@@ -1,0 +1,10 @@
+{
+    "name": "__MyOrganization__.__MyPackage__.Editor",
+    "references": [
+      "__MyOrganization__.__MyPackage__"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}

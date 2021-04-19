@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+npm publish --access public Packages/com.__my-organization__.__my-package__

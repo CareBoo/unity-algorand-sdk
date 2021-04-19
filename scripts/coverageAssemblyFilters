@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+echo "::set-output name=result::+__MyOrganization__.__MyPackage__*,-__MyOrganization__.__MyPackage__*.Tests,-__MyOrganization__.__MyPackage__*.Samples*"

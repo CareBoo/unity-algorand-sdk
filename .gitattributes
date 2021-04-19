@@ -1,0 +1,2 @@
+# Convert CRLF to LF on checkout for bash scripts
+*.sh text eol=lf

@@ -1,0 +1,11 @@
+{
+    "name": "__MyOrganization__.__MyPackage__.Tests",
+    "references": [
+        "__MyOrganization__.__MyPackage__"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": []
+}

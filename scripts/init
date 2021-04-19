@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+find . -type f -name "*release*.json" -exec sed -i "s/__my-organization__/$ORGANIZATION_KEBAB/g" {} +
+find . -type f -name "*release*.json" -exec sed -i "s/__my-package__/$PACKAGE_KEBAB/g" {} +
+
+cd scripts
+
+find . -type f ! -name "init" -exec sed -i "s/__MyOrganization__/$ORGANIZATION_PASCAL/g" {} +
+find . -type f ! -name "init" -exec sed -i "s/__MyPackage__/$PACKAGE_PASCAL/g" {} +
+find . -type f ! -name "init" -exec sed -i "s/__my-organization__/$ORGANIZATION_KEBAB/g" {} +
+find . -type f ! -name "init" -exec sed -i "s/__my-package__/$PACKAGE_KEBAB/g" {} +
+
+cd -
+
+cd Packages
+
+find . -type f -name "*.json" -exec sed -i "s/__my-organization__/$ORGANIZATION_KEBAB/g" {} +
+find . -type f -name "*.json" -exec sed -i "s/__my-package__/$PACKAGE_KEBAB/g" {} +
+find . -type f -name "*.json" -exec sed -i "s/__MyPackage__/$PACKAGE_PASCAL/g" {} +
+
+find . -type f -name "*.cs" -exec sed -i "s/__MyOrganization__/$ORGANIZATION_PASCAL/g" {} +
+find . -type f -name "*.cs" -exec sed -i "s/__MyPackage__/$PACKAGE_PASCAL/g" {} +
+find . -type f -name "*.asmdef" -exec sed -i "s/__MyOrganization__/$ORGANIZATION_PASCAL/g" {} +
+find . -type f -name "*.asmdef" -exec sed -i "s/__MyPackage__/$PACKAGE_PASCAL/g" {} +
+find . -type f -name "*.md" -exec sed -i "s/__MyOrganization__/$ORGANIZATION_PASCAL/g" {} +
+find . -type f -name "*.md" -exec sed -i "s/__MyPackage__/$PACKAGE_PASCAL/g" {} +
+
+find . -type f -name "*.asmdef" -exec bash -c 'mv "$2" "${2/__MyOrganization__/$1}"' -- ${ORGANIZATION_PASCAL} {} \;
+find . -type f -name "*.asmdef" -exec bash -c 'mv "$2" "${2/__MyPackage__/$1}"' -- ${PACKAGE_PASCAL} {} \;
+find . -type f -name "*.asmdef.meta" -exec bash -c 'mv "$2" "${2/__MyOrganization__/$1}"' -- ${ORGANIZATION_PASCAL} {} \;
+find . -type f -name "*.asmdef.meta" -exec bash -c 'mv "$2" "${2/__MyPackage__/$1}"' -- ${PACKAGE_PASCAL} {} \;
+find . -type f -name "*.md" -exec bash -c 'mv "$2" "${2/__MyOrganization__/$1}"' -- ${ORGANIZATION_PASCAL} {} \;
+find . -type f -name "*.md" -exec bash -c 'mv "$2" "${2/__MyPackage__/$1}"' -- ${PACKAGE_PASCAL} {} \;
+find . -type f -name "*.md.meta" -exec bash -c 'mv "$2" "${2/__MyOrganization__/$1}"' -- ${ORGANIZATION_PASCAL} {} \;
+find . -type f -name "*.md.meta" -exec bash -c 'mv "$2" "${2/__MyPackage__/$1}"' -- ${PACKAGE_PASCAL} {} \;
+
+mv com._my-organization__.__my-package__ com.${ORGANIZATION_KEBAB}.${PACKAGE_KEBAB}
+
+cd -
