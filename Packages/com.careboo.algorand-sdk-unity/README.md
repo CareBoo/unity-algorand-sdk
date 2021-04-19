@@ -17,18 +17,18 @@ The Package Manager is a work in progress for Unity. Because of that, your packa
   ├── CHANGELOG.md
   ├── Third Party Notices.md
   ├── Editor
-  │   ├── __MyOrganization__.__MyPackage__.Editor.asmdef
+  │   ├── CareBoo.Algorand.SDK.Unity.Editor.asmdef
   │   └── EditorExample.cs
   ├── Runtime
-  │   ├── __MyOrganization__.__MyPackage__.asmdef
+  │   ├── CareBoo.Algorand.SDK.Unity.asmdef
   │   └── RuntimeExample.cs
   ├── Tests
   │   ├── .tests.json
   │   ├── Editor
-  │   │   ├── __MyOrganization__.__MyPackage__.Editor.Tests.asmdef
+  │   │   ├── CareBoo.Algorand.SDK.Unity.Editor.Tests.asmdef
   │   │   └── EditorExampleTest.cs
   │   └── Runtime
-  │        ├── __MyOrganization__.__MyPackage__.Tests.asmdef
+  │        ├── CareBoo.Algorand.SDK.Unity.Tests.asmdef
   │        └── RuntimeExampleTest.cs
   ├── Samples
   │   └── Example
@@ -42,7 +42,7 @@ The Package Manager is a work in progress for Unity. Because of that, your packa
 ## Develop your package
 Package development works best within the Unity Editor.  Here's how to get started:
 
-1. Enter your package name. The name you choose should contain your default organization followed by the name you typed. For example: `__MyOrganization__.__MyPackage__`.
+1. Enter your package name. The name you choose should contain your default organization followed by the name you typed. For example: `CareBoo.Algorand.SDK.Unity`.
 
 2. [Enter the information](#FillOutFields) for your package in the `package.json` file.
 
@@ -101,17 +101,17 @@ Use these conventions for naming and storing your assembly definition files to e
 
 * Store Editor-specific code under a root editor assembly definition file:
 
-  `Editor/__MyOrganization__.__MyPackage__.Editor.asmdef`
+  `Editor/CareBoo.Algorand.SDK.Unity.Editor.asmdef`
 
 * Store runtime-specific code under a root runtime assembly definition file:
 
-  `Runtime/__MyOrganization__.__MyPackage__.asmdef`
+  `Runtime/CareBoo.Algorand.SDK.Unity.asmdef`
 
 * Configure related test assemblies for your editor and runtime scripts:
 
-  `Tests/Editor/__MyOrganization__.__MyPackage__.Editor.Tests.asmdef`
+  `Tests/Editor/CareBoo.Algorand.SDK.Unity.Editor.Tests.asmdef`
 
-  `Tests/Runtime/__MyOrganization__.__MyPackage__.Tests.asmdef`
+  `Tests/Runtime/CareBoo.Algorand.SDK.Unity.Tests.asmdef`
 
 To get a more general view of a recommended package folder layout, see [Package layout](https://docs.unity3d.com/Manual/cus-layout.html).
 

@@ -1,15 +1,15 @@
 using UnityEngine;
-using UnityEditor;
 using UnityEngine.TestTools;
 using NUnit.Framework;
 using System.Collections;
 
-namespace __MyOrganization__.__MyPackage__.Editor.Tests
+namespace CareBoo.Algorand.SDK.Unity.Tests
 {
-    class EditorExampleTest
+    class RuntimeExampleTest
     {
+
         [Test]
-        public void EditorSampleTestSimplePasses()
+        public void PlayModeSampleTestSimplePasses()
         {
             var expected = 4;
             var actual = 2 + 2;
@@ -19,11 +19,12 @@ namespace __MyOrganization__.__MyPackage__.Editor.Tests
         // A UnityTest behaves like a coroutine in PlayMode
         // and allows you to yield null to skip a frame in EditMode
         [UnityTest]
-        public IEnumerator EditorSampleTestWithEnumeratorPasses()
+        public IEnumerator PlayModeSampleTestWithEnumeratorPasses()
         {
-            // Use the Assert class to test conditions.
-            // yield to skip a frame
-            yield return null;
+            var go = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            var rb = go.AddComponent<Rigidbody>();
+            yield return new WaitForSeconds(0.5f);
+            Assert.Greater(rb.velocity.sqrMagnitude, 0f);
         }
     }
 }

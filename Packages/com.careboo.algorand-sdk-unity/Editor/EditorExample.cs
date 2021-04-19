@@ -1,10 +1,10 @@
 // -----------------------------------------------------------------------------
 //
-// Use this runtime example C# file to develop runtime code.
+// Use this editor example C# file to develop editor (non-runtime) code.
 //
 // -----------------------------------------------------------------------------
 
-namespace __MyOrganization__.__MyPackage__
+namespace CareBoo.Algorand.SDK.Unity.Editor
 {
     /// <summary>
     /// Provide a general description of the public class.
@@ -13,7 +13,7 @@ namespace __MyOrganization__.__MyPackage__
     /// Packages require XmlDoc documentation for ALL Package APIs.
     /// https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments
     /// </remarks>
-    public class MyPublicRuntimeExampleClass
+    public class MyPublicEditorExampleClass
     {
         /// <summary>
         /// Provide a description of what this private method does.

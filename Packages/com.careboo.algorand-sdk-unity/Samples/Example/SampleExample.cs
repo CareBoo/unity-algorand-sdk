@@ -5,7 +5,7 @@
 //
 // -----------------------------------------------------------------------------
 
-namespace __MyOrganization__.__MyPackage__
+namespace CareBoo.Algorand.SDK.Unity
 {
     /// <summary>
     /// Provide a general description of the public class.

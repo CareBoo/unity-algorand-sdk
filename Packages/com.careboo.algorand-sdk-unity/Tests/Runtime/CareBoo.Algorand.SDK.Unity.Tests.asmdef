@@ -1,7 +1,7 @@
 {
-    "name": "__MyOrganization__.__MyPackage__.Tests",
+    "name": "CareBoo.Algorand.SDK.Unity.Tests",
     "references": [
-        "__MyOrganization__.__MyPackage__"
+        "CareBoo.Algorand.SDK.Unity"
     ],
     "optionalUnityReferences": [
         "TestAssemblies"

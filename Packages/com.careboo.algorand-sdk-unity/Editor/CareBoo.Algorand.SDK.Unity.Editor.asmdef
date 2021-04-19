@@ -1,7 +1,7 @@
 {
-    "name": "__MyOrganization__.__MyPackage__.Editor",
+    "name": "CareBoo.Algorand.SDK.Unity.Editor",
     "references": [
-      "__MyOrganization__.__MyPackage__"
+      "CareBoo.Algorand.SDK.Unity"
     ],
     "includePlatforms": [
         "Editor"

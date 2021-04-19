@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "com.__my-organization__.__my-package__": {
-      "version": "file:com._my-organization__.__my-package__",
+    "com.careboo.algorand-sdk-unity": {
+      "version": "file:com._my-organization__.algorand-sdk-unity",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
