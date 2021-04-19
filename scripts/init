@@ -37,3 +37,10 @@ find . -type f -name "*.md.meta" -exec bash -c 'mv "$2" "${2/__MyPackage__/$1}"'
 mv com._my-organization__.__my-package__ com.${ORGANIZATION_KEBAB}.${PACKAGE_KEBAB}
 
 cd -
+
+cd ProjectSettings
+
+sed -i "s/companyName: DefaultCompany/companyName: $ORGANIZATION_PASCAL/" ProjectSettings.asset
+sed -i "s/productName: UPMTemplate/productName: $PACKAGE_PASCAL/" ProjectSettings.asset
+
+cd -
