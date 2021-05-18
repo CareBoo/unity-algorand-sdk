@@ -1,3 +1,10 @@
+# 1.0.0-exp.1 (2021-05-18)
+
+
+### Features
+
+* Add Mnemonic and Key datastructs ([4370f74](https://github.com/CareBoo/Algorand.SDK.Unity/commit/4370f74c4e5f5ed9977dc4954313bf57e7023547))
+
 # Changelog
 All notable changes to this package will be documented in this file.
 
