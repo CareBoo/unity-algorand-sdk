@@ -1,7 +1,8 @@
 {
   "dependencies": {
+    "com.unity.burst": "1.5.3",
     "com.unity.ide.vscode": "1.2.3",
-    "com.unity.package-validation-suite": "0.20.0-preview",
+    "com.unity.package-validation-suite": "0.20.1-preview",
     "com.unity.settings-manager": "1.0.3",
     "com.unity.test-framework": "1.1.24",
     "com.unity.test-framework.performance": "2.8.0-preview",
