@@ -12,22 +12,22 @@
       "@semantic-release/changelog",
       {
         "preset": "angular",
-        "changelogFile": "Packages/com.careboo.algorand-sdk-unity/CHANGELOG.md"
+        "changelogFile": "Packages/com.careboo.unity-algorand-sdk/CHANGELOG.md"
       }
     ],
     [
       "@semantic-release/npm",
       {
         "npmPublish": false,
-        "pkgRoot": "Packages/com.careboo.algorand-sdk-unity"
+        "pkgRoot": "Packages/com.careboo.unity-algorand-sdk"
       }
     ],
     [
       "@semantic-release/git",
       {
         "assets": [
-          "Packages/com.careboo.algorand-sdk-unity/package.json",
-          "Packages/com.careboo.algorand-sdk-unity/CHANGELOG.md"
+          "Packages/com.careboo.unity-algorand-sdk/package.json",
+          "Packages/com.careboo.unity-algorand-sdk/CHANGELOG.md"
         ],
         "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }

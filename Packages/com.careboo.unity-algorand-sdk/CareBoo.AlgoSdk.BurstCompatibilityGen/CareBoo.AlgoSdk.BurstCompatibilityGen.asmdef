@@ -1,0 +1,23 @@
+{
+    "name": "CareBoo.AlgoSdk.BurstCompatibilityGen",
+    "rootNamespace": "",
+    "references": [
+        "CareBoo.AlgoSdk.Tests",
+        "Unity.Collections",
+        "Unity.Collections.BurstCompatibilityGen",
+        "Unity.Collections.Tests"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

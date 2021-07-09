@@ -1,0 +1,23 @@
+{
+    "name": "CareBoo.AlgoSdk.Tests",
+    "rootNamespace": "",
+    "references": [
+        "CareBoo.AlgoSdk",
+        "Unity.Burst",
+        "Unity.Collections",
+        "UnityEngine.TestRunner"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
