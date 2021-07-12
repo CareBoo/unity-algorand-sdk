@@ -33,7 +33,9 @@ namespace AlgoSdk
             }
         }
 
-        public int Length => 32;
+        public const int Length = 32;
+
+        int IByteArray.Length => Length;
 
         public byte this[int index]
         {
@@ -60,22 +62,22 @@ namespace AlgoSdk
             var result = new Mnemonic();
             var numBits = 0;
             var buffer = 0;
-            var currentIndex = 0;
+            var wordIndex = 0;
             for (var i = 0; i < Length; i++)
             {
                 buffer |= this[i] << numBits;
                 numBits += 8;
                 if (numBits >= 11)
                 {
-                    result[currentIndex] = (Mnemonic.Word)(buffer & ((ushort)Mnemonic.Word.LENGTH - 1));
-                    currentIndex++;
+                    result[wordIndex] = (Mnemonic.Word)(buffer & ((ushort)Mnemonic.Word.LENGTH - 1));
+                    wordIndex++;
                     buffer >>= 11;
                     numBits -= 11;
                 }
             }
             if (numBits != 0)
             {
-
+                result[wordIndex] = (Mnemonic.Word)(buffer & ((ushort)Mnemonic.Word.LENGTH - 1));
             }
             return result;
         }
@@ -91,6 +93,15 @@ namespace AlgoSdk
                 if (!this[i].Equals(other[i]))
                     return false;
             return true;
+        }
+
+        public static Key FromString(string keyString)
+        {
+            var key = new Key();
+            var bytes = System.Convert.FromBase64String(keyString);
+            for (var i = 0; i < Length; i++)
+                key[i] = bytes[i];
+            return key;
         }
     }
 }
