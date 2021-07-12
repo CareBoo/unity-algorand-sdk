@@ -1,3 +1,10 @@
+# [1.0.0-exp.3](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.2...v1.0.0-exp.3) (2021-07-12)
+
+
+### Bug Fixes
+
+* :triangular_flag_on_post: Update package registry ([a0800bc](https://github.com/CareBoo/unity-algorand-sdk/commit/a0800bc57c6fde758182075a90e2fbd96ce67be8))
+
 # [1.0.0-exp.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.1...v1.0.0-exp.2) (2021-07-12)
 
 
