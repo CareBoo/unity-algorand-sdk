@@ -1,5 +1,6 @@
 using System;
 using System.Runtime.InteropServices;
+using System.Text;
 using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
@@ -79,6 +80,10 @@ namespace AlgoSdk
             return result;
         }
 
+        public Address ToAddress()
+        {
+            throw new NotImplementedException();
+        }
 
         public bool Equals(Key other)
         {
