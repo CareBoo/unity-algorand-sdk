@@ -94,6 +94,18 @@ namespace AlgoSdk
             return mnemonic;
         }
 
+        [NotBurstCompatible]
+        public static implicit operator string(Mnemonic mnemonic)
+        {
+            return mnemonic.ToString();
+        }
+
+        [NotBurstCompatible]
+        public static implicit operator Mnemonic(string mnemonicString)
+        {
+            return Mnemonic.FromString(mnemonicString);
+        }
+
         public static Mnemonic FromKey(Key key)
         {
             throw new NotImplementedException();
