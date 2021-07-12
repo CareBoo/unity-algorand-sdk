@@ -1,3 +1,10 @@
+# [1.0.0-exp.5](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.4...v1.0.0-exp.5) (2021-07-12)
+
+
+### Bug Fixes
+
+* :bug: Fix repository ([e765589](https://github.com/CareBoo/unity-algorand-sdk/commit/e765589b92849e23b7d080f335067cba1c1a8b62))
+
 # [1.0.0-exp.4](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.3...v1.0.0-exp.4) (2021-07-12)
 
 
