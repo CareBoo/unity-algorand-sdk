@@ -1,3 +1,10 @@
+# [1.0.0-exp.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.1...v1.0.0-exp.2) (2021-07-12)
+
+
+### Features
+
+* :sparkles: Add Mnemonic.FromString and Mnemonic.ToString ([d3a88c6](https://github.com/CareBoo/unity-algorand-sdk/commit/d3a88c6026ff3162a46f1e3d13ca54d103d43aaf))
+
 # 1.0.0-exp.1 (2021-05-18)
 
 
