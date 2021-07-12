@@ -2,6 +2,7 @@ using System;
 using System.Runtime.InteropServices;
 using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
+using Unity.Mathematics;
 
 namespace AlgoSdk
 {
@@ -54,6 +55,15 @@ namespace AlgoSdk
             }
         }
 
+        [NotBurstCompatible]
+        public override string ToString()
+        {
+            var words = new string[25];
+            for (var i = 0; i < Length; i++)
+                words[i] = this[i].ToString();
+            return string.Join(" ", words);
+        }
+
         public Key ToKey()
         {
             throw new NotImplementedException();
@@ -67,32 +77,26 @@ namespace AlgoSdk
             return true;
         }
 
+        [NotBurstCompatible]
+        public static Mnemonic FromString(string mnemonicString)
+        {
+            var words = mnemonicString.Split(' ');
+            if (words.Length != 25)
+                throw new ArgumentException($"Mnemonic must be 25 words, but was {words.Length} words...");
+
+            var mnemonic = new Mnemonic();
+            for (var i = 0; i < words.Length; i++)
+            {
+                var wordString = words[i];
+                var shortWordString = wordString.Substring(0, math.min(4, wordString.Length));
+                mnemonic[i] = (Word)Enum.Parse(typeof(ShortWord), shortWordString);
+            }
+            return mnemonic;
+        }
+
         public static Mnemonic FromKey(Key key)
         {
             throw new NotImplementedException();
-        }
-
-        [BurstCompatible(GenericTypeArguments = new[] { typeof(Key) })]
-        internal static void To11Bit<TByteArray>(in TByteArray data, ref NativeList<ushort> output)
-            where TByteArray : struct, IByteArray
-        {
-            var buffer = 0;
-            var numBits = 0;
-            for (var i = 0; i < data.Length; i++)
-            {
-                buffer |= data[i] << numBits;
-                numBits += 8;
-                if (numBits >= 11)
-                {
-                    output.Add((ushort)(buffer & ((ushort)Mnemonic.Word.LENGTH - 1)));
-                    buffer >>= 11;
-                    numBits -= 11;
-                }
-            }
-            if (numBits != 0)
-            {
-                output.Add((ushort)(buffer & ((ushort)Mnemonic.Word.LENGTH - 1)));
-            }
         }
     }
 }
