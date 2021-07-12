@@ -10,5 +10,6 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@CareBoo"
   },
+  "repository": "github:CareBoo/unity-algorand-sdk",
   "type": "tool"
 }
