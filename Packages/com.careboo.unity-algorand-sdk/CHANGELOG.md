@@ -1,3 +1,10 @@
+# [1.0.0-exp.4](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.3...v1.0.0-exp.4) (2021-07-12)
+
+
+### Bug Fixes
+
+* :bug: Fix npm release ([9e68078](https://github.com/CareBoo/unity-algorand-sdk/commit/9e68078b5f7f75a7670e7cf03dc1ee5137709bf1))
+
 # [1.0.0-exp.3](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.2...v1.0.0-exp.3) (2021-07-12)
 
 
