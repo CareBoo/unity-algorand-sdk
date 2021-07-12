@@ -1,6 +1,6 @@
 {
   "name": "com.careboo.unity-algorand-sdk",
-  "displayName": "Unity Algorand SDK",
+  "displayName": "Algorand SDK",
   "version": "1.0.0-exp.2",
   "unity": "2020.3",
   "description": "WARNING: This package has not been audited and it should not be used in a production environment.",
@@ -8,7 +8,7 @@
     "com.unity.collections": "1.0.0-pre.3"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@careboo"
+    "registry": "https://npm.pkg.github.com/@CareBoo"
   },
   "type": "tool"
 }
