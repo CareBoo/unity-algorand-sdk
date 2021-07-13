@@ -6,7 +6,10 @@
     "excludePlatforms": [],
     "allowUnsafeCode": true,
     "overrideReferences": true,
-    "precompiledReferences": [],
+    "precompiledReferences": [
+        "NSec.Cryptography.dll",
+        "System.Memory.dll"
+    ],
     "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
