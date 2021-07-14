@@ -8,9 +8,10 @@ using NUnit.Framework;
 public class Sha512Test : MonoBehaviour
 {
     [Test]
-    public void CanCallSha512Hash()
+    public void Sha512IsTruncatedTo32Bytes()
     {
         var bytes = new byte[] { 0x30, 0x30, 0x30, 0x30 };
-        Debug.Log(Encoding.UTF8.GetString(Algorand.Crypto.SHA512.Hash(bytes)));
+        bytes = Algorand.Crypto.SHA512.Hash(bytes);
+        Assert.AreEqual(32, bytes.Length);
     }
 }
