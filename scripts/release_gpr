@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+npm publish --registry https://npm.pkg.github.com/@careboo Packages/com.careboo.unity-algorand-sdk

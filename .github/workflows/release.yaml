@@ -28,13 +28,18 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-node@v1
+        if: steps.semantic.outputs.new_release_published == 'true'
         with:
           node-version: '12.x'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@careboo'
 
-      - name: Publish to GitHub Package Repository
+      - name: Publish to npmjs
         if: steps.semantic.outputs.new_release_published == 'true'
-        run: ./scripts/release
+        run: ./scripts/release_npmjs
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish to GPR
+        if: steps.semantic.outputs.new_release_published == 'true'
+        run: ./scripts/release_gpr
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
