@@ -1,16 +1,14 @@
-using System;
 using AlgoSdk;
+using AlgoSdk.Crypto;
 using NUnit.Framework;
 
 public class MnemonicTest
 {
     private string RandomMnemonicString()
     {
-        var words = new string[Mnemonic.Length];
-        var random = new Random();
-        for (var i = 0; i < Mnemonic.Length; i++)
-            words[i] = ((Mnemonic.Word)random.Next((int)Mnemonic.Word.LENGTH)).ToString();
-        return string.Join(" ", words);
+        var key = Random.RandomBytes<Key>();
+        var mnemonic = key.ToMnemonic();
+        return mnemonic.ToString();
     }
 
     [Test]
@@ -34,7 +32,7 @@ public class MnemonicTest
     [Test]
     public void MnemonicToKeyShouldGenerateValidKey()
     {
-        var word = (Mnemonic.Word)Enum.Parse(typeof(Mnemonic.ShortWord), "aban");
+        var word = (Mnemonic.Word)System.Enum.Parse(typeof(Mnemonic.ShortWord), "aban");
         Assert.AreEqual(Mnemonic.Word.abandon, word);
     }
 }

@@ -5,7 +5,8 @@
         "CareBoo.AlgoSdk",
         "Unity.Burst",
         "Unity.Collections",
-        "UnityEngine.TestRunner"
+        "UnityEngine.TestRunner",
+        "CareBoo.AlgoSdk.Crypto"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
