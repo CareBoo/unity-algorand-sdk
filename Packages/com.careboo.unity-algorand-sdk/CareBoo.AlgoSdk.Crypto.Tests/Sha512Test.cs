@@ -11,7 +11,17 @@ public class Sha512Test
     public void Sha512IsTruncatedTo32Bytes()
     {
         var bytes = new byte[] { 0x30, 0x30, 0x30, 0x30 };
-        bytes = AlgoSdk.Crypto.SHA512.Hash(bytes);
+        bytes = AlgoSdk.Crypto.Sha512.Hash(bytes);
         Assert.AreEqual(32, bytes.Length);
+    }
+
+    [Test]
+    public void GeneratedRandomBytesIsSameLengthAsSize()
+    {
+        uint size = 32;
+        var bytes = Sha512.RandomBytes(size);
+        foreach (var b in bytes)
+            Assert.AreNotEqual(0, b);
+        Assert.AreEqual(size, bytes.Length);
     }
 }

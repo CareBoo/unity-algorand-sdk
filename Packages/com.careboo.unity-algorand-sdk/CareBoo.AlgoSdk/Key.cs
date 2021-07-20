@@ -4,6 +4,7 @@ using System.Text;
 using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
+using AlgoSdk.LowLevel;
 
 namespace AlgoSdk
 {
@@ -24,12 +25,12 @@ namespace AlgoSdk
     {
         [SerializeField] [FieldOffset(0)] internal FixedBytes32 buffer;
 
-        unsafe internal byte* Buffer
+        public unsafe IntPtr Buffer
         {
             get
             {
                 fixed (byte* b = &buffer.offset0000.byte0000)
-                    return b;
+                    return (IntPtr)b;
             }
         }
 
@@ -39,22 +40,8 @@ namespace AlgoSdk
 
         public byte this[int index]
         {
-            get
-            {
-                ByteArray.CheckElementAccess(index, Length);
-                unsafe
-                {
-                    return UnsafeUtility.ReadArrayElement<byte>(Buffer, index);
-                }
-            }
-            set
-            {
-                ByteArray.CheckElementAccess(index, Length);
-                unsafe
-                {
-                    UnsafeUtility.WriteArrayElement<byte>(Buffer, index, value);
-                }
-            }
+            get => this.GetByteAt(index);
+            set => this.SetByteAt(index, value);
         }
 
         public Mnemonic ToMnemonic()

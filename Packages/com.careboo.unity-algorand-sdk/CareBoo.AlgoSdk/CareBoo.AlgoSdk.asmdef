@@ -4,7 +4,9 @@
     "references": [
         "Unity.Burst",
         "Unity.Collections",
-        "Unity.Mathematics"
+        "Unity.Mathematics",
+        "CareBoo.AlgoSdk.Crypto",
+        "CareBoo.AlgoSdk.LowLevel"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

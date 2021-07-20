@@ -1,19 +1,16 @@
 {
-    "name": "CareBoo.AlgoSdk.Crypto",
-    "rootNamespace": "AlgoSdk.Crypto",
+    "name": "CareBoo.AlgoSdk.LowLevel",
+    "rootNamespace": "AlgoSdk.LowLevel",
     "references": [
         "Unity.Collections",
         "Unity.Burst",
-        "Unity.Mathematics",
-        "CareBoo.AlgoSdk.LowLevel"
+        "Unity.Mathematics"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": true,
-    "overrideReferences": true,
-    "precompiledReferences": [
-        "BouncyCastle.Crypto.dll"
-    ],
+    "overrideReferences": false,
+    "precompiledReferences": [],
     "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
