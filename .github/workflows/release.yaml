@@ -27,16 +27,24 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/setup-node@v1
+      - name: Setup npm for npmjs
+        uses: actions/setup-node@v2
         if: steps.semantic.outputs.new_release_published == 'true'
         with:
           node-version: '12.x'
+          registry-url: https://registry.npmjs.org/
 
       - name: Publish to npmjs
         if: steps.semantic.outputs.new_release_published == 'true'
         run: ./scripts/release_npmjs
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Setup npm for GPR
+        uses: actions/setup-node@v2
+        if: steps.semantic.outputs.new_release_published == 'true'
+        with:
+          registry-url: 'https://npm.pkg.github.com'
 
       - name: Publish to GPR
         if: steps.semantic.outputs.new_release_published == 'true'
