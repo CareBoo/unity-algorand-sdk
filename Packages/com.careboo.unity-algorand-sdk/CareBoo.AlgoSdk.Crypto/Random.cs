@@ -11,11 +11,6 @@ namespace AlgoSdk.Crypto
             sodium_init();
         }
 
-        public static UIntPtr RandomBytes(UIntPtr size)
-        {
-            throw new NotImplementedException();
-        }
-
         public static T RandomBytes<T>() where T : unmanaged
         {
             var size = UnsafeUtility.SizeOf<T>();
