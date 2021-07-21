@@ -2,6 +2,7 @@
 using System;
 using System.Diagnostics;
 using Unity.Collections.LowLevel.Unsafe;
+using Unity.Mathematics;
 
 namespace AlgoSdk.LowLevel
 {
@@ -20,7 +21,7 @@ namespace AlgoSdk.LowLevel
                 throw new IndexOutOfRangeException($"Index {index} is out of range [0, {length}).");
         }
 
-        public static byte GetByteAt<TByteArray>(this TByteArray bytes, int index)
+        public static byte GetByteAt<TByteArray>(ref this TByteArray bytes, int index)
             where TByteArray : unmanaged, IByteArray
         {
             CheckElementAccess(index, bytes.Length);
@@ -40,11 +41,12 @@ namespace AlgoSdk.LowLevel
             }
         }
 
-        public static void Copy<T, U>(T from, U to)
+        public static void Copy<T, U>(ref T from, ref U to)
             where T : unmanaged, IByteArray
             where U : unmanaged, IByteArray
         {
-            for (var i = 0; i < from.Length; i++)
+            var length = math.min(from.Length, to.Length);
+            for (var i = 0; i < length; i++)
                 to.SetByteAt(i, from.GetByteAt(i));
         }
     }

@@ -59,7 +59,7 @@ namespace AlgoSdk.Crypto
                 }
             }
 
-            public int Length => 32;
+            public int Length => Size;
 
             public byte this[int index]
             {
