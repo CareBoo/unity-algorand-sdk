@@ -3,7 +3,11 @@
     "rootNamespace": "",
     "references": [
         "UnityEngine.TestRunner",
-        "CareBoo.AlgoSdk.Crypto"
+        "CareBoo.AlgoSdk.Crypto",
+        "Unity.Collections",
+        "Unity.Burst",
+        "Unity.Mathematics",
+        "CareBoo.AlgoSdk.LowLevel"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

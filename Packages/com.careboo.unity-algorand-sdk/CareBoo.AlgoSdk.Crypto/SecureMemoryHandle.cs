@@ -7,6 +7,11 @@ namespace AlgoSdk.Crypto
 {
     public struct SecureMemoryHandle : INativeDisposable
     {
+        static SecureMemoryHandle()
+        {
+            sodium_init();
+        }
+
         public IntPtr Ptr;
 
         internal struct DisposeJob : IJob
