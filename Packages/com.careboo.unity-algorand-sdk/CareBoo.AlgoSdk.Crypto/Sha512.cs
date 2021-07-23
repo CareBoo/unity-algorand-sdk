@@ -8,6 +8,18 @@ namespace AlgoSdk.Crypto
 {
     public static class Sha512
     {
+        internal static readonly Sha512StateVector FIPS_Sha512_256_IV = new UInt64[8]
+        {
+            Convert.ToUInt64("22312194FC2BF72C", 16),
+            Convert.ToUInt64("9F555FA3C84C64C2", 16),
+            Convert.ToUInt64("2393B86B6F53B151", 16),
+            Convert.ToUInt64("963877195940EABD", 16),
+            Convert.ToUInt64("96283EE2A88EFFE3", 16),
+            Convert.ToUInt64("BE5E1E2553863992", 16),
+            Convert.ToUInt64("2B0199FC2C85B8AA", 16),
+            Convert.ToUInt64("0EB72DDC81C52CA2", 16),
+        };
+
         public unsafe static Sha512_Hash Hash<TByteArray>(in TByteArray bytes)
             where TByteArray : unmanaged, IByteArray
         {
@@ -18,10 +30,17 @@ namespace AlgoSdk.Crypto
             return hash;
         }
 
-        public static Sha512_256_Hash Hash256Truncated<TByteArray>(in TByteArray bytes)
+        public unsafe static Sha512_256_Hash Hash256Truncated<TByteArray>(in TByteArray bytes)
             where TByteArray : unmanaged, IByteArray
         {
-            var hash512 = Hash(bytes);
+            var size = (ulong)bytes.Length;
+            var hashState = default(crypto_hash_sha512_state);
+            crypto_hash_sha512_init(&hashState);
+            hashState.vector = FIPS_Sha512_256_IV;
+            fixed (void* bytesPtr = &bytes)
+                crypto_hash_sha512_update(&hashState, bytesPtr, size);
+            var hash512 = new Sha512_Hash();
+            crypto_hash_sha512_final(&hashState, &hash512);
             var result = new Sha512_256_Hash();
             ByteArray.Copy(ref hash512, ref result);
             return result;
