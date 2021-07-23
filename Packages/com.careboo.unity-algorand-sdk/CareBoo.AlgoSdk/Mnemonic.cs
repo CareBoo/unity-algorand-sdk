@@ -26,6 +26,7 @@ namespace AlgoSdk
     {
         [FieldOffset(0)] internal FixedBytes50 buffer;
         public const int Length = 25;
+        public const int ChecksumIndex = Length - 1;
 
         unsafe internal byte* Buffer
         {
@@ -65,7 +66,7 @@ namespace AlgoSdk
             return string.Join(" ", words);
         }
 
-        public Key ToKey()
+        public PrivateKey ToKey()
         {
             throw new NotImplementedException();
         }
@@ -107,7 +108,7 @@ namespace AlgoSdk
             return Mnemonic.FromString(mnemonicString);
         }
 
-        public static Mnemonic FromKey(Key key)
+        public static Mnemonic FromKey(PrivateKey key)
         {
             throw new NotImplementedException();
         }
