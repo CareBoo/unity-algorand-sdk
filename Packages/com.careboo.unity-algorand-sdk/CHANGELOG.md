@@ -1,3 +1,10 @@
+# [1.0.0-exp.7](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.6...v1.0.0-exp.7) (2021-07-24)
+
+
+### Features
+
+* :sparkles: Add Account.Generate ([95233bf](https://github.com/CareBoo/unity-algorand-sdk/commit/95233bf877ee70d6e67f91baaf6f9e640b0a9141))
+
 # [1.0.0-exp.6](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.5...v1.0.0-exp.6) (2021-07-24)
 
 
