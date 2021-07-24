@@ -1,8 +1,6 @@
 using System;
 using System.Runtime.InteropServices;
-using System.Text;
 using Unity.Collections;
-using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using AlgoSdk.LowLevel;
 using AlgoSdk.Crypto;
@@ -42,7 +40,7 @@ namespace AlgoSdk
 
         public Address ToAddress()
         {
-            throw new NotImplementedException();
+            return seed.ToPublicKey();
         }
 
         public bool Equals(PrivateKey other)
@@ -51,6 +49,17 @@ namespace AlgoSdk
                 if (!this[i].Equals(other[i]))
                     return false;
             return true;
+        }
+
+        public override string ToString()
+        {
+            var address = ToAddress();
+            var bytes = new byte[this.Length + address.Length];
+            for (var i = 0; i < this.Length; i++)
+                bytes[i] = this[i];
+            for (var i = 0; i < address.Length; i++)
+                bytes[i + this.Length] = address[i];
+            return System.Convert.ToBase64String(bytes);
         }
 
         public static PrivateKey FromString(string keyString)

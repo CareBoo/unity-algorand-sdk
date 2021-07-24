@@ -66,7 +66,7 @@ namespace AlgoSdk
             return string.Join(" ", words);
         }
 
-        public PrivateKey ToKey()
+        public PrivateKey ToPrivateKey()
         {
             throw new NotImplementedException();
         }

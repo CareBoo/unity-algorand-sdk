@@ -74,6 +74,13 @@ namespace AlgoSdk.Crypto
                         return false;
                 return true;
             }
+
+            public PublicKey ToPublicKey()
+            {
+                var (sk, pk) = CreateKey(in this);
+                sk.Dispose();
+                return pk;
+            }
         }
 
         [StructLayout(LayoutKind.Explicit, Size = Size)]
@@ -112,11 +119,14 @@ namespace AlgoSdk.Crypto
             }
         }
 
-        public static (SecretKeyHandle sk, PublicKey pk) CreateKey(Seed seed)
+        public static (SecretKeyHandle sk, PublicKey pk) CreateKey(in Seed seed)
         {
             var pk = new PublicKey();
             var sk = SecretKeyHandle.Create();
-            int error = crypto_sign_ed25519_seed_keypair(&pk, sk, &seed);
+            fixed (Seed* seedPtr = &seed)
+            {
+                int error = crypto_sign_ed25519_seed_keypair(&pk, sk, seedPtr);
+            }
             return (sk, pk);
         }
     }
