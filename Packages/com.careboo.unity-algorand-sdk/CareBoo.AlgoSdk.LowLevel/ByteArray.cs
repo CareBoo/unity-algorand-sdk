@@ -41,6 +41,15 @@ namespace AlgoSdk.LowLevel
             }
         }
 
+        public static byte[] ToRawBytes<TByteArray>(ref this TByteArray bytes)
+            where TByteArray : unmanaged, IByteArray
+        {
+            var result = new byte[bytes.Length];
+            for (var i = 0; i < bytes.Length; i++)
+                result[i] = bytes.GetByteAt(i);
+            return result;
+        }
+
         public static void Copy<T, U>(ref T from, ref U to)
             where T : unmanaged, IByteArray
             where U : unmanaged, IByteArray
