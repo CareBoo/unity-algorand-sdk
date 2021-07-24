@@ -1,3 +1,15 @@
+# [1.0.0-exp.6](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.5...v1.0.0-exp.6) (2021-07-24)
+
+
+### Features
+
+* :construction_worker: Add npmjs support ([56f60f0](https://github.com/CareBoo/unity-algorand-sdk/commit/56f60f0804c3cac377c78a5c47eea17785b29f9e))
+* :heavy_plus_sign: Add libsodium ios, android, and windows ([00c9511](https://github.com/CareBoo/unity-algorand-sdk/commit/00c95113a152f01e737e56be6a31b3207aed57ff))
+* :sparkles: Add Address struct ([d92b903](https://github.com/CareBoo/unity-algorand-sdk/commit/d92b90356cbf0070dd737a838eae417212a84a18))
+* :sparkles: Add checksums ([2bc2189](https://github.com/CareBoo/unity-algorand-sdk/commit/2bc2189174e48de3324aa8ca4e3bbce22ca4e1c8))
+* :sparkles: Add Sha512 interop ([86aabf5](https://github.com/CareBoo/unity-algorand-sdk/commit/86aabf5b0936cea36881cfaad1e1d87245755c92))
+* :sparkles: Add start of Native Integration with Libsodium ([55e325f](https://github.com/CareBoo/unity-algorand-sdk/commit/55e325f4249603da679a66ece605f6ba8d5d762d))
+
 # [1.0.0-exp.6](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.5...v1.0.0-exp.6) (2021-07-23)
 
 
