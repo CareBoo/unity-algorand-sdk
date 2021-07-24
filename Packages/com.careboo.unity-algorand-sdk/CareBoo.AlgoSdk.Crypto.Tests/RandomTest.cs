@@ -28,7 +28,7 @@ public class RandomTest
     [Test]
     public void CanGenerateRandomBytesForType()
     {
-        var test = Random.RandomBytes<TestStruct>();
+        var test = Random.Bytes<TestStruct>();
         UnityEngine.Debug.Log($"{test.byte0000},{test.byte0001},{test.byte0002},{test.byte0003},{test.byte0004}");
     }
 }
