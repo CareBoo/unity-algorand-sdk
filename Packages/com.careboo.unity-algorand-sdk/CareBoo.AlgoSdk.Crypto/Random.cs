@@ -11,7 +11,7 @@ namespace AlgoSdk.Crypto
             sodium_init();
         }
 
-        public static T RandomBytes<T>() where T : unmanaged
+        public static T Bytes<T>() where T : unmanaged
         {
             var size = UnsafeUtility.SizeOf<T>();
             T result = default;

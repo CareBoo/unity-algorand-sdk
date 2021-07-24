@@ -6,7 +6,7 @@ public class MnemonicTest
 {
     private string RandomMnemonicString()
     {
-        var key = Random.RandomBytes<PrivateKey>();
+        var key = Random.Bytes<PrivateKey>();
         var mnemonic = key.ToMnemonic();
         return mnemonic.ToString();
     }
