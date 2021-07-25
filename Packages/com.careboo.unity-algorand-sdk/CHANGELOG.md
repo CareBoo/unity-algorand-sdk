@@ -1,3 +1,10 @@
+# [1.0.0-exp.8](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.7...v1.0.0-exp.8) (2021-07-25)
+
+
+### Features
+
+* :sparkles: Added Transaction Header, Payment ([d3ebced](https://github.com/CareBoo/unity-algorand-sdk/commit/d3ebcedd3f86bdfabbb9f90a97e655fcadac1145))
+
 # [1.0.0-exp.7](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.6...v1.0.0-exp.7) (2021-07-24)
 
 
