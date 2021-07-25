@@ -1,20 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using AlgoSdk.Crypto;
-using System.Text;
 using NUnit.Framework;
-using Unity.Collections;
-using Unity.Collections.LowLevel.Unsafe;
 using System.Runtime.InteropServices;
 
 public class RandomTest
 {
-    [Test]
-    public void GeneratedRandomBytesIsSameLengthAsSize()
-    {
-
-    }
-
     [StructLayout(LayoutKind.Explicit, Size = 5)]
     internal struct TestStruct
     {

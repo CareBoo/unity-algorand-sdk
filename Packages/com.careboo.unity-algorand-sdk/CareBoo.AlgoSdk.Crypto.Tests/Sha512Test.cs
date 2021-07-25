@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using AlgoSdk.Crypto;
-using System.Text;
 using NUnit.Framework;
 
 public class Sha512Test
