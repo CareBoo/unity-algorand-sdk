@@ -280,7 +280,7 @@ namespace MessagePack.Unity.Editor
                 UseShellExecute = false,
                 FileName = fileName,
                 Arguments = arguments,
-                WorkingDirectory = Application.dataPath
+                WorkingDirectory = Application.dataPath.Substring(0, Application.dataPath.Length - "Assets/".Length)
             };
 
             Process p;

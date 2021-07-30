@@ -1,7 +1,10 @@
 {
     "name": "MessagePack.Unity.Editor",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "MessagePack",
+        "CareBoo.AlgoSdk"
+    ],
     "includePlatforms": [
         "Editor"
     ],

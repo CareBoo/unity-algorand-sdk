@@ -2,12 +2,16 @@ using System;
 using System.Runtime.InteropServices;
 using AlgoSdk.Crypto;
 using AlgoSdk.LowLevel;
+using AlgoSdk.MsgPack;
+using MessagePack;
 using UnityEngine;
 
 namespace AlgoSdk
 {
     [Serializable]
     [StructLayout(LayoutKind.Explicit, Size = 32)]
+    [MessagePackObject]
+    [MessagePackFormatter(typeof(AddressFormatter))]
     public struct Address
     : IByteArray
     {
