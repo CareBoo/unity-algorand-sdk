@@ -1,3 +1,10 @@
+# [1.0.0-exp.9](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.8...v1.0.0-exp.9) (2021-08-02)
+
+
+### Features
+
+* :sparkles: Add basic transaction support for message pack serialization and deserialization ([63243ed](https://github.com/CareBoo/unity-algorand-sdk/commit/63243ed492919522a752784756de2633d17a79fa))
+
 # [1.0.0-exp.8](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.7...v1.0.0-exp.8) (2021-07-25)
 
 
