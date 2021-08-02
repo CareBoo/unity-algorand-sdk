@@ -2,18 +2,15 @@ using System;
 using System.Runtime.InteropServices;
 using AlgoSdk.Crypto;
 using AlgoSdk.LowLevel;
-using AlgoSdk.MsgPack;
-using MessagePack;
 using UnityEngine;
 
 namespace AlgoSdk
 {
     [Serializable]
     [StructLayout(LayoutKind.Explicit, Size = 32)]
-    [MessagePackObject]
-    [MessagePackFormatter(typeof(AddressFormatter))]
     public struct Address
     : IByteArray
+    , IEquatable<Address>
     {
         [Serializable]
         [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
@@ -47,20 +44,20 @@ namespace AlgoSdk
 
             public bool Equals(CheckSum other)
             {
-                for (var i = 0; i < Length; i++)
-                    if (this[i] != other[i])
-                        return false;
-                return true;
+                return ByteArray.Equals(in this, in other);
             }
 
             public static implicit operator CheckSum(Sha512_256_Hash hash)
             {
                 var checkSum = new CheckSum();
+                var hashStart = hash.Length - checkSum.Length;
                 for (var i = 0; i < checkSum.Length; i++)
-                    checkSum[i] = hash[i + hash.Length - checkSum.Length];
+                    checkSum[i] = hash[i + hashStart];
                 return checkSum;
             }
         }
+
+        public const int SizeBytes = Ed25519.PublicKey.SizeBytes;
 
         [SerializeField] [FieldOffset(0)] internal Ed25519.PublicKey publicKey;
 
@@ -77,11 +74,6 @@ namespace AlgoSdk
         public CheckSum ComputeCheckSum()
         {
             return Sha512.Hash256Truncated(in this);
-        }
-
-        public static implicit operator Address(Ed25519.PublicKey publicKey)
-        {
-            return new Address() { publicKey = publicKey };
         }
 
         public override string ToString()
@@ -107,6 +99,36 @@ namespace AlgoSdk
             if (!address.ComputeCheckSum().Equals(checkSum))
                 throw new ArgumentException($"Checksum for {addressString} was invalid!");
             return address;
+        }
+
+        public static implicit operator Address(Ed25519.PublicKey publicKey)
+        {
+            return new Address() { publicKey = publicKey };
+        }
+
+        public static bool operator ==(in Address a1, in Address a2)
+        {
+            return a1.Equals(a2);
+        }
+
+        public static bool operator !=(in Address a1, in Address a2)
+        {
+            return !a1.Equals(a2);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return ByteArray.Equals(in this, obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return ByteArray.GetHashCode(in this);
+        }
+
+        public bool Equals(Address other)
+        {
+            return ByteArray.Equals(in this, in other);
         }
     }
 }

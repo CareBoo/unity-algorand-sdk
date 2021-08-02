@@ -1,4 +1,3 @@
-using System;
 using AlgoSdk.LowLevel;
 using Unity.Collections;
 using Unity.Mathematics;
@@ -33,15 +32,6 @@ namespace AlgoSdk
             if (numBits != 0 && arrIndex < maxArraySize)
                 result[arrIndex] = (ushort)(buffer & baseMaxValue);
             return result;
-        }
-
-        public unsafe static ReadOnlySpan<byte> AsSpan<TByteArray>(ref this TByteArray bytes)
-            where TByteArray : unmanaged, IByteArray
-        {
-            fixed (void* b = &bytes)
-            {
-                return new ReadOnlySpan<byte>(b, bytes.Length);
-            }
         }
     }
 }

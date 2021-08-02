@@ -6,14 +6,16 @@
         "Unity.Burst",
         "Unity.Collections",
         "UnityEngine.TestRunner",
-        "CareBoo.AlgoSdk.Crypto"
+        "CareBoo.AlgoSdk.Crypto",
+        "MessagePack"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": true,
     "overrideReferences": true,
     "precompiledReferences": [
-        "nunit.framework.dll"
+        "nunit.framework.dll",
+        "System.Memory.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [

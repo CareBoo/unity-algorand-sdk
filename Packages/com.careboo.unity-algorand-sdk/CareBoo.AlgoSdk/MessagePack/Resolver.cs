@@ -1,11 +1,12 @@
 using System;
 using System.Collections.Generic;
-using AlgoSdk.MsgPack.Resolvers;
+using AlgoSdk.Crypto;
+using AlgoSdk.MsgPack.Formatters;
 using MessagePack;
 using MessagePack.Formatters;
 using Unity.Collections;
 
-namespace AlgoSdk.MsgPack
+namespace AlgoSdk.MsgPack.Resolvers
 {
     public class Resolver : IFormatterResolver
     {
@@ -13,7 +14,7 @@ namespace AlgoSdk.MsgPack
 
         public IMessagePackFormatter<T> GetFormatter<T>()
         {
-            return FormatterCache<T>.Formatter ?? GeneratedResolver.Instance.GetFormatter<T>();
+            return FormatterCache<T>.Formatter;
         }
 
         private static class FormatterCache<T>
@@ -22,33 +23,34 @@ namespace AlgoSdk.MsgPack
 
             static FormatterCache()
             {
-                var f = (IMessagePackFormatter<T>)ResolverHelper.GetFormatter(typeof(T));
+                Formatter = (IMessagePackFormatter<T>)ResolverHelper.GetFormatter(typeof(T));
             }
         }
     }
 
     internal static class ResolverHelper
     {
-        private static readonly Dictionary<Type, int> lookup = new Dictionary<Type, int>()
+        private static readonly Dictionary<Type, object> lookup = new Dictionary<Type, object>()
         {
-            {typeof(Address), 0},
-            {typeof(NativeReference<>), 1}
+            {typeof(ulong), UInt64Formatter.Instance},
+            {typeof(Address), new ByteArrayFormatter<Address>()},
+            {typeof(Sha512_256_Hash), new ByteArrayFormatter<Sha512_256_Hash>()},
+            {typeof(NativeReference<bool>), new NativeReferenceFormatter<bool>()},
+            {typeof(TransactionType), new TransactionTypeFormatter()},
+            {typeof(FixedString32), new FixedStringFormatter<FixedString32>()},
+            {typeof(NativeText), new NativeTextFormatter()},
+            {typeof(Ed25519.PublicKey), new ByteArrayFormatter<Ed25519.PublicKey>()},
+            {typeof(VrfPubkey), new ByteArrayFormatter<VrfPubkey>()},
+            {typeof(AssetParams), new ByteArrayFormatter<AssetParams>()},
+            {typeof(RawTransaction), new RawTransactionFormatter()},
+            {typeof(ITransaction), new TransactionFormatter()}
         };
 
         internal static object GetFormatter(Type t)
         {
-            UnityEngine.Debug.Log(typeof(NativeReference<>).GetGenericTypeDefinition());
-            UnityEngine.Debug.Log(typeof(Address).GetGenericTypeDefinition());
-            UnityEngine.Debug.Log(typeof(NativeReference<Address>).GetGenericTypeDefinition());
-            if (!lookup.TryGetValue(t.GetGenericTypeDefinition(), out var key))
-            {
-                return null;
-            }
-            switch (key)
-            {
-                case 0: return new AddressFormatter();
-                default: return null;
-            }
+            if (lookup.TryGetValue(t, out var formatter))
+                return formatter;
+            return null;
         }
     }
 }

@@ -1,23 +1,14 @@
 using System;
 using AlgoSdk.Crypto;
-using Unity.Collections;
+using AlgoSdk.MsgPack;
 
 namespace AlgoSdk
 {
     public interface ITransaction
     {
-        ulong Fee { get; set; }
-        ulong FirstValidRound { get; set; }
-        Sha512_256_Hash GenesisHash { get; set; }
-        ulong LastValidRound { get; set; }
-        Address Sender { get; set; }
-        TransactionType TransactionType { get; }
-
-        NativeText GenesisId { get; set; }
-        NativeReference<Address> Group { get; set; }
-        NativeReference<Address> Lease { get; set; }
-        NativeText Note { get; set; }
-        NativeReference<Address> RekeyTo { get; set; }
+        Transaction.Header GetHeader();
+        void CopyToRawTransaction(ref RawTransaction rawTransaction);
+        void CopyFromRawTransaction(in RawTransaction rawTransaction);
     }
 
     public enum TransactionType : ushort
@@ -41,6 +32,11 @@ namespace AlgoSdk
         {
             var signature = new Signature();
             return new SignedTransaction<Signature, TTransaction>(in signature, ref transaction);
+        }
+
+        public static ITransaction GetTypedTransaction(this in Header header)
+        {
+            return null;
         }
     }
 }

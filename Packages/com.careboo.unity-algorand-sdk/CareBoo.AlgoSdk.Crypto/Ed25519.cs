@@ -83,7 +83,7 @@ namespace AlgoSdk.Crypto
             }
         }
 
-        [StructLayout(LayoutKind.Explicit, Size = Size)]
+        [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
         public struct PublicKey
         : IByteArray
         , IEquatable<PublicKey>
@@ -91,7 +91,7 @@ namespace AlgoSdk.Crypto
             [FieldOffset(0)] internal FixedBytes16 offset0000;
             [FieldOffset(16)] internal FixedBytes16 offset0016;
 
-            public const int Size = 32;
+            public const int SizeBytes = 32;
 
             public unsafe IntPtr Buffer
             {
@@ -116,6 +116,26 @@ namespace AlgoSdk.Crypto
                     if (this[i] != other[i])
                         return false;
                 return true;
+            }
+
+            public override bool Equals(object obj)
+            {
+                return ByteArray.Equals(in this, obj);
+            }
+
+            public override int GetHashCode()
+            {
+                return ByteArray.GetHashCode(in this);
+            }
+
+            public static bool operator ==(in PublicKey x, in PublicKey y)
+            {
+                return ByteArray.Equals(in x, in y);
+            }
+
+            public static bool operator !=(in PublicKey x, in PublicKey y)
+            {
+                return !ByteArray.Equals(in x, in y);
             }
         }
 

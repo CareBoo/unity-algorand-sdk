@@ -16,7 +16,7 @@ namespace AlgoSdk.MsgPack
             if (options != null)
                 return;
 
-            options = MessagePackSerializerOptions.Standard.WithResolver(GeneratedResolver.Instance);
+            options = MessagePackSerializerOptions.Standard.WithResolver(Resolver.Instance);
         }
 
 #if UNITY_EDITOR

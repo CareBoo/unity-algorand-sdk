@@ -3,7 +3,9 @@
     "rootNamespace": "",
     "references": [
         "MessagePack",
-        "CareBoo.AlgoSdk"
+        "CareBoo.AlgoSdk",
+        "CareBoo.AlgoSdk.Crypto",
+        "Unity.Collections"
     ],
     "includePlatforms": [
         "Editor"

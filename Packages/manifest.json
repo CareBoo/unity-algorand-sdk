@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.unity.burst": "1.5.4",
+    "com.unity.burst": "1.5.5",
     "com.unity.ide.vscode": "1.2.3",
     "com.unity.nuget.mono-cecil": "1.10.1",
     "com.unity.package-validation-suite": "0.21.0-preview",
