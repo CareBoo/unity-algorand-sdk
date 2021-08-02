@@ -1,6 +1,7 @@
 using AlgoSdk;
 using AlgoSdk.Crypto;
 using NUnit.Framework;
+using Unity.Collections.LowLevel.Unsafe;
 
 public class MnemonicTest
 {

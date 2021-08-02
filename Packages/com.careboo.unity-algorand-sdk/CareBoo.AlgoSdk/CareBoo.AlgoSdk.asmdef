@@ -6,14 +6,17 @@
         "Unity.Collections",
         "Unity.Mathematics",
         "CareBoo.AlgoSdk.Crypto",
-        "CareBoo.AlgoSdk.LowLevel"
+        "CareBoo.AlgoSdk.LowLevel",
+        "MessagePack",
+        "MessagePack.Annotations"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": true,
     "overrideReferences": true,
     "precompiledReferences": [
-        ""
+        "System.Buffers.dll",
+        "System.Memory.dll"
     ],
     "autoReferenced": false,
     "defineConstraints": [],

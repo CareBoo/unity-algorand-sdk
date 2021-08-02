@@ -1,4 +1,7 @@
 using System;
+using AlgoSdk.LowLevel;
+using Unity.Collections;
+using Unity.Mathematics;
 
 namespace AlgoSdk
 {
@@ -47,6 +50,56 @@ namespace AlgoSdk
             return returnArray;
         }
 
+        public static unsafe void ToBytes<TByteArray, TString>(in TString s, ref TByteArray bytes)
+            where TByteArray : struct, IByteArray
+            where TString : struct, IUTF8Bytes, INativeList<byte>
+        {
+            if (s.Length == 0)
+            {
+                throw new ArgumentNullException(nameof(s));
+            }
+
+            var length = s.Length;
+            while (s[length - 1] == PaddingCharValue)
+                length--;
+
+            int byteCount = length * 5 / 8; //this must be TRUNCATED
+            if (bytes.Length != byteCount)
+                throw new ArgumentException($"bytes.Length ({bytes.Length}) is different than expected bytes ({byteCount})");
+
+            byte curByte = 0, bitsRemaining = 8;
+            int mask = 0, arrayIndex = 0;
+            var sPtr = s.GetUnsafePtr();
+
+            var i = 0;
+            while (i < length)
+            {
+                var error = Unicode.Utf8ToUcs(out var rune, sPtr, ref i, s.Capacity);
+                int cValue = CharToValue((char)rune.value);
+
+                if (bitsRemaining > 5)
+                {
+                    mask = cValue << (bitsRemaining - 5);
+                    curByte = (byte)(curByte | mask);
+                    bitsRemaining -= 5;
+                }
+                else
+                {
+                    mask = cValue >> (5 - bitsRemaining);
+                    curByte = (byte)(curByte | mask);
+                    bytes[arrayIndex++] = curByte;
+                    curByte = (byte)(cValue << (3 + bitsRemaining));
+                    bitsRemaining += 3;
+                }
+            }
+
+            //if we didn't end with a full byte
+            if (arrayIndex != byteCount)
+            {
+                bytes[arrayIndex] = curByte;
+            }
+        }
+
         public static string ToString(byte[] input)
         {
             if (input == null || input.Length == 0)
@@ -85,6 +138,45 @@ namespace AlgoSdk
 
             return new string(returnArray);
         }
+
+        public static void ToString<TByteArray, TString>(in TByteArray bytes, ref TString s)
+            where TByteArray : struct, IByteArray
+            where TString : struct, IUTF8Bytes, INativeList<byte>
+        {
+            if (bytes.Length == 0)
+                throw new ArgumentNullException(nameof(bytes));
+
+            s.Length = (int)math.ceil(bytes.Length / 5f) * 8;
+
+            byte nextCharByte = 0, bitsRemaining = 5;
+            int arrayIndex = 0;
+
+            for (var i = 0; i < bytes.Length; i++)
+            {
+                var b = bytes[i];
+                nextCharByte = (byte)(nextCharByte | (b >> (8 - bitsRemaining)));
+                s[arrayIndex++] = (byte)ValueToChar(nextCharByte);
+
+                if (bitsRemaining < 4)
+                {
+                    nextCharByte = (byte)((b >> (3 - bitsRemaining)) & 31);
+                    s[arrayIndex++] = (byte)ValueToChar(nextCharByte);
+                    bitsRemaining += 5;
+                }
+
+                bitsRemaining -= 3;
+                nextCharByte = (byte)((b << bitsRemaining) & 31);
+            }
+
+            //if we didn't end with a full char
+            if (arrayIndex != s.Length)
+            {
+                s[arrayIndex++] = (byte)ValueToChar(nextCharByte);
+                while (arrayIndex != s.Length) s[arrayIndex++] = PaddingCharValue; //padding
+            }
+        }
+
+        public static readonly byte PaddingCharValue = (byte)'=';
 
         private static int CharToValue(char c)
         {

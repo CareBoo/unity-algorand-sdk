@@ -1,0 +1,21 @@
+{
+    "name": "MessagePack.Unity.Editor",
+    "rootNamespace": "",
+    "references": [
+        "MessagePack",
+        "CareBoo.AlgoSdk",
+        "CareBoo.AlgoSdk.Crypto",
+        "Unity.Collections"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
