@@ -1,26 +1,27 @@
-using System;
 using AlgoSdk.Crypto;
+using AlgoSdk.MsgPack;
 using Unity.Collections;
+using Unity.Jobs;
 
 namespace AlgoSdk
 {
     public static partial class Transaction
     {
-        public struct Header
-        : IDisposable
+        public struct Header : ITransaction, INativeDisposable
         {
             public ulong Fee;
             public ulong FirstValidRound;
             public Sha512_256_Hash GenesisHash;
             public ulong LastValidRound;
             public Address Sender;
-            public readonly TransactionType TransactionType;
+            TransactionType transactionType;
+            public FixedString32 GenesisId;
+            public Address Group;
+            public Address Lease;
+            public NativeText Note;
+            public Address RekeyTo;
 
-            NativeText genesisId;
-            NativeReference<Address> group;
-            NativeReference<Address> lease;
-            NativeText note;
-            NativeReference<Address> rekeyTo;
+            public TransactionType TransactionType => transactionType;
 
             public Header(
                 in ulong fee,
@@ -36,100 +37,58 @@ namespace AlgoSdk
                 GenesisHash = genesisHash;
                 LastValidRound = lastValidRound;
                 Sender = sender;
-                TransactionType = transactionType;
+                this.transactionType = transactionType;
 
-                genesisId = default;
-                group = default;
-                lease = default;
-                note = default;
-                rekeyTo = default;
+                GenesisId = default;
+                Group = default;
+                Lease = default;
+                Note = default;
+                RekeyTo = default;
             }
 
-            public NativeText GenesisId => genesisId;
-
-            public void SetGenesisId(ref NativeText value)
+            public JobHandle Dispose(JobHandle inputDeps)
             {
-                if (genesisId.IsCreated)
-                    genesisId.Dispose();
-                genesisId = value;
-            }
-
-            public NativeReference<Address>.ReadOnly Group => group.AsReadOnly();
-
-            public void SetGroup(ref NativeReference<Address> value)
-            {
-                if (group.IsCreated)
-                    group.Dispose();
-                group = value;
-            }
-
-            public NativeReference<Address>.ReadOnly Lease => lease.AsReadOnly();
-
-            public void SetLease(ref NativeReference<Address> value)
-            {
-                if (lease.IsCreated)
-                    lease.Dispose();
-                lease = value;
-            }
-
-            public NativeText Note => note;
-
-            public void SetNote(NativeText value)
-            {
-                if (note.IsCreated)
-                    note.Dispose();
-                note = value;
-            }
-
-            public NativeReference<Address>.ReadOnly RekeyTo => rekeyTo.AsReadOnly();
-
-            public void SetRekeyTo(ref NativeReference<Address> value)
-            {
-                if (rekeyTo.IsCreated)
-                    rekeyTo.Dispose();
-                rekeyTo = value;
+                return Note.Dispose(inputDeps);
             }
 
             public void Dispose()
             {
-                if (genesisId.IsCreated)
-                    genesisId.Dispose();
-                if (group.IsCreated)
-                    group.Dispose();
-                if (lease.IsCreated)
-                    lease.Dispose();
-                if (note.IsCreated)
-                    note.Dispose();
-                if (rekeyTo.IsCreated)
-                    rekeyTo.Dispose();
+                Note.Dispose();
             }
 
-            public readonly ref struct ReadOnly
+            public Header GetHeader()
             {
-                readonly Header header;
-
-                internal ReadOnly(in Header header)
-                {
-                    this.header = header;
-                }
-
-                public ulong Fee => header.Fee;
-                public ulong FirstValidRound => header.FirstValidRound;
-                public Sha512_256_Hash GenesisHash => header.GenesisHash;
-                public ulong LastValidRound => header.LastValidRound;
-                public Address Sender => header.Sender;
-                public TransactionType TransactionType => header.TransactionType;
-
-                public NativeText GenesisId => header.GenesisId;
-                public NativeReference<Address>.ReadOnly Group => header.Group;
-                public NativeReference<Address>.ReadOnly Lease => header.Lease;
-                public NativeText Note => header.Note;
-                public NativeReference<Address>.ReadOnly RekeyTo => header.RekeyTo;
+                return this;
             }
 
-            public ReadOnly AsReadOnly()
+            public void CopyToRawTransaction(ref RawTransaction rawTransaction)
             {
-                return new ReadOnly(in this);
+                rawTransaction.Fee = Fee;
+                rawTransaction.FirstValidRound = FirstValidRound;
+                rawTransaction.GenesisHash = GenesisHash;
+                rawTransaction.LastValidRound = LastValidRound;
+                rawTransaction.Sender = Sender;
+                rawTransaction.TransactionType = TransactionType;
+                rawTransaction.GenesisId = GenesisId;
+                rawTransaction.Group = Group;
+                rawTransaction.Lease = Lease;
+                rawTransaction.Note = Note;
+                rawTransaction.RekeyTo = RekeyTo;
+            }
+
+            public void CopyFromRawTransaction(in RawTransaction rawTransaction)
+            {
+                Fee = rawTransaction.Fee;
+                FirstValidRound = rawTransaction.FirstValidRound;
+                GenesisHash = rawTransaction.GenesisHash;
+                LastValidRound = rawTransaction.LastValidRound;
+                Sender = rawTransaction.Sender;
+                transactionType = rawTransaction.TransactionType;
+                GenesisId = rawTransaction.GenesisId;
+                Group = rawTransaction.Group;
+                Lease = rawTransaction.Lease;
+                Note = rawTransaction.Note;
+                RekeyTo = rawTransaction.RekeyTo;
             }
         }
     }

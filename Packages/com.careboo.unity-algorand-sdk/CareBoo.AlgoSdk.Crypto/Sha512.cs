@@ -117,5 +117,15 @@ namespace AlgoSdk.Crypto
                     return false;
             return true;
         }
+
+        public static bool operator ==(in Sha512_256_Hash x, in Sha512_256_Hash y)
+        {
+            return ByteArray.Equals(in x, in y);
+        }
+
+        public static bool operator !=(in Sha512_256_Hash x, in Sha512_256_Hash y)
+        {
+            return !ByteArray.Equals(in x, in y);
+        }
     }
 }

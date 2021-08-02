@@ -1,5 +1,6 @@
-
 using System;
+using System.Buffers;
+using System.Collections.Generic;
 using System.Diagnostics;
 using Unity.Collections.LowLevel.Unsafe;
 using Unity.Mathematics;
@@ -10,6 +11,33 @@ namespace AlgoSdk.LowLevel
     {
         IntPtr Buffer { get; }
         int Length { get; }
+        byte this[int index] { get; set; }
+    }
+
+    public struct ByteArrayComparer<T> : IEqualityComparer<T> where T : unmanaged, IByteArray
+    {
+        public static bool Equals(in T x, in T y)
+        {
+            for (var i = 0; i < x.Length; i++)
+                if (ByteArray.ReadByteAt(x, i) != ByteArray.ReadByteAt(y, i))
+                    return false;
+            return true;
+        }
+
+        public static unsafe int GetHashCode(in T obj)
+        {
+            return UnsafeUtility.ReadArrayElement<int>((void*)obj.Buffer, 0);
+        }
+
+        bool IEqualityComparer<T>.Equals(T x, T y)
+        {
+            return Equals(in x, in y);
+        }
+
+        int IEqualityComparer<T>.GetHashCode(T obj)
+        {
+            return GetHashCode(in obj);
+        }
     }
 
     public static class ByteArray
@@ -21,7 +49,7 @@ namespace AlgoSdk.LowLevel
                 throw new IndexOutOfRangeException($"Index {index} is out of range [0, {length}).");
         }
 
-        public static byte GetByteAt<TByteArray>(ref this TByteArray bytes, int index)
+        public static byte GetByteAt<TByteArray>(this ref TByteArray bytes, int index)
             where TByteArray : unmanaged, IByteArray
         {
             CheckElementAccess(index, bytes.Length);
@@ -41,6 +69,16 @@ namespace AlgoSdk.LowLevel
             }
         }
 
+        public static byte ReadByteAt<TByteArray>(in TByteArray bytes, int index)
+            where TByteArray : unmanaged, IByteArray
+        {
+            CheckElementAccess(index, bytes.Length);
+            unsafe
+            {
+                return UnsafeUtility.ReadArrayElement<byte>((byte*)bytes.Buffer, index);
+            }
+        }
+
         public static byte[] ToRawBytes<TByteArray>(ref this TByteArray bytes)
             where TByteArray : unmanaged, IByteArray
         {
@@ -57,6 +95,68 @@ namespace AlgoSdk.LowLevel
             var length = math.min(from.Length, to.Length);
             for (var i = 0; i < length; i++)
                 to.SetByteAt(i, from.GetByteAt(i));
+        }
+
+        public unsafe static ReadOnlySpan<byte> AsReadOnlySpan<TByteArray>(ref this TByteArray bytes)
+            where TByteArray : unmanaged, IByteArray
+        {
+            fixed (void* b = &bytes)
+            {
+                return new ReadOnlySpan<byte>(b, bytes.Length);
+            }
+        }
+
+        public unsafe static Span<byte> AsSpan<TByteArray>(ref this TByteArray bytes)
+            where TByteArray : unmanaged, IByteArray
+        {
+            fixed (void* b = &bytes)
+            {
+                return new Span<byte>(b, bytes.Length);
+            }
+        }
+
+        public static TByteArray ToByteArray<TByteArray>(this in Span<byte> span)
+            where TByteArray : unmanaged, IByteArray
+        {
+            TByteArray bytes = default;
+            span.CopyTo(bytes.AsSpan());
+            return bytes;
+        }
+
+        public static TByteArray ToByteArray<TByteArray>(this in ReadOnlySpan<byte> span)
+            where TByteArray : unmanaged, IByteArray
+        {
+            TByteArray bytes = default;
+            span.CopyTo(bytes.AsSpan());
+            return bytes;
+        }
+
+        public static TByteArray ToByteArray<TByteArray>(this in ReadOnlySequence<byte> seq)
+            where TByteArray : unmanaged, IByteArray
+        {
+            TByteArray bytes = default;
+            seq.CopyTo(bytes.AsSpan());
+            return bytes;
+        }
+
+        public static bool Equals<TByteArray>(in TByteArray x, in TByteArray y)
+            where TByteArray : unmanaged, IByteArray
+        {
+            return ByteArrayComparer<TByteArray>.Equals(in x, in y);
+        }
+
+        public static bool Equals<TByteArray>(in TByteArray x, object obj)
+            where TByteArray : unmanaged, IByteArray
+        {
+            if (obj is TByteArray y)
+                return Equals(in x, in y);
+            return false;
+        }
+
+        public static int GetHashCode<TByteArray>(in TByteArray bytes)
+            where TByteArray : unmanaged, IByteArray
+        {
+            return ByteArrayComparer<TByteArray>.GetHashCode(in bytes);
         }
     }
 }
