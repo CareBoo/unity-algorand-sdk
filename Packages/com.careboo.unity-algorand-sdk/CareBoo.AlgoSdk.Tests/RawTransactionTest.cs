@@ -24,5 +24,6 @@ public class RawTransactionTest : MonoBehaviour
         var bytes = MessagePackSerializer.Serialize(transaction, Config.Options);
         var json = MessagePackSerializer.ConvertToJson(bytes, Config.Options);
         UnityEngine.Debug.Log(json);
+        UnityEngine.Debug.Log(System.Convert.ToBase64String(bytes));
     }
 }

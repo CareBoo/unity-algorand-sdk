@@ -33,11 +33,12 @@ namespace AlgoSdk.MsgPack.Resolvers
         private static readonly Dictionary<Type, object> lookup = new Dictionary<Type, object>()
         {
             {typeof(ulong), UInt64Formatter.Instance},
-            {typeof(Address), new ByteArrayFormatter<Address>()},
+            {typeof(Address), new AddressFormatter()},
             {typeof(Sha512_256_Hash), new ByteArrayFormatter<Sha512_256_Hash>()},
             {typeof(NativeReference<bool>), new NativeReferenceFormatter<bool>()},
             {typeof(TransactionType), new TransactionTypeFormatter()},
             {typeof(FixedString32), new FixedStringFormatter<FixedString32>()},
+            {typeof(FixedString128), new FixedStringFormatter<FixedString128>()},
             {typeof(NativeText), new NativeTextFormatter()},
             {typeof(Ed25519.PublicKey), new ByteArrayFormatter<Ed25519.PublicKey>()},
             {typeof(VrfPubkey), new ByteArrayFormatter<VrfPubkey>()},

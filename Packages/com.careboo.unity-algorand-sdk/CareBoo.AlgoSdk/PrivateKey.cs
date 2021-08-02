@@ -38,9 +38,14 @@ namespace AlgoSdk
             return result;
         }
 
-        public Address ToAddress()
+        public Ed25519.PublicKey ToPublicKey()
         {
             return seed.ToPublicKey();
+        }
+
+        public Address ToAddress()
+        {
+            return ToPublicKey();
         }
 
         public bool Equals(PrivateKey other)
@@ -53,12 +58,12 @@ namespace AlgoSdk
 
         public override string ToString()
         {
-            var address = ToAddress();
-            var bytes = new byte[this.Length + address.Length];
+            var pk = ToPublicKey();
+            var bytes = new byte[this.Length + pk.Length];
             for (var i = 0; i < this.Length; i++)
                 bytes[i] = this[i];
-            for (var i = 0; i < address.Length; i++)
-                bytes[i + this.Length] = address[i];
+            for (var i = 0; i < pk.Length; i++)
+                bytes[i + this.Length] = pk[i];
             return System.Convert.ToBase64String(bytes);
         }
 

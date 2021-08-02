@@ -1,5 +1,5 @@
-using AlgoSdk.LowLevel;
 using MessagePack;
+using Unity.Collections;
 
 namespace AlgoSdk.MsgPack.Formatters
 {
@@ -7,12 +7,14 @@ namespace AlgoSdk.MsgPack.Formatters
     {
         public Address Deserialize(ref MessagePackReader reader, MessagePackSerializerOptions options)
         {
-            return reader.ReadBytes().Value.ToByteArray<Address>();
+            var s = options.Resolver.GetFormatter<FixedString128>().Deserialize(ref reader, options);
+            return Address.FromString(in s);
         }
 
         public void Serialize(ref MessagePackWriter writer, Address value, MessagePackSerializerOptions options)
         {
-            writer.Write(value.AsReadOnlySpan());
+            var s = value.ToFixedString();
+            options.Resolver.GetFormatter<FixedString128>().Serialize(ref writer, s, options);
         }
     }
 }
