@@ -50,7 +50,7 @@ namespace AlgoSdk.LowLevel
         }
 
         public static byte GetByteAt<TByteArray>(this ref TByteArray bytes, int index)
-            where TByteArray : unmanaged, IByteArray
+            where TByteArray : struct, IByteArray
         {
             CheckElementAccess(index, bytes.Length);
             unsafe
@@ -60,7 +60,7 @@ namespace AlgoSdk.LowLevel
         }
 
         public static void SetByteAt<TByteArray>(ref this TByteArray bytes, int index, byte value)
-            where TByteArray : unmanaged, IByteArray
+            where TByteArray : struct, IByteArray
         {
             CheckElementAccess(index, bytes.Length);
             unsafe
@@ -70,7 +70,7 @@ namespace AlgoSdk.LowLevel
         }
 
         public static byte ReadByteAt<TByteArray>(in TByteArray bytes, int index)
-            where TByteArray : unmanaged, IByteArray
+            where TByteArray : struct, IByteArray
         {
             CheckElementAccess(index, bytes.Length);
             unsafe

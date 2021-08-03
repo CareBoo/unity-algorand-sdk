@@ -12,7 +12,7 @@ namespace AlgoSdk.Crypto
 
         [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
         internal static unsafe extern int crypto_sign_ed25519_detached(
-            byte* signature,
+            Ed25519.Signature* signature,
             out ulong signatureLength_p,
             byte* message,
             ulong messageLength,
@@ -20,9 +20,14 @@ namespace AlgoSdk.Crypto
 
         [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
         internal static extern int crypto_sign_ed25519_verify_detached(
-            byte* signature,
+            Ed25519.Signature* signature,
             byte* message,
             ulong messageLength,
             Ed25519.PublicKey* pk);
+
+        [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
+        internal static unsafe extern int crypto_sign_ed25519_sk_to_seed(
+            Ed25519.Seed* seed,
+            SecureMemoryHandle sk);
     }
 }

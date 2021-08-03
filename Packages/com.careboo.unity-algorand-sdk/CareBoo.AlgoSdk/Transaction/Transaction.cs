@@ -1,6 +1,9 @@
 using System;
 using AlgoSdk.Crypto;
+using AlgoSdk.LowLevel;
 using AlgoSdk.MsgPack;
+using MessagePack;
+using Unity.Collections;
 
 namespace AlgoSdk
 {
@@ -25,18 +28,26 @@ namespace AlgoSdk
 
     public static partial class Transaction
     {
-        public static SignedTransaction<Signature, TTransaction> Sign<TTransaction>(
-            this ref TTransaction transaction, in PrivateKey privateKey
+        public static SignedTransaction<TTransaction> Sign<TTransaction>(
+            this ref TTransaction transaction, in Ed25519.SecretKeyHandle secretKey
             )
-            where TTransaction : unmanaged, ITransaction, IDisposable
+            where TTransaction : struct, ITransaction, IDisposable
         {
-            var signature = new Signature();
-            return new SignedTransaction<Signature, TTransaction>(in signature, ref transaction);
+            using var message = transaction.ToMessagePack(Allocator.Temp);
+            var signature = secretKey.Sign(message);
+            return new SignedTransaction<TTransaction>(in signature, ref transaction);
         }
 
-        public static ITransaction GetTypedTransaction(this in Header header)
+        public static NativeByteArray ToMessagePack<TTransaction>(
+            this ref TTransaction transaction,
+            Allocator allocator
+            )
+            where TTransaction : struct, ITransaction, IDisposable
         {
-            return null;
+            var rawTransaction = new RawTransaction();
+            transaction.CopyToRawTransaction(ref rawTransaction);
+            var data = MessagePackSerializer.Serialize(rawTransaction, Config.Options);
+            return new NativeByteArray(data, allocator);
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Runtime.InteropServices;
 using AlgoSdk.LowLevel;
 using Unity.Collections;
 using Unity.Jobs;
+using UnityEngine.Assertions;
 using static AlgoSdk.Crypto.sodium;
 
 namespace AlgoSdk.Crypto
@@ -37,6 +38,22 @@ namespace AlgoSdk.Crypto
             public static implicit operator SecretKeyHandle(SecureMemoryHandle secureMemoryHandle)
             {
                 return new SecretKeyHandle() { handle = secureMemoryHandle };
+            }
+
+            public Signature Sign<TMessage>(in TMessage message)
+                where TMessage : IByteArray
+            {
+                var signature = new Signature();
+                crypto_sign_ed25519_detached(&signature, out var signatureLength, (byte*)message.Buffer, (ulong)message.Length, this);
+                Assert.AreEqual(signatureLength, (ulong)signature.Length);
+                return signature;
+            }
+
+            public Seed ToSeed()
+            {
+                var seed = new Seed();
+                crypto_sign_ed25519_sk_to_seed(&seed, this);
+                return seed;
             }
         }
 
@@ -77,9 +94,20 @@ namespace AlgoSdk.Crypto
 
             public PublicKey ToPublicKey()
             {
-                var (sk, pk) = CreateKey(in this);
+                var (sk, pk) = ToKeys();
                 sk.Dispose();
                 return pk;
+            }
+
+            public (SecretKeyHandle, PublicKey) ToKeys()
+            {
+                var pk = new PublicKey();
+                var sk = SecretKeyHandle.Create();
+                fixed (Seed* seedPtr = &this)
+                {
+                    int error = crypto_sign_ed25519_seed_keypair(&pk, sk, seedPtr);
+                }
+                return (sk, pk);
             }
         }
 
@@ -139,15 +167,65 @@ namespace AlgoSdk.Crypto
             }
         }
 
-        public static (SecretKeyHandle sk, PublicKey pk) CreateKey(in Seed seed)
+        [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
+        public struct Signature
+        : IByteArray
+        , IEquatable<Signature>
         {
-            var pk = new PublicKey();
-            var sk = SecretKeyHandle.Create();
-            fixed (Seed* seedPtr = &seed)
+            public const int SizeBytes = 64;
+            [FieldOffset(0)] internal FixedBytes64 buffer;
+
+            public byte this[int index]
             {
-                int error = crypto_sign_ed25519_seed_keypair(&pk, sk, seedPtr);
+                get => this.GetByteAt(index);
+                set => this.SetByteAt(index, value);
             }
-            return (sk, pk);
+
+            public unsafe IntPtr Buffer
+            {
+                get
+                {
+                    fixed (byte* b = &buffer.offset0000.offset0000.byte0000)
+                        return (IntPtr)b;
+                }
+            }
+
+            public int Length => SizeBytes;
+
+            public bool Verify<TMessage>(TMessage message, PublicKey pk)
+                where TMessage : IByteArray
+            {
+                fixed (Signature* s = &this)
+                {
+                    var error = crypto_sign_ed25519_verify_detached(s, (byte*)message.Buffer, (ulong)message.Length, &pk);
+                    return error == 0;
+                }
+            }
+
+            public bool Equals(Signature other)
+            {
+                return ByteArray.Equals(in this, in other);
+            }
+
+            public override bool Equals(object obj)
+            {
+                return ByteArray.Equals(in this, obj);
+            }
+
+            public override int GetHashCode()
+            {
+                return ByteArray.GetHashCode(in this);
+            }
+
+            public static bool operator ==(in Signature x, in Signature y)
+            {
+                return ByteArray.Equals(in x, in y);
+            }
+
+            public static bool operator !=(in Signature x, in Signature y)
+            {
+                return !ByteArray.Equals(in x, in y);
+            }
         }
     }
 }
