@@ -106,9 +106,15 @@ namespace AlgoSdk
             set => this.SetByteAt(index, value);
         }
 
-        public CheckSum ComputeCheckSum()
+        private static CheckSum ComputeCheckSum(in Ed25519.PublicKey publicKey)
         {
             return Sha512.Hash256Truncated(in publicKey);
+        }
+
+        public Address GenerateCheckSum()
+        {
+            checkSum = ComputeCheckSum(in publicKey);
+            return this;
         }
 
         public FixedString128 ToFixedString()
@@ -132,7 +138,7 @@ namespace AlgoSdk
         {
             var address = new Address();
             Base32Encoding.ToBytes(in s, ref address);
-            CheckSum checkSum = address.ComputeCheckSum();
+            CheckSum checkSum = ComputeCheckSum(in address.publicKey);
             if (address.checkSum != checkSum)
                 throw new ArgumentException($"Checksum for {s} was invalid. Got {checkSum} but was expecting {address.checkSum}");
             return address;

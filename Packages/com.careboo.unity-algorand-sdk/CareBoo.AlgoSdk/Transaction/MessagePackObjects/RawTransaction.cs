@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using AlgoSdk.Crypto;
 using MessagePack;
@@ -7,6 +8,7 @@ namespace AlgoSdk.MsgPack
 {
     [MessagePackObject]
     public struct RawTransaction
+        : IEquatable<RawTransaction>
     {
         [Key("fee")]
         public ulong Fee;
@@ -159,6 +161,7 @@ namespace AlgoSdk.MsgPack
             "fv",
             "gen",
             "gh",
+            "grp",
             "lv",
             "lx",
             "nonpart",
@@ -205,6 +208,7 @@ namespace AlgoSdk.MsgPack
             (in RawTransaction data) => data.FirstValidRound != default,
             (in RawTransaction data) => data.GenesisId != default,
             (in RawTransaction data) => data.GenesisHash != default,
+            (in RawTransaction data) => data.Group != default,
             (in RawTransaction data) => data.LastValidRound != default,
             (in RawTransaction data) => data.Lease != default,
             (in RawTransaction data) => data.NonParticipation.IsCreated,
@@ -253,6 +257,7 @@ namespace AlgoSdk.MsgPack
             {"fv", (GetSerializer((in RawTransaction r) => r.FirstValidRound), GetDeserializer((ref RawTransaction r, ulong value) => r.FirstValidRound = value))},
             {"gen", (GetSerializer((in RawTransaction r) => r.GenesisId), GetDeserializer((ref RawTransaction r, FixedString32 value) => r.GenesisId = value))},
             {"gh", (GetSerializer((in RawTransaction r) => r.GenesisHash), GetDeserializer((ref RawTransaction r, Sha512_256_Hash value) => r.GenesisHash = value))},
+            {"grp", (GetSerializer((in RawTransaction r) => r.Group), GetDeserializer((ref RawTransaction r, Address value) => r.Group = value))},
             {"lv", (GetSerializer((in RawTransaction r) => r.LastValidRound), GetDeserializer((ref RawTransaction r, ulong value) => r.LastValidRound = value))},
             {"lx", (GetSerializer((in RawTransaction r) => r.Lease), GetDeserializer((ref RawTransaction r, Address value) => r.Lease = value))},
             {"nonpart", (GetSerializer((in RawTransaction r) => r.NonParticipation), GetDeserializer((ref RawTransaction r, NativeReference<bool> value) => r.NonParticipation = value))},
@@ -295,6 +300,78 @@ namespace AlgoSdk.MsgPack
                 if (ShouldSerialize[i](in this))
                     list.Add(OrderedFields[i]);
             return list;
+        }
+
+        public bool Equals(RawTransaction other)
+        {
+            return Fee.Equals(other.Fee)
+                && FirstValidRound.Equals(other.FirstValidRound)
+                && GenesisHash.Equals(other.GenesisHash)
+                && LastValidRound.Equals(other.LastValidRound)
+                && Sender.Equals(other.Sender)
+                && TransactionType.Equals(other.TransactionType)
+                && GenesisId.Equals(other.GenesisId)
+                && Group.Equals(other.Group)
+                && Lease.Equals(other.Lease)
+                && Note.IsCreated == other.Note.IsCreated
+                && (!Note.IsCreated || Note.Equals(other.Note))
+                && RekeyTo.Equals(other.RekeyTo)
+                && AssetAmount.Equals(other.AssetAmount)
+                && AssetCloseTo.Equals(other.AssetCloseTo)
+                && AssetFrozen.IsCreated == other.AssetFrozen.IsCreated
+                && (!AssetFrozen.IsCreated || AssetFrozen.Equals(other.AssetFrozen))
+                && Amount.Equals(other.Amount)
+                && AppArguments.IsCreated == other.AppArguments.IsCreated
+                && (!AppArguments.IsCreated || AppArguments.Equals(other.AppArguments))
+                && OnComplete.Equals(other.OnComplete)
+                && ApprovalProgram.IsCreated == other.ApprovalProgram.IsCreated
+                && (!ApprovalProgram.IsCreated || ApprovalProgram.Equals(other.ApprovalProgram))
+                && AssetParams.Equals(other.AssetParams)
+                && ForeignAssets.IsCreated == other.ForeignAssets.IsCreated
+                && (!ForeignAssets.IsCreated || ForeignAssets.Equals(other.ForeignAssets))
+                && Accounts.IsCreated == other.Accounts.IsCreated
+                && (!Accounts.IsCreated || Accounts.Equals(other.Accounts))
+                && ExtraProgramPages.Equals(other.ExtraProgramPages)
+                && ForeignApps.IsCreated == other.ForeignApps.IsCreated
+                && (!ForeignApps.IsCreated || ForeignApps.Equals(other.ForeignApps))
+                && GlobalStateSchema.Equals(other.GlobalStateSchema)
+                && ApplicationId.Equals(other.ApplicationId)
+                && LocalStateSchema.Equals(other.LocalStateSchema)
+                && ClearStateProgram.IsCreated == other.ClearStateProgram.IsCreated
+                && (!ClearStateProgram.IsCreated || ClearStateProgram.Equals(other.ClearStateProgram))
+                && AssetReceiver.Equals(other.AssetReceiver)
+                && AssetSender.Equals(other.AssetSender)
+                && ConfigAsset.Equals(other.ConfigAsset)
+                && CloseRemainderTo.Equals(other.CloseRemainderTo)
+                && FreezeAccount.Equals(other.FreezeAccount)
+                && FreezeAsset.Equals(other.FreezeAsset)
+                && NonParticipation.IsCreated == other.NonParticipation.IsCreated
+                && (!NonParticipation.IsCreated || NonParticipation.Equals(other.NonParticipation))
+                && Receiver.Equals(other.Receiver)
+                && SelectionPk.Equals(other.SelectionPk)
+                && VoteFirst.Equals(other.VoteFirst)
+                && VoteKeyDilution.Equals(other.VoteKeyDilution)
+                && VoteLast.Equals(other.VoteLast)
+                && XferAsset.Equals(other.XferAsset)
+                ;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is RawTransaction other)
+                return Equals(other);
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 17;
+                hash = hash * 31 + Fee.GetHashCode();
+                hash = hash * 31 + FirstValidRound.GetHashCode();
+                return hash;
+            }
         }
     }
 }

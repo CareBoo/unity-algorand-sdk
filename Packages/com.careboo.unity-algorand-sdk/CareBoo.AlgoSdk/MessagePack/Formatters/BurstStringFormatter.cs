@@ -1,4 +1,3 @@
-using System.Collections;
 using AlgoSdk.MsgPack;
 using MessagePack;
 using MessagePack.Formatters;
@@ -21,7 +20,7 @@ namespace AlgoSdk
 
         public void Serialize(ref MessagePackWriter writer, T value, MessagePackSerializerOptions options)
         {
-            writer.WriteString(value.ToReadOnlySpan());
+            writer.WriteString(value.AsReadOnlySpan());
         }
     }
 
@@ -39,7 +38,7 @@ namespace AlgoSdk
 
         public void Serialize(ref MessagePackWriter writer, NativeText value, MessagePackSerializerOptions options)
         {
-            writer.WriteString(value.ToReadOnlySpan());
+            writer.WriteString(value.AsReadOnlySpan());
         }
     }
 }

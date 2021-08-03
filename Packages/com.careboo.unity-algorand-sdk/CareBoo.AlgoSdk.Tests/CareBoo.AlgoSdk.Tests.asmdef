@@ -7,7 +7,8 @@
         "Unity.Collections",
         "UnityEngine.TestRunner",
         "CareBoo.AlgoSdk.Crypto",
-        "MessagePack"
+        "MessagePack",
+        "CareBoo.AlgoSdk.LowLevel"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
