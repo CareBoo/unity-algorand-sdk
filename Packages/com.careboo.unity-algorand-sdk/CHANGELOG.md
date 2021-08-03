@@ -1,3 +1,10 @@
+# [1.0.0-exp.10](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.9...v1.0.0-exp.10) (2021-08-03)
+
+
+### Features
+
+* :sparkles: Add IEquatable, GetHashCode for RawTransaction ([885928e](https://github.com/CareBoo/unity-algorand-sdk/commit/885928e3c69dbc3742d11369d5e316853d6a8e8c))
+
 # [1.0.0-exp.9](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.8...v1.0.0-exp.9) (2021-08-02)
 
 
