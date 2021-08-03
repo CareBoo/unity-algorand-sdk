@@ -3,9 +3,8 @@ using AlgoSdk.Crypto;
 using AlgoSdk.MsgPack;
 using MessagePack;
 using NUnit.Framework;
-using UnityEngine;
 
-public class RawTransactionTest : MonoBehaviour
+public class RawTransactionTest
 {
     [Test]
     public void SerializedTransactionShouldEqualDeserializedTransaction()

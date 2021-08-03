@@ -155,6 +155,11 @@ namespace AlgoSdk
             return new Address() { publicKey = publicKey };
         }
 
+        public static implicit operator Ed25519.PublicKey(Address address)
+        {
+            return address.publicKey;
+        }
+
         public static bool operator ==(in Address a1, in Address a2)
         {
             return a1.Equals(a2);

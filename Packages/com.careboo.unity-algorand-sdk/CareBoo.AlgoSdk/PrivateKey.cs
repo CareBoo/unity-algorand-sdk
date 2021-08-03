@@ -38,6 +38,11 @@ namespace AlgoSdk
             return result;
         }
 
+        public (Ed25519.SecretKeyHandle, Ed25519.PublicKey) ToKeys()
+        {
+            return seed.ToKeys();
+        }
+
         public Ed25519.PublicKey ToPublicKey()
         {
             return seed.ToPublicKey();

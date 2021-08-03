@@ -3,15 +3,14 @@ using AlgoSdk.Crypto;
 
 namespace AlgoSdk
 {
-    public readonly ref struct SignedTransaction<TSignature, TTransaction>
-        where TSignature : unmanaged, ISignature
-        where TTransaction : unmanaged, ITransaction, IDisposable
+    public readonly ref struct SignedTransaction<TTransaction>
+        where TTransaction : struct, ITransaction, IDisposable
     {
-        public readonly TSignature Signature;
+        public readonly Ed25519.Signature Signature;
         public readonly TTransaction Transaction;
 
         public SignedTransaction(
-            in TSignature signature,
+            in Ed25519.Signature signature,
             ref TTransaction transaction
         )
         {

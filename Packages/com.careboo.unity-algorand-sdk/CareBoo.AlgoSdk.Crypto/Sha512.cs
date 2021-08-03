@@ -86,8 +86,8 @@ namespace AlgoSdk.Crypto
 
     [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
     public struct Sha512_256_Hash
-    : IByteArray
-    , IEquatable<Sha512_256_Hash>
+        : IByteArray
+        , IEquatable<Sha512_256_Hash>
     {
         [FieldOffset(0)] internal FixedBytes16 offset0000;
         [FieldOffset(16)] internal FixedBytes16 offset0016;
@@ -126,6 +126,16 @@ namespace AlgoSdk.Crypto
         public static bool operator !=(in Sha512_256_Hash x, in Sha512_256_Hash y)
         {
             return !ByteArray.Equals(in x, in y);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return ByteArray.Equals(in this, obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return ByteArray.GetHashCode(in this);
         }
     }
 }
