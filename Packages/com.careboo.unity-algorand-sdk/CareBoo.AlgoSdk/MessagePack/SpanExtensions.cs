@@ -26,16 +26,16 @@ namespace AlgoSdk.MsgPack
             where TString : struct, IUTF8Bytes, INativeList<byte>
         {
             s.Length = (int)sequence.Length;
-            sequence.CopyTo(s.ToSpan());
+            sequence.CopyTo(s.AsSpan());
         }
 
-        public static unsafe Span<byte> ToSpan<TString>(this ref TString s)
+        public static unsafe Span<byte> AsSpan<TString>(this ref TString s)
             where TString : struct, IUTF8Bytes, INativeList<byte>
         {
             return new Span<byte>(s.GetUnsafePtr(), s.Length);
         }
 
-        public static unsafe ReadOnlySpan<byte> ToReadOnlySpan<TString>(this ref TString s)
+        public static unsafe ReadOnlySpan<byte> AsReadOnlySpan<TString>(this ref TString s)
             where TString : struct, IUTF8Bytes, INativeList<byte>
         {
             return new ReadOnlySpan<byte>(s.GetUnsafePtr(), s.Length);
