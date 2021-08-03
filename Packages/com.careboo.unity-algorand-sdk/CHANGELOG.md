@@ -1,3 +1,10 @@
+# [1.0.0-exp.11](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.10...v1.0.0-exp.11) (2021-08-03)
+
+
+### Features
+
+* :sparkles: Add basic signed transaction support ([bb5900f](https://github.com/CareBoo/unity-algorand-sdk/commit/bb5900fa66bc9501c3d9da26e1e984ddd1fb2cc0))
+
 # [1.0.0-exp.10](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.9...v1.0.0-exp.10) (2021-08-03)
 
 
