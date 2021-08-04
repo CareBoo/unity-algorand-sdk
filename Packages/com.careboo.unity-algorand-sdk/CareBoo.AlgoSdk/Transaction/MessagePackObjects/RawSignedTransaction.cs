@@ -1,30 +1,53 @@
 
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using AlgoSdk.MsgPack;
 using Unity.Collections;
 
 namespace AlgoSdk
 {
     public struct RawSignedTransaction
+        : IMessagePackType<RawSignedTransaction>
     {
-        public RawTransaction Transaction;
-        public Signature Sig;
-        public MultiSig MultiSig;
-        public LogicSig LogicSig;
+        public Prop<RawTransaction> Transaction;
+        public Prop<Signature> Sig;
+        public Prop<MultiSig> MultiSig;
+        public Prop<LogicSig> LogicSig;
 
-        private static readonly FixedString32[] OrderedFields = new FixedString32[]
+        private static readonly Dictionary<FixedString32, Field<RawSignedTransaction>> fields;
+
+        private static readonly FixedString32[] orderedFields;
+
+        static RawSignedTransaction()
         {
+            fields = new Dictionary<FixedString32, Field<RawSignedTransaction>>()
+            {
+                {"txn", Field<RawSignedTransaction>.Assign((ref RawSignedTransaction r) => ref r.Transaction)},
+                {"sig", Field<RawSignedTransaction>.Assign((ref RawSignedTransaction r) => ref r.Sig)},
+                {"msig", Field<RawSignedTransaction>.Assign((ref RawSignedTransaction r) => ref r.LogicSig)},
+                {"lsig", Field<RawSignedTransaction>.Assign((ref RawSignedTransaction r) => ref r.MultiSig)},
+            };
+            orderedFields = fields.Keys.ToArray();
+            Array.Sort(orderedFields);
+        }
 
-        };
+        public Dictionary<FixedString32, Field<RawSignedTransaction>> MessagePackFields => fields;
 
-        private delegate bool SerializePredicate(in RawSignedTransaction data);
-
-        private static readonly SerializePredicate[] ShouldSerialize = new SerializePredicate[]
+        public bool Equals(RawSignedTransaction other)
         {
-            (in RawSignedTransaction data) => data.Transaction != default,
-            (in RawSignedTransaction data) => data.Sig != default,
-            (in RawSignedTransaction data) => data.MultiSig != default,
-            (in RawSignedTransaction data) => data.LogicSig != default,
-    };
+            for (var i = 0; i < orderedFields.Length; i++)
+                if (!fields[orderedFields[i]].FieldsEqual(ref this, ref other))
+                    return false;
+            return true;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is RawSignedTransaction raw)
+                return Equals(raw);
+            return false;
+        }
     }
 }

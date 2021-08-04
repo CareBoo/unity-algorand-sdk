@@ -7,11 +7,11 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
-    public interface ITransaction
+    public interface ITransaction : IDisposable
     {
-        Transaction.Header GetHeader();
-        void CopyToRawTransaction(ref RawTransaction rawTransaction);
-        void CopyFromRawTransaction(in RawTransaction rawTransaction);
+        Transaction.Header Header { get; }
+        void CopyTo(ref RawTransaction rawTransaction);
+        void CopyFrom(in RawTransaction rawTransaction);
     }
 
     public enum TransactionType : ushort
@@ -28,14 +28,14 @@ namespace AlgoSdk
 
     public static partial class Transaction
     {
-        public static SignedTransaction<Signature, TTransaction> Sign<TTransaction>(
+        public static SignedTransaction<TTransaction> Sign<TTransaction>(
             this ref TTransaction transaction, in Ed25519.SecretKeyHandle secretKey
             )
-            where TTransaction : struct, ITransaction, IDisposable
+            where TTransaction : struct, ITransaction, IEquatable<TTransaction>
         {
             using var message = transaction.ToMessagePack(Allocator.Temp);
             Signature signature = secretKey.Sign(message);
-            return new SignedTransaction<Signature, TTransaction>(in signature, in transaction);
+            return new SignedTransaction<TTransaction>(in signature, in transaction);
         }
 
         public static NativeByteArray ToMessagePack<TTransaction>(
@@ -45,7 +45,7 @@ namespace AlgoSdk
             where TTransaction : struct, ITransaction, IDisposable
         {
             var rawTransaction = new RawTransaction();
-            transaction.CopyToRawTransaction(ref rawTransaction);
+            transaction.CopyTo(ref rawTransaction);
             var data = MessagePackSerializer.Serialize(rawTransaction, Config.Options);
             return new NativeByteArray(data, allocator);
         }

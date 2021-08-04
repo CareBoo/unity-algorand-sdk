@@ -152,7 +152,9 @@ namespace AlgoSdk
 
         public static implicit operator Address(Ed25519.PublicKey publicKey)
         {
-            return new Address() { publicKey = publicKey };
+            var address = new Address() { publicKey = publicKey };
+            address.GenerateCheckSum();
+            return address;
         }
 
         public static implicit operator Ed25519.PublicKey(Address address)

@@ -1,11 +1,21 @@
+using System;
 using AlgoSdk.Crypto;
 using AlgoSdk.LowLevel;
 
 namespace AlgoSdk
 {
-    public struct Signature : ISignature
+    public struct Signature
+        : ISignature
+        , IEquatable<Signature>
+        , IByteArray
     {
-        readonly Ed25519.Signature sig;
+        Ed25519.Signature sig;
+
+        public IntPtr Buffer => sig.Buffer;
+
+        public int Length => sig.Length;
+
+        public byte this[int index] { get => sig[index]; set => sig[index] = value; }
 
         public Signature(in Ed25519.Signature sig)
         {
@@ -51,6 +61,11 @@ namespace AlgoSdk
                 case Ed25519.Signature edSig: return sig == edSig;
                 default: return false;
             }
+        }
+
+        public bool Equals(Signature other)
+        {
+            return this.sig.Equals(other.sig);
         }
     }
 }

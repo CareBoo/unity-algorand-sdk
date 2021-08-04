@@ -9,11 +9,14 @@ namespace AlgoSdk
         public struct Payment
             : IDisposable
             , ITransaction
+            , IEquatable<Payment>
         {
             public Header Header;
             public Address Receiver;
             public ulong Amount;
             public Address CloseRemainderTo;
+
+            Header ITransaction.Header => Header;
 
             public Payment(
                 in ulong fee,
@@ -45,22 +48,31 @@ namespace AlgoSdk
 
             public Header GetHeader() => Header;
 
-            public void CopyToRawTransaction(ref RawTransaction rawTransaction)
+            public void CopyTo(ref RawTransaction rawTransaction)
             {
-                Header.CopyToRawTransaction(ref rawTransaction);
+                Header.CopyTo(ref rawTransaction);
                 rawTransaction.Receiver = Receiver;
                 rawTransaction.Amount = Amount;
                 if (CloseRemainderTo != default)
                     rawTransaction.CloseRemainderTo = CloseRemainderTo;
             }
 
-            public void CopyFromRawTransaction(in RawTransaction rawTransaction)
+            public void CopyFrom(in RawTransaction rawTransaction)
             {
-                Header.CopyFromRawTransaction(in rawTransaction);
+                Header.CopyFrom(in rawTransaction);
                 Receiver = rawTransaction.Receiver;
                 Amount = rawTransaction.Amount;
                 if (rawTransaction.CloseRemainderTo.IsCreated)
                     CloseRemainderTo = rawTransaction.CloseRemainderTo;
+            }
+
+            public bool Equals(Payment other)
+            {
+                return Header.Equals(other.Header)
+                    && Receiver == other.Receiver
+                    && Amount == other.Amount
+                    && CloseRemainderTo == other.CloseRemainderTo
+                    ;
             }
         }
     }
