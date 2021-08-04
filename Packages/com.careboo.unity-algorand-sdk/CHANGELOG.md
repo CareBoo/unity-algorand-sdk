@@ -1,3 +1,10 @@
+# [1.0.0-exp.12](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.11...v1.0.0-exp.12) (2021-08-04)
+
+
+### Features
+
+* Add signed transaction support for payment transactions ([c07d370](https://github.com/CareBoo/unity-algorand-sdk/commit/c07d3705f70bcc33c245aa120c667a7dcc28d6e1))
+
 # [1.0.0-exp.11](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.10...v1.0.0-exp.11) (2021-08-03)
 
 
