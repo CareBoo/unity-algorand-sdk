@@ -1,17 +1,17 @@
 using System;
-using AlgoSdk.Crypto;
 
 namespace AlgoSdk
 {
-    public readonly ref struct SignedTransaction<TTransaction>
+    public readonly struct SignedTransaction<TSignature, TTransaction>
+        where TSignature : struct, ISignature
         where TTransaction : struct, ITransaction, IDisposable
     {
-        public readonly Ed25519.Signature Signature;
+        public readonly TSignature Signature;
         public readonly TTransaction Transaction;
 
         public SignedTransaction(
-            in Ed25519.Signature signature,
-            ref TTransaction transaction
+            in TSignature signature,
+            in TTransaction transaction
         )
         {
             Signature = signature;

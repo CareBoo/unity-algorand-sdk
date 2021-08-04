@@ -28,14 +28,14 @@ namespace AlgoSdk
 
     public static partial class Transaction
     {
-        public static SignedTransaction<TTransaction> Sign<TTransaction>(
+        public static SignedTransaction<Signature, TTransaction> Sign<TTransaction>(
             this ref TTransaction transaction, in Ed25519.SecretKeyHandle secretKey
             )
             where TTransaction : struct, ITransaction, IDisposable
         {
             using var message = transaction.ToMessagePack(Allocator.Temp);
-            var signature = secretKey.Sign(message);
-            return new SignedTransaction<TTransaction>(in signature, ref transaction);
+            Signature signature = secretKey.Sign(message);
+            return new SignedTransaction<Signature, TTransaction>(in signature, in transaction);
         }
 
         public static NativeByteArray ToMessagePack<TTransaction>(

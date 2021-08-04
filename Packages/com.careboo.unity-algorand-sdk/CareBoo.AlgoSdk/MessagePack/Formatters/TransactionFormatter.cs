@@ -59,8 +59,7 @@ namespace AlgoSdk.MsgPack.Formatters
             for (var i = 0; i < length; i++)
             {
                 var key = options.Resolver.GetFormatter<FixedString32>().Deserialize(ref reader, options);
-                var (_, deserialize) = RawTransaction.Serializers[key];
-                deserialize(ref result, ref reader, options);
+                result.MessagePackFields[key].Deserialize(ref result, ref reader, options);
             }
             return result;
         }
@@ -73,8 +72,7 @@ namespace AlgoSdk.MsgPack.Formatters
             {
                 var key = fieldsToSerialize[i];
                 options.Resolver.GetFormatter<FixedString32>().Serialize(ref writer, key, options);
-                var (serialize, _) = RawTransaction.Serializers[key];
-                serialize(in value, ref writer, options);
+                value.MessagePackFields[key].Serialize(ref value, ref writer, options);
             }
         }
     }
