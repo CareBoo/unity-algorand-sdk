@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using AlgoSdk;
 using AlgoSdk.Crypto;
 using NUnit.Framework;
 using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 
 public class SignedTransactionTest
 {
@@ -22,5 +21,14 @@ public class SignedTransactionTest
         var signedTransaction = transaction.Sign(account.SecretKey);
         using var message = transaction.ToMessagePack(Allocator.Temp);
         Assert.IsTrue(signedTransaction.Signature.Verify(message, account.Address));
+    }
+
+    [Test]
+    public void SizeOfSignedTransactionShouldBeUnder4KB()
+    {
+        const int MAX_BYTES = 4000;
+        var size = UnsafeUtility.SizeOf<RawSignedTransaction>();
+        UnityEngine.Debug.Log($"Size of {nameof(RawSignedTransaction)}: {size}");
+        Assert.IsTrue(size <= MAX_BYTES);
     }
 }

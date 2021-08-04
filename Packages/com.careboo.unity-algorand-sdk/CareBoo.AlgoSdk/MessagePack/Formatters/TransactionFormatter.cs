@@ -72,7 +72,14 @@ namespace AlgoSdk.MsgPack.Formatters
             {
                 var key = fieldsToSerialize[i];
                 options.Resolver.GetFormatter<FixedString32>().Serialize(ref writer, key, options);
-                value.MessagePackFields[key].Serialize(ref value, ref writer, options);
+                try
+                {
+                    value.MessagePackFields[key].Serialize(ref value, ref writer, options);
+                }
+                catch (NullReferenceException nullReferenceException)
+                {
+                    UnityEngine.Debug.LogError($"{key} produced a null ref exception:\n{nullReferenceException}");
+                }
             }
         }
     }

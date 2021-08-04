@@ -50,7 +50,8 @@ namespace AlgoSdk
                 Header.CopyToRawTransaction(ref rawTransaction);
                 rawTransaction.Receiver = Receiver;
                 rawTransaction.Amount = Amount;
-                rawTransaction.CloseRemainderTo = CloseRemainderTo;
+                if (CloseRemainderTo != default)
+                    rawTransaction.CloseRemainderTo = CloseRemainderTo;
             }
 
             public void CopyFromRawTransaction(in RawTransaction rawTransaction)
@@ -58,7 +59,8 @@ namespace AlgoSdk
                 Header.CopyFromRawTransaction(in rawTransaction);
                 Receiver = rawTransaction.Receiver;
                 Amount = rawTransaction.Amount;
-                CloseRemainderTo = rawTransaction.CloseRemainderTo;
+                if (rawTransaction.CloseRemainderTo.IsCreated)
+                    CloseRemainderTo = rawTransaction.CloseRemainderTo;
             }
         }
     }
