@@ -3,6 +3,7 @@ using AlgoSdk.Crypto;
 using AlgoSdk.MsgPack;
 using MessagePack;
 using NUnit.Framework;
+using Unity.Collections.LowLevel.Unsafe;
 
 public class RawTransactionTest
 {
@@ -22,5 +23,14 @@ public class RawTransactionTest
         var json = MessagePackSerializer.ConvertToJson(bytes, Config.Options);
         var deserialized = MessagePackSerializer.Deserialize<RawTransaction>(bytes, Config.Options);
         Assert.AreEqual(transaction, deserialized);
+    }
+
+    [Test]
+    public void SizeOfRawTransactionShouldBeUnder4KB()
+    {
+        const int MAX_BYTES = 4000;
+        var size = UnsafeUtility.SizeOf<RawTransaction>();
+        UnityEngine.Debug.Log($"Size of {nameof(RawTransaction)}: {size}");
+        Assert.IsTrue(size <= MAX_BYTES);
     }
 }

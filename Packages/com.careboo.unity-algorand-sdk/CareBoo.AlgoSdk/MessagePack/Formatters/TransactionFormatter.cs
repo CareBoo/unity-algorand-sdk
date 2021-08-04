@@ -1,7 +1,6 @@
 using System;
 using MessagePack;
 using MessagePack.Formatters;
-using Unity.Collections;
 
 namespace AlgoSdk.MsgPack.Formatters
 {
@@ -22,7 +21,7 @@ namespace AlgoSdk.MsgPack.Formatters
         public void Serialize(ref MessagePackWriter writer, ITransaction value, MessagePackSerializerOptions options)
         {
             var rawTransaction = new RawTransaction();
-            value.CopyToRawTransaction(ref rawTransaction);
+            value.CopyTo(ref rawTransaction);
             options.Resolver.GetFormatter<RawTransaction>().Serialize(ref writer, rawTransaction, options);
         }
     }
@@ -36,46 +35,15 @@ namespace AlgoSdk.MsgPack.Formatters
             var resolver = options.Resolver;
             var rawTransaction = resolver.GetFormatter<RawTransaction>().Deserialize(ref reader, options);
             T result = default;
-            result.CopyFromRawTransaction(in rawTransaction);
+            result.CopyFrom(in rawTransaction);
             return result;
         }
 
         public void Serialize(ref MessagePackWriter writer, T value, MessagePackSerializerOptions options)
         {
             var rawTransaction = new RawTransaction();
-            value.CopyToRawTransaction(ref rawTransaction);
+            value.CopyTo(ref rawTransaction);
             options.Resolver.GetFormatter<RawTransaction>().Serialize(ref writer, rawTransaction, options);
-        }
-    }
-
-    public sealed class RawTransactionFormatter
-        : IMessagePackFormatter<RawTransaction>
-    {
-
-        public RawTransaction Deserialize(ref MessagePackReader reader, MessagePackSerializerOptions options)
-        {
-            var result = new RawTransaction();
-            var length = reader.ReadMapHeader();
-            for (var i = 0; i < length; i++)
-            {
-                var key = options.Resolver.GetFormatter<FixedString32>().Deserialize(ref reader, options);
-                var (_, deserialize) = RawTransaction.Serializers[key];
-                deserialize(ref result, ref reader, options);
-            }
-            return result;
-        }
-
-        public void Serialize(ref MessagePackWriter writer, RawTransaction value, MessagePackSerializerOptions options)
-        {
-            using var fieldsToSerialize = value.GetFieldsToSerialize(Allocator.Temp);
-            writer.WriteMapHeader(fieldsToSerialize.Length);
-            for (var i = 0; i < fieldsToSerialize.Length; i++)
-            {
-                var key = fieldsToSerialize[i];
-                options.Resolver.GetFormatter<FixedString32>().Serialize(ref writer, key, options);
-                var (serialize, _) = RawTransaction.Serializers[key];
-                serialize(in value, ref writer, options);
-            }
         }
     }
 }
