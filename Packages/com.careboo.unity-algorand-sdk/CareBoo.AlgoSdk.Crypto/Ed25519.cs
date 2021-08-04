@@ -169,8 +169,8 @@ namespace AlgoSdk.Crypto
 
         [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
         public struct Signature
-        : IByteArray
-        , IEquatable<Signature>
+            : IByteArray
+            , IEquatable<Signature>
         {
             public const int SizeBytes = 64;
             [FieldOffset(0)] internal FixedBytes64 buffer;

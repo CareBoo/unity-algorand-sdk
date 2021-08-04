@@ -33,6 +33,7 @@ namespace AlgoSdk.MsgPack.Resolvers
         private static readonly Dictionary<Type, object> lookup = new Dictionary<Type, object>()
         {
             {typeof(ulong), UInt64Formatter.Instance},
+            {typeof(bool), BooleanFormatter.Instance},
             {typeof(Address), new AddressFormatter()},
             {typeof(Sha512_256_Hash), new ByteArrayFormatter<Sha512_256_Hash>()},
             {typeof(NativeReference<bool>), new NativeReferenceFormatter<bool>()},
@@ -43,8 +44,11 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(Ed25519.PublicKey), new ByteArrayFormatter<Ed25519.PublicKey>()},
             {typeof(VrfPubkey), new ByteArrayFormatter<VrfPubkey>()},
             {typeof(AssetParams), new ByteArrayFormatter<AssetParams>()},
-            {typeof(RawTransaction), new RawTransactionFormatter()},
-            {typeof(ITransaction), new TransactionFormatter()}
+            {typeof(RawTransaction), new MessagePackTypeFormatter<RawTransaction>()},
+            {typeof(ITransaction), new TransactionFormatter()},
+            {typeof(SignedTransaction<Transaction.Payment>), new SignedTransactionFormatter<SignedTransaction<Transaction.Payment>>()},
+            {typeof(Signature), new ByteArrayFormatter<Signature>()},
+            {typeof(RawSignedTransaction), new MessagePackTypeFormatter<RawSignedTransaction>()},
         };
 
         internal static object GetFormatter(Type t)

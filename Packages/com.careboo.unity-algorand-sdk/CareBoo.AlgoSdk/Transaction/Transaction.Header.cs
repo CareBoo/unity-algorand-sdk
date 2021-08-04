@@ -1,3 +1,4 @@
+using System;
 using AlgoSdk.Crypto;
 using AlgoSdk.MsgPack;
 using Unity.Collections;
@@ -7,7 +8,10 @@ namespace AlgoSdk
 {
     public static partial class Transaction
     {
-        public struct Header : ITransaction, INativeDisposable
+        public struct Header
+            : ITransaction
+            , INativeDisposable
+            , IEquatable<Header>
         {
             public ulong Fee;
             public ulong FirstValidRound;
@@ -22,6 +26,8 @@ namespace AlgoSdk
             public Address RekeyTo;
 
             public TransactionType TransactionType => transactionType;
+
+            Header ITransaction.Header => this;
 
             public Header(
                 in ulong fee,
@@ -61,7 +67,7 @@ namespace AlgoSdk
                 return this;
             }
 
-            public void CopyToRawTransaction(ref RawTransaction rawTransaction)
+            public void CopyTo(ref RawTransaction rawTransaction)
             {
                 rawTransaction.Fee = Fee;
                 rawTransaction.FirstValidRound = FirstValidRound;
@@ -69,14 +75,19 @@ namespace AlgoSdk
                 rawTransaction.LastValidRound = LastValidRound;
                 rawTransaction.Sender = Sender;
                 rawTransaction.TransactionType = TransactionType;
-                rawTransaction.GenesisId = GenesisId;
-                rawTransaction.Group = Group;
-                rawTransaction.Lease = Lease;
-                rawTransaction.Note = Note;
-                rawTransaction.RekeyTo = RekeyTo;
+                if (GenesisId.Length > 0)
+                    rawTransaction.GenesisId = GenesisId;
+                if (Group != default)
+                    rawTransaction.Group = Group;
+                if (Lease != default)
+                    rawTransaction.Lease = Lease;
+                if (Note.IsCreated)
+                    rawTransaction.Note = Note;
+                if (RekeyTo != default)
+                    rawTransaction.RekeyTo = RekeyTo;
             }
 
-            public void CopyFromRawTransaction(in RawTransaction rawTransaction)
+            public void CopyFrom(in RawTransaction rawTransaction)
             {
                 Fee = rawTransaction.Fee;
                 FirstValidRound = rawTransaction.FirstValidRound;
@@ -84,11 +95,33 @@ namespace AlgoSdk
                 LastValidRound = rawTransaction.LastValidRound;
                 Sender = rawTransaction.Sender;
                 transactionType = rawTransaction.TransactionType;
-                GenesisId = rawTransaction.GenesisId;
-                Group = rawTransaction.Group;
-                Lease = rawTransaction.Lease;
-                Note = rawTransaction.Note;
-                RekeyTo = rawTransaction.RekeyTo;
+                if (rawTransaction.GenesisId.IsCreated)
+                    GenesisId = rawTransaction.GenesisId;
+                if (rawTransaction.Group.IsCreated)
+                    Group = rawTransaction.Group;
+                if (rawTransaction.Lease.IsCreated)
+                    Lease = rawTransaction.Lease;
+                if (rawTransaction.Note.IsCreated)
+                    Note = rawTransaction.Note;
+                if (rawTransaction.RekeyTo.IsCreated)
+                    RekeyTo = rawTransaction.RekeyTo;
+            }
+
+            public bool Equals(Header other)
+            {
+                return Fee == other.Fee
+                    && FirstValidRound == other.FirstValidRound
+                    && GenesisHash == other.GenesisHash
+                    && LastValidRound == other.LastValidRound
+                    && Sender == other.Sender
+                    && TransactionType == other.TransactionType
+                    && GenesisId == other.GenesisId
+                    && Group == other.Group
+                    && Lease == other.Lease
+                    && Note.IsCreated == other.Note.IsCreated
+                    && (!Note.IsCreated || Note.Equals(other.Note))
+                    && RekeyTo == other.RekeyTo
+                    ;
             }
         }
     }
