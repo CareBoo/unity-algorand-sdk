@@ -1,3 +1,10 @@
+# [1.0.0-exp.13](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.12...v1.0.0-exp.13) (2021-08-07)
+
+
+### Bug Fixes
+
+* :white_check_mark: Fix CI tests on Github Actions can't find libsodium ([20c4ad5](https://github.com/CareBoo/unity-algorand-sdk/commit/20c4ad56edf57cef595c2f4078bba4e15d893602)), closes [#12](https://github.com/CareBoo/unity-algorand-sdk/issues/12)
+
 # [1.0.0-exp.12](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.11...v1.0.0-exp.12) (2021-08-04)
 
 
