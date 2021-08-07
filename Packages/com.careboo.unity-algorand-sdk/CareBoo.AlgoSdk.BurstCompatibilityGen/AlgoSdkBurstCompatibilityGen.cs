@@ -1,11 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Unity.Collections.Tests;
-using UnityEditor;
-using NUnit.Framework;
-using Unity.Collections;
 
+#if UNITY_EDITOR_WIN
 public class AlgoSdkBurstCompatibilityGen : BurstCompatibilityTests
 {
     public AlgoSdkBurstCompatibilityGen() : base(
@@ -15,3 +10,4 @@ public class AlgoSdkBurstCompatibilityGen : BurstCompatibilityTests
     )
     { }
 }
+#endif
