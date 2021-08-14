@@ -8,6 +8,13 @@
         "com.unity.collections": "1.0.0-pre.3"
       }
     },
+    "com.cysharp.unitask": {
+      "version": "2.2.5",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
     "com.unity.burst": {
       "version": "1.5.5",
       "depth": 0,
