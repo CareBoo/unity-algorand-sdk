@@ -1,7 +1,10 @@
+using System;
+
 namespace AlgoSdk
 {
-    public ref struct Optional<T>
-        where T : struct
+    public struct Optional<T>
+        : IEquatable<Optional<T>>
+        where T : struct, IEquatable<T>
     {
         public readonly T Value;
         public readonly bool HasValue;
@@ -10,6 +13,12 @@ namespace AlgoSdk
         {
             Value = value;
             HasValue = true;
+        }
+
+        public bool Equals(Optional<T> other)
+        {
+            return HasValue == other.HasValue
+                && Value.Equals(other.Value);
         }
     }
 }
