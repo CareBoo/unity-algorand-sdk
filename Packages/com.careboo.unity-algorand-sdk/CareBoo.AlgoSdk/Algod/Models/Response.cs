@@ -1,7 +1,7 @@
 
 namespace AlgoSdk
 {
-    public class Response<T>
-    {
-    }
+    public struct Response<T> { }
+
+    public struct Response { }
 }

@@ -10,16 +10,17 @@ public class SignedTransactionTest
     [Test]
     public void SignedTransactionShouldBeVerifiable()
     {
-        using var account = Account.Generate();
+        var seed = AlgoSdk.Crypto.Random.Bytes<PrivateKey>();
+        using var kp = seed.ToKeyPair();
         var transaction = new Transaction.Payment(
             fee: 40000,
             firstValidRound: 123,
             genesisHash: AlgoSdk.Crypto.Random.Bytes<Sha512_256_Hash>(),
             lastValidRound: 124,
-            sender: account.Address,
+            sender: (Address)kp.PublicKey,
             receiver: AlgoSdk.Crypto.Random.Bytes<Address>().GenerateCheckSum(),
             amount: 1000000);
-        var signedTransaction = transaction.Sign(account.SecretKey);
+        var signedTransaction = transaction.Sign(kp.SecretKey);
         Assert.IsTrue(signedTransaction.Verify());
     }
 
@@ -35,16 +36,17 @@ public class SignedTransactionTest
     [Test]
     public void SerializedSignedTransactionShouldEqualDeserializedSignedTransaction()
     {
-        using var account = Account.Generate();
+        var seed = AlgoSdk.Crypto.Random.Bytes<PrivateKey>();
+        using var kp = seed.ToKeyPair();
         var transaction = new Transaction.Payment(
             fee: 40000,
             firstValidRound: 123,
             genesisHash: AlgoSdk.Crypto.Random.Bytes<Sha512_256_Hash>(),
             lastValidRound: 124,
-            sender: account.Address,
+            sender: (Address)kp.PublicKey,
             receiver: AlgoSdk.Crypto.Random.Bytes<Address>().GenerateCheckSum(),
             amount: 1000000);
-        var signedTransaction = transaction.Sign(account.SecretKey);
+        var signedTransaction = transaction.Sign(kp.SecretKey);
         var serialized = MessagePackSerializer.Serialize(signedTransaction, Config.Options);
         var deserialized = MessagePackSerializer.Deserialize<SignedTransaction<Transaction.Payment>>(serialized, Config.Options);
         Assert.IsTrue(signedTransaction.Equals(deserialized));

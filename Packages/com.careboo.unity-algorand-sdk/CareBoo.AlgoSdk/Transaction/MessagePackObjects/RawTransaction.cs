@@ -55,13 +55,7 @@ namespace AlgoSdk.MsgPack
         public Prop<StateSchema> LocalStateSchema;
         public Prop<StateSchema> ExtraProgramPages;
 
-        private static readonly FixedString32[] orderedFieldNames;
-
-        private static readonly Dictionary<FixedString32, Field<RawTransaction>> fields;
-
-        static RawTransaction()
-        {
-            fields = new Dictionary<FixedString32, Field<RawTransaction>>()
+        private static readonly SortedDictionary<FixedString32, Field<RawTransaction>> fields = new SortedDictionary<FixedString32, Field<RawTransaction>>()
             {
                 {"aamt", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.AssetAmount)},
                 {"aclose", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.AssetCloseTo)},
@@ -106,10 +100,6 @@ namespace AlgoSdk.MsgPack
                 {"xaid", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.XferAsset)},
             };
 
-            orderedFieldNames = fields.Keys.ToArray();
-            Array.Sort(orderedFieldNames);
-        }
-
         public static bool operator ==(in RawTransaction x, in RawTransaction y)
         {
             return x.Equals(y);
@@ -120,18 +110,11 @@ namespace AlgoSdk.MsgPack
             return !x.Equals(y);
         }
 
-        public Dictionary<FixedString32, Field<RawTransaction>> MessagePackFields => fields;
+        public SortedDictionary<FixedString32, Field<RawTransaction>> MessagePackFields => fields;
 
         public bool Equals(RawTransaction other)
         {
-            for (var i = 0; i < orderedFieldNames.Length; i++)
-            {
-                var fieldName = orderedFieldNames[i];
-                var field = fields[fieldName];
-                if (!field.FieldsEqual(ref this, ref other))
-                    return false;
-            }
-            return true;
+            return this.Equals(ref other);
         }
 
         public override bool Equals(object obj)

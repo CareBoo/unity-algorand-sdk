@@ -43,7 +43,7 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(NativeText), new NativeTextFormatter()},
             {typeof(Ed25519.PublicKey), new ByteArrayFormatter<Ed25519.PublicKey>()},
             {typeof(VrfPubkey), new ByteArrayFormatter<VrfPubkey>()},
-            {typeof(AssetParams), new ByteArrayFormatter<AssetParams>()},
+            {typeof(AssetParams), new TodoFormatter<AssetParams>()},
             {typeof(RawTransaction), new MessagePackTypeFormatter<RawTransaction>()},
             {typeof(ITransaction), new TransactionFormatter()},
             {typeof(SignedTransaction<Transaction.Payment>), new SignedTransactionFormatter<SignedTransaction<Transaction.Payment>>()},

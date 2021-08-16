@@ -9,8 +9,6 @@ public class AlgodClientTest
     [UnityTest]
     public IEnumerator SendRequestToGoogle() => UniTask.ToCoroutine(async () =>
     {
-        var client = new AlgodClient();
-        var response = await client.GetAsync("https://www.google.com");
-        UnityEngine.Debug.Log(response);
+
     });
 }

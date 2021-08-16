@@ -5,7 +5,7 @@ namespace AlgoSdk
 {
     public partial struct AlgodClient
     {
-        public async UniTask<string> GetAsync(string url)
+        public static async UniTask<string> GetAsync(string url)
         {
             var downloadHandler = new DownloadHandlerBuffer();
             var webrequest = new UnityWebRequest()
