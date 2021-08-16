@@ -20,5 +20,10 @@ namespace AlgoSdk
             return HasValue == other.HasValue
                 && Value.Equals(other.Value);
         }
+
+        public static implicit operator Optional<T>(T value)
+        {
+            return new Optional<T>(value);
+        }
     }
 }
