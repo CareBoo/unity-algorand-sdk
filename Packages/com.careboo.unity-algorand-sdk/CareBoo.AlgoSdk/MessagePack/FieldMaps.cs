@@ -13,7 +13,8 @@ namespace AlgoSdk.MsgPack
             lookup = new Dictionary<Type, object>()
             {
                 {typeof(RawTransaction), rawTransactionFields},
-                {typeof(RawSignedTransaction), rawSignedTransactionFields}
+                {typeof(RawSignedTransaction), rawSignedTransactionFields},
+                {typeof(Account), accountFields},
             };
         }
 
@@ -22,11 +23,11 @@ namespace AlgoSdk.MsgPack
             return lookup[t];
         }
 
-        internal static SortedDictionary<FixedString32, Field<T>> GetFieldMap<T>()
+        internal static SortedDictionary<FixedString64, Field<T>> GetFieldMap<T>()
             where T : struct
         {
             var fieldMap = GetFieldMap(typeof(T));
-            return (SortedDictionary<FixedString32, Field<T>>)fieldMap;
+            return (SortedDictionary<FixedString64, Field<T>>)fieldMap;
         }
     }
 }

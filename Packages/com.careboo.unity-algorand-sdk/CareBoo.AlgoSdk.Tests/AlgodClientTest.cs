@@ -9,6 +9,6 @@ public class AlgodClientTest
     [UnityTest]
     public IEnumerator SendRequestToGoogle() => UniTask.ToCoroutine(async () =>
     {
-
+        await UniTask.Delay(10);
     });
 }

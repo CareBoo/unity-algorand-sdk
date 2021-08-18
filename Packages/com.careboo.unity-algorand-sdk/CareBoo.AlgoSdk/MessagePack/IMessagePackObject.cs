@@ -6,10 +6,10 @@ namespace AlgoSdk.MsgPack
 
     public static class MessagePackObject
     {
-        public static NativeList<FixedString32> GetFieldsToSerialize<TMessagePackObject>(this ref TMessagePackObject obj, Allocator allocator)
+        public static NativeList<FixedString64> GetFieldsToSerialize<TMessagePackObject>(this ref TMessagePackObject obj, Allocator allocator)
             where TMessagePackObject : struct, IMessagePackObject
         {
-            var list = new NativeList<FixedString32>(FieldCache<TMessagePackObject>.Map.Count, allocator);
+            var list = new NativeList<FixedString64>(FieldCache<TMessagePackObject>.Map.Count, allocator);
             var fieldEnum = FieldCache<TMessagePackObject>.Map.GetEnumerator();
             while (fieldEnum.MoveNext())
             {

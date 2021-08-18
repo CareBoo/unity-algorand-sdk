@@ -4,7 +4,6 @@ using Unity.Collections.LowLevel.Unsafe;
 
 namespace AlgoSdk.MsgPack
 {
-
     public struct NativeListComparer<T> : IEqualityComparer<NativeList<T>>
         where T : unmanaged
     {
@@ -28,6 +27,19 @@ namespace AlgoSdk.MsgPack
         }
 
         public int GetHashCode(TransactionType obj)
+        {
+            return obj.GetHashCode();
+        }
+    }
+
+    public struct SignatureTypeComparer : IEqualityComparer<SignatureType>
+    {
+        public bool Equals(SignatureType x, SignatureType y)
+        {
+            return x == y;
+        }
+
+        public int GetHashCode(SignatureType obj)
         {
             return obj.GetHashCode();
         }

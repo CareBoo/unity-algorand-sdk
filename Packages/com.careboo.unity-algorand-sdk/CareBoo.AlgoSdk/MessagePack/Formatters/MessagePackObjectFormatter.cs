@@ -5,7 +5,7 @@ using Unity.Collections;
 
 namespace AlgoSdk.MsgPack
 {
-    public sealed class MessagePackTypeFormatter<TMessagePackObject>
+    public sealed class MessagePackObjectFormatter<TMessagePackObject>
         : IMessagePackFormatter<TMessagePackObject>
         where TMessagePackObject : struct, IMessagePackObject
     {
@@ -15,7 +15,7 @@ namespace AlgoSdk.MsgPack
             var length = reader.ReadMapHeader();
             for (var i = 0; i < length; i++)
             {
-                var key = options.Resolver.GetFormatter<FixedString32>().Deserialize(ref reader, options);
+                var key = options.Resolver.GetFormatter<FixedString64>().Deserialize(ref reader, options);
                 try
                 {
                     FieldCache<TMessagePackObject>.Map[key].Deserialize(ref result, ref reader, options);
@@ -36,7 +36,7 @@ namespace AlgoSdk.MsgPack
             for (var i = 0; i < fieldsToSerialize.Length; i++)
             {
                 var key = fieldsToSerialize[i];
-                options.Resolver.GetFormatter<FixedString32>().Serialize(ref writer, key, options);
+                options.Resolver.GetFormatter<FixedString64>().Serialize(ref writer, key, options);
                 try
                 {
                     FieldCache<TMessagePackObject>.Map[key].Serialize(ref value, ref writer, options);

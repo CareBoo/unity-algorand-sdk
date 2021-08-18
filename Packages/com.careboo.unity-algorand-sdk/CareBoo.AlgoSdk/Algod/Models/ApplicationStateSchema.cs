@@ -1,7 +1,13 @@
+using System;
+
 namespace AlgoSdk
 {
-    public struct ApplicationStateSchema
+    public struct ApplicationStateSchema : IEquatable<ApplicationStateSchema>
     {
+        public bool Equals(ApplicationStateSchema other)
+        {
+            return true;
+        }
     }
 }
 

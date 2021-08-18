@@ -1,7 +1,13 @@
+using System;
+
 namespace AlgoSdk
 {
-    public struct AccountParticipation
+    public struct AccountParticipation : IEquatable<AccountParticipation>
     {
+        public bool Equals(AccountParticipation other)
+        {
+            return true;
+        }
     }
 }
 
