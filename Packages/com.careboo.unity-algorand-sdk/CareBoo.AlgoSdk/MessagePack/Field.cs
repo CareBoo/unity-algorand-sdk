@@ -19,7 +19,7 @@ namespace AlgoSdk.MsgPack
             ref MessagePackWriter writer,
             MessagePackSerializerOptions options);
 
-        public delegate ref Prop<T> PropGetter<T>(ref TMessagePackObject messagePackObject);
+        public delegate ref T FieldGetter<T>(ref TMessagePackObject messagePackObject);
 
         public delegate bool EqualityComparer(ref TMessagePackObject messagePackObject, ref TMessagePackObject other);
 
@@ -36,41 +36,44 @@ namespace AlgoSdk.MsgPack
             ShouldSerialize = shouldSerialize;
         }
 
-        public static Field<TMessagePackObject> Assign<T>(PropGetter<T> prop, EqualityComparer fieldsEqual)
+        public static Field<TMessagePackObject> Assign<T>(FieldGetter<T> field, SerializePredicate shouldSerialize, EqualityComparer fieldsEqual)
         {
             void serialize(ref TMessagePackObject messagePackObject, ref MessagePackWriter writer, MessagePackSerializerOptions options)
             {
-                options.Resolver.GetFormatter<T>().Serialize(ref writer, prop(ref messagePackObject).Get(), options);
-            };
+                options.Resolver.GetFormatter<T>().Serialize(ref writer, field(ref messagePackObject), options);
+            }
             void deserialize(ref TMessagePackObject messagePackObject, ref MessagePackReader reader, MessagePackSerializerOptions options)
             {
-                prop(ref messagePackObject).Set(options.Resolver.GetFormatter<T>().Deserialize(ref reader, options));
-            }
-            bool shouldSerialize(ref TMessagePackObject messagePackObject)
-            {
-                return prop(ref messagePackObject).IsCreated;
+                field(ref messagePackObject) = (options.Resolver.GetFormatter<T>().Deserialize(ref reader, options));
             }
             return new Field<TMessagePackObject>(deserialize, serialize, shouldSerialize, fieldsEqual);
         }
 
-        public static Field<TMessagePackObject> Assign<T>(PropGetter<T> prop) where T : IEquatable<T>
+        public static Field<TMessagePackObject> Assign<T>(FieldGetter<T> field) where T : IEquatable<T>
         {
             bool fieldsEqual(ref TMessagePackObject messagePackObject, ref TMessagePackObject other)
             {
-                return prop(ref messagePackObject).Value.Equals(prop(ref other).Value);
+                return field(ref messagePackObject).Equals(field(ref other));
             }
-            return Assign(prop, fieldsEqual);
+            bool shouldSerialize(ref TMessagePackObject messagePackObject)
+            {
+                return !field(ref messagePackObject).Equals(default);
+            }
+            return Assign(field, shouldSerialize, fieldsEqual);
         }
 
-        public static Field<TMessagePackObject> Assign<T, TComparer>(PropGetter<T> prop, TComparer comparer)
+        public static Field<TMessagePackObject> Assign<T, TComparer>(FieldGetter<T> field, TComparer comparer)
             where TComparer : IEqualityComparer<T>
         {
             bool fieldsEqual(ref TMessagePackObject messagePackObject, ref TMessagePackObject other)
             {
-                return comparer.Equals(prop(ref messagePackObject).Value, prop(ref other).Value);
+                return comparer.Equals(field(ref messagePackObject), field(ref other));
             }
-            return Assign(prop, fieldsEqual);
+            bool shouldSerialize(ref TMessagePackObject messagePackObject)
+            {
+                return !comparer.Equals(field(ref messagePackObject), default);
+            }
+            return Assign(field, shouldSerialize, fieldsEqual);
         }
     }
-
 }

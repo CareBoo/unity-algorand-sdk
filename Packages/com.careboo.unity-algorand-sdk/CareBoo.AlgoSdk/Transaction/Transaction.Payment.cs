@@ -1,6 +1,5 @@
 using System;
 using AlgoSdk.Crypto;
-using AlgoSdk.MsgPack;
 
 namespace AlgoSdk
 {
@@ -53,8 +52,7 @@ namespace AlgoSdk
                 Header.CopyTo(ref rawTransaction);
                 rawTransaction.Receiver = Receiver;
                 rawTransaction.Amount = Amount;
-                if (CloseRemainderTo != default)
-                    rawTransaction.CloseRemainderTo = CloseRemainderTo;
+                rawTransaction.CloseRemainderTo = CloseRemainderTo;
             }
 
             public void CopyFrom(in RawTransaction rawTransaction)
@@ -62,8 +60,7 @@ namespace AlgoSdk
                 Header.CopyFrom(in rawTransaction);
                 Receiver = rawTransaction.Receiver;
                 Amount = rawTransaction.Amount;
-                if (rawTransaction.CloseRemainderTo.IsCreated)
-                    CloseRemainderTo = rawTransaction.CloseRemainderTo;
+                CloseRemainderTo = rawTransaction.CloseRemainderTo;
             }
 
             public bool Equals(Payment other)

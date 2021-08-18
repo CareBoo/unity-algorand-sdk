@@ -36,7 +36,7 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(bool), BooleanFormatter.Instance},
             {typeof(Address), new AddressFormatter()},
             {typeof(Sha512_256_Hash), new ByteArrayFormatter<Sha512_256_Hash>()},
-            {typeof(NativeReference<bool>), new NativeReferenceFormatter<bool>()},
+            {typeof(Optional<bool>), new OptionalFormatter<bool>()},
             {typeof(TransactionType), new TransactionTypeFormatter()},
             {typeof(FixedString32), new FixedStringFormatter<FixedString32>()},
             {typeof(FixedString128), new FixedStringFormatter<FixedString128>()},

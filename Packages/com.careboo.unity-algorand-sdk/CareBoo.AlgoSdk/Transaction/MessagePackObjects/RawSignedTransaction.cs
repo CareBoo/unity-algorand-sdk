@@ -8,33 +8,31 @@ using Unity.Collections;
 namespace AlgoSdk
 {
     public struct RawSignedTransaction
-        : IMessagePackType<RawSignedTransaction>
+        : IMessagePackObject
+        , IEquatable<RawSignedTransaction>
     {
-        public Prop<RawTransaction> Transaction;
-        public Prop<Signature> Sig;
-        public Prop<MultiSig> MultiSig;
-        public Prop<LogicSig> LogicSig;
-
-        private static readonly SortedDictionary<FixedString32, Field<RawSignedTransaction>> fields = new SortedDictionary<FixedString32, Field<RawSignedTransaction>>()
-            {
-                {"txn", Field<RawSignedTransaction>.Assign((ref RawSignedTransaction r) => ref r.Transaction)},
-                {"sig", Field<RawSignedTransaction>.Assign((ref RawSignedTransaction r) => ref r.Sig)},
-                {"msig", Field<RawSignedTransaction>.Assign((ref RawSignedTransaction r) => ref r.LogicSig)},
-                {"lsig", Field<RawSignedTransaction>.Assign((ref RawSignedTransaction r) => ref r.MultiSig)},
-            };
-
-        public SortedDictionary<FixedString32, Field<RawSignedTransaction>> MessagePackFields => fields;
+        public RawTransaction Transaction;
+        public Signature Sig;
+        public MultiSig MultiSig;
+        public LogicSig LogicSig;
 
         public bool Equals(RawSignedTransaction other)
         {
             return this.Equals(ref other);
         }
+    }
+}
 
-        public override bool Equals(object obj)
+namespace AlgoSdk.MsgPack
+{
+    internal static partial class FieldMaps
+    {
+        private static readonly SortedDictionary<FixedString32, Field<RawSignedTransaction>> rawSignedTransactionFields = new SortedDictionary<FixedString32, Field<RawSignedTransaction>>()
         {
-            if (obj is RawSignedTransaction raw)
-                return Equals(raw);
-            return false;
-        }
+            {"txn", Field<RawSignedTransaction>.Assign((ref RawSignedTransaction r) => ref r.Transaction)},
+            {"sig", Field<RawSignedTransaction>.Assign((ref RawSignedTransaction r) => ref r.Sig)},
+            {"msig", Field<RawSignedTransaction>.Assign((ref RawSignedTransaction r) => ref r.LogicSig)},
+            {"lsig", Field<RawSignedTransaction>.Assign((ref RawSignedTransaction r) => ref r.MultiSig)},
+        };
     }
 }

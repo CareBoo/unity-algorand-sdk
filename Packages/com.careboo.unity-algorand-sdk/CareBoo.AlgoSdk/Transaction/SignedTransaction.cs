@@ -38,15 +38,13 @@ namespace AlgoSdk
         public void CopyFrom(in RawSignedTransaction data)
         {
             Signature = data.Sig;
-            Transaction.CopyFrom(data.Transaction.Value);
+            Transaction.CopyFrom(data.Transaction);
         }
 
         public void CopyTo(ref RawSignedTransaction data)
         {
             data.Sig = Signature;
-            var transaction = data.Transaction.Value;
-            Transaction.CopyTo(ref transaction);
-            data.Transaction = transaction;
+            Transaction.CopyTo(ref data.Transaction);
         }
 
         public void Dispose()

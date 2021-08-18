@@ -7,7 +7,7 @@ namespace AlgoSdk.MsgPack
 {
     public sealed class MessagePackTypeFormatter<TMessagePackObject>
         : IMessagePackFormatter<TMessagePackObject>
-        where TMessagePackObject : struct, IMessagePackType<TMessagePackObject>
+        where TMessagePackObject : struct, IMessagePackObject
     {
         public TMessagePackObject Deserialize(ref MessagePackReader reader, MessagePackSerializerOptions options)
         {
@@ -18,7 +18,7 @@ namespace AlgoSdk.MsgPack
                 var key = options.Resolver.GetFormatter<FixedString32>().Deserialize(ref reader, options);
                 try
                 {
-                    result.MessagePackFields[key].Deserialize(ref result, ref reader, options);
+                    FieldCache<TMessagePackObject>.Map[key].Deserialize(ref result, ref reader, options);
                 }
                 catch (NullReferenceException nullRef)
                 {
@@ -39,7 +39,7 @@ namespace AlgoSdk.MsgPack
                 options.Resolver.GetFormatter<FixedString32>().Serialize(ref writer, key, options);
                 try
                 {
-                    value.MessagePackFields[key].Serialize(ref value, ref writer, options);
+                    FieldCache<TMessagePackObject>.Map[key].Serialize(ref value, ref writer, options);
                 }
                 catch (NullReferenceException nullRef)
                 {

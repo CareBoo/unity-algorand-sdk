@@ -1,15 +1,14 @@
 using System;
 using MessagePack;
 using MessagePack.Formatters;
-using Unity.Collections;
 
 namespace AlgoSdk.MsgPack.Formatters
 {
-    public sealed class NativeReferenceFormatter<T>
-        : IMessagePackFormatter<NativeReference<T>>
-        where T : unmanaged
+    public sealed class OptionalFormatter<T>
+        : IMessagePackFormatter<Optional<T>>
+        where T : struct, IEquatable<T>
     {
-        public NativeReference<T> Deserialize(ref MessagePackReader reader, MessagePackSerializerOptions options)
+        public Optional<T> Deserialize(ref MessagePackReader reader, MessagePackSerializerOptions options)
         {
             if (reader.IsNil)
                 return default;
@@ -18,13 +17,12 @@ namespace AlgoSdk.MsgPack.Formatters
             if (childFormatter == null)
                 throw new InvalidOperationException($"Could not resolve formatter for type {typeof(T)}");
 
-            var value = childFormatter.Deserialize(ref reader, options);
-            return new NativeReference<T>(Allocator.Persistent) { Value = value };
+            return childFormatter.Deserialize(ref reader, options);
         }
 
-        public void Serialize(ref MessagePackWriter writer, NativeReference<T> value, MessagePackSerializerOptions options)
+        public void Serialize(ref MessagePackWriter writer, Optional<T> value, MessagePackSerializerOptions options)
         {
-            if (!value.IsCreated)
+            if (!value.HasValue)
                 writer.WriteNil();
 
             var childFormatter = options.Resolver.GetFormatter<T>();
