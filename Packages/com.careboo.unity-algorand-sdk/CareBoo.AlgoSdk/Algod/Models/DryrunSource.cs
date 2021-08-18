@@ -1,6 +1,6 @@
 namespace AlgoSdk
 {
-    public struct ApplicationLocalState
+    public struct DryrunSource
     {
     }
 }
