@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using AlgoSdk.MsgPack;
 using Unity.Collections;
+using Unity.Jobs;
 
 namespace AlgoSdk
 {
     public struct Account
         : IMessagePackObject
+        , INativeDisposable
     {
         public Address Address;
         public ulong Amount;
@@ -24,6 +26,25 @@ namespace AlgoSdk
         public ulong Round;
         public SignatureType SignatureType;
         public FixedString32 Status;
+
+        public JobHandle Dispose(JobHandle inputDeps)
+        {
+            var dispose1 = ApplicationsLocalState.Dispose(inputDeps);
+            var dispose2 = Assets.Dispose(inputDeps);
+            dispose1 = JobHandle.CombineDependencies(dispose1, dispose2);
+            var dispose3 = CreatedApplications.Dispose(inputDeps);
+            var dispose4 = CreatedAssets.Dispose(inputDeps);
+            dispose3 = JobHandle.CombineDependencies(dispose3, dispose4);
+            return JobHandle.CombineDependencies(dispose1, dispose3);
+        }
+
+        public void Dispose()
+        {
+            ApplicationsLocalState.Dispose();
+            Assets.Dispose();
+            CreatedApplications.Dispose();
+            CreatedAssets.Dispose();
+        }
     }
 }
 
