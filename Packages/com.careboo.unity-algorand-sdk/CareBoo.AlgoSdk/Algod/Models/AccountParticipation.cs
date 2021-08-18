@@ -41,14 +41,13 @@ namespace AlgoSdk.MsgPack
 {
     internal static partial class FieldMaps
     {
-        internal static readonly Dictionary<FixedString64, Field<AccountParticipation>> accountParticipationFields =
-            new Dictionary<FixedString64, Field<AccountParticipation>>()
-            {
-                {"selection-participation-key", Field<AccountParticipation>.Assign((ref AccountParticipation x) => ref x.SelectionParticipationKey)},
-                {"vote-first-valid", Field<AccountParticipation>.Assign((ref AccountParticipation x) => ref x.VoteFirstValid)},
-                {"vote-key-dilution", Field<AccountParticipation>.Assign((ref AccountParticipation x) => ref x.VoteKeyDilution)},
-                {"vote-last-valid", Field<AccountParticipation>.Assign((ref AccountParticipation x) => ref x.VoteLastValid)},
-                {"vote-participation-key", Field<AccountParticipation>.Assign((ref AccountParticipation x) => ref x.VoteParticipationKey)},
-            };
+        internal static readonly Field<AccountParticipation>.Map accountParticipationFields =
+            new Field<AccountParticipation>.Map()
+                .Assign("selection-participation-key", (ref AccountParticipation x) => ref x.SelectionParticipationKey, default(NativeTextComparer))
+                .Assign("vote-first-valid", (ref AccountParticipation x) => ref x.VoteFirstValid)
+                .Assign("vote-key-dilution", (ref AccountParticipation x) => ref x.VoteKeyDilution)
+                .Assign("vote-last-valid", (ref AccountParticipation x) => ref x.VoteLastValid)
+                .Assign("vote-participation-key", (ref AccountParticipation x) => ref x.VoteParticipationKey, default(NativeTextComparer))
+                ;
     }
 }

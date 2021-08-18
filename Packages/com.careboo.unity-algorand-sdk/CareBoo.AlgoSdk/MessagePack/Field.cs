@@ -1,12 +1,29 @@
 using System;
 using System.Collections.Generic;
 using MessagePack;
+using Unity.Collections;
 
 namespace AlgoSdk.MsgPack
 {
     public class Field<TMessagePackObject>
         where TMessagePackObject : struct
     {
+        public class Map : SortedDictionary<FixedString64, Field<TMessagePackObject>>
+        {
+            public Map Assign<T>(FixedString32 key, FieldGetter<T> field)
+                where T : IEquatable<T>
+            {
+                this.Add(key, Field<TMessagePackObject>.Assign(field));
+                return this;
+            }
+
+            public Map Assign<T, TComparer>(FixedString32 key, FieldGetter<T> field, TComparer comparer)
+                where TComparer : IEqualityComparer<T>
+            {
+                this.Add(key, Field<TMessagePackObject>.Assign(field, comparer));
+                return this;
+            }
+        }
         public delegate bool SerializePredicate(ref TMessagePackObject messagePackObject);
 
         public delegate void Deserializer(

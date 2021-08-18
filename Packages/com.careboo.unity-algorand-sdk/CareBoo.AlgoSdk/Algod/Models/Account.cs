@@ -52,8 +52,8 @@ namespace AlgoSdk.MsgPack
 {
     internal static partial class FieldMaps
     {
-        internal static readonly Dictionary<FixedString64, Field<Account>> accountFields =
-            new Dictionary<FixedString64, Field<Account>>()
+        internal static readonly Field<Account>.Map accountFields =
+            new Field<Account>.Map()
             {
                 {"address", Field<Account>.Assign((ref Account a) => ref a.Address)},
                 {"amount", Field<Account>.Assign((ref Account a) => ref a.Amount)},

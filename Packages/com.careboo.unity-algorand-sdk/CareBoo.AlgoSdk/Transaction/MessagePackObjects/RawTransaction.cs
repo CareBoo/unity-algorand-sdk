@@ -91,7 +91,7 @@ namespace AlgoSdk.MsgPack
 {
     internal static partial class FieldMaps
     {
-        private static readonly SortedDictionary<FixedString64, Field<RawTransaction>> rawTransactionFields = new SortedDictionary<FixedString64, Field<RawTransaction>>()
+        private static readonly Field<RawTransaction>.Map rawTransactionFields = new Field<RawTransaction>.Map()
         {
             {"aamt", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.AssetAmount)},
             {"aclose", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.AssetCloseTo)},

@@ -27,12 +27,12 @@ namespace AlgoSdk.MsgPack
 {
     internal static partial class FieldMaps
     {
-        private static readonly SortedDictionary<FixedString64, Field<RawSignedTransaction>> rawSignedTransactionFields = new SortedDictionary<FixedString64, Field<RawSignedTransaction>>()
-        {
-            {"txn", Field<RawSignedTransaction>.Assign((ref RawSignedTransaction r) => ref r.Transaction)},
-            {"sig", Field<RawSignedTransaction>.Assign((ref RawSignedTransaction r) => ref r.Sig)},
-            {"msig", Field<RawSignedTransaction>.Assign((ref RawSignedTransaction r) => ref r.LogicSig)},
-            {"lsig", Field<RawSignedTransaction>.Assign((ref RawSignedTransaction r) => ref r.MultiSig)},
-        };
+        private static readonly Field<RawSignedTransaction>.Map rawSignedTransactionFields =
+            new Field<RawSignedTransaction>.Map()
+                .Assign("txn", (ref RawSignedTransaction r) => ref r.Transaction)
+                .Assign("sig", (ref RawSignedTransaction r) => ref r.Sig)
+                .Assign("msig", (ref RawSignedTransaction r) => ref r.LogicSig)
+                .Assign("lsig", (ref RawSignedTransaction r) => ref r.MultiSig)
+                ;
     }
 }
