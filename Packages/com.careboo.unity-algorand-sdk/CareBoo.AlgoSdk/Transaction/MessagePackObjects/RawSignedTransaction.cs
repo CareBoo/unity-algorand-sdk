@@ -9,11 +9,12 @@ namespace AlgoSdk
 {
     public struct RawSignedTransaction
         : IMessagePackObject
+        , IEquatable<RawSignedTransaction>
     {
-        public Field<RawTransaction> Transaction;
-        public Field<Signature> Sig;
-        public Field<MultiSig> MultiSig;
-        public Field<LogicSig> LogicSig;
+        public RawTransaction Transaction;
+        public Signature Sig;
+        public MultiSig MultiSig;
+        public LogicSig LogicSig;
 
         public bool Equals(RawSignedTransaction other)
         {
@@ -26,12 +27,12 @@ namespace AlgoSdk.MsgPack
 {
     internal static partial class FieldMaps
     {
-        private static readonly SortedDictionary<FixedString32, FieldFor<RawSignedTransaction>> rawSignedTransactionFields = new SortedDictionary<FixedString32, FieldFor<RawSignedTransaction>>()
+        private static readonly SortedDictionary<FixedString32, Field<RawSignedTransaction>> rawSignedTransactionFields = new SortedDictionary<FixedString32, Field<RawSignedTransaction>>()
         {
-            {"txn", FieldFor<RawSignedTransaction>.Assign((ref RawSignedTransaction r) => ref r.Transaction)},
-            {"sig", FieldFor<RawSignedTransaction>.Assign((ref RawSignedTransaction r) => ref r.Sig)},
-            {"msig", FieldFor<RawSignedTransaction>.Assign((ref RawSignedTransaction r) => ref r.LogicSig)},
-            {"lsig", FieldFor<RawSignedTransaction>.Assign((ref RawSignedTransaction r) => ref r.MultiSig)},
+            {"txn", Field<RawSignedTransaction>.Assign((ref RawSignedTransaction r) => ref r.Transaction)},
+            {"sig", Field<RawSignedTransaction>.Assign((ref RawSignedTransaction r) => ref r.Sig)},
+            {"msig", Field<RawSignedTransaction>.Assign((ref RawSignedTransaction r) => ref r.LogicSig)},
+            {"lsig", Field<RawSignedTransaction>.Assign((ref RawSignedTransaction r) => ref r.MultiSig)},
         };
     }
 }

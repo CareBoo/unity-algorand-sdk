@@ -22,11 +22,11 @@ namespace AlgoSdk.MsgPack
             return lookup[t];
         }
 
-        internal static SortedDictionary<FixedString32, FieldFor<T>> GetFieldMap<T>()
+        internal static SortedDictionary<FixedString32, Field<T>> GetFieldMap<T>()
             where T : struct
         {
             var fieldMap = GetFieldMap(typeof(T));
-            return (SortedDictionary<FixedString32, FieldFor<T>>)fieldMap;
+            return (SortedDictionary<FixedString32, Field<T>>)fieldMap;
         }
     }
 }

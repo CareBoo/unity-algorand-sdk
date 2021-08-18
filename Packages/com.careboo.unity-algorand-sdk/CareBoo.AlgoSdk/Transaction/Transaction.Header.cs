@@ -75,16 +75,11 @@ namespace AlgoSdk
                 rawTransaction.LastValidRound = LastValidRound;
                 rawTransaction.Sender = Sender;
                 rawTransaction.TransactionType = TransactionType;
-                if (GenesisId.Length > 0)
-                    rawTransaction.GenesisId = GenesisId;
-                if (Group != default)
-                    rawTransaction.Group = Group;
-                if (Lease != default)
-                    rawTransaction.Lease = Lease;
-                if (Note.IsCreated)
-                    rawTransaction.Note = Note;
-                if (RekeyTo != default)
-                    rawTransaction.RekeyTo = RekeyTo;
+                rawTransaction.GenesisId = GenesisId;
+                rawTransaction.Group = Group;
+                rawTransaction.Lease = Lease;
+                rawTransaction.Note = Note;
+                rawTransaction.RekeyTo = RekeyTo;
             }
 
             public void CopyFrom(in RawTransaction rawTransaction)
@@ -95,16 +90,11 @@ namespace AlgoSdk
                 LastValidRound = rawTransaction.LastValidRound;
                 Sender = rawTransaction.Sender;
                 transactionType = rawTransaction.TransactionType;
-                if (rawTransaction.GenesisId.IsCreated)
-                    GenesisId = rawTransaction.GenesisId;
-                if (rawTransaction.Group.IsCreated)
-                    Group = rawTransaction.Group;
-                if (rawTransaction.Lease.IsCreated)
-                    Lease = rawTransaction.Lease;
-                if (rawTransaction.Note.IsCreated)
-                    Note = rawTransaction.Note;
-                if (rawTransaction.RekeyTo.IsCreated)
-                    RekeyTo = rawTransaction.RekeyTo;
+                GenesisId = rawTransaction.GenesisId;
+                Group = rawTransaction.Group;
+                Lease = rawTransaction.Lease;
+                Note = rawTransaction.Note;
+                RekeyTo = rawTransaction.RekeyTo;
             }
 
             public bool Equals(Header other)

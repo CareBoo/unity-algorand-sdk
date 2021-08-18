@@ -10,47 +10,47 @@ namespace AlgoSdk
         : IEquatable<RawTransaction>
         , IMessagePackObject
     {
-        public Field<ulong> Fee;
-        public Field<ulong> FirstValidRound;
-        public Field<Sha512_256_Hash> GenesisHash;
-        public Field<ulong> LastValidRound;
-        public Field<Address> Sender;
-        public Field<TransactionType> TransactionType;
-        public Field<FixedString32> GenesisId;
-        public Field<Address> Group;
-        public Field<Address> Lease;
-        public Field<NativeText> Note;
-        public Field<Address> RekeyTo;
-        public Field<Address> Receiver;
-        public Field<ulong> Amount;
-        public Field<Address> CloseRemainderTo;
-        public Field<Ed25519.PublicKey> VotePk;
-        public Field<VrfPubkey> SelectionPk;
-        public Field<ulong> VoteFirst;
-        public Field<ulong> VoteLast;
-        public Field<ulong> VoteKeyDilution;
-        public Field<Optional<bool>> NonParticipation;
-        public Field<ulong> ConfigAsset;
-        public Field<AssetParams> AssetParams;
-        public Field<ulong> XferAsset;
-        public Field<ulong> AssetAmount;
-        public Field<Address> AssetSender;
-        public Field<Address> AssetReceiver;
-        public Field<Address> AssetCloseTo;
-        public Field<Address> FreezeAccount;
-        public Field<ulong> FreezeAsset;
-        public Field<Optional<bool>> AssetFrozen;
-        public Field<ulong> ApplicationId;
-        public Field<ulong> OnComplete;
-        public Field<NativeList<Address>> Accounts;
-        public Field<NativeArray<byte>> ApprovalProgram;
-        public Field<NativeArray<byte>> AppArguments;
-        public Field<NativeArray<byte>> ClearStateProgram;
-        public Field<NativeList<Address>> ForeignApps;
-        public Field<NativeList<Address>> ForeignAssets;
-        public Field<StateSchema> GlobalStateSchema;
-        public Field<StateSchema> LocalStateSchema;
-        public Field<StateSchema> ExtraProgramPages;
+        public ulong Fee;
+        public ulong FirstValidRound;
+        public Sha512_256_Hash GenesisHash;
+        public ulong LastValidRound;
+        public Address Sender;
+        public TransactionType TransactionType;
+        public FixedString32 GenesisId;
+        public Address Group;
+        public Address Lease;
+        public NativeText Note;
+        public Address RekeyTo;
+        public Address Receiver;
+        public ulong Amount;
+        public Address CloseRemainderTo;
+        public Ed25519.PublicKey VotePk;
+        public VrfPubkey SelectionPk;
+        public ulong VoteFirst;
+        public ulong VoteLast;
+        public ulong VoteKeyDilution;
+        public Optional<bool> NonParticipation;
+        public ulong ConfigAsset;
+        public AssetParams AssetParams;
+        public ulong XferAsset;
+        public ulong AssetAmount;
+        public Address AssetSender;
+        public Address AssetReceiver;
+        public Address AssetCloseTo;
+        public Address FreezeAccount;
+        public ulong FreezeAsset;
+        public Optional<bool> AssetFrozen;
+        public ulong ApplicationId;
+        public ulong OnComplete;
+        public NativeList<Address> Accounts;
+        public NativeArray<byte> ApprovalProgram;
+        public NativeArray<byte> AppArguments;
+        public NativeArray<byte> ClearStateProgram;
+        public NativeList<Address> ForeignApps;
+        public NativeList<Address> ForeignAssets;
+        public StateSchema GlobalStateSchema;
+        public StateSchema LocalStateSchema;
+        public StateSchema ExtraProgramPages;
 
         public static bool operator ==(in RawTransaction x, in RawTransaction y)
         {
@@ -91,49 +91,49 @@ namespace AlgoSdk.MsgPack
 {
     internal static partial class FieldMaps
     {
-        private static readonly SortedDictionary<FixedString32, FieldFor<RawTransaction>> rawTransactionFields = new SortedDictionary<FixedString32, FieldFor<RawTransaction>>()
+        private static readonly SortedDictionary<FixedString32, Field<RawTransaction>> rawTransactionFields = new SortedDictionary<FixedString32, Field<RawTransaction>>()
         {
-            {"aamt", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.AssetAmount)},
-            {"aclose", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.AssetCloseTo)},
-            {"afrz", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.AssetFrozen)},
-            {"amt", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.Amount)},
-            {"apaa", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.AppArguments, default(NativeArrayComparer<byte>))},
-            {"apan", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.OnComplete)},
-            {"apap", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.ApprovalProgram, default(NativeArrayComparer<byte>))},
-            {"apar", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.AssetParams)},
-            {"apas", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.ForeignAssets, default(NativeListComparer<Address>))},
-            {"apat", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.Accounts, default(NativeListComparer<Address>))},
-            {"apep", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.ExtraProgramPages)},
-            {"apfa", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.ForeignApps, default(NativeListComparer<Address>))},
-            {"apgs", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.GlobalStateSchema)},
-            {"apid", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.ApplicationId)},
-            {"apls", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.LocalStateSchema)},
-            {"apsu", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.ClearStateProgram, default(NativeArrayComparer<byte>))},
-            {"arcv", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.AssetReceiver)},
-            {"asnd", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.AssetSender)},
-            {"caid", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.ConfigAsset)},
-            {"close", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.CloseRemainderTo)},
-            {"fadd", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.FreezeAccount)},
-            {"faid", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.FreezeAsset)},
-            {"fee", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.Fee)},
-            {"fv", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.FirstValidRound)},
-            {"gen", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.GenesisId)},
-            {"gh", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.GenesisHash)},
-            {"grp", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.Group)},
-            {"lv", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.LastValidRound)},
-            {"lx", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.Lease)},
-            {"nonpart", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.NonParticipation)},
-            {"note", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.Note, default(NativeTextComparer))},
-            {"rcv", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.Receiver)},
-            {"rekey", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.RekeyTo)},
-            {"selkey", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.SelectionPk)},
-            {"snd", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.Sender)},
-            {"type", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.TransactionType, default(TransactionTypeComparer))},
-            {"votefst", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.VoteFirst)},
-            {"votekd", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.VoteKeyDilution)},
-            {"votekey", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.VotePk)},
-            {"votelst", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.VoteLast)},
-            {"xaid", FieldFor<RawTransaction>.Assign((ref RawTransaction r) => ref r.XferAsset)},
+            {"aamt", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.AssetAmount)},
+            {"aclose", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.AssetCloseTo)},
+            {"afrz", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.AssetFrozen)},
+            {"amt", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.Amount)},
+            {"apaa", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.AppArguments, default(NativeArrayComparer<byte>))},
+            {"apan", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.OnComplete)},
+            {"apap", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.ApprovalProgram, default(NativeArrayComparer<byte>))},
+            {"apar", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.AssetParams)},
+            {"apas", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.ForeignAssets, default(NativeListComparer<Address>))},
+            {"apat", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.Accounts, default(NativeListComparer<Address>))},
+            {"apep", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.ExtraProgramPages)},
+            {"apfa", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.ForeignApps, default(NativeListComparer<Address>))},
+            {"apgs", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.GlobalStateSchema)},
+            {"apid", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.ApplicationId)},
+            {"apls", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.LocalStateSchema)},
+            {"apsu", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.ClearStateProgram, default(NativeArrayComparer<byte>))},
+            {"arcv", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.AssetReceiver)},
+            {"asnd", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.AssetSender)},
+            {"caid", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.ConfigAsset)},
+            {"close", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.CloseRemainderTo)},
+            {"fadd", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.FreezeAccount)},
+            {"faid", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.FreezeAsset)},
+            {"fee", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.Fee)},
+            {"fv", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.FirstValidRound)},
+            {"gen", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.GenesisId)},
+            {"gh", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.GenesisHash)},
+            {"grp", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.Group)},
+            {"lv", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.LastValidRound)},
+            {"lx", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.Lease)},
+            {"nonpart", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.NonParticipation)},
+            {"note", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.Note, default(NativeTextComparer))},
+            {"rcv", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.Receiver)},
+            {"rekey", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.RekeyTo)},
+            {"selkey", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.SelectionPk)},
+            {"snd", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.Sender)},
+            {"type", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.TransactionType, default(TransactionTypeComparer))},
+            {"votefst", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.VoteFirst)},
+            {"votekd", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.VoteKeyDilution)},
+            {"votekey", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.VotePk)},
+            {"votelst", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.VoteLast)},
+            {"xaid", Field<RawTransaction>.Assign((ref RawTransaction r) => ref r.XferAsset)},
         };
     }
 }
