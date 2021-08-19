@@ -88,4 +88,19 @@ namespace AlgoSdk.MsgPack
             return obj.GetHashCode();
         }
     }
+
+    public struct UnsafeListComparer<T> : IEqualityComparer<UnsafeList<T>>
+        where T : unmanaged
+    {
+        public bool Equals(UnsafeList<T> x, UnsafeList<T> y)
+        {
+            return x.IsCreated == y.IsCreated
+                && (!x.IsCreated || x.Equals(y));
+        }
+
+        public int GetHashCode(UnsafeList<T> obj)
+        {
+            return obj.GetHashCode();
+        }
+    }
 }
