@@ -10,8 +10,8 @@ namespace AlgoSdk
     [Serializable]
     [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
     public struct Address
-    : IByteArray
-    , IEquatable<Address>
+        : IByteArray
+        , IEquatable<Address>
     {
         [Serializable]
         [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]

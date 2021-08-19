@@ -59,6 +59,20 @@ namespace AlgoSdk.MsgPack
         }
     }
 
+    public struct UnsafeTextComparer : IEqualityComparer<UnsafeText>
+    {
+        public bool Equals(UnsafeText x, UnsafeText y)
+        {
+            return x.IsCreated == y.IsCreated
+                && (!x.IsCreated || x.Equals(y));
+        }
+
+        public int GetHashCode(UnsafeText obj)
+        {
+            return obj.GetHashCode();
+        }
+    }
+
     public struct NativeReferenceComparer<T> : IEqualityComparer<NativeReference<T>>
         where T : unmanaged
     {

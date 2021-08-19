@@ -1,5 +1,6 @@
 using AlgoSdk.MsgPack;
 using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 using Unity.Jobs;
 
 namespace AlgoSdk
@@ -11,13 +12,13 @@ namespace AlgoSdk
         public Address Address;
         public ulong Amount;
         public ulong AmountWithoutPendingRewards;
-        public NativeArray<ApplicationLocalState> ApplicationsLocalState;
+        public UnsafeList<ApplicationLocalState> ApplicationsLocalState;
         public Optional<ulong> ApplicationsTotalExtraPages;
         public Optional<ApplicationStateSchema> ApplicationsTotalSchema;
-        public NativeArray<AssetHolding> Assets;
+        public UnsafeList<AssetHolding> Assets;
         public Optional<Address> AuthAddress;
-        public NativeArray<Application> CreatedApplications;
-        public NativeArray<Asset> CreatedAssets;
+        public UnsafeList<Application> CreatedApplications;
+        public UnsafeList<Asset> CreatedAssets;
         public Optional<AccountParticipation> Participation;
         public ulong PendingRewards;
         public Optional<ulong> RewardBase;
@@ -56,13 +57,13 @@ namespace AlgoSdk.MsgPack
                 .Assign("address", (ref Account a) => ref a.Address)
                 .Assign("amount", (ref Account a) => ref a.Amount)
                 .Assign("amount-without-pending-rewards", (ref Account a) => ref a.AmountWithoutPendingRewards)
-                .Assign("apps-local-state", (ref Account a) => ref a.ApplicationsLocalState, default(NativeArrayComparer<ApplicationLocalState>))
+                .Assign("apps-local-state", (ref Account a) => ref a.ApplicationsLocalState, default(UnsafeListComparer<ApplicationLocalState>))
                 .Assign("apps-total-extra-pages", (ref Account a) => ref a.ApplicationsTotalExtraPages)
                 .Assign("apps-total-schema", (ref Account a) => ref a.ApplicationsTotalSchema)
-                .Assign("assets", (ref Account a) => ref a.Assets, default(NativeArrayComparer<AssetHolding>))
+                .Assign("assets", (ref Account a) => ref a.Assets, default(UnsafeListComparer<AssetHolding>))
                 .Assign("auth-addr", (ref Account a) => ref a.AuthAddress)
-                .Assign("created-apps", (ref Account a) => ref a.CreatedApplications, default(NativeArrayComparer<Application>))
-                .Assign("created-assets", (ref Account a) => ref a.CreatedAssets, default(NativeArrayComparer<Asset>))
+                .Assign("created-apps", (ref Account a) => ref a.CreatedApplications, default(UnsafeListComparer<Application>))
+                .Assign("created-assets", (ref Account a) => ref a.CreatedAssets, default(UnsafeListComparer<Asset>))
                 .Assign("participation", (ref Account a) => ref a.Participation)
                 .Assign("pending-rewards", (ref Account a) => ref a.PendingRewards)
                 .Assign("reward-base", (ref Account a) => ref a.RewardBase)
