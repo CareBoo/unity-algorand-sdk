@@ -10,14 +10,14 @@ namespace AlgoSdk.MsgPack
     {
         public class Map : SortedDictionary<FixedString64, Field<TMessagePackObject>>
         {
-            public Map Assign<T>(FixedString32 key, FieldGetter<T> field)
+            public Map Assign<T>(FixedString64 key, FieldGetter<T> field)
                 where T : IEquatable<T>
             {
                 this.Add(key, Field<TMessagePackObject>.Assign(field));
                 return this;
             }
 
-            public Map Assign<T, TComparer>(FixedString32 key, FieldGetter<T> field, TComparer comparer)
+            public Map Assign<T, TComparer>(FixedString64 key, FieldGetter<T> field, TComparer comparer)
                 where TComparer : IEqualityComparer<T>
             {
                 this.Add(key, Field<TMessagePackObject>.Assign(field, comparer));
