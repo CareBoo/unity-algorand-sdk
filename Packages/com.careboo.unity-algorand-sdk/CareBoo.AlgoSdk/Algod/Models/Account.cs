@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using AlgoSdk.MsgPack;
 using Unity.Collections;
 using Unity.Jobs;
@@ -54,24 +53,23 @@ namespace AlgoSdk.MsgPack
     {
         internal static readonly Field<Account>.Map accountFields =
             new Field<Account>.Map()
-            {
-                {"address", Field<Account>.Assign((ref Account a) => ref a.Address)},
-                {"amount", Field<Account>.Assign((ref Account a) => ref a.Amount)},
-                {"amount-without-pending-rewards", Field<Account>.Assign((ref Account a) => ref a.AmountWithoutPendingRewards)},
-                {"apps-local-state", Field<Account>.Assign((ref Account a) => ref a.ApplicationsLocalState, default(NativeArrayComparer<ApplicationLocalState>))},
-                {"apps-total-extra-pages", Field<Account>.Assign((ref Account a) => ref a.ApplicationsTotalExtraPages)},
-                {"apps-total-schema", Field<Account>.Assign((ref Account a) => ref a.ApplicationsTotalSchema)},
-                {"assets", Field<Account>.Assign((ref Account a) => ref a.Assets, default(NativeArrayComparer<AssetHolding>))},
-                {"auth-addr", Field<Account>.Assign((ref Account a) => ref a.AuthAddress)},
-                {"created-apps", Field<Account>.Assign((ref Account a) => ref a.CreatedApplications, default(NativeArrayComparer<Application>))},
-                {"created-assets", Field<Account>.Assign((ref Account a) => ref a.CreatedAssets, default(NativeArrayComparer<Asset>))},
-                {"participation", Field<Account>.Assign((ref Account a) => ref a.Participation)},
-                {"pending-rewards", Field<Account>.Assign((ref Account a) => ref a.PendingRewards)},
-                {"reward-base", Field<Account>.Assign((ref Account a) => ref a.RewardBase)},
-                {"rewards", Field<Account>.Assign((ref Account a) => ref a.Rewards)},
-                {"round", Field<Account>.Assign((ref Account a) => ref a.Round)},
-                {"sig-type", Field<Account>.Assign((ref Account a) => ref a.SignatureType, default(SignatureTypeComparer))},
-                {"status", Field<Account>.Assign((ref Account a) => ref a.Status)},
-            };
+                .Assign("address", (ref Account a) => ref a.Address)
+                .Assign("amount", (ref Account a) => ref a.Amount)
+                .Assign("amount-without-pending-rewards", (ref Account a) => ref a.AmountWithoutPendingRewards)
+                .Assign("apps-local-state", (ref Account a) => ref a.ApplicationsLocalState, default(NativeArrayComparer<ApplicationLocalState>))
+                .Assign("apps-total-extra-pages", (ref Account a) => ref a.ApplicationsTotalExtraPages)
+                .Assign("apps-total-schema", (ref Account a) => ref a.ApplicationsTotalSchema)
+                .Assign("assets", (ref Account a) => ref a.Assets, default(NativeArrayComparer<AssetHolding>))
+                .Assign("auth-addr", (ref Account a) => ref a.AuthAddress)
+                .Assign("created-apps", (ref Account a) => ref a.CreatedApplications, default(NativeArrayComparer<Application>))
+                .Assign("created-assets", (ref Account a) => ref a.CreatedAssets, default(NativeArrayComparer<Asset>))
+                .Assign("participation", (ref Account a) => ref a.Participation)
+                .Assign("pending-rewards", (ref Account a) => ref a.PendingRewards)
+                .Assign("reward-base", (ref Account a) => ref a.RewardBase)
+                .Assign("rewards", (ref Account a) => ref a.Rewards)
+                .Assign("round", (ref Account a) => ref a.Round)
+                .Assign("sig-type", (ref Account a) => ref a.SignatureType, default(SignatureTypeComparer))
+                .Assign("status", (ref Account a) => ref a.Status)
+                ;
     }
 }
