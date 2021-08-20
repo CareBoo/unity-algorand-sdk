@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.cysharp.unitask": "2.2.5",
-    "com.unity.burst": "1.5.5",
+    "com.unity.burst": "1.5.6",
     "com.unity.ide.vscode": "1.2.3",
     "com.unity.nuget.mono-cecil": "1.10.1",
     "com.unity.package-validation-suite": "0.21.1-preview",

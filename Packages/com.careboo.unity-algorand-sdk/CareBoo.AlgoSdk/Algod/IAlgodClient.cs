@@ -1,15 +1,15 @@
-using AlgoSdk.MsgPack;
 using Cysharp.Threading.Tasks;
 using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 
 namespace AlgoSdk
 {
     public interface IAlgodClient
     {
-        UniTask<Response<string>> GetGenesisInformation();
-        UniTask<Response> GetHealth();
-        UniTask<Response<string>> GetMetrics();
-        UniTask<Response<string>> GetSwaggerSpec();
+        UniTask<Response<UnsafeText>> GetGenesisInformation();
+        UniTask<Response<bool>> GetHealth();
+        UniTask<Response<UnsafeText>> GetMetrics();
+        UniTask<Response<UnsafeText>> GetSwaggerSpec();
         UniTask<Response<Account>> GetAccountInformation(Address accountAddress);
         UniTask<Response<PendingTransactions>> GetPendingTransactions();
         UniTask<Response<PendingTransactions>> GetPendingTransactions(Address accountAddress);

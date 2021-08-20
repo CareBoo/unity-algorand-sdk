@@ -1,7 +1,7 @@
 using System;
 using AlgoSdk.Crypto;
-using AlgoSdk.MsgPack;
 using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 using Unity.Jobs;
 
 namespace AlgoSdk
@@ -22,7 +22,7 @@ namespace AlgoSdk
             public FixedString32 GenesisId;
             public Address Group;
             public Address Lease;
-            public NativeText Note;
+            public UnsafeText Note;
             public Address RekeyTo;
 
             public TransactionType TransactionType => transactionType;
