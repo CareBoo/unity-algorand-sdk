@@ -15,7 +15,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout Algorand sandbox
+        uses: actions/checkout@v2
+        with:
+          repository: algorand/sandbox
+          path: __sandbox__
+      - name: Run Algorand sandbox services
+        run: |
+          cd __sandbox__
+          ./sandbox up
+      - name: Checkout repository
+        uses: actions/checkout@v2
         with:
           lfs: true
       - name: Get Date
