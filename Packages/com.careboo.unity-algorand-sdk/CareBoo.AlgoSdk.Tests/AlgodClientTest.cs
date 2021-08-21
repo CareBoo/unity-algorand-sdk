@@ -12,6 +12,7 @@ public class AlgodClientTest
     static readonly AlgodClient client = new AlgodClient(SandBoxAddress, SandboxToken);
 
     [UnityTest]
+    [ConditionalIgnore(nameof(UnityEngine.Application.isBatchMode), "This test requires certain dependencies to be set up and running.")]
     public IEnumerator SandboxShouldBeHealthy() => UniTask.ToCoroutine(async () =>
     {
         var expected = "null\n";
@@ -20,6 +21,7 @@ public class AlgodClientTest
     });
 
     [UnityTest]
+    [ConditionalIgnore(nameof(UnityEngine.Application.isBatchMode), "This test requires certain dependencies to be set up and running.")]
     public IEnumerator PlayException() => UniTask.ToCoroutine(async () =>
     {
         using var response = await client.GetAsync("dne");
