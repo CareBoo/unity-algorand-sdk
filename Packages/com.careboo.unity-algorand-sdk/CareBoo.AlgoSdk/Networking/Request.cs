@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 
 namespace AlgoSdk
 {
-    public readonly struct Request
+    public struct Request
     {
         readonly UnityWebRequest unityWebRequest;
 
