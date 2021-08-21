@@ -1,8 +1,5 @@
 
-using AlgoSdk.MsgPack;
-using MessagePack;
 using Unity.Collections;
-using Unity.Collections.LowLevel.Unsafe;
 using Unity.Jobs;
 
 namespace AlgoSdk
@@ -41,15 +38,25 @@ namespace AlgoSdk
             Message.Dispose();
             Error.Dispose();
         }
+
+        public static implicit operator Response<T>(NativeReference<T> message)
+        {
+            return new Response<T>(ref message);
+        }
+
+        public static implicit operator Response<T>(ErrorResponse error)
+        {
+            return new Response<T>(ref error);
+        }
     }
 
     public struct Response
         : INativeDisposable
     {
-        public NativeArray<byte> Message;
+        public NativeText Message;
         public ErrorResponse Error;
 
-        public Response(ref NativeArray<byte> message)
+        public Response(ref NativeText message)
         {
             Message = message;
             Error = default;
@@ -63,6 +70,7 @@ namespace AlgoSdk
 
         public bool IsError => Error.Message.Length > 0;
 
+
         public JobHandle Dispose(JobHandle inputDeps)
         {
             return JobHandle.CombineDependencies(
@@ -73,29 +81,19 @@ namespace AlgoSdk
 
         public void Dispose()
         {
-            Message.Dispose();
+            if (Message.IsCreated)
+                Message.Dispose();
             Error.Dispose();
         }
-    }
 
-    public struct ErrorResponse
-        : INativeDisposable
-    {
-        public UnsafeText Data;
-        public UnsafeText Message;
-
-        public JobHandle Dispose(JobHandle inputDeps)
+        public static implicit operator Response(NativeText message)
         {
-            return JobHandle.CombineDependencies(
-                Data.Dispose(inputDeps),
-                Message.Dispose(inputDeps)
-            );
+            return new Response(ref message);
         }
 
-        public void Dispose()
+        public static implicit operator Response(ErrorResponse error)
         {
-            Data.Dispose();
-            Message.Dispose();
+            return new Response(ref error);
         }
     }
 }

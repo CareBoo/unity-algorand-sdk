@@ -4,19 +4,19 @@ using UnityEngine;
 
 namespace AlgoSdk.MsgPack
 {
-    public static class Config
+    public static class AlgoSdkMessagePackConfig
     {
-        static MessagePackSerializerOptions options = null;
+        static MessagePackSerializerOptions serializerOptions = null;
 
-        public static MessagePackSerializerOptions Options => options;
+        public static MessagePackSerializerOptions SerializerOptions => serializerOptions;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void Initialize()
         {
-            if (options != null)
+            if (serializerOptions != null)
                 return;
 
-            options = MessagePackSerializerOptions.Standard.WithResolver(Resolver.Instance);
+            serializerOptions = MessagePackSerializerOptions.Standard.WithResolver(AlgoSdkMessagePackResolver.Instance);
         }
 
 #if UNITY_EDITOR

@@ -46,7 +46,7 @@ namespace AlgoSdk
         {
             var rawTransaction = new RawTransaction();
             transaction.CopyTo(ref rawTransaction);
-            var data = MessagePackSerializer.Serialize(rawTransaction, Config.Options);
+            var data = MessagePackSerializer.Serialize(rawTransaction, AlgoSdkMessagePackConfig.SerializerOptions);
             return new NativeByteArray(data, allocator);
         }
     }

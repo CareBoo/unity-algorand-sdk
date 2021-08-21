@@ -47,8 +47,8 @@ public class SignedTransactionTest
             receiver: AlgoSdk.Crypto.Random.Bytes<Address>().GenerateCheckSum(),
             amount: 1000000);
         var signedTransaction = transaction.Sign(kp.SecretKey);
-        var serialized = MessagePackSerializer.Serialize(signedTransaction, Config.Options);
-        var deserialized = MessagePackSerializer.Deserialize<SignedTransaction<Transaction.Payment>>(serialized, Config.Options);
+        var serialized = MessagePackSerializer.Serialize(signedTransaction, AlgoSdkMessagePackConfig.SerializerOptions);
+        var deserialized = MessagePackSerializer.Deserialize<SignedTransaction<Transaction.Payment>>(serialized, AlgoSdkMessagePackConfig.SerializerOptions);
         Assert.IsTrue(signedTransaction.Equals(deserialized));
     }
 }

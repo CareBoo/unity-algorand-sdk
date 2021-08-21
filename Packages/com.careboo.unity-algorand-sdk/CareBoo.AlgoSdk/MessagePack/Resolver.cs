@@ -5,12 +5,13 @@ using AlgoSdk.MsgPack.Formatters;
 using MessagePack;
 using MessagePack.Formatters;
 using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 
 namespace AlgoSdk.MsgPack.Resolvers
 {
-    public class Resolver : IFormatterResolver
+    public class AlgoSdkMessagePackResolver : IFormatterResolver
     {
-        public static Resolver Instance = new Resolver();
+        public static AlgoSdkMessagePackResolver Instance = new AlgoSdkMessagePackResolver();
 
         public IMessagePackFormatter<T> GetFormatter<T>()
         {
@@ -43,29 +44,34 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(FixedString64), new FixedStringFormatter<FixedString64>()},
             {typeof(FixedString128), new FixedStringFormatter<FixedString128>()},
             {typeof(NativeText), new NativeTextFormatter()},
+            {typeof(UnsafeText), new UnsafeTextFormatter()},
             {typeof(Ed25519.PublicKey), new ByteArrayFormatter<Ed25519.PublicKey>()},
             {typeof(VrfPubkey), new ByteArrayFormatter<VrfPubkey>()},
             {typeof(ITransaction), new TransactionFormatter()},
             {typeof(SignedTransaction<Transaction.Payment>), new SignedTransactionFormatter<SignedTransaction<Transaction.Payment>>()},
             {typeof(Signature), new ByteArrayFormatter<Signature>()},
+            {typeof(ErrorResponse), new MessagePackObjectFormatter<ErrorResponse>()},
+            {typeof(RawSignedTransaction), new MessagePackObjectFormatter<RawSignedTransaction>()},
+            {typeof(RawTransaction), new MessagePackObjectFormatter<RawTransaction>()},
+            {typeof(Account), new MessagePackObjectFormatter<Account>()},
+            {typeof(AccountParticipation), new MessagePackObjectFormatter<AccountParticipation>()},
+            {typeof(AccountStateDelta), new MessagePackObjectFormatter<AccountStateDelta>()},
+            {typeof(Application), new MessagePackObjectFormatter<Application>()},
+            {typeof(ApplicationLocalState), new MessagePackObjectFormatter<ApplicationLocalState>()},
+            {typeof(ApplicationParams), new MessagePackObjectFormatter<ApplicationParams>()},
+            {typeof(ApplicationStateSchema), new MessagePackObjectFormatter<ApplicationStateSchema>()},
+            {typeof(Asset), new MessagePackObjectFormatter<Asset>()},
+            {typeof(AssetHolding), new MessagePackObjectFormatter<AssetHolding>()},
+            {typeof(AssetParams), new MessagePackObjectFormatter<AssetParams>()},
+            {typeof(BuildVersion), new MessagePackObjectFormatter<BuildVersion>()},
+            {typeof(CatchupMessage), new MessagePackObjectFormatter<CatchupMessage>()},
+            {typeof(DryrunRequest), new MessagePackObjectFormatter<DryrunRequest>()},
         };
 
         internal static object GetFormatter(Type t)
         {
             if (lookup.TryGetValue(t, out var formatter))
                 return formatter;
-            if (typeof(IMessagePackObject).IsAssignableFrom(t) && lookup.TryGetValue(typeof(IMessagePackObject), out var messagePackFormatter))
-            {
-                var messagePackFormatterType = (Type)messagePackFormatter;
-                messagePackFormatterType = messagePackFormatterType.MakeGenericType(t);
-                return Activator.CreateInstance(messagePackFormatterType);
-            }
-            if (t.IsGenericType && lookup.TryGetValue(t.GetGenericTypeDefinition(), out var genericFormatter))
-            {
-                var genericFormatterType = (Type)genericFormatter;
-                genericFormatterType = genericFormatterType.MakeGenericType(t.GenericTypeArguments);
-                return Activator.CreateInstance(genericFormatterType);
-            }
             return null;
         }
     }

@@ -9,6 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using MessagePack.LZ4;
 using Nerdbank.Streams;
+using Unity.Collections;
 
 namespace MessagePack
 {

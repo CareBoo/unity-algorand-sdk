@@ -15,12 +15,27 @@ namespace AlgoSdk.MsgPack
                 {typeof(RawTransaction), rawTransactionFields},
                 {typeof(RawSignedTransaction), rawSignedTransactionFields},
                 {typeof(Account), accountFields},
+                {typeof(ErrorResponse), errorResponseFields},
+                {typeof(AccountParticipation), accountParticipationFields},
+                {typeof(AccountStateDelta), accountStateDeltaFields},
+                {typeof(Application), applicationFields},
+                {typeof(ApplicationLocalState), applicationLocalStateFields},
+                {typeof(ApplicationParams), applicationParamsFields},
+                {typeof(ApplicationStateSchema), applicationStateSchemaFields},
+                {typeof(Asset), assetFields},
+                {typeof(AssetHolding), assetHoldingFields},
+                {typeof(AssetParams), assetParamsFields},
+                {typeof(BuildVersion), buildVersionFields},
+                {typeof(CatchupMessage), catchupMessageFields},
+                {typeof(DryrunRequest), dryrunRequestFields}
             };
         }
 
         internal static object GetFieldMap(Type t)
         {
-            return lookup[t];
+            if (lookup.TryGetValue(t, out var map))
+                return map;
+            return null;
         }
 
         internal static SortedDictionary<FixedString64, Field<T>> GetFieldMap<T>()

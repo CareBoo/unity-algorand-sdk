@@ -1,6 +1,8 @@
 using System;
 using Cysharp.Threading.Tasks;
+using Unity.Collections;
 using UnityEngine.Networking;
+using static Cysharp.Threading.Tasks.UnityAsyncExtensions;
 
 namespace AlgoSdk
 {
@@ -17,20 +19,9 @@ namespace AlgoSdk
             this.token = token;
         }
 
-        public async UniTask<string> GetTextAsync(string endpoint)
-        {
-            using var webRequest = await Request(endpoint);
-            return webRequest.downloadHandler.text;
-        }
-
-        public async UniTask<byte[]> GetRawAsync(string endpoint)
-        {
-            using var webRequest = await Request(endpoint);
-            return webRequest.downloadHandler.data;
-        }
-
         private async UniTask<UnityWebRequest> Request(string endpoint)
         {
+
             var downloadHandler = new DownloadHandlerBuffer();
             var webRequest = new UnityWebRequest()
             {
@@ -43,15 +34,14 @@ namespace AlgoSdk
 
         public async UniTask<Response> GetAsync(string endpoint)
         {
-            try
+            var unityWebRequest = new UnityWebRequest()
             {
-                var request = await Request(endpoint);
-            }
-            catch (Exception ex)
-            {
-                UnityEngine.Debug.Log(ex);
-            }
-            throw new NotImplementedException();
+                method = UnityWebRequest.kHttpVerbGET,
+                url = $"{address}/{endpoint}",
+                downloadHandler = new DownloadHandlerBuffer(),
+            };
+            var request = new Request(unityWebRequest);
+            return await request.Send();
         }
     }
 }

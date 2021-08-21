@@ -12,20 +12,18 @@ public class AlgodClientTest
     static readonly AlgodClient client = new AlgodClient(SandBoxAddress, SandboxToken);
 
     [UnityTest]
-    [Ignore("This is just for playing around...")]
     public IEnumerator SandboxShouldBeHealthy() => UniTask.ToCoroutine(async () =>
     {
         var expected = "null\n";
-        var actual = await client.GetTextAsync("health");
-        Assert.AreEqual(expected, actual);
+        using var response = await client.GetAsync("health");
+        Assert.AreEqual(expected, response.Message.ToString());
     });
 
     [UnityTest]
-    [Ignore("This is just for playing around...")]
     public IEnumerator PlayException() => UniTask.ToCoroutine(async () =>
     {
-        var expected = "null\n";
-        var actual = await client.GetTextAsync("dne");
-        Assert.AreEqual(expected, actual);
+        using var response = await client.GetAsync("dne");
+        Assert.IsTrue(response.IsError);
+        UnityEngine.Debug.Log(response.Error.Message);
     });
 }
