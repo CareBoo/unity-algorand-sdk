@@ -23,7 +23,7 @@ jobs:
       - name: Run Algorand sandbox services
         run: |
           cd __sandbox__
-          ./sandbox up
+          ./sandbox up -v
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
