@@ -1,7 +1,10 @@
 using System.Collections;
 using AlgoSdk;
+using AlgoSdk.LowLevel;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
+using Unity.Collections;
+using UnityEngine.Networking;
 using UnityEngine.TestTools;
 
 public class AlgodClientTest
@@ -17,7 +20,8 @@ public class AlgodClientTest
     {
         var expected = "null\n";
         using var response = await client.GetAsync("health");
-        Assert.AreEqual(expected, response.Message.ToString());
+        using var text = response.Data.AsUtf8Text(Allocator.Temp);
+        Assert.AreEqual(expected, text.ToString());
     });
 
     [UnityTest]
@@ -25,7 +29,6 @@ public class AlgodClientTest
     public IEnumerator PlayException() => UniTask.ToCoroutine(async () =>
     {
         using var response = await client.GetAsync("dne");
-        Assert.IsTrue(response.IsError);
-        UnityEngine.Debug.Log(response.Error.Message);
+        Assert.IsTrue(response.Status == UnityWebRequest.Result.ProtocolError);
     });
 }

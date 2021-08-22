@@ -1,6 +1,5 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine.Networking;
-using static Cysharp.Threading.Tasks.UnityAsyncExtensions;
 
 namespace AlgoSdk
 {
@@ -9,19 +8,30 @@ namespace AlgoSdk
         readonly string address;
         readonly string token;
 
-        const string TokenHeader = "X-Algo-API-Token";
-
         public AlgodClient(string address, string token)
         {
             this.address = address;
             this.token = token;
         }
 
-        public async UniTask<Response> GetAsync(string endpoint)
+        public async UniTask<AlgoApiResponse> GetAsync(string endpoint)
         {
-            var unityWebRequest = UnityWebRequest.Get(endpoint);
-            var request = new Request(unityWebRequest);
-            return await request.Send();
+            return await AlgoApiRequest.Get(token, GetUrl(endpoint)).Send();
+        }
+
+        public async UniTask<AlgoApiResponse> PostAsync(string endpoint, string postData)
+        {
+            return await AlgoApiRequest.Post(token, GetUrl(endpoint), postData).Send();
+        }
+
+        public async UniTask<AlgoApiResponse> DeleteAsync(string endpoint)
+        {
+            return await AlgoApiRequest.Delete(token, GetUrl(endpoint)).Send();
+        }
+
+        public string GetUrl(string endpoint)
+        {
+            return $"{address}/{endpoint}";
         }
     }
 }
