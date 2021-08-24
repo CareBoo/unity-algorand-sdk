@@ -1,3 +1,4 @@
+using AlgoSdk.LowLevel;
 using Unity.Collections;
 using Unity.Jobs;
 using UnityEngine.Networking;
@@ -28,7 +29,8 @@ namespace AlgoSdk
             status = completedRequest.result;
             responseCode = completedRequest.responseCode;
             var contentTypeHeader = completedRequest.GetResponseHeader("Content-Type");
-            contentType = GetContentType(contentTypeHeader) switch
+            contentTypeHeader = PruneParametersFromContentType(contentTypeHeader);
+            contentType = contentTypeHeader switch
             {
                 "application/json" => ContentType.Json,
                 "application/msgpack" => ContentType.MessagePack,
@@ -55,22 +57,22 @@ namespace AlgoSdk
                 data.Dispose();
         }
 
-        private static string GetContentType(string fullType)
+        private static string PruneParametersFromContentType(string fullType)
         {
+            if (fullType == null) return fullType;
             for (var i = 0; i < fullType.Length; i++)
                 if (fullType[i] == ';')
-                    return fullType.Substring(0, i + 1);
+                    return fullType.Substring(0, i);
             return fullType;
         }
     }
 
     public struct AlgoApiResponse<T>
         : INativeDisposable
-        where T : unmanaged
     {
         AlgoApiResponse rawResponse;
         ErrorResponse error;
-        NativeReference<T> payload;
+        T payload;
 
         public AlgoApiResponse(AlgoApiResponse response)
         {
@@ -85,19 +87,22 @@ namespace AlgoSdk
             };
             payload = response.Status switch
             {
-                UnityWebRequest.Result.Success => new NativeReference<T>(
-                    AlgoApiSerializer.Deserialize<T>(rawBytes, response.ContentType),
-                    Allocator.Persistent),
+                UnityWebRequest.Result.Success => AlgoApiSerializer.Deserialize<T>(rawBytes, response.ContentType),
                 _ => default
             };
         }
+
+        public T Payload => payload;
+
+        public ErrorResponse Error => error;
+
+        public AlgoApiResponse Raw => rawResponse;
 
         public JobHandle Dispose(JobHandle inputDeps)
         {
             return JobHandle.CombineDependencies(
                 rawResponse.Dispose(inputDeps),
-                error.Dispose(inputDeps),
-                payload.IsCreated ? payload.Dispose(inputDeps) : inputDeps
+                error.Dispose(inputDeps)
             );
         }
 
@@ -105,7 +110,6 @@ namespace AlgoSdk
         {
             rawResponse.Dispose();
             error.Dispose();
-            if (payload.IsCreated) payload.Dispose();
         }
 
         public static implicit operator AlgoApiResponse<T>(AlgoApiResponse response)
@@ -116,7 +120,6 @@ namespace AlgoSdk
         public static implicit operator AlgoApiResponse(AlgoApiResponse<T> response)
         {
             response.error.Dispose();
-            if (response.payload.IsCreated) response.payload.Dispose();
             return response.rawResponse;
         }
     }

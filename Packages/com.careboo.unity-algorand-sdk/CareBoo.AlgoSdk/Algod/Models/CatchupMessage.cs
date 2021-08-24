@@ -1,14 +1,25 @@
 using System;
 using AlgoSdk.MsgPack;
 using Unity.Collections;
+using Unity.Jobs;
 
 namespace AlgoSdk
 {
     public struct CatchupMessage
         : IMessagePackObject
+        , INativeDisposable
         , IEquatable<CatchupMessage>
     {
         public FixedString512 Message;
+
+        public JobHandle Dispose(JobHandle inputDeps)
+        {
+            return inputDeps;
+        }
+
+        public void Dispose()
+        {
+        }
 
         public bool Equals(CatchupMessage other)
         {

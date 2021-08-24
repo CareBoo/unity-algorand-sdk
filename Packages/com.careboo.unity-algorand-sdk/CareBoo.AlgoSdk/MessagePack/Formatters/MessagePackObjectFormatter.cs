@@ -22,8 +22,7 @@ namespace AlgoSdk.MsgPack
                 }
                 catch (NullReferenceException nullRef)
                 {
-                    UnityEngine.Debug.LogError($"Encountered {nameof(NullReferenceException)} when trying to serialize \"{key}\"");
-                    throw nullRef;
+                    UnityEngine.Debug.LogError($"Encountered {nameof(NullReferenceException)} when trying to deserialize \"{key}\":\n{nullRef}");
                 }
             }
             return result;

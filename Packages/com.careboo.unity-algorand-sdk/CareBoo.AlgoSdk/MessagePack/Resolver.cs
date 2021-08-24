@@ -24,7 +24,13 @@ namespace AlgoSdk.MsgPack.Resolvers
 
             static FormatterCache()
             {
-                Formatter = (IMessagePackFormatter<T>)ResolverHelper.GetFormatter(typeof(T));
+                var rawFormatter = ResolverHelper.GetFormatter(typeof(T));
+                if (rawFormatter == null)
+                    throw new NullReferenceException($"{typeof(T)} has no formatter...");
+                if (rawFormatter is IMessagePackFormatter<T> formatter)
+                    Formatter = formatter;
+                else
+                    throw new InvalidCastException($"{rawFormatter.GetType()} is not an IMessagePackFormatter<{typeof(T)}>");
             }
         }
     }
@@ -37,14 +43,20 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(bool), BooleanFormatter.Instance},
             {typeof(Address), new AddressFormatter()},
             {typeof(Sha512_256_Hash), new ByteArrayFormatter<Sha512_256_Hash>()},
-            {typeof(Optional<>), typeof(OptionalFormatter<>)},
-            {typeof(IMessagePackObject), typeof(MessagePackObjectFormatter<>)},
+            {typeof(Optional<ulong>), new OptionalFormatter<ulong>()},
+            {typeof(Optional<ApplicationStateSchema>), new OptionalFormatter<ApplicationStateSchema>()},
+            {typeof(Optional<Address>), new OptionalFormatter<Address>()},
+            {typeof(Optional<AccountParticipation>), new OptionalFormatter<AccountParticipation>()},
             {typeof(TransactionType), new TransactionTypeFormatter()},
             {typeof(FixedString32), new FixedStringFormatter<FixedString32>()},
             {typeof(FixedString64), new FixedStringFormatter<FixedString64>()},
             {typeof(FixedString128), new FixedStringFormatter<FixedString128>()},
             {typeof(NativeText), new NativeTextFormatter()},
             {typeof(UnsafeText), new UnsafeTextFormatter()},
+            {typeof(UnsafeList<ApplicationLocalState>), new UnsafeListFormatter<ApplicationLocalState>()},
+            {typeof(UnsafeList<AssetHolding>), new UnsafeListFormatter<AssetHolding>()},
+            {typeof(UnsafeList<Application>), new UnsafeListFormatter<Application>()},
+            {typeof(UnsafeList<Asset>), new UnsafeListFormatter<Asset>()},
             {typeof(Ed25519.PublicKey), new ByteArrayFormatter<Ed25519.PublicKey>()},
             {typeof(VrfPubkey), new ByteArrayFormatter<VrfPubkey>()},
             {typeof(ITransaction), new TransactionFormatter()},

@@ -29,21 +29,21 @@ namespace AlgoSdk
 
         public JobHandle Dispose(JobHandle inputDeps)
         {
-            var dispose1 = ApplicationsLocalState.Dispose(inputDeps);
-            var dispose2 = Assets.Dispose(inputDeps);
+            var dispose1 = ApplicationsLocalState.IsCreated ? ApplicationsLocalState.Dispose(inputDeps) : inputDeps;
+            var dispose2 = Assets.IsCreated ? Assets.Dispose(inputDeps) : inputDeps;
             dispose1 = JobHandle.CombineDependencies(dispose1, dispose2);
-            var dispose3 = CreatedApplications.Dispose(inputDeps);
-            var dispose4 = CreatedAssets.Dispose(inputDeps);
+            var dispose3 = CreatedApplications.IsCreated ? CreatedApplications.Dispose(inputDeps) : inputDeps;
+            var dispose4 = CreatedAssets.IsCreated ? CreatedAssets.Dispose(inputDeps) : inputDeps;
             dispose3 = JobHandle.CombineDependencies(dispose3, dispose4);
             return JobHandle.CombineDependencies(dispose1, dispose3);
         }
 
         public void Dispose()
         {
-            ApplicationsLocalState.Dispose();
-            Assets.Dispose();
-            CreatedApplications.Dispose();
-            CreatedAssets.Dispose();
+            if (ApplicationsLocalState.IsCreated) ApplicationsLocalState.Dispose();
+            if (Assets.IsCreated) Assets.Dispose();
+            if (CreatedApplications.IsCreated) CreatedApplications.Dispose();
+            if (CreatedAssets.IsCreated) CreatedAssets.Dispose();
         }
     }
 }

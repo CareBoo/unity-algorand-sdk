@@ -60,4 +60,17 @@ public class AlgodClientTest
         using var text = response.Data.AsUtf8Text(Allocator.Temp);
         UnityEngine.Debug.Log(text.ToString());
     });
+
+    [UnityTest]
+    [ConditionalIgnore(nameof(UnityEngine.Application.isBatchMode), "This test requires certain dependencies to be set up and running.")]
+    public IEnumerator GetAccountInformationShouldReturnOk() => UniTask.ToCoroutine(async () =>
+    {
+        var expected = Address.FromString("HF4JGMDSCSXWVVMGQXO7FKGQ2PEBDTG75L6J5Q7WCKEOP2G46U3LVKX66A");
+        using var response = await client.GetAccountInformation(expected);
+        using var account = response.Payload;
+        var actual = account.Address;
+        Assert.AreEqual(expected, actual);
+        using var text = response.Raw.Data.AsUtf8Text(Allocator.Temp);
+        UnityEngine.Debug.Log(text.ToString());
+    });
 }

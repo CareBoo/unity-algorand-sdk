@@ -1,9 +1,10 @@
 using MessagePack;
+using MessagePack.Formatters;
 using Unity.Collections;
 
 namespace AlgoSdk.MsgPack.Formatters
 {
-    public sealed class AddressFormatter : global::MessagePack.Formatters.IMessagePackFormatter<global::AlgoSdk.Address>
+    public sealed class AddressFormatter : IMessagePackFormatter<AlgoSdk.Address>
     {
         public Address Deserialize(ref MessagePackReader reader, MessagePackSerializerOptions options)
         {
