@@ -33,7 +33,7 @@ jobs:
       - name: Run Algorand sandbox services
         run: |
           cd sandbox
-          script -e -c -- ./sandbox up -v release
+          script -e -c "./sandbox up -v release"
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
