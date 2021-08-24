@@ -25,15 +25,15 @@ jobs:
           # - WebGL
 
     steps:
-      # - name: Checkout Algorand sandbox
-      #   uses: actions/checkout@v2
-      #   with:
-      #     repository: algorand/sandbox
-      #     path: sandbox
-      # - name: Run Algorand sandbox services
-      #   run: |
-      #     cd sandbox
-      #     ./sandbox up -v
+      - name: Checkout Algorand sandbox
+        uses: actions/checkout@v2
+        with:
+          repository: algorand/sandbox
+          path: sandbox
+      - name: Run Algorand sandbox services
+        run: |
+          cd sandbox
+          ./sandbox up release --rm -tv
       - name: Checkout repository
         uses: actions/checkout@v2
         with:

@@ -150,6 +150,11 @@ namespace AlgoSdk
             return FromString(in s);
         }
 
+        public static implicit operator Address(string s)
+        {
+            return FromString(s);
+        }
+
         public static implicit operator Address(Ed25519.PublicKey publicKey)
         {
             var address = new Address() { publicKey = publicKey };
