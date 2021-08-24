@@ -30,10 +30,12 @@ jobs:
         with:
           repository: algorand/sandbox
           path: sandbox
+      - name: Fake TTY
+        uses: Yuri6037/Action-FakeTTY@v1.1
       - name: Run Algorand sandbox services
         run: |
           cd sandbox
-          ./sandbox up -v release --rm -t
+          ./sandbox up -v release
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
