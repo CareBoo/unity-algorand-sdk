@@ -34,7 +34,7 @@ jobs:
         run: |
           cd sandbox
           script -e -c "./sandbox up -v release"
-          ping http://localhost:4001
+          ping localhost:4001
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
