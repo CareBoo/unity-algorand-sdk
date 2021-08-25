@@ -13,6 +13,7 @@ jobs:
   testAllModes:
     name: Test ${{ matrix.targetPlatform }}
     runs-on: ubuntu-latest
+
     strategy:
       fail-fast: false
       matrix:
@@ -25,16 +26,6 @@ jobs:
           # - WebGL
 
     steps:
-      - name: Checkout Algorand sandbox
-        uses: actions/checkout@v2
-        with:
-          repository: algorand/sandbox
-          path: sandbox
-      - name: Run Algorand sandbox services
-        run: |
-          cd sandbox
-          script -e -c "./sandbox up -v release"
-          ping localhost:4001
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
