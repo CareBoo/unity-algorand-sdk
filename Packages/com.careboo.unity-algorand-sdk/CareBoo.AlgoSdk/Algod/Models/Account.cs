@@ -1,24 +1,23 @@
+using System;
 using AlgoSdk.MsgPack;
 using Unity.Collections;
-using Unity.Collections.LowLevel.Unsafe;
-using Unity.Jobs;
 
 namespace AlgoSdk
 {
     public struct Account
         : IMessagePackObject
-        , INativeDisposable
+        , IEquatable<Account>
     {
         public Address Address;
         public ulong Amount;
         public ulong AmountWithoutPendingRewards;
-        public UnsafeList<ApplicationLocalState> ApplicationsLocalState;
+        public ApplicationLocalState[] ApplicationsLocalState;
         public Optional<ulong> ApplicationsTotalExtraPages;
         public Optional<ApplicationStateSchema> ApplicationsTotalSchema;
-        public UnsafeList<AssetHolding> Assets;
+        public AssetHolding[] Assets;
         public Optional<Address> AuthAddress;
-        public UnsafeList<Application> CreatedApplications;
-        public UnsafeList<Asset> CreatedAssets;
+        public Application[] CreatedApplications;
+        public Asset[] CreatedAssets;
         public Optional<AccountParticipation> Participation;
         public ulong PendingRewards;
         public Optional<ulong> RewardBase;
@@ -27,23 +26,9 @@ namespace AlgoSdk
         public SignatureType SignatureType;
         public FixedString32 Status;
 
-        public JobHandle Dispose(JobHandle inputDeps)
+        public bool Equals(Account other)
         {
-            var dispose1 = ApplicationsLocalState.IsCreated ? ApplicationsLocalState.Dispose(inputDeps) : inputDeps;
-            var dispose2 = Assets.IsCreated ? Assets.Dispose(inputDeps) : inputDeps;
-            dispose1 = JobHandle.CombineDependencies(dispose1, dispose2);
-            var dispose3 = CreatedApplications.IsCreated ? CreatedApplications.Dispose(inputDeps) : inputDeps;
-            var dispose4 = CreatedAssets.IsCreated ? CreatedAssets.Dispose(inputDeps) : inputDeps;
-            dispose3 = JobHandle.CombineDependencies(dispose3, dispose4);
-            return JobHandle.CombineDependencies(dispose1, dispose3);
-        }
-
-        public void Dispose()
-        {
-            if (ApplicationsLocalState.IsCreated) ApplicationsLocalState.Dispose();
-            if (Assets.IsCreated) Assets.Dispose();
-            if (CreatedApplications.IsCreated) CreatedApplications.Dispose();
-            if (CreatedAssets.IsCreated) CreatedAssets.Dispose();
+            return this.Equals(ref other);
         }
     }
 }
@@ -57,19 +42,19 @@ namespace AlgoSdk.MsgPack
                 .Assign("address", (ref Account a) => ref a.Address)
                 .Assign("amount", (ref Account a) => ref a.Amount)
                 .Assign("amount-without-pending-rewards", (ref Account a) => ref a.AmountWithoutPendingRewards)
-                .Assign("apps-local-state", (ref Account a) => ref a.ApplicationsLocalState, default(UnsafeListComparer<ApplicationLocalState>))
+                .Assign("apps-local-state", (ref Account a) => ref a.ApplicationsLocalState, ArrayComparer<ApplicationLocalState>.Instance)
                 .Assign("apps-total-extra-pages", (ref Account a) => ref a.ApplicationsTotalExtraPages)
                 .Assign("apps-total-schema", (ref Account a) => ref a.ApplicationsTotalSchema)
-                .Assign("assets", (ref Account a) => ref a.Assets, default(UnsafeListComparer<AssetHolding>))
+                .Assign("assets", (ref Account a) => ref a.Assets, ArrayComparer<AssetHolding>.Instance)
                 .Assign("auth-addr", (ref Account a) => ref a.AuthAddress)
-                .Assign("created-apps", (ref Account a) => ref a.CreatedApplications, default(UnsafeListComparer<Application>))
-                .Assign("created-assets", (ref Account a) => ref a.CreatedAssets, default(UnsafeListComparer<Asset>))
+                .Assign("created-apps", (ref Account a) => ref a.CreatedApplications, ArrayComparer<Application>.Instance)
+                .Assign("created-assets", (ref Account a) => ref a.CreatedAssets, ArrayComparer<Asset>.Instance)
                 .Assign("participation", (ref Account a) => ref a.Participation)
                 .Assign("pending-rewards", (ref Account a) => ref a.PendingRewards)
                 .Assign("reward-base", (ref Account a) => ref a.RewardBase)
                 .Assign("rewards", (ref Account a) => ref a.Rewards)
                 .Assign("round", (ref Account a) => ref a.Round)
-                .Assign("sig-type", (ref Account a) => ref a.SignatureType, default(SignatureTypeComparer))
+                .Assign("sig-type", (ref Account a) => ref a.SignatureType, SignatureTypeComparer.Instance)
                 .Assign("status", (ref Account a) => ref a.Status)
                 ;
     }

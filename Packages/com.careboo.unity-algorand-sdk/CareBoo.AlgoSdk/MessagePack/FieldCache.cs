@@ -1,12 +1,10 @@
-using System.Collections.Generic;
 using System.IO;
-using Unity.Collections;
 
 namespace AlgoSdk.MsgPack
 {
     public static class FieldCache<T> where T : struct, IMessagePackObject
     {
-        public static readonly SortedDictionary<FixedString64, Field<T>> Map;
+        public static readonly Field<T>.Map Map;
 
         static FieldCache()
         {

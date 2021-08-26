@@ -1,6 +1,4 @@
-using AlgoSdk.LowLevel;
-using Unity.Collections;
-using Unity.Jobs;
+using System.Text;
 using UnityEngine.Networking;
 
 namespace AlgoSdk
@@ -13,19 +11,15 @@ namespace AlgoSdk
     }
 
     public struct AlgoApiResponse
-        : INativeDisposable
     {
-        NativeArray<byte> data;
+        byte[] data;
         UnityWebRequest.Result status;
         long responseCode;
         ContentType contentType;
 
         public AlgoApiResponse(ref UnityWebRequest completedRequest)
         {
-            var requestData = completedRequest.downloadHandler.data;
-            data = requestData != null
-                ? new NativeArray<byte>(requestData, Allocator.Persistent)
-                : default;
+            data = completedRequest.downloadHandler.data;
             status = completedRequest.result;
             responseCode = completedRequest.responseCode;
             var contentTypeHeader = completedRequest.GetResponseHeader("Content-Type");
@@ -36,9 +30,10 @@ namespace AlgoSdk
                 "application/msgpack" => ContentType.MessagePack,
                 _ => ContentType.None
             };
+            completedRequest.Dispose();
         }
 
-        public NativeArray<byte>.ReadOnly Data => data.AsReadOnly();
+        public byte[] Data => data;
 
         public long ResponseCode => responseCode;
 
@@ -46,15 +41,9 @@ namespace AlgoSdk
 
         public ContentType ContentType => contentType;
 
-        public JobHandle Dispose(JobHandle inputDeps)
+        public string GetText()
         {
-            return data.IsCreated ? data.Dispose(inputDeps) : inputDeps;
-        }
-
-        public void Dispose()
-        {
-            if (data.IsCreated)
-                data.Dispose();
+            return Encoding.UTF8.GetString(data, 0, data.Length);
         }
 
         private static string PruneParametersFromContentType(string fullType)
@@ -68,7 +57,6 @@ namespace AlgoSdk
     }
 
     public struct AlgoApiResponse<T>
-        : INativeDisposable
     {
         AlgoApiResponse rawResponse;
         ErrorResponse error;
@@ -77,12 +65,12 @@ namespace AlgoSdk
         public AlgoApiResponse(AlgoApiResponse response)
         {
             this.rawResponse = response;
-            NativeArray<byte>.ReadOnly rawBytes = response.Data;
+            byte[] rawBytes = response.Data;
             error = response.Status switch
             {
                 UnityWebRequest.Result.ProtocolError => AlgoApiSerializer.Deserialize<ErrorResponse>(rawBytes, response.ContentType),
-                UnityWebRequest.Result.ConnectionError => new ErrorResponse("Could not connect", Allocator.Persistent),
-                UnityWebRequest.Result.DataProcessingError => new ErrorResponse("Error processing data from server", Allocator.Persistent),
+                UnityWebRequest.Result.ConnectionError => new ErrorResponse("Could not connect"),
+                UnityWebRequest.Result.DataProcessingError => new ErrorResponse("Error processing data from server"),
                 _ => default
             };
             payload = response.Status switch
@@ -98,20 +86,6 @@ namespace AlgoSdk
 
         public AlgoApiResponse Raw => rawResponse;
 
-        public JobHandle Dispose(JobHandle inputDeps)
-        {
-            return JobHandle.CombineDependencies(
-                rawResponse.Dispose(inputDeps),
-                error.Dispose(inputDeps)
-            );
-        }
-
-        public void Dispose()
-        {
-            rawResponse.Dispose();
-            error.Dispose();
-        }
-
         public static implicit operator AlgoApiResponse<T>(AlgoApiResponse response)
         {
             return new AlgoApiResponse<T>(response);
@@ -119,7 +93,6 @@ namespace AlgoSdk
 
         public static implicit operator AlgoApiResponse(AlgoApiResponse<T> response)
         {
-            response.error.Dispose();
             return response.rawResponse;
         }
     }

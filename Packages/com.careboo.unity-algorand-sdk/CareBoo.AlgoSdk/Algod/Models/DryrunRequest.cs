@@ -1,7 +1,6 @@
 using System;
 using AlgoSdk.MsgPack;
 using Unity.Collections;
-using Unity.Collections.LowLevel.Unsafe;
 
 namespace AlgoSdk
 {
@@ -9,13 +8,13 @@ namespace AlgoSdk
         : IEquatable<DryrunRequest>
         , IMessagePackObject
     {
-        public UnsafeList<Account> Accounts;
-        public UnsafeList<Application> Applications;
+        public Account[] Accounts;
+        public Application[] Applications;
         public ulong LatestTimestamp;
         public FixedString64 ProtocolVersion;
         public ulong Round;
-        public UnsafeList<DryrunSource> Sources;
-        public UnsafeList<RawTransaction> Transactions;
+        public DryrunSource[] Sources;
+        public RawTransaction[] Transactions;
 
         public bool Equals(DryrunRequest other)
         {
@@ -30,13 +29,13 @@ namespace AlgoSdk.MsgPack
     {
         internal static readonly Field<DryrunRequest>.Map dryrunRequestFields =
             new Field<DryrunRequest>.Map()
-                .Assign("accounts", (ref DryrunRequest x) => ref x.Accounts, default(UnsafeListComparer<Account>))
-                .Assign("apps", (ref DryrunRequest x) => ref x.Applications, default(UnsafeListComparer<Application>))
+                .Assign("accounts", (ref DryrunRequest x) => ref x.Accounts, ArrayComparer<Account>.Instance)
+                .Assign("apps", (ref DryrunRequest x) => ref x.Applications, ArrayComparer<Application>.Instance)
                 .Assign("latest-timestamp", (ref DryrunRequest x) => ref x.LatestTimestamp)
                 .Assign("protocol-version", (ref DryrunRequest x) => ref x.ProtocolVersion)
                 .Assign("round", (ref DryrunRequest x) => ref x.Round)
-                .Assign("sources", (ref DryrunRequest x) => ref x.Sources, default(UnsafeListComparer<DryrunSource>))
-                .Assign("txns", (ref DryrunRequest x) => ref x.Transactions, default(UnsafeListComparer<RawTransaction>))
+                .Assign("sources", (ref DryrunRequest x) => ref x.Sources, ArrayComparer<DryrunSource>.Instance)
+                .Assign("txns", (ref DryrunRequest x) => ref x.Transactions, ArrayComparer<RawTransaction>.Instance)
                 ;
     }
 }

@@ -1,8 +1,6 @@
 using System;
 using AlgoSdk.Crypto;
 using Unity.Collections;
-using Unity.Collections.LowLevel.Unsafe;
-using Unity.Jobs;
 
 namespace AlgoSdk
 {
@@ -10,7 +8,6 @@ namespace AlgoSdk
     {
         public struct Header
             : ITransaction
-            , INativeDisposable
             , IEquatable<Header>
         {
             public ulong Fee;
@@ -22,7 +19,7 @@ namespace AlgoSdk
             public FixedString32 GenesisId;
             public Address Group;
             public Address Lease;
-            public UnsafeText Note;
+            public string Note;
             public Address RekeyTo;
 
             public TransactionType TransactionType => transactionType;
@@ -50,16 +47,6 @@ namespace AlgoSdk
                 Lease = default;
                 Note = default;
                 RekeyTo = default;
-            }
-
-            public JobHandle Dispose(JobHandle inputDeps)
-            {
-                return Note.Dispose(inputDeps);
-            }
-
-            public void Dispose()
-            {
-                Note.Dispose();
             }
 
             public Header GetHeader()
@@ -108,8 +95,7 @@ namespace AlgoSdk
                     && GenesisId == other.GenesisId
                     && Group == other.Group
                     && Lease == other.Lease
-                    && Note.IsCreated == other.Note.IsCreated
-                    && (!Note.IsCreated || Note.Equals(other.Note))
+                    && string.Equals(Note, other.Note)
                     && RekeyTo == other.RekeyTo
                     ;
             }

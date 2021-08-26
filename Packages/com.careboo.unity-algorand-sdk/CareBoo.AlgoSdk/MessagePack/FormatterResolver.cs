@@ -5,13 +5,12 @@ using AlgoSdk.MsgPack.Formatters;
 using MessagePack;
 using MessagePack.Formatters;
 using Unity.Collections;
-using Unity.Collections.LowLevel.Unsafe;
 
 namespace AlgoSdk.MsgPack.Resolvers
 {
-    public class AlgoSdkMessagePackResolver : IFormatterResolver
+    public class FormatterResolver : IFormatterResolver
     {
-        public static AlgoSdkMessagePackResolver Instance = new AlgoSdkMessagePackResolver();
+        public static FormatterResolver Instance = new FormatterResolver();
 
         public IMessagePackFormatter<T> GetFormatter<T>()
         {
@@ -24,7 +23,7 @@ namespace AlgoSdk.MsgPack.Resolvers
 
             static FormatterCache()
             {
-                var rawFormatter = ResolverHelper.GetFormatter(typeof(T));
+                var rawFormatter = GetFormatter(typeof(T));
                 if (rawFormatter == null)
                     throw new NullReferenceException($"{typeof(T)} has no formatter...");
                 if (rawFormatter is IMessagePackFormatter<T> formatter)
@@ -33,11 +32,8 @@ namespace AlgoSdk.MsgPack.Resolvers
                     throw new InvalidCastException($"{rawFormatter.GetType()} is not an IMessagePackFormatter<{typeof(T)}>");
             }
         }
-    }
 
-    internal static class ResolverHelper
-    {
-        private static readonly Dictionary<Type, object> lookup = new Dictionary<Type, object>()
+        private static readonly Dictionary<Type, object> formatterLookup = new Dictionary<Type, object>()
         {
             {typeof(ulong), UInt64Formatter.Instance},
             {typeof(bool), BooleanFormatter.Instance},
@@ -51,12 +47,10 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(FixedString32), new FixedStringFormatter<FixedString32>()},
             {typeof(FixedString64), new FixedStringFormatter<FixedString64>()},
             {typeof(FixedString128), new FixedStringFormatter<FixedString128>()},
-            {typeof(NativeText), new NativeTextFormatter()},
-            {typeof(UnsafeText), new UnsafeTextFormatter()},
-            {typeof(UnsafeList<ApplicationLocalState>), new UnsafeListFormatter<ApplicationLocalState>()},
-            {typeof(UnsafeList<AssetHolding>), new UnsafeListFormatter<AssetHolding>()},
-            {typeof(UnsafeList<Application>), new UnsafeListFormatter<Application>()},
-            {typeof(UnsafeList<Asset>), new UnsafeListFormatter<Asset>()},
+            {typeof(ApplicationLocalState[]), new ArrayFormatter<ApplicationLocalState>()},
+            {typeof(AssetHolding[]), new ArrayFormatter<AssetHolding>()},
+            {typeof(Application[]), new ArrayFormatter<Application>()},
+            {typeof(Asset[]), new ArrayFormatter<Asset>()},
             {typeof(Ed25519.PublicKey), new ByteArrayFormatter<Ed25519.PublicKey>()},
             {typeof(VrfPubkey), new ByteArrayFormatter<VrfPubkey>()},
             {typeof(ITransaction), new TransactionFormatter()},
@@ -80,9 +74,9 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(DryrunRequest), new MessagePackObjectFormatter<DryrunRequest>()},
         };
 
-        internal static object GetFormatter(Type t)
+        private static object GetFormatter(Type t)
         {
-            if (lookup.TryGetValue(t, out var formatter))
+            if (formatterLookup.TryGetValue(t, out var formatter))
                 return formatter;
             return null;
         }

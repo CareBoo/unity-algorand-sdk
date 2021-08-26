@@ -1,27 +1,14 @@
 using System;
 using AlgoSdk.MsgPack;
-using Unity.Collections;
-using Unity.Jobs;
 
 namespace AlgoSdk
 {
     public struct Application
         : IMessagePackObject
-        , INativeDisposable
         , IEquatable<Application>
     {
         public ulong Id;
         public ApplicationParams Params;
-
-        public JobHandle Dispose(JobHandle inputDeps)
-        {
-            return Params.Dispose(inputDeps);
-        }
-
-        public void Dispose()
-        {
-            Params.Dispose();
-        }
 
         public bool Equals(Application other)
         {

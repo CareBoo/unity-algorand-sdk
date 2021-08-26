@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Unity.Collections;
 
 namespace AlgoSdk.MsgPack
 {
@@ -31,18 +30,12 @@ namespace AlgoSdk.MsgPack
             };
         }
 
-        internal static object GetFieldMap(Type t)
-        {
-            if (lookup.TryGetValue(t, out var map))
-                return map;
-            return null;
-        }
-
-        internal static SortedDictionary<FixedString64, Field<T>> GetFieldMap<T>()
+        internal static Field<T>.Map GetFieldMap<T>()
             where T : struct
         {
-            var fieldMap = GetFieldMap(typeof(T));
-            return (SortedDictionary<FixedString64, Field<T>>)fieldMap;
+            if (lookup.TryGetValue(typeof(T), out var map))
+                return (Field<T>.Map)map;
+            return null;
         }
     }
 }

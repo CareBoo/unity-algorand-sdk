@@ -7,7 +7,7 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
-    public interface ITransaction : IDisposable
+    public interface ITransaction
     {
         Transaction.Header Header { get; }
         void CopyTo(ref RawTransaction rawTransaction);
@@ -42,11 +42,11 @@ namespace AlgoSdk
             this ref TTransaction transaction,
             Allocator allocator
             )
-            where TTransaction : struct, ITransaction, IDisposable
+            where TTransaction : struct, ITransaction
         {
             var rawTransaction = new RawTransaction();
             transaction.CopyTo(ref rawTransaction);
-            var data = MessagePackSerializer.Serialize(rawTransaction, AlgoSdkMessagePackConfig.SerializerOptions);
+            var data = AlgoApiSerializer.SerializeMessagePack(rawTransaction);
             return new NativeByteArray(data, allocator);
         }
     }

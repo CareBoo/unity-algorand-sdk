@@ -6,8 +6,7 @@ namespace AlgoSdk
     public static partial class Transaction
     {
         public struct Payment
-            : IDisposable
-            , ITransaction
+            : ITransaction
             , IEquatable<Payment>
         {
             public Header Header;
@@ -38,11 +37,6 @@ namespace AlgoSdk
                 Receiver = receiver;
                 Amount = amount;
                 CloseRemainderTo = default;
-            }
-
-            public void Dispose()
-            {
-                Header.Dispose();
             }
 
             public Header GetHeader() => Header;

@@ -1,25 +1,9 @@
+using System;
 using System.Collections.Generic;
-using Unity.Collections;
-using Unity.Collections.LowLevel.Unsafe;
 
 namespace AlgoSdk.MsgPack
 {
-    public struct NativeListComparer<T> : IEqualityComparer<NativeList<T>>
-        where T : unmanaged
-    {
-        public unsafe bool Equals(NativeList<T> x, NativeList<T> y)
-        {
-            return x.IsCreated == y.IsCreated
-                && (!x.IsCreated || (x.Length == y.Length && x.GetUnsafePtr() == y.GetUnsafePtr()));
-        }
-
-        public int GetHashCode(NativeList<T> obj)
-        {
-            return obj.GetHashCode();
-        }
-    }
-
-    public struct TransactionTypeComparer : IEqualityComparer<TransactionType>
+    public class TransactionTypeComparer : IEqualityComparer<TransactionType>
     {
         public bool Equals(TransactionType x, TransactionType y)
         {
@@ -30,9 +14,11 @@ namespace AlgoSdk.MsgPack
         {
             return obj.GetHashCode();
         }
+
+        public static readonly TransactionTypeComparer Instance = new TransactionTypeComparer();
     }
 
-    public struct SignatureTypeComparer : IEqualityComparer<SignatureType>
+    public class SignatureTypeComparer : IEqualityComparer<SignatureType>
     {
         public bool Equals(SignatureType x, SignatureType y)
         {
@@ -43,78 +29,45 @@ namespace AlgoSdk.MsgPack
         {
             return obj.GetHashCode();
         }
+
+        public static readonly SignatureTypeComparer Instance = new SignatureTypeComparer();
     }
 
-    public struct NativeTextComparer : IEqualityComparer<NativeText>
+    public class ArrayComparer<T> : IEqualityComparer<T[]>
+        where T : IEquatable<T>
     {
-        public bool Equals(NativeText x, NativeText y)
+        public bool Equals(T[] x, T[] y)
         {
-            return x.IsCreated == y.IsCreated
-                && (!x.IsCreated || x.Equals(y));
+            if (x == null || y == null) return x == y;
+
+            if (x.Length != y.Length) return false;
+
+            for (var i = 0; i < x.Length; i++)
+                if (!x[i].Equals(y[i]))
+                    return false;
+            return true;
         }
 
-        public int GetHashCode(NativeText obj)
+        public int GetHashCode(T[] obj)
         {
             return obj.GetHashCode();
         }
+
+        public static readonly ArrayComparer<T> Instance = new ArrayComparer<T>();
     }
 
-    public struct UnsafeTextComparer : IEqualityComparer<UnsafeText>
+    public class StringComparer : IEqualityComparer<string>
     {
-        public bool Equals(UnsafeText x, UnsafeText y)
+        public bool Equals(string x, string y)
         {
-            return x.IsCreated == y.IsCreated
-                && (!x.IsCreated || x.Equals(y));
+            return string.Equals(x, y);
         }
 
-        public int GetHashCode(UnsafeText obj)
+        public int GetHashCode(string obj)
         {
             return obj.GetHashCode();
         }
-    }
 
-    public struct NativeReferenceComparer<T> : IEqualityComparer<NativeReference<T>>
-        where T : unmanaged
-    {
-        public bool Equals(NativeReference<T> x, NativeReference<T> y)
-        {
-            return x.IsCreated == y.IsCreated
-                && (!x.IsCreated || x.Equals(y));
-        }
-
-        public int GetHashCode(NativeReference<T> obj)
-        {
-            return obj.GetHashCode();
-        }
-    }
-
-    public struct NativeArrayComparer<T> : IEqualityComparer<NativeArray<T>>
-        where T : unmanaged
-    {
-        public bool Equals(NativeArray<T> x, NativeArray<T> y)
-        {
-            return x.IsCreated == y.IsCreated
-                && (!x.IsCreated || x.Equals(y));
-        }
-
-        public int GetHashCode(NativeArray<T> obj)
-        {
-            return obj.GetHashCode();
-        }
-    }
-
-    public struct UnsafeListComparer<T> : IEqualityComparer<UnsafeList<T>>
-        where T : unmanaged
-    {
-        public bool Equals(UnsafeList<T> x, UnsafeList<T> y)
-        {
-            return x.IsCreated == y.IsCreated
-                && (!x.IsCreated || x.Equals(y));
-        }
-
-        public int GetHashCode(UnsafeList<T> obj)
-        {
-            return obj.GetHashCode();
-        }
+        public static readonly StringComparer Instance = new StringComparer();
     }
 }

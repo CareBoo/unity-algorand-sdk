@@ -1,10 +1,9 @@
-using AlgoSdk.MsgPack.Resolvers;
 using MessagePack;
 using UnityEngine;
 
 namespace AlgoSdk.MsgPack
 {
-    public static class AlgoSdkMessagePackConfig
+    public static class MessagePackConfig
     {
         static MessagePackSerializerOptions serializerOptions = null;
 
@@ -16,7 +15,7 @@ namespace AlgoSdk.MsgPack
             if (serializerOptions != null)
                 return;
 
-            serializerOptions = MessagePackSerializerOptions.Standard.WithResolver(AlgoSdkMessagePackResolver.Instance);
+            serializerOptions = MessagePackSerializerOptions.Standard.WithResolver(Resolvers.FormatterResolver.Instance);
         }
 
 #if UNITY_EDITOR

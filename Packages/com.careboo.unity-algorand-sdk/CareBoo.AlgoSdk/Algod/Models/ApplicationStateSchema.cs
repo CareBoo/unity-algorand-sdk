@@ -12,7 +12,7 @@ namespace AlgoSdk
 
         public bool Equals(ApplicationStateSchema other)
         {
-            return true;
+            return this.Equals(ref other);
         }
     }
 }

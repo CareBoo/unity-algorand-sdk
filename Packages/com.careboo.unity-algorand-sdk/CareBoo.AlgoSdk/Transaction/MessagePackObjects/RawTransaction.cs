@@ -19,7 +19,7 @@ namespace AlgoSdk
         public FixedString32 GenesisId;
         public Address Group;
         public Address Lease;
-        public UnsafeText Note;
+        public string Note;
         public Address RekeyTo;
         public Address Receiver;
         public ulong Amount;
@@ -42,12 +42,12 @@ namespace AlgoSdk
         public Optional<bool> AssetFrozen;
         public ulong ApplicationId;
         public ulong OnComplete;
-        public UnsafeList<Address> Accounts;
-        public UnsafeList<byte> ApprovalProgram;
-        public UnsafeList<byte> AppArguments;
-        public UnsafeList<byte> ClearStateProgram;
-        public UnsafeList<Address> ForeignApps;
-        public UnsafeList<Address> ForeignAssets;
+        public Address[] Accounts;
+        public byte[] ApprovalProgram;
+        public byte[] AppArguments;
+        public byte[] ClearStateProgram;
+        public Address[] ForeignApps;
+        public Address[] ForeignAssets;
         public StateSchema GlobalStateSchema;
         public StateSchema LocalStateSchema;
         public StateSchema ExtraProgramPages;
@@ -96,18 +96,18 @@ namespace AlgoSdk.MsgPack
             .Assign("aclose", (ref RawTransaction r) => ref r.AssetCloseTo)
             .Assign("afrz", (ref RawTransaction r) => ref r.AssetFrozen)
             .Assign("amt", (ref RawTransaction r) => ref r.Amount)
-            .Assign("apaa", (ref RawTransaction r) => ref r.AppArguments, default(UnsafeListComparer<byte>))
+            .Assign("apaa", (ref RawTransaction r) => ref r.AppArguments, ArrayComparer<byte>.Instance)
             .Assign("apan", (ref RawTransaction r) => ref r.OnComplete)
-            .Assign("apap", (ref RawTransaction r) => ref r.ApprovalProgram, default(UnsafeListComparer<byte>))
+            .Assign("apap", (ref RawTransaction r) => ref r.ApprovalProgram, ArrayComparer<byte>.Instance)
             .Assign("apar", (ref RawTransaction r) => ref r.AssetParams)
-            .Assign("apas", (ref RawTransaction r) => ref r.ForeignAssets, default(UnsafeListComparer<Address>))
-            .Assign("apat", (ref RawTransaction r) => ref r.Accounts, default(UnsafeListComparer<Address>))
+            .Assign("apas", (ref RawTransaction r) => ref r.ForeignAssets, ArrayComparer<Address>.Instance)
+            .Assign("apat", (ref RawTransaction r) => ref r.Accounts, ArrayComparer<Address>.Instance)
             .Assign("apep", (ref RawTransaction r) => ref r.ExtraProgramPages)
-            .Assign("apfa", (ref RawTransaction r) => ref r.ForeignApps, default(UnsafeListComparer<Address>))
+            .Assign("apfa", (ref RawTransaction r) => ref r.ForeignApps, ArrayComparer<Address>.Instance)
             .Assign("apgs", (ref RawTransaction r) => ref r.GlobalStateSchema)
             .Assign("apid", (ref RawTransaction r) => ref r.ApplicationId)
             .Assign("apls", (ref RawTransaction r) => ref r.LocalStateSchema)
-            .Assign("apsu", (ref RawTransaction r) => ref r.ClearStateProgram, default(UnsafeListComparer<byte>))
+            .Assign("apsu", (ref RawTransaction r) => ref r.ClearStateProgram, ArrayComparer<byte>.Instance)
             .Assign("arcv", (ref RawTransaction r) => ref r.AssetReceiver)
             .Assign("asnd", (ref RawTransaction r) => ref r.AssetSender)
             .Assign("caid", (ref RawTransaction r) => ref r.ConfigAsset)
@@ -122,12 +122,12 @@ namespace AlgoSdk.MsgPack
             .Assign("lv", (ref RawTransaction r) => ref r.LastValidRound)
             .Assign("lx", (ref RawTransaction r) => ref r.Lease)
             .Assign("nonpart", (ref RawTransaction r) => ref r.NonParticipation)
-            .Assign("note", (ref RawTransaction r) => ref r.Note, default(UnsafeTextComparer))
+            .Assign("note", (ref RawTransaction r) => ref r.Note, StringComparer.Instance)
             .Assign("rcv", (ref RawTransaction r) => ref r.Receiver)
             .Assign("rekey", (ref RawTransaction r) => ref r.RekeyTo)
             .Assign("selkey", (ref RawTransaction r) => ref r.SelectionPk)
             .Assign("snd", (ref RawTransaction r) => ref r.Sender)
-            .Assign("type", (ref RawTransaction r) => ref r.TransactionType, default(TransactionTypeComparer))
+            .Assign("type", (ref RawTransaction r) => ref r.TransactionType, TransactionTypeComparer.Instance)
             .Assign("votefst", (ref RawTransaction r) => ref r.VoteFirst)
             .Assign("votekd", (ref RawTransaction r) => ref r.VoteKeyDilution)
             .Assign("votekey", (ref RawTransaction r) => ref r.VotePk)

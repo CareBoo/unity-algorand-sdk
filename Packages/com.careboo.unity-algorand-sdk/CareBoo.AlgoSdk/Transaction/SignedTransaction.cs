@@ -14,8 +14,7 @@ namespace AlgoSdk
     }
 
     public struct SignedTransaction<TTransaction>
-        : IDisposable
-        , ISignedTransaction
+        : ISignedTransaction
         , IEquatable<SignedTransaction<TTransaction>>
         where TTransaction : struct, ITransaction, IEquatable<TTransaction>
     {
@@ -45,11 +44,6 @@ namespace AlgoSdk
         {
             data.Sig = Signature;
             Transaction.CopyTo(ref data.Transaction);
-        }
-
-        public void Dispose()
-        {
-            Transaction.Dispose();
         }
 
         public bool Equals(SignedTransaction<TTransaction> other)

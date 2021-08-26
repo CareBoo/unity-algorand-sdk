@@ -1,7 +1,14 @@
+using System;
+
 namespace AlgoSdk
 {
     public struct TealKeyValue
+        : IEquatable<TealKeyValue>
     {
+        public bool Equals(TealKeyValue other)
+        {
+            return true;
+        }
     }
 }
 

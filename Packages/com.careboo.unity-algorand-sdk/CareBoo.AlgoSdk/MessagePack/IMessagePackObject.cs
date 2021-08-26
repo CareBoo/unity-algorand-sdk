@@ -1,3 +1,4 @@
+using System;
 using Unity.Collections;
 
 namespace AlgoSdk.MsgPack
@@ -14,8 +15,16 @@ namespace AlgoSdk.MsgPack
             while (fieldEnum.MoveNext())
             {
                 var kvp = fieldEnum.Current;
-                if (kvp.Value.ShouldSerialize(ref obj))
-                    list.Add(kvp.Key);
+                try
+                {
+                    if (kvp.Value.ShouldSerialize(ref obj))
+                        list.Add(kvp.Key);
+                }
+                catch (NullReferenceException nullRef)
+                {
+                    UnityEngine.Debug.LogError($"Encountered {nameof(NullReferenceException)} when trying to check if we should serialize \"{kvp.Key}\":\n{nullRef}");
+                    throw nullRef;
+                }
             }
             return list;
         }
