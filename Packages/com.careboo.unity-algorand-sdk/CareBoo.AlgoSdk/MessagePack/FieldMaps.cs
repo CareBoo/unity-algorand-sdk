@@ -28,7 +28,8 @@ namespace AlgoSdk.MsgPack
                 {typeof(CatchupMessage), catchupMessageFields},
                 {typeof(DryrunRequest), dryrunRequestFields},
                 {typeof(PendingTransactions), pendingTransactionsFields},
-                {typeof(Block), blockFields}
+                {typeof(Block), blockFields},
+                {typeof(MerkleProof), merkleProofFields}
             };
         }
 

@@ -1,19 +1,13 @@
-using Unity.Collections;
-using Unity.Jobs;
+using AlgoSdk.MsgPack;
 
 namespace AlgoSdk
 {
     public struct MerkleProof
-        : INativeDisposable
+        : IMessagePackObject
     {
-        public JobHandle Dispose(JobHandle inputDeps)
-        {
-            return inputDeps;
-        }
-
-        public void Dispose()
-        {
-        }
+        public ulong TransactionIndex;
+        public string Proof;
+        public string SignedTransactionHash;
     }
 }
 
@@ -21,5 +15,11 @@ namespace AlgoSdk.MsgPack
 {
     internal static partial class FieldMaps
     {
+        internal static readonly Field<MerkleProof>.Map merkleProofFields =
+            new Field<MerkleProof>.Map()
+                .Assign("idx", (ref MerkleProof x) => ref x.TransactionIndex)
+                .Assign("proof", (ref MerkleProof x) => ref x.Proof, StringComparer.Instance)
+                .Assign("stibhash", (ref MerkleProof x) => ref x.SignedTransactionHash, StringComparer.Instance)
+                ;
     }
 }

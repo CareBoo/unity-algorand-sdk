@@ -76,7 +76,8 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(CatchupMessage), new MessagePackObjectFormatter<CatchupMessage>()},
             {typeof(DryrunRequest), new MessagePackObjectFormatter<DryrunRequest>()},
             {typeof(PendingTransactions), new MessagePackObjectFormatter<PendingTransactions>()},
-            {typeof(Block), new MessagePackObjectFormatter<Block>()}
+            {typeof(Block), new MessagePackObjectFormatter<Block>()},
+            {typeof(MerkleProof), new MessagePackObjectFormatter<MerkleProof>()}
         };
 
         private static object GetFormatter(Type t)

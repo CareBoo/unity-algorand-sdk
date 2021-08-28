@@ -72,7 +72,7 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<MerkleProof>> GetMerkleProof(ulong round, TransactionId txid)
         {
-            throw new System.NotImplementedException();
+            return await GetAsync($"/v2/blocks/{round}/transactions/{txid}/proof");
         }
 
         public async UniTask<AlgoApiResponse<CatchupMessage>> StartCatchup(string catchpoint)
