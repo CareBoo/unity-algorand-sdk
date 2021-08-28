@@ -14,7 +14,7 @@ namespace AlgoSdk
         public ulong CloseRewards;
         public ulong ClosingAmount;
         public ulong ConfirmedRound;
-        public StateDelta GlobalStateDelta;
+        public EvalDeltaKeyValue[] GlobalStateDelta;
         public AccountStateDelta[] LocalStateDelta;
         public FixedString128Bytes PoolError;
         public ulong ReceiverRewards;
@@ -39,7 +39,7 @@ namespace AlgoSdk.MsgPack
                 .Assign("asset-index", (ref PendingTransaction x) => ref x.AssetIndex)
                 .Assign("close-rewards", (ref PendingTransaction x) => ref x.CloseRewards)
                 .Assign("confirmed-round", (ref PendingTransaction x) => ref x.ConfirmedRound)
-                .Assign("global-state-delta", (ref PendingTransaction x) => ref x.GlobalStateDelta)
+                .Assign("global-state-delta", (ref PendingTransaction x) => ref x.GlobalStateDelta, ArrayComparer<EvalDeltaKeyValue>.Instance)
                 .Assign("local-state-delta", (ref PendingTransaction x) => ref x.LocalStateDelta, ArrayComparer<AccountStateDelta>.Instance)
                 .Assign("pool-error", (ref PendingTransaction x) => ref x.PoolError)
                 .Assign("receiver-rewards", (ref PendingTransaction x) => ref x.ReceiverRewards)

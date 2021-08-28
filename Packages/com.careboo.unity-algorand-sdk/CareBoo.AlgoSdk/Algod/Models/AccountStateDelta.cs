@@ -8,7 +8,7 @@ namespace AlgoSdk
         , IEquatable<AccountStateDelta>
     {
         public Address Address;
-        public StateDelta Delta;
+        public EvalDeltaKeyValue[] Delta;
 
         public bool Equals(AccountStateDelta other)
         {
@@ -24,7 +24,7 @@ namespace AlgoSdk.MsgPack
         internal static readonly Field<AccountStateDelta>.Map accountStateDeltaFields =
             new Field<AccountStateDelta>.Map()
                 .Assign("address", (ref AccountStateDelta x) => ref x.Address)
-                .Assign("delta", (ref AccountStateDelta x) => ref x.Delta)
+                .Assign("delta", (ref AccountStateDelta x) => ref x.Delta, ArrayComparer<EvalDeltaKeyValue>.Instance)
                 ;
     }
 }

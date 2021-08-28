@@ -162,7 +162,10 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<DryrunResults>> TealDryrun(Optional<DryrunRequest> request = default)
         {
-            throw new System.NotImplementedException();
+            var postData = request.HasValue
+                ? AlgoApiSerializer.SerializeJson(request.Value)
+                : null;
+            return await PostAsync("/v2/teal/dryrun", postData);
         }
 
         public async UniTask<AlgoApiResponse<TransactionId>> BroadcastTransaction(RawSignedTransaction rawTxn)

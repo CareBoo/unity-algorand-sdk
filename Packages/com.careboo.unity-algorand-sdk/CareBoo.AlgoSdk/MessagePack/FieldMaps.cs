@@ -27,13 +27,19 @@ namespace AlgoSdk.MsgPack
                 {typeof(BuildVersion), buildVersionFields},
                 {typeof(CatchupMessage), catchupMessageFields},
                 {typeof(DryrunRequest), dryrunRequestFields},
+                {typeof(DryrunSource), dryrunSourceFields},
+                {typeof(DryrunResults), dryrunResultsFields},
+                {typeof(DryrunTxnResult), dryrunTxnResultFields},
+                {typeof(DryrunState), dryrunStateFields},
                 {typeof(PendingTransactions), pendingTransactionsFields},
                 {typeof(Block), blockFields},
                 {typeof(MerkleProof), merkleProofFields},
                 {typeof(LedgerSupply), ledgerSupplyFields},
                 {typeof(Status), statusFields},
                 {typeof(Version), versionFields},
-                {typeof(TransactionParams), transactionParamsFields}
+                {typeof(TransactionParams), transactionParamsFields},
+                {typeof(EvalDeltaKeyValue), evalDeltaKeyValueFields},
+                {typeof(EvalDelta), evalDeltaFields}
             };
         }
 
