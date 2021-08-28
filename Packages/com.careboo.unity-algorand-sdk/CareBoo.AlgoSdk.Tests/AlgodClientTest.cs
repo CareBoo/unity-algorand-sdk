@@ -121,4 +121,12 @@ public class AlgodClientTest
         Debug.Log(response.Raw.GetText());
         Assert.AreEqual(UnityWebRequest.Result.Success, response.Raw.Status);
     });
+
+    [UnityTest]
+    public IEnumerator GetVersionsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
+    {
+        var response = await client.GetVersions();
+        Debug.Log(response.Raw.GetText());
+        Assert.AreEqual(UnityWebRequest.Result.Success, response.Raw.Status);
+    });
 }

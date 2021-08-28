@@ -177,7 +177,7 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<Version>> GetVersions()
         {
-            throw new System.NotImplementedException();
+            return await GetAsync("/versions");
         }
 
         public async UniTask<AlgoApiResponse> GetAsync(string endpoint)

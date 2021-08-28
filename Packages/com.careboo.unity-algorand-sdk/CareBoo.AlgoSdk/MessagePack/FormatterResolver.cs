@@ -54,6 +54,7 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(Application[]), new ArrayFormatter<Application>()},
             {typeof(Asset[]), new ArrayFormatter<Asset>()},
             {typeof(PendingTransaction[]), new ArrayFormatter<PendingTransaction>()},
+            {typeof(FixedString32Bytes[]), new ArrayFormatter<FixedString32Bytes>()},
             {typeof(Ed25519.PublicKey), new ByteArrayFormatter<Ed25519.PublicKey>()},
             {typeof(VrfPubkey), new ByteArrayFormatter<VrfPubkey>()},
             {typeof(ITransaction), new TransactionFormatter()},
@@ -79,7 +80,8 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(Block), new MessagePackObjectFormatter<Block>()},
             {typeof(MerkleProof), new MessagePackObjectFormatter<MerkleProof>()},
             {typeof(LedgerSupply), new MessagePackObjectFormatter<LedgerSupply>()},
-            {typeof(Status), new MessagePackObjectFormatter<Status>()}
+            {typeof(Status), new MessagePackObjectFormatter<Status>()},
+            {typeof(Version), new MessagePackObjectFormatter<Version>()}
         };
 
         private static object GetFormatter(Type t)

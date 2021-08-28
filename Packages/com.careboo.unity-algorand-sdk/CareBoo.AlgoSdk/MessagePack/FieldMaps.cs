@@ -31,7 +31,8 @@ namespace AlgoSdk.MsgPack
                 {typeof(Block), blockFields},
                 {typeof(MerkleProof), merkleProofFields},
                 {typeof(LedgerSupply), ledgerSupplyFields},
-                {typeof(Status), statusFields}
+                {typeof(Status), statusFields},
+                {typeof(Version), versionFields}
             };
         }
 
