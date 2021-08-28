@@ -35,7 +35,7 @@ namespace AlgoSdk
             return new AlgoApiRequest(token, ref webRequest);
         }
 
-        public static AlgoApiRequest Post(string token, string url, string postData)
+        public static AlgoApiRequest Post(string token, string url, string postData = null)
         {
             var webRequest = UnityWebRequest.Post(url, postData);
             return new AlgoApiRequest(token, ref webRequest);

@@ -7,19 +7,9 @@ namespace AlgoSdk
 {
     public struct CatchupMessage
         : IMessagePackObject
-        , INativeDisposable
         , IEquatable<CatchupMessage>
     {
         public FixedString512Bytes Message;
-
-        public JobHandle Dispose(JobHandle inputDeps)
-        {
-            return inputDeps;
-        }
-
-        public void Dispose()
-        {
-        }
 
         public bool Equals(CatchupMessage other)
         {

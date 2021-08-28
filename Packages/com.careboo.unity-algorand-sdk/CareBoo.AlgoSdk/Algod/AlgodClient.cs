@@ -77,7 +77,7 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<CatchupMessage>> StartCatchup(string catchpoint)
         {
-            throw new System.NotImplementedException();
+            return await PostAsync($"/v2/catchup/{catchpoint}");
         }
 
         public async UniTask<AlgoApiResponse<CatchupMessage>> AbortCatchup(string catchpoint)
@@ -140,7 +140,7 @@ namespace AlgoSdk
             return await AlgoApiRequest.Get(token, GetUrl(endpoint)).Send();
         }
 
-        public async UniTask<AlgoApiResponse> PostAsync(string endpoint, string postData)
+        public async UniTask<AlgoApiResponse> PostAsync(string endpoint, string postData = null)
         {
             return await AlgoApiRequest.Post(token, GetUrl(endpoint), postData).Send();
         }
