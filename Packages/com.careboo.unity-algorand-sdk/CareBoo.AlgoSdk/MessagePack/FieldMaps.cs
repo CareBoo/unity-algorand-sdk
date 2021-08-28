@@ -29,7 +29,8 @@ namespace AlgoSdk.MsgPack
                 {typeof(DryrunRequest), dryrunRequestFields},
                 {typeof(PendingTransactions), pendingTransactionsFields},
                 {typeof(Block), blockFields},
-                {typeof(MerkleProof), merkleProofFields}
+                {typeof(MerkleProof), merkleProofFields},
+                {typeof(LedgerSupply), ledgerSupplyFields}
             };
         }
 

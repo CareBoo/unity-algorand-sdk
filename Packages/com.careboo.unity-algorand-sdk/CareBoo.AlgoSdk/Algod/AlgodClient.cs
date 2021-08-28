@@ -87,7 +87,7 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<LedgerSupply>> GetLedgerSupply()
         {
-            throw new System.NotImplementedException();
+            return await GetAsync("/v2/ledger/supply");
         }
 
         public async UniTask<AlgoApiResponse<TransactionId>> RegisterParticipationKeys(Address accountAddress, ulong fee = 1000, Optional<ulong> keyDilution = default, Optional<bool> noWait = default, Optional<bool> roundLastValid = default)
