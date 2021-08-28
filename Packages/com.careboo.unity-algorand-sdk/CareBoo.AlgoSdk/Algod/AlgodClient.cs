@@ -62,7 +62,7 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<Asset>> GetAsset(ulong assetId)
         {
-            throw new System.NotImplementedException();
+            return await GetAsync($"/v2/assets/{assetId}");
         }
 
         public async UniTask<AlgoApiResponse<Block>> GetBlock(ulong round)
