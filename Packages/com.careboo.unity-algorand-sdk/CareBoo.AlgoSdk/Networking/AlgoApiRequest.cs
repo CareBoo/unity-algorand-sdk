@@ -37,7 +37,9 @@ namespace AlgoSdk
 
         public static AlgoApiRequest Post(string token, string url, string postData = null)
         {
-            var webRequest = UnityWebRequest.Post(url, postData);
+            var webRequest = string.IsNullOrEmpty(postData)
+                ? UnityWebRequestPostWithoutBody(url)
+                : UnityWebRequest.Post(url, postData);
             return new AlgoApiRequest(token, ref webRequest);
         }
 
@@ -45,6 +47,17 @@ namespace AlgoSdk
         {
             var webRequest = UnityWebRequest.Delete(url);
             return new AlgoApiRequest(token, ref webRequest);
+        }
+
+        private static UnityWebRequest UnityWebRequestPostWithoutBody(string url)
+        {
+            return new UnityWebRequest()
+            {
+                method = UnityWebRequest.kHttpVerbPOST,
+                url = url,
+                downloadHandler = new DownloadHandlerBuffer(),
+                disposeDownloadHandlerOnDispose = true
+            };
         }
 
         public ref struct Sent

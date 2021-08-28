@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Linq;
 using AlgoSdk;
@@ -92,6 +91,7 @@ public class AlgodClientTest
     {
         var response = await client.GetPendingTransactions();
         Debug.Log(response.Raw.GetText());
+        Assert.AreEqual(UnityWebRequest.Result.Success, response.Raw.Status);
     });
 
     [UnityTest]
@@ -100,38 +100,17 @@ public class AlgodClientTest
     {
         var response = await client.GetBlock(1);
         Debug.Log(response.Raw.GetText());
+        Assert.AreEqual(UnityWebRequest.Result.Success, response.Raw.Status);
     });
 
     [UnityTest]
     [ConditionalIgnore(nameof(UnityEngine.Application.isBatchMode), "This test requires certain dependencies to be set up and running.")]
-    public IEnumerator GetResultsFromAllEndpoints() => UniTask.ToCoroutine(async () =>
+    public IEnumerator RegisterParticipationKeysShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var endpoints = new[]
-        {
-            "/v2/accounts",
-            "/v2/applications",
-            "/v2/blocks",
-            "/v2/transactions",
-            "/v2/status",
-            "/v2/versions"
-        };
-
-        foreach (var endpoint in endpoints)
-        {
-            var response = await client.GetAsync(endpoint);
-            Debug.Log(response.GetText());
-        }
+        var addresses = await GetAddresses();
+        var response = await client.RegisterParticipationKeys(addresses[0]);
+        Debug.Log(response.Raw.GetText());
+        Assert.AreEqual(UnityWebRequest.Result.Success, response.Raw.Status);
     });
 
-    [Serializable]
-    public struct Data
-    {
-        public int camelcase_value;
-    }
-
-    [Test]
-    public void CheckUnityJsonFormat()
-    {
-        Debug.Log(JsonUtility.ToJson(new Data { camelcase_value = 3 }));
-    }
 }

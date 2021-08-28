@@ -1,4 +1,6 @@
+using System.Text;
 using Cysharp.Threading.Tasks;
+using Unity.Collections;
 
 namespace AlgoSdk
 {
@@ -90,14 +92,57 @@ namespace AlgoSdk
             return await GetAsync("/v2/ledger/supply");
         }
 
-        public async UniTask<AlgoApiResponse<TransactionId>> RegisterParticipationKeys(Address accountAddress, ulong fee = 1000, Optional<ulong> keyDilution = default, Optional<bool> noWait = default, Optional<bool> roundLastValid = default)
+        public async UniTask<AlgoApiResponse<TransactionId>> RegisterParticipationKeys(
+            Address accountAddress,
+            ulong fee = 1000,
+            Optional<ulong> keyDilution = default,
+            Optional<bool> noWait = default,
+            Optional<bool> roundLastValid = default)
         {
-            throw new System.NotImplementedException();
+            var endpoint = new NativeText("/v2/register-participation-keys/", Allocator.Temp);
+            endpoint.Append(accountAddress.ToFixedString());
+            var queryParams = new NativeList<FixedString64Bytes>(4, Allocator.Temp);
+            if (fee != 1000)
+            {
+                var feeParam = new FixedString64Bytes("fee=");
+                feeParam.Append(fee);
+                queryParams.AddNoResize(feeParam);
+            }
+            if (keyDilution.HasValue)
+            {
+                var keyDilutionParam = new FixedString64Bytes("key-dilution=");
+                keyDilutionParam.Append(keyDilution.Value);
+                queryParams.AddNoResize(keyDilutionParam);
+            }
+            if (noWait.HasValue)
+            {
+                var noWaitParam = new FixedString64Bytes("no-wait=");
+                noWaitParam.Append(noWait.Value);
+                queryParams.AddNoResize(noWaitParam);
+            }
+            if (roundLastValid.HasValue)
+            {
+                var roundLastValidParam = new FixedString64Bytes("round-last-valid=");
+                roundLastValidParam.Append(roundLastValid.Value);
+                queryParams.AddNoResize(roundLastValidParam);
+            }
+            if (queryParams.Length > 0)
+            {
+                for (var i = 0; i < queryParams.Length; i++)
+                {
+                    endpoint.Append(i == 0 ? "?" : "&");
+                    endpoint.Append(queryParams[i]);
+                }
+            }
+            var endpointString = endpoint.ToString();
+            endpoint.Dispose();
+            queryParams.Dispose();
+            return await PostAsync(endpointString, null);
         }
 
         public async UniTask<AlgoApiResponse> ShutDown(Optional<ulong> timeout = default)
         {
-            throw new System.NotImplementedException();
+            return await PostAsync("/v2/shutdown", null);
         }
 
         public async UniTask<AlgoApiResponse<Status>> GetCurrentStatus()
