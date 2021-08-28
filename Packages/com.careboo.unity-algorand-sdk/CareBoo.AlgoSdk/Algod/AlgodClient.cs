@@ -82,7 +82,7 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<CatchupMessage>> AbortCatchup(string catchpoint)
         {
-            throw new System.NotImplementedException();
+            return await DeleteAsync($"/v2/catchup/{catchpoint}");
         }
 
         public async UniTask<AlgoApiResponse<LedgerSupply>> GetLedgerSupply()
