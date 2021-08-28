@@ -1,4 +1,5 @@
-using System.IO;
+using System;
+using UnityEngine;
 
 namespace AlgoSdk.MsgPack
 {
@@ -10,7 +11,7 @@ namespace AlgoSdk.MsgPack
         {
             Map = FieldMaps.GetFieldMap<T>();
             if (Map == null)
-                throw new InvalidDataException($"There is no map set for type: {typeof(T)}");
+                throw new NullReferenceException($"There is no map set for type: {typeof(T)}");
         }
     }
 }

@@ -31,7 +31,7 @@ namespace AlgoSdk.MsgPack
                 }
                 catch (Exception ex)
                 {
-                    Debug.LogError($"Encountered {ex.GetType().Name} when trying to deserialize \"{key}\"");
+                    Debug.LogError($"Encountered {ex.GetType().Name} when trying to deserialize \"{key}\"\n{ex}");
                     throw ex;
                 }
             }
@@ -52,7 +52,7 @@ namespace AlgoSdk.MsgPack
                 }
                 catch (Exception ex)
                 {
-                    Debug.LogError($"Encountered {ex.GetType().Name} when trying to serialize \"{key}\"");
+                    Debug.LogError($"Encountered {ex.GetType().Name} when trying to serialize \"{key}\"\n{ex}");
                     throw ex;
                 }
             }

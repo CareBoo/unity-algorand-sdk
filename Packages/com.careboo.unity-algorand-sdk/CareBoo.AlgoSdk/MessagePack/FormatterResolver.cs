@@ -37,6 +37,7 @@ namespace AlgoSdk.MsgPack.Resolvers
         {
             {typeof(ulong), UInt64Formatter.Instance},
             {typeof(bool), BooleanFormatter.Instance},
+            {typeof(string), NullableStringFormatter.Instance},
             {typeof(Address), new AddressFormatter()},
             {typeof(Sha512_256_Hash), new ByteArrayFormatter<Sha512_256_Hash>()},
             {typeof(Optional<ulong>), new OptionalFormatter<ulong>()},
@@ -75,6 +76,7 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(CatchupMessage), new MessagePackObjectFormatter<CatchupMessage>()},
             {typeof(DryrunRequest), new MessagePackObjectFormatter<DryrunRequest>()},
             {typeof(PendingTransactions), new MessagePackObjectFormatter<PendingTransactions>()},
+            {typeof(Block), new MessagePackObjectFormatter<Block>()}
         };
 
         private static object GetFormatter(Type t)

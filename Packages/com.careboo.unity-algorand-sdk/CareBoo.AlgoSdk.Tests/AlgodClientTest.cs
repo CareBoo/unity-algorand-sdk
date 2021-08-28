@@ -96,6 +96,14 @@ public class AlgodClientTest
 
     [UnityTest]
     [ConditionalIgnore(nameof(UnityEngine.Application.isBatchMode), "This test requires certain dependencies to be set up and running.")]
+    public IEnumerator GetBlockShouldReturnOkay() => UniTask.ToCoroutine(async () =>
+    {
+        var response = await client.GetBlock(1);
+        Debug.Log(response.Raw.GetText());
+    });
+
+    [UnityTest]
+    [ConditionalIgnore(nameof(UnityEngine.Application.isBatchMode), "This test requires certain dependencies to be set up and running.")]
     public IEnumerator GetResultsFromAllEndpoints() => UniTask.ToCoroutine(async () =>
     {
         var endpoints = new[]
