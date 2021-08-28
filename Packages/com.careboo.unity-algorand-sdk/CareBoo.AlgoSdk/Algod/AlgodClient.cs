@@ -47,7 +47,7 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<PendingTransactions>> GetPendingTransactions(Address accountAddress, ulong max = 0)
         {
-            throw new System.NotImplementedException();
+            return await GetAsync($"/v2/accounts/{accountAddress}/transactions/pending?max={max}");
         }
 
         public async UniTask<AlgoApiResponse<PendingTransaction>> GetPendingTransaction(TransactionId txId)
