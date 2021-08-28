@@ -137,17 +137,17 @@ namespace AlgoSdk
             var endpointString = endpoint.ToString();
             endpoint.Dispose();
             queryParams.Dispose();
-            return await PostAsync(endpointString, null);
+            return await PostAsync(endpointString);
         }
 
         public async UniTask<AlgoApiResponse> ShutDown(Optional<ulong> timeout = default)
         {
-            return await PostAsync("/v2/shutdown", null);
+            return await PostAsync("/v2/shutdown");
         }
 
         public async UniTask<AlgoApiResponse<Status>> GetCurrentStatus()
         {
-            throw new System.NotImplementedException();
+            return await GetAsync("/v2/status");
         }
 
         public async UniTask<AlgoApiResponse<Status>> GetStatusOfBlockAfterRound(ulong round)

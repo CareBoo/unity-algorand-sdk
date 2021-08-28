@@ -30,7 +30,8 @@ namespace AlgoSdk.MsgPack
                 {typeof(PendingTransactions), pendingTransactionsFields},
                 {typeof(Block), blockFields},
                 {typeof(MerkleProof), merkleProofFields},
-                {typeof(LedgerSupply), ledgerSupplyFields}
+                {typeof(LedgerSupply), ledgerSupplyFields},
+                {typeof(Status), statusFields}
             };
         }
 

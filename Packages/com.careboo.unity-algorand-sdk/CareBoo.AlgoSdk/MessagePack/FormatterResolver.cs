@@ -78,7 +78,8 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(PendingTransactions), new MessagePackObjectFormatter<PendingTransactions>()},
             {typeof(Block), new MessagePackObjectFormatter<Block>()},
             {typeof(MerkleProof), new MessagePackObjectFormatter<MerkleProof>()},
-            {typeof(LedgerSupply), new MessagePackObjectFormatter<LedgerSupply>()}
+            {typeof(LedgerSupply), new MessagePackObjectFormatter<LedgerSupply>()},
+            {typeof(Status), new MessagePackObjectFormatter<Status>()}
         };
 
         private static object GetFormatter(Type t)
