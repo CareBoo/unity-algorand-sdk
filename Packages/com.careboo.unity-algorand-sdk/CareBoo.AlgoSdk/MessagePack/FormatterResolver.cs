@@ -81,7 +81,8 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(MerkleProof), new MessagePackObjectFormatter<MerkleProof>()},
             {typeof(LedgerSupply), new MessagePackObjectFormatter<LedgerSupply>()},
             {typeof(Status), new MessagePackObjectFormatter<Status>()},
-            {typeof(Version), new MessagePackObjectFormatter<Version>()}
+            {typeof(Version), new MessagePackObjectFormatter<Version>()},
+            {typeof(TransactionParams), new MessagePackObjectFormatter<TransactionParams>()}
         };
 
         private static object GetFormatter(Type t)

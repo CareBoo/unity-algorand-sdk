@@ -129,4 +129,12 @@ public class AlgodClientTest
         Debug.Log(response.Raw.GetText());
         Assert.AreEqual(UnityWebRequest.Result.Success, response.Raw.Status);
     });
+
+    [UnityTest]
+    public IEnumerator GetTransactionParamsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
+    {
+        var response = await client.GetTransactionParams();
+        Debug.Log(response.Raw.GetText());
+        Assert.AreEqual(UnityWebRequest.Result.Success, response.Raw.Status);
+    });
 }

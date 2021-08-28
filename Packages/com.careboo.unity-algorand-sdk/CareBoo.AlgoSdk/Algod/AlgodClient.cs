@@ -172,7 +172,7 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<TransactionParams>> GetTransactionParams()
         {
-            throw new System.NotImplementedException();
+            return await GetAsync("/v2/transactions/params");
         }
 
         public async UniTask<AlgoApiResponse<Version>> GetVersions()
