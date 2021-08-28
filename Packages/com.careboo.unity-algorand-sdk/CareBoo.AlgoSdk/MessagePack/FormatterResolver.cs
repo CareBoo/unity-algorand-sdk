@@ -44,6 +44,7 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(Optional<Address>), new OptionalFormatter<Address>()},
             {typeof(Optional<AccountParticipation>), new OptionalFormatter<AccountParticipation>()},
             {typeof(TransactionType), new TransactionTypeFormatter()},
+            {typeof(TransactionId), new TransactionIdFormatter()},
             {typeof(FixedString32Bytes), new FixedStringFormatter<FixedString32Bytes>()},
             {typeof(FixedString64Bytes), new FixedStringFormatter<FixedString64Bytes>()},
             {typeof(FixedString128Bytes), new FixedStringFormatter<FixedString128Bytes>()},
