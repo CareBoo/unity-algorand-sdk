@@ -57,7 +57,7 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<Application>> GetApplication(ulong applicationId)
         {
-            throw new System.NotImplementedException();
+            return await GetAsync($"/v2/applications/{applicationId}");
         }
 
         public async UniTask<AlgoApiResponse<Asset>> GetAsset(ulong assetId)
