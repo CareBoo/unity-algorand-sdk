@@ -67,7 +67,7 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<Block>> GetBlock(ulong round)
         {
-            throw new System.NotImplementedException();
+            return await GetAsync($"/v2/blocks/{round}");
         }
 
         public async UniTask<AlgoApiResponse<MerkleProof>> GetMerkleProof(ulong round, TransactionId txid)
