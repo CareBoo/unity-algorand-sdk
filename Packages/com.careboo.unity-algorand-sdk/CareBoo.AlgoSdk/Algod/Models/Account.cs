@@ -24,7 +24,7 @@ namespace AlgoSdk
         public ulong Rewards;
         public ulong Round;
         public SignatureType SignatureType;
-        public FixedString32 Status;
+        public FixedString32Bytes Status;
 
         public bool Equals(Account other)
         {

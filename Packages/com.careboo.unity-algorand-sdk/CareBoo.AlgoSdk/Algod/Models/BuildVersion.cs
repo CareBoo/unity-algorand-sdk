@@ -8,10 +8,10 @@ namespace AlgoSdk
         : IMessagePackObject
         , IEquatable<BuildVersion>
     {
-        public FixedString64 Branch;
+        public FixedString64Bytes Branch;
         public ulong BuildNumber;
-        public FixedString64 Channel;
-        public FixedString128 CommitHash;
+        public FixedString64Bytes Channel;
+        public FixedString128Bytes CommitHash;
         public ulong Major;
         public ulong Minor;
 

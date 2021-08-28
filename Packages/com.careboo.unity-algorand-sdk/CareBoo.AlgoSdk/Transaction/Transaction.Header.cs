@@ -16,7 +16,7 @@ namespace AlgoSdk
             public ulong LastValidRound;
             public Address Sender;
             TransactionType transactionType;
-            public FixedString32 GenesisId;
+            public FixedString32Bytes GenesisId;
             public Address Group;
             public Address Lease;
             public string Note;

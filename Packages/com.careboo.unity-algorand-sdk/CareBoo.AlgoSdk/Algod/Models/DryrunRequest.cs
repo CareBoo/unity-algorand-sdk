@@ -11,7 +11,7 @@ namespace AlgoSdk
         public Account[] Accounts;
         public Application[] Applications;
         public ulong LatestTimestamp;
-        public FixedString64 ProtocolVersion;
+        public FixedString64Bytes ProtocolVersion;
         public ulong Round;
         public DryrunSource[] Sources;
         public RawTransaction[] Transactions;

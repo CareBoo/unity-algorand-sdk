@@ -2,6 +2,7 @@ using System;
 using MessagePack;
 using MessagePack.Formatters;
 using Unity.Collections;
+using UnityEngine;
 
 namespace AlgoSdk.MsgPack
 {
@@ -15,14 +16,23 @@ namespace AlgoSdk.MsgPack
             var length = reader.ReadMapHeader();
             for (var i = 0; i < length; i++)
             {
-                var key = options.Resolver.GetFormatter<FixedString64>().Deserialize(ref reader, options);
+                var key = options.Resolver.GetFormatter<FixedString64Bytes>().Deserialize(ref reader, options);
                 try
                 {
-                    FieldCache<TMessagePackObject>.Map[key].Deserialize(ref result, ref reader, options);
+                    if (FieldCache<TMessagePackObject>.Map.TryGetValue(key, out var field))
+                    {
+                        field.Deserialize(ref result, ref reader, options);
+                    }
+                    else
+                    {
+                        Debug.Log($"Given key: {key} not found in FieldCache<{typeof(TMessagePackObject)}>.Map");
+                        reader.Skip();
+                    }
                 }
-                catch (NullReferenceException nullRef)
+                catch (Exception ex)
                 {
-                    UnityEngine.Debug.LogError($"Encountered {nameof(NullReferenceException)} when trying to deserialize \"{key}\":\n{nullRef}");
+                    Debug.LogError($"Encountered {ex.GetType().Name} when trying to deserialize \"{key}\"");
+                    throw ex;
                 }
             }
             return result;
@@ -35,15 +45,15 @@ namespace AlgoSdk.MsgPack
             for (var i = 0; i < fieldsToSerialize.Length; i++)
             {
                 var key = fieldsToSerialize[i];
-                options.Resolver.GetFormatter<FixedString64>().Serialize(ref writer, key, options);
+                options.Resolver.GetFormatter<FixedString64Bytes>().Serialize(ref writer, key, options);
                 try
                 {
                     FieldCache<TMessagePackObject>.Map[key].Serialize(ref value, ref writer, options);
                 }
-                catch (NullReferenceException nullRef)
+                catch (Exception ex)
                 {
-                    UnityEngine.Debug.LogError($"Encountered {nameof(NullReferenceException)} when trying to serialize \"{key}\"");
-                    throw nullRef;
+                    Debug.LogError($"Encountered {ex.GetType().Name} when trying to serialize \"{key}\"");
+                    throw ex;
                 }
             }
         }

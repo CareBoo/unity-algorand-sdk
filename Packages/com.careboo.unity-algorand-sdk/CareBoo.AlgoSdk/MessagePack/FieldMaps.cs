@@ -26,7 +26,8 @@ namespace AlgoSdk.MsgPack
                 {typeof(AssetParams), assetParamsFields},
                 {typeof(BuildVersion), buildVersionFields},
                 {typeof(CatchupMessage), catchupMessageFields},
-                {typeof(DryrunRequest), dryrunRequestFields}
+                {typeof(DryrunRequest), dryrunRequestFields},
+                {typeof(PendingTransactions), pendingTransactionsFields}
             };
         }
 

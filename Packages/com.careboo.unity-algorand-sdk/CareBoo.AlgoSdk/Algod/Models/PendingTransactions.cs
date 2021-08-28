@@ -1,19 +1,18 @@
-using Unity.Collections;
-using Unity.Jobs;
+using System;
+using AlgoSdk.MsgPack;
 
 namespace AlgoSdk
 {
     public struct PendingTransactions
-        : INativeDisposable
+        : IMessagePackObject
+        , IEquatable<PendingTransactions>
     {
-        public JobHandle Dispose(JobHandle inputDeps)
-        {
-            throw new System.NotImplementedException();
-        }
+        public PendingTransaction[] TopTransactions;
+        public ulong TotalTransactions;
 
-        public void Dispose()
+        public bool Equals(PendingTransactions other)
         {
-            throw new System.NotImplementedException();
+            return this.Equals(ref other);
         }
     }
 }
@@ -22,5 +21,10 @@ namespace AlgoSdk.MsgPack
 {
     internal static partial class FieldMaps
     {
+        internal static readonly Field<PendingTransactions>.Map pendingTransactionsFields =
+            new Field<PendingTransactions>.Map()
+                .Assign("top-transactions", (ref PendingTransactions x) => ref x.TopTransactions, ArrayComparer<PendingTransaction>.Instance)
+                .Assign("total-transactions", (ref PendingTransactions x) => ref x.TotalTransactions)
+                ;
     }
 }

@@ -8,11 +8,11 @@ namespace AlgoSdk
         : IEquatable<AccountParticipation>
         , IMessagePackObject
     {
-        public FixedString128 SelectionParticipationKey;
+        public FixedString128Bytes SelectionParticipationKey;
         public ulong VoteFirstValid;
         public ulong VoteKeyDilution;
         public ulong VoteLastValid;
-        public FixedString128 VoteParticipationKey;
+        public FixedString128Bytes VoteParticipationKey;
 
         public bool Equals(AccountParticipation other)
         {

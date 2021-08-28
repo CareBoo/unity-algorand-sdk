@@ -8,16 +8,16 @@ namespace AlgoSdk.MsgPack
     public class Field<TMessagePackObject>
         where TMessagePackObject : struct
     {
-        public class Map : SortedDictionary<FixedString64, Field<TMessagePackObject>>
+        public class Map : SortedDictionary<FixedString64Bytes, Field<TMessagePackObject>>
         {
-            public Map Assign<T>(FixedString64 key, FieldGetter<T> field)
+            public Map Assign<T>(FixedString64Bytes key, FieldGetter<T> field)
                 where T : IEquatable<T>
             {
                 Add(key, Field<TMessagePackObject>.Assign(field));
                 return this;
             }
 
-            public Map Assign<T>(FixedString64 key, FieldGetter<T> field, IEqualityComparer<T> comparer)
+            public Map Assign<T>(FixedString64Bytes key, FieldGetter<T> field, IEqualityComparer<T> comparer)
             {
                 Add(key, Field<TMessagePackObject>.Assign(field, comparer));
                 return this;

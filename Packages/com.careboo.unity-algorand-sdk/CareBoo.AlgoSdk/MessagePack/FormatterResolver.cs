@@ -44,13 +44,14 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(Optional<Address>), new OptionalFormatter<Address>()},
             {typeof(Optional<AccountParticipation>), new OptionalFormatter<AccountParticipation>()},
             {typeof(TransactionType), new TransactionTypeFormatter()},
-            {typeof(FixedString32), new FixedStringFormatter<FixedString32>()},
-            {typeof(FixedString64), new FixedStringFormatter<FixedString64>()},
-            {typeof(FixedString128), new FixedStringFormatter<FixedString128>()},
+            {typeof(FixedString32Bytes), new FixedStringFormatter<FixedString32Bytes>()},
+            {typeof(FixedString64Bytes), new FixedStringFormatter<FixedString64Bytes>()},
+            {typeof(FixedString128Bytes), new FixedStringFormatter<FixedString128Bytes>()},
             {typeof(ApplicationLocalState[]), new ArrayFormatter<ApplicationLocalState>()},
             {typeof(AssetHolding[]), new ArrayFormatter<AssetHolding>()},
             {typeof(Application[]), new ArrayFormatter<Application>()},
             {typeof(Asset[]), new ArrayFormatter<Asset>()},
+            {typeof(PendingTransaction[]), new ArrayFormatter<PendingTransaction>()},
             {typeof(Ed25519.PublicKey), new ByteArrayFormatter<Ed25519.PublicKey>()},
             {typeof(VrfPubkey), new ByteArrayFormatter<VrfPubkey>()},
             {typeof(ITransaction), new TransactionFormatter()},
@@ -72,6 +73,7 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(BuildVersion), new MessagePackObjectFormatter<BuildVersion>()},
             {typeof(CatchupMessage), new MessagePackObjectFormatter<CatchupMessage>()},
             {typeof(DryrunRequest), new MessagePackObjectFormatter<DryrunRequest>()},
+            {typeof(PendingTransactions), new MessagePackObjectFormatter<PendingTransactions>()},
         };
 
         private static object GetFormatter(Type t)

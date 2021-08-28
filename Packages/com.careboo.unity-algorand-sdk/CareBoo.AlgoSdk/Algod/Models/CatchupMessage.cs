@@ -10,7 +10,7 @@ namespace AlgoSdk
         , INativeDisposable
         , IEquatable<CatchupMessage>
     {
-        public FixedString512 Message;
+        public FixedString512Bytes Message;
 
         public JobHandle Dispose(JobHandle inputDeps)
         {

@@ -14,12 +14,12 @@ namespace AlgoSdk
         public Optional<bool> DefaultFrozen;
         public Address Freeze;
         public Address Manager;
-        public FixedString128 MetadataHash;
-        public FixedString64 Name;
+        public FixedString128Bytes MetadataHash;
+        public FixedString64Bytes Name;
         public Address Reserve;
         public ulong Total;
-        public FixedString64 UnitName;
-        public FixedString512 Url;
+        public FixedString64Bytes UnitName;
+        public FixedString512Bytes Url;
 
         public bool Equals(AssetParams other)
         {

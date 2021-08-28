@@ -3,7 +3,7 @@ using UnityEngine.Networking;
 
 namespace AlgoSdk
 {
-    public enum ContentType : byte
+    public enum AlgoApiFormat : byte
     {
         None,
         Json,
@@ -15,7 +15,7 @@ namespace AlgoSdk
         byte[] data;
         UnityWebRequest.Result status;
         long responseCode;
-        ContentType contentType;
+        AlgoApiFormat contentType;
 
         public AlgoApiResponse(ref UnityWebRequest completedRequest)
         {
@@ -26,9 +26,9 @@ namespace AlgoSdk
             contentTypeHeader = PruneParametersFromContentType(contentTypeHeader);
             contentType = contentTypeHeader switch
             {
-                "application/json" => ContentType.Json,
-                "application/msgpack" => ContentType.MessagePack,
-                _ => ContentType.None
+                "application/json" => AlgoApiFormat.Json,
+                "application/msgpack" => AlgoApiFormat.MessagePack,
+                _ => AlgoApiFormat.None
             };
             completedRequest.Dispose();
         }
@@ -39,11 +39,13 @@ namespace AlgoSdk
 
         public UnityWebRequest.Result Status => status;
 
-        public ContentType ContentType => contentType;
+        public AlgoApiFormat ContentType => contentType;
 
         public string GetText()
         {
-            return Encoding.UTF8.GetString(data, 0, data.Length);
+            return contentType == AlgoApiFormat.MessagePack
+                ? System.Convert.ToBase64String(data)
+                : Encoding.UTF8.GetString(data, 0, data.Length);
         }
 
         private static string PruneParametersFromContentType(string fullType)

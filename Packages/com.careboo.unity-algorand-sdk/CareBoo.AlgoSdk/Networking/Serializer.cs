@@ -7,12 +7,12 @@ namespace AlgoSdk
 {
     public static class AlgoApiSerializer
     {
-        public static T Deserialize<T>(byte[] rawBytes, ContentType contentType)
+        public static T Deserialize<T>(byte[] rawBytes, AlgoApiFormat contentType)
         {
             return contentType switch
             {
-                ContentType.Json => DeserializeJson<T>(rawBytes),
-                ContentType.MessagePack => DeserializeMessagePack<T>(rawBytes),
+                AlgoApiFormat.Json => DeserializeJson<T>(rawBytes),
+                AlgoApiFormat.MessagePack => DeserializeMessagePack<T>(rawBytes),
                 _ => throw new NotSupportedException($"ContentType {contentType} is not supported")
             };
         }
