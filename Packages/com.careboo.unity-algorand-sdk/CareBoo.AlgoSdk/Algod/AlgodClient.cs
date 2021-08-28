@@ -167,7 +167,8 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<TransactionId>> BroadcastTransaction(RawSignedTransaction rawTxn)
         {
-            throw new System.NotImplementedException();
+            var postData = AlgoApiSerializer.SerializeJson(rawTxn);
+            return await PostAsync("/v2/transactions", postData);
         }
 
         public async UniTask<AlgoApiResponse<TransactionParams>> GetTransactionParams()
