@@ -28,7 +28,7 @@ namespace AlgoSdk
             Optional<bool> roundLastValid = default);
         UniTask<AlgoApiResponse> ShutDown(Optional<ulong> timeout = default);
         UniTask<AlgoApiResponse<Status>> GetCurrentStatus();
-        UniTask<AlgoApiResponse<Status>> GetStatusOfBlockAfterRound(ulong round);
+        UniTask<AlgoApiResponse<Status>> GetStatusAfterWaitingForRound(ulong round);
         UniTask<AlgoApiResponse<TealCompilationResult>> TealCompile(string source);
         UniTask<AlgoApiResponse<DryrunResults>> TealDryrun(Optional<DryrunRequest> request = default);
         UniTask<AlgoApiResponse<TransactionId>> BroadcastTransaction(RawSignedTransaction rawTxn);

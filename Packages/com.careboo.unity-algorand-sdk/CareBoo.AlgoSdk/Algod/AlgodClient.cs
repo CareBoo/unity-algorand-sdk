@@ -150,9 +150,9 @@ namespace AlgoSdk
             return await GetAsync("/v2/status");
         }
 
-        public async UniTask<AlgoApiResponse<Status>> GetStatusOfBlockAfterRound(ulong round)
+        public async UniTask<AlgoApiResponse<Status>> GetStatusAfterWaitingForRound(ulong round)
         {
-            throw new System.NotImplementedException();
+            return await GetAsync($"/v2/status/wait-for-block-after/{round}");
         }
 
         public async UniTask<AlgoApiResponse<TealCompilationResult>> TealCompile(string source)
