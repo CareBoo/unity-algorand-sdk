@@ -1,3 +1,10 @@
+# [1.0.0-exp.14](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.13...v1.0.0-exp.14) (2021-08-30)
+
+
+### Features
+
+* **algod:** implement Algod Client ([a7c9e90](https://github.com/CareBoo/unity-algorand-sdk/commit/a7c9e90e2f61a715488bfd8f0095c0206ae6e739)), closes [#10](https://github.com/CareBoo/unity-algorand-sdk/issues/10) [#16](https://github.com/CareBoo/unity-algorand-sdk/issues/16) [#18](https://github.com/CareBoo/unity-algorand-sdk/issues/18)
+
 # [1.0.0-exp.13](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.12...v1.0.0-exp.13) (2021-08-07)
 
 
