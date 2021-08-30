@@ -19,9 +19,9 @@ public class RawTransactionTest
         transaction.TransactionType = TransactionType.Payment;
         transaction.Receiver = AlgoSdk.Crypto.Random.Bytes<Address>().GenerateCheckSum();
         transaction.Amount = 40000;
-        var bytes = MessagePackSerializer.Serialize(transaction, MessagePackConfig.SerializerOptions);
-        var json = MessagePackSerializer.ConvertToJson(bytes, MessagePackConfig.SerializerOptions);
-        var deserialized = MessagePackSerializer.Deserialize<RawTransaction>(bytes, MessagePackConfig.SerializerOptions);
+        var bytes = MessagePackSerializer.Serialize(transaction, MessagePackConfig.SerializerOptionsMessagePack);
+        var json = MessagePackSerializer.ConvertToJson(bytes, MessagePackConfig.SerializerOptionsMessagePack);
+        var deserialized = MessagePackSerializer.Deserialize<RawTransaction>(bytes, MessagePackConfig.SerializerOptionsMessagePack);
         Assert.AreEqual(transaction, deserialized);
     }
 

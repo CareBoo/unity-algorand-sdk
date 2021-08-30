@@ -29,7 +29,7 @@ namespace AlgoSdk
     {
         public NativeText Deserialize(ref MessagePackReader reader, MessagePackSerializerOptions options)
         {
-            var result = new NativeText(Allocator.Persistent);
+            var result = new NativeText(Allocator.Temp);
             if (reader.TryReadStringSpan(out var span))
                 span.CopyTo(ref result);
             else

@@ -1,4 +1,3 @@
-using System.Text;
 using Cysharp.Threading.Tasks;
 using Unity.Collections;
 
@@ -157,21 +156,27 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<TealCompilationResult>> TealCompile(string source)
         {
-            throw new System.NotImplementedException();
+            return await PostAsync("/v2/teal/compile", source);
         }
 
         public async UniTask<AlgoApiResponse<DryrunResults>> TealDryrun(Optional<DryrunRequest> request = default)
         {
-            var postData = request.HasValue
-                ? AlgoApiSerializer.SerializeJson(request.Value)
-                : null;
-            return await PostAsync("/v2/teal/dryrun", postData);
+            const string endpoint = "/v2/teal/dryrun";
+            return request.HasValue
+                ? await PostAsync(endpoint, AlgoApiSerializer.SerializeMessagePack(request.Value))
+                : await PostAsync(endpoint);
         }
 
-        public async UniTask<AlgoApiResponse<TransactionId>> BroadcastTransaction(RawSignedTransaction rawTxn)
+        public async UniTask<AlgoApiResponse<TransactionId>> SendTransaction(RawSignedTransaction rawTxn)
         {
-            var postData = AlgoApiSerializer.SerializeJson(rawTxn);
-            return await PostAsync("/v2/transactions", postData);
+            var data = AlgoApiSerializer.SerializeMessagePack(rawTxn);
+            return await PostAsync("/v2/transactions", data);
+        }
+
+        public async UniTask<AlgoApiResponse> SendTransactionRaw(RawSignedTransaction rawTxn)
+        {
+            var data = AlgoApiSerializer.SerializeMessagePack(rawTxn);
+            return await PostAsync("/v2/transactions", data);
         }
 
         public async UniTask<AlgoApiResponse<TransactionParams>> GetTransactionParams()
@@ -189,9 +194,19 @@ namespace AlgoSdk
             return await AlgoApiRequest.Get(token, GetUrl(endpoint)).Send();
         }
 
-        public async UniTask<AlgoApiResponse> PostAsync(string endpoint, string postData = null)
+        public async UniTask<AlgoApiResponse> PostAsync(string endpoint)
         {
-            return await AlgoApiRequest.Post(token, GetUrl(endpoint), postData).Send();
+            return await AlgoApiRequest.Post(token, GetUrl(endpoint)).Send();
+        }
+
+        public async UniTask<AlgoApiResponse> PostAsync(string endpoint, byte[] data)
+        {
+            return await AlgoApiRequest.Post(token, GetUrl(endpoint), data).Send();
+        }
+
+        public async UniTask<AlgoApiResponse> PostAsync(string endpoint, string source)
+        {
+            return await AlgoApiRequest.Post(token, GetUrl(endpoint), source).Send();
         }
 
         public async UniTask<AlgoApiResponse> DeleteAsync(string endpoint)

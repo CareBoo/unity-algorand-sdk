@@ -10,6 +10,7 @@ namespace AlgoSdk
     public readonly ref struct AlgoApiRequest
     {
         public const string TokenHeader = "X-Algo-API-Token";
+        public const string ContentTypeHeader = "Content-Type";
         readonly UnityWebRequest unityWebRequest;
 
         private AlgoApiRequest(string token, ref UnityWebRequest unityWebRequest)
@@ -35,11 +36,25 @@ namespace AlgoSdk
             return new AlgoApiRequest(token, ref webRequest);
         }
 
-        public static AlgoApiRequest Post(string token, string url, string postData = null)
+        public static AlgoApiRequest Post(string token, string url)
         {
-            var webRequest = string.IsNullOrEmpty(postData)
-                ? UnityWebRequestPostWithoutBody(url)
-                : UnityWebRequest.Post(url, postData);
+            var webRequest = UnityWebRequestPostWithoutBody(url);
+            return new AlgoApiRequest(token, ref webRequest);
+        }
+
+        public static AlgoApiRequest Post(string token, string url, byte[] postData)
+        {
+            var webRequest = UnityWebRequestPostWithoutBody(url);
+            webRequest.uploadHandler = new UploadHandlerRaw(postData);
+            webRequest.disposeUploadHandlerOnDispose = true;
+            webRequest.SetRequestHeader(ContentTypeHeader, "application/x-binary");
+            return new AlgoApiRequest(token, ref webRequest);
+        }
+
+        public static AlgoApiRequest Post(string token, string url, string postData)
+        {
+            var webRequest = UnityWebRequest.Post(url, postData);
+            webRequest.SetRequestHeader(ContentTypeHeader, "text/plain");
             return new AlgoApiRequest(token, ref webRequest);
         }
 

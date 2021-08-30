@@ -17,6 +17,15 @@ namespace MessagePack
         // see:http://msdn.microsoft.com/en-us/library/w3f99sx1.aspx
         internal static readonly Regex AssemblyNameVersionSelectorRegex = new Regex(@", Version=\d+.\d+.\d+.\d+, Culture=[\w-]+, PublicKeyToken=(?:null|[a-f0-9]{16})", RegexOptions.Compiled);
 
+        public bool IsJson { get; private set; }
+
+        public MessagePackSerializerOptions WithIsJsonTrue()
+        {
+            var result = Clone();
+            result.IsJson = true;
+            return result;
+        }
+
         /// <summary>
         /// A collection of known dangerous types that are not expected in a typical MessagePack stream,
         /// and thus are rejected by the default implementation of <see cref="ThrowIfDeserializingTypeIsDisallowed(Type)"/>.

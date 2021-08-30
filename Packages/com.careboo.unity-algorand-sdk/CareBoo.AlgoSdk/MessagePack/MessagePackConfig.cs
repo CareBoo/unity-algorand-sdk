@@ -5,17 +5,21 @@ namespace AlgoSdk.MsgPack
 {
     public static class MessagePackConfig
     {
-        static MessagePackSerializerOptions serializerOptions = null;
+        static MessagePackSerializerOptions serializerOptionsMessagePack = null;
+        static MessagePackSerializerOptions serializerOptionsJson = null;
 
-        public static MessagePackSerializerOptions SerializerOptions => serializerOptions;
+        public static MessagePackSerializerOptions SerializerOptionsMessagePack => serializerOptionsMessagePack;
+
+        public static MessagePackSerializerOptions SerializerOptionsJson => serializerOptionsJson;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void Initialize()
         {
-            if (serializerOptions != null)
+            if (serializerOptionsMessagePack != null)
                 return;
 
-            serializerOptions = MessagePackSerializerOptions.Standard.WithResolver(Resolvers.FormatterResolver.Instance);
+            serializerOptionsMessagePack = MessagePackSerializerOptions.Standard.WithResolver(Resolvers.FormatterResolver.Instance);
+            serializerOptionsJson = serializerOptionsMessagePack.WithIsJsonTrue();
         }
 
 #if UNITY_EDITOR

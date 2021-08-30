@@ -25,9 +25,9 @@ namespace AlgoSdk.MsgPack
     {
         internal static readonly Field<DryrunResults>.Map dryrunResultsFields =
             new Field<DryrunResults>.Map()
-                .Assign("", (ref DryrunResults x) => ref x.Error, StringComparer.Instance)
-                .Assign("", (ref DryrunResults x) => ref x.ProtocolVersion)
-                .Assign("", (ref DryrunResults x) => ref x.Txns, ArrayComparer<DryrunTxnResult>.Instance)
+                .Assign("error", (ref DryrunResults x) => ref x.Error, StringComparer.Instance)
+                .Assign("protocol-version", (ref DryrunResults x) => ref x.ProtocolVersion)
+                .Assign("txns", (ref DryrunResults x) => ref x.Txns, ArrayComparer<DryrunTxnResult>.Instance)
                 ;
     }
 }

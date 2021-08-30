@@ -31,9 +31,18 @@ public class MnemonicTest
     }
 
     [Test]
-    public void MnemonicToKeyShouldGenerateValidKey()
+    public void ShortWordShouldEqualWord()
     {
         var word = (Mnemonic.Word)System.Enum.Parse(typeof(Mnemonic.ShortWord), "aban");
         Assert.AreEqual(Mnemonic.Word.abandon, word);
+    }
+
+    [Test]
+    public void MnemonicToKeyShouldGenerateValidKey()
+    {
+        var expected = Random.Bytes<PrivateKey>();
+        var mnemonic = expected.ToMnemonic();
+        var actual = mnemonic.ToPrivateKey();
+        Assert.AreEqual(expected, actual);
     }
 }

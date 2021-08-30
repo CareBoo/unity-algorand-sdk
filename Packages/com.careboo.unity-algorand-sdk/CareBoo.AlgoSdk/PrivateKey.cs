@@ -63,7 +63,7 @@ namespace AlgoSdk
 
         public override string ToString()
         {
-            var pk = ToPublicKey();
+            var pk = this.ToPublicKey();
             var bytes = new byte[this.Length + pk.Length];
             for (var i = 0; i < this.Length; i++)
                 bytes[i] = this[i];

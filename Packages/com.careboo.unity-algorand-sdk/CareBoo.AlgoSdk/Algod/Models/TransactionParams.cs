@@ -1,4 +1,5 @@
 using System;
+using AlgoSdk.Crypto;
 using AlgoSdk.MsgPack;
 using Unity.Collections;
 
@@ -10,7 +11,7 @@ namespace AlgoSdk
     {
         public FixedString128Bytes ConsensusVersion;
         public ulong Fee;
-        public FixedString64Bytes GenesisHash;
+        public GenesisHash GenesisHash;
         public FixedString32Bytes GenesisId;
         public ulong LastRound;
         public ulong MinFee;

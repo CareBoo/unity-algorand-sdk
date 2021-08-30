@@ -2,7 +2,6 @@ using System;
 using AlgoSdk.Crypto;
 using AlgoSdk.MsgPack;
 using Unity.Collections;
-using Unity.Collections.LowLevel.Unsafe;
 
 namespace AlgoSdk
 {
@@ -12,19 +11,19 @@ namespace AlgoSdk
     {
         public ulong Fee;
         public ulong FirstValidRound;
-        public Sha512_256_Hash GenesisHash;
+        public GenesisHash GenesisHash;
         public ulong LastValidRound;
         public Address Sender;
         public TransactionType TransactionType;
         public FixedString32Bytes GenesisId;
         public Address Group;
         public Address Lease;
-        public string Note;
+        public byte[] Note;
         public Address RekeyTo;
         public Address Receiver;
         public ulong Amount;
         public Address CloseRemainderTo;
-        public Ed25519.PublicKey VotePk;
+        public Address VotePk;
         public VrfPubkey SelectionPk;
         public ulong VoteFirst;
         public ulong VoteLast;
@@ -122,7 +121,7 @@ namespace AlgoSdk.MsgPack
             .Assign("lv", (ref RawTransaction r) => ref r.LastValidRound)
             .Assign("lx", (ref RawTransaction r) => ref r.Lease)
             .Assign("nonpart", (ref RawTransaction r) => ref r.NonParticipation)
-            .Assign("note", (ref RawTransaction r) => ref r.Note, StringComparer.Instance)
+            .Assign("note", (ref RawTransaction r) => ref r.Note, ArrayComparer<byte>.Instance)
             .Assign("rcv", (ref RawTransaction r) => ref r.Receiver)
             .Assign("rekey", (ref RawTransaction r) => ref r.RekeyTo)
             .Assign("selkey", (ref RawTransaction r) => ref r.SelectionPk)

@@ -39,7 +39,8 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(bool), BooleanFormatter.Instance},
             {typeof(string), NullableStringFormatter.Instance},
             {typeof(Address), new AddressFormatter()},
-            {typeof(Sha512_256_Hash), new ByteArrayFormatter<Sha512_256_Hash>()},
+            {typeof(GenesisHash), new GenesisHashFormatter()},
+            {typeof(Sha512_256_Hash), ByteArrayFormatter<Sha512_256_Hash>.Instance},
             {typeof(Optional<ulong>), new OptionalFormatter<ulong>()},
             {typeof(Optional<ApplicationStateSchema>), new OptionalFormatter<ApplicationStateSchema>()},
             {typeof(Optional<Address>), new OptionalFormatter<Address>()},
@@ -51,6 +52,8 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(FixedString32Bytes), new FixedStringFormatter<FixedString32Bytes>()},
             {typeof(FixedString64Bytes), new FixedStringFormatter<FixedString64Bytes>()},
             {typeof(FixedString128Bytes), new FixedStringFormatter<FixedString128Bytes>()},
+            {typeof(NativeText), new NativeTextFormatter()},
+            {typeof(byte[]), ByteArrayFormatter.Instance},
             {typeof(ApplicationLocalState[]), new ArrayFormatter<ApplicationLocalState>()},
             {typeof(AssetHolding[]), new ArrayFormatter<AssetHolding>()},
             {typeof(Application[]), new ArrayFormatter<Application>()},
@@ -64,11 +67,11 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(AccountStateDelta[]), new ArrayFormatter<AccountStateDelta>()},
             {typeof(TealValue[]), new ArrayFormatter<TealValue>()},
             {typeof(EvalDeltaKeyValue[]), new ArrayFormatter<EvalDeltaKeyValue>()},
-            {typeof(Ed25519.PublicKey), new ByteArrayFormatter<Ed25519.PublicKey>()},
-            {typeof(VrfPubkey), new ByteArrayFormatter<VrfPubkey>()},
+            {typeof(BlockTransaction[]), new ArrayFormatter<BlockTransaction>()},
+            {typeof(VrfPubkey), ByteArrayFormatter<VrfPubkey>.Instance},
             {typeof(ITransaction), new TransactionFormatter()},
             {typeof(SignedTransaction<Transaction.Payment>), new SignedTransactionFormatter<SignedTransaction<Transaction.Payment>>()},
-            {typeof(Signature), new ByteArrayFormatter<Signature>()},
+            {typeof(Signature), ByteArrayFormatter<Signature>.Instance},
             {typeof(ErrorResponse), new MessagePackObjectFormatter<ErrorResponse>()},
             {typeof(RawSignedTransaction), new MessagePackObjectFormatter<RawSignedTransaction>()},
             {typeof(RawTransaction), new MessagePackObjectFormatter<RawTransaction>()},
@@ -90,9 +93,12 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(DryrunTxnResult), new MessagePackObjectFormatter<DryrunTxnResult>()},
             {typeof(DryrunState), new MessagePackObjectFormatter<DryrunState>()},
             {typeof(TealValue), new TealValueFormatter()},
-            {typeof(TealBytes), new ByteArrayFormatter<TealBytes>()},
+            {typeof(TealBytes), ByteArrayFormatter<TealBytes>.Instance},
             {typeof(PendingTransactions), new MessagePackObjectFormatter<PendingTransactions>()},
+            {typeof(PendingTransaction), new MessagePackObjectFormatter<PendingTransaction>()},
             {typeof(Block), new MessagePackObjectFormatter<Block>()},
+            {typeof(Block.Header), new MessagePackObjectFormatter<Block.Header>()},
+            {typeof(BlockTransaction), new MessagePackObjectFormatter<BlockTransaction>()},
             {typeof(MerkleProof), new MessagePackObjectFormatter<MerkleProof>()},
             {typeof(LedgerSupply), new MessagePackObjectFormatter<LedgerSupply>()},
             {typeof(Status), new MessagePackObjectFormatter<Status>()},
@@ -107,6 +113,21 @@ namespace AlgoSdk.MsgPack.Resolvers
             if (formatterLookup.TryGetValue(t, out var formatter))
                 return formatter;
             return null;
+        }
+    }
+
+    [Obsolete("TODO: Implement a formatter for the type, T")]
+    public class TodoFormatter<T> : IMessagePackFormatter<T>
+    {
+        public T Deserialize(ref MessagePackReader reader, MessagePackSerializerOptions options)
+        {
+            reader.Skip();
+            return default;
+        }
+
+        public void Serialize(ref MessagePackWriter writer, T value, MessagePackSerializerOptions options)
+        {
+            writer.WriteNil();
         }
     }
 }

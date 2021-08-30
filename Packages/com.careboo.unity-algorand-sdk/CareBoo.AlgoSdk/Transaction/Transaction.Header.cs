@@ -12,14 +12,14 @@ namespace AlgoSdk
         {
             public ulong Fee;
             public ulong FirstValidRound;
-            public Sha512_256_Hash GenesisHash;
+            public GenesisHash GenesisHash;
             public ulong LastValidRound;
             public Address Sender;
             TransactionType transactionType;
             public FixedString32Bytes GenesisId;
             public Address Group;
             public Address Lease;
-            public string Note;
+            public byte[] Note;
             public Address RekeyTo;
 
             public TransactionType TransactionType => transactionType;
@@ -88,7 +88,7 @@ namespace AlgoSdk
             {
                 return Fee == other.Fee
                     && FirstValidRound == other.FirstValidRound
-                    && GenesisHash == other.GenesisHash
+                    && GenesisHash.Equals(other.GenesisHash)
                     && LastValidRound == other.LastValidRound
                     && Sender == other.Sender
                     && TransactionType == other.TransactionType

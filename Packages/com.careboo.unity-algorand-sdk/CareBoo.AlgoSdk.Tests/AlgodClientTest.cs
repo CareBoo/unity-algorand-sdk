@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Linq;
+using System.Text;
 using AlgoSdk;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
@@ -13,10 +14,11 @@ public class AlgodClientTest
 {
     const string SandboxToken = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
     const string SandBoxAddress = "http://localhost:4001";
+    static readonly Mnemonic AccountMnemonic = "earth burst hero frown popular genius occur interest hobby push throw canoe orchard dish shed poem child frequent shop lecture female define state abstract tree";
 
     static readonly AlgodClient client = new AlgodClient(SandBoxAddress, SandboxToken);
 
-    private static async UniTask<Address[]> GetAddresses()
+    static async UniTask<Address[]> GetAddresses()
     {
         var genesisResponse = await client.GetGenesisInformation();
         var genesisJson = genesisResponse.GetText();
@@ -25,6 +27,16 @@ public class AlgodClientTest
             .Where(a => a.comment.Contains("Wallet"))
             .Select(a => (Address)a.addr)
             .ToArray();
+    }
+
+    static void AssertResponseSuccess<T>(AlgoApiResponse<T> response) where T : struct
+    {
+        Assert.AreEqual(UnityWebRequest.Result.Success, response.Raw.Status, response.Error.Message);
+    }
+
+    static void AssertResponseSuccess(AlgoApiResponse response)
+    {
+        Assert.AreEqual(UnityWebRequest.Result.Success, response.Status, response.GetText());
     }
 
     [UnityTest]
@@ -48,7 +60,7 @@ public class AlgodClientTest
     {
         var response = await client.GetGenesisInformation();
         Debug.Log(response.GetText());
-        Assert.AreEqual(UnityWebRequest.Result.Success, response.Status);
+        AssertResponseSuccess(response);
     });
 
     [UnityTest]
@@ -56,7 +68,7 @@ public class AlgodClientTest
     {
         var response = await client.GetMetrics();
         Debug.Log(response.GetText());
-        Assert.AreEqual(UnityWebRequest.Result.Success, response.Status);
+        AssertResponseSuccess(response);
     });
 
     [UnityTest]
@@ -64,7 +76,7 @@ public class AlgodClientTest
     {
         var response = await client.GetSwaggerSpec();
         Debug.Log(response.GetText());
-        Assert.AreEqual(UnityWebRequest.Result.Success, response.Status);
+        AssertResponseSuccess(response);
     });
 
     [UnityTest]
@@ -86,24 +98,27 @@ public class AlgodClientTest
     {
         var response = await client.GetPendingTransactions();
         Debug.Log(response.Raw.GetText());
-        Assert.AreEqual(UnityWebRequest.Result.Success, response.Raw.Status);
+        AssertResponseSuccess(response);
     });
 
     [UnityTest]
     public IEnumerator GetBlockShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var response = await client.GetBlock(1);
-        Debug.Log(response.Raw.GetText());
-        Assert.AreEqual(UnityWebRequest.Result.Success, response.Raw.Status);
+        var pendingResponse = await client.GetPendingTransaction("NM73ELLIXPXOEJI2XSWCNA5UE2BWZEN6YBAORDMTSGR3WTIUQFFA");
+        AssertResponseSuccess(pendingResponse);
+        var blockResponse = await client.GetBlock(pendingResponse.Payload.ConfirmedRound);
+        Debug.Log(blockResponse.Raw.GetText());
+        AssertResponseSuccess(blockResponse);
     });
 
     [UnityTest]
+    [Ignore("Register Participation keys isn't supported yet in the algod sandbox... :(")]
     public IEnumerator RegisterParticipationKeysShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var addresses = await GetAddresses();
         var response = await client.RegisterParticipationKeys(addresses[0]);
         Debug.Log(response.Raw.GetText());
-        Assert.AreEqual(UnityWebRequest.Result.Success, response.Raw.Status);
+        AssertResponseSuccess(response);
     });
 
     [UnityTest]
@@ -111,7 +126,7 @@ public class AlgodClientTest
     {
         var response = await client.GetCurrentStatus();
         Debug.Log(response.Raw.GetText());
-        Assert.AreEqual(UnityWebRequest.Result.Success, response.Raw.Status);
+        AssertResponseSuccess(response);
     });
 
     [UnityTest]
@@ -119,7 +134,7 @@ public class AlgodClientTest
     {
         var response = await client.GetStatusAfterWaitingForRound(0);
         Debug.Log(response.Raw.GetText());
-        Assert.AreEqual(UnityWebRequest.Result.Success, response.Raw.Status);
+        AssertResponseSuccess(response);
     });
 
     [UnityTest]
@@ -127,7 +142,7 @@ public class AlgodClientTest
     {
         var response = await client.GetVersions();
         Debug.Log(response.Raw.GetText());
-        Assert.AreEqual(UnityWebRequest.Result.Success, response.Raw.Status);
+        AssertResponseSuccess(response);
     });
 
     [UnityTest]
@@ -135,6 +150,47 @@ public class AlgodClientTest
     {
         var response = await client.GetTransactionParams();
         Debug.Log(response.Raw.GetText());
-        Assert.AreEqual(UnityWebRequest.Result.Success, response.Raw.Status);
+        AssertResponseSuccess(response);
+    });
+
+    [UnityTest]
+    [Ignore("Not sure how this is supposed to be called just yet")]
+    public IEnumerator GetMerkleProofShouldReturnOkay() => UniTask.ToCoroutine(async () =>
+    {
+        TransactionId txId = "NM73ELLIXPXOEJI2XSWCNA5UE2BWZEN6YBAORDMTSGR3WTIUQFFA";
+        var pendingtxnResponse = await client.GetPendingTransaction(txId);
+        var round = pendingtxnResponse.Payload.ConfirmedRound;
+        var response = await client.GetMerkleProof(round, txId);
+        Debug.Log(response.Raw.GetText());
+        AssertResponseSuccess(response);
+    });
+
+    [UnityTest]
+    public IEnumerator TransferFundsShouldReturnTransactionId() => UniTask.ToCoroutine(async () =>
+    {
+        using var keyPair = AccountMnemonic
+            .ToPrivateKey()
+            .ToKeyPair();
+        var transactionParamsResponse = await client.GetTransactionParams();
+        AssertResponseSuccess(transactionParamsResponse);
+        var transactionParams = transactionParamsResponse.Payload;
+        var txn = new Transaction.Payment(
+            fee: 1000,
+            firstValidRound: transactionParams.LastRound + 1,
+            genesisHash: transactionParams.GenesisHash,
+            lastValidRound: transactionParams.LastRound + 1001,
+            sender: keyPair.PublicKey,
+            receiver: "RDSRVT3X6Y5POLDIN66TSTMUYIBVOMPEOCO4Y2CYACPFKDXZPDCZGVE4PQ",
+            amount: 1000000
+        );
+        txn.Header.GenesisId = transactionParams.GenesisId;
+        var rawSignedTxn = txn.Sign(keyPair.SecretKey).ToRaw();
+        Debug.Log(System.Convert.ToBase64String(AlgoApiSerializer.SerializeMessagePack(rawSignedTxn)));
+        var txidResponse = await client.SendTransaction(rawSignedTxn);
+        AssertResponseSuccess(txidResponse);
+        Debug.Log(txidResponse.Raw.GetText());
+        var pendingResponse = await client.GetPendingTransaction(txidResponse.Payload);
+        AssertResponseSuccess(pendingResponse);
+        Debug.Log(pendingResponse.Raw.GetText());
     });
 }

@@ -46,6 +46,13 @@ namespace AlgoSdk
             Transaction.CopyTo(ref data.Transaction);
         }
 
+        public RawSignedTransaction ToRaw()
+        {
+            RawSignedTransaction result = new RawSignedTransaction();
+            CopyTo(ref result);
+            return result;
+        }
+
         public bool Equals(SignedTransaction<TTransaction> other)
         {
             return Signature.Equals(other.Signature)
@@ -55,7 +62,7 @@ namespace AlgoSdk
 
         public bool Verify()
         {
-            using var message = Transaction.ToMessagePack(Allocator.Temp);
+            using var message = Transaction.ToSignatureMessage(Allocator.Temp);
             return Signature.Verify(message, Transaction.Header.Sender);
         }
     }
