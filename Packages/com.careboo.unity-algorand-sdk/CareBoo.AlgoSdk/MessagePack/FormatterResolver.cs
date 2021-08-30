@@ -41,6 +41,7 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(Address), new AddressFormatter()},
             {typeof(GenesisHash), new GenesisHashFormatter()},
             {typeof(Sha512_256_Hash), ByteArrayFormatter<Sha512_256_Hash>.Instance},
+            {typeof(Optional<bool>), new OptionalFormatter<bool>()},
             {typeof(Optional<ulong>), new OptionalFormatter<ulong>()},
             {typeof(Optional<ApplicationStateSchema>), new OptionalFormatter<ApplicationStateSchema>()},
             {typeof(Optional<Address>), new OptionalFormatter<Address>()},

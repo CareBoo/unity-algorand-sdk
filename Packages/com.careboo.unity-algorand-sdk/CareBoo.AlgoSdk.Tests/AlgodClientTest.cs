@@ -39,6 +39,32 @@ public class AlgodClientTest
         Assert.AreEqual(UnityWebRequest.Result.Success, response.Status, response.GetText());
     }
 
+    static async UniTask<TransactionId> MakePaymentTransaction(ulong amt)
+    {
+        using var keyPair = AccountMnemonic
+            .ToPrivateKey()
+            .ToKeyPair();
+        var transactionParamsResponse = await client.GetTransactionParams();
+        AssertResponseSuccess(transactionParamsResponse);
+        var transactionParams = transactionParamsResponse.Payload;
+        var txn = new Transaction.Payment(
+            fee: 1000,
+            firstValidRound: transactionParams.LastRound + 1,
+            genesisHash: transactionParams.GenesisHash,
+            lastValidRound: transactionParams.LastRound + 1001,
+            sender: keyPair.PublicKey,
+            receiver: "RDSRVT3X6Y5POLDIN66TSTMUYIBVOMPEOCO4Y2CYACPFKDXZPDCZGVE4PQ",
+            amount: amt
+        );
+        txn.Header.GenesisId = transactionParams.GenesisId;
+        var rawSignedTxn = txn.Sign(keyPair.SecretKey).ToRaw();
+        Debug.Log(System.Convert.ToBase64String(AlgoApiSerializer.SerializeMessagePack(rawSignedTxn)));
+        var txidResponse = await client.SendTransaction(rawSignedTxn);
+        AssertResponseSuccess(txidResponse);
+        Debug.Log(txidResponse.Raw.GetText());
+        return txidResponse.Payload;
+    }
+
     [UnityTest]
     public IEnumerator SandboxShouldBeHealthy() => UniTask.ToCoroutine(async () =>
     {
@@ -104,9 +130,16 @@ public class AlgodClientTest
     [UnityTest]
     public IEnumerator GetBlockShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var pendingResponse = await client.GetPendingTransaction("NM73ELLIXPXOEJI2XSWCNA5UE2BWZEN6YBAORDMTSGR3WTIUQFFA");
-        AssertResponseSuccess(pendingResponse);
-        var blockResponse = await client.GetBlock(pendingResponse.Payload.ConfirmedRound);
+        TransactionId txId = await MakePaymentTransaction(10000);
+        var pendingTxn = new PendingTransaction();
+        while (pendingTxn.ConfirmedRound <= 0)
+        {
+            await UniTask.Delay(500);
+            var pendingResponse = await client.GetPendingTransaction(txId);
+            pendingTxn = pendingResponse.Payload;
+        }
+        var round = pendingTxn.ConfirmedRound;
+        var blockResponse = await client.GetBlock(round);
         Debug.Log(blockResponse.Raw.GetText());
         AssertResponseSuccess(blockResponse);
     });
@@ -154,12 +187,17 @@ public class AlgodClientTest
     });
 
     [UnityTest]
-    [Ignore("Not sure how this is supposed to be called just yet")]
     public IEnumerator GetMerkleProofShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        TransactionId txId = "NM73ELLIXPXOEJI2XSWCNA5UE2BWZEN6YBAORDMTSGR3WTIUQFFA";
-        var pendingtxnResponse = await client.GetPendingTransaction(txId);
-        var round = pendingtxnResponse.Payload.ConfirmedRound;
+        TransactionId txId = await MakePaymentTransaction(10000);
+        var pendingTxn = new PendingTransaction();
+        while (pendingTxn.ConfirmedRound <= 0)
+        {
+            await UniTask.Delay(500);
+            var pendingResponse = await client.GetPendingTransaction(txId);
+            pendingTxn = pendingResponse.Payload;
+        }
+        var round = pendingTxn.ConfirmedRound;
         var response = await client.GetMerkleProof(round, txId);
         Debug.Log(response.Raw.GetText());
         AssertResponseSuccess(response);
@@ -168,28 +206,8 @@ public class AlgodClientTest
     [UnityTest]
     public IEnumerator TransferFundsShouldReturnTransactionId() => UniTask.ToCoroutine(async () =>
     {
-        using var keyPair = AccountMnemonic
-            .ToPrivateKey()
-            .ToKeyPair();
-        var transactionParamsResponse = await client.GetTransactionParams();
-        AssertResponseSuccess(transactionParamsResponse);
-        var transactionParams = transactionParamsResponse.Payload;
-        var txn = new Transaction.Payment(
-            fee: 1000,
-            firstValidRound: transactionParams.LastRound + 1,
-            genesisHash: transactionParams.GenesisHash,
-            lastValidRound: transactionParams.LastRound + 1001,
-            sender: keyPair.PublicKey,
-            receiver: "RDSRVT3X6Y5POLDIN66TSTMUYIBVOMPEOCO4Y2CYACPFKDXZPDCZGVE4PQ",
-            amount: 1000000
-        );
-        txn.Header.GenesisId = transactionParams.GenesisId;
-        var rawSignedTxn = txn.Sign(keyPair.SecretKey).ToRaw();
-        Debug.Log(System.Convert.ToBase64String(AlgoApiSerializer.SerializeMessagePack(rawSignedTxn)));
-        var txidResponse = await client.SendTransaction(rawSignedTxn);
-        AssertResponseSuccess(txidResponse);
-        Debug.Log(txidResponse.Raw.GetText());
-        var pendingResponse = await client.GetPendingTransaction(txidResponse.Payload);
+        var txId = await MakePaymentTransaction(10000);
+        var pendingResponse = await client.GetPendingTransaction(txId);
         AssertResponseSuccess(pendingResponse);
         Debug.Log(pendingResponse.Raw.GetText());
     });
