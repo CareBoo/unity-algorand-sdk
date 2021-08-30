@@ -1,8 +1,6 @@
 using System;
 using AlgoSdk.Crypto;
-using AlgoSdk.MsgPack;
 using Unity.Collections;
-using Unity.Jobs;
 
 namespace AlgoSdk
 {
@@ -10,19 +8,18 @@ namespace AlgoSdk
     {
         public struct Header
             : ITransaction
-            , INativeDisposable
             , IEquatable<Header>
         {
             public ulong Fee;
             public ulong FirstValidRound;
-            public Sha512_256_Hash GenesisHash;
+            public GenesisHash GenesisHash;
             public ulong LastValidRound;
             public Address Sender;
             TransactionType transactionType;
-            public FixedString32 GenesisId;
+            public FixedString32Bytes GenesisId;
             public Address Group;
             public Address Lease;
-            public NativeText Note;
+            public byte[] Note;
             public Address RekeyTo;
 
             public TransactionType TransactionType => transactionType;
@@ -52,16 +49,6 @@ namespace AlgoSdk
                 RekeyTo = default;
             }
 
-            public JobHandle Dispose(JobHandle inputDeps)
-            {
-                return Note.Dispose(inputDeps);
-            }
-
-            public void Dispose()
-            {
-                Note.Dispose();
-            }
-
             public Header GetHeader()
             {
                 return this;
@@ -75,16 +62,11 @@ namespace AlgoSdk
                 rawTransaction.LastValidRound = LastValidRound;
                 rawTransaction.Sender = Sender;
                 rawTransaction.TransactionType = TransactionType;
-                if (GenesisId.Length > 0)
-                    rawTransaction.GenesisId = GenesisId;
-                if (Group != default)
-                    rawTransaction.Group = Group;
-                if (Lease != default)
-                    rawTransaction.Lease = Lease;
-                if (Note.IsCreated)
-                    rawTransaction.Note = Note;
-                if (RekeyTo != default)
-                    rawTransaction.RekeyTo = RekeyTo;
+                rawTransaction.GenesisId = GenesisId;
+                rawTransaction.Group = Group;
+                rawTransaction.Lease = Lease;
+                rawTransaction.Note = Note;
+                rawTransaction.RekeyTo = RekeyTo;
             }
 
             public void CopyFrom(in RawTransaction rawTransaction)
@@ -95,31 +77,25 @@ namespace AlgoSdk
                 LastValidRound = rawTransaction.LastValidRound;
                 Sender = rawTransaction.Sender;
                 transactionType = rawTransaction.TransactionType;
-                if (rawTransaction.GenesisId.IsCreated)
-                    GenesisId = rawTransaction.GenesisId;
-                if (rawTransaction.Group.IsCreated)
-                    Group = rawTransaction.Group;
-                if (rawTransaction.Lease.IsCreated)
-                    Lease = rawTransaction.Lease;
-                if (rawTransaction.Note.IsCreated)
-                    Note = rawTransaction.Note;
-                if (rawTransaction.RekeyTo.IsCreated)
-                    RekeyTo = rawTransaction.RekeyTo;
+                GenesisId = rawTransaction.GenesisId;
+                Group = rawTransaction.Group;
+                Lease = rawTransaction.Lease;
+                Note = rawTransaction.Note;
+                RekeyTo = rawTransaction.RekeyTo;
             }
 
             public bool Equals(Header other)
             {
                 return Fee == other.Fee
                     && FirstValidRound == other.FirstValidRound
-                    && GenesisHash == other.GenesisHash
+                    && GenesisHash.Equals(other.GenesisHash)
                     && LastValidRound == other.LastValidRound
                     && Sender == other.Sender
                     && TransactionType == other.TransactionType
                     && GenesisId == other.GenesisId
                     && Group == other.Group
                     && Lease == other.Lease
-                    && Note.IsCreated == other.Note.IsCreated
-                    && (!Note.IsCreated || Note.Equals(other.Note))
+                    && string.Equals(Note, other.Note)
                     && RekeyTo == other.RekeyTo
                     ;
             }

@@ -14,8 +14,7 @@ namespace AlgoSdk
     }
 
     public struct SignedTransaction<TTransaction>
-        : IDisposable
-        , ISignedTransaction
+        : ISignedTransaction
         , IEquatable<SignedTransaction<TTransaction>>
         where TTransaction : struct, ITransaction, IEquatable<TTransaction>
     {
@@ -38,20 +37,20 @@ namespace AlgoSdk
         public void CopyFrom(in RawSignedTransaction data)
         {
             Signature = data.Sig;
-            Transaction.CopyFrom(data.Transaction.Value);
+            Transaction.CopyFrom(data.Transaction);
         }
 
         public void CopyTo(ref RawSignedTransaction data)
         {
             data.Sig = Signature;
-            var transaction = data.Transaction.Value;
-            Transaction.CopyTo(ref transaction);
-            data.Transaction = transaction;
+            Transaction.CopyTo(ref data.Transaction);
         }
 
-        public void Dispose()
+        public RawSignedTransaction ToRaw()
         {
-            Transaction.Dispose();
+            RawSignedTransaction result = new RawSignedTransaction();
+            CopyTo(ref result);
+            return result;
         }
 
         public bool Equals(SignedTransaction<TTransaction> other)
@@ -63,7 +62,7 @@ namespace AlgoSdk
 
         public bool Verify()
         {
-            using var message = Transaction.ToMessagePack(Allocator.Temp);
+            using var message = Transaction.ToSignatureMessage(Allocator.Temp);
             return Signature.Verify(message, Transaction.Header.Sender);
         }
     }

@@ -5,11 +5,19 @@
       "depth": 0,
       "source": "embedded",
       "dependencies": {
-        "com.unity.collections": "1.0.0-pre.3"
+        "com.unity.collections": "1.0.0-pre.3",
+        "com.cysharp.unitask": "2.2.5"
       }
     },
+    "com.cysharp.unitask": {
+      "version": "2.2.5",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
     "com.unity.burst": {
-      "version": "1.5.5",
+      "version": "1.5.6",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -18,11 +26,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collections": {
-      "version": "1.0.0-pre.3",
-      "depth": 1,
+      "version": "1.0.0-pre.5",
+      "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.burst": "1.5.3",
+        "com.unity.burst": "1.5.4",
         "com.unity.test-framework": "1.1.22"
       },
       "url": "https://packages.unity.com"
@@ -56,7 +64,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.package-validation-suite": {
-      "version": "0.21.0-preview",
+      "version": "0.21.1-preview",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -71,8 +79,24 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.sysroot": {
+      "version": "0.1.19-preview",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.sysroot.linux-x86_64": {
+      "version": "0.1.14-preview",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.sysroot": "0.1.18-preview"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.test-framework": {
-      "version": "1.1.27",
+      "version": "1.1.29",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -109,8 +133,18 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.toolchain.win-x86_64-linux-x86_64": {
+      "version": "0.1.21-preview",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.sysroot": "0.1.19-preview",
+        "com.unity.sysroot.linux-x86_64": "0.1.14-preview"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.ui": {
-      "version": "1.0.0-preview.15",
+      "version": "1.0.0-preview.16",
       "depth": 0,
       "source": "registry",
       "dependencies": {

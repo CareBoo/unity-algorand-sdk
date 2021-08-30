@@ -11,11 +11,23 @@ env:
 
 jobs:
   testAllModes:
-    name: Test on version ${{ matrix.unityVersion }}
+    name: Test ${{ matrix.targetPlatform }}
     runs-on: ubuntu-latest
 
+    strategy:
+      fail-fast: false
+      matrix:
+        targetPlatform:
+          # - StandaloneOSX
+          # - StandaloneWindows64
+          - StandaloneLinux64
+          # - iOS
+          # - Android
+          # - WebGL
+
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
         with:
           lfs: true
       - name: Get Date
@@ -26,11 +38,10 @@ jobs:
       - name: Cache Library
         uses: actions/cache@v2.1.1
         with:
-          path: ${{ matrix.projectPath }}/Library
-          key: Library-${{ matrix.projectPath }}-${{ matrix.unityVersion }}-${{ steps.get-date.outputs.date }}
+          path: Library
+          key: Library-${{ matrix.targetPlatform }}-${{ steps.get-date.outputs.date }}
           restore-keys: |
-            Library-${{ matrix.projectPath }}-${{ matrix.unityVersion }}-
-            Library-${{ matrix.projectPath }}-
+            Library-${{ matrix.targetPlatform }}-
             Library-
       - run: ./scripts/coverageAssemblyFilters
         id: assemblyFilters
@@ -38,7 +49,9 @@ jobs:
         id: tests
         with:
           artifactsPath: TestResults
-          customParameters: -burst-disable-compilation -enableCodeCoverage -coverageOptions generateAdditionalMetrics;enableCyclomaticComplexity;assemblyFilters:${{ steps.assemblyFilters.outputs.result }}
+          customParameters: -batchMode -burst-disable-compilation -enableCodeCoverage -coverageOptions generateAdditionalMetrics;enableCyclomaticComplexity;assemblyFilters:${{ steps.assemblyFilters.outputs.result }}
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          useNetworkHost: true
       - name: Upload Test Results Artifacts
         uses: actions/upload-artifact@v1
         with:

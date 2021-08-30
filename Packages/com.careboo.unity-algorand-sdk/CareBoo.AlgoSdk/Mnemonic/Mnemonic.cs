@@ -27,6 +27,7 @@ namespace AlgoSdk
         [FieldOffset(0)] internal FixedBytes50 buffer;
         public const int Length = 25;
         public const int ChecksumIndex = Length - 1;
+        public const int BitsPerWord = 11;
 
         unsafe internal byte* Buffer
         {
@@ -68,7 +69,27 @@ namespace AlgoSdk
 
         public PrivateKey ToPrivateKey()
         {
-            throw new NotImplementedException();
+            var result = new PrivateKey();
+            var buffer = 0;
+            var numBits = 0;
+            var j = 0;
+            for (var i = 0; i < ChecksumIndex; i++)
+            {
+                buffer |= ((ushort)this[i] << numBits);
+                numBits += BitsPerWord;
+                while (numBits >= 8 && j < 32)
+                {
+                    result[j] = (byte)(buffer & 0xff);
+                    j++;
+                    buffer >>= 8;
+                    numBits -= 8;
+                }
+            }
+            if (numBits != 0 && j < 32)
+            {
+                result[j] = (byte)(buffer & 0xff);
+            }
+            return result;
         }
 
         public bool Equals(Mnemonic other)
@@ -110,7 +131,7 @@ namespace AlgoSdk
 
         public static Mnemonic FromKey(PrivateKey key)
         {
-            throw new NotImplementedException();
+            return key.ToMnemonic();
         }
     }
 }

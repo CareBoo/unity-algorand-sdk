@@ -8,7 +8,8 @@
         "CareBoo.AlgoSdk.Crypto",
         "CareBoo.AlgoSdk.LowLevel",
         "MessagePack",
-        "MessagePack.Annotations"
+        "MessagePack.Annotations",
+        "UniTask"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

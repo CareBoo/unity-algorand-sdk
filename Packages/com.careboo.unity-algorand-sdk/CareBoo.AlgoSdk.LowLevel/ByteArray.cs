@@ -80,7 +80,7 @@ namespace AlgoSdk.LowLevel
         }
 
         public static byte[] ToRawBytes<TByteArray>(ref this TByteArray bytes)
-            where TByteArray : unmanaged, IByteArray
+            where TByteArray : struct, IByteArray
         {
             var result = new byte[bytes.Length];
             for (var i = 0; i < bytes.Length; i++)
@@ -89,12 +89,18 @@ namespace AlgoSdk.LowLevel
         }
 
         public static void Copy<T, U>(ref T from, ref U to)
-            where T : unmanaged, IByteArray
-            where U : unmanaged, IByteArray
+            where T : struct, IByteArray
+            where U : struct, IByteArray
         {
             var length = math.min(from.Length, to.Length);
             for (var i = 0; i < length; i++)
                 to.SetByteAt(i, from.GetByteAt(i));
+        }
+
+        public static byte[] ToArray<TByteArray>(ref this TByteArray bytes)
+            where TByteArray : struct, IByteArray
+        {
+            return bytes.ToRawBytes();
         }
 
         public unsafe static ReadOnlySpan<byte> AsReadOnlySpan<TByteArray>(ref this TByteArray bytes)
