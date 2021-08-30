@@ -38,9 +38,9 @@ namespace AlgoSdk
             return result;
         }
 
-        public (Ed25519.SecretKeyHandle, Ed25519.PublicKey) ToKeys()
+        public Ed25519.KeyPair ToKeyPair()
         {
-            return seed.ToKeys();
+            return seed.ToKeyPair();
         }
 
         public Ed25519.PublicKey ToPublicKey()
@@ -63,7 +63,7 @@ namespace AlgoSdk
 
         public override string ToString()
         {
-            var pk = ToPublicKey();
+            var pk = this.ToPublicKey();
             var bytes = new byte[this.Length + pk.Length];
             for (var i = 0; i < this.Length; i++)
                 bytes[i] = this[i];

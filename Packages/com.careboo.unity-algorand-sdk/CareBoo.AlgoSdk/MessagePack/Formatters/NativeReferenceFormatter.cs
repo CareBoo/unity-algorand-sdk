@@ -1,12 +1,13 @@
 using System;
 using MessagePack;
+using MessagePack.Formatters;
 using Unity.Collections;
 
 namespace AlgoSdk.MsgPack.Formatters
 {
     public sealed class NativeReferenceFormatter<T>
-    : global::MessagePack.Formatters.IMessagePackFormatter<global::Unity.Collections.NativeReference<T>>
-    where T : unmanaged
+        : IMessagePackFormatter<NativeReference<T>>
+        where T : unmanaged
     {
         public NativeReference<T> Deserialize(ref MessagePackReader reader, MessagePackSerializerOptions options)
         {

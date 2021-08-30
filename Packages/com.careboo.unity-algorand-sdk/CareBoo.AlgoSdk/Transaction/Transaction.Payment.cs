@@ -1,14 +1,12 @@
 using System;
 using AlgoSdk.Crypto;
-using AlgoSdk.MsgPack;
 
 namespace AlgoSdk
 {
     public static partial class Transaction
     {
         public struct Payment
-            : IDisposable
-            , ITransaction
+            : ITransaction
             , IEquatable<Payment>
         {
             public Header Header;
@@ -41,11 +39,6 @@ namespace AlgoSdk
                 CloseRemainderTo = default;
             }
 
-            public void Dispose()
-            {
-                Header.Dispose();
-            }
-
             public Header GetHeader() => Header;
 
             public void CopyTo(ref RawTransaction rawTransaction)
@@ -53,8 +46,7 @@ namespace AlgoSdk
                 Header.CopyTo(ref rawTransaction);
                 rawTransaction.Receiver = Receiver;
                 rawTransaction.Amount = Amount;
-                if (CloseRemainderTo != default)
-                    rawTransaction.CloseRemainderTo = CloseRemainderTo;
+                rawTransaction.CloseRemainderTo = CloseRemainderTo;
             }
 
             public void CopyFrom(in RawTransaction rawTransaction)
@@ -62,8 +54,7 @@ namespace AlgoSdk
                 Header.CopyFrom(in rawTransaction);
                 Receiver = rawTransaction.Receiver;
                 Amount = rawTransaction.Amount;
-                if (rawTransaction.CloseRemainderTo.IsCreated)
-                    CloseRemainderTo = rawTransaction.CloseRemainderTo;
+                CloseRemainderTo = rawTransaction.CloseRemainderTo;
             }
 
             public bool Equals(Payment other)

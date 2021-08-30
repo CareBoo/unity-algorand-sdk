@@ -65,7 +65,7 @@ namespace AlgoSdk
 
             int byteCount = length * 5 / 8; //this must be TRUNCATED
             if (bytes.Length != byteCount)
-                throw new ArgumentException($"bytes.Length ({bytes.Length}) is different than expected bytes ({byteCount})");
+                throw new ArgumentException($"bytes.Length ({bytes.Length}) is different than expected bytes ({byteCount}). This usually means the given format is not Base32...");
 
             byte curByte = 0, bitsRemaining = 8;
             int mask = 0, arrayIndex = 0;

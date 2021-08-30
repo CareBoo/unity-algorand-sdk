@@ -12,6 +12,21 @@ namespace AlgoSdk
             return true;
         }
 
+        public override bool Equals(object obj)
+        {
+            return obj is LogicSig lsig && this.Equals(lsig);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+
         public bool Verify<TMessage>(TMessage message, Crypto.Ed25519.PublicKey pk) where TMessage : IByteArray
         {
             throw new System.NotImplementedException();

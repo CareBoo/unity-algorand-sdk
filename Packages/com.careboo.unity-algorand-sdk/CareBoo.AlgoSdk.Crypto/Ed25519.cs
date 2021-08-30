@@ -10,6 +10,35 @@ namespace AlgoSdk.Crypto
 {
     public unsafe static class Ed25519
     {
+        public struct KeyPair : INativeDisposable
+        {
+
+            public readonly SecretKeyHandle SecretKey;
+            public readonly PublicKey PublicKey;
+
+            public KeyPair(SecretKeyHandle secretKey, in PublicKey publicKey)
+            {
+                SecretKey = secretKey;
+                PublicKey = publicKey;
+            }
+
+            public void Deconstruct(out SecretKeyHandle secretKey, out PublicKey publicKey)
+            {
+                secretKey = SecretKey;
+                publicKey = PublicKey;
+            }
+
+            public JobHandle Dispose(JobHandle inputDeps)
+            {
+                return SecretKey.Dispose(inputDeps);
+            }
+
+            public void Dispose()
+            {
+                SecretKey.Dispose();
+            }
+        }
+
         public struct SecretKeyHandle : INativeDisposable
         {
             public const int KeySize = (32 + 32);
@@ -94,12 +123,12 @@ namespace AlgoSdk.Crypto
 
             public PublicKey ToPublicKey()
             {
-                var (sk, pk) = ToKeys();
+                var (sk, pk) = ToKeyPair();
                 sk.Dispose();
                 return pk;
             }
 
-            public (SecretKeyHandle, PublicKey) ToKeys()
+            public KeyPair ToKeyPair()
             {
                 var pk = new PublicKey();
                 var sk = SecretKeyHandle.Create();
@@ -107,7 +136,7 @@ namespace AlgoSdk.Crypto
                 {
                     int error = crypto_sign_ed25519_seed_keypair(&pk, sk, seedPtr);
                 }
-                return (sk, pk);
+                return new KeyPair(sk, pk);
             }
         }
 

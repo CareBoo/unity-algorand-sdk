@@ -10,8 +10,8 @@ namespace AlgoSdk
     [Serializable]
     [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
     public struct Address
-    : IByteArray
-    , IEquatable<Address>
+        : IByteArray
+        , IEquatable<Address>
     {
         [Serializable]
         [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
@@ -117,9 +117,9 @@ namespace AlgoSdk
             return this;
         }
 
-        public FixedString128 ToFixedString()
+        public FixedString128Bytes ToFixedString()
         {
-            var result = new FixedString128();
+            var result = new FixedString128Bytes();
             Base32Encoding.ToString(in this, ref result);
             var trimPadding = result.Length;
             while (result[trimPadding - 1] == Base32Encoding.PaddingCharValue)
@@ -146,8 +146,13 @@ namespace AlgoSdk
 
         public static Address FromString(string addressString)
         {
-            var s = new FixedString128(addressString);
+            var s = new FixedString128Bytes(addressString);
             return FromString(in s);
+        }
+
+        public static implicit operator Address(string s)
+        {
+            return FromString(s);
         }
 
         public static implicit operator Address(Ed25519.PublicKey publicKey)
