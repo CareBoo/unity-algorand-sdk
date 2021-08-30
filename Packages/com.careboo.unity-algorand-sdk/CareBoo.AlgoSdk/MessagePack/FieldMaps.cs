@@ -42,7 +42,8 @@ namespace AlgoSdk.MsgPack
                 {typeof(Version), versionFields},
                 {typeof(TransactionParams), transactionParamsFields},
                 {typeof(EvalDeltaKeyValue), evalDeltaKeyValueFields},
-                {typeof(EvalDelta), evalDeltaFields}
+                {typeof(EvalDelta), evalDeltaFields},
+                {typeof(TealKeyValue), tealKeyValueFields},
             };
         }
 

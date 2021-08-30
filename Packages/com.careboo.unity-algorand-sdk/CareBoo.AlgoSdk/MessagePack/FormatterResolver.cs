@@ -67,6 +67,7 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(DryrunState[]), new ArrayFormatter<DryrunState>()},
             {typeof(AccountStateDelta[]), new ArrayFormatter<AccountStateDelta>()},
             {typeof(TealValue[]), new ArrayFormatter<TealValue>()},
+            {typeof(TealKeyValue[]), new ArrayFormatter<TealKeyValue>()},
             {typeof(EvalDeltaKeyValue[]), new ArrayFormatter<EvalDeltaKeyValue>()},
             {typeof(BlockTransaction[]), new ArrayFormatter<BlockTransaction>()},
             {typeof(VrfPubkey), ByteArrayFormatter<VrfPubkey>.Instance},
@@ -107,6 +108,7 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(TransactionParams), new MessagePackObjectFormatter<TransactionParams>()},
             {typeof(EvalDeltaKeyValue), new MessagePackObjectFormatter<EvalDeltaKeyValue>()},
             {typeof(EvalDelta), new MessagePackObjectFormatter<EvalDelta>()},
+            {typeof(TealKeyValue), new MessagePackObjectFormatter<TealKeyValue>()},
         };
 
         private static object GetFormatter(Type t)
