@@ -17,7 +17,7 @@
       "url": "https://package.openupm.com"
     },
     "com.unity.burst": {
-      "version": "1.5.6",
+      "version": "1.6.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -43,7 +43,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.vscode": {
-      "version": "1.2.3",
+      "version": "1.2.4",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -64,7 +64,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.package-validation-suite": {
-      "version": "0.21.1-preview",
+      "version": "0.22.0-preview",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -144,12 +144,10 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ui": {
-      "version": "1.0.0-preview.16",
+      "version": "1.0.0-preview.17",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "nuget.moq": "1.0.0",
-        "nuget.castle-core": "1.0.1",
         "com.unity.modules.uielementsnative": "1.0.0",
         "com.unity.textcore": "1.0.0-preview.3"
       },
@@ -162,22 +160,6 @@
       "dependencies": {
         "com.unity.test-framework": "1.1.9",
         "com.unity.package-validation-suite": "0.7.10-preview"
-      },
-      "url": "https://packages.unity.com"
-    },
-    "nuget.castle-core": {
-      "version": "1.0.1",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
-    "nuget.moq": {
-      "version": "1.0.0",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "nuget.castle-core": "1.0.1"
       },
       "url": "https://packages.unity.com"
     },
