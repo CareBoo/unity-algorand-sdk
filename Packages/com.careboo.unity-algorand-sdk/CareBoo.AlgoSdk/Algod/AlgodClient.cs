@@ -173,12 +173,6 @@ namespace AlgoSdk
             return await PostAsync("/v2/transactions", data);
         }
 
-        public async UniTask<AlgoApiResponse> SendTransactionRaw(RawSignedTransaction rawTxn)
-        {
-            var data = AlgoApiSerializer.SerializeMessagePack(rawTxn);
-            return await PostAsync("/v2/transactions", data);
-        }
-
         public async UniTask<AlgoApiResponse<TransactionParams>> GetTransactionParams()
         {
             return await GetAsync("/v2/transactions/params");
