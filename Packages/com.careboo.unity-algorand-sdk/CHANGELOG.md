@@ -1,3 +1,15 @@
+# [1.0.0-exp.15](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.14...v1.0.0-exp.15) (2021-09-03)
+
+
+### Code Refactoring
+
+* :fire: remove unnecessary `SendTransactionRaw` ([09b3bdc](https://github.com/CareBoo/unity-algorand-sdk/commit/09b3bdc0dfbeb2b47603b3cfc92be0478120bd09))
+
+
+### BREAKING CHANGES
+
+* Removes the `SendTransactionRaw` method from `AlgodClient`
+
 # [1.0.0-exp.14](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.13...v1.0.0-exp.14) (2021-08-30)
 
 
