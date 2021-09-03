@@ -1,7 +1,7 @@
 {
   "name": "com.careboo.unity-algorand-sdk",
   "displayName": "Algorand SDK",
-  "version": "1.0.0-exp.14",
+  "version": "1.0.0-exp.15",
   "unity": "2020.3",
   "description": "WARNING: This package has not been audited and it should not be used in a production environment.",
   "dependencies": {
