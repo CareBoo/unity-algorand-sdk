@@ -51,6 +51,7 @@
       "url": "https://package.openupm.com",
       "scopes": [
         "com.cysharp.unitask",
+        "com.faster-games.t4",
         "com.neuecc.messagepack",
         "com.openupm"
       ]
