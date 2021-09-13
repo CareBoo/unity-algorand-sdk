@@ -2,11 +2,15 @@ using AlgoSdk.MsgPack;
 
 namespace AlgoSdk
 {
+    [AlgoApiObject]
     public struct MerkleProof
         : IMessagePackObject
     {
+        [AlgoApiKey("idx")]
         public ulong TransactionIndex;
+        [AlgoApiKey("proof")]
         public string Proof;
+        [AlgoApiKey("stibhash")]
         public string SignedTransactionHash;
     }
 }

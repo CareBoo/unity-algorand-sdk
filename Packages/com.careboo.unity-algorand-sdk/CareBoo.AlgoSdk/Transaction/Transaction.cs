@@ -49,7 +49,8 @@ namespace AlgoSdk
         {
             var rawTransaction = new RawTransaction();
             transaction.CopyTo(ref rawTransaction);
-            var data = AlgoApiSerializer.SerializeMessagePack(rawTransaction);
+            using var data = new NativeList<byte>(Allocator.Temp);
+            AlgoApiSerializer.SerializeMessagePack(rawTransaction, data);
 
             var result = new NativeByteArray(SignaturePrefix.Length + data.Length, allocator);
             for (var i = 0; i < SignaturePrefix.Length; i++)

@@ -3,6 +3,7 @@ using AlgoSdk.MsgPack;
 
 namespace AlgoSdk
 {
+    [AlgoApiObject]
     public struct Asset
         : IMessagePackObject
         , IEquatable<Asset>

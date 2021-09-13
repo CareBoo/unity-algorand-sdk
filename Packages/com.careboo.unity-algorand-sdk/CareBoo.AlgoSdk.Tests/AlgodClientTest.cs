@@ -4,6 +4,7 @@ using System.Text;
 using AlgoSdk;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
+using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.TestTools;
@@ -58,7 +59,9 @@ public class AlgodClientTest
         );
         txn.Header.GenesisId = transactionParams.GenesisId;
         var rawSignedTxn = txn.Sign(keyPair.SecretKey).ToRaw();
-        Debug.Log(System.Convert.ToBase64String(AlgoApiSerializer.SerializeMessagePack(rawSignedTxn)));
+        using var serialized = new NativeList<byte>(Allocator.Temp);
+        AlgoApiSerializer.SerializeMessagePack(rawSignedTxn, serialized);
+        Debug.Log(System.Convert.ToBase64String(serialized.ToArray()));
         var txidResponse = await client.SendTransaction(rawSignedTxn);
         AssertResponseSuccess(txidResponse);
         Debug.Log(txidResponse.Raw.GetText());

@@ -4,13 +4,18 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
+    [AlgoApiObject]
     public struct Version
         : IMessagePackObject
         , IEquatable<Version>
     {
+        [AlgoApiKey("build")]
         public BuildVersion Build;
+        [AlgoApiKey("genesis_hash_b64")]
         public FixedString64Bytes GenesisHashBase64;
+        [AlgoApiKey("genesis_id")]
         public FixedString32Bytes GenesisId;
+        [AlgoApiKey("versions")]
         public FixedString32Bytes[] Versions;
 
         public bool Equals(Version other)

@@ -3,9 +3,9 @@ using System.Diagnostics;
 
 namespace AlgoSdk
 {
-    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, Inherited = true, AllowMultiple = false)]
+    [AttributeUsage(AttributeTargets.Struct, AllowMultiple = false)]
     [Conditional("UNITY_EDITOR")]
-    sealed class AlgoApiObjectAttribute : Attribute
+    public sealed class AlgoApiObjectAttribute : Attribute
     {
     }
 }

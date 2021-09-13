@@ -1,44 +1,49 @@
 using System;
-using System.Text;
-using AlgoSdk.MsgPack;
-using MessagePack;
+using AlgoSdk.Json;
+using AlgoSdk.MessagePack;
+using Unity.Collections;
 
 namespace AlgoSdk
 {
     public static class AlgoApiSerializer
     {
-        public static T Deserialize<T>(byte[] rawBytes, AlgoApiFormat contentType)
+        public static T Deserialize<T>(NativeArray<byte>.ReadOnly bytes, AlgoApiFormat contentType)
         {
             return contentType switch
             {
-                AlgoApiFormat.Json => DeserializeJson<T>(rawBytes),
-                AlgoApiFormat.MessagePack => DeserializeMessagePack<T>(rawBytes),
+                AlgoApiFormat.Json => DeserializeJson<T>(bytes),
+                AlgoApiFormat.MessagePack => DeserializeMessagePack<T>(bytes),
                 _ => throw new NotSupportedException($"ContentType {contentType} is not supported")
             };
         }
 
-        public static T DeserializeJson<T>(byte[] rawBytes)
+        public static T DeserializeJson<T>(NativeArray<byte>.ReadOnly bytes)
         {
-            var data = MessagePackSerializer.ConvertFromJson(
-                Encoding.UTF8.GetString(rawBytes, 0, rawBytes.Length),
-                MessagePackConfig.SerializerOptionsJson);
-            return MessagePackSerializer.Deserialize<T>(data, MessagePackConfig.SerializerOptionsJson);
+            throw new NotImplementedException();
         }
 
-        public static T DeserializeMessagePack<T>(byte[] rawBytes)
+        public static T DeserializeJson<T>(NativeText text)
         {
-            return MessagePackSerializer.Deserialize<T>(rawBytes, MessagePackConfig.SerializerOptionsMessagePack);
+            var reader = new JsonReader(text);
+            return AlgoApiFormatterCache<T>.Formatter.Deserialize(ref reader);
         }
 
-        public static byte[] SerializeMessagePack<T>(T obj)
+        public static T DeserializeMessagePack<T>(NativeArray<byte>.ReadOnly bytes)
         {
-            return MessagePackSerializer.Serialize(obj, MessagePackConfig.SerializerOptionsMessagePack);
+            var reader = new MessagePackReader(bytes);
+            return AlgoApiFormatterCache<T>.Formatter.Deserialize(ref reader);
         }
 
-        public static string SerializeJson<T>(T obj)
+        public static void SerializeMessagePack<T>(T obj, NativeList<byte> bytes)
         {
-            var data = MessagePackSerializer.Serialize(obj, MessagePackConfig.SerializerOptionsJson);
-            return MessagePackSerializer.ConvertToJson(data, MessagePackConfig.SerializerOptionsJson);
+            var writer = new MessagePackWriter(bytes);
+            AlgoApiFormatterCache<T>.Formatter.Serialize(ref writer, obj);
+        }
+
+        public static void SerializeJson<T>(T obj, NativeText text)
+        {
+            var writer = new JsonWriter(text);
+            AlgoApiFormatterCache<T>.Formatter.Serialize(ref writer, obj);
         }
     }
 }

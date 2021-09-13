@@ -1,25 +1,9 @@
 using System;
-using System.Collections.Generic;
 using AlgoSdk.MsgPack;
 
 namespace AlgoSdk
 {
-    public class EvalDeltaActionComparer : IEqualityComparer<EvalDeltaAction>
-    {
-        public bool Equals(EvalDeltaAction x, EvalDeltaAction y)
-        {
-            return x == y;
-        }
-
-        public int GetHashCode(EvalDeltaAction obj)
-        {
-            return obj.GetHashCode();
-        }
-
-        public static EvalDeltaActionComparer Instance = new EvalDeltaActionComparer();
-    }
-
-    public enum EvalDeltaAction
+    public enum EvalDeltaAction : byte
     {
         None = 0,
         SetUint = 1,
@@ -27,6 +11,7 @@ namespace AlgoSdk
         Delete = 3
     }
 
+    [AlgoApiObject]
     public struct EvalDelta
         : IMessagePackObject
         , IEquatable<EvalDelta>

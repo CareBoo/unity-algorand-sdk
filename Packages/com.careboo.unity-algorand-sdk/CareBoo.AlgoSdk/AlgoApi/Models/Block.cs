@@ -5,6 +5,7 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
+    [AlgoApiObject]
     public struct Block
         : IMessagePackObject
         , IEquatable<Block>
@@ -17,6 +18,7 @@ namespace AlgoSdk
             return this.Equals(ref other);
         }
 
+        [AlgoApiObject]
         public struct Header
             : IMessagePackObject
             , IEquatable<Header>

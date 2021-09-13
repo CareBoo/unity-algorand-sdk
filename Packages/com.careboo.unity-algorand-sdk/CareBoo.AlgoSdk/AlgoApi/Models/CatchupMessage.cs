@@ -1,10 +1,10 @@
 using System;
 using AlgoSdk.MsgPack;
 using Unity.Collections;
-using Unity.Jobs;
 
 namespace AlgoSdk
 {
+    [AlgoApiObject]
     public struct CatchupMessage
         : IMessagePackObject
         , IEquatable<CatchupMessage>

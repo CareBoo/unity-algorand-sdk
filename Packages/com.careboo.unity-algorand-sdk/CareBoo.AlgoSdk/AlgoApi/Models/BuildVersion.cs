@@ -4,6 +4,7 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
+    [AlgoApiObject]
     public struct BuildVersion
         : IMessagePackObject
         , IEquatable<BuildVersion>

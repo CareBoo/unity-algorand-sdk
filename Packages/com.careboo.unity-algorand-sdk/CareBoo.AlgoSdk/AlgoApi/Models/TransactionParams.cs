@@ -1,19 +1,25 @@
 using System;
-using AlgoSdk.Crypto;
 using AlgoSdk.MsgPack;
 using Unity.Collections;
 
 namespace AlgoSdk
 {
+    [AlgoApiObject]
     public struct TransactionParams
         : IMessagePackObject
         , IEquatable<TransactionParams>
     {
+        [AlgoApiKey("consensus-version")]
         public FixedString128Bytes ConsensusVersion;
+        [AlgoApiKey("fee")]
         public ulong Fee;
+        [AlgoApiKey("genesis-hash")]
         public GenesisHash GenesisHash;
+        [AlgoApiKey("genesis-id")]
         public FixedString32Bytes GenesisId;
+        [AlgoApiKey("last-round")]
         public ulong LastRound;
+        [AlgoApiKey("min-fee")]
         public ulong MinFee;
 
         public bool Equals(TransactionParams other)

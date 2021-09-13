@@ -4,11 +4,14 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
+    [AlgoApiObject]
     public struct EvalDeltaKeyValue
         : IMessagePackObject
         , IEquatable<EvalDeltaKeyValue>
     {
+        [AlgoApiKey("key")]
         public FixedString64Bytes Key;
+        [AlgoApiKey("value")]
         public EvalDelta Value;
 
         public bool Equals(EvalDeltaKeyValue other)

@@ -4,6 +4,7 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
+    [AlgoApiObject]
     public struct DryrunRequest
         : IEquatable<DryrunRequest>
         , IMessagePackObject

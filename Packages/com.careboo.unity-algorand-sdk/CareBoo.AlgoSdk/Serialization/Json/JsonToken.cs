@@ -13,6 +13,8 @@ namespace AlgoSdk.Json
         Bool,
         Null,
         Number,
+        Next,
+        KeyValueSeparator,
     }
 
     public static class JsonTokenExtensions
@@ -41,6 +43,8 @@ namespace AlgoSdk.Json
                 '8' => JsonToken.Number,
                 '9' => JsonToken.Number,
                 '-' => JsonToken.Number,
+                ',' => JsonToken.Next,
+                ':' => JsonToken.KeyValueSeparator,
                 _ => JsonToken.None
             };
         }

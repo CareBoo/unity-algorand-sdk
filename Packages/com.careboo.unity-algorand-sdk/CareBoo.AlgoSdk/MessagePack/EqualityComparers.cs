@@ -70,4 +70,19 @@ namespace AlgoSdk.MsgPack
 
         public static readonly StringComparer Instance = new StringComparer();
     }
+
+    public class EvalDeltaActionComparer : IEqualityComparer<EvalDeltaAction>
+    {
+        public bool Equals(EvalDeltaAction x, EvalDeltaAction y)
+        {
+            return x == y;
+        }
+
+        public int GetHashCode(EvalDeltaAction obj)
+        {
+            return obj.GetHashCode();
+        }
+
+        public static EvalDeltaActionComparer Instance = new EvalDeltaActionComparer();
+    }
 }

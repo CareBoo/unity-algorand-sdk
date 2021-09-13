@@ -5,7 +5,7 @@ namespace AlgoSdk
 {
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, Inherited = true, AllowMultiple = false)]
     [Conditional("UNITY_EDITOR")]
-    sealed class AlgoApiKeyAttribute : Attribute
+    public sealed class AlgoApiKeyAttribute : Attribute
     {
         readonly string keyName;
 
@@ -15,5 +15,7 @@ namespace AlgoSdk
         }
 
         public string KeyName => keyName;
+
+        public Type EqualityComparer { get; set; }
     }
 }

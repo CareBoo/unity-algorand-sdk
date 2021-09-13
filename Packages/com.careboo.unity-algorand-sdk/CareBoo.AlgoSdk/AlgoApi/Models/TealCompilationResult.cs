@@ -4,11 +4,14 @@ using AlgoSdk.MsgPack;
 
 namespace AlgoSdk
 {
+    [AlgoApiObject]
     public struct TealCompilationResult
         : IMessagePackObject
         , IEquatable<TealCompilationResult>
     {
+        [AlgoApiKey("hash")]
         public Sha512_256_Hash Hash;
+        [AlgoApiKey("result")]
         public string BytesBase64;
 
         public bool Equals(TealCompilationResult other)

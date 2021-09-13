@@ -1,4 +1,5 @@
 using System.Text;
+using Unity.Collections;
 using UnityEngine.Networking;
 
 namespace AlgoSdk
@@ -68,16 +69,17 @@ namespace AlgoSdk
         {
             this.rawResponse = response;
             byte[] rawBytes = response.Data;
+            using var bytes = new NativeArray<byte>(rawBytes, Allocator.Temp);
             error = response.Status switch
             {
-                UnityWebRequest.Result.ProtocolError => AlgoApiSerializer.Deserialize<ErrorResponse>(rawBytes, response.ContentType),
+                UnityWebRequest.Result.ProtocolError => AlgoApiSerializer.Deserialize<ErrorResponse>(bytes.AsReadOnly(), response.ContentType),
                 UnityWebRequest.Result.ConnectionError => new ErrorResponse("Could not connect"),
                 UnityWebRequest.Result.DataProcessingError => new ErrorResponse("Error processing data from server"),
                 _ => default
             };
             payload = response.Status switch
             {
-                UnityWebRequest.Result.Success => AlgoApiSerializer.Deserialize<T>(rawBytes, response.ContentType),
+                UnityWebRequest.Result.Success => AlgoApiSerializer.Deserialize<T>(bytes.AsReadOnly(), response.ContentType),
                 _ => default
             };
         }

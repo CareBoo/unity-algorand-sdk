@@ -5,8 +5,7 @@ using Unity.Collections;
 namespace AlgoSdk
 {
     public struct TransactionId
-        : IMessagePackObject
-        , IEquatable<TransactionId>
+        : IEquatable<TransactionId>
     {
         public FixedString64Bytes Text;
 
