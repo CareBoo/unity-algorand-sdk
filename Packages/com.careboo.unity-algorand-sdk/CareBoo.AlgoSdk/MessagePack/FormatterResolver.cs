@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using AlgoSdk.Crypto;
 using AlgoSdk.MsgPack.Formatters;
+using AlgoSdk.Formatters;
 using MessagePack;
 using MessagePack.Formatters;
 using Unity.Collections;
@@ -53,7 +54,6 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(FixedString32Bytes), new FixedStringFormatter<FixedString32Bytes>()},
             {typeof(FixedString64Bytes), new FixedStringFormatter<FixedString64Bytes>()},
             {typeof(FixedString128Bytes), new FixedStringFormatter<FixedString128Bytes>()},
-            {typeof(NativeText), new NativeTextFormatter()},
             {typeof(byte[]), ByteArrayFormatter.Instance},
             {typeof(ApplicationLocalState[]), new ArrayFormatter<ApplicationLocalState>()},
             {typeof(AssetHolding[]), new ArrayFormatter<AssetHolding>()},
@@ -71,44 +71,10 @@ namespace AlgoSdk.MsgPack.Resolvers
             {typeof(EvalDeltaKeyValue[]), new ArrayFormatter<EvalDeltaKeyValue>()},
             {typeof(BlockTransaction[]), new ArrayFormatter<BlockTransaction>()},
             {typeof(VrfPubkey), ByteArrayFormatter<VrfPubkey>.Instance},
-            {typeof(ITransaction), new TransactionFormatter()},
             {typeof(SignedTransaction<Transaction.Payment>), new SignedTransactionFormatter<SignedTransaction<Transaction.Payment>>()},
             {typeof(Signature), ByteArrayFormatter<Signature>.Instance},
-            {typeof(ErrorResponse), new MessagePackObjectFormatter<ErrorResponse>()},
-            {typeof(RawSignedTransaction), new MessagePackObjectFormatter<RawSignedTransaction>()},
-            {typeof(RawTransaction), new MessagePackObjectFormatter<RawTransaction>()},
-            {typeof(Account), new MessagePackObjectFormatter<Account>()},
-            {typeof(AccountParticipation), new MessagePackObjectFormatter<AccountParticipation>()},
-            {typeof(AccountStateDelta), new MessagePackObjectFormatter<AccountStateDelta>()},
-            {typeof(Application), new MessagePackObjectFormatter<Application>()},
-            {typeof(ApplicationLocalState), new MessagePackObjectFormatter<ApplicationLocalState>()},
-            {typeof(ApplicationParams), new MessagePackObjectFormatter<ApplicationParams>()},
-            {typeof(ApplicationStateSchema), new MessagePackObjectFormatter<ApplicationStateSchema>()},
-            {typeof(Asset), new MessagePackObjectFormatter<Asset>()},
-            {typeof(AssetHolding), new MessagePackObjectFormatter<AssetHolding>()},
-            {typeof(AssetParams), new MessagePackObjectFormatter<AssetParams>()},
-            {typeof(BuildVersion), new MessagePackObjectFormatter<BuildVersion>()},
-            {typeof(CatchupMessage), new MessagePackObjectFormatter<CatchupMessage>()},
-            {typeof(DryrunRequest), new MessagePackObjectFormatter<DryrunRequest>()},
-            {typeof(DryrunSource), new MessagePackObjectFormatter<DryrunSource>()},
-            {typeof(DryrunResults), new MessagePackObjectFormatter<DryrunResults>()},
-            {typeof(DryrunTxnResult), new MessagePackObjectFormatter<DryrunTxnResult>()},
-            {typeof(DryrunState), new MessagePackObjectFormatter<DryrunState>()},
             {typeof(TealValue), new TealValueFormatter()},
             {typeof(TealBytes), ByteArrayFormatter<TealBytes>.Instance},
-            {typeof(PendingTransactions), new MessagePackObjectFormatter<PendingTransactions>()},
-            {typeof(PendingTransaction), new MessagePackObjectFormatter<PendingTransaction>()},
-            {typeof(Block), new MessagePackObjectFormatter<Block>()},
-            {typeof(Block.Header), new MessagePackObjectFormatter<Block.Header>()},
-            {typeof(BlockTransaction), new MessagePackObjectFormatter<BlockTransaction>()},
-            {typeof(MerkleProof), new MessagePackObjectFormatter<MerkleProof>()},
-            {typeof(LedgerSupply), new MessagePackObjectFormatter<LedgerSupply>()},
-            {typeof(Status), new MessagePackObjectFormatter<Status>()},
-            {typeof(Version), new MessagePackObjectFormatter<Version>()},
-            {typeof(TransactionParams), new MessagePackObjectFormatter<TransactionParams>()},
-            {typeof(EvalDeltaKeyValue), new MessagePackObjectFormatter<EvalDeltaKeyValue>()},
-            {typeof(EvalDelta), new MessagePackObjectFormatter<EvalDelta>()},
-            {typeof(TealKeyValue), new MessagePackObjectFormatter<TealKeyValue>()},
         };
 
         private static object GetFormatter(Type t)

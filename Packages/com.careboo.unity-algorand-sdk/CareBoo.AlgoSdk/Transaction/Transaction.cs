@@ -15,9 +15,9 @@ namespace AlgoSdk
         void CopyFrom(in RawTransaction rawTransaction);
     }
 
-    public enum TransactionType : ushort
+    public enum TransactionType : short
     {
-        None,
+        None = -1,
         Payment,
         KeyRegistration,
         AssetTransfer,

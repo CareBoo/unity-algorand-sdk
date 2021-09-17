@@ -3,7 +3,7 @@ using Unity.Collections;
 
 namespace AlgoSdk.MessagePack
 {
-    public ref struct MessagePackWriter
+    public ref partial struct MessagePackWriter
     {
         NativeList<byte> data;
 
@@ -17,9 +17,14 @@ namespace AlgoSdk.MessagePack
             throw new NotImplementedException();
         }
 
-        public void WriteString<T>(T fs) where T : struct, INativeList<byte>, IUTF8Bytes
+        public void WriteString<T>(in T fs) where T : struct, INativeList<byte>, IUTF8Bytes
         {
             throw new NotImplementedException();
+        }
+
+        public void WriteNil()
+        {
+            data.Add(MessagePackCode.Nil);
         }
     }
 }

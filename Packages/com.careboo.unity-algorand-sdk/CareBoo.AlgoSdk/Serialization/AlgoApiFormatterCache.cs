@@ -25,7 +25,6 @@ namespace AlgoSdk
         {
             lookup = new Dictionary<Type, object>()
             {
-
             };
         }
 

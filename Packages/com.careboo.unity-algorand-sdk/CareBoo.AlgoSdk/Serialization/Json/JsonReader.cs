@@ -33,6 +33,8 @@ namespace AlgoSdk.Json
             where T : struct, INativeList<byte>, IUTF8Bytes
         {
             value.Clear();
+            if (Peek() != JsonToken.String)
+                return JsonReadError.IncorrectType;
             text.Read(ref offset);
             while (offset < text.Length)
             {
@@ -48,6 +50,17 @@ namespace AlgoSdk.Json
                 }
                 value.Append(r);
             }
+            return JsonReadError.None;
+        }
+
+        public JsonReadError ReadKey<T>(ref T value)
+            where T : struct, INativeList<byte>, IUTF8Bytes
+        {
+            var err = ReadString(ref value);
+            if (err != JsonReadError.None)
+                return err;
+            if (Read() != JsonToken.KeyValueSeparator)
+                return JsonReadError.IncorrectFormat;
             return JsonReadError.None;
         }
 

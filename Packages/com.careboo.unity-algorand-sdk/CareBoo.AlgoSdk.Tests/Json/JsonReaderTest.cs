@@ -1,6 +1,7 @@
 using AlgoSdk.Json;
 using NUnit.Framework;
 using Unity.Collections;
+using UnityEngine;
 
 public class JsonReaderTest
 {
@@ -54,6 +55,14 @@ public class JsonReaderTest
         reader.ReadNull();
         Assert.AreEqual(JsonToken.ObjectEnd, reader.Read());
         Assert.AreEqual(JsonToken.None, reader.Read());
+    }
+
+    [Test]
+    public void CheckValue()
+    {
+        var expected = 3;
+        Assert.AreEqual(expected, expected++);
+        Debug.Log(expected);
     }
 
     void AssertReadStringEqual(ref JsonReader reader, FixedString32Bytes expected)
