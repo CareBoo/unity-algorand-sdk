@@ -1,16 +1,14 @@
 using System;
-using AlgoSdk.MsgPack;
-using Unity.Collections;
 
 namespace AlgoSdk
 {
     [AlgoApiObject]
     public struct ErrorResponse
-        : IMessagePackObject
-        , IEquatable<ErrorResponse>
+        : IEquatable<ErrorResponse>
     {
         [AlgoApiKey("data")]
         public string Data;
+
         [AlgoApiKey("message")]
         public string Message;
 
@@ -27,19 +25,9 @@ namespace AlgoSdk
 
         public bool Equals(ErrorResponse other)
         {
-            return this.Equals(ref other);
-        }
-    }
-}
-
-namespace AlgoSdk.MsgPack
-{
-    internal static partial class FieldMaps
-    {
-        internal static readonly Field<ErrorResponse>.Map errorResponseFields =
-            new Field<ErrorResponse>.Map()
-                .Assign("data", (ref ErrorResponse x) => ref x.Data)
-                .Assign("message", (ref ErrorResponse x) => ref x.Message)
+            return StringComparer.Equals(Data, other.Data)
+                && StringComparer.Equals(Message, other.Message)
                 ;
+        }
     }
 }

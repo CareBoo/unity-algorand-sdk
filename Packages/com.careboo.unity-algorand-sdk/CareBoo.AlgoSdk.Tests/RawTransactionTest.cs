@@ -1,8 +1,7 @@
 using AlgoSdk;
 using AlgoSdk.Crypto;
-using AlgoSdk.MsgPack;
-using MessagePack;
 using NUnit.Framework;
+using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
 
 public class RawTransactionTest
@@ -19,9 +18,9 @@ public class RawTransactionTest
         transaction.TransactionType = TransactionType.Payment;
         transaction.Receiver = AlgoSdk.Crypto.Random.Bytes<Address>().GenerateCheckSum();
         transaction.Amount = 40000;
-        var bytes = MessagePackSerializer.Serialize(transaction, MessagePackConfig.SerializerOptionsMessagePack);
-        var json = MessagePackSerializer.ConvertToJson(bytes, MessagePackConfig.SerializerOptionsMessagePack);
-        var deserialized = MessagePackSerializer.Deserialize<RawTransaction>(bytes, MessagePackConfig.SerializerOptionsMessagePack);
+        using var bytes = new NativeList<byte>(Allocator.Temp);
+        AlgoApiSerializer.SerializeMessagePack(transaction, bytes);
+        var deserialized = AlgoApiSerializer.DeserializeMessagePack<RawTransaction>(bytes.AsArray().AsReadOnly());
         Assert.AreEqual(transaction, deserialized);
     }
 

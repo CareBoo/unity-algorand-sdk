@@ -166,7 +166,7 @@ namespace AlgoSdk.MessagePack
             }
         }
 
-        public static MessagePackType ToMessagePackType(byte code)
+        public static MessagePackType ToMessagePackType(this byte code)
         {
             return TypeLookupTable[code];
         }

@@ -1,4 +1,3 @@
-using System;
 using Unity.Collections;
 
 namespace AlgoSdk.MessagePack
@@ -10,16 +9,6 @@ namespace AlgoSdk.MessagePack
         public MessagePackWriter(NativeList<byte> data)
         {
             this.data = data;
-        }
-
-        public void WriteMapHeader(int length)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void WriteString<T>(in T fs) where T : struct, INativeList<byte>, IUTF8Bytes
-        {
-            throw new NotImplementedException();
         }
 
         public void WriteNil()

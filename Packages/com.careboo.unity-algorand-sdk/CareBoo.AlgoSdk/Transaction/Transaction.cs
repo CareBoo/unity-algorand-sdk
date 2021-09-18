@@ -1,9 +1,8 @@
 using System;
 using System.Text;
 using AlgoSdk.Crypto;
+using AlgoSdk.Formatters;
 using AlgoSdk.LowLevel;
-using AlgoSdk.MsgPack;
-using MessagePack;
 using Unity.Collections;
 
 namespace AlgoSdk
@@ -15,9 +14,10 @@ namespace AlgoSdk
         void CopyFrom(in RawTransaction rawTransaction);
     }
 
+    [AlgoApiFormatter(typeof(TransactionTypeFormatter))]
     public enum TransactionType : short
     {
-        None = -1,
+        None,
         Payment,
         KeyRegistration,
         AssetTransfer,

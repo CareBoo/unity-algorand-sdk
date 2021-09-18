@@ -1,12 +1,10 @@
 using System;
-using AlgoSdk.MsgPack;
 
 namespace AlgoSdk
 {
     [AlgoApiObject]
     public struct Status
-        : IMessagePackObject
-        , IEquatable<Status>
+        : IEquatable<Status>
     {
         [AlgoApiKey("catchpoint")]
         public string Catchpoint;
@@ -41,32 +39,10 @@ namespace AlgoSdk
 
         public bool Equals(Status other)
         {
-            return this.Equals(ref other);
-        }
-    }
-}
-
-namespace AlgoSdk.MsgPack
-{
-    internal static partial class FieldMaps
-    {
-        internal static readonly Field<Status>.Map statusFields =
-            new Field<Status>.Map()
-                .Assign("catchpoint", (ref Status x) => ref x.Catchpoint, StringComparer.Instance)
-                .Assign("catchpoint-acquired-blocks", (ref Status x) => ref x.CatchpointAcquiredBlocks)
-                .Assign("catchpoint-processed-accounts", (ref Status x) => ref x.CatchpointProcessedAmounts)
-                .Assign("catchpoint-total-accounts", (ref Status x) => ref x.CatchpointTotalAccounts)
-                .Assign("catchpoint-total-blocks", (ref Status x) => ref x.CatchpointTotalBlocks)
-                .Assign("catchpoint-verified-accounts", (ref Status x) => ref x.CatchpointVerifiedAccounts)
-                .Assign("catchup-time", (ref Status x) => ref x.CatchupTime)
-                .Assign("last-catchpoint", (ref Status x) => ref x.LastCatchpoint, StringComparer.Instance)
-                .Assign("last-round", (ref Status x) => ref x.LastRound)
-                .Assign("last-version", (ref Status x) => ref x.LastVersion, StringComparer.Instance)
-                .Assign("next-version", (ref Status x) => ref x.NextVersion, StringComparer.Instance)
-                .Assign("next-version-round", (ref Status x) => ref x.NextVersionRound)
-                .Assign("next-version-supported", (ref Status x) => ref x.NextVersionSupported)
-                .Assign("stopped-at-unsupported-round", (ref Status x) => ref x.StoppedAtUnsupportedRound)
-                .Assign("time-since-last-round", (ref Status x) => ref x.TimeSinceLastRound)
+            return StringComparer.Equals(Catchpoint, other.Catchpoint)
+                && LastRound.Equals(other.LastRound)
+                && TimeSinceLastRound.Equals(other.TimeSinceLastRound)
                 ;
+        }
     }
 }

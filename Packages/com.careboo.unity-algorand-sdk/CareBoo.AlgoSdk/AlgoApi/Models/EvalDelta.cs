@@ -1,44 +1,37 @@
 using System;
-using AlgoSdk.MsgPack;
+using AlgoSdk.Formatters;
 
 namespace AlgoSdk
 {
+    [AlgoApiFormatter(typeof(EnumFormatter<EvalDeltaAction>))]
     public enum EvalDeltaAction : byte
     {
         None = 0,
-        SetUint = 1,
+        SetUInt = 1,
         SetBytes = 2,
         Delete = 3
     }
 
     [AlgoApiObject]
     public struct EvalDelta
-        : IMessagePackObject
-        , IEquatable<EvalDelta>
+        : IEquatable<EvalDelta>
     {
         [AlgoApiKey("action")]
         public EvalDeltaAction Action;
         [AlgoApiKey("bytes")]
         public TealBytes Bytes;
         [AlgoApiKey("uint")]
-        public ulong Uint;
+        public ulong UInt;
 
         public bool Equals(EvalDelta other)
         {
-            return this.Equals(ref other);
+            return Action == other.Action
+                && Action switch
+                {
+                    EvalDeltaAction.SetBytes => Bytes.Equals(other.Bytes),
+                    EvalDeltaAction.SetUInt => UInt.Equals(other.UInt),
+                    _ => true
+                };
         }
-    }
-}
-
-namespace AlgoSdk.MsgPack
-{
-    internal static partial class FieldMaps
-    {
-        internal static readonly Field<EvalDelta>.Map evalDeltaFields =
-            new Field<EvalDelta>.Map()
-                .Assign("action", (ref EvalDelta x) => ref x.Action, EvalDeltaActionComparer.Instance)
-                .Assign("bytes", (ref EvalDelta x) => ref x.Bytes)
-                .Assign("uint", (ref EvalDelta x) => ref x.Uint)
-                ;
     }
 }

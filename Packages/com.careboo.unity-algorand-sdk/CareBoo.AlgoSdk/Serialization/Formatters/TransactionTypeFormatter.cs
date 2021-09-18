@@ -10,6 +10,7 @@ namespace AlgoSdk.Formatters
     {
         private static readonly FixedString32Bytes[] typeToString = new FixedString32Bytes[(int)TransactionType.Count]
         {
+            default,
             "pay",
             "keyreg",
             "axfer",

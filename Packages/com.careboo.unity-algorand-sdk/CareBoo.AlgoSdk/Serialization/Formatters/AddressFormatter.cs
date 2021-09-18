@@ -1,17 +1,39 @@
+using AlgoSdk.Json;
+using AlgoSdk.MessagePack;
 using Unity.Collections;
 
 namespace AlgoSdk.Formatters
 {
-    public sealed class AddressFormatter : ByteArrayFormatter<Address>
+    public class AddressFormatter : IAlgoApiFormatter<Address>
     {
-        protected override void BytesToString<T>(Address value, ref T fs)
+        public Address Deserialize(ref JsonReader reader)
         {
-            fs.CopyFrom(value.ToFixedString());
+            var text = new NativeText(Allocator.Temp);
+            var fs = new FixedString128Bytes();
+            reader.ReadString(ref fs).ThrowIfError();
+            return Address.FromString(fs);
         }
 
-        protected override Address BytesFromString<T>(in T fs)
+        public Address Deserialize(ref MessagePackReader reader)
         {
-            return Address.FromString<T>(in fs);
+            var bytes = reader.ReadBytes();
+            Address result = default;
+            for (var i = 0; i < bytes.Length; i++)
+                result[i] = bytes[i];
+            return result.GenerateCheckSum();
+        }
+
+        public void Serialize(ref JsonWriter writer, Address value)
+        {
+            writer.WriteString(value.ToFixedString());
+        }
+
+        public void Serialize(ref MessagePackWriter writer, Address value)
+        {
+            unsafe
+            {
+                writer.WriteBytes((void*)value.Buffer, value.publicKey.Length);
+            }
         }
     }
 }

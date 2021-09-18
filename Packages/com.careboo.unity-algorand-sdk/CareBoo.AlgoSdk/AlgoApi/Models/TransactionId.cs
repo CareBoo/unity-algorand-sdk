@@ -1,9 +1,10 @@
 using System;
-using AlgoSdk.MsgPack;
+using AlgoSdk.Formatters;
 using Unity.Collections;
 
 namespace AlgoSdk
 {
+    [AlgoApiFormatter(typeof(TransactionIdFormatter))]
     public struct TransactionId
         : IEquatable<TransactionId>
     {

@@ -162,7 +162,7 @@ namespace AlgoSdk
         public async UniTask<AlgoApiResponse<DryrunResults>> TealDryrun(Optional<DryrunRequest> request = default)
         {
             const string endpoint = "/v2/teal/dryrun";
-            using var data = new NativeList<byte>(Allocator.Temp);
+            using var data = new NativeList<byte>(Allocator.Persistent);
             AlgoApiSerializer.SerializeMessagePack(request.Value, data);
             return request.HasValue
                 ? await PostAsync(endpoint, data.AsArray().AsReadOnly())
@@ -171,7 +171,7 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<TransactionId>> SendTransaction(RawSignedTransaction rawTxn)
         {
-            using var data = new NativeList<byte>(Allocator.Temp);
+            using var data = new NativeList<byte>(Allocator.Persistent);
             AlgoApiSerializer.SerializeMessagePack(rawTxn, data);
             return await PostAsync("/v2/transactions", data.AsArray().AsReadOnly());
         }

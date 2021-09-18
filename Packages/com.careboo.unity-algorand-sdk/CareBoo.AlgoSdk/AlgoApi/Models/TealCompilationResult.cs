@@ -1,13 +1,11 @@
 using System;
 using AlgoSdk.Crypto;
-using AlgoSdk.MsgPack;
 
 namespace AlgoSdk
 {
     [AlgoApiObject]
     public struct TealCompilationResult
-        : IMessagePackObject
-        , IEquatable<TealCompilationResult>
+        : IEquatable<TealCompilationResult>
     {
         [AlgoApiKey("hash")]
         public Sha512_256_Hash Hash;
@@ -16,19 +14,7 @@ namespace AlgoSdk
 
         public bool Equals(TealCompilationResult other)
         {
-            return this.Equals(ref other);
+            return Hash.Equals(other.Hash);
         }
-    }
-}
-
-namespace AlgoSdk.MsgPack
-{
-    internal static partial class FieldMaps
-    {
-        internal static readonly Field<TealCompilationResult>.Map tealCompilationResultFields =
-            new Field<TealCompilationResult>.Map()
-                .Assign("hash", (ref TealCompilationResult x) => ref x.Hash)
-                .Assign("result", (ref TealCompilationResult x) => ref x.BytesBase64, StringComparer.Instance)
-                ;
     }
 }

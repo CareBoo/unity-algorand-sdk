@@ -1,13 +1,11 @@
 using System;
-using AlgoSdk.MsgPack;
 using Unity.Collections;
 
 namespace AlgoSdk
 {
     [AlgoApiObject]
     public struct DryrunState
-        : IMessagePackObject
-        , IEquatable<DryrunState>
+        : IEquatable<DryrunState>
     {
         [AlgoApiKey("error")]
         public FixedString128Bytes Error;
@@ -22,22 +20,12 @@ namespace AlgoSdk
 
         public bool Equals(DryrunState other)
         {
-            return this.Equals(ref other);
+            return Error.Equals(other.Error)
+                && Line.Equals(other.Line)
+                && ProgramCounter.Equals(other.ProgramCounter)
+                && ArrayComparer.Equals(Scratch, other.Scratch)
+                && ArrayComparer.Equals(Stack, other.Stack);
+            ;
         }
-    }
-}
-
-namespace AlgoSdk.MsgPack
-{
-    internal static partial class FieldMaps
-    {
-        internal static readonly Field<DryrunState>.Map dryrunStateFields =
-            new Field<DryrunState>.Map()
-                .Assign("error", (ref DryrunState x) => ref x.Error)
-                .Assign("line", (ref DryrunState x) => ref x.Line)
-                .Assign("pc", (ref DryrunState x) => ref x.ProgramCounter)
-                .Assign("scratch", (ref DryrunState x) => ref x.Scratch, ArrayComparer<TealValue>.Instance)
-                .Assign("stack", (ref DryrunState x) => ref x.Stack, ArrayComparer<TealValue>.Instance)
-                ;
     }
 }

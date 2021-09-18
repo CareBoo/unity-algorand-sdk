@@ -9,10 +9,13 @@ namespace Unity.Collections
 
             int digitOffset = offset;
             value = 0;
-            while (offset < fs.Length && Unicode.Rune.IsDigit(fs.Peek(offset)))
+            var rune = fs.Peek(offset);
+            var c = (char)rune.value;
+            while (offset < fs.Length && Unicode.Rune.IsDigit(rune))
             {
                 value *= 10;
                 value += (ulong)(fs.Read(ref offset).value - '0');
+                rune = fs.Peek(offset);
             }
             return digitOffset != offset;
         }

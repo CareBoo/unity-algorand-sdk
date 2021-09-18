@@ -1,13 +1,11 @@
 using System;
-using AlgoSdk.MsgPack;
 using Unity.Collections;
 
 namespace AlgoSdk
 {
     [AlgoApiObject]
     public struct BuildVersion
-        : IMessagePackObject
-        , IEquatable<BuildVersion>
+        : IEquatable<BuildVersion>
     {
         [AlgoApiKey("branch")]
         public FixedString64Bytes Branch;
@@ -24,23 +22,7 @@ namespace AlgoSdk
 
         public bool Equals(BuildVersion other)
         {
-            return this.Equals(ref other);
+            return CommitHash.Equals(other.CommitHash);
         }
-    }
-}
-
-namespace AlgoSdk.MsgPack
-{
-    internal static partial class FieldMaps
-    {
-        internal readonly static Field<BuildVersion>.Map buildVersionFields =
-            new Field<BuildVersion>.Map()
-                .Assign("branch", (ref BuildVersion x) => ref x.Branch)
-                .Assign("build_number", (ref BuildVersion x) => ref x.BuildNumber)
-                .Assign("channel", (ref BuildVersion x) => ref x.Channel)
-                .Assign("commit_hash", (ref BuildVersion x) => ref x.CommitHash)
-                .Assign("major", (ref BuildVersion x) => ref x.Major)
-                .Assign("minor", (ref BuildVersion x) => ref x.Minor)
-                ;
     }
 }

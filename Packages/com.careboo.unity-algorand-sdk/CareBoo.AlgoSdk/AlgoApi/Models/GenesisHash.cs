@@ -1,10 +1,11 @@
 using System;
 using AlgoSdk.Crypto;
+using AlgoSdk.Formatters;
 using AlgoSdk.LowLevel;
-using Unity.Collections;
 
 namespace AlgoSdk
 {
+    [AlgoApiFormatter(typeof(GenesisHashFormatter))]
     public struct GenesisHash
         : IByteArray
         , IEquatable<GenesisHash>

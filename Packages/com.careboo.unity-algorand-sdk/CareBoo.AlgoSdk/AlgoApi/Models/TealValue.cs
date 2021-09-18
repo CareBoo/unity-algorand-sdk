@@ -1,10 +1,13 @@
 using System;
 using System.Runtime.InteropServices;
+using AlgoSdk.Formatters;
 using AlgoSdk.LowLevel;
+using AlgoSdk.MsgPack.Formatters;
 
 namespace AlgoSdk
 {
-    public enum TealValueType : int
+    [AlgoApiFormatter(typeof(EnumFormatter<TealValueType>))]
+    public enum TealValueType : byte
     {
         None = 0,
         Bytes = 1,
@@ -12,6 +15,7 @@ namespace AlgoSdk
     }
 
     [StructLayout(LayoutKind.Explicit)]
+    [AlgoApiFormatter(typeof(TealValueFormatter))]
     public struct TealValue
         : IEquatable<TealValue>
     {
@@ -66,6 +70,7 @@ namespace AlgoSdk
         }
     }
 
+    [AlgoApiFormatter(typeof(ByteArrayFormatter<TealBytes>))]
     public struct TealBytes
         : IEquatable<TealBytes>
         , IByteArray

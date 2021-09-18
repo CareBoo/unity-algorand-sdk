@@ -19,7 +19,17 @@ namespace AlgoSdk
 
         public static T DeserializeJson<T>(NativeArray<byte>.ReadOnly bytes)
         {
-            throw new NotImplementedException();
+            var text = new NativeText(bytes.Length, Allocator.Temp);
+            try
+            {
+                for (var i = 0; i < bytes.Length; i++)
+                    text.AppendRawByte(bytes[i]);
+                return DeserializeJson<T>(text);
+            }
+            finally
+            {
+                text.Dispose();
+            }
         }
 
         public static T DeserializeJson<T>(NativeText text)

@@ -5,6 +5,50 @@ using Unity.Collections;
 
 namespace AlgoSdk.Formatters
 {
+    public class ByteArrayFormatter : IAlgoApiFormatter<byte[]>
+    {
+        public byte[] Deserialize(ref JsonReader reader)
+        {
+            if (reader.Peek() == JsonToken.ArrayBegin)
+            {
+                return ArrayFormatter<byte>.Instance.Deserialize(ref reader);
+            }
+            else
+            {
+                var b64 = new NativeText(Allocator.Temp);
+                try
+                {
+                    reader.ReadString(ref b64).ThrowIfError();
+                    return System.Convert.FromBase64String(b64.ToString());
+                }
+                finally
+                {
+                    b64.Dispose();
+                }
+            }
+        }
+
+        public byte[] Deserialize(ref MessagePackReader reader)
+        {
+            return reader.Peek().ToMessagePackType() == MessagePackType.Array
+                ? ArrayFormatter<byte>.Instance.Deserialize(ref reader)
+                : reader.ReadBytes().ToArray()
+                ;
+        }
+
+        public void Serialize(ref JsonWriter writer, byte[] value)
+        {
+            var s = System.Convert.ToBase64String(value);
+            using var t = new NativeText(s, Allocator.Temp);
+            writer.WriteString(in t);
+        }
+
+        public void Serialize(ref MessagePackWriter writer, byte[] value)
+        {
+            writer.WriteBytes(value);
+        }
+    }
+
     public class ByteArrayFormatter<TByteArray>
         : IAlgoApiFormatter<TByteArray>
         where TByteArray : unmanaged, IByteArray
@@ -18,7 +62,9 @@ namespace AlgoSdk.Formatters
             {
                 reader.ReadString(ref text)
                     .ThrowIfError();
-                return BytesFromString(in text);
+                TByteArray result = default;
+                result.CopyFromBase64(text);
+                return result;
             }
             finally
             {
@@ -40,8 +86,8 @@ namespace AlgoSdk.Formatters
             var text = new NativeText(Allocator.Temp);
             try
             {
-                BytesToString(value, ref text);
-                writer.WriteString(in text);
+                value.CopyToBase64(ref text);
+                writer.WriteString(text);
             }
             finally
             {
@@ -55,20 +101,6 @@ namespace AlgoSdk.Formatters
             {
                 writer.WriteBytes((void*)value.Buffer, value.Length);
             }
-        }
-
-        protected virtual TByteArray BytesFromString<T>(in T fs)
-            where T : struct, INativeList<byte>, IUTF8Bytes
-        {
-            TByteArray result = default;
-            result.CopyFromBase64(in fs);
-            return result;
-        }
-
-        protected virtual void BytesToString<T>(TByteArray value, ref T fs)
-            where T : struct, INativeList<byte>, IUTF8Bytes
-        {
-            value.CopyToBase64(ref fs);
         }
     }
 }

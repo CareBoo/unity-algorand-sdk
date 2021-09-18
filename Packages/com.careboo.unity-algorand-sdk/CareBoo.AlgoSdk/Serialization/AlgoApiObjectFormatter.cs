@@ -1,7 +1,6 @@
 using AlgoSdk.Json;
 using AlgoSdk.MessagePack;
 using Unity.Collections;
-using UnityEngine.Assertions;
 
 namespace AlgoSdk
 {
@@ -18,15 +17,16 @@ namespace AlgoSdk
         public T Deserialize(ref JsonReader reader)
         {
             T result = default;
-            var token = reader.Read();
-            while (token == JsonToken.ObjectBegin || token == JsonToken.Next)
+            if (!reader.TryRead(JsonToken.ObjectBegin))
+                JsonReadError.IncorrectType.ThrowIfError();
+            while (reader.Peek() != JsonToken.ObjectEnd && reader.Peek() != JsonToken.None)
             {
                 FixedString64Bytes key = default;
-                reader.ReadString(ref key);
-                Assert.AreEqual(JsonToken.KeyValueSeparator, reader.Read());
-                fieldMap[key].DeserializeJson(ref result, ref reader);
-                token = reader.Read();
+                reader.ReadString(ref key).ThrowIfError();
+                fieldMap.GetField(key).DeserializeJson(ref result, ref reader);
             }
+            if (!reader.TryRead(JsonToken.ObjectEnd))
+                JsonReadError.IncorrectFormat.ThrowIfError();
             return result;
         }
 
@@ -38,7 +38,7 @@ namespace AlgoSdk
             {
                 FixedString64Bytes key = default;
                 reader.ReadString(ref key);
-                fieldMap[key].DeserializeMessagePack(ref result, ref reader);
+                fieldMap.GetField(key).DeserializeMessagePack(ref result, ref reader);
             }
             return result;
         }
@@ -54,7 +54,7 @@ namespace AlgoSdk
                     writer.BeginNextItem();
                 var key = fieldsToSerialize[i];
                 writer.WriteObjectKey(key);
-                fieldMap[key].SerializeJson(ref value, ref writer);
+                fieldMap.GetField(key).SerializeJson(value, ref writer);
             }
             writer.EndObject();
         }
@@ -67,7 +67,7 @@ namespace AlgoSdk
             {
                 var key = fieldsToSerialize[i];
                 writer.WriteString(key);
-                fieldMap[key].SerializeMessagePack(ref value, ref writer);
+                fieldMap.GetField(key).SerializeMessagePack(value, ref writer);
             }
         }
     }

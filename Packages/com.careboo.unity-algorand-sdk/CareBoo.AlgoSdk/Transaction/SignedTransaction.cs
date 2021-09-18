@@ -1,4 +1,5 @@
 using System;
+using AlgoSdk.Formatters;
 using Unity.Collections;
 
 namespace AlgoSdk
@@ -13,6 +14,7 @@ namespace AlgoSdk
         public void CopyFrom(in RawSignedTransaction data);
     }
 
+    [AlgoApiFormatter(typeof(SignedTransactionFormatter<>))]
     public struct SignedTransaction<TTransaction>
         : ISignedTransaction
         , IEquatable<SignedTransaction<TTransaction>>

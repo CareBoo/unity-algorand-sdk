@@ -12,22 +12,19 @@ namespace AlgoSdk.Formatters
 
         public TransactionId Deserialize(ref JsonReader reader)
         {
-            if (reader.Peek() != JsonToken.ObjectBegin)
+            if (!reader.TryRead(JsonToken.ObjectBegin))
                 JsonReadError.IncorrectType.ThrowIfError();
 
-            reader.Read();
             var key = new FixedString32Bytes();
             reader.ReadString(ref key).ThrowIfError();
             if (key != Key)
                 JsonReadError.IncorrectFormat.ThrowIfError();
-            var token = reader.Read();
-            if (token != JsonToken.KeyValueSeparator)
-                JsonReadError.IncorrectFormat.ThrowIfError();
-
             var value = new FixedString64Bytes();
             reader.ReadString(ref value).ThrowIfError();
-            if (reader.Read() != JsonToken.ObjectEnd)
+
+            if (!reader.TryRead(JsonToken.ObjectEnd))
                 JsonReadError.IncorrectFormat.ThrowIfError();
+
             return value;
         }
 

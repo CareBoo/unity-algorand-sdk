@@ -1,13 +1,11 @@
 using System;
-using AlgoSdk.MsgPack;
 using Unity.Collections;
 
 namespace AlgoSdk
 {
     [AlgoApiObject]
     public struct Version
-        : IMessagePackObject
-        , IEquatable<Version>
+        : IEquatable<Version>
     {
         [AlgoApiKey("build")]
         public BuildVersion Build;
@@ -20,21 +18,11 @@ namespace AlgoSdk
 
         public bool Equals(Version other)
         {
-            return this.Equals(ref other);
-        }
-    }
-}
-
-namespace AlgoSdk.MsgPack
-{
-    internal static partial class FieldMaps
-    {
-        internal static readonly Field<Version>.Map versionFields =
-            new Field<Version>.Map()
-                .Assign("build", (ref Version x) => ref x.Build)
-                .Assign("genesis_hash_b64", (ref Version x) => ref x.GenesisHashBase64)
-                .Assign("genesis_id", (ref Version x) => ref x.GenesisId)
-                .Assign("versions", (ref Version x) => ref x.Versions, ArrayComparer<FixedString32Bytes>.Instance)
+            return Build.Equals(other.Build)
+                && GenesisHashBase64.Equals(other.GenesisHashBase64)
+                && GenesisId.Equals(other.GenesisId)
+                && ArrayComparer.Equals(Versions, other.Versions)
                 ;
+        }
     }
 }

@@ -20,9 +20,18 @@ namespace AlgoSdk.MessagePack
             return data[offset];
         }
 
-        public byte Read()
+        public byte ReadByte()
         {
-            return data[offset++];
+            if (TryRead(out byte code))
+                return code;
+            throw InsufficientBuffer();
+        }
+
+        public sbyte ReadSByte()
+        {
+            if (TryRead(out sbyte code))
+                return code;
+            throw InsufficientBuffer();
         }
 
         bool TryRead<T>(out T value) where T : struct
@@ -48,6 +57,17 @@ namespace AlgoSdk.MessagePack
             code = data[next];
             offset = next;
             return true;
+        }
+
+        public bool TryRead(out sbyte value)
+        {
+            if (TryRead(out byte byteVal))
+            {
+                value = unchecked((sbyte)byteVal);
+                return true;
+            }
+            value = default;
+            return false;
         }
 
         public bool TrySkip()

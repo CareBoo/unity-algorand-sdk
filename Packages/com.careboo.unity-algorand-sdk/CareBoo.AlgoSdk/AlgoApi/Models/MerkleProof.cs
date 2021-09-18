@@ -1,10 +1,10 @@
-using AlgoSdk.MsgPack;
+using System;
 
 namespace AlgoSdk
 {
     [AlgoApiObject]
     public struct MerkleProof
-        : IMessagePackObject
+        : IEquatable<MerkleProof>
     {
         [AlgoApiKey("idx")]
         public ulong TransactionIndex;
@@ -12,18 +12,13 @@ namespace AlgoSdk
         public string Proof;
         [AlgoApiKey("stibhash")]
         public string SignedTransactionHash;
-    }
-}
 
-namespace AlgoSdk.MsgPack
-{
-    internal static partial class FieldMaps
-    {
-        internal static readonly Field<MerkleProof>.Map merkleProofFields =
-            new Field<MerkleProof>.Map()
-                .Assign("idx", (ref MerkleProof x) => ref x.TransactionIndex)
-                .Assign("proof", (ref MerkleProof x) => ref x.Proof, StringComparer.Instance)
-                .Assign("stibhash", (ref MerkleProof x) => ref x.SignedTransactionHash, StringComparer.Instance)
+        public bool Equals(MerkleProof other)
+        {
+            return TransactionIndex == other.TransactionIndex
+                && StringComparer.Equals(Proof, other.Proof)
+                && StringComparer.Equals(SignedTransactionHash, other.SignedTransactionHash)
                 ;
+        }
     }
 }

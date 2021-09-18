@@ -1,5 +1,4 @@
 using System;
-using AlgoSdk.MsgPack;
 using Unity.Collections;
 
 namespace AlgoSdk
@@ -7,7 +6,6 @@ namespace AlgoSdk
     [AlgoApiObject]
     public struct DryrunRequest
         : IEquatable<DryrunRequest>
-        , IMessagePackObject
     {
         [AlgoApiKey("accounts")]
         public Account[] Accounts;
@@ -26,24 +24,14 @@ namespace AlgoSdk
 
         public bool Equals(DryrunRequest other)
         {
-            return this.Equals(ref other);
+            return ArrayComparer.Equals(Accounts, other.Accounts)
+                && ArrayComparer.Equals(Applications, other.Applications)
+                && LatestTimestamp.Equals(other.LatestTimestamp)
+                && ProtocolVersion.Equals(other.ProtocolVersion)
+                && Round.Equals(other.Round)
+                && ArrayComparer.Equals(Sources, other.Sources)
+                && ArrayComparer.Equals(Transactions, other.Transactions);
+            ;
         }
-    }
-}
-
-namespace AlgoSdk.MsgPack
-{
-    internal static partial class FieldMaps
-    {
-        internal static readonly Field<DryrunRequest>.Map dryrunRequestFields =
-            new Field<DryrunRequest>.Map()
-                .Assign("accounts", (ref DryrunRequest x) => ref x.Accounts, ArrayComparer<Account>.Instance)
-                .Assign("apps", (ref DryrunRequest x) => ref x.Applications, ArrayComparer<Application>.Instance)
-                .Assign("latest-timestamp", (ref DryrunRequest x) => ref x.LatestTimestamp)
-                .Assign("protocol-version", (ref DryrunRequest x) => ref x.ProtocolVersion)
-                .Assign("round", (ref DryrunRequest x) => ref x.Round)
-                .Assign("sources", (ref DryrunRequest x) => ref x.Sources, ArrayComparer<DryrunSource>.Instance)
-                .Assign("txns", (ref DryrunRequest x) => ref x.Transactions, ArrayComparer<RawTransaction>.Instance)
-                ;
     }
 }

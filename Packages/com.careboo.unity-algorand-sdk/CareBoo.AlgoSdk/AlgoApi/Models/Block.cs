@@ -1,27 +1,24 @@
 using System;
 using AlgoSdk.Crypto;
-using AlgoSdk.MsgPack;
 using Unity.Collections;
 
 namespace AlgoSdk
 {
     [AlgoApiObject]
     public struct Block
-        : IMessagePackObject
-        , IEquatable<Block>
+        : IEquatable<Block>
     {
         [AlgoApiKey("block")]
         public Header HeaderData;
 
         public bool Equals(Block other)
         {
-            return this.Equals(ref other);
+            return HeaderData.Equals(other.HeaderData);
         }
 
         [AlgoApiObject]
         public struct Header
-            : IMessagePackObject
-            , IEquatable<Header>
+            : IEquatable<Header>
         {
             [AlgoApiKey("earn")]
             public ulong Earn;
@@ -73,39 +70,14 @@ namespace AlgoSdk
 
             public bool Equals(Header other)
             {
-                return this.Equals(ref other);
+                return GenesisId.Equals(other.GenesisId)
+                    && GenesisHash.Equals(other.GenesisHash)
+                    && PreviousBlock.Equals(other.PreviousBlock)
+                    && Round.Equals(other.Round)
+                    && Proto.Equals(other.Proto)
+                    && Seed.Equals(other.Seed)
+                    ;
             }
         }
-    }
-}
-
-namespace AlgoSdk.MsgPack
-{
-    internal static partial class FieldMaps
-    {
-        internal static readonly Field<Block>.Map blockFields =
-            new Field<Block>.Map()
-                .Assign("block", (ref Block x) => ref x.HeaderData)
-                ;
-
-        internal static readonly Field<Block.Header>.Map block_headerFields =
-            new Field<Block.Header>.Map()
-                .Assign("earn", (ref Block.Header x) => ref x.Earn)
-                .Assign("fees", (ref Block.Header x) => ref x.Fees)
-                .Assign("frac", (ref Block.Header x) => ref x.Fraction)
-                .Assign("gen", (ref Block.Header x) => ref x.GenesisId)
-                .Assign("gh", (ref Block.Header x) => ref x.GenesisHash)
-                .Assign("prev", (ref Block.Header x) => ref x.PreviousBlock)
-                .Assign("proto", (ref Block.Header x) => ref x.Proto)
-                .Assign("rate", (ref Block.Header x) => ref x.Rate)
-                .Assign("rnd", (ref Block.Header x) => ref x.Round)
-                .Assign("rwcalr", (ref Block.Header x) => ref x.RwCalr)
-                .Assign("rwd", (ref Block.Header x) => ref x.Rwd)
-                .Assign("seed", (ref Block.Header x) => ref x.Seed)
-                .Assign("tc", (ref Block.Header x) => ref x.Tc)
-                .Assign("ts", (ref Block.Header x) => ref x.Ts)
-                .Assign("txn", (ref Block.Header x) => ref x.Txn)
-                .Assign("txns", (ref Block.Header x) => ref x.Txns, ArrayComparer<BlockTransaction>.Instance)
-                ;
     }
 }

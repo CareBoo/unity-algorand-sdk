@@ -7,30 +7,32 @@ using Unity.Collections;
 namespace AlgoSdk
 {
 
-    public class AlgoApiField<AlgoApiObject>
-        where AlgoApiObject : struct
+    public class AlgoApiField<TAlgoApiObject>
+        where TAlgoApiObject : struct
     {
         public delegate void MessagePackDeserializer(
-            ref AlgoApiObject obj,
+            ref TAlgoApiObject obj,
             ref MessagePackReader reader);
 
         public delegate void JsonDeserializer(
-            ref AlgoApiObject obj,
+            ref TAlgoApiObject obj,
             ref JsonReader reader);
 
         public delegate void MessagePackSerializer(
-            ref AlgoApiObject obj,
+            TAlgoApiObject obj,
             ref MessagePackWriter writer);
 
         public delegate void JsonSerializer(
-            ref AlgoApiObject obj,
+            TAlgoApiObject obj,
             ref JsonWriter writer);
 
-        public delegate bool EqualityComparer(ref AlgoApiObject messagePackObject, ref AlgoApiObject other);
+        public delegate bool EqualityComparer(TAlgoApiObject messagePackObject, TAlgoApiObject other);
 
-        public delegate bool SerializePredicate(ref AlgoApiObject messagePackObject);
+        public delegate bool SerializePredicate(TAlgoApiObject messagePackObject);
 
-        public delegate ref T FieldGetter<T>(ref AlgoApiObject messagePackObject);
+        public delegate T FieldGetter<T>(TAlgoApiObject messagePackObject);
+
+        public delegate void FieldSetter<T>(ref TAlgoApiObject messagePackObject, T value);
 
         public readonly MessagePackDeserializer DeserializeMessagePack;
         public readonly MessagePackSerializer SerializeMessagePack;
@@ -55,52 +57,52 @@ namespace AlgoSdk
             ShouldSerialize = shouldSerialize;
         }
 
-        public static AlgoApiField<AlgoApiObject> Assign<T>(FieldGetter<T> field)
+        public static AlgoApiField<TAlgoApiObject> Assign<T>(FieldGetter<T> getter, FieldSetter<T> setter)
             where T : IEquatable<T>
         {
-            bool fieldsEqual(ref AlgoApiObject messagePackObject, ref AlgoApiObject other)
+            bool fieldsEqual(TAlgoApiObject messagePackObject, TAlgoApiObject other)
             {
-                return field(ref messagePackObject).Equals(field(ref other));
+                return getter(messagePackObject).Equals(getter(other));
             }
-            bool shouldSerialize(ref AlgoApiObject messagePackObject)
+            bool shouldSerialize(TAlgoApiObject messagePackObject)
             {
-                return !field(ref messagePackObject).Equals(default);
+                return !getter(messagePackObject).Equals(default);
             }
-            return Assign(field, fieldsEqual, shouldSerialize);
+            return Assign(getter, setter, fieldsEqual, shouldSerialize);
         }
 
-        public static AlgoApiField<AlgoApiObject> Assign<T>(FieldGetter<T> field, IEqualityComparer<T> comparer)
+        public static AlgoApiField<TAlgoApiObject> Assign<T>(FieldGetter<T> getter, FieldSetter<T> setter, IEqualityComparer<T> comparer)
         {
-            bool fieldsEqual(ref AlgoApiObject messagePackObject, ref AlgoApiObject other)
+            bool fieldsEqual(TAlgoApiObject messagePackObject, TAlgoApiObject other)
             {
-                return comparer.Equals(field(ref messagePackObject), field(ref other));
+                return comparer.Equals(getter(messagePackObject), getter(other));
             }
-            bool shouldSerialize(ref AlgoApiObject messagePackObject)
+            bool shouldSerialize(TAlgoApiObject messagePackObject)
             {
-                return !comparer.Equals(field(ref messagePackObject), default);
+                return !comparer.Equals(getter(messagePackObject), default);
             }
-            return Assign(field, fieldsEqual, shouldSerialize);
+            return Assign(getter, setter, fieldsEqual, shouldSerialize);
         }
 
-        public static AlgoApiField<AlgoApiObject> Assign<T>(FieldGetter<T> field, EqualityComparer fieldsEqual, SerializePredicate shouldSerialize)
+        public static AlgoApiField<TAlgoApiObject> Assign<T>(FieldGetter<T> getter, FieldSetter<T> setter, EqualityComparer fieldsEqual, SerializePredicate shouldSerialize)
         {
-            void deserializeMessagePack(ref AlgoApiObject obj, ref MessagePackReader reader)
+            void deserializeMessagePack(ref TAlgoApiObject obj, ref MessagePackReader reader)
             {
-                field(ref obj) = AlgoApiFormatterCache<T>.Formatter.Deserialize(ref reader);
+                setter(ref obj, AlgoApiFormatterCache<T>.Formatter.Deserialize(ref reader));
             }
-            void deserializeJson(ref AlgoApiObject obj, ref JsonReader reader)
+            void deserializeJson(ref TAlgoApiObject obj, ref JsonReader reader)
             {
-                field(ref obj) = AlgoApiFormatterCache<T>.Formatter.Deserialize(ref reader);
+                setter(ref obj, AlgoApiFormatterCache<T>.Formatter.Deserialize(ref reader));
             }
-            void serializeMessagePack(ref AlgoApiObject obj, ref MessagePackWriter writer)
+            void serializeMessagePack(TAlgoApiObject obj, ref MessagePackWriter writer)
             {
-                AlgoApiFormatterCache<T>.Formatter.Serialize(ref writer, field(ref obj));
+                AlgoApiFormatterCache<T>.Formatter.Serialize(ref writer, getter(obj));
             }
-            void serializeJson(ref AlgoApiObject obj, ref JsonWriter writer)
+            void serializeJson(TAlgoApiObject obj, ref JsonWriter writer)
             {
-                AlgoApiFormatterCache<T>.Formatter.Serialize(ref writer, field(ref obj));
+                AlgoApiFormatterCache<T>.Formatter.Serialize(ref writer, getter(obj));
             }
-            return new AlgoApiField<AlgoApiObject>(
+            return new AlgoApiField<TAlgoApiObject>(
                 deserializeMessagePack,
                 serializeMessagePack,
                 deserializeJson,
@@ -109,29 +111,36 @@ namespace AlgoSdk
                 fieldsEqual);
         }
 
-        public class Map : SortedDictionary<FixedString64Bytes, AlgoApiField<AlgoApiObject>>
+        public class Map : SortedDictionary<FixedString64Bytes, AlgoApiField<TAlgoApiObject>>
         {
-            public Map Assign<T>(FixedString64Bytes key, FieldGetter<T> field)
+            public Map Assign<T>(FixedString64Bytes key, FieldGetter<T> getter, FieldSetter<T> setter)
                 where T : IEquatable<T>
             {
-                Add(key, AlgoApiField<AlgoApiObject>.Assign(field));
+                Add(key, AlgoApiField<TAlgoApiObject>.Assign(getter, setter));
                 return this;
             }
 
-            public Map Assign<T>(FixedString64Bytes key, FieldGetter<T> field, IEqualityComparer<T> comparer)
+            public Map Assign<T>(FixedString64Bytes key, FieldGetter<T> getter, FieldSetter<T> setter, IEqualityComparer<T> comparer)
             {
-                Add(key, AlgoApiField<AlgoApiObject>.Assign(field, comparer));
+                Add(key, AlgoApiField<TAlgoApiObject>.Assign(getter, setter, comparer));
                 return this;
             }
 
-            public NativeList<FixedString64Bytes> GetFieldsToSerialize(AlgoApiObject obj, Allocator allocator)
+            public AlgoApiField<TAlgoApiObject> GetField(FixedString64Bytes key)
+            {
+                if (TryGetValue(key, out var field))
+                    return field;
+                throw new KeyNotFoundException($"Could not find the key, \"{key}\", for any fields on {typeof(TAlgoApiObject)}");
+            }
+
+            public NativeList<FixedString64Bytes> GetFieldsToSerialize(TAlgoApiObject obj, Allocator allocator)
             {
                 var list = new NativeList<FixedString64Bytes>(Count, allocator);
                 var fieldEnum = GetEnumerator();
                 while (fieldEnum.MoveNext())
                 {
                     var kvp = fieldEnum.Current;
-                    if (kvp.Value.ShouldSerialize(ref obj))
+                    if (kvp.Value.ShouldSerialize(obj))
                         list.Add(kvp.Key);
                 }
                 return list;

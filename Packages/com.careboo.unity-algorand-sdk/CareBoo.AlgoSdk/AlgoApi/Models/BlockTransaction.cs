@@ -1,24 +1,38 @@
 using System;
-using AlgoSdk.MsgPack;
 
 namespace AlgoSdk
 {
     [AlgoApiObject]
     public struct BlockTransaction
-        : IMessagePackObject
-        , IEquatable<BlockTransaction>
+        : IEquatable<BlockTransaction>
     {
         [AlgoApiKey("txn")]
-        public RawTransaction Transaction;
+        public RawTransaction Transaction
+        {
+            get => signedTxn.Transaction;
+            set => signedTxn.Transaction = value;
+        }
 
         [AlgoApiKey("sig")]
-        public Signature Sig;
+        public Signature Sig
+        {
+            get => signedTxn.Sig;
+            set => signedTxn.Sig = value;
+        }
 
         [AlgoApiKey("msig")]
-        public MultiSig MultiSig;
+        public MultiSig MultiSig
+        {
+            get => signedTxn.MultiSig;
+            set => signedTxn.MultiSig = value;
+        }
 
         [AlgoApiKey("lsig")]
-        public LogicSig LogicSig;
+        public LogicSig LogicSig
+        {
+            get => signedTxn.LogicSig;
+            set => signedTxn.LogicSig = value;
+        }
 
         [AlgoApiKey("hgi")]
         public Optional<bool> Hgi;
@@ -29,37 +43,16 @@ namespace AlgoSdk
         [AlgoApiKey("rs")]
         public ulong Rs;
 
+        RawSignedTransaction signedTxn;
+
         public bool Equals(BlockTransaction other)
         {
-            return this.Equals(ref other);
+            return signedTxn.Equals(other.signedTxn);
         }
 
         public static implicit operator RawSignedTransaction(BlockTransaction blockTxn)
         {
-            return new RawSignedTransaction()
-            {
-                Transaction = blockTxn.Transaction,
-                Sig = blockTxn.Sig,
-                MultiSig = blockTxn.MultiSig,
-                LogicSig = blockTxn.LogicSig
-            };
+            return blockTxn.signedTxn;
         }
-    }
-}
-
-namespace AlgoSdk.MsgPack
-{
-    internal static partial class FieldMaps
-    {
-        private static readonly Field<BlockTransaction>.Map blockTransactionFields =
-            new Field<BlockTransaction>.Map()
-                .Assign("txn", (ref BlockTransaction r) => ref r.Transaction)
-                .Assign("sig", (ref BlockTransaction r) => ref r.Sig)
-                .Assign("msig", (ref BlockTransaction r) => ref r.LogicSig)
-                .Assign("lsig", (ref BlockTransaction r) => ref r.MultiSig)
-                .Assign("hgi", (ref BlockTransaction r) => ref r.Hgi)
-                .Assign("rr", (ref BlockTransaction r) => ref r.Rr)
-                .Assign("rs", (ref BlockTransaction r) => ref r.Rs)
-                ;
     }
 }
