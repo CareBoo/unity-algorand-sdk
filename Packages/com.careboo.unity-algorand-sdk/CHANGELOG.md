@@ -1,3 +1,15 @@
+# [1.0.0-exp.16](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.15...v1.0.0-exp.16) (2021-09-19)
+
+
+### Code Refactoring
+
+* remove .NET 4.8 requirement ([9f55707](https://github.com/CareBoo/unity-algorand-sdk/commit/9f55707ba4f8a3d9b12fb7530b6ceec40c95219b)), closes [#19](https://github.com/CareBoo/unity-algorand-sdk/issues/19) [#9](https://github.com/CareBoo/unity-algorand-sdk/issues/9)
+
+
+### BREAKING CHANGES
+
+* Algo Serializer API has completely changed...
+
 # [1.0.0-exp.15](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.14...v1.0.0-exp.15) (2021-09-03)
 
 
