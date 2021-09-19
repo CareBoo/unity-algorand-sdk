@@ -18,14 +18,13 @@ namespace AlgoSdk.MessagePack
             if (!TryGetBytesLength(out int length))
                 return false;
 
-            offset += length;
-            if (offset >= data.Length)
+            if (offset + length >= data.Length)
             {
                 offset = resetOffset;
                 return false;
             }
-
             bytes = data.AsNativeSlice(offset, length);
+            offset += length;
             return true;
         }
 

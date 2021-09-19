@@ -17,7 +17,9 @@ namespace AlgoSdk.MessagePack
 
         public byte Peek()
         {
-            return data[offset];
+            if (TryPeek(out byte code))
+                return code;
+            throw InsufficientBuffer();
         }
 
         public byte ReadByte()
@@ -39,10 +41,10 @@ namespace AlgoSdk.MessagePack
             value = default;
             var size = UnsafeUtility.SizeOf<T>();
             var next = offset + size;
-            if (next >= data.Length) return false;
+            if (next - 1 >= data.Length) return false;
             unsafe
             {
-                value = UnsafeUtility.ReadArrayElement<T>(data.GetUnsafeReadOnlyPtr(), offset);
+                value = UnsafeUtility.ReadArrayElementWithStride<T>(data.GetUnsafeReadOnlyPtr(), offset, 1);
             }
             offset = next;
             return true;
@@ -51,11 +53,10 @@ namespace AlgoSdk.MessagePack
         public bool TryRead(out byte code)
         {
             code = default;
-            var next = offset + 1;
-            if (next >= data.Length)
+            var reset = offset;
+            if (offset >= data.Length)
                 return false;
-            code = data[next];
-            offset = next;
+            code = data[offset++];
             return true;
         }
 
@@ -70,11 +71,19 @@ namespace AlgoSdk.MessagePack
             return false;
         }
 
+        public bool TryPeek(out byte code)
+        {
+            code = default;
+            if (offset >= data.Length)
+                return false;
+            code = data[offset];
+            return true;
+        }
+
         public bool TrySkip()
         {
-            if (offset >= data.Length) return false;
+            if (!TryPeek(out byte code)) return false;
 
-            byte code = Peek();
             switch (code)
             {
                 case MessagePackCode.Nil:

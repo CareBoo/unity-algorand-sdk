@@ -1,4 +1,5 @@
 using System;
+using Unity.Mathematics;
 
 namespace AlgoSdk.MessagePack
 {

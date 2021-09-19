@@ -125,7 +125,7 @@ namespace AlgoSdk
 
             public void CopyFrom(in RawTransaction rawTransaction)
             {
-                Header.CopyFrom(in rawTransaction);
+                Header = rawTransaction.Header;
                 @params = rawTransaction.PaymentParams;
             }
 
@@ -155,7 +155,10 @@ namespace AlgoSdk
 
                 public bool Equals(Params other)
                 {
-                    throw new NotImplementedException();
+                    return Receiver.Equals(other.Receiver)
+                        && Amount.Equals(other.Amount)
+                        && CloseRemainderTo.Equals(other.CloseRemainderTo)
+                        ;
                 }
             }
         }

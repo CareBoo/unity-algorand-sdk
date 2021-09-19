@@ -7,18 +7,13 @@
         "Unity.Mathematics",
         "CareBoo.AlgoSdk.Crypto",
         "CareBoo.AlgoSdk.LowLevel",
-        "MessagePack",
-        "MessagePack.Annotations",
         "UniTask"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": true,
     "overrideReferences": true,
-    "precompiledReferences": [
-        "System.Buffers.dll",
-        "System.Memory.dll"
-    ],
+    "precompiledReferences": [],
     "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],

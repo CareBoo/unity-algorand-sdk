@@ -3,6 +3,7 @@ using AlgoSdk.Crypto;
 using NUnit.Framework;
 using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
+using UnityEngine;
 
 public class RawTransactionTest
 {
@@ -20,8 +21,9 @@ public class RawTransactionTest
         transaction.Amount = 40000;
         using var bytes = new NativeList<byte>(Allocator.Temp);
         AlgoApiSerializer.SerializeMessagePack(transaction, bytes);
+        Debug.Log(System.Convert.ToBase64String(bytes.ToArray()));
         var deserialized = AlgoApiSerializer.DeserializeMessagePack<RawTransaction>(bytes.AsArray().AsReadOnly());
-        Assert.AreEqual(transaction, deserialized);
+        Assert.IsTrue(transaction.Equals(deserialized));
     }
 
     [Test]
