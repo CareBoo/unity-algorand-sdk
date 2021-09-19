@@ -103,48 +103,6 @@ namespace AlgoSdk.LowLevel
             return bytes.ToRawBytes();
         }
 
-        public unsafe static ReadOnlySpan<byte> AsReadOnlySpan<TByteArray>(ref this TByteArray bytes)
-            where TByteArray : unmanaged, IByteArray
-        {
-            fixed (void* b = &bytes)
-            {
-                return new ReadOnlySpan<byte>(b, bytes.Length);
-            }
-        }
-
-        public unsafe static Span<byte> AsSpan<TByteArray>(ref this TByteArray bytes)
-            where TByteArray : unmanaged, IByteArray
-        {
-            fixed (void* b = &bytes)
-            {
-                return new Span<byte>(b, bytes.Length);
-            }
-        }
-
-        public static TByteArray ToByteArray<TByteArray>(this in Span<byte> span)
-            where TByteArray : unmanaged, IByteArray
-        {
-            TByteArray bytes = default;
-            span.CopyTo(bytes.AsSpan());
-            return bytes;
-        }
-
-        public static TByteArray ToByteArray<TByteArray>(this in ReadOnlySpan<byte> span)
-            where TByteArray : unmanaged, IByteArray
-        {
-            TByteArray bytes = default;
-            span.CopyTo(bytes.AsSpan());
-            return bytes;
-        }
-
-        public static TByteArray ToByteArray<TByteArray>(this in ReadOnlySequence<byte> seq)
-            where TByteArray : unmanaged, IByteArray
-        {
-            TByteArray bytes = default;
-            seq.CopyTo(bytes.AsSpan());
-            return bytes;
-        }
-
         public static bool Equals<TByteArray>(in TByteArray x, in TByteArray y)
             where TByteArray : unmanaged, IByteArray
         {

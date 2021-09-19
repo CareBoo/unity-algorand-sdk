@@ -4,6 +4,7 @@ using System.Text;
 using AlgoSdk;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
+using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.TestTools;
@@ -48,7 +49,7 @@ public class AlgodClientTest
         AssertResponseSuccess(transactionParamsResponse);
         var transactionParams = transactionParamsResponse.Payload;
         var txn = new Transaction.Payment(
-            fee: 1000,
+            fee: transactionParams.MinFee,
             firstValidRound: transactionParams.LastRound + 1,
             genesisHash: transactionParams.GenesisHash,
             lastValidRound: transactionParams.LastRound + 1001,
@@ -56,9 +57,13 @@ public class AlgodClientTest
             receiver: "RDSRVT3X6Y5POLDIN66TSTMUYIBVOMPEOCO4Y2CYACPFKDXZPDCZGVE4PQ",
             amount: amt
         );
-        txn.Header.GenesisId = transactionParams.GenesisId;
+        txn.Note = Encoding.UTF8.GetBytes("hello");
+        txn.GenesisId = transactionParams.GenesisId;
         var rawSignedTxn = txn.Sign(keyPair.SecretKey).ToRaw();
-        Debug.Log(System.Convert.ToBase64String(AlgoApiSerializer.SerializeMessagePack(rawSignedTxn)));
+        var serialized = new NativeList<byte>(Allocator.Temp);
+        AlgoApiSerializer.SerializeMessagePack(rawSignedTxn, serialized);
+        Debug.Log(System.Convert.ToBase64String(serialized.ToArray()));
+        serialized.Dispose();
         var txidResponse = await client.SendTransaction(rawSignedTxn);
         AssertResponseSuccess(txidResponse);
         Debug.Log(txidResponse.Raw.GetText());
@@ -130,7 +135,7 @@ public class AlgodClientTest
     [UnityTest]
     public IEnumerator GetBlockShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        TransactionId txId = await MakePaymentTransaction(10000);
+        TransactionId txId = await MakePaymentTransaction(100000);
         var pendingTxn = new PendingTransaction();
         while (pendingTxn.ConfirmedRound <= 0)
         {
@@ -189,7 +194,7 @@ public class AlgodClientTest
     [UnityTest]
     public IEnumerator GetMerkleProofShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        TransactionId txId = await MakePaymentTransaction(10000);
+        TransactionId txId = await MakePaymentTransaction(100000);
         var pendingTxn = new PendingTransaction();
         while (pendingTxn.ConfirmedRound <= 0)
         {
@@ -206,7 +211,7 @@ public class AlgodClientTest
     [UnityTest]
     public IEnumerator TransferFundsShouldReturnTransactionId() => UniTask.ToCoroutine(async () =>
     {
-        var txId = await MakePaymentTransaction(10000);
+        var txId = await MakePaymentTransaction(100000);
         var pendingResponse = await client.GetPendingTransaction(txId);
         AssertResponseSuccess(pendingResponse);
         Debug.Log(pendingResponse.Raw.GetText());

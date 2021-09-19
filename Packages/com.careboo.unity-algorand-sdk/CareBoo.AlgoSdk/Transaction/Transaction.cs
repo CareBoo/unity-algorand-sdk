@@ -1,9 +1,8 @@
 using System;
 using System.Text;
 using AlgoSdk.Crypto;
+using AlgoSdk.Formatters;
 using AlgoSdk.LowLevel;
-using AlgoSdk.MsgPack;
-using MessagePack;
 using Unity.Collections;
 
 namespace AlgoSdk
@@ -15,7 +14,8 @@ namespace AlgoSdk
         void CopyFrom(in RawTransaction rawTransaction);
     }
 
-    public enum TransactionType : ushort
+    [AlgoApiFormatter(typeof(TransactionTypeFormatter))]
+    public enum TransactionType : short
     {
         None,
         Payment,
@@ -49,7 +49,8 @@ namespace AlgoSdk
         {
             var rawTransaction = new RawTransaction();
             transaction.CopyTo(ref rawTransaction);
-            var data = AlgoApiSerializer.SerializeMessagePack(rawTransaction);
+            using var data = new NativeList<byte>(Allocator.Temp);
+            AlgoApiSerializer.SerializeMessagePack(rawTransaction, data);
 
             var result = new NativeByteArray(SignaturePrefix.Length + data.Length, allocator);
             for (var i = 0; i < SignaturePrefix.Length; i++)

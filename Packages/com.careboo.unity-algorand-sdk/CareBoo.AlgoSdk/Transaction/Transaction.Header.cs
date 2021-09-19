@@ -15,14 +15,12 @@ namespace AlgoSdk
             public GenesisHash GenesisHash;
             public ulong LastValidRound;
             public Address Sender;
-            TransactionType transactionType;
+            public TransactionType TransactionType;
             public FixedString32Bytes GenesisId;
             public Address Group;
             public Address Lease;
             public byte[] Note;
             public Address RekeyTo;
-
-            public TransactionType TransactionType => transactionType;
 
             Header ITransaction.Header => this;
 
@@ -40,7 +38,7 @@ namespace AlgoSdk
                 GenesisHash = genesisHash;
                 LastValidRound = lastValidRound;
                 Sender = sender;
-                this.transactionType = transactionType;
+                TransactionType = transactionType;
 
                 GenesisId = default;
                 Group = default;
@@ -49,24 +47,9 @@ namespace AlgoSdk
                 RekeyTo = default;
             }
 
-            public Header GetHeader()
-            {
-                return this;
-            }
-
             public void CopyTo(ref RawTransaction rawTransaction)
             {
-                rawTransaction.Fee = Fee;
-                rawTransaction.FirstValidRound = FirstValidRound;
-                rawTransaction.GenesisHash = GenesisHash;
-                rawTransaction.LastValidRound = LastValidRound;
-                rawTransaction.Sender = Sender;
-                rawTransaction.TransactionType = TransactionType;
-                rawTransaction.GenesisId = GenesisId;
-                rawTransaction.Group = Group;
-                rawTransaction.Lease = Lease;
-                rawTransaction.Note = Note;
-                rawTransaction.RekeyTo = RekeyTo;
+                rawTransaction.Header = this;
             }
 
             public void CopyFrom(in RawTransaction rawTransaction)
@@ -76,7 +59,7 @@ namespace AlgoSdk
                 GenesisHash = rawTransaction.GenesisHash;
                 LastValidRound = rawTransaction.LastValidRound;
                 Sender = rawTransaction.Sender;
-                transactionType = rawTransaction.TransactionType;
+                TransactionType = rawTransaction.TransactionType;
                 GenesisId = rawTransaction.GenesisId;
                 Group = rawTransaction.Group;
                 Lease = rawTransaction.Lease;
@@ -98,6 +81,24 @@ namespace AlgoSdk
                     && string.Equals(Note, other.Note)
                     && RekeyTo == other.RekeyTo
                     ;
+            }
+
+            public override bool Equals(object obj)
+            {
+                if (obj is RawTransaction other)
+                    return Equals(other);
+                return false;
+            }
+
+            public override int GetHashCode()
+            {
+                unchecked
+                {
+                    int hash = 17;
+                    hash = hash * 31 + Fee.GetHashCode();
+                    hash = hash * 31 + FirstValidRound.GetHashCode();
+                    return hash;
+                }
             }
         }
     }

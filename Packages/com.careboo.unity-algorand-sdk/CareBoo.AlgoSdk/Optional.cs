@@ -1,7 +1,9 @@
 using System;
+using AlgoSdk.Formatters;
 
 namespace AlgoSdk
 {
+    [AlgoApiFormatter(typeof(OptionalFormatter<>))]
     public struct Optional<T>
         : IEquatable<Optional<T>>
         where T : struct, IEquatable<T>
