@@ -1,6 +1,7 @@
 using AlgoSdk;
 using AlgoSdk.Crypto;
 using NUnit.Framework;
+using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
 
 public class SignedTransactionTest
@@ -45,8 +46,9 @@ public class SignedTransactionTest
             receiver: AlgoSdk.Crypto.Random.Bytes<Address>().GenerateCheckSum(),
             amount: 1000000);
         var signedTransaction = transaction.Sign(kp.SecretKey);
-        var serialized = AlgoApiSerializer.SerializeMessagePack(signedTransaction);
-        var deserialized = AlgoApiSerializer.Deserialize<SignedTransaction<Transaction.Payment>>(serialized, AlgoApiFormat.MessagePack);
+        using var serialized = new NativeList<byte>(Allocator.Temp);
+        AlgoApiSerializer.SerializeMessagePack(signedTransaction, serialized);
+        var deserialized = AlgoApiSerializer.Deserialize<SignedTransaction<Transaction.Payment>>(serialized.AsArray().AsReadOnly(), AlgoApiFormat.MessagePack);
         Assert.IsTrue(signedTransaction.Equals(deserialized));
     }
 }

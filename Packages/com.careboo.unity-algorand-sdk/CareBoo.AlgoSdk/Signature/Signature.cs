@@ -1,9 +1,11 @@
 using System;
 using AlgoSdk.Crypto;
+using AlgoSdk.Formatters;
 using AlgoSdk.LowLevel;
 
 namespace AlgoSdk
 {
+    [AlgoApiFormatter(typeof(ByteArrayFormatter<Signature>))]
     public struct Signature
         : ISignature
         , IEquatable<Signature>

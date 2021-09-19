@@ -1,5 +1,6 @@
 using System;
 using AlgoSdk.Crypto;
+using Unity.Collections;
 
 namespace AlgoSdk
 {
@@ -9,12 +10,88 @@ namespace AlgoSdk
             : ITransaction
             , IEquatable<Payment>
         {
-            public Header Header;
-            public Address Receiver;
-            public ulong Amount;
-            public Address CloseRemainderTo;
+            Header header;
 
-            Header ITransaction.Header => Header;
+            Params @params;
+
+            public Header Header
+            {
+                get => header;
+                set => header = value;
+            }
+
+            public ulong Fee
+            {
+                get => header.Fee;
+                set => header.Fee = value;
+            }
+
+            public ulong FirstValidRound
+            {
+                get => header.FirstValidRound;
+                set => header.FirstValidRound = value;
+            }
+            public GenesisHash GenesisHash
+            {
+                get => header.GenesisHash;
+                set => header.GenesisHash = value;
+            }
+            public ulong LastValidRound
+            {
+                get => header.LastValidRound;
+                set => header.LastValidRound = value;
+            }
+
+            public Address Sender
+            {
+                get => header.Sender;
+                set => header.Sender = value;
+            }
+
+            public FixedString32Bytes GenesisId
+            {
+                get => header.GenesisId;
+                set => header.GenesisId = value;
+            }
+
+            public Address Group
+            {
+                get => header.Group;
+                set => header.Group = value;
+            }
+            public Address Lease
+            {
+                get => header.Lease;
+                set => header.Lease = value;
+            }
+            public byte[] Note
+            {
+                get => header.Note;
+                set => header.Note = value;
+            }
+            public Address RekeyTo
+            {
+                get => header.RekeyTo;
+                set => header.RekeyTo = value;
+            }
+
+            public Address Receiver
+            {
+                get => @params.Receiver;
+                set => @params.Receiver = value;
+            }
+
+            public ulong Amount
+            {
+                get => @params.Amount;
+                set => @params.Amount = value;
+            }
+
+            public Address CloseRemainderTo
+            {
+                get => @params.CloseRemainderTo;
+                set => @params.CloseRemainderTo = value;
+            }
 
             public Payment(
                 in ulong fee,
@@ -26,7 +103,7 @@ namespace AlgoSdk
                 in ulong amount
             )
             {
-                Header = new Header(
+                header = new Header(
                     in fee,
                     in firstValidRound,
                     in genesisHash,
@@ -34,36 +111,55 @@ namespace AlgoSdk
                     in sender,
                     TransactionType.Payment
                 );
-                Receiver = receiver;
-                Amount = amount;
-                CloseRemainderTo = default;
+                @params = new Params(
+                    in receiver,
+                    in amount
+                );
             }
-
-            public Header GetHeader() => Header;
 
             public void CopyTo(ref RawTransaction rawTransaction)
             {
                 Header.CopyTo(ref rawTransaction);
-                rawTransaction.Receiver = Receiver;
-                rawTransaction.Amount = Amount;
-                rawTransaction.CloseRemainderTo = CloseRemainderTo;
+                rawTransaction.PaymentParams = @params;
             }
 
             public void CopyFrom(in RawTransaction rawTransaction)
             {
-                Header.CopyFrom(in rawTransaction);
-                Receiver = rawTransaction.Receiver;
-                Amount = rawTransaction.Amount;
-                CloseRemainderTo = rawTransaction.CloseRemainderTo;
+                Header = rawTransaction.Header;
+                @params = rawTransaction.PaymentParams;
             }
 
             public bool Equals(Payment other)
             {
-                return Header.Equals(other.Header)
-                    && Receiver == other.Receiver
-                    && Amount == other.Amount
-                    && CloseRemainderTo == other.CloseRemainderTo
+                return header.Equals(other.Header)
+                    && @params.Equals(other.@params)
                     ;
+            }
+
+            public struct Params
+                : IEquatable<Params>
+            {
+                public Address Receiver;
+                public ulong Amount;
+                public Address CloseRemainderTo;
+
+                public Params(
+                    in Address receiver,
+                    in ulong amount
+                )
+                {
+                    Receiver = receiver;
+                    Amount = amount;
+                    CloseRemainderTo = default;
+                }
+
+                public bool Equals(Params other)
+                {
+                    return Receiver.Equals(other.Receiver)
+                        && Amount.Equals(other.Amount)
+                        && CloseRemainderTo.Equals(other.CloseRemainderTo)
+                        ;
+                }
             }
         }
     }

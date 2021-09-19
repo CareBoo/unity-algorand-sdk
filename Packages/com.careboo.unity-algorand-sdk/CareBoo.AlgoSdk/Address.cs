@@ -1,6 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 using AlgoSdk.Crypto;
+using AlgoSdk.Formatters;
 using AlgoSdk.LowLevel;
 using Unity.Collections;
 using UnityEngine;
@@ -9,6 +10,7 @@ namespace AlgoSdk
 {
     [Serializable]
     [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
+    [AlgoApiFormatter(typeof(AddressFormatter))]
     public struct Address
         : IByteArray
         , IEquatable<Address>
@@ -79,7 +81,7 @@ namespace AlgoSdk
 
             public override string ToString()
             {
-                return System.Convert.ToBase64String(this.AsReadOnlySpan().ToArray());
+                return System.Convert.ToBase64String(this.ToArray());
             }
         }
 
