@@ -6,9 +6,9 @@ namespace AlgoSdk
 {
     public static partial class Transaction
     {
-        public struct Payment
+        public struct AssetConfiguration
             : ITransaction
-            , IEquatable<Payment>
+            , IEquatable<AssetConfiguration>
         {
             Header header;
 
@@ -78,63 +78,57 @@ namespace AlgoSdk
                 set => header.RekeyTo = value;
             }
 
-            public Address Receiver
+            public ulong ConfigAsset
             {
-                get => @params.Receiver;
-                set => @params.Receiver = value;
+                get => @params.ConfigAsset;
+                set => @params.ConfigAsset = value;
             }
 
-            public ulong Amount
+            public AssetParams AssetParams
             {
-                get => @params.Amount;
-                set => @params.Amount = value;
+                get => @params.AssetParams;
+                set => @params.AssetParams = value;
             }
 
-            public Address CloseRemainderTo
-            {
-                get => @params.CloseRemainderTo;
-                set => @params.CloseRemainderTo = value;
-            }
-
-            public Payment(
-                in ulong fee,
-                in ulong firstValidRound,
-                in Sha512_256_Hash genesisHash,
-                in ulong lastValidRound,
-                in Address sender,
-                in Address receiver,
-                in ulong amount
+            public AssetConfiguration(
+                ulong fee,
+                ulong firstValidRound,
+                Sha512_256_Hash genesisHash,
+                ulong lastValidRound,
+                Address sender,
+                ulong configAsset,
+                AssetParams assetParams
             )
             {
                 header = new Header(
-                    in fee,
-                    in firstValidRound,
-                    in genesisHash,
-                    in lastValidRound,
-                    in sender,
-                    TransactionType.Payment
+                    fee,
+                    firstValidRound,
+                    genesisHash,
+                    lastValidRound,
+                    sender,
+                    TransactionType.AssetConfiguration
                 );
                 @params = new Params(
-                    in receiver,
-                    in amount
+                    configAsset,
+                    assetParams
                 );
             }
 
             public void CopyTo(ref RawTransaction rawTransaction)
             {
                 Header.CopyTo(ref rawTransaction);
-                rawTransaction.PaymentParams = @params;
+                rawTransaction.AssetConfigurationParams = @params;
             }
 
             public void CopyFrom(in RawTransaction rawTransaction)
             {
                 Header = rawTransaction.Header;
-                @params = rawTransaction.PaymentParams;
+                @params = rawTransaction.AssetConfigurationParams;
             }
 
-            public bool Equals(Payment other)
+            public bool Equals(AssetConfiguration other)
             {
-                return header.Equals(other.Header)
+                return header.Equals(other.header)
                     && @params.Equals(other.@params)
                     ;
             }
@@ -142,25 +136,23 @@ namespace AlgoSdk
             public struct Params
                 : IEquatable<Params>
             {
-                public Address Receiver;
-                public ulong Amount;
-                public Address CloseRemainderTo;
+                public ulong ConfigAsset;
+
+                public AssetParams AssetParams;
 
                 public Params(
-                    in Address receiver,
-                    in ulong amount
+                    ulong configAsset,
+                    AssetParams assetParams
                 )
                 {
-                    Receiver = receiver;
-                    Amount = amount;
-                    CloseRemainderTo = default;
+                    ConfigAsset = configAsset;
+                    AssetParams = assetParams;
                 }
 
                 public bool Equals(Params other)
                 {
-                    return Receiver.Equals(other.Receiver)
-                        && Amount.Equals(other.Amount)
-                        && CloseRemainderTo.Equals(other.CloseRemainderTo)
+                    return ConfigAsset.Equals(other.ConfigAsset)
+                        && AssetParams.Equals(other.AssetParams)
                         ;
                 }
             }

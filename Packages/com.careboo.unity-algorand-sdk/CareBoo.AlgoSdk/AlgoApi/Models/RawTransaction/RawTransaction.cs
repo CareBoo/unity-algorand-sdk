@@ -18,10 +18,6 @@ namespace AlgoSdk
         public ulong VoteKeyDilution;
         [AlgoApiKey("nonpart")]
         public Optional<bool> NonParticipation;
-        [AlgoApiKey("caid")]
-        public ulong ConfigAsset;
-        [AlgoApiKey("apar")]
-        public AssetParams AssetParams;
         [AlgoApiKey("xaid")]
         public ulong XferAsset;
         [AlgoApiKey("aamt")]
@@ -63,6 +59,7 @@ namespace AlgoSdk
 
         public Transaction.Header Header;
         public Transaction.Payment.Params PaymentParams;
+        public Transaction.AssetConfiguration.Params AssetConfigurationParams;
 
         public static bool operator ==(in RawTransaction x, in RawTransaction y)
         {
@@ -80,6 +77,7 @@ namespace AlgoSdk
                 && TransactionType switch
                 {
                     TransactionType.Payment => PaymentParams.Equals(other.PaymentParams),
+                    TransactionType.AssetConfiguration => AssetConfigurationParams.Equals(other.AssetConfigurationParams),
                     _ => true
                 };
         }
