@@ -142,7 +142,7 @@ namespace AlgoSdk
                 rawTransaction.AssetTransferParams = @params;
             }
 
-            public void CopyFrom(in RawTransaction rawTransaction)
+            public void CopyFrom(RawTransaction rawTransaction)
             {
                 Header = rawTransaction.Header;
                 @params = rawTransaction.AssetTransferParams;

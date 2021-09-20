@@ -6,9 +6,9 @@ namespace AlgoSdk
 {
     public static partial class Transaction
     {
-        public struct Payment
+        public struct AssetFreeze
             : ITransaction
-            , IEquatable<Payment>
+            , IEquatable<AssetFreeze>
         {
             Header header;
 
@@ -78,61 +78,63 @@ namespace AlgoSdk
                 set => header.RekeyTo = value;
             }
 
-            public Address Receiver
+            public Address FreezeAccount
             {
-                get => @params.Receiver;
-                set => @params.Receiver = value;
+                get => @params.FreezeAccount;
+                set => @params.FreezeAccount = value;
             }
 
-            public ulong Amount
+            public ulong FreezeAsset
             {
-                get => @params.Amount;
-                set => @params.Amount = value;
+                get => @params.FreezeAsset;
+                set => @params.FreezeAsset = value;
             }
 
-            public Address CloseRemainderTo
+            public Optional<bool> AssetFrozen
             {
-                get => @params.CloseRemainderTo;
-                set => @params.CloseRemainderTo = value;
+                get => @params.AssetFrozen;
+                set => @params.AssetFrozen = value;
             }
 
-            public Payment(
-                 ulong fee,
-                 ulong firstValidRound,
-                 Sha512_256_Hash genesisHash,
-                 ulong lastValidRound,
-                 Address sender,
-                 Address receiver,
-                 ulong amount
+            public AssetFreeze(
+                ulong fee,
+                ulong firstValidRound,
+                Sha512_256_Hash genesisHash,
+                ulong lastValidRound,
+                Address sender,
+                Address freezeAccount,
+                ulong freezeAsset,
+                bool assetFrozen
             )
             {
                 header = new Header(
-                     fee,
-                     firstValidRound,
-                     genesisHash,
-                     lastValidRound,
-                     sender,
-                    TransactionType.Payment
+                    fee,
+                    firstValidRound,
+                    genesisHash,
+                    lastValidRound,
+                    sender,
+                    TransactionType.AssetFreeze
                 );
                 @params = new Params(
-                     receiver,
-                     amount
+                    freezeAccount,
+                    freezeAsset,
+                    assetFrozen
                 );
             }
 
             public void CopyTo(ref RawTransaction rawTransaction)
             {
                 rawTransaction.Header = header;
-                rawTransaction.PaymentParams = @params;
+                rawTransaction.AssetFreezeParams = @params;
             }
 
             public void CopyFrom(RawTransaction rawTransaction)
             {
                 header = rawTransaction.Header;
-                @params = rawTransaction.PaymentParams;
+                @params = rawTransaction.AssetFreezeParams;
             }
 
-            public bool Equals(Payment other)
+            public bool Equals(AssetFreeze other)
             {
                 return header.Equals(other.Header)
                     && @params.Equals(other.@params)
@@ -142,25 +144,26 @@ namespace AlgoSdk
             public struct Params
                 : IEquatable<Params>
             {
-                public Address Receiver;
-                public ulong Amount;
-                public Address CloseRemainderTo;
+                public Address FreezeAccount;
+                public ulong FreezeAsset;
+                public Optional<bool> AssetFrozen;
 
                 public Params(
-                     Address receiver,
-                     ulong amount
+                    Address freezeAccount,
+                    ulong freezeAsset,
+                    bool assetFrozen
                 )
                 {
-                    Receiver = receiver;
-                    Amount = amount;
-                    CloseRemainderTo = default;
+                    FreezeAccount = freezeAccount;
+                    FreezeAsset = freezeAsset;
+                    AssetFrozen = assetFrozen;
                 }
 
                 public bool Equals(Params other)
                 {
-                    return Receiver.Equals(other.Receiver)
-                        && Amount.Equals(other.Amount)
-                        && CloseRemainderTo.Equals(other.CloseRemainderTo)
+                    return FreezeAccount.Equals(other.FreezeAccount)
+                        && FreezeAsset.Equals(other.FreezeAccount)
+                        && AssetFrozen.Equals(other.AssetFrozen)
                         ;
                 }
             }
