@@ -107,11 +107,11 @@ namespace AlgoSdk
             )
             {
                 header = new Header(
-                     fee,
-                     firstValidRound,
-                     genesisHash,
-                     lastValidRound,
-                     sender,
+                    fee,
+                    firstValidRound,
+                    genesisHash,
+                    lastValidRound,
+                    sender,
                     TransactionType.Payment
                 );
                 @params = new Params(

@@ -114,10 +114,10 @@ namespace AlgoSdk
                 Sha512_256_Hash genesisHash,
                 ulong lastValidRound,
                 Address sender,
-                    ulong xferAsset,
-                    ulong assetAmount,
-                    Address assetSender,
-                    Address assetReceiver
+                ulong xferAsset,
+                ulong assetAmount,
+                Address assetSender,
+                Address assetReceiver
             )
             {
                 header = new Header(
