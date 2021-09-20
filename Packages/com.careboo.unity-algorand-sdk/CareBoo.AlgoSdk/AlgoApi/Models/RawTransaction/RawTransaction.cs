@@ -18,12 +18,6 @@ namespace AlgoSdk
         public ulong VoteKeyDilution;
         [AlgoApiKey("nonpart")]
         public Optional<bool> NonParticipation;
-        [AlgoApiKey("fadd")]
-        public Address FreezeAccount;
-        [AlgoApiKey("faid")]
-        public ulong FreezeAsset;
-        [AlgoApiKey("afrz")]
-        public Optional<bool> AssetFrozen;
         [AlgoApiKey("apid")]
         public ulong ApplicationId;
         [AlgoApiKey("apan")]
@@ -51,6 +45,7 @@ namespace AlgoSdk
         public Transaction.Payment.Params PaymentParams;
         public Transaction.AssetConfiguration.Params AssetConfigurationParams;
         public Transaction.AssetTransfer.Params AssetTransferParams;
+        public Transaction.AssetFreeze.Params AssetFreezeParams;
 
         public static bool operator ==(in RawTransaction x, in RawTransaction y)
         {

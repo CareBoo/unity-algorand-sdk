@@ -22,11 +22,11 @@ namespace AlgoSdk
             public Address RekeyTo;
 
             public Header(
-                in ulong fee,
-                in ulong firstValidRound,
-                in Sha512_256_Hash genesisHash,
-                in ulong lastValidRound,
-                in Address sender,
+                ulong fee,
+                ulong firstValidRound,
+                Sha512_256_Hash genesisHash,
+                ulong lastValidRound,
+                Address sender,
                 TransactionType transactionType
             )
             {
