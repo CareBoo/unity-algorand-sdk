@@ -1,3 +1,12 @@
+# [1.0.0-exp.17](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.16...v1.0.0-exp.17) (2021-09-20)
+
+
+### Features
+
+* :sparkles: implement asset configuration transaction ([4f9ec58](https://github.com/CareBoo/unity-algorand-sdk/commit/4f9ec587932ed51da9bbbeaa1ddf3653a346c978)), closes [#27](https://github.com/CareBoo/unity-algorand-sdk/issues/27)
+* :sparkles: implement AssetFreezeTransaction ([e3233bf](https://github.com/CareBoo/unity-algorand-sdk/commit/e3233bf9c8258eab91e8141c561d837f26780172)), closes [#26](https://github.com/CareBoo/unity-algorand-sdk/issues/26)
+* :sparkles: implement AssetTransfer Transaction ([62a1841](https://github.com/CareBoo/unity-algorand-sdk/commit/62a1841332811753f48ac7fdccb1eec117607f3a)), closes [#23](https://github.com/CareBoo/unity-algorand-sdk/issues/23)
+
 # [1.0.0-exp.16](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.15...v1.0.0-exp.16) (2021-09-19)
 
 
