@@ -11,7 +11,7 @@ namespace AlgoSdk
     {
         Transaction.Header Header { get; }
         void CopyTo(ref RawTransaction rawTransaction);
-        void CopyFrom(in RawTransaction rawTransaction);
+        void CopyFrom(RawTransaction rawTransaction);
     }
 
     [AlgoApiFormatter(typeof(TransactionTypeFormatter))]

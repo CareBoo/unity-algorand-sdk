@@ -6,9 +6,9 @@ namespace AlgoSdk
 {
     public static partial class Transaction
     {
-        public struct Payment
+        public struct AssetTransfer
             : ITransaction
-            , IEquatable<Payment>
+            , IEquatable<AssetTransfer>
         {
             Header header;
 
@@ -78,32 +78,46 @@ namespace AlgoSdk
                 set => header.RekeyTo = value;
             }
 
-            public Address Receiver
+            public ulong XferAsset
             {
-                get => @params.Receiver;
-                set => @params.Receiver = value;
+                get => @params.XferAsset;
+                set => @params.XferAsset = value;
             }
 
-            public ulong Amount
+            public ulong AssetAmount
             {
-                get => @params.Amount;
-                set => @params.Amount = value;
+                get => @params.AssetAmount;
+                set => @params.AssetAmount = value;
             }
 
-            public Address CloseRemainderTo
+            public Address AssetSender
             {
-                get => @params.CloseRemainderTo;
-                set => @params.CloseRemainderTo = value;
+                get => @params.AssetSender;
+                set => @params.AssetSender = value;
             }
 
-            public Payment(
-                 ulong fee,
-                 ulong firstValidRound,
-                 Sha512_256_Hash genesisHash,
-                 ulong lastValidRound,
-                 Address sender,
-                 Address receiver,
-                 ulong amount
+            public Address AssetReceiver
+            {
+                get => @params.AssetReceiver;
+                set => @params.AssetReceiver = value;
+            }
+
+            public Address AssetCloseTo
+            {
+                get => @params.AssetCloseTo;
+                set => @params.AssetCloseTo = value;
+            }
+
+            public AssetTransfer(
+                ulong fee,
+                ulong firstValidRound,
+                Sha512_256_Hash genesisHash,
+                ulong lastValidRound,
+                Address sender,
+                ulong xferAsset,
+                ulong assetAmount,
+                Address assetSender,
+                Address assetReceiver
             )
             {
                 header = new Header(
@@ -112,29 +126,31 @@ namespace AlgoSdk
                     genesisHash,
                     lastValidRound,
                     sender,
-                    TransactionType.Payment
+                    TransactionType.AssetTransfer
                 );
                 @params = new Params(
-                     receiver,
-                     amount
+                    xferAsset,
+                    assetAmount,
+                    assetSender,
+                    assetReceiver
                 );
             }
 
             public void CopyTo(ref RawTransaction rawTransaction)
             {
                 rawTransaction.Header = header;
-                rawTransaction.PaymentParams = @params;
+                rawTransaction.AssetTransferParams = @params;
             }
 
             public void CopyFrom(RawTransaction rawTransaction)
             {
-                header = rawTransaction.Header;
-                @params = rawTransaction.PaymentParams;
+                Header = rawTransaction.Header;
+                @params = rawTransaction.AssetTransferParams;
             }
 
-            public bool Equals(Payment other)
+            public bool Equals(AssetTransfer other)
             {
-                return header.Equals(other.Header)
+                return header.Equals(other.header)
                     && @params.Equals(other.@params)
                     ;
             }
@@ -142,25 +158,33 @@ namespace AlgoSdk
             public struct Params
                 : IEquatable<Params>
             {
-                public Address Receiver;
-                public ulong Amount;
-                public Address CloseRemainderTo;
+                public ulong XferAsset;
+                public ulong AssetAmount;
+                public Address AssetSender;
+                public Address AssetReceiver;
+                public Address AssetCloseTo;
 
                 public Params(
-                     Address receiver,
-                     ulong amount
+                    ulong xferAsset,
+                    ulong assetAmount,
+                    Address assetSender,
+                    Address assetReceiver
                 )
                 {
-                    Receiver = receiver;
-                    Amount = amount;
-                    CloseRemainderTo = default;
+                    XferAsset = xferAsset;
+                    AssetAmount = assetAmount;
+                    AssetSender = assetSender;
+                    AssetReceiver = assetReceiver;
+                    AssetCloseTo = default;
                 }
 
                 public bool Equals(Params other)
                 {
-                    return Receiver.Equals(other.Receiver)
-                        && Amount.Equals(other.Amount)
-                        && CloseRemainderTo.Equals(other.CloseRemainderTo)
+                    return XferAsset.Equals(other.XferAsset)
+                        && AssetAmount.Equals(other.AssetAmount)
+                        && AssetSender.Equals(other.AssetSender)
+                        && AssetReceiver.Equals(other.AssetReceiver)
+                        && AssetCloseTo.Equals(other.AssetCloseTo)
                         ;
                 }
             }

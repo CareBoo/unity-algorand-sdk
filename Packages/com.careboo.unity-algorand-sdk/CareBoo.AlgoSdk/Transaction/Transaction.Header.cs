@@ -7,8 +7,7 @@ namespace AlgoSdk
     public static partial class Transaction
     {
         public struct Header
-            : ITransaction
-            , IEquatable<Header>
+            : IEquatable<Header>
         {
             public ulong Fee;
             public ulong FirstValidRound;
@@ -22,14 +21,12 @@ namespace AlgoSdk
             public byte[] Note;
             public Address RekeyTo;
 
-            Header ITransaction.Header => this;
-
             public Header(
-                in ulong fee,
-                in ulong firstValidRound,
-                in Sha512_256_Hash genesisHash,
-                in ulong lastValidRound,
-                in Address sender,
+                ulong fee,
+                ulong firstValidRound,
+                Sha512_256_Hash genesisHash,
+                ulong lastValidRound,
+                Address sender,
                 TransactionType transactionType
             )
             {
@@ -45,26 +42,6 @@ namespace AlgoSdk
                 Lease = default;
                 Note = default;
                 RekeyTo = default;
-            }
-
-            public void CopyTo(ref RawTransaction rawTransaction)
-            {
-                rawTransaction.Header = this;
-            }
-
-            public void CopyFrom(in RawTransaction rawTransaction)
-            {
-                Fee = rawTransaction.Fee;
-                FirstValidRound = rawTransaction.FirstValidRound;
-                GenesisHash = rawTransaction.GenesisHash;
-                LastValidRound = rawTransaction.LastValidRound;
-                Sender = rawTransaction.Sender;
-                TransactionType = rawTransaction.TransactionType;
-                GenesisId = rawTransaction.GenesisId;
-                Group = rawTransaction.Group;
-                Lease = rawTransaction.Lease;
-                Note = rawTransaction.Note;
-                RekeyTo = rawTransaction.RekeyTo;
             }
 
             public bool Equals(Header other)
