@@ -116,13 +116,13 @@ namespace AlgoSdk
 
             public void CopyTo(ref RawTransaction rawTransaction)
             {
-                Header.CopyTo(ref rawTransaction);
+                rawTransaction.Header = header;
                 rawTransaction.AssetConfigurationParams = @params;
             }
 
             public void CopyFrom(in RawTransaction rawTransaction)
             {
-                Header = rawTransaction.Header;
+                header = rawTransaction.Header;
                 @params = rawTransaction.AssetConfigurationParams;
             }
 
