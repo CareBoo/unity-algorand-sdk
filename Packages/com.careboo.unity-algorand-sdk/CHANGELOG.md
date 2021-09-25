@@ -1,3 +1,10 @@
+# [1.0.0-exp.19](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.18...v1.0.0-exp.19) (2021-09-25)
+
+
+### Bug Fixes
+
+* :bug: fix compile errs ([7a03ed9](https://github.com/CareBoo/unity-algorand-sdk/commit/7a03ed99a5cd7d3657df89c58a989ee0e33ced66))
+
 # [1.0.0-exp.18](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.17...v1.0.0-exp.18) (2021-09-25)
 
 
