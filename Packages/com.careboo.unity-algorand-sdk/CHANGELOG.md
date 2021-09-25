@@ -1,3 +1,10 @@
+# [1.0.0-exp.18](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.17...v1.0.0-exp.18) (2021-09-25)
+
+
+### Features
+
+* :sparkles: add LogicSig implementation ([51a21e0](https://github.com/CareBoo/unity-algorand-sdk/commit/51a21e02f98bb221ca2e14cbb8d1243f7b15b5ef))
+
 # [1.0.0-exp.17](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.16...v1.0.0-exp.17) (2021-09-20)
 
 
