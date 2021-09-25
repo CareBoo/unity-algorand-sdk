@@ -109,7 +109,7 @@ namespace AlgoSdk.LowLevel
             return ByteArrayComparer<TByteArray>.Equals(in x, in y);
         }
 
-        public static bool Equals<T, U>(in T x, in U y)
+        public static bool EqualsOther<T, U>(in T x, in U y)
             where T : struct, IByteArray
             where U : struct, IByteArray
         {

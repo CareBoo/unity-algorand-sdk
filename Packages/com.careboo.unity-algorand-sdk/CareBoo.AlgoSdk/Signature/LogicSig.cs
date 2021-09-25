@@ -39,6 +39,7 @@ namespace AlgoSdk
             return Sig.Verify(programByteArray, sender)
                 || MultiSig.Verify(programByteArray, sender)
                 || VerifyProgram(programByteArray, sender)
+                ;
         }
 
         bool VerifyProgram(NativeByteArray programByteArray, Ed25519.PublicKey sender)
@@ -59,7 +60,7 @@ namespace AlgoSdk
                 return false;
 
             for (var i = 0; i < Args.Length; i++)
-                if (!ArrayComparer.Equals(Args[i], other.Args[i])
+                if (!ArrayComparer.Equals(Args[i], other.Args[i]))
                     return false;
 
             return true;
