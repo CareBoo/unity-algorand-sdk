@@ -109,6 +109,20 @@ namespace AlgoSdk.LowLevel
             return ByteArrayComparer<TByteArray>.Equals(in x, in y);
         }
 
+        public static bool Equals<T, U>(in T x, in U y)
+            where T : struct, IByteArray
+            where U : struct, IByteArray
+        {
+            if (x.Length != y.Length)
+                return false;
+
+            for (var i = 0; i < x.Length; i++)
+                if (x[i] != y[i])
+                    return false;
+
+            return true;
+        }
+
         public static bool Equals<TByteArray>(in TByteArray x, object obj)
             where TByteArray : unmanaged, IByteArray
         {

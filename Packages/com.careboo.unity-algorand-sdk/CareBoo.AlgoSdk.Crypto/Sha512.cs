@@ -2,6 +2,7 @@ using System;
 using System.Runtime.InteropServices;
 using AlgoSdk.LowLevel;
 using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 using static AlgoSdk.Crypto.sodium;
 
 namespace AlgoSdk.Crypto
@@ -23,22 +24,40 @@ namespace AlgoSdk.Crypto
         public unsafe static Sha512_Hash Hash<TByteArray>(in TByteArray bytes)
             where TByteArray : unmanaged, IByteArray
         {
-            var hash = new Sha512_Hash();
-            var size = (ulong)bytes.Length;
             fixed (void* b = &bytes)
-                crypto_hash_sha512(&hash, b, size);
+                return Hash(b, bytes.Length);
+        }
+
+        public unsafe static Sha512_Hash Hash(NativeArray<byte> bytes)
+        {
+            return Hash(bytes.GetUnsafePtr(), bytes.Length);
+        }
+
+        public unsafe static Sha512_Hash Hash(void* ptr, int length)
+        {
+            var hash = new Sha512_Hash();
+            crypto_hash_sha512(&hash, ptr, (ulong)length);
             return hash;
         }
 
         public unsafe static Sha512_256_Hash Hash256Truncated<TByteArray>(in TByteArray bytes)
             where TByteArray : unmanaged, IByteArray
         {
-            var size = (ulong)bytes.Length;
+            fixed (void* bytesPtr = &bytes)
+                return Hash256Truncated(bytesPtr, bytes.Length);
+        }
+
+        public unsafe static Sha512_256_Hash Hash256Truncated(NativeArray<byte> bytes)
+        {
+            return Hash256Truncated(bytes.GetUnsafePtr(), bytes.Length);
+        }
+
+        public unsafe static Sha512_256_Hash Hash256Truncated(void* ptr, int length)
+        {
             var hashState = default(crypto_hash_sha512_state);
             crypto_hash_sha512_init(&hashState);
             hashState.vector = FIPS_Sha512_256_IV;
-            fixed (void* bytesPtr = &bytes)
-                crypto_hash_sha512_update(&hashState, bytesPtr, size);
+            crypto_hash_sha512_update(&hashState, ptr, (ulong)length);
             var hash512 = new Sha512_Hash();
             crypto_hash_sha512_final(&hashState, &hash512);
             var result = new Sha512_256_Hash();
