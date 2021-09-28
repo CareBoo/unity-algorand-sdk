@@ -1,3 +1,10 @@
+# [1.0.0-exp.21](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.20...v1.0.0-exp.21) (2021-09-28)
+
+
+### Features
+
+* :sparkles: update AlgoApiFormatterLookup ([cc112e5](https://github.com/CareBoo/unity-algorand-sdk/commit/cc112e55d4489e30afd2854757e482cf9d37c8ee))
+
 # [1.0.0-exp.20](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.19...v1.0.0-exp.20) (2021-09-28)
 
 
