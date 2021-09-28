@@ -1,5 +1,4 @@
 using System;
-using System.Text;
 using AlgoSdk.Crypto;
 using AlgoSdk.LowLevel;
 using Unity.Collections;
@@ -15,7 +14,7 @@ namespace AlgoSdk
         public byte[] Program;
 
         [AlgoApiKey("arg")]
-        public byte[][] Args;
+        public FixedList128Bytes<byte>[] Args;
 
         [AlgoApiKey("sig")]
         public Signature Sig;
@@ -26,7 +25,7 @@ namespace AlgoSdk
         public bool Equals(LogicSig other)
         {
             return ArrayComparer.Equals(Program, other.Program)
-                && ArgsEqual(other)
+                && ArrayComparer.Equals(Args, other.Args)
                 && Sig.Equals(other.Sig)
                 && MultiSig.Equals(other.MultiSig)
                 ;
@@ -44,26 +43,12 @@ namespace AlgoSdk
 
         bool VerifyProgram(NativeByteArray programByteArray, Ed25519.PublicKey sender)
         {
+            Sha512_256_Hash programHash = default;
             unsafe
             {
-                var programHash = Sha512.Hash256Truncated((void*)programByteArray.Buffer, programByteArray.Length);
-                return ByteArray.Equals(programHash, sender);
+                programHash = Sha512.Hash256Truncated(programByteArray.GetUnsafePtr(), programByteArray.Length);
             }
-        }
-
-        bool ArgsEqual(LogicSig other)
-        {
-            if (Args == null)
-                return other.Args == null;
-
-            if (Args.Length != other.Args.Length)
-                return false;
-
-            for (var i = 0; i < Args.Length; i++)
-                if (!ArrayComparer.Equals(Args[i], other.Args[i]))
-                    return false;
-
-            return true;
+            return ByteArray.Equals(programHash, sender);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace AlgoSdk
     {
         Ed25519.Signature sig;
 
-        public IntPtr Buffer => sig.Buffer;
+        public unsafe void* GetUnsafePtr() => sig.GetUnsafePtr();
 
         public int Length => sig.Length;
 

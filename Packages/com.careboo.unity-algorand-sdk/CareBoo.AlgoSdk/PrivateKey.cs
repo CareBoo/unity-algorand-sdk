@@ -11,12 +11,12 @@ namespace AlgoSdk
     [StructLayout(LayoutKind.Explicit, Size = 32)]
     [BurstCompatible]
     public struct PrivateKey
-    : IEquatable<PrivateKey>
-    , IByteArray
+        : IEquatable<PrivateKey>
+        , IByteArray
     {
         [SerializeField] [FieldOffset(0)] internal Ed25519.Seed seed;
 
-        public IntPtr Buffer => seed.Buffer;
+        public unsafe void* GetUnsafePtr() => seed.GetUnsafePtr();
 
         public int Length => seed.Length;
 

@@ -40,6 +40,11 @@ namespace AlgoSdk
             AddFormatter<FixedString128Bytes>(new FixedStringFormatter<FixedString128Bytes>());
             AddFormatter<FixedString512Bytes>(new FixedStringFormatter<FixedString512Bytes>());
             AddFormatter<FixedString4096Bytes>(new FixedStringFormatter<FixedString4096Bytes>());
+            AddFormatter<FixedList32Bytes<byte>>(new FixedBytesFormatter<FixedList32Bytes<byte>>());
+            AddFormatter<FixedList64Bytes<byte>>(new FixedBytesFormatter<FixedList64Bytes<byte>>());
+            AddFormatter<FixedList128Bytes<byte>>(new FixedBytesFormatter<FixedList128Bytes<byte>>());
+            AddFormatter<FixedList512Bytes<byte>>(new FixedBytesFormatter<FixedList512Bytes<byte>>());
+            AddFormatter<FixedList4096Bytes<byte>>(new FixedBytesFormatter<FixedList4096Bytes<byte>>());
         }
 
         static void AddFormatter(Type t, object formatter)

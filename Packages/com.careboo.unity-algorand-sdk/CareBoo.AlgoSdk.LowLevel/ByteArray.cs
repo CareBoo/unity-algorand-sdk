@@ -1,5 +1,4 @@
 using System;
-using System.Buffers;
 using System.Collections.Generic;
 using System.Diagnostics;
 using Unity.Collections.LowLevel.Unsafe;
@@ -7,11 +6,19 @@ using Unity.Mathematics;
 
 namespace AlgoSdk.LowLevel
 {
-    public interface IByteArray
+    public interface IArray<T>
     {
-        IntPtr Buffer { get; }
         int Length { get; }
-        byte this[int index] { get; set; }
+        T this[int index] { get; set; }
+    }
+
+    public interface IContiguousArray<T> : IArray<T>
+    {
+        unsafe void* GetUnsafePtr();
+    }
+
+    public interface IByteArray : IContiguousArray<byte>
+    {
     }
 
     public struct ByteArrayComparer<T> : IEqualityComparer<T> where T : unmanaged, IByteArray
@@ -26,7 +33,7 @@ namespace AlgoSdk.LowLevel
 
         public static unsafe int GetHashCode(in T obj)
         {
-            return UnsafeUtility.ReadArrayElement<int>((void*)obj.Buffer, 0);
+            return UnsafeUtility.ReadArrayElement<int>(obj.GetUnsafePtr(), 0);
         }
 
         bool IEqualityComparer<T>.Equals(T x, T y)
@@ -55,7 +62,7 @@ namespace AlgoSdk.LowLevel
             CheckElementAccess(index, bytes.Length);
             unsafe
             {
-                return UnsafeUtility.ReadArrayElement<byte>((byte*)bytes.Buffer, index);
+                return UnsafeUtility.ReadArrayElement<byte>(bytes.GetUnsafePtr(), index);
             }
         }
 
@@ -65,7 +72,7 @@ namespace AlgoSdk.LowLevel
             CheckElementAccess(index, bytes.Length);
             unsafe
             {
-                UnsafeUtility.WriteArrayElement<byte>((byte*)bytes.Buffer, index, value);
+                UnsafeUtility.WriteArrayElement<byte>(bytes.GetUnsafePtr(), index, value);
             }
         }
 
@@ -75,17 +82,8 @@ namespace AlgoSdk.LowLevel
             CheckElementAccess(index, bytes.Length);
             unsafe
             {
-                return UnsafeUtility.ReadArrayElement<byte>((byte*)bytes.Buffer, index);
+                return UnsafeUtility.ReadArrayElement<byte>(bytes.GetUnsafePtr(), index);
             }
-        }
-
-        public static byte[] ToRawBytes<TByteArray>(ref this TByteArray bytes)
-            where TByteArray : struct, IByteArray
-        {
-            var result = new byte[bytes.Length];
-            for (var i = 0; i < bytes.Length; i++)
-                result[i] = bytes.GetByteAt(i);
-            return result;
         }
 
         public static void Copy<T, U>(ref T from, ref U to)
@@ -98,9 +96,12 @@ namespace AlgoSdk.LowLevel
         }
 
         public static byte[] ToArray<TByteArray>(ref this TByteArray bytes)
-            where TByteArray : struct, IByteArray
+            where TByteArray : struct, IArray<byte>
         {
-            return bytes.ToRawBytes();
+            var result = new byte[bytes.Length];
+            for (var i = 0; i < bytes.Length; i++)
+                result[i] = bytes[i];
+            return result;
         }
 
         public static bool Equals<TByteArray>(in TByteArray x, in TByteArray y)
