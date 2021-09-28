@@ -65,22 +65,11 @@ namespace AlgoSdk
             if (lookup == null)
                 EnsureLookupInitialized();
 
-            var type = typeof(T);
-            if (lookup.TryGetValue(typeof(T), out var formatter))
+            if (lookup.TryGetValue(typeof(T), out var formatter)
+                && formatter is IAlgoApiFormatter<T> algoApiFormatter)
             {
-            }
-            else if (type.IsArray)
-            {
-                formatter = Activator.CreateInstance(typeof(ArrayFormatter<>).MakeGenericType(type.GetElementType()));
-            }
-            else if (type.IsGenericType && lookup.TryGetValue(type.GetGenericTypeDefinition(), out var openFormatterTypeObj))
-            {
-                var openFormatterType = (Type)openFormatterTypeObj;
-                var genericFormatterType = openFormatterType.MakeGenericType(type.GenericTypeArguments);
-                formatter = Activator.CreateInstance(genericFormatterType);
-            }
-            if (formatter is IAlgoApiFormatter<T> algoApiFormatter)
                 return algoApiFormatter;
+            }
             throw new InvalidCastException($"formatter of type {formatter.GetType()} cannot be cast to {typeof(IAlgoApiFormatter<T>)}...");
         }
     }

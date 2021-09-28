@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 
 namespace AlgoSdk
 {
-    [AttributeUsage(AttributeTargets.Struct | AttributeTargets.Class | AttributeTargets.Enum, Inherited = true, AllowMultiple = false)]
+    [AttributeUsage(AttributeTargets.Struct | AttributeTargets.Class | AttributeTargets.Enum, Inherited = true, AllowMultiple = true)]
     [Conditional("UNITY_EDITOR")]
     public sealed class AlgoApiFormatterAttribute : Attribute
     {

@@ -7,6 +7,7 @@ using System;
 using System.IO;
 using Microsoft.CSharp;
 using System.CodeDom.Compiler;
+using AlgoSdk.Formatters;
 
 namespace AlgoSdk.Editor.CodeGen
 {
@@ -16,6 +17,7 @@ namespace AlgoSdk.Editor.CodeGen
         CodeCompileUnit targetUnit;
         CodeTypeDeclaration targetClass;
         CodeFieldReferenceExpression lookupField;
+        HashSet<Type> AddedTypes = new HashSet<Type>();
 
         public FormatterCacheCodeGen()
         {
@@ -42,10 +44,10 @@ namespace AlgoSdk.Editor.CodeGen
                 new CodeTypeReferenceExpression(typeof(AlgoApiFormatterLookup)),
                 AlgoApiFormatterLookup.InitLookupMethodName);
             ensureLookupsMethod.Statements.Add(initLookupMethod);
-            foreach (var algoApiObjType in algoApiObjTypes)
-                ensureLookupsMethod.Statements.Add(GetLookupAddExpressionForAlgoApiObjType(algoApiObjType));
-            foreach (var algoApiFormatterType in algoApiFormatterTypes)
-                ensureLookupsMethod.Statements.Add(GetLookupAddExpressionForAlgoApiFormatterType(algoApiFormatterType));
+            foreach (var statement in algoApiObjTypes.SelectMany(GetLookupAddExpressionForAlgoApiObjType))
+                ensureLookupsMethod.Statements.Add(statement);
+            foreach (var statement in algoApiFormatterTypes.SelectMany(GetLookupAddExpressionForAlgoApiFormatterType))
+                ensureLookupsMethod.Statements.Add(statement);
 
             targetClass.Members.Add(ensureLookupsMethod);
         }
@@ -61,40 +63,74 @@ namespace AlgoSdk.Editor.CodeGen
             return filePath;
         }
 
-        CodeExpression GetLookupAddExpressionForAlgoApiObjType(Type algoApiObjType)
+        IEnumerable<CodeExpression> GetLookupAddExpressionForAlgoApiObjType(Type algoApiObjType)
         {
+            var result = new List<CodeExpression>();
+            var fieldKeys = GetKeyProps(algoApiObjType);
             var createFormatterExpression = new CodeObjectCreateExpression(
                     typeof(AlgoApiObjectFormatter<>).MakeGenericType(algoApiObjType),
-                    GetCreateMapExpression(algoApiObjType));
+                    GetCreateMapExpression(algoApiObjType, fieldKeys));
 
-            return AddFormatterExpression(
-                new CodeTypeOfExpression(new CodeTypeReference(algoApiObjType)),
-                createFormatterExpression);
+            if (AddedTypes.Add(algoApiObjType))
+            {
+                result.Add(
+                   AddFormatterExpression(
+                       algoApiObjType,
+                       createFormatterExpression)
+               );
+            }
+            foreach (var type in fieldKeys.Select(x => x.Item3).Where(x => x.IsArray))
+            {
+                createFormatterExpression = new CodeObjectCreateExpression(
+                    typeof(ArrayFormatter<>).MakeGenericType(type.GetElementType())
+                );
+                if (AddedTypes.Add(type))
+                {
+                    result.Add(
+                       AddFormatterExpression(
+                           type,
+                           createFormatterExpression
+                       )
+                   );
+                }
+            }
+            return result;
         }
 
-        CodeExpression GetLookupAddExpressionForAlgoApiFormatterType(Type algoApiFormatterType)
+        IEnumerable<CodeExpression> GetLookupAddExpressionForAlgoApiFormatterType(Type algoApiFormatterType)
         {
-            var formatterAttribute = algoApiFormatterType.GetCustomAttribute<AlgoApiFormatterAttribute>();
-            var formatterType = formatterAttribute.FormatterType;
-            var typeofExpression = new CodeTypeOfExpression(new CodeTypeReference(algoApiFormatterType));
-            CodeExpression formatterExpression = formatterType.IsGenericTypeDefinition
-                ? (CodeExpression)new CodeTypeOfExpression(new CodeTypeReference(formatterType))
-                : (CodeExpression)new CodeObjectCreateExpression(formatterType);
-            return AddFormatterExpression(typeofExpression, formatterExpression);
+            var result = new List<CodeExpression>();
+            var formatterAttributes = algoApiFormatterType.GetCustomAttributes<AlgoApiFormatterAttribute>();
+            foreach (var formatterType in formatterAttributes.Select(x => x.FormatterType))
+            {
+                if (algoApiFormatterType.IsGenericType)
+                {
+                    algoApiFormatterType = formatterType.GetInterfaces()
+                        .Single(t => t.GetGenericTypeDefinition() == typeof(IAlgoApiFormatter<>))
+                        .GetGenericArguments()
+                        .First();
+                }
+                var typeofExpression = new CodeTypeOfExpression(new CodeTypeReference(algoApiFormatterType));
+                CodeExpression formatterExpression = new CodeObjectCreateExpression(formatterType);
+                if (AddedTypes.Add(algoApiFormatterType))
+                {
+                    result.Add(AddFormatterExpression(algoApiFormatterType, formatterExpression));
+                }
+            }
+            return result;
         }
 
-        CodeExpression AddFormatterExpression(CodeTypeOfExpression typeExpression, CodeExpression formatterExpression)
+        CodeExpression AddFormatterExpression(Type type, CodeExpression formatterExpression)
         {
             return new CodeMethodInvokeExpression(
                 new CodeTypeReferenceExpression(typeof(AlgoApiFormatterLookup)),
                 AlgoApiFormatterLookup.AddFormatterMethodName,
-                typeExpression,
+                new CodeTypeOfExpression(new CodeTypeReference(type)),
                 formatterExpression);
         }
 
-        CodeExpression GetCreateMapExpression(Type algoApiObjType)
+        CodeExpression GetCreateMapExpression(Type algoApiObjType, List<(string, MemberInfo, Type)> fieldKeys)
         {
-            var fieldKeys = GetKeyProps(algoApiObjType);
             CodeExpression createdMapExpression = new CodeObjectCreateExpression(
                 typeof(AlgoApiField<>.Map).MakeGenericType(algoApiObjType));
             foreach (var (key, member, type) in fieldKeys)
