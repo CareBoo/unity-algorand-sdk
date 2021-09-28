@@ -12,7 +12,7 @@ namespace AlgoSdk.Editor.CodeGen
 {
     public class FormatterCacheCodeGen
     {
-        const string outputFileName = "AlgoApiFormatterLookup.codegen.cs";
+        const string outputFileName = "AlgoApiFormatterLookup.gen.cs";
         CodeCompileUnit targetUnit;
         CodeTypeDeclaration targetClass;
         CodeFieldReferenceExpression lookupField;
@@ -157,6 +157,11 @@ namespace AlgoSdk.Editor.CodeGen
                                     .Select(Format)
                                     .Aggregate((x1, x2) => $"{x1}, {x2}");
                 name = $"{type.FullName.Substring(0, type.FullName.IndexOf("`"))}<{genericArguments}>";
+            }
+            else if (type.IsArray)
+            {
+                string elementType = Format(type.GetElementType());
+                name = $"{elementType}[]";
             }
             else
                 name = type.FullName;
