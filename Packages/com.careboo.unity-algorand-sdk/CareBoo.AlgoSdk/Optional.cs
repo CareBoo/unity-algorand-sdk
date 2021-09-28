@@ -3,7 +3,11 @@ using AlgoSdk.Formatters;
 
 namespace AlgoSdk
 {
-    [AlgoApiFormatter(typeof(OptionalFormatter<>))]
+    [AlgoApiFormatter(typeof(OptionalFormatter<bool>))]
+    [AlgoApiFormatter(typeof(OptionalFormatter<ulong>))]
+    [AlgoApiFormatter(typeof(OptionalFormatter<Address>))]
+    [AlgoApiFormatter(typeof(OptionalFormatter<AccountParticipation>))]
+    [AlgoApiFormatter(typeof(OptionalFormatter<ApplicationStateSchema>))]
     public struct Optional<T>
         : IEquatable<Optional<T>>
         where T : struct, IEquatable<T>

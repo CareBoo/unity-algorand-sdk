@@ -14,7 +14,10 @@ namespace AlgoSdk
         public void CopyFrom(in RawSignedTransaction data);
     }
 
-    [AlgoApiFormatter(typeof(SignedTransactionFormatter<>))]
+    [AlgoApiFormatter(typeof(SignedTransactionFormatter<Transaction.Payment>))]
+    [AlgoApiFormatter(typeof(SignedTransactionFormatter<Transaction.AssetConfiguration>))]
+    [AlgoApiFormatter(typeof(SignedTransactionFormatter<Transaction.AssetFreeze>))]
+    [AlgoApiFormatter(typeof(SignedTransactionFormatter<Transaction.AssetTransfer>))]
     public struct SignedTransaction<TTransaction>
         : ISignedTransaction
         , IEquatable<SignedTransaction<TTransaction>>
