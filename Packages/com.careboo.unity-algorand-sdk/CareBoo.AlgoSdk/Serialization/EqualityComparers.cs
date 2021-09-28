@@ -69,7 +69,7 @@ namespace AlgoSdk
     {
         public static bool Equals<T>(T[] x, T[] y) where T : IEquatable<T>
         {
-            return ArrayComparer.Equals(x, y);
+            return ArrayComparer<T>.Equals(x, y);
         }
     }
 
