@@ -24,10 +24,10 @@ namespace AlgoSdk
 
         public bool Equals(LogicSig other)
         {
-            return ArrayComparer.Equals(Program, other.Program)
-                && ArrayComparer.Equals(Args, other.Args)
-                && Sig.Equals(other.Sig)
+            return Sig.Equals(other.Sig)
                 && MultiSig.Equals(other.MultiSig)
+                && ArrayComparer.Equals(Program, other.Program)
+                && ArrayComparer.Equals(Args, other.Args)
                 ;
         }
 
