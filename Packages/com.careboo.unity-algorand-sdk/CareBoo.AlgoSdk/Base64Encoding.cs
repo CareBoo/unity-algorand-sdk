@@ -6,15 +6,15 @@ namespace AlgoSdk
 {
     public static class Base64Encoding
     {
-        public static void CopyToBase64<TByteArray, T>(ref this TByteArray bytes, ref T s)
-            where TByteArray : struct, IByteArray
+        public static void CopyToBase64<TBytes, T>(ref this TBytes bytes, ref T s)
+            where TBytes : struct, IArray<byte>
             where T : struct, IUTF8Bytes, INativeList<byte>
         {
             s.CopyFrom(System.Convert.ToBase64String(bytes.ToArray()));
         }
 
         public static void CopyFromBase64<TByteArray, T>(ref this TByteArray bytes, in T s, int maxLength = int.MaxValue)
-            where TByteArray : struct, IByteArray
+            where TByteArray : struct, IArray<byte>
             where T : struct, IUTF8Bytes, INativeList<byte>
         {
             var managedString = s.ToString();

@@ -28,13 +28,10 @@ namespace AlgoSdk
 
             public const int SizeBytes = 4;
 
-            public unsafe IntPtr Buffer
+            public unsafe void* GetUnsafePtr()
             {
-                get
-                {
-                    fixed (byte* b = &byte0000)
-                        return (IntPtr)b;
-                }
+                fixed (byte* b = &byte0000)
+                    return b;
             }
 
             public int Length => SizeBytes;
@@ -91,13 +88,10 @@ namespace AlgoSdk
         [SerializeField] [FieldOffset(0)] internal Ed25519.PublicKey publicKey;
         [SerializeField] [FieldOffset(Ed25519.PublicKey.SizeBytes)] internal CheckSum checkSum;
 
-        public unsafe IntPtr Buffer
+        public unsafe void* GetUnsafePtr()
         {
-            get
-            {
-                fixed (byte* b = &buffer)
-                    return (IntPtr)b;
-            }
+            fixed (byte* b = &buffer)
+                return b;
         }
 
         public int Length => SizeBytes;

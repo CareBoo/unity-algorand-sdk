@@ -73,7 +73,7 @@ namespace AlgoSdk.Crypto
                 where TMessage : IByteArray
             {
                 var signature = new Signature();
-                crypto_sign_ed25519_detached(&signature, out var signatureLength, (byte*)message.Buffer, (ulong)message.Length, this);
+                crypto_sign_ed25519_detached(&signature, out var signatureLength, (byte*)message.GetUnsafePtr(), (ulong)message.Length, this);
                 Assert.AreEqual(signatureLength, (ulong)signature.Length);
                 return signature;
             }
@@ -88,21 +88,18 @@ namespace AlgoSdk.Crypto
 
         [StructLayout(LayoutKind.Explicit, Size = Size)]
         public struct Seed
-        : IByteArray
-        , IEquatable<Seed>
+            : IByteArray
+            , IEquatable<Seed>
         {
             [FieldOffset(0)] internal FixedBytes16 offset0000;
             [FieldOffset(16)] internal FixedBytes16 offset0016;
 
             public const int Size = 32;
 
-            public unsafe IntPtr Buffer
+            public unsafe void* GetUnsafePtr()
             {
-                get
-                {
-                    fixed (byte* b = &offset0000.byte0000)
-                        return (IntPtr)b;
-                }
+                fixed (byte* b = &offset0000.byte0000)
+                    return b;
             }
 
             public int Length => Size;
@@ -142,21 +139,18 @@ namespace AlgoSdk.Crypto
 
         [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
         public struct PublicKey
-        : IByteArray
-        , IEquatable<PublicKey>
+            : IByteArray
+            , IEquatable<PublicKey>
         {
             [FieldOffset(0)] internal FixedBytes16 offset0000;
             [FieldOffset(16)] internal FixedBytes16 offset0016;
 
             public const int SizeBytes = 32;
 
-            public unsafe IntPtr Buffer
+            public unsafe void* GetUnsafePtr()
             {
-                get
-                {
-                    fixed (byte* b = &offset0000.byte0000)
-                        return (IntPtr)b;
-                }
+                fixed (byte* b = &offset0000.byte0000)
+                    return b;
             }
 
             public int Length => 32;
@@ -210,13 +204,10 @@ namespace AlgoSdk.Crypto
                 set => this.SetByteAt(index, value);
             }
 
-            public unsafe IntPtr Buffer
+            public unsafe void* GetUnsafePtr()
             {
-                get
-                {
-                    fixed (byte* b = &buffer.offset0000.offset0000.byte0000)
-                        return (IntPtr)b;
-                }
+                fixed (byte* b = &buffer.offset0000.offset0000.byte0000)
+                    return b;
             }
 
             public int Length => SizeBytes;
@@ -226,7 +217,7 @@ namespace AlgoSdk.Crypto
             {
                 fixed (Signature* s = &this)
                 {
-                    var error = crypto_sign_ed25519_verify_detached(s, (byte*)message.Buffer, (ulong)message.Length, &pk);
+                    var error = crypto_sign_ed25519_verify_detached(s, (byte*)message.GetUnsafePtr(), (ulong)message.Length, &pk);
                     return error == 0;
                 }
             }

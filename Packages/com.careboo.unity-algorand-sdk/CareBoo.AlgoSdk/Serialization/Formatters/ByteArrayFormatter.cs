@@ -99,7 +99,7 @@ namespace AlgoSdk.Formatters
         {
             unsafe
             {
-                writer.WriteBytes((void*)value.Buffer, value.Length);
+                writer.WriteBytes(value.GetUnsafePtr(), value.Length);
             }
         }
     }

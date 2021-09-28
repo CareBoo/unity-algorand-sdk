@@ -79,13 +79,10 @@ namespace AlgoSdk
         public FixedBytes64 Bytes;
         public byte this[int index] { get => this.GetByteAt(index); set => this.SetByteAt(index, value); }
 
-        public unsafe IntPtr Buffer
+        public unsafe void* GetUnsafePtr()
         {
-            get
-            {
-                fixed (byte* b = &Bytes.offset0000.offset0000.byte0000)
-                    return (IntPtr)b;
-            }
+            fixed (byte* b = &Bytes.offset0000.offset0000.byte0000)
+                return b;
         }
 
         public int Length => SizeBytes;

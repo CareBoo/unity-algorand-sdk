@@ -32,7 +32,7 @@ namespace AlgoSdk.Formatters
         {
             unsafe
             {
-                writer.WriteBytes((void*)value.Buffer, value.publicKey.Length);
+                writer.WriteBytes(value.GetUnsafePtr(), value.publicKey.Length);
             }
         }
     }

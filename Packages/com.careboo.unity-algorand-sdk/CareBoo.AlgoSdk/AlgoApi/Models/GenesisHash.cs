@@ -14,7 +14,7 @@ namespace AlgoSdk
 
         public byte this[int index] { get => hash[index]; set => hash[index] = value; }
 
-        public IntPtr Buffer => hash.Buffer;
+        public unsafe void* GetUnsafePtr() => hash.GetUnsafePtr();
 
         public int Length => hash.Length;
 

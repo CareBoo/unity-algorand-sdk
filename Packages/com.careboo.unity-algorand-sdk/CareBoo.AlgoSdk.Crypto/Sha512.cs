@@ -77,13 +77,10 @@ namespace AlgoSdk.Crypto
         [FieldOffset(48)] internal FixedBytes16 offset0048;
         public const int SizeBytes = 512 / 8;
 
-        public unsafe IntPtr Buffer
+        public unsafe void* GetUnsafePtr()
         {
-            get
-            {
-                fixed (byte* b = &offset0000.byte0000)
-                    return (IntPtr)b;
-            }
+            fixed (byte* b = &offset0000.byte0000)
+                return b;
         }
 
         public int Length => SizeBytes;
@@ -112,13 +109,10 @@ namespace AlgoSdk.Crypto
         [FieldOffset(16)] internal FixedBytes16 offset0016;
         public const int SizeBytes = 256 / 8;
 
-        public unsafe IntPtr Buffer
+        public unsafe void* GetUnsafePtr()
         {
-            get
-            {
-                fixed (byte* b = &offset0000.byte0000)
-                    return (IntPtr)b;
-            }
+            fixed (byte* b = &offset0000.byte0000)
+                return b;
         }
 
         public int Length => SizeBytes;

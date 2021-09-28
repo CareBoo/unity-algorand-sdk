@@ -12,8 +12,6 @@ namespace AlgoSdk.LowLevel
     {
         public byte this[int index] { get => this.GetByteAt(index); set => this.SetByteAt(index, value); }
 
-        public unsafe IntPtr Buffer => (IntPtr)data.GetUnsafePtr();
-
         public int Length => data.Length;
 
         readonly NativeArray<byte> data;
@@ -27,6 +25,8 @@ namespace AlgoSdk.LowLevel
         {
             data = new NativeArray<byte>(arr, allocator);
         }
+
+        public unsafe void* GetUnsafePtr() => data.GetUnsafePtr();
 
         public bool Equals(NativeByteArray other)
         {
@@ -42,5 +42,6 @@ namespace AlgoSdk.LowLevel
         {
             data.Dispose();
         }
+
     }
 }

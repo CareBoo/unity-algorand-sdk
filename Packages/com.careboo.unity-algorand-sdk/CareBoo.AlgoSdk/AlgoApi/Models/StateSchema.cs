@@ -9,7 +9,7 @@ namespace AlgoSdk
     {
         public byte this[int index] { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-        public IntPtr Buffer => IntPtr.Zero;
+        public unsafe void* GetUnsafePtr() => (void*)IntPtr.Zero;
 
         public int Length => 0;
 
