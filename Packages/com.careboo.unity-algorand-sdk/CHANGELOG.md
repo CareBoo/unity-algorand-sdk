@@ -1,3 +1,15 @@
+# [1.0.0-exp.20](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.19...v1.0.0-exp.20) (2021-09-28)
+
+
+### Features
+
+* :sparkles: add FixedBytesFormatter ([941eb3f](https://github.com/CareBoo/unity-algorand-sdk/commit/941eb3f83b4b82d58431bc49b7f402e1ecfbccea))
+
+
+### BREAKING CHANGES
+
+* Replace Buffer with GetUnsafePtr
+
 # [1.0.0-exp.19](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.18...v1.0.0-exp.19) (2021-09-25)
 
 
