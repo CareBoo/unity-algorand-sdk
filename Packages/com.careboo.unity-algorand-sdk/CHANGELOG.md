@@ -1,3 +1,11 @@
+# [1.0.0-exp.22](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.21...v1.0.0-exp.22) (2021-09-28)
+
+
+### Bug Fixes
+
+* :bug: fix crash on ArrayComparer.Equals ([8ca1b06](https://github.com/CareBoo/unity-algorand-sdk/commit/8ca1b06daedcbdf97650f4b79bd72a134238bec0))
+* :bug: fix issues with codegen and AOT compilation ([d2f9bdc](https://github.com/CareBoo/unity-algorand-sdk/commit/d2f9bdc8f8c77b8afb690162c3fafda81b5f8c48))
+
 # [1.0.0-exp.21](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.20...v1.0.0-exp.21) (2021-09-28)
 
 
