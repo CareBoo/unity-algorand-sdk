@@ -67,9 +67,7 @@ namespace AlgoSdk.Editor.CodeGen
         {
             var result = new List<CodeExpression>();
             var fieldKeys = GetKeyProps(algoApiObjType);
-            var createFormatterExpression = new CodeObjectCreateExpression(
-                    typeof(AlgoApiObjectFormatter<>).MakeGenericType(algoApiObjType),
-                    GetCreateMapExpression(algoApiObjType, fieldKeys));
+            var createFormatterExpression = GetCreateFormatterExpression(algoApiObjType, fieldKeys);
 
             if (AddedTypes.Add(algoApiObjType))
             {
@@ -79,7 +77,7 @@ namespace AlgoSdk.Editor.CodeGen
                        createFormatterExpression)
                );
             }
-            foreach (var type in fieldKeys.Select(x => x.Item3).Where(x => x.IsArray))
+            foreach (var type in fieldKeys.Select(x => x.type).Where(x => x.IsArray))
             {
                 createFormatterExpression = new CodeObjectCreateExpression(
                     typeof(ArrayFormatter<>).MakeGenericType(type.GetElementType())
@@ -129,30 +127,36 @@ namespace AlgoSdk.Editor.CodeGen
                 formatterExpression);
         }
 
-        CodeExpression GetCreateMapExpression(Type algoApiObjType, List<(string, MemberInfo, Type)> fieldKeys)
+        CodeExpression GetCreateFormatterExpression(Type algoApiObjType, List<(AlgoApiKeyAttribute, MemberInfo, Type)> fieldKeys)
         {
-            CodeExpression createdMapExpression = new CodeObjectCreateExpression(
-                typeof(AlgoApiField<>.Map).MakeGenericType(algoApiObjType));
+            CodeExpression createdFormatterExpression = new CodeObjectCreateExpression(
+                typeof(AlgoApiObjectFormatter<>).MakeGenericType(algoApiObjType));
             foreach (var (key, member, type) in fieldKeys)
             {
-                createdMapExpression = new CodeMethodInvokeExpression(
-                    createdMapExpression,
-                    nameof(AlgoApiField<int>.Map.Assign),
+                createdFormatterExpression = new CodeMethodInvokeExpression(
+                    createdFormatterExpression,
+                    nameof(AlgoApiObjectFormatter<int>.Assign),
                     GetAssignParamsExpressions(key, member, type));
             }
-            return createdMapExpression;
+            return createdFormatterExpression;
         }
 
-        CodeExpression[] GetAssignParamsExpressions(string key, MemberInfo member, Type memberType)
+        CodeExpression[] GetAssignParamsExpressions(AlgoApiKeyAttribute key, MemberInfo member, Type memberType)
         {
             var declaringType = member.DeclaringType;
             var memberName = member.Name;
-            var expressions = new List<CodeExpression>()
+            var expressions = new List<CodeExpression>();
+            if (key.HasMultipleKeys)
             {
-                new CodePrimitiveExpression(key),
-                new CodeSnippetExpression($"({Format(declaringType)} x) => x.{memberName}"),
-                new CodeSnippetExpression($"(ref {Format(declaringType)} x, {Format(memberType)} value) => x.{memberName} = value")
-            };
+                expressions.Add(new CodePrimitiveExpression(key.JsonKeyName));
+                expressions.Add(new CodePrimitiveExpression(key.MessagePackKeyName));
+            }
+            else
+            {
+                expressions.Add(new CodePrimitiveExpression(key.KeyName));
+            }
+            expressions.Add(new CodeSnippetExpression($"({Format(declaringType)} x) => x.{memberName}"));
+            expressions.Add(new CodeSnippetExpression($"(ref {Format(declaringType)} x, {Format(memberType)} value) => x.{memberName} = value"));
             if (memberType.GetInterfaces().All(t => t != typeof(IEquatable<>).MakeGenericType(memberType)))
             {
                 var equalityComparerType = memberType.IsArray
@@ -167,7 +171,7 @@ namespace AlgoSdk.Editor.CodeGen
             return expressions.ToArray();
         }
 
-        List<(string, MemberInfo, Type)> GetKeyProps(Type algoApiObjType)
+        List<(AlgoApiKeyAttribute key, MemberInfo member, Type type)> GetKeyProps(Type algoApiObjType)
         {
             var fields = algoApiObjType.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance)
                 .Select(f => ((MemberInfo)f, f.FieldType));
@@ -175,13 +179,13 @@ namespace AlgoSdk.Editor.CodeGen
                 .Select(p => ((MemberInfo)p, p.PropertyType));
             return props.Concat(fields)
                 .Select(GetKeyProp)
-                .Where(x => x.Item1 != null)
+                .Where(x => x.key != null)
                 .ToList();
         }
 
-        (string, MemberInfo, Type) GetKeyProp((MemberInfo, Type) prop)
+        (AlgoApiKeyAttribute key, MemberInfo member, Type type) GetKeyProp((MemberInfo member, Type type) prop)
         {
-            return (KeyFromMember(prop.Item1), prop.Item1, prop.Item2);
+            return (KeyFromMember(prop.member), prop.member, prop.type);
         }
 
         string Format(Type type)
@@ -204,10 +208,9 @@ namespace AlgoSdk.Editor.CodeGen
             return name.Replace('+', '.');
         }
 
-        string KeyFromMember(MemberInfo member)
+        AlgoApiKeyAttribute KeyFromMember(MemberInfo member)
         {
-            var keyAttr = member.GetCustomAttribute<AlgoApiKeyAttribute>();
-            return keyAttr?.KeyName;
+            return member.GetCustomAttribute<AlgoApiKeyAttribute>();
         }
 
         [MenuItem("AlgoSdk/GenerateFormatterCache")]
