@@ -7,15 +7,26 @@ namespace AlgoSdk
     [Conditional("UNITY_EDITOR")]
     public sealed class AlgoApiKeyAttribute : Attribute
     {
-        readonly string keyName;
+        public readonly string keyName;
+        public readonly string msgPackKeyName;
 
         public AlgoApiKeyAttribute(string keyName)
         {
             this.keyName = keyName;
         }
 
+        public AlgoApiKeyAttribute(string jsonKeyName, string msgPackKeyName)
+        {
+            this.keyName = jsonKeyName;
+            this.msgPackKeyName = msgPackKeyName;
+        }
+
+        public bool HasMultipleKeys => msgPackKeyName != null;
+
         public string KeyName => keyName;
 
-        public Type EqualityComparer { get; set; }
+        public string JsonKeyName => keyName;
+
+        public string MessagePackKeyName => msgPackKeyName ?? keyName;
     }
 }
