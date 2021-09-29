@@ -1,0 +1,17 @@
+{
+    "name": "BossRoom.Server",
+    "rootNamespace": "",
+    "references": [
+        "Unity.Multiplayer.MLAPI.Runtime",
+        "BossRoom.Shared"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
