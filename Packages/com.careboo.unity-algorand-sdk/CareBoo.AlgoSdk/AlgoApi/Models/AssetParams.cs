@@ -31,6 +31,9 @@ namespace AlgoSdk
         [AlgoApiKey("name")]
         public FixedString64Bytes Name;
 
+        [AlgoApiKey("name-b64")]
+        public FixedString128Bytes NameBase64;
+
         [AlgoApiKey("reserve")]
         public Address Reserve;
 
@@ -40,8 +43,14 @@ namespace AlgoSdk
         [AlgoApiKey("unit-name")]
         public FixedString64Bytes UnitName;
 
+        [AlgoApiKey("unit-name-b64")]
+        public FixedString128Bytes UnitNameBase64;
+
         [AlgoApiKey("url")]
         public FixedString512Bytes Url;
+
+        [AlgoApiKey("url-b64")]
+        public FixedString512Bytes UrlBase64;
 
         public bool Equals(AssetParams other)
         {
@@ -53,10 +62,13 @@ namespace AlgoSdk
                 && Manager.Equals(other.Manager)
                 && MetadataHash.Equals(other.MetadataHash)
                 && Name.Equals(other.Name)
+                && NameBase64.Equals(other.NameBase64)
                 && Reserve.Equals(other.Reserve)
                 && Total.Equals(other.Total)
                 && UnitName.Equals(other.UnitName)
+                && UnitNameBase64.Equals(other.UnitNameBase64)
                 && Url.Equals(other.Url)
+                && UrlBase64.Equals(other.UrlBase64)
                 ;
         }
     }
