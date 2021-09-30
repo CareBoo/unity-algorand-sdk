@@ -14,7 +14,7 @@ namespace AlgoSdk
         UniTask<AlgoApiResponse<PendingTransaction>> GetPendingTransaction(TransactionId txId);
         UniTask<AlgoApiResponse<Application>> GetApplication(ulong applicationId);
         UniTask<AlgoApiResponse<Asset>> GetAsset(ulong assetId);
-        UniTask<AlgoApiResponse<Block>> GetBlock(ulong round);
+        UniTask<AlgoApiResponse<BlockResponse>> GetBlock(ulong round);
         UniTask<AlgoApiResponse<MerkleProof>> GetMerkleProof(ulong round, TransactionId txid);
         UniTask<AlgoApiResponse<CatchupMessage>> StartCatchup(string catchpoint);
         UniTask<AlgoApiResponse<CatchupMessage>> AbortCatchup(string catchpoint);
