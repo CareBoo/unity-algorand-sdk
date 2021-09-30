@@ -5,13 +5,13 @@ using Unity.Collections;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct Block
-        : IEquatable<Block>
+    public struct BlockResponse
+        : IEquatable<BlockResponse>
     {
         [AlgoApiKey("block")]
         public Header HeaderData;
 
-        public bool Equals(Block other)
+        public bool Equals(BlockResponse other)
         {
             return HeaderData.Equals(other.HeaderData);
         }
