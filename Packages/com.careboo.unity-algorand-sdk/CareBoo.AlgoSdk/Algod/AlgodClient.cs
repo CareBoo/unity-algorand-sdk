@@ -66,7 +66,7 @@ namespace AlgoSdk
             return await GetAsync($"/v2/assets/{assetId}");
         }
 
-        public async UniTask<AlgoApiResponse<Block>> GetBlock(ulong round)
+        public async UniTask<AlgoApiResponse<BlockResponse>> GetBlock(ulong round)
         {
             return await GetAsync($"/v2/blocks/{round}");
         }
