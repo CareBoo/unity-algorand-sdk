@@ -6,6 +6,15 @@ namespace AlgoSdk
     public struct Asset
         : IEquatable<Asset>
     {
+        [AlgoApiKey("created-at-round")]
+        public Optional<ulong> CreatedAtRound;
+
+        [AlgoApiKey("deleted")]
+        public Optional<bool> Deleted;
+
+        [AlgoApiKey("destroyed-at-round")]
+        public Optional<ulong> DestroyedAtRound;
+
         [AlgoApiKey("index")]
         public ulong Index;
 
