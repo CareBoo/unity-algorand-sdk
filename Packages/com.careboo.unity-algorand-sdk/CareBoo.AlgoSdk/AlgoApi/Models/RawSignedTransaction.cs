@@ -8,13 +8,16 @@ namespace AlgoSdk
     public struct RawSignedTransaction
         : IEquatable<RawSignedTransaction>
     {
-        [AlgoApiKey("txn")]
+        [AlgoApiKey(null, "txn")]
         public RawTransaction Transaction;
-        [AlgoApiKey("sig")]
+
+        [AlgoApiKey(null, "sig")]
         public Signature Sig;
-        [AlgoApiKey("msig")]
+
+        [AlgoApiKey(null, "msig")]
         public MultiSig MultiSig;
-        [AlgoApiKey("lsig")]
+
+        [AlgoApiKey(null, "lsig")]
         public LogicSig LogicSig;
 
         public bool Equals(RawSignedTransaction other)

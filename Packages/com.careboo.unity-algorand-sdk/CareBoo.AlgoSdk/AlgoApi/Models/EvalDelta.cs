@@ -16,11 +16,11 @@ namespace AlgoSdk
     public struct EvalDelta
         : IEquatable<EvalDelta>
     {
-        [AlgoApiKey("action")]
+        [AlgoApiKey("action", null)]
         public EvalDeltaAction Action;
-        [AlgoApiKey("bytes")]
+        [AlgoApiKey("bytes", null)]
         public TealBytes Bytes;
-        [AlgoApiKey("uint")]
+        [AlgoApiKey("uint", null)]
         public ulong UInt;
 
         public bool Equals(EvalDelta other)

@@ -2,14 +2,14 @@ namespace AlgoSdk
 {
     public partial struct RawTransaction
     {
-        [AlgoApiKey("caid")]
+        [AlgoApiKey(null, "caid")]
         public ulong ConfigAsset
         {
             get => AssetConfigurationParams.ConfigAsset;
             set => AssetConfigurationParams.ConfigAsset = value;
         }
 
-        [AlgoApiKey("apar")]
+        [AlgoApiKey(null, "apar")]
         public AssetParams AssetParams
         {
             get => AssetConfigurationParams.AssetParams;

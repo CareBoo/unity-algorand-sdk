@@ -7,19 +7,19 @@ namespace AlgoSdk
     public struct AccountParticipation
         : IEquatable<AccountParticipation>
     {
-        [AlgoApiKey("selection-participation-key")]
+        [AlgoApiKey("selection-participation-key", null)]
         public FixedString128Bytes SelectionParticipationKey;
 
-        [AlgoApiKey("vote-first-valid")]
+        [AlgoApiKey("vote-first-valid", null)]
         public ulong VoteFirstValid;
 
-        [AlgoApiKey("vote-key-dilution")]
+        [AlgoApiKey("vote-key-dilution", null)]
         public ulong VoteKeyDilution;
 
-        [AlgoApiKey("vote-last-valid")]
+        [AlgoApiKey("vote-last-valid", null)]
         public ulong VoteLastValid;
 
-        [AlgoApiKey("vote-participation-key")]
+        [AlgoApiKey("vote-participation-key", null)]
         public FixedString128Bytes VoteParticipationKey;
 
         public bool Equals(AccountParticipation other)

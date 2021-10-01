@@ -6,22 +6,22 @@ namespace AlgoSdk
     public struct ApplicationLocalState
         : IEquatable<ApplicationLocalState>
     {
-        [AlgoApiKey("closed-out-at-round")]
+        [AlgoApiKey("closed-out-at-round", null)]
         public Optional<ulong> ClosedOutAtRound;
 
-        [AlgoApiKey("deleted")]
+        [AlgoApiKey("deleted", null)]
         public Optional<bool> Deleted;
 
-        [AlgoApiKey("id")]
+        [AlgoApiKey("id", null)]
         public ulong Id;
 
-        [AlgoApiKey("key-value")]
+        [AlgoApiKey("key-value", null)]
         public TealKeyValue[] KeyValues;
 
-        [AlgoApiKey("opted-in-at-round")]
+        [AlgoApiKey("opted-in-at-round", null)]
         public Optional<ulong> OptedInAtRound;
 
-        [AlgoApiKey("schema")]
+        [AlgoApiKey("schema", null)]
         public ApplicationStateSchema Schema;
 
         public bool Equals(ApplicationLocalState other)

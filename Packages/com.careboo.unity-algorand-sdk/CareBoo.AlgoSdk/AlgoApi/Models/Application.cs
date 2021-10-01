@@ -6,19 +6,19 @@ namespace AlgoSdk
     public struct Application
         : IEquatable<Application>
     {
-        [AlgoApiKey("created-at-round")]
+        [AlgoApiKey("created-at-round", null)]
         public Optional<ulong> CreatedAtRound;
 
-        [AlgoApiKey("deleted")]
+        [AlgoApiKey("deleted", null)]
         public Optional<bool> Deleted;
 
-        [AlgoApiKey("deleted-at-round")]
+        [AlgoApiKey("deleted-at-round", null)]
         public Optional<ulong> DeletedAtRound;
 
-        [AlgoApiKey("id")]
+        [AlgoApiKey("id", null)]
         public ulong Id;
 
-        [AlgoApiKey("params")]
+        [AlgoApiKey("params", null)]
         public ApplicationParams Params;
 
         public bool Equals(Application other)

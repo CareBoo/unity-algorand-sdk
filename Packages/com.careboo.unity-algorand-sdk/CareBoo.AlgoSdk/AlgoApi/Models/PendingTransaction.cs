@@ -7,29 +7,29 @@ namespace AlgoSdk
     public struct PendingTransaction
         : IEquatable<PendingTransaction>
     {
-        [AlgoApiKey("application-index")]
+        [AlgoApiKey("application-index", null)]
         public ulong ApplicationIndex;
-        [AlgoApiKey("asset-closing-amount")]
+        [AlgoApiKey("asset-closing-amount", null)]
         public ulong AssetClosingAmount;
-        [AlgoApiKey("asset-index")]
+        [AlgoApiKey("asset-index", null)]
         public ulong AssetIndex;
-        [AlgoApiKey("close-rewards")]
+        [AlgoApiKey("close-rewards", null)]
         public ulong CloseRewards;
-        [AlgoApiKey("closing-amount")]
+        [AlgoApiKey("closing-amount", null)]
         public ulong ClosingAmount;
-        [AlgoApiKey("confirmed-round")]
+        [AlgoApiKey("confirmed-round", null)]
         public ulong ConfirmedRound;
-        [AlgoApiKey("global-state-delta")]
+        [AlgoApiKey("global-state-delta", null)]
         public EvalDeltaKeyValue[] GlobalStateDelta;
-        [AlgoApiKey("local-state-delta")]
+        [AlgoApiKey("local-state-delta", null)]
         public AccountStateDelta[] LocalStateDelta;
-        [AlgoApiKey("pool-error")]
+        [AlgoApiKey("pool-error", null)]
         public FixedString128Bytes PoolError;
-        [AlgoApiKey("receiver-rewards")]
+        [AlgoApiKey("receiver-rewards", null)]
         public ulong ReceiverRewards;
-        [AlgoApiKey("sender-rewards")]
+        [AlgoApiKey("sender-rewards", null)]
         public ulong SenderRewards;
-        [AlgoApiKey("txn")]
+        [AlgoApiKey("txn", null)]
         public RawSignedTransaction Transaction;
 
         public bool Equals(PendingTransaction other)

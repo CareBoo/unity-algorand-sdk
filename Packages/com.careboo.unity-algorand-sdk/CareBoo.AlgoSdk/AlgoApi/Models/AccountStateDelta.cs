@@ -6,10 +6,10 @@ namespace AlgoSdk
     public struct AccountStateDelta
         : IEquatable<AccountStateDelta>
     {
-        [AlgoApiKey("address")]
+        [AlgoApiKey("address", null)]
         public Address Address;
 
-        [AlgoApiKey("delta")]
+        [AlgoApiKey("delta", null)]
         public EvalDeltaKeyValue[] Delta;
 
         public bool Equals(AccountStateDelta other)
