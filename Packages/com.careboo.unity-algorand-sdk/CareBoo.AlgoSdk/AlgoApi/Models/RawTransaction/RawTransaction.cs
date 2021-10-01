@@ -18,34 +18,13 @@ namespace AlgoSdk
         public ulong VoteKeyDilution;
         [AlgoApiKey("nonpart")]
         public Optional<bool> NonParticipation;
-        [AlgoApiKey("apid")]
-        public ulong ApplicationId;
-        [AlgoApiKey("apan")]
-        public ulong OnComplete;
-        [AlgoApiKey("apat")]
-        public Address[] Accounts;
-        [AlgoApiKey("apap")]
-        public byte[] ApprovalProgram;
-        [AlgoApiKey("apaa")]
-        public byte[] AppArguments;
-        [AlgoApiKey("apsu")]
-        public byte[] ClearStateProgram;
-        [AlgoApiKey("apfa")]
-        public Address[] ForeignApps;
-        [AlgoApiKey("apas")]
-        public Address[] ForeignAssets;
-        [AlgoApiKey("apgs")]
-        public StateSchema GlobalStateSchema;
-        [AlgoApiKey("apls")]
-        public StateSchema LocalStateSchema;
-        [AlgoApiKey("apep")]
-        public StateSchema ExtraProgramPages;
 
         public Transaction.Header Header;
         public Transaction.Payment.Params PaymentParams;
         public Transaction.AssetConfiguration.Params AssetConfigurationParams;
         public Transaction.AssetTransfer.Params AssetTransferParams;
         public Transaction.AssetFreeze.Params AssetFreezeParams;
+        public Transaction.ApplicationCall.Params ApplicationCallParams;
 
         public static bool operator ==(in RawTransaction x, in RawTransaction y)
         {
