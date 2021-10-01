@@ -6,25 +6,13 @@ namespace AlgoSdk
     public partial struct RawTransaction
         : IEquatable<RawTransaction>
     {
-        [AlgoApiKey("votekey")]
-        public Address VotePk;
-        [AlgoApiKey("selkey")]
-        public VrfPubkey SelectionPk;
-        [AlgoApiKey("votefst")]
-        public ulong VoteFirst;
-        [AlgoApiKey("votelst")]
-        public ulong VoteLast;
-        [AlgoApiKey("votekd")]
-        public ulong VoteKeyDilution;
-        [AlgoApiKey("nonpart")]
-        public Optional<bool> NonParticipation;
-
         public Transaction.Header Header;
         public Transaction.Payment.Params PaymentParams;
         public Transaction.AssetConfiguration.Params AssetConfigurationParams;
         public Transaction.AssetTransfer.Params AssetTransferParams;
         public Transaction.AssetFreeze.Params AssetFreezeParams;
         public Transaction.ApplicationCall.Params ApplicationCallParams;
+        public Transaction.KeyRegistration.Params KeyRegistrationParams;
 
         public static bool operator ==(in RawTransaction x, in RawTransaction y)
         {
