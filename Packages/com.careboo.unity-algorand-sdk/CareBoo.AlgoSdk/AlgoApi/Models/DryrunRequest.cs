@@ -7,19 +7,19 @@ namespace AlgoSdk
     public struct DryrunRequest
         : IEquatable<DryrunRequest>
     {
-        [AlgoApiKey("accounts")]
+        [AlgoApiKey("accounts", null)]
         public Account[] Accounts;
-        [AlgoApiKey("apps")]
+        [AlgoApiKey("apps", null)]
         public Application[] Applications;
-        [AlgoApiKey("latest-timestamp")]
+        [AlgoApiKey("latest-timestamp", null)]
         public ulong LatestTimestamp;
-        [AlgoApiKey("protocol-version")]
+        [AlgoApiKey("protocol-version", null)]
         public FixedString64Bytes ProtocolVersion;
-        [AlgoApiKey("round")]
+        [AlgoApiKey("round", null)]
         public ulong Round;
-        [AlgoApiKey("sources")]
+        [AlgoApiKey("sources", null)]
         public DryrunSource[] Sources;
-        [AlgoApiKey("txns")]
+        [AlgoApiKey("txns", null)]
         public RawTransaction[] Transactions;
 
         public bool Equals(DryrunRequest other)

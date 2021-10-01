@@ -7,55 +7,55 @@ namespace AlgoSdk
     public struct Account
         : IEquatable<Account>
     {
-        [AlgoApiKey("address")]
+        [AlgoApiKey("address", null)]
         public Address Address;
 
-        [AlgoApiKey("amount")]
+        [AlgoApiKey("amount", null)]
         public ulong Amount;
 
-        [AlgoApiKey("amount-without-pending-rewards")]
+        [AlgoApiKey("amount-without-pending-rewards", null)]
         public ulong AmountWithoutPendingRewards;
 
-        [AlgoApiKey("apps-local-state")]
+        [AlgoApiKey("apps-local-state", null)]
         public ApplicationLocalState[] ApplicationsLocalState;
 
-        [AlgoApiKey("apps-total-extra-pages")]
+        [AlgoApiKey("apps-total-extra-pages", null)]
         public Optional<ulong> ApplicationsTotalExtraPages;
 
-        [AlgoApiKey("apps-total-schema")]
+        [AlgoApiKey("apps-total-schema", null)]
         public Optional<ApplicationStateSchema> ApplicationsTotalSchema;
 
-        [AlgoApiKey("assets")]
+        [AlgoApiKey("assets", null)]
         public AssetHolding[] Assets;
 
-        [AlgoApiKey("auth-addr")]
+        [AlgoApiKey("auth-addr", null)]
         public Optional<Address> AuthAddress;
 
-        [AlgoApiKey("created-apps")]
+        [AlgoApiKey("created-apps", null)]
         public Application[] CreatedApplications;
 
-        [AlgoApiKey("created-assets")]
+        [AlgoApiKey("created-assets", null)]
         public Asset[] CreatedAssets;
 
-        [AlgoApiKey("participation")]
+        [AlgoApiKey("participation", null)]
         public Optional<AccountParticipation> Participation;
 
-        [AlgoApiKey("pending-rewards")]
+        [AlgoApiKey("pending-rewards", null)]
         public ulong PendingRewards;
 
-        [AlgoApiKey("reward-base")]
+        [AlgoApiKey("reward-base", null)]
         public Optional<ulong> RewardBase;
 
-        [AlgoApiKey("rewards")]
+        [AlgoApiKey("rewards", null)]
         public ulong Rewards;
 
-        [AlgoApiKey("round")]
+        [AlgoApiKey("round", null)]
         public ulong Round;
 
-        [AlgoApiKey("sig-type")]
+        [AlgoApiKey("sig-type", null)]
         public SignatureType SignatureType;
 
-        [AlgoApiKey("status")]
+        [AlgoApiKey("status", null)]
         public FixedString32Bytes Status;
 
         public bool Equals(Account other)

@@ -9,56 +9,34 @@ namespace AlgoSdk
     public sealed class AlgoApiObjectFormatter<T> : IAlgoApiFormatter<T>
         where T : struct
     {
-        readonly AlgoApiField<T>.Map jsonFieldMap = new AlgoApiField<T>.Map();
-        readonly AlgoApiField<T>.Map msgPackFieldMap = new AlgoApiField<T>.Map();
-
-        public AlgoApiObjectFormatter()
-        {
-        }
+        readonly AlgoApiField<T>.Map<FixedString64Bytes> jsonFieldMap = new AlgoApiField<T>.Map<FixedString64Bytes>();
+        readonly AlgoApiField<T>.Map<FixedString32Bytes> msgPackFieldMap = new AlgoApiField<T>.Map<FixedString32Bytes>();
 
         public AlgoApiObjectFormatter<T> Assign<TField>(
-            FixedString64Bytes key,
+            string jsonKey,
+            string messagePackKey,
             AlgoApiField<T>.FieldGetter<TField> getter,
             AlgoApiField<T>.FieldSetter<TField> setter)
             where TField : IEquatable<TField>
         {
-            jsonFieldMap.Assign(key, getter, setter);
-            msgPackFieldMap.Assign(key, getter, setter);
+            if (!string.IsNullOrEmpty(jsonKey))
+                jsonFieldMap.Assign(jsonKey, getter, setter);
+            if (!string.IsNullOrEmpty(messagePackKey))
+                msgPackFieldMap.Assign(messagePackKey, getter, setter);
             return this;
         }
 
         public AlgoApiObjectFormatter<T> Assign<TField>(
-            FixedString64Bytes jsonKey,
-            FixedString64Bytes messagePackKey,
-            AlgoApiField<T>.FieldGetter<TField> getter,
-            AlgoApiField<T>.FieldSetter<TField> setter)
-            where TField : IEquatable<TField>
-        {
-            jsonFieldMap.Assign(jsonKey, getter, setter);
-            msgPackFieldMap.Assign(messagePackKey, getter, setter);
-            return this;
-        }
-
-        public AlgoApiObjectFormatter<T> Assign<TField>(
-            FixedString64Bytes key,
+            string jsonKey,
+            string messagePackKey,
             AlgoApiField<T>.FieldGetter<TField> getter,
             AlgoApiField<T>.FieldSetter<TField> setter,
             IEqualityComparer<TField> comparer)
         {
-            jsonFieldMap.Assign(key, getter, setter, comparer);
-            msgPackFieldMap.Assign(key, getter, setter, comparer);
-            return this;
-        }
-
-        public AlgoApiObjectFormatter<T> Assign<TField>(
-            FixedString64Bytes jsonKey,
-            FixedString64Bytes messagePackKey,
-            AlgoApiField<T>.FieldGetter<TField> getter,
-            AlgoApiField<T>.FieldSetter<TField> setter,
-            IEqualityComparer<TField> comparer)
-        {
-            jsonFieldMap.Assign(jsonKey, getter, setter, comparer);
-            msgPackFieldMap.Assign(messagePackKey, getter, setter, comparer);
+            if (!string.IsNullOrEmpty(jsonKey))
+                jsonFieldMap.Assign(jsonKey, getter, setter, comparer);
+            if (!string.IsNullOrEmpty(messagePackKey))
+                msgPackFieldMap.Assign(messagePackKey, getter, setter, comparer);
             return this;
         }
 
@@ -84,7 +62,7 @@ namespace AlgoSdk
             var length = reader.ReadMapHeader();
             for (var i = 0; i < length; i++)
             {
-                FixedString64Bytes key = default;
+                FixedString32Bytes key = default;
                 reader.ReadString(ref key);
                 msgPackFieldMap.GetField(key).DeserializeMessagePack(ref result, ref reader);
             }

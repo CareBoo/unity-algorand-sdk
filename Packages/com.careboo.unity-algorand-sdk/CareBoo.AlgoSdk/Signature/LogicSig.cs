@@ -10,16 +10,16 @@ namespace AlgoSdk
         : ISignature
         , IEquatable<LogicSig>
     {
-        [AlgoApiKey("l")]
+        [AlgoApiKey(null, "l")]
         public byte[] Program;
 
-        [AlgoApiKey("arg")]
+        [AlgoApiKey(null, "arg")]
         public FixedList128Bytes<byte>[] Args;
 
-        [AlgoApiKey("sig")]
+        [AlgoApiKey(null, "sig")]
         public Signature Sig;
 
-        [AlgoApiKey("msig")]
+        [AlgoApiKey(null, "msig")]
         public MultiSig MultiSig;
 
         public bool Equals(LogicSig other)

@@ -111,31 +111,32 @@ namespace AlgoSdk
                 fieldsEqual);
         }
 
-        public class Map : SortedDictionary<FixedString64Bytes, AlgoApiField<TAlgoApiObject>>
+        public class Map<TKey> : SortedDictionary<TKey, AlgoApiField<TAlgoApiObject>>
+            where TKey : unmanaged, INativeList<byte>, IUTF8Bytes
         {
-            public Map Assign<T>(FixedString64Bytes key, FieldGetter<T> getter, FieldSetter<T> setter)
+            public Map<TKey> Assign<T>(TKey key, FieldGetter<T> getter, FieldSetter<T> setter)
                 where T : IEquatable<T>
             {
                 Add(key, AlgoApiField<TAlgoApiObject>.Assign(getter, setter));
                 return this;
             }
 
-            public Map Assign<T>(FixedString64Bytes key, FieldGetter<T> getter, FieldSetter<T> setter, IEqualityComparer<T> comparer)
+            public Map<TKey> Assign<T>(TKey key, FieldGetter<T> getter, FieldSetter<T> setter, IEqualityComparer<T> comparer)
             {
                 Add(key, AlgoApiField<TAlgoApiObject>.Assign(getter, setter, comparer));
                 return this;
             }
 
-            public AlgoApiField<TAlgoApiObject> GetField(FixedString64Bytes key)
+            public AlgoApiField<TAlgoApiObject> GetField(TKey key)
             {
                 if (TryGetValue(key, out var field))
                     return field;
                 throw new KeyNotFoundException($"Could not find the key, \"{key}\", for any fields on {typeof(TAlgoApiObject)}");
             }
 
-            public NativeList<FixedString64Bytes> GetFieldsToSerialize(TAlgoApiObject obj, Allocator allocator)
+            public NativeList<TKey> GetFieldsToSerialize(TAlgoApiObject obj, Allocator allocator)
             {
-                var list = new NativeList<FixedString64Bytes>(Count, allocator);
+                var list = new NativeList<TKey>(Count, allocator);
                 var fieldEnum = GetEnumerator();
                 while (fieldEnum.MoveNext())
                 {
