@@ -145,18 +145,13 @@ namespace AlgoSdk.Editor.CodeGen
         {
             var declaringType = member.DeclaringType;
             var memberName = member.Name;
-            var expressions = new List<CodeExpression>();
-            if (key.HasMultipleKeys)
+            var expressions = new List<CodeExpression>()
             {
-                expressions.Add(new CodePrimitiveExpression(key.JsonKeyName));
-                expressions.Add(new CodePrimitiveExpression(key.MessagePackKeyName));
-            }
-            else
-            {
-                expressions.Add(new CodePrimitiveExpression(key.KeyName));
-            }
-            expressions.Add(new CodeSnippetExpression($"({Format(declaringType)} x) => x.{memberName}"));
-            expressions.Add(new CodeSnippetExpression($"(ref {Format(declaringType)} x, {Format(memberType)} value) => x.{memberName} = value"));
+                new CodePrimitiveExpression(key.JsonKeyName),
+                new CodePrimitiveExpression(key.MessagePackKeyName),
+                new CodeSnippetExpression($"({Format(declaringType)} x) => x.{memberName}"),
+                new CodeSnippetExpression($"(ref {Format(declaringType)} x, {Format(memberType)} value) => x.{memberName} = value"),
+            };
             if (memberType.GetInterfaces().All(t => t != typeof(IEquatable<>).MakeGenericType(memberType)))
             {
                 var equalityComparerType = memberType.IsArray

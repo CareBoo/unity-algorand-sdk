@@ -6,25 +6,25 @@ namespace AlgoSdk
     public struct AssetHolding
         : IEquatable<AssetHolding>
     {
-        [AlgoApiKey("amount")]
+        [AlgoApiKey("amount", null)]
         public ulong Amount;
 
-        [AlgoApiKey("asset-id")]
+        [AlgoApiKey("asset-id", null)]
         public ulong AssetId;
 
-        [AlgoApiKey("creator")]
+        [AlgoApiKey("creator", null)]
         public Address Creator;
 
-        [AlgoApiKey("deleted")]
+        [AlgoApiKey("deleted", null)]
         public Optional<bool> Deleted;
 
-        [AlgoApiKey("is-frozen")]
+        [AlgoApiKey("is-frozen", null)]
         public bool IsFrozen;
 
-        [AlgoApiKey("opted-in-at-round")]
+        [AlgoApiKey("opted-in-at-round", null)]
         public Optional<ulong> OptedInAtRound;
 
-        [AlgoApiKey("opted-out-at-round")]
+        [AlgoApiKey("opted-out-at-round", null)]
         public Optional<ulong> OptedOutAtRound;
 
         public bool Equals(AssetHolding other)

@@ -7,9 +7,9 @@ namespace AlgoSdk
     public struct EvalDeltaKeyValue
         : IEquatable<EvalDeltaKeyValue>
     {
-        [AlgoApiKey("key")]
+        [AlgoApiKey("key", null)]
         public FixedString64Bytes Key;
-        [AlgoApiKey("value")]
+        [AlgoApiKey("value", null)]
         public EvalDelta Value;
 
         public bool Equals(EvalDeltaKeyValue other)

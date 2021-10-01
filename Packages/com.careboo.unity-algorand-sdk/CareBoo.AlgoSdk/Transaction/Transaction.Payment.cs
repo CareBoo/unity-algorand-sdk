@@ -96,6 +96,12 @@ namespace AlgoSdk
                 set => @params.CloseRemainderTo = value;
             }
 
+            public Optional<ulong> CloseAmount
+            {
+                get => @params.CloseAmount;
+                set => @params.CloseAmount = value;
+            }
+
             public Payment(
                  ulong fee,
                  ulong firstValidRound,
@@ -139,12 +145,21 @@ namespace AlgoSdk
                     ;
             }
 
+            [AlgoApiObject]
             public struct Params
                 : IEquatable<Params>
             {
+                [AlgoApiKey("receiver", "rcv")]
                 public Address Receiver;
+
+                [AlgoApiKey("amount", "amt")]
                 public ulong Amount;
+
+                [AlgoApiKey("close-remainder-to", "close")]
                 public Address CloseRemainderTo;
+
+                [AlgoApiKey("close-amount", null)]
+                public Optional<ulong> CloseAmount;
 
                 public Params(
                      Address receiver,
@@ -154,6 +169,7 @@ namespace AlgoSdk
                     Receiver = receiver;
                     Amount = amount;
                     CloseRemainderTo = default;
+                    CloseAmount = default;
                 }
 
                 public bool Equals(Params other)
@@ -161,6 +177,7 @@ namespace AlgoSdk
                     return Receiver.Equals(other.Receiver)
                         && Amount.Equals(other.Amount)
                         && CloseRemainderTo.Equals(other.CloseRemainderTo)
+                        && CloseAmount.Equals(other.CloseAmount)
                         ;
                 }
             }

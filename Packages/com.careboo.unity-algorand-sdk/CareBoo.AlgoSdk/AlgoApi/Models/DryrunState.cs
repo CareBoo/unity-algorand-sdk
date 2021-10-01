@@ -7,15 +7,15 @@ namespace AlgoSdk
     public struct DryrunState
         : IEquatable<DryrunState>
     {
-        [AlgoApiKey("error")]
+        [AlgoApiKey("error", null)]
         public FixedString128Bytes Error;
-        [AlgoApiKey("line")]
+        [AlgoApiKey("line", null)]
         public ulong Line;
-        [AlgoApiKey("pc")]
+        [AlgoApiKey("pc", null)]
         public ulong ProgramCounter;
-        [AlgoApiKey("scratch")]
+        [AlgoApiKey("scratch", null)]
         public TealValue[] Scratch;
-        [AlgoApiKey("stack")]
+        [AlgoApiKey("stack", null)]
         public TealValue[] Stack;
 
         public bool Equals(DryrunState other)

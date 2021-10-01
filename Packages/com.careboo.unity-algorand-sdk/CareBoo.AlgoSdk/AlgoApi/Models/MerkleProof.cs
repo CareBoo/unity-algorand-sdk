@@ -6,11 +6,11 @@ namespace AlgoSdk
     public struct MerkleProof
         : IEquatable<MerkleProof>
     {
-        [AlgoApiKey("idx")]
+        [AlgoApiKey("idx", null)]
         public ulong TransactionIndex;
-        [AlgoApiKey("proof")]
+        [AlgoApiKey("proof", null)]
         public string Proof;
-        [AlgoApiKey("stibhash")]
+        [AlgoApiKey("stibhash", null)]
         public string SignedTransactionHash;
 
         public bool Equals(MerkleProof other)

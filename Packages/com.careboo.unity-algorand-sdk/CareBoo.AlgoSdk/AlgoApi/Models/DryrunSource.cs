@@ -7,13 +7,13 @@ namespace AlgoSdk
     public struct DryrunSource
         : IEquatable<DryrunSource>
     {
-        [AlgoApiKey("app-index")]
+        [AlgoApiKey("app-index", null)]
         public ulong AppIndex;
-        [AlgoApiKey("field-name")]
+        [AlgoApiKey("field-name", null)]
         public FixedString32Bytes FieldName;
-        [AlgoApiKey("source")]
+        [AlgoApiKey("source", null)]
         public string Source;
-        [AlgoApiKey("txn-index")]
+        [AlgoApiKey("txn-index", null)]
         public ulong TransactionIndex;
 
         public bool Equals(DryrunSource other)
