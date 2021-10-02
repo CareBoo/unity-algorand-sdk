@@ -43,6 +43,10 @@ namespace AlgoSdk
                 {
                     TransactionType.Payment => PaymentParams.Equals(other.PaymentParams),
                     TransactionType.AssetConfiguration => AssetConfigurationParams.Equals(other.AssetConfigurationParams),
+                    TransactionType.ApplicationCall => ApplicationCallParams.Equals(other.ApplicationCallParams),
+                    TransactionType.AssetFreeze => AssetFreezeParams.Equals(other.AssetFreezeParams),
+                    TransactionType.AssetTransfer => AssetTransferParams.Equals(other.AssetTransferParams),
+                    TransactionType.KeyRegistration => KeyRegistrationParams.Equals(other.KeyRegistrationParams),
                     _ => true
                 };
         }
