@@ -8,22 +8,22 @@ namespace AlgoSdk
     {
         public Transaction.Header Header;
 
-        [AlgoApiField("payment-transaction", null)]
+        [AlgoApiField("payment-transaction", null, readOnly: true)]
         public Transaction.Payment.Params PaymentParams;
 
-        [AlgoApiField("asset-config-transaction", null)]
+        [AlgoApiField("asset-config-transaction", null, readOnly: true)]
         public Transaction.AssetConfiguration.Params AssetConfigurationParams;
 
-        [AlgoApiField("asset-transfer-transaction", null)]
+        [AlgoApiField("asset-transfer-transaction", null, readOnly: true)]
         public Transaction.AssetTransfer.Params AssetTransferParams;
 
-        [AlgoApiField("asset-freeze-transaction", null)]
+        [AlgoApiField("asset-freeze-transaction", null, readOnly: true)]
         public Transaction.AssetFreeze.Params AssetFreezeParams;
 
-        [AlgoApiField("application-transaction", null)]
+        [AlgoApiField("application-transaction", null, readOnly: true)]
         public Transaction.ApplicationCall.Params ApplicationCallParams;
 
-        [AlgoApiField("keyreg-transaction", null)]
+        [AlgoApiField("keyreg-transaction", null, readOnly: true)]
         public Transaction.KeyRegistration.Params KeyRegistrationParams;
 
         public static bool operator ==(in RawTransaction x, in RawTransaction y)
