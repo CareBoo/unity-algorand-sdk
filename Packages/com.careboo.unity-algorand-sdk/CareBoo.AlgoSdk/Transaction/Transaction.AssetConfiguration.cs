@@ -133,11 +133,14 @@ namespace AlgoSdk
                     ;
             }
 
+            [AlgoApiObject]
             public struct Params
                 : IEquatable<Params>
             {
+                [AlgoApiField("asset-id", "xaid")]
                 public ulong ConfigAsset;
 
+                [AlgoApiField("params", "params")]
                 public AssetParams AssetParams;
 
                 public Params(
