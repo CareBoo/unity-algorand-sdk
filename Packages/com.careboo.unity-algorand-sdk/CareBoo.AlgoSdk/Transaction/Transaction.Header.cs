@@ -21,6 +21,21 @@ namespace AlgoSdk
             public byte[] Note;
             public Address RekeyTo;
 
+            public TransactionId Id;
+            public Address AuthAddress;
+            public ulong CloseRewards;
+            public ulong ClosingAmount;
+            public ulong ConfirmedRound;
+            public ulong CreatedApplicationIndex;
+            public ulong CreatedAssetIndex;
+            public ulong IntraRoundOffset;
+            public EvalDeltaKeyValue[] GlobalStateDelta;
+            public AccountStateDelta[] LocalStateDelta;
+            public ulong ReceiverRewards;
+            public ulong RoundTime;
+            public ulong SenderRewards;
+
+
             public Header(
                 ulong fee,
                 ulong firstValidRound,
@@ -42,6 +57,20 @@ namespace AlgoSdk
                 Lease = default;
                 Note = default;
                 RekeyTo = default;
+
+                Id = default;
+                AuthAddress = default;
+                CloseRewards = default;
+                ClosingAmount = default;
+                ConfirmedRound = default;
+                CreatedApplicationIndex = default;
+                CreatedAssetIndex = default;
+                IntraRoundOffset = default;
+                GlobalStateDelta = default;
+                LocalStateDelta = default;
+                ReceiverRewards = default;
+                RoundTime = default;
+                SenderRewards = default;
             }
 
             public bool Equals(Header other)

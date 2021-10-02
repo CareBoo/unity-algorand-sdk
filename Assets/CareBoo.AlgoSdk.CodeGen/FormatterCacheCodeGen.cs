@@ -163,6 +163,7 @@ namespace AlgoSdk.Editor.CodeGen
                     "Instance");
                 expressions.Add(equalityComparer);
             }
+            expressions.Add(new CodePrimitiveExpression(key.ReadOnly));
             return expressions.ToArray();
         }
 
