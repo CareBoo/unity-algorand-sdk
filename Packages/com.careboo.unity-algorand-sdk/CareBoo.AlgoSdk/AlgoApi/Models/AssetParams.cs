@@ -7,49 +7,49 @@ namespace AlgoSdk
     public partial struct AssetParams
         : IEquatable<AssetParams>
     {
-        [AlgoApiKey("clawback", null)]
+        [AlgoApiField("clawback", null)]
         public Address Clawback;
 
-        [AlgoApiKey("creator", null)]
+        [AlgoApiField("creator", null)]
         public Address Creator;
 
-        [AlgoApiKey("decimals", null)]
+        [AlgoApiField("decimals", null)]
         public ulong Decimals;
 
-        [AlgoApiKey("default-frozen", null)]
+        [AlgoApiField("default-frozen", null)]
         public Optional<bool> DefaultFrozen;
 
-        [AlgoApiKey("freeze", null)]
+        [AlgoApiField("freeze", null)]
         public Address Freeze;
 
-        [AlgoApiKey("manager", null)]
+        [AlgoApiField("manager", null)]
         public Address Manager;
 
-        [AlgoApiKey("metadata-hash", null)]
+        [AlgoApiField("metadata-hash", null)]
         public FixedString128Bytes MetadataHash;
 
-        [AlgoApiKey("name", null)]
+        [AlgoApiField("name", null)]
         public FixedString64Bytes Name;
 
-        [AlgoApiKey("name-b64", null)]
+        [AlgoApiField("name-b64", null)]
         public FixedString128Bytes NameBase64;
 
-        [AlgoApiKey("reserve", null)]
+        [AlgoApiField("reserve", null)]
         public Address Reserve;
 
-        [AlgoApiKey("total", null)]
+        [AlgoApiField("total", null)]
         public ulong Total;
 
-        [AlgoApiKey("unit-name", null)]
+        [AlgoApiField("unit-name", null)]
         public FixedString64Bytes UnitName;
 
-        [AlgoApiKey("unit-name-b64", null)]
+        [AlgoApiField("unit-name-b64", null)]
         public FixedString128Bytes UnitNameBase64;
 
-        [AlgoApiKey("url", null)]
+        [AlgoApiField("url", null)]
         public FixedString512Bytes Url;
 
-        [AlgoApiKey("url-b64", null)]
+        [AlgoApiField("url-b64", null)]
         public FixedString512Bytes UrlBase64;
 
         public bool Equals(AssetParams other)

@@ -127,7 +127,7 @@ namespace AlgoSdk.Editor.CodeGen
                 formatterExpression);
         }
 
-        CodeExpression GetCreateFormatterExpression(Type algoApiObjType, List<(AlgoApiKeyAttribute, MemberInfo, Type)> fieldKeys)
+        CodeExpression GetCreateFormatterExpression(Type algoApiObjType, List<(AlgoApiField, MemberInfo, Type)> fieldKeys)
         {
             CodeExpression createdFormatterExpression = new CodeObjectCreateExpression(
                 typeof(AlgoApiObjectFormatter<>).MakeGenericType(algoApiObjType));
@@ -141,7 +141,7 @@ namespace AlgoSdk.Editor.CodeGen
             return createdFormatterExpression;
         }
 
-        CodeExpression[] GetAssignParamsExpressions(AlgoApiKeyAttribute key, MemberInfo member, Type memberType)
+        CodeExpression[] GetAssignParamsExpressions(AlgoApiField key, MemberInfo member, Type memberType)
         {
             var declaringType = member.DeclaringType;
             var memberName = member.Name;
@@ -167,7 +167,7 @@ namespace AlgoSdk.Editor.CodeGen
             return expressions.ToArray();
         }
 
-        List<(AlgoApiKeyAttribute key, MemberInfo member, Type type)> GetKeyProps(Type algoApiObjType)
+        List<(AlgoApiField key, MemberInfo member, Type type)> GetKeyProps(Type algoApiObjType)
         {
             var fields = algoApiObjType.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance)
                 .Select(f => ((MemberInfo)f, f.FieldType));
@@ -179,7 +179,7 @@ namespace AlgoSdk.Editor.CodeGen
                 .ToList();
         }
 
-        (AlgoApiKeyAttribute key, MemberInfo member, Type type) GetKeyProp((MemberInfo member, Type type) prop)
+        (AlgoApiField key, MemberInfo member, Type type) GetKeyProp((MemberInfo member, Type type) prop)
         {
             return (KeyFromMember(prop.member), prop.member, prop.type);
         }
@@ -204,9 +204,9 @@ namespace AlgoSdk.Editor.CodeGen
             return name.Replace('+', '.');
         }
 
-        AlgoApiKeyAttribute KeyFromMember(MemberInfo member)
+        AlgoApiField KeyFromMember(MemberInfo member)
         {
-            return member.GetCustomAttribute<AlgoApiKeyAttribute>();
+            return member.GetCustomAttribute<AlgoApiField>();
         }
 
         [MenuItem("AlgoSdk/GenerateFormatterCache")]

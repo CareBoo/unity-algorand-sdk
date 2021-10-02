@@ -6,19 +6,19 @@ namespace AlgoSdk
     public struct Asset
         : IEquatable<Asset>
     {
-        [AlgoApiKey("created-at-round", null)]
+        [AlgoApiField("created-at-round", null)]
         public Optional<ulong> CreatedAtRound;
 
-        [AlgoApiKey("deleted", null)]
+        [AlgoApiField("deleted", null)]
         public Optional<bool> Deleted;
 
-        [AlgoApiKey("destroyed-at-round", null)]
+        [AlgoApiField("destroyed-at-round", null)]
         public Optional<ulong> DestroyedAtRound;
 
-        [AlgoApiKey("index", null)]
+        [AlgoApiField("index", null)]
         public ulong Index;
 
-        [AlgoApiKey("params", null)]
+        [AlgoApiField("params", null)]
         public AssetParams Params;
 
         public bool Equals(Asset other)

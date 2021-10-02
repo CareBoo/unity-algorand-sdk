@@ -7,22 +7,22 @@ namespace AlgoSdk
     public struct BlockRewards
         : IEquatable<BlockRewards>
     {
-        [AlgoApiKey("fee-sink", null)]
+        [AlgoApiField("fee-sink", null)]
         public FixedString128Bytes FeeSink;
 
-        [AlgoApiKey("rewards-calculation-round", null)]
+        [AlgoApiField("rewards-calculation-round", null)]
         public ulong RewardsCalculationRound;
 
-        [AlgoApiKey("rewards-level", null)]
+        [AlgoApiField("rewards-level", null)]
         public ulong RewardsLevel;
 
-        [AlgoApiKey("rewards-pool", null)]
+        [AlgoApiField("rewards-pool", null)]
         public FixedString128Bytes RewardsPool;
 
-        [AlgoApiKey("rewards-rate", null)]
+        [AlgoApiField("rewards-rate", null)]
         public ulong RewardsRate;
 
-        [AlgoApiKey("rewards-residue", null)]
+        [AlgoApiField("rewards-residue", null)]
         public ulong RewardsResidue;
 
         public bool Equals(BlockRewards other)

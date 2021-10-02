@@ -7,22 +7,22 @@ namespace AlgoSdk
     public struct TransactionParams
         : IEquatable<TransactionParams>
     {
-        [AlgoApiKey("consensus-version", null)]
+        [AlgoApiField("consensus-version", null)]
         public FixedString128Bytes ConsensusVersion;
 
-        [AlgoApiKey("fee", null)]
+        [AlgoApiField("fee", null)]
         public ulong Fee;
 
-        [AlgoApiKey("genesis-hash", null)]
+        [AlgoApiField("genesis-hash", null)]
         public GenesisHash GenesisHash;
 
-        [AlgoApiKey("genesis-id", null)]
+        [AlgoApiField("genesis-id", null)]
         public FixedString32Bytes GenesisId;
 
-        [AlgoApiKey("last-round", null)]
+        [AlgoApiField("last-round", null)]
         public ulong LastRound;
 
-        [AlgoApiKey("min-fee", null)]
+        [AlgoApiField("min-fee", null)]
         public ulong MinFee;
 
         public bool Equals(TransactionParams other)

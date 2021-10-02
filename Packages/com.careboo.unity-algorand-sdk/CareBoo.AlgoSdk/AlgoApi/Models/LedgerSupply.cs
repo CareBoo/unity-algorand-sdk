@@ -6,13 +6,13 @@ namespace AlgoSdk
     public struct LedgerSupply
         : IEquatable<LedgerSupply>
     {
-        [AlgoApiKey("current_round", null)]
+        [AlgoApiField("current_round", null)]
         public ulong Round;
 
-        [AlgoApiKey("online-money", null)]
+        [AlgoApiField("online-money", null)]
         public ulong OnlineMoney;
 
-        [AlgoApiKey("total-money", null)]
+        [AlgoApiField("total-money", null)]
         public ulong TotalMoney;
 
         public bool Equals(LedgerSupply other)

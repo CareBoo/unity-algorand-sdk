@@ -6,10 +6,10 @@ namespace AlgoSdk
     public struct ApplicationStateSchema
         : IEquatable<ApplicationStateSchema>
     {
-        [AlgoApiKey("num-byte-slice", "nbs")]
+        [AlgoApiField("num-byte-slice", "nbs")]
         public ulong NumByteSlices;
 
-        [AlgoApiKey("num-uint", "nui")]
+        [AlgoApiField("num-uint", "nui")]
         public ulong NumUints;
 
         public bool Equals(ApplicationStateSchema other)

@@ -7,17 +7,17 @@ namespace AlgoSdk
     public struct BuildVersion
         : IEquatable<BuildVersion>
     {
-        [AlgoApiKey("branch", null)]
+        [AlgoApiField("branch", null)]
         public FixedString64Bytes Branch;
-        [AlgoApiKey("build_number", null)]
+        [AlgoApiField("build_number", null)]
         public ulong BuildNumber;
-        [AlgoApiKey("channel", null)]
+        [AlgoApiField("channel", null)]
         public FixedString64Bytes Channel;
-        [AlgoApiKey("commit_hash", null)]
+        [AlgoApiField("commit_hash", null)]
         public FixedString128Bytes CommitHash;
-        [AlgoApiKey("major", null)]
+        [AlgoApiField("major", null)]
         public ulong Major;
-        [AlgoApiKey("minor", null)]
+        [AlgoApiField("minor", null)]
         public ulong Minor;
 
         public bool Equals(BuildVersion other)

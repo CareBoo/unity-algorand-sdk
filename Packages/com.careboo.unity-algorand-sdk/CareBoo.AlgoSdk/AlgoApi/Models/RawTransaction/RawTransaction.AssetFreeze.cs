@@ -2,21 +2,21 @@ namespace AlgoSdk
 {
     public partial struct RawTransaction
     {
-        [AlgoApiKey(null, "fadd")]
+        [AlgoApiField(null, "fadd")]
         public Address FreezeAccount
         {
             get => AssetFreezeParams.FreezeAccount;
             set => AssetFreezeParams.FreezeAccount = value;
         }
 
-        [AlgoApiKey(null, "faid")]
+        [AlgoApiField(null, "faid")]
         public ulong FreezeAsset
         {
             get => AssetFreezeParams.FreezeAsset;
             set => AssetFreezeParams.FreezeAsset = value;
         }
 
-        [AlgoApiKey(null, "afrz")]
+        [AlgoApiField(null, "afrz")]
         public Optional<bool> AssetFrozen
         {
             get => AssetFreezeParams.AssetFrozen;
