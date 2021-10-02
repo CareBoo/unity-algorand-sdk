@@ -180,19 +180,41 @@ namespace AlgoSdk
                     ;
             }
 
+            [AlgoApiObject]
             public struct Params
                 : IEquatable<Params>
             {
+                [AlgoApiField("application-id", "apid")]
                 public ulong ApplicationId;
+
+                [AlgoApiField("on-completion", null)]
                 public ulong OnComplete;
+
+                [AlgoApiField("accounts", "apat")]
                 public Address[] Accounts;
+
+                [AlgoApiField("approval-program", "apap")]
                 public byte[] ApprovalProgram;
+
+                [AlgoApiField("application-args", "apaa")]
                 public byte[] AppArguments;
+
+                [AlgoApiField("clear-state-program", "apsu")]
                 public byte[] ClearStateProgram;
+
+                [AlgoApiField("foreign-apps", "apfa")]
                 public Address[] ForeignApps;
+
+                [AlgoApiField("foreign-assets", "apas")]
                 public Address[] ForeignAssets;
+
+                [AlgoApiField("global-state-schema", null)]
                 public Optional<ApplicationStateSchema> GlobalStateSchema;
+
+                [AlgoApiField("local-state-schema", null)]
                 public Optional<ApplicationStateSchema> LocalStateSchema;
+
+                [AlgoApiField("extra-program-pages", "epp")]
                 public Optional<ulong> ExtraProgramPages;
 
                 public Params(

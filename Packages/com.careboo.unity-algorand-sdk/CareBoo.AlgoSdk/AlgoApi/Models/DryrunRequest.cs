@@ -9,16 +9,22 @@ namespace AlgoSdk
     {
         [AlgoApiField("accounts", null)]
         public Account[] Accounts;
+
         [AlgoApiField("apps", null)]
         public Application[] Applications;
+
         [AlgoApiField("latest-timestamp", null)]
         public ulong LatestTimestamp;
+
         [AlgoApiField("protocol-version", null)]
         public FixedString64Bytes ProtocolVersion;
+
         [AlgoApiField("round", null)]
         public ulong Round;
+
         [AlgoApiField("sources", null)]
         public DryrunSource[] Sources;
+
         [AlgoApiField("txns", null)]
         public RawTransaction[] Transactions;
 
