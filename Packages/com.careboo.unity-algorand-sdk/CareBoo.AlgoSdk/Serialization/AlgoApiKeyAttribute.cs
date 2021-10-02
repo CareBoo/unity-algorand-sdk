@@ -9,8 +9,9 @@ namespace AlgoSdk
     {
         readonly string jsonKeyName;
         readonly string msgPackKeyName;
+        readonly bool readOnly;
 
-        public AlgoApiKeyAttribute(string jsonKeyName, string msgPackKeyName)
+        public AlgoApiKeyAttribute(string jsonKeyName, string msgPackKeyName, bool readOnly = false)
         {
             this.jsonKeyName = jsonKeyName;
             this.msgPackKeyName = msgPackKeyName;
@@ -19,5 +20,7 @@ namespace AlgoSdk
         public string JsonKeyName => jsonKeyName;
 
         public string MessagePackKeyName => msgPackKeyName;
+
+        public bool ReadOnly => readOnly;
     }
 }

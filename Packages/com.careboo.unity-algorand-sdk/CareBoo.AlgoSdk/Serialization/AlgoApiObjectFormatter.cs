@@ -16,13 +16,14 @@ namespace AlgoSdk
             string jsonKey,
             string messagePackKey,
             AlgoApiField<T>.FieldGetter<TField> getter,
-            AlgoApiField<T>.FieldSetter<TField> setter)
+            AlgoApiField<T>.FieldSetter<TField> setter,
+            bool readOnly)
             where TField : IEquatable<TField>
         {
             if (!string.IsNullOrEmpty(jsonKey))
-                jsonFieldMap.Assign(jsonKey, getter, setter);
+                jsonFieldMap.Assign(jsonKey, getter, setter, readOnly);
             if (!string.IsNullOrEmpty(messagePackKey))
-                msgPackFieldMap.Assign(messagePackKey, getter, setter);
+                msgPackFieldMap.Assign(messagePackKey, getter, setter, readOnly);
             return this;
         }
 
@@ -31,12 +32,13 @@ namespace AlgoSdk
             string messagePackKey,
             AlgoApiField<T>.FieldGetter<TField> getter,
             AlgoApiField<T>.FieldSetter<TField> setter,
-            IEqualityComparer<TField> comparer)
+            IEqualityComparer<TField> comparer,
+            bool readOnly)
         {
             if (!string.IsNullOrEmpty(jsonKey))
-                jsonFieldMap.Assign(jsonKey, getter, setter, comparer);
+                jsonFieldMap.Assign(jsonKey, getter, setter, comparer, readOnly);
             if (!string.IsNullOrEmpty(messagePackKey))
-                msgPackFieldMap.Assign(messagePackKey, getter, setter, comparer);
+                msgPackFieldMap.Assign(messagePackKey, getter, setter, comparer, readOnly);
             return this;
         }
 
