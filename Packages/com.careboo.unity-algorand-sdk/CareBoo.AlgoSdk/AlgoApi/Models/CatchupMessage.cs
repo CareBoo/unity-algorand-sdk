@@ -7,7 +7,7 @@ namespace AlgoSdk
     public struct CatchupMessage
         : IEquatable<CatchupMessage>
     {
-        [AlgoApiKey("catchup-message", null)]
+        [AlgoApiField("catchup-message", null)]
         public FixedString512Bytes Message;
 
         public bool Equals(CatchupMessage other)

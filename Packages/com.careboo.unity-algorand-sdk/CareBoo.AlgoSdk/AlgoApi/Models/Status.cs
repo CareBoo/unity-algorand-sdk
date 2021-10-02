@@ -6,35 +6,35 @@ namespace AlgoSdk
     public struct Status
         : IEquatable<Status>
     {
-        [AlgoApiKey("catchpoint", null)]
+        [AlgoApiField("catchpoint", null)]
         public string Catchpoint;
-        [AlgoApiKey("catchpoint-acquired-blocks", null)]
+        [AlgoApiField("catchpoint-acquired-blocks", null)]
         public ulong CatchpointAcquiredBlocks;
-        [AlgoApiKey("catchpoint-processed-accounts", null)]
+        [AlgoApiField("catchpoint-processed-accounts", null)]
         public ulong CatchpointProcessedAmounts;
-        [AlgoApiKey("catchpoint-total-accounts", null)]
+        [AlgoApiField("catchpoint-total-accounts", null)]
         public ulong CatchpointTotalAccounts;
-        [AlgoApiKey("catchpoint-total-blocks", null)]
+        [AlgoApiField("catchpoint-total-blocks", null)]
         public ulong CatchpointTotalBlocks;
-        [AlgoApiKey("catchpoint-verified-accounts", null)]
+        [AlgoApiField("catchpoint-verified-accounts", null)]
         public ulong CatchpointVerifiedAccounts;
-        [AlgoApiKey("catchup-time", null)]
+        [AlgoApiField("catchup-time", null)]
         public ulong CatchupTime;
-        [AlgoApiKey("last-catchpoint", null)]
+        [AlgoApiField("last-catchpoint", null)]
         public string LastCatchpoint;
-        [AlgoApiKey("last-round", null)]
+        [AlgoApiField("last-round", null)]
         public ulong LastRound;
-        [AlgoApiKey("last-version", null)]
+        [AlgoApiField("last-version", null)]
         public string LastVersion;
-        [AlgoApiKey("next-version", null)]
+        [AlgoApiField("next-version", null)]
         public string NextVersion;
-        [AlgoApiKey("next-version-round", null)]
+        [AlgoApiField("next-version-round", null)]
         public ulong NextVersionRound;
-        [AlgoApiKey("next-version-supported", null)]
+        [AlgoApiField("next-version-supported", null)]
         public bool NextVersionSupported;
-        [AlgoApiKey("stopped-at-unsupported-round", null)]
+        [AlgoApiField("stopped-at-unsupported-round", null)]
         public bool StoppedAtUnsupportedRound;
-        [AlgoApiKey("time-since-last-round", null)]
+        [AlgoApiField("time-since-last-round", null)]
         public ulong TimeSinceLastRound;
 
         public bool Equals(Status other)

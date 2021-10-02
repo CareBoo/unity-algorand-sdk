@@ -7,11 +7,11 @@ namespace AlgoSdk
     public struct DryrunResults
         : IEquatable<DryrunResults>
     {
-        [AlgoApiKey("error", null)]
+        [AlgoApiField("error", null)]
         public string Error;
-        [AlgoApiKey("protocol-version", null)]
+        [AlgoApiField("protocol-version", null)]
         public FixedString128Bytes ProtocolVersion;
-        [AlgoApiKey("txns", null)]
+        [AlgoApiField("txns", null)]
         public DryrunTxnResult[] Txns;
 
         public bool Equals(DryrunResults other)

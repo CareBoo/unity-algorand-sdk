@@ -5,13 +5,13 @@ namespace AlgoSdk
 {
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, Inherited = true, AllowMultiple = false)]
     [Conditional("UNITY_EDITOR")]
-    public sealed class AlgoApiKeyAttribute : Attribute
+    public sealed class AlgoApiField : Attribute
     {
         readonly string jsonKeyName;
         readonly string msgPackKeyName;
         readonly bool readOnly;
 
-        public AlgoApiKeyAttribute(string jsonKeyName, string msgPackKeyName, bool readOnly = false)
+        public AlgoApiField(string jsonKeyName, string msgPackKeyName, bool readOnly = false)
         {
             this.jsonKeyName = jsonKeyName;
             this.msgPackKeyName = msgPackKeyName;

@@ -7,16 +7,16 @@ namespace AlgoSdk
     public struct Version
         : IEquatable<Version>
     {
-        [AlgoApiKey("build", null)]
+        [AlgoApiField("build", null)]
         public BuildVersion Build;
 
-        [AlgoApiKey("genesis_hash_b64", null)]
+        [AlgoApiField("genesis_hash_b64", null)]
         public FixedString64Bytes GenesisHashBase64;
 
-        [AlgoApiKey("genesis_id", null)]
+        [AlgoApiField("genesis_id", null)]
         public FixedString32Bytes GenesisId;
 
-        [AlgoApiKey("versions", null)]
+        [AlgoApiField("versions", null)]
         public FixedString32Bytes[] Versions;
 
         public bool Equals(Version other)

@@ -7,10 +7,10 @@ namespace AlgoSdk
     public struct TealKeyValue
         : IEquatable<TealKeyValue>
     {
-        [AlgoApiKey("key", null)]
+        [AlgoApiField("key", null)]
         public FixedString128Bytes Key;
 
-        [AlgoApiKey("value", null)]
+        [AlgoApiField("value", null)]
         public TealValue Value;
 
         public bool Equals(TealKeyValue other)

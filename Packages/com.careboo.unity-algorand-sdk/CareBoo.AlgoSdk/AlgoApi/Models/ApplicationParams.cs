@@ -6,25 +6,25 @@ namespace AlgoSdk
     public struct ApplicationParams
         : IEquatable<ApplicationParams>
     {
-        [AlgoApiKey("approval-program", null)]
+        [AlgoApiField("approval-program", null)]
         public byte[] ApprovalProgram;
 
-        [AlgoApiKey("clear-state-program", null)]
+        [AlgoApiField("clear-state-program", null)]
         public byte[] ClearStateProgram;
 
-        [AlgoApiKey("creator", null)]
+        [AlgoApiField("creator", null)]
         public Address Creator;
 
-        [AlgoApiKey("extra-program-pages", null)]
+        [AlgoApiField("extra-program-pages", null)]
         public Optional<ulong> ExtraProgramPages;
 
-        [AlgoApiKey("global-state", null)]
+        [AlgoApiField("global-state", null)]
         public TealKeyValue[] GlobalState;
 
-        [AlgoApiKey("global-state-schema", null)]
+        [AlgoApiField("global-state-schema", null)]
         public Optional<ApplicationStateSchema> GlobalStateSchema;
 
-        [AlgoApiKey("local-state-schema", null)]
+        [AlgoApiField("local-state-schema", null)]
         public Optional<ApplicationStateSchema> LocalStateSchema;
 
         public bool Equals(ApplicationParams other)

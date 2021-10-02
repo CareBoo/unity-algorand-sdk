@@ -5,13 +5,13 @@ namespace AlgoSdk
 {
     public struct BlockUpgradeVote : IEquatable<BlockUpgradeVote>
     {
-        [AlgoApiKey("upgrade-approve", null)]
+        [AlgoApiField("upgrade-approve", null)]
         public Optional<bool> UpgradeApprove;
 
-        [AlgoApiKey("upgrade-delay", null)]
+        [AlgoApiField("upgrade-delay", null)]
         public Optional<ulong> UpgradeDelay;
 
-        [AlgoApiKey("upgrade-propose", null)]
+        [AlgoApiField("upgrade-propose", null)]
         public FixedString128Bytes UpgradePropose;
 
         public bool Equals(BlockUpgradeVote other)

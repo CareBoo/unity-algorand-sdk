@@ -7,19 +7,19 @@ namespace AlgoSdk
     public struct BlockUpgradeStatus
         : IEquatable<BlockUpgradeStatus>
     {
-        [AlgoApiKey("current-protocol", null)]
+        [AlgoApiField("current-protocol", null)]
         public FixedString128Bytes CurrentProtocol;
 
-        [AlgoApiKey("next-protocol", null)]
+        [AlgoApiField("next-protocol", null)]
         public FixedString128Bytes NextProtocol;
 
-        [AlgoApiKey("next-protocol-approvals", null)]
+        [AlgoApiField("next-protocol-approvals", null)]
         public Optional<ulong> NextProtocolApprovals;
 
-        [AlgoApiKey("next-protocol-switch-on", null)]
+        [AlgoApiField("next-protocol-switch-on", null)]
         public Optional<ulong> NextProtocolSwitchOn;
 
-        [AlgoApiKey("next-protocol-vote-before", null)]
+        [AlgoApiField("next-protocol-vote-before", null)]
         public Optional<ulong> NextProtocolVoteBefore;
 
 
