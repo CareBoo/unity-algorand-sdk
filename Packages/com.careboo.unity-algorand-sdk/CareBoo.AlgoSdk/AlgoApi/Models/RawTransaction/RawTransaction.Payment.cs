@@ -2,21 +2,21 @@ namespace AlgoSdk
 {
     public partial struct RawTransaction
     {
-        [AlgoApiKey(null, "rcv")]
+        [AlgoApiField(null, "rcv")]
         public Address Receiver
         {
             get => PaymentParams.Receiver;
             set => PaymentParams.Receiver = value;
         }
 
-        [AlgoApiKey(null, "amt")]
+        [AlgoApiField(null, "amt")]
         public ulong Amount
         {
             get => PaymentParams.Amount;
             set => PaymentParams.Amount = value;
         }
 
-        [AlgoApiKey(null, "close")]
+        [AlgoApiField(null, "close")]
         public Address CloseRemainderTo
         {
             get => PaymentParams.CloseRemainderTo;

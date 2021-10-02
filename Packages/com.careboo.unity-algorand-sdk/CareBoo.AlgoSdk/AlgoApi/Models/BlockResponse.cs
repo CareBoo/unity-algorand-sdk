@@ -8,7 +8,7 @@ namespace AlgoSdk
     public struct BlockResponse
         : IEquatable<BlockResponse>
     {
-        [AlgoApiKey(null, "block")]
+        [AlgoApiField(null, "block")]
         public Header HeaderData;
 
         public bool Equals(BlockResponse other)
@@ -20,52 +20,52 @@ namespace AlgoSdk
         public struct Header
             : IEquatable<Header>
         {
-            [AlgoApiKey(null, "earn")]
+            [AlgoApiField(null, "earn")]
             public ulong Earn;
 
-            [AlgoApiKey(null, "fees")]
+            [AlgoApiField(null, "fees")]
             public Address Fees;
 
-            [AlgoApiKey(null, "frac")]
+            [AlgoApiField(null, "frac")]
             public ulong Fraction;
 
-            [AlgoApiKey(null, "gen")]
+            [AlgoApiField(null, "gen")]
             public FixedString64Bytes GenesisId;
 
-            [AlgoApiKey(null, "gh")]
+            [AlgoApiField(null, "gh")]
             public GenesisHash GenesisHash;
 
-            [AlgoApiKey(null, "prev")]
+            [AlgoApiField(null, "prev")]
             public FixedString128Bytes PreviousBlock;
 
-            [AlgoApiKey(null, "proto")]
+            [AlgoApiField(null, "proto")]
             public FixedString128Bytes Proto;
 
-            [AlgoApiKey(null, "rate")]
+            [AlgoApiField(null, "rate")]
             public ulong Rate;
 
-            [AlgoApiKey(null, "rnd")]
+            [AlgoApiField(null, "rnd")]
             public ulong Round;
 
-            [AlgoApiKey(null, "rwcalr")]
+            [AlgoApiField(null, "rwcalr")]
             public ulong RwCalr;
 
-            [AlgoApiKey(null, "rwd")]
+            [AlgoApiField(null, "rwd")]
             public Address Rwd;
 
-            [AlgoApiKey(null, "seed")]
+            [AlgoApiField(null, "seed")]
             public Sha512_256_Hash Seed;
 
-            [AlgoApiKey(null, "tc")]
+            [AlgoApiField(null, "tc")]
             public ulong Tc;
 
-            [AlgoApiKey(null, "ts")]
+            [AlgoApiField(null, "ts")]
             public ulong Ts;
 
-            [AlgoApiKey(null, "txn")]
+            [AlgoApiField(null, "txn")]
             public Sha512_256_Hash Txn;
 
-            [AlgoApiKey(null, "txns")]
+            [AlgoApiField(null, "txns")]
             public BlockTransaction[] Txns;
 
             public bool Equals(Header other)

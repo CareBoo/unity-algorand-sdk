@@ -7,19 +7,19 @@ namespace AlgoSdk
     public struct DryrunTxnResult
         : IEquatable<DryrunTxnResult>
     {
-        [AlgoApiKey("app-call-messages", null)]
+        [AlgoApiField("app-call-messages", null)]
         public FixedString128Bytes[] AppCallMessages;
-        [AlgoApiKey("app-call-trace", null)]
+        [AlgoApiField("app-call-trace", null)]
         public DryrunState[] AppCallTrace;
-        [AlgoApiKey("disassembly", null)]
+        [AlgoApiField("disassembly", null)]
         public FixedString128Bytes[] Disassembly;
-        [AlgoApiKey("global-delta", null)]
+        [AlgoApiField("global-delta", null)]
         public EvalDeltaKeyValue[] GlobalDelta;
-        [AlgoApiKey("local-deltas", null)]
+        [AlgoApiField("local-deltas", null)]
         public AccountStateDelta[] LocalDeltas;
-        [AlgoApiKey("logic-sig-messages", null)]
+        [AlgoApiField("logic-sig-messages", null)]
         public FixedString128Bytes[] LogicSigMessages;
-        [AlgoApiKey("logic-sig-trace", null)]
+        [AlgoApiField("logic-sig-trace", null)]
         public DryrunState[] LogicSigTrace;
 
         public bool Equals(DryrunTxnResult other)

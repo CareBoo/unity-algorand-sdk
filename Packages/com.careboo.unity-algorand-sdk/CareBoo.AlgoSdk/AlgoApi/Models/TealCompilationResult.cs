@@ -7,10 +7,10 @@ namespace AlgoSdk
     public struct TealCompilationResult
         : IEquatable<TealCompilationResult>
     {
-        [AlgoApiKey("hash", null)]
+        [AlgoApiField("hash", null)]
         public Sha512_256_Hash Hash;
 
-        [AlgoApiKey("result", null)]
+        [AlgoApiField("result", null)]
         public string BytesBase64;
 
         public bool Equals(TealCompilationResult other)

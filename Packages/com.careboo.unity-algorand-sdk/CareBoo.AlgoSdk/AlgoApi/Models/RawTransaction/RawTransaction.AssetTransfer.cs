@@ -2,35 +2,35 @@ namespace AlgoSdk
 {
     public partial struct RawTransaction
     {
-        [AlgoApiKey(null, "xaid")]
+        [AlgoApiField(null, "xaid")]
         public ulong XferAsset
         {
             get => AssetTransferParams.XferAsset;
             set => AssetTransferParams.XferAsset = value;
         }
 
-        [AlgoApiKey(null, "aamt")]
+        [AlgoApiField(null, "aamt")]
         public ulong AssetAmount
         {
             get => AssetTransferParams.AssetAmount;
             set => AssetTransferParams.AssetAmount = value;
         }
 
-        [AlgoApiKey(null, "asnd")]
+        [AlgoApiField(null, "asnd")]
         public Address AssetSender
         {
             get => AssetTransferParams.AssetSender;
             set => AssetTransferParams.AssetSender = value;
         }
 
-        [AlgoApiKey(null, "arcv")]
+        [AlgoApiField(null, "arcv")]
         public Address AssetReceiver
         {
             get => AssetTransferParams.AssetReceiver;
             set => AssetTransferParams.AssetReceiver = value;
         }
 
-        [AlgoApiKey(null, "aclose")]
+        [AlgoApiField(null, "aclose")]
         public Address AssetCloseTo
         {
             get => AssetTransferParams.AssetCloseTo;
