@@ -15,6 +15,7 @@ namespace AlgoSdk
             public ulong LastValidRound;
             public Address Sender;
             public TransactionType TransactionType;
+
             public FixedString32Bytes GenesisId;
             public Address Group;
             public Address Lease;
@@ -34,6 +35,7 @@ namespace AlgoSdk
             public ulong ReceiverRewards;
             public ulong RoundTime;
             public ulong SenderRewards;
+            public OnCompletion OnCompletion;
 
 
             public Header(
@@ -71,6 +73,7 @@ namespace AlgoSdk
                 ReceiverRewards = default;
                 RoundTime = default;
                 SenderRewards = default;
+                OnCompletion = default;
             }
 
             public bool Equals(Header other)
@@ -91,7 +94,7 @@ namespace AlgoSdk
 
             public override bool Equals(object obj)
             {
-                if (obj is RawTransaction other)
+                if (obj is Header other)
                     return Equals(other);
                 return false;
             }
