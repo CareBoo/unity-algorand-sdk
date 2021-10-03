@@ -59,14 +59,14 @@ namespace AlgoSdk
         }
 
         [AlgoApiField(null, "apgs")]
-        public Optional<ApplicationStateSchema> GlobalStateSchema
+        public Optional<StateSchema> GlobalStateSchema
         {
             get => ApplicationCallParams.GlobalStateSchema;
             set => ApplicationCallParams.GlobalStateSchema = value;
         }
 
         [AlgoApiField(null, "apls")]
-        public Optional<ApplicationStateSchema> LocalStateSchema
+        public Optional<StateSchema> LocalStateSchema
         {
             get => ApplicationCallParams.LocalStateSchema;
             set => ApplicationCallParams.LocalStateSchema = value;

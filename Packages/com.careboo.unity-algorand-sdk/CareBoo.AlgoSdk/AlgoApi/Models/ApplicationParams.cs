@@ -22,10 +22,10 @@ namespace AlgoSdk
         public TealKeyValue[] GlobalState;
 
         [AlgoApiField("global-state-schema", null)]
-        public Optional<ApplicationStateSchema> GlobalStateSchema;
+        public Optional<StateSchema> GlobalStateSchema;
 
         [AlgoApiField("local-state-schema", null)]
-        public Optional<ApplicationStateSchema> LocalStateSchema;
+        public Optional<StateSchema> LocalStateSchema;
 
         public bool Equals(ApplicationParams other)
         {
