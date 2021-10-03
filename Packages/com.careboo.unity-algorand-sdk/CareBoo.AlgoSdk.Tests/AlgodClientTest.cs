@@ -59,12 +59,12 @@ public class AlgodClientTest
         );
         txn.Note = Encoding.UTF8.GetBytes("hello");
         txn.GenesisId = transactionParams.GenesisId;
-        var rawSignedTxn = txn.Sign(keyPair.SecretKey).ToRaw();
+        SignedTransaction signedTxn = txn.Sign(keyPair.SecretKey);
         var serialized = new NativeList<byte>(Allocator.Temp);
-        AlgoApiSerializer.SerializeMessagePack(rawSignedTxn, serialized);
+        AlgoApiSerializer.SerializeMessagePack(signedTxn, serialized);
         Debug.Log(System.Convert.ToBase64String(serialized.ToArray()));
         serialized.Dispose();
-        var txidResponse = await client.SendTransaction(rawSignedTxn);
+        var txidResponse = await client.SendTransaction(signedTxn);
         AssertResponseSuccess(txidResponse);
         Debug.Log(txidResponse.Raw.GetText());
         return txidResponse.Payload;

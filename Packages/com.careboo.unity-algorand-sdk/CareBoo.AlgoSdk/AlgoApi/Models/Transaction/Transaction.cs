@@ -1,4 +1,8 @@
 using System;
+using System.Text;
+using AlgoSdk.Crypto;
+using AlgoSdk.LowLevel;
+using Unity.Collections;
 
 namespace AlgoSdk
 {
@@ -6,6 +10,8 @@ namespace AlgoSdk
     public partial struct Transaction
         : IEquatable<Transaction>
     {
+        static readonly byte[] SignaturePrefix = Encoding.UTF8.GetBytes("TX");
+
         public Header HeaderParams;
 
         [AlgoApiField("payment-transaction", null, readOnly: true)]
@@ -42,6 +48,45 @@ namespace AlgoSdk
                     TransactionType.KeyRegistration => KeyRegistrationParams.Equals(other.KeyRegistrationParams),
                     _ => true
                 };
+        }
+
+        public bool VerifySignature()
+        {
+            if (!Signature.Sig.Equals(default))
+            {
+                using var msg = ToSignatureMessage(Allocator.Temp);
+                return Signature.Sig.Verify(msg, Sender);
+            }
+            if (!Signature.LogicSig.Equals(default))
+            {
+                return Signature.LogicSig.IsValid(Sender);
+            }
+            if (!Signature.MultiSig.Equals(default))
+            {
+
+            }
+            throw new ArgumentException("No sig set...", nameof(Signature));
+        }
+
+        public Transaction Sign(Ed25519.SecretKeyHandle secretKey)
+        {
+            Signature = default;
+            using var message = ToSignatureMessage(Allocator.Temp);
+            Signature.Sig = secretKey.Sign(message);
+            return this;
+        }
+
+        public NativeByteArray ToSignatureMessage(Allocator allocator)
+        {
+            using var data = new NativeList<byte>(Allocator.Temp);
+            AlgoApiSerializer.SerializeMessagePack(this, data);
+
+            var result = new NativeByteArray(SignaturePrefix.Length + data.Length, allocator);
+            for (var i = 0; i < SignaturePrefix.Length; i++)
+                result[i] = SignaturePrefix[i];
+            for (var i = 0; i < data.Length; i++)
+                result[i + SignaturePrefix.Length] = data[i];
+            return result;
         }
     }
 }

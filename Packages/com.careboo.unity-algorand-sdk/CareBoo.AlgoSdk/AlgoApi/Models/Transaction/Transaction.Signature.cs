@@ -21,5 +21,10 @@ namespace AlgoSdk
                 && Sig.Equals(other.Sig)
                 ;
         }
+
+        public bool Verify()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
