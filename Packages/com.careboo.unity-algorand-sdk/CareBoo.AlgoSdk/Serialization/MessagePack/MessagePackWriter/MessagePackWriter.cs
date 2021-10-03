@@ -1,4 +1,5 @@
 using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 
 namespace AlgoSdk.MessagePack
 {
@@ -14,6 +15,11 @@ namespace AlgoSdk.MessagePack
         public void WriteNil()
         {
             data.Add(MessagePackCode.Nil);
+        }
+
+        public unsafe void WriteRaw(NativeArray<byte>.ReadOnly bytes)
+        {
+            data.AddRange(bytes.GetUnsafeReadOnlyPtr(), bytes.Length);
         }
     }
 }
