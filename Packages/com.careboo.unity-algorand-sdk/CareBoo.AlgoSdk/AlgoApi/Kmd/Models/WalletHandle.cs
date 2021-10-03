@@ -2,16 +2,16 @@ using System;
 
 namespace AlgoSdk
 {
-    public struct APIV1WalletHandle
-        : IEquatable<APIV1WalletHandle>
+    public struct WalletHandle
+        : IEquatable<WalletHandle>
     {
         [AlgoApiField("expires_seconds", null)]
         public ulong ExpiresSeconds;
 
         [AlgoApiField("wallet", null)]
-        public APIV1Wallet Wallet;
+        public Wallet Wallet;
 
-        public bool Equals(APIV1WalletHandle other)
+        public bool Equals(WalletHandle other)
         {
             return Wallet.Equals(other.Wallet);
         }
