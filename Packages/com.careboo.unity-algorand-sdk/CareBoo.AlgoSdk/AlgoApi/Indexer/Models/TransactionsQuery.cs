@@ -7,6 +7,8 @@ namespace AlgoSdk
     {
         public Address Address;
 
+        public DateTime AfterTime;
+
         public bool Equals(TransactionsQuery other)
         {
             throw new NotImplementedException();
