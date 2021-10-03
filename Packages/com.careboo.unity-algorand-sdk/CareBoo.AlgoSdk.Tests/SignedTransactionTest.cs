@@ -27,8 +27,8 @@ public class SignedTransactionTest
     public void SizeOfSignedTransactionShouldBeUnder4KB()
     {
         const int MAX_BYTES = 4000;
-        var size = UnsafeUtility.SizeOf<RawSignedTransaction>();
-        UnityEngine.Debug.Log($"Size of {nameof(RawSignedTransaction)}: {size}");
+        var size = UnsafeUtility.SizeOf<SignedTransaction>();
+        UnityEngine.Debug.Log($"Size of {nameof(SignedTransaction)}: {size}");
         Assert.IsTrue(size <= MAX_BYTES);
     }
 

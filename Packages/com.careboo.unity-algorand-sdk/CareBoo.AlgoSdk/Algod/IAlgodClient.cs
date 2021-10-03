@@ -30,7 +30,7 @@ namespace AlgoSdk
         UniTask<AlgoApiResponse<Status>> GetStatusAfterWaitingForRound(ulong round);
         UniTask<AlgoApiResponse<TealCompilationResult>> TealCompile(string source);
         UniTask<AlgoApiResponse<DryrunResults>> TealDryrun(Optional<DryrunRequest> request = default);
-        UniTask<AlgoApiResponse<TransactionId>> SendTransaction(RawSignedTransaction rawTxn);
+        UniTask<AlgoApiResponse<TransactionId>> SendTransaction(SignedTransaction rawTxn);
         UniTask<AlgoApiResponse<TransactionParams>> GetTransactionParams();
         UniTask<AlgoApiResponse<Version>> GetVersions();
     }

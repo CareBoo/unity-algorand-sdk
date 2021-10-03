@@ -26,6 +26,9 @@ namespace AlgoSdk
         [AlgoApiField("keyreg-transaction", null, readOnly: true)]
         public KeyRegistration.Params KeyRegistrationParams;
 
+        [AlgoApiField("signature", null, readOnly: true)]
+        public TransactionSignature Signature;
+
         public bool Equals(Transaction other)
         {
             return HeaderParams.Equals(other.HeaderParams)

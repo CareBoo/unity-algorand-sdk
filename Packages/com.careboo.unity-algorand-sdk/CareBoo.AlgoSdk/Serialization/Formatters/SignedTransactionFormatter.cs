@@ -10,7 +10,7 @@ namespace AlgoSdk.Formatters
     {
         public SignedTransaction<T> Deserialize(ref JsonReader reader)
         {
-            var raw = AlgoApiFormatterCache<RawSignedTransaction>.Formatter.Deserialize(ref reader);
+            var raw = AlgoApiFormatterCache<SignedTransaction>.Formatter.Deserialize(ref reader);
             SignedTransaction<T> result = default;
             result.CopyFrom(in raw);
             return result;
@@ -18,7 +18,7 @@ namespace AlgoSdk.Formatters
 
         public SignedTransaction<T> Deserialize(ref MessagePackReader reader)
         {
-            var raw = AlgoApiFormatterCache<RawSignedTransaction>.Formatter.Deserialize(ref reader);
+            var raw = AlgoApiFormatterCache<SignedTransaction>.Formatter.Deserialize(ref reader);
             SignedTransaction<T> result = default;
             result.CopyFrom(in raw);
             return result;
@@ -26,16 +26,16 @@ namespace AlgoSdk.Formatters
 
         public void Serialize(ref JsonWriter writer, SignedTransaction<T> value)
         {
-            RawSignedTransaction raw = default;
+            SignedTransaction raw = default;
             value.CopyTo(ref raw);
-            AlgoApiFormatterCache<RawSignedTransaction>.Formatter.Serialize(ref writer, raw);
+            AlgoApiFormatterCache<SignedTransaction>.Formatter.Serialize(ref writer, raw);
         }
 
         public void Serialize(ref MessagePackWriter writer, SignedTransaction<T> value)
         {
-            RawSignedTransaction raw = default;
+            SignedTransaction raw = default;
             value.CopyTo(ref raw);
-            AlgoApiFormatterCache<RawSignedTransaction>.Formatter.Serialize(ref writer, raw);
+            AlgoApiFormatterCache<SignedTransaction>.Formatter.Serialize(ref writer, raw);
         }
     }
 }
