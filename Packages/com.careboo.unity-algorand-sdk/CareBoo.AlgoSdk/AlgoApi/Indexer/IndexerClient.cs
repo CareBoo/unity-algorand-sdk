@@ -24,7 +24,7 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<AccountsResponse>> GetAccounts(AccountsQuery query = default)
         {
-            throw new System.NotImplementedException();
+            return await this.GetAsync("/v2/accounts", query);
         }
 
         public async UniTask<AlgoApiResponse<TransactionsResponse>> GetAccountTransactions(ulong accountId, TransactionsQuery query = default)
