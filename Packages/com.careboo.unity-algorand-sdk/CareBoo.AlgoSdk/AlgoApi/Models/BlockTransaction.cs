@@ -14,7 +14,7 @@ namespace AlgoSdk
         }
 
         [AlgoApiField("sig", "sig")]
-        public Signature Sig
+        public Sig Sig
         {
             get => signedTxn.Sig;
             set => signedTxn.Sig = value;
@@ -43,14 +43,14 @@ namespace AlgoSdk
         [AlgoApiField("rs", "rs")]
         public ulong Rs;
 
-        RawSignedTransaction signedTxn;
+        SignedTransaction signedTxn;
 
         public bool Equals(BlockTransaction other)
         {
             return signedTxn.Equals(other.signedTxn);
         }
 
-        public static implicit operator RawSignedTransaction(BlockTransaction blockTxn)
+        public static implicit operator SignedTransaction(BlockTransaction blockTxn)
         {
             return blockTxn.signedTxn;
         }

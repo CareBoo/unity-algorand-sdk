@@ -169,7 +169,7 @@ namespace AlgoSdk
                 : await PostAsync(endpoint);
         }
 
-        public async UniTask<AlgoApiResponse<TransactionId>> SendTransaction(RawSignedTransaction rawTxn)
+        public async UniTask<AlgoApiResponse<TransactionId>> SendTransaction(SignedTransaction rawTxn)
         {
             using var data = new NativeList<byte>(Allocator.Persistent);
             AlgoApiSerializer.SerializeMessagePack(rawTxn, data);

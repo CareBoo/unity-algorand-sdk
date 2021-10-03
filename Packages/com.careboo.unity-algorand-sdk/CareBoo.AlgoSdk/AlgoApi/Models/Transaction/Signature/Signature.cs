@@ -5,10 +5,10 @@ using AlgoSdk.LowLevel;
 
 namespace AlgoSdk
 {
-    [AlgoApiFormatter(typeof(ByteArrayFormatter<Signature>))]
-    public struct Signature
+    [AlgoApiFormatter(typeof(ByteArrayFormatter<Sig>))]
+    public struct Sig
         : ISignature
-        , IEquatable<Signature>
+        , IEquatable<Sig>
         , IByteArray
     {
         Ed25519.Signature sig;
@@ -19,7 +19,7 @@ namespace AlgoSdk
 
         public byte this[int index] { get => sig[index]; set => sig[index] = value; }
 
-        public Signature(in Ed25519.Signature sig)
+        public Sig(in Ed25519.Signature sig)
         {
             this.sig = sig;
         }
@@ -30,22 +30,22 @@ namespace AlgoSdk
             return sig.Verify(message, pk);
         }
 
-        public static implicit operator Ed25519.Signature(Signature signature)
+        public static implicit operator Ed25519.Signature(Sig signature)
         {
             return signature.sig;
         }
 
-        public static implicit operator Signature(Ed25519.Signature sig)
+        public static implicit operator Sig(Ed25519.Signature sig)
         {
-            return new Signature(in sig);
+            return new Sig(in sig);
         }
 
-        public static bool operator ==(in Signature x, in Signature y)
+        public static bool operator ==(in Sig x, in Sig y)
         {
             return x.sig == y.sig;
         }
 
-        public static bool operator !=(in Signature x, in Signature y)
+        public static bool operator !=(in Sig x, in Sig y)
         {
             return x.sig != y.sig;
         }
@@ -59,13 +59,13 @@ namespace AlgoSdk
         {
             switch (obj)
             {
-                case Signature signature: return this == signature;
+                case Sig signature: return this == signature;
                 case Ed25519.Signature edSig: return sig == edSig;
                 default: return false;
             }
         }
 
-        public bool Equals(Signature other)
+        public bool Equals(Sig other)
         {
             return this.sig.Equals(other.sig);
         }
