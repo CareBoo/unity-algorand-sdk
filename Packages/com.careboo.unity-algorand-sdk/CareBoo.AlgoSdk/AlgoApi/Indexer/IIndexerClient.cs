@@ -2,7 +2,7 @@ using Cysharp.Threading.Tasks;
 
 namespace AlgoSdk
 {
-    public interface IIndexerClient
+    public interface IIndexerClient : IApiClient
     {
         UniTask<AlgoApiResponse<HealthCheck>> GetHealth();
         UniTask<AlgoApiResponse<AccountsResponse>> GetAccounts(AccountsQuery query = default);
