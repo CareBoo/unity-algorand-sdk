@@ -3,8 +3,8 @@ using System;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct APIV1DELETEMultisigResponse
-        : IEquatable<APIV1DELETEMultisigResponse>
+    public struct DeleteMultisigResponse
+        : IEquatable<DeleteMultisigResponse>
     {
         [AlgoApiField("error", null)]
         public Optional<bool> Error;
@@ -12,7 +12,7 @@ namespace AlgoSdk
         [AlgoApiField("message", null)]
         public string Message;
 
-        public bool Equals(APIV1DELETEMultisigResponse other)
+        public bool Equals(DeleteMultisigResponse other)
         {
             return Error.Equals(other.Error)
                 && StringComparer.Equals(Message, other.Message)

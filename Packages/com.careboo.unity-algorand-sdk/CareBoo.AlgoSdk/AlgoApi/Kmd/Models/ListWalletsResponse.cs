@@ -3,8 +3,8 @@ using System;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct APIV1GETWalletsResponse
-        : IEquatable<APIV1GETWalletsResponse>
+    public struct ListWalletsResponse
+        : IEquatable<ListWalletsResponse>
     {
         [AlgoApiField("error", null)]
         public Optional<bool> Error;
@@ -13,9 +13,9 @@ namespace AlgoSdk
         public string Message;
 
         [AlgoApiField("wallets", null)]
-        public APIV1Wallet[] Wallets;
+        public Wallet[] Wallets;
 
-        public bool Equals(APIV1GETWalletsResponse other)
+        public bool Equals(ListWalletsResponse other)
         {
             return Error.Equals(other.Error)
                 && Message.Equals(other.Message)
