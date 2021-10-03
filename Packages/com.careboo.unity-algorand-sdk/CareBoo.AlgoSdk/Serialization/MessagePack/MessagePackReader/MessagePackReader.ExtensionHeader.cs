@@ -1,3 +1,5 @@
+using Unity.Collections;
+
 namespace AlgoSdk.MessagePack
 {
     public ref partial struct MessagePackReader
@@ -58,6 +60,28 @@ namespace AlgoSdk.MessagePack
                 return false;
 
             header = new ExtensionHeader(unchecked((sbyte)typeCode), length);
+            return true;
+        }
+
+        bool TryReadRawNextExtension(NativeList<byte> bytes)
+        {
+            if (!TryPeek(out byte code))
+                return false;
+
+            var resetOffset = offset;
+            if (!TryReadExtensionFormatHeader(out var header))
+            {
+                offset = resetOffset;
+                return false;
+            }
+            bytes.Add(code);
+            bytes.Add((byte)header.TypeCode);
+            if (!TryAdvance((int)header.Length, bytes))
+            {
+                offset = resetOffset;
+                return false;
+            }
+
             return true;
         }
     }
