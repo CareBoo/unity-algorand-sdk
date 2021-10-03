@@ -6,5 +6,6 @@ namespace AlgoSdk
     {
         UniTask<AlgoApiResponse<HealthCheck>> GetHealth();
         UniTask<AlgoApiResponse<AccountsResponse>> GetAccounts(AccountsQuery query = default);
+        UniTask<AlgoApiResponse<Account>> GetAccount(ulong accountId, AccountQuery query = default);
     }
 }
