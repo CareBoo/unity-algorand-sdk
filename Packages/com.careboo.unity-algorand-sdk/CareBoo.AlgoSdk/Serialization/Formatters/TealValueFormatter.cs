@@ -40,11 +40,11 @@ namespace AlgoSdk.MsgPack.Formatters
             {
                 var key = new FixedString32Bytes();
                 reader.ReadString(ref key);
-                if (key == "type")
+                if (key == "tt")
                     result.Type = AlgoApiFormatterCache<TealValueType>.Formatter.Deserialize(ref reader);
-                else if (key == "bytes")
+                else if (key == "tb")
                     result.Bytes = AlgoApiFormatterCache<TealBytes>.Formatter.Deserialize(ref reader);
-                else if (key == "uint")
+                else if (key == "ui")
                     result.Uint = AlgoApiFormatterCache<ulong>.Formatter.Deserialize(ref reader);
                 else
                     throw new ArgumentOutOfRangeException($"Found unexpected key in message: {key}");
@@ -77,16 +77,16 @@ namespace AlgoSdk.MsgPack.Formatters
         public void Serialize(ref MessagePackWriter writer, TealValue value)
         {
             writer.WriteMapHeader(2);
-            writer.WriteString(new FixedString32Bytes("type"));
+            writer.WriteString(new FixedString32Bytes("tt"));
             AlgoApiFormatterCache<TealValueType>.Formatter.Serialize(ref writer, value.Type);
             switch (value.Type)
             {
                 case TealValueType.Bytes:
-                    writer.WriteString(new FixedString32Bytes("bytes"));
+                    writer.WriteString(new FixedString32Bytes("tb"));
                     AlgoApiFormatterCache<TealBytes>.Formatter.Serialize(ref writer, value.Bytes);
                     break;
                 case TealValueType.Uint:
-                    writer.WriteString(new FixedString32Bytes("uint"));
+                    writer.WriteString(new FixedString32Bytes("ui"));
                     AlgoApiFormatterCache<ulong>.Formatter.Serialize(ref writer, value.Uint);
                     break;
                 default:
