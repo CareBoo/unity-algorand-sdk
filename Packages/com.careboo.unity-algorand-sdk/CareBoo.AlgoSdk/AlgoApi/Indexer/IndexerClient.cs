@@ -19,7 +19,7 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<AccountResponse>> GetAccount(ulong accountId, AccountQuery query = default)
         {
-            throw new System.NotImplementedException();
+            return await this.GetAsync($"/v2/accounts/{accountId}", query);
         }
 
         public async UniTask<AlgoApiResponse<AccountsResponse>> GetAccounts(AccountsQuery query = default)
