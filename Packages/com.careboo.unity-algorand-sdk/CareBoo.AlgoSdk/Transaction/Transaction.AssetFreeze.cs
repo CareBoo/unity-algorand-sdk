@@ -144,8 +144,13 @@ namespace AlgoSdk
             public struct Params
                 : IEquatable<Params>
             {
+                [AlgoApiField("address", "fadd")]
                 public Address FreezeAccount;
+
+                [AlgoApiField("asset-id", "faid")]
                 public ulong FreezeAsset;
+
+                [AlgoApiField("new-freeze-status", "afrz")]
                 public Optional<bool> AssetFrozen;
 
                 public Params(
