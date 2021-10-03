@@ -9,7 +9,9 @@
         "Unity.Mathematics",
         "CareBoo.AlgoSdk.LowLevel"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
