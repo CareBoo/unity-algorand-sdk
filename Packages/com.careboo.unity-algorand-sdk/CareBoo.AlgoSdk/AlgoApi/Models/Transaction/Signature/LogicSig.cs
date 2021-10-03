@@ -10,16 +10,16 @@ namespace AlgoSdk
         : ISignature
         , IEquatable<LogicSig>
     {
-        [AlgoApiField(null, "l")]
+        [AlgoApiField("logicsig", "l")]
         public byte[] Program;
 
-        [AlgoApiField(null, "arg")]
+        [AlgoApiField("args", "arg")]
         public FixedList128Bytes<byte>[] Args;
 
-        [AlgoApiField(null, "sig")]
+        [AlgoApiField("signature", "sig")]
         public Sig Sig;
 
-        [AlgoApiField(null, "msig")]
+        [AlgoApiField("multisig-signature", "msig")]
         public MultiSig MultiSig;
 
         public bool Equals(LogicSig other)
@@ -33,7 +33,6 @@ namespace AlgoSdk
 
         public bool IsValid(Address sender)
         {
-
             using var programByteArray = new NativeByteArray(Program, Allocator.Temp);
             return Sig.Verify(programByteArray, sender)
                 || MultiSig.Verify(programByteArray, sender)
