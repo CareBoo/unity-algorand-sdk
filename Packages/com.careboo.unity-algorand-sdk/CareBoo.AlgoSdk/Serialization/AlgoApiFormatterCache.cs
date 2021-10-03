@@ -33,6 +33,7 @@ namespace AlgoSdk
             AddFormatter<ulong>(new UInt64Formatter());
             AddFormatter<bool>(new BoolFormatter());
             AddFormatter<string>(new StringFormatter());
+            AddFormatter<DateTime>(new DateTimeFormatter());
             AddFormatter<Sha512_256_Hash>(ByteArrayFormatter<Sha512_256_Hash>.Instance);
             AddFormatter<byte[]>(new ByteArrayFormatter());
             AddFormatter<FixedString32Bytes>(new FixedStringFormatter<FixedString32Bytes>());
