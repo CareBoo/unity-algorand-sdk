@@ -18,6 +18,8 @@ namespace AlgoSdk
     [AlgoApiFormatter(typeof(SignedTransactionFormatter<Transaction.AssetConfiguration>))]
     [AlgoApiFormatter(typeof(SignedTransactionFormatter<Transaction.AssetFreeze>))]
     [AlgoApiFormatter(typeof(SignedTransactionFormatter<Transaction.AssetTransfer>))]
+    [AlgoApiFormatter(typeof(SignedTransactionFormatter<Transaction.ApplicationCall>))]
+    [AlgoApiFormatter(typeof(SignedTransactionFormatter<Transaction.KeyRegistration>))]
     public struct SignedTransaction<TTransaction>
         : ISignedTransaction
         , IEquatable<SignedTransaction<TTransaction>>

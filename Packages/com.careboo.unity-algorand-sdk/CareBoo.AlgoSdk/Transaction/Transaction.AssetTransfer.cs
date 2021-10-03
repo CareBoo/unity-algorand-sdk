@@ -179,7 +179,7 @@ namespace AlgoSdk
                 [AlgoApiField("close-to", "aclose")]
                 public Address AssetCloseTo;
 
-                [AlgoApiField("close-amount", null)]
+                [AlgoApiField("close-amount", "close-amount")]
                 public ulong CloseAmount;
 
                 public Params(
