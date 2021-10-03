@@ -4,8 +4,8 @@ using Unity.Collections;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct APIV1Wallet
-        : IEquatable<APIV1Wallet>
+    public struct Wallet
+        : IEquatable<Wallet>
     {
         [AlgoApiField("driver_name", null)]
         public FixedString64Bytes DriverName;
@@ -25,7 +25,7 @@ namespace AlgoSdk
         [AlgoApiField("supported_txs", null)]
         public TransactionType[] SupportedTransactions;
 
-        public bool Equals(APIV1Wallet other)
+        public bool Equals(Wallet other)
         {
             return Id.Equals(other.Id);
         }
