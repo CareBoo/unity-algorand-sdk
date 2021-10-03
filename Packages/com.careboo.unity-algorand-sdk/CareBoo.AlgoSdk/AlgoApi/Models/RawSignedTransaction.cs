@@ -9,7 +9,7 @@ namespace AlgoSdk
         : IEquatable<RawSignedTransaction>
     {
         [AlgoApiField("txn", "txn")]
-        public RawTransaction Transaction;
+        public Transaction Transaction;
 
         [AlgoApiField("sig", "sig")]
         public Signature Sig;

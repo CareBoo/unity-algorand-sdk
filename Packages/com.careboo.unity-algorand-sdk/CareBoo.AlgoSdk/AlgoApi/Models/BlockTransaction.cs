@@ -7,7 +7,7 @@ namespace AlgoSdk
         : IEquatable<BlockTransaction>
     {
         [AlgoApiField("txn", "txn")]
-        public RawTransaction Transaction
+        public Transaction Transaction
         {
             get => signedTxn.Transaction;
             set => signedTxn.Transaction = value;
