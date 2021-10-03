@@ -26,7 +26,7 @@ namespace AlgoSdk
         public DryrunSource[] Sources;
 
         [AlgoApiField("txns", null)]
-        public RawTransaction[] Transactions;
+        public Transaction[] Transactions;
 
         public bool Equals(DryrunRequest other)
         {

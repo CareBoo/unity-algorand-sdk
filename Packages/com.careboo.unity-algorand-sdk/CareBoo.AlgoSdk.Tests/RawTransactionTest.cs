@@ -10,7 +10,7 @@ public class RawTransactionTest
     [Test]
     public void SerializedTransactionShouldEqualDeserializedTransaction()
     {
-        var transaction = new RawTransaction();
+        var transaction = new Transaction();
         transaction.Fee = 32;
         transaction.FirstValidRound = 1009;
         transaction.GenesisHash = AlgoSdk.Crypto.Random.Bytes<Sha512_256_Hash>();
@@ -22,7 +22,7 @@ public class RawTransactionTest
         using var bytes = new NativeList<byte>(Allocator.Temp);
         AlgoApiSerializer.SerializeMessagePack(transaction, bytes);
         Debug.Log(System.Convert.ToBase64String(bytes.ToArray()));
-        var deserialized = AlgoApiSerializer.DeserializeMessagePack<RawTransaction>(bytes.AsArray().AsReadOnly());
+        var deserialized = AlgoApiSerializer.DeserializeMessagePack<Transaction>(bytes.AsArray().AsReadOnly());
         Assert.IsTrue(transaction.Equals(deserialized));
     }
 
@@ -30,8 +30,8 @@ public class RawTransactionTest
     public void SizeOfRawTransactionShouldBeUnder4KB()
     {
         const int MAX_BYTES = 4000;
-        var size = UnsafeUtility.SizeOf<RawTransaction>();
-        UnityEngine.Debug.Log($"Size of {nameof(RawTransaction)}: {size}");
+        var size = UnsafeUtility.SizeOf<Transaction>();
+        UnityEngine.Debug.Log($"Size of {nameof(Transaction)}: {size}");
         Assert.IsTrue(size <= MAX_BYTES);
     }
 }
