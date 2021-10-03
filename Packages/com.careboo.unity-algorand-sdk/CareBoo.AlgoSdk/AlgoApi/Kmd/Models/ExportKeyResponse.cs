@@ -17,7 +17,10 @@ namespace AlgoSdk
 
         public bool Equals(ExportKeyResponse other)
         {
-            throw new NotImplementedException();
+            return Error.Equals(other.Error)
+                && Message.Equals(other.Message)
+                && PrivateKey.Equals(other.PrivateKey)
+                ;
         }
     }
 }
