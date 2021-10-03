@@ -36,6 +36,12 @@ namespace AlgoSdk.MessagePack
             throw InsufficientBuffer();
         }
 
+        public void ReadRaw(NativeList<byte> bytes)
+        {
+            if (!TryReadRaw(bytes))
+                throw InsufficientBuffer();
+        }
+
         bool TryRead<T>(out T value) where T : struct
         {
             value = default;
@@ -78,6 +84,78 @@ namespace AlgoSdk.MessagePack
                 return false;
             code = data[offset];
             return true;
+        }
+
+        public bool TryReadRaw(NativeList<byte> bytes)
+        {
+            if (!TryPeek(out byte code)) return false;
+
+            switch (code)
+            {
+                case MessagePackCode.Nil:
+                case MessagePackCode.True:
+                case MessagePackCode.False:
+                    return TryAdvance(1, bytes);
+                case MessagePackCode.Int8:
+                case MessagePackCode.UInt8:
+                    return TryAdvance(2, bytes);
+                case MessagePackCode.Int16:
+                case MessagePackCode.UInt16:
+                    return TryAdvance(3, bytes);
+                case MessagePackCode.Int32:
+                case MessagePackCode.UInt32:
+                case MessagePackCode.Float32:
+                    return TryAdvance(5, bytes);
+                case MessagePackCode.Int64:
+                case MessagePackCode.UInt64:
+                case MessagePackCode.Float64:
+                    return TryAdvance(9, bytes);
+                case MessagePackCode.Map16:
+                case MessagePackCode.Map32:
+                    return TryReadRawNextMap(bytes);
+                case MessagePackCode.Array16:
+                case MessagePackCode.Array32:
+                    return TryReadRawNextArray(bytes);
+                case MessagePackCode.Str8:
+                case MessagePackCode.Str16:
+                case MessagePackCode.Str32:
+                    return TryReadRawNextString(bytes);
+                case MessagePackCode.Bin8:
+                case MessagePackCode.Bin16:
+                case MessagePackCode.Bin32:
+                    return TryReadRawNextBinary(bytes);
+                case MessagePackCode.FixExt1:
+                case MessagePackCode.FixExt2:
+                case MessagePackCode.FixExt4:
+                case MessagePackCode.FixExt8:
+                case MessagePackCode.FixExt16:
+                case MessagePackCode.Ext8:
+                case MessagePackCode.Ext16:
+                case MessagePackCode.Ext32:
+                    return TryReadRawNextExtension(bytes);
+                default:
+                    if ((code >= MessagePackCode.MinNegativeFixInt && code <= MessagePackCode.MaxNegativeFixInt) ||
+                        (code >= MessagePackCode.MinFixInt && code <= MessagePackCode.MaxFixInt))
+                    {
+                        return TryAdvance(1, bytes);
+                    }
+
+                    if (code >= MessagePackCode.MinFixMap && code <= MessagePackCode.MaxFixMap)
+                    {
+                        return TryReadRawNextMap(bytes);
+                    }
+
+                    if (code >= MessagePackCode.MinFixArray && code <= MessagePackCode.MaxFixArray)
+                    {
+                        return TryReadRawNextArray(bytes);
+                    }
+
+                    if (code >= MessagePackCode.MinFixStr && code <= MessagePackCode.MaxFixStr)
+                    {
+                        return TryReadRawNextString(bytes);
+                    }
+                    throw new NotSupportedException($"msgpack code not supported: {code}");
+            }
         }
 
         public bool TrySkip()
@@ -146,7 +224,7 @@ namespace AlgoSdk.MessagePack
 
                     if (code >= MessagePackCode.MinFixStr && code <= MessagePackCode.MaxFixStr)
                     {
-                        return this.TryGetStringLengthInBytes(out length) && TryAdvance(length);
+                        return TryGetStringLengthInBytes(out length) && TryAdvance(length);
                     }
                     throw new NotSupportedException($"msgpack code not supported: {code}");
             }
@@ -166,6 +244,21 @@ namespace AlgoSdk.MessagePack
             if (result >= data.Length) return false;
             offset = result;
             return true;
+        }
+
+        bool TryAdvance(int x, NativeList<byte> buffer)
+        {
+            if (!TryAdvance(x)) return false;
+            unsafe
+            {
+                buffer.AddRange(GetCurrentUnsafePtr() - x, x);
+            }
+            return true;
+        }
+
+        unsafe byte* GetCurrentUnsafePtr()
+        {
+            return (byte*)data.GetUnsafeReadOnlyPtr() + offset;
         }
     }
 }
