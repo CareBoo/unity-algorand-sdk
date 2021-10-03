@@ -39,6 +39,24 @@ namespace AlgoSdk
         public static readonly SignatureTypeComparer Instance = new SignatureTypeComparer();
     }
 
+    public class OnCompletionComparer : IEqualityComparer<OnCompletion>
+    {
+        bool IEqualityComparer<OnCompletion>.Equals(OnCompletion x, OnCompletion y) => Equals(x, y);
+        int IEqualityComparer<OnCompletion>.GetHashCode(OnCompletion obj) => GetHashCode(obj);
+
+        public static bool Equals(OnCompletion x, OnCompletion y)
+        {
+            return x == y;
+        }
+
+        public static int GetHashCode(OnCompletion obj)
+        {
+            return obj.GetHashCode();
+        }
+
+        public static readonly OnCompletionComparer Instance = new OnCompletionComparer();
+    }
+
     public class ArrayComparer<T> : IEqualityComparer<T[]>
         where T : IEquatable<T>
     {

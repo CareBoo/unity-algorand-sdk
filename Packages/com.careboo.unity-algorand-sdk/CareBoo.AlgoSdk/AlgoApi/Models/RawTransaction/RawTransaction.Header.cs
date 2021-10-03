@@ -171,5 +171,12 @@ namespace AlgoSdk
             get => Header.SenderRewards;
             set => Header.SenderRewards = value;
         }
+
+        [AlgoApiField("on-completion", "apan", readOnly: true)]
+        public OnCompletion OnCompletion
+        {
+            get => Header.OnCompletion;
+            set => Header.OnCompletion = value;
+        }
     }
 }

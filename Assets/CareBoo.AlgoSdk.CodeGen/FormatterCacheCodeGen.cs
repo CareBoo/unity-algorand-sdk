@@ -238,7 +238,8 @@ namespace AlgoSdk.Editor.CodeGen
             {typeof(string), typeof(StringComparer)},
             {typeof(EvalDeltaAction), typeof(EvalDeltaActionComparer)},
             {typeof(TransactionType), typeof(TransactionTypeComparer)},
-            {typeof(SignatureType), typeof(SignatureTypeComparer)}
+            {typeof(SignatureType), typeof(SignatureTypeComparer)},
+            {typeof(OnCompletion), typeof(OnCompletionComparer)}
         };
     }
 }
