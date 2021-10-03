@@ -37,8 +37,6 @@ namespace AlgoSdk
                 ;
         }
 
-        public bool Verify() => Transaction.VerifySignature();
-
         public static implicit operator SignedTransaction(Transaction txn)
         {
             return new SignedTransaction { Transaction = txn };
