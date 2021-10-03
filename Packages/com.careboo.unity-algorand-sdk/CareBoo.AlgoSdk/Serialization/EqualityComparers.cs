@@ -57,6 +57,24 @@ namespace AlgoSdk
         public static readonly OnCompletionComparer Instance = new OnCompletionComparer();
     }
 
+    public class AddressRoleComparer : IEqualityComparer<AddressRole>
+    {
+        bool IEqualityComparer<AddressRole>.Equals(AddressRole x, AddressRole y) => Equals(x, y);
+        int IEqualityComparer<AddressRole>.GetHashCode(AddressRole obj) => GetHashCode(obj);
+
+        public static bool Equals(AddressRole x, AddressRole y)
+        {
+            return x == y;
+        }
+
+        public static int GetHashCode(AddressRole obj)
+        {
+            return obj.GetHashCode();
+        }
+
+        public static readonly AddressRoleComparer Instance = new AddressRoleComparer();
+    }
+
     public class ArrayComparer<T> : IEqualityComparer<T[]>
         where T : IEquatable<T>
     {

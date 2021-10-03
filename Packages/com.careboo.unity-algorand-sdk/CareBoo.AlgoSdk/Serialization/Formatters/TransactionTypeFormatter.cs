@@ -6,7 +6,7 @@ using Unity.Collections;
 
 namespace AlgoSdk.Formatters
 {
-    public sealed class TransactionTypeFormatter : IAlgoApiFormatter<TransactionType>
+    public class TransactionTypeFormatter : IAlgoApiFormatter<TransactionType>
     {
         private static readonly FixedString32Bytes[] typeToString = new FixedString32Bytes[(int)TransactionType.Count]
         {
