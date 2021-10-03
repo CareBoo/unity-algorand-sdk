@@ -22,7 +22,7 @@ namespace AlgoSdk
         public Optional<ulong> OptedInAtRound;
 
         [AlgoApiField("schema", null)]
-        public ApplicationStateSchema Schema;
+        public StateSchema Schema;
 
         public bool Equals(ApplicationLocalState other)
         {

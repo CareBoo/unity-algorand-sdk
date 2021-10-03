@@ -7,7 +7,7 @@ namespace AlgoSdk
     [AlgoApiFormatter(typeof(OptionalFormatter<ulong>))]
     [AlgoApiFormatter(typeof(OptionalFormatter<Address>))]
     [AlgoApiFormatter(typeof(OptionalFormatter<AccountParticipation>))]
-    [AlgoApiFormatter(typeof(OptionalFormatter<ApplicationStateSchema>))]
+    [AlgoApiFormatter(typeof(OptionalFormatter<StateSchema>))]
     public struct Optional<T>
         : IEquatable<Optional<T>>
         where T : struct, IEquatable<T>

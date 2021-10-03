@@ -118,12 +118,12 @@ namespace AlgoSdk
                 get => @params.ForeignAssets;
                 set => @params.ForeignAssets = value;
             }
-            public Optional<ApplicationStateSchema> GlobalStateSchema
+            public Optional<StateSchema> GlobalStateSchema
             {
                 get => @params.GlobalStateSchema;
                 set => @params.GlobalStateSchema = value;
             }
-            public Optional<ApplicationStateSchema> LocalStateSchema
+            public Optional<StateSchema> LocalStateSchema
             {
                 get => @params.LocalStateSchema;
                 set => @params.LocalStateSchema = value;
@@ -209,10 +209,10 @@ namespace AlgoSdk
                 public Address[] ForeignAssets;
 
                 [AlgoApiField("global-state-schema", "global-state-schema")]
-                public Optional<ApplicationStateSchema> GlobalStateSchema;
+                public Optional<StateSchema> GlobalStateSchema;
 
                 [AlgoApiField("local-state-schema", "local-state-schema")]
-                public Optional<ApplicationStateSchema> LocalStateSchema;
+                public Optional<StateSchema> LocalStateSchema;
 
                 [AlgoApiField("extra-program-pages", "epp")]
                 public Optional<ulong> ExtraProgramPages;
