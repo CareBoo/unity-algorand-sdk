@@ -50,24 +50,6 @@ namespace AlgoSdk
                 };
         }
 
-        public bool VerifySignature()
-        {
-            if (!Signature.Sig.Equals(default))
-            {
-                using var msg = ToSignatureMessage(Allocator.Temp);
-                return Signature.Sig.Verify(msg, Sender);
-            }
-            if (!Signature.LogicSig.Equals(default))
-            {
-                return Signature.LogicSig.IsValid(Sender);
-            }
-            if (!Signature.MultiSig.Equals(default))
-            {
-
-            }
-            throw new ArgumentException("No sig set...", nameof(Signature));
-        }
-
         public Transaction Sign(Ed25519.SecretKeyHandle secretKey)
         {
             Signature = default;
