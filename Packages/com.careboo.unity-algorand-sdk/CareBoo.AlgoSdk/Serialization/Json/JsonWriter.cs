@@ -20,6 +20,12 @@ namespace AlgoSdk.Json
 
         public JsonWriter EndArray() => WriteChar(']');
 
+        public JsonWriter WriteRaw(NativeText raw)
+        {
+            text.Append(raw);
+            return this;
+        }
+
         public JsonWriter WriteString<T>(in T fs)
             where T : struct, INativeList<byte>, IUTF8Bytes
         {
