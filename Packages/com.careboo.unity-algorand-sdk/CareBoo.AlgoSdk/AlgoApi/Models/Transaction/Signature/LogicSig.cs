@@ -34,8 +34,8 @@ namespace AlgoSdk
         public bool IsValid(Address sender)
         {
             using var programByteArray = new NativeByteArray(Program, Allocator.Temp);
-            return Sig.Verify(programByteArray, sender)
-                || MultiSig.Verify(programByteArray, sender)
+            return (!Sig.Equals(default) && Sig.Verify(programByteArray, sender))
+                || (!MultiSig.Equals(default) && MultiSig.Verify(programByteArray))
                 || VerifyProgram(programByteArray, sender)
                 ;
         }

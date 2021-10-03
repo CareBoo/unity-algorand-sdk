@@ -10,40 +10,38 @@ namespace AlgoSdk
         , IEquatable<MultiSig>
     {
 
+        [AlgoApiField("subsignature", "subsig")]
+        public SubSignature[] SubSignatures;
+
+        [AlgoApiField("threshold", "thr")]
+        public ulong Threshold;
+
+        [AlgoApiField("version", "v")]
+        public ulong Version;
+
         public bool Equals(MultiSig other)
         {
-            return true;
+            return ArrayComparer.Equals(SubSignatures, other.SubSignatures)
+                && Threshold.Equals(other.Threshold)
+                && Version.Equals(other.Version)
+                ;
         }
 
-        public override bool Equals(object obj)
-        {
-            return obj is MultiSig msig && this.Equals(msig);
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
-
-        public bool Verify<TMessage>(TMessage message, Crypto.Ed25519.PublicKey pk)
+        public bool Verify<TMessage>(TMessage message)
             where TMessage : IByteArray
         {
-            throw new System.NotImplementedException();
-        }
-
-        public static bool operator ==(in MultiSig x, in MultiSig y)
-        {
-            return true;
-        }
-
-        public static bool operator !=(in MultiSig x, in MultiSig y)
-        {
-            return false;
+            ulong verified = 0;
+            if (SubSignatures != null)
+            {
+                for (var i = 0; i < SubSignatures.Length; i++)
+                {
+                    var pk = SubSignatures[i].PublicKey;
+                    var sig = SubSignatures[i].Signature;
+                    if (sig.Verify(message, pk))
+                        verified++;
+                }
+            }
+            return verified >= Threshold;
         }
 
         [AlgoApiObject]
