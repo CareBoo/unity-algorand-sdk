@@ -3,43 +3,33 @@ using System;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public partial struct RawTransaction
-        : IEquatable<RawTransaction>
+    public partial struct Transaction
+        : IEquatable<Transaction>
     {
-        public Transaction.Header Header;
+        public Header HeaderParams;
 
         [AlgoApiField("payment-transaction", null, readOnly: true)]
-        public Transaction.Payment.Params PaymentParams;
+        public Payment.Params PaymentParams;
 
         [AlgoApiField("asset-config-transaction", null, readOnly: true)]
-        public Transaction.AssetConfiguration.Params AssetConfigurationParams;
+        public AssetConfiguration.Params AssetConfigurationParams;
 
         [AlgoApiField("asset-transfer-transaction", null, readOnly: true)]
-        public Transaction.AssetTransfer.Params AssetTransferParams;
+        public AssetTransfer.Params AssetTransferParams;
 
         [AlgoApiField("asset-freeze-transaction", null, readOnly: true)]
-        public Transaction.AssetFreeze.Params AssetFreezeParams;
+        public AssetFreeze.Params AssetFreezeParams;
 
         [AlgoApiField("application-transaction", null, readOnly: true)]
-        public Transaction.ApplicationCall.Params ApplicationCallParams;
+        public ApplicationCall.Params ApplicationCallParams;
 
         [AlgoApiField("keyreg-transaction", null, readOnly: true)]
-        public Transaction.KeyRegistration.Params KeyRegistrationParams;
+        public KeyRegistration.Params KeyRegistrationParams;
 
-        public static bool operator ==(in RawTransaction x, in RawTransaction y)
+        public bool Equals(Transaction other)
         {
-            return x.Equals(y);
-        }
-
-        public static bool operator !=(in RawTransaction x, in RawTransaction y)
-        {
-            return !x.Equals(y);
-        }
-
-        public bool Equals(RawTransaction other)
-        {
-            return Header.Equals(other.Header)
-                && TransactionType switch
+            return HeaderParams.Equals(other.HeaderParams)
+                && HeaderParams.TransactionType switch
                 {
                     TransactionType.Payment => PaymentParams.Equals(other.PaymentParams),
                     TransactionType.AssetConfiguration => AssetConfigurationParams.Equals(other.AssetConfigurationParams),
@@ -50,14 +40,5 @@ namespace AlgoSdk
                     _ => true
                 };
         }
-
-        public override bool Equals(object obj)
-        {
-            if (obj is RawTransaction other)
-                return Equals(other);
-            return false;
-        }
-
-        public override int GetHashCode() => Header.GetHashCode();
     }
 }

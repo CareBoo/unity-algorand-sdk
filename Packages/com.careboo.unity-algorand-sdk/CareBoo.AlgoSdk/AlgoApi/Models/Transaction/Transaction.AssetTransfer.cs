@@ -4,8 +4,43 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
-    public static partial class Transaction
+    public partial struct Transaction
     {
+        [AlgoApiField(null, "xaid")]
+        public ulong XferAsset
+        {
+            get => AssetTransferParams.XferAsset;
+            set => AssetTransferParams.XferAsset = value;
+        }
+
+        [AlgoApiField(null, "aamt")]
+        public ulong AssetAmount
+        {
+            get => AssetTransferParams.AssetAmount;
+            set => AssetTransferParams.AssetAmount = value;
+        }
+
+        [AlgoApiField(null, "asnd")]
+        public Address AssetSender
+        {
+            get => AssetTransferParams.AssetSender;
+            set => AssetTransferParams.AssetSender = value;
+        }
+
+        [AlgoApiField(null, "arcv")]
+        public Address AssetReceiver
+        {
+            get => AssetTransferParams.AssetReceiver;
+            set => AssetTransferParams.AssetReceiver = value;
+        }
+
+        [AlgoApiField(null, "aclose")]
+        public Address AssetCloseTo
+        {
+            get => AssetTransferParams.AssetCloseTo;
+            set => AssetTransferParams.AssetCloseTo = value;
+        }
+
         public struct AssetTransfer
             : ITransaction
             , IEquatable<AssetTransfer>
@@ -142,16 +177,16 @@ namespace AlgoSdk
                 );
             }
 
-            public void CopyTo(ref RawTransaction rawTransaction)
+            public void CopyTo(ref Transaction transaction)
             {
-                rawTransaction.Header = header;
-                rawTransaction.AssetTransferParams = @params;
+                transaction.HeaderParams = header;
+                transaction.AssetTransferParams = @params;
             }
 
-            public void CopyFrom(RawTransaction rawTransaction)
+            public void CopyFrom(Transaction transaction)
             {
-                Header = rawTransaction.Header;
-                @params = rawTransaction.AssetTransferParams;
+                Header = transaction.HeaderParams;
+                @params = transaction.AssetTransferParams;
             }
 
             public bool Equals(AssetTransfer other)

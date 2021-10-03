@@ -4,8 +4,29 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
-    public static partial class Transaction
+    public partial struct Transaction
     {
+        [AlgoApiField(null, "rcv")]
+        public Address Receiver
+        {
+            get => PaymentParams.Receiver;
+            set => PaymentParams.Receiver = value;
+        }
+
+        [AlgoApiField(null, "amt")]
+        public ulong Amount
+        {
+            get => PaymentParams.Amount;
+            set => PaymentParams.Amount = value;
+        }
+
+        [AlgoApiField(null, "close")]
+        public Address CloseRemainderTo
+        {
+            get => PaymentParams.CloseRemainderTo;
+            set => PaymentParams.CloseRemainderTo = value;
+        }
+
         public struct Payment
             : ITransaction
             , IEquatable<Payment>
@@ -126,16 +147,16 @@ namespace AlgoSdk
                 );
             }
 
-            public void CopyTo(ref RawTransaction rawTransaction)
+            public void CopyTo(ref Transaction transaction)
             {
-                rawTransaction.Header = header;
-                rawTransaction.PaymentParams = @params;
+                transaction.HeaderParams = header;
+                transaction.PaymentParams = @params;
             }
 
-            public void CopyFrom(RawTransaction rawTransaction)
+            public void CopyFrom(Transaction transaction)
             {
-                header = rawTransaction.Header;
-                @params = rawTransaction.PaymentParams;
+                header = transaction.HeaderParams;
+                @params = transaction.PaymentParams;
             }
 
             public bool Equals(Payment other)

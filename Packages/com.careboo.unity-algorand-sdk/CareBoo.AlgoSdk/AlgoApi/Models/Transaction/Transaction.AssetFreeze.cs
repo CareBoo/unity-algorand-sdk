@@ -4,11 +4,32 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
-    public static partial class Transaction
+    public partial struct Transaction
     {
-        public struct AssetConfiguration
+        [AlgoApiField(null, "fadd")]
+        public Address FreezeAccount
+        {
+            get => AssetFreezeParams.FreezeAccount;
+            set => AssetFreezeParams.FreezeAccount = value;
+        }
+
+        [AlgoApiField(null, "faid")]
+        public ulong FreezeAsset
+        {
+            get => AssetFreezeParams.FreezeAsset;
+            set => AssetFreezeParams.FreezeAsset = value;
+        }
+
+        [AlgoApiField(null, "afrz")]
+        public Optional<bool> AssetFrozen
+        {
+            get => AssetFreezeParams.AssetFrozen;
+            set => AssetFreezeParams.AssetFrozen = value;
+        }
+
+        public struct AssetFreeze
             : ITransaction
-            , IEquatable<AssetConfiguration>
+            , IEquatable<AssetFreeze>
         {
             Header header;
 
@@ -78,26 +99,33 @@ namespace AlgoSdk
                 set => header.RekeyTo = value;
             }
 
-            public ulong ConfigAsset
+            public Address FreezeAccount
             {
-                get => @params.ConfigAsset;
-                set => @params.ConfigAsset = value;
+                get => @params.FreezeAccount;
+                set => @params.FreezeAccount = value;
             }
 
-            public AssetParams AssetParams
+            public ulong FreezeAsset
             {
-                get => @params.AssetParams;
-                set => @params.AssetParams = value;
+                get => @params.FreezeAsset;
+                set => @params.FreezeAsset = value;
             }
 
-            public AssetConfiguration(
+            public Optional<bool> AssetFrozen
+            {
+                get => @params.AssetFrozen;
+                set => @params.AssetFrozen = value;
+            }
+
+            public AssetFreeze(
                 ulong fee,
                 ulong firstValidRound,
                 Sha512_256_Hash genesisHash,
                 ulong lastValidRound,
                 Address sender,
-                ulong configAsset,
-                AssetParams assetParams
+                Address freezeAccount,
+                ulong freezeAsset,
+                bool assetFrozen
             )
             {
                 header = new Header(
@@ -106,56 +134,62 @@ namespace AlgoSdk
                     genesisHash,
                     lastValidRound,
                     sender,
-                    TransactionType.AssetConfiguration
+                    TransactionType.AssetFreeze
                 );
                 @params = new Params(
-                    configAsset,
-                    assetParams
+                    freezeAccount,
+                    freezeAsset,
+                    assetFrozen
                 );
             }
 
-            public void CopyTo(ref RawTransaction rawTransaction)
+            public void CopyTo(ref Transaction transaction)
             {
-                rawTransaction.Header = header;
-                rawTransaction.AssetConfigurationParams = @params;
+                transaction.HeaderParams = header;
+                transaction.AssetFreezeParams = @params;
             }
 
-            public void CopyFrom(RawTransaction rawTransaction)
+            public void CopyFrom(Transaction transaction)
             {
-                header = rawTransaction.Header;
-                @params = rawTransaction.AssetConfigurationParams;
+                header = transaction.HeaderParams;
+                @params = transaction.AssetFreezeParams;
             }
 
-            public bool Equals(AssetConfiguration other)
+            public bool Equals(AssetFreeze other)
             {
-                return header.Equals(other.header)
+                return header.Equals(other.Header)
                     && @params.Equals(other.@params)
                     ;
             }
 
-            [AlgoApiObject]
             public struct Params
                 : IEquatable<Params>
             {
-                [AlgoApiField("asset-id", "xaid")]
-                public ulong ConfigAsset;
+                [AlgoApiField("address", "fadd")]
+                public Address FreezeAccount;
 
-                [AlgoApiField("params", "params")]
-                public AssetParams AssetParams;
+                [AlgoApiField("asset-id", "faid")]
+                public ulong FreezeAsset;
+
+                [AlgoApiField("new-freeze-status", "afrz")]
+                public Optional<bool> AssetFrozen;
 
                 public Params(
-                    ulong configAsset,
-                    AssetParams assetParams
+                    Address freezeAccount,
+                    ulong freezeAsset,
+                    bool assetFrozen
                 )
                 {
-                    ConfigAsset = configAsset;
-                    AssetParams = assetParams;
+                    FreezeAccount = freezeAccount;
+                    FreezeAsset = freezeAsset;
+                    AssetFrozen = assetFrozen;
                 }
 
                 public bool Equals(Params other)
                 {
-                    return ConfigAsset.Equals(other.ConfigAsset)
-                        && AssetParams.Equals(other.AssetParams)
+                    return FreezeAccount.Equals(other.FreezeAccount)
+                        && FreezeAsset.Equals(other.FreezeAccount)
+                        && AssetFrozen.Equals(other.AssetFrozen)
                         ;
                 }
             }
