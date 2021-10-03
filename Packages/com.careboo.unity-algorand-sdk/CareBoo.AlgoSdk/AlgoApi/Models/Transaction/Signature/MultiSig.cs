@@ -1,12 +1,15 @@
 using System;
+using AlgoSdk.Crypto;
 using AlgoSdk.LowLevel;
 
 namespace AlgoSdk
 {
+    [AlgoApiObject]
     public struct MultiSig
         : ISignature
         , IEquatable<MultiSig>
     {
+
         public bool Equals(MultiSig other)
         {
             return true;
@@ -27,7 +30,8 @@ namespace AlgoSdk
             return base.ToString();
         }
 
-        public bool Verify<TMessage>(TMessage message, Crypto.Ed25519.PublicKey pk) where TMessage : IByteArray
+        public bool Verify<TMessage>(TMessage message, Crypto.Ed25519.PublicKey pk)
+            where TMessage : IByteArray
         {
             throw new System.NotImplementedException();
         }
@@ -40,6 +44,22 @@ namespace AlgoSdk
         public static bool operator !=(in MultiSig x, in MultiSig y)
         {
             return false;
+        }
+
+        [AlgoApiObject]
+        public struct SubSignature
+            : IEquatable<SubSignature>
+        {
+            [AlgoApiField("public-key", "pk")]
+            public Ed25519.PublicKey PublicKey;
+
+            [AlgoApiField("signature", "s")]
+            public Sig Signature;
+
+            public bool Equals(SubSignature other)
+            {
+                return Signature.Equals(other.Signature);
+            }
         }
     }
 }
