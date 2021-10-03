@@ -9,7 +9,6 @@ namespace AlgoSdk
         : ISignature
         , IEquatable<MultiSig>
     {
-
         [AlgoApiField("subsignature", "subsig")]
         public SubSignature[] SubSignatures;
 
