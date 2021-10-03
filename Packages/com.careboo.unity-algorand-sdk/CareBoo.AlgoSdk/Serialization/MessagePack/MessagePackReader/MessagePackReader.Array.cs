@@ -1,3 +1,5 @@
+using Unity.Collections;
+
 namespace AlgoSdk.MessagePack
 {
     public ref partial struct MessagePackReader
@@ -29,6 +31,29 @@ namespace AlgoSdk.MessagePack
                         break;
                     }
                     throw InvalidCode(code);
+            }
+            return true;
+        }
+
+        bool TryReadRawNextArray(NativeList<byte> bytes)
+        {
+            if (!TryPeek(out var code))
+                return false;
+
+            var resetOffset = offset;
+            if (!TryReadArrayHeader(out var length))
+            {
+                offset = resetOffset;
+                return false;
+            }
+            bytes.Add(code);
+            for (var i = 0; i < length; i++)
+            {
+                if (!TryReadRaw(bytes))
+                {
+                    offset = resetOffset;
+                    return false;
+                }
             }
             return true;
         }

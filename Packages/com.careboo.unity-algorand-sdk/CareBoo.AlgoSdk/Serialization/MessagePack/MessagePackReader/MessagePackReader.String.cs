@@ -97,5 +97,25 @@ namespace AlgoSdk.MessagePack
             }
             return false;
         }
+
+        bool TryReadRawNextString(NativeList<byte> bytes)
+        {
+            if (!TryPeek(out var code))
+                return false;
+
+            var resetOffset = offset;
+            if (!TryGetStringLengthInBytes(out var length))
+            {
+                offset = resetOffset;
+                return false;
+            }
+            bytes.Add(code);
+            if (!TryAdvance(length, bytes))
+            {
+                offset = resetOffset;
+                return false;
+            }
+            return true;
+        }
     }
 }
