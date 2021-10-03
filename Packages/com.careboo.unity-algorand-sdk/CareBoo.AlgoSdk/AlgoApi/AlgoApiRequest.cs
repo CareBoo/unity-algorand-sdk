@@ -1,7 +1,9 @@
 using System;
 using System.Runtime.CompilerServices;
+using System.Text;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using Unity.Collections;
 using UnityEngine.Networking;
 using static Cysharp.Threading.Tasks.UnityAsyncExtensions;
 
@@ -33,6 +35,16 @@ namespace AlgoSdk
         public static AlgoApiRequest Get(string token, string url)
         {
             var webRequest = UnityWebRequest.Get(url);
+            return new AlgoApiRequest(token, ref webRequest);
+        }
+
+        public static AlgoApiRequest Get(string token, string url, NativeText json)
+        {
+            var jsonBytes = Encoding.UTF8.GetBytes(json.ToString());
+            var webRequest = UnityWebRequest.Get(url);
+            webRequest.uploadHandler = new UploadHandlerRaw(jsonBytes);
+            webRequest.disposeUploadHandlerOnDispose = true;
+            webRequest.SetRequestHeader(ContentTypeHeader, "application/json");
             return new AlgoApiRequest(token, ref webRequest);
         }
 

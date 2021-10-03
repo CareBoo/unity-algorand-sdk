@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using Cysharp.Threading.Tasks;
 using Unity.Collections;
 
@@ -17,6 +16,17 @@ namespace AlgoSdk
             where T : IApiClient
         {
             return await AlgoApiRequest.Get(client.Token, client.GetUrl(endpoint)).Send();
+        }
+
+        public static async UniTask<AlgoApiResponse> GetAsync<T, TQuery>(this T client, string endpoint, TQuery query)
+            where T : IApiClient
+            where TQuery : struct, IEquatable<TQuery>
+        {
+            if (query.Equals(default))
+                return await client.GetAsync(endpoint);
+            using var json = new NativeText(Allocator.Persistent);
+            AlgoApiSerializer.SerializeJson(query, json);
+            return await AlgoApiRequest.Get(client.Token, client.GetUrl(endpoint), json).Send();
         }
 
         public static async UniTask<AlgoApiResponse> PostAsync<T>(this T client, string endpoint)
