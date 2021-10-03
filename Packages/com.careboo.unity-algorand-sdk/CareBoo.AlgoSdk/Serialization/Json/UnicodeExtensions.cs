@@ -6,7 +6,12 @@ namespace AlgoSdk.Json
     {
         public static bool IsWhiteSpaceOrSeparator(this Unicode.Rune rune)
         {
-            var c = rune.ToChar();
+            return rune.ToChar()
+                .IsWhiteSpaceOrSeparator();
+        }
+
+        public static bool IsWhiteSpaceOrSeparator(this char c)
+        {
             return c == ' ' || c == '\t' || c == '\n' || c == '\r'
                 || c == ',' || c == ':'
                 ;

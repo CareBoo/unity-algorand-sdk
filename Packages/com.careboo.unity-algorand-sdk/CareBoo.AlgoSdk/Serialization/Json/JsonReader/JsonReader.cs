@@ -1,3 +1,4 @@
+using System;
 using Unity.Collections;
 
 namespace AlgoSdk.Json
@@ -85,6 +86,27 @@ namespace AlgoSdk.Json
             return JsonReadError.ParseError;
         }
 
+        public JsonReadError ReadRaw<T>(ref T value)
+            where T : struct, INativeList<byte>, IUTF8Bytes
+        {
+            value.Clear();
+            var startToken = Peek();
+            char c = default;
+            while (offset < text.Length && !EndValue(startToken, c))
+            {
+                var r = text.Read(ref offset);
+                c = r.ToChar();
+                if (c == '\\')
+                {
+                    if (offset >= text.Length)
+                        return JsonReadError.IncorrectFormat;
+                    r = text.Read(ref offset);
+                }
+                value.Append(r);
+            }
+            return JsonReadError.None;
+        }
+
         public bool TryReadNull()
         {
             var token = Peek();
@@ -111,6 +133,17 @@ namespace AlgoSdk.Json
                 else
                     break;
             }
+        }
+
+        bool EndValue(JsonToken startToken, char c)
+        {
+            return startToken switch
+            {
+                JsonToken.ArrayBegin => c == ']',
+                JsonToken.ObjectBegin => c == '}',
+                JsonToken.String => c == '"',
+                _ => c.IsWhiteSpaceOrSeparator()
+            };
         }
     }
 }
