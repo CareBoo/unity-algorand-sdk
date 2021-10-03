@@ -187,7 +187,7 @@ namespace AlgoSdk
                 [AlgoApiField("application-id", "apid")]
                 public ulong ApplicationId;
 
-                [AlgoApiField("on-completion", null)]
+                [AlgoApiField("on-completion", "on-completion")]
                 public ulong OnComplete;
 
                 [AlgoApiField("accounts", "apat")]
@@ -208,10 +208,10 @@ namespace AlgoSdk
                 [AlgoApiField("foreign-assets", "apas")]
                 public Address[] ForeignAssets;
 
-                [AlgoApiField("global-state-schema", null)]
+                [AlgoApiField("global-state-schema", "global-state-schema")]
                 public Optional<ApplicationStateSchema> GlobalStateSchema;
 
-                [AlgoApiField("local-state-schema", null)]
+                [AlgoApiField("local-state-schema", "local-state-schema")]
                 public Optional<ApplicationStateSchema> LocalStateSchema;
 
                 [AlgoApiField("extra-program-pages", "epp")]

@@ -149,16 +149,16 @@ namespace AlgoSdk
             public struct Params
                 : IEquatable<Params>
             {
-                [AlgoApiField("receiver", null)]
+                [AlgoApiField("receiver", "rcv")]
                 public Address Receiver;
 
-                [AlgoApiField("amount", null)]
+                [AlgoApiField("amount", "amt")]
                 public ulong Amount;
 
-                [AlgoApiField("close-remainder-to", null)]
+                [AlgoApiField("close-remainder-to", "close")]
                 public Address CloseRemainderTo;
 
-                [AlgoApiField("close-amount", null)]
+                [AlgoApiField("close-amount", "close-amount")]
                 public Optional<ulong> CloseAmount;
 
                 public Params(
