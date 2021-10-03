@@ -29,42 +29,42 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<TransactionsResponse>> GetAccountTransactions(ulong accountId, TransactionsQuery query = default)
         {
-            throw new System.NotImplementedException();
+            return await this.GetAsync($"/v2/accounts/{accountId}/transactions", query);
         }
 
         public async UniTask<AlgoApiResponse<ApplicationResponse>> GetApplication(ulong applicationId, ApplicationsQuery query = default)
         {
-            throw new System.NotImplementedException();
+            return await this.GetAsync($"/v2/applications/{applicationId}", query);
         }
 
         public async UniTask<AlgoApiResponse<ApplicationsResponse>> GetApplications(ApplicationsQuery query = default)
         {
-            throw new System.NotImplementedException();
+            return await this.GetAsync("/v2/applications", query);
         }
 
         public async UniTask<AlgoApiResponse<AssetResponse>> GetAsset(ulong assetId, AssetQuery query = default)
         {
-            throw new System.NotImplementedException();
+            return await this.GetAsync($"/v2/assets/{assetId}", query);
         }
 
         public async UniTask<AlgoApiResponse<BalancesResponse>> GetAssetBalances(ulong assetId, BalancesQuery query = default)
         {
-            throw new System.NotImplementedException();
+            return await this.GetAsync($"/v2/assets/{assetId}/balances", query);
         }
 
         public async UniTask<AlgoApiResponse<AssetsResponse>> GetAssets(AssetsQuery query = default)
         {
-            throw new System.NotImplementedException();
+            return await this.GetAsync("/v2/assets", query);
         }
 
         public async UniTask<AlgoApiResponse<TransactionsResponse>> GetAssetTransactions(ulong assetId, TransactionsQuery query = default)
         {
-            throw new System.NotImplementedException();
+            return await this.GetAsync($"/v2/assets/{assetId}/transactions", query);
         }
 
         public async UniTask<AlgoApiResponse<Block>> GetBlock(ulong round)
         {
-            throw new System.NotImplementedException();
+            return await this.GetAsync($"/v2/blocks/{round}");
         }
 
         public async UniTask<AlgoApiResponse<HealthCheck>> GetHealth()
@@ -74,12 +74,12 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<TransactionResponse>> GetTransaction(TransactionId txid)
         {
-            throw new System.NotImplementedException();
+            return await this.GetAsync($"/v2/transactions/{txid}");
         }
 
         public async UniTask<AlgoApiResponse<TransactionsResponse>> GetTransactions(TransactionsQuery query = default)
         {
-            throw new System.NotImplementedException();
+            return await this.GetAsync("/v2/transactions", query);
         }
     }
 }
