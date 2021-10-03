@@ -7,31 +7,27 @@ namespace AlgoSdk
         : IEquatable<BlockTransaction>
     {
         [AlgoApiField("txn", "txn")]
-        public Transaction Transaction
-        {
-            get => signedTxn.Transaction;
-            set => signedTxn.Transaction = value;
-        }
+        public Transaction Transaction;
 
         [AlgoApiField("sig", "sig")]
         public Sig Sig
         {
-            get => signedTxn.Sig;
-            set => signedTxn.Sig = value;
+            get => Transaction.Signature.Sig;
+            set => Transaction.Signature.Sig = value;
         }
 
         [AlgoApiField("msig", "msig")]
         public MultiSig MultiSig
         {
-            get => signedTxn.MultiSig;
-            set => signedTxn.MultiSig = value;
+            get => Transaction.Signature.MultiSig;
+            set => Transaction.Signature.MultiSig = value;
         }
 
         [AlgoApiField("lsig", "lsig")]
         public LogicSig LogicSig
         {
-            get => signedTxn.LogicSig;
-            set => signedTxn.LogicSig = value;
+            get => Transaction.Signature.LogicSig;
+            set => Transaction.Signature.LogicSig = value;
         }
 
         [AlgoApiField("hgi", "hgi")]
@@ -43,16 +39,14 @@ namespace AlgoSdk
         [AlgoApiField("rs", "rs")]
         public ulong Rs;
 
-        SignedTransaction signedTxn;
-
         public bool Equals(BlockTransaction other)
         {
-            return signedTxn.Equals(other.signedTxn);
+            return Transaction.Equals(other.Transaction);
         }
 
-        public static implicit operator SignedTransaction(BlockTransaction blockTxn)
+        public static implicit operator Transaction(BlockTransaction blockTxn)
         {
-            return blockTxn.signedTxn;
+            return blockTxn.Transaction;
         }
     }
 }
