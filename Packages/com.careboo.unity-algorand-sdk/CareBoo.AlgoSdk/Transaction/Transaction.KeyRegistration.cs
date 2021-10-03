@@ -156,11 +156,22 @@ namespace AlgoSdk
             public struct Params
                 : IEquatable<Params>
             {
+                [AlgoApiField("vote-participation-key", "votekey")]
                 public Address VotePk;
+
+                [AlgoApiField("selection-participation-key", "selkey")]
                 public VrfPubkey SelectionPk;
+
+                [AlgoApiField("vote-first-valid", "votefst")]
                 public ulong VoteFirst;
+
+                [AlgoApiField("vote-last-valid", "votelst")]
                 public ulong VoteLast;
+
+                [AlgoApiField("vote-key-dilution", "votekd")]
                 public ulong VoteKeyDilution;
+
+                [AlgoApiField("non-participation", "nonpart")]
                 public Optional<bool> NonParticipation;
 
                 public Params(
