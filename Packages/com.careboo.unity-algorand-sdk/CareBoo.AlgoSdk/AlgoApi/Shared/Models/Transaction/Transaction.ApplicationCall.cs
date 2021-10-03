@@ -13,8 +13,8 @@ namespace AlgoSdk
             set => ApplicationCallParams.ApplicationId = value;
         }
 
-        [AlgoApiField(null, "apan")]
-        public ulong OnComplete
+        [AlgoApiField("on-completion", "apan")]
+        public OnCompletion OnComplete
         {
             get => ApplicationCallParams.OnComplete;
             set => ApplicationCallParams.OnComplete = value;
@@ -160,51 +160,61 @@ namespace AlgoSdk
                 get => @params.ApplicationId;
                 set => @params.ApplicationId = value;
             }
-            public ulong OnComplete
+
+            public OnCompletion OnComplete
             {
                 get => @params.OnComplete;
                 set => @params.OnComplete = value;
             }
+
             public Address[] Accounts
             {
                 get => @params.Accounts;
                 set => @params.Accounts = value;
             }
+
             public byte[] ApprovalProgram
             {
                 get => @params.ApprovalProgram;
                 set => @params.ApprovalProgram = value;
             }
+
             public byte[] AppArguments
             {
                 get => @params.AppArguments;
                 set => @params.AppArguments = value;
             }
+
             public byte[] ClearStateProgram
             {
                 get => @params.ClearStateProgram;
                 set => @params.ClearStateProgram = value;
             }
+
             public Address[] ForeignApps
             {
                 get => @params.ForeignApps;
                 set => @params.ForeignApps = value;
             }
+
             public Address[] ForeignAssets
             {
                 get => @params.ForeignAssets;
                 set => @params.ForeignAssets = value;
             }
+
             public Optional<StateSchema> GlobalStateSchema
             {
                 get => @params.GlobalStateSchema;
                 set => @params.GlobalStateSchema = value;
             }
+
             public Optional<StateSchema> LocalStateSchema
             {
                 get => @params.LocalStateSchema;
                 set => @params.LocalStateSchema = value;
             }
+
             public Optional<ulong> ExtraProgramPages
             {
                 get => @params.ExtraProgramPages;
@@ -221,7 +231,7 @@ namespace AlgoSdk
                 ulong freezeAsset,
                 bool assetFrozen,
                 ulong appId,
-                ulong onComplete
+                OnCompletion onComplete
             )
             {
                 header = new Header(
@@ -264,8 +274,8 @@ namespace AlgoSdk
                 [AlgoApiField("application-id", "apid")]
                 public ulong ApplicationId;
 
-                [AlgoApiField("on-completion", "on-completion")]
-                public ulong OnComplete;
+                [AlgoApiField("on-completion", "apan")]
+                public OnCompletion OnComplete;
 
                 [AlgoApiField("accounts", "apat")]
                 public Address[] Accounts;
@@ -296,7 +306,7 @@ namespace AlgoSdk
 
                 public Params(
                     ulong appId,
-                    ulong onComplete
+                    OnCompletion onComplete
                 )
                 {
                     ApplicationId = appId;

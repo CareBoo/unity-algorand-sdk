@@ -21,5 +21,20 @@ namespace AlgoSdk
                 && Sig.Equals(other.Sig)
                 ;
         }
+
+        public static implicit operator TransactionSignature(LogicSig lsig)
+        {
+            return new TransactionSignature { LogicSig = lsig };
+        }
+
+        public static implicit operator TransactionSignature(MultiSig msig)
+        {
+            return new TransactionSignature { MultiSig = msig };
+        }
+
+        public static implicit operator TransactionSignature(Sig sig)
+        {
+            return new TransactionSignature { Sig = sig };
+        }
     }
 }

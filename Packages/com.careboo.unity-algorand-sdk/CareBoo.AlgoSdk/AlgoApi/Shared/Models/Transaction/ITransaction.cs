@@ -19,7 +19,7 @@ namespace AlgoSdk
         {
             Transaction txn = default;
             source.CopyTo(ref txn);
-            return txn.Sign(secretKey);
+            return new SignedTransaction { Transaction = txn.Sign(secretKey) };
         }
     }
 }
