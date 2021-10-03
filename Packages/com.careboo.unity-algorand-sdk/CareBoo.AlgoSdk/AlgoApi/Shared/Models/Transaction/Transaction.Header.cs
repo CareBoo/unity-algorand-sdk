@@ -174,13 +174,6 @@ namespace AlgoSdk
             set => HeaderParams.SenderRewards = value;
         }
 
-        [AlgoApiField("on-completion", "apan", readOnly: true)]
-        public OnCompletion OnCompletion
-        {
-            get => HeaderParams.OnCompletion;
-            set => HeaderParams.OnCompletion = value;
-        }
-
         public struct Header
             : IEquatable<Header>
         {

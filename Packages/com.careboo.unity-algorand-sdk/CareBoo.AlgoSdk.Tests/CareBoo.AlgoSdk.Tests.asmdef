@@ -10,7 +10,9 @@
         "CareBoo.AlgoSdk.LowLevel",
         "UniTask"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": true,
     "overrideReferences": true,
