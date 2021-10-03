@@ -6,10 +6,10 @@ namespace AlgoSdk
     public struct ErrorResponse
         : IEquatable<ErrorResponse>
     {
-        [AlgoApiField("data", null)]
+        [AlgoApiField("data", "data")]
         public string Data;
 
-        [AlgoApiField("message", null)]
+        [AlgoApiField("message", "message")]
         public string Message;
 
         public ErrorResponse(string message, string data)
