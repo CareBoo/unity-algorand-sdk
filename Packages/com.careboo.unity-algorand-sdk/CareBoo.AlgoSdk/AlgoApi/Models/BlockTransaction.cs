@@ -6,41 +6,41 @@ namespace AlgoSdk
     public struct BlockTransaction
         : IEquatable<BlockTransaction>
     {
-        [AlgoApiField(null, "txn")]
+        [AlgoApiField("txn", "txn")]
         public RawTransaction Transaction
         {
             get => signedTxn.Transaction;
             set => signedTxn.Transaction = value;
         }
 
-        [AlgoApiField(null, "sig")]
+        [AlgoApiField("sig", "sig")]
         public Signature Sig
         {
             get => signedTxn.Sig;
             set => signedTxn.Sig = value;
         }
 
-        [AlgoApiField(null, "msig")]
+        [AlgoApiField("msig", "msig")]
         public MultiSig MultiSig
         {
             get => signedTxn.MultiSig;
             set => signedTxn.MultiSig = value;
         }
 
-        [AlgoApiField(null, "lsig")]
+        [AlgoApiField("lsig", "lsig")]
         public LogicSig LogicSig
         {
             get => signedTxn.LogicSig;
             set => signedTxn.LogicSig = value;
         }
 
-        [AlgoApiField(null, "hgi")]
+        [AlgoApiField("hgi", "hgi")]
         public Optional<bool> Hgi;
 
-        [AlgoApiField(null, "rr")]
+        [AlgoApiField("rr", "rr")]
         public ulong Rr;
 
-        [AlgoApiField(null, "rs")]
+        [AlgoApiField("rs", "rs")]
         public ulong Rs;
 
         RawSignedTransaction signedTxn;

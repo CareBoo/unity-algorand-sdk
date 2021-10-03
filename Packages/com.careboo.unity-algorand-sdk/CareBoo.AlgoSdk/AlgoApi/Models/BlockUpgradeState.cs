@@ -4,8 +4,8 @@ using Unity.Collections;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct BlockUpgradeStatus
-        : IEquatable<BlockUpgradeStatus>
+    public struct BlockUpgradeState
+        : IEquatable<BlockUpgradeState>
     {
         [AlgoApiField("current-protocol", null)]
         public FixedString128Bytes CurrentProtocol;
@@ -23,7 +23,7 @@ namespace AlgoSdk
         public Optional<ulong> NextProtocolVoteBefore;
 
 
-        public bool Equals(BlockUpgradeStatus other)
+        public bool Equals(BlockUpgradeState other)
         {
             return CurrentProtocol.Equals(other.CurrentProtocol)
                 && NextProtocol.Equals(other.NextProtocol)
