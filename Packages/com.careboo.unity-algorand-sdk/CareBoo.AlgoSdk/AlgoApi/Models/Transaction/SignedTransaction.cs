@@ -10,8 +10,44 @@ namespace AlgoSdk
         ITransaction Transaction { get; }
         bool Verify();
 
-        public void CopyTo(ref RawSignedTransaction data);
-        public void CopyFrom(in RawSignedTransaction data);
+        public void CopyTo(ref SignedTransaction data);
+        public void CopyFrom(in SignedTransaction data);
+    }
+
+    [AlgoApiObject]
+    public struct SignedTransaction
+        : IEquatable<SignedTransaction>
+    {
+        [AlgoApiField("txn", "txn")]
+        public Transaction Transaction;
+
+        [AlgoApiField("sig", "sig")]
+        public Sig Sig
+        {
+            get => Transaction.Signature.Sig;
+            set => Transaction.Signature.Sig = value;
+        }
+
+        [AlgoApiField("msig", "msig")]
+        public MultiSig MultiSig
+        {
+            get => Transaction.Signature.MultiSig;
+            set => Transaction.Signature.MultiSig = value;
+        }
+
+        [AlgoApiField("lsig", "lsig")]
+        public LogicSig LogicSig
+        {
+            get => Transaction.Signature.LogicSig;
+            set => Transaction.Signature.LogicSig = value;
+        }
+
+        public bool Equals(SignedTransaction other)
+        {
+            return Transaction.Equals(other.Transaction)
+                && Transaction.Signature.Equals(other.Transaction.Signature)
+                ;
+        }
     }
 
     [AlgoApiFormatter(typeof(SignedTransactionFormatter<Transaction.Payment>))]
@@ -25,11 +61,11 @@ namespace AlgoSdk
         , IEquatable<SignedTransaction<TTransaction>>
         where TTransaction : struct, ITransaction, IEquatable<TTransaction>
     {
-        public Signature Signature;
+        public Sig Signature;
         public TTransaction Transaction;
 
         public SignedTransaction(
-            in Signature signature,
+            in Sig signature,
             in TTransaction transaction
         )
         {
@@ -41,21 +77,21 @@ namespace AlgoSdk
 
         ITransaction ISignedTransaction.Transaction => Transaction;
 
-        public void CopyFrom(in RawSignedTransaction data)
+        public void CopyFrom(in SignedTransaction data)
         {
             Signature = data.Sig;
             Transaction.CopyFrom(data.Transaction);
         }
 
-        public void CopyTo(ref RawSignedTransaction data)
+        public void CopyTo(ref SignedTransaction data)
         {
             data.Sig = Signature;
             Transaction.CopyTo(ref data.Transaction);
         }
 
-        public RawSignedTransaction ToRaw()
+        public SignedTransaction ToRaw()
         {
-            RawSignedTransaction result = new RawSignedTransaction();
+            SignedTransaction result = new SignedTransaction();
             CopyTo(ref result);
             return result;
         }

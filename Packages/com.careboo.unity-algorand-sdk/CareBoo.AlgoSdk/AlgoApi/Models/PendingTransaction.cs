@@ -30,7 +30,7 @@ namespace AlgoSdk
         [AlgoApiField("sender-rewards", null)]
         public ulong SenderRewards;
         [AlgoApiField("txn", null)]
-        public RawSignedTransaction Transaction;
+        public SignedTransaction Transaction;
 
         public bool Equals(PendingTransaction other)
         {

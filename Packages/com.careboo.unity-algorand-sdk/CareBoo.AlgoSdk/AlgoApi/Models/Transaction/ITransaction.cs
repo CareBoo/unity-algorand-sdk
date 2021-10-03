@@ -23,7 +23,7 @@ namespace AlgoSdk
             where TTransaction : struct, ITransaction, IEquatable<TTransaction>
         {
             using var message = transaction.ToSignatureMessage(Allocator.Temp);
-            Signature signature = secretKey.Sign(message);
+            Sig signature = secretKey.Sign(message);
             return new SignedTransaction<TTransaction>(in signature, in transaction);
         }
 

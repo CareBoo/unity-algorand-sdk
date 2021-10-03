@@ -17,7 +17,7 @@ namespace AlgoSdk
         public FixedList128Bytes<byte>[] Args;
 
         [AlgoApiField(null, "sig")]
-        public Signature Sig;
+        public Sig Sig;
 
         [AlgoApiField(null, "msig")]
         public MultiSig MultiSig;
