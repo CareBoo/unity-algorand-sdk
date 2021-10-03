@@ -23,7 +23,7 @@ namespace AlgoSdk
         public Optional<ulong> ApplicationsTotalExtraPages;
 
         [AlgoApiField("apps-total-schema", null)]
-        public Optional<ApplicationStateSchema> ApplicationsTotalSchema;
+        public Optional<StateSchema> ApplicationsTotalSchema;
 
         [AlgoApiField("assets", null)]
         public AssetHolding[] Assets;
