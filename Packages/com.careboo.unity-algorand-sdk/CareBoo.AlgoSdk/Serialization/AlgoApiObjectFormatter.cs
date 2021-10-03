@@ -6,7 +6,7 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
-    public sealed class AlgoApiObjectFormatter<T> : IAlgoApiFormatter<T>
+    public class AlgoApiObjectFormatter<T> : IAlgoApiFormatter<T>
         where T : struct
     {
         readonly AlgoApiField<T>.Map<FixedString64Bytes> jsonFieldMap = new AlgoApiField<T>.Map<FixedString64Bytes>();
@@ -97,6 +97,53 @@ namespace AlgoSdk
                 writer.WriteString(key);
                 msgPackFieldMap.GetField(key).SerializeMessagePack(value, ref writer);
             }
+        }
+    }
+
+    public class AlgoApiObjectFormatter : IAlgoApiFormatter<AlgoApiObject>
+    {
+        public AlgoApiObject Deserialize(ref JsonReader reader)
+        {
+            var json = new NativeText(Allocator.Temp);
+            try
+            {
+                reader.ReadRaw(ref json).ThrowIfError();
+                return new AlgoApiObject { Json = json.ToString() };
+            }
+            finally
+            {
+                json.Dispose();
+            }
+        }
+
+        public AlgoApiObject Deserialize(ref MessagePackReader reader)
+        {
+            var msgPack = new NativeList<byte>(Allocator.Temp);
+            try
+            {
+                reader.ReadRaw(msgPack);
+                return new AlgoApiObject { MessagePack = msgPack.ToArray() };
+            }
+            finally
+            {
+                msgPack.Dispose();
+            }
+        }
+
+        public void Serialize(ref JsonWriter writer, AlgoApiObject value)
+        {
+            if (!value.IsJson)
+                throw new ArgumentException("cannot serialize non-json to json...", nameof(value));
+            using var json = new NativeText(value.Json, Allocator.Temp);
+            writer.WriteRaw(json);
+        }
+
+        public void Serialize(ref MessagePackWriter writer, AlgoApiObject value)
+        {
+            if (!value.IsMessagePack)
+                throw new ArgumentException("cannot serialize non-json to json...", nameof(value));
+            using var msgPack = new NativeArray<byte>(value.MessagePack, Allocator.Temp);
+            writer.WriteRaw(msgPack.AsReadOnly());
         }
     }
 }
