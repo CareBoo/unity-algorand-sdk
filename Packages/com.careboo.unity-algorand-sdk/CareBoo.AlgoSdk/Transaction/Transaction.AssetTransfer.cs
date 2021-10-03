@@ -108,6 +108,12 @@ namespace AlgoSdk
                 set => @params.AssetCloseTo = value;
             }
 
+            public ulong CloseAmount
+            {
+                get => @params.CloseAmount;
+                set => @params.CloseAmount = value;
+            }
+
             public AssetTransfer(
                 ulong fee,
                 ulong firstValidRound,
@@ -158,11 +164,23 @@ namespace AlgoSdk
             public struct Params
                 : IEquatable<Params>
             {
+                [AlgoApiField("asset-id", "xaid")]
                 public ulong XferAsset;
+
+                [AlgoApiField("amount", "aamt")]
                 public ulong AssetAmount;
+
+                [AlgoApiField("sender", "asnd")]
                 public Address AssetSender;
+
+                [AlgoApiField("receiver", "arcv")]
                 public Address AssetReceiver;
+
+                [AlgoApiField("close-to", "aclose")]
                 public Address AssetCloseTo;
+
+                [AlgoApiField("close-amount", null)]
+                public ulong CloseAmount;
 
                 public Params(
                     ulong xferAsset,
@@ -176,6 +194,7 @@ namespace AlgoSdk
                     AssetSender = assetSender;
                     AssetReceiver = assetReceiver;
                     AssetCloseTo = default;
+                    CloseAmount = default;
                 }
 
                 public bool Equals(Params other)
