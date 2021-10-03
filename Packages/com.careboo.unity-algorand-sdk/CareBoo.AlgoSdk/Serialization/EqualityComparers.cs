@@ -71,6 +71,18 @@ namespace AlgoSdk
         {
             return ArrayComparer<T>.Equals(x, y);
         }
+
+        public static bool Equals(string[] x, string[] y)
+        {
+            if (x == null || y == null) return x == y;
+
+            if (x.Length != y.Length) return false;
+
+            for (var i = 0; i < x.Length; i++)
+                if (!StringComparer.Equals(x, y))
+                    return false;
+            return true;
+        }
     }
 
     public class StringComparer : IEqualityComparer<string>
