@@ -47,7 +47,9 @@ namespace AlgoSdk
                     TransactionType.AssetTransfer => AssetTransferParams.Equals(other.AssetTransferParams),
                     TransactionType.KeyRegistration => KeyRegistrationParams.Equals(other.KeyRegistrationParams),
                     _ => true
-                };
+                }
+                && Signature.Equals(other.Signature)
+                ;
         }
 
         public Transaction Sign(Ed25519.SecretKeyHandle secretKey)
