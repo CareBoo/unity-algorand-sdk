@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AlgoSdk
 {
-    public class TransactionTypeComparer : IEqualityComparer<TransactionType>
+    public struct TransactionTypeComparer : IEqualityComparer<TransactionType>
     {
         bool IEqualityComparer<TransactionType>.Equals(TransactionType x, TransactionType y) => Equals(x, y);
         int IEqualityComparer<TransactionType>.GetHashCode(TransactionType obj) => GetHashCode(obj);
@@ -21,7 +21,7 @@ namespace AlgoSdk
         public static readonly TransactionTypeComparer Instance = new TransactionTypeComparer();
     }
 
-    public class SignatureTypeComparer : IEqualityComparer<SignatureType>
+    public struct SignatureTypeComparer : IEqualityComparer<SignatureType>
     {
         bool IEqualityComparer<SignatureType>.Equals(SignatureType x, SignatureType y) => Equals(x, y);
         int IEqualityComparer<SignatureType>.GetHashCode(SignatureType obj) => GetHashCode(obj);
@@ -39,7 +39,7 @@ namespace AlgoSdk
         public static readonly SignatureTypeComparer Instance = new SignatureTypeComparer();
     }
 
-    public class OnCompletionComparer : IEqualityComparer<OnCompletion>
+    public struct OnCompletionComparer : IEqualityComparer<OnCompletion>
     {
         bool IEqualityComparer<OnCompletion>.Equals(OnCompletion x, OnCompletion y) => Equals(x, y);
         int IEqualityComparer<OnCompletion>.GetHashCode(OnCompletion obj) => GetHashCode(obj);
@@ -57,7 +57,7 @@ namespace AlgoSdk
         public static readonly OnCompletionComparer Instance = new OnCompletionComparer();
     }
 
-    public class AddressRoleComparer : IEqualityComparer<AddressRole>
+    public struct AddressRoleComparer : IEqualityComparer<AddressRole>
     {
         bool IEqualityComparer<AddressRole>.Equals(AddressRole x, AddressRole y) => Equals(x, y);
         int IEqualityComparer<AddressRole>.GetHashCode(AddressRole obj) => GetHashCode(obj);
@@ -75,7 +75,33 @@ namespace AlgoSdk
         public static readonly AddressRoleComparer Instance = new AddressRoleComparer();
     }
 
-    public class ArrayComparer<T> : IEqualityComparer<T[]>
+    public struct ArrayComparer<T, TComparer> : IEqualityComparer<T[]>
+        where TComparer : struct, IEqualityComparer<T>
+    {
+        bool IEqualityComparer<T[]>.Equals(T[] x, T[] y) => Equals(x, y);
+        int IEqualityComparer<T[]>.GetHashCode(T[] obj) => GetHashCode(obj);
+
+        public static bool Equals(T[] x, T[] y)
+        {
+            if (x == null || y == null) return x == y;
+
+            if (x.Length != y.Length) return false;
+
+            for (var i = 0; i < x.Length; i++)
+                if (!default(TComparer).Equals(x[i], y[i]))
+                    return false;
+            return true;
+        }
+
+        public static int GetHashCode(T[] obj)
+        {
+            return obj.GetHashCode();
+        }
+
+        public static readonly ArrayComparer<T, TComparer> Instance = new ArrayComparer<T, TComparer>();
+    }
+
+    public struct ArrayComparer<T> : IEqualityComparer<T[]>
         where T : IEquatable<T>
     {
         bool IEqualityComparer<T[]>.Equals(T[] x, T[] y) => Equals(x, y);
@@ -121,7 +147,7 @@ namespace AlgoSdk
         }
     }
 
-    public class StringComparer : IEqualityComparer<string>
+    public struct StringComparer : IEqualityComparer<string>
     {
         bool IEqualityComparer<string>.Equals(string x, string y) => string.Equals(x, y);
 
@@ -132,7 +158,7 @@ namespace AlgoSdk
         public static bool Equals(string x, string y) => string.Equals(x, y);
     }
 
-    public class EvalDeltaActionComparer : IEqualityComparer<EvalDeltaAction>
+    public struct EvalDeltaActionComparer : IEqualityComparer<EvalDeltaAction>
     {
         bool IEqualityComparer<EvalDeltaAction>.Equals(EvalDeltaAction x, EvalDeltaAction y)
         {
