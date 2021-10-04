@@ -6,6 +6,9 @@ namespace AlgoSdk
     public struct ErrorResponse
         : IEquatable<ErrorResponse>
     {
+        [AlgoApiField("error", "error")]
+        public Optional<bool> Error;
+
         [AlgoApiField("data", "data")]
         public string Data;
 
@@ -16,6 +19,7 @@ namespace AlgoSdk
         {
             Message = message;
             Data = data;
+            Error = default;
         }
 
         public ErrorResponse(string message)
@@ -27,6 +31,7 @@ namespace AlgoSdk
         {
             return StringComparer.Equals(Data, other.Data)
                 && StringComparer.Equals(Message, other.Message)
+                && Error.Equals(other.Error)
                 ;
         }
     }
