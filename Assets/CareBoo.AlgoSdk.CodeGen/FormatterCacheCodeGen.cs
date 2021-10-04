@@ -154,10 +154,17 @@ namespace AlgoSdk.Editor.CodeGen
             };
             if (memberType.GetInterfaces().All(t => t != typeof(IEquatable<>).MakeGenericType(memberType)))
             {
-                var equalityComparerType = memberType.IsArray
-                    ? typeof(ArrayComparer<>).MakeGenericType(memberType.GetElementType())
-                    : equalityComparerLookup[memberType]
-                    ;
+                Type equalityComparerType;
+                if (memberType.IsArray)
+                {
+                    var elementType = memberType.GetElementType();
+                    if (elementType.GetInterfaces().All(t => t != (typeof(IEquatable<>).MakeGenericType(elementType))))
+                        equalityComparerType = typeof(ArrayComparer<,>).MakeGenericType(elementType, equalityComparerLookup[elementType]);
+                    else
+                        equalityComparerType = typeof(ArrayComparer<>).MakeGenericType(memberType.GetElementType());
+                }
+                else
+                    equalityComparerType = equalityComparerLookup[memberType];
                 var equalityComparer = new CodePropertyReferenceExpression(
                     new CodeTypeReferenceExpression(equalityComparerType),
                     "Instance");

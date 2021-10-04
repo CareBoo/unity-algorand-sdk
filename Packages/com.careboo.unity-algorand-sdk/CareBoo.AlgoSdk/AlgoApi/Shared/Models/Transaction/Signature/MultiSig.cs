@@ -13,10 +13,10 @@ namespace AlgoSdk
         public SubSignature[] SubSignatures;
 
         [AlgoApiField("threshold", "thr")]
-        public ulong Threshold;
+        public byte Threshold;
 
         [AlgoApiField("version", "v")]
-        public ulong Version;
+        public byte Version;
 
         public bool Equals(MultiSig other)
         {
@@ -29,7 +29,7 @@ namespace AlgoSdk
         public bool Verify<TMessage>(TMessage message)
             where TMessage : IByteArray
         {
-            ulong verified = 0;
+            byte verified = 0;
             if (SubSignatures != null)
             {
                 for (var i = 0; i < SubSignatures.Length; i++)
