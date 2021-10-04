@@ -7,7 +7,7 @@ namespace AlgoSdk
         : IEquatable<SignProgramResponse>
     {
         [AlgoApiField("sig", null)]
-        public Sig Sig;
+        public byte[] SignedProgram;
 
         [AlgoApiField("error", null)]
         public Optional<bool> Error;
@@ -17,7 +17,7 @@ namespace AlgoSdk
 
         public bool Equals(SignProgramResponse other)
         {
-            return Sig.Equals(other.Sig)
+            return ArrayComparer.Equals(SignedProgram, other.SignedProgram)
                 && Error.Equals(other.Error)
                 && Message.Equals(other.Message)
                 ;
