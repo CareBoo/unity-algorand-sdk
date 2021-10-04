@@ -3,11 +3,11 @@ using System;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct SignProgramMultiSigResponse
-        : IEquatable<SignProgramMultiSigResponse>
+    public struct SignTransactionResponse
+        : IEquatable<SignTransactionResponse>
     {
-        [AlgoApiField("multisig", null)]
-        public byte[] SignedProgram;
+        [AlgoApiField("signed_transaction", null)]
+        public byte[] SignedTransaction;
 
         [AlgoApiField("error", null)]
         public Optional<bool> Error;
@@ -15,9 +15,9 @@ namespace AlgoSdk
         [AlgoApiField("message", null)]
         public string Message;
 
-        public bool Equals(SignProgramMultiSigResponse other)
+        public bool Equals(SignTransactionResponse other)
         {
-            return ArrayComparer.Equals(SignedProgram, other.SignedProgram)
+            return ArrayComparer.Equals(SignedTransaction, other.SignedTransaction)
                 && Error.Equals(other.Error)
                 && Message.Equals(other.Message)
                 ;
