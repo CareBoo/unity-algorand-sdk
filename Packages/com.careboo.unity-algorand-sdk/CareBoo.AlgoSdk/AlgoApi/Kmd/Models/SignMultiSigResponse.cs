@@ -1,5 +1,4 @@
 using System;
-using Unity.Collections;
 
 namespace AlgoSdk
 {
@@ -8,7 +7,7 @@ namespace AlgoSdk
         : IEquatable<SignMultiSigResponse>
     {
         [AlgoApiField("multisig", null)]
-        public FixedString128Bytes MultiSig;
+        public byte[] SignedTransaction;
 
         [AlgoApiField("error", null)]
         public Optional<bool> Error;
@@ -18,7 +17,7 @@ namespace AlgoSdk
 
         public bool Equals(SignMultiSigResponse other)
         {
-            return MultiSig.Equals(other.MultiSig)
+            return ArrayComparer.Equals(SignedTransaction, other.SignedTransaction)
                 && Error.Equals(other.Error)
                 && Message.Equals(other.Message)
                 ;
