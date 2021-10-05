@@ -2,7 +2,7 @@ using Cysharp.Threading.Tasks;
 
 namespace AlgoSdk
 {
-    public interface IAlgodClient : IApiClient
+    public interface IAlgodClient : IAlgoApiClient
     {
         UniTask<AlgoApiResponse> GetGenesisInformation();
         UniTask<AlgoApiResponse> GetHealth();
