@@ -36,7 +36,6 @@ namespace AlgoSdk
             AddFormatter<DateTime>(new DateTimeFormatter());
             AddFormatter<Sha512_256_Hash>(ByteArrayFormatter<Sha512_256_Hash>.Instance);
             AddFormatter<Ed25519.PublicKey>(ByteArrayFormatter<Ed25519.PublicKey>.Instance);
-            AddFormatter<Ed25519.Signature>(ByteArrayFormatter<Ed25519.Signature>.Instance);
             AddFormatter<byte[]>(new ByteArrayFormatter());
             AddFormatter<FixedString32Bytes>(new FixedStringFormatter<FixedString32Bytes>());
             AddFormatter<FixedString64Bytes>(new FixedStringFormatter<FixedString64Bytes>());
