@@ -44,9 +44,9 @@ namespace BossRoom.Scripts.Editor
             {
                 if (!EditorPrefs.HasKey(k_LoadBootstrapSceneKey))
                 {
-                    EditorPrefs.SetBool(k_LoadBootstrapSceneKey, true);
+                    EditorPrefs.SetBool(k_LoadBootstrapSceneKey, false);
                 }
-                return EditorPrefs.GetBool(k_LoadBootstrapSceneKey, true);
+                return EditorPrefs.GetBool(k_LoadBootstrapSceneKey, false);
             }
             set => EditorPrefs.SetBool(k_LoadBootstrapSceneKey, value);
         }
