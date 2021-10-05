@@ -12,7 +12,7 @@ namespace AlgoSdk
         public Ed25519.PublicKey PublicKey;
 
         [AlgoApiField("transaction", null)]
-        public byte[] Transaction;
+        public byte[] TransactionMsgPack;
 
         [AlgoApiField("wallet_handle_token", null)]
         public FixedString128Bytes WalletHandleToken;
@@ -23,7 +23,7 @@ namespace AlgoSdk
         public bool Equals(SignTransactionRequest other)
         {
             return PublicKey.Equals(other.PublicKey)
-                && ArrayComparer.Equals(Transaction, other.Transaction)
+                && ArrayComparer.Equals(TransactionMsgPack, other.TransactionMsgPack)
                 && WalletHandleToken.Equals(other.WalletHandleToken)
                 && WalletPassword.Equals(other.WalletPassword)
                 ;

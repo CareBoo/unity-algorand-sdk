@@ -7,7 +7,7 @@ namespace AlgoSdk
         : IEquatable<SignProgramResponse>
     {
         [AlgoApiField("sig", null)]
-        public byte[] SignedProgram;
+        public Sig SignedProgram;
 
         [AlgoApiField("error", null)]
         public Optional<bool> Error;
