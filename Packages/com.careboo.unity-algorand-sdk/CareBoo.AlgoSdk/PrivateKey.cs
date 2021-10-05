@@ -4,12 +4,13 @@ using Unity.Collections;
 using UnityEngine;
 using AlgoSdk.LowLevel;
 using AlgoSdk.Crypto;
+using AlgoSdk.Formatters;
 
 namespace AlgoSdk
 {
     [Serializable]
+    [AlgoApiFormatter(typeof(ByteArrayFormatter<PrivateKey>))]
     [StructLayout(LayoutKind.Explicit, Size = 32)]
-    [BurstCompatible]
     public struct PrivateKey
         : IEquatable<PrivateKey>
         , IByteArray
