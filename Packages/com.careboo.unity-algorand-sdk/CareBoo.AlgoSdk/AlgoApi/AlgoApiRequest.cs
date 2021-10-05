@@ -70,9 +70,26 @@ namespace AlgoSdk
             return new AlgoApiRequest(token, ref webRequest);
         }
 
+        public static AlgoApiRequest Post(string token, string url, NativeText json)
+        {
+            var webRequest = UnityWebRequest.Post(url, json.ToString());
+            webRequest.SetRequestHeader(ContentTypeHeader, "application/json");
+            return new AlgoApiRequest(token, ref webRequest);
+        }
+
         public static AlgoApiRequest Delete(string token, string url)
         {
             var webRequest = UnityWebRequest.Delete(url);
+            return new AlgoApiRequest(token, ref webRequest);
+        }
+
+        public static AlgoApiRequest Delete(string token, string url, NativeText json)
+        {
+            var jsonBytes = Encoding.UTF8.GetBytes(json.ToString());
+            var webRequest = UnityWebRequest.Delete(url);
+            webRequest.uploadHandler = new UploadHandlerRaw(jsonBytes);
+            webRequest.disposeUploadHandlerOnDispose = true;
+            webRequest.SetRequestHeader(ContentTypeHeader, "application/json");
             return new AlgoApiRequest(token, ref webRequest);
         }
 
