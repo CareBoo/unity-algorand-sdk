@@ -145,7 +145,7 @@ namespace AlgoSdk
             AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.Address), new AlgoSdk.Formatters.AddressFormatter());
             AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.AddressRole), new AlgoSdk.AddressRoleFormatter());
             AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.AlgoApiObject), new AlgoSdk.AlgoApiObjectFormatter());
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.EvalDeltaAction), new AlgoSdk.Formatters.EnumFormatter<AlgoSdk.EvalDeltaAction>());
+            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.EvalDeltaAction), new AlgoSdk.Formatters.ByteEnumFormatter<AlgoSdk.EvalDeltaAction>());
             AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.GenesisHash), new AlgoSdk.Formatters.GenesisHashFormatter());
             AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.OnCompletion), new AlgoSdk.Formatters.OnCompletionFormatter());
             AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.Optional<bool>), new AlgoSdk.Formatters.OptionalFormatter<bool>());
@@ -157,11 +157,11 @@ namespace AlgoSdk
             AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.Optional<AlgoSdk.StateSchema>), new AlgoSdk.Formatters.OptionalFormatter<AlgoSdk.StateSchema>());
             AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.PrivateKey), new AlgoSdk.Formatters.ByteArrayFormatter<AlgoSdk.PrivateKey>());
             AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.Sig), new AlgoSdk.Formatters.ByteArrayFormatter<AlgoSdk.Sig>());
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.SignatureType), new AlgoSdk.Formatters.EnumFormatter<AlgoSdk.SignatureType>());
+            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.SignatureType), new AlgoSdk.Formatters.SignatureTypeFormatter());
             AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.SignedTransaction), new AlgoSdk.SignedTransactionFormatter());
             AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.TealBytes), new AlgoSdk.Formatters.ByteArrayFormatter<AlgoSdk.TealBytes>());
             AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.TealValue), new AlgoSdk.MsgPack.Formatters.TealValueFormatter());
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.TealValueType), new AlgoSdk.Formatters.EnumFormatter<AlgoSdk.TealValueType>());
+            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.TealValueType), new AlgoSdk.Formatters.ByteEnumFormatter<AlgoSdk.TealValueType>());
             AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.TransactionId), new AlgoSdk.Formatters.TransactionIdFormatter());
             AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.TransactionType), new AlgoSdk.Formatters.TransactionTypeFormatter());
             AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.VrfPubkey), new AlgoSdk.Formatters.ByteArrayFormatter<AlgoSdk.VrfPubkey>());

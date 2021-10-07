@@ -2,9 +2,10 @@ using AlgoSdk.Formatters;
 
 namespace AlgoSdk
 {
-    [AlgoApiFormatter(typeof(EnumFormatter<SignatureType>))]
+    [AlgoApiFormatter(typeof(SignatureTypeFormatter))]
     public enum SignatureType : byte
     {
+        None,
         Sig,
         MultiSig,
         LogicSig

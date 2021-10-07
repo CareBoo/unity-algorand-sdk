@@ -11,7 +11,6 @@ namespace AlgoSdk
         CloseOut,
         Clear,
         Update,
-        Delete,
-        Count
+        Delete
     }
 }
