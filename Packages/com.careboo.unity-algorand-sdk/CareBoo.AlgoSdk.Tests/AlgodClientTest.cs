@@ -11,7 +11,7 @@ using UnityEngine.TestTools;
 
 
 [ConditionalIgnore(nameof(UnityEngine.Application.isBatchMode), "This test requires algod service to be running.")]
-public class AlgodClientTest
+public class AlgodClientTest : AlgoApiClientTest
 {
     const string SandboxToken = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
     const string SandBoxAddress = "http://localhost:4001";
@@ -38,16 +38,6 @@ public class AlgodClientTest
             .ToArray();
     }
 
-    static void AssertResponseSuccess<T>(AlgoApiResponse<T> response) where T : struct
-    {
-        Assert.AreEqual(UnityWebRequest.Result.Success, response.Raw.Status, response.Error.Message);
-    }
-
-    static void AssertResponseSuccess(AlgoApiResponse response)
-    {
-        Assert.AreEqual(UnityWebRequest.Result.Success, response.Status, response.GetText());
-    }
-
     static async UniTask<TransactionId> MakePaymentTransaction(ulong amt)
     {
         using var keyPair = AccountMnemonic
@@ -68,10 +58,8 @@ public class AlgodClientTest
         txn.Note = Encoding.UTF8.GetBytes("hello");
         txn.GenesisId = transactionParams.GenesisId;
         SignedTransaction signedTxn = txn.Sign(keyPair.SecretKey);
-        var serialized = new NativeList<byte>(Allocator.Temp);
-        AlgoApiSerializer.SerializeMessagePack(signedTxn, serialized);
+        var serialized = AlgoApiSerializer.SerializeMessagePack(signedTxn, Allocator.Temp);
         Debug.Log(System.Convert.ToBase64String(serialized.ToArray()));
-        serialized.Dispose();
         var txidResponse = await client.SendTransaction(signedTxn);
         AssertResponseSuccess(txidResponse);
         Debug.Log(txidResponse.Raw.GetText());

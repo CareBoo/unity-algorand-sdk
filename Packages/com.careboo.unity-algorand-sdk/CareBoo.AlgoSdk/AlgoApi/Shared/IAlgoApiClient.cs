@@ -22,8 +22,7 @@ namespace AlgoSdk
             where T : IAlgoApiClient
             where TBody : struct, IEquatable<TBody>
         {
-            using var json = new NativeText(Allocator.Persistent);
-            AlgoApiSerializer.SerializeJson(body, json);
+            using var json = AlgoApiSerializer.SerializeJson(body, Allocator.Persistent);
             return await AlgoApiRequest.Get(client.Token, client.GetUrl(endpoint), json).Send();
         }
 
@@ -31,8 +30,7 @@ namespace AlgoSdk
             where T : IAlgoApiClient
             where TBody : struct, IEquatable<TBody>
         {
-            using var json = new NativeText(Allocator.Persistent);
-            AlgoApiSerializer.SerializeJson(body, json);
+            using var json = AlgoApiSerializer.SerializeJson(body, Allocator.Persistent);
             return await AlgoApiRequest.Post(client.Token, client.GetUrl(endpoint), json).Send();
         }
 
@@ -70,8 +68,7 @@ namespace AlgoSdk
             where T : IAlgoApiClient
             where TBody : struct, IEquatable<TBody>
         {
-            using var json = new NativeText(Allocator.Persistent);
-            AlgoApiSerializer.SerializeJson(body, json);
+            using var json = AlgoApiSerializer.SerializeJson(body, Allocator.Persistent);
             return await AlgoApiRequest.Delete(client.Token, client.GetUrl(endpoint), json).Send();
         }
 

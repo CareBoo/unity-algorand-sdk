@@ -44,18 +44,20 @@ namespace AlgoSdk
             return AlgoApiFormatterCache<T>.Formatter.Deserialize(ref reader);
         }
 
-        public static void SerializeMessagePack<T>(T obj, NativeList<byte> bytes)
+        public static NativeList<byte> SerializeMessagePack<T>(T obj, Allocator allocator)
         {
-            var writer = new MessagePackWriter(bytes);
+            var writer = new MessagePackWriter(allocator);
             var formatter = AlgoApiFormatterCache<T>.Formatter;
             formatter.Serialize(ref writer, obj);
+            return writer.Data;
         }
 
-        public static void SerializeJson<T>(T obj, NativeText text)
+        public static NativeText SerializeJson<T>(T obj, Allocator allocator)
         {
-            var writer = new JsonWriter(text);
+            var writer = new JsonWriter(allocator);
             var formatter = AlgoApiFormatterCache<T>.Formatter;
             formatter.Serialize(ref writer, obj);
+            return writer.Text;
         }
     }
 }

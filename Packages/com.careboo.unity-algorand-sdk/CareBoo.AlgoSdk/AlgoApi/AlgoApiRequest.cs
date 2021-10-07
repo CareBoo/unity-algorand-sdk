@@ -40,11 +40,15 @@ namespace AlgoSdk
 
         public static AlgoApiRequest Get(string token, string url, NativeText json)
         {
-            var jsonBytes = Encoding.UTF8.GetBytes(json.ToString());
             var webRequest = UnityWebRequest.Get(url);
-            webRequest.uploadHandler = new UploadHandlerRaw(jsonBytes);
-            webRequest.disposeUploadHandlerOnDispose = true;
             webRequest.SetRequestHeader(ContentTypeHeader, "application/json");
+            var jsonString = json.ToString();
+            if (!string.IsNullOrEmpty(jsonString))
+            {
+                var jsonBytes = Encoding.UTF8.GetBytes(jsonString);
+                webRequest.uploadHandler = new UploadHandlerRaw(jsonBytes);
+                webRequest.disposeUploadHandlerOnDispose = true;
+            }
             return new AlgoApiRequest(token, ref webRequest);
         }
 
