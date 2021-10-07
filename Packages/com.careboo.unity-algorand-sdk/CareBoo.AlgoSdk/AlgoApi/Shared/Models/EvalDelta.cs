@@ -3,7 +3,7 @@ using AlgoSdk.Formatters;
 
 namespace AlgoSdk
 {
-    [AlgoApiFormatter(typeof(EnumFormatter<EvalDeltaAction>))]
+    [AlgoApiFormatter(typeof(ByteEnumFormatter<EvalDeltaAction>))]
     public enum EvalDeltaAction : byte
     {
         None = 0,

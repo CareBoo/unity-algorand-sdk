@@ -6,7 +6,7 @@ using AlgoSdk.MsgPack.Formatters;
 
 namespace AlgoSdk
 {
-    [AlgoApiFormatter(typeof(EnumFormatter<TealValueType>))]
+    [AlgoApiFormatter(typeof(ByteEnumFormatter<TealValueType>))]
     public enum TealValueType : byte
     {
         None = 0,

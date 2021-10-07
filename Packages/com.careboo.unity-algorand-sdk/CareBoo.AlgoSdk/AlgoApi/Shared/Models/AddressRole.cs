@@ -6,7 +6,6 @@ namespace AlgoSdk
         None,
         Sender,
         Receiver,
-        FreezeTarget,
-        Count
+        FreezeTarget
     }
 }
