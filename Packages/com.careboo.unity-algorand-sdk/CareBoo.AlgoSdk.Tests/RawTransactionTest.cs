@@ -19,8 +19,7 @@ public class RawTransactionTest
         transaction.TransactionType = TransactionType.Payment;
         transaction.Receiver = AlgoSdk.Crypto.Random.Bytes<Address>().GenerateCheckSum();
         transaction.Amount = 40000;
-        using var bytes = new NativeList<byte>(Allocator.Temp);
-        AlgoApiSerializer.SerializeMessagePack(transaction, bytes);
+        using var bytes = AlgoApiSerializer.SerializeMessagePack(transaction, Allocator.Temp);
         Debug.Log(System.Convert.ToBase64String(bytes.ToArray()));
         var deserialized = AlgoApiSerializer.DeserializeMessagePack<Transaction>(bytes.AsArray().AsReadOnly());
         Assert.IsTrue(transaction.Equals(deserialized));

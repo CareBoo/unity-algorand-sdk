@@ -2,7 +2,7 @@ using System;
 
 namespace AlgoSdk.MessagePack
 {
-    public ref partial struct MessagePackWriter
+    public partial struct MessagePackWriter
     {
         public void WriteBytesHeader(int length)
         {

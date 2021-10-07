@@ -2,7 +2,7 @@ using Unity.Collections;
 
 namespace AlgoSdk.MessagePack
 {
-    public ref partial struct MessagePackWriter
+    public partial struct MessagePackWriter
     {
         public unsafe void WriteString<T>(in T fs)
             where T : struct, INativeList<byte>, IUTF8Bytes

@@ -6,8 +6,8 @@ namespace AlgoSdk
     {
         UniTask<AlgoApiResponse<HealthCheck>> GetHealth();
         UniTask<AlgoApiResponse<AccountsResponse>> GetAccounts(AccountsQuery query = default);
-        UniTask<AlgoApiResponse<AccountResponse>> GetAccount(ulong accountId, AccountQuery query = default);
-        UniTask<AlgoApiResponse<TransactionsResponse>> GetAccountTransactions(ulong accountId, TransactionsQuery query = default);
+        UniTask<AlgoApiResponse<AccountResponse>> GetAccount(Address accountAddress, AccountQuery query = default);
+        UniTask<AlgoApiResponse<TransactionsResponse>> GetAccountTransactions(Address accountAddress, TransactionsQuery query = default);
         UniTask<AlgoApiResponse<ApplicationsResponse>> GetApplications(ApplicationsQuery query = default);
         UniTask<AlgoApiResponse<ApplicationResponse>> GetApplication(ulong applicationId, ApplicationsQuery query = default);
         UniTask<AlgoApiResponse<AssetsResponse>> GetAssets(AssetsQuery query = default);

@@ -62,9 +62,7 @@ namespace AlgoSdk
 
         public NativeByteArray ToSignatureMessage(Allocator allocator)
         {
-            using var data = new NativeList<byte>(Allocator.Temp);
-            AlgoApiSerializer.SerializeMessagePack(this, data);
-
+            using var data = AlgoApiSerializer.SerializeMessagePack(this, Allocator.Temp);
             var result = new NativeByteArray(SignaturePrefix.Length + data.Length, allocator);
             for (var i = 0; i < SignaturePrefix.Length; i++)
                 result[i] = SignaturePrefix[i];
