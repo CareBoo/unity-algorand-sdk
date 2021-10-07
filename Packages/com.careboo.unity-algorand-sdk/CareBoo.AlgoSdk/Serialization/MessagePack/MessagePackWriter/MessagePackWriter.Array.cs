@@ -1,6 +1,6 @@
 namespace AlgoSdk.MessagePack
 {
-    public ref partial struct MessagePackWriter
+    public partial struct MessagePackWriter
     {
         public void WriteArrayHeader(int count) => WriteArrayHeader((uint)count);
 

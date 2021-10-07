@@ -17,9 +17,9 @@ namespace AlgoSdk
 
         public string Token => token;
 
-        public async UniTask<AlgoApiResponse<AccountResponse>> GetAccount(ulong accountId, AccountQuery query = default)
+        public async UniTask<AlgoApiResponse<AccountResponse>> GetAccount(Address accountAddress, AccountQuery query = default)
         {
-            return await this.GetAsync($"/v2/accounts/{accountId}", query);
+            return await this.GetAsync($"/v2/accounts/{accountAddress}", query);
         }
 
         public async UniTask<AlgoApiResponse<AccountsResponse>> GetAccounts(AccountsQuery query = default)
@@ -27,9 +27,9 @@ namespace AlgoSdk
             return await this.GetAsync("/v2/accounts", query);
         }
 
-        public async UniTask<AlgoApiResponse<TransactionsResponse>> GetAccountTransactions(ulong accountId, TransactionsQuery query = default)
+        public async UniTask<AlgoApiResponse<TransactionsResponse>> GetAccountTransactions(Address accountAddress, TransactionsQuery query = default)
         {
-            return await this.GetAsync($"/v2/accounts/{accountId}/transactions", query);
+            return await this.GetAsync($"/v2/accounts/{accountAddress}/transactions", query);
         }
 
         public async UniTask<AlgoApiResponse<ApplicationResponse>> GetApplication(ulong applicationId, ApplicationsQuery query = default)

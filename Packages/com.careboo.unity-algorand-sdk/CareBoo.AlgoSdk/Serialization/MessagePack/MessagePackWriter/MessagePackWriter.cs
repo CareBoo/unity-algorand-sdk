@@ -1,15 +1,32 @@
 using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
+using Unity.Jobs;
 
 namespace AlgoSdk.MessagePack
 {
-    public ref partial struct MessagePackWriter
+    public partial struct MessagePackWriter
+        : INativeDisposable
     {
         NativeList<byte> data;
 
-        public MessagePackWriter(NativeList<byte> data)
+        public MessagePackWriter(Allocator allocator)
         {
-            this.data = data;
+            this.data = new NativeList<byte>(allocator);
+        }
+
+        public NativeList<byte> Data => data;
+
+        public JobHandle Dispose(JobHandle inputDeps)
+        {
+            return data.IsCreated
+                ? data.Dispose(inputDeps)
+                : inputDeps;
+        }
+
+        public void Dispose()
+        {
+            if (data.IsCreated)
+                data.Dispose();
         }
 
         public void WriteNil()

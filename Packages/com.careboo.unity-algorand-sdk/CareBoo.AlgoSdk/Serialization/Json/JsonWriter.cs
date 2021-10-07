@@ -1,16 +1,19 @@
 using Unity.Collections;
+using Unity.Jobs;
 
 namespace AlgoSdk.Json
 {
-    public ref struct JsonWriter
+    public struct JsonWriter
+        : INativeDisposable
     {
         NativeText text;
 
-        public JsonWriter(NativeText text)
+        public JsonWriter(Allocator allocator)
         {
-            text.Clear();
-            this.text = text;
+            text = new NativeText(allocator);
         }
+
+        public NativeText Text => text;
 
         public JsonWriter BeginObject() => WriteChar('{');
 
@@ -68,8 +71,9 @@ namespace AlgoSdk.Json
         public JsonWriter WriteObjectKey<T>(in T fs)
             where T : struct, INativeList<byte>, IUTF8Bytes
         {
-            return WriteString(in fs)
-                .WriteChar(':');
+            WriteString(in fs);
+            WriteChar(':');
+            return this;
         }
 
         public JsonWriter BeginNextItem() => WriteChar(',');
@@ -78,6 +82,19 @@ namespace AlgoSdk.Json
         {
             text.Append(c.ToRune());
             return this;
+        }
+
+        public JobHandle Dispose(JobHandle inputDeps)
+        {
+            return text.IsCreated
+                ? text.Dispose(inputDeps)
+                : inputDeps;
+        }
+
+        public void Dispose()
+        {
+            if (text.IsCreated)
+                text.Dispose();
         }
     }
 }
