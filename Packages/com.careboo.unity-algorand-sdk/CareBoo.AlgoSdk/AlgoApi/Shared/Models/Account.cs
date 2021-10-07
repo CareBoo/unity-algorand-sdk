@@ -31,11 +31,20 @@ namespace AlgoSdk
         [AlgoApiField("auth-addr", null)]
         public Optional<Address> AuthAddress;
 
+        [AlgoApiField("closed-at-round", null, readOnly: true)]
+        public ulong ClosedAtRound;
+
         [AlgoApiField("created-apps", null)]
         public Application[] CreatedApplications;
 
         [AlgoApiField("created-assets", null)]
         public Asset[] CreatedAssets;
+
+        [AlgoApiField("created-at-round", null, readOnly: true)]
+        public ulong CreatedAtRound;
+
+        [AlgoApiField("deleted", null, readOnly: true)]
+        public Optional<bool> Deleted;
 
         [AlgoApiField("participation", null)]
         public Optional<AccountParticipation> Participation;
