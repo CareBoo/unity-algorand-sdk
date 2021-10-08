@@ -68,14 +68,14 @@ namespace AlgoSdk
             return this;
         }
 
-        public QueryBuilder AddFixedString<T>(string key, T value)
-            where T : unmanaged, IUTF8Bytes, INativeList<byte>
+        public QueryBuilder Add<T>(string key, Optional<T> value)
+            where T : unmanaged, IUTF8Bytes, INativeList<byte>, IEquatable<T>
         {
-            if (value.Equals(default))
+            if (!value.HasValue)
                 return this;
 
             AddKey(key);
-            text.Append(value);
+            text.Append(value.Value);
             return this;
         }
 
