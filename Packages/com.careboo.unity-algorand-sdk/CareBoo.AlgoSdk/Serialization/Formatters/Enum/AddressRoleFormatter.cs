@@ -3,7 +3,7 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
-    public class AddressRoleFormatter : ByteEnumFormatter<AddressRole>
+    public class AddressRoleFormatter : KeywordByteEnumFormatter<AddressRole>
     {
         private static readonly FixedString32Bytes[] typeToString = new FixedString32Bytes[]
         {

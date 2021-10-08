@@ -15,7 +15,7 @@ namespace AlgoSdk
         public FixedString64Bytes GenesisId;
 
         [AlgoApiField("previous-block-hash", "prev")]
-        public FixedString128Bytes PreviousBlockHash;
+        public Sha512_256_Hash PreviousBlockHash;
 
         [AlgoApiField("rewards", null)]
         public BlockRewards Rewards;
@@ -29,7 +29,7 @@ namespace AlgoSdk
         [AlgoApiField("timestamp", "ts")]
         public ulong Timestamp;
 
-        [AlgoApiField("transactions", "ts")]
+        [AlgoApiField("transactions", "txns")]
         public BlockTransaction[] Transactions;
 
         [AlgoApiField("transaction-root", "txn")]
@@ -46,7 +46,7 @@ namespace AlgoSdk
 
 
         [AlgoApiField(null, "fees")]
-        public FixedString128Bytes FeeSink
+        public Address FeeSink
         {
             get => Rewards.FeeSink;
             set => Rewards.FeeSink = value;
@@ -67,7 +67,7 @@ namespace AlgoSdk
         }
 
         [AlgoApiField(null, "rwd")]
-        public FixedString128Bytes RewardsPool
+        public Address RewardsPool
         {
             get => Rewards.RewardsPool;
             set => Rewards.RewardsPool = value;
@@ -80,7 +80,7 @@ namespace AlgoSdk
             set => Rewards.RewardsRate = value;
         }
 
-        [AlgoApiField(null, "frace")]
+        [AlgoApiField(null, "frac")]
         public ulong RewardsResidue
         {
             get => Rewards.RewardsResidue;
@@ -137,7 +137,7 @@ namespace AlgoSdk
         }
 
         [AlgoApiField(null, "upgradeprop")]
-        public FixedString128Bytes UpgradePropose
+        public Address UpgradePropose
         {
             get => UpgradeVote.UpgradePropose;
             set => UpgradeVote.UpgradePropose = value;

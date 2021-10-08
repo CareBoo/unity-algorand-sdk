@@ -8,7 +8,7 @@ namespace AlgoSdk
         : IEquatable<BlockRewards>
     {
         [AlgoApiField("fee-sink", null)]
-        public FixedString128Bytes FeeSink;
+        public Address FeeSink;
 
         [AlgoApiField("rewards-calculation-round", null)]
         public ulong RewardsCalculationRound;
@@ -17,7 +17,7 @@ namespace AlgoSdk
         public ulong RewardsLevel;
 
         [AlgoApiField("rewards-pool", null)]
-        public FixedString128Bytes RewardsPool;
+        public Address RewardsPool;
 
         [AlgoApiField("rewards-rate", null)]
         public ulong RewardsRate;
