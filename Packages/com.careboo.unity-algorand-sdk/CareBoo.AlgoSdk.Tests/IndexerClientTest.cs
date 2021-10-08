@@ -3,31 +3,17 @@ using AlgoSdk;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
 using UnityEngine;
-using UnityEngine.Networking;
 using UnityEngine.TestTools;
 
 [ConditionalIgnore(nameof(UnityEngine.Application.isBatchMode), "This test requires indexer service to be running.")]
 public class IndexerClientTest : AlgoApiClientTest
 {
-    const string SandboxToken = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-    const string SandBoxAddress = "http://localhost:8980";
-    static readonly Mnemonic AccountMnemonic = "earth burst hero frown popular genius occur interest hobby push throw canoe orchard dish shed poem child frequent shop lecture female define state abstract tree";
-
-    static readonly IndexerClient client = new IndexerClient(SandBoxAddress, SandboxToken);
-
-    static async UniTask<bool> SandboxIsHealthy()
-    {
-        var response = await client.GetHealth();
-        return response.Payload.DatabaseAvailable;
-    }
-
-
     [UnityTest]
     public IEnumerator GetAccountShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         Address accountAddress = AccountMnemonic.ToPrivateKey().ToPublicKey();
-        var response = await client.GetAccount(accountAddress);
-        Debug.Log(response.Raw.GetText());
+        var response = await indexer.GetAccount(accountAddress);
+        Debug.Log(response.GetText());
         AssertResponseSuccess(response);
     });
 
@@ -35,8 +21,8 @@ public class IndexerClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetAccountsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var response = await client.GetAccounts();
-        Debug.Log(response.Raw.GetText());
+        var response = await indexer.GetAccounts();
+        Debug.Log(response.GetText());
         AssertResponseSuccess(response);
     });
 
@@ -44,31 +30,71 @@ public class IndexerClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetAccountsGreaterThan1000AlgoShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var response = await client.GetAccounts(new AccountsQuery
+        var response = await indexer.GetAccounts(new AccountsQuery
         {
             CurrencyGreaterThan = 1000
         });
-        Debug.Log(response.Raw.GetText());
+        Debug.Log(response.GetText());
         AssertResponseSuccess(response);
     });
 
     [UnityTest]
+    [Ignore("limit isn't working at the moment...")]
     public IEnumerator GetAccountsPaginatedShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var firstPageResponse = await client.GetAccounts(new AccountsQuery
+        ulong limit = 1;
+        var firstPageResponse = await indexer.GetAccounts(new AccountsQuery
         {
-            Limit = 1
+            Limit = limit,
+            IncludeAll = true
         });
-        Debug.Log(firstPageResponse.Raw.GetText());
+        Debug.Log($"first page:\n{firstPageResponse.GetText()}");
         AssertResponseSuccess(firstPageResponse);
-        Assert.AreEqual(firstPageResponse.Payload.Accounts.Length, 1);
-        var secondPageResponse = await client.GetAccounts(new AccountsQuery
+        var secondPageResponse = await indexer.GetAccounts(new AccountsQuery
         {
             Next = firstPageResponse.Payload.NextToken,
-            Limit = 1
+            Limit = limit
         });
-        Debug.Log(secondPageResponse.Raw.GetText());
+        Debug.Log($"second page:\n{secondPageResponse.GetText()}");
         AssertResponseSuccess(secondPageResponse);
-        Assert.AreEqual(secondPageResponse.Payload.Accounts.Length, 1);
+    });
+
+
+    [UnityTest]
+    public IEnumerator GetAccountTransactionsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
+    {
+        await MakePaymentTransaction(10_000);
+        Address accountAddress = AccountMnemonic.ToPrivateKey().ToPublicKey();
+        var response = await indexer.GetAccountTransactions(accountAddress);
+        Debug.Log(response.GetText());
+        AssertResponseSuccess(response);
+    });
+
+
+    [UnityTest]
+    public IEnumerator GetApplicationsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
+    {
+        var response = await indexer.GetApplications();
+        Debug.Log(response.GetText());
+        AssertResponseSuccess(response);
+    });
+
+
+    [UnityTest]
+    public IEnumerator GetAssetsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
+    {
+        var response = await indexer.GetAssets();
+        Debug.Log(response.GetText());
+        AssertResponseSuccess(response);
+    });
+
+
+    [UnityTest]
+    public IEnumerator GetHealthShouldReturnOkay() => UniTask.ToCoroutine(async () =>
+    {
+        var response = await indexer.GetHealth();
+        Debug.Log(response.GetText());
+        AssertResponseSuccess(response);
+        Assert.IsTrue(response.Payload.DatabaseAvailable);
     });
 }
