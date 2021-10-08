@@ -2,7 +2,7 @@ using Unity.Collections;
 
 namespace AlgoSdk.Formatters
 {
-    public sealed class OnCompletionFormatter : ByteEnumFormatter<OnCompletion>
+    public sealed class OnCompletionFormatter : KeywordByteEnumFormatter<OnCompletion>
     {
         private static readonly FixedString32Bytes[] typeToString = new FixedString32Bytes[]
         {
