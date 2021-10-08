@@ -25,5 +25,13 @@ namespace AlgoSdk
         {
             return TypeToString[(int)addrRole];
         }
+
+        public static Optional<FixedString32Bytes> ToOptionalFixedString(this AddressRole addressRole)
+        {
+            return addressRole == AddressRole.None
+                ? default(Optional<FixedString32Bytes>)
+                : addressRole.ToFixedString()
+                ;
+        }
     }
 }

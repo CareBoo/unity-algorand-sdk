@@ -26,5 +26,13 @@ namespace AlgoSdk
         {
             return TypeToString[(int)sigType];
         }
+
+        public static Optional<FixedString32Bytes> ToOptionalFixedString(this SignatureType sigType)
+        {
+            return sigType == SignatureType.None
+                ? default(Optional<FixedString32Bytes>)
+                : sigType.ToFixedString()
+                ;
+        }
     }
 }
