@@ -33,5 +33,13 @@ namespace AlgoSdk
         {
             return TypeToString[(int)txType];
         }
+
+        public static Optional<FixedString32Bytes> ToOptionalFixedString(this TransactionType txType)
+        {
+            return txType == TransactionType.None
+                ? default(Optional<FixedString32Bytes>)
+                : txType.ToFixedString()
+                ;
+        }
     }
 }

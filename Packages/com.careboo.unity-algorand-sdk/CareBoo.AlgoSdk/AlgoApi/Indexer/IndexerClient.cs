@@ -32,12 +32,12 @@ namespace AlgoSdk
             Optional<ulong> currencyLessThan = default,
             Optional<bool> includeAll = default,
             Optional<ulong> limit = default,
-            FixedString128Bytes next = default,
+            Optional<FixedString128Bytes> next = default,
             Optional<ulong> round = default
         )
         {
             using var queryBuilder = new QueryBuilder(Allocator.Persistent);
-            queryBuilder
+            var query = queryBuilder
                 .Add("application-id", applicationId)
                 .Add("asset-id", assetId)
                 .Add("auth-addr", authAddr)
@@ -45,10 +45,11 @@ namespace AlgoSdk
                 .Add("currency-less-than", currencyLessThan)
                 .Add("include-all", includeAll)
                 .Add("limit", limit)
-                .AddFixedString("next", next)
+                .Add("next", next)
                 .Add("round", round)
+                .ToString()
                 ;
-            return await this.GetAsync("/v2/accounts" + queryBuilder.ToString());
+            return await this.GetAsync("/v2/accounts" + query);
         }
 
         public async UniTask<AlgoApiResponse<AccountResponse>> GetAccount(
@@ -58,11 +59,12 @@ namespace AlgoSdk
         )
         {
             using var queryBuilder = new QueryBuilder(Allocator.Persistent);
-            queryBuilder
+            var query = queryBuilder
                 .Add("include-all", includeAll)
                 .Add("round", round)
+                .ToString()
                 ;
-            return await this.GetAsync($"/v2/accounts/{accountAddress}{queryBuilder}");
+            return await this.GetAsync($"/v2/accounts/{accountAddress}{query}");
         }
 
         public async UniTask<AlgoApiResponse<TransactionsResponse>> GetAccountTransactions(
@@ -75,17 +77,17 @@ namespace AlgoSdk
             Optional<ulong> limit = default,
             Optional<ulong> maxRound = default,
             Optional<ulong> minRound = default,
-            FixedString128Bytes next = default,
+            Optional<FixedString128Bytes> next = default,
             string notePrefix = default,
             Optional<bool> rekeyTo = default,
             Optional<ulong> round = default,
             SignatureType sigType = default,
             TransactionType txType = default,
-            FixedString64Bytes txid = default
+            Optional<FixedString64Bytes> txid = default
         )
         {
             using var queryBuilder = new QueryBuilder(Allocator.Persistent);
-            queryBuilder
+            var query = queryBuilder
                 .Add("account-address", accountAddress)
                 .Add("after-time", afterTime)
                 .Add("asset-id", assetId)
@@ -95,32 +97,34 @@ namespace AlgoSdk
                 .Add("limit", limit)
                 .Add("max-round", maxRound)
                 .Add("min-round", minRound)
-                .AddFixedString("next", next)
+                .Add("next", next)
                 .Add("note-prefix", notePrefix)
                 .Add("rekey-to", rekeyTo)
                 .Add("round", round)
-                .AddFixedString("sig-type", sigType.ToFixedString())
-                .AddFixedString("tx-type", txType.ToFixedString())
-                .AddFixedString("txid", txid)
+                .Add("sig-type", sigType.ToOptionalFixedString())
+                .Add("tx-type", txType.ToOptionalFixedString())
+                .Add("txid", txid)
+                .ToString()
                 ;
-            return await this.GetAsync($"/v2/accounts/{accountAddress}/transactions{queryBuilder}");
+            return await this.GetAsync($"/v2/accounts/{accountAddress}/transactions{query}");
         }
 
         public async UniTask<AlgoApiResponse<ApplicationsResponse>> GetApplications(
             Optional<ulong> applicationId = default,
             Optional<bool> includeAll = default,
             Optional<ulong> limit = default,
-            FixedString128Bytes next = default
+            Optional<FixedString128Bytes> next = default
         )
         {
             using var queryBuilder = new QueryBuilder(Allocator.Persistent);
-            queryBuilder
+            var query = queryBuilder
                 .Add("application-id", applicationId)
                 .Add("include-all", includeAll)
                 .Add("limit", limit)
-                .AddFixedString("next", next)
+                .Add("next", next)
+                .ToString()
                 ;
-            return await this.GetAsync("/v2/applications" + queryBuilder.ToString());
+            return await this.GetAsync("/v2/applications" + query);
         }
 
         public async UniTask<AlgoApiResponse<ApplicationResponse>> GetApplication(
@@ -129,10 +133,10 @@ namespace AlgoSdk
         )
         {
             using var queryBuilder = new QueryBuilder(Allocator.Persistent);
-            queryBuilder
+            var query = queryBuilder
                 .Add("include-all", includeAll)
                 ;
-            return await this.GetAsync($"/v2/applications/{applicationId}{queryBuilder}");
+            return await this.GetAsync($"/v2/applications/{applicationId}{query}");
         }
 
         public async UniTask<AlgoApiResponse<AssetsResponse>> GetAssets(
@@ -141,20 +145,21 @@ namespace AlgoSdk
             Optional<bool> includeAll = default,
             Optional<ulong> limit = default,
             string name = default,
-            FixedString128Bytes next = default,
+            Optional<FixedString128Bytes> next = default,
             string unit = default
         )
         {
             using var queryBuilder = new QueryBuilder(Allocator.Persistent);
-            queryBuilder.Add("asset-id", assetId)
+            var query = queryBuilder.Add("asset-id", assetId)
                 .Add("creator", creator)
                 .Add("include-all", includeAll)
                 .Add("limit", limit)
                 .Add("name", name)
                 .Add("next", next)
                 .Add("unit", unit)
+                .ToString()
                 ;
-            return await this.GetAsync($"/v2/assets{queryBuilder}");
+            return await this.GetAsync($"/v2/assets{query}");
         }
 
         public async UniTask<AlgoApiResponse<AssetResponse>> GetAsset(
@@ -163,10 +168,10 @@ namespace AlgoSdk
         )
         {
             using var queryBuilder = new QueryBuilder(Allocator.Persistent);
-            queryBuilder
+            var query = queryBuilder
                 .Add("include-all", includeAll)
                 ;
-            return await this.GetAsync($"/v2/assets/{assetId}{queryBuilder}");
+            return await this.GetAsync($"/v2/assets/{assetId}{query}");
         }
 
         public async UniTask<AlgoApiResponse<BalancesResponse>> GetAssetBalances(
@@ -175,20 +180,21 @@ namespace AlgoSdk
             Optional<ulong> currencyLessThan = default,
             Optional<bool> includeAll = default,
             Optional<ulong> limit = default,
-            FixedString128Bytes next = default,
+            Optional<FixedString128Bytes> next = default,
             Optional<ulong> round = default
         )
         {
             using var queryBuilder = new QueryBuilder(Allocator.Persistent);
-            queryBuilder
+            var query = queryBuilder
                 .Add("currency-greater-than", currencyGreaterThan)
                 .Add("currency-less-than", currencyLessThan)
                 .Add("include-all", includeAll)
                 .Add("limit", limit)
-                .AddFixedString("next", next)
+                .Add("next", next)
                 .Add("round", round)
+                .ToString()
                 ;
-            return await this.GetAsync($"/v2/assets/{assetId}/balances{queryBuilder}");
+            return await this.GetAsync($"/v2/assets/{assetId}/balances{query}");
         }
 
         public async UniTask<AlgoApiResponse<TransactionsResponse>> GetAssetTransactions(
@@ -203,19 +209,19 @@ namespace AlgoSdk
             Optional<ulong> limit = default,
             Optional<ulong> maxRound = default,
             Optional<ulong> minRound = default,
-            FixedString128Bytes next = default,
+            Optional<FixedString128Bytes> next = default,
             string notePrefix = default,
             Optional<bool> rekeyTo = default,
             Optional<ulong> round = default,
             SignatureType sigType = default,
             TransactionType txType = default,
-            FixedString64Bytes txid = default
+            Optional<FixedString64Bytes> txid = default
         )
         {
             using var queryBuilder = new QueryBuilder(Allocator.Persistent);
-            queryBuilder
+            var query = queryBuilder
                 .Add("address", address)
-                .AddFixedString("address-role", addressRole.ToFixedString())
+                .Add("address-role", addressRole.ToOptionalFixedString())
                 .Add("after-time", afterTime)
                 .Add("before-time", beforeTime)
                 .Add("currency-greater-than", currencyGreaterThan)
@@ -224,15 +230,16 @@ namespace AlgoSdk
                 .Add("limit", limit)
                 .Add("max-round", maxRound)
                 .Add("min-round", minRound)
-                .AddFixedString("next", next)
+                .Add("next", next)
                 .Add("note-prefix", notePrefix)
                 .Add("rekey-to", rekeyTo)
                 .Add("round", round)
-                .AddFixedString("sig-type", sigType.ToFixedString())
-                .AddFixedString("tx-type", txType.ToFixedString())
-                .AddFixedString("txid", txid)
+                .Add("sig-type", sigType.ToOptionalFixedString())
+                .Add("tx-type", txType.ToOptionalFixedString())
+                .Add("txid", txid)
+                .ToString()
                 ;
-            return await this.GetAsync($"/v2/assets/{assetId}/transactions{queryBuilder}");
+            return await this.GetAsync($"/v2/assets/{assetId}/transactions{query}");
         }
 
         public async UniTask<AlgoApiResponse<Block>> GetBlock(ulong round)
@@ -253,19 +260,19 @@ namespace AlgoSdk
             Optional<ulong> limit = default,
             Optional<ulong> maxRound = default,
             Optional<ulong> minRound = default,
-            FixedString128Bytes next = default,
+            Optional<FixedString128Bytes> next = default,
             string notePrefix = default,
             Optional<bool> rekeyTo = default,
             Optional<ulong> round = default,
             SignatureType sigType = default,
             TransactionType txType = default,
-            FixedString64Bytes txid = default
+            Optional<FixedString64Bytes> txid = default
         )
         {
             using var queryBuilder = new QueryBuilder(Allocator.Persistent);
-            queryBuilder
+            var query = queryBuilder
                 .Add("address", address)
-                .AddFixedString("address-role", addressRole.ToFixedString())
+                .Add("address-role", addressRole.ToOptionalFixedString())
                 .Add("after-time", afterTime)
                 .Add("application-id", applicationId)
                 .Add("asset-id", assetId)
@@ -276,15 +283,16 @@ namespace AlgoSdk
                 .Add("limit", limit)
                 .Add("max-round", maxRound)
                 .Add("min-round", minRound)
-                .AddFixedString("next", next)
+                .Add("next", next)
                 .Add("note-prefix", notePrefix)
                 .Add("rekey-to", rekeyTo)
                 .Add("round", round)
-                .AddFixedString("sig-type", sigType.ToFixedString())
-                .AddFixedString("tx-type", txType.ToFixedString())
-                .AddFixedString("txid", txid)
+                .Add("sig-type", sigType.ToOptionalFixedString())
+                .Add("tx-type", txType.ToOptionalFixedString())
+                .Add("txid", txid)
+                .ToString()
                 ;
-            return await this.GetAsync("/v2/transactions" + queryBuilder.ToString());
+            return await this.GetAsync("/v2/transactions" + query);
         }
 
         public async UniTask<AlgoApiResponse<TransactionResponse>> GetTransaction(FixedString64Bytes txid)

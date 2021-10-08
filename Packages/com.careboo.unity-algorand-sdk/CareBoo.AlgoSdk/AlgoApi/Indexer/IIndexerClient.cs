@@ -15,7 +15,7 @@ namespace AlgoSdk
             Optional<ulong> currencyLessThan = default,
             Optional<bool> includeAll = default,
             Optional<ulong> limit = default,
-            FixedString128Bytes next = default,
+            Optional<FixedString128Bytes> next = default,
             Optional<ulong> round = default
         );
         UniTask<AlgoApiResponse<AccountResponse>> GetAccount(
@@ -33,19 +33,19 @@ namespace AlgoSdk
             Optional<ulong> limit = default,
             Optional<ulong> maxRound = default,
             Optional<ulong> minRound = default,
-            FixedString128Bytes next = default,
+            Optional<FixedString128Bytes> next = default,
             string notePrefix = default,
             Optional<bool> rekeyTo = default,
             Optional<ulong> round = default,
             SignatureType sigType = default,
             TransactionType txType = default,
-            FixedString64Bytes txid = default
+            Optional<FixedString64Bytes> txid = default
         );
         UniTask<AlgoApiResponse<ApplicationsResponse>> GetApplications(
             Optional<ulong> applicationId = default,
             Optional<bool> includeAll = default,
             Optional<ulong> limit = default,
-            FixedString128Bytes next = default
+            Optional<FixedString128Bytes> next = default
         );
         UniTask<AlgoApiResponse<ApplicationResponse>> GetApplication(
             ulong applicationId,
@@ -57,7 +57,7 @@ namespace AlgoSdk
             Optional<bool> includeAll = default,
             Optional<ulong> limit = default,
             string name = default,
-            FixedString128Bytes next = default,
+            Optional<FixedString128Bytes> next = default,
             string unit = default
         );
         UniTask<AlgoApiResponse<AssetResponse>> GetAsset(
@@ -70,7 +70,7 @@ namespace AlgoSdk
             Optional<ulong> currencyLessThan = default,
             Optional<bool> includeAll = default,
             Optional<ulong> limit = default,
-            FixedString128Bytes next = default,
+            Optional<FixedString128Bytes> next = default,
             Optional<ulong> round = default
         );
         UniTask<AlgoApiResponse<TransactionsResponse>> GetAssetTransactions(
@@ -85,13 +85,13 @@ namespace AlgoSdk
             Optional<ulong> limit = default,
             Optional<ulong> maxRound = default,
             Optional<ulong> minRound = default,
-            FixedString128Bytes next = default,
+            Optional<FixedString128Bytes> next = default,
             string notePrefix = default,
             Optional<bool> rekeyTo = default,
             Optional<ulong> round = default,
             SignatureType sigType = default,
             TransactionType txType = default,
-            FixedString64Bytes txid = default
+            Optional<FixedString64Bytes> txid = default
         );
         UniTask<AlgoApiResponse<Block>> GetBlock(ulong round);
         UniTask<AlgoApiResponse<TransactionsResponse>> GetTransactions(
@@ -107,13 +107,13 @@ namespace AlgoSdk
             Optional<ulong> limit = default,
             Optional<ulong> maxRound = default,
             Optional<ulong> minRound = default,
-            FixedString128Bytes next = default,
+            Optional<FixedString128Bytes> next = default,
             string notePrefix = default,
             Optional<bool> rekeyTo = default,
             Optional<ulong> round = default,
             SignatureType sigType = default,
             TransactionType txType = default,
-            FixedString64Bytes txid = default
+            Optional<FixedString64Bytes> txid = default
         );
         UniTask<AlgoApiResponse<TransactionResponse>> GetTransaction(FixedString64Bytes txid);
     }
