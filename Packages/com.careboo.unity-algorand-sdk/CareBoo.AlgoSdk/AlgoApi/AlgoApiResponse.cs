@@ -67,6 +67,9 @@ namespace AlgoSdk
 
         public AlgoApiResponse(AlgoApiResponse response)
         {
+#if UNITY_INCLUDE_TESTS
+            UnityEngine.Debug.Log(response.GetText());
+#endif
             this.rawResponse = response;
             byte[] rawBytes = response.Data;
             using var bytes = new NativeArray<byte>(rawBytes, Allocator.Temp);
