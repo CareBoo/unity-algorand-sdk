@@ -10,7 +10,7 @@ namespace AlgoSdk.Formatters
         {
             var text = new NativeText(Allocator.Temp);
             var fs = new FixedString128Bytes();
-            reader.ReadString(ref fs).ThrowIfError();
+            reader.ReadString(ref fs).ThrowIfError(reader.Char, reader.Position);
             return Address.FromString(fs);
         }
 

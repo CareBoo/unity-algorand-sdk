@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using Unity.Collections;
 
 namespace AlgoSdk
 {
@@ -11,15 +12,15 @@ namespace AlgoSdk
         UniTask<AlgoApiResponse<Account>> GetAccountInformation(Address accountAddress);
         UniTask<AlgoApiResponse<PendingTransactions>> GetPendingTransactions(ulong max = 0);
         UniTask<AlgoApiResponse<PendingTransactions>> GetPendingTransactions(Address accountAddress, ulong max = 0);
-        UniTask<AlgoApiResponse<PendingTransaction>> GetPendingTransaction(TransactionId txId);
+        UniTask<AlgoApiResponse<PendingTransaction>> GetPendingTransaction(FixedString64Bytes txId);
         UniTask<AlgoApiResponse<Application>> GetApplication(ulong applicationId);
         UniTask<AlgoApiResponse<Asset>> GetAsset(ulong assetId);
         UniTask<AlgoApiResponse<BlockResponse>> GetBlock(ulong round);
-        UniTask<AlgoApiResponse<MerkleProof>> GetMerkleProof(ulong round, TransactionId txid);
+        UniTask<AlgoApiResponse<MerkleProof>> GetMerkleProof(ulong round, FixedString64Bytes txid);
         UniTask<AlgoApiResponse<CatchupMessage>> StartCatchup(string catchpoint);
         UniTask<AlgoApiResponse<CatchupMessage>> AbortCatchup(string catchpoint);
         UniTask<AlgoApiResponse<LedgerSupply>> GetLedgerSupply();
-        UniTask<AlgoApiResponse<TransactionId>> RegisterParticipationKeys(
+        UniTask<AlgoApiResponse<TransactionIdResponse>> RegisterParticipationKeys(
             Address accountAddress,
             ulong fee = 1000,
             Optional<ulong> keyDilution = default,
@@ -30,7 +31,7 @@ namespace AlgoSdk
         UniTask<AlgoApiResponse<Status>> GetStatusAfterWaitingForRound(ulong round);
         UniTask<AlgoApiResponse<TealCompilationResult>> TealCompile(string source);
         UniTask<AlgoApiResponse<DryrunResults>> TealDryrun(Optional<DryrunRequest> request = default);
-        UniTask<AlgoApiResponse<TransactionId>> SendTransaction(SignedTransaction rawTxn);
+        UniTask<AlgoApiResponse<TransactionIdResponse>> SendTransaction(SignedTransaction rawTxn);
         UniTask<AlgoApiResponse<TransactionParams>> GetTransactionParams();
         UniTask<AlgoApiResponse<Version>> GetVersions();
     }

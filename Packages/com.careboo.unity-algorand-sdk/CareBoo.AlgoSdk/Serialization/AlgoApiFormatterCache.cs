@@ -72,7 +72,7 @@ namespace AlgoSdk
             {
                 return algoApiFormatter;
             }
-            throw new InvalidCastException($"formatter of type {formatter.GetType()} cannot be cast to {typeof(IAlgoApiFormatter<T>)}...");
+            throw new InvalidCastException($"formatter '{(formatter?.GetType().FullName ?? "void")}' cannot be cast to '{typeof(IAlgoApiFormatter<T>).FullName}'...");
         }
     }
 }

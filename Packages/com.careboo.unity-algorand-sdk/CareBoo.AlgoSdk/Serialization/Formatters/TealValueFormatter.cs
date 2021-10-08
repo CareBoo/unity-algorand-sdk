@@ -11,11 +11,11 @@ namespace AlgoSdk.MsgPack.Formatters
         {
             TealValue result = default;
             if (!reader.TryRead(JsonToken.ObjectBegin))
-                JsonReadError.IncorrectType.ThrowIfError();
+                JsonReadError.IncorrectType.ThrowIfError(reader.Char, reader.Position);
             for (var i = 0; i < 2; i++)
             {
                 var key = new FixedString32Bytes();
-                reader.ReadString(ref key).ThrowIfError();
+                reader.ReadString(ref key).ThrowIfError(reader.Char, reader.Position);
                 if (key == "type")
                     result.Type = AlgoApiFormatterCache<TealValueType>.Formatter.Deserialize(ref reader);
                 else if (key == "bytes")
@@ -26,7 +26,7 @@ namespace AlgoSdk.MsgPack.Formatters
                     throw new ArgumentOutOfRangeException($"Found unexpected key in message: {key}");
             }
             if (!reader.TryRead(JsonToken.ObjectEnd))
-                JsonReadError.IncorrectFormat.ThrowIfError();
+                JsonReadError.IncorrectFormat.ThrowIfError(reader.Char, reader.Position);
             return result;
         }
 

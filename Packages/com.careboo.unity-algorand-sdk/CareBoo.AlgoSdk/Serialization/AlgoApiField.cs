@@ -64,11 +64,13 @@ namespace AlgoSdk
         {
             bool fieldsEqual(TAlgoApiObject messagePackObject, TAlgoApiObject other)
             {
-                return getter(messagePackObject).Equals(getter(other));
+                var field = getter(messagePackObject);
+                return field.Equals(getter(other));
             }
             bool shouldSerialize(TAlgoApiObject messagePackObject)
             {
-                return !getter(messagePackObject).Equals(default);
+                var field = getter(messagePackObject);
+                return !field.Equals(default);
             }
             return Assign(getter, setter, fieldsEqual, readOnly ? shouldSerializeReadOnly : shouldSerialize);
         }

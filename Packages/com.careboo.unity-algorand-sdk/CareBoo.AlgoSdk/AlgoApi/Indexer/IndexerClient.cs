@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using Unity.Collections;
 
 namespace AlgoSdk
 {
@@ -72,7 +73,7 @@ namespace AlgoSdk
             return await this.GetAsync("/health");
         }
 
-        public async UniTask<AlgoApiResponse<TransactionResponse>> GetTransaction(TransactionId txid)
+        public async UniTask<AlgoApiResponse<TransactionResponse>> GetTransaction(FixedString64Bytes txid)
         {
             return await this.GetAsync($"/v2/transactions/{txid}");
         }

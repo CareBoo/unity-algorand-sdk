@@ -8,7 +8,7 @@ namespace AlgoSdk.Formatters
         public ulong Deserialize(ref JsonReader reader)
         {
             reader.ReadNumber(out ulong val)
-                .ThrowIfError();
+                .ThrowIfError(reader.Char, reader.Position);
             return val;
         }
 

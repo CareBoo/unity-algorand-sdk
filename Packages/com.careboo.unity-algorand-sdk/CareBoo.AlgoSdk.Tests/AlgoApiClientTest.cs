@@ -18,7 +18,7 @@ public abstract class AlgoApiClientTest
 
     protected static void AssertResponseSuccess<T>(AlgoApiResponse<T> response) where T : struct
     {
-        Assert.AreEqual(UnityWebRequest.Result.Success, response.Raw.Status, response.Error.Message);
+        Assert.AreEqual(UnityWebRequest.Result.Success, response.Status, response.Error.Message);
     }
 
     protected static void AssertResponseSuccess(AlgoApiResponse response)
@@ -26,7 +26,7 @@ public abstract class AlgoApiClientTest
         Assert.AreEqual(UnityWebRequest.Result.Success, response.Status, response.GetText());
     }
 
-    protected static async UniTask<TransactionId> MakePaymentTransaction(ulong amt)
+    protected static async UniTask<TransactionIdResponse> MakePaymentTransaction(ulong amt)
     {
         using var keyPair = AccountMnemonic
             .ToPrivateKey()
@@ -50,7 +50,7 @@ public abstract class AlgoApiClientTest
         Debug.Log(System.Convert.ToBase64String(serialized.ToArray()));
         var txidResponse = await algod.SendTransaction(signedTxn);
         AssertResponseSuccess(txidResponse);
-        Debug.Log(txidResponse.Raw.GetText());
+        Debug.Log(txidResponse.GetText());
         return txidResponse.Payload;
     }
 }

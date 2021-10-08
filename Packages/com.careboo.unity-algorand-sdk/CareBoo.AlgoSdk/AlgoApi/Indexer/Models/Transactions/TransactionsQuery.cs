@@ -3,6 +3,7 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
+    [AlgoApiObject]
     public struct TransactionsQuery
         : IEquatable<TransactionsQuery>
     {
@@ -58,7 +59,7 @@ namespace AlgoSdk
         public TransactionType TxType;
 
         [AlgoApiField("txid", null)]
-        public TransactionId TxId;
+        public FixedString64Bytes TxId;
 
         public bool Equals(TransactionsQuery other)
         {

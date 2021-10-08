@@ -1,78 +1,45 @@
 using System;
 using System.Collections.Generic;
+using Unity.Collections.LowLevel.Unsafe;
 
 namespace AlgoSdk
 {
-    public struct TransactionTypeComparer : IEqualityComparer<TransactionType>
+    public struct ByteEnumComparer<T> : IEqualityComparer<T>
+        where T : Enum
     {
-        bool IEqualityComparer<TransactionType>.Equals(TransactionType x, TransactionType y) => Equals(x, y);
-        int IEqualityComparer<TransactionType>.GetHashCode(TransactionType obj) => GetHashCode(obj);
+        bool IEqualityComparer<T>.Equals(T x, T y) => Equals(x, y);
+        int IEqualityComparer<T>.GetHashCode(T obj) => GetHashCode(obj);
 
-        public static bool Equals(TransactionType x, TransactionType y)
+        public static bool Equals(T x, T y)
         {
-            return x == y;
+            return UnsafeUtility.As<T, byte>(ref x) == UnsafeUtility.As<T, byte>(ref y);
         }
 
-        public static int GetHashCode(TransactionType obj)
+        public static int GetHashCode(T obj)
         {
             return obj.GetHashCode();
         }
 
-        public static readonly TransactionTypeComparer Instance = new TransactionTypeComparer();
+        public static readonly ByteEnumComparer<T> Instance = new ByteEnumComparer<T>();
     }
 
-    public struct SignatureTypeComparer : IEqualityComparer<SignatureType>
+    public struct IntEnumComparer<T> : IEqualityComparer<T>
+        where T : Enum
     {
-        bool IEqualityComparer<SignatureType>.Equals(SignatureType x, SignatureType y) => Equals(x, y);
-        int IEqualityComparer<SignatureType>.GetHashCode(SignatureType obj) => GetHashCode(obj);
+        bool IEqualityComparer<T>.Equals(T x, T y) => Equals(x, y);
+        int IEqualityComparer<T>.GetHashCode(T obj) => GetHashCode(obj);
 
-        public static bool Equals(SignatureType x, SignatureType y)
+        public static bool Equals(T x, T y)
         {
-            return x == y;
+            return UnsafeUtility.As<T, int>(ref x) == UnsafeUtility.As<T, int>(ref y);
         }
 
-        public static int GetHashCode(SignatureType obj)
+        public static int GetHashCode(T obj)
         {
             return obj.GetHashCode();
         }
 
-        public static readonly SignatureTypeComparer Instance = new SignatureTypeComparer();
-    }
-
-    public struct OnCompletionComparer : IEqualityComparer<OnCompletion>
-    {
-        bool IEqualityComparer<OnCompletion>.Equals(OnCompletion x, OnCompletion y) => Equals(x, y);
-        int IEqualityComparer<OnCompletion>.GetHashCode(OnCompletion obj) => GetHashCode(obj);
-
-        public static bool Equals(OnCompletion x, OnCompletion y)
-        {
-            return x == y;
-        }
-
-        public static int GetHashCode(OnCompletion obj)
-        {
-            return obj.GetHashCode();
-        }
-
-        public static readonly OnCompletionComparer Instance = new OnCompletionComparer();
-    }
-
-    public struct AddressRoleComparer : IEqualityComparer<AddressRole>
-    {
-        bool IEqualityComparer<AddressRole>.Equals(AddressRole x, AddressRole y) => Equals(x, y);
-        int IEqualityComparer<AddressRole>.GetHashCode(AddressRole obj) => GetHashCode(obj);
-
-        public static bool Equals(AddressRole x, AddressRole y)
-        {
-            return x == y;
-        }
-
-        public static int GetHashCode(AddressRole obj)
-        {
-            return obj.GetHashCode();
-        }
-
-        public static readonly AddressRoleComparer Instance = new AddressRoleComparer();
+        public static readonly IntEnumComparer<T> Instance = new IntEnumComparer<T>();
     }
 
     public struct ArrayComparer<T, TComparer> : IEqualityComparer<T[]>
@@ -156,22 +123,5 @@ namespace AlgoSdk
         public static readonly StringComparer Instance = new StringComparer();
 
         public static bool Equals(string x, string y) => string.Equals(x, y);
-    }
-
-    public struct EvalDeltaActionComparer : IEqualityComparer<EvalDeltaAction>
-    {
-        bool IEqualityComparer<EvalDeltaAction>.Equals(EvalDeltaAction x, EvalDeltaAction y)
-        {
-            return Equals(x, y);
-        }
-
-        int IEqualityComparer<EvalDeltaAction>.GetHashCode(EvalDeltaAction obj)
-        {
-            return obj.GetHashCode();
-        }
-
-        public static readonly EvalDeltaActionComparer Instance = new EvalDeltaActionComparer();
-
-        public static bool Equals(EvalDeltaAction x, EvalDeltaAction y) => x == y;
     }
 }
