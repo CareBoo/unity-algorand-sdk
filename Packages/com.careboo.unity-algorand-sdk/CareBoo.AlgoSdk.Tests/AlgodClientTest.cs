@@ -101,7 +101,7 @@ public class AlgodClientTest : AlgoApiClientTest
     {
         if (!await AlgodIsHealthy())
             return;
-        TransactionId txId = await MakePaymentTransaction(100000);
+        TransactionIdResponse txId = await MakePaymentTransaction(100000);
         var pendingTxn = new PendingTransaction();
         while (pendingTxn.ConfirmedRound <= 0)
         {
@@ -172,7 +172,7 @@ public class AlgodClientTest : AlgoApiClientTest
     {
         if (!await AlgodIsHealthy())
             return;
-        TransactionId txId = await MakePaymentTransaction(100000);
+        TransactionIdResponse txId = await MakePaymentTransaction(100000);
         var pendingTxn = new PendingTransaction();
         while (pendingTxn.ConfirmedRound <= 0)
         {

@@ -16,11 +16,11 @@ namespace AlgoSdk
             TransactionSignature signature = default;
             Transaction txn = default;
             if (!reader.TryRead(JsonToken.ObjectBegin))
-                JsonReadError.IncorrectType.ThrowIfError();
+                JsonReadError.IncorrectType.ThrowIfError(reader.Char, reader.Position);
             while (reader.Peek() != JsonToken.ObjectEnd && reader.Peek() != JsonToken.None)
             {
                 FixedString32Bytes key = default;
-                reader.ReadString(ref key).ThrowIfError();
+                reader.ReadString(ref key).ThrowIfError(reader.Char, reader.Position);
                 if (key == TxnKey)
                     txn = AlgoApiFormatterCache<Transaction>.Formatter.Deserialize(ref reader);
                 else if (key == SigKey)
@@ -31,7 +31,7 @@ namespace AlgoSdk
                     signature = AlgoApiFormatterCache<MultiSig>.Formatter.Deserialize(ref reader);
             }
             if (!reader.TryRead(JsonToken.ObjectEnd))
-                JsonReadError.IncorrectFormat.ThrowIfError();
+                JsonReadError.IncorrectFormat.ThrowIfError(reader.Char, reader.Position);
             txn.Signature = signature;
             return new SignedTransaction { Transaction = txn };
         }

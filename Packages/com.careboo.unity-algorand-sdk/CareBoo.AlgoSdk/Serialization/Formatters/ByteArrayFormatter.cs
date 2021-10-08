@@ -18,7 +18,7 @@ namespace AlgoSdk.Formatters
                 var b64 = new NativeText(Allocator.Temp);
                 try
                 {
-                    reader.ReadString(ref b64).ThrowIfError();
+                    reader.ReadString(ref b64).ThrowIfError(reader.Char, reader.Position);
                     return System.Convert.FromBase64String(b64.ToString());
                 }
                 finally
@@ -61,7 +61,7 @@ namespace AlgoSdk.Formatters
             try
             {
                 reader.ReadString(ref text)
-                    .ThrowIfError();
+                    .ThrowIfError(reader.Char, reader.Position);
                 TByteArray result = default;
                 result.CopyFromBase64(text);
                 return result;

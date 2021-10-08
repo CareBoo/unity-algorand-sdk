@@ -1,43 +1,23 @@
 using System;
-using AlgoSdk.Formatters;
 using Unity.Collections;
 
 namespace AlgoSdk
 {
-    [AlgoApiFormatter(typeof(TransactionIdFormatter))]
-    public struct TransactionId
-        : IEquatable<TransactionId>
+    [AlgoApiObject]
+    public struct TransactionIdResponse
+        : IEquatable<TransactionIdResponse>
     {
-        public FixedString64Bytes Text;
+        [AlgoApiField("txId", "txId")]
+        public FixedString64Bytes TxId;
 
-        public bool Equals(TransactionId other)
+        public bool Equals(TransactionIdResponse other)
         {
-            return this.Text.Equals(other.Text);
+            return TxId.Equals(other.TxId);
         }
 
-        public override string ToString()
+        public static implicit operator FixedString64Bytes(TransactionIdResponse resp)
         {
-            return Text.ToString();
-        }
-
-        public static implicit operator string(TransactionId txid)
-        {
-            return txid.ToString();
-        }
-
-        public static implicit operator TransactionId(string text)
-        {
-            return new TransactionId { Text = text };
-        }
-
-        public static implicit operator TransactionId(FixedString64Bytes text)
-        {
-            return new TransactionId { Text = text };
-        }
-
-        public static implicit operator FixedString64Bytes(TransactionId txid)
-        {
-            return txid.Text;
+            return resp.TxId;
         }
     }
 }

@@ -152,19 +152,9 @@ namespace AlgoSdk.Editor.CodeGen
                 new CodeSnippetExpression($"({Format(declaringType)} x) => x.{memberName}"),
                 new CodeSnippetExpression($"(ref {Format(declaringType)} x, {Format(memberType)} value) => x.{memberName} = value"),
             };
-            if (memberType.GetInterfaces().All(t => t != typeof(IEquatable<>).MakeGenericType(memberType)))
+            var equalityComparerType = GetEqualityComparerType(memberType);
+            if (equalityComparerType != null)
             {
-                Type equalityComparerType;
-                if (memberType.IsArray)
-                {
-                    var elementType = memberType.GetElementType();
-                    if (elementType.GetInterfaces().All(t => t != (typeof(IEquatable<>).MakeGenericType(elementType))))
-                        equalityComparerType = typeof(ArrayComparer<,>).MakeGenericType(elementType, equalityComparerLookup[elementType]);
-                    else
-                        equalityComparerType = typeof(ArrayComparer<>).MakeGenericType(memberType.GetElementType());
-                }
-                else
-                    equalityComparerType = equalityComparerLookup[memberType];
                 var equalityComparer = new CodePropertyReferenceExpression(
                     new CodeTypeReferenceExpression(equalityComparerType),
                     "Instance");
@@ -189,6 +179,39 @@ namespace AlgoSdk.Editor.CodeGen
         (AlgoApiField key, MemberInfo member, Type type) GetKeyProp((MemberInfo member, Type type) prop)
         {
             return (KeyFromMember(prop.member), prop.member, prop.type);
+        }
+
+        Type GetEqualityComparerType(Type type)
+        {
+            if (equalityComparerLookup.TryGetValue(type, out var elementComparerType))
+                return elementComparerType;
+
+            var equatableType = typeof(IEquatable<>).MakeGenericType(type);
+            if (type.IsValueType && type.GetInterfaces().Any(t => t == equatableType))
+                return null;
+
+            if (type.IsArray)
+            {
+                var elementType = type.GetElementType();
+                elementComparerType = GetEqualityComparerType(elementType);
+                return elementComparerType == null
+                    ? typeof(ArrayComparer<>).MakeGenericType(elementType)
+                    : typeof(ArrayComparer<,>).MakeGenericType(elementType, elementComparerType)
+                    ;
+            }
+
+            if (type.IsEnum)
+            {
+                var underlyingTypeCode = Type.GetTypeCode(type.GetEnumUnderlyingType());
+                return underlyingTypeCode switch
+                {
+                    TypeCode.Byte => typeof(ByteEnumComparer<>).MakeGenericType(type),
+                    TypeCode.Int32 => typeof(IntEnumComparer<>).MakeGenericType(type),
+                    _ => throw new NotSupportedException($"{underlyingTypeCode} doesn't have an enum comparer...")
+                };
+            }
+
+            throw new NotSupportedException($"Could not find equality comparer or it doesn't implement `IEquatable<>` for type '{type.FullName}'");
         }
 
         string Format(Type type)
@@ -242,11 +265,7 @@ namespace AlgoSdk.Editor.CodeGen
 
         static readonly Dictionary<Type, Type> equalityComparerLookup = new Dictionary<Type, Type>()
         {
-            {typeof(string), typeof(StringComparer)},
-            {typeof(EvalDeltaAction), typeof(EvalDeltaActionComparer)},
-            {typeof(TransactionType), typeof(TransactionTypeComparer)},
-            {typeof(SignatureType), typeof(SignatureTypeComparer)},
-            {typeof(OnCompletion), typeof(OnCompletionComparer)}
+            {typeof(string), typeof(StringComparer)}
         };
     }
 }

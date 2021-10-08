@@ -14,6 +14,10 @@ namespace AlgoSdk.Json
             this.offset = 0;
         }
 
+        public int Position => offset;
+
+        public char Char => text.Peek(offset).ToChar();
+
         public JsonToken Peek()
         {
             if (offset >= text.Length)

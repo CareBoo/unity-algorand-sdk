@@ -84,7 +84,7 @@ namespace AlgoSdk
         }
 
         [AlgoApiField("id", "id", readOnly: true)]
-        public TransactionId Id
+        public FixedString64Bytes Id
         {
             get => HeaderParams.Id;
             set => HeaderParams.Id = value;
@@ -190,7 +190,7 @@ namespace AlgoSdk
             public byte[] Note;
             public Address RekeyTo;
 
-            public TransactionId Id;
+            public FixedString64Bytes Id;
             public Address AuthAddress;
             public ulong CloseRewards;
             public ulong ClosingAmount;
