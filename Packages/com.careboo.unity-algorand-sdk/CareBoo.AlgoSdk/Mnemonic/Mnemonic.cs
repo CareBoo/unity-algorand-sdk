@@ -4,6 +4,7 @@ using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
 using Unity.Mathematics;
 using AlgoSdk.LowLevel;
+using AlgoSdk.Crypto;
 
 namespace AlgoSdk
 {
@@ -20,7 +21,6 @@ namespace AlgoSdk
 
     [Serializable]
     [StructLayout(LayoutKind.Explicit, Size = 50)]
-    [BurstCompatible]
     public partial struct Mnemonic
         : IEquatable<Mnemonic>
     {
@@ -58,7 +58,6 @@ namespace AlgoSdk
             }
         }
 
-        [NotBurstCompatible]
         public override string ToString()
         {
             var words = new string[25];
@@ -100,7 +99,6 @@ namespace AlgoSdk
             return true;
         }
 
-        [NotBurstCompatible]
         public static Mnemonic FromString(string mnemonicString)
         {
             var words = mnemonicString.Split(' ');
@@ -117,13 +115,11 @@ namespace AlgoSdk
             return mnemonic;
         }
 
-        [NotBurstCompatible]
         public static implicit operator string(Mnemonic mnemonic)
         {
             return mnemonic.ToString();
         }
 
-        [NotBurstCompatible]
         public static implicit operator Mnemonic(string mnemonicString)
         {
             return Mnemonic.FromString(mnemonicString);
