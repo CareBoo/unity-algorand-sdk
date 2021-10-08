@@ -6,10 +6,10 @@ namespace AlgoSdk
     public struct PendingTransactions
         : IEquatable<PendingTransactions>
     {
-        [AlgoApiField("top-transactions", null)]
-        public PendingTransaction[] TopTransactions;
+        [AlgoApiField("top-transactions", "top-transactions")]
+        public SignedTransaction[] TopTransactions;
 
-        [AlgoApiField("total-transactions", null)]
+        [AlgoApiField("total-transactions", "total-transactions")]
         public ulong TotalTransactions;
 
         public bool Equals(PendingTransactions other)

@@ -45,7 +45,7 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<PendingTransactions>> GetPendingTransactions(ulong max = 0)
         {
-            return await this.GetAsync($"/v2/transactions/pending?max={max}");
+            return await this.GetAsync($"/v2/transactions/pending?max={max}&format=msgpack");
         }
 
         public async UniTask<AlgoApiResponse<PendingTransactions>> GetPendingTransactions(Address accountAddress, ulong max = 0)
@@ -55,7 +55,7 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<PendingTransaction>> GetPendingTransaction(TransactionId txid)
         {
-            return await this.GetAsync($"/v2/transactions/pending/{txid}");
+            return await this.GetAsync($"/v2/transactions/pending/{txid}?format=msgpack");
         }
 
         public async UniTask<AlgoApiResponse<Application>> GetApplication(ulong applicationId)
