@@ -1,4 +1,5 @@
 using AlgoSdk.Formatters;
+using Unity.Collections;
 
 namespace AlgoSdk
 {
@@ -9,5 +10,21 @@ namespace AlgoSdk
         Sig,
         MultiSig,
         LogicSig
+    }
+
+    public static class SignatureTypeExtensions
+    {
+        public static readonly FixedString32Bytes[] TypeToString = new FixedString32Bytes[]
+        {
+            default,
+            "sig",
+            "msig",
+            "lsig"
+        };
+
+        public static FixedString32Bytes ToFixedString(this SignatureType sigType)
+        {
+            return TypeToString[(int)sigType];
+        }
     }
 }
