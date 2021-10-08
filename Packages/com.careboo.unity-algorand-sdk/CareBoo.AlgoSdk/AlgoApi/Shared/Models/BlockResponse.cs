@@ -1,6 +1,4 @@
 using System;
-using AlgoSdk.Crypto;
-using Unity.Collections;
 
 namespace AlgoSdk
 {
@@ -10,6 +8,9 @@ namespace AlgoSdk
     {
         [AlgoApiField("block", "block")]
         public Block BlockHeader;
+
+        [AlgoApiField(null, "cert")]
+        public AlgoApiObject Cert;
 
         public bool Equals(BlockResponse other)
         {

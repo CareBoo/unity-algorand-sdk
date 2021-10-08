@@ -241,7 +241,7 @@ namespace AlgoSdk.MessagePack
         bool TryAdvance(int x)
         {
             var result = offset + x;
-            if (result >= data.Length) return false;
+            if (result > data.Length) return false;
             offset = result;
             return true;
         }

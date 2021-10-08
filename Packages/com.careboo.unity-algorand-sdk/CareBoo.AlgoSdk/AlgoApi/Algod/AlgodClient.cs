@@ -70,7 +70,7 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<BlockResponse>> GetBlock(ulong round)
         {
-            return await this.GetAsync($"/v2/blocks/{round}");
+            return await this.GetAsync($"/v2/blocks/{round}?format=msgpack");
         }
 
         public async UniTask<AlgoApiResponse<MerkleProof>> GetMerkleProof(ulong round, TransactionId txid)

@@ -12,7 +12,7 @@ namespace AlgoSdk
         public Optional<ulong> UpgradeDelay;
 
         [AlgoApiField("upgrade-propose", null)]
-        public FixedString128Bytes UpgradePropose;
+        public Address UpgradePropose;
 
         public bool Equals(BlockUpgradeVote other)
         {
