@@ -195,6 +195,7 @@ namespace AlgoSdk
                     ;
             }
 
+            [AlgoApiObject]
             public struct Params
                 : IEquatable<Params>
             {
