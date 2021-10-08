@@ -90,6 +90,7 @@ public class AlgodClientTest : AlgoApiClientTest
     {
         if (!await AlgodIsHealthy())
             return;
+        await MakePaymentTransaction(100_000);
         var response = await algod.GetPendingTransactions();
         Debug.Log(response.Raw.GetText());
         AssertResponseSuccess(response);
