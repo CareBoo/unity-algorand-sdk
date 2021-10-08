@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Linq;
-using System.Text;
 using AlgoSdk;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
-using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.TestTools;
@@ -13,23 +11,16 @@ using UnityEngine.TestTools;
 [ConditionalIgnore(nameof(UnityEngine.Application.isBatchMode), "This test requires algod service to be running.")]
 public class AlgodClientTest : AlgoApiClientTest
 {
-    const string SandboxToken = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-    const string SandBoxAddress = "http://localhost:4001";
-    static readonly Mnemonic AccountMnemonic = "earth burst hero frown popular genius occur interest hobby push throw canoe orchard dish shed poem child frequent shop lecture female define state abstract tree";
-
-    static readonly AlgodClient client = new AlgodClient(SandBoxAddress, SandboxToken);
-
-
-    static async UniTask<bool> SandboxIsHealthy()
+    static async UniTask<bool> AlgodIsHealthy()
     {
         var expected = "null\n";
-        var response = await client.GetHealth();
+        var response = await algod.GetHealth();
         return expected == response.GetText();
     }
 
     static async UniTask<Address[]> GetAddresses()
     {
-        var genesisResponse = await client.GetGenesisInformation();
+        var genesisResponse = await algod.GetGenesisInformation();
         var genesisJson = genesisResponse.GetText();
         var genesisInfo = JsonUtility.FromJson<GenesisInformation>(genesisJson);
         return genesisInfo.alloc
@@ -38,40 +29,12 @@ public class AlgodClientTest : AlgoApiClientTest
             .ToArray();
     }
 
-    static async UniTask<TransactionId> MakePaymentTransaction(ulong amt)
-    {
-        using var keyPair = AccountMnemonic
-            .ToPrivateKey()
-            .ToKeyPair();
-        var transactionParamsResponse = await client.GetTransactionParams();
-        AssertResponseSuccess(transactionParamsResponse);
-        var transactionParams = transactionParamsResponse.Payload;
-        var txn = new Transaction.Payment(
-            fee: transactionParams.MinFee,
-            firstValidRound: transactionParams.LastRound + 1,
-            genesisHash: transactionParams.GenesisHash,
-            lastValidRound: transactionParams.LastRound + 1001,
-            sender: keyPair.PublicKey,
-            receiver: "RDSRVT3X6Y5POLDIN66TSTMUYIBVOMPEOCO4Y2CYACPFKDXZPDCZGVE4PQ",
-            amount: amt
-        );
-        txn.Note = Encoding.UTF8.GetBytes("hello");
-        txn.GenesisId = transactionParams.GenesisId;
-        SignedTransaction signedTxn = txn.Sign(keyPair.SecretKey);
-        var serialized = AlgoApiSerializer.SerializeMessagePack(signedTxn, Allocator.Temp);
-        Debug.Log(System.Convert.ToBase64String(serialized.ToArray()));
-        var txidResponse = await client.SendTransaction(signedTxn);
-        AssertResponseSuccess(txidResponse);
-        Debug.Log(txidResponse.Raw.GetText());
-        return txidResponse.Payload;
-    }
-
     [UnityTest]
     public IEnumerator PlayException() => UniTask.ToCoroutine(async () =>
     {
-        if (!await SandboxIsHealthy())
+        if (!await AlgodIsHealthy())
             return;
-        var response = await client.GetAsync("/does_not_exist");
+        var response = await algod.GetAsync("/does_not_exist");
         Assert.AreEqual(UnityWebRequest.Result.ProtocolError, response.Status);
         Debug.Log(response.GetText());
     });
@@ -79,9 +42,9 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetGenesisInformationShouldReturnOk() => UniTask.ToCoroutine(async () =>
     {
-        if (!await SandboxIsHealthy())
+        if (!await AlgodIsHealthy())
             return;
-        var response = await client.GetGenesisInformation();
+        var response = await algod.GetGenesisInformation();
         Debug.Log(response.GetText());
         AssertResponseSuccess(response);
     });
@@ -89,9 +52,9 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetMetricsShouldReturnOk() => UniTask.ToCoroutine(async () =>
     {
-        if (!await SandboxIsHealthy())
+        if (!await AlgodIsHealthy())
             return;
-        var response = await client.GetMetrics();
+        var response = await algod.GetMetrics();
         Debug.Log(response.GetText());
         AssertResponseSuccess(response);
     });
@@ -99,9 +62,9 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetSwaggerSpecShouldReturnOk() => UniTask.ToCoroutine(async () =>
     {
-        if (!await SandboxIsHealthy())
+        if (!await AlgodIsHealthy())
             return;
-        var response = await client.GetSwaggerSpec();
+        var response = await algod.GetSwaggerSpec();
         Debug.Log(response.GetText());
         AssertResponseSuccess(response);
     });
@@ -109,12 +72,12 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetAccountInformationShouldReturnOk() => UniTask.ToCoroutine(async () =>
     {
-        if (!await SandboxIsHealthy())
+        if (!await AlgodIsHealthy())
             return;
         var addresses = await GetAddresses();
         foreach (var expected in addresses)
         {
-            var response = await client.GetAccountInformation(expected);
+            var response = await algod.GetAccountInformation(expected);
             var account = response.Payload;
             var actual = account.Address;
             Debug.Log(response.Raw.GetText());
@@ -125,9 +88,9 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetPendingTransactionsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        if (!await SandboxIsHealthy())
+        if (!await AlgodIsHealthy())
             return;
-        var response = await client.GetPendingTransactions();
+        var response = await algod.GetPendingTransactions();
         Debug.Log(response.Raw.GetText());
         AssertResponseSuccess(response);
     });
@@ -135,18 +98,18 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetBlockShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        if (!await SandboxIsHealthy())
+        if (!await AlgodIsHealthy())
             return;
         TransactionId txId = await MakePaymentTransaction(100000);
         var pendingTxn = new PendingTransaction();
         while (pendingTxn.ConfirmedRound <= 0)
         {
             await UniTask.Delay(500);
-            var pendingResponse = await client.GetPendingTransaction(txId);
+            var pendingResponse = await algod.GetPendingTransaction(txId);
             pendingTxn = pendingResponse.Payload;
         }
         var round = pendingTxn.ConfirmedRound;
-        var blockResponse = await client.GetBlock(round);
+        var blockResponse = await algod.GetBlock(round);
         Debug.Log(blockResponse.Raw.GetText());
         AssertResponseSuccess(blockResponse);
     });
@@ -155,10 +118,10 @@ public class AlgodClientTest : AlgoApiClientTest
     [Ignore("Register Participation keys isn't supported yet in the algod sandbox... :(")]
     public IEnumerator RegisterParticipationKeysShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        if (!await SandboxIsHealthy())
+        if (!await AlgodIsHealthy())
             return;
         var addresses = await GetAddresses();
-        var response = await client.RegisterParticipationKeys(addresses[0]);
+        var response = await algod.RegisterParticipationKeys(addresses[0]);
         Debug.Log(response.Raw.GetText());
         AssertResponseSuccess(response);
     });
@@ -166,9 +129,9 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetCurrentStatusShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        if (!await SandboxIsHealthy())
+        if (!await AlgodIsHealthy())
             return;
-        var response = await client.GetCurrentStatus();
+        var response = await algod.GetCurrentStatus();
         Debug.Log(response.Raw.GetText());
         AssertResponseSuccess(response);
     });
@@ -176,9 +139,9 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetStatusAfterWaitingForRoundShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        if (!await SandboxIsHealthy())
+        if (!await AlgodIsHealthy())
             return;
-        var response = await client.GetStatusAfterWaitingForRound(0);
+        var response = await algod.GetStatusAfterWaitingForRound(0);
         Debug.Log(response.Raw.GetText());
         AssertResponseSuccess(response);
     });
@@ -186,9 +149,9 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetVersionsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        if (!await SandboxIsHealthy())
+        if (!await AlgodIsHealthy())
             return;
-        var response = await client.GetVersions();
+        var response = await algod.GetVersions();
         Debug.Log(response.Raw.GetText());
         AssertResponseSuccess(response);
     });
@@ -196,9 +159,9 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetTransactionParamsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        if (!await SandboxIsHealthy())
+        if (!await AlgodIsHealthy())
             return;
-        var response = await client.GetTransactionParams();
+        var response = await algod.GetTransactionParams();
         Debug.Log(response.Raw.GetText());
         AssertResponseSuccess(response);
     });
@@ -206,18 +169,18 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetMerkleProofShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        if (!await SandboxIsHealthy())
+        if (!await AlgodIsHealthy())
             return;
         TransactionId txId = await MakePaymentTransaction(100000);
         var pendingTxn = new PendingTransaction();
         while (pendingTxn.ConfirmedRound <= 0)
         {
             await UniTask.Delay(500);
-            var pendingResponse = await client.GetPendingTransaction(txId);
+            var pendingResponse = await algod.GetPendingTransaction(txId);
             pendingTxn = pendingResponse.Payload;
         }
         var round = pendingTxn.ConfirmedRound;
-        var response = await client.GetMerkleProof(round, txId);
+        var response = await algod.GetMerkleProof(round, txId);
         Debug.Log(response.Raw.GetText());
         AssertResponseSuccess(response);
     });
@@ -225,10 +188,10 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator TransferFundsShouldReturnTransactionId() => UniTask.ToCoroutine(async () =>
     {
-        if (!await SandboxIsHealthy())
+        if (!await AlgodIsHealthy())
             return;
         var txId = await MakePaymentTransaction(100000);
-        var pendingResponse = await client.GetPendingTransaction(txId);
+        var pendingResponse = await algod.GetPendingTransaction(txId);
         AssertResponseSuccess(pendingResponse);
         Debug.Log(pendingResponse.Raw.GetText());
     });
