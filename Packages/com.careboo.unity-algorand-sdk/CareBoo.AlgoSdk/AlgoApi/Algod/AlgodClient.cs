@@ -53,7 +53,7 @@ namespace AlgoSdk
             return await this.GetAsync($"/v2/accounts/{accountAddress}/transactions/pending?max={max}");
         }
 
-        public async UniTask<AlgoApiResponse<PendingTransaction>> GetPendingTransaction(TransactionId txid)
+        public async UniTask<AlgoApiResponse<PendingTransaction>> GetPendingTransaction(FixedString64Bytes txid)
         {
             return await this.GetAsync($"/v2/transactions/pending/{txid}?format=msgpack");
         }
@@ -73,7 +73,7 @@ namespace AlgoSdk
             return await this.GetAsync($"/v2/blocks/{round}?format=msgpack");
         }
 
-        public async UniTask<AlgoApiResponse<MerkleProof>> GetMerkleProof(ulong round, TransactionId txid)
+        public async UniTask<AlgoApiResponse<MerkleProof>> GetMerkleProof(ulong round, FixedString64Bytes txid)
         {
             return await this.GetAsync($"/v2/blocks/{round}/transactions/{txid}/proof");
         }
@@ -93,7 +93,7 @@ namespace AlgoSdk
             return await this.GetAsync("/v2/ledger/supply");
         }
 
-        public async UniTask<AlgoApiResponse<TransactionId>> RegisterParticipationKeys(
+        public async UniTask<AlgoApiResponse<TransactionIdResponse>> RegisterParticipationKeys(
             Address accountAddress,
             ulong fee = 1000,
             Optional<ulong> keyDilution = default,
@@ -170,7 +170,7 @@ namespace AlgoSdk
                 : await this.PostAsync(endpoint);
         }
 
-        public async UniTask<AlgoApiResponse<TransactionId>> SendTransaction(SignedTransaction rawTxn)
+        public async UniTask<AlgoApiResponse<TransactionIdResponse>> SendTransaction(SignedTransaction rawTxn)
         {
             using var data = AlgoApiSerializer.SerializeMessagePack(rawTxn, Allocator.Persistent);
             return await this.PostAsync("/v2/transactions", data.AsArray().AsReadOnly());

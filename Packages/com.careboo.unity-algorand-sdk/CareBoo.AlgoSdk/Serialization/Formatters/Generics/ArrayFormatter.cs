@@ -16,14 +16,14 @@ namespace AlgoSdk.Formatters
 
             var list = new List<T>();
             if (!reader.TryRead(JsonToken.ArrayBegin))
-                JsonReadError.IncorrectType.ThrowIfError();
+                JsonReadError.IncorrectType.ThrowIfError(reader.Char, reader.Position);
             while (reader.Peek() != JsonToken.ArrayEnd && reader.Peek() != JsonToken.None)
             {
                 var nextItem = AlgoApiFormatterCache<T>.Formatter.Deserialize(ref reader);
                 list.Add(nextItem);
             }
             if (!reader.TryRead(JsonToken.ArrayEnd))
-                JsonReadError.IncorrectFormat.ThrowIfError();
+                JsonReadError.IncorrectFormat.ThrowIfError(reader.Char, reader.Position);
 
             return list.ToArray();
         }

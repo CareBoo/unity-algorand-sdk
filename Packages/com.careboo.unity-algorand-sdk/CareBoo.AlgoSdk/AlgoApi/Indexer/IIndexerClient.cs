@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using Unity.Collections;
 
 namespace AlgoSdk
 {
@@ -16,6 +17,6 @@ namespace AlgoSdk
         UniTask<AlgoApiResponse<TransactionsResponse>> GetAssetTransactions(ulong assetId, TransactionsQuery query = default);
         UniTask<AlgoApiResponse<Block>> GetBlock(ulong round);
         UniTask<AlgoApiResponse<TransactionsResponse>> GetTransactions(TransactionsQuery query = default);
-        UniTask<AlgoApiResponse<TransactionResponse>> GetTransaction(TransactionId txid);
+        UniTask<AlgoApiResponse<TransactionResponse>> GetTransaction(FixedString64Bytes txid);
     }
 }

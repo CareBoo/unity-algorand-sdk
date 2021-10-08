@@ -11,7 +11,7 @@ namespace AlgoSdk.Formatters
         {
             T result = default;
             reader.ReadString(ref result)
-                .ThrowIfError();
+                .ThrowIfError(reader.Char, reader.Position);
             return result;
         }
 

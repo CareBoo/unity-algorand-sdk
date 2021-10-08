@@ -8,7 +8,7 @@ namespace AlgoSdk.Formatters
         public bool Deserialize(ref JsonReader reader)
         {
             reader.ReadBool(out bool val)
-                .ThrowIfError();
+                .ThrowIfError(reader.Char, reader.Position);
             return val;
         }
 
