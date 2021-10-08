@@ -1,3 +1,38 @@
+# [1.0.0-exp.25](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.24...v1.0.0-exp.25) (2021-10-08)
+
+
+### Bug Fixes
+
+* :bug: fix keyworded enum types formatting as numbers ([d686c13](https://github.com/CareBoo/unity-algorand-sdk/commit/d686c134dff5e0d657f974600c5948b86f506f0f))
+* **algod:** :bug: fix pending transactions not returning messagepack ([dca09f8](https://github.com/CareBoo/unity-algorand-sdk/commit/dca09f8d6c2e1781097f3386355852b7179f01d9))
+* **indexer:** :bug: add missing fields to `Account` model ([5732a1d](https://github.com/CareBoo/unity-algorand-sdk/commit/5732a1d7b6a57d300e8e8b4662696e180c0c2ecb))
+* **indexer:** :bug: fix `HealthCheck` missing serialization logic ([f5165c6](https://github.com/CareBoo/unity-algorand-sdk/commit/f5165c681387450a791f191a2ae88a060741a9de))
+* **indexer:** :fire: fix huge issue with indexer where query parameters were in body ([7bcca20](https://github.com/CareBoo/unity-algorand-sdk/commit/7bcca2022b8c1238cd35f225fccef80ada562143))
+* **serialization:** :bug: fix `Block` not having a formatter ([dec6176](https://github.com/CareBoo/unity-algorand-sdk/commit/dec61762ddfba5c7f43223175c8c63f2d0b3609e))
+* **serialization:** :bug: fix `BlockResponse` Serialization ([1252a16](https://github.com/CareBoo/unity-algorand-sdk/commit/1252a1634d6bb2fa00f78c1628ce7dbf33da6a56))
+* **serialization:** :bug: fix `JsonWriter` not writing to `NativeText` ([2b61659](https://github.com/CareBoo/unity-algorand-sdk/commit/2b61659ea6801947f7b31069ecade0d6cb5f1e09))
+* **serialization:** :bug: fix discrepancy between `TransactionId` and `TransactinIdResponse` ([d0c0370](https://github.com/CareBoo/unity-algorand-sdk/commit/d0c0370c0578e6d2296d0667557148e711c67174))
+* **serialization:** :bug: fix issue where fixed strings were incorrectly being added to the queryparams ([a3e6fd9](https://github.com/CareBoo/unity-algorand-sdk/commit/a3e6fd9dbaf62d6e4bb05432568c0de36e3abb35))
+* **serialization:** :bug: fix missing `AlgoApiObject` on all Transaction Params ([a11015f](https://github.com/CareBoo/unity-algorand-sdk/commit/a11015ff3da75db5ab5d6f7c809a89f50fe1142b))
+
+
+### Features
+
+* **networking:** :sparkles: add `ApiResponse` API to `ApiResponse<>` ([8556c53](https://github.com/CareBoo/unity-algorand-sdk/commit/8556c53616646d9b39d9a4a88488b66acb6ac421))
+* **serialization:** :sparkles: add support for generically serializing byte enums to strings ([424c8b4](https://github.com/CareBoo/unity-algorand-sdk/commit/424c8b49c2a567c015a356db3b12a4d4d035dd61))
+* **serialization:** :sparkles: finish implementing `MessagePackReader.Integers` and `MessagePackWriter.Integers` ([37d8f20](https://github.com/CareBoo/unity-algorand-sdk/commit/37d8f20eba237ad28fcf84f83cdbc989b0168a86))
+* **serialization:** :sparkles: finish implementing serializer/deserializer methods in `EnumFormatter` ([3af569f](https://github.com/CareBoo/unity-algorand-sdk/commit/3af569f180d26f5501a48d1eb43a00327bdd5921))
+
+
+### Reverts
+
+* **demo:** :fire: remove bossroom assets... too big to be a sample ([e53192d](https://github.com/CareBoo/unity-algorand-sdk/commit/e53192daaba120f53d5c8f7312d2b199a8f4e564))
+
+
+### BREAKING CHANGES
+
+* **indexer:** indexer queries are now given as optional arguments
+
 # [1.0.0-exp.24](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.23...v1.0.0-exp.24) (2021-10-05)
 
 
