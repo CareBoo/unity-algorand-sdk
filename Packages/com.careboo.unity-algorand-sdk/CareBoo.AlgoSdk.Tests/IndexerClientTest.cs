@@ -30,10 +30,7 @@ public class IndexerClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetAccountsGreaterThan1000AlgoShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var response = await indexer.GetAccounts(new AccountsQuery
-        {
-            CurrencyGreaterThan = 1000
-        });
+        var response = await indexer.GetAccounts(currencyGreaterThan: 1000);
         Debug.Log(response.GetText());
         AssertResponseSuccess(response);
     });
@@ -43,20 +40,17 @@ public class IndexerClientTest : AlgoApiClientTest
     public IEnumerator GetAccountsPaginatedShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         ulong limit = 1;
-        var firstPageResponse = await indexer.GetAccounts(new AccountsQuery
-        {
-            Limit = limit,
-            IncludeAll = true
-        });
+        var firstPageResponse = await indexer.GetAccounts(limit: limit);
         Debug.Log($"first page:\n{firstPageResponse.GetText()}");
         AssertResponseSuccess(firstPageResponse);
-        var secondPageResponse = await indexer.GetAccounts(new AccountsQuery
-        {
-            Next = firstPageResponse.Payload.NextToken,
-            Limit = limit
-        });
+        var secondPageResponse = await indexer.GetAccounts(
+            limit: limit,
+            next: firstPageResponse.Payload.NextToken);
         Debug.Log($"second page:\n{secondPageResponse.GetText()}");
         AssertResponseSuccess(secondPageResponse);
+
+        Assert.AreEqual(limit, firstPageResponse.Payload.Accounts.Length);
+        Assert.AreEqual(limit, secondPageResponse.Payload.Accounts.Length);
     });
 
 
@@ -84,6 +78,14 @@ public class IndexerClientTest : AlgoApiClientTest
     public IEnumerator GetAssetsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var response = await indexer.GetAssets();
+        Debug.Log(response.GetText());
+        AssertResponseSuccess(response);
+    });
+
+    [UnityTest]
+    public IEnumerator GetTransactionsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
+    {
+        var response = await indexer.GetTransactions();
         Debug.Log(response.GetText());
         AssertResponseSuccess(response);
     });

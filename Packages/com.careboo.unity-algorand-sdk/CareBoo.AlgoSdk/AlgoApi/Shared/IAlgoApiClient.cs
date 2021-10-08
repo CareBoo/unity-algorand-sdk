@@ -18,14 +18,6 @@ namespace AlgoSdk
             return await AlgoApiRequest.Get(client.Token, client.GetUrl(endpoint)).Send();
         }
 
-        public static async UniTask<AlgoApiResponse> GetAsync<T, TBody>(this T client, string endpoint, TBody body)
-            where T : IAlgoApiClient
-            where TBody : struct, IEquatable<TBody>
-        {
-            using var json = AlgoApiSerializer.SerializeJson(body, Allocator.Persistent);
-            return await AlgoApiRequest.Get(client.Token, client.GetUrl(endpoint), json).Send();
-        }
-
         public static async UniTask<AlgoApiResponse> PostAsync<T, TBody>(this T client, string endpoint, TBody body)
             where T : IAlgoApiClient
             where TBody : struct, IEquatable<TBody>
