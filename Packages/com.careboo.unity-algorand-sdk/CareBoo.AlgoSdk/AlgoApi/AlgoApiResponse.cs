@@ -90,6 +90,16 @@ namespace AlgoSdk
 
         public AlgoApiResponse Raw => rawResponse;
 
+        public byte[] Data => rawResponse.Data;
+
+        public long ResponseCode => rawResponse.ResponseCode;
+
+        public UnityWebRequest.Result Status => rawResponse.Status;
+
+        public AlgoApiFormat ContentType => rawResponse.ContentType;
+
+        public string GetText() => rawResponse.GetText();
+
         public static implicit operator AlgoApiResponse<T>(AlgoApiResponse response)
         {
             return new AlgoApiResponse<T>(response);
