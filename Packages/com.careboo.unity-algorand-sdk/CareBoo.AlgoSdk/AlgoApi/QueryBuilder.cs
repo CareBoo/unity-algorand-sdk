@@ -9,7 +9,7 @@ namespace AlgoSdk
     public struct QueryBuilder
         : INativeDisposable
     {
-        const string DateTimeFormat = "yyyy-MM-dd'T'HH:mm:ss.fffzzz";
+        const string DateTimeFormat = "o";
         NativeText text;
 
         public QueryBuilder(Allocator allocator)
@@ -64,7 +64,7 @@ namespace AlgoSdk
                 return this;
 
             AddKey(key);
-            text.Append(dt.ToString(DateTimeFormat, DateTimeFormatInfo.InvariantInfo));
+            text.Append(dt.ToString(DateTimeFormat));
             return this;
         }
 
