@@ -30,7 +30,7 @@ namespace AlgoSdk
         {
             return addressRole == AddressRole.None
                 ? default(Optional<FixedString32Bytes>)
-                : addressRole.ToFixedString()
+                : (Optional<FixedString32Bytes>)addressRole.ToFixedString()
                 ;
         }
     }

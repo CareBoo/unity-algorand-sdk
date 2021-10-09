@@ -33,5 +33,13 @@ namespace AlgoSdk
         {
             return new Optional<T>(value);
         }
+
+        public static implicit operator T(Optional<T> optional)
+        {
+            return optional.HasValue
+                ? optional.Value
+                : default
+                ;
+        }
     }
 }

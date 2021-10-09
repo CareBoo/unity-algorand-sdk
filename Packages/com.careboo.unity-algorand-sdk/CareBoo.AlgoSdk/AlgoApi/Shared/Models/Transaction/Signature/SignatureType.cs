@@ -31,7 +31,7 @@ namespace AlgoSdk
         {
             return sigType == SignatureType.None
                 ? default(Optional<FixedString32Bytes>)
-                : sigType.ToFixedString()
+                : (Optional<FixedString32Bytes>)sigType.ToFixedString()
                 ;
         }
     }

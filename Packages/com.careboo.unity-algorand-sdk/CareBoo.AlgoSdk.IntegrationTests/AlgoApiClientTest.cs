@@ -16,7 +16,7 @@ public abstract class AlgoApiClientTest
 
     protected static readonly KmdClient kmd = new KmdClient("http://localhost:4002", SandboxToken);
 
-    protected static readonly IndexerClient indexer = new IndexerClient("http://localhost:8980", SandboxToken);
+    protected static readonly IndexerClient indexer = new IndexerClient("http://localhost:8980");
 
     protected static void AssertResponseSuccess<T>(AlgoApiResponse<T> response) where T : struct
     {

@@ -3,7 +3,7 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
-    public interface IAlgodClient : IAlgoApiClient
+    public interface IAlgodClient : ITokenizedApiClient
     {
         UniTask<AlgoApiResponse> GetGenesisInformation();
         UniTask<AlgoApiResponse> GetHealth();
