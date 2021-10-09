@@ -15,7 +15,7 @@ namespace AlgoSdk
         public Ed25519.PublicKey PublicKey;
 
         [AlgoApiField("signer", null)]
-        public byte[] Signer;
+        public Address Signer;
 
         [AlgoApiField("transaction", null)]
         public byte[] Transaction;

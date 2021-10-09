@@ -4,7 +4,7 @@
     "com.mlapi.contrib.transport.litenetlib": "https://github.com/Unity-Technologies/mlapi-community-contributions.git?path=/Transports/com.mlapi.contrib.transport.litenetlib#3f0350ae57befd5ea7deabb1db310eb77704f58e",
     "com.unity.burst": "1.6.0",
     "com.unity.collections": "1.0.0-pre.6",
-    "com.unity.ide.vscode": "1.2.4",
+    "com.unity.ide.vscode": "1.2.3",
     "com.unity.multiplayer.mlapi": "https://github.com/Unity-Technologies/com.unity.multiplayer.mlapi.git?path=/com.unity.multiplayer.mlapi#release/0.1.0",
     "com.unity.nuget.mono-cecil": "1.10.1",
     "com.unity.package-validation-suite": "0.22.0-preview",

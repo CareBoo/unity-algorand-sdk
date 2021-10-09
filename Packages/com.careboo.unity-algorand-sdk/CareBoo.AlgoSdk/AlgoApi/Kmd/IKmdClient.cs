@@ -1,30 +1,107 @@
+using AlgoSdk.Crypto;
 using Cysharp.Threading.Tasks;
+using Unity.Collections;
 
 namespace AlgoSdk
 {
     public interface IKmdClient : IAlgoApiClient
     {
         UniTask<AlgoApiResponse> GetSwaggerSpec();
-        UniTask<AlgoApiResponse<GenerateKeyResponse>> GenerateKey(GenerateKeyRequest request);
-        UniTask<AlgoApiResponse<DeleteKeyResponse>> DeleteKey(DeleteKeyRequest request);
-        UniTask<AlgoApiResponse<ExportKeyResponse>> ExportKey(ExportKeyRequest request);
-        UniTask<AlgoApiResponse<ImportKeyResponse>> ImportKey(ImportKeyRequest request);
-        UniTask<AlgoApiResponse<ListKeysResponse>> ListKeys(ListKeysRequest request);
-        UniTask<AlgoApiResponse<ExportMasterKeyResponse>> ExportMasterKey(ExportMasterKeyRequest request);
-        UniTask<AlgoApiResponse<DeleteMultiSigResponse>> DeleteMultiSig(DeleteMultiSigRequest request);
-        UniTask<AlgoApiResponse<ExportMultiSigResponse>> ExportMultiSig(ExportMultiSigRequest request);
-        UniTask<AlgoApiResponse<ImportMultiSigResponse>> ImportMultiSig(ImportMultiSigRequest request);
-        UniTask<AlgoApiResponse<ListMultiSigResponse>> ListMultiSig(ListMultiSigRequest request);
-        UniTask<AlgoApiResponse<SignMultiSigResponse>> SignMultiSig(SignMultiSigRequest request);
-        UniTask<AlgoApiResponse<SignProgramMultiSigResponse>> SignProgramMultiSig(SignProgramMultiSigRequest request);
-        UniTask<AlgoApiResponse<SignProgramResponse>> SignProgram(SignProgramRequest request);
-        UniTask<AlgoApiResponse<SignTransactionResponse>> SignTransaction(SignTransactionRequest request);
-        UniTask<AlgoApiResponse<CreateWalletResponse>> CreateWallet(CreateWalletRequest request);
-        UniTask<AlgoApiResponse<WalletInfoResponse>> WalletInfo(WalletInfoRequest request);
-        UniTask<AlgoApiResponse<InitWalletHandleTokenResponse>> InitWalletHandleToken(InitWalletHandleTokenRequest request);
-        UniTask<AlgoApiResponse<ReleaseWalletHandleTokenResponse>> ReleaseWalletHandleToken(ReleaseWalletHandleTokenRequest request);
-        UniTask<AlgoApiResponse<RenameWalletResponse>> RenameWallet(RenameWalletRequest request);
-        UniTask<AlgoApiResponse<RenewWalletHandleTokenResponse>> RenewWalletHandleToken(RenewWalletHandleTokenRequest request);
+        UniTask<AlgoApiResponse<GenerateKeyResponse>> GenerateKey(
+            Optional<bool> displayMnemonic = default,
+            FixedString128Bytes walletPassword = default
+        );
+        UniTask<AlgoApiResponse<DeleteKeyResponse>> DeleteKey(
+            Address address = default,
+            FixedString128Bytes walletHandleToken = default,
+            FixedString128Bytes walletPassword = default
+        );
+        UniTask<AlgoApiResponse<ExportKeyResponse>> ExportKey(
+            Address address = default,
+            FixedString128Bytes walletHandleToken = default,
+            FixedString128Bytes walletPassword = default
+        );
+        UniTask<AlgoApiResponse<ImportKeyResponse>> ImportKey(
+            PrivateKey privateKey = default,
+            FixedString128Bytes walletPassword = default
+        );
+        UniTask<AlgoApiResponse<ListKeysResponse>> ListKeys(
+            FixedString128Bytes walletHandleToken = default
+        );
+        UniTask<AlgoApiResponse<ExportMasterKeyResponse>> ExportMasterKey(
+            FixedString128Bytes walletHandleToken = default,
+            FixedString128Bytes walletPassword = default
+        );
+        UniTask<AlgoApiResponse<DeleteMultiSigResponse>> DeleteMultiSig(
+            Address address = default,
+            FixedString128Bytes walletHandleToken = default,
+            FixedString128Bytes walletPassword = default
+        );
+        UniTask<AlgoApiResponse<ExportMultiSigResponse>> ExportMultiSig(
+            Address address = default,
+            FixedString128Bytes walletHandleToken = default
+        );
+        UniTask<AlgoApiResponse<ImportMultiSigResponse>> ImportMultiSig(
+            Optional<byte> version = default,
+            Ed25519.PublicKey[] publicKeys = default,
+            Optional<byte> threshold = default,
+            FixedString128Bytes walletHandleToken = default
+        );
+        UniTask<AlgoApiResponse<ListMultiSigResponse>> ListMultiSig(
+            FixedString128Bytes walletHandleToken = default
+        );
+        UniTask<AlgoApiResponse<SignMultiSigResponse>> SignMultiSig(
+            MultiSig multiSig = default,
+            Ed25519.PublicKey publicKey = default,
+            Address signer = default,
+            byte[] transaction = default,
+            FixedString128Bytes walletHandleToken = default,
+            FixedString128Bytes walletPassword = default
+        );
+        UniTask<AlgoApiResponse<SignProgramMultiSigResponse>> SignProgramMultiSig(
+            Address address = default,
+            byte[] data = default,
+            MultiSig multiSig = default,
+            Ed25519.PublicKey publicKey = default,
+            FixedString128Bytes walletHandleToken = default,
+            FixedString128Bytes walletPassword = default
+        );
+        UniTask<AlgoApiResponse<SignProgramResponse>> SignProgram(
+            Address address = default,
+            byte[] data = default,
+            FixedString128Bytes walletHandleToken = default,
+            FixedString128Bytes walletPassword = default
+        );
+        UniTask<AlgoApiResponse<SignTransactionResponse>> SignTransaction(
+            Ed25519.PublicKey publicKey = default,
+            byte[] transaction = default,
+            FixedString128Bytes walletHandleToken = default,
+            FixedString128Bytes walletPassword = default
+        );
+        UniTask<AlgoApiResponse<CreateWalletResponse>> CreateWallet(
+            PrivateKey masterDerivationKey = default,
+            FixedString128Bytes walletDriverName = default,
+            FixedString128Bytes walletName = default,
+            FixedString128Bytes walletPassword = default
+        );
+        UniTask<AlgoApiResponse<WalletInfoResponse>> WalletInfo(
+            FixedString128Bytes walletHandleToken = default
+        );
+        UniTask<AlgoApiResponse<InitWalletHandleTokenResponse>> InitWalletHandleToken(
+            FixedString128Bytes walletId = default,
+            FixedString128Bytes walletPassword = default
+        );
+        UniTask<AlgoApiResponse<ReleaseWalletHandleTokenResponse>> ReleaseWalletHandleToken(
+            FixedString128Bytes walletHandleToken = default
+        );
+        UniTask<AlgoApiResponse<RenameWalletResponse>> RenameWallet(
+            FixedString128Bytes walletId = default,
+            FixedString128Bytes walletName = default,
+            FixedString128Bytes walletPassword = default
+        );
+        UniTask<AlgoApiResponse<RenewWalletHandleTokenResponse>> RenewWalletHandleToken(
+            FixedString128Bytes walletHandleToken = default
+        );
         UniTask<AlgoApiResponse<ListWalletsResponse>> ListWallets();
         UniTask<AlgoApiResponse<VersionsResponse>> Versions();
     }

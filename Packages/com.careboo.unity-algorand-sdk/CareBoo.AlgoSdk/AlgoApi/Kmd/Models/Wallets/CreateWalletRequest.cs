@@ -11,10 +11,10 @@ namespace AlgoSdk
         public PrivateKey MasterDerivationKey;
 
         [AlgoApiField("wallet_driver_name", null)]
-        public FixedString64Bytes WalletDriverName;
+        public FixedString128Bytes WalletDriverName;
 
         [AlgoApiField("wallet_name", null)]
-        public FixedString64Bytes WalletName;
+        public FixedString128Bytes WalletName;
 
         [AlgoApiField("wallet_password", null)]
         public FixedString128Bytes WalletPassword;
