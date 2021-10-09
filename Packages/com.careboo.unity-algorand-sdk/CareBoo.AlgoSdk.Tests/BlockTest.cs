@@ -12,4 +12,12 @@ public class BlockTest
         using var bytes = new NativeArray<byte>(blockMsgPack, Allocator.Temp);
         AlgoApiSerializer.DeserializeMessagePack<BlockResponse>(bytes.AsReadOnly());
     }
+
+    [Test]
+    public void DefaultFixedStringsShouldBeEqual()
+    {
+        var fs = new FixedString32Bytes();
+        var defaultFs = default(FixedString32Bytes);
+        Assert.IsTrue(defaultFs == fs);
+    }
 }

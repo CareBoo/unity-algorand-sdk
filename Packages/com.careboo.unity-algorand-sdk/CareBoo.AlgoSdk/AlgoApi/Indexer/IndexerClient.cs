@@ -7,17 +7,13 @@ namespace AlgoSdk
     public struct IndexerClient : IIndexerClient
     {
         readonly string address;
-        readonly string token;
 
-        public IndexerClient(string address, string token)
+        public IndexerClient(string address)
         {
             this.address = address.TrimEnd('/');
-            this.token = token;
         }
 
         public string Address => address;
-
-        public string Token => token;
 
         public async UniTask<AlgoApiResponse<HealthCheck>> GetHealth()
         {
@@ -88,7 +84,6 @@ namespace AlgoSdk
         {
             using var queryBuilder = new QueryBuilder(Allocator.Persistent);
             var query = queryBuilder
-                .Add("account-address", accountAddress)
                 .Add("after-time", afterTime)
                 .Add("asset-id", assetId)
                 .Add("before-time", beforeTime)
@@ -298,6 +293,11 @@ namespace AlgoSdk
         public async UniTask<AlgoApiResponse<TransactionResponse>> GetTransaction(FixedString64Bytes txid)
         {
             return await this.GetAsync($"/v2/transactions/{txid}");
+        }
+
+        async UniTask<AlgoApiResponse> GetAsync(string endpoint)
+        {
+            return await AlgoApiRequest.Get(this.GetUrl(endpoint)).Send();
         }
     }
 }

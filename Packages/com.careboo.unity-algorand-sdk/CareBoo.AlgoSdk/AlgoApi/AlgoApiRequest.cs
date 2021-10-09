@@ -15,10 +15,15 @@ namespace AlgoSdk
         public const string ContentTypeHeader = "Content-Type";
         readonly UnityWebRequest unityWebRequest;
 
-        private AlgoApiRequest(string token, ref UnityWebRequest unityWebRequest)
+        private AlgoApiRequest(ref UnityWebRequest unityWebRequest)
+        {
+            this.unityWebRequest = unityWebRequest;
+        }
+
+        public AlgoApiRequest SetToken(string token)
         {
             unityWebRequest.SetRequestHeader(TokenHeader, token);
-            this.unityWebRequest = unityWebRequest;
+            return this;
         }
 
         public Sent Send(CancellationToken cancellationToken = default)
@@ -32,69 +37,55 @@ namespace AlgoSdk
             return new Sent<TProgress>(unityWebRequest.SendWebRequest(), progress, cancellationToken);
         }
 
-        public static AlgoApiRequest Get(string token, string url)
+        public static AlgoApiRequest Get(string url)
         {
             var webRequest = UnityWebRequest.Get(url);
-            return new AlgoApiRequest(token, ref webRequest);
+            return new AlgoApiRequest(ref webRequest);
         }
 
-        public static AlgoApiRequest Get(string token, string url, NativeText json)
-        {
-            var webRequest = UnityWebRequest.Get(url);
-            webRequest.SetRequestHeader(ContentTypeHeader, "application/json");
-            var jsonString = json.ToString();
-            if (!string.IsNullOrEmpty(jsonString))
-            {
-                var jsonBytes = Encoding.UTF8.GetBytes(jsonString);
-                webRequest.uploadHandler = new UploadHandlerRaw(jsonBytes);
-                webRequest.disposeUploadHandlerOnDispose = true;
-            }
-            return new AlgoApiRequest(token, ref webRequest);
-        }
-
-        public static AlgoApiRequest Post(string token, string url)
+        public static AlgoApiRequest Post(string url)
         {
             var webRequest = UnityWebRequestPostWithoutBody(url);
-            return new AlgoApiRequest(token, ref webRequest);
+            return new AlgoApiRequest(ref webRequest);
         }
 
-        public static AlgoApiRequest Post(string token, string url, byte[] postData)
+        public static AlgoApiRequest Post(string url, byte[] postData)
         {
             var webRequest = UnityWebRequestPostWithoutBody(url);
             webRequest.uploadHandler = new UploadHandlerRaw(postData);
             webRequest.disposeUploadHandlerOnDispose = true;
             webRequest.SetRequestHeader(ContentTypeHeader, "application/x-binary");
-            return new AlgoApiRequest(token, ref webRequest);
+            return new AlgoApiRequest(ref webRequest);
         }
 
-        public static AlgoApiRequest Post(string token, string url, string postData)
+        public static AlgoApiRequest Post(string url, string postData)
         {
             var webRequest = UnityWebRequest.Post(url, postData);
             webRequest.SetRequestHeader(ContentTypeHeader, "text/plain");
-            return new AlgoApiRequest(token, ref webRequest);
+            return new AlgoApiRequest(ref webRequest);
         }
 
-        public static AlgoApiRequest Post(string token, string url, NativeText json)
+        public static AlgoApiRequest Post(string url, NativeText json)
         {
             var webRequest = UnityWebRequest.Post(url, json.ToString());
             webRequest.SetRequestHeader(ContentTypeHeader, "application/json");
-            return new AlgoApiRequest(token, ref webRequest);
+            return new AlgoApiRequest(ref webRequest);
         }
 
-        public static AlgoApiRequest Delete(string token, string url)
+        public static AlgoApiRequest Delete(string url)
         {
             var webRequest = UnityWebRequest.Delete(url);
-            return new AlgoApiRequest(token, ref webRequest);
+            return new AlgoApiRequest(ref webRequest);
         }
 
-        public static AlgoApiRequest Delete(string token, string url, NativeText json)
+        public static AlgoApiRequest Delete(string url, NativeText json)
         {
             var jsonBytes = Encoding.UTF8.GetBytes(json.ToString());
             var webRequest = UnityWebRequest.Delete(url);
             webRequest.uploadHandler = new UploadHandlerRaw(jsonBytes);
             webRequest.disposeUploadHandlerOnDispose = true;
             webRequest.SetRequestHeader(ContentTypeHeader, "application/json");
-            return new AlgoApiRequest(token, ref webRequest);
+            return new AlgoApiRequest(ref webRequest);
         }
 
         private static UnityWebRequest UnityWebRequestPostWithoutBody(string url)
