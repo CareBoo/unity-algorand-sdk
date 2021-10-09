@@ -38,7 +38,7 @@ namespace AlgoSdk
         {
             return txType == TransactionType.None
                 ? default(Optional<FixedString32Bytes>)
-                : txType.ToFixedString()
+                : (Optional<FixedString32Bytes>)txType.ToFixedString()
                 ;
         }
     }

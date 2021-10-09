@@ -4,7 +4,7 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
-    public interface IIndexerClient : IAlgoApiClient
+    public interface IIndexerClient : IApiClient
     {
         UniTask<AlgoApiResponse<HealthCheck>> GetHealth();
         UniTask<AlgoApiResponse<AccountsResponse>> GetAccounts(
