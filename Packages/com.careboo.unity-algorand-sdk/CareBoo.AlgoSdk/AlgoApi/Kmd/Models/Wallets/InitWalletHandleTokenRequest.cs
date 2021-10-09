@@ -7,7 +7,6 @@ namespace AlgoSdk
     public struct InitWalletHandleTokenRequest
         : IEquatable<InitWalletHandleTokenRequest>
     {
-
         [AlgoApiField("wallet_id", null)]
         public FixedString128Bytes WalletId;
 

@@ -9,13 +9,13 @@ namespace AlgoSdk
         : IEquatable<ImportMultiSigRequest>
     {
         [AlgoApiField("multisig_version", null)]
-        public byte Version;
+        public Optional<byte> Version;
 
         [AlgoApiField("pks", null)]
         public Ed25519.PublicKey[] PublicKeys;
 
         [AlgoApiField("threshold", null)]
-        public byte Threshold;
+        public Optional<byte> Threshold;
 
         [AlgoApiField("wallet_handle_token", null)]
         public FixedString128Bytes WalletHandleToken;
