@@ -4,7 +4,7 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
-    public interface IKmdClient : ITokenizedApiClient
+    public interface IKmdClient : IAlgoApiClient
     {
         UniTask<AlgoApiResponse> GetSwaggerSpec();
         UniTask<AlgoApiResponse<GenerateKeyResponse>> GenerateKey(
