@@ -1,73 +1,44 @@
 using System.Collections;
 using AlgoSdk;
 using Cysharp.Threading.Tasks;
-using NUnit.Framework;
 using UnityEngine.TestTools;
-using static UnityEngine.Networking.UnityWebRequest;
 
 public class KmdClientKeysTest : KmdClientTestFixture
 {
-    protected Address generatedKeyAddress;
-
-    protected override async UniTask SetUpAsync()
+    protected async UniTask<Address> GenerateKey()
     {
-        await base.SetUpAsync();
-        await GenerateKey();
+        var response = await kmd.GenerateKey(walletHandleToken: walletHandleToken);
+        AssertResponseSuccess(response);
+        return response.Payload.Address;
     }
 
-    protected override async UniTask TearDownAsync()
+    protected async UniTask DeleteKey(Address address)
     {
-        await base.TearDownAsync();
-        await DeleteGeneratedKey();
-    }
-
-    protected async UniTask GenerateKey()
-    {
-        var response = await kmd.GenerateKey(displayMnemonic: true, walletPassword: WalletPassword);
-        if (response.Status != Result.Success)
-            Assert.Ignore(
-                $"Ignoring test because {nameof(GenerateKey)} response was {response.ResponseCode}: {response.Status}. " +
-                $"Message:\n{response.Error.Message}"
-            );
-    }
-
-    protected async UniTask DeleteGeneratedKey()
-    {
-        if (!generatedKeyAddress.Equals(default))
-            await kmd.DeleteKey(
-                address: generatedKeyAddress,
-                walletHandleToken: walletHandle,
-                walletPassword: WalletPassword
-            );
-        generatedKeyAddress = default;
-    }
-
-    [UnityTest]
-    public IEnumerator GenerateKeyThenDeleteKeyShouldReturnOkay() => UniTask.ToCoroutine(async () =>
-    {
-        var generateKeyResponse = await kmd.GenerateKey(walletPassword: WalletPassword);
-        AssertResponseSuccess(generateKeyResponse);
-        var generatedAddress = generateKeyResponse.Payload.Address;
-        var deleteKeyRequest = await kmd.DeleteKey(
-            address: generatedAddress,
-            walletHandleToken: walletHandle,
+        await kmd.DeleteKey(
+            address: address,
+            walletHandleToken: walletHandleToken,
             walletPassword: WalletPassword
         );
-        AssertResponseSuccess(deleteKeyRequest);
-    });
-
+    }
 
     [UnityTest]
     public IEnumerator ExportKeyShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var generateKeyResponse = await kmd.GenerateKey(walletPassword: WalletPassword);
-        AssertResponseSuccess(generateKeyResponse);
-        var generatedAddress = generateKeyResponse.Payload.Address;
-        var deleteKeyRequest = await kmd.DeleteKey(
-            address: generatedAddress,
-            walletHandleToken: walletHandle,
-            walletPassword: WalletPassword
+        var address = await GenerateKey();
+        var response = await kmd.ExportKey(address, walletHandleToken, WalletPassword);
+        AssertResponseSuccess(response);
+        await DeleteKey(address);
+    });
+
+    [UnityTest]
+    public IEnumerator ImportKeyShouldReturnOkay() => UniTask.ToCoroutine(async () =>
+    {
+        var response = await kmd.ImportKey(
+            AlgoSdk.Crypto.Random.Bytes<PrivateKey>(),
+            walletHandleToken
         );
-        AssertResponseSuccess(deleteKeyRequest);
+        AssertResponseSuccess(response);
+        var address = response.Payload.Address;
+        await DeleteKey(address);
     });
 }
