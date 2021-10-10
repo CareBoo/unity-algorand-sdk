@@ -46,10 +46,10 @@ namespace AlgoSdk
             return this;
         }
 
-        public QueryBuilder Add<T>(string key, T value)
+        public QueryBuilder Add<T>(string key, T value, T defaultValue = default)
             where T : struct, IEquatable<T>
         {
-            if (value.Equals(default))
+            if (value.Equals(defaultValue))
                 return this;
 
             AddKey(key);

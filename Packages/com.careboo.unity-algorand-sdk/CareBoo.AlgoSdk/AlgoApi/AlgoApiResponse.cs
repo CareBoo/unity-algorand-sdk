@@ -1,22 +1,16 @@
 using System.Text;
 using Unity.Collections;
 using UnityEngine.Networking;
+using static UnityEngine.Networking.UnityWebRequest;
 
 namespace AlgoSdk
 {
-    public enum AlgoApiFormat : byte
-    {
-        None,
-        Json,
-        MessagePack
-    }
-
     public struct AlgoApiResponse
     {
         byte[] data;
         UnityWebRequest.Result status;
         long responseCode;
-        AlgoApiFormat contentType;
+        ContentType contentType;
 
         public AlgoApiResponse(ref UnityWebRequest completedRequest)
         {
@@ -25,12 +19,7 @@ namespace AlgoSdk
             responseCode = completedRequest.responseCode;
             var contentTypeHeader = completedRequest.GetResponseHeader("Content-Type");
             contentTypeHeader = PruneParametersFromContentType(contentTypeHeader);
-            contentType = contentTypeHeader switch
-            {
-                "application/json" => AlgoApiFormat.Json,
-                "application/msgpack" => AlgoApiFormat.MessagePack,
-                _ => AlgoApiFormat.None
-            };
+            contentType = contentTypeHeader.ToContentType();
             completedRequest.Dispose();
         }
 
@@ -38,15 +27,16 @@ namespace AlgoSdk
 
         public long ResponseCode => responseCode;
 
-        public UnityWebRequest.Result Status => status;
+        public Result Status => status;
 
-        public AlgoApiFormat ContentType => contentType;
+        public ContentType ContentType => contentType;
 
         public string GetText()
         {
-            return contentType == AlgoApiFormat.MessagePack
+            return contentType == ContentType.MessagePack
                 ? System.Convert.ToBase64String(data)
-                : Encoding.UTF8.GetString(data, 0, data.Length);
+                : Encoding.UTF8.GetString(data, 0, data.Length)
+                ;
         }
 
         private static string PruneParametersFromContentType(string fullType)
@@ -75,14 +65,14 @@ namespace AlgoSdk
             using var bytes = new NativeArray<byte>(rawBytes, Allocator.Temp);
             error = response.Status switch
             {
-                UnityWebRequest.Result.ProtocolError => AlgoApiSerializer.Deserialize<ErrorResponse>(bytes.AsReadOnly(), response.ContentType),
-                UnityWebRequest.Result.ConnectionError => new ErrorResponse("Could not connect"),
-                UnityWebRequest.Result.DataProcessingError => new ErrorResponse("Error processing data from server"),
+                Result.ProtocolError => AlgoApiSerializer.Deserialize<ErrorResponse>(bytes.AsReadOnly(), response.ContentType),
+                Result.ConnectionError => new ErrorResponse("Could not connect"),
+                Result.DataProcessingError => new ErrorResponse("Error processing data from server"),
                 _ => default
             };
             payload = response.Status switch
             {
-                UnityWebRequest.Result.Success => AlgoApiSerializer.Deserialize<T>(bytes.AsReadOnly(), response.ContentType),
+                Result.Success => AlgoApiSerializer.Deserialize<T>(bytes.AsReadOnly(), response.ContentType),
                 _ => default
             };
         }
@@ -97,9 +87,9 @@ namespace AlgoSdk
 
         public long ResponseCode => rawResponse.ResponseCode;
 
-        public UnityWebRequest.Result Status => rawResponse.Status;
+        public Result Status => rawResponse.Status;
 
-        public AlgoApiFormat ContentType => rawResponse.ContentType;
+        public ContentType ContentType => rawResponse.ContentType;
 
         public string GetText() => rawResponse.GetText();
 

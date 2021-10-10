@@ -23,12 +23,15 @@ public class AlgodClientTest : AlgoApiClientTest
             .ToArray();
     }
 
-    [UnityTest]
-    public IEnumerator PlayException() => UniTask.ToCoroutine(async () =>
+    [UnityTearDown]
+    public IEnumerator WaitForTransactions() => UniTask.ToCoroutine(async () =>
     {
-        var response = await algod.GetAsync("/does_not_exist");
-        Assert.AreEqual(UnityWebRequest.Result.ProtocolError, response.Status);
-        Debug.Log(response.GetText());
+        var response = await algod.GetPendingTransactions();
+        while (response.Payload.TotalTransactions > 0)
+        {
+            await UniTask.Delay(100);
+            response = await algod.GetPendingTransactions();
+        }
     });
 
     [UnityTest]
@@ -72,10 +75,11 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetPendingTransactionsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        await MakePaymentTransaction(100_000);
+        var txId = await MakePaymentTransaction(100_000);
         var response = await algod.GetPendingTransactions();
         Debug.Log(response.Raw.GetText());
         AssertResponseSuccess(response);
+        Assert.IsTrue(response.Payload.TopTransactions.Any(txn => txn.Transaction.Id == txId.TxId));
     });
 
     [UnityTest]
@@ -85,7 +89,7 @@ public class AlgodClientTest : AlgoApiClientTest
         var pendingTxn = new PendingTransaction();
         while (pendingTxn.ConfirmedRound <= 0)
         {
-            await UniTask.Delay(500);
+            await UniTask.Delay(100);
             var pendingResponse = await algod.GetPendingTransaction(txId);
             pendingTxn = pendingResponse.Payload;
         }

@@ -24,7 +24,9 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<HealthCheck>> GetHealth()
         {
-            return await this.GetAsync("/health");
+            return await this
+                .Get("/health")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<AccountsResponse>> GetAccounts(
@@ -52,7 +54,9 @@ namespace AlgoSdk
                 .Add("round", round)
                 .ToString()
                 ;
-            return await this.GetAsync("/v2/accounts" + query);
+            return await this
+                .Get("/v2/accounts" + query)
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<AccountResponse>> GetAccount(
@@ -67,7 +71,9 @@ namespace AlgoSdk
                 .Add("round", round)
                 .ToString()
                 ;
-            return await this.GetAsync($"/v2/accounts/{accountAddress}{query}");
+            return await this
+                .Get($"/v2/accounts/{accountAddress}{query}")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<TransactionsResponse>> GetAccountTransactions(
@@ -108,7 +114,9 @@ namespace AlgoSdk
                 .Add("txid", txid)
                 .ToString()
                 ;
-            return await this.GetAsync($"/v2/accounts/{accountAddress}/transactions{query}");
+            return await this
+                .Get($"/v2/accounts/{accountAddress}/transactions{query}")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<ApplicationsResponse>> GetApplications(
@@ -126,7 +134,9 @@ namespace AlgoSdk
                 .Add("next", next)
                 .ToString()
                 ;
-            return await this.GetAsync("/v2/applications" + query);
+            return await this
+                .Get("/v2/applications" + query)
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<ApplicationResponse>> GetApplication(
@@ -138,7 +148,9 @@ namespace AlgoSdk
             var query = queryBuilder
                 .Add("include-all", includeAll)
                 ;
-            return await this.GetAsync($"/v2/applications/{applicationId}{query}");
+            return await this
+                .Get($"/v2/applications/{applicationId}{query}")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<AssetsResponse>> GetAssets(
@@ -161,7 +173,9 @@ namespace AlgoSdk
                 .Add("unit", unit)
                 .ToString()
                 ;
-            return await this.GetAsync($"/v2/assets{query}");
+            return await this
+                .Get($"/v2/assets{query}")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<AssetResponse>> GetAsset(
@@ -173,7 +187,9 @@ namespace AlgoSdk
             var query = queryBuilder
                 .Add("include-all", includeAll)
                 ;
-            return await this.GetAsync($"/v2/assets/{assetId}{query}");
+            return await this
+                .Get($"/v2/assets/{assetId}{query}")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<BalancesResponse>> GetAssetBalances(
@@ -196,7 +212,9 @@ namespace AlgoSdk
                 .Add("round", round)
                 .ToString()
                 ;
-            return await this.GetAsync($"/v2/assets/{assetId}/balances{query}");
+            return await this
+                .Get($"/v2/assets/{assetId}/balances{query}")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<TransactionsResponse>> GetAssetTransactions(
@@ -241,12 +259,14 @@ namespace AlgoSdk
                 .Add("txid", txid)
                 .ToString()
                 ;
-            return await this.GetAsync($"/v2/assets/{assetId}/transactions{query}");
+            return await this
+                .Get($"/v2/assets/{assetId}/transactions{query}")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<Block>> GetBlock(ulong round)
         {
-            return await this.GetAsync($"/v2/blocks/{round}");
+            return await this.Get($"/v2/blocks/{round}").Send();
         }
 
         public async UniTask<AlgoApiResponse<TransactionsResponse>> GetTransactions(
@@ -294,12 +314,16 @@ namespace AlgoSdk
                 .Add("txid", txid)
                 .ToString()
                 ;
-            return await this.GetAsync("/v2/transactions" + query);
+            return await this
+                .Get("/v2/transactions" + query)
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<TransactionResponse>> GetTransaction(FixedString64Bytes txid)
         {
-            return await this.GetAsync($"/v2/transactions/{txid}");
+            return await this
+                .Get($"/v2/transactions/{txid}")
+                .Send();
         }
     }
 }
