@@ -56,6 +56,11 @@ namespace AlgoSdk
 
         public AlgoApiRequest SetRawBody(byte[] data, ContentType contentType)
         {
+            if (data == null || data.Length == 0)
+            {
+                unityWebRequest.SetRequestHeader("Content-Type", contentType.ToHeaderValue());
+                return this;
+            }
             unityWebRequest.uploadHandler = new UploadHandlerRaw(data);
             unityWebRequest.uploadHandler.contentType = contentType.ToHeaderValue();
             unityWebRequest.disposeUploadHandlerOnDispose = true;
