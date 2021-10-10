@@ -11,9 +11,9 @@ using UnityEngine.TestTools;
 [System.Flags]
 public enum AlgoServices : byte
 {
-    Algod,
-    Kmd,
-    Indexer
+    Algod = 1,
+    Kmd = 2,
+    Indexer = 4
 }
 
 public abstract class AlgoApiClientTest
@@ -69,7 +69,9 @@ public abstract class AlgoApiClientTest
     abstract protected AlgoServices RequiresServices { get; }
 
     [UnitySetUp]
-    public IEnumerator CheckServices() => UniTask.ToCoroutine(async () =>
+    public IEnumerator SetUpTest() => UniTask.ToCoroutine(SetUpAsync);
+
+    protected virtual async UniTask SetUpAsync()
     {
         if (RequiresServices.HasFlag(AlgoServices.Algod))
             await CheckAlgodService();
@@ -77,7 +79,7 @@ public abstract class AlgoApiClientTest
             await CheckIndexerService();
         if (RequiresServices.HasFlag(AlgoServices.Kmd))
             await CheckKmdService();
-    });
+    }
 
     async static UniTask CheckAlgodService()
     {

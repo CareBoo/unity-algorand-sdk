@@ -1,5 +1,7 @@
 using System.Collections;
+using System.Linq;
 using AlgoSdk;
+using AlgoSdk.Crypto;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
 using Unity.Collections;
@@ -10,8 +12,10 @@ using UnityEngine.TestTools;
 [TestFixture]
 public class KmdClientTest : AlgoApiClientTest
 {
+    const string WalletName = "AlgoSdkTestWallet";
     const string WalletPassword = "helloworld123";
-    FixedString128Bytes walletHandle;
+    const string WalletDriverName = "sqlite";
+    FixedString128Bytes walletHandle = default;
 
     protected override AlgoServices RequiresServices => AlgoServices.Kmd;
 
@@ -37,7 +41,12 @@ public class KmdClientTest : AlgoApiClientTest
 
     static async UniTask<(bool, Wallet)> TryCreateWallet()
     {
-        var response = await kmd.CreateWallet();
+        var response = await kmd.CreateWallet(
+            masterDerivationKey: AlgoSdk.Crypto.Random.Bytes<PrivateKey>(),
+            walletDriverName: WalletDriverName,
+            walletName: WalletName,
+            walletPassword: WalletPassword
+        );
         if (response.Status != UnityWebRequest.Result.Success)
         {
             Assert.Ignore(
@@ -55,29 +64,25 @@ public class KmdClientTest : AlgoApiClientTest
         return (true, response.Payload.Wallet);
     }
 
-    [UnitySetUp]
-    public IEnumerator SetUpTest() => UniTask.ToCoroutine(async () =>
+    protected override async UniTask SetUpAsync()
     {
+        await base.SetUpAsync();
         if (walletHandle.Length > 0)
             return;
         var (ok, wallets) = await TryListWallets();
         if (!ok)
             return;
-        Wallet wallet;
-        if (wallets.Length == 0)
+        Wallet wallet = wallets.FirstOrDefault(w => w.Name.Equals(WalletName));
+        if (wallet.Equals(default))
         {
             (ok, wallet) = await TryCreateWallet();
             if (!ok)
                 return;
         }
-        else
-        {
-            wallet = wallets[0];
-        }
         var initWalletHandleResponse = await kmd.InitWalletHandleToken(wallet.Id, WalletPassword);
         walletHandle = initWalletHandleResponse.Payload.WalletHandleToken;
         return;
-    });
+    }
 
     [UnityTearDown]
     public IEnumerator TearDownTest() => UniTask.ToCoroutine(async () =>

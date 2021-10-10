@@ -1,4 +1,3 @@
-using System;
 using Unity.Collections;
 
 namespace AlgoSdk.MessagePack
