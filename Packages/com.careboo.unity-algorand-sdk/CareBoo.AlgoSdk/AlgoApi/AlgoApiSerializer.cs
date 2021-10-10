@@ -8,6 +8,12 @@ namespace AlgoSdk
 {
     public static class AlgoApiSerializer
     {
+        public static T Deserialize<T>(byte[] bytes, ContentType contentType)
+        {
+            using var nativeBytes = new NativeArray<byte>(bytes, Allocator.Temp);
+            return Deserialize<T>(nativeBytes.AsReadOnly(), contentType);
+        }
+
         public static T Deserialize<T>(NativeArray<byte>.ReadOnly bytes, ContentType contentType)
         {
             return contentType switch
