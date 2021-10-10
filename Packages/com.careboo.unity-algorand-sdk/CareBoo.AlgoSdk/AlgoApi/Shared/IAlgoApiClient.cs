@@ -21,70 +21,28 @@ namespace AlgoSdk
             return client.Address + endpoint;
         }
 
-        public static async UniTask<AlgoApiResponse> GetAsync<T>(this T client, string endpoint)
+        public static AlgoApiRequest Get<T>(this T client, string endpoint)
             where T : IAlgoApiClient
         {
-            return await AlgoApiRequest.Get(client.GetUrl(endpoint))
+            return AlgoApiRequest.Get(client.GetUrl(endpoint))
                 .SetToken(client.TokenHeader, client.Token)
-                .Send();
+                ;
         }
 
-        public static async UniTask<AlgoApiResponse> PostAsync<T, TBody>(this T client, string endpoint, TBody body)
-            where T : IAlgoApiClient
-            where TBody : struct, IEquatable<TBody>
-        {
-            using var json = AlgoApiSerializer.SerializeJson(body, Allocator.Persistent);
-            return await AlgoApiRequest.Post(client.GetUrl(endpoint), json)
-                .SetToken(client.TokenHeader, client.Token)
-                .Send();
-        }
-
-        public static async UniTask<AlgoApiResponse> PostAsync<T>(this T client, string endpoint)
-                where T : IAlgoApiClient
-        {
-            return await AlgoApiRequest.Post(client.GetUrl(endpoint))
-                .SetToken(client.TokenHeader, client.Token)
-                .Send();
-        }
-
-        public static async UniTask<AlgoApiResponse> PostAsync<T>(this T client, string endpoint, NativeArray<byte>.ReadOnly data)
+        public static AlgoApiRequest Post<T>(this T client, string endpoint)
             where T : IAlgoApiClient
         {
-            return await TokenizedClientExtensions.PostAsync(client, endpoint, data.ToArray());
+            return AlgoApiRequest.Post(client.GetUrl(endpoint))
+                .SetToken(client.TokenHeader, client.Token)
+                ;
         }
 
-        public static async UniTask<AlgoApiResponse> PostAsync<T>(this T client, string endpoint, byte[] data)
+        public static AlgoApiRequest Delete<T>(this T client, string endpoint)
             where T : IAlgoApiClient
         {
-            return await AlgoApiRequest.Post(client.GetUrl(endpoint), data)
+            return AlgoApiRequest.Delete(client.GetUrl(endpoint))
                 .SetToken(client.TokenHeader, client.Token)
-                .Send();
-        }
-
-        public static async UniTask<AlgoApiResponse> PostAsync<T>(this T client, string endpoint, string source)
-            where T : IAlgoApiClient
-        {
-            return await AlgoApiRequest.Post(client.GetUrl(endpoint), source)
-                .SetToken(client.TokenHeader, client.Token)
-                .Send();
-        }
-
-        public static async UniTask<AlgoApiResponse> DeleteAsync<T>(this T client, string endpoint)
-            where T : IAlgoApiClient
-        {
-            return await AlgoApiRequest.Delete(client.GetUrl(endpoint))
-                .SetToken(client.TokenHeader, client.Token)
-                .Send();
-        }
-
-        public static async UniTask<AlgoApiResponse> DeleteAsync<T, TBody>(this T client, string endpoint, TBody body)
-            where T : IAlgoApiClient
-            where TBody : struct, IEquatable<TBody>
-        {
-            using var json = AlgoApiSerializer.SerializeJson(body, Allocator.Persistent);
-            return await AlgoApiRequest.Delete(client.GetUrl(endpoint), json)
-                .SetToken(client.TokenHeader, client.Token)
-                .Send();
+                ;
         }
     }
 }

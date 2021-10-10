@@ -24,7 +24,9 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse> GetSwaggerSpec()
         {
-            return await this.GetAsync("/swagger.json");
+            return await this
+                .Get("/swagger.json")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<GenerateKeyResponse>> GenerateKey(
@@ -33,7 +35,10 @@ namespace AlgoSdk
         )
         {
             var request = new GenerateKeyRequest { DisplayMnemonic = displayMnemonic, WalletPassword = walletPassword };
-            return await this.PostAsync("/v1/key", request);
+            return await this
+                .Post("/v1/key")
+                .SetJsonBody(request)
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<DeleteKeyResponse>> DeleteKey(
@@ -48,7 +53,10 @@ namespace AlgoSdk
                 WalletHandleToken = walletHandleToken,
                 WalletPassword = walletPassword
             };
-            return await this.DeleteAsync("/v1/key", request);
+            return await this
+                .Delete("/v1/key")
+                .SetJsonBody(request)
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<ExportKeyResponse>> ExportKey(
@@ -63,7 +71,10 @@ namespace AlgoSdk
                 WalletHandleToken = walletHandleToken,
                 WalletPassword = walletPassword
             };
-            return await this.PostAsync("/v1/key/export", request);
+            return await this
+                .Post("/v1/key/export")
+                .SetJsonBody(request)
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<ImportKeyResponse>> ImportKey(
@@ -76,7 +87,10 @@ namespace AlgoSdk
                 PrivateKey = privateKey,
                 WalletPassword = walletPassword
             };
-            return await this.PostAsync("/v1/key/import", request);
+            return await this
+                .Post("/v1/key/import")
+                .SetJsonBody(request)
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<ListKeysResponse>> ListKeys(
@@ -84,7 +98,10 @@ namespace AlgoSdk
         )
         {
             var request = new ListKeysRequest { WalletHandleToken = walletHandleToken };
-            return await this.PostAsync("/v1/key/list", request);
+            return await this
+                .Post("/v1/key/list")
+                .SetJsonBody(request)
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<ExportMasterKeyResponse>> ExportMasterKey(
@@ -97,7 +114,10 @@ namespace AlgoSdk
                 WalletHandleToken = walletHandleToken,
                 WalletPassword = walletPassword
             };
-            return await this.PostAsync("/v1/master-key/export", request);
+            return await this
+                .Post("/v1/master-key/export")
+                .SetJsonBody(request)
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<DeleteMultiSigResponse>> DeleteMultiSig(
@@ -112,7 +132,10 @@ namespace AlgoSdk
                 WalletHandleToken = walletHandleToken,
                 WalletPassword = walletPassword
             };
-            return await this.DeleteAsync("/v1/multisig", request);
+            return await this
+                .Delete("/v1/multisig")
+                .SetJsonBody(request)
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<ExportMultiSigResponse>> ExportMultiSig(
@@ -125,7 +148,10 @@ namespace AlgoSdk
                 Address = address,
                 WalletHandleToken = walletHandleToken
             };
-            return await this.PostAsync("/v1/multisig/export", request);
+            return await this
+                .Post("/v1/multisig/export")
+                .SetJsonBody(request)
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<ImportMultiSigResponse>> ImportMultiSig(
@@ -142,7 +168,10 @@ namespace AlgoSdk
                 Threshold = threshold,
                 WalletHandleToken = walletHandleToken
             };
-            return await this.PostAsync("/v1/multisig/import", request);
+            return await this
+                .Post("/v1/multisig/import")
+                .SetJsonBody(request)
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<ListMultiSigResponse>> ListMultiSig(
@@ -150,7 +179,10 @@ namespace AlgoSdk
         )
         {
             var request = new ListMultiSigRequest { WalletHandleToken = walletHandleToken };
-            return await this.PostAsync("/v1/multisig/list", request);
+            return await this
+                .Post("/v1/multisig/list")
+                .SetJsonBody(request)
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<SignMultiSigResponse>> SignMultiSig(
@@ -171,7 +203,10 @@ namespace AlgoSdk
                 WalletHandleToken = walletHandleToken,
                 WalletPassword = walletPassword
             };
-            return await this.PostAsync("/v1/multisig/sign", request);
+            return await this
+                .Post("/v1/multisig/sign")
+                .SetJsonBody(request)
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<SignProgramMultiSigResponse>> SignProgramMultiSig(
@@ -192,7 +227,10 @@ namespace AlgoSdk
                 WalletHandleToken = walletHandleToken,
                 WalletPassword = walletPassword
             };
-            return await this.PostAsync("/v1/multisig/signprogram", request);
+            return await this
+                .Post("/v1/multisig/signprogram")
+                .SetJsonBody(request)
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<SignProgramResponse>> SignProgram(
@@ -209,7 +247,10 @@ namespace AlgoSdk
                 WalletHandleToken = walletHandleToken,
                 WalletPassword = walletPassword
             };
-            return await this.PostAsync("/v1/program/sign", request);
+            return await this
+                .Post("/v1/program/sign")
+                .SetJsonBody(request)
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<SignTransactionResponse>> SignTransaction(
@@ -226,7 +267,10 @@ namespace AlgoSdk
                 WalletHandleToken = walletHandleToken,
                 WalletPassword = walletPassword
             };
-            return await this.PostAsync("/v1/transaction/sign", request);
+            return await this
+                .Post("/v1/transaction/sign")
+                .SetJsonBody(request)
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<CreateWalletResponse>> CreateWallet(
@@ -243,7 +287,10 @@ namespace AlgoSdk
                 WalletName = walletName,
                 WalletPassword = walletPassword
             };
-            return await this.PostAsync("/v1/wallet", request);
+            return await this
+                .Post("/v1/wallet")
+                .SetJsonBody(request)
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<WalletInfoResponse>> WalletInfo(
@@ -251,7 +298,10 @@ namespace AlgoSdk
         )
         {
             var request = new WalletInfoRequest { WalletHandleToken = walletHandleToken };
-            return await this.PostAsync("/v1/wallet/info", request);
+            return await this
+                .Post("/v1/wallet/info")
+                .SetJsonBody(request)
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<InitWalletHandleTokenResponse>> InitWalletHandleToken(
@@ -264,7 +314,10 @@ namespace AlgoSdk
                 WalletId = walletId,
                 WalletPassword = walletPassword
             };
-            return await this.PostAsync("/v1/wallet/init", request);
+            return await this
+                .Post("/v1/wallet/init")
+                .SetJsonBody(request)
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<ReleaseWalletHandleTokenResponse>> ReleaseWalletHandleToken(
@@ -272,7 +325,10 @@ namespace AlgoSdk
         )
         {
             var request = new ReleaseWalletHandleTokenRequest { WalletHandleToken = walletHandleToken };
-            return await this.PostAsync("/v1/wallet/release", request);
+            return await this
+                .Post("/v1/wallet/release")
+                .SetJsonBody(request)
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<RenameWalletResponse>> RenameWallet(
@@ -287,7 +343,10 @@ namespace AlgoSdk
                 WalletName = walletName,
                 WalletPassword = walletPassword
             };
-            return await this.PostAsync("/v1/wallet/rename", request);
+            return await this
+                .Post("/v1/wallet/rename")
+                .SetJsonBody(request)
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<RenewWalletHandleTokenResponse>> RenewWalletHandleToken(
@@ -295,17 +354,25 @@ namespace AlgoSdk
         )
         {
             var request = new RenewWalletHandleTokenRequest { WalletHandleToken = walletHandleToken };
-            return await this.PostAsync("/v1/wallet/renew", request);
+            return await this
+                .Post("/v1/wallet/renew")
+                .SetJsonBody(request)
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<ListWalletsResponse>> ListWallets()
         {
-            return await this.GetAsync("/v1/wallets");
+            return await this
+                .Get("/v1/wallets")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<VersionsResponse>> Versions()
         {
-            return await this.GetAsync("/v1/versions");
+            return await this
+                .Get("/v1/versions")
+                .SetJsonBody("{}")
+                .Send();
         }
     }
 }

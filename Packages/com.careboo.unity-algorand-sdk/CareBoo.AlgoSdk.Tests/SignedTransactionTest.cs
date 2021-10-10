@@ -30,7 +30,7 @@ public class SignedTransactionTest
             amount: 1000000);
         SignedTransaction signedTransaction = transaction.Sign(kp.SecretKey);
         using var serialized = AlgoApiSerializer.SerializeMessagePack(signedTransaction, Allocator.Temp);
-        var deserialized = AlgoApiSerializer.Deserialize<SignedTransaction>(serialized.AsArray().AsReadOnly(), AlgoApiFormat.MessagePack);
+        var deserialized = AlgoApiSerializer.Deserialize<SignedTransaction>(serialized.AsArray().AsReadOnly(), ContentType.MessagePack);
         Assert.IsTrue(signedTransaction.Equals(deserialized));
     }
 }
