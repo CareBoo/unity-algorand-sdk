@@ -9,7 +9,7 @@ using AlgoSdk.Formatters;
 namespace AlgoSdk
 {
     [Serializable]
-    [AlgoApiFormatter(typeof(ByteArrayFormatter<PrivateKey>))]
+    [AlgoApiFormatter(typeof(PrivateKeyFormatter))]
     [StructLayout(LayoutKind.Explicit, Size = 32)]
     public struct PrivateKey
         : IEquatable<PrivateKey>
