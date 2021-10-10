@@ -76,5 +76,17 @@ namespace AlgoSdk.Json
                 ? JsonReadError.None
                 : JsonReadError.ParseError;
         }
+
+        JsonReadError SkipNumber()
+        {
+            while (offset < text.Length)
+            {
+                var t = text.Peek(offset).ToJsonToken();
+                if (t != JsonToken.Number)
+                    break;
+                offset++;
+            }
+            return JsonReadError.None;
+        }
     }
 }
