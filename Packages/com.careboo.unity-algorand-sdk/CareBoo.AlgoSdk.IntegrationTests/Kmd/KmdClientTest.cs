@@ -103,5 +103,29 @@ public class KmdClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GenerateKeyThenDeleteKeyShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
+        var generateKeyResponse = await kmd.GenerateKey(walletPassword: WalletPassword);
+        AssertResponseSuccess(generateKeyResponse);
+        var generatedAddress = generateKeyResponse.Payload.Address;
+        var deleteKeyRequest = await kmd.DeleteKey(
+            address: generatedAddress,
+            walletHandleToken: walletHandle,
+            walletPassword: WalletPassword
+        );
+        AssertResponseSuccess(deleteKeyRequest);
+    });
+
+
+    [UnityTest]
+    public IEnumerator ExportKeyShouldReturnOkay() => UniTask.ToCoroutine(async () =>
+    {
+        var generateKeyResponse = await kmd.GenerateKey(walletPassword: WalletPassword);
+        AssertResponseSuccess(generateKeyResponse);
+        var generatedAddress = generateKeyResponse.Payload.Address;
+        var deleteKeyRequest = await kmd.DeleteKey(
+            address: generatedAddress,
+            walletHandleToken: walletHandle,
+            walletPassword: WalletPassword
+        );
+        AssertResponseSuccess(deleteKeyRequest);
     });
 }
