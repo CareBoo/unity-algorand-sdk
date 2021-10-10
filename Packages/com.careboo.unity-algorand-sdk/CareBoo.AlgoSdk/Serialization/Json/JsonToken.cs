@@ -13,13 +13,18 @@ namespace AlgoSdk.Json
         Bool,
         Null,
         Number,
+        EscapeChar
     }
 
     public static class JsonTokenExtensions
     {
         public static JsonToken ToJsonToken(this Unicode.Rune rune)
         {
-            var c = rune.ToChar();
+            return rune.ToChar().ToJsonToken();
+        }
+
+        public static JsonToken ToJsonToken(this char c)
+        {
             return c switch
             {
                 '{' => JsonToken.ObjectBegin,
@@ -41,6 +46,8 @@ namespace AlgoSdk.Json
                 '8' => JsonToken.Number,
                 '9' => JsonToken.Number,
                 '-' => JsonToken.Number,
+                '.' => JsonToken.Number,
+                '\\' => JsonToken.EscapeChar,
                 _ => JsonToken.None
             };
         }
