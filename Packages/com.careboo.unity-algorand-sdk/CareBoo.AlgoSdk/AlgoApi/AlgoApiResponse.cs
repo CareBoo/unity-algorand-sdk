@@ -1,5 +1,6 @@
 using System.Text;
 using Unity.Collections;
+using UnityEngine;
 using UnityEngine.Networking;
 using static UnityEngine.Networking.UnityWebRequest;
 
@@ -20,6 +21,16 @@ namespace AlgoSdk
             var contentTypeHeader = completedRequest.GetResponseHeader("Content-Type");
             contentTypeHeader = PruneParametersFromContentType(contentTypeHeader);
             contentType = contentTypeHeader.ToContentType();
+#if UNITY_EDITOR
+            Debug.Log(
+                "completed request\n" +
+                $"\turl: {completedRequest.url}\n" +
+                $"\tdownloadHandler.text: {completedRequest.downloadHandler.text}\n" +
+                $"\terror: {completedRequest.error}\n" +
+                $"\tmethod: {completedRequest.method}\n" +
+                $"\tdownloadHandler.error: {completedRequest.downloadHandler.error}"
+            );
+#endif
             completedRequest.Dispose();
         }
 
@@ -32,6 +43,11 @@ namespace AlgoSdk
         public ContentType ContentType => contentType;
 
         public string GetText()
+        {
+            return GetText(data, contentType);
+        }
+
+        private static string GetText(byte[] data, ContentType contentType)
         {
             return contentType == ContentType.MessagePack
                 ? System.Convert.ToBase64String(data)
@@ -57,9 +73,6 @@ namespace AlgoSdk
 
         public AlgoApiResponse(AlgoApiResponse response)
         {
-#if UNITY_INCLUDE_TESTS
-            UnityEngine.Debug.Log(response.GetText());
-#endif
             this.rawResponse = response;
             byte[] rawBytes = response.Data;
             using var bytes = new NativeArray<byte>(rawBytes, Allocator.Temp);

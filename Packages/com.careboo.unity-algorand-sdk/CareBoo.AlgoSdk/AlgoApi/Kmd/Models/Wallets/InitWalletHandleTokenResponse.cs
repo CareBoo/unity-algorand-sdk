@@ -1,4 +1,5 @@
 using System;
+using Unity.Collections;
 
 namespace AlgoSdk
 {
@@ -7,7 +8,7 @@ namespace AlgoSdk
         : IEquatable<InitWalletHandleTokenResponse>
     {
         [AlgoApiField("wallet_handle_token", null)]
-        public string WalletHandleToken;
+        public FixedString128Bytes WalletHandleToken;
 
         [AlgoApiField("error", null)]
         public Optional<bool> Error;

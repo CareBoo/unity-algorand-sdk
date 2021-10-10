@@ -370,8 +370,7 @@ namespace AlgoSdk
         public async UniTask<AlgoApiResponse<VersionsResponse>> Versions()
         {
             return await this
-                .Get("/v1/versions")
-                .SetJsonBody("{}")
+                .Get("/versions")
                 .Send();
         }
     }

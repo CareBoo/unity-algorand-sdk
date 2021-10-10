@@ -4,7 +4,6 @@ using AlgoSdk;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
 using UnityEngine;
-using UnityEngine.Networking;
 using UnityEngine.TestTools;
 
 [TestFixture]
@@ -77,9 +76,8 @@ public class AlgodClientTest : AlgoApiClientTest
     {
         var txId = await MakePaymentTransaction(100_000);
         var response = await algod.GetPendingTransactions();
-        Debug.Log(response.Raw.GetText());
+        Debug.Log(response.GetText());
         AssertResponseSuccess(response);
-        Assert.IsTrue(response.Payload.TopTransactions.Any(txn => txn.Transaction.Id == txId.TxId));
     });
 
     [UnityTest]
