@@ -36,6 +36,12 @@ namespace AlgoSdk.MessagePack
             throw InsufficientBuffer();
         }
 
+        public void Skip()
+        {
+            if (!TrySkip())
+                throw InsufficientBuffer();
+        }
+
         public void ReadRaw(NativeList<byte> bytes)
         {
             if (!TryReadRaw(bytes))
