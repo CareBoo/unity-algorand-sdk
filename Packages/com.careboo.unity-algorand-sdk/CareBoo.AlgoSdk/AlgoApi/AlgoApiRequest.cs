@@ -11,7 +11,6 @@ namespace AlgoSdk
 {
     public readonly ref struct AlgoApiRequest
     {
-        public const string TokenHeader = "X-Algo-API-Token";
         public const string ContentTypeHeader = "Content-Type";
         readonly UnityWebRequest unityWebRequest;
 
@@ -20,9 +19,10 @@ namespace AlgoSdk
             this.unityWebRequest = unityWebRequest;
         }
 
-        public AlgoApiRequest SetToken(string token)
+        public AlgoApiRequest SetToken(string tokenHeader, string token)
         {
-            unityWebRequest.SetRequestHeader(TokenHeader, token);
+            if (!string.IsNullOrEmpty(token))
+                unityWebRequest.SetRequestHeader(tokenHeader, token);
             return this;
         }
 

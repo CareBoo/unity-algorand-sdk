@@ -7,6 +7,7 @@ namespace AlgoSdk
     public struct KmdClient : IKmdClient
     {
         readonly string address;
+
         readonly string token;
 
         public KmdClient(string address, string token)
@@ -18,6 +19,8 @@ namespace AlgoSdk
         public string Address => address;
 
         public string Token => token;
+
+        public string TokenHeader => "X-KMD-API-Token";
 
         public async UniTask<AlgoApiResponse> GetSwaggerSpec()
         {

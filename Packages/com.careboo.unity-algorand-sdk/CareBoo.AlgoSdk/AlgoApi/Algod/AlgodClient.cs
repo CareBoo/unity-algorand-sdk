@@ -6,6 +6,7 @@ namespace AlgoSdk
     public struct AlgodClient : IAlgodClient
     {
         readonly string address;
+
         readonly string token;
 
         public AlgodClient(string address, string token)
@@ -17,6 +18,8 @@ namespace AlgoSdk
         public string Address => address;
 
         public string Token => token;
+
+        public string TokenHeader => "X-Algo-API-Token";
 
         public async UniTask<AlgoApiResponse> GetGenesisInformation()
         {

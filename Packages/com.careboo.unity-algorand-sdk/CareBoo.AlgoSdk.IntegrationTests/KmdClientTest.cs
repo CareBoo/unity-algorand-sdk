@@ -19,14 +19,14 @@ public class KmdClientTest : AlgoApiClientTest
         var response = await kmd.ListWallets();
         if (response.Status != UnityWebRequest.Result.Success)
         {
-            Debug.LogWarning(
+            Assert.Ignore(
                 $"Ignoring test because {nameof(TryListWallets)} response was {response.ResponseCode}: {response.Status}. Message:\n\"{response.Error.Message}\""
             );
             return (false, default);
         }
         if (response.Payload.Error)
         {
-            Debug.LogWarning(
+            Assert.Ignore(
                 $"Ignoring test because of {nameof(TryListWallets)} API err:\n\"{response.Payload.Message}\""
             );
             return (false, default);
@@ -39,14 +39,14 @@ public class KmdClientTest : AlgoApiClientTest
         var response = await kmd.CreateWallet();
         if (response.Status != UnityWebRequest.Result.Success)
         {
-            Debug.LogWarning(
+            Assert.Ignore(
                 $"Ignoring test because {nameof(TryCreateWallet)} response was {response.ResponseCode}: {response.Status}. Message:\n\"{response.Error.Message}\""
             );
             return (false, default);
         }
         if (response.Payload.Error)
         {
-            Debug.LogWarning(
+            Assert.Ignore(
                 $"Ignoring test because of {nameof(TryCreateWallet)} API err:\n\"{response.Payload.Message}\""
             );
             return (false, default);
@@ -54,19 +54,20 @@ public class KmdClientTest : AlgoApiClientTest
         return (true, response.Payload.Wallet);
     }
 
-    async UniTask<bool> TrySetUp()
+    [UnitySetUp]
+    public IEnumerator SetUpTest() => UniTask.ToCoroutine(async () =>
     {
         if (walletHandle.Length > 0)
-            return true;
+            return;
         var (ok, wallets) = await TryListWallets();
         if (!ok)
-            return false;
+            return;
         Wallet wallet;
         if (wallets.Length == 0)
         {
             (ok, wallet) = await TryCreateWallet();
             if (!ok)
-                return false;
+                return;
         }
         else
         {
@@ -74,8 +75,8 @@ public class KmdClientTest : AlgoApiClientTest
         }
         var initWalletHandleResponse = await kmd.InitWalletHandleToken(wallet.Id, WalletPassword);
         walletHandle = initWalletHandleResponse.Payload.WalletHandleToken;
-        return true;
-    }
+        return;
+    });
 
     [UnityTearDown]
     public IEnumerator TearDownTest() => UniTask.ToCoroutine(async () =>
@@ -96,7 +97,5 @@ public class KmdClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GenerateKeyThenDeleteKeyShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        if (!await TrySetUp())
-            Assert.Ignore();
     });
 }
