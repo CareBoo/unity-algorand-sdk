@@ -11,13 +11,13 @@ namespace AlgoSdk
         [AlgoApiField("display_mnemonic", null)]
         public Optional<bool> DisplayMnemonic;
 
-        [AlgoApiField("wallet_password", null)]
-        public FixedString128Bytes WalletPassword;
+        [AlgoApiField("wallet_handle_token", null)]
+        public FixedString128Bytes WalletHandleToken;
 
         public bool Equals(GenerateKeyRequest other)
         {
             return DisplayMnemonic.Equals(other.DisplayMnemonic)
-                && WalletPassword.Equals(other.WalletPassword)
+                && WalletHandleToken.Equals(other.WalletHandleToken)
                 ;
         }
     }
