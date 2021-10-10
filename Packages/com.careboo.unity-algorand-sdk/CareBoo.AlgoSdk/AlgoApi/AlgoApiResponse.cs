@@ -15,7 +15,7 @@ namespace AlgoSdk
 
         public AlgoApiResponse(UnityWebRequest completedRequest)
         {
-            data = completedRequest.downloadHandler.data;
+            data = completedRequest.downloadHandler?.data;
             status = completedRequest.result;
             responseCode = completedRequest.responseCode;
             contentType = completedRequest.ParseContentType();
@@ -26,7 +26,7 @@ namespace AlgoSdk
                 Result.DataProcessingError => new ErrorResponse("Error processing data from server"),
                 _ => default
             };
-            DebugRequest(completedRequest);
+            DebugRequest(completedRequest, contentType);
             completedRequest.Dispose();
         }
 
@@ -42,25 +42,30 @@ namespace AlgoSdk
 
         public bool IsError => !error.Equals(default);
 
-        public string GetText()
-        {
-            return contentType == ContentType.MessagePack
-                ? System.Convert.ToBase64String(data)
-                : Encoding.UTF8.GetString(data, 0, data.Length)
-                ;
-        }
+        public string GetText() => GetText(data, contentType);
 
         [Conditional("UNITY_EDITOR")]
-        static void DebugRequest(UnityWebRequest completedRequest)
+        static void DebugRequest(UnityWebRequest completedRequest, ContentType contentType)
         {
             UnityEngine.Debug.Log(
                 "completed request\n" +
                 $"\turl: {completedRequest.url}\n" +
-                $"\tdownloadHandler.text: {completedRequest.downloadHandler.text}\n" +
+                $"\tuploadedData: {GetText(completedRequest.uploadHandler?.data, contentType)}\n" +
+                $"\tdownloadedData: {GetText(completedRequest.downloadHandler?.data, contentType)}\n" +
                 $"\terror: {completedRequest.error}\n" +
                 $"\tmethod: {completedRequest.method}\n" +
-                $"\tdownloadHandler.error: {completedRequest.downloadHandler.error}"
+                $"\tdownloadHandler.error: {completedRequest.downloadHandler?.error}"
             );
+        }
+
+        static string GetText(byte[] data, ContentType contentType)
+        {
+            if (data == null)
+                return "";
+            return contentType == ContentType.MessagePack
+                ? System.Convert.ToBase64String(data)
+                : Encoding.UTF8.GetString(data, 0, data.Length)
+                ;
         }
     }
 
