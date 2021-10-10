@@ -14,14 +14,22 @@ public class KmdClientKeysTest : KmdClientTestFixture
         return response.Payload.Address;
     }
 
-    protected async UniTask DeleteKey(Address address)
+    protected async UniTask<AlgoApiResponse> DeleteKey(Address address)
     {
-        await kmd.DeleteKey(
+        return await kmd.DeleteKey(
             address: address,
             walletHandleToken: walletHandleToken,
             walletPassword: WalletPassword
         );
     }
+
+    [UnityTest]
+    public IEnumerator DeleteKeyShouldReturnOkay() => UniTask.ToCoroutine(async () =>
+    {
+        var address = await GenerateKey();
+        var response = await DeleteKey(address);
+        AssertResponseSuccess(response);
+    });
 
     [UnityTest]
     public IEnumerator ExportKeyShouldReturnOkay() => UniTask.ToCoroutine(async () =>
