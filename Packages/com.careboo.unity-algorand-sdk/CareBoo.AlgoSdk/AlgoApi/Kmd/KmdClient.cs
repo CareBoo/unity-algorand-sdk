@@ -31,10 +31,10 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<GenerateKeyResponse>> GenerateKey(
             Optional<bool> displayMnemonic = default,
-            FixedString128Bytes walletPassword = default
+            FixedString128Bytes walletHandleToken = default
         )
         {
-            var request = new GenerateKeyRequest { DisplayMnemonic = displayMnemonic, WalletPassword = walletPassword };
+            var request = new GenerateKeyRequest { DisplayMnemonic = displayMnemonic, WalletHandleToken = walletHandleToken };
             return await this
                 .Post("/v1/key")
                 .SetJsonBody(request)
@@ -79,13 +79,13 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<ImportKeyResponse>> ImportKey(
             PrivateKey privateKey = default,
-            FixedString128Bytes walletPassword = default
+            FixedString128Bytes walletHandleToken = default
         )
         {
             var request = new ImportKeyRequest
             {
                 PrivateKey = privateKey,
-                WalletPassword = walletPassword
+                WalletHandleToken = walletHandleToken
             };
             return await this
                 .Post("/v1/key/import")
