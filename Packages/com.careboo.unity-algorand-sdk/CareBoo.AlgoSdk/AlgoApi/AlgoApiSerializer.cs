@@ -10,6 +10,8 @@ namespace AlgoSdk
     {
         public static T Deserialize<T>(byte[] bytes, ContentType contentType)
         {
+            if (bytes == null)
+                return default;
             using var nativeBytes = new NativeArray<byte>(bytes, Allocator.Temp);
             return Deserialize<T>(nativeBytes.AsReadOnly(), contentType);
         }

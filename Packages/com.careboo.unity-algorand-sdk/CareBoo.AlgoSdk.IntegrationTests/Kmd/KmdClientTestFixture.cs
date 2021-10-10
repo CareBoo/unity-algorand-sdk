@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Linq;
 using AlgoSdk;
 using Cysharp.Threading.Tasks;
@@ -57,12 +56,6 @@ public abstract class KmdClientTestFixture : AlgoApiClientTestFixture
                 $"Ignoring test because {nameof(ListWallets)} response was {response.ResponseCode}: {response.Status}. Message:\n\"{response.Error.Message}\""
             );
         }
-        if (response.Payload.Error)
-        {
-            Assert.Ignore(
-                $"Ignoring test because of {nameof(ListWallets)} API err:\n\"{response.Payload.Message}\""
-            );
-        }
         return response.Payload.Wallets;
     }
 
@@ -78,12 +71,6 @@ public abstract class KmdClientTestFixture : AlgoApiClientTestFixture
         {
             Assert.Ignore(
                 $"Ignoring test because {nameof(CreateWallet)} response was {response.ResponseCode}: {response.Status}. Message:\n\"{response.Error.Message}\""
-            );
-        }
-        if (response.Payload.Error)
-        {
-            Assert.Ignore(
-                $"Ignoring test because of {nameof(CreateWallet)} API err:\n\"{response.Payload.Message}\""
             );
         }
         return response.Payload.Wallet;

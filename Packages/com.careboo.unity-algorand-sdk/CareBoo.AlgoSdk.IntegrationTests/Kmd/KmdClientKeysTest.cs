@@ -2,7 +2,6 @@ using System.Collections;
 using AlgoSdk;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
-using UnityEngine.Networking;
 using UnityEngine.TestTools;
 using static UnityEngine.Networking.UnityWebRequest;
 
@@ -24,24 +23,23 @@ public class KmdClientKeysTest : KmdClientTestFixture
 
     protected async UniTask GenerateKey()
     {
-        var response = await kmd.GenerateKey(walletPassword: WalletPassword);
+        var response = await kmd.GenerateKey(displayMnemonic: true, walletPassword: WalletPassword);
         if (response.Status != Result.Success)
             Assert.Ignore(
                 $"Ignoring test because {nameof(GenerateKey)} response was {response.ResponseCode}: {response.Status}. " +
                 $"Message:\n{response.Error.Message}"
             );
-
-
     }
 
     protected async UniTask DeleteGeneratedKey()
     {
-        var deleteKeyRequest = await kmd.DeleteKey(
-            address: generatedKeyAddress,
-            walletHandleToken: walletHandle,
-            walletPassword: WalletPassword
-        );
-        AssertResponseSuccess(deleteKeyRequest);
+        if (!generatedKeyAddress.Equals(default))
+            await kmd.DeleteKey(
+                address: generatedKeyAddress,
+                walletHandleToken: walletHandle,
+                walletPassword: WalletPassword
+            );
+        generatedKeyAddress = default;
     }
 
     [UnityTest]
