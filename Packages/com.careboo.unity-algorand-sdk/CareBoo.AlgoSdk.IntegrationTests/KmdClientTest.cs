@@ -8,11 +8,12 @@ using UnityEngine.Networking;
 using UnityEngine.TestTools;
 
 [TestFixture]
-[ConditionalIgnore(nameof(UnityEngine.Application.isBatchMode), "This test requires kmd service to be running.")]
 public class KmdClientTest : AlgoApiClientTest
 {
     const string WalletPassword = "helloworld123";
     FixedString128Bytes walletHandle;
+
+    protected override AlgoServices RequiresServices => AlgoServices.Kmd;
 
     static async UniTask<(bool, Wallet[])> TryListWallets()
     {
