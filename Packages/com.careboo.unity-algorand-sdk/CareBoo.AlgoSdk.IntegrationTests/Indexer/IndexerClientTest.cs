@@ -6,9 +6,16 @@ using UnityEngine;
 using UnityEngine.TestTools;
 
 [TestFixture]
-public class IndexerClientTest : AlgoApiClientTest
+public class IndexerClientTest : AlgoApiClientTestFixture
 {
     protected override AlgoServices RequiresServices => AlgoServices.Indexer | AlgoServices.Algod;
+
+    protected override async UniTask SetUpAsync()
+    {
+        await CheckServices();
+    }
+
+    protected override UniTask TearDownAsync() => UniTask.CompletedTask;
 
     [UnityTest]
     public IEnumerator GetAccountShouldReturnOkay() => UniTask.ToCoroutine(async () =>

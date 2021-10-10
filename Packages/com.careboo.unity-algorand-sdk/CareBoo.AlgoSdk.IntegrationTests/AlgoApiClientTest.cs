@@ -16,7 +16,8 @@ public enum AlgoServices : byte
     Indexer = 4
 }
 
-public abstract class AlgoApiClientTest
+[TestFixture]
+public abstract class AlgoApiClientTestFixture
 {
     protected const string SandboxToken = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
 
@@ -71,7 +72,14 @@ public abstract class AlgoApiClientTest
     [UnitySetUp]
     public IEnumerator SetUpTest() => UniTask.ToCoroutine(SetUpAsync);
 
-    protected virtual async UniTask SetUpAsync()
+    [UnityTearDown]
+    public IEnumerator TearDownTest() => UniTask.ToCoroutine(TearDownAsync);
+
+    protected abstract UniTask SetUpAsync();
+
+    protected abstract UniTask TearDownAsync();
+
+    protected async UniTask CheckServices()
     {
         if (RequiresServices.HasFlag(AlgoServices.Algod))
             await CheckAlgodService();

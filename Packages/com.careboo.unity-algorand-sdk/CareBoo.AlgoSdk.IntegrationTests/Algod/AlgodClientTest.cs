@@ -7,9 +7,16 @@ using UnityEngine;
 using UnityEngine.TestTools;
 
 [TestFixture]
-public class AlgodClientTest : AlgoApiClientTest
+public class AlgodClientTest : AlgoApiClientTestFixture
 {
     protected override AlgoServices RequiresServices => AlgoServices.Algod;
+
+    protected override async UniTask SetUpAsync()
+    {
+        await CheckServices();
+    }
+
+    protected override UniTask TearDownAsync() => UniTask.CompletedTask;
 
     static async UniTask<Address[]> GetAddresses()
     {

@@ -98,6 +98,8 @@ namespace AlgoSdk
 
         public ErrorResponse Error => error;
 
+        public bool IsError => Raw.IsError;
+
         public AlgoApiResponse Raw => rawResponse;
 
         public byte[] Data => rawResponse.Data;
