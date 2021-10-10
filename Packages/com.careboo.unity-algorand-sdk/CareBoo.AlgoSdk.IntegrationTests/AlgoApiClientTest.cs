@@ -1,10 +1,20 @@
 using System.Text;
+using System.Collections;
 using AlgoSdk;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.TestTools;
+
+[System.Flags]
+public enum AlgoServices : byte
+{
+    Algod,
+    Kmd,
+    Indexer
+}
 
 public abstract class AlgoApiClientTest
 {
@@ -54,5 +64,49 @@ public abstract class AlgoApiClientTest
         AssertResponseSuccess(txidResponse);
         Debug.Log(txidResponse.GetText());
         return txidResponse.Payload;
+    }
+
+    abstract protected AlgoServices RequiresServices { get; }
+
+    [UnitySetUp]
+    public IEnumerator CheckServices() => UniTask.ToCoroutine(async () =>
+    {
+        if (RequiresServices.HasFlag(AlgoServices.Algod))
+            await CheckAlgodService();
+        if (RequiresServices.HasFlag(AlgoServices.Indexer))
+            await CheckIndexerService();
+        if (RequiresServices.HasFlag(AlgoServices.Kmd))
+            await CheckKmdService();
+    });
+
+    async static UniTask CheckAlgodService()
+    {
+        var healthResponse = await algod.GetHealth();
+        if (healthResponse.Status != UnityWebRequest.Result.Success)
+            Assert.Ignore($"Ignoring test because of {healthResponse.Status}: {healthResponse.ResponseCode} when trying to check health of algod service");
+        var expected = "null\n";
+        var actual = healthResponse.GetText();
+        if (actual != expected)
+            Assert.Ignore($"Ignoring test because algod is unhealthy:\n\"{actual}\"");
+    }
+
+    async static UniTask CheckIndexerService()
+    {
+        var healthResponse = await indexer.GetHealth();
+        if (healthResponse.Status != UnityWebRequest.Result.Success)
+            Assert.Ignore($"Ignoring test because of {healthResponse.Status}: {healthResponse.ResponseCode} when trying to check health of indexer service");
+        var health = healthResponse.Payload;
+        if (health.DatabaseAvailable)
+            return;
+
+        using var healthJson = AlgoApiSerializer.SerializeJson(health, Allocator.Persistent);
+        Assert.Ignore($"Ignoring test because indexer is unhealthy:\n\"{healthJson}\"");
+    }
+
+    async static UniTask CheckKmdService()
+    {
+        var healthResponse = await kmd.Versions();
+        if (healthResponse.Status != UnityWebRequest.Result.Success)
+            Assert.Ignore($"Ignoring test because of {healthResponse.Status}: {healthResponse.ResponseCode} when trying to check health of kmd service");
     }
 }

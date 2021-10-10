@@ -51,7 +51,6 @@ jobs:
           artifactsPath: TestResults
           customParameters: -batchMode -burst-disable-compilation -enableCodeCoverage -coverageOptions generateAdditionalMetrics;enableCyclomaticComplexity;assemblyFilters:${{ steps.assemblyFilters.outputs.result }}
           githubToken: ${{ secrets.GITHUB_TOKEN }}
-          testMode: EditMode
           useNetworkHost: true
       - name: Upload Test Results Artifacts
         uses: actions/upload-artifact@v1

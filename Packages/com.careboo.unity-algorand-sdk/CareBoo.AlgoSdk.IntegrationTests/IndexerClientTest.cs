@@ -5,9 +5,11 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-[ConditionalIgnore(nameof(UnityEngine.Application.isBatchMode), "This test requires indexer service to be running.")]
+[TestFixture]
 public class IndexerClientTest : AlgoApiClientTest
 {
+    protected override AlgoServices RequiresServices => AlgoServices.Indexer | AlgoServices.Algod;
+
     [UnityTest]
     public IEnumerator GetAccountShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
