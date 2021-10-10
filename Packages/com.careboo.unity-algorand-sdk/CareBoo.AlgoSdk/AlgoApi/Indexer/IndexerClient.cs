@@ -8,12 +8,19 @@ namespace AlgoSdk
     {
         readonly string address;
 
-        public IndexerClient(string address)
+        readonly string token;
+
+        public IndexerClient(string address, string token)
         {
             this.address = address.TrimEnd('/');
+            this.token = token;
         }
 
         public string Address => address;
+
+        public string Token => token;
+
+        public string TokenHeader => "X-Indexer-API-Token";
 
         public async UniTask<AlgoApiResponse<HealthCheck>> GetHealth()
         {
@@ -293,11 +300,6 @@ namespace AlgoSdk
         public async UniTask<AlgoApiResponse<TransactionResponse>> GetTransaction(FixedString64Bytes txid)
         {
             return await this.GetAsync($"/v2/transactions/{txid}");
-        }
-
-        async UniTask<AlgoApiResponse> GetAsync(string endpoint)
-        {
-            return await AlgoApiRequest.Get(this.GetUrl(endpoint)).Send();
         }
     }
 }

@@ -31,6 +31,13 @@ namespace AlgoSdk
         {
             lookup = new Dictionary<Type, object>();
             AddFormatter<ulong>(new UInt64Formatter());
+            AddFormatter<uint>(new UInt32Formatter());
+            AddFormatter<ushort>(new UInt16Formatter());
+            AddFormatter<byte>(new UInt8Formatter());
+            AddFormatter<long>(new Int64Formatter());
+            AddFormatter<int>(new Int32Formatter());
+            AddFormatter<short>(new Int16Formatter());
+            AddFormatter<sbyte>(new Int8Formatter());
             AddFormatter<bool>(new BoolFormatter());
             AddFormatter<string>(new StringFormatter());
             AddFormatter<DateTime>(new DateTimeFormatter());
