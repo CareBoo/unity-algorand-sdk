@@ -9,6 +9,7 @@ namespace AlgoSdk.Json
         ParseError,
         IncorrectFormat,
         IncorrectType,
+        Overflow,
     }
 
     public class JsonReadException : Exception

@@ -1,4 +1,3 @@
-using System;
 using Unity.Collections;
 
 namespace AlgoSdk.Json
@@ -34,90 +33,43 @@ namespace AlgoSdk.Json
             return text.Read(ref offset).ToJsonToken();
         }
 
-        public JsonReadError ReadString<T>(ref T value)
-            where T : struct, INativeList<byte>, IUTF8Bytes
-        {
-            value.Clear();
-            if (Peek() != JsonToken.String)
-                return JsonReadError.IncorrectType;
-            text.Read(ref offset);
-            while (offset < text.Length)
-            {
-                var r = text.Read(ref offset);
-                var c = r.ToChar();
-                if (c == '"')
-                    break;
-                if (c == '\\')
-                {
-                    if (offset >= text.Length)
-                        return JsonReadError.IncorrectFormat;
-                    r = text.Read(ref offset);
-                }
-                value.Append(r);
-            }
-            return JsonReadError.None;
-        }
-
-        public JsonReadError ReadBool(out bool value)
+        public JsonReadError Skip()
         {
             SkipWhitespace();
-            value = default;
-
-            var resetOffset = offset;
-            var c = text.Read(ref offset).ToChar();
-            if (c == 't' && text.Found(ref offset, 'r', 'u', 'e'))
+            var startToken = Peek();
+            switch (startToken)
             {
-                value = true;
-                return JsonReadError.None;
+                case JsonToken.ArrayBegin:
+                    return SkipArray();
+                case JsonToken.Bool:
+                    return SkipBool();
+                case JsonToken.Null:
+                    return SkipNull();
+                case JsonToken.Number:
+                    return SkipNumber();
+                case JsonToken.ObjectBegin:
+                    return SkipObject();
+                case JsonToken.String:
+                    return SkipString();
+                default:
+                    return JsonReadError.IncorrectFormat;
             }
-            if (c == 'f' && text.Found(ref offset, 'a', 'l', 's', 'e'))
-            {
-                return JsonReadError.None;
-            }
-            offset = resetOffset;
-            return JsonReadError.ParseError;
-        }
-
-        public JsonReadError ReadNull()
-        {
-            SkipWhitespace();
-            var resetOffset = offset;
-            if (text.Found(ref offset, 'n', 'u', 'l', 'l'))
-            {
-                return JsonReadError.None;
-            }
-            offset = resetOffset;
-            return JsonReadError.ParseError;
         }
 
         public JsonReadError ReadRaw<T>(ref T value)
             where T : struct, INativeList<byte>, IUTF8Bytes
         {
             value.Clear();
-            var startToken = Peek();
-            char c = default;
-            while (offset < text.Length && !EndValue(startToken, c))
+            var startOffset = offset;
+            var skipErr = Skip();
+            if (skipErr != JsonReadError.None)
             {
-                var r = text.Read(ref offset);
-                c = r.ToChar();
-                if (c == '\\')
-                {
-                    if (offset >= text.Length)
-                        return JsonReadError.IncorrectFormat;
-                    r = text.Read(ref offset);
-                }
-                value.Append(r);
+                offset = startOffset;
+                return skipErr;
             }
+            while (startOffset < offset)
+                value.Append(text.Read(ref startOffset));
             return JsonReadError.None;
-        }
-
-        public bool TryReadNull()
-        {
-            var token = Peek();
-            if (token != JsonToken.Null)
-                return false;
-            ReadNull();
-            return true;
         }
 
         public bool TryRead(JsonToken token)
@@ -132,22 +84,10 @@ namespace AlgoSdk.Json
         {
             while (offset < text.Length)
             {
-                if (text.Peek(offset).IsWhiteSpaceOrSeparator())
-                    offset++;
-                else
+                if (!text.Peek(offset).IsWhiteSpaceOrSeparator())
                     break;
+                offset++;
             }
-        }
-
-        bool EndValue(JsonToken startToken, char c)
-        {
-            return startToken switch
-            {
-                JsonToken.ArrayBegin => c == ']',
-                JsonToken.ObjectBegin => c == '}',
-                JsonToken.String => c == '"',
-                _ => c.IsWhiteSpaceOrSeparator()
-            };
         }
     }
 }
