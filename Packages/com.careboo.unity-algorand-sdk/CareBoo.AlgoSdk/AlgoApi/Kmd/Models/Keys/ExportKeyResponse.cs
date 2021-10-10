@@ -1,4 +1,5 @@
 using System;
+using AlgoSdk.Crypto;
 
 namespace AlgoSdk
 {
