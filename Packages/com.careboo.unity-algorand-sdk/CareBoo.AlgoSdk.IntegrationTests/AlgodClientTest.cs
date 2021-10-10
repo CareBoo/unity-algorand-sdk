@@ -7,16 +7,10 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.TestTools;
 
-
-[ConditionalIgnore(nameof(UnityEngine.Application.isBatchMode), "This test requires algod service to be running.")]
+[TestFixture]
 public class AlgodClientTest : AlgoApiClientTest
 {
-    static async UniTask<bool> AlgodIsHealthy()
-    {
-        var expected = "null\n";
-        var response = await algod.GetHealth();
-        return expected == response.GetText();
-    }
+    protected override AlgoServices RequiresServices => AlgoServices.Algod;
 
     static async UniTask<Address[]> GetAddresses()
     {
@@ -32,8 +26,6 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator PlayException() => UniTask.ToCoroutine(async () =>
     {
-        if (!await AlgodIsHealthy())
-            return;
         var response = await algod.GetAsync("/does_not_exist");
         Assert.AreEqual(UnityWebRequest.Result.ProtocolError, response.Status);
         Debug.Log(response.GetText());
@@ -42,8 +34,6 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetGenesisInformationShouldReturnOk() => UniTask.ToCoroutine(async () =>
     {
-        if (!await AlgodIsHealthy())
-            return;
         var response = await algod.GetGenesisInformation();
         Debug.Log(response.GetText());
         AssertResponseSuccess(response);
@@ -52,8 +42,6 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetMetricsShouldReturnOk() => UniTask.ToCoroutine(async () =>
     {
-        if (!await AlgodIsHealthy())
-            return;
         var response = await algod.GetMetrics();
         Debug.Log(response.GetText());
         AssertResponseSuccess(response);
@@ -62,8 +50,6 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetSwaggerSpecShouldReturnOk() => UniTask.ToCoroutine(async () =>
     {
-        if (!await AlgodIsHealthy())
-            return;
         var response = await algod.GetSwaggerSpec();
         Debug.Log(response.GetText());
         AssertResponseSuccess(response);
@@ -72,8 +58,6 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetAccountInformationShouldReturnOk() => UniTask.ToCoroutine(async () =>
     {
-        if (!await AlgodIsHealthy())
-            return;
         var addresses = await GetAddresses();
         foreach (var expected in addresses)
         {
@@ -88,8 +72,6 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetPendingTransactionsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        if (!await AlgodIsHealthy())
-            return;
         await MakePaymentTransaction(100_000);
         var response = await algod.GetPendingTransactions();
         Debug.Log(response.Raw.GetText());
@@ -99,8 +81,6 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetBlockShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        if (!await AlgodIsHealthy())
-            return;
         TransactionIdResponse txId = await MakePaymentTransaction(100000);
         var pendingTxn = new PendingTransaction();
         while (pendingTxn.ConfirmedRound <= 0)
@@ -119,8 +99,6 @@ public class AlgodClientTest : AlgoApiClientTest
     [Ignore("Register Participation keys isn't supported yet in the algod sandbox... :(")]
     public IEnumerator RegisterParticipationKeysShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        if (!await AlgodIsHealthy())
-            return;
         var addresses = await GetAddresses();
         var response = await algod.RegisterParticipationKeys(addresses[0]);
         Debug.Log(response.Raw.GetText());
@@ -130,8 +108,6 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetCurrentStatusShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        if (!await AlgodIsHealthy())
-            return;
         var response = await algod.GetCurrentStatus();
         Debug.Log(response.Raw.GetText());
         AssertResponseSuccess(response);
@@ -140,8 +116,6 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetStatusAfterWaitingForRoundShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        if (!await AlgodIsHealthy())
-            return;
         var response = await algod.GetStatusAfterWaitingForRound(0);
         Debug.Log(response.Raw.GetText());
         AssertResponseSuccess(response);
@@ -150,8 +124,6 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetVersionsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        if (!await AlgodIsHealthy())
-            return;
         var response = await algod.GetVersions();
         Debug.Log(response.Raw.GetText());
         AssertResponseSuccess(response);
@@ -160,8 +132,6 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetTransactionParamsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        if (!await AlgodIsHealthy())
-            return;
         var response = await algod.GetTransactionParams();
         Debug.Log(response.Raw.GetText());
         AssertResponseSuccess(response);
@@ -170,8 +140,6 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator GetMerkleProofShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        if (!await AlgodIsHealthy())
-            return;
         TransactionIdResponse txId = await MakePaymentTransaction(100000);
         var pendingTxn = new PendingTransaction();
         while (pendingTxn.ConfirmedRound <= 0)
@@ -189,8 +157,6 @@ public class AlgodClientTest : AlgoApiClientTest
     [UnityTest]
     public IEnumerator TransferFundsShouldReturnTransactionId() => UniTask.ToCoroutine(async () =>
     {
-        if (!await AlgodIsHealthy())
-            return;
         var txId = await MakePaymentTransaction(100000);
         var pendingResponse = await algod.GetPendingTransaction(txId);
         AssertResponseSuccess(pendingResponse);
