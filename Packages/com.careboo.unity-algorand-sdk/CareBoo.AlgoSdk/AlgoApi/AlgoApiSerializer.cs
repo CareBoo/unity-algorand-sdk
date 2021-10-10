@@ -2,18 +2,20 @@ using System;
 using AlgoSdk.Json;
 using AlgoSdk.MessagePack;
 using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 
 namespace AlgoSdk
 {
     public static class AlgoApiSerializer
     {
-        public static T Deserialize<T>(NativeArray<byte>.ReadOnly bytes, AlgoApiFormat contentType)
+        public static T Deserialize<T>(NativeArray<byte>.ReadOnly bytes, ContentType contentType)
         {
             return contentType switch
             {
-                AlgoApiFormat.Json => DeserializeJson<T>(bytes),
-                AlgoApiFormat.MessagePack => DeserializeMessagePack<T>(bytes),
-                _ => throw new NotSupportedException($"ContentType {contentType} is not supported")
+                ContentType.Json => DeserializeJson<T>(bytes),
+                ContentType.MessagePack => DeserializeMessagePack<T>(bytes),
+                _ when bytes.Length == 0 => default,
+                _ => throw new NotSupportedException($"Cannot decode {bytes.Length} bytes of content type {contentType}")
             };
         }
 
@@ -22,8 +24,11 @@ namespace AlgoSdk
             var text = new NativeText(bytes.Length, Allocator.Temp);
             try
             {
-                for (var i = 0; i < bytes.Length; i++)
-                    text.AppendRawByte(bytes[i]);
+                unsafe
+                {
+                    UnsafeUtility.MemCpy(text.GetUnsafePtr(), bytes.GetUnsafeReadOnlyPtr(), bytes.Length);
+                    text.Length = bytes.Length;
+                }
                 return DeserializeJson<T>(text);
             }
             finally

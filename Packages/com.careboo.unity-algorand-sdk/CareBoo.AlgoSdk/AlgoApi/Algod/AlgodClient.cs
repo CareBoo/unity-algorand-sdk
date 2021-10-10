@@ -23,77 +23,107 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse> GetGenesisInformation()
         {
-            return await this.GetAsync("/genesis");
+            return await this
+                .Get("/genesis")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse> GetHealth()
         {
-            return await this.GetAsync("/health");
+            return await this
+                .Get("/health")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse> GetMetrics()
         {
-            return await this.GetAsync("/metrics");
+            return await this
+                .Get("/metrics")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse> GetSwaggerSpec()
         {
-            return await this.GetAsync("/swagger.json");
+            return await this
+                .Get("/swagger.json")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<Account>> GetAccountInformation(Address accountAddress)
         {
-            return await this.GetAsync($"/v2/accounts/{accountAddress}");
+            return await this
+                .Get($"/v2/accounts/{accountAddress}")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<PendingTransactions>> GetPendingTransactions(ulong max = 0)
         {
-            return await this.GetAsync($"/v2/transactions/pending?max={max}&format=msgpack");
+            return await this
+                .Get($"/v2/transactions/pending?max={max}&format=msgpack")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<PendingTransactions>> GetPendingTransactions(Address accountAddress, ulong max = 0)
         {
-            return await this.GetAsync($"/v2/accounts/{accountAddress}/transactions/pending?max={max}");
+            return await this
+                .Get($"/v2/accounts/{accountAddress}/transactions/pending?max={max}")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<PendingTransaction>> GetPendingTransaction(FixedString64Bytes txid)
         {
-            return await this.GetAsync($"/v2/transactions/pending/{txid}?format=msgpack");
+            return await this
+                .Get($"/v2/transactions/pending/{txid}?format=msgpack")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<Application>> GetApplication(ulong applicationId)
         {
-            return await this.GetAsync($"/v2/applications/{applicationId}");
+            return await this
+                .Get($"/v2/applications/{applicationId}")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<Asset>> GetAsset(ulong assetId)
         {
-            return await this.GetAsync($"/v2/assets/{assetId}");
+            return await this
+                .Get($"/v2/assets/{assetId}")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<BlockResponse>> GetBlock(ulong round)
         {
-            return await this.GetAsync($"/v2/blocks/{round}?format=msgpack");
+            return await this
+                .Get($"/v2/blocks/{round}?format=msgpack")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<MerkleProof>> GetMerkleProof(ulong round, FixedString64Bytes txid)
         {
-            return await this.GetAsync($"/v2/blocks/{round}/transactions/{txid}/proof");
+            return await this
+                .Get($"/v2/blocks/{round}/transactions/{txid}/proof")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<CatchupMessage>> StartCatchup(string catchpoint)
         {
-            return await this.PostAsync($"/v2/catchup/{catchpoint}");
+            return await this
+                .Post($"/v2/catchup/{catchpoint}")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<CatchupMessage>> AbortCatchup(string catchpoint)
         {
-            return await this.DeleteAsync($"/v2/catchup/{catchpoint}");
+            return await this
+                .Delete($"/v2/catchup/{catchpoint}")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<LedgerSupply>> GetLedgerSupply()
         {
-            return await this.GetAsync("/v2/ledger/supply");
+            return await this
+                .Get("/v2/ledger/supply")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<TransactionIdResponse>> RegisterParticipationKeys(
@@ -103,90 +133,82 @@ namespace AlgoSdk
             Optional<bool> noWait = default,
             Optional<bool> roundLastValid = default)
         {
-            var endpoint = new NativeText("/v2/register-participation-keys/", Allocator.Temp);
-            endpoint.Append(accountAddress.ToFixedString());
-            var queryParams = new NativeList<FixedString64Bytes>(4, Allocator.Temp);
-            if (fee != 1000)
-            {
-                var feeParam = new FixedString64Bytes("fee=");
-                feeParam.Append(fee);
-                queryParams.AddNoResize(feeParam);
-            }
-            if (keyDilution.HasValue)
-            {
-                var keyDilutionParam = new FixedString64Bytes("key-dilution=");
-                keyDilutionParam.Append(keyDilution.Value);
-                queryParams.AddNoResize(keyDilutionParam);
-            }
-            if (noWait.HasValue)
-            {
-                var noWaitParam = new FixedString64Bytes("no-wait=");
-                noWaitParam.Append(noWait.Value);
-                queryParams.AddNoResize(noWaitParam);
-            }
-            if (roundLastValid.HasValue)
-            {
-                var roundLastValidParam = new FixedString64Bytes("round-last-valid=");
-                roundLastValidParam.Append(roundLastValid.Value);
-                queryParams.AddNoResize(roundLastValidParam);
-            }
-            if (queryParams.Length > 0)
-            {
-                for (var i = 0; i < queryParams.Length; i++)
-                {
-                    endpoint.Append(i == 0 ? "?" : "&");
-                    endpoint.Append(queryParams[i]);
-                }
-            }
-            var endpointString = endpoint.ToString();
-            endpoint.Dispose();
-            queryParams.Dispose();
-            return await this.PostAsync(endpointString);
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
+                .Add("fee", fee, (ulong)1000)
+                .Add("key-dilution", keyDilution)
+                .Add("no-wait", noWait)
+                .Add("round-last-valid", roundLastValid)
+                ;
+            return await this
+                .Post($"/v2/register-participation-keys/{accountAddress}{queryBuilder}")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse> ShutDown(Optional<ulong> timeout = default)
         {
-            return await this.PostAsync("/v2/shutdown");
+            return await this
+                .Post("/v2/shutdown")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<Status>> GetCurrentStatus()
         {
-            return await this.GetAsync("/v2/status");
+            return await this
+                .Get("/v2/status")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<Status>> GetStatusAfterWaitingForRound(ulong round)
         {
-            return await this.GetAsync($"/v2/status/wait-for-block-after/{round}");
+            return await this
+                .Get($"/v2/status/wait-for-block-after/{round}")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<TealCompilationResult>> TealCompile(string source)
         {
-            return await this.PostAsync("/v2/teal/compile", source);
+            return await this
+                .Post("/v2/teal/compile")
+                .SetPlainTextBody(source)
+                .Send();
         }
 
-        public async UniTask<AlgoApiResponse<DryrunResults>> TealDryrun(Optional<DryrunRequest> request = default)
+        public async UniTask<AlgoApiResponse<DryrunResults>> TealDryrun(Optional<DryrunRequest> dryrunRequest = default)
         {
             const string endpoint = "/v2/teal/dryrun";
-            using var data = AlgoApiSerializer.SerializeMessagePack(request.Value, Allocator.Persistent);
-            return request.HasValue
-                ? await this.PostAsync(endpoint, data.AsArray().AsReadOnly())
-                : await this.PostAsync(endpoint);
+            using var data = AlgoApiSerializer.SerializeMessagePack(dryrunRequest.Value, Allocator.Persistent);
+            return dryrunRequest.HasValue
+                ? await this
+                    .Post(endpoint)
+                    .SetMessagePackBody(data.AsArray().AsReadOnly())
+                    .Send()
+                : await this
+                    .Post(endpoint)
+                    .Send()
+                ;
         }
 
         public async UniTask<AlgoApiResponse<TransactionIdResponse>> SendTransaction(SignedTransaction rawTxn)
         {
             using var data = AlgoApiSerializer.SerializeMessagePack(rawTxn, Allocator.Persistent);
-            return await this.PostAsync("/v2/transactions", data.AsArray().AsReadOnly());
+            return await this
+                .Post("/v2/transactions")
+                .SetMessagePackBody(data.AsArray().AsReadOnly())
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<TransactionParams>> GetTransactionParams()
         {
-            return await this.GetAsync("/v2/transactions/params");
+            return await this
+                .Get("/v2/transactions/params")
+                .Send();
         }
 
         public async UniTask<AlgoApiResponse<Version>> GetVersions()
         {
-            return await this.GetAsync("/versions");
+            return await this
+                .Get("/versions")
+                .Send();
         }
     }
 }
