@@ -1,6 +1,8 @@
 using System.Collections;
+using System.Linq;
 using AlgoSdk;
 using Cysharp.Threading.Tasks;
+using NUnit.Framework;
 using UnityEngine.TestTools;
 
 public class KmdClientKeysTest : KmdClientTestFixture
@@ -40,5 +42,16 @@ public class KmdClientKeysTest : KmdClientTestFixture
         AssertResponseSuccess(response);
         var address = response.Payload.Address;
         await DeleteKey(address);
+    });
+
+    [UnityTest]
+    public IEnumerator ListKeysShouldReturnOkay() => UniTask.ToCoroutine(async () =>
+    {
+        var address = await GenerateKey();
+        var response = await kmd.ListKeys(walletHandleToken);
+        await DeleteKey(address);
+        AssertResponseSuccess(response);
+        var addresses = response.Payload.Addresses;
+        Assert.IsTrue(addresses.Any(x => x.Equals(address)));
     });
 }
