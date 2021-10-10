@@ -11,7 +11,7 @@ namespace AlgoSdk
             Optional<bool> displayMnemonic = default,
             FixedString128Bytes walletPassword = default
         );
-        UniTask<AlgoApiResponse<DeleteKeyResponse>> DeleteKey(
+        UniTask<AlgoApiResponse> DeleteKey(
             Address address = default,
             FixedString128Bytes walletHandleToken = default,
             FixedString128Bytes walletPassword = default
@@ -32,7 +32,7 @@ namespace AlgoSdk
             FixedString128Bytes walletHandleToken = default,
             FixedString128Bytes walletPassword = default
         );
-        UniTask<AlgoApiResponse<DeleteMultiSigResponse>> DeleteMultiSig(
+        UniTask<AlgoApiResponse> DeleteMultiSig(
             Address address = default,
             FixedString128Bytes walletHandleToken = default,
             FixedString128Bytes walletPassword = default
@@ -91,7 +91,7 @@ namespace AlgoSdk
             FixedString128Bytes walletId = default,
             FixedString128Bytes walletPassword = default
         );
-        UniTask<AlgoApiResponse<ReleaseWalletHandleTokenResponse>> ReleaseWalletHandleToken(
+        UniTask<AlgoApiResponse> ReleaseWalletHandleToken(
             FixedString128Bytes walletHandleToken = default
         );
         UniTask<AlgoApiResponse<RenameWalletResponse>> RenameWallet(

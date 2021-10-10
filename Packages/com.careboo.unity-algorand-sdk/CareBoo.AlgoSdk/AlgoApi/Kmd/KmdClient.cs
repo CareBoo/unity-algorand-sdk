@@ -41,7 +41,7 @@ namespace AlgoSdk
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<DeleteKeyResponse>> DeleteKey(
+        public async UniTask<AlgoApiResponse> DeleteKey(
             Address address = default,
             FixedString128Bytes walletHandleToken = default,
             FixedString128Bytes walletPassword = default
@@ -120,7 +120,7 @@ namespace AlgoSdk
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<DeleteMultiSigResponse>> DeleteMultiSig(
+        public async UniTask<AlgoApiResponse> DeleteMultiSig(
             Address address = default,
             FixedString128Bytes walletHandleToken = default,
             FixedString128Bytes walletPassword = default
@@ -320,7 +320,7 @@ namespace AlgoSdk
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<ReleaseWalletHandleTokenResponse>> ReleaseWalletHandleToken(
+        public async UniTask<AlgoApiResponse> ReleaseWalletHandleToken(
             FixedString128Bytes walletHandleToken = default
         )
         {
