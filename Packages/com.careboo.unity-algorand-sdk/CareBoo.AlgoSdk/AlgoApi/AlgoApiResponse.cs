@@ -1,6 +1,5 @@
+using System.Diagnostics;
 using System.Text;
-using Unity.Collections;
-using UnityEngine;
 using UnityEngine.Networking;
 using static UnityEngine.Networking.UnityWebRequest;
 
@@ -8,29 +7,26 @@ namespace AlgoSdk
 {
     public struct AlgoApiResponse
     {
-        byte[] data;
-        UnityWebRequest.Result status;
-        long responseCode;
-        ContentType contentType;
+        readonly byte[] data;
+        readonly Result status;
+        readonly long responseCode;
+        readonly ContentType contentType;
+        ErrorResponse error;
 
-        public AlgoApiResponse(ref UnityWebRequest completedRequest)
+        public AlgoApiResponse(UnityWebRequest completedRequest)
         {
             data = completedRequest.downloadHandler.data;
             status = completedRequest.result;
             responseCode = completedRequest.responseCode;
-            var contentTypeHeader = completedRequest.GetResponseHeader("Content-Type");
-            contentTypeHeader = PruneParametersFromContentType(contentTypeHeader);
-            contentType = contentTypeHeader.ToContentType();
-#if UNITY_EDITOR
-            Debug.Log(
-                "completed request\n" +
-                $"\turl: {completedRequest.url}\n" +
-                $"\tdownloadHandler.text: {completedRequest.downloadHandler.text}\n" +
-                $"\terror: {completedRequest.error}\n" +
-                $"\tmethod: {completedRequest.method}\n" +
-                $"\tdownloadHandler.error: {completedRequest.downloadHandler.error}"
-            );
-#endif
+            contentType = completedRequest.ParseContentType();
+            error = status switch
+            {
+                Result.ProtocolError => AlgoApiSerializer.Deserialize<ErrorResponse>(data, contentType),
+                Result.ConnectionError => new ErrorResponse("Could not connect"),
+                Result.DataProcessingError => new ErrorResponse("Error processing data from server"),
+                _ => default
+            };
+            DebugRequest(completedRequest);
             completedRequest.Dispose();
         }
 
@@ -42,12 +38,11 @@ namespace AlgoSdk
 
         public ContentType ContentType => contentType;
 
-        public string GetText()
-        {
-            return GetText(data, contentType);
-        }
+        public ErrorResponse Error => error;
 
-        private static string GetText(byte[] data, ContentType contentType)
+        public bool IsError => !error.Equals(default);
+
+        public string GetText()
         {
             return contentType == ContentType.MessagePack
                 ? System.Convert.ToBase64String(data)
@@ -55,39 +50,48 @@ namespace AlgoSdk
                 ;
         }
 
-        private static string PruneParametersFromContentType(string fullType)
+        [Conditional("UNITY_EDITOR")]
+        static void DebugRequest(UnityWebRequest completedRequest)
         {
-            if (fullType == null) return fullType;
-            for (var i = 0; i < fullType.Length; i++)
-                if (fullType[i] == ';')
-                    return fullType.Substring(0, i);
-            return fullType;
+            UnityEngine.Debug.Log(
+                "completed request\n" +
+                $"\turl: {completedRequest.url}\n" +
+                $"\tdownloadHandler.text: {completedRequest.downloadHandler.text}\n" +
+                $"\terror: {completedRequest.error}\n" +
+                $"\tmethod: {completedRequest.method}\n" +
+                $"\tdownloadHandler.error: {completedRequest.downloadHandler.error}"
+            );
         }
     }
 
-    public struct AlgoApiResponse<T>
+    public readonly struct AlgoApiResponse<T>
     {
-        AlgoApiResponse rawResponse;
-        ErrorResponse error;
-        T payload;
+        readonly AlgoApiResponse rawResponse;
+        readonly ErrorResponse error;
+        readonly T payload;
 
         public AlgoApiResponse(AlgoApiResponse response)
         {
             this.rawResponse = response;
-            byte[] rawBytes = response.Data;
-            using var bytes = new NativeArray<byte>(rawBytes, Allocator.Temp);
-            error = response.Status switch
-            {
-                Result.ProtocolError => AlgoApiSerializer.Deserialize<ErrorResponse>(bytes.AsReadOnly(), response.ContentType),
-                Result.ConnectionError => new ErrorResponse("Could not connect"),
-                Result.DataProcessingError => new ErrorResponse("Error processing data from server"),
-                _ => default
-            };
-            payload = response.Status switch
-            {
-                Result.Success => AlgoApiSerializer.Deserialize<T>(bytes.AsReadOnly(), response.ContentType),
-                _ => default
-            };
+            error = response.Error;
+            payload = response.IsError
+                ? default
+                : AlgoApiSerializer.Deserialize<T>(response.Data, response.ContentType)
+                ;
+        }
+
+        public AlgoApiResponse(AlgoApiResponse response, ErrorResponse error)
+        {
+            this.rawResponse = response;
+            this.error = error;
+            this.payload = default;
+        }
+
+        public AlgoApiResponse(AlgoApiResponse response, T payload)
+        {
+            this.rawResponse = response;
+            this.error = default;
+            this.payload = payload;
         }
 
         public T Payload => payload;

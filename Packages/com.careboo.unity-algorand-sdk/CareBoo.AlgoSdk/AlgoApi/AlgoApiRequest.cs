@@ -167,7 +167,7 @@ namespace AlgoSdk
                 {
                     completedRequest = webErr.UnityWebRequest;
                 }
-                return new AlgoApiResponse(ref completedRequest);
+                return new AlgoApiResponse(completedRequest);
             }
 
             public void OnCompleted(Action continuation)
