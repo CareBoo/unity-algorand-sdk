@@ -124,6 +124,11 @@ namespace AlgoSdk
             return result;
         }
 
+        public Ed25519.PublicKey ToPublicKey()
+        {
+            return publicKey;
+        }
+
         public override string ToString()
         {
             return ToFixedString().ToString();
@@ -146,6 +151,12 @@ namespace AlgoSdk
             return FromString(in s);
         }
 
+        public static Address FromPublicKey(Ed25519.PublicKey publicKey)
+        {
+            return new Address() { publicKey = publicKey }
+                .GenerateCheckSum();
+        }
+
         public static implicit operator Address(string s)
         {
             return FromString(s);
@@ -153,14 +164,12 @@ namespace AlgoSdk
 
         public static implicit operator Address(Ed25519.PublicKey publicKey)
         {
-            var address = new Address() { publicKey = publicKey };
-            address.GenerateCheckSum();
-            return address;
+            return Address.FromPublicKey(publicKey);
         }
 
         public static implicit operator Ed25519.PublicKey(Address address)
         {
-            return address.publicKey;
+            return address.ToPublicKey();
         }
 
         public static bool operator ==(in Address a1, in Address a2)
