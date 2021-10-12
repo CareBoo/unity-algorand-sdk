@@ -7,7 +7,7 @@ namespace AlgoSdk
         : IEquatable<SignTransactionResponse>
     {
         [AlgoApiField("signed_transaction", null)]
-        public Sig SignedTransaction;
+        public byte[] SignedTransaction;
 
         [AlgoApiField("error", null)]
         public Optional<bool> Error;

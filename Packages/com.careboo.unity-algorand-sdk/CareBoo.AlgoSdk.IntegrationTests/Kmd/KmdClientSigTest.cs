@@ -93,4 +93,17 @@ public class KmdClientSigTest : KmdClientTestFixture
         );
         AssertResponseSuccess(response);
     });
+
+
+    [UnityTest]
+    public IEnumerator SignTransactionShouldReturnOkay() => UniTask.ToCoroutine(async () =>
+    {
+        var txn = AlgoApiSerializer.SerializeMessagePack(GetTransaction());
+        var generateKeyResponse = await kmd.GenerateKey(walletHandleToken: walletHandleToken);
+        AssertResponseSuccess(generateKeyResponse);
+        Ed25519.PublicKey pk = generateKeyResponse.Payload.Address;
+        var signResponse = await kmd.SignTransaction(pk, txn, walletHandleToken, WalletPassword);
+        AssertResponseSuccess(signResponse);
+        await kmd.DeleteKey(pk, walletHandleToken, WalletPassword);
+    });
 }
