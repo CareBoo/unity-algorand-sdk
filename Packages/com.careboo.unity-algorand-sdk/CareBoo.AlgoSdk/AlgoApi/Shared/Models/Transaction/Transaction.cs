@@ -52,12 +52,10 @@ namespace AlgoSdk
                 ;
         }
 
-        public Transaction Sign(Ed25519.SecretKeyHandle secretKey)
+        public Sig Sign(Ed25519.SecretKeyHandle secretKey)
         {
-            Signature = default;
             using var message = ToSignatureMessage(Allocator.Temp);
-            Signature.Sig = secretKey.Sign(message);
-            return this;
+            return secretKey.Sign(message);
         }
 
         public NativeByteArray ToSignatureMessage(Allocator allocator)

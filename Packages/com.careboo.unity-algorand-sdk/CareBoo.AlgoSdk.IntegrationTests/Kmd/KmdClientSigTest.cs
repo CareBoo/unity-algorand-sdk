@@ -36,7 +36,7 @@ public class KmdClientSigTest : KmdClientTestFixture
 
     protected Transaction GetTransaction()
     {
-        var txnPay = new Transaction.Payment(
+        return new Transaction.Payment(
             fee: 10000,
             firstValidRound: 3000,
             lastValidRound: 4000,
@@ -48,10 +48,7 @@ public class KmdClientSigTest : KmdClientTestFixture
         {
             Note = Encoding.UTF8.GetBytes("hello"),
             GenesisId = "hello world genesis"
-        };
-        Transaction rawTxn = default;
-        txnPay.CopyTo(ref rawTxn);
-        return rawTxn;
+        }.ToRaw();
     }
 
     [UnityTest]
@@ -77,7 +74,7 @@ public class KmdClientSigTest : KmdClientTestFixture
         using var keyPair = privateKeys[0].ToKeyPair();
         var txn = GetTransaction();
         var txnBytes = AlgoApiSerializer.SerializeMessagePack(txn);
-        var sig = txn.Sign(keyPair.SecretKey).Signature.Sig;
+        var sig = txn.Sign(keyPair.SecretKey);
         var response = await kmd.SignMultiSig(
             new MultiSig
             {

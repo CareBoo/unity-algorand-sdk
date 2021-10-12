@@ -12,14 +12,33 @@ namespace AlgoSdk
     public static class TransactionExtensions
     {
         public static SignedTransaction Sign<TTransaction>(
-            this ref TTransaction source,
+            this TTransaction source,
             Ed25519.SecretKeyHandle secretKey
             )
             where TTransaction : struct, ITransaction, IEquatable<TTransaction>
         {
-            Transaction txn = default;
-            source.CopyTo(ref txn);
-            return new SignedTransaction { Transaction = txn.Sign(secretKey) };
+            Transaction txn = source.ToRaw();
+            txn.Signature = txn.Sign(secretKey);
+            return new SignedTransaction { Transaction = txn };
+        }
+
+        public static Sig GetSignature<TTransaction>(
+            this TTransaction source,
+            Ed25519.SecretKeyHandle secretKey
+            )
+            where TTransaction : struct, ITransaction, IEquatable<TTransaction>
+        {
+            return source.ToRaw().Sign(secretKey);
+        }
+
+        public static Transaction ToRaw<TTransaction>(
+            this TTransaction source
+            )
+            where TTransaction : struct, ITransaction, IEquatable<TTransaction>
+        {
+            Transaction raw = default;
+            source.CopyTo(ref raw);
+            return raw;
         }
     }
 }
