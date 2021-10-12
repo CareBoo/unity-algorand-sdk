@@ -3,6 +3,7 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
+    [AlgoApiObject]
     public struct DeleteMultiSigRequest
         : IEquatable<DeleteMultiSigRequest>
     {
