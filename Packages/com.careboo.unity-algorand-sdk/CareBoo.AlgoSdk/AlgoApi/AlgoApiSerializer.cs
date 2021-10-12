@@ -65,6 +65,12 @@ namespace AlgoSdk
             return writer.Data;
         }
 
+        public static byte[] SerializeMessagePack<T>(T obj)
+        {
+            using var listBytes = SerializeMessagePack<T>(obj, Allocator.Temp);
+            return listBytes.ToArray();
+        }
+
         public static NativeText SerializeJson<T>(T obj, Allocator allocator)
         {
             var writer = new JsonWriter(allocator);
