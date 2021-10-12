@@ -41,6 +41,13 @@ public class KmdClientKeysTest : KmdClientTestFixture
     });
 
     [UnityTest]
+    public IEnumerator ExportMasterKeyShouldReturnOkay() => UniTask.ToCoroutine(async () =>
+    {
+        var response = await kmd.ExportMasterKey(walletHandleToken, WalletPassword);
+        AssertResponseSuccess(response);
+    });
+
+    [UnityTest]
     public IEnumerator ImportKeyShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var response = await kmd.ImportKey(
