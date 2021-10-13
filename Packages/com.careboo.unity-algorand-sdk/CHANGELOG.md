@@ -1,3 +1,36 @@
+# [1.0.0-exp.26](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.25...v1.0.0-exp.26) (2021-10-13)
+
+
+### Bug Fixes
+
+* **indexer:** :bug: add token back to indexer ([023cb05](https://github.com/CareBoo/unity-algorand-sdk/commit/023cb05f173242f2c3f234f8203fcf2c03ea5369))
+* **indexer:** :bug: fix indexer requires token ([57f6114](https://github.com/CareBoo/unity-algorand-sdk/commit/57f61141f9c7763bb10a3a9deac07dcbc65ea6a9))
+* **json:** :bug: fix `PrivateKey` JSON deserialization err ([cb327e0](https://github.com/CareBoo/unity-algorand-sdk/commit/cb327e0f38ef61e43f5c5e38c3090ab02b83693d))
+* **json:** :bug: fix empty json objects missing begin object '{' char ([af9a2f1](https://github.com/CareBoo/unity-algorand-sdk/commit/af9a2f1cdc7b02a16e1ef052a1156ddee0d0a2a8))
+* **kmd:** :bug: fix `GenerateKeyRequest` to use `wallet_handle_token` not password ([a86c25e](https://github.com/CareBoo/unity-algorand-sdk/commit/a86c25ea9b233dd755f234d64d36467415ce6ebb))
+* **kmd:** :bug: fix `ImportKeyRequest` to use wallet_handle_token not password ([f020a03](https://github.com/CareBoo/unity-algorand-sdk/commit/f020a03fb19c9cf89452066d6dbd3cf278eb9f7f))
+* **kmd:** :bug: fix `KmdClient.SignTransaction` returning a signed transaction message ([f0a354c](https://github.com/CareBoo/unity-algorand-sdk/commit/f0a354caeafd05ae7a984451582e8d53b82bbd6b))
+* **kmd:** :bug: fix `WalletHandle` not added to formatter cache ([4c30939](https://github.com/CareBoo/unity-algorand-sdk/commit/4c309395b3f7076aa4db1e6ebfb552d59fad57b0))
+* **kmd:** :bug: fix multisig ([fc7bcd6](https://github.com/CareBoo/unity-algorand-sdk/commit/fc7bcd6f647c399b3edebb52ccd65fccf715393e))
+
+
+### Code Refactoring
+
+* **kmd:** :recycle: replace `Request` with explicit method params ([030a0a9](https://github.com/CareBoo/unity-algorand-sdk/commit/030a0a9486f6270e6e867ad1efbad73b90e0ecfb))
+
+
+### Features
+
+* **json:** :sparkles: implement `JsonReader.Skip` ([0d6e6ab](https://github.com/CareBoo/unity-algorand-sdk/commit/0d6e6ab4c3b75e96c5e18b105019acb9c50180ac))
+* **serialization:** :sparkles: add support for deserializing `byte[]` ([3ef497f](https://github.com/CareBoo/unity-algorand-sdk/commit/3ef497f3e1f6d31b23fc9bcef77c66f975e242b5))
+* **transaction:** :sparkles: add `GetSignature` and `ToRaw` extensions to `ITransaction` ([e4a3ad5](https://github.com/CareBoo/unity-algorand-sdk/commit/e4a3ad5e15e10155d9cb39dcaf61afc77989950e))
+
+
+### BREAKING CHANGES
+
+* **indexer:** Removed token from IndexerClient constructor
+* **kmd:** changes `IKmdClient` API to use parameters instead of `Request` objs
+
 # [1.0.0-exp.25](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.24...v1.0.0-exp.25) (2021-10-08)
 
 
