@@ -4,9 +4,9 @@ using UnityEngine.TestTools;
 
 public class KmdClientTest : KmdClientTestFixture
 {
-    protected override UniTask SetUpAsync()
+    protected override async UniTask SetUpAsync()
     {
-        return UniTask.CompletedTask;
+        await base.CheckServices();
     }
 
     protected override UniTask TearDownAsync()
