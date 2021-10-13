@@ -30,8 +30,8 @@ namespace AlgoSdk
         }
 
         public async UniTask<AlgoApiResponse<GenerateKeyResponse>> GenerateKey(
-            Optional<bool> displayMnemonic = default,
-            FixedString128Bytes walletHandleToken = default
+            FixedString128Bytes walletHandleToken,
+            Optional<bool> displayMnemonic = default
         )
         {
             var request = new GenerateKeyRequest { DisplayMnemonic = displayMnemonic, WalletHandleToken = walletHandleToken };
@@ -42,9 +42,9 @@ namespace AlgoSdk
         }
 
         public async UniTask<AlgoApiResponse> DeleteKey(
-            Address address = default,
-            FixedString128Bytes walletHandleToken = default,
-            FixedString128Bytes walletPassword = default
+            Address address,
+            FixedString128Bytes walletHandleToken,
+            FixedString128Bytes walletPassword
         )
         {
             var request = new DeleteKeyRequest
@@ -60,9 +60,9 @@ namespace AlgoSdk
         }
 
         public async UniTask<AlgoApiResponse<ExportKeyResponse>> ExportKey(
-            Address address = default,
-            FixedString128Bytes walletHandleToken = default,
-            FixedString128Bytes walletPassword = default
+            Address address,
+            FixedString128Bytes walletHandleToken,
+            FixedString128Bytes walletPassword
         )
         {
             var request = new ExportKeyRequest
@@ -78,8 +78,8 @@ namespace AlgoSdk
         }
 
         public async UniTask<AlgoApiResponse<ImportKeyResponse>> ImportKey(
-            PrivateKey privateKey = default,
-            FixedString128Bytes walletHandleToken = default
+            PrivateKey privateKey,
+            FixedString128Bytes walletHandleToken
         )
         {
             var request = new ImportKeyRequest
@@ -94,7 +94,7 @@ namespace AlgoSdk
         }
 
         public async UniTask<AlgoApiResponse<ListKeysResponse>> ListKeys(
-            FixedString128Bytes walletHandleToken = default
+            FixedString128Bytes walletHandleToken
         )
         {
             var request = new ListKeysRequest { WalletHandleToken = walletHandleToken };
@@ -105,8 +105,8 @@ namespace AlgoSdk
         }
 
         public async UniTask<AlgoApiResponse<ExportMasterKeyResponse>> ExportMasterKey(
-            FixedString128Bytes walletHandleToken = default,
-            FixedString128Bytes walletPassword = default
+            FixedString128Bytes walletHandleToken,
+            FixedString128Bytes walletPassword
         )
         {
             var request = new ExportMasterKeyRequest
@@ -120,13 +120,13 @@ namespace AlgoSdk
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse> DeleteMultiSig(
-            Address address = default,
-            FixedString128Bytes walletHandleToken = default,
-            FixedString128Bytes walletPassword = default
+        public async UniTask<AlgoApiResponse> DeleteMultisig(
+            Address address,
+            FixedString128Bytes walletHandleToken,
+            FixedString128Bytes walletPassword
         )
         {
-            var request = new DeleteMultiSigRequest
+            var request = new DeleteMultisigRequest
             {
                 Address = address,
                 WalletHandleToken = walletHandleToken,
@@ -138,12 +138,12 @@ namespace AlgoSdk
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<ExportMultiSigResponse>> ExportMultiSig(
-            Address address = default,
-            FixedString128Bytes walletHandleToken = default
+        public async UniTask<AlgoApiResponse<ExportMultisigResponse>> ExportMultisig(
+            Address address,
+            FixedString128Bytes walletHandleToken
         )
         {
-            var request = new ExportMultiSigRequest
+            var request = new ExportMultisigRequest
             {
                 Address = address,
                 WalletHandleToken = walletHandleToken
@@ -154,14 +154,14 @@ namespace AlgoSdk
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<ImportMultiSigResponse>> ImportMultiSig(
-            Optional<byte> version = default,
-            Ed25519.PublicKey[] publicKeys = default,
-            Optional<byte> threshold = default,
-            FixedString128Bytes walletHandleToken = default
+        public async UniTask<AlgoApiResponse<ImportMultisigResponse>> ImportMultisig(
+            byte version,
+            Ed25519.PublicKey[] publicKeys,
+            byte threshold,
+            FixedString128Bytes walletHandleToken
         )
         {
-            var request = new ImportMultiSigRequest
+            var request = new ImportMultisigRequest
             {
                 Version = version,
                 PublicKeys = publicKeys,
@@ -174,32 +174,30 @@ namespace AlgoSdk
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<ListMultiSigResponse>> ListMultiSig(
-            FixedString128Bytes walletHandleToken = default
+        public async UniTask<AlgoApiResponse<ListMultisigResponse>> ListMultisig(
+            FixedString128Bytes walletHandleToken
         )
         {
-            var request = new ListMultiSigRequest { WalletHandleToken = walletHandleToken };
+            var request = new ListMultisigRequest { WalletHandleToken = walletHandleToken };
             return await this
                 .Post("/v1/multisig/list")
                 .SetJsonBody(request)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<SignMultiSigResponse>> SignMultiSig(
-            MultiSig multiSig = default,
-            Ed25519.PublicKey publicKey = default,
-            Address signer = default,
-            byte[] transaction = default,
-            FixedString128Bytes walletHandleToken = default,
-            FixedString128Bytes walletPassword = default
+        public async UniTask<AlgoApiResponse<SignMultisigResponse>> SignMultisig(
+            Multisig msig,
+            Ed25519.PublicKey publicKey,
+            byte[] transactionData,
+            FixedString128Bytes walletHandleToken,
+            FixedString128Bytes walletPassword
         )
         {
-            var request = new SignMultiSigRequest
+            var request = new SignMultisigRequest
             {
-                MultiSig = multiSig,
+                Multisig = msig,
                 PublicKey = publicKey,
-                Signer = signer,
-                Transaction = transaction,
+                Transaction = transactionData,
                 WalletHandleToken = walletHandleToken,
                 WalletPassword = walletPassword
             };
@@ -209,20 +207,20 @@ namespace AlgoSdk
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<SignProgramMultiSigResponse>> SignProgramMultiSig(
-            Address address = default,
-            byte[] data = default,
-            MultiSig multiSig = default,
-            Ed25519.PublicKey publicKey = default,
-            FixedString128Bytes walletHandleToken = default,
-            FixedString128Bytes walletPassword = default
+        public async UniTask<AlgoApiResponse<SignProgramMultisigResponse>> SignProgramMultisig(
+            Address msigAccount,
+            byte[] programData,
+            Multisig msig,
+            Ed25519.PublicKey publicKey,
+            FixedString128Bytes walletHandleToken,
+            FixedString128Bytes walletPassword
         )
         {
-            var request = new SignProgramMultiSigRequest
+            var request = new SignProgramMultisigRequest
             {
-                Address = address,
-                Data = data,
-                MultiSig = multiSig,
+                Address = msigAccount,
+                Data = programData,
+                Multisig = msig,
                 PublicKey = publicKey,
                 WalletHandleToken = walletHandleToken,
                 WalletPassword = walletPassword
@@ -234,16 +232,16 @@ namespace AlgoSdk
         }
 
         public async UniTask<AlgoApiResponse<SignProgramResponse>> SignProgram(
-            Address address = default,
-            byte[] data = default,
-            FixedString128Bytes walletHandleToken = default,
-            FixedString128Bytes walletPassword = default
+            Address account,
+            byte[] programData,
+            FixedString128Bytes walletHandleToken,
+            FixedString128Bytes walletPassword
         )
         {
             var request = new SignProgramRequest
             {
-                Address = address,
-                Data = data,
+                Address = account,
+                Data = programData,
                 WalletHandleToken = walletHandleToken,
                 WalletPassword = walletPassword
             };
@@ -254,16 +252,16 @@ namespace AlgoSdk
         }
 
         public async UniTask<AlgoApiResponse<SignTransactionResponse>> SignTransaction(
-            Ed25519.PublicKey publicKey = default,
-            byte[] transaction = default,
-            FixedString128Bytes walletHandleToken = default,
-            FixedString128Bytes walletPassword = default
+            Address account,
+            byte[] transactionData,
+            FixedString128Bytes walletHandleToken,
+            FixedString128Bytes walletPassword
         )
         {
             var request = new SignTransactionRequest
             {
-                PublicKey = publicKey,
-                Transaction = transaction,
+                PublicKey = account,
+                Transaction = transactionData,
                 WalletHandleToken = walletHandleToken,
                 WalletPassword = walletPassword
             };
@@ -274,10 +272,10 @@ namespace AlgoSdk
         }
 
         public async UniTask<AlgoApiResponse<CreateWalletResponse>> CreateWallet(
-            PrivateKey masterDerivationKey = default,
-            FixedString128Bytes walletDriverName = default,
-            FixedString128Bytes walletName = default,
-            FixedString128Bytes walletPassword = default
+            PrivateKey masterDerivationKey,
+            FixedString128Bytes walletDriverName,
+            FixedString128Bytes walletName,
+            FixedString128Bytes walletPassword
         )
         {
             var request = new CreateWalletRequest
@@ -294,7 +292,7 @@ namespace AlgoSdk
         }
 
         public async UniTask<AlgoApiResponse<WalletInfoResponse>> WalletInfo(
-            FixedString128Bytes walletHandleToken = default
+            FixedString128Bytes walletHandleToken
         )
         {
             var request = new WalletInfoRequest { WalletHandleToken = walletHandleToken };
@@ -305,8 +303,8 @@ namespace AlgoSdk
         }
 
         public async UniTask<AlgoApiResponse<InitWalletHandleTokenResponse>> InitWalletHandleToken(
-            FixedString128Bytes walletId = default,
-            FixedString128Bytes walletPassword = default
+            FixedString128Bytes walletId,
+            FixedString128Bytes walletPassword
         )
         {
             var request = new InitWalletHandleTokenRequest
@@ -321,7 +319,7 @@ namespace AlgoSdk
         }
 
         public async UniTask<AlgoApiResponse> ReleaseWalletHandleToken(
-            FixedString128Bytes walletHandleToken = default
+            FixedString128Bytes walletHandleToken
         )
         {
             var request = new ReleaseWalletHandleTokenRequest { WalletHandleToken = walletHandleToken };
@@ -332,15 +330,15 @@ namespace AlgoSdk
         }
 
         public async UniTask<AlgoApiResponse<RenameWalletResponse>> RenameWallet(
-            FixedString128Bytes walletId = default,
-            FixedString128Bytes walletName = default,
-            FixedString128Bytes walletPassword = default
+            FixedString128Bytes walletId,
+            FixedString128Bytes newName,
+            FixedString128Bytes walletPassword
         )
         {
             var request = new RenameWalletRequest
             {
                 WalletId = walletId,
-                WalletName = walletName,
+                WalletName = newName,
                 WalletPassword = walletPassword
             };
             return await this
@@ -350,7 +348,7 @@ namespace AlgoSdk
         }
 
         public async UniTask<AlgoApiResponse<RenewWalletHandleTokenResponse>> RenewWalletHandleToken(
-            FixedString128Bytes walletHandleToken = default
+            FixedString128Bytes walletHandleToken
         )
         {
             var request = new RenewWalletHandleTokenRequest { WalletHandleToken = walletHandleToken };
