@@ -2,6 +2,7 @@ using System;
 
 namespace AlgoSdk
 {
+    [AlgoApiObject]
     public struct WalletHandle
         : IEquatable<WalletHandle>
     {
