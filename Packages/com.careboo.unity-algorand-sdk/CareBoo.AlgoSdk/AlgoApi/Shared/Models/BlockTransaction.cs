@@ -17,10 +17,10 @@ namespace AlgoSdk
         }
 
         [AlgoApiField("msig", "msig")]
-        public MultiSig MultiSig
+        public Multisig Multisig
         {
-            get => Transaction.Signature.MultiSig;
-            set => Transaction.Signature.MultiSig = value;
+            get => Transaction.Signature.Multisig;
+            set => Transaction.Signature.Multisig = value;
         }
 
         [AlgoApiField("lsig", "lsig")]

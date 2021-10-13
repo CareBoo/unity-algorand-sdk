@@ -20,12 +20,12 @@ namespace AlgoSdk
         public Sig Sig;
 
         [AlgoApiField("multisig-signature", "msig")]
-        public MultiSig MultiSig;
+        public Multisig Multisig;
 
         public bool Equals(LogicSig other)
         {
             return Sig.Equals(other.Sig)
-                && MultiSig.Equals(other.MultiSig)
+                && Multisig.Equals(other.Multisig)
                 && ArrayComparer.Equals(Program, other.Program)
                 && ArrayComparer.Equals(Args, other.Args)
                 ;
@@ -35,7 +35,7 @@ namespace AlgoSdk
         {
             using var programByteArray = new NativeByteArray(Program, Allocator.Temp);
             return (!Sig.Equals(default) && Sig.Verify(programByteArray, sender))
-                || (!MultiSig.Equals(default) && MultiSig.Verify(programByteArray))
+                || (!Multisig.Equals(default) && Multisig.Verify(programByteArray))
                 || VerifyProgram(programByteArray, sender)
                 ;
         }

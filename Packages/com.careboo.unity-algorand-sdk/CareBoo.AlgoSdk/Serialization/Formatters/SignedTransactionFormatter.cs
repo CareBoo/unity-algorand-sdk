@@ -9,7 +9,7 @@ namespace AlgoSdk
         static readonly FixedString32Bytes TxnKey = "txn";
         static readonly FixedString32Bytes SigKey = "sig";
         static readonly FixedString32Bytes LogicSigKey = "lsig";
-        static readonly FixedString32Bytes MultiSigKey = "msig";
+        static readonly FixedString32Bytes MultisigKey = "msig";
 
         public SignedTransaction Deserialize(ref JsonReader reader)
         {
@@ -27,8 +27,8 @@ namespace AlgoSdk
                     signature = AlgoApiFormatterCache<Sig>.Formatter.Deserialize(ref reader);
                 else if (key == LogicSigKey)
                     signature = AlgoApiFormatterCache<LogicSig>.Formatter.Deserialize(ref reader);
-                else if (key == MultiSigKey)
-                    signature = AlgoApiFormatterCache<MultiSig>.Formatter.Deserialize(ref reader);
+                else if (key == MultisigKey)
+                    signature = AlgoApiFormatterCache<Multisig>.Formatter.Deserialize(ref reader);
             }
             if (!reader.TryRead(JsonToken.ObjectEnd))
                 JsonReadError.IncorrectFormat.ThrowIfError(reader.Char, reader.Position);
@@ -51,8 +51,8 @@ namespace AlgoSdk
                     signature = AlgoApiFormatterCache<Sig>.Formatter.Deserialize(ref reader);
                 else if (key == LogicSigKey)
                     signature = AlgoApiFormatterCache<LogicSig>.Formatter.Deserialize(ref reader);
-                else if (key == MultiSigKey)
-                    signature = AlgoApiFormatterCache<MultiSig>.Formatter.Deserialize(ref reader);
+                else if (key == MultisigKey)
+                    signature = AlgoApiFormatterCache<Multisig>.Formatter.Deserialize(ref reader);
             }
             txn.Signature = signature;
             return new SignedTransaction { Transaction = txn };
@@ -71,10 +71,10 @@ namespace AlgoSdk
                 writer.WriteObjectKey(LogicSigKey);
                 AlgoApiFormatterCache<LogicSig>.Formatter.Serialize(ref writer, value.Signature.LogicSig);
             }
-            else if (!value.Signature.MultiSig.Equals(default))
+            else if (!value.Signature.Multisig.Equals(default))
             {
-                writer.WriteObjectKey(MultiSigKey);
-                AlgoApiFormatterCache<MultiSig>.Formatter.Serialize(ref writer, value.Signature.MultiSig);
+                writer.WriteObjectKey(MultisigKey);
+                AlgoApiFormatterCache<Multisig>.Formatter.Serialize(ref writer, value.Signature.Multisig);
             }
             writer.WriteObjectKey(TxnKey);
             AlgoApiFormatterCache<Transaction>.Formatter.Serialize(ref writer, value.Transaction);
@@ -94,10 +94,10 @@ namespace AlgoSdk
                 writer.WriteString(LogicSigKey);
                 AlgoApiFormatterCache<LogicSig>.Formatter.Serialize(ref writer, value.Signature.LogicSig);
             }
-            else if (!value.Signature.MultiSig.Equals(default))
+            else if (!value.Signature.Multisig.Equals(default))
             {
-                writer.WriteString(MultiSigKey);
-                AlgoApiFormatterCache<MultiSig>.Formatter.Serialize(ref writer, value.Signature.MultiSig);
+                writer.WriteString(MultisigKey);
+                AlgoApiFormatterCache<Multisig>.Formatter.Serialize(ref writer, value.Signature.Multisig);
             }
             writer.WriteString(TxnKey);
             AlgoApiFormatterCache<Transaction>.Formatter.Serialize(ref writer, value.Transaction);
