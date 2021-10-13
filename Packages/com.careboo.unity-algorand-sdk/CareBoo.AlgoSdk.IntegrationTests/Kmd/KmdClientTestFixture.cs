@@ -12,6 +12,7 @@ public abstract class KmdClientTestFixture : AlgoApiClientTestFixture
     public const string WalletPassword = "helloworld123";
     public const string WalletDriverName = "sqlite";
     public FixedString128Bytes walletHandleToken = default;
+    public Wallet wallet;
 
     protected override AlgoServices RequiresServices => AlgoServices.Kmd;
 
@@ -31,7 +32,7 @@ public abstract class KmdClientTestFixture : AlgoApiClientTestFixture
         if (walletHandleToken.Length > 0)
             return;
         var wallets = await ListWallets();
-        Wallet wallet = wallets.FirstOrDefault(w => w.Name.Equals(WalletName));
+        wallet = wallets.FirstOrDefault(w => w.Name.Equals(WalletName));
         if (wallet.Equals(default))
         {
             wallet = await CreateWallet();
@@ -45,6 +46,7 @@ public abstract class KmdClientTestFixture : AlgoApiClientTestFixture
         if (walletHandleToken.Length > 0)
             await kmd.ReleaseWalletHandleToken(walletHandleToken);
         walletHandleToken.Clear();
+        wallet = default;
     }
 
     static async UniTask<Wallet[]> ListWallets()
