@@ -8,7 +8,7 @@ namespace AlgoSdk
     {
         None,
         Sig,
-        MultiSig,
+        Multisig,
         LogicSig
     }
 
