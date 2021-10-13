@@ -74,11 +74,10 @@ namespace AlgoSdk
         public void Serialize(ref JsonWriter writer, T value)
         {
             using var fieldsToSerialize = jsonFieldMap.GetFieldsToSerialize(value, Allocator.Temp);
+            writer.BeginObject();
             for (var i = 0; i < fieldsToSerialize.Length; i++)
             {
-                if (i == 0)
-                    writer.BeginObject();
-                else
+                if (i > 0)
                     writer.BeginNextItem();
                 var key = fieldsToSerialize[i];
                 writer.WriteObjectKey(key);
