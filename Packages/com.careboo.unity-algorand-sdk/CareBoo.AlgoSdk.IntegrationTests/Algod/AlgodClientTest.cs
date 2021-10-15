@@ -171,4 +171,13 @@ public class AlgodClientTest : AlgoApiClientTestFixture
         AssertResponseSuccess(pendingResponse);
         Debug.Log(pendingResponse.Raw.GetText());
     });
+
+    [UnityTest]
+    public IEnumerator TealCompileShouldReturnOkay() => UniTask.ToCoroutine(async () =>
+    {
+        var response = await algod.TealCompile(TealCodeCases.AtomicSwap.Src);
+        AssertResponseSuccess(response);
+        Assert.AreEqual(TealCodeCases.AtomicSwap.CompiledResult, response.Payload.CompiledBytesBase64);
+        Assert.AreEqual(TealCodeCases.AtomicSwap.CompiledHash, response.Payload.Hash.ToString());
+    });
 }
