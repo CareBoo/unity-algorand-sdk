@@ -1,5 +1,4 @@
 using System;
-using AlgoSdk.Crypto;
 
 namespace AlgoSdk
 {
@@ -8,10 +7,10 @@ namespace AlgoSdk
         : IEquatable<TealCompilationResult>
     {
         [AlgoApiField("hash", null)]
-        public Sha512_256_Hash Hash;
+        public Address Hash;
 
         [AlgoApiField("result", null)]
-        public string BytesBase64;
+        public string CompiledBytesBase64;
 
         public bool Equals(TealCompilationResult other)
         {
