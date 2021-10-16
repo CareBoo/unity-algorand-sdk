@@ -6,7 +6,7 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
-    [AlgoApiFormatter(typeof(ByteArrayFormatter))]
+    [AlgoApiFormatter(typeof(ByteArrayFormatter<VrfPubKey>))]
     [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
     public struct VrfPubKey
         : IEquatable<VrfPubKey>
