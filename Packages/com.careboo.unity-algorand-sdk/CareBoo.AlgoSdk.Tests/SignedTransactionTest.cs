@@ -19,7 +19,7 @@ public class SignedTransactionTest
     {
         var seed = AlgoSdk.Crypto.Random.Bytes<PrivateKey>();
         using var kp = seed.ToKeyPair();
-        var transaction = new PaymentTxn(
+        var transaction = Transaction.Payment(
             sender: (Address)kp.PublicKey,
             txnParams: new TransactionParams
             {
