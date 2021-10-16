@@ -125,10 +125,7 @@ namespace AlgoSdk.Crypto
 
         public bool Equals(Sha512_256_Hash other)
         {
-            for (var i = 0; i < Length; i++)
-                if (this[i] != other[i])
-                    return false;
-            return true;
+            return ByteArray.Equals(this, other);
         }
 
         public static bool operator ==(in Sha512_256_Hash x, in Sha512_256_Hash y)

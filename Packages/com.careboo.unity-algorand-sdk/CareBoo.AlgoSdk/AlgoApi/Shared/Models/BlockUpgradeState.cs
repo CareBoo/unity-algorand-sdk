@@ -14,13 +14,13 @@ namespace AlgoSdk
         public FixedString128Bytes NextProtocol;
 
         [AlgoApiField("next-protocol-approvals", null)]
-        public Optional<ulong> NextProtocolApprovals;
+        public ulong NextProtocolApprovals;
 
         [AlgoApiField("next-protocol-switch-on", null)]
-        public Optional<ulong> NextProtocolSwitchOn;
+        public ulong NextProtocolSwitchOn;
 
         [AlgoApiField("next-protocol-vote-before", null)]
-        public Optional<ulong> NextProtocolVoteBefore;
+        public ulong NextProtocolVoteBefore;
 
 
         public bool Equals(BlockUpgradeState other)

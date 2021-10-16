@@ -1,4 +1,5 @@
 using System;
+using AlgoSdk.Crypto;
 using Unity.Collections;
 
 namespace AlgoSdk
@@ -6,17 +7,17 @@ namespace AlgoSdk
     public partial struct Transaction
     {
         [AlgoApiField(null, "votekey")]
-        public Address VotePk
+        public Ed25519.PublicKey VoteParticipationKey
         {
-            get => KeyRegistrationParams.VotePk;
-            set => KeyRegistrationParams.VotePk = value;
+            get => KeyRegistrationParams.VoteParticipationKey;
+            set => KeyRegistrationParams.VoteParticipationKey = value;
         }
 
         [AlgoApiField(null, "selkey")]
-        public FixedString128Bytes SelectionPk
+        public VrfPubKey SelectionParticipationKey
         {
-            get => KeyRegistrationParams.SelectionPk;
-            set => KeyRegistrationParams.SelectionPk = value;
+            get => KeyRegistrationParams.SelectionParticipationKey;
+            set => KeyRegistrationParams.SelectionParticipationKey = value;
         }
 
         [AlgoApiField(null, "votefst")]
@@ -121,16 +122,16 @@ namespace AlgoSdk
                 set => header.RekeyTo = value;
             }
 
-            public Address VotePk
+            public Ed25519.PublicKey VoteParticipationKey
             {
-                get => @params.VotePk;
-                set => @params.VotePk = value;
+                get => @params.VoteParticipationKey;
+                set => @params.VoteParticipationKey = value;
             }
 
-            public FixedString128Bytes SelectionPk
+            public VrfPubKey SelectionParticipationKey
             {
-                get => @params.SelectionPk;
-                set => @params.SelectionPk = value;
+                get => @params.SelectionParticipationKey;
+                set => @params.SelectionParticipationKey = value;
             }
 
             public ulong VoteFirst
@@ -170,6 +171,20 @@ namespace AlgoSdk
                 @params = new Params();
             }
 
+            public KeyRegistration(
+                Address sender,
+                TransactionParams txnParams,
+                Params accountParticipation
+            )
+            {
+                header = new Header(
+                    sender,
+                    TransactionType.KeyRegistration,
+                    txnParams
+                );
+                @params = accountParticipation;
+            }
+
             public void CopyTo(ref Transaction transaction)
             {
                 transaction.HeaderParams = header;
@@ -194,10 +209,10 @@ namespace AlgoSdk
                 : IEquatable<Params>
             {
                 [AlgoApiField("vote-participation-key", "votekey")]
-                public Address VotePk;
+                public Ed25519.PublicKey VoteParticipationKey;
 
                 [AlgoApiField("selection-participation-key", "selkey")]
-                public FixedString128Bytes SelectionPk;
+                public VrfPubKey SelectionParticipationKey;
 
                 [AlgoApiField("vote-first-valid", "votefst")]
                 public ulong VoteFirst;
@@ -212,15 +227,15 @@ namespace AlgoSdk
                 public Optional<bool> NonParticipation;
 
                 public Params(
-                    Address votePk,
-                    FixedString128Bytes selectionPk,
+                    Ed25519.PublicKey votePk,
+                    VrfPubKey selectionPk,
                     ulong voteFirst,
                     ulong voteLast,
                     ulong voteKeyDilution
                 )
                 {
-                    VotePk = votePk;
-                    SelectionPk = selectionPk;
+                    VoteParticipationKey = votePk;
+                    SelectionParticipationKey = selectionPk;
                     VoteFirst = voteFirst;
                     VoteLast = voteLast;
                     VoteKeyDilution = voteKeyDilution;
@@ -229,13 +244,7 @@ namespace AlgoSdk
 
                 public bool Equals(Params other)
                 {
-                    return VotePk.Equals(other.VotePk)
-                        && SelectionPk.Equals(other.SelectionPk)
-                        && VoteFirst.Equals(other.VoteFirst)
-                        && VoteLast.Equals(other.VoteLast)
-                        && VoteKeyDilution.Equals(other.VoteKeyDilution)
-                        && NonParticipation.Equals(other.NonParticipation)
-                        ;
+                    return SelectionParticipationKey.Equals(other.SelectionParticipationKey);
                 }
             }
         }
