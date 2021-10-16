@@ -25,6 +25,23 @@ namespace AlgoSdk
             get => AssetFreezeParams.AssetFrozen;
             set => AssetFreezeParams.AssetFrozen = value;
         }
+
+        public static AssetFreezeTxn AssetFreeze(
+            Address sender,
+            TransactionParams txnParams,
+            Address freezeAccount,
+            ulong freezeAsset,
+            bool assetFrozen
+        )
+        {
+            return new AssetFreezeTxn(
+                sender,
+                txnParams,
+                freezeAccount,
+                freezeAsset,
+                assetFrozen
+            );
+        }
     }
 
     public struct AssetFreezeTxn
