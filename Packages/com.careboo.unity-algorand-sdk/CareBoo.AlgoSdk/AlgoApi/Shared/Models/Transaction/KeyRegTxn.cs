@@ -47,6 +47,23 @@ namespace AlgoSdk
             get => KeyRegistrationParams.NonParticipation;
             set => KeyRegistrationParams.NonParticipation = value;
         }
+
+        public static KeyRegTxn RegisterAccountOnline(
+            Address account,
+            TransactionParams txnParams,
+            AccountParticipation accountParticipation
+        )
+        {
+            return new KeyRegTxn(account, txnParams, accountParticipation);
+        }
+
+        public static KeyRegTxn RegisterAccountOffline(
+            Address account,
+            TransactionParams txnParams
+        )
+        {
+            return new KeyRegTxn(account, txnParams);
+        }
     }
 
     public struct KeyRegTxn
@@ -175,7 +192,7 @@ namespace AlgoSdk
         public KeyRegTxn(
             Address sender,
             TransactionParams txnParams,
-            Params accountParticipation
+            AccountParticipation accountParticipation
         )
         {
             header = new TransactionHeader(
@@ -183,7 +200,7 @@ namespace AlgoSdk
                 TransactionType.KeyRegistration,
                 txnParams
             );
-            @params = accountParticipation;
+            @params = new Params(accountParticipation);
         }
 
         public void CopyTo(ref Transaction transaction)
@@ -210,36 +227,50 @@ namespace AlgoSdk
             : IEquatable<Params>
         {
             [AlgoApiField("vote-participation-key", "votekey")]
-            public Ed25519.PublicKey VoteParticipationKey;
+            public Ed25519.PublicKey VoteParticipationKey
+            {
+                get => AccountParticipation.VoteParticipationKey;
+                set => AccountParticipation.VoteParticipationKey = value;
+            }
 
             [AlgoApiField("selection-participation-key", "selkey")]
-            public VrfPubKey SelectionParticipationKey;
+            public VrfPubKey SelectionParticipationKey
+            {
+                get => AccountParticipation.SelectionParticipationKey;
+                set => AccountParticipation.SelectionParticipationKey = value;
+            }
 
             [AlgoApiField("vote-first-valid", "votefst")]
-            public ulong VoteFirst;
+            public ulong VoteFirst
+            {
+                get => AccountParticipation.VoteFirst;
+                set => AccountParticipation.VoteFirst = value;
+            }
 
             [AlgoApiField("vote-last-valid", "votelst")]
-            public ulong VoteLast;
+            public ulong VoteLast
+            {
+                get => AccountParticipation.VoteLast;
+                set => AccountParticipation.VoteLast = value;
+            }
 
             [AlgoApiField("vote-key-dilution", "votekd")]
-            public ulong VoteKeyDilution;
+            public ulong VoteKeyDilution
+            {
+                get => AccountParticipation.VoteKeyDilution;
+                set => AccountParticipation.VoteKeyDilution = value;
+            }
 
             [AlgoApiField("non-participation", "nonpart")]
             public Optional<bool> NonParticipation;
 
+            public AccountParticipation AccountParticipation;
+
             public Params(
-                Ed25519.PublicKey votePk,
-                VrfPubKey selectionPk,
-                ulong voteFirst,
-                ulong voteLast,
-                ulong voteKeyDilution
+                AccountParticipation accountParticipation
             )
             {
-                VoteParticipationKey = votePk;
-                SelectionParticipationKey = selectionPk;
-                VoteFirst = voteFirst;
-                VoteLast = voteLast;
-                VoteKeyDilution = voteKeyDilution;
+                AccountParticipation = accountParticipation;
                 NonParticipation = default;
             }
 
