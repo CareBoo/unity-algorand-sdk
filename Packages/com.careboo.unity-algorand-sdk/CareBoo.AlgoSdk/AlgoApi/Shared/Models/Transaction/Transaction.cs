@@ -12,25 +12,25 @@ namespace AlgoSdk
     {
         static readonly byte[] SignaturePrefix = Encoding.UTF8.GetBytes("TX");
 
-        public Header HeaderParams;
+        public TransactionHeader HeaderParams;
 
         [AlgoApiField("payment-transaction", null, readOnly: true)]
-        public Payment.Params PaymentParams;
+        public PaymentTxn.Params PaymentParams;
 
         [AlgoApiField("asset-config-transaction", null, readOnly: true)]
-        public AssetConfiguration.Params AssetConfigurationParams;
+        public AssetConfigTxn.Params AssetConfigurationParams;
 
         [AlgoApiField("asset-transfer-transaction", null, readOnly: true)]
-        public AssetTransfer.Params AssetTransferParams;
+        public AssetTransferTxn.Params AssetTransferParams;
 
         [AlgoApiField("asset-freeze-transaction", null, readOnly: true)]
-        public AssetFreeze.Params AssetFreezeParams;
+        public AssetFreezeTxn.Params AssetFreezeParams;
 
         [AlgoApiField("application-transaction", null, readOnly: true)]
-        public ApplicationCall.Params ApplicationCallParams;
+        public AppCallTxn.Params ApplicationCallParams;
 
         [AlgoApiField("keyreg-transaction", null, readOnly: true)]
-        public KeyRegistration.Params KeyRegistrationParams;
+        public KeyRegTxn.Params KeyRegistrationParams;
 
         [AlgoApiField("signature", null, readOnly: true)]
         public TransactionSignature Signature;
