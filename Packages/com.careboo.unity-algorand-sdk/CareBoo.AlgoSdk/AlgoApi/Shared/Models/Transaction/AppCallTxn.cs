@@ -81,6 +81,25 @@ namespace AlgoSdk
             get => ApplicationCallParams.ExtraProgramPages;
             set => ApplicationCallParams.ExtraProgramPages = value;
         }
+
+        public static AppCallTxn AppCreate(
+            Address sender,
+            TransactionParams txnParams,
+            OnCompletion onComplete
+        )
+        {
+            return new AppCallTxn(sender, txnParams, onComplete);
+        }
+
+        public static AppCallTxn AppConfigure(
+            Address sender,
+            TransactionParams txnParams,
+            ulong applicationId,
+            OnCompletion onComplete
+        )
+        {
+            return new AppCallTxn(sender, txnParams, applicationId, onComplete);
+        }
     }
 
     public struct AppCallTxn
@@ -239,6 +258,22 @@ namespace AlgoSdk
             );
         }
 
+        public AppCallTxn(
+            Address sender,
+            TransactionParams txnParams,
+            OnCompletion onComplete
+        )
+        {
+            header = new TransactionHeader(
+                sender,
+                TransactionType.ApplicationCall,
+                txnParams
+            );
+            @params = new Params(
+                onComplete
+            );
+        }
+
         public void CopyTo(ref Transaction transaction)
         {
             transaction.HeaderParams = header;
@@ -301,6 +336,23 @@ namespace AlgoSdk
             )
             {
                 ApplicationId = appId;
+                OnComplete = onComplete;
+                Accounts = default;
+                ApprovalProgram = default;
+                AppArguments = default;
+                ClearStateProgram = default;
+                ForeignApps = default;
+                ForeignAssets = default;
+                GlobalStateSchema = default;
+                LocalStateSchema = default;
+                ExtraProgramPages = default;
+            }
+
+            public Params(
+                OnCompletion onComplete
+            )
+            {
+                ApplicationId = default;
                 OnComplete = onComplete;
                 Accounts = default;
                 ApprovalProgram = default;
