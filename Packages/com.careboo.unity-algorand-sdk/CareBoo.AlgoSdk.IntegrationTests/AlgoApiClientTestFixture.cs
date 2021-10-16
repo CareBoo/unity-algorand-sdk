@@ -47,7 +47,7 @@ public abstract class AlgoApiClientTestFixture
         var transactionParamsResponse = await algod.GetSuggestedParams();
         AssertResponseSuccess(transactionParamsResponse);
         var transactionParams = transactionParamsResponse.Payload;
-        var txn = new Transaction.Payment(
+        var txn = new PaymentTxn(
             sender: keyPair.PublicKey,
             txnParams: transactionParams,
             receiver: "RDSRVT3X6Y5POLDIN66TSTMUYIBVOMPEOCO4Y2CYACPFKDXZPDCZGVE4PQ",
