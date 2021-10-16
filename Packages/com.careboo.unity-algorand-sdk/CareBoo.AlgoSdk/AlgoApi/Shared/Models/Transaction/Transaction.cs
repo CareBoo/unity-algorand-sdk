@@ -10,7 +10,7 @@ namespace AlgoSdk
     public partial struct Transaction
         : IEquatable<Transaction>
     {
-        static readonly byte[] SignaturePrefix = Encoding.UTF8.GetBytes("TX");
+        public static readonly byte[] SignaturePrefix = Encoding.UTF8.GetBytes("TX");
 
         public TransactionHeader HeaderParams;
 
@@ -52,7 +52,21 @@ namespace AlgoSdk
                 ;
         }
 
-        public Sig Sign(Ed25519.SecretKeyHandle secretKey)
+        public int EstimateBlockSizeBytes()
+        {
+            var rndSeed = AlgoSdk.Crypto.Random.Bytes<Ed25519.Seed>();
+            using var keyPair = rndSeed.ToKeyPair();
+            var signedTxn = Sign(keyPair.SecretKey);
+            return AlgoApiSerializer.SerializeMessagePack(signedTxn).Length;
+        }
+
+        public SignedTransaction Sign(Ed25519.SecretKeyHandle secretKey)
+        {
+            Signature = GetSignature(secretKey);
+            return new SignedTransaction { Transaction = this };
+        }
+
+        public Sig GetSignature(Ed25519.SecretKeyHandle secretKey)
         {
             using var message = ToSignatureMessage(Allocator.Temp);
             return secretKey.Sign(message);

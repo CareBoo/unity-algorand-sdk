@@ -33,127 +33,129 @@ namespace AlgoSdk
             ulong amount
         )
         {
-            return new PaymentTxn(
-                sender,
-                txnParams,
-                receiver,
-                amount
-            );
+            var txn = new PaymentTxn
+            {
+                header = new TransactionHeader(sender, TransactionType.Payment, txnParams),
+                Receiver = receiver,
+                Amount = amount
+            };
+            txn.Fee = txn.GetSuggestedFee(txnParams);
+            return txn;
         }
     }
 
+    [AlgoApiObject]
     public struct PaymentTxn
         : ITransaction
         , IEquatable<PaymentTxn>
     {
-        TransactionHeader header;
+        internal TransactionHeader header;
 
         Params @params;
 
-        public TransactionHeader Header
-        {
-            get => header;
-            set => header = value;
-        }
-
+        [AlgoApiField("fee", "fee")]
         public ulong Fee
         {
             get => header.Fee;
             set => header.Fee = value;
         }
 
+        [AlgoApiField("first-valid", "fv")]
         public ulong FirstValidRound
         {
             get => header.FirstValidRound;
             set => header.FirstValidRound = value;
         }
+
+        [AlgoApiField("genesis-hash", "gh")]
         public GenesisHash GenesisHash
         {
             get => header.GenesisHash;
             set => header.GenesisHash = value;
         }
+
+        [AlgoApiField("last-valid", "lv")]
         public ulong LastValidRound
         {
             get => header.LastValidRound;
             set => header.LastValidRound = value;
         }
 
+        [AlgoApiField("sender", "snd")]
         public Address Sender
         {
             get => header.Sender;
             set => header.Sender = value;
         }
 
+        [AlgoApiField("tx-type", "type")]
+        public TransactionType TransactionType
+        {
+            get => TransactionType.Payment;
+            internal set => header.TransactionType = TransactionType.Payment;
+        }
+
+        [AlgoApiField("genesis-id", "gen")]
         public FixedString32Bytes GenesisId
         {
             get => header.GenesisId;
             set => header.GenesisId = value;
         }
 
+        [AlgoApiField("group", "grp")]
         public Address Group
         {
             get => header.Group;
             set => header.Group = value;
         }
 
+        [AlgoApiField("lease", "lx")]
         public Address Lease
         {
             get => header.Lease;
             set => header.Lease = value;
         }
 
+        [AlgoApiField("note", "note")]
         public byte[] Note
         {
             get => header.Note;
             set => header.Note = value;
         }
 
+        [AlgoApiField("rekey-to", "rekey")]
         public Address RekeyTo
         {
             get => header.RekeyTo;
             set => header.RekeyTo = value;
         }
 
+        [AlgoApiField(null, "rcv")]
         public Address Receiver
         {
             get => @params.Receiver;
             set => @params.Receiver = value;
         }
 
+        [AlgoApiField(null, "amt")]
         public ulong Amount
         {
             get => @params.Amount;
             set => @params.Amount = value;
         }
 
+        [AlgoApiField(null, "close")]
         public Address CloseRemainderTo
         {
             get => @params.CloseRemainderTo;
             set => @params.CloseRemainderTo = value;
         }
 
+        [AlgoApiField("close-amount", "close-amount", readOnly: true)]
         public ulong CloseAmount
         {
             get => @params.CloseAmount;
             set => @params.CloseAmount = value;
-        }
-
-        public PaymentTxn(
-             Address sender,
-             TransactionParams txnParams,
-             Address receiver,
-             ulong amount
-        )
-        {
-            header = new TransactionHeader(
-                sender,
-                TransactionType.Payment,
-                txnParams
-            );
-            @params = new Params(
-                 receiver,
-                 amount
-            );
         }
 
         public void CopyTo(ref Transaction transaction)
@@ -170,7 +172,7 @@ namespace AlgoSdk
 
         public bool Equals(PaymentTxn other)
         {
-            return header.Equals(other.Header)
+            return header.Equals(other.header)
                 && @params.Equals(other.@params)
                 ;
         }
@@ -190,17 +192,6 @@ namespace AlgoSdk
 
             [AlgoApiField("close-amount", "close-amount")]
             public ulong CloseAmount;
-
-            public Params(
-                 Address receiver,
-                 ulong amount
-            )
-            {
-                Receiver = receiver;
-                Amount = amount;
-                CloseRemainderTo = default;
-                CloseAmount = default;
-            }
 
             public bool Equals(Params other)
             {

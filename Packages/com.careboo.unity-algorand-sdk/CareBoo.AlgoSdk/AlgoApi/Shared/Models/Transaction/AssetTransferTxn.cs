@@ -49,14 +49,16 @@ namespace AlgoSdk
             Address assetReceiver
         )
         {
-            return new AssetTransferTxn(
-                sender,
-                txnParams,
-                xferAsset,
-                assetAmount,
-                assetSender,
-                assetReceiver
-            );
+            var txn = new AssetTransferTxn
+            {
+                header = new TransactionHeader(sender, TransactionType.AssetTransfer, txnParams),
+                XferAsset = xferAsset,
+                AssetAmount = assetAmount,
+                AssetSender = assetSender,
+                AssetReceiver = assetReceiver
+            };
+            txn.Fee = txn.GetSuggestedFee(txnParams);
+            return txn;
         }
 
         public static AssetTransferTxn AssetAccept(
@@ -65,7 +67,13 @@ namespace AlgoSdk
             ulong xferAsset
         )
         {
-            return new AssetTransferTxn(sender, txnParams, xferAsset);
+            var txn = new AssetTransferTxn
+            {
+                header = new TransactionHeader(sender, TransactionType.AssetTransfer, txnParams),
+                XferAsset = xferAsset
+            };
+            txn.Fee = txn.GetSuggestedFee(txnParams);
+            return txn;
         }
 
         public static AssetTransferTxn AssetClawback(
@@ -77,163 +85,145 @@ namespace AlgoSdk
             Address assetReceiver
         )
         {
-            return new AssetTransferTxn(
-                clawbackAccount,
-                txnParams,
-                xferAsset,
-                assetAmount,
-                assetSender,
-                assetReceiver
-            );
+            var txn = new AssetTransferTxn
+            {
+                header = new TransactionHeader(clawbackAccount, TransactionType.AssetTransfer, txnParams),
+                XferAsset = xferAsset,
+                AssetAmount = assetAmount,
+                AssetSender = assetSender,
+                AssetReceiver = assetReceiver
+            };
+            txn.Fee = txn.GetSuggestedFee(txnParams);
+            return txn;
         }
     }
 
+    [AlgoApiObject]
     public struct AssetTransferTxn
         : ITransaction
         , IEquatable<AssetTransferTxn>
     {
-        TransactionHeader header;
+        internal TransactionHeader header;
 
         Params @params;
 
-        public TransactionHeader Header
-        {
-            get => header;
-            set => header = value;
-        }
-
+        [AlgoApiField("fee", "fee")]
         public ulong Fee
         {
             get => header.Fee;
             set => header.Fee = value;
         }
 
+        [AlgoApiField("first-valid", "fv")]
         public ulong FirstValidRound
         {
             get => header.FirstValidRound;
             set => header.FirstValidRound = value;
         }
+
+        [AlgoApiField("genesis-hash", "gh")]
         public GenesisHash GenesisHash
         {
             get => header.GenesisHash;
             set => header.GenesisHash = value;
         }
+
+        [AlgoApiField("last-valid", "lv")]
         public ulong LastValidRound
         {
             get => header.LastValidRound;
             set => header.LastValidRound = value;
         }
 
+        [AlgoApiField("sender", "snd")]
         public Address Sender
         {
             get => header.Sender;
             set => header.Sender = value;
         }
 
+        [AlgoApiField("tx-type", "type")]
+        public TransactionType TransactionType
+        {
+            get => TransactionType.AssetTransfer;
+            internal set => header.TransactionType = TransactionType.AssetTransfer;
+        }
+
+        [AlgoApiField("genesis-id", "gen")]
         public FixedString32Bytes GenesisId
         {
             get => header.GenesisId;
             set => header.GenesisId = value;
         }
 
+        [AlgoApiField("group", "grp")]
         public Address Group
         {
             get => header.Group;
             set => header.Group = value;
         }
 
+        [AlgoApiField("lease", "lx")]
         public Address Lease
         {
             get => header.Lease;
             set => header.Lease = value;
         }
 
+        [AlgoApiField("note", "note")]
         public byte[] Note
         {
             get => header.Note;
             set => header.Note = value;
         }
 
+        [AlgoApiField("rekey-to", "rekey")]
         public Address RekeyTo
         {
             get => header.RekeyTo;
             set => header.RekeyTo = value;
         }
 
+        [AlgoApiField(null, "xaid")]
         public ulong XferAsset
         {
             get => @params.XferAsset;
             set => @params.XferAsset = value;
         }
 
+        [AlgoApiField(null, "aamt")]
         public ulong AssetAmount
         {
             get => @params.AssetAmount;
             set => @params.AssetAmount = value;
         }
 
+        [AlgoApiField(null, "asnd")]
         public Address AssetSender
         {
             get => @params.AssetSender;
             set => @params.AssetSender = value;
         }
 
+        [AlgoApiField(null, "arcv")]
         public Address AssetReceiver
         {
             get => @params.AssetReceiver;
             set => @params.AssetReceiver = value;
         }
 
+        [AlgoApiField(null, "aclose")]
         public Address AssetCloseTo
         {
             get => @params.AssetCloseTo;
             set => @params.AssetCloseTo = value;
         }
 
+        [AlgoApiField("close-amount", "close-amount", readOnly: true)]
         public ulong CloseAmount
         {
             get => @params.CloseAmount;
             set => @params.CloseAmount = value;
-        }
-
-        public AssetTransferTxn(
-            Address sender,
-            TransactionParams txnParams,
-            ulong xferAsset
-        )
-        {
-            header = new TransactionHeader(
-                sender,
-                TransactionType.AssetTransfer,
-                txnParams
-            );
-            @params = new Params(
-                xferAsset,
-                sender,
-                sender
-            );
-        }
-
-        public AssetTransferTxn(
-            Address sender,
-            TransactionParams txnParams,
-            ulong xferAsset,
-            ulong assetAmount,
-            Address assetSender,
-            Address assetReceiver
-        )
-        {
-            header = new TransactionHeader(
-                sender,
-                TransactionType.AssetTransfer,
-                txnParams
-            );
-            @params = new Params(
-                xferAsset,
-                assetAmount,
-                assetSender,
-                assetReceiver
-            );
         }
 
         public void CopyTo(ref Transaction transaction)
@@ -244,7 +234,7 @@ namespace AlgoSdk
 
         public void CopyFrom(Transaction transaction)
         {
-            Header = transaction.HeaderParams;
+            header = transaction.HeaderParams;
             @params = transaction.AssetTransferParams;
         }
 
@@ -276,35 +266,6 @@ namespace AlgoSdk
 
             [AlgoApiField("close-amount", "close-amount")]
             public ulong CloseAmount;
-
-            public Params(
-                ulong xferAsset,
-                ulong assetAmount,
-                Address assetSender,
-                Address assetReceiver
-            )
-            {
-                XferAsset = xferAsset;
-                AssetAmount = assetAmount;
-                AssetSender = assetSender;
-                AssetReceiver = assetReceiver;
-                AssetCloseTo = default;
-                CloseAmount = default;
-            }
-
-            public Params(
-                ulong xferAsset,
-                Address assetSender,
-                Address assetReceiver
-            )
-            {
-                XferAsset = xferAsset;
-                AssetSender = assetSender;
-                AssetReceiver = assetReceiver;
-                AssetAmount = default;
-                AssetCloseTo = default;
-                CloseAmount = default;
-            }
 
             public bool Equals(Params other)
             {

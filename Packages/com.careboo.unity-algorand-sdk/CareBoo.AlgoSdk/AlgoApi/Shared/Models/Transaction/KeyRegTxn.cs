@@ -54,7 +54,13 @@ namespace AlgoSdk
             AccountParticipation accountParticipation
         )
         {
-            return new KeyRegTxn(account, txnParams, accountParticipation);
+            var txn = new KeyRegTxn
+            {
+                header = new TransactionHeader(account, TransactionType.KeyRegistration, txnParams),
+                AccountParticipation = accountParticipation
+            };
+            txn.Fee = txn.GetSuggestedFee(txnParams);
+            return txn;
         }
 
         public static KeyRegTxn KeyRegOffline(
@@ -62,145 +68,147 @@ namespace AlgoSdk
             TransactionParams txnParams
         )
         {
-            return new KeyRegTxn(account, txnParams);
+            var txn = new KeyRegTxn
+            {
+                header = new TransactionHeader(account, TransactionType.KeyRegistration, txnParams)
+            };
+            txn.Fee = txn.GetSuggestedFee(txnParams);
+            return txn;
         }
     }
 
+    [AlgoApiObject]
     public struct KeyRegTxn
            : ITransaction
            , IEquatable<KeyRegTxn>
     {
-        TransactionHeader header;
+        internal TransactionHeader header;
 
         Params @params;
 
-        public TransactionHeader Header
+        public AccountParticipation AccountParticipation
         {
-            get => header;
-            set => header = value;
+            get => @params.AccountParticipation;
+            set => @params.AccountParticipation = value;
         }
 
+        [AlgoApiField("fee", "fee")]
         public ulong Fee
         {
             get => header.Fee;
             set => header.Fee = value;
         }
 
+        [AlgoApiField("first-valid", "fv")]
         public ulong FirstValidRound
         {
             get => header.FirstValidRound;
             set => header.FirstValidRound = value;
         }
 
+        [AlgoApiField("genesis-hash", "gh")]
         public GenesisHash GenesisHash
         {
             get => header.GenesisHash;
             set => header.GenesisHash = value;
         }
 
+        [AlgoApiField("last-valid", "lv")]
         public ulong LastValidRound
         {
             get => header.LastValidRound;
             set => header.LastValidRound = value;
         }
 
+        [AlgoApiField("sender", "snd")]
         public Address Sender
         {
             get => header.Sender;
             set => header.Sender = value;
         }
 
+        [AlgoApiField("tx-type", "type")]
+        public TransactionType TransactionType
+        {
+            get => TransactionType.KeyRegistration;
+            internal set => header.TransactionType = TransactionType.KeyRegistration;
+        }
+
+        [AlgoApiField("genesis-id", "gen")]
         public FixedString32Bytes GenesisId
         {
             get => header.GenesisId;
             set => header.GenesisId = value;
         }
 
+        [AlgoApiField("group", "grp")]
         public Address Group
         {
             get => header.Group;
             set => header.Group = value;
         }
 
+        [AlgoApiField("lease", "lx")]
         public Address Lease
         {
             get => header.Lease;
             set => header.Lease = value;
         }
 
+        [AlgoApiField("note", "note")]
         public byte[] Note
         {
             get => header.Note;
             set => header.Note = value;
         }
 
+        [AlgoApiField("rekey-to", "rekey")]
         public Address RekeyTo
         {
             get => header.RekeyTo;
             set => header.RekeyTo = value;
         }
 
+        [AlgoApiField(null, "votekey")]
         public Ed25519.PublicKey VoteParticipationKey
         {
             get => @params.VoteParticipationKey;
             set => @params.VoteParticipationKey = value;
         }
 
+        [AlgoApiField(null, "selkey")]
         public VrfPubKey SelectionParticipationKey
         {
             get => @params.SelectionParticipationKey;
             set => @params.SelectionParticipationKey = value;
         }
 
+        [AlgoApiField(null, "votefst")]
         public ulong VoteFirst
         {
             get => @params.VoteFirst;
             set => @params.VoteFirst = value;
         }
 
+        [AlgoApiField(null, "votelst")]
         public ulong VoteLast
         {
             get => @params.VoteLast;
             set => @params.VoteLast = value;
         }
 
+        [AlgoApiField(null, "votekd")]
         public ulong VoteKeyDilution
         {
             get => @params.VoteKeyDilution;
             set => @params.VoteKeyDilution = value;
         }
 
+        [AlgoApiField(null, "nonpart")]
         public Optional<bool> NonParticipation
         {
             get => @params.NonParticipation;
             set => @params.NonParticipation = value;
-        }
-
-        public KeyRegTxn(
-             Address sender,
-             TransactionParams txnParams
-        )
-        {
-            header = new TransactionHeader(
-                sender,
-                TransactionType.KeyRegistration,
-                txnParams
-            );
-            @params = new Params();
-        }
-
-        public KeyRegTxn(
-            Address sender,
-            TransactionParams txnParams,
-            AccountParticipation accountParticipation
-        )
-        {
-            header = new TransactionHeader(
-                sender,
-                TransactionType.KeyRegistration,
-                txnParams
-            );
-            @params = new Params(accountParticipation);
         }
 
         public void CopyTo(ref Transaction transaction)
@@ -217,7 +225,7 @@ namespace AlgoSdk
 
         public bool Equals(KeyRegTxn other)
         {
-            return header.Equals(other.Header)
+            return header.Equals(other.header)
                 && @params.Equals(other.@params)
                 ;
         }
@@ -265,14 +273,6 @@ namespace AlgoSdk
             public Optional<bool> NonParticipation;
 
             public AccountParticipation AccountParticipation;
-
-            public Params(
-                AccountParticipation accountParticipation
-            )
-            {
-                AccountParticipation = accountParticipation;
-                NonParticipation = default;
-            }
 
             public bool Equals(Params other)
             {

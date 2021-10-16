@@ -55,7 +55,7 @@ public abstract class AlgoApiClientTestFixture
         );
         txn.Note = Encoding.UTF8.GetBytes("hello");
         txn.GenesisId = transactionParams.GenesisId;
-        SignedTransaction signedTxn = txn.Sign(keyPair.SecretKey);
+        var signedTxn = txn.Sign(keyPair.SecretKey);
         var serialized = AlgoApiSerializer.SerializeMessagePack(signedTxn, Allocator.Temp);
         Debug.Log(System.Convert.ToBase64String(serialized.ToArray()));
         var txidResponse = await algod.SendTransaction(signedTxn);

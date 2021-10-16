@@ -1,3 +1,4 @@
+using System;
 using Cysharp.Threading.Tasks;
 using Unity.Collections;
 
@@ -188,9 +189,10 @@ namespace AlgoSdk
                 ;
         }
 
-        public async UniTask<AlgoApiResponse<TransactionIdResponse>> SendTransaction(SignedTransaction rawTxn)
+        public async UniTask<AlgoApiResponse<TransactionIdResponse>> SendTransaction<T>(Signed<T> txn)
+            where T : struct, ITransaction, IEquatable<T>
         {
-            using var data = AlgoApiSerializer.SerializeMessagePack(rawTxn, Allocator.Persistent);
+            using var data = AlgoApiSerializer.SerializeMessagePack(txn, Allocator.Persistent);
             return await this
                 .Post("/v2/transactions")
                 .SetMessagePackBody(data.AsArray().AsReadOnly())
