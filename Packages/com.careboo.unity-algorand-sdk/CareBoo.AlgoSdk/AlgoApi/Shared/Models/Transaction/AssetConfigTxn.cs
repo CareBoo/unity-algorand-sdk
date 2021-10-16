@@ -18,6 +18,34 @@ namespace AlgoSdk
             get => AssetConfigurationParams.AssetParams;
             set => AssetConfigurationParams.AssetParams = value;
         }
+
+        public static AssetConfigTxn AssetCreate(
+            Address sender,
+            TransactionParams txnParams,
+            AssetParams assetParams
+        )
+        {
+            return new AssetConfigTxn(sender, txnParams, assetParams);
+        }
+
+        public static AssetConfigTxn AssetConfigure(
+            Address sender,
+            TransactionParams txnParams,
+            ulong assetId,
+            AssetParams assetParams
+        )
+        {
+            return new AssetConfigTxn(sender, txnParams, assetId, assetParams);
+        }
+
+        public static AssetConfigTxn AssetDelete(
+            Address sender,
+            TransactionParams txnParams,
+            ulong assetId
+        )
+        {
+            return new AssetConfigTxn(sender, txnParams, assetId);
+        }
     }
 
     public struct AssetConfigTxn
@@ -122,6 +150,38 @@ namespace AlgoSdk
             );
         }
 
+        public AssetConfigTxn(
+            Address sender,
+            TransactionParams txnParams,
+            ulong configAsset
+        )
+        {
+            header = new TransactionHeader(
+                sender,
+                TransactionType.AssetConfiguration,
+                txnParams
+            );
+            @params = new Params(
+                configAsset
+            );
+        }
+
+        public AssetConfigTxn(
+            Address sender,
+            TransactionParams txnParams,
+            AssetParams assetParams
+        )
+        {
+            header = new TransactionHeader(
+                sender,
+                TransactionType.AssetConfiguration,
+                txnParams
+            );
+            @params = new Params(
+                assetParams
+            );
+        }
+
         public void CopyTo(ref Transaction transaction)
         {
             transaction.HeaderParams = header;
@@ -157,6 +217,22 @@ namespace AlgoSdk
             )
             {
                 ConfigAsset = configAsset;
+                AssetParams = assetParams;
+            }
+
+            public Params(
+                ulong configAsset
+            )
+            {
+                ConfigAsset = configAsset;
+                AssetParams = default;
+            }
+
+            public Params(
+                AssetParams assetParams
+            )
+            {
+                ConfigAsset = default;
                 AssetParams = assetParams;
             }
 
