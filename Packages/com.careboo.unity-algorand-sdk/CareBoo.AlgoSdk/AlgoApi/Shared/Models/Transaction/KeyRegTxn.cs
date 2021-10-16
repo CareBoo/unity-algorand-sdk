@@ -48,7 +48,7 @@ namespace AlgoSdk
             set => KeyRegistrationParams.NonParticipation = value;
         }
 
-        public static KeyRegTxn RegisterAccountOnline(
+        public static KeyRegTxn KeyRegOnline(
             Address account,
             TransactionParams txnParams,
             AccountParticipation accountParticipation
@@ -57,7 +57,7 @@ namespace AlgoSdk
             return new KeyRegTxn(account, txnParams, accountParticipation);
         }
 
-        public static KeyRegTxn RegisterAccountOffline(
+        public static KeyRegTxn KeyRegOffline(
             Address account,
             TransactionParams txnParams
         )
