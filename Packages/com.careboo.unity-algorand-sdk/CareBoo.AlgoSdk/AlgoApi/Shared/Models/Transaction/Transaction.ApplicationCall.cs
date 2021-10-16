@@ -1,5 +1,4 @@
 using System;
-using AlgoSdk.Crypto;
 using Unity.Collections;
 
 namespace AlgoSdk
@@ -224,9 +223,6 @@ namespace AlgoSdk
             public ApplicationCall(
                 Address sender,
                 TransactionParams txnParams,
-                Address freezeAccount,
-                ulong freezeAsset,
-                bool assetFrozen,
                 ulong appId,
                 OnCompletion onComplete
             )

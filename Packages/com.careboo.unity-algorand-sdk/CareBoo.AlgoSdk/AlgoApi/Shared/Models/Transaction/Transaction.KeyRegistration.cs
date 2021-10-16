@@ -1,5 +1,4 @@
 using System;
-using AlgoSdk.Crypto;
 using Unity.Collections;
 
 namespace AlgoSdk
@@ -73,11 +72,13 @@ namespace AlgoSdk
                 get => header.FirstValidRound;
                 set => header.FirstValidRound = value;
             }
+
             public GenesisHash GenesisHash
             {
                 get => header.GenesisHash;
                 set => header.GenesisHash = value;
             }
+
             public ulong LastValidRound
             {
                 get => header.LastValidRound;
