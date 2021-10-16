@@ -47,7 +47,7 @@ namespace AlgoSdk
         public Optional<bool> Deleted;
 
         [AlgoApiField("participation", null)]
-        public Transaction.KeyRegistration.Params Participation;
+        public KeyRegTxn.Params Participation;
 
         [AlgoApiField("pending-rewards", null)]
         public ulong PendingRewards;
