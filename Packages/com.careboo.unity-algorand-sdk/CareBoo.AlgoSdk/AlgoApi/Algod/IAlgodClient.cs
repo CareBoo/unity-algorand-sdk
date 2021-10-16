@@ -1,3 +1,4 @@
+using System;
 using Cysharp.Threading.Tasks;
 using Unity.Collections;
 
@@ -31,7 +32,8 @@ namespace AlgoSdk
         UniTask<AlgoApiResponse<Status>> GetStatusAfterWaitingForRound(ulong round);
         UniTask<AlgoApiResponse<TealCompilationResult>> TealCompile(string source);
         UniTask<AlgoApiResponse<DryrunResults>> TealDryrun(Optional<DryrunRequest> request = default);
-        UniTask<AlgoApiResponse<TransactionIdResponse>> SendTransaction(SignedTransaction rawTxn);
+        UniTask<AlgoApiResponse<TransactionIdResponse>> SendTransaction<T>(Signed<T> txn)
+            where T : struct, ITransaction, IEquatable<T>;
         UniTask<AlgoApiResponse<TransactionParams>> GetSuggestedParams();
         UniTask<AlgoApiResponse<Version>> GetVersions();
     }

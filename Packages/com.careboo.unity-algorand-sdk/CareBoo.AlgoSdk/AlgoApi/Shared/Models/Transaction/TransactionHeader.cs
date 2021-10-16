@@ -1,5 +1,6 @@
 using System;
 using Unity.Collections;
+using Unity.Mathematics;
 
 namespace AlgoSdk
 {
@@ -212,7 +213,7 @@ namespace AlgoSdk
             TransactionParams transactionParams
         )
         {
-            Fee = transactionParams.FlatFee ? transactionParams.Fee : transactionParams.MinFee;
+            Fee = math.max(transactionParams.Fee, transactionParams.MinFee);
             FirstValidRound = transactionParams.FirstValidRound;
             GenesisHash = transactionParams.GenesisHash;
             LastValidRound = transactionParams.LastValidRound;

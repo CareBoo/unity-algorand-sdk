@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Linq;
-using System.Text;
 using AlgoSdk;
 using AlgoSdk.Crypto;
 using Cysharp.Threading.Tasks;
@@ -51,7 +50,7 @@ public class KmdClientSigTest : KmdClientTestFixture
         await base.TearDownAsync();
     }
 
-    protected async UniTask<Transaction> GetTransaction()
+    protected async UniTask<PaymentTxn> GetTransaction()
     {
         var txnParams = (await algod.GetSuggestedParams()).Payload;
         return Transaction.Payment(
@@ -59,7 +58,7 @@ public class KmdClientSigTest : KmdClientTestFixture
             txnParams: txnParams,
             receiver: AlgoSdk.Crypto.Random.Bytes<Address>().GenerateCheckSum(),
             amount: 30000
-        ).ToRaw();
+        );
     }
 
     [UnityTest]

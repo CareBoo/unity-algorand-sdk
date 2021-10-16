@@ -25,7 +25,13 @@ namespace AlgoSdk
             AssetParams assetParams
         )
         {
-            return new AssetConfigTxn(sender, txnParams, assetParams);
+            var txn = new AssetConfigTxn
+            {
+                header = new TransactionHeader(sender, TransactionType.AssetConfiguration, txnParams),
+                AssetParams = assetParams
+            };
+            txn.Fee = txn.GetSuggestedFee(txnParams);
+            return txn;
         }
 
         public static AssetConfigTxn AssetConfigure(
@@ -35,7 +41,14 @@ namespace AlgoSdk
             AssetParams assetParams
         )
         {
-            return new AssetConfigTxn(sender, txnParams, assetId, assetParams);
+            var txn = new AssetConfigTxn
+            {
+                header = new TransactionHeader(sender, TransactionType.AssetConfiguration, txnParams),
+                ConfigAsset = assetId,
+                AssetParams = assetParams
+            };
+            txn.Fee = txn.GetSuggestedFee(txnParams);
+            return txn;
         }
 
         public static AssetConfigTxn AssetDelete(
@@ -44,142 +57,114 @@ namespace AlgoSdk
             ulong assetId
         )
         {
-            return new AssetConfigTxn(sender, txnParams, assetId);
+            var txn = new AssetConfigTxn
+            {
+                header = new TransactionHeader(sender, TransactionType.AssetConfiguration, txnParams),
+                ConfigAsset = assetId
+            };
+            txn.Fee = txn.GetSuggestedFee(txnParams);
+            return txn;
         }
     }
 
+    [AlgoApiObject]
     public struct AssetConfigTxn
         : ITransaction
         , IEquatable<AssetConfigTxn>
     {
-        TransactionHeader header;
+        internal TransactionHeader header;
 
         Params @params;
 
-        public TransactionHeader Header
-        {
-            get => header;
-            set => header = value;
-        }
-
+        [AlgoApiField("fee", "fee")]
         public ulong Fee
         {
             get => header.Fee;
             set => header.Fee = value;
         }
 
+        [AlgoApiField("first-valid", "fv")]
         public ulong FirstValidRound
         {
             get => header.FirstValidRound;
             set => header.FirstValidRound = value;
         }
+
+        [AlgoApiField("genesis-hash", "gh")]
         public GenesisHash GenesisHash
         {
             get => header.GenesisHash;
             set => header.GenesisHash = value;
         }
+
+        [AlgoApiField("last-valid", "lv")]
         public ulong LastValidRound
         {
             get => header.LastValidRound;
             set => header.LastValidRound = value;
         }
 
+        [AlgoApiField("sender", "snd")]
         public Address Sender
         {
             get => header.Sender;
             set => header.Sender = value;
         }
 
+        [AlgoApiField("tx-type", "type")]
+        public TransactionType TransactionType
+        {
+            get => TransactionType.AssetConfiguration;
+            internal set => header.TransactionType = TransactionType.AssetConfiguration;
+        }
+
+        [AlgoApiField("genesis-id", "gen")]
         public FixedString32Bytes GenesisId
         {
             get => header.GenesisId;
             set => header.GenesisId = value;
         }
 
+        [AlgoApiField("group", "grp")]
         public Address Group
         {
             get => header.Group;
             set => header.Group = value;
         }
 
+        [AlgoApiField("lease", "lx")]
         public Address Lease
         {
             get => header.Lease;
             set => header.Lease = value;
         }
 
+        [AlgoApiField("note", "note")]
         public byte[] Note
         {
             get => header.Note;
             set => header.Note = value;
         }
 
+        [AlgoApiField("rekey-to", "rekey")]
         public Address RekeyTo
         {
             get => header.RekeyTo;
             set => header.RekeyTo = value;
         }
 
+        [AlgoApiField(null, "caid")]
         public ulong ConfigAsset
         {
             get => @params.ConfigAsset;
             set => @params.ConfigAsset = value;
         }
 
+        [AlgoApiField(null, "apar")]
         public AssetParams AssetParams
         {
             get => @params.AssetParams;
             set => @params.AssetParams = value;
-        }
-
-        public AssetConfigTxn(
-            Address sender,
-            TransactionParams txnParams,
-            ulong configAsset,
-            AssetParams assetParams
-        )
-        {
-            header = new TransactionHeader(
-                sender,
-                TransactionType.AssetConfiguration,
-                txnParams
-            );
-            @params = new Params(
-                configAsset,
-                assetParams
-            );
-        }
-
-        public AssetConfigTxn(
-            Address sender,
-            TransactionParams txnParams,
-            ulong configAsset
-        )
-        {
-            header = new TransactionHeader(
-                sender,
-                TransactionType.AssetConfiguration,
-                txnParams
-            );
-            @params = new Params(
-                configAsset
-            );
-        }
-
-        public AssetConfigTxn(
-            Address sender,
-            TransactionParams txnParams,
-            AssetParams assetParams
-        )
-        {
-            header = new TransactionHeader(
-                sender,
-                TransactionType.AssetConfiguration,
-                txnParams
-            );
-            @params = new Params(
-                assetParams
-            );
         }
 
         public void CopyTo(ref Transaction transaction)
@@ -210,31 +195,6 @@ namespace AlgoSdk
 
             [AlgoApiField("params", "params")]
             public AssetParams AssetParams;
-
-            public Params(
-                ulong configAsset,
-                AssetParams assetParams
-            )
-            {
-                ConfigAsset = configAsset;
-                AssetParams = assetParams;
-            }
-
-            public Params(
-                ulong configAsset
-            )
-            {
-                ConfigAsset = configAsset;
-                AssetParams = default;
-            }
-
-            public Params(
-                AssetParams assetParams
-            )
-            {
-                ConfigAsset = default;
-                AssetParams = assetParams;
-            }
 
             public bool Equals(Params other)
             {

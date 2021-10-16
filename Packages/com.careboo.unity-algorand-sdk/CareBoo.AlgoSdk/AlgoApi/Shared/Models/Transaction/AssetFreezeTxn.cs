@@ -34,124 +34,122 @@ namespace AlgoSdk
             bool assetFrozen
         )
         {
-            return new AssetFreezeTxn(
-                sender,
-                txnParams,
-                freezeAccount,
-                freezeAsset,
-                assetFrozen
-            );
+            var txn = new AssetFreezeTxn
+            {
+                header = new TransactionHeader(sender, TransactionType.AssetFreeze, txnParams),
+                FreezeAccount = freezeAccount,
+                FreezeAsset = freezeAsset,
+                AssetFrozen = assetFrozen
+            };
+            txn.Fee = txn.GetSuggestedFee(txnParams);
+            return txn;
         }
     }
 
+    [AlgoApiObject]
     public struct AssetFreezeTxn
         : ITransaction
         , IEquatable<AssetFreezeTxn>
     {
-        TransactionHeader header;
+        internal TransactionHeader header;
 
         Params @params;
 
-        public TransactionHeader Header
-        {
-            get => header;
-            set => header = value;
-        }
-
+        [AlgoApiField("fee", "fee")]
         public ulong Fee
         {
             get => header.Fee;
             set => header.Fee = value;
         }
 
+        [AlgoApiField("first-valid", "fv")]
         public ulong FirstValidRound
         {
             get => header.FirstValidRound;
             set => header.FirstValidRound = value;
         }
+
+        [AlgoApiField("genesis-hash", "gh")]
         public GenesisHash GenesisHash
         {
             get => header.GenesisHash;
             set => header.GenesisHash = value;
         }
+
+        [AlgoApiField("last-valid", "lv")]
         public ulong LastValidRound
         {
             get => header.LastValidRound;
             set => header.LastValidRound = value;
         }
 
+        [AlgoApiField("sender", "snd")]
         public Address Sender
         {
             get => header.Sender;
             set => header.Sender = value;
         }
 
+        [AlgoApiField("tx-type", "type")]
+        public TransactionType TransactionType
+        {
+            get => TransactionType.AssetFreeze;
+            internal set => header.TransactionType = TransactionType.AssetFreeze;
+        }
+
+        [AlgoApiField("genesis-id", "gen")]
         public FixedString32Bytes GenesisId
         {
             get => header.GenesisId;
             set => header.GenesisId = value;
         }
 
+        [AlgoApiField("group", "grp")]
         public Address Group
         {
             get => header.Group;
             set => header.Group = value;
         }
 
+        [AlgoApiField("lease", "lx")]
         public Address Lease
         {
             get => header.Lease;
             set => header.Lease = value;
         }
 
+        [AlgoApiField("note", "note")]
         public byte[] Note
         {
             get => header.Note;
             set => header.Note = value;
         }
 
+        [AlgoApiField("rekey-to", "rekey")]
         public Address RekeyTo
         {
             get => header.RekeyTo;
             set => header.RekeyTo = value;
         }
-
+        [AlgoApiField(null, "fadd")]
         public Address FreezeAccount
         {
             get => @params.FreezeAccount;
             set => @params.FreezeAccount = value;
         }
 
+        [AlgoApiField(null, "faid")]
         public ulong FreezeAsset
         {
             get => @params.FreezeAsset;
             set => @params.FreezeAsset = value;
         }
 
+        [AlgoApiField(null, "afrz")]
         public Optional<bool> AssetFrozen
         {
             get => @params.AssetFrozen;
             set => @params.AssetFrozen = value;
-        }
-
-        public AssetFreezeTxn(
-            Address sender,
-            TransactionParams txnParams,
-            Address freezeAccount,
-            ulong freezeAsset,
-            bool assetFrozen
-        )
-        {
-            header = new TransactionHeader(
-                sender,
-                TransactionType.AssetFreeze,
-                txnParams
-            );
-            @params = new Params(
-                freezeAccount,
-                freezeAsset,
-                assetFrozen
-            );
         }
 
         public void CopyTo(ref Transaction transaction)
@@ -168,7 +166,7 @@ namespace AlgoSdk
 
         public bool Equals(AssetFreezeTxn other)
         {
-            return header.Equals(other.Header)
+            return header.Equals(other.header)
                 && @params.Equals(other.@params)
                 ;
         }
@@ -185,17 +183,6 @@ namespace AlgoSdk
 
             [AlgoApiField("new-freeze-status", "afrz")]
             public Optional<bool> AssetFrozen;
-
-            public Params(
-                Address freezeAccount,
-                ulong freezeAsset,
-                bool assetFrozen
-            )
-            {
-                FreezeAccount = freezeAccount;
-                FreezeAsset = freezeAsset;
-                AssetFrozen = assetFrozen;
-            }
 
             public bool Equals(Params other)
             {
