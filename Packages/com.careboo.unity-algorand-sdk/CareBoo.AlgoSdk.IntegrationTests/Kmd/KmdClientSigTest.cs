@@ -51,21 +51,15 @@ public class KmdClientSigTest : KmdClientTestFixture
         await base.TearDownAsync();
     }
 
-    protected Transaction GetTransaction()
+    protected async UniTask<Transaction> GetTransaction()
     {
+        var txnParams = (await algod.GetSuggestedParams()).Payload;
         return new Transaction.Payment(
-            fee: 10000,
-            firstValidRound: 3000,
-            lastValidRound: 4000,
-            genesisHash: AlgoSdk.Crypto.Random.Bytes<Sha512_256_Hash>(),
             sender: msigAddress,
+            txnParams: txnParams,
             receiver: AlgoSdk.Crypto.Random.Bytes<Address>().GenerateCheckSum(),
             amount: 30000
-        )
-        {
-            Note = Encoding.UTF8.GetBytes("hello"),
-            GenesisId = "hello world genesis"
-        }.ToRaw();
+        ).ToRaw();
     }
 
     [UnityTest]
@@ -89,7 +83,7 @@ public class KmdClientSigTest : KmdClientTestFixture
     public IEnumerator SignMultisigShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         using var keyPair = privateKeys[0].ToKeyPair();
-        var txn = GetTransaction();
+        var txn = await GetTransaction();
         var pubKeyAddress = (Address)keyPair.PublicKey;
         var txnBytes = AlgoApiSerializer.SerializeMessagePack(txn);
         var response = await kmd.SignMultisig(
@@ -107,7 +101,7 @@ public class KmdClientSigTest : KmdClientTestFixture
     public IEnumerator SignProgramMultisigShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         using var keyPair = privateKeys[0].ToKeyPair();
-        var txn = GetTransaction();
+        var txn = await GetTransaction();
         var pubKeyAddress = (Address)keyPair.PublicKey;
         txn.Sender = keyPair.PublicKey;
         var txnBytes = AlgoApiSerializer.SerializeMessagePack(txn);
@@ -126,7 +120,7 @@ public class KmdClientSigTest : KmdClientTestFixture
     [UnityTest]
     public IEnumerator SignTransactionShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var txn = AlgoApiSerializer.SerializeMessagePack(GetTransaction());
+        var txn = AlgoApiSerializer.SerializeMessagePack(await GetTransaction());
         Ed25519.PublicKey pk = privateKeys[0].ToPublicKey();
         var signResponse = await kmd.SignTransaction(
             pk,
@@ -140,7 +134,7 @@ public class KmdClientSigTest : KmdClientTestFixture
     [UnityTest]
     public IEnumerator SignProgramShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var txn = AlgoApiSerializer.SerializeMessagePack(GetTransaction());
+        var txn = AlgoApiSerializer.SerializeMessagePack(await GetTransaction());
         Ed25519.PublicKey pk = privateKeys[0].ToPublicKey();
         var signResponse = await kmd.SignProgram(pk, txn, walletHandleToken, WalletPassword);
         AssertResponseSuccess(signResponse);

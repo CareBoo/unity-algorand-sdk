@@ -141,7 +141,7 @@ public class AlgodClientTest : AlgoApiClientTestFixture
     [UnityTest]
     public IEnumerator GetTransactionParamsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var response = await algod.GetTransactionParams();
+        var response = await algod.GetSuggestedParams();
         Debug.Log(response.Raw.GetText());
         AssertResponseSuccess(response);
     });

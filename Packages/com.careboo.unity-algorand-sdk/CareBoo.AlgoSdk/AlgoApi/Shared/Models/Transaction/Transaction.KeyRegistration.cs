@@ -157,23 +157,16 @@ namespace AlgoSdk
             }
 
             public KeyRegistration(
-                 ulong fee,
-                 ulong firstValidRound,
-                 Sha512_256_Hash genesisHash,
-                 ulong lastValidRound,
-                 Address sender
+                 Address sender,
+                 TransactionParams txnParams
             )
             {
                 header = new Header(
-                    fee,
-                    firstValidRound,
-                    genesisHash,
-                    lastValidRound,
                     sender,
-                    TransactionType.KeyRegistration
+                    TransactionType.KeyRegistration,
+                    txnParams
                 );
-                @params = new Params(
-                );
+                @params = new Params();
             }
 
             public void CopyTo(ref Transaction transaction)

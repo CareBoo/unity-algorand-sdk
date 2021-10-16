@@ -207,22 +207,19 @@ namespace AlgoSdk
 
 
             public Header(
-                ulong fee,
-                ulong firstValidRound,
-                Sha512_256_Hash genesisHash,
-                ulong lastValidRound,
                 Address sender,
-                TransactionType transactionType
+                TransactionType transactionType,
+                TransactionParams transactionParams
             )
             {
-                Fee = fee;
-                FirstValidRound = firstValidRound;
-                GenesisHash = genesisHash;
-                LastValidRound = lastValidRound;
+                Fee = transactionParams.FlatFee ? transactionParams.Fee : transactionParams.MinFee;
+                FirstValidRound = transactionParams.FirstValidRound;
+                GenesisHash = transactionParams.GenesisHash;
+                LastValidRound = transactionParams.LastValidRound;
                 Sender = sender;
                 TransactionType = transactionType;
 
-                GenesisId = default;
+                GenesisId = transactionParams.GenesisId;
                 Group = default;
                 Lease = default;
                 Note = default;

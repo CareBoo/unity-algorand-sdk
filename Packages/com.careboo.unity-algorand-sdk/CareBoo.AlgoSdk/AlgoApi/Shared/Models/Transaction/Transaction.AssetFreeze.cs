@@ -118,23 +118,17 @@ namespace AlgoSdk
             }
 
             public AssetFreeze(
-                ulong fee,
-                ulong firstValidRound,
-                Sha512_256_Hash genesisHash,
-                ulong lastValidRound,
                 Address sender,
+                TransactionParams txnParams,
                 Address freezeAccount,
                 ulong freezeAsset,
                 bool assetFrozen
             )
             {
                 header = new Header(
-                    fee,
-                    firstValidRound,
-                    genesisHash,
-                    lastValidRound,
                     sender,
-                    TransactionType.AssetFreeze
+                    TransactionType.AssetFreeze,
+                    txnParams
                 );
                 @params = new Params(
                     freezeAccount,

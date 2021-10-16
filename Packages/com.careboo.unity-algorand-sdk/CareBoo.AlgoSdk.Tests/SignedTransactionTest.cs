@@ -1,5 +1,4 @@
 using AlgoSdk;
-using AlgoSdk.Crypto;
 using NUnit.Framework;
 using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
@@ -21,11 +20,16 @@ public class SignedTransactionTest
         var seed = AlgoSdk.Crypto.Random.Bytes<PrivateKey>();
         using var kp = seed.ToKeyPair();
         var transaction = new Transaction.Payment(
-            fee: 40000,
-            firstValidRound: 123,
-            genesisHash: AlgoSdk.Crypto.Random.Bytes<Sha512_256_Hash>(),
-            lastValidRound: 124,
             sender: (Address)kp.PublicKey,
+            txnParams: new TransactionParams
+            {
+                ConsensusVersion = "https://github.com/algorandfoundation/specs/tree/abc54f79f9ad679d2d22f0fb9909fb005c16f8a1",
+                Fee = 0,
+                GenesisHash = "m0XImxCpIDneMMenkOlyixCtRKRVd0mbH8vV/QLYB1U=",
+                GenesisId = "sandnet-v1",
+                MinFee = 1000,
+                PreviousRound = 45666234
+            },
             receiver: AlgoSdk.Crypto.Random.Bytes<Address>().GenerateCheckSum(),
             amount: 1000000);
         SignedTransaction signedTransaction = transaction.Sign(kp.SecretKey);

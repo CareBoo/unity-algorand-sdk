@@ -32,7 +32,7 @@ namespace AlgoSdk
         UniTask<AlgoApiResponse<TealCompilationResult>> TealCompile(string source);
         UniTask<AlgoApiResponse<DryrunResults>> TealDryrun(Optional<DryrunRequest> request = default);
         UniTask<AlgoApiResponse<TransactionIdResponse>> SendTransaction(SignedTransaction rawTxn);
-        UniTask<AlgoApiResponse<TransactionParams>> GetTransactionParams();
+        UniTask<AlgoApiResponse<TransactionParams>> GetSuggestedParams();
         UniTask<AlgoApiResponse<Version>> GetVersions();
     }
 }
