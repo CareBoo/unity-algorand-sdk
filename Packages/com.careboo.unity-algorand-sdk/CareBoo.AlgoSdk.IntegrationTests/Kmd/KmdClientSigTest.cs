@@ -54,7 +54,7 @@ public class KmdClientSigTest : KmdClientTestFixture
     protected async UniTask<Transaction> GetTransaction()
     {
         var txnParams = (await algod.GetSuggestedParams()).Payload;
-        return new PaymentTxn(
+        return Transaction.Payment(
             sender: msigAddress,
             txnParams: txnParams,
             receiver: AlgoSdk.Crypto.Random.Bytes<Address>().GenerateCheckSum(),
