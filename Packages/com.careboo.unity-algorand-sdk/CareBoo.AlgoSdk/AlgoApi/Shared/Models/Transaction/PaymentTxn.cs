@@ -25,6 +25,21 @@ namespace AlgoSdk
             get => PaymentParams.CloseRemainderTo;
             set => PaymentParams.CloseRemainderTo = value;
         }
+
+        public static PaymentTxn Payment(
+            Address sender,
+            TransactionParams txnParams,
+            Address receiver,
+            ulong amount
+        )
+        {
+            return new PaymentTxn(
+                sender,
+                txnParams,
+                receiver,
+                amount
+            );
+        }
     }
 
     public struct PaymentTxn
