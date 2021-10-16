@@ -39,6 +39,53 @@ namespace AlgoSdk
             get => AssetTransferParams.AssetCloseTo;
             set => AssetTransferParams.AssetCloseTo = value;
         }
+
+        public static AssetTransferTxn AssetTransfer(
+            Address sender,
+            TransactionParams txnParams,
+            ulong xferAsset,
+            ulong assetAmount,
+            Address assetSender,
+            Address assetReceiver
+        )
+        {
+            return new AssetTransferTxn(
+                sender,
+                txnParams,
+                xferAsset,
+                assetAmount,
+                assetSender,
+                assetReceiver
+            );
+        }
+
+        public static AssetTransferTxn AssetAccept(
+            Address sender,
+            TransactionParams txnParams,
+            ulong xferAsset
+        )
+        {
+            return new AssetTransferTxn(sender, txnParams, xferAsset);
+        }
+
+        public static AssetTransferTxn AssetClawback(
+            Address clawbackAccount,
+            TransactionParams txnParams,
+            ulong xferAsset,
+            ulong assetAmount,
+            Address assetSender,
+            Address assetReceiver
+        )
+        {
+            return new AssetTransferTxn(
+                clawbackAccount,
+                txnParams,
+                xferAsset,
+                assetAmount,
+                assetSender,
+                assetReceiver
+            );
+        }
     }
 
     public struct AssetTransferTxn
@@ -152,6 +199,24 @@ namespace AlgoSdk
         public AssetTransferTxn(
             Address sender,
             TransactionParams txnParams,
+            ulong xferAsset
+        )
+        {
+            header = new TransactionHeader(
+                sender,
+                TransactionType.AssetTransfer,
+                txnParams
+            );
+            @params = new Params(
+                xferAsset,
+                sender,
+                sender
+            );
+        }
+
+        public AssetTransferTxn(
+            Address sender,
+            TransactionParams txnParams,
             ulong xferAsset,
             ulong assetAmount,
             Address assetSender,
@@ -223,6 +288,20 @@ namespace AlgoSdk
                 AssetAmount = assetAmount;
                 AssetSender = assetSender;
                 AssetReceiver = assetReceiver;
+                AssetCloseTo = default;
+                CloseAmount = default;
+            }
+
+            public Params(
+                ulong xferAsset,
+                Address assetSender,
+                Address assetReceiver
+            )
+            {
+                XferAsset = xferAsset;
+                AssetSender = assetSender;
+                AssetReceiver = assetReceiver;
+                AssetAmount = default;
                 AssetCloseTo = default;
                 CloseAmount = default;
             }
