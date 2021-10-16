@@ -47,7 +47,7 @@ public abstract class AlgoApiClientTestFixture
         var transactionParamsResponse = await algod.GetSuggestedParams();
         AssertResponseSuccess(transactionParamsResponse);
         var transactionParams = transactionParamsResponse.Payload;
-        var txn = new PaymentTxn(
+        var txn = Transaction.Payment(
             sender: keyPair.PublicKey,
             txnParams: transactionParams,
             receiver: "RDSRVT3X6Y5POLDIN66TSTMUYIBVOMPEOCO4Y2CYACPFKDXZPDCZGVE4PQ",
@@ -60,7 +60,6 @@ public abstract class AlgoApiClientTestFixture
         Debug.Log(System.Convert.ToBase64String(serialized.ToArray()));
         var txidResponse = await algod.SendTransaction(signedTxn);
         AssertResponseSuccess(txidResponse);
-        Debug.Log(txidResponse.GetText());
         return txidResponse.Payload;
     }
 
