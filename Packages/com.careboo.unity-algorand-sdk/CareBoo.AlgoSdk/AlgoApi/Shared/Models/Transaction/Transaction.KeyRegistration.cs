@@ -14,7 +14,7 @@ namespace AlgoSdk
         }
 
         [AlgoApiField(null, "selkey")]
-        public VrfPubkey SelectionPk
+        public FixedString128Bytes SelectionPk
         {
             get => KeyRegistrationParams.SelectionPk;
             set => KeyRegistrationParams.SelectionPk = value;
@@ -126,7 +126,7 @@ namespace AlgoSdk
                 set => @params.VotePk = value;
             }
 
-            public VrfPubkey SelectionPk
+            public FixedString128Bytes SelectionPk
             {
                 get => @params.SelectionPk;
                 set => @params.SelectionPk = value;
@@ -203,7 +203,7 @@ namespace AlgoSdk
                 public Address VotePk;
 
                 [AlgoApiField("selection-participation-key", "selkey")]
-                public VrfPubkey SelectionPk;
+                public FixedString128Bytes SelectionPk;
 
                 [AlgoApiField("vote-first-valid", "votefst")]
                 public ulong VoteFirst;
@@ -219,7 +219,7 @@ namespace AlgoSdk
 
                 public Params(
                     Address votePk,
-                    VrfPubkey selectionPk,
+                    FixedString128Bytes selectionPk,
                     ulong voteFirst,
                     ulong voteLast,
                     ulong voteKeyDilution
