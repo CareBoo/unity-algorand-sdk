@@ -22,10 +22,10 @@ namespace AlgoSdk
         public bool IsFrozen;
 
         [AlgoApiField("opted-in-at-round", null)]
-        public Optional<ulong> OptedInAtRound;
+        public ulong OptedInAtRound;
 
         [AlgoApiField("opted-out-at-round", null)]
-        public Optional<ulong> OptedOutAtRound;
+        public ulong OptedOutAtRound;
 
         public bool Equals(AssetHolding other)
         {

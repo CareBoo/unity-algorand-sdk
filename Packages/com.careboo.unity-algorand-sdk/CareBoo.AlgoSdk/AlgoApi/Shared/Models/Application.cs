@@ -7,13 +7,13 @@ namespace AlgoSdk
         : IEquatable<Application>
     {
         [AlgoApiField("created-at-round", null)]
-        public Optional<ulong> CreatedAtRound;
+        public ulong CreatedAtRound;
 
         [AlgoApiField("deleted", null)]
         public Optional<bool> Deleted;
 
         [AlgoApiField("deleted-at-round", null)]
-        public Optional<ulong> DeletedAtRound;
+        public ulong DeletedAtRound;
 
         [AlgoApiField("id", null)]
         public ulong Id;

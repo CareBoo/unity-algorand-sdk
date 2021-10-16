@@ -5,11 +5,6 @@ namespace AlgoSdk
 {
     [AlgoApiFormatter(typeof(OptionalFormatter<bool>))]
     [AlgoApiFormatter(typeof(OptionalFormatter<ulong>))]
-    [AlgoApiFormatter(typeof(OptionalFormatter<uint>))]
-    [AlgoApiFormatter(typeof(OptionalFormatter<byte>))]
-    [AlgoApiFormatter(typeof(OptionalFormatter<Address>))]
-    [AlgoApiFormatter(typeof(OptionalFormatter<AccountParticipation>))]
-    [AlgoApiFormatter(typeof(OptionalFormatter<StateSchema>))]
     public struct Optional<T>
         : IEquatable<Optional<T>>
         where T : struct, IEquatable<T>

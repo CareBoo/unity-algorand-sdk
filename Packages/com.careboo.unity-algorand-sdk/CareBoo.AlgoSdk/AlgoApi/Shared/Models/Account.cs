@@ -20,16 +20,16 @@ namespace AlgoSdk
         public ApplicationLocalState[] ApplicationsLocalState;
 
         [AlgoApiField("apps-total-extra-pages", null)]
-        public Optional<ulong> ApplicationsTotalExtraPages;
+        public ulong ApplicationsTotalExtraPages;
 
         [AlgoApiField("apps-total-schema", null)]
-        public Optional<StateSchema> ApplicationsTotalSchema;
+        public StateSchema ApplicationsTotalSchema;
 
         [AlgoApiField("assets", null)]
         public AssetHolding[] Assets;
 
         [AlgoApiField("auth-addr", null)]
-        public Optional<Address> AuthAddress;
+        public Address AuthAddress;
 
         [AlgoApiField("closed-at-round", null, readOnly: true)]
         public ulong ClosedAtRound;
@@ -47,13 +47,13 @@ namespace AlgoSdk
         public Optional<bool> Deleted;
 
         [AlgoApiField("participation", null)]
-        public Optional<AccountParticipation> Participation;
+        public Transaction.KeyRegistration.Params Participation;
 
         [AlgoApiField("pending-rewards", null)]
         public ulong PendingRewards;
 
         [AlgoApiField("reward-base", null)]
-        public Optional<ulong> RewardBase;
+        public ulong RewardBase;
 
         [AlgoApiField("rewards", null)]
         public ulong Rewards;
