@@ -44,15 +44,12 @@ public abstract class AlgoApiClientTestFixture
         using var keyPair = AccountMnemonic
             .ToPrivateKey()
             .ToKeyPair();
-        var transactionParamsResponse = await algod.GetTransactionParams();
+        var transactionParamsResponse = await algod.GetSuggestedParams();
         AssertResponseSuccess(transactionParamsResponse);
         var transactionParams = transactionParamsResponse.Payload;
         var txn = new Transaction.Payment(
-            fee: transactionParams.MinFee,
-            firstValidRound: transactionParams.LastRound + 1,
-            genesisHash: transactionParams.GenesisHash,
-            lastValidRound: transactionParams.LastRound + 1001,
             sender: keyPair.PublicKey,
+            txnParams: transactionParams,
             receiver: "RDSRVT3X6Y5POLDIN66TSTMUYIBVOMPEOCO4Y2CYACPFKDXZPDCZGVE4PQ",
             amount: amt
         );

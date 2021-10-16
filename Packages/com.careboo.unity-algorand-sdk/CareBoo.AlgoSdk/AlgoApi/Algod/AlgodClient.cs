@@ -197,7 +197,7 @@ namespace AlgoSdk
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<TransactionParams>> GetTransactionParams()
+        public async UniTask<AlgoApiResponse<TransactionParams>> GetSuggestedParams()
         {
             return await this
                 .Get("/v2/transactions/params")

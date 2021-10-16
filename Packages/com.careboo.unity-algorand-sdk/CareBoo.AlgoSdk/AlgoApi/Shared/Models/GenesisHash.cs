@@ -2,6 +2,7 @@ using System;
 using AlgoSdk.Crypto;
 using AlgoSdk.Formatters;
 using AlgoSdk.LowLevel;
+using Unity.Collections;
 
 namespace AlgoSdk
 {
@@ -31,6 +32,14 @@ namespace AlgoSdk
         public static implicit operator GenesisHash(Sha512_256_Hash hash)
         {
             return new GenesisHash { hash = hash };
+        }
+
+        public static implicit operator GenesisHash(string s)
+        {
+            GenesisHash result = default;
+            FixedString64Bytes fs = s;
+            result.CopyFromBase64(fs);
+            return result;
         }
     }
 }
