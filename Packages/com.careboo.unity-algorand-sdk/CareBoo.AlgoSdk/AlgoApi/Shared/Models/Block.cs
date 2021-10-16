@@ -102,21 +102,21 @@ namespace AlgoSdk
         }
 
         [AlgoApiField(null, "nextyes")]
-        public Optional<ulong> NextProtocolApprovals
+        public ulong NextProtocolApprovals
         {
             get => UpgradeState.NextProtocolApprovals;
             set => UpgradeState.NextProtocolApprovals = value;
         }
 
         [AlgoApiField(null, "nextswitch")]
-        public Optional<ulong> NextProtocolSwitchOn
+        public ulong NextProtocolSwitchOn
         {
             get => UpgradeState.NextProtocolSwitchOn;
             set => UpgradeState.NextProtocolSwitchOn = value;
         }
 
         [AlgoApiField(null, "nextbefore")]
-        public Optional<ulong> NextProtocolVoteBefore
+        public ulong NextProtocolVoteBefore
         {
             get => UpgradeState.NextProtocolVoteBefore;
             set => UpgradeState.NextProtocolVoteBefore = value;
@@ -130,7 +130,7 @@ namespace AlgoSdk
         }
 
         [AlgoApiField(null, "upgradedelay")]
-        public Optional<ulong> UpgradeDelay
+        public ulong UpgradeDelay
         {
             get => UpgradeVote.UpgradeDelay;
             set => UpgradeVote.UpgradeDelay = value;

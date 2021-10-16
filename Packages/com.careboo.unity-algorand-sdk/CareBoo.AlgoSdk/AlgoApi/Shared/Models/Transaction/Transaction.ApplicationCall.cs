@@ -62,21 +62,21 @@ namespace AlgoSdk
         }
 
         [AlgoApiField(null, "apgs")]
-        public Optional<StateSchema> GlobalStateSchema
+        public StateSchema GlobalStateSchema
         {
             get => ApplicationCallParams.GlobalStateSchema;
             set => ApplicationCallParams.GlobalStateSchema = value;
         }
 
         [AlgoApiField(null, "apls")]
-        public Optional<StateSchema> LocalStateSchema
+        public StateSchema LocalStateSchema
         {
             get => ApplicationCallParams.LocalStateSchema;
             set => ApplicationCallParams.LocalStateSchema = value;
         }
 
         [AlgoApiField(null, "apep")]
-        public Optional<ulong> ExtraProgramPages
+        public ulong ExtraProgramPages
         {
             get => ApplicationCallParams.ExtraProgramPages;
             set => ApplicationCallParams.ExtraProgramPages = value;
@@ -202,19 +202,19 @@ namespace AlgoSdk
                 set => @params.ForeignAssets = value;
             }
 
-            public Optional<StateSchema> GlobalStateSchema
+            public StateSchema GlobalStateSchema
             {
                 get => @params.GlobalStateSchema;
                 set => @params.GlobalStateSchema = value;
             }
 
-            public Optional<StateSchema> LocalStateSchema
+            public StateSchema LocalStateSchema
             {
                 get => @params.LocalStateSchema;
                 set => @params.LocalStateSchema = value;
             }
 
-            public Optional<ulong> ExtraProgramPages
+            public ulong ExtraProgramPages
             {
                 get => @params.ExtraProgramPages;
                 set => @params.ExtraProgramPages = value;
@@ -286,13 +286,13 @@ namespace AlgoSdk
                 public Address[] ForeignAssets;
 
                 [AlgoApiField("global-state-schema", "global-state-schema")]
-                public Optional<StateSchema> GlobalStateSchema;
+                public StateSchema GlobalStateSchema;
 
                 [AlgoApiField("local-state-schema", "local-state-schema")]
-                public Optional<StateSchema> LocalStateSchema;
+                public StateSchema LocalStateSchema;
 
                 [AlgoApiField("extra-program-pages", "epp")]
-                public Optional<ulong> ExtraProgramPages;
+                public ulong ExtraProgramPages;
 
                 public Params(
                     ulong appId,

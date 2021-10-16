@@ -14,13 +14,13 @@ namespace AlgoSdk
         public string Message;
 
         [AlgoApiField("multisig_version", null)]
-        public Optional<byte> MultisigVersion;
+        public byte MultisigVersion;
 
         [AlgoApiField("pks", null)]
         public Ed25519.PublicKey[] Pks;
 
         [AlgoApiField("threshold", null)]
-        public Optional<byte> Threshold;
+        public byte Threshold;
 
         public bool Equals(ExportMultisigResponse other)
         {

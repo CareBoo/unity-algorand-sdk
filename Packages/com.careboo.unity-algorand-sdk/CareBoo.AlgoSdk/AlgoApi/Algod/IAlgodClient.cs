@@ -5,10 +5,10 @@ namespace AlgoSdk
 {
     public interface IAlgodClient : IAlgoApiClient
     {
-        UniTask<AlgoApiResponse> GetGenesisInformation();
+        UniTask<AlgoApiResponse<AlgoApiObject>> GetGenesisInformation();
         UniTask<AlgoApiResponse> GetHealth();
         UniTask<AlgoApiResponse> GetMetrics();
-        UniTask<AlgoApiResponse> GetSwaggerSpec();
+        UniTask<AlgoApiResponse<AlgoApiObject>> GetSwaggerSpec();
         UniTask<AlgoApiResponse<Account>> GetAccountInformation(Address accountAddress);
         UniTask<AlgoApiResponse<PendingTransactions>> GetPendingTransactions(ulong max = 0);
         UniTask<AlgoApiResponse<PendingTransactions>> GetPendingTransactions(Address accountAddress, ulong max = 0);

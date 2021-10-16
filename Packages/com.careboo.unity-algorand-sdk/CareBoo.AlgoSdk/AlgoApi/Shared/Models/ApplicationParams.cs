@@ -16,16 +16,16 @@ namespace AlgoSdk
         public Address Creator;
 
         [AlgoApiField("extra-program-pages", null)]
-        public Optional<ulong> ExtraProgramPages;
+        public ulong ExtraProgramPages;
 
         [AlgoApiField("global-state", null)]
         public TealKeyValue[] GlobalState;
 
         [AlgoApiField("global-state-schema", null)]
-        public Optional<StateSchema> GlobalStateSchema;
+        public StateSchema GlobalStateSchema;
 
         [AlgoApiField("local-state-schema", null)]
-        public Optional<StateSchema> LocalStateSchema;
+        public StateSchema LocalStateSchema;
 
         public bool Equals(ApplicationParams other)
         {

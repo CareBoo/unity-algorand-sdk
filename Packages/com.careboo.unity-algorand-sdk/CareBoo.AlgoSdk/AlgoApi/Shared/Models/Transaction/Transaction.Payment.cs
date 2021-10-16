@@ -117,7 +117,7 @@ namespace AlgoSdk
                 set => @params.CloseRemainderTo = value;
             }
 
-            public Optional<ulong> CloseAmount
+            public ulong CloseAmount
             {
                 get => @params.CloseAmount;
                 set => @params.CloseAmount = value;
@@ -174,7 +174,7 @@ namespace AlgoSdk
                 public Address CloseRemainderTo;
 
                 [AlgoApiField("close-amount", "close-amount")]
-                public Optional<ulong> CloseAmount;
+                public ulong CloseAmount;
 
                 public Params(
                      Address receiver,

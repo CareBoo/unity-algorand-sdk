@@ -21,7 +21,7 @@ namespace AlgoSdk
 
         public string TokenHeader => "X-Algo-API-Token";
 
-        public async UniTask<AlgoApiResponse> GetGenesisInformation()
+        public async UniTask<AlgoApiResponse<AlgoApiObject>> GetGenesisInformation()
         {
             return await this
                 .Get("/genesis")
@@ -42,7 +42,7 @@ namespace AlgoSdk
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse> GetSwaggerSpec()
+        public async UniTask<AlgoApiResponse<AlgoApiObject>> GetSwaggerSpec()
         {
             return await this
                 .Get("/swagger.json")
@@ -133,14 +133,14 @@ namespace AlgoSdk
             Optional<bool> noWait = default,
             Optional<bool> roundLastValid = default)
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Temp)
+            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
                 .Add("fee", fee, (ulong)1000)
                 .Add("key-dilution", keyDilution)
                 .Add("no-wait", noWait)
                 .Add("round-last-valid", roundLastValid)
                 ;
-            return await this
-                .Post($"/v2/register-participation-keys/{accountAddress}{queryBuilder}")
+            var endpoint = $"/v2/register-participation-keys/{accountAddress}{queryBuilder}";
+            return await AlgoApiRequest.Post(this.GetUrl(endpoint))
                 .Send();
         }
 

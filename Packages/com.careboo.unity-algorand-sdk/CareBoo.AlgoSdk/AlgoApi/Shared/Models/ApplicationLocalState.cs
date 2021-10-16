@@ -7,7 +7,7 @@ namespace AlgoSdk
         : IEquatable<ApplicationLocalState>
     {
         [AlgoApiField("closed-out-at-round", null)]
-        public Optional<ulong> ClosedOutAtRound;
+        public ulong ClosedOutAtRound;
 
         [AlgoApiField("deleted", null)]
         public Optional<bool> Deleted;
@@ -19,7 +19,7 @@ namespace AlgoSdk
         public TealKeyValue[] KeyValues;
 
         [AlgoApiField("opted-in-at-round", null)]
-        public Optional<ulong> OptedInAtRound;
+        public ulong OptedInAtRound;
 
         [AlgoApiField("schema", null)]
         public StateSchema Schema;

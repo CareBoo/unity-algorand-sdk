@@ -9,7 +9,7 @@ namespace AlgoSdk
         public Optional<bool> UpgradeApprove;
 
         [AlgoApiField("upgrade-delay", null)]
-        public Optional<ulong> UpgradeDelay;
+        public ulong UpgradeDelay;
 
         [AlgoApiField("upgrade-propose", null)]
         public Address UpgradePropose;
