@@ -88,7 +88,13 @@ namespace AlgoSdk
             OnCompletion onComplete
         )
         {
-            return new AppCallTxn(sender, txnParams, onComplete);
+            var txn = new AppCallTxn
+            {
+                header = new TransactionHeader(sender, TransactionType.ApplicationCall, txnParams),
+                OnComplete = onComplete
+            };
+            txn.Fee = txn.GetSuggestedFee(txnParams);
+            return txn;
         }
 
         public static AppCallTxn AppConfigure(
@@ -98,180 +104,178 @@ namespace AlgoSdk
             OnCompletion onComplete
         )
         {
-            return new AppCallTxn(sender, txnParams, applicationId, onComplete);
+            var txn = new AppCallTxn
+            {
+                header = new TransactionHeader(sender, TransactionType.ApplicationCall, txnParams),
+                ApplicationId = applicationId,
+                OnComplete = onComplete
+            };
+            txn.Fee = txn.GetSuggestedFee(txnParams);
+            return txn;
         }
     }
 
+    [AlgoApiObject]
     public struct AppCallTxn
           : ITransaction
           , IEquatable<AppCallTxn>
     {
-        TransactionHeader header;
+        internal TransactionHeader header;
 
         Params @params;
 
-        public TransactionHeader Header
-        {
-            get => header;
-            set => header = value;
-        }
-
+        [AlgoApiField("fee", "fee")]
         public ulong Fee
         {
             get => header.Fee;
             set => header.Fee = value;
         }
 
+        [AlgoApiField("first-valid", "fv")]
         public ulong FirstValidRound
         {
             get => header.FirstValidRound;
             set => header.FirstValidRound = value;
         }
+
+        [AlgoApiField("genesis-hash", "gh")]
         public GenesisHash GenesisHash
         {
             get => header.GenesisHash;
             set => header.GenesisHash = value;
         }
+
+        [AlgoApiField("last-valid", "lv")]
         public ulong LastValidRound
         {
             get => header.LastValidRound;
             set => header.LastValidRound = value;
         }
 
+        [AlgoApiField("sender", "snd")]
         public Address Sender
         {
             get => header.Sender;
             set => header.Sender = value;
         }
 
+        [AlgoApiField("tx-type", "type")]
+        public TransactionType TransactionType
+        {
+            get => TransactionType.ApplicationCall;
+            internal set => header.TransactionType = TransactionType.ApplicationCall;
+        }
+
+        [AlgoApiField("genesis-id", "gen")]
         public FixedString32Bytes GenesisId
         {
             get => header.GenesisId;
             set => header.GenesisId = value;
         }
 
+        [AlgoApiField("group", "grp")]
         public Address Group
         {
             get => header.Group;
             set => header.Group = value;
         }
 
+        [AlgoApiField("lease", "lx")]
         public Address Lease
         {
             get => header.Lease;
             set => header.Lease = value;
         }
 
+        [AlgoApiField("note", "note")]
         public byte[] Note
         {
             get => header.Note;
             set => header.Note = value;
         }
 
+        [AlgoApiField("rekey-to", "rekey")]
         public Address RekeyTo
         {
             get => header.RekeyTo;
             set => header.RekeyTo = value;
         }
 
+        [AlgoApiField(null, "apid")]
         public ulong ApplicationId
         {
             get => @params.ApplicationId;
             set => @params.ApplicationId = value;
         }
 
+        [AlgoApiField("on-completion", "apan")]
         public OnCompletion OnComplete
         {
             get => @params.OnComplete;
             set => @params.OnComplete = value;
         }
 
+        [AlgoApiField(null, "apat")]
         public Address[] Accounts
         {
             get => @params.Accounts;
             set => @params.Accounts = value;
         }
 
+        [AlgoApiField(null, "apap")]
         public byte[] ApprovalProgram
         {
             get => @params.ApprovalProgram;
             set => @params.ApprovalProgram = value;
         }
 
+        [AlgoApiField(null, "apaa")]
         public byte[] AppArguments
         {
             get => @params.AppArguments;
             set => @params.AppArguments = value;
         }
 
+        [AlgoApiField(null, "apsu")]
         public byte[] ClearStateProgram
         {
             get => @params.ClearStateProgram;
             set => @params.ClearStateProgram = value;
         }
 
+        [AlgoApiField(null, "apfa")]
         public Address[] ForeignApps
         {
             get => @params.ForeignApps;
             set => @params.ForeignApps = value;
         }
 
+        [AlgoApiField(null, "apas")]
         public Address[] ForeignAssets
         {
             get => @params.ForeignAssets;
             set => @params.ForeignAssets = value;
         }
 
+        [AlgoApiField(null, "apgs")]
         public StateSchema GlobalStateSchema
         {
             get => @params.GlobalStateSchema;
             set => @params.GlobalStateSchema = value;
         }
 
+        [AlgoApiField(null, "apls")]
         public StateSchema LocalStateSchema
         {
             get => @params.LocalStateSchema;
             set => @params.LocalStateSchema = value;
         }
 
+        [AlgoApiField(null, "apep")]
         public ulong ExtraProgramPages
         {
             get => @params.ExtraProgramPages;
             set => @params.ExtraProgramPages = value;
-        }
-
-        public AppCallTxn(
-            Address sender,
-            TransactionParams txnParams,
-            ulong appId,
-            OnCompletion onComplete
-        )
-        {
-            header = new TransactionHeader(
-                sender,
-                TransactionType.ApplicationCall,
-                txnParams
-            );
-            @params = new Params(
-                appId,
-                onComplete
-            );
-        }
-
-        public AppCallTxn(
-            Address sender,
-            TransactionParams txnParams,
-            OnCompletion onComplete
-        )
-        {
-            header = new TransactionHeader(
-                sender,
-                TransactionType.ApplicationCall,
-                txnParams
-            );
-            @params = new Params(
-                onComplete
-            );
         }
 
         public void CopyTo(ref Transaction transaction)
@@ -288,7 +292,7 @@ namespace AlgoSdk
 
         public bool Equals(AppCallTxn other)
         {
-            return header.Equals(other.Header)
+            return header.Equals(other.header)
                 && @params.Equals(other.@params)
                 ;
         }
@@ -329,41 +333,6 @@ namespace AlgoSdk
 
             [AlgoApiField("extra-program-pages", "epp")]
             public ulong ExtraProgramPages;
-
-            public Params(
-                ulong appId,
-                OnCompletion onComplete
-            )
-            {
-                ApplicationId = appId;
-                OnComplete = onComplete;
-                Accounts = default;
-                ApprovalProgram = default;
-                AppArguments = default;
-                ClearStateProgram = default;
-                ForeignApps = default;
-                ForeignAssets = default;
-                GlobalStateSchema = default;
-                LocalStateSchema = default;
-                ExtraProgramPages = default;
-            }
-
-            public Params(
-                OnCompletion onComplete
-            )
-            {
-                ApplicationId = default;
-                OnComplete = onComplete;
-                Accounts = default;
-                ApprovalProgram = default;
-                AppArguments = default;
-                ClearStateProgram = default;
-                ForeignApps = default;
-                ForeignAssets = default;
-                GlobalStateSchema = default;
-                LocalStateSchema = default;
-                ExtraProgramPages = default;
-            }
 
             public bool Equals(Params other)
             {

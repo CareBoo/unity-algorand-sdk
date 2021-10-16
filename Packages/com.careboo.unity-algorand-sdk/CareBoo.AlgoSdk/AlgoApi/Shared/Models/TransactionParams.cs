@@ -34,13 +34,19 @@ namespace AlgoSdk
             }
         }
 
-        public bool FlatFee;
+        public bool FlatFee
+        {
+            get => !noFlatFee;
+            set => noFlatFee = !value;
+        }
 
         public ulong FirstValidRound;
 
         public ulong LastValidRound;
 
         ulong prevRound;
+
+        bool noFlatFee;
 
         public bool Equals(TransactionParams other)
         {
