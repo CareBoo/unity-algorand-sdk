@@ -158,7 +158,7 @@ namespace AlgoSdk
             AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.TealValue), new AlgoSdk.MsgPack.Formatters.TealValueFormatter());
             AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.TealValueType), new AlgoSdk.Formatters.ByteEnumFormatter<AlgoSdk.TealValueType>());
             AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.TransactionType), new AlgoSdk.Formatters.TransactionTypeFormatter());
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.VrfPubKey), new AlgoSdk.Formatters.ByteArrayFormatter());
+            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.VrfPubKey), new AlgoSdk.Formatters.ByteArrayFormatter<AlgoSdk.VrfPubKey>());
         }
     }
 }
