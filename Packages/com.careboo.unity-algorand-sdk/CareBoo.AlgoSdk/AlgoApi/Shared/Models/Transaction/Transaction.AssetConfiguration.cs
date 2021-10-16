@@ -105,22 +105,16 @@ namespace AlgoSdk
             }
 
             public AssetConfiguration(
-                ulong fee,
-                ulong firstValidRound,
-                Sha512_256_Hash genesisHash,
-                ulong lastValidRound,
                 Address sender,
+                TransactionParams txnParams,
                 ulong configAsset,
                 AssetParams assetParams
             )
             {
                 header = new Header(
-                    fee,
-                    firstValidRound,
-                    genesisHash,
-                    lastValidRound,
                     sender,
-                    TransactionType.AssetConfiguration
+                    TransactionType.AssetConfiguration,
+                    txnParams
                 );
                 @params = new Params(
                     configAsset,

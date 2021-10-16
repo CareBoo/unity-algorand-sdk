@@ -124,22 +124,16 @@ namespace AlgoSdk
             }
 
             public Payment(
-                 ulong fee,
-                 ulong firstValidRound,
-                 Sha512_256_Hash genesisHash,
-                 ulong lastValidRound,
                  Address sender,
+                 TransactionParams txnParams,
                  Address receiver,
                  ulong amount
             )
             {
                 header = new Header(
-                    fee,
-                    firstValidRound,
-                    genesisHash,
-                    lastValidRound,
                     sender,
-                    TransactionType.Payment
+                    TransactionType.Payment,
+                    txnParams
                 );
                 @params = new Params(
                      receiver,

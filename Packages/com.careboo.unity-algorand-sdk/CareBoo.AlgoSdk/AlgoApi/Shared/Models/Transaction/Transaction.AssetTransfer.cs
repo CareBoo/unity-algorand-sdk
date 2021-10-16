@@ -150,11 +150,8 @@ namespace AlgoSdk
             }
 
             public AssetTransfer(
-                ulong fee,
-                ulong firstValidRound,
-                Sha512_256_Hash genesisHash,
-                ulong lastValidRound,
                 Address sender,
+                TransactionParams txnParams,
                 ulong xferAsset,
                 ulong assetAmount,
                 Address assetSender,
@@ -162,12 +159,9 @@ namespace AlgoSdk
             )
             {
                 header = new Header(
-                    fee,
-                    firstValidRound,
-                    genesisHash,
-                    lastValidRound,
                     sender,
-                    TransactionType.AssetTransfer
+                    TransactionType.AssetTransfer,
+                    txnParams
                 );
                 @params = new Params(
                     xferAsset,

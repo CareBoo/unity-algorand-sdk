@@ -8,7 +8,7 @@ namespace AlgoSdk
         : IEquatable<TransactionParams>
     {
         [AlgoApiField("consensus-version", null)]
-        public FixedString128Bytes ConsensusVersion;
+        public string ConsensusVersion;
 
         [AlgoApiField("fee", null)]
         public ulong Fee;
@@ -19,11 +19,28 @@ namespace AlgoSdk
         [AlgoApiField("genesis-id", null)]
         public FixedString32Bytes GenesisId;
 
-        [AlgoApiField("last-round", null)]
-        public ulong LastRound;
-
         [AlgoApiField("min-fee", null)]
         public ulong MinFee;
+
+        [AlgoApiField("last-round", null)]
+        public ulong PreviousRound
+        {
+            get => prevRound;
+            set
+            {
+                prevRound = value;
+                FirstValidRound = value;
+                LastValidRound = value + 1000;
+            }
+        }
+
+        public bool FlatFee;
+
+        public ulong FirstValidRound;
+
+        public ulong LastValidRound;
+
+        ulong prevRound;
 
         public bool Equals(TransactionParams other)
         {
@@ -31,8 +48,10 @@ namespace AlgoSdk
                 && Fee.Equals(other.Fee)
                 && GenesisHash.Equals(other.GenesisHash)
                 && GenesisId.Equals(other.GenesisId)
-                && LastRound.Equals(other.LastRound)
                 && MinFee.Equals(other.MinFee)
+                && FirstValidRound.Equals(other.FirstValidRound)
+                && LastValidRound.Equals(other.LastValidRound)
+                && FlatFee.Equals(other.FlatFee)
                 ;
         }
     }

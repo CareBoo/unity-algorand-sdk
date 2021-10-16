@@ -222,11 +222,8 @@ namespace AlgoSdk
             }
 
             public ApplicationCall(
-                ulong fee,
-                ulong firstValidRound,
-                Sha512_256_Hash genesisHash,
-                ulong lastValidRound,
                 Address sender,
+                TransactionParams txnParams,
                 Address freezeAccount,
                 ulong freezeAsset,
                 bool assetFrozen,
@@ -235,12 +232,9 @@ namespace AlgoSdk
             )
             {
                 header = new Header(
-                    fee,
-                    firstValidRound,
-                    genesisHash,
-                    lastValidRound,
                     sender,
-                    TransactionType.ApplicationCall
+                    TransactionType.ApplicationCall,
+                    txnParams
                 );
                 @params = new Params(
                     appId,
