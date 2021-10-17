@@ -56,7 +56,7 @@ public class KmdClientSigTest : KmdClientTestFixture
         return Transaction.Payment(
             sender: msigAddress,
             txnParams: txnParams,
-            receiver: AlgoSdk.Crypto.Random.Bytes<Address>().GenerateCheckSum(),
+            receiver: AlgoSdk.Crypto.Random.Bytes<Address>(),
             amount: 30000
         );
     }

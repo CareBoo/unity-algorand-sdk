@@ -50,13 +50,13 @@ namespace AlgoSdk
             return returnArray;
         }
 
-        public static unsafe void ToBytes<TByteArray, TString>(in TString s, ref TByteArray bytes)
+        public static unsafe void ToBytes<TByteArray, TString>(TString s, ref TByteArray bytes)
             where TByteArray : struct, IByteArray
             where TString : struct, IUTF8Bytes, INativeList<byte>
         {
             if (s.Length == 0)
             {
-                throw new ArgumentNullException(nameof(s));
+                throw new ArgumentException("argument must have a length > 0", nameof(s));
             }
 
             var length = s.Length;

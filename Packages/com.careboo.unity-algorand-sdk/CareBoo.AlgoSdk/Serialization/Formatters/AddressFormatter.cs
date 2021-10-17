@@ -20,7 +20,7 @@ namespace AlgoSdk.Formatters
             Address result = default;
             for (var i = 0; i < bytes.Length; i++)
                 result[i] = bytes[i];
-            return result.GenerateCheckSum();
+            return result;
         }
 
         public void Serialize(ref JsonWriter writer, Address value)
