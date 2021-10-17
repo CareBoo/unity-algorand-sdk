@@ -39,10 +39,10 @@ jobs:
         uses: actions/cache@v2.1.1
         with:
           path: Library
-          key: Library2-${{ matrix.targetPlatform }}-${{ steps.get-date.outputs.date }}
+          key: Library-${{ matrix.targetPlatform }}-${{ steps.get-date.outputs.date }}
           restore-keys: |
-            Library2-${{ matrix.targetPlatform }}-
-            Library2-
+            Library-${{ matrix.targetPlatform }}-
+            Library-
       - run: ./scripts/coverageAssemblyFilters
         id: assemblyFilters
       - uses: game-ci/unity-test-runner@v2
