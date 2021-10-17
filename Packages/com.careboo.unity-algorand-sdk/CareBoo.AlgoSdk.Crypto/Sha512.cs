@@ -41,10 +41,9 @@ namespace AlgoSdk.Crypto
         }
 
         public unsafe static Sha512_256_Hash Hash256Truncated<TByteArray>(in TByteArray bytes)
-            where TByteArray : unmanaged, IByteArray
+            where TByteArray : struct, IByteArray
         {
-            fixed (void* bytesPtr = &bytes)
-                return Hash256Truncated(bytesPtr, bytes.Length);
+            return Hash256Truncated(bytes.GetUnsafePtr(), bytes.Length);
         }
 
         public unsafe static Sha512_256_Hash Hash256Truncated(NativeArray<byte> bytes)

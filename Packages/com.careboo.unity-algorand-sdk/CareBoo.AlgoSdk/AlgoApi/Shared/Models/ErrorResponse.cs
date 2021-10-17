@@ -11,22 +11,22 @@ namespace AlgoSdk
 
         public string Message;
 
-        public ErrorResponse(string message, string data)
-        {
-            Message = message;
-            Data = data;
-        }
+        public long Code;
 
-        public ErrorResponse(string message)
-            : this(message, null)
+        public ErrorResponse WithCode(long code)
         {
+            Code = code;
+            return this;
         }
 
         public bool Equals(ErrorResponse other)
         {
             return StringComparer.Equals(Data, other.Data)
                 && StringComparer.Equals(Message, other.Message)
+                && Code.Equals(other.Code)
                 ;
         }
+
+        public bool IsError => Code >= 400;
     }
 }

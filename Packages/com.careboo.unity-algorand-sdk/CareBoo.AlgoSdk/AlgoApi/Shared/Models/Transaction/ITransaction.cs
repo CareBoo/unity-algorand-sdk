@@ -1,5 +1,4 @@
 using System;
-using System.Text;
 using AlgoSdk.Crypto;
 using AlgoSdk.LowLevel;
 using Unity.Collections;
@@ -67,6 +66,13 @@ namespace AlgoSdk
             var signedTxn = txn.Sign(keyPair.SecretKey);
             using var signedBytes = AlgoApiSerializer.SerializeMessagePack(signedTxn, Allocator.Temp);
             return signedBytes.Length;
+        }
+
+        public static Sha512_256_Hash GetId<T>(this T txn)
+            where T : struct, ITransaction, IEquatable<T>
+        {
+            using var txnData = txn.ToSignatureMessage(Allocator.Temp);
+            return Sha512.Hash256Truncated(txnData);
         }
     }
 }

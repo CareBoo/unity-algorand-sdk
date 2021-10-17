@@ -21,9 +21,9 @@ namespace AlgoSdk
             contentType = completedRequest.ParseContentType();
             error = status switch
             {
-                Result.ProtocolError => AlgoApiSerializer.Deserialize<ErrorResponse>(data, contentType),
-                Result.ConnectionError => new ErrorResponse("Could not connect"),
-                Result.DataProcessingError => new ErrorResponse("Error processing data from server"),
+                Result.ProtocolError => AlgoApiSerializer.Deserialize<ErrorResponse>(data, contentType).WithCode(responseCode),
+                Result.ConnectionError => new ErrorResponse { Message = "Failed to communicate with the server", Code = responseCode },
+                Result.DataProcessingError => new ErrorResponse { Message = "Error processing data", Code = responseCode },
                 _ => default
             };
             DebugRequest(completedRequest, contentType);
@@ -40,11 +40,11 @@ namespace AlgoSdk
 
         public ErrorResponse Error => error;
 
-        public bool IsError => !error.Equals(default);
-
         public string GetText() => GetText(data, contentType);
 
+
         [Conditional("UNITY_EDITOR")]
+        [Conditional("UNITY_ALGO_SDK_DEBUG")]
         static void DebugRequest(UnityWebRequest completedRequest, ContentType contentType)
         {
             UnityEngine.Debug.Log(
@@ -79,7 +79,7 @@ namespace AlgoSdk
         {
             this.rawResponse = response;
             error = response.Error;
-            payload = response.IsError
+            payload = error.IsError
                 ? default
                 : AlgoApiSerializer.Deserialize<T>(response.Data, response.ContentType)
                 ;
@@ -103,8 +103,6 @@ namespace AlgoSdk
 
         public ErrorResponse Error => error;
 
-        public bool IsError => Raw.IsError;
-
         public AlgoApiResponse Raw => rawResponse;
 
         public byte[] Data => rawResponse.Data;
@@ -125,6 +123,12 @@ namespace AlgoSdk
         public static implicit operator AlgoApiResponse(AlgoApiResponse<T> response)
         {
             return response.rawResponse;
+        }
+
+        public void Deconstruct(out ErrorResponse error, out T payload)
+        {
+            error = this.error;
+            payload = this.payload;
         }
     }
 }

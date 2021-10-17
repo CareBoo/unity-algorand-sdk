@@ -65,14 +65,14 @@ public class KmdClientSigTest : KmdClientTestFixture
     public IEnumerator ExportMultisigShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var response = await kmd.ExportMultisig(msigAddress, walletHandleToken);
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
     });
 
     [UnityTest]
     public IEnumerator ListMultisigShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var response = await kmd.ListMultisig(walletHandleToken);
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
         var addresses = response.Payload.Addresses;
         Assert.IsTrue(addresses.Any(a => a.Equals(msigAddress)));
     });
@@ -92,7 +92,7 @@ public class KmdClientSigTest : KmdClientTestFixture
             walletHandleToken: walletHandleToken,
             walletPassword: WalletPassword
         );
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
     });
 
 
@@ -112,7 +112,7 @@ public class KmdClientSigTest : KmdClientTestFixture
             walletHandleToken: walletHandleToken,
             walletPassword: WalletPassword
         );
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
     });
 
 
@@ -127,7 +127,7 @@ public class KmdClientSigTest : KmdClientTestFixture
             walletHandleToken,
             WalletPassword
         );
-        AssertResponseSuccess(signResponse);
+        AssertOkay(signResponse.Error);
     });
 
     [UnityTest]
@@ -136,6 +136,6 @@ public class KmdClientSigTest : KmdClientTestFixture
         var txn = AlgoApiSerializer.SerializeMessagePack(await GetTransaction());
         Ed25519.PublicKey pk = privateKeys[0].ToPublicKey();
         var signResponse = await kmd.SignProgram(pk, txn, walletHandleToken, WalletPassword);
-        AssertResponseSuccess(signResponse);
+        AssertOkay(signResponse.Error);
     });
 }

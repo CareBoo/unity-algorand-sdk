@@ -12,6 +12,8 @@ namespace AlgoSdk
     {
         public static readonly byte[] SignaturePrefix = Encoding.UTF8.GetBytes("TX");
 
+        public const int MaxGroupSize = 16;
+
         public TransactionHeader HeaderParams;
 
         [AlgoApiField("payment-transaction", null, readOnly: true)]
@@ -81,6 +83,50 @@ namespace AlgoSdk
             for (var i = 0; i < data.Length; i++)
                 result[i + SignaturePrefix.Length] = data[i];
             return result;
+        }
+
+        public Sha512_256_Hash GetId()
+        {
+            using var txnData = ToSignatureMessage(Allocator.Temp);
+            return Sha512.Hash256Truncated(txnData);
+        }
+
+        public static Sha512_256_Hash GetGroupId(params Transaction[] txns)
+        {
+            if (txns == null || txns.Length == 0)
+                throw new ArgumentException("Cannot get the group id of 0 transactions", nameof(txns));
+            if (txns.Length > TransactionGroup.MaxSize)
+                throw new ArgumentException($"Cannot get the group id of a group of more than {TransactionGroup.MaxSize} transactions", nameof(txns));
+            for (var i = 0; i < txns.Length; i++)
+                txns[i].Group = default;
+            var txnMsgs = new Sha512_256_Hash[txns.Length];
+            for (var i = 0; i < txns.Length; i++)
+            {
+                txns[i].Group = default;
+                txnMsgs[i] = txns[i].GetId();
+            }
+            return GetGroupId(txnMsgs);
+        }
+
+        public static Sha512_256_Hash GetGroupId(params Sha512_256_Hash[] txns)
+        {
+            if (txns == null || txns.Length == 0)
+                throw new ArgumentException("Cannot get the group id of 0 transactions", nameof(txns));
+            if (txns.Length > TransactionGroup.MaxSize)
+                throw new ArgumentException($"Cannot get the group id of a group of more than {TransactionGroup.MaxSize} transactions", nameof(txns));
+            var group = new TransactionGroup { Txns = txns };
+            using var msgpack = AlgoApiSerializer.SerializeMessagePack(group, Allocator.Temp);
+            var data = new NativeByteArray(TransactionGroup.IdPrefix.Length + msgpack.Length, Allocator.Temp);
+            try
+            {
+                data.CopyFrom(TransactionGroup.IdPrefix, 0);
+                data.CopyFrom(msgpack.AsArray(), TransactionGroup.IdPrefix.Length);
+                return Sha512.Hash256Truncated(data);
+            }
+            finally
+            {
+                data.Dispose();
+            }
         }
     }
 }
