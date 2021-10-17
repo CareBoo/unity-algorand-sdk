@@ -1,4 +1,5 @@
 using System;
+using AlgoSdk.Crypto;
 using Unity.Collections;
 
 namespace AlgoSdk
@@ -7,68 +8,91 @@ namespace AlgoSdk
     public partial struct AssetParams
         : IEquatable<AssetParams>
     {
-        [AlgoApiField("clawback", null)]
+        [AlgoApiField("clawback", "c")]
         public Address Clawback;
 
-        [AlgoApiField("creator", null)]
+        [AlgoApiField("creator", null, readOnly: true)]
         public Address Creator;
 
-        [AlgoApiField("decimals", null)]
-        public ulong Decimals;
+        [AlgoApiField("decimals", "dc")]
+        public uint Decimals;
 
-        [AlgoApiField("default-frozen", null)]
-        public Optional<bool> DefaultFrozen;
+        [AlgoApiField("default-frozen", "df")]
+        public bool DefaultFrozen;
 
-        [AlgoApiField("freeze", null)]
+        [AlgoApiField("freeze", "f")]
         public Address Freeze;
 
-        [AlgoApiField("manager", null)]
+        [AlgoApiField("manager", "m")]
         public Address Manager;
 
-        [AlgoApiField("metadata-hash", null)]
-        public FixedString128Bytes MetadataHash;
+        [AlgoApiField("metadata-hash", "am")]
+        public Sha512_256_Hash MetadataHash;
 
-        [AlgoApiField("name", null)]
+        [AlgoApiField("name", "an")]
         public FixedString64Bytes Name;
 
-        [AlgoApiField("name-b64", null)]
-        public FixedString128Bytes NameBase64;
+        [AlgoApiField("name-b64", null, readOnly: true)]
+        public FixedString64Bytes NameBase64
+        {
+            get
+            {
+                FixedString64Bytes b64 = default;
+                Name.Utf8ToBase64(ref b64);
+                return b64;
+            }
+            set => value.Base64ToUtf8(ref Name);
+        }
 
-        [AlgoApiField("reserve", null)]
+        [AlgoApiField("reserve", "r")]
         public Address Reserve;
 
-        [AlgoApiField("total", null)]
+        [AlgoApiField("total", "t")]
         public ulong Total;
 
-        [AlgoApiField("unit-name", null)]
-        public FixedString64Bytes UnitName;
+        [AlgoApiField("unit-name", "un")]
+        public FixedString32Bytes UnitName;
 
-        [AlgoApiField("unit-name-b64", null)]
-        public FixedString128Bytes UnitNameBase64;
+        [AlgoApiField("unit-name-b64", null, readOnly: true)]
+        public FixedString32Bytes UnitNameBase64
+        {
+            get
+            {
+                FixedString32Bytes b64 = default;
+                UnitName.Utf8ToBase64(ref b64);
+                return b64;
+            }
+            set => value.Base64ToUtf8(ref UnitName);
+        }
 
-        [AlgoApiField("url", null)]
-        public FixedString512Bytes Url;
+        [AlgoApiField("url", "au")]
+        public FixedString64Bytes Url;
 
-        [AlgoApiField("url-b64", null)]
-        public FixedString512Bytes UrlBase64;
+        [AlgoApiField("url-b64", null, readOnly: true)]
+        public FixedString64Bytes UrlBase64
+        {
+            get
+            {
+                FixedString64Bytes b64 = default;
+                Url.Utf8ToBase64(ref b64);
+                return b64;
+            }
+            set => value.Base64ToUtf8(ref Url);
+        }
 
         public bool Equals(AssetParams other)
         {
             return Clawback.Equals(other.Clawback)
-                && Creator.Equals(other.Creator)
                 && Decimals.Equals(other.Decimals)
                 && DefaultFrozen.Equals(other.DefaultFrozen)
                 && Freeze.Equals(other.Freeze)
                 && Manager.Equals(other.Manager)
                 && MetadataHash.Equals(other.MetadataHash)
                 && Name.Equals(other.Name)
-                && NameBase64.Equals(other.NameBase64)
                 && Reserve.Equals(other.Reserve)
                 && Total.Equals(other.Total)
                 && UnitName.Equals(other.UnitName)
-                && UnitNameBase64.Equals(other.UnitNameBase64)
                 && Url.Equals(other.Url)
-                && UrlBase64.Equals(other.UrlBase64)
                 ;
         }
     }

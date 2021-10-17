@@ -7,6 +7,7 @@ using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.TestTools;
+using System;
 
 [System.Flags]
 public enum AlgoServices : byte
@@ -39,10 +40,30 @@ public abstract class AlgoApiClientTestFixture
         Assert.AreEqual(UnityWebRequest.Result.Success, response.Status, response.GetText());
     }
 
+    protected static async UniTask<PendingTransaction> WaitForTransaction(FixedString64Bytes txid)
+    {
+        async UniTask<bool> WaitMs(int ms)
+        {
+            await UniTask.Delay(ms);
+            return true;
+        }
+
+        PendingTransaction pending = default;
+        do
+        {
+            var pendingResponse = await algod.GetPendingTransaction(txid);
+            AssertResponseSuccess(pendingResponse);
+            pending = pendingResponse.Payload;
+        }
+        while (pending.ConfirmedRound == 0 && await WaitMs(1000));
+        return pending;
+    }
+
+    protected static readonly PrivateKey AccountPrivateKey = AccountMnemonic.ToPrivateKey();
+
     protected static async UniTask<TransactionIdResponse> MakePaymentTransaction(ulong amt)
     {
-        using var keyPair = AccountMnemonic
-            .ToPrivateKey()
+        using var keyPair = AccountPrivateKey
             .ToKeyPair();
         var transactionParamsResponse = await algod.GetSuggestedParams();
         AssertResponseSuccess(transactionParamsResponse);
