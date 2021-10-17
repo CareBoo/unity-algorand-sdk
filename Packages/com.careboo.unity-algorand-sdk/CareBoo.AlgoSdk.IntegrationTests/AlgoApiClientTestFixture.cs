@@ -7,7 +7,6 @@ using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.TestTools;
-using System;
 
 [System.Flags]
 public enum AlgoServices : byte
@@ -30,14 +29,9 @@ public abstract class AlgoApiClientTestFixture
 
     protected static readonly IndexerClient indexer = new IndexerClient("http://localhost:8980", null);
 
-    protected static void AssertResponseSuccess<T>(AlgoApiResponse<T> response) where T : struct
+    protected static void AssertOkay(ErrorResponse error)
     {
-        Assert.AreEqual(UnityWebRequest.Result.Success, response.Status, response.Error.Message);
-    }
-
-    protected static void AssertResponseSuccess(AlgoApiResponse response)
-    {
-        Assert.AreEqual(UnityWebRequest.Result.Success, response.Status, response.GetText());
+        Assert.IsFalse(error.IsError, error.Message);
     }
 
     protected static async UniTask<PendingTransaction> WaitForTransaction(FixedString64Bytes txid)
@@ -49,11 +43,11 @@ public abstract class AlgoApiClientTestFixture
         }
 
         PendingTransaction pending = default;
+        ErrorResponse error = default;
         do
         {
-            var pendingResponse = await algod.GetPendingTransaction(txid);
-            AssertResponseSuccess(pendingResponse);
-            pending = pendingResponse.Payload;
+            (error, pending) = await algod.GetPendingTransaction(txid);
+            AssertOkay(error);
         }
         while (pending.ConfirmedRound == 0 && await WaitMs(1000));
         return pending;
@@ -65,23 +59,22 @@ public abstract class AlgoApiClientTestFixture
     {
         using var keyPair = AccountPrivateKey
             .ToKeyPair();
-        var transactionParamsResponse = await algod.GetSuggestedParams();
-        AssertResponseSuccess(transactionParamsResponse);
-        var transactionParams = transactionParamsResponse.Payload;
+        var (error, txnParams) = await algod.GetSuggestedParams();
+        AssertOkay(error);
         var txn = Transaction.Payment(
             sender: keyPair.PublicKey,
-            txnParams: transactionParams,
+            txnParams: txnParams,
             receiver: "RDSRVT3X6Y5POLDIN66TSTMUYIBVOMPEOCO4Y2CYACPFKDXZPDCZGVE4PQ",
             amount: amt
         );
         txn.Note = Encoding.UTF8.GetBytes("hello");
-        txn.GenesisId = transactionParams.GenesisId;
         var signedTxn = txn.Sign(keyPair.SecretKey);
         var serialized = AlgoApiSerializer.SerializeMessagePack(signedTxn, Allocator.Temp);
         Debug.Log(System.Convert.ToBase64String(serialized.ToArray()));
-        var txidResponse = await algod.SendTransaction(signedTxn);
-        AssertResponseSuccess(txidResponse);
-        return txidResponse.Payload;
+        TransactionIdResponse txidResponse = default;
+        (error, txidResponse) = await algod.SendTransaction(signedTxn);
+        AssertOkay(error);
+        return txidResponse;
     }
 
     abstract protected AlgoServices RequiresServices { get; }

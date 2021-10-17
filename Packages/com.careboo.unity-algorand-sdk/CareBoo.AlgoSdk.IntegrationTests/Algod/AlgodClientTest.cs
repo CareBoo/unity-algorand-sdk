@@ -12,21 +12,21 @@ public class AlgodClientTest : AlgodClientTestFixture
     public IEnumerator GetGenesisInformationShouldReturnOk() => UniTask.ToCoroutine(async () =>
     {
         var response = await algod.GetGenesisInformation();
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
     });
 
     [UnityTest]
     public IEnumerator GetMetricsShouldReturnOk() => UniTask.ToCoroutine(async () =>
     {
         var response = await algod.GetMetrics();
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
     });
 
     [UnityTest]
     public IEnumerator GetSwaggerSpecShouldReturnOk() => UniTask.ToCoroutine(async () =>
     {
         var response = await algod.GetSwaggerSpec();
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
     });
 
     [UnityTest]
@@ -47,7 +47,7 @@ public class AlgodClientTest : AlgodClientTestFixture
     {
         var txId = await MakePaymentTransaction(100_000);
         var response = await algod.GetPendingTransactions();
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
     });
 
     [UnityTest]
@@ -63,8 +63,7 @@ public class AlgodClientTest : AlgodClientTestFixture
         }
         var round = pendingTxn.ConfirmedRound;
         var blockResponse = await algod.GetBlock(round);
-        Debug.Log(blockResponse.Raw.GetText());
-        AssertResponseSuccess(blockResponse);
+        AssertOkay(blockResponse.Error);
     });
 
     [UnityTest]
@@ -73,35 +72,35 @@ public class AlgodClientTest : AlgodClientTestFixture
     {
         var addresses = await GetAddresses();
         var response = await algod.RegisterParticipationKeys(addresses[0]);
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
     });
 
     [UnityTest]
     public IEnumerator GetCurrentStatusShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var response = await algod.GetCurrentStatus();
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
     });
 
     [UnityTest]
     public IEnumerator GetStatusAfterWaitingForRoundShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var response = await algod.GetStatusAfterWaitingForRound(0);
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
     });
 
     [UnityTest]
     public IEnumerator GetVersionsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var response = await algod.GetVersions();
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
     });
 
     [UnityTest]
     public IEnumerator GetTransactionParamsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var response = await algod.GetSuggestedParams();
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
     });
 
     [UnityTest]
@@ -117,7 +116,7 @@ public class AlgodClientTest : AlgodClientTestFixture
         }
         var round = pendingTxn.ConfirmedRound;
         var response = await algod.GetMerkleProof(round, txId);
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
     });
 
     [UnityTest]
@@ -125,7 +124,7 @@ public class AlgodClientTest : AlgodClientTestFixture
     {
         var txId = await MakePaymentTransaction(100000);
         var pendingResponse = await algod.GetPendingTransaction(txId);
-        AssertResponseSuccess(pendingResponse);
+        AssertOkay(pendingResponse.Error);
         Debug.Log(pendingResponse.Raw.GetText());
     });
 
@@ -133,7 +132,7 @@ public class AlgodClientTest : AlgodClientTestFixture
     public IEnumerator TealCompileShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var response = await algod.TealCompile(TealCodeCases.AtomicSwap.Src);
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
         Assert.AreEqual(TealCodeCases.AtomicSwap.CompiledResult, response.Payload.CompiledBytesBase64);
         Assert.AreEqual(TealCodeCases.AtomicSwap.CompiledHash, response.Payload.Hash.ToString());
     });

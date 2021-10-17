@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.TestTools;
 
 [TestFixture]
-public class AlgodClientAssetsTest : AlgodClientTestFixture
+public class AlgodClientAssetTest : AlgodClientTestFixture
 {
     [UnityTest]
     public IEnumerator CreatingConfiguringThenDeletingNftShouldReturnOkay() => UniTask.ToCoroutine(async () =>
@@ -28,7 +28,7 @@ public class AlgodClientAssetsTest : AlgodClientTestFixture
         var bytes = AlgoApiSerializer.SerializeMessagePack(createAssetTxn);
         Debug.Log(System.Convert.ToBase64String(bytes));
         var createResponse = await algod.SendTransaction(createAssetTxn);
-        AssertResponseSuccess(createResponse);
+        AssertOkay(createResponse.Error);
         var txid = createResponse.Payload.TxId;
         var assetId = (await WaitForTransaction(txid)).AssetIndex;
         var configureAssetParams = new AssetParams
@@ -40,14 +40,14 @@ public class AlgodClientAssetsTest : AlgodClientTestFixture
             .AssetConfigure(keyPair.PublicKey, txnParams, assetId, configureAssetParams)
             .Sign(keyPair.SecretKey);
         var configureResponse = await algod.SendTransaction(configureAssetTxn);
-        AssertResponseSuccess(configureResponse);
+        AssertOkay(configureResponse.Error);
         await WaitForTransaction(configureResponse.Payload.TxId);
         var assetInfoResponse = await algod.GetAsset(assetId);
         var deleteAssetTxn = Transaction
             .AssetDelete(keyPair.PublicKey, txnParams, assetId)
             .Sign(keyPair.SecretKey);
         var deleteResponse = await algod.SendTransaction(deleteAssetTxn);
-        AssertResponseSuccess(deleteResponse);
+        AssertOkay(deleteResponse.Error);
         await WaitForTransaction(deleteResponse.Payload.TxId);
     });
 }

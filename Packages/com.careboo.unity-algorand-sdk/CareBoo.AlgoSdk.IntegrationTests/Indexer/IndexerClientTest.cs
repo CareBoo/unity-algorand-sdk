@@ -23,7 +23,7 @@ public class IndexerClientTest : AlgoApiClientTestFixture
         Address accountAddress = AccountMnemonic.ToPrivateKey().ToPublicKey();
         var response = await indexer.GetAccount(accountAddress);
         Debug.Log(response.GetText());
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
     });
 
 
@@ -32,7 +32,7 @@ public class IndexerClientTest : AlgoApiClientTestFixture
     {
         var response = await indexer.GetAccounts();
         Debug.Log(response.GetText());
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
     });
 
 
@@ -41,7 +41,7 @@ public class IndexerClientTest : AlgoApiClientTestFixture
     {
         var response = await indexer.GetAccounts(currencyGreaterThan: 1000);
         Debug.Log(response.GetText());
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
     });
 
     [UnityTest]
@@ -50,12 +50,12 @@ public class IndexerClientTest : AlgoApiClientTestFixture
         ulong limit = 3;
         var firstPageResponse = await indexer.GetAccounts(limit: limit);
         Debug.Log($"first page:\n{firstPageResponse.GetText()}");
-        AssertResponseSuccess(firstPageResponse);
+        AssertOkay(firstPageResponse.Error);
         var secondPageResponse = await indexer.GetAccounts(
             limit: limit,
             next: firstPageResponse.Payload.NextToken);
         Debug.Log($"second page:\n{secondPageResponse.GetText()}");
-        AssertResponseSuccess(secondPageResponse);
+        AssertOkay(secondPageResponse.Error);
     });
 
 
@@ -66,7 +66,7 @@ public class IndexerClientTest : AlgoApiClientTestFixture
         Address accountAddress = AccountMnemonic.ToPrivateKey().ToPublicKey();
         var response = await indexer.GetAccountTransactions(accountAddress);
         Debug.Log(response.GetText());
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
     });
 
 
@@ -75,7 +75,7 @@ public class IndexerClientTest : AlgoApiClientTestFixture
     {
         var response = await indexer.GetApplications();
         Debug.Log(response.GetText());
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
     });
 
 
@@ -84,7 +84,7 @@ public class IndexerClientTest : AlgoApiClientTestFixture
     {
         var response = await indexer.GetAssets();
         Debug.Log(response.GetText());
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
     });
 
     [UnityTest]
@@ -92,7 +92,7 @@ public class IndexerClientTest : AlgoApiClientTestFixture
     {
         var response = await indexer.GetTransactions();
         Debug.Log(response.GetText());
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
     });
 
 
@@ -101,7 +101,7 @@ public class IndexerClientTest : AlgoApiClientTestFixture
     {
         var response = await indexer.GetHealth();
         Debug.Log(response.GetText());
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
         Assert.IsTrue(response.Payload.DatabaseAvailable);
     });
 }

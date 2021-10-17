@@ -18,13 +18,13 @@ public class KmdClientTest : KmdClientTestFixture
     public IEnumerator GetSwaggerSpecShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var response = await kmd.GetSwaggerSpec();
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
     });
 
     [UnityTest]
     public IEnumerator GetVersionsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var response = await kmd.Versions();
-        AssertResponseSuccess(response);
+        AssertOkay(response.Error);
     });
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
 using Unity.Mathematics;
 
@@ -89,6 +90,28 @@ namespace AlgoSdk.LowLevel
         public static void CopyFrom<T, U>(this ref T target, U source, int start, int length = int.MaxValue)
             where T : struct, IByteArray
             where U : struct, IByteArray
+        {
+            if (start >= target.Length)
+                return;
+            length = math.min(source.Length, length);
+            var end = math.min(target.Length, start + length);
+            for (var i = start; i < end; i++)
+                target[i] = source[i - start];
+        }
+
+        public static void CopyFrom<T>(this ref T target, byte[] source, int start, int length = int.MaxValue)
+            where T : struct, IByteArray
+        {
+            if (start >= target.Length)
+                return;
+            length = math.min(source.Length, length);
+            var end = math.min(target.Length, start + length);
+            for (var i = start; i < end; i++)
+                target[i] = source[i - start];
+        }
+
+        public static void CopyFrom<T>(this ref T target, NativeArray<byte> source, int start, int length = int.MaxValue)
+            where T : struct, IByteArray
         {
             if (start >= target.Length)
                 return;

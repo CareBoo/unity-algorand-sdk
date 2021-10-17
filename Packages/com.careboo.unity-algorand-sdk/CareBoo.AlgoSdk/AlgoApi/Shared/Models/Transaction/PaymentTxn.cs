@@ -1,4 +1,5 @@
 using System;
+using AlgoSdk.Crypto;
 using Unity.Collections;
 
 namespace AlgoSdk
@@ -103,14 +104,14 @@ namespace AlgoSdk
         }
 
         [AlgoApiField("group", "grp")]
-        public Address Group
+        public Sha512_256_Hash Group
         {
             get => header.Group;
             set => header.Group = value;
         }
 
         [AlgoApiField("lease", "lx")]
-        public Address Lease
+        public Sha512_256_Hash Lease
         {
             get => header.Lease;
             set => header.Lease = value;

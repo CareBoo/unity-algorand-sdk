@@ -1,4 +1,5 @@
 using System;
+using AlgoSdk.Crypto;
 using Unity.Collections;
 using Unity.Mathematics;
 
@@ -56,14 +57,14 @@ namespace AlgoSdk
         }
 
         [AlgoApiField("group", "grp")]
-        public Address Group
+        public Sha512_256_Hash Group
         {
             get => HeaderParams.Group;
             set => HeaderParams.Group = value;
         }
 
         [AlgoApiField("lease", "lx")]
-        public Address Lease
+        public Sha512_256_Hash Lease
         {
             get => HeaderParams.Lease;
             set => HeaderParams.Lease = value;
@@ -84,7 +85,7 @@ namespace AlgoSdk
         }
 
         [AlgoApiField("id", "id", readOnly: true)]
-        public FixedString64Bytes Id
+        public Sha512_256_Hash Id
         {
             get => HeaderParams.Id;
             set => HeaderParams.Id = value;
@@ -186,12 +187,12 @@ namespace AlgoSdk
         public TransactionType TransactionType;
 
         public FixedString32Bytes GenesisId;
-        public Address Group;
-        public Address Lease;
+        public Sha512_256_Hash Group;
+        public Sha512_256_Hash Lease;
         public byte[] Note;
         public Address RekeyTo;
 
-        public FixedString64Bytes Id;
+        public Sha512_256_Hash Id;
         public Address AuthAddress;
         public ulong CloseRewards;
         public ulong ClosingAmount;
