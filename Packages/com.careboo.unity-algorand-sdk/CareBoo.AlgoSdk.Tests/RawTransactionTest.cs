@@ -15,9 +15,9 @@ public class RawTransactionTest
         transaction.FirstValidRound = 1009;
         transaction.GenesisHash = AlgoSdk.Crypto.Random.Bytes<Sha512_256_Hash>();
         transaction.LastValidRound = 10021;
-        transaction.Sender = AlgoSdk.Crypto.Random.Bytes<Address>().GenerateCheckSum();
+        transaction.Sender = AlgoSdk.Crypto.Random.Bytes<Address>();
         transaction.TransactionType = TransactionType.Payment;
-        transaction.Receiver = AlgoSdk.Crypto.Random.Bytes<Address>().GenerateCheckSum();
+        transaction.Receiver = AlgoSdk.Crypto.Random.Bytes<Address>();
         transaction.Amount = 40000;
         using var bytes = AlgoApiSerializer.SerializeMessagePack(transaction, Allocator.Temp);
         Debug.Log(System.Convert.ToBase64String(bytes.ToArray()));

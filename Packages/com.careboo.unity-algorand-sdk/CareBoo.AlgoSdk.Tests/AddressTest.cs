@@ -10,7 +10,6 @@ public class AddressTest
         var addressBytes = System.Convert.FromBase64String("GGLP4dv2Cb8V9MfEW9n2VwjOdUmhSaj8nkLMAVaJ+7o=");
         for (var i = 0; i < addressBytes.Length; i++)
             expected[i] = addressBytes[i];
-        expected.GenerateCheckSum();
         var actual = Address.FromString("DBRM7YO36YE36FPUY7CFXWPWK4EM45KJUFE2R7E6ILGACVUJ7O5LSFLAFY");
         Assert.AreEqual(expected, actual);
     }
@@ -23,7 +22,6 @@ public class AddressTest
         var actual = new Address();
         for (var i = 0; i < actualBytes.Length; i++)
             actual[i] = actualBytes[i];
-        actual.GenerateCheckSum();
         Assert.AreEqual(expected, actual.ToString());
     }
 }

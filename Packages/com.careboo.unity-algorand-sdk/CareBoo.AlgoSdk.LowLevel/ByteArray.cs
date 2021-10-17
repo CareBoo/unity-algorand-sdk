@@ -86,7 +86,32 @@ namespace AlgoSdk.LowLevel
             }
         }
 
-        public static void Copy<T, U>(ref T from, ref U to)
+        public static void CopyFrom<T, U>(this ref T target, U source, int start, int length = int.MaxValue)
+            where T : struct, IByteArray
+            where U : struct, IByteArray
+        {
+            if (start >= target.Length)
+                return;
+            length = math.min(source.Length, length);
+            var end = math.min(target.Length, start + length);
+            for (var i = start; i < end; i++)
+                target[i] = source[i - start];
+        }
+
+        public static void CopyTo<T, U>(this T source, ref U target, int start, int length = int.MaxValue)
+            where T : struct, IByteArray
+            where U : struct, IByteArray
+        {
+            if (start >= source.Length)
+                return;
+            length = math.min(length, target.Length);
+            var end = math.min(source.Length, start + length);
+            for (var i = start; i < end; i++)
+                target[i - start] = source[i];
+        }
+
+
+        public static void CopyTo<T, U>(this T from, ref U to)
             where T : struct, IByteArray
             where U : struct, IByteArray
         {
