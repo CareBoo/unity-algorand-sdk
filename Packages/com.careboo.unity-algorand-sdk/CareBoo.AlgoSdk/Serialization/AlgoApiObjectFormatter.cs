@@ -51,7 +51,14 @@ namespace AlgoSdk
             {
                 FixedString64Bytes key = default;
                 reader.ReadString(ref key).ThrowIfError(reader.Char, reader.Position);
-                jsonFieldMap.GetField(key).DeserializeJson(ref result, ref reader);
+                try
+                {
+                    jsonFieldMap.GetField(key).DeserializeJson(ref result, ref reader);
+                }
+                catch (Exception ex)
+                {
+                    throw new SerializationException($"Got exception when deserializing \"{key}\" for type {typeof(T)}", ex);
+                }
             }
             if (!reader.TryRead(JsonToken.ObjectEnd))
                 JsonReadError.IncorrectFormat.ThrowIfError(reader.Char, reader.Position);
@@ -66,7 +73,14 @@ namespace AlgoSdk
             {
                 FixedString32Bytes key = default;
                 reader.ReadString(ref key);
-                msgPackFieldMap.GetField(key).DeserializeMessagePack(ref result, ref reader);
+                try
+                {
+                    msgPackFieldMap.GetField(key).DeserializeMessagePack(ref result, ref reader);
+                }
+                catch (Exception ex)
+                {
+                    throw new SerializationException($"Got exception when deserializing \"{key}\" for type {typeof(T)}", ex);
+                }
             }
             return result;
         }

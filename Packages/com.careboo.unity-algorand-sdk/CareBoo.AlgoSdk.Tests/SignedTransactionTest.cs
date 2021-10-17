@@ -30,7 +30,7 @@ public class SignedTransactionTest
                 MinFee = 1000,
                 PreviousRound = 45666234
             },
-            receiver: AlgoSdk.Crypto.Random.Bytes<Address>().GenerateCheckSum(),
+            receiver: AlgoSdk.Crypto.Random.Bytes<Address>(),
             amount: 1000000);
         var signedTxn = transaction.Sign(kp.SecretKey);
         using var serialized = AlgoApiSerializer.SerializeMessagePack(signedTxn, Allocator.Temp);

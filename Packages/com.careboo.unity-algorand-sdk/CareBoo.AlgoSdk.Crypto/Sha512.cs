@@ -61,7 +61,7 @@ namespace AlgoSdk.Crypto
             var hash512 = new Sha512_Hash();
             crypto_hash_sha512_final(&hashState, &hash512);
             var result = new Sha512_256_Hash();
-            ByteArray.Copy(ref hash512, ref result);
+            ByteArray.CopyTo(hash512, ref result);
             return result;
         }
     }
