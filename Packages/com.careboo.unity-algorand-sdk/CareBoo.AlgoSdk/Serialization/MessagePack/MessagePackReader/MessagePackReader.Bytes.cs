@@ -1,4 +1,6 @@
+using AlgoSdk.LowLevel;
 using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 
 namespace AlgoSdk.MessagePack
 {
@@ -9,6 +11,31 @@ namespace AlgoSdk.MessagePack
             if (TryReadBytes(out NativeSlice<byte> bytes))
                 return bytes;
             throw InsufficientBuffer();
+        }
+
+        public T ReadBytes<T>()
+            where T : unmanaged, IByteArray
+        {
+            T result = default;
+            unsafe
+            {
+                UnsafeReadBytes(result.GetUnsafePtr(), result.Length);
+            }
+            return result;
+        }
+
+        public unsafe void UnsafeReadBytes(void* ptr, int length)
+        {
+            var resetOffset = offset;
+            if (!TryGetBytesLength(out int msgLength))
+                throw InsufficientBuffer();
+            if (msgLength > length)
+            {
+                offset = resetOffset;
+                throw InsufficientBuffer();
+            }
+            UnsafeUtility.MemCpy(ptr, GetCurrentUnsafePtr(), msgLength);
+            offset += msgLength;
         }
 
         public bool TryReadBytes(out NativeSlice<byte> bytes)

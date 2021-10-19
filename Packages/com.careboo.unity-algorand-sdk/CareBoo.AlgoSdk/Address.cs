@@ -8,7 +8,6 @@ using UnityEngine;
 
 namespace AlgoSdk
 {
-    [Serializable]
     [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
     [AlgoApiFormatter(typeof(AddressFormatter))]
     public struct Address
@@ -51,10 +50,7 @@ namespace AlgoSdk
             {
                 bytes.Dispose();
             }
-            var trimPadding = result.Length;
-            while (result[trimPadding - 1] == Base32Encoding.PaddingCharValue)
-                trimPadding--;
-            result.Length = trimPadding;
+            Base32Encoding.TrimPadding(ref result);
             return result;
         }
 

@@ -1,3 +1,4 @@
+using AlgoSdk.MessagePack;
 using Unity.Collections;
 
 namespace AlgoSdk.Formatters
@@ -16,5 +17,15 @@ namespace AlgoSdk.Formatters
         };
 
         public OnCompletionFormatter() : base(typeToString) { }
+
+        public override OnCompletion Deserialize(ref MessagePackReader reader)
+        {
+            return (OnCompletion)reader.ReadByte();
+        }
+
+        public override void Serialize(ref MessagePackWriter writer, OnCompletion value)
+        {
+            writer.Write((byte)value);
+        }
     }
 }

@@ -35,7 +35,7 @@ public abstract class AlgoApiClientTestFixture
         Assert.IsFalse(error.IsError, error.Message);
     }
 
-    protected static async UniTask<PendingTransaction> WaitForTransaction(Sha512_256_Hash txid)
+    protected static async UniTask<PendingTransaction> WaitForTransaction(TransactionId txid)
     {
         async UniTask<bool> WaitMs(int ms)
         {

@@ -100,6 +100,15 @@ namespace AlgoSdk
             }
         }
 
+        public static void TrimPadding<T>(ref T fs)
+            where T : struct, INativeList<byte>, IUTF8Bytes
+        {
+            var trimPadding = fs.Length;
+            while (fs[trimPadding - 1] == Base32Encoding.PaddingCharValue)
+                trimPadding--;
+            fs.Length = trimPadding;
+        }
+
         public static string ToString(byte[] input)
         {
             if (input == null || input.Length == 0)

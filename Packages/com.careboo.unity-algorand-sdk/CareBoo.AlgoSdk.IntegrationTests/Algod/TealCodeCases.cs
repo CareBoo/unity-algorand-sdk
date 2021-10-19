@@ -3,12 +3,12 @@ public static class TealCodeCases
     public static class SmartContract
     {
         public const string ApprovalSrc =
-@"#pragma version 5
+@"#pragma version 4
 int 1
 return";
 
         public const string ClearStateSrc =
-@"#pragma version 5
+@"#pragma version 4
 int 1
 return";
     }

@@ -8,19 +8,14 @@ namespace AlgoSdk.Formatters
     {
         public Address Deserialize(ref JsonReader reader)
         {
-            var text = new NativeText(Allocator.Temp);
             var fs = new FixedString128Bytes();
             reader.ReadString(ref fs).ThrowIfError(reader.Char, reader.Position);
             return Address.FromString(fs);
         }
 
-        public Address Deserialize(ref MessagePackReader reader)
+        public unsafe Address Deserialize(ref MessagePackReader reader)
         {
-            var bytes = reader.ReadBytes();
-            Address result = default;
-            for (var i = 0; i < bytes.Length; i++)
-                result[i] = bytes[i];
-            return result;
+            return reader.ReadBytes<Address>();
         }
 
         public void Serialize(ref JsonWriter writer, Address value)
@@ -28,12 +23,9 @@ namespace AlgoSdk.Formatters
             writer.WriteString(value.ToFixedString());
         }
 
-        public void Serialize(ref MessagePackWriter writer, Address value)
+        public unsafe void Serialize(ref MessagePackWriter writer, Address value)
         {
-            unsafe
-            {
-                writer.WriteBytes(value.GetUnsafePtr(), value.publicKey.Length);
-            }
+            writer.WriteBytes(value.GetUnsafePtr(), value.Length);
         }
     }
 }
