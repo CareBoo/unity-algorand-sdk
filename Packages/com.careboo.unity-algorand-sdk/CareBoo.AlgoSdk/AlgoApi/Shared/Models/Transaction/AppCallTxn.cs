@@ -114,6 +114,21 @@ namespace AlgoSdk
             txn.Fee = txn.GetSuggestedFee(txnParams);
             return txn;
         }
+
+        public static AppCallTxn AppOptIn(
+            Address sender,
+            TransactionParams txnParams,
+            ulong applicationId
+        )
+        {
+            var txn = new AppCallTxn
+            {
+                header = new TransactionHeader(sender, TransactionType.ApplicationCall, txnParams),
+                ApplicationId = applicationId,
+            };
+            txn.Fee = txn.GetSuggestedFee(txnParams);
+            return txn;
+        }
     }
 
     [AlgoApiObject]
