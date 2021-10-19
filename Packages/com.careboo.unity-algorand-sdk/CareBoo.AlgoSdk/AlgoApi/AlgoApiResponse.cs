@@ -15,10 +15,11 @@ namespace AlgoSdk
 
         public AlgoApiResponse(UnityWebRequest completedRequest)
         {
+            DebugRequest(completedRequest);
             data = completedRequest.downloadHandler?.data;
             status = completedRequest.result;
             responseCode = completedRequest.responseCode;
-            contentType = completedRequest.ParseContentType();
+            contentType = completedRequest.ParseResponseContentType();
             error = status switch
             {
                 Result.ProtocolError => AlgoApiSerializer.Deserialize<ErrorResponse>(data, contentType).WithCode(responseCode),
@@ -26,7 +27,6 @@ namespace AlgoSdk
                 Result.DataProcessingError => new ErrorResponse { Message = "Error processing data", Code = responseCode },
                 _ => default
             };
-            DebugRequest(completedRequest, contentType);
             completedRequest.Dispose();
         }
 
@@ -43,15 +43,14 @@ namespace AlgoSdk
         public string GetText() => GetText(data, contentType);
 
 
-        [Conditional("UNITY_EDITOR")]
         [Conditional("UNITY_ALGO_SDK_DEBUG")]
-        static void DebugRequest(UnityWebRequest completedRequest, ContentType contentType)
+        static void DebugRequest(UnityWebRequest completedRequest)
         {
             UnityEngine.Debug.Log(
                 "completed request\n" +
                 $"\turl: {completedRequest.url}\n" +
-                $"\tuploadedData: {GetText(completedRequest.uploadHandler?.data, contentType)}\n" +
-                $"\tdownloadedData: {GetText(completedRequest.downloadHandler?.data, contentType)}\n" +
+                $"\tuploadedData: {GetText(completedRequest.uploadHandler?.data, completedRequest.ParseRequestContentType())}\n" +
+                $"\tdownloadedData: {GetText(completedRequest.downloadHandler?.data, completedRequest.ParseResponseContentType())}\n" +
                 $"\terror: {completedRequest.error}\n" +
                 $"\tmethod: {completedRequest.method}\n" +
                 $"\tdownloadHandler.error: {completedRequest.downloadHandler?.error}"

@@ -14,11 +14,11 @@ namespace AlgoSdk
         UniTask<AlgoApiResponse<Account>> GetAccountInformation(Address accountAddress);
         UniTask<AlgoApiResponse<PendingTransactions>> GetPendingTransactions(ulong max = 0);
         UniTask<AlgoApiResponse<PendingTransactions>> GetPendingTransactions(Address accountAddress, ulong max = 0);
-        UniTask<AlgoApiResponse<PendingTransaction>> GetPendingTransaction(Sha512_256_Hash txId);
+        UniTask<AlgoApiResponse<PendingTransaction>> GetPendingTransaction(TransactionId txId);
         UniTask<AlgoApiResponse<Application>> GetApplication(ulong applicationId);
         UniTask<AlgoApiResponse<Asset>> GetAsset(ulong assetId);
         UniTask<AlgoApiResponse<BlockResponse>> GetBlock(ulong round);
-        UniTask<AlgoApiResponse<MerkleProof>> GetMerkleProof(ulong round, Sha512_256_Hash txid);
+        UniTask<AlgoApiResponse<MerkleProof>> GetMerkleProof(ulong round, TransactionId txid);
         UniTask<AlgoApiResponse<CatchupMessage>> StartCatchup(string catchpoint);
         UniTask<AlgoApiResponse<CatchupMessage>> AbortCatchup(string catchpoint);
         UniTask<AlgoApiResponse<LedgerSupply>> GetLedgerSupply();
