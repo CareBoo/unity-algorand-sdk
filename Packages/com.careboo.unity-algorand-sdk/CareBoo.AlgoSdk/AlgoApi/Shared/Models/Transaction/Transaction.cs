@@ -85,13 +85,13 @@ namespace AlgoSdk
             return result;
         }
 
-        public Sha512_256_Hash GetId()
+        public TransactionId GetId()
         {
             using var txnData = ToSignatureMessage(Allocator.Temp);
             return Sha512.Hash256Truncated(txnData);
         }
 
-        public static Sha512_256_Hash GetGroupId(params Transaction[] txns)
+        public static TransactionId GetGroupId(params Transaction[] txns)
         {
             if (txns == null || txns.Length == 0)
                 throw new ArgumentException("Cannot get the group id of 0 transactions", nameof(txns));
@@ -108,7 +108,7 @@ namespace AlgoSdk
             return GetGroupId(txnMsgs);
         }
 
-        public static Sha512_256_Hash GetGroupId(params Sha512_256_Hash[] txns)
+        public static TransactionId GetGroupId(params Sha512_256_Hash[] txns)
         {
             if (txns == null || txns.Length == 0)
                 throw new ArgumentException("Cannot get the group id of 0 transactions", nameof(txns));

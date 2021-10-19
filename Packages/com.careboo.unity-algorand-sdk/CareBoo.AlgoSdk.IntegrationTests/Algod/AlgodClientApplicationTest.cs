@@ -20,6 +20,7 @@ public class AlgodClientApplicationTest : AlgodClientTestFixture
         createTxn.ApprovalProgram = progBytes;
         createTxn.ClearStateProgram = progBytes;
         var (createError, txid) = await algod.SendTransaction(createTxn.Sign(keyPair.SecretKey));
+        AssertOkay(createError);
         await WaitForTransaction(txid);
     });
 }
