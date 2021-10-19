@@ -1,5 +1,18 @@
 public static class TealCodeCases
 {
+    public static class SmartContract
+    {
+        public const string ApprovalSrc =
+@"#pragma version 5
+int 1
+return";
+
+        public const string ClearStateSrc =
+@"#pragma version 5
+int 1
+return";
+    }
+
     public static class AtomicSwap
     {
         public const string Src =
