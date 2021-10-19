@@ -1,4 +1,5 @@
 using System;
+using AlgoSdk.Crypto;
 using Unity.Collections;
 
 namespace AlgoSdk
@@ -8,14 +9,14 @@ namespace AlgoSdk
         : IEquatable<TransactionIdResponse>
     {
         [AlgoApiField("txId", "txId")]
-        public FixedString64Bytes TxId;
+        public Sha512_256_Hash TxId;
 
         public bool Equals(TransactionIdResponse other)
         {
             return TxId.Equals(other.TxId);
         }
 
-        public static implicit operator FixedString64Bytes(TransactionIdResponse resp)
+        public static implicit operator Sha512_256_Hash(TransactionIdResponse resp)
         {
             return resp.TxId;
         }

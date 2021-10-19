@@ -1,4 +1,4 @@
-using System;
+using Unity.Collections;
 
 namespace AlgoSdk.MessagePack
 {
@@ -30,11 +30,8 @@ namespace AlgoSdk.MessagePack
 
         public void WriteBigEndian(ulong value)
         {
-            unchecked
-            {
-                for (var i = 56; i >= 0; i -= 8)
-                    data.Add((byte)(value >> i));
-            }
+            using var bytes = value.ToBytesBigEndian(Allocator.Temp);
+            data.AddRange(bytes);
         }
     }
 }

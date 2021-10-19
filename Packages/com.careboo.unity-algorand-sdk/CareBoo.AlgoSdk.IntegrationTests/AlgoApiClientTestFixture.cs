@@ -7,6 +7,7 @@ using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.TestTools;
+using AlgoSdk.Crypto;
 
 [System.Flags]
 public enum AlgoServices : byte
@@ -34,7 +35,7 @@ public abstract class AlgoApiClientTestFixture
         Assert.IsFalse(error.IsError, error.Message);
     }
 
-    protected static async UniTask<PendingTransaction> WaitForTransaction(FixedString64Bytes txid)
+    protected static async UniTask<PendingTransaction> WaitForTransaction(Sha512_256_Hash txid)
     {
         async UniTask<bool> WaitMs(int ms)
         {
