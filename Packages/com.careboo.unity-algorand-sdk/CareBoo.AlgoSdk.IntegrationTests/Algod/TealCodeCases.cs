@@ -4,6 +4,51 @@ public static class TealCodeCases
     {
         public const string ApprovalSrc =
 @"#pragma version 4
+txn ApplicationID
+int 0
+==
+bnz main_l12
+txn OnCompletion
+int DeleteApplication
+==
+bnz main_l11
+txn OnCompletion
+int UpdateApplication
+==
+bnz main_l10
+txn OnCompletion
+int CloseOut
+==
+bnz main_l9
+txn OnCompletion
+int OptIn
+==
+bnz main_l8
+txn OnCompletion
+int NoOp
+==
+bnz main_l7
+err
+main_l7:
+int 1
+return
+main_l8:
+int 1
+return
+main_l9:
+int 1
+return
+main_l10:
+txn Sender
+global CreatorAddress
+==
+return
+main_l11:
+txn Sender
+global CreatorAddress
+==
+return
+main_l12:
 int 1
 return";
 

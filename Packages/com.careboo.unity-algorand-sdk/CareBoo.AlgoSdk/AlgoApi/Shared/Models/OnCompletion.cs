@@ -5,7 +5,6 @@ namespace AlgoSdk
     [AlgoApiFormatter(typeof(OnCompletionFormatter))]
     public enum OnCompletion : byte
     {
-        None,
         NoOp,
         OptIn,
         CloseOut,
