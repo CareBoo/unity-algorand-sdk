@@ -2,27 +2,16 @@ using System.Collections;
 using AlgoSdk;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
-using UnityEngine;
 using UnityEngine.TestTools;
 
 [TestFixture]
-public class IndexerClientTest : AlgoApiClientTestFixture
+public class IndexerClientTest : IndexerClientTestFixture
 {
-    protected override AlgoServices RequiresServices => AlgoServices.Indexer | AlgoServices.Algod;
-
-    protected override async UniTask SetUpAsync()
-    {
-        await CheckServices();
-    }
-
-    protected override UniTask TearDownAsync() => UniTask.CompletedTask;
-
     [UnityTest]
     public IEnumerator GetAccountShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         Address accountAddress = AccountMnemonic.ToPrivateKey().ToPublicKey();
         var response = await indexer.GetAccount(accountAddress);
-        Debug.Log(response.GetText());
         AssertOkay(response.Error);
     });
 
@@ -31,7 +20,6 @@ public class IndexerClientTest : AlgoApiClientTestFixture
     public IEnumerator GetAccountsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var response = await indexer.GetAccounts();
-        Debug.Log(response.GetText());
         AssertOkay(response.Error);
     });
 
@@ -40,7 +28,6 @@ public class IndexerClientTest : AlgoApiClientTestFixture
     public IEnumerator GetAccountsGreaterThan1000AlgoShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var response = await indexer.GetAccounts(currencyGreaterThan: 1000);
-        Debug.Log(response.GetText());
         AssertOkay(response.Error);
     });
 
@@ -49,12 +36,10 @@ public class IndexerClientTest : AlgoApiClientTestFixture
     {
         ulong limit = 3;
         var firstPageResponse = await indexer.GetAccounts(limit: limit);
-        Debug.Log($"first page:\n{firstPageResponse.GetText()}");
         AssertOkay(firstPageResponse.Error);
         var secondPageResponse = await indexer.GetAccounts(
             limit: limit,
             next: firstPageResponse.Payload.NextToken);
-        Debug.Log($"second page:\n{secondPageResponse.GetText()}");
         AssertOkay(secondPageResponse.Error);
     });
 
@@ -65,7 +50,6 @@ public class IndexerClientTest : AlgoApiClientTestFixture
         await MakePaymentTransaction(10_000);
         Address accountAddress = AccountMnemonic.ToPrivateKey().ToPublicKey();
         var response = await indexer.GetAccountTransactions(accountAddress);
-        Debug.Log(response.GetText());
         AssertOkay(response.Error);
     });
 
@@ -74,7 +58,6 @@ public class IndexerClientTest : AlgoApiClientTestFixture
     public IEnumerator GetApplicationsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var response = await indexer.GetApplications();
-        Debug.Log(response.GetText());
         AssertOkay(response.Error);
     });
 
@@ -83,7 +66,6 @@ public class IndexerClientTest : AlgoApiClientTestFixture
     public IEnumerator GetAssetsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var response = await indexer.GetAssets();
-        Debug.Log(response.GetText());
         AssertOkay(response.Error);
     });
 
@@ -91,7 +73,6 @@ public class IndexerClientTest : AlgoApiClientTestFixture
     public IEnumerator GetTransactionsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var response = await indexer.GetTransactions();
-        Debug.Log(response.GetText());
         AssertOkay(response.Error);
     });
 
@@ -100,7 +81,6 @@ public class IndexerClientTest : AlgoApiClientTestFixture
     public IEnumerator GetHealthShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var response = await indexer.GetHealth();
-        Debug.Log(response.GetText());
         AssertOkay(response.Error);
         Assert.IsTrue(response.Payload.DatabaseAvailable);
     });
