@@ -20,25 +20,11 @@ namespace AlgoSdk
             set => ApplicationCallParams.OnComplete = value;
         }
 
-        [AlgoApiField(null, "apat")]
-        public Address[] Accounts
-        {
-            get => ApplicationCallParams.Accounts;
-            set => ApplicationCallParams.Accounts = value;
-        }
-
         [AlgoApiField(null, "apap")]
         public byte[] ApprovalProgram
         {
             get => ApplicationCallParams.ApprovalProgram;
             set => ApplicationCallParams.ApprovalProgram = value;
-        }
-
-        [AlgoApiField(null, "apaa")]
-        public byte[] AppArguments
-        {
-            get => ApplicationCallParams.AppArguments;
-            set => ApplicationCallParams.AppArguments = value;
         }
 
         [AlgoApiField(null, "apsu")]
@@ -48,15 +34,29 @@ namespace AlgoSdk
             set => ApplicationCallParams.ClearStateProgram = value;
         }
 
+        [AlgoApiField(null, "apaa")]
+        public byte[] AppArguments
+        {
+            get => ApplicationCallParams.AppArguments;
+            set => ApplicationCallParams.AppArguments = value;
+        }
+
+        [AlgoApiField(null, "apat")]
+        public Address[] Accounts
+        {
+            get => ApplicationCallParams.Accounts;
+            set => ApplicationCallParams.Accounts = value;
+        }
+
         [AlgoApiField(null, "apfa")]
-        public Address[] ForeignApps
+        public ulong[] ForeignApps
         {
             get => ApplicationCallParams.ForeignApps;
             set => ApplicationCallParams.ForeignApps = value;
         }
 
         [AlgoApiField(null, "apas")]
-        public Address[] ForeignAssets
+        public ulong[] ForeignAssets
         {
             get => ApplicationCallParams.ForeignAssets;
             set => ApplicationCallParams.ForeignAssets = value;
@@ -86,30 +86,95 @@ namespace AlgoSdk
         public static AppCallTxn AppCreate(
             Address sender,
             TransactionParams txnParams,
-            OnCompletion onComplete
+            byte[] approvalProgram,
+            byte[] clearStateProgram,
+            StateSchema globalStateSchema = default,
+            StateSchema localStateSchema = default,
+            ulong extraProgramPages = default
         )
         {
             var txn = new AppCallTxn
             {
                 header = new TransactionHeader(sender, TransactionType.ApplicationCall, txnParams),
-                OnComplete = onComplete
+                OnComplete = OnCompletion.NoOp,
+                ApprovalProgram = approvalProgram,
+                ClearStateProgram = clearStateProgram,
+                GlobalStateSchema = globalStateSchema,
+                LocalStateSchema = localStateSchema,
+                ExtraProgramPages = extraProgramPages
             };
             txn.Fee = txn.GetSuggestedFee(txnParams);
             return txn;
         }
 
-        public static AppCallTxn AppConfigure(
+        public static AppCallTxn AppCloseOut(
             Address sender,
             TransactionParams txnParams,
             ulong applicationId,
-            OnCompletion onComplete
+            byte[] appArguments = default,
+            Address[] accounts = default,
+            ulong[] foreignApps = default,
+            ulong[] foreignAssets = default
         )
         {
             var txn = new AppCallTxn
             {
                 header = new TransactionHeader(sender, TransactionType.ApplicationCall, txnParams),
                 ApplicationId = applicationId,
-                OnComplete = onComplete
+                OnComplete = OnCompletion.CloseOut,
+                AppArguments = appArguments,
+                Accounts = accounts,
+                ForeignApps = foreignApps,
+                ForeignAssets = foreignAssets,
+            };
+            txn.Fee = txn.GetSuggestedFee(txnParams);
+            return txn;
+        }
+
+        public static AppCallTxn AppClearState(
+            Address sender,
+            TransactionParams txnParams,
+            ulong applicationId,
+            byte[] appArguments = default,
+            Address[] accounts = default,
+            ulong[] foreignApps = default,
+            ulong[] foreignAssets = default
+        )
+        {
+            var txn = new AppCallTxn
+            {
+                header = new TransactionHeader(sender, TransactionType.ApplicationCall, txnParams),
+                ApplicationId = applicationId,
+                OnComplete = OnCompletion.Clear,
+                AppArguments = appArguments,
+                Accounts = accounts,
+                ForeignApps = foreignApps,
+                ForeignAssets = foreignAssets,
+            };
+            txn.Fee = txn.GetSuggestedFee(txnParams);
+            return txn;
+        }
+
+        public static AppCallTxn AppCall(
+            Address sender,
+            TransactionParams txnParams,
+            ulong applicationId,
+            OnCompletion onComplete = OnCompletion.NoOp,
+            byte[] appArguments = default,
+            Address[] accounts = default,
+            ulong[] foreignApps = default,
+            ulong[] foreignAssets = default
+        )
+        {
+            var txn = new AppCallTxn
+            {
+                header = new TransactionHeader(sender, TransactionType.ApplicationCall, txnParams),
+                ApplicationId = applicationId,
+                OnComplete = onComplete,
+                AppArguments = appArguments,
+                Accounts = accounts,
+                ForeignApps = foreignApps,
+                ForeignAssets = foreignAssets,
             };
             txn.Fee = txn.GetSuggestedFee(txnParams);
             return txn;
@@ -118,13 +183,76 @@ namespace AlgoSdk
         public static AppCallTxn AppOptIn(
             Address sender,
             TransactionParams txnParams,
-            ulong applicationId
+            ulong applicationId,
+            byte[] appArguments = default,
+            Address[] accounts = default,
+            ulong[] foreignApps = default,
+            ulong[] foreignAssets = default
         )
         {
             var txn = new AppCallTxn
             {
                 header = new TransactionHeader(sender, TransactionType.ApplicationCall, txnParams),
                 ApplicationId = applicationId,
+                OnComplete = OnCompletion.OptIn,
+                AppArguments = appArguments,
+                Accounts = accounts,
+                ForeignApps = foreignApps,
+                ForeignAssets = foreignAssets,
+            };
+            txn.Fee = txn.GetSuggestedFee(txnParams);
+            return txn;
+        }
+
+        public static AppCallTxn AppUpdateTxn(
+            Address sender,
+            TransactionParams txnParams,
+            ulong applicationId,
+            byte[] approvalProgram = default,
+            byte[] clearStateProgram = default,
+            ulong extraProgramPages = default,
+            byte[] appArguments = default,
+            Address[] accounts = default,
+            ulong[] foreignApps = default,
+            ulong[] foreignAssets = default
+        )
+        {
+            var txn = new AppCallTxn
+            {
+                header = new TransactionHeader(sender, TransactionType.ApplicationCall, txnParams),
+                ApplicationId = applicationId,
+                OnComplete = OnCompletion.Update,
+                ApprovalProgram = approvalProgram,
+                ClearStateProgram = clearStateProgram,
+                ExtraProgramPages = extraProgramPages,
+                AppArguments = appArguments,
+                Accounts = accounts,
+                ForeignApps = foreignApps,
+                ForeignAssets = foreignAssets
+            };
+            txn.Fee = txn.GetSuggestedFee(txnParams);
+            return txn;
+        }
+
+        public static AppCallTxn AppDelete(
+            Address sender,
+            TransactionParams txnParams,
+            ulong applicationId,
+            byte[] appArguments = default,
+            Address[] accounts = default,
+            ulong[] foreignApps = default,
+            ulong[] foreignAssets = default
+        )
+        {
+            var txn = new AppCallTxn
+            {
+                header = new TransactionHeader(sender, TransactionType.ApplicationCall, txnParams),
+                ApplicationId = applicationId,
+                OnComplete = OnCompletion.Delete,
+                AppArguments = appArguments,
+                Accounts = accounts,
+                ForeignApps = foreignApps,
+                ForeignAssets = foreignAssets
             };
             txn.Fee = txn.GetSuggestedFee(txnParams);
             return txn;
@@ -231,25 +359,11 @@ namespace AlgoSdk
             set => @params.OnComplete = value;
         }
 
-        [AlgoApiField(null, "apat")]
-        public Address[] Accounts
-        {
-            get => @params.Accounts;
-            set => @params.Accounts = value;
-        }
-
         [AlgoApiField(null, "apap")]
         public byte[] ApprovalProgram
         {
             get => @params.ApprovalProgram;
             set => @params.ApprovalProgram = value;
-        }
-
-        [AlgoApiField(null, "apaa")]
-        public byte[] AppArguments
-        {
-            get => @params.AppArguments;
-            set => @params.AppArguments = value;
         }
 
         [AlgoApiField(null, "apsu")]
@@ -259,15 +373,29 @@ namespace AlgoSdk
             set => @params.ClearStateProgram = value;
         }
 
+        [AlgoApiField(null, "apaa")]
+        public byte[] AppArguments
+        {
+            get => @params.AppArguments;
+            set => @params.AppArguments = value;
+        }
+
+        [AlgoApiField(null, "apat")]
+        public Address[] Accounts
+        {
+            get => @params.Accounts;
+            set => @params.Accounts = value;
+        }
+
         [AlgoApiField(null, "apfa")]
-        public Address[] ForeignApps
+        public ulong[] ForeignApps
         {
             get => @params.ForeignApps;
             set => @params.ForeignApps = value;
         }
 
         [AlgoApiField(null, "apas")]
-        public Address[] ForeignAssets
+        public ulong[] ForeignAssets
         {
             get => @params.ForeignAssets;
             set => @params.ForeignAssets = value;
@@ -323,23 +451,23 @@ namespace AlgoSdk
             [AlgoApiField("on-completion", "apan")]
             public OnCompletion OnComplete;
 
-            [AlgoApiField("accounts", "apat")]
-            public Address[] Accounts;
-
             [AlgoApiField("approval-program", "apap")]
             public byte[] ApprovalProgram;
-
-            [AlgoApiField("application-args", "apaa")]
-            public byte[] AppArguments;
 
             [AlgoApiField("clear-state-program", "apsu")]
             public byte[] ClearStateProgram;
 
+            [AlgoApiField("application-args", "apaa")]
+            public byte[] AppArguments;
+
+            [AlgoApiField("accounts", "apat")]
+            public Address[] Accounts;
+
             [AlgoApiField("foreign-apps", "apfa")]
-            public Address[] ForeignApps;
+            public ulong[] ForeignApps;
 
             [AlgoApiField("foreign-assets", "apas")]
-            public Address[] ForeignAssets;
+            public ulong[] ForeignAssets;
 
             [AlgoApiField("global-state-schema", "global-state-schema")]
             public StateSchema GlobalStateSchema;
