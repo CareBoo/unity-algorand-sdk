@@ -3,27 +3,51 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// Params used for setting all transactions. Contains fee, genesis info, and round constraints.
+    /// Usually this is retrieved from <see cref="AlgodClient.GetSuggestedParams"/> then modified.
+    /// </summary>
     [AlgoApiObject]
     public struct TransactionParams
         : IEquatable<TransactionParams>
     {
+        /// <summary>
+        /// Indicates the consensus protocol version as of <see cref="LastRound"/>.
+        /// </summary>
         [AlgoApiField("consensus-version", null)]
         public string ConsensusVersion;
 
+        /// <summary>
+        /// Fee is the suggested transaction fee in units of micro-Algos per byte.
+        /// Fee may fall to zero but transactions must still have a fee of at least
+        /// <see cref="MinFee"/> for the current network protocol.
+        /// </summary>
         [AlgoApiField("fee", null)]
         public ulong Fee;
 
+        /// <summary>
+        /// The hash of the genesis block.
+        /// </summary>
         [AlgoApiField("genesis-hash", null)]
         public GenesisHash GenesisHash;
 
+        /// <summary>
+        /// An ID listed in the genesis block.
+        /// </summary>
         [AlgoApiField("genesis-id", null)]
         public FixedString32Bytes GenesisId;
 
+        /// <summary>
+        /// The minimum transaction fee (not per byte) required for the txn to validate for the current network protocol.
+        /// </summary>
         [AlgoApiField("min-fee", null)]
         public ulong MinFee;
 
+        /// <summary>
+        /// Indicates the last round seen by the node
+        /// </summary>
         [AlgoApiField("last-round", null)]
-        public ulong PreviousRound
+        public ulong LastRound
         {
             get => prevRound;
             set
@@ -34,14 +58,23 @@ namespace AlgoSdk
             }
         }
 
+        /// <summary>
+        /// Whether to interpret <see cref="Fee"/> as microalgos per byte, or as a flat amount of microalgos.
+        /// </summary>
         public bool FlatFee
         {
             get => !noFlatFee;
             set => noFlatFee = !value;
         }
 
+        /// <summary>
+        /// The last valid round for a transaction.
+        /// </summary>
         public ulong FirstValidRound;
 
+        /// <summary>
+        /// The first valid round for a transaction.
+        /// </summary>
         public ulong LastValidRound;
 
         ulong prevRound;

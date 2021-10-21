@@ -8,8 +8,8 @@ using UnityEngine;
 
 namespace AlgoSdk
 {
-    [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
     [AlgoApiFormatter(typeof(AddressFormatter))]
+    [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
     public struct Address
         : IByteArray
         , IEquatable<Address>

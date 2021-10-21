@@ -2,7 +2,7 @@ namespace AlgoSdk
 {
     public partial struct Mnemonic
     {
-        public enum ShortWord : ushort
+        internal enum ShortWord : ushort
         {
             aban,
             abil,

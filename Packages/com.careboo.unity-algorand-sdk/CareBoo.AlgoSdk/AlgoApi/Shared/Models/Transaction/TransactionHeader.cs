@@ -148,7 +148,7 @@ namespace AlgoSdk
         }
 
         [AlgoApiField("local-state-delta", "ld", readOnly: true)]
-        public AccountStateDelta[] LocalStateDelta
+        public ApplicationStateDelta[] LocalStateDelta
         {
             get => HeaderParams.LocalStateDelta;
             set => HeaderParams.LocalStateDelta = value;
@@ -201,7 +201,7 @@ namespace AlgoSdk
         public ulong CreatedAssetIndex;
         public ulong IntraRoundOffset;
         public EvalDeltaKeyValue[] GlobalStateDelta;
-        public AccountStateDelta[] LocalStateDelta;
+        public ApplicationStateDelta[] LocalStateDelta;
         public ulong ReceiverRewards;
         public ulong RoundTime;
         public ulong SenderRewards;

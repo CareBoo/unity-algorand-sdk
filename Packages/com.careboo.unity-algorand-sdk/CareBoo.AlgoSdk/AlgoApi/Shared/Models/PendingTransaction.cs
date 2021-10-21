@@ -29,7 +29,7 @@ namespace AlgoSdk
         public EvalDeltaKeyValue[] GlobalStateDelta;
 
         [AlgoApiField("local-state-delta", "local-state-delta")]
-        public AccountStateDelta[] LocalStateDelta;
+        public ApplicationStateDelta[] LocalStateDelta;
 
         [AlgoApiField("pool-error", "pool-error")]
         public FixedString128Bytes PoolError;

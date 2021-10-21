@@ -18,7 +18,7 @@ namespace AlgoSdk
         }
     }
 
-    public partial class AlgoApiFormatterLookup
+    internal partial class AlgoApiFormatterLookup
     {
         public const string EnsureLookupMethodName = nameof(EnsureLookupInitialized);
         public const string LookupFieldName = nameof(lookup);
@@ -69,7 +69,7 @@ namespace AlgoSdk
             AddFormatter(type, formatter);
         }
 
-        public static IAlgoApiFormatter<T> GetFormatter<T>()
+        internal static IAlgoApiFormatter<T> GetFormatter<T>()
         {
             if (lookup == null)
                 EnsureLookupInitialized();

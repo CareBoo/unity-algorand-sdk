@@ -5,7 +5,7 @@ namespace AlgoSdk
 {
     [AttributeUsage(AttributeTargets.Struct, AllowMultiple = false)]
     [Conditional("UNITY_EDITOR")]
-    public sealed class AlgoApiObjectAttribute : Attribute
+    internal sealed class AlgoApiObjectAttribute : Attribute
     {
     }
 }

@@ -3,8 +3,8 @@ using System;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct AccountStateDelta
-        : IEquatable<AccountStateDelta>
+    public struct ApplicationStateDelta
+        : IEquatable<ApplicationStateDelta>
     {
         [AlgoApiField("address", null)]
         public Address Address;
@@ -12,7 +12,7 @@ namespace AlgoSdk
         [AlgoApiField("delta", null)]
         public EvalDeltaKeyValue[] Delta;
 
-        public bool Equals(AccountStateDelta other)
+        public bool Equals(ApplicationStateDelta other)
         {
             return Address.Equals(other.Address)
                 && ArrayComparer.Equals(Delta, other.Delta);

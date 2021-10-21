@@ -9,16 +9,22 @@ namespace AlgoSdk
     {
         [AlgoApiField("app-call-messages", null)]
         public FixedString128Bytes[] AppCallMessages;
+
         [AlgoApiField("app-call-trace", null)]
         public DryrunState[] AppCallTrace;
+
         [AlgoApiField("disassembly", null)]
         public FixedString128Bytes[] Disassembly;
+
         [AlgoApiField("global-delta", null)]
         public EvalDeltaKeyValue[] GlobalDelta;
+
         [AlgoApiField("local-deltas", null)]
-        public AccountStateDelta[] LocalDeltas;
+        public ApplicationStateDelta[] LocalDeltas;
+
         [AlgoApiField("logic-sig-messages", null)]
         public FixedString128Bytes[] LogicSigMessages;
+
         [AlgoApiField("logic-sig-trace", null)]
         public DryrunState[] LogicSigTrace;
 

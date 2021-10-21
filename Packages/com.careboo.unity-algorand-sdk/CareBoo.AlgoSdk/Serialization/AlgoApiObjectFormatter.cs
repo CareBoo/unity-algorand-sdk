@@ -12,7 +12,7 @@ namespace AlgoSdk
         readonly AlgoApiField<T>.Map<FixedString64Bytes> jsonFieldMap = new AlgoApiField<T>.Map<FixedString64Bytes>();
         readonly AlgoApiField<T>.Map<FixedString32Bytes> msgPackFieldMap = new AlgoApiField<T>.Map<FixedString32Bytes>();
 
-        public AlgoApiObjectFormatter<T> Assign<TField>(
+        internal AlgoApiObjectFormatter<T> Assign<TField>(
             string jsonKey,
             string messagePackKey,
             AlgoApiField<T>.FieldGetter<TField> getter,
@@ -27,7 +27,7 @@ namespace AlgoSdk
             return this;
         }
 
-        public AlgoApiObjectFormatter<T> Assign<TField>(
+        internal AlgoApiObjectFormatter<T> Assign<TField>(
             string jsonKey,
             string messagePackKey,
             AlgoApiField<T>.FieldGetter<TField> getter,

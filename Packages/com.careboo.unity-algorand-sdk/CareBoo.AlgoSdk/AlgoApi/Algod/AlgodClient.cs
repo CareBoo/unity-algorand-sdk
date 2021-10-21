@@ -4,22 +4,46 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// A client for accessing the algod service
+    /// </summary>
+    /// <remarks>
+    /// The algod service is responsible for handling information
+    /// required to create and send transactions.
+    /// </remarks>
     public struct AlgodClient : IAlgodClient
     {
         readonly string address;
 
         readonly string token;
 
-        public AlgodClient(string address, string token)
+        /// <summary>
+        /// Create a new algod client
+        /// </summary>
+        /// <param name="address">url of the algod service, including the port, e.g. <c>"http://localhost:4001"</c></param>
+        /// <param name="token">token used in authenticating to the algod service</param>
+        public AlgodClient(string address, string token = null)
         {
             this.address = address.TrimEnd('/');
             this.token = token;
         }
 
+        /// <summary>
+        /// Address of the algod service, including the port
+        /// </summary>
+        /// <remarks>
+        /// e.g. <c>"http://localhost:4001"</c>
+        /// </remarks>
         public string Address => address;
 
+        /// <summary>
+        /// Token used in authenticating to the algod service
+        /// </summary>
         public string Token => token;
 
+        /// <summary>
+        /// Request header key the <see cref="Token"/> is placed in
+        /// </summary>
         public string TokenHeader => "X-Algo-API-Token";
 
         public async UniTask<AlgoApiResponse<AlgoApiObject>> GetGenesisInformation()
@@ -64,7 +88,7 @@ namespace AlgoSdk
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<PendingTransactions>> GetPendingTransactions(Address accountAddress, ulong max = 0)
+        public async UniTask<AlgoApiResponse<PendingTransactions>> GetPendingTransactionsByAccount(Address accountAddress, ulong max = 0)
         {
             return await this
                 .Get($"/v2/accounts/{accountAddress}/transactions/pending?max={max}")
@@ -130,7 +154,7 @@ namespace AlgoSdk
         }
 
         public async UniTask<AlgoApiResponse<TransactionIdResponse>> RegisterParticipationKeys(
-            Address accountAddress,
+            string accountAddress,
             ulong fee = 1000,
             Optional<ulong> keyDilution = default,
             Optional<bool> noWait = default,

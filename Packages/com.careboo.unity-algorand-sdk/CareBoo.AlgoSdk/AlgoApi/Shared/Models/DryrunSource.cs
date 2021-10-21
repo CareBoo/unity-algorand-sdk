@@ -9,10 +9,13 @@ namespace AlgoSdk
     {
         [AlgoApiField("app-index", null)]
         public ulong AppIndex;
+
         [AlgoApiField("field-name", null)]
         public FixedString32Bytes FieldName;
+
         [AlgoApiField("source", null)]
         public string Source;
+
         [AlgoApiField("txn-index", null)]
         public ulong TransactionIndex;
 
