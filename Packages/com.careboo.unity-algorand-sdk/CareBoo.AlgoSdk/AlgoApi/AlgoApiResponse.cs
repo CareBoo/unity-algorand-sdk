@@ -5,7 +5,10 @@ using static UnityEngine.Networking.UnityWebRequest;
 
 namespace AlgoSdk
 {
-    public struct AlgoApiResponse
+    /// <summary>
+    /// Wrapper class around a completed <see cref="UnityWebRequest"/>
+    /// </summary>
+    public struct AlgoApiResponse : IAlgoApiResponse
     {
         readonly byte[] data;
         readonly Result status;
@@ -68,7 +71,12 @@ namespace AlgoSdk
         }
     }
 
-    public readonly struct AlgoApiResponse<T>
+    /// <summary>
+    /// Wrapper class around a completed <see cref="UnityWebRequest"/>.
+    /// This can be deconstructed into a tuple of (ErrorResponse, Payload)
+    /// </summary>
+    /// <typeparam name="T">The type of the object deserialized from the response</typeparam>
+    public readonly struct AlgoApiResponse<T> : IAlgoApiResponse<T>
     {
         readonly AlgoApiResponse rawResponse;
         readonly ErrorResponse error;
@@ -101,8 +109,6 @@ namespace AlgoSdk
         public T Payload => payload;
 
         public ErrorResponse Error => error;
-
-        public AlgoApiResponse Raw => rawResponse;
 
         public byte[] Data => rawResponse.Data;
 

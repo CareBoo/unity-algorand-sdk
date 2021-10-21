@@ -7,7 +7,7 @@ namespace AlgoSdk
 {
     [AttributeUsage(AttributeTargets.Struct | AttributeTargets.Class | AttributeTargets.Enum, Inherited = true, AllowMultiple = true)]
     [Conditional("UNITY_EDITOR")]
-    internal sealed class AlgoApiFormatterAttribute : Attribute
+    public sealed class AlgoApiFormatterAttribute : Attribute
     {
         readonly Type formatterType;
 

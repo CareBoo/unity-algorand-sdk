@@ -5,7 +5,7 @@ namespace AlgoSdk
 {
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, Inherited = true, AllowMultiple = false)]
     [Conditional("UNITY_EDITOR")]
-    internal sealed class AlgoApiField : Attribute
+    public sealed class AlgoApiField : Attribute
     {
         readonly string jsonKeyName;
         readonly string msgPackKeyName;

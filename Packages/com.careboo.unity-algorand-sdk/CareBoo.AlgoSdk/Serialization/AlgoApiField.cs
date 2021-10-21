@@ -6,7 +6,7 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
-    internal class AlgoApiField<TAlgoApiObject>
+    public class AlgoApiField<TAlgoApiObject>
         where TAlgoApiObject : struct
     {
         public delegate void MessagePackDeserializer(

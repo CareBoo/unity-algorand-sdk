@@ -28,22 +28,10 @@ namespace AlgoSdk
             this.token = token;
         }
 
-        /// <summary>
-        /// Address of the algod service, including the port
-        /// </summary>
-        /// <remarks>
-        /// e.g. <c>"http://localhost:4001"</c>
-        /// </remarks>
         public string Address => address;
 
-        /// <summary>
-        /// Token used in authenticating to the algod service
-        /// </summary>
         public string Token => token;
 
-        /// <summary>
-        /// Request header key the <see cref="Token"/> is placed in
-        /// </summary>
         public string TokenHeader => "X-Algo-API-Token";
 
         public async UniTask<AlgoApiResponse<AlgoApiObject>> GetGenesisInformation()

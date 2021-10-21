@@ -71,7 +71,7 @@ public class AlgodClientTest : AlgodClientTestFixture
     public IEnumerator RegisterParticipationKeysShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var addresses = await GetAddresses();
-        var response = await algod.RegisterParticipationKeys(addresses[0]);
+        var response = await algod.RegisterParticipationKeys(addresses[0].ToString());
         AssertOkay(response.Error);
     });
 
@@ -125,7 +125,6 @@ public class AlgodClientTest : AlgodClientTestFixture
         var txId = await MakePaymentTransaction(100000);
         var pendingResponse = await algod.GetPendingTransaction(txId);
         AssertOkay(pendingResponse.Error);
-        Debug.Log(pendingResponse.Raw.GetText());
     });
 
     [UnityTest]

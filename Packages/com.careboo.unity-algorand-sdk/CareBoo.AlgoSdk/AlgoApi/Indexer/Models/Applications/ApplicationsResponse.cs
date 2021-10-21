@@ -6,15 +6,16 @@ namespace AlgoSdk
     [AlgoApiObject]
     public struct ApplicationsResponse
         : IEquatable<ApplicationsResponse>
+        , IPaginatedResponse
     {
         [AlgoApiField("applications", null)]
-        public Application[] Applications;
+        public Application[] Applications { get; set; }
 
         [AlgoApiField("current-round", null)]
-        public ulong CurrentRound;
+        public ulong CurrentRound { get; set; }
 
         [AlgoApiField("next-token", null)]
-        public FixedString128Bytes NextToken;
+        public FixedString128Bytes NextToken { get; set; }
 
         public bool Equals(ApplicationsResponse other)
         {
