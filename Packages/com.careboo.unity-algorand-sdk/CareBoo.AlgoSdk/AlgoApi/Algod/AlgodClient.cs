@@ -113,10 +113,8 @@ namespace AlgoSdk
 
         public async UniTask<AlgoApiResponse<MerkleProof>> GetMerkleProof(ulong round, TransactionId txid)
         {
-            FixedString64Bytes txidstr = default;
-            Base64Encoding.CopyToBase64(txid, ref txidstr);
             return await this
-                .Get($"/v2/blocks/{round}/transactions/{txidstr}/proof")
+                .Get($"/v2/blocks/{round}/transactions/{txid}/proof")
                 .Send();
         }
 

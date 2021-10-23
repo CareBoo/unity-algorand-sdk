@@ -106,16 +106,9 @@ public class AlgodClientTest : AlgodClientTestFixture
     [UnityTest]
     public IEnumerator GetMerkleProofShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        TransactionIdResponse txId = await MakePaymentTransaction(100000);
-        var pendingTxn = new PendingTransaction();
-        while (pendingTxn.ConfirmedRound <= 0)
-        {
-            await UniTask.Delay(500);
-            var pendingResponse = await algod.GetPendingTransaction(txId);
-            pendingTxn = pendingResponse.Payload;
-        }
-        var round = pendingTxn.ConfirmedRound;
-        var response = await algod.GetMerkleProof(round, txId);
+        TransactionIdResponse txid = await MakePaymentTransaction(100000);
+        var pendingTxn = await WaitForTransaction(txid);
+        var response = await algod.GetMerkleProof(pendingTxn.ConfirmedRound, txid);
         AssertOkay(response.Error);
     });
 
