@@ -1,0 +1,76 @@
+{
+    "metadata": [
+        {
+            "src": [
+                {
+                    "files": [
+                        "CareBoo.AlgoSdk.csproj",
+                        "CareBoo.AlgoSdk.BurstCompatibilityGen.csproj",
+                        "CareBoo.AlgoSdk.Crypto.csproj",
+                        "CareBoo.AlgoSdk.Crypto.Tests.csproj",
+                        "CareBoo.AlgoSdk.IntegrationTests.csproj",
+                        "CareBoo.AlgoSdk.LowLevel.csproj",
+                        "CareBoo.AlgoSdk.Tests.csproj"
+                    ],
+                    "src": "../../../"
+                }
+            ],
+            "dest": "../Documentation~/api",
+            "disableGitFeatures": false,
+            "disableDefaultFilter": false,
+            "filter": ""
+        }
+    ],
+    "build": {
+        "content": [
+            {
+                "src": "",
+                "files": [
+                    "index.md",
+                    "**.yml",
+                    "api/**.yml",
+                    "api/index.md"
+                ]
+            },
+            {
+                "src": "../Documentation~",
+                "files": [
+                    "*.md",
+                    "*.yml",
+                    "**/*.md",
+                    "**/*.yml"
+                ]
+            }
+        ],
+        "resource": [
+            {
+                "src": "",
+                "files": [
+                    "images/**",
+                    "favicon.ico",
+                    "logo.svg"
+                ]
+            }
+        ],
+        "overwrite": [
+            {
+                "files": [
+                    "apidoc/**.md"
+                ],
+                "exclude": [
+                    "obj/**",
+                    "_site/**"
+                ]
+            }
+        ],
+        "dest": "../docs~",
+        "template": [
+            "default"
+        ],
+        "markdownEngineName": "markdig",
+        "noLangKeyword": false,
+        "keepFileLink": false,
+        "cleanupCacheHistory": false,
+        "disableGitFeatures": false
+    }
+}

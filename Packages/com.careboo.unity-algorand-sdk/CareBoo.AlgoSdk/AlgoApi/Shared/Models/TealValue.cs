@@ -2,7 +2,6 @@ using System;
 using System.Runtime.InteropServices;
 using AlgoSdk.Formatters;
 using AlgoSdk.LowLevel;
-using AlgoSdk.MsgPack.Formatters;
 
 namespace AlgoSdk
 {

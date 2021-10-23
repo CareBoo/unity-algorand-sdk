@@ -1,0 +1,745 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.Crypto.Sha512
+  commentId: T:AlgoSdk.Crypto.Sha512
+  id: Sha512
+  parent: AlgoSdk.Crypto
+  children:
+  - AlgoSdk.Crypto.Sha512.Hash(System.Void*,System.Int32)
+  - AlgoSdk.Crypto.Sha512.Hash(Unity.Collections.NativeArray{System.Byte})
+  - AlgoSdk.Crypto.Sha512.Hash``1(``0@)
+  - AlgoSdk.Crypto.Sha512.Hash256Truncated(System.Void*,System.Int32)
+  - AlgoSdk.Crypto.Sha512.Hash256Truncated(Unity.Collections.NativeArray{System.Byte})
+  - AlgoSdk.Crypto.Sha512.Hash256Truncated``1(``0@)
+  langs:
+  - csharp
+  - vb
+  name: Sha512
+  nameWithType: Sha512
+  fullName: AlgoSdk.Crypto.Sha512
+  type: Class
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk.Crypto/Sha512.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Sha512
+    path: ../CareBoo.AlgoSdk.Crypto/Sha512.cs
+    startLine: 9
+  assemblies:
+  - CareBoo.AlgoSdk.Crypto
+  namespace: AlgoSdk.Crypto
+  syntax:
+    content: public static class Sha512
+    content.vb: Public Module Sha512
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: AlgoSdk.Crypto.Sha512.Hash``1(``0@)
+  commentId: M:AlgoSdk.Crypto.Sha512.Hash``1(``0@)
+  id: Hash``1(``0@)
+  parent: AlgoSdk.Crypto.Sha512
+  langs:
+  - csharp
+  - vb
+  name: Hash<TByteArray>(TByteArray)
+  nameWithType: Sha512.Hash<TByteArray>(TByteArray)
+  fullName: AlgoSdk.Crypto.Sha512.Hash<TByteArray>(TByteArray)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk.Crypto/Sha512.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Hash
+    path: ../CareBoo.AlgoSdk.Crypto/Sha512.cs
+    startLine: 23
+  assemblies:
+  - CareBoo.AlgoSdk.Crypto
+  namespace: AlgoSdk.Crypto
+  syntax:
+    content: >-
+      public static Sha512_Hash Hash<TByteArray>(in TByteArray bytes)
+          where TByteArray : struct, IByteArray
+    parameters:
+    - id: bytes
+      type: '{TByteArray}'
+    typeParameters:
+    - id: TByteArray
+    return:
+      type: AlgoSdk.Crypto.Sha512_Hash
+    content.vb: Public Shared Function Hash(Of TByteArray As {Structure, IByteArray})(ByRef bytes As TByteArray) As Sha512_Hash
+  overload: AlgoSdk.Crypto.Sha512.Hash*
+  nameWithType.vb: Sha512.Hash(Of TByteArray)(ByRef TByteArray)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AlgoSdk.Crypto.Sha512.Hash(Of TByteArray)(ByRef TByteArray)
+  name.vb: Hash(Of TByteArray)(ByRef TByteArray)
+- uid: AlgoSdk.Crypto.Sha512.Hash(Unity.Collections.NativeArray{System.Byte})
+  commentId: M:AlgoSdk.Crypto.Sha512.Hash(Unity.Collections.NativeArray{System.Byte})
+  id: Hash(Unity.Collections.NativeArray{System.Byte})
+  parent: AlgoSdk.Crypto.Sha512
+  langs:
+  - csharp
+  - vb
+  name: Hash(NativeArray<Byte>)
+  nameWithType: Sha512.Hash(NativeArray<Byte>)
+  fullName: AlgoSdk.Crypto.Sha512.Hash(Unity.Collections.NativeArray<System.Byte>)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk.Crypto/Sha512.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Hash
+    path: ../CareBoo.AlgoSdk.Crypto/Sha512.cs
+    startLine: 30
+  assemblies:
+  - CareBoo.AlgoSdk.Crypto
+  namespace: AlgoSdk.Crypto
+  syntax:
+    content: public static Sha512_Hash Hash(NativeArray<byte> bytes)
+    parameters:
+    - id: bytes
+      type: Unity.Collections.NativeArray{System.Byte}
+    return:
+      type: AlgoSdk.Crypto.Sha512_Hash
+    content.vb: Public Shared Function Hash(bytes As NativeArray(Of Byte)) As Sha512_Hash
+  overload: AlgoSdk.Crypto.Sha512.Hash*
+  nameWithType.vb: Sha512.Hash(NativeArray(Of Byte))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AlgoSdk.Crypto.Sha512.Hash(Unity.Collections.NativeArray(Of System.Byte))
+  name.vb: Hash(NativeArray(Of Byte))
+- uid: AlgoSdk.Crypto.Sha512.Hash(System.Void*,System.Int32)
+  commentId: M:AlgoSdk.Crypto.Sha512.Hash(System.Void*,System.Int32)
+  id: Hash(System.Void*,System.Int32)
+  parent: AlgoSdk.Crypto.Sha512
+  langs:
+  - csharp
+  - vb
+  name: Hash(Void*, Int32)
+  nameWithType: Sha512.Hash(Void*, Int32)
+  fullName: AlgoSdk.Crypto.Sha512.Hash(System.Void*, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk.Crypto/Sha512.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Hash
+    path: ../CareBoo.AlgoSdk.Crypto/Sha512.cs
+    startLine: 35
+  assemblies:
+  - CareBoo.AlgoSdk.Crypto
+  namespace: AlgoSdk.Crypto
+  syntax:
+    content: public static Sha512_Hash Hash(void *ptr, int length)
+    parameters:
+    - id: ptr
+      type: System.Void*
+    - id: length
+      type: System.Int32
+    return:
+      type: AlgoSdk.Crypto.Sha512_Hash
+    content.vb: Public Shared Function Hash(ptr As  *, length As Integer) As Sha512_Hash
+  overload: AlgoSdk.Crypto.Sha512.Hash*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AlgoSdk.Crypto.Sha512.Hash256Truncated``1(``0@)
+  commentId: M:AlgoSdk.Crypto.Sha512.Hash256Truncated``1(``0@)
+  id: Hash256Truncated``1(``0@)
+  parent: AlgoSdk.Crypto.Sha512
+  langs:
+  - csharp
+  - vb
+  name: Hash256Truncated<TByteArray>(TByteArray)
+  nameWithType: Sha512.Hash256Truncated<TByteArray>(TByteArray)
+  fullName: AlgoSdk.Crypto.Sha512.Hash256Truncated<TByteArray>(TByteArray)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk.Crypto/Sha512.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Hash256Truncated
+    path: ../CareBoo.AlgoSdk.Crypto/Sha512.cs
+    startLine: 42
+  assemblies:
+  - CareBoo.AlgoSdk.Crypto
+  namespace: AlgoSdk.Crypto
+  syntax:
+    content: >-
+      public static Sha512_256_Hash Hash256Truncated<TByteArray>(in TByteArray bytes)
+          where TByteArray : struct, IByteArray
+    parameters:
+    - id: bytes
+      type: '{TByteArray}'
+    typeParameters:
+    - id: TByteArray
+    return:
+      type: AlgoSdk.Crypto.Sha512_256_Hash
+    content.vb: Public Shared Function Hash256Truncated(Of TByteArray As {Structure, IByteArray})(ByRef bytes As TByteArray) As Sha512_256_Hash
+  overload: AlgoSdk.Crypto.Sha512.Hash256Truncated*
+  nameWithType.vb: Sha512.Hash256Truncated(Of TByteArray)(ByRef TByteArray)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AlgoSdk.Crypto.Sha512.Hash256Truncated(Of TByteArray)(ByRef TByteArray)
+  name.vb: Hash256Truncated(Of TByteArray)(ByRef TByteArray)
+- uid: AlgoSdk.Crypto.Sha512.Hash256Truncated(Unity.Collections.NativeArray{System.Byte})
+  commentId: M:AlgoSdk.Crypto.Sha512.Hash256Truncated(Unity.Collections.NativeArray{System.Byte})
+  id: Hash256Truncated(Unity.Collections.NativeArray{System.Byte})
+  parent: AlgoSdk.Crypto.Sha512
+  langs:
+  - csharp
+  - vb
+  name: Hash256Truncated(NativeArray<Byte>)
+  nameWithType: Sha512.Hash256Truncated(NativeArray<Byte>)
+  fullName: AlgoSdk.Crypto.Sha512.Hash256Truncated(Unity.Collections.NativeArray<System.Byte>)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk.Crypto/Sha512.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Hash256Truncated
+    path: ../CareBoo.AlgoSdk.Crypto/Sha512.cs
+    startLine: 48
+  assemblies:
+  - CareBoo.AlgoSdk.Crypto
+  namespace: AlgoSdk.Crypto
+  syntax:
+    content: public static Sha512_256_Hash Hash256Truncated(NativeArray<byte> bytes)
+    parameters:
+    - id: bytes
+      type: Unity.Collections.NativeArray{System.Byte}
+    return:
+      type: AlgoSdk.Crypto.Sha512_256_Hash
+    content.vb: Public Shared Function Hash256Truncated(bytes As NativeArray(Of Byte)) As Sha512_256_Hash
+  overload: AlgoSdk.Crypto.Sha512.Hash256Truncated*
+  nameWithType.vb: Sha512.Hash256Truncated(NativeArray(Of Byte))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AlgoSdk.Crypto.Sha512.Hash256Truncated(Unity.Collections.NativeArray(Of System.Byte))
+  name.vb: Hash256Truncated(NativeArray(Of Byte))
+- uid: AlgoSdk.Crypto.Sha512.Hash256Truncated(System.Void*,System.Int32)
+  commentId: M:AlgoSdk.Crypto.Sha512.Hash256Truncated(System.Void*,System.Int32)
+  id: Hash256Truncated(System.Void*,System.Int32)
+  parent: AlgoSdk.Crypto.Sha512
+  langs:
+  - csharp
+  - vb
+  name: Hash256Truncated(Void*, Int32)
+  nameWithType: Sha512.Hash256Truncated(Void*, Int32)
+  fullName: AlgoSdk.Crypto.Sha512.Hash256Truncated(System.Void*, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk.Crypto/Sha512.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Hash256Truncated
+    path: ../CareBoo.AlgoSdk.Crypto/Sha512.cs
+    startLine: 53
+  assemblies:
+  - CareBoo.AlgoSdk.Crypto
+  namespace: AlgoSdk.Crypto
+  syntax:
+    content: public static Sha512_256_Hash Hash256Truncated(void *ptr, int length)
+    parameters:
+    - id: ptr
+      type: System.Void*
+    - id: length
+      type: System.Int32
+    return:
+      type: AlgoSdk.Crypto.Sha512_256_Hash
+    content.vb: Public Shared Function Hash256Truncated(ptr As  *, length As Integer) As Sha512_256_Hash
+  overload: AlgoSdk.Crypto.Sha512.Hash256Truncated*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: AlgoSdk.Crypto
+  commentId: N:AlgoSdk.Crypto
+  name: AlgoSdk.Crypto
+  nameWithType: AlgoSdk.Crypto
+  fullName: AlgoSdk.Crypto
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AlgoSdk.Crypto.Sha512.Hash*
+  commentId: Overload:AlgoSdk.Crypto.Sha512.Hash
+  name: Hash
+  nameWithType: Sha512.Hash
+  fullName: AlgoSdk.Crypto.Sha512.Hash
+- uid: '{TByteArray}'
+  commentId: '!:TByteArray'
+  definition: TByteArray
+  name: TByteArray
+  nameWithType: TByteArray
+  fullName: TByteArray
+- uid: AlgoSdk.Crypto.Sha512_Hash
+  commentId: T:AlgoSdk.Crypto.Sha512_Hash
+  parent: AlgoSdk.Crypto
+  name: Sha512_Hash
+  nameWithType: Sha512_Hash
+  fullName: AlgoSdk.Crypto.Sha512_Hash
+- uid: TByteArray
+  name: TByteArray
+  nameWithType: TByteArray
+  fullName: TByteArray
+- uid: Unity.Collections.NativeArray{System.Byte}
+  commentId: T:Unity.Collections.NativeArray{System.Byte}
+  parent: Unity.Collections
+  definition: Unity.Collections.NativeArray`1
+  name: NativeArray<Byte>
+  nameWithType: NativeArray<Byte>
+  fullName: Unity.Collections.NativeArray<System.Byte>
+  nameWithType.vb: NativeArray(Of Byte)
+  fullName.vb: Unity.Collections.NativeArray(Of System.Byte)
+  name.vb: NativeArray(Of Byte)
+  spec.csharp:
+  - uid: Unity.Collections.NativeArray`1
+    name: NativeArray
+    nameWithType: NativeArray
+    fullName: Unity.Collections.NativeArray
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Unity.Collections.NativeArray`1
+    name: NativeArray
+    nameWithType: NativeArray
+    fullName: Unity.Collections.NativeArray
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Unity.Collections.NativeArray`1
+  commentId: T:Unity.Collections.NativeArray`1
+  isExternal: true
+  name: NativeArray<T>
+  nameWithType: NativeArray<T>
+  fullName: Unity.Collections.NativeArray<T>
+  nameWithType.vb: NativeArray(Of T)
+  fullName.vb: Unity.Collections.NativeArray(Of T)
+  name.vb: NativeArray(Of T)
+  spec.csharp:
+  - uid: Unity.Collections.NativeArray`1
+    name: NativeArray
+    nameWithType: NativeArray
+    fullName: Unity.Collections.NativeArray
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Unity.Collections.NativeArray`1
+    name: NativeArray
+    nameWithType: NativeArray
+    fullName: Unity.Collections.NativeArray
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Unity.Collections
+  commentId: N:Unity.Collections
+  name: Unity.Collections
+  nameWithType: Unity.Collections
+  fullName: Unity.Collections
+- uid: System.Void*
+  isExternal: true
+  name: Void*
+  nameWithType: Void*
+  fullName: System.Void*
+  spec.csharp:
+  - uid: System.Void
+    name: Void
+    nameWithType: Void
+    fullName: System.Void
+    isExternal: true
+  - name: '*'
+    nameWithType: '*'
+    fullName: '*'
+  spec.vb:
+  - uid: System.Void
+    name: Void
+    nameWithType: Void
+    fullName: System.Void
+    isExternal: true
+  - name: '*'
+    nameWithType: '*'
+    fullName: '*'
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: AlgoSdk.Crypto.Sha512.Hash256Truncated*
+  commentId: Overload:AlgoSdk.Crypto.Sha512.Hash256Truncated
+  name: Hash256Truncated
+  nameWithType: Sha512.Hash256Truncated
+  fullName: AlgoSdk.Crypto.Sha512.Hash256Truncated
+- uid: AlgoSdk.Crypto.Sha512_256_Hash
+  commentId: T:AlgoSdk.Crypto.Sha512_256_Hash
+  parent: AlgoSdk.Crypto
+  name: Sha512_256_Hash
+  nameWithType: Sha512_256_Hash
+  fullName: AlgoSdk.Crypto.Sha512_256_Hash

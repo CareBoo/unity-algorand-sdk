@@ -61,7 +61,7 @@ namespace AlgoSdk
         public Address AuthAddress;
 
         /// <summary>
-        ///
+        /// Round during which this account was most recently closed.
         /// </summary>
         [AlgoApiField("closed-at-round", null, readOnly: true)]
         public ulong ClosedAtRound;
@@ -78,12 +78,21 @@ namespace AlgoSdk
         [AlgoApiField("created-assets", null)]
         public Asset[] CreatedAssets;
 
+        /// <summary>
+        /// Round during which this account first appeared in a transaction.
+        /// </summary>
         [AlgoApiField("created-at-round", null, readOnly: true)]
         public ulong CreatedAtRound;
 
+        /// <summary>
+        /// Whether or not this account is currently closed.
+        /// </summary>
         [AlgoApiField("deleted", null, readOnly: true)]
         public Optional<bool> Deleted;
 
+        /// <summary>
+        /// See <see cref="AccountParticipation"/>
+        /// </summary>
         [AlgoApiField("participation", null)]
         public AccountParticipation Participation;
 

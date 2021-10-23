@@ -1,0 +1,771 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.SignTransactionRequest
+  commentId: T:AlgoSdk.SignTransactionRequest
+  id: SignTransactionRequest
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.SignTransactionRequest.Equals(AlgoSdk.SignTransactionRequest)
+  - AlgoSdk.SignTransactionRequest.PublicKey
+  - AlgoSdk.SignTransactionRequest.Transaction
+  - AlgoSdk.SignTransactionRequest.WalletHandleToken
+  - AlgoSdk.SignTransactionRequest.WalletPassword
+  langs:
+  - csharp
+  - vb
+  name: SignTransactionRequest
+  nameWithType: SignTransactionRequest
+  fullName: AlgoSdk.SignTransactionRequest
+  type: Struct
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignTransactionRequest.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: SignTransactionRequest
+    path: ../CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignTransactionRequest.cs
+    startLine: 6
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: 'public struct SignTransactionRequest : IEquatable<SignTransactionRequest>'
+    content.vb: >-
+      Public Structure SignTransactionRequest
+          Implements IEquatable(Of SignTransactionRequest)
+  implements:
+  - System.IEquatable{AlgoSdk.SignTransactionRequest}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: AlgoSdk.SignTransactionRequest.PublicKey
+  commentId: F:AlgoSdk.SignTransactionRequest.PublicKey
+  id: PublicKey
+  parent: AlgoSdk.SignTransactionRequest
+  langs:
+  - csharp
+  - vb
+  name: PublicKey
+  nameWithType: SignTransactionRequest.PublicKey
+  fullName: AlgoSdk.SignTransactionRequest.PublicKey
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignTransactionRequest.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: PublicKey
+    path: ../CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignTransactionRequest.cs
+    startLine: 11
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("public_key", null, false)]
+
+      public Ed25519.PublicKey PublicKey
+    return:
+      type: AlgoSdk.Crypto.Ed25519.PublicKey
+    content.vb: >-
+      <AlgoApiField("public_key", Nothing, False)>
+
+      Public PublicKey As Ed25519.PublicKey
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: public_key
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.SignTransactionRequest.Transaction
+  commentId: F:AlgoSdk.SignTransactionRequest.Transaction
+  id: Transaction
+  parent: AlgoSdk.SignTransactionRequest
+  langs:
+  - csharp
+  - vb
+  name: Transaction
+  nameWithType: SignTransactionRequest.Transaction
+  fullName: AlgoSdk.SignTransactionRequest.Transaction
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignTransactionRequest.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Transaction
+    path: ../CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignTransactionRequest.cs
+    startLine: 14
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("transaction", null, false)]
+
+      public byte[] Transaction
+    return:
+      type: System.Byte[]
+    content.vb: >-
+      <AlgoApiField("transaction", Nothing, False)>
+
+      Public Transaction As Byte()
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: transaction
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.SignTransactionRequest.WalletHandleToken
+  commentId: F:AlgoSdk.SignTransactionRequest.WalletHandleToken
+  id: WalletHandleToken
+  parent: AlgoSdk.SignTransactionRequest
+  langs:
+  - csharp
+  - vb
+  name: WalletHandleToken
+  nameWithType: SignTransactionRequest.WalletHandleToken
+  fullName: AlgoSdk.SignTransactionRequest.WalletHandleToken
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignTransactionRequest.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: WalletHandleToken
+    path: ../CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignTransactionRequest.cs
+    startLine: 17
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("wallet_handle_token", null, false)]
+
+      public FixedString128Bytes WalletHandleToken
+    return:
+      type: Unity.Collections.FixedString128Bytes
+    content.vb: >-
+      <AlgoApiField("wallet_handle_token", Nothing, False)>
+
+      Public WalletHandleToken As FixedString128Bytes
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: wallet_handle_token
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.SignTransactionRequest.WalletPassword
+  commentId: F:AlgoSdk.SignTransactionRequest.WalletPassword
+  id: WalletPassword
+  parent: AlgoSdk.SignTransactionRequest
+  langs:
+  - csharp
+  - vb
+  name: WalletPassword
+  nameWithType: SignTransactionRequest.WalletPassword
+  fullName: AlgoSdk.SignTransactionRequest.WalletPassword
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignTransactionRequest.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: WalletPassword
+    path: ../CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignTransactionRequest.cs
+    startLine: 20
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("wallet_password", null, false)]
+
+      public FixedString128Bytes WalletPassword
+    return:
+      type: Unity.Collections.FixedString128Bytes
+    content.vb: >-
+      <AlgoApiField("wallet_password", Nothing, False)>
+
+      Public WalletPassword As FixedString128Bytes
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: wallet_password
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.SignTransactionRequest.Equals(AlgoSdk.SignTransactionRequest)
+  commentId: M:AlgoSdk.SignTransactionRequest.Equals(AlgoSdk.SignTransactionRequest)
+  id: Equals(AlgoSdk.SignTransactionRequest)
+  parent: AlgoSdk.SignTransactionRequest
+  langs:
+  - csharp
+  - vb
+  name: Equals(SignTransactionRequest)
+  nameWithType: SignTransactionRequest.Equals(SignTransactionRequest)
+  fullName: AlgoSdk.SignTransactionRequest.Equals(AlgoSdk.SignTransactionRequest)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignTransactionRequest.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Equals
+    path: ../CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignTransactionRequest.cs
+    startLine: 22
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public bool Equals(SignTransactionRequest other)
+    parameters:
+    - id: other
+      type: AlgoSdk.SignTransactionRequest
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As SignTransactionRequest) As Boolean
+  overload: AlgoSdk.SignTransactionRequest.Equals*
+  implements:
+  - System.IEquatable{AlgoSdk.SignTransactionRequest}.Equals(AlgoSdk.SignTransactionRequest)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: System.IEquatable{AlgoSdk.SignTransactionRequest}
+  commentId: T:System.IEquatable{AlgoSdk.SignTransactionRequest}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<SignTransactionRequest>
+  nameWithType: IEquatable<SignTransactionRequest>
+  fullName: System.IEquatable<AlgoSdk.SignTransactionRequest>
+  nameWithType.vb: IEquatable(Of SignTransactionRequest)
+  fullName.vb: System.IEquatable(Of AlgoSdk.SignTransactionRequest)
+  name.vb: IEquatable(Of SignTransactionRequest)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AlgoSdk.SignTransactionRequest
+    name: SignTransactionRequest
+    nameWithType: SignTransactionRequest
+    fullName: AlgoSdk.SignTransactionRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AlgoSdk.SignTransactionRequest
+    name: SignTransactionRequest
+    nameWithType: SignTransactionRequest
+    fullName: AlgoSdk.SignTransactionRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AlgoSdk.Crypto.Ed25519.PublicKey
+  commentId: T:AlgoSdk.Crypto.Ed25519.PublicKey
+  parent: AlgoSdk.Crypto
+  name: Ed25519.PublicKey
+  nameWithType: Ed25519.PublicKey
+  fullName: AlgoSdk.Crypto.Ed25519.PublicKey
+- uid: AlgoSdk.Crypto
+  commentId: N:AlgoSdk.Crypto
+  name: AlgoSdk.Crypto
+  nameWithType: AlgoSdk.Crypto
+  fullName: AlgoSdk.Crypto
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Unity.Collections.FixedString128Bytes
+  commentId: T:Unity.Collections.FixedString128Bytes
+  parent: Unity.Collections
+  name: FixedString128Bytes
+  nameWithType: FixedString128Bytes
+  fullName: Unity.Collections.FixedString128Bytes
+- uid: Unity.Collections
+  commentId: N:Unity.Collections
+  name: Unity.Collections
+  nameWithType: Unity.Collections
+  fullName: Unity.Collections
+- uid: AlgoSdk.SignTransactionRequest.Equals*
+  commentId: Overload:AlgoSdk.SignTransactionRequest.Equals
+  name: Equals
+  nameWithType: SignTransactionRequest.Equals
+  fullName: AlgoSdk.SignTransactionRequest.Equals
+- uid: System.IEquatable{AlgoSdk.SignTransactionRequest}.Equals(AlgoSdk.SignTransactionRequest)
+  commentId: M:System.IEquatable{AlgoSdk.SignTransactionRequest}.Equals(AlgoSdk.SignTransactionRequest)
+  parent: System.IEquatable{AlgoSdk.SignTransactionRequest}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(SignTransactionRequest)
+  nameWithType: IEquatable<SignTransactionRequest>.Equals(SignTransactionRequest)
+  fullName: System.IEquatable<AlgoSdk.SignTransactionRequest>.Equals(AlgoSdk.SignTransactionRequest)
+  nameWithType.vb: IEquatable(Of SignTransactionRequest).Equals(SignTransactionRequest)
+  fullName.vb: System.IEquatable(Of AlgoSdk.SignTransactionRequest).Equals(AlgoSdk.SignTransactionRequest)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<SignTransactionRequest>.Equals
+    fullName: System.IEquatable<AlgoSdk.SignTransactionRequest>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.SignTransactionRequest
+    name: SignTransactionRequest
+    nameWithType: SignTransactionRequest
+    fullName: AlgoSdk.SignTransactionRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of SignTransactionRequest).Equals
+    fullName: System.IEquatable(Of AlgoSdk.SignTransactionRequest).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.SignTransactionRequest
+    name: SignTransactionRequest
+    nameWithType: SignTransactionRequest
+    fullName: AlgoSdk.SignTransactionRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.SignTransactionRequest
+  commentId: T:AlgoSdk.SignTransactionRequest
+  parent: AlgoSdk
+  name: SignTransactionRequest
+  nameWithType: SignTransactionRequest
+  fullName: AlgoSdk.SignTransactionRequest
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

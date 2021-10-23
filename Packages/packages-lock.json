@@ -16,6 +16,13 @@
       "dependencies": {},
       "url": "https://package.openupm.com"
     },
+    "com.macacagames.docgenerator": {
+      "version": "https://github.com/MacacaGames/UnityDocGenerator.git#1.0.1",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "54ce7528db0266b61ca92805121fb16f5653dfa7"
+    },
     "com.unity.burst": {
       "version": "1.6.1",
       "depth": 0,
@@ -64,7 +71,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.package-validation-suite": {
-      "version": "0.22.0-preview",
+      "version": "0.23.0-preview",
       "depth": 0,
       "source": "registry",
       "dependencies": {

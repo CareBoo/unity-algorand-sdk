@@ -6,16 +6,28 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// A group of transactions used to generate a group id for atomic transactions.
+    /// </summary>
     [AlgoApiObject]
     public struct TransactionGroup
         : IEquatable<TransactionGroup>
     {
+        /// <summary>
+        /// Max number of allowed transactions in an atomic transaction.
+        /// </summary>
         public const int MaxSize = 16;
 
+        /// <summary>
+        /// The prefix to use when converting this group of transactions to bytes.
+        /// </summary>
         public static readonly byte[] IdPrefix = Encoding.UTF8.GetBytes("TG");
 
+        /// <summary>
+        /// The list of transaction ids belonging to this group.
+        /// </summary>
         [AlgoApiField("txlist", "txlist")]
-        public Sha512_256_Hash[] Txns;
+        public TransactionId[] Txns;
 
 
         public bool Equals(TransactionGroup other)
@@ -23,7 +35,11 @@ namespace AlgoSdk
             return ArrayComparer.Equals(Txns, other.Txns);
         }
 
-        public Sha512_256_Hash GetId()
+        /// <summary>
+        /// Hash the transaction ids contained in this group.
+        /// </summary>
+        /// <returns>A <see cref="TransactionId"/></returns>
+        public TransactionId GetId()
         {
             using var msgpack = AlgoApiSerializer.SerializeMessagePack(this, Allocator.Temp);
             var data = new NativeByteArray(IdPrefix.Length + msgpack.Length, Allocator.Temp);

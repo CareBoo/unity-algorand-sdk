@@ -1,0 +1,1054 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.BlockTransaction
+  commentId: T:AlgoSdk.BlockTransaction
+  id: BlockTransaction
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.BlockTransaction.Equals(AlgoSdk.BlockTransaction)
+  - AlgoSdk.BlockTransaction.Hgi
+  - AlgoSdk.BlockTransaction.LogicSig
+  - AlgoSdk.BlockTransaction.Multisig
+  - AlgoSdk.BlockTransaction.op_Implicit(AlgoSdk.BlockTransaction)~AlgoSdk.Transaction
+  - AlgoSdk.BlockTransaction.Rr
+  - AlgoSdk.BlockTransaction.Rs
+  - AlgoSdk.BlockTransaction.Sig
+  - AlgoSdk.BlockTransaction.Transaction
+  langs:
+  - csharp
+  - vb
+  name: BlockTransaction
+  nameWithType: BlockTransaction
+  fullName: AlgoSdk.BlockTransaction
+  type: Struct
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/BlockTransaction.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: BlockTransaction
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/BlockTransaction.cs
+    startLine: 4
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: 'public struct BlockTransaction : IEquatable<BlockTransaction>'
+    content.vb: >-
+      Public Structure BlockTransaction
+          Implements IEquatable(Of BlockTransaction)
+  implements:
+  - System.IEquatable{AlgoSdk.BlockTransaction}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: AlgoSdk.BlockTransaction.Transaction
+  commentId: F:AlgoSdk.BlockTransaction.Transaction
+  id: Transaction
+  parent: AlgoSdk.BlockTransaction
+  langs:
+  - csharp
+  - vb
+  name: Transaction
+  nameWithType: BlockTransaction.Transaction
+  fullName: AlgoSdk.BlockTransaction.Transaction
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/BlockTransaction.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Transaction
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/BlockTransaction.cs
+    startLine: 9
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("txn", "txn", false)]
+
+      public Transaction Transaction
+    return:
+      type: AlgoSdk.Transaction
+    content.vb: >-
+      <AlgoApiField("txn", "txn", False)>
+
+      Public Transaction As Transaction
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: txn
+    - type: System.String
+      value: txn
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.BlockTransaction.Sig
+  commentId: P:AlgoSdk.BlockTransaction.Sig
+  id: Sig
+  parent: AlgoSdk.BlockTransaction
+  langs:
+  - csharp
+  - vb
+  name: Sig
+  nameWithType: BlockTransaction.Sig
+  fullName: AlgoSdk.BlockTransaction.Sig
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/BlockTransaction.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Sig
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/BlockTransaction.cs
+    startLine: 11
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("sig", "sig", false)]
+
+      public Sig Sig { get; set; }
+    parameters: []
+    return:
+      type: AlgoSdk.Sig
+    content.vb: >-
+      <AlgoApiField("sig", "sig", False)>
+
+      Public Property Sig As Sig
+  overload: AlgoSdk.BlockTransaction.Sig*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: sig
+    - type: System.String
+      value: sig
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.BlockTransaction.Multisig
+  commentId: P:AlgoSdk.BlockTransaction.Multisig
+  id: Multisig
+  parent: AlgoSdk.BlockTransaction
+  langs:
+  - csharp
+  - vb
+  name: Multisig
+  nameWithType: BlockTransaction.Multisig
+  fullName: AlgoSdk.BlockTransaction.Multisig
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/BlockTransaction.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Multisig
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/BlockTransaction.cs
+    startLine: 18
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("msig", "msig", false)]
+
+      public Multisig Multisig { get; set; }
+    parameters: []
+    return:
+      type: AlgoSdk.Multisig
+    content.vb: >-
+      <AlgoApiField("msig", "msig", False)>
+
+      Public Property Multisig As Multisig
+  overload: AlgoSdk.BlockTransaction.Multisig*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: msig
+    - type: System.String
+      value: msig
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.BlockTransaction.LogicSig
+  commentId: P:AlgoSdk.BlockTransaction.LogicSig
+  id: LogicSig
+  parent: AlgoSdk.BlockTransaction
+  langs:
+  - csharp
+  - vb
+  name: LogicSig
+  nameWithType: BlockTransaction.LogicSig
+  fullName: AlgoSdk.BlockTransaction.LogicSig
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/BlockTransaction.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: LogicSig
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/BlockTransaction.cs
+    startLine: 25
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("lsig", "lsig", false)]
+
+      public LogicSig LogicSig { get; set; }
+    parameters: []
+    return:
+      type: AlgoSdk.LogicSig
+    content.vb: >-
+      <AlgoApiField("lsig", "lsig", False)>
+
+      Public Property LogicSig As LogicSig
+  overload: AlgoSdk.BlockTransaction.LogicSig*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: lsig
+    - type: System.String
+      value: lsig
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.BlockTransaction.Hgi
+  commentId: F:AlgoSdk.BlockTransaction.Hgi
+  id: Hgi
+  parent: AlgoSdk.BlockTransaction
+  langs:
+  - csharp
+  - vb
+  name: Hgi
+  nameWithType: BlockTransaction.Hgi
+  fullName: AlgoSdk.BlockTransaction.Hgi
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/BlockTransaction.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Hgi
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/BlockTransaction.cs
+    startLine: 33
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("hgi", "hgi", false)]
+
+      public Optional<bool> Hgi
+    return:
+      type: AlgoSdk.Optional{System.Boolean}
+    content.vb: "<AlgoApiField(\"hgi\", \"hgi\", False)>\nPublic Hgi As "
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: hgi
+    - type: System.String
+      value: hgi
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.BlockTransaction.Rr
+  commentId: F:AlgoSdk.BlockTransaction.Rr
+  id: Rr
+  parent: AlgoSdk.BlockTransaction
+  langs:
+  - csharp
+  - vb
+  name: Rr
+  nameWithType: BlockTransaction.Rr
+  fullName: AlgoSdk.BlockTransaction.Rr
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/BlockTransaction.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Rr
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/BlockTransaction.cs
+    startLine: 36
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("rr", "rr", false)]
+
+      public ulong Rr
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("rr", "rr", False)>
+
+      Public Rr As ULong
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: rr
+    - type: System.String
+      value: rr
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.BlockTransaction.Rs
+  commentId: F:AlgoSdk.BlockTransaction.Rs
+  id: Rs
+  parent: AlgoSdk.BlockTransaction
+  langs:
+  - csharp
+  - vb
+  name: Rs
+  nameWithType: BlockTransaction.Rs
+  fullName: AlgoSdk.BlockTransaction.Rs
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/BlockTransaction.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Rs
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/BlockTransaction.cs
+    startLine: 39
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("rs", "rs", false)]
+
+      public ulong Rs
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("rs", "rs", False)>
+
+      Public Rs As ULong
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: rs
+    - type: System.String
+      value: rs
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.BlockTransaction.Equals(AlgoSdk.BlockTransaction)
+  commentId: M:AlgoSdk.BlockTransaction.Equals(AlgoSdk.BlockTransaction)
+  id: Equals(AlgoSdk.BlockTransaction)
+  parent: AlgoSdk.BlockTransaction
+  langs:
+  - csharp
+  - vb
+  name: Equals(BlockTransaction)
+  nameWithType: BlockTransaction.Equals(BlockTransaction)
+  fullName: AlgoSdk.BlockTransaction.Equals(AlgoSdk.BlockTransaction)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/BlockTransaction.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Equals
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/BlockTransaction.cs
+    startLine: 41
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public bool Equals(BlockTransaction other)
+    parameters:
+    - id: other
+      type: AlgoSdk.BlockTransaction
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As BlockTransaction) As Boolean
+  overload: AlgoSdk.BlockTransaction.Equals*
+  implements:
+  - System.IEquatable{AlgoSdk.BlockTransaction}.Equals(AlgoSdk.BlockTransaction)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.BlockTransaction.op_Implicit(AlgoSdk.BlockTransaction)~AlgoSdk.Transaction
+  commentId: M:AlgoSdk.BlockTransaction.op_Implicit(AlgoSdk.BlockTransaction)~AlgoSdk.Transaction
+  id: op_Implicit(AlgoSdk.BlockTransaction)~AlgoSdk.Transaction
+  parent: AlgoSdk.BlockTransaction
+  langs:
+  - csharp
+  - vb
+  name: Implicit(BlockTransaction to Transaction)
+  nameWithType: BlockTransaction.Implicit(BlockTransaction to Transaction)
+  fullName: AlgoSdk.BlockTransaction.Implicit(AlgoSdk.BlockTransaction to AlgoSdk.Transaction)
+  type: Operator
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/BlockTransaction.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: op_Implicit
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/BlockTransaction.cs
+    startLine: 46
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public static implicit operator Transaction(BlockTransaction blockTxn)
+    parameters:
+    - id: blockTxn
+      type: AlgoSdk.BlockTransaction
+    return:
+      type: AlgoSdk.Transaction
+    content.vb: Public Shared Widening Operator CType(blockTxn As BlockTransaction) As Transaction
+  overload: AlgoSdk.BlockTransaction.op_Implicit*
+  nameWithType.vb: BlockTransaction.Widening(BlockTransaction to Transaction)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AlgoSdk.BlockTransaction.Widening(AlgoSdk.BlockTransaction to AlgoSdk.Transaction)
+  name.vb: Widening(BlockTransaction to Transaction)
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: System.IEquatable{AlgoSdk.BlockTransaction}
+  commentId: T:System.IEquatable{AlgoSdk.BlockTransaction}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<BlockTransaction>
+  nameWithType: IEquatable<BlockTransaction>
+  fullName: System.IEquatable<AlgoSdk.BlockTransaction>
+  nameWithType.vb: IEquatable(Of BlockTransaction)
+  fullName.vb: System.IEquatable(Of AlgoSdk.BlockTransaction)
+  name.vb: IEquatable(Of BlockTransaction)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AlgoSdk.BlockTransaction
+    name: BlockTransaction
+    nameWithType: BlockTransaction
+    fullName: AlgoSdk.BlockTransaction
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AlgoSdk.BlockTransaction
+    name: BlockTransaction
+    nameWithType: BlockTransaction
+    fullName: AlgoSdk.BlockTransaction
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AlgoSdk.Transaction
+  commentId: T:AlgoSdk.Transaction
+  parent: AlgoSdk
+  name: Transaction
+  nameWithType: Transaction
+  fullName: AlgoSdk.Transaction
+- uid: AlgoSdk.BlockTransaction.Sig*
+  commentId: Overload:AlgoSdk.BlockTransaction.Sig
+  name: Sig
+  nameWithType: BlockTransaction.Sig
+  fullName: AlgoSdk.BlockTransaction.Sig
+- uid: AlgoSdk.Sig
+  commentId: T:AlgoSdk.Sig
+  parent: AlgoSdk
+  name: Sig
+  nameWithType: Sig
+  fullName: AlgoSdk.Sig
+- uid: AlgoSdk.BlockTransaction.Multisig*
+  commentId: Overload:AlgoSdk.BlockTransaction.Multisig
+  name: Multisig
+  nameWithType: BlockTransaction.Multisig
+  fullName: AlgoSdk.BlockTransaction.Multisig
+- uid: AlgoSdk.Multisig
+  commentId: T:AlgoSdk.Multisig
+  parent: AlgoSdk
+  name: Multisig
+  nameWithType: Multisig
+  fullName: AlgoSdk.Multisig
+- uid: AlgoSdk.BlockTransaction.LogicSig*
+  commentId: Overload:AlgoSdk.BlockTransaction.LogicSig
+  name: LogicSig
+  nameWithType: BlockTransaction.LogicSig
+  fullName: AlgoSdk.BlockTransaction.LogicSig
+- uid: AlgoSdk.LogicSig
+  commentId: T:AlgoSdk.LogicSig
+  parent: AlgoSdk
+  name: LogicSig
+  nameWithType: LogicSig
+  fullName: AlgoSdk.LogicSig
+- uid: AlgoSdk.Optional{System.Boolean}
+  commentId: T:AlgoSdk.Optional{System.Boolean}
+  parent: AlgoSdk
+  definition: AlgoSdk.Optional`1
+  name: Optional<Boolean>
+  nameWithType: Optional<Boolean>
+  fullName: AlgoSdk.Optional<System.Boolean>
+  nameWithType.vb: Optional(Of Boolean)
+  fullName.vb: AlgoSdk.Optional(Of System.Boolean)
+  name.vb: Optional(Of Boolean)
+  spec.csharp:
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Optional`1
+  commentId: T:AlgoSdk.Optional`1
+  parent: AlgoSdk
+  name: Optional<T>
+  nameWithType: Optional<T>
+  fullName: AlgoSdk.Optional<T>
+  nameWithType.vb: Optional(Of T)
+  fullName.vb: AlgoSdk.Optional(Of T)
+  name.vb: Optional(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: AlgoSdk.BlockTransaction.Equals*
+  commentId: Overload:AlgoSdk.BlockTransaction.Equals
+  name: Equals
+  nameWithType: BlockTransaction.Equals
+  fullName: AlgoSdk.BlockTransaction.Equals
+- uid: System.IEquatable{AlgoSdk.BlockTransaction}.Equals(AlgoSdk.BlockTransaction)
+  commentId: M:System.IEquatable{AlgoSdk.BlockTransaction}.Equals(AlgoSdk.BlockTransaction)
+  parent: System.IEquatable{AlgoSdk.BlockTransaction}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(BlockTransaction)
+  nameWithType: IEquatable<BlockTransaction>.Equals(BlockTransaction)
+  fullName: System.IEquatable<AlgoSdk.BlockTransaction>.Equals(AlgoSdk.BlockTransaction)
+  nameWithType.vb: IEquatable(Of BlockTransaction).Equals(BlockTransaction)
+  fullName.vb: System.IEquatable(Of AlgoSdk.BlockTransaction).Equals(AlgoSdk.BlockTransaction)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<BlockTransaction>.Equals
+    fullName: System.IEquatable<AlgoSdk.BlockTransaction>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.BlockTransaction
+    name: BlockTransaction
+    nameWithType: BlockTransaction
+    fullName: AlgoSdk.BlockTransaction
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of BlockTransaction).Equals
+    fullName: System.IEquatable(Of AlgoSdk.BlockTransaction).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.BlockTransaction
+    name: BlockTransaction
+    nameWithType: BlockTransaction
+    fullName: AlgoSdk.BlockTransaction
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.BlockTransaction
+  commentId: T:AlgoSdk.BlockTransaction
+  parent: AlgoSdk
+  name: BlockTransaction
+  nameWithType: BlockTransaction
+  fullName: AlgoSdk.BlockTransaction
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.BlockTransaction.op_Implicit*
+  commentId: Overload:AlgoSdk.BlockTransaction.op_Implicit
+  name: Implicit
+  nameWithType: BlockTransaction.Implicit
+  fullName: AlgoSdk.BlockTransaction.Implicit
+  nameWithType.vb: BlockTransaction.Widening
+  fullName.vb: AlgoSdk.BlockTransaction.Widening
+  name.vb: Widening

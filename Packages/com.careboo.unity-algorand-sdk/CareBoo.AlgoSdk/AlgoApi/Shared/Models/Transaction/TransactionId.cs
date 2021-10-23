@@ -7,6 +7,10 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// A SHA512 256-truncated hash of a transaction's bytes.
+    /// This is usually Base32 encoded with the padding chars trimmed.
+    /// </summary>
     [AlgoApiFormatter(typeof(TransactionIdFormatter))]
     [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
     public struct TransactionId

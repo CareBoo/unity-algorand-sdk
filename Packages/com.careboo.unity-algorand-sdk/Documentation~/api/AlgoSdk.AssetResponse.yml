@@ -1,0 +1,675 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.AssetResponse
+  commentId: T:AlgoSdk.AssetResponse
+  id: AssetResponse
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.AssetResponse.Asset
+  - AlgoSdk.AssetResponse.CurrentRound
+  - AlgoSdk.AssetResponse.Equals(AlgoSdk.AssetResponse)
+  langs:
+  - csharp
+  - vb
+  name: AssetResponse
+  nameWithType: AssetResponse
+  fullName: AlgoSdk.AssetResponse
+  type: Struct
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Indexer/Models/Assets/AssetResponse.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: AssetResponse
+    path: ../CareBoo.AlgoSdk/AlgoApi/Indexer/Models/Assets/AssetResponse.cs
+    startLine: 4
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: 'public struct AssetResponse : IEquatable<AssetResponse>, IIndexerResponse'
+    content.vb: >-
+      Public Structure AssetResponse
+          Implements IEquatable(Of AssetResponse), IIndexerResponse
+  implements:
+  - System.IEquatable{AlgoSdk.AssetResponse}
+  - AlgoSdk.IIndexerResponse
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: AlgoSdk.AssetResponse.Asset
+  commentId: P:AlgoSdk.AssetResponse.Asset
+  id: Asset
+  parent: AlgoSdk.AssetResponse
+  langs:
+  - csharp
+  - vb
+  name: Asset
+  nameWithType: AssetResponse.Asset
+  fullName: AlgoSdk.AssetResponse.Asset
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Indexer/Models/Assets/AssetResponse.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Asset
+    path: ../CareBoo.AlgoSdk/AlgoApi/Indexer/Models/Assets/AssetResponse.cs
+    startLine: 9
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("asset", null, false)]
+
+      public Asset Asset { get; set; }
+    parameters: []
+    return:
+      type: AlgoSdk.Asset
+    content.vb: >-
+      <AlgoApiField("asset", Nothing, False)>
+
+      Public Property Asset As Asset
+  overload: AlgoSdk.AssetResponse.Asset*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: asset
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AssetResponse.CurrentRound
+  commentId: P:AlgoSdk.AssetResponse.CurrentRound
+  id: CurrentRound
+  parent: AlgoSdk.AssetResponse
+  langs:
+  - csharp
+  - vb
+  name: CurrentRound
+  nameWithType: AssetResponse.CurrentRound
+  fullName: AlgoSdk.AssetResponse.CurrentRound
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Indexer/Models/Assets/AssetResponse.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: CurrentRound
+    path: ../CareBoo.AlgoSdk/AlgoApi/Indexer/Models/Assets/AssetResponse.cs
+    startLine: 12
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("current-round", null, false)]
+
+      public ulong CurrentRound { get; set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("current-round", Nothing, False)>
+
+      Public Property CurrentRound As ULong
+  overload: AlgoSdk.AssetResponse.CurrentRound*
+  implements:
+  - AlgoSdk.IIndexerResponse.CurrentRound
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: current-round
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AssetResponse.Equals(AlgoSdk.AssetResponse)
+  commentId: M:AlgoSdk.AssetResponse.Equals(AlgoSdk.AssetResponse)
+  id: Equals(AlgoSdk.AssetResponse)
+  parent: AlgoSdk.AssetResponse
+  langs:
+  - csharp
+  - vb
+  name: Equals(AssetResponse)
+  nameWithType: AssetResponse.Equals(AssetResponse)
+  fullName: AlgoSdk.AssetResponse.Equals(AlgoSdk.AssetResponse)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Indexer/Models/Assets/AssetResponse.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Equals
+    path: ../CareBoo.AlgoSdk/AlgoApi/Indexer/Models/Assets/AssetResponse.cs
+    startLine: 15
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public bool Equals(AssetResponse other)
+    parameters:
+    - id: other
+      type: AlgoSdk.AssetResponse
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As AssetResponse) As Boolean
+  overload: AlgoSdk.AssetResponse.Equals*
+  implements:
+  - System.IEquatable{AlgoSdk.AssetResponse}.Equals(AlgoSdk.AssetResponse)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: System.IEquatable{AlgoSdk.AssetResponse}
+  commentId: T:System.IEquatable{AlgoSdk.AssetResponse}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<AssetResponse>
+  nameWithType: IEquatable<AssetResponse>
+  fullName: System.IEquatable<AlgoSdk.AssetResponse>
+  nameWithType.vb: IEquatable(Of AssetResponse)
+  fullName.vb: System.IEquatable(Of AlgoSdk.AssetResponse)
+  name.vb: IEquatable(Of AssetResponse)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AlgoSdk.AssetResponse
+    name: AssetResponse
+    nameWithType: AssetResponse
+    fullName: AlgoSdk.AssetResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AlgoSdk.AssetResponse
+    name: AssetResponse
+    nameWithType: AssetResponse
+    fullName: AlgoSdk.AssetResponse
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.IIndexerResponse
+  commentId: T:AlgoSdk.IIndexerResponse
+  parent: AlgoSdk
+  name: IIndexerResponse
+  nameWithType: IIndexerResponse
+  fullName: AlgoSdk.IIndexerResponse
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AlgoSdk.AssetResponse.Asset*
+  commentId: Overload:AlgoSdk.AssetResponse.Asset
+  name: Asset
+  nameWithType: AssetResponse.Asset
+  fullName: AlgoSdk.AssetResponse.Asset
+- uid: AlgoSdk.Asset
+  commentId: T:AlgoSdk.Asset
+  parent: AlgoSdk
+  name: Asset
+  nameWithType: Asset
+  fullName: AlgoSdk.Asset
+- uid: AlgoSdk.AssetResponse.CurrentRound*
+  commentId: Overload:AlgoSdk.AssetResponse.CurrentRound
+  name: CurrentRound
+  nameWithType: AssetResponse.CurrentRound
+  fullName: AlgoSdk.AssetResponse.CurrentRound
+- uid: AlgoSdk.IIndexerResponse.CurrentRound
+  commentId: P:AlgoSdk.IIndexerResponse.CurrentRound
+  parent: AlgoSdk.IIndexerResponse
+  name: CurrentRound
+  nameWithType: IIndexerResponse.CurrentRound
+  fullName: AlgoSdk.IIndexerResponse.CurrentRound
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: AlgoSdk.AssetResponse.Equals*
+  commentId: Overload:AlgoSdk.AssetResponse.Equals
+  name: Equals
+  nameWithType: AssetResponse.Equals
+  fullName: AlgoSdk.AssetResponse.Equals
+- uid: System.IEquatable{AlgoSdk.AssetResponse}.Equals(AlgoSdk.AssetResponse)
+  commentId: M:System.IEquatable{AlgoSdk.AssetResponse}.Equals(AlgoSdk.AssetResponse)
+  parent: System.IEquatable{AlgoSdk.AssetResponse}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(AssetResponse)
+  nameWithType: IEquatable<AssetResponse>.Equals(AssetResponse)
+  fullName: System.IEquatable<AlgoSdk.AssetResponse>.Equals(AlgoSdk.AssetResponse)
+  nameWithType.vb: IEquatable(Of AssetResponse).Equals(AssetResponse)
+  fullName.vb: System.IEquatable(Of AlgoSdk.AssetResponse).Equals(AlgoSdk.AssetResponse)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<AssetResponse>.Equals
+    fullName: System.IEquatable<AlgoSdk.AssetResponse>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.AssetResponse
+    name: AssetResponse
+    nameWithType: AssetResponse
+    fullName: AlgoSdk.AssetResponse
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of AssetResponse).Equals
+    fullName: System.IEquatable(Of AlgoSdk.AssetResponse).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.AssetResponse
+    name: AssetResponse
+    nameWithType: AssetResponse
+    fullName: AlgoSdk.AssetResponse
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AssetResponse
+  commentId: T:AlgoSdk.AssetResponse
+  parent: AlgoSdk
+  name: AssetResponse
+  nameWithType: AssetResponse
+  fullName: AlgoSdk.AssetResponse
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

@@ -1,0 +1,960 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.DryrunTxnResult
+  commentId: T:AlgoSdk.DryrunTxnResult
+  id: DryrunTxnResult
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.DryrunTxnResult.AppCallMessages
+  - AlgoSdk.DryrunTxnResult.AppCallTrace
+  - AlgoSdk.DryrunTxnResult.Disassembly
+  - AlgoSdk.DryrunTxnResult.Equals(AlgoSdk.DryrunTxnResult)
+  - AlgoSdk.DryrunTxnResult.GlobalDelta
+  - AlgoSdk.DryrunTxnResult.LocalDeltas
+  - AlgoSdk.DryrunTxnResult.LogicSigMessages
+  - AlgoSdk.DryrunTxnResult.LogicSigTrace
+  langs:
+  - csharp
+  - vb
+  name: DryrunTxnResult
+  nameWithType: DryrunTxnResult
+  fullName: AlgoSdk.DryrunTxnResult
+  type: Struct
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/DryrunTxnResult.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: DryrunTxnResult
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/DryrunTxnResult.cs
+    startLine: 5
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: 'public struct DryrunTxnResult : IEquatable<DryrunTxnResult>'
+    content.vb: >-
+      Public Structure DryrunTxnResult
+          Implements IEquatable(Of DryrunTxnResult)
+  implements:
+  - System.IEquatable{AlgoSdk.DryrunTxnResult}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: AlgoSdk.DryrunTxnResult.AppCallMessages
+  commentId: F:AlgoSdk.DryrunTxnResult.AppCallMessages
+  id: AppCallMessages
+  parent: AlgoSdk.DryrunTxnResult
+  langs:
+  - csharp
+  - vb
+  name: AppCallMessages
+  nameWithType: DryrunTxnResult.AppCallMessages
+  fullName: AlgoSdk.DryrunTxnResult.AppCallMessages
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/DryrunTxnResult.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: AppCallMessages
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/DryrunTxnResult.cs
+    startLine: 10
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("app-call-messages", null, false)]
+
+      public FixedString128Bytes[] AppCallMessages
+    return:
+      type: Unity.Collections.FixedString128Bytes[]
+    content.vb: >-
+      <AlgoApiField("app-call-messages", Nothing, False)>
+
+      Public AppCallMessages As FixedString128Bytes()
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: app-call-messages
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.DryrunTxnResult.AppCallTrace
+  commentId: F:AlgoSdk.DryrunTxnResult.AppCallTrace
+  id: AppCallTrace
+  parent: AlgoSdk.DryrunTxnResult
+  langs:
+  - csharp
+  - vb
+  name: AppCallTrace
+  nameWithType: DryrunTxnResult.AppCallTrace
+  fullName: AlgoSdk.DryrunTxnResult.AppCallTrace
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/DryrunTxnResult.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: AppCallTrace
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/DryrunTxnResult.cs
+    startLine: 13
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("app-call-trace", null, false)]
+
+      public DryrunState[] AppCallTrace
+    return:
+      type: AlgoSdk.DryrunState[]
+    content.vb: >-
+      <AlgoApiField("app-call-trace", Nothing, False)>
+
+      Public AppCallTrace As DryrunState()
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: app-call-trace
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.DryrunTxnResult.Disassembly
+  commentId: F:AlgoSdk.DryrunTxnResult.Disassembly
+  id: Disassembly
+  parent: AlgoSdk.DryrunTxnResult
+  langs:
+  - csharp
+  - vb
+  name: Disassembly
+  nameWithType: DryrunTxnResult.Disassembly
+  fullName: AlgoSdk.DryrunTxnResult.Disassembly
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/DryrunTxnResult.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Disassembly
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/DryrunTxnResult.cs
+    startLine: 16
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("disassembly", null, false)]
+
+      public FixedString128Bytes[] Disassembly
+    return:
+      type: Unity.Collections.FixedString128Bytes[]
+    content.vb: >-
+      <AlgoApiField("disassembly", Nothing, False)>
+
+      Public Disassembly As FixedString128Bytes()
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: disassembly
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.DryrunTxnResult.GlobalDelta
+  commentId: F:AlgoSdk.DryrunTxnResult.GlobalDelta
+  id: GlobalDelta
+  parent: AlgoSdk.DryrunTxnResult
+  langs:
+  - csharp
+  - vb
+  name: GlobalDelta
+  nameWithType: DryrunTxnResult.GlobalDelta
+  fullName: AlgoSdk.DryrunTxnResult.GlobalDelta
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/DryrunTxnResult.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: GlobalDelta
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/DryrunTxnResult.cs
+    startLine: 19
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("global-delta", null, false)]
+
+      public EvalDeltaKeyValue[] GlobalDelta
+    return:
+      type: AlgoSdk.EvalDeltaKeyValue[]
+    content.vb: >-
+      <AlgoApiField("global-delta", Nothing, False)>
+
+      Public GlobalDelta As EvalDeltaKeyValue()
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: global-delta
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.DryrunTxnResult.LocalDeltas
+  commentId: F:AlgoSdk.DryrunTxnResult.LocalDeltas
+  id: LocalDeltas
+  parent: AlgoSdk.DryrunTxnResult
+  langs:
+  - csharp
+  - vb
+  name: LocalDeltas
+  nameWithType: DryrunTxnResult.LocalDeltas
+  fullName: AlgoSdk.DryrunTxnResult.LocalDeltas
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/DryrunTxnResult.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: LocalDeltas
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/DryrunTxnResult.cs
+    startLine: 22
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("local-deltas", null, false)]
+
+      public ApplicationStateDelta[] LocalDeltas
+    return:
+      type: AlgoSdk.ApplicationStateDelta[]
+    content.vb: >-
+      <AlgoApiField("local-deltas", Nothing, False)>
+
+      Public LocalDeltas As ApplicationStateDelta()
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: local-deltas
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.DryrunTxnResult.LogicSigMessages
+  commentId: F:AlgoSdk.DryrunTxnResult.LogicSigMessages
+  id: LogicSigMessages
+  parent: AlgoSdk.DryrunTxnResult
+  langs:
+  - csharp
+  - vb
+  name: LogicSigMessages
+  nameWithType: DryrunTxnResult.LogicSigMessages
+  fullName: AlgoSdk.DryrunTxnResult.LogicSigMessages
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/DryrunTxnResult.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: LogicSigMessages
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/DryrunTxnResult.cs
+    startLine: 25
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("logic-sig-messages", null, false)]
+
+      public FixedString128Bytes[] LogicSigMessages
+    return:
+      type: Unity.Collections.FixedString128Bytes[]
+    content.vb: >-
+      <AlgoApiField("logic-sig-messages", Nothing, False)>
+
+      Public LogicSigMessages As FixedString128Bytes()
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: logic-sig-messages
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.DryrunTxnResult.LogicSigTrace
+  commentId: F:AlgoSdk.DryrunTxnResult.LogicSigTrace
+  id: LogicSigTrace
+  parent: AlgoSdk.DryrunTxnResult
+  langs:
+  - csharp
+  - vb
+  name: LogicSigTrace
+  nameWithType: DryrunTxnResult.LogicSigTrace
+  fullName: AlgoSdk.DryrunTxnResult.LogicSigTrace
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/DryrunTxnResult.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: LogicSigTrace
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/DryrunTxnResult.cs
+    startLine: 28
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("logic-sig-trace", null, false)]
+
+      public DryrunState[] LogicSigTrace
+    return:
+      type: AlgoSdk.DryrunState[]
+    content.vb: >-
+      <AlgoApiField("logic-sig-trace", Nothing, False)>
+
+      Public LogicSigTrace As DryrunState()
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: logic-sig-trace
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.DryrunTxnResult.Equals(AlgoSdk.DryrunTxnResult)
+  commentId: M:AlgoSdk.DryrunTxnResult.Equals(AlgoSdk.DryrunTxnResult)
+  id: Equals(AlgoSdk.DryrunTxnResult)
+  parent: AlgoSdk.DryrunTxnResult
+  langs:
+  - csharp
+  - vb
+  name: Equals(DryrunTxnResult)
+  nameWithType: DryrunTxnResult.Equals(DryrunTxnResult)
+  fullName: AlgoSdk.DryrunTxnResult.Equals(AlgoSdk.DryrunTxnResult)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/DryrunTxnResult.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Equals
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/DryrunTxnResult.cs
+    startLine: 30
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public bool Equals(DryrunTxnResult other)
+    parameters:
+    - id: other
+      type: AlgoSdk.DryrunTxnResult
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As DryrunTxnResult) As Boolean
+  overload: AlgoSdk.DryrunTxnResult.Equals*
+  implements:
+  - System.IEquatable{AlgoSdk.DryrunTxnResult}.Equals(AlgoSdk.DryrunTxnResult)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: System.IEquatable{AlgoSdk.DryrunTxnResult}
+  commentId: T:System.IEquatable{AlgoSdk.DryrunTxnResult}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<DryrunTxnResult>
+  nameWithType: IEquatable<DryrunTxnResult>
+  fullName: System.IEquatable<AlgoSdk.DryrunTxnResult>
+  nameWithType.vb: IEquatable(Of DryrunTxnResult)
+  fullName.vb: System.IEquatable(Of AlgoSdk.DryrunTxnResult)
+  name.vb: IEquatable(Of DryrunTxnResult)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AlgoSdk.DryrunTxnResult
+    name: DryrunTxnResult
+    nameWithType: DryrunTxnResult
+    fullName: AlgoSdk.DryrunTxnResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AlgoSdk.DryrunTxnResult
+    name: DryrunTxnResult
+    nameWithType: DryrunTxnResult
+    fullName: AlgoSdk.DryrunTxnResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Unity.Collections.FixedString128Bytes[]
+  isExternal: true
+  name: FixedString128Bytes[]
+  nameWithType: FixedString128Bytes[]
+  fullName: Unity.Collections.FixedString128Bytes[]
+  nameWithType.vb: FixedString128Bytes()
+  fullName.vb: Unity.Collections.FixedString128Bytes()
+  name.vb: FixedString128Bytes()
+  spec.csharp:
+  - uid: Unity.Collections.FixedString128Bytes
+    name: FixedString128Bytes
+    nameWithType: FixedString128Bytes
+    fullName: Unity.Collections.FixedString128Bytes
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Unity.Collections.FixedString128Bytes
+    name: FixedString128Bytes
+    nameWithType: FixedString128Bytes
+    fullName: Unity.Collections.FixedString128Bytes
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: AlgoSdk.DryrunState[]
+  isExternal: true
+  name: DryrunState[]
+  nameWithType: DryrunState[]
+  fullName: AlgoSdk.DryrunState[]
+  nameWithType.vb: DryrunState()
+  fullName.vb: AlgoSdk.DryrunState()
+  name.vb: DryrunState()
+  spec.csharp:
+  - uid: AlgoSdk.DryrunState
+    name: DryrunState
+    nameWithType: DryrunState
+    fullName: AlgoSdk.DryrunState
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: AlgoSdk.DryrunState
+    name: DryrunState
+    nameWithType: DryrunState
+    fullName: AlgoSdk.DryrunState
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: AlgoSdk.EvalDeltaKeyValue[]
+  isExternal: true
+  name: EvalDeltaKeyValue[]
+  nameWithType: EvalDeltaKeyValue[]
+  fullName: AlgoSdk.EvalDeltaKeyValue[]
+  nameWithType.vb: EvalDeltaKeyValue()
+  fullName.vb: AlgoSdk.EvalDeltaKeyValue()
+  name.vb: EvalDeltaKeyValue()
+  spec.csharp:
+  - uid: AlgoSdk.EvalDeltaKeyValue
+    name: EvalDeltaKeyValue
+    nameWithType: EvalDeltaKeyValue
+    fullName: AlgoSdk.EvalDeltaKeyValue
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: AlgoSdk.EvalDeltaKeyValue
+    name: EvalDeltaKeyValue
+    nameWithType: EvalDeltaKeyValue
+    fullName: AlgoSdk.EvalDeltaKeyValue
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: AlgoSdk.ApplicationStateDelta[]
+  isExternal: true
+  name: ApplicationStateDelta[]
+  nameWithType: ApplicationStateDelta[]
+  fullName: AlgoSdk.ApplicationStateDelta[]
+  nameWithType.vb: ApplicationStateDelta()
+  fullName.vb: AlgoSdk.ApplicationStateDelta()
+  name.vb: ApplicationStateDelta()
+  spec.csharp:
+  - uid: AlgoSdk.ApplicationStateDelta
+    name: ApplicationStateDelta
+    nameWithType: ApplicationStateDelta
+    fullName: AlgoSdk.ApplicationStateDelta
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: AlgoSdk.ApplicationStateDelta
+    name: ApplicationStateDelta
+    nameWithType: ApplicationStateDelta
+    fullName: AlgoSdk.ApplicationStateDelta
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: AlgoSdk.DryrunTxnResult.Equals*
+  commentId: Overload:AlgoSdk.DryrunTxnResult.Equals
+  name: Equals
+  nameWithType: DryrunTxnResult.Equals
+  fullName: AlgoSdk.DryrunTxnResult.Equals
+- uid: System.IEquatable{AlgoSdk.DryrunTxnResult}.Equals(AlgoSdk.DryrunTxnResult)
+  commentId: M:System.IEquatable{AlgoSdk.DryrunTxnResult}.Equals(AlgoSdk.DryrunTxnResult)
+  parent: System.IEquatable{AlgoSdk.DryrunTxnResult}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(DryrunTxnResult)
+  nameWithType: IEquatable<DryrunTxnResult>.Equals(DryrunTxnResult)
+  fullName: System.IEquatable<AlgoSdk.DryrunTxnResult>.Equals(AlgoSdk.DryrunTxnResult)
+  nameWithType.vb: IEquatable(Of DryrunTxnResult).Equals(DryrunTxnResult)
+  fullName.vb: System.IEquatable(Of AlgoSdk.DryrunTxnResult).Equals(AlgoSdk.DryrunTxnResult)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<DryrunTxnResult>.Equals
+    fullName: System.IEquatable<AlgoSdk.DryrunTxnResult>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.DryrunTxnResult
+    name: DryrunTxnResult
+    nameWithType: DryrunTxnResult
+    fullName: AlgoSdk.DryrunTxnResult
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of DryrunTxnResult).Equals
+    fullName: System.IEquatable(Of AlgoSdk.DryrunTxnResult).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.DryrunTxnResult
+    name: DryrunTxnResult
+    nameWithType: DryrunTxnResult
+    fullName: AlgoSdk.DryrunTxnResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.DryrunTxnResult
+  commentId: T:AlgoSdk.DryrunTxnResult
+  parent: AlgoSdk
+  name: DryrunTxnResult
+  nameWithType: DryrunTxnResult
+  fullName: AlgoSdk.DryrunTxnResult
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

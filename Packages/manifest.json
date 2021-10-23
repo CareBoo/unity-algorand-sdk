@@ -1,11 +1,12 @@
 {
   "dependencies": {
     "com.cysharp.unitask": "2.2.5",
+    "com.macacagames.docgenerator": "https://github.com/MacacaGames/UnityDocGenerator.git#1.0.1",
     "com.unity.burst": "1.6.1",
     "com.unity.collections": "1.0.0-pre.6",
     "com.unity.ide.vscode": "1.2.3",
     "com.unity.nuget.mono-cecil": "1.10.2",
-    "com.unity.package-validation-suite": "0.22.0-preview",
+    "com.unity.package-validation-suite": "0.23.0-preview",
     "com.unity.settings-manager": "1.0.3",
     "com.unity.test-framework": "1.1.30",
     "com.unity.test-framework.performance": "2.8.0-preview",

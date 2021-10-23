@@ -1,0 +1,646 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.ExportMultisigRequest
+  commentId: T:AlgoSdk.ExportMultisigRequest
+  id: ExportMultisigRequest
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.ExportMultisigRequest.Address
+  - AlgoSdk.ExportMultisigRequest.Equals(AlgoSdk.ExportMultisigRequest)
+  - AlgoSdk.ExportMultisigRequest.WalletHandleToken
+  langs:
+  - csharp
+  - vb
+  name: ExportMultisigRequest
+  nameWithType: ExportMultisigRequest
+  fullName: AlgoSdk.ExportMultisigRequest
+  type: Struct
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/ExportMultisigRequest.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ExportMultisigRequest
+    path: ../CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/ExportMultisigRequest.cs
+    startLine: 5
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: 'public struct ExportMultisigRequest : IEquatable<ExportMultisigRequest>'
+    content.vb: >-
+      Public Structure ExportMultisigRequest
+          Implements IEquatable(Of ExportMultisigRequest)
+  implements:
+  - System.IEquatable{AlgoSdk.ExportMultisigRequest}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: AlgoSdk.ExportMultisigRequest.Address
+  commentId: F:AlgoSdk.ExportMultisigRequest.Address
+  id: Address
+  parent: AlgoSdk.ExportMultisigRequest
+  langs:
+  - csharp
+  - vb
+  name: Address
+  nameWithType: ExportMultisigRequest.Address
+  fullName: AlgoSdk.ExportMultisigRequest.Address
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/ExportMultisigRequest.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Address
+    path: ../CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/ExportMultisigRequest.cs
+    startLine: 10
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("address", null, false)]
+
+      public Address Address
+    return:
+      type: AlgoSdk.Address
+    content.vb: >-
+      <AlgoApiField("address", Nothing, False)>
+
+      Public Address As Address
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: address
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.ExportMultisigRequest.WalletHandleToken
+  commentId: F:AlgoSdk.ExportMultisigRequest.WalletHandleToken
+  id: WalletHandleToken
+  parent: AlgoSdk.ExportMultisigRequest
+  langs:
+  - csharp
+  - vb
+  name: WalletHandleToken
+  nameWithType: ExportMultisigRequest.WalletHandleToken
+  fullName: AlgoSdk.ExportMultisigRequest.WalletHandleToken
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/ExportMultisigRequest.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: WalletHandleToken
+    path: ../CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/ExportMultisigRequest.cs
+    startLine: 13
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("wallet_handle_token", null, false)]
+
+      public FixedString128Bytes WalletHandleToken
+    return:
+      type: Unity.Collections.FixedString128Bytes
+    content.vb: >-
+      <AlgoApiField("wallet_handle_token", Nothing, False)>
+
+      Public WalletHandleToken As FixedString128Bytes
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: wallet_handle_token
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.ExportMultisigRequest.Equals(AlgoSdk.ExportMultisigRequest)
+  commentId: M:AlgoSdk.ExportMultisigRequest.Equals(AlgoSdk.ExportMultisigRequest)
+  id: Equals(AlgoSdk.ExportMultisigRequest)
+  parent: AlgoSdk.ExportMultisigRequest
+  langs:
+  - csharp
+  - vb
+  name: Equals(ExportMultisigRequest)
+  nameWithType: ExportMultisigRequest.Equals(ExportMultisigRequest)
+  fullName: AlgoSdk.ExportMultisigRequest.Equals(AlgoSdk.ExportMultisigRequest)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/ExportMultisigRequest.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Equals
+    path: ../CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/ExportMultisigRequest.cs
+    startLine: 15
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public bool Equals(ExportMultisigRequest other)
+    parameters:
+    - id: other
+      type: AlgoSdk.ExportMultisigRequest
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As ExportMultisigRequest) As Boolean
+  overload: AlgoSdk.ExportMultisigRequest.Equals*
+  implements:
+  - System.IEquatable{AlgoSdk.ExportMultisigRequest}.Equals(AlgoSdk.ExportMultisigRequest)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: System.IEquatable{AlgoSdk.ExportMultisigRequest}
+  commentId: T:System.IEquatable{AlgoSdk.ExportMultisigRequest}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<ExportMultisigRequest>
+  nameWithType: IEquatable<ExportMultisigRequest>
+  fullName: System.IEquatable<AlgoSdk.ExportMultisigRequest>
+  nameWithType.vb: IEquatable(Of ExportMultisigRequest)
+  fullName.vb: System.IEquatable(Of AlgoSdk.ExportMultisigRequest)
+  name.vb: IEquatable(Of ExportMultisigRequest)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AlgoSdk.ExportMultisigRequest
+    name: ExportMultisigRequest
+    nameWithType: ExportMultisigRequest
+    fullName: AlgoSdk.ExportMultisigRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AlgoSdk.ExportMultisigRequest
+    name: ExportMultisigRequest
+    nameWithType: ExportMultisigRequest
+    fullName: AlgoSdk.ExportMultisigRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AlgoSdk.Address
+  commentId: T:AlgoSdk.Address
+  parent: AlgoSdk
+  name: Address
+  nameWithType: Address
+  fullName: AlgoSdk.Address
+- uid: Unity.Collections.FixedString128Bytes
+  commentId: T:Unity.Collections.FixedString128Bytes
+  parent: Unity.Collections
+  name: FixedString128Bytes
+  nameWithType: FixedString128Bytes
+  fullName: Unity.Collections.FixedString128Bytes
+- uid: Unity.Collections
+  commentId: N:Unity.Collections
+  name: Unity.Collections
+  nameWithType: Unity.Collections
+  fullName: Unity.Collections
+- uid: AlgoSdk.ExportMultisigRequest.Equals*
+  commentId: Overload:AlgoSdk.ExportMultisigRequest.Equals
+  name: Equals
+  nameWithType: ExportMultisigRequest.Equals
+  fullName: AlgoSdk.ExportMultisigRequest.Equals
+- uid: System.IEquatable{AlgoSdk.ExportMultisigRequest}.Equals(AlgoSdk.ExportMultisigRequest)
+  commentId: M:System.IEquatable{AlgoSdk.ExportMultisigRequest}.Equals(AlgoSdk.ExportMultisigRequest)
+  parent: System.IEquatable{AlgoSdk.ExportMultisigRequest}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(ExportMultisigRequest)
+  nameWithType: IEquatable<ExportMultisigRequest>.Equals(ExportMultisigRequest)
+  fullName: System.IEquatable<AlgoSdk.ExportMultisigRequest>.Equals(AlgoSdk.ExportMultisigRequest)
+  nameWithType.vb: IEquatable(Of ExportMultisigRequest).Equals(ExportMultisigRequest)
+  fullName.vb: System.IEquatable(Of AlgoSdk.ExportMultisigRequest).Equals(AlgoSdk.ExportMultisigRequest)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<ExportMultisigRequest>.Equals
+    fullName: System.IEquatable<AlgoSdk.ExportMultisigRequest>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.ExportMultisigRequest
+    name: ExportMultisigRequest
+    nameWithType: ExportMultisigRequest
+    fullName: AlgoSdk.ExportMultisigRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of ExportMultisigRequest).Equals
+    fullName: System.IEquatable(Of AlgoSdk.ExportMultisigRequest).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.ExportMultisigRequest
+    name: ExportMultisigRequest
+    nameWithType: ExportMultisigRequest
+    fullName: AlgoSdk.ExportMultisigRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.ExportMultisigRequest
+  commentId: T:AlgoSdk.ExportMultisigRequest
+  parent: AlgoSdk
+  name: ExportMultisigRequest
+  nameWithType: ExportMultisigRequest
+  fullName: AlgoSdk.ExportMultisigRequest
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

@@ -1,0 +1,1006 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.KeyRegTxn.Params
+  commentId: T:AlgoSdk.KeyRegTxn.Params
+  id: KeyRegTxn.Params
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.KeyRegTxn.Params.AccountParticipation
+  - AlgoSdk.KeyRegTxn.Params.Equals(AlgoSdk.KeyRegTxn.Params)
+  - AlgoSdk.KeyRegTxn.Params.NonParticipation
+  - AlgoSdk.KeyRegTxn.Params.SelectionParticipationKey
+  - AlgoSdk.KeyRegTxn.Params.VoteFirst
+  - AlgoSdk.KeyRegTxn.Params.VoteKeyDilution
+  - AlgoSdk.KeyRegTxn.Params.VoteLast
+  - AlgoSdk.KeyRegTxn.Params.VoteParticipationKey
+  langs:
+  - csharp
+  - vb
+  name: KeyRegTxn.Params
+  nameWithType: KeyRegTxn.Params
+  fullName: AlgoSdk.KeyRegTxn.Params
+  type: Struct
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/KeyRegTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Params
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/KeyRegTxn.cs
+    startLine: 245
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: 'public struct Params : IEquatable<KeyRegTxn.Params>'
+    content.vb: >-
+      Public Structure Params
+          Implements IEquatable(Of KeyRegTxn.Params)
+  implements:
+  - System.IEquatable{AlgoSdk.KeyRegTxn.Params}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: AlgoSdk.KeyRegTxn.Params.VoteParticipationKey
+  commentId: P:AlgoSdk.KeyRegTxn.Params.VoteParticipationKey
+  id: VoteParticipationKey
+  parent: AlgoSdk.KeyRegTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: VoteParticipationKey
+  nameWithType: KeyRegTxn.Params.VoteParticipationKey
+  fullName: AlgoSdk.KeyRegTxn.Params.VoteParticipationKey
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/KeyRegTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: VoteParticipationKey
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/KeyRegTxn.cs
+    startLine: 249
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("vote-participation-key", "votekey", false)]
+
+      public Ed25519.PublicKey VoteParticipationKey { get; set; }
+    parameters: []
+    return:
+      type: AlgoSdk.Crypto.Ed25519.PublicKey
+    content.vb: >-
+      <AlgoApiField("vote-participation-key", "votekey", False)>
+
+      Public Property VoteParticipationKey As Ed25519.PublicKey
+  overload: AlgoSdk.KeyRegTxn.Params.VoteParticipationKey*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: vote-participation-key
+    - type: System.String
+      value: votekey
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.KeyRegTxn.Params.SelectionParticipationKey
+  commentId: P:AlgoSdk.KeyRegTxn.Params.SelectionParticipationKey
+  id: SelectionParticipationKey
+  parent: AlgoSdk.KeyRegTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: SelectionParticipationKey
+  nameWithType: KeyRegTxn.Params.SelectionParticipationKey
+  fullName: AlgoSdk.KeyRegTxn.Params.SelectionParticipationKey
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/KeyRegTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: SelectionParticipationKey
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/KeyRegTxn.cs
+    startLine: 256
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("selection-participation-key", "selkey", false)]
+
+      public VrfPubKey SelectionParticipationKey { get; set; }
+    parameters: []
+    return:
+      type: AlgoSdk.VrfPubKey
+    content.vb: >-
+      <AlgoApiField("selection-participation-key", "selkey", False)>
+
+      Public Property SelectionParticipationKey As VrfPubKey
+  overload: AlgoSdk.KeyRegTxn.Params.SelectionParticipationKey*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: selection-participation-key
+    - type: System.String
+      value: selkey
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.KeyRegTxn.Params.VoteFirst
+  commentId: P:AlgoSdk.KeyRegTxn.Params.VoteFirst
+  id: VoteFirst
+  parent: AlgoSdk.KeyRegTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: VoteFirst
+  nameWithType: KeyRegTxn.Params.VoteFirst
+  fullName: AlgoSdk.KeyRegTxn.Params.VoteFirst
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/KeyRegTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: VoteFirst
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/KeyRegTxn.cs
+    startLine: 263
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("vote-first-valid", "votefst", false)]
+
+      public ulong VoteFirst { get; set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("vote-first-valid", "votefst", False)>
+
+      Public Property VoteFirst As ULong
+  overload: AlgoSdk.KeyRegTxn.Params.VoteFirst*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: vote-first-valid
+    - type: System.String
+      value: votefst
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.KeyRegTxn.Params.VoteLast
+  commentId: P:AlgoSdk.KeyRegTxn.Params.VoteLast
+  id: VoteLast
+  parent: AlgoSdk.KeyRegTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: VoteLast
+  nameWithType: KeyRegTxn.Params.VoteLast
+  fullName: AlgoSdk.KeyRegTxn.Params.VoteLast
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/KeyRegTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: VoteLast
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/KeyRegTxn.cs
+    startLine: 270
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("vote-last-valid", "votelst", false)]
+
+      public ulong VoteLast { get; set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("vote-last-valid", "votelst", False)>
+
+      Public Property VoteLast As ULong
+  overload: AlgoSdk.KeyRegTxn.Params.VoteLast*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: vote-last-valid
+    - type: System.String
+      value: votelst
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.KeyRegTxn.Params.VoteKeyDilution
+  commentId: P:AlgoSdk.KeyRegTxn.Params.VoteKeyDilution
+  id: VoteKeyDilution
+  parent: AlgoSdk.KeyRegTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: VoteKeyDilution
+  nameWithType: KeyRegTxn.Params.VoteKeyDilution
+  fullName: AlgoSdk.KeyRegTxn.Params.VoteKeyDilution
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/KeyRegTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: VoteKeyDilution
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/KeyRegTxn.cs
+    startLine: 277
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("vote-key-dilution", "votekd", false)]
+
+      public ulong VoteKeyDilution { get; set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("vote-key-dilution", "votekd", False)>
+
+      Public Property VoteKeyDilution As ULong
+  overload: AlgoSdk.KeyRegTxn.Params.VoteKeyDilution*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: vote-key-dilution
+    - type: System.String
+      value: votekd
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.KeyRegTxn.Params.NonParticipation
+  commentId: F:AlgoSdk.KeyRegTxn.Params.NonParticipation
+  id: NonParticipation
+  parent: AlgoSdk.KeyRegTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: NonParticipation
+  nameWithType: KeyRegTxn.Params.NonParticipation
+  fullName: AlgoSdk.KeyRegTxn.Params.NonParticipation
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/KeyRegTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: NonParticipation
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/KeyRegTxn.cs
+    startLine: 285
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("non-participation", "nonpart", false)]
+
+      public Optional<bool> NonParticipation
+    return:
+      type: AlgoSdk.Optional{System.Boolean}
+    content.vb: "<AlgoApiField(\"non-participation\", \"nonpart\", False)>\nPublic NonParticipation As "
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: non-participation
+    - type: System.String
+      value: nonpart
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.KeyRegTxn.Params.AccountParticipation
+  commentId: F:AlgoSdk.KeyRegTxn.Params.AccountParticipation
+  id: AccountParticipation
+  parent: AlgoSdk.KeyRegTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: AccountParticipation
+  nameWithType: KeyRegTxn.Params.AccountParticipation
+  fullName: AlgoSdk.KeyRegTxn.Params.AccountParticipation
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/KeyRegTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: AccountParticipation
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/KeyRegTxn.cs
+    startLine: 287
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public AccountParticipation AccountParticipation
+    return:
+      type: AlgoSdk.AccountParticipation
+    content.vb: Public AccountParticipation As AccountParticipation
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.KeyRegTxn.Params.Equals(AlgoSdk.KeyRegTxn.Params)
+  commentId: M:AlgoSdk.KeyRegTxn.Params.Equals(AlgoSdk.KeyRegTxn.Params)
+  id: Equals(AlgoSdk.KeyRegTxn.Params)
+  parent: AlgoSdk.KeyRegTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: Equals(KeyRegTxn.Params)
+  nameWithType: KeyRegTxn.Params.Equals(KeyRegTxn.Params)
+  fullName: AlgoSdk.KeyRegTxn.Params.Equals(AlgoSdk.KeyRegTxn.Params)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/KeyRegTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Equals
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/KeyRegTxn.cs
+    startLine: 289
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public bool Equals(KeyRegTxn.Params other)
+    parameters:
+    - id: other
+      type: AlgoSdk.KeyRegTxn.Params
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As KeyRegTxn.Params) As Boolean
+  overload: AlgoSdk.KeyRegTxn.Params.Equals*
+  implements:
+  - System.IEquatable{AlgoSdk.KeyRegTxn.Params}.Equals(AlgoSdk.KeyRegTxn.Params)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: System.IEquatable{AlgoSdk.KeyRegTxn.Params}
+  commentId: T:System.IEquatable{AlgoSdk.KeyRegTxn.Params}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<KeyRegTxn.Params>
+  nameWithType: IEquatable<KeyRegTxn.Params>
+  fullName: System.IEquatable<AlgoSdk.KeyRegTxn.Params>
+  nameWithType.vb: IEquatable(Of KeyRegTxn.Params)
+  fullName.vb: System.IEquatable(Of AlgoSdk.KeyRegTxn.Params)
+  name.vb: IEquatable(Of KeyRegTxn.Params)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AlgoSdk.KeyRegTxn.Params
+    name: KeyRegTxn.Params
+    nameWithType: KeyRegTxn.Params
+    fullName: AlgoSdk.KeyRegTxn.Params
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AlgoSdk.KeyRegTxn.Params
+    name: KeyRegTxn.Params
+    nameWithType: KeyRegTxn.Params
+    fullName: AlgoSdk.KeyRegTxn.Params
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AlgoSdk.KeyRegTxn.Params.VoteParticipationKey*
+  commentId: Overload:AlgoSdk.KeyRegTxn.Params.VoteParticipationKey
+  name: VoteParticipationKey
+  nameWithType: KeyRegTxn.Params.VoteParticipationKey
+  fullName: AlgoSdk.KeyRegTxn.Params.VoteParticipationKey
+- uid: AlgoSdk.Crypto.Ed25519.PublicKey
+  commentId: T:AlgoSdk.Crypto.Ed25519.PublicKey
+  parent: AlgoSdk.Crypto
+  name: Ed25519.PublicKey
+  nameWithType: Ed25519.PublicKey
+  fullName: AlgoSdk.Crypto.Ed25519.PublicKey
+- uid: AlgoSdk.Crypto
+  commentId: N:AlgoSdk.Crypto
+  name: AlgoSdk.Crypto
+  nameWithType: AlgoSdk.Crypto
+  fullName: AlgoSdk.Crypto
+- uid: AlgoSdk.KeyRegTxn.Params.SelectionParticipationKey*
+  commentId: Overload:AlgoSdk.KeyRegTxn.Params.SelectionParticipationKey
+  name: SelectionParticipationKey
+  nameWithType: KeyRegTxn.Params.SelectionParticipationKey
+  fullName: AlgoSdk.KeyRegTxn.Params.SelectionParticipationKey
+- uid: AlgoSdk.VrfPubKey
+  commentId: T:AlgoSdk.VrfPubKey
+  parent: AlgoSdk
+  name: VrfPubKey
+  nameWithType: VrfPubKey
+  fullName: AlgoSdk.VrfPubKey
+- uid: AlgoSdk.KeyRegTxn.Params.VoteFirst*
+  commentId: Overload:AlgoSdk.KeyRegTxn.Params.VoteFirst
+  name: VoteFirst
+  nameWithType: KeyRegTxn.Params.VoteFirst
+  fullName: AlgoSdk.KeyRegTxn.Params.VoteFirst
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: AlgoSdk.KeyRegTxn.Params.VoteLast*
+  commentId: Overload:AlgoSdk.KeyRegTxn.Params.VoteLast
+  name: VoteLast
+  nameWithType: KeyRegTxn.Params.VoteLast
+  fullName: AlgoSdk.KeyRegTxn.Params.VoteLast
+- uid: AlgoSdk.KeyRegTxn.Params.VoteKeyDilution*
+  commentId: Overload:AlgoSdk.KeyRegTxn.Params.VoteKeyDilution
+  name: VoteKeyDilution
+  nameWithType: KeyRegTxn.Params.VoteKeyDilution
+  fullName: AlgoSdk.KeyRegTxn.Params.VoteKeyDilution
+- uid: AlgoSdk.Optional{System.Boolean}
+  commentId: T:AlgoSdk.Optional{System.Boolean}
+  parent: AlgoSdk
+  definition: AlgoSdk.Optional`1
+  name: Optional<Boolean>
+  nameWithType: Optional<Boolean>
+  fullName: AlgoSdk.Optional<System.Boolean>
+  nameWithType.vb: Optional(Of Boolean)
+  fullName.vb: AlgoSdk.Optional(Of System.Boolean)
+  name.vb: Optional(Of Boolean)
+  spec.csharp:
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Optional`1
+  commentId: T:AlgoSdk.Optional`1
+  parent: AlgoSdk
+  name: Optional<T>
+  nameWithType: Optional<T>
+  fullName: AlgoSdk.Optional<T>
+  nameWithType.vb: Optional(Of T)
+  fullName.vb: AlgoSdk.Optional(Of T)
+  name.vb: Optional(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AccountParticipation
+  commentId: T:AlgoSdk.AccountParticipation
+  parent: AlgoSdk
+  name: AccountParticipation
+  nameWithType: AccountParticipation
+  fullName: AlgoSdk.AccountParticipation
+- uid: AlgoSdk.KeyRegTxn.Params.Equals*
+  commentId: Overload:AlgoSdk.KeyRegTxn.Params.Equals
+  name: Equals
+  nameWithType: KeyRegTxn.Params.Equals
+  fullName: AlgoSdk.KeyRegTxn.Params.Equals
+- uid: System.IEquatable{AlgoSdk.KeyRegTxn.Params}.Equals(AlgoSdk.KeyRegTxn.Params)
+  commentId: M:System.IEquatable{AlgoSdk.KeyRegTxn.Params}.Equals(AlgoSdk.KeyRegTxn.Params)
+  parent: System.IEquatable{AlgoSdk.KeyRegTxn.Params}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(KeyRegTxn.Params)
+  nameWithType: IEquatable<KeyRegTxn.Params>.Equals(KeyRegTxn.Params)
+  fullName: System.IEquatable<AlgoSdk.KeyRegTxn.Params>.Equals(AlgoSdk.KeyRegTxn.Params)
+  nameWithType.vb: IEquatable(Of KeyRegTxn.Params).Equals(KeyRegTxn.Params)
+  fullName.vb: System.IEquatable(Of AlgoSdk.KeyRegTxn.Params).Equals(AlgoSdk.KeyRegTxn.Params)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<KeyRegTxn.Params>.Equals
+    fullName: System.IEquatable<AlgoSdk.KeyRegTxn.Params>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.KeyRegTxn.Params
+    name: KeyRegTxn.Params
+    nameWithType: KeyRegTxn.Params
+    fullName: AlgoSdk.KeyRegTxn.Params
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of KeyRegTxn.Params).Equals
+    fullName: System.IEquatable(Of AlgoSdk.KeyRegTxn.Params).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.KeyRegTxn.Params
+    name: KeyRegTxn.Params
+    nameWithType: KeyRegTxn.Params
+    fullName: AlgoSdk.KeyRegTxn.Params
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.KeyRegTxn.Params
+  commentId: T:AlgoSdk.KeyRegTxn.Params
+  parent: AlgoSdk
+  name: KeyRegTxn.Params
+  nameWithType: KeyRegTxn.Params
+  fullName: AlgoSdk.KeyRegTxn.Params
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

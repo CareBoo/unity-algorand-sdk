@@ -1,0 +1,903 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.MiniAssetHolding
+  commentId: T:AlgoSdk.MiniAssetHolding
+  id: MiniAssetHolding
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.MiniAssetHolding.Address
+  - AlgoSdk.MiniAssetHolding.Amount
+  - AlgoSdk.MiniAssetHolding.Deleted
+  - AlgoSdk.MiniAssetHolding.Equals(AlgoSdk.MiniAssetHolding)
+  - AlgoSdk.MiniAssetHolding.IsFrozen
+  - AlgoSdk.MiniAssetHolding.OptedInAtRound
+  - AlgoSdk.MiniAssetHolding.OptedOutAtRound
+  langs:
+  - csharp
+  - vb
+  name: MiniAssetHolding
+  nameWithType: MiniAssetHolding
+  fullName: AlgoSdk.MiniAssetHolding
+  type: Struct
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/MiniAssetHolding.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: MiniAssetHolding
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/MiniAssetHolding.cs
+    startLine: 4
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: 'public struct MiniAssetHolding : IEquatable<MiniAssetHolding>'
+    content.vb: >-
+      Public Structure MiniAssetHolding
+          Implements IEquatable(Of MiniAssetHolding)
+  implements:
+  - System.IEquatable{AlgoSdk.MiniAssetHolding}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: AlgoSdk.MiniAssetHolding.Address
+  commentId: F:AlgoSdk.MiniAssetHolding.Address
+  id: Address
+  parent: AlgoSdk.MiniAssetHolding
+  langs:
+  - csharp
+  - vb
+  name: Address
+  nameWithType: MiniAssetHolding.Address
+  fullName: AlgoSdk.MiniAssetHolding.Address
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/MiniAssetHolding.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Address
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/MiniAssetHolding.cs
+    startLine: 9
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("address", null, false)]
+
+      public Address Address
+    return:
+      type: AlgoSdk.Address
+    content.vb: >-
+      <AlgoApiField("address", Nothing, False)>
+
+      Public Address As Address
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: address
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.MiniAssetHolding.Amount
+  commentId: F:AlgoSdk.MiniAssetHolding.Amount
+  id: Amount
+  parent: AlgoSdk.MiniAssetHolding
+  langs:
+  - csharp
+  - vb
+  name: Amount
+  nameWithType: MiniAssetHolding.Amount
+  fullName: AlgoSdk.MiniAssetHolding.Amount
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/MiniAssetHolding.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Amount
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/MiniAssetHolding.cs
+    startLine: 12
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("amount", null, false)]
+
+      public ulong Amount
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("amount", Nothing, False)>
+
+      Public Amount As ULong
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: amount
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.MiniAssetHolding.Deleted
+  commentId: F:AlgoSdk.MiniAssetHolding.Deleted
+  id: Deleted
+  parent: AlgoSdk.MiniAssetHolding
+  langs:
+  - csharp
+  - vb
+  name: Deleted
+  nameWithType: MiniAssetHolding.Deleted
+  fullName: AlgoSdk.MiniAssetHolding.Deleted
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/MiniAssetHolding.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Deleted
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/MiniAssetHolding.cs
+    startLine: 15
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("deleted", null, false)]
+
+      public Optional<bool> Deleted
+    return:
+      type: AlgoSdk.Optional{System.Boolean}
+    content.vb: "<AlgoApiField(\"deleted\", Nothing, False)>\nPublic Deleted As "
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: deleted
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.MiniAssetHolding.IsFrozen
+  commentId: F:AlgoSdk.MiniAssetHolding.IsFrozen
+  id: IsFrozen
+  parent: AlgoSdk.MiniAssetHolding
+  langs:
+  - csharp
+  - vb
+  name: IsFrozen
+  nameWithType: MiniAssetHolding.IsFrozen
+  fullName: AlgoSdk.MiniAssetHolding.IsFrozen
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/MiniAssetHolding.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: IsFrozen
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/MiniAssetHolding.cs
+    startLine: 18
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("is-frozen", null, false)]
+
+      public Optional<bool> IsFrozen
+    return:
+      type: AlgoSdk.Optional{System.Boolean}
+    content.vb: "<AlgoApiField(\"is-frozen\", Nothing, False)>\nPublic IsFrozen As "
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: is-frozen
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.MiniAssetHolding.OptedInAtRound
+  commentId: F:AlgoSdk.MiniAssetHolding.OptedInAtRound
+  id: OptedInAtRound
+  parent: AlgoSdk.MiniAssetHolding
+  langs:
+  - csharp
+  - vb
+  name: OptedInAtRound
+  nameWithType: MiniAssetHolding.OptedInAtRound
+  fullName: AlgoSdk.MiniAssetHolding.OptedInAtRound
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/MiniAssetHolding.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: OptedInAtRound
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/MiniAssetHolding.cs
+    startLine: 21
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("opted-in-at-round", null, false)]
+
+      public ulong OptedInAtRound
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("opted-in-at-round", Nothing, False)>
+
+      Public OptedInAtRound As ULong
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: opted-in-at-round
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.MiniAssetHolding.OptedOutAtRound
+  commentId: F:AlgoSdk.MiniAssetHolding.OptedOutAtRound
+  id: OptedOutAtRound
+  parent: AlgoSdk.MiniAssetHolding
+  langs:
+  - csharp
+  - vb
+  name: OptedOutAtRound
+  nameWithType: MiniAssetHolding.OptedOutAtRound
+  fullName: AlgoSdk.MiniAssetHolding.OptedOutAtRound
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/MiniAssetHolding.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: OptedOutAtRound
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/MiniAssetHolding.cs
+    startLine: 24
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("opted-out-at-round", null, false)]
+
+      public ulong OptedOutAtRound
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("opted-out-at-round", Nothing, False)>
+
+      Public OptedOutAtRound As ULong
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: opted-out-at-round
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.MiniAssetHolding.Equals(AlgoSdk.MiniAssetHolding)
+  commentId: M:AlgoSdk.MiniAssetHolding.Equals(AlgoSdk.MiniAssetHolding)
+  id: Equals(AlgoSdk.MiniAssetHolding)
+  parent: AlgoSdk.MiniAssetHolding
+  langs:
+  - csharp
+  - vb
+  name: Equals(MiniAssetHolding)
+  nameWithType: MiniAssetHolding.Equals(MiniAssetHolding)
+  fullName: AlgoSdk.MiniAssetHolding.Equals(AlgoSdk.MiniAssetHolding)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/MiniAssetHolding.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Equals
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/MiniAssetHolding.cs
+    startLine: 26
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public bool Equals(MiniAssetHolding other)
+    parameters:
+    - id: other
+      type: AlgoSdk.MiniAssetHolding
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As MiniAssetHolding) As Boolean
+  overload: AlgoSdk.MiniAssetHolding.Equals*
+  implements:
+  - System.IEquatable{AlgoSdk.MiniAssetHolding}.Equals(AlgoSdk.MiniAssetHolding)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: System.IEquatable{AlgoSdk.MiniAssetHolding}
+  commentId: T:System.IEquatable{AlgoSdk.MiniAssetHolding}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<MiniAssetHolding>
+  nameWithType: IEquatable<MiniAssetHolding>
+  fullName: System.IEquatable<AlgoSdk.MiniAssetHolding>
+  nameWithType.vb: IEquatable(Of MiniAssetHolding)
+  fullName.vb: System.IEquatable(Of AlgoSdk.MiniAssetHolding)
+  name.vb: IEquatable(Of MiniAssetHolding)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AlgoSdk.MiniAssetHolding
+    name: MiniAssetHolding
+    nameWithType: MiniAssetHolding
+    fullName: AlgoSdk.MiniAssetHolding
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AlgoSdk.MiniAssetHolding
+    name: MiniAssetHolding
+    nameWithType: MiniAssetHolding
+    fullName: AlgoSdk.MiniAssetHolding
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AlgoSdk.Address
+  commentId: T:AlgoSdk.Address
+  parent: AlgoSdk
+  name: Address
+  nameWithType: Address
+  fullName: AlgoSdk.Address
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: AlgoSdk.Optional{System.Boolean}
+  commentId: T:AlgoSdk.Optional{System.Boolean}
+  parent: AlgoSdk
+  definition: AlgoSdk.Optional`1
+  name: Optional<Boolean>
+  nameWithType: Optional<Boolean>
+  fullName: AlgoSdk.Optional<System.Boolean>
+  nameWithType.vb: Optional(Of Boolean)
+  fullName.vb: AlgoSdk.Optional(Of System.Boolean)
+  name.vb: Optional(Of Boolean)
+  spec.csharp:
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Optional`1
+  commentId: T:AlgoSdk.Optional`1
+  parent: AlgoSdk
+  name: Optional<T>
+  nameWithType: Optional<T>
+  fullName: AlgoSdk.Optional<T>
+  nameWithType.vb: Optional(Of T)
+  fullName.vb: AlgoSdk.Optional(Of T)
+  name.vb: Optional(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.MiniAssetHolding.Equals*
+  commentId: Overload:AlgoSdk.MiniAssetHolding.Equals
+  name: Equals
+  nameWithType: MiniAssetHolding.Equals
+  fullName: AlgoSdk.MiniAssetHolding.Equals
+- uid: System.IEquatable{AlgoSdk.MiniAssetHolding}.Equals(AlgoSdk.MiniAssetHolding)
+  commentId: M:System.IEquatable{AlgoSdk.MiniAssetHolding}.Equals(AlgoSdk.MiniAssetHolding)
+  parent: System.IEquatable{AlgoSdk.MiniAssetHolding}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(MiniAssetHolding)
+  nameWithType: IEquatable<MiniAssetHolding>.Equals(MiniAssetHolding)
+  fullName: System.IEquatable<AlgoSdk.MiniAssetHolding>.Equals(AlgoSdk.MiniAssetHolding)
+  nameWithType.vb: IEquatable(Of MiniAssetHolding).Equals(MiniAssetHolding)
+  fullName.vb: System.IEquatable(Of AlgoSdk.MiniAssetHolding).Equals(AlgoSdk.MiniAssetHolding)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<MiniAssetHolding>.Equals
+    fullName: System.IEquatable<AlgoSdk.MiniAssetHolding>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MiniAssetHolding
+    name: MiniAssetHolding
+    nameWithType: MiniAssetHolding
+    fullName: AlgoSdk.MiniAssetHolding
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of MiniAssetHolding).Equals
+    fullName: System.IEquatable(Of AlgoSdk.MiniAssetHolding).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MiniAssetHolding
+    name: MiniAssetHolding
+    nameWithType: MiniAssetHolding
+    fullName: AlgoSdk.MiniAssetHolding
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.MiniAssetHolding
+  commentId: T:AlgoSdk.MiniAssetHolding
+  parent: AlgoSdk
+  name: MiniAssetHolding
+  nameWithType: MiniAssetHolding
+  fullName: AlgoSdk.MiniAssetHolding
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

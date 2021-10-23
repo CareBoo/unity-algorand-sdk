@@ -1,0 +1,999 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.MsgPack.Formatters.TealValueFormatter
+  commentId: T:AlgoSdk.MsgPack.Formatters.TealValueFormatter
+  id: TealValueFormatter
+  parent: AlgoSdk.MsgPack.Formatters
+  children:
+  - AlgoSdk.MsgPack.Formatters.TealValueFormatter.Deserialize(AlgoSdk.Json.JsonReader@)
+  - AlgoSdk.MsgPack.Formatters.TealValueFormatter.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  - AlgoSdk.MsgPack.Formatters.TealValueFormatter.Serialize(AlgoSdk.Json.JsonWriter@,AlgoSdk.TealValue)
+  - AlgoSdk.MsgPack.Formatters.TealValueFormatter.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,AlgoSdk.TealValue)
+  langs:
+  - csharp
+  - vb
+  name: TealValueFormatter
+  nameWithType: TealValueFormatter
+  fullName: AlgoSdk.MsgPack.Formatters.TealValueFormatter
+  type: Class
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/TealValueFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: TealValueFormatter
+    path: ../CareBoo.AlgoSdk/Serialization/Formatters/TealValueFormatter.cs
+    startLine: 7
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MsgPack.Formatters
+  syntax:
+    content: 'public sealed class TealValueFormatter : IAlgoApiFormatter<TealValue>'
+    content.vb: >-
+      Public NotInheritable Class TealValueFormatter
+          Implements IAlgoApiFormatter(Of TealValue)
+  inheritance:
+  - System.Object
+  implements:
+  - AlgoSdk.IAlgoApiFormatter{AlgoSdk.TealValue}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: AlgoSdk.MsgPack.Formatters.TealValueFormatter.Deserialize(AlgoSdk.Json.JsonReader@)
+  commentId: M:AlgoSdk.MsgPack.Formatters.TealValueFormatter.Deserialize(AlgoSdk.Json.JsonReader@)
+  id: Deserialize(AlgoSdk.Json.JsonReader@)
+  parent: AlgoSdk.MsgPack.Formatters.TealValueFormatter
+  langs:
+  - csharp
+  - vb
+  name: Deserialize(ref JsonReader)
+  nameWithType: TealValueFormatter.Deserialize(ref JsonReader)
+  fullName: AlgoSdk.MsgPack.Formatters.TealValueFormatter.Deserialize(ref AlgoSdk.Json.JsonReader)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/TealValueFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Deserialize
+    path: ../CareBoo.AlgoSdk/Serialization/Formatters/TealValueFormatter.cs
+    startLine: 9
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MsgPack.Formatters
+  syntax:
+    content: public TealValue Deserialize(ref JsonReader reader)
+    parameters:
+    - id: reader
+      type: AlgoSdk.Json.JsonReader
+    return:
+      type: AlgoSdk.TealValue
+    content.vb: Public Function Deserialize(ByRef reader As JsonReader) As TealValue
+  overload: AlgoSdk.MsgPack.Formatters.TealValueFormatter.Deserialize*
+  implements:
+  - AlgoSdk.IAlgoApiFormatter{AlgoSdk.TealValue}.Deserialize(AlgoSdk.Json.JsonReader@)
+  nameWithType.vb: TealValueFormatter.Deserialize(ByRef JsonReader)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.MsgPack.Formatters.TealValueFormatter.Deserialize(ByRef AlgoSdk.Json.JsonReader)
+  name.vb: Deserialize(ByRef JsonReader)
+- uid: AlgoSdk.MsgPack.Formatters.TealValueFormatter.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  commentId: M:AlgoSdk.MsgPack.Formatters.TealValueFormatter.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  id: Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  parent: AlgoSdk.MsgPack.Formatters.TealValueFormatter
+  langs:
+  - csharp
+  - vb
+  name: Deserialize(ref MessagePackReader)
+  nameWithType: TealValueFormatter.Deserialize(ref MessagePackReader)
+  fullName: AlgoSdk.MsgPack.Formatters.TealValueFormatter.Deserialize(ref AlgoSdk.MessagePack.MessagePackReader)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/TealValueFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Deserialize
+    path: ../CareBoo.AlgoSdk/Serialization/Formatters/TealValueFormatter.cs
+    startLine: 32
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MsgPack.Formatters
+  syntax:
+    content: public TealValue Deserialize(ref MessagePackReader reader)
+    parameters:
+    - id: reader
+      type: AlgoSdk.MessagePack.MessagePackReader
+    return:
+      type: AlgoSdk.TealValue
+    content.vb: Public Function Deserialize(ByRef reader As MessagePackReader) As TealValue
+  overload: AlgoSdk.MsgPack.Formatters.TealValueFormatter.Deserialize*
+  implements:
+  - AlgoSdk.IAlgoApiFormatter{AlgoSdk.TealValue}.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  nameWithType.vb: TealValueFormatter.Deserialize(ByRef MessagePackReader)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.MsgPack.Formatters.TealValueFormatter.Deserialize(ByRef AlgoSdk.MessagePack.MessagePackReader)
+  name.vb: Deserialize(ByRef MessagePackReader)
+- uid: AlgoSdk.MsgPack.Formatters.TealValueFormatter.Serialize(AlgoSdk.Json.JsonWriter@,AlgoSdk.TealValue)
+  commentId: M:AlgoSdk.MsgPack.Formatters.TealValueFormatter.Serialize(AlgoSdk.Json.JsonWriter@,AlgoSdk.TealValue)
+  id: Serialize(AlgoSdk.Json.JsonWriter@,AlgoSdk.TealValue)
+  parent: AlgoSdk.MsgPack.Formatters.TealValueFormatter
+  langs:
+  - csharp
+  - vb
+  name: Serialize(ref JsonWriter, TealValue)
+  nameWithType: TealValueFormatter.Serialize(ref JsonWriter, TealValue)
+  fullName: AlgoSdk.MsgPack.Formatters.TealValueFormatter.Serialize(ref AlgoSdk.Json.JsonWriter, AlgoSdk.TealValue)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/TealValueFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Serialize
+    path: ../CareBoo.AlgoSdk/Serialization/Formatters/TealValueFormatter.cs
+    startLine: 54
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MsgPack.Formatters
+  syntax:
+    content: public void Serialize(ref JsonWriter writer, TealValue value)
+    parameters:
+    - id: writer
+      type: AlgoSdk.Json.JsonWriter
+    - id: value
+      type: AlgoSdk.TealValue
+    content.vb: Public Sub Serialize(ByRef writer As JsonWriter, value As TealValue)
+  overload: AlgoSdk.MsgPack.Formatters.TealValueFormatter.Serialize*
+  implements:
+  - AlgoSdk.IAlgoApiFormatter{AlgoSdk.TealValue}.Serialize(AlgoSdk.Json.JsonWriter@,AlgoSdk.TealValue)
+  nameWithType.vb: TealValueFormatter.Serialize(ByRef JsonWriter, TealValue)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.MsgPack.Formatters.TealValueFormatter.Serialize(ByRef AlgoSdk.Json.JsonWriter, AlgoSdk.TealValue)
+  name.vb: Serialize(ByRef JsonWriter, TealValue)
+- uid: AlgoSdk.MsgPack.Formatters.TealValueFormatter.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,AlgoSdk.TealValue)
+  commentId: M:AlgoSdk.MsgPack.Formatters.TealValueFormatter.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,AlgoSdk.TealValue)
+  id: Serialize(AlgoSdk.MessagePack.MessagePackWriter@,AlgoSdk.TealValue)
+  parent: AlgoSdk.MsgPack.Formatters.TealValueFormatter
+  langs:
+  - csharp
+  - vb
+  name: Serialize(ref MessagePackWriter, TealValue)
+  nameWithType: TealValueFormatter.Serialize(ref MessagePackWriter, TealValue)
+  fullName: AlgoSdk.MsgPack.Formatters.TealValueFormatter.Serialize(ref AlgoSdk.MessagePack.MessagePackWriter, AlgoSdk.TealValue)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/TealValueFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Serialize
+    path: ../CareBoo.AlgoSdk/Serialization/Formatters/TealValueFormatter.cs
+    startLine: 76
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MsgPack.Formatters
+  syntax:
+    content: public void Serialize(ref MessagePackWriter writer, TealValue value)
+    parameters:
+    - id: writer
+      type: AlgoSdk.MessagePack.MessagePackWriter
+    - id: value
+      type: AlgoSdk.TealValue
+    content.vb: Public Sub Serialize(ByRef writer As MessagePackWriter, value As TealValue)
+  overload: AlgoSdk.MsgPack.Formatters.TealValueFormatter.Serialize*
+  implements:
+  - AlgoSdk.IAlgoApiFormatter{AlgoSdk.TealValue}.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,AlgoSdk.TealValue)
+  nameWithType.vb: TealValueFormatter.Serialize(ByRef MessagePackWriter, TealValue)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.MsgPack.Formatters.TealValueFormatter.Serialize(ByRef AlgoSdk.MessagePack.MessagePackWriter, AlgoSdk.TealValue)
+  name.vb: Serialize(ByRef MessagePackWriter, TealValue)
+references:
+- uid: AlgoSdk.MsgPack.Formatters
+  commentId: N:AlgoSdk.MsgPack.Formatters
+  name: AlgoSdk.MsgPack.Formatters
+  nameWithType: AlgoSdk.MsgPack.Formatters
+  fullName: AlgoSdk.MsgPack.Formatters
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AlgoSdk.IAlgoApiFormatter{AlgoSdk.TealValue}
+  commentId: T:AlgoSdk.IAlgoApiFormatter{AlgoSdk.TealValue}
+  parent: AlgoSdk
+  definition: AlgoSdk.IAlgoApiFormatter`1
+  name: IAlgoApiFormatter<TealValue>
+  nameWithType: IAlgoApiFormatter<TealValue>
+  fullName: AlgoSdk.IAlgoApiFormatter<AlgoSdk.TealValue>
+  nameWithType.vb: IAlgoApiFormatter(Of TealValue)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of AlgoSdk.TealValue)
+  name.vb: IAlgoApiFormatter(Of TealValue)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1
+    name: IAlgoApiFormatter
+    nameWithType: IAlgoApiFormatter
+    fullName: AlgoSdk.IAlgoApiFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AlgoSdk.TealValue
+    name: TealValue
+    nameWithType: TealValue
+    fullName: AlgoSdk.TealValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1
+    name: IAlgoApiFormatter
+    nameWithType: IAlgoApiFormatter
+    fullName: AlgoSdk.IAlgoApiFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AlgoSdk.TealValue
+    name: TealValue
+    nameWithType: TealValue
+    fullName: AlgoSdk.TealValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AlgoSdk.IAlgoApiFormatter`1
+  commentId: T:AlgoSdk.IAlgoApiFormatter`1
+  name: IAlgoApiFormatter<T>
+  nameWithType: IAlgoApiFormatter<T>
+  fullName: AlgoSdk.IAlgoApiFormatter<T>
+  nameWithType.vb: IAlgoApiFormatter(Of T)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of T)
+  name.vb: IAlgoApiFormatter(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1
+    name: IAlgoApiFormatter
+    nameWithType: IAlgoApiFormatter
+    fullName: AlgoSdk.IAlgoApiFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1
+    name: IAlgoApiFormatter
+    nameWithType: IAlgoApiFormatter
+    fullName: AlgoSdk.IAlgoApiFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: AlgoSdk.MsgPack.Formatters.TealValueFormatter.Deserialize*
+  commentId: Overload:AlgoSdk.MsgPack.Formatters.TealValueFormatter.Deserialize
+  name: Deserialize
+  nameWithType: TealValueFormatter.Deserialize
+  fullName: AlgoSdk.MsgPack.Formatters.TealValueFormatter.Deserialize
+- uid: AlgoSdk.IAlgoApiFormatter{AlgoSdk.TealValue}.Deserialize(AlgoSdk.Json.JsonReader@)
+  commentId: M:AlgoSdk.IAlgoApiFormatter{AlgoSdk.TealValue}.Deserialize(AlgoSdk.Json.JsonReader@)
+  parent: AlgoSdk.IAlgoApiFormatter{AlgoSdk.TealValue}
+  definition: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+  name: Deserialize(JsonReader)
+  nameWithType: IAlgoApiFormatter<TealValue>.Deserialize(JsonReader)
+  fullName: AlgoSdk.IAlgoApiFormatter<AlgoSdk.TealValue>.Deserialize(AlgoSdk.Json.JsonReader)
+  nameWithType.vb: IAlgoApiFormatter(Of TealValue).Deserialize(JsonReader)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of AlgoSdk.TealValue).Deserialize(AlgoSdk.Json.JsonReader)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+    name: Deserialize
+    nameWithType: IAlgoApiFormatter<TealValue>.Deserialize
+    fullName: AlgoSdk.IAlgoApiFormatter<AlgoSdk.TealValue>.Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonReader
+    name: JsonReader
+    nameWithType: JsonReader
+    fullName: AlgoSdk.Json.JsonReader
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+    name: Deserialize
+    nameWithType: IAlgoApiFormatter(Of TealValue).Deserialize
+    fullName: AlgoSdk.IAlgoApiFormatter(Of AlgoSdk.TealValue).Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonReader
+    name: JsonReader
+    nameWithType: JsonReader
+    fullName: AlgoSdk.Json.JsonReader
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Json.JsonReader
+  commentId: T:AlgoSdk.Json.JsonReader
+  parent: AlgoSdk.Json
+  name: JsonReader
+  nameWithType: JsonReader
+  fullName: AlgoSdk.Json.JsonReader
+- uid: AlgoSdk.TealValue
+  commentId: T:AlgoSdk.TealValue
+  parent: AlgoSdk
+  name: TealValue
+  nameWithType: TealValue
+  fullName: AlgoSdk.TealValue
+- uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+  commentId: M:AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+  name: Deserialize(JsonReader)
+  nameWithType: IAlgoApiFormatter<T>.Deserialize(JsonReader)
+  fullName: AlgoSdk.IAlgoApiFormatter<T>.Deserialize(AlgoSdk.Json.JsonReader)
+  nameWithType.vb: IAlgoApiFormatter(Of T).Deserialize(JsonReader)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of T).Deserialize(AlgoSdk.Json.JsonReader)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+    name: Deserialize
+    nameWithType: IAlgoApiFormatter<T>.Deserialize
+    fullName: AlgoSdk.IAlgoApiFormatter<T>.Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonReader
+    name: JsonReader
+    nameWithType: JsonReader
+    fullName: AlgoSdk.Json.JsonReader
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+    name: Deserialize
+    nameWithType: IAlgoApiFormatter(Of T).Deserialize
+    fullName: AlgoSdk.IAlgoApiFormatter(Of T).Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonReader
+    name: JsonReader
+    nameWithType: JsonReader
+    fullName: AlgoSdk.Json.JsonReader
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Json
+  commentId: N:AlgoSdk.Json
+  name: AlgoSdk.Json
+  nameWithType: AlgoSdk.Json
+  fullName: AlgoSdk.Json
+- uid: AlgoSdk.IAlgoApiFormatter{AlgoSdk.TealValue}.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  commentId: M:AlgoSdk.IAlgoApiFormatter{AlgoSdk.TealValue}.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  parent: AlgoSdk.IAlgoApiFormatter{AlgoSdk.TealValue}
+  definition: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  name: Deserialize(MessagePackReader)
+  nameWithType: IAlgoApiFormatter<TealValue>.Deserialize(MessagePackReader)
+  fullName: AlgoSdk.IAlgoApiFormatter<AlgoSdk.TealValue>.Deserialize(AlgoSdk.MessagePack.MessagePackReader)
+  nameWithType.vb: IAlgoApiFormatter(Of TealValue).Deserialize(MessagePackReader)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of AlgoSdk.TealValue).Deserialize(AlgoSdk.MessagePack.MessagePackReader)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+    name: Deserialize
+    nameWithType: IAlgoApiFormatter<TealValue>.Deserialize
+    fullName: AlgoSdk.IAlgoApiFormatter<AlgoSdk.TealValue>.Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackReader
+    name: MessagePackReader
+    nameWithType: MessagePackReader
+    fullName: AlgoSdk.MessagePack.MessagePackReader
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+    name: Deserialize
+    nameWithType: IAlgoApiFormatter(Of TealValue).Deserialize
+    fullName: AlgoSdk.IAlgoApiFormatter(Of AlgoSdk.TealValue).Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackReader
+    name: MessagePackReader
+    nameWithType: MessagePackReader
+    fullName: AlgoSdk.MessagePack.MessagePackReader
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.MessagePack.MessagePackReader
+  commentId: T:AlgoSdk.MessagePack.MessagePackReader
+  parent: AlgoSdk.MessagePack
+  name: MessagePackReader
+  nameWithType: MessagePackReader
+  fullName: AlgoSdk.MessagePack.MessagePackReader
+- uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  commentId: M:AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  name: Deserialize(MessagePackReader)
+  nameWithType: IAlgoApiFormatter<T>.Deserialize(MessagePackReader)
+  fullName: AlgoSdk.IAlgoApiFormatter<T>.Deserialize(AlgoSdk.MessagePack.MessagePackReader)
+  nameWithType.vb: IAlgoApiFormatter(Of T).Deserialize(MessagePackReader)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of T).Deserialize(AlgoSdk.MessagePack.MessagePackReader)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+    name: Deserialize
+    nameWithType: IAlgoApiFormatter<T>.Deserialize
+    fullName: AlgoSdk.IAlgoApiFormatter<T>.Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackReader
+    name: MessagePackReader
+    nameWithType: MessagePackReader
+    fullName: AlgoSdk.MessagePack.MessagePackReader
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+    name: Deserialize
+    nameWithType: IAlgoApiFormatter(Of T).Deserialize
+    fullName: AlgoSdk.IAlgoApiFormatter(Of T).Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackReader
+    name: MessagePackReader
+    nameWithType: MessagePackReader
+    fullName: AlgoSdk.MessagePack.MessagePackReader
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.MessagePack
+  commentId: N:AlgoSdk.MessagePack
+  name: AlgoSdk.MessagePack
+  nameWithType: AlgoSdk.MessagePack
+  fullName: AlgoSdk.MessagePack
+- uid: AlgoSdk.MsgPack.Formatters.TealValueFormatter.Serialize*
+  commentId: Overload:AlgoSdk.MsgPack.Formatters.TealValueFormatter.Serialize
+  name: Serialize
+  nameWithType: TealValueFormatter.Serialize
+  fullName: AlgoSdk.MsgPack.Formatters.TealValueFormatter.Serialize
+- uid: AlgoSdk.IAlgoApiFormatter{AlgoSdk.TealValue}.Serialize(AlgoSdk.Json.JsonWriter@,AlgoSdk.TealValue)
+  commentId: M:AlgoSdk.IAlgoApiFormatter{AlgoSdk.TealValue}.Serialize(AlgoSdk.Json.JsonWriter@,AlgoSdk.TealValue)
+  parent: AlgoSdk.IAlgoApiFormatter{AlgoSdk.TealValue}
+  definition: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+  name: Serialize(JsonWriter, TealValue)
+  nameWithType: IAlgoApiFormatter<TealValue>.Serialize(JsonWriter, TealValue)
+  fullName: AlgoSdk.IAlgoApiFormatter<AlgoSdk.TealValue>.Serialize(AlgoSdk.Json.JsonWriter, AlgoSdk.TealValue)
+  nameWithType.vb: IAlgoApiFormatter(Of TealValue).Serialize(JsonWriter, TealValue)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of AlgoSdk.TealValue).Serialize(AlgoSdk.Json.JsonWriter, AlgoSdk.TealValue)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+    name: Serialize
+    nameWithType: IAlgoApiFormatter<TealValue>.Serialize
+    fullName: AlgoSdk.IAlgoApiFormatter<AlgoSdk.TealValue>.Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonWriter
+    name: JsonWriter
+    nameWithType: JsonWriter
+    fullName: AlgoSdk.Json.JsonWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AlgoSdk.TealValue
+    name: TealValue
+    nameWithType: TealValue
+    fullName: AlgoSdk.TealValue
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+    name: Serialize
+    nameWithType: IAlgoApiFormatter(Of TealValue).Serialize
+    fullName: AlgoSdk.IAlgoApiFormatter(Of AlgoSdk.TealValue).Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonWriter
+    name: JsonWriter
+    nameWithType: JsonWriter
+    fullName: AlgoSdk.Json.JsonWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AlgoSdk.TealValue
+    name: TealValue
+    nameWithType: TealValue
+    fullName: AlgoSdk.TealValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Json.JsonWriter
+  commentId: T:AlgoSdk.Json.JsonWriter
+  parent: AlgoSdk.Json
+  name: JsonWriter
+  nameWithType: JsonWriter
+  fullName: AlgoSdk.Json.JsonWriter
+- uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+  commentId: M:AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+  name: Serialize(JsonWriter, T)
+  nameWithType: IAlgoApiFormatter<T>.Serialize(JsonWriter, T)
+  fullName: AlgoSdk.IAlgoApiFormatter<T>.Serialize(AlgoSdk.Json.JsonWriter, T)
+  nameWithType.vb: IAlgoApiFormatter(Of T).Serialize(JsonWriter, T)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of T).Serialize(AlgoSdk.Json.JsonWriter, T)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+    name: Serialize
+    nameWithType: IAlgoApiFormatter<T>.Serialize
+    fullName: AlgoSdk.IAlgoApiFormatter<T>.Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonWriter
+    name: JsonWriter
+    nameWithType: JsonWriter
+    fullName: AlgoSdk.Json.JsonWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+    name: Serialize
+    nameWithType: IAlgoApiFormatter(Of T).Serialize
+    fullName: AlgoSdk.IAlgoApiFormatter(Of T).Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonWriter
+    name: JsonWriter
+    nameWithType: JsonWriter
+    fullName: AlgoSdk.Json.JsonWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.IAlgoApiFormatter{AlgoSdk.TealValue}.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,AlgoSdk.TealValue)
+  commentId: M:AlgoSdk.IAlgoApiFormatter{AlgoSdk.TealValue}.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,AlgoSdk.TealValue)
+  parent: AlgoSdk.IAlgoApiFormatter{AlgoSdk.TealValue}
+  definition: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+  name: Serialize(MessagePackWriter, TealValue)
+  nameWithType: IAlgoApiFormatter<TealValue>.Serialize(MessagePackWriter, TealValue)
+  fullName: AlgoSdk.IAlgoApiFormatter<AlgoSdk.TealValue>.Serialize(AlgoSdk.MessagePack.MessagePackWriter, AlgoSdk.TealValue)
+  nameWithType.vb: IAlgoApiFormatter(Of TealValue).Serialize(MessagePackWriter, TealValue)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of AlgoSdk.TealValue).Serialize(AlgoSdk.MessagePack.MessagePackWriter, AlgoSdk.TealValue)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+    name: Serialize
+    nameWithType: IAlgoApiFormatter<TealValue>.Serialize
+    fullName: AlgoSdk.IAlgoApiFormatter<AlgoSdk.TealValue>.Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackWriter
+    name: MessagePackWriter
+    nameWithType: MessagePackWriter
+    fullName: AlgoSdk.MessagePack.MessagePackWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AlgoSdk.TealValue
+    name: TealValue
+    nameWithType: TealValue
+    fullName: AlgoSdk.TealValue
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+    name: Serialize
+    nameWithType: IAlgoApiFormatter(Of TealValue).Serialize
+    fullName: AlgoSdk.IAlgoApiFormatter(Of AlgoSdk.TealValue).Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackWriter
+    name: MessagePackWriter
+    nameWithType: MessagePackWriter
+    fullName: AlgoSdk.MessagePack.MessagePackWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AlgoSdk.TealValue
+    name: TealValue
+    nameWithType: TealValue
+    fullName: AlgoSdk.TealValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.MessagePack.MessagePackWriter
+  commentId: T:AlgoSdk.MessagePack.MessagePackWriter
+  parent: AlgoSdk.MessagePack
+  name: MessagePackWriter
+  nameWithType: MessagePackWriter
+  fullName: AlgoSdk.MessagePack.MessagePackWriter
+- uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+  commentId: M:AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+  name: Serialize(MessagePackWriter, T)
+  nameWithType: IAlgoApiFormatter<T>.Serialize(MessagePackWriter, T)
+  fullName: AlgoSdk.IAlgoApiFormatter<T>.Serialize(AlgoSdk.MessagePack.MessagePackWriter, T)
+  nameWithType.vb: IAlgoApiFormatter(Of T).Serialize(MessagePackWriter, T)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of T).Serialize(AlgoSdk.MessagePack.MessagePackWriter, T)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+    name: Serialize
+    nameWithType: IAlgoApiFormatter<T>.Serialize
+    fullName: AlgoSdk.IAlgoApiFormatter<T>.Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackWriter
+    name: MessagePackWriter
+    nameWithType: MessagePackWriter
+    fullName: AlgoSdk.MessagePack.MessagePackWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+    name: Serialize
+    nameWithType: IAlgoApiFormatter(Of T).Serialize
+    fullName: AlgoSdk.IAlgoApiFormatter(Of T).Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackWriter
+    name: MessagePackWriter
+    nameWithType: MessagePackWriter
+    fullName: AlgoSdk.MessagePack.MessagePackWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
