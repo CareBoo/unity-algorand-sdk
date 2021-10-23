@@ -1,0 +1,7 @@
+apiRules:
+- include:
+    uidRegex: ^AlgoSdk
+    type: Namespace
+- exclude:
+    uidRegex: .*
+    type: Namespace
