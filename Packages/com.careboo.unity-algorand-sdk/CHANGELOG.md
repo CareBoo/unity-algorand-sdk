@@ -1,3 +1,42 @@
+# [1.0.0-exp.27](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.26...v1.0.0-exp.27) (2021-10-23)
+
+
+### Bug Fixes
+
+* **algod:** :bug: fix `AlgodClient.TealCompile` ([8f5a67a](https://github.com/CareBoo/unity-algorand-sdk/commit/8f5a67a694cd21496b6db7c1630324ddbfd13f1f)), closes [#20](https://github.com/CareBoo/unity-algorand-sdk/issues/20)
+* **algod:** :bug: fix `AssetParams` serialization ([cbf9a69](https://github.com/CareBoo/unity-algorand-sdk/commit/cbf9a6981c52c565eb3837186c38765e5b8bea27))
+* **algod:** :bug: fix vrfpubkey formatter lookup ([0bb0014](https://github.com/CareBoo/unity-algorand-sdk/commit/0bb001407b81abc288d271cda3c6d6b9c19c49df))
+* **algod:** :bug: fix vrfpubkey formatting ([7d02443](https://github.com/CareBoo/unity-algorand-sdk/commit/7d024437ac9415449717ebf8a97017fcc10f9ee1))
+* **algod:** :bug: replace `VrfPubKey` with `FixedString128Bytes` ([94b02b0](https://github.com/CareBoo/unity-algorand-sdk/commit/94b02b06f25d4b97e264f085cc96afbfdfb68862)), closes [#42](https://github.com/CareBoo/unity-algorand-sdk/issues/42)
+* **kmd:** :art: fix `KmdClient` API incorrectly using optional args ([a53998b](https://github.com/CareBoo/unity-algorand-sdk/commit/a53998b00aa103a47ad1fea014c5f6627f8a3d34)), closes [#36](https://github.com/CareBoo/unity-algorand-sdk/issues/36)
+* **serialization:** :bug: fix `TransactionId` serialization ([b7e07ca](https://github.com/CareBoo/unity-algorand-sdk/commit/b7e07caf5e8b8b5b0327c15c618a75263726dc18))
+* **transaction:** :bug: fix `OnCompletion` having incorrect byte values ([514a378](https://github.com/CareBoo/unity-algorand-sdk/commit/514a378dce9c0669002960f6ef76d453a54fe0f0))
+* **transaction:** :bug: fix incorrect constructor in `Transaction.ApplicationCall` ([98b5829](https://github.com/CareBoo/unity-algorand-sdk/commit/98b58295d7676d73a924a5d837b7f9b0dc8a62c9))
+
+
+### Code Refactoring
+
+* **algod:** :recycle: replace `AccountParticipation` with `Transaction.KeyRegistration.Params` ([3b624ee](https://github.com/CareBoo/unity-algorand-sdk/commit/3b624eec4974e28b0cc31b019d41f37dc60207ca))
+
+
+### Features
+
+* **transaction:** :sparkles: add `RegisterAccountOnline` and `RegisterAccountOffline` APIs ([71d42c1](https://github.com/CareBoo/unity-algorand-sdk/commit/71d42c1d832212ddaa5ee872f8e332af570854ac))
+* **transaction:** :sparkles: add `Transaction.AppCreate` and `Transaction.AppConfigure` APIs ([c64469a](https://github.com/CareBoo/unity-algorand-sdk/commit/c64469ac3e696c518d7d644d1e5b219bfd25d4b5))
+* **transaction:** :sparkles: add `Transaction.AssetCreate` `Transaction.AssetConfigure` and `Transaction.AssetDelete` API ([259b37b](https://github.com/CareBoo/unity-algorand-sdk/commit/259b37b336a91a9d718343b4f189e4f9313a940c))
+* **transaction:** :sparkles: add `Transaction.AssetFreeze` API ([160f837](https://github.com/CareBoo/unity-algorand-sdk/commit/160f83777f78b7a0fd53fd60b5241d766f4e6c17))
+* **transaction:** :sparkles: add `Transaction.Payment` API ([88e918d](https://github.com/CareBoo/unity-algorand-sdk/commit/88e918dca1b6cc5376f138c5a010a50d8c504a21))
+* **transaction:** :sparkles: implement address from application id ([9e3c883](https://github.com/CareBoo/unity-algorand-sdk/commit/9e3c8839abc58e11583e4974858cb794ac1cadc8))
+* **transaction:** :sparkles: implement AssetClawback and AssetAccept ([c3578ec](https://github.com/CareBoo/unity-algorand-sdk/commit/c3578ec748160017c3da76dbcc35aee66515fc74)), closes [#24](https://github.com/CareBoo/unity-algorand-sdk/issues/24) [#25](https://github.com/CareBoo/unity-algorand-sdk/issues/25)
+* **transaction:** :sparkles: implement atomic transfers ([21f7ee3](https://github.com/CareBoo/unity-algorand-sdk/commit/21f7ee34c14b0e9b99ba193f7b73215798dc5a76)), closes [#45](https://github.com/CareBoo/unity-algorand-sdk/issues/45)
+* **transaction:** :sparkles: use `TransactionParams` in Transaction constructors ([a966320](https://github.com/CareBoo/unity-algorand-sdk/commit/a966320a0ba5f45225c77db23ef0742c43b73cfa))
+
+
+### BREAKING CHANGES
+
+* **algod:** `AccountParticipation` no longer exists
+* **transaction:** All transaction constructors have been changed to use `TransactionParams`
+
 # [1.0.0-exp.26](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.25...v1.0.0-exp.26) (2021-10-13)
 
 
