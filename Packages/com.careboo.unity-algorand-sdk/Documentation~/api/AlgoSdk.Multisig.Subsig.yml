@@ -1,0 +1,703 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.Multisig.Subsig
+  commentId: T:AlgoSdk.Multisig.Subsig
+  id: Multisig.Subsig
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.Multisig.Subsig.Equals(AlgoSdk.Multisig.Subsig)
+  - AlgoSdk.Multisig.Subsig.op_Implicit(AlgoSdk.Address)~AlgoSdk.Multisig.Subsig
+  - AlgoSdk.Multisig.Subsig.PublicKey
+  - AlgoSdk.Multisig.Subsig.Sig
+  langs:
+  - csharp
+  - vb
+  name: Multisig.Subsig
+  nameWithType: Multisig.Subsig
+  fullName: AlgoSdk.Multisig.Subsig
+  type: Struct
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/Signature/Multisig.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Subsig
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/Signature/Multisig.cs
+    startLine: 45
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: 'public struct Subsig : IEquatable<Multisig.Subsig>'
+    content.vb: >-
+      Public Structure Subsig
+          Implements IEquatable(Of Multisig.Subsig)
+  implements:
+  - System.IEquatable{AlgoSdk.Multisig.Subsig}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: AlgoSdk.Multisig.Subsig.PublicKey
+  commentId: F:AlgoSdk.Multisig.Subsig.PublicKey
+  id: PublicKey
+  parent: AlgoSdk.Multisig.Subsig
+  langs:
+  - csharp
+  - vb
+  name: PublicKey
+  nameWithType: Multisig.Subsig.PublicKey
+  fullName: AlgoSdk.Multisig.Subsig.PublicKey
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/Signature/Multisig.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: PublicKey
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/Signature/Multisig.cs
+    startLine: 50
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("pk", "pk", false)]
+
+      public Ed25519.PublicKey PublicKey
+    return:
+      type: AlgoSdk.Crypto.Ed25519.PublicKey
+    content.vb: >-
+      <AlgoApiField("pk", "pk", False)>
+
+      Public PublicKey As Ed25519.PublicKey
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: pk
+    - type: System.String
+      value: pk
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Multisig.Subsig.Sig
+  commentId: F:AlgoSdk.Multisig.Subsig.Sig
+  id: Sig
+  parent: AlgoSdk.Multisig.Subsig
+  langs:
+  - csharp
+  - vb
+  name: Sig
+  nameWithType: Multisig.Subsig.Sig
+  fullName: AlgoSdk.Multisig.Subsig.Sig
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/Signature/Multisig.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Sig
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/Signature/Multisig.cs
+    startLine: 53
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("s", "s", false)]
+
+      public Sig Sig
+    return:
+      type: AlgoSdk.Sig
+    content.vb: >-
+      <AlgoApiField("s", "s", False)>
+
+      Public Sig As Sig
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: s
+    - type: System.String
+      value: s
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Multisig.Subsig.Equals(AlgoSdk.Multisig.Subsig)
+  commentId: M:AlgoSdk.Multisig.Subsig.Equals(AlgoSdk.Multisig.Subsig)
+  id: Equals(AlgoSdk.Multisig.Subsig)
+  parent: AlgoSdk.Multisig.Subsig
+  langs:
+  - csharp
+  - vb
+  name: Equals(Multisig.Subsig)
+  nameWithType: Multisig.Subsig.Equals(Multisig.Subsig)
+  fullName: AlgoSdk.Multisig.Subsig.Equals(AlgoSdk.Multisig.Subsig)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/Signature/Multisig.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Equals
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/Signature/Multisig.cs
+    startLine: 55
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public bool Equals(Multisig.Subsig other)
+    parameters:
+    - id: other
+      type: AlgoSdk.Multisig.Subsig
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As Multisig.Subsig) As Boolean
+  overload: AlgoSdk.Multisig.Subsig.Equals*
+  implements:
+  - System.IEquatable{AlgoSdk.Multisig.Subsig}.Equals(AlgoSdk.Multisig.Subsig)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Multisig.Subsig.op_Implicit(AlgoSdk.Address)~AlgoSdk.Multisig.Subsig
+  commentId: M:AlgoSdk.Multisig.Subsig.op_Implicit(AlgoSdk.Address)~AlgoSdk.Multisig.Subsig
+  id: op_Implicit(AlgoSdk.Address)~AlgoSdk.Multisig.Subsig
+  parent: AlgoSdk.Multisig.Subsig
+  langs:
+  - csharp
+  - vb
+  name: Implicit(Address to Multisig.Subsig)
+  nameWithType: Multisig.Subsig.Implicit(Address to Multisig.Subsig)
+  fullName: AlgoSdk.Multisig.Subsig.Implicit(AlgoSdk.Address to AlgoSdk.Multisig.Subsig)
+  type: Operator
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/Signature/Multisig.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: op_Implicit
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/Signature/Multisig.cs
+    startLine: 60
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public static implicit operator Multisig.Subsig(Address address)
+    parameters:
+    - id: address
+      type: AlgoSdk.Address
+    return:
+      type: AlgoSdk.Multisig.Subsig
+    content.vb: Public Shared Widening Operator CType(address As Address) As Multisig.Subsig
+  overload: AlgoSdk.Multisig.Subsig.op_Implicit*
+  nameWithType.vb: Multisig.Subsig.Widening(Address to Multisig.Subsig)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AlgoSdk.Multisig.Subsig.Widening(AlgoSdk.Address to AlgoSdk.Multisig.Subsig)
+  name.vb: Widening(Address to Multisig.Subsig)
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: System.IEquatable{AlgoSdk.Multisig.Subsig}
+  commentId: T:System.IEquatable{AlgoSdk.Multisig.Subsig}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<Multisig.Subsig>
+  nameWithType: IEquatable<Multisig.Subsig>
+  fullName: System.IEquatable<AlgoSdk.Multisig.Subsig>
+  nameWithType.vb: IEquatable(Of Multisig.Subsig)
+  fullName.vb: System.IEquatable(Of AlgoSdk.Multisig.Subsig)
+  name.vb: IEquatable(Of Multisig.Subsig)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AlgoSdk.Multisig.Subsig
+    name: Multisig.Subsig
+    nameWithType: Multisig.Subsig
+    fullName: AlgoSdk.Multisig.Subsig
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AlgoSdk.Multisig.Subsig
+    name: Multisig.Subsig
+    nameWithType: Multisig.Subsig
+    fullName: AlgoSdk.Multisig.Subsig
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AlgoSdk.Crypto.Ed25519.PublicKey
+  commentId: T:AlgoSdk.Crypto.Ed25519.PublicKey
+  parent: AlgoSdk.Crypto
+  name: Ed25519.PublicKey
+  nameWithType: Ed25519.PublicKey
+  fullName: AlgoSdk.Crypto.Ed25519.PublicKey
+- uid: AlgoSdk.Crypto
+  commentId: N:AlgoSdk.Crypto
+  name: AlgoSdk.Crypto
+  nameWithType: AlgoSdk.Crypto
+  fullName: AlgoSdk.Crypto
+- uid: AlgoSdk.Sig
+  commentId: T:AlgoSdk.Sig
+  parent: AlgoSdk
+  name: Sig
+  nameWithType: Sig
+  fullName: AlgoSdk.Sig
+- uid: AlgoSdk.Multisig.Subsig.Equals*
+  commentId: Overload:AlgoSdk.Multisig.Subsig.Equals
+  name: Equals
+  nameWithType: Multisig.Subsig.Equals
+  fullName: AlgoSdk.Multisig.Subsig.Equals
+- uid: System.IEquatable{AlgoSdk.Multisig.Subsig}.Equals(AlgoSdk.Multisig.Subsig)
+  commentId: M:System.IEquatable{AlgoSdk.Multisig.Subsig}.Equals(AlgoSdk.Multisig.Subsig)
+  parent: System.IEquatable{AlgoSdk.Multisig.Subsig}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(Multisig.Subsig)
+  nameWithType: IEquatable<Multisig.Subsig>.Equals(Multisig.Subsig)
+  fullName: System.IEquatable<AlgoSdk.Multisig.Subsig>.Equals(AlgoSdk.Multisig.Subsig)
+  nameWithType.vb: IEquatable(Of Multisig.Subsig).Equals(Multisig.Subsig)
+  fullName.vb: System.IEquatable(Of AlgoSdk.Multisig.Subsig).Equals(AlgoSdk.Multisig.Subsig)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<Multisig.Subsig>.Equals
+    fullName: System.IEquatable<AlgoSdk.Multisig.Subsig>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Multisig.Subsig
+    name: Multisig.Subsig
+    nameWithType: Multisig.Subsig
+    fullName: AlgoSdk.Multisig.Subsig
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of Multisig.Subsig).Equals
+    fullName: System.IEquatable(Of AlgoSdk.Multisig.Subsig).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Multisig.Subsig
+    name: Multisig.Subsig
+    nameWithType: Multisig.Subsig
+    fullName: AlgoSdk.Multisig.Subsig
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Multisig.Subsig
+  commentId: T:AlgoSdk.Multisig.Subsig
+  parent: AlgoSdk
+  name: Multisig.Subsig
+  nameWithType: Multisig.Subsig
+  fullName: AlgoSdk.Multisig.Subsig
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Multisig.Subsig.op_Implicit*
+  commentId: Overload:AlgoSdk.Multisig.Subsig.op_Implicit
+  name: Implicit
+  nameWithType: Multisig.Subsig.Implicit
+  fullName: AlgoSdk.Multisig.Subsig.Implicit
+  nameWithType.vb: Multisig.Subsig.Widening
+  fullName.vb: AlgoSdk.Multisig.Subsig.Widening
+  name.vb: Widening
+- uid: AlgoSdk.Address
+  commentId: T:AlgoSdk.Address
+  parent: AlgoSdk
+  name: Address
+  nameWithType: Address
+  fullName: AlgoSdk.Address

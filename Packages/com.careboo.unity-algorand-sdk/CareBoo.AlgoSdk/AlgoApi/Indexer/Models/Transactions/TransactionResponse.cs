@@ -5,12 +5,13 @@ namespace AlgoSdk
     [AlgoApiObject]
     public struct TransactionResponse
         : IEquatable<TransactionResponse>
+        , IIndexerResponse
     {
         [AlgoApiField("transaction", null)]
-        public Transaction Transaction;
+        public Transaction Transaction { get; set; }
 
         [AlgoApiField("current-round", null)]
-        public ulong CurrentRound;
+        public ulong CurrentRound { get; set; }
 
         public bool Equals(TransactionResponse other)
         {

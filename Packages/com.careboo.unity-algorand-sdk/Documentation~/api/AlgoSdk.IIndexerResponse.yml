@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.IIndexerResponse
+  commentId: T:AlgoSdk.IIndexerResponse
+  id: IIndexerResponse
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.IIndexerResponse.CurrentRound
+  langs:
+  - csharp
+  - vb
+  name: IIndexerResponse
+  nameWithType: IIndexerResponse
+  fullName: AlgoSdk.IIndexerResponse
+  type: Interface
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Indexer/Models/IIndexerResponse.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: IIndexerResponse
+    path: ../CareBoo.AlgoSdk/AlgoApi/Indexer/Models/IIndexerResponse.cs
+    startLine: 4
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public interface IIndexerResponse
+    content.vb: Public Interface IIndexerResponse
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: AlgoSdk.IIndexerResponse.CurrentRound
+  commentId: P:AlgoSdk.IIndexerResponse.CurrentRound
+  id: CurrentRound
+  parent: AlgoSdk.IIndexerResponse
+  langs:
+  - csharp
+  - vb
+  name: CurrentRound
+  nameWithType: IIndexerResponse.CurrentRound
+  fullName: AlgoSdk.IIndexerResponse.CurrentRound
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Indexer/Models/IIndexerResponse.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: CurrentRound
+    path: ../CareBoo.AlgoSdk/AlgoApi/Indexer/Models/IIndexerResponse.cs
+    startLine: 9
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  summary: "\nRound at which the results were computed.\n"
+  example: []
+  syntax:
+    content: ulong CurrentRound { get; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: ReadOnly Property CurrentRound As ULong
+  overload: AlgoSdk.IIndexerResponse.CurrentRound*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: AlgoSdk.IIndexerResponse.CurrentRound*
+  commentId: Overload:AlgoSdk.IIndexerResponse.CurrentRound
+  name: CurrentRound
+  nameWithType: IIndexerResponse.CurrentRound
+  fullName: AlgoSdk.IIndexerResponse.CurrentRound
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

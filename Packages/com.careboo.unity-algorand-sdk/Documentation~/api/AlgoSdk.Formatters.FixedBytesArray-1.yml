@@ -1,0 +1,1016 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.Formatters.FixedBytesArray`1
+  commentId: T:AlgoSdk.Formatters.FixedBytesArray`1
+  id: FixedBytesArray`1
+  parent: AlgoSdk.Formatters
+  children:
+  - AlgoSdk.Formatters.FixedBytesArray`1.#ctor(`0)
+  - AlgoSdk.Formatters.FixedBytesArray`1.Item(System.Int32)
+  - AlgoSdk.Formatters.FixedBytesArray`1.Length
+  - AlgoSdk.Formatters.FixedBytesArray`1.op_Implicit(`0)~AlgoSdk.Formatters.FixedBytesArray{`0}
+  - AlgoSdk.Formatters.FixedBytesArray`1.op_Implicit(AlgoSdk.Formatters.FixedBytesArray{`0})~`0
+  langs:
+  - csharp
+  - vb
+  name: FixedBytesArray<T>
+  nameWithType: FixedBytesArray<T>
+  fullName: AlgoSdk.Formatters.FixedBytesArray<T>
+  type: Struct
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/FixedBytesFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: FixedBytesArray
+    path: ../CareBoo.AlgoSdk/Serialization/Formatters/FixedBytesFormatter.cs
+    startLine: 72
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Formatters
+  syntax:
+    content: 'public struct FixedBytesArray<T> : IArray<byte> where T : struct, INativeList<byte>'
+    typeParameters:
+    - id: T
+    content.vb: >-
+      Public Structure FixedBytesArray(Of T As {Structure, INativeList(Of Byte)})
+          Implements IArray(Of Byte)
+  implements:
+  - AlgoSdk.LowLevel.IArray{System.Byte}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - AlgoSdk.Formatters.FixedBytesArray`1.AlgoSdk.Base64Encoding.CopyToBase64``2({T}@)
+  - AlgoSdk.Formatters.FixedBytesArray`1.AlgoSdk.Base64Encoding.CopyFromBase64``2({T}@,System.Int32)
+  nameWithType.vb: FixedBytesArray(Of T)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+  fullName.vb: AlgoSdk.Formatters.FixedBytesArray(Of T)
+  name.vb: FixedBytesArray(Of T)
+- uid: AlgoSdk.Formatters.FixedBytesArray`1.#ctor(`0)
+  commentId: M:AlgoSdk.Formatters.FixedBytesArray`1.#ctor(`0)
+  id: '#ctor(`0)'
+  parent: AlgoSdk.Formatters.FixedBytesArray`1
+  langs:
+  - csharp
+  - vb
+  name: FixedBytesArray(T)
+  nameWithType: FixedBytesArray<T>.FixedBytesArray(T)
+  fullName: AlgoSdk.Formatters.FixedBytesArray<T>.FixedBytesArray(T)
+  type: Constructor
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/FixedBytesFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: .ctor
+    path: ../CareBoo.AlgoSdk/Serialization/Formatters/FixedBytesFormatter.cs
+    startLine: 78
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Formatters
+  syntax:
+    content: public FixedBytesArray(T bytes)
+    parameters:
+    - id: bytes
+      type: '{T}'
+    content.vb: Public Sub New(bytes As T)
+  overload: AlgoSdk.Formatters.FixedBytesArray`1.#ctor*
+  nameWithType.vb: FixedBytesArray(Of T).FixedBytesArray(T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.Formatters.FixedBytesArray(Of T).FixedBytesArray(T)
+- uid: AlgoSdk.Formatters.FixedBytesArray`1.Item(System.Int32)
+  commentId: P:AlgoSdk.Formatters.FixedBytesArray`1.Item(System.Int32)
+  id: Item(System.Int32)
+  parent: AlgoSdk.Formatters.FixedBytesArray`1
+  langs:
+  - csharp
+  - vb
+  name: Item[Int32]
+  nameWithType: FixedBytesArray<T>.Item[Int32]
+  fullName: AlgoSdk.Formatters.FixedBytesArray<T>.Item[System.Int32]
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/FixedBytesFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: this[]
+    path: ../CareBoo.AlgoSdk/Serialization/Formatters/FixedBytesFormatter.cs
+    startLine: 83
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Formatters
+  syntax:
+    content: public byte this[int index] { get; set; }
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: System.Byte
+    content.vb: Public Property Item(index As Integer) As Byte
+  overload: AlgoSdk.Formatters.FixedBytesArray`1.Item*
+  implements:
+  - AlgoSdk.LowLevel.IArray{System.Byte}.Item(System.Int32)
+  nameWithType.vb: FixedBytesArray(Of T).Item(Int32)
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.Formatters.FixedBytesArray(Of T).Item(System.Int32)
+  name.vb: Item(Int32)
+- uid: AlgoSdk.Formatters.FixedBytesArray`1.Length
+  commentId: P:AlgoSdk.Formatters.FixedBytesArray`1.Length
+  id: Length
+  parent: AlgoSdk.Formatters.FixedBytesArray`1
+  langs:
+  - csharp
+  - vb
+  name: Length
+  nameWithType: FixedBytesArray<T>.Length
+  fullName: AlgoSdk.Formatters.FixedBytesArray<T>.Length
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/FixedBytesFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Length
+    path: ../CareBoo.AlgoSdk/Serialization/Formatters/FixedBytesFormatter.cs
+    startLine: 89
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Formatters
+  syntax:
+    content: public int Length { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Length As Integer
+  overload: AlgoSdk.Formatters.FixedBytesArray`1.Length*
+  implements:
+  - AlgoSdk.LowLevel.IArray{System.Byte}.Length
+  nameWithType.vb: FixedBytesArray(Of T).Length
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.Formatters.FixedBytesArray(Of T).Length
+- uid: AlgoSdk.Formatters.FixedBytesArray`1.op_Implicit(`0)~AlgoSdk.Formatters.FixedBytesArray{`0}
+  commentId: M:AlgoSdk.Formatters.FixedBytesArray`1.op_Implicit(`0)~AlgoSdk.Formatters.FixedBytesArray{`0}
+  id: op_Implicit(`0)~AlgoSdk.Formatters.FixedBytesArray{`0}
+  parent: AlgoSdk.Formatters.FixedBytesArray`1
+  langs:
+  - csharp
+  - vb
+  name: Implicit(T to FixedBytesArray<T>)
+  nameWithType: FixedBytesArray<T>.Implicit(T to FixedBytesArray<T>)
+  fullName: AlgoSdk.Formatters.FixedBytesArray<T>.Implicit(T to AlgoSdk.Formatters.FixedBytesArray<T>)
+  type: Operator
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/FixedBytesFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: op_Implicit
+    path: ../CareBoo.AlgoSdk/Serialization/Formatters/FixedBytesFormatter.cs
+    startLine: 95
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Formatters
+  syntax:
+    content: public static implicit operator FixedBytesArray<T>(T bytes)
+    parameters:
+    - id: bytes
+      type: '{T}'
+    return:
+      type: AlgoSdk.Formatters.FixedBytesArray`1
+    content.vb: Public Shared Widening Operator CType(bytes As T) As FixedBytesArray(Of T)
+  overload: AlgoSdk.Formatters.FixedBytesArray`1.op_Implicit*
+  nameWithType.vb: FixedBytesArray(Of T).Widening(T to FixedBytesArray(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AlgoSdk.Formatters.FixedBytesArray(Of T).Widening(T to AlgoSdk.Formatters.FixedBytesArray(Of T))
+  name.vb: Widening(T to FixedBytesArray(Of T))
+- uid: AlgoSdk.Formatters.FixedBytesArray`1.op_Implicit(AlgoSdk.Formatters.FixedBytesArray{`0})~`0
+  commentId: M:AlgoSdk.Formatters.FixedBytesArray`1.op_Implicit(AlgoSdk.Formatters.FixedBytesArray{`0})~`0
+  id: op_Implicit(AlgoSdk.Formatters.FixedBytesArray{`0})~`0
+  parent: AlgoSdk.Formatters.FixedBytesArray`1
+  langs:
+  - csharp
+  - vb
+  name: Implicit(FixedBytesArray<T> to T)
+  nameWithType: FixedBytesArray<T>.Implicit(FixedBytesArray<T> to T)
+  fullName: AlgoSdk.Formatters.FixedBytesArray<T>.Implicit(AlgoSdk.Formatters.FixedBytesArray<T> to T)
+  type: Operator
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/FixedBytesFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: op_Implicit
+    path: ../CareBoo.AlgoSdk/Serialization/Formatters/FixedBytesFormatter.cs
+    startLine: 100
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Formatters
+  syntax:
+    content: public static implicit operator T(FixedBytesArray<T> fixedBytesArray)
+    parameters:
+    - id: fixedBytesArray
+      type: AlgoSdk.Formatters.FixedBytesArray`1
+    return:
+      type: '{T}'
+    content.vb: Public Shared Widening Operator CType(fixedBytesArray As FixedBytesArray(Of T)) As T
+  overload: AlgoSdk.Formatters.FixedBytesArray`1.op_Implicit*
+  nameWithType.vb: FixedBytesArray(Of T).Widening(FixedBytesArray(Of T) to T)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AlgoSdk.Formatters.FixedBytesArray(Of T).Widening(AlgoSdk.Formatters.FixedBytesArray(Of T) to T)
+  name.vb: Widening(FixedBytesArray(Of T) to T)
+references:
+- uid: AlgoSdk.Formatters
+  commentId: N:AlgoSdk.Formatters
+  name: AlgoSdk.Formatters
+  nameWithType: AlgoSdk.Formatters
+  fullName: AlgoSdk.Formatters
+- uid: AlgoSdk.LowLevel.IArray{System.Byte}
+  commentId: T:AlgoSdk.LowLevel.IArray{System.Byte}
+  parent: AlgoSdk.LowLevel
+  definition: AlgoSdk.LowLevel.IArray`1
+  name: IArray<Byte>
+  nameWithType: IArray<Byte>
+  fullName: AlgoSdk.LowLevel.IArray<System.Byte>
+  nameWithType.vb: IArray(Of Byte)
+  fullName.vb: AlgoSdk.LowLevel.IArray(Of System.Byte)
+  name.vb: IArray(Of Byte)
+  spec.csharp:
+  - uid: AlgoSdk.LowLevel.IArray`1
+    name: IArray
+    nameWithType: IArray
+    fullName: AlgoSdk.LowLevel.IArray
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.LowLevel.IArray`1
+    name: IArray
+    nameWithType: IArray
+    fullName: AlgoSdk.LowLevel.IArray
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Formatters.FixedBytesArray`1.AlgoSdk.Base64Encoding.CopyToBase64``2({T}@)
+  commentId: M:AlgoSdk.Base64Encoding.CopyToBase64``2(``0,``1@)
+  parent: AlgoSdk.Base64Encoding
+  definition: AlgoSdk.Base64Encoding.CopyToBase64``2(``0,``1@)
+  name: CopyToBase64<FixedBytesArray<T>, T>(T)
+  nameWithType: Base64Encoding.CopyToBase64<FixedBytesArray<T>, T>(T)
+  fullName: AlgoSdk.Base64Encoding.CopyToBase64<AlgoSdk.Formatters.FixedBytesArray<T>, T>(T)
+  nameWithType.vb: Base64Encoding.CopyToBase64(Of FixedBytesArray(Of T), T)(T)
+  fullName.vb: AlgoSdk.Base64Encoding.CopyToBase64(Of AlgoSdk.Formatters.FixedBytesArray(Of T), T)(T)
+  name.vb: CopyToBase64(Of FixedBytesArray(Of T), T)(T)
+  spec.csharp:
+  - uid: AlgoSdk.Base64Encoding.CopyToBase64``2(``1@)
+    name: CopyToBase64<FixedBytesArray<T>, T>
+    nameWithType: Base64Encoding.CopyToBase64<FixedBytesArray<T>, T>
+    fullName: AlgoSdk.Base64Encoding.CopyToBase64<AlgoSdk.Formatters.FixedBytesArray<T>, T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.Base64Encoding.CopyToBase64``2(``1@)
+    name: CopyToBase64(Of FixedBytesArray(Of T), T)
+    nameWithType: Base64Encoding.CopyToBase64(Of FixedBytesArray(Of T), T)
+    fullName: AlgoSdk.Base64Encoding.CopyToBase64(Of AlgoSdk.Formatters.FixedBytesArray(Of T), T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Formatters.FixedBytesArray`1.AlgoSdk.Base64Encoding.CopyFromBase64``2({T}@,System.Int32)
+  commentId: M:AlgoSdk.Base64Encoding.CopyFromBase64``2(``0@,``1@,System.Int32)
+  parent: AlgoSdk.Base64Encoding
+  definition: AlgoSdk.Base64Encoding.CopyFromBase64``2(``0@,``1@,System.Int32)
+  name: CopyFromBase64<FixedBytesArray<T>, T>(T, Int32)
+  nameWithType: Base64Encoding.CopyFromBase64<FixedBytesArray<T>, T>(T, Int32)
+  fullName: AlgoSdk.Base64Encoding.CopyFromBase64<AlgoSdk.Formatters.FixedBytesArray<T>, T>(T, System.Int32)
+  nameWithType.vb: Base64Encoding.CopyFromBase64(Of FixedBytesArray(Of T), T)(T, Int32)
+  fullName.vb: AlgoSdk.Base64Encoding.CopyFromBase64(Of AlgoSdk.Formatters.FixedBytesArray(Of T), T)(T, System.Int32)
+  name.vb: CopyFromBase64(Of FixedBytesArray(Of T), T)(T, Int32)
+  spec.csharp:
+  - uid: AlgoSdk.Base64Encoding.CopyFromBase64``2(``1@,System.Int32)
+    name: CopyFromBase64<FixedBytesArray<T>, T>
+    nameWithType: Base64Encoding.CopyFromBase64<FixedBytesArray<T>, T>
+    fullName: AlgoSdk.Base64Encoding.CopyFromBase64<AlgoSdk.Formatters.FixedBytesArray<T>, T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.Base64Encoding.CopyFromBase64``2(``1@,System.Int32)
+    name: CopyFromBase64(Of FixedBytesArray(Of T), T)
+    nameWithType: Base64Encoding.CopyFromBase64(Of FixedBytesArray(Of T), T)
+    fullName: AlgoSdk.Base64Encoding.CopyFromBase64(Of AlgoSdk.Formatters.FixedBytesArray(Of T), T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.LowLevel.IArray`1
+  commentId: T:AlgoSdk.LowLevel.IArray`1
+  name: IArray<T>
+  nameWithType: IArray<T>
+  fullName: AlgoSdk.LowLevel.IArray<T>
+  nameWithType.vb: IArray(Of T)
+  fullName.vb: AlgoSdk.LowLevel.IArray(Of T)
+  name.vb: IArray(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.LowLevel.IArray`1
+    name: IArray
+    nameWithType: IArray
+    fullName: AlgoSdk.LowLevel.IArray
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.LowLevel.IArray`1
+    name: IArray
+    nameWithType: IArray
+    fullName: AlgoSdk.LowLevel.IArray
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.LowLevel
+  commentId: N:AlgoSdk.LowLevel
+  name: AlgoSdk.LowLevel
+  nameWithType: AlgoSdk.LowLevel
+  fullName: AlgoSdk.LowLevel
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AlgoSdk.Base64Encoding.CopyToBase64``2(``0,``1@)
+  commentId: M:AlgoSdk.Base64Encoding.CopyToBase64``2(``0,``1@)
+  name: CopyToBase64<TBytes, T>(TBytes, T)
+  nameWithType: Base64Encoding.CopyToBase64<TBytes, T>(TBytes, T)
+  fullName: AlgoSdk.Base64Encoding.CopyToBase64<TBytes, T>(TBytes, T)
+  nameWithType.vb: Base64Encoding.CopyToBase64(Of TBytes, T)(TBytes, T)
+  fullName.vb: AlgoSdk.Base64Encoding.CopyToBase64(Of TBytes, T)(TBytes, T)
+  name.vb: CopyToBase64(Of TBytes, T)(TBytes, T)
+  spec.csharp:
+  - uid: AlgoSdk.Base64Encoding.CopyToBase64``2(``0,``1@)
+    name: CopyToBase64<TBytes, T>
+    nameWithType: Base64Encoding.CopyToBase64<TBytes, T>
+    fullName: AlgoSdk.Base64Encoding.CopyToBase64<TBytes, T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TBytes
+    nameWithType: TBytes
+    fullName: TBytes
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.Base64Encoding.CopyToBase64``2(``0,``1@)
+    name: CopyToBase64(Of TBytes, T)
+    nameWithType: Base64Encoding.CopyToBase64(Of TBytes, T)
+    fullName: AlgoSdk.Base64Encoding.CopyToBase64(Of TBytes, T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TBytes
+    nameWithType: TBytes
+    fullName: TBytes
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Base64Encoding
+  commentId: T:AlgoSdk.Base64Encoding
+  parent: AlgoSdk
+  name: Base64Encoding
+  nameWithType: Base64Encoding
+  fullName: AlgoSdk.Base64Encoding
+- uid: AlgoSdk.Base64Encoding.CopyFromBase64``2(``0@,``1@,System.Int32)
+  commentId: M:AlgoSdk.Base64Encoding.CopyFromBase64``2(``0@,``1@,System.Int32)
+  isExternal: true
+  name: CopyFromBase64<TByteArray, T>(TByteArray, T, Int32)
+  nameWithType: Base64Encoding.CopyFromBase64<TByteArray, T>(TByteArray, T, Int32)
+  fullName: AlgoSdk.Base64Encoding.CopyFromBase64<TByteArray, T>(TByteArray, T, System.Int32)
+  nameWithType.vb: Base64Encoding.CopyFromBase64(Of TByteArray, T)(TByteArray, T, Int32)
+  fullName.vb: AlgoSdk.Base64Encoding.CopyFromBase64(Of TByteArray, T)(TByteArray, T, System.Int32)
+  name.vb: CopyFromBase64(Of TByteArray, T)(TByteArray, T, Int32)
+  spec.csharp:
+  - uid: AlgoSdk.Base64Encoding.CopyFromBase64``2(``0@,``1@,System.Int32)
+    name: CopyFromBase64<TByteArray, T>
+    nameWithType: Base64Encoding.CopyFromBase64<TByteArray, T>
+    fullName: AlgoSdk.Base64Encoding.CopyFromBase64<TByteArray, T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TByteArray
+    nameWithType: TByteArray
+    fullName: TByteArray
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.Base64Encoding.CopyFromBase64``2(``0@,``1@,System.Int32)
+    name: CopyFromBase64(Of TByteArray, T)
+    nameWithType: Base64Encoding.CopyFromBase64(Of TByteArray, T)
+    fullName: AlgoSdk.Base64Encoding.CopyFromBase64(Of TByteArray, T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TByteArray
+    nameWithType: TByteArray
+    fullName: TByteArray
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: AlgoSdk.Formatters.FixedBytesArray`1.#ctor*
+  commentId: Overload:AlgoSdk.Formatters.FixedBytesArray`1.#ctor
+  name: FixedBytesArray
+  nameWithType: FixedBytesArray<T>.FixedBytesArray
+  fullName: AlgoSdk.Formatters.FixedBytesArray<T>.FixedBytesArray
+  nameWithType.vb: FixedBytesArray(Of T).FixedBytesArray
+  fullName.vb: AlgoSdk.Formatters.FixedBytesArray(Of T).FixedBytesArray
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: AlgoSdk.Formatters.FixedBytesArray`1.Item*
+  commentId: Overload:AlgoSdk.Formatters.FixedBytesArray`1.Item
+  name: Item
+  nameWithType: FixedBytesArray<T>.Item
+  fullName: AlgoSdk.Formatters.FixedBytesArray<T>.Item
+  nameWithType.vb: FixedBytesArray(Of T).Item
+  fullName.vb: AlgoSdk.Formatters.FixedBytesArray(Of T).Item
+- uid: AlgoSdk.LowLevel.IArray{System.Byte}.Item(System.Int32)
+  commentId: P:AlgoSdk.LowLevel.IArray{System.Byte}.Item(System.Int32)
+  parent: AlgoSdk.LowLevel.IArray{System.Byte}
+  definition: AlgoSdk.LowLevel.IArray`1.Item(System.Int32)
+  name: Item[Int32]
+  nameWithType: IArray<Byte>.Item[Int32]
+  fullName: AlgoSdk.LowLevel.IArray<System.Byte>.Item[System.Int32]
+  nameWithType.vb: IArray(Of Byte).Item(Int32)
+  fullName.vb: AlgoSdk.LowLevel.IArray(Of System.Byte).Item(System.Int32)
+  name.vb: Item(Int32)
+  spec.csharp:
+  - uid: AlgoSdk.LowLevel.IArray`1.Item(System.Int32)
+    name: Item
+    nameWithType: IArray<Byte>.Item
+    fullName: AlgoSdk.LowLevel.IArray<System.Byte>.Item
+  - name: '['
+    nameWithType: '['
+    fullName: '['
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ']'
+    nameWithType: ']'
+    fullName: ']'
+  spec.vb:
+  - uid: AlgoSdk.LowLevel.IArray`1.Item(System.Int32)
+    name: Item
+    nameWithType: IArray(Of Byte).Item
+    fullName: AlgoSdk.LowLevel.IArray(Of System.Byte).Item
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  name: Byte
+  nameWithType: Byte
+  fullName: System.Byte
+- uid: AlgoSdk.LowLevel.IArray`1.Item(System.Int32)
+  commentId: P:AlgoSdk.LowLevel.IArray`1.Item(System.Int32)
+  isExternal: true
+  name: Item[Int32]
+  nameWithType: IArray<T>.Item[Int32]
+  fullName: AlgoSdk.LowLevel.IArray<T>.Item[System.Int32]
+  nameWithType.vb: IArray(Of T).Item(Int32)
+  fullName.vb: AlgoSdk.LowLevel.IArray(Of T).Item(System.Int32)
+  name.vb: Item(Int32)
+  spec.csharp:
+  - uid: AlgoSdk.LowLevel.IArray`1.Item(System.Int32)
+    name: Item
+    nameWithType: IArray<T>.Item
+    fullName: AlgoSdk.LowLevel.IArray<T>.Item
+  - name: '['
+    nameWithType: '['
+    fullName: '['
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ']'
+    nameWithType: ']'
+    fullName: ']'
+  spec.vb:
+  - uid: AlgoSdk.LowLevel.IArray`1.Item(System.Int32)
+    name: Item
+    nameWithType: IArray(Of T).Item
+    fullName: AlgoSdk.LowLevel.IArray(Of T).Item
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Formatters.FixedBytesArray`1.Length*
+  commentId: Overload:AlgoSdk.Formatters.FixedBytesArray`1.Length
+  name: Length
+  nameWithType: FixedBytesArray<T>.Length
+  fullName: AlgoSdk.Formatters.FixedBytesArray<T>.Length
+  nameWithType.vb: FixedBytesArray(Of T).Length
+  fullName.vb: AlgoSdk.Formatters.FixedBytesArray(Of T).Length
+- uid: AlgoSdk.LowLevel.IArray{System.Byte}.Length
+  commentId: P:AlgoSdk.LowLevel.IArray{System.Byte}.Length
+  parent: AlgoSdk.LowLevel.IArray{System.Byte}
+  definition: AlgoSdk.LowLevel.IArray`1.Length
+  name: Length
+  nameWithType: IArray<Byte>.Length
+  fullName: AlgoSdk.LowLevel.IArray<System.Byte>.Length
+  nameWithType.vb: IArray(Of Byte).Length
+  fullName.vb: AlgoSdk.LowLevel.IArray(Of System.Byte).Length
+- uid: AlgoSdk.LowLevel.IArray`1.Length
+  commentId: P:AlgoSdk.LowLevel.IArray`1.Length
+  name: Length
+  nameWithType: IArray<T>.Length
+  fullName: AlgoSdk.LowLevel.IArray<T>.Length
+  nameWithType.vb: IArray(Of T).Length
+  fullName.vb: AlgoSdk.LowLevel.IArray(Of T).Length
+- uid: AlgoSdk.Formatters.FixedBytesArray`1.op_Implicit*
+  commentId: Overload:AlgoSdk.Formatters.FixedBytesArray`1.op_Implicit
+  name: Implicit
+  nameWithType: FixedBytesArray<T>.Implicit
+  fullName: AlgoSdk.Formatters.FixedBytesArray<T>.Implicit
+  nameWithType.vb: FixedBytesArray(Of T).Widening
+  fullName.vb: AlgoSdk.Formatters.FixedBytesArray(Of T).Widening
+  name.vb: Widening
+- uid: AlgoSdk.Formatters.FixedBytesArray`1
+  commentId: T:AlgoSdk.Formatters.FixedBytesArray`1
+  parent: AlgoSdk.Formatters
+  name: FixedBytesArray<T>
+  nameWithType: FixedBytesArray<T>
+  fullName: AlgoSdk.Formatters.FixedBytesArray<T>
+  nameWithType.vb: FixedBytesArray(Of T)
+  fullName.vb: AlgoSdk.Formatters.FixedBytesArray(Of T)
+  name.vb: FixedBytesArray(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.Formatters.FixedBytesArray`1
+    name: FixedBytesArray
+    nameWithType: FixedBytesArray
+    fullName: AlgoSdk.Formatters.FixedBytesArray
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Formatters.FixedBytesArray`1
+    name: FixedBytesArray
+    nameWithType: FixedBytesArray
+    fullName: AlgoSdk.Formatters.FixedBytesArray
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

@@ -1,0 +1,869 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.Optional`1
+  commentId: T:AlgoSdk.Optional`1
+  id: Optional`1
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.Optional`1.#ctor(`0)
+  - AlgoSdk.Optional`1.Equals(AlgoSdk.Optional{`0})
+  - AlgoSdk.Optional`1.HasValue
+  - AlgoSdk.Optional`1.op_Implicit(`0)~AlgoSdk.Optional{`0}
+  - AlgoSdk.Optional`1.op_Implicit(AlgoSdk.Optional{`0})~`0
+  - AlgoSdk.Optional`1.Value
+  langs:
+  - csharp
+  - vb
+  name: Optional<T>
+  nameWithType: Optional<T>
+  fullName: AlgoSdk.Optional<T>
+  type: Struct
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Optional.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Optional
+    path: ../CareBoo.AlgoSdk/Optional.cs
+    startLine: 5
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiFormatter(typeof(OptionalFormatter<bool>), "C:\\Users\\jason\\Projects\\CareBoo\\Unity.AlgoSdk\\Packages\\com.careboo.unity-algorand-sdk\\CareBoo.AlgoSdk\\Optional.cs", 6)]
+
+      [AlgoApiFormatter(typeof(OptionalFormatter<ulong>), "C:\\Users\\jason\\Projects\\CareBoo\\Unity.AlgoSdk\\Packages\\com.careboo.unity-algorand-sdk\\CareBoo.AlgoSdk\\Optional.cs", 7)]
+
+      [AlgoApiFormatter(typeof(OptionalFormatter<uint>), "C:\\Users\\jason\\Projects\\CareBoo\\Unity.AlgoSdk\\Packages\\com.careboo.unity-algorand-sdk\\CareBoo.AlgoSdk\\Optional.cs", 8)]
+
+      public struct Optional<T> : IEquatable<Optional<T>> where T : struct, IEquatable<T>
+    typeParameters:
+    - id: T
+    content.vb: >-
+      <AlgoApiFormatter(GetType(OptionalFormatter(Of Boolean)), "C:\Users\jason\Projects\CareBoo\Unity.AlgoSdk\Packages\com.careboo.unity-algorand-sdk\CareBoo.AlgoSdk\Optional.cs", 6)>
+
+      <AlgoApiFormatter(GetType(OptionalFormatter(Of ULong)), "C:\Users\jason\Projects\CareBoo\Unity.AlgoSdk\Packages\com.careboo.unity-algorand-sdk\CareBoo.AlgoSdk\Optional.cs", 7)>
+
+      <AlgoApiFormatter(GetType(OptionalFormatter(Of UInteger)), "C:\Users\jason\Projects\CareBoo\Unity.AlgoSdk\Packages\com.careboo.unity-algorand-sdk\CareBoo.AlgoSdk\Optional.cs", 8)>
+
+      Public Structure Optional(Of T As {Structure, IEquatable(Of T)})
+          Implements IEquatable(Of  Optional(Of T) )
+  implements:
+  - System.IEquatable{AlgoSdk.Optional`1}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: AlgoSdk.AlgoApiFormatterAttribute
+    ctor: AlgoSdk.AlgoApiFormatterAttribute.#ctor(System.Type,System.String,System.Int32)
+    arguments:
+    - type: System.Type
+      value: AlgoSdk.Formatters.OptionalFormatter{System.Boolean}
+    - type: System.String
+      value: C:\Users\jason\Projects\CareBoo\Unity.AlgoSdk\Packages\com.careboo.unity-algorand-sdk\CareBoo.AlgoSdk\Optional.cs
+    - type: System.Int32
+      value: 6
+  - type: AlgoSdk.AlgoApiFormatterAttribute
+    ctor: AlgoSdk.AlgoApiFormatterAttribute.#ctor(System.Type,System.String,System.Int32)
+    arguments:
+    - type: System.Type
+      value: AlgoSdk.Formatters.OptionalFormatter{System.UInt64}
+    - type: System.String
+      value: C:\Users\jason\Projects\CareBoo\Unity.AlgoSdk\Packages\com.careboo.unity-algorand-sdk\CareBoo.AlgoSdk\Optional.cs
+    - type: System.Int32
+      value: 7
+  - type: AlgoSdk.AlgoApiFormatterAttribute
+    ctor: AlgoSdk.AlgoApiFormatterAttribute.#ctor(System.Type,System.String,System.Int32)
+    arguments:
+    - type: System.Type
+      value: AlgoSdk.Formatters.OptionalFormatter{System.UInt32}
+    - type: System.String
+      value: C:\Users\jason\Projects\CareBoo\Unity.AlgoSdk\Packages\com.careboo.unity-algorand-sdk\CareBoo.AlgoSdk\Optional.cs
+    - type: System.Int32
+      value: 8
+  nameWithType.vb: Optional(Of T)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+  fullName.vb: AlgoSdk.Optional(Of T)
+  name.vb: Optional(Of T)
+- uid: AlgoSdk.Optional`1.Value
+  commentId: F:AlgoSdk.Optional`1.Value
+  id: Value
+  parent: AlgoSdk.Optional`1
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: Optional<T>.Value
+  fullName: AlgoSdk.Optional<T>.Value
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Optional.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Value
+    path: ../CareBoo.AlgoSdk/Optional.cs
+    startLine: 12
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public readonly T Value
+    return:
+      type: '{T}'
+    content.vb: Public ReadOnly Value As T
+  nameWithType.vb: Optional(Of T).Value
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: AlgoSdk.Optional(Of T).Value
+- uid: AlgoSdk.Optional`1.HasValue
+  commentId: F:AlgoSdk.Optional`1.HasValue
+  id: HasValue
+  parent: AlgoSdk.Optional`1
+  langs:
+  - csharp
+  - vb
+  name: HasValue
+  nameWithType: Optional<T>.HasValue
+  fullName: AlgoSdk.Optional<T>.HasValue
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Optional.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: HasValue
+    path: ../CareBoo.AlgoSdk/Optional.cs
+    startLine: 13
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public readonly bool HasValue
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly HasValue As Boolean
+  nameWithType.vb: Optional(Of T).HasValue
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: AlgoSdk.Optional(Of T).HasValue
+- uid: AlgoSdk.Optional`1.#ctor(`0)
+  commentId: M:AlgoSdk.Optional`1.#ctor(`0)
+  id: '#ctor(`0)'
+  parent: AlgoSdk.Optional`1
+  langs:
+  - csharp
+  - vb
+  name: Optional(T)
+  nameWithType: Optional<T>.Optional(T)
+  fullName: AlgoSdk.Optional<T>.Optional(T)
+  type: Constructor
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Optional.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: .ctor
+    path: ../CareBoo.AlgoSdk/Optional.cs
+    startLine: 15
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public Optional(T value)
+    parameters:
+    - id: value
+      type: '{T}'
+    content.vb: Public Sub New(value As T)
+  overload: AlgoSdk.Optional`1.#ctor*
+  nameWithType.vb: Optional(Of T).Optional(T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.Optional(Of T).Optional(T)
+- uid: AlgoSdk.Optional`1.Equals(AlgoSdk.Optional{`0})
+  commentId: M:AlgoSdk.Optional`1.Equals(AlgoSdk.Optional{`0})
+  id: Equals(AlgoSdk.Optional{`0})
+  parent: AlgoSdk.Optional`1
+  langs:
+  - csharp
+  - vb
+  name: Equals(Optional<T>)
+  nameWithType: Optional<T>.Equals(Optional<T>)
+  fullName: AlgoSdk.Optional<T>.Equals(AlgoSdk.Optional<T>)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Optional.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Equals
+    path: ../CareBoo.AlgoSdk/Optional.cs
+    startLine: 21
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public bool Equals(Optional<T> other)
+    parameters:
+    - id: other
+      type: AlgoSdk.Optional`1
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As  Optional (Of T)) As Boolean
+  overload: AlgoSdk.Optional`1.Equals*
+  implements:
+  - System.IEquatable{AlgoSdk.Optional`1}.Equals(AlgoSdk.Optional{{T}})
+  nameWithType.vb: Optional(Of T).Equals(Optional(Of T))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.Optional(Of T).Equals(AlgoSdk.Optional(Of T))
+  name.vb: Equals(Optional(Of T))
+- uid: AlgoSdk.Optional`1.op_Implicit(`0)~AlgoSdk.Optional{`0}
+  commentId: M:AlgoSdk.Optional`1.op_Implicit(`0)~AlgoSdk.Optional{`0}
+  id: op_Implicit(`0)~AlgoSdk.Optional{`0}
+  parent: AlgoSdk.Optional`1
+  langs:
+  - csharp
+  - vb
+  name: Implicit(T to Optional<T>)
+  nameWithType: Optional<T>.Implicit(T to Optional<T>)
+  fullName: AlgoSdk.Optional<T>.Implicit(T to AlgoSdk.Optional<T>)
+  type: Operator
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Optional.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: op_Implicit
+    path: ../CareBoo.AlgoSdk/Optional.cs
+    startLine: 27
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public static implicit operator Optional<T>(T value)
+    parameters:
+    - id: value
+      type: '{T}'
+    return:
+      type: AlgoSdk.Optional`1
+    content.vb: 'Public Shared Widening Operator CType(value As T) As '
+  overload: AlgoSdk.Optional`1.op_Implicit*
+  nameWithType.vb: Optional(Of T).Widening(T to Optional(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AlgoSdk.Optional(Of T).Widening(T to AlgoSdk.Optional(Of T))
+  name.vb: Widening(T to Optional(Of T))
+- uid: AlgoSdk.Optional`1.op_Implicit(AlgoSdk.Optional{`0})~`0
+  commentId: M:AlgoSdk.Optional`1.op_Implicit(AlgoSdk.Optional{`0})~`0
+  id: op_Implicit(AlgoSdk.Optional{`0})~`0
+  parent: AlgoSdk.Optional`1
+  langs:
+  - csharp
+  - vb
+  name: Implicit(Optional<T> to T)
+  nameWithType: Optional<T>.Implicit(Optional<T> to T)
+  fullName: AlgoSdk.Optional<T>.Implicit(AlgoSdk.Optional<T> to T)
+  type: Operator
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Optional.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: op_Implicit
+    path: ../CareBoo.AlgoSdk/Optional.cs
+    startLine: 32
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public static implicit operator T(Optional<T> optional)
+    parameters:
+    - id: optional
+      type: AlgoSdk.Optional`1
+    return:
+      type: '{T}'
+    content.vb: Public Shared Widening Operator CType(optional As  Optional (Of T)) As T
+  overload: AlgoSdk.Optional`1.op_Implicit*
+  nameWithType.vb: Optional(Of T).Widening(Optional(Of T) to T)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AlgoSdk.Optional(Of T).Widening(AlgoSdk.Optional(Of T) to T)
+  name.vb: Widening(Optional(Of T) to T)
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: System.IEquatable{AlgoSdk.Optional`1}
+  commentId: T:System.IEquatable{AlgoSdk.Optional`1}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<Optional<T>>
+  nameWithType: IEquatable<Optional<T>>
+  fullName: System.IEquatable<AlgoSdk.Optional<T>>
+  nameWithType.vb: IEquatable(Of Optional(Of T))
+  fullName.vb: System.IEquatable(Of AlgoSdk.Optional(Of T))
+  name.vb: IEquatable(Of Optional(Of T))
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: AlgoSdk.Optional`1.#ctor*
+  commentId: Overload:AlgoSdk.Optional`1.#ctor
+  name: Optional
+  nameWithType: Optional<T>.Optional
+  fullName: AlgoSdk.Optional<T>.Optional
+  nameWithType.vb: Optional(Of T).Optional
+  fullName.vb: AlgoSdk.Optional(Of T).Optional
+- uid: AlgoSdk.Optional`1.Equals*
+  commentId: Overload:AlgoSdk.Optional`1.Equals
+  name: Equals
+  nameWithType: Optional<T>.Equals
+  fullName: AlgoSdk.Optional<T>.Equals
+  nameWithType.vb: Optional(Of T).Equals
+  fullName.vb: AlgoSdk.Optional(Of T).Equals
+- uid: System.IEquatable{AlgoSdk.Optional`1}.Equals(AlgoSdk.Optional{{T}})
+  commentId: M:System.IEquatable{AlgoSdk.Optional`1}.Equals(AlgoSdk.Optional{`0})
+  parent: System.IEquatable{AlgoSdk.Optional`1}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(Optional<T>)
+  nameWithType: IEquatable<Optional<T>>.Equals(Optional<T>)
+  fullName: System.IEquatable<AlgoSdk.Optional<T>>.Equals(AlgoSdk.Optional<T>)
+  nameWithType.vb: IEquatable(Of Optional(Of T)).Equals(Optional(Of T))
+  fullName.vb: System.IEquatable(Of AlgoSdk.Optional(Of T)).Equals(AlgoSdk.Optional(Of T))
+  name.vb: Equals(Optional(Of T))
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<Optional<T>>.Equals
+    fullName: System.IEquatable<AlgoSdk.Optional<T>>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of Optional(Of T)).Equals
+    fullName: System.IEquatable(Of AlgoSdk.Optional(Of T)).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Optional`1
+  commentId: T:AlgoSdk.Optional`1
+  parent: AlgoSdk
+  name: Optional<T>
+  nameWithType: Optional<T>
+  fullName: AlgoSdk.Optional<T>
+  nameWithType.vb: Optional(Of T)
+  fullName.vb: AlgoSdk.Optional(Of T)
+  name.vb: Optional(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Optional`1.op_Implicit*
+  commentId: Overload:AlgoSdk.Optional`1.op_Implicit
+  name: Implicit
+  nameWithType: Optional<T>.Implicit
+  fullName: AlgoSdk.Optional<T>.Implicit
+  nameWithType.vb: Optional(Of T).Widening
+  fullName.vb: AlgoSdk.Optional(Of T).Widening
+  name.vb: Widening

@@ -3,6 +3,9 @@ using AlgoSdk.Formatters;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// Represents the action on the value
+    /// </summary>
     [AlgoApiFormatter(typeof(ByteEnumFormatter<EvalDeltaAction>))]
     public enum EvalDeltaAction : byte
     {
@@ -12,6 +15,9 @@ namespace AlgoSdk
         Delete = 3
     }
 
+    /// <summary>
+    /// Represents a TEAL value delta.
+    /// </summary>
     [AlgoApiObject]
     public struct EvalDelta
         : IEquatable<EvalDelta>

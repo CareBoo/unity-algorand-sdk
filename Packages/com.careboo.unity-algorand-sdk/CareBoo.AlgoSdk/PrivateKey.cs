@@ -8,6 +8,9 @@ using AlgoSdk.Formatters;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// The private key for an Algorand account.
+    /// </summary>
     [Serializable]
     [AlgoApiFormatter(typeof(PrivateKeyFormatter))]
     [StructLayout(LayoutKind.Explicit, Size = 32)]

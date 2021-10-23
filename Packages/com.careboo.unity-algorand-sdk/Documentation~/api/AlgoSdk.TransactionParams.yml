@@ -1,0 +1,994 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.TransactionParams
+  commentId: T:AlgoSdk.TransactionParams
+  id: TransactionParams
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.TransactionParams.ConsensusVersion
+  - AlgoSdk.TransactionParams.Equals(AlgoSdk.TransactionParams)
+  - AlgoSdk.TransactionParams.Fee
+  - AlgoSdk.TransactionParams.FirstValidRound
+  - AlgoSdk.TransactionParams.FlatFee
+  - AlgoSdk.TransactionParams.GenesisHash
+  - AlgoSdk.TransactionParams.GenesisId
+  - AlgoSdk.TransactionParams.LastRound
+  - AlgoSdk.TransactionParams.LastValidRound
+  - AlgoSdk.TransactionParams.MinFee
+  langs:
+  - csharp
+  - vb
+  name: TransactionParams
+  nameWithType: TransactionParams
+  fullName: AlgoSdk.TransactionParams
+  type: Struct
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/TransactionParams.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: TransactionParams
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/TransactionParams.cs
+    startLine: 9
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  summary: "\nParams used for setting all transactions. Contains fee, genesis info, and round constraints.\nUsually this is retrieved from <xref href=\"AlgoSdk.AlgodClient.GetSuggestedParams\" data-throw-if-not-resolved=\"false\"></xref> then modified.\n"
+  example: []
+  syntax:
+    content: 'public struct TransactionParams : IEquatable<TransactionParams>'
+    content.vb: >-
+      Public Structure TransactionParams
+          Implements IEquatable(Of TransactionParams)
+  implements:
+  - System.IEquatable{AlgoSdk.TransactionParams}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: AlgoSdk.TransactionParams.ConsensusVersion
+  commentId: F:AlgoSdk.TransactionParams.ConsensusVersion
+  id: ConsensusVersion
+  parent: AlgoSdk.TransactionParams
+  langs:
+  - csharp
+  - vb
+  name: ConsensusVersion
+  nameWithType: TransactionParams.ConsensusVersion
+  fullName: AlgoSdk.TransactionParams.ConsensusVersion
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/TransactionParams.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ConsensusVersion
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/TransactionParams.cs
+    startLine: 17
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  summary: "\nIndicates the consensus protocol version as of <xref href=\"AlgoSdk.TransactionParams.LastRound\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: >-
+      [AlgoApiField("consensus-version", null, false)]
+
+      public string ConsensusVersion
+    return:
+      type: System.String
+    content.vb: >-
+      <AlgoApiField("consensus-version", Nothing, False)>
+
+      Public ConsensusVersion As String
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: consensus-version
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.TransactionParams.Fee
+  commentId: F:AlgoSdk.TransactionParams.Fee
+  id: Fee
+  parent: AlgoSdk.TransactionParams
+  langs:
+  - csharp
+  - vb
+  name: Fee
+  nameWithType: TransactionParams.Fee
+  fullName: AlgoSdk.TransactionParams.Fee
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/TransactionParams.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Fee
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/TransactionParams.cs
+    startLine: 25
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  summary: "\nFee is the suggested transaction fee in units of micro-Algos per byte.\nFee may fall to zero but transactions must still have a fee of at least\n<xref href=\"AlgoSdk.TransactionParams.MinFee\" data-throw-if-not-resolved=\"false\"></xref> for the current network protocol.\n"
+  example: []
+  syntax:
+    content: >-
+      [AlgoApiField("fee", null, false)]
+
+      public ulong Fee
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("fee", Nothing, False)>
+
+      Public Fee As ULong
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: fee
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.TransactionParams.GenesisHash
+  commentId: F:AlgoSdk.TransactionParams.GenesisHash
+  id: GenesisHash
+  parent: AlgoSdk.TransactionParams
+  langs:
+  - csharp
+  - vb
+  name: GenesisHash
+  nameWithType: TransactionParams.GenesisHash
+  fullName: AlgoSdk.TransactionParams.GenesisHash
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/TransactionParams.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: GenesisHash
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/TransactionParams.cs
+    startLine: 31
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  summary: "\nThe hash of the genesis block.\n"
+  example: []
+  syntax:
+    content: >-
+      [AlgoApiField("genesis-hash", null, false)]
+
+      public GenesisHash GenesisHash
+    return:
+      type: AlgoSdk.GenesisHash
+    content.vb: >-
+      <AlgoApiField("genesis-hash", Nothing, False)>
+
+      Public GenesisHash As GenesisHash
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: genesis-hash
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.TransactionParams.GenesisId
+  commentId: F:AlgoSdk.TransactionParams.GenesisId
+  id: GenesisId
+  parent: AlgoSdk.TransactionParams
+  langs:
+  - csharp
+  - vb
+  name: GenesisId
+  nameWithType: TransactionParams.GenesisId
+  fullName: AlgoSdk.TransactionParams.GenesisId
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/TransactionParams.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: GenesisId
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/TransactionParams.cs
+    startLine: 37
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  summary: "\nAn ID listed in the genesis block.\n"
+  example: []
+  syntax:
+    content: >-
+      [AlgoApiField("genesis-id", null, false)]
+
+      public FixedString32Bytes GenesisId
+    return:
+      type: Unity.Collections.FixedString32Bytes
+    content.vb: >-
+      <AlgoApiField("genesis-id", Nothing, False)>
+
+      Public GenesisId As FixedString32Bytes
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: genesis-id
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.TransactionParams.MinFee
+  commentId: F:AlgoSdk.TransactionParams.MinFee
+  id: MinFee
+  parent: AlgoSdk.TransactionParams
+  langs:
+  - csharp
+  - vb
+  name: MinFee
+  nameWithType: TransactionParams.MinFee
+  fullName: AlgoSdk.TransactionParams.MinFee
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/TransactionParams.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: MinFee
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/TransactionParams.cs
+    startLine: 43
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  summary: "\nThe minimum transaction fee (not per byte) required for the txn to validate for the current network protocol.\n"
+  example: []
+  syntax:
+    content: >-
+      [AlgoApiField("min-fee", null, false)]
+
+      public ulong MinFee
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("min-fee", Nothing, False)>
+
+      Public MinFee As ULong
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: min-fee
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.TransactionParams.LastRound
+  commentId: P:AlgoSdk.TransactionParams.LastRound
+  id: LastRound
+  parent: AlgoSdk.TransactionParams
+  langs:
+  - csharp
+  - vb
+  name: LastRound
+  nameWithType: TransactionParams.LastRound
+  fullName: AlgoSdk.TransactionParams.LastRound
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/TransactionParams.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: LastRound
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/TransactionParams.cs
+    startLine: 48
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  summary: "\nIndicates the last round seen by the node\n"
+  example: []
+  syntax:
+    content: >-
+      [AlgoApiField("last-round", null, false)]
+
+      public ulong LastRound { get; set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("last-round", Nothing, False)>
+
+      Public Property LastRound As ULong
+  overload: AlgoSdk.TransactionParams.LastRound*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: last-round
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.TransactionParams.FlatFee
+  commentId: P:AlgoSdk.TransactionParams.FlatFee
+  id: FlatFee
+  parent: AlgoSdk.TransactionParams
+  langs:
+  - csharp
+  - vb
+  name: FlatFee
+  nameWithType: TransactionParams.FlatFee
+  fullName: AlgoSdk.TransactionParams.FlatFee
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/TransactionParams.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: FlatFee
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/TransactionParams.cs
+    startLine: 63
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  summary: "\nWhether to interpret <xref href=\"AlgoSdk.TransactionParams.Fee\" data-throw-if-not-resolved=\"false\"></xref> as microalgos per byte, or as a flat amount of microalgos.\n"
+  example: []
+  syntax:
+    content: public bool FlatFee { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property FlatFee As Boolean
+  overload: AlgoSdk.TransactionParams.FlatFee*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.TransactionParams.FirstValidRound
+  commentId: F:AlgoSdk.TransactionParams.FirstValidRound
+  id: FirstValidRound
+  parent: AlgoSdk.TransactionParams
+  langs:
+  - csharp
+  - vb
+  name: FirstValidRound
+  nameWithType: TransactionParams.FirstValidRound
+  fullName: AlgoSdk.TransactionParams.FirstValidRound
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/TransactionParams.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: FirstValidRound
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/TransactionParams.cs
+    startLine: 72
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  summary: "\nThe last valid round for a transaction.\n"
+  example: []
+  syntax:
+    content: public ulong FirstValidRound
+    return:
+      type: System.UInt64
+    content.vb: Public FirstValidRound As ULong
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.TransactionParams.LastValidRound
+  commentId: F:AlgoSdk.TransactionParams.LastValidRound
+  id: LastValidRound
+  parent: AlgoSdk.TransactionParams
+  langs:
+  - csharp
+  - vb
+  name: LastValidRound
+  nameWithType: TransactionParams.LastValidRound
+  fullName: AlgoSdk.TransactionParams.LastValidRound
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/TransactionParams.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: LastValidRound
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/TransactionParams.cs
+    startLine: 77
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  summary: "\nThe first valid round for a transaction.\n"
+  example: []
+  syntax:
+    content: public ulong LastValidRound
+    return:
+      type: System.UInt64
+    content.vb: Public LastValidRound As ULong
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.TransactionParams.Equals(AlgoSdk.TransactionParams)
+  commentId: M:AlgoSdk.TransactionParams.Equals(AlgoSdk.TransactionParams)
+  id: Equals(AlgoSdk.TransactionParams)
+  parent: AlgoSdk.TransactionParams
+  langs:
+  - csharp
+  - vb
+  name: Equals(TransactionParams)
+  nameWithType: TransactionParams.Equals(TransactionParams)
+  fullName: AlgoSdk.TransactionParams.Equals(AlgoSdk.TransactionParams)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/TransactionParams.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Equals
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/TransactionParams.cs
+    startLine: 83
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public bool Equals(TransactionParams other)
+    parameters:
+    - id: other
+      type: AlgoSdk.TransactionParams
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As TransactionParams) As Boolean
+  overload: AlgoSdk.TransactionParams.Equals*
+  implements:
+  - System.IEquatable{AlgoSdk.TransactionParams}.Equals(AlgoSdk.TransactionParams)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AlgoSdk.AlgodClient.GetSuggestedParams
+  commentId: M:AlgoSdk.AlgodClient.GetSuggestedParams
+  isExternal: true
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: System.IEquatable{AlgoSdk.TransactionParams}
+  commentId: T:System.IEquatable{AlgoSdk.TransactionParams}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<TransactionParams>
+  nameWithType: IEquatable<TransactionParams>
+  fullName: System.IEquatable<AlgoSdk.TransactionParams>
+  nameWithType.vb: IEquatable(Of TransactionParams)
+  fullName.vb: System.IEquatable(Of AlgoSdk.TransactionParams)
+  name.vb: IEquatable(Of TransactionParams)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AlgoSdk.TransactionParams
+    name: TransactionParams
+    nameWithType: TransactionParams
+    fullName: AlgoSdk.TransactionParams
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AlgoSdk.TransactionParams
+    name: TransactionParams
+    nameWithType: TransactionParams
+    fullName: AlgoSdk.TransactionParams
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AlgoSdk.TransactionParams.LastRound
+  commentId: P:AlgoSdk.TransactionParams.LastRound
+  isExternal: true
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AlgoSdk.TransactionParams.MinFee
+  commentId: F:AlgoSdk.TransactionParams.MinFee
+  isExternal: true
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: AlgoSdk.GenesisHash
+  commentId: T:AlgoSdk.GenesisHash
+  parent: AlgoSdk
+  name: GenesisHash
+  nameWithType: GenesisHash
+  fullName: AlgoSdk.GenesisHash
+- uid: Unity.Collections.FixedString32Bytes
+  commentId: T:Unity.Collections.FixedString32Bytes
+  parent: Unity.Collections
+  name: FixedString32Bytes
+  nameWithType: FixedString32Bytes
+  fullName: Unity.Collections.FixedString32Bytes
+- uid: Unity.Collections
+  commentId: N:Unity.Collections
+  name: Unity.Collections
+  nameWithType: Unity.Collections
+  fullName: Unity.Collections
+- uid: AlgoSdk.TransactionParams.LastRound*
+  commentId: Overload:AlgoSdk.TransactionParams.LastRound
+  name: LastRound
+  nameWithType: TransactionParams.LastRound
+  fullName: AlgoSdk.TransactionParams.LastRound
+- uid: AlgoSdk.TransactionParams.Fee
+  commentId: F:AlgoSdk.TransactionParams.Fee
+  isExternal: true
+- uid: AlgoSdk.TransactionParams.FlatFee*
+  commentId: Overload:AlgoSdk.TransactionParams.FlatFee
+  name: FlatFee
+  nameWithType: TransactionParams.FlatFee
+  fullName: AlgoSdk.TransactionParams.FlatFee
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: AlgoSdk.TransactionParams.Equals*
+  commentId: Overload:AlgoSdk.TransactionParams.Equals
+  name: Equals
+  nameWithType: TransactionParams.Equals
+  fullName: AlgoSdk.TransactionParams.Equals
+- uid: System.IEquatable{AlgoSdk.TransactionParams}.Equals(AlgoSdk.TransactionParams)
+  commentId: M:System.IEquatable{AlgoSdk.TransactionParams}.Equals(AlgoSdk.TransactionParams)
+  parent: System.IEquatable{AlgoSdk.TransactionParams}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(TransactionParams)
+  nameWithType: IEquatable<TransactionParams>.Equals(TransactionParams)
+  fullName: System.IEquatable<AlgoSdk.TransactionParams>.Equals(AlgoSdk.TransactionParams)
+  nameWithType.vb: IEquatable(Of TransactionParams).Equals(TransactionParams)
+  fullName.vb: System.IEquatable(Of AlgoSdk.TransactionParams).Equals(AlgoSdk.TransactionParams)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<TransactionParams>.Equals
+    fullName: System.IEquatable<AlgoSdk.TransactionParams>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.TransactionParams
+    name: TransactionParams
+    nameWithType: TransactionParams
+    fullName: AlgoSdk.TransactionParams
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of TransactionParams).Equals
+    fullName: System.IEquatable(Of AlgoSdk.TransactionParams).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.TransactionParams
+    name: TransactionParams
+    nameWithType: TransactionParams
+    fullName: AlgoSdk.TransactionParams
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.TransactionParams
+  commentId: T:AlgoSdk.TransactionParams
+  parent: AlgoSdk
+  name: TransactionParams
+  nameWithType: TransactionParams
+  fullName: AlgoSdk.TransactionParams
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

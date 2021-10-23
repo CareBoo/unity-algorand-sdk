@@ -1,0 +1,768 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.AssetFreezeTxn.Params
+  commentId: T:AlgoSdk.AssetFreezeTxn.Params
+  id: AssetFreezeTxn.Params
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.AssetFreezeTxn.Params.AssetFrozen
+  - AlgoSdk.AssetFreezeTxn.Params.Equals(AlgoSdk.AssetFreezeTxn.Params)
+  - AlgoSdk.AssetFreezeTxn.Params.FreezeAccount
+  - AlgoSdk.AssetFreezeTxn.Params.FreezeAsset
+  langs:
+  - csharp
+  - vb
+  name: AssetFreezeTxn.Params
+  nameWithType: AssetFreezeTxn.Params
+  fullName: AlgoSdk.AssetFreezeTxn.Params
+  type: Struct
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetFreezeTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Params
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetFreezeTxn.cs
+    startLine: 183
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: 'public struct Params : IEquatable<AssetFreezeTxn.Params>'
+    content.vb: >-
+      Public Structure Params
+          Implements IEquatable(Of AssetFreezeTxn.Params)
+  implements:
+  - System.IEquatable{AlgoSdk.AssetFreezeTxn.Params}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: AlgoSdk.AssetFreezeTxn.Params.FreezeAccount
+  commentId: F:AlgoSdk.AssetFreezeTxn.Params.FreezeAccount
+  id: FreezeAccount
+  parent: AlgoSdk.AssetFreezeTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: FreezeAccount
+  nameWithType: AssetFreezeTxn.Params.FreezeAccount
+  fullName: AlgoSdk.AssetFreezeTxn.Params.FreezeAccount
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetFreezeTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: FreezeAccount
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetFreezeTxn.cs
+    startLine: 188
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("address", "fadd", false)]
+
+      public Address FreezeAccount
+    return:
+      type: AlgoSdk.Address
+    content.vb: >-
+      <AlgoApiField("address", "fadd", False)>
+
+      Public FreezeAccount As Address
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: address
+    - type: System.String
+      value: fadd
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AssetFreezeTxn.Params.FreezeAsset
+  commentId: F:AlgoSdk.AssetFreezeTxn.Params.FreezeAsset
+  id: FreezeAsset
+  parent: AlgoSdk.AssetFreezeTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: FreezeAsset
+  nameWithType: AssetFreezeTxn.Params.FreezeAsset
+  fullName: AlgoSdk.AssetFreezeTxn.Params.FreezeAsset
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetFreezeTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: FreezeAsset
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetFreezeTxn.cs
+    startLine: 191
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("asset-id", "faid", false)]
+
+      public ulong FreezeAsset
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("asset-id", "faid", False)>
+
+      Public FreezeAsset As ULong
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: asset-id
+    - type: System.String
+      value: faid
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AssetFreezeTxn.Params.AssetFrozen
+  commentId: F:AlgoSdk.AssetFreezeTxn.Params.AssetFrozen
+  id: AssetFrozen
+  parent: AlgoSdk.AssetFreezeTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: AssetFrozen
+  nameWithType: AssetFreezeTxn.Params.AssetFrozen
+  fullName: AlgoSdk.AssetFreezeTxn.Params.AssetFrozen
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetFreezeTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: AssetFrozen
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetFreezeTxn.cs
+    startLine: 194
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("new-freeze-status", "afrz", false)]
+
+      public Optional<bool> AssetFrozen
+    return:
+      type: AlgoSdk.Optional{System.Boolean}
+    content.vb: "<AlgoApiField(\"new-freeze-status\", \"afrz\", False)>\nPublic AssetFrozen As "
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: new-freeze-status
+    - type: System.String
+      value: afrz
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AssetFreezeTxn.Params.Equals(AlgoSdk.AssetFreezeTxn.Params)
+  commentId: M:AlgoSdk.AssetFreezeTxn.Params.Equals(AlgoSdk.AssetFreezeTxn.Params)
+  id: Equals(AlgoSdk.AssetFreezeTxn.Params)
+  parent: AlgoSdk.AssetFreezeTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: Equals(AssetFreezeTxn.Params)
+  nameWithType: AssetFreezeTxn.Params.Equals(AssetFreezeTxn.Params)
+  fullName: AlgoSdk.AssetFreezeTxn.Params.Equals(AlgoSdk.AssetFreezeTxn.Params)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetFreezeTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Equals
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetFreezeTxn.cs
+    startLine: 196
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public bool Equals(AssetFreezeTxn.Params other)
+    parameters:
+    - id: other
+      type: AlgoSdk.AssetFreezeTxn.Params
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As AssetFreezeTxn.Params) As Boolean
+  overload: AlgoSdk.AssetFreezeTxn.Params.Equals*
+  implements:
+  - System.IEquatable{AlgoSdk.AssetFreezeTxn.Params}.Equals(AlgoSdk.AssetFreezeTxn.Params)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: System.IEquatable{AlgoSdk.AssetFreezeTxn.Params}
+  commentId: T:System.IEquatable{AlgoSdk.AssetFreezeTxn.Params}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<AssetFreezeTxn.Params>
+  nameWithType: IEquatable<AssetFreezeTxn.Params>
+  fullName: System.IEquatable<AlgoSdk.AssetFreezeTxn.Params>
+  nameWithType.vb: IEquatable(Of AssetFreezeTxn.Params)
+  fullName.vb: System.IEquatable(Of AlgoSdk.AssetFreezeTxn.Params)
+  name.vb: IEquatable(Of AssetFreezeTxn.Params)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AlgoSdk.AssetFreezeTxn.Params
+    name: AssetFreezeTxn.Params
+    nameWithType: AssetFreezeTxn.Params
+    fullName: AlgoSdk.AssetFreezeTxn.Params
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AlgoSdk.AssetFreezeTxn.Params
+    name: AssetFreezeTxn.Params
+    nameWithType: AssetFreezeTxn.Params
+    fullName: AlgoSdk.AssetFreezeTxn.Params
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AlgoSdk.Address
+  commentId: T:AlgoSdk.Address
+  parent: AlgoSdk
+  name: Address
+  nameWithType: Address
+  fullName: AlgoSdk.Address
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: AlgoSdk.Optional{System.Boolean}
+  commentId: T:AlgoSdk.Optional{System.Boolean}
+  parent: AlgoSdk
+  definition: AlgoSdk.Optional`1
+  name: Optional<Boolean>
+  nameWithType: Optional<Boolean>
+  fullName: AlgoSdk.Optional<System.Boolean>
+  nameWithType.vb: Optional(Of Boolean)
+  fullName.vb: AlgoSdk.Optional(Of System.Boolean)
+  name.vb: Optional(Of Boolean)
+  spec.csharp:
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Optional`1
+  commentId: T:AlgoSdk.Optional`1
+  parent: AlgoSdk
+  name: Optional<T>
+  nameWithType: Optional<T>
+  fullName: AlgoSdk.Optional<T>
+  nameWithType.vb: Optional(Of T)
+  fullName.vb: AlgoSdk.Optional(Of T)
+  name.vb: Optional(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AssetFreezeTxn.Params.Equals*
+  commentId: Overload:AlgoSdk.AssetFreezeTxn.Params.Equals
+  name: Equals
+  nameWithType: AssetFreezeTxn.Params.Equals
+  fullName: AlgoSdk.AssetFreezeTxn.Params.Equals
+- uid: System.IEquatable{AlgoSdk.AssetFreezeTxn.Params}.Equals(AlgoSdk.AssetFreezeTxn.Params)
+  commentId: M:System.IEquatable{AlgoSdk.AssetFreezeTxn.Params}.Equals(AlgoSdk.AssetFreezeTxn.Params)
+  parent: System.IEquatable{AlgoSdk.AssetFreezeTxn.Params}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(AssetFreezeTxn.Params)
+  nameWithType: IEquatable<AssetFreezeTxn.Params>.Equals(AssetFreezeTxn.Params)
+  fullName: System.IEquatable<AlgoSdk.AssetFreezeTxn.Params>.Equals(AlgoSdk.AssetFreezeTxn.Params)
+  nameWithType.vb: IEquatable(Of AssetFreezeTxn.Params).Equals(AssetFreezeTxn.Params)
+  fullName.vb: System.IEquatable(Of AlgoSdk.AssetFreezeTxn.Params).Equals(AlgoSdk.AssetFreezeTxn.Params)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<AssetFreezeTxn.Params>.Equals
+    fullName: System.IEquatable<AlgoSdk.AssetFreezeTxn.Params>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.AssetFreezeTxn.Params
+    name: AssetFreezeTxn.Params
+    nameWithType: AssetFreezeTxn.Params
+    fullName: AlgoSdk.AssetFreezeTxn.Params
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of AssetFreezeTxn.Params).Equals
+    fullName: System.IEquatable(Of AlgoSdk.AssetFreezeTxn.Params).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.AssetFreezeTxn.Params
+    name: AssetFreezeTxn.Params
+    nameWithType: AssetFreezeTxn.Params
+    fullName: AlgoSdk.AssetFreezeTxn.Params
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AssetFreezeTxn.Params
+  commentId: T:AlgoSdk.AssetFreezeTxn.Params
+  parent: AlgoSdk
+  name: AssetFreezeTxn.Params
+  nameWithType: AssetFreezeTxn.Params
+  fullName: AlgoSdk.AssetFreezeTxn.Params
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

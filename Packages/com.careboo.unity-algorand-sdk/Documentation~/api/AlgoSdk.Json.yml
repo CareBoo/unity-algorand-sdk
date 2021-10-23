@@ -1,0 +1,74 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.Json
+  commentId: N:AlgoSdk.Json
+  id: AlgoSdk.Json
+  children:
+  - AlgoSdk.Json.JsonReader
+  - AlgoSdk.Json.JsonReadError
+  - AlgoSdk.Json.JsonReadErrorExtensions
+  - AlgoSdk.Json.JsonReadException
+  - AlgoSdk.Json.JsonToken
+  - AlgoSdk.Json.JsonTokenExtensions
+  - AlgoSdk.Json.JsonWriter
+  - AlgoSdk.Json.UnicodeExtensions
+  langs:
+  - csharp
+  - vb
+  name: AlgoSdk.Json
+  nameWithType: AlgoSdk.Json
+  fullName: AlgoSdk.Json
+  type: Namespace
+  assemblies:
+  - CareBoo.AlgoSdk
+references:
+- uid: AlgoSdk.Json.JsonReader
+  commentId: T:AlgoSdk.Json.JsonReader
+  parent: AlgoSdk.Json
+  name: JsonReader
+  nameWithType: JsonReader
+  fullName: AlgoSdk.Json.JsonReader
+- uid: AlgoSdk.Json.JsonWriter
+  commentId: T:AlgoSdk.Json.JsonWriter
+  parent: AlgoSdk.Json
+  name: JsonWriter
+  nameWithType: JsonWriter
+  fullName: AlgoSdk.Json.JsonWriter
+- uid: AlgoSdk.Json.JsonReadError
+  commentId: T:AlgoSdk.Json.JsonReadError
+  parent: AlgoSdk.Json
+  name: JsonReadError
+  nameWithType: JsonReadError
+  fullName: AlgoSdk.Json.JsonReadError
+- uid: AlgoSdk.Json.JsonReadException
+  commentId: T:AlgoSdk.Json.JsonReadException
+  name: JsonReadException
+  nameWithType: JsonReadException
+  fullName: AlgoSdk.Json.JsonReadException
+- uid: AlgoSdk.Json.JsonReadErrorExtensions
+  commentId: T:AlgoSdk.Json.JsonReadErrorExtensions
+  parent: AlgoSdk.Json
+  name: JsonReadErrorExtensions
+  nameWithType: JsonReadErrorExtensions
+  fullName: AlgoSdk.Json.JsonReadErrorExtensions
+- uid: AlgoSdk.Json.UnicodeExtensions
+  commentId: T:AlgoSdk.Json.UnicodeExtensions
+  name: UnicodeExtensions
+  nameWithType: UnicodeExtensions
+  fullName: AlgoSdk.Json.UnicodeExtensions
+- uid: AlgoSdk.Json.JsonToken
+  commentId: T:AlgoSdk.Json.JsonToken
+  parent: AlgoSdk.Json
+  name: JsonToken
+  nameWithType: JsonToken
+  fullName: AlgoSdk.Json.JsonToken
+- uid: AlgoSdk.Json.JsonTokenExtensions
+  commentId: T:AlgoSdk.Json.JsonTokenExtensions
+  name: JsonTokenExtensions
+  nameWithType: JsonTokenExtensions
+  fullName: AlgoSdk.Json.JsonTokenExtensions
+- uid: AlgoSdk.Json
+  commentId: N:AlgoSdk.Json
+  name: AlgoSdk.Json
+  nameWithType: AlgoSdk.Json
+  fullName: AlgoSdk.Json

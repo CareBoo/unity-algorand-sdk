@@ -4,7 +4,25 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
-    public partial struct Transaction
+    public interface IAssetFreezeTxn : ITransaction
+    {
+        /// <summary>
+        /// The address of the account whose asset is being frozen or unfrozen.
+        /// </summary>
+        Address FreezeAccount { get; set; }
+
+        /// <summary>
+        /// The asset ID being frozen or unfrozen.
+        /// </summary>
+        ulong FreezeAsset { get; set; }
+
+        /// <summary>
+        /// True to freeze the asset.
+        /// </summary>
+        Optional<bool> AssetFrozen { get; set; }
+    }
+
+    public partial struct Transaction : IAssetFreezeTxn
     {
         [AlgoApiField(null, "fadd")]
         public Address FreezeAccount
@@ -27,6 +45,15 @@ namespace AlgoSdk
             set => AssetFreezeParams.AssetFrozen = value;
         }
 
+        /// <summary>
+        /// Create an <see cref="AssetFreezeTxn"/> which is used to freeze or unfreeze an asset from transfers.
+        /// </summary>
+        /// <param name="sender">The address of the account that pays the fee and amount.</param>
+        /// <param name="txnParams">See <see cref="TransactionParams"/></param>
+        /// <param name="freezeAccount">The address of the account whose asset is being frozen or unfrozen.</param>
+        /// <param name="freezeAsset">The asset ID being frozen or unfrozen.</param>
+        /// <param name="assetFrozen">True to freeze the asset.</param>
+        /// <returns>An <see cref="AssetFreezeTxn"/>.</returns>
         public static AssetFreezeTxn AssetFreeze(
             Address sender,
             TransactionParams txnParams,
@@ -49,7 +76,7 @@ namespace AlgoSdk
 
     [AlgoApiObject]
     public struct AssetFreezeTxn
-        : ITransaction
+        : IAssetFreezeTxn
         , IEquatable<AssetFreezeTxn>
     {
         internal TransactionHeader header;

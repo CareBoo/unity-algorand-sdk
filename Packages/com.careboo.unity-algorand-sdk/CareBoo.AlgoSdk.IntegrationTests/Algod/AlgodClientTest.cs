@@ -71,7 +71,7 @@ public class AlgodClientTest : AlgodClientTestFixture
     public IEnumerator RegisterParticipationKeysShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var addresses = await GetAddresses();
-        var response = await algod.RegisterParticipationKeys(addresses[0]);
+        var response = await algod.RegisterParticipationKeys(addresses[0].ToString());
         AssertOkay(response.Error);
     });
 
@@ -106,16 +106,9 @@ public class AlgodClientTest : AlgodClientTestFixture
     [UnityTest]
     public IEnumerator GetMerkleProofShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        TransactionIdResponse txId = await MakePaymentTransaction(100000);
-        var pendingTxn = new PendingTransaction();
-        while (pendingTxn.ConfirmedRound <= 0)
-        {
-            await UniTask.Delay(500);
-            var pendingResponse = await algod.GetPendingTransaction(txId);
-            pendingTxn = pendingResponse.Payload;
-        }
-        var round = pendingTxn.ConfirmedRound;
-        var response = await algod.GetMerkleProof(round, txId);
+        TransactionIdResponse txid = await MakePaymentTransaction(100000);
+        var pendingTxn = await WaitForTransaction(txid);
+        var response = await algod.GetMerkleProof(pendingTxn.ConfirmedRound, txid);
         AssertOkay(response.Error);
     });
 
@@ -125,7 +118,6 @@ public class AlgodClientTest : AlgodClientTestFixture
         var txId = await MakePaymentTransaction(100000);
         var pendingResponse = await algod.GetPendingTransaction(txId);
         AssertOkay(pendingResponse.Error);
-        Debug.Log(pendingResponse.Raw.GetText());
     });
 
     [UnityTest]

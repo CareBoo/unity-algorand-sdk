@@ -7,24 +7,45 @@ using Unity.Collections.LowLevel.Unsafe;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// Application index and its parameters
+    /// </summary>
     [AlgoApiObject]
     public struct Application
         : IEquatable<Application>
     {
+        /// <summary>
+        /// Bytes prefix when hashing this struct
+        /// </summary>
         public static readonly byte[] HashPrefix = Encoding.UTF8.GetBytes("appID");
 
+        /// <summary>
+        /// Round when this application was created.
+        /// </summary>
         [AlgoApiField("created-at-round", null)]
         public ulong CreatedAtRound;
 
+        /// <summary>
+        /// Whether or not this application is currently deleted.
+        /// </summary>
         [AlgoApiField("deleted", null)]
         public Optional<bool> Deleted;
 
+        /// <summary>
+        /// Round when this application was deleted.
+        /// </summary>
         [AlgoApiField("deleted-at-round", null)]
         public ulong DeletedAtRound;
 
+        /// <summary>
+        /// [appidx] application index.
+        /// </summary>
         [AlgoApiField("id", null)]
         public ulong Id;
 
+        /// <summary>
+        /// [appparams] application parameters.
+        /// </summary>
         [AlgoApiField("params", null)]
         public ApplicationParams Params;
 
@@ -33,12 +54,21 @@ namespace AlgoSdk
             return Id.Equals(other.Id);
         }
 
+        /// <summary>
+        /// Computes the <see cref="Address"/> from the <see cref="Application.Id"/> for this application.
+        /// </summary>
+        /// <returns><see cref="Optional{Address}.Empty"/> if the <see cref="Application.Id"/> is empty, otherwise an <see cref="Address"/>.</returns>
         public Optional<Address> GetAddress() =>
              Id > 0
                 ? ComputeAddressFromId(Id)
                 : default
                 ;
 
+        /// <summary>
+        /// Computes the <see cref="Address"/> from an <see cref="Application.Id"/>.
+        /// </summary>
+        /// <param name="appIndex">An application id.</param>
+        /// <returns>An <see cref="Address"/>.</returns>
         public static Address ComputeAddressFromId(ulong appIndex)
         {
             using var appIndexBytes = appIndex.ToBytesBigEndian(Allocator.Temp);

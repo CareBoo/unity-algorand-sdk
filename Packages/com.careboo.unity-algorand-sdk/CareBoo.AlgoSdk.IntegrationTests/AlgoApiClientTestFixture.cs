@@ -7,7 +7,6 @@ using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.TestTools;
-using AlgoSdk.Crypto;
 
 [System.Flags]
 public enum AlgoServices : byte
@@ -22,7 +21,7 @@ public abstract class AlgoApiClientTestFixture
 {
     protected const string SandboxToken = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
 
-    protected static readonly Mnemonic AccountMnemonic = "earth burst hero frown popular genius occur interest hobby push throw canoe orchard dish shed poem child frequent shop lecture female define state abstract tree";
+    protected static readonly Mnemonic AccountMnemonic = "find paddle girl crumble hammer usual obvious toy actual obscure decorate lock bag inmate author valve course ship burger denial sibling tissue nominee above remove";
 
     protected static readonly AlgodClient algod = new AlgodClient("http://localhost:4001", SandboxToken);
 

@@ -2,6 +2,9 @@ using System;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// A health check response from <see cref="IIndexerClient.GetHealth"/>
+    /// </summary>
     [AlgoApiObject]
     public struct HealthCheck
         : IEquatable<HealthCheck>

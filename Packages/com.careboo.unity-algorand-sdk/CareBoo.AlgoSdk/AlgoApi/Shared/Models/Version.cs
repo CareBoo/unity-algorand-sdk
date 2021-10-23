@@ -3,10 +3,16 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// algod version information
+    /// </summary>
     [AlgoApiObject]
     public struct Version
         : IEquatable<Version>
     {
+        /// <summary>
+        /// See <see cref="BuildVersion"/>
+        /// </summary>
         [AlgoApiField("build", null)]
         public BuildVersion Build;
 

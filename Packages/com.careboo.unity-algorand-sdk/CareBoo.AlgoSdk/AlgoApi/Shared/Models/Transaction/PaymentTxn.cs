@@ -4,6 +4,24 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
+    public interface IPaymentTxn : ITransaction
+    {
+        /// <summary>
+        /// The address of the account that receives the <see cref="Amount"/>.
+        /// </summary>
+        Address Receiver { get; set; }
+
+        /// <summary>
+        /// The total amount to be sent in microAlgos.
+        /// </summary>
+        ulong Amount { get; set; }
+
+        /// <summary>
+        /// When set, it indicates that the transaction is requesting that the <see cref="ITransaction.Sender"/> account should be closed, and all remaining funds, after the <see cref="ITransaction.Fee"/> and <see cref="Amount"/> are paid, be transferred to this address.
+        /// </summary>
+        Address CloseRemainderTo { get; set; }
+    }
+
     public partial struct Transaction
     {
         [AlgoApiField(null, "rcv")]
@@ -27,18 +45,29 @@ namespace AlgoSdk
             set => PaymentParams.CloseRemainderTo = value;
         }
 
+        /// <summary>
+        /// Create a <see cref="PaymentTxn"/>
+        /// </summary>
+        /// <param name="sender">The address of the account that pays the fee and amount.</param>
+        /// <param name="txnParams">See <see cref="TransactionParams"/></param>
+        /// <param name="receiver">The address of the account that receives the amount.</param>
+        /// <param name="amount">The total amount to be sent in microAlgos.</param>
+        /// <param name="closeRemainderTo">When set, it indicates that the transaction is requesting that the Sender account should be closed, and all remaining funds, after the fee and amount are paid, be transferred to this address.</param>
+        /// <returns>A <see cref="PaymentTxn"/></returns>
         public static PaymentTxn Payment(
             Address sender,
             TransactionParams txnParams,
             Address receiver,
-            ulong amount
+            ulong amount,
+            Address closeRemainderTo = default
         )
         {
             var txn = new PaymentTxn
             {
                 header = new TransactionHeader(sender, TransactionType.Payment, txnParams),
                 Receiver = receiver,
-                Amount = amount
+                Amount = amount,
+                CloseRemainderTo = closeRemainderTo
             };
             txn.Fee = txn.GetSuggestedFee(txnParams);
             return txn;
@@ -47,7 +76,7 @@ namespace AlgoSdk
 
     [AlgoApiObject]
     public struct PaymentTxn
-        : ITransaction
+        : IPaymentTxn
         , IEquatable<PaymentTxn>
     {
         internal TransactionHeader header;

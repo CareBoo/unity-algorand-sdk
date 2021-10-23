@@ -1,0 +1,1018 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.Formatters.OnCompletionFormatter
+  commentId: T:AlgoSdk.Formatters.OnCompletionFormatter
+  id: OnCompletionFormatter
+  parent: AlgoSdk.Formatters
+  children:
+  - AlgoSdk.Formatters.OnCompletionFormatter.#ctor
+  - AlgoSdk.Formatters.OnCompletionFormatter.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  - AlgoSdk.Formatters.OnCompletionFormatter.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,AlgoSdk.OnCompletion)
+  langs:
+  - csharp
+  - vb
+  name: OnCompletionFormatter
+  nameWithType: OnCompletionFormatter
+  fullName: AlgoSdk.Formatters.OnCompletionFormatter
+  type: Class
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/Enum/OnCompletionFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: OnCompletionFormatter
+    path: ../CareBoo.AlgoSdk/Serialization/Formatters/Enum/OnCompletionFormatter.cs
+    startLine: 5
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Formatters
+  syntax:
+    content: 'public sealed class OnCompletionFormatter : KeywordByteEnumFormatter<OnCompletion>, IAlgoApiFormatter<OnCompletion>'
+    content.vb: >-
+      Public NotInheritable Class OnCompletionFormatter
+          Inherits KeywordByteEnumFormatter(Of OnCompletion)
+          Implements IAlgoApiFormatter(Of OnCompletion)
+  inheritance:
+  - System.Object
+  - AlgoSdk.Formatters.KeywordByteEnumFormatter{AlgoSdk.OnCompletion}
+  implements:
+  - AlgoSdk.IAlgoApiFormatter{AlgoSdk.OnCompletion}
+  inheritedMembers:
+  - AlgoSdk.Formatters.KeywordByteEnumFormatter{AlgoSdk.OnCompletion}.Deserialize(AlgoSdk.Json.JsonReader@)
+  - AlgoSdk.Formatters.KeywordByteEnumFormatter{AlgoSdk.OnCompletion}.Serialize(AlgoSdk.Json.JsonWriter@,AlgoSdk.OnCompletion)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: AlgoSdk.Formatters.OnCompletionFormatter.#ctor
+  commentId: M:AlgoSdk.Formatters.OnCompletionFormatter.#ctor
+  id: '#ctor'
+  parent: AlgoSdk.Formatters.OnCompletionFormatter
+  langs:
+  - csharp
+  - vb
+  name: OnCompletionFormatter()
+  nameWithType: OnCompletionFormatter.OnCompletionFormatter()
+  fullName: AlgoSdk.Formatters.OnCompletionFormatter.OnCompletionFormatter()
+  type: Constructor
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/Enum/OnCompletionFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: .ctor
+    path: ../CareBoo.AlgoSdk/Serialization/Formatters/Enum/OnCompletionFormatter.cs
+    startLine: 18
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Formatters
+  syntax:
+    content: public OnCompletionFormatter()
+    content.vb: Public Sub New
+  overload: AlgoSdk.Formatters.OnCompletionFormatter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Formatters.OnCompletionFormatter.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  commentId: M:AlgoSdk.Formatters.OnCompletionFormatter.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  id: Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  parent: AlgoSdk.Formatters.OnCompletionFormatter
+  langs:
+  - csharp
+  - vb
+  name: Deserialize(ref MessagePackReader)
+  nameWithType: OnCompletionFormatter.Deserialize(ref MessagePackReader)
+  fullName: AlgoSdk.Formatters.OnCompletionFormatter.Deserialize(ref AlgoSdk.MessagePack.MessagePackReader)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/Enum/OnCompletionFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Deserialize
+    path: ../CareBoo.AlgoSdk/Serialization/Formatters/Enum/OnCompletionFormatter.cs
+    startLine: 20
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Formatters
+  syntax:
+    content: public override OnCompletion Deserialize(ref MessagePackReader reader)
+    parameters:
+    - id: reader
+      type: AlgoSdk.MessagePack.MessagePackReader
+    return:
+      type: AlgoSdk.OnCompletion
+    content.vb: Public Overrides Function Deserialize(ByRef reader As MessagePackReader) As OnCompletion
+  overridden: AlgoSdk.Formatters.KeywordByteEnumFormatter{AlgoSdk.OnCompletion}.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  overload: AlgoSdk.Formatters.OnCompletionFormatter.Deserialize*
+  nameWithType.vb: OnCompletionFormatter.Deserialize(ByRef MessagePackReader)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: AlgoSdk.Formatters.OnCompletionFormatter.Deserialize(ByRef AlgoSdk.MessagePack.MessagePackReader)
+  name.vb: Deserialize(ByRef MessagePackReader)
+- uid: AlgoSdk.Formatters.OnCompletionFormatter.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,AlgoSdk.OnCompletion)
+  commentId: M:AlgoSdk.Formatters.OnCompletionFormatter.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,AlgoSdk.OnCompletion)
+  id: Serialize(AlgoSdk.MessagePack.MessagePackWriter@,AlgoSdk.OnCompletion)
+  parent: AlgoSdk.Formatters.OnCompletionFormatter
+  langs:
+  - csharp
+  - vb
+  name: Serialize(ref MessagePackWriter, OnCompletion)
+  nameWithType: OnCompletionFormatter.Serialize(ref MessagePackWriter, OnCompletion)
+  fullName: AlgoSdk.Formatters.OnCompletionFormatter.Serialize(ref AlgoSdk.MessagePack.MessagePackWriter, AlgoSdk.OnCompletion)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/Enum/OnCompletionFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Serialize
+    path: ../CareBoo.AlgoSdk/Serialization/Formatters/Enum/OnCompletionFormatter.cs
+    startLine: 25
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Formatters
+  syntax:
+    content: public override void Serialize(ref MessagePackWriter writer, OnCompletion value)
+    parameters:
+    - id: writer
+      type: AlgoSdk.MessagePack.MessagePackWriter
+    - id: value
+      type: AlgoSdk.OnCompletion
+    content.vb: Public Overrides Sub Serialize(ByRef writer As MessagePackWriter, value As OnCompletion)
+  overridden: AlgoSdk.Formatters.KeywordByteEnumFormatter{AlgoSdk.OnCompletion}.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,AlgoSdk.OnCompletion)
+  overload: AlgoSdk.Formatters.OnCompletionFormatter.Serialize*
+  nameWithType.vb: OnCompletionFormatter.Serialize(ByRef MessagePackWriter, OnCompletion)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: AlgoSdk.Formatters.OnCompletionFormatter.Serialize(ByRef AlgoSdk.MessagePack.MessagePackWriter, AlgoSdk.OnCompletion)
+  name.vb: Serialize(ByRef MessagePackWriter, OnCompletion)
+references:
+- uid: AlgoSdk.Formatters
+  commentId: N:AlgoSdk.Formatters
+  name: AlgoSdk.Formatters
+  nameWithType: AlgoSdk.Formatters
+  fullName: AlgoSdk.Formatters
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AlgoSdk.Formatters.KeywordByteEnumFormatter{AlgoSdk.OnCompletion}
+  commentId: T:AlgoSdk.Formatters.KeywordByteEnumFormatter{AlgoSdk.OnCompletion}
+  parent: AlgoSdk.Formatters
+  definition: AlgoSdk.Formatters.KeywordByteEnumFormatter`1
+  name: KeywordByteEnumFormatter<OnCompletion>
+  nameWithType: KeywordByteEnumFormatter<OnCompletion>
+  fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter<AlgoSdk.OnCompletion>
+  nameWithType.vb: KeywordByteEnumFormatter(Of OnCompletion)
+  fullName.vb: AlgoSdk.Formatters.KeywordByteEnumFormatter(Of AlgoSdk.OnCompletion)
+  name.vb: KeywordByteEnumFormatter(Of OnCompletion)
+  spec.csharp:
+  - uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1
+    name: KeywordByteEnumFormatter
+    nameWithType: KeywordByteEnumFormatter
+    fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AlgoSdk.OnCompletion
+    name: OnCompletion
+    nameWithType: OnCompletion
+    fullName: AlgoSdk.OnCompletion
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1
+    name: KeywordByteEnumFormatter
+    nameWithType: KeywordByteEnumFormatter
+    fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AlgoSdk.OnCompletion
+    name: OnCompletion
+    nameWithType: OnCompletion
+    fullName: AlgoSdk.OnCompletion
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.IAlgoApiFormatter{AlgoSdk.OnCompletion}
+  commentId: T:AlgoSdk.IAlgoApiFormatter{AlgoSdk.OnCompletion}
+  parent: AlgoSdk
+  definition: AlgoSdk.IAlgoApiFormatter`1
+  name: IAlgoApiFormatter<OnCompletion>
+  nameWithType: IAlgoApiFormatter<OnCompletion>
+  fullName: AlgoSdk.IAlgoApiFormatter<AlgoSdk.OnCompletion>
+  nameWithType.vb: IAlgoApiFormatter(Of OnCompletion)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of AlgoSdk.OnCompletion)
+  name.vb: IAlgoApiFormatter(Of OnCompletion)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1
+    name: IAlgoApiFormatter
+    nameWithType: IAlgoApiFormatter
+    fullName: AlgoSdk.IAlgoApiFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AlgoSdk.OnCompletion
+    name: OnCompletion
+    nameWithType: OnCompletion
+    fullName: AlgoSdk.OnCompletion
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1
+    name: IAlgoApiFormatter
+    nameWithType: IAlgoApiFormatter
+    fullName: AlgoSdk.IAlgoApiFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AlgoSdk.OnCompletion
+    name: OnCompletion
+    nameWithType: OnCompletion
+    fullName: AlgoSdk.OnCompletion
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Formatters.KeywordByteEnumFormatter{AlgoSdk.OnCompletion}.Deserialize(AlgoSdk.Json.JsonReader@)
+  commentId: M:AlgoSdk.Formatters.KeywordByteEnumFormatter{AlgoSdk.OnCompletion}.Deserialize(AlgoSdk.Json.JsonReader@)
+  parent: AlgoSdk.Formatters.KeywordByteEnumFormatter{AlgoSdk.OnCompletion}
+  definition: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+  name: Deserialize(JsonReader)
+  nameWithType: KeywordByteEnumFormatter<OnCompletion>.Deserialize(JsonReader)
+  fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter<AlgoSdk.OnCompletion>.Deserialize(AlgoSdk.Json.JsonReader)
+  nameWithType.vb: KeywordByteEnumFormatter(Of OnCompletion).Deserialize(JsonReader)
+  fullName.vb: AlgoSdk.Formatters.KeywordByteEnumFormatter(Of AlgoSdk.OnCompletion).Deserialize(AlgoSdk.Json.JsonReader)
+  spec.csharp:
+  - uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+    name: Deserialize
+    nameWithType: KeywordByteEnumFormatter<OnCompletion>.Deserialize
+    fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter<AlgoSdk.OnCompletion>.Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonReader
+    name: JsonReader
+    nameWithType: JsonReader
+    fullName: AlgoSdk.Json.JsonReader
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+    name: Deserialize
+    nameWithType: KeywordByteEnumFormatter(Of OnCompletion).Deserialize
+    fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter(Of AlgoSdk.OnCompletion).Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonReader
+    name: JsonReader
+    nameWithType: JsonReader
+    fullName: AlgoSdk.Json.JsonReader
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Formatters.KeywordByteEnumFormatter{AlgoSdk.OnCompletion}.Serialize(AlgoSdk.Json.JsonWriter@,AlgoSdk.OnCompletion)
+  commentId: M:AlgoSdk.Formatters.KeywordByteEnumFormatter{AlgoSdk.OnCompletion}.Serialize(AlgoSdk.Json.JsonWriter@,AlgoSdk.OnCompletion)
+  parent: AlgoSdk.Formatters.KeywordByteEnumFormatter{AlgoSdk.OnCompletion}
+  definition: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+  name: Serialize(JsonWriter, OnCompletion)
+  nameWithType: KeywordByteEnumFormatter<OnCompletion>.Serialize(JsonWriter, OnCompletion)
+  fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter<AlgoSdk.OnCompletion>.Serialize(AlgoSdk.Json.JsonWriter, AlgoSdk.OnCompletion)
+  nameWithType.vb: KeywordByteEnumFormatter(Of OnCompletion).Serialize(JsonWriter, OnCompletion)
+  fullName.vb: AlgoSdk.Formatters.KeywordByteEnumFormatter(Of AlgoSdk.OnCompletion).Serialize(AlgoSdk.Json.JsonWriter, AlgoSdk.OnCompletion)
+  spec.csharp:
+  - uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+    name: Serialize
+    nameWithType: KeywordByteEnumFormatter<OnCompletion>.Serialize
+    fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter<AlgoSdk.OnCompletion>.Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonWriter
+    name: JsonWriter
+    nameWithType: JsonWriter
+    fullName: AlgoSdk.Json.JsonWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AlgoSdk.OnCompletion
+    name: OnCompletion
+    nameWithType: OnCompletion
+    fullName: AlgoSdk.OnCompletion
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+    name: Serialize
+    nameWithType: KeywordByteEnumFormatter(Of OnCompletion).Serialize
+    fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter(Of AlgoSdk.OnCompletion).Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonWriter
+    name: JsonWriter
+    nameWithType: JsonWriter
+    fullName: AlgoSdk.Json.JsonWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AlgoSdk.OnCompletion
+    name: OnCompletion
+    nameWithType: OnCompletion
+    fullName: AlgoSdk.OnCompletion
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1
+  commentId: T:AlgoSdk.Formatters.KeywordByteEnumFormatter`1
+  name: KeywordByteEnumFormatter<T>
+  nameWithType: KeywordByteEnumFormatter<T>
+  fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter<T>
+  nameWithType.vb: KeywordByteEnumFormatter(Of T)
+  fullName.vb: AlgoSdk.Formatters.KeywordByteEnumFormatter(Of T)
+  name.vb: KeywordByteEnumFormatter(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1
+    name: KeywordByteEnumFormatter
+    nameWithType: KeywordByteEnumFormatter
+    fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1
+    name: KeywordByteEnumFormatter
+    nameWithType: KeywordByteEnumFormatter
+    fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.IAlgoApiFormatter`1
+  commentId: T:AlgoSdk.IAlgoApiFormatter`1
+  name: IAlgoApiFormatter<T>
+  nameWithType: IAlgoApiFormatter<T>
+  fullName: AlgoSdk.IAlgoApiFormatter<T>
+  nameWithType.vb: IAlgoApiFormatter(Of T)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of T)
+  name.vb: IAlgoApiFormatter(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1
+    name: IAlgoApiFormatter
+    nameWithType: IAlgoApiFormatter
+    fullName: AlgoSdk.IAlgoApiFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1
+    name: IAlgoApiFormatter
+    nameWithType: IAlgoApiFormatter
+    fullName: AlgoSdk.IAlgoApiFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+  commentId: M:AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+  name: Deserialize(JsonReader)
+  nameWithType: KeywordByteEnumFormatter<T>.Deserialize(JsonReader)
+  fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter<T>.Deserialize(AlgoSdk.Json.JsonReader)
+  nameWithType.vb: KeywordByteEnumFormatter(Of T).Deserialize(JsonReader)
+  fullName.vb: AlgoSdk.Formatters.KeywordByteEnumFormatter(Of T).Deserialize(AlgoSdk.Json.JsonReader)
+  spec.csharp:
+  - uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+    name: Deserialize
+    nameWithType: KeywordByteEnumFormatter<T>.Deserialize
+    fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter<T>.Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonReader
+    name: JsonReader
+    nameWithType: JsonReader
+    fullName: AlgoSdk.Json.JsonReader
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+    name: Deserialize
+    nameWithType: KeywordByteEnumFormatter(Of T).Deserialize
+    fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter(Of T).Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonReader
+    name: JsonReader
+    nameWithType: JsonReader
+    fullName: AlgoSdk.Json.JsonReader
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+  commentId: M:AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+  name: Serialize(JsonWriter, T)
+  nameWithType: KeywordByteEnumFormatter<T>.Serialize(JsonWriter, T)
+  fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter<T>.Serialize(AlgoSdk.Json.JsonWriter, T)
+  nameWithType.vb: KeywordByteEnumFormatter(Of T).Serialize(JsonWriter, T)
+  fullName.vb: AlgoSdk.Formatters.KeywordByteEnumFormatter(Of T).Serialize(AlgoSdk.Json.JsonWriter, T)
+  spec.csharp:
+  - uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+    name: Serialize
+    nameWithType: KeywordByteEnumFormatter<T>.Serialize
+    fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter<T>.Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonWriter
+    name: JsonWriter
+    nameWithType: JsonWriter
+    fullName: AlgoSdk.Json.JsonWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+    name: Serialize
+    nameWithType: KeywordByteEnumFormatter(Of T).Serialize
+    fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter(Of T).Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonWriter
+    name: JsonWriter
+    nameWithType: JsonWriter
+    fullName: AlgoSdk.Json.JsonWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Formatters.OnCompletionFormatter.#ctor*
+  commentId: Overload:AlgoSdk.Formatters.OnCompletionFormatter.#ctor
+  name: OnCompletionFormatter
+  nameWithType: OnCompletionFormatter.OnCompletionFormatter
+  fullName: AlgoSdk.Formatters.OnCompletionFormatter.OnCompletionFormatter
+- uid: AlgoSdk.Formatters.KeywordByteEnumFormatter{AlgoSdk.OnCompletion}.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  commentId: M:AlgoSdk.Formatters.KeywordByteEnumFormatter{AlgoSdk.OnCompletion}.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  parent: AlgoSdk.Formatters.KeywordByteEnumFormatter{AlgoSdk.OnCompletion}
+  definition: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  name: Deserialize(MessagePackReader)
+  nameWithType: KeywordByteEnumFormatter<OnCompletion>.Deserialize(MessagePackReader)
+  fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter<AlgoSdk.OnCompletion>.Deserialize(AlgoSdk.MessagePack.MessagePackReader)
+  nameWithType.vb: KeywordByteEnumFormatter(Of OnCompletion).Deserialize(MessagePackReader)
+  fullName.vb: AlgoSdk.Formatters.KeywordByteEnumFormatter(Of AlgoSdk.OnCompletion).Deserialize(AlgoSdk.MessagePack.MessagePackReader)
+  spec.csharp:
+  - uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+    name: Deserialize
+    nameWithType: KeywordByteEnumFormatter<OnCompletion>.Deserialize
+    fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter<AlgoSdk.OnCompletion>.Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackReader
+    name: MessagePackReader
+    nameWithType: MessagePackReader
+    fullName: AlgoSdk.MessagePack.MessagePackReader
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+    name: Deserialize
+    nameWithType: KeywordByteEnumFormatter(Of OnCompletion).Deserialize
+    fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter(Of AlgoSdk.OnCompletion).Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackReader
+    name: MessagePackReader
+    nameWithType: MessagePackReader
+    fullName: AlgoSdk.MessagePack.MessagePackReader
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Formatters.OnCompletionFormatter.Deserialize*
+  commentId: Overload:AlgoSdk.Formatters.OnCompletionFormatter.Deserialize
+  name: Deserialize
+  nameWithType: OnCompletionFormatter.Deserialize
+  fullName: AlgoSdk.Formatters.OnCompletionFormatter.Deserialize
+- uid: AlgoSdk.MessagePack.MessagePackReader
+  commentId: T:AlgoSdk.MessagePack.MessagePackReader
+  parent: AlgoSdk.MessagePack
+  name: MessagePackReader
+  nameWithType: MessagePackReader
+  fullName: AlgoSdk.MessagePack.MessagePackReader
+- uid: AlgoSdk.OnCompletion
+  commentId: T:AlgoSdk.OnCompletion
+  parent: AlgoSdk
+  name: OnCompletion
+  nameWithType: OnCompletion
+  fullName: AlgoSdk.OnCompletion
+- uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  commentId: M:AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  name: Deserialize(MessagePackReader)
+  nameWithType: KeywordByteEnumFormatter<T>.Deserialize(MessagePackReader)
+  fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter<T>.Deserialize(AlgoSdk.MessagePack.MessagePackReader)
+  nameWithType.vb: KeywordByteEnumFormatter(Of T).Deserialize(MessagePackReader)
+  fullName.vb: AlgoSdk.Formatters.KeywordByteEnumFormatter(Of T).Deserialize(AlgoSdk.MessagePack.MessagePackReader)
+  spec.csharp:
+  - uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+    name: Deserialize
+    nameWithType: KeywordByteEnumFormatter<T>.Deserialize
+    fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter<T>.Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackReader
+    name: MessagePackReader
+    nameWithType: MessagePackReader
+    fullName: AlgoSdk.MessagePack.MessagePackReader
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+    name: Deserialize
+    nameWithType: KeywordByteEnumFormatter(Of T).Deserialize
+    fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter(Of T).Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackReader
+    name: MessagePackReader
+    nameWithType: MessagePackReader
+    fullName: AlgoSdk.MessagePack.MessagePackReader
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.MessagePack
+  commentId: N:AlgoSdk.MessagePack
+  name: AlgoSdk.MessagePack
+  nameWithType: AlgoSdk.MessagePack
+  fullName: AlgoSdk.MessagePack
+- uid: AlgoSdk.Formatters.KeywordByteEnumFormatter{AlgoSdk.OnCompletion}.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,AlgoSdk.OnCompletion)
+  commentId: M:AlgoSdk.Formatters.KeywordByteEnumFormatter{AlgoSdk.OnCompletion}.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,AlgoSdk.OnCompletion)
+  parent: AlgoSdk.Formatters.KeywordByteEnumFormatter{AlgoSdk.OnCompletion}
+  definition: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+  name: Serialize(MessagePackWriter, OnCompletion)
+  nameWithType: KeywordByteEnumFormatter<OnCompletion>.Serialize(MessagePackWriter, OnCompletion)
+  fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter<AlgoSdk.OnCompletion>.Serialize(AlgoSdk.MessagePack.MessagePackWriter, AlgoSdk.OnCompletion)
+  nameWithType.vb: KeywordByteEnumFormatter(Of OnCompletion).Serialize(MessagePackWriter, OnCompletion)
+  fullName.vb: AlgoSdk.Formatters.KeywordByteEnumFormatter(Of AlgoSdk.OnCompletion).Serialize(AlgoSdk.MessagePack.MessagePackWriter, AlgoSdk.OnCompletion)
+  spec.csharp:
+  - uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+    name: Serialize
+    nameWithType: KeywordByteEnumFormatter<OnCompletion>.Serialize
+    fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter<AlgoSdk.OnCompletion>.Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackWriter
+    name: MessagePackWriter
+    nameWithType: MessagePackWriter
+    fullName: AlgoSdk.MessagePack.MessagePackWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AlgoSdk.OnCompletion
+    name: OnCompletion
+    nameWithType: OnCompletion
+    fullName: AlgoSdk.OnCompletion
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+    name: Serialize
+    nameWithType: KeywordByteEnumFormatter(Of OnCompletion).Serialize
+    fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter(Of AlgoSdk.OnCompletion).Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackWriter
+    name: MessagePackWriter
+    nameWithType: MessagePackWriter
+    fullName: AlgoSdk.MessagePack.MessagePackWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AlgoSdk.OnCompletion
+    name: OnCompletion
+    nameWithType: OnCompletion
+    fullName: AlgoSdk.OnCompletion
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Formatters.OnCompletionFormatter.Serialize*
+  commentId: Overload:AlgoSdk.Formatters.OnCompletionFormatter.Serialize
+  name: Serialize
+  nameWithType: OnCompletionFormatter.Serialize
+  fullName: AlgoSdk.Formatters.OnCompletionFormatter.Serialize
+- uid: AlgoSdk.MessagePack.MessagePackWriter
+  commentId: T:AlgoSdk.MessagePack.MessagePackWriter
+  parent: AlgoSdk.MessagePack
+  name: MessagePackWriter
+  nameWithType: MessagePackWriter
+  fullName: AlgoSdk.MessagePack.MessagePackWriter
+- uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+  commentId: M:AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+  name: Serialize(MessagePackWriter, T)
+  nameWithType: KeywordByteEnumFormatter<T>.Serialize(MessagePackWriter, T)
+  fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter<T>.Serialize(AlgoSdk.MessagePack.MessagePackWriter, T)
+  nameWithType.vb: KeywordByteEnumFormatter(Of T).Serialize(MessagePackWriter, T)
+  fullName.vb: AlgoSdk.Formatters.KeywordByteEnumFormatter(Of T).Serialize(AlgoSdk.MessagePack.MessagePackWriter, T)
+  spec.csharp:
+  - uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+    name: Serialize
+    nameWithType: KeywordByteEnumFormatter<T>.Serialize
+    fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter<T>.Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackWriter
+    name: MessagePackWriter
+    nameWithType: MessagePackWriter
+    fullName: AlgoSdk.MessagePack.MessagePackWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+    name: Serialize
+    nameWithType: KeywordByteEnumFormatter(Of T).Serialize
+    fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter(Of T).Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackWriter
+    name: MessagePackWriter
+    nameWithType: MessagePackWriter
+    fullName: AlgoSdk.MessagePack.MessagePackWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

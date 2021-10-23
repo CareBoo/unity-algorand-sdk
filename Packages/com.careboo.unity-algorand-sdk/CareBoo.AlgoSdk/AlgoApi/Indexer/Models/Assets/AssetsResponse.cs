@@ -6,15 +6,16 @@ namespace AlgoSdk
     [AlgoApiObject]
     public struct AssetsResponse
         : IEquatable<AssetsResponse>
+        , IPaginatedResponse
     {
         [AlgoApiField("assets", null)]
-        public Asset[] Assets;
+        public Asset[] Assets { get; set; }
 
         [AlgoApiField("current-round", null)]
-        public ulong CurrentRound;
+        public ulong CurrentRound { get; set; }
 
         [AlgoApiField("next-token", null)]
-        public FixedString128Bytes NextToken;
+        public FixedString128Bytes NextToken { get; set; }
 
         public bool Equals(AssetsResponse other)
         {
