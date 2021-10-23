@@ -1,0 +1,1181 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct AlgodClient
+   | Unity Algorand SDK </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct AlgodClient
+   | Unity Algorand SDK ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AlgoSdk.AlgodClient">
+  
+  
+  <h1 id="AlgoSdk_AlgodClient" data-uid="AlgoSdk.AlgodClient" class="text-break">Struct AlgodClient
+  </h1>
+  <div class="markdown level0 summary"><p>A client for accessing the algod service</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="AlgoSdk.IAlgodClient.html">IAlgodClient</a></div>
+    <div><a class="xref" href="AlgoSdk.IAlgoApiClient.html">IAlgoApiClient</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="AlgoSdk_AlgodClient_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct AlgodClient : IAlgodClient, IAlgoApiClient</code></pre>
+  </div>
+  <h5 id="AlgoSdk_AlgodClient_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>The algod service is responsible for handling information
+required to create and send transactions.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="AlgoSdk_AlgodClient__ctor_" data-uid="AlgoSdk.AlgodClient.#ctor*"></a>
+  <h4 id="AlgoSdk_AlgodClient__ctor_System_String_System_String_" data-uid="AlgoSdk.AlgodClient.#ctor(System.String,System.String)">AlgodClient(String, String)</h4>
+  <div class="markdown level1 summary"><p>Create a new algod client</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgodClient(string address, string token = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>url of the algod service, including the port, e.g. <code>&quot;http://localhost:4001&quot;</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">token</span></td>
+        <td><p>token used in authenticating to the algod service</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="AlgoSdk_AlgodClient_Address_" data-uid="AlgoSdk.AlgodClient.Address*"></a>
+  <h4 id="AlgoSdk_AlgodClient_Address" data-uid="AlgoSdk.AlgodClient.Address">Address</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string Address { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_Token_" data-uid="AlgoSdk.AlgodClient.Token*"></a>
+  <h4 id="AlgoSdk_AlgodClient_Token" data-uid="AlgoSdk.AlgodClient.Token">Token</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string Token { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_TokenHeader_" data-uid="AlgoSdk.AlgodClient.TokenHeader*"></a>
+  <h4 id="AlgoSdk_AlgodClient_TokenHeader" data-uid="AlgoSdk.AlgodClient.TokenHeader">TokenHeader</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string TokenHeader { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="AlgoSdk_AlgodClient_AbortCatchup_" data-uid="AlgoSdk.AlgodClient.AbortCatchup*"></a>
+  <h4 id="AlgoSdk_AlgodClient_AbortCatchup_System_String_" data-uid="AlgoSdk.AlgodClient.AbortCatchup(System.String)">AbortCatchup(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;CatchupMessage&gt;&gt; AbortCatchup(string catchpoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">catchpoint</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.CatchupMessage.html">CatchupMessage</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetAccountInformation_" data-uid="AlgoSdk.AlgodClient.GetAccountInformation*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetAccountInformation_AlgoSdk_Address_" data-uid="AlgoSdk.AlgodClient.GetAccountInformation(AlgoSdk.Address)">GetAccountInformation(Address)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;Account&gt;&gt; GetAccountInformation(Address accountAddress)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">accountAddress</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.Account.html">Account</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetApplication_" data-uid="AlgoSdk.AlgodClient.GetApplication*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetApplication_System_UInt64_" data-uid="AlgoSdk.AlgodClient.GetApplication(System.UInt64)">GetApplication(UInt64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;Application&gt;&gt; GetApplication(ulong applicationId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.Application.html">Application</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetAsset_" data-uid="AlgoSdk.AlgodClient.GetAsset*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetAsset_System_UInt64_" data-uid="AlgoSdk.AlgodClient.GetAsset(System.UInt64)">GetAsset(UInt64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;Asset&gt;&gt; GetAsset(ulong assetId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">assetId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.Asset.html">Asset</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetBlock_" data-uid="AlgoSdk.AlgodClient.GetBlock*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetBlock_System_UInt64_" data-uid="AlgoSdk.AlgodClient.GetBlock(System.UInt64)">GetBlock(UInt64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;BlockResponse&gt;&gt; GetBlock(ulong round)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">round</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.BlockResponse.html">BlockResponse</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetCurrentStatus_" data-uid="AlgoSdk.AlgodClient.GetCurrentStatus*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetCurrentStatus" data-uid="AlgoSdk.AlgodClient.GetCurrentStatus">GetCurrentStatus()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;Status&gt;&gt; GetCurrentStatus()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.Status.html">Status</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetGenesisInformation_" data-uid="AlgoSdk.AlgodClient.GetGenesisInformation*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetGenesisInformation" data-uid="AlgoSdk.AlgodClient.GetGenesisInformation">GetGenesisInformation()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;AlgoApiObject&gt;&gt; GetGenesisInformation()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.AlgoApiObject.html">AlgoApiObject</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetHealth_" data-uid="AlgoSdk.AlgodClient.GetHealth*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetHealth" data-uid="AlgoSdk.AlgodClient.GetHealth">GetHealth()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&gt; GetHealth()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse.html">AlgoApiResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetLedgerSupply_" data-uid="AlgoSdk.AlgodClient.GetLedgerSupply*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetLedgerSupply" data-uid="AlgoSdk.AlgodClient.GetLedgerSupply">GetLedgerSupply()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;LedgerSupply&gt;&gt; GetLedgerSupply()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.LedgerSupply.html">LedgerSupply</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetMerkleProof_" data-uid="AlgoSdk.AlgodClient.GetMerkleProof*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetMerkleProof_System_UInt64_AlgoSdk_TransactionId_" data-uid="AlgoSdk.AlgodClient.GetMerkleProof(System.UInt64,AlgoSdk.TransactionId)">GetMerkleProof(UInt64, TransactionId)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;MerkleProof&gt;&gt; GetMerkleProof(ulong round, TransactionId txid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">round</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionId.html">TransactionId</a></td>
+        <td><span class="parametername">txid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.MerkleProof.html">MerkleProof</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetMetrics_" data-uid="AlgoSdk.AlgodClient.GetMetrics*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetMetrics" data-uid="AlgoSdk.AlgodClient.GetMetrics">GetMetrics()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&gt; GetMetrics()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse.html">AlgoApiResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetPendingTransaction_" data-uid="AlgoSdk.AlgodClient.GetPendingTransaction*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetPendingTransaction_AlgoSdk_TransactionId_" data-uid="AlgoSdk.AlgodClient.GetPendingTransaction(AlgoSdk.TransactionId)">GetPendingTransaction(TransactionId)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;PendingTransaction&gt;&gt; GetPendingTransaction(TransactionId txid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionId.html">TransactionId</a></td>
+        <td><span class="parametername">txid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.PendingTransaction.html">PendingTransaction</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetPendingTransactions_" data-uid="AlgoSdk.AlgodClient.GetPendingTransactions*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetPendingTransactions_System_UInt64_" data-uid="AlgoSdk.AlgodClient.GetPendingTransactions(System.UInt64)">GetPendingTransactions(UInt64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;PendingTransactions&gt;&gt; GetPendingTransactions(ulong max = 0UL)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">max</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.PendingTransactions.html">PendingTransactions</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetPendingTransactionsByAccount_" data-uid="AlgoSdk.AlgodClient.GetPendingTransactionsByAccount*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetPendingTransactionsByAccount_AlgoSdk_Address_System_UInt64_" data-uid="AlgoSdk.AlgodClient.GetPendingTransactionsByAccount(AlgoSdk.Address,System.UInt64)">GetPendingTransactionsByAccount(Address, UInt64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;PendingTransactions&gt;&gt; GetPendingTransactionsByAccount(Address accountAddress, ulong max = 0UL)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">accountAddress</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">max</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.PendingTransactions.html">PendingTransactions</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetStatusAfterWaitingForRound_" data-uid="AlgoSdk.AlgodClient.GetStatusAfterWaitingForRound*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetStatusAfterWaitingForRound_System_UInt64_" data-uid="AlgoSdk.AlgodClient.GetStatusAfterWaitingForRound(System.UInt64)">GetStatusAfterWaitingForRound(UInt64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;Status&gt;&gt; GetStatusAfterWaitingForRound(ulong round)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">round</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.Status.html">Status</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetSuggestedParams_" data-uid="AlgoSdk.AlgodClient.GetSuggestedParams*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetSuggestedParams" data-uid="AlgoSdk.AlgodClient.GetSuggestedParams">GetSuggestedParams()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;TransactionParams&gt;&gt; GetSuggestedParams()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetSwaggerSpec_" data-uid="AlgoSdk.AlgodClient.GetSwaggerSpec*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetSwaggerSpec" data-uid="AlgoSdk.AlgodClient.GetSwaggerSpec">GetSwaggerSpec()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;AlgoApiObject&gt;&gt; GetSwaggerSpec()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.AlgoApiObject.html">AlgoApiObject</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetVersions_" data-uid="AlgoSdk.AlgodClient.GetVersions*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetVersions" data-uid="AlgoSdk.AlgodClient.GetVersions">GetVersions()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;Version&gt;&gt; GetVersions()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.Version.html">Version</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_RegisterParticipationKeys_" data-uid="AlgoSdk.AlgodClient.RegisterParticipationKeys*"></a>
+  <h4 id="AlgoSdk_AlgodClient_RegisterParticipationKeys_System_String_System_UInt64_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_Boolean__" data-uid="AlgoSdk.AlgodClient.RegisterParticipationKeys(System.String,System.UInt64,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.Boolean})">RegisterParticipationKeys(String, UInt64, Optional&lt;UInt64&gt;, Optional&lt;Boolean&gt;, Optional&lt;Boolean&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;TransactionIdResponse&gt;&gt; RegisterParticipationKeys(string accountAddress, ulong fee = 1000UL, Optional&lt;ulong&gt; keyDilution = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; noWait = default(Optional&lt;bool&gt;), Optional&lt;bool&gt; roundLastValid = default(Optional&lt;bool&gt;))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">accountAddress</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">fee</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">keyDilution</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">noWait</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">roundLastValid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.TransactionIdResponse.html">TransactionIdResponse</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_SendTransaction_" data-uid="AlgoSdk.AlgodClient.SendTransaction*"></a>
+  <h4 id="AlgoSdk_AlgodClient_SendTransaction__1_AlgoSdk_Signed___0__" data-uid="AlgoSdk.AlgodClient.SendTransaction``1(AlgoSdk.Signed{``0})">SendTransaction&lt;T&gt;(Signed&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;TransactionIdResponse&gt;&gt; SendTransaction&lt;T&gt;(Signed&lt;T&gt; txn)
+    where T : struct, ITransaction, IEquatable&lt;T&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Signed-1.html">Signed</a>&lt;T&gt;</td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.TransactionIdResponse.html">TransactionIdResponse</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_ShutDown_" data-uid="AlgoSdk.AlgodClient.ShutDown*"></a>
+  <h4 id="AlgoSdk_AlgodClient_ShutDown_AlgoSdk_Optional_System_UInt64__" data-uid="AlgoSdk.AlgodClient.ShutDown(AlgoSdk.Optional{System.UInt64})">ShutDown(Optional&lt;UInt64&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&gt; ShutDown(Optional&lt;ulong&gt; timeout = default(Optional&lt;ulong&gt;))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">timeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse.html">AlgoApiResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_StartCatchup_" data-uid="AlgoSdk.AlgodClient.StartCatchup*"></a>
+  <h4 id="AlgoSdk_AlgodClient_StartCatchup_System_String_" data-uid="AlgoSdk.AlgodClient.StartCatchup(System.String)">StartCatchup(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;CatchupMessage&gt;&gt; StartCatchup(string catchpoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">catchpoint</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.CatchupMessage.html">CatchupMessage</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_TealCompile_" data-uid="AlgoSdk.AlgodClient.TealCompile*"></a>
+  <h4 id="AlgoSdk_AlgodClient_TealCompile_System_String_" data-uid="AlgoSdk.AlgodClient.TealCompile(System.String)">TealCompile(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;TealCompilationResult&gt;&gt; TealCompile(string source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.TealCompilationResult.html">TealCompilationResult</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_TealDryrun_" data-uid="AlgoSdk.AlgodClient.TealDryrun*"></a>
+  <h4 id="AlgoSdk_AlgodClient_TealDryrun_AlgoSdk_Optional_AlgoSdk_DryrunRequest__" data-uid="AlgoSdk.AlgodClient.TealDryrun(AlgoSdk.Optional{AlgoSdk.DryrunRequest})">TealDryrun(Optional&lt;DryrunRequest&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;DryrunResults&gt;&gt; TealDryrun(Optional&lt;DryrunRequest&gt; dryrunRequest = default(Optional&lt;DryrunRequest&gt;))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="AlgoSdk.DryrunRequest.html">DryrunRequest</a>&gt;</td>
+        <td><span class="parametername">dryrunRequest</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.DryrunResults.html">DryrunResults</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="AlgoSdk.IAlgodClient.html">IAlgodClient</a>
+  </div>
+  <div>
+      <a class="xref" href="AlgoSdk.IAlgoApiClient.html">IAlgoApiClient</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
