@@ -8,6 +8,9 @@ using UnityEngine;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// A public key for an Algorand account.
+    /// </summary>
     [AlgoApiFormatter(typeof(AddressFormatter))]
     [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
     public struct Address

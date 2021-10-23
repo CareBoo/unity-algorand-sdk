@@ -79,7 +79,7 @@ namespace AlgoSdk
         public async UniTask<AlgoApiResponse<PendingTransactions>> GetPendingTransactionsByAccount(Address accountAddress, ulong max = 0)
         {
             return await this
-                .Get($"/v2/accounts/{accountAddress}/transactions/pending?max={max}")
+                .Get($"/v2/accounts/{accountAddress}/transactions/pending?max={max}&format=msgpack")
                 .Send();
         }
 

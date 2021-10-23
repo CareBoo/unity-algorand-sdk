@@ -3,6 +3,9 @@ using AlgoSdk.Formatters;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// Role of an address for a transaction.
+    /// </summary>
     [AlgoApiFormatter(typeof(AddressRoleFormatter))]
     public enum AddressRole : byte
     {

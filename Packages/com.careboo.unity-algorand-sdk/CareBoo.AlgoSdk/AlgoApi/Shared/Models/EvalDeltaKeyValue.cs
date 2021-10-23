@@ -3,6 +3,9 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// EvalDeltaKeyValue
+    /// </summary>
     [AlgoApiObject]
     public struct EvalDeltaKeyValue
         : IEquatable<EvalDeltaKeyValue>

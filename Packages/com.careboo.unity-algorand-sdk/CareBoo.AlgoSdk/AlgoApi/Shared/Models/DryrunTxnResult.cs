@@ -3,6 +3,9 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// DryrunTxnResult contains any <see cref="LogicSig"/> or ApplicationCall program debug information and state updates from a dryrun.
+    /// </summary>
     [AlgoApiObject]
     public struct DryrunTxnResult
         : IEquatable<DryrunTxnResult>
@@ -13,6 +16,15 @@ namespace AlgoSdk
         [AlgoApiField("app-call-trace", null)]
         public DryrunState[] AppCallTrace;
 
+        /// <summary>
+        /// Execution cost of app call transaction
+        /// </summary>
+        [AlgoApiField("cost", null)]
+        public ulong Cost;
+
+        /// <summary>
+        /// Disassembled program line by line.
+        /// </summary>
         [AlgoApiField("disassembly", null)]
         public FixedString128Bytes[] Disassembly;
 
@@ -20,7 +32,7 @@ namespace AlgoSdk
         public EvalDeltaKeyValue[] GlobalDelta;
 
         [AlgoApiField("local-deltas", null)]
-        public ApplicationStateDelta[] LocalDeltas;
+        public AccountStateDelta[] LocalDeltas;
 
         [AlgoApiField("logic-sig-messages", null)]
         public FixedString128Bytes[] LogicSigMessages;

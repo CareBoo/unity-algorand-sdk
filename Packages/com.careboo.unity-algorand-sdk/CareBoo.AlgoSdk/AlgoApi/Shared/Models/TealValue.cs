@@ -5,6 +5,9 @@ using AlgoSdk.LowLevel;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// TEAL Value Type. Value 1 refers to bytes, value 2 refers to uint.
+    /// </summary>
     [AlgoApiFormatter(typeof(ByteEnumFormatter<TealValueType>))]
     public enum TealValueType : byte
     {
@@ -13,13 +16,27 @@ namespace AlgoSdk
         Uint = 2
     }
 
+    /// <summary>
+    /// Represents a TEAL value.
+    /// </summary>
     [StructLayout(LayoutKind.Explicit)]
     [AlgoApiFormatter(typeof(TealValueFormatter))]
     public struct TealValue
         : IEquatable<TealValue>
     {
+        /// <summary>
+        /// [tb] bytes value.
+        /// </summary>
         [FieldOffset(0)] TealBytes bytes;
+
+        /// <summary>
+        /// [ui] uint value.
+        /// </summary>
         [FieldOffset(0)] ulong uintValue;
+
+        /// <summary>
+        /// See <see cref="TealValueType"/>
+        /// </summary>
         [FieldOffset(64)] public TealValueType Type;
 
         public TealBytes Bytes

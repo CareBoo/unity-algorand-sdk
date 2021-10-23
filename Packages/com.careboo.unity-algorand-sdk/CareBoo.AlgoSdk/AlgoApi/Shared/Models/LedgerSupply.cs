@@ -2,6 +2,9 @@ using System;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// Supply represents the current supply of MicroAlgos in the system.
+    /// </summary>
     [AlgoApiObject]
     public struct LedgerSupply
         : IEquatable<LedgerSupply>

@@ -21,9 +21,15 @@ namespace AlgoSdk
         }
     }
 
+    /// <summary>
+    /// JSON information from <see cref="IAlgodClient.GetGenesisInformation"/>
+    /// </summary>
     [Serializable]
     public struct GenesisInformation
     {
+        /// <summary>
+        /// Genesis account allocations
+        /// </summary>
         public GenesisAccountAlloc[] alloc;
         public string fees;
         public string id;

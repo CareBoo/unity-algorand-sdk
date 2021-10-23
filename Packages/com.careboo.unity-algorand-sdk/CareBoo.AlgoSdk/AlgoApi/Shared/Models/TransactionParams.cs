@@ -5,7 +5,7 @@ namespace AlgoSdk
 {
     /// <summary>
     /// Params used for setting all transactions. Contains fee, genesis info, and round constraints.
-    /// Usually this is retrieved from <see cref="AlgodClient.GetSuggestedParams"/> then modified.
+    /// Usually this is retrieved from <see cref="IAlgodClient.GetSuggestedParams"/> then modified.
     /// </summary>
     [AlgoApiObject]
     public struct TransactionParams

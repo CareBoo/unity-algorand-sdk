@@ -2,13 +2,22 @@ using System;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// A transaction found in a <see cref="BlockResponse"/> from <see cref="IAlgodClient.GetBlock"/>.
+    /// </summary>
     [AlgoApiObject]
     public struct BlockTransaction
         : IEquatable<BlockTransaction>
     {
+        /// <summary>
+        /// The transaction.
+        /// </summary>
         [AlgoApiField("txn", "txn")]
         public Transaction Transaction;
 
+        /// <summary>
+        /// A crypto sig if the transaction was signed by one.
+        /// </summary>
         [AlgoApiField("sig", "sig")]
         public Sig Sig
         {
@@ -16,6 +25,9 @@ namespace AlgoSdk
             set => Transaction.Signature.Sig = value;
         }
 
+        /// <summary>
+        /// A multisig if the transaction was signed by one.
+        /// </summary>
         [AlgoApiField("msig", "msig")]
         public Multisig Multisig
         {
@@ -23,6 +35,9 @@ namespace AlgoSdk
             set => Transaction.Signature.Multisig = value;
         }
 
+        /// <summary>
+        /// A logic sig if the transaction was signed by one.
+        /// </summary>
         [AlgoApiField("lsig", "lsig")]
         public LogicSig LogicSig
         {
