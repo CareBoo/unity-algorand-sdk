@@ -4,12 +4,23 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// A client for accessing the kmd service
+    /// </summary>
+    /// <remarks>
+    /// The kmd service is responsible for managing keys and wallets
+    /// </remarks>
     public struct KmdClient : IKmdClient
     {
         readonly string address;
 
         readonly string token;
 
+        /// <summary>
+        /// Create a new kmd client
+        /// </summary>
+        /// <param name="address">url of the service, including the port, e.g. <c>"http://localhost:4001"</c></param>
+        /// <param name="token">token used in authenticating to the service</param>
         public KmdClient(string address, string token)
         {
             this.address = address.TrimEnd('/');
@@ -22,7 +33,7 @@ namespace AlgoSdk
 
         public string TokenHeader => "X-KMD-API-Token";
 
-        public async UniTask<AlgoApiResponse> GetSwaggerSpec()
+        public async UniTask<AlgoApiResponse<AlgoApiObject>> GetSwaggerSpec()
         {
             return await this
                 .Get("/swagger.json")
@@ -155,10 +166,10 @@ namespace AlgoSdk
         }
 
         public async UniTask<AlgoApiResponse<ImportMultisigResponse>> ImportMultisig(
-            byte version,
             Ed25519.PublicKey[] publicKeys,
             byte threshold,
-            FixedString128Bytes walletHandleToken
+            FixedString128Bytes walletHandleToken,
+            byte version = 1
         )
         {
             var request = new ImportMultisigRequest

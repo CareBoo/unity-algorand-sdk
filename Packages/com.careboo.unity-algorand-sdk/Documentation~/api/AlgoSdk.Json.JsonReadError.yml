@@ -1,0 +1,375 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.Json.JsonReadError
+  commentId: T:AlgoSdk.Json.JsonReadError
+  id: JsonReadError
+  parent: AlgoSdk.Json
+  children:
+  - AlgoSdk.Json.JsonReadError.IncorrectFormat
+  - AlgoSdk.Json.JsonReadError.IncorrectType
+  - AlgoSdk.Json.JsonReadError.None
+  - AlgoSdk.Json.JsonReadError.Overflow
+  - AlgoSdk.Json.JsonReadError.ParseError
+  - AlgoSdk.Json.JsonReadError.UnknownError
+  langs:
+  - csharp
+  - vb
+  name: JsonReadError
+  nameWithType: JsonReadError
+  fullName: AlgoSdk.Json.JsonReadError
+  type: Enum
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReadError.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: JsonReadError
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReadError.cs
+    startLine: 4
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public enum JsonReadError
+    content.vb: Public Enum JsonReadError
+  extensionMethods:
+  - AlgoSdk.Json.JsonReadError.AlgoSdk.Json.JsonReadErrorExtensions.ThrowIfError(System.Char,System.Int32)
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: AlgoSdk.Json.JsonReadError.None
+  commentId: F:AlgoSdk.Json.JsonReadError.None
+  id: None
+  parent: AlgoSdk.Json.JsonReadError
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: JsonReadError.None
+  fullName: AlgoSdk.Json.JsonReadError.None
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReadError.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: None
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReadError.cs
+    startLine: 6
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: None = 0
+    return:
+      type: AlgoSdk.Json.JsonReadError
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.Json.JsonReadError.UnknownError
+  commentId: F:AlgoSdk.Json.JsonReadError.UnknownError
+  id: UnknownError
+  parent: AlgoSdk.Json.JsonReadError
+  langs:
+  - csharp
+  - vb
+  name: UnknownError
+  nameWithType: JsonReadError.UnknownError
+  fullName: AlgoSdk.Json.JsonReadError.UnknownError
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReadError.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: UnknownError
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReadError.cs
+    startLine: 7
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: UnknownError = 1
+    return:
+      type: AlgoSdk.Json.JsonReadError
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.Json.JsonReadError.ParseError
+  commentId: F:AlgoSdk.Json.JsonReadError.ParseError
+  id: ParseError
+  parent: AlgoSdk.Json.JsonReadError
+  langs:
+  - csharp
+  - vb
+  name: ParseError
+  nameWithType: JsonReadError.ParseError
+  fullName: AlgoSdk.Json.JsonReadError.ParseError
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReadError.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ParseError
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReadError.cs
+    startLine: 8
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: ParseError = 2
+    return:
+      type: AlgoSdk.Json.JsonReadError
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.Json.JsonReadError.IncorrectFormat
+  commentId: F:AlgoSdk.Json.JsonReadError.IncorrectFormat
+  id: IncorrectFormat
+  parent: AlgoSdk.Json.JsonReadError
+  langs:
+  - csharp
+  - vb
+  name: IncorrectFormat
+  nameWithType: JsonReadError.IncorrectFormat
+  fullName: AlgoSdk.Json.JsonReadError.IncorrectFormat
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReadError.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: IncorrectFormat
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReadError.cs
+    startLine: 9
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: IncorrectFormat = 3
+    return:
+      type: AlgoSdk.Json.JsonReadError
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.Json.JsonReadError.IncorrectType
+  commentId: F:AlgoSdk.Json.JsonReadError.IncorrectType
+  id: IncorrectType
+  parent: AlgoSdk.Json.JsonReadError
+  langs:
+  - csharp
+  - vb
+  name: IncorrectType
+  nameWithType: JsonReadError.IncorrectType
+  fullName: AlgoSdk.Json.JsonReadError.IncorrectType
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReadError.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: IncorrectType
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReadError.cs
+    startLine: 10
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: IncorrectType = 4
+    return:
+      type: AlgoSdk.Json.JsonReadError
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.Json.JsonReadError.Overflow
+  commentId: F:AlgoSdk.Json.JsonReadError.Overflow
+  id: Overflow
+  parent: AlgoSdk.Json.JsonReadError
+  langs:
+  - csharp
+  - vb
+  name: Overflow
+  nameWithType: JsonReadError.Overflow
+  fullName: AlgoSdk.Json.JsonReadError.Overflow
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReadError.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Overflow
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReadError.cs
+    startLine: 11
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: Overflow = 5
+    return:
+      type: AlgoSdk.Json.JsonReadError
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: AlgoSdk.Json
+  commentId: N:AlgoSdk.Json
+  name: AlgoSdk.Json
+  nameWithType: AlgoSdk.Json
+  fullName: AlgoSdk.Json
+- uid: AlgoSdk.Json.JsonReadError.AlgoSdk.Json.JsonReadErrorExtensions.ThrowIfError(System.Char,System.Int32)
+  commentId: M:AlgoSdk.Json.JsonReadErrorExtensions.ThrowIfError(AlgoSdk.Json.JsonReadError,System.Char,System.Int32)
+  parent: AlgoSdk.Json.JsonReadErrorExtensions
+  definition: AlgoSdk.Json.JsonReadErrorExtensions.ThrowIfError(AlgoSdk.Json.JsonReadError,System.Char,System.Int32)
+  name: ThrowIfError(Char, Int32)
+  nameWithType: JsonReadErrorExtensions.ThrowIfError(Char, Int32)
+  fullName: AlgoSdk.Json.JsonReadErrorExtensions.ThrowIfError(System.Char, System.Int32)
+  spec.csharp:
+  - uid: AlgoSdk.Json.JsonReadErrorExtensions.ThrowIfError(System.Char,System.Int32)
+    name: ThrowIfError
+    nameWithType: JsonReadErrorExtensions.ThrowIfError
+    fullName: AlgoSdk.Json.JsonReadErrorExtensions.ThrowIfError
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.Json.JsonReadErrorExtensions.ThrowIfError(System.Char,System.Int32)
+    name: ThrowIfError
+    nameWithType: JsonReadErrorExtensions.ThrowIfError
+    fullName: AlgoSdk.Json.JsonReadErrorExtensions.ThrowIfError
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Json.JsonReadErrorExtensions.ThrowIfError(AlgoSdk.Json.JsonReadError,System.Char,System.Int32)
+  commentId: M:AlgoSdk.Json.JsonReadErrorExtensions.ThrowIfError(AlgoSdk.Json.JsonReadError,System.Char,System.Int32)
+  isExternal: true
+  name: ThrowIfError(JsonReadError, Char, Int32)
+  nameWithType: JsonReadErrorExtensions.ThrowIfError(JsonReadError, Char, Int32)
+  fullName: AlgoSdk.Json.JsonReadErrorExtensions.ThrowIfError(AlgoSdk.Json.JsonReadError, System.Char, System.Int32)
+  spec.csharp:
+  - uid: AlgoSdk.Json.JsonReadErrorExtensions.ThrowIfError(AlgoSdk.Json.JsonReadError,System.Char,System.Int32)
+    name: ThrowIfError
+    nameWithType: JsonReadErrorExtensions.ThrowIfError
+    fullName: AlgoSdk.Json.JsonReadErrorExtensions.ThrowIfError
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonReadError
+    name: JsonReadError
+    nameWithType: JsonReadError
+    fullName: AlgoSdk.Json.JsonReadError
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.Json.JsonReadErrorExtensions.ThrowIfError(AlgoSdk.Json.JsonReadError,System.Char,System.Int32)
+    name: ThrowIfError
+    nameWithType: JsonReadErrorExtensions.ThrowIfError
+    fullName: AlgoSdk.Json.JsonReadErrorExtensions.ThrowIfError
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonReadError
+    name: JsonReadError
+    nameWithType: JsonReadError
+    fullName: AlgoSdk.Json.JsonReadError
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Json.JsonReadErrorExtensions
+  commentId: T:AlgoSdk.Json.JsonReadErrorExtensions
+  parent: AlgoSdk.Json
+  name: JsonReadErrorExtensions
+  nameWithType: JsonReadErrorExtensions
+  fullName: AlgoSdk.Json.JsonReadErrorExtensions
+- uid: AlgoSdk.Json.JsonReadError
+  commentId: T:AlgoSdk.Json.JsonReadError
+  parent: AlgoSdk.Json
+  name: JsonReadError
+  nameWithType: JsonReadError
+  fullName: AlgoSdk.Json.JsonReadError

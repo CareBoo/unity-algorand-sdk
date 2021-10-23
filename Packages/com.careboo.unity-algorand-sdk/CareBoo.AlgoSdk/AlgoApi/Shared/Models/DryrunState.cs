@@ -3,18 +3,34 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// Stores the TEAL eval step data
+    /// </summary>
     [AlgoApiObject]
     public struct DryrunState
         : IEquatable<DryrunState>
     {
+        /// <summary>
+        /// Evaluation error if any
+        /// </summary>
         [AlgoApiField("error", null)]
         public FixedString128Bytes Error;
+
+        /// <summary>
+        /// Line number
+        /// </summary>
         [AlgoApiField("line", null)]
         public ulong Line;
+
+        /// <summary>
+        /// Program counter
+        /// </summary>
         [AlgoApiField("pc", null)]
         public ulong ProgramCounter;
+
         [AlgoApiField("scratch", null)]
         public TealValue[] Scratch;
+
         [AlgoApiField("stack", null)]
         public TealValue[] Stack;
 

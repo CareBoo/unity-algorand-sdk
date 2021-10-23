@@ -3,7 +3,7 @@ using AlgoSdk.Json;
 using AlgoSdk.MessagePack;
 using Unity.Collections;
 
-namespace AlgoSdk.MsgPack.Formatters
+namespace AlgoSdk.Formatters
 {
     public sealed class TealValueFormatter : IAlgoApiFormatter<TealValue>
     {

@@ -1,0 +1,108 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.IPaginatedResponse
+  commentId: T:AlgoSdk.IPaginatedResponse
+  id: IPaginatedResponse
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.IPaginatedResponse.NextToken
+  langs:
+  - csharp
+  - vb
+  name: IPaginatedResponse
+  nameWithType: IPaginatedResponse
+  fullName: AlgoSdk.IPaginatedResponse
+  type: Interface
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Indexer/Models/IIndexerResponse.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: IPaginatedResponse
+    path: ../CareBoo.AlgoSdk/AlgoApi/Indexer/Models/IIndexerResponse.cs
+    startLine: 12
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: 'public interface IPaginatedResponse : IIndexerResponse'
+    content.vb: >-
+      Public Interface IPaginatedResponse
+          Inherits IIndexerResponse
+  inheritedMembers:
+  - AlgoSdk.IIndexerResponse.CurrentRound
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: AlgoSdk.IPaginatedResponse.NextToken
+  commentId: P:AlgoSdk.IPaginatedResponse.NextToken
+  id: NextToken
+  parent: AlgoSdk.IPaginatedResponse
+  langs:
+  - csharp
+  - vb
+  name: NextToken
+  nameWithType: IPaginatedResponse.NextToken
+  fullName: AlgoSdk.IPaginatedResponse.NextToken
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Indexer/Models/IIndexerResponse.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: NextToken
+    path: ../CareBoo.AlgoSdk/AlgoApi/Indexer/Models/IIndexerResponse.cs
+    startLine: 19
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  summary: "\nUsed for pagination, when making another request provide this token with the\nnext parameter.\n"
+  example: []
+  syntax:
+    content: FixedString128Bytes NextToken { get; }
+    parameters: []
+    return:
+      type: Unity.Collections.FixedString128Bytes
+    content.vb: ReadOnly Property NextToken As FixedString128Bytes
+  overload: AlgoSdk.IPaginatedResponse.NextToken*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: AlgoSdk.IIndexerResponse.CurrentRound
+  commentId: P:AlgoSdk.IIndexerResponse.CurrentRound
+  parent: AlgoSdk.IIndexerResponse
+  name: CurrentRound
+  nameWithType: IIndexerResponse.CurrentRound
+  fullName: AlgoSdk.IIndexerResponse.CurrentRound
+- uid: AlgoSdk.IIndexerResponse
+  commentId: T:AlgoSdk.IIndexerResponse
+  parent: AlgoSdk
+  name: IIndexerResponse
+  nameWithType: IIndexerResponse
+  fullName: AlgoSdk.IIndexerResponse
+- uid: AlgoSdk.IPaginatedResponse.NextToken*
+  commentId: Overload:AlgoSdk.IPaginatedResponse.NextToken
+  name: NextToken
+  nameWithType: IPaginatedResponse.NextToken
+  fullName: AlgoSdk.IPaginatedResponse.NextToken
+- uid: Unity.Collections.FixedString128Bytes
+  commentId: T:Unity.Collections.FixedString128Bytes
+  parent: Unity.Collections
+  name: FixedString128Bytes
+  nameWithType: FixedString128Bytes
+  fullName: Unity.Collections.FixedString128Bytes
+- uid: Unity.Collections
+  commentId: N:Unity.Collections
+  name: Unity.Collections
+  nameWithType: Unity.Collections
+  fullName: Unity.Collections

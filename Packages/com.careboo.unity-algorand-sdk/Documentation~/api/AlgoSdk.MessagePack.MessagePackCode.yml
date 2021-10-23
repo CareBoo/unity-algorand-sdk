@@ -1,0 +1,1881 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.MessagePack.MessagePackCode
+  commentId: T:AlgoSdk.MessagePack.MessagePackCode
+  id: MessagePackCode
+  parent: AlgoSdk.MessagePack
+  children:
+  - AlgoSdk.MessagePack.MessagePackCode.Array16
+  - AlgoSdk.MessagePack.MessagePackCode.Array32
+  - AlgoSdk.MessagePack.MessagePackCode.Bin16
+  - AlgoSdk.MessagePack.MessagePackCode.Bin32
+  - AlgoSdk.MessagePack.MessagePackCode.Bin8
+  - AlgoSdk.MessagePack.MessagePackCode.Ext16
+  - AlgoSdk.MessagePack.MessagePackCode.Ext32
+  - AlgoSdk.MessagePack.MessagePackCode.Ext8
+  - AlgoSdk.MessagePack.MessagePackCode.False
+  - AlgoSdk.MessagePack.MessagePackCode.FixExt1
+  - AlgoSdk.MessagePack.MessagePackCode.FixExt16
+  - AlgoSdk.MessagePack.MessagePackCode.FixExt2
+  - AlgoSdk.MessagePack.MessagePackCode.FixExt4
+  - AlgoSdk.MessagePack.MessagePackCode.FixExt8
+  - AlgoSdk.MessagePack.MessagePackCode.Float32
+  - AlgoSdk.MessagePack.MessagePackCode.Float64
+  - AlgoSdk.MessagePack.MessagePackCode.Int16
+  - AlgoSdk.MessagePack.MessagePackCode.Int32
+  - AlgoSdk.MessagePack.MessagePackCode.Int64
+  - AlgoSdk.MessagePack.MessagePackCode.Int8
+  - AlgoSdk.MessagePack.MessagePackCode.Map16
+  - AlgoSdk.MessagePack.MessagePackCode.Map32
+  - AlgoSdk.MessagePack.MessagePackCode.MaxFixArray
+  - AlgoSdk.MessagePack.MessagePackCode.MaxFixInt
+  - AlgoSdk.MessagePack.MessagePackCode.MaxFixMap
+  - AlgoSdk.MessagePack.MessagePackCode.MaxFixStr
+  - AlgoSdk.MessagePack.MessagePackCode.MaxNegativeFixInt
+  - AlgoSdk.MessagePack.MessagePackCode.MinFixArray
+  - AlgoSdk.MessagePack.MessagePackCode.MinFixInt
+  - AlgoSdk.MessagePack.MessagePackCode.MinFixMap
+  - AlgoSdk.MessagePack.MessagePackCode.MinFixStr
+  - AlgoSdk.MessagePack.MessagePackCode.MinNegativeFixInt
+  - AlgoSdk.MessagePack.MessagePackCode.NeverUsed
+  - AlgoSdk.MessagePack.MessagePackCode.Nil
+  - AlgoSdk.MessagePack.MessagePackCode.Str16
+  - AlgoSdk.MessagePack.MessagePackCode.Str32
+  - AlgoSdk.MessagePack.MessagePackCode.Str8
+  - AlgoSdk.MessagePack.MessagePackCode.ToFormatName(System.Byte)
+  - AlgoSdk.MessagePack.MessagePackCode.ToMessagePackType(System.Byte)
+  - AlgoSdk.MessagePack.MessagePackCode.True
+  - AlgoSdk.MessagePack.MessagePackCode.UInt16
+  - AlgoSdk.MessagePack.MessagePackCode.UInt32
+  - AlgoSdk.MessagePack.MessagePackCode.UInt64
+  - AlgoSdk.MessagePack.MessagePackCode.UInt8
+  langs:
+  - csharp
+  - vb
+  name: MessagePackCode
+  nameWithType: MessagePackCode
+  fullName: AlgoSdk.MessagePack.MessagePackCode
+  type: Class
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: MessagePackCode
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 20
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public static class MessagePackCode
+    content.vb: Public Module MessagePackCode
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: AlgoSdk.MessagePack.MessagePackCode.MinFixInt
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.MinFixInt
+  id: MinFixInt
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: MinFixInt
+  nameWithType: MessagePackCode.MinFixInt
+  fullName: AlgoSdk.MessagePack.MessagePackCode.MinFixInt
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: MinFixInt
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 22
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte MinFixInt = 0
+    return:
+      type: System.Byte
+    content.vb: Public Const MinFixInt As Byte = 0
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.MaxFixInt
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.MaxFixInt
+  id: MaxFixInt
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: MaxFixInt
+  nameWithType: MessagePackCode.MaxFixInt
+  fullName: AlgoSdk.MessagePack.MessagePackCode.MaxFixInt
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: MaxFixInt
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 23
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte MaxFixInt = 127
+    return:
+      type: System.Byte
+    content.vb: Public Const MaxFixInt As Byte = 127
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.MinFixMap
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.MinFixMap
+  id: MinFixMap
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: MinFixMap
+  nameWithType: MessagePackCode.MinFixMap
+  fullName: AlgoSdk.MessagePack.MessagePackCode.MinFixMap
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: MinFixMap
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 24
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte MinFixMap = 128
+    return:
+      type: System.Byte
+    content.vb: Public Const MinFixMap As Byte = 128
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.MaxFixMap
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.MaxFixMap
+  id: MaxFixMap
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: MaxFixMap
+  nameWithType: MessagePackCode.MaxFixMap
+  fullName: AlgoSdk.MessagePack.MessagePackCode.MaxFixMap
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: MaxFixMap
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 25
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte MaxFixMap = 143
+    return:
+      type: System.Byte
+    content.vb: Public Const MaxFixMap As Byte = 143
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.MinFixArray
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.MinFixArray
+  id: MinFixArray
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: MinFixArray
+  nameWithType: MessagePackCode.MinFixArray
+  fullName: AlgoSdk.MessagePack.MessagePackCode.MinFixArray
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: MinFixArray
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 26
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte MinFixArray = 144
+    return:
+      type: System.Byte
+    content.vb: Public Const MinFixArray As Byte = 144
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.MaxFixArray
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.MaxFixArray
+  id: MaxFixArray
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: MaxFixArray
+  nameWithType: MessagePackCode.MaxFixArray
+  fullName: AlgoSdk.MessagePack.MessagePackCode.MaxFixArray
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: MaxFixArray
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 27
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte MaxFixArray = 159
+    return:
+      type: System.Byte
+    content.vb: Public Const MaxFixArray As Byte = 159
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.MinFixStr
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.MinFixStr
+  id: MinFixStr
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: MinFixStr
+  nameWithType: MessagePackCode.MinFixStr
+  fullName: AlgoSdk.MessagePack.MessagePackCode.MinFixStr
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: MinFixStr
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 28
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte MinFixStr = 160
+    return:
+      type: System.Byte
+    content.vb: Public Const MinFixStr As Byte = 160
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.MaxFixStr
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.MaxFixStr
+  id: MaxFixStr
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: MaxFixStr
+  nameWithType: MessagePackCode.MaxFixStr
+  fullName: AlgoSdk.MessagePack.MessagePackCode.MaxFixStr
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: MaxFixStr
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 29
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte MaxFixStr = 191
+    return:
+      type: System.Byte
+    content.vb: Public Const MaxFixStr As Byte = 191
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.Nil
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.Nil
+  id: Nil
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: Nil
+  nameWithType: MessagePackCode.Nil
+  fullName: AlgoSdk.MessagePack.MessagePackCode.Nil
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Nil
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 30
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte Nil = 192
+    return:
+      type: System.Byte
+    content.vb: Public Const Nil As Byte = 192
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.NeverUsed
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.NeverUsed
+  id: NeverUsed
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: NeverUsed
+  nameWithType: MessagePackCode.NeverUsed
+  fullName: AlgoSdk.MessagePack.MessagePackCode.NeverUsed
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: NeverUsed
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 31
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte NeverUsed = 193
+    return:
+      type: System.Byte
+    content.vb: Public Const NeverUsed As Byte = 193
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.False
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.False
+  id: "False"
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: "False"
+  nameWithType: MessagePackCode.False
+  fullName: AlgoSdk.MessagePack.MessagePackCode.False
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: "False"
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 32
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte False = 194
+    return:
+      type: System.Byte
+    content.vb: Public Const False As Byte = 194
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.True
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.True
+  id: "True"
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: "True"
+  nameWithType: MessagePackCode.True
+  fullName: AlgoSdk.MessagePack.MessagePackCode.True
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: "True"
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 33
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte True = 195
+    return:
+      type: System.Byte
+    content.vb: Public Const True As Byte = 195
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.Bin8
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.Bin8
+  id: Bin8
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: Bin8
+  nameWithType: MessagePackCode.Bin8
+  fullName: AlgoSdk.MessagePack.MessagePackCode.Bin8
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Bin8
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 34
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte Bin8 = 196
+    return:
+      type: System.Byte
+    content.vb: Public Const Bin8 As Byte = 196
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.Bin16
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.Bin16
+  id: Bin16
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: Bin16
+  nameWithType: MessagePackCode.Bin16
+  fullName: AlgoSdk.MessagePack.MessagePackCode.Bin16
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Bin16
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 35
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte Bin16 = 197
+    return:
+      type: System.Byte
+    content.vb: Public Const Bin16 As Byte = 197
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.Bin32
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.Bin32
+  id: Bin32
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: Bin32
+  nameWithType: MessagePackCode.Bin32
+  fullName: AlgoSdk.MessagePack.MessagePackCode.Bin32
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Bin32
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 36
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte Bin32 = 198
+    return:
+      type: System.Byte
+    content.vb: Public Const Bin32 As Byte = 198
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.Ext8
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.Ext8
+  id: Ext8
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: Ext8
+  nameWithType: MessagePackCode.Ext8
+  fullName: AlgoSdk.MessagePack.MessagePackCode.Ext8
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Ext8
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 37
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte Ext8 = 199
+    return:
+      type: System.Byte
+    content.vb: Public Const Ext8 As Byte = 199
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.Ext16
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.Ext16
+  id: Ext16
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: Ext16
+  nameWithType: MessagePackCode.Ext16
+  fullName: AlgoSdk.MessagePack.MessagePackCode.Ext16
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Ext16
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 38
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte Ext16 = 200
+    return:
+      type: System.Byte
+    content.vb: Public Const Ext16 As Byte = 200
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.Ext32
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.Ext32
+  id: Ext32
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: Ext32
+  nameWithType: MessagePackCode.Ext32
+  fullName: AlgoSdk.MessagePack.MessagePackCode.Ext32
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Ext32
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 39
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte Ext32 = 201
+    return:
+      type: System.Byte
+    content.vb: Public Const Ext32 As Byte = 201
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.Float32
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.Float32
+  id: Float32
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: Float32
+  nameWithType: MessagePackCode.Float32
+  fullName: AlgoSdk.MessagePack.MessagePackCode.Float32
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Float32
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 40
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte Float32 = 202
+    return:
+      type: System.Byte
+    content.vb: Public Const Float32 As Byte = 202
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.Float64
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.Float64
+  id: Float64
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: Float64
+  nameWithType: MessagePackCode.Float64
+  fullName: AlgoSdk.MessagePack.MessagePackCode.Float64
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Float64
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 41
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte Float64 = 203
+    return:
+      type: System.Byte
+    content.vb: Public Const Float64 As Byte = 203
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.UInt8
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.UInt8
+  id: UInt8
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: UInt8
+  nameWithType: MessagePackCode.UInt8
+  fullName: AlgoSdk.MessagePack.MessagePackCode.UInt8
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: UInt8
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 42
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte UInt8 = 204
+    return:
+      type: System.Byte
+    content.vb: Public Const UInt8 As Byte = 204
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.UInt16
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.UInt16
+  id: UInt16
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: UInt16
+  nameWithType: MessagePackCode.UInt16
+  fullName: AlgoSdk.MessagePack.MessagePackCode.UInt16
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: UInt16
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 43
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte UInt16 = 205
+    return:
+      type: System.Byte
+    content.vb: Public Const UInt16 As Byte = 205
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.UInt32
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.UInt32
+  id: UInt32
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: UInt32
+  nameWithType: MessagePackCode.UInt32
+  fullName: AlgoSdk.MessagePack.MessagePackCode.UInt32
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: UInt32
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 44
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte UInt32 = 206
+    return:
+      type: System.Byte
+    content.vb: Public Const UInt32 As Byte = 206
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.UInt64
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.UInt64
+  id: UInt64
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: UInt64
+  nameWithType: MessagePackCode.UInt64
+  fullName: AlgoSdk.MessagePack.MessagePackCode.UInt64
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: UInt64
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 45
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte UInt64 = 207
+    return:
+      type: System.Byte
+    content.vb: Public Const UInt64 As Byte = 207
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.Int8
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.Int8
+  id: Int8
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: Int8
+  nameWithType: MessagePackCode.Int8
+  fullName: AlgoSdk.MessagePack.MessagePackCode.Int8
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Int8
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 46
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte Int8 = 208
+    return:
+      type: System.Byte
+    content.vb: Public Const Int8 As Byte = 208
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.Int16
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.Int16
+  id: Int16
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: Int16
+  nameWithType: MessagePackCode.Int16
+  fullName: AlgoSdk.MessagePack.MessagePackCode.Int16
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Int16
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 47
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte Int16 = 209
+    return:
+      type: System.Byte
+    content.vb: Public Const Int16 As Byte = 209
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.Int32
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.Int32
+  id: Int32
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: Int32
+  nameWithType: MessagePackCode.Int32
+  fullName: AlgoSdk.MessagePack.MessagePackCode.Int32
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Int32
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 48
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte Int32 = 210
+    return:
+      type: System.Byte
+    content.vb: Public Const Int32 As Byte = 210
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.Int64
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.Int64
+  id: Int64
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: Int64
+  nameWithType: MessagePackCode.Int64
+  fullName: AlgoSdk.MessagePack.MessagePackCode.Int64
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Int64
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 49
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte Int64 = 211
+    return:
+      type: System.Byte
+    content.vb: Public Const Int64 As Byte = 211
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.FixExt1
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.FixExt1
+  id: FixExt1
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: FixExt1
+  nameWithType: MessagePackCode.FixExt1
+  fullName: AlgoSdk.MessagePack.MessagePackCode.FixExt1
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: FixExt1
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 50
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte FixExt1 = 212
+    return:
+      type: System.Byte
+    content.vb: Public Const FixExt1 As Byte = 212
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.FixExt2
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.FixExt2
+  id: FixExt2
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: FixExt2
+  nameWithType: MessagePackCode.FixExt2
+  fullName: AlgoSdk.MessagePack.MessagePackCode.FixExt2
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: FixExt2
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 51
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte FixExt2 = 213
+    return:
+      type: System.Byte
+    content.vb: Public Const FixExt2 As Byte = 213
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.FixExt4
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.FixExt4
+  id: FixExt4
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: FixExt4
+  nameWithType: MessagePackCode.FixExt4
+  fullName: AlgoSdk.MessagePack.MessagePackCode.FixExt4
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: FixExt4
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 52
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte FixExt4 = 214
+    return:
+      type: System.Byte
+    content.vb: Public Const FixExt4 As Byte = 214
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.FixExt8
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.FixExt8
+  id: FixExt8
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: FixExt8
+  nameWithType: MessagePackCode.FixExt8
+  fullName: AlgoSdk.MessagePack.MessagePackCode.FixExt8
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: FixExt8
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 53
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte FixExt8 = 215
+    return:
+      type: System.Byte
+    content.vb: Public Const FixExt8 As Byte = 215
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.FixExt16
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.FixExt16
+  id: FixExt16
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: FixExt16
+  nameWithType: MessagePackCode.FixExt16
+  fullName: AlgoSdk.MessagePack.MessagePackCode.FixExt16
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: FixExt16
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 54
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte FixExt16 = 216
+    return:
+      type: System.Byte
+    content.vb: Public Const FixExt16 As Byte = 216
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.Str8
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.Str8
+  id: Str8
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: Str8
+  nameWithType: MessagePackCode.Str8
+  fullName: AlgoSdk.MessagePack.MessagePackCode.Str8
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Str8
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 55
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte Str8 = 217
+    return:
+      type: System.Byte
+    content.vb: Public Const Str8 As Byte = 217
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.Str16
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.Str16
+  id: Str16
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: Str16
+  nameWithType: MessagePackCode.Str16
+  fullName: AlgoSdk.MessagePack.MessagePackCode.Str16
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Str16
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 56
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte Str16 = 218
+    return:
+      type: System.Byte
+    content.vb: Public Const Str16 As Byte = 218
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.Str32
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.Str32
+  id: Str32
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: Str32
+  nameWithType: MessagePackCode.Str32
+  fullName: AlgoSdk.MessagePack.MessagePackCode.Str32
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Str32
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 57
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte Str32 = 219
+    return:
+      type: System.Byte
+    content.vb: Public Const Str32 As Byte = 219
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.Array16
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.Array16
+  id: Array16
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: Array16
+  nameWithType: MessagePackCode.Array16
+  fullName: AlgoSdk.MessagePack.MessagePackCode.Array16
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Array16
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 58
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte Array16 = 220
+    return:
+      type: System.Byte
+    content.vb: Public Const Array16 As Byte = 220
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.Array32
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.Array32
+  id: Array32
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: Array32
+  nameWithType: MessagePackCode.Array32
+  fullName: AlgoSdk.MessagePack.MessagePackCode.Array32
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Array32
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 59
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte Array32 = 221
+    return:
+      type: System.Byte
+    content.vb: Public Const Array32 As Byte = 221
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.Map16
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.Map16
+  id: Map16
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: Map16
+  nameWithType: MessagePackCode.Map16
+  fullName: AlgoSdk.MessagePack.MessagePackCode.Map16
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Map16
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 60
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte Map16 = 222
+    return:
+      type: System.Byte
+    content.vb: Public Const Map16 As Byte = 222
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.Map32
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.Map32
+  id: Map32
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: Map32
+  nameWithType: MessagePackCode.Map32
+  fullName: AlgoSdk.MessagePack.MessagePackCode.Map32
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Map32
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 61
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte Map32 = 223
+    return:
+      type: System.Byte
+    content.vb: Public Const Map32 As Byte = 223
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.MinNegativeFixInt
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.MinNegativeFixInt
+  id: MinNegativeFixInt
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: MinNegativeFixInt
+  nameWithType: MessagePackCode.MinNegativeFixInt
+  fullName: AlgoSdk.MessagePack.MessagePackCode.MinNegativeFixInt
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: MinNegativeFixInt
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 62
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte MinNegativeFixInt = 224
+    return:
+      type: System.Byte
+    content.vb: Public Const MinNegativeFixInt As Byte = 224
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.MaxNegativeFixInt
+  commentId: F:AlgoSdk.MessagePack.MessagePackCode.MaxNegativeFixInt
+  id: MaxNegativeFixInt
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: MaxNegativeFixInt
+  nameWithType: MessagePackCode.MaxNegativeFixInt
+  fullName: AlgoSdk.MessagePack.MessagePackCode.MaxNegativeFixInt
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: MaxNegativeFixInt
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 63
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public const byte MaxNegativeFixInt = 255
+    return:
+      type: System.Byte
+    content.vb: Public Const MaxNegativeFixInt As Byte = 255
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.MessagePack.MessagePackCode.ToMessagePackType(System.Byte)
+  commentId: M:AlgoSdk.MessagePack.MessagePackCode.ToMessagePackType(System.Byte)
+  id: ToMessagePackType(System.Byte)
+  isExtensionMethod: true
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: ToMessagePackType(Byte)
+  nameWithType: MessagePackCode.ToMessagePackType(Byte)
+  fullName: AlgoSdk.MessagePack.MessagePackCode.ToMessagePackType(System.Byte)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ToMessagePackType
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 168
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public static MessagePackType ToMessagePackType(this byte code)
+    parameters:
+    - id: code
+      type: System.Byte
+    return:
+      type: AlgoSdk.MessagePack.MessagePackType
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToMessagePackType(code As Byte) As MessagePackType
+  overload: AlgoSdk.MessagePack.MessagePackCode.ToMessagePackType*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: AlgoSdk.MessagePack.MessagePackCode.ToFormatName(System.Byte)
+  commentId: M:AlgoSdk.MessagePack.MessagePackCode.ToFormatName(System.Byte)
+  id: ToFormatName(System.Byte)
+  parent: AlgoSdk.MessagePack.MessagePackCode
+  langs:
+  - csharp
+  - vb
+  name: ToFormatName(Byte)
+  nameWithType: MessagePackCode.ToFormatName(Byte)
+  fullName: AlgoSdk.MessagePack.MessagePackCode.ToFormatName(System.Byte)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ToFormatName
+    path: ../CareBoo.AlgoSdk/Serialization/MessagePack/MessagePackCode.cs
+    startLine: 173
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.MessagePack
+  syntax:
+    content: public static string ToFormatName(byte code)
+    parameters:
+    - id: code
+      type: System.Byte
+    return:
+      type: System.String
+    content.vb: Public Shared Function ToFormatName(code As Byte) As String
+  overload: AlgoSdk.MessagePack.MessagePackCode.ToFormatName*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: AlgoSdk.MessagePack
+  commentId: N:AlgoSdk.MessagePack
+  name: AlgoSdk.MessagePack
+  nameWithType: AlgoSdk.MessagePack
+  fullName: AlgoSdk.MessagePack
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  name: Byte
+  nameWithType: Byte
+  fullName: System.Byte
+- uid: AlgoSdk.MessagePack.MessagePackCode.ToMessagePackType*
+  commentId: Overload:AlgoSdk.MessagePack.MessagePackCode.ToMessagePackType
+  name: ToMessagePackType
+  nameWithType: MessagePackCode.ToMessagePackType
+  fullName: AlgoSdk.MessagePack.MessagePackCode.ToMessagePackType
+- uid: AlgoSdk.MessagePack.MessagePackType
+  commentId: T:AlgoSdk.MessagePack.MessagePackType
+  parent: AlgoSdk.MessagePack
+  name: MessagePackType
+  nameWithType: MessagePackType
+  fullName: AlgoSdk.MessagePack.MessagePackType
+- uid: AlgoSdk.MessagePack.MessagePackCode.ToFormatName*
+  commentId: Overload:AlgoSdk.MessagePack.MessagePackCode.ToFormatName
+  name: ToFormatName
+  nameWithType: MessagePackCode.ToFormatName
+  fullName: AlgoSdk.MessagePack.MessagePackCode.ToFormatName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

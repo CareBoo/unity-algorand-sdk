@@ -5,7 +5,7 @@ using Unity.Jobs;
 
 namespace AlgoSdk
 {
-    public struct QueryBuilder
+    internal struct QueryBuilder
         : INativeDisposable
     {
         const string DateTimeFormat = "o";

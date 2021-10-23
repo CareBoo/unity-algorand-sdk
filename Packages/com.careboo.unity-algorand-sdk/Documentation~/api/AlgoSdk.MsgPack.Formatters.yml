@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.MsgPack.Formatters
+  commentId: N:AlgoSdk.MsgPack.Formatters
+  id: AlgoSdk.MsgPack.Formatters
+  children:
+  - AlgoSdk.MsgPack.Formatters.TealValueFormatter
+  langs:
+  - csharp
+  - vb
+  name: AlgoSdk.MsgPack.Formatters
+  nameWithType: AlgoSdk.MsgPack.Formatters
+  fullName: AlgoSdk.MsgPack.Formatters
+  type: Namespace
+  assemblies:
+  - CareBoo.AlgoSdk
+references:
+- uid: AlgoSdk.MsgPack.Formatters.TealValueFormatter
+  commentId: T:AlgoSdk.MsgPack.Formatters.TealValueFormatter
+  parent: AlgoSdk.MsgPack.Formatters
+  name: TealValueFormatter
+  nameWithType: TealValueFormatter
+  fullName: AlgoSdk.MsgPack.Formatters.TealValueFormatter
+- uid: AlgoSdk.MsgPack.Formatters
+  commentId: N:AlgoSdk.MsgPack.Formatters
+  name: AlgoSdk.MsgPack.Formatters
+  nameWithType: AlgoSdk.MsgPack.Formatters
+  fullName: AlgoSdk.MsgPack.Formatters

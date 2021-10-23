@@ -3,6 +3,9 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// Request data type for dryrun endpoint. Given the Transactions and simulated ledger state upload, run TEAL scripts and return debugging information.
+    /// </summary>
     [AlgoApiObject]
     public struct DryrunRequest
         : IEquatable<DryrunRequest>
@@ -13,12 +16,21 @@ namespace AlgoSdk
         [AlgoApiField("apps", null)]
         public Application[] Applications;
 
+        /// <summary>
+        /// LatestTimestamp is available to some TEAL scripts. Defaults to the latest confirmed timestamp this algod is attached to.
+        /// </summary>
         [AlgoApiField("latest-timestamp", null)]
         public ulong LatestTimestamp;
 
+        /// <summary>
+        /// ProtocolVersion specifies a specific version string to operate under, otherwise whatever the current protocol of the network this algod is running in.
+        /// </summary>
         [AlgoApiField("protocol-version", null)]
         public FixedString64Bytes ProtocolVersion;
 
+        /// <summary>
+        /// Round is available to some TEAL scripts. Defaults to the current round on the network this algod is attached to.
+        /// </summary>
         [AlgoApiField("round", null)]
         public ulong Round;
 

@@ -28,7 +28,7 @@ public class SignedTransactionTest
                 GenesisHash = "m0XImxCpIDneMMenkOlyixCtRKRVd0mbH8vV/QLYB1U=",
                 GenesisId = "sandnet-v1",
                 MinFee = 1000,
-                PreviousRound = 45666234
+                LastRound = 45666234
             },
             receiver: AlgoSdk.Crypto.Random.Bytes<Address>(),
             amount: 1000000);

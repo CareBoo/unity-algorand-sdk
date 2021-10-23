@@ -1,0 +1,687 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.RenameWalletRequest
+  commentId: T:AlgoSdk.RenameWalletRequest
+  id: RenameWalletRequest
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.RenameWalletRequest.Equals(AlgoSdk.RenameWalletRequest)
+  - AlgoSdk.RenameWalletRequest.WalletId
+  - AlgoSdk.RenameWalletRequest.WalletName
+  - AlgoSdk.RenameWalletRequest.WalletPassword
+  langs:
+  - csharp
+  - vb
+  name: RenameWalletRequest
+  nameWithType: RenameWalletRequest
+  fullName: AlgoSdk.RenameWalletRequest
+  type: Struct
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Wallets/RenameWalletRequest.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: RenameWalletRequest
+    path: ../CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Wallets/RenameWalletRequest.cs
+    startLine: 5
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: 'public struct RenameWalletRequest : IEquatable<RenameWalletRequest>'
+    content.vb: >-
+      Public Structure RenameWalletRequest
+          Implements IEquatable(Of RenameWalletRequest)
+  implements:
+  - System.IEquatable{AlgoSdk.RenameWalletRequest}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: AlgoSdk.RenameWalletRequest.WalletId
+  commentId: F:AlgoSdk.RenameWalletRequest.WalletId
+  id: WalletId
+  parent: AlgoSdk.RenameWalletRequest
+  langs:
+  - csharp
+  - vb
+  name: WalletId
+  nameWithType: RenameWalletRequest.WalletId
+  fullName: AlgoSdk.RenameWalletRequest.WalletId
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Wallets/RenameWalletRequest.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: WalletId
+    path: ../CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Wallets/RenameWalletRequest.cs
+    startLine: 10
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("wallet_id", null, false)]
+
+      public FixedString128Bytes WalletId
+    return:
+      type: Unity.Collections.FixedString128Bytes
+    content.vb: >-
+      <AlgoApiField("wallet_id", Nothing, False)>
+
+      Public WalletId As FixedString128Bytes
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: wallet_id
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.RenameWalletRequest.WalletName
+  commentId: F:AlgoSdk.RenameWalletRequest.WalletName
+  id: WalletName
+  parent: AlgoSdk.RenameWalletRequest
+  langs:
+  - csharp
+  - vb
+  name: WalletName
+  nameWithType: RenameWalletRequest.WalletName
+  fullName: AlgoSdk.RenameWalletRequest.WalletName
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Wallets/RenameWalletRequest.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: WalletName
+    path: ../CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Wallets/RenameWalletRequest.cs
+    startLine: 13
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("wallet_name", null, false)]
+
+      public FixedString128Bytes WalletName
+    return:
+      type: Unity.Collections.FixedString128Bytes
+    content.vb: >-
+      <AlgoApiField("wallet_name", Nothing, False)>
+
+      Public WalletName As FixedString128Bytes
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: wallet_name
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.RenameWalletRequest.WalletPassword
+  commentId: F:AlgoSdk.RenameWalletRequest.WalletPassword
+  id: WalletPassword
+  parent: AlgoSdk.RenameWalletRequest
+  langs:
+  - csharp
+  - vb
+  name: WalletPassword
+  nameWithType: RenameWalletRequest.WalletPassword
+  fullName: AlgoSdk.RenameWalletRequest.WalletPassword
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Wallets/RenameWalletRequest.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: WalletPassword
+    path: ../CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Wallets/RenameWalletRequest.cs
+    startLine: 16
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("wallet_password", null, false)]
+
+      public FixedString128Bytes WalletPassword
+    return:
+      type: Unity.Collections.FixedString128Bytes
+    content.vb: >-
+      <AlgoApiField("wallet_password", Nothing, False)>
+
+      Public WalletPassword As FixedString128Bytes
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: wallet_password
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.RenameWalletRequest.Equals(AlgoSdk.RenameWalletRequest)
+  commentId: M:AlgoSdk.RenameWalletRequest.Equals(AlgoSdk.RenameWalletRequest)
+  id: Equals(AlgoSdk.RenameWalletRequest)
+  parent: AlgoSdk.RenameWalletRequest
+  langs:
+  - csharp
+  - vb
+  name: Equals(RenameWalletRequest)
+  nameWithType: RenameWalletRequest.Equals(RenameWalletRequest)
+  fullName: AlgoSdk.RenameWalletRequest.Equals(AlgoSdk.RenameWalletRequest)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Wallets/RenameWalletRequest.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Equals
+    path: ../CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Wallets/RenameWalletRequest.cs
+    startLine: 18
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public bool Equals(RenameWalletRequest other)
+    parameters:
+    - id: other
+      type: AlgoSdk.RenameWalletRequest
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As RenameWalletRequest) As Boolean
+  overload: AlgoSdk.RenameWalletRequest.Equals*
+  implements:
+  - System.IEquatable{AlgoSdk.RenameWalletRequest}.Equals(AlgoSdk.RenameWalletRequest)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: System.IEquatable{AlgoSdk.RenameWalletRequest}
+  commentId: T:System.IEquatable{AlgoSdk.RenameWalletRequest}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<RenameWalletRequest>
+  nameWithType: IEquatable<RenameWalletRequest>
+  fullName: System.IEquatable<AlgoSdk.RenameWalletRequest>
+  nameWithType.vb: IEquatable(Of RenameWalletRequest)
+  fullName.vb: System.IEquatable(Of AlgoSdk.RenameWalletRequest)
+  name.vb: IEquatable(Of RenameWalletRequest)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AlgoSdk.RenameWalletRequest
+    name: RenameWalletRequest
+    nameWithType: RenameWalletRequest
+    fullName: AlgoSdk.RenameWalletRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AlgoSdk.RenameWalletRequest
+    name: RenameWalletRequest
+    nameWithType: RenameWalletRequest
+    fullName: AlgoSdk.RenameWalletRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Unity.Collections.FixedString128Bytes
+  commentId: T:Unity.Collections.FixedString128Bytes
+  parent: Unity.Collections
+  name: FixedString128Bytes
+  nameWithType: FixedString128Bytes
+  fullName: Unity.Collections.FixedString128Bytes
+- uid: Unity.Collections
+  commentId: N:Unity.Collections
+  name: Unity.Collections
+  nameWithType: Unity.Collections
+  fullName: Unity.Collections
+- uid: AlgoSdk.RenameWalletRequest.Equals*
+  commentId: Overload:AlgoSdk.RenameWalletRequest.Equals
+  name: Equals
+  nameWithType: RenameWalletRequest.Equals
+  fullName: AlgoSdk.RenameWalletRequest.Equals
+- uid: System.IEquatable{AlgoSdk.RenameWalletRequest}.Equals(AlgoSdk.RenameWalletRequest)
+  commentId: M:System.IEquatable{AlgoSdk.RenameWalletRequest}.Equals(AlgoSdk.RenameWalletRequest)
+  parent: System.IEquatable{AlgoSdk.RenameWalletRequest}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(RenameWalletRequest)
+  nameWithType: IEquatable<RenameWalletRequest>.Equals(RenameWalletRequest)
+  fullName: System.IEquatable<AlgoSdk.RenameWalletRequest>.Equals(AlgoSdk.RenameWalletRequest)
+  nameWithType.vb: IEquatable(Of RenameWalletRequest).Equals(RenameWalletRequest)
+  fullName.vb: System.IEquatable(Of AlgoSdk.RenameWalletRequest).Equals(AlgoSdk.RenameWalletRequest)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<RenameWalletRequest>.Equals
+    fullName: System.IEquatable<AlgoSdk.RenameWalletRequest>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.RenameWalletRequest
+    name: RenameWalletRequest
+    nameWithType: RenameWalletRequest
+    fullName: AlgoSdk.RenameWalletRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of RenameWalletRequest).Equals
+    fullName: System.IEquatable(Of AlgoSdk.RenameWalletRequest).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.RenameWalletRequest
+    name: RenameWalletRequest
+    nameWithType: RenameWalletRequest
+    fullName: AlgoSdk.RenameWalletRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.RenameWalletRequest
+  commentId: T:AlgoSdk.RenameWalletRequest
+  parent: AlgoSdk
+  name: RenameWalletRequest
+  nameWithType: RenameWalletRequest
+  fullName: AlgoSdk.RenameWalletRequest
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

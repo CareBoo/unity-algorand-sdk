@@ -6,6 +6,9 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// Genesis hash found of the genesis block.
+    /// </summary>
     [AlgoApiFormatter(typeof(GenesisHashFormatter))]
     public struct GenesisHash
         : IByteArray

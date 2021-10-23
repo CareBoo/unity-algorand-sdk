@@ -1,0 +1,1387 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.Json.JsonReader
+  commentId: T:AlgoSdk.Json.JsonReader
+  id: JsonReader
+  parent: AlgoSdk.Json
+  children:
+  - AlgoSdk.Json.JsonReader.#ctor(Unity.Collections.NativeText)
+  - AlgoSdk.Json.JsonReader.Char
+  - AlgoSdk.Json.JsonReader.Peek
+  - AlgoSdk.Json.JsonReader.Position
+  - AlgoSdk.Json.JsonReader.Read
+  - AlgoSdk.Json.JsonReader.ReadBool(System.Boolean@)
+  - AlgoSdk.Json.JsonReader.ReadNull
+  - AlgoSdk.Json.JsonReader.ReadNumber(System.Byte@)
+  - AlgoSdk.Json.JsonReader.ReadNumber(System.Int16@)
+  - AlgoSdk.Json.JsonReader.ReadNumber(System.Int32@)
+  - AlgoSdk.Json.JsonReader.ReadNumber(System.Int64@)
+  - AlgoSdk.Json.JsonReader.ReadNumber(System.SByte@)
+  - AlgoSdk.Json.JsonReader.ReadNumber(System.Single@)
+  - AlgoSdk.Json.JsonReader.ReadNumber(System.UInt16@)
+  - AlgoSdk.Json.JsonReader.ReadNumber(System.UInt32@)
+  - AlgoSdk.Json.JsonReader.ReadNumber(System.UInt64@)
+  - AlgoSdk.Json.JsonReader.ReadRaw``1(``0@)
+  - AlgoSdk.Json.JsonReader.ReadString``1(``0@)
+  - AlgoSdk.Json.JsonReader.Skip
+  - AlgoSdk.Json.JsonReader.SkipBool
+  - AlgoSdk.Json.JsonReader.SkipNull
+  - AlgoSdk.Json.JsonReader.SkipString
+  - AlgoSdk.Json.JsonReader.TryRead(AlgoSdk.Json.JsonToken)
+  - AlgoSdk.Json.JsonReader.TryReadNull
+  langs:
+  - csharp
+  - vb
+  name: JsonReader
+  nameWithType: JsonReader
+  fullName: AlgoSdk.Json.JsonReader
+  type: Struct
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: JsonReader
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.cs
+    startLine: 4
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public struct JsonReader
+    content.vb: Public Structure JsonReader
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: AlgoSdk.Json.JsonReader.ReadString``1(``0@)
+  commentId: M:AlgoSdk.Json.JsonReader.ReadString``1(``0@)
+  id: ReadString``1(``0@)
+  parent: AlgoSdk.Json.JsonReader
+  langs:
+  - csharp
+  - vb
+  name: ReadString<T>(ref T)
+  nameWithType: JsonReader.ReadString<T>(ref T)
+  fullName: AlgoSdk.Json.JsonReader.ReadString<T>(ref T)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.String.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ReadString
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.String.cs
+    startLine: 6
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: >-
+      public JsonReadError ReadString<T>(ref T value)
+          where T : struct, INativeList<byte>, IUTF8Bytes
+    parameters:
+    - id: value
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: AlgoSdk.Json.JsonReadError
+    content.vb: Public Function ReadString(Of T As {Structure, INativeList(Of Byte), IUTF8Bytes})(ByRef value As T) As JsonReadError
+  overload: AlgoSdk.Json.JsonReader.ReadString*
+  nameWithType.vb: JsonReader.ReadString(Of T)(ByRef T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.Json.JsonReader.ReadString(Of T)(ByRef T)
+  name.vb: ReadString(Of T)(ByRef T)
+- uid: AlgoSdk.Json.JsonReader.SkipString
+  commentId: M:AlgoSdk.Json.JsonReader.SkipString
+  id: SkipString
+  parent: AlgoSdk.Json.JsonReader
+  langs:
+  - csharp
+  - vb
+  name: SkipString()
+  nameWithType: JsonReader.SkipString()
+  fullName: AlgoSdk.Json.JsonReader.SkipString()
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.String.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: SkipString
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.String.cs
+    startLine: 42
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonReadError SkipString()
+    return:
+      type: AlgoSdk.Json.JsonReadError
+    content.vb: Public Function SkipString As JsonReadError
+  overload: AlgoSdk.Json.JsonReader.SkipString*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Json.JsonReader.ReadBool(System.Boolean@)
+  commentId: M:AlgoSdk.Json.JsonReader.ReadBool(System.Boolean@)
+  id: ReadBool(System.Boolean@)
+  parent: AlgoSdk.Json.JsonReader
+  langs:
+  - csharp
+  - vb
+  name: ReadBool(out Boolean)
+  nameWithType: JsonReader.ReadBool(out Boolean)
+  fullName: AlgoSdk.Json.JsonReader.ReadBool(out System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Bool.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ReadBool
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Bool.cs
+    startLine: 6
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonReadError ReadBool(out bool value)
+    parameters:
+    - id: value
+      type: System.Boolean
+    return:
+      type: AlgoSdk.Json.JsonReadError
+    content.vb: Public Function ReadBool(ByRef value As Boolean) As JsonReadError
+  overload: AlgoSdk.Json.JsonReader.ReadBool*
+  nameWithType.vb: JsonReader.ReadBool(ByRef Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.Json.JsonReader.ReadBool(ByRef System.Boolean)
+  name.vb: ReadBool(ByRef Boolean)
+- uid: AlgoSdk.Json.JsonReader.SkipBool
+  commentId: M:AlgoSdk.Json.JsonReader.SkipBool
+  id: SkipBool
+  parent: AlgoSdk.Json.JsonReader
+  langs:
+  - csharp
+  - vb
+  name: SkipBool()
+  nameWithType: JsonReader.SkipBool()
+  fullName: AlgoSdk.Json.JsonReader.SkipBool()
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Bool.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: SkipBool
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Bool.cs
+    startLine: 26
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonReadError SkipBool()
+    return:
+      type: AlgoSdk.Json.JsonReadError
+    content.vb: Public Function SkipBool As JsonReadError
+  overload: AlgoSdk.Json.JsonReader.SkipBool*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Json.JsonReader.ReadNumber(System.Single@)
+  commentId: M:AlgoSdk.Json.JsonReader.ReadNumber(System.Single@)
+  id: ReadNumber(System.Single@)
+  parent: AlgoSdk.Json.JsonReader
+  langs:
+  - csharp
+  - vb
+  name: ReadNumber(out Single)
+  nameWithType: JsonReader.ReadNumber(out Single)
+  fullName: AlgoSdk.Json.JsonReader.ReadNumber(out System.Single)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Number.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ReadNumber
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Number.cs
+    startLine: 6
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonReadError ReadNumber(out float value)
+    parameters:
+    - id: value
+      type: System.Single
+    return:
+      type: AlgoSdk.Json.JsonReadError
+    content.vb: Public Function ReadNumber(ByRef value As Single) As JsonReadError
+  overload: AlgoSdk.Json.JsonReader.ReadNumber*
+  nameWithType.vb: JsonReader.ReadNumber(ByRef Single)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.Json.JsonReader.ReadNumber(ByRef System.Single)
+  name.vb: ReadNumber(ByRef Single)
+- uid: AlgoSdk.Json.JsonReader.ReadNumber(System.SByte@)
+  commentId: M:AlgoSdk.Json.JsonReader.ReadNumber(System.SByte@)
+  id: ReadNumber(System.SByte@)
+  parent: AlgoSdk.Json.JsonReader
+  langs:
+  - csharp
+  - vb
+  name: ReadNumber(out SByte)
+  nameWithType: JsonReader.ReadNumber(out SByte)
+  fullName: AlgoSdk.Json.JsonReader.ReadNumber(out System.SByte)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Number.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ReadNumber
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Number.cs
+    startLine: 15
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonReadError ReadNumber(out sbyte value)
+    parameters:
+    - id: value
+      type: System.SByte
+    return:
+      type: AlgoSdk.Json.JsonReadError
+    content.vb: Public Function ReadNumber(ByRef value As SByte) As JsonReadError
+  overload: AlgoSdk.Json.JsonReader.ReadNumber*
+  nameWithType.vb: JsonReader.ReadNumber(ByRef SByte)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.Json.JsonReader.ReadNumber(ByRef System.SByte)
+  name.vb: ReadNumber(ByRef SByte)
+- uid: AlgoSdk.Json.JsonReader.ReadNumber(System.Byte@)
+  commentId: M:AlgoSdk.Json.JsonReader.ReadNumber(System.Byte@)
+  id: ReadNumber(System.Byte@)
+  parent: AlgoSdk.Json.JsonReader
+  langs:
+  - csharp
+  - vb
+  name: ReadNumber(out Byte)
+  nameWithType: JsonReader.ReadNumber(out Byte)
+  fullName: AlgoSdk.Json.JsonReader.ReadNumber(out System.Byte)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Number.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ReadNumber
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Number.cs
+    startLine: 22
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonReadError ReadNumber(out byte value)
+    parameters:
+    - id: value
+      type: System.Byte
+    return:
+      type: AlgoSdk.Json.JsonReadError
+    content.vb: Public Function ReadNumber(ByRef value As Byte) As JsonReadError
+  overload: AlgoSdk.Json.JsonReader.ReadNumber*
+  nameWithType.vb: JsonReader.ReadNumber(ByRef Byte)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.Json.JsonReader.ReadNumber(ByRef System.Byte)
+  name.vb: ReadNumber(ByRef Byte)
+- uid: AlgoSdk.Json.JsonReader.ReadNumber(System.Int16@)
+  commentId: M:AlgoSdk.Json.JsonReader.ReadNumber(System.Int16@)
+  id: ReadNumber(System.Int16@)
+  parent: AlgoSdk.Json.JsonReader
+  langs:
+  - csharp
+  - vb
+  name: ReadNumber(out Int16)
+  nameWithType: JsonReader.ReadNumber(out Int16)
+  fullName: AlgoSdk.Json.JsonReader.ReadNumber(out System.Int16)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Number.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ReadNumber
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Number.cs
+    startLine: 29
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonReadError ReadNumber(out short value)
+    parameters:
+    - id: value
+      type: System.Int16
+    return:
+      type: AlgoSdk.Json.JsonReadError
+    content.vb: Public Function ReadNumber(ByRef value As Short) As JsonReadError
+  overload: AlgoSdk.Json.JsonReader.ReadNumber*
+  nameWithType.vb: JsonReader.ReadNumber(ByRef Int16)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.Json.JsonReader.ReadNumber(ByRef System.Int16)
+  name.vb: ReadNumber(ByRef Int16)
+- uid: AlgoSdk.Json.JsonReader.ReadNumber(System.UInt16@)
+  commentId: M:AlgoSdk.Json.JsonReader.ReadNumber(System.UInt16@)
+  id: ReadNumber(System.UInt16@)
+  parent: AlgoSdk.Json.JsonReader
+  langs:
+  - csharp
+  - vb
+  name: ReadNumber(out UInt16)
+  nameWithType: JsonReader.ReadNumber(out UInt16)
+  fullName: AlgoSdk.Json.JsonReader.ReadNumber(out System.UInt16)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Number.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ReadNumber
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Number.cs
+    startLine: 36
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonReadError ReadNumber(out ushort value)
+    parameters:
+    - id: value
+      type: System.UInt16
+    return:
+      type: AlgoSdk.Json.JsonReadError
+    content.vb: Public Function ReadNumber(ByRef value As UShort) As JsonReadError
+  overload: AlgoSdk.Json.JsonReader.ReadNumber*
+  nameWithType.vb: JsonReader.ReadNumber(ByRef UInt16)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.Json.JsonReader.ReadNumber(ByRef System.UInt16)
+  name.vb: ReadNumber(ByRef UInt16)
+- uid: AlgoSdk.Json.JsonReader.ReadNumber(System.Int32@)
+  commentId: M:AlgoSdk.Json.JsonReader.ReadNumber(System.Int32@)
+  id: ReadNumber(System.Int32@)
+  parent: AlgoSdk.Json.JsonReader
+  langs:
+  - csharp
+  - vb
+  name: ReadNumber(out Int32)
+  nameWithType: JsonReader.ReadNumber(out Int32)
+  fullName: AlgoSdk.Json.JsonReader.ReadNumber(out System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Number.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ReadNumber
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Number.cs
+    startLine: 43
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonReadError ReadNumber(out int value)
+    parameters:
+    - id: value
+      type: System.Int32
+    return:
+      type: AlgoSdk.Json.JsonReadError
+    content.vb: Public Function ReadNumber(ByRef value As Integer) As JsonReadError
+  overload: AlgoSdk.Json.JsonReader.ReadNumber*
+  nameWithType.vb: JsonReader.ReadNumber(ByRef Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.Json.JsonReader.ReadNumber(ByRef System.Int32)
+  name.vb: ReadNumber(ByRef Int32)
+- uid: AlgoSdk.Json.JsonReader.ReadNumber(System.UInt32@)
+  commentId: M:AlgoSdk.Json.JsonReader.ReadNumber(System.UInt32@)
+  id: ReadNumber(System.UInt32@)
+  parent: AlgoSdk.Json.JsonReader
+  langs:
+  - csharp
+  - vb
+  name: ReadNumber(out UInt32)
+  nameWithType: JsonReader.ReadNumber(out UInt32)
+  fullName: AlgoSdk.Json.JsonReader.ReadNumber(out System.UInt32)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Number.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ReadNumber
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Number.cs
+    startLine: 52
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonReadError ReadNumber(out uint value)
+    parameters:
+    - id: value
+      type: System.UInt32
+    return:
+      type: AlgoSdk.Json.JsonReadError
+    content.vb: Public Function ReadNumber(ByRef value As UInteger) As JsonReadError
+  overload: AlgoSdk.Json.JsonReader.ReadNumber*
+  nameWithType.vb: JsonReader.ReadNumber(ByRef UInt32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.Json.JsonReader.ReadNumber(ByRef System.UInt32)
+  name.vb: ReadNumber(ByRef UInt32)
+- uid: AlgoSdk.Json.JsonReader.ReadNumber(System.Int64@)
+  commentId: M:AlgoSdk.Json.JsonReader.ReadNumber(System.Int64@)
+  id: ReadNumber(System.Int64@)
+  parent: AlgoSdk.Json.JsonReader
+  langs:
+  - csharp
+  - vb
+  name: ReadNumber(out Int64)
+  nameWithType: JsonReader.ReadNumber(out Int64)
+  fullName: AlgoSdk.Json.JsonReader.ReadNumber(out System.Int64)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Number.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ReadNumber
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Number.cs
+    startLine: 61
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonReadError ReadNumber(out long value)
+    parameters:
+    - id: value
+      type: System.Int64
+    return:
+      type: AlgoSdk.Json.JsonReadError
+    content.vb: Public Function ReadNumber(ByRef value As Long) As JsonReadError
+  overload: AlgoSdk.Json.JsonReader.ReadNumber*
+  nameWithType.vb: JsonReader.ReadNumber(ByRef Int64)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.Json.JsonReader.ReadNumber(ByRef System.Int64)
+  name.vb: ReadNumber(ByRef Int64)
+- uid: AlgoSdk.Json.JsonReader.ReadNumber(System.UInt64@)
+  commentId: M:AlgoSdk.Json.JsonReader.ReadNumber(System.UInt64@)
+  id: ReadNumber(System.UInt64@)
+  parent: AlgoSdk.Json.JsonReader
+  langs:
+  - csharp
+  - vb
+  name: ReadNumber(out UInt64)
+  nameWithType: JsonReader.ReadNumber(out UInt64)
+  fullName: AlgoSdk.Json.JsonReader.ReadNumber(out System.UInt64)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Number.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ReadNumber
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Number.cs
+    startLine: 70
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonReadError ReadNumber(out ulong value)
+    parameters:
+    - id: value
+      type: System.UInt64
+    return:
+      type: AlgoSdk.Json.JsonReadError
+    content.vb: Public Function ReadNumber(ByRef value As ULong) As JsonReadError
+  overload: AlgoSdk.Json.JsonReader.ReadNumber*
+  nameWithType.vb: JsonReader.ReadNumber(ByRef UInt64)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.Json.JsonReader.ReadNumber(ByRef System.UInt64)
+  name.vb: ReadNumber(ByRef UInt64)
+- uid: AlgoSdk.Json.JsonReader.ReadNull
+  commentId: M:AlgoSdk.Json.JsonReader.ReadNull
+  id: ReadNull
+  parent: AlgoSdk.Json.JsonReader
+  langs:
+  - csharp
+  - vb
+  name: ReadNull()
+  nameWithType: JsonReader.ReadNull()
+  fullName: AlgoSdk.Json.JsonReader.ReadNull()
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Null.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ReadNull
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Null.cs
+    startLine: 6
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonReadError ReadNull()
+    return:
+      type: AlgoSdk.Json.JsonReadError
+    content.vb: Public Function ReadNull As JsonReadError
+  overload: AlgoSdk.Json.JsonReader.ReadNull*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Json.JsonReader.TryReadNull
+  commentId: M:AlgoSdk.Json.JsonReader.TryReadNull
+  id: TryReadNull
+  parent: AlgoSdk.Json.JsonReader
+  langs:
+  - csharp
+  - vb
+  name: TryReadNull()
+  nameWithType: JsonReader.TryReadNull()
+  fullName: AlgoSdk.Json.JsonReader.TryReadNull()
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Null.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: TryReadNull
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Null.cs
+    startLine: 18
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public bool TryReadNull()
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryReadNull As Boolean
+  overload: AlgoSdk.Json.JsonReader.TryReadNull*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Json.JsonReader.SkipNull
+  commentId: M:AlgoSdk.Json.JsonReader.SkipNull
+  id: SkipNull
+  parent: AlgoSdk.Json.JsonReader
+  langs:
+  - csharp
+  - vb
+  name: SkipNull()
+  nameWithType: JsonReader.SkipNull()
+  fullName: AlgoSdk.Json.JsonReader.SkipNull()
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Null.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: SkipNull
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.Null.cs
+    startLine: 27
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonReadError SkipNull()
+    return:
+      type: AlgoSdk.Json.JsonReadError
+    content.vb: Public Function SkipNull As JsonReadError
+  overload: AlgoSdk.Json.JsonReader.SkipNull*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Json.JsonReader.#ctor(Unity.Collections.NativeText)
+  commentId: M:AlgoSdk.Json.JsonReader.#ctor(Unity.Collections.NativeText)
+  id: '#ctor(Unity.Collections.NativeText)'
+  parent: AlgoSdk.Json.JsonReader
+  langs:
+  - csharp
+  - vb
+  name: JsonReader(NativeText)
+  nameWithType: JsonReader.JsonReader(NativeText)
+  fullName: AlgoSdk.Json.JsonReader.JsonReader(Unity.Collections.NativeText)
+  type: Constructor
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: .ctor
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.cs
+    startLine: 9
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonReader(NativeText text)
+    parameters:
+    - id: text
+      type: Unity.Collections.NativeText
+    content.vb: Public Sub New(text As NativeText)
+  overload: AlgoSdk.Json.JsonReader.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Json.JsonReader.Position
+  commentId: P:AlgoSdk.Json.JsonReader.Position
+  id: Position
+  parent: AlgoSdk.Json.JsonReader
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: JsonReader.Position
+  fullName: AlgoSdk.Json.JsonReader.Position
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Position
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.cs
+    startLine: 15
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public int Position { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Position As Integer
+  overload: AlgoSdk.Json.JsonReader.Position*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: AlgoSdk.Json.JsonReader.Char
+  commentId: P:AlgoSdk.Json.JsonReader.Char
+  id: Char
+  parent: AlgoSdk.Json.JsonReader
+  langs:
+  - csharp
+  - vb
+  name: Char
+  nameWithType: JsonReader.Char
+  fullName: AlgoSdk.Json.JsonReader.Char
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Char
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.cs
+    startLine: 17
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public char Char { get; }
+    parameters: []
+    return:
+      type: System.Char
+    content.vb: Public ReadOnly Property Char As Char
+  overload: AlgoSdk.Json.JsonReader.Char*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: AlgoSdk.Json.JsonReader.Peek
+  commentId: M:AlgoSdk.Json.JsonReader.Peek
+  id: Peek
+  parent: AlgoSdk.Json.JsonReader
+  langs:
+  - csharp
+  - vb
+  name: Peek()
+  nameWithType: JsonReader.Peek()
+  fullName: AlgoSdk.Json.JsonReader.Peek()
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Peek
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.cs
+    startLine: 19
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonToken Peek()
+    return:
+      type: AlgoSdk.Json.JsonToken
+    content.vb: Public Function Peek As JsonToken
+  overload: AlgoSdk.Json.JsonReader.Peek*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Json.JsonReader.Read
+  commentId: M:AlgoSdk.Json.JsonReader.Read
+  id: Read
+  parent: AlgoSdk.Json.JsonReader
+  langs:
+  - csharp
+  - vb
+  name: Read()
+  nameWithType: JsonReader.Read()
+  fullName: AlgoSdk.Json.JsonReader.Read()
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Read
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.cs
+    startLine: 27
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonToken Read()
+    return:
+      type: AlgoSdk.Json.JsonToken
+    content.vb: Public Function Read As JsonToken
+  overload: AlgoSdk.Json.JsonReader.Read*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Json.JsonReader.Skip
+  commentId: M:AlgoSdk.Json.JsonReader.Skip
+  id: Skip
+  parent: AlgoSdk.Json.JsonReader
+  langs:
+  - csharp
+  - vb
+  name: Skip()
+  nameWithType: JsonReader.Skip()
+  fullName: AlgoSdk.Json.JsonReader.Skip()
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Skip
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.cs
+    startLine: 35
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonReadError Skip()
+    return:
+      type: AlgoSdk.Json.JsonReadError
+    content.vb: Public Function Skip As JsonReadError
+  overload: AlgoSdk.Json.JsonReader.Skip*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Json.JsonReader.ReadRaw``1(``0@)
+  commentId: M:AlgoSdk.Json.JsonReader.ReadRaw``1(``0@)
+  id: ReadRaw``1(``0@)
+  parent: AlgoSdk.Json.JsonReader
+  langs:
+  - csharp
+  - vb
+  name: ReadRaw<T>(ref T)
+  nameWithType: JsonReader.ReadRaw<T>(ref T)
+  fullName: AlgoSdk.Json.JsonReader.ReadRaw<T>(ref T)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ReadRaw
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.cs
+    startLine: 58
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: >-
+      public JsonReadError ReadRaw<T>(ref T value)
+          where T : struct, INativeList<byte>, IUTF8Bytes
+    parameters:
+    - id: value
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: AlgoSdk.Json.JsonReadError
+    content.vb: Public Function ReadRaw(Of T As {Structure, INativeList(Of Byte), IUTF8Bytes})(ByRef value As T) As JsonReadError
+  overload: AlgoSdk.Json.JsonReader.ReadRaw*
+  nameWithType.vb: JsonReader.ReadRaw(Of T)(ByRef T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.Json.JsonReader.ReadRaw(Of T)(ByRef T)
+  name.vb: ReadRaw(Of T)(ByRef T)
+- uid: AlgoSdk.Json.JsonReader.TryRead(AlgoSdk.Json.JsonToken)
+  commentId: M:AlgoSdk.Json.JsonReader.TryRead(AlgoSdk.Json.JsonToken)
+  id: TryRead(AlgoSdk.Json.JsonToken)
+  parent: AlgoSdk.Json.JsonReader
+  langs:
+  - csharp
+  - vb
+  name: TryRead(JsonToken)
+  nameWithType: JsonReader.TryRead(JsonToken)
+  fullName: AlgoSdk.Json.JsonReader.TryRead(AlgoSdk.Json.JsonToken)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: TryRead
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonReader/JsonReader.cs
+    startLine: 74
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public bool TryRead(JsonToken token)
+    parameters:
+    - id: token
+      type: AlgoSdk.Json.JsonToken
+    return:
+      type: System.Boolean
+    content.vb: Public Function TryRead(token As JsonToken) As Boolean
+  overload: AlgoSdk.Json.JsonReader.TryRead*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AlgoSdk.Json
+  commentId: N:AlgoSdk.Json
+  name: AlgoSdk.Json
+  nameWithType: AlgoSdk.Json
+  fullName: AlgoSdk.Json
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AlgoSdk.Json.JsonReader.ReadString*
+  commentId: Overload:AlgoSdk.Json.JsonReader.ReadString
+  name: ReadString
+  nameWithType: JsonReader.ReadString
+  fullName: AlgoSdk.Json.JsonReader.ReadString
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: AlgoSdk.Json.JsonReadError
+  commentId: T:AlgoSdk.Json.JsonReadError
+  parent: AlgoSdk.Json
+  name: JsonReadError
+  nameWithType: JsonReadError
+  fullName: AlgoSdk.Json.JsonReadError
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: AlgoSdk.Json.JsonReader.SkipString*
+  commentId: Overload:AlgoSdk.Json.JsonReader.SkipString
+  name: SkipString
+  nameWithType: JsonReader.SkipString
+  fullName: AlgoSdk.Json.JsonReader.SkipString
+- uid: AlgoSdk.Json.JsonReader.ReadBool*
+  commentId: Overload:AlgoSdk.Json.JsonReader.ReadBool
+  name: ReadBool
+  nameWithType: JsonReader.ReadBool
+  fullName: AlgoSdk.Json.JsonReader.ReadBool
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: AlgoSdk.Json.JsonReader.SkipBool*
+  commentId: Overload:AlgoSdk.Json.JsonReader.SkipBool
+  name: SkipBool
+  nameWithType: JsonReader.SkipBool
+  fullName: AlgoSdk.Json.JsonReader.SkipBool
+- uid: AlgoSdk.Json.JsonReader.ReadNumber*
+  commentId: Overload:AlgoSdk.Json.JsonReader.ReadNumber
+  name: ReadNumber
+  nameWithType: JsonReader.ReadNumber
+  fullName: AlgoSdk.Json.JsonReader.ReadNumber
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: System.SByte
+  commentId: T:System.SByte
+  parent: System
+  isExternal: true
+  name: SByte
+  nameWithType: SByte
+  fullName: System.SByte
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  name: Byte
+  nameWithType: Byte
+  fullName: System.Byte
+- uid: System.Int16
+  commentId: T:System.Int16
+  parent: System
+  isExternal: true
+  name: Int16
+  nameWithType: Int16
+  fullName: System.Int16
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  name: UInt16
+  nameWithType: UInt16
+  fullName: System.UInt16
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: AlgoSdk.Json.JsonReader.ReadNull*
+  commentId: Overload:AlgoSdk.Json.JsonReader.ReadNull
+  name: ReadNull
+  nameWithType: JsonReader.ReadNull
+  fullName: AlgoSdk.Json.JsonReader.ReadNull
+- uid: AlgoSdk.Json.JsonReader.TryReadNull*
+  commentId: Overload:AlgoSdk.Json.JsonReader.TryReadNull
+  name: TryReadNull
+  nameWithType: JsonReader.TryReadNull
+  fullName: AlgoSdk.Json.JsonReader.TryReadNull
+- uid: AlgoSdk.Json.JsonReader.SkipNull*
+  commentId: Overload:AlgoSdk.Json.JsonReader.SkipNull
+  name: SkipNull
+  nameWithType: JsonReader.SkipNull
+  fullName: AlgoSdk.Json.JsonReader.SkipNull
+- uid: AlgoSdk.Json.JsonReader.#ctor*
+  commentId: Overload:AlgoSdk.Json.JsonReader.#ctor
+  name: JsonReader
+  nameWithType: JsonReader.JsonReader
+  fullName: AlgoSdk.Json.JsonReader.JsonReader
+- uid: Unity.Collections.NativeText
+  commentId: T:Unity.Collections.NativeText
+  parent: Unity.Collections
+  name: NativeText
+  nameWithType: NativeText
+  fullName: Unity.Collections.NativeText
+- uid: Unity.Collections
+  commentId: N:Unity.Collections
+  name: Unity.Collections
+  nameWithType: Unity.Collections
+  fullName: Unity.Collections
+- uid: AlgoSdk.Json.JsonReader.Position*
+  commentId: Overload:AlgoSdk.Json.JsonReader.Position
+  name: Position
+  nameWithType: JsonReader.Position
+  fullName: AlgoSdk.Json.JsonReader.Position
+- uid: AlgoSdk.Json.JsonReader.Char*
+  commentId: Overload:AlgoSdk.Json.JsonReader.Char
+  name: Char
+  nameWithType: JsonReader.Char
+  fullName: AlgoSdk.Json.JsonReader.Char
+- uid: System.Char
+  commentId: T:System.Char
+  parent: System
+  isExternal: true
+  name: Char
+  nameWithType: Char
+  fullName: System.Char
+- uid: AlgoSdk.Json.JsonReader.Peek*
+  commentId: Overload:AlgoSdk.Json.JsonReader.Peek
+  name: Peek
+  nameWithType: JsonReader.Peek
+  fullName: AlgoSdk.Json.JsonReader.Peek
+- uid: AlgoSdk.Json.JsonToken
+  commentId: T:AlgoSdk.Json.JsonToken
+  parent: AlgoSdk.Json
+  name: JsonToken
+  nameWithType: JsonToken
+  fullName: AlgoSdk.Json.JsonToken
+- uid: AlgoSdk.Json.JsonReader.Read*
+  commentId: Overload:AlgoSdk.Json.JsonReader.Read
+  name: Read
+  nameWithType: JsonReader.Read
+  fullName: AlgoSdk.Json.JsonReader.Read
+- uid: AlgoSdk.Json.JsonReader.Skip*
+  commentId: Overload:AlgoSdk.Json.JsonReader.Skip
+  name: Skip
+  nameWithType: JsonReader.Skip
+  fullName: AlgoSdk.Json.JsonReader.Skip
+- uid: AlgoSdk.Json.JsonReader.ReadRaw*
+  commentId: Overload:AlgoSdk.Json.JsonReader.ReadRaw
+  name: ReadRaw
+  nameWithType: JsonReader.ReadRaw
+  fullName: AlgoSdk.Json.JsonReader.ReadRaw
+- uid: AlgoSdk.Json.JsonReader.TryRead*
+  commentId: Overload:AlgoSdk.Json.JsonReader.TryRead
+  name: TryRead
+  nameWithType: JsonReader.TryRead
+  fullName: AlgoSdk.Json.JsonReader.TryRead

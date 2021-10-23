@@ -1,0 +1,2026 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  id: AlgoSdk
+  children:
+  - AlgoSdk.Account
+  - AlgoSdk.AccountParticipation
+  - AlgoSdk.AccountResponse
+  - AlgoSdk.AccountsResponse
+  - AlgoSdk.Address
+  - AlgoSdk.Address.CheckSum
+  - AlgoSdk.AddressRole
+  - AlgoSdk.AddressRoleExtensions
+  - AlgoSdk.AddressRoleFormatter
+  - AlgoSdk.AlgoApiField
+  - AlgoSdk.AlgoApiField`1
+  - AlgoSdk.AlgoApiField`1.EqualityComparer
+  - AlgoSdk.AlgoApiField`1.FieldGetter`1
+  - AlgoSdk.AlgoApiField`1.FieldSetter`1
+  - AlgoSdk.AlgoApiField`1.JsonDeserializer
+  - AlgoSdk.AlgoApiField`1.JsonSerializer
+  - AlgoSdk.AlgoApiField`1.Map`1
+  - AlgoSdk.AlgoApiField`1.MessagePackDeserializer
+  - AlgoSdk.AlgoApiField`1.MessagePackSerializer
+  - AlgoSdk.AlgoApiField`1.SerializePredicate
+  - AlgoSdk.AlgoApiFormatterAttribute
+  - AlgoSdk.AlgoApiFormatterCache`1
+  - AlgoSdk.AlgoApiFormatterLookup
+  - AlgoSdk.AlgoApiObject
+  - AlgoSdk.AlgoApiObjectAttribute
+  - AlgoSdk.AlgoApiObjectFormatter
+  - AlgoSdk.AlgoApiObjectFormatter`1
+  - AlgoSdk.AlgoApiRequest
+  - AlgoSdk.AlgoApiRequest.Awaiter
+  - AlgoSdk.AlgoApiRequest.Sent
+  - AlgoSdk.AlgoApiRequest.Sent`1
+  - AlgoSdk.AlgoApiResponse
+  - AlgoSdk.AlgoApiResponse`1
+  - AlgoSdk.AlgoApiSerializer
+  - AlgoSdk.AlgodClient
+  - AlgoSdk.AppCallTxn
+  - AlgoSdk.AppCallTxn.Params
+  - AlgoSdk.Application
+  - AlgoSdk.ApplicationLocalState
+  - AlgoSdk.ApplicationParams
+  - AlgoSdk.ApplicationResponse
+  - AlgoSdk.ApplicationsResponse
+  - AlgoSdk.ApplicationStateDelta
+  - AlgoSdk.ArrayComparer
+  - AlgoSdk.ArrayComparer`1
+  - AlgoSdk.ArrayComparer`2
+  - AlgoSdk.Asset
+  - AlgoSdk.AssetConfigTxn
+  - AlgoSdk.AssetConfigTxn.Params
+  - AlgoSdk.AssetFreezeTxn
+  - AlgoSdk.AssetFreezeTxn.Params
+  - AlgoSdk.AssetHolding
+  - AlgoSdk.AssetParams
+  - AlgoSdk.AssetResponse
+  - AlgoSdk.AssetsResponse
+  - AlgoSdk.AssetTransferTxn
+  - AlgoSdk.AssetTransferTxn.Params
+  - AlgoSdk.BalancesResponse
+  - AlgoSdk.Base32Encoding
+  - AlgoSdk.Base64Encoding
+  - AlgoSdk.Block
+  - AlgoSdk.BlockResponse
+  - AlgoSdk.BlockRewards
+  - AlgoSdk.BlockTransaction
+  - AlgoSdk.BlockUpgradeState
+  - AlgoSdk.BlockUpgradeVote
+  - AlgoSdk.BuildVersion
+  - AlgoSdk.ByteEnumComparer`1
+  - AlgoSdk.CatchupMessage
+  - AlgoSdk.ContentType
+  - AlgoSdk.ContentTypeExtensions
+  - AlgoSdk.CreateWalletRequest
+  - AlgoSdk.CreateWalletResponse
+  - AlgoSdk.DateTimeFormatter
+  - AlgoSdk.DeleteKeyRequest
+  - AlgoSdk.DeleteMultisigRequest
+  - AlgoSdk.DryrunRequest
+  - AlgoSdk.DryrunResults
+  - AlgoSdk.DryrunSource
+  - AlgoSdk.DryrunState
+  - AlgoSdk.DryrunTxnResult
+  - AlgoSdk.Endianness
+  - AlgoSdk.ErrorResponse
+  - AlgoSdk.EvalDelta
+  - AlgoSdk.EvalDeltaAction
+  - AlgoSdk.EvalDeltaKeyValue
+  - AlgoSdk.ExportKeyRequest
+  - AlgoSdk.ExportKeyResponse
+  - AlgoSdk.ExportMasterKeyRequest
+  - AlgoSdk.ExportMasterKeyResponse
+  - AlgoSdk.ExportMultisigRequest
+  - AlgoSdk.ExportMultisigResponse
+  - AlgoSdk.GenerateKeyRequest
+  - AlgoSdk.GenerateKeyResponse
+  - AlgoSdk.GenesisAccountAlloc
+  - AlgoSdk.GenesisAccountAlloc.State
+  - AlgoSdk.GenesisHash
+  - AlgoSdk.GenesisInformation
+  - AlgoSdk.HealthCheck
+  - AlgoSdk.IAlgoApiClient
+  - AlgoSdk.IAlgoApiFormatter`1
+  - AlgoSdk.IAlgoApiResponse
+  - AlgoSdk.IAlgoApiResponse`1
+  - AlgoSdk.IAlgodClient
+  - AlgoSdk.IIndexerClient
+  - AlgoSdk.IIndexerResponse
+  - AlgoSdk.IKmdClient
+  - AlgoSdk.ImportKeyRequest
+  - AlgoSdk.ImportKeyResponse
+  - AlgoSdk.ImportMultisigRequest
+  - AlgoSdk.ImportMultisigResponse
+  - AlgoSdk.IndexerClient
+  - AlgoSdk.InitWalletHandleTokenRequest
+  - AlgoSdk.InitWalletHandleTokenResponse
+  - AlgoSdk.IntEnumComparer`1
+  - AlgoSdk.IPaginatedResponse
+  - AlgoSdk.ISignature
+  - AlgoSdk.ITransaction
+  - AlgoSdk.KeyRegTxn
+  - AlgoSdk.KeyRegTxn.Params
+  - AlgoSdk.KmdClient
+  - AlgoSdk.LedgerSupply
+  - AlgoSdk.ListKeysRequest
+  - AlgoSdk.ListKeysResponse
+  - AlgoSdk.ListMultisigRequest
+  - AlgoSdk.ListMultisigResponse
+  - AlgoSdk.ListWalletsResponse
+  - AlgoSdk.LogicSig
+  - AlgoSdk.MerkleProof
+  - AlgoSdk.MiniAssetHolding
+  - AlgoSdk.Mnemonic
+  - AlgoSdk.Mnemonic.Word
+  - AlgoSdk.Multisig
+  - AlgoSdk.Multisig.Subsig
+  - AlgoSdk.OnCompletion
+  - AlgoSdk.Optional`1
+  - AlgoSdk.PaymentTxn
+  - AlgoSdk.PaymentTxn.Params
+  - AlgoSdk.PendingTransaction
+  - AlgoSdk.PendingTransactions
+  - AlgoSdk.PrivateKey
+  - AlgoSdk.ReleaseWalletHandleTokenRequest
+  - AlgoSdk.RenameWalletRequest
+  - AlgoSdk.RenameWalletResponse
+  - AlgoSdk.RenewWalletHandleTokenRequest
+  - AlgoSdk.RenewWalletHandleTokenResponse
+  - AlgoSdk.SerializationException
+  - AlgoSdk.Sig
+  - AlgoSdk.SignatureType
+  - AlgoSdk.SignatureTypeExtensions
+  - AlgoSdk.Signed`1
+  - AlgoSdk.SignedTransaction
+  - AlgoSdk.SignedTransactionFormatter
+  - AlgoSdk.SignedTransactionFormatter`1
+  - AlgoSdk.SignMultisigRequest
+  - AlgoSdk.SignMultisigResponse
+  - AlgoSdk.SignProgramMultisigRequest
+  - AlgoSdk.SignProgramMultisigResponse
+  - AlgoSdk.SignProgramRequest
+  - AlgoSdk.SignProgramResponse
+  - AlgoSdk.SignTransactionRequest
+  - AlgoSdk.SignTransactionResponse
+  - AlgoSdk.StateSchema
+  - AlgoSdk.Status
+  - AlgoSdk.StringComparer
+  - AlgoSdk.TealBytes
+  - AlgoSdk.TealCompilationResult
+  - AlgoSdk.TealKeyValue
+  - AlgoSdk.TealValue
+  - AlgoSdk.TealValueType
+  - AlgoSdk.TokenizedClientExtensions
+  - AlgoSdk.Transaction
+  - AlgoSdk.TransactionExtensions
+  - AlgoSdk.TransactionGroup
+  - AlgoSdk.TransactionHeader
+  - AlgoSdk.TransactionId
+  - AlgoSdk.TransactionIdResponse
+  - AlgoSdk.TransactionParams
+  - AlgoSdk.TransactionResponse
+  - AlgoSdk.TransactionSignature
+  - AlgoSdk.TransactionsResponse
+  - AlgoSdk.TransactionType
+  - AlgoSdk.TransactionTypeExtensions
+  - AlgoSdk.Utf8StringExtensions
+  - AlgoSdk.Version
+  - AlgoSdk.VersionsResponse
+  - AlgoSdk.VrfPubKey
+  - AlgoSdk.Wallet
+  - AlgoSdk.WalletHandle
+  - AlgoSdk.WalletInfoRequest
+  - AlgoSdk.WalletInfoResponse
+  langs:
+  - csharp
+  - vb
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+  type: Namespace
+  assemblies:
+  - CareBoo.AlgoSdk
+references:
+- uid: AlgoSdk.Optional`1
+  commentId: T:AlgoSdk.Optional`1
+  parent: AlgoSdk
+  name: Optional<T>
+  nameWithType: Optional<T>
+  fullName: AlgoSdk.Optional<T>
+  nameWithType.vb: Optional(Of T)
+  fullName.vb: AlgoSdk.Optional(Of T)
+  name.vb: Optional(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.GenesisHash
+  commentId: T:AlgoSdk.GenesisHash
+  parent: AlgoSdk
+  name: GenesisHash
+  nameWithType: GenesisHash
+  fullName: AlgoSdk.GenesisHash
+- uid: AlgoSdk.CreateWalletResponse
+  commentId: T:AlgoSdk.CreateWalletResponse
+  parent: AlgoSdk
+  name: CreateWalletResponse
+  nameWithType: CreateWalletResponse
+  fullName: AlgoSdk.CreateWalletResponse
+- uid: AlgoSdk.HealthCheck
+  commentId: T:AlgoSdk.HealthCheck
+  parent: AlgoSdk
+  name: HealthCheck
+  nameWithType: HealthCheck
+  fullName: AlgoSdk.HealthCheck
+- uid: AlgoSdk.TransactionIdResponse
+  commentId: T:AlgoSdk.TransactionIdResponse
+  parent: AlgoSdk
+  name: TransactionIdResponse
+  nameWithType: TransactionIdResponse
+  fullName: AlgoSdk.TransactionIdResponse
+- uid: AlgoSdk.Asset
+  commentId: T:AlgoSdk.Asset
+  parent: AlgoSdk
+  name: Asset
+  nameWithType: Asset
+  fullName: AlgoSdk.Asset
+- uid: AlgoSdk.DeleteKeyRequest
+  commentId: T:AlgoSdk.DeleteKeyRequest
+  parent: AlgoSdk
+  name: DeleteKeyRequest
+  nameWithType: DeleteKeyRequest
+  fullName: AlgoSdk.DeleteKeyRequest
+- uid: AlgoSdk.CatchupMessage
+  commentId: T:AlgoSdk.CatchupMessage
+  parent: AlgoSdk
+  name: CatchupMessage
+  nameWithType: CatchupMessage
+  fullName: AlgoSdk.CatchupMessage
+- uid: AlgoSdk.ITransaction
+  commentId: T:AlgoSdk.ITransaction
+  parent: AlgoSdk
+  name: ITransaction
+  nameWithType: ITransaction
+  fullName: AlgoSdk.ITransaction
+- uid: AlgoSdk.TransactionExtensions
+  commentId: T:AlgoSdk.TransactionExtensions
+  parent: AlgoSdk
+  name: TransactionExtensions
+  nameWithType: TransactionExtensions
+  fullName: AlgoSdk.TransactionExtensions
+- uid: AlgoSdk.ImportKeyRequest
+  commentId: T:AlgoSdk.ImportKeyRequest
+  parent: AlgoSdk
+  name: ImportKeyRequest
+  nameWithType: ImportKeyRequest
+  fullName: AlgoSdk.ImportKeyRequest
+- uid: AlgoSdk.SignProgramRequest
+  commentId: T:AlgoSdk.SignProgramRequest
+  parent: AlgoSdk
+  name: SignProgramRequest
+  nameWithType: SignProgramRequest
+  fullName: AlgoSdk.SignProgramRequest
+- uid: AlgoSdk.TransactionId
+  commentId: T:AlgoSdk.TransactionId
+  parent: AlgoSdk
+  name: TransactionId
+  nameWithType: TransactionId
+  fullName: AlgoSdk.TransactionId
+- uid: AlgoSdk.Wallet
+  commentId: T:AlgoSdk.Wallet
+  parent: AlgoSdk
+  name: Wallet
+  nameWithType: Wallet
+  fullName: AlgoSdk.Wallet
+- uid: AlgoSdk.AlgoApiResponse
+  commentId: T:AlgoSdk.AlgoApiResponse
+  parent: AlgoSdk
+  name: AlgoApiResponse
+  nameWithType: AlgoApiResponse
+  fullName: AlgoSdk.AlgoApiResponse
+- uid: AlgoSdk.AlgoApiResponse`1
+  commentId: T:AlgoSdk.AlgoApiResponse`1
+  parent: AlgoSdk
+  name: AlgoApiResponse<T>
+  nameWithType: AlgoApiResponse<T>
+  fullName: AlgoSdk.AlgoApiResponse<T>
+  nameWithType.vb: AlgoApiResponse(Of T)
+  fullName.vb: AlgoSdk.AlgoApiResponse(Of T)
+  name.vb: AlgoApiResponse(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.AlgoApiResponse`1
+    name: AlgoApiResponse
+    nameWithType: AlgoApiResponse
+    fullName: AlgoSdk.AlgoApiResponse
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.AlgoApiResponse`1
+    name: AlgoApiResponse
+    nameWithType: AlgoApiResponse
+    fullName: AlgoSdk.AlgoApiResponse
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.WalletInfoResponse
+  commentId: T:AlgoSdk.WalletInfoResponse
+  parent: AlgoSdk
+  name: WalletInfoResponse
+  nameWithType: WalletInfoResponse
+  fullName: AlgoSdk.WalletInfoResponse
+- uid: AlgoSdk.ImportKeyResponse
+  commentId: T:AlgoSdk.ImportKeyResponse
+  parent: AlgoSdk
+  name: ImportKeyResponse
+  nameWithType: ImportKeyResponse
+  fullName: AlgoSdk.ImportKeyResponse
+- uid: AlgoSdk.SignProgramResponse
+  commentId: T:AlgoSdk.SignProgramResponse
+  parent: AlgoSdk
+  name: SignProgramResponse
+  nameWithType: SignProgramResponse
+  fullName: AlgoSdk.SignProgramResponse
+- uid: AlgoSdk.ISignature
+  commentId: T:AlgoSdk.ISignature
+  parent: AlgoSdk
+  name: ISignature
+  nameWithType: ISignature
+  fullName: AlgoSdk.ISignature
+- uid: AlgoSdk.ListKeysResponse
+  commentId: T:AlgoSdk.ListKeysResponse
+  parent: AlgoSdk
+  name: ListKeysResponse
+  nameWithType: ListKeysResponse
+  fullName: AlgoSdk.ListKeysResponse
+- uid: AlgoSdk.RenameWalletResponse
+  commentId: T:AlgoSdk.RenameWalletResponse
+  parent: AlgoSdk
+  name: RenameWalletResponse
+  nameWithType: RenameWalletResponse
+  fullName: AlgoSdk.RenameWalletResponse
+- uid: AlgoSdk.TransactionSignature
+  commentId: T:AlgoSdk.TransactionSignature
+  parent: AlgoSdk
+  name: TransactionSignature
+  nameWithType: TransactionSignature
+  fullName: AlgoSdk.TransactionSignature
+- uid: AlgoSdk.DryrunRequest
+  commentId: T:AlgoSdk.DryrunRequest
+  parent: AlgoSdk
+  name: DryrunRequest
+  nameWithType: DryrunRequest
+  fullName: AlgoSdk.DryrunRequest
+- uid: AlgoSdk.ListKeysRequest
+  commentId: T:AlgoSdk.ListKeysRequest
+  parent: AlgoSdk
+  name: ListKeysRequest
+  nameWithType: ListKeysRequest
+  fullName: AlgoSdk.ListKeysRequest
+- uid: AlgoSdk.BlockUpgradeState
+  commentId: T:AlgoSdk.BlockUpgradeState
+  parent: AlgoSdk
+  name: BlockUpgradeState
+  nameWithType: BlockUpgradeState
+  fullName: AlgoSdk.BlockUpgradeState
+- uid: AlgoSdk.ApplicationLocalState
+  commentId: T:AlgoSdk.ApplicationLocalState
+  parent: AlgoSdk
+  name: ApplicationLocalState
+  nameWithType: ApplicationLocalState
+  fullName: AlgoSdk.ApplicationLocalState
+- uid: AlgoSdk.Mnemonic
+  commentId: T:AlgoSdk.Mnemonic
+  parent: AlgoSdk
+  name: Mnemonic
+  nameWithType: Mnemonic
+  fullName: AlgoSdk.Mnemonic
+- uid: AlgoSdk.Mnemonic.Word
+  commentId: T:AlgoSdk.Mnemonic.Word
+  parent: AlgoSdk
+  name: Mnemonic.Word
+  nameWithType: Mnemonic.Word
+  fullName: AlgoSdk.Mnemonic.Word
+- uid: AlgoSdk.ApplicationStateDelta
+  commentId: T:AlgoSdk.ApplicationStateDelta
+  parent: AlgoSdk
+  name: ApplicationStateDelta
+  nameWithType: ApplicationStateDelta
+  fullName: AlgoSdk.ApplicationStateDelta
+- uid: AlgoSdk.Version
+  commentId: T:AlgoSdk.Version
+  parent: AlgoSdk
+  name: Version
+  nameWithType: Version
+  fullName: AlgoSdk.Version
+- uid: AlgoSdk.EvalDeltaKeyValue
+  commentId: T:AlgoSdk.EvalDeltaKeyValue
+  parent: AlgoSdk
+  name: EvalDeltaKeyValue
+  nameWithType: EvalDeltaKeyValue
+  fullName: AlgoSdk.EvalDeltaKeyValue
+- uid: AlgoSdk.AlgoApiField`1
+  commentId: T:AlgoSdk.AlgoApiField`1
+  parent: AlgoSdk
+  name: AlgoApiField<TAlgoApiObject>
+  nameWithType: AlgoApiField<TAlgoApiObject>
+  fullName: AlgoSdk.AlgoApiField<TAlgoApiObject>
+  nameWithType.vb: AlgoApiField(Of TAlgoApiObject)
+  fullName.vb: AlgoSdk.AlgoApiField(Of TAlgoApiObject)
+  name.vb: AlgoApiField(Of TAlgoApiObject)
+  spec.csharp:
+  - uid: AlgoSdk.AlgoApiField`1
+    name: AlgoApiField
+    nameWithType: AlgoApiField
+    fullName: AlgoSdk.AlgoApiField
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TAlgoApiObject
+    nameWithType: TAlgoApiObject
+    fullName: TAlgoApiObject
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.AlgoApiField`1
+    name: AlgoApiField
+    nameWithType: AlgoApiField
+    fullName: AlgoSdk.AlgoApiField
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TAlgoApiObject
+    nameWithType: TAlgoApiObject
+    fullName: TAlgoApiObject
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AlgoApiField`1.MessagePackDeserializer
+  commentId: T:AlgoSdk.AlgoApiField`1.MessagePackDeserializer
+  parent: AlgoSdk
+  name: AlgoApiField.MessagePackDeserializer<>
+  nameWithType: AlgoApiField.MessagePackDeserializer<>
+  fullName: AlgoSdk.AlgoApiField.MessagePackDeserializer<>
+  nameWithType.vb: AlgoApiField.MessagePackDeserializer(Of )
+  fullName.vb: AlgoSdk.AlgoApiField.MessagePackDeserializer(Of )
+  name.vb: AlgoApiField.MessagePackDeserializer(Of )
+  spec.csharp:
+  - uid: AlgoSdk.AlgoApiField`1.MessagePackDeserializer
+    name: AlgoApiField.MessagePackDeserializer
+    nameWithType: AlgoApiField.MessagePackDeserializer
+    fullName: AlgoSdk.AlgoApiField.MessagePackDeserializer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.AlgoApiField`1.MessagePackDeserializer
+    name: AlgoApiField.MessagePackDeserializer
+    nameWithType: AlgoApiField.MessagePackDeserializer
+    fullName: AlgoSdk.AlgoApiField.MessagePackDeserializer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AlgoApiField`1.JsonDeserializer
+  commentId: T:AlgoSdk.AlgoApiField`1.JsonDeserializer
+  parent: AlgoSdk
+  name: AlgoApiField.JsonDeserializer<>
+  nameWithType: AlgoApiField.JsonDeserializer<>
+  fullName: AlgoSdk.AlgoApiField.JsonDeserializer<>
+  nameWithType.vb: AlgoApiField.JsonDeserializer(Of )
+  fullName.vb: AlgoSdk.AlgoApiField.JsonDeserializer(Of )
+  name.vb: AlgoApiField.JsonDeserializer(Of )
+  spec.csharp:
+  - uid: AlgoSdk.AlgoApiField`1.JsonDeserializer
+    name: AlgoApiField.JsonDeserializer
+    nameWithType: AlgoApiField.JsonDeserializer
+    fullName: AlgoSdk.AlgoApiField.JsonDeserializer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.AlgoApiField`1.JsonDeserializer
+    name: AlgoApiField.JsonDeserializer
+    nameWithType: AlgoApiField.JsonDeserializer
+    fullName: AlgoSdk.AlgoApiField.JsonDeserializer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AlgoApiField`1.MessagePackSerializer
+  commentId: T:AlgoSdk.AlgoApiField`1.MessagePackSerializer
+  parent: AlgoSdk
+  name: AlgoApiField.MessagePackSerializer<>
+  nameWithType: AlgoApiField.MessagePackSerializer<>
+  fullName: AlgoSdk.AlgoApiField.MessagePackSerializer<>
+  nameWithType.vb: AlgoApiField.MessagePackSerializer(Of )
+  fullName.vb: AlgoSdk.AlgoApiField.MessagePackSerializer(Of )
+  name.vb: AlgoApiField.MessagePackSerializer(Of )
+  spec.csharp:
+  - uid: AlgoSdk.AlgoApiField`1.MessagePackSerializer
+    name: AlgoApiField.MessagePackSerializer
+    nameWithType: AlgoApiField.MessagePackSerializer
+    fullName: AlgoSdk.AlgoApiField.MessagePackSerializer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.AlgoApiField`1.MessagePackSerializer
+    name: AlgoApiField.MessagePackSerializer
+    nameWithType: AlgoApiField.MessagePackSerializer
+    fullName: AlgoSdk.AlgoApiField.MessagePackSerializer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AlgoApiField`1.JsonSerializer
+  commentId: T:AlgoSdk.AlgoApiField`1.JsonSerializer
+  parent: AlgoSdk
+  name: AlgoApiField.JsonSerializer<>
+  nameWithType: AlgoApiField.JsonSerializer<>
+  fullName: AlgoSdk.AlgoApiField.JsonSerializer<>
+  nameWithType.vb: AlgoApiField.JsonSerializer(Of )
+  fullName.vb: AlgoSdk.AlgoApiField.JsonSerializer(Of )
+  name.vb: AlgoApiField.JsonSerializer(Of )
+  spec.csharp:
+  - uid: AlgoSdk.AlgoApiField`1.JsonSerializer
+    name: AlgoApiField.JsonSerializer
+    nameWithType: AlgoApiField.JsonSerializer
+    fullName: AlgoSdk.AlgoApiField.JsonSerializer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.AlgoApiField`1.JsonSerializer
+    name: AlgoApiField.JsonSerializer
+    nameWithType: AlgoApiField.JsonSerializer
+    fullName: AlgoSdk.AlgoApiField.JsonSerializer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AlgoApiField`1.EqualityComparer
+  commentId: T:AlgoSdk.AlgoApiField`1.EqualityComparer
+  parent: AlgoSdk
+  name: AlgoApiField.EqualityComparer<>
+  nameWithType: AlgoApiField.EqualityComparer<>
+  fullName: AlgoSdk.AlgoApiField.EqualityComparer<>
+  nameWithType.vb: AlgoApiField.EqualityComparer(Of )
+  fullName.vb: AlgoSdk.AlgoApiField.EqualityComparer(Of )
+  name.vb: AlgoApiField.EqualityComparer(Of )
+  spec.csharp:
+  - uid: AlgoSdk.AlgoApiField`1.EqualityComparer
+    name: AlgoApiField.EqualityComparer
+    nameWithType: AlgoApiField.EqualityComparer
+    fullName: AlgoSdk.AlgoApiField.EqualityComparer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.AlgoApiField`1.EqualityComparer
+    name: AlgoApiField.EqualityComparer
+    nameWithType: AlgoApiField.EqualityComparer
+    fullName: AlgoSdk.AlgoApiField.EqualityComparer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AlgoApiField`1.SerializePredicate
+  commentId: T:AlgoSdk.AlgoApiField`1.SerializePredicate
+  parent: AlgoSdk
+  name: AlgoApiField.SerializePredicate<>
+  nameWithType: AlgoApiField.SerializePredicate<>
+  fullName: AlgoSdk.AlgoApiField.SerializePredicate<>
+  nameWithType.vb: AlgoApiField.SerializePredicate(Of )
+  fullName.vb: AlgoSdk.AlgoApiField.SerializePredicate(Of )
+  name.vb: AlgoApiField.SerializePredicate(Of )
+  spec.csharp:
+  - uid: AlgoSdk.AlgoApiField`1.SerializePredicate
+    name: AlgoApiField.SerializePredicate
+    nameWithType: AlgoApiField.SerializePredicate
+    fullName: AlgoSdk.AlgoApiField.SerializePredicate
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.AlgoApiField`1.SerializePredicate
+    name: AlgoApiField.SerializePredicate
+    nameWithType: AlgoApiField.SerializePredicate
+    fullName: AlgoSdk.AlgoApiField.SerializePredicate
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AlgoApiField`1.FieldGetter`1
+  commentId: T:AlgoSdk.AlgoApiField`1.FieldGetter`1
+  name: AlgoApiField.FieldGetter<T>
+  nameWithType: AlgoApiField.FieldGetter<T>
+  fullName: AlgoSdk.AlgoApiField.FieldGetter<T>
+  nameWithType.vb: AlgoApiField.FieldGetter(Of T)
+  fullName.vb: AlgoSdk.AlgoApiField.FieldGetter(Of T)
+  name.vb: AlgoApiField.FieldGetter(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.AlgoApiField`1.FieldGetter`1
+    name: AlgoApiField.FieldGetter
+    nameWithType: AlgoApiField.FieldGetter
+    fullName: AlgoSdk.AlgoApiField.FieldGetter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.AlgoApiField`1.FieldGetter`1
+    name: AlgoApiField.FieldGetter
+    nameWithType: AlgoApiField.FieldGetter
+    fullName: AlgoSdk.AlgoApiField.FieldGetter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AlgoApiField`1.FieldSetter`1
+  commentId: T:AlgoSdk.AlgoApiField`1.FieldSetter`1
+  name: AlgoApiField.FieldSetter<T>
+  nameWithType: AlgoApiField.FieldSetter<T>
+  fullName: AlgoSdk.AlgoApiField.FieldSetter<T>
+  nameWithType.vb: AlgoApiField.FieldSetter(Of T)
+  fullName.vb: AlgoSdk.AlgoApiField.FieldSetter(Of T)
+  name.vb: AlgoApiField.FieldSetter(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.AlgoApiField`1.FieldSetter`1
+    name: AlgoApiField.FieldSetter
+    nameWithType: AlgoApiField.FieldSetter
+    fullName: AlgoSdk.AlgoApiField.FieldSetter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.AlgoApiField`1.FieldSetter`1
+    name: AlgoApiField.FieldSetter
+    nameWithType: AlgoApiField.FieldSetter
+    fullName: AlgoSdk.AlgoApiField.FieldSetter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AlgoApiField`1.Map`1
+  commentId: T:AlgoSdk.AlgoApiField`1.Map`1
+  parent: AlgoSdk
+  name: AlgoApiField.Map<TKey>
+  nameWithType: AlgoApiField.Map<TKey>
+  fullName: AlgoSdk.AlgoApiField.Map<TKey>
+  nameWithType.vb: AlgoApiField.Map(Of TKey)
+  fullName.vb: AlgoSdk.AlgoApiField.Map(Of TKey)
+  name.vb: AlgoApiField.Map(Of TKey)
+  spec.csharp:
+  - uid: AlgoSdk.AlgoApiField`1.Map`1
+    name: AlgoApiField.Map
+    nameWithType: AlgoApiField.Map
+    fullName: AlgoSdk.AlgoApiField.Map
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.AlgoApiField`1.Map`1
+    name: AlgoApiField.Map
+    nameWithType: AlgoApiField.Map
+    fullName: AlgoSdk.AlgoApiField.Map
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.SignProgramMultisigRequest
+  commentId: T:AlgoSdk.SignProgramMultisigRequest
+  parent: AlgoSdk
+  name: SignProgramMultisigRequest
+  nameWithType: SignProgramMultisigRequest
+  fullName: AlgoSdk.SignProgramMultisigRequest
+- uid: AlgoSdk.AssetResponse
+  commentId: T:AlgoSdk.AssetResponse
+  parent: AlgoSdk
+  name: AssetResponse
+  nameWithType: AssetResponse
+  fullName: AlgoSdk.AssetResponse
+- uid: AlgoSdk.WalletInfoRequest
+  commentId: T:AlgoSdk.WalletInfoRequest
+  parent: AlgoSdk
+  name: WalletInfoRequest
+  nameWithType: WalletInfoRequest
+  fullName: AlgoSdk.WalletInfoRequest
+- uid: AlgoSdk.GenerateKeyRequest
+  commentId: T:AlgoSdk.GenerateKeyRequest
+  parent: AlgoSdk
+  name: GenerateKeyRequest
+  nameWithType: GenerateKeyRequest
+  fullName: AlgoSdk.GenerateKeyRequest
+- uid: AlgoSdk.DryrunResults
+  commentId: T:AlgoSdk.DryrunResults
+  parent: AlgoSdk
+  name: DryrunResults
+  nameWithType: DryrunResults
+  fullName: AlgoSdk.DryrunResults
+- uid: AlgoSdk.VersionsResponse
+  commentId: T:AlgoSdk.VersionsResponse
+  parent: AlgoSdk
+  name: VersionsResponse
+  nameWithType: VersionsResponse
+  fullName: AlgoSdk.VersionsResponse
+- uid: AlgoSdk.PendingTransactions
+  commentId: T:AlgoSdk.PendingTransactions
+  parent: AlgoSdk
+  name: PendingTransactions
+  nameWithType: PendingTransactions
+  fullName: AlgoSdk.PendingTransactions
+- uid: AlgoSdk.RenewWalletHandleTokenResponse
+  commentId: T:AlgoSdk.RenewWalletHandleTokenResponse
+  parent: AlgoSdk
+  name: RenewWalletHandleTokenResponse
+  nameWithType: RenewWalletHandleTokenResponse
+  fullName: AlgoSdk.RenewWalletHandleTokenResponse
+- uid: AlgoSdk.ContentType
+  commentId: T:AlgoSdk.ContentType
+  parent: AlgoSdk
+  name: ContentType
+  nameWithType: ContentType
+  fullName: AlgoSdk.ContentType
+- uid: AlgoSdk.ContentTypeExtensions
+  commentId: T:AlgoSdk.ContentTypeExtensions
+  parent: AlgoSdk
+  name: ContentTypeExtensions
+  nameWithType: ContentTypeExtensions
+  fullName: AlgoSdk.ContentTypeExtensions
+- uid: AlgoSdk.BlockResponse
+  commentId: T:AlgoSdk.BlockResponse
+  parent: AlgoSdk
+  name: BlockResponse
+  nameWithType: BlockResponse
+  fullName: AlgoSdk.BlockResponse
+- uid: AlgoSdk.ExportMasterKeyResponse
+  commentId: T:AlgoSdk.ExportMasterKeyResponse
+  parent: AlgoSdk
+  name: ExportMasterKeyResponse
+  nameWithType: ExportMasterKeyResponse
+  fullName: AlgoSdk.ExportMasterKeyResponse
+- uid: AlgoSdk.GenerateKeyResponse
+  commentId: T:AlgoSdk.GenerateKeyResponse
+  parent: AlgoSdk
+  name: GenerateKeyResponse
+  nameWithType: GenerateKeyResponse
+  fullName: AlgoSdk.GenerateKeyResponse
+- uid: AlgoSdk.DryrunState
+  commentId: T:AlgoSdk.DryrunState
+  parent: AlgoSdk
+  name: DryrunState
+  nameWithType: DryrunState
+  fullName: AlgoSdk.DryrunState
+- uid: AlgoSdk.AssetHolding
+  commentId: T:AlgoSdk.AssetHolding
+  parent: AlgoSdk
+  name: AssetHolding
+  nameWithType: AssetHolding
+  fullName: AlgoSdk.AssetHolding
+- uid: AlgoSdk.AlgoApiFormatterLookup
+  commentId: T:AlgoSdk.AlgoApiFormatterLookup
+  name: AlgoApiFormatterLookup
+  nameWithType: AlgoApiFormatterLookup
+  fullName: AlgoSdk.AlgoApiFormatterLookup
+- uid: AlgoSdk.Transaction
+  commentId: T:AlgoSdk.Transaction
+  parent: AlgoSdk
+  name: Transaction
+  nameWithType: Transaction
+  fullName: AlgoSdk.Transaction
+- uid: AlgoSdk.PaymentTxn
+  commentId: T:AlgoSdk.PaymentTxn
+  parent: AlgoSdk
+  name: PaymentTxn
+  nameWithType: PaymentTxn
+  fullName: AlgoSdk.PaymentTxn
+- uid: AlgoSdk.PaymentTxn.Params
+  commentId: T:AlgoSdk.PaymentTxn.Params
+  parent: AlgoSdk
+  name: PaymentTxn.Params
+  nameWithType: PaymentTxn.Params
+  fullName: AlgoSdk.PaymentTxn.Params
+- uid: AlgoSdk.WalletHandle
+  commentId: T:AlgoSdk.WalletHandle
+  parent: AlgoSdk
+  name: WalletHandle
+  nameWithType: WalletHandle
+  fullName: AlgoSdk.WalletHandle
+- uid: AlgoSdk.TealKeyValue
+  commentId: T:AlgoSdk.TealKeyValue
+  parent: AlgoSdk
+  name: TealKeyValue
+  nameWithType: TealKeyValue
+  fullName: AlgoSdk.TealKeyValue
+- uid: AlgoSdk.Utf8StringExtensions
+  commentId: T:AlgoSdk.Utf8StringExtensions
+  name: Utf8StringExtensions
+  nameWithType: Utf8StringExtensions
+  fullName: AlgoSdk.Utf8StringExtensions
+- uid: AlgoSdk.ImportMultisigRequest
+  commentId: T:AlgoSdk.ImportMultisigRequest
+  parent: AlgoSdk
+  name: ImportMultisigRequest
+  nameWithType: ImportMultisigRequest
+  fullName: AlgoSdk.ImportMultisigRequest
+- uid: AlgoSdk.SignMultisigResponse
+  commentId: T:AlgoSdk.SignMultisigResponse
+  parent: AlgoSdk
+  name: SignMultisigResponse
+  nameWithType: SignMultisigResponse
+  fullName: AlgoSdk.SignMultisigResponse
+- uid: AlgoSdk.Sig
+  commentId: T:AlgoSdk.Sig
+  parent: AlgoSdk
+  name: Sig
+  nameWithType: Sig
+  fullName: AlgoSdk.Sig
+- uid: AlgoSdk.LogicSig
+  commentId: T:AlgoSdk.LogicSig
+  parent: AlgoSdk
+  name: LogicSig
+  nameWithType: LogicSig
+  fullName: AlgoSdk.LogicSig
+- uid: AlgoSdk.TransactionGroup
+  commentId: T:AlgoSdk.TransactionGroup
+  parent: AlgoSdk
+  name: TransactionGroup
+  nameWithType: TransactionGroup
+  fullName: AlgoSdk.TransactionGroup
+- uid: AlgoSdk.PrivateKey
+  commentId: T:AlgoSdk.PrivateKey
+  parent: AlgoSdk
+  name: PrivateKey
+  nameWithType: PrivateKey
+  fullName: AlgoSdk.PrivateKey
+- uid: AlgoSdk.AlgoApiFormatterCache`1
+  commentId: T:AlgoSdk.AlgoApiFormatterCache`1
+  name: AlgoApiFormatterCache<T>
+  nameWithType: AlgoApiFormatterCache<T>
+  fullName: AlgoSdk.AlgoApiFormatterCache<T>
+  nameWithType.vb: AlgoApiFormatterCache(Of T)
+  fullName.vb: AlgoSdk.AlgoApiFormatterCache(Of T)
+  name.vb: AlgoApiFormatterCache(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.AlgoApiFormatterCache`1
+    name: AlgoApiFormatterCache
+    nameWithType: AlgoApiFormatterCache
+    fullName: AlgoSdk.AlgoApiFormatterCache
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.AlgoApiFormatterCache`1
+    name: AlgoApiFormatterCache
+    nameWithType: AlgoApiFormatterCache
+    fullName: AlgoSdk.AlgoApiFormatterCache
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Base64Encoding
+  commentId: T:AlgoSdk.Base64Encoding
+  parent: AlgoSdk
+  name: Base64Encoding
+  nameWithType: Base64Encoding
+  fullName: AlgoSdk.Base64Encoding
+- uid: AlgoSdk.TransactionParams
+  commentId: T:AlgoSdk.TransactionParams
+  parent: AlgoSdk
+  name: TransactionParams
+  nameWithType: TransactionParams
+  fullName: AlgoSdk.TransactionParams
+- uid: AlgoSdk.TransactionType
+  commentId: T:AlgoSdk.TransactionType
+  parent: AlgoSdk
+  name: TransactionType
+  nameWithType: TransactionType
+  fullName: AlgoSdk.TransactionType
+- uid: AlgoSdk.TransactionTypeExtensions
+  commentId: T:AlgoSdk.TransactionTypeExtensions
+  parent: AlgoSdk
+  name: TransactionTypeExtensions
+  nameWithType: TransactionTypeExtensions
+  fullName: AlgoSdk.TransactionTypeExtensions
+- uid: AlgoSdk.AlgoApiObjectFormatter`1
+  commentId: T:AlgoSdk.AlgoApiObjectFormatter`1
+  parent: AlgoSdk
+  name: AlgoApiObjectFormatter<T>
+  nameWithType: AlgoApiObjectFormatter<T>
+  fullName: AlgoSdk.AlgoApiObjectFormatter<T>
+  nameWithType.vb: AlgoApiObjectFormatter(Of T)
+  fullName.vb: AlgoSdk.AlgoApiObjectFormatter(Of T)
+  name.vb: AlgoApiObjectFormatter(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.AlgoApiObjectFormatter`1
+    name: AlgoApiObjectFormatter
+    nameWithType: AlgoApiObjectFormatter
+    fullName: AlgoSdk.AlgoApiObjectFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.AlgoApiObjectFormatter`1
+    name: AlgoApiObjectFormatter
+    nameWithType: AlgoApiObjectFormatter
+    fullName: AlgoSdk.AlgoApiObjectFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AlgoApiObjectFormatter
+  commentId: T:AlgoSdk.AlgoApiObjectFormatter
+  parent: AlgoSdk
+  name: AlgoApiObjectFormatter
+  nameWithType: AlgoApiObjectFormatter
+  fullName: AlgoSdk.AlgoApiObjectFormatter
+- uid: AlgoSdk.BlockTransaction
+  commentId: T:AlgoSdk.BlockTransaction
+  parent: AlgoSdk
+  name: BlockTransaction
+  nameWithType: BlockTransaction
+  fullName: AlgoSdk.BlockTransaction
+- uid: AlgoSdk.RenewWalletHandleTokenRequest
+  commentId: T:AlgoSdk.RenewWalletHandleTokenRequest
+  parent: AlgoSdk
+  name: RenewWalletHandleTokenRequest
+  nameWithType: RenewWalletHandleTokenRequest
+  fullName: AlgoSdk.RenewWalletHandleTokenRequest
+- uid: AlgoSdk.PendingTransaction
+  commentId: T:AlgoSdk.PendingTransaction
+  parent: AlgoSdk
+  name: PendingTransaction
+  nameWithType: PendingTransaction
+  fullName: AlgoSdk.PendingTransaction
+- uid: AlgoSdk.CreateWalletRequest
+  commentId: T:AlgoSdk.CreateWalletRequest
+  parent: AlgoSdk
+  name: CreateWalletRequest
+  nameWithType: CreateWalletRequest
+  fullName: AlgoSdk.CreateWalletRequest
+- uid: AlgoSdk.Status
+  commentId: T:AlgoSdk.Status
+  parent: AlgoSdk
+  name: Status
+  nameWithType: Status
+  fullName: AlgoSdk.Status
+- uid: AlgoSdk.DryrunSource
+  commentId: T:AlgoSdk.DryrunSource
+  parent: AlgoSdk
+  name: DryrunSource
+  nameWithType: DryrunSource
+  fullName: AlgoSdk.DryrunSource
+- uid: AlgoSdk.AddressRoleFormatter
+  commentId: T:AlgoSdk.AddressRoleFormatter
+  parent: AlgoSdk
+  name: AddressRoleFormatter
+  nameWithType: AddressRoleFormatter
+  fullName: AlgoSdk.AddressRoleFormatter
+- uid: AlgoSdk.ApplicationParams
+  commentId: T:AlgoSdk.ApplicationParams
+  parent: AlgoSdk
+  name: ApplicationParams
+  nameWithType: ApplicationParams
+  fullName: AlgoSdk.ApplicationParams
+- uid: AlgoSdk.IAlgoApiClient
+  commentId: T:AlgoSdk.IAlgoApiClient
+  parent: AlgoSdk
+  name: IAlgoApiClient
+  nameWithType: IAlgoApiClient
+  fullName: AlgoSdk.IAlgoApiClient
+- uid: AlgoSdk.TokenizedClientExtensions
+  commentId: T:AlgoSdk.TokenizedClientExtensions
+  parent: AlgoSdk
+  name: TokenizedClientExtensions
+  nameWithType: TokenizedClientExtensions
+  fullName: AlgoSdk.TokenizedClientExtensions
+- uid: AlgoSdk.BlockRewards
+  commentId: T:AlgoSdk.BlockRewards
+  parent: AlgoSdk
+  name: BlockRewards
+  nameWithType: BlockRewards
+  fullName: AlgoSdk.BlockRewards
+- uid: AlgoSdk.MiniAssetHolding
+  commentId: T:AlgoSdk.MiniAssetHolding
+  parent: AlgoSdk
+  name: MiniAssetHolding
+  nameWithType: MiniAssetHolding
+  fullName: AlgoSdk.MiniAssetHolding
+- uid: AlgoSdk.SerializationException
+  commentId: T:AlgoSdk.SerializationException
+  name: SerializationException
+  nameWithType: SerializationException
+  fullName: AlgoSdk.SerializationException
+- uid: AlgoSdk.AlgoApiRequest
+  commentId: T:AlgoSdk.AlgoApiRequest
+  parent: AlgoSdk
+  name: AlgoApiRequest
+  nameWithType: AlgoApiRequest
+  fullName: AlgoSdk.AlgoApiRequest
+- uid: AlgoSdk.AlgoApiRequest.Sent
+  commentId: T:AlgoSdk.AlgoApiRequest.Sent
+  parent: AlgoSdk
+  name: AlgoApiRequest.Sent
+  nameWithType: AlgoApiRequest.Sent
+  fullName: AlgoSdk.AlgoApiRequest.Sent
+- uid: AlgoSdk.AlgoApiRequest.Sent`1
+  commentId: T:AlgoSdk.AlgoApiRequest.Sent`1
+  name: AlgoApiRequest.Sent<TProgress>
+  nameWithType: AlgoApiRequest.Sent<TProgress>
+  fullName: AlgoSdk.AlgoApiRequest.Sent<TProgress>
+  nameWithType.vb: AlgoApiRequest.Sent(Of TProgress)
+  fullName.vb: AlgoSdk.AlgoApiRequest.Sent(Of TProgress)
+  name.vb: AlgoApiRequest.Sent(Of TProgress)
+  spec.csharp:
+  - uid: AlgoSdk.AlgoApiRequest.Sent`1
+    name: AlgoApiRequest.Sent
+    nameWithType: AlgoApiRequest.Sent
+    fullName: AlgoSdk.AlgoApiRequest.Sent
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TProgress
+    nameWithType: TProgress
+    fullName: TProgress
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.AlgoApiRequest.Sent`1
+    name: AlgoApiRequest.Sent
+    nameWithType: AlgoApiRequest.Sent
+    fullName: AlgoSdk.AlgoApiRequest.Sent
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TProgress
+    nameWithType: TProgress
+    fullName: TProgress
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AlgoApiRequest.Awaiter
+  commentId: T:AlgoSdk.AlgoApiRequest.Awaiter
+  parent: AlgoSdk
+  name: AlgoApiRequest.Awaiter
+  nameWithType: AlgoApiRequest.Awaiter
+  fullName: AlgoSdk.AlgoApiRequest.Awaiter
+- uid: AlgoSdk.ByteEnumComparer`1
+  commentId: T:AlgoSdk.ByteEnumComparer`1
+  parent: AlgoSdk
+  name: ByteEnumComparer<T>
+  nameWithType: ByteEnumComparer<T>
+  fullName: AlgoSdk.ByteEnumComparer<T>
+  nameWithType.vb: ByteEnumComparer(Of T)
+  fullName.vb: AlgoSdk.ByteEnumComparer(Of T)
+  name.vb: ByteEnumComparer(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.ByteEnumComparer`1
+    name: ByteEnumComparer
+    nameWithType: ByteEnumComparer
+    fullName: AlgoSdk.ByteEnumComparer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.ByteEnumComparer`1
+    name: ByteEnumComparer
+    nameWithType: ByteEnumComparer
+    fullName: AlgoSdk.ByteEnumComparer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.IntEnumComparer`1
+  commentId: T:AlgoSdk.IntEnumComparer`1
+  parent: AlgoSdk
+  name: IntEnumComparer<T>
+  nameWithType: IntEnumComparer<T>
+  fullName: AlgoSdk.IntEnumComparer<T>
+  nameWithType.vb: IntEnumComparer(Of T)
+  fullName.vb: AlgoSdk.IntEnumComparer(Of T)
+  name.vb: IntEnumComparer(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.IntEnumComparer`1
+    name: IntEnumComparer
+    nameWithType: IntEnumComparer
+    fullName: AlgoSdk.IntEnumComparer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.IntEnumComparer`1
+    name: IntEnumComparer
+    nameWithType: IntEnumComparer
+    fullName: AlgoSdk.IntEnumComparer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.ArrayComparer`2
+  commentId: T:AlgoSdk.ArrayComparer`2
+  parent: AlgoSdk
+  name: ArrayComparer<T, TComparer>
+  nameWithType: ArrayComparer<T, TComparer>
+  fullName: AlgoSdk.ArrayComparer<T, TComparer>
+  nameWithType.vb: ArrayComparer(Of T, TComparer)
+  fullName.vb: AlgoSdk.ArrayComparer(Of T, TComparer)
+  name.vb: ArrayComparer(Of T, TComparer)
+  spec.csharp:
+  - uid: AlgoSdk.ArrayComparer`2
+    name: ArrayComparer
+    nameWithType: ArrayComparer
+    fullName: AlgoSdk.ArrayComparer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TComparer
+    nameWithType: TComparer
+    fullName: TComparer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.ArrayComparer`2
+    name: ArrayComparer
+    nameWithType: ArrayComparer
+    fullName: AlgoSdk.ArrayComparer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TComparer
+    nameWithType: TComparer
+    fullName: TComparer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.ArrayComparer`1
+  commentId: T:AlgoSdk.ArrayComparer`1
+  parent: AlgoSdk
+  name: ArrayComparer<T>
+  nameWithType: ArrayComparer<T>
+  fullName: AlgoSdk.ArrayComparer<T>
+  nameWithType.vb: ArrayComparer(Of T)
+  fullName.vb: AlgoSdk.ArrayComparer(Of T)
+  name.vb: ArrayComparer(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.ArrayComparer`1
+    name: ArrayComparer
+    nameWithType: ArrayComparer
+    fullName: AlgoSdk.ArrayComparer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.ArrayComparer`1
+    name: ArrayComparer
+    nameWithType: ArrayComparer
+    fullName: AlgoSdk.ArrayComparer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.ArrayComparer
+  commentId: T:AlgoSdk.ArrayComparer
+  name: ArrayComparer
+  nameWithType: ArrayComparer
+  fullName: AlgoSdk.ArrayComparer
+- uid: AlgoSdk.StringComparer
+  commentId: T:AlgoSdk.StringComparer
+  parent: AlgoSdk
+  name: StringComparer
+  nameWithType: StringComparer
+  fullName: AlgoSdk.StringComparer
+- uid: AlgoSdk.SignatureType
+  commentId: T:AlgoSdk.SignatureType
+  parent: AlgoSdk
+  name: SignatureType
+  nameWithType: SignatureType
+  fullName: AlgoSdk.SignatureType
+- uid: AlgoSdk.SignatureTypeExtensions
+  commentId: T:AlgoSdk.SignatureTypeExtensions
+  parent: AlgoSdk
+  name: SignatureTypeExtensions
+  nameWithType: SignatureTypeExtensions
+  fullName: AlgoSdk.SignatureTypeExtensions
+- uid: AlgoSdk.IKmdClient
+  commentId: T:AlgoSdk.IKmdClient
+  parent: AlgoSdk
+  name: IKmdClient
+  nameWithType: IKmdClient
+  fullName: AlgoSdk.IKmdClient
+- uid: AlgoSdk.ListWalletsResponse
+  commentId: T:AlgoSdk.ListWalletsResponse
+  parent: AlgoSdk
+  name: ListWalletsResponse
+  nameWithType: ListWalletsResponse
+  fullName: AlgoSdk.ListWalletsResponse
+- uid: AlgoSdk.MerkleProof
+  commentId: T:AlgoSdk.MerkleProof
+  parent: AlgoSdk
+  name: MerkleProof
+  nameWithType: MerkleProof
+  fullName: AlgoSdk.MerkleProof
+- uid: AlgoSdk.SignedTransactionFormatter
+  commentId: T:AlgoSdk.SignedTransactionFormatter
+  parent: AlgoSdk
+  name: SignedTransactionFormatter
+  nameWithType: SignedTransactionFormatter
+  fullName: AlgoSdk.SignedTransactionFormatter
+- uid: AlgoSdk.SignedTransactionFormatter`1
+  commentId: T:AlgoSdk.SignedTransactionFormatter`1
+  name: SignedTransactionFormatter<TTransaction>
+  nameWithType: SignedTransactionFormatter<TTransaction>
+  fullName: AlgoSdk.SignedTransactionFormatter<TTransaction>
+  nameWithType.vb: SignedTransactionFormatter(Of TTransaction)
+  fullName.vb: AlgoSdk.SignedTransactionFormatter(Of TTransaction)
+  name.vb: SignedTransactionFormatter(Of TTransaction)
+  spec.csharp:
+  - uid: AlgoSdk.SignedTransactionFormatter`1
+    name: SignedTransactionFormatter
+    nameWithType: SignedTransactionFormatter
+    fullName: AlgoSdk.SignedTransactionFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTransaction
+    nameWithType: TTransaction
+    fullName: TTransaction
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.SignedTransactionFormatter`1
+    name: SignedTransactionFormatter
+    nameWithType: SignedTransactionFormatter
+    fullName: AlgoSdk.SignedTransactionFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTransaction
+    nameWithType: TTransaction
+    fullName: TTransaction
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Account
+  commentId: T:AlgoSdk.Account
+  parent: AlgoSdk
+  name: Account
+  nameWithType: Account
+  fullName: AlgoSdk.Account
+- uid: AlgoSdk.InitWalletHandleTokenResponse
+  commentId: T:AlgoSdk.InitWalletHandleTokenResponse
+  parent: AlgoSdk
+  name: InitWalletHandleTokenResponse
+  nameWithType: InitWalletHandleTokenResponse
+  fullName: AlgoSdk.InitWalletHandleTokenResponse
+- uid: AlgoSdk.SignMultisigRequest
+  commentId: T:AlgoSdk.SignMultisigRequest
+  parent: AlgoSdk
+  name: SignMultisigRequest
+  nameWithType: SignMultisigRequest
+  fullName: AlgoSdk.SignMultisigRequest
+- uid: AlgoSdk.ExportKeyRequest
+  commentId: T:AlgoSdk.ExportKeyRequest
+  parent: AlgoSdk
+  name: ExportKeyRequest
+  nameWithType: ExportKeyRequest
+  fullName: AlgoSdk.ExportKeyRequest
+- uid: AlgoSdk.Endianness
+  commentId: T:AlgoSdk.Endianness
+  name: Endianness
+  nameWithType: Endianness
+  fullName: AlgoSdk.Endianness
+- uid: AlgoSdk.AccountsResponse
+  commentId: T:AlgoSdk.AccountsResponse
+  parent: AlgoSdk
+  name: AccountsResponse
+  nameWithType: AccountsResponse
+  fullName: AlgoSdk.AccountsResponse
+- uid: AlgoSdk.ExportMultisigRequest
+  commentId: T:AlgoSdk.ExportMultisigRequest
+  parent: AlgoSdk
+  name: ExportMultisigRequest
+  nameWithType: ExportMultisigRequest
+  fullName: AlgoSdk.ExportMultisigRequest
+- uid: AlgoSdk.AssetsResponse
+  commentId: T:AlgoSdk.AssetsResponse
+  parent: AlgoSdk
+  name: AssetsResponse
+  nameWithType: AssetsResponse
+  fullName: AlgoSdk.AssetsResponse
+- uid: AlgoSdk.ReleaseWalletHandleTokenRequest
+  commentId: T:AlgoSdk.ReleaseWalletHandleTokenRequest
+  parent: AlgoSdk
+  name: ReleaseWalletHandleTokenRequest
+  nameWithType: ReleaseWalletHandleTokenRequest
+  fullName: AlgoSdk.ReleaseWalletHandleTokenRequest
+- uid: AlgoSdk.ExportMasterKeyRequest
+  commentId: T:AlgoSdk.ExportMasterKeyRequest
+  parent: AlgoSdk
+  name: ExportMasterKeyRequest
+  nameWithType: ExportMasterKeyRequest
+  fullName: AlgoSdk.ExportMasterKeyRequest
+- uid: AlgoSdk.ListMultisigRequest
+  commentId: T:AlgoSdk.ListMultisigRequest
+  parent: AlgoSdk
+  name: ListMultisigRequest
+  nameWithType: ListMultisigRequest
+  fullName: AlgoSdk.ListMultisigRequest
+- uid: AlgoSdk.AlgoApiFormatterAttribute
+  commentId: T:AlgoSdk.AlgoApiFormatterAttribute
+  parent: AlgoSdk
+  name: AlgoApiFormatterAttribute
+  nameWithType: AlgoApiFormatterAttribute
+  fullName: AlgoSdk.AlgoApiFormatterAttribute
+- uid: AlgoSdk.AssetConfigTxn
+  commentId: T:AlgoSdk.AssetConfigTxn
+  parent: AlgoSdk
+  name: AssetConfigTxn
+  nameWithType: AssetConfigTxn
+  fullName: AlgoSdk.AssetConfigTxn
+- uid: AlgoSdk.AssetConfigTxn.Params
+  commentId: T:AlgoSdk.AssetConfigTxn.Params
+  parent: AlgoSdk
+  name: AssetConfigTxn.Params
+  nameWithType: AssetConfigTxn.Params
+  fullName: AlgoSdk.AssetConfigTxn.Params
+- uid: AlgoSdk.Block
+  commentId: T:AlgoSdk.Block
+  parent: AlgoSdk
+  name: Block
+  nameWithType: Block
+  fullName: AlgoSdk.Block
+- uid: AlgoSdk.ErrorResponse
+  commentId: T:AlgoSdk.ErrorResponse
+  parent: AlgoSdk
+  name: ErrorResponse
+  nameWithType: ErrorResponse
+  fullName: AlgoSdk.ErrorResponse
+- uid: AlgoSdk.TransactionsResponse
+  commentId: T:AlgoSdk.TransactionsResponse
+  parent: AlgoSdk
+  name: TransactionsResponse
+  nameWithType: TransactionsResponse
+  fullName: AlgoSdk.TransactionsResponse
+- uid: AlgoSdk.ListMultisigResponse
+  commentId: T:AlgoSdk.ListMultisigResponse
+  parent: AlgoSdk
+  name: ListMultisigResponse
+  nameWithType: ListMultisigResponse
+  fullName: AlgoSdk.ListMultisigResponse
+- uid: AlgoSdk.Application
+  commentId: T:AlgoSdk.Application
+  parent: AlgoSdk
+  name: Application
+  nameWithType: Application
+  fullName: AlgoSdk.Application
+- uid: AlgoSdk.TransactionHeader
+  commentId: T:AlgoSdk.TransactionHeader
+  parent: AlgoSdk
+  name: TransactionHeader
+  nameWithType: TransactionHeader
+  fullName: AlgoSdk.TransactionHeader
+- uid: AlgoSdk.BuildVersion
+  commentId: T:AlgoSdk.BuildVersion
+  parent: AlgoSdk
+  name: BuildVersion
+  nameWithType: BuildVersion
+  fullName: AlgoSdk.BuildVersion
+- uid: AlgoSdk.AlgoApiField
+  commentId: T:AlgoSdk.AlgoApiField
+  parent: AlgoSdk
+  name: AlgoApiField
+  nameWithType: AlgoApiField
+  fullName: AlgoSdk.AlgoApiField
+- uid: AlgoSdk.AlgoApiSerializer
+  commentId: T:AlgoSdk.AlgoApiSerializer
+  name: AlgoApiSerializer
+  nameWithType: AlgoApiSerializer
+  fullName: AlgoSdk.AlgoApiSerializer
+- uid: AlgoSdk.AssetParams
+  commentId: T:AlgoSdk.AssetParams
+  parent: AlgoSdk
+  name: AssetParams
+  nameWithType: AssetParams
+  fullName: AlgoSdk.AssetParams
+- uid: AlgoSdk.AlgoApiObjectAttribute
+  commentId: T:AlgoSdk.AlgoApiObjectAttribute
+  name: AlgoApiObjectAttribute
+  nameWithType: AlgoApiObjectAttribute
+  fullName: AlgoSdk.AlgoApiObjectAttribute
+- uid: AlgoSdk.TealValueType
+  commentId: T:AlgoSdk.TealValueType
+  parent: AlgoSdk
+  name: TealValueType
+  nameWithType: TealValueType
+  fullName: AlgoSdk.TealValueType
+- uid: AlgoSdk.TealValue
+  commentId: T:AlgoSdk.TealValue
+  parent: AlgoSdk
+  name: TealValue
+  nameWithType: TealValue
+  fullName: AlgoSdk.TealValue
+- uid: AlgoSdk.TealBytes
+  commentId: T:AlgoSdk.TealBytes
+  parent: AlgoSdk
+  name: TealBytes
+  nameWithType: TealBytes
+  fullName: AlgoSdk.TealBytes
+- uid: AlgoSdk.InitWalletHandleTokenRequest
+  commentId: T:AlgoSdk.InitWalletHandleTokenRequest
+  parent: AlgoSdk
+  name: InitWalletHandleTokenRequest
+  nameWithType: InitWalletHandleTokenRequest
+  fullName: AlgoSdk.InitWalletHandleTokenRequest
+- uid: AlgoSdk.KmdClient
+  commentId: T:AlgoSdk.KmdClient
+  name: KmdClient
+  nameWithType: KmdClient
+  fullName: AlgoSdk.KmdClient
+- uid: AlgoSdk.StateSchema
+  commentId: T:AlgoSdk.StateSchema
+  parent: AlgoSdk
+  name: StateSchema
+  nameWithType: StateSchema
+  fullName: AlgoSdk.StateSchema
+- uid: AlgoSdk.DateTimeFormatter
+  commentId: T:AlgoSdk.DateTimeFormatter
+  name: DateTimeFormatter
+  nameWithType: DateTimeFormatter
+  fullName: AlgoSdk.DateTimeFormatter
+- uid: AlgoSdk.AccountParticipation
+  commentId: T:AlgoSdk.AccountParticipation
+  parent: AlgoSdk
+  name: AccountParticipation
+  nameWithType: AccountParticipation
+  fullName: AlgoSdk.AccountParticipation
+- uid: AlgoSdk.IIndexerClient
+  commentId: T:AlgoSdk.IIndexerClient
+  parent: AlgoSdk
+  name: IIndexerClient
+  nameWithType: IIndexerClient
+  fullName: AlgoSdk.IIndexerClient
+- uid: AlgoSdk.AccountResponse
+  commentId: T:AlgoSdk.AccountResponse
+  parent: AlgoSdk
+  name: AccountResponse
+  nameWithType: AccountResponse
+  fullName: AlgoSdk.AccountResponse
+- uid: AlgoSdk.IndexerClient
+  commentId: T:AlgoSdk.IndexerClient
+  name: IndexerClient
+  nameWithType: IndexerClient
+  fullName: AlgoSdk.IndexerClient
+- uid: AlgoSdk.GenesisAccountAlloc
+  commentId: T:AlgoSdk.GenesisAccountAlloc
+  name: GenesisAccountAlloc
+  nameWithType: GenesisAccountAlloc
+  fullName: AlgoSdk.GenesisAccountAlloc
+- uid: AlgoSdk.GenesisAccountAlloc.State
+  commentId: T:AlgoSdk.GenesisAccountAlloc.State
+  parent: AlgoSdk
+  name: GenesisAccountAlloc.State
+  nameWithType: GenesisAccountAlloc.State
+  fullName: AlgoSdk.GenesisAccountAlloc.State
+- uid: AlgoSdk.GenesisInformation
+  commentId: T:AlgoSdk.GenesisInformation
+  name: GenesisInformation
+  nameWithType: GenesisInformation
+  fullName: AlgoSdk.GenesisInformation
+- uid: AlgoSdk.KeyRegTxn
+  commentId: T:AlgoSdk.KeyRegTxn
+  parent: AlgoSdk
+  name: KeyRegTxn
+  nameWithType: KeyRegTxn
+  fullName: AlgoSdk.KeyRegTxn
+- uid: AlgoSdk.KeyRegTxn.Params
+  commentId: T:AlgoSdk.KeyRegTxn.Params
+  parent: AlgoSdk
+  name: KeyRegTxn.Params
+  nameWithType: KeyRegTxn.Params
+  fullName: AlgoSdk.KeyRegTxn.Params
+- uid: AlgoSdk.DeleteMultisigRequest
+  commentId: T:AlgoSdk.DeleteMultisigRequest
+  parent: AlgoSdk
+  name: DeleteMultisigRequest
+  nameWithType: DeleteMultisigRequest
+  fullName: AlgoSdk.DeleteMultisigRequest
+- uid: AlgoSdk.RenameWalletRequest
+  commentId: T:AlgoSdk.RenameWalletRequest
+  parent: AlgoSdk
+  name: RenameWalletRequest
+  nameWithType: RenameWalletRequest
+  fullName: AlgoSdk.RenameWalletRequest
+- uid: AlgoSdk.SignTransactionResponse
+  commentId: T:AlgoSdk.SignTransactionResponse
+  parent: AlgoSdk
+  name: SignTransactionResponse
+  nameWithType: SignTransactionResponse
+  fullName: AlgoSdk.SignTransactionResponse
+- uid: AlgoSdk.ImportMultisigResponse
+  commentId: T:AlgoSdk.ImportMultisigResponse
+  parent: AlgoSdk
+  name: ImportMultisigResponse
+  nameWithType: ImportMultisigResponse
+  fullName: AlgoSdk.ImportMultisigResponse
+- uid: AlgoSdk.TealCompilationResult
+  commentId: T:AlgoSdk.TealCompilationResult
+  parent: AlgoSdk
+  name: TealCompilationResult
+  nameWithType: TealCompilationResult
+  fullName: AlgoSdk.TealCompilationResult
+- uid: AlgoSdk.SignTransactionRequest
+  commentId: T:AlgoSdk.SignTransactionRequest
+  parent: AlgoSdk
+  name: SignTransactionRequest
+  nameWithType: SignTransactionRequest
+  fullName: AlgoSdk.SignTransactionRequest
+- uid: AlgoSdk.BlockUpgradeVote
+  commentId: T:AlgoSdk.BlockUpgradeVote
+  parent: AlgoSdk
+  name: BlockUpgradeVote
+  nameWithType: BlockUpgradeVote
+  fullName: AlgoSdk.BlockUpgradeVote
+- uid: AlgoSdk.LedgerSupply
+  commentId: T:AlgoSdk.LedgerSupply
+  parent: AlgoSdk
+  name: LedgerSupply
+  nameWithType: LedgerSupply
+  fullName: AlgoSdk.LedgerSupply
+- uid: AlgoSdk.ExportKeyResponse
+  commentId: T:AlgoSdk.ExportKeyResponse
+  parent: AlgoSdk
+  name: ExportKeyResponse
+  nameWithType: ExportKeyResponse
+  fullName: AlgoSdk.ExportKeyResponse
+- uid: AlgoSdk.DryrunTxnResult
+  commentId: T:AlgoSdk.DryrunTxnResult
+  parent: AlgoSdk
+  name: DryrunTxnResult
+  nameWithType: DryrunTxnResult
+  fullName: AlgoSdk.DryrunTxnResult
+- uid: AlgoSdk.BalancesResponse
+  commentId: T:AlgoSdk.BalancesResponse
+  parent: AlgoSdk
+  name: BalancesResponse
+  nameWithType: BalancesResponse
+  fullName: AlgoSdk.BalancesResponse
+- uid: AlgoSdk.AlgoApiObject
+  commentId: T:AlgoSdk.AlgoApiObject
+  parent: AlgoSdk
+  name: AlgoApiObject
+  nameWithType: AlgoApiObject
+  fullName: AlgoSdk.AlgoApiObject
+- uid: AlgoSdk.Base32Encoding
+  commentId: T:AlgoSdk.Base32Encoding
+  name: Base32Encoding
+  nameWithType: Base32Encoding
+  fullName: AlgoSdk.Base32Encoding
+- uid: AlgoSdk.AssetFreezeTxn
+  commentId: T:AlgoSdk.AssetFreezeTxn
+  parent: AlgoSdk
+  name: AssetFreezeTxn
+  nameWithType: AssetFreezeTxn
+  fullName: AlgoSdk.AssetFreezeTxn
+- uid: AlgoSdk.AssetFreezeTxn.Params
+  commentId: T:AlgoSdk.AssetFreezeTxn.Params
+  parent: AlgoSdk
+  name: AssetFreezeTxn.Params
+  nameWithType: AssetFreezeTxn.Params
+  fullName: AlgoSdk.AssetFreezeTxn.Params
+- uid: AlgoSdk.AppCallTxn
+  commentId: T:AlgoSdk.AppCallTxn
+  parent: AlgoSdk
+  name: AppCallTxn
+  nameWithType: AppCallTxn
+  fullName: AlgoSdk.AppCallTxn
+- uid: AlgoSdk.AppCallTxn.Params
+  commentId: T:AlgoSdk.AppCallTxn.Params
+  parent: AlgoSdk
+  name: AppCallTxn.Params
+  nameWithType: AppCallTxn.Params
+  fullName: AlgoSdk.AppCallTxn.Params
+- uid: AlgoSdk.ExportMultisigResponse
+  commentId: T:AlgoSdk.ExportMultisigResponse
+  parent: AlgoSdk
+  name: ExportMultisigResponse
+  nameWithType: ExportMultisigResponse
+  fullName: AlgoSdk.ExportMultisigResponse
+- uid: AlgoSdk.ApplicationResponse
+  commentId: T:AlgoSdk.ApplicationResponse
+  parent: AlgoSdk
+  name: ApplicationResponse
+  nameWithType: ApplicationResponse
+  fullName: AlgoSdk.ApplicationResponse
+- uid: AlgoSdk.Address
+  commentId: T:AlgoSdk.Address
+  parent: AlgoSdk
+  name: Address
+  nameWithType: Address
+  fullName: AlgoSdk.Address
+- uid: AlgoSdk.Address.CheckSum
+  commentId: T:AlgoSdk.Address.CheckSum
+  parent: AlgoSdk
+  name: Address.CheckSum
+  nameWithType: Address.CheckSum
+  fullName: AlgoSdk.Address.CheckSum
+- uid: AlgoSdk.SignProgramMultisigResponse
+  commentId: T:AlgoSdk.SignProgramMultisigResponse
+  parent: AlgoSdk
+  name: SignProgramMultisigResponse
+  nameWithType: SignProgramMultisigResponse
+  fullName: AlgoSdk.SignProgramMultisigResponse
+- uid: AlgoSdk.AlgodClient
+  commentId: T:AlgoSdk.AlgodClient
+  name: AlgodClient
+  nameWithType: AlgodClient
+  fullName: AlgoSdk.AlgodClient
+- uid: AlgoSdk.SignedTransaction
+  commentId: T:AlgoSdk.SignedTransaction
+  parent: AlgoSdk
+  name: SignedTransaction
+  nameWithType: SignedTransaction
+  fullName: AlgoSdk.SignedTransaction
+- uid: AlgoSdk.Signed`1
+  commentId: T:AlgoSdk.Signed`1
+  parent: AlgoSdk
+  name: Signed<TTransaction>
+  nameWithType: Signed<TTransaction>
+  fullName: AlgoSdk.Signed<TTransaction>
+  nameWithType.vb: Signed(Of TTransaction)
+  fullName.vb: AlgoSdk.Signed(Of TTransaction)
+  name.vb: Signed(Of TTransaction)
+  spec.csharp:
+  - uid: AlgoSdk.Signed`1
+    name: Signed
+    nameWithType: Signed
+    fullName: AlgoSdk.Signed
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTransaction
+    nameWithType: TTransaction
+    fullName: TTransaction
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Signed`1
+    name: Signed
+    nameWithType: Signed
+    fullName: AlgoSdk.Signed
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTransaction
+    nameWithType: TTransaction
+    fullName: TTransaction
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.OnCompletion
+  commentId: T:AlgoSdk.OnCompletion
+  parent: AlgoSdk
+  name: OnCompletion
+  nameWithType: OnCompletion
+  fullName: AlgoSdk.OnCompletion
+- uid: AlgoSdk.IAlgoApiFormatter`1
+  commentId: T:AlgoSdk.IAlgoApiFormatter`1
+  name: IAlgoApiFormatter<T>
+  nameWithType: IAlgoApiFormatter<T>
+  fullName: AlgoSdk.IAlgoApiFormatter<T>
+  nameWithType.vb: IAlgoApiFormatter(Of T)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of T)
+  name.vb: IAlgoApiFormatter(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1
+    name: IAlgoApiFormatter
+    nameWithType: IAlgoApiFormatter
+    fullName: AlgoSdk.IAlgoApiFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1
+    name: IAlgoApiFormatter
+    nameWithType: IAlgoApiFormatter
+    fullName: AlgoSdk.IAlgoApiFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.IAlgodClient
+  commentId: T:AlgoSdk.IAlgodClient
+  parent: AlgoSdk
+  name: IAlgodClient
+  nameWithType: IAlgodClient
+  fullName: AlgoSdk.IAlgodClient
+- uid: AlgoSdk.Multisig
+  commentId: T:AlgoSdk.Multisig
+  parent: AlgoSdk
+  name: Multisig
+  nameWithType: Multisig
+  fullName: AlgoSdk.Multisig
+- uid: AlgoSdk.Multisig.Subsig
+  commentId: T:AlgoSdk.Multisig.Subsig
+  parent: AlgoSdk
+  name: Multisig.Subsig
+  nameWithType: Multisig.Subsig
+  fullName: AlgoSdk.Multisig.Subsig
+- uid: AlgoSdk.AddressRole
+  commentId: T:AlgoSdk.AddressRole
+  parent: AlgoSdk
+  name: AddressRole
+  nameWithType: AddressRole
+  fullName: AlgoSdk.AddressRole
+- uid: AlgoSdk.AddressRoleExtensions
+  commentId: T:AlgoSdk.AddressRoleExtensions
+  parent: AlgoSdk
+  name: AddressRoleExtensions
+  nameWithType: AddressRoleExtensions
+  fullName: AlgoSdk.AddressRoleExtensions
+- uid: AlgoSdk.EvalDeltaAction
+  commentId: T:AlgoSdk.EvalDeltaAction
+  parent: AlgoSdk
+  name: EvalDeltaAction
+  nameWithType: EvalDeltaAction
+  fullName: AlgoSdk.EvalDeltaAction
+- uid: AlgoSdk.EvalDelta
+  commentId: T:AlgoSdk.EvalDelta
+  parent: AlgoSdk
+  name: EvalDelta
+  nameWithType: EvalDelta
+  fullName: AlgoSdk.EvalDelta
+- uid: AlgoSdk.TransactionResponse
+  commentId: T:AlgoSdk.TransactionResponse
+  parent: AlgoSdk
+  name: TransactionResponse
+  nameWithType: TransactionResponse
+  fullName: AlgoSdk.TransactionResponse
+- uid: AlgoSdk.VrfPubKey
+  commentId: T:AlgoSdk.VrfPubKey
+  parent: AlgoSdk
+  name: VrfPubKey
+  nameWithType: VrfPubKey
+  fullName: AlgoSdk.VrfPubKey
+- uid: AlgoSdk.AssetTransferTxn
+  commentId: T:AlgoSdk.AssetTransferTxn
+  parent: AlgoSdk
+  name: AssetTransferTxn
+  nameWithType: AssetTransferTxn
+  fullName: AlgoSdk.AssetTransferTxn
+- uid: AlgoSdk.AssetTransferTxn.Params
+  commentId: T:AlgoSdk.AssetTransferTxn.Params
+  parent: AlgoSdk
+  name: AssetTransferTxn.Params
+  nameWithType: AssetTransferTxn.Params
+  fullName: AlgoSdk.AssetTransferTxn.Params
+- uid: AlgoSdk.ApplicationsResponse
+  commentId: T:AlgoSdk.ApplicationsResponse
+  parent: AlgoSdk
+  name: ApplicationsResponse
+  nameWithType: ApplicationsResponse
+  fullName: AlgoSdk.ApplicationsResponse
+- uid: AlgoSdk.IAlgoApiResponse
+  commentId: T:AlgoSdk.IAlgoApiResponse
+  parent: AlgoSdk
+  name: IAlgoApiResponse
+  nameWithType: IAlgoApiResponse
+  fullName: AlgoSdk.IAlgoApiResponse
+- uid: AlgoSdk.IAlgoApiResponse`1
+  commentId: T:AlgoSdk.IAlgoApiResponse`1
+  name: IAlgoApiResponse<T>
+  nameWithType: IAlgoApiResponse<T>
+  fullName: AlgoSdk.IAlgoApiResponse<T>
+  nameWithType.vb: IAlgoApiResponse(Of T)
+  fullName.vb: AlgoSdk.IAlgoApiResponse(Of T)
+  name.vb: IAlgoApiResponse(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiResponse`1
+    name: IAlgoApiResponse
+    nameWithType: IAlgoApiResponse
+    fullName: AlgoSdk.IAlgoApiResponse
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiResponse`1
+    name: IAlgoApiResponse
+    nameWithType: IAlgoApiResponse
+    fullName: AlgoSdk.IAlgoApiResponse
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.IIndexerResponse
+  commentId: T:AlgoSdk.IIndexerResponse
+  parent: AlgoSdk
+  name: IIndexerResponse
+  nameWithType: IIndexerResponse
+  fullName: AlgoSdk.IIndexerResponse
+- uid: AlgoSdk.IPaginatedResponse
+  commentId: T:AlgoSdk.IPaginatedResponse
+  parent: AlgoSdk
+  name: IPaginatedResponse
+  nameWithType: IPaginatedResponse
+  fullName: AlgoSdk.IPaginatedResponse
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk

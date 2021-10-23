@@ -1,0 +1,869 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.HealthCheck
+  commentId: T:AlgoSdk.HealthCheck
+  id: HealthCheck
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.HealthCheck.Data
+  - AlgoSdk.HealthCheck.DatabaseAvailable
+  - AlgoSdk.HealthCheck.Equals(AlgoSdk.HealthCheck)
+  - AlgoSdk.HealthCheck.Errors
+  - AlgoSdk.HealthCheck.IsMigrating
+  - AlgoSdk.HealthCheck.Message
+  - AlgoSdk.HealthCheck.Round
+  langs:
+  - csharp
+  - vb
+  name: HealthCheck
+  nameWithType: HealthCheck
+  fullName: AlgoSdk.HealthCheck
+  type: Struct
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/HealthCheck.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: HealthCheck
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/HealthCheck.cs
+    startLine: 4
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: 'public struct HealthCheck : IEquatable<HealthCheck>'
+    content.vb: >-
+      Public Structure HealthCheck
+          Implements IEquatable(Of HealthCheck)
+  implements:
+  - System.IEquatable{AlgoSdk.HealthCheck}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: AlgoSdk.HealthCheck.Data
+  commentId: F:AlgoSdk.HealthCheck.Data
+  id: Data
+  parent: AlgoSdk.HealthCheck
+  langs:
+  - csharp
+  - vb
+  name: Data
+  nameWithType: HealthCheck.Data
+  fullName: AlgoSdk.HealthCheck.Data
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/HealthCheck.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Data
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/HealthCheck.cs
+    startLine: 9
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("data", "data", false)]
+
+      public AlgoApiObject Data
+    return:
+      type: AlgoSdk.AlgoApiObject
+    content.vb: >-
+      <AlgoApiField("data", "data", False)>
+
+      Public Data As AlgoApiObject
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: data
+    - type: System.String
+      value: data
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.HealthCheck.DatabaseAvailable
+  commentId: F:AlgoSdk.HealthCheck.DatabaseAvailable
+  id: DatabaseAvailable
+  parent: AlgoSdk.HealthCheck
+  langs:
+  - csharp
+  - vb
+  name: DatabaseAvailable
+  nameWithType: HealthCheck.DatabaseAvailable
+  fullName: AlgoSdk.HealthCheck.DatabaseAvailable
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/HealthCheck.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: DatabaseAvailable
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/HealthCheck.cs
+    startLine: 12
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("db-available", "db-available", false)]
+
+      public bool DatabaseAvailable
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <AlgoApiField("db-available", "db-available", False)>
+
+      Public DatabaseAvailable As Boolean
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: db-available
+    - type: System.String
+      value: db-available
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.HealthCheck.Errors
+  commentId: F:AlgoSdk.HealthCheck.Errors
+  id: Errors
+  parent: AlgoSdk.HealthCheck
+  langs:
+  - csharp
+  - vb
+  name: Errors
+  nameWithType: HealthCheck.Errors
+  fullName: AlgoSdk.HealthCheck.Errors
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/HealthCheck.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Errors
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/HealthCheck.cs
+    startLine: 15
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("errors", "errors", false)]
+
+      public string[] Errors
+    return:
+      type: System.String[]
+    content.vb: >-
+      <AlgoApiField("errors", "errors", False)>
+
+      Public Errors As String()
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: errors
+    - type: System.String
+      value: errors
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.HealthCheck.IsMigrating
+  commentId: F:AlgoSdk.HealthCheck.IsMigrating
+  id: IsMigrating
+  parent: AlgoSdk.HealthCheck
+  langs:
+  - csharp
+  - vb
+  name: IsMigrating
+  nameWithType: HealthCheck.IsMigrating
+  fullName: AlgoSdk.HealthCheck.IsMigrating
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/HealthCheck.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: IsMigrating
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/HealthCheck.cs
+    startLine: 18
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("is-migrating", "is-migrating", false)]
+
+      public bool IsMigrating
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <AlgoApiField("is-migrating", "is-migrating", False)>
+
+      Public IsMigrating As Boolean
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: is-migrating
+    - type: System.String
+      value: is-migrating
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.HealthCheck.Message
+  commentId: F:AlgoSdk.HealthCheck.Message
+  id: Message
+  parent: AlgoSdk.HealthCheck
+  langs:
+  - csharp
+  - vb
+  name: Message
+  nameWithType: HealthCheck.Message
+  fullName: AlgoSdk.HealthCheck.Message
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/HealthCheck.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Message
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/HealthCheck.cs
+    startLine: 21
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("message", "message", false)]
+
+      public string Message
+    return:
+      type: System.String
+    content.vb: >-
+      <AlgoApiField("message", "message", False)>
+
+      Public Message As String
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: message
+    - type: System.String
+      value: message
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.HealthCheck.Round
+  commentId: F:AlgoSdk.HealthCheck.Round
+  id: Round
+  parent: AlgoSdk.HealthCheck
+  langs:
+  - csharp
+  - vb
+  name: Round
+  nameWithType: HealthCheck.Round
+  fullName: AlgoSdk.HealthCheck.Round
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/HealthCheck.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Round
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/HealthCheck.cs
+    startLine: 24
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("round", "round", false)]
+
+      public ulong Round
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("round", "round", False)>
+
+      Public Round As ULong
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: round
+    - type: System.String
+      value: round
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.HealthCheck.Equals(AlgoSdk.HealthCheck)
+  commentId: M:AlgoSdk.HealthCheck.Equals(AlgoSdk.HealthCheck)
+  id: Equals(AlgoSdk.HealthCheck)
+  parent: AlgoSdk.HealthCheck
+  langs:
+  - csharp
+  - vb
+  name: Equals(HealthCheck)
+  nameWithType: HealthCheck.Equals(HealthCheck)
+  fullName: AlgoSdk.HealthCheck.Equals(AlgoSdk.HealthCheck)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/HealthCheck.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Equals
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/HealthCheck.cs
+    startLine: 26
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public bool Equals(HealthCheck other)
+    parameters:
+    - id: other
+      type: AlgoSdk.HealthCheck
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As HealthCheck) As Boolean
+  overload: AlgoSdk.HealthCheck.Equals*
+  implements:
+  - System.IEquatable{AlgoSdk.HealthCheck}.Equals(AlgoSdk.HealthCheck)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: System.IEquatable{AlgoSdk.HealthCheck}
+  commentId: T:System.IEquatable{AlgoSdk.HealthCheck}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<HealthCheck>
+  nameWithType: IEquatable<HealthCheck>
+  fullName: System.IEquatable<AlgoSdk.HealthCheck>
+  nameWithType.vb: IEquatable(Of HealthCheck)
+  fullName.vb: System.IEquatable(Of AlgoSdk.HealthCheck)
+  name.vb: IEquatable(Of HealthCheck)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AlgoSdk.HealthCheck
+    name: HealthCheck
+    nameWithType: HealthCheck
+    fullName: AlgoSdk.HealthCheck
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AlgoSdk.HealthCheck
+    name: HealthCheck
+    nameWithType: HealthCheck
+    fullName: AlgoSdk.HealthCheck
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AlgoSdk.AlgoApiObject
+  commentId: T:AlgoSdk.AlgoApiObject
+  parent: AlgoSdk
+  name: AlgoApiObject
+  nameWithType: AlgoApiObject
+  fullName: AlgoSdk.AlgoApiObject
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: AlgoSdk.HealthCheck.Equals*
+  commentId: Overload:AlgoSdk.HealthCheck.Equals
+  name: Equals
+  nameWithType: HealthCheck.Equals
+  fullName: AlgoSdk.HealthCheck.Equals
+- uid: System.IEquatable{AlgoSdk.HealthCheck}.Equals(AlgoSdk.HealthCheck)
+  commentId: M:System.IEquatable{AlgoSdk.HealthCheck}.Equals(AlgoSdk.HealthCheck)
+  parent: System.IEquatable{AlgoSdk.HealthCheck}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(HealthCheck)
+  nameWithType: IEquatable<HealthCheck>.Equals(HealthCheck)
+  fullName: System.IEquatable<AlgoSdk.HealthCheck>.Equals(AlgoSdk.HealthCheck)
+  nameWithType.vb: IEquatable(Of HealthCheck).Equals(HealthCheck)
+  fullName.vb: System.IEquatable(Of AlgoSdk.HealthCheck).Equals(AlgoSdk.HealthCheck)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<HealthCheck>.Equals
+    fullName: System.IEquatable<AlgoSdk.HealthCheck>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.HealthCheck
+    name: HealthCheck
+    nameWithType: HealthCheck
+    fullName: AlgoSdk.HealthCheck
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of HealthCheck).Equals
+    fullName: System.IEquatable(Of AlgoSdk.HealthCheck).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.HealthCheck
+    name: HealthCheck
+    nameWithType: HealthCheck
+    fullName: AlgoSdk.HealthCheck
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.HealthCheck
+  commentId: T:AlgoSdk.HealthCheck
+  parent: AlgoSdk
+  name: HealthCheck
+  nameWithType: HealthCheck
+  fullName: AlgoSdk.HealthCheck
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

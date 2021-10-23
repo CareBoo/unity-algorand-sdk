@@ -4,7 +4,6 @@ using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
 using Unity.Mathematics;
 using AlgoSdk.LowLevel;
-using AlgoSdk.Crypto;
 
 namespace AlgoSdk
 {
@@ -19,14 +18,29 @@ namespace AlgoSdk
         [FieldOffset(49)] internal byte byte0049;
     }
 
+    /// <summary>
+    /// Byte struct representing a private key encoded with <see cref="Length"/> words.
+    /// </summary>
     [Serializable]
     [StructLayout(LayoutKind.Explicit, Size = 50)]
     public partial struct Mnemonic
         : IEquatable<Mnemonic>
     {
         [FieldOffset(0)] internal FixedBytes50 buffer;
+
+        /// <summary>
+        /// Number of words contained in the mnemonic.
+        /// </summary>
         public const int Length = 25;
+
+        /// <summary>
+        /// Index of the word used for the checksum.
+        /// </summary>
         public const int ChecksumIndex = Length - 1;
+
+        /// <summary>
+        /// The number of bits encoded by each word.
+        /// </summary>
         public const int BitsPerWord = 11;
 
         unsafe internal byte* Buffer
@@ -38,6 +52,11 @@ namespace AlgoSdk
             }
         }
 
+        /// <summary>
+        /// The word at a given index.
+        /// </summary>
+        /// <param name="index">The index of the word.</param>
+        /// <returns>A word in the set of possible mnemonic words.</returns>
         public Word this[int index]
         {
             get
@@ -66,6 +85,9 @@ namespace AlgoSdk
             return string.Join(" ", words);
         }
 
+        /// <summary>
+        /// Get the <see cref="PrivateKey"/> from this mnemonic encodes.
+        /// </summary>
         public PrivateKey ToPrivateKey()
         {
             var result = new PrivateKey();

@@ -1,6 +1,4 @@
-using AlgoSdk.Formatters;
-
-namespace AlgoSdk
+namespace AlgoSdk.Formatters
 {
     public class AddressRoleFormatter : KeywordByteEnumFormatter<AddressRole>
     {

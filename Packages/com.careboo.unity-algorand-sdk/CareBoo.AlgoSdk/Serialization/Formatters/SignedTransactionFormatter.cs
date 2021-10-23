@@ -3,7 +3,7 @@ using AlgoSdk.Json;
 using AlgoSdk.MessagePack;
 using Unity.Collections;
 
-namespace AlgoSdk
+namespace AlgoSdk.Formatters
 {
     public class SignedTransactionFormatter : IAlgoApiFormatter<SignedTransaction>
     {

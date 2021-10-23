@@ -1,0 +1,1126 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.SignedTransactionFormatter`1
+  commentId: T:AlgoSdk.SignedTransactionFormatter`1
+  id: SignedTransactionFormatter`1
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.SignedTransactionFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+  - AlgoSdk.SignedTransactionFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  - AlgoSdk.SignedTransactionFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,AlgoSdk.Signed{`0})
+  - AlgoSdk.SignedTransactionFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,AlgoSdk.Signed{`0})
+  langs:
+  - csharp
+  - vb
+  name: SignedTransactionFormatter<TTransaction>
+  nameWithType: SignedTransactionFormatter<TTransaction>
+  fullName: AlgoSdk.SignedTransactionFormatter<TTransaction>
+  type: Class
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/SignedTransactionFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: SignedTransactionFormatter
+    path: ../CareBoo.AlgoSdk/Serialization/Formatters/SignedTransactionFormatter.cs
+    startLine: 107
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: 'public class SignedTransactionFormatter<TTransaction> : IAlgoApiFormatter<Signed<TTransaction>> where TTransaction : struct, ITransaction, IEquatable<TTransaction>'
+    typeParameters:
+    - id: TTransaction
+    content.vb: >-
+      Public Class SignedTransactionFormatter(Of TTransaction As {Structure, ITransaction, IEquatable(Of TTransaction)})
+          Implements IAlgoApiFormatter(Of Signed(Of TTransaction))
+  inheritance:
+  - System.Object
+  implements:
+  - AlgoSdk.IAlgoApiFormatter{AlgoSdk.Signed{{TTransaction}}}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  nameWithType.vb: SignedTransactionFormatter(Of TTransaction)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: AlgoSdk.SignedTransactionFormatter(Of TTransaction)
+  name.vb: SignedTransactionFormatter(Of TTransaction)
+- uid: AlgoSdk.SignedTransactionFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+  commentId: M:AlgoSdk.SignedTransactionFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+  id: Deserialize(AlgoSdk.Json.JsonReader@)
+  parent: AlgoSdk.SignedTransactionFormatter`1
+  langs:
+  - csharp
+  - vb
+  name: Deserialize(ref JsonReader)
+  nameWithType: SignedTransactionFormatter<TTransaction>.Deserialize(ref JsonReader)
+  fullName: AlgoSdk.SignedTransactionFormatter<TTransaction>.Deserialize(ref AlgoSdk.Json.JsonReader)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/SignedTransactionFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Deserialize
+    path: ../CareBoo.AlgoSdk/Serialization/Formatters/SignedTransactionFormatter.cs
+    startLine: 116
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public Signed<TTransaction> Deserialize(ref JsonReader reader)
+    parameters:
+    - id: reader
+      type: AlgoSdk.Json.JsonReader
+    return:
+      type: AlgoSdk.Signed{{TTransaction}}
+    content.vb: Public Function Deserialize(ByRef reader As JsonReader) As Signed(Of TTransaction)
+  overload: AlgoSdk.SignedTransactionFormatter`1.Deserialize*
+  implements:
+  - AlgoSdk.IAlgoApiFormatter{AlgoSdk.Signed{{TTransaction}}}.Deserialize(AlgoSdk.Json.JsonReader@)
+  nameWithType.vb: SignedTransactionFormatter(Of TTransaction).Deserialize(ByRef JsonReader)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.SignedTransactionFormatter(Of TTransaction).Deserialize(ByRef AlgoSdk.Json.JsonReader)
+  name.vb: Deserialize(ByRef JsonReader)
+- uid: AlgoSdk.SignedTransactionFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  commentId: M:AlgoSdk.SignedTransactionFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  id: Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  parent: AlgoSdk.SignedTransactionFormatter`1
+  langs:
+  - csharp
+  - vb
+  name: Deserialize(ref MessagePackReader)
+  nameWithType: SignedTransactionFormatter<TTransaction>.Deserialize(ref MessagePackReader)
+  fullName: AlgoSdk.SignedTransactionFormatter<TTransaction>.Deserialize(ref AlgoSdk.MessagePack.MessagePackReader)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/SignedTransactionFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Deserialize
+    path: ../CareBoo.AlgoSdk/Serialization/Formatters/SignedTransactionFormatter.cs
+    startLine: 140
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public Signed<TTransaction> Deserialize(ref MessagePackReader reader)
+    parameters:
+    - id: reader
+      type: AlgoSdk.MessagePack.MessagePackReader
+    return:
+      type: AlgoSdk.Signed{{TTransaction}}
+    content.vb: Public Function Deserialize(ByRef reader As MessagePackReader) As Signed(Of TTransaction)
+  overload: AlgoSdk.SignedTransactionFormatter`1.Deserialize*
+  implements:
+  - AlgoSdk.IAlgoApiFormatter{AlgoSdk.Signed{{TTransaction}}}.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  nameWithType.vb: SignedTransactionFormatter(Of TTransaction).Deserialize(ByRef MessagePackReader)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.SignedTransactionFormatter(Of TTransaction).Deserialize(ByRef AlgoSdk.MessagePack.MessagePackReader)
+  name.vb: Deserialize(ByRef MessagePackReader)
+- uid: AlgoSdk.SignedTransactionFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,AlgoSdk.Signed{`0})
+  commentId: M:AlgoSdk.SignedTransactionFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,AlgoSdk.Signed{`0})
+  id: Serialize(AlgoSdk.Json.JsonWriter@,AlgoSdk.Signed{`0})
+  parent: AlgoSdk.SignedTransactionFormatter`1
+  langs:
+  - csharp
+  - vb
+  name: Serialize(ref JsonWriter, Signed<TTransaction>)
+  nameWithType: SignedTransactionFormatter<TTransaction>.Serialize(ref JsonWriter, Signed<TTransaction>)
+  fullName: AlgoSdk.SignedTransactionFormatter<TTransaction>.Serialize(ref AlgoSdk.Json.JsonWriter, AlgoSdk.Signed<TTransaction>)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/SignedTransactionFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Serialize
+    path: ../CareBoo.AlgoSdk/Serialization/Formatters/SignedTransactionFormatter.cs
+    startLine: 161
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public void Serialize(ref JsonWriter writer, Signed<TTransaction> value)
+    parameters:
+    - id: writer
+      type: AlgoSdk.Json.JsonWriter
+    - id: value
+      type: AlgoSdk.Signed{{TTransaction}}
+    content.vb: Public Sub Serialize(ByRef writer As JsonWriter, value As Signed(Of TTransaction))
+  overload: AlgoSdk.SignedTransactionFormatter`1.Serialize*
+  implements:
+  - AlgoSdk.IAlgoApiFormatter{AlgoSdk.Signed{{TTransaction}}}.Serialize(AlgoSdk.Json.JsonWriter@,AlgoSdk.Signed{{TTransaction}})
+  nameWithType.vb: SignedTransactionFormatter(Of TTransaction).Serialize(ByRef JsonWriter, Signed(Of TTransaction))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.SignedTransactionFormatter(Of TTransaction).Serialize(ByRef AlgoSdk.Json.JsonWriter, AlgoSdk.Signed(Of TTransaction))
+  name.vb: Serialize(ByRef JsonWriter, Signed(Of TTransaction))
+- uid: AlgoSdk.SignedTransactionFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,AlgoSdk.Signed{`0})
+  commentId: M:AlgoSdk.SignedTransactionFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,AlgoSdk.Signed{`0})
+  id: Serialize(AlgoSdk.MessagePack.MessagePackWriter@,AlgoSdk.Signed{`0})
+  parent: AlgoSdk.SignedTransactionFormatter`1
+  langs:
+  - csharp
+  - vb
+  name: Serialize(ref MessagePackWriter, Signed<TTransaction>)
+  nameWithType: SignedTransactionFormatter<TTransaction>.Serialize(ref MessagePackWriter, Signed<TTransaction>)
+  fullName: AlgoSdk.SignedTransactionFormatter<TTransaction>.Serialize(ref AlgoSdk.MessagePack.MessagePackWriter, AlgoSdk.Signed<TTransaction>)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/SignedTransactionFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Serialize
+    path: ../CareBoo.AlgoSdk/Serialization/Formatters/SignedTransactionFormatter.cs
+    startLine: 184
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public void Serialize(ref MessagePackWriter writer, Signed<TTransaction> value)
+    parameters:
+    - id: writer
+      type: AlgoSdk.MessagePack.MessagePackWriter
+    - id: value
+      type: AlgoSdk.Signed{{TTransaction}}
+    content.vb: Public Sub Serialize(ByRef writer As MessagePackWriter, value As Signed(Of TTransaction))
+  overload: AlgoSdk.SignedTransactionFormatter`1.Serialize*
+  implements:
+  - AlgoSdk.IAlgoApiFormatter{AlgoSdk.Signed{{TTransaction}}}.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,AlgoSdk.Signed{{TTransaction}})
+  nameWithType.vb: SignedTransactionFormatter(Of TTransaction).Serialize(ByRef MessagePackWriter, Signed(Of TTransaction))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.SignedTransactionFormatter(Of TTransaction).Serialize(ByRef AlgoSdk.MessagePack.MessagePackWriter, AlgoSdk.Signed(Of TTransaction))
+  name.vb: Serialize(ByRef MessagePackWriter, Signed(Of TTransaction))
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AlgoSdk.IAlgoApiFormatter{AlgoSdk.Signed{{TTransaction}}}
+  commentId: T:AlgoSdk.IAlgoApiFormatter{AlgoSdk.Signed{`0}}
+  parent: AlgoSdk
+  definition: AlgoSdk.IAlgoApiFormatter`1
+  name: IAlgoApiFormatter<Signed<TTransaction>>
+  nameWithType: IAlgoApiFormatter<Signed<TTransaction>>
+  fullName: AlgoSdk.IAlgoApiFormatter<AlgoSdk.Signed<TTransaction>>
+  nameWithType.vb: IAlgoApiFormatter(Of Signed(Of TTransaction))
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of AlgoSdk.Signed(Of TTransaction))
+  name.vb: IAlgoApiFormatter(Of Signed(Of TTransaction))
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1
+    name: IAlgoApiFormatter
+    nameWithType: IAlgoApiFormatter
+    fullName: AlgoSdk.IAlgoApiFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AlgoSdk.Signed`1
+    name: Signed
+    nameWithType: Signed
+    fullName: AlgoSdk.Signed
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTransaction
+    nameWithType: TTransaction
+    fullName: TTransaction
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1
+    name: IAlgoApiFormatter
+    nameWithType: IAlgoApiFormatter
+    fullName: AlgoSdk.IAlgoApiFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AlgoSdk.Signed`1
+    name: Signed
+    nameWithType: Signed
+    fullName: AlgoSdk.Signed
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTransaction
+    nameWithType: TTransaction
+    fullName: TTransaction
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AlgoSdk.IAlgoApiFormatter`1
+  commentId: T:AlgoSdk.IAlgoApiFormatter`1
+  name: IAlgoApiFormatter<T>
+  nameWithType: IAlgoApiFormatter<T>
+  fullName: AlgoSdk.IAlgoApiFormatter<T>
+  nameWithType.vb: IAlgoApiFormatter(Of T)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of T)
+  name.vb: IAlgoApiFormatter(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1
+    name: IAlgoApiFormatter
+    nameWithType: IAlgoApiFormatter
+    fullName: AlgoSdk.IAlgoApiFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1
+    name: IAlgoApiFormatter
+    nameWithType: IAlgoApiFormatter
+    fullName: AlgoSdk.IAlgoApiFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.SignedTransactionFormatter`1.Deserialize*
+  commentId: Overload:AlgoSdk.SignedTransactionFormatter`1.Deserialize
+  name: Deserialize
+  nameWithType: SignedTransactionFormatter<TTransaction>.Deserialize
+  fullName: AlgoSdk.SignedTransactionFormatter<TTransaction>.Deserialize
+  nameWithType.vb: SignedTransactionFormatter(Of TTransaction).Deserialize
+  fullName.vb: AlgoSdk.SignedTransactionFormatter(Of TTransaction).Deserialize
+- uid: AlgoSdk.IAlgoApiFormatter{AlgoSdk.Signed{{TTransaction}}}.Deserialize(AlgoSdk.Json.JsonReader@)
+  commentId: M:AlgoSdk.IAlgoApiFormatter{AlgoSdk.Signed{`0}}.Deserialize(AlgoSdk.Json.JsonReader@)
+  parent: AlgoSdk.IAlgoApiFormatter{AlgoSdk.Signed{{TTransaction}}}
+  definition: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+  name: Deserialize(JsonReader)
+  nameWithType: IAlgoApiFormatter<Signed<TTransaction>>.Deserialize(JsonReader)
+  fullName: AlgoSdk.IAlgoApiFormatter<AlgoSdk.Signed<TTransaction>>.Deserialize(AlgoSdk.Json.JsonReader)
+  nameWithType.vb: IAlgoApiFormatter(Of Signed(Of TTransaction)).Deserialize(JsonReader)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of AlgoSdk.Signed(Of TTransaction)).Deserialize(AlgoSdk.Json.JsonReader)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+    name: Deserialize
+    nameWithType: IAlgoApiFormatter<Signed<TTransaction>>.Deserialize
+    fullName: AlgoSdk.IAlgoApiFormatter<AlgoSdk.Signed<TTransaction>>.Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonReader
+    name: JsonReader
+    nameWithType: JsonReader
+    fullName: AlgoSdk.Json.JsonReader
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+    name: Deserialize
+    nameWithType: IAlgoApiFormatter(Of Signed(Of TTransaction)).Deserialize
+    fullName: AlgoSdk.IAlgoApiFormatter(Of AlgoSdk.Signed(Of TTransaction)).Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonReader
+    name: JsonReader
+    nameWithType: JsonReader
+    fullName: AlgoSdk.Json.JsonReader
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Json.JsonReader
+  commentId: T:AlgoSdk.Json.JsonReader
+  parent: AlgoSdk.Json
+  name: JsonReader
+  nameWithType: JsonReader
+  fullName: AlgoSdk.Json.JsonReader
+- uid: AlgoSdk.Signed{{TTransaction}}
+  commentId: T:AlgoSdk.Signed{`0}
+  parent: AlgoSdk
+  definition: AlgoSdk.Signed`1
+  name: Signed<TTransaction>
+  nameWithType: Signed<TTransaction>
+  fullName: AlgoSdk.Signed<TTransaction>
+  nameWithType.vb: Signed(Of TTransaction)
+  fullName.vb: AlgoSdk.Signed(Of TTransaction)
+  name.vb: Signed(Of TTransaction)
+  spec.csharp:
+  - uid: AlgoSdk.Signed`1
+    name: Signed
+    nameWithType: Signed
+    fullName: AlgoSdk.Signed
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTransaction
+    nameWithType: TTransaction
+    fullName: TTransaction
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Signed`1
+    name: Signed
+    nameWithType: Signed
+    fullName: AlgoSdk.Signed
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTransaction
+    nameWithType: TTransaction
+    fullName: TTransaction
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+  commentId: M:AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+  name: Deserialize(JsonReader)
+  nameWithType: IAlgoApiFormatter<T>.Deserialize(JsonReader)
+  fullName: AlgoSdk.IAlgoApiFormatter<T>.Deserialize(AlgoSdk.Json.JsonReader)
+  nameWithType.vb: IAlgoApiFormatter(Of T).Deserialize(JsonReader)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of T).Deserialize(AlgoSdk.Json.JsonReader)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+    name: Deserialize
+    nameWithType: IAlgoApiFormatter<T>.Deserialize
+    fullName: AlgoSdk.IAlgoApiFormatter<T>.Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonReader
+    name: JsonReader
+    nameWithType: JsonReader
+    fullName: AlgoSdk.Json.JsonReader
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+    name: Deserialize
+    nameWithType: IAlgoApiFormatter(Of T).Deserialize
+    fullName: AlgoSdk.IAlgoApiFormatter(Of T).Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonReader
+    name: JsonReader
+    nameWithType: JsonReader
+    fullName: AlgoSdk.Json.JsonReader
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Json
+  commentId: N:AlgoSdk.Json
+  name: AlgoSdk.Json
+  nameWithType: AlgoSdk.Json
+  fullName: AlgoSdk.Json
+- uid: AlgoSdk.Signed`1
+  commentId: T:AlgoSdk.Signed`1
+  parent: AlgoSdk
+  name: Signed<TTransaction>
+  nameWithType: Signed<TTransaction>
+  fullName: AlgoSdk.Signed<TTransaction>
+  nameWithType.vb: Signed(Of TTransaction)
+  fullName.vb: AlgoSdk.Signed(Of TTransaction)
+  name.vb: Signed(Of TTransaction)
+  spec.csharp:
+  - uid: AlgoSdk.Signed`1
+    name: Signed
+    nameWithType: Signed
+    fullName: AlgoSdk.Signed
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTransaction
+    nameWithType: TTransaction
+    fullName: TTransaction
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Signed`1
+    name: Signed
+    nameWithType: Signed
+    fullName: AlgoSdk.Signed
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTransaction
+    nameWithType: TTransaction
+    fullName: TTransaction
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.IAlgoApiFormatter{AlgoSdk.Signed{{TTransaction}}}.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  commentId: M:AlgoSdk.IAlgoApiFormatter{AlgoSdk.Signed{`0}}.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  parent: AlgoSdk.IAlgoApiFormatter{AlgoSdk.Signed{{TTransaction}}}
+  definition: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  name: Deserialize(MessagePackReader)
+  nameWithType: IAlgoApiFormatter<Signed<TTransaction>>.Deserialize(MessagePackReader)
+  fullName: AlgoSdk.IAlgoApiFormatter<AlgoSdk.Signed<TTransaction>>.Deserialize(AlgoSdk.MessagePack.MessagePackReader)
+  nameWithType.vb: IAlgoApiFormatter(Of Signed(Of TTransaction)).Deserialize(MessagePackReader)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of AlgoSdk.Signed(Of TTransaction)).Deserialize(AlgoSdk.MessagePack.MessagePackReader)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+    name: Deserialize
+    nameWithType: IAlgoApiFormatter<Signed<TTransaction>>.Deserialize
+    fullName: AlgoSdk.IAlgoApiFormatter<AlgoSdk.Signed<TTransaction>>.Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackReader
+    name: MessagePackReader
+    nameWithType: MessagePackReader
+    fullName: AlgoSdk.MessagePack.MessagePackReader
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+    name: Deserialize
+    nameWithType: IAlgoApiFormatter(Of Signed(Of TTransaction)).Deserialize
+    fullName: AlgoSdk.IAlgoApiFormatter(Of AlgoSdk.Signed(Of TTransaction)).Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackReader
+    name: MessagePackReader
+    nameWithType: MessagePackReader
+    fullName: AlgoSdk.MessagePack.MessagePackReader
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.MessagePack.MessagePackReader
+  commentId: T:AlgoSdk.MessagePack.MessagePackReader
+  parent: AlgoSdk.MessagePack
+  name: MessagePackReader
+  nameWithType: MessagePackReader
+  fullName: AlgoSdk.MessagePack.MessagePackReader
+- uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  commentId: M:AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  name: Deserialize(MessagePackReader)
+  nameWithType: IAlgoApiFormatter<T>.Deserialize(MessagePackReader)
+  fullName: AlgoSdk.IAlgoApiFormatter<T>.Deserialize(AlgoSdk.MessagePack.MessagePackReader)
+  nameWithType.vb: IAlgoApiFormatter(Of T).Deserialize(MessagePackReader)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of T).Deserialize(AlgoSdk.MessagePack.MessagePackReader)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+    name: Deserialize
+    nameWithType: IAlgoApiFormatter<T>.Deserialize
+    fullName: AlgoSdk.IAlgoApiFormatter<T>.Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackReader
+    name: MessagePackReader
+    nameWithType: MessagePackReader
+    fullName: AlgoSdk.MessagePack.MessagePackReader
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+    name: Deserialize
+    nameWithType: IAlgoApiFormatter(Of T).Deserialize
+    fullName: AlgoSdk.IAlgoApiFormatter(Of T).Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackReader
+    name: MessagePackReader
+    nameWithType: MessagePackReader
+    fullName: AlgoSdk.MessagePack.MessagePackReader
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.MessagePack
+  commentId: N:AlgoSdk.MessagePack
+  name: AlgoSdk.MessagePack
+  nameWithType: AlgoSdk.MessagePack
+  fullName: AlgoSdk.MessagePack
+- uid: AlgoSdk.SignedTransactionFormatter`1.Serialize*
+  commentId: Overload:AlgoSdk.SignedTransactionFormatter`1.Serialize
+  name: Serialize
+  nameWithType: SignedTransactionFormatter<TTransaction>.Serialize
+  fullName: AlgoSdk.SignedTransactionFormatter<TTransaction>.Serialize
+  nameWithType.vb: SignedTransactionFormatter(Of TTransaction).Serialize
+  fullName.vb: AlgoSdk.SignedTransactionFormatter(Of TTransaction).Serialize
+- uid: AlgoSdk.IAlgoApiFormatter{AlgoSdk.Signed{{TTransaction}}}.Serialize(AlgoSdk.Json.JsonWriter@,AlgoSdk.Signed{{TTransaction}})
+  commentId: M:AlgoSdk.IAlgoApiFormatter{AlgoSdk.Signed{`0}}.Serialize(AlgoSdk.Json.JsonWriter@,AlgoSdk.Signed{`0})
+  parent: AlgoSdk.IAlgoApiFormatter{AlgoSdk.Signed{{TTransaction}}}
+  definition: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+  name: Serialize(JsonWriter, Signed<TTransaction>)
+  nameWithType: IAlgoApiFormatter<Signed<TTransaction>>.Serialize(JsonWriter, Signed<TTransaction>)
+  fullName: AlgoSdk.IAlgoApiFormatter<AlgoSdk.Signed<TTransaction>>.Serialize(AlgoSdk.Json.JsonWriter, AlgoSdk.Signed<TTransaction>)
+  nameWithType.vb: IAlgoApiFormatter(Of Signed(Of TTransaction)).Serialize(JsonWriter, Signed(Of TTransaction))
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of AlgoSdk.Signed(Of TTransaction)).Serialize(AlgoSdk.Json.JsonWriter, AlgoSdk.Signed(Of TTransaction))
+  name.vb: Serialize(JsonWriter, Signed(Of TTransaction))
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+    name: Serialize
+    nameWithType: IAlgoApiFormatter<Signed<TTransaction>>.Serialize
+    fullName: AlgoSdk.IAlgoApiFormatter<AlgoSdk.Signed<TTransaction>>.Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonWriter
+    name: JsonWriter
+    nameWithType: JsonWriter
+    fullName: AlgoSdk.Json.JsonWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AlgoSdk.Signed`1
+    name: Signed
+    nameWithType: Signed
+    fullName: AlgoSdk.Signed
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTransaction
+    nameWithType: TTransaction
+    fullName: TTransaction
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+    name: Serialize
+    nameWithType: IAlgoApiFormatter(Of Signed(Of TTransaction)).Serialize
+    fullName: AlgoSdk.IAlgoApiFormatter(Of AlgoSdk.Signed(Of TTransaction)).Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonWriter
+    name: JsonWriter
+    nameWithType: JsonWriter
+    fullName: AlgoSdk.Json.JsonWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AlgoSdk.Signed`1
+    name: Signed
+    nameWithType: Signed
+    fullName: AlgoSdk.Signed
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTransaction
+    nameWithType: TTransaction
+    fullName: TTransaction
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Json.JsonWriter
+  commentId: T:AlgoSdk.Json.JsonWriter
+  parent: AlgoSdk.Json
+  name: JsonWriter
+  nameWithType: JsonWriter
+  fullName: AlgoSdk.Json.JsonWriter
+- uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+  commentId: M:AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+  name: Serialize(JsonWriter, T)
+  nameWithType: IAlgoApiFormatter<T>.Serialize(JsonWriter, T)
+  fullName: AlgoSdk.IAlgoApiFormatter<T>.Serialize(AlgoSdk.Json.JsonWriter, T)
+  nameWithType.vb: IAlgoApiFormatter(Of T).Serialize(JsonWriter, T)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of T).Serialize(AlgoSdk.Json.JsonWriter, T)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+    name: Serialize
+    nameWithType: IAlgoApiFormatter<T>.Serialize
+    fullName: AlgoSdk.IAlgoApiFormatter<T>.Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonWriter
+    name: JsonWriter
+    nameWithType: JsonWriter
+    fullName: AlgoSdk.Json.JsonWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+    name: Serialize
+    nameWithType: IAlgoApiFormatter(Of T).Serialize
+    fullName: AlgoSdk.IAlgoApiFormatter(Of T).Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonWriter
+    name: JsonWriter
+    nameWithType: JsonWriter
+    fullName: AlgoSdk.Json.JsonWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.IAlgoApiFormatter{AlgoSdk.Signed{{TTransaction}}}.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,AlgoSdk.Signed{{TTransaction}})
+  commentId: M:AlgoSdk.IAlgoApiFormatter{AlgoSdk.Signed{`0}}.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,AlgoSdk.Signed{`0})
+  parent: AlgoSdk.IAlgoApiFormatter{AlgoSdk.Signed{{TTransaction}}}
+  definition: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+  name: Serialize(MessagePackWriter, Signed<TTransaction>)
+  nameWithType: IAlgoApiFormatter<Signed<TTransaction>>.Serialize(MessagePackWriter, Signed<TTransaction>)
+  fullName: AlgoSdk.IAlgoApiFormatter<AlgoSdk.Signed<TTransaction>>.Serialize(AlgoSdk.MessagePack.MessagePackWriter, AlgoSdk.Signed<TTransaction>)
+  nameWithType.vb: IAlgoApiFormatter(Of Signed(Of TTransaction)).Serialize(MessagePackWriter, Signed(Of TTransaction))
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of AlgoSdk.Signed(Of TTransaction)).Serialize(AlgoSdk.MessagePack.MessagePackWriter, AlgoSdk.Signed(Of TTransaction))
+  name.vb: Serialize(MessagePackWriter, Signed(Of TTransaction))
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+    name: Serialize
+    nameWithType: IAlgoApiFormatter<Signed<TTransaction>>.Serialize
+    fullName: AlgoSdk.IAlgoApiFormatter<AlgoSdk.Signed<TTransaction>>.Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackWriter
+    name: MessagePackWriter
+    nameWithType: MessagePackWriter
+    fullName: AlgoSdk.MessagePack.MessagePackWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AlgoSdk.Signed`1
+    name: Signed
+    nameWithType: Signed
+    fullName: AlgoSdk.Signed
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTransaction
+    nameWithType: TTransaction
+    fullName: TTransaction
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+    name: Serialize
+    nameWithType: IAlgoApiFormatter(Of Signed(Of TTransaction)).Serialize
+    fullName: AlgoSdk.IAlgoApiFormatter(Of AlgoSdk.Signed(Of TTransaction)).Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackWriter
+    name: MessagePackWriter
+    nameWithType: MessagePackWriter
+    fullName: AlgoSdk.MessagePack.MessagePackWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AlgoSdk.Signed`1
+    name: Signed
+    nameWithType: Signed
+    fullName: AlgoSdk.Signed
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTransaction
+    nameWithType: TTransaction
+    fullName: TTransaction
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.MessagePack.MessagePackWriter
+  commentId: T:AlgoSdk.MessagePack.MessagePackWriter
+  parent: AlgoSdk.MessagePack
+  name: MessagePackWriter
+  nameWithType: MessagePackWriter
+  fullName: AlgoSdk.MessagePack.MessagePackWriter
+- uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+  commentId: M:AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+  name: Serialize(MessagePackWriter, T)
+  nameWithType: IAlgoApiFormatter<T>.Serialize(MessagePackWriter, T)
+  fullName: AlgoSdk.IAlgoApiFormatter<T>.Serialize(AlgoSdk.MessagePack.MessagePackWriter, T)
+  nameWithType.vb: IAlgoApiFormatter(Of T).Serialize(MessagePackWriter, T)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of T).Serialize(AlgoSdk.MessagePack.MessagePackWriter, T)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+    name: Serialize
+    nameWithType: IAlgoApiFormatter<T>.Serialize
+    fullName: AlgoSdk.IAlgoApiFormatter<T>.Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackWriter
+    name: MessagePackWriter
+    nameWithType: MessagePackWriter
+    fullName: AlgoSdk.MessagePack.MessagePackWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+    name: Serialize
+    nameWithType: IAlgoApiFormatter(Of T).Serialize
+    fullName: AlgoSdk.IAlgoApiFormatter(Of T).Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackWriter
+    name: MessagePackWriter
+    nameWithType: MessagePackWriter
+    fullName: AlgoSdk.MessagePack.MessagePackWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

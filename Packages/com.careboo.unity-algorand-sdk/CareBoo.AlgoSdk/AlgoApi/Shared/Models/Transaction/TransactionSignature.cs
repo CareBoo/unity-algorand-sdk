@@ -2,6 +2,9 @@ using System;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// An untyped wrapper around different transaction signatures.
+    /// </summary>
     [AlgoApiObject]
     public struct TransactionSignature
         : IEquatable<TransactionSignature>

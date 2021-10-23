@@ -1,0 +1,1201 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.Json.JsonWriter
+  commentId: T:AlgoSdk.Json.JsonWriter
+  id: JsonWriter
+  parent: AlgoSdk.Json
+  children:
+  - AlgoSdk.Json.JsonWriter.#ctor(Unity.Collections.Allocator)
+  - AlgoSdk.Json.JsonWriter.BeginArray
+  - AlgoSdk.Json.JsonWriter.BeginNextItem
+  - AlgoSdk.Json.JsonWriter.BeginObject
+  - AlgoSdk.Json.JsonWriter.Dispose
+  - AlgoSdk.Json.JsonWriter.Dispose(Unity.Jobs.JobHandle)
+  - AlgoSdk.Json.JsonWriter.EndArray
+  - AlgoSdk.Json.JsonWriter.EndObject
+  - AlgoSdk.Json.JsonWriter.Text
+  - AlgoSdk.Json.JsonWriter.WriteBool(System.Boolean)
+  - AlgoSdk.Json.JsonWriter.WriteChar(System.Char)
+  - AlgoSdk.Json.JsonWriter.WriteNull
+  - AlgoSdk.Json.JsonWriter.WriteNumber(System.Int64)
+  - AlgoSdk.Json.JsonWriter.WriteNumber(System.Single)
+  - AlgoSdk.Json.JsonWriter.WriteNumber(System.UInt64)
+  - AlgoSdk.Json.JsonWriter.WriteObjectKey``1(``0@)
+  - AlgoSdk.Json.JsonWriter.WriteRaw(Unity.Collections.NativeText)
+  - AlgoSdk.Json.JsonWriter.WriteString``1(``0@)
+  langs:
+  - csharp
+  - vb
+  name: JsonWriter
+  nameWithType: JsonWriter
+  fullName: AlgoSdk.Json.JsonWriter
+  type: Struct
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: JsonWriter
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+    startLine: 5
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: 'public struct JsonWriter : INativeDisposable, IDisposable'
+    content.vb: >-
+      Public Structure JsonWriter
+          Implements INativeDisposable, IDisposable
+  implements:
+  - Unity.Collections.INativeDisposable
+  - System.IDisposable
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: AlgoSdk.Json.JsonWriter.#ctor(Unity.Collections.Allocator)
+  commentId: M:AlgoSdk.Json.JsonWriter.#ctor(Unity.Collections.Allocator)
+  id: '#ctor(Unity.Collections.Allocator)'
+  parent: AlgoSdk.Json.JsonWriter
+  langs:
+  - csharp
+  - vb
+  name: JsonWriter(Allocator)
+  nameWithType: JsonWriter.JsonWriter(Allocator)
+  fullName: AlgoSdk.Json.JsonWriter.JsonWriter(Unity.Collections.Allocator)
+  type: Constructor
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: .ctor
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+    startLine: 10
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonWriter(Allocator allocator)
+    parameters:
+    - id: allocator
+      type: Unity.Collections.Allocator
+    content.vb: Public Sub New(allocator As Allocator)
+  overload: AlgoSdk.Json.JsonWriter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Json.JsonWriter.Text
+  commentId: P:AlgoSdk.Json.JsonWriter.Text
+  id: Text
+  parent: AlgoSdk.Json.JsonWriter
+  langs:
+  - csharp
+  - vb
+  name: Text
+  nameWithType: JsonWriter.Text
+  fullName: AlgoSdk.Json.JsonWriter.Text
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Text
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+    startLine: 15
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public NativeText Text { get; }
+    parameters: []
+    return:
+      type: Unity.Collections.NativeText
+    content.vb: Public ReadOnly Property Text As NativeText
+  overload: AlgoSdk.Json.JsonWriter.Text*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: AlgoSdk.Json.JsonWriter.BeginObject
+  commentId: M:AlgoSdk.Json.JsonWriter.BeginObject
+  id: BeginObject
+  parent: AlgoSdk.Json.JsonWriter
+  langs:
+  - csharp
+  - vb
+  name: BeginObject()
+  nameWithType: JsonWriter.BeginObject()
+  fullName: AlgoSdk.Json.JsonWriter.BeginObject()
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: BeginObject
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+    startLine: 17
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonWriter BeginObject()
+    return:
+      type: AlgoSdk.Json.JsonWriter
+    content.vb: Public Function BeginObject As JsonWriter
+  overload: AlgoSdk.Json.JsonWriter.BeginObject*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Json.JsonWriter.EndObject
+  commentId: M:AlgoSdk.Json.JsonWriter.EndObject
+  id: EndObject
+  parent: AlgoSdk.Json.JsonWriter
+  langs:
+  - csharp
+  - vb
+  name: EndObject()
+  nameWithType: JsonWriter.EndObject()
+  fullName: AlgoSdk.Json.JsonWriter.EndObject()
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: EndObject
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+    startLine: 19
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonWriter EndObject()
+    return:
+      type: AlgoSdk.Json.JsonWriter
+    content.vb: Public Function EndObject As JsonWriter
+  overload: AlgoSdk.Json.JsonWriter.EndObject*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Json.JsonWriter.BeginArray
+  commentId: M:AlgoSdk.Json.JsonWriter.BeginArray
+  id: BeginArray
+  parent: AlgoSdk.Json.JsonWriter
+  langs:
+  - csharp
+  - vb
+  name: BeginArray()
+  nameWithType: JsonWriter.BeginArray()
+  fullName: AlgoSdk.Json.JsonWriter.BeginArray()
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: BeginArray
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+    startLine: 21
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonWriter BeginArray()
+    return:
+      type: AlgoSdk.Json.JsonWriter
+    content.vb: Public Function BeginArray As JsonWriter
+  overload: AlgoSdk.Json.JsonWriter.BeginArray*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Json.JsonWriter.EndArray
+  commentId: M:AlgoSdk.Json.JsonWriter.EndArray
+  id: EndArray
+  parent: AlgoSdk.Json.JsonWriter
+  langs:
+  - csharp
+  - vb
+  name: EndArray()
+  nameWithType: JsonWriter.EndArray()
+  fullName: AlgoSdk.Json.JsonWriter.EndArray()
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: EndArray
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+    startLine: 23
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonWriter EndArray()
+    return:
+      type: AlgoSdk.Json.JsonWriter
+    content.vb: Public Function EndArray As JsonWriter
+  overload: AlgoSdk.Json.JsonWriter.EndArray*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Json.JsonWriter.WriteRaw(Unity.Collections.NativeText)
+  commentId: M:AlgoSdk.Json.JsonWriter.WriteRaw(Unity.Collections.NativeText)
+  id: WriteRaw(Unity.Collections.NativeText)
+  parent: AlgoSdk.Json.JsonWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteRaw(NativeText)
+  nameWithType: JsonWriter.WriteRaw(NativeText)
+  fullName: AlgoSdk.Json.JsonWriter.WriteRaw(Unity.Collections.NativeText)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: WriteRaw
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+    startLine: 25
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonWriter WriteRaw(NativeText raw)
+    parameters:
+    - id: raw
+      type: Unity.Collections.NativeText
+    return:
+      type: AlgoSdk.Json.JsonWriter
+    content.vb: Public Function WriteRaw(raw As NativeText) As JsonWriter
+  overload: AlgoSdk.Json.JsonWriter.WriteRaw*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Json.JsonWriter.WriteString``1(``0@)
+  commentId: M:AlgoSdk.Json.JsonWriter.WriteString``1(``0@)
+  id: WriteString``1(``0@)
+  parent: AlgoSdk.Json.JsonWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteString<T>(T)
+  nameWithType: JsonWriter.WriteString<T>(T)
+  fullName: AlgoSdk.Json.JsonWriter.WriteString<T>(T)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: WriteString
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+    startLine: 31
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: >-
+      public JsonWriter WriteString<T>(in T fs)
+          where T : struct, INativeList<byte>, IUTF8Bytes
+    parameters:
+    - id: fs
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: AlgoSdk.Json.JsonWriter
+    content.vb: Public Function WriteString(Of T As {Structure, INativeList(Of Byte), IUTF8Bytes})(ByRef fs As T) As JsonWriter
+  overload: AlgoSdk.Json.JsonWriter.WriteString*
+  nameWithType.vb: JsonWriter.WriteString(Of T)(ByRef T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.Json.JsonWriter.WriteString(Of T)(ByRef T)
+  name.vb: WriteString(Of T)(ByRef T)
+- uid: AlgoSdk.Json.JsonWriter.WriteNumber(System.Single)
+  commentId: M:AlgoSdk.Json.JsonWriter.WriteNumber(System.Single)
+  id: WriteNumber(System.Single)
+  parent: AlgoSdk.Json.JsonWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteNumber(Single)
+  nameWithType: JsonWriter.WriteNumber(Single)
+  fullName: AlgoSdk.Json.JsonWriter.WriteNumber(System.Single)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: WriteNumber
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+    startLine: 40
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonWriter WriteNumber(float value)
+    parameters:
+    - id: value
+      type: System.Single
+    return:
+      type: AlgoSdk.Json.JsonWriter
+    content.vb: Public Function WriteNumber(value As Single) As JsonWriter
+  overload: AlgoSdk.Json.JsonWriter.WriteNumber*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Json.JsonWriter.WriteNumber(System.UInt64)
+  commentId: M:AlgoSdk.Json.JsonWriter.WriteNumber(System.UInt64)
+  id: WriteNumber(System.UInt64)
+  parent: AlgoSdk.Json.JsonWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteNumber(UInt64)
+  nameWithType: JsonWriter.WriteNumber(UInt64)
+  fullName: AlgoSdk.Json.JsonWriter.WriteNumber(System.UInt64)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: WriteNumber
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+    startLine: 46
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonWriter WriteNumber(ulong value)
+    parameters:
+    - id: value
+      type: System.UInt64
+    return:
+      type: AlgoSdk.Json.JsonWriter
+    content.vb: Public Function WriteNumber(value As ULong) As JsonWriter
+  overload: AlgoSdk.Json.JsonWriter.WriteNumber*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Json.JsonWriter.WriteNumber(System.Int64)
+  commentId: M:AlgoSdk.Json.JsonWriter.WriteNumber(System.Int64)
+  id: WriteNumber(System.Int64)
+  parent: AlgoSdk.Json.JsonWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteNumber(Int64)
+  nameWithType: JsonWriter.WriteNumber(Int64)
+  fullName: AlgoSdk.Json.JsonWriter.WriteNumber(System.Int64)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: WriteNumber
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+    startLine: 52
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonWriter WriteNumber(long value)
+    parameters:
+    - id: value
+      type: System.Int64
+    return:
+      type: AlgoSdk.Json.JsonWriter
+    content.vb: Public Function WriteNumber(value As Long) As JsonWriter
+  overload: AlgoSdk.Json.JsonWriter.WriteNumber*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Json.JsonWriter.WriteBool(System.Boolean)
+  commentId: M:AlgoSdk.Json.JsonWriter.WriteBool(System.Boolean)
+  id: WriteBool(System.Boolean)
+  parent: AlgoSdk.Json.JsonWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteBool(Boolean)
+  nameWithType: JsonWriter.WriteBool(Boolean)
+  fullName: AlgoSdk.Json.JsonWriter.WriteBool(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: WriteBool
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+    startLine: 58
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonWriter WriteBool(bool value)
+    parameters:
+    - id: value
+      type: System.Boolean
+    return:
+      type: AlgoSdk.Json.JsonWriter
+    content.vb: Public Function WriteBool(value As Boolean) As JsonWriter
+  overload: AlgoSdk.Json.JsonWriter.WriteBool*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Json.JsonWriter.WriteNull
+  commentId: M:AlgoSdk.Json.JsonWriter.WriteNull
+  id: WriteNull
+  parent: AlgoSdk.Json.JsonWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteNull()
+  nameWithType: JsonWriter.WriteNull()
+  fullName: AlgoSdk.Json.JsonWriter.WriteNull()
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: WriteNull
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+    startLine: 64
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonWriter WriteNull()
+    return:
+      type: AlgoSdk.Json.JsonWriter
+    content.vb: Public Function WriteNull As JsonWriter
+  overload: AlgoSdk.Json.JsonWriter.WriteNull*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Json.JsonWriter.WriteObjectKey``1(``0@)
+  commentId: M:AlgoSdk.Json.JsonWriter.WriteObjectKey``1(``0@)
+  id: WriteObjectKey``1(``0@)
+  parent: AlgoSdk.Json.JsonWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteObjectKey<T>(T)
+  nameWithType: JsonWriter.WriteObjectKey<T>(T)
+  fullName: AlgoSdk.Json.JsonWriter.WriteObjectKey<T>(T)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: WriteObjectKey
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+    startLine: 70
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: >-
+      public JsonWriter WriteObjectKey<T>(in T fs)
+          where T : struct, INativeList<byte>, IUTF8Bytes
+    parameters:
+    - id: fs
+      type: '{T}'
+    typeParameters:
+    - id: T
+    return:
+      type: AlgoSdk.Json.JsonWriter
+    content.vb: Public Function WriteObjectKey(Of T As {Structure, INativeList(Of Byte), IUTF8Bytes})(ByRef fs As T) As JsonWriter
+  overload: AlgoSdk.Json.JsonWriter.WriteObjectKey*
+  nameWithType.vb: JsonWriter.WriteObjectKey(Of T)(ByRef T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.Json.JsonWriter.WriteObjectKey(Of T)(ByRef T)
+  name.vb: WriteObjectKey(Of T)(ByRef T)
+- uid: AlgoSdk.Json.JsonWriter.BeginNextItem
+  commentId: M:AlgoSdk.Json.JsonWriter.BeginNextItem
+  id: BeginNextItem
+  parent: AlgoSdk.Json.JsonWriter
+  langs:
+  - csharp
+  - vb
+  name: BeginNextItem()
+  nameWithType: JsonWriter.BeginNextItem()
+  fullName: AlgoSdk.Json.JsonWriter.BeginNextItem()
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: BeginNextItem
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+    startLine: 78
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonWriter BeginNextItem()
+    return:
+      type: AlgoSdk.Json.JsonWriter
+    content.vb: Public Function BeginNextItem As JsonWriter
+  overload: AlgoSdk.Json.JsonWriter.BeginNextItem*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Json.JsonWriter.WriteChar(System.Char)
+  commentId: M:AlgoSdk.Json.JsonWriter.WriteChar(System.Char)
+  id: WriteChar(System.Char)
+  parent: AlgoSdk.Json.JsonWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteChar(Char)
+  nameWithType: JsonWriter.WriteChar(Char)
+  fullName: AlgoSdk.Json.JsonWriter.WriteChar(System.Char)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: WriteChar
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+    startLine: 80
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JsonWriter WriteChar(char c)
+    parameters:
+    - id: c
+      type: System.Char
+    return:
+      type: AlgoSdk.Json.JsonWriter
+    content.vb: Public Function WriteChar(c As Char) As JsonWriter
+  overload: AlgoSdk.Json.JsonWriter.WriteChar*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Json.JsonWriter.Dispose(Unity.Jobs.JobHandle)
+  commentId: M:AlgoSdk.Json.JsonWriter.Dispose(Unity.Jobs.JobHandle)
+  id: Dispose(Unity.Jobs.JobHandle)
+  parent: AlgoSdk.Json.JsonWriter
+  langs:
+  - csharp
+  - vb
+  name: Dispose(JobHandle)
+  nameWithType: JsonWriter.Dispose(JobHandle)
+  fullName: AlgoSdk.Json.JsonWriter.Dispose(Unity.Jobs.JobHandle)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Dispose
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+    startLine: 86
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public JobHandle Dispose(JobHandle inputDeps)
+    parameters:
+    - id: inputDeps
+      type: Unity.Jobs.JobHandle
+    return:
+      type: Unity.Jobs.JobHandle
+    content.vb: Public Function Dispose(inputDeps As JobHandle) As JobHandle
+  overload: AlgoSdk.Json.JsonWriter.Dispose*
+  implements:
+  - Unity.Collections.INativeDisposable.Dispose(Unity.Jobs.JobHandle)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Json.JsonWriter.Dispose
+  commentId: M:AlgoSdk.Json.JsonWriter.Dispose
+  id: Dispose
+  parent: AlgoSdk.Json.JsonWriter
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: JsonWriter.Dispose()
+  fullName: AlgoSdk.Json.JsonWriter.Dispose()
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Dispose
+    path: ../CareBoo.AlgoSdk/Serialization/Json/JsonWriter.cs
+    startLine: 93
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk.Json
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose
+  overload: AlgoSdk.Json.JsonWriter.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AlgoSdk.Json
+  commentId: N:AlgoSdk.Json
+  name: AlgoSdk.Json
+  nameWithType: AlgoSdk.Json
+  fullName: AlgoSdk.Json
+- uid: Unity.Collections.INativeDisposable
+  commentId: T:Unity.Collections.INativeDisposable
+  parent: Unity.Collections
+  name: INativeDisposable
+  nameWithType: INativeDisposable
+  fullName: Unity.Collections.INativeDisposable
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Unity.Collections
+  commentId: N:Unity.Collections
+  name: Unity.Collections
+  nameWithType: Unity.Collections
+  fullName: Unity.Collections
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AlgoSdk.Json.JsonWriter.#ctor*
+  commentId: Overload:AlgoSdk.Json.JsonWriter.#ctor
+  name: JsonWriter
+  nameWithType: JsonWriter.JsonWriter
+  fullName: AlgoSdk.Json.JsonWriter.JsonWriter
+- uid: Unity.Collections.Allocator
+  commentId: T:Unity.Collections.Allocator
+  parent: Unity.Collections
+  isExternal: true
+  name: Allocator
+  nameWithType: Allocator
+  fullName: Unity.Collections.Allocator
+- uid: AlgoSdk.Json.JsonWriter.Text*
+  commentId: Overload:AlgoSdk.Json.JsonWriter.Text
+  name: Text
+  nameWithType: JsonWriter.Text
+  fullName: AlgoSdk.Json.JsonWriter.Text
+- uid: Unity.Collections.NativeText
+  commentId: T:Unity.Collections.NativeText
+  parent: Unity.Collections
+  name: NativeText
+  nameWithType: NativeText
+  fullName: Unity.Collections.NativeText
+- uid: AlgoSdk.Json.JsonWriter.BeginObject*
+  commentId: Overload:AlgoSdk.Json.JsonWriter.BeginObject
+  name: BeginObject
+  nameWithType: JsonWriter.BeginObject
+  fullName: AlgoSdk.Json.JsonWriter.BeginObject
+- uid: AlgoSdk.Json.JsonWriter
+  commentId: T:AlgoSdk.Json.JsonWriter
+  parent: AlgoSdk.Json
+  name: JsonWriter
+  nameWithType: JsonWriter
+  fullName: AlgoSdk.Json.JsonWriter
+- uid: AlgoSdk.Json.JsonWriter.EndObject*
+  commentId: Overload:AlgoSdk.Json.JsonWriter.EndObject
+  name: EndObject
+  nameWithType: JsonWriter.EndObject
+  fullName: AlgoSdk.Json.JsonWriter.EndObject
+- uid: AlgoSdk.Json.JsonWriter.BeginArray*
+  commentId: Overload:AlgoSdk.Json.JsonWriter.BeginArray
+  name: BeginArray
+  nameWithType: JsonWriter.BeginArray
+  fullName: AlgoSdk.Json.JsonWriter.BeginArray
+- uid: AlgoSdk.Json.JsonWriter.EndArray*
+  commentId: Overload:AlgoSdk.Json.JsonWriter.EndArray
+  name: EndArray
+  nameWithType: JsonWriter.EndArray
+  fullName: AlgoSdk.Json.JsonWriter.EndArray
+- uid: AlgoSdk.Json.JsonWriter.WriteRaw*
+  commentId: Overload:AlgoSdk.Json.JsonWriter.WriteRaw
+  name: WriteRaw
+  nameWithType: JsonWriter.WriteRaw
+  fullName: AlgoSdk.Json.JsonWriter.WriteRaw
+- uid: AlgoSdk.Json.JsonWriter.WriteString*
+  commentId: Overload:AlgoSdk.Json.JsonWriter.WriteString
+  name: WriteString
+  nameWithType: JsonWriter.WriteString
+  fullName: AlgoSdk.Json.JsonWriter.WriteString
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: AlgoSdk.Json.JsonWriter.WriteNumber*
+  commentId: Overload:AlgoSdk.Json.JsonWriter.WriteNumber
+  name: WriteNumber
+  nameWithType: JsonWriter.WriteNumber
+  fullName: AlgoSdk.Json.JsonWriter.WriteNumber
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: AlgoSdk.Json.JsonWriter.WriteBool*
+  commentId: Overload:AlgoSdk.Json.JsonWriter.WriteBool
+  name: WriteBool
+  nameWithType: JsonWriter.WriteBool
+  fullName: AlgoSdk.Json.JsonWriter.WriteBool
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: AlgoSdk.Json.JsonWriter.WriteNull*
+  commentId: Overload:AlgoSdk.Json.JsonWriter.WriteNull
+  name: WriteNull
+  nameWithType: JsonWriter.WriteNull
+  fullName: AlgoSdk.Json.JsonWriter.WriteNull
+- uid: AlgoSdk.Json.JsonWriter.WriteObjectKey*
+  commentId: Overload:AlgoSdk.Json.JsonWriter.WriteObjectKey
+  name: WriteObjectKey
+  nameWithType: JsonWriter.WriteObjectKey
+  fullName: AlgoSdk.Json.JsonWriter.WriteObjectKey
+- uid: AlgoSdk.Json.JsonWriter.BeginNextItem*
+  commentId: Overload:AlgoSdk.Json.JsonWriter.BeginNextItem
+  name: BeginNextItem
+  nameWithType: JsonWriter.BeginNextItem
+  fullName: AlgoSdk.Json.JsonWriter.BeginNextItem
+- uid: AlgoSdk.Json.JsonWriter.WriteChar*
+  commentId: Overload:AlgoSdk.Json.JsonWriter.WriteChar
+  name: WriteChar
+  nameWithType: JsonWriter.WriteChar
+  fullName: AlgoSdk.Json.JsonWriter.WriteChar
+- uid: System.Char
+  commentId: T:System.Char
+  parent: System
+  isExternal: true
+  name: Char
+  nameWithType: Char
+  fullName: System.Char
+- uid: AlgoSdk.Json.JsonWriter.Dispose*
+  commentId: Overload:AlgoSdk.Json.JsonWriter.Dispose
+  name: Dispose
+  nameWithType: JsonWriter.Dispose
+  fullName: AlgoSdk.Json.JsonWriter.Dispose
+- uid: Unity.Collections.INativeDisposable.Dispose(Unity.Jobs.JobHandle)
+  commentId: M:Unity.Collections.INativeDisposable.Dispose(Unity.Jobs.JobHandle)
+  parent: Unity.Collections.INativeDisposable
+  isExternal: true
+  name: Dispose(JobHandle)
+  nameWithType: INativeDisposable.Dispose(JobHandle)
+  fullName: Unity.Collections.INativeDisposable.Dispose(Unity.Jobs.JobHandle)
+  spec.csharp:
+  - uid: Unity.Collections.INativeDisposable.Dispose(Unity.Jobs.JobHandle)
+    name: Dispose
+    nameWithType: INativeDisposable.Dispose
+    fullName: Unity.Collections.INativeDisposable.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Unity.Jobs.JobHandle
+    name: JobHandle
+    nameWithType: JobHandle
+    fullName: Unity.Jobs.JobHandle
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Unity.Collections.INativeDisposable.Dispose(Unity.Jobs.JobHandle)
+    name: Dispose
+    nameWithType: INativeDisposable.Dispose
+    fullName: Unity.Collections.INativeDisposable.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Unity.Jobs.JobHandle
+    name: JobHandle
+    nameWithType: JobHandle
+    fullName: Unity.Jobs.JobHandle
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Unity.Jobs.JobHandle
+  commentId: T:Unity.Jobs.JobHandle
+  parent: Unity.Jobs
+  isExternal: true
+  name: JobHandle
+  nameWithType: JobHandle
+  fullName: Unity.Jobs.JobHandle
+- uid: Unity.Jobs
+  commentId: N:Unity.Jobs
+  isExternal: true
+  name: Unity.Jobs
+  nameWithType: Unity.Jobs
+  fullName: Unity.Jobs
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
