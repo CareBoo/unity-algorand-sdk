@@ -43,12 +43,12 @@ jobs:
         with:
           lfs: true
 
-      - name: Download site artifact
+      - name: Download Docs site artifact
         uses: actions/download-artifact@v1
         with:
           name: _site
 
-      - name: Deploy
+      - name: Deploy Docs
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
