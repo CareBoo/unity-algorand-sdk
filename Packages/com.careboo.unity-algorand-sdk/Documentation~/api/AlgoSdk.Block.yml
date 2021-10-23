@@ -1,0 +1,2057 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.Block
+  commentId: T:AlgoSdk.Block
+  id: Block
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.Block.CurrentProtocol
+  - AlgoSdk.Block.Equals(AlgoSdk.Block)
+  - AlgoSdk.Block.FeeSink
+  - AlgoSdk.Block.GenesisHash
+  - AlgoSdk.Block.GenesisId
+  - AlgoSdk.Block.NextProtocol
+  - AlgoSdk.Block.NextProtocolApprovals
+  - AlgoSdk.Block.NextProtocolSwitchOn
+  - AlgoSdk.Block.NextProtocolVoteBefore
+  - AlgoSdk.Block.PreviousBlockHash
+  - AlgoSdk.Block.Rewards
+  - AlgoSdk.Block.RewardsCalculationRound
+  - AlgoSdk.Block.RewardsLevel
+  - AlgoSdk.Block.RewardsPool
+  - AlgoSdk.Block.RewardsRate
+  - AlgoSdk.Block.RewardsResidue
+  - AlgoSdk.Block.RootTransaction
+  - AlgoSdk.Block.Round
+  - AlgoSdk.Block.Seed
+  - AlgoSdk.Block.Timestamp
+  - AlgoSdk.Block.TransactionCounter
+  - AlgoSdk.Block.Transactions
+  - AlgoSdk.Block.UpgradeApprove
+  - AlgoSdk.Block.UpgradeDelay
+  - AlgoSdk.Block.UpgradePropose
+  - AlgoSdk.Block.UpgradeState
+  - AlgoSdk.Block.UpgradeVote
+  langs:
+  - csharp
+  - vb
+  name: Block
+  nameWithType: Block
+  fullName: AlgoSdk.Block
+  type: Struct
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Block
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 6
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: 'public struct Block : IEquatable<Block>'
+    content.vb: >-
+      Public Structure Block
+          Implements IEquatable(Of Block)
+  implements:
+  - System.IEquatable{AlgoSdk.Block}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: AlgoSdk.Block.GenesisHash
+  commentId: F:AlgoSdk.Block.GenesisHash
+  id: GenesisHash
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: GenesisHash
+  nameWithType: Block.GenesisHash
+  fullName: AlgoSdk.Block.GenesisHash
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: GenesisHash
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 11
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("genesis-hash", "gh", false)]
+
+      public GenesisHash GenesisHash
+    return:
+      type: AlgoSdk.GenesisHash
+    content.vb: >-
+      <AlgoApiField("genesis-hash", "gh", False)>
+
+      Public GenesisHash As GenesisHash
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: genesis-hash
+    - type: System.String
+      value: gh
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.GenesisId
+  commentId: F:AlgoSdk.Block.GenesisId
+  id: GenesisId
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: GenesisId
+  nameWithType: Block.GenesisId
+  fullName: AlgoSdk.Block.GenesisId
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: GenesisId
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 14
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("genesis-id", "gen", false)]
+
+      public FixedString64Bytes GenesisId
+    return:
+      type: Unity.Collections.FixedString64Bytes
+    content.vb: >-
+      <AlgoApiField("genesis-id", "gen", False)>
+
+      Public GenesisId As FixedString64Bytes
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: genesis-id
+    - type: System.String
+      value: gen
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.PreviousBlockHash
+  commentId: F:AlgoSdk.Block.PreviousBlockHash
+  id: PreviousBlockHash
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: PreviousBlockHash
+  nameWithType: Block.PreviousBlockHash
+  fullName: AlgoSdk.Block.PreviousBlockHash
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: PreviousBlockHash
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 17
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("previous-block-hash", "prev", false)]
+
+      public Sha512_256_Hash PreviousBlockHash
+    return:
+      type: AlgoSdk.Crypto.Sha512_256_Hash
+    content.vb: >-
+      <AlgoApiField("previous-block-hash", "prev", False)>
+
+      Public PreviousBlockHash As Sha512_256_Hash
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: previous-block-hash
+    - type: System.String
+      value: prev
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.Rewards
+  commentId: F:AlgoSdk.Block.Rewards
+  id: Rewards
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: Rewards
+  nameWithType: Block.Rewards
+  fullName: AlgoSdk.Block.Rewards
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Rewards
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 20
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("rewards", null, false)]
+
+      public BlockRewards Rewards
+    return:
+      type: AlgoSdk.BlockRewards
+    content.vb: >-
+      <AlgoApiField("rewards", Nothing, False)>
+
+      Public Rewards As BlockRewards
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: rewards
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.Round
+  commentId: F:AlgoSdk.Block.Round
+  id: Round
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: Round
+  nameWithType: Block.Round
+  fullName: AlgoSdk.Block.Round
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Round
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 23
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("round", "rnd", false)]
+
+      public ulong Round
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("round", "rnd", False)>
+
+      Public Round As ULong
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: round
+    - type: System.String
+      value: rnd
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.Seed
+  commentId: F:AlgoSdk.Block.Seed
+  id: Seed
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: Seed
+  nameWithType: Block.Seed
+  fullName: AlgoSdk.Block.Seed
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Seed
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 26
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("seed", "seed", false)]
+
+      public Sha512_256_Hash Seed
+    return:
+      type: AlgoSdk.Crypto.Sha512_256_Hash
+    content.vb: >-
+      <AlgoApiField("seed", "seed", False)>
+
+      Public Seed As Sha512_256_Hash
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: seed
+    - type: System.String
+      value: seed
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.Timestamp
+  commentId: F:AlgoSdk.Block.Timestamp
+  id: Timestamp
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: Timestamp
+  nameWithType: Block.Timestamp
+  fullName: AlgoSdk.Block.Timestamp
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Timestamp
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 29
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("timestamp", "ts", false)]
+
+      public ulong Timestamp
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("timestamp", "ts", False)>
+
+      Public Timestamp As ULong
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: timestamp
+    - type: System.String
+      value: ts
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.Transactions
+  commentId: F:AlgoSdk.Block.Transactions
+  id: Transactions
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: Transactions
+  nameWithType: Block.Transactions
+  fullName: AlgoSdk.Block.Transactions
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Transactions
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 32
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("transactions", "txns", false)]
+
+      public BlockTransaction[] Transactions
+    return:
+      type: AlgoSdk.BlockTransaction[]
+    content.vb: >-
+      <AlgoApiField("transactions", "txns", False)>
+
+      Public Transactions As BlockTransaction()
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: transactions
+    - type: System.String
+      value: txns
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.RootTransaction
+  commentId: F:AlgoSdk.Block.RootTransaction
+  id: RootTransaction
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: RootTransaction
+  nameWithType: Block.RootTransaction
+  fullName: AlgoSdk.Block.RootTransaction
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: RootTransaction
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 35
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("transaction-root", "txn", false)]
+
+      public Sha512_256_Hash RootTransaction
+    return:
+      type: AlgoSdk.Crypto.Sha512_256_Hash
+    content.vb: >-
+      <AlgoApiField("transaction-root", "txn", False)>
+
+      Public RootTransaction As Sha512_256_Hash
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: transaction-root
+    - type: System.String
+      value: txn
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.TransactionCounter
+  commentId: F:AlgoSdk.Block.TransactionCounter
+  id: TransactionCounter
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: TransactionCounter
+  nameWithType: Block.TransactionCounter
+  fullName: AlgoSdk.Block.TransactionCounter
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: TransactionCounter
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 38
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("txn-counter", "tc", false)]
+
+      public ulong TransactionCounter
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("txn-counter", "tc", False)>
+
+      Public TransactionCounter As ULong
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: txn-counter
+    - type: System.String
+      value: tc
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.UpgradeState
+  commentId: F:AlgoSdk.Block.UpgradeState
+  id: UpgradeState
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: UpgradeState
+  nameWithType: Block.UpgradeState
+  fullName: AlgoSdk.Block.UpgradeState
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: UpgradeState
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 41
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("upgrade-state", null, false)]
+
+      public BlockUpgradeState UpgradeState
+    return:
+      type: AlgoSdk.BlockUpgradeState
+    content.vb: >-
+      <AlgoApiField("upgrade-state", Nothing, False)>
+
+      Public UpgradeState As BlockUpgradeState
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: upgrade-state
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.UpgradeVote
+  commentId: F:AlgoSdk.Block.UpgradeVote
+  id: UpgradeVote
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: UpgradeVote
+  nameWithType: Block.UpgradeVote
+  fullName: AlgoSdk.Block.UpgradeVote
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: UpgradeVote
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 44
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("upgrade-vote", null, false)]
+
+      public BlockUpgradeVote UpgradeVote
+    return:
+      type: AlgoSdk.BlockUpgradeVote
+    content.vb: >-
+      <AlgoApiField("upgrade-vote", Nothing, False)>
+
+      Public UpgradeVote As BlockUpgradeVote
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: upgrade-vote
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.FeeSink
+  commentId: P:AlgoSdk.Block.FeeSink
+  id: FeeSink
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: FeeSink
+  nameWithType: Block.FeeSink
+  fullName: AlgoSdk.Block.FeeSink
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: FeeSink
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 47
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField(null, "fees", false)]
+
+      public Address FeeSink { get; set; }
+    parameters: []
+    return:
+      type: AlgoSdk.Address
+    content.vb: >-
+      <AlgoApiField(Nothing, "fees", False)>
+
+      Public Property FeeSink As Address
+  overload: AlgoSdk.Block.FeeSink*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+    - type: System.String
+      value: fees
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.RewardsCalculationRound
+  commentId: P:AlgoSdk.Block.RewardsCalculationRound
+  id: RewardsCalculationRound
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: RewardsCalculationRound
+  nameWithType: Block.RewardsCalculationRound
+  fullName: AlgoSdk.Block.RewardsCalculationRound
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: RewardsCalculationRound
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 54
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField(null, "rwcalr", false)]
+
+      public ulong RewardsCalculationRound { get; set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField(Nothing, "rwcalr", False)>
+
+      Public Property RewardsCalculationRound As ULong
+  overload: AlgoSdk.Block.RewardsCalculationRound*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+    - type: System.String
+      value: rwcalr
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.RewardsLevel
+  commentId: P:AlgoSdk.Block.RewardsLevel
+  id: RewardsLevel
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: RewardsLevel
+  nameWithType: Block.RewardsLevel
+  fullName: AlgoSdk.Block.RewardsLevel
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: RewardsLevel
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 61
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField(null, "earn", false)]
+
+      public ulong RewardsLevel { get; set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField(Nothing, "earn", False)>
+
+      Public Property RewardsLevel As ULong
+  overload: AlgoSdk.Block.RewardsLevel*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+    - type: System.String
+      value: earn
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.RewardsPool
+  commentId: P:AlgoSdk.Block.RewardsPool
+  id: RewardsPool
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: RewardsPool
+  nameWithType: Block.RewardsPool
+  fullName: AlgoSdk.Block.RewardsPool
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: RewardsPool
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 68
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField(null, "rwd", false)]
+
+      public Address RewardsPool { get; set; }
+    parameters: []
+    return:
+      type: AlgoSdk.Address
+    content.vb: >-
+      <AlgoApiField(Nothing, "rwd", False)>
+
+      Public Property RewardsPool As Address
+  overload: AlgoSdk.Block.RewardsPool*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+    - type: System.String
+      value: rwd
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.RewardsRate
+  commentId: P:AlgoSdk.Block.RewardsRate
+  id: RewardsRate
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: RewardsRate
+  nameWithType: Block.RewardsRate
+  fullName: AlgoSdk.Block.RewardsRate
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: RewardsRate
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 75
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField(null, "rate", false)]
+
+      public ulong RewardsRate { get; set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField(Nothing, "rate", False)>
+
+      Public Property RewardsRate As ULong
+  overload: AlgoSdk.Block.RewardsRate*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+    - type: System.String
+      value: rate
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.RewardsResidue
+  commentId: P:AlgoSdk.Block.RewardsResidue
+  id: RewardsResidue
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: RewardsResidue
+  nameWithType: Block.RewardsResidue
+  fullName: AlgoSdk.Block.RewardsResidue
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: RewardsResidue
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 82
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField(null, "frac", false)]
+
+      public ulong RewardsResidue { get; set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField(Nothing, "frac", False)>
+
+      Public Property RewardsResidue As ULong
+  overload: AlgoSdk.Block.RewardsResidue*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+    - type: System.String
+      value: frac
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.CurrentProtocol
+  commentId: P:AlgoSdk.Block.CurrentProtocol
+  id: CurrentProtocol
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: CurrentProtocol
+  nameWithType: Block.CurrentProtocol
+  fullName: AlgoSdk.Block.CurrentProtocol
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: CurrentProtocol
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 89
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField(null, "proto", false)]
+
+      public FixedString128Bytes CurrentProtocol { get; set; }
+    parameters: []
+    return:
+      type: Unity.Collections.FixedString128Bytes
+    content.vb: >-
+      <AlgoApiField(Nothing, "proto", False)>
+
+      Public Property CurrentProtocol As FixedString128Bytes
+  overload: AlgoSdk.Block.CurrentProtocol*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+    - type: System.String
+      value: proto
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.NextProtocol
+  commentId: P:AlgoSdk.Block.NextProtocol
+  id: NextProtocol
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: NextProtocol
+  nameWithType: Block.NextProtocol
+  fullName: AlgoSdk.Block.NextProtocol
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: NextProtocol
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 96
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField(null, "nextproto", false)]
+
+      public FixedString128Bytes NextProtocol { get; set; }
+    parameters: []
+    return:
+      type: Unity.Collections.FixedString128Bytes
+    content.vb: >-
+      <AlgoApiField(Nothing, "nextproto", False)>
+
+      Public Property NextProtocol As FixedString128Bytes
+  overload: AlgoSdk.Block.NextProtocol*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+    - type: System.String
+      value: nextproto
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.NextProtocolApprovals
+  commentId: P:AlgoSdk.Block.NextProtocolApprovals
+  id: NextProtocolApprovals
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: NextProtocolApprovals
+  nameWithType: Block.NextProtocolApprovals
+  fullName: AlgoSdk.Block.NextProtocolApprovals
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: NextProtocolApprovals
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 103
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField(null, "nextyes", false)]
+
+      public ulong NextProtocolApprovals { get; set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField(Nothing, "nextyes", False)>
+
+      Public Property NextProtocolApprovals As ULong
+  overload: AlgoSdk.Block.NextProtocolApprovals*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+    - type: System.String
+      value: nextyes
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.NextProtocolSwitchOn
+  commentId: P:AlgoSdk.Block.NextProtocolSwitchOn
+  id: NextProtocolSwitchOn
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: NextProtocolSwitchOn
+  nameWithType: Block.NextProtocolSwitchOn
+  fullName: AlgoSdk.Block.NextProtocolSwitchOn
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: NextProtocolSwitchOn
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 110
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField(null, "nextswitch", false)]
+
+      public ulong NextProtocolSwitchOn { get; set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField(Nothing, "nextswitch", False)>
+
+      Public Property NextProtocolSwitchOn As ULong
+  overload: AlgoSdk.Block.NextProtocolSwitchOn*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+    - type: System.String
+      value: nextswitch
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.NextProtocolVoteBefore
+  commentId: P:AlgoSdk.Block.NextProtocolVoteBefore
+  id: NextProtocolVoteBefore
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: NextProtocolVoteBefore
+  nameWithType: Block.NextProtocolVoteBefore
+  fullName: AlgoSdk.Block.NextProtocolVoteBefore
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: NextProtocolVoteBefore
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 117
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField(null, "nextbefore", false)]
+
+      public ulong NextProtocolVoteBefore { get; set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField(Nothing, "nextbefore", False)>
+
+      Public Property NextProtocolVoteBefore As ULong
+  overload: AlgoSdk.Block.NextProtocolVoteBefore*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+    - type: System.String
+      value: nextbefore
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.UpgradeApprove
+  commentId: P:AlgoSdk.Block.UpgradeApprove
+  id: UpgradeApprove
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: UpgradeApprove
+  nameWithType: Block.UpgradeApprove
+  fullName: AlgoSdk.Block.UpgradeApprove
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: UpgradeApprove
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 124
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField(null, "upgradeyes", false)]
+
+      public Optional<bool> UpgradeApprove { get; set; }
+    parameters: []
+    return:
+      type: AlgoSdk.Optional{System.Boolean}
+    content.vb: "<AlgoApiField(Nothing, \"upgradeyes\", False)>\nPublic Property UpgradeApprove As "
+  overload: AlgoSdk.Block.UpgradeApprove*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+    - type: System.String
+      value: upgradeyes
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.UpgradeDelay
+  commentId: P:AlgoSdk.Block.UpgradeDelay
+  id: UpgradeDelay
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: UpgradeDelay
+  nameWithType: Block.UpgradeDelay
+  fullName: AlgoSdk.Block.UpgradeDelay
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: UpgradeDelay
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 131
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField(null, "upgradedelay", false)]
+
+      public ulong UpgradeDelay { get; set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField(Nothing, "upgradedelay", False)>
+
+      Public Property UpgradeDelay As ULong
+  overload: AlgoSdk.Block.UpgradeDelay*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+    - type: System.String
+      value: upgradedelay
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.UpgradePropose
+  commentId: P:AlgoSdk.Block.UpgradePropose
+  id: UpgradePropose
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: UpgradePropose
+  nameWithType: Block.UpgradePropose
+  fullName: AlgoSdk.Block.UpgradePropose
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: UpgradePropose
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 138
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField(null, "upgradeprop", false)]
+
+      public Address UpgradePropose { get; set; }
+    parameters: []
+    return:
+      type: AlgoSdk.Address
+    content.vb: >-
+      <AlgoApiField(Nothing, "upgradeprop", False)>
+
+      Public Property UpgradePropose As Address
+  overload: AlgoSdk.Block.UpgradePropose*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+    - type: System.String
+      value: upgradeprop
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.Block.Equals(AlgoSdk.Block)
+  commentId: M:AlgoSdk.Block.Equals(AlgoSdk.Block)
+  id: Equals(AlgoSdk.Block)
+  parent: AlgoSdk.Block
+  langs:
+  - csharp
+  - vb
+  name: Equals(Block)
+  nameWithType: Block.Equals(Block)
+  fullName: AlgoSdk.Block.Equals(AlgoSdk.Block)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Equals
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Block.cs
+    startLine: 145
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public bool Equals(Block other)
+    parameters:
+    - id: other
+      type: AlgoSdk.Block
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As Block) As Boolean
+  overload: AlgoSdk.Block.Equals*
+  implements:
+  - System.IEquatable{AlgoSdk.Block}.Equals(AlgoSdk.Block)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: System.IEquatable{AlgoSdk.Block}
+  commentId: T:System.IEquatable{AlgoSdk.Block}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<Block>
+  nameWithType: IEquatable<Block>
+  fullName: System.IEquatable<AlgoSdk.Block>
+  nameWithType.vb: IEquatable(Of Block)
+  fullName.vb: System.IEquatable(Of AlgoSdk.Block)
+  name.vb: IEquatable(Of Block)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AlgoSdk.Block
+    name: Block
+    nameWithType: Block
+    fullName: AlgoSdk.Block
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AlgoSdk.Block
+    name: Block
+    nameWithType: Block
+    fullName: AlgoSdk.Block
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AlgoSdk.GenesisHash
+  commentId: T:AlgoSdk.GenesisHash
+  parent: AlgoSdk
+  name: GenesisHash
+  nameWithType: GenesisHash
+  fullName: AlgoSdk.GenesisHash
+- uid: Unity.Collections.FixedString64Bytes
+  commentId: T:Unity.Collections.FixedString64Bytes
+  parent: Unity.Collections
+  name: FixedString64Bytes
+  nameWithType: FixedString64Bytes
+  fullName: Unity.Collections.FixedString64Bytes
+- uid: Unity.Collections
+  commentId: N:Unity.Collections
+  name: Unity.Collections
+  nameWithType: Unity.Collections
+  fullName: Unity.Collections
+- uid: AlgoSdk.Crypto.Sha512_256_Hash
+  commentId: T:AlgoSdk.Crypto.Sha512_256_Hash
+  parent: AlgoSdk.Crypto
+  name: Sha512_256_Hash
+  nameWithType: Sha512_256_Hash
+  fullName: AlgoSdk.Crypto.Sha512_256_Hash
+- uid: AlgoSdk.Crypto
+  commentId: N:AlgoSdk.Crypto
+  name: AlgoSdk.Crypto
+  nameWithType: AlgoSdk.Crypto
+  fullName: AlgoSdk.Crypto
+- uid: AlgoSdk.BlockRewards
+  commentId: T:AlgoSdk.BlockRewards
+  parent: AlgoSdk
+  name: BlockRewards
+  nameWithType: BlockRewards
+  fullName: AlgoSdk.BlockRewards
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: AlgoSdk.BlockTransaction[]
+  isExternal: true
+  name: BlockTransaction[]
+  nameWithType: BlockTransaction[]
+  fullName: AlgoSdk.BlockTransaction[]
+  nameWithType.vb: BlockTransaction()
+  fullName.vb: AlgoSdk.BlockTransaction()
+  name.vb: BlockTransaction()
+  spec.csharp:
+  - uid: AlgoSdk.BlockTransaction
+    name: BlockTransaction
+    nameWithType: BlockTransaction
+    fullName: AlgoSdk.BlockTransaction
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: AlgoSdk.BlockTransaction
+    name: BlockTransaction
+    nameWithType: BlockTransaction
+    fullName: AlgoSdk.BlockTransaction
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: AlgoSdk.BlockUpgradeState
+  commentId: T:AlgoSdk.BlockUpgradeState
+  parent: AlgoSdk
+  name: BlockUpgradeState
+  nameWithType: BlockUpgradeState
+  fullName: AlgoSdk.BlockUpgradeState
+- uid: AlgoSdk.BlockUpgradeVote
+  commentId: T:AlgoSdk.BlockUpgradeVote
+  parent: AlgoSdk
+  name: BlockUpgradeVote
+  nameWithType: BlockUpgradeVote
+  fullName: AlgoSdk.BlockUpgradeVote
+- uid: AlgoSdk.Block.FeeSink*
+  commentId: Overload:AlgoSdk.Block.FeeSink
+  name: FeeSink
+  nameWithType: Block.FeeSink
+  fullName: AlgoSdk.Block.FeeSink
+- uid: AlgoSdk.Address
+  commentId: T:AlgoSdk.Address
+  parent: AlgoSdk
+  name: Address
+  nameWithType: Address
+  fullName: AlgoSdk.Address
+- uid: AlgoSdk.Block.RewardsCalculationRound*
+  commentId: Overload:AlgoSdk.Block.RewardsCalculationRound
+  name: RewardsCalculationRound
+  nameWithType: Block.RewardsCalculationRound
+  fullName: AlgoSdk.Block.RewardsCalculationRound
+- uid: AlgoSdk.Block.RewardsLevel*
+  commentId: Overload:AlgoSdk.Block.RewardsLevel
+  name: RewardsLevel
+  nameWithType: Block.RewardsLevel
+  fullName: AlgoSdk.Block.RewardsLevel
+- uid: AlgoSdk.Block.RewardsPool*
+  commentId: Overload:AlgoSdk.Block.RewardsPool
+  name: RewardsPool
+  nameWithType: Block.RewardsPool
+  fullName: AlgoSdk.Block.RewardsPool
+- uid: AlgoSdk.Block.RewardsRate*
+  commentId: Overload:AlgoSdk.Block.RewardsRate
+  name: RewardsRate
+  nameWithType: Block.RewardsRate
+  fullName: AlgoSdk.Block.RewardsRate
+- uid: AlgoSdk.Block.RewardsResidue*
+  commentId: Overload:AlgoSdk.Block.RewardsResidue
+  name: RewardsResidue
+  nameWithType: Block.RewardsResidue
+  fullName: AlgoSdk.Block.RewardsResidue
+- uid: AlgoSdk.Block.CurrentProtocol*
+  commentId: Overload:AlgoSdk.Block.CurrentProtocol
+  name: CurrentProtocol
+  nameWithType: Block.CurrentProtocol
+  fullName: AlgoSdk.Block.CurrentProtocol
+- uid: Unity.Collections.FixedString128Bytes
+  commentId: T:Unity.Collections.FixedString128Bytes
+  parent: Unity.Collections
+  name: FixedString128Bytes
+  nameWithType: FixedString128Bytes
+  fullName: Unity.Collections.FixedString128Bytes
+- uid: AlgoSdk.Block.NextProtocol*
+  commentId: Overload:AlgoSdk.Block.NextProtocol
+  name: NextProtocol
+  nameWithType: Block.NextProtocol
+  fullName: AlgoSdk.Block.NextProtocol
+- uid: AlgoSdk.Block.NextProtocolApprovals*
+  commentId: Overload:AlgoSdk.Block.NextProtocolApprovals
+  name: NextProtocolApprovals
+  nameWithType: Block.NextProtocolApprovals
+  fullName: AlgoSdk.Block.NextProtocolApprovals
+- uid: AlgoSdk.Block.NextProtocolSwitchOn*
+  commentId: Overload:AlgoSdk.Block.NextProtocolSwitchOn
+  name: NextProtocolSwitchOn
+  nameWithType: Block.NextProtocolSwitchOn
+  fullName: AlgoSdk.Block.NextProtocolSwitchOn
+- uid: AlgoSdk.Block.NextProtocolVoteBefore*
+  commentId: Overload:AlgoSdk.Block.NextProtocolVoteBefore
+  name: NextProtocolVoteBefore
+  nameWithType: Block.NextProtocolVoteBefore
+  fullName: AlgoSdk.Block.NextProtocolVoteBefore
+- uid: AlgoSdk.Block.UpgradeApprove*
+  commentId: Overload:AlgoSdk.Block.UpgradeApprove
+  name: UpgradeApprove
+  nameWithType: Block.UpgradeApprove
+  fullName: AlgoSdk.Block.UpgradeApprove
+- uid: AlgoSdk.Optional{System.Boolean}
+  commentId: T:AlgoSdk.Optional{System.Boolean}
+  parent: AlgoSdk
+  definition: AlgoSdk.Optional`1
+  name: Optional<Boolean>
+  nameWithType: Optional<Boolean>
+  fullName: AlgoSdk.Optional<System.Boolean>
+  nameWithType.vb: Optional(Of Boolean)
+  fullName.vb: AlgoSdk.Optional(Of System.Boolean)
+  name.vb: Optional(Of Boolean)
+  spec.csharp:
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Optional`1
+  commentId: T:AlgoSdk.Optional`1
+  parent: AlgoSdk
+  name: Optional<T>
+  nameWithType: Optional<T>
+  fullName: AlgoSdk.Optional<T>
+  nameWithType.vb: Optional(Of T)
+  fullName.vb: AlgoSdk.Optional(Of T)
+  name.vb: Optional(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Optional`1
+    name: Optional
+    nameWithType: Optional
+    fullName: AlgoSdk.Optional
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Block.UpgradeDelay*
+  commentId: Overload:AlgoSdk.Block.UpgradeDelay
+  name: UpgradeDelay
+  nameWithType: Block.UpgradeDelay
+  fullName: AlgoSdk.Block.UpgradeDelay
+- uid: AlgoSdk.Block.UpgradePropose*
+  commentId: Overload:AlgoSdk.Block.UpgradePropose
+  name: UpgradePropose
+  nameWithType: Block.UpgradePropose
+  fullName: AlgoSdk.Block.UpgradePropose
+- uid: AlgoSdk.Block.Equals*
+  commentId: Overload:AlgoSdk.Block.Equals
+  name: Equals
+  nameWithType: Block.Equals
+  fullName: AlgoSdk.Block.Equals
+- uid: System.IEquatable{AlgoSdk.Block}.Equals(AlgoSdk.Block)
+  commentId: M:System.IEquatable{AlgoSdk.Block}.Equals(AlgoSdk.Block)
+  parent: System.IEquatable{AlgoSdk.Block}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(Block)
+  nameWithType: IEquatable<Block>.Equals(Block)
+  fullName: System.IEquatable<AlgoSdk.Block>.Equals(AlgoSdk.Block)
+  nameWithType.vb: IEquatable(Of Block).Equals(Block)
+  fullName.vb: System.IEquatable(Of AlgoSdk.Block).Equals(AlgoSdk.Block)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<Block>.Equals
+    fullName: System.IEquatable<AlgoSdk.Block>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Block
+    name: Block
+    nameWithType: Block
+    fullName: AlgoSdk.Block
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of Block).Equals
+    fullName: System.IEquatable(Of AlgoSdk.Block).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Block
+    name: Block
+    nameWithType: Block
+    fullName: AlgoSdk.Block
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Block
+  commentId: T:AlgoSdk.Block
+  parent: AlgoSdk
+  name: Block
+  nameWithType: Block
+  fullName: AlgoSdk.Block
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

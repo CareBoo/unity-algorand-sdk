@@ -1,0 +1,374 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.IAlgoApiResponse
+  commentId: T:AlgoSdk.IAlgoApiResponse
+  id: IAlgoApiResponse
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.IAlgoApiResponse.ContentType
+  - AlgoSdk.IAlgoApiResponse.Data
+  - AlgoSdk.IAlgoApiResponse.Error
+  - AlgoSdk.IAlgoApiResponse.GetText
+  - AlgoSdk.IAlgoApiResponse.ResponseCode
+  - AlgoSdk.IAlgoApiResponse.Status
+  langs:
+  - csharp
+  - vb
+  name: IAlgoApiResponse
+  nameWithType: IAlgoApiResponse
+  fullName: AlgoSdk.IAlgoApiResponse
+  type: Interface
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/IAlgoApiResponse.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: IAlgoApiResponse
+    path: ../CareBoo.AlgoSdk/AlgoApi/IAlgoApiResponse.cs
+    startLine: 7
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public interface IAlgoApiResponse
+    content.vb: Public Interface IAlgoApiResponse
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: AlgoSdk.IAlgoApiResponse.Data
+  commentId: P:AlgoSdk.IAlgoApiResponse.Data
+  id: Data
+  parent: AlgoSdk.IAlgoApiResponse
+  langs:
+  - csharp
+  - vb
+  name: Data
+  nameWithType: IAlgoApiResponse.Data
+  fullName: AlgoSdk.IAlgoApiResponse.Data
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/IAlgoApiResponse.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Data
+    path: ../CareBoo.AlgoSdk/AlgoApi/IAlgoApiResponse.cs
+    startLine: 12
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  summary: "\nRaw downloaded data\n"
+  example: []
+  syntax:
+    content: byte[] Data { get; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: ReadOnly Property Data As Byte()
+  overload: AlgoSdk.IAlgoApiResponse.Data*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: AlgoSdk.IAlgoApiResponse.ResponseCode
+  commentId: P:AlgoSdk.IAlgoApiResponse.ResponseCode
+  id: ResponseCode
+  parent: AlgoSdk.IAlgoApiResponse
+  langs:
+  - csharp
+  - vb
+  name: ResponseCode
+  nameWithType: IAlgoApiResponse.ResponseCode
+  fullName: AlgoSdk.IAlgoApiResponse.ResponseCode
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/IAlgoApiResponse.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ResponseCode
+    path: ../CareBoo.AlgoSdk/AlgoApi/IAlgoApiResponse.cs
+    startLine: 17
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  summary: "\nHTTP status code\n"
+  example: []
+  syntax:
+    content: long ResponseCode { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: ReadOnly Property ResponseCode As Long
+  overload: AlgoSdk.IAlgoApiResponse.ResponseCode*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: AlgoSdk.IAlgoApiResponse.Status
+  commentId: P:AlgoSdk.IAlgoApiResponse.Status
+  id: Status
+  parent: AlgoSdk.IAlgoApiResponse
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: IAlgoApiResponse.Status
+  fullName: AlgoSdk.IAlgoApiResponse.Status
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/IAlgoApiResponse.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Status
+    path: ../CareBoo.AlgoSdk/AlgoApi/IAlgoApiResponse.cs
+    startLine: 22
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  summary: "\nA <xref href=\"UnityEngine.Networking.UnityWebRequest.Result\" data-throw-if-not-resolved=\"false\"></xref> status for the request\n"
+  example: []
+  syntax:
+    content: UnityWebRequest.Result Status { get; }
+    parameters: []
+    return:
+      type: UnityEngine.Networking.UnityWebRequest.Result
+    content.vb: ReadOnly Property Status As UnityWebRequest.Result
+  overload: AlgoSdk.IAlgoApiResponse.Status*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: AlgoSdk.IAlgoApiResponse.ContentType
+  commentId: P:AlgoSdk.IAlgoApiResponse.ContentType
+  id: ContentType
+  parent: AlgoSdk.IAlgoApiResponse
+  langs:
+  - csharp
+  - vb
+  name: ContentType
+  nameWithType: IAlgoApiResponse.ContentType
+  fullName: AlgoSdk.IAlgoApiResponse.ContentType
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/IAlgoApiResponse.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ContentType
+    path: ../CareBoo.AlgoSdk/AlgoApi/IAlgoApiResponse.cs
+    startLine: 27
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  summary: "\nThe <xref href=\"AlgoSdk.IAlgoApiResponse.ContentType\" data-throw-if-not-resolved=\"false\"></xref> found in the Response header\n"
+  example: []
+  syntax:
+    content: ContentType ContentType { get; }
+    parameters: []
+    return:
+      type: AlgoSdk.ContentType
+    content.vb: ReadOnly Property ContentType As ContentType
+  overload: AlgoSdk.IAlgoApiResponse.ContentType*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: AlgoSdk.IAlgoApiResponse.Error
+  commentId: P:AlgoSdk.IAlgoApiResponse.Error
+  id: Error
+  parent: AlgoSdk.IAlgoApiResponse
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: IAlgoApiResponse.Error
+  fullName: AlgoSdk.IAlgoApiResponse.Error
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/IAlgoApiResponse.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Error
+    path: ../CareBoo.AlgoSdk/AlgoApi/IAlgoApiResponse.cs
+    startLine: 33
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  summary: "\nAn <xref href=\"AlgoSdk.ErrorResponse\" data-throw-if-not-resolved=\"false\"></xref> that is populated if there is an error.\nCheck <xref href=\"AlgoSdk.ErrorResponse.IsError\" data-throw-if-not-resolved=\"false\"></xref> to see if there was an error.\n"
+  example: []
+  syntax:
+    content: ErrorResponse Error { get; }
+    parameters: []
+    return:
+      type: AlgoSdk.ErrorResponse
+    content.vb: ReadOnly Property Error As ErrorResponse
+  overload: AlgoSdk.IAlgoApiResponse.Error*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: AlgoSdk.IAlgoApiResponse.GetText
+  commentId: M:AlgoSdk.IAlgoApiResponse.GetText
+  id: GetText
+  parent: AlgoSdk.IAlgoApiResponse
+  langs:
+  - csharp
+  - vb
+  name: GetText()
+  nameWithType: IAlgoApiResponse.GetText()
+  fullName: AlgoSdk.IAlgoApiResponse.GetText()
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/IAlgoApiResponse.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: GetText
+    path: ../CareBoo.AlgoSdk/AlgoApi/IAlgoApiResponse.cs
+    startLine: 39
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  summary: "\nParses the <xref href=\"AlgoSdk.IAlgoApiResponse.Data\" data-throw-if-not-resolved=\"false\"></xref> into a string based on <xref href=\"AlgoSdk.IAlgoApiResponse.ContentType\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: string GetText()
+    return:
+      type: System.String
+      description: A string encoded from <xref href="AlgoSdk.IAlgoApiResponse.Data" data-throw-if-not-resolved="false"></xref>
+    content.vb: Function GetText As String
+  overload: AlgoSdk.IAlgoApiResponse.GetText*
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: AlgoSdk.IAlgoApiResponse.Data*
+  commentId: Overload:AlgoSdk.IAlgoApiResponse.Data
+  name: Data
+  nameWithType: IAlgoApiResponse.Data
+  fullName: AlgoSdk.IAlgoApiResponse.Data
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: AlgoSdk.IAlgoApiResponse.ResponseCode*
+  commentId: Overload:AlgoSdk.IAlgoApiResponse.ResponseCode
+  name: ResponseCode
+  nameWithType: IAlgoApiResponse.ResponseCode
+  fullName: AlgoSdk.IAlgoApiResponse.ResponseCode
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine.Networking.UnityWebRequest.Result
+  commentId: T:UnityEngine.Networking.UnityWebRequest.Result
+  parent: UnityEngine.Networking
+  isExternal: true
+  name: UnityWebRequest.Result
+  nameWithType: UnityWebRequest.Result
+  fullName: UnityEngine.Networking.UnityWebRequest.Result
+- uid: AlgoSdk.IAlgoApiResponse.Status*
+  commentId: Overload:AlgoSdk.IAlgoApiResponse.Status
+  name: Status
+  nameWithType: IAlgoApiResponse.Status
+  fullName: AlgoSdk.IAlgoApiResponse.Status
+- uid: UnityEngine.Networking
+  commentId: N:UnityEngine.Networking
+  isExternal: true
+  name: UnityEngine.Networking
+  nameWithType: UnityEngine.Networking
+  fullName: UnityEngine.Networking
+- uid: AlgoSdk.IAlgoApiResponse.ContentType
+  commentId: P:AlgoSdk.IAlgoApiResponse.ContentType
+  parent: AlgoSdk.IAlgoApiResponse
+  name: ContentType
+  nameWithType: IAlgoApiResponse.ContentType
+  fullName: AlgoSdk.IAlgoApiResponse.ContentType
+- uid: AlgoSdk.IAlgoApiResponse.ContentType*
+  commentId: Overload:AlgoSdk.IAlgoApiResponse.ContentType
+  name: ContentType
+  nameWithType: IAlgoApiResponse.ContentType
+  fullName: AlgoSdk.IAlgoApiResponse.ContentType
+- uid: AlgoSdk.ContentType
+  commentId: T:AlgoSdk.ContentType
+  parent: AlgoSdk
+  name: ContentType
+  nameWithType: ContentType
+  fullName: AlgoSdk.ContentType
+- uid: AlgoSdk.IAlgoApiResponse
+  commentId: T:AlgoSdk.IAlgoApiResponse
+  parent: AlgoSdk
+  name: IAlgoApiResponse
+  nameWithType: IAlgoApiResponse
+  fullName: AlgoSdk.IAlgoApiResponse
+- uid: AlgoSdk.ErrorResponse
+  commentId: T:AlgoSdk.ErrorResponse
+  parent: AlgoSdk
+  name: ErrorResponse
+  nameWithType: ErrorResponse
+  fullName: AlgoSdk.ErrorResponse
+- uid: AlgoSdk.ErrorResponse.IsError
+  commentId: P:AlgoSdk.ErrorResponse.IsError
+  isExternal: true
+- uid: AlgoSdk.IAlgoApiResponse.Error*
+  commentId: Overload:AlgoSdk.IAlgoApiResponse.Error
+  name: Error
+  nameWithType: IAlgoApiResponse.Error
+  fullName: AlgoSdk.IAlgoApiResponse.Error
+- uid: AlgoSdk.IAlgoApiResponse.Data
+  commentId: P:AlgoSdk.IAlgoApiResponse.Data
+  parent: AlgoSdk.IAlgoApiResponse
+  name: Data
+  nameWithType: IAlgoApiResponse.Data
+  fullName: AlgoSdk.IAlgoApiResponse.Data
+- uid: AlgoSdk.IAlgoApiResponse.GetText*
+  commentId: Overload:AlgoSdk.IAlgoApiResponse.GetText
+  name: GetText
+  nameWithType: IAlgoApiResponse.GetText
+  fullName: AlgoSdk.IAlgoApiResponse.GetText
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

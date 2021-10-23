@@ -2,10 +2,12 @@ using System;
 using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
 using Unity.Jobs;
-using Unity.Mathematics;
 
 namespace AlgoSdk.LowLevel
 {
+    /// <summary>
+    /// A wrapper around <see cref="NativeArray{byte}"/> that implements <see cref="IByteArray"/>.
+    /// </summary>
     public struct NativeByteArray
         : IByteArray
         , IEquatable<NativeByteArray>

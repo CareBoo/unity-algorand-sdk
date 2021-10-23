@@ -4,6 +4,39 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
+    public interface IKeyRegTxn : ITransaction
+    {
+        /// <summary>
+        /// The root participation public key.
+        /// </summary>
+        Ed25519.PublicKey VoteParticipationKey { get; set; }
+
+        /// <summary>
+        /// The VRF public key.
+        /// </summary>
+        VrfPubKey SelectionParticipationKey { get; set; }
+
+        /// <summary>
+        /// The first round that the participation key is valid. Not to be confused with the <see cref="ITransaction.FirstValidRound"/> of the keyreg transaction.
+        /// </summary>
+        ulong VoteFirst { get; set; }
+
+        /// <summary>
+        /// The last round that the participation key is valid. Not to be confused with the <see cref="ITransaction.LastValidRound"/> of the keyreg transaction.
+        /// </summary>
+        ulong VoteLast { get; set; }
+
+        /// <summary>
+        /// This is the dilution for the 2-level participation key.
+        /// </summary>
+        ulong VoteKeyDilution { get; set; }
+
+        /// <summary>
+        /// All new Algorand accounts are participating by default. This means that they earn rewards. Mark an account nonparticipating by setting this value to <c>true</c> and this account will no longer earn rewards. It is unlikely that you will ever need to do this and exists mainly for economic-related functions on the network.
+        /// </summary>
+        Optional<bool> NonParticipation { get; set; }
+    }
+
     public partial struct Transaction
     {
         [AlgoApiField(null, "votekey")]
@@ -48,6 +81,13 @@ namespace AlgoSdk
             set => KeyRegistrationParams.NonParticipation = value;
         }
 
+        /// <summary>
+        /// Register account online for participation.
+        /// </summary>
+        /// <param name="account">Account to register online. This is the sender of the transaction.</param>
+        /// <param name="txnParams">See <see cref="TransactionParams"/></param>
+        /// <param name="accountParticipation">See <see cref="AccountParticipation"/></param>
+        /// <returns>A <see cref="KeyRegTxn"/>.</returns>
         public static KeyRegTxn KeyRegOnline(
             Address account,
             TransactionParams txnParams,
@@ -63,6 +103,12 @@ namespace AlgoSdk
             return txn;
         }
 
+        /// <summary>
+        /// Register account offline for participation.
+        /// </summary>
+        /// <param name="account">Account to register offline. This is the sender of the transaction.</param>
+        /// <param name="txnParams">See <see cref="TransactionParams"/></param>
+        /// <returns>A <see cref="KeyRegTxn"/>.</returns>
         public static KeyRegTxn KeyRegOffline(
             Address account,
             TransactionParams txnParams
@@ -79,7 +125,7 @@ namespace AlgoSdk
 
     [AlgoApiObject]
     public struct KeyRegTxn
-           : ITransaction
+           : IKeyRegTxn
            , IEquatable<KeyRegTxn>
     {
         internal TransactionHeader header;

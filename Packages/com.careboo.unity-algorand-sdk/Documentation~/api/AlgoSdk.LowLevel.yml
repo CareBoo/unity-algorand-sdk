@@ -1,0 +1,216 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.LowLevel
+  commentId: N:AlgoSdk.LowLevel
+  id: AlgoSdk.LowLevel
+  children:
+  - AlgoSdk.LowLevel.ByteArray
+  - AlgoSdk.LowLevel.ByteArrayComparer`1
+  - AlgoSdk.LowLevel.FixedBytes128
+  - AlgoSdk.LowLevel.FixedBytes32
+  - AlgoSdk.LowLevel.FixedBytes64
+  - AlgoSdk.LowLevel.IArray`1
+  - AlgoSdk.LowLevel.IByteArray
+  - AlgoSdk.LowLevel.IContiguousArray`1
+  - AlgoSdk.LowLevel.NativeArrayExtensions
+  - AlgoSdk.LowLevel.NativeByteArray
+  - AlgoSdk.LowLevel.NativeReferenceOfDisposable`1
+  langs:
+  - csharp
+  - vb
+  name: AlgoSdk.LowLevel
+  nameWithType: AlgoSdk.LowLevel
+  fullName: AlgoSdk.LowLevel
+  type: Namespace
+  assemblies:
+  - CareBoo.AlgoSdk.LowLevel
+references:
+- uid: AlgoSdk.LowLevel.NativeReferenceOfDisposable`1
+  commentId: T:AlgoSdk.LowLevel.NativeReferenceOfDisposable`1
+  parent: AlgoSdk.LowLevel
+  name: NativeReferenceOfDisposable<T>
+  nameWithType: NativeReferenceOfDisposable<T>
+  fullName: AlgoSdk.LowLevel.NativeReferenceOfDisposable<T>
+  nameWithType.vb: NativeReferenceOfDisposable(Of T)
+  fullName.vb: AlgoSdk.LowLevel.NativeReferenceOfDisposable(Of T)
+  name.vb: NativeReferenceOfDisposable(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.LowLevel.NativeReferenceOfDisposable`1
+    name: NativeReferenceOfDisposable
+    nameWithType: NativeReferenceOfDisposable
+    fullName: AlgoSdk.LowLevel.NativeReferenceOfDisposable
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.LowLevel.NativeReferenceOfDisposable`1
+    name: NativeReferenceOfDisposable
+    nameWithType: NativeReferenceOfDisposable
+    fullName: AlgoSdk.LowLevel.NativeReferenceOfDisposable
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.LowLevel.NativeByteArray
+  commentId: T:AlgoSdk.LowLevel.NativeByteArray
+  parent: AlgoSdk.LowLevel
+  name: NativeByteArray
+  nameWithType: NativeByteArray
+  fullName: AlgoSdk.LowLevel.NativeByteArray
+- uid: AlgoSdk.LowLevel.NativeArrayExtensions
+  commentId: T:AlgoSdk.LowLevel.NativeArrayExtensions
+  name: NativeArrayExtensions
+  nameWithType: NativeArrayExtensions
+  fullName: AlgoSdk.LowLevel.NativeArrayExtensions
+- uid: AlgoSdk.LowLevel.IArray`1
+  commentId: T:AlgoSdk.LowLevel.IArray`1
+  name: IArray<T>
+  nameWithType: IArray<T>
+  fullName: AlgoSdk.LowLevel.IArray<T>
+  nameWithType.vb: IArray(Of T)
+  fullName.vb: AlgoSdk.LowLevel.IArray(Of T)
+  name.vb: IArray(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.LowLevel.IArray`1
+    name: IArray
+    nameWithType: IArray
+    fullName: AlgoSdk.LowLevel.IArray
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.LowLevel.IArray`1
+    name: IArray
+    nameWithType: IArray
+    fullName: AlgoSdk.LowLevel.IArray
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.LowLevel.IContiguousArray`1
+  commentId: T:AlgoSdk.LowLevel.IContiguousArray`1
+  name: IContiguousArray<T>
+  nameWithType: IContiguousArray<T>
+  fullName: AlgoSdk.LowLevel.IContiguousArray<T>
+  nameWithType.vb: IContiguousArray(Of T)
+  fullName.vb: AlgoSdk.LowLevel.IContiguousArray(Of T)
+  name.vb: IContiguousArray(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.LowLevel.IContiguousArray`1
+    name: IContiguousArray
+    nameWithType: IContiguousArray
+    fullName: AlgoSdk.LowLevel.IContiguousArray
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.LowLevel.IContiguousArray`1
+    name: IContiguousArray
+    nameWithType: IContiguousArray
+    fullName: AlgoSdk.LowLevel.IContiguousArray
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.LowLevel.IByteArray
+  commentId: T:AlgoSdk.LowLevel.IByteArray
+  parent: AlgoSdk.LowLevel
+  name: IByteArray
+  nameWithType: IByteArray
+  fullName: AlgoSdk.LowLevel.IByteArray
+- uid: AlgoSdk.LowLevel.ByteArrayComparer`1
+  commentId: T:AlgoSdk.LowLevel.ByteArrayComparer`1
+  name: ByteArrayComparer<T>
+  nameWithType: ByteArrayComparer<T>
+  fullName: AlgoSdk.LowLevel.ByteArrayComparer<T>
+  nameWithType.vb: ByteArrayComparer(Of T)
+  fullName.vb: AlgoSdk.LowLevel.ByteArrayComparer(Of T)
+  name.vb: ByteArrayComparer(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.LowLevel.ByteArrayComparer`1
+    name: ByteArrayComparer
+    nameWithType: ByteArrayComparer
+    fullName: AlgoSdk.LowLevel.ByteArrayComparer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.LowLevel.ByteArrayComparer`1
+    name: ByteArrayComparer
+    nameWithType: ByteArrayComparer
+    fullName: AlgoSdk.LowLevel.ByteArrayComparer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.LowLevel.ByteArray
+  commentId: T:AlgoSdk.LowLevel.ByteArray
+  parent: AlgoSdk.LowLevel
+  name: ByteArray
+  nameWithType: ByteArray
+  fullName: AlgoSdk.LowLevel.ByteArray
+- uid: AlgoSdk.LowLevel.FixedBytes32
+  commentId: T:AlgoSdk.LowLevel.FixedBytes32
+  name: FixedBytes32
+  nameWithType: FixedBytes32
+  fullName: AlgoSdk.LowLevel.FixedBytes32
+- uid: AlgoSdk.LowLevel.FixedBytes64
+  commentId: T:AlgoSdk.LowLevel.FixedBytes64
+  parent: AlgoSdk.LowLevel
+  name: FixedBytes64
+  nameWithType: FixedBytes64
+  fullName: AlgoSdk.LowLevel.FixedBytes64
+- uid: AlgoSdk.LowLevel.FixedBytes128
+  commentId: T:AlgoSdk.LowLevel.FixedBytes128
+  name: FixedBytes128
+  nameWithType: FixedBytes128
+  fullName: AlgoSdk.LowLevel.FixedBytes128
+- uid: AlgoSdk.LowLevel
+  commentId: N:AlgoSdk.LowLevel
+  name: AlgoSdk.LowLevel
+  nameWithType: AlgoSdk.LowLevel
+  fullName: AlgoSdk.LowLevel

@@ -4,12 +4,23 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// A client for accessing the indexer service
+    /// </summary>
+    /// <remarks>
+    /// The indexer service is responsible for querying the blockchain
+    /// </remarks>
     public struct IndexerClient : IIndexerClient
     {
         readonly string address;
 
         readonly string token;
 
+        /// <summary>
+        /// Create a new indexer client
+        /// </summary>
+        /// <param name="address">url of the service, including the port, e.g. <c>"http://localhost:4001"</c></param>
+        /// <param name="token">token used in authenticating to the service</param>
         public IndexerClient(string address, string token)
         {
             this.address = address.TrimEnd('/');
@@ -92,7 +103,7 @@ namespace AlgoSdk
             Optional<ulong> round = default,
             SignatureType sigType = default,
             TransactionType txType = default,
-            Optional<FixedString64Bytes> txid = default
+            TransactionId txid = default
         )
         {
             using var queryBuilder = new QueryBuilder(Allocator.Persistent);
@@ -235,7 +246,7 @@ namespace AlgoSdk
             Optional<ulong> round = default,
             SignatureType sigType = default,
             TransactionType txType = default,
-            Optional<FixedString64Bytes> txid = default
+            TransactionId txid = default
         )
         {
             using var queryBuilder = new QueryBuilder(Allocator.Persistent);
@@ -288,7 +299,7 @@ namespace AlgoSdk
             Optional<ulong> round = default,
             SignatureType sigType = default,
             TransactionType txType = default,
-            Optional<FixedString64Bytes> txid = default
+            TransactionId txid = default
         )
         {
             using var queryBuilder = new QueryBuilder(Allocator.Persistent);
@@ -319,7 +330,7 @@ namespace AlgoSdk
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<TransactionResponse>> GetTransaction(FixedString64Bytes txid)
+        public async UniTask<AlgoApiResponse<TransactionResponse>> GetTransaction(TransactionId txid)
         {
             return await this
                 .Get($"/v2/transactions/{txid}")

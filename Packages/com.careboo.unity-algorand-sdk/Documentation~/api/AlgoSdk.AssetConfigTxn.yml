@@ -1,0 +1,2125 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.AssetConfigTxn
+  commentId: T:AlgoSdk.AssetConfigTxn
+  id: AssetConfigTxn
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.AssetConfigTxn.AssetParams
+  - AlgoSdk.AssetConfigTxn.ConfigAsset
+  - AlgoSdk.AssetConfigTxn.CopyFrom(AlgoSdk.Transaction)
+  - AlgoSdk.AssetConfigTxn.CopyTo(AlgoSdk.Transaction@)
+  - AlgoSdk.AssetConfigTxn.Equals(AlgoSdk.AssetConfigTxn)
+  - AlgoSdk.AssetConfigTxn.Fee
+  - AlgoSdk.AssetConfigTxn.FirstValidRound
+  - AlgoSdk.AssetConfigTxn.GenesisHash
+  - AlgoSdk.AssetConfigTxn.GenesisId
+  - AlgoSdk.AssetConfigTxn.Group
+  - AlgoSdk.AssetConfigTxn.LastValidRound
+  - AlgoSdk.AssetConfigTxn.Lease
+  - AlgoSdk.AssetConfigTxn.Note
+  - AlgoSdk.AssetConfigTxn.RekeyTo
+  - AlgoSdk.AssetConfigTxn.Sender
+  - AlgoSdk.AssetConfigTxn.TransactionType
+  langs:
+  - csharp
+  - vb
+  name: AssetConfigTxn
+  nameWithType: AssetConfigTxn
+  fullName: AlgoSdk.AssetConfigTxn
+  type: Struct
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: AssetConfigTxn
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+    startLine: 92
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: 'public struct AssetConfigTxn : ITransaction, IEquatable<AssetConfigTxn>'
+    content.vb: >-
+      Public Structure AssetConfigTxn
+          Implements ITransaction, IEquatable(Of AssetConfigTxn)
+  implements:
+  - AlgoSdk.ITransaction
+  - System.IEquatable{AlgoSdk.AssetConfigTxn}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - AlgoSdk.AssetConfigTxn.AlgoSdk.TransactionExtensions.Sign``1(AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  - AlgoSdk.AssetConfigTxn.AlgoSdk.TransactionExtensions.GetSignature``1(AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  - AlgoSdk.AssetConfigTxn.AlgoSdk.TransactionExtensions.ToSignatureMessage``1(Unity.Collections.Allocator)
+  - AlgoSdk.AssetConfigTxn.AlgoSdk.TransactionExtensions.GetSuggestedFee``1(AlgoSdk.TransactionParams)
+  - AlgoSdk.AssetConfigTxn.AlgoSdk.TransactionExtensions.EstimateBlockSizeBytes``1
+  - AlgoSdk.AssetConfigTxn.AlgoSdk.TransactionExtensions.GetId``1
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: AlgoSdk.AssetConfigTxn.Fee
+  commentId: P:AlgoSdk.AssetConfigTxn.Fee
+  id: Fee
+  parent: AlgoSdk.AssetConfigTxn
+  langs:
+  - csharp
+  - vb
+  name: Fee
+  nameWithType: AssetConfigTxn.Fee
+  fullName: AlgoSdk.AssetConfigTxn.Fee
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Fee
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+    startLine: 101
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("fee", "fee", false)]
+
+      public ulong Fee { get; set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("fee", "fee", False)>
+
+      Public Property Fee As ULong
+  overload: AlgoSdk.AssetConfigTxn.Fee*
+  implements:
+  - AlgoSdk.ITransaction.Fee
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: fee
+    - type: System.String
+      value: fee
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AssetConfigTxn.FirstValidRound
+  commentId: P:AlgoSdk.AssetConfigTxn.FirstValidRound
+  id: FirstValidRound
+  parent: AlgoSdk.AssetConfigTxn
+  langs:
+  - csharp
+  - vb
+  name: FirstValidRound
+  nameWithType: AssetConfigTxn.FirstValidRound
+  fullName: AlgoSdk.AssetConfigTxn.FirstValidRound
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: FirstValidRound
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+    startLine: 108
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("first-valid", "fv", false)]
+
+      public ulong FirstValidRound { get; set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("first-valid", "fv", False)>
+
+      Public Property FirstValidRound As ULong
+  overload: AlgoSdk.AssetConfigTxn.FirstValidRound*
+  implements:
+  - AlgoSdk.ITransaction.FirstValidRound
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: first-valid
+    - type: System.String
+      value: fv
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AssetConfigTxn.GenesisHash
+  commentId: P:AlgoSdk.AssetConfigTxn.GenesisHash
+  id: GenesisHash
+  parent: AlgoSdk.AssetConfigTxn
+  langs:
+  - csharp
+  - vb
+  name: GenesisHash
+  nameWithType: AssetConfigTxn.GenesisHash
+  fullName: AlgoSdk.AssetConfigTxn.GenesisHash
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: GenesisHash
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+    startLine: 115
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("genesis-hash", "gh", false)]
+
+      public GenesisHash GenesisHash { get; set; }
+    parameters: []
+    return:
+      type: AlgoSdk.GenesisHash
+    content.vb: >-
+      <AlgoApiField("genesis-hash", "gh", False)>
+
+      Public Property GenesisHash As GenesisHash
+  overload: AlgoSdk.AssetConfigTxn.GenesisHash*
+  implements:
+  - AlgoSdk.ITransaction.GenesisHash
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: genesis-hash
+    - type: System.String
+      value: gh
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AssetConfigTxn.LastValidRound
+  commentId: P:AlgoSdk.AssetConfigTxn.LastValidRound
+  id: LastValidRound
+  parent: AlgoSdk.AssetConfigTxn
+  langs:
+  - csharp
+  - vb
+  name: LastValidRound
+  nameWithType: AssetConfigTxn.LastValidRound
+  fullName: AlgoSdk.AssetConfigTxn.LastValidRound
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: LastValidRound
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+    startLine: 122
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("last-valid", "lv", false)]
+
+      public ulong LastValidRound { get; set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("last-valid", "lv", False)>
+
+      Public Property LastValidRound As ULong
+  overload: AlgoSdk.AssetConfigTxn.LastValidRound*
+  implements:
+  - AlgoSdk.ITransaction.LastValidRound
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: last-valid
+    - type: System.String
+      value: lv
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AssetConfigTxn.Sender
+  commentId: P:AlgoSdk.AssetConfigTxn.Sender
+  id: Sender
+  parent: AlgoSdk.AssetConfigTxn
+  langs:
+  - csharp
+  - vb
+  name: Sender
+  nameWithType: AssetConfigTxn.Sender
+  fullName: AlgoSdk.AssetConfigTxn.Sender
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Sender
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+    startLine: 129
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("sender", "snd", false)]
+
+      public Address Sender { get; set; }
+    parameters: []
+    return:
+      type: AlgoSdk.Address
+    content.vb: >-
+      <AlgoApiField("sender", "snd", False)>
+
+      Public Property Sender As Address
+  overload: AlgoSdk.AssetConfigTxn.Sender*
+  implements:
+  - AlgoSdk.ITransaction.Sender
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: sender
+    - type: System.String
+      value: snd
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AssetConfigTxn.TransactionType
+  commentId: P:AlgoSdk.AssetConfigTxn.TransactionType
+  id: TransactionType
+  parent: AlgoSdk.AssetConfigTxn
+  langs:
+  - csharp
+  - vb
+  name: TransactionType
+  nameWithType: AssetConfigTxn.TransactionType
+  fullName: AlgoSdk.AssetConfigTxn.TransactionType
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: TransactionType
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+    startLine: 136
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("tx-type", "type", false)]
+
+      public TransactionType TransactionType { get; }
+    parameters: []
+    return:
+      type: AlgoSdk.TransactionType
+    content.vb: >-
+      <AlgoApiField("tx-type", "type", False)>
+
+      Public ReadOnly Property TransactionType As TransactionType
+  overload: AlgoSdk.AssetConfigTxn.TransactionType*
+  implements:
+  - AlgoSdk.ITransaction.TransactionType
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: tx-type
+    - type: System.String
+      value: type
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: AlgoSdk.AssetConfigTxn.GenesisId
+  commentId: P:AlgoSdk.AssetConfigTxn.GenesisId
+  id: GenesisId
+  parent: AlgoSdk.AssetConfigTxn
+  langs:
+  - csharp
+  - vb
+  name: GenesisId
+  nameWithType: AssetConfigTxn.GenesisId
+  fullName: AlgoSdk.AssetConfigTxn.GenesisId
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: GenesisId
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+    startLine: 143
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("genesis-id", "gen", false)]
+
+      public FixedString32Bytes GenesisId { get; set; }
+    parameters: []
+    return:
+      type: Unity.Collections.FixedString32Bytes
+    content.vb: >-
+      <AlgoApiField("genesis-id", "gen", False)>
+
+      Public Property GenesisId As FixedString32Bytes
+  overload: AlgoSdk.AssetConfigTxn.GenesisId*
+  implements:
+  - AlgoSdk.ITransaction.GenesisId
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: genesis-id
+    - type: System.String
+      value: gen
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AssetConfigTxn.Group
+  commentId: P:AlgoSdk.AssetConfigTxn.Group
+  id: Group
+  parent: AlgoSdk.AssetConfigTxn
+  langs:
+  - csharp
+  - vb
+  name: Group
+  nameWithType: AssetConfigTxn.Group
+  fullName: AlgoSdk.AssetConfigTxn.Group
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Group
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+    startLine: 150
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("group", "grp", false)]
+
+      public Sha512_256_Hash Group { get; set; }
+    parameters: []
+    return:
+      type: AlgoSdk.Crypto.Sha512_256_Hash
+    content.vb: >-
+      <AlgoApiField("group", "grp", False)>
+
+      Public Property Group As Sha512_256_Hash
+  overload: AlgoSdk.AssetConfigTxn.Group*
+  implements:
+  - AlgoSdk.ITransaction.Group
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: group
+    - type: System.String
+      value: grp
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AssetConfigTxn.Lease
+  commentId: P:AlgoSdk.AssetConfigTxn.Lease
+  id: Lease
+  parent: AlgoSdk.AssetConfigTxn
+  langs:
+  - csharp
+  - vb
+  name: Lease
+  nameWithType: AssetConfigTxn.Lease
+  fullName: AlgoSdk.AssetConfigTxn.Lease
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Lease
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+    startLine: 157
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("lease", "lx", false)]
+
+      public Sha512_256_Hash Lease { get; set; }
+    parameters: []
+    return:
+      type: AlgoSdk.Crypto.Sha512_256_Hash
+    content.vb: >-
+      <AlgoApiField("lease", "lx", False)>
+
+      Public Property Lease As Sha512_256_Hash
+  overload: AlgoSdk.AssetConfigTxn.Lease*
+  implements:
+  - AlgoSdk.ITransaction.Lease
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: lease
+    - type: System.String
+      value: lx
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AssetConfigTxn.Note
+  commentId: P:AlgoSdk.AssetConfigTxn.Note
+  id: Note
+  parent: AlgoSdk.AssetConfigTxn
+  langs:
+  - csharp
+  - vb
+  name: Note
+  nameWithType: AssetConfigTxn.Note
+  fullName: AlgoSdk.AssetConfigTxn.Note
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Note
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+    startLine: 164
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("note", "note", false)]
+
+      public byte[] Note { get; set; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: >-
+      <AlgoApiField("note", "note", False)>
+
+      Public Property Note As Byte()
+  overload: AlgoSdk.AssetConfigTxn.Note*
+  implements:
+  - AlgoSdk.ITransaction.Note
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: note
+    - type: System.String
+      value: note
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AssetConfigTxn.RekeyTo
+  commentId: P:AlgoSdk.AssetConfigTxn.RekeyTo
+  id: RekeyTo
+  parent: AlgoSdk.AssetConfigTxn
+  langs:
+  - csharp
+  - vb
+  name: RekeyTo
+  nameWithType: AssetConfigTxn.RekeyTo
+  fullName: AlgoSdk.AssetConfigTxn.RekeyTo
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: RekeyTo
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+    startLine: 171
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("rekey-to", "rekey", false)]
+
+      public Address RekeyTo { get; set; }
+    parameters: []
+    return:
+      type: AlgoSdk.Address
+    content.vb: >-
+      <AlgoApiField("rekey-to", "rekey", False)>
+
+      Public Property RekeyTo As Address
+  overload: AlgoSdk.AssetConfigTxn.RekeyTo*
+  implements:
+  - AlgoSdk.ITransaction.RekeyTo
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: rekey-to
+    - type: System.String
+      value: rekey
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AssetConfigTxn.ConfigAsset
+  commentId: P:AlgoSdk.AssetConfigTxn.ConfigAsset
+  id: ConfigAsset
+  parent: AlgoSdk.AssetConfigTxn
+  langs:
+  - csharp
+  - vb
+  name: ConfigAsset
+  nameWithType: AssetConfigTxn.ConfigAsset
+  fullName: AlgoSdk.AssetConfigTxn.ConfigAsset
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ConfigAsset
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+    startLine: 178
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField(null, "caid", false)]
+
+      public ulong ConfigAsset { get; set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField(Nothing, "caid", False)>
+
+      Public Property ConfigAsset As ULong
+  overload: AlgoSdk.AssetConfigTxn.ConfigAsset*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+    - type: System.String
+      value: caid
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AssetConfigTxn.AssetParams
+  commentId: P:AlgoSdk.AssetConfigTxn.AssetParams
+  id: AssetParams
+  parent: AlgoSdk.AssetConfigTxn
+  langs:
+  - csharp
+  - vb
+  name: AssetParams
+  nameWithType: AssetConfigTxn.AssetParams
+  fullName: AlgoSdk.AssetConfigTxn.AssetParams
+  type: Property
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: AssetParams
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+    startLine: 185
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField(null, "apar", false)]
+
+      public AssetParams AssetParams { get; set; }
+    parameters: []
+    return:
+      type: AlgoSdk.AssetParams
+    content.vb: >-
+      <AlgoApiField(Nothing, "apar", False)>
+
+      Public Property AssetParams As AssetParams
+  overload: AlgoSdk.AssetConfigTxn.AssetParams*
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+    - type: System.String
+      value: apar
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AssetConfigTxn.CopyTo(AlgoSdk.Transaction@)
+  commentId: M:AlgoSdk.AssetConfigTxn.CopyTo(AlgoSdk.Transaction@)
+  id: CopyTo(AlgoSdk.Transaction@)
+  parent: AlgoSdk.AssetConfigTxn
+  langs:
+  - csharp
+  - vb
+  name: CopyTo(ref Transaction)
+  nameWithType: AssetConfigTxn.CopyTo(ref Transaction)
+  fullName: AlgoSdk.AssetConfigTxn.CopyTo(ref AlgoSdk.Transaction)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: CopyTo
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+    startLine: 192
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public void CopyTo(ref Transaction transaction)
+    parameters:
+    - id: transaction
+      type: AlgoSdk.Transaction
+    content.vb: Public Sub CopyTo(ByRef transaction As Transaction)
+  overload: AlgoSdk.AssetConfigTxn.CopyTo*
+  implements:
+  - AlgoSdk.ITransaction.CopyTo(AlgoSdk.Transaction@)
+  nameWithType.vb: AssetConfigTxn.CopyTo(ByRef Transaction)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.AssetConfigTxn.CopyTo(ByRef AlgoSdk.Transaction)
+  name.vb: CopyTo(ByRef Transaction)
+- uid: AlgoSdk.AssetConfigTxn.CopyFrom(AlgoSdk.Transaction)
+  commentId: M:AlgoSdk.AssetConfigTxn.CopyFrom(AlgoSdk.Transaction)
+  id: CopyFrom(AlgoSdk.Transaction)
+  parent: AlgoSdk.AssetConfigTxn
+  langs:
+  - csharp
+  - vb
+  name: CopyFrom(Transaction)
+  nameWithType: AssetConfigTxn.CopyFrom(Transaction)
+  fullName: AlgoSdk.AssetConfigTxn.CopyFrom(AlgoSdk.Transaction)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: CopyFrom
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+    startLine: 198
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public void CopyFrom(Transaction transaction)
+    parameters:
+    - id: transaction
+      type: AlgoSdk.Transaction
+    content.vb: Public Sub CopyFrom(transaction As Transaction)
+  overload: AlgoSdk.AssetConfigTxn.CopyFrom*
+  implements:
+  - AlgoSdk.ITransaction.CopyFrom(AlgoSdk.Transaction)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AssetConfigTxn.Equals(AlgoSdk.AssetConfigTxn)
+  commentId: M:AlgoSdk.AssetConfigTxn.Equals(AlgoSdk.AssetConfigTxn)
+  id: Equals(AlgoSdk.AssetConfigTxn)
+  parent: AlgoSdk.AssetConfigTxn
+  langs:
+  - csharp
+  - vb
+  name: Equals(AssetConfigTxn)
+  nameWithType: AssetConfigTxn.Equals(AssetConfigTxn)
+  fullName: AlgoSdk.AssetConfigTxn.Equals(AlgoSdk.AssetConfigTxn)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Equals
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AssetConfigTxn.cs
+    startLine: 204
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public bool Equals(AssetConfigTxn other)
+    parameters:
+    - id: other
+      type: AlgoSdk.AssetConfigTxn
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As AssetConfigTxn) As Boolean
+  overload: AlgoSdk.AssetConfigTxn.Equals*
+  implements:
+  - System.IEquatable{AlgoSdk.AssetConfigTxn}.Equals(AlgoSdk.AssetConfigTxn)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: AlgoSdk.ITransaction
+  commentId: T:AlgoSdk.ITransaction
+  parent: AlgoSdk
+  name: ITransaction
+  nameWithType: ITransaction
+  fullName: AlgoSdk.ITransaction
+- uid: System.IEquatable{AlgoSdk.AssetConfigTxn}
+  commentId: T:System.IEquatable{AlgoSdk.AssetConfigTxn}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<AssetConfigTxn>
+  nameWithType: IEquatable<AssetConfigTxn>
+  fullName: System.IEquatable<AlgoSdk.AssetConfigTxn>
+  nameWithType.vb: IEquatable(Of AssetConfigTxn)
+  fullName.vb: System.IEquatable(Of AlgoSdk.AssetConfigTxn)
+  name.vb: IEquatable(Of AssetConfigTxn)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AlgoSdk.AssetConfigTxn
+    name: AssetConfigTxn
+    nameWithType: AssetConfigTxn
+    fullName: AlgoSdk.AssetConfigTxn
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AlgoSdk.AssetConfigTxn
+    name: AssetConfigTxn
+    nameWithType: AssetConfigTxn
+    fullName: AlgoSdk.AssetConfigTxn
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AssetConfigTxn.AlgoSdk.TransactionExtensions.Sign``1(AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  commentId: M:AlgoSdk.TransactionExtensions.Sign``1(``0,AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  parent: AlgoSdk.TransactionExtensions
+  definition: AlgoSdk.TransactionExtensions.Sign``1(``0,AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  name: Sign<AssetConfigTxn>(Ed25519.SecretKeyHandle)
+  nameWithType: TransactionExtensions.Sign<AssetConfigTxn>(Ed25519.SecretKeyHandle)
+  fullName: AlgoSdk.TransactionExtensions.Sign<AlgoSdk.AssetConfigTxn>(AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  nameWithType.vb: TransactionExtensions.Sign(Of AssetConfigTxn)(Ed25519.SecretKeyHandle)
+  fullName.vb: AlgoSdk.TransactionExtensions.Sign(Of AlgoSdk.AssetConfigTxn)(AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  name.vb: Sign(Of AssetConfigTxn)(Ed25519.SecretKeyHandle)
+  spec.csharp:
+  - uid: AlgoSdk.TransactionExtensions.Sign``1(AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+    name: Sign<AssetConfigTxn>
+    nameWithType: TransactionExtensions.Sign<AssetConfigTxn>
+    fullName: AlgoSdk.TransactionExtensions.Sign<AlgoSdk.AssetConfigTxn>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Crypto.Ed25519.SecretKeyHandle
+    name: Ed25519.SecretKeyHandle
+    nameWithType: Ed25519.SecretKeyHandle
+    fullName: AlgoSdk.Crypto.Ed25519.SecretKeyHandle
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.TransactionExtensions.Sign``1(AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+    name: Sign(Of AssetConfigTxn)
+    nameWithType: TransactionExtensions.Sign(Of AssetConfigTxn)
+    fullName: AlgoSdk.TransactionExtensions.Sign(Of AlgoSdk.AssetConfigTxn)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Crypto.Ed25519.SecretKeyHandle
+    name: Ed25519.SecretKeyHandle
+    nameWithType: Ed25519.SecretKeyHandle
+    fullName: AlgoSdk.Crypto.Ed25519.SecretKeyHandle
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AssetConfigTxn.AlgoSdk.TransactionExtensions.GetSignature``1(AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  commentId: M:AlgoSdk.TransactionExtensions.GetSignature``1(``0,AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  parent: AlgoSdk.TransactionExtensions
+  definition: AlgoSdk.TransactionExtensions.GetSignature``1(``0,AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  name: GetSignature<AssetConfigTxn>(Ed25519.SecretKeyHandle)
+  nameWithType: TransactionExtensions.GetSignature<AssetConfigTxn>(Ed25519.SecretKeyHandle)
+  fullName: AlgoSdk.TransactionExtensions.GetSignature<AlgoSdk.AssetConfigTxn>(AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  nameWithType.vb: TransactionExtensions.GetSignature(Of AssetConfigTxn)(Ed25519.SecretKeyHandle)
+  fullName.vb: AlgoSdk.TransactionExtensions.GetSignature(Of AlgoSdk.AssetConfigTxn)(AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  name.vb: GetSignature(Of AssetConfigTxn)(Ed25519.SecretKeyHandle)
+  spec.csharp:
+  - uid: AlgoSdk.TransactionExtensions.GetSignature``1(AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+    name: GetSignature<AssetConfigTxn>
+    nameWithType: TransactionExtensions.GetSignature<AssetConfigTxn>
+    fullName: AlgoSdk.TransactionExtensions.GetSignature<AlgoSdk.AssetConfigTxn>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Crypto.Ed25519.SecretKeyHandle
+    name: Ed25519.SecretKeyHandle
+    nameWithType: Ed25519.SecretKeyHandle
+    fullName: AlgoSdk.Crypto.Ed25519.SecretKeyHandle
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.TransactionExtensions.GetSignature``1(AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+    name: GetSignature(Of AssetConfigTxn)
+    nameWithType: TransactionExtensions.GetSignature(Of AssetConfigTxn)
+    fullName: AlgoSdk.TransactionExtensions.GetSignature(Of AlgoSdk.AssetConfigTxn)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Crypto.Ed25519.SecretKeyHandle
+    name: Ed25519.SecretKeyHandle
+    nameWithType: Ed25519.SecretKeyHandle
+    fullName: AlgoSdk.Crypto.Ed25519.SecretKeyHandle
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AssetConfigTxn.AlgoSdk.TransactionExtensions.ToSignatureMessage``1(Unity.Collections.Allocator)
+  commentId: M:AlgoSdk.TransactionExtensions.ToSignatureMessage``1(``0,Unity.Collections.Allocator)
+  parent: AlgoSdk.TransactionExtensions
+  definition: AlgoSdk.TransactionExtensions.ToSignatureMessage``1(``0,Unity.Collections.Allocator)
+  name: ToSignatureMessage<AssetConfigTxn>(Allocator)
+  nameWithType: TransactionExtensions.ToSignatureMessage<AssetConfigTxn>(Allocator)
+  fullName: AlgoSdk.TransactionExtensions.ToSignatureMessage<AlgoSdk.AssetConfigTxn>(Unity.Collections.Allocator)
+  nameWithType.vb: TransactionExtensions.ToSignatureMessage(Of AssetConfigTxn)(Allocator)
+  fullName.vb: AlgoSdk.TransactionExtensions.ToSignatureMessage(Of AlgoSdk.AssetConfigTxn)(Unity.Collections.Allocator)
+  name.vb: ToSignatureMessage(Of AssetConfigTxn)(Allocator)
+  spec.csharp:
+  - uid: AlgoSdk.TransactionExtensions.ToSignatureMessage``1(Unity.Collections.Allocator)
+    name: ToSignatureMessage<AssetConfigTxn>
+    nameWithType: TransactionExtensions.ToSignatureMessage<AssetConfigTxn>
+    fullName: AlgoSdk.TransactionExtensions.ToSignatureMessage<AlgoSdk.AssetConfigTxn>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Unity.Collections.Allocator
+    name: Allocator
+    nameWithType: Allocator
+    fullName: Unity.Collections.Allocator
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.TransactionExtensions.ToSignatureMessage``1(Unity.Collections.Allocator)
+    name: ToSignatureMessage(Of AssetConfigTxn)
+    nameWithType: TransactionExtensions.ToSignatureMessage(Of AssetConfigTxn)
+    fullName: AlgoSdk.TransactionExtensions.ToSignatureMessage(Of AlgoSdk.AssetConfigTxn)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Unity.Collections.Allocator
+    name: Allocator
+    nameWithType: Allocator
+    fullName: Unity.Collections.Allocator
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AssetConfigTxn.AlgoSdk.TransactionExtensions.GetSuggestedFee``1(AlgoSdk.TransactionParams)
+  commentId: M:AlgoSdk.TransactionExtensions.GetSuggestedFee``1(``0,AlgoSdk.TransactionParams)
+  parent: AlgoSdk.TransactionExtensions
+  definition: AlgoSdk.TransactionExtensions.GetSuggestedFee``1(``0,AlgoSdk.TransactionParams)
+  name: GetSuggestedFee<AssetConfigTxn>(TransactionParams)
+  nameWithType: TransactionExtensions.GetSuggestedFee<AssetConfigTxn>(TransactionParams)
+  fullName: AlgoSdk.TransactionExtensions.GetSuggestedFee<AlgoSdk.AssetConfigTxn>(AlgoSdk.TransactionParams)
+  nameWithType.vb: TransactionExtensions.GetSuggestedFee(Of AssetConfigTxn)(TransactionParams)
+  fullName.vb: AlgoSdk.TransactionExtensions.GetSuggestedFee(Of AlgoSdk.AssetConfigTxn)(AlgoSdk.TransactionParams)
+  name.vb: GetSuggestedFee(Of AssetConfigTxn)(TransactionParams)
+  spec.csharp:
+  - uid: AlgoSdk.TransactionExtensions.GetSuggestedFee``1(AlgoSdk.TransactionParams)
+    name: GetSuggestedFee<AssetConfigTxn>
+    nameWithType: TransactionExtensions.GetSuggestedFee<AssetConfigTxn>
+    fullName: AlgoSdk.TransactionExtensions.GetSuggestedFee<AlgoSdk.AssetConfigTxn>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.TransactionParams
+    name: TransactionParams
+    nameWithType: TransactionParams
+    fullName: AlgoSdk.TransactionParams
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.TransactionExtensions.GetSuggestedFee``1(AlgoSdk.TransactionParams)
+    name: GetSuggestedFee(Of AssetConfigTxn)
+    nameWithType: TransactionExtensions.GetSuggestedFee(Of AssetConfigTxn)
+    fullName: AlgoSdk.TransactionExtensions.GetSuggestedFee(Of AlgoSdk.AssetConfigTxn)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.TransactionParams
+    name: TransactionParams
+    nameWithType: TransactionParams
+    fullName: AlgoSdk.TransactionParams
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AssetConfigTxn.AlgoSdk.TransactionExtensions.EstimateBlockSizeBytes``1
+  commentId: M:AlgoSdk.TransactionExtensions.EstimateBlockSizeBytes``1(``0)
+  parent: AlgoSdk.TransactionExtensions
+  definition: AlgoSdk.TransactionExtensions.EstimateBlockSizeBytes``1(``0)
+  name: EstimateBlockSizeBytes<AssetConfigTxn>()
+  nameWithType: TransactionExtensions.EstimateBlockSizeBytes<AssetConfigTxn>()
+  fullName: AlgoSdk.TransactionExtensions.EstimateBlockSizeBytes<AlgoSdk.AssetConfigTxn>()
+  nameWithType.vb: TransactionExtensions.EstimateBlockSizeBytes(Of AssetConfigTxn)()
+  fullName.vb: AlgoSdk.TransactionExtensions.EstimateBlockSizeBytes(Of AlgoSdk.AssetConfigTxn)()
+  name.vb: EstimateBlockSizeBytes(Of AssetConfigTxn)()
+  spec.csharp:
+  - uid: AlgoSdk.TransactionExtensions.EstimateBlockSizeBytes``1
+    name: EstimateBlockSizeBytes<AssetConfigTxn>
+    nameWithType: TransactionExtensions.EstimateBlockSizeBytes<AssetConfigTxn>
+    fullName: AlgoSdk.TransactionExtensions.EstimateBlockSizeBytes<AlgoSdk.AssetConfigTxn>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.TransactionExtensions.EstimateBlockSizeBytes``1
+    name: EstimateBlockSizeBytes(Of AssetConfigTxn)
+    nameWithType: TransactionExtensions.EstimateBlockSizeBytes(Of AssetConfigTxn)
+    fullName: AlgoSdk.TransactionExtensions.EstimateBlockSizeBytes(Of AlgoSdk.AssetConfigTxn)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AssetConfigTxn.AlgoSdk.TransactionExtensions.GetId``1
+  commentId: M:AlgoSdk.TransactionExtensions.GetId``1(``0)
+  parent: AlgoSdk.TransactionExtensions
+  definition: AlgoSdk.TransactionExtensions.GetId``1(``0)
+  name: GetId<AssetConfigTxn>()
+  nameWithType: TransactionExtensions.GetId<AssetConfigTxn>()
+  fullName: AlgoSdk.TransactionExtensions.GetId<AlgoSdk.AssetConfigTxn>()
+  nameWithType.vb: TransactionExtensions.GetId(Of AssetConfigTxn)()
+  fullName.vb: AlgoSdk.TransactionExtensions.GetId(Of AlgoSdk.AssetConfigTxn)()
+  name.vb: GetId(Of AssetConfigTxn)()
+  spec.csharp:
+  - uid: AlgoSdk.TransactionExtensions.GetId``1
+    name: GetId<AssetConfigTxn>
+    nameWithType: TransactionExtensions.GetId<AssetConfigTxn>
+    fullName: AlgoSdk.TransactionExtensions.GetId<AlgoSdk.AssetConfigTxn>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.TransactionExtensions.GetId``1
+    name: GetId(Of AssetConfigTxn)
+    nameWithType: TransactionExtensions.GetId(Of AssetConfigTxn)
+    fullName: AlgoSdk.TransactionExtensions.GetId(Of AlgoSdk.AssetConfigTxn)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AlgoSdk.TransactionExtensions.Sign``1(``0,AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  commentId: M:AlgoSdk.TransactionExtensions.Sign``1(``0,AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  name: Sign<T>(T, Ed25519.SecretKeyHandle)
+  nameWithType: TransactionExtensions.Sign<T>(T, Ed25519.SecretKeyHandle)
+  fullName: AlgoSdk.TransactionExtensions.Sign<T>(T, AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  nameWithType.vb: TransactionExtensions.Sign(Of T)(T, Ed25519.SecretKeyHandle)
+  fullName.vb: AlgoSdk.TransactionExtensions.Sign(Of T)(T, AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  name.vb: Sign(Of T)(T, Ed25519.SecretKeyHandle)
+  spec.csharp:
+  - uid: AlgoSdk.TransactionExtensions.Sign``1(``0,AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+    name: Sign<T>
+    nameWithType: TransactionExtensions.Sign<T>
+    fullName: AlgoSdk.TransactionExtensions.Sign<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AlgoSdk.Crypto.Ed25519.SecretKeyHandle
+    name: Ed25519.SecretKeyHandle
+    nameWithType: Ed25519.SecretKeyHandle
+    fullName: AlgoSdk.Crypto.Ed25519.SecretKeyHandle
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.TransactionExtensions.Sign``1(``0,AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+    name: Sign(Of T)
+    nameWithType: TransactionExtensions.Sign(Of T)
+    fullName: AlgoSdk.TransactionExtensions.Sign(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AlgoSdk.Crypto.Ed25519.SecretKeyHandle
+    name: Ed25519.SecretKeyHandle
+    nameWithType: Ed25519.SecretKeyHandle
+    fullName: AlgoSdk.Crypto.Ed25519.SecretKeyHandle
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.TransactionExtensions
+  commentId: T:AlgoSdk.TransactionExtensions
+  parent: AlgoSdk
+  name: TransactionExtensions
+  nameWithType: TransactionExtensions
+  fullName: AlgoSdk.TransactionExtensions
+- uid: AlgoSdk.TransactionExtensions.GetSignature``1(``0,AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  commentId: M:AlgoSdk.TransactionExtensions.GetSignature``1(``0,AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  name: GetSignature<T>(T, Ed25519.SecretKeyHandle)
+  nameWithType: TransactionExtensions.GetSignature<T>(T, Ed25519.SecretKeyHandle)
+  fullName: AlgoSdk.TransactionExtensions.GetSignature<T>(T, AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  nameWithType.vb: TransactionExtensions.GetSignature(Of T)(T, Ed25519.SecretKeyHandle)
+  fullName.vb: AlgoSdk.TransactionExtensions.GetSignature(Of T)(T, AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  name.vb: GetSignature(Of T)(T, Ed25519.SecretKeyHandle)
+  spec.csharp:
+  - uid: AlgoSdk.TransactionExtensions.GetSignature``1(``0,AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+    name: GetSignature<T>
+    nameWithType: TransactionExtensions.GetSignature<T>
+    fullName: AlgoSdk.TransactionExtensions.GetSignature<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AlgoSdk.Crypto.Ed25519.SecretKeyHandle
+    name: Ed25519.SecretKeyHandle
+    nameWithType: Ed25519.SecretKeyHandle
+    fullName: AlgoSdk.Crypto.Ed25519.SecretKeyHandle
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.TransactionExtensions.GetSignature``1(``0,AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+    name: GetSignature(Of T)
+    nameWithType: TransactionExtensions.GetSignature(Of T)
+    fullName: AlgoSdk.TransactionExtensions.GetSignature(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AlgoSdk.Crypto.Ed25519.SecretKeyHandle
+    name: Ed25519.SecretKeyHandle
+    nameWithType: Ed25519.SecretKeyHandle
+    fullName: AlgoSdk.Crypto.Ed25519.SecretKeyHandle
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.TransactionExtensions.ToSignatureMessage``1(``0,Unity.Collections.Allocator)
+  commentId: M:AlgoSdk.TransactionExtensions.ToSignatureMessage``1(``0,Unity.Collections.Allocator)
+  isExternal: true
+  name: ToSignatureMessage<T>(T, Allocator)
+  nameWithType: TransactionExtensions.ToSignatureMessage<T>(T, Allocator)
+  fullName: AlgoSdk.TransactionExtensions.ToSignatureMessage<T>(T, Unity.Collections.Allocator)
+  nameWithType.vb: TransactionExtensions.ToSignatureMessage(Of T)(T, Allocator)
+  fullName.vb: AlgoSdk.TransactionExtensions.ToSignatureMessage(Of T)(T, Unity.Collections.Allocator)
+  name.vb: ToSignatureMessage(Of T)(T, Allocator)
+  spec.csharp:
+  - uid: AlgoSdk.TransactionExtensions.ToSignatureMessage``1(``0,Unity.Collections.Allocator)
+    name: ToSignatureMessage<T>
+    nameWithType: TransactionExtensions.ToSignatureMessage<T>
+    fullName: AlgoSdk.TransactionExtensions.ToSignatureMessage<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Unity.Collections.Allocator
+    name: Allocator
+    nameWithType: Allocator
+    fullName: Unity.Collections.Allocator
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.TransactionExtensions.ToSignatureMessage``1(``0,Unity.Collections.Allocator)
+    name: ToSignatureMessage(Of T)
+    nameWithType: TransactionExtensions.ToSignatureMessage(Of T)
+    fullName: AlgoSdk.TransactionExtensions.ToSignatureMessage(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Unity.Collections.Allocator
+    name: Allocator
+    nameWithType: Allocator
+    fullName: Unity.Collections.Allocator
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.TransactionExtensions.GetSuggestedFee``1(``0,AlgoSdk.TransactionParams)
+  commentId: M:AlgoSdk.TransactionExtensions.GetSuggestedFee``1(``0,AlgoSdk.TransactionParams)
+  name: GetSuggestedFee<T>(T, TransactionParams)
+  nameWithType: TransactionExtensions.GetSuggestedFee<T>(T, TransactionParams)
+  fullName: AlgoSdk.TransactionExtensions.GetSuggestedFee<T>(T, AlgoSdk.TransactionParams)
+  nameWithType.vb: TransactionExtensions.GetSuggestedFee(Of T)(T, TransactionParams)
+  fullName.vb: AlgoSdk.TransactionExtensions.GetSuggestedFee(Of T)(T, AlgoSdk.TransactionParams)
+  name.vb: GetSuggestedFee(Of T)(T, TransactionParams)
+  spec.csharp:
+  - uid: AlgoSdk.TransactionExtensions.GetSuggestedFee``1(``0,AlgoSdk.TransactionParams)
+    name: GetSuggestedFee<T>
+    nameWithType: TransactionExtensions.GetSuggestedFee<T>
+    fullName: AlgoSdk.TransactionExtensions.GetSuggestedFee<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AlgoSdk.TransactionParams
+    name: TransactionParams
+    nameWithType: TransactionParams
+    fullName: AlgoSdk.TransactionParams
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.TransactionExtensions.GetSuggestedFee``1(``0,AlgoSdk.TransactionParams)
+    name: GetSuggestedFee(Of T)
+    nameWithType: TransactionExtensions.GetSuggestedFee(Of T)
+    fullName: AlgoSdk.TransactionExtensions.GetSuggestedFee(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: AlgoSdk.TransactionParams
+    name: TransactionParams
+    nameWithType: TransactionParams
+    fullName: AlgoSdk.TransactionParams
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.TransactionExtensions.EstimateBlockSizeBytes``1(``0)
+  commentId: M:AlgoSdk.TransactionExtensions.EstimateBlockSizeBytes``1(``0)
+  name: EstimateBlockSizeBytes<T>(T)
+  nameWithType: TransactionExtensions.EstimateBlockSizeBytes<T>(T)
+  fullName: AlgoSdk.TransactionExtensions.EstimateBlockSizeBytes<T>(T)
+  nameWithType.vb: TransactionExtensions.EstimateBlockSizeBytes(Of T)(T)
+  fullName.vb: AlgoSdk.TransactionExtensions.EstimateBlockSizeBytes(Of T)(T)
+  name.vb: EstimateBlockSizeBytes(Of T)(T)
+  spec.csharp:
+  - uid: AlgoSdk.TransactionExtensions.EstimateBlockSizeBytes``1(``0)
+    name: EstimateBlockSizeBytes<T>
+    nameWithType: TransactionExtensions.EstimateBlockSizeBytes<T>
+    fullName: AlgoSdk.TransactionExtensions.EstimateBlockSizeBytes<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.TransactionExtensions.EstimateBlockSizeBytes``1(``0)
+    name: EstimateBlockSizeBytes(Of T)
+    nameWithType: TransactionExtensions.EstimateBlockSizeBytes(Of T)
+    fullName: AlgoSdk.TransactionExtensions.EstimateBlockSizeBytes(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.TransactionExtensions.GetId``1(``0)
+  commentId: M:AlgoSdk.TransactionExtensions.GetId``1(``0)
+  name: GetId<T>(T)
+  nameWithType: TransactionExtensions.GetId<T>(T)
+  fullName: AlgoSdk.TransactionExtensions.GetId<T>(T)
+  nameWithType.vb: TransactionExtensions.GetId(Of T)(T)
+  fullName.vb: AlgoSdk.TransactionExtensions.GetId(Of T)(T)
+  name.vb: GetId(Of T)(T)
+  spec.csharp:
+  - uid: AlgoSdk.TransactionExtensions.GetId``1(``0)
+    name: GetId<T>
+    nameWithType: TransactionExtensions.GetId<T>
+    fullName: AlgoSdk.TransactionExtensions.GetId<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.TransactionExtensions.GetId``1(``0)
+    name: GetId(Of T)
+    nameWithType: TransactionExtensions.GetId(Of T)
+    fullName: AlgoSdk.TransactionExtensions.GetId(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AssetConfigTxn.Fee*
+  commentId: Overload:AlgoSdk.AssetConfigTxn.Fee
+  name: Fee
+  nameWithType: AssetConfigTxn.Fee
+  fullName: AlgoSdk.AssetConfigTxn.Fee
+- uid: AlgoSdk.ITransaction.Fee
+  commentId: P:AlgoSdk.ITransaction.Fee
+  parent: AlgoSdk.ITransaction
+  name: Fee
+  nameWithType: ITransaction.Fee
+  fullName: AlgoSdk.ITransaction.Fee
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: AlgoSdk.AssetConfigTxn.FirstValidRound*
+  commentId: Overload:AlgoSdk.AssetConfigTxn.FirstValidRound
+  name: FirstValidRound
+  nameWithType: AssetConfigTxn.FirstValidRound
+  fullName: AlgoSdk.AssetConfigTxn.FirstValidRound
+- uid: AlgoSdk.ITransaction.FirstValidRound
+  commentId: P:AlgoSdk.ITransaction.FirstValidRound
+  parent: AlgoSdk.ITransaction
+  name: FirstValidRound
+  nameWithType: ITransaction.FirstValidRound
+  fullName: AlgoSdk.ITransaction.FirstValidRound
+- uid: AlgoSdk.AssetConfigTxn.GenesisHash*
+  commentId: Overload:AlgoSdk.AssetConfigTxn.GenesisHash
+  name: GenesisHash
+  nameWithType: AssetConfigTxn.GenesisHash
+  fullName: AlgoSdk.AssetConfigTxn.GenesisHash
+- uid: AlgoSdk.ITransaction.GenesisHash
+  commentId: P:AlgoSdk.ITransaction.GenesisHash
+  parent: AlgoSdk.ITransaction
+  name: GenesisHash
+  nameWithType: ITransaction.GenesisHash
+  fullName: AlgoSdk.ITransaction.GenesisHash
+- uid: AlgoSdk.GenesisHash
+  commentId: T:AlgoSdk.GenesisHash
+  parent: AlgoSdk
+  name: GenesisHash
+  nameWithType: GenesisHash
+  fullName: AlgoSdk.GenesisHash
+- uid: AlgoSdk.AssetConfigTxn.LastValidRound*
+  commentId: Overload:AlgoSdk.AssetConfigTxn.LastValidRound
+  name: LastValidRound
+  nameWithType: AssetConfigTxn.LastValidRound
+  fullName: AlgoSdk.AssetConfigTxn.LastValidRound
+- uid: AlgoSdk.ITransaction.LastValidRound
+  commentId: P:AlgoSdk.ITransaction.LastValidRound
+  parent: AlgoSdk.ITransaction
+  name: LastValidRound
+  nameWithType: ITransaction.LastValidRound
+  fullName: AlgoSdk.ITransaction.LastValidRound
+- uid: AlgoSdk.AssetConfigTxn.Sender*
+  commentId: Overload:AlgoSdk.AssetConfigTxn.Sender
+  name: Sender
+  nameWithType: AssetConfigTxn.Sender
+  fullName: AlgoSdk.AssetConfigTxn.Sender
+- uid: AlgoSdk.ITransaction.Sender
+  commentId: P:AlgoSdk.ITransaction.Sender
+  parent: AlgoSdk.ITransaction
+  name: Sender
+  nameWithType: ITransaction.Sender
+  fullName: AlgoSdk.ITransaction.Sender
+- uid: AlgoSdk.Address
+  commentId: T:AlgoSdk.Address
+  parent: AlgoSdk
+  name: Address
+  nameWithType: Address
+  fullName: AlgoSdk.Address
+- uid: AlgoSdk.AssetConfigTxn.TransactionType*
+  commentId: Overload:AlgoSdk.AssetConfigTxn.TransactionType
+  name: TransactionType
+  nameWithType: AssetConfigTxn.TransactionType
+  fullName: AlgoSdk.AssetConfigTxn.TransactionType
+- uid: AlgoSdk.ITransaction.TransactionType
+  commentId: P:AlgoSdk.ITransaction.TransactionType
+  parent: AlgoSdk.ITransaction
+  name: TransactionType
+  nameWithType: ITransaction.TransactionType
+  fullName: AlgoSdk.ITransaction.TransactionType
+- uid: AlgoSdk.TransactionType
+  commentId: T:AlgoSdk.TransactionType
+  parent: AlgoSdk
+  name: TransactionType
+  nameWithType: TransactionType
+  fullName: AlgoSdk.TransactionType
+- uid: AlgoSdk.AssetConfigTxn.GenesisId*
+  commentId: Overload:AlgoSdk.AssetConfigTxn.GenesisId
+  name: GenesisId
+  nameWithType: AssetConfigTxn.GenesisId
+  fullName: AlgoSdk.AssetConfigTxn.GenesisId
+- uid: AlgoSdk.ITransaction.GenesisId
+  commentId: P:AlgoSdk.ITransaction.GenesisId
+  parent: AlgoSdk.ITransaction
+  name: GenesisId
+  nameWithType: ITransaction.GenesisId
+  fullName: AlgoSdk.ITransaction.GenesisId
+- uid: Unity.Collections.FixedString32Bytes
+  commentId: T:Unity.Collections.FixedString32Bytes
+  parent: Unity.Collections
+  name: FixedString32Bytes
+  nameWithType: FixedString32Bytes
+  fullName: Unity.Collections.FixedString32Bytes
+- uid: Unity.Collections
+  commentId: N:Unity.Collections
+  name: Unity.Collections
+  nameWithType: Unity.Collections
+  fullName: Unity.Collections
+- uid: AlgoSdk.AssetConfigTxn.Group*
+  commentId: Overload:AlgoSdk.AssetConfigTxn.Group
+  name: Group
+  nameWithType: AssetConfigTxn.Group
+  fullName: AlgoSdk.AssetConfigTxn.Group
+- uid: AlgoSdk.ITransaction.Group
+  commentId: P:AlgoSdk.ITransaction.Group
+  parent: AlgoSdk.ITransaction
+  name: Group
+  nameWithType: ITransaction.Group
+  fullName: AlgoSdk.ITransaction.Group
+- uid: AlgoSdk.Crypto.Sha512_256_Hash
+  commentId: T:AlgoSdk.Crypto.Sha512_256_Hash
+  parent: AlgoSdk.Crypto
+  name: Sha512_256_Hash
+  nameWithType: Sha512_256_Hash
+  fullName: AlgoSdk.Crypto.Sha512_256_Hash
+- uid: AlgoSdk.Crypto
+  commentId: N:AlgoSdk.Crypto
+  name: AlgoSdk.Crypto
+  nameWithType: AlgoSdk.Crypto
+  fullName: AlgoSdk.Crypto
+- uid: AlgoSdk.AssetConfigTxn.Lease*
+  commentId: Overload:AlgoSdk.AssetConfigTxn.Lease
+  name: Lease
+  nameWithType: AssetConfigTxn.Lease
+  fullName: AlgoSdk.AssetConfigTxn.Lease
+- uid: AlgoSdk.ITransaction.Lease
+  commentId: P:AlgoSdk.ITransaction.Lease
+  parent: AlgoSdk.ITransaction
+  name: Lease
+  nameWithType: ITransaction.Lease
+  fullName: AlgoSdk.ITransaction.Lease
+- uid: AlgoSdk.AssetConfigTxn.Note*
+  commentId: Overload:AlgoSdk.AssetConfigTxn.Note
+  name: Note
+  nameWithType: AssetConfigTxn.Note
+  fullName: AlgoSdk.AssetConfigTxn.Note
+- uid: AlgoSdk.ITransaction.Note
+  commentId: P:AlgoSdk.ITransaction.Note
+  parent: AlgoSdk.ITransaction
+  name: Note
+  nameWithType: ITransaction.Note
+  fullName: AlgoSdk.ITransaction.Note
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: AlgoSdk.AssetConfigTxn.RekeyTo*
+  commentId: Overload:AlgoSdk.AssetConfigTxn.RekeyTo
+  name: RekeyTo
+  nameWithType: AssetConfigTxn.RekeyTo
+  fullName: AlgoSdk.AssetConfigTxn.RekeyTo
+- uid: AlgoSdk.ITransaction.RekeyTo
+  commentId: P:AlgoSdk.ITransaction.RekeyTo
+  parent: AlgoSdk.ITransaction
+  name: RekeyTo
+  nameWithType: ITransaction.RekeyTo
+  fullName: AlgoSdk.ITransaction.RekeyTo
+- uid: AlgoSdk.AssetConfigTxn.ConfigAsset*
+  commentId: Overload:AlgoSdk.AssetConfigTxn.ConfigAsset
+  name: ConfigAsset
+  nameWithType: AssetConfigTxn.ConfigAsset
+  fullName: AlgoSdk.AssetConfigTxn.ConfigAsset
+- uid: AlgoSdk.AssetConfigTxn.AssetParams*
+  commentId: Overload:AlgoSdk.AssetConfigTxn.AssetParams
+  name: AssetParams
+  nameWithType: AssetConfigTxn.AssetParams
+  fullName: AlgoSdk.AssetConfigTxn.AssetParams
+- uid: AlgoSdk.AssetParams
+  commentId: T:AlgoSdk.AssetParams
+  parent: AlgoSdk
+  name: AssetParams
+  nameWithType: AssetParams
+  fullName: AlgoSdk.AssetParams
+- uid: AlgoSdk.AssetConfigTxn.CopyTo*
+  commentId: Overload:AlgoSdk.AssetConfigTxn.CopyTo
+  name: CopyTo
+  nameWithType: AssetConfigTxn.CopyTo
+  fullName: AlgoSdk.AssetConfigTxn.CopyTo
+- uid: AlgoSdk.ITransaction.CopyTo(AlgoSdk.Transaction@)
+  commentId: M:AlgoSdk.ITransaction.CopyTo(AlgoSdk.Transaction@)
+  parent: AlgoSdk.ITransaction
+  name: CopyTo(Transaction)
+  nameWithType: ITransaction.CopyTo(Transaction)
+  fullName: AlgoSdk.ITransaction.CopyTo(AlgoSdk.Transaction)
+  spec.csharp:
+  - uid: AlgoSdk.ITransaction.CopyTo(AlgoSdk.Transaction@)
+    name: CopyTo
+    nameWithType: ITransaction.CopyTo
+    fullName: AlgoSdk.ITransaction.CopyTo
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Transaction
+    name: Transaction
+    nameWithType: Transaction
+    fullName: AlgoSdk.Transaction
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.ITransaction.CopyTo(AlgoSdk.Transaction@)
+    name: CopyTo
+    nameWithType: ITransaction.CopyTo
+    fullName: AlgoSdk.ITransaction.CopyTo
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Transaction
+    name: Transaction
+    nameWithType: Transaction
+    fullName: AlgoSdk.Transaction
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Transaction
+  commentId: T:AlgoSdk.Transaction
+  parent: AlgoSdk
+  name: Transaction
+  nameWithType: Transaction
+  fullName: AlgoSdk.Transaction
+- uid: AlgoSdk.AssetConfigTxn.CopyFrom*
+  commentId: Overload:AlgoSdk.AssetConfigTxn.CopyFrom
+  name: CopyFrom
+  nameWithType: AssetConfigTxn.CopyFrom
+  fullName: AlgoSdk.AssetConfigTxn.CopyFrom
+- uid: AlgoSdk.ITransaction.CopyFrom(AlgoSdk.Transaction)
+  commentId: M:AlgoSdk.ITransaction.CopyFrom(AlgoSdk.Transaction)
+  parent: AlgoSdk.ITransaction
+  name: CopyFrom(Transaction)
+  nameWithType: ITransaction.CopyFrom(Transaction)
+  fullName: AlgoSdk.ITransaction.CopyFrom(AlgoSdk.Transaction)
+  spec.csharp:
+  - uid: AlgoSdk.ITransaction.CopyFrom(AlgoSdk.Transaction)
+    name: CopyFrom
+    nameWithType: ITransaction.CopyFrom
+    fullName: AlgoSdk.ITransaction.CopyFrom
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Transaction
+    name: Transaction
+    nameWithType: Transaction
+    fullName: AlgoSdk.Transaction
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.ITransaction.CopyFrom(AlgoSdk.Transaction)
+    name: CopyFrom
+    nameWithType: ITransaction.CopyFrom
+    fullName: AlgoSdk.ITransaction.CopyFrom
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Transaction
+    name: Transaction
+    nameWithType: Transaction
+    fullName: AlgoSdk.Transaction
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AssetConfigTxn.Equals*
+  commentId: Overload:AlgoSdk.AssetConfigTxn.Equals
+  name: Equals
+  nameWithType: AssetConfigTxn.Equals
+  fullName: AlgoSdk.AssetConfigTxn.Equals
+- uid: System.IEquatable{AlgoSdk.AssetConfigTxn}.Equals(AlgoSdk.AssetConfigTxn)
+  commentId: M:System.IEquatable{AlgoSdk.AssetConfigTxn}.Equals(AlgoSdk.AssetConfigTxn)
+  parent: System.IEquatable{AlgoSdk.AssetConfigTxn}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(AssetConfigTxn)
+  nameWithType: IEquatable<AssetConfigTxn>.Equals(AssetConfigTxn)
+  fullName: System.IEquatable<AlgoSdk.AssetConfigTxn>.Equals(AlgoSdk.AssetConfigTxn)
+  nameWithType.vb: IEquatable(Of AssetConfigTxn).Equals(AssetConfigTxn)
+  fullName.vb: System.IEquatable(Of AlgoSdk.AssetConfigTxn).Equals(AlgoSdk.AssetConfigTxn)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<AssetConfigTxn>.Equals
+    fullName: System.IEquatable<AlgoSdk.AssetConfigTxn>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.AssetConfigTxn
+    name: AssetConfigTxn
+    nameWithType: AssetConfigTxn
+    fullName: AlgoSdk.AssetConfigTxn
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of AssetConfigTxn).Equals
+    fullName: System.IEquatable(Of AlgoSdk.AssetConfigTxn).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.AssetConfigTxn
+    name: AssetConfigTxn
+    nameWithType: AssetConfigTxn
+    fullName: AlgoSdk.AssetConfigTxn
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AssetConfigTxn
+  commentId: T:AlgoSdk.AssetConfigTxn
+  parent: AlgoSdk
+  name: AssetConfigTxn
+  nameWithType: AssetConfigTxn
+  fullName: AlgoSdk.AssetConfigTxn
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

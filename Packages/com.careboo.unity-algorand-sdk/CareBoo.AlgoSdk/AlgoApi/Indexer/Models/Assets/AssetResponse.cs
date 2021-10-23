@@ -5,12 +5,13 @@ namespace AlgoSdk
     [AlgoApiObject]
     public struct AssetResponse
         : IEquatable<AssetResponse>
+        , IIndexerResponse
     {
         [AlgoApiField("asset", null)]
-        public Asset Asset;
+        public Asset Asset { get; set; }
 
         [AlgoApiField("current-round", null)]
-        public ulong CurrentRound;
+        public ulong CurrentRound { get; set; }
 
         public bool Equals(AssetResponse other)
         {

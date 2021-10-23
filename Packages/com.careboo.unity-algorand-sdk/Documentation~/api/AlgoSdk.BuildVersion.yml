@@ -1,0 +1,841 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.BuildVersion
+  commentId: T:AlgoSdk.BuildVersion
+  id: BuildVersion
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.BuildVersion.Branch
+  - AlgoSdk.BuildVersion.BuildNumber
+  - AlgoSdk.BuildVersion.Channel
+  - AlgoSdk.BuildVersion.CommitHash
+  - AlgoSdk.BuildVersion.Equals(AlgoSdk.BuildVersion)
+  - AlgoSdk.BuildVersion.Major
+  - AlgoSdk.BuildVersion.Minor
+  langs:
+  - csharp
+  - vb
+  name: BuildVersion
+  nameWithType: BuildVersion
+  fullName: AlgoSdk.BuildVersion
+  type: Struct
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/BuildVersion.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: BuildVersion
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/BuildVersion.cs
+    startLine: 5
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: 'public struct BuildVersion : IEquatable<BuildVersion>'
+    content.vb: >-
+      Public Structure BuildVersion
+          Implements IEquatable(Of BuildVersion)
+  implements:
+  - System.IEquatable{AlgoSdk.BuildVersion}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: AlgoSdk.BuildVersion.Branch
+  commentId: F:AlgoSdk.BuildVersion.Branch
+  id: Branch
+  parent: AlgoSdk.BuildVersion
+  langs:
+  - csharp
+  - vb
+  name: Branch
+  nameWithType: BuildVersion.Branch
+  fullName: AlgoSdk.BuildVersion.Branch
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/BuildVersion.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Branch
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/BuildVersion.cs
+    startLine: 10
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("branch", null, false)]
+
+      public FixedString64Bytes Branch
+    return:
+      type: Unity.Collections.FixedString64Bytes
+    content.vb: >-
+      <AlgoApiField("branch", Nothing, False)>
+
+      Public Branch As FixedString64Bytes
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: branch
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.BuildVersion.BuildNumber
+  commentId: F:AlgoSdk.BuildVersion.BuildNumber
+  id: BuildNumber
+  parent: AlgoSdk.BuildVersion
+  langs:
+  - csharp
+  - vb
+  name: BuildNumber
+  nameWithType: BuildVersion.BuildNumber
+  fullName: AlgoSdk.BuildVersion.BuildNumber
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/BuildVersion.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: BuildNumber
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/BuildVersion.cs
+    startLine: 12
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("build_number", null, false)]
+
+      public ulong BuildNumber
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("build_number", Nothing, False)>
+
+      Public BuildNumber As ULong
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: build_number
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.BuildVersion.Channel
+  commentId: F:AlgoSdk.BuildVersion.Channel
+  id: Channel
+  parent: AlgoSdk.BuildVersion
+  langs:
+  - csharp
+  - vb
+  name: Channel
+  nameWithType: BuildVersion.Channel
+  fullName: AlgoSdk.BuildVersion.Channel
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/BuildVersion.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Channel
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/BuildVersion.cs
+    startLine: 14
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("channel", null, false)]
+
+      public FixedString64Bytes Channel
+    return:
+      type: Unity.Collections.FixedString64Bytes
+    content.vb: >-
+      <AlgoApiField("channel", Nothing, False)>
+
+      Public Channel As FixedString64Bytes
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: channel
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.BuildVersion.CommitHash
+  commentId: F:AlgoSdk.BuildVersion.CommitHash
+  id: CommitHash
+  parent: AlgoSdk.BuildVersion
+  langs:
+  - csharp
+  - vb
+  name: CommitHash
+  nameWithType: BuildVersion.CommitHash
+  fullName: AlgoSdk.BuildVersion.CommitHash
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/BuildVersion.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: CommitHash
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/BuildVersion.cs
+    startLine: 16
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("commit_hash", null, false)]
+
+      public FixedString128Bytes CommitHash
+    return:
+      type: Unity.Collections.FixedString128Bytes
+    content.vb: >-
+      <AlgoApiField("commit_hash", Nothing, False)>
+
+      Public CommitHash As FixedString128Bytes
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: commit_hash
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.BuildVersion.Major
+  commentId: F:AlgoSdk.BuildVersion.Major
+  id: Major
+  parent: AlgoSdk.BuildVersion
+  langs:
+  - csharp
+  - vb
+  name: Major
+  nameWithType: BuildVersion.Major
+  fullName: AlgoSdk.BuildVersion.Major
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/BuildVersion.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Major
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/BuildVersion.cs
+    startLine: 18
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("major", null, false)]
+
+      public ulong Major
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("major", Nothing, False)>
+
+      Public Major As ULong
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: major
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.BuildVersion.Minor
+  commentId: F:AlgoSdk.BuildVersion.Minor
+  id: Minor
+  parent: AlgoSdk.BuildVersion
+  langs:
+  - csharp
+  - vb
+  name: Minor
+  nameWithType: BuildVersion.Minor
+  fullName: AlgoSdk.BuildVersion.Minor
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/BuildVersion.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Minor
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/BuildVersion.cs
+    startLine: 20
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("minor", null, false)]
+
+      public ulong Minor
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("minor", Nothing, False)>
+
+      Public Minor As ULong
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: minor
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.BuildVersion.Equals(AlgoSdk.BuildVersion)
+  commentId: M:AlgoSdk.BuildVersion.Equals(AlgoSdk.BuildVersion)
+  id: Equals(AlgoSdk.BuildVersion)
+  parent: AlgoSdk.BuildVersion
+  langs:
+  - csharp
+  - vb
+  name: Equals(BuildVersion)
+  nameWithType: BuildVersion.Equals(BuildVersion)
+  fullName: AlgoSdk.BuildVersion.Equals(AlgoSdk.BuildVersion)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/BuildVersion.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Equals
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/BuildVersion.cs
+    startLine: 22
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public bool Equals(BuildVersion other)
+    parameters:
+    - id: other
+      type: AlgoSdk.BuildVersion
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As BuildVersion) As Boolean
+  overload: AlgoSdk.BuildVersion.Equals*
+  implements:
+  - System.IEquatable{AlgoSdk.BuildVersion}.Equals(AlgoSdk.BuildVersion)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: System.IEquatable{AlgoSdk.BuildVersion}
+  commentId: T:System.IEquatable{AlgoSdk.BuildVersion}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<BuildVersion>
+  nameWithType: IEquatable<BuildVersion>
+  fullName: System.IEquatable<AlgoSdk.BuildVersion>
+  nameWithType.vb: IEquatable(Of BuildVersion)
+  fullName.vb: System.IEquatable(Of AlgoSdk.BuildVersion)
+  name.vb: IEquatable(Of BuildVersion)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AlgoSdk.BuildVersion
+    name: BuildVersion
+    nameWithType: BuildVersion
+    fullName: AlgoSdk.BuildVersion
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AlgoSdk.BuildVersion
+    name: BuildVersion
+    nameWithType: BuildVersion
+    fullName: AlgoSdk.BuildVersion
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Unity.Collections.FixedString64Bytes
+  commentId: T:Unity.Collections.FixedString64Bytes
+  parent: Unity.Collections
+  name: FixedString64Bytes
+  nameWithType: FixedString64Bytes
+  fullName: Unity.Collections.FixedString64Bytes
+- uid: Unity.Collections
+  commentId: N:Unity.Collections
+  name: Unity.Collections
+  nameWithType: Unity.Collections
+  fullName: Unity.Collections
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: Unity.Collections.FixedString128Bytes
+  commentId: T:Unity.Collections.FixedString128Bytes
+  parent: Unity.Collections
+  name: FixedString128Bytes
+  nameWithType: FixedString128Bytes
+  fullName: Unity.Collections.FixedString128Bytes
+- uid: AlgoSdk.BuildVersion.Equals*
+  commentId: Overload:AlgoSdk.BuildVersion.Equals
+  name: Equals
+  nameWithType: BuildVersion.Equals
+  fullName: AlgoSdk.BuildVersion.Equals
+- uid: System.IEquatable{AlgoSdk.BuildVersion}.Equals(AlgoSdk.BuildVersion)
+  commentId: M:System.IEquatable{AlgoSdk.BuildVersion}.Equals(AlgoSdk.BuildVersion)
+  parent: System.IEquatable{AlgoSdk.BuildVersion}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(BuildVersion)
+  nameWithType: IEquatable<BuildVersion>.Equals(BuildVersion)
+  fullName: System.IEquatable<AlgoSdk.BuildVersion>.Equals(AlgoSdk.BuildVersion)
+  nameWithType.vb: IEquatable(Of BuildVersion).Equals(BuildVersion)
+  fullName.vb: System.IEquatable(Of AlgoSdk.BuildVersion).Equals(AlgoSdk.BuildVersion)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<BuildVersion>.Equals
+    fullName: System.IEquatable<AlgoSdk.BuildVersion>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.BuildVersion
+    name: BuildVersion
+    nameWithType: BuildVersion
+    fullName: AlgoSdk.BuildVersion
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of BuildVersion).Equals
+    fullName: System.IEquatable(Of AlgoSdk.BuildVersion).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.BuildVersion
+    name: BuildVersion
+    nameWithType: BuildVersion
+    fullName: AlgoSdk.BuildVersion
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.BuildVersion
+  commentId: T:AlgoSdk.BuildVersion
+  parent: AlgoSdk
+  name: BuildVersion
+  nameWithType: BuildVersion
+  fullName: AlgoSdk.BuildVersion
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

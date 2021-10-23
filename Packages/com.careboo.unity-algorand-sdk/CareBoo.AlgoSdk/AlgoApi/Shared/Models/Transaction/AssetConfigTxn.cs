@@ -4,7 +4,20 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
-    public partial struct Transaction
+    public interface IAssetConfigTxn : ITransaction
+    {
+        /// <summary>
+        /// For re-configure or destroy transactions, this is the unique asset ID. On asset creation, the ID is set to zero.
+        /// </summary>
+        ulong ConfigAsset { get; set; }
+
+        /// <summary>
+        /// See <see cref="AssetParams"/> for all available fields.
+        /// </summary>
+        AssetParams AssetParams { get; set; }
+    }
+
+    public partial struct Transaction : IAssetConfigTxn
     {
         [AlgoApiField(null, "caid")]
         public ulong ConfigAsset
@@ -20,6 +33,13 @@ namespace AlgoSdk
             set => AssetConfigurationParams.AssetParams = value;
         }
 
+        /// <summary>
+        /// Create an <see cref="AssetConfigTxn"/> that will create an asset.
+        /// </summary>
+        /// <param name="sender">The address of the account that pays the fee and amount.</param>
+        /// <param name="txnParams">See <see cref="TransactionParams"/></param>
+        /// <param name="assetParams">See <see cref="AssetParams"/> for all available fields.</param>
+        /// <returns>An <see cref="AssetConfigTxn"/> that will create an asset.</returns>
         public static AssetConfigTxn AssetCreate(
             Address sender,
             TransactionParams txnParams,
@@ -35,6 +55,14 @@ namespace AlgoSdk
             return txn;
         }
 
+        /// <summary>
+        /// Create an <see cref="AssetConfigTxn"/> that will configure an asset.
+        /// </summary>
+        /// <param name="sender">The address of the account that pays the fee and amount.</param>
+        /// <param name="txnParams">See <see cref="TransactionParams"/></param>
+        /// <param name="assetId">The unique asset id.</param>
+        /// <param name="assetParams">See <see cref="AssetParams"/> for all available fields.</param>
+        /// <returns>An <see cref="AssetConfigTxn"/> that will configure an asset.</returns>
         public static AssetConfigTxn AssetConfigure(
             Address sender,
             TransactionParams txnParams,
@@ -52,6 +80,13 @@ namespace AlgoSdk
             return txn;
         }
 
+        /// <summary>
+        /// Create an <see cref="AssetConfigTxn"/> that will delete an asset.
+        /// </summary>
+        /// <param name="sender">The address of the account that pays the fee and amount.</param>
+        /// <param name="txnParams">See <see cref="TransactionParams"/></param>
+        /// <param name="assetId">The unique asset id.</param>
+        /// <returns>An <see cref="AssetConfigTxn"/> that will delete an asset.</returns>
         public static AssetConfigTxn AssetDelete(
             Address sender,
             TransactionParams txnParams,
@@ -70,7 +105,7 @@ namespace AlgoSdk
 
     [AlgoApiObject]
     public struct AssetConfigTxn
-        : ITransaction
+        : IAssetConfigTxn
         , IEquatable<AssetConfigTxn>
     {
         internal TransactionHeader header;

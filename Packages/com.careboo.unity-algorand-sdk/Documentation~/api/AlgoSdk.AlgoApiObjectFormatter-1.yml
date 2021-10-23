@@ -1,0 +1,1392 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.AlgoApiObjectFormatter`1
+  commentId: T:AlgoSdk.AlgoApiObjectFormatter`1
+  id: AlgoApiObjectFormatter`1
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.AlgoApiObjectFormatter`1.Assign``1(System.String,System.String,AlgoSdk.AlgoApiField{`0}.FieldGetter{``0},AlgoSdk.AlgoApiField{`0}.FieldSetter{``0},System.Boolean)
+  - AlgoSdk.AlgoApiObjectFormatter`1.Assign``1(System.String,System.String,AlgoSdk.AlgoApiField{`0}.FieldGetter{``0},AlgoSdk.AlgoApiField{`0}.FieldSetter{``0},System.Collections.Generic.IEqualityComparer{``0},System.Boolean)
+  - AlgoSdk.AlgoApiObjectFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+  - AlgoSdk.AlgoApiObjectFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  - AlgoSdk.AlgoApiObjectFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+  - AlgoSdk.AlgoApiObjectFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+  langs:
+  - csharp
+  - vb
+  name: AlgoApiObjectFormatter<T>
+  nameWithType: AlgoApiObjectFormatter<T>
+  fullName: AlgoSdk.AlgoApiObjectFormatter<T>
+  type: Class
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/AlgoApiObjectFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: AlgoApiObjectFormatter
+    path: ../CareBoo.AlgoSdk/Serialization/AlgoApiObjectFormatter.cs
+    startLine: 8
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: 'public class AlgoApiObjectFormatter<T> : IAlgoApiFormatter<T> where T : struct'
+    typeParameters:
+    - id: T
+    content.vb: >-
+      Public Class AlgoApiObjectFormatter(Of T As Structure)
+          Implements IAlgoApiFormatter(Of T)
+  inheritance:
+  - System.Object
+  implements:
+  - AlgoSdk.IAlgoApiFormatter{{T}}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  nameWithType.vb: AlgoApiObjectFormatter(Of T)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: AlgoSdk.AlgoApiObjectFormatter(Of T)
+  name.vb: AlgoApiObjectFormatter(Of T)
+- uid: AlgoSdk.AlgoApiObjectFormatter`1.Assign``1(System.String,System.String,AlgoSdk.AlgoApiField{`0}.FieldGetter{``0},AlgoSdk.AlgoApiField{`0}.FieldSetter{``0},System.Boolean)
+  commentId: M:AlgoSdk.AlgoApiObjectFormatter`1.Assign``1(System.String,System.String,AlgoSdk.AlgoApiField{`0}.FieldGetter{``0},AlgoSdk.AlgoApiField{`0}.FieldSetter{``0},System.Boolean)
+  id: Assign``1(System.String,System.String,AlgoSdk.AlgoApiField{`0}.FieldGetter{``0},AlgoSdk.AlgoApiField{`0}.FieldSetter{``0},System.Boolean)
+  parent: AlgoSdk.AlgoApiObjectFormatter`1
+  langs:
+  - csharp
+  - vb
+  name: Assign<TField>(String, String, AlgoApiField<T>.FieldGetter<TField>, AlgoApiField<T>.FieldSetter<TField>, Boolean)
+  nameWithType: AlgoApiObjectFormatter<T>.Assign<TField>(String, String, AlgoApiField<T>.FieldGetter<TField>, AlgoApiField<T>.FieldSetter<TField>, Boolean)
+  fullName: AlgoSdk.AlgoApiObjectFormatter<T>.Assign<TField>(System.String, System.String, AlgoSdk.AlgoApiField<T>.FieldGetter<TField>, AlgoSdk.AlgoApiField<T>.FieldSetter<TField>, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/AlgoApiObjectFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Assign
+    path: ../CareBoo.AlgoSdk/Serialization/AlgoApiObjectFormatter.cs
+    startLine: 14
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      public AlgoApiObjectFormatter<T> Assign<TField>(string jsonKey, string messagePackKey, AlgoApiField<T>.FieldGetter<TField> getter, AlgoApiField<T>.FieldSetter<TField> setter, bool readOnly)
+          where TField : IEquatable<TField>
+    parameters:
+    - id: jsonKey
+      type: System.String
+    - id: messagePackKey
+      type: System.String
+    - id: getter
+      type: AlgoSdk.AlgoApiField{{T}}.FieldGetter{{TField}}
+    - id: setter
+      type: AlgoSdk.AlgoApiField{{T}}.FieldSetter{{TField}}
+    - id: readOnly
+      type: System.Boolean
+    typeParameters:
+    - id: TField
+    return:
+      type: AlgoSdk.AlgoApiObjectFormatter`1
+    content.vb: Public Function Assign(Of TField As IEquatable(Of TField))(jsonKey As String, messagePackKey As String, getter As AlgoApiField(Of T).FieldGetter(Of TField), setter As AlgoApiField(Of T).FieldSetter(Of TField), readOnly As Boolean) As AlgoApiObjectFormatter(Of T)
+  overload: AlgoSdk.AlgoApiObjectFormatter`1.Assign*
+  nameWithType.vb: AlgoApiObjectFormatter(Of T).Assign(Of TField)(String, String, AlgoApiField(Of T).FieldGetter(Of TField), AlgoApiField(Of T).FieldSetter(Of TField), Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.AlgoApiObjectFormatter(Of T).Assign(Of TField)(System.String, System.String, AlgoSdk.AlgoApiField(Of T).FieldGetter(Of TField), AlgoSdk.AlgoApiField(Of T).FieldSetter(Of TField), System.Boolean)
+  name.vb: Assign(Of TField)(String, String, AlgoApiField(Of T).FieldGetter(Of TField), AlgoApiField(Of T).FieldSetter(Of TField), Boolean)
+- uid: AlgoSdk.AlgoApiObjectFormatter`1.Assign``1(System.String,System.String,AlgoSdk.AlgoApiField{`0}.FieldGetter{``0},AlgoSdk.AlgoApiField{`0}.FieldSetter{``0},System.Collections.Generic.IEqualityComparer{``0},System.Boolean)
+  commentId: M:AlgoSdk.AlgoApiObjectFormatter`1.Assign``1(System.String,System.String,AlgoSdk.AlgoApiField{`0}.FieldGetter{``0},AlgoSdk.AlgoApiField{`0}.FieldSetter{``0},System.Collections.Generic.IEqualityComparer{``0},System.Boolean)
+  id: Assign``1(System.String,System.String,AlgoSdk.AlgoApiField{`0}.FieldGetter{``0},AlgoSdk.AlgoApiField{`0}.FieldSetter{``0},System.Collections.Generic.IEqualityComparer{``0},System.Boolean)
+  parent: AlgoSdk.AlgoApiObjectFormatter`1
+  langs:
+  - csharp
+  - vb
+  name: Assign<TField>(String, String, AlgoApiField<T>.FieldGetter<TField>, AlgoApiField<T>.FieldSetter<TField>, IEqualityComparer<TField>, Boolean)
+  nameWithType: AlgoApiObjectFormatter<T>.Assign<TField>(String, String, AlgoApiField<T>.FieldGetter<TField>, AlgoApiField<T>.FieldSetter<TField>, IEqualityComparer<TField>, Boolean)
+  fullName: AlgoSdk.AlgoApiObjectFormatter<T>.Assign<TField>(System.String, System.String, AlgoSdk.AlgoApiField<T>.FieldGetter<TField>, AlgoSdk.AlgoApiField<T>.FieldSetter<TField>, System.Collections.Generic.IEqualityComparer<TField>, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/AlgoApiObjectFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Assign
+    path: ../CareBoo.AlgoSdk/Serialization/AlgoApiObjectFormatter.cs
+    startLine: 29
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public AlgoApiObjectFormatter<T> Assign<TField>(string jsonKey, string messagePackKey, AlgoApiField<T>.FieldGetter<TField> getter, AlgoApiField<T>.FieldSetter<TField> setter, IEqualityComparer<TField> comparer, bool readOnly)
+    parameters:
+    - id: jsonKey
+      type: System.String
+    - id: messagePackKey
+      type: System.String
+    - id: getter
+      type: AlgoSdk.AlgoApiField{{T}}.FieldGetter{{TField}}
+    - id: setter
+      type: AlgoSdk.AlgoApiField{{T}}.FieldSetter{{TField}}
+    - id: comparer
+      type: System.Collections.Generic.IEqualityComparer{{TField}}
+    - id: readOnly
+      type: System.Boolean
+    typeParameters:
+    - id: TField
+    return:
+      type: AlgoSdk.AlgoApiObjectFormatter`1
+    content.vb: Public Function Assign(Of TField)(jsonKey As String, messagePackKey As String, getter As AlgoApiField(Of T).FieldGetter(Of TField), setter As AlgoApiField(Of T).FieldSetter(Of TField), comparer As IEqualityComparer(Of TField), readOnly As Boolean) As AlgoApiObjectFormatter(Of T)
+  overload: AlgoSdk.AlgoApiObjectFormatter`1.Assign*
+  nameWithType.vb: AlgoApiObjectFormatter(Of T).Assign(Of TField)(String, String, AlgoApiField(Of T).FieldGetter(Of TField), AlgoApiField(Of T).FieldSetter(Of TField), IEqualityComparer(Of TField), Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.AlgoApiObjectFormatter(Of T).Assign(Of TField)(System.String, System.String, AlgoSdk.AlgoApiField(Of T).FieldGetter(Of TField), AlgoSdk.AlgoApiField(Of T).FieldSetter(Of TField), System.Collections.Generic.IEqualityComparer(Of TField), System.Boolean)
+  name.vb: Assign(Of TField)(String, String, AlgoApiField(Of T).FieldGetter(Of TField), AlgoApiField(Of T).FieldSetter(Of TField), IEqualityComparer(Of TField), Boolean)
+- uid: AlgoSdk.AlgoApiObjectFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+  commentId: M:AlgoSdk.AlgoApiObjectFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+  id: Deserialize(AlgoSdk.Json.JsonReader@)
+  parent: AlgoSdk.AlgoApiObjectFormatter`1
+  langs:
+  - csharp
+  - vb
+  name: Deserialize(ref JsonReader)
+  nameWithType: AlgoApiObjectFormatter<T>.Deserialize(ref JsonReader)
+  fullName: AlgoSdk.AlgoApiObjectFormatter<T>.Deserialize(ref AlgoSdk.Json.JsonReader)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/AlgoApiObjectFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Deserialize
+    path: ../CareBoo.AlgoSdk/Serialization/AlgoApiObjectFormatter.cs
+    startLine: 44
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public T Deserialize(ref JsonReader reader)
+    parameters:
+    - id: reader
+      type: AlgoSdk.Json.JsonReader
+    return:
+      type: '{T}'
+    content.vb: Public Function Deserialize(ByRef reader As JsonReader) As T
+  overload: AlgoSdk.AlgoApiObjectFormatter`1.Deserialize*
+  implements:
+  - AlgoSdk.IAlgoApiFormatter{{T}}.Deserialize(AlgoSdk.Json.JsonReader@)
+  nameWithType.vb: AlgoApiObjectFormatter(Of T).Deserialize(ByRef JsonReader)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.AlgoApiObjectFormatter(Of T).Deserialize(ByRef AlgoSdk.Json.JsonReader)
+  name.vb: Deserialize(ByRef JsonReader)
+- uid: AlgoSdk.AlgoApiObjectFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  commentId: M:AlgoSdk.AlgoApiObjectFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  id: Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  parent: AlgoSdk.AlgoApiObjectFormatter`1
+  langs:
+  - csharp
+  - vb
+  name: Deserialize(ref MessagePackReader)
+  nameWithType: AlgoApiObjectFormatter<T>.Deserialize(ref MessagePackReader)
+  fullName: AlgoSdk.AlgoApiObjectFormatter<T>.Deserialize(ref AlgoSdk.MessagePack.MessagePackReader)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/AlgoApiObjectFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Deserialize
+    path: ../CareBoo.AlgoSdk/Serialization/AlgoApiObjectFormatter.cs
+    startLine: 67
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public T Deserialize(ref MessagePackReader reader)
+    parameters:
+    - id: reader
+      type: AlgoSdk.MessagePack.MessagePackReader
+    return:
+      type: '{T}'
+    content.vb: Public Function Deserialize(ByRef reader As MessagePackReader) As T
+  overload: AlgoSdk.AlgoApiObjectFormatter`1.Deserialize*
+  implements:
+  - AlgoSdk.IAlgoApiFormatter{{T}}.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  nameWithType.vb: AlgoApiObjectFormatter(Of T).Deserialize(ByRef MessagePackReader)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.AlgoApiObjectFormatter(Of T).Deserialize(ByRef AlgoSdk.MessagePack.MessagePackReader)
+  name.vb: Deserialize(ByRef MessagePackReader)
+- uid: AlgoSdk.AlgoApiObjectFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+  commentId: M:AlgoSdk.AlgoApiObjectFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+  id: Serialize(AlgoSdk.Json.JsonWriter@,`0)
+  parent: AlgoSdk.AlgoApiObjectFormatter`1
+  langs:
+  - csharp
+  - vb
+  name: Serialize(ref JsonWriter, T)
+  nameWithType: AlgoApiObjectFormatter<T>.Serialize(ref JsonWriter, T)
+  fullName: AlgoSdk.AlgoApiObjectFormatter<T>.Serialize(ref AlgoSdk.Json.JsonWriter, T)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/AlgoApiObjectFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Serialize
+    path: ../CareBoo.AlgoSdk/Serialization/AlgoApiObjectFormatter.cs
+    startLine: 87
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public void Serialize(ref JsonWriter writer, T value)
+    parameters:
+    - id: writer
+      type: AlgoSdk.Json.JsonWriter
+    - id: value
+      type: '{T}'
+    content.vb: Public Sub Serialize(ByRef writer As JsonWriter, value As T)
+  overload: AlgoSdk.AlgoApiObjectFormatter`1.Serialize*
+  implements:
+  - AlgoSdk.IAlgoApiFormatter{{T}}.Serialize(AlgoSdk.Json.JsonWriter@,{T})
+  nameWithType.vb: AlgoApiObjectFormatter(Of T).Serialize(ByRef JsonWriter, T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.AlgoApiObjectFormatter(Of T).Serialize(ByRef AlgoSdk.Json.JsonWriter, T)
+  name.vb: Serialize(ByRef JsonWriter, T)
+- uid: AlgoSdk.AlgoApiObjectFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+  commentId: M:AlgoSdk.AlgoApiObjectFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+  id: Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+  parent: AlgoSdk.AlgoApiObjectFormatter`1
+  langs:
+  - csharp
+  - vb
+  name: Serialize(ref MessagePackWriter, T)
+  nameWithType: AlgoApiObjectFormatter<T>.Serialize(ref MessagePackWriter, T)
+  fullName: AlgoSdk.AlgoApiObjectFormatter<T>.Serialize(ref AlgoSdk.MessagePack.MessagePackWriter, T)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/AlgoApiObjectFormatter.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Serialize
+    path: ../CareBoo.AlgoSdk/Serialization/AlgoApiObjectFormatter.cs
+    startLine: 102
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public void Serialize(ref MessagePackWriter writer, T value)
+    parameters:
+    - id: writer
+      type: AlgoSdk.MessagePack.MessagePackWriter
+    - id: value
+      type: '{T}'
+    content.vb: Public Sub Serialize(ByRef writer As MessagePackWriter, value As T)
+  overload: AlgoSdk.AlgoApiObjectFormatter`1.Serialize*
+  implements:
+  - AlgoSdk.IAlgoApiFormatter{{T}}.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,{T})
+  nameWithType.vb: AlgoApiObjectFormatter(Of T).Serialize(ByRef MessagePackWriter, T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AlgoSdk.AlgoApiObjectFormatter(Of T).Serialize(ByRef AlgoSdk.MessagePack.MessagePackWriter, T)
+  name.vb: Serialize(ByRef MessagePackWriter, T)
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AlgoSdk.IAlgoApiFormatter{{T}}
+  commentId: T:AlgoSdk.IAlgoApiFormatter{``0}
+  parent: AlgoSdk
+  definition: AlgoSdk.IAlgoApiFormatter`1
+  name: IAlgoApiFormatter<T>
+  nameWithType: IAlgoApiFormatter<T>
+  fullName: AlgoSdk.IAlgoApiFormatter<T>
+  nameWithType.vb: IAlgoApiFormatter(Of T)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of T)
+  name.vb: IAlgoApiFormatter(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1
+    name: IAlgoApiFormatter
+    nameWithType: IAlgoApiFormatter
+    fullName: AlgoSdk.IAlgoApiFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1
+    name: IAlgoApiFormatter
+    nameWithType: IAlgoApiFormatter
+    fullName: AlgoSdk.IAlgoApiFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AlgoSdk.IAlgoApiFormatter`1
+  commentId: T:AlgoSdk.IAlgoApiFormatter`1
+  name: IAlgoApiFormatter<T>
+  nameWithType: IAlgoApiFormatter<T>
+  fullName: AlgoSdk.IAlgoApiFormatter<T>
+  nameWithType.vb: IAlgoApiFormatter(Of T)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of T)
+  name.vb: IAlgoApiFormatter(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1
+    name: IAlgoApiFormatter
+    nameWithType: IAlgoApiFormatter
+    fullName: AlgoSdk.IAlgoApiFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1
+    name: IAlgoApiFormatter
+    nameWithType: IAlgoApiFormatter
+    fullName: AlgoSdk.IAlgoApiFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AlgoApiObjectFormatter`1.Assign*
+  commentId: Overload:AlgoSdk.AlgoApiObjectFormatter`1.Assign
+  name: Assign
+  nameWithType: AlgoApiObjectFormatter<T>.Assign
+  fullName: AlgoSdk.AlgoApiObjectFormatter<T>.Assign
+  nameWithType.vb: AlgoApiObjectFormatter(Of T).Assign
+  fullName.vb: AlgoSdk.AlgoApiObjectFormatter(Of T).Assign
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: AlgoSdk.AlgoApiField{{T}}.FieldGetter{{TField}}
+  commentId: T:AlgoSdk.AlgoApiField{`0}.FieldGetter{``0}
+  parent: AlgoSdk
+  definition: AlgoSdk.AlgoApiField`1.FieldGetter`1
+  name: AlgoApiField.FieldGetter<TField>
+  nameWithType: AlgoApiField.FieldGetter<TField>
+  fullName: AlgoSdk.AlgoApiField.FieldGetter<TField>
+  nameWithType.vb: AlgoApiField.FieldGetter(Of TField)
+  fullName.vb: AlgoSdk.AlgoApiField.FieldGetter(Of TField)
+  name.vb: AlgoApiField.FieldGetter(Of TField)
+  spec.csharp:
+  - uid: AlgoSdk.AlgoApiField`1.FieldGetter`1
+    name: AlgoApiField.FieldGetter
+    nameWithType: AlgoApiField.FieldGetter
+    fullName: AlgoSdk.AlgoApiField.FieldGetter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TField
+    nameWithType: TField
+    fullName: TField
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.AlgoApiField`1.FieldGetter`1
+    name: AlgoApiField.FieldGetter
+    nameWithType: AlgoApiField.FieldGetter
+    fullName: AlgoSdk.AlgoApiField.FieldGetter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TField
+    nameWithType: TField
+    fullName: TField
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AlgoApiField{{T}}.FieldSetter{{TField}}
+  commentId: T:AlgoSdk.AlgoApiField{`0}.FieldSetter{``0}
+  parent: AlgoSdk
+  definition: AlgoSdk.AlgoApiField`1.FieldSetter`1
+  name: AlgoApiField.FieldSetter<TField>
+  nameWithType: AlgoApiField.FieldSetter<TField>
+  fullName: AlgoSdk.AlgoApiField.FieldSetter<TField>
+  nameWithType.vb: AlgoApiField.FieldSetter(Of TField)
+  fullName.vb: AlgoSdk.AlgoApiField.FieldSetter(Of TField)
+  name.vb: AlgoApiField.FieldSetter(Of TField)
+  spec.csharp:
+  - uid: AlgoSdk.AlgoApiField`1.FieldSetter`1
+    name: AlgoApiField.FieldSetter
+    nameWithType: AlgoApiField.FieldSetter
+    fullName: AlgoSdk.AlgoApiField.FieldSetter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TField
+    nameWithType: TField
+    fullName: TField
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.AlgoApiField`1.FieldSetter`1
+    name: AlgoApiField.FieldSetter
+    nameWithType: AlgoApiField.FieldSetter
+    fullName: AlgoSdk.AlgoApiField.FieldSetter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TField
+    nameWithType: TField
+    fullName: TField
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: AlgoSdk.AlgoApiObjectFormatter`1
+  commentId: T:AlgoSdk.AlgoApiObjectFormatter`1
+  parent: AlgoSdk
+  name: AlgoApiObjectFormatter<T>
+  nameWithType: AlgoApiObjectFormatter<T>
+  fullName: AlgoSdk.AlgoApiObjectFormatter<T>
+  nameWithType.vb: AlgoApiObjectFormatter(Of T)
+  fullName.vb: AlgoSdk.AlgoApiObjectFormatter(Of T)
+  name.vb: AlgoApiObjectFormatter(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.AlgoApiObjectFormatter`1
+    name: AlgoApiObjectFormatter
+    nameWithType: AlgoApiObjectFormatter
+    fullName: AlgoSdk.AlgoApiObjectFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.AlgoApiObjectFormatter`1
+    name: AlgoApiObjectFormatter
+    nameWithType: AlgoApiObjectFormatter
+    fullName: AlgoSdk.AlgoApiObjectFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AlgoApiField`1.FieldGetter`1
+  commentId: T:AlgoSdk.AlgoApiField`1.FieldGetter`1
+  name: AlgoApiField.FieldGetter<T>
+  nameWithType: AlgoApiField.FieldGetter<T>
+  fullName: AlgoSdk.AlgoApiField.FieldGetter<T>
+  nameWithType.vb: AlgoApiField.FieldGetter(Of T)
+  fullName.vb: AlgoSdk.AlgoApiField.FieldGetter(Of T)
+  name.vb: AlgoApiField.FieldGetter(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.AlgoApiField`1.FieldGetter`1
+    name: AlgoApiField.FieldGetter
+    nameWithType: AlgoApiField.FieldGetter
+    fullName: AlgoSdk.AlgoApiField.FieldGetter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.AlgoApiField`1.FieldGetter`1
+    name: AlgoApiField.FieldGetter
+    nameWithType: AlgoApiField.FieldGetter
+    fullName: AlgoSdk.AlgoApiField.FieldGetter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AlgoApiField`1.FieldSetter`1
+  commentId: T:AlgoSdk.AlgoApiField`1.FieldSetter`1
+  name: AlgoApiField.FieldSetter<T>
+  nameWithType: AlgoApiField.FieldSetter<T>
+  fullName: AlgoSdk.AlgoApiField.FieldSetter<T>
+  nameWithType.vb: AlgoApiField.FieldSetter(Of T)
+  fullName.vb: AlgoSdk.AlgoApiField.FieldSetter(Of T)
+  name.vb: AlgoApiField.FieldSetter(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.AlgoApiField`1.FieldSetter`1
+    name: AlgoApiField.FieldSetter
+    nameWithType: AlgoApiField.FieldSetter
+    fullName: AlgoSdk.AlgoApiField.FieldSetter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.AlgoApiField`1.FieldSetter`1
+    name: AlgoApiField.FieldSetter
+    nameWithType: AlgoApiField.FieldSetter
+    fullName: AlgoSdk.AlgoApiField.FieldSetter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEqualityComparer{{TField}}
+  commentId: T:System.Collections.Generic.IEqualityComparer{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEqualityComparer`1
+  name: IEqualityComparer<TField>
+  nameWithType: IEqualityComparer<TField>
+  fullName: System.Collections.Generic.IEqualityComparer<TField>
+  nameWithType.vb: IEqualityComparer(Of TField)
+  fullName.vb: System.Collections.Generic.IEqualityComparer(Of TField)
+  name.vb: IEqualityComparer(Of TField)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEqualityComparer`1
+    name: IEqualityComparer
+    nameWithType: IEqualityComparer
+    fullName: System.Collections.Generic.IEqualityComparer
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TField
+    nameWithType: TField
+    fullName: TField
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEqualityComparer`1
+    name: IEqualityComparer
+    nameWithType: IEqualityComparer
+    fullName: System.Collections.Generic.IEqualityComparer
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TField
+    nameWithType: TField
+    fullName: TField
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEqualityComparer`1
+  commentId: T:System.Collections.Generic.IEqualityComparer`1
+  isExternal: true
+  name: IEqualityComparer<T>
+  nameWithType: IEqualityComparer<T>
+  fullName: System.Collections.Generic.IEqualityComparer<T>
+  nameWithType.vb: IEqualityComparer(Of T)
+  fullName.vb: System.Collections.Generic.IEqualityComparer(Of T)
+  name.vb: IEqualityComparer(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEqualityComparer`1
+    name: IEqualityComparer
+    nameWithType: IEqualityComparer
+    fullName: System.Collections.Generic.IEqualityComparer
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEqualityComparer`1
+    name: IEqualityComparer
+    nameWithType: IEqualityComparer
+    fullName: System.Collections.Generic.IEqualityComparer
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: AlgoSdk.AlgoApiObjectFormatter`1.Deserialize*
+  commentId: Overload:AlgoSdk.AlgoApiObjectFormatter`1.Deserialize
+  name: Deserialize
+  nameWithType: AlgoApiObjectFormatter<T>.Deserialize
+  fullName: AlgoSdk.AlgoApiObjectFormatter<T>.Deserialize
+  nameWithType.vb: AlgoApiObjectFormatter(Of T).Deserialize
+  fullName.vb: AlgoSdk.AlgoApiObjectFormatter(Of T).Deserialize
+- uid: AlgoSdk.IAlgoApiFormatter{{T}}.Deserialize(AlgoSdk.Json.JsonReader@)
+  commentId: M:AlgoSdk.IAlgoApiFormatter{`0}.Deserialize(AlgoSdk.Json.JsonReader@)
+  parent: AlgoSdk.IAlgoApiFormatter{{T}}
+  definition: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+  name: Deserialize(JsonReader)
+  nameWithType: IAlgoApiFormatter<T>.Deserialize(JsonReader)
+  fullName: AlgoSdk.IAlgoApiFormatter<T>.Deserialize(AlgoSdk.Json.JsonReader)
+  nameWithType.vb: IAlgoApiFormatter(Of T).Deserialize(JsonReader)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of T).Deserialize(AlgoSdk.Json.JsonReader)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+    name: Deserialize
+    nameWithType: IAlgoApiFormatter<T>.Deserialize
+    fullName: AlgoSdk.IAlgoApiFormatter<T>.Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonReader
+    name: JsonReader
+    nameWithType: JsonReader
+    fullName: AlgoSdk.Json.JsonReader
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+    name: Deserialize
+    nameWithType: IAlgoApiFormatter(Of T).Deserialize
+    fullName: AlgoSdk.IAlgoApiFormatter(Of T).Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonReader
+    name: JsonReader
+    nameWithType: JsonReader
+    fullName: AlgoSdk.Json.JsonReader
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Json.JsonReader
+  commentId: T:AlgoSdk.Json.JsonReader
+  parent: AlgoSdk.Json
+  name: JsonReader
+  nameWithType: JsonReader
+  fullName: AlgoSdk.Json.JsonReader
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+  commentId: M:AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+  name: Deserialize(JsonReader)
+  nameWithType: IAlgoApiFormatter<T>.Deserialize(JsonReader)
+  fullName: AlgoSdk.IAlgoApiFormatter<T>.Deserialize(AlgoSdk.Json.JsonReader)
+  nameWithType.vb: IAlgoApiFormatter(Of T).Deserialize(JsonReader)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of T).Deserialize(AlgoSdk.Json.JsonReader)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+    name: Deserialize
+    nameWithType: IAlgoApiFormatter<T>.Deserialize
+    fullName: AlgoSdk.IAlgoApiFormatter<T>.Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonReader
+    name: JsonReader
+    nameWithType: JsonReader
+    fullName: AlgoSdk.Json.JsonReader
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.Json.JsonReader@)
+    name: Deserialize
+    nameWithType: IAlgoApiFormatter(Of T).Deserialize
+    fullName: AlgoSdk.IAlgoApiFormatter(Of T).Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonReader
+    name: JsonReader
+    nameWithType: JsonReader
+    fullName: AlgoSdk.Json.JsonReader
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Json
+  commentId: N:AlgoSdk.Json
+  name: AlgoSdk.Json
+  nameWithType: AlgoSdk.Json
+  fullName: AlgoSdk.Json
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: AlgoSdk.IAlgoApiFormatter{{T}}.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  commentId: M:AlgoSdk.IAlgoApiFormatter{`0}.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  parent: AlgoSdk.IAlgoApiFormatter{{T}}
+  definition: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  name: Deserialize(MessagePackReader)
+  nameWithType: IAlgoApiFormatter<T>.Deserialize(MessagePackReader)
+  fullName: AlgoSdk.IAlgoApiFormatter<T>.Deserialize(AlgoSdk.MessagePack.MessagePackReader)
+  nameWithType.vb: IAlgoApiFormatter(Of T).Deserialize(MessagePackReader)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of T).Deserialize(AlgoSdk.MessagePack.MessagePackReader)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+    name: Deserialize
+    nameWithType: IAlgoApiFormatter<T>.Deserialize
+    fullName: AlgoSdk.IAlgoApiFormatter<T>.Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackReader
+    name: MessagePackReader
+    nameWithType: MessagePackReader
+    fullName: AlgoSdk.MessagePack.MessagePackReader
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+    name: Deserialize
+    nameWithType: IAlgoApiFormatter(Of T).Deserialize
+    fullName: AlgoSdk.IAlgoApiFormatter(Of T).Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackReader
+    name: MessagePackReader
+    nameWithType: MessagePackReader
+    fullName: AlgoSdk.MessagePack.MessagePackReader
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.MessagePack.MessagePackReader
+  commentId: T:AlgoSdk.MessagePack.MessagePackReader
+  parent: AlgoSdk.MessagePack
+  name: MessagePackReader
+  nameWithType: MessagePackReader
+  fullName: AlgoSdk.MessagePack.MessagePackReader
+- uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  commentId: M:AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+  name: Deserialize(MessagePackReader)
+  nameWithType: IAlgoApiFormatter<T>.Deserialize(MessagePackReader)
+  fullName: AlgoSdk.IAlgoApiFormatter<T>.Deserialize(AlgoSdk.MessagePack.MessagePackReader)
+  nameWithType.vb: IAlgoApiFormatter(Of T).Deserialize(MessagePackReader)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of T).Deserialize(AlgoSdk.MessagePack.MessagePackReader)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+    name: Deserialize
+    nameWithType: IAlgoApiFormatter<T>.Deserialize
+    fullName: AlgoSdk.IAlgoApiFormatter<T>.Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackReader
+    name: MessagePackReader
+    nameWithType: MessagePackReader
+    fullName: AlgoSdk.MessagePack.MessagePackReader
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Deserialize(AlgoSdk.MessagePack.MessagePackReader@)
+    name: Deserialize
+    nameWithType: IAlgoApiFormatter(Of T).Deserialize
+    fullName: AlgoSdk.IAlgoApiFormatter(Of T).Deserialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackReader
+    name: MessagePackReader
+    nameWithType: MessagePackReader
+    fullName: AlgoSdk.MessagePack.MessagePackReader
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.MessagePack
+  commentId: N:AlgoSdk.MessagePack
+  name: AlgoSdk.MessagePack
+  nameWithType: AlgoSdk.MessagePack
+  fullName: AlgoSdk.MessagePack
+- uid: AlgoSdk.AlgoApiObjectFormatter`1.Serialize*
+  commentId: Overload:AlgoSdk.AlgoApiObjectFormatter`1.Serialize
+  name: Serialize
+  nameWithType: AlgoApiObjectFormatter<T>.Serialize
+  fullName: AlgoSdk.AlgoApiObjectFormatter<T>.Serialize
+  nameWithType.vb: AlgoApiObjectFormatter(Of T).Serialize
+  fullName.vb: AlgoSdk.AlgoApiObjectFormatter(Of T).Serialize
+- uid: AlgoSdk.IAlgoApiFormatter{{T}}.Serialize(AlgoSdk.Json.JsonWriter@,{T})
+  commentId: M:AlgoSdk.IAlgoApiFormatter{`0}.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+  parent: AlgoSdk.IAlgoApiFormatter{{T}}
+  definition: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+  name: Serialize(JsonWriter, T)
+  nameWithType: IAlgoApiFormatter<T>.Serialize(JsonWriter, T)
+  fullName: AlgoSdk.IAlgoApiFormatter<T>.Serialize(AlgoSdk.Json.JsonWriter, T)
+  nameWithType.vb: IAlgoApiFormatter(Of T).Serialize(JsonWriter, T)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of T).Serialize(AlgoSdk.Json.JsonWriter, T)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+    name: Serialize
+    nameWithType: IAlgoApiFormatter<T>.Serialize
+    fullName: AlgoSdk.IAlgoApiFormatter<T>.Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonWriter
+    name: JsonWriter
+    nameWithType: JsonWriter
+    fullName: AlgoSdk.Json.JsonWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+    name: Serialize
+    nameWithType: IAlgoApiFormatter(Of T).Serialize
+    fullName: AlgoSdk.IAlgoApiFormatter(Of T).Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonWriter
+    name: JsonWriter
+    nameWithType: JsonWriter
+    fullName: AlgoSdk.Json.JsonWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Json.JsonWriter
+  commentId: T:AlgoSdk.Json.JsonWriter
+  parent: AlgoSdk.Json
+  name: JsonWriter
+  nameWithType: JsonWriter
+  fullName: AlgoSdk.Json.JsonWriter
+- uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+  commentId: M:AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+  name: Serialize(JsonWriter, T)
+  nameWithType: IAlgoApiFormatter<T>.Serialize(JsonWriter, T)
+  fullName: AlgoSdk.IAlgoApiFormatter<T>.Serialize(AlgoSdk.Json.JsonWriter, T)
+  nameWithType.vb: IAlgoApiFormatter(Of T).Serialize(JsonWriter, T)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of T).Serialize(AlgoSdk.Json.JsonWriter, T)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+    name: Serialize
+    nameWithType: IAlgoApiFormatter<T>.Serialize
+    fullName: AlgoSdk.IAlgoApiFormatter<T>.Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonWriter
+    name: JsonWriter
+    nameWithType: JsonWriter
+    fullName: AlgoSdk.Json.JsonWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.Json.JsonWriter@,`0)
+    name: Serialize
+    nameWithType: IAlgoApiFormatter(Of T).Serialize
+    fullName: AlgoSdk.IAlgoApiFormatter(Of T).Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.Json.JsonWriter
+    name: JsonWriter
+    nameWithType: JsonWriter
+    fullName: AlgoSdk.Json.JsonWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.IAlgoApiFormatter{{T}}.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,{T})
+  commentId: M:AlgoSdk.IAlgoApiFormatter{`0}.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+  parent: AlgoSdk.IAlgoApiFormatter{{T}}
+  definition: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+  name: Serialize(MessagePackWriter, T)
+  nameWithType: IAlgoApiFormatter<T>.Serialize(MessagePackWriter, T)
+  fullName: AlgoSdk.IAlgoApiFormatter<T>.Serialize(AlgoSdk.MessagePack.MessagePackWriter, T)
+  nameWithType.vb: IAlgoApiFormatter(Of T).Serialize(MessagePackWriter, T)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of T).Serialize(AlgoSdk.MessagePack.MessagePackWriter, T)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+    name: Serialize
+    nameWithType: IAlgoApiFormatter<T>.Serialize
+    fullName: AlgoSdk.IAlgoApiFormatter<T>.Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackWriter
+    name: MessagePackWriter
+    nameWithType: MessagePackWriter
+    fullName: AlgoSdk.MessagePack.MessagePackWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+    name: Serialize
+    nameWithType: IAlgoApiFormatter(Of T).Serialize
+    fullName: AlgoSdk.IAlgoApiFormatter(Of T).Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackWriter
+    name: MessagePackWriter
+    nameWithType: MessagePackWriter
+    fullName: AlgoSdk.MessagePack.MessagePackWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.MessagePack.MessagePackWriter
+  commentId: T:AlgoSdk.MessagePack.MessagePackWriter
+  parent: AlgoSdk.MessagePack
+  name: MessagePackWriter
+  nameWithType: MessagePackWriter
+  fullName: AlgoSdk.MessagePack.MessagePackWriter
+- uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+  commentId: M:AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+  name: Serialize(MessagePackWriter, T)
+  nameWithType: IAlgoApiFormatter<T>.Serialize(MessagePackWriter, T)
+  fullName: AlgoSdk.IAlgoApiFormatter<T>.Serialize(AlgoSdk.MessagePack.MessagePackWriter, T)
+  nameWithType.vb: IAlgoApiFormatter(Of T).Serialize(MessagePackWriter, T)
+  fullName.vb: AlgoSdk.IAlgoApiFormatter(Of T).Serialize(AlgoSdk.MessagePack.MessagePackWriter, T)
+  spec.csharp:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+    name: Serialize
+    nameWithType: IAlgoApiFormatter<T>.Serialize
+    fullName: AlgoSdk.IAlgoApiFormatter<T>.Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackWriter
+    name: MessagePackWriter
+    nameWithType: MessagePackWriter
+    fullName: AlgoSdk.MessagePack.MessagePackWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AlgoSdk.IAlgoApiFormatter`1.Serialize(AlgoSdk.MessagePack.MessagePackWriter@,`0)
+    name: Serialize
+    nameWithType: IAlgoApiFormatter(Of T).Serialize
+    fullName: AlgoSdk.IAlgoApiFormatter(Of T).Serialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.MessagePack.MessagePackWriter
+    name: MessagePackWriter
+    nameWithType: MessagePackWriter
+    fullName: AlgoSdk.MessagePack.MessagePackWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

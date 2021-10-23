@@ -1,0 +1,70 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.AlgoApiField`1.FieldSetter`1
+  commentId: T:AlgoSdk.AlgoApiField`1.FieldSetter`1
+  id: AlgoApiField`1.FieldSetter`1
+  parent: AlgoSdk
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: AlgoApiField<TAlgoApiObject>.FieldSetter<T>
+  nameWithType: AlgoApiField<TAlgoApiObject>.FieldSetter<T>
+  fullName: AlgoSdk.AlgoApiField<TAlgoApiObject>.FieldSetter<T>
+  type: Delegate
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/AlgoApiField.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: FieldSetter
+    path: ../CareBoo.AlgoSdk/Serialization/AlgoApiField.cs
+    startLine: 33
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public delegate void FieldSetter<T>(ref TAlgoApiObject messagePackObject, T value);
+    parameters:
+    - id: messagePackObject
+      type: '{TAlgoApiObject}'
+    - id: value
+      type: '{T}'
+    typeParameters:
+    - id: T
+    content.vb: Public Delegate Sub FieldSetter(Of T)(ByRef messagePackObject As TAlgoApiObject, value As T)
+  nameWithType.vb: AlgoApiField(Of TAlgoApiObject).FieldSetter(Of T)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+  fullName.vb: AlgoSdk.AlgoApiField(Of TAlgoApiObject).FieldSetter(Of T)
+  name.vb: AlgoApiField(Of TAlgoApiObject).FieldSetter(Of T)
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: '{TAlgoApiObject}'
+  commentId: '!:TAlgoApiObject'
+  definition: TAlgoApiObject
+  name: TAlgoApiObject
+  nameWithType: TAlgoApiObject
+  fullName: TAlgoApiObject
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: TAlgoApiObject
+  name: TAlgoApiObject
+  nameWithType: TAlgoApiObject
+  fullName: TAlgoApiObject
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

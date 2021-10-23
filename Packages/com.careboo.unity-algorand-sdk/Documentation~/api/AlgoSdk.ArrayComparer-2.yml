@@ -1,0 +1,929 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.ArrayComparer`2
+  commentId: T:AlgoSdk.ArrayComparer`2
+  id: ArrayComparer`2
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.ArrayComparer`2.Equals(`0[],`0[])
+  - AlgoSdk.ArrayComparer`2.GetHashCode(`0[])
+  - AlgoSdk.ArrayComparer`2.Instance
+  - AlgoSdk.ArrayComparer`2.System#Collections#Generic#IEqualityComparer{T[]}#Equals(`0[],`0[])
+  - AlgoSdk.ArrayComparer`2.System#Collections#Generic#IEqualityComparer{T[]}#GetHashCode(`0[])
+  langs:
+  - csharp
+  - vb
+  name: ArrayComparer<T, TComparer>
+  nameWithType: ArrayComparer<T, TComparer>
+  fullName: AlgoSdk.ArrayComparer<T, TComparer>
+  type: Struct
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/EqualityComparers.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ArrayComparer
+    path: ../CareBoo.AlgoSdk/Serialization/EqualityComparers.cs
+    startLine: 44
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: 'public struct ArrayComparer<T, TComparer> : IEqualityComparer<T[]> where TComparer : struct, IEqualityComparer<T>'
+    typeParameters:
+    - id: T
+    - id: TComparer
+    content.vb: >-
+      Public Structure ArrayComparer(Of T, TComparer As {Structure, IEqualityComparer(Of T)})
+          Implements IEqualityComparer(Of T())
+  implements:
+  - System.Collections.Generic.IEqualityComparer{{T}[]}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  nameWithType.vb: ArrayComparer(Of T, TComparer)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+  fullName.vb: AlgoSdk.ArrayComparer(Of T, TComparer)
+  name.vb: ArrayComparer(Of T, TComparer)
+- uid: AlgoSdk.ArrayComparer`2.System#Collections#Generic#IEqualityComparer{T[]}#Equals(`0[],`0[])
+  commentId: M:AlgoSdk.ArrayComparer`2.System#Collections#Generic#IEqualityComparer{T[]}#Equals(`0[],`0[])
+  id: System#Collections#Generic#IEqualityComparer{T[]}#Equals(`0[],`0[])
+  isEii: true
+  parent: AlgoSdk.ArrayComparer`2
+  langs:
+  - csharp
+  - vb
+  name: IEqualityComparer<T[]>.Equals(T[], T[])
+  nameWithType: ArrayComparer<T, TComparer>.IEqualityComparer<T[]>.Equals(T[], T[])
+  fullName: AlgoSdk.ArrayComparer<T, TComparer>.System.Collections.Generic.IEqualityComparer<T[]>.Equals(T[], T[])
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/EqualityComparers.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: System.Collections.Generic.IEqualityComparer<T[]>.Equals
+    path: ../CareBoo.AlgoSdk/Serialization/EqualityComparers.cs
+    startLine: 47
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: bool IEqualityComparer<T[]>.Equals(T[] x, T[] y)
+    parameters:
+    - id: x
+      type: '{T}[]'
+    - id: y
+      type: '{T}[]'
+    return:
+      type: System.Boolean
+    content.vb: Function System.Collections.Generic.IEqualityComparer<T[]>.Equals(x As T(), y As T()) As Boolean Implements IEqualityComparer(Of T()).Equals
+  overload: AlgoSdk.ArrayComparer`2.System#Collections#Generic#IEqualityComparer{T[]}#Equals*
+  implements:
+  - System.Collections.Generic.IEqualityComparer{{T}[]}.Equals({T}[],{T}[])
+  nameWithType.vb: ArrayComparer(Of T, TComparer).System.Collections.Generic.IEqualityComparer<T[]>.Equals(T(), T())
+  fullName.vb: AlgoSdk.ArrayComparer(Of T, TComparer).System.Collections.Generic.IEqualityComparer<T[]>.Equals(T(), T())
+  name.vb: System.Collections.Generic.IEqualityComparer<T[]>.Equals(T(), T())
+- uid: AlgoSdk.ArrayComparer`2.System#Collections#Generic#IEqualityComparer{T[]}#GetHashCode(`0[])
+  commentId: M:AlgoSdk.ArrayComparer`2.System#Collections#Generic#IEqualityComparer{T[]}#GetHashCode(`0[])
+  id: System#Collections#Generic#IEqualityComparer{T[]}#GetHashCode(`0[])
+  isEii: true
+  parent: AlgoSdk.ArrayComparer`2
+  langs:
+  - csharp
+  - vb
+  name: IEqualityComparer<T[]>.GetHashCode(T[])
+  nameWithType: ArrayComparer<T, TComparer>.IEqualityComparer<T[]>.GetHashCode(T[])
+  fullName: AlgoSdk.ArrayComparer<T, TComparer>.System.Collections.Generic.IEqualityComparer<T[]>.GetHashCode(T[])
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/EqualityComparers.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: System.Collections.Generic.IEqualityComparer<T[]>.GetHashCode
+    path: ../CareBoo.AlgoSdk/Serialization/EqualityComparers.cs
+    startLine: 48
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: int IEqualityComparer<T[]>.GetHashCode(T[] obj)
+    parameters:
+    - id: obj
+      type: '{T}[]'
+    return:
+      type: System.Int32
+    content.vb: Function System.Collections.Generic.IEqualityComparer<T[]>.GetHashCode(obj As T()) As Integer Implements IEqualityComparer(Of T()).GetHashCode
+  overload: AlgoSdk.ArrayComparer`2.System#Collections#Generic#IEqualityComparer{T[]}#GetHashCode*
+  implements:
+  - System.Collections.Generic.IEqualityComparer{{T}[]}.GetHashCode({T}[])
+  nameWithType.vb: ArrayComparer(Of T, TComparer).System.Collections.Generic.IEqualityComparer<T[]>.GetHashCode(T())
+  fullName.vb: AlgoSdk.ArrayComparer(Of T, TComparer).System.Collections.Generic.IEqualityComparer<T[]>.GetHashCode(T())
+  name.vb: System.Collections.Generic.IEqualityComparer<T[]>.GetHashCode(T())
+- uid: AlgoSdk.ArrayComparer`2.Equals(`0[],`0[])
+  commentId: M:AlgoSdk.ArrayComparer`2.Equals(`0[],`0[])
+  id: Equals(`0[],`0[])
+  parent: AlgoSdk.ArrayComparer`2
+  langs:
+  - csharp
+  - vb
+  name: Equals(T[], T[])
+  nameWithType: ArrayComparer<T, TComparer>.Equals(T[], T[])
+  fullName: AlgoSdk.ArrayComparer<T, TComparer>.Equals(T[], T[])
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/EqualityComparers.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Equals
+    path: ../CareBoo.AlgoSdk/Serialization/EqualityComparers.cs
+    startLine: 50
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public static bool Equals(T[] x, T[] y)
+    parameters:
+    - id: x
+      type: '{T}[]'
+    - id: y
+      type: '{T}[]'
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function Equals(x As T(), y As T()) As Boolean
+  overload: AlgoSdk.ArrayComparer`2.Equals*
+  nameWithType.vb: ArrayComparer(Of T, TComparer).Equals(T(), T())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AlgoSdk.ArrayComparer(Of T, TComparer).Equals(T(), T())
+  name.vb: Equals(T(), T())
+- uid: AlgoSdk.ArrayComparer`2.GetHashCode(`0[])
+  commentId: M:AlgoSdk.ArrayComparer`2.GetHashCode(`0[])
+  id: GetHashCode(`0[])
+  parent: AlgoSdk.ArrayComparer`2
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode(T[])
+  nameWithType: ArrayComparer<T, TComparer>.GetHashCode(T[])
+  fullName: AlgoSdk.ArrayComparer<T, TComparer>.GetHashCode(T[])
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/EqualityComparers.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: GetHashCode
+    path: ../CareBoo.AlgoSdk/Serialization/EqualityComparers.cs
+    startLine: 62
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public static int GetHashCode(T[] obj)
+    parameters:
+    - id: obj
+      type: '{T}[]'
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function GetHashCode(obj As T()) As Integer
+  overload: AlgoSdk.ArrayComparer`2.GetHashCode*
+  nameWithType.vb: ArrayComparer(Of T, TComparer).GetHashCode(T())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: AlgoSdk.ArrayComparer(Of T, TComparer).GetHashCode(T())
+  name.vb: GetHashCode(T())
+- uid: AlgoSdk.ArrayComparer`2.Instance
+  commentId: F:AlgoSdk.ArrayComparer`2.Instance
+  id: Instance
+  parent: AlgoSdk.ArrayComparer`2
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ArrayComparer<T, TComparer>.Instance
+  fullName: AlgoSdk.ArrayComparer<T, TComparer>.Instance
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/EqualityComparers.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Instance
+    path: ../CareBoo.AlgoSdk/Serialization/EqualityComparers.cs
+    startLine: 67
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public static readonly ArrayComparer<T, TComparer> Instance
+    return:
+      type: AlgoSdk.ArrayComparer`2
+    content.vb: Public Shared ReadOnly Instance As ArrayComparer(Of T, TComparer)
+  nameWithType.vb: ArrayComparer(Of T, TComparer).Instance
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+  fullName.vb: AlgoSdk.ArrayComparer(Of T, TComparer).Instance
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: System.Collections.Generic.IEqualityComparer{{T}[]}
+  commentId: T:System.Collections.Generic.IEqualityComparer{`0[]}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEqualityComparer`1
+  name: IEqualityComparer<T[]>
+  nameWithType: IEqualityComparer<T[]>
+  fullName: System.Collections.Generic.IEqualityComparer<T[]>
+  nameWithType.vb: IEqualityComparer(Of T())
+  fullName.vb: System.Collections.Generic.IEqualityComparer(Of T())
+  name.vb: IEqualityComparer(Of T())
+  spec.csharp:
+  - uid: System.Collections.Generic.IEqualityComparer`1
+    name: IEqualityComparer
+    nameWithType: IEqualityComparer
+    fullName: System.Collections.Generic.IEqualityComparer
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEqualityComparer`1
+    name: IEqualityComparer
+    nameWithType: IEqualityComparer
+    fullName: System.Collections.Generic.IEqualityComparer
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEqualityComparer`1
+  commentId: T:System.Collections.Generic.IEqualityComparer`1
+  isExternal: true
+  name: IEqualityComparer<T>
+  nameWithType: IEqualityComparer<T>
+  fullName: System.Collections.Generic.IEqualityComparer<T>
+  nameWithType.vb: IEqualityComparer(Of T)
+  fullName.vb: System.Collections.Generic.IEqualityComparer(Of T)
+  name.vb: IEqualityComparer(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEqualityComparer`1
+    name: IEqualityComparer
+    nameWithType: IEqualityComparer
+    fullName: System.Collections.Generic.IEqualityComparer
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEqualityComparer`1
+    name: IEqualityComparer
+    nameWithType: IEqualityComparer
+    fullName: System.Collections.Generic.IEqualityComparer
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AlgoSdk.ArrayComparer`2.System#Collections#Generic#IEqualityComparer{T[]}#Equals*
+  commentId: Overload:AlgoSdk.ArrayComparer`2.System#Collections#Generic#IEqualityComparer{T[]}#Equals
+  name: IEqualityComparer<T[]>.Equals
+  nameWithType: ArrayComparer<T, TComparer>.IEqualityComparer<T[]>.Equals
+  fullName: AlgoSdk.ArrayComparer<T, TComparer>.System.Collections.Generic.IEqualityComparer<T[]>.Equals
+  nameWithType.vb: ArrayComparer(Of T, TComparer).System.Collections.Generic.IEqualityComparer<T[]>.Equals
+  fullName.vb: AlgoSdk.ArrayComparer(Of T, TComparer).System.Collections.Generic.IEqualityComparer<T[]>.Equals
+  name.vb: System.Collections.Generic.IEqualityComparer<T[]>.Equals
+- uid: System.Collections.Generic.IEqualityComparer{{T}[]}.Equals({T}[],{T}[])
+  commentId: M:System.Collections.Generic.IEqualityComparer{`0[]}.Equals(`0[],`0[])
+  parent: System.Collections.Generic.IEqualityComparer{{T}[]}
+  definition: System.Collections.Generic.IEqualityComparer`1.Equals(`0,`0)
+  name: Equals(T[], T[])
+  nameWithType: IEqualityComparer<T[]>.Equals(T[], T[])
+  fullName: System.Collections.Generic.IEqualityComparer<T[]>.Equals(T[], T[])
+  nameWithType.vb: IEqualityComparer(Of T()).Equals(T(), T())
+  fullName.vb: System.Collections.Generic.IEqualityComparer(Of T()).Equals(T(), T())
+  name.vb: Equals(T(), T())
+  spec.csharp:
+  - uid: System.Collections.Generic.IEqualityComparer`1.Equals(`0,`0)
+    name: Equals
+    nameWithType: IEqualityComparer<T[]>.Equals
+    fullName: System.Collections.Generic.IEqualityComparer<T[]>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEqualityComparer`1.Equals(`0,`0)
+    name: Equals
+    nameWithType: IEqualityComparer(Of T()).Equals
+    fullName: System.Collections.Generic.IEqualityComparer(Of T()).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: '{T}[]'
+  isExternal: true
+  name: T[]
+  nameWithType: T[]
+  fullName: T[]
+  nameWithType.vb: T()
+  fullName.vb: T()
+  name.vb: T()
+  spec.csharp:
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.Generic.IEqualityComparer`1.Equals(`0,`0)
+  commentId: M:System.Collections.Generic.IEqualityComparer`1.Equals(`0,`0)
+  isExternal: true
+  name: Equals(T, T)
+  nameWithType: IEqualityComparer<T>.Equals(T, T)
+  fullName: System.Collections.Generic.IEqualityComparer<T>.Equals(T, T)
+  nameWithType.vb: IEqualityComparer(Of T).Equals(T, T)
+  fullName.vb: System.Collections.Generic.IEqualityComparer(Of T).Equals(T, T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEqualityComparer`1.Equals(`0,`0)
+    name: Equals
+    nameWithType: IEqualityComparer<T>.Equals
+    fullName: System.Collections.Generic.IEqualityComparer<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEqualityComparer`1.Equals(`0,`0)
+    name: Equals
+    nameWithType: IEqualityComparer(Of T).Equals
+    fullName: System.Collections.Generic.IEqualityComparer(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.ArrayComparer`2.System#Collections#Generic#IEqualityComparer{T[]}#GetHashCode*
+  commentId: Overload:AlgoSdk.ArrayComparer`2.System#Collections#Generic#IEqualityComparer{T[]}#GetHashCode
+  name: IEqualityComparer<T[]>.GetHashCode
+  nameWithType: ArrayComparer<T, TComparer>.IEqualityComparer<T[]>.GetHashCode
+  fullName: AlgoSdk.ArrayComparer<T, TComparer>.System.Collections.Generic.IEqualityComparer<T[]>.GetHashCode
+  nameWithType.vb: ArrayComparer(Of T, TComparer).System.Collections.Generic.IEqualityComparer<T[]>.GetHashCode
+  fullName.vb: AlgoSdk.ArrayComparer(Of T, TComparer).System.Collections.Generic.IEqualityComparer<T[]>.GetHashCode
+  name.vb: System.Collections.Generic.IEqualityComparer<T[]>.GetHashCode
+- uid: System.Collections.Generic.IEqualityComparer{{T}[]}.GetHashCode({T}[])
+  commentId: M:System.Collections.Generic.IEqualityComparer{`0[]}.GetHashCode(`0[])
+  parent: System.Collections.Generic.IEqualityComparer{{T}[]}
+  definition: System.Collections.Generic.IEqualityComparer`1.GetHashCode(`0)
+  name: GetHashCode(T[])
+  nameWithType: IEqualityComparer<T[]>.GetHashCode(T[])
+  fullName: System.Collections.Generic.IEqualityComparer<T[]>.GetHashCode(T[])
+  nameWithType.vb: IEqualityComparer(Of T()).GetHashCode(T())
+  fullName.vb: System.Collections.Generic.IEqualityComparer(Of T()).GetHashCode(T())
+  name.vb: GetHashCode(T())
+  spec.csharp:
+  - uid: System.Collections.Generic.IEqualityComparer`1.GetHashCode(`0)
+    name: GetHashCode
+    nameWithType: IEqualityComparer<T[]>.GetHashCode
+    fullName: System.Collections.Generic.IEqualityComparer<T[]>.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEqualityComparer`1.GetHashCode(`0)
+    name: GetHashCode
+    nameWithType: IEqualityComparer(Of T()).GetHashCode
+    fullName: System.Collections.Generic.IEqualityComparer(Of T()).GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Collections.Generic.IEqualityComparer`1.GetHashCode(`0)
+  commentId: M:System.Collections.Generic.IEqualityComparer`1.GetHashCode(`0)
+  isExternal: true
+  name: GetHashCode(T)
+  nameWithType: IEqualityComparer<T>.GetHashCode(T)
+  fullName: System.Collections.Generic.IEqualityComparer<T>.GetHashCode(T)
+  nameWithType.vb: IEqualityComparer(Of T).GetHashCode(T)
+  fullName.vb: System.Collections.Generic.IEqualityComparer(Of T).GetHashCode(T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEqualityComparer`1.GetHashCode(`0)
+    name: GetHashCode
+    nameWithType: IEqualityComparer<T>.GetHashCode
+    fullName: System.Collections.Generic.IEqualityComparer<T>.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEqualityComparer`1.GetHashCode(`0)
+    name: GetHashCode
+    nameWithType: IEqualityComparer(Of T).GetHashCode
+    fullName: System.Collections.Generic.IEqualityComparer(Of T).GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.ArrayComparer`2.Equals*
+  commentId: Overload:AlgoSdk.ArrayComparer`2.Equals
+  name: Equals
+  nameWithType: ArrayComparer<T, TComparer>.Equals
+  fullName: AlgoSdk.ArrayComparer<T, TComparer>.Equals
+  nameWithType.vb: ArrayComparer(Of T, TComparer).Equals
+  fullName.vb: AlgoSdk.ArrayComparer(Of T, TComparer).Equals
+- uid: AlgoSdk.ArrayComparer`2.GetHashCode*
+  commentId: Overload:AlgoSdk.ArrayComparer`2.GetHashCode
+  name: GetHashCode
+  nameWithType: ArrayComparer<T, TComparer>.GetHashCode
+  fullName: AlgoSdk.ArrayComparer<T, TComparer>.GetHashCode
+  nameWithType.vb: ArrayComparer(Of T, TComparer).GetHashCode
+  fullName.vb: AlgoSdk.ArrayComparer(Of T, TComparer).GetHashCode
+- uid: AlgoSdk.ArrayComparer`2
+  commentId: T:AlgoSdk.ArrayComparer`2
+  parent: AlgoSdk
+  name: ArrayComparer<T, TComparer>
+  nameWithType: ArrayComparer<T, TComparer>
+  fullName: AlgoSdk.ArrayComparer<T, TComparer>
+  nameWithType.vb: ArrayComparer(Of T, TComparer)
+  fullName.vb: AlgoSdk.ArrayComparer(Of T, TComparer)
+  name.vb: ArrayComparer(Of T, TComparer)
+  spec.csharp:
+  - uid: AlgoSdk.ArrayComparer`2
+    name: ArrayComparer
+    nameWithType: ArrayComparer
+    fullName: AlgoSdk.ArrayComparer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TComparer
+    nameWithType: TComparer
+    fullName: TComparer
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.ArrayComparer`2
+    name: ArrayComparer
+    nameWithType: ArrayComparer
+    fullName: AlgoSdk.ArrayComparer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TComparer
+    nameWithType: TComparer
+    fullName: TComparer
+  - name: )
+    nameWithType: )
+    fullName: )

@@ -85,7 +85,7 @@ namespace AlgoSdk
         }
 
         [AlgoApiField("id", "id", readOnly: true)]
-        public Sha512_256_Hash Id
+        public TransactionId Id
         {
             get => HeaderParams.Id;
             set => HeaderParams.Id = value;
@@ -176,6 +176,12 @@ namespace AlgoSdk
         }
     }
 
+    /// <summary>
+    /// Contains parameters used in all transaction types.
+    /// </summary>
+    /// <remarks>
+    /// For the most part, this is used internally in the sdk and shouldn't be used directly.
+    /// </remarks>
     public struct TransactionHeader
         : IEquatable<TransactionHeader>
     {
@@ -192,7 +198,7 @@ namespace AlgoSdk
         public byte[] Note;
         public Address RekeyTo;
 
-        public Sha512_256_Hash Id;
+        public TransactionId Id;
         public Address AuthAddress;
         public ulong CloseRewards;
         public ulong ClosingAmount;

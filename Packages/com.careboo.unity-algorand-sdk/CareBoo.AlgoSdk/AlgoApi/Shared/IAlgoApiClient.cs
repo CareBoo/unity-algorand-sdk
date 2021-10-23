@@ -1,15 +1,23 @@
-using System;
-using Cysharp.Threading.Tasks;
-using Unity.Collections;
-
 namespace AlgoSdk
 {
     public interface IAlgoApiClient
     {
+        /// <summary>
+        /// Address of the service, including the port
+        /// </summary>
+        /// <remarks>
+        /// e.g. <c>"http://localhost:4001"</c>
+        /// </remarks>
         string Address { get; }
 
+        /// <summary>
+        /// Token used in authenticating to the service
+        /// </summary>
         string Token { get; }
 
+        /// <summary>
+        /// Request header to use for the authenticating <see cref="Token"/>
+        /// </summary>
         string TokenHeader { get; }
     }
 

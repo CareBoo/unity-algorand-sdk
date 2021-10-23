@@ -10,6 +10,8 @@ namespace AlgoSdk
         : IEquatable<Optional<T>>
         where T : struct, IEquatable<T>
     {
+        public static Optional<T> Empty => default;
+
         public readonly T Value;
         public readonly bool HasValue;
 

@@ -1,0 +1,877 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.SignProgramMultisigRequest
+  commentId: T:AlgoSdk.SignProgramMultisigRequest
+  id: SignProgramMultisigRequest
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.SignProgramMultisigRequest.Address
+  - AlgoSdk.SignProgramMultisigRequest.Data
+  - AlgoSdk.SignProgramMultisigRequest.Equals(AlgoSdk.SignProgramMultisigRequest)
+  - AlgoSdk.SignProgramMultisigRequest.Multisig
+  - AlgoSdk.SignProgramMultisigRequest.PublicKey
+  - AlgoSdk.SignProgramMultisigRequest.WalletHandleToken
+  - AlgoSdk.SignProgramMultisigRequest.WalletPassword
+  langs:
+  - csharp
+  - vb
+  name: SignProgramMultisigRequest
+  nameWithType: SignProgramMultisigRequest
+  fullName: AlgoSdk.SignProgramMultisigRequest
+  type: Struct
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignProgramMultisigRequest.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: SignProgramMultisigRequest
+    path: ../CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignProgramMultisigRequest.cs
+    startLine: 6
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: 'public struct SignProgramMultisigRequest : IEquatable<SignProgramMultisigRequest>'
+    content.vb: >-
+      Public Structure SignProgramMultisigRequest
+          Implements IEquatable(Of SignProgramMultisigRequest)
+  implements:
+  - System.IEquatable{AlgoSdk.SignProgramMultisigRequest}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: AlgoSdk.SignProgramMultisigRequest.Address
+  commentId: F:AlgoSdk.SignProgramMultisigRequest.Address
+  id: Address
+  parent: AlgoSdk.SignProgramMultisigRequest
+  langs:
+  - csharp
+  - vb
+  name: Address
+  nameWithType: SignProgramMultisigRequest.Address
+  fullName: AlgoSdk.SignProgramMultisigRequest.Address
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignProgramMultisigRequest.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Address
+    path: ../CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignProgramMultisigRequest.cs
+    startLine: 11
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("address", null, false)]
+
+      public Address Address
+    return:
+      type: AlgoSdk.Address
+    content.vb: >-
+      <AlgoApiField("address", Nothing, False)>
+
+      Public Address As Address
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: address
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.SignProgramMultisigRequest.Data
+  commentId: F:AlgoSdk.SignProgramMultisigRequest.Data
+  id: Data
+  parent: AlgoSdk.SignProgramMultisigRequest
+  langs:
+  - csharp
+  - vb
+  name: Data
+  nameWithType: SignProgramMultisigRequest.Data
+  fullName: AlgoSdk.SignProgramMultisigRequest.Data
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignProgramMultisigRequest.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Data
+    path: ../CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignProgramMultisigRequest.cs
+    startLine: 14
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("data", null, false)]
+
+      public byte[] Data
+    return:
+      type: System.Byte[]
+    content.vb: >-
+      <AlgoApiField("data", Nothing, False)>
+
+      Public Data As Byte()
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: data
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.SignProgramMultisigRequest.Multisig
+  commentId: F:AlgoSdk.SignProgramMultisigRequest.Multisig
+  id: Multisig
+  parent: AlgoSdk.SignProgramMultisigRequest
+  langs:
+  - csharp
+  - vb
+  name: Multisig
+  nameWithType: SignProgramMultisigRequest.Multisig
+  fullName: AlgoSdk.SignProgramMultisigRequest.Multisig
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignProgramMultisigRequest.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Multisig
+    path: ../CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignProgramMultisigRequest.cs
+    startLine: 17
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("partial_multisig", null, false)]
+
+      public Multisig Multisig
+    return:
+      type: AlgoSdk.Multisig
+    content.vb: >-
+      <AlgoApiField("partial_multisig", Nothing, False)>
+
+      Public Multisig As Multisig
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: partial_multisig
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.SignProgramMultisigRequest.PublicKey
+  commentId: F:AlgoSdk.SignProgramMultisigRequest.PublicKey
+  id: PublicKey
+  parent: AlgoSdk.SignProgramMultisigRequest
+  langs:
+  - csharp
+  - vb
+  name: PublicKey
+  nameWithType: SignProgramMultisigRequest.PublicKey
+  fullName: AlgoSdk.SignProgramMultisigRequest.PublicKey
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignProgramMultisigRequest.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: PublicKey
+    path: ../CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignProgramMultisigRequest.cs
+    startLine: 20
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("public_key", null, false)]
+
+      public Ed25519.PublicKey PublicKey
+    return:
+      type: AlgoSdk.Crypto.Ed25519.PublicKey
+    content.vb: >-
+      <AlgoApiField("public_key", Nothing, False)>
+
+      Public PublicKey As Ed25519.PublicKey
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: public_key
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.SignProgramMultisigRequest.WalletHandleToken
+  commentId: F:AlgoSdk.SignProgramMultisigRequest.WalletHandleToken
+  id: WalletHandleToken
+  parent: AlgoSdk.SignProgramMultisigRequest
+  langs:
+  - csharp
+  - vb
+  name: WalletHandleToken
+  nameWithType: SignProgramMultisigRequest.WalletHandleToken
+  fullName: AlgoSdk.SignProgramMultisigRequest.WalletHandleToken
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignProgramMultisigRequest.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: WalletHandleToken
+    path: ../CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignProgramMultisigRequest.cs
+    startLine: 23
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("wallet_handle_token", null, false)]
+
+      public FixedString128Bytes WalletHandleToken
+    return:
+      type: Unity.Collections.FixedString128Bytes
+    content.vb: >-
+      <AlgoApiField("wallet_handle_token", Nothing, False)>
+
+      Public WalletHandleToken As FixedString128Bytes
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: wallet_handle_token
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.SignProgramMultisigRequest.WalletPassword
+  commentId: F:AlgoSdk.SignProgramMultisigRequest.WalletPassword
+  id: WalletPassword
+  parent: AlgoSdk.SignProgramMultisigRequest
+  langs:
+  - csharp
+  - vb
+  name: WalletPassword
+  nameWithType: SignProgramMultisigRequest.WalletPassword
+  fullName: AlgoSdk.SignProgramMultisigRequest.WalletPassword
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignProgramMultisigRequest.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: WalletPassword
+    path: ../CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignProgramMultisigRequest.cs
+    startLine: 26
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("wallet_password", null, false)]
+
+      public FixedString128Bytes WalletPassword
+    return:
+      type: Unity.Collections.FixedString128Bytes
+    content.vb: >-
+      <AlgoApiField("wallet_password", Nothing, False)>
+
+      Public WalletPassword As FixedString128Bytes
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: wallet_password
+    - type: System.String
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.SignProgramMultisigRequest.Equals(AlgoSdk.SignProgramMultisigRequest)
+  commentId: M:AlgoSdk.SignProgramMultisigRequest.Equals(AlgoSdk.SignProgramMultisigRequest)
+  id: Equals(AlgoSdk.SignProgramMultisigRequest)
+  parent: AlgoSdk.SignProgramMultisigRequest
+  langs:
+  - csharp
+  - vb
+  name: Equals(SignProgramMultisigRequest)
+  nameWithType: SignProgramMultisigRequest.Equals(SignProgramMultisigRequest)
+  fullName: AlgoSdk.SignProgramMultisigRequest.Equals(AlgoSdk.SignProgramMultisigRequest)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignProgramMultisigRequest.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Equals
+    path: ../CareBoo.AlgoSdk/AlgoApi/Kmd/Models/Signatures/SignProgramMultisigRequest.cs
+    startLine: 28
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public bool Equals(SignProgramMultisigRequest other)
+    parameters:
+    - id: other
+      type: AlgoSdk.SignProgramMultisigRequest
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As SignProgramMultisigRequest) As Boolean
+  overload: AlgoSdk.SignProgramMultisigRequest.Equals*
+  implements:
+  - System.IEquatable{AlgoSdk.SignProgramMultisigRequest}.Equals(AlgoSdk.SignProgramMultisigRequest)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: System.IEquatable{AlgoSdk.SignProgramMultisigRequest}
+  commentId: T:System.IEquatable{AlgoSdk.SignProgramMultisigRequest}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<SignProgramMultisigRequest>
+  nameWithType: IEquatable<SignProgramMultisigRequest>
+  fullName: System.IEquatable<AlgoSdk.SignProgramMultisigRequest>
+  nameWithType.vb: IEquatable(Of SignProgramMultisigRequest)
+  fullName.vb: System.IEquatable(Of AlgoSdk.SignProgramMultisigRequest)
+  name.vb: IEquatable(Of SignProgramMultisigRequest)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AlgoSdk.SignProgramMultisigRequest
+    name: SignProgramMultisigRequest
+    nameWithType: SignProgramMultisigRequest
+    fullName: AlgoSdk.SignProgramMultisigRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AlgoSdk.SignProgramMultisigRequest
+    name: SignProgramMultisigRequest
+    nameWithType: SignProgramMultisigRequest
+    fullName: AlgoSdk.SignProgramMultisigRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AlgoSdk.Address
+  commentId: T:AlgoSdk.Address
+  parent: AlgoSdk
+  name: Address
+  nameWithType: Address
+  fullName: AlgoSdk.Address
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: AlgoSdk.Multisig
+  commentId: T:AlgoSdk.Multisig
+  parent: AlgoSdk
+  name: Multisig
+  nameWithType: Multisig
+  fullName: AlgoSdk.Multisig
+- uid: AlgoSdk.Crypto.Ed25519.PublicKey
+  commentId: T:AlgoSdk.Crypto.Ed25519.PublicKey
+  parent: AlgoSdk.Crypto
+  name: Ed25519.PublicKey
+  nameWithType: Ed25519.PublicKey
+  fullName: AlgoSdk.Crypto.Ed25519.PublicKey
+- uid: AlgoSdk.Crypto
+  commentId: N:AlgoSdk.Crypto
+  name: AlgoSdk.Crypto
+  nameWithType: AlgoSdk.Crypto
+  fullName: AlgoSdk.Crypto
+- uid: Unity.Collections.FixedString128Bytes
+  commentId: T:Unity.Collections.FixedString128Bytes
+  parent: Unity.Collections
+  name: FixedString128Bytes
+  nameWithType: FixedString128Bytes
+  fullName: Unity.Collections.FixedString128Bytes
+- uid: Unity.Collections
+  commentId: N:Unity.Collections
+  name: Unity.Collections
+  nameWithType: Unity.Collections
+  fullName: Unity.Collections
+- uid: AlgoSdk.SignProgramMultisigRequest.Equals*
+  commentId: Overload:AlgoSdk.SignProgramMultisigRequest.Equals
+  name: Equals
+  nameWithType: SignProgramMultisigRequest.Equals
+  fullName: AlgoSdk.SignProgramMultisigRequest.Equals
+- uid: System.IEquatable{AlgoSdk.SignProgramMultisigRequest}.Equals(AlgoSdk.SignProgramMultisigRequest)
+  commentId: M:System.IEquatable{AlgoSdk.SignProgramMultisigRequest}.Equals(AlgoSdk.SignProgramMultisigRequest)
+  parent: System.IEquatable{AlgoSdk.SignProgramMultisigRequest}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(SignProgramMultisigRequest)
+  nameWithType: IEquatable<SignProgramMultisigRequest>.Equals(SignProgramMultisigRequest)
+  fullName: System.IEquatable<AlgoSdk.SignProgramMultisigRequest>.Equals(AlgoSdk.SignProgramMultisigRequest)
+  nameWithType.vb: IEquatable(Of SignProgramMultisigRequest).Equals(SignProgramMultisigRequest)
+  fullName.vb: System.IEquatable(Of AlgoSdk.SignProgramMultisigRequest).Equals(AlgoSdk.SignProgramMultisigRequest)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<SignProgramMultisigRequest>.Equals
+    fullName: System.IEquatable<AlgoSdk.SignProgramMultisigRequest>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.SignProgramMultisigRequest
+    name: SignProgramMultisigRequest
+    nameWithType: SignProgramMultisigRequest
+    fullName: AlgoSdk.SignProgramMultisigRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of SignProgramMultisigRequest).Equals
+    fullName: System.IEquatable(Of AlgoSdk.SignProgramMultisigRequest).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.SignProgramMultisigRequest
+    name: SignProgramMultisigRequest
+    nameWithType: SignProgramMultisigRequest
+    fullName: AlgoSdk.SignProgramMultisigRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.SignProgramMultisigRequest
+  commentId: T:AlgoSdk.SignProgramMultisigRequest
+  parent: AlgoSdk
+  name: SignProgramMultisigRequest
+  nameWithType: SignProgramMultisigRequest
+  fullName: AlgoSdk.SignProgramMultisigRequest
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

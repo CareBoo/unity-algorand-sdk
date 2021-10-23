@@ -1,0 +1,442 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.Formatters
+  commentId: N:AlgoSdk.Formatters
+  id: AlgoSdk.Formatters
+  children:
+  - AlgoSdk.Formatters.AddressFormatter
+  - AlgoSdk.Formatters.ArrayFormatter`1
+  - AlgoSdk.Formatters.BoolFormatter
+  - AlgoSdk.Formatters.ByteArrayFormatter
+  - AlgoSdk.Formatters.ByteArrayFormatter`1
+  - AlgoSdk.Formatters.ByteEnumFormatter`1
+  - AlgoSdk.Formatters.ErrorResponseFormatter
+  - AlgoSdk.Formatters.FixedBytesArray`1
+  - AlgoSdk.Formatters.FixedBytesFormatter`1
+  - AlgoSdk.Formatters.FixedStringFormatter`1
+  - AlgoSdk.Formatters.GenesisHashFormatter
+  - AlgoSdk.Formatters.Int16Formatter
+  - AlgoSdk.Formatters.Int32Formatter
+  - AlgoSdk.Formatters.Int64Formatter
+  - AlgoSdk.Formatters.Int8Formatter
+  - AlgoSdk.Formatters.KeywordByteEnumFormatter`1
+  - AlgoSdk.Formatters.OnCompletionFormatter
+  - AlgoSdk.Formatters.OptionalFormatter`1
+  - AlgoSdk.Formatters.PrivateKeyFormatter
+  - AlgoSdk.Formatters.SignatureTypeFormatter
+  - AlgoSdk.Formatters.StringFormatter
+  - AlgoSdk.Formatters.TransactionIdFormatter
+  - AlgoSdk.Formatters.TransactionTypeFormatter
+  - AlgoSdk.Formatters.UInt16Formatter
+  - AlgoSdk.Formatters.UInt32Formatter
+  - AlgoSdk.Formatters.UInt64Formatter
+  - AlgoSdk.Formatters.UInt8Formatter
+  langs:
+  - csharp
+  - vb
+  name: AlgoSdk.Formatters
+  nameWithType: AlgoSdk.Formatters
+  fullName: AlgoSdk.Formatters
+  type: Namespace
+  assemblies:
+  - CareBoo.AlgoSdk
+references:
+- uid: AlgoSdk.Formatters.FixedStringFormatter`1
+  commentId: T:AlgoSdk.Formatters.FixedStringFormatter`1
+  name: FixedStringFormatter<T>
+  nameWithType: FixedStringFormatter<T>
+  fullName: AlgoSdk.Formatters.FixedStringFormatter<T>
+  nameWithType.vb: FixedStringFormatter(Of T)
+  fullName.vb: AlgoSdk.Formatters.FixedStringFormatter(Of T)
+  name.vb: FixedStringFormatter(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.Formatters.FixedStringFormatter`1
+    name: FixedStringFormatter
+    nameWithType: FixedStringFormatter
+    fullName: AlgoSdk.Formatters.FixedStringFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Formatters.FixedStringFormatter`1
+    name: FixedStringFormatter
+    nameWithType: FixedStringFormatter
+    fullName: AlgoSdk.Formatters.FixedStringFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Formatters.OptionalFormatter`1
+  commentId: T:AlgoSdk.Formatters.OptionalFormatter`1
+  name: OptionalFormatter<T>
+  nameWithType: OptionalFormatter<T>
+  fullName: AlgoSdk.Formatters.OptionalFormatter<T>
+  nameWithType.vb: OptionalFormatter(Of T)
+  fullName.vb: AlgoSdk.Formatters.OptionalFormatter(Of T)
+  name.vb: OptionalFormatter(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.Formatters.OptionalFormatter`1
+    name: OptionalFormatter
+    nameWithType: OptionalFormatter
+    fullName: AlgoSdk.Formatters.OptionalFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Formatters.OptionalFormatter`1
+    name: OptionalFormatter
+    nameWithType: OptionalFormatter
+    fullName: AlgoSdk.Formatters.OptionalFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Formatters.ByteArrayFormatter
+  commentId: T:AlgoSdk.Formatters.ByteArrayFormatter
+  name: ByteArrayFormatter
+  nameWithType: ByteArrayFormatter
+  fullName: AlgoSdk.Formatters.ByteArrayFormatter
+- uid: AlgoSdk.Formatters.ByteArrayFormatter`1
+  commentId: T:AlgoSdk.Formatters.ByteArrayFormatter`1
+  parent: AlgoSdk.Formatters
+  name: ByteArrayFormatter<TByteArray>
+  nameWithType: ByteArrayFormatter<TByteArray>
+  fullName: AlgoSdk.Formatters.ByteArrayFormatter<TByteArray>
+  nameWithType.vb: ByteArrayFormatter(Of TByteArray)
+  fullName.vb: AlgoSdk.Formatters.ByteArrayFormatter(Of TByteArray)
+  name.vb: ByteArrayFormatter(Of TByteArray)
+  spec.csharp:
+  - uid: AlgoSdk.Formatters.ByteArrayFormatter`1
+    name: ByteArrayFormatter
+    nameWithType: ByteArrayFormatter
+    fullName: AlgoSdk.Formatters.ByteArrayFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TByteArray
+    nameWithType: TByteArray
+    fullName: TByteArray
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Formatters.ByteArrayFormatter`1
+    name: ByteArrayFormatter
+    nameWithType: ByteArrayFormatter
+    fullName: AlgoSdk.Formatters.ByteArrayFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TByteArray
+    nameWithType: TByteArray
+    fullName: TByteArray
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Formatters.GenesisHashFormatter
+  commentId: T:AlgoSdk.Formatters.GenesisHashFormatter
+  parent: AlgoSdk.Formatters
+  name: GenesisHashFormatter
+  nameWithType: GenesisHashFormatter
+  fullName: AlgoSdk.Formatters.GenesisHashFormatter
+- uid: AlgoSdk.Formatters.TransactionTypeFormatter
+  commentId: T:AlgoSdk.Formatters.TransactionTypeFormatter
+  parent: AlgoSdk.Formatters
+  name: TransactionTypeFormatter
+  nameWithType: TransactionTypeFormatter
+  fullName: AlgoSdk.Formatters.TransactionTypeFormatter
+- uid: AlgoSdk.Formatters.BoolFormatter
+  commentId: T:AlgoSdk.Formatters.BoolFormatter
+  name: BoolFormatter
+  nameWithType: BoolFormatter
+  fullName: AlgoSdk.Formatters.BoolFormatter
+- uid: AlgoSdk.Formatters.PrivateKeyFormatter
+  commentId: T:AlgoSdk.Formatters.PrivateKeyFormatter
+  parent: AlgoSdk.Formatters
+  name: PrivateKeyFormatter
+  nameWithType: PrivateKeyFormatter
+  fullName: AlgoSdk.Formatters.PrivateKeyFormatter
+- uid: AlgoSdk.Formatters.ArrayFormatter`1
+  commentId: T:AlgoSdk.Formatters.ArrayFormatter`1
+  parent: AlgoSdk.Formatters
+  name: ArrayFormatter<T>
+  nameWithType: ArrayFormatter<T>
+  fullName: AlgoSdk.Formatters.ArrayFormatter<T>
+  nameWithType.vb: ArrayFormatter(Of T)
+  fullName.vb: AlgoSdk.Formatters.ArrayFormatter(Of T)
+  name.vb: ArrayFormatter(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.Formatters.ArrayFormatter`1
+    name: ArrayFormatter
+    nameWithType: ArrayFormatter
+    fullName: AlgoSdk.Formatters.ArrayFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Formatters.ArrayFormatter`1
+    name: ArrayFormatter
+    nameWithType: ArrayFormatter
+    fullName: AlgoSdk.Formatters.ArrayFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Formatters.TransactionIdFormatter
+  commentId: T:AlgoSdk.Formatters.TransactionIdFormatter
+  parent: AlgoSdk.Formatters
+  name: TransactionIdFormatter
+  nameWithType: TransactionIdFormatter
+  fullName: AlgoSdk.Formatters.TransactionIdFormatter
+- uid: AlgoSdk.Formatters.SignatureTypeFormatter
+  commentId: T:AlgoSdk.Formatters.SignatureTypeFormatter
+  parent: AlgoSdk.Formatters
+  name: SignatureTypeFormatter
+  nameWithType: SignatureTypeFormatter
+  fullName: AlgoSdk.Formatters.SignatureTypeFormatter
+- uid: AlgoSdk.Formatters.OnCompletionFormatter
+  commentId: T:AlgoSdk.Formatters.OnCompletionFormatter
+  parent: AlgoSdk.Formatters
+  name: OnCompletionFormatter
+  nameWithType: OnCompletionFormatter
+  fullName: AlgoSdk.Formatters.OnCompletionFormatter
+- uid: AlgoSdk.Formatters.AddressFormatter
+  commentId: T:AlgoSdk.Formatters.AddressFormatter
+  parent: AlgoSdk.Formatters
+  name: AddressFormatter
+  nameWithType: AddressFormatter
+  fullName: AlgoSdk.Formatters.AddressFormatter
+- uid: AlgoSdk.Formatters.UInt64Formatter
+  commentId: T:AlgoSdk.Formatters.UInt64Formatter
+  name: UInt64Formatter
+  nameWithType: UInt64Formatter
+  fullName: AlgoSdk.Formatters.UInt64Formatter
+- uid: AlgoSdk.Formatters.UInt32Formatter
+  commentId: T:AlgoSdk.Formatters.UInt32Formatter
+  name: UInt32Formatter
+  nameWithType: UInt32Formatter
+  fullName: AlgoSdk.Formatters.UInt32Formatter
+- uid: AlgoSdk.Formatters.UInt16Formatter
+  commentId: T:AlgoSdk.Formatters.UInt16Formatter
+  name: UInt16Formatter
+  nameWithType: UInt16Formatter
+  fullName: AlgoSdk.Formatters.UInt16Formatter
+- uid: AlgoSdk.Formatters.UInt8Formatter
+  commentId: T:AlgoSdk.Formatters.UInt8Formatter
+  name: UInt8Formatter
+  nameWithType: UInt8Formatter
+  fullName: AlgoSdk.Formatters.UInt8Formatter
+- uid: AlgoSdk.Formatters.Int64Formatter
+  commentId: T:AlgoSdk.Formatters.Int64Formatter
+  name: Int64Formatter
+  nameWithType: Int64Formatter
+  fullName: AlgoSdk.Formatters.Int64Formatter
+- uid: AlgoSdk.Formatters.Int32Formatter
+  commentId: T:AlgoSdk.Formatters.Int32Formatter
+  name: Int32Formatter
+  nameWithType: Int32Formatter
+  fullName: AlgoSdk.Formatters.Int32Formatter
+- uid: AlgoSdk.Formatters.Int16Formatter
+  commentId: T:AlgoSdk.Formatters.Int16Formatter
+  name: Int16Formatter
+  nameWithType: Int16Formatter
+  fullName: AlgoSdk.Formatters.Int16Formatter
+- uid: AlgoSdk.Formatters.Int8Formatter
+  commentId: T:AlgoSdk.Formatters.Int8Formatter
+  name: Int8Formatter
+  nameWithType: Int8Formatter
+  fullName: AlgoSdk.Formatters.Int8Formatter
+- uid: AlgoSdk.Formatters.FixedBytesFormatter`1
+  commentId: T:AlgoSdk.Formatters.FixedBytesFormatter`1
+  name: FixedBytesFormatter<T>
+  nameWithType: FixedBytesFormatter<T>
+  fullName: AlgoSdk.Formatters.FixedBytesFormatter<T>
+  nameWithType.vb: FixedBytesFormatter(Of T)
+  fullName.vb: AlgoSdk.Formatters.FixedBytesFormatter(Of T)
+  name.vb: FixedBytesFormatter(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.Formatters.FixedBytesFormatter`1
+    name: FixedBytesFormatter
+    nameWithType: FixedBytesFormatter
+    fullName: AlgoSdk.Formatters.FixedBytesFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Formatters.FixedBytesFormatter`1
+    name: FixedBytesFormatter
+    nameWithType: FixedBytesFormatter
+    fullName: AlgoSdk.Formatters.FixedBytesFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Formatters.FixedBytesArray`1
+  commentId: T:AlgoSdk.Formatters.FixedBytesArray`1
+  parent: AlgoSdk.Formatters
+  name: FixedBytesArray<T>
+  nameWithType: FixedBytesArray<T>
+  fullName: AlgoSdk.Formatters.FixedBytesArray<T>
+  nameWithType.vb: FixedBytesArray(Of T)
+  fullName.vb: AlgoSdk.Formatters.FixedBytesArray(Of T)
+  name.vb: FixedBytesArray(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.Formatters.FixedBytesArray`1
+    name: FixedBytesArray
+    nameWithType: FixedBytesArray
+    fullName: AlgoSdk.Formatters.FixedBytesArray
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Formatters.FixedBytesArray`1
+    name: FixedBytesArray
+    nameWithType: FixedBytesArray
+    fullName: AlgoSdk.Formatters.FixedBytesArray
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Formatters.ErrorResponseFormatter
+  commentId: T:AlgoSdk.Formatters.ErrorResponseFormatter
+  parent: AlgoSdk.Formatters
+  name: ErrorResponseFormatter
+  nameWithType: ErrorResponseFormatter
+  fullName: AlgoSdk.Formatters.ErrorResponseFormatter
+- uid: AlgoSdk.Formatters.StringFormatter
+  commentId: T:AlgoSdk.Formatters.StringFormatter
+  name: StringFormatter
+  nameWithType: StringFormatter
+  fullName: AlgoSdk.Formatters.StringFormatter
+- uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1
+  commentId: T:AlgoSdk.Formatters.KeywordByteEnumFormatter`1
+  name: KeywordByteEnumFormatter<T>
+  nameWithType: KeywordByteEnumFormatter<T>
+  fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter<T>
+  nameWithType.vb: KeywordByteEnumFormatter(Of T)
+  fullName.vb: AlgoSdk.Formatters.KeywordByteEnumFormatter(Of T)
+  name.vb: KeywordByteEnumFormatter(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1
+    name: KeywordByteEnumFormatter
+    nameWithType: KeywordByteEnumFormatter
+    fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1
+    name: KeywordByteEnumFormatter
+    nameWithType: KeywordByteEnumFormatter
+    fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Formatters.ByteEnumFormatter`1
+  commentId: T:AlgoSdk.Formatters.ByteEnumFormatter`1
+  name: ByteEnumFormatter<T>
+  nameWithType: ByteEnumFormatter<T>
+  fullName: AlgoSdk.Formatters.ByteEnumFormatter<T>
+  nameWithType.vb: ByteEnumFormatter(Of T)
+  fullName.vb: AlgoSdk.Formatters.ByteEnumFormatter(Of T)
+  name.vb: ByteEnumFormatter(Of T)
+  spec.csharp:
+  - uid: AlgoSdk.Formatters.ByteEnumFormatter`1
+    name: ByteEnumFormatter
+    nameWithType: ByteEnumFormatter
+    fullName: AlgoSdk.Formatters.ByteEnumFormatter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: AlgoSdk.Formatters.ByteEnumFormatter`1
+    name: ByteEnumFormatter
+    nameWithType: ByteEnumFormatter
+    fullName: AlgoSdk.Formatters.ByteEnumFormatter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.Formatters
+  commentId: N:AlgoSdk.Formatters
+  name: AlgoSdk.Formatters
+  nameWithType: AlgoSdk.Formatters
+  fullName: AlgoSdk.Formatters

@@ -1,0 +1,40 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.ISignature
+  commentId: T:AlgoSdk.ISignature
+  id: ISignature
+  parent: AlgoSdk
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ISignature
+  nameWithType: ISignature
+  fullName: AlgoSdk.ISignature
+  type: Interface
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/Signature/ISignature.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ISignature
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/Signature/ISignature.cs
+    startLine: 2
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public interface ISignature
+    content.vb: Public Interface ISignature
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk

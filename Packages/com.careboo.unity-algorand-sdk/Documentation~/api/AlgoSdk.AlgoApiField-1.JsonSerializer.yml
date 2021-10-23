@@ -1,0 +1,69 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.AlgoApiField`1.JsonSerializer
+  commentId: T:AlgoSdk.AlgoApiField`1.JsonSerializer
+  id: AlgoApiField`1.JsonSerializer
+  parent: AlgoSdk
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: AlgoApiField<TAlgoApiObject>.JsonSerializer
+  nameWithType: AlgoApiField<TAlgoApiObject>.JsonSerializer
+  fullName: AlgoSdk.AlgoApiField<TAlgoApiObject>.JsonSerializer
+  type: Delegate
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/AlgoApiField.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: JsonSerializer
+    path: ../CareBoo.AlgoSdk/Serialization/AlgoApiField.cs
+    startLine: 23
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public delegate void JsonSerializer(TAlgoApiObject obj, ref JsonWriter writer);
+    parameters:
+    - id: obj
+      type: '{TAlgoApiObject}'
+    - id: writer
+      type: AlgoSdk.Json.JsonWriter
+    content.vb: Public Delegate Sub JsonSerializer(obj As TAlgoApiObject, ByRef writer As JsonWriter)
+  nameWithType.vb: AlgoApiField(Of TAlgoApiObject).JsonSerializer
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+  fullName.vb: AlgoSdk.AlgoApiField(Of TAlgoApiObject).JsonSerializer
+  name.vb: AlgoApiField(Of TAlgoApiObject).JsonSerializer
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: '{TAlgoApiObject}'
+  commentId: '!:TAlgoApiObject'
+  definition: TAlgoApiObject
+  name: TAlgoApiObject
+  nameWithType: TAlgoApiObject
+  fullName: TAlgoApiObject
+- uid: AlgoSdk.Json.JsonWriter
+  commentId: T:AlgoSdk.Json.JsonWriter
+  parent: AlgoSdk.Json
+  name: JsonWriter
+  nameWithType: JsonWriter
+  fullName: AlgoSdk.Json.JsonWriter
+- uid: TAlgoApiObject
+  name: TAlgoApiObject
+  nameWithType: TAlgoApiObject
+  fullName: TAlgoApiObject
+- uid: AlgoSdk.Json
+  commentId: N:AlgoSdk.Json
+  name: AlgoSdk.Json
+  nameWithType: AlgoSdk.Json
+  fullName: AlgoSdk.Json

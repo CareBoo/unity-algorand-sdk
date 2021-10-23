@@ -1,0 +1,740 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.PaymentTxn.Params
+  commentId: T:AlgoSdk.PaymentTxn.Params
+  id: PaymentTxn.Params
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.PaymentTxn.Params.Amount
+  - AlgoSdk.PaymentTxn.Params.CloseAmount
+  - AlgoSdk.PaymentTxn.Params.CloseRemainderTo
+  - AlgoSdk.PaymentTxn.Params.Equals(AlgoSdk.PaymentTxn.Params)
+  - AlgoSdk.PaymentTxn.Params.Receiver
+  langs:
+  - csharp
+  - vb
+  name: PaymentTxn.Params
+  nameWithType: PaymentTxn.Params
+  fullName: AlgoSdk.PaymentTxn.Params
+  type: Struct
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/PaymentTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Params
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/PaymentTxn.cs
+    startLine: 191
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: 'public struct Params : IEquatable<PaymentTxn.Params>'
+    content.vb: >-
+      Public Structure Params
+          Implements IEquatable(Of PaymentTxn.Params)
+  implements:
+  - System.IEquatable{AlgoSdk.PaymentTxn.Params}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: AlgoSdk.PaymentTxn.Params.Receiver
+  commentId: F:AlgoSdk.PaymentTxn.Params.Receiver
+  id: Receiver
+  parent: AlgoSdk.PaymentTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: Receiver
+  nameWithType: PaymentTxn.Params.Receiver
+  fullName: AlgoSdk.PaymentTxn.Params.Receiver
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/PaymentTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Receiver
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/PaymentTxn.cs
+    startLine: 196
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("receiver", "rcv", false)]
+
+      public Address Receiver
+    return:
+      type: AlgoSdk.Address
+    content.vb: >-
+      <AlgoApiField("receiver", "rcv", False)>
+
+      Public Receiver As Address
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: receiver
+    - type: System.String
+      value: rcv
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.PaymentTxn.Params.Amount
+  commentId: F:AlgoSdk.PaymentTxn.Params.Amount
+  id: Amount
+  parent: AlgoSdk.PaymentTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: Amount
+  nameWithType: PaymentTxn.Params.Amount
+  fullName: AlgoSdk.PaymentTxn.Params.Amount
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/PaymentTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Amount
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/PaymentTxn.cs
+    startLine: 199
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("amount", "amt", false)]
+
+      public ulong Amount
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("amount", "amt", False)>
+
+      Public Amount As ULong
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: amount
+    - type: System.String
+      value: amt
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.PaymentTxn.Params.CloseRemainderTo
+  commentId: F:AlgoSdk.PaymentTxn.Params.CloseRemainderTo
+  id: CloseRemainderTo
+  parent: AlgoSdk.PaymentTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: CloseRemainderTo
+  nameWithType: PaymentTxn.Params.CloseRemainderTo
+  fullName: AlgoSdk.PaymentTxn.Params.CloseRemainderTo
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/PaymentTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: CloseRemainderTo
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/PaymentTxn.cs
+    startLine: 202
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("close-remainder-to", "close", false)]
+
+      public Address CloseRemainderTo
+    return:
+      type: AlgoSdk.Address
+    content.vb: >-
+      <AlgoApiField("close-remainder-to", "close", False)>
+
+      Public CloseRemainderTo As Address
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: close-remainder-to
+    - type: System.String
+      value: close
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.PaymentTxn.Params.CloseAmount
+  commentId: F:AlgoSdk.PaymentTxn.Params.CloseAmount
+  id: CloseAmount
+  parent: AlgoSdk.PaymentTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: CloseAmount
+  nameWithType: PaymentTxn.Params.CloseAmount
+  fullName: AlgoSdk.PaymentTxn.Params.CloseAmount
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/PaymentTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: CloseAmount
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/PaymentTxn.cs
+    startLine: 205
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("close-amount", "close-amount", false)]
+
+      public ulong CloseAmount
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("close-amount", "close-amount", False)>
+
+      Public CloseAmount As ULong
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: close-amount
+    - type: System.String
+      value: close-amount
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.PaymentTxn.Params.Equals(AlgoSdk.PaymentTxn.Params)
+  commentId: M:AlgoSdk.PaymentTxn.Params.Equals(AlgoSdk.PaymentTxn.Params)
+  id: Equals(AlgoSdk.PaymentTxn.Params)
+  parent: AlgoSdk.PaymentTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: Equals(PaymentTxn.Params)
+  nameWithType: PaymentTxn.Params.Equals(PaymentTxn.Params)
+  fullName: AlgoSdk.PaymentTxn.Params.Equals(AlgoSdk.PaymentTxn.Params)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/PaymentTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Equals
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/PaymentTxn.cs
+    startLine: 207
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public bool Equals(PaymentTxn.Params other)
+    parameters:
+    - id: other
+      type: AlgoSdk.PaymentTxn.Params
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As PaymentTxn.Params) As Boolean
+  overload: AlgoSdk.PaymentTxn.Params.Equals*
+  implements:
+  - System.IEquatable{AlgoSdk.PaymentTxn.Params}.Equals(AlgoSdk.PaymentTxn.Params)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: System.IEquatable{AlgoSdk.PaymentTxn.Params}
+  commentId: T:System.IEquatable{AlgoSdk.PaymentTxn.Params}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<PaymentTxn.Params>
+  nameWithType: IEquatable<PaymentTxn.Params>
+  fullName: System.IEquatable<AlgoSdk.PaymentTxn.Params>
+  nameWithType.vb: IEquatable(Of PaymentTxn.Params)
+  fullName.vb: System.IEquatable(Of AlgoSdk.PaymentTxn.Params)
+  name.vb: IEquatable(Of PaymentTxn.Params)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AlgoSdk.PaymentTxn.Params
+    name: PaymentTxn.Params
+    nameWithType: PaymentTxn.Params
+    fullName: AlgoSdk.PaymentTxn.Params
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AlgoSdk.PaymentTxn.Params
+    name: PaymentTxn.Params
+    nameWithType: PaymentTxn.Params
+    fullName: AlgoSdk.PaymentTxn.Params
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AlgoSdk.Address
+  commentId: T:AlgoSdk.Address
+  parent: AlgoSdk
+  name: Address
+  nameWithType: Address
+  fullName: AlgoSdk.Address
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: AlgoSdk.PaymentTxn.Params.Equals*
+  commentId: Overload:AlgoSdk.PaymentTxn.Params.Equals
+  name: Equals
+  nameWithType: PaymentTxn.Params.Equals
+  fullName: AlgoSdk.PaymentTxn.Params.Equals
+- uid: System.IEquatable{AlgoSdk.PaymentTxn.Params}.Equals(AlgoSdk.PaymentTxn.Params)
+  commentId: M:System.IEquatable{AlgoSdk.PaymentTxn.Params}.Equals(AlgoSdk.PaymentTxn.Params)
+  parent: System.IEquatable{AlgoSdk.PaymentTxn.Params}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(PaymentTxn.Params)
+  nameWithType: IEquatable<PaymentTxn.Params>.Equals(PaymentTxn.Params)
+  fullName: System.IEquatable<AlgoSdk.PaymentTxn.Params>.Equals(AlgoSdk.PaymentTxn.Params)
+  nameWithType.vb: IEquatable(Of PaymentTxn.Params).Equals(PaymentTxn.Params)
+  fullName.vb: System.IEquatable(Of AlgoSdk.PaymentTxn.Params).Equals(AlgoSdk.PaymentTxn.Params)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<PaymentTxn.Params>.Equals
+    fullName: System.IEquatable<AlgoSdk.PaymentTxn.Params>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.PaymentTxn.Params
+    name: PaymentTxn.Params
+    nameWithType: PaymentTxn.Params
+    fullName: AlgoSdk.PaymentTxn.Params
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of PaymentTxn.Params).Equals
+    fullName: System.IEquatable(Of AlgoSdk.PaymentTxn.Params).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.PaymentTxn.Params
+    name: PaymentTxn.Params
+    nameWithType: PaymentTxn.Params
+    fullName: AlgoSdk.PaymentTxn.Params
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.PaymentTxn.Params
+  commentId: T:AlgoSdk.PaymentTxn.Params
+  parent: AlgoSdk
+  name: PaymentTxn.Params
+  nameWithType: PaymentTxn.Params
+  fullName: AlgoSdk.PaymentTxn.Params
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

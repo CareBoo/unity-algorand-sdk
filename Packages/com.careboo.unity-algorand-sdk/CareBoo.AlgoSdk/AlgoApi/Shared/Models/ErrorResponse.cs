@@ -3,6 +3,9 @@ using AlgoSdk.Formatters;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// An error response from algorand APIs with optional data field.
+    /// </summary>
     [AlgoApiFormatter(typeof(ErrorResponseFormatter))]
     public struct ErrorResponse
         : IEquatable<ErrorResponse>
@@ -11,6 +14,9 @@ namespace AlgoSdk
 
         public string Message;
 
+        /// <summary>
+        /// HTTP response code
+        /// </summary>
         public long Code;
 
         public ErrorResponse WithCode(long code)

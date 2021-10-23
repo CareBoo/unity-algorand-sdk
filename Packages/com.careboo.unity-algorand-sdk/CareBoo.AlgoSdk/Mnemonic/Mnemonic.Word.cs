@@ -2,6 +2,9 @@ namespace AlgoSdk
 {
     public partial struct Mnemonic
     {
+        /// <summary>
+        /// A list of possible words that occur in a <see cref="Mnemonic"/>
+        /// </summary>
         public enum Word : ushort
         {
             abandon,

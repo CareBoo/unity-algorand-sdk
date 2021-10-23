@@ -6,6 +6,9 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// 32 byte public key required for <see cref="KeyRegTxn.SelectionParticipationKey"/>
+    /// </summary>
     [AlgoApiFormatter(typeof(ByteArrayFormatter<VrfPubKey>))]
     [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
     public struct VrfPubKey
@@ -13,7 +16,9 @@ namespace AlgoSdk
         , IByteArray
     {
         [FieldOffset(0)] internal FixedBytes16 offset0000;
+
         [FieldOffset(16)] internal FixedBytes16 offset0016;
+
         public const int SizeBytes = 256 / 8;
 
         public byte this[int index]

@@ -40,7 +40,6 @@ namespace AlgoSdk
             AddFormatter<sbyte>(new Int8Formatter());
             AddFormatter<bool>(new BoolFormatter());
             AddFormatter<string>(new StringFormatter());
-            AddFormatter<DateTime>(new DateTimeFormatter());
             AddFormatter<Sha512_256_Hash>(ByteArrayFormatter<Sha512_256_Hash>.Instance);
             AddFormatter<Ed25519.PublicKey>(ByteArrayFormatter<Ed25519.PublicKey>.Instance);
             AddFormatter<byte[]>(new ByteArrayFormatter());

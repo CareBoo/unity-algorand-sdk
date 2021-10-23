@@ -2,6 +2,9 @@ using System;
 
 namespace AlgoSdk
 {
+    /// <summary>
+    /// Application state delta for an account <see cref="Address"/>.
+    /// </summary>
     [AlgoApiObject]
     public struct AccountStateDelta
         : IEquatable<AccountStateDelta>

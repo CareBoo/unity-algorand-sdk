@@ -1,0 +1,1158 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.AppCallTxn.Params
+  commentId: T:AlgoSdk.AppCallTxn.Params
+  id: AppCallTxn.Params
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.AppCallTxn.Params.Accounts
+  - AlgoSdk.AppCallTxn.Params.AppArguments
+  - AlgoSdk.AppCallTxn.Params.ApplicationId
+  - AlgoSdk.AppCallTxn.Params.ApprovalProgram
+  - AlgoSdk.AppCallTxn.Params.ClearStateProgram
+  - AlgoSdk.AppCallTxn.Params.Equals(AlgoSdk.AppCallTxn.Params)
+  - AlgoSdk.AppCallTxn.Params.ExtraProgramPages
+  - AlgoSdk.AppCallTxn.Params.ForeignApps
+  - AlgoSdk.AppCallTxn.Params.ForeignAssets
+  - AlgoSdk.AppCallTxn.Params.GlobalStateSchema
+  - AlgoSdk.AppCallTxn.Params.LocalStateSchema
+  - AlgoSdk.AppCallTxn.Params.OnComplete
+  langs:
+  - csharp
+  - vb
+  name: AppCallTxn.Params
+  nameWithType: AppCallTxn.Params
+  fullName: AlgoSdk.AppCallTxn.Params
+  type: Struct
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Params
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+    startLine: 524
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: 'public struct Params : IEquatable<AppCallTxn.Params>'
+    content.vb: >-
+      Public Structure Params
+          Implements IEquatable(Of AppCallTxn.Params)
+  implements:
+  - System.IEquatable{AlgoSdk.AppCallTxn.Params}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: AlgoSdk.AppCallTxn.Params.ApplicationId
+  commentId: F:AlgoSdk.AppCallTxn.Params.ApplicationId
+  id: ApplicationId
+  parent: AlgoSdk.AppCallTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: ApplicationId
+  nameWithType: AppCallTxn.Params.ApplicationId
+  fullName: AlgoSdk.AppCallTxn.Params.ApplicationId
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ApplicationId
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+    startLine: 529
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("application-id", "apid", false)]
+
+      public ulong ApplicationId
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("application-id", "apid", False)>
+
+      Public ApplicationId As ULong
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: application-id
+    - type: System.String
+      value: apid
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AppCallTxn.Params.OnComplete
+  commentId: F:AlgoSdk.AppCallTxn.Params.OnComplete
+  id: OnComplete
+  parent: AlgoSdk.AppCallTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: OnComplete
+  nameWithType: AppCallTxn.Params.OnComplete
+  fullName: AlgoSdk.AppCallTxn.Params.OnComplete
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: OnComplete
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+    startLine: 532
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("on-completion", "apan", false)]
+
+      public OnCompletion OnComplete
+    return:
+      type: AlgoSdk.OnCompletion
+    content.vb: >-
+      <AlgoApiField("on-completion", "apan", False)>
+
+      Public OnComplete As OnCompletion
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: on-completion
+    - type: System.String
+      value: apan
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AppCallTxn.Params.ApprovalProgram
+  commentId: F:AlgoSdk.AppCallTxn.Params.ApprovalProgram
+  id: ApprovalProgram
+  parent: AlgoSdk.AppCallTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: ApprovalProgram
+  nameWithType: AppCallTxn.Params.ApprovalProgram
+  fullName: AlgoSdk.AppCallTxn.Params.ApprovalProgram
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ApprovalProgram
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+    startLine: 535
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("approval-program", "apap", false)]
+
+      public byte[] ApprovalProgram
+    return:
+      type: System.Byte[]
+    content.vb: >-
+      <AlgoApiField("approval-program", "apap", False)>
+
+      Public ApprovalProgram As Byte()
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: approval-program
+    - type: System.String
+      value: apap
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AppCallTxn.Params.ClearStateProgram
+  commentId: F:AlgoSdk.AppCallTxn.Params.ClearStateProgram
+  id: ClearStateProgram
+  parent: AlgoSdk.AppCallTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: ClearStateProgram
+  nameWithType: AppCallTxn.Params.ClearStateProgram
+  fullName: AlgoSdk.AppCallTxn.Params.ClearStateProgram
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ClearStateProgram
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+    startLine: 538
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("clear-state-program", "apsu", false)]
+
+      public byte[] ClearStateProgram
+    return:
+      type: System.Byte[]
+    content.vb: >-
+      <AlgoApiField("clear-state-program", "apsu", False)>
+
+      Public ClearStateProgram As Byte()
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: clear-state-program
+    - type: System.String
+      value: apsu
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AppCallTxn.Params.AppArguments
+  commentId: F:AlgoSdk.AppCallTxn.Params.AppArguments
+  id: AppArguments
+  parent: AlgoSdk.AppCallTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: AppArguments
+  nameWithType: AppCallTxn.Params.AppArguments
+  fullName: AlgoSdk.AppCallTxn.Params.AppArguments
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: AppArguments
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+    startLine: 541
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("application-args", "apaa", false)]
+
+      public byte[] AppArguments
+    return:
+      type: System.Byte[]
+    content.vb: >-
+      <AlgoApiField("application-args", "apaa", False)>
+
+      Public AppArguments As Byte()
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: application-args
+    - type: System.String
+      value: apaa
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AppCallTxn.Params.Accounts
+  commentId: F:AlgoSdk.AppCallTxn.Params.Accounts
+  id: Accounts
+  parent: AlgoSdk.AppCallTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: Accounts
+  nameWithType: AppCallTxn.Params.Accounts
+  fullName: AlgoSdk.AppCallTxn.Params.Accounts
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Accounts
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+    startLine: 544
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("accounts", "apat", false)]
+
+      public Address[] Accounts
+    return:
+      type: AlgoSdk.Address[]
+    content.vb: >-
+      <AlgoApiField("accounts", "apat", False)>
+
+      Public Accounts As Address()
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: accounts
+    - type: System.String
+      value: apat
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AppCallTxn.Params.ForeignApps
+  commentId: F:AlgoSdk.AppCallTxn.Params.ForeignApps
+  id: ForeignApps
+  parent: AlgoSdk.AppCallTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: ForeignApps
+  nameWithType: AppCallTxn.Params.ForeignApps
+  fullName: AlgoSdk.AppCallTxn.Params.ForeignApps
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ForeignApps
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+    startLine: 547
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("foreign-apps", "apfa", false)]
+
+      public ulong[] ForeignApps
+    return:
+      type: System.UInt64[]
+    content.vb: >-
+      <AlgoApiField("foreign-apps", "apfa", False)>
+
+      Public ForeignApps As ULong()
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: foreign-apps
+    - type: System.String
+      value: apfa
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AppCallTxn.Params.ForeignAssets
+  commentId: F:AlgoSdk.AppCallTxn.Params.ForeignAssets
+  id: ForeignAssets
+  parent: AlgoSdk.AppCallTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: ForeignAssets
+  nameWithType: AppCallTxn.Params.ForeignAssets
+  fullName: AlgoSdk.AppCallTxn.Params.ForeignAssets
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ForeignAssets
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+    startLine: 550
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("foreign-assets", "apas", false)]
+
+      public ulong[] ForeignAssets
+    return:
+      type: System.UInt64[]
+    content.vb: >-
+      <AlgoApiField("foreign-assets", "apas", False)>
+
+      Public ForeignAssets As ULong()
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: foreign-assets
+    - type: System.String
+      value: apas
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AppCallTxn.Params.GlobalStateSchema
+  commentId: F:AlgoSdk.AppCallTxn.Params.GlobalStateSchema
+  id: GlobalStateSchema
+  parent: AlgoSdk.AppCallTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: GlobalStateSchema
+  nameWithType: AppCallTxn.Params.GlobalStateSchema
+  fullName: AlgoSdk.AppCallTxn.Params.GlobalStateSchema
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: GlobalStateSchema
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+    startLine: 553
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("global-state-schema", "global-state-schema", false)]
+
+      public StateSchema GlobalStateSchema
+    return:
+      type: AlgoSdk.StateSchema
+    content.vb: >-
+      <AlgoApiField("global-state-schema", "global-state-schema", False)>
+
+      Public GlobalStateSchema As StateSchema
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: global-state-schema
+    - type: System.String
+      value: global-state-schema
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AppCallTxn.Params.LocalStateSchema
+  commentId: F:AlgoSdk.AppCallTxn.Params.LocalStateSchema
+  id: LocalStateSchema
+  parent: AlgoSdk.AppCallTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: LocalStateSchema
+  nameWithType: AppCallTxn.Params.LocalStateSchema
+  fullName: AlgoSdk.AppCallTxn.Params.LocalStateSchema
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: LocalStateSchema
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+    startLine: 556
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("local-state-schema", "local-state-schema", false)]
+
+      public StateSchema LocalStateSchema
+    return:
+      type: AlgoSdk.StateSchema
+    content.vb: >-
+      <AlgoApiField("local-state-schema", "local-state-schema", False)>
+
+      Public LocalStateSchema As StateSchema
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: local-state-schema
+    - type: System.String
+      value: local-state-schema
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AppCallTxn.Params.ExtraProgramPages
+  commentId: F:AlgoSdk.AppCallTxn.Params.ExtraProgramPages
+  id: ExtraProgramPages
+  parent: AlgoSdk.AppCallTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: ExtraProgramPages
+  nameWithType: AppCallTxn.Params.ExtraProgramPages
+  fullName: AlgoSdk.AppCallTxn.Params.ExtraProgramPages
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: ExtraProgramPages
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+    startLine: 559
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiField("extra-program-pages", "epp", false)]
+
+      public ulong ExtraProgramPages
+    return:
+      type: System.UInt64
+    content.vb: >-
+      <AlgoApiField("extra-program-pages", "epp", False)>
+
+      Public ExtraProgramPages As ULong
+  attributes:
+  - type: AlgoSdk.AlgoApiField
+    ctor: AlgoSdk.AlgoApiField.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: extra-program-pages
+    - type: System.String
+      value: epp
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AlgoSdk.AppCallTxn.Params.Equals(AlgoSdk.AppCallTxn.Params)
+  commentId: M:AlgoSdk.AppCallTxn.Params.Equals(AlgoSdk.AppCallTxn.Params)
+  id: Equals(AlgoSdk.AppCallTxn.Params)
+  parent: AlgoSdk.AppCallTxn.Params
+  langs:
+  - csharp
+  - vb
+  name: Equals(AppCallTxn.Params)
+  nameWithType: AppCallTxn.Params.Equals(AppCallTxn.Params)
+  fullName: AlgoSdk.AppCallTxn.Params.Equals(AlgoSdk.AppCallTxn.Params)
+  type: Method
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Equals
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/Transaction/AppCallTxn.cs
+    startLine: 561
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: public bool Equals(AppCallTxn.Params other)
+    parameters:
+    - id: other
+      type: AlgoSdk.AppCallTxn.Params
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As AppCallTxn.Params) As Boolean
+  overload: AlgoSdk.AppCallTxn.Params.Equals*
+  implements:
+  - System.IEquatable{AlgoSdk.AppCallTxn.Params}.Equals(AlgoSdk.AppCallTxn.Params)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: System.IEquatable{AlgoSdk.AppCallTxn.Params}
+  commentId: T:System.IEquatable{AlgoSdk.AppCallTxn.Params}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<AppCallTxn.Params>
+  nameWithType: IEquatable<AppCallTxn.Params>
+  fullName: System.IEquatable<AlgoSdk.AppCallTxn.Params>
+  nameWithType.vb: IEquatable(Of AppCallTxn.Params)
+  fullName.vb: System.IEquatable(Of AlgoSdk.AppCallTxn.Params)
+  name.vb: IEquatable(Of AppCallTxn.Params)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: AlgoSdk.AppCallTxn.Params
+    name: AppCallTxn.Params
+    nameWithType: AppCallTxn.Params
+    fullName: AlgoSdk.AppCallTxn.Params
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: AlgoSdk.AppCallTxn.Params
+    name: AppCallTxn.Params
+    nameWithType: AppCallTxn.Params
+    fullName: AlgoSdk.AppCallTxn.Params
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: AlgoSdk.OnCompletion
+  commentId: T:AlgoSdk.OnCompletion
+  parent: AlgoSdk
+  name: OnCompletion
+  nameWithType: OnCompletion
+  fullName: AlgoSdk.OnCompletion
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: AlgoSdk.Address[]
+  isExternal: true
+  name: Address[]
+  nameWithType: Address[]
+  fullName: AlgoSdk.Address[]
+  nameWithType.vb: Address()
+  fullName.vb: AlgoSdk.Address()
+  name.vb: Address()
+  spec.csharp:
+  - uid: AlgoSdk.Address
+    name: Address
+    nameWithType: Address
+    fullName: AlgoSdk.Address
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: AlgoSdk.Address
+    name: Address
+    nameWithType: Address
+    fullName: AlgoSdk.Address
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.UInt64[]
+  isExternal: true
+  name: UInt64[]
+  nameWithType: UInt64[]
+  fullName: System.UInt64[]
+  nameWithType.vb: UInt64()
+  fullName.vb: System.UInt64()
+  name.vb: UInt64()
+  spec.csharp:
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: AlgoSdk.StateSchema
+  commentId: T:AlgoSdk.StateSchema
+  parent: AlgoSdk
+  name: StateSchema
+  nameWithType: StateSchema
+  fullName: AlgoSdk.StateSchema
+- uid: AlgoSdk.AppCallTxn.Params.Equals*
+  commentId: Overload:AlgoSdk.AppCallTxn.Params.Equals
+  name: Equals
+  nameWithType: AppCallTxn.Params.Equals
+  fullName: AlgoSdk.AppCallTxn.Params.Equals
+- uid: System.IEquatable{AlgoSdk.AppCallTxn.Params}.Equals(AlgoSdk.AppCallTxn.Params)
+  commentId: M:System.IEquatable{AlgoSdk.AppCallTxn.Params}.Equals(AlgoSdk.AppCallTxn.Params)
+  parent: System.IEquatable{AlgoSdk.AppCallTxn.Params}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(AppCallTxn.Params)
+  nameWithType: IEquatable<AppCallTxn.Params>.Equals(AppCallTxn.Params)
+  fullName: System.IEquatable<AlgoSdk.AppCallTxn.Params>.Equals(AlgoSdk.AppCallTxn.Params)
+  nameWithType.vb: IEquatable(Of AppCallTxn.Params).Equals(AppCallTxn.Params)
+  fullName.vb: System.IEquatable(Of AlgoSdk.AppCallTxn.Params).Equals(AlgoSdk.AppCallTxn.Params)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<AppCallTxn.Params>.Equals
+    fullName: System.IEquatable<AlgoSdk.AppCallTxn.Params>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.AppCallTxn.Params
+    name: AppCallTxn.Params
+    nameWithType: AppCallTxn.Params
+    fullName: AlgoSdk.AppCallTxn.Params
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of AppCallTxn.Params).Equals
+    fullName: System.IEquatable(Of AlgoSdk.AppCallTxn.Params).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: AlgoSdk.AppCallTxn.Params
+    name: AppCallTxn.Params
+    nameWithType: AppCallTxn.Params
+    fullName: AlgoSdk.AppCallTxn.Params
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: AlgoSdk.AppCallTxn.Params
+  commentId: T:AlgoSdk.AppCallTxn.Params
+  parent: AlgoSdk
+  name: AppCallTxn.Params
+  nameWithType: AppCallTxn.Params
+  fullName: AlgoSdk.AppCallTxn.Params
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

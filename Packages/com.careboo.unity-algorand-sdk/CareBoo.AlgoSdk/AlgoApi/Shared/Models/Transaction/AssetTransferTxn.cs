@@ -4,6 +4,34 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
+    public interface IAssetTransferTxn : ITransaction
+    {
+        /// <summary>
+        /// The unique ID of the asset to be transferred.
+        /// </summary>
+        ulong XferAsset { get; set; }
+
+        /// <summary>
+        /// The amount of the asset to be transferred. A zero amount transferred to self allocates that asset in the account's Asset map.
+        /// </summary>
+        ulong AssetAmount { get; set; }
+
+        /// <summary>
+        /// The sender of the transfer. The regular <see cref="ITransaction.Sender"/> field should be used and this one set to the zero value for regular transfers between accounts. If this value is nonzero, it indicates a clawback transaction where the sender is the asset's clawback address and the asset sender is the address from which the funds will be withdrawn.
+        /// </summary>
+        Address AssetSender { get; set; }
+
+        /// <summary>
+        /// The recipient of the asset transfer.
+        /// </summary>
+        Address AssetReceiver { get; set; }
+
+        /// <summary>
+        /// Specify this field to remove the asset holding from the sender account and reduce the account's minimum balance (i.e. opt-out of the asset).
+        /// </summary>
+        Address AssetCloseTo { get; set; }
+    }
+
     public partial struct Transaction
     {
         [AlgoApiField(null, "xaid")]
@@ -41,12 +69,20 @@ namespace AlgoSdk
             set => AssetTransferParams.AssetCloseTo = value;
         }
 
+        /// <summary>
+        /// Create an <see cref="AssetTransferTxn"/> for transferring an asset to another account.
+        /// </summary>
+        /// <param name="sender">The address of the account that pays the fee and sends the asset amount.</param>
+        /// <param name="txnParams">See <see cref="TransactionParams"/></param>
+        /// <param name="xferAsset">The unique ID of the asset to be transferred.</param>
+        /// <param name="assetAmount">The amount of the asset to be transferred. A zero amount transferred to self allocates that asset in the account's Asset map.</param>
+        /// <param name="assetReceiver"></param>
+        /// <returns>An <see cref="AssetTransferTxn"/> for transferring an asset to another account.</returns>
         public static AssetTransferTxn AssetTransfer(
             Address sender,
             TransactionParams txnParams,
             ulong xferAsset,
             ulong assetAmount,
-            Address assetSender,
             Address assetReceiver
         )
         {
@@ -55,13 +91,19 @@ namespace AlgoSdk
                 header = new TransactionHeader(sender, TransactionType.AssetTransfer, txnParams),
                 XferAsset = xferAsset,
                 AssetAmount = assetAmount,
-                AssetSender = assetSender,
                 AssetReceiver = assetReceiver
             };
             txn.Fee = txn.GetSuggestedFee(txnParams);
             return txn;
         }
 
+        /// <summary>
+        /// Create an <see cref="AssetTransferTxn"/> for opting in to an asset.
+        /// </summary>
+        /// <param name="sender">The address of the account that pays the fee and amount.</param>
+        /// <param name="txnParams">See <see cref="TransactionParams"/></param>
+        /// <param name="xferAsset">The unique ID of the asset to opt-in to.</param>
+        /// <returns>An <see cref="AssetTransferTxn"/> for opting in to an asset.</returns>
         public static AssetTransferTxn AssetAccept(
             Address sender,
             TransactionParams txnParams,
@@ -77,22 +119,35 @@ namespace AlgoSdk
             return txn;
         }
 
+        /// <summary>
+        /// Creates a form of <see cref="AssetTransferTxn"/> to clawback assets from an account.
+        /// </summary>
+        /// <param name="sender">The sender of this transaction must be the clawback account specified in the asset configuration.</param>
+        /// <param name="txnParams">See <see cref="TransactionParams"/></param>
+        /// <param name="xferAsset">The unique ID of the asset to be transferred.</param>
+        /// <param name="assetAmount">The amount of the asset to be transferred.</param>
+        /// <param name="assetSender">The address from which the funds will be withdrawn.</param>
+        /// <param name="assetReceiver">The recipient of the asset transfer.</param>
+        /// <param name="assetCloseTo">Specify this field to remove the entire asset holding balance from the AssetSender account. It will not remove the asset holding.</param>
+        /// <returns>A form of <see cref="AssetTransferTxn"/> to clawback assets from an account</returns>
         public static AssetTransferTxn AssetClawback(
-            Address clawbackAccount,
+            Address sender,
             TransactionParams txnParams,
             ulong xferAsset,
             ulong assetAmount,
             Address assetSender,
-            Address assetReceiver
+            Address assetReceiver,
+            Address assetCloseTo = default
         )
         {
             var txn = new AssetTransferTxn
             {
-                header = new TransactionHeader(clawbackAccount, TransactionType.AssetTransfer, txnParams),
+                header = new TransactionHeader(sender, TransactionType.AssetTransfer, txnParams),
                 XferAsset = xferAsset,
                 AssetAmount = assetAmount,
                 AssetSender = assetSender,
-                AssetReceiver = assetReceiver
+                AssetReceiver = assetReceiver,
+                AssetCloseTo = assetCloseTo
             };
             txn.Fee = txn.GetSuggestedFee(txnParams);
             return txn;
@@ -101,7 +156,7 @@ namespace AlgoSdk
 
     [AlgoApiObject]
     public struct AssetTransferTxn
-        : ITransaction
+        : IAssetTransferTxn
         , IEquatable<AssetTransferTxn>
     {
         internal TransactionHeader header;

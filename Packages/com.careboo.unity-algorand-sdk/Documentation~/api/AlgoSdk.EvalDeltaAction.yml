@@ -1,0 +1,194 @@
+### YamlMime:ManagedReference
+items:
+- uid: AlgoSdk.EvalDeltaAction
+  commentId: T:AlgoSdk.EvalDeltaAction
+  id: EvalDeltaAction
+  parent: AlgoSdk
+  children:
+  - AlgoSdk.EvalDeltaAction.Delete
+  - AlgoSdk.EvalDeltaAction.None
+  - AlgoSdk.EvalDeltaAction.SetBytes
+  - AlgoSdk.EvalDeltaAction.SetUInt
+  langs:
+  - csharp
+  - vb
+  name: EvalDeltaAction
+  nameWithType: EvalDeltaAction
+  fullName: AlgoSdk.EvalDeltaAction
+  type: Enum
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/EvalDelta.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: EvalDeltaAction
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/EvalDelta.cs
+    startLine: 5
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: >-
+      [AlgoApiFormatter(typeof(ByteEnumFormatter<EvalDeltaAction>), "C:\\Users\\jason\\Projects\\CareBoo\\Unity.AlgoSdk\\Packages\\com.careboo.unity-algorand-sdk\\CareBoo.AlgoSdk\\AlgoApi\\Shared\\Models\\EvalDelta.cs", 6)]
+
+      public enum EvalDeltaAction : byte
+    content.vb: >-
+      <AlgoApiFormatter(GetType(ByteEnumFormatter(Of EvalDeltaAction)), "C:\Users\jason\Projects\CareBoo\Unity.AlgoSdk\Packages\com.careboo.unity-algorand-sdk\CareBoo.AlgoSdk\AlgoApi\Shared\Models\EvalDelta.cs", 6)>
+
+      Public Enum EvalDeltaAction As Byte
+  attributes:
+  - type: AlgoSdk.AlgoApiFormatterAttribute
+    ctor: AlgoSdk.AlgoApiFormatterAttribute.#ctor(System.Type,System.String,System.Int32)
+    arguments:
+    - type: System.Type
+      value: AlgoSdk.Formatters.ByteEnumFormatter{AlgoSdk.EvalDeltaAction}
+    - type: System.String
+      value: C:\Users\jason\Projects\CareBoo\Unity.AlgoSdk\Packages\com.careboo.unity-algorand-sdk\CareBoo.AlgoSdk\AlgoApi\Shared\Models\EvalDelta.cs
+    - type: System.Int32
+      value: 6
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: AlgoSdk.EvalDeltaAction.None
+  commentId: F:AlgoSdk.EvalDeltaAction.None
+  id: None
+  parent: AlgoSdk.EvalDeltaAction
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: EvalDeltaAction.None
+  fullName: AlgoSdk.EvalDeltaAction.None
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/EvalDelta.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: None
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/EvalDelta.cs
+    startLine: 8
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: None = 0
+    return:
+      type: AlgoSdk.EvalDeltaAction
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.EvalDeltaAction.SetUInt
+  commentId: F:AlgoSdk.EvalDeltaAction.SetUInt
+  id: SetUInt
+  parent: AlgoSdk.EvalDeltaAction
+  langs:
+  - csharp
+  - vb
+  name: SetUInt
+  nameWithType: EvalDeltaAction.SetUInt
+  fullName: AlgoSdk.EvalDeltaAction.SetUInt
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/EvalDelta.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: SetUInt
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/EvalDelta.cs
+    startLine: 9
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: SetUInt = 1
+    return:
+      type: AlgoSdk.EvalDeltaAction
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.EvalDeltaAction.SetBytes
+  commentId: F:AlgoSdk.EvalDeltaAction.SetBytes
+  id: SetBytes
+  parent: AlgoSdk.EvalDeltaAction
+  langs:
+  - csharp
+  - vb
+  name: SetBytes
+  nameWithType: EvalDeltaAction.SetBytes
+  fullName: AlgoSdk.EvalDeltaAction.SetBytes
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/EvalDelta.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: SetBytes
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/EvalDelta.cs
+    startLine: 10
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: SetBytes = 2
+    return:
+      type: AlgoSdk.EvalDeltaAction
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AlgoSdk.EvalDeltaAction.Delete
+  commentId: F:AlgoSdk.EvalDeltaAction.Delete
+  id: Delete
+  parent: AlgoSdk.EvalDeltaAction
+  langs:
+  - csharp
+  - vb
+  name: Delete
+  nameWithType: EvalDeltaAction.Delete
+  fullName: AlgoSdk.EvalDeltaAction.Delete
+  type: Field
+  source:
+    remote:
+      path: Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/Shared/Models/EvalDelta.cs
+      branch: jasonboukheir/issue#33
+      repo: git@github.com:CareBoo/unity-algorand-sdk.git
+    id: Delete
+    path: ../CareBoo.AlgoSdk/AlgoApi/Shared/Models/EvalDelta.cs
+    startLine: 11
+  assemblies:
+  - CareBoo.AlgoSdk
+  namespace: AlgoSdk
+  syntax:
+    content: Delete = 3
+    return:
+      type: AlgoSdk.EvalDeltaAction
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: AlgoSdk
+  commentId: N:AlgoSdk
+  name: AlgoSdk
+  nameWithType: AlgoSdk
+  fullName: AlgoSdk
+- uid: AlgoSdk.EvalDeltaAction
+  commentId: T:AlgoSdk.EvalDeltaAction
+  parent: AlgoSdk
+  name: EvalDeltaAction
+  nameWithType: EvalDeltaAction
+  fullName: AlgoSdk.EvalDeltaAction
