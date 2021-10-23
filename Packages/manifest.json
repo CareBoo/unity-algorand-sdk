@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "com.cysharp.unitask": "2.2.5",
-    "com.macacagames.docgenerator": "https://github.com/MacacaGames/UnityDocGenerator.git#1.0.1",
     "com.unity.burst": "1.6.1",
     "com.unity.collections": "1.0.0-pre.6",
     "com.unity.ide.vscode": "1.2.3",

@@ -16,13 +16,6 @@
       "dependencies": {},
       "url": "https://package.openupm.com"
     },
-    "com.macacagames.docgenerator": {
-      "version": "https://github.com/MacacaGames/UnityDocGenerator.git#1.0.1",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "54ce7528db0266b61ca92805121fb16f5653dfa7"
-    },
     "com.unity.burst": {
       "version": "1.6.1",
       "depth": 0,
