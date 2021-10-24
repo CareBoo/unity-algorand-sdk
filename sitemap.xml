@@ -2,1639 +2,1639 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Account.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AccountParticipation.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AccountResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AccountsResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AccountStateDelta.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Address.CheckSum.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Address.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AddressRole.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AddressRoleExtensions.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiField.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiField-1.EqualityComparer.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiField-1.FieldGetter-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiField-1.FieldSetter-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiField-1.JsonDeserializer.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiField-1.JsonSerializer.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiField-1.Map-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiField-1.MessagePackDeserializer.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiField-1.MessagePackSerializer.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiField-1.SerializePredicate.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiField-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiFormatterAttribute.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiFormatterCache-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiFormatterLookup.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiObject.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiObjectAttribute.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiObjectFormatter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiObjectFormatter-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiRequest.Awaiter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiRequest.Sent.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiRequest.Sent-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiRequest.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiResponse-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgoApiSerializer.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AlgodClient.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AppCallTxn.Params.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AppCallTxn.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Application.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ApplicationLocalState.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ApplicationParams.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ApplicationResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ApplicationsResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ArrayComparer.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ArrayComparer-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ArrayComparer-2.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Asset.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AssetConfigTxn.Params.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AssetConfigTxn.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AssetFreezeTxn.Params.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AssetFreezeTxn.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AssetHolding.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AssetParams.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AssetResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AssetsResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AssetTransferTxn.Params.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.AssetTransferTxn.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.BalancesResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Base32Encoding.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Base64Encoding.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Block.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.BlockResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.BlockRewards.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.BlockTransaction.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.BlockUpgradeState.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.BlockUpgradeVote.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.BuildVersion.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ByteEnumComparer-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.CatchupMessage.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ContentType.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ContentTypeExtensions.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.CreateWalletRequest.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.CreateWalletResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Crypto.Ed25519.KeyPair.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Crypto.Ed25519.PublicKey.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Crypto.Ed25519.SecretKeyHandle.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Crypto.Ed25519.Seed.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Crypto.Ed25519.Signature.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Crypto.Ed25519.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Crypto.Random.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Crypto.SecureMemoryHandle.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Crypto.Sha512.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Crypto.Sha512_256_Hash.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Crypto.Sha512_Hash.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Crypto.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.DeleteKeyRequest.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.DeleteMultisigRequest.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.DryrunRequest.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.DryrunResults.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.DryrunSource.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.DryrunState.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.DryrunTxnResult.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Endianness.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ErrorResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.EvalDelta.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.EvalDeltaAction.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.EvalDeltaKeyValue.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ExportKeyRequest.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ExportKeyResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ExportMasterKeyRequest.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ExportMasterKeyResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ExportMultisigRequest.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ExportMultisigResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.AddressFormatter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.AddressRoleFormatter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.ArrayFormatter-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.BoolFormatter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.ByteArrayFormatter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.ByteArrayFormatter-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.ByteEnumFormatter-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.ErrorResponseFormatter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.FixedBytesArray-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.FixedBytesFormatter-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.FixedStringFormatter-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.GenesisHashFormatter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.Int16Formatter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.Int32Formatter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.Int64Formatter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.Int8Formatter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.KeywordByteEnumFormatter-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.OnCompletionFormatter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.OptionalFormatter-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.PrivateKeyFormatter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.SignatureTypeFormatter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.SignedTransactionFormatter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.SignedTransactionFormatter-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.StringFormatter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.TealValueFormatter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.TransactionIdFormatter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.TransactionTypeFormatter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.UInt16Formatter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.UInt32Formatter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.UInt64Formatter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.UInt8Formatter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Formatters.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.GenerateKeyRequest.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.GenerateKeyResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.GenesisAccountAlloc.State.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.GenesisAccountAlloc.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.GenesisHash.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.GenesisInformation.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.HealthCheck.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.IAlgoApiClient.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.IAlgoApiFormatter-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.IAlgoApiResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.IAlgoApiResponse-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.IAlgodClient.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.IAppCallTxn.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.IAssetConfigTxn.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.IAssetFreezeTxn.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.IAssetTransferTxn.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.IBlockRewards.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.IBlockUpgradeState.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.IBlockUpgradeVote.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.IIndexerClient.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.IIndexerResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.IKeyRegTxn.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.IKmdClient.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ImportKeyRequest.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ImportKeyResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ImportMultisigRequest.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ImportMultisigResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.IndexerClient.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.InitWalletHandleTokenRequest.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.InitWalletHandleTokenResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.IntEnumComparer-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.IPaginatedResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.IPaymentTxn.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ISignature.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ITransaction.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Json.JsonReader.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Json.JsonReadError.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Json.JsonReadErrorExtensions.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Json.JsonReadException.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Json.JsonToken.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Json.JsonTokenExtensions.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Json.JsonWriter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Json.UnicodeExtensions.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Json.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.KeyRegTxn.Params.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.KeyRegTxn.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.KmdClient.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.LedgerSupply.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ListKeysRequest.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ListKeysResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ListMultisigRequest.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ListMultisigResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ListWalletsResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.LogicSig.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.LowLevel.ByteArray.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.LowLevel.ByteArrayComparer-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.LowLevel.FixedBytes128.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.LowLevel.FixedBytes32.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.LowLevel.FixedBytes64.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.LowLevel.IArray-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.LowLevel.IByteArray.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.LowLevel.IContiguousArray-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.LowLevel.NativeArrayExtensions.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.LowLevel.NativeByteArray.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.LowLevel.NativeReferenceOfDisposable-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.LowLevel.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.MerkleProof.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.MessagePack.BinaryUtils.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.MessagePack.ExtensionHeader.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.MessagePack.MessagePackCode.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.MessagePack.MessagePackRange.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.MessagePack.MessagePackReader.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.MessagePack.MessagePackType.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.MessagePack.MessagePackWriter.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.MessagePack.ReservedMessagePackExtensionTypeCode.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.MessagePack.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.MiniAssetHolding.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Mnemonic.Word.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Mnemonic.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Multisig.Subsig.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Multisig.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.OnCompletion.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Optional-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.PaymentTxn.Params.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.PaymentTxn.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.PendingTransaction.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.PendingTransactions.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.PrivateKey.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.ReleaseWalletHandleTokenRequest.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.RenameWalletRequest.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.RenameWalletResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.RenewWalletHandleTokenRequest.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.RenewWalletHandleTokenResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.SerializationException.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Sig.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.SignatureType.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.SignatureTypeExtensions.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Signed-1.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.SignedTransaction.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.SignMultisigRequest.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.SignMultisigResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.SignProgramMultisigRequest.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.SignProgramMultisigResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.SignProgramRequest.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.SignProgramResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.SignTransactionRequest.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.SignTransactionResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.StateSchema.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Status.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.StringComparer.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.TealBytes.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.TealCompilationResult.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.TealKeyValue.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.TealValue.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.TealValueType.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.TokenizedClientExtensions.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Transaction.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.TransactionExtensions.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.TransactionGroup.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.TransactionHeader.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.TransactionId.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.TransactionIdResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.TransactionParams.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.TransactionResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.TransactionSignature.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.TransactionsResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.TransactionType.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.TransactionTypeExtensions.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Utf8StringExtensions.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Version.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.VersionsResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.VrfPubKey.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.Wallet.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.WalletHandle.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.WalletInfoRequest.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.WalletInfoResponse.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/api/AlgoSdk.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/index.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://careboo.github.io/unity-algorand-sdk/manual/getting_started.html</loc>
-    <lastmod>2021-10-24T12:02:50+00:00</lastmod>
+    <lastmod>2021-10-24T12:17:09+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
