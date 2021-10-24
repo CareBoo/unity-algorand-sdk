@@ -74,7 +74,7 @@ jobs:
         id: version
         uses: notiz-dev/github-action-json-property@release
         with:
-            path: 'Packages/com.careboo.unity-aglorand-sdk/package.json'
+            path: 'Packages/com.careboo.unity-algorand-sdk/package.json'
             prop_path: 'version'
 
       - name: Install DocFX
@@ -121,7 +121,7 @@ jobs:
         id: version
         uses: notiz-dev/github-action-json-property@release
         with:
-            path: 'Packages/com.careboo.unity-aglorand-sdk/package.json'
+            path: 'Packages/com.careboo.unity-algorand-sdk/package.json'
             prop_path: 'version'
 
       - name: Deploy Docs
