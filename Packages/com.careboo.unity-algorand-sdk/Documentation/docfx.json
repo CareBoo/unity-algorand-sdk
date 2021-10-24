@@ -76,10 +76,6 @@
                     "changefreq": "daily"
                 }
             }
-        },
-        "template": [
-            "default",
-            "templates/unity"
-        ]
+        }
     }
 }
