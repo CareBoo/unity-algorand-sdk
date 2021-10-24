@@ -33,7 +33,8 @@
             {
                 "files": [
                     "toc.yml",
-                    "index.md"
+                    "index.md",
+                    "CHANGELOG.md"
                 ]
             },
             {

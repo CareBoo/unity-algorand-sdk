@@ -25,6 +25,9 @@ jobs:
       - name: Use README.md as index.md
         run: cp README.md Packages/com.careboo.unity-algorand-sdk/Documentation/index.md
 
+      - name: Move CHANGELOG.md
+        run: cp Packages/com.careboo.unity-algorand-sdk/CHANGELOG.md Packages/com.careboo.unity-algorand-sdk/Documentation/CHANGELOG.md
+
       - name: Build
         run: docfx Packages/com.careboo.unity-algorand-sdk/Documentation/docfx.json
 
