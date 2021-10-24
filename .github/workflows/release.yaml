@@ -126,7 +126,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        tag: ['version, 'branch']
+        tag: ['version', 'branch']
     steps:
       - name: Download Docs site artifact
         uses: actions/download-artifact@v1
