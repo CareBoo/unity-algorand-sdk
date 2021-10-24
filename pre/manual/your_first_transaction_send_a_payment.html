@@ -1,0 +1,327 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Send a Payment | Unity Algorand SDK </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Send a Payment | Unity Algorand SDK ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h2 id="send-a-payment">Send a Payment</h2>
+
+<p>Now that we&#39;ve verified our connection with <code>AlgodClient</code> and have obtained the private key of an account with sufficient Algorand balance, we can make a payment transaction. Create the following <code>MonoBehaviour</code>:</p>
+<pre><code class="lang-csharp">using AlgoSdk;
+using Cysharp.Threading.Tasks;
+using UnityEngine;
+
+public class AlgodMakePayment : MonoBehaviour
+{
+    public ulong Amount;
+
+    public string Receiver;
+
+    [NonSerialized]
+    AlgodClient algod;
+
+    [NonSerialized]
+    PrivateKey privateKey;
+
+    public void Start()
+    {
+        // setup AlgodClient
+    }
+
+    public void Update()
+    {
+        // logic to call MakePayment
+    }
+
+    public async UniTaskVoid MakePayment(Address receiver, ulong amount)
+    {
+        // payment logic
+    }
+}
+</code></pre><p>Let&#39;s add in our <code>AlgodClient</code> to the <code>Start()</code> method again. This time, let&#39;s also setup our <code>privateKey</code> using the mnemonic
+from before.</p>
+<pre><code class="lang-csharp">public void Start()
+{
+    algod = new AlgodClient(
+        address: &quot;http://localhost:4001&quot;,
+        token: &quot;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&quot;
+    );
+    privateKey = Mnemonic
+        .FromString(&quot;find paddle girl crumble hammer usual obvious toy actual obscure decorate lock bag inmate author valve course ship burger denial sibling tissue nominee above remove&quot;)
+        .ToPrivateKey();
+}
+</code></pre><p>Now let&#39;s start building out our <code>MakePayment(Address receiver, ulong amount)</code> method. Most of the time, the process for sending a transaction will look like</p>
+<ol>
+<li>Get the suggested <code>TransactionParams</code> from <code>AlgodClient.GetSuggestedParams()</code>. This contains information like the fee, the hash of the genesis block, and the latest round number.</li>
+<li>Create a transaction using the static creation methods found in the <code>Transaction</code> class. For a payment transaction, we&#39;re going to use <code>Transaction.Payment(Address sender, TransactionParams txnParams, Address receiver, ulong amount)</code>.</li>
+<li>Sign the transaction using either a secret key or a wallet.</li>
+<li>Send the signed transaction with <code>AlgodClient.SendTransaction&lt;T&gt;(Signed&lt;T&gt; txn)</code> and save its <code>TransactionId</code>.</li>
+<li>Wait for the transaction to be confirmed by polling <code>AlgodClient.GetPendingTransaction(TransactionId txid)</code> until it returns <code>PendingTransaction.ConfirmedRound &gt; 0</code> marking that it was confirmed.</li>
+</ol>
+<div class="NOTE"><h5>Note</h5><p>The only supported external wallet at the moment is the <code>kmd</code> service.</p>
+</div>
+<p>Incorporating the steps from above, our <code>MakePayment(Address receiver, ulong amount)</code> implementation will look like</p>
+<pre><code class="lang-csharp">public async UniTaskVoid MakePayment(Address receiver, ulong amount)
+{
+    // Get the secret key handle and the public key of the sender account.
+    // We&#39;ll use the secret key handle to sign the transaction.
+    // The public key will be used as the sender&#39;s Address.
+    using var keyPair = privateKey.ToKeyPair();
+
+    // Get the suggested transaction params
+    var (txnParamsError, txnParams) = await algod.GetSuggestedParams();
+    if (txnParamsError.IsError)
+    {
+        Debug.LogError(txnParamsError.Message);
+        return;
+    }
+
+    // Construct and sign the payment transaction
+    var paymentTxn = Transaction.Payment(
+        sender: keyPair.PublicKey,
+        txnParams: txnParams,
+        receiver: receiver,
+        amount: amount
+    )
+    var signedTxn = paymentTxn.Sign(keyPair.SecretKey);
+
+    // Send the transaction
+    var (sendTxnError, txid) = await algod.SendTransaction(signedTxn);
+    if (sendTxnError.IsError)
+    {
+        Debug.LogError(sendTxnError.Message);
+        return;
+    }
+
+    // Wait for the transaction to be confirmed
+    PendingTransaction pending = default;
+    ErrorResponse error = default;
+    while (pending.ConfirmedRound == 0)
+    {
+        (error, pending) = await algod.GetPendingTransaction(txid);
+        if (error.IsError)
+        {
+            Debug.LogError(error.Message);
+            return;
+        }
+        await UniTask.Delay(1000);
+    }
+
+    Debug.Log($&quot;Successfully made payment! Confirmed on round {pending.ConfirmedRound}&quot;);
+}
+</code></pre><div class="NOTE"><h5>Note</h5><p>The <code>Ed25519.SecretKeyHandle</code> obtained from a <code>PrivateKey</code> is <code>IDisposable</code>.
+It or its parent <code>Ed25519.KeyPair</code> should be disposed when no longer being used.</p>
+</div>
+<p>All that&#39;s left now is to call our <code>MakePayment</code> method. We&#39;ll specify the <code>amount</code> and <code>receiver</code> in the editor. Make a new scene
+and attach your <code>AlgodMakePayment</code> component to a new <code>GameObject</code>. Set the <code>Amount</code> field to <code>100000</code>.
+Set the <code>Receiver</code> field to a valid address; In this case, we&#39;ll use one of the addresses that was listed before,
+<code>2HALGWMIGEFVZRWC3O536UNUY4ABVLZCSBKJI5RC7HE3H64FHGWFVYE6E4</code>. We&#39;ll keep things simple and trigger the payment with the
+press of a spacebar. Add the following to your <code>Update</code> method:</p>
+<pre><code class="lang-csharp">public void Update()
+{
+    if (Input.GetKeyDown(KeyCode.Space))
+    {
+        Debug.Log($&quot;Making payment transaction of {Amount} microAlgos to account {Receiver}&quot;);
+        MakePayment(Receiver, Amount).Forget();
+    }
+}
+</code></pre><p>Your <code>AlgodMakePayment</code> script should now look like</p>
+<pre><code class="lang-csharp">using AlgoSdk;
+using Cysharp.Threading.Tasks;
+using System;
+using UnityEngine;
+
+public class AlgodMakePayment : MonoBehaviour
+{
+    public ulong Amount;
+
+    public string Receiver;
+
+    [NonSerialized]
+    AlgodClient algod;
+
+    [NonSerialized]
+    PrivateKey privateKey;
+
+    public void Start()
+    {
+        algod = new AlgodClient(
+            address: &quot;http://localhost:4001&quot;,
+            token: &quot;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&quot;
+        );
+        privateKey = Mnemonic
+            .FromString(&quot;find paddle girl crumble hammer usual obvious toy actual obscure decorate lock bag inmate author valve course ship burger denial sibling tissue nominee above remove&quot;)
+            .ToPrivateKey();
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log($&quot;Making payment transaction of {Amount} microAlgos to account {Receiver}&quot;);
+            MakePayment(Receiver, Amount).Forget();
+        }
+    }
+
+    public async UniTaskVoid MakePayment(Address receiver, ulong amount)
+    {
+        // Get the secret key handle and the public key of the sender account.
+        // We&#39;ll use the secret key handle to sign the transaction.
+        // The public key will be used as the sender&#39;s Address.
+        using var keyPair = privateKey.ToKeyPair();
+
+        // Get the suggested transaction params
+        var (txnParamsError, txnParams) = await algod.GetSuggestedParams();
+        if (txnParamsError.IsError)
+        {
+            Debug.LogError(txnParamsError.Message);
+            return;
+        }
+
+        // Construct and sign the payment transaction
+        var paymentTxn = Transaction.Payment(
+            sender: keyPair.PublicKey,
+            txnParams: txnParams,
+            receiver: receiver,
+            amount: amount
+        );
+        var signedTxn = paymentTxn.Sign(keyPair.SecretKey);
+
+        // Send the transaction
+        var (sendTxnError, txid) = await algod.SendTransaction(signedTxn);
+        if (sendTxnError.IsError)
+        {
+            Debug.LogError(sendTxnError.Message);
+            return;
+        }
+
+        // Wait for the transaction to be confirmed
+        PendingTransaction pending = default;
+        ErrorResponse error = default;
+        while (pending.ConfirmedRound == 0)
+        {
+            (error, pending) = await algod.GetPendingTransaction(txid);
+            if (error.IsError)
+            {
+                Debug.LogError(error.Message);
+                return;
+            }
+            await UniTask.Delay(1000);
+        }
+        Debug.Log($&quot;Successfully made payment! Confirmed on round {pending.ConfirmedRound}&quot;);
+    }
+}
+</code></pre><p>Hit the <strong>Play</strong> button, wait for the scene to start, and press spacebar. You should see <code>Making payment transaction of [...]</code> then  <code>Successfully made payment! [...]</code> shortly after in the console. You just sent your first transaction!</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/CareBoo/unity-algorand-sdk/blob/exp/Packages/com.careboo.unity-algorand-sdk/Documentation/manual/your_first_transaction_send_a_payment.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

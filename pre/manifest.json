@@ -3312,6 +3312,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "manual/create_an_nft_configure_an_asset.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/create_an_nft_configure_an_asset.html",
+          "hash": "gTE+25kTu54nJq1HAQhjbtl92BmXFCTQfoIX/6vU+LU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "manual/quickstart.md",
       "output": {
         ".html": {
@@ -3323,15 +3335,48 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "manual/toc.yml",
       "output": {
         ".html": {
           "relative_path": "manual/toc.html",
-          "hash": "bC68tb9H79gzzwnVTWqasexv9C6NgWU6BCiG35hnFw8="
+          "hash": "LPB+MIh6d+fV8m0YkAhbbuvW575p/fv3UgsYz2QEzqA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/your_first_transaction_connect_to_a_node.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/your_first_transaction_connect_to_a_node.html",
+          "hash": "Ly+Lat5cieKdFQEcGIafN86KffCFFRW9OjY16a9SAdA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/your_first_transaction_send_a_payment.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/your_first_transaction_send_a_payment.html",
+          "hash": "XsT2eLiFrxwmeyo7yCPeZnkbB2Fpz1/KRkkB/Y2t9qQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/your_first_transaction_setup_sender_account.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/your_first_transaction_setup_sender_account.html",
+          "hash": "dHA0L7H/3wcBPEw/NwkZEO6jt1G9UzFTcqlAIGB/BoM="
         }
       },
       "is_incremental": false,
@@ -3408,7 +3453,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 3,
+          "total_file_count": 7,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
