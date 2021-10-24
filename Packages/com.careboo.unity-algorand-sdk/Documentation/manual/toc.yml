@@ -1,6 +1,12 @@
-- name: Getting Started
+- name: Quickstart
+  href: quickstart.md
+- name: Your First Transaction
   items:
-  - name: Quickstart
-    href: getting_started_quickstart.md
-  - name: Walkthrough
-    href: getting_started_walkthrough.md
+  - name: Connect to a Node
+    href: your_first_transaction/connect_to_a_node.md
+  - name: Send a Payment
+    href: your_first_transaction/send_a_payment.md
+- name: Create an NFT
+  items:
+  - name: Configure an Asset
+    href: create_an_nft/configure_an_asset.md
