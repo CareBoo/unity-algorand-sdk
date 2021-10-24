@@ -79,8 +79,7 @@
             }
         },
         "template": [
-            "default",
-            "templates/docfx"
+            "default"
         ]
     }
 }
