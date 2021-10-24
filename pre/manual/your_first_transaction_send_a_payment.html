@@ -82,6 +82,7 @@
 <p>Now that we&#39;ve verified our connection with <code>AlgodClient</code> and have obtained the private key of an account with sufficient Algorand balance, we can make a payment transaction. Create the following <code>MonoBehaviour</code>:</p>
 <pre><code class="lang-csharp">using AlgoSdk;
 using Cysharp.Threading.Tasks;
+using System;
 using UnityEngine;
 
 public class AlgodMakePayment : MonoBehaviour
@@ -123,7 +124,9 @@ from before.</p>
         .FromString(&quot;find paddle girl crumble hammer usual obvious toy actual obscure decorate lock bag inmate author valve course ship burger denial sibling tissue nominee above remove&quot;)
         .ToPrivateKey();
 }
-</code></pre><p>Now let&#39;s start building out our <code>MakePayment(Address receiver, ulong amount)</code> method. Most of the time, the process for sending a transaction will look like</p>
+</code></pre><div class="WARNING"><h5>Warning</h5><p>Never share your private key or mnemonic. In a production environment, do not store your keys in a field like this. Instead, it&#39;s recommended to use an external wallet to store keys.</p>
+</div>
+<p>Now let&#39;s start building out our <code>MakePayment(Address receiver, ulong amount)</code> method. Most of the time, the process for sending a transaction will look like</p>
 <ol>
 <li>Get the suggested <code>TransactionParams</code> from <code>AlgodClient.GetSuggestedParams()</code>. This contains information like the fee, the hash of the genesis block, and the latest round number.</li>
 <li>Create a transaction using the static creation methods found in the <code>Transaction</code> class. For a payment transaction, we&#39;re going to use <code>Transaction.Payment(Address sender, TransactionParams txnParams, Address receiver, ulong amount)</code>.</li>
