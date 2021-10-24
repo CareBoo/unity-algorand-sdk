@@ -6,6 +6,7 @@ Now that we've verified our connection with `AlgodClient` and have obtained the 
 ```csharp
 using AlgoSdk;
 using Cysharp.Threading.Tasks;
+using System;
 using UnityEngine;
 
 public class AlgodMakePayment : MonoBehaviour
@@ -52,6 +53,9 @@ public void Start()
         .ToPrivateKey();
 }
 ```
+
+> [!Warning]
+> Never share your private key or mnemonic. In a production environment, do not store your keys in a field like this. Instead, it's recommended to use an external wallet to store keys.
 
 Now let's start building out our `MakePayment(Address receiver, ulong amount)` method. Most of the time, the process for sending a transaction will look like
 1. Get the suggested `TransactionParams` from `AlgodClient.GetSuggestedParams()`. This contains information like the fee, the hash of the genesis block, and the latest round number.
