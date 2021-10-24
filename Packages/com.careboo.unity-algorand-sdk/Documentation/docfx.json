@@ -70,7 +70,7 @@
             }
         ],
         "sitemap": {
-            "baseUrl": "https://CareBoo.github.io/unity-algorand-sdk",
+            "baseUrl": "https://CareBoo.github.io/unity-algorand-sdk/",
             "changefreq": "weekly",
             "fileOptions": {
                 "api/*": {

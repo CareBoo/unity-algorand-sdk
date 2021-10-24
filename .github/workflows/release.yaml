@@ -3,7 +3,7 @@ name: Create Release
 on:
   push:
     branches:
-      - master
+      - main
       - pre
       - exp
       - '[0-9]+.[0-9]+.[0-9]+'
@@ -59,3 +59,75 @@ jobs:
         run: ./scripts/release_gpr
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  build_docs:
+    name: Build Docs
+    needs: release
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          lfs: true
+
+      - name: Get package version
+        id: version
+        uses: notiz-dev/github-action-json-property@release
+        with:
+            path: 'Packages/com.careboo.unity-aglorand-sdk/package.json'
+            prop_path: 'version'
+
+      - name: Install DocFX
+        run: choco install -y docfx
+
+      - name: Use README.md as index.md
+        run: cp README.md Packages/com.careboo.unity-algorand-sdk/Documentation/index.md
+
+      - name: Move CHANGELOG.md
+        run: cp Packages/com.careboo.unity-algorand-sdk/CHANGELOG.md Packages/com.careboo.unity-algorand-sdk/Documentation/CHANGELOG.md
+
+      - name: Update sitemap
+        uses: jossef/action-set-json-field@v1
+        with:
+          file: Packages/com.careboo.unity-algorand-sdk/Documentation/docfx.json
+          field: build.sitemap.baseUrl
+          value: https://CareBoo.github.io/unity-algorand-sdk/${{ steps.version.outputs.prop }}/
+
+      - name: Build
+        run: docfx Packages/com.careboo.unity-algorand-sdk/Documentation/docfx.json
+
+      - name: Upload site artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: _site
+          path: Packages/com.careboo.unity-algorand-sdk/_site
+
+  deploy_docs:
+    name: Deploy Docs
+    needs: build_docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          lfs: true
+
+      - name: Download Docs site artifact
+        uses: actions/download-artifact@v1
+        with:
+          name: _site
+
+      - name: Get package version
+        id: version
+        uses: notiz-dev/github-action-json-property@release
+        with:
+            path: 'Packages/com.careboo.unity-aglorand-sdk/package.json'
+            prop_path: 'version'
+
+      - name: Deploy Docs
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: _site
+          destination_dir: ${{ steps.version.outputs.prop }}
