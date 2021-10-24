@@ -1357,7 +1357,7 @@
   "index.html": {
     "href": "index.html",
     "title": "Unity Algorand SDK | Unity Algorand SDK",
-    "keywords": "Unity Algorand SDK Algorand SDK for Unity Development. See this Github issue . WARNING This package has not been audited and isn't suitable for production use."
+    "keywords": "Unity Algorand SDK Algorand SDK for Unity Development. Important This package has not been audited and isn't suitable for production use."
   },
   "manual/getting_started.html": {
     "href": "manual/getting_started.html",
