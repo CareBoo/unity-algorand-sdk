@@ -76,6 +76,10 @@
                     "changefreq": "daily"
                 }
             }
-        }
+        },
+        "template": [
+            "default",
+            "templates/docfx"
+        ]
     }
 }
