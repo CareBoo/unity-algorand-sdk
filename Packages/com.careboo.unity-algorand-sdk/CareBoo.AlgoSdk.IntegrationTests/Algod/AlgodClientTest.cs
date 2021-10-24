@@ -2,7 +2,6 @@ using System.Collections;
 using AlgoSdk;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
-using UnityEngine;
 using UnityEngine.TestTools;
 
 [TestFixture]
