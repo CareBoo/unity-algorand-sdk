@@ -10,7 +10,7 @@ public class BlockTest
     public void DeserializingBlockFromMessagePackShouldThrowNoErrors()
     {
         using var bytes = new NativeArray<byte>(blockMsgPack, Allocator.Temp);
-        AlgoApiSerializer.DeserializeMessagePack<BlockResponse>(bytes.AsReadOnly());
+        AlgoApiSerializer.DeserializeMessagePack<BlockResponse>(bytes);
     }
 
     [Test]
