@@ -125,7 +125,7 @@ jobs:
     needs: build_docs
     runs-on: ubuntu-latest
     strategy:
-      max-parellel: 1
+      max-parallel: 1
       matrix:
         tag: ['version', 'branch']
     steps:
