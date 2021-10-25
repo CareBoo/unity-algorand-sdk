@@ -1,3 +1,15 @@
+# [1.0.0-pre.3](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.2...v1.0.0-pre.3) (2021-10-25)
+
+
+### Code Refactoring
+
+* :fire: remove `NativeSliceExtensions` ([c5c7715](https://github.com/CareBoo/unity-algorand-sdk/commit/c5c77158ab8bfa6585e95f3cb01594b80758f635))
+
+
+### BREAKING CHANGES
+
+* Removing `NativeSliceExtensions`
+
 # [1.0.0-pre.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.1...v1.0.0-pre.2) (2021-10-25)
 
 
