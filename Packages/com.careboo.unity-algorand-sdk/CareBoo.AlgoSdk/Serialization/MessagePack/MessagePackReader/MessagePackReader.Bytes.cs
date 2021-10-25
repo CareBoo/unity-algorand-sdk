@@ -50,7 +50,7 @@ namespace AlgoSdk.MessagePack
                 offset = resetOffset;
                 return false;
             }
-            bytes = data.AsNativeSlice(offset, length);
+            bytes = new NativeSlice<byte>(data, offset, length);
             offset += length;
             return true;
         }

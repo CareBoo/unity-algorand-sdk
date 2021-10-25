@@ -140,7 +140,6 @@ jobs:
         run: echo "::set-output name=name::${GITHUB_REF#refs/heads/}"
 
       - name: Checkout
-        if: ${{ matrix.tag == 'version' }}
         uses: actions/checkout@v2
         with:
           lfs: true

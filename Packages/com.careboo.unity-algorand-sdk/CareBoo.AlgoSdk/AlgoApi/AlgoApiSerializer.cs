@@ -23,7 +23,7 @@ namespace AlgoSdk
             if (bytes == null)
                 return default;
             using var nativeBytes = new NativeArray<byte>(bytes, Allocator.Temp);
-            return Deserialize<T>(nativeBytes.AsReadOnly(), contentType);
+            return Deserialize<T>(nativeBytes, contentType);
         }
 
         /// <summary>
@@ -33,7 +33,7 @@ namespace AlgoSdk
         /// <param name="bytes">The raw data to deserialize</param>
         /// <param name="contentType">The content type of the raw data (Json | MessagePack)</param>
         /// <returns>The data deserialized as T</returns>
-        public static T Deserialize<T>(NativeArray<byte>.ReadOnly bytes, ContentType contentType)
+        public static T Deserialize<T>(NativeArray<byte> bytes, ContentType contentType)
         {
             return contentType switch
             {
@@ -50,7 +50,7 @@ namespace AlgoSdk
         /// <typeparam name="T">The type to deserialize the data into</typeparam>
         /// <param name="bytes">UTF8 Bytes that can be decoded into JSON</param>
         /// <returns>The data deserialized as T</returns>
-        public static T DeserializeJson<T>(NativeArray<byte>.ReadOnly bytes)
+        public static T DeserializeJson<T>(NativeArray<byte> bytes)
         {
             var text = new NativeText(bytes.Length, Allocator.Temp);
             try
@@ -86,7 +86,7 @@ namespace AlgoSdk
         /// <typeparam name="T">The type of the object that will be deserialized into</typeparam>
         /// <param name="bytes">The messagepack bytes</param>
         /// <returns>The data deserialized as T</returns>
-        public static T DeserializeMessagePack<T>(NativeArray<byte>.ReadOnly bytes)
+        public static T DeserializeMessagePack<T>(NativeArray<byte> bytes)
         {
             var reader = new MessagePackReader(bytes);
             return AlgoApiFormatterCache<T>.Formatter.Deserialize(ref reader);

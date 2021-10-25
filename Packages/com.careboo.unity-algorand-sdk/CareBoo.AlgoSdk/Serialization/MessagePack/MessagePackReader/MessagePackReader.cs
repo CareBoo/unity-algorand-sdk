@@ -6,10 +6,10 @@ namespace AlgoSdk.MessagePack
 {
     public ref partial struct MessagePackReader
     {
-        NativeArray<byte>.ReadOnly data;
+        NativeArray<byte> data;
         int offset;
 
-        public MessagePackReader(NativeArray<byte>.ReadOnly data)
+        public MessagePackReader(NativeArray<byte> data)
         {
             this.data = data;
             this.offset = 0;
