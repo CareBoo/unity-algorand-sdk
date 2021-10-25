@@ -2035,15 +2035,15 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AlgoApiSerializer.Deserialize
   nameWithType: AlgoApiSerializer.Deserialize
-- uid: AlgoSdk.AlgoApiSerializer.Deserialize``1(NativeArray{System.Byte}.ReadOnly,AlgoSdk.ContentType)
-  name: Deserialize<T>(NativeArray<Byte>.ReadOnly, ContentType)
-  href: api/AlgoSdk.AlgoApiSerializer.html#AlgoSdk_AlgoApiSerializer_Deserialize__1_NativeArray_System_Byte__ReadOnly_AlgoSdk_ContentType_
-  commentId: M:AlgoSdk.AlgoApiSerializer.Deserialize``1(NativeArray{System.Byte}.ReadOnly,AlgoSdk.ContentType)
-  name.vb: Deserialize(Of T)(NativeArray(Of Byte).ReadOnly, ContentType)
-  fullName: AlgoSdk.AlgoApiSerializer.Deserialize<T>(NativeArray<System.Byte>.ReadOnly, AlgoSdk.ContentType)
-  fullName.vb: AlgoSdk.AlgoApiSerializer.Deserialize(Of T)(NativeArray(Of System.Byte).ReadOnly, AlgoSdk.ContentType)
-  nameWithType: AlgoApiSerializer.Deserialize<T>(NativeArray<Byte>.ReadOnly, ContentType)
-  nameWithType.vb: AlgoApiSerializer.Deserialize(Of T)(NativeArray(Of Byte).ReadOnly, ContentType)
+- uid: AlgoSdk.AlgoApiSerializer.Deserialize``1(NativeArray{System.Byte},AlgoSdk.ContentType)
+  name: Deserialize<T>(NativeArray<Byte>, ContentType)
+  href: api/AlgoSdk.AlgoApiSerializer.html#AlgoSdk_AlgoApiSerializer_Deserialize__1_NativeArray_System_Byte__AlgoSdk_ContentType_
+  commentId: M:AlgoSdk.AlgoApiSerializer.Deserialize``1(NativeArray{System.Byte},AlgoSdk.ContentType)
+  name.vb: Deserialize(Of T)(NativeArray(Of Byte), ContentType)
+  fullName: AlgoSdk.AlgoApiSerializer.Deserialize<T>(NativeArray<System.Byte>, AlgoSdk.ContentType)
+  fullName.vb: AlgoSdk.AlgoApiSerializer.Deserialize(Of T)(NativeArray(Of System.Byte), AlgoSdk.ContentType)
+  nameWithType: AlgoApiSerializer.Deserialize<T>(NativeArray<Byte>, ContentType)
+  nameWithType.vb: AlgoApiSerializer.Deserialize(Of T)(NativeArray(Of Byte), ContentType)
 - uid: AlgoSdk.AlgoApiSerializer.Deserialize``1(System.Byte[],AlgoSdk.ContentType)
   name: Deserialize<T>(Byte[], ContentType)
   href: api/AlgoSdk.AlgoApiSerializer.html#AlgoSdk_AlgoApiSerializer_Deserialize__1_System_Byte___AlgoSdk_ContentType_
@@ -2060,15 +2060,15 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AlgoApiSerializer.DeserializeJson
   nameWithType: AlgoApiSerializer.DeserializeJson
-- uid: AlgoSdk.AlgoApiSerializer.DeserializeJson``1(NativeArray{System.Byte}.ReadOnly)
-  name: DeserializeJson<T>(NativeArray<Byte>.ReadOnly)
-  href: api/AlgoSdk.AlgoApiSerializer.html#AlgoSdk_AlgoApiSerializer_DeserializeJson__1_NativeArray_System_Byte__ReadOnly_
-  commentId: M:AlgoSdk.AlgoApiSerializer.DeserializeJson``1(NativeArray{System.Byte}.ReadOnly)
-  name.vb: DeserializeJson(Of T)(NativeArray(Of Byte).ReadOnly)
-  fullName: AlgoSdk.AlgoApiSerializer.DeserializeJson<T>(NativeArray<System.Byte>.ReadOnly)
-  fullName.vb: AlgoSdk.AlgoApiSerializer.DeserializeJson(Of T)(NativeArray(Of System.Byte).ReadOnly)
-  nameWithType: AlgoApiSerializer.DeserializeJson<T>(NativeArray<Byte>.ReadOnly)
-  nameWithType.vb: AlgoApiSerializer.DeserializeJson(Of T)(NativeArray(Of Byte).ReadOnly)
+- uid: AlgoSdk.AlgoApiSerializer.DeserializeJson``1(NativeArray{System.Byte})
+  name: DeserializeJson<T>(NativeArray<Byte>)
+  href: api/AlgoSdk.AlgoApiSerializer.html#AlgoSdk_AlgoApiSerializer_DeserializeJson__1_NativeArray_System_Byte__
+  commentId: M:AlgoSdk.AlgoApiSerializer.DeserializeJson``1(NativeArray{System.Byte})
+  name.vb: DeserializeJson(Of T)(NativeArray(Of Byte))
+  fullName: AlgoSdk.AlgoApiSerializer.DeserializeJson<T>(NativeArray<System.Byte>)
+  fullName.vb: AlgoSdk.AlgoApiSerializer.DeserializeJson(Of T)(NativeArray(Of System.Byte))
+  nameWithType: AlgoApiSerializer.DeserializeJson<T>(NativeArray<Byte>)
+  nameWithType.vb: AlgoApiSerializer.DeserializeJson(Of T)(NativeArray(Of Byte))
 - uid: AlgoSdk.AlgoApiSerializer.DeserializeJson``1(NativeText)
   name: DeserializeJson<T>(NativeText)
   href: api/AlgoSdk.AlgoApiSerializer.html#AlgoSdk_AlgoApiSerializer_DeserializeJson__1_NativeText_
@@ -2085,15 +2085,15 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AlgoApiSerializer.DeserializeMessagePack
   nameWithType: AlgoApiSerializer.DeserializeMessagePack
-- uid: AlgoSdk.AlgoApiSerializer.DeserializeMessagePack``1(NativeArray{System.Byte}.ReadOnly)
-  name: DeserializeMessagePack<T>(NativeArray<Byte>.ReadOnly)
-  href: api/AlgoSdk.AlgoApiSerializer.html#AlgoSdk_AlgoApiSerializer_DeserializeMessagePack__1_NativeArray_System_Byte__ReadOnly_
-  commentId: M:AlgoSdk.AlgoApiSerializer.DeserializeMessagePack``1(NativeArray{System.Byte}.ReadOnly)
-  name.vb: DeserializeMessagePack(Of T)(NativeArray(Of Byte).ReadOnly)
-  fullName: AlgoSdk.AlgoApiSerializer.DeserializeMessagePack<T>(NativeArray<System.Byte>.ReadOnly)
-  fullName.vb: AlgoSdk.AlgoApiSerializer.DeserializeMessagePack(Of T)(NativeArray(Of System.Byte).ReadOnly)
-  nameWithType: AlgoApiSerializer.DeserializeMessagePack<T>(NativeArray<Byte>.ReadOnly)
-  nameWithType.vb: AlgoApiSerializer.DeserializeMessagePack(Of T)(NativeArray(Of Byte).ReadOnly)
+- uid: AlgoSdk.AlgoApiSerializer.DeserializeMessagePack``1(NativeArray{System.Byte})
+  name: DeserializeMessagePack<T>(NativeArray<Byte>)
+  href: api/AlgoSdk.AlgoApiSerializer.html#AlgoSdk_AlgoApiSerializer_DeserializeMessagePack__1_NativeArray_System_Byte__
+  commentId: M:AlgoSdk.AlgoApiSerializer.DeserializeMessagePack``1(NativeArray{System.Byte})
+  name.vb: DeserializeMessagePack(Of T)(NativeArray(Of Byte))
+  fullName: AlgoSdk.AlgoApiSerializer.DeserializeMessagePack<T>(NativeArray<System.Byte>)
+  fullName.vb: AlgoSdk.AlgoApiSerializer.DeserializeMessagePack(Of T)(NativeArray(Of System.Byte))
+  nameWithType: AlgoApiSerializer.DeserializeMessagePack<T>(NativeArray<Byte>)
+  nameWithType.vb: AlgoApiSerializer.DeserializeMessagePack(Of T)(NativeArray(Of Byte))
 - uid: AlgoSdk.AlgoApiSerializer.SerializeJson*
   name: SerializeJson
   href: api/AlgoSdk.AlgoApiSerializer.html#AlgoSdk_AlgoApiSerializer_SerializeJson_
@@ -14732,15 +14732,15 @@ references:
   commentId: T:AlgoSdk.MessagePack.MessagePackReader
   fullName: AlgoSdk.MessagePack.MessagePackReader
   nameWithType: MessagePackReader
-- uid: AlgoSdk.MessagePack.MessagePackReader.#ctor(NativeArray{System.Byte}.ReadOnly)
-  name: MessagePackReader(NativeArray<Byte>.ReadOnly)
-  href: api/AlgoSdk.MessagePack.MessagePackReader.html#AlgoSdk_MessagePack_MessagePackReader__ctor_NativeArray_System_Byte__ReadOnly_
-  commentId: M:AlgoSdk.MessagePack.MessagePackReader.#ctor(NativeArray{System.Byte}.ReadOnly)
-  name.vb: MessagePackReader(NativeArray(Of Byte).ReadOnly)
-  fullName: AlgoSdk.MessagePack.MessagePackReader.MessagePackReader(NativeArray<System.Byte>.ReadOnly)
-  fullName.vb: AlgoSdk.MessagePack.MessagePackReader.MessagePackReader(NativeArray(Of System.Byte).ReadOnly)
-  nameWithType: MessagePackReader.MessagePackReader(NativeArray<Byte>.ReadOnly)
-  nameWithType.vb: MessagePackReader.MessagePackReader(NativeArray(Of Byte).ReadOnly)
+- uid: AlgoSdk.MessagePack.MessagePackReader.#ctor(NativeArray{System.Byte})
+  name: MessagePackReader(NativeArray<Byte>)
+  href: api/AlgoSdk.MessagePack.MessagePackReader.html#AlgoSdk_MessagePack_MessagePackReader__ctor_NativeArray_System_Byte__
+  commentId: M:AlgoSdk.MessagePack.MessagePackReader.#ctor(NativeArray{System.Byte})
+  name.vb: MessagePackReader(NativeArray(Of Byte))
+  fullName: AlgoSdk.MessagePack.MessagePackReader.MessagePackReader(NativeArray<System.Byte>)
+  fullName.vb: AlgoSdk.MessagePack.MessagePackReader.MessagePackReader(NativeArray(Of System.Byte))
+  nameWithType: MessagePackReader.MessagePackReader(NativeArray<Byte>)
+  nameWithType.vb: MessagePackReader.MessagePackReader(NativeArray(Of Byte))
 - uid: AlgoSdk.MessagePack.MessagePackReader.#ctor*
   name: MessagePackReader
   href: api/AlgoSdk.MessagePack.MessagePackReader.html#AlgoSdk_MessagePack_MessagePackReader__ctor_

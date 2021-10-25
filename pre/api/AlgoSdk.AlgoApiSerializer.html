@@ -102,13 +102,13 @@
   
   
   <a id="AlgoSdk_AlgoApiSerializer_Deserialize_" data-uid="AlgoSdk.AlgoApiSerializer.Deserialize*"></a>
-  <h4 id="AlgoSdk_AlgoApiSerializer_Deserialize__1_NativeArray_System_Byte__ReadOnly_AlgoSdk_ContentType_" data-uid="AlgoSdk.AlgoApiSerializer.Deserialize``1(NativeArray{System.Byte}.ReadOnly,AlgoSdk.ContentType)">Deserialize&lt;T&gt;(NativeArray&lt;Byte&gt;.ReadOnly, ContentType)</h4>
+  <h4 id="AlgoSdk_AlgoApiSerializer_Deserialize__1_NativeArray_System_Byte__AlgoSdk_ContentType_" data-uid="AlgoSdk.AlgoApiSerializer.Deserialize``1(NativeArray{System.Byte},AlgoSdk.ContentType)">Deserialize&lt;T&gt;(NativeArray&lt;Byte&gt;, ContentType)</h4>
   <div class="markdown level1 summary"><p>Deserializes raw data based on its <a class="xref" href="AlgoSdk.ContentType.html">ContentType</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T Deserialize&lt;T&gt;(NativeArray&lt;byte&gt;.ReadOnly bytes, ContentType contentType)</code></pre>
+    <pre><code class="lang-csharp hljs">public static T Deserialize&lt;T&gt;(NativeArray&lt;byte&gt; bytes, ContentType contentType)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,7 +121,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">NativeArray.ReadOnly</span>&lt;&gt;</td>
+        <td><span class="xref">NativeArray</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
         <td><span class="parametername">bytes</span></td>
         <td><p>The raw data to deserialize</p>
 </td>
@@ -236,13 +236,13 @@
   
   
   <a id="AlgoSdk_AlgoApiSerializer_DeserializeJson_" data-uid="AlgoSdk.AlgoApiSerializer.DeserializeJson*"></a>
-  <h4 id="AlgoSdk_AlgoApiSerializer_DeserializeJson__1_NativeArray_System_Byte__ReadOnly_" data-uid="AlgoSdk.AlgoApiSerializer.DeserializeJson``1(NativeArray{System.Byte}.ReadOnly)">DeserializeJson&lt;T&gt;(NativeArray&lt;Byte&gt;.ReadOnly)</h4>
+  <h4 id="AlgoSdk_AlgoApiSerializer_DeserializeJson__1_NativeArray_System_Byte__" data-uid="AlgoSdk.AlgoApiSerializer.DeserializeJson``1(NativeArray{System.Byte})">DeserializeJson&lt;T&gt;(NativeArray&lt;Byte&gt;)</h4>
   <div class="markdown level1 summary"><p>Deserialize JSON encoded as UTF8 bytes</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T DeserializeJson&lt;T&gt;(NativeArray&lt;byte&gt;.ReadOnly bytes)</code></pre>
+    <pre><code class="lang-csharp hljs">public static T DeserializeJson&lt;T&gt;(NativeArray&lt;byte&gt; bytes)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -255,7 +255,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">NativeArray.ReadOnly</span>&lt;&gt;</td>
+        <td><span class="xref">NativeArray</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
         <td><span class="parametername">bytes</span></td>
         <td><p>UTF8 Bytes that can be decoded into JSON</p>
 </td>
@@ -358,13 +358,13 @@
   
   
   <a id="AlgoSdk_AlgoApiSerializer_DeserializeMessagePack_" data-uid="AlgoSdk.AlgoApiSerializer.DeserializeMessagePack*"></a>
-  <h4 id="AlgoSdk_AlgoApiSerializer_DeserializeMessagePack__1_NativeArray_System_Byte__ReadOnly_" data-uid="AlgoSdk.AlgoApiSerializer.DeserializeMessagePack``1(NativeArray{System.Byte}.ReadOnly)">DeserializeMessagePack&lt;T&gt;(NativeArray&lt;Byte&gt;.ReadOnly)</h4>
+  <h4 id="AlgoSdk_AlgoApiSerializer_DeserializeMessagePack__1_NativeArray_System_Byte__" data-uid="AlgoSdk.AlgoApiSerializer.DeserializeMessagePack``1(NativeArray{System.Byte})">DeserializeMessagePack&lt;T&gt;(NativeArray&lt;Byte&gt;)</h4>
   <div class="markdown level1 summary"><p>Deserialize messagepack bytes into an object</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T DeserializeMessagePack&lt;T&gt;(NativeArray&lt;byte&gt;.ReadOnly bytes)</code></pre>
+    <pre><code class="lang-csharp hljs">public static T DeserializeMessagePack&lt;T&gt;(NativeArray&lt;byte&gt; bytes)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -377,7 +377,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">NativeArray.ReadOnly</span>&lt;&gt;</td>
+        <td><span class="xref">NativeArray</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
         <td><span class="parametername">bytes</span></td>
         <td><p>The messagepack bytes</p>
 </td>
