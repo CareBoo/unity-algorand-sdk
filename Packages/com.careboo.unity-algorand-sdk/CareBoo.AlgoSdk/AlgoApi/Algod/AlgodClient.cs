@@ -62,7 +62,7 @@ namespace AlgoSdk
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<Account>> GetAccountInformation(Address accountAddress)
+        public async UniTask<AlgoApiResponse<AccountInfo>> GetAccountInformation(Address accountAddress)
         {
             return await this
                 .Get($"/v2/accounts/{accountAddress}")

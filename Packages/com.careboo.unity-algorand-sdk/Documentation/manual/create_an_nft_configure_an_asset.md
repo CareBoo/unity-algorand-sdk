@@ -1,2 +1,0 @@
-Configure an Asset
-------------------

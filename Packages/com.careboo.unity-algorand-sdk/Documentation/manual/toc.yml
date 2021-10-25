@@ -1,14 +1,2 @@
 - name: Quickstart
   href: quickstart.md
-- name: Your First Transaction
-  items:
-  - name: Connect to a Node
-    href: your_first_transaction_connect_to_a_node.md
-  - name: Setup Sender Account
-    href: your_first_transaction_setup_sender_account.md
-  - name: Send a Payment
-    href: your_first_transaction_send_a_payment.md
-- name: Create an NFT
-  items:
-  - name: Configure an Asset
-    href: create_an_nft_configure_an_asset.md

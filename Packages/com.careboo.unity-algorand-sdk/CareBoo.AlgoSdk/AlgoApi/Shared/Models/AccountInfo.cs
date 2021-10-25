@@ -7,8 +7,8 @@ namespace AlgoSdk
     /// Information regarding an Algorand account at a given round.
     /// </summary>
     [AlgoApiObject]
-    public struct Account
-        : IEquatable<Account>
+    public struct AccountInfo
+        : IEquatable<AccountInfo>
     {
         /// <summary>
         /// The public key of the account.
@@ -151,7 +151,7 @@ namespace AlgoSdk
         [AlgoApiField("status", null)]
         public FixedString32Bytes Status;
 
-        public bool Equals(Account other)
+        public bool Equals(AccountInfo other)
         {
             return Address.Equals(other.Address);
         }
