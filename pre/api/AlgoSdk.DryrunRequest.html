@@ -86,6 +86,10 @@
   <div class="markdown level0 summary"><p>Request data type for dryrun endpoint. Given the Transactions and simulated ledger state upload, run TEAL scripts and return debugging information.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.DryrunRequest.html">DryrunRequest</a>&gt;</div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_DryrunRequest_syntax">Syntax</h5>
@@ -101,8 +105,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;accounts&quot;, null, false)]
-public Account[] Accounts</code></pre>
+    <pre><code class="lang-csharp hljs">public AccountInfo[] Accounts</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -114,7 +117,7 @@ public Account[] Accounts</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="AlgoSdk.Account.html">Account</a>[]</td>
+        <td><a class="xref" href="AlgoSdk.AccountInfo.html">AccountInfo</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -126,8 +129,7 @@ public Account[] Accounts</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;apps&quot;, null, false)]
-public Application[] Applications</code></pre>
+    <pre><code class="lang-csharp hljs">public Application[] Applications</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -152,8 +154,7 @@ public Application[] Applications</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;latest-timestamp&quot;, null, false)]
-public ulong LatestTimestamp</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong LatestTimestamp</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -178,8 +179,7 @@ public ulong LatestTimestamp</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;protocol-version&quot;, null, false)]
-public FixedString64Bytes ProtocolVersion</code></pre>
+    <pre><code class="lang-csharp hljs">public FixedString64Bytes ProtocolVersion</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,8 +204,7 @@ public FixedString64Bytes ProtocolVersion</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;round&quot;, null, false)]
-public ulong Round</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong Round</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -229,8 +228,7 @@ public ulong Round</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;sources&quot;, null, false)]
-public DryrunSource[] Sources</code></pre>
+    <pre><code class="lang-csharp hljs">public DryrunSource[] Sources</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -254,8 +252,7 @@ public DryrunSource[] Sources</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;txns&quot;, null, false)]
-public Transaction[] Transactions</code></pre>
+    <pre><code class="lang-csharp hljs">public Transaction[] Transactions</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -316,6 +313,10 @@ public Transaction[] Transactions</code></pre>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IEquatable&lt;&gt;</span>
+  </div>
 </article>
           </div>
           

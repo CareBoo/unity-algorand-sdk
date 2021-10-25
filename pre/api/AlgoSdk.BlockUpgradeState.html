@@ -87,6 +87,7 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.BlockUpgradeState.html">BlockUpgradeState</a>&gt;</div>
     <div><a class="xref" href="AlgoSdk.IBlockUpgradeState.html">IBlockUpgradeState</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
@@ -105,9 +106,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;current-protocol&quot;, null, false)]
-public FixedString128Bytes CurrentProtocol { readonly get; set;
-}</code></pre>
+    <pre><code class="lang-csharp hljs">public FixedString128Bytes CurrentProtocol { readonly get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -132,9 +131,7 @@ public FixedString128Bytes CurrentProtocol { readonly get; set;
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;next-protocol&quot;, null, false)]
-public FixedString128Bytes NextProtocol { readonly get; set;
-}</code></pre>
+    <pre><code class="lang-csharp hljs">public FixedString128Bytes NextProtocol { readonly get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,9 +156,7 @@ public FixedString128Bytes NextProtocol { readonly get; set;
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;next-protocol-approvals&quot;, null, false)]
-public ulong NextProtocolApprovals { readonly get; set;
-}</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong NextProtocolApprovals { readonly get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -186,9 +181,7 @@ public ulong NextProtocolApprovals { readonly get; set;
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;next-protocol-switch-on&quot;, null, false)]
-public ulong NextProtocolSwitchOn { readonly get; set;
-}</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong NextProtocolSwitchOn { readonly get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -213,9 +206,7 @@ public ulong NextProtocolSwitchOn { readonly get; set;
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;next-protocol-vote-before&quot;, null, false)]
-public ulong NextProtocolVoteBefore { readonly get; set;
-}</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong NextProtocolVoteBefore { readonly get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -277,6 +268,9 @@ public ulong NextProtocolVoteBefore { readonly get; set;
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IEquatable&lt;&gt;</span>
+  </div>
   <div>
       <a class="xref" href="AlgoSdk.IBlockUpgradeState.html">IBlockUpgradeState</a>
   </div>

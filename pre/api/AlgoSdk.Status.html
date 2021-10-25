@@ -86,6 +86,10 @@
   <div class="markdown level0 summary"><p>The node status from <a class="xref" href="AlgoSdk.IAlgodClient.html#AlgoSdk_IAlgodClient_GetCurrentStatus">GetCurrentStatus()</a> and <a class="xref" href="AlgoSdk.IAlgodClient.html#AlgoSdk_IAlgodClient_GetStatusAfterWaitingForRound_System_UInt64_">GetStatusAfterWaitingForRound(UInt64)</a></p>
 </div>
   <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.Status.html">Status</a>&gt;</div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_Status_syntax">Syntax</h5>
@@ -102,8 +106,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;catchpoint&quot;, null, false)]
-public string Catchpoint</code></pre>
+    <pre><code class="lang-csharp hljs">public string Catchpoint</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -128,8 +131,7 @@ public string Catchpoint</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;catchpoint-acquired-blocks&quot;, null, false)]
-public ulong CatchpointAcquiredBlocks</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong CatchpointAcquiredBlocks</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -154,8 +156,7 @@ public ulong CatchpointAcquiredBlocks</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;catchpoint-processed-accounts&quot;, null, false)]
-public ulong CatchpointProcessedAmounts</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong CatchpointProcessedAmounts</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,8 +181,7 @@ public ulong CatchpointProcessedAmounts</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;catchpoint-total-accounts&quot;, null, false)]
-public ulong CatchpointTotalAccounts</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong CatchpointTotalAccounts</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,8 +206,7 @@ public ulong CatchpointTotalAccounts</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;catchpoint-total-blocks&quot;, null, false)]
-public ulong CatchpointTotalBlocks</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong CatchpointTotalBlocks</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -232,8 +231,7 @@ public ulong CatchpointTotalBlocks</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;catchpoint-verified-accounts&quot;, null, false)]
-public ulong CatchpointVerifiedAccounts</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong CatchpointVerifiedAccounts</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -258,8 +256,7 @@ public ulong CatchpointVerifiedAccounts</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;catchup-time&quot;, null, false)]
-public ulong CatchupTime</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong CatchupTime</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -284,8 +281,7 @@ public ulong CatchupTime</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;last-catchpoint&quot;, null, false)]
-public string LastCatchpoint</code></pre>
+    <pre><code class="lang-csharp hljs">public string LastCatchpoint</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -310,8 +306,7 @@ public string LastCatchpoint</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;last-round&quot;, null, false)]
-public ulong LastRound</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong LastRound</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -336,8 +331,7 @@ public ulong LastRound</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;last-version&quot;, null, false)]
-public string LastVersion</code></pre>
+    <pre><code class="lang-csharp hljs">public string LastVersion</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -362,8 +356,7 @@ public string LastVersion</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;next-version&quot;, null, false)]
-public string NextVersion</code></pre>
+    <pre><code class="lang-csharp hljs">public string NextVersion</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -388,8 +381,7 @@ public string NextVersion</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;next-version-round&quot;, null, false)]
-public ulong NextVersionRound</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong NextVersionRound</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -414,8 +406,7 @@ public ulong NextVersionRound</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;next-version-supported&quot;, null, false)]
-public bool NextVersionSupported</code></pre>
+    <pre><code class="lang-csharp hljs">public bool NextVersionSupported</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -440,8 +431,7 @@ public bool NextVersionSupported</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;stopped-at-unsupported-round&quot;, null, false)]
-public bool StoppedAtUnsupportedRound</code></pre>
+    <pre><code class="lang-csharp hljs">public bool StoppedAtUnsupportedRound</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -466,8 +456,7 @@ public bool StoppedAtUnsupportedRound</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;time-since-last-round&quot;, null, false)]
-public ulong TimeSinceLastRound</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong TimeSinceLastRound</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -528,6 +517,10 @@ public ulong TimeSinceLastRound</code></pre>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IEquatable&lt;&gt;</span>
+  </div>
 </article>
           </div>
           

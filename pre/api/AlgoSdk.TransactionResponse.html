@@ -87,6 +87,7 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.TransactionResponse.html">TransactionResponse</a>&gt;</div>
     <div><a class="xref" href="AlgoSdk.IIndexerResponse.html">IIndexerResponse</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
@@ -105,9 +106,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;current-round&quot;, null, false)]
-public ulong CurrentRound { readonly get; set;
-}</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong CurrentRound { readonly get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -132,9 +131,7 @@ public ulong CurrentRound { readonly get; set;
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;transaction&quot;, null, false)]
-public Transaction Transaction { readonly get; set;
-}</code></pre>
+    <pre><code class="lang-csharp hljs">public Transaction Transaction { readonly get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -196,6 +193,9 @@ public Transaction Transaction { readonly get; set;
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IEquatable&lt;&gt;</span>
+  </div>
   <div>
       <a class="xref" href="AlgoSdk.IIndexerResponse.html">IIndexerResponse</a>
   </div>

@@ -85,14 +85,15 @@
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;T&gt;&gt;</div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_Optional_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiFormatter(typeof(OptionalFormatter&lt;bool&gt;), &quot;&quot;, 0)]
-[AlgoApiFormatter(typeof(OptionalFormatter&lt;ulong&gt;), &quot;&quot;, 0)]
-[AlgoApiFormatter(typeof(OptionalFormatter&lt;uint&gt;), &quot;&quot;, 0)]
-public struct Optional&lt;T&gt; : IEquatable&lt;Optional&lt;T&gt;&gt; where T : struct, IEquatable&lt;T&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct Optional&lt;T&gt; : IEquatable&lt;Optional&lt;T&gt;&gt; where T : struct, IEquatable&lt;T&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -345,6 +346,10 @@ public struct Optional&lt;T&gt; : IEquatable&lt;Optional&lt;T&gt;&gt; where T : 
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IEquatable&lt;&gt;</span>
+  </div>
 </article>
           </div>
           

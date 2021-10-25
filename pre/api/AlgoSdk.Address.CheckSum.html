@@ -87,16 +87,14 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="AlgoSdk.LowLevel.IByteArray.html">IByteArray</a></div>
-    <div><a class="xref" href="AlgoSdk.LowLevel.IContiguousArray-1.html">IContiguousArray</a>&lt;<span class="xref">System.Byte</span>&gt;</div>
-    <div><a class="xref" href="AlgoSdk.LowLevel.IArray-1.html">IArray</a>&lt;<span class="xref">System.Byte</span>&gt;</div>
+    <div><span class="xref">IByteArray</span></div>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.Address.CheckSum.html">Address.CheckSum</a>&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_Address_CheckSum_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
-public struct CheckSum : IByteArray, IContiguousArray&lt;byte&gt;, IArray&lt;byte&gt;, IEquatable&lt;Address.CheckSum&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct CheckSum : IByteArray, IEquatable&lt;Address.CheckSum&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -412,7 +410,7 @@ public struct CheckSum : IByteArray, IContiguousArray&lt;byte&gt;, IArray&lt;byt
   
   
   <a id="AlgoSdk_Address_CheckSum_op_Implicit_" data-uid="AlgoSdk.Address.CheckSum.op_Implicit*"></a>
-  <h4 id="AlgoSdk_Address_CheckSum_op_Implicit_AlgoSdk_Crypto_Sha512_256_Hash__AlgoSdk_Address_CheckSum" data-uid="AlgoSdk.Address.CheckSum.op_Implicit(AlgoSdk.Crypto.Sha512_256_Hash)~AlgoSdk.Address.CheckSum">Implicit(Sha512_256_Hash to Address.CheckSum)</h4>
+  <h4 id="AlgoSdk_Address_CheckSum_op_Implicit_Sha512_256_Hash__AlgoSdk_Address_CheckSum" data-uid="AlgoSdk.Address.CheckSum.op_Implicit(Sha512_256_Hash)~AlgoSdk.Address.CheckSum">Implicit(Sha512_256_Hash to Address.CheckSum)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -430,7 +428,7 @@ public struct CheckSum : IByteArray, IContiguousArray&lt;byte&gt;, IArray&lt;byt
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="AlgoSdk.Crypto.Sha512_256_Hash.html">Sha512_256_Hash</a></td>
+        <td><span class="xref">Sha512_256_Hash</span></td>
         <td><span class="parametername">hash</span></td>
         <td></td>
       </tr>
@@ -500,13 +498,10 @@ public struct CheckSum : IByteArray, IContiguousArray&lt;byte&gt;, IArray&lt;byt
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="AlgoSdk.LowLevel.IByteArray.html">IByteArray</a>
+      <span class="xref">IByteArray</span>
   </div>
   <div>
-      <a class="xref" href="AlgoSdk.LowLevel.IContiguousArray-1.html">IContiguousArray&lt;T&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="AlgoSdk.LowLevel.IArray-1.html">IArray&lt;T&gt;</a>
+      <span class="xref">IEquatable&lt;&gt;</span>
   </div>
 </article>
           </div>

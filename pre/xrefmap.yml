@@ -13,139 +13,158 @@ references:
   commentId: T:AlgoSdk.Account
   fullName: AlgoSdk.Account
   nameWithType: Account
-- uid: AlgoSdk.Account.Address
-  name: Address
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_Address
-  commentId: F:AlgoSdk.Account.Address
-  fullName: AlgoSdk.Account.Address
-  nameWithType: Account.Address
-- uid: AlgoSdk.Account.Amount
-  name: Amount
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_Amount
-  commentId: F:AlgoSdk.Account.Amount
-  fullName: AlgoSdk.Account.Amount
-  nameWithType: Account.Amount
-- uid: AlgoSdk.Account.AmountWithoutPendingRewards
-  name: AmountWithoutPendingRewards
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_AmountWithoutPendingRewards
-  commentId: F:AlgoSdk.Account.AmountWithoutPendingRewards
-  fullName: AlgoSdk.Account.AmountWithoutPendingRewards
-  nameWithType: Account.AmountWithoutPendingRewards
-- uid: AlgoSdk.Account.ApplicationsLocalState
-  name: ApplicationsLocalState
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_ApplicationsLocalState
-  commentId: F:AlgoSdk.Account.ApplicationsLocalState
-  fullName: AlgoSdk.Account.ApplicationsLocalState
-  nameWithType: Account.ApplicationsLocalState
-- uid: AlgoSdk.Account.ApplicationsTotalExtraPages
-  name: ApplicationsTotalExtraPages
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_ApplicationsTotalExtraPages
-  commentId: F:AlgoSdk.Account.ApplicationsTotalExtraPages
-  fullName: AlgoSdk.Account.ApplicationsTotalExtraPages
-  nameWithType: Account.ApplicationsTotalExtraPages
-- uid: AlgoSdk.Account.ApplicationsTotalSchema
-  name: ApplicationsTotalSchema
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_ApplicationsTotalSchema
-  commentId: F:AlgoSdk.Account.ApplicationsTotalSchema
-  fullName: AlgoSdk.Account.ApplicationsTotalSchema
-  nameWithType: Account.ApplicationsTotalSchema
-- uid: AlgoSdk.Account.Assets
-  name: Assets
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_Assets
-  commentId: F:AlgoSdk.Account.Assets
-  fullName: AlgoSdk.Account.Assets
-  nameWithType: Account.Assets
-- uid: AlgoSdk.Account.AuthAddress
-  name: AuthAddress
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_AuthAddress
-  commentId: F:AlgoSdk.Account.AuthAddress
-  fullName: AlgoSdk.Account.AuthAddress
-  nameWithType: Account.AuthAddress
-- uid: AlgoSdk.Account.ClosedAtRound
-  name: ClosedAtRound
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_ClosedAtRound
-  commentId: F:AlgoSdk.Account.ClosedAtRound
-  fullName: AlgoSdk.Account.ClosedAtRound
-  nameWithType: Account.ClosedAtRound
-- uid: AlgoSdk.Account.CreatedApplications
-  name: CreatedApplications
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_CreatedApplications
-  commentId: F:AlgoSdk.Account.CreatedApplications
-  fullName: AlgoSdk.Account.CreatedApplications
-  nameWithType: Account.CreatedApplications
-- uid: AlgoSdk.Account.CreatedAssets
-  name: CreatedAssets
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_CreatedAssets
-  commentId: F:AlgoSdk.Account.CreatedAssets
-  fullName: AlgoSdk.Account.CreatedAssets
-  nameWithType: Account.CreatedAssets
-- uid: AlgoSdk.Account.CreatedAtRound
-  name: CreatedAtRound
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_CreatedAtRound
-  commentId: F:AlgoSdk.Account.CreatedAtRound
-  fullName: AlgoSdk.Account.CreatedAtRound
-  nameWithType: Account.CreatedAtRound
-- uid: AlgoSdk.Account.Deleted
-  name: Deleted
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_Deleted
-  commentId: F:AlgoSdk.Account.Deleted
-  fullName: AlgoSdk.Account.Deleted
-  nameWithType: Account.Deleted
-- uid: AlgoSdk.Account.Equals(AlgoSdk.Account)
-  name: Equals(Account)
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_Equals_AlgoSdk_Account_
-  commentId: M:AlgoSdk.Account.Equals(AlgoSdk.Account)
-  fullName: AlgoSdk.Account.Equals(AlgoSdk.Account)
-  nameWithType: Account.Equals(Account)
-- uid: AlgoSdk.Account.Equals*
-  name: Equals
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_Equals_
-  commentId: Overload:AlgoSdk.Account.Equals
+- uid: AlgoSdk.Account.GenerateAccount
+  name: GenerateAccount()
+  href: api/AlgoSdk.Account.html#AlgoSdk_Account_GenerateAccount
+  commentId: M:AlgoSdk.Account.GenerateAccount
+  fullName: AlgoSdk.Account.GenerateAccount()
+  nameWithType: Account.GenerateAccount()
+- uid: AlgoSdk.Account.GenerateAccount*
+  name: GenerateAccount
+  href: api/AlgoSdk.Account.html#AlgoSdk_Account_GenerateAccount_
+  commentId: Overload:AlgoSdk.Account.GenerateAccount
   isSpec: "True"
-  fullName: AlgoSdk.Account.Equals
-  nameWithType: Account.Equals
-- uid: AlgoSdk.Account.Participation
+  fullName: AlgoSdk.Account.GenerateAccount
+  nameWithType: Account.GenerateAccount
+- uid: AlgoSdk.AccountInfo
+  name: AccountInfo
+  href: api/AlgoSdk.AccountInfo.html
+  commentId: T:AlgoSdk.AccountInfo
+  fullName: AlgoSdk.AccountInfo
+  nameWithType: AccountInfo
+- uid: AlgoSdk.AccountInfo.Address
+  name: Address
+  href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_Address
+  commentId: F:AlgoSdk.AccountInfo.Address
+  fullName: AlgoSdk.AccountInfo.Address
+  nameWithType: AccountInfo.Address
+- uid: AlgoSdk.AccountInfo.Amount
+  name: Amount
+  href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_Amount
+  commentId: F:AlgoSdk.AccountInfo.Amount
+  fullName: AlgoSdk.AccountInfo.Amount
+  nameWithType: AccountInfo.Amount
+- uid: AlgoSdk.AccountInfo.AmountWithoutPendingRewards
+  name: AmountWithoutPendingRewards
+  href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_AmountWithoutPendingRewards
+  commentId: F:AlgoSdk.AccountInfo.AmountWithoutPendingRewards
+  fullName: AlgoSdk.AccountInfo.AmountWithoutPendingRewards
+  nameWithType: AccountInfo.AmountWithoutPendingRewards
+- uid: AlgoSdk.AccountInfo.ApplicationsLocalState
+  name: ApplicationsLocalState
+  href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_ApplicationsLocalState
+  commentId: F:AlgoSdk.AccountInfo.ApplicationsLocalState
+  fullName: AlgoSdk.AccountInfo.ApplicationsLocalState
+  nameWithType: AccountInfo.ApplicationsLocalState
+- uid: AlgoSdk.AccountInfo.ApplicationsTotalExtraPages
+  name: ApplicationsTotalExtraPages
+  href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_ApplicationsTotalExtraPages
+  commentId: F:AlgoSdk.AccountInfo.ApplicationsTotalExtraPages
+  fullName: AlgoSdk.AccountInfo.ApplicationsTotalExtraPages
+  nameWithType: AccountInfo.ApplicationsTotalExtraPages
+- uid: AlgoSdk.AccountInfo.ApplicationsTotalSchema
+  name: ApplicationsTotalSchema
+  href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_ApplicationsTotalSchema
+  commentId: F:AlgoSdk.AccountInfo.ApplicationsTotalSchema
+  fullName: AlgoSdk.AccountInfo.ApplicationsTotalSchema
+  nameWithType: AccountInfo.ApplicationsTotalSchema
+- uid: AlgoSdk.AccountInfo.Assets
+  name: Assets
+  href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_Assets
+  commentId: F:AlgoSdk.AccountInfo.Assets
+  fullName: AlgoSdk.AccountInfo.Assets
+  nameWithType: AccountInfo.Assets
+- uid: AlgoSdk.AccountInfo.AuthAddress
+  name: AuthAddress
+  href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_AuthAddress
+  commentId: F:AlgoSdk.AccountInfo.AuthAddress
+  fullName: AlgoSdk.AccountInfo.AuthAddress
+  nameWithType: AccountInfo.AuthAddress
+- uid: AlgoSdk.AccountInfo.ClosedAtRound
+  name: ClosedAtRound
+  href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_ClosedAtRound
+  commentId: F:AlgoSdk.AccountInfo.ClosedAtRound
+  fullName: AlgoSdk.AccountInfo.ClosedAtRound
+  nameWithType: AccountInfo.ClosedAtRound
+- uid: AlgoSdk.AccountInfo.CreatedApplications
+  name: CreatedApplications
+  href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_CreatedApplications
+  commentId: F:AlgoSdk.AccountInfo.CreatedApplications
+  fullName: AlgoSdk.AccountInfo.CreatedApplications
+  nameWithType: AccountInfo.CreatedApplications
+- uid: AlgoSdk.AccountInfo.CreatedAssets
+  name: CreatedAssets
+  href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_CreatedAssets
+  commentId: F:AlgoSdk.AccountInfo.CreatedAssets
+  fullName: AlgoSdk.AccountInfo.CreatedAssets
+  nameWithType: AccountInfo.CreatedAssets
+- uid: AlgoSdk.AccountInfo.CreatedAtRound
+  name: CreatedAtRound
+  href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_CreatedAtRound
+  commentId: F:AlgoSdk.AccountInfo.CreatedAtRound
+  fullName: AlgoSdk.AccountInfo.CreatedAtRound
+  nameWithType: AccountInfo.CreatedAtRound
+- uid: AlgoSdk.AccountInfo.Deleted
+  name: Deleted
+  href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_Deleted
+  commentId: F:AlgoSdk.AccountInfo.Deleted
+  fullName: AlgoSdk.AccountInfo.Deleted
+  nameWithType: AccountInfo.Deleted
+- uid: AlgoSdk.AccountInfo.Equals(AlgoSdk.AccountInfo)
+  name: Equals(AccountInfo)
+  href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_Equals_AlgoSdk_AccountInfo_
+  commentId: M:AlgoSdk.AccountInfo.Equals(AlgoSdk.AccountInfo)
+  fullName: AlgoSdk.AccountInfo.Equals(AlgoSdk.AccountInfo)
+  nameWithType: AccountInfo.Equals(AccountInfo)
+- uid: AlgoSdk.AccountInfo.Equals*
+  name: Equals
+  href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_Equals_
+  commentId: Overload:AlgoSdk.AccountInfo.Equals
+  isSpec: "True"
+  fullName: AlgoSdk.AccountInfo.Equals
+  nameWithType: AccountInfo.Equals
+- uid: AlgoSdk.AccountInfo.Participation
   name: Participation
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_Participation
-  commentId: F:AlgoSdk.Account.Participation
-  fullName: AlgoSdk.Account.Participation
-  nameWithType: Account.Participation
-- uid: AlgoSdk.Account.PendingRewards
+  href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_Participation
+  commentId: F:AlgoSdk.AccountInfo.Participation
+  fullName: AlgoSdk.AccountInfo.Participation
+  nameWithType: AccountInfo.Participation
+- uid: AlgoSdk.AccountInfo.PendingRewards
   name: PendingRewards
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_PendingRewards
-  commentId: F:AlgoSdk.Account.PendingRewards
-  fullName: AlgoSdk.Account.PendingRewards
-  nameWithType: Account.PendingRewards
-- uid: AlgoSdk.Account.RewardBase
+  href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_PendingRewards
+  commentId: F:AlgoSdk.AccountInfo.PendingRewards
+  fullName: AlgoSdk.AccountInfo.PendingRewards
+  nameWithType: AccountInfo.PendingRewards
+- uid: AlgoSdk.AccountInfo.RewardBase
   name: RewardBase
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_RewardBase
-  commentId: F:AlgoSdk.Account.RewardBase
-  fullName: AlgoSdk.Account.RewardBase
-  nameWithType: Account.RewardBase
-- uid: AlgoSdk.Account.Rewards
+  href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_RewardBase
+  commentId: F:AlgoSdk.AccountInfo.RewardBase
+  fullName: AlgoSdk.AccountInfo.RewardBase
+  nameWithType: AccountInfo.RewardBase
+- uid: AlgoSdk.AccountInfo.Rewards
   name: Rewards
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_Rewards
-  commentId: F:AlgoSdk.Account.Rewards
-  fullName: AlgoSdk.Account.Rewards
-  nameWithType: Account.Rewards
-- uid: AlgoSdk.Account.Round
+  href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_Rewards
+  commentId: F:AlgoSdk.AccountInfo.Rewards
+  fullName: AlgoSdk.AccountInfo.Rewards
+  nameWithType: AccountInfo.Rewards
+- uid: AlgoSdk.AccountInfo.Round
   name: Round
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_Round
-  commentId: F:AlgoSdk.Account.Round
-  fullName: AlgoSdk.Account.Round
-  nameWithType: Account.Round
-- uid: AlgoSdk.Account.SignatureType
+  href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_Round
+  commentId: F:AlgoSdk.AccountInfo.Round
+  fullName: AlgoSdk.AccountInfo.Round
+  nameWithType: AccountInfo.Round
+- uid: AlgoSdk.AccountInfo.SignatureType
   name: SignatureType
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_SignatureType
-  commentId: F:AlgoSdk.Account.SignatureType
-  fullName: AlgoSdk.Account.SignatureType
-  nameWithType: Account.SignatureType
-- uid: AlgoSdk.Account.Status
+  href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_SignatureType
+  commentId: F:AlgoSdk.AccountInfo.SignatureType
+  fullName: AlgoSdk.AccountInfo.SignatureType
+  nameWithType: AccountInfo.SignatureType
+- uid: AlgoSdk.AccountInfo.Status
   name: Status
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_Status
-  commentId: F:AlgoSdk.Account.Status
-  fullName: AlgoSdk.Account.Status
-  nameWithType: Account.Status
+  href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_Status
+  commentId: F:AlgoSdk.AccountInfo.Status
+  fullName: AlgoSdk.AccountInfo.Status
+  nameWithType: AccountInfo.Status
 - uid: AlgoSdk.AccountParticipation
   name: AccountParticipation
   href: api/AlgoSdk.AccountParticipation.html
@@ -431,13 +450,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Address.CheckSum.Equality
   nameWithType: Address.CheckSum.Equality
-- uid: AlgoSdk.Address.CheckSum.op_Implicit(AlgoSdk.Crypto.Sha512_256_Hash)~AlgoSdk.Address.CheckSum
+- uid: AlgoSdk.Address.CheckSum.op_Implicit(Sha512_256_Hash)~AlgoSdk.Address.CheckSum
   name: Implicit(Sha512_256_Hash to Address.CheckSum)
-  href: api/AlgoSdk.Address.CheckSum.html#AlgoSdk_Address_CheckSum_op_Implicit_AlgoSdk_Crypto_Sha512_256_Hash__AlgoSdk_Address_CheckSum
-  commentId: M:AlgoSdk.Address.CheckSum.op_Implicit(AlgoSdk.Crypto.Sha512_256_Hash)~AlgoSdk.Address.CheckSum
+  href: api/AlgoSdk.Address.CheckSum.html#AlgoSdk_Address_CheckSum_op_Implicit_Sha512_256_Hash__AlgoSdk_Address_CheckSum
+  commentId: M:AlgoSdk.Address.CheckSum.op_Implicit(Sha512_256_Hash)~AlgoSdk.Address.CheckSum
   name.vb: Widening(Sha512_256_Hash to Address.CheckSum)
-  fullName: AlgoSdk.Address.CheckSum.Implicit(AlgoSdk.Crypto.Sha512_256_Hash to AlgoSdk.Address.CheckSum)
-  fullName.vb: AlgoSdk.Address.CheckSum.Widening(AlgoSdk.Crypto.Sha512_256_Hash to AlgoSdk.Address.CheckSum)
+  fullName: AlgoSdk.Address.CheckSum.Implicit(Sha512_256_Hash to AlgoSdk.Address.CheckSum)
+  fullName.vb: AlgoSdk.Address.CheckSum.Widening(Sha512_256_Hash to AlgoSdk.Address.CheckSum)
   nameWithType: Address.CheckSum.Implicit(Sha512_256_Hash to Address.CheckSum)
   nameWithType.vb: Address.CheckSum.Widening(Sha512_256_Hash to Address.CheckSum)
 - uid: AlgoSdk.Address.CheckSum.op_Implicit*
@@ -510,11 +529,11 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Address.Equals
   nameWithType: Address.Equals
-- uid: AlgoSdk.Address.FromPublicKey(AlgoSdk.Crypto.Ed25519.PublicKey)
+- uid: AlgoSdk.Address.FromPublicKey(Ed25519.PublicKey)
   name: FromPublicKey(Ed25519.PublicKey)
-  href: api/AlgoSdk.Address.html#AlgoSdk_Address_FromPublicKey_AlgoSdk_Crypto_Ed25519_PublicKey_
-  commentId: M:AlgoSdk.Address.FromPublicKey(AlgoSdk.Crypto.Ed25519.PublicKey)
-  fullName: AlgoSdk.Address.FromPublicKey(AlgoSdk.Crypto.Ed25519.PublicKey)
+  href: api/AlgoSdk.Address.html#AlgoSdk_Address_FromPublicKey_Ed25519_PublicKey_
+  commentId: M:AlgoSdk.Address.FromPublicKey(Ed25519.PublicKey)
+  fullName: AlgoSdk.Address.FromPublicKey(Ed25519.PublicKey)
   nameWithType: Address.FromPublicKey(Ed25519.PublicKey)
 - uid: AlgoSdk.Address.FromPublicKey*
   name: FromPublicKey
@@ -616,22 +635,22 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Address.Equality
   nameWithType: Address.Equality
-- uid: AlgoSdk.Address.op_Implicit(AlgoSdk.Address)~AlgoSdk.Crypto.Ed25519.PublicKey
+- uid: AlgoSdk.Address.op_Implicit(AlgoSdk.Address)~Ed25519.PublicKey
   name: Implicit(Address to Ed25519.PublicKey)
-  href: api/AlgoSdk.Address.html#AlgoSdk_Address_op_Implicit_AlgoSdk_Address__AlgoSdk_Crypto_Ed25519_PublicKey
-  commentId: M:AlgoSdk.Address.op_Implicit(AlgoSdk.Address)~AlgoSdk.Crypto.Ed25519.PublicKey
+  href: api/AlgoSdk.Address.html#AlgoSdk_Address_op_Implicit_AlgoSdk_Address__Ed25519_PublicKey
+  commentId: M:AlgoSdk.Address.op_Implicit(AlgoSdk.Address)~Ed25519.PublicKey
   name.vb: Widening(Address to Ed25519.PublicKey)
-  fullName: AlgoSdk.Address.Implicit(AlgoSdk.Address to AlgoSdk.Crypto.Ed25519.PublicKey)
-  fullName.vb: AlgoSdk.Address.Widening(AlgoSdk.Address to AlgoSdk.Crypto.Ed25519.PublicKey)
+  fullName: AlgoSdk.Address.Implicit(AlgoSdk.Address to Ed25519.PublicKey)
+  fullName.vb: AlgoSdk.Address.Widening(AlgoSdk.Address to Ed25519.PublicKey)
   nameWithType: Address.Implicit(Address to Ed25519.PublicKey)
   nameWithType.vb: Address.Widening(Address to Ed25519.PublicKey)
-- uid: AlgoSdk.Address.op_Implicit(AlgoSdk.Crypto.Ed25519.PublicKey)~AlgoSdk.Address
+- uid: AlgoSdk.Address.op_Implicit(Ed25519.PublicKey)~AlgoSdk.Address
   name: Implicit(Ed25519.PublicKey to Address)
-  href: api/AlgoSdk.Address.html#AlgoSdk_Address_op_Implicit_AlgoSdk_Crypto_Ed25519_PublicKey__AlgoSdk_Address
-  commentId: M:AlgoSdk.Address.op_Implicit(AlgoSdk.Crypto.Ed25519.PublicKey)~AlgoSdk.Address
+  href: api/AlgoSdk.Address.html#AlgoSdk_Address_op_Implicit_Ed25519_PublicKey__AlgoSdk_Address
+  commentId: M:AlgoSdk.Address.op_Implicit(Ed25519.PublicKey)~AlgoSdk.Address
   name.vb: Widening(Ed25519.PublicKey to Address)
-  fullName: AlgoSdk.Address.Implicit(AlgoSdk.Crypto.Ed25519.PublicKey to AlgoSdk.Address)
-  fullName.vb: AlgoSdk.Address.Widening(AlgoSdk.Crypto.Ed25519.PublicKey to AlgoSdk.Address)
+  fullName: AlgoSdk.Address.Implicit(Ed25519.PublicKey to AlgoSdk.Address)
+  fullName.vb: AlgoSdk.Address.Widening(Ed25519.PublicKey to AlgoSdk.Address)
   nameWithType: Address.Implicit(Ed25519.PublicKey to Address)
   nameWithType.vb: Address.Widening(Ed25519.PublicKey to Address)
 - uid: AlgoSdk.Address.op_Implicit(System.String)~AlgoSdk.Address
@@ -1099,11 +1118,11 @@ references:
   commentId: T:AlgoSdk.AlgoApiFormatterAttribute
   fullName: AlgoSdk.AlgoApiFormatterAttribute
   nameWithType: AlgoApiFormatterAttribute
-- uid: AlgoSdk.AlgoApiFormatterAttribute.#ctor(System.Type,System.String,System.Int32)
+- uid: AlgoSdk.AlgoApiFormatterAttribute.#ctor(Type,System.String,System.Int32)
   name: AlgoApiFormatterAttribute(Type, String, Int32)
-  href: api/AlgoSdk.AlgoApiFormatterAttribute.html#AlgoSdk_AlgoApiFormatterAttribute__ctor_System_Type_System_String_System_Int32_
-  commentId: M:AlgoSdk.AlgoApiFormatterAttribute.#ctor(System.Type,System.String,System.Int32)
-  fullName: AlgoSdk.AlgoApiFormatterAttribute.AlgoApiFormatterAttribute(System.Type, System.String, System.Int32)
+  href: api/AlgoSdk.AlgoApiFormatterAttribute.html#AlgoSdk_AlgoApiFormatterAttribute__ctor_Type_System_String_System_Int32_
+  commentId: M:AlgoSdk.AlgoApiFormatterAttribute.#ctor(Type,System.String,System.Int32)
+  fullName: AlgoSdk.AlgoApiFormatterAttribute.AlgoApiFormatterAttribute(Type, System.String, System.Int32)
   nameWithType: AlgoApiFormatterAttribute.AlgoApiFormatterAttribute(Type, String, Int32)
 - uid: AlgoSdk.AlgoApiFormatterAttribute.#ctor*
   name: AlgoApiFormatterAttribute
@@ -1451,11 +1470,11 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AlgoApiRequest.Awaiter.IsCompleted
   nameWithType: AlgoApiRequest.Awaiter.IsCompleted
-- uid: AlgoSdk.AlgoApiRequest.Awaiter.OnCompleted(System.Action)
+- uid: AlgoSdk.AlgoApiRequest.Awaiter.OnCompleted(Action)
   name: OnCompleted(Action)
-  href: api/AlgoSdk.AlgoApiRequest.Awaiter.html#AlgoSdk_AlgoApiRequest_Awaiter_OnCompleted_System_Action_
-  commentId: M:AlgoSdk.AlgoApiRequest.Awaiter.OnCompleted(System.Action)
-  fullName: AlgoSdk.AlgoApiRequest.Awaiter.OnCompleted(System.Action)
+  href: api/AlgoSdk.AlgoApiRequest.Awaiter.html#AlgoSdk_AlgoApiRequest_Awaiter_OnCompleted_Action_
+  commentId: M:AlgoSdk.AlgoApiRequest.Awaiter.OnCompleted(Action)
+  fullName: AlgoSdk.AlgoApiRequest.Awaiter.OnCompleted(Action)
   nameWithType: AlgoApiRequest.Awaiter.OnCompleted(Action)
 - uid: AlgoSdk.AlgoApiRequest.Awaiter.OnCompleted*
   name: OnCompleted
@@ -1464,11 +1483,11 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AlgoApiRequest.Awaiter.OnCompleted
   nameWithType: AlgoApiRequest.Awaiter.OnCompleted
-- uid: AlgoSdk.AlgoApiRequest.Awaiter.UnsafeOnCompleted(System.Action)
+- uid: AlgoSdk.AlgoApiRequest.Awaiter.UnsafeOnCompleted(Action)
   name: UnsafeOnCompleted(Action)
-  href: api/AlgoSdk.AlgoApiRequest.Awaiter.html#AlgoSdk_AlgoApiRequest_Awaiter_UnsafeOnCompleted_System_Action_
-  commentId: M:AlgoSdk.AlgoApiRequest.Awaiter.UnsafeOnCompleted(System.Action)
-  fullName: AlgoSdk.AlgoApiRequest.Awaiter.UnsafeOnCompleted(System.Action)
+  href: api/AlgoSdk.AlgoApiRequest.Awaiter.html#AlgoSdk_AlgoApiRequest_Awaiter_UnsafeOnCompleted_Action_
+  commentId: M:AlgoSdk.AlgoApiRequest.Awaiter.UnsafeOnCompleted(Action)
+  fullName: AlgoSdk.AlgoApiRequest.Awaiter.UnsafeOnCompleted(Action)
   nameWithType: AlgoApiRequest.Awaiter.UnsafeOnCompleted(Action)
 - uid: AlgoSdk.AlgoApiRequest.Awaiter.UnsafeOnCompleted*
   name: UnsafeOnCompleted
@@ -6239,11 +6258,11 @@ references:
   commentId: T:AlgoSdk.Crypto.SecureMemoryHandle
   fullName: AlgoSdk.Crypto.SecureMemoryHandle
   nameWithType: SecureMemoryHandle
-- uid: AlgoSdk.Crypto.SecureMemoryHandle.Create(System.UIntPtr)
+- uid: AlgoSdk.Crypto.SecureMemoryHandle.Create(UIntPtr)
   name: Create(UIntPtr)
-  href: api/AlgoSdk.Crypto.SecureMemoryHandle.html#AlgoSdk_Crypto_SecureMemoryHandle_Create_System_UIntPtr_
-  commentId: M:AlgoSdk.Crypto.SecureMemoryHandle.Create(System.UIntPtr)
-  fullName: AlgoSdk.Crypto.SecureMemoryHandle.Create(System.UIntPtr)
+  href: api/AlgoSdk.Crypto.SecureMemoryHandle.html#AlgoSdk_Crypto_SecureMemoryHandle_Create_UIntPtr_
+  commentId: M:AlgoSdk.Crypto.SecureMemoryHandle.Create(UIntPtr)
+  fullName: AlgoSdk.Crypto.SecureMemoryHandle.Create(UIntPtr)
   nameWithType: SecureMemoryHandle.Create(UIntPtr)
 - uid: AlgoSdk.Crypto.SecureMemoryHandle.Create*
   name: Create
@@ -9220,24 +9239,24 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.GenesisHash.Length
   nameWithType: GenesisHash.Length
-- uid: AlgoSdk.GenesisHash.op_Implicit(AlgoSdk.Crypto.Sha512_256_Hash)~AlgoSdk.GenesisHash
-  name: Implicit(Sha512_256_Hash to GenesisHash)
-  href: api/AlgoSdk.GenesisHash.html#AlgoSdk_GenesisHash_op_Implicit_AlgoSdk_Crypto_Sha512_256_Hash__AlgoSdk_GenesisHash
-  commentId: M:AlgoSdk.GenesisHash.op_Implicit(AlgoSdk.Crypto.Sha512_256_Hash)~AlgoSdk.GenesisHash
-  name.vb: Widening(Sha512_256_Hash to GenesisHash)
-  fullName: AlgoSdk.GenesisHash.Implicit(AlgoSdk.Crypto.Sha512_256_Hash to AlgoSdk.GenesisHash)
-  fullName.vb: AlgoSdk.GenesisHash.Widening(AlgoSdk.Crypto.Sha512_256_Hash to AlgoSdk.GenesisHash)
-  nameWithType: GenesisHash.Implicit(Sha512_256_Hash to GenesisHash)
-  nameWithType.vb: GenesisHash.Widening(Sha512_256_Hash to GenesisHash)
-- uid: AlgoSdk.GenesisHash.op_Implicit(AlgoSdk.GenesisHash)~AlgoSdk.Crypto.Sha512_256_Hash
+- uid: AlgoSdk.GenesisHash.op_Implicit(AlgoSdk.GenesisHash)~Sha512_256_Hash
   name: Implicit(GenesisHash to Sha512_256_Hash)
-  href: api/AlgoSdk.GenesisHash.html#AlgoSdk_GenesisHash_op_Implicit_AlgoSdk_GenesisHash__AlgoSdk_Crypto_Sha512_256_Hash
-  commentId: M:AlgoSdk.GenesisHash.op_Implicit(AlgoSdk.GenesisHash)~AlgoSdk.Crypto.Sha512_256_Hash
+  href: api/AlgoSdk.GenesisHash.html#AlgoSdk_GenesisHash_op_Implicit_AlgoSdk_GenesisHash__Sha512_256_Hash
+  commentId: M:AlgoSdk.GenesisHash.op_Implicit(AlgoSdk.GenesisHash)~Sha512_256_Hash
   name.vb: Widening(GenesisHash to Sha512_256_Hash)
-  fullName: AlgoSdk.GenesisHash.Implicit(AlgoSdk.GenesisHash to AlgoSdk.Crypto.Sha512_256_Hash)
-  fullName.vb: AlgoSdk.GenesisHash.Widening(AlgoSdk.GenesisHash to AlgoSdk.Crypto.Sha512_256_Hash)
+  fullName: AlgoSdk.GenesisHash.Implicit(AlgoSdk.GenesisHash to Sha512_256_Hash)
+  fullName.vb: AlgoSdk.GenesisHash.Widening(AlgoSdk.GenesisHash to Sha512_256_Hash)
   nameWithType: GenesisHash.Implicit(GenesisHash to Sha512_256_Hash)
   nameWithType.vb: GenesisHash.Widening(GenesisHash to Sha512_256_Hash)
+- uid: AlgoSdk.GenesisHash.op_Implicit(Sha512_256_Hash)~AlgoSdk.GenesisHash
+  name: Implicit(Sha512_256_Hash to GenesisHash)
+  href: api/AlgoSdk.GenesisHash.html#AlgoSdk_GenesisHash_op_Implicit_Sha512_256_Hash__AlgoSdk_GenesisHash
+  commentId: M:AlgoSdk.GenesisHash.op_Implicit(Sha512_256_Hash)~AlgoSdk.GenesisHash
+  name.vb: Widening(Sha512_256_Hash to GenesisHash)
+  fullName: AlgoSdk.GenesisHash.Implicit(Sha512_256_Hash to AlgoSdk.GenesisHash)
+  fullName.vb: AlgoSdk.GenesisHash.Widening(Sha512_256_Hash to AlgoSdk.GenesisHash)
+  nameWithType: GenesisHash.Implicit(Sha512_256_Hash to GenesisHash)
+  nameWithType.vb: GenesisHash.Widening(Sha512_256_Hash to GenesisHash)
 - uid: AlgoSdk.GenesisHash.op_Implicit(System.String)~AlgoSdk.GenesisHash
   name: Implicit(String to GenesisHash)
   href: api/AlgoSdk.GenesisHash.html#AlgoSdk_GenesisHash_op_Implicit_System_String__AlgoSdk_GenesisHash
@@ -10437,13 +10456,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.IIndexerClient.GetAccounts
   nameWithType: IIndexerClient.GetAccounts
-- uid: AlgoSdk.IIndexerClient.GetAccountTransactions(AlgoSdk.Address,System.DateTime,AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
+- uid: AlgoSdk.IIndexerClient.GetAccountTransactions(AlgoSdk.Address,DateTime,AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
   name: GetAccountTransactions(Address, DateTime, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<FixedString128Bytes>, String, Optional<Boolean>, Optional<UInt64>, SignatureType, TransactionType, TransactionId)
-  href: api/AlgoSdk.IIndexerClient.html#AlgoSdk_IIndexerClient_GetAccountTransactions_AlgoSdk_Address_System_DateTime_AlgoSdk_Optional_System_UInt64__System_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__System_String_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_AlgoSdk_TransactionType_AlgoSdk_TransactionId_
-  commentId: M:AlgoSdk.IIndexerClient.GetAccountTransactions(AlgoSdk.Address,System.DateTime,AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
+  href: api/AlgoSdk.IIndexerClient.html#AlgoSdk_IIndexerClient_GetAccountTransactions_AlgoSdk_Address_DateTime_AlgoSdk_Optional_System_UInt64__DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__System_String_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_AlgoSdk_TransactionType_AlgoSdk_TransactionId_
+  commentId: M:AlgoSdk.IIndexerClient.GetAccountTransactions(AlgoSdk.Address,DateTime,AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
   name.vb: GetAccountTransactions(Address, DateTime, Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of FixedString128Bytes), String, Optional(Of Boolean), Optional(Of UInt64), SignatureType, TransactionType, TransactionId)
-  fullName: AlgoSdk.IIndexerClient.GetAccountTransactions(AlgoSdk.Address, System.DateTime, AlgoSdk.Optional<System.UInt64>, System.DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<FixedString128Bytes>, System.String, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
-  fullName.vb: AlgoSdk.IIndexerClient.GetAccountTransactions(AlgoSdk.Address, System.DateTime, AlgoSdk.Optional(Of System.UInt64), System.DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of FixedString128Bytes), System.String, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
+  fullName: AlgoSdk.IIndexerClient.GetAccountTransactions(AlgoSdk.Address, DateTime, AlgoSdk.Optional<System.UInt64>, DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<FixedString128Bytes>, System.String, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
+  fullName.vb: AlgoSdk.IIndexerClient.GetAccountTransactions(AlgoSdk.Address, DateTime, AlgoSdk.Optional(Of System.UInt64), DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of FixedString128Bytes), System.String, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
   nameWithType: IIndexerClient.GetAccountTransactions(Address, DateTime, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<FixedString128Bytes>, String, Optional<Boolean>, Optional<UInt64>, SignatureType, TransactionType, TransactionId)
   nameWithType.vb: IIndexerClient.GetAccountTransactions(Address, DateTime, Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of FixedString128Bytes), String, Optional(Of Boolean), Optional(Of UInt64), SignatureType, TransactionType, TransactionId)
 - uid: AlgoSdk.IIndexerClient.GetAccountTransactions*
@@ -10533,13 +10552,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.IIndexerClient.GetAssets
   nameWithType: IIndexerClient.GetAssets
-- uid: AlgoSdk.IIndexerClient.GetAssetTransactions(System.UInt64,AlgoSdk.Address,AlgoSdk.AddressRole,System.DateTime,System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
+- uid: AlgoSdk.IIndexerClient.GetAssetTransactions(System.UInt64,AlgoSdk.Address,AlgoSdk.AddressRole,DateTime,DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
   name: GetAssetTransactions(UInt64, Address, AddressRole, DateTime, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<Boolean>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<FixedString128Bytes>, String, Optional<Boolean>, Optional<UInt64>, SignatureType, TransactionType, TransactionId)
-  href: api/AlgoSdk.IIndexerClient.html#AlgoSdk_IIndexerClient_GetAssetTransactions_System_UInt64_AlgoSdk_Address_AlgoSdk_AddressRole_System_DateTime_System_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__System_String_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_AlgoSdk_TransactionType_AlgoSdk_TransactionId_
-  commentId: M:AlgoSdk.IIndexerClient.GetAssetTransactions(System.UInt64,AlgoSdk.Address,AlgoSdk.AddressRole,System.DateTime,System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
+  href: api/AlgoSdk.IIndexerClient.html#AlgoSdk_IIndexerClient_GetAssetTransactions_System_UInt64_AlgoSdk_Address_AlgoSdk_AddressRole_DateTime_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__System_String_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_AlgoSdk_TransactionType_AlgoSdk_TransactionId_
+  commentId: M:AlgoSdk.IIndexerClient.GetAssetTransactions(System.UInt64,AlgoSdk.Address,AlgoSdk.AddressRole,DateTime,DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
   name.vb: GetAssetTransactions(UInt64, Address, AddressRole, DateTime, DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of Boolean), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of FixedString128Bytes), String, Optional(Of Boolean), Optional(Of UInt64), SignatureType, TransactionType, TransactionId)
-  fullName: AlgoSdk.IIndexerClient.GetAssetTransactions(System.UInt64, AlgoSdk.Address, AlgoSdk.AddressRole, System.DateTime, System.DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<FixedString128Bytes>, System.String, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
-  fullName.vb: AlgoSdk.IIndexerClient.GetAssetTransactions(System.UInt64, AlgoSdk.Address, AlgoSdk.AddressRole, System.DateTime, System.DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of FixedString128Bytes), System.String, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
+  fullName: AlgoSdk.IIndexerClient.GetAssetTransactions(System.UInt64, AlgoSdk.Address, AlgoSdk.AddressRole, DateTime, DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<FixedString128Bytes>, System.String, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
+  fullName.vb: AlgoSdk.IIndexerClient.GetAssetTransactions(System.UInt64, AlgoSdk.Address, AlgoSdk.AddressRole, DateTime, DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of FixedString128Bytes), System.String, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
   nameWithType: IIndexerClient.GetAssetTransactions(UInt64, Address, AddressRole, DateTime, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<Boolean>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<FixedString128Bytes>, String, Optional<Boolean>, Optional<UInt64>, SignatureType, TransactionType, TransactionId)
   nameWithType.vb: IIndexerClient.GetAssetTransactions(UInt64, Address, AddressRole, DateTime, DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of Boolean), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of FixedString128Bytes), String, Optional(Of Boolean), Optional(Of UInt64), SignatureType, TransactionType, TransactionId)
 - uid: AlgoSdk.IIndexerClient.GetAssetTransactions*
@@ -10588,13 +10607,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.IIndexerClient.GetTransaction
   nameWithType: IIndexerClient.GetTransaction
-- uid: AlgoSdk.IIndexerClient.GetTransactions(AlgoSdk.Address,AlgoSdk.AddressRole,System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
+- uid: AlgoSdk.IIndexerClient.GetTransactions(AlgoSdk.Address,AlgoSdk.AddressRole,DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
   name: GetTransactions(Address, AddressRole, DateTime, Optional<UInt64>, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<Boolean>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<FixedString128Bytes>, String, Optional<Boolean>, Optional<UInt64>, SignatureType, TransactionType, TransactionId)
-  href: api/AlgoSdk.IIndexerClient.html#AlgoSdk_IIndexerClient_GetTransactions_AlgoSdk_Address_AlgoSdk_AddressRole_System_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__System_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__System_String_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_AlgoSdk_TransactionType_AlgoSdk_TransactionId_
-  commentId: M:AlgoSdk.IIndexerClient.GetTransactions(AlgoSdk.Address,AlgoSdk.AddressRole,System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
+  href: api/AlgoSdk.IIndexerClient.html#AlgoSdk_IIndexerClient_GetTransactions_AlgoSdk_Address_AlgoSdk_AddressRole_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__System_String_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_AlgoSdk_TransactionType_AlgoSdk_TransactionId_
+  commentId: M:AlgoSdk.IIndexerClient.GetTransactions(AlgoSdk.Address,AlgoSdk.AddressRole,DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
   name.vb: GetTransactions(Address, AddressRole, DateTime, Optional(Of UInt64), Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of Boolean), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of FixedString128Bytes), String, Optional(Of Boolean), Optional(Of UInt64), SignatureType, TransactionType, TransactionId)
-  fullName: AlgoSdk.IIndexerClient.GetTransactions(AlgoSdk.Address, AlgoSdk.AddressRole, System.DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, System.DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<FixedString128Bytes>, System.String, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
-  fullName.vb: AlgoSdk.IIndexerClient.GetTransactions(AlgoSdk.Address, AlgoSdk.AddressRole, System.DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), System.DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of FixedString128Bytes), System.String, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
+  fullName: AlgoSdk.IIndexerClient.GetTransactions(AlgoSdk.Address, AlgoSdk.AddressRole, DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<FixedString128Bytes>, System.String, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
+  fullName.vb: AlgoSdk.IIndexerClient.GetTransactions(AlgoSdk.Address, AlgoSdk.AddressRole, DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of FixedString128Bytes), System.String, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
   nameWithType: IIndexerClient.GetTransactions(Address, AddressRole, DateTime, Optional<UInt64>, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<Boolean>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<FixedString128Bytes>, String, Optional<Boolean>, Optional<UInt64>, SignatureType, TransactionType, TransactionId)
   nameWithType.vb: IIndexerClient.GetTransactions(Address, AddressRole, DateTime, Optional(Of UInt64), Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of Boolean), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of FixedString128Bytes), String, Optional(Of Boolean), Optional(Of UInt64), SignatureType, TransactionType, TransactionId)
 - uid: AlgoSdk.IIndexerClient.GetTransactions*
@@ -10833,13 +10852,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.IKmdClient.ImportKey
   nameWithType: IKmdClient.ImportKey
-- uid: AlgoSdk.IKmdClient.ImportMultisig(AlgoSdk.Crypto.Ed25519.PublicKey[],System.Byte,FixedString128Bytes,System.Byte)
+- uid: AlgoSdk.IKmdClient.ImportMultisig(Ed25519.PublicKey[],System.Byte,FixedString128Bytes,System.Byte)
   name: ImportMultisig(Ed25519.PublicKey[], Byte, FixedString128Bytes, Byte)
-  href: api/AlgoSdk.IKmdClient.html#AlgoSdk_IKmdClient_ImportMultisig_AlgoSdk_Crypto_Ed25519_PublicKey___System_Byte_FixedString128Bytes_System_Byte_
-  commentId: M:AlgoSdk.IKmdClient.ImportMultisig(AlgoSdk.Crypto.Ed25519.PublicKey[],System.Byte,FixedString128Bytes,System.Byte)
+  href: api/AlgoSdk.IKmdClient.html#AlgoSdk_IKmdClient_ImportMultisig_Ed25519_PublicKey___System_Byte_FixedString128Bytes_System_Byte_
+  commentId: M:AlgoSdk.IKmdClient.ImportMultisig(Ed25519.PublicKey[],System.Byte,FixedString128Bytes,System.Byte)
   name.vb: ImportMultisig(Ed25519.PublicKey(), Byte, FixedString128Bytes, Byte)
-  fullName: AlgoSdk.IKmdClient.ImportMultisig(AlgoSdk.Crypto.Ed25519.PublicKey[], System.Byte, FixedString128Bytes, System.Byte)
-  fullName.vb: AlgoSdk.IKmdClient.ImportMultisig(AlgoSdk.Crypto.Ed25519.PublicKey(), System.Byte, FixedString128Bytes, System.Byte)
+  fullName: AlgoSdk.IKmdClient.ImportMultisig(Ed25519.PublicKey[], System.Byte, FixedString128Bytes, System.Byte)
+  fullName.vb: AlgoSdk.IKmdClient.ImportMultisig(Ed25519.PublicKey(), System.Byte, FixedString128Bytes, System.Byte)
   nameWithType: IKmdClient.ImportMultisig(Ed25519.PublicKey[], Byte, FixedString128Bytes, Byte)
   nameWithType.vb: IKmdClient.ImportMultisig(Ed25519.PublicKey(), Byte, FixedString128Bytes, Byte)
 - uid: AlgoSdk.IKmdClient.ImportMultisig*
@@ -10940,13 +10959,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.IKmdClient.RenewWalletHandleToken
   nameWithType: IKmdClient.RenewWalletHandleToken
-- uid: AlgoSdk.IKmdClient.SignMultisig(AlgoSdk.Multisig,AlgoSdk.Crypto.Ed25519.PublicKey,System.Byte[],FixedString128Bytes,FixedString128Bytes)
+- uid: AlgoSdk.IKmdClient.SignMultisig(AlgoSdk.Multisig,Ed25519.PublicKey,System.Byte[],FixedString128Bytes,FixedString128Bytes)
   name: SignMultisig(Multisig, Ed25519.PublicKey, Byte[], FixedString128Bytes, FixedString128Bytes)
-  href: api/AlgoSdk.IKmdClient.html#AlgoSdk_IKmdClient_SignMultisig_AlgoSdk_Multisig_AlgoSdk_Crypto_Ed25519_PublicKey_System_Byte___FixedString128Bytes_FixedString128Bytes_
-  commentId: M:AlgoSdk.IKmdClient.SignMultisig(AlgoSdk.Multisig,AlgoSdk.Crypto.Ed25519.PublicKey,System.Byte[],FixedString128Bytes,FixedString128Bytes)
+  href: api/AlgoSdk.IKmdClient.html#AlgoSdk_IKmdClient_SignMultisig_AlgoSdk_Multisig_Ed25519_PublicKey_System_Byte___FixedString128Bytes_FixedString128Bytes_
+  commentId: M:AlgoSdk.IKmdClient.SignMultisig(AlgoSdk.Multisig,Ed25519.PublicKey,System.Byte[],FixedString128Bytes,FixedString128Bytes)
   name.vb: SignMultisig(Multisig, Ed25519.PublicKey, Byte(), FixedString128Bytes, FixedString128Bytes)
-  fullName: AlgoSdk.IKmdClient.SignMultisig(AlgoSdk.Multisig, AlgoSdk.Crypto.Ed25519.PublicKey, System.Byte[], FixedString128Bytes, FixedString128Bytes)
-  fullName.vb: AlgoSdk.IKmdClient.SignMultisig(AlgoSdk.Multisig, AlgoSdk.Crypto.Ed25519.PublicKey, System.Byte(), FixedString128Bytes, FixedString128Bytes)
+  fullName: AlgoSdk.IKmdClient.SignMultisig(AlgoSdk.Multisig, Ed25519.PublicKey, System.Byte[], FixedString128Bytes, FixedString128Bytes)
+  fullName.vb: AlgoSdk.IKmdClient.SignMultisig(AlgoSdk.Multisig, Ed25519.PublicKey, System.Byte(), FixedString128Bytes, FixedString128Bytes)
   nameWithType: IKmdClient.SignMultisig(Multisig, Ed25519.PublicKey, Byte[], FixedString128Bytes, FixedString128Bytes)
   nameWithType.vb: IKmdClient.SignMultisig(Multisig, Ed25519.PublicKey, Byte(), FixedString128Bytes, FixedString128Bytes)
 - uid: AlgoSdk.IKmdClient.SignMultisig*
@@ -10972,13 +10991,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.IKmdClient.SignProgram
   nameWithType: IKmdClient.SignProgram
-- uid: AlgoSdk.IKmdClient.SignProgramMultisig(AlgoSdk.Address,System.Byte[],AlgoSdk.Multisig,AlgoSdk.Crypto.Ed25519.PublicKey,FixedString128Bytes,FixedString128Bytes)
+- uid: AlgoSdk.IKmdClient.SignProgramMultisig(AlgoSdk.Address,System.Byte[],AlgoSdk.Multisig,Ed25519.PublicKey,FixedString128Bytes,FixedString128Bytes)
   name: SignProgramMultisig(Address, Byte[], Multisig, Ed25519.PublicKey, FixedString128Bytes, FixedString128Bytes)
-  href: api/AlgoSdk.IKmdClient.html#AlgoSdk_IKmdClient_SignProgramMultisig_AlgoSdk_Address_System_Byte___AlgoSdk_Multisig_AlgoSdk_Crypto_Ed25519_PublicKey_FixedString128Bytes_FixedString128Bytes_
-  commentId: M:AlgoSdk.IKmdClient.SignProgramMultisig(AlgoSdk.Address,System.Byte[],AlgoSdk.Multisig,AlgoSdk.Crypto.Ed25519.PublicKey,FixedString128Bytes,FixedString128Bytes)
+  href: api/AlgoSdk.IKmdClient.html#AlgoSdk_IKmdClient_SignProgramMultisig_AlgoSdk_Address_System_Byte___AlgoSdk_Multisig_Ed25519_PublicKey_FixedString128Bytes_FixedString128Bytes_
+  commentId: M:AlgoSdk.IKmdClient.SignProgramMultisig(AlgoSdk.Address,System.Byte[],AlgoSdk.Multisig,Ed25519.PublicKey,FixedString128Bytes,FixedString128Bytes)
   name.vb: SignProgramMultisig(Address, Byte(), Multisig, Ed25519.PublicKey, FixedString128Bytes, FixedString128Bytes)
-  fullName: AlgoSdk.IKmdClient.SignProgramMultisig(AlgoSdk.Address, System.Byte[], AlgoSdk.Multisig, AlgoSdk.Crypto.Ed25519.PublicKey, FixedString128Bytes, FixedString128Bytes)
-  fullName.vb: AlgoSdk.IKmdClient.SignProgramMultisig(AlgoSdk.Address, System.Byte(), AlgoSdk.Multisig, AlgoSdk.Crypto.Ed25519.PublicKey, FixedString128Bytes, FixedString128Bytes)
+  fullName: AlgoSdk.IKmdClient.SignProgramMultisig(AlgoSdk.Address, System.Byte[], AlgoSdk.Multisig, Ed25519.PublicKey, FixedString128Bytes, FixedString128Bytes)
+  fullName.vb: AlgoSdk.IKmdClient.SignProgramMultisig(AlgoSdk.Address, System.Byte(), AlgoSdk.Multisig, Ed25519.PublicKey, FixedString128Bytes, FixedString128Bytes)
   nameWithType: IKmdClient.SignProgramMultisig(Address, Byte[], Multisig, Ed25519.PublicKey, FixedString128Bytes, FixedString128Bytes)
   nameWithType.vb: IKmdClient.SignProgramMultisig(Address, Byte(), Multisig, Ed25519.PublicKey, FixedString128Bytes, FixedString128Bytes)
 - uid: AlgoSdk.IKmdClient.SignProgramMultisig*
@@ -11242,13 +11261,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.IndexerClient.GetAccounts
   nameWithType: IndexerClient.GetAccounts
-- uid: AlgoSdk.IndexerClient.GetAccountTransactions(AlgoSdk.Address,System.DateTime,AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
+- uid: AlgoSdk.IndexerClient.GetAccountTransactions(AlgoSdk.Address,DateTime,AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
   name: GetAccountTransactions(Address, DateTime, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<FixedString128Bytes>, String, Optional<Boolean>, Optional<UInt64>, SignatureType, TransactionType, TransactionId)
-  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetAccountTransactions_AlgoSdk_Address_System_DateTime_AlgoSdk_Optional_System_UInt64__System_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__System_String_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_AlgoSdk_TransactionType_AlgoSdk_TransactionId_
-  commentId: M:AlgoSdk.IndexerClient.GetAccountTransactions(AlgoSdk.Address,System.DateTime,AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetAccountTransactions_AlgoSdk_Address_DateTime_AlgoSdk_Optional_System_UInt64__DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__System_String_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_AlgoSdk_TransactionType_AlgoSdk_TransactionId_
+  commentId: M:AlgoSdk.IndexerClient.GetAccountTransactions(AlgoSdk.Address,DateTime,AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
   name.vb: GetAccountTransactions(Address, DateTime, Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of FixedString128Bytes), String, Optional(Of Boolean), Optional(Of UInt64), SignatureType, TransactionType, TransactionId)
-  fullName: AlgoSdk.IndexerClient.GetAccountTransactions(AlgoSdk.Address, System.DateTime, AlgoSdk.Optional<System.UInt64>, System.DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<FixedString128Bytes>, System.String, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
-  fullName.vb: AlgoSdk.IndexerClient.GetAccountTransactions(AlgoSdk.Address, System.DateTime, AlgoSdk.Optional(Of System.UInt64), System.DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of FixedString128Bytes), System.String, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
+  fullName: AlgoSdk.IndexerClient.GetAccountTransactions(AlgoSdk.Address, DateTime, AlgoSdk.Optional<System.UInt64>, DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<FixedString128Bytes>, System.String, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
+  fullName.vb: AlgoSdk.IndexerClient.GetAccountTransactions(AlgoSdk.Address, DateTime, AlgoSdk.Optional(Of System.UInt64), DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of FixedString128Bytes), System.String, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
   nameWithType: IndexerClient.GetAccountTransactions(Address, DateTime, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<FixedString128Bytes>, String, Optional<Boolean>, Optional<UInt64>, SignatureType, TransactionType, TransactionId)
   nameWithType.vb: IndexerClient.GetAccountTransactions(Address, DateTime, Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of FixedString128Bytes), String, Optional(Of Boolean), Optional(Of UInt64), SignatureType, TransactionType, TransactionId)
 - uid: AlgoSdk.IndexerClient.GetAccountTransactions*
@@ -11338,13 +11357,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.IndexerClient.GetAssets
   nameWithType: IndexerClient.GetAssets
-- uid: AlgoSdk.IndexerClient.GetAssetTransactions(System.UInt64,AlgoSdk.Address,AlgoSdk.AddressRole,System.DateTime,System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
+- uid: AlgoSdk.IndexerClient.GetAssetTransactions(System.UInt64,AlgoSdk.Address,AlgoSdk.AddressRole,DateTime,DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
   name: GetAssetTransactions(UInt64, Address, AddressRole, DateTime, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<Boolean>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<FixedString128Bytes>, String, Optional<Boolean>, Optional<UInt64>, SignatureType, TransactionType, TransactionId)
-  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetAssetTransactions_System_UInt64_AlgoSdk_Address_AlgoSdk_AddressRole_System_DateTime_System_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__System_String_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_AlgoSdk_TransactionType_AlgoSdk_TransactionId_
-  commentId: M:AlgoSdk.IndexerClient.GetAssetTransactions(System.UInt64,AlgoSdk.Address,AlgoSdk.AddressRole,System.DateTime,System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetAssetTransactions_System_UInt64_AlgoSdk_Address_AlgoSdk_AddressRole_DateTime_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__System_String_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_AlgoSdk_TransactionType_AlgoSdk_TransactionId_
+  commentId: M:AlgoSdk.IndexerClient.GetAssetTransactions(System.UInt64,AlgoSdk.Address,AlgoSdk.AddressRole,DateTime,DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
   name.vb: GetAssetTransactions(UInt64, Address, AddressRole, DateTime, DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of Boolean), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of FixedString128Bytes), String, Optional(Of Boolean), Optional(Of UInt64), SignatureType, TransactionType, TransactionId)
-  fullName: AlgoSdk.IndexerClient.GetAssetTransactions(System.UInt64, AlgoSdk.Address, AlgoSdk.AddressRole, System.DateTime, System.DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<FixedString128Bytes>, System.String, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
-  fullName.vb: AlgoSdk.IndexerClient.GetAssetTransactions(System.UInt64, AlgoSdk.Address, AlgoSdk.AddressRole, System.DateTime, System.DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of FixedString128Bytes), System.String, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
+  fullName: AlgoSdk.IndexerClient.GetAssetTransactions(System.UInt64, AlgoSdk.Address, AlgoSdk.AddressRole, DateTime, DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<FixedString128Bytes>, System.String, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
+  fullName.vb: AlgoSdk.IndexerClient.GetAssetTransactions(System.UInt64, AlgoSdk.Address, AlgoSdk.AddressRole, DateTime, DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of FixedString128Bytes), System.String, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
   nameWithType: IndexerClient.GetAssetTransactions(UInt64, Address, AddressRole, DateTime, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<Boolean>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<FixedString128Bytes>, String, Optional<Boolean>, Optional<UInt64>, SignatureType, TransactionType, TransactionId)
   nameWithType.vb: IndexerClient.GetAssetTransactions(UInt64, Address, AddressRole, DateTime, DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of Boolean), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of FixedString128Bytes), String, Optional(Of Boolean), Optional(Of UInt64), SignatureType, TransactionType, TransactionId)
 - uid: AlgoSdk.IndexerClient.GetAssetTransactions*
@@ -11393,13 +11412,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.IndexerClient.GetTransaction
   nameWithType: IndexerClient.GetTransaction
-- uid: AlgoSdk.IndexerClient.GetTransactions(AlgoSdk.Address,AlgoSdk.AddressRole,System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
+- uid: AlgoSdk.IndexerClient.GetTransactions(AlgoSdk.Address,AlgoSdk.AddressRole,DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
   name: GetTransactions(Address, AddressRole, DateTime, Optional<UInt64>, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<Boolean>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<FixedString128Bytes>, String, Optional<Boolean>, Optional<UInt64>, SignatureType, TransactionType, TransactionId)
-  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetTransactions_AlgoSdk_Address_AlgoSdk_AddressRole_System_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__System_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__System_String_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_AlgoSdk_TransactionType_AlgoSdk_TransactionId_
-  commentId: M:AlgoSdk.IndexerClient.GetTransactions(AlgoSdk.Address,AlgoSdk.AddressRole,System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetTransactions_AlgoSdk_Address_AlgoSdk_AddressRole_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__System_String_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_AlgoSdk_TransactionType_AlgoSdk_TransactionId_
+  commentId: M:AlgoSdk.IndexerClient.GetTransactions(AlgoSdk.Address,AlgoSdk.AddressRole,DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
   name.vb: GetTransactions(Address, AddressRole, DateTime, Optional(Of UInt64), Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of Boolean), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of FixedString128Bytes), String, Optional(Of Boolean), Optional(Of UInt64), SignatureType, TransactionType, TransactionId)
-  fullName: AlgoSdk.IndexerClient.GetTransactions(AlgoSdk.Address, AlgoSdk.AddressRole, System.DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, System.DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<FixedString128Bytes>, System.String, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
-  fullName.vb: AlgoSdk.IndexerClient.GetTransactions(AlgoSdk.Address, AlgoSdk.AddressRole, System.DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), System.DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of FixedString128Bytes), System.String, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
+  fullName: AlgoSdk.IndexerClient.GetTransactions(AlgoSdk.Address, AlgoSdk.AddressRole, DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<FixedString128Bytes>, System.String, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
+  fullName.vb: AlgoSdk.IndexerClient.GetTransactions(AlgoSdk.Address, AlgoSdk.AddressRole, DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of FixedString128Bytes), System.String, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
   nameWithType: IndexerClient.GetTransactions(Address, AddressRole, DateTime, Optional<UInt64>, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<Boolean>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<FixedString128Bytes>, String, Optional<Boolean>, Optional<UInt64>, SignatureType, TransactionType, TransactionId)
   nameWithType.vb: IndexerClient.GetTransactions(Address, AddressRole, DateTime, Optional(Of UInt64), Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of Boolean), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of FixedString128Bytes), String, Optional(Of Boolean), Optional(Of UInt64), SignatureType, TransactionType, TransactionId)
 - uid: AlgoSdk.IndexerClient.GetTransactions*
@@ -13083,13 +13102,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.KmdClient.ImportKey
   nameWithType: KmdClient.ImportKey
-- uid: AlgoSdk.KmdClient.ImportMultisig(AlgoSdk.Crypto.Ed25519.PublicKey[],System.Byte,FixedString128Bytes,System.Byte)
+- uid: AlgoSdk.KmdClient.ImportMultisig(Ed25519.PublicKey[],System.Byte,FixedString128Bytes,System.Byte)
   name: ImportMultisig(Ed25519.PublicKey[], Byte, FixedString128Bytes, Byte)
-  href: api/AlgoSdk.KmdClient.html#AlgoSdk_KmdClient_ImportMultisig_AlgoSdk_Crypto_Ed25519_PublicKey___System_Byte_FixedString128Bytes_System_Byte_
-  commentId: M:AlgoSdk.KmdClient.ImportMultisig(AlgoSdk.Crypto.Ed25519.PublicKey[],System.Byte,FixedString128Bytes,System.Byte)
+  href: api/AlgoSdk.KmdClient.html#AlgoSdk_KmdClient_ImportMultisig_Ed25519_PublicKey___System_Byte_FixedString128Bytes_System_Byte_
+  commentId: M:AlgoSdk.KmdClient.ImportMultisig(Ed25519.PublicKey[],System.Byte,FixedString128Bytes,System.Byte)
   name.vb: ImportMultisig(Ed25519.PublicKey(), Byte, FixedString128Bytes, Byte)
-  fullName: AlgoSdk.KmdClient.ImportMultisig(AlgoSdk.Crypto.Ed25519.PublicKey[], System.Byte, FixedString128Bytes, System.Byte)
-  fullName.vb: AlgoSdk.KmdClient.ImportMultisig(AlgoSdk.Crypto.Ed25519.PublicKey(), System.Byte, FixedString128Bytes, System.Byte)
+  fullName: AlgoSdk.KmdClient.ImportMultisig(Ed25519.PublicKey[], System.Byte, FixedString128Bytes, System.Byte)
+  fullName.vb: AlgoSdk.KmdClient.ImportMultisig(Ed25519.PublicKey(), System.Byte, FixedString128Bytes, System.Byte)
   nameWithType: KmdClient.ImportMultisig(Ed25519.PublicKey[], Byte, FixedString128Bytes, Byte)
   nameWithType.vb: KmdClient.ImportMultisig(Ed25519.PublicKey(), Byte, FixedString128Bytes, Byte)
 - uid: AlgoSdk.KmdClient.ImportMultisig*
@@ -13190,13 +13209,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.KmdClient.RenewWalletHandleToken
   nameWithType: KmdClient.RenewWalletHandleToken
-- uid: AlgoSdk.KmdClient.SignMultisig(AlgoSdk.Multisig,AlgoSdk.Crypto.Ed25519.PublicKey,System.Byte[],FixedString128Bytes,FixedString128Bytes)
+- uid: AlgoSdk.KmdClient.SignMultisig(AlgoSdk.Multisig,Ed25519.PublicKey,System.Byte[],FixedString128Bytes,FixedString128Bytes)
   name: SignMultisig(Multisig, Ed25519.PublicKey, Byte[], FixedString128Bytes, FixedString128Bytes)
-  href: api/AlgoSdk.KmdClient.html#AlgoSdk_KmdClient_SignMultisig_AlgoSdk_Multisig_AlgoSdk_Crypto_Ed25519_PublicKey_System_Byte___FixedString128Bytes_FixedString128Bytes_
-  commentId: M:AlgoSdk.KmdClient.SignMultisig(AlgoSdk.Multisig,AlgoSdk.Crypto.Ed25519.PublicKey,System.Byte[],FixedString128Bytes,FixedString128Bytes)
+  href: api/AlgoSdk.KmdClient.html#AlgoSdk_KmdClient_SignMultisig_AlgoSdk_Multisig_Ed25519_PublicKey_System_Byte___FixedString128Bytes_FixedString128Bytes_
+  commentId: M:AlgoSdk.KmdClient.SignMultisig(AlgoSdk.Multisig,Ed25519.PublicKey,System.Byte[],FixedString128Bytes,FixedString128Bytes)
   name.vb: SignMultisig(Multisig, Ed25519.PublicKey, Byte(), FixedString128Bytes, FixedString128Bytes)
-  fullName: AlgoSdk.KmdClient.SignMultisig(AlgoSdk.Multisig, AlgoSdk.Crypto.Ed25519.PublicKey, System.Byte[], FixedString128Bytes, FixedString128Bytes)
-  fullName.vb: AlgoSdk.KmdClient.SignMultisig(AlgoSdk.Multisig, AlgoSdk.Crypto.Ed25519.PublicKey, System.Byte(), FixedString128Bytes, FixedString128Bytes)
+  fullName: AlgoSdk.KmdClient.SignMultisig(AlgoSdk.Multisig, Ed25519.PublicKey, System.Byte[], FixedString128Bytes, FixedString128Bytes)
+  fullName.vb: AlgoSdk.KmdClient.SignMultisig(AlgoSdk.Multisig, Ed25519.PublicKey, System.Byte(), FixedString128Bytes, FixedString128Bytes)
   nameWithType: KmdClient.SignMultisig(Multisig, Ed25519.PublicKey, Byte[], FixedString128Bytes, FixedString128Bytes)
   nameWithType.vb: KmdClient.SignMultisig(Multisig, Ed25519.PublicKey, Byte(), FixedString128Bytes, FixedString128Bytes)
 - uid: AlgoSdk.KmdClient.SignMultisig*
@@ -13222,13 +13241,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.KmdClient.SignProgram
   nameWithType: KmdClient.SignProgram
-- uid: AlgoSdk.KmdClient.SignProgramMultisig(AlgoSdk.Address,System.Byte[],AlgoSdk.Multisig,AlgoSdk.Crypto.Ed25519.PublicKey,FixedString128Bytes,FixedString128Bytes)
+- uid: AlgoSdk.KmdClient.SignProgramMultisig(AlgoSdk.Address,System.Byte[],AlgoSdk.Multisig,Ed25519.PublicKey,FixedString128Bytes,FixedString128Bytes)
   name: SignProgramMultisig(Address, Byte[], Multisig, Ed25519.PublicKey, FixedString128Bytes, FixedString128Bytes)
-  href: api/AlgoSdk.KmdClient.html#AlgoSdk_KmdClient_SignProgramMultisig_AlgoSdk_Address_System_Byte___AlgoSdk_Multisig_AlgoSdk_Crypto_Ed25519_PublicKey_FixedString128Bytes_FixedString128Bytes_
-  commentId: M:AlgoSdk.KmdClient.SignProgramMultisig(AlgoSdk.Address,System.Byte[],AlgoSdk.Multisig,AlgoSdk.Crypto.Ed25519.PublicKey,FixedString128Bytes,FixedString128Bytes)
+  href: api/AlgoSdk.KmdClient.html#AlgoSdk_KmdClient_SignProgramMultisig_AlgoSdk_Address_System_Byte___AlgoSdk_Multisig_Ed25519_PublicKey_FixedString128Bytes_FixedString128Bytes_
+  commentId: M:AlgoSdk.KmdClient.SignProgramMultisig(AlgoSdk.Address,System.Byte[],AlgoSdk.Multisig,Ed25519.PublicKey,FixedString128Bytes,FixedString128Bytes)
   name.vb: SignProgramMultisig(Address, Byte(), Multisig, Ed25519.PublicKey, FixedString128Bytes, FixedString128Bytes)
-  fullName: AlgoSdk.KmdClient.SignProgramMultisig(AlgoSdk.Address, System.Byte[], AlgoSdk.Multisig, AlgoSdk.Crypto.Ed25519.PublicKey, FixedString128Bytes, FixedString128Bytes)
-  fullName.vb: AlgoSdk.KmdClient.SignProgramMultisig(AlgoSdk.Address, System.Byte(), AlgoSdk.Multisig, AlgoSdk.Crypto.Ed25519.PublicKey, FixedString128Bytes, FixedString128Bytes)
+  fullName: AlgoSdk.KmdClient.SignProgramMultisig(AlgoSdk.Address, System.Byte[], AlgoSdk.Multisig, Ed25519.PublicKey, FixedString128Bytes, FixedString128Bytes)
+  fullName.vb: AlgoSdk.KmdClient.SignProgramMultisig(AlgoSdk.Address, System.Byte(), AlgoSdk.Multisig, Ed25519.PublicKey, FixedString128Bytes, FixedString128Bytes)
   nameWithType: KmdClient.SignProgramMultisig(Address, Byte[], Multisig, Ed25519.PublicKey, FixedString128Bytes, FixedString128Bytes)
   nameWithType.vb: KmdClient.SignProgramMultisig(Address, Byte(), Multisig, Ed25519.PublicKey, FixedString128Bytes, FixedString128Bytes)
 - uid: AlgoSdk.KmdClient.SignProgramMultisig*
@@ -29036,11 +29055,11 @@ references:
   commentId: M:AlgoSdk.SerializationException.#ctor(System.String)
   fullName: AlgoSdk.SerializationException.SerializationException(System.String)
   nameWithType: SerializationException.SerializationException(String)
-- uid: AlgoSdk.SerializationException.#ctor(System.String,System.Exception)
+- uid: AlgoSdk.SerializationException.#ctor(System.String,Exception)
   name: SerializationException(String, Exception)
-  href: api/AlgoSdk.SerializationException.html#AlgoSdk_SerializationException__ctor_System_String_System_Exception_
-  commentId: M:AlgoSdk.SerializationException.#ctor(System.String,System.Exception)
-  fullName: AlgoSdk.SerializationException.SerializationException(System.String, System.Exception)
+  href: api/AlgoSdk.SerializationException.html#AlgoSdk_SerializationException__ctor_System_String_Exception_
+  commentId: M:AlgoSdk.SerializationException.#ctor(System.String,Exception)
+  fullName: AlgoSdk.SerializationException.SerializationException(System.String, Exception)
   nameWithType: SerializationException.SerializationException(String, Exception)
 - uid: AlgoSdk.SerializationException.#ctor*
   name: SerializationException
@@ -29055,13 +29074,13 @@ references:
   commentId: T:AlgoSdk.Sig
   fullName: AlgoSdk.Sig
   nameWithType: Sig
-- uid: AlgoSdk.Sig.#ctor(AlgoSdk.Crypto.Ed25519.Signature@)
+- uid: AlgoSdk.Sig.#ctor(Ed25519.Signature@)
   name: Sig(in Ed25519.Signature)
-  href: api/AlgoSdk.Sig.html#AlgoSdk_Sig__ctor_AlgoSdk_Crypto_Ed25519_Signature__
-  commentId: M:AlgoSdk.Sig.#ctor(AlgoSdk.Crypto.Ed25519.Signature@)
+  href: api/AlgoSdk.Sig.html#AlgoSdk_Sig__ctor_Ed25519_Signature__
+  commentId: M:AlgoSdk.Sig.#ctor(Ed25519.Signature@)
   name.vb: Sig(ByRef Ed25519.Signature)
-  fullName: AlgoSdk.Sig.Sig(in AlgoSdk.Crypto.Ed25519.Signature)
-  fullName.vb: AlgoSdk.Sig.Sig(ByRef AlgoSdk.Crypto.Ed25519.Signature)
+  fullName: AlgoSdk.Sig.Sig(in Ed25519.Signature)
+  fullName.vb: AlgoSdk.Sig.Sig(ByRef Ed25519.Signature)
   nameWithType: Sig.Sig(in Ed25519.Signature)
   nameWithType.vb: Sig.Sig(ByRef Ed25519.Signature)
 - uid: AlgoSdk.Sig.#ctor*
@@ -29161,24 +29180,24 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Sig.Equality
   nameWithType: Sig.Equality
-- uid: AlgoSdk.Sig.op_Implicit(AlgoSdk.Crypto.Ed25519.Signature)~AlgoSdk.Sig
-  name: Implicit(Ed25519.Signature to Sig)
-  href: api/AlgoSdk.Sig.html#AlgoSdk_Sig_op_Implicit_AlgoSdk_Crypto_Ed25519_Signature__AlgoSdk_Sig
-  commentId: M:AlgoSdk.Sig.op_Implicit(AlgoSdk.Crypto.Ed25519.Signature)~AlgoSdk.Sig
-  name.vb: Widening(Ed25519.Signature to Sig)
-  fullName: AlgoSdk.Sig.Implicit(AlgoSdk.Crypto.Ed25519.Signature to AlgoSdk.Sig)
-  fullName.vb: AlgoSdk.Sig.Widening(AlgoSdk.Crypto.Ed25519.Signature to AlgoSdk.Sig)
-  nameWithType: Sig.Implicit(Ed25519.Signature to Sig)
-  nameWithType.vb: Sig.Widening(Ed25519.Signature to Sig)
-- uid: AlgoSdk.Sig.op_Implicit(AlgoSdk.Sig)~AlgoSdk.Crypto.Ed25519.Signature
+- uid: AlgoSdk.Sig.op_Implicit(AlgoSdk.Sig)~Ed25519.Signature
   name: Implicit(Sig to Ed25519.Signature)
-  href: api/AlgoSdk.Sig.html#AlgoSdk_Sig_op_Implicit_AlgoSdk_Sig__AlgoSdk_Crypto_Ed25519_Signature
-  commentId: M:AlgoSdk.Sig.op_Implicit(AlgoSdk.Sig)~AlgoSdk.Crypto.Ed25519.Signature
+  href: api/AlgoSdk.Sig.html#AlgoSdk_Sig_op_Implicit_AlgoSdk_Sig__Ed25519_Signature
+  commentId: M:AlgoSdk.Sig.op_Implicit(AlgoSdk.Sig)~Ed25519.Signature
   name.vb: Widening(Sig to Ed25519.Signature)
-  fullName: AlgoSdk.Sig.Implicit(AlgoSdk.Sig to AlgoSdk.Crypto.Ed25519.Signature)
-  fullName.vb: AlgoSdk.Sig.Widening(AlgoSdk.Sig to AlgoSdk.Crypto.Ed25519.Signature)
+  fullName: AlgoSdk.Sig.Implicit(AlgoSdk.Sig to Ed25519.Signature)
+  fullName.vb: AlgoSdk.Sig.Widening(AlgoSdk.Sig to Ed25519.Signature)
   nameWithType: Sig.Implicit(Sig to Ed25519.Signature)
   nameWithType.vb: Sig.Widening(Sig to Ed25519.Signature)
+- uid: AlgoSdk.Sig.op_Implicit(Ed25519.Signature)~AlgoSdk.Sig
+  name: Implicit(Ed25519.Signature to Sig)
+  href: api/AlgoSdk.Sig.html#AlgoSdk_Sig_op_Implicit_Ed25519_Signature__AlgoSdk_Sig
+  commentId: M:AlgoSdk.Sig.op_Implicit(Ed25519.Signature)~AlgoSdk.Sig
+  name.vb: Widening(Ed25519.Signature to Sig)
+  fullName: AlgoSdk.Sig.Implicit(Ed25519.Signature to AlgoSdk.Sig)
+  fullName.vb: AlgoSdk.Sig.Widening(Ed25519.Signature to AlgoSdk.Sig)
+  nameWithType: Sig.Implicit(Ed25519.Signature to Sig)
+  nameWithType.vb: Sig.Widening(Ed25519.Signature to Sig)
 - uid: AlgoSdk.Sig.op_Implicit*
   name: Implicit
   href: api/AlgoSdk.Sig.html#AlgoSdk_Sig_op_Implicit_
@@ -29212,13 +29231,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Sig.Verify
   nameWithType: Sig.Verify
-- uid: AlgoSdk.Sig.Verify``1(``0,AlgoSdk.Crypto.Ed25519.PublicKey)
+- uid: AlgoSdk.Sig.Verify``1(``0,Ed25519.PublicKey)
   name: Verify<TMessage>(TMessage, Ed25519.PublicKey)
-  href: api/AlgoSdk.Sig.html#AlgoSdk_Sig_Verify__1___0_AlgoSdk_Crypto_Ed25519_PublicKey_
-  commentId: M:AlgoSdk.Sig.Verify``1(``0,AlgoSdk.Crypto.Ed25519.PublicKey)
+  href: api/AlgoSdk.Sig.html#AlgoSdk_Sig_Verify__1___0_Ed25519_PublicKey_
+  commentId: M:AlgoSdk.Sig.Verify``1(``0,Ed25519.PublicKey)
   name.vb: Verify(Of TMessage)(TMessage, Ed25519.PublicKey)
-  fullName: AlgoSdk.Sig.Verify<TMessage>(TMessage, AlgoSdk.Crypto.Ed25519.PublicKey)
-  fullName.vb: AlgoSdk.Sig.Verify(Of TMessage)(TMessage, AlgoSdk.Crypto.Ed25519.PublicKey)
+  fullName: AlgoSdk.Sig.Verify<TMessage>(TMessage, Ed25519.PublicKey)
+  fullName.vb: AlgoSdk.Sig.Verify(Of TMessage)(TMessage, Ed25519.PublicKey)
   nameWithType: Sig.Verify<TMessage>(TMessage, Ed25519.PublicKey)
   nameWithType.vb: Sig.Verify(Of TMessage)(TMessage, Ed25519.PublicKey)
 - uid: AlgoSdk.SignatureType
@@ -30862,11 +30881,11 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Transaction.GetId
   nameWithType: Transaction.GetId
-- uid: AlgoSdk.Transaction.GetSignature(AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+- uid: AlgoSdk.Transaction.GetSignature(Ed25519.SecretKeyHandle)
   name: GetSignature(Ed25519.SecretKeyHandle)
-  href: api/AlgoSdk.Transaction.html#AlgoSdk_Transaction_GetSignature_AlgoSdk_Crypto_Ed25519_SecretKeyHandle_
-  commentId: M:AlgoSdk.Transaction.GetSignature(AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
-  fullName: AlgoSdk.Transaction.GetSignature(AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  href: api/AlgoSdk.Transaction.html#AlgoSdk_Transaction_GetSignature_Ed25519_SecretKeyHandle_
+  commentId: M:AlgoSdk.Transaction.GetSignature(Ed25519.SecretKeyHandle)
+  fullName: AlgoSdk.Transaction.GetSignature(Ed25519.SecretKeyHandle)
   nameWithType: Transaction.GetSignature(Ed25519.SecretKeyHandle)
 - uid: AlgoSdk.Transaction.GetSignature*
   name: GetSignature
@@ -31179,11 +31198,11 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Transaction.SenderRewards
   nameWithType: Transaction.SenderRewards
-- uid: AlgoSdk.Transaction.Sign(AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+- uid: AlgoSdk.Transaction.Sign(Ed25519.SecretKeyHandle)
   name: Sign(Ed25519.SecretKeyHandle)
-  href: api/AlgoSdk.Transaction.html#AlgoSdk_Transaction_Sign_AlgoSdk_Crypto_Ed25519_SecretKeyHandle_
-  commentId: M:AlgoSdk.Transaction.Sign(AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
-  fullName: AlgoSdk.Transaction.Sign(AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  href: api/AlgoSdk.Transaction.html#AlgoSdk_Transaction_Sign_Ed25519_SecretKeyHandle_
+  commentId: M:AlgoSdk.Transaction.Sign(Ed25519.SecretKeyHandle)
+  fullName: AlgoSdk.Transaction.Sign(Ed25519.SecretKeyHandle)
   nameWithType: Transaction.Sign(Ed25519.SecretKeyHandle)
 - uid: AlgoSdk.Transaction.Sign*
   name: Sign
@@ -31356,13 +31375,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.TransactionExtensions.GetSignature
   nameWithType: TransactionExtensions.GetSignature
-- uid: AlgoSdk.TransactionExtensions.GetSignature``1(``0,AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+- uid: AlgoSdk.TransactionExtensions.GetSignature``1(``0,Ed25519.SecretKeyHandle)
   name: GetSignature<T>(T, Ed25519.SecretKeyHandle)
-  href: api/AlgoSdk.TransactionExtensions.html#AlgoSdk_TransactionExtensions_GetSignature__1___0_AlgoSdk_Crypto_Ed25519_SecretKeyHandle_
-  commentId: M:AlgoSdk.TransactionExtensions.GetSignature``1(``0,AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  href: api/AlgoSdk.TransactionExtensions.html#AlgoSdk_TransactionExtensions_GetSignature__1___0_Ed25519_SecretKeyHandle_
+  commentId: M:AlgoSdk.TransactionExtensions.GetSignature``1(``0,Ed25519.SecretKeyHandle)
   name.vb: GetSignature(Of T)(T, Ed25519.SecretKeyHandle)
-  fullName: AlgoSdk.TransactionExtensions.GetSignature<T>(T, AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
-  fullName.vb: AlgoSdk.TransactionExtensions.GetSignature(Of T)(T, AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  fullName: AlgoSdk.TransactionExtensions.GetSignature<T>(T, Ed25519.SecretKeyHandle)
+  fullName.vb: AlgoSdk.TransactionExtensions.GetSignature(Of T)(T, Ed25519.SecretKeyHandle)
   nameWithType: TransactionExtensions.GetSignature<T>(T, Ed25519.SecretKeyHandle)
   nameWithType.vb: TransactionExtensions.GetSignature(Of T)(T, Ed25519.SecretKeyHandle)
 - uid: AlgoSdk.TransactionExtensions.GetSuggestedFee*
@@ -31388,13 +31407,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.TransactionExtensions.Sign
   nameWithType: TransactionExtensions.Sign
-- uid: AlgoSdk.TransactionExtensions.Sign``1(``0,AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+- uid: AlgoSdk.TransactionExtensions.Sign``1(``0,Ed25519.SecretKeyHandle)
   name: Sign<T>(T, Ed25519.SecretKeyHandle)
-  href: api/AlgoSdk.TransactionExtensions.html#AlgoSdk_TransactionExtensions_Sign__1___0_AlgoSdk_Crypto_Ed25519_SecretKeyHandle_
-  commentId: M:AlgoSdk.TransactionExtensions.Sign``1(``0,AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  href: api/AlgoSdk.TransactionExtensions.html#AlgoSdk_TransactionExtensions_Sign__1___0_Ed25519_SecretKeyHandle_
+  commentId: M:AlgoSdk.TransactionExtensions.Sign``1(``0,Ed25519.SecretKeyHandle)
   name.vb: Sign(Of T)(T, Ed25519.SecretKeyHandle)
-  fullName: AlgoSdk.TransactionExtensions.Sign<T>(T, AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
-  fullName.vb: AlgoSdk.TransactionExtensions.Sign(Of T)(T, AlgoSdk.Crypto.Ed25519.SecretKeyHandle)
+  fullName: AlgoSdk.TransactionExtensions.Sign<T>(T, Ed25519.SecretKeyHandle)
+  fullName.vb: AlgoSdk.TransactionExtensions.Sign(Of T)(T, Ed25519.SecretKeyHandle)
   nameWithType: TransactionExtensions.Sign<T>(T, Ed25519.SecretKeyHandle)
   nameWithType.vb: TransactionExtensions.Sign(Of T)(T, Ed25519.SecretKeyHandle)
 - uid: AlgoSdk.TransactionExtensions.ToSignatureMessage*
@@ -31747,24 +31766,24 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.TransactionId.Length
   nameWithType: TransactionId.Length
-- uid: AlgoSdk.TransactionId.op_Implicit(AlgoSdk.Crypto.Sha512_256_Hash)~AlgoSdk.TransactionId
-  name: Implicit(Sha512_256_Hash to TransactionId)
-  href: api/AlgoSdk.TransactionId.html#AlgoSdk_TransactionId_op_Implicit_AlgoSdk_Crypto_Sha512_256_Hash__AlgoSdk_TransactionId
-  commentId: M:AlgoSdk.TransactionId.op_Implicit(AlgoSdk.Crypto.Sha512_256_Hash)~AlgoSdk.TransactionId
-  name.vb: Widening(Sha512_256_Hash to TransactionId)
-  fullName: AlgoSdk.TransactionId.Implicit(AlgoSdk.Crypto.Sha512_256_Hash to AlgoSdk.TransactionId)
-  fullName.vb: AlgoSdk.TransactionId.Widening(AlgoSdk.Crypto.Sha512_256_Hash to AlgoSdk.TransactionId)
-  nameWithType: TransactionId.Implicit(Sha512_256_Hash to TransactionId)
-  nameWithType.vb: TransactionId.Widening(Sha512_256_Hash to TransactionId)
-- uid: AlgoSdk.TransactionId.op_Implicit(AlgoSdk.TransactionId)~AlgoSdk.Crypto.Sha512_256_Hash
+- uid: AlgoSdk.TransactionId.op_Implicit(AlgoSdk.TransactionId)~Sha512_256_Hash
   name: Implicit(TransactionId to Sha512_256_Hash)
-  href: api/AlgoSdk.TransactionId.html#AlgoSdk_TransactionId_op_Implicit_AlgoSdk_TransactionId__AlgoSdk_Crypto_Sha512_256_Hash
-  commentId: M:AlgoSdk.TransactionId.op_Implicit(AlgoSdk.TransactionId)~AlgoSdk.Crypto.Sha512_256_Hash
+  href: api/AlgoSdk.TransactionId.html#AlgoSdk_TransactionId_op_Implicit_AlgoSdk_TransactionId__Sha512_256_Hash
+  commentId: M:AlgoSdk.TransactionId.op_Implicit(AlgoSdk.TransactionId)~Sha512_256_Hash
   name.vb: Widening(TransactionId to Sha512_256_Hash)
-  fullName: AlgoSdk.TransactionId.Implicit(AlgoSdk.TransactionId to AlgoSdk.Crypto.Sha512_256_Hash)
-  fullName.vb: AlgoSdk.TransactionId.Widening(AlgoSdk.TransactionId to AlgoSdk.Crypto.Sha512_256_Hash)
+  fullName: AlgoSdk.TransactionId.Implicit(AlgoSdk.TransactionId to Sha512_256_Hash)
+  fullName.vb: AlgoSdk.TransactionId.Widening(AlgoSdk.TransactionId to Sha512_256_Hash)
   nameWithType: TransactionId.Implicit(TransactionId to Sha512_256_Hash)
   nameWithType.vb: TransactionId.Widening(TransactionId to Sha512_256_Hash)
+- uid: AlgoSdk.TransactionId.op_Implicit(Sha512_256_Hash)~AlgoSdk.TransactionId
+  name: Implicit(Sha512_256_Hash to TransactionId)
+  href: api/AlgoSdk.TransactionId.html#AlgoSdk_TransactionId_op_Implicit_Sha512_256_Hash__AlgoSdk_TransactionId
+  commentId: M:AlgoSdk.TransactionId.op_Implicit(Sha512_256_Hash)~AlgoSdk.TransactionId
+  name.vb: Widening(Sha512_256_Hash to TransactionId)
+  fullName: AlgoSdk.TransactionId.Implicit(Sha512_256_Hash to AlgoSdk.TransactionId)
+  fullName.vb: AlgoSdk.TransactionId.Widening(Sha512_256_Hash to AlgoSdk.TransactionId)
+  nameWithType: TransactionId.Implicit(Sha512_256_Hash to TransactionId)
+  nameWithType.vb: TransactionId.Widening(Sha512_256_Hash to TransactionId)
 - uid: AlgoSdk.TransactionId.op_Implicit*
   name: Implicit
   href: api/AlgoSdk.TransactionId.html#AlgoSdk_TransactionId_op_Implicit_

@@ -86,17 +86,15 @@
   <div class="markdown level0 summary"><p>A typed signed transaction.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.Signed-1.html">Signed</a>&lt;TTransaction&gt;&gt;</div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_Signed_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiFormatter(typeof(SignedTransactionFormatter&lt;AppCallTxn&gt;), &quot;&quot;, 0)]
-[AlgoApiFormatter(typeof(SignedTransactionFormatter&lt;AssetConfigTxn&gt;), &quot;&quot;, 0)]
-[AlgoApiFormatter(typeof(SignedTransactionFormatter&lt;AssetFreezeTxn&gt;), &quot;&quot;, 0)]
-[AlgoApiFormatter(typeof(SignedTransactionFormatter&lt;AssetTransferTxn&gt;), &quot;&quot;, 0)]
-[AlgoApiFormatter(typeof(SignedTransactionFormatter&lt;KeyRegTxn&gt;), &quot;&quot;, 0)]
-[AlgoApiFormatter(typeof(SignedTransactionFormatter&lt;PaymentTxn&gt;), &quot;&quot;, 0)]
-public struct Signed&lt;TTransaction&gt; : IEquatable&lt;Signed&lt;TTransaction&gt;&gt; where TTransaction : struct, ITransaction, IEquatable&lt;TTransaction&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct Signed&lt;TTransaction&gt; : IEquatable&lt;Signed&lt;TTransaction&gt;&gt; where TTransaction : struct, ITransaction, IEquatable&lt;TTransaction&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -210,6 +208,10 @@ public struct Signed&lt;TTransaction&gt; : IEquatable&lt;Signed&lt;TTransaction&
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IEquatable&lt;&gt;</span>
+  </div>
 </article>
           </div>
           
