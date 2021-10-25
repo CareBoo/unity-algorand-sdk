@@ -10,11 +10,11 @@
 
 namespace AlgoSdk
 {
-
-
+    
+    
     public sealed partial class AlgoApiFormatterLookup
     {
-
+        
         private static void EnsureLookupInitialized()
         {
             AlgoSdk.AlgoApiFormatterLookup.InitLookup();
