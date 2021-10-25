@@ -1,3 +1,10 @@
+# [1.0.0-pre.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.1...v1.0.0-pre.2) (2021-10-25)
+
+
+### Bug Fixes
+
+* fix empty dirs finding their way into the project ([82afc9d](https://github.com/CareBoo/unity-algorand-sdk/commit/82afc9d14a0374b39e63dd7581b950324e12bf39))
+
 # 1.0.0-pre.1 (2021-10-24)
 
 
