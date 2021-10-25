@@ -9,7 +9,7 @@ namespace AlgoSdk
         , IPaginatedResponse
     {
         [AlgoApiField("accounts", null)]
-        public Account[] Accounts { get; set; }
+        public AccountInfo[] Accounts { get; set; }
 
         [AlgoApiField("current-round", null)]
         public ulong CurrentRound { get; set; }

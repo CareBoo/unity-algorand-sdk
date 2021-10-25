@@ -11,7 +11,7 @@ namespace AlgoSdk
         : IEquatable<DryrunRequest>
     {
         [AlgoApiField("accounts", null)]
-        public Account[] Accounts;
+        public AccountInfo[] Accounts;
 
         [AlgoApiField("apps", null)]
         public Application[] Applications;

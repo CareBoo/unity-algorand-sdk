@@ -8,7 +8,7 @@ namespace AlgoSdk
         , IIndexerResponse
     {
         [AlgoApiField("account", null)]
-        public Account Account { get; set; }
+        public AccountInfo Account { get; set; }
 
         [AlgoApiField("current-round", null)]
         public ulong CurrentRound { get; set; }

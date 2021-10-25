@@ -37,8 +37,8 @@ namespace AlgoSdk
         /// Given a specific account public key, this call returns the accounts status, balance and spendable amounts.
         /// </remarks>
         /// <param name="accountAddress">An account public key (address)</param>
-        /// <returns>an <see cref="Account"/> if everything is okay</returns>
-        UniTask<AlgoApiResponse<Account>> GetAccountInformation(Address accountAddress);
+        /// <returns>an <see cref="AccountInfo"/> if everything is okay</returns>
+        UniTask<AlgoApiResponse<AccountInfo>> GetAccountInformation(Address accountAddress);
 
         /// <summary>
         /// Get a list of unconfirmed transactions currently in the transaction pool by address.
