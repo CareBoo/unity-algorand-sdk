@@ -6,9 +6,9 @@ on:
       - main
       - pre
       - exp
-      - '[0-9]+.[0-9]+.[0-9]+'
-      - '[0-9]+.[0-9]+.x'
-      - '[0-9]+.x.x'
+      - "[0-9]+.[0-9]+.[0-9]+"
+      - "[0-9]+.[0-9]+.x"
+      - "[0-9]+.x.x"
 
 jobs:
   release:
@@ -39,7 +39,7 @@ jobs:
         uses: actions/setup-node@v2
         if: steps.semantic.outputs.new_release_published == 'true'
         with:
-          node-version: '12.x'
+          node-version: "12.x"
           registry-url: https://registry.npmjs.org/
 
       - name: Publish to npmjs
@@ -52,7 +52,7 @@ jobs:
         uses: actions/setup-node@v2
         if: steps.semantic.outputs.new_release_published == 'true'
         with:
-          registry-url: 'https://npm.pkg.github.com'
+          registry-url: "https://npm.pkg.github.com"
 
       - name: Publish to GPR
         if: steps.semantic.outputs.new_release_published == 'true'
@@ -66,7 +66,7 @@ jobs:
     runs-on: windows-latest
     strategy:
       matrix:
-        tag: ['version', 'branch']
+        tag: ["version", "branch"]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -78,8 +78,8 @@ jobs:
         if: ${{ matrix.tag == 'version' }}
         uses: notiz-dev/github-action-json-property@release
         with:
-            path: 'Packages/com.careboo.unity-algorand-sdk/package.json'
-            prop_path: 'version'
+          path: "Packages/com.careboo.unity-algorand-sdk/package.json"
+          prop_path: "version"
 
       - name: Get branch
         id: branch
@@ -120,24 +120,15 @@ jobs:
           name: _site_${{ matrix.tag }}
           path: Packages/com.careboo.unity-algorand-sdk/_site
 
-  deploy_docs:
-    name: Deploy Docs
+  deploy_docs_version:
+    name: Deploy Version Docs
     needs: build_docs
     runs-on: ubuntu-latest
-    strategy:
-      max-parallel: 1
-      matrix:
-        tag: ['version', 'branch']
     steps:
       - name: Download Docs site artifact
         uses: actions/download-artifact@v1
         with:
-          name: _site_${{ matrix.tag }}
-
-      - name: Get branch
-        id: branch
-        if: ${{ matrix.tag == 'branch' }}
-        run: echo "::set-output name=name::${GITHUB_REF#refs/heads/}"
+          name: _site_version
 
       - name: Checkout
         uses: actions/checkout@v2
@@ -145,29 +136,45 @@ jobs:
           lfs: true
 
       - name: Get package version
-        if: ${{ matrix.tag == 'version' }}
         id: version
         uses: notiz-dev/github-action-json-property@release
         with:
-            path: 'Packages/com.careboo.unity-algorand-sdk/package.json'
-            prop_path: 'version'
+          path: "Packages/com.careboo.unity-algorand-sdk/package.json"
+          prop_path: "version"
 
       - name: Deploy Docs Version
-        if: ${{ matrix.tag == 'version' }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: _site_${{ matrix.tag }}
+          publish_dir: _site_version
           destination_dir: ${{ steps.version.outputs.prop }}
           keep_files: true
 
+  deploy_docs_branch:
+    name: Deploy Branch Docs
+    needs: deploy_docs_version
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Docs site artifact
+        uses: actions/download-artifact@v1
+        with:
+          name: _site_branch
+
+      - name: Get branch
+        id: branch
+        run: echo "::set-output name=name::${GITHUB_REF#refs/heads/}"
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          lfs: true
+
       - name: Deploy Docs Branch
-        if: ${{ matrix.tag == 'branch' }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: _site_${{ matrix.tag }}
+          publish_dir: _site_branch
           destination_dir: ${{ steps.branch.outputs.name }}
           keep_files: true
