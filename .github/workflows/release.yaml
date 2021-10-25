@@ -161,6 +161,7 @@ jobs:
           publish_branch: gh-pages
           publish_dir: _site_${{ matrix.tag }}
           destination_dir: ${{ steps.version.outputs.prop }}
+          keep_files: true
 
       - name: Deploy Docs Branch
         if: ${{ matrix.tag == 'branch' }}
@@ -170,3 +171,4 @@ jobs:
           publish_branch: gh-pages
           publish_dir: _site_${{ matrix.tag }}
           destination_dir: ${{ steps.branch.outputs.name }}
+          keep_files: true
