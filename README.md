@@ -42,4 +42,4 @@ Check out the [Quickstart Guide](https://careboo.github.io/unity-algorand-sdk/ma
 > [!Note]
 > The documentation is generated per release branch and version. The documentation for a specific version/branch
 > can be found at `https://careboo.github.io/unity-algorand-sdk/{version}/`, e.g.
-> https://careboo.github.io/unity-algorand-sdk/1.0.0-pre.1/
+> https://careboo.github.io/unity-algorand-sdk/1.0.0-pre.3/
