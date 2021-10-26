@@ -31,7 +31,7 @@ Then use the Open UPM CLI at the root of your Unity project to install.
 > openupm add com.careboo.unity-algorand-sdk
 ```
 
-Alternatively, this SDK is [available in the Unity Asset Store]().
+This SDK will soon be [available in the Unity Asset Store](https://u3d.as/2GBr).
 
 Getting Started
 ---------------
