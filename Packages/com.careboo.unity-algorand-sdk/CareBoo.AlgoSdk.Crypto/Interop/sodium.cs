@@ -7,6 +7,8 @@ namespace AlgoSdk.Crypto
     {
 #if UNITY_IPHONE
         internal const string Library = "__Internal";
+#elif (UNITY_EDITOR_OSX || UNITY_STANDALONE_OSX)
+        internal const string Library = "sodium";
 #else
         internal const string Library = "libsodium";
 #endif

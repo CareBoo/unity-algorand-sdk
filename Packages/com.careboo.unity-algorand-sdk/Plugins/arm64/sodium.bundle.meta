@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: ee5c9c4e7f681da4d8ee31ab72f220cc
+guid: 2619296f8642a4d73a00b8ad7f2af30e
 PluginImporter:
   externalObjects: {}
   serializedVersion: 2
   iconMap: {}
   executionOrder: {}
   defineConstraints: []
-  isPreloaded: 1
+  isPreloaded: 0
   isOverridable: 1
   isExplicitlyReferenced: 0
   validateReferences: 1
@@ -16,20 +16,11 @@ PluginImporter:
     second:
       enabled: 0
       settings:
-        Exclude Android: 1
-        Exclude Editor: 0
-        Exclude Linux64: 0
+        Exclude Editor: 1
+        Exclude Linux64: 1
         Exclude OSXUniversal: 0
-        Exclude WebGL: 1
-        Exclude Win: 0
-        Exclude Win64: 0
-        Exclude iOS: 1
-  - first:
-      Android: Android
-    second:
-      enabled: 0
-      settings:
-        CPU: ARMv7
+        Exclude Win: 1
+        Exclude Win64: 1
   - first:
       Any: 
     second:
@@ -38,7 +29,7 @@ PluginImporter:
   - first:
       Editor: Editor
     second:
-      enabled: 1
+      enabled: 0
       settings:
         CPU: x86_64
         DefaultValueInitialized: true
@@ -46,41 +37,27 @@ PluginImporter:
   - first:
       Standalone: Linux64
     second:
-      enabled: 1
+      enabled: 0
       settings:
-        CPU: AnyCPU
+        CPU: None
   - first:
       Standalone: OSXUniversal
     second:
       enabled: 1
       settings:
-        CPU: x86_64
+        CPU: ARM64
   - first:
       Standalone: Win
     second:
-      enabled: 1
+      enabled: 0
       settings:
-        CPU: None
+        CPU: x86
   - first:
       Standalone: Win64
     second:
-      enabled: 1
-      settings:
-        CPU: None
-  - first:
-      WebGL: WebGL
-    second:
-      enabled: 0
-      settings: {}
-  - first:
-      iPhone: iOS
-    second:
       enabled: 0
       settings:
-        AddToEmbeddedBinaries: false
-        CPU: AnyCPU
-        CompileFlags: 
-        FrameworkDependencies: 
+        CPU: x86_64
   userData: 
   assetBundleName: 
   assetBundleVariant: 
