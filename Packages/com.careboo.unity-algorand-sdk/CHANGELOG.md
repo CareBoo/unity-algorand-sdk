@@ -1,3 +1,10 @@
+# [1.0.0-pre.4](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.3...v1.0.0-pre.4) (2021-10-27)
+
+
+### Features
+
+* **unity:** make AlgoApiClient's Serializable ([4a3aa11](https://github.com/CareBoo/unity-algorand-sdk/commit/4a3aa11fe3ecdf46f00ef29829e1d965043ee3aa))
+
 # [1.0.0-pre.3](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.2...v1.0.0-pre.3) (2021-10-25)
 
 
