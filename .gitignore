@@ -65,3 +65,5 @@ crashlytics-build.properties
 
 # node modules
 node_modules/
+
+.DS_Store
