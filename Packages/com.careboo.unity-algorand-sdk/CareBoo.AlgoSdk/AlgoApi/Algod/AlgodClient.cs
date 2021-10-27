@@ -1,6 +1,7 @@
 using System;
 using Cysharp.Threading.Tasks;
 using Unity.Collections;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -11,11 +12,14 @@ namespace AlgoSdk
     /// The algod service is responsible for handling information
     /// required to create and send transactions.
     /// </remarks>
+    [Serializable]
     public struct AlgodClient : IAlgodClient
     {
-        readonly string address;
+        [SerializeField]
+        string address;
 
-        readonly string token;
+        [SerializeField]
+        string token;
 
         /// <summary>
         /// Create a new algod client

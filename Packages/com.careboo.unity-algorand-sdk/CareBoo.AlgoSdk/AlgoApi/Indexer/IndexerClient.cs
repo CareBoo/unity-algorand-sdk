@@ -1,6 +1,7 @@
 using System;
 using Cysharp.Threading.Tasks;
 using Unity.Collections;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -10,11 +11,14 @@ namespace AlgoSdk
     /// <remarks>
     /// The indexer service is responsible for querying the blockchain
     /// </remarks>
+    [Serializable]
     public struct IndexerClient : IIndexerClient
     {
-        readonly string address;
+        [SerializeField]
+        string address;
 
-        readonly string token;
+        [SerializeField]
+        string token;
 
         /// <summary>
         /// Create a new indexer client
