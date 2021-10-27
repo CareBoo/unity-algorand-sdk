@@ -1,3 +1,10 @@
+# [1.0.0-pre.5](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.4...v1.0.0-pre.5) (2021-10-27)
+
+
+### Bug Fixes
+
+* **crypto:** fix libsodium not working on OSX ([1154450](https://github.com/CareBoo/unity-algorand-sdk/commit/1154450267b71762195f701694616a38d47fd529))
+
 # [1.0.0-pre.4](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.3...v1.0.0-pre.4) (2021-10-27)
 
 
