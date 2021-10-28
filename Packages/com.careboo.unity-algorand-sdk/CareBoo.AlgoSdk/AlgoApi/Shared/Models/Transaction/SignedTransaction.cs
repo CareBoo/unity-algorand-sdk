@@ -61,5 +61,18 @@ namespace AlgoSdk
                 && Signature.Equals(other.Signature)
                 ;
         }
+
+        public SignedTransaction ToUntyped()
+        {
+            Transaction raw = default;
+            Transaction.CopyTo(ref raw);
+            raw.Signature = Signature;
+            return new SignedTransaction { Transaction = raw };
+        }
+
+        public static implicit operator SignedTransaction(Signed<TTransaction> typedSignedTxn)
+        {
+            return typedSignedTxn.ToUntyped();
+        }
     }
 }

@@ -215,6 +215,24 @@ namespace AlgoSdk
                 .Send();
         }
 
+        public async UniTask<AlgoApiResponse<TransactionIdResponse>> SendTransactions(
+            params SignedTransaction[] txns
+        )
+        {
+            using var bytes = new NativeList<byte>(Allocator.Persistent);
+            for (var i = 0; i < txns.Length; i++)
+            {
+                using (var data = AlgoApiSerializer.SerializeMessagePack(txns[i], Allocator.Temp))
+                {
+                    bytes.AddRange(data);
+                }
+            }
+            return await this
+                .Post("/v2/transactions")
+                .SetMessagePackBody(bytes.AsArray().AsReadOnly())
+                .Send();
+        }
+
         public async UniTask<AlgoApiResponse<TransactionParams>> GetSuggestedParams()
         {
             return await this

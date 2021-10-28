@@ -21,7 +21,7 @@ public abstract class AlgoApiClientTestFixture
 {
     protected const string SandboxToken = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
 
-    protected static readonly Mnemonic AccountMnemonic = "find paddle girl crumble hammer usual obvious toy actual obscure decorate lock bag inmate author valve course ship burger denial sibling tissue nominee above remove";
+    protected static readonly Mnemonic AccountMnemonic = "fluid eight extra cancel energy syrup pledge latin coral name vacant napkin beach script unfold weekend earn act attend student double potato west abandon shallow";
 
     protected static readonly AlgodClient algod = new AlgodClient("http://localhost:4001", SandboxToken);
 
