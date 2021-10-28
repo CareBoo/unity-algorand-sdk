@@ -113,7 +113,8 @@ namespace AlgoSdk
             var txn = new AssetTransferTxn
             {
                 header = new TransactionHeader(sender, TransactionType.AssetTransfer, txnParams),
-                XferAsset = xferAsset
+                XferAsset = xferAsset,
+                AssetReceiver = sender,
             };
             txn.Fee = txn.GetSuggestedFee(txnParams);
             return txn;

@@ -186,6 +186,13 @@ namespace AlgoSdk
             where T : struct, ITransaction, IEquatable<T>;
 
         /// <summary>
+        /// Broadcasts a group of transactions to the network.
+        /// </summary>
+        /// <param name="signedTxns">The signed transactions in the same order as they were when using <see cref="Transaction.GetGroupId(TransactionId[])"/></param>
+        /// <returns>Transaction ID of the submission.</returns>
+        UniTask<AlgoApiResponse<TransactionIdResponse>> SendTransactions(params SignedTransaction[] signedTxns);
+
+        /// <summary>
         /// Get parameters for constructing a new transaction
         /// </summary>
         /// <returns><see cref="TransactionParams"/> contains the parameters that help a client construct a new transaction.</returns>

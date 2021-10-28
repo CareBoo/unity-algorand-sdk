@@ -82,13 +82,6 @@ public class AlgodClientTest : AlgodClientTestFixture
     });
 
     [UnityTest]
-    public IEnumerator GetStatusAfterWaitingForRoundShouldReturnOkay() => UniTask.ToCoroutine(async () =>
-    {
-        var response = await algod.GetStatusAfterWaitingForRound(0);
-        AssertOkay(response.Error);
-    });
-
-    [UnityTest]
     public IEnumerator GetVersionsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var response = await algod.GetVersions();
@@ -126,5 +119,27 @@ public class AlgodClientTest : AlgodClientTestFixture
         AssertOkay(response.Error);
         Assert.AreEqual(TealCodeCases.AtomicSwap.CompiledResult, response.Payload.CompiledBytesBase64);
         Assert.AreEqual(TealCodeCases.AtomicSwap.CompiledHash, response.Payload.Hash.ToString());
+    });
+
+    [UnityTest]
+    public IEnumerator SendTransactionGroupShouldReturnOkay() => UniTask.ToCoroutine(async () =>
+    {
+        var (_, txnParams) = await algod.GetSuggestedParams();
+        var receiver = AlgoSdk.Crypto.Random.Bytes<Address>();
+
+        using var kp = AccountPrivateKey.ToKeyPair();
+        var txn1 = Transaction.Payment(kp.PublicKey, txnParams, receiver, 100_000L);
+        var txn2 = Transaction.Payment(kp.PublicKey, txnParams, receiver, 200_000L);
+        var groupId = Transaction.GetGroupId(txn1.GetId(), txn2.GetId());
+        txn1.Group = groupId;
+        txn2.Group = groupId;
+
+        var signed1 = txn1.Sign(kp.SecretKey);
+        var signed2 = txn2.Sign(kp.SecretKey);
+
+        var (err, txid) = await algod.SendTransactions(signed1, signed2);
+        AssertOkay(err);
+        var pending = await WaitForTransaction(txid);
+        UnityEngine.Debug.Log($"pending tx count: {pending.InnerTransactions?.Length ?? 0}");
     });
 }
