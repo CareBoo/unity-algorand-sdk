@@ -1,3 +1,15 @@
+# [1.0.0-pre.6](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.5...v1.0.0-pre.6) (2021-10-28)
+
+
+### Bug Fixes
+
+* **indexer:** fix missing `Version` field in `HealthCheck` ([39c3444](https://github.com/CareBoo/unity-algorand-sdk/commit/39c3444ee0a6a628dbd80619804a12720223a2ef))
+
+
+### Features
+
+* **algod:** add support for sending a group of transactions ([a7a7695](https://github.com/CareBoo/unity-algorand-sdk/commit/a7a7695ce1e0196ca5bc3fe47e463b6a0c643f2f))
+
 # [1.0.0-pre.5](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.4...v1.0.0-pre.5) (2021-10-27)
 
 
