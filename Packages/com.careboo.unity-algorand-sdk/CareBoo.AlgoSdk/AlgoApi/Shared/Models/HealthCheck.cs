@@ -27,6 +27,9 @@ namespace AlgoSdk
         [AlgoApiField("round", "round")]
         public ulong Round;
 
+        [AlgoApiField("version", "version")]
+        public string Version;
+
         public bool Equals(HealthCheck other)
         {
             return Data.Equals(other.Data)
