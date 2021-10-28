@@ -944,6 +944,51 @@ If MAX = 0, returns all pending transactions.</p>
   </table>
   
   
+  <a id="AlgoSdk_IAlgodClient_SendTransactions_" data-uid="AlgoSdk.IAlgodClient.SendTransactions*"></a>
+  <h4 id="AlgoSdk_IAlgodClient_SendTransactions_AlgoSdk_SignedTransaction___" data-uid="AlgoSdk.IAlgodClient.SendTransactions(AlgoSdk.SignedTransaction[])">SendTransactions(SignedTransaction[])</h4>
+  <div class="markdown level1 summary"><p>Broadcasts a group of transactions to the network.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">UniTask&lt;AlgoApiResponse&lt;TransactionIdResponse&gt;&gt; SendTransactions(params SignedTransaction[] signedTxns)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.SignedTransaction.html">SignedTransaction</a>[]</td>
+        <td><span class="parametername">signedTxns</span></td>
+        <td><p>The signed transactions in the same order as they were when using <a class="xref" href="AlgoSdk.Transaction.html#AlgoSdk_Transaction_GetGroupId_AlgoSdk_TransactionId___">GetGroupId(TransactionId[])</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.TransactionIdResponse.html">TransactionIdResponse</a>&gt;&gt;</td>
+        <td><p>Transaction ID of the submission.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_IAlgodClient_ShutDown_" data-uid="AlgoSdk.IAlgodClient.ShutDown*"></a>
   <h4 id="AlgoSdk_IAlgodClient_ShutDown_AlgoSdk_Optional_System_UInt64__" data-uid="AlgoSdk.IAlgodClient.ShutDown(AlgoSdk.Optional{System.UInt64})">ShutDown(Optional&lt;UInt64&gt;)</h4>
   <div class="markdown level1 summary"><p>Special management endpoint to shutdown the node.</p>

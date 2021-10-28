@@ -2442,6 +2442,22 @@ references:
   fullName.vb: AlgoSdk.AlgodClient.SendTransaction(Of T)(AlgoSdk.Signed(Of T))
   nameWithType: AlgodClient.SendTransaction<T>(Signed<T>)
   nameWithType.vb: AlgodClient.SendTransaction(Of T)(Signed(Of T))
+- uid: AlgoSdk.AlgodClient.SendTransactions(AlgoSdk.SignedTransaction[])
+  name: SendTransactions(SignedTransaction[])
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_SendTransactions_AlgoSdk_SignedTransaction___
+  commentId: M:AlgoSdk.AlgodClient.SendTransactions(AlgoSdk.SignedTransaction[])
+  name.vb: SendTransactions(SignedTransaction())
+  fullName: AlgoSdk.AlgodClient.SendTransactions(AlgoSdk.SignedTransaction[])
+  fullName.vb: AlgoSdk.AlgodClient.SendTransactions(AlgoSdk.SignedTransaction())
+  nameWithType: AlgodClient.SendTransactions(SignedTransaction[])
+  nameWithType.vb: AlgodClient.SendTransactions(SignedTransaction())
+- uid: AlgoSdk.AlgodClient.SendTransactions*
+  name: SendTransactions
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_SendTransactions_
+  commentId: Overload:AlgoSdk.AlgodClient.SendTransactions
+  isSpec: "True"
+  fullName: AlgoSdk.AlgodClient.SendTransactions
+  nameWithType: AlgodClient.SendTransactions
 - uid: AlgoSdk.AlgodClient.ShutDown(AlgoSdk.Optional{System.UInt64})
   name: ShutDown(Optional<UInt64>)
   href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_ShutDown_AlgoSdk_Optional_System_UInt64__
@@ -9373,6 +9389,12 @@ references:
   commentId: F:AlgoSdk.HealthCheck.Round
   fullName: AlgoSdk.HealthCheck.Round
   nameWithType: HealthCheck.Round
+- uid: AlgoSdk.HealthCheck.Version
+  name: Version
+  href: api/AlgoSdk.HealthCheck.html#AlgoSdk_HealthCheck_Version
+  commentId: F:AlgoSdk.HealthCheck.Version
+  fullName: AlgoSdk.HealthCheck.Version
+  nameWithType: HealthCheck.Version
 - uid: AlgoSdk.IAlgoApiClient
   name: IAlgoApiClient
   href: api/AlgoSdk.IAlgoApiClient.html
@@ -9863,6 +9885,22 @@ references:
   fullName.vb: AlgoSdk.IAlgodClient.SendTransaction(Of T)(AlgoSdk.Signed(Of T))
   nameWithType: IAlgodClient.SendTransaction<T>(Signed<T>)
   nameWithType.vb: IAlgodClient.SendTransaction(Of T)(Signed(Of T))
+- uid: AlgoSdk.IAlgodClient.SendTransactions(AlgoSdk.SignedTransaction[])
+  name: SendTransactions(SignedTransaction[])
+  href: api/AlgoSdk.IAlgodClient.html#AlgoSdk_IAlgodClient_SendTransactions_AlgoSdk_SignedTransaction___
+  commentId: M:AlgoSdk.IAlgodClient.SendTransactions(AlgoSdk.SignedTransaction[])
+  name.vb: SendTransactions(SignedTransaction())
+  fullName: AlgoSdk.IAlgodClient.SendTransactions(AlgoSdk.SignedTransaction[])
+  fullName.vb: AlgoSdk.IAlgodClient.SendTransactions(AlgoSdk.SignedTransaction())
+  nameWithType: IAlgodClient.SendTransactions(SignedTransaction[])
+  nameWithType.vb: IAlgodClient.SendTransactions(SignedTransaction())
+- uid: AlgoSdk.IAlgodClient.SendTransactions*
+  name: SendTransactions
+  href: api/AlgoSdk.IAlgodClient.html#AlgoSdk_IAlgodClient_SendTransactions_
+  commentId: Overload:AlgoSdk.IAlgodClient.SendTransactions
+  isSpec: "True"
+  fullName: AlgoSdk.IAlgodClient.SendTransactions
+  nameWithType: IAlgodClient.SendTransactions
 - uid: AlgoSdk.IAlgodClient.ShutDown(AlgoSdk.Optional{System.UInt64})
   name: ShutDown(Optional<UInt64>)
   href: api/AlgoSdk.IAlgodClient.html#AlgoSdk_IAlgodClient_ShutDown_AlgoSdk_Optional_System_UInt64__
@@ -29335,6 +29373,25 @@ references:
   fullName.vb: AlgoSdk.Signed(Of TTransaction).Equals
   nameWithType: Signed<TTransaction>.Equals
   nameWithType.vb: Signed(Of TTransaction).Equals
+- uid: AlgoSdk.Signed`1.op_Implicit(AlgoSdk.Signed{`0})~AlgoSdk.SignedTransaction
+  name: Implicit(Signed<TTransaction> to SignedTransaction)
+  href: api/AlgoSdk.Signed-1.html#AlgoSdk_Signed_1_op_Implicit_AlgoSdk_Signed__0___AlgoSdk_SignedTransaction
+  commentId: M:AlgoSdk.Signed`1.op_Implicit(AlgoSdk.Signed{`0})~AlgoSdk.SignedTransaction
+  name.vb: Widening(Signed(Of TTransaction) to SignedTransaction)
+  fullName: AlgoSdk.Signed<TTransaction>.Implicit(AlgoSdk.Signed<TTransaction> to AlgoSdk.SignedTransaction)
+  fullName.vb: AlgoSdk.Signed(Of TTransaction).Widening(AlgoSdk.Signed(Of TTransaction) to AlgoSdk.SignedTransaction)
+  nameWithType: Signed<TTransaction>.Implicit(Signed<TTransaction> to SignedTransaction)
+  nameWithType.vb: Signed(Of TTransaction).Widening(Signed(Of TTransaction) to SignedTransaction)
+- uid: AlgoSdk.Signed`1.op_Implicit*
+  name: Implicit
+  href: api/AlgoSdk.Signed-1.html#AlgoSdk_Signed_1_op_Implicit_
+  commentId: Overload:AlgoSdk.Signed`1.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: AlgoSdk.Signed<TTransaction>.Implicit
+  fullName.vb: AlgoSdk.Signed(Of TTransaction).Widening
+  nameWithType: Signed<TTransaction>.Implicit
+  nameWithType.vb: Signed(Of TTransaction).Widening
 - uid: AlgoSdk.Signed`1.Signature
   name: Signature
   href: api/AlgoSdk.Signed-1.html#AlgoSdk_Signed_1_Signature
@@ -29343,6 +29400,23 @@ references:
   fullName.vb: AlgoSdk.Signed(Of TTransaction).Signature
   nameWithType: Signed<TTransaction>.Signature
   nameWithType.vb: Signed(Of TTransaction).Signature
+- uid: AlgoSdk.Signed`1.ToUntyped
+  name: ToUntyped()
+  href: api/AlgoSdk.Signed-1.html#AlgoSdk_Signed_1_ToUntyped
+  commentId: M:AlgoSdk.Signed`1.ToUntyped
+  fullName: AlgoSdk.Signed<TTransaction>.ToUntyped()
+  fullName.vb: AlgoSdk.Signed(Of TTransaction).ToUntyped()
+  nameWithType: Signed<TTransaction>.ToUntyped()
+  nameWithType.vb: Signed(Of TTransaction).ToUntyped()
+- uid: AlgoSdk.Signed`1.ToUntyped*
+  name: ToUntyped
+  href: api/AlgoSdk.Signed-1.html#AlgoSdk_Signed_1_ToUntyped_
+  commentId: Overload:AlgoSdk.Signed`1.ToUntyped
+  isSpec: "True"
+  fullName: AlgoSdk.Signed<TTransaction>.ToUntyped
+  fullName.vb: AlgoSdk.Signed(Of TTransaction).ToUntyped
+  nameWithType: Signed<TTransaction>.ToUntyped
+  nameWithType.vb: Signed(Of TTransaction).ToUntyped
 - uid: AlgoSdk.Signed`1.Transaction
   name: Transaction
   href: api/AlgoSdk.Signed-1.html#AlgoSdk_Signed_1_Transaction
