@@ -5,6 +5,14 @@
 - name: Changelog
   href: changelog/
 - name: License
-  href: license/
+  items:
+    - name: License
+      href: license/LICENSE.md
+    - name: Third Party Notices
+      href: license/Third Party Notices.md
+- name: Changelog
+  items:
+    - name: Changes
+      href: changelog/CHANGELOG.md
 - name: GitHub
   href: https://github.com/CareBoo/unity-algorand-sdk

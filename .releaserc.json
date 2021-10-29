@@ -12,7 +12,8 @@
       "@semantic-release/changelog",
       {
         "preset": "angular",
-        "changelogFile": "Packages/com.careboo.unity-algorand-sdk/CHANGELOG.md"
+        "changelogFile": "Packages/com.careboo.unity-algorand-sdk/CHANGELOG.md",
+        "changelogTitle": "#Changelog\nAll notable changes to this package will be documented in this file.\n\nThe format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)\nand this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).\n"
       }
     ],
     [
