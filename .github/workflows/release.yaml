@@ -159,7 +159,6 @@ jobs:
           publish_branch: gh-pages
           publish_dir: _site_version
           destination_dir: ${{ steps.version.outputs.prop }}
-          keep_files: true
 
   deploy_docs_branch:
     name: Deploy Branch Docs
@@ -187,4 +186,3 @@ jobs:
           publish_branch: gh-pages
           publish_dir: _site_branch
           destination_dir: ${{ steps.branch.outputs.name }}
-          keep_files: true
