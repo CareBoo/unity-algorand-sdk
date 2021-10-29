@@ -2331,13 +2331,13 @@
   
   
   <a id="AlgoSdk_Transaction_AssetClawback_" data-uid="AlgoSdk.Transaction.AssetClawback*"></a>
-  <h4 id="AlgoSdk_Transaction_AssetClawback_AlgoSdk_Address_AlgoSdk_TransactionParams_System_UInt64_System_UInt64_AlgoSdk_Address_AlgoSdk_Address_AlgoSdk_Address_" data-uid="AlgoSdk.Transaction.AssetClawback(AlgoSdk.Address,AlgoSdk.TransactionParams,System.UInt64,System.UInt64,AlgoSdk.Address,AlgoSdk.Address,AlgoSdk.Address)">AssetClawback(Address, TransactionParams, UInt64, UInt64, Address, Address, Address)</h4>
+  <h4 id="AlgoSdk_Transaction_AssetClawback_AlgoSdk_Address_AlgoSdk_TransactionParams_System_UInt64_System_UInt64_AlgoSdk_Address_AlgoSdk_Address_" data-uid="AlgoSdk.Transaction.AssetClawback(AlgoSdk.Address,AlgoSdk.TransactionParams,System.UInt64,System.UInt64,AlgoSdk.Address,AlgoSdk.Address)">AssetClawback(Address, TransactionParams, UInt64, UInt64, Address, Address)</h4>
   <div class="markdown level1 summary"><p>Creates a form of <a class="xref" href="AlgoSdk.AssetTransferTxn.html">AssetTransferTxn</a> to clawback assets from an account.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static AssetTransferTxn AssetClawback(Address sender, TransactionParams txnParams, ulong xferAsset, ulong assetAmount, Address assetSender, Address assetReceiver, Address assetCloseTo = default(Address))</code></pre>
+    <pre><code class="lang-csharp hljs">public static AssetTransferTxn AssetClawback(Address sender, TransactionParams txnParams, ulong xferAsset, ulong assetAmount, Address assetSender, Address assetReceiver)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2383,12 +2383,6 @@
         <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
         <td><span class="parametername">assetReceiver</span></td>
         <td><p>The recipient of the asset transfer.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
-        <td><span class="parametername">assetCloseTo</span></td>
-        <td><p>Specify this field to remove the entire asset holding balance from the AssetSender account. It will not remove the asset holding.</p>
 </td>
       </tr>
     </tbody>

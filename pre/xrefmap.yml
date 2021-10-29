@@ -30467,12 +30467,12 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Transaction.AssetAmount
   nameWithType: Transaction.AssetAmount
-- uid: AlgoSdk.Transaction.AssetClawback(AlgoSdk.Address,AlgoSdk.TransactionParams,System.UInt64,System.UInt64,AlgoSdk.Address,AlgoSdk.Address,AlgoSdk.Address)
-  name: AssetClawback(Address, TransactionParams, UInt64, UInt64, Address, Address, Address)
-  href: api/AlgoSdk.Transaction.html#AlgoSdk_Transaction_AssetClawback_AlgoSdk_Address_AlgoSdk_TransactionParams_System_UInt64_System_UInt64_AlgoSdk_Address_AlgoSdk_Address_AlgoSdk_Address_
-  commentId: M:AlgoSdk.Transaction.AssetClawback(AlgoSdk.Address,AlgoSdk.TransactionParams,System.UInt64,System.UInt64,AlgoSdk.Address,AlgoSdk.Address,AlgoSdk.Address)
-  fullName: AlgoSdk.Transaction.AssetClawback(AlgoSdk.Address, AlgoSdk.TransactionParams, System.UInt64, System.UInt64, AlgoSdk.Address, AlgoSdk.Address, AlgoSdk.Address)
-  nameWithType: Transaction.AssetClawback(Address, TransactionParams, UInt64, UInt64, Address, Address, Address)
+- uid: AlgoSdk.Transaction.AssetClawback(AlgoSdk.Address,AlgoSdk.TransactionParams,System.UInt64,System.UInt64,AlgoSdk.Address,AlgoSdk.Address)
+  name: AssetClawback(Address, TransactionParams, UInt64, UInt64, Address, Address)
+  href: api/AlgoSdk.Transaction.html#AlgoSdk_Transaction_AssetClawback_AlgoSdk_Address_AlgoSdk_TransactionParams_System_UInt64_System_UInt64_AlgoSdk_Address_AlgoSdk_Address_
+  commentId: M:AlgoSdk.Transaction.AssetClawback(AlgoSdk.Address,AlgoSdk.TransactionParams,System.UInt64,System.UInt64,AlgoSdk.Address,AlgoSdk.Address)
+  fullName: AlgoSdk.Transaction.AssetClawback(AlgoSdk.Address, AlgoSdk.TransactionParams, System.UInt64, System.UInt64, AlgoSdk.Address, AlgoSdk.Address)
+  nameWithType: Transaction.AssetClawback(Address, TransactionParams, UInt64, UInt64, Address, Address)
 - uid: AlgoSdk.Transaction.AssetClawback*
   name: AssetClawback
   href: api/AlgoSdk.Transaction.html#AlgoSdk_Transaction_AssetClawback_
