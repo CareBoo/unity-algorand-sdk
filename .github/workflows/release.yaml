@@ -66,7 +66,7 @@ jobs:
       - name: Upload package.json artifact
         uses: actions/upload-artifact@v2.2.4
         with:
-          name: released_package.json
+          name: release
           path: Packages/com.careboo.unity-algorand-sdk/package.json
 
   build_docs:
@@ -85,14 +85,14 @@ jobs:
       - name: Download package artifact
         uses: actions/download-artifact@v2
         with:
-          name: released_package.json
+          name: release
 
       - name: Get package version
         id: version
         if: ${{ matrix.tag == 'version' }}
         uses: notiz-dev/github-action-json-property@release
         with:
-          path: "released_package.json"
+          path: "release/package.json"
           prop_path: "version"
 
       - name: Get branch
