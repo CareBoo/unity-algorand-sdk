@@ -3,7 +3,15 @@
   "displayName": "Algorand SDK",
   "version": "1.0.0",
   "unity": "2020.3",
-  "description": "WARNING: This package has not been audited and it should not be used in a production environment.",
+  "keywords": [
+    "algorand",
+    "tool",
+    "sdk",
+    "crypto",
+    "blockchain"
+  ],
+  "license": "MIT",
+  "description": "Integrate Algorand blockchain services into your game.\n\nWARNING: This package has not been audited and it should not be used in a production environment.",
   "dependencies": {
     "com.unity.collections": "1.0.0-pre.6",
     "com.cysharp.unitask": "2.2.5"
@@ -12,5 +20,10 @@
     "access": "public"
   },
   "repository": "github:CareBoo/unity-algorand-sdk",
-  "type": "tool"
+  "changelogUrl": "https://careboo.github.io/unity-algorand-sdk/{{ version }}/CHANGELOG.html",
+  "documentationUrl": "https://careboo.github.io/unity-algorand-sdk/{{ version }}",
+  "author": {
+    "name": "CareBoo",
+    "url": "https://github.com/CareBoo"
+  }
 }

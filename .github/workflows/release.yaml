@@ -27,13 +27,16 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Move Documentation folder
-        if: steps.semantic.outputs.new_release_published == 'true'
-        run: mv Packages/com.careboo.unity-algorand-sdk/Documentation Packages/com.careboo.unity-algorand-sdk/~Documentation
-
       - name: Move README.md
         if: steps.semantic.outputs.new_release_published == 'true'
         run: mv README.md Packages/com.careboo.unity-algorand-sdk/README.md
+
+      - name: Move Documentation folder
+        if: steps.semantic.outputs.new_release_published == 'true'
+        run: |
+          mv Packages/com.careboo.unity-algorand-sdk/Documentation Packages/com.careboo.unity-algorand-sdk/~Documentation
+          rm Packages/com.careboo.unity-algorand-sdk/Documentation.meta
+          rm Packages/com.careboo.unity-algorand-sdk/~Documentation/**/*.meta
 
       - name: Setup npm for npmjs
         uses: actions/setup-node@v2
@@ -60,6 +63,12 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Upload package.json artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: released_package.json
+          path: Packages/com.careboo.unity-algorand-sdk/package.json
+
   build_docs:
     name: Build Docs
     needs: release
@@ -73,12 +82,17 @@ jobs:
         with:
           lfs: true
 
+      - name: Download package artifact
+        uses: actions/download-artifact@v1
+        with:
+          name: released_package.json
+
       - name: Get package version
         id: version
         if: ${{ matrix.tag == 'version' }}
         uses: notiz-dev/github-action-json-property@release
         with:
-          path: "Packages/com.careboo.unity-algorand-sdk/package.json"
+          path: "released_package.json"
           prop_path: "version"
 
       - name: Get branch
