@@ -1,3 +1,10 @@
+# [1.0.0-pre.7](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.6...v1.0.0-pre.7) (2021-10-29)
+
+
+### Bug Fixes
+
+* **transaction:** remove unused assetCloseTo param in `AssetClawback` ([f45dac1](https://github.com/CareBoo/unity-algorand-sdk/commit/f45dac1328af34e1eb437431e2bc60aa71ad53af))
+
 # [1.0.0-pre.6](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.5...v1.0.0-pre.6) (2021-10-28)
 
 
