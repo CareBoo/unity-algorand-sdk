@@ -69,12 +69,6 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload package.json artifact
-        uses: actions/upload-artifact@v2.2.4
-        with:
-          name: release
-          path: Packages/com.careboo.unity-algorand-sdk/package.json
-
   build_docs:
     name: Build Docs
     needs: release
@@ -87,18 +81,14 @@ jobs:
         uses: actions/checkout@v2
         with:
           lfs: true
-
-      - name: Download package artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: release
+          ref: ${{ github.ref }}
 
       - name: Get package version
         id: version
         if: ${{ matrix.tag == 'version' }}
         uses: notiz-dev/github-action-json-property@release
         with:
-          path: "release/package.json"
+          path: "Packages/com.careboo.unity-algorand-sdk/package.json"
           prop_path: "version"
 
       - name: Get branch
