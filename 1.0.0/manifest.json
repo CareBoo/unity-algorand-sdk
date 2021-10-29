@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "changelog/CHANGELOG.html",
-          "hash": "pDWFSQnOoFBPPWeK9MKpceP720KWkzHy6pfohSzBCyM="
+          "hash": "+/ybSWbNB2jsIeQLrEEgh6JlX260haUDQpO2495gaJU="
         }
       },
       "is_incremental": false,
@@ -40,7 +40,7 @@
       "output": {
         ".html": {
           "relative_path": "license/Third Party Notices.html",
-          "hash": "k7qSncSWkLVH1oxDNE+wDLp9vB05/OAXg5GiRrfluoI="
+          "hash": "Ev4kCxVgNOUNQTONwFaqQ9yCk9G6flfs8K+WXIeseV0="
         }
       },
       "is_incremental": false,
@@ -3323,12 +3323,42 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "changelog/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "changelog/toc.html",
+          "hash": "j/R7VsgfMrRj2PSFCxNuNW5i4MM9bx8I75x/hK6u+GE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
           "hash": "eG2NXRWsw3tottybwiScy9xu4GPgsRRcWECQZDi/wgY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "license/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "license/toc.html",
+          "hash": "w1gCSlweAYAIHzJTzHx6nPUpaI/v9FzeJs7SRARy97c="
         }
       },
       "is_incremental": false,
@@ -3411,7 +3441,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "CXtTySiqVb4VYoSzWlaj+B/246QwCyE9iqDhUHOtbPw="
+          "hash": "m4SOx9G2npI7vLspzglmkZypuKtM6qCTtqdFd1kTNmc="
         }
       },
       "is_incremental": false,
