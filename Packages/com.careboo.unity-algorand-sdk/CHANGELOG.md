@@ -1,3 +1,17 @@
+#Changelog
+All notable changes to this package will be documented in this file.
+
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+
+
+## [1.0.1-pre.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0...v1.0.1-pre.1) (2021-10-29)
+
+
+### Bug Fixes
+
+* add missing meta files ([2407941](https://github.com/CareBoo/unity-algorand-sdk/commit/24079419c06ea7c5608d601219239322f7d4b5ab))
+
 # Changelog
 All notable changes to this package will be documented in this file.
 
