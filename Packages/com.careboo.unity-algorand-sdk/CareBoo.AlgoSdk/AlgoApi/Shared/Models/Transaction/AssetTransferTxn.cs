@@ -137,8 +137,7 @@ namespace AlgoSdk
             ulong xferAsset,
             ulong assetAmount,
             Address assetSender,
-            Address assetReceiver,
-            Address assetCloseTo = default
+            Address assetReceiver
         )
         {
             var txn = new AssetTransferTxn
@@ -148,7 +147,6 @@ namespace AlgoSdk
                 AssetAmount = assetAmount,
                 AssetSender = assetSender,
                 AssetReceiver = assetReceiver,
-                AssetCloseTo = assetCloseTo
             };
             txn.Fee = txn.GetSuggestedFee(txnParams);
             return txn;
