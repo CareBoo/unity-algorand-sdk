@@ -24,11 +24,23 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "CHANGELOG.md",
+      "source_relative_path": "../CHANGELOG.md",
       "output": {
         ".html": {
-          "relative_path": "CHANGELOG.html",
-          "hash": "6GXw5DUlYEzYZZ7rjJof1Ez/AhoM+xuAdfPtLfCUF1o="
+          "relative_path": "changelog/CHANGELOG.html",
+          "hash": "pDWFSQnOoFBPPWeK9MKpceP720KWkzHy6pfohSzBCyM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Third Party Notices.md",
+      "output": {
+        ".html": {
+          "relative_path": "license/Third Party Notices.html",
+          "hash": "k7qSncSWkLVH1oxDNE+wDLp9vB05/OAXg5GiRrfluoI="
         }
       },
       "is_incremental": false,
@@ -3391,12 +3403,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "aL5DBvz1idVqtxDsgbmWNG0a7Xm2LW3HLDh+qno46yQ="
+          "hash": "CXtTySiqVb4VYoSzWlaj+B/246QwCyE9iqDhUHOtbPw="
         }
       },
       "is_incremental": false,
@@ -3417,7 +3432,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 3,
+          "total_file_count": 4,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
