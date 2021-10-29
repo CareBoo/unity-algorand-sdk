@@ -64,7 +64,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload package.json artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2.2.4
         with:
           name: released_package.json
           path: Packages/com.careboo.unity-algorand-sdk/package.json
