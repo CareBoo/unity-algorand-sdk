@@ -5,9 +5,9 @@ namespace AlgoSdk.Formatters
 {
     public sealed class OnCompletionFormatter : KeywordByteEnumFormatter<OnCompletion>
     {
-        private static readonly FixedString32Bytes[] typeToString = new FixedString32Bytes[]
+        private static readonly string[] typeToString = new string[]
         {
-            default,
+            string.Empty,
             "noop",
             "optin",
             "closeout",

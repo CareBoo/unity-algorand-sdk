@@ -40,7 +40,7 @@ namespace AlgoSdk.Formatters
         {
             var s = System.Convert.ToBase64String(value);
             using var t = new NativeText(s, Allocator.Temp);
-            writer.WriteString(in t);
+            writer.WriteString(t);
         }
 
         public void Serialize(ref MessagePackWriter writer, byte[] value)

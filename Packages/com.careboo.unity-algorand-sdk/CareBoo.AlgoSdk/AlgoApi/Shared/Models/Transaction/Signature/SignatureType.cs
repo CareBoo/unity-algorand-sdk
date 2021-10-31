@@ -14,9 +14,9 @@ namespace AlgoSdk
 
     public static class SignatureTypeExtensions
     {
-        public static readonly FixedString32Bytes[] TypeToString = new FixedString32Bytes[]
+        public static readonly string[] TypeToString = new string[]
         {
-            default,
+            string.Empty,
             "sig",
             "msig",
             "lsig"

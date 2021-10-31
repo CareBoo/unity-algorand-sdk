@@ -105,7 +105,7 @@ namespace AlgoSdk
 
         public bool Equals(TealBytes other)
         {
-            return ByteArray.Equals(in this, in other);
+            return ByteArray.Equals(this, other);
         }
     }
 }

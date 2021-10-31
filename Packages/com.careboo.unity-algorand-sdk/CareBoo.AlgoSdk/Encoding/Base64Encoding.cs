@@ -13,7 +13,7 @@ namespace AlgoSdk
             s.CopyFrom(System.Convert.ToBase64String(bytes.ToArray()));
         }
 
-        public static void CopyFromBase64<TByteArray, T>(ref this TByteArray bytes, in T s, int maxLength = int.MaxValue)
+        public static void CopyFromBase64<TByteArray, T>(ref this TByteArray bytes, T s, int maxLength = int.MaxValue)
             where TByteArray : struct, IArray<byte>
             where T : struct, IUTF8Bytes, INativeList<byte>
         {

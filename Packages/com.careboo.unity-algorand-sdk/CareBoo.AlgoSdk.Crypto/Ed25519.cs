@@ -14,7 +14,7 @@ namespace AlgoSdk.Crypto
             public readonly SecretKeyHandle SecretKey;
             public readonly PublicKey PublicKey;
 
-            public KeyPair(SecretKeyHandle secretKey, in PublicKey publicKey)
+            public KeyPair(SecretKeyHandle secretKey, PublicKey publicKey)
             {
                 SecretKey = secretKey;
                 PublicKey = publicKey;
@@ -181,22 +181,22 @@ namespace AlgoSdk.Crypto
 
             public override bool Equals(object obj)
             {
-                return ByteArray.Equals(in this, obj);
+                return ByteArray.Equals(this, obj);
             }
 
             public override int GetHashCode()
             {
-                return ByteArray.GetHashCode(in this);
+                return ByteArray.GetHashCode(this);
             }
 
             public static bool operator ==(in PublicKey x, in PublicKey y)
             {
-                return ByteArray.Equals(in x, in y);
+                return ByteArray.Equals(x, y);
             }
 
             public static bool operator !=(in PublicKey x, in PublicKey y)
             {
-                return !ByteArray.Equals(in x, in y);
+                return !ByteArray.Equals(x, y);
             }
         }
 
@@ -238,27 +238,27 @@ namespace AlgoSdk.Crypto
 
             public bool Equals(Signature other)
             {
-                return ByteArray.Equals(in this, in other);
+                return ByteArray.Equals(this, other);
             }
 
             public override bool Equals(object obj)
             {
-                return ByteArray.Equals(in this, obj);
+                return ByteArray.Equals(this, obj);
             }
 
             public override int GetHashCode()
             {
-                return ByteArray.GetHashCode(in this);
+                return ByteArray.GetHashCode(this);
             }
 
             public static bool operator ==(in Signature x, in Signature y)
             {
-                return ByteArray.Equals(in x, in y);
+                return ByteArray.Equals(x, y);
             }
 
             public static bool operator !=(in Signature x, in Signature y)
             {
-                return !ByteArray.Equals(in x, in y);
+                return !ByteArray.Equals(x, y);
             }
         }
     }

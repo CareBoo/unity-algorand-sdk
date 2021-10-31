@@ -23,7 +23,7 @@ namespace AlgoSdk.Crypto
         };
 #endif
 
-        public unsafe static Sha512_256_Hash Hash256Truncated<TByteArray>(in TByteArray bytes)
+        public unsafe static Sha512_256_Hash Hash256Truncated<TByteArray>(TByteArray bytes)
             where TByteArray : struct, IByteArray
         {
             return Hash256Truncated(bytes.GetUnsafePtr(), bytes.Length);
@@ -77,22 +77,22 @@ namespace AlgoSdk.Crypto
 
         public static bool operator ==(in Sha512_256_Hash x, in Sha512_256_Hash y)
         {
-            return ByteArray.Equals(in x, in y);
+            return ByteArray.Equals(x, y);
         }
 
         public static bool operator !=(in Sha512_256_Hash x, in Sha512_256_Hash y)
         {
-            return !ByteArray.Equals(in x, in y);
+            return !ByteArray.Equals(x, y);
         }
 
         public override bool Equals(object obj)
         {
-            return ByteArray.Equals(in this, obj);
+            return ByteArray.Equals(this, obj);
         }
 
         public override int GetHashCode()
         {
-            return ByteArray.GetHashCode(in this);
+            return ByteArray.GetHashCode(this);
         }
     }
 

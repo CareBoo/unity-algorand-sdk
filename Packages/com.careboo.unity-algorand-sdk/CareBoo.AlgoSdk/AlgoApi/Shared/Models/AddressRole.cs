@@ -17,9 +17,9 @@ namespace AlgoSdk
 
     public static class AddressRoleExtensions
     {
-        public static readonly FixedString32Bytes[] TypeToString = new FixedString32Bytes[]
+        public static readonly string[] TypeToString = new string[]
         {
-            default,
+            string.Empty,
             "sender",
             "receiver",
             "freeze-target"
