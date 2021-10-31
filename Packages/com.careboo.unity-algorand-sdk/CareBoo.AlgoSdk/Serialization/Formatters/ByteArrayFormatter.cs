@@ -95,12 +95,9 @@ namespace AlgoSdk.Formatters
             }
         }
 
-        public void Serialize(ref MessagePackWriter writer, TByteArray value)
+        public unsafe void Serialize(ref MessagePackWriter writer, TByteArray value)
         {
-            unsafe
-            {
-                writer.WriteBytes(value.GetUnsafePtr(), value.Length);
-            }
+            writer.WriteBytes(value.GetUnsafePtr(), value.Length);
         }
     }
 }

@@ -41,6 +41,6 @@ mergeInto(LibraryManager.library, {
     var msgBytes = Module.HEAPU8.subarray(message, message + messageLength);
     var pkBytes = Module.HEAPU8.subarray(pk, pk + window.nacl.sign.publicKeyLength);
     var sigBytes = Module.HEAPU8.subarray(signature, signature + window.nacl.sign.signatureLength);
-    return window.nacl.sign.detached.verify(msgBytes, sigBytes, pkBytes) ? 1 : 0;
+    return window.nacl.sign.detached.verify(msgBytes, sigBytes, pkBytes) ? 0 : 1;
   },
 });
