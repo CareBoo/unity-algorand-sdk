@@ -24,12 +24,12 @@ namespace AlgoSdk.Formatters
 
         public void Serialize(ref JsonWriter writer, T value)
         {
-            writer.WriteString(in value);
+            writer.WriteString(value);
         }
 
         public void Serialize(ref MessagePackWriter writer, T value)
         {
-            writer.WriteString(in value);
+            writer.WriteString(value);
         }
     }
 }

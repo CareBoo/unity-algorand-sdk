@@ -1,95 +1,33 @@
 using System;
 using System.Runtime.InteropServices;
 using AlgoSdk.LowLevel;
-using Unity.Collections;
-using Unity.Collections.LowLevel.Unsafe;
 
 namespace AlgoSdk.Crypto
 {
-    [StructLayout(LayoutKind.Explicit, Size = 64)]
-    internal struct Sha512StateVector
-    {
-        [FieldOffset(0)] internal FixedBytes64 buffer;
-
-        public const int Length = 8;
-
-        unsafe internal byte* Buffer
-        {
-            get
-            {
-                fixed (byte* b = &buffer.offset0000.offset0000.byte0000)
-                    return b;
-            }
-        }
-
-        public UInt64 this[int index]
-        {
-            get
-            {
-                ByteArray.CheckElementAccess(index, Length);
-                unsafe
-                {
-                    return UnsafeUtility.ReadArrayElement<UInt64>(Buffer, index);
-                }
-            }
-            set
-            {
-                ByteArray.CheckElementAccess(index, Length);
-                unsafe
-                {
-                    UnsafeUtility.WriteArrayElement<UInt64>(Buffer, index, value);
-                }
-            }
-        }
-
-        public static implicit operator Sha512StateVector(UInt64[] arr)
-        {
-            var result = new Sha512StateVector();
-            for (var i = 0; i < arr.Length; i++)
-                result[i] = arr[i];
-            return result;
-        }
-    }
-
-    [StructLayout(LayoutKind.Explicit, Size = 16)]
-    internal struct Sha512StateCount
-    {
-        [FieldOffset(0)] internal FixedBytes16 buffer;
-
-        public const int Length = 2;
-
-        unsafe internal byte* Buffer
-        {
-            get
-            {
-                fixed (byte* b = &buffer.byte0000)
-                    return b;
-            }
-        }
-
-        public UInt64 this[int index]
-        {
-            get
-            {
-                ByteArray.CheckElementAccess(index, Length);
-                unsafe
-                {
-                    return UnsafeUtility.ReadArrayElement<UInt64>(Buffer, index);
-                }
-            }
-            set
-            {
-                ByteArray.CheckElementAccess(index, Length);
-                unsafe
-                {
-                    UnsafeUtility.WriteArrayElement<UInt64>(Buffer, index, value);
-                }
-            }
-        }
-    }
-
     internal static unsafe partial class sodium
     {
+#if (UNITY_WEBGL && !UNITY_EDITOR)
+        [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
+        internal static extern void crypto_hash_sha512_256(
+            void* output, 
+            void* @in, 
+            UIntPtr inlen);
+#else
+        [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
+        internal static extern int crypto_hash_sha512_init(
+            void* state);
+
+        [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
+        internal static extern int crypto_hash_sha512_update(
+            void* state,
+            void* @in,
+            UIntPtr inlen);
+
+        [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
+        internal static extern int crypto_hash_sha512_final(
+            void* state,
+            void* @out);
+
         [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
         internal struct crypto_hash_sha512_state
         {
@@ -99,26 +37,6 @@ namespace AlgoSdk.Crypto
             [FieldOffset(64)] internal Sha512StateCount count;
             [FieldOffset(80)] internal FixedBytes128 buffer;
         }
-
-        [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
-        internal static extern int crypto_hash_sha512(
-            void* @out,
-            void* @in,
-            ulong inlen);
-
-        [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
-        internal static extern int crypto_hash_sha512_init(
-            crypto_hash_sha512_state* state);
-
-        [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
-        internal static extern int crypto_hash_sha512_update(
-            crypto_hash_sha512_state* state,
-            void* @in,
-            ulong inlen);
-
-        [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
-        internal static extern int crypto_hash_sha512_final(
-            crypto_hash_sha512_state* state,
-            void* @out);
+#endif
     }
 }

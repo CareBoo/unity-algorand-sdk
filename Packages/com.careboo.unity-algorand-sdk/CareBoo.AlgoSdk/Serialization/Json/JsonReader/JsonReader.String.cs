@@ -4,6 +4,21 @@ namespace AlgoSdk.Json
 {
     public ref partial struct JsonReader
     {
+        public JsonReadError ReadString(out string value)
+        {
+            var text = new NativeText(Allocator.Temp);
+            try
+            {
+                var result = ReadString(ref text);
+                value = text.ToString();
+                return result;
+            }
+            finally
+            {
+                text.Dispose();
+            }
+        }
+
         public JsonReadError ReadString<T>(ref T value)
             where T : struct, INativeList<byte>, IUTF8Bytes
         {

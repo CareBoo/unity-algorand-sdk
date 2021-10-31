@@ -13,7 +13,7 @@ namespace AlgoSdk.Formatters
             reader.ReadString(ref s)
                 .ThrowIfError(reader.Char, reader.Position);
             GenesisHash result = default;
-            result.CopyFromBase64(in s);
+            result.CopyFromBase64(s);
             return result;
         }
 
@@ -26,7 +26,7 @@ namespace AlgoSdk.Formatters
         {
             var fs = new FixedString64Bytes();
             value.CopyToBase64(ref fs);
-            writer.WriteString(in fs);
+            writer.WriteString(fs);
         }
 
         public void Serialize(ref MessagePackWriter writer, GenesisHash value)

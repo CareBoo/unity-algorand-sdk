@@ -32,7 +32,7 @@ public abstract class KmdClientTestFixture : AlgoApiClientTestFixture
         if (walletHandleToken.Length > 0)
             return;
         var wallets = await ListWallets();
-        wallet = wallets.FirstOrDefault(w => w.Name.Equals(WalletName));
+        wallet = wallets?.FirstOrDefault(w => w.Name.Equals(WalletName)) ?? default;
         if (wallet.Equals(default))
         {
             wallet = await CreateWallet();

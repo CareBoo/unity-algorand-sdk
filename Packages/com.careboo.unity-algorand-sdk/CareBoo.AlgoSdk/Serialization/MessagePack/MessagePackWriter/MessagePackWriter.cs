@@ -34,9 +34,9 @@ namespace AlgoSdk.MessagePack
             data.Add(MessagePackCode.Nil);
         }
 
-        public unsafe void WriteRaw(NativeArray<byte>.ReadOnly bytes)
+        public unsafe void WriteRaw(NativeArray<byte> bytes)
         {
-            data.AddRange(bytes.GetUnsafeReadOnlyPtr(), bytes.Length);
+            data.AddRange(bytes.GetUnsafePtr(), bytes.Length);
         }
     }
 }

@@ -19,24 +19,22 @@ namespace AlgoSdk.MessagePack
             else
             {
                 data.Add(MessagePackCode.Bin32);
-                WriteBigEndian(length);
+                WriteBigEndian((uint)length);
             }
         }
 
         public unsafe void WriteBytes(void* buffer, int length)
         {
+            UnityEngine.Debug.Log($"buffer ptr: {(System.IntPtr)buffer}\nbuffer length: {length}");
             WriteBytesHeader(length);
             data.AddRange(buffer, length);
         }
 
-        public void WriteBytes(byte[] arr)
+        public unsafe void WriteBytes(byte[] arr)
         {
-            unsafe
+            fixed (byte* buffer = &arr[0])
             {
-                fixed (byte* buffer = &arr[0])
-                {
-                    WriteBytes(buffer, arr.Length);
-                }
+                WriteBytes(buffer, arr.Length);
             }
         }
     }

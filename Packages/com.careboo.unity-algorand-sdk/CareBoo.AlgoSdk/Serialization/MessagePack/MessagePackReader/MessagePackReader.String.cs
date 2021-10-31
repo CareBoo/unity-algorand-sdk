@@ -4,6 +4,20 @@ namespace AlgoSdk.MessagePack
 {
     public ref partial struct MessagePackReader
     {
+        public void ReadString(out string s)
+        {
+            var text = new NativeText(Allocator.Temp);
+            try
+            {
+                ReadString(ref text);
+                s = text.ToString();
+            }
+            finally
+            {
+                text.Dispose();
+            }
+        }
+
         public void ReadString<T>(ref T fs)
             where T : struct, INativeList<byte>, IUTF8Bytes
         {

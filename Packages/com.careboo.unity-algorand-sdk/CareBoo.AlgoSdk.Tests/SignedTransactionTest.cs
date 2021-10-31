@@ -1,4 +1,5 @@
 using AlgoSdk;
+using AlgoSdk.LowLevel;
 using NUnit.Framework;
 using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
@@ -19,7 +20,7 @@ public class SignedTransactionTest
     {
         var seed = AlgoSdk.Crypto.Random.Bytes<PrivateKey>();
         using var kp = seed.ToKeyPair();
-        var transaction = Transaction.Payment(
+        var txn = Transaction.Payment(
             sender: (Address)kp.PublicKey,
             txnParams: new TransactionParams
             {
@@ -31,10 +32,11 @@ public class SignedTransactionTest
                 LastRound = 45666234
             },
             receiver: AlgoSdk.Crypto.Random.Bytes<Address>(),
-            amount: 1000000);
-        var signedTxn = transaction.Sign(kp.SecretKey);
-        using var serialized = AlgoApiSerializer.SerializeMessagePack(signedTxn, Allocator.Temp);
+            amount: 1000000
+        ).Sign(kp.SecretKey);
+        using var serialized = AlgoApiSerializer.SerializeMessagePack(txn, Allocator.Temp);
+        UnityEngine.Debug.Log($"Serialized bytes: {System.Convert.ToBase64String(serialized.ToArray())}");
         var deserialized = AlgoApiSerializer.Deserialize<Signed<PaymentTxn>>(serialized.AsArray(), ContentType.MessagePack);
-        Assert.IsTrue(signedTxn.Equals(deserialized));
+        Assert.IsTrue(txn.Equals(deserialized));
     }
 }

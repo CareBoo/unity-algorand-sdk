@@ -24,7 +24,7 @@ namespace AlgoSdk.LowLevel
 
     public struct ByteArrayComparer<T> : IEqualityComparer<T> where T : unmanaged, IByteArray
     {
-        public static bool Equals(in T x, in T y)
+        public static bool Equals(T x, T y)
         {
             for (var i = 0; i < x.Length; i++)
                 if (ByteArray.ReadByteAt(x, i) != ByteArray.ReadByteAt(y, i))
@@ -32,19 +32,19 @@ namespace AlgoSdk.LowLevel
             return true;
         }
 
-        public static unsafe int GetHashCode(in T obj)
+        public static unsafe int GetHashCode(T obj)
         {
             return UnsafeUtility.ReadArrayElement<int>(obj.GetUnsafePtr(), 0);
         }
 
         bool IEqualityComparer<T>.Equals(T x, T y)
         {
-            return Equals(in x, in y);
+            return Equals(x, y);
         }
 
         int IEqualityComparer<T>.GetHashCode(T obj)
         {
-            return GetHashCode(in obj);
+            return GetHashCode(obj);
         }
     }
 
@@ -77,7 +77,7 @@ namespace AlgoSdk.LowLevel
             }
         }
 
-        public static byte ReadByteAt<TByteArray>(in TByteArray bytes, int index)
+        public static byte ReadByteAt<TByteArray>(TByteArray bytes, int index)
             where TByteArray : struct, IByteArray
         {
             CheckElementAccess(index, bytes.Length);
@@ -143,7 +143,22 @@ namespace AlgoSdk.LowLevel
                 to.SetByteAt(i, from.GetByteAt(i));
         }
 
-        public static byte[] ToArray<TByteArray>(ref this TByteArray bytes)
+        public static string ToBase64<TByteArray>(this TByteArray bytes)
+            where TByteArray : struct, IArray<byte>
+        {
+            return System.Convert.ToBase64String(bytes.ToArray());
+        }
+
+        public static TByteArray FromBase64<TByteArray>(string b64)
+            where TByteArray : struct, IByteArray
+        {
+            var arr = System.Convert.FromBase64String(b64);
+            var result = default(TByteArray);
+            result.CopyFrom(arr, 0, arr.Length);
+            return result;
+        }
+
+        public static byte[] ToArray<TByteArray>(this TByteArray bytes)
             where TByteArray : struct, IArray<byte>
         {
             var result = new byte[bytes.Length];
@@ -152,13 +167,13 @@ namespace AlgoSdk.LowLevel
             return result;
         }
 
-        public static bool Equals<TByteArray>(in TByteArray x, in TByteArray y)
+        public static bool Equals<TByteArray>(TByteArray x, TByteArray y)
             where TByteArray : unmanaged, IByteArray
         {
-            return ByteArrayComparer<TByteArray>.Equals(in x, in y);
+            return ByteArrayComparer<TByteArray>.Equals(x, y);
         }
 
-        public static bool EqualsOther<T, U>(in T x, in U y)
+        public static bool EqualsOther<T, U>(T x, U y)
             where T : struct, IByteArray
             where U : struct, IByteArray
         {
@@ -172,18 +187,18 @@ namespace AlgoSdk.LowLevel
             return true;
         }
 
-        public static bool Equals<TByteArray>(in TByteArray x, object obj)
+        public static bool Equals<TByteArray>(TByteArray x, object obj)
             where TByteArray : unmanaged, IByteArray
         {
             if (obj is TByteArray y)
-                return Equals(in x, in y);
+                return Equals(x, y);
             return false;
         }
 
-        public static int GetHashCode<TByteArray>(in TByteArray bytes)
+        public static int GetHashCode<TByteArray>(TByteArray bytes)
             where TByteArray : unmanaged, IByteArray
         {
-            return ByteArrayComparer<TByteArray>.GetHashCode(in bytes);
+            return ByteArrayComparer<TByteArray>.GetHashCode(bytes);
         }
     }
 }

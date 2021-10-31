@@ -108,6 +108,13 @@ public abstract class AlgoApiClientTestFixture
         var actual = healthResponse.GetText();
         if (actual != expected)
             Assert.Ignore($"Ignoring test because algod is unhealthy:\n\"{actual}\"");
+
+        var (err, info) = await algod.GetAccountInformation(AccountMnemonic.ToPrivateKey().ToAddress());
+        if (err)
+            Assert.Ignore($"Ignoring test because of error on {nameof(algod.GetAccountInformation)}:\n{err}");
+
+        if (info.Amount < 10_000)
+            Assert.Ignore($"Ignoring test because account has less than the min algo");
     }
 
     async static UniTask CheckIndexerService()

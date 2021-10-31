@@ -29,7 +29,15 @@ namespace AlgoSdk.Json
             return this;
         }
 
-        public JsonWriter WriteString<T>(in T fs)
+        public JsonWriter WriteString(string s)
+        {
+            WriteChar('"');
+            text.Append(s);
+            WriteChar('"');
+            return this;
+        }
+
+        public JsonWriter WriteString<T>(T fs)
             where T : struct, INativeList<byte>, IUTF8Bytes
         {
             WriteChar('"');
@@ -68,10 +76,10 @@ namespace AlgoSdk.Json
             return this;
         }
 
-        public JsonWriter WriteObjectKey<T>(in T fs)
+        public JsonWriter WriteObjectKey<T>(T fs)
             where T : struct, INativeList<byte>, IUTF8Bytes
         {
-            WriteString(in fs);
+            WriteString(fs);
             WriteChar(':');
             return this;
         }

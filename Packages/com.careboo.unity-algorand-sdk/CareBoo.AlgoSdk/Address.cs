@@ -134,12 +134,12 @@ namespace AlgoSdk
 
         public override bool Equals(object obj)
         {
-            return ByteArray.Equals(in this, obj);
+            return ByteArray.Equals(this, obj);
         }
 
         public override int GetHashCode()
         {
-            return ByteArray.GetHashCode(in this);
+            return ByteArray.GetHashCode(this);
         }
 
         public bool Equals(Address other)
@@ -179,7 +179,7 @@ namespace AlgoSdk
 
             public bool Equals(CheckSum other)
             {
-                return ByteArray.Equals(in this, in other);
+                return ByteArray.Equals(this, other);
             }
 
             public static implicit operator CheckSum(Sha512_256_Hash hash)
@@ -193,22 +193,22 @@ namespace AlgoSdk
 
             public static bool operator ==(in CheckSum x, in CheckSum y)
             {
-                return ByteArray.Equals(in x, in y);
+                return ByteArray.Equals(x, y);
             }
 
             public static bool operator !=(in CheckSum x, in CheckSum y)
             {
-                return !ByteArray.Equals(in x, in y);
+                return !ByteArray.Equals(x, y);
             }
 
             public override bool Equals(object obj)
             {
-                return ByteArray.Equals(in this, obj);
+                return ByteArray.Equals(this, obj);
             }
 
             public override int GetHashCode()
             {
-                return ByteArray.GetHashCode(in this);
+                return ByteArray.GetHashCode(this);
             }
 
             public override string ToString()
