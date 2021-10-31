@@ -154,9 +154,9 @@ namespace AlgoSdk
         public void Serialize(ref MessagePackWriter writer, AlgoApiObject value)
         {
             if (!value.IsMessagePack)
-                throw new ArgumentException("cannot serialize non-json to json...", nameof(value));
+                throw new ArgumentException("cannot serialize non-msgpack to msgpack...", nameof(value));
             using var msgPack = new NativeArray<byte>(value.MessagePack, Allocator.Temp);
-            writer.WriteRaw(msgPack.AsReadOnly());
+            writer.WriteRaw(msgPack);
         }
     }
 }

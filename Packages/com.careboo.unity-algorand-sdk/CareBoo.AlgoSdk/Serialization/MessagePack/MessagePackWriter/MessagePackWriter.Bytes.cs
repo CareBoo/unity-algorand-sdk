@@ -29,14 +29,11 @@ namespace AlgoSdk.MessagePack
             data.AddRange(buffer, length);
         }
 
-        public void WriteBytes(byte[] arr)
+        public unsafe void WriteBytes(byte[] arr)
         {
-            unsafe
+            fixed (byte* buffer = &arr[0])
             {
-                fixed (byte* buffer = &arr[0])
-                {
-                    WriteBytes(buffer, arr.Length);
-                }
+                WriteBytes(buffer, arr.Length);
             }
         }
     }

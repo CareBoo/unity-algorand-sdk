@@ -143,7 +143,22 @@ namespace AlgoSdk.LowLevel
                 to.SetByteAt(i, from.GetByteAt(i));
         }
 
-        public static byte[] ToArray<TByteArray>(ref this TByteArray bytes)
+        public static string ToBase64<TByteArray>(this TByteArray bytes)
+            where TByteArray : struct, IArray<byte>
+        {
+            return System.Convert.ToBase64String(bytes.ToArray());
+        }
+
+        public static TByteArray FromBase64<TByteArray>(string b64)
+            where TByteArray : struct, IByteArray
+        {
+            var arr = System.Convert.FromBase64String(b64);
+            var result = default(TByteArray);
+            result.CopyFrom(arr, 0, arr.Length);
+            return result;
+        }
+
+        public static byte[] ToArray<TByteArray>(this TByteArray bytes)
             where TByteArray : struct, IArray<byte>
         {
             var result = new byte[bytes.Length];

@@ -33,6 +33,21 @@ namespace AlgoSdk
                 ;
         }
 
+        public override string ToString()
+        {
+            return Message;
+        }
+
         public bool IsError => Code >= 400;
+
+        public static implicit operator bool(ErrorResponse error)
+        {
+            return error.IsError;
+        }
+
+        public static implicit operator string(ErrorResponse error)
+        {
+            return error.Message;
+        }
     }
 }
