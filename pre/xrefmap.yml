@@ -4688,15 +4688,15 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Base32Encoding.ToString
   nameWithType: Base32Encoding.ToString
-- uid: AlgoSdk.Base32Encoding.ToString``2(``0@,``1@)
-  name: ToString<TByteArray, TString>(in TByteArray, ref TString)
-  href: api/AlgoSdk.Base32Encoding.html#AlgoSdk_Base32Encoding_ToString__2___0____1__
-  commentId: M:AlgoSdk.Base32Encoding.ToString``2(``0@,``1@)
-  name.vb: ToString(Of TByteArray, TString)(ByRef TByteArray, ByRef TString)
-  fullName: AlgoSdk.Base32Encoding.ToString<TByteArray, TString>(in TByteArray, ref TString)
-  fullName.vb: AlgoSdk.Base32Encoding.ToString(Of TByteArray, TString)(ByRef TByteArray, ByRef TString)
-  nameWithType: Base32Encoding.ToString<TByteArray, TString>(in TByteArray, ref TString)
-  nameWithType.vb: Base32Encoding.ToString(Of TByteArray, TString)(ByRef TByteArray, ByRef TString)
+- uid: AlgoSdk.Base32Encoding.ToString``2(``0,``1@)
+  name: ToString<TByteArray, TString>(TByteArray, ref TString)
+  href: api/AlgoSdk.Base32Encoding.html#AlgoSdk_Base32Encoding_ToString__2___0___1__
+  commentId: M:AlgoSdk.Base32Encoding.ToString``2(``0,``1@)
+  name.vb: ToString(Of TByteArray, TString)(TByteArray, ByRef TString)
+  fullName: AlgoSdk.Base32Encoding.ToString<TByteArray, TString>(TByteArray, ref TString)
+  fullName.vb: AlgoSdk.Base32Encoding.ToString(Of TByteArray, TString)(TByteArray, ByRef TString)
+  nameWithType: Base32Encoding.ToString<TByteArray, TString>(TByteArray, ref TString)
+  nameWithType.vb: Base32Encoding.ToString(Of TByteArray, TString)(TByteArray, ByRef TString)
 - uid: AlgoSdk.Base32Encoding.TrimPadding*
   name: TrimPadding
   href: api/AlgoSdk.Base32Encoding.html#AlgoSdk_Base32Encoding_TrimPadding_
@@ -4742,15 +4742,15 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Base64Encoding.CopyFromBase64
   nameWithType: Base64Encoding.CopyFromBase64
-- uid: AlgoSdk.Base64Encoding.CopyFromBase64``2(``0@,``1@,System.Int32)
-  name: CopyFromBase64<TByteArray, T>(ref TByteArray, in T, Int32)
-  href: api/AlgoSdk.Base64Encoding.html#AlgoSdk_Base64Encoding_CopyFromBase64__2___0____1__System_Int32_
-  commentId: M:AlgoSdk.Base64Encoding.CopyFromBase64``2(``0@,``1@,System.Int32)
-  name.vb: CopyFromBase64(Of TByteArray, T)(ByRef TByteArray, ByRef T, Int32)
-  fullName: AlgoSdk.Base64Encoding.CopyFromBase64<TByteArray, T>(ref TByteArray, in T, System.Int32)
-  fullName.vb: AlgoSdk.Base64Encoding.CopyFromBase64(Of TByteArray, T)(ByRef TByteArray, ByRef T, System.Int32)
-  nameWithType: Base64Encoding.CopyFromBase64<TByteArray, T>(ref TByteArray, in T, Int32)
-  nameWithType.vb: Base64Encoding.CopyFromBase64(Of TByteArray, T)(ByRef TByteArray, ByRef T, Int32)
+- uid: AlgoSdk.Base64Encoding.CopyFromBase64``2(``0@,``1,System.Int32)
+  name: CopyFromBase64<TByteArray, T>(ref TByteArray, T, Int32)
+  href: api/AlgoSdk.Base64Encoding.html#AlgoSdk_Base64Encoding_CopyFromBase64__2___0____1_System_Int32_
+  commentId: M:AlgoSdk.Base64Encoding.CopyFromBase64``2(``0@,``1,System.Int32)
+  name.vb: CopyFromBase64(Of TByteArray, T)(ByRef TByteArray, T, Int32)
+  fullName: AlgoSdk.Base64Encoding.CopyFromBase64<TByteArray, T>(ref TByteArray, T, System.Int32)
+  fullName.vb: AlgoSdk.Base64Encoding.CopyFromBase64(Of TByteArray, T)(ByRef TByteArray, T, System.Int32)
+  nameWithType: Base64Encoding.CopyFromBase64<TByteArray, T>(ref TByteArray, T, Int32)
+  nameWithType.vb: Base64Encoding.CopyFromBase64(Of TByteArray, T)(ByRef TByteArray, T, Int32)
 - uid: AlgoSdk.Base64Encoding.CopyToBase64*
   name: CopyToBase64
   href: api/AlgoSdk.Base64Encoding.html#AlgoSdk_Base64Encoding_CopyToBase64_
@@ -5737,15 +5737,12 @@ references:
   commentId: T:AlgoSdk.Crypto.Ed25519.KeyPair
   fullName: AlgoSdk.Crypto.Ed25519.KeyPair
   nameWithType: Ed25519.KeyPair
-- uid: AlgoSdk.Crypto.Ed25519.KeyPair.#ctor(AlgoSdk.Crypto.Ed25519.SecretKeyHandle,AlgoSdk.Crypto.Ed25519.PublicKey@)
-  name: KeyPair(Ed25519.SecretKeyHandle, in Ed25519.PublicKey)
-  href: api/AlgoSdk.Crypto.Ed25519.KeyPair.html#AlgoSdk_Crypto_Ed25519_KeyPair__ctor_AlgoSdk_Crypto_Ed25519_SecretKeyHandle_AlgoSdk_Crypto_Ed25519_PublicKey__
-  commentId: M:AlgoSdk.Crypto.Ed25519.KeyPair.#ctor(AlgoSdk.Crypto.Ed25519.SecretKeyHandle,AlgoSdk.Crypto.Ed25519.PublicKey@)
-  name.vb: KeyPair(Ed25519.SecretKeyHandle, ByRef Ed25519.PublicKey)
-  fullName: AlgoSdk.Crypto.Ed25519.KeyPair.KeyPair(AlgoSdk.Crypto.Ed25519.SecretKeyHandle, in AlgoSdk.Crypto.Ed25519.PublicKey)
-  fullName.vb: AlgoSdk.Crypto.Ed25519.KeyPair.KeyPair(AlgoSdk.Crypto.Ed25519.SecretKeyHandle, ByRef AlgoSdk.Crypto.Ed25519.PublicKey)
-  nameWithType: Ed25519.KeyPair.KeyPair(Ed25519.SecretKeyHandle, in Ed25519.PublicKey)
-  nameWithType.vb: Ed25519.KeyPair.KeyPair(Ed25519.SecretKeyHandle, ByRef Ed25519.PublicKey)
+- uid: AlgoSdk.Crypto.Ed25519.KeyPair.#ctor(AlgoSdk.Crypto.Ed25519.SecretKeyHandle,AlgoSdk.Crypto.Ed25519.PublicKey)
+  name: KeyPair(Ed25519.SecretKeyHandle, Ed25519.PublicKey)
+  href: api/AlgoSdk.Crypto.Ed25519.KeyPair.html#AlgoSdk_Crypto_Ed25519_KeyPair__ctor_AlgoSdk_Crypto_Ed25519_SecretKeyHandle_AlgoSdk_Crypto_Ed25519_PublicKey_
+  commentId: M:AlgoSdk.Crypto.Ed25519.KeyPair.#ctor(AlgoSdk.Crypto.Ed25519.SecretKeyHandle,AlgoSdk.Crypto.Ed25519.PublicKey)
+  fullName: AlgoSdk.Crypto.Ed25519.KeyPair.KeyPair(AlgoSdk.Crypto.Ed25519.SecretKeyHandle, AlgoSdk.Crypto.Ed25519.PublicKey)
+  nameWithType: Ed25519.KeyPair.KeyPair(Ed25519.SecretKeyHandle, Ed25519.PublicKey)
 - uid: AlgoSdk.Crypto.Ed25519.KeyPair.#ctor*
   name: KeyPair
   href: api/AlgoSdk.Crypto.Ed25519.KeyPair.html#AlgoSdk_Crypto_Ed25519_KeyPair__ctor_
@@ -5990,6 +5987,19 @@ references:
   fullName.vb: AlgoSdk.Crypto.Ed25519.SecretKeyHandle.Widening
   nameWithType: Ed25519.SecretKeyHandle.Implicit
   nameWithType.vb: Ed25519.SecretKeyHandle.Widening
+- uid: AlgoSdk.Crypto.Ed25519.SecretKeyHandle.Ptr
+  name: Ptr
+  href: api/AlgoSdk.Crypto.Ed25519.SecretKeyHandle.html#AlgoSdk_Crypto_Ed25519_SecretKeyHandle_Ptr
+  commentId: P:AlgoSdk.Crypto.Ed25519.SecretKeyHandle.Ptr
+  fullName: AlgoSdk.Crypto.Ed25519.SecretKeyHandle.Ptr
+  nameWithType: Ed25519.SecretKeyHandle.Ptr
+- uid: AlgoSdk.Crypto.Ed25519.SecretKeyHandle.Ptr*
+  name: Ptr
+  href: api/AlgoSdk.Crypto.Ed25519.SecretKeyHandle.html#AlgoSdk_Crypto_Ed25519_SecretKeyHandle_Ptr_
+  commentId: Overload:AlgoSdk.Crypto.Ed25519.SecretKeyHandle.Ptr
+  isSpec: "True"
+  fullName: AlgoSdk.Crypto.Ed25519.SecretKeyHandle.Ptr
+  nameWithType: Ed25519.SecretKeyHandle.Ptr
 - uid: AlgoSdk.Crypto.Ed25519.SecretKeyHandle.Sign*
   name: Sign
   href: api/AlgoSdk.Crypto.Ed25519.SecretKeyHandle.html#AlgoSdk_Crypto_Ed25519_SecretKeyHandle_Sign_
@@ -5997,28 +6007,15 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Crypto.Ed25519.SecretKeyHandle.Sign
   nameWithType: Ed25519.SecretKeyHandle.Sign
-- uid: AlgoSdk.Crypto.Ed25519.SecretKeyHandle.Sign``1(``0@)
-  name: Sign<TMessage>(in TMessage)
-  href: api/AlgoSdk.Crypto.Ed25519.SecretKeyHandle.html#AlgoSdk_Crypto_Ed25519_SecretKeyHandle_Sign__1___0__
-  commentId: M:AlgoSdk.Crypto.Ed25519.SecretKeyHandle.Sign``1(``0@)
-  name.vb: Sign(Of TMessage)(ByRef TMessage)
-  fullName: AlgoSdk.Crypto.Ed25519.SecretKeyHandle.Sign<TMessage>(in TMessage)
-  fullName.vb: AlgoSdk.Crypto.Ed25519.SecretKeyHandle.Sign(Of TMessage)(ByRef TMessage)
-  nameWithType: Ed25519.SecretKeyHandle.Sign<TMessage>(in TMessage)
-  nameWithType.vb: Ed25519.SecretKeyHandle.Sign(Of TMessage)(ByRef TMessage)
-- uid: AlgoSdk.Crypto.Ed25519.SecretKeyHandle.ToSeed
-  name: ToSeed()
-  href: api/AlgoSdk.Crypto.Ed25519.SecretKeyHandle.html#AlgoSdk_Crypto_Ed25519_SecretKeyHandle_ToSeed
-  commentId: M:AlgoSdk.Crypto.Ed25519.SecretKeyHandle.ToSeed
-  fullName: AlgoSdk.Crypto.Ed25519.SecretKeyHandle.ToSeed()
-  nameWithType: Ed25519.SecretKeyHandle.ToSeed()
-- uid: AlgoSdk.Crypto.Ed25519.SecretKeyHandle.ToSeed*
-  name: ToSeed
-  href: api/AlgoSdk.Crypto.Ed25519.SecretKeyHandle.html#AlgoSdk_Crypto_Ed25519_SecretKeyHandle_ToSeed_
-  commentId: Overload:AlgoSdk.Crypto.Ed25519.SecretKeyHandle.ToSeed
-  isSpec: "True"
-  fullName: AlgoSdk.Crypto.Ed25519.SecretKeyHandle.ToSeed
-  nameWithType: Ed25519.SecretKeyHandle.ToSeed
+- uid: AlgoSdk.Crypto.Ed25519.SecretKeyHandle.Sign``1(``0)
+  name: Sign<TMessage>(TMessage)
+  href: api/AlgoSdk.Crypto.Ed25519.SecretKeyHandle.html#AlgoSdk_Crypto_Ed25519_SecretKeyHandle_Sign__1___0_
+  commentId: M:AlgoSdk.Crypto.Ed25519.SecretKeyHandle.Sign``1(``0)
+  name.vb: Sign(Of TMessage)(TMessage)
+  fullName: AlgoSdk.Crypto.Ed25519.SecretKeyHandle.Sign<TMessage>(TMessage)
+  fullName.vb: AlgoSdk.Crypto.Ed25519.SecretKeyHandle.Sign(Of TMessage)(TMessage)
+  nameWithType: Ed25519.SecretKeyHandle.Sign<TMessage>(TMessage)
+  nameWithType.vb: Ed25519.SecretKeyHandle.Sign(Of TMessage)(TMessage)
 - uid: AlgoSdk.Crypto.Ed25519.Seed
   name: Ed25519.Seed
   href: api/AlgoSdk.Crypto.Ed25519.Seed.html
@@ -6331,46 +6328,6 @@ references:
   commentId: T:AlgoSdk.Crypto.Sha512
   fullName: AlgoSdk.Crypto.Sha512
   nameWithType: Sha512
-- uid: AlgoSdk.Crypto.Sha512.Hash(NativeArray{System.Byte})
-  name: Hash(NativeArray<Byte>)
-  href: api/AlgoSdk.Crypto.Sha512.html#AlgoSdk_Crypto_Sha512_Hash_NativeArray_System_Byte__
-  commentId: M:AlgoSdk.Crypto.Sha512.Hash(NativeArray{System.Byte})
-  name.vb: Hash(NativeArray(Of Byte))
-  fullName: AlgoSdk.Crypto.Sha512.Hash(NativeArray<System.Byte>)
-  fullName.vb: AlgoSdk.Crypto.Sha512.Hash(NativeArray(Of System.Byte))
-  nameWithType: Sha512.Hash(NativeArray<Byte>)
-  nameWithType.vb: Sha512.Hash(NativeArray(Of Byte))
-- uid: AlgoSdk.Crypto.Sha512.Hash(System.Void*,System.Int32)
-  name: Hash(Void*, Int32)
-  href: api/AlgoSdk.Crypto.Sha512.html#AlgoSdk_Crypto_Sha512_Hash_System_Void__System_Int32_
-  commentId: M:AlgoSdk.Crypto.Sha512.Hash(System.Void*,System.Int32)
-  fullName: AlgoSdk.Crypto.Sha512.Hash(System.Void*, System.Int32)
-  nameWithType: Sha512.Hash(Void*, Int32)
-- uid: AlgoSdk.Crypto.Sha512.Hash*
-  name: Hash
-  href: api/AlgoSdk.Crypto.Sha512.html#AlgoSdk_Crypto_Sha512_Hash_
-  commentId: Overload:AlgoSdk.Crypto.Sha512.Hash
-  isSpec: "True"
-  fullName: AlgoSdk.Crypto.Sha512.Hash
-  nameWithType: Sha512.Hash
-- uid: AlgoSdk.Crypto.Sha512.Hash``1(``0@)
-  name: Hash<TByteArray>(in TByteArray)
-  href: api/AlgoSdk.Crypto.Sha512.html#AlgoSdk_Crypto_Sha512_Hash__1___0__
-  commentId: M:AlgoSdk.Crypto.Sha512.Hash``1(``0@)
-  name.vb: Hash(Of TByteArray)(ByRef TByteArray)
-  fullName: AlgoSdk.Crypto.Sha512.Hash<TByteArray>(in TByteArray)
-  fullName.vb: AlgoSdk.Crypto.Sha512.Hash(Of TByteArray)(ByRef TByteArray)
-  nameWithType: Sha512.Hash<TByteArray>(in TByteArray)
-  nameWithType.vb: Sha512.Hash(Of TByteArray)(ByRef TByteArray)
-- uid: AlgoSdk.Crypto.Sha512.Hash256Truncated(NativeArray{System.Byte})
-  name: Hash256Truncated(NativeArray<Byte>)
-  href: api/AlgoSdk.Crypto.Sha512.html#AlgoSdk_Crypto_Sha512_Hash256Truncated_NativeArray_System_Byte__
-  commentId: M:AlgoSdk.Crypto.Sha512.Hash256Truncated(NativeArray{System.Byte})
-  name.vb: Hash256Truncated(NativeArray(Of Byte))
-  fullName: AlgoSdk.Crypto.Sha512.Hash256Truncated(NativeArray<System.Byte>)
-  fullName.vb: AlgoSdk.Crypto.Sha512.Hash256Truncated(NativeArray(Of System.Byte))
-  nameWithType: Sha512.Hash256Truncated(NativeArray<Byte>)
-  nameWithType.vb: Sha512.Hash256Truncated(NativeArray(Of Byte))
 - uid: AlgoSdk.Crypto.Sha512.Hash256Truncated(System.Void*,System.Int32)
   name: Hash256Truncated(Void*, Int32)
   href: api/AlgoSdk.Crypto.Sha512.html#AlgoSdk_Crypto_Sha512_Hash256Truncated_System_Void__System_Int32_
@@ -6384,15 +6341,15 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Crypto.Sha512.Hash256Truncated
   nameWithType: Sha512.Hash256Truncated
-- uid: AlgoSdk.Crypto.Sha512.Hash256Truncated``1(``0@)
-  name: Hash256Truncated<TByteArray>(in TByteArray)
-  href: api/AlgoSdk.Crypto.Sha512.html#AlgoSdk_Crypto_Sha512_Hash256Truncated__1___0__
-  commentId: M:AlgoSdk.Crypto.Sha512.Hash256Truncated``1(``0@)
-  name.vb: Hash256Truncated(Of TByteArray)(ByRef TByteArray)
-  fullName: AlgoSdk.Crypto.Sha512.Hash256Truncated<TByteArray>(in TByteArray)
-  fullName.vb: AlgoSdk.Crypto.Sha512.Hash256Truncated(Of TByteArray)(ByRef TByteArray)
-  nameWithType: Sha512.Hash256Truncated<TByteArray>(in TByteArray)
-  nameWithType.vb: Sha512.Hash256Truncated(Of TByteArray)(ByRef TByteArray)
+- uid: AlgoSdk.Crypto.Sha512.Hash256Truncated``1(``0)
+  name: Hash256Truncated<TByteArray>(TByteArray)
+  href: api/AlgoSdk.Crypto.Sha512.html#AlgoSdk_Crypto_Sha512_Hash256Truncated__1___0_
+  commentId: M:AlgoSdk.Crypto.Sha512.Hash256Truncated``1(``0)
+  name.vb: Hash256Truncated(Of TByteArray)(TByteArray)
+  fullName: AlgoSdk.Crypto.Sha512.Hash256Truncated<TByteArray>(TByteArray)
+  fullName.vb: AlgoSdk.Crypto.Sha512.Hash256Truncated(Of TByteArray)(TByteArray)
+  nameWithType: Sha512.Hash256Truncated<TByteArray>(TByteArray)
+  nameWithType.vb: Sha512.Hash256Truncated(Of TByteArray)(TByteArray)
 - uid: AlgoSdk.Crypto.Sha512_256_Hash
   name: Sha512_256_Hash
   href: api/AlgoSdk.Crypto.Sha512_256_Hash.html
@@ -6978,6 +6935,47 @@ references:
   commentId: F:AlgoSdk.ErrorResponse.Message
   fullName: AlgoSdk.ErrorResponse.Message
   nameWithType: ErrorResponse.Message
+- uid: AlgoSdk.ErrorResponse.op_Implicit(AlgoSdk.ErrorResponse)~System.Boolean
+  name: Implicit(ErrorResponse to Boolean)
+  href: api/AlgoSdk.ErrorResponse.html#AlgoSdk_ErrorResponse_op_Implicit_AlgoSdk_ErrorResponse__System_Boolean
+  commentId: M:AlgoSdk.ErrorResponse.op_Implicit(AlgoSdk.ErrorResponse)~System.Boolean
+  name.vb: Widening(ErrorResponse to Boolean)
+  fullName: AlgoSdk.ErrorResponse.Implicit(AlgoSdk.ErrorResponse to System.Boolean)
+  fullName.vb: AlgoSdk.ErrorResponse.Widening(AlgoSdk.ErrorResponse to System.Boolean)
+  nameWithType: ErrorResponse.Implicit(ErrorResponse to Boolean)
+  nameWithType.vb: ErrorResponse.Widening(ErrorResponse to Boolean)
+- uid: AlgoSdk.ErrorResponse.op_Implicit(AlgoSdk.ErrorResponse)~System.String
+  name: Implicit(ErrorResponse to String)
+  href: api/AlgoSdk.ErrorResponse.html#AlgoSdk_ErrorResponse_op_Implicit_AlgoSdk_ErrorResponse__System_String
+  commentId: M:AlgoSdk.ErrorResponse.op_Implicit(AlgoSdk.ErrorResponse)~System.String
+  name.vb: Widening(ErrorResponse to String)
+  fullName: AlgoSdk.ErrorResponse.Implicit(AlgoSdk.ErrorResponse to System.String)
+  fullName.vb: AlgoSdk.ErrorResponse.Widening(AlgoSdk.ErrorResponse to System.String)
+  nameWithType: ErrorResponse.Implicit(ErrorResponse to String)
+  nameWithType.vb: ErrorResponse.Widening(ErrorResponse to String)
+- uid: AlgoSdk.ErrorResponse.op_Implicit*
+  name: Implicit
+  href: api/AlgoSdk.ErrorResponse.html#AlgoSdk_ErrorResponse_op_Implicit_
+  commentId: Overload:AlgoSdk.ErrorResponse.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: AlgoSdk.ErrorResponse.Implicit
+  fullName.vb: AlgoSdk.ErrorResponse.Widening
+  nameWithType: ErrorResponse.Implicit
+  nameWithType.vb: ErrorResponse.Widening
+- uid: AlgoSdk.ErrorResponse.ToString
+  name: ToString()
+  href: api/AlgoSdk.ErrorResponse.html#AlgoSdk_ErrorResponse_ToString
+  commentId: M:AlgoSdk.ErrorResponse.ToString
+  fullName: AlgoSdk.ErrorResponse.ToString()
+  nameWithType: ErrorResponse.ToString()
+- uid: AlgoSdk.ErrorResponse.ToString*
+  name: ToString
+  href: api/AlgoSdk.ErrorResponse.html#AlgoSdk_ErrorResponse_ToString_
+  commentId: Overload:AlgoSdk.ErrorResponse.ToString
+  isSpec: "True"
+  fullName: AlgoSdk.ErrorResponse.ToString
+  nameWithType: ErrorResponse.ToString
 - uid: AlgoSdk.ErrorResponse.WithCode(System.Int64)
   name: WithCode(Int64)
   href: api/AlgoSdk.ErrorResponse.html#AlgoSdk_ErrorResponse_WithCode_System_Int64_
@@ -8269,15 +8267,15 @@ references:
   fullName.vb: AlgoSdk.Formatters.KeywordByteEnumFormatter(Of T)
   nameWithType: KeywordByteEnumFormatter<T>
   nameWithType.vb: KeywordByteEnumFormatter(Of T)
-- uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.#ctor(FixedString32Bytes[])
-  name: KeywordByteEnumFormatter(FixedString32Bytes[])
-  href: api/AlgoSdk.Formatters.KeywordByteEnumFormatter-1.html#AlgoSdk_Formatters_KeywordByteEnumFormatter_1__ctor_FixedString32Bytes___
-  commentId: M:AlgoSdk.Formatters.KeywordByteEnumFormatter`1.#ctor(FixedString32Bytes[])
-  name.vb: KeywordByteEnumFormatter(FixedString32Bytes())
-  fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter<T>.KeywordByteEnumFormatter(FixedString32Bytes[])
-  fullName.vb: AlgoSdk.Formatters.KeywordByteEnumFormatter(Of T).KeywordByteEnumFormatter(FixedString32Bytes())
-  nameWithType: KeywordByteEnumFormatter<T>.KeywordByteEnumFormatter(FixedString32Bytes[])
-  nameWithType.vb: KeywordByteEnumFormatter(Of T).KeywordByteEnumFormatter(FixedString32Bytes())
+- uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.#ctor(System.String[])
+  name: KeywordByteEnumFormatter(String[])
+  href: api/AlgoSdk.Formatters.KeywordByteEnumFormatter-1.html#AlgoSdk_Formatters_KeywordByteEnumFormatter_1__ctor_System_String___
+  commentId: M:AlgoSdk.Formatters.KeywordByteEnumFormatter`1.#ctor(System.String[])
+  name.vb: KeywordByteEnumFormatter(String())
+  fullName: AlgoSdk.Formatters.KeywordByteEnumFormatter<T>.KeywordByteEnumFormatter(System.String[])
+  fullName.vb: AlgoSdk.Formatters.KeywordByteEnumFormatter(Of T).KeywordByteEnumFormatter(System.String())
+  nameWithType: KeywordByteEnumFormatter<T>.KeywordByteEnumFormatter(String[])
+  nameWithType.vb: KeywordByteEnumFormatter(Of T).KeywordByteEnumFormatter(String())
 - uid: AlgoSdk.Formatters.KeywordByteEnumFormatter`1.#ctor*
   name: KeywordByteEnumFormatter
   href: api/AlgoSdk.Formatters.KeywordByteEnumFormatter-1.html#AlgoSdk_Formatters_KeywordByteEnumFormatter_1__ctor_
@@ -12069,6 +12067,15 @@ references:
   fullName.vb: AlgoSdk.Json.JsonReader.ReadRaw(Of T)(ByRef T)
   nameWithType: JsonReader.ReadRaw<T>(ref T)
   nameWithType.vb: JsonReader.ReadRaw(Of T)(ByRef T)
+- uid: AlgoSdk.Json.JsonReader.ReadString(System.String@)
+  name: ReadString(out String)
+  href: api/AlgoSdk.Json.JsonReader.html#AlgoSdk_Json_JsonReader_ReadString_System_String__
+  commentId: M:AlgoSdk.Json.JsonReader.ReadString(System.String@)
+  name.vb: ReadString(ByRef String)
+  fullName: AlgoSdk.Json.JsonReader.ReadString(out System.String)
+  fullName.vb: AlgoSdk.Json.JsonReader.ReadString(ByRef System.String)
+  nameWithType: JsonReader.ReadString(out String)
+  nameWithType.vb: JsonReader.ReadString(ByRef String)
 - uid: AlgoSdk.Json.JsonReader.ReadString*
   name: ReadString
   href: api/AlgoSdk.Json.JsonReader.html#AlgoSdk_Json_JsonReader_ReadString_
@@ -12521,15 +12528,15 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Json.JsonWriter.WriteObjectKey
   nameWithType: JsonWriter.WriteObjectKey
-- uid: AlgoSdk.Json.JsonWriter.WriteObjectKey``1(``0@)
-  name: WriteObjectKey<T>(in T)
-  href: api/AlgoSdk.Json.JsonWriter.html#AlgoSdk_Json_JsonWriter_WriteObjectKey__1___0__
-  commentId: M:AlgoSdk.Json.JsonWriter.WriteObjectKey``1(``0@)
-  name.vb: WriteObjectKey(Of T)(ByRef T)
-  fullName: AlgoSdk.Json.JsonWriter.WriteObjectKey<T>(in T)
-  fullName.vb: AlgoSdk.Json.JsonWriter.WriteObjectKey(Of T)(ByRef T)
-  nameWithType: JsonWriter.WriteObjectKey<T>(in T)
-  nameWithType.vb: JsonWriter.WriteObjectKey(Of T)(ByRef T)
+- uid: AlgoSdk.Json.JsonWriter.WriteObjectKey``1(``0)
+  name: WriteObjectKey<T>(T)
+  href: api/AlgoSdk.Json.JsonWriter.html#AlgoSdk_Json_JsonWriter_WriteObjectKey__1___0_
+  commentId: M:AlgoSdk.Json.JsonWriter.WriteObjectKey``1(``0)
+  name.vb: WriteObjectKey(Of T)(T)
+  fullName: AlgoSdk.Json.JsonWriter.WriteObjectKey<T>(T)
+  fullName.vb: AlgoSdk.Json.JsonWriter.WriteObjectKey(Of T)(T)
+  nameWithType: JsonWriter.WriteObjectKey<T>(T)
+  nameWithType.vb: JsonWriter.WriteObjectKey(Of T)(T)
 - uid: AlgoSdk.Json.JsonWriter.WriteRaw(NativeText)
   name: WriteRaw(NativeText)
   href: api/AlgoSdk.Json.JsonWriter.html#AlgoSdk_Json_JsonWriter_WriteRaw_NativeText_
@@ -12543,6 +12550,12 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Json.JsonWriter.WriteRaw
   nameWithType: JsonWriter.WriteRaw
+- uid: AlgoSdk.Json.JsonWriter.WriteString(System.String)
+  name: WriteString(String)
+  href: api/AlgoSdk.Json.JsonWriter.html#AlgoSdk_Json_JsonWriter_WriteString_System_String_
+  commentId: M:AlgoSdk.Json.JsonWriter.WriteString(System.String)
+  fullName: AlgoSdk.Json.JsonWriter.WriteString(System.String)
+  nameWithType: JsonWriter.WriteString(String)
 - uid: AlgoSdk.Json.JsonWriter.WriteString*
   name: WriteString
   href: api/AlgoSdk.Json.JsonWriter.html#AlgoSdk_Json_JsonWriter_WriteString_
@@ -12550,15 +12563,15 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Json.JsonWriter.WriteString
   nameWithType: JsonWriter.WriteString
-- uid: AlgoSdk.Json.JsonWriter.WriteString``1(``0@)
-  name: WriteString<T>(in T)
-  href: api/AlgoSdk.Json.JsonWriter.html#AlgoSdk_Json_JsonWriter_WriteString__1___0__
-  commentId: M:AlgoSdk.Json.JsonWriter.WriteString``1(``0@)
-  name.vb: WriteString(Of T)(ByRef T)
-  fullName: AlgoSdk.Json.JsonWriter.WriteString<T>(in T)
-  fullName.vb: AlgoSdk.Json.JsonWriter.WriteString(Of T)(ByRef T)
-  nameWithType: JsonWriter.WriteString<T>(in T)
-  nameWithType.vb: JsonWriter.WriteString(Of T)(ByRef T)
+- uid: AlgoSdk.Json.JsonWriter.WriteString``1(``0)
+  name: WriteString<T>(T)
+  href: api/AlgoSdk.Json.JsonWriter.html#AlgoSdk_Json_JsonWriter_WriteString__1___0_
+  commentId: M:AlgoSdk.Json.JsonWriter.WriteString``1(``0)
+  name.vb: WriteString(Of T)(T)
+  fullName: AlgoSdk.Json.JsonWriter.WriteString<T>(T)
+  fullName.vb: AlgoSdk.Json.JsonWriter.WriteString(Of T)(T)
+  nameWithType: JsonWriter.WriteString<T>(T)
+  nameWithType.vb: JsonWriter.WriteString(Of T)(T)
 - uid: AlgoSdk.Json.UnicodeExtensions
   name: UnicodeExtensions
   href: api/AlgoSdk.Json.UnicodeExtensions.html
@@ -13708,24 +13721,24 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.LowLevel.ByteArray.Equals
   nameWithType: ByteArray.Equals
-- uid: AlgoSdk.LowLevel.ByteArray.Equals``1(``0@,``0@)
-  name: Equals<TByteArray>(in TByteArray, in TByteArray)
-  href: api/AlgoSdk.LowLevel.ByteArray.html#AlgoSdk_LowLevel_ByteArray_Equals__1___0____0__
-  commentId: M:AlgoSdk.LowLevel.ByteArray.Equals``1(``0@,``0@)
-  name.vb: Equals(Of TByteArray)(ByRef TByteArray, ByRef TByteArray)
-  fullName: AlgoSdk.LowLevel.ByteArray.Equals<TByteArray>(in TByteArray, in TByteArray)
-  fullName.vb: AlgoSdk.LowLevel.ByteArray.Equals(Of TByteArray)(ByRef TByteArray, ByRef TByteArray)
-  nameWithType: ByteArray.Equals<TByteArray>(in TByteArray, in TByteArray)
-  nameWithType.vb: ByteArray.Equals(Of TByteArray)(ByRef TByteArray, ByRef TByteArray)
-- uid: AlgoSdk.LowLevel.ByteArray.Equals``1(``0@,System.Object)
-  name: Equals<TByteArray>(in TByteArray, Object)
-  href: api/AlgoSdk.LowLevel.ByteArray.html#AlgoSdk_LowLevel_ByteArray_Equals__1___0__System_Object_
-  commentId: M:AlgoSdk.LowLevel.ByteArray.Equals``1(``0@,System.Object)
-  name.vb: Equals(Of TByteArray)(ByRef TByteArray, Object)
-  fullName: AlgoSdk.LowLevel.ByteArray.Equals<TByteArray>(in TByteArray, System.Object)
-  fullName.vb: AlgoSdk.LowLevel.ByteArray.Equals(Of TByteArray)(ByRef TByteArray, System.Object)
-  nameWithType: ByteArray.Equals<TByteArray>(in TByteArray, Object)
-  nameWithType.vb: ByteArray.Equals(Of TByteArray)(ByRef TByteArray, Object)
+- uid: AlgoSdk.LowLevel.ByteArray.Equals``1(``0,``0)
+  name: Equals<TByteArray>(TByteArray, TByteArray)
+  href: api/AlgoSdk.LowLevel.ByteArray.html#AlgoSdk_LowLevel_ByteArray_Equals__1___0___0_
+  commentId: M:AlgoSdk.LowLevel.ByteArray.Equals``1(``0,``0)
+  name.vb: Equals(Of TByteArray)(TByteArray, TByteArray)
+  fullName: AlgoSdk.LowLevel.ByteArray.Equals<TByteArray>(TByteArray, TByteArray)
+  fullName.vb: AlgoSdk.LowLevel.ByteArray.Equals(Of TByteArray)(TByteArray, TByteArray)
+  nameWithType: ByteArray.Equals<TByteArray>(TByteArray, TByteArray)
+  nameWithType.vb: ByteArray.Equals(Of TByteArray)(TByteArray, TByteArray)
+- uid: AlgoSdk.LowLevel.ByteArray.Equals``1(``0,System.Object)
+  name: Equals<TByteArray>(TByteArray, Object)
+  href: api/AlgoSdk.LowLevel.ByteArray.html#AlgoSdk_LowLevel_ByteArray_Equals__1___0_System_Object_
+  commentId: M:AlgoSdk.LowLevel.ByteArray.Equals``1(``0,System.Object)
+  name.vb: Equals(Of TByteArray)(TByteArray, Object)
+  fullName: AlgoSdk.LowLevel.ByteArray.Equals<TByteArray>(TByteArray, System.Object)
+  fullName.vb: AlgoSdk.LowLevel.ByteArray.Equals(Of TByteArray)(TByteArray, System.Object)
+  nameWithType: ByteArray.Equals<TByteArray>(TByteArray, Object)
+  nameWithType.vb: ByteArray.Equals(Of TByteArray)(TByteArray, Object)
 - uid: AlgoSdk.LowLevel.ByteArray.EqualsOther*
   name: EqualsOther
   href: api/AlgoSdk.LowLevel.ByteArray.html#AlgoSdk_LowLevel_ByteArray_EqualsOther_
@@ -13733,15 +13746,31 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.LowLevel.ByteArray.EqualsOther
   nameWithType: ByteArray.EqualsOther
-- uid: AlgoSdk.LowLevel.ByteArray.EqualsOther``2(``0@,``1@)
-  name: EqualsOther<T, U>(in T, in U)
-  href: api/AlgoSdk.LowLevel.ByteArray.html#AlgoSdk_LowLevel_ByteArray_EqualsOther__2___0____1__
-  commentId: M:AlgoSdk.LowLevel.ByteArray.EqualsOther``2(``0@,``1@)
-  name.vb: EqualsOther(Of T, U)(ByRef T, ByRef U)
-  fullName: AlgoSdk.LowLevel.ByteArray.EqualsOther<T, U>(in T, in U)
-  fullName.vb: AlgoSdk.LowLevel.ByteArray.EqualsOther(Of T, U)(ByRef T, ByRef U)
-  nameWithType: ByteArray.EqualsOther<T, U>(in T, in U)
-  nameWithType.vb: ByteArray.EqualsOther(Of T, U)(ByRef T, ByRef U)
+- uid: AlgoSdk.LowLevel.ByteArray.EqualsOther``2(``0,``1)
+  name: EqualsOther<T, U>(T, U)
+  href: api/AlgoSdk.LowLevel.ByteArray.html#AlgoSdk_LowLevel_ByteArray_EqualsOther__2___0___1_
+  commentId: M:AlgoSdk.LowLevel.ByteArray.EqualsOther``2(``0,``1)
+  name.vb: EqualsOther(Of T, U)(T, U)
+  fullName: AlgoSdk.LowLevel.ByteArray.EqualsOther<T, U>(T, U)
+  fullName.vb: AlgoSdk.LowLevel.ByteArray.EqualsOther(Of T, U)(T, U)
+  nameWithType: ByteArray.EqualsOther<T, U>(T, U)
+  nameWithType.vb: ByteArray.EqualsOther(Of T, U)(T, U)
+- uid: AlgoSdk.LowLevel.ByteArray.FromBase64*
+  name: FromBase64
+  href: api/AlgoSdk.LowLevel.ByteArray.html#AlgoSdk_LowLevel_ByteArray_FromBase64_
+  commentId: Overload:AlgoSdk.LowLevel.ByteArray.FromBase64
+  isSpec: "True"
+  fullName: AlgoSdk.LowLevel.ByteArray.FromBase64
+  nameWithType: ByteArray.FromBase64
+- uid: AlgoSdk.LowLevel.ByteArray.FromBase64``1(System.String)
+  name: FromBase64<TByteArray>(String)
+  href: api/AlgoSdk.LowLevel.ByteArray.html#AlgoSdk_LowLevel_ByteArray_FromBase64__1_System_String_
+  commentId: M:AlgoSdk.LowLevel.ByteArray.FromBase64``1(System.String)
+  name.vb: FromBase64(Of TByteArray)(String)
+  fullName: AlgoSdk.LowLevel.ByteArray.FromBase64<TByteArray>(System.String)
+  fullName.vb: AlgoSdk.LowLevel.ByteArray.FromBase64(Of TByteArray)(System.String)
+  nameWithType: ByteArray.FromBase64<TByteArray>(String)
+  nameWithType.vb: ByteArray.FromBase64(Of TByteArray)(String)
 - uid: AlgoSdk.LowLevel.ByteArray.GetByteAt*
   name: GetByteAt
   href: api/AlgoSdk.LowLevel.ByteArray.html#AlgoSdk_LowLevel_ByteArray_GetByteAt_
@@ -13765,15 +13794,15 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.LowLevel.ByteArray.GetHashCode
   nameWithType: ByteArray.GetHashCode
-- uid: AlgoSdk.LowLevel.ByteArray.GetHashCode``1(``0@)
-  name: GetHashCode<TByteArray>(in TByteArray)
-  href: api/AlgoSdk.LowLevel.ByteArray.html#AlgoSdk_LowLevel_ByteArray_GetHashCode__1___0__
-  commentId: M:AlgoSdk.LowLevel.ByteArray.GetHashCode``1(``0@)
-  name.vb: GetHashCode(Of TByteArray)(ByRef TByteArray)
-  fullName: AlgoSdk.LowLevel.ByteArray.GetHashCode<TByteArray>(in TByteArray)
-  fullName.vb: AlgoSdk.LowLevel.ByteArray.GetHashCode(Of TByteArray)(ByRef TByteArray)
-  nameWithType: ByteArray.GetHashCode<TByteArray>(in TByteArray)
-  nameWithType.vb: ByteArray.GetHashCode(Of TByteArray)(ByRef TByteArray)
+- uid: AlgoSdk.LowLevel.ByteArray.GetHashCode``1(``0)
+  name: GetHashCode<TByteArray>(TByteArray)
+  href: api/AlgoSdk.LowLevel.ByteArray.html#AlgoSdk_LowLevel_ByteArray_GetHashCode__1___0_
+  commentId: M:AlgoSdk.LowLevel.ByteArray.GetHashCode``1(``0)
+  name.vb: GetHashCode(Of TByteArray)(TByteArray)
+  fullName: AlgoSdk.LowLevel.ByteArray.GetHashCode<TByteArray>(TByteArray)
+  fullName.vb: AlgoSdk.LowLevel.ByteArray.GetHashCode(Of TByteArray)(TByteArray)
+  nameWithType: ByteArray.GetHashCode<TByteArray>(TByteArray)
+  nameWithType.vb: ByteArray.GetHashCode(Of TByteArray)(TByteArray)
 - uid: AlgoSdk.LowLevel.ByteArray.ReadByteAt*
   name: ReadByteAt
   href: api/AlgoSdk.LowLevel.ByteArray.html#AlgoSdk_LowLevel_ByteArray_ReadByteAt_
@@ -13781,15 +13810,15 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.LowLevel.ByteArray.ReadByteAt
   nameWithType: ByteArray.ReadByteAt
-- uid: AlgoSdk.LowLevel.ByteArray.ReadByteAt``1(``0@,System.Int32)
-  name: ReadByteAt<TByteArray>(in TByteArray, Int32)
-  href: api/AlgoSdk.LowLevel.ByteArray.html#AlgoSdk_LowLevel_ByteArray_ReadByteAt__1___0__System_Int32_
-  commentId: M:AlgoSdk.LowLevel.ByteArray.ReadByteAt``1(``0@,System.Int32)
-  name.vb: ReadByteAt(Of TByteArray)(ByRef TByteArray, Int32)
-  fullName: AlgoSdk.LowLevel.ByteArray.ReadByteAt<TByteArray>(in TByteArray, System.Int32)
-  fullName.vb: AlgoSdk.LowLevel.ByteArray.ReadByteAt(Of TByteArray)(ByRef TByteArray, System.Int32)
-  nameWithType: ByteArray.ReadByteAt<TByteArray>(in TByteArray, Int32)
-  nameWithType.vb: ByteArray.ReadByteAt(Of TByteArray)(ByRef TByteArray, Int32)
+- uid: AlgoSdk.LowLevel.ByteArray.ReadByteAt``1(``0,System.Int32)
+  name: ReadByteAt<TByteArray>(TByteArray, Int32)
+  href: api/AlgoSdk.LowLevel.ByteArray.html#AlgoSdk_LowLevel_ByteArray_ReadByteAt__1___0_System_Int32_
+  commentId: M:AlgoSdk.LowLevel.ByteArray.ReadByteAt``1(``0,System.Int32)
+  name.vb: ReadByteAt(Of TByteArray)(TByteArray, Int32)
+  fullName: AlgoSdk.LowLevel.ByteArray.ReadByteAt<TByteArray>(TByteArray, System.Int32)
+  fullName.vb: AlgoSdk.LowLevel.ByteArray.ReadByteAt(Of TByteArray)(TByteArray, System.Int32)
+  nameWithType: ByteArray.ReadByteAt<TByteArray>(TByteArray, Int32)
+  nameWithType.vb: ByteArray.ReadByteAt(Of TByteArray)(TByteArray, Int32)
 - uid: AlgoSdk.LowLevel.ByteArray.SetByteAt*
   name: SetByteAt
   href: api/AlgoSdk.LowLevel.ByteArray.html#AlgoSdk_LowLevel_ByteArray_SetByteAt_
@@ -13813,15 +13842,31 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.LowLevel.ByteArray.ToArray
   nameWithType: ByteArray.ToArray
-- uid: AlgoSdk.LowLevel.ByteArray.ToArray``1(``0@)
-  name: ToArray<TByteArray>(ref TByteArray)
-  href: api/AlgoSdk.LowLevel.ByteArray.html#AlgoSdk_LowLevel_ByteArray_ToArray__1___0__
-  commentId: M:AlgoSdk.LowLevel.ByteArray.ToArray``1(``0@)
-  name.vb: ToArray(Of TByteArray)(ByRef TByteArray)
-  fullName: AlgoSdk.LowLevel.ByteArray.ToArray<TByteArray>(ref TByteArray)
-  fullName.vb: AlgoSdk.LowLevel.ByteArray.ToArray(Of TByteArray)(ByRef TByteArray)
-  nameWithType: ByteArray.ToArray<TByteArray>(ref TByteArray)
-  nameWithType.vb: ByteArray.ToArray(Of TByteArray)(ByRef TByteArray)
+- uid: AlgoSdk.LowLevel.ByteArray.ToArray``1(``0)
+  name: ToArray<TByteArray>(TByteArray)
+  href: api/AlgoSdk.LowLevel.ByteArray.html#AlgoSdk_LowLevel_ByteArray_ToArray__1___0_
+  commentId: M:AlgoSdk.LowLevel.ByteArray.ToArray``1(``0)
+  name.vb: ToArray(Of TByteArray)(TByteArray)
+  fullName: AlgoSdk.LowLevel.ByteArray.ToArray<TByteArray>(TByteArray)
+  fullName.vb: AlgoSdk.LowLevel.ByteArray.ToArray(Of TByteArray)(TByteArray)
+  nameWithType: ByteArray.ToArray<TByteArray>(TByteArray)
+  nameWithType.vb: ByteArray.ToArray(Of TByteArray)(TByteArray)
+- uid: AlgoSdk.LowLevel.ByteArray.ToBase64*
+  name: ToBase64
+  href: api/AlgoSdk.LowLevel.ByteArray.html#AlgoSdk_LowLevel_ByteArray_ToBase64_
+  commentId: Overload:AlgoSdk.LowLevel.ByteArray.ToBase64
+  isSpec: "True"
+  fullName: AlgoSdk.LowLevel.ByteArray.ToBase64
+  nameWithType: ByteArray.ToBase64
+- uid: AlgoSdk.LowLevel.ByteArray.ToBase64``1(``0)
+  name: ToBase64<TByteArray>(TByteArray)
+  href: api/AlgoSdk.LowLevel.ByteArray.html#AlgoSdk_LowLevel_ByteArray_ToBase64__1___0_
+  commentId: M:AlgoSdk.LowLevel.ByteArray.ToBase64``1(``0)
+  name.vb: ToBase64(Of TByteArray)(TByteArray)
+  fullName: AlgoSdk.LowLevel.ByteArray.ToBase64<TByteArray>(TByteArray)
+  fullName.vb: AlgoSdk.LowLevel.ByteArray.ToBase64(Of TByteArray)(TByteArray)
+  nameWithType: ByteArray.ToBase64<TByteArray>(TByteArray)
+  nameWithType.vb: ByteArray.ToBase64(Of TByteArray)(TByteArray)
 - uid: AlgoSdk.LowLevel.ByteArrayComparer`1
   name: ByteArrayComparer<T>
   href: api/AlgoSdk.LowLevel.ByteArrayComparer-1.html
@@ -13831,15 +13876,14 @@ references:
   fullName.vb: AlgoSdk.LowLevel.ByteArrayComparer(Of T)
   nameWithType: ByteArrayComparer<T>
   nameWithType.vb: ByteArrayComparer(Of T)
-- uid: AlgoSdk.LowLevel.ByteArrayComparer`1.Equals(`0@,`0@)
-  name: Equals(in T, in T)
-  href: api/AlgoSdk.LowLevel.ByteArrayComparer-1.html#AlgoSdk_LowLevel_ByteArrayComparer_1_Equals__0___0__
-  commentId: M:AlgoSdk.LowLevel.ByteArrayComparer`1.Equals(`0@,`0@)
-  name.vb: Equals(ByRef T, ByRef T)
-  fullName: AlgoSdk.LowLevel.ByteArrayComparer<T>.Equals(in T, in T)
-  fullName.vb: AlgoSdk.LowLevel.ByteArrayComparer(Of T).Equals(ByRef T, ByRef T)
-  nameWithType: ByteArrayComparer<T>.Equals(in T, in T)
-  nameWithType.vb: ByteArrayComparer(Of T).Equals(ByRef T, ByRef T)
+- uid: AlgoSdk.LowLevel.ByteArrayComparer`1.Equals(`0,`0)
+  name: Equals(T, T)
+  href: api/AlgoSdk.LowLevel.ByteArrayComparer-1.html#AlgoSdk_LowLevel_ByteArrayComparer_1_Equals__0__0_
+  commentId: M:AlgoSdk.LowLevel.ByteArrayComparer`1.Equals(`0,`0)
+  fullName: AlgoSdk.LowLevel.ByteArrayComparer<T>.Equals(T, T)
+  fullName.vb: AlgoSdk.LowLevel.ByteArrayComparer(Of T).Equals(T, T)
+  nameWithType: ByteArrayComparer<T>.Equals(T, T)
+  nameWithType.vb: ByteArrayComparer(Of T).Equals(T, T)
 - uid: AlgoSdk.LowLevel.ByteArrayComparer`1.Equals*
   name: Equals
   href: api/AlgoSdk.LowLevel.ByteArrayComparer-1.html#AlgoSdk_LowLevel_ByteArrayComparer_1_Equals_
@@ -13849,15 +13893,14 @@ references:
   fullName.vb: AlgoSdk.LowLevel.ByteArrayComparer(Of T).Equals
   nameWithType: ByteArrayComparer<T>.Equals
   nameWithType.vb: ByteArrayComparer(Of T).Equals
-- uid: AlgoSdk.LowLevel.ByteArrayComparer`1.GetHashCode(`0@)
-  name: GetHashCode(in T)
-  href: api/AlgoSdk.LowLevel.ByteArrayComparer-1.html#AlgoSdk_LowLevel_ByteArrayComparer_1_GetHashCode__0__
-  commentId: M:AlgoSdk.LowLevel.ByteArrayComparer`1.GetHashCode(`0@)
-  name.vb: GetHashCode(ByRef T)
-  fullName: AlgoSdk.LowLevel.ByteArrayComparer<T>.GetHashCode(in T)
-  fullName.vb: AlgoSdk.LowLevel.ByteArrayComparer(Of T).GetHashCode(ByRef T)
-  nameWithType: ByteArrayComparer<T>.GetHashCode(in T)
-  nameWithType.vb: ByteArrayComparer(Of T).GetHashCode(ByRef T)
+- uid: AlgoSdk.LowLevel.ByteArrayComparer`1.GetHashCode(`0)
+  name: GetHashCode(T)
+  href: api/AlgoSdk.LowLevel.ByteArrayComparer-1.html#AlgoSdk_LowLevel_ByteArrayComparer_1_GetHashCode__0_
+  commentId: M:AlgoSdk.LowLevel.ByteArrayComparer`1.GetHashCode(`0)
+  fullName: AlgoSdk.LowLevel.ByteArrayComparer<T>.GetHashCode(T)
+  fullName.vb: AlgoSdk.LowLevel.ByteArrayComparer(Of T).GetHashCode(T)
+  nameWithType: ByteArrayComparer<T>.GetHashCode(T)
+  nameWithType.vb: ByteArrayComparer(Of T).GetHashCode(T)
 - uid: AlgoSdk.LowLevel.ByteArrayComparer`1.GetHashCode*
   name: GetHashCode
   href: api/AlgoSdk.LowLevel.ByteArrayComparer-1.html#AlgoSdk_LowLevel_ByteArrayComparer_1_GetHashCode_
@@ -14954,6 +14997,15 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.MessagePack.MessagePackReader.ReadSByte
   nameWithType: MessagePackReader.ReadSByte
+- uid: AlgoSdk.MessagePack.MessagePackReader.ReadString(System.String@)
+  name: ReadString(out String)
+  href: api/AlgoSdk.MessagePack.MessagePackReader.html#AlgoSdk_MessagePack_MessagePackReader_ReadString_System_String__
+  commentId: M:AlgoSdk.MessagePack.MessagePackReader.ReadString(System.String@)
+  name.vb: ReadString(ByRef String)
+  fullName: AlgoSdk.MessagePack.MessagePackReader.ReadString(out System.String)
+  fullName.vb: AlgoSdk.MessagePack.MessagePackReader.ReadString(ByRef System.String)
+  nameWithType: MessagePackReader.ReadString(out String)
+  nameWithType.vb: MessagePackReader.ReadString(ByRef String)
 - uid: AlgoSdk.MessagePack.MessagePackReader.ReadString*
   name: ReadString
   href: api/AlgoSdk.MessagePack.MessagePackReader.html#AlgoSdk_MessagePack_MessagePackReader_ReadString_
@@ -15579,15 +15631,15 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.MessagePack.MessagePackWriter.WriteNil
   nameWithType: MessagePackWriter.WriteNil
-- uid: AlgoSdk.MessagePack.MessagePackWriter.WriteRaw(NativeArray{System.Byte}.ReadOnly)
-  name: WriteRaw(NativeArray<Byte>.ReadOnly)
-  href: api/AlgoSdk.MessagePack.MessagePackWriter.html#AlgoSdk_MessagePack_MessagePackWriter_WriteRaw_NativeArray_System_Byte__ReadOnly_
-  commentId: M:AlgoSdk.MessagePack.MessagePackWriter.WriteRaw(NativeArray{System.Byte}.ReadOnly)
-  name.vb: WriteRaw(NativeArray(Of Byte).ReadOnly)
-  fullName: AlgoSdk.MessagePack.MessagePackWriter.WriteRaw(NativeArray<System.Byte>.ReadOnly)
-  fullName.vb: AlgoSdk.MessagePack.MessagePackWriter.WriteRaw(NativeArray(Of System.Byte).ReadOnly)
-  nameWithType: MessagePackWriter.WriteRaw(NativeArray<Byte>.ReadOnly)
-  nameWithType.vb: MessagePackWriter.WriteRaw(NativeArray(Of Byte).ReadOnly)
+- uid: AlgoSdk.MessagePack.MessagePackWriter.WriteRaw(NativeArray{System.Byte})
+  name: WriteRaw(NativeArray<Byte>)
+  href: api/AlgoSdk.MessagePack.MessagePackWriter.html#AlgoSdk_MessagePack_MessagePackWriter_WriteRaw_NativeArray_System_Byte__
+  commentId: M:AlgoSdk.MessagePack.MessagePackWriter.WriteRaw(NativeArray{System.Byte})
+  name.vb: WriteRaw(NativeArray(Of Byte))
+  fullName: AlgoSdk.MessagePack.MessagePackWriter.WriteRaw(NativeArray<System.Byte>)
+  fullName.vb: AlgoSdk.MessagePack.MessagePackWriter.WriteRaw(NativeArray(Of System.Byte))
+  nameWithType: MessagePackWriter.WriteRaw(NativeArray<Byte>)
+  nameWithType.vb: MessagePackWriter.WriteRaw(NativeArray(Of Byte))
 - uid: AlgoSdk.MessagePack.MessagePackWriter.WriteRaw*
   name: WriteRaw
   href: api/AlgoSdk.MessagePack.MessagePackWriter.html#AlgoSdk_MessagePack_MessagePackWriter_WriteRaw_
@@ -15595,6 +15647,12 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.MessagePack.MessagePackWriter.WriteRaw
   nameWithType: MessagePackWriter.WriteRaw
+- uid: AlgoSdk.MessagePack.MessagePackWriter.WriteString(System.String)
+  name: WriteString(String)
+  href: api/AlgoSdk.MessagePack.MessagePackWriter.html#AlgoSdk_MessagePack_MessagePackWriter_WriteString_System_String_
+  commentId: M:AlgoSdk.MessagePack.MessagePackWriter.WriteString(System.String)
+  fullName: AlgoSdk.MessagePack.MessagePackWriter.WriteString(System.String)
+  nameWithType: MessagePackWriter.WriteString(String)
 - uid: AlgoSdk.MessagePack.MessagePackWriter.WriteString*
   name: WriteString
   href: api/AlgoSdk.MessagePack.MessagePackWriter.html#AlgoSdk_MessagePack_MessagePackWriter_WriteString_
@@ -15602,15 +15660,28 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.MessagePack.MessagePackWriter.WriteString
   nameWithType: MessagePackWriter.WriteString
-- uid: AlgoSdk.MessagePack.MessagePackWriter.WriteString``1(``0@)
-  name: WriteString<T>(in T)
-  href: api/AlgoSdk.MessagePack.MessagePackWriter.html#AlgoSdk_MessagePack_MessagePackWriter_WriteString__1___0__
-  commentId: M:AlgoSdk.MessagePack.MessagePackWriter.WriteString``1(``0@)
-  name.vb: WriteString(Of T)(ByRef T)
-  fullName: AlgoSdk.MessagePack.MessagePackWriter.WriteString<T>(in T)
-  fullName.vb: AlgoSdk.MessagePack.MessagePackWriter.WriteString(Of T)(ByRef T)
-  nameWithType: MessagePackWriter.WriteString<T>(in T)
-  nameWithType.vb: MessagePackWriter.WriteString(Of T)(ByRef T)
+- uid: AlgoSdk.MessagePack.MessagePackWriter.WriteString``1(``0)
+  name: WriteString<T>(T)
+  href: api/AlgoSdk.MessagePack.MessagePackWriter.html#AlgoSdk_MessagePack_MessagePackWriter_WriteString__1___0_
+  commentId: M:AlgoSdk.MessagePack.MessagePackWriter.WriteString``1(``0)
+  name.vb: WriteString(Of T)(T)
+  fullName: AlgoSdk.MessagePack.MessagePackWriter.WriteString<T>(T)
+  fullName.vb: AlgoSdk.MessagePack.MessagePackWriter.WriteString(Of T)(T)
+  nameWithType: MessagePackWriter.WriteString<T>(T)
+  nameWithType.vb: MessagePackWriter.WriteString(Of T)(T)
+- uid: AlgoSdk.MessagePack.MessagePackWriter.WriteStringHeader(System.Int32)
+  name: WriteStringHeader(Int32)
+  href: api/AlgoSdk.MessagePack.MessagePackWriter.html#AlgoSdk_MessagePack_MessagePackWriter_WriteStringHeader_System_Int32_
+  commentId: M:AlgoSdk.MessagePack.MessagePackWriter.WriteStringHeader(System.Int32)
+  fullName: AlgoSdk.MessagePack.MessagePackWriter.WriteStringHeader(System.Int32)
+  nameWithType: MessagePackWriter.WriteStringHeader(Int32)
+- uid: AlgoSdk.MessagePack.MessagePackWriter.WriteStringHeader*
+  name: WriteStringHeader
+  href: api/AlgoSdk.MessagePack.MessagePackWriter.html#AlgoSdk_MessagePack_MessagePackWriter_WriteStringHeader_
+  commentId: Overload:AlgoSdk.MessagePack.MessagePackWriter.WriteStringHeader
+  isSpec: "True"
+  fullName: AlgoSdk.MessagePack.MessagePackWriter.WriteStringHeader
+  nameWithType: MessagePackWriter.WriteStringHeader
 - uid: AlgoSdk.MessagePack.ReservedMessagePackExtensionTypeCode
   name: ReservedMessagePackExtensionTypeCode
   href: api/AlgoSdk.MessagePack.ReservedMessagePackExtensionTypeCode.html
