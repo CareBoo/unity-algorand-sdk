@@ -13,6 +13,7 @@ Supported Build Targets:
 - [x] Linux
 - [x] Android
 - [x] iOS
+- [x] WebGL
 
 Installation
 ------------
