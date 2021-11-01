@@ -9,7 +9,7 @@ namespace AlgoSdk
     /// [apar] when part of an AssetConfig transaction.
     /// </summary>
     [AlgoApiObject]
-    public partial struct AssetParams
+    public struct AssetParams
         : IEquatable<AssetParams>
     {
         /// <summary>
