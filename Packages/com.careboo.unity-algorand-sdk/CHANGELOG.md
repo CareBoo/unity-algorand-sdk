@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [1.1.0-pre.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.1.0-pre.1...v1.1.0-pre.2) (2021-11-01)
+
+
+### Bug Fixes
+
+* **osx:** fix multiple sodium.bundle plugins ([b3b9389](https://github.com/CareBoo/unity-algorand-sdk/commit/b3b93890b5ec0bde98bbf5d35fd4246475b6cc0a))
+
 # [1.1.0-pre.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.1-pre.1...v1.1.0-pre.1) (2021-10-31)
 
 
