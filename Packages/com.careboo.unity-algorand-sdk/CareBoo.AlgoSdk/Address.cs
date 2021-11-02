@@ -11,6 +11,7 @@ namespace AlgoSdk
     /// <summary>
     /// A public key for an Algorand account.
     /// </summary>
+    [Serializable]
     [AlgoApiFormatter(typeof(AddressFormatter))]
     [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
     public struct Address
@@ -22,7 +23,7 @@ namespace AlgoSdk
         public static readonly Address Empty = default(Address);
 
         [FieldOffset(0)] internal byte buffer;
-        [SerializeField] [FieldOffset(0)] internal Ed25519.PublicKey publicKey;
+        [FieldOffset(0), SerializeField] internal Ed25519.PublicKey publicKey;
 
         public unsafe void* GetUnsafePtr()
         {

@@ -6,6 +6,8 @@ public class AlgodCheck : MonoBehaviour
 {
     AlgodClient algod;
 
+    public Address testAddress;
+
     public void Start()
     {
         algod = new AlgodClient(

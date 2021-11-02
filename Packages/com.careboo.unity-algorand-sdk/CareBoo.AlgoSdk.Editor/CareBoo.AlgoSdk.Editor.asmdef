@@ -1,0 +1,20 @@
+{
+    "name": "CareBoo.AlgoSdk.Editor",
+    "rootNamespace": "CareBoo.AlgoSdk.Editor",
+    "references": [
+        "CareBoo.AlgoSdk",
+        "CareBoo.AlgoSdk.LowLevel",
+        "CareBoo.AlgoSdk.Crypto"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
