@@ -30,6 +30,11 @@ namespace AlgoSdk
         [FieldOffset(0), SerializeField] internal FixedBytes50 buffer;
 
         /// <summary>
+        /// Size of Mnemonic in bytes.
+        /// </summary>
+        public const int SizeBytes = 50;
+
+        /// <summary>
         /// Number of words contained in the mnemonic.
         /// </summary>
         public const int Length = 25;
@@ -52,6 +57,12 @@ namespace AlgoSdk
                     return b;
             }
         }
+
+        /// <summary>
+        /// Get the byte pointer at the start of this struct.
+        /// </summary>
+        /// <returns>An unsafe byte pointer.</returns>
+        public unsafe byte* GetUnsafePtr() => Buffer;
 
         /// <summary>
         /// The word at a given index.
