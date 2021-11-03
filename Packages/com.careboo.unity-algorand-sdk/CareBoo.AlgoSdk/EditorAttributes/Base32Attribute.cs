@@ -4,7 +4,7 @@ using UnityEngine;
 namespace AlgoSdk
 {
     [Conditional("UNITY_EDITOR")]
-    public class TrimmedBase64PropertyAttribute : PropertyAttribute
+    public class Base32Attribute : PropertyAttribute
     {
     }
 }

@@ -4,7 +4,8 @@
     "references": [
         "CareBoo.AlgoSdk",
         "CareBoo.AlgoSdk.LowLevel",
-        "CareBoo.AlgoSdk.Crypto"
+        "CareBoo.AlgoSdk.Crypto",
+        "Unity.Collections"
     ],
     "includePlatforms": [
         "Editor"

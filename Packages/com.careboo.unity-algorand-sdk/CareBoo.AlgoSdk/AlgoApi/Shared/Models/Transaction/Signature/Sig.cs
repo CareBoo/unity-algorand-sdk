@@ -2,15 +2,18 @@ using System;
 using AlgoSdk.Crypto;
 using AlgoSdk.Formatters;
 using AlgoSdk.LowLevel;
+using UnityEngine;
 
 namespace AlgoSdk
 {
+    [Serializable]
     [AlgoApiFormatter(typeof(ByteArrayFormatter<Sig>))]
     public struct Sig
         : ISignature
         , IEquatable<Sig>
         , IByteArray
     {
+        [SerializeField]
         Ed25519.Signature sig;
 
         public unsafe void* GetUnsafePtr() => sig.GetUnsafePtr();

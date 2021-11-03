@@ -2,6 +2,7 @@ using System;
 using System.Runtime.InteropServices;
 using AlgoSdk.Formatters;
 using AlgoSdk.LowLevel;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -86,6 +87,7 @@ namespace AlgoSdk
         }
     }
 
+    [Serializable]
     [AlgoApiFormatter(typeof(ByteArrayFormatter<TealBytes>))]
     public struct TealBytes
         : IEquatable<TealBytes>

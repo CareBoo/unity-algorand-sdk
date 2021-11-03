@@ -3,6 +3,7 @@ using System.Runtime.InteropServices;
 using AlgoSdk.LowLevel;
 using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
+using UnityEngine;
 using static AlgoSdk.Crypto.sodium;
 
 namespace AlgoSdk.Crypto
@@ -48,12 +49,13 @@ namespace AlgoSdk.Crypto
     }
 
     [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
+    [Serializable]
     public struct Sha512_256_Hash
         : IByteArray
         , IEquatable<Sha512_256_Hash>
     {
-        [FieldOffset(0)] internal FixedBytes16 offset0000;
-        [FieldOffset(16)] internal FixedBytes16 offset0016;
+        [FieldOffset(0), SerializeField] internal FixedBytes16 offset0000;
+        [FieldOffset(16), SerializeField] internal FixedBytes16 offset0016;
         public const int SizeBytes = 256 / 8;
 
         public unsafe void* GetUnsafePtr()

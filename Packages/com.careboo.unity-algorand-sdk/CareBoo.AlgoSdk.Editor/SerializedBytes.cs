@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using AlgoSdk.LowLevel;
 using UnityEditor;
 
 namespace CareBoo.AlgoSdk.Editor
@@ -15,23 +14,6 @@ namespace CareBoo.AlgoSdk.Editor
         {
             serializedObject = root.serializedObject;
             rootPath = root.propertyPath;
-        }
-
-        public T ToByteArray<T>() where T : struct, IByteArray
-        {
-            T byteArray = default;
-            var bytes = GetBytes();
-            for (var i = 0; i < bytes.Count; i++)
-                byteArray[i] = bytes[i];
-            return byteArray;
-        }
-
-        public void SetBytes<T>(T byteArray) where T : IByteArray
-        {
-            var bytes = new List<byte>();
-            for (var i = 0; i < byteArray.Length; i++)
-                bytes.Add(byteArray[i]);
-            SetBytes(bytes);
         }
 
         public List<byte> GetBytes()

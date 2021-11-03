@@ -3,6 +3,7 @@ using System.Runtime.InteropServices;
 using AlgoSdk.Formatters;
 using AlgoSdk.LowLevel;
 using Unity.Collections;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -11,13 +12,14 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiFormatter(typeof(ByteArrayFormatter<VrfPubKey>))]
     [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
+    [Serializable]
     public struct VrfPubKey
         : IEquatable<VrfPubKey>
         , IByteArray
     {
-        [FieldOffset(0)] internal FixedBytes16 offset0000;
+        [FieldOffset(0), SerializeField] internal FixedBytes16 offset0000;
 
-        [FieldOffset(16)] internal FixedBytes16 offset0016;
+        [FieldOffset(16), SerializeField] internal FixedBytes16 offset0016;
 
         public const int SizeBytes = 256 / 8;
 
