@@ -1,0 +1,3678 @@
+{
+  "sitemap": {
+    "fileOptions": {
+      "api/*": {
+        "baseUrl": "https://CareBoo.github.io/unity-algorand-sdk/1.1.0/",
+        "changefreq": "daily"
+      }
+    },
+    "baseUrl": "https://CareBoo.github.io/unity-algorand-sdk/1.1.0/",
+    "changefreq": "weekly"
+  },
+  "homepages": [],
+  "source_base_path": "D:/a/unity-algorand-sdk/unity-algorand-sdk/Packages/com.careboo.unity-algorand-sdk/Documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../CHANGELOG.md",
+      "output": {
+        ".html": {
+          "relative_path": "changelog/CHANGELOG.html",
+          "hash": "ilU7Tl5OeRmorR2XLFZX1dEHgER1kUYytNcr9pcPgxU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../LICENSE.md",
+      "output": {
+        ".html": {
+          "relative_path": "license/LICENSE.html",
+          "hash": "GgwfMpP3K4gEv5fn/nZfm19uFm0bfcWPOk1ZlXP8x8w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "../Third Party Notices.md",
+      "output": {
+        ".html": {
+          "relative_path": "license/Third Party Notices.html",
+          "hash": "r5Y90ua7NYU7QqMDY134YebY+onkkkkvHl5PFuqKtDs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Account.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Account.html",
+          "hash": "SAw99u/MOYQU+15MVFYNDax2iE2OsHfRkb91st/jpzI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AccountInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AccountInfo.html",
+          "hash": "yevJ5ubgRSY2gxlgaEJ8sdVhhOG92evctSkkc/+EYZ8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AccountParticipation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AccountParticipation.html",
+          "hash": "7KAAd1p2FhbnEJymEIai7feP2j4zLaWa++ZE9z7LEN4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AccountResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AccountResponse.html",
+          "hash": "2HsRfyLkOWLFI00HXH4aTPDUymmn6M6AoZR/Hz1phYk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AccountStateDelta.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AccountStateDelta.html",
+          "hash": "f7eOXnUIYR1dmUq7POLnjQNF8RqG/0N/zgbz6+eHv+8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AccountsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AccountsResponse.html",
+          "hash": "EymJue8r0vwxCU9jVSu7rK4Lp2YPfl5mft2TsRX6YbA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Address.CheckSum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Address.CheckSum.html",
+          "hash": "bnX2xq7fRIsVrix+t1djz0E4YRQyOZsz1nbgyVO/cSY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Address.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Address.html",
+          "hash": "TODaoRPTVCbbUFkD7xuKA8k8nqxgSFAq2NZ1EaAnHfA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AddressRole.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AddressRole.html",
+          "hash": "oPi7NbKj9he6MQoTWLCaub0++TIeP6ocEyftYxHHptQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AddressRoleExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AddressRoleExtensions.html",
+          "hash": "LoSfjmaCcUKkGxCOs9DfumvmzmkvSBjF6Bgzu4bWz0U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiField-1.EqualityComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiField-1.EqualityComparer.html",
+          "hash": "z186fazHl6avbA84DYPYIGfQQPn1Dw5Mb+W9t38zoG4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiField-1.FieldGetter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiField-1.FieldGetter-1.html",
+          "hash": "qwJMJXjI8YaAcFxl8ouD3a4isqqDhVI6X17y64fORUg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiField-1.FieldSetter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiField-1.FieldSetter-1.html",
+          "hash": "esEoweEUZcgGYfXtr9rFthnkkNWCjf9tSbBrtbMLnJk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiField-1.JsonDeserializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiField-1.JsonDeserializer.html",
+          "hash": "cmAxDjzEllJOv/hIOHlfN+eEOfYiWY/wiSX3aCbxGYk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiField-1.JsonSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiField-1.JsonSerializer.html",
+          "hash": "u62BY0I8bh/TU4LXUcoC0cp0vm+hr5rgnrkN5/5P1mY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiField-1.Map-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiField-1.Map-1.html",
+          "hash": "X9hvTYBwo3rmZw+pLV0Byeeq8oHopsn3krs95menFVM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiField-1.MessagePackDeserializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiField-1.MessagePackDeserializer.html",
+          "hash": "YGA316JZjI49JV+6edaiSo9JkMac1jmLtkckMc9mAQY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiField-1.MessagePackSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiField-1.MessagePackSerializer.html",
+          "hash": "W6MdLf4LLtr2c3kepGk1fC1NUAH7ULYN/RlsBVAEGp4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiField-1.SerializePredicate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiField-1.SerializePredicate.html",
+          "hash": "rijzl8ReXlkE+bkIs/MwSQ9XsTIZ6TdBzOWaXS2xC5U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiField-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiField-1.html",
+          "hash": "HFl33WPmoXjVqey4bP9vueNi2e0HtU18Xo296tMwk1k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiField.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiField.html",
+          "hash": "9k7HJfMFiUkjeBgFpaFOPssM7/ZH1UaQwdkXcWU/ytU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiFormatterAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiFormatterAttribute.html",
+          "hash": "UIYcBNi+cRzKuL08S83ry6yk4smdJn/QWnABc1thVtU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiFormatterCache-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiFormatterCache-1.html",
+          "hash": "wi3nxofkGTE5QaCxSeEJPgHn0tP2Hp5DfYV5/9bv8Lk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiFormatterLookup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiFormatterLookup.html",
+          "hash": "ScaPz/UNlqvwo43ClJb5rzmVwJHlf4lTkPJ9sRWlpOI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiObject.html",
+          "hash": "bDyd6onRIgCUHUn6gxL5l1YLdP3dLKubrykXF+7uCyE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiObjectAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiObjectAttribute.html",
+          "hash": "EUhFCWlElAJHe108xXEHWYOg3QHBJmqaOC7oa90I/2Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiObjectFormatter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiObjectFormatter-1.html",
+          "hash": "CmUjrXDdJkJXMTUUVwDVuSBSG0lzCb8QenU4a/S4VNE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiObjectFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiObjectFormatter.html",
+          "hash": "XI3JOkG8kkee2PYRugOMMun8tFoYxJvnZoF5G5U5P7A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiRequest.Awaiter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiRequest.Awaiter.html",
+          "hash": "dx/AdOMU93tGwApMSsVwrwOS07sNkX+l9sQ4Dim6QCI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiRequest.Sent-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiRequest.Sent-1.html",
+          "hash": "sgAUyB12RYNlbWxsG2Yy8Ushvmv8/sEwDBFEw/v9nbU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiRequest.Sent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiRequest.Sent.html",
+          "hash": "2F5A4Iebw6SeqM2j9Xo8T6wCOafaYoRaj1y63HptX2c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiRequest.html",
+          "hash": "vK82vs6qLG2o8CCiuSaXHGkwDOUCN3kKVq2tC1fa7Wg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiResponse-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiResponse-1.html",
+          "hash": "mhTxk7HdtOhEKh2k91r66sohLQIhzic0N1/QoIB4GMQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiResponse.html",
+          "hash": "iNxFsVvwwMRQimb9HkskRdOM43CSLK5S6ZbS0Y+pTcg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgoApiSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgoApiSerializer.html",
+          "hash": "OEFM3j5gvNVJiUkKpkzDaDNSjsOn/dhyPWiA1Li3z58="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AlgodClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AlgodClient.html",
+          "hash": "3IR8ePW5OcWVdZTmgAw2KtXjWSAMBlGmhtoFfjd4KcY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AppCallTxn.Params.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AppCallTxn.Params.html",
+          "hash": "8UGp9UcaR5lmYkdSc72jYIN8CSRUDQXRydzgp+m9mFk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AppCallTxn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AppCallTxn.html",
+          "hash": "YbNEyPk4KJrlwjW5JK7qmLnsadRHL9Cyj3BQ/JMInqo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Application.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Application.html",
+          "hash": "0mwTutXr8YzCUmNJ4oJeSI5imzOhqYZBiF2Yo1ETMls="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ApplicationLocalState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ApplicationLocalState.html",
+          "hash": "JncCVk5PAOx5ep+GhY+XDcay+ELVgRWc49JAXypagQE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ApplicationParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ApplicationParams.html",
+          "hash": "d9ASstLsGpSfkE/+PUTIoQbgfezPzzsF6mXRqmmkgcM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ApplicationResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ApplicationResponse.html",
+          "hash": "FoICPFbXwki150ZtxygQNKYVeGi6cJfY7xACUdCBdcM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ApplicationsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ApplicationsResponse.html",
+          "hash": "FipqOucpkHH+1SZASJql57XT0G/qbIqBquF1wJVk3jI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ArrayComparer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ArrayComparer-1.html",
+          "hash": "kvgw4fusug0t1/MvP/ffXueC1g2qtIcf9j6AthlpaRc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ArrayComparer-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ArrayComparer-2.html",
+          "hash": "ue4DjUgsqnUgEadZDuydWMOAkyicK//NIMBhwvdGY34="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ArrayComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ArrayComparer.html",
+          "hash": "mm7hmeVF7Rwrv2zcJW2NicPocoypsmuOxZTIvRE1DG8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Asset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Asset.html",
+          "hash": "ps9SsavhVcEXBagvCwvPR6RK4b1oqNRh97KBh5W9K9I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AssetConfigTxn.Params.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AssetConfigTxn.Params.html",
+          "hash": "3pYKw+HpYpLKEhMsor/L/1kgP9dH/UwGw5uFYEGvPQg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AssetConfigTxn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AssetConfigTxn.html",
+          "hash": "nNWB6/1NSZL4ooUw5tMNcmP6T686IDrfBC5QGRUozMA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AssetFreezeTxn.Params.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AssetFreezeTxn.Params.html",
+          "hash": "/Wzu6aTYq64o7devW58k3sD3s/0HnTtW2Hx0XPO3S9g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AssetFreezeTxn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AssetFreezeTxn.html",
+          "hash": "fKzSSATo5TNegEtm4caiLETOUqUhDfwYdOfdpBzZIug="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AssetHolding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AssetHolding.html",
+          "hash": "nUYCYD8atv8HNPfvQsvwE1dY1x0R8ObUZSpmwR8bhxE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AssetParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AssetParams.html",
+          "hash": "1uFPTRtvPJHzApofrfDLg7q+FOAKDjGpfGV2hvckVA4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AssetResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AssetResponse.html",
+          "hash": "i31VGWDmJh0bmJBVibh+Tn3YrWXm7y911YYksU/VdXc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AssetTransferTxn.Params.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AssetTransferTxn.Params.html",
+          "hash": "GT9j9ZAcHLQUKCGypRr8YzrKtSBsnwebWJsjRBL0o3k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AssetTransferTxn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AssetTransferTxn.html",
+          "hash": "QKJtf5zMqd8sm1LDk6VlXOB4+iw9eQDPjdN4M6yXtQo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AssetsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AssetsResponse.html",
+          "hash": "IxVn60471CbhBpsqOWWmTmpsHOcyPxi8GzLUbiDOyUM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.BalancesResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.BalancesResponse.html",
+          "hash": "pRF8OvBynLSz69bOqzqlaAT1O9kQYGIWntuiAMw8+bY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Base32Encoding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Base32Encoding.html",
+          "hash": "7efRYWqVITujJOqvE+KVkXBFEU12sBhp3NF0rgy+ukg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Base64Encoding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Base64Encoding.html",
+          "hash": "NzYG+UxSqfkiUkBJia1hgoQ3vCtpObdYOzCGuC+9XSY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Block.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Block.html",
+          "hash": "3HK6Stwn3da0BA9CnH1McQctGYzUS7zxP4eWcrwZ2ec="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.BlockResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.BlockResponse.html",
+          "hash": "iuQktu/sWWVcBhHGH4DO7m6FBfh4KnR4Cho83Emk9fs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.BlockRewards.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.BlockRewards.html",
+          "hash": "RwrR4cbXD690hW2BUB+QwZ3PA1+vB87F+/MEJ7A6pCY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.BlockTransaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.BlockTransaction.html",
+          "hash": "3Ckz626MbZD5xB4ItgS38jpsaG9ViIfBZNPlFpbH9yI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.BlockUpgradeState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.BlockUpgradeState.html",
+          "hash": "wyAmlJ03odFVmoxXWfWnUJD9c65alkRxigSNgo9dCBY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.BlockUpgradeVote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.BlockUpgradeVote.html",
+          "hash": "QMtRO06+DUO/G6J8JqqBuZXprNmTNFXcwBCMdGORZEE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.BuildVersion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.BuildVersion.html",
+          "hash": "g7DoifpxLFhd+yJPNdoz1bPoT3zF/2ayvma55isr9TE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ByteEnumComparer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ByteEnumComparer-1.html",
+          "hash": "xwKYAhhqAPk/EsgubK52N8r58ZvX0xZOEMXFlVkj5Js="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.CatchupMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.CatchupMessage.html",
+          "hash": "rWEfcMqn69WxPupSOUQO4OkOcvrLd+POcAtg9/jvIm8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.CompiledTeal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.CompiledTeal.html",
+          "hash": "9GshvIPmqWwWlXKmIyr//Y+6R5ID1dygtPsUf8H0zWk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.CompiledTealFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.CompiledTealFormatter.html",
+          "hash": "o5bM3DvRtZrsC++Kz0bfgUulYxS7wY2d99epZC7p3M8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ContentType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ContentType.html",
+          "hash": "0W4lOliHSRNWp58GlPMZEaMYgI+rm/bydZfKH6K5tpY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ContentTypeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ContentTypeExtensions.html",
+          "hash": "OXG8rLFdT3jcfrdnWaD65wqpyKLCsW0qLZK+jbp1V5Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.CreateWalletRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.CreateWalletRequest.html",
+          "hash": "0ouLCD+g/FoRL8HEeCEvpLzhjYmyaUVnPJyTSZEnLRI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.CreateWalletResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.CreateWalletResponse.html",
+          "hash": "KYNICfa0VaSXhKoCsZzxA5AAzWqt3CpqCf4DLJYwtdU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Crypto.Ed25519.KeyPair.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Crypto.Ed25519.KeyPair.html",
+          "hash": "uFRNtHV5SbnFyxoXw7xEub03sWb6p+IvPqvM4V+H9yc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Crypto.Ed25519.PublicKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Crypto.Ed25519.PublicKey.html",
+          "hash": "NX1g1Dh/eN9vaFF23I6azGBq7f8yCL9TUcw5yKS9Cvg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Crypto.Ed25519.SecretKeyHandle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Crypto.Ed25519.SecretKeyHandle.html",
+          "hash": "ExBmq92jlFTmDtZGKfdscbXItLTN+o/H3o50I2N7BmU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Crypto.Ed25519.Seed.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Crypto.Ed25519.Seed.html",
+          "hash": "M3EOFRj7dZGY9dw7iA9BuAU70zRdijARWPYqC92zzxE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Crypto.Ed25519.Signature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Crypto.Ed25519.Signature.html",
+          "hash": "hJWZeXWp05/qSTuRpVWPfn3h5ZA0XuiJBgRQtHqOgqE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Crypto.Ed25519.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Crypto.Ed25519.html",
+          "hash": "YM65GGtltSW0b8A6Qjk0ch8kP/8ylelCigv6PtjbCTk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Crypto.Random.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Crypto.Random.html",
+          "hash": "F5WT/SI+/4CW0XG9xJ1SeDNk/h2XlBAaJmW6s3HaNRU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Crypto.SecureMemoryHandle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Crypto.SecureMemoryHandle.html",
+          "hash": "sEk87GDSXzy1KGlbBamPxafhQaTUnCq/xq/HeQg1Iy0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Crypto.Sha512.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Crypto.Sha512.html",
+          "hash": "IytDYUFEOieRAmf/t28hh2hssc7CN+xYL34YsufzoTc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Crypto.Sha512_256_Hash.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Crypto.Sha512_256_Hash.html",
+          "hash": "mlGrWWFqcLR/heBkghRrr1F3ioQh/vLuzuZu/xNqRME="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Crypto.Sha512_Hash.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Crypto.Sha512_Hash.html",
+          "hash": "rckg8tPydqmqsnY18S7JFnIMx5MLq/mPTYtJpNIPdIY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Crypto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Crypto.html",
+          "hash": "dlBn+GoQ6f6wAe+FQ88hVr3QIv+1cwyMDjS65zNF1i4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.DeleteKeyRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.DeleteKeyRequest.html",
+          "hash": "yaPrLTSflF1D924eG12b7sLNjg6MnNr3SvdxbD6ysm4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.DeleteMultisigRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.DeleteMultisigRequest.html",
+          "hash": "VmZiibHApwQjD6lpbvCd8yQ6pC7/uu9Z61WEPPpcNBc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.DryrunRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.DryrunRequest.html",
+          "hash": "66miXESPlNaiNo1KoFAvI8nOXIBzK++D+ISEO991Xhk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.DryrunResults.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.DryrunResults.html",
+          "hash": "UlgVDbxcDDVj22VEG7fqkCZXq+D3+QXEkqmG/bYlpSU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.DryrunSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.DryrunSource.html",
+          "hash": "7MQ1jvaS9cEkySLCDgavglaQxDZaK+VKuTPTSUvJgvQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.DryrunState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.DryrunState.html",
+          "hash": "QNLbzcIZI2vRPIyKwe8NJCQwWkt+93cREx1SrjUrOEs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.DryrunTxnResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.DryrunTxnResult.html",
+          "hash": "gdLkAHZctGQGUiC/4AnDSpK163tOGgMgLGnDED62pxk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Editor.AddressDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Editor.AddressDrawer.html",
+          "hash": "hcfhWi3jvIhQu4ggEuL1vBrlNPcC0/mHCufH2QAnZfg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Editor.Base32Drawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Editor.Base32Drawer.html",
+          "hash": "vWAYR6r+fvjTPlApwHuLFmW8gfOpd4eB1uTRu6QLAvI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Editor.Base64Drawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Editor.Base64Drawer.html",
+          "hash": "Wt2/jPBe32AbbUCzsYDxEUilTtLvXqEtLs7GO6HQGss="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Editor.BytesTextDrawer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Editor.BytesTextDrawer-1.html",
+          "hash": "I53AEFg0kIQ6bgo9q1IB9t8fyo3MNjCM+NrHJK/IC4c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Editor.BytesTextDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Editor.BytesTextDrawer.html",
+          "hash": "0eUcalFceEG3OJOd38R+dJ10u6viqbHR0xDGQIuc900="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Editor.CompiledTealDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Editor.CompiledTealDrawer.html",
+          "hash": "s6mJJ9jdYFq872f92M4SYGnBKC2Aj/7R53SkBu8+3TE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Editor.FixedStringDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Editor.FixedStringDrawer.html",
+          "hash": "IHHRrt1HGphs2so44NWeORSoihdq1XcVjUrBFe5HNnw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Editor.MnemonicDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Editor.MnemonicDrawer.html",
+          "hash": "Aq4ZapVyRuzB0qab00JmGqt6gWl5v4PVkYmifBlB5VY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Editor.PrivateKeyDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Editor.PrivateKeyDrawer.html",
+          "hash": "hsVdQcEWxLEetqlugT8TMjmdhZ95nnRD7ErGCwRmuHk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Editor.SerializedBytes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Editor.SerializedBytes.html",
+          "hash": "E97N9bWLsZTjL/QYeNjjTWRMIZsZKcPVernExpGp4Ow="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Editor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Editor.html",
+          "hash": "JD7QM+d6vqLmqMBc/HxloJSJS/tBA/4BiL9KobXsyAU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Endianness.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Endianness.html",
+          "hash": "KHdS3Yv8bcIVKfoPVEqdlrM49zAnl8AeusywGzAjmKQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ErrorResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ErrorResponse.html",
+          "hash": "Srim7kVrgAKSbpexXZQ27w3zrNxx1Jayn7hBUv1zD/k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.EvalDelta.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.EvalDelta.html",
+          "hash": "6l+No5NpNj4QSWW3mq8XvVJrMUAOY50FR5Cp4T+T8hM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.EvalDeltaAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.EvalDeltaAction.html",
+          "hash": "O6MsuIc994yzNX0pMnuduveUBd020cW/KJ3gvX9wv1U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.EvalDeltaKeyValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.EvalDeltaKeyValue.html",
+          "hash": "rTCe/RerAwXtv4QBQAwMQOmmKSUOuc9CFfQvNcUhnE4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ExportKeyRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ExportKeyRequest.html",
+          "hash": "nuARJshMb4iPAysLS3KndNZomuYIJM89rvSnywa9fPI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ExportKeyResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ExportKeyResponse.html",
+          "hash": "dcYB/NmbEOUmKIaIMG7nYgpzi+6vUGwhbtToQRwOQxc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ExportMasterKeyRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ExportMasterKeyRequest.html",
+          "hash": "WDRAbQCLIkfo68vw3Ww0LlLty7ZvUAYvWb+bAp2AtRU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ExportMasterKeyResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ExportMasterKeyResponse.html",
+          "hash": "4jSBKbkXSJsc4KTC/ve7MiNd6z2RXvLlTly9/ksM5mQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ExportMultisigRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ExportMultisigRequest.html",
+          "hash": "n7r96GHtHKcjaYWAQbibYQDr6JyNm2NLF5Lej9RsyhU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ExportMultisigResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ExportMultisigResponse.html",
+          "hash": "c2OB6Xwy88S44fpAILVHhzOjTMGsifNLvQsOEmN+MUE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.AddressFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.AddressFormatter.html",
+          "hash": "NDEYp7q0GNMzr869Cx4MaY9FQNqLGv4eG02jK4Z4igk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.AddressRoleFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.AddressRoleFormatter.html",
+          "hash": "FZ4idM5scgNcqAId1umoA/W1XIhWURMvmFu7fSr6cB4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.ArrayFormatter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.ArrayFormatter-1.html",
+          "hash": "gIC77vmPR0hqdi7ZmSwN8xuBIlzLFCDXExZUFcRENAo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.BoolFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.BoolFormatter.html",
+          "hash": "gfsq/QJY76OdP5YXKTanSCpkLXLtZIl2XuCkFAak80E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.ByteArrayFormatter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.ByteArrayFormatter-1.html",
+          "hash": "inmwA/ws+NmrFl/nzj/BuchniIR3KmFS9N4WZqflVpk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.ByteArrayFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.ByteArrayFormatter.html",
+          "hash": "7Jmy5/uMcupURzzxX1m9D+4VWOq/m9zXlo8jTOxeEEQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.ByteEnumFormatter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.ByteEnumFormatter-1.html",
+          "hash": "9RCjGwrTrTUu1uTV6eWIedSnrIXsEOvUawHzoBM2HjE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.ErrorResponseFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.ErrorResponseFormatter.html",
+          "hash": "ffae/dYDUd+c9qsmvSeMKB1JdrEf/m6rfVwZZ3hw60o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.FixedBytesArray-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.FixedBytesArray-1.html",
+          "hash": "8aK7njfyFDdQchF3I4ckb5vv20v1Zb98uG+WaiPWtBk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.FixedBytesFormatter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.FixedBytesFormatter-1.html",
+          "hash": "1ShIFTvwlFU7ySqhD6cYnRlbIolX6JzuLdLNxAr1ZJo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.FixedStringFormatter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.FixedStringFormatter-1.html",
+          "hash": "2vylhdx/bjuSD2KSgr++Yy9qXUODa+Eo+Nz+rubVuGo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.GenesisHashFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.GenesisHashFormatter.html",
+          "hash": "bfo7D7HS+T13Wd043pauJy29/RulKYrtFWRTIeJr9Nk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.Int16Formatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.Int16Formatter.html",
+          "hash": "8xNW34n38YrHsQKQ4LADFj2p/juUdxYqs60jD3PX0I8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.Int32Formatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.Int32Formatter.html",
+          "hash": "YU59oh+gWG3jqJoeMswi3kUt2I8TF0AeZF5fzG1t8g0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.Int64Formatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.Int64Formatter.html",
+          "hash": "eDqMi13euvqDx0o/4qq+YujnUAAKhDICr04WubLNORk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.Int8Formatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.Int8Formatter.html",
+          "hash": "7L+bLqMCsP0TP56ciZTNejzlXT1UjFKiSZbdAkUCXmA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.KeywordByteEnumFormatter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.KeywordByteEnumFormatter-1.html",
+          "hash": "wawJUguRJvN4fPYNoQHlfkFl42jGqK8vssl30lnUA04="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.OnCompletionFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.OnCompletionFormatter.html",
+          "hash": "hOwcOVN23ZG1Gwm6y0KBJheHSTGoXQQGMvrwBMV9Vis="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.OptionalFormatter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.OptionalFormatter-1.html",
+          "hash": "u+ML980cofTWPwL7HV3SMon/M7BJvbkwt56t1qNY/aE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.PrivateKeyFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.PrivateKeyFormatter.html",
+          "hash": "V++fYihEl6uwwxYzwU1OzdPFcVSQt+6SbtSobAYgGdY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.SignatureTypeFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.SignatureTypeFormatter.html",
+          "hash": "NBwWfl/Y6n/mjaIgEtZMdNCney4X9NxpHBbbDqBrg+o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.SignedTransactionFormatter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.SignedTransactionFormatter-1.html",
+          "hash": "APPMY+PN+1RFhsiNnj3z2qDUbuaoZIeCazr309Z+xrQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.SignedTransactionFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.SignedTransactionFormatter.html",
+          "hash": "10dz5KYncPMWILcn06VgWKA6n5EHcPXBrWgqar98U24="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.StringFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.StringFormatter.html",
+          "hash": "fybzirEYOX1OC5pW/mz8iU5g3tciITTICZaxT0jKSD4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.TealValueFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.TealValueFormatter.html",
+          "hash": "73S+bGDr7iiymu0Hz5c/6UMqyRFEImX/5eVR6TU4/3g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.TransactionIdFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.TransactionIdFormatter.html",
+          "hash": "OjDgwicg7Ka/gmWEZSFcA3t8phqih5MDOHt4KJ3BJ2A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.TransactionTypeFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.TransactionTypeFormatter.html",
+          "hash": "h/FDzZdaMiLJHkSQpxoBqfa+GVBYUAsH1GxdAdptK8g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.UInt16Formatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.UInt16Formatter.html",
+          "hash": "D8Bf2lJKax6PCIA5VX6OcdtqMVDDoOHkzK9w3xnsPCY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.UInt32Formatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.UInt32Formatter.html",
+          "hash": "1iI1k4wCPdUy4DS7YlXVuBF42ZmDQ+LEqTiV8sdcDi0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.UInt64Formatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.UInt64Formatter.html",
+          "hash": "6Gw5OtwCJJ9I/Zwvo5TzmLFt9OQMpYrsLaM6OhD2RcI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.UInt8Formatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.UInt8Formatter.html",
+          "hash": "n21EFTx12iTKdLZmxGji5Y+nfJ2ElfV+LJLDsT8pmr0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Formatters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Formatters.html",
+          "hash": "JURgbIdFBZ0UcUVeJQ9mvFtmXM54kZ8SwGITiWTvf9A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.GenerateKeyRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.GenerateKeyRequest.html",
+          "hash": "5Qy+tcVWHVI6PAMJA6YIMTlfjqM5fAAnySfpKvmnaX0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.GenerateKeyResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.GenerateKeyResponse.html",
+          "hash": "uFOnqZXcV+Ezh9FMRUZp7/HGT4Cne/qnLoA0bZbsEgo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.GenesisAccountAlloc.State.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.GenesisAccountAlloc.State.html",
+          "hash": "wzhtfRnkeSKrLHbBvctFxJjFHG2u/E2kmzMyI1l/de0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.GenesisAccountAlloc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.GenesisAccountAlloc.html",
+          "hash": "LlTphkxpjpQCFpC/6e3Yao21l3cq4CZTOaYtF67qVxo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.GenesisHash.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.GenesisHash.html",
+          "hash": "eaHySndqfOghTzy/ETmC3yCgfpK0WbaxMzOwbg7JwkY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.GenesisInformation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.GenesisInformation.html",
+          "hash": "/N6+KVUMKsj+ig3nSI+yxqER0a3Ar5qyIIR+LQ0C9YU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.HealthCheck.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.HealthCheck.html",
+          "hash": "jmkqt8kCad4Cjm7urEVndpKmhVla00ZtnSsYItsTAFg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.IAlgoApiClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.IAlgoApiClient.html",
+          "hash": "XWPdXOOzmmKkZj70gmb/68huOJJyQXa+D1WVfJ9tw28="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.IAlgoApiFormatter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.IAlgoApiFormatter-1.html",
+          "hash": "YyGOYp/dBfyTw/qgtbdFVhe33ZwbGwqMeiEn+vguoNw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.IAlgoApiResponse-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.IAlgoApiResponse-1.html",
+          "hash": "ZHs53idvnY65Vm7xQnUktUO1auY/zV0lNdf2tSfJLfs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.IAlgoApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.IAlgoApiResponse.html",
+          "hash": "NjTS6BEhWY1zeKaCNggTE9ASsyJz5OuYBMPfwIy2Reg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.IAlgodClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.IAlgodClient.html",
+          "hash": "hum75i8G0LOr/nySez0gvafqeH1aY8jb1inIKK2cUYM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.IAppCallTxn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.IAppCallTxn.html",
+          "hash": "NoHRZDBHzrQB9hv3mRzJ2xMAC3jCEWtbKugifUZAyJs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.IAssetConfigTxn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.IAssetConfigTxn.html",
+          "hash": "+SUG4fJmKH6rZY7tNloyffcEKR4s8zfA45KqTL2Cgbc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.IAssetFreezeTxn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.IAssetFreezeTxn.html",
+          "hash": "/tTZrwKNOMJUmNev9tV7ujTM3OleXTuZAXxcKUgdbVU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.IAssetTransferTxn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.IAssetTransferTxn.html",
+          "hash": "BrRK75xR4shYZgakiKuEf/hP63qdM4Y3sCd0YaSs0xc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.IBlockRewards.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.IBlockRewards.html",
+          "hash": "rcQxoWEs6v2MBnevaTwRGp24LuAM14X9LTCwStayiG0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.IBlockUpgradeState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.IBlockUpgradeState.html",
+          "hash": "m/8oHJLUVpm8SS/Hp2XUHlo4yZsdH1GSXPJ9k2FQ+jA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.IBlockUpgradeVote.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.IBlockUpgradeVote.html",
+          "hash": "P47olIYeJtprNEbCT2x8gU+hOr8W4ymuD1qHYCG8BRk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.IIndexerClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.IIndexerClient.html",
+          "hash": "78DmfhO5c8YFiv1e0n61Khr9Sy7d0RobDXtB2Un6kfI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.IIndexerResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.IIndexerResponse.html",
+          "hash": "ERXPRFajKA39gpHOnUErxPJWhco6Dqq6vXN1lrmtQJQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.IKeyRegTxn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.IKeyRegTxn.html",
+          "hash": "MCk/rpNPYYtd4c6oEcB11zsaHt6hld5wYXl7JNVTt5Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.IKmdClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.IKmdClient.html",
+          "hash": "5eBcWydpc96N28CQBb9HAT++bgPaELkZuuS6wvYmlio="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.IPaginatedResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.IPaginatedResponse.html",
+          "hash": "tSMDYvUiOklpPRAZJELdiWWVz+dgIyiLik3er9kZmN0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.IPaymentTxn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.IPaymentTxn.html",
+          "hash": "4EqTyurqO9NYceO1x/CFebfZb9zVwrtlYs88ZENO0ss="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ISignature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ISignature.html",
+          "hash": "CeaucAXQjQJndZ1q3++b3MbyZnzzrip+mVK5k39rf3I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ITransaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ITransaction.html",
+          "hash": "fie3ztvUiqd247czu0gg769t9ypRRZjx2TEA8o/L9mE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ImportKeyRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ImportKeyRequest.html",
+          "hash": "Jd64fTpGjlD1mxtlh9HSLTqBtixbbmhcdw7cVk0F8qE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ImportKeyResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ImportKeyResponse.html",
+          "hash": "hnyBPDel888wAwieO9Q509QQrFr70CoATTjbS9vaucA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ImportMultisigRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ImportMultisigRequest.html",
+          "hash": "49zKbw4aF0XflgoUnLJFeODfIGOEz5/bLMRLkfz2Nsg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ImportMultisigResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ImportMultisigResponse.html",
+          "hash": "ISMNux0JWZpJGUcBEc3rVFnUButtjGywBA7DXOgCBZg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.IndexerClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.IndexerClient.html",
+          "hash": "697NUO7GRkpW1jfdaxcEz8tuov3Onz7RXPXZMds0Mlc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.InitWalletHandleTokenRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.InitWalletHandleTokenRequest.html",
+          "hash": "Gzj6zyf0nN9gWN3Dx2h3xJ63VLt7SJu0dKoGt9ZN5yA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.InitWalletHandleTokenResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.InitWalletHandleTokenResponse.html",
+          "hash": "31TcqtzANGQdZA7NI2f9grkEyVbr+1gmMIOaVADNXOA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.IntEnumComparer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.IntEnumComparer-1.html",
+          "hash": "7Bch0A5wVPvt94qNiqeMoBHw/g7m3tCU68d8lwhuo+M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Json.JsonReadError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Json.JsonReadError.html",
+          "hash": "XXFWdwdFDObwk6hHv6Es2iYktlmGhwXQQ6CpsGEN8Vg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Json.JsonReadErrorExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Json.JsonReadErrorExtensions.html",
+          "hash": "Wqx2WY4Kxx4yzWZvAXXXsizr4IH3MOoy+pg1hppvLsk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Json.JsonReadException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Json.JsonReadException.html",
+          "hash": "MGuk1UGgDflc0EKYY1RdRBIpN5l6gMjnHGEQk+X0UBw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Json.JsonReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Json.JsonReader.html",
+          "hash": "kDB1m9KNeG9PUvXgLiS8PsbnJTju5b5m8UQ1SjbHco4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Json.JsonToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Json.JsonToken.html",
+          "hash": "BOYV9fDShcboTA6F+ApKfLotqLfL97xKpGWXn/48mpM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Json.JsonTokenExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Json.JsonTokenExtensions.html",
+          "hash": "k8FMt+Fb4LJ6Qr1JvK9Eh4UViwEArLe/Ui/fYddyRa8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Json.JsonWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Json.JsonWriter.html",
+          "hash": "gKfBvL/XBI/Qh9h0+qkoC/ZCut1gmRIC4mQ7uFBR+Pk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Json.UnicodeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Json.UnicodeExtensions.html",
+          "hash": "Msfn8HldNRcdnoJKkBHdl/ozXtvpcGnf55pMr2+5xvU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Json.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Json.html",
+          "hash": "3TYDlGTqB2d/E3/CNOfXTtLPVcvbpnc5t5Ry3hvtmGk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.KeyRegTxn.Params.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.KeyRegTxn.Params.html",
+          "hash": "TSL7wj33E0WdBRBM4CydKDKnQUxPtSZUERBILSwbJ44="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.KeyRegTxn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.KeyRegTxn.html",
+          "hash": "K/ymYK2KhAIGQBLkb1m/YnyH9PFiINUgGX0Fp6NW3NY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.KmdClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.KmdClient.html",
+          "hash": "Ma5VmaShHPPvGdbiveVtrjiVbrxbsrIf5/M482Dc5M8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.LedgerSupply.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.LedgerSupply.html",
+          "hash": "xwrFxS4QnUIM3NgYCSBkQ695cCU8eUP+moTaoBeiaTE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ListKeysRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ListKeysRequest.html",
+          "hash": "0Ij4CXsTbdn2BWiixEq9mJewbat++D0jckk7FgF70qs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ListKeysResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ListKeysResponse.html",
+          "hash": "konoGYrTkHlJTn9POlhHa1QEuvlW5BmRx32ufdNFSQY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ListMultisigRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ListMultisigRequest.html",
+          "hash": "QfWONIhiTlcoQgJtYlx8Qm0h1F7krR403EX768gD3IM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ListMultisigResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ListMultisigResponse.html",
+          "hash": "kQc5jXIC8Xl22EMcaz1ORziZM81O3MEi6r53vEuF/Mk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ListWalletsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ListWalletsResponse.html",
+          "hash": "FJRdpvSMQHNM48wq34iFn3s/99iO0y3/2JDoEJzJ4KI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.LogicSig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.LogicSig.html",
+          "hash": "/SSrCaFhxzvicZaJK7wdusobTck/wfKIlnk0XvQfqsI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.LowLevel.ByteArray.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.LowLevel.ByteArray.html",
+          "hash": "IOv03YnfhY6E2+ddNUgwvNzE7ATxKeKIzAeipxCB5ao="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.LowLevel.ByteArrayComparer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.LowLevel.ByteArrayComparer-1.html",
+          "hash": "nsM8YQ6HMJ27qqiU/IzDfFDIDE3Pu+dcNxPTqtSBwnk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.LowLevel.FixedBytes128.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.LowLevel.FixedBytes128.html",
+          "hash": "X8aOLlANSgCCMh9NYWmoZbT1Rv6J+4ve1oa7zRdeMnc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.LowLevel.FixedBytes32.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.LowLevel.FixedBytes32.html",
+          "hash": "+PPZSSt7RYpA+nmXvwvHJNva7H9L6AHVPNJ8tizqTxg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.LowLevel.FixedBytes64.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.LowLevel.FixedBytes64.html",
+          "hash": "vlvnqCtVA6oMD+HMCCSLYhyAuIm39KdS91SL4ZjagGk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.LowLevel.IArray-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.LowLevel.IArray-1.html",
+          "hash": "FeAvYHt7ayD3PukNgYYx0Awwu3J6mfnZLCxKFvaxYyQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.LowLevel.IByteArray.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.LowLevel.IByteArray.html",
+          "hash": "/B8kYU18C0Lov3fnQaLcIlzlzzc8L7lsi/oweBPsB20="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.LowLevel.IContiguousArray-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.LowLevel.IContiguousArray-1.html",
+          "hash": "bJzgv4lM7ddCaNEsN03mpDrd8TOPZ5sT75qctjGe8Gk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.LowLevel.NativeArrayExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.LowLevel.NativeArrayExtensions.html",
+          "hash": "j3SreHXvR2QARK1gE19ZM/UVMdEucY6C/fuUti2aSWA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.LowLevel.NativeByteArray.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.LowLevel.NativeByteArray.html",
+          "hash": "55yAVFGHijfUw55okAcbxbFwI2XzeTbxlIOJjT/ykB8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.LowLevel.NativeReferenceOfDisposable-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.LowLevel.NativeReferenceOfDisposable-1.html",
+          "hash": "UcK80iRXwmOHzGQyuM37ZMR5/ooHHb0AxqmyRbFtcks="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.LowLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.LowLevel.html",
+          "hash": "NIiZ6yMtDx40j90/ZYNubql8B/NNNYe2TKwO/XAkBtY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.MerkleProof.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.MerkleProof.html",
+          "hash": "qUSahIzYe9BMYRB3hBAZqN+4K4uG+EaiPm3TySkpwMU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.MessagePack.BinaryUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.MessagePack.BinaryUtils.html",
+          "hash": "eJxGQBFBNPVpeP5jKMqTMz3YLO0sYswIdPeJ1479kwE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.MessagePack.ExtensionHeader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.MessagePack.ExtensionHeader.html",
+          "hash": "evYBnYq52YTCke/Y/p9nlBufUObGlxTEhXybuuNPCGk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.MessagePack.MessagePackCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.MessagePack.MessagePackCode.html",
+          "hash": "8m4vmcn+QdwusQ+6HPaUtwxyZ7RhCrpd08uDk7R9RVA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.MessagePack.MessagePackRange.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.MessagePack.MessagePackRange.html",
+          "hash": "58T/VveQJTM1E9olkzXg3NL9rU3+JvO5+c9DRMTO8u4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.MessagePack.MessagePackReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.MessagePack.MessagePackReader.html",
+          "hash": "JXHrrIj3wXJ2xlvqYhofvoKCo3gZXep4qph+xAsemlU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.MessagePack.MessagePackType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.MessagePack.MessagePackType.html",
+          "hash": "UdCyOFHsFzZu0vrLBjscQ3dkvlrch6giy0SQrK0AWiM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.MessagePack.MessagePackWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.MessagePack.MessagePackWriter.html",
+          "hash": "E3NTYsMqZdTWe1ZNqoL/lwSzkorpBzYmcHB1S8V+Sjg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.MessagePack.ReservedMessagePackExtensionTypeCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.MessagePack.ReservedMessagePackExtensionTypeCode.html",
+          "hash": "Jq9CusZtBSewZzcc1WNjuAAS+2zs/uNDoy3oheXvAlA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.MessagePack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.MessagePack.html",
+          "hash": "wgeMxuKpy1ZGnfzMNmMF9a5m1XKM+RW0BlvtMfHTGwY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.MiniAssetHolding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.MiniAssetHolding.html",
+          "hash": "hWqtSkQDBZBwwJs0ps8Jr/GT71h+ann8gXqS7yyF9+E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Mnemonic.Word.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Mnemonic.Word.html",
+          "hash": "lCFNzQrbYAVV2W/HOgXc7kPzqoSnixHtkb17bBUzg5s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Mnemonic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Mnemonic.html",
+          "hash": "k8BHLIYaIyQlogUrNjKH3aV9ZDoWN5XaUhgAUm4EuyY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Multisig.Subsig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Multisig.Subsig.html",
+          "hash": "sn2TdeSSaQ3Rd21llfRx0Gj+YZCTyRYvag3edqa7VME="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Multisig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Multisig.html",
+          "hash": "pZ8byNnono87GemLtw0OQuAv+m5PboTtM6MEs9wqvsw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.OnCompletion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.OnCompletion.html",
+          "hash": "dMTpF067+v4ejqznPnUkxQ/o3tZoW7dljR3smtni6c8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Optional-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Optional-1.html",
+          "hash": "vZyrKg5TFmzETBW9C0JZ0vkuMQhAkBDZuZ2IVv0RJvA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.PaymentTxn.Params.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.PaymentTxn.Params.html",
+          "hash": "E5Yb8AOqOOOnpr9i1RpiotDXBqFAiPdq2WfDXYGkdsc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.PaymentTxn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.PaymentTxn.html",
+          "hash": "QU+4YnVR+B4XE8EltmSNA2iJt/iSEfFy+eHjL1MBG5c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.PendingTransaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.PendingTransaction.html",
+          "hash": "Rf94RK0slz//xfUKjdf903dj+a8lLDV3jFF+9wcM7Fg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.PendingTransactions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.PendingTransactions.html",
+          "hash": "ECDZd7VL7uoyiFjOnNQkCKDHSG871CZlKa5Fqj74alw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.PrivateKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.PrivateKey.html",
+          "hash": "1o58trcjOCkLivNkkcpej/Pyo/s56jUSZHfvtesvTOk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ReleaseWalletHandleTokenRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ReleaseWalletHandleTokenRequest.html",
+          "hash": "daVbqlYsABAQ3z7nQlovoZechhY/NS+ZJCdVyVKCxok="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.RenameWalletRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.RenameWalletRequest.html",
+          "hash": "Tb721bseoP46oXPe5AidlT5x6sRba+TmN2Oon//NqOY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.RenameWalletResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.RenameWalletResponse.html",
+          "hash": "2ib/WwK4ZOXTGI5ldBLJqdhpO2a2T73VIt57AyMkVe4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.RenewWalletHandleTokenRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.RenewWalletHandleTokenRequest.html",
+          "hash": "AQ+HO6bNbIKudrc2e5JNbUQ5u0buCDhMDZSIAOljcdE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.RenewWalletHandleTokenResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.RenewWalletHandleTokenResponse.html",
+          "hash": "9ad14/Gs9VAbay+b8uW4fdti5hC5agEm5g/HJcUETUw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.SerializationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.SerializationException.html",
+          "hash": "F7Uj6ZMOYqDrUrFxPbrq5gdFmys4IEnisc+Z2bCp/go="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Sig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Sig.html",
+          "hash": "GsfaV5Zz3L1LbA4R44yRxw+V35Qf/5j8Rxs18A925AE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.SignMultisigRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.SignMultisigRequest.html",
+          "hash": "NnP6T74n6iPBeg8XHM1WweGZLr3L2mjHXYfB1oE1Pag="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.SignMultisigResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.SignMultisigResponse.html",
+          "hash": "D1p5o8YDYEMoFZFoiP4/qFgA4ALdPJ9APl3Hm7NAjbM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.SignProgramMultisigRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.SignProgramMultisigRequest.html",
+          "hash": "+nsJWF+SLiQX5t4S7NZO0pIcHZ3/l5dB6Me+RgDAasQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.SignProgramMultisigResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.SignProgramMultisigResponse.html",
+          "hash": "GZwQKmnBFe3P/TvuyA0IBKGI7UxWxG8AuVU/hv4TMCI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.SignProgramRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.SignProgramRequest.html",
+          "hash": "A0PMM9GK6mtpqqD9kqTiATvhZ7FF5DC7dLfzJWj3Lwk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.SignProgramResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.SignProgramResponse.html",
+          "hash": "ZgG/+ohxMjDJQJEnhYGJGBBHuC7zBXbHpz24F8VkNi4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.SignTransactionRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.SignTransactionRequest.html",
+          "hash": "Auge0TjD9se/oLJ8dyMZbrf2PRjE9a3NyLAr8BQV6Tk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.SignTransactionResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.SignTransactionResponse.html",
+          "hash": "4y+MjqNjnFRFj9T0odCxIHykx6pM9jI1dMvCGDSgKOk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.SignatureType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.SignatureType.html",
+          "hash": "ID+rx5HD+qeHUXazFg8JTmn5QKEoYleoDvUEEGlt5Pw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.SignatureTypeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.SignatureTypeExtensions.html",
+          "hash": "t+CbQGmS3/Ce4VrGMkUIL+1RQFJz1ubGJY0oTUhjAN4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Signed-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Signed-1.html",
+          "hash": "niNfpQxs0e9TNA55TkvICea1TtJszBZxhgOgQC3pr/c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.SignedTransaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.SignedTransaction.html",
+          "hash": "XQ2V3vi+Pvj/JOesbznmmsUlqfNtZz7o8soGiZuGWXM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.StateSchema.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.StateSchema.html",
+          "hash": "ffnhsYO7h/k+jk84FjZt/8F0jW5IzmFA4h7qE3OOJ2k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Status.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Status.html",
+          "hash": "GLpHaHN7e7Pp7RxpHwNWM10hqCTYN9ilBqqLj5NDzJg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.StringComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.StringComparer.html",
+          "hash": "YVtgbavbKbFctWET2BRjDIv2WjKEQPJN2IDy2GTS/FM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.TealBytes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.TealBytes.html",
+          "hash": "2CwbtGdBx+3Z0GHqDYUfXWv5xmgLxLWwRrzprMkvdv4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.TealCompilationResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.TealCompilationResult.html",
+          "hash": "ybUzq80RfkxGu3IcRs4glp4stV2j9wwzaRjBlPJdg1o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.TealKeyValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.TealKeyValue.html",
+          "hash": "qbn3htzMeaFiqik3h/wAWC5tj/owoyh4ApSnvkr7a7Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.TealValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.TealValue.html",
+          "hash": "vWvygLBCfW6TTJ7F35aFRmDpTIsWY8lAsqvLDkpODqk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.TealValueType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.TealValueType.html",
+          "hash": "y62MAj0vbyYasOIzUnxoYyFqrXZ4+Zr2T/jGklHJngk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.TokenizedClientExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.TokenizedClientExtensions.html",
+          "hash": "oOtx74lFtvk93q8FXOetcCpcu5fKyXDkslcN/Y31yDk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Transaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Transaction.html",
+          "hash": "KKq5rWRpWrw7nGaZXPb3hjoDELoxUGLy8FDH710PCWo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.TransactionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.TransactionExtensions.html",
+          "hash": "QZFRbVyQ8FaWe5ruKgeroqkxf9/xOwhzqr+VUq4sRf0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.TransactionGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.TransactionGroup.html",
+          "hash": "KhcRkLAxNzQYDvQEyilDGp2GnVVpxQnRLPlRyEritj0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.TransactionHeader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.TransactionHeader.html",
+          "hash": "nWnpoI2lzLd9OBaWldpFpf9DGCN73+X7jsLLSioDi3E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.TransactionId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.TransactionId.html",
+          "hash": "5YJM5CcfzuCQm9ISe3YjGfMQsx9fKxUHYPDufnJgo0U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.TransactionIdResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.TransactionIdResponse.html",
+          "hash": "rQRktEj3xms9Bi6KP+cLPePFCDiyhx+TlncWg0iDtPA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.TransactionParams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.TransactionParams.html",
+          "hash": "YgXnWL+vq1NGjQ3jYf4dRZj8YVS1QxmHRzAUaXKlSio="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.TransactionResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.TransactionResponse.html",
+          "hash": "WgSZm/FpRi4vno3lfptp3BUq6VPTK2D2AEfoKbhjCTI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.TransactionSignature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.TransactionSignature.html",
+          "hash": "HBlNs7wWv8gUtKoWhTdwJcY4+Pkc7DQzbiCx7bVck98="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.TransactionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.TransactionType.html",
+          "hash": "PqEkyHri2YzgZIaKi7MeJOTo/XB9TWOnyeh56uiUIJY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.TransactionTypeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.TransactionTypeExtensions.html",
+          "hash": "H1oSv6ngJLqX5OSi9+VCQnyqyM2v4oJRzGMXtsT6kps="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.TransactionsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.TransactionsResponse.html",
+          "hash": "677dcJaN05kDa+e/TjyrkO8wvQnj89IL6+SCWly7z+k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Utf8StringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Utf8StringExtensions.html",
+          "hash": "/E7SZfTGBp+s5ouyX+gciVN6NNe7AX9qkg+My0q+XHE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Version.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Version.html",
+          "hash": "9FZeil3vIjyQX7lITpzjt+7sKbIw4NVcl4lL00hb8go="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.VersionsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.VersionsResponse.html",
+          "hash": "DErP8C9IsY9EE4zDNuFNfk3pJF/JX9zIi/E6tHYCgw4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.VrfPubKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.VrfPubKey.html",
+          "hash": "prrSkO+jiWRyG5qUkRyLEYOj2Y2LfT/9zSR6uVZP26Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Wallet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Wallet.html",
+          "hash": "1JMBGxvzZflEpzvgXc32CwhsZtPbQPc3Qf8i6fjmks0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.WalletHandle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.WalletHandle.html",
+          "hash": "jBB5qjDwaxklnNoalB1GcMh9gkat5n9LzBoC5xL2it0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.WalletInfoRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.WalletInfoRequest.html",
+          "hash": "9SzXJhc+LEPdzqD8T/LN5k+mGosCVLvA5LKY0Ja1PmI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.WalletInfoResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.WalletInfoResponse.html",
+          "hash": "77tYPoTRB6CevJU0WyP/EjqijNXxdrrZPGJtfUS3cKA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.html",
+          "hash": "PVYMcs7aYbUVC/LqxS0TCx6EDXlxgprDSN730wb1yWw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "QYDGSaEKuHscPCGE2btEN99TO4a+rEauIkTb/JhVhCA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "changelog/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "changelog/toc.html",
+          "hash": "j/R7VsgfMrRj2PSFCxNuNW5i4MM9bx8I75x/hK6u+GE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "JjpxBsXonLI3F7SDZuI8oWc1lfqGRfpMm6PiE9Ovxp4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "license/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "license/toc.html",
+          "hash": "w1gCSlweAYAIHzJTzHx6nPUpaI/v9FzeJs7SRARy97c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/quickstart.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/quickstart.html",
+          "hash": "prEs+mGdiNft4m5T8oUI+guAvJgN2szzp6t7ycZdW1o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "manual/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "manual/toc.html",
+          "hash": "ACkLHOaDg3ZinHSC53K86GG+6IbfXc+LHoO2OIpjJyQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/favicon.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/favicon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/favicon.png.meta",
+      "output": {
+        "resource": {
+          "relative_path": "resources/favicon.png.meta"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "resources/logo.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/logo.svg.meta",
+      "output": {
+        "resource": {
+          "relative_path": "resources/logo.svg.meta"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "m4SOx9G2npI7vLspzglmkZypuKtM6qCTtqdFd1kTNmc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 5,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 285,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
