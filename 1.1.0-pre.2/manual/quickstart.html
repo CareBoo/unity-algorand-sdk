@@ -1,0 +1,409 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Quickstart | Unity Algorand SDK </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Quickstart | Unity Algorand SDK ">
+    <meta name="generator" content="docfx 2.58.5.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="quickstart">Quickstart</h1>
+
+<h2 id="install">Install</h2>
+<p>This SDK is provided as a UPM package in the following locations:</p>
+<ul>
+<li><a href="https://openupm.com/packages/com.careboo.unity-algorand-sdk">Open UPM</a></li>
+<li><a href="https://www.npmjs.com/package/com.careboo.unity-algorand-sdk">NPM Registry</a></li>
+<li><a href="https://github.com/CareBoo/unity-algorand-sdk/packages/894742">GitHub Package Registry</a></li>
+</ul>
+<p>The easiest way to install is to use Open UPM as it manages your scopes automatically.
+You can <a href="https://openupm.com/docs/getting-started.html">install Open UPM here</a>.
+Then use the Open UPM CLI at the root of your Unity project to install.</p>
+<pre><code class="lang-sh">&gt; cd &lt;your unity project&gt;
+&gt; openupm add com.careboo.unity-algorand-sdk
+</code></pre><p>Alternatively, this SDK is <a href="">available in the Unity Asset Store</a>.</p>
+<h2 id="create-an-account">Create an Account</h2>
+<p>The following code will generate a new account:</p>
+<pre><code class="lang-csharp">// using AlgoSdk;
+// using UnityEngine;
+
+var (privateKey, address) = Account.GenerateAccount();
+Debug.Log($&quot;My address: {address}&quot;);
+Debug.Log($&quot;My private key: {privateKey}&quot;);
+Debug.Log($&quot;My passphrase (mnemonic): {privateKey.ToMnemonic()}&quot;);
+</code></pre><p>Save your address and passphrase in a separate place.</p>
+<div class="WARNING"><h5>Warning</h5><p>Never share your private key or mnemonic. Production environments require stringent private key management.
+For more information on key management in community Wallets, click
+<a href="https://developer.algorand.org/ecosystem-projects/#wallets">here</a>.
+For the <a href="https://developer.algorand.org/articles/algorand-wallet-now-open-source/">Algorand open source wallet</a>,
+click <a href="https://github.com/algorand/algorand-wallet">here</a>.</p>
+</div>
+<h2 id="fund-the-account">Fund the Account</h2>
+<p>Before sending transactions to the Algorand network, the account must be funded to cover the minimal transaction fees that exist on Algorand. To fund the account use the <a href="https://dispenser.testnet.aws.algodev.network/">Algorand faucet</a>.</p>
+<h2 id="connect-to-a-node">Connect to a Node</h2>
+<div class="NOTE"><h5>Note</h5><p>Prerequisites:</p>
+<ul>
+<li><a href="https://docs.docker.com/compose/install/">Docker Compose</a></li>
+<li><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Git</a></li>
+</ul>
+</div>
+<p>The easiest way to access a node in development is via the Algorand Sandbox.</p>
+<pre><code class="lang-bash">&gt; git clone https://github.com/algorand/sandbox.git
+&gt; cd sandbox
+&gt; ./sandbox up testnet
+</code></pre><p>The <code>testnet</code> option will configure the network to use the testnet.</p>
+<div class="WARNING"><h5>Warning</h5><p>The sandbox installation may take a few minutes to startup in order to catch up to the current block round.
+To learn more about fast catchup, see <a href="https://developer.algorand.org/docs/run-a-node/setup/install/#sync-node-network-using-fast-catchup">Sync Node Network using Fast Catchup</a></p>
+</div>
+<p>Once the network is up and running, you should be able to connect to the <code>algod</code> service.
+Verify that the node is healthy and you can connect to it. Create a new <code>AlgodCheck</code> component
+that creates an <code>AlgodClient</code> on <code>Start()</code> and makes a <code>GetHealth()</code> request.</p>
+<pre><code class="lang-csharp">using AlgoSdk;
+using Cysharp.Threading.Tasks;
+using UnityEngine;
+
+public class AlgodCheck : MonoBehaviour
+{
+    AlgodClient algod;
+
+    public void Start()
+    {
+        algod = new AlgodClient(
+            address: &quot;http://localhost:4001&quot;,
+            token: &quot;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&quot;
+        );
+        CheckAlgodStatus().Forget();
+    }
+
+    public async UniTaskVoid CheckAlgodStatus()
+    {
+        var response = await algod.GetHealth();
+        if (response.Error.IsError)
+        {
+            Debug.LogError(response.Error.Message);
+        }
+        else
+        {
+            Debug.Log(&quot;Connected to algod!&quot;);
+        }
+    }
+}
+</code></pre><p>Add the <code>AlgodCheck</code> component to a <code>GameObject</code> in a new scene, and press <strong>Play</strong>. You should see the
+<code>Connected to algod!</code> message in the editor console. If you cannot connect, or the node is not healthy,
+then you should see an error message in the console.</p>
+<h2 id="check-your-balance">Check Your Balance</h2>
+<p>To verify your funds were added to your account, add the following method to your <code>AlgodCheck</code> script.
+Replace the address with the address of the account you generated earlier.</p>
+<pre><code class="lang-csharp">public async UniTaskVoid CheckBalance()
+{
+    var accountAddress = &quot;FLWI6UNTQ6CXTKSHOC7QPHYD2L3JVLIPWKNR5FECHX46VOE3DMY24BJASY&quot;;
+    var (error, accountInfo) = await algod.GetAccountInformation(accountAddress);
+    if (error.IsError)
+    {
+        Debug.LogError(error.Message);
+    }
+    else
+    {
+        Debug.Log($&quot;My account has {accountInfo.Amount / 1_000_000} algos&quot;);
+    }
+}
+</code></pre><p>Then call it in your <code>Start()</code> method.</p>
+<pre><code class="lang-csharp">public void Start()
+{
+    // [...]
+    CheckBalance().Forget();
+}
+</code></pre><p>Your balance should appear in the editor console when you press <strong>Play</strong> again.</p>
+<h2 id="send-a-transaction">Send a Transaction</h2>
+<p>The process for sending a transaction will look like</p>
+<ol>
+<li>Get the suggested <code>TransactionParams</code> from <code>AlgodClient.GetSuggestedParams()</code>. This contains information like the fee, the hash of the genesis block, and the latest round number.</li>
+<li>Create a transaction using the static creation methods found in the <code>Transaction</code> class. For a payment transaction, we&#39;re going to use <code>Transaction.Payment(Address sender, TransactionParams txnParams, Address receiver, ulong amount)</code>.</li>
+<li>Sign the transaction using either a secret key or a wallet.</li>
+<li>Send the signed transaction with <code>AlgodClient.SendTransaction&lt;T&gt;(Signed&lt;T&gt; txn)</code> and save its <code>TransactionId</code>.</li>
+<li>Wait for the transaction to be confirmed by polling <code>AlgodClient.GetPendingTransaction(TransactionId txid)</code> until it returns <code>PendingTransaction.ConfirmedRound &gt; 0</code> marking that it was confirmed.</li>
+</ol>
+<p>Add a new method, <code>MakePayment(PrivateKey privateKey, Address receiver, ulong amount)</code> that will send a <code>PaymentTxn</code>.</p>
+<pre><code class="lang-csharp">public async UniTaskVoid MakePayment(PrivateKey privateKey, Address receiver, ulong amount)
+{
+    // Get the secret key handle and the public key of the sender account.
+    // We&#39;ll use the secret key handle to sign the transaction.
+    // The public key will be used as the sender&#39;s Address.
+    using var keyPair = privateKey.ToKeyPair();
+
+    // Get the suggested transaction params
+    var (txnParamsError, txnParams) = await algod.GetSuggestedParams();
+    if (txnParamsError.IsError)
+    {
+        Debug.LogError(txnParamsError.Message);
+        return;
+    }
+
+    // Construct and sign the payment transaction
+    var paymentTxn = Transaction.Payment(
+        sender: keyPair.PublicKey,
+        txnParams: txnParams,
+        receiver: receiver,
+        amount: amount
+    );
+    var signedTxn = paymentTxn.Sign(keyPair.SecretKey);
+
+    // Send the transaction
+    var (sendTxnError, txid) = await algod.SendTransaction(signedTxn);
+    if (sendTxnError.IsError)
+    {
+        Debug.LogError(sendTxnError.Message);
+        return;
+    }
+
+    // Wait for the transaction to be confirmed
+    PendingTransaction pending = default;
+    ErrorResponse error = default;
+    while (pending.ConfirmedRound == 0)
+    {
+        (error, pending) = await algod.GetPendingTransaction(txid);
+        if (error.IsError)
+        {
+            Debug.LogError(error.Message);
+            return;
+        }
+        await UniTask.Delay(1000);
+    }
+
+    Debug.Log($&quot;Successfully made payment! Confirmed on round {pending.ConfirmedRound}&quot;);
+}
+</code></pre><p>To keep things simple, add a new <code>Update()</code> method that will invoke <code>MakePayment</code> whenever the player presses their spacebar.
+Replace the passphrase with the passphrase you generated earlier.</p>
+<pre><code class="lang-csharp">public void Update()
+{
+    if (Input.GetKeyDown(KeyCode.Space))
+    {
+        var privateKey = Mnemonic
+            .FromString(&quot;find paddle girl crumble hammer usual obvious toy actual obscure decorate lock bag inmate author valve course ship burger denial sibling tissue nominee above remove&quot;)
+            .ToPrivateKey();
+        ulong amount = 100_000;
+        Address receiver = &quot;HZ57J3K46JIJXILONBBZOHX6BKPXEM2VVXNRFSUED6DKFD5ZD24PMJ3MVA&quot;;
+        MakePayment(privateKey, receiver, amount).Forget();
+    }
+}
+</code></pre><p>Now press <strong>Play</strong> again, then press the spacebar. After a couple seconds, your transaction should be confirmed and you should see a
+&quot;Successfully made payment!&quot; message in the editor console.</p>
+<h2 id="complete-example">Complete Example</h2>
+<p>Here is the final code for <code>AlgodCheck</code> component.</p>
+<pre><code class="lang-csharp">using AlgoSdk;
+using Cysharp.Threading.Tasks;
+using UnityEngine;
+
+public class AlgodCheck : MonoBehaviour
+{
+    AlgodClient algod;
+
+    public void Start()
+    {
+        algod = new AlgodClient(
+            address: &quot;http://localhost:4001&quot;,
+            token: &quot;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&quot;
+        );
+        CheckAlgodStatus().Forget();
+        CheckBalance().Forget();
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            var privateKey = Mnemonic
+                .FromString(&quot;find paddle girl crumble hammer usual obvious toy actual obscure decorate lock bag inmate author valve course ship burger denial sibling tissue nominee above remove&quot;)
+                .ToPrivateKey();
+            ulong amount = 100_000;
+            Address receiver = &quot;HZ57J3K46JIJXILONBBZOHX6BKPXEM2VVXNRFSUED6DKFD5ZD24PMJ3MVA&quot;;
+            MakePayment(privateKey, receiver, amount).Forget();
+        }
+    }
+
+    public async UniTaskVoid CheckAlgodStatus()
+    {
+        var response = await algod.GetHealth();
+        if (response.Error.IsError)
+        {
+            Debug.LogError(response.Error.Message);
+        }
+        else
+        {
+            Debug.Log(&quot;Connected to algod!&quot;);
+        }
+    }
+
+    public async UniTaskVoid CheckBalance()
+    {
+        var accountAddress = &quot;FLWI6UNTQ6CXTKSHOC7QPHYD2L3JVLIPWKNR5FECHX46VOE3DMY24BJASY&quot;;
+        var (error, accountInfo) = await algod.GetAccountInformation(accountAddress);
+        if (error.IsError)
+        {
+            Debug.LogError(error.Message);
+        }
+        else
+        {
+            Debug.Log($&quot;My account has {accountInfo.Amount / 1_000_000} algos&quot;);
+        }
+    }
+
+    public async UniTaskVoid MakePayment(PrivateKey privateKey, Address receiver, ulong amount)
+    {
+        // Get the secret key handle and the public key of the sender account.
+        // We&#39;ll use the secret key handle to sign the transaction.
+        // The public key will be used as the sender&#39;s Address.
+        using var keyPair = privateKey.ToKeyPair();
+
+        // Get the suggested transaction params
+        var (txnParamsError, txnParams) = await algod.GetSuggestedParams();
+        if (txnParamsError.IsError)
+        {
+            Debug.LogError(txnParamsError.Message);
+            return;
+        }
+
+        // Construct and sign the payment transaction
+        var paymentTxn = Transaction.Payment(
+            sender: keyPair.PublicKey,
+            txnParams: txnParams,
+            receiver: receiver,
+            amount: amount
+        );
+        var signedTxn = paymentTxn.Sign(keyPair.SecretKey);
+
+        // Send the transaction
+        var (sendTxnError, txid) = await algod.SendTransaction(signedTxn);
+        if (sendTxnError.IsError)
+        {
+            Debug.LogError(sendTxnError.Message);
+            return;
+        }
+
+        // Wait for the transaction to be confirmed
+        PendingTransaction pending = default;
+        ErrorResponse error = default;
+        while (pending.ConfirmedRound == 0)
+        {
+            (error, pending) = await algod.GetPendingTransaction(txid);
+            if (error.IsError)
+            {
+                Debug.LogError(error.Message);
+                return;
+            }
+            await UniTask.Delay(1000);
+        }
+
+        Debug.Log($&quot;Successfully made payment! Confirmed on round {pending.ConfirmedRound}&quot;);
+    }
+}
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/CareBoo/unity-algorand-sdk/blob/exp/Packages/com.careboo.unity-algorand-sdk/Documentation/manual/quickstart.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
