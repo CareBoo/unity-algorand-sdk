@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [1.1.0-pre.3](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.1.0-pre.2...v1.1.0-pre.3) (2021-11-03)
+
+
+### Features
+
+* **editor:** Make many models serializable and add property drawers to render them in editor ([09185fc](https://github.com/CareBoo/unity-algorand-sdk/commit/09185fce14850cb2d4f9a42be98f077e090608ac)), closes [#41](https://github.com/CareBoo/unity-algorand-sdk/issues/41)
+
 # [1.1.0-pre.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.1.0-pre.1...v1.1.0-pre.2) (2021-11-01)
 
 
