@@ -40,7 +40,10 @@ Getting Started
 The [Manual](https://careboo.github.io/unity-algorand-sdk/main/) is the best place to start.
 Check out the [Quickstart Guide](https://careboo.github.io/unity-algorand-sdk/main/manual/quickstart.html).
 
+There's a Demo game you can try out in the [demo branch](https://github.com/CareBoo/unity-algorand-sdk/tree/demo).
+
 > [!Note]
 > The documentation is generated per release branch and version. The documentation for a specific version/branch
 > can be found at `https://careboo.github.io/unity-algorand-sdk/{version}/`, e.g.
 > https://careboo.github.io/unity-algorand-sdk/1.0.0-pre.3/
+
