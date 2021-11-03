@@ -5564,6 +5564,124 @@ references:
   commentId: F:AlgoSdk.CatchupMessage.Message
   fullName: AlgoSdk.CatchupMessage.Message
   nameWithType: CatchupMessage.Message
+- uid: AlgoSdk.CompiledTeal
+  name: CompiledTeal
+  href: api/AlgoSdk.CompiledTeal.html
+  commentId: T:AlgoSdk.CompiledTeal
+  fullName: AlgoSdk.CompiledTeal
+  nameWithType: CompiledTeal
+- uid: AlgoSdk.CompiledTeal.Bytes
+  name: Bytes
+  href: api/AlgoSdk.CompiledTeal.html#AlgoSdk_CompiledTeal_Bytes
+  commentId: F:AlgoSdk.CompiledTeal.Bytes
+  fullName: AlgoSdk.CompiledTeal.Bytes
+  nameWithType: CompiledTeal.Bytes
+- uid: AlgoSdk.CompiledTeal.Equals(AlgoSdk.CompiledTeal)
+  name: Equals(CompiledTeal)
+  href: api/AlgoSdk.CompiledTeal.html#AlgoSdk_CompiledTeal_Equals_AlgoSdk_CompiledTeal_
+  commentId: M:AlgoSdk.CompiledTeal.Equals(AlgoSdk.CompiledTeal)
+  fullName: AlgoSdk.CompiledTeal.Equals(AlgoSdk.CompiledTeal)
+  nameWithType: CompiledTeal.Equals(CompiledTeal)
+- uid: AlgoSdk.CompiledTeal.Equals(System.Byte[])
+  name: Equals(Byte[])
+  href: api/AlgoSdk.CompiledTeal.html#AlgoSdk_CompiledTeal_Equals_System_Byte___
+  commentId: M:AlgoSdk.CompiledTeal.Equals(System.Byte[])
+  name.vb: Equals(Byte())
+  fullName: AlgoSdk.CompiledTeal.Equals(System.Byte[])
+  fullName.vb: AlgoSdk.CompiledTeal.Equals(System.Byte())
+  nameWithType: CompiledTeal.Equals(Byte[])
+  nameWithType.vb: CompiledTeal.Equals(Byte())
+- uid: AlgoSdk.CompiledTeal.Equals*
+  name: Equals
+  href: api/AlgoSdk.CompiledTeal.html#AlgoSdk_CompiledTeal_Equals_
+  commentId: Overload:AlgoSdk.CompiledTeal.Equals
+  isSpec: "True"
+  fullName: AlgoSdk.CompiledTeal.Equals
+  nameWithType: CompiledTeal.Equals
+- uid: AlgoSdk.CompiledTeal.op_Implicit(AlgoSdk.CompiledTeal)~System.Byte[]
+  name: Implicit(CompiledTeal to Byte[])
+  href: api/AlgoSdk.CompiledTeal.html#AlgoSdk_CompiledTeal_op_Implicit_AlgoSdk_CompiledTeal__System_Byte__
+  commentId: M:AlgoSdk.CompiledTeal.op_Implicit(AlgoSdk.CompiledTeal)~System.Byte[]
+  name.vb: Widening(CompiledTeal to Byte())
+  fullName: AlgoSdk.CompiledTeal.Implicit(AlgoSdk.CompiledTeal to System.Byte[])
+  fullName.vb: AlgoSdk.CompiledTeal.Widening(AlgoSdk.CompiledTeal to System.Byte())
+  nameWithType: CompiledTeal.Implicit(CompiledTeal to Byte[])
+  nameWithType.vb: CompiledTeal.Widening(CompiledTeal to Byte())
+- uid: AlgoSdk.CompiledTeal.op_Implicit(System.Byte[])~AlgoSdk.CompiledTeal
+  name: Implicit(Byte[] to CompiledTeal)
+  href: api/AlgoSdk.CompiledTeal.html#AlgoSdk_CompiledTeal_op_Implicit_System_Byte____AlgoSdk_CompiledTeal
+  commentId: M:AlgoSdk.CompiledTeal.op_Implicit(System.Byte[])~AlgoSdk.CompiledTeal
+  name.vb: Widening(Byte() to CompiledTeal)
+  fullName: AlgoSdk.CompiledTeal.Implicit(System.Byte[] to AlgoSdk.CompiledTeal)
+  fullName.vb: AlgoSdk.CompiledTeal.Widening(System.Byte() to AlgoSdk.CompiledTeal)
+  nameWithType: CompiledTeal.Implicit(Byte[] to CompiledTeal)
+  nameWithType.vb: CompiledTeal.Widening(Byte() to CompiledTeal)
+- uid: AlgoSdk.CompiledTeal.op_Implicit*
+  name: Implicit
+  href: api/AlgoSdk.CompiledTeal.html#AlgoSdk_CompiledTeal_op_Implicit_
+  commentId: Overload:AlgoSdk.CompiledTeal.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: AlgoSdk.CompiledTeal.Implicit
+  fullName.vb: AlgoSdk.CompiledTeal.Widening
+  nameWithType: CompiledTeal.Implicit
+  nameWithType.vb: CompiledTeal.Widening
+- uid: AlgoSdk.CompiledTealFormatter
+  name: CompiledTealFormatter
+  href: api/AlgoSdk.CompiledTealFormatter.html
+  commentId: T:AlgoSdk.CompiledTealFormatter
+  fullName: AlgoSdk.CompiledTealFormatter
+  nameWithType: CompiledTealFormatter
+- uid: AlgoSdk.CompiledTealFormatter.Deserialize(JsonReader@)
+  name: Deserialize(ref JsonReader)
+  href: api/AlgoSdk.CompiledTealFormatter.html#AlgoSdk_CompiledTealFormatter_Deserialize_JsonReader__
+  commentId: M:AlgoSdk.CompiledTealFormatter.Deserialize(JsonReader@)
+  name.vb: Deserialize(ByRef JsonReader)
+  fullName: AlgoSdk.CompiledTealFormatter.Deserialize(ref JsonReader)
+  fullName.vb: AlgoSdk.CompiledTealFormatter.Deserialize(ByRef JsonReader)
+  nameWithType: CompiledTealFormatter.Deserialize(ref JsonReader)
+  nameWithType.vb: CompiledTealFormatter.Deserialize(ByRef JsonReader)
+- uid: AlgoSdk.CompiledTealFormatter.Deserialize(MessagePackReader@)
+  name: Deserialize(ref MessagePackReader)
+  href: api/AlgoSdk.CompiledTealFormatter.html#AlgoSdk_CompiledTealFormatter_Deserialize_MessagePackReader__
+  commentId: M:AlgoSdk.CompiledTealFormatter.Deserialize(MessagePackReader@)
+  name.vb: Deserialize(ByRef MessagePackReader)
+  fullName: AlgoSdk.CompiledTealFormatter.Deserialize(ref MessagePackReader)
+  fullName.vb: AlgoSdk.CompiledTealFormatter.Deserialize(ByRef MessagePackReader)
+  nameWithType: CompiledTealFormatter.Deserialize(ref MessagePackReader)
+  nameWithType.vb: CompiledTealFormatter.Deserialize(ByRef MessagePackReader)
+- uid: AlgoSdk.CompiledTealFormatter.Deserialize*
+  name: Deserialize
+  href: api/AlgoSdk.CompiledTealFormatter.html#AlgoSdk_CompiledTealFormatter_Deserialize_
+  commentId: Overload:AlgoSdk.CompiledTealFormatter.Deserialize
+  isSpec: "True"
+  fullName: AlgoSdk.CompiledTealFormatter.Deserialize
+  nameWithType: CompiledTealFormatter.Deserialize
+- uid: AlgoSdk.CompiledTealFormatter.Serialize(JsonWriter@,AlgoSdk.CompiledTeal)
+  name: Serialize(ref JsonWriter, CompiledTeal)
+  href: api/AlgoSdk.CompiledTealFormatter.html#AlgoSdk_CompiledTealFormatter_Serialize_JsonWriter__AlgoSdk_CompiledTeal_
+  commentId: M:AlgoSdk.CompiledTealFormatter.Serialize(JsonWriter@,AlgoSdk.CompiledTeal)
+  name.vb: Serialize(ByRef JsonWriter, CompiledTeal)
+  fullName: AlgoSdk.CompiledTealFormatter.Serialize(ref JsonWriter, AlgoSdk.CompiledTeal)
+  fullName.vb: AlgoSdk.CompiledTealFormatter.Serialize(ByRef JsonWriter, AlgoSdk.CompiledTeal)
+  nameWithType: CompiledTealFormatter.Serialize(ref JsonWriter, CompiledTeal)
+  nameWithType.vb: CompiledTealFormatter.Serialize(ByRef JsonWriter, CompiledTeal)
+- uid: AlgoSdk.CompiledTealFormatter.Serialize(MessagePackWriter@,AlgoSdk.CompiledTeal)
+  name: Serialize(ref MessagePackWriter, CompiledTeal)
+  href: api/AlgoSdk.CompiledTealFormatter.html#AlgoSdk_CompiledTealFormatter_Serialize_MessagePackWriter__AlgoSdk_CompiledTeal_
+  commentId: M:AlgoSdk.CompiledTealFormatter.Serialize(MessagePackWriter@,AlgoSdk.CompiledTeal)
+  name.vb: Serialize(ByRef MessagePackWriter, CompiledTeal)
+  fullName: AlgoSdk.CompiledTealFormatter.Serialize(ref MessagePackWriter, AlgoSdk.CompiledTeal)
+  fullName.vb: AlgoSdk.CompiledTealFormatter.Serialize(ByRef MessagePackWriter, AlgoSdk.CompiledTeal)
+  nameWithType: CompiledTealFormatter.Serialize(ref MessagePackWriter, CompiledTeal)
+  nameWithType.vb: CompiledTealFormatter.Serialize(ByRef MessagePackWriter, CompiledTeal)
+- uid: AlgoSdk.CompiledTealFormatter.Serialize*
+  name: Serialize
+  href: api/AlgoSdk.CompiledTealFormatter.html#AlgoSdk_CompiledTealFormatter_Serialize_
+  commentId: Overload:AlgoSdk.CompiledTealFormatter.Serialize
+  isSpec: "True"
+  fullName: AlgoSdk.CompiledTealFormatter.Serialize
+  nameWithType: CompiledTealFormatter.Serialize
 - uid: AlgoSdk.ContentType
   name: ContentType
   href: api/AlgoSdk.ContentType.html
@@ -6866,6 +6984,384 @@ references:
   commentId: F:AlgoSdk.DryrunTxnResult.LogicSigTrace
   fullName: AlgoSdk.DryrunTxnResult.LogicSigTrace
   nameWithType: DryrunTxnResult.LogicSigTrace
+- uid: AlgoSdk.Editor
+  name: AlgoSdk.Editor
+  href: api/AlgoSdk.Editor.html
+  commentId: N:AlgoSdk.Editor
+  fullName: AlgoSdk.Editor
+  nameWithType: AlgoSdk.Editor
+- uid: AlgoSdk.Editor.AddressDrawer
+  name: AddressDrawer
+  href: api/AlgoSdk.Editor.AddressDrawer.html
+  commentId: T:AlgoSdk.Editor.AddressDrawer
+  fullName: AlgoSdk.Editor.AddressDrawer
+  nameWithType: AddressDrawer
+- uid: AlgoSdk.Editor.AddressDrawer.GetByteArray(System.String)
+  name: GetByteArray(String)
+  href: api/AlgoSdk.Editor.AddressDrawer.html#AlgoSdk_Editor_AddressDrawer_GetByteArray_System_String_
+  commentId: M:AlgoSdk.Editor.AddressDrawer.GetByteArray(System.String)
+  fullName: AlgoSdk.Editor.AddressDrawer.GetByteArray(System.String)
+  nameWithType: AddressDrawer.GetByteArray(String)
+- uid: AlgoSdk.Editor.AddressDrawer.GetByteArray*
+  name: GetByteArray
+  href: api/AlgoSdk.Editor.AddressDrawer.html#AlgoSdk_Editor_AddressDrawer_GetByteArray_
+  commentId: Overload:AlgoSdk.Editor.AddressDrawer.GetByteArray
+  isSpec: "True"
+  fullName: AlgoSdk.Editor.AddressDrawer.GetByteArray
+  nameWithType: AddressDrawer.GetByteArray
+- uid: AlgoSdk.Editor.AddressDrawer.GetString(AlgoSdk.Address)
+  name: GetString(Address)
+  href: api/AlgoSdk.Editor.AddressDrawer.html#AlgoSdk_Editor_AddressDrawer_GetString_AlgoSdk_Address_
+  commentId: M:AlgoSdk.Editor.AddressDrawer.GetString(AlgoSdk.Address)
+  fullName: AlgoSdk.Editor.AddressDrawer.GetString(AlgoSdk.Address)
+  nameWithType: AddressDrawer.GetString(Address)
+- uid: AlgoSdk.Editor.AddressDrawer.GetString*
+  name: GetString
+  href: api/AlgoSdk.Editor.AddressDrawer.html#AlgoSdk_Editor_AddressDrawer_GetString_
+  commentId: Overload:AlgoSdk.Editor.AddressDrawer.GetString
+  isSpec: "True"
+  fullName: AlgoSdk.Editor.AddressDrawer.GetString
+  nameWithType: AddressDrawer.GetString
+- uid: AlgoSdk.Editor.Base32Drawer
+  name: Base32Drawer
+  href: api/AlgoSdk.Editor.Base32Drawer.html
+  commentId: T:AlgoSdk.Editor.Base32Drawer
+  fullName: AlgoSdk.Editor.Base32Drawer
+  nameWithType: Base32Drawer
+- uid: AlgoSdk.Editor.Base32Drawer.GetBytes(System.String)
+  name: GetBytes(String)
+  href: api/AlgoSdk.Editor.Base32Drawer.html#AlgoSdk_Editor_Base32Drawer_GetBytes_System_String_
+  commentId: M:AlgoSdk.Editor.Base32Drawer.GetBytes(System.String)
+  fullName: AlgoSdk.Editor.Base32Drawer.GetBytes(System.String)
+  nameWithType: Base32Drawer.GetBytes(String)
+- uid: AlgoSdk.Editor.Base32Drawer.GetBytes*
+  name: GetBytes
+  href: api/AlgoSdk.Editor.Base32Drawer.html#AlgoSdk_Editor_Base32Drawer_GetBytes_
+  commentId: Overload:AlgoSdk.Editor.Base32Drawer.GetBytes
+  isSpec: "True"
+  fullName: AlgoSdk.Editor.Base32Drawer.GetBytes
+  nameWithType: Base32Drawer.GetBytes
+- uid: AlgoSdk.Editor.Base32Drawer.GetString(List{System.Byte})
+  name: GetString(List<Byte>)
+  href: api/AlgoSdk.Editor.Base32Drawer.html#AlgoSdk_Editor_Base32Drawer_GetString_List_System_Byte__
+  commentId: M:AlgoSdk.Editor.Base32Drawer.GetString(List{System.Byte})
+  name.vb: GetString(List(Of Byte))
+  fullName: AlgoSdk.Editor.Base32Drawer.GetString(List<System.Byte>)
+  fullName.vb: AlgoSdk.Editor.Base32Drawer.GetString(List(Of System.Byte))
+  nameWithType: Base32Drawer.GetString(List<Byte>)
+  nameWithType.vb: Base32Drawer.GetString(List(Of Byte))
+- uid: AlgoSdk.Editor.Base32Drawer.GetString*
+  name: GetString
+  href: api/AlgoSdk.Editor.Base32Drawer.html#AlgoSdk_Editor_Base32Drawer_GetString_
+  commentId: Overload:AlgoSdk.Editor.Base32Drawer.GetString
+  isSpec: "True"
+  fullName: AlgoSdk.Editor.Base32Drawer.GetString
+  nameWithType: Base32Drawer.GetString
+- uid: AlgoSdk.Editor.Base64Drawer
+  name: Base64Drawer
+  href: api/AlgoSdk.Editor.Base64Drawer.html
+  commentId: T:AlgoSdk.Editor.Base64Drawer
+  fullName: AlgoSdk.Editor.Base64Drawer
+  nameWithType: Base64Drawer
+- uid: AlgoSdk.Editor.Base64Drawer.GetBytes(System.String)
+  name: GetBytes(String)
+  href: api/AlgoSdk.Editor.Base64Drawer.html#AlgoSdk_Editor_Base64Drawer_GetBytes_System_String_
+  commentId: M:AlgoSdk.Editor.Base64Drawer.GetBytes(System.String)
+  fullName: AlgoSdk.Editor.Base64Drawer.GetBytes(System.String)
+  nameWithType: Base64Drawer.GetBytes(String)
+- uid: AlgoSdk.Editor.Base64Drawer.GetBytes*
+  name: GetBytes
+  href: api/AlgoSdk.Editor.Base64Drawer.html#AlgoSdk_Editor_Base64Drawer_GetBytes_
+  commentId: Overload:AlgoSdk.Editor.Base64Drawer.GetBytes
+  isSpec: "True"
+  fullName: AlgoSdk.Editor.Base64Drawer.GetBytes
+  nameWithType: Base64Drawer.GetBytes
+- uid: AlgoSdk.Editor.Base64Drawer.GetString(List{System.Byte})
+  name: GetString(List<Byte>)
+  href: api/AlgoSdk.Editor.Base64Drawer.html#AlgoSdk_Editor_Base64Drawer_GetString_List_System_Byte__
+  commentId: M:AlgoSdk.Editor.Base64Drawer.GetString(List{System.Byte})
+  name.vb: GetString(List(Of Byte))
+  fullName: AlgoSdk.Editor.Base64Drawer.GetString(List<System.Byte>)
+  fullName.vb: AlgoSdk.Editor.Base64Drawer.GetString(List(Of System.Byte))
+  nameWithType: Base64Drawer.GetString(List<Byte>)
+  nameWithType.vb: Base64Drawer.GetString(List(Of Byte))
+- uid: AlgoSdk.Editor.Base64Drawer.GetString*
+  name: GetString
+  href: api/AlgoSdk.Editor.Base64Drawer.html#AlgoSdk_Editor_Base64Drawer_GetString_
+  commentId: Overload:AlgoSdk.Editor.Base64Drawer.GetString
+  isSpec: "True"
+  fullName: AlgoSdk.Editor.Base64Drawer.GetString
+  nameWithType: Base64Drawer.GetString
+- uid: AlgoSdk.Editor.BytesTextDrawer
+  name: BytesTextDrawer
+  href: api/AlgoSdk.Editor.BytesTextDrawer.html
+  commentId: T:AlgoSdk.Editor.BytesTextDrawer
+  fullName: AlgoSdk.Editor.BytesTextDrawer
+  nameWithType: BytesTextDrawer
+- uid: AlgoSdk.Editor.BytesTextDrawer.GetBytes(System.String)
+  name: GetBytes(String)
+  href: api/AlgoSdk.Editor.BytesTextDrawer.html#AlgoSdk_Editor_BytesTextDrawer_GetBytes_System_String_
+  commentId: M:AlgoSdk.Editor.BytesTextDrawer.GetBytes(System.String)
+  fullName: AlgoSdk.Editor.BytesTextDrawer.GetBytes(System.String)
+  nameWithType: BytesTextDrawer.GetBytes(String)
+- uid: AlgoSdk.Editor.BytesTextDrawer.GetBytes*
+  name: GetBytes
+  href: api/AlgoSdk.Editor.BytesTextDrawer.html#AlgoSdk_Editor_BytesTextDrawer_GetBytes_
+  commentId: Overload:AlgoSdk.Editor.BytesTextDrawer.GetBytes
+  isSpec: "True"
+  fullName: AlgoSdk.Editor.BytesTextDrawer.GetBytes
+  nameWithType: BytesTextDrawer.GetBytes
+- uid: AlgoSdk.Editor.BytesTextDrawer.GetString(List{System.Byte})
+  name: GetString(List<Byte>)
+  href: api/AlgoSdk.Editor.BytesTextDrawer.html#AlgoSdk_Editor_BytesTextDrawer_GetString_List_System_Byte__
+  commentId: M:AlgoSdk.Editor.BytesTextDrawer.GetString(List{System.Byte})
+  name.vb: GetString(List(Of Byte))
+  fullName: AlgoSdk.Editor.BytesTextDrawer.GetString(List<System.Byte>)
+  fullName.vb: AlgoSdk.Editor.BytesTextDrawer.GetString(List(Of System.Byte))
+  nameWithType: BytesTextDrawer.GetString(List<Byte>)
+  nameWithType.vb: BytesTextDrawer.GetString(List(Of Byte))
+- uid: AlgoSdk.Editor.BytesTextDrawer.GetString*
+  name: GetString
+  href: api/AlgoSdk.Editor.BytesTextDrawer.html#AlgoSdk_Editor_BytesTextDrawer_GetString_
+  commentId: Overload:AlgoSdk.Editor.BytesTextDrawer.GetString
+  isSpec: "True"
+  fullName: AlgoSdk.Editor.BytesTextDrawer.GetString
+  nameWithType: BytesTextDrawer.GetString
+- uid: AlgoSdk.Editor.BytesTextDrawer.OnGUI(Rect,SerializedProperty,GUIContent)
+  name: OnGUI(Rect, SerializedProperty, GUIContent)
+  href: api/AlgoSdk.Editor.BytesTextDrawer.html#AlgoSdk_Editor_BytesTextDrawer_OnGUI_Rect_SerializedProperty_GUIContent_
+  commentId: M:AlgoSdk.Editor.BytesTextDrawer.OnGUI(Rect,SerializedProperty,GUIContent)
+  fullName: AlgoSdk.Editor.BytesTextDrawer.OnGUI(Rect, SerializedProperty, GUIContent)
+  nameWithType: BytesTextDrawer.OnGUI(Rect, SerializedProperty, GUIContent)
+- uid: AlgoSdk.Editor.BytesTextDrawer.OnGUI*
+  name: OnGUI
+  href: api/AlgoSdk.Editor.BytesTextDrawer.html#AlgoSdk_Editor_BytesTextDrawer_OnGUI_
+  commentId: Overload:AlgoSdk.Editor.BytesTextDrawer.OnGUI
+  isSpec: "True"
+  fullName: AlgoSdk.Editor.BytesTextDrawer.OnGUI
+  nameWithType: BytesTextDrawer.OnGUI
+- uid: AlgoSdk.Editor.BytesTextDrawer`1
+  name: BytesTextDrawer<T>
+  href: api/AlgoSdk.Editor.BytesTextDrawer-1.html
+  commentId: T:AlgoSdk.Editor.BytesTextDrawer`1
+  name.vb: BytesTextDrawer(Of T)
+  fullName: AlgoSdk.Editor.BytesTextDrawer<T>
+  fullName.vb: AlgoSdk.Editor.BytesTextDrawer(Of T)
+  nameWithType: BytesTextDrawer<T>
+  nameWithType.vb: BytesTextDrawer(Of T)
+- uid: AlgoSdk.Editor.BytesTextDrawer`1.GetByteArray(System.String)
+  name: GetByteArray(String)
+  href: api/AlgoSdk.Editor.BytesTextDrawer-1.html#AlgoSdk_Editor_BytesTextDrawer_1_GetByteArray_System_String_
+  commentId: M:AlgoSdk.Editor.BytesTextDrawer`1.GetByteArray(System.String)
+  fullName: AlgoSdk.Editor.BytesTextDrawer<T>.GetByteArray(System.String)
+  fullName.vb: AlgoSdk.Editor.BytesTextDrawer(Of T).GetByteArray(System.String)
+  nameWithType: BytesTextDrawer<T>.GetByteArray(String)
+  nameWithType.vb: BytesTextDrawer(Of T).GetByteArray(String)
+- uid: AlgoSdk.Editor.BytesTextDrawer`1.GetByteArray*
+  name: GetByteArray
+  href: api/AlgoSdk.Editor.BytesTextDrawer-1.html#AlgoSdk_Editor_BytesTextDrawer_1_GetByteArray_
+  commentId: Overload:AlgoSdk.Editor.BytesTextDrawer`1.GetByteArray
+  isSpec: "True"
+  fullName: AlgoSdk.Editor.BytesTextDrawer<T>.GetByteArray
+  fullName.vb: AlgoSdk.Editor.BytesTextDrawer(Of T).GetByteArray
+  nameWithType: BytesTextDrawer<T>.GetByteArray
+  nameWithType.vb: BytesTextDrawer(Of T).GetByteArray
+- uid: AlgoSdk.Editor.BytesTextDrawer`1.GetBytes(System.String)
+  name: GetBytes(String)
+  href: api/AlgoSdk.Editor.BytesTextDrawer-1.html#AlgoSdk_Editor_BytesTextDrawer_1_GetBytes_System_String_
+  commentId: M:AlgoSdk.Editor.BytesTextDrawer`1.GetBytes(System.String)
+  fullName: AlgoSdk.Editor.BytesTextDrawer<T>.GetBytes(System.String)
+  fullName.vb: AlgoSdk.Editor.BytesTextDrawer(Of T).GetBytes(System.String)
+  nameWithType: BytesTextDrawer<T>.GetBytes(String)
+  nameWithType.vb: BytesTextDrawer(Of T).GetBytes(String)
+- uid: AlgoSdk.Editor.BytesTextDrawer`1.GetBytes*
+  name: GetBytes
+  href: api/AlgoSdk.Editor.BytesTextDrawer-1.html#AlgoSdk_Editor_BytesTextDrawer_1_GetBytes_
+  commentId: Overload:AlgoSdk.Editor.BytesTextDrawer`1.GetBytes
+  isSpec: "True"
+  fullName: AlgoSdk.Editor.BytesTextDrawer<T>.GetBytes
+  fullName.vb: AlgoSdk.Editor.BytesTextDrawer(Of T).GetBytes
+  nameWithType: BytesTextDrawer<T>.GetBytes
+  nameWithType.vb: BytesTextDrawer(Of T).GetBytes
+- uid: AlgoSdk.Editor.BytesTextDrawer`1.GetString(`0)
+  name: GetString(T)
+  href: api/AlgoSdk.Editor.BytesTextDrawer-1.html#AlgoSdk_Editor_BytesTextDrawer_1_GetString__0_
+  commentId: M:AlgoSdk.Editor.BytesTextDrawer`1.GetString(`0)
+  fullName: AlgoSdk.Editor.BytesTextDrawer<T>.GetString(T)
+  fullName.vb: AlgoSdk.Editor.BytesTextDrawer(Of T).GetString(T)
+  nameWithType: BytesTextDrawer<T>.GetString(T)
+  nameWithType.vb: BytesTextDrawer(Of T).GetString(T)
+- uid: AlgoSdk.Editor.BytesTextDrawer`1.GetString(List{System.Byte})
+  name: GetString(List<Byte>)
+  href: api/AlgoSdk.Editor.BytesTextDrawer-1.html#AlgoSdk_Editor_BytesTextDrawer_1_GetString_List_System_Byte__
+  commentId: M:AlgoSdk.Editor.BytesTextDrawer`1.GetString(List{System.Byte})
+  name.vb: GetString(List(Of Byte))
+  fullName: AlgoSdk.Editor.BytesTextDrawer<T>.GetString(List<System.Byte>)
+  fullName.vb: AlgoSdk.Editor.BytesTextDrawer(Of T).GetString(List(Of System.Byte))
+  nameWithType: BytesTextDrawer<T>.GetString(List<Byte>)
+  nameWithType.vb: BytesTextDrawer(Of T).GetString(List(Of Byte))
+- uid: AlgoSdk.Editor.BytesTextDrawer`1.GetString*
+  name: GetString
+  href: api/AlgoSdk.Editor.BytesTextDrawer-1.html#AlgoSdk_Editor_BytesTextDrawer_1_GetString_
+  commentId: Overload:AlgoSdk.Editor.BytesTextDrawer`1.GetString
+  isSpec: "True"
+  fullName: AlgoSdk.Editor.BytesTextDrawer<T>.GetString
+  fullName.vb: AlgoSdk.Editor.BytesTextDrawer(Of T).GetString
+  nameWithType: BytesTextDrawer<T>.GetString
+  nameWithType.vb: BytesTextDrawer(Of T).GetString
+- uid: AlgoSdk.Editor.CompiledTealDrawer
+  name: CompiledTealDrawer
+  href: api/AlgoSdk.Editor.CompiledTealDrawer.html
+  commentId: T:AlgoSdk.Editor.CompiledTealDrawer
+  fullName: AlgoSdk.Editor.CompiledTealDrawer
+  nameWithType: CompiledTealDrawer
+- uid: AlgoSdk.Editor.CompiledTealDrawer.OnGUI(Rect,SerializedProperty,GUIContent)
+  name: OnGUI(Rect, SerializedProperty, GUIContent)
+  href: api/AlgoSdk.Editor.CompiledTealDrawer.html#AlgoSdk_Editor_CompiledTealDrawer_OnGUI_Rect_SerializedProperty_GUIContent_
+  commentId: M:AlgoSdk.Editor.CompiledTealDrawer.OnGUI(Rect,SerializedProperty,GUIContent)
+  fullName: AlgoSdk.Editor.CompiledTealDrawer.OnGUI(Rect, SerializedProperty, GUIContent)
+  nameWithType: CompiledTealDrawer.OnGUI(Rect, SerializedProperty, GUIContent)
+- uid: AlgoSdk.Editor.CompiledTealDrawer.OnGUI*
+  name: OnGUI
+  href: api/AlgoSdk.Editor.CompiledTealDrawer.html#AlgoSdk_Editor_CompiledTealDrawer_OnGUI_
+  commentId: Overload:AlgoSdk.Editor.CompiledTealDrawer.OnGUI
+  isSpec: "True"
+  fullName: AlgoSdk.Editor.CompiledTealDrawer.OnGUI
+  nameWithType: CompiledTealDrawer.OnGUI
+- uid: AlgoSdk.Editor.FixedStringDrawer
+  name: FixedStringDrawer
+  href: api/AlgoSdk.Editor.FixedStringDrawer.html
+  commentId: T:AlgoSdk.Editor.FixedStringDrawer
+  fullName: AlgoSdk.Editor.FixedStringDrawer
+  nameWithType: FixedStringDrawer
+- uid: AlgoSdk.Editor.FixedStringDrawer.OnGUI(Rect,SerializedProperty,GUIContent)
+  name: OnGUI(Rect, SerializedProperty, GUIContent)
+  href: api/AlgoSdk.Editor.FixedStringDrawer.html#AlgoSdk_Editor_FixedStringDrawer_OnGUI_Rect_SerializedProperty_GUIContent_
+  commentId: M:AlgoSdk.Editor.FixedStringDrawer.OnGUI(Rect,SerializedProperty,GUIContent)
+  fullName: AlgoSdk.Editor.FixedStringDrawer.OnGUI(Rect, SerializedProperty, GUIContent)
+  nameWithType: FixedStringDrawer.OnGUI(Rect, SerializedProperty, GUIContent)
+- uid: AlgoSdk.Editor.FixedStringDrawer.OnGUI*
+  name: OnGUI
+  href: api/AlgoSdk.Editor.FixedStringDrawer.html#AlgoSdk_Editor_FixedStringDrawer_OnGUI_
+  commentId: Overload:AlgoSdk.Editor.FixedStringDrawer.OnGUI
+  isSpec: "True"
+  fullName: AlgoSdk.Editor.FixedStringDrawer.OnGUI
+  nameWithType: FixedStringDrawer.OnGUI
+- uid: AlgoSdk.Editor.MnemonicDrawer
+  name: MnemonicDrawer
+  href: api/AlgoSdk.Editor.MnemonicDrawer.html
+  commentId: T:AlgoSdk.Editor.MnemonicDrawer
+  fullName: AlgoSdk.Editor.MnemonicDrawer
+  nameWithType: MnemonicDrawer
+- uid: AlgoSdk.Editor.MnemonicDrawer.GetBytes(System.String)
+  name: GetBytes(String)
+  href: api/AlgoSdk.Editor.MnemonicDrawer.html#AlgoSdk_Editor_MnemonicDrawer_GetBytes_System_String_
+  commentId: M:AlgoSdk.Editor.MnemonicDrawer.GetBytes(System.String)
+  fullName: AlgoSdk.Editor.MnemonicDrawer.GetBytes(System.String)
+  nameWithType: MnemonicDrawer.GetBytes(String)
+- uid: AlgoSdk.Editor.MnemonicDrawer.GetBytes*
+  name: GetBytes
+  href: api/AlgoSdk.Editor.MnemonicDrawer.html#AlgoSdk_Editor_MnemonicDrawer_GetBytes_
+  commentId: Overload:AlgoSdk.Editor.MnemonicDrawer.GetBytes
+  isSpec: "True"
+  fullName: AlgoSdk.Editor.MnemonicDrawer.GetBytes
+  nameWithType: MnemonicDrawer.GetBytes
+- uid: AlgoSdk.Editor.MnemonicDrawer.GetString(List{System.Byte})
+  name: GetString(List<Byte>)
+  href: api/AlgoSdk.Editor.MnemonicDrawer.html#AlgoSdk_Editor_MnemonicDrawer_GetString_List_System_Byte__
+  commentId: M:AlgoSdk.Editor.MnemonicDrawer.GetString(List{System.Byte})
+  name.vb: GetString(List(Of Byte))
+  fullName: AlgoSdk.Editor.MnemonicDrawer.GetString(List<System.Byte>)
+  fullName.vb: AlgoSdk.Editor.MnemonicDrawer.GetString(List(Of System.Byte))
+  nameWithType: MnemonicDrawer.GetString(List<Byte>)
+  nameWithType.vb: MnemonicDrawer.GetString(List(Of Byte))
+- uid: AlgoSdk.Editor.MnemonicDrawer.GetString*
+  name: GetString
+  href: api/AlgoSdk.Editor.MnemonicDrawer.html#AlgoSdk_Editor_MnemonicDrawer_GetString_
+  commentId: Overload:AlgoSdk.Editor.MnemonicDrawer.GetString
+  isSpec: "True"
+  fullName: AlgoSdk.Editor.MnemonicDrawer.GetString
+  nameWithType: MnemonicDrawer.GetString
+- uid: AlgoSdk.Editor.PrivateKeyDrawer
+  name: PrivateKeyDrawer
+  href: api/AlgoSdk.Editor.PrivateKeyDrawer.html
+  commentId: T:AlgoSdk.Editor.PrivateKeyDrawer
+  fullName: AlgoSdk.Editor.PrivateKeyDrawer
+  nameWithType: PrivateKeyDrawer
+- uid: AlgoSdk.Editor.PrivateKeyDrawer.GetByteArray(System.String)
+  name: GetByteArray(String)
+  href: api/AlgoSdk.Editor.PrivateKeyDrawer.html#AlgoSdk_Editor_PrivateKeyDrawer_GetByteArray_System_String_
+  commentId: M:AlgoSdk.Editor.PrivateKeyDrawer.GetByteArray(System.String)
+  fullName: AlgoSdk.Editor.PrivateKeyDrawer.GetByteArray(System.String)
+  nameWithType: PrivateKeyDrawer.GetByteArray(String)
+- uid: AlgoSdk.Editor.PrivateKeyDrawer.GetByteArray*
+  name: GetByteArray
+  href: api/AlgoSdk.Editor.PrivateKeyDrawer.html#AlgoSdk_Editor_PrivateKeyDrawer_GetByteArray_
+  commentId: Overload:AlgoSdk.Editor.PrivateKeyDrawer.GetByteArray
+  isSpec: "True"
+  fullName: AlgoSdk.Editor.PrivateKeyDrawer.GetByteArray
+  nameWithType: PrivateKeyDrawer.GetByteArray
+- uid: AlgoSdk.Editor.PrivateKeyDrawer.GetString(AlgoSdk.PrivateKey)
+  name: GetString(PrivateKey)
+  href: api/AlgoSdk.Editor.PrivateKeyDrawer.html#AlgoSdk_Editor_PrivateKeyDrawer_GetString_AlgoSdk_PrivateKey_
+  commentId: M:AlgoSdk.Editor.PrivateKeyDrawer.GetString(AlgoSdk.PrivateKey)
+  fullName: AlgoSdk.Editor.PrivateKeyDrawer.GetString(AlgoSdk.PrivateKey)
+  nameWithType: PrivateKeyDrawer.GetString(PrivateKey)
+- uid: AlgoSdk.Editor.PrivateKeyDrawer.GetString*
+  name: GetString
+  href: api/AlgoSdk.Editor.PrivateKeyDrawer.html#AlgoSdk_Editor_PrivateKeyDrawer_GetString_
+  commentId: Overload:AlgoSdk.Editor.PrivateKeyDrawer.GetString
+  isSpec: "True"
+  fullName: AlgoSdk.Editor.PrivateKeyDrawer.GetString
+  nameWithType: PrivateKeyDrawer.GetString
+- uid: AlgoSdk.Editor.SerializedBytes
+  name: SerializedBytes
+  href: api/AlgoSdk.Editor.SerializedBytes.html
+  commentId: T:AlgoSdk.Editor.SerializedBytes
+  fullName: AlgoSdk.Editor.SerializedBytes
+  nameWithType: SerializedBytes
+- uid: AlgoSdk.Editor.SerializedBytes.#ctor(SerializedProperty)
+  name: SerializedBytes(SerializedProperty)
+  href: api/AlgoSdk.Editor.SerializedBytes.html#AlgoSdk_Editor_SerializedBytes__ctor_SerializedProperty_
+  commentId: M:AlgoSdk.Editor.SerializedBytes.#ctor(SerializedProperty)
+  fullName: AlgoSdk.Editor.SerializedBytes.SerializedBytes(SerializedProperty)
+  nameWithType: SerializedBytes.SerializedBytes(SerializedProperty)
+- uid: AlgoSdk.Editor.SerializedBytes.#ctor*
+  name: SerializedBytes
+  href: api/AlgoSdk.Editor.SerializedBytes.html#AlgoSdk_Editor_SerializedBytes__ctor_
+  commentId: Overload:AlgoSdk.Editor.SerializedBytes.#ctor
+  isSpec: "True"
+  fullName: AlgoSdk.Editor.SerializedBytes.SerializedBytes
+  nameWithType: SerializedBytes.SerializedBytes
+- uid: AlgoSdk.Editor.SerializedBytes.GetBytes
+  name: GetBytes()
+  href: api/AlgoSdk.Editor.SerializedBytes.html#AlgoSdk_Editor_SerializedBytes_GetBytes
+  commentId: M:AlgoSdk.Editor.SerializedBytes.GetBytes
+  fullName: AlgoSdk.Editor.SerializedBytes.GetBytes()
+  nameWithType: SerializedBytes.GetBytes()
+- uid: AlgoSdk.Editor.SerializedBytes.GetBytes*
+  name: GetBytes
+  href: api/AlgoSdk.Editor.SerializedBytes.html#AlgoSdk_Editor_SerializedBytes_GetBytes_
+  commentId: Overload:AlgoSdk.Editor.SerializedBytes.GetBytes
+  isSpec: "True"
+  fullName: AlgoSdk.Editor.SerializedBytes.GetBytes
+  nameWithType: SerializedBytes.GetBytes
+- uid: AlgoSdk.Editor.SerializedBytes.SetBytes(List{System.Byte})
+  name: SetBytes(List<Byte>)
+  href: api/AlgoSdk.Editor.SerializedBytes.html#AlgoSdk_Editor_SerializedBytes_SetBytes_List_System_Byte__
+  commentId: M:AlgoSdk.Editor.SerializedBytes.SetBytes(List{System.Byte})
+  name.vb: SetBytes(List(Of Byte))
+  fullName: AlgoSdk.Editor.SerializedBytes.SetBytes(List<System.Byte>)
+  fullName.vb: AlgoSdk.Editor.SerializedBytes.SetBytes(List(Of System.Byte))
+  nameWithType: SerializedBytes.SetBytes(List<Byte>)
+  nameWithType.vb: SerializedBytes.SetBytes(List(Of Byte))
+- uid: AlgoSdk.Editor.SerializedBytes.SetBytes*
+  name: SetBytes
+  href: api/AlgoSdk.Editor.SerializedBytes.html#AlgoSdk_Editor_SerializedBytes_SetBytes_
+  commentId: Overload:AlgoSdk.Editor.SerializedBytes.SetBytes
+  isSpec: "True"
+  fullName: AlgoSdk.Editor.SerializedBytes.SetBytes
+  nameWithType: SerializedBytes.SetBytes
 - uid: AlgoSdk.Endianness
   name: Endianness
   href: api/AlgoSdk.Endianness.html
@@ -10241,6 +10737,19 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.IAssetTransferTxn.AssetSender
   nameWithType: IAssetTransferTxn.AssetSender
+- uid: AlgoSdk.IAssetTransferTxn.CloseAmount
+  name: CloseAmount
+  href: api/AlgoSdk.IAssetTransferTxn.html#AlgoSdk_IAssetTransferTxn_CloseAmount
+  commentId: P:AlgoSdk.IAssetTransferTxn.CloseAmount
+  fullName: AlgoSdk.IAssetTransferTxn.CloseAmount
+  nameWithType: IAssetTransferTxn.CloseAmount
+- uid: AlgoSdk.IAssetTransferTxn.CloseAmount*
+  name: CloseAmount
+  href: api/AlgoSdk.IAssetTransferTxn.html#AlgoSdk_IAssetTransferTxn_CloseAmount_
+  commentId: Overload:AlgoSdk.IAssetTransferTxn.CloseAmount
+  isSpec: "True"
+  fullName: AlgoSdk.IAssetTransferTxn.CloseAmount
+  nameWithType: IAssetTransferTxn.CloseAmount
 - uid: AlgoSdk.IAssetTransferTxn.XferAsset
   name: XferAsset
   href: api/AlgoSdk.IAssetTransferTxn.html#AlgoSdk_IAssetTransferTxn_XferAsset
@@ -15806,6 +16315,19 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Mnemonic.FromString
   nameWithType: Mnemonic.FromString
+- uid: AlgoSdk.Mnemonic.GetUnsafePtr
+  name: GetUnsafePtr()
+  href: api/AlgoSdk.Mnemonic.html#AlgoSdk_Mnemonic_GetUnsafePtr
+  commentId: M:AlgoSdk.Mnemonic.GetUnsafePtr
+  fullName: AlgoSdk.Mnemonic.GetUnsafePtr()
+  nameWithType: Mnemonic.GetUnsafePtr()
+- uid: AlgoSdk.Mnemonic.GetUnsafePtr*
+  name: GetUnsafePtr
+  href: api/AlgoSdk.Mnemonic.html#AlgoSdk_Mnemonic_GetUnsafePtr_
+  commentId: Overload:AlgoSdk.Mnemonic.GetUnsafePtr
+  isSpec: "True"
+  fullName: AlgoSdk.Mnemonic.GetUnsafePtr
+  nameWithType: Mnemonic.GetUnsafePtr
 - uid: AlgoSdk.Mnemonic.Item(System.Int32)
   name: Item[Int32]
   href: api/AlgoSdk.Mnemonic.html#AlgoSdk_Mnemonic_Item_System_Int32_
@@ -15856,6 +16378,12 @@ references:
   fullName.vb: AlgoSdk.Mnemonic.Widening
   nameWithType: Mnemonic.Implicit
   nameWithType.vb: Mnemonic.Widening
+- uid: AlgoSdk.Mnemonic.SizeBytes
+  name: SizeBytes
+  href: api/AlgoSdk.Mnemonic.html#AlgoSdk_Mnemonic_SizeBytes
+  commentId: F:AlgoSdk.Mnemonic.SizeBytes
+  fullName: AlgoSdk.Mnemonic.SizeBytes
+  nameWithType: Mnemonic.SizeBytes
 - uid: AlgoSdk.Mnemonic.ToPrivateKey
   name: ToPrivateKey()
   href: api/AlgoSdk.Mnemonic.html#AlgoSdk_Mnemonic_ToPrivateKey

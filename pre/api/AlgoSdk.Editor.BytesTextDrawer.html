@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Struct BlockRewards
+    <title>Class BytesTextDrawer
    | Unity Algorand SDK </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Struct BlockRewards
+    <meta name="title" content="Class BytesTextDrawer
    | Unity Algorand SDK ">
     <meta name="generator" content="docfx 2.58.5.0">
     
@@ -78,187 +78,39 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="AlgoSdk.BlockRewards">
+            <article class="content wrap" id="_content" data-uid="AlgoSdk.Editor.BytesTextDrawer">
   
   
-  <h1 id="AlgoSdk_BlockRewards" data-uid="AlgoSdk.BlockRewards" class="text-break">Struct BlockRewards
+  <h1 id="AlgoSdk_Editor_BytesTextDrawer" data-uid="AlgoSdk.Editor.BytesTextDrawer" class="text-break">Class BytesTextDrawer
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.BlockRewards.html">BlockRewards</a>&gt;</div>
-    <div><a class="xref" href="AlgoSdk.IBlockRewards.html">IBlockRewards</a></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">BytesTextDrawer</span></div>
+      <div class="level2"><a class="xref" href="AlgoSdk.Editor.Base32Drawer.html">Base32Drawer</a></div>
+      <div class="level2"><a class="xref" href="AlgoSdk.Editor.Base64Drawer.html">Base64Drawer</a></div>
+      <div class="level2"><a class="xref" href="AlgoSdk.Editor.BytesTextDrawer-1.html">BytesTextDrawer&lt;T&gt;</a></div>
+      <div class="level2"><a class="xref" href="AlgoSdk.Editor.MnemonicDrawer.html">MnemonicDrawer</a></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.Editor.html">AlgoSdk.Editor</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="AlgoSdk_BlockRewards_syntax">Syntax</h5>
+  <h5 id="AlgoSdk_Editor_BytesTextDrawer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct BlockRewards : IEquatable&lt;BlockRewards&gt;, IBlockRewards</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class BytesTextDrawer : PropertyDrawer</code></pre>
   </div>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="AlgoSdk_BlockRewards_FeeSink_" data-uid="AlgoSdk.BlockRewards.FeeSink*"></a>
-  <h4 id="AlgoSdk_BlockRewards_FeeSink" data-uid="AlgoSdk.BlockRewards.FeeSink">FeeSink</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address FeeSink { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_BlockRewards_RewardsCalculationRound_" data-uid="AlgoSdk.BlockRewards.RewardsCalculationRound*"></a>
-  <h4 id="AlgoSdk_BlockRewards_RewardsCalculationRound" data-uid="AlgoSdk.BlockRewards.RewardsCalculationRound">RewardsCalculationRound</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong RewardsCalculationRound { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_BlockRewards_RewardsLevel_" data-uid="AlgoSdk.BlockRewards.RewardsLevel*"></a>
-  <h4 id="AlgoSdk_BlockRewards_RewardsLevel" data-uid="AlgoSdk.BlockRewards.RewardsLevel">RewardsLevel</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong RewardsLevel { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_BlockRewards_RewardsPool_" data-uid="AlgoSdk.BlockRewards.RewardsPool*"></a>
-  <h4 id="AlgoSdk_BlockRewards_RewardsPool" data-uid="AlgoSdk.BlockRewards.RewardsPool">RewardsPool</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address RewardsPool { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_BlockRewards_RewardsRate_" data-uid="AlgoSdk.BlockRewards.RewardsRate*"></a>
-  <h4 id="AlgoSdk_BlockRewards_RewardsRate" data-uid="AlgoSdk.BlockRewards.RewardsRate">RewardsRate</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong RewardsRate { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_BlockRewards_RewardsResidue_" data-uid="AlgoSdk.BlockRewards.RewardsResidue*"></a>
-  <h4 id="AlgoSdk_BlockRewards_RewardsResidue" data-uid="AlgoSdk.BlockRewards.RewardsResidue">RewardsResidue</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong RewardsResidue { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="AlgoSdk_BlockRewards_Equals_" data-uid="AlgoSdk.BlockRewards.Equals*"></a>
-  <h4 id="AlgoSdk_BlockRewards_Equals_AlgoSdk_BlockRewards_" data-uid="AlgoSdk.BlockRewards.Equals(AlgoSdk.BlockRewards)">Equals(BlockRewards)</h4>
+  <a id="AlgoSdk_Editor_BytesTextDrawer_GetBytes_" data-uid="AlgoSdk.Editor.BytesTextDrawer.GetBytes*"></a>
+  <h4 id="AlgoSdk_Editor_BytesTextDrawer_GetBytes_System_String_" data-uid="AlgoSdk.Editor.BytesTextDrawer.GetBytes(System.String)">GetBytes(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(BlockRewards other)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract List&lt;byte&gt; GetBytes(string s)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -271,8 +123,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="AlgoSdk.BlockRewards.html">BlockRewards</a></td>
-        <td><span class="parametername">other</span></td>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">s</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -287,18 +139,90 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">List</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">IEquatable&lt;&gt;</span>
+  
+  
+  <a id="AlgoSdk_Editor_BytesTextDrawer_GetString_" data-uid="AlgoSdk.Editor.BytesTextDrawer.GetString*"></a>
+  <h4 id="AlgoSdk_Editor_BytesTextDrawer_GetString_List_System_Byte__" data-uid="AlgoSdk.Editor.BytesTextDrawer.GetString(List{System.Byte})">GetString(List&lt;Byte&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract string GetString(List&lt;byte&gt; bytes)</code></pre>
   </div>
-  <div>
-      <a class="xref" href="AlgoSdk.IBlockRewards.html">IBlockRewards</a>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="parametername">bytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Editor_BytesTextDrawer_OnGUI_" data-uid="AlgoSdk.Editor.BytesTextDrawer.OnGUI*"></a>
+  <h4 id="AlgoSdk_Editor_BytesTextDrawer_OnGUI_Rect_SerializedProperty_GUIContent_" data-uid="AlgoSdk.Editor.BytesTextDrawer.OnGUI(Rect,SerializedProperty,GUIContent)">OnGUI(Rect, SerializedProperty, GUIContent)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Rect</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">SerializedProperty</span></td>
+        <td><span class="parametername">property</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">GUIContent</span></td>
+        <td><span class="parametername">label</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
