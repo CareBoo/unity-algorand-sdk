@@ -6,6 +6,7 @@ namespace AlgoSdk
     /// The <see cref="StateSchema"/> object is only required for the create application call transaction. The <see cref="StateSchema"/> object must be fully populated for both the <see cref="IAppCallTxn.GlobalStateSchema"/> and <see cref="IAppCallTxn.LocalStateSchema"/> objects.
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct StateSchema
         : IEquatable<StateSchema>
     {

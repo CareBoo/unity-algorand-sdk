@@ -6,6 +6,7 @@ namespace AlgoSdk
     /// Describes an asset held by an account.
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct AssetHolding
         : IEquatable<AssetHolding>
     {

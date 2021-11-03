@@ -7,6 +7,7 @@ namespace AlgoSdk
     /// Information regarding an Algorand account at a given round.
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct AccountInfo
         : IEquatable<AccountInfo>
     {

@@ -5,7 +5,8 @@
         "CareBoo.AlgoSdk",
         "CareBoo.AlgoSdk.LowLevel",
         "CareBoo.AlgoSdk.Crypto",
-        "Unity.Collections"
+        "Unity.Collections",
+        "Unity.Mathematics"
     ],
     "includePlatforms": [
         "Editor"

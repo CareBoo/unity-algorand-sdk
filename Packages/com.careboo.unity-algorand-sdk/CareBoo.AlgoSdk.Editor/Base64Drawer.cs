@@ -1,12 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
-using AlgoSdk;
 using AlgoSdk.Crypto;
 using UnityEditor;
 
 namespace AlgoSdk.Editor
 {
-    [CustomPropertyDrawer(typeof(Base64Attribute))]
     [CustomPropertyDrawer(typeof(GenesisHash))]
     [CustomPropertyDrawer(typeof(Sha512_256_Hash))]
     [CustomPropertyDrawer(typeof(Ed25519.PublicKey))]

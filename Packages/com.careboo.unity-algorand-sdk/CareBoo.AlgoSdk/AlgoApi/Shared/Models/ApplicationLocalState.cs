@@ -6,6 +6,7 @@ namespace AlgoSdk
     /// Stores local state associated with an application.
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct ApplicationLocalState
         : IEquatable<ApplicationLocalState>
     {

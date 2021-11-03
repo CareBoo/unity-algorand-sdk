@@ -6,6 +6,7 @@ namespace AlgoSdk
     /// Stores the global information associated with an application.
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct ApplicationParams
         : IEquatable<ApplicationParams>
     {

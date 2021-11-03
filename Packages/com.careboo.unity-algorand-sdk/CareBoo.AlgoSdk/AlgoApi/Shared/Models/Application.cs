@@ -11,6 +11,7 @@ namespace AlgoSdk
     /// Application index and its parameters
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct Application
         : IEquatable<Application>
     {
