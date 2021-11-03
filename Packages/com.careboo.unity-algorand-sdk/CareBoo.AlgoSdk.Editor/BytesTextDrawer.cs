@@ -4,7 +4,7 @@ using AlgoSdk.LowLevel;
 using UnityEditor;
 using UnityEngine;
 
-namespace CareBoo.AlgoSdk.Editor
+namespace AlgoSdk.Editor
 {
     public abstract class BytesTextDrawer<T> : BytesTextDrawer
         where T : struct, IByteArray

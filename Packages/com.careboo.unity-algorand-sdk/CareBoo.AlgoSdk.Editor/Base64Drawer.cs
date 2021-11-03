@@ -4,7 +4,7 @@ using AlgoSdk;
 using AlgoSdk.Crypto;
 using UnityEditor;
 
-namespace CareBoo.AlgoSdk.Editor
+namespace AlgoSdk.Editor
 {
     [CustomPropertyDrawer(typeof(Base64Attribute))]
     [CustomPropertyDrawer(typeof(GenesisHash))]

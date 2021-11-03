@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEditor;
 
-namespace CareBoo.AlgoSdk.Editor
+namespace AlgoSdk.Editor
 {
     public class SerializedBytes
     {

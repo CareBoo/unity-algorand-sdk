@@ -1,6 +1,6 @@
 {
     "name": "CareBoo.AlgoSdk.Editor",
-    "rootNamespace": "CareBoo.AlgoSdk.Editor",
+    "rootNamespace": "AlgoSdk.Editor",
     "references": [
         "CareBoo.AlgoSdk",
         "CareBoo.AlgoSdk.LowLevel",

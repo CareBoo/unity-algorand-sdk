@@ -1,7 +1,7 @@
 using AlgoSdk;
 using UnityEditor;
 
-namespace CareBoo.AlgoSdk.Editor
+namespace AlgoSdk.Editor
 {
     [CustomPropertyDrawer(typeof(Address))]
     public class AddressDrawer : BytesTextDrawer<Address>

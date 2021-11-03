@@ -4,7 +4,7 @@ using AlgoSdk;
 using System.Linq;
 using Unity.Collections;
 
-namespace CareBoo.AlgoSdk.Editor
+namespace AlgoSdk.Editor
 {
     [CustomPropertyDrawer(typeof(Base32Attribute))]
     [CustomPropertyDrawer(typeof(TransactionId))]
