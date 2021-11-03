@@ -5,6 +5,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [1.1.0](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0...v1.1.0) (2021-11-03)
+
+
+### Bug Fixes
+
+* add missing meta files ([2407941](https://github.com/CareBoo/unity-algorand-sdk/commit/24079419c06ea7c5608d601219239322f7d4b5ab))
+* **osx:** fix multiple sodium.bundle plugins ([b3b9389](https://github.com/CareBoo/unity-algorand-sdk/commit/b3b93890b5ec0bde98bbf5d35fd4246475b6cc0a))
+
+
+### Features
+
+* **editor:** Make many models serializable and add property drawers to render them in editor ([09185fc](https://github.com/CareBoo/unity-algorand-sdk/commit/09185fce14850cb2d4f9a42be98f077e090608ac)), closes [#41](https://github.com/CareBoo/unity-algorand-sdk/issues/41)
+* support WebGL ([1890694](https://github.com/CareBoo/unity-algorand-sdk/commit/18906948adbb7c5e42dd3988a738dccd14b4cd3d)), closes [#52](https://github.com/CareBoo/unity-algorand-sdk/issues/52)
+
 # [1.1.0-pre.3](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.1.0-pre.2...v1.1.0-pre.3) (2021-11-03)
 
 
