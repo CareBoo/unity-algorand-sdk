@@ -1,5 +1,6 @@
 using System;
 using AlgoSdk.Formatters;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -7,6 +8,7 @@ namespace AlgoSdk
     /// An error response from algorand APIs with optional data field.
     /// </summary>
     [AlgoApiFormatter(typeof(ErrorResponseFormatter))]
+    [Serializable]
     public struct ErrorResponse
         : IEquatable<ErrorResponse>
     {
@@ -17,6 +19,7 @@ namespace AlgoSdk
         /// <summary>
         /// HTTP response code
         /// </summary>
+        [Tooltip("HTTP response code")]
         public long Code;
 
         public ErrorResponse WithCode(long code)

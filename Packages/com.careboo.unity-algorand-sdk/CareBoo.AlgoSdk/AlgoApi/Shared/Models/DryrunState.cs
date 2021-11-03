@@ -1,5 +1,6 @@
 using System;
 using Unity.Collections;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -7,6 +8,7 @@ namespace AlgoSdk
     /// Stores the TEAL eval step data
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct DryrunState
         : IEquatable<DryrunState>
     {
@@ -14,18 +16,21 @@ namespace AlgoSdk
         /// Evaluation error if any
         /// </summary>
         [AlgoApiField("error", null)]
+        [Tooltip("Evaluation error if any")]
         public FixedString128Bytes Error;
 
         /// <summary>
         /// Line number
         /// </summary>
         [AlgoApiField("line", null)]
+        [Tooltip("Line number")]
         public ulong Line;
 
         /// <summary>
         /// Program counter
         /// </summary>
         [AlgoApiField("pc", null)]
+        [Tooltip("Program counter")]
         public ulong ProgramCounter;
 
         [AlgoApiField("scratch", null)]

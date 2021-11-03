@@ -1,5 +1,6 @@
 using System;
 using Unity.Collections;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -8,6 +9,7 @@ namespace AlgoSdk
     /// Usually this is retrieved from <see cref="IAlgodClient.GetSuggestedParams"/> then modified.
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct TransactionParams
         : IEquatable<TransactionParams>
     {
@@ -15,6 +17,7 @@ namespace AlgoSdk
         /// Indicates the consensus protocol version as of <see cref="LastRound"/>.
         /// </summary>
         [AlgoApiField("consensus-version", null)]
+        [Tooltip("Indicates the consensus protocol version as of LastRound.")]
         public string ConsensusVersion;
 
         /// <summary>
@@ -23,24 +26,28 @@ namespace AlgoSdk
         /// <see cref="MinFee"/> for the current network protocol.
         /// </summary>
         [AlgoApiField("fee", null)]
+        [Tooltip("Fee is the suggested transaction fee in units of micro-Algos per byte. Fee may fall to zero but transactions must still have a fee of at least MinFee for the current network protocol.")]
         public ulong Fee;
 
         /// <summary>
         /// The hash of the genesis block.
         /// </summary>
         [AlgoApiField("genesis-hash", null)]
+        [Tooltip("The hash of the genesis block.")]
         public GenesisHash GenesisHash;
 
         /// <summary>
         /// An ID listed in the genesis block.
         /// </summary>
         [AlgoApiField("genesis-id", null)]
+        [Tooltip("An ID listed in the genesis block.")]
         public FixedString32Bytes GenesisId;
 
         /// <summary>
         /// The minimum transaction fee (not per byte) required for the txn to validate for the current network protocol.
         /// </summary>
         [AlgoApiField("min-fee", null)]
+        [Tooltip("The minimum transaction fee (not per byte) required for the txn to validate for the current network protocol.")]
         public ulong MinFee;
 
         /// <summary>
@@ -70,11 +77,13 @@ namespace AlgoSdk
         /// <summary>
         /// The last valid round for a transaction.
         /// </summary>
+        [Tooltip("The last valid round for a transaction.")]
         public ulong FirstValidRound;
 
         /// <summary>
         /// The first valid round for a transaction.
         /// </summary>
+        [Tooltip("The first valid round for a transaction.")]
         public ulong LastValidRound;
 
         ulong prevRound;

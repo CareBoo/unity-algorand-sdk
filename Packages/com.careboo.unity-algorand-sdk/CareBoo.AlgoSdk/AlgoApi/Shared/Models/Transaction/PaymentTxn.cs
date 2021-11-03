@@ -1,6 +1,7 @@
 using System;
 using AlgoSdk.Crypto;
 using Unity.Collections;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -75,12 +76,15 @@ namespace AlgoSdk
     }
 
     [AlgoApiObject]
+    [Serializable]
     public struct PaymentTxn
         : IPaymentTxn
         , IEquatable<PaymentTxn>
     {
+        [SerializeField]
         internal TransactionHeader header;
 
+        [SerializeField]
         Params @params;
 
         [AlgoApiField("fee", "fee")]
@@ -208,19 +212,24 @@ namespace AlgoSdk
         }
 
         [AlgoApiObject]
+        [Serializable]
         public struct Params
             : IEquatable<Params>
         {
             [AlgoApiField("receiver", "rcv")]
+            [Tooltip("The address of the account that receives the Amount.")]
             public Address Receiver;
 
             [AlgoApiField("amount", "amt")]
+            [Tooltip("The total amount to be sent in microAlgos.")]
             public ulong Amount;
 
             [AlgoApiField("close-remainder-to", "close")]
+            [Tooltip("When set, it indicates that the transaction is requesting that the Sender account should be closed, and all remaining funds, after the Fee and Amount are paid, be transferred to this address.")]
             public Address CloseRemainderTo;
 
             [AlgoApiField("close-amount", "close-amount")]
+            [NonSerialized]
             public ulong CloseAmount;
 
             public bool Equals(Params other)

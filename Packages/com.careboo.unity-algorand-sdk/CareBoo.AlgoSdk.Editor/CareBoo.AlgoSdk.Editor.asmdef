@@ -1,0 +1,22 @@
+{
+    "name": "CareBoo.AlgoSdk.Editor",
+    "rootNamespace": "AlgoSdk.Editor",
+    "references": [
+        "CareBoo.AlgoSdk",
+        "CareBoo.AlgoSdk.LowLevel",
+        "CareBoo.AlgoSdk.Crypto",
+        "Unity.Collections",
+        "Unity.Mathematics"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

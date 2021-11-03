@@ -1,6 +1,7 @@
 using System;
 using AlgoSdk.Crypto;
 using Unity.Collections;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -124,12 +125,15 @@ namespace AlgoSdk
     }
 
     [AlgoApiObject]
+    [Serializable]
     public struct KeyRegTxn
            : IKeyRegTxn
            , IEquatable<KeyRegTxn>
     {
+        [SerializeField]
         internal TransactionHeader header;
 
+        [SerializeField]
         Params @params;
 
         public AccountParticipation AccountParticipation
@@ -277,6 +281,7 @@ namespace AlgoSdk
         }
 
         [AlgoApiObject]
+        [Serializable]
         public struct Params
             : IEquatable<Params>
         {
@@ -316,6 +321,7 @@ namespace AlgoSdk
             }
 
             [AlgoApiField("non-participation", "nonpart")]
+            [Tooltip("All new Algorand accounts are participating by default. This means that they earn rewards. Mark an account nonparticipating by setting this value to <c>true</c> and this account will no longer earn rewards. It is unlikely that you will ever need to do this and exists mainly for economic-related functions on the network.")]
             public Optional<bool> NonParticipation;
 
             public AccountParticipation AccountParticipation;

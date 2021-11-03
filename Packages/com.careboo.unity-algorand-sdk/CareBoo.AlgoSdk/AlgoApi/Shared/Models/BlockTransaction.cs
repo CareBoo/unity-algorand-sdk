@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -13,6 +14,7 @@ namespace AlgoSdk
         /// The transaction.
         /// </summary>
         [AlgoApiField("txn", "txn")]
+        [Tooltip("The transaction")]
         public Transaction Transaction;
 
         /// <summary>

@@ -4,6 +4,7 @@ using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
 using Unity.Mathematics;
 using AlgoSdk.LowLevel;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -11,11 +12,11 @@ namespace AlgoSdk
     [StructLayout(LayoutKind.Explicit, Size = 50)]
     internal struct FixedBytes50
     {
-        [FieldOffset(0)] internal FixedBytes16 offset0000;
-        [FieldOffset(16)] internal FixedBytes16 offset0016;
-        [FieldOffset(32)] internal FixedBytes16 offset0032;
-        [FieldOffset(48)] internal byte byte0048;
-        [FieldOffset(49)] internal byte byte0049;
+        [FieldOffset(0), SerializeField] internal FixedBytes16 offset0000;
+        [FieldOffset(16), SerializeField] internal FixedBytes16 offset0016;
+        [FieldOffset(32), SerializeField] internal FixedBytes16 offset0032;
+        [FieldOffset(48), SerializeField] internal byte byte0048;
+        [FieldOffset(49), SerializeField] internal byte byte0049;
     }
 
     /// <summary>
@@ -26,7 +27,12 @@ namespace AlgoSdk
     public partial struct Mnemonic
         : IEquatable<Mnemonic>
     {
-        [FieldOffset(0)] internal FixedBytes50 buffer;
+        [FieldOffset(0), SerializeField] internal FixedBytes50 buffer;
+
+        /// <summary>
+        /// Size of Mnemonic in bytes.
+        /// </summary>
+        public const int SizeBytes = 50;
 
         /// <summary>
         /// Number of words contained in the mnemonic.
@@ -51,6 +57,12 @@ namespace AlgoSdk
                     return b;
             }
         }
+
+        /// <summary>
+        /// Get the byte pointer at the start of this struct.
+        /// </summary>
+        /// <returns>An unsafe byte pointer.</returns>
+        public unsafe byte* GetUnsafePtr() => Buffer;
 
         /// <summary>
         /// The word at a given index.

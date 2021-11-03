@@ -1,6 +1,7 @@
 using System;
 using AlgoSdk.Crypto;
 using Unity.Collections;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -19,17 +20,17 @@ namespace AlgoSdk
         /// <summary>
         /// Logic executed for every application transaction, except when on-completion is set to "clear". It can read and write global state for the application, as well as account-specific local state. Approval programs may reject the transaction.
         /// </summary>
-        byte[] ApprovalProgram { get; set; }
+        CompiledTeal ApprovalProgram { get; set; }
 
         /// <summary>
         /// Logic executed for application transactions with on-completion set to "clear". It can read and write global state for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.
         /// </summary>
-        byte[] ClearStateProgram { get; set; }
+        CompiledTeal ClearStateProgram { get; set; }
 
         /// <summary>
         /// Transaction specific arguments accessed from the application's approval-program and clear-state-program.
         /// </summary>
-        byte[] AppArguments { get; set; }
+        CompiledTeal AppArguments { get; set; }
 
         /// <summary>
         /// List of accounts in addition to the sender that may be accessed from the application's approval-program and clear-state-program.
@@ -79,21 +80,21 @@ namespace AlgoSdk
         }
 
         [AlgoApiField(null, "apap")]
-        public byte[] ApprovalProgram
+        public CompiledTeal ApprovalProgram
         {
             get => ApplicationCallParams.ApprovalProgram;
             set => ApplicationCallParams.ApprovalProgram = value;
         }
 
         [AlgoApiField(null, "apsu")]
-        public byte[] ClearStateProgram
+        public CompiledTeal ClearStateProgram
         {
             get => ApplicationCallParams.ClearStateProgram;
             set => ApplicationCallParams.ClearStateProgram = value;
         }
 
         [AlgoApiField(null, "apaa")]
-        public byte[] AppArguments
+        public CompiledTeal AppArguments
         {
             get => ApplicationCallParams.AppArguments;
             set => ApplicationCallParams.AppArguments = value;
@@ -399,12 +400,15 @@ namespace AlgoSdk
     }
 
     [AlgoApiObject]
+    [Serializable]
     public struct AppCallTxn
           : IAppCallTxn
           , IEquatable<AppCallTxn>
     {
+        [SerializeField]
         internal TransactionHeader header;
 
+        [SerializeField]
         Params @params;
 
         [AlgoApiField("fee", "fee")]
@@ -499,21 +503,21 @@ namespace AlgoSdk
         }
 
         [AlgoApiField(null, "apap")]
-        public byte[] ApprovalProgram
+        public CompiledTeal ApprovalProgram
         {
             get => @params.ApprovalProgram;
             set => @params.ApprovalProgram = value;
         }
 
         [AlgoApiField(null, "apsu")]
-        public byte[] ClearStateProgram
+        public CompiledTeal ClearStateProgram
         {
             get => @params.ClearStateProgram;
             set => @params.ClearStateProgram = value;
         }
 
         [AlgoApiField(null, "apaa")]
-        public byte[] AppArguments
+        public CompiledTeal AppArguments
         {
             get => @params.AppArguments;
             set => @params.AppArguments = value;
@@ -581,40 +585,52 @@ namespace AlgoSdk
         }
 
         [AlgoApiObject]
+        [Serializable]
         public struct Params
             : IEquatable<Params>
         {
             [AlgoApiField("application-id", "apid")]
+            [Tooltip("ID of the application being configured or empty if creating")]
             public ulong ApplicationId;
 
             [AlgoApiField("on-completion", "apan")]
+            [Tooltip("Defines what additional actions occur with the transaction.")]
             public OnCompletion OnComplete;
 
             [AlgoApiField("approval-program", "apap")]
-            public byte[] ApprovalProgram;
+            [Tooltip("Logic executed for every application transaction, except when on-completion is set to \"clear\". It can read and write global state for the application, as well as account-specific local state. Approval programs may reject the transaction.")]
+            public CompiledTeal ApprovalProgram;
 
             [AlgoApiField("clear-state-program", "apsu")]
-            public byte[] ClearStateProgram;
+            [Tooltip("Logic executed for application transactions with on-completion set to \"clear\". It can read and write global state for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.")]
+            public CompiledTeal ClearStateProgram;
 
             [AlgoApiField("application-args", "apaa")]
-            public byte[] AppArguments;
+            [Tooltip("Transaction specific arguments accessed from the application's approval-program and clear-state-program.")]
+            public CompiledTeal AppArguments;
 
             [AlgoApiField("accounts", "apat")]
+            [Tooltip("List of accounts in addition to the sender that may be accessed from the application's approval-program and clear-state-program.")]
             public Address[] Accounts;
 
             [AlgoApiField("foreign-apps", "apfa")]
+            [Tooltip("Lists the applications in addition to the application-id whose global states may be accessed by this application's approval-program and clear-state-program. The access is read-only.")]
             public ulong[] ForeignApps;
 
             [AlgoApiField("foreign-assets", "apas")]
+            [Tooltip("Lists the assets whose AssetParams may be accessed by this application's approval-program and clear-state-program. The access is read-only.")]
             public ulong[] ForeignAssets;
 
             [AlgoApiField("global-state-schema", "global-state-schema")]
+            [Tooltip("Holds the maximum number of global state values")]
             public StateSchema GlobalStateSchema;
 
             [AlgoApiField("local-state-schema", "local-state-schema")]
+            [Tooltip("Holds the maximum number of local state values")]
             public StateSchema LocalStateSchema;
 
             [AlgoApiField("extra-program-pages", "epp")]
+            [Tooltip("Number of additional pages allocated to the application's approval and clear state programs. Each ExtraProgramPages is 2048 bytes.")]
             public ulong ExtraProgramPages;
 
             public bool Equals(Params other)

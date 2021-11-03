@@ -1,5 +1,6 @@
 using System;
 using Unity.Collections;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -7,6 +8,7 @@ namespace AlgoSdk
     /// Represents a key-value pair in an application store.
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct TealKeyValue
         : IEquatable<TealKeyValue>
     {

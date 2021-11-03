@@ -1,6 +1,7 @@
 using System;
 using AlgoSdk.Crypto;
 using Unity.Collections;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -30,6 +31,11 @@ namespace AlgoSdk
         /// Specify this field to remove the asset holding from the sender account and reduce the account's minimum balance (i.e. opt-out of the asset).
         /// </summary>
         Address AssetCloseTo { get; set; }
+
+        /// <summary>
+        /// The amount returned from the close out.
+        /// </summary>
+        ulong CloseAmount { get; set; }
     }
 
     public partial struct Transaction
@@ -154,12 +160,15 @@ namespace AlgoSdk
     }
 
     [AlgoApiObject]
+    [Serializable]
     public struct AssetTransferTxn
         : IAssetTransferTxn
         , IEquatable<AssetTransferTxn>
     {
+        [SerializeField]
         internal TransactionHeader header;
 
+        [SerializeField]
         Params @params;
 
         [AlgoApiField("fee", "fee")]
@@ -305,21 +314,27 @@ namespace AlgoSdk
             : IEquatable<Params>
         {
             [AlgoApiField("asset-id", "xaid")]
+            [Tooltip("The unique ID of the asset to be transferred.")]
             public ulong XferAsset;
 
             [AlgoApiField("amount", "aamt")]
+            [Tooltip("The amount of the asset to be transferred. A zero amount transferred to self allocates that asset in the account's Asset map.")]
             public ulong AssetAmount;
 
             [AlgoApiField("sender", "asnd")]
+            [Tooltip("The sender of the transfer. The regular Sender field should be used and this one set to the zero value for regular transfers between accounts. If this value is nonzero, it indicates a clawback transaction where the sender is the asset's clawback address and the asset sender is the address from which the funds will be withdrawn.")]
             public Address AssetSender;
 
             [AlgoApiField("receiver", "arcv")]
+            [Tooltip("The recipient of the asset transfer.")]
             public Address AssetReceiver;
 
             [AlgoApiField("close-to", "aclose")]
+            [Tooltip("Specify this field to remove the asset holding from the sender account and reduce the account's minimum balance (i.e. opt-out of the asset).")]
             public Address AssetCloseTo;
 
             [AlgoApiField("close-amount", "close-amount")]
+            [NonSerialized]
             public ulong CloseAmount;
 
             public bool Equals(Params other)

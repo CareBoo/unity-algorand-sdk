@@ -7,6 +7,7 @@ namespace AlgoSdk
     /// Information regarding the algod service's build version.
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct BuildVersion
         : IEquatable<BuildVersion>
     {

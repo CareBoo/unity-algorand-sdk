@@ -1,6 +1,7 @@
 using System;
 using AlgoSdk.Crypto;
 using Unity.Collections;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -104,12 +105,15 @@ namespace AlgoSdk
     }
 
     [AlgoApiObject]
+    [Serializable]
     public struct AssetConfigTxn
         : IAssetConfigTxn
         , IEquatable<AssetConfigTxn>
     {
+        [SerializeField]
         internal TransactionHeader header;
 
+        [SerializeField]
         Params @params;
 
         [AlgoApiField("fee", "fee")]
@@ -223,10 +227,12 @@ namespace AlgoSdk
         }
 
         [AlgoApiObject]
+        [Serializable]
         public struct Params
             : IEquatable<Params>
         {
             [AlgoApiField("asset-id", "xaid")]
+            [Tooltip("For re-configure or destroy transactions, this is the unique asset ID. On asset creation, the ID is set to zero.")]
             public ulong ConfigAsset;
 
             [AlgoApiField("params", "params")]

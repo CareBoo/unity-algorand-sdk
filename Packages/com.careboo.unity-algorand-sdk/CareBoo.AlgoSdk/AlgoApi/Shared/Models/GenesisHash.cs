@@ -3,18 +3,20 @@ using AlgoSdk.Crypto;
 using AlgoSdk.Formatters;
 using AlgoSdk.LowLevel;
 using Unity.Collections;
+using UnityEngine;
 
 namespace AlgoSdk
 {
     /// <summary>
     /// Genesis hash found of the genesis block.
     /// </summary>
+    [Serializable]
     [AlgoApiFormatter(typeof(GenesisHashFormatter))]
     public struct GenesisHash
         : IByteArray
         , IEquatable<GenesisHash>
     {
-        Sha512_256_Hash hash;
+        [SerializeField] Sha512_256_Hash hash;
 
         public byte this[int index] { get => hash[index]; set => hash[index] = value; }
 

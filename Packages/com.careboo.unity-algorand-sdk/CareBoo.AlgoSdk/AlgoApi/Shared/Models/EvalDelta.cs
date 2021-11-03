@@ -19,6 +19,7 @@ namespace AlgoSdk
     /// Represents a TEAL value delta.
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct EvalDelta
         : IEquatable<EvalDelta>
     {

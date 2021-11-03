@@ -3,6 +3,7 @@ using System.Text;
 using AlgoSdk.Crypto;
 using AlgoSdk.LowLevel;
 using Unity.Collections;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -10,6 +11,7 @@ namespace AlgoSdk
     /// A group of transactions used to generate a group id for atomic transactions.
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct TransactionGroup
         : IEquatable<TransactionGroup>
     {
@@ -27,6 +29,7 @@ namespace AlgoSdk
         /// The list of transaction ids belonging to this group.
         /// </summary>
         [AlgoApiField("txlist", "txlist")]
+        [Tooltip("The list of transaction ids belonging to this group.")]
         public TransactionId[] Txns;
 
 
