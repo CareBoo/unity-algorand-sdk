@@ -4,6 +4,7 @@ using AlgoSdk.Crypto;
 using AlgoSdk.Formatters;
 using AlgoSdk.LowLevel;
 using Unity.Collections;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -13,13 +14,14 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiFormatter(typeof(TransactionIdFormatter))]
     [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
+    [Serializable]
     public struct TransactionId
         : IByteArray
         , IEquatable<TransactionId>
     {
         public const int SizeBytes = Sha512_256_Hash.SizeBytes;
 
-        [FieldOffset(0)] Sha512_256_Hash hash;
+        [FieldOffset(0), SerializeField] Sha512_256_Hash hash;
 
         public byte this[int index] { get => hash[index]; set => hash[index] = value; }
 

@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using AlgoSdk.Json;
 using AlgoSdk.MessagePack;
-using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
 
 namespace AlgoSdk.Formatters
@@ -10,17 +9,17 @@ namespace AlgoSdk.Formatters
     public abstract class KeywordByteEnumFormatter<T> : IAlgoApiFormatter<T>
         where T : Enum
     {
-        readonly Dictionary<FixedString32Bytes, T> stringToType;
-        readonly FixedString32Bytes[] typeToString;
+        readonly Dictionary<string, T> stringToType;
+        readonly string[] typeToString;
 
 
-        public KeywordByteEnumFormatter(FixedString32Bytes[] typeToString)
+        public KeywordByteEnumFormatter(string[] typeToString)
         {
             this.typeToString = typeToString;
             if (typeToString == null || typeToString.Length < 1)
                 throw new ArgumentNullException(nameof(typeToString));
 
-            stringToType = new Dictionary<FixedString32Bytes, T>();
+            stringToType = new Dictionary<string, T>();
             for (var i = 1; i < typeToString.Length; i++)
             {
                 stringToType[typeToString[i]] = UnsafeUtility.As<int, T>(ref i);
@@ -35,8 +34,7 @@ namespace AlgoSdk.Formatters
                 byte nil = 0;
                 return UnsafeUtility.As<byte, T>(ref nil);
             }
-            var s = new FixedString32Bytes();
-            reader.ReadString(ref s);
+            reader.ReadString(out var s);
             return stringToType.TryGetValue(s, out var t)
                 ? t
                 : throw new ArgumentException($"{s} is not a valid name for {typeof(T)}");
@@ -49,8 +47,7 @@ namespace AlgoSdk.Formatters
                 byte nil = 0;
                 return UnsafeUtility.As<byte, T>(ref nil);
             }
-            var s = new FixedString32Bytes();
-            reader.ReadString(ref s);
+            reader.ReadString(out var s);
             return stringToType.TryGetValue(s, out var t)
                 ? t
                 : throw new ArgumentException($"{s} is not a valid name for {typeof(T)}");
@@ -77,6 +74,9 @@ namespace AlgoSdk.Formatters
                 return;
             }
 
+            UnityEngine.Debug.Log(
+                $"Debugging {nameof(KeywordByteEnumFormatter<T>)}.{nameof(Serialize)}:\n" +
+                $"b: {b}\ns: {typeToString[b]}");
             writer.WriteString(typeToString[b]);
         }
     }

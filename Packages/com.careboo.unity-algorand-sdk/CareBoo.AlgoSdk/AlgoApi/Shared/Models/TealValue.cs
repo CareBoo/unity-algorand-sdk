@@ -2,6 +2,7 @@ using System;
 using System.Runtime.InteropServices;
 using AlgoSdk.Formatters;
 using AlgoSdk.LowLevel;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -21,18 +22,19 @@ namespace AlgoSdk
     /// </summary>
     [StructLayout(LayoutKind.Explicit)]
     [AlgoApiFormatter(typeof(TealValueFormatter))]
+    [Serializable]
     public struct TealValue
         : IEquatable<TealValue>
     {
         /// <summary>
         /// [tb] bytes value.
         /// </summary>
-        [FieldOffset(0)] TealBytes bytes;
+        [FieldOffset(0), SerializeField] TealBytes bytes;
 
         /// <summary>
         /// [ui] uint value.
         /// </summary>
-        [FieldOffset(0)] ulong uintValue;
+        [FieldOffset(0), SerializeField] ulong uintValue;
 
         /// <summary>
         /// See <see cref="TealValueType"/>
@@ -86,6 +88,7 @@ namespace AlgoSdk
         }
     }
 
+    [Serializable]
     [AlgoApiFormatter(typeof(ByteArrayFormatter<TealBytes>))]
     public struct TealBytes
         : IEquatable<TealBytes>
@@ -105,7 +108,7 @@ namespace AlgoSdk
 
         public bool Equals(TealBytes other)
         {
-            return ByteArray.Equals(in this, in other);
+            return ByteArray.Equals(this, other);
         }
     }
 }

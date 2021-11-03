@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -6,6 +7,7 @@ namespace AlgoSdk
     /// Response from <see cref="IAlgodClient.SendTransaction"/>. Wraps a <see cref="TransactionId"/>.
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct TransactionIdResponse
         : IEquatable<TransactionIdResponse>
     {
@@ -13,6 +15,7 @@ namespace AlgoSdk
         /// The returned <see cref="TransactionId"/>
         /// </summary>
         [AlgoApiField("txId", "txId")]
+        [Tooltip("The returned TransactionId")]
         public TransactionId TxId;
 
         public bool Equals(TransactionIdResponse other)

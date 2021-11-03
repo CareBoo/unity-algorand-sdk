@@ -4,6 +4,7 @@ using AlgoSdk.Crypto;
 using AlgoSdk.LowLevel;
 using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -11,6 +12,7 @@ namespace AlgoSdk
     /// Application index and its parameters
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct Application
         : IEquatable<Application>
     {
@@ -23,30 +25,35 @@ namespace AlgoSdk
         /// Round when this application was created.
         /// </summary>
         [AlgoApiField("created-at-round", null)]
+        [Tooltip("Round when this application was created.")]
         public ulong CreatedAtRound;
 
         /// <summary>
         /// Whether or not this application is currently deleted.
         /// </summary>
         [AlgoApiField("deleted", null)]
+        [Tooltip("Whether or not this application is currently deleted.")]
         public Optional<bool> Deleted;
 
         /// <summary>
         /// Round when this application was deleted.
         /// </summary>
         [AlgoApiField("deleted-at-round", null)]
+        [Tooltip("Round when this application was deleted.")]
         public ulong DeletedAtRound;
 
         /// <summary>
         /// [appidx] application index.
         /// </summary>
         [AlgoApiField("id", null)]
+        [Tooltip("[appidx] application index.")]
         public ulong Id;
 
         /// <summary>
         /// [appparams] application parameters.
         /// </summary>
         [AlgoApiField("params", null)]
+        [Tooltip("[appparams] application parameters.")]
         public ApplicationParams Params;
 
         public bool Equals(Application other)

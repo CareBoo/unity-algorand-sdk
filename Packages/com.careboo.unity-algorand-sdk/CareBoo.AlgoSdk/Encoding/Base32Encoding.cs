@@ -148,7 +148,7 @@ namespace AlgoSdk
             return new string(returnArray);
         }
 
-        public static void ToString<TByteArray, TString>(in TByteArray bytes, ref TString s)
+        public static void ToString<TByteArray, TString>(TByteArray bytes, ref TString s)
             where TByteArray : struct, IByteArray
             where TString : struct, IUTF8Bytes, INativeList<byte>
         {

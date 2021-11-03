@@ -7,6 +7,7 @@ using Unity.Collections;
 namespace AlgoSdk
 {
     [AlgoApiObject]
+    [Serializable]
     public partial struct Transaction
         : IEquatable<Transaction>
         , ITransaction

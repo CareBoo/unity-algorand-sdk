@@ -37,13 +37,13 @@ namespace AlgoSdk.Formatters
         public void Serialize(ref JsonWriter writer, string value)
         {
             using var text = new NativeText(value, Allocator.Temp);
-            writer.WriteString(in text);
+            writer.WriteString(text);
         }
 
         public void Serialize(ref MessagePackWriter writer, string value)
         {
             using var text = new NativeText(value, Allocator.Temp);
-            writer.WriteString(in text);
+            writer.WriteString(text);
         }
     }
 }

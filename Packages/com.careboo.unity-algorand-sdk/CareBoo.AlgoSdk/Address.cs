@@ -11,6 +11,7 @@ namespace AlgoSdk
     /// <summary>
     /// A public key for an Algorand account.
     /// </summary>
+    [Serializable]
     [AlgoApiFormatter(typeof(AddressFormatter))]
     [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
     public struct Address
@@ -22,7 +23,7 @@ namespace AlgoSdk
         public static readonly Address Empty = default(Address);
 
         [FieldOffset(0)] internal byte buffer;
-        [SerializeField] [FieldOffset(0)] internal Ed25519.PublicKey publicKey;
+        [FieldOffset(0), SerializeField] internal Ed25519.PublicKey publicKey;
 
         public unsafe void* GetUnsafePtr()
         {
@@ -134,12 +135,12 @@ namespace AlgoSdk
 
         public override bool Equals(object obj)
         {
-            return ByteArray.Equals(in this, obj);
+            return ByteArray.Equals(this, obj);
         }
 
         public override int GetHashCode()
         {
-            return ByteArray.GetHashCode(in this);
+            return ByteArray.GetHashCode(this);
         }
 
         public bool Equals(Address other)
@@ -179,7 +180,7 @@ namespace AlgoSdk
 
             public bool Equals(CheckSum other)
             {
-                return ByteArray.Equals(in this, in other);
+                return ByteArray.Equals(this, other);
             }
 
             public static implicit operator CheckSum(Sha512_256_Hash hash)
@@ -193,22 +194,22 @@ namespace AlgoSdk
 
             public static bool operator ==(in CheckSum x, in CheckSum y)
             {
-                return ByteArray.Equals(in x, in y);
+                return ByteArray.Equals(x, y);
             }
 
             public static bool operator !=(in CheckSum x, in CheckSum y)
             {
-                return !ByteArray.Equals(in x, in y);
+                return !ByteArray.Equals(x, y);
             }
 
             public override bool Equals(object obj)
             {
-                return ByteArray.Equals(in this, obj);
+                return ByteArray.Equals(this, obj);
             }
 
             public override int GetHashCode()
             {
-                return ByteArray.GetHashCode(in this);
+                return ByteArray.GetHashCode(this);
             }
 
             public override string ToString()

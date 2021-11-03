@@ -21,9 +21,9 @@ namespace AlgoSdk
 
     public static class TransactionTypeExtensions
     {
-        public static readonly FixedString32Bytes[] TypeToString = new FixedString32Bytes[(int)TransactionType.Count]
+        public static readonly string[] TypeToString = new string[(int)TransactionType.Count]
         {
-            default,
+            string.Empty,
             "pay",
             "keyreg",
             "axfer",

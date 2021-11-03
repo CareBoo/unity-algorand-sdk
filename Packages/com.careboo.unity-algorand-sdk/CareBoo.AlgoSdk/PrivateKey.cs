@@ -36,7 +36,7 @@ namespace AlgoSdk
             var result = new Mnemonic();
             for (var i = 0; i < Mnemonic.ChecksumIndex; i++)
                 result[i] = (Mnemonic.Word)(bit11Array[i]);
-            var checksum256 = Sha512.Hash256Truncated(in this);
+            var checksum256 = Sha512.Hash256Truncated(this);
             using var checksum11Bit = checksum256.ToBitArray(Allocator.Temp, bitsPerElement: 11, maxArraySize: 1);
             result[Mnemonic.ChecksumIndex] = (Mnemonic.Word)(checksum11Bit[0]);
             return result;

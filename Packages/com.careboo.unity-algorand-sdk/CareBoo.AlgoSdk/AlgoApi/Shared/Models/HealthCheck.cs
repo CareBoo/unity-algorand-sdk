@@ -6,6 +6,7 @@ namespace AlgoSdk
     /// A health check response from <see cref="IIndexerClient.GetHealth"/>
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct HealthCheck
         : IEquatable<HealthCheck>
     {

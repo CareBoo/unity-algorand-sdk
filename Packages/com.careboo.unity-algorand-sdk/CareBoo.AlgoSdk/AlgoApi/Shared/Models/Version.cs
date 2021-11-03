@@ -7,6 +7,7 @@ namespace AlgoSdk
     /// algod version information
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct Version
         : IEquatable<Version>
     {

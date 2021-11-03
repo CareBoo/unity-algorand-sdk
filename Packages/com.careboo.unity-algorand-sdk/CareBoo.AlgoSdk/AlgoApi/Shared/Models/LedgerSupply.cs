@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -6,6 +7,7 @@ namespace AlgoSdk
     /// Supply represents the current supply of MicroAlgos in the system.
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct LedgerSupply
         : IEquatable<LedgerSupply>
     {

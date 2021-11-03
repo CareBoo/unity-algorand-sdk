@@ -4,6 +4,7 @@ using Unity.Collections;
 namespace AlgoSdk
 {
     [AlgoApiObject]
+    [Serializable]
     public struct Wallet
         : IEquatable<Wallet>
     {

@@ -1,6 +1,7 @@
 using System;
 using AlgoSdk.Crypto;
 using Unity.Collections;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -8,6 +9,7 @@ namespace AlgoSdk
     /// Block information.
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct Block
         : IEquatable<Block>
         , IBlockRewards
@@ -18,18 +20,21 @@ namespace AlgoSdk
         /// [gh] hash to which this block belongs.
         /// </summary>
         [AlgoApiField("genesis-hash", "gh")]
+        [Tooltip("hash to which this block belongs.")]
         public GenesisHash GenesisHash;
 
         /// <summary>
         /// [gen] ID to which this block belongs.
         /// </summary>
         [AlgoApiField("genesis-id", "gen")]
+        [Tooltip("ID to which this block belongs.")]
         public FixedString64Bytes GenesisId;
 
         /// <summary>
         /// [prev] Previous block hash.
         /// </summary>
         [AlgoApiField("previous-block-hash", "prev")]
+        [Tooltip("Previous block hash.")]
         public Sha512_256_Hash PreviousBlockHash;
 
         /// <summary>
@@ -42,30 +47,35 @@ namespace AlgoSdk
         /// [rnd] Current round on which this block was appended to the chain.
         /// </summary>
         [AlgoApiField("round", "rnd")]
+        [Tooltip("Current round on which this block was appended to the chain.")]
         public ulong Round;
 
         /// <summary>
         /// [seed] Sortition seed.
         /// </summary>
         [AlgoApiField("seed", "seed")]
+        [Tooltip("Sortition seed.")]
         public Sha512_256_Hash Seed;
 
         /// <summary>
         /// [ts] Block creation timestamp in seconds since epoch
         /// </summary>
         [AlgoApiField("timestamp", "ts")]
+        [Tooltip("Block creation timestamp in seconds since epoch")]
         public ulong Timestamp;
 
         /// <summary>
         /// [txns] list of transactions corresponding to a given round.
         /// </summary>
         [AlgoApiField("transactions", "txns")]
+        [Tooltip("list of transactions corresponding to a given round.")]
         public BlockTransaction[] Transactions;
 
         /// <summary>
         /// [txn] TransactionsRoot authenticates the set of transactions appearing in the block. More specifically, it's the root of a merkle tree whose leaves are the block's Txids, in lexicographic order. For the empty block, it's 0. Note that the TxnRoot does not authenticate the signatures on the transactions, only the transactions themselves. Two blocks with the same transactions but in a different order and with different signatures will have the same TxnRoot.
         /// </summary>
         [AlgoApiField("transaction-root", "txn")]
+        [Tooltip("TransactionsRoot authenticates the set of transactions appearing in the block. More specifically, it's the root of a merkle tree whose leaves are the block's Txids, in lexicographic order. For the empty block, it's 0. Note that the TxnRoot does not authenticate the signatures on the transactions, only the transactions themselves. Two blocks with the same transactions but in a different order and with different signatures will have the same TxnRoot.")]
         public Sha512_256_Hash RootTransaction;
 
         /// <summary>
@@ -75,6 +85,7 @@ namespace AlgoSdk
         /// Specifically, TxnCounter is the number of the next transaction that will be committed after this block. It is 0 when no transactions have ever been committed (since TxnCounter started being supported).
         /// </remarks>
         [AlgoApiField("txn-counter", "tc")]
+        [Tooltip("TxnCounter counts the number of transactions committed in the ledger, from the time at which support for this feature was introduced.")]
         public ulong TransactionCounter;
 
         /// <summary>

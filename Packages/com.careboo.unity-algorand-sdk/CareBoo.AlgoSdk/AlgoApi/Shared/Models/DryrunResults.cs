@@ -1,5 +1,6 @@
 using System;
 using Unity.Collections;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -7,6 +8,7 @@ namespace AlgoSdk
     /// Response from <see cref="IAlgodClient.TealDryrun(Optional{DryrunRequest})"/>
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct DryrunResults
         : IEquatable<DryrunResults>
     {
@@ -17,6 +19,7 @@ namespace AlgoSdk
         /// Protocol version is the protocol version Dryrun was operated under.
         /// </summary>
         [AlgoApiField("protocol-version", null)]
+        [Tooltip("Protocol version is the protocol version Dryrun was operated under.")]
         public FixedString128Bytes ProtocolVersion;
 
         [AlgoApiField("txns", null)]

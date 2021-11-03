@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -6,6 +7,7 @@ namespace AlgoSdk
     /// A wrapped Block from the <see cref="IAlgodClient.GetBlock"/>
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct BlockResponse
         : IEquatable<BlockResponse>
     {
@@ -13,12 +15,14 @@ namespace AlgoSdk
         /// Block data.
         /// </summary>
         [AlgoApiField("block", "block")]
+        [Tooltip("Block data.")]
         public Block BlockHeader;
 
         /// <summary>
         /// Block certificate object.
         /// </summary>
         [AlgoApiField(null, "cert")]
+        [Tooltip("Block certificate object.")]
         public AlgoApiObject Cert;
 
         public bool Equals(BlockResponse other)

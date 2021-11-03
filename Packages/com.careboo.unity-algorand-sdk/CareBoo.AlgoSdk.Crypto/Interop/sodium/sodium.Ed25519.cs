@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.InteropServices;
 
 namespace AlgoSdk.Crypto
@@ -6,28 +7,32 @@ namespace AlgoSdk.Crypto
     {
         [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
         internal static extern int crypto_sign_ed25519_seed_keypair(
-            Ed25519.PublicKey* pk,
-            SecureMemoryHandle sk,
-            Ed25519.Seed* seed);
+            void* pk,
+            IntPtr sk,
+            void* seed);
 
+#if (UNITY_WEBGL && !UNITY_EDITOR)
+        [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
+        internal static unsafe extern void crypto_sign_ed25519_detached(
+            void* signature,
+            void* message,
+            UIntPtr messageLength,
+            IntPtr sk);
+#else
         [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
         internal static unsafe extern int crypto_sign_ed25519_detached(
-            Ed25519.Signature* signature,
-            out ulong signatureLength_p,
-            byte* message,
-            ulong messageLength,
-            SecureMemoryHandle sk);
+            void* signature,
+            out UIntPtr signatureLength_p,
+            void* message,
+            UIntPtr messageLength,
+            IntPtr sk);
+#endif
 
         [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
         internal static extern int crypto_sign_ed25519_verify_detached(
-            Ed25519.Signature* signature,
-            byte* message,
-            ulong messageLength,
-            Ed25519.PublicKey* pk);
-
-        [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
-        internal static unsafe extern int crypto_sign_ed25519_sk_to_seed(
-            Ed25519.Seed* seed,
-            SecureMemoryHandle sk);
+            void* signature,
+            void* message,
+            UIntPtr messageLength,
+            void* pk);
     }
 }

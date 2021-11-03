@@ -1,1052 +1,1006 @@
-# 1.0.0 (2021-10-29)
-
-
-### Bug Fixes
-
-* :bug: fix `RawTransaction.Equals` ([b0769da](https://github.com/CareBoo/unity-algorand-sdk/commit/b0769da141c3fd40d90368a83467ea6de5167af1))
-* :bug: fix compile errs ([9e59233](https://github.com/CareBoo/unity-algorand-sdk/commit/9e59233acf1419c2543d0a9b9c0ecec9c2abdd74))
-* :bug: fix crash on ArrayComparer.Equals ([e2931e0](https://github.com/CareBoo/unity-algorand-sdk/commit/e2931e0f717bb18118b4518302426f9474a6dfee))
-* :bug: fix issues with codegen and AOT compilation ([4d4b583](https://github.com/CareBoo/unity-algorand-sdk/commit/4d4b583f0d43b456569d54a39940b0c435b6c96c))
-* :bug: fix keyworded enum types formatting as numbers ([ee6f363](https://github.com/CareBoo/unity-algorand-sdk/commit/ee6f36332d9f6ec73c94a2ef21d2400ee4cde657))
-* :bug: Fix npm release ([e3fed38](https://github.com/CareBoo/unity-algorand-sdk/commit/e3fed383886b464ed1f7dd400787c2d4c3abd272))
-* :bug: Fix repository ([b4efa6e](https://github.com/CareBoo/unity-algorand-sdk/commit/b4efa6e02aab21efad9cd2e51aa06abdf83757c0))
-* :bug: fix signatures ([1e3a9cc](https://github.com/CareBoo/unity-algorand-sdk/commit/1e3a9cc801a282e46d0d4416489a4c53dd134161))
-* :triangular_flag_on_post: Update package registry ([64987f8](https://github.com/CareBoo/unity-algorand-sdk/commit/64987f8c68b83d5abcc9a8a10bbac3c60e934117))
-* :white_check_mark: Fix CI tests on Github Actions can't find libsodium ([db8718a](https://github.com/CareBoo/unity-algorand-sdk/commit/db8718aa2de3a218789d513b40f7b19345771690)), closes [#12](https://github.com/CareBoo/unity-algorand-sdk/issues/12)
-* **algod:** :bug: fix `AlgodClient.TealCompile` ([bd05ed3](https://github.com/CareBoo/unity-algorand-sdk/commit/bd05ed30d3f283fc13184b5ae65be486b709b7fa)), closes [#20](https://github.com/CareBoo/unity-algorand-sdk/issues/20)
-* **algod:** :bug: fix `AssetParams` serialization ([6f2b830](https://github.com/CareBoo/unity-algorand-sdk/commit/6f2b83070ecc4c21457732dfbfb9d708a641502b))
-* **algod:** :bug: fix pending transactions not returning messagepack ([3b881a3](https://github.com/CareBoo/unity-algorand-sdk/commit/3b881a3b6290fadd22046ad85d49dc26f733b7ef))
-* **algod:** :bug: fix vrfpubkey formatter lookup ([08a09ae](https://github.com/CareBoo/unity-algorand-sdk/commit/08a09ae8908ecce9695d8527d3f102e0fb487479))
-* **algod:** :bug: fix vrfpubkey formatting ([f3c1a56](https://github.com/CareBoo/unity-algorand-sdk/commit/f3c1a563f3e01f8cb27a79b16c7bc395556c242d))
-* **algod:** :bug: replace `VrfPubKey` with `FixedString128Bytes` ([e6ce383](https://github.com/CareBoo/unity-algorand-sdk/commit/e6ce3832920e3d6a2add10b731cabf507e69b21f)), closes [#42](https://github.com/CareBoo/unity-algorand-sdk/issues/42)
-* **crypto:** fix libsodium not working on OSX ([cb0b2c4](https://github.com/CareBoo/unity-algorand-sdk/commit/cb0b2c456eef7e3a0c3bd6664cfd3aaad3e0826d))
-* fix empty dirs finding their way into the project ([5a00890](https://github.com/CareBoo/unity-algorand-sdk/commit/5a00890475ced1d585d0f137d9f7d577a6f862ef))
-* **indexer:** :bug: add missing fields to `Account` model ([86122de](https://github.com/CareBoo/unity-algorand-sdk/commit/86122deb97cc6b99074415c1c069f36e978fe4c7))
-* **indexer:** :bug: add token back to indexer ([c704eb2](https://github.com/CareBoo/unity-algorand-sdk/commit/c704eb2196a0f2764c1c24982fcec4448fd14142))
-* **indexer:** :bug: fix `HealthCheck` missing serialization logic ([f11aa38](https://github.com/CareBoo/unity-algorand-sdk/commit/f11aa384567a2b04a5eadebe8135a9cce8f77df5))
-* **indexer:** :bug: fix indexer requires token ([ef2d461](https://github.com/CareBoo/unity-algorand-sdk/commit/ef2d461037a2e1c6805cb07456a4b501f8ea502b))
-* **indexer:** :bug: fix transaction formatters missing valid msgpack fields ([e18f84a](https://github.com/CareBoo/unity-algorand-sdk/commit/e18f84a5b54a011aa353d8cc47cc06d9129e3a3d))
-* **indexer:** :fire: fix huge issue with indexer where query parameters were in body ([92cb794](https://github.com/CareBoo/unity-algorand-sdk/commit/92cb7946a88c0c4169eec9d4673f9a102065cfa1))
-* **indexer:** :sparkles: fix `TealValue` msgpack fieldnames ([2da8001](https://github.com/CareBoo/unity-algorand-sdk/commit/2da8001d1963ebea0f5541a0cba43d8d21177790))
-* **indexer:** fix missing `Version` field in `HealthCheck` ([f70c73d](https://github.com/CareBoo/unity-algorand-sdk/commit/f70c73d5d5dd6d07442a63f3e07d4c2280fcd08c))
-* **json:** :bug: fix `PrivateKey` JSON deserialization err ([63baf88](https://github.com/CareBoo/unity-algorand-sdk/commit/63baf885f7a9d2efb26a7cd11da3392e255cdb59))
-* **json:** :bug: fix empty json objects missing begin object '{' char ([d2b0539](https://github.com/CareBoo/unity-algorand-sdk/commit/d2b0539bc7ea9ef5e2a9527776ce959995cfb35e))
-* **kmd:** :art: fix `KmdClient` API incorrectly using optional args ([29374e1](https://github.com/CareBoo/unity-algorand-sdk/commit/29374e10748775c1b3416b6918a0ca8ba581ba6e)), closes [#36](https://github.com/CareBoo/unity-algorand-sdk/issues/36)
-* **kmd:** :bug: fix `GenerateKeyRequest` to use `wallet_handle_token` not password ([19c3215](https://github.com/CareBoo/unity-algorand-sdk/commit/19c321578986a83807e080eb4f8bbc66aa139490))
-* **kmd:** :bug: fix `ImportKeyRequest` to use wallet_handle_token not password ([4a60a6c](https://github.com/CareBoo/unity-algorand-sdk/commit/4a60a6cf242a148bc00cf4db885e1cade00050ed))
-* **kmd:** :bug: fix `KmdClient.SignTransaction` returning a signed transaction message ([6df57ec](https://github.com/CareBoo/unity-algorand-sdk/commit/6df57ece5c3da0ae2f9319680b0c879281bd1de6))
-* **kmd:** :bug: fix `WalletHandle` not added to formatter cache ([be0495d](https://github.com/CareBoo/unity-algorand-sdk/commit/be0495d641426a54d59c87a430906b38047b01ba))
-* **kmd:** :bug: fix multisig ([78559d0](https://github.com/CareBoo/unity-algorand-sdk/commit/78559d0c62326a8a7b6d7d0d45c39813428830f5))
-* **serialization:** :bug: fix `Block` not having a formatter ([d840dfe](https://github.com/CareBoo/unity-algorand-sdk/commit/d840dfef2aeaefd9e531ca10f19ab62fb41ddeec))
-* **serialization:** :bug: fix `BlockResponse` Serialization ([6925142](https://github.com/CareBoo/unity-algorand-sdk/commit/69251420e5b3eb2c1c8e32c07ebe1bd38c0433ef))
-* **serialization:** :bug: fix `JsonWriter` not writing to `NativeText` ([9a21502](https://github.com/CareBoo/unity-algorand-sdk/commit/9a215021943f26e44aa89f867c881ab6a5bf4e79))
-* **serialization:** :bug: fix `SignedTransaction` serialization ([2f7bc6b](https://github.com/CareBoo/unity-algorand-sdk/commit/2f7bc6b566d912efdef57a7fb6c8e8cfb1450cbd))
-* **serialization:** :bug: fix `TransactionId` serialization ([f4fcb74](https://github.com/CareBoo/unity-algorand-sdk/commit/f4fcb7406bdd74d1ec3b36bca930afc5772e622b))
-* **serialization:** :bug: fix discrepancy between `TransactionId` and `TransactinIdResponse` ([4bef93f](https://github.com/CareBoo/unity-algorand-sdk/commit/4bef93f912c2026852e9d523ade6ca7817c75950))
-* **serialization:** :bug: fix issue where fixed strings were incorrectly being added to the queryparams ([338790b](https://github.com/CareBoo/unity-algorand-sdk/commit/338790b5a315297ae670b5e38a232661751a13f2))
-* **serialization:** :bug: fix missing `AlgoApiObject` on all Transaction Params ([d8f5b27](https://github.com/CareBoo/unity-algorand-sdk/commit/d8f5b27040cdbd30700bffd0cda21f8e48ba5dd2))
-* **transaction:** :bug: fix `OnCompletion` having incorrect byte values ([9786105](https://github.com/CareBoo/unity-algorand-sdk/commit/9786105f1cfe089c7329d3c157d9df91e601b69c))
-* **transaction:** :bug: fix incorrect constructor in `Transaction.ApplicationCall` ([521fb98](https://github.com/CareBoo/unity-algorand-sdk/commit/521fb98be04ca801296a17b4091e4b64caa48d05))
-* **transaction:** remove unused assetCloseTo param in `AssetClawback` ([ce4d004](https://github.com/CareBoo/unity-algorand-sdk/commit/ce4d004a09f32530870a28d1652bc3747fa3e928))
-
-
-### Code Refactoring
-
-* :fire: remove `NativeSliceExtensions` ([325bfa9](https://github.com/CareBoo/unity-algorand-sdk/commit/325bfa9c03ca342bc939f7862c6beebe1796e678))
-* :fire: remove some verify methods in the transaction ([2432bdd](https://github.com/CareBoo/unity-algorand-sdk/commit/2432bdd1ec1a4a105bea297b413a80921a9d70ee))
-* :fire: remove unnecessary `SendTransactionRaw` ([552dac8](https://github.com/CareBoo/unity-algorand-sdk/commit/552dac85bf6b4bff29d3a05c98b9a0ecc66e230c))
-* :recycle: convert all `SignedTransaction<>` to a single `SignedTransaction` ([4909d60](https://github.com/CareBoo/unity-algorand-sdk/commit/4909d6056a2291f9aa21a757ed62a70f3568ed61))
-* :recycle: rename `RawSignedTransaction` -> `SignedTransaction` ([787b160](https://github.com/CareBoo/unity-algorand-sdk/commit/787b160468d159bd0cac67abc74e7ed9e81ae8ed))
-* :recycle: rename `RawTransaction` -> `Transaction` ([b3c4129](https://github.com/CareBoo/unity-algorand-sdk/commit/b3c412904be573b2bcff9cbc50a0616595ce2dea))
-* :recycle: rename AlgoApiKeyAttribute -> AlgoApiFieldAttribute ([607dab2](https://github.com/CareBoo/unity-algorand-sdk/commit/607dab20f38e791239e7aaf240c9752ed6b6df94))
-* **algod:** :recycle: rename `Block` -> `BlockResponse` ([de1999c](https://github.com/CareBoo/unity-algorand-sdk/commit/de1999c2d9860d7394ce692b33f5decfc9522756))
-* **algod:** :recycle: replace `AccountParticipation` with `Transaction.KeyRegistration.Params` ([b7e9ba7](https://github.com/CareBoo/unity-algorand-sdk/commit/b7e9ba73da80e1ecd1bc6c5ea9b0440111b49ed1))
-* **kmd:** :recycle: replace `Request` with explicit method params ([1b63b9b](https://github.com/CareBoo/unity-algorand-sdk/commit/1b63b9be42288ccb4b57d02c6c945a567e8a9eb7))
-* remove .NET 4.8 requirement ([077ea1e](https://github.com/CareBoo/unity-algorand-sdk/commit/077ea1e62db9ee057a4d782f7750ffe4af9e9cbd)), closes [#19](https://github.com/CareBoo/unity-algorand-sdk/issues/19) [#9](https://github.com/CareBoo/unity-algorand-sdk/issues/9)
-
-
-### Features
-
-* :construction_worker: Add npmjs support ([42c57c3](https://github.com/CareBoo/unity-algorand-sdk/commit/42c57c389081fd2b9c25b797245f899d989f9a95))
-* :heavy_plus_sign: Add libsodium ios, android, and windows ([066a8ad](https://github.com/CareBoo/unity-algorand-sdk/commit/066a8ad97732d3358ed9de8282c298015c95ccf6))
-* :sparkles: Add Account.Generate ([8cfea18](https://github.com/CareBoo/unity-algorand-sdk/commit/8cfea181e464adff165db56a94ad3eb83290f571))
-* :sparkles: Add Address struct ([9c63147](https://github.com/CareBoo/unity-algorand-sdk/commit/9c6314716058530bdd79984f7ea3e016b2283928))
-* :sparkles: Add basic signed transaction support ([64bfae2](https://github.com/CareBoo/unity-algorand-sdk/commit/64bfae28348d3aff964e2de8f88517ce713827e3))
-* :sparkles: Add basic transaction support for message pack serialization and deserialization ([13dc164](https://github.com/CareBoo/unity-algorand-sdk/commit/13dc16404fdc433c75108b181d98f72d3e9d62ab))
-* :sparkles: Add checksums ([1427b4c](https://github.com/CareBoo/unity-algorand-sdk/commit/1427b4c19d3379f3d165db1c72c468a55b1ca35b))
-* :sparkles: add FixedBytesFormatter ([e686c0d](https://github.com/CareBoo/unity-algorand-sdk/commit/e686c0dacab26cf31704defb3e8fdf062f5f4d47))
-* :sparkles: Add IEquatable, GetHashCode for RawTransaction ([fea1031](https://github.com/CareBoo/unity-algorand-sdk/commit/fea1031ff5e2f5fb69a16e1257c99c2cbe04f12d))
-* :sparkles: add LogicSig implementation ([bfcea16](https://github.com/CareBoo/unity-algorand-sdk/commit/bfcea16c6c07f3e01b68f36dc52486405ee9fceb))
-* :sparkles: Add Mnemonic.FromString and Mnemonic.ToString ([5f2e0ef](https://github.com/CareBoo/unity-algorand-sdk/commit/5f2e0ef99bf17599795d9fbf74f891a4cb671db4))
-* :sparkles: add readOnly support ([4f94ee4](https://github.com/CareBoo/unity-algorand-sdk/commit/4f94ee487d99435bf794fa390c2828679c28c486))
-* :sparkles: Add Sha512 interop ([72412b8](https://github.com/CareBoo/unity-algorand-sdk/commit/72412b88e1cf1e0f9199b2bccbe139bfcdfd0850))
-* :sparkles: Add start of Native Integration with Libsodium ([04dadfb](https://github.com/CareBoo/unity-algorand-sdk/commit/04dadfbbe27cee981f3338d59578315bb93c940c))
-* :sparkles: Added Transaction Header, Payment ([f4f5004](https://github.com/CareBoo/unity-algorand-sdk/commit/f4f5004193dac2a5b39b9861de345922bea69479))
-* :sparkles: implement asset configuration transaction ([15201f2](https://github.com/CareBoo/unity-algorand-sdk/commit/15201f272896f68729c6fdddcfdb3de6ab685c3e)), closes [#27](https://github.com/CareBoo/unity-algorand-sdk/issues/27)
-* :sparkles: implement AssetFreezeTransaction ([aeb6bf7](https://github.com/CareBoo/unity-algorand-sdk/commit/aeb6bf7b587185cc5cf083d800a66d71940faeba)), closes [#26](https://github.com/CareBoo/unity-algorand-sdk/issues/26)
-* :sparkles: implement AssetTransfer Transaction ([2d74093](https://github.com/CareBoo/unity-algorand-sdk/commit/2d740930d91df326725d9ac4a6766945f8f17135)), closes [#23](https://github.com/CareBoo/unity-algorand-sdk/issues/23)
-* :sparkles: update AlgoApiFormatterLookup ([509f021](https://github.com/CareBoo/unity-algorand-sdk/commit/509f02187fe81bca24e68db8ebdaf1a203c6d3da))
-* Add Mnemonic and Key datastructs ([0338af0](https://github.com/CareBoo/unity-algorand-sdk/commit/0338af06b891e1abea5ecff2fb7cda4e0d276489))
-* Add signed transaction support for payment transactions ([4cb4b4c](https://github.com/CareBoo/unity-algorand-sdk/commit/4cb4b4cd0ec4c79f98b27aa787d96548ba007d75))
-* **algod:** add support for sending a group of transactions ([c2337e0](https://github.com/CareBoo/unity-algorand-sdk/commit/c2337e0a9c0f45cb31ffa08ae7cfe159651eaded))
-* **algod:** implement Algod Client ([ba2920e](https://github.com/CareBoo/unity-algorand-sdk/commit/ba2920e9ca39656cc395650e90416a6ae2b5fee3)), closes [#10](https://github.com/CareBoo/unity-algorand-sdk/issues/10) [#16](https://github.com/CareBoo/unity-algorand-sdk/issues/16) [#18](https://github.com/CareBoo/unity-algorand-sdk/issues/18)
-* **indexer:** :recycle: rename `ApplicationStateSchema` -> `StateSchema` ([c2c1752](https://github.com/CareBoo/unity-algorand-sdk/commit/c2c17527209d18f05646173d4ad6f5a9931584bc))
-* **indexer:** :sparkles: add `IIndexerClient` ([c383659](https://github.com/CareBoo/unity-algorand-sdk/commit/c383659059b43efe5d2f95c113f0285147e1b199))
-* **indexer:** :sparkles: implement `AccountQuery` ([3bc4c45](https://github.com/CareBoo/unity-algorand-sdk/commit/3bc4c45221247b7199e8a3777cf7370fee6ca996))
-* **indexer:** :sparkles: implement `AccountResponse` ([df7875c](https://github.com/CareBoo/unity-algorand-sdk/commit/df7875c2194ae125c1fd98da95d7ae51a3659383))
-* **indexer:** :sparkles: implement `AccountsQuery` ([eb4f138](https://github.com/CareBoo/unity-algorand-sdk/commit/eb4f1383fe3ab49930ee23f7f4872c4f5ec98d89))
-* **indexer:** :sparkles: implement `AccountsResponse` ([15b95a0](https://github.com/CareBoo/unity-algorand-sdk/commit/15b95a0d5a934c091c710f9f85da6d9f7892f269))
-* **indexer:** :sparkles: implement `AddressRole` ([819fee1](https://github.com/CareBoo/unity-algorand-sdk/commit/819fee17d8cae4a9719c3ec5215a1163eac0e8b6))
-* **indexer:** :sparkles: implement `Application` ([6efc045](https://github.com/CareBoo/unity-algorand-sdk/commit/6efc045b7290327aea91c7d13e7552a1b2a66de3))
-* **indexer:** :sparkles: implement `ApplicationLocalState` ([b9f5e19](https://github.com/CareBoo/unity-algorand-sdk/commit/b9f5e19c483316ef48234f41453e29b753d04993))
-* **indexer:** :sparkles: implement `ApplicationQuery` ([90529fe](https://github.com/CareBoo/unity-algorand-sdk/commit/90529feb9962a64e31ff13ace2926c4009cfb906))
-* **indexer:** :sparkles: implement `ApplicationResponse` ([2968a38](https://github.com/CareBoo/unity-algorand-sdk/commit/2968a3886f1be540e660c3b0b5a9aad389b6f1c0))
-* **indexer:** :sparkles: implement `ApplicationsQuery` ([1b2a010](https://github.com/CareBoo/unity-algorand-sdk/commit/1b2a0100f02c8b51c53be54bcafe069fe92e5658))
-* **indexer:** :sparkles: implement `ApplicationsResponse` ([f3120b3](https://github.com/CareBoo/unity-algorand-sdk/commit/f3120b39e60549a5d0b23a0730cc8433fd65f297))
-* **indexer:** :sparkles: implement `Asset` ([3e2b9e6](https://github.com/CareBoo/unity-algorand-sdk/commit/3e2b9e6d602cf26ed7535927ff30f9d777913fef))
-* **indexer:** :sparkles: implement `AssetHolding` ([b7e6714](https://github.com/CareBoo/unity-algorand-sdk/commit/b7e67142a06c504e5f2a97974550cc810bbdb9ba))
-* **indexer:** :sparkles: implement `AssetParams` ([3e25148](https://github.com/CareBoo/unity-algorand-sdk/commit/3e25148ef21ade54167f71d1fd8c02fcbd4f476a))
-* **indexer:** :sparkles: implement `AssetQuery` ([2c8f30d](https://github.com/CareBoo/unity-algorand-sdk/commit/2c8f30d79e0847101b898b983891addf595dd37c))
-* **indexer:** :sparkles: implement `AssetResponse` ([f44da47](https://github.com/CareBoo/unity-algorand-sdk/commit/f44da4723ef5dbcd93049f1cdb4ec759ff2ca530))
-* **indexer:** :sparkles: implement `AssetsResponse` ([abf6ccd](https://github.com/CareBoo/unity-algorand-sdk/commit/abf6ccd0ba15fd30503fe5edb875ac8e66949e49))
-* **indexer:** :sparkles: implement `BalancesQuery` ([37c652e](https://github.com/CareBoo/unity-algorand-sdk/commit/37c652e458fde70485ec1d9f75a6f044e3459848))
-* **indexer:** :sparkles: implement `BalancesResponse` ([bef374a](https://github.com/CareBoo/unity-algorand-sdk/commit/bef374aa161f29885984f12f117d51586af36f98))
-* **indexer:** :sparkles: implement `Block` ([8168949](https://github.com/CareBoo/unity-algorand-sdk/commit/8168949039df1448008280485699282e5a3ae142))
-* **indexer:** :sparkles: implement `BlockRewards` ([43a2e0d](https://github.com/CareBoo/unity-algorand-sdk/commit/43a2e0de5f124cf73bda585efafacef4cb75fdf3))
-* **indexer:** :sparkles: implement `BlockUpgradeStatus` ([34ee633](https://github.com/CareBoo/unity-algorand-sdk/commit/34ee633991fff8fd67c219d1bc07dd4f6e064a28))
-* **indexer:** :sparkles: implement `BlockUpgradeVote` ([46bfbdf](https://github.com/CareBoo/unity-algorand-sdk/commit/46bfbdfb01f23b30804027c4e38d4f64960353a7))
-* **indexer:** :sparkles: implement `ErrorResponse` msgpack fields ([7bb31e4](https://github.com/CareBoo/unity-algorand-sdk/commit/7bb31e43d0cae3c0ff28e21d579ef6a3d18012e5))
-* **indexer:** :sparkles: implement `EvalDelta` msgpack fields ([e7ce847](https://github.com/CareBoo/unity-algorand-sdk/commit/e7ce847312a539ff9ef5ba8d24b2373270825de5))
-* **indexer:** :sparkles: implement `EvalDeltaKeyValue` msgpack fields ([f564579](https://github.com/CareBoo/unity-algorand-sdk/commit/f564579c8b488b94926d6670b1c50e82525f7ff3))
-* **indexer:** :sparkles: implement `HealthCheck` ([57e38ee](https://github.com/CareBoo/unity-algorand-sdk/commit/57e38ee9f0a4a56c50752dab0305bd0becbb775e))
-* **indexer:** :sparkles: implement `IndexerClient.GetAccount` ([e088877](https://github.com/CareBoo/unity-algorand-sdk/commit/e08887724a5a393dfcf88a6fe04e8b98e780a264))
-* **indexer:** :sparkles: implement `IndexerClient.GetAccounts` ([1fa9f5b](https://github.com/CareBoo/unity-algorand-sdk/commit/1fa9f5b906f9ae31289043faadacc510affa582a))
-* **indexer:** :sparkles: implement `IndexerClient.GetHealth` ([ee98909](https://github.com/CareBoo/unity-algorand-sdk/commit/ee989091c0a1dc74e491b337ed2cb486aee66b3b))
-* **indexer:** :sparkles: implement `IndexerClient` ([b39c115](https://github.com/CareBoo/unity-algorand-sdk/commit/b39c1157689abcdbd1e19ad14363bd6d63d454a7))
-* **indexer:** :sparkles: implement `LogicSig` json fields ([a547772](https://github.com/CareBoo/unity-algorand-sdk/commit/a5477728821094296cf2b1053223f49b8a34fd8f))
-* **indexer:** :sparkles: implement `MiniAssetHolding` ([6df0bd0](https://github.com/CareBoo/unity-algorand-sdk/commit/6df0bd0048ea48ae70aa63d19e851910f4d8c4b9))
-* **indexer:** :sparkles: implement `MultiSig.SubSignature` ([d995b21](https://github.com/CareBoo/unity-algorand-sdk/commit/d995b211ad9d1ded2159ac8700864513f375456b))
-* **indexer:** :sparkles: implement `MultiSig` ([2b33c02](https://github.com/CareBoo/unity-algorand-sdk/commit/2b33c0263329b4d675b5ef5dc2e72995ea30e3d0))
-* **indexer:** :sparkles: implement `OnCompletion` ([b7181f3](https://github.com/CareBoo/unity-algorand-sdk/commit/b7181f318265347807e74b8b34a84a084ed4c586))
-* **indexer:** :sparkles: implement `TealKeyValue` msgPack fields ([bfcb1ad](https://github.com/CareBoo/unity-algorand-sdk/commit/bfcb1ade5bb620630a80f50dc8b6b0d147b4435a))
-* **indexer:** :sparkles: implement `Transaction.ApplicationCall` ([4e800be](https://github.com/CareBoo/unity-algorand-sdk/commit/4e800be0301f6df03b67ef3d98c686becb33b296))
-* **indexer:** :sparkles: implement `Transaction.ApplicationCall` model fields ([e05a1b3](https://github.com/CareBoo/unity-algorand-sdk/commit/e05a1b36fe5fce154862308569c212b52c5a4c0f))
-* **indexer:** :sparkles: implement `Transaction.AssetConfiguration` model fields ([b021ac9](https://github.com/CareBoo/unity-algorand-sdk/commit/b021ac9f7fe4800900e0bb73efc5bc3be7228c93))
-* **indexer:** :sparkles: implement `Transaction.AssetFreeze` model fields ([655aee9](https://github.com/CareBoo/unity-algorand-sdk/commit/655aee9fee97f43e4a8c669846924c86dbbe071c))
-* **indexer:** :sparkles: implement `Transaction.AssetTransfer` model fields ([5322ad7](https://github.com/CareBoo/unity-algorand-sdk/commit/5322ad707f3d4f99dd182d0c6834209145e29e4d))
-* **indexer:** :sparkles: implement `Transaction.KeyRegistration` ([da15081](https://github.com/CareBoo/unity-algorand-sdk/commit/da1508124e3564de206990d0dcb8c16a77f44742))
-* **indexer:** :sparkles: implement `Transaction.KeyRegistration` model fields ([ab75259](https://github.com/CareBoo/unity-algorand-sdk/commit/ab75259643194eff90a0eeed7bb0c2bba98d1953))
-* **indexer:** :sparkles: implement `TransactionResponse` ([0cdcdde](https://github.com/CareBoo/unity-algorand-sdk/commit/0cdcdde80cc9135e2f5326715f294713b05a1a20))
-* **indexer:** :sparkles: implement `TransactionsQuery` ([a9e353a](https://github.com/CareBoo/unity-algorand-sdk/commit/a9e353adc44117479f7c5bb47d456880f0a5f164))
-* **indexer:** :sparkles: implement AssetsQuery ([ebfb08c](https://github.com/CareBoo/unity-algorand-sdk/commit/ebfb08c00b4a95e01a0fe0a7bb2541d3bb612295))
-* **indexer:** :sparkles: implement TransactionsResponse ([27345f5](https://github.com/CareBoo/unity-algorand-sdk/commit/27345f5a579485d040f3f7c7c166e0b32a7d6d39))
-* **json:** :sparkles: implement `JsonReader.Skip` ([cba58d6](https://github.com/CareBoo/unity-algorand-sdk/commit/cba58d6ae81c5225d1c7379d7ebf5564c2a536e5))
-* **json:** :sparkles: implement `JsonWriter.WriteRaw` ([f780932](https://github.com/CareBoo/unity-algorand-sdk/commit/f780932803e25f3641e55e636be00b6b371430d4))
-* **json:** :sparkles: implement `ReadRaw` ([c2ec519](https://github.com/CareBoo/unity-algorand-sdk/commit/c2ec51903457a5872794b003d0b92e3e2fff8d90))
-* **kmd:** :sparkles: add `Error` to `ErrorMessage` which is used for kmd ([b64aac6](https://github.com/CareBoo/unity-algorand-sdk/commit/b64aac6d959cf67a02827268dfe3ac56ec11b666))
-* **kmd:** :sparkles: implement `APIV1DELETEKeyResponse` ([d273c12](https://github.com/CareBoo/unity-algorand-sdk/commit/d273c1280988fcbd4b7fc6a0aa43255464fb1e5e))
-* **kmd:** :sparkles: implement `APIV1DELETEMultisigResponse` ([b323213](https://github.com/CareBoo/unity-algorand-sdk/commit/b323213bf13991365d8cfd9542aab37135421183))
-* **kmd:** :sparkles: implement `APIV1GETWalletsResponse` ([cd7180d](https://github.com/CareBoo/unity-algorand-sdk/commit/cd7180d0fa05bd749fecd6623e0ad2bd2a02a132))
-* **kmd:** :sparkles: implement `APIV1Wallet` ([4b74869](https://github.com/CareBoo/unity-algorand-sdk/commit/4b7486950aae352ff8d1119c88026d2a7ffe6a8a))
-* **kmd:** :sparkles: implement `APIV1WalletHandle` ([da73b67](https://github.com/CareBoo/unity-algorand-sdk/commit/da73b672661e6ef53168b8cf610d3eed9b8262f7))
-* **kmd:** :sparkles: implement `CreateWalletRequest` ([02cac0a](https://github.com/CareBoo/unity-algorand-sdk/commit/02cac0aabe7064a8c5a033d2eee44a198b6afeb6))
-* **kmd:** :sparkles: implement `CreateWalletRequest` api fields ([9f1b667](https://github.com/CareBoo/unity-algorand-sdk/commit/9f1b6672861aae64f636bd6ec346d4efdea38f1a))
-* **kmd:** :sparkles: implement `CreateWalletResponse` ([d0c3965](https://github.com/CareBoo/unity-algorand-sdk/commit/d0c396531c32ea1f277ae1d1883d08b718fdddc8))
-* **kmd:** :sparkles: implement `DeleteKeyRequest` ([9de69d0](https://github.com/CareBoo/unity-algorand-sdk/commit/9de69d0a677e28008fa73e5c56957921a29bf8cb))
-* **kmd:** :sparkles: implement `DeleteMultiSigRequest` ([4d0b859](https://github.com/CareBoo/unity-algorand-sdk/commit/4d0b859cea81428d39fc9e4aea29a28b3a4e9374))
-* **kmd:** :sparkles: implement `ExportKeyRequest` ([2dfed57](https://github.com/CareBoo/unity-algorand-sdk/commit/2dfed577a7e6b1bf1ef276a5e2ddff57a4532681))
-* **kmd:** :sparkles: implement `ExportKeyResponse.Equals` ([a5769c7](https://github.com/CareBoo/unity-algorand-sdk/commit/a5769c7ceb1e8f5f8e36fccb123653e1a1c6b9ae))
-* **kmd:** :sparkles: implement `ExportKeyResponse` ([f5dc29a](https://github.com/CareBoo/unity-algorand-sdk/commit/f5dc29a2f34a1244adb3e475ea21cff67416a8b2))
-* **kmd:** :sparkles: implement `ExportMasterKeyRequest` ([b668ac9](https://github.com/CareBoo/unity-algorand-sdk/commit/b668ac98790b2849194a4ce1bf63073bd2a93499))
-* **kmd:** :sparkles: implement `ExportMasterKeyResponse` ([eaf3066](https://github.com/CareBoo/unity-algorand-sdk/commit/eaf30661e5cd0a3201ca9f1d0bfd1b1cb2aaf7a5))
-* **kmd:** :sparkles: implement `ExportMultiSigRequest` ([eab6771](https://github.com/CareBoo/unity-algorand-sdk/commit/eab677148322ff5a012b919aeff67a8fc7b88fef))
-* **kmd:** :sparkles: implement `ExportMultiSigResponse` ([41677c2](https://github.com/CareBoo/unity-algorand-sdk/commit/41677c24c781017801e5f62846714a70fb7bfdfc))
-* **kmd:** :sparkles: implement `GenerateKeyResponse` ([82f0749](https://github.com/CareBoo/unity-algorand-sdk/commit/82f07495143755c2c13f9ee4a6bab708e67b537b))
-* **kmd:** :sparkles: implement `GenerateMasterKeyRequest` ([41f2b64](https://github.com/CareBoo/unity-algorand-sdk/commit/41f2b64f34fd6294af51b97c96c6bbf1d0fad144))
-* **kmd:** :sparkles: implement `ImportKeyRequest` ([09c8308](https://github.com/CareBoo/unity-algorand-sdk/commit/09c8308c0d00e58941a97ccb74af4b0142df002f))
-* **kmd:** :sparkles: implement `ImportKeyResponse` ([338e9e7](https://github.com/CareBoo/unity-algorand-sdk/commit/338e9e7536f8dd3752200be7b762dfaee079e39e))
-* **kmd:** :sparkles: implement `ImportMultiSigRequest` ([b8eb046](https://github.com/CareBoo/unity-algorand-sdk/commit/b8eb04619bbd9966452de5f48a76928400472fc8))
-* **kmd:** :sparkles: implement `ImportMultiSigResponse` ([6a92419](https://github.com/CareBoo/unity-algorand-sdk/commit/6a924199ebc5ee9892630d9bfa14691a7efe7bfb))
-* **kmd:** :sparkles: implement `InitWalletHandleTokenRequest` ([5c2bde4](https://github.com/CareBoo/unity-algorand-sdk/commit/5c2bde417793a0cc2c5ed74527841655affd8650))
-* **kmd:** :sparkles: implement `InitWalletHandleTokenResponse` ([4eacfe2](https://github.com/CareBoo/unity-algorand-sdk/commit/4eacfe2654cc83e1f36c7dc2434c39e0175dfa09))
-* **kmd:** :sparkles: implement `KmdClient` ([b37cef3](https://github.com/CareBoo/unity-algorand-sdk/commit/b37cef3c93d66110fe5b9dbca6723da3849ef68d)), closes [#13](https://github.com/CareBoo/unity-algorand-sdk/issues/13)
-* **kmd:** :sparkles: implement `ListKeysRequest` ([70ce0ff](https://github.com/CareBoo/unity-algorand-sdk/commit/70ce0ff4da135cad5e66b2c7d49acb4ebe62b78b))
-* **kmd:** :sparkles: implement `ListKeysResponse` ([6fb2a6d](https://github.com/CareBoo/unity-algorand-sdk/commit/6fb2a6d892e7b7a43cc4418fa507dd8c1ade9183))
-* **kmd:** :sparkles: implement `ListMultiSigRequest` ([3da753e](https://github.com/CareBoo/unity-algorand-sdk/commit/3da753ea7606ce7be3e1292cde6a73311bae2009))
-* **kmd:** :sparkles: implement `ListMultiSigResponse` ([d0a6782](https://github.com/CareBoo/unity-algorand-sdk/commit/d0a678261616ba5fffefac387da5bead2e953ded))
-* **kmd:** :sparkles: implement `ListWalletsRequest` ([91de444](https://github.com/CareBoo/unity-algorand-sdk/commit/91de44473618235d4203bcc25c2b3a51fbd2563f))
-* **kmd:** :sparkles: implement `ReleaseWalletHandleTokenRequest` ([c6a836d](https://github.com/CareBoo/unity-algorand-sdk/commit/c6a836dee7d85da7f3aa211fb2f3312f989d95b9))
-* **kmd:** :sparkles: implement `ReleaseWalletHandleTokenResponse` ([3f2d081](https://github.com/CareBoo/unity-algorand-sdk/commit/3f2d08140e7c34b3377a361c85cc1bb93fbab1a0))
-* **kmd:** :sparkles: implement `RenameWalletRequest` ([ccf7d3e](https://github.com/CareBoo/unity-algorand-sdk/commit/ccf7d3e824ad523ab92ac31bdca551aee39f1089))
-* **kmd:** :sparkles: implement `RenameWalletResponse` ([1d35264](https://github.com/CareBoo/unity-algorand-sdk/commit/1d352644c714c664024ffcf7c1de2b2e7a14a272))
-* **kmd:** :sparkles: implement `RenewWalletHandleTokenRequest` ([76269cc](https://github.com/CareBoo/unity-algorand-sdk/commit/76269ccb2474b826926fe5102cd8425aed814aab))
-* **kmd:** :sparkles: implement `RenewWalletHandleTokenResponse` ([d4f6a9a](https://github.com/CareBoo/unity-algorand-sdk/commit/d4f6a9a10e8cca5a9c89fc27cd55c3760c43dad8))
-* **kmd:** :sparkles: implement `SignMultiSigRequest` ([d535391](https://github.com/CareBoo/unity-algorand-sdk/commit/d535391d4cfa397ba6d56cf766966299a54beb59))
-* **kmd:** :sparkles: implement `SignMultiSigResponse` ([0b16ac4](https://github.com/CareBoo/unity-algorand-sdk/commit/0b16ac485c27b9caf6efb58604cec90f6f4c2b27))
-* **kmd:** :sparkles: implement `SignProgramMultiSigRequest` ([9460af9](https://github.com/CareBoo/unity-algorand-sdk/commit/9460af994e14ff3e3aae2317d1fba2fbece38388))
-* **kmd:** :sparkles: implement `SignProgramMultiSigResponse` ([ee5ea0e](https://github.com/CareBoo/unity-algorand-sdk/commit/ee5ea0e8bf2f999aa2f340f31fe9d9f4d980b0a8))
-* **kmd:** :sparkles: implement `SignProgramRequest` ([c8826fa](https://github.com/CareBoo/unity-algorand-sdk/commit/c8826fa39de84df78d2dc8e241145ec4f4811429))
-* **kmd:** :sparkles: implement `SignTransactionRequest` ([38ec667](https://github.com/CareBoo/unity-algorand-sdk/commit/38ec667c31f3b3b2e8309196b3f57f27a89e280d))
-* **kmd:** :sparkles: implement `SignTransactionResponse` ([e88c293](https://github.com/CareBoo/unity-algorand-sdk/commit/e88c2933f2c89a86669edbc3560ad20f8bd01a81))
-* **kmd:** :sparkles: implement `VersionsRequest` ([90f9cb6](https://github.com/CareBoo/unity-algorand-sdk/commit/90f9cb65238272c5b7ef9c468f57201bd95aad27))
-* **kmd:** :sparkles: implement `VersionsResponse` ([15ab570](https://github.com/CareBoo/unity-algorand-sdk/commit/15ab570f68f1a8170cac5678dd5f5cb400b28097))
-* **kmd:** :sparkles: implement `WalletInfoResponse` ([cb073e9](https://github.com/CareBoo/unity-algorand-sdk/commit/cb073e99625cde9075a312c56ed7cc5e8a288c4c))
-* **kmd:** implement `SignProgramResponse` ([f529e2a](https://github.com/CareBoo/unity-algorand-sdk/commit/f529e2a85538ff6e3d13ebe37a23d44cce4aa4b7))
-* **msgpack:** :sparkles: implement `MessagePackReader.ReadRaw` ([0f6e28a](https://github.com/CareBoo/unity-algorand-sdk/commit/0f6e28afa94261b8af955e1c9fe9f6bdd62f2e64))
-* **msgpack:** :sparkles: implement `MessagePackWriter.WriteRaw` ([703544c](https://github.com/CareBoo/unity-algorand-sdk/commit/703544c00fbcb5cd5ce0def75e5d921e6a7a922c))
-* **networking:** :sparkles: add `ApiResponse` API to `ApiResponse<>` ([b9728f9](https://github.com/CareBoo/unity-algorand-sdk/commit/b9728f9d43d1e55b8732c8132bd6b6015c395a84))
-* **serialization:** :sparkles: add formatters for `PrivateKey`, `PublicKey`, and `Signature` ([11d345b](https://github.com/CareBoo/unity-algorand-sdk/commit/11d345b839abc76cc1fe376cfed833a2d2041be6))
-* **serialization:** :sparkles: add support for deserializing `byte[]` ([6764157](https://github.com/CareBoo/unity-algorand-sdk/commit/676415734c8e1d4884927399c292526ec01e2361))
-* **serialization:** :sparkles: add support for generically serializing byte enums to strings ([bae5d83](https://github.com/CareBoo/unity-algorand-sdk/commit/bae5d830cc420d3a6033e34baa988512cdb96bff))
-* **serialization:** :sparkles: finish implementing `MessagePackReader.Integers` and `MessagePackWriter.Integers` ([d669359](https://github.com/CareBoo/unity-algorand-sdk/commit/d66935919094ef99208c425f27edf3c0223e0e2d))
-* **serialization:** :sparkles: finish implementing serializer/deserializer methods in `EnumFormatter` ([414991f](https://github.com/CareBoo/unity-algorand-sdk/commit/414991fd35c1c2dac8988f0aa12822e9d01af540))
-* **serialization:** :sparkles: implement `AlgoApiObject` ([9ef3335](https://github.com/CareBoo/unity-algorand-sdk/commit/9ef333546494d141ca66b5ebcf25ec18651c443e))
-* **serialization:** :sparkles: implement `Timestamp` ([e520962](https://github.com/CareBoo/unity-algorand-sdk/commit/e5209622de596d71a88ab3ef9e4f8617d646d548))
-* **serialization:** :tada: update formatter cache ([ae346d6](https://github.com/CareBoo/unity-algorand-sdk/commit/ae346d6b9408fd66815de9d2a6f461a453ef890e))
-* **transaction:** :sparkles: add `GetSignature` and `ToRaw` extensions to `ITransaction` ([426dea6](https://github.com/CareBoo/unity-algorand-sdk/commit/426dea611a06178a0e11059f359034c10a98287d))
-* **transaction:** :sparkles: add `RegisterAccountOnline` and `RegisterAccountOffline` APIs ([d52e953](https://github.com/CareBoo/unity-algorand-sdk/commit/d52e95341acb07ad4412634f7c0002035668e441))
-* **transaction:** :sparkles: add `Transaction.AppCreate` and `Transaction.AppConfigure` APIs ([0dd2e75](https://github.com/CareBoo/unity-algorand-sdk/commit/0dd2e751dfadb31ab1004e01e4cce3e0e57f943d))
-* **transaction:** :sparkles: add `Transaction.AssetCreate` `Transaction.AssetConfigure` and `Transaction.AssetDelete` API ([4192aba](https://github.com/CareBoo/unity-algorand-sdk/commit/4192aba6962cb06a41a461e0fdf39a5d927c63ff))
-* **transaction:** :sparkles: add `Transaction.AssetFreeze` API ([d8b5721](https://github.com/CareBoo/unity-algorand-sdk/commit/d8b5721a291a732b3ee94560e808e62d3eb32798))
-* **transaction:** :sparkles: add `Transaction.Payment` API ([241ec4c](https://github.com/CareBoo/unity-algorand-sdk/commit/241ec4c33df16bb8fc4018ef95766ef2748b1214))
-* **transaction:** :sparkles: implement address from application id ([a7df476](https://github.com/CareBoo/unity-algorand-sdk/commit/a7df4765b61ff1c0f89248686fa6f5148e90199b))
-* **transaction:** :sparkles: implement AssetClawback and AssetAccept ([ccb2dc6](https://github.com/CareBoo/unity-algorand-sdk/commit/ccb2dc66fcbc66c738168a34b95d55aba4039945)), closes [#24](https://github.com/CareBoo/unity-algorand-sdk/issues/24) [#25](https://github.com/CareBoo/unity-algorand-sdk/issues/25)
-* **transaction:** :sparkles: implement atomic transfers ([c97fdc1](https://github.com/CareBoo/unity-algorand-sdk/commit/c97fdc1d1fd60c684e6f4256ef53f32b55509370)), closes [#45](https://github.com/CareBoo/unity-algorand-sdk/issues/45)
-* **transaction:** :sparkles: use `TransactionParams` in Transaction constructors ([c99bd3f](https://github.com/CareBoo/unity-algorand-sdk/commit/c99bd3f6dad2270bdcec2f5551ac0bb4f21cd556))
-* **unity:** make AlgoApiClient's Serializable ([a6ef8a4](https://github.com/CareBoo/unity-algorand-sdk/commit/a6ef8a45f08256576a38013229bf9e50114d36d8))
-
-
-### Reverts
-
-* **demo:** :fire: remove bossroom assets... too big to be a sample ([d768029](https://github.com/CareBoo/unity-algorand-sdk/commit/d76802948df36cc557744eaa889de43d2d253707))
-
-
-### BREAKING CHANGES
-
-* Removing `NativeSliceExtensions`
-* **algod:** `AccountParticipation` no longer exists
-* **transaction:** All transaction constructors have been changed to use `TransactionParams`
-* **indexer:** Removed token from IndexerClient constructor
-* **kmd:** changes `IKmdClient` API to use parameters instead of `Request` objs
-* **indexer:** indexer queries are now given as optional arguments
-* remove `Transaction.VerifySignature`, `SignedTransaction.Verify`
-* signed transactions are now represented by `SignedTransaction` (non-generic)
-* renamed `RawSignedTransaction` -> `SignedTransaction`
-* `RawTransaction` renamed to `Transaction`
-* AlgoApiKeyAttribute -> AlgoApiFieldAttribute
-* **algod:** `Block` renamed to `BlockResponse`
-* Replace Buffer with GetUnsafePtr
-* Algo Serializer API has completely changed...
-* Removes the `SendTransactionRaw` method from `AlgodClient`
-
-# [1.0.0-pre.7](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.6...v1.0.0-pre.7) (2021-10-29)
-
-
-### Bug Fixes
-
-* **transaction:** remove unused assetCloseTo param in `AssetClawback` ([f45dac1](https://github.com/CareBoo/unity-algorand-sdk/commit/f45dac1328af34e1eb437431e2bc60aa71ad53af))
-
-# [1.0.0-pre.6](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.5...v1.0.0-pre.6) (2021-10-28)
-
-
-### Bug Fixes
-
-* **indexer:** fix missing `Version` field in `HealthCheck` ([39c3444](https://github.com/CareBoo/unity-algorand-sdk/commit/39c3444ee0a6a628dbd80619804a12720223a2ef))
-
-
-### Features
-
-* **algod:** add support for sending a group of transactions ([a7a7695](https://github.com/CareBoo/unity-algorand-sdk/commit/a7a7695ce1e0196ca5bc3fe47e463b6a0c643f2f))
-
-# [1.0.0-pre.5](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.4...v1.0.0-pre.5) (2021-10-27)
-
-
-### Bug Fixes
-
-* **crypto:** fix libsodium not working on OSX ([1154450](https://github.com/CareBoo/unity-algorand-sdk/commit/1154450267b71762195f701694616a38d47fd529))
-
-# [1.0.0-pre.4](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.3...v1.0.0-pre.4) (2021-10-27)
-
-
-### Features
-
-* **unity:** make AlgoApiClient's Serializable ([4a3aa11](https://github.com/CareBoo/unity-algorand-sdk/commit/4a3aa11fe3ecdf46f00ef29829e1d965043ee3aa))
-
-# [1.0.0-pre.3](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.2...v1.0.0-pre.3) (2021-10-25)
-
-
-### Code Refactoring
-
-* :fire: remove `NativeSliceExtensions` ([c5c7715](https://github.com/CareBoo/unity-algorand-sdk/commit/c5c77158ab8bfa6585e95f3cb01594b80758f635))
-
-
-### BREAKING CHANGES
-
-* Removing `NativeSliceExtensions`
-
-# [1.0.0-pre.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.1...v1.0.0-pre.2) (2021-10-25)
-
-
-### Bug Fixes
-
-* fix empty dirs finding their way into the project ([82afc9d](https://github.com/CareBoo/unity-algorand-sdk/commit/82afc9d14a0374b39e63dd7581b950324e12bf39))
-
-# 1.0.0-pre.1 (2021-10-24)
-
-
-### Bug Fixes
-
-* :bug: fix `RawTransaction.Equals` ([f6bd889](https://github.com/CareBoo/unity-algorand-sdk/commit/f6bd889c737f970c835d3273f7c28b002794ed3f))
-* :bug: fix compile errs ([7a03ed9](https://github.com/CareBoo/unity-algorand-sdk/commit/7a03ed99a5cd7d3657df89c58a989ee0e33ced66))
-* :bug: fix crash on ArrayComparer.Equals ([8ca1b06](https://github.com/CareBoo/unity-algorand-sdk/commit/8ca1b06daedcbdf97650f4b79bd72a134238bec0))
-* :bug: fix issues with codegen and AOT compilation ([d2f9bdc](https://github.com/CareBoo/unity-algorand-sdk/commit/d2f9bdc8f8c77b8afb690162c3fafda81b5f8c48))
-* :bug: fix keyworded enum types formatting as numbers ([d686c13](https://github.com/CareBoo/unity-algorand-sdk/commit/d686c134dff5e0d657f974600c5948b86f506f0f))
-* :bug: Fix npm release ([9e68078](https://github.com/CareBoo/unity-algorand-sdk/commit/9e68078b5f7f75a7670e7cf03dc1ee5137709bf1))
-* :bug: Fix repository ([e765589](https://github.com/CareBoo/unity-algorand-sdk/commit/e765589b92849e23b7d080f335067cba1c1a8b62))
-* :bug: fix signatures ([2fb4614](https://github.com/CareBoo/unity-algorand-sdk/commit/2fb461459ac58266c1078bdb16607d65a25d8553))
-* :triangular_flag_on_post: Update package registry ([a0800bc](https://github.com/CareBoo/unity-algorand-sdk/commit/a0800bc57c6fde758182075a90e2fbd96ce67be8))
-* :white_check_mark: Fix CI tests on Github Actions can't find libsodium ([20c4ad5](https://github.com/CareBoo/unity-algorand-sdk/commit/20c4ad56edf57cef595c2f4078bba4e15d893602)), closes [#12](https://github.com/CareBoo/unity-algorand-sdk/issues/12)
-* **algod:** :bug: fix `AlgodClient.TealCompile` ([8f5a67a](https://github.com/CareBoo/unity-algorand-sdk/commit/8f5a67a694cd21496b6db7c1630324ddbfd13f1f)), closes [#20](https://github.com/CareBoo/unity-algorand-sdk/issues/20)
-* **algod:** :bug: fix `AssetParams` serialization ([cbf9a69](https://github.com/CareBoo/unity-algorand-sdk/commit/cbf9a6981c52c565eb3837186c38765e5b8bea27))
-* **algod:** :bug: fix pending transactions not returning messagepack ([dca09f8](https://github.com/CareBoo/unity-algorand-sdk/commit/dca09f8d6c2e1781097f3386355852b7179f01d9))
-* **algod:** :bug: fix vrfpubkey formatter lookup ([0bb0014](https://github.com/CareBoo/unity-algorand-sdk/commit/0bb001407b81abc288d271cda3c6d6b9c19c49df))
-* **algod:** :bug: fix vrfpubkey formatting ([7d02443](https://github.com/CareBoo/unity-algorand-sdk/commit/7d024437ac9415449717ebf8a97017fcc10f9ee1))
-* **algod:** :bug: replace `VrfPubKey` with `FixedString128Bytes` ([94b02b0](https://github.com/CareBoo/unity-algorand-sdk/commit/94b02b06f25d4b97e264f085cc96afbfdfb68862)), closes [#42](https://github.com/CareBoo/unity-algorand-sdk/issues/42)
-* **indexer:** :bug: add missing fields to `Account` model ([5732a1d](https://github.com/CareBoo/unity-algorand-sdk/commit/5732a1d7b6a57d300e8e8b4662696e180c0c2ecb))
-* **indexer:** :bug: add token back to indexer ([023cb05](https://github.com/CareBoo/unity-algorand-sdk/commit/023cb05f173242f2c3f234f8203fcf2c03ea5369))
-* **indexer:** :bug: fix `HealthCheck` missing serialization logic ([f5165c6](https://github.com/CareBoo/unity-algorand-sdk/commit/f5165c681387450a791f191a2ae88a060741a9de))
-* **indexer:** :bug: fix indexer requires token ([57f6114](https://github.com/CareBoo/unity-algorand-sdk/commit/57f61141f9c7763bb10a3a9deac07dcbc65ea6a9))
-* **indexer:** :bug: fix transaction formatters missing valid msgpack fields ([bf917ac](https://github.com/CareBoo/unity-algorand-sdk/commit/bf917ac30f964b9102c293d00a60d6f0072e75bd))
-* **indexer:** :fire: fix huge issue with indexer where query parameters were in body ([7bcca20](https://github.com/CareBoo/unity-algorand-sdk/commit/7bcca2022b8c1238cd35f225fccef80ada562143))
-* **indexer:** :sparkles: fix `TealValue` msgpack fieldnames ([2a6ef27](https://github.com/CareBoo/unity-algorand-sdk/commit/2a6ef27e4f465c73a3cb744eae12267929c06f07))
-* **json:** :bug: fix `PrivateKey` JSON deserialization err ([cb327e0](https://github.com/CareBoo/unity-algorand-sdk/commit/cb327e0f38ef61e43f5c5e38c3090ab02b83693d))
-* **json:** :bug: fix empty json objects missing begin object '{' char ([af9a2f1](https://github.com/CareBoo/unity-algorand-sdk/commit/af9a2f1cdc7b02a16e1ef052a1156ddee0d0a2a8))
-* **kmd:** :art: fix `KmdClient` API incorrectly using optional args ([a53998b](https://github.com/CareBoo/unity-algorand-sdk/commit/a53998b00aa103a47ad1fea014c5f6627f8a3d34)), closes [#36](https://github.com/CareBoo/unity-algorand-sdk/issues/36)
-* **kmd:** :bug: fix `GenerateKeyRequest` to use `wallet_handle_token` not password ([a86c25e](https://github.com/CareBoo/unity-algorand-sdk/commit/a86c25ea9b233dd755f234d64d36467415ce6ebb))
-* **kmd:** :bug: fix `ImportKeyRequest` to use wallet_handle_token not password ([f020a03](https://github.com/CareBoo/unity-algorand-sdk/commit/f020a03fb19c9cf89452066d6dbd3cf278eb9f7f))
-* **kmd:** :bug: fix `KmdClient.SignTransaction` returning a signed transaction message ([f0a354c](https://github.com/CareBoo/unity-algorand-sdk/commit/f0a354caeafd05ae7a984451582e8d53b82bbd6b))
-* **kmd:** :bug: fix `WalletHandle` not added to formatter cache ([4c30939](https://github.com/CareBoo/unity-algorand-sdk/commit/4c309395b3f7076aa4db1e6ebfb552d59fad57b0))
-* **kmd:** :bug: fix multisig ([fc7bcd6](https://github.com/CareBoo/unity-algorand-sdk/commit/fc7bcd6f647c399b3edebb52ccd65fccf715393e))
-* **serialization:** :bug: fix `Block` not having a formatter ([dec6176](https://github.com/CareBoo/unity-algorand-sdk/commit/dec61762ddfba5c7f43223175c8c63f2d0b3609e))
-* **serialization:** :bug: fix `BlockResponse` Serialization ([1252a16](https://github.com/CareBoo/unity-algorand-sdk/commit/1252a1634d6bb2fa00f78c1628ce7dbf33da6a56))
-* **serialization:** :bug: fix `JsonWriter` not writing to `NativeText` ([2b61659](https://github.com/CareBoo/unity-algorand-sdk/commit/2b61659ea6801947f7b31069ecade0d6cb5f1e09))
-* **serialization:** :bug: fix `SignedTransaction` serialization ([f4bde8d](https://github.com/CareBoo/unity-algorand-sdk/commit/f4bde8d4fd65e6146df35a6ce0890ed4417a235a))
-* **serialization:** :bug: fix `TransactionId` serialization ([b7e07ca](https://github.com/CareBoo/unity-algorand-sdk/commit/b7e07caf5e8b8b5b0327c15c618a75263726dc18))
-* **serialization:** :bug: fix discrepancy between `TransactionId` and `TransactinIdResponse` ([d0c0370](https://github.com/CareBoo/unity-algorand-sdk/commit/d0c0370c0578e6d2296d0667557148e711c67174))
-* **serialization:** :bug: fix issue where fixed strings were incorrectly being added to the queryparams ([a3e6fd9](https://github.com/CareBoo/unity-algorand-sdk/commit/a3e6fd9dbaf62d6e4bb05432568c0de36e3abb35))
-* **serialization:** :bug: fix missing `AlgoApiObject` on all Transaction Params ([a11015f](https://github.com/CareBoo/unity-algorand-sdk/commit/a11015ff3da75db5ab5d6f7c809a89f50fe1142b))
-* **transaction:** :bug: fix `OnCompletion` having incorrect byte values ([514a378](https://github.com/CareBoo/unity-algorand-sdk/commit/514a378dce9c0669002960f6ef76d453a54fe0f0))
-* **transaction:** :bug: fix incorrect constructor in `Transaction.ApplicationCall` ([98b5829](https://github.com/CareBoo/unity-algorand-sdk/commit/98b58295d7676d73a924a5d837b7f9b0dc8a62c9))
-
-
-### Code Refactoring
-
-* :fire: remove some verify methods in the transaction ([70a8308](https://github.com/CareBoo/unity-algorand-sdk/commit/70a830830d3778a23d32fd9985d5d424972dd99f))
-* :fire: remove unnecessary `SendTransactionRaw` ([09b3bdc](https://github.com/CareBoo/unity-algorand-sdk/commit/09b3bdc0dfbeb2b47603b3cfc92be0478120bd09))
-* :recycle: convert all `SignedTransaction<>` to a single `SignedTransaction` ([26fa65a](https://github.com/CareBoo/unity-algorand-sdk/commit/26fa65a53fa4cb2f4e8d81aa9ec2adc537d09b01))
-* :recycle: rename `RawSignedTransaction` -> `SignedTransaction` ([059c6a3](https://github.com/CareBoo/unity-algorand-sdk/commit/059c6a369bd3f5e6d2b65965927cffd8bce65a49))
-* :recycle: rename `RawTransaction` -> `Transaction` ([bade09e](https://github.com/CareBoo/unity-algorand-sdk/commit/bade09e7edc7df1d6dcbeb932f38fe7c199b21bb))
-* :recycle: rename AlgoApiKeyAttribute -> AlgoApiFieldAttribute ([1b37028](https://github.com/CareBoo/unity-algorand-sdk/commit/1b370289ba2ffe8457f35c998aed6efcfe01931c))
-* **algod:** :recycle: rename `Block` -> `BlockResponse` ([eca9fb6](https://github.com/CareBoo/unity-algorand-sdk/commit/eca9fb6c2be3a99272067d308a089148a1680427))
-* **algod:** :recycle: replace `AccountParticipation` with `Transaction.KeyRegistration.Params` ([3b624ee](https://github.com/CareBoo/unity-algorand-sdk/commit/3b624eec4974e28b0cc31b019d41f37dc60207ca))
-* **kmd:** :recycle: replace `Request` with explicit method params ([030a0a9](https://github.com/CareBoo/unity-algorand-sdk/commit/030a0a9486f6270e6e867ad1efbad73b90e0ecfb))
-* remove .NET 4.8 requirement ([9f55707](https://github.com/CareBoo/unity-algorand-sdk/commit/9f55707ba4f8a3d9b12fb7530b6ceec40c95219b)), closes [#19](https://github.com/CareBoo/unity-algorand-sdk/issues/19) [#9](https://github.com/CareBoo/unity-algorand-sdk/issues/9)
-
-
-### Features
-
-* :construction_worker: Add npmjs support ([56f60f0](https://github.com/CareBoo/unity-algorand-sdk/commit/56f60f0804c3cac377c78a5c47eea17785b29f9e))
-* :heavy_plus_sign: Add libsodium ios, android, and windows ([00c9511](https://github.com/CareBoo/unity-algorand-sdk/commit/00c95113a152f01e737e56be6a31b3207aed57ff))
-* :sparkles: Add Account.Generate ([95233bf](https://github.com/CareBoo/unity-algorand-sdk/commit/95233bf877ee70d6e67f91baaf6f9e640b0a9141))
-* :sparkles: Add Address struct ([d92b903](https://github.com/CareBoo/unity-algorand-sdk/commit/d92b90356cbf0070dd737a838eae417212a84a18))
-* :sparkles: Add basic signed transaction support ([bb5900f](https://github.com/CareBoo/unity-algorand-sdk/commit/bb5900fa66bc9501c3d9da26e1e984ddd1fb2cc0))
-* :sparkles: Add basic transaction support for message pack serialization and deserialization ([63243ed](https://github.com/CareBoo/unity-algorand-sdk/commit/63243ed492919522a752784756de2633d17a79fa))
-* :sparkles: Add checksums ([2bc2189](https://github.com/CareBoo/unity-algorand-sdk/commit/2bc2189174e48de3324aa8ca4e3bbce22ca4e1c8))
-* :sparkles: add FixedBytesFormatter ([941eb3f](https://github.com/CareBoo/unity-algorand-sdk/commit/941eb3f83b4b82d58431bc49b7f402e1ecfbccea))
-* :sparkles: Add IEquatable, GetHashCode for RawTransaction ([885928e](https://github.com/CareBoo/unity-algorand-sdk/commit/885928e3c69dbc3742d11369d5e316853d6a8e8c))
-* :sparkles: add LogicSig implementation ([51a21e0](https://github.com/CareBoo/unity-algorand-sdk/commit/51a21e02f98bb221ca2e14cbb8d1243f7b15b5ef))
-* :sparkles: Add Mnemonic.FromString and Mnemonic.ToString ([d3a88c6](https://github.com/CareBoo/unity-algorand-sdk/commit/d3a88c6026ff3162a46f1e3d13ca54d103d43aaf))
-* :sparkles: add readOnly support ([6070565](https://github.com/CareBoo/unity-algorand-sdk/commit/6070565057130a23b52575126774a6d1fa58718a))
-* :sparkles: Add Sha512 interop ([86aabf5](https://github.com/CareBoo/unity-algorand-sdk/commit/86aabf5b0936cea36881cfaad1e1d87245755c92))
-* :sparkles: Add start of Native Integration with Libsodium ([55e325f](https://github.com/CareBoo/unity-algorand-sdk/commit/55e325f4249603da679a66ece605f6ba8d5d762d))
-* :sparkles: Added Transaction Header, Payment ([d3ebced](https://github.com/CareBoo/unity-algorand-sdk/commit/d3ebcedd3f86bdfabbb9f90a97e655fcadac1145))
-* :sparkles: implement asset configuration transaction ([4f9ec58](https://github.com/CareBoo/unity-algorand-sdk/commit/4f9ec587932ed51da9bbbeaa1ddf3653a346c978)), closes [#27](https://github.com/CareBoo/unity-algorand-sdk/issues/27)
-* :sparkles: implement AssetFreezeTransaction ([e3233bf](https://github.com/CareBoo/unity-algorand-sdk/commit/e3233bf9c8258eab91e8141c561d837f26780172)), closes [#26](https://github.com/CareBoo/unity-algorand-sdk/issues/26)
-* :sparkles: implement AssetTransfer Transaction ([62a1841](https://github.com/CareBoo/unity-algorand-sdk/commit/62a1841332811753f48ac7fdccb1eec117607f3a)), closes [#23](https://github.com/CareBoo/unity-algorand-sdk/issues/23)
-* :sparkles: update AlgoApiFormatterLookup ([cc112e5](https://github.com/CareBoo/unity-algorand-sdk/commit/cc112e55d4489e30afd2854757e482cf9d37c8ee))
-* Add Mnemonic and Key datastructs ([4370f74](https://github.com/CareBoo/unity-algorand-sdk/commit/4370f74c4e5f5ed9977dc4954313bf57e7023547))
-* Add signed transaction support for payment transactions ([c07d370](https://github.com/CareBoo/unity-algorand-sdk/commit/c07d3705f70bcc33c245aa120c667a7dcc28d6e1))
-* **algod:** implement Algod Client ([a7c9e90](https://github.com/CareBoo/unity-algorand-sdk/commit/a7c9e90e2f61a715488bfd8f0095c0206ae6e739)), closes [#10](https://github.com/CareBoo/unity-algorand-sdk/issues/10) [#16](https://github.com/CareBoo/unity-algorand-sdk/issues/16) [#18](https://github.com/CareBoo/unity-algorand-sdk/issues/18)
-* **indexer:** :recycle: rename `ApplicationStateSchema` -> `StateSchema` ([7b02f70](https://github.com/CareBoo/unity-algorand-sdk/commit/7b02f70dbac6c3a67a0168107103a43be0a262ad))
-* **indexer:** :sparkles: add `IIndexerClient` ([093153e](https://github.com/CareBoo/unity-algorand-sdk/commit/093153e104a09e4d9f3cafe27ea494d44fe35840))
-* **indexer:** :sparkles: implement `AccountQuery` ([bda5301](https://github.com/CareBoo/unity-algorand-sdk/commit/bda5301687bf0a90d51860cd96074118639cc722))
-* **indexer:** :sparkles: implement `AccountResponse` ([09d7fb9](https://github.com/CareBoo/unity-algorand-sdk/commit/09d7fb9b53afba88181a98ee66a4f95633ae7257))
-* **indexer:** :sparkles: implement `AccountsQuery` ([e7d56e2](https://github.com/CareBoo/unity-algorand-sdk/commit/e7d56e29b559af8288e334e4006fe44bbab496b6))
-* **indexer:** :sparkles: implement `AccountsResponse` ([ea01260](https://github.com/CareBoo/unity-algorand-sdk/commit/ea01260b0cc63fb0ee873b3f62c0a243fe20da30))
-* **indexer:** :sparkles: implement `AddressRole` ([3325b60](https://github.com/CareBoo/unity-algorand-sdk/commit/3325b60757eac9400e5bf227639c2946b8f36a2d))
-* **indexer:** :sparkles: implement `Application` ([144d04d](https://github.com/CareBoo/unity-algorand-sdk/commit/144d04d940c2361b636e3cff21a6134b08515980))
-* **indexer:** :sparkles: implement `ApplicationLocalState` ([9ad284f](https://github.com/CareBoo/unity-algorand-sdk/commit/9ad284f734a27fb2cfc61a203f9400f397f63d31))
-* **indexer:** :sparkles: implement `ApplicationQuery` ([de02370](https://github.com/CareBoo/unity-algorand-sdk/commit/de02370084ddf28ebf5473fd9016d0f634537c24))
-* **indexer:** :sparkles: implement `ApplicationResponse` ([fa34b20](https://github.com/CareBoo/unity-algorand-sdk/commit/fa34b201d734a2deae62731ce224841ea9c00895))
-* **indexer:** :sparkles: implement `ApplicationsQuery` ([914ca8b](https://github.com/CareBoo/unity-algorand-sdk/commit/914ca8b4b483f25d91be6e59b953a0d3b3fb2426))
-* **indexer:** :sparkles: implement `ApplicationsResponse` ([e342cdc](https://github.com/CareBoo/unity-algorand-sdk/commit/e342cdc68d34e2582b0965af801eed60569fbd5e))
-* **indexer:** :sparkles: implement `Asset` ([161f361](https://github.com/CareBoo/unity-algorand-sdk/commit/161f3618265027bf37f025c90326b3b96df24e8f))
-* **indexer:** :sparkles: implement `AssetHolding` ([203785a](https://github.com/CareBoo/unity-algorand-sdk/commit/203785a112052f38c796bb6d9a5cef3a884cdbac))
-* **indexer:** :sparkles: implement `AssetParams` ([ac78bfe](https://github.com/CareBoo/unity-algorand-sdk/commit/ac78bfedb61875fabb480e602eb9866f37bdd926))
-* **indexer:** :sparkles: implement `AssetQuery` ([c8eda94](https://github.com/CareBoo/unity-algorand-sdk/commit/c8eda9423f316cc766f02e88ce6a0dea5805bde5))
-* **indexer:** :sparkles: implement `AssetResponse` ([cd8e48f](https://github.com/CareBoo/unity-algorand-sdk/commit/cd8e48ff76f0959f848fc1dc5eb4f6cede1a6afd))
-* **indexer:** :sparkles: implement `AssetsResponse` ([ade022d](https://github.com/CareBoo/unity-algorand-sdk/commit/ade022d73f1d0557b2259c676a5b3fd1493b8fb5))
-* **indexer:** :sparkles: implement `BalancesQuery` ([b8f167e](https://github.com/CareBoo/unity-algorand-sdk/commit/b8f167eeea4dceb2493accf20dac409a0903950b))
-* **indexer:** :sparkles: implement `BalancesResponse` ([c7ae299](https://github.com/CareBoo/unity-algorand-sdk/commit/c7ae29964bb26898f5d86519167eacd247265017))
-* **indexer:** :sparkles: implement `Block` ([2533f24](https://github.com/CareBoo/unity-algorand-sdk/commit/2533f240584fe2022c4a2d64d90ebf2f9555da59))
-* **indexer:** :sparkles: implement `BlockRewards` ([bb49cb0](https://github.com/CareBoo/unity-algorand-sdk/commit/bb49cb05bdade80cb283d9624eb751d9fd9bd112))
-* **indexer:** :sparkles: implement `BlockUpgradeStatus` ([e9a0423](https://github.com/CareBoo/unity-algorand-sdk/commit/e9a0423125b1e2f2d5c2a0794cd9c705f84667c4))
-* **indexer:** :sparkles: implement `BlockUpgradeVote` ([de5e72e](https://github.com/CareBoo/unity-algorand-sdk/commit/de5e72e097ee4abff6db3d0fe6bf1b5ba0067c6a))
-* **indexer:** :sparkles: implement `ErrorResponse` msgpack fields ([358e6a6](https://github.com/CareBoo/unity-algorand-sdk/commit/358e6a6475f716e0df55ed75ee8f0173c885d1c1))
-* **indexer:** :sparkles: implement `EvalDelta` msgpack fields ([45b2df2](https://github.com/CareBoo/unity-algorand-sdk/commit/45b2df29af0e15759fafab566ca52b320f5e3adc))
-* **indexer:** :sparkles: implement `EvalDeltaKeyValue` msgpack fields ([bd3c230](https://github.com/CareBoo/unity-algorand-sdk/commit/bd3c2304f227c5e252f6b269d3c33468e9e796a3))
-* **indexer:** :sparkles: implement `HealthCheck` ([a164577](https://github.com/CareBoo/unity-algorand-sdk/commit/a1645779a235d1e8c5201af61671292065f37cda))
-* **indexer:** :sparkles: implement `IndexerClient.GetAccount` ([88ba11a](https://github.com/CareBoo/unity-algorand-sdk/commit/88ba11ac8d2dbf0d1aae786bb7f904a3c872fc53))
-* **indexer:** :sparkles: implement `IndexerClient.GetAccounts` ([2e427f1](https://github.com/CareBoo/unity-algorand-sdk/commit/2e427f11f1a834d3d63c9f3eb3090f4330136342))
-* **indexer:** :sparkles: implement `IndexerClient.GetHealth` ([0883ff0](https://github.com/CareBoo/unity-algorand-sdk/commit/0883ff0b17fb2123bf251ffbe0ada58f25cf4ecc))
-* **indexer:** :sparkles: implement `IndexerClient` ([d7fd35a](https://github.com/CareBoo/unity-algorand-sdk/commit/d7fd35a195b216ffef6371ba099355b51a85f852))
-* **indexer:** :sparkles: implement `LogicSig` json fields ([b22297c](https://github.com/CareBoo/unity-algorand-sdk/commit/b22297c25e71bbee318e779281904090d2cb79d7))
-* **indexer:** :sparkles: implement `MiniAssetHolding` ([59941b8](https://github.com/CareBoo/unity-algorand-sdk/commit/59941b8002cfbcb37a24b1a80ecb96dc9cf9620f))
-* **indexer:** :sparkles: implement `MultiSig.SubSignature` ([ef526ec](https://github.com/CareBoo/unity-algorand-sdk/commit/ef526ec427cb3e280ad7336ad6f65c748070a577))
-* **indexer:** :sparkles: implement `MultiSig` ([df959a7](https://github.com/CareBoo/unity-algorand-sdk/commit/df959a75a1898605840402cc2805b5fd2b0cc4f9))
-* **indexer:** :sparkles: implement `OnCompletion` ([04227b9](https://github.com/CareBoo/unity-algorand-sdk/commit/04227b95db85508f8f258963454a3095263dd80e))
-* **indexer:** :sparkles: implement `TealKeyValue` msgPack fields ([e521553](https://github.com/CareBoo/unity-algorand-sdk/commit/e5215533bc5a0c25f71fbc38584b35d3a9b910b2))
-* **indexer:** :sparkles: implement `Transaction.ApplicationCall` ([5a5e819](https://github.com/CareBoo/unity-algorand-sdk/commit/5a5e819ec408c44a0999f38db7bab3b4c16c2d0e))
-* **indexer:** :sparkles: implement `Transaction.ApplicationCall` model fields ([69d64e8](https://github.com/CareBoo/unity-algorand-sdk/commit/69d64e8b14d0b6bf3da90ce4e782d13c9364745a))
-* **indexer:** :sparkles: implement `Transaction.AssetConfiguration` model fields ([baf7c2e](https://github.com/CareBoo/unity-algorand-sdk/commit/baf7c2ea37cdc40c9e890c7c84e9ae51478df06c))
-* **indexer:** :sparkles: implement `Transaction.AssetFreeze` model fields ([be45b90](https://github.com/CareBoo/unity-algorand-sdk/commit/be45b901e4478e404cd6aac77996de78470b75b1))
-* **indexer:** :sparkles: implement `Transaction.AssetTransfer` model fields ([84aa15e](https://github.com/CareBoo/unity-algorand-sdk/commit/84aa15eef120f882177b4f57800036dccb91a6b5))
-* **indexer:** :sparkles: implement `Transaction.KeyRegistration` ([69e004e](https://github.com/CareBoo/unity-algorand-sdk/commit/69e004eb56759117e9fc7bdba8adc67d4ac30ddd))
-* **indexer:** :sparkles: implement `Transaction.KeyRegistration` model fields ([44029ca](https://github.com/CareBoo/unity-algorand-sdk/commit/44029ca8048cd9baf31d1a9aff9eea3b335ec93d))
-* **indexer:** :sparkles: implement `TransactionResponse` ([430a1fa](https://github.com/CareBoo/unity-algorand-sdk/commit/430a1fa205e194766d22aa565a552769bebfc919))
-* **indexer:** :sparkles: implement `TransactionsQuery` ([9ec7f4f](https://github.com/CareBoo/unity-algorand-sdk/commit/9ec7f4f5ec8e8df560ae6ea4a6b6bb548c203680))
-* **indexer:** :sparkles: implement AssetsQuery ([e8d6e55](https://github.com/CareBoo/unity-algorand-sdk/commit/e8d6e550bc757c03c4f5bbff484d9e17e5283b09))
-* **indexer:** :sparkles: implement TransactionsResponse ([e1a46f8](https://github.com/CareBoo/unity-algorand-sdk/commit/e1a46f877be174bf7605b1b8dac8f146cf850c62))
-* **json:** :sparkles: implement `JsonReader.Skip` ([0d6e6ab](https://github.com/CareBoo/unity-algorand-sdk/commit/0d6e6ab4c3b75e96c5e18b105019acb9c50180ac))
-* **json:** :sparkles: implement `JsonWriter.WriteRaw` ([1643bad](https://github.com/CareBoo/unity-algorand-sdk/commit/1643badcf0069875a579da604ad0e2b5fb89d466))
-* **json:** :sparkles: implement `ReadRaw` ([384abf8](https://github.com/CareBoo/unity-algorand-sdk/commit/384abf82e09f38724218d47675452c9f26595e21))
-* **kmd:** :sparkles: add `Error` to `ErrorMessage` which is used for kmd ([3c37a94](https://github.com/CareBoo/unity-algorand-sdk/commit/3c37a947ed4ff34b2b008562e8a40e6eaa142078))
-* **kmd:** :sparkles: implement `APIV1DELETEKeyResponse` ([81f6c1e](https://github.com/CareBoo/unity-algorand-sdk/commit/81f6c1e14cf23ca1bca6a6e22ee76a3196a26f6f))
-* **kmd:** :sparkles: implement `APIV1DELETEMultisigResponse` ([4c1d6db](https://github.com/CareBoo/unity-algorand-sdk/commit/4c1d6db3848c387d244bbb624030cd0fb2614dec))
-* **kmd:** :sparkles: implement `APIV1GETWalletsResponse` ([9025e9a](https://github.com/CareBoo/unity-algorand-sdk/commit/9025e9a2dbf20fa2ed951d5ba602017901257984))
-* **kmd:** :sparkles: implement `APIV1Wallet` ([e514183](https://github.com/CareBoo/unity-algorand-sdk/commit/e5141835d7db31cb7d4274b0e4c80976ce40291c))
-* **kmd:** :sparkles: implement `APIV1WalletHandle` ([8bae4b4](https://github.com/CareBoo/unity-algorand-sdk/commit/8bae4b4e3385ef981a9375a791cdd3cb5e867578))
-* **kmd:** :sparkles: implement `CreateWalletRequest` ([63882eb](https://github.com/CareBoo/unity-algorand-sdk/commit/63882eb7f363f34e510629c41276b6deeeadc718))
-* **kmd:** :sparkles: implement `CreateWalletRequest` api fields ([f32094f](https://github.com/CareBoo/unity-algorand-sdk/commit/f32094f9235dd2c09e32935cea80e747bd0af597))
-* **kmd:** :sparkles: implement `CreateWalletResponse` ([2579231](https://github.com/CareBoo/unity-algorand-sdk/commit/2579231460707e0824699c897deb136e29e2755e))
-* **kmd:** :sparkles: implement `DeleteKeyRequest` ([5c89319](https://github.com/CareBoo/unity-algorand-sdk/commit/5c8931958bf638375843e8b57ef484dae713d936))
-* **kmd:** :sparkles: implement `DeleteMultiSigRequest` ([15afda0](https://github.com/CareBoo/unity-algorand-sdk/commit/15afda09b50ebf543a05b95c5970cc61f6e68d7d))
-* **kmd:** :sparkles: implement `ExportKeyRequest` ([a8b1131](https://github.com/CareBoo/unity-algorand-sdk/commit/a8b11314d037e7e8ece0273dd82b27f511433582))
-* **kmd:** :sparkles: implement `ExportKeyResponse.Equals` ([010e656](https://github.com/CareBoo/unity-algorand-sdk/commit/010e656a3ddd7a9abea101a86828ad6c7b635c45))
-* **kmd:** :sparkles: implement `ExportKeyResponse` ([db01766](https://github.com/CareBoo/unity-algorand-sdk/commit/db01766b0ad407e9088a1f2d1ba8487da5500b31))
-* **kmd:** :sparkles: implement `ExportMasterKeyRequest` ([2a8ed81](https://github.com/CareBoo/unity-algorand-sdk/commit/2a8ed81b3b0577329dc862cea9d4de7a7c7b59fb))
-* **kmd:** :sparkles: implement `ExportMasterKeyResponse` ([2843847](https://github.com/CareBoo/unity-algorand-sdk/commit/2843847d11145f3ee143d6f1a072fd59999e32f3))
-* **kmd:** :sparkles: implement `ExportMultiSigRequest` ([e67c925](https://github.com/CareBoo/unity-algorand-sdk/commit/e67c925bce69227c730971840ec07984cb14711b))
-* **kmd:** :sparkles: implement `ExportMultiSigResponse` ([bac0edb](https://github.com/CareBoo/unity-algorand-sdk/commit/bac0edb70256ceb82916eac7c6e29ef2f52aaf69))
-* **kmd:** :sparkles: implement `GenerateKeyResponse` ([1d6795f](https://github.com/CareBoo/unity-algorand-sdk/commit/1d6795ffdfa76e0c20f2ec56ba4dea36ac7303aa))
-* **kmd:** :sparkles: implement `GenerateMasterKeyRequest` ([6503dd8](https://github.com/CareBoo/unity-algorand-sdk/commit/6503dd8ef729d2a5460bcded8fad46efea99e77a))
-* **kmd:** :sparkles: implement `ImportKeyRequest` ([521f7c1](https://github.com/CareBoo/unity-algorand-sdk/commit/521f7c1af4183cfa00d4f6ad2e4e6d7ac81dbfde))
-* **kmd:** :sparkles: implement `ImportKeyResponse` ([83798a6](https://github.com/CareBoo/unity-algorand-sdk/commit/83798a65359906741b908e752d83f73ae0273613))
-* **kmd:** :sparkles: implement `ImportMultiSigRequest` ([5eb5d42](https://github.com/CareBoo/unity-algorand-sdk/commit/5eb5d42d7d67919d9b7357708e5d3a68861877d5))
-* **kmd:** :sparkles: implement `ImportMultiSigResponse` ([001f3ea](https://github.com/CareBoo/unity-algorand-sdk/commit/001f3eaffcf58aa5050cb8c5632dfff300adf69d))
-* **kmd:** :sparkles: implement `InitWalletHandleTokenRequest` ([36dd459](https://github.com/CareBoo/unity-algorand-sdk/commit/36dd459e9923e3539ef291e4fdf0f8ea4c3afc09))
-* **kmd:** :sparkles: implement `InitWalletHandleTokenResponse` ([26db31b](https://github.com/CareBoo/unity-algorand-sdk/commit/26db31bea84cb50e16d0194e8bf7b147469d1971))
-* **kmd:** :sparkles: implement `KmdClient` ([7433060](https://github.com/CareBoo/unity-algorand-sdk/commit/743306013c6d5d7473990b9c8ad4f5055b036ba0)), closes [#13](https://github.com/CareBoo/unity-algorand-sdk/issues/13)
-* **kmd:** :sparkles: implement `ListKeysRequest` ([b55fe67](https://github.com/CareBoo/unity-algorand-sdk/commit/b55fe67f5dd3a3b5316bef1dd32ecd421081214a))
-* **kmd:** :sparkles: implement `ListKeysResponse` ([0096bd5](https://github.com/CareBoo/unity-algorand-sdk/commit/0096bd59eeb9ed56e65e1abb5cdda262c63979dc))
-* **kmd:** :sparkles: implement `ListMultiSigRequest` ([ce667d1](https://github.com/CareBoo/unity-algorand-sdk/commit/ce667d10e43c7cb55e2b6b247760bfba92ad706d))
-* **kmd:** :sparkles: implement `ListMultiSigResponse` ([550a0ed](https://github.com/CareBoo/unity-algorand-sdk/commit/550a0edb96b79b14ad139d7fc72828b59184b2c4))
-* **kmd:** :sparkles: implement `ListWalletsRequest` ([b3b5023](https://github.com/CareBoo/unity-algorand-sdk/commit/b3b5023fd1a4374f99fe787c31648ba87502c598))
-* **kmd:** :sparkles: implement `ReleaseWalletHandleTokenRequest` ([ff024de](https://github.com/CareBoo/unity-algorand-sdk/commit/ff024de546b8faddcecf248dd3ae4b2f2f8b8d04))
-* **kmd:** :sparkles: implement `ReleaseWalletHandleTokenResponse` ([719c393](https://github.com/CareBoo/unity-algorand-sdk/commit/719c39331096dd0058cb1fb6a85abc8a4ca48b20))
-* **kmd:** :sparkles: implement `RenameWalletRequest` ([c5a9f3b](https://github.com/CareBoo/unity-algorand-sdk/commit/c5a9f3b549b482223e9bde8fa0c7324849b29408))
-* **kmd:** :sparkles: implement `RenameWalletResponse` ([6e5b55e](https://github.com/CareBoo/unity-algorand-sdk/commit/6e5b55ef118d6e94816c4e47b942c759158ee5ea))
-* **kmd:** :sparkles: implement `RenewWalletHandleTokenRequest` ([0a0d589](https://github.com/CareBoo/unity-algorand-sdk/commit/0a0d589b48b63e51eb90e4ab142f58090ebac76c))
-* **kmd:** :sparkles: implement `RenewWalletHandleTokenResponse` ([d85e5f5](https://github.com/CareBoo/unity-algorand-sdk/commit/d85e5f5e5dbbe0ad9fb1b0afdae48bd87e70959e))
-* **kmd:** :sparkles: implement `SignMultiSigRequest` ([e1dfee9](https://github.com/CareBoo/unity-algorand-sdk/commit/e1dfee9f4e7b2fb51c32b9fa881b4c6ec70e979d))
-* **kmd:** :sparkles: implement `SignMultiSigResponse` ([83ea09f](https://github.com/CareBoo/unity-algorand-sdk/commit/83ea09fb0da43e0fa99545ea667012a996e1b8a6))
-* **kmd:** :sparkles: implement `SignProgramMultiSigRequest` ([063ed1d](https://github.com/CareBoo/unity-algorand-sdk/commit/063ed1d0ee411b1dd17ea5fb21da348bed78c3f1))
-* **kmd:** :sparkles: implement `SignProgramMultiSigResponse` ([b5e5b5e](https://github.com/CareBoo/unity-algorand-sdk/commit/b5e5b5ebe9b81cac41264343de6e3dcde3765736))
-* **kmd:** :sparkles: implement `SignProgramRequest` ([52ccb07](https://github.com/CareBoo/unity-algorand-sdk/commit/52ccb07a62a1986ba3344e5c87d537f46fab499c))
-* **kmd:** :sparkles: implement `SignTransactionRequest` ([c542582](https://github.com/CareBoo/unity-algorand-sdk/commit/c54258248defcff86d9484c423e91603ab0c78ad))
-* **kmd:** :sparkles: implement `SignTransactionResponse` ([d7080ab](https://github.com/CareBoo/unity-algorand-sdk/commit/d7080ab90dd16f4b4d51570540a62ab6322d5256))
-* **kmd:** :sparkles: implement `VersionsRequest` ([f70f0fd](https://github.com/CareBoo/unity-algorand-sdk/commit/f70f0fde67adf73fea202917c985f2372ea24d0c))
-* **kmd:** :sparkles: implement `VersionsResponse` ([7c85ec2](https://github.com/CareBoo/unity-algorand-sdk/commit/7c85ec249642d8749c8fea7ec73f8e5dd28eb46c))
-* **kmd:** :sparkles: implement `WalletInfoResponse` ([6b3edc7](https://github.com/CareBoo/unity-algorand-sdk/commit/6b3edc798c63d6518f29d9050bf81f953079876c))
-* **kmd:** implement `SignProgramResponse` ([978a31d](https://github.com/CareBoo/unity-algorand-sdk/commit/978a31d0fa9e5af12872dc5efcba055405f96e5c))
-* **msgpack:** :sparkles: implement `MessagePackReader.ReadRaw` ([c2dec22](https://github.com/CareBoo/unity-algorand-sdk/commit/c2dec22a8c520aa953964f449ebc84cac5b89dff))
-* **msgpack:** :sparkles: implement `MessagePackWriter.WriteRaw` ([d5ae90e](https://github.com/CareBoo/unity-algorand-sdk/commit/d5ae90e320d855f0e8f3a5f59e87934f4390ff50))
-* **networking:** :sparkles: add `ApiResponse` API to `ApiResponse<>` ([8556c53](https://github.com/CareBoo/unity-algorand-sdk/commit/8556c53616646d9b39d9a4a88488b66acb6ac421))
-* **serialization:** :sparkles: add formatters for `PrivateKey`, `PublicKey`, and `Signature` ([2dedd67](https://github.com/CareBoo/unity-algorand-sdk/commit/2dedd67f4aa6676744fb48082343d68d96c4a805))
-* **serialization:** :sparkles: add support for deserializing `byte[]` ([3ef497f](https://github.com/CareBoo/unity-algorand-sdk/commit/3ef497f3e1f6d31b23fc9bcef77c66f975e242b5))
-* **serialization:** :sparkles: add support for generically serializing byte enums to strings ([424c8b4](https://github.com/CareBoo/unity-algorand-sdk/commit/424c8b49c2a567c015a356db3b12a4d4d035dd61))
-* **serialization:** :sparkles: finish implementing `MessagePackReader.Integers` and `MessagePackWriter.Integers` ([37d8f20](https://github.com/CareBoo/unity-algorand-sdk/commit/37d8f20eba237ad28fcf84f83cdbc989b0168a86))
-* **serialization:** :sparkles: finish implementing serializer/deserializer methods in `EnumFormatter` ([3af569f](https://github.com/CareBoo/unity-algorand-sdk/commit/3af569f180d26f5501a48d1eb43a00327bdd5921))
-* **serialization:** :sparkles: implement `AlgoApiObject` ([74456b6](https://github.com/CareBoo/unity-algorand-sdk/commit/74456b60bb235eaf89b26d809adb2141b82d57f8))
-* **serialization:** :sparkles: implement `Timestamp` ([cc1159b](https://github.com/CareBoo/unity-algorand-sdk/commit/cc1159b510aefc79c53fbe35154c5cf422e68f5f))
-* **serialization:** :tada: update formatter cache ([029f841](https://github.com/CareBoo/unity-algorand-sdk/commit/029f8419b54810d582c3550b8a3b2e193946bf5a))
-* **transaction:** :sparkles: add `GetSignature` and `ToRaw` extensions to `ITransaction` ([e4a3ad5](https://github.com/CareBoo/unity-algorand-sdk/commit/e4a3ad5e15e10155d9cb39dcaf61afc77989950e))
-* **transaction:** :sparkles: add `RegisterAccountOnline` and `RegisterAccountOffline` APIs ([71d42c1](https://github.com/CareBoo/unity-algorand-sdk/commit/71d42c1d832212ddaa5ee872f8e332af570854ac))
-* **transaction:** :sparkles: add `Transaction.AppCreate` and `Transaction.AppConfigure` APIs ([c64469a](https://github.com/CareBoo/unity-algorand-sdk/commit/c64469ac3e696c518d7d644d1e5b219bfd25d4b5))
-* **transaction:** :sparkles: add `Transaction.AssetCreate` `Transaction.AssetConfigure` and `Transaction.AssetDelete` API ([259b37b](https://github.com/CareBoo/unity-algorand-sdk/commit/259b37b336a91a9d718343b4f189e4f9313a940c))
-* **transaction:** :sparkles: add `Transaction.AssetFreeze` API ([160f837](https://github.com/CareBoo/unity-algorand-sdk/commit/160f83777f78b7a0fd53fd60b5241d766f4e6c17))
-* **transaction:** :sparkles: add `Transaction.Payment` API ([88e918d](https://github.com/CareBoo/unity-algorand-sdk/commit/88e918dca1b6cc5376f138c5a010a50d8c504a21))
-* **transaction:** :sparkles: implement address from application id ([9e3c883](https://github.com/CareBoo/unity-algorand-sdk/commit/9e3c8839abc58e11583e4974858cb794ac1cadc8))
-* **transaction:** :sparkles: implement AssetClawback and AssetAccept ([c3578ec](https://github.com/CareBoo/unity-algorand-sdk/commit/c3578ec748160017c3da76dbcc35aee66515fc74)), closes [#24](https://github.com/CareBoo/unity-algorand-sdk/issues/24) [#25](https://github.com/CareBoo/unity-algorand-sdk/issues/25)
-* **transaction:** :sparkles: implement atomic transfers ([21f7ee3](https://github.com/CareBoo/unity-algorand-sdk/commit/21f7ee34c14b0e9b99ba193f7b73215798dc5a76)), closes [#45](https://github.com/CareBoo/unity-algorand-sdk/issues/45)
-* **transaction:** :sparkles: use `TransactionParams` in Transaction constructors ([a966320](https://github.com/CareBoo/unity-algorand-sdk/commit/a966320a0ba5f45225c77db23ef0742c43b73cfa))
-
-
-### Reverts
-
-* **demo:** :fire: remove bossroom assets... too big to be a sample ([e53192d](https://github.com/CareBoo/unity-algorand-sdk/commit/e53192daaba120f53d5c8f7312d2b199a8f4e564))
-
-
-### BREAKING CHANGES
-
-* **algod:** `AccountParticipation` no longer exists
-* **transaction:** All transaction constructors have been changed to use `TransactionParams`
-* **indexer:** Removed token from IndexerClient constructor
-* **kmd:** changes `IKmdClient` API to use parameters instead of `Request` objs
-* **indexer:** indexer queries are now given as optional arguments
-* remove `Transaction.VerifySignature`, `SignedTransaction.Verify`
-* signed transactions are now represented by `SignedTransaction` (non-generic)
-* renamed `RawSignedTransaction` -> `SignedTransaction`
-* `RawTransaction` renamed to `Transaction`
-* AlgoApiKeyAttribute -> AlgoApiFieldAttribute
-* **algod:** `Block` renamed to `BlockResponse`
-* Replace Buffer with GetUnsafePtr
-* Algo Serializer API has completely changed...
-* Removes the `SendTransactionRaw` method from `AlgodClient`
-
-# [1.0.0-exp.27](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.26...v1.0.0-exp.27) (2021-10-24)
-
-
-### Bug Fixes
-
-* **algod:** :bug: fix `AlgodClient.TealCompile` ([8f5a67a](https://github.com/CareBoo/unity-algorand-sdk/commit/8f5a67a694cd21496b6db7c1630324ddbfd13f1f)), closes [#20](https://github.com/CareBoo/unity-algorand-sdk/issues/20)
-* **algod:** :bug: fix `AssetParams` serialization ([cbf9a69](https://github.com/CareBoo/unity-algorand-sdk/commit/cbf9a6981c52c565eb3837186c38765e5b8bea27))
-* **algod:** :bug: fix vrfpubkey formatter lookup ([0bb0014](https://github.com/CareBoo/unity-algorand-sdk/commit/0bb001407b81abc288d271cda3c6d6b9c19c49df))
-* **algod:** :bug: fix vrfpubkey formatting ([7d02443](https://github.com/CareBoo/unity-algorand-sdk/commit/7d024437ac9415449717ebf8a97017fcc10f9ee1))
-* **algod:** :bug: replace `VrfPubKey` with `FixedString128Bytes` ([94b02b0](https://github.com/CareBoo/unity-algorand-sdk/commit/94b02b06f25d4b97e264f085cc96afbfdfb68862)), closes [#42](https://github.com/CareBoo/unity-algorand-sdk/issues/42)
-* **kmd:** :art: fix `KmdClient` API incorrectly using optional args ([a53998b](https://github.com/CareBoo/unity-algorand-sdk/commit/a53998b00aa103a47ad1fea014c5f6627f8a3d34)), closes [#36](https://github.com/CareBoo/unity-algorand-sdk/issues/36)
-* **serialization:** :bug: fix `TransactionId` serialization ([b7e07ca](https://github.com/CareBoo/unity-algorand-sdk/commit/b7e07caf5e8b8b5b0327c15c618a75263726dc18))
-* **transaction:** :bug: fix `OnCompletion` having incorrect byte values ([514a378](https://github.com/CareBoo/unity-algorand-sdk/commit/514a378dce9c0669002960f6ef76d453a54fe0f0))
-* **transaction:** :bug: fix incorrect constructor in `Transaction.ApplicationCall` ([98b5829](https://github.com/CareBoo/unity-algorand-sdk/commit/98b58295d7676d73a924a5d837b7f9b0dc8a62c9))
-
-
-### Code Refactoring
-
-* **algod:** :recycle: replace `AccountParticipation` with `Transaction.KeyRegistration.Params` ([3b624ee](https://github.com/CareBoo/unity-algorand-sdk/commit/3b624eec4974e28b0cc31b019d41f37dc60207ca))
-
-
-### Features
-
-* **transaction:** :sparkles: add `RegisterAccountOnline` and `RegisterAccountOffline` APIs ([71d42c1](https://github.com/CareBoo/unity-algorand-sdk/commit/71d42c1d832212ddaa5ee872f8e332af570854ac))
-* **transaction:** :sparkles: add `Transaction.AppCreate` and `Transaction.AppConfigure` APIs ([c64469a](https://github.com/CareBoo/unity-algorand-sdk/commit/c64469ac3e696c518d7d644d1e5b219bfd25d4b5))
-* **transaction:** :sparkles: add `Transaction.AssetCreate` `Transaction.AssetConfigure` and `Transaction.AssetDelete` API ([259b37b](https://github.com/CareBoo/unity-algorand-sdk/commit/259b37b336a91a9d718343b4f189e4f9313a940c))
-* **transaction:** :sparkles: add `Transaction.AssetFreeze` API ([160f837](https://github.com/CareBoo/unity-algorand-sdk/commit/160f83777f78b7a0fd53fd60b5241d766f4e6c17))
-* **transaction:** :sparkles: add `Transaction.Payment` API ([88e918d](https://github.com/CareBoo/unity-algorand-sdk/commit/88e918dca1b6cc5376f138c5a010a50d8c504a21))
-* **transaction:** :sparkles: implement address from application id ([9e3c883](https://github.com/CareBoo/unity-algorand-sdk/commit/9e3c8839abc58e11583e4974858cb794ac1cadc8))
-* **transaction:** :sparkles: implement AssetClawback and AssetAccept ([c3578ec](https://github.com/CareBoo/unity-algorand-sdk/commit/c3578ec748160017c3da76dbcc35aee66515fc74)), closes [#24](https://github.com/CareBoo/unity-algorand-sdk/issues/24) [#25](https://github.com/CareBoo/unity-algorand-sdk/issues/25)
-* **transaction:** :sparkles: implement atomic transfers ([21f7ee3](https://github.com/CareBoo/unity-algorand-sdk/commit/21f7ee34c14b0e9b99ba193f7b73215798dc5a76)), closes [#45](https://github.com/CareBoo/unity-algorand-sdk/issues/45)
-* **transaction:** :sparkles: use `TransactionParams` in Transaction constructors ([a966320](https://github.com/CareBoo/unity-algorand-sdk/commit/a966320a0ba5f45225c77db23ef0742c43b73cfa))
-
-
-### BREAKING CHANGES
-
-* **algod:** `AccountParticipation` no longer exists
-* **transaction:** All transaction constructors have been changed to use `TransactionParams`
-
-# [1.0.0-exp.27](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.26...v1.0.0-exp.27) (2021-10-23)
-
-
-### Bug Fixes
-
-* **algod:** :bug: fix `AlgodClient.TealCompile` ([8f5a67a](https://github.com/CareBoo/unity-algorand-sdk/commit/8f5a67a694cd21496b6db7c1630324ddbfd13f1f)), closes [#20](https://github.com/CareBoo/unity-algorand-sdk/issues/20)
-* **algod:** :bug: fix `AssetParams` serialization ([cbf9a69](https://github.com/CareBoo/unity-algorand-sdk/commit/cbf9a6981c52c565eb3837186c38765e5b8bea27))
-* **algod:** :bug: fix vrfpubkey formatter lookup ([0bb0014](https://github.com/CareBoo/unity-algorand-sdk/commit/0bb001407b81abc288d271cda3c6d6b9c19c49df))
-* **algod:** :bug: fix vrfpubkey formatting ([7d02443](https://github.com/CareBoo/unity-algorand-sdk/commit/7d024437ac9415449717ebf8a97017fcc10f9ee1))
-* **algod:** :bug: replace `VrfPubKey` with `FixedString128Bytes` ([94b02b0](https://github.com/CareBoo/unity-algorand-sdk/commit/94b02b06f25d4b97e264f085cc96afbfdfb68862)), closes [#42](https://github.com/CareBoo/unity-algorand-sdk/issues/42)
-* **kmd:** :art: fix `KmdClient` API incorrectly using optional args ([a53998b](https://github.com/CareBoo/unity-algorand-sdk/commit/a53998b00aa103a47ad1fea014c5f6627f8a3d34)), closes [#36](https://github.com/CareBoo/unity-algorand-sdk/issues/36)
-* **serialization:** :bug: fix `TransactionId` serialization ([b7e07ca](https://github.com/CareBoo/unity-algorand-sdk/commit/b7e07caf5e8b8b5b0327c15c618a75263726dc18))
-* **transaction:** :bug: fix `OnCompletion` having incorrect byte values ([514a378](https://github.com/CareBoo/unity-algorand-sdk/commit/514a378dce9c0669002960f6ef76d453a54fe0f0))
-* **transaction:** :bug: fix incorrect constructor in `Transaction.ApplicationCall` ([98b5829](https://github.com/CareBoo/unity-algorand-sdk/commit/98b58295d7676d73a924a5d837b7f9b0dc8a62c9))
-
-
-### Code Refactoring
-
-* **algod:** :recycle: replace `AccountParticipation` with `Transaction.KeyRegistration.Params` ([3b624ee](https://github.com/CareBoo/unity-algorand-sdk/commit/3b624eec4974e28b0cc31b019d41f37dc60207ca))
-
-
-### Features
-
-* **transaction:** :sparkles: add `RegisterAccountOnline` and `RegisterAccountOffline` APIs ([71d42c1](https://github.com/CareBoo/unity-algorand-sdk/commit/71d42c1d832212ddaa5ee872f8e332af570854ac))
-* **transaction:** :sparkles: add `Transaction.AppCreate` and `Transaction.AppConfigure` APIs ([c64469a](https://github.com/CareBoo/unity-algorand-sdk/commit/c64469ac3e696c518d7d644d1e5b219bfd25d4b5))
-* **transaction:** :sparkles: add `Transaction.AssetCreate` `Transaction.AssetConfigure` and `Transaction.AssetDelete` API ([259b37b](https://github.com/CareBoo/unity-algorand-sdk/commit/259b37b336a91a9d718343b4f189e4f9313a940c))
-* **transaction:** :sparkles: add `Transaction.AssetFreeze` API ([160f837](https://github.com/CareBoo/unity-algorand-sdk/commit/160f83777f78b7a0fd53fd60b5241d766f4e6c17))
-* **transaction:** :sparkles: add `Transaction.Payment` API ([88e918d](https://github.com/CareBoo/unity-algorand-sdk/commit/88e918dca1b6cc5376f138c5a010a50d8c504a21))
-* **transaction:** :sparkles: implement address from application id ([9e3c883](https://github.com/CareBoo/unity-algorand-sdk/commit/9e3c8839abc58e11583e4974858cb794ac1cadc8))
-* **transaction:** :sparkles: implement AssetClawback and AssetAccept ([c3578ec](https://github.com/CareBoo/unity-algorand-sdk/commit/c3578ec748160017c3da76dbcc35aee66515fc74)), closes [#24](https://github.com/CareBoo/unity-algorand-sdk/issues/24) [#25](https://github.com/CareBoo/unity-algorand-sdk/issues/25)
-* **transaction:** :sparkles: implement atomic transfers ([21f7ee3](https://github.com/CareBoo/unity-algorand-sdk/commit/21f7ee34c14b0e9b99ba193f7b73215798dc5a76)), closes [#45](https://github.com/CareBoo/unity-algorand-sdk/issues/45)
-* **transaction:** :sparkles: use `TransactionParams` in Transaction constructors ([a966320](https://github.com/CareBoo/unity-algorand-sdk/commit/a966320a0ba5f45225c77db23ef0742c43b73cfa))
-
-
-### BREAKING CHANGES
-
-* **algod:** `AccountParticipation` no longer exists
-* **transaction:** All transaction constructors have been changed to use `TransactionParams`
-
-# [1.0.0-exp.26](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.25...v1.0.0-exp.26) (2021-10-13)
-
-
-### Bug Fixes
-
-* **indexer:** :bug: add token back to indexer ([023cb05](https://github.com/CareBoo/unity-algorand-sdk/commit/023cb05f173242f2c3f234f8203fcf2c03ea5369))
-* **indexer:** :bug: fix indexer requires token ([57f6114](https://github.com/CareBoo/unity-algorand-sdk/commit/57f61141f9c7763bb10a3a9deac07dcbc65ea6a9))
-* **json:** :bug: fix `PrivateKey` JSON deserialization err ([cb327e0](https://github.com/CareBoo/unity-algorand-sdk/commit/cb327e0f38ef61e43f5c5e38c3090ab02b83693d))
-* **json:** :bug: fix empty json objects missing begin object '{' char ([af9a2f1](https://github.com/CareBoo/unity-algorand-sdk/commit/af9a2f1cdc7b02a16e1ef052a1156ddee0d0a2a8))
-* **kmd:** :bug: fix `GenerateKeyRequest` to use `wallet_handle_token` not password ([a86c25e](https://github.com/CareBoo/unity-algorand-sdk/commit/a86c25ea9b233dd755f234d64d36467415ce6ebb))
-* **kmd:** :bug: fix `ImportKeyRequest` to use wallet_handle_token not password ([f020a03](https://github.com/CareBoo/unity-algorand-sdk/commit/f020a03fb19c9cf89452066d6dbd3cf278eb9f7f))
-* **kmd:** :bug: fix `KmdClient.SignTransaction` returning a signed transaction message ([f0a354c](https://github.com/CareBoo/unity-algorand-sdk/commit/f0a354caeafd05ae7a984451582e8d53b82bbd6b))
-* **kmd:** :bug: fix `WalletHandle` not added to formatter cache ([4c30939](https://github.com/CareBoo/unity-algorand-sdk/commit/4c309395b3f7076aa4db1e6ebfb552d59fad57b0))
-* **kmd:** :bug: fix multisig ([fc7bcd6](https://github.com/CareBoo/unity-algorand-sdk/commit/fc7bcd6f647c399b3edebb52ccd65fccf715393e))
-
-
-### Code Refactoring
-
-* **kmd:** :recycle: replace `Request` with explicit method params ([030a0a9](https://github.com/CareBoo/unity-algorand-sdk/commit/030a0a9486f6270e6e867ad1efbad73b90e0ecfb))
-
-
-### Features
-
-* **json:** :sparkles: implement `JsonReader.Skip` ([0d6e6ab](https://github.com/CareBoo/unity-algorand-sdk/commit/0d6e6ab4c3b75e96c5e18b105019acb9c50180ac))
-* **serialization:** :sparkles: add support for deserializing `byte[]` ([3ef497f](https://github.com/CareBoo/unity-algorand-sdk/commit/3ef497f3e1f6d31b23fc9bcef77c66f975e242b5))
-* **transaction:** :sparkles: add `GetSignature` and `ToRaw` extensions to `ITransaction` ([e4a3ad5](https://github.com/CareBoo/unity-algorand-sdk/commit/e4a3ad5e15e10155d9cb39dcaf61afc77989950e))
-
-
-### BREAKING CHANGES
-
-* **indexer:** Removed token from IndexerClient constructor
-* **kmd:** changes `IKmdClient` API to use parameters instead of `Request` objs
-
-# [1.0.0-exp.25](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.24...v1.0.0-exp.25) (2021-10-08)
-
-
-### Bug Fixes
-
-* :bug: fix keyworded enum types formatting as numbers ([d686c13](https://github.com/CareBoo/unity-algorand-sdk/commit/d686c134dff5e0d657f974600c5948b86f506f0f))
-* **algod:** :bug: fix pending transactions not returning messagepack ([dca09f8](https://github.com/CareBoo/unity-algorand-sdk/commit/dca09f8d6c2e1781097f3386355852b7179f01d9))
-* **indexer:** :bug: add missing fields to `Account` model ([5732a1d](https://github.com/CareBoo/unity-algorand-sdk/commit/5732a1d7b6a57d300e8e8b4662696e180c0c2ecb))
-* **indexer:** :bug: fix `HealthCheck` missing serialization logic ([f5165c6](https://github.com/CareBoo/unity-algorand-sdk/commit/f5165c681387450a791f191a2ae88a060741a9de))
-* **indexer:** :fire: fix huge issue with indexer where query parameters were in body ([7bcca20](https://github.com/CareBoo/unity-algorand-sdk/commit/7bcca2022b8c1238cd35f225fccef80ada562143))
-* **serialization:** :bug: fix `Block` not having a formatter ([dec6176](https://github.com/CareBoo/unity-algorand-sdk/commit/dec61762ddfba5c7f43223175c8c63f2d0b3609e))
-* **serialization:** :bug: fix `BlockResponse` Serialization ([1252a16](https://github.com/CareBoo/unity-algorand-sdk/commit/1252a1634d6bb2fa00f78c1628ce7dbf33da6a56))
-* **serialization:** :bug: fix `JsonWriter` not writing to `NativeText` ([2b61659](https://github.com/CareBoo/unity-algorand-sdk/commit/2b61659ea6801947f7b31069ecade0d6cb5f1e09))
-* **serialization:** :bug: fix discrepancy between `TransactionId` and `TransactinIdResponse` ([d0c0370](https://github.com/CareBoo/unity-algorand-sdk/commit/d0c0370c0578e6d2296d0667557148e711c67174))
-* **serialization:** :bug: fix issue where fixed strings were incorrectly being added to the queryparams ([a3e6fd9](https://github.com/CareBoo/unity-algorand-sdk/commit/a3e6fd9dbaf62d6e4bb05432568c0de36e3abb35))
-* **serialization:** :bug: fix missing `AlgoApiObject` on all Transaction Params ([a11015f](https://github.com/CareBoo/unity-algorand-sdk/commit/a11015ff3da75db5ab5d6f7c809a89f50fe1142b))
-
-
-### Features
-
-* **networking:** :sparkles: add `ApiResponse` API to `ApiResponse<>` ([8556c53](https://github.com/CareBoo/unity-algorand-sdk/commit/8556c53616646d9b39d9a4a88488b66acb6ac421))
-* **serialization:** :sparkles: add support for generically serializing byte enums to strings ([424c8b4](https://github.com/CareBoo/unity-algorand-sdk/commit/424c8b49c2a567c015a356db3b12a4d4d035dd61))
-* **serialization:** :sparkles: finish implementing `MessagePackReader.Integers` and `MessagePackWriter.Integers` ([37d8f20](https://github.com/CareBoo/unity-algorand-sdk/commit/37d8f20eba237ad28fcf84f83cdbc989b0168a86))
-* **serialization:** :sparkles: finish implementing serializer/deserializer methods in `EnumFormatter` ([3af569f](https://github.com/CareBoo/unity-algorand-sdk/commit/3af569f180d26f5501a48d1eb43a00327bdd5921))
-
-
-### Reverts
-
-* **demo:** :fire: remove bossroom assets... too big to be a sample ([e53192d](https://github.com/CareBoo/unity-algorand-sdk/commit/e53192daaba120f53d5c8f7312d2b199a8f4e564))
-
-
-### BREAKING CHANGES
-
-* **indexer:** indexer queries are now given as optional arguments
-
-# [1.0.0-exp.24](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.23...v1.0.0-exp.24) (2021-10-05)
-
-
-### Bug Fixes
-
-* :bug: fix signatures ([2fb4614](https://github.com/CareBoo/unity-algorand-sdk/commit/2fb461459ac58266c1078bdb16607d65a25d8553))
-
-
-### Features
-
-* **kmd:** :sparkles: add `Error` to `ErrorMessage` which is used for kmd ([3c37a94](https://github.com/CareBoo/unity-algorand-sdk/commit/3c37a947ed4ff34b2b008562e8a40e6eaa142078))
-* **kmd:** :sparkles: implement `APIV1DELETEKeyResponse` ([81f6c1e](https://github.com/CareBoo/unity-algorand-sdk/commit/81f6c1e14cf23ca1bca6a6e22ee76a3196a26f6f))
-* **kmd:** :sparkles: implement `APIV1DELETEMultisigResponse` ([4c1d6db](https://github.com/CareBoo/unity-algorand-sdk/commit/4c1d6db3848c387d244bbb624030cd0fb2614dec))
-* **kmd:** :sparkles: implement `APIV1GETWalletsResponse` ([9025e9a](https://github.com/CareBoo/unity-algorand-sdk/commit/9025e9a2dbf20fa2ed951d5ba602017901257984))
-* **kmd:** :sparkles: implement `APIV1Wallet` ([e514183](https://github.com/CareBoo/unity-algorand-sdk/commit/e5141835d7db31cb7d4274b0e4c80976ce40291c))
-* **kmd:** :sparkles: implement `APIV1WalletHandle` ([8bae4b4](https://github.com/CareBoo/unity-algorand-sdk/commit/8bae4b4e3385ef981a9375a791cdd3cb5e867578))
-* **kmd:** :sparkles: implement `CreateWalletRequest` ([63882eb](https://github.com/CareBoo/unity-algorand-sdk/commit/63882eb7f363f34e510629c41276b6deeeadc718))
-* **kmd:** :sparkles: implement `CreateWalletRequest` api fields ([f32094f](https://github.com/CareBoo/unity-algorand-sdk/commit/f32094f9235dd2c09e32935cea80e747bd0af597))
-* **kmd:** :sparkles: implement `CreateWalletResponse` ([2579231](https://github.com/CareBoo/unity-algorand-sdk/commit/2579231460707e0824699c897deb136e29e2755e))
-* **kmd:** :sparkles: implement `DeleteKeyRequest` ([5c89319](https://github.com/CareBoo/unity-algorand-sdk/commit/5c8931958bf638375843e8b57ef484dae713d936))
-* **kmd:** :sparkles: implement `DeleteMultiSigRequest` ([15afda0](https://github.com/CareBoo/unity-algorand-sdk/commit/15afda09b50ebf543a05b95c5970cc61f6e68d7d))
-* **kmd:** :sparkles: implement `ExportKeyRequest` ([a8b1131](https://github.com/CareBoo/unity-algorand-sdk/commit/a8b11314d037e7e8ece0273dd82b27f511433582))
-* **kmd:** :sparkles: implement `ExportKeyResponse.Equals` ([010e656](https://github.com/CareBoo/unity-algorand-sdk/commit/010e656a3ddd7a9abea101a86828ad6c7b635c45))
-* **kmd:** :sparkles: implement `ExportKeyResponse` ([db01766](https://github.com/CareBoo/unity-algorand-sdk/commit/db01766b0ad407e9088a1f2d1ba8487da5500b31))
-* **kmd:** :sparkles: implement `ExportMasterKeyRequest` ([2a8ed81](https://github.com/CareBoo/unity-algorand-sdk/commit/2a8ed81b3b0577329dc862cea9d4de7a7c7b59fb))
-* **kmd:** :sparkles: implement `ExportMasterKeyResponse` ([2843847](https://github.com/CareBoo/unity-algorand-sdk/commit/2843847d11145f3ee143d6f1a072fd59999e32f3))
-* **kmd:** :sparkles: implement `ExportMultiSigRequest` ([e67c925](https://github.com/CareBoo/unity-algorand-sdk/commit/e67c925bce69227c730971840ec07984cb14711b))
-* **kmd:** :sparkles: implement `ExportMultiSigResponse` ([bac0edb](https://github.com/CareBoo/unity-algorand-sdk/commit/bac0edb70256ceb82916eac7c6e29ef2f52aaf69))
-* **kmd:** :sparkles: implement `GenerateKeyResponse` ([1d6795f](https://github.com/CareBoo/unity-algorand-sdk/commit/1d6795ffdfa76e0c20f2ec56ba4dea36ac7303aa))
-* **kmd:** :sparkles: implement `GenerateMasterKeyRequest` ([6503dd8](https://github.com/CareBoo/unity-algorand-sdk/commit/6503dd8ef729d2a5460bcded8fad46efea99e77a))
-* **kmd:** :sparkles: implement `ImportKeyRequest` ([521f7c1](https://github.com/CareBoo/unity-algorand-sdk/commit/521f7c1af4183cfa00d4f6ad2e4e6d7ac81dbfde))
-* **kmd:** :sparkles: implement `ImportKeyResponse` ([83798a6](https://github.com/CareBoo/unity-algorand-sdk/commit/83798a65359906741b908e752d83f73ae0273613))
-* **kmd:** :sparkles: implement `ImportMultiSigRequest` ([5eb5d42](https://github.com/CareBoo/unity-algorand-sdk/commit/5eb5d42d7d67919d9b7357708e5d3a68861877d5))
-* **kmd:** :sparkles: implement `ImportMultiSigResponse` ([001f3ea](https://github.com/CareBoo/unity-algorand-sdk/commit/001f3eaffcf58aa5050cb8c5632dfff300adf69d))
-* **kmd:** :sparkles: implement `InitWalletHandleTokenRequest` ([36dd459](https://github.com/CareBoo/unity-algorand-sdk/commit/36dd459e9923e3539ef291e4fdf0f8ea4c3afc09))
-* **kmd:** :sparkles: implement `InitWalletHandleTokenResponse` ([26db31b](https://github.com/CareBoo/unity-algorand-sdk/commit/26db31bea84cb50e16d0194e8bf7b147469d1971))
-* **kmd:** :sparkles: implement `KmdClient` ([7433060](https://github.com/CareBoo/unity-algorand-sdk/commit/743306013c6d5d7473990b9c8ad4f5055b036ba0)), closes [#13](https://github.com/CareBoo/unity-algorand-sdk/issues/13)
-* **kmd:** :sparkles: implement `ListKeysRequest` ([b55fe67](https://github.com/CareBoo/unity-algorand-sdk/commit/b55fe67f5dd3a3b5316bef1dd32ecd421081214a))
-* **kmd:** :sparkles: implement `ListKeysResponse` ([0096bd5](https://github.com/CareBoo/unity-algorand-sdk/commit/0096bd59eeb9ed56e65e1abb5cdda262c63979dc))
-* **kmd:** :sparkles: implement `ListMultiSigRequest` ([ce667d1](https://github.com/CareBoo/unity-algorand-sdk/commit/ce667d10e43c7cb55e2b6b247760bfba92ad706d))
-* **kmd:** :sparkles: implement `ListMultiSigResponse` ([550a0ed](https://github.com/CareBoo/unity-algorand-sdk/commit/550a0edb96b79b14ad139d7fc72828b59184b2c4))
-* **kmd:** :sparkles: implement `ListWalletsRequest` ([b3b5023](https://github.com/CareBoo/unity-algorand-sdk/commit/b3b5023fd1a4374f99fe787c31648ba87502c598))
-* **kmd:** :sparkles: implement `ReleaseWalletHandleTokenRequest` ([ff024de](https://github.com/CareBoo/unity-algorand-sdk/commit/ff024de546b8faddcecf248dd3ae4b2f2f8b8d04))
-* **kmd:** :sparkles: implement `ReleaseWalletHandleTokenResponse` ([719c393](https://github.com/CareBoo/unity-algorand-sdk/commit/719c39331096dd0058cb1fb6a85abc8a4ca48b20))
-* **kmd:** :sparkles: implement `RenameWalletRequest` ([c5a9f3b](https://github.com/CareBoo/unity-algorand-sdk/commit/c5a9f3b549b482223e9bde8fa0c7324849b29408))
-* **kmd:** :sparkles: implement `RenameWalletResponse` ([6e5b55e](https://github.com/CareBoo/unity-algorand-sdk/commit/6e5b55ef118d6e94816c4e47b942c759158ee5ea))
-* **kmd:** :sparkles: implement `RenewWalletHandleTokenRequest` ([0a0d589](https://github.com/CareBoo/unity-algorand-sdk/commit/0a0d589b48b63e51eb90e4ab142f58090ebac76c))
-* **kmd:** :sparkles: implement `RenewWalletHandleTokenResponse` ([d85e5f5](https://github.com/CareBoo/unity-algorand-sdk/commit/d85e5f5e5dbbe0ad9fb1b0afdae48bd87e70959e))
-* **kmd:** :sparkles: implement `SignMultiSigRequest` ([e1dfee9](https://github.com/CareBoo/unity-algorand-sdk/commit/e1dfee9f4e7b2fb51c32b9fa881b4c6ec70e979d))
-* **kmd:** :sparkles: implement `SignMultiSigResponse` ([83ea09f](https://github.com/CareBoo/unity-algorand-sdk/commit/83ea09fb0da43e0fa99545ea667012a996e1b8a6))
-* **kmd:** :sparkles: implement `SignProgramMultiSigRequest` ([063ed1d](https://github.com/CareBoo/unity-algorand-sdk/commit/063ed1d0ee411b1dd17ea5fb21da348bed78c3f1))
-* **kmd:** :sparkles: implement `SignProgramMultiSigResponse` ([b5e5b5e](https://github.com/CareBoo/unity-algorand-sdk/commit/b5e5b5ebe9b81cac41264343de6e3dcde3765736))
-* **kmd:** :sparkles: implement `SignProgramRequest` ([52ccb07](https://github.com/CareBoo/unity-algorand-sdk/commit/52ccb07a62a1986ba3344e5c87d537f46fab499c))
-* **kmd:** :sparkles: implement `SignTransactionRequest` ([c542582](https://github.com/CareBoo/unity-algorand-sdk/commit/c54258248defcff86d9484c423e91603ab0c78ad))
-* **kmd:** :sparkles: implement `SignTransactionResponse` ([d7080ab](https://github.com/CareBoo/unity-algorand-sdk/commit/d7080ab90dd16f4b4d51570540a62ab6322d5256))
-* **kmd:** :sparkles: implement `VersionsRequest` ([f70f0fd](https://github.com/CareBoo/unity-algorand-sdk/commit/f70f0fde67adf73fea202917c985f2372ea24d0c))
-* **kmd:** :sparkles: implement `VersionsResponse` ([7c85ec2](https://github.com/CareBoo/unity-algorand-sdk/commit/7c85ec249642d8749c8fea7ec73f8e5dd28eb46c))
-* **kmd:** :sparkles: implement `WalletInfoResponse` ([6b3edc7](https://github.com/CareBoo/unity-algorand-sdk/commit/6b3edc798c63d6518f29d9050bf81f953079876c))
-* **kmd:** implement `SignProgramResponse` ([978a31d](https://github.com/CareBoo/unity-algorand-sdk/commit/978a31d0fa9e5af12872dc5efcba055405f96e5c))
-* **serialization:** :sparkles: add formatters for `PrivateKey`, `PublicKey`, and `Signature` ([2dedd67](https://github.com/CareBoo/unity-algorand-sdk/commit/2dedd67f4aa6676744fb48082343d68d96c4a805))
-* **serialization:** :tada: update formatter cache ([029f841](https://github.com/CareBoo/unity-algorand-sdk/commit/029f8419b54810d582c3550b8a3b2e193946bf5a))
-
-# [1.0.0-exp.23](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.22...v1.0.0-exp.23) (2021-10-03)
-
-
-### Bug Fixes
-
-* :bug: fix `RawTransaction.Equals` ([f6bd889](https://github.com/CareBoo/unity-algorand-sdk/commit/f6bd889c737f970c835d3273f7c28b002794ed3f))
-* **indexer:** :bug: fix transaction formatters missing valid msgpack fields ([bf917ac](https://github.com/CareBoo/unity-algorand-sdk/commit/bf917ac30f964b9102c293d00a60d6f0072e75bd))
-* **indexer:** :sparkles: fix `TealValue` msgpack fieldnames ([2a6ef27](https://github.com/CareBoo/unity-algorand-sdk/commit/2a6ef27e4f465c73a3cb744eae12267929c06f07))
-* **serialization:** :bug: fix `SignedTransaction` serialization ([f4bde8d](https://github.com/CareBoo/unity-algorand-sdk/commit/f4bde8d4fd65e6146df35a6ce0890ed4417a235a))
-
-
-### Code Refactoring
-
-* :fire: remove some verify methods in the transaction ([70a8308](https://github.com/CareBoo/unity-algorand-sdk/commit/70a830830d3778a23d32fd9985d5d424972dd99f))
-* :recycle: convert all `SignedTransaction<>` to a single `SignedTransaction` ([26fa65a](https://github.com/CareBoo/unity-algorand-sdk/commit/26fa65a53fa4cb2f4e8d81aa9ec2adc537d09b01))
-* :recycle: rename `RawSignedTransaction` -> `SignedTransaction` ([059c6a3](https://github.com/CareBoo/unity-algorand-sdk/commit/059c6a369bd3f5e6d2b65965927cffd8bce65a49))
-* :recycle: rename `RawTransaction` -> `Transaction` ([bade09e](https://github.com/CareBoo/unity-algorand-sdk/commit/bade09e7edc7df1d6dcbeb932f38fe7c199b21bb))
-* :recycle: rename AlgoApiKeyAttribute -> AlgoApiFieldAttribute ([1b37028](https://github.com/CareBoo/unity-algorand-sdk/commit/1b370289ba2ffe8457f35c998aed6efcfe01931c))
-* **algod:** :recycle: rename `Block` -> `BlockResponse` ([eca9fb6](https://github.com/CareBoo/unity-algorand-sdk/commit/eca9fb6c2be3a99272067d308a089148a1680427))
-
-
-### Features
-
-* :sparkles: add readOnly support ([6070565](https://github.com/CareBoo/unity-algorand-sdk/commit/6070565057130a23b52575126774a6d1fa58718a))
-* **indexer:** :recycle: rename `ApplicationStateSchema` -> `StateSchema` ([7b02f70](https://github.com/CareBoo/unity-algorand-sdk/commit/7b02f70dbac6c3a67a0168107103a43be0a262ad))
-* **indexer:** :sparkles: add `IIndexerClient` ([093153e](https://github.com/CareBoo/unity-algorand-sdk/commit/093153e104a09e4d9f3cafe27ea494d44fe35840))
-* **indexer:** :sparkles: implement `AccountQuery` ([bda5301](https://github.com/CareBoo/unity-algorand-sdk/commit/bda5301687bf0a90d51860cd96074118639cc722))
-* **indexer:** :sparkles: implement `AccountResponse` ([09d7fb9](https://github.com/CareBoo/unity-algorand-sdk/commit/09d7fb9b53afba88181a98ee66a4f95633ae7257))
-* **indexer:** :sparkles: implement `AccountsQuery` ([e7d56e2](https://github.com/CareBoo/unity-algorand-sdk/commit/e7d56e29b559af8288e334e4006fe44bbab496b6))
-* **indexer:** :sparkles: implement `AccountsResponse` ([ea01260](https://github.com/CareBoo/unity-algorand-sdk/commit/ea01260b0cc63fb0ee873b3f62c0a243fe20da30))
-* **indexer:** :sparkles: implement `AddressRole` ([3325b60](https://github.com/CareBoo/unity-algorand-sdk/commit/3325b60757eac9400e5bf227639c2946b8f36a2d))
-* **indexer:** :sparkles: implement `Application` ([144d04d](https://github.com/CareBoo/unity-algorand-sdk/commit/144d04d940c2361b636e3cff21a6134b08515980))
-* **indexer:** :sparkles: implement `ApplicationLocalState` ([9ad284f](https://github.com/CareBoo/unity-algorand-sdk/commit/9ad284f734a27fb2cfc61a203f9400f397f63d31))
-* **indexer:** :sparkles: implement `ApplicationQuery` ([de02370](https://github.com/CareBoo/unity-algorand-sdk/commit/de02370084ddf28ebf5473fd9016d0f634537c24))
-* **indexer:** :sparkles: implement `ApplicationResponse` ([fa34b20](https://github.com/CareBoo/unity-algorand-sdk/commit/fa34b201d734a2deae62731ce224841ea9c00895))
-* **indexer:** :sparkles: implement `ApplicationsQuery` ([914ca8b](https://github.com/CareBoo/unity-algorand-sdk/commit/914ca8b4b483f25d91be6e59b953a0d3b3fb2426))
-* **indexer:** :sparkles: implement `ApplicationsResponse` ([e342cdc](https://github.com/CareBoo/unity-algorand-sdk/commit/e342cdc68d34e2582b0965af801eed60569fbd5e))
-* **indexer:** :sparkles: implement `Asset` ([161f361](https://github.com/CareBoo/unity-algorand-sdk/commit/161f3618265027bf37f025c90326b3b96df24e8f))
-* **indexer:** :sparkles: implement `AssetHolding` ([203785a](https://github.com/CareBoo/unity-algorand-sdk/commit/203785a112052f38c796bb6d9a5cef3a884cdbac))
-* **indexer:** :sparkles: implement `AssetParams` ([ac78bfe](https://github.com/CareBoo/unity-algorand-sdk/commit/ac78bfedb61875fabb480e602eb9866f37bdd926))
-* **indexer:** :sparkles: implement `AssetQuery` ([c8eda94](https://github.com/CareBoo/unity-algorand-sdk/commit/c8eda9423f316cc766f02e88ce6a0dea5805bde5))
-* **indexer:** :sparkles: implement `AssetResponse` ([cd8e48f](https://github.com/CareBoo/unity-algorand-sdk/commit/cd8e48ff76f0959f848fc1dc5eb4f6cede1a6afd))
-* **indexer:** :sparkles: implement `AssetsResponse` ([ade022d](https://github.com/CareBoo/unity-algorand-sdk/commit/ade022d73f1d0557b2259c676a5b3fd1493b8fb5))
-* **indexer:** :sparkles: implement `BalancesQuery` ([b8f167e](https://github.com/CareBoo/unity-algorand-sdk/commit/b8f167eeea4dceb2493accf20dac409a0903950b))
-* **indexer:** :sparkles: implement `BalancesResponse` ([c7ae299](https://github.com/CareBoo/unity-algorand-sdk/commit/c7ae29964bb26898f5d86519167eacd247265017))
-* **indexer:** :sparkles: implement `Block` ([2533f24](https://github.com/CareBoo/unity-algorand-sdk/commit/2533f240584fe2022c4a2d64d90ebf2f9555da59))
-* **indexer:** :sparkles: implement `BlockRewards` ([bb49cb0](https://github.com/CareBoo/unity-algorand-sdk/commit/bb49cb05bdade80cb283d9624eb751d9fd9bd112))
-* **indexer:** :sparkles: implement `BlockUpgradeStatus` ([e9a0423](https://github.com/CareBoo/unity-algorand-sdk/commit/e9a0423125b1e2f2d5c2a0794cd9c705f84667c4))
-* **indexer:** :sparkles: implement `BlockUpgradeVote` ([de5e72e](https://github.com/CareBoo/unity-algorand-sdk/commit/de5e72e097ee4abff6db3d0fe6bf1b5ba0067c6a))
-* **indexer:** :sparkles: implement `ErrorResponse` msgpack fields ([358e6a6](https://github.com/CareBoo/unity-algorand-sdk/commit/358e6a6475f716e0df55ed75ee8f0173c885d1c1))
-* **indexer:** :sparkles: implement `EvalDelta` msgpack fields ([45b2df2](https://github.com/CareBoo/unity-algorand-sdk/commit/45b2df29af0e15759fafab566ca52b320f5e3adc))
-* **indexer:** :sparkles: implement `EvalDeltaKeyValue` msgpack fields ([bd3c230](https://github.com/CareBoo/unity-algorand-sdk/commit/bd3c2304f227c5e252f6b269d3c33468e9e796a3))
-* **indexer:** :sparkles: implement `HealthCheck` ([a164577](https://github.com/CareBoo/unity-algorand-sdk/commit/a1645779a235d1e8c5201af61671292065f37cda))
-* **indexer:** :sparkles: implement `IndexerClient.GetAccount` ([88ba11a](https://github.com/CareBoo/unity-algorand-sdk/commit/88ba11ac8d2dbf0d1aae786bb7f904a3c872fc53))
-* **indexer:** :sparkles: implement `IndexerClient.GetAccounts` ([2e427f1](https://github.com/CareBoo/unity-algorand-sdk/commit/2e427f11f1a834d3d63c9f3eb3090f4330136342))
-* **indexer:** :sparkles: implement `IndexerClient.GetHealth` ([0883ff0](https://github.com/CareBoo/unity-algorand-sdk/commit/0883ff0b17fb2123bf251ffbe0ada58f25cf4ecc))
-* **indexer:** :sparkles: implement `IndexerClient` ([d7fd35a](https://github.com/CareBoo/unity-algorand-sdk/commit/d7fd35a195b216ffef6371ba099355b51a85f852))
-* **indexer:** :sparkles: implement `LogicSig` json fields ([b22297c](https://github.com/CareBoo/unity-algorand-sdk/commit/b22297c25e71bbee318e779281904090d2cb79d7))
-* **indexer:** :sparkles: implement `MiniAssetHolding` ([59941b8](https://github.com/CareBoo/unity-algorand-sdk/commit/59941b8002cfbcb37a24b1a80ecb96dc9cf9620f))
-* **indexer:** :sparkles: implement `MultiSig.SubSignature` ([ef526ec](https://github.com/CareBoo/unity-algorand-sdk/commit/ef526ec427cb3e280ad7336ad6f65c748070a577))
-* **indexer:** :sparkles: implement `MultiSig` ([df959a7](https://github.com/CareBoo/unity-algorand-sdk/commit/df959a75a1898605840402cc2805b5fd2b0cc4f9))
-* **indexer:** :sparkles: implement `OnCompletion` ([04227b9](https://github.com/CareBoo/unity-algorand-sdk/commit/04227b95db85508f8f258963454a3095263dd80e))
-* **indexer:** :sparkles: implement `TealKeyValue` msgPack fields ([e521553](https://github.com/CareBoo/unity-algorand-sdk/commit/e5215533bc5a0c25f71fbc38584b35d3a9b910b2))
-* **indexer:** :sparkles: implement `Transaction.ApplicationCall` ([5a5e819](https://github.com/CareBoo/unity-algorand-sdk/commit/5a5e819ec408c44a0999f38db7bab3b4c16c2d0e))
-* **indexer:** :sparkles: implement `Transaction.ApplicationCall` model fields ([69d64e8](https://github.com/CareBoo/unity-algorand-sdk/commit/69d64e8b14d0b6bf3da90ce4e782d13c9364745a))
-* **indexer:** :sparkles: implement `Transaction.AssetConfiguration` model fields ([baf7c2e](https://github.com/CareBoo/unity-algorand-sdk/commit/baf7c2ea37cdc40c9e890c7c84e9ae51478df06c))
-* **indexer:** :sparkles: implement `Transaction.AssetFreeze` model fields ([be45b90](https://github.com/CareBoo/unity-algorand-sdk/commit/be45b901e4478e404cd6aac77996de78470b75b1))
-* **indexer:** :sparkles: implement `Transaction.AssetTransfer` model fields ([84aa15e](https://github.com/CareBoo/unity-algorand-sdk/commit/84aa15eef120f882177b4f57800036dccb91a6b5))
-* **indexer:** :sparkles: implement `Transaction.KeyRegistration` ([69e004e](https://github.com/CareBoo/unity-algorand-sdk/commit/69e004eb56759117e9fc7bdba8adc67d4ac30ddd))
-* **indexer:** :sparkles: implement `Transaction.KeyRegistration` model fields ([44029ca](https://github.com/CareBoo/unity-algorand-sdk/commit/44029ca8048cd9baf31d1a9aff9eea3b335ec93d))
-* **indexer:** :sparkles: implement `TransactionResponse` ([430a1fa](https://github.com/CareBoo/unity-algorand-sdk/commit/430a1fa205e194766d22aa565a552769bebfc919))
-* **indexer:** :sparkles: implement `TransactionsQuery` ([9ec7f4f](https://github.com/CareBoo/unity-algorand-sdk/commit/9ec7f4f5ec8e8df560ae6ea4a6b6bb548c203680))
-* **indexer:** :sparkles: implement AssetsQuery ([e8d6e55](https://github.com/CareBoo/unity-algorand-sdk/commit/e8d6e550bc757c03c4f5bbff484d9e17e5283b09))
-* **indexer:** :sparkles: implement TransactionsResponse ([e1a46f8](https://github.com/CareBoo/unity-algorand-sdk/commit/e1a46f877be174bf7605b1b8dac8f146cf850c62))
-* **json:** :sparkles: implement `JsonWriter.WriteRaw` ([1643bad](https://github.com/CareBoo/unity-algorand-sdk/commit/1643badcf0069875a579da604ad0e2b5fb89d466))
-* **json:** :sparkles: implement `ReadRaw` ([384abf8](https://github.com/CareBoo/unity-algorand-sdk/commit/384abf82e09f38724218d47675452c9f26595e21))
-* **msgpack:** :sparkles: implement `MessagePackReader.ReadRaw` ([c2dec22](https://github.com/CareBoo/unity-algorand-sdk/commit/c2dec22a8c520aa953964f449ebc84cac5b89dff))
-* **msgpack:** :sparkles: implement `MessagePackWriter.WriteRaw` ([d5ae90e](https://github.com/CareBoo/unity-algorand-sdk/commit/d5ae90e320d855f0e8f3a5f59e87934f4390ff50))
-* **serialization:** :sparkles: implement `AlgoApiObject` ([74456b6](https://github.com/CareBoo/unity-algorand-sdk/commit/74456b60bb235eaf89b26d809adb2141b82d57f8))
-* **serialization:** :sparkles: implement `Timestamp` ([cc1159b](https://github.com/CareBoo/unity-algorand-sdk/commit/cc1159b510aefc79c53fbe35154c5cf422e68f5f))
-
-
-### BREAKING CHANGES
-
-* remove `Transaction.VerifySignature`, `SignedTransaction.Verify`
-* signed transactions are now represented by `SignedTransaction` (non-generic)
-* renamed `RawSignedTransaction` -> `SignedTransaction`
-* `RawTransaction` renamed to `Transaction`
-* AlgoApiKeyAttribute -> AlgoApiFieldAttribute
-* **algod:** `Block` renamed to `BlockResponse`
-
-# [1.0.0-exp.22](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.21...v1.0.0-exp.22) (2021-09-28)
-
-
-### Bug Fixes
-
-* :bug: fix crash on ArrayComparer.Equals ([8ca1b06](https://github.com/CareBoo/unity-algorand-sdk/commit/8ca1b06daedcbdf97650f4b79bd72a134238bec0))
-* :bug: fix issues with codegen and AOT compilation ([d2f9bdc](https://github.com/CareBoo/unity-algorand-sdk/commit/d2f9bdc8f8c77b8afb690162c3fafda81b5f8c48))
-
-# [1.0.0-exp.21](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.20...v1.0.0-exp.21) (2021-09-28)
-
-
-### Features
-
-* :sparkles: update AlgoApiFormatterLookup ([cc112e5](https://github.com/CareBoo/unity-algorand-sdk/commit/cc112e55d4489e30afd2854757e482cf9d37c8ee))
-
-# [1.0.0-exp.20](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.19...v1.0.0-exp.20) (2021-09-28)
-
-
-### Features
-
-* :sparkles: add FixedBytesFormatter ([941eb3f](https://github.com/CareBoo/unity-algorand-sdk/commit/941eb3f83b4b82d58431bc49b7f402e1ecfbccea))
-
-
-### BREAKING CHANGES
-
-* Replace Buffer with GetUnsafePtr
-
-# [1.0.0-exp.19](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.18...v1.0.0-exp.19) (2021-09-25)
-
-
-### Bug Fixes
-
-* :bug: fix compile errs ([7a03ed9](https://github.com/CareBoo/unity-algorand-sdk/commit/7a03ed99a5cd7d3657df89c58a989ee0e33ced66))
-
-# [1.0.0-exp.18](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.17...v1.0.0-exp.18) (2021-09-25)
-
-
-### Features
-
-* :sparkles: add LogicSig implementation ([51a21e0](https://github.com/CareBoo/unity-algorand-sdk/commit/51a21e02f98bb221ca2e14cbb8d1243f7b15b5ef))
-
-# [1.0.0-exp.17](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.16...v1.0.0-exp.17) (2021-09-20)
-
-
-### Features
-
-* :sparkles: implement asset configuration transaction ([4f9ec58](https://github.com/CareBoo/unity-algorand-sdk/commit/4f9ec587932ed51da9bbbeaa1ddf3653a346c978)), closes [#27](https://github.com/CareBoo/unity-algorand-sdk/issues/27)
-* :sparkles: implement AssetFreezeTransaction ([e3233bf](https://github.com/CareBoo/unity-algorand-sdk/commit/e3233bf9c8258eab91e8141c561d837f26780172)), closes [#26](https://github.com/CareBoo/unity-algorand-sdk/issues/26)
-* :sparkles: implement AssetTransfer Transaction ([62a1841](https://github.com/CareBoo/unity-algorand-sdk/commit/62a1841332811753f48ac7fdccb1eec117607f3a)), closes [#23](https://github.com/CareBoo/unity-algorand-sdk/issues/23)
-
-# [1.0.0-exp.16](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.15...v1.0.0-exp.16) (2021-09-19)
-
-
-### Code Refactoring
-
-* remove .NET 4.8 requirement ([9f55707](https://github.com/CareBoo/unity-algorand-sdk/commit/9f55707ba4f8a3d9b12fb7530b6ceec40c95219b)), closes [#19](https://github.com/CareBoo/unity-algorand-sdk/issues/19) [#9](https://github.com/CareBoo/unity-algorand-sdk/issues/9)
-
-
-### BREAKING CHANGES
-
-* Algo Serializer API has completely changed...
-
-# [1.0.0-exp.15](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.14...v1.0.0-exp.15) (2021-09-03)
-
-
-### Code Refactoring
-
-* :fire: remove unnecessary `SendTransactionRaw` ([09b3bdc](https://github.com/CareBoo/unity-algorand-sdk/commit/09b3bdc0dfbeb2b47603b3cfc92be0478120bd09))
-
-
-### BREAKING CHANGES
-
-* Removes the `SendTransactionRaw` method from `AlgodClient`
-
-# [1.0.0-exp.14](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.13...v1.0.0-exp.14) (2021-08-30)
-
-
-### Features
-
-* **algod:** implement Algod Client ([a7c9e90](https://github.com/CareBoo/unity-algorand-sdk/commit/a7c9e90e2f61a715488bfd8f0095c0206ae6e739)), closes [#10](https://github.com/CareBoo/unity-algorand-sdk/issues/10) [#16](https://github.com/CareBoo/unity-algorand-sdk/issues/16) [#18](https://github.com/CareBoo/unity-algorand-sdk/issues/18)
-
-# [1.0.0-exp.13](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.12...v1.0.0-exp.13) (2021-08-07)
-
-
-### Bug Fixes
-
-* :white_check_mark: Fix CI tests on Github Actions can't find libsodium ([20c4ad5](https://github.com/CareBoo/unity-algorand-sdk/commit/20c4ad56edf57cef595c2f4078bba4e15d893602)), closes [#12](https://github.com/CareBoo/unity-algorand-sdk/issues/12)
-
-# [1.0.0-exp.12](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.11...v1.0.0-exp.12) (2021-08-04)
-
-
-### Features
-
-* Add signed transaction support for payment transactions ([c07d370](https://github.com/CareBoo/unity-algorand-sdk/commit/c07d3705f70bcc33c245aa120c667a7dcc28d6e1))
-
-# [1.0.0-exp.11](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.10...v1.0.0-exp.11) (2021-08-03)
-
-
-### Features
-
-* :sparkles: Add basic signed transaction support ([bb5900f](https://github.com/CareBoo/unity-algorand-sdk/commit/bb5900fa66bc9501c3d9da26e1e984ddd1fb2cc0))
-
-# [1.0.0-exp.10](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.9...v1.0.0-exp.10) (2021-08-03)
-
-
-### Features
-
-* :sparkles: Add IEquatable, GetHashCode for RawTransaction ([885928e](https://github.com/CareBoo/unity-algorand-sdk/commit/885928e3c69dbc3742d11369d5e316853d6a8e8c))
-
-# [1.0.0-exp.9](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.8...v1.0.0-exp.9) (2021-08-02)
-
-
-### Features
-
-* :sparkles: Add basic transaction support for message pack serialization and deserialization ([63243ed](https://github.com/CareBoo/unity-algorand-sdk/commit/63243ed492919522a752784756de2633d17a79fa))
-
-# [1.0.0-exp.8](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.7...v1.0.0-exp.8) (2021-07-25)
-
-
-### Features
-
-* :sparkles: Added Transaction Header, Payment ([d3ebced](https://github.com/CareBoo/unity-algorand-sdk/commit/d3ebcedd3f86bdfabbb9f90a97e655fcadac1145))
-
-# [1.0.0-exp.7](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.6...v1.0.0-exp.7) (2021-07-24)
-
-
-### Features
-
-* :sparkles: Add Account.Generate ([95233bf](https://github.com/CareBoo/unity-algorand-sdk/commit/95233bf877ee70d6e67f91baaf6f9e640b0a9141))
-
-# [1.0.0-exp.6](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.5...v1.0.0-exp.6) (2021-07-24)
-
-
-### Features
-
-* :construction_worker: Add npmjs support ([56f60f0](https://github.com/CareBoo/unity-algorand-sdk/commit/56f60f0804c3cac377c78a5c47eea17785b29f9e))
-* :heavy_plus_sign: Add libsodium ios, android, and windows ([00c9511](https://github.com/CareBoo/unity-algorand-sdk/commit/00c95113a152f01e737e56be6a31b3207aed57ff))
-* :sparkles: Add Address struct ([d92b903](https://github.com/CareBoo/unity-algorand-sdk/commit/d92b90356cbf0070dd737a838eae417212a84a18))
-* :sparkles: Add checksums ([2bc2189](https://github.com/CareBoo/unity-algorand-sdk/commit/2bc2189174e48de3324aa8ca4e3bbce22ca4e1c8))
-* :sparkles: Add Sha512 interop ([86aabf5](https://github.com/CareBoo/unity-algorand-sdk/commit/86aabf5b0936cea36881cfaad1e1d87245755c92))
-* :sparkles: Add start of Native Integration with Libsodium ([55e325f](https://github.com/CareBoo/unity-algorand-sdk/commit/55e325f4249603da679a66ece605f6ba8d5d762d))
-
-# [1.0.0-exp.6](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.5...v1.0.0-exp.6) (2021-07-23)
-
-
-### Features
-
-* :construction_worker: Add npmjs support ([56f60f0](https://github.com/CareBoo/unity-algorand-sdk/commit/56f60f0804c3cac377c78a5c47eea17785b29f9e))
-* :heavy_plus_sign: Add libsodium ios, android, and windows ([00c9511](https://github.com/CareBoo/unity-algorand-sdk/commit/00c95113a152f01e737e56be6a31b3207aed57ff))
-* :sparkles: Add checksums ([2bc2189](https://github.com/CareBoo/unity-algorand-sdk/commit/2bc2189174e48de3324aa8ca4e3bbce22ca4e1c8))
-* :sparkles: Add Sha512 interop ([86aabf5](https://github.com/CareBoo/unity-algorand-sdk/commit/86aabf5b0936cea36881cfaad1e1d87245755c92))
-* :sparkles: Add start of Native Integration with Libsodium ([55e325f](https://github.com/CareBoo/unity-algorand-sdk/commit/55e325f4249603da679a66ece605f6ba8d5d762d))
-
-# [1.0.0-exp.6](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.5...v1.0.0-exp.6) (2021-07-21)
-
-
-### Features
-
-* :construction_worker: Add npmjs support ([56f60f0](https://github.com/CareBoo/unity-algorand-sdk/commit/56f60f0804c3cac377c78a5c47eea17785b29f9e))
-* :heavy_plus_sign: Add libsodium ios, android, and windows ([00c9511](https://github.com/CareBoo/unity-algorand-sdk/commit/00c95113a152f01e737e56be6a31b3207aed57ff))
-* :sparkles: Add Sha512 interop ([86aabf5](https://github.com/CareBoo/unity-algorand-sdk/commit/86aabf5b0936cea36881cfaad1e1d87245755c92))
-* :sparkles: Add start of Native Integration with Libsodium ([55e325f](https://github.com/CareBoo/unity-algorand-sdk/commit/55e325f4249603da679a66ece605f6ba8d5d762d))
-
-# [1.0.0-exp.6](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.5...v1.0.0-exp.6) (2021-07-20)
-
-
-### Features
-
-* :construction_worker: Add npmjs support ([56f60f0](https://github.com/CareBoo/unity-algorand-sdk/commit/56f60f0804c3cac377c78a5c47eea17785b29f9e))
-* :heavy_plus_sign: Add libsodium ios, android, and windows ([00c9511](https://github.com/CareBoo/unity-algorand-sdk/commit/00c95113a152f01e737e56be6a31b3207aed57ff))
-* :sparkles: Add start of Native Integration with Libsodium ([55e325f](https://github.com/CareBoo/unity-algorand-sdk/commit/55e325f4249603da679a66ece605f6ba8d5d762d))
-
-# [1.0.0-exp.6](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.5...v1.0.0-exp.6) (2021-07-20)
-
-
-### Features
-
-* :construction_worker: Add npmjs support ([56f60f0](https://github.com/CareBoo/unity-algorand-sdk/commit/56f60f0804c3cac377c78a5c47eea17785b29f9e))
-* :heavy_plus_sign: Add libsodium ios, android, and windows ([00c9511](https://github.com/CareBoo/unity-algorand-sdk/commit/00c95113a152f01e737e56be6a31b3207aed57ff))
-* :sparkles: Add start of Native Integration with Libsodium ([55e325f](https://github.com/CareBoo/unity-algorand-sdk/commit/55e325f4249603da679a66ece605f6ba8d5d762d))
-
-# [1.0.0-exp.5](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.4...v1.0.0-exp.5) (2021-07-12)
-
-
-### Bug Fixes
-
-* :bug: Fix repository ([e765589](https://github.com/CareBoo/unity-algorand-sdk/commit/e765589b92849e23b7d080f335067cba1c1a8b62))
-
-# [1.0.0-exp.4](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.3...v1.0.0-exp.4) (2021-07-12)
-
-
-### Bug Fixes
-
-* :bug: Fix npm release ([9e68078](https://github.com/CareBoo/unity-algorand-sdk/commit/9e68078b5f7f75a7670e7cf03dc1ee5137709bf1))
-
-# [1.0.0-exp.3](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.2...v1.0.0-exp.3) (2021-07-12)
-
-
-### Bug Fixes
-
-* :triangular_flag_on_post: Update package registry ([a0800bc](https://github.com/CareBoo/unity-algorand-sdk/commit/a0800bc57c6fde758182075a90e2fbd96ce67be8))
-
-# [1.0.0-exp.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.1...v1.0.0-exp.2) (2021-07-12)
-
-
-### Features
-
-* :sparkles: Add Mnemonic.FromString and Mnemonic.ToString ([d3a88c6](https://github.com/CareBoo/unity-algorand-sdk/commit/d3a88c6026ff3162a46f1e3d13ca54d103d43aaf))
-
-# 1.0.0-exp.1 (2021-05-18)
-
-
-### Features
-
-* Add Mnemonic and Key datastructs ([4370f74](https://github.com/CareBoo/Algorand.SDK.Unity/commit/4370f74c4e5f5ed9977dc4954313bf57e7023547))
-
 # Changelog
 All notable changes to this package will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [0.1.0] - 2020-08-18
 
-### This is the first release of *\<My Package\>*.
+# [1.1.0-pre.3](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.1.0-pre.2...v1.1.0-pre.3) (2021-11-03)
 
-*Short description of this release*
+
+### Features
+
+* **editor:** Make many models serializable and add property drawers to render them in editor ([09185fc](https://github.com/CareBoo/unity-algorand-sdk/commit/09185fce14850cb2d4f9a42be98f077e090608ac)), closes [#41](https://github.com/CareBoo/unity-algorand-sdk/issues/41)
+
+# [1.1.0-pre.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.1.0-pre.1...v1.1.0-pre.2) (2021-11-01)
+
+
+### Bug Fixes
+
+* **osx:** fix multiple sodium.bundle plugins ([b3b9389](https://github.com/CareBoo/unity-algorand-sdk/commit/b3b93890b5ec0bde98bbf5d35fd4246475b6cc0a))
+
+# [1.1.0-pre.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.1-pre.1...v1.1.0-pre.1) (2021-10-31)
+
+
+### Features
+
+* support WebGL ([1890694](https://github.com/CareBoo/unity-algorand-sdk/commit/18906948adbb7c5e42dd3988a738dccd14b4cd3d)), closes [#52](https://github.com/CareBoo/unity-algorand-sdk/issues/52)
+
+
+## [1.0.1-pre.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0...v1.0.1-pre.1) (2021-10-29)
+
+### Bug Fixes
+
+- add missing meta files ([2407941](https://github.com/CareBoo/unity-algorand-sdk/commit/24079419c06ea7c5608d601219239322f7d4b5ab))
+
+# 1.0.0 (2021-10-29)
+
+### Bug Fixes
+
+- :bug: fix `RawTransaction.Equals` ([b0769da](https://github.com/CareBoo/unity-algorand-sdk/commit/b0769da141c3fd40d90368a83467ea6de5167af1))
+- :bug: fix compile errs ([9e59233](https://github.com/CareBoo/unity-algorand-sdk/commit/9e59233acf1419c2543d0a9b9c0ecec9c2abdd74))
+- :bug: fix crash on ArrayComparer.Equals ([e2931e0](https://github.com/CareBoo/unity-algorand-sdk/commit/e2931e0f717bb18118b4518302426f9474a6dfee))
+- :bug: fix issues with codegen and AOT compilation ([4d4b583](https://github.com/CareBoo/unity-algorand-sdk/commit/4d4b583f0d43b456569d54a39940b0c435b6c96c))
+- :bug: fix keyworded enum types formatting as numbers ([ee6f363](https://github.com/CareBoo/unity-algorand-sdk/commit/ee6f36332d9f6ec73c94a2ef21d2400ee4cde657))
+- :bug: Fix npm release ([e3fed38](https://github.com/CareBoo/unity-algorand-sdk/commit/e3fed383886b464ed1f7dd400787c2d4c3abd272))
+- :bug: Fix repository ([b4efa6e](https://github.com/CareBoo/unity-algorand-sdk/commit/b4efa6e02aab21efad9cd2e51aa06abdf83757c0))
+- :bug: fix signatures ([1e3a9cc](https://github.com/CareBoo/unity-algorand-sdk/commit/1e3a9cc801a282e46d0d4416489a4c53dd134161))
+- :triangular_flag_on_post: Update package registry ([64987f8](https://github.com/CareBoo/unity-algorand-sdk/commit/64987f8c68b83d5abcc9a8a10bbac3c60e934117))
+- :white_check_mark: Fix CI tests on Github Actions can't find libsodium ([db8718a](https://github.com/CareBoo/unity-algorand-sdk/commit/db8718aa2de3a218789d513b40f7b19345771690)), closes [#12](https://github.com/CareBoo/unity-algorand-sdk/issues/12)
+- **algod:** :bug: fix `AlgodClient.TealCompile` ([bd05ed3](https://github.com/CareBoo/unity-algorand-sdk/commit/bd05ed30d3f283fc13184b5ae65be486b709b7fa)), closes [#20](https://github.com/CareBoo/unity-algorand-sdk/issues/20)
+- **algod:** :bug: fix `AssetParams` serialization ([6f2b830](https://github.com/CareBoo/unity-algorand-sdk/commit/6f2b83070ecc4c21457732dfbfb9d708a641502b))
+- **algod:** :bug: fix pending transactions not returning messagepack ([3b881a3](https://github.com/CareBoo/unity-algorand-sdk/commit/3b881a3b6290fadd22046ad85d49dc26f733b7ef))
+- **algod:** :bug: fix vrfpubkey formatter lookup ([08a09ae](https://github.com/CareBoo/unity-algorand-sdk/commit/08a09ae8908ecce9695d8527d3f102e0fb487479))
+- **algod:** :bug: fix vrfpubkey formatting ([f3c1a56](https://github.com/CareBoo/unity-algorand-sdk/commit/f3c1a563f3e01f8cb27a79b16c7bc395556c242d))
+- **algod:** :bug: replace `VrfPubKey` with `FixedString128Bytes` ([e6ce383](https://github.com/CareBoo/unity-algorand-sdk/commit/e6ce3832920e3d6a2add10b731cabf507e69b21f)), closes [#42](https://github.com/CareBoo/unity-algorand-sdk/issues/42)
+- **crypto:** fix libsodium not working on OSX ([cb0b2c4](https://github.com/CareBoo/unity-algorand-sdk/commit/cb0b2c456eef7e3a0c3bd6664cfd3aaad3e0826d))
+- fix empty dirs finding their way into the project ([5a00890](https://github.com/CareBoo/unity-algorand-sdk/commit/5a00890475ced1d585d0f137d9f7d577a6f862ef))
+- **indexer:** :bug: add missing fields to `Account` model ([86122de](https://github.com/CareBoo/unity-algorand-sdk/commit/86122deb97cc6b99074415c1c069f36e978fe4c7))
+- **indexer:** :bug: add token back to indexer ([c704eb2](https://github.com/CareBoo/unity-algorand-sdk/commit/c704eb2196a0f2764c1c24982fcec4448fd14142))
+- **indexer:** :bug: fix `HealthCheck` missing serialization logic ([f11aa38](https://github.com/CareBoo/unity-algorand-sdk/commit/f11aa384567a2b04a5eadebe8135a9cce8f77df5))
+- **indexer:** :bug: fix indexer requires token ([ef2d461](https://github.com/CareBoo/unity-algorand-sdk/commit/ef2d461037a2e1c6805cb07456a4b501f8ea502b))
+- **indexer:** :bug: fix transaction formatters missing valid msgpack fields ([e18f84a](https://github.com/CareBoo/unity-algorand-sdk/commit/e18f84a5b54a011aa353d8cc47cc06d9129e3a3d))
+- **indexer:** :fire: fix huge issue with indexer where query parameters were in body ([92cb794](https://github.com/CareBoo/unity-algorand-sdk/commit/92cb7946a88c0c4169eec9d4673f9a102065cfa1))
+- **indexer:** :sparkles: fix `TealValue` msgpack fieldnames ([2da8001](https://github.com/CareBoo/unity-algorand-sdk/commit/2da8001d1963ebea0f5541a0cba43d8d21177790))
+- **indexer:** fix missing `Version` field in `HealthCheck` ([f70c73d](https://github.com/CareBoo/unity-algorand-sdk/commit/f70c73d5d5dd6d07442a63f3e07d4c2280fcd08c))
+- **json:** :bug: fix `PrivateKey` JSON deserialization err ([63baf88](https://github.com/CareBoo/unity-algorand-sdk/commit/63baf885f7a9d2efb26a7cd11da3392e255cdb59))
+- **json:** :bug: fix empty json objects missing begin object '{' char ([d2b0539](https://github.com/CareBoo/unity-algorand-sdk/commit/d2b0539bc7ea9ef5e2a9527776ce959995cfb35e))
+- **kmd:** :art: fix `KmdClient` API incorrectly using optional args ([29374e1](https://github.com/CareBoo/unity-algorand-sdk/commit/29374e10748775c1b3416b6918a0ca8ba581ba6e)), closes [#36](https://github.com/CareBoo/unity-algorand-sdk/issues/36)
+- **kmd:** :bug: fix `GenerateKeyRequest` to use `wallet_handle_token` not password ([19c3215](https://github.com/CareBoo/unity-algorand-sdk/commit/19c321578986a83807e080eb4f8bbc66aa139490))
+- **kmd:** :bug: fix `ImportKeyRequest` to use wallet_handle_token not password ([4a60a6c](https://github.com/CareBoo/unity-algorand-sdk/commit/4a60a6cf242a148bc00cf4db885e1cade00050ed))
+- **kmd:** :bug: fix `KmdClient.SignTransaction` returning a signed transaction message ([6df57ec](https://github.com/CareBoo/unity-algorand-sdk/commit/6df57ece5c3da0ae2f9319680b0c879281bd1de6))
+- **kmd:** :bug: fix `WalletHandle` not added to formatter cache ([be0495d](https://github.com/CareBoo/unity-algorand-sdk/commit/be0495d641426a54d59c87a430906b38047b01ba))
+- **kmd:** :bug: fix multisig ([78559d0](https://github.com/CareBoo/unity-algorand-sdk/commit/78559d0c62326a8a7b6d7d0d45c39813428830f5))
+- **serialization:** :bug: fix `Block` not having a formatter ([d840dfe](https://github.com/CareBoo/unity-algorand-sdk/commit/d840dfef2aeaefd9e531ca10f19ab62fb41ddeec))
+- **serialization:** :bug: fix `BlockResponse` Serialization ([6925142](https://github.com/CareBoo/unity-algorand-sdk/commit/69251420e5b3eb2c1c8e32c07ebe1bd38c0433ef))
+- **serialization:** :bug: fix `JsonWriter` not writing to `NativeText` ([9a21502](https://github.com/CareBoo/unity-algorand-sdk/commit/9a215021943f26e44aa89f867c881ab6a5bf4e79))
+- **serialization:** :bug: fix `SignedTransaction` serialization ([2f7bc6b](https://github.com/CareBoo/unity-algorand-sdk/commit/2f7bc6b566d912efdef57a7fb6c8e8cfb1450cbd))
+- **serialization:** :bug: fix `TransactionId` serialization ([f4fcb74](https://github.com/CareBoo/unity-algorand-sdk/commit/f4fcb7406bdd74d1ec3b36bca930afc5772e622b))
+- **serialization:** :bug: fix discrepancy between `TransactionId` and `TransactinIdResponse` ([4bef93f](https://github.com/CareBoo/unity-algorand-sdk/commit/4bef93f912c2026852e9d523ade6ca7817c75950))
+- **serialization:** :bug: fix issue where fixed strings were incorrectly being added to the queryparams ([338790b](https://github.com/CareBoo/unity-algorand-sdk/commit/338790b5a315297ae670b5e38a232661751a13f2))
+- **serialization:** :bug: fix missing `AlgoApiObject` on all Transaction Params ([d8f5b27](https://github.com/CareBoo/unity-algorand-sdk/commit/d8f5b27040cdbd30700bffd0cda21f8e48ba5dd2))
+- **transaction:** :bug: fix `OnCompletion` having incorrect byte values ([9786105](https://github.com/CareBoo/unity-algorand-sdk/commit/9786105f1cfe089c7329d3c157d9df91e601b69c))
+- **transaction:** :bug: fix incorrect constructor in `Transaction.ApplicationCall` ([521fb98](https://github.com/CareBoo/unity-algorand-sdk/commit/521fb98be04ca801296a17b4091e4b64caa48d05))
+- **transaction:** remove unused assetCloseTo param in `AssetClawback` ([ce4d004](https://github.com/CareBoo/unity-algorand-sdk/commit/ce4d004a09f32530870a28d1652bc3747fa3e928))
+
+### Code Refactoring
+
+- :fire: remove `NativeSliceExtensions` ([325bfa9](https://github.com/CareBoo/unity-algorand-sdk/commit/325bfa9c03ca342bc939f7862c6beebe1796e678))
+- :fire: remove some verify methods in the transaction ([2432bdd](https://github.com/CareBoo/unity-algorand-sdk/commit/2432bdd1ec1a4a105bea297b413a80921a9d70ee))
+- :fire: remove unnecessary `SendTransactionRaw` ([552dac8](https://github.com/CareBoo/unity-algorand-sdk/commit/552dac85bf6b4bff29d3a05c98b9a0ecc66e230c))
+- :recycle: convert all `SignedTransaction<>` to a single `SignedTransaction` ([4909d60](https://github.com/CareBoo/unity-algorand-sdk/commit/4909d6056a2291f9aa21a757ed62a70f3568ed61))
+- :recycle: rename `RawSignedTransaction` -> `SignedTransaction` ([787b160](https://github.com/CareBoo/unity-algorand-sdk/commit/787b160468d159bd0cac67abc74e7ed9e81ae8ed))
+- :recycle: rename `RawTransaction` -> `Transaction` ([b3c4129](https://github.com/CareBoo/unity-algorand-sdk/commit/b3c412904be573b2bcff9cbc50a0616595ce2dea))
+- :recycle: rename AlgoApiKeyAttribute -> AlgoApiFieldAttribute ([607dab2](https://github.com/CareBoo/unity-algorand-sdk/commit/607dab20f38e791239e7aaf240c9752ed6b6df94))
+- **algod:** :recycle: rename `Block` -> `BlockResponse` ([de1999c](https://github.com/CareBoo/unity-algorand-sdk/commit/de1999c2d9860d7394ce692b33f5decfc9522756))
+- **algod:** :recycle: replace `AccountParticipation` with `Transaction.KeyRegistration.Params` ([b7e9ba7](https://github.com/CareBoo/unity-algorand-sdk/commit/b7e9ba73da80e1ecd1bc6c5ea9b0440111b49ed1))
+- **kmd:** :recycle: replace `Request` with explicit method params ([1b63b9b](https://github.com/CareBoo/unity-algorand-sdk/commit/1b63b9be42288ccb4b57d02c6c945a567e8a9eb7))
+- remove .NET 4.8 requirement ([077ea1e](https://github.com/CareBoo/unity-algorand-sdk/commit/077ea1e62db9ee057a4d782f7750ffe4af9e9cbd)), closes [#19](https://github.com/CareBoo/unity-algorand-sdk/issues/19) [#9](https://github.com/CareBoo/unity-algorand-sdk/issues/9)
+
+### Features
+
+- :construction_worker: Add npmjs support ([42c57c3](https://github.com/CareBoo/unity-algorand-sdk/commit/42c57c389081fd2b9c25b797245f899d989f9a95))
+- :heavy_plus_sign: Add libsodium ios, android, and windows ([066a8ad](https://github.com/CareBoo/unity-algorand-sdk/commit/066a8ad97732d3358ed9de8282c298015c95ccf6))
+- :sparkles: Add Account.Generate ([8cfea18](https://github.com/CareBoo/unity-algorand-sdk/commit/8cfea181e464adff165db56a94ad3eb83290f571))
+- :sparkles: Add Address struct ([9c63147](https://github.com/CareBoo/unity-algorand-sdk/commit/9c6314716058530bdd79984f7ea3e016b2283928))
+- :sparkles: Add basic signed transaction support ([64bfae2](https://github.com/CareBoo/unity-algorand-sdk/commit/64bfae28348d3aff964e2de8f88517ce713827e3))
+- :sparkles: Add basic transaction support for message pack serialization and deserialization ([13dc164](https://github.com/CareBoo/unity-algorand-sdk/commit/13dc16404fdc433c75108b181d98f72d3e9d62ab))
+- :sparkles: Add checksums ([1427b4c](https://github.com/CareBoo/unity-algorand-sdk/commit/1427b4c19d3379f3d165db1c72c468a55b1ca35b))
+- :sparkles: add FixedBytesFormatter ([e686c0d](https://github.com/CareBoo/unity-algorand-sdk/commit/e686c0dacab26cf31704defb3e8fdf062f5f4d47))
+- :sparkles: Add IEquatable, GetHashCode for RawTransaction ([fea1031](https://github.com/CareBoo/unity-algorand-sdk/commit/fea1031ff5e2f5fb69a16e1257c99c2cbe04f12d))
+- :sparkles: add LogicSig implementation ([bfcea16](https://github.com/CareBoo/unity-algorand-sdk/commit/bfcea16c6c07f3e01b68f36dc52486405ee9fceb))
+- :sparkles: Add Mnemonic.FromString and Mnemonic.ToString ([5f2e0ef](https://github.com/CareBoo/unity-algorand-sdk/commit/5f2e0ef99bf17599795d9fbf74f891a4cb671db4))
+- :sparkles: add readOnly support ([4f94ee4](https://github.com/CareBoo/unity-algorand-sdk/commit/4f94ee487d99435bf794fa390c2828679c28c486))
+- :sparkles: Add Sha512 interop ([72412b8](https://github.com/CareBoo/unity-algorand-sdk/commit/72412b88e1cf1e0f9199b2bccbe139bfcdfd0850))
+- :sparkles: Add start of Native Integration with Libsodium ([04dadfb](https://github.com/CareBoo/unity-algorand-sdk/commit/04dadfbbe27cee981f3338d59578315bb93c940c))
+- :sparkles: Added Transaction Header, Payment ([f4f5004](https://github.com/CareBoo/unity-algorand-sdk/commit/f4f5004193dac2a5b39b9861de345922bea69479))
+- :sparkles: implement asset configuration transaction ([15201f2](https://github.com/CareBoo/unity-algorand-sdk/commit/15201f272896f68729c6fdddcfdb3de6ab685c3e)), closes [#27](https://github.com/CareBoo/unity-algorand-sdk/issues/27)
+- :sparkles: implement AssetFreezeTransaction ([aeb6bf7](https://github.com/CareBoo/unity-algorand-sdk/commit/aeb6bf7b587185cc5cf083d800a66d71940faeba)), closes [#26](https://github.com/CareBoo/unity-algorand-sdk/issues/26)
+- :sparkles: implement AssetTransfer Transaction ([2d74093](https://github.com/CareBoo/unity-algorand-sdk/commit/2d740930d91df326725d9ac4a6766945f8f17135)), closes [#23](https://github.com/CareBoo/unity-algorand-sdk/issues/23)
+- :sparkles: update AlgoApiFormatterLookup ([509f021](https://github.com/CareBoo/unity-algorand-sdk/commit/509f02187fe81bca24e68db8ebdaf1a203c6d3da))
+- Add Mnemonic and Key datastructs ([0338af0](https://github.com/CareBoo/unity-algorand-sdk/commit/0338af06b891e1abea5ecff2fb7cda4e0d276489))
+- Add signed transaction support for payment transactions ([4cb4b4c](https://github.com/CareBoo/unity-algorand-sdk/commit/4cb4b4cd0ec4c79f98b27aa787d96548ba007d75))
+- **algod:** add support for sending a group of transactions ([c2337e0](https://github.com/CareBoo/unity-algorand-sdk/commit/c2337e0a9c0f45cb31ffa08ae7cfe159651eaded))
+- **algod:** implement Algod Client ([ba2920e](https://github.com/CareBoo/unity-algorand-sdk/commit/ba2920e9ca39656cc395650e90416a6ae2b5fee3)), closes [#10](https://github.com/CareBoo/unity-algorand-sdk/issues/10) [#16](https://github.com/CareBoo/unity-algorand-sdk/issues/16) [#18](https://github.com/CareBoo/unity-algorand-sdk/issues/18)
+- **indexer:** :recycle: rename `ApplicationStateSchema` -> `StateSchema` ([c2c1752](https://github.com/CareBoo/unity-algorand-sdk/commit/c2c17527209d18f05646173d4ad6f5a9931584bc))
+- **indexer:** :sparkles: add `IIndexerClient` ([c383659](https://github.com/CareBoo/unity-algorand-sdk/commit/c383659059b43efe5d2f95c113f0285147e1b199))
+- **indexer:** :sparkles: implement `AccountQuery` ([3bc4c45](https://github.com/CareBoo/unity-algorand-sdk/commit/3bc4c45221247b7199e8a3777cf7370fee6ca996))
+- **indexer:** :sparkles: implement `AccountResponse` ([df7875c](https://github.com/CareBoo/unity-algorand-sdk/commit/df7875c2194ae125c1fd98da95d7ae51a3659383))
+- **indexer:** :sparkles: implement `AccountsQuery` ([eb4f138](https://github.com/CareBoo/unity-algorand-sdk/commit/eb4f1383fe3ab49930ee23f7f4872c4f5ec98d89))
+- **indexer:** :sparkles: implement `AccountsResponse` ([15b95a0](https://github.com/CareBoo/unity-algorand-sdk/commit/15b95a0d5a934c091c710f9f85da6d9f7892f269))
+- **indexer:** :sparkles: implement `AddressRole` ([819fee1](https://github.com/CareBoo/unity-algorand-sdk/commit/819fee17d8cae4a9719c3ec5215a1163eac0e8b6))
+- **indexer:** :sparkles: implement `Application` ([6efc045](https://github.com/CareBoo/unity-algorand-sdk/commit/6efc045b7290327aea91c7d13e7552a1b2a66de3))
+- **indexer:** :sparkles: implement `ApplicationLocalState` ([b9f5e19](https://github.com/CareBoo/unity-algorand-sdk/commit/b9f5e19c483316ef48234f41453e29b753d04993))
+- **indexer:** :sparkles: implement `ApplicationQuery` ([90529fe](https://github.com/CareBoo/unity-algorand-sdk/commit/90529feb9962a64e31ff13ace2926c4009cfb906))
+- **indexer:** :sparkles: implement `ApplicationResponse` ([2968a38](https://github.com/CareBoo/unity-algorand-sdk/commit/2968a3886f1be540e660c3b0b5a9aad389b6f1c0))
+- **indexer:** :sparkles: implement `ApplicationsQuery` ([1b2a010](https://github.com/CareBoo/unity-algorand-sdk/commit/1b2a0100f02c8b51c53be54bcafe069fe92e5658))
+- **indexer:** :sparkles: implement `ApplicationsResponse` ([f3120b3](https://github.com/CareBoo/unity-algorand-sdk/commit/f3120b39e60549a5d0b23a0730cc8433fd65f297))
+- **indexer:** :sparkles: implement `Asset` ([3e2b9e6](https://github.com/CareBoo/unity-algorand-sdk/commit/3e2b9e6d602cf26ed7535927ff30f9d777913fef))
+- **indexer:** :sparkles: implement `AssetHolding` ([b7e6714](https://github.com/CareBoo/unity-algorand-sdk/commit/b7e67142a06c504e5f2a97974550cc810bbdb9ba))
+- **indexer:** :sparkles: implement `AssetParams` ([3e25148](https://github.com/CareBoo/unity-algorand-sdk/commit/3e25148ef21ade54167f71d1fd8c02fcbd4f476a))
+- **indexer:** :sparkles: implement `AssetQuery` ([2c8f30d](https://github.com/CareBoo/unity-algorand-sdk/commit/2c8f30d79e0847101b898b983891addf595dd37c))
+- **indexer:** :sparkles: implement `AssetResponse` ([f44da47](https://github.com/CareBoo/unity-algorand-sdk/commit/f44da4723ef5dbcd93049f1cdb4ec759ff2ca530))
+- **indexer:** :sparkles: implement `AssetsResponse` ([abf6ccd](https://github.com/CareBoo/unity-algorand-sdk/commit/abf6ccd0ba15fd30503fe5edb875ac8e66949e49))
+- **indexer:** :sparkles: implement `BalancesQuery` ([37c652e](https://github.com/CareBoo/unity-algorand-sdk/commit/37c652e458fde70485ec1d9f75a6f044e3459848))
+- **indexer:** :sparkles: implement `BalancesResponse` ([bef374a](https://github.com/CareBoo/unity-algorand-sdk/commit/bef374aa161f29885984f12f117d51586af36f98))
+- **indexer:** :sparkles: implement `Block` ([8168949](https://github.com/CareBoo/unity-algorand-sdk/commit/8168949039df1448008280485699282e5a3ae142))
+- **indexer:** :sparkles: implement `BlockRewards` ([43a2e0d](https://github.com/CareBoo/unity-algorand-sdk/commit/43a2e0de5f124cf73bda585efafacef4cb75fdf3))
+- **indexer:** :sparkles: implement `BlockUpgradeStatus` ([34ee633](https://github.com/CareBoo/unity-algorand-sdk/commit/34ee633991fff8fd67c219d1bc07dd4f6e064a28))
+- **indexer:** :sparkles: implement `BlockUpgradeVote` ([46bfbdf](https://github.com/CareBoo/unity-algorand-sdk/commit/46bfbdfb01f23b30804027c4e38d4f64960353a7))
+- **indexer:** :sparkles: implement `ErrorResponse` msgpack fields ([7bb31e4](https://github.com/CareBoo/unity-algorand-sdk/commit/7bb31e43d0cae3c0ff28e21d579ef6a3d18012e5))
+- **indexer:** :sparkles: implement `EvalDelta` msgpack fields ([e7ce847](https://github.com/CareBoo/unity-algorand-sdk/commit/e7ce847312a539ff9ef5ba8d24b2373270825de5))
+- **indexer:** :sparkles: implement `EvalDeltaKeyValue` msgpack fields ([f564579](https://github.com/CareBoo/unity-algorand-sdk/commit/f564579c8b488b94926d6670b1c50e82525f7ff3))
+- **indexer:** :sparkles: implement `HealthCheck` ([57e38ee](https://github.com/CareBoo/unity-algorand-sdk/commit/57e38ee9f0a4a56c50752dab0305bd0becbb775e))
+- **indexer:** :sparkles: implement `IndexerClient.GetAccount` ([e088877](https://github.com/CareBoo/unity-algorand-sdk/commit/e08887724a5a393dfcf88a6fe04e8b98e780a264))
+- **indexer:** :sparkles: implement `IndexerClient.GetAccounts` ([1fa9f5b](https://github.com/CareBoo/unity-algorand-sdk/commit/1fa9f5b906f9ae31289043faadacc510affa582a))
+- **indexer:** :sparkles: implement `IndexerClient.GetHealth` ([ee98909](https://github.com/CareBoo/unity-algorand-sdk/commit/ee989091c0a1dc74e491b337ed2cb486aee66b3b))
+- **indexer:** :sparkles: implement `IndexerClient` ([b39c115](https://github.com/CareBoo/unity-algorand-sdk/commit/b39c1157689abcdbd1e19ad14363bd6d63d454a7))
+- **indexer:** :sparkles: implement `LogicSig` json fields ([a547772](https://github.com/CareBoo/unity-algorand-sdk/commit/a5477728821094296cf2b1053223f49b8a34fd8f))
+- **indexer:** :sparkles: implement `MiniAssetHolding` ([6df0bd0](https://github.com/CareBoo/unity-algorand-sdk/commit/6df0bd0048ea48ae70aa63d19e851910f4d8c4b9))
+- **indexer:** :sparkles: implement `MultiSig.SubSignature` ([d995b21](https://github.com/CareBoo/unity-algorand-sdk/commit/d995b211ad9d1ded2159ac8700864513f375456b))
+- **indexer:** :sparkles: implement `MultiSig` ([2b33c02](https://github.com/CareBoo/unity-algorand-sdk/commit/2b33c0263329b4d675b5ef5dc2e72995ea30e3d0))
+- **indexer:** :sparkles: implement `OnCompletion` ([b7181f3](https://github.com/CareBoo/unity-algorand-sdk/commit/b7181f318265347807e74b8b34a84a084ed4c586))
+- **indexer:** :sparkles: implement `TealKeyValue` msgPack fields ([bfcb1ad](https://github.com/CareBoo/unity-algorand-sdk/commit/bfcb1ade5bb620630a80f50dc8b6b0d147b4435a))
+- **indexer:** :sparkles: implement `Transaction.ApplicationCall` ([4e800be](https://github.com/CareBoo/unity-algorand-sdk/commit/4e800be0301f6df03b67ef3d98c686becb33b296))
+- **indexer:** :sparkles: implement `Transaction.ApplicationCall` model fields ([e05a1b3](https://github.com/CareBoo/unity-algorand-sdk/commit/e05a1b36fe5fce154862308569c212b52c5a4c0f))
+- **indexer:** :sparkles: implement `Transaction.AssetConfiguration` model fields ([b021ac9](https://github.com/CareBoo/unity-algorand-sdk/commit/b021ac9f7fe4800900e0bb73efc5bc3be7228c93))
+- **indexer:** :sparkles: implement `Transaction.AssetFreeze` model fields ([655aee9](https://github.com/CareBoo/unity-algorand-sdk/commit/655aee9fee97f43e4a8c669846924c86dbbe071c))
+- **indexer:** :sparkles: implement `Transaction.AssetTransfer` model fields ([5322ad7](https://github.com/CareBoo/unity-algorand-sdk/commit/5322ad707f3d4f99dd182d0c6834209145e29e4d))
+- **indexer:** :sparkles: implement `Transaction.KeyRegistration` ([da15081](https://github.com/CareBoo/unity-algorand-sdk/commit/da1508124e3564de206990d0dcb8c16a77f44742))
+- **indexer:** :sparkles: implement `Transaction.KeyRegistration` model fields ([ab75259](https://github.com/CareBoo/unity-algorand-sdk/commit/ab75259643194eff90a0eeed7bb0c2bba98d1953))
+- **indexer:** :sparkles: implement `TransactionResponse` ([0cdcdde](https://github.com/CareBoo/unity-algorand-sdk/commit/0cdcdde80cc9135e2f5326715f294713b05a1a20))
+- **indexer:** :sparkles: implement `TransactionsQuery` ([a9e353a](https://github.com/CareBoo/unity-algorand-sdk/commit/a9e353adc44117479f7c5bb47d456880f0a5f164))
+- **indexer:** :sparkles: implement AssetsQuery ([ebfb08c](https://github.com/CareBoo/unity-algorand-sdk/commit/ebfb08c00b4a95e01a0fe0a7bb2541d3bb612295))
+- **indexer:** :sparkles: implement TransactionsResponse ([27345f5](https://github.com/CareBoo/unity-algorand-sdk/commit/27345f5a579485d040f3f7c7c166e0b32a7d6d39))
+- **json:** :sparkles: implement `JsonReader.Skip` ([cba58d6](https://github.com/CareBoo/unity-algorand-sdk/commit/cba58d6ae81c5225d1c7379d7ebf5564c2a536e5))
+- **json:** :sparkles: implement `JsonWriter.WriteRaw` ([f780932](https://github.com/CareBoo/unity-algorand-sdk/commit/f780932803e25f3641e55e636be00b6b371430d4))
+- **json:** :sparkles: implement `ReadRaw` ([c2ec519](https://github.com/CareBoo/unity-algorand-sdk/commit/c2ec51903457a5872794b003d0b92e3e2fff8d90))
+- **kmd:** :sparkles: add `Error` to `ErrorMessage` which is used for kmd ([b64aac6](https://github.com/CareBoo/unity-algorand-sdk/commit/b64aac6d959cf67a02827268dfe3ac56ec11b666))
+- **kmd:** :sparkles: implement `APIV1DELETEKeyResponse` ([d273c12](https://github.com/CareBoo/unity-algorand-sdk/commit/d273c1280988fcbd4b7fc6a0aa43255464fb1e5e))
+- **kmd:** :sparkles: implement `APIV1DELETEMultisigResponse` ([b323213](https://github.com/CareBoo/unity-algorand-sdk/commit/b323213bf13991365d8cfd9542aab37135421183))
+- **kmd:** :sparkles: implement `APIV1GETWalletsResponse` ([cd7180d](https://github.com/CareBoo/unity-algorand-sdk/commit/cd7180d0fa05bd749fecd6623e0ad2bd2a02a132))
+- **kmd:** :sparkles: implement `APIV1Wallet` ([4b74869](https://github.com/CareBoo/unity-algorand-sdk/commit/4b7486950aae352ff8d1119c88026d2a7ffe6a8a))
+- **kmd:** :sparkles: implement `APIV1WalletHandle` ([da73b67](https://github.com/CareBoo/unity-algorand-sdk/commit/da73b672661e6ef53168b8cf610d3eed9b8262f7))
+- **kmd:** :sparkles: implement `CreateWalletRequest` ([02cac0a](https://github.com/CareBoo/unity-algorand-sdk/commit/02cac0aabe7064a8c5a033d2eee44a198b6afeb6))
+- **kmd:** :sparkles: implement `CreateWalletRequest` api fields ([9f1b667](https://github.com/CareBoo/unity-algorand-sdk/commit/9f1b6672861aae64f636bd6ec346d4efdea38f1a))
+- **kmd:** :sparkles: implement `CreateWalletResponse` ([d0c3965](https://github.com/CareBoo/unity-algorand-sdk/commit/d0c396531c32ea1f277ae1d1883d08b718fdddc8))
+- **kmd:** :sparkles: implement `DeleteKeyRequest` ([9de69d0](https://github.com/CareBoo/unity-algorand-sdk/commit/9de69d0a677e28008fa73e5c56957921a29bf8cb))
+- **kmd:** :sparkles: implement `DeleteMultiSigRequest` ([4d0b859](https://github.com/CareBoo/unity-algorand-sdk/commit/4d0b859cea81428d39fc9e4aea29a28b3a4e9374))
+- **kmd:** :sparkles: implement `ExportKeyRequest` ([2dfed57](https://github.com/CareBoo/unity-algorand-sdk/commit/2dfed577a7e6b1bf1ef276a5e2ddff57a4532681))
+- **kmd:** :sparkles: implement `ExportKeyResponse.Equals` ([a5769c7](https://github.com/CareBoo/unity-algorand-sdk/commit/a5769c7ceb1e8f5f8e36fccb123653e1a1c6b9ae))
+- **kmd:** :sparkles: implement `ExportKeyResponse` ([f5dc29a](https://github.com/CareBoo/unity-algorand-sdk/commit/f5dc29a2f34a1244adb3e475ea21cff67416a8b2))
+- **kmd:** :sparkles: implement `ExportMasterKeyRequest` ([b668ac9](https://github.com/CareBoo/unity-algorand-sdk/commit/b668ac98790b2849194a4ce1bf63073bd2a93499))
+- **kmd:** :sparkles: implement `ExportMasterKeyResponse` ([eaf3066](https://github.com/CareBoo/unity-algorand-sdk/commit/eaf30661e5cd0a3201ca9f1d0bfd1b1cb2aaf7a5))
+- **kmd:** :sparkles: implement `ExportMultiSigRequest` ([eab6771](https://github.com/CareBoo/unity-algorand-sdk/commit/eab677148322ff5a012b919aeff67a8fc7b88fef))
+- **kmd:** :sparkles: implement `ExportMultiSigResponse` ([41677c2](https://github.com/CareBoo/unity-algorand-sdk/commit/41677c24c781017801e5f62846714a70fb7bfdfc))
+- **kmd:** :sparkles: implement `GenerateKeyResponse` ([82f0749](https://github.com/CareBoo/unity-algorand-sdk/commit/82f07495143755c2c13f9ee4a6bab708e67b537b))
+- **kmd:** :sparkles: implement `GenerateMasterKeyRequest` ([41f2b64](https://github.com/CareBoo/unity-algorand-sdk/commit/41f2b64f34fd6294af51b97c96c6bbf1d0fad144))
+- **kmd:** :sparkles: implement `ImportKeyRequest` ([09c8308](https://github.com/CareBoo/unity-algorand-sdk/commit/09c8308c0d00e58941a97ccb74af4b0142df002f))
+- **kmd:** :sparkles: implement `ImportKeyResponse` ([338e9e7](https://github.com/CareBoo/unity-algorand-sdk/commit/338e9e7536f8dd3752200be7b762dfaee079e39e))
+- **kmd:** :sparkles: implement `ImportMultiSigRequest` ([b8eb046](https://github.com/CareBoo/unity-algorand-sdk/commit/b8eb04619bbd9966452de5f48a76928400472fc8))
+- **kmd:** :sparkles: implement `ImportMultiSigResponse` ([6a92419](https://github.com/CareBoo/unity-algorand-sdk/commit/6a924199ebc5ee9892630d9bfa14691a7efe7bfb))
+- **kmd:** :sparkles: implement `InitWalletHandleTokenRequest` ([5c2bde4](https://github.com/CareBoo/unity-algorand-sdk/commit/5c2bde417793a0cc2c5ed74527841655affd8650))
+- **kmd:** :sparkles: implement `InitWalletHandleTokenResponse` ([4eacfe2](https://github.com/CareBoo/unity-algorand-sdk/commit/4eacfe2654cc83e1f36c7dc2434c39e0175dfa09))
+- **kmd:** :sparkles: implement `KmdClient` ([b37cef3](https://github.com/CareBoo/unity-algorand-sdk/commit/b37cef3c93d66110fe5b9dbca6723da3849ef68d)), closes [#13](https://github.com/CareBoo/unity-algorand-sdk/issues/13)
+- **kmd:** :sparkles: implement `ListKeysRequest` ([70ce0ff](https://github.com/CareBoo/unity-algorand-sdk/commit/70ce0ff4da135cad5e66b2c7d49acb4ebe62b78b))
+- **kmd:** :sparkles: implement `ListKeysResponse` ([6fb2a6d](https://github.com/CareBoo/unity-algorand-sdk/commit/6fb2a6d892e7b7a43cc4418fa507dd8c1ade9183))
+- **kmd:** :sparkles: implement `ListMultiSigRequest` ([3da753e](https://github.com/CareBoo/unity-algorand-sdk/commit/3da753ea7606ce7be3e1292cde6a73311bae2009))
+- **kmd:** :sparkles: implement `ListMultiSigResponse` ([d0a6782](https://github.com/CareBoo/unity-algorand-sdk/commit/d0a678261616ba5fffefac387da5bead2e953ded))
+- **kmd:** :sparkles: implement `ListWalletsRequest` ([91de444](https://github.com/CareBoo/unity-algorand-sdk/commit/91de44473618235d4203bcc25c2b3a51fbd2563f))
+- **kmd:** :sparkles: implement `ReleaseWalletHandleTokenRequest` ([c6a836d](https://github.com/CareBoo/unity-algorand-sdk/commit/c6a836dee7d85da7f3aa211fb2f3312f989d95b9))
+- **kmd:** :sparkles: implement `ReleaseWalletHandleTokenResponse` ([3f2d081](https://github.com/CareBoo/unity-algorand-sdk/commit/3f2d08140e7c34b3377a361c85cc1bb93fbab1a0))
+- **kmd:** :sparkles: implement `RenameWalletRequest` ([ccf7d3e](https://github.com/CareBoo/unity-algorand-sdk/commit/ccf7d3e824ad523ab92ac31bdca551aee39f1089))
+- **kmd:** :sparkles: implement `RenameWalletResponse` ([1d35264](https://github.com/CareBoo/unity-algorand-sdk/commit/1d352644c714c664024ffcf7c1de2b2e7a14a272))
+- **kmd:** :sparkles: implement `RenewWalletHandleTokenRequest` ([76269cc](https://github.com/CareBoo/unity-algorand-sdk/commit/76269ccb2474b826926fe5102cd8425aed814aab))
+- **kmd:** :sparkles: implement `RenewWalletHandleTokenResponse` ([d4f6a9a](https://github.com/CareBoo/unity-algorand-sdk/commit/d4f6a9a10e8cca5a9c89fc27cd55c3760c43dad8))
+- **kmd:** :sparkles: implement `SignMultiSigRequest` ([d535391](https://github.com/CareBoo/unity-algorand-sdk/commit/d535391d4cfa397ba6d56cf766966299a54beb59))
+- **kmd:** :sparkles: implement `SignMultiSigResponse` ([0b16ac4](https://github.com/CareBoo/unity-algorand-sdk/commit/0b16ac485c27b9caf6efb58604cec90f6f4c2b27))
+- **kmd:** :sparkles: implement `SignProgramMultiSigRequest` ([9460af9](https://github.com/CareBoo/unity-algorand-sdk/commit/9460af994e14ff3e3aae2317d1fba2fbece38388))
+- **kmd:** :sparkles: implement `SignProgramMultiSigResponse` ([ee5ea0e](https://github.com/CareBoo/unity-algorand-sdk/commit/ee5ea0e8bf2f999aa2f340f31fe9d9f4d980b0a8))
+- **kmd:** :sparkles: implement `SignProgramRequest` ([c8826fa](https://github.com/CareBoo/unity-algorand-sdk/commit/c8826fa39de84df78d2dc8e241145ec4f4811429))
+- **kmd:** :sparkles: implement `SignTransactionRequest` ([38ec667](https://github.com/CareBoo/unity-algorand-sdk/commit/38ec667c31f3b3b2e8309196b3f57f27a89e280d))
+- **kmd:** :sparkles: implement `SignTransactionResponse` ([e88c293](https://github.com/CareBoo/unity-algorand-sdk/commit/e88c2933f2c89a86669edbc3560ad20f8bd01a81))
+- **kmd:** :sparkles: implement `VersionsRequest` ([90f9cb6](https://github.com/CareBoo/unity-algorand-sdk/commit/90f9cb65238272c5b7ef9c468f57201bd95aad27))
+- **kmd:** :sparkles: implement `VersionsResponse` ([15ab570](https://github.com/CareBoo/unity-algorand-sdk/commit/15ab570f68f1a8170cac5678dd5f5cb400b28097))
+- **kmd:** :sparkles: implement `WalletInfoResponse` ([cb073e9](https://github.com/CareBoo/unity-algorand-sdk/commit/cb073e99625cde9075a312c56ed7cc5e8a288c4c))
+- **kmd:** implement `SignProgramResponse` ([f529e2a](https://github.com/CareBoo/unity-algorand-sdk/commit/f529e2a85538ff6e3d13ebe37a23d44cce4aa4b7))
+- **msgpack:** :sparkles: implement `MessagePackReader.ReadRaw` ([0f6e28a](https://github.com/CareBoo/unity-algorand-sdk/commit/0f6e28afa94261b8af955e1c9fe9f6bdd62f2e64))
+- **msgpack:** :sparkles: implement `MessagePackWriter.WriteRaw` ([703544c](https://github.com/CareBoo/unity-algorand-sdk/commit/703544c00fbcb5cd5ce0def75e5d921e6a7a922c))
+- **networking:** :sparkles: add `ApiResponse` API to `ApiResponse<>` ([b9728f9](https://github.com/CareBoo/unity-algorand-sdk/commit/b9728f9d43d1e55b8732c8132bd6b6015c395a84))
+- **serialization:** :sparkles: add formatters for `PrivateKey`, `PublicKey`, and `Signature` ([11d345b](https://github.com/CareBoo/unity-algorand-sdk/commit/11d345b839abc76cc1fe376cfed833a2d2041be6))
+- **serialization:** :sparkles: add support for deserializing `byte[]` ([6764157](https://github.com/CareBoo/unity-algorand-sdk/commit/676415734c8e1d4884927399c292526ec01e2361))
+- **serialization:** :sparkles: add support for generically serializing byte enums to strings ([bae5d83](https://github.com/CareBoo/unity-algorand-sdk/commit/bae5d830cc420d3a6033e34baa988512cdb96bff))
+- **serialization:** :sparkles: finish implementing `MessagePackReader.Integers` and `MessagePackWriter.Integers` ([d669359](https://github.com/CareBoo/unity-algorand-sdk/commit/d66935919094ef99208c425f27edf3c0223e0e2d))
+- **serialization:** :sparkles: finish implementing serializer/deserializer methods in `EnumFormatter` ([414991f](https://github.com/CareBoo/unity-algorand-sdk/commit/414991fd35c1c2dac8988f0aa12822e9d01af540))
+- **serialization:** :sparkles: implement `AlgoApiObject` ([9ef3335](https://github.com/CareBoo/unity-algorand-sdk/commit/9ef333546494d141ca66b5ebcf25ec18651c443e))
+- **serialization:** :sparkles: implement `Timestamp` ([e520962](https://github.com/CareBoo/unity-algorand-sdk/commit/e5209622de596d71a88ab3ef9e4f8617d646d548))
+- **serialization:** :tada: update formatter cache ([ae346d6](https://github.com/CareBoo/unity-algorand-sdk/commit/ae346d6b9408fd66815de9d2a6f461a453ef890e))
+- **transaction:** :sparkles: add `GetSignature` and `ToRaw` extensions to `ITransaction` ([426dea6](https://github.com/CareBoo/unity-algorand-sdk/commit/426dea611a06178a0e11059f359034c10a98287d))
+- **transaction:** :sparkles: add `RegisterAccountOnline` and `RegisterAccountOffline` APIs ([d52e953](https://github.com/CareBoo/unity-algorand-sdk/commit/d52e95341acb07ad4412634f7c0002035668e441))
+- **transaction:** :sparkles: add `Transaction.AppCreate` and `Transaction.AppConfigure` APIs ([0dd2e75](https://github.com/CareBoo/unity-algorand-sdk/commit/0dd2e751dfadb31ab1004e01e4cce3e0e57f943d))
+- **transaction:** :sparkles: add `Transaction.AssetCreate` `Transaction.AssetConfigure` and `Transaction.AssetDelete` API ([4192aba](https://github.com/CareBoo/unity-algorand-sdk/commit/4192aba6962cb06a41a461e0fdf39a5d927c63ff))
+- **transaction:** :sparkles: add `Transaction.AssetFreeze` API ([d8b5721](https://github.com/CareBoo/unity-algorand-sdk/commit/d8b5721a291a732b3ee94560e808e62d3eb32798))
+- **transaction:** :sparkles: add `Transaction.Payment` API ([241ec4c](https://github.com/CareBoo/unity-algorand-sdk/commit/241ec4c33df16bb8fc4018ef95766ef2748b1214))
+- **transaction:** :sparkles: implement address from application id ([a7df476](https://github.com/CareBoo/unity-algorand-sdk/commit/a7df4765b61ff1c0f89248686fa6f5148e90199b))
+- **transaction:** :sparkles: implement AssetClawback and AssetAccept ([ccb2dc6](https://github.com/CareBoo/unity-algorand-sdk/commit/ccb2dc66fcbc66c738168a34b95d55aba4039945)), closes [#24](https://github.com/CareBoo/unity-algorand-sdk/issues/24) [#25](https://github.com/CareBoo/unity-algorand-sdk/issues/25)
+- **transaction:** :sparkles: implement atomic transfers ([c97fdc1](https://github.com/CareBoo/unity-algorand-sdk/commit/c97fdc1d1fd60c684e6f4256ef53f32b55509370)), closes [#45](https://github.com/CareBoo/unity-algorand-sdk/issues/45)
+- **transaction:** :sparkles: use `TransactionParams` in Transaction constructors ([c99bd3f](https://github.com/CareBoo/unity-algorand-sdk/commit/c99bd3f6dad2270bdcec2f5551ac0bb4f21cd556))
+- **unity:** make AlgoApiClient's Serializable ([a6ef8a4](https://github.com/CareBoo/unity-algorand-sdk/commit/a6ef8a45f08256576a38013229bf9e50114d36d8))
+
+### Reverts
+
+- **demo:** :fire: remove bossroom assets... too big to be a sample ([d768029](https://github.com/CareBoo/unity-algorand-sdk/commit/d76802948df36cc557744eaa889de43d2d253707))
+
+### BREAKING CHANGES
+
+- Removing `NativeSliceExtensions`
+- **algod:** `AccountParticipation` no longer exists
+- **transaction:** All transaction constructors have been changed to use `TransactionParams`
+- **indexer:** Removed token from IndexerClient constructor
+- **kmd:** changes `IKmdClient` API to use parameters instead of `Request` objs
+- **indexer:** indexer queries are now given as optional arguments
+- remove `Transaction.VerifySignature`, `SignedTransaction.Verify`
+- signed transactions are now represented by `SignedTransaction` (non-generic)
+- renamed `RawSignedTransaction` -> `SignedTransaction`
+- `RawTransaction` renamed to `Transaction`
+- AlgoApiKeyAttribute -> AlgoApiFieldAttribute
+- **algod:** `Block` renamed to `BlockResponse`
+- Replace Buffer with GetUnsafePtr
+- Algo Serializer API has completely changed...
+- Removes the `SendTransactionRaw` method from `AlgodClient`
+
+# [1.0.0-pre.7](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.6...v1.0.0-pre.7) (2021-10-29)
+
+### Bug Fixes
+
+- **transaction:** remove unused assetCloseTo param in `AssetClawback` ([f45dac1](https://github.com/CareBoo/unity-algorand-sdk/commit/f45dac1328af34e1eb437431e2bc60aa71ad53af))
+
+# [1.0.0-pre.6](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.5...v1.0.0-pre.6) (2021-10-28)
+
+### Bug Fixes
+
+- **indexer:** fix missing `Version` field in `HealthCheck` ([39c3444](https://github.com/CareBoo/unity-algorand-sdk/commit/39c3444ee0a6a628dbd80619804a12720223a2ef))
+
+### Features
+
+- **algod:** add support for sending a group of transactions ([a7a7695](https://github.com/CareBoo/unity-algorand-sdk/commit/a7a7695ce1e0196ca5bc3fe47e463b6a0c643f2f))
+
+# [1.0.0-pre.5](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.4...v1.0.0-pre.5) (2021-10-27)
+
+### Bug Fixes
+
+- **crypto:** fix libsodium not working on OSX ([1154450](https://github.com/CareBoo/unity-algorand-sdk/commit/1154450267b71762195f701694616a38d47fd529))
+
+# [1.0.0-pre.4](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.3...v1.0.0-pre.4) (2021-10-27)
+
+### Features
+
+- **unity:** make AlgoApiClient's Serializable ([4a3aa11](https://github.com/CareBoo/unity-algorand-sdk/commit/4a3aa11fe3ecdf46f00ef29829e1d965043ee3aa))
+
+# [1.0.0-pre.3](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.2...v1.0.0-pre.3) (2021-10-25)
+
+### Code Refactoring
+
+- :fire: remove `NativeSliceExtensions` ([c5c7715](https://github.com/CareBoo/unity-algorand-sdk/commit/c5c77158ab8bfa6585e95f3cb01594b80758f635))
+
+### BREAKING CHANGES
+
+- Removing `NativeSliceExtensions`
+
+# [1.0.0-pre.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.1...v1.0.0-pre.2) (2021-10-25)
+
+### Bug Fixes
+
+- fix empty dirs finding their way into the project ([82afc9d](https://github.com/CareBoo/unity-algorand-sdk/commit/82afc9d14a0374b39e63dd7581b950324e12bf39))
+
+# 1.0.0-pre.1 (2021-10-24)
+
+### Bug Fixes
+
+- :bug: fix `RawTransaction.Equals` ([f6bd889](https://github.com/CareBoo/unity-algorand-sdk/commit/f6bd889c737f970c835d3273f7c28b002794ed3f))
+- :bug: fix compile errs ([7a03ed9](https://github.com/CareBoo/unity-algorand-sdk/commit/7a03ed99a5cd7d3657df89c58a989ee0e33ced66))
+- :bug: fix crash on ArrayComparer.Equals ([8ca1b06](https://github.com/CareBoo/unity-algorand-sdk/commit/8ca1b06daedcbdf97650f4b79bd72a134238bec0))
+- :bug: fix issues with codegen and AOT compilation ([d2f9bdc](https://github.com/CareBoo/unity-algorand-sdk/commit/d2f9bdc8f8c77b8afb690162c3fafda81b5f8c48))
+- :bug: fix keyworded enum types formatting as numbers ([d686c13](https://github.com/CareBoo/unity-algorand-sdk/commit/d686c134dff5e0d657f974600c5948b86f506f0f))
+- :bug: Fix npm release ([9e68078](https://github.com/CareBoo/unity-algorand-sdk/commit/9e68078b5f7f75a7670e7cf03dc1ee5137709bf1))
+- :bug: Fix repository ([e765589](https://github.com/CareBoo/unity-algorand-sdk/commit/e765589b92849e23b7d080f335067cba1c1a8b62))
+- :bug: fix signatures ([2fb4614](https://github.com/CareBoo/unity-algorand-sdk/commit/2fb461459ac58266c1078bdb16607d65a25d8553))
+- :triangular_flag_on_post: Update package registry ([a0800bc](https://github.com/CareBoo/unity-algorand-sdk/commit/a0800bc57c6fde758182075a90e2fbd96ce67be8))
+- :white_check_mark: Fix CI tests on Github Actions can't find libsodium ([20c4ad5](https://github.com/CareBoo/unity-algorand-sdk/commit/20c4ad56edf57cef595c2f4078bba4e15d893602)), closes [#12](https://github.com/CareBoo/unity-algorand-sdk/issues/12)
+- **algod:** :bug: fix `AlgodClient.TealCompile` ([8f5a67a](https://github.com/CareBoo/unity-algorand-sdk/commit/8f5a67a694cd21496b6db7c1630324ddbfd13f1f)), closes [#20](https://github.com/CareBoo/unity-algorand-sdk/issues/20)
+- **algod:** :bug: fix `AssetParams` serialization ([cbf9a69](https://github.com/CareBoo/unity-algorand-sdk/commit/cbf9a6981c52c565eb3837186c38765e5b8bea27))
+- **algod:** :bug: fix pending transactions not returning messagepack ([dca09f8](https://github.com/CareBoo/unity-algorand-sdk/commit/dca09f8d6c2e1781097f3386355852b7179f01d9))
+- **algod:** :bug: fix vrfpubkey formatter lookup ([0bb0014](https://github.com/CareBoo/unity-algorand-sdk/commit/0bb001407b81abc288d271cda3c6d6b9c19c49df))
+- **algod:** :bug: fix vrfpubkey formatting ([7d02443](https://github.com/CareBoo/unity-algorand-sdk/commit/7d024437ac9415449717ebf8a97017fcc10f9ee1))
+- **algod:** :bug: replace `VrfPubKey` with `FixedString128Bytes` ([94b02b0](https://github.com/CareBoo/unity-algorand-sdk/commit/94b02b06f25d4b97e264f085cc96afbfdfb68862)), closes [#42](https://github.com/CareBoo/unity-algorand-sdk/issues/42)
+- **indexer:** :bug: add missing fields to `Account` model ([5732a1d](https://github.com/CareBoo/unity-algorand-sdk/commit/5732a1d7b6a57d300e8e8b4662696e180c0c2ecb))
+- **indexer:** :bug: add token back to indexer ([023cb05](https://github.com/CareBoo/unity-algorand-sdk/commit/023cb05f173242f2c3f234f8203fcf2c03ea5369))
+- **indexer:** :bug: fix `HealthCheck` missing serialization logic ([f5165c6](https://github.com/CareBoo/unity-algorand-sdk/commit/f5165c681387450a791f191a2ae88a060741a9de))
+- **indexer:** :bug: fix indexer requires token ([57f6114](https://github.com/CareBoo/unity-algorand-sdk/commit/57f61141f9c7763bb10a3a9deac07dcbc65ea6a9))
+- **indexer:** :bug: fix transaction formatters missing valid msgpack fields ([bf917ac](https://github.com/CareBoo/unity-algorand-sdk/commit/bf917ac30f964b9102c293d00a60d6f0072e75bd))
+- **indexer:** :fire: fix huge issue with indexer where query parameters were in body ([7bcca20](https://github.com/CareBoo/unity-algorand-sdk/commit/7bcca2022b8c1238cd35f225fccef80ada562143))
+- **indexer:** :sparkles: fix `TealValue` msgpack fieldnames ([2a6ef27](https://github.com/CareBoo/unity-algorand-sdk/commit/2a6ef27e4f465c73a3cb744eae12267929c06f07))
+- **json:** :bug: fix `PrivateKey` JSON deserialization err ([cb327e0](https://github.com/CareBoo/unity-algorand-sdk/commit/cb327e0f38ef61e43f5c5e38c3090ab02b83693d))
+- **json:** :bug: fix empty json objects missing begin object '{' char ([af9a2f1](https://github.com/CareBoo/unity-algorand-sdk/commit/af9a2f1cdc7b02a16e1ef052a1156ddee0d0a2a8))
+- **kmd:** :art: fix `KmdClient` API incorrectly using optional args ([a53998b](https://github.com/CareBoo/unity-algorand-sdk/commit/a53998b00aa103a47ad1fea014c5f6627f8a3d34)), closes [#36](https://github.com/CareBoo/unity-algorand-sdk/issues/36)
+- **kmd:** :bug: fix `GenerateKeyRequest` to use `wallet_handle_token` not password ([a86c25e](https://github.com/CareBoo/unity-algorand-sdk/commit/a86c25ea9b233dd755f234d64d36467415ce6ebb))
+- **kmd:** :bug: fix `ImportKeyRequest` to use wallet_handle_token not password ([f020a03](https://github.com/CareBoo/unity-algorand-sdk/commit/f020a03fb19c9cf89452066d6dbd3cf278eb9f7f))
+- **kmd:** :bug: fix `KmdClient.SignTransaction` returning a signed transaction message ([f0a354c](https://github.com/CareBoo/unity-algorand-sdk/commit/f0a354caeafd05ae7a984451582e8d53b82bbd6b))
+- **kmd:** :bug: fix `WalletHandle` not added to formatter cache ([4c30939](https://github.com/CareBoo/unity-algorand-sdk/commit/4c309395b3f7076aa4db1e6ebfb552d59fad57b0))
+- **kmd:** :bug: fix multisig ([fc7bcd6](https://github.com/CareBoo/unity-algorand-sdk/commit/fc7bcd6f647c399b3edebb52ccd65fccf715393e))
+- **serialization:** :bug: fix `Block` not having a formatter ([dec6176](https://github.com/CareBoo/unity-algorand-sdk/commit/dec61762ddfba5c7f43223175c8c63f2d0b3609e))
+- **serialization:** :bug: fix `BlockResponse` Serialization ([1252a16](https://github.com/CareBoo/unity-algorand-sdk/commit/1252a1634d6bb2fa00f78c1628ce7dbf33da6a56))
+- **serialization:** :bug: fix `JsonWriter` not writing to `NativeText` ([2b61659](https://github.com/CareBoo/unity-algorand-sdk/commit/2b61659ea6801947f7b31069ecade0d6cb5f1e09))
+- **serialization:** :bug: fix `SignedTransaction` serialization ([f4bde8d](https://github.com/CareBoo/unity-algorand-sdk/commit/f4bde8d4fd65e6146df35a6ce0890ed4417a235a))
+- **serialization:** :bug: fix `TransactionId` serialization ([b7e07ca](https://github.com/CareBoo/unity-algorand-sdk/commit/b7e07caf5e8b8b5b0327c15c618a75263726dc18))
+- **serialization:** :bug: fix discrepancy between `TransactionId` and `TransactinIdResponse` ([d0c0370](https://github.com/CareBoo/unity-algorand-sdk/commit/d0c0370c0578e6d2296d0667557148e711c67174))
+- **serialization:** :bug: fix issue where fixed strings were incorrectly being added to the queryparams ([a3e6fd9](https://github.com/CareBoo/unity-algorand-sdk/commit/a3e6fd9dbaf62d6e4bb05432568c0de36e3abb35))
+- **serialization:** :bug: fix missing `AlgoApiObject` on all Transaction Params ([a11015f](https://github.com/CareBoo/unity-algorand-sdk/commit/a11015ff3da75db5ab5d6f7c809a89f50fe1142b))
+- **transaction:** :bug: fix `OnCompletion` having incorrect byte values ([514a378](https://github.com/CareBoo/unity-algorand-sdk/commit/514a378dce9c0669002960f6ef76d453a54fe0f0))
+- **transaction:** :bug: fix incorrect constructor in `Transaction.ApplicationCall` ([98b5829](https://github.com/CareBoo/unity-algorand-sdk/commit/98b58295d7676d73a924a5d837b7f9b0dc8a62c9))
+
+### Code Refactoring
+
+- :fire: remove some verify methods in the transaction ([70a8308](https://github.com/CareBoo/unity-algorand-sdk/commit/70a830830d3778a23d32fd9985d5d424972dd99f))
+- :fire: remove unnecessary `SendTransactionRaw` ([09b3bdc](https://github.com/CareBoo/unity-algorand-sdk/commit/09b3bdc0dfbeb2b47603b3cfc92be0478120bd09))
+- :recycle: convert all `SignedTransaction<>` to a single `SignedTransaction` ([26fa65a](https://github.com/CareBoo/unity-algorand-sdk/commit/26fa65a53fa4cb2f4e8d81aa9ec2adc537d09b01))
+- :recycle: rename `RawSignedTransaction` -> `SignedTransaction` ([059c6a3](https://github.com/CareBoo/unity-algorand-sdk/commit/059c6a369bd3f5e6d2b65965927cffd8bce65a49))
+- :recycle: rename `RawTransaction` -> `Transaction` ([bade09e](https://github.com/CareBoo/unity-algorand-sdk/commit/bade09e7edc7df1d6dcbeb932f38fe7c199b21bb))
+- :recycle: rename AlgoApiKeyAttribute -> AlgoApiFieldAttribute ([1b37028](https://github.com/CareBoo/unity-algorand-sdk/commit/1b370289ba2ffe8457f35c998aed6efcfe01931c))
+- **algod:** :recycle: rename `Block` -> `BlockResponse` ([eca9fb6](https://github.com/CareBoo/unity-algorand-sdk/commit/eca9fb6c2be3a99272067d308a089148a1680427))
+- **algod:** :recycle: replace `AccountParticipation` with `Transaction.KeyRegistration.Params` ([3b624ee](https://github.com/CareBoo/unity-algorand-sdk/commit/3b624eec4974e28b0cc31b019d41f37dc60207ca))
+- **kmd:** :recycle: replace `Request` with explicit method params ([030a0a9](https://github.com/CareBoo/unity-algorand-sdk/commit/030a0a9486f6270e6e867ad1efbad73b90e0ecfb))
+- remove .NET 4.8 requirement ([9f55707](https://github.com/CareBoo/unity-algorand-sdk/commit/9f55707ba4f8a3d9b12fb7530b6ceec40c95219b)), closes [#19](https://github.com/CareBoo/unity-algorand-sdk/issues/19) [#9](https://github.com/CareBoo/unity-algorand-sdk/issues/9)
+
+### Features
+
+- :construction_worker: Add npmjs support ([56f60f0](https://github.com/CareBoo/unity-algorand-sdk/commit/56f60f0804c3cac377c78a5c47eea17785b29f9e))
+- :heavy_plus_sign: Add libsodium ios, android, and windows ([00c9511](https://github.com/CareBoo/unity-algorand-sdk/commit/00c95113a152f01e737e56be6a31b3207aed57ff))
+- :sparkles: Add Account.Generate ([95233bf](https://github.com/CareBoo/unity-algorand-sdk/commit/95233bf877ee70d6e67f91baaf6f9e640b0a9141))
+- :sparkles: Add Address struct ([d92b903](https://github.com/CareBoo/unity-algorand-sdk/commit/d92b90356cbf0070dd737a838eae417212a84a18))
+- :sparkles: Add basic signed transaction support ([bb5900f](https://github.com/CareBoo/unity-algorand-sdk/commit/bb5900fa66bc9501c3d9da26e1e984ddd1fb2cc0))
+- :sparkles: Add basic transaction support for message pack serialization and deserialization ([63243ed](https://github.com/CareBoo/unity-algorand-sdk/commit/63243ed492919522a752784756de2633d17a79fa))
+- :sparkles: Add checksums ([2bc2189](https://github.com/CareBoo/unity-algorand-sdk/commit/2bc2189174e48de3324aa8ca4e3bbce22ca4e1c8))
+- :sparkles: add FixedBytesFormatter ([941eb3f](https://github.com/CareBoo/unity-algorand-sdk/commit/941eb3f83b4b82d58431bc49b7f402e1ecfbccea))
+- :sparkles: Add IEquatable, GetHashCode for RawTransaction ([885928e](https://github.com/CareBoo/unity-algorand-sdk/commit/885928e3c69dbc3742d11369d5e316853d6a8e8c))
+- :sparkles: add LogicSig implementation ([51a21e0](https://github.com/CareBoo/unity-algorand-sdk/commit/51a21e02f98bb221ca2e14cbb8d1243f7b15b5ef))
+- :sparkles: Add Mnemonic.FromString and Mnemonic.ToString ([d3a88c6](https://github.com/CareBoo/unity-algorand-sdk/commit/d3a88c6026ff3162a46f1e3d13ca54d103d43aaf))
+- :sparkles: add readOnly support ([6070565](https://github.com/CareBoo/unity-algorand-sdk/commit/6070565057130a23b52575126774a6d1fa58718a))
+- :sparkles: Add Sha512 interop ([86aabf5](https://github.com/CareBoo/unity-algorand-sdk/commit/86aabf5b0936cea36881cfaad1e1d87245755c92))
+- :sparkles: Add start of Native Integration with Libsodium ([55e325f](https://github.com/CareBoo/unity-algorand-sdk/commit/55e325f4249603da679a66ece605f6ba8d5d762d))
+- :sparkles: Added Transaction Header, Payment ([d3ebced](https://github.com/CareBoo/unity-algorand-sdk/commit/d3ebcedd3f86bdfabbb9f90a97e655fcadac1145))
+- :sparkles: implement asset configuration transaction ([4f9ec58](https://github.com/CareBoo/unity-algorand-sdk/commit/4f9ec587932ed51da9bbbeaa1ddf3653a346c978)), closes [#27](https://github.com/CareBoo/unity-algorand-sdk/issues/27)
+- :sparkles: implement AssetFreezeTransaction ([e3233bf](https://github.com/CareBoo/unity-algorand-sdk/commit/e3233bf9c8258eab91e8141c561d837f26780172)), closes [#26](https://github.com/CareBoo/unity-algorand-sdk/issues/26)
+- :sparkles: implement AssetTransfer Transaction ([62a1841](https://github.com/CareBoo/unity-algorand-sdk/commit/62a1841332811753f48ac7fdccb1eec117607f3a)), closes [#23](https://github.com/CareBoo/unity-algorand-sdk/issues/23)
+- :sparkles: update AlgoApiFormatterLookup ([cc112e5](https://github.com/CareBoo/unity-algorand-sdk/commit/cc112e55d4489e30afd2854757e482cf9d37c8ee))
+- Add Mnemonic and Key datastructs ([4370f74](https://github.com/CareBoo/unity-algorand-sdk/commit/4370f74c4e5f5ed9977dc4954313bf57e7023547))
+- Add signed transaction support for payment transactions ([c07d370](https://github.com/CareBoo/unity-algorand-sdk/commit/c07d3705f70bcc33c245aa120c667a7dcc28d6e1))
+- **algod:** implement Algod Client ([a7c9e90](https://github.com/CareBoo/unity-algorand-sdk/commit/a7c9e90e2f61a715488bfd8f0095c0206ae6e739)), closes [#10](https://github.com/CareBoo/unity-algorand-sdk/issues/10) [#16](https://github.com/CareBoo/unity-algorand-sdk/issues/16) [#18](https://github.com/CareBoo/unity-algorand-sdk/issues/18)
+- **indexer:** :recycle: rename `ApplicationStateSchema` -> `StateSchema` ([7b02f70](https://github.com/CareBoo/unity-algorand-sdk/commit/7b02f70dbac6c3a67a0168107103a43be0a262ad))
+- **indexer:** :sparkles: add `IIndexerClient` ([093153e](https://github.com/CareBoo/unity-algorand-sdk/commit/093153e104a09e4d9f3cafe27ea494d44fe35840))
+- **indexer:** :sparkles: implement `AccountQuery` ([bda5301](https://github.com/CareBoo/unity-algorand-sdk/commit/bda5301687bf0a90d51860cd96074118639cc722))
+- **indexer:** :sparkles: implement `AccountResponse` ([09d7fb9](https://github.com/CareBoo/unity-algorand-sdk/commit/09d7fb9b53afba88181a98ee66a4f95633ae7257))
+- **indexer:** :sparkles: implement `AccountsQuery` ([e7d56e2](https://github.com/CareBoo/unity-algorand-sdk/commit/e7d56e29b559af8288e334e4006fe44bbab496b6))
+- **indexer:** :sparkles: implement `AccountsResponse` ([ea01260](https://github.com/CareBoo/unity-algorand-sdk/commit/ea01260b0cc63fb0ee873b3f62c0a243fe20da30))
+- **indexer:** :sparkles: implement `AddressRole` ([3325b60](https://github.com/CareBoo/unity-algorand-sdk/commit/3325b60757eac9400e5bf227639c2946b8f36a2d))
+- **indexer:** :sparkles: implement `Application` ([144d04d](https://github.com/CareBoo/unity-algorand-sdk/commit/144d04d940c2361b636e3cff21a6134b08515980))
+- **indexer:** :sparkles: implement `ApplicationLocalState` ([9ad284f](https://github.com/CareBoo/unity-algorand-sdk/commit/9ad284f734a27fb2cfc61a203f9400f397f63d31))
+- **indexer:** :sparkles: implement `ApplicationQuery` ([de02370](https://github.com/CareBoo/unity-algorand-sdk/commit/de02370084ddf28ebf5473fd9016d0f634537c24))
+- **indexer:** :sparkles: implement `ApplicationResponse` ([fa34b20](https://github.com/CareBoo/unity-algorand-sdk/commit/fa34b201d734a2deae62731ce224841ea9c00895))
+- **indexer:** :sparkles: implement `ApplicationsQuery` ([914ca8b](https://github.com/CareBoo/unity-algorand-sdk/commit/914ca8b4b483f25d91be6e59b953a0d3b3fb2426))
+- **indexer:** :sparkles: implement `ApplicationsResponse` ([e342cdc](https://github.com/CareBoo/unity-algorand-sdk/commit/e342cdc68d34e2582b0965af801eed60569fbd5e))
+- **indexer:** :sparkles: implement `Asset` ([161f361](https://github.com/CareBoo/unity-algorand-sdk/commit/161f3618265027bf37f025c90326b3b96df24e8f))
+- **indexer:** :sparkles: implement `AssetHolding` ([203785a](https://github.com/CareBoo/unity-algorand-sdk/commit/203785a112052f38c796bb6d9a5cef3a884cdbac))
+- **indexer:** :sparkles: implement `AssetParams` ([ac78bfe](https://github.com/CareBoo/unity-algorand-sdk/commit/ac78bfedb61875fabb480e602eb9866f37bdd926))
+- **indexer:** :sparkles: implement `AssetQuery` ([c8eda94](https://github.com/CareBoo/unity-algorand-sdk/commit/c8eda9423f316cc766f02e88ce6a0dea5805bde5))
+- **indexer:** :sparkles: implement `AssetResponse` ([cd8e48f](https://github.com/CareBoo/unity-algorand-sdk/commit/cd8e48ff76f0959f848fc1dc5eb4f6cede1a6afd))
+- **indexer:** :sparkles: implement `AssetsResponse` ([ade022d](https://github.com/CareBoo/unity-algorand-sdk/commit/ade022d73f1d0557b2259c676a5b3fd1493b8fb5))
+- **indexer:** :sparkles: implement `BalancesQuery` ([b8f167e](https://github.com/CareBoo/unity-algorand-sdk/commit/b8f167eeea4dceb2493accf20dac409a0903950b))
+- **indexer:** :sparkles: implement `BalancesResponse` ([c7ae299](https://github.com/CareBoo/unity-algorand-sdk/commit/c7ae29964bb26898f5d86519167eacd247265017))
+- **indexer:** :sparkles: implement `Block` ([2533f24](https://github.com/CareBoo/unity-algorand-sdk/commit/2533f240584fe2022c4a2d64d90ebf2f9555da59))
+- **indexer:** :sparkles: implement `BlockRewards` ([bb49cb0](https://github.com/CareBoo/unity-algorand-sdk/commit/bb49cb05bdade80cb283d9624eb751d9fd9bd112))
+- **indexer:** :sparkles: implement `BlockUpgradeStatus` ([e9a0423](https://github.com/CareBoo/unity-algorand-sdk/commit/e9a0423125b1e2f2d5c2a0794cd9c705f84667c4))
+- **indexer:** :sparkles: implement `BlockUpgradeVote` ([de5e72e](https://github.com/CareBoo/unity-algorand-sdk/commit/de5e72e097ee4abff6db3d0fe6bf1b5ba0067c6a))
+- **indexer:** :sparkles: implement `ErrorResponse` msgpack fields ([358e6a6](https://github.com/CareBoo/unity-algorand-sdk/commit/358e6a6475f716e0df55ed75ee8f0173c885d1c1))
+- **indexer:** :sparkles: implement `EvalDelta` msgpack fields ([45b2df2](https://github.com/CareBoo/unity-algorand-sdk/commit/45b2df29af0e15759fafab566ca52b320f5e3adc))
+- **indexer:** :sparkles: implement `EvalDeltaKeyValue` msgpack fields ([bd3c230](https://github.com/CareBoo/unity-algorand-sdk/commit/bd3c2304f227c5e252f6b269d3c33468e9e796a3))
+- **indexer:** :sparkles: implement `HealthCheck` ([a164577](https://github.com/CareBoo/unity-algorand-sdk/commit/a1645779a235d1e8c5201af61671292065f37cda))
+- **indexer:** :sparkles: implement `IndexerClient.GetAccount` ([88ba11a](https://github.com/CareBoo/unity-algorand-sdk/commit/88ba11ac8d2dbf0d1aae786bb7f904a3c872fc53))
+- **indexer:** :sparkles: implement `IndexerClient.GetAccounts` ([2e427f1](https://github.com/CareBoo/unity-algorand-sdk/commit/2e427f11f1a834d3d63c9f3eb3090f4330136342))
+- **indexer:** :sparkles: implement `IndexerClient.GetHealth` ([0883ff0](https://github.com/CareBoo/unity-algorand-sdk/commit/0883ff0b17fb2123bf251ffbe0ada58f25cf4ecc))
+- **indexer:** :sparkles: implement `IndexerClient` ([d7fd35a](https://github.com/CareBoo/unity-algorand-sdk/commit/d7fd35a195b216ffef6371ba099355b51a85f852))
+- **indexer:** :sparkles: implement `LogicSig` json fields ([b22297c](https://github.com/CareBoo/unity-algorand-sdk/commit/b22297c25e71bbee318e779281904090d2cb79d7))
+- **indexer:** :sparkles: implement `MiniAssetHolding` ([59941b8](https://github.com/CareBoo/unity-algorand-sdk/commit/59941b8002cfbcb37a24b1a80ecb96dc9cf9620f))
+- **indexer:** :sparkles: implement `MultiSig.SubSignature` ([ef526ec](https://github.com/CareBoo/unity-algorand-sdk/commit/ef526ec427cb3e280ad7336ad6f65c748070a577))
+- **indexer:** :sparkles: implement `MultiSig` ([df959a7](https://github.com/CareBoo/unity-algorand-sdk/commit/df959a75a1898605840402cc2805b5fd2b0cc4f9))
+- **indexer:** :sparkles: implement `OnCompletion` ([04227b9](https://github.com/CareBoo/unity-algorand-sdk/commit/04227b95db85508f8f258963454a3095263dd80e))
+- **indexer:** :sparkles: implement `TealKeyValue` msgPack fields ([e521553](https://github.com/CareBoo/unity-algorand-sdk/commit/e5215533bc5a0c25f71fbc38584b35d3a9b910b2))
+- **indexer:** :sparkles: implement `Transaction.ApplicationCall` ([5a5e819](https://github.com/CareBoo/unity-algorand-sdk/commit/5a5e819ec408c44a0999f38db7bab3b4c16c2d0e))
+- **indexer:** :sparkles: implement `Transaction.ApplicationCall` model fields ([69d64e8](https://github.com/CareBoo/unity-algorand-sdk/commit/69d64e8b14d0b6bf3da90ce4e782d13c9364745a))
+- **indexer:** :sparkles: implement `Transaction.AssetConfiguration` model fields ([baf7c2e](https://github.com/CareBoo/unity-algorand-sdk/commit/baf7c2ea37cdc40c9e890c7c84e9ae51478df06c))
+- **indexer:** :sparkles: implement `Transaction.AssetFreeze` model fields ([be45b90](https://github.com/CareBoo/unity-algorand-sdk/commit/be45b901e4478e404cd6aac77996de78470b75b1))
+- **indexer:** :sparkles: implement `Transaction.AssetTransfer` model fields ([84aa15e](https://github.com/CareBoo/unity-algorand-sdk/commit/84aa15eef120f882177b4f57800036dccb91a6b5))
+- **indexer:** :sparkles: implement `Transaction.KeyRegistration` ([69e004e](https://github.com/CareBoo/unity-algorand-sdk/commit/69e004eb56759117e9fc7bdba8adc67d4ac30ddd))
+- **indexer:** :sparkles: implement `Transaction.KeyRegistration` model fields ([44029ca](https://github.com/CareBoo/unity-algorand-sdk/commit/44029ca8048cd9baf31d1a9aff9eea3b335ec93d))
+- **indexer:** :sparkles: implement `TransactionResponse` ([430a1fa](https://github.com/CareBoo/unity-algorand-sdk/commit/430a1fa205e194766d22aa565a552769bebfc919))
+- **indexer:** :sparkles: implement `TransactionsQuery` ([9ec7f4f](https://github.com/CareBoo/unity-algorand-sdk/commit/9ec7f4f5ec8e8df560ae6ea4a6b6bb548c203680))
+- **indexer:** :sparkles: implement AssetsQuery ([e8d6e55](https://github.com/CareBoo/unity-algorand-sdk/commit/e8d6e550bc757c03c4f5bbff484d9e17e5283b09))
+- **indexer:** :sparkles: implement TransactionsResponse ([e1a46f8](https://github.com/CareBoo/unity-algorand-sdk/commit/e1a46f877be174bf7605b1b8dac8f146cf850c62))
+- **json:** :sparkles: implement `JsonReader.Skip` ([0d6e6ab](https://github.com/CareBoo/unity-algorand-sdk/commit/0d6e6ab4c3b75e96c5e18b105019acb9c50180ac))
+- **json:** :sparkles: implement `JsonWriter.WriteRaw` ([1643bad](https://github.com/CareBoo/unity-algorand-sdk/commit/1643badcf0069875a579da604ad0e2b5fb89d466))
+- **json:** :sparkles: implement `ReadRaw` ([384abf8](https://github.com/CareBoo/unity-algorand-sdk/commit/384abf82e09f38724218d47675452c9f26595e21))
+- **kmd:** :sparkles: add `Error` to `ErrorMessage` which is used for kmd ([3c37a94](https://github.com/CareBoo/unity-algorand-sdk/commit/3c37a947ed4ff34b2b008562e8a40e6eaa142078))
+- **kmd:** :sparkles: implement `APIV1DELETEKeyResponse` ([81f6c1e](https://github.com/CareBoo/unity-algorand-sdk/commit/81f6c1e14cf23ca1bca6a6e22ee76a3196a26f6f))
+- **kmd:** :sparkles: implement `APIV1DELETEMultisigResponse` ([4c1d6db](https://github.com/CareBoo/unity-algorand-sdk/commit/4c1d6db3848c387d244bbb624030cd0fb2614dec))
+- **kmd:** :sparkles: implement `APIV1GETWalletsResponse` ([9025e9a](https://github.com/CareBoo/unity-algorand-sdk/commit/9025e9a2dbf20fa2ed951d5ba602017901257984))
+- **kmd:** :sparkles: implement `APIV1Wallet` ([e514183](https://github.com/CareBoo/unity-algorand-sdk/commit/e5141835d7db31cb7d4274b0e4c80976ce40291c))
+- **kmd:** :sparkles: implement `APIV1WalletHandle` ([8bae4b4](https://github.com/CareBoo/unity-algorand-sdk/commit/8bae4b4e3385ef981a9375a791cdd3cb5e867578))
+- **kmd:** :sparkles: implement `CreateWalletRequest` ([63882eb](https://github.com/CareBoo/unity-algorand-sdk/commit/63882eb7f363f34e510629c41276b6deeeadc718))
+- **kmd:** :sparkles: implement `CreateWalletRequest` api fields ([f32094f](https://github.com/CareBoo/unity-algorand-sdk/commit/f32094f9235dd2c09e32935cea80e747bd0af597))
+- **kmd:** :sparkles: implement `CreateWalletResponse` ([2579231](https://github.com/CareBoo/unity-algorand-sdk/commit/2579231460707e0824699c897deb136e29e2755e))
+- **kmd:** :sparkles: implement `DeleteKeyRequest` ([5c89319](https://github.com/CareBoo/unity-algorand-sdk/commit/5c8931958bf638375843e8b57ef484dae713d936))
+- **kmd:** :sparkles: implement `DeleteMultiSigRequest` ([15afda0](https://github.com/CareBoo/unity-algorand-sdk/commit/15afda09b50ebf543a05b95c5970cc61f6e68d7d))
+- **kmd:** :sparkles: implement `ExportKeyRequest` ([a8b1131](https://github.com/CareBoo/unity-algorand-sdk/commit/a8b11314d037e7e8ece0273dd82b27f511433582))
+- **kmd:** :sparkles: implement `ExportKeyResponse.Equals` ([010e656](https://github.com/CareBoo/unity-algorand-sdk/commit/010e656a3ddd7a9abea101a86828ad6c7b635c45))
+- **kmd:** :sparkles: implement `ExportKeyResponse` ([db01766](https://github.com/CareBoo/unity-algorand-sdk/commit/db01766b0ad407e9088a1f2d1ba8487da5500b31))
+- **kmd:** :sparkles: implement `ExportMasterKeyRequest` ([2a8ed81](https://github.com/CareBoo/unity-algorand-sdk/commit/2a8ed81b3b0577329dc862cea9d4de7a7c7b59fb))
+- **kmd:** :sparkles: implement `ExportMasterKeyResponse` ([2843847](https://github.com/CareBoo/unity-algorand-sdk/commit/2843847d11145f3ee143d6f1a072fd59999e32f3))
+- **kmd:** :sparkles: implement `ExportMultiSigRequest` ([e67c925](https://github.com/CareBoo/unity-algorand-sdk/commit/e67c925bce69227c730971840ec07984cb14711b))
+- **kmd:** :sparkles: implement `ExportMultiSigResponse` ([bac0edb](https://github.com/CareBoo/unity-algorand-sdk/commit/bac0edb70256ceb82916eac7c6e29ef2f52aaf69))
+- **kmd:** :sparkles: implement `GenerateKeyResponse` ([1d6795f](https://github.com/CareBoo/unity-algorand-sdk/commit/1d6795ffdfa76e0c20f2ec56ba4dea36ac7303aa))
+- **kmd:** :sparkles: implement `GenerateMasterKeyRequest` ([6503dd8](https://github.com/CareBoo/unity-algorand-sdk/commit/6503dd8ef729d2a5460bcded8fad46efea99e77a))
+- **kmd:** :sparkles: implement `ImportKeyRequest` ([521f7c1](https://github.com/CareBoo/unity-algorand-sdk/commit/521f7c1af4183cfa00d4f6ad2e4e6d7ac81dbfde))
+- **kmd:** :sparkles: implement `ImportKeyResponse` ([83798a6](https://github.com/CareBoo/unity-algorand-sdk/commit/83798a65359906741b908e752d83f73ae0273613))
+- **kmd:** :sparkles: implement `ImportMultiSigRequest` ([5eb5d42](https://github.com/CareBoo/unity-algorand-sdk/commit/5eb5d42d7d67919d9b7357708e5d3a68861877d5))
+- **kmd:** :sparkles: implement `ImportMultiSigResponse` ([001f3ea](https://github.com/CareBoo/unity-algorand-sdk/commit/001f3eaffcf58aa5050cb8c5632dfff300adf69d))
+- **kmd:** :sparkles: implement `InitWalletHandleTokenRequest` ([36dd459](https://github.com/CareBoo/unity-algorand-sdk/commit/36dd459e9923e3539ef291e4fdf0f8ea4c3afc09))
+- **kmd:** :sparkles: implement `InitWalletHandleTokenResponse` ([26db31b](https://github.com/CareBoo/unity-algorand-sdk/commit/26db31bea84cb50e16d0194e8bf7b147469d1971))
+- **kmd:** :sparkles: implement `KmdClient` ([7433060](https://github.com/CareBoo/unity-algorand-sdk/commit/743306013c6d5d7473990b9c8ad4f5055b036ba0)), closes [#13](https://github.com/CareBoo/unity-algorand-sdk/issues/13)
+- **kmd:** :sparkles: implement `ListKeysRequest` ([b55fe67](https://github.com/CareBoo/unity-algorand-sdk/commit/b55fe67f5dd3a3b5316bef1dd32ecd421081214a))
+- **kmd:** :sparkles: implement `ListKeysResponse` ([0096bd5](https://github.com/CareBoo/unity-algorand-sdk/commit/0096bd59eeb9ed56e65e1abb5cdda262c63979dc))
+- **kmd:** :sparkles: implement `ListMultiSigRequest` ([ce667d1](https://github.com/CareBoo/unity-algorand-sdk/commit/ce667d10e43c7cb55e2b6b247760bfba92ad706d))
+- **kmd:** :sparkles: implement `ListMultiSigResponse` ([550a0ed](https://github.com/CareBoo/unity-algorand-sdk/commit/550a0edb96b79b14ad139d7fc72828b59184b2c4))
+- **kmd:** :sparkles: implement `ListWalletsRequest` ([b3b5023](https://github.com/CareBoo/unity-algorand-sdk/commit/b3b5023fd1a4374f99fe787c31648ba87502c598))
+- **kmd:** :sparkles: implement `ReleaseWalletHandleTokenRequest` ([ff024de](https://github.com/CareBoo/unity-algorand-sdk/commit/ff024de546b8faddcecf248dd3ae4b2f2f8b8d04))
+- **kmd:** :sparkles: implement `ReleaseWalletHandleTokenResponse` ([719c393](https://github.com/CareBoo/unity-algorand-sdk/commit/719c39331096dd0058cb1fb6a85abc8a4ca48b20))
+- **kmd:** :sparkles: implement `RenameWalletRequest` ([c5a9f3b](https://github.com/CareBoo/unity-algorand-sdk/commit/c5a9f3b549b482223e9bde8fa0c7324849b29408))
+- **kmd:** :sparkles: implement `RenameWalletResponse` ([6e5b55e](https://github.com/CareBoo/unity-algorand-sdk/commit/6e5b55ef118d6e94816c4e47b942c759158ee5ea))
+- **kmd:** :sparkles: implement `RenewWalletHandleTokenRequest` ([0a0d589](https://github.com/CareBoo/unity-algorand-sdk/commit/0a0d589b48b63e51eb90e4ab142f58090ebac76c))
+- **kmd:** :sparkles: implement `RenewWalletHandleTokenResponse` ([d85e5f5](https://github.com/CareBoo/unity-algorand-sdk/commit/d85e5f5e5dbbe0ad9fb1b0afdae48bd87e70959e))
+- **kmd:** :sparkles: implement `SignMultiSigRequest` ([e1dfee9](https://github.com/CareBoo/unity-algorand-sdk/commit/e1dfee9f4e7b2fb51c32b9fa881b4c6ec70e979d))
+- **kmd:** :sparkles: implement `SignMultiSigResponse` ([83ea09f](https://github.com/CareBoo/unity-algorand-sdk/commit/83ea09fb0da43e0fa99545ea667012a996e1b8a6))
+- **kmd:** :sparkles: implement `SignProgramMultiSigRequest` ([063ed1d](https://github.com/CareBoo/unity-algorand-sdk/commit/063ed1d0ee411b1dd17ea5fb21da348bed78c3f1))
+- **kmd:** :sparkles: implement `SignProgramMultiSigResponse` ([b5e5b5e](https://github.com/CareBoo/unity-algorand-sdk/commit/b5e5b5ebe9b81cac41264343de6e3dcde3765736))
+- **kmd:** :sparkles: implement `SignProgramRequest` ([52ccb07](https://github.com/CareBoo/unity-algorand-sdk/commit/52ccb07a62a1986ba3344e5c87d537f46fab499c))
+- **kmd:** :sparkles: implement `SignTransactionRequest` ([c542582](https://github.com/CareBoo/unity-algorand-sdk/commit/c54258248defcff86d9484c423e91603ab0c78ad))
+- **kmd:** :sparkles: implement `SignTransactionResponse` ([d7080ab](https://github.com/CareBoo/unity-algorand-sdk/commit/d7080ab90dd16f4b4d51570540a62ab6322d5256))
+- **kmd:** :sparkles: implement `VersionsRequest` ([f70f0fd](https://github.com/CareBoo/unity-algorand-sdk/commit/f70f0fde67adf73fea202917c985f2372ea24d0c))
+- **kmd:** :sparkles: implement `VersionsResponse` ([7c85ec2](https://github.com/CareBoo/unity-algorand-sdk/commit/7c85ec249642d8749c8fea7ec73f8e5dd28eb46c))
+- **kmd:** :sparkles: implement `WalletInfoResponse` ([6b3edc7](https://github.com/CareBoo/unity-algorand-sdk/commit/6b3edc798c63d6518f29d9050bf81f953079876c))
+- **kmd:** implement `SignProgramResponse` ([978a31d](https://github.com/CareBoo/unity-algorand-sdk/commit/978a31d0fa9e5af12872dc5efcba055405f96e5c))
+- **msgpack:** :sparkles: implement `MessagePackReader.ReadRaw` ([c2dec22](https://github.com/CareBoo/unity-algorand-sdk/commit/c2dec22a8c520aa953964f449ebc84cac5b89dff))
+- **msgpack:** :sparkles: implement `MessagePackWriter.WriteRaw` ([d5ae90e](https://github.com/CareBoo/unity-algorand-sdk/commit/d5ae90e320d855f0e8f3a5f59e87934f4390ff50))
+- **networking:** :sparkles: add `ApiResponse` API to `ApiResponse<>` ([8556c53](https://github.com/CareBoo/unity-algorand-sdk/commit/8556c53616646d9b39d9a4a88488b66acb6ac421))
+- **serialization:** :sparkles: add formatters for `PrivateKey`, `PublicKey`, and `Signature` ([2dedd67](https://github.com/CareBoo/unity-algorand-sdk/commit/2dedd67f4aa6676744fb48082343d68d96c4a805))
+- **serialization:** :sparkles: add support for deserializing `byte[]` ([3ef497f](https://github.com/CareBoo/unity-algorand-sdk/commit/3ef497f3e1f6d31b23fc9bcef77c66f975e242b5))
+- **serialization:** :sparkles: add support for generically serializing byte enums to strings ([424c8b4](https://github.com/CareBoo/unity-algorand-sdk/commit/424c8b49c2a567c015a356db3b12a4d4d035dd61))
+- **serialization:** :sparkles: finish implementing `MessagePackReader.Integers` and `MessagePackWriter.Integers` ([37d8f20](https://github.com/CareBoo/unity-algorand-sdk/commit/37d8f20eba237ad28fcf84f83cdbc989b0168a86))
+- **serialization:** :sparkles: finish implementing serializer/deserializer methods in `EnumFormatter` ([3af569f](https://github.com/CareBoo/unity-algorand-sdk/commit/3af569f180d26f5501a48d1eb43a00327bdd5921))
+- **serialization:** :sparkles: implement `AlgoApiObject` ([74456b6](https://github.com/CareBoo/unity-algorand-sdk/commit/74456b60bb235eaf89b26d809adb2141b82d57f8))
+- **serialization:** :sparkles: implement `Timestamp` ([cc1159b](https://github.com/CareBoo/unity-algorand-sdk/commit/cc1159b510aefc79c53fbe35154c5cf422e68f5f))
+- **serialization:** :tada: update formatter cache ([029f841](https://github.com/CareBoo/unity-algorand-sdk/commit/029f8419b54810d582c3550b8a3b2e193946bf5a))
+- **transaction:** :sparkles: add `GetSignature` and `ToRaw` extensions to `ITransaction` ([e4a3ad5](https://github.com/CareBoo/unity-algorand-sdk/commit/e4a3ad5e15e10155d9cb39dcaf61afc77989950e))
+- **transaction:** :sparkles: add `RegisterAccountOnline` and `RegisterAccountOffline` APIs ([71d42c1](https://github.com/CareBoo/unity-algorand-sdk/commit/71d42c1d832212ddaa5ee872f8e332af570854ac))
+- **transaction:** :sparkles: add `Transaction.AppCreate` and `Transaction.AppConfigure` APIs ([c64469a](https://github.com/CareBoo/unity-algorand-sdk/commit/c64469ac3e696c518d7d644d1e5b219bfd25d4b5))
+- **transaction:** :sparkles: add `Transaction.AssetCreate` `Transaction.AssetConfigure` and `Transaction.AssetDelete` API ([259b37b](https://github.com/CareBoo/unity-algorand-sdk/commit/259b37b336a91a9d718343b4f189e4f9313a940c))
+- **transaction:** :sparkles: add `Transaction.AssetFreeze` API ([160f837](https://github.com/CareBoo/unity-algorand-sdk/commit/160f83777f78b7a0fd53fd60b5241d766f4e6c17))
+- **transaction:** :sparkles: add `Transaction.Payment` API ([88e918d](https://github.com/CareBoo/unity-algorand-sdk/commit/88e918dca1b6cc5376f138c5a010a50d8c504a21))
+- **transaction:** :sparkles: implement address from application id ([9e3c883](https://github.com/CareBoo/unity-algorand-sdk/commit/9e3c8839abc58e11583e4974858cb794ac1cadc8))
+- **transaction:** :sparkles: implement AssetClawback and AssetAccept ([c3578ec](https://github.com/CareBoo/unity-algorand-sdk/commit/c3578ec748160017c3da76dbcc35aee66515fc74)), closes [#24](https://github.com/CareBoo/unity-algorand-sdk/issues/24) [#25](https://github.com/CareBoo/unity-algorand-sdk/issues/25)
+- **transaction:** :sparkles: implement atomic transfers ([21f7ee3](https://github.com/CareBoo/unity-algorand-sdk/commit/21f7ee34c14b0e9b99ba193f7b73215798dc5a76)), closes [#45](https://github.com/CareBoo/unity-algorand-sdk/issues/45)
+- **transaction:** :sparkles: use `TransactionParams` in Transaction constructors ([a966320](https://github.com/CareBoo/unity-algorand-sdk/commit/a966320a0ba5f45225c77db23ef0742c43b73cfa))
+
+### Reverts
+
+- **demo:** :fire: remove bossroom assets... too big to be a sample ([e53192d](https://github.com/CareBoo/unity-algorand-sdk/commit/e53192daaba120f53d5c8f7312d2b199a8f4e564))
+
+### BREAKING CHANGES
+
+- **algod:** `AccountParticipation` no longer exists
+- **transaction:** All transaction constructors have been changed to use `TransactionParams`
+- **indexer:** Removed token from IndexerClient constructor
+- **kmd:** changes `IKmdClient` API to use parameters instead of `Request` objs
+- **indexer:** indexer queries are now given as optional arguments
+- remove `Transaction.VerifySignature`, `SignedTransaction.Verify`
+- signed transactions are now represented by `SignedTransaction` (non-generic)
+- renamed `RawSignedTransaction` -> `SignedTransaction`
+- `RawTransaction` renamed to `Transaction`
+- AlgoApiKeyAttribute -> AlgoApiFieldAttribute
+- **algod:** `Block` renamed to `BlockResponse`
+- Replace Buffer with GetUnsafePtr
+- Algo Serializer API has completely changed...
+- Removes the `SendTransactionRaw` method from `AlgodClient`
+
+# [1.0.0-exp.27](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.26...v1.0.0-exp.27) (2021-10-24)
+
+### Bug Fixes
+
+- **algod:** :bug: fix `AlgodClient.TealCompile` ([8f5a67a](https://github.com/CareBoo/unity-algorand-sdk/commit/8f5a67a694cd21496b6db7c1630324ddbfd13f1f)), closes [#20](https://github.com/CareBoo/unity-algorand-sdk/issues/20)
+- **algod:** :bug: fix `AssetParams` serialization ([cbf9a69](https://github.com/CareBoo/unity-algorand-sdk/commit/cbf9a6981c52c565eb3837186c38765e5b8bea27))
+- **algod:** :bug: fix vrfpubkey formatter lookup ([0bb0014](https://github.com/CareBoo/unity-algorand-sdk/commit/0bb001407b81abc288d271cda3c6d6b9c19c49df))
+- **algod:** :bug: fix vrfpubkey formatting ([7d02443](https://github.com/CareBoo/unity-algorand-sdk/commit/7d024437ac9415449717ebf8a97017fcc10f9ee1))
+- **algod:** :bug: replace `VrfPubKey` with `FixedString128Bytes` ([94b02b0](https://github.com/CareBoo/unity-algorand-sdk/commit/94b02b06f25d4b97e264f085cc96afbfdfb68862)), closes [#42](https://github.com/CareBoo/unity-algorand-sdk/issues/42)
+- **kmd:** :art: fix `KmdClient` API incorrectly using optional args ([a53998b](https://github.com/CareBoo/unity-algorand-sdk/commit/a53998b00aa103a47ad1fea014c5f6627f8a3d34)), closes [#36](https://github.com/CareBoo/unity-algorand-sdk/issues/36)
+- **serialization:** :bug: fix `TransactionId` serialization ([b7e07ca](https://github.com/CareBoo/unity-algorand-sdk/commit/b7e07caf5e8b8b5b0327c15c618a75263726dc18))
+- **transaction:** :bug: fix `OnCompletion` having incorrect byte values ([514a378](https://github.com/CareBoo/unity-algorand-sdk/commit/514a378dce9c0669002960f6ef76d453a54fe0f0))
+- **transaction:** :bug: fix incorrect constructor in `Transaction.ApplicationCall` ([98b5829](https://github.com/CareBoo/unity-algorand-sdk/commit/98b58295d7676d73a924a5d837b7f9b0dc8a62c9))
+
+### Code Refactoring
+
+- **algod:** :recycle: replace `AccountParticipation` with `Transaction.KeyRegistration.Params` ([3b624ee](https://github.com/CareBoo/unity-algorand-sdk/commit/3b624eec4974e28b0cc31b019d41f37dc60207ca))
+
+### Features
+
+- **transaction:** :sparkles: add `RegisterAccountOnline` and `RegisterAccountOffline` APIs ([71d42c1](https://github.com/CareBoo/unity-algorand-sdk/commit/71d42c1d832212ddaa5ee872f8e332af570854ac))
+- **transaction:** :sparkles: add `Transaction.AppCreate` and `Transaction.AppConfigure` APIs ([c64469a](https://github.com/CareBoo/unity-algorand-sdk/commit/c64469ac3e696c518d7d644d1e5b219bfd25d4b5))
+- **transaction:** :sparkles: add `Transaction.AssetCreate` `Transaction.AssetConfigure` and `Transaction.AssetDelete` API ([259b37b](https://github.com/CareBoo/unity-algorand-sdk/commit/259b37b336a91a9d718343b4f189e4f9313a940c))
+- **transaction:** :sparkles: add `Transaction.AssetFreeze` API ([160f837](https://github.com/CareBoo/unity-algorand-sdk/commit/160f83777f78b7a0fd53fd60b5241d766f4e6c17))
+- **transaction:** :sparkles: add `Transaction.Payment` API ([88e918d](https://github.com/CareBoo/unity-algorand-sdk/commit/88e918dca1b6cc5376f138c5a010a50d8c504a21))
+- **transaction:** :sparkles: implement address from application id ([9e3c883](https://github.com/CareBoo/unity-algorand-sdk/commit/9e3c8839abc58e11583e4974858cb794ac1cadc8))
+- **transaction:** :sparkles: implement AssetClawback and AssetAccept ([c3578ec](https://github.com/CareBoo/unity-algorand-sdk/commit/c3578ec748160017c3da76dbcc35aee66515fc74)), closes [#24](https://github.com/CareBoo/unity-algorand-sdk/issues/24) [#25](https://github.com/CareBoo/unity-algorand-sdk/issues/25)
+- **transaction:** :sparkles: implement atomic transfers ([21f7ee3](https://github.com/CareBoo/unity-algorand-sdk/commit/21f7ee34c14b0e9b99ba193f7b73215798dc5a76)), closes [#45](https://github.com/CareBoo/unity-algorand-sdk/issues/45)
+- **transaction:** :sparkles: use `TransactionParams` in Transaction constructors ([a966320](https://github.com/CareBoo/unity-algorand-sdk/commit/a966320a0ba5f45225c77db23ef0742c43b73cfa))
+
+### BREAKING CHANGES
+
+- **algod:** `AccountParticipation` no longer exists
+- **transaction:** All transaction constructors have been changed to use `TransactionParams`
+
+# [1.0.0-exp.27](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.26...v1.0.0-exp.27) (2021-10-23)
+
+### Bug Fixes
+
+- **algod:** :bug: fix `AlgodClient.TealCompile` ([8f5a67a](https://github.com/CareBoo/unity-algorand-sdk/commit/8f5a67a694cd21496b6db7c1630324ddbfd13f1f)), closes [#20](https://github.com/CareBoo/unity-algorand-sdk/issues/20)
+- **algod:** :bug: fix `AssetParams` serialization ([cbf9a69](https://github.com/CareBoo/unity-algorand-sdk/commit/cbf9a6981c52c565eb3837186c38765e5b8bea27))
+- **algod:** :bug: fix vrfpubkey formatter lookup ([0bb0014](https://github.com/CareBoo/unity-algorand-sdk/commit/0bb001407b81abc288d271cda3c6d6b9c19c49df))
+- **algod:** :bug: fix vrfpubkey formatting ([7d02443](https://github.com/CareBoo/unity-algorand-sdk/commit/7d024437ac9415449717ebf8a97017fcc10f9ee1))
+- **algod:** :bug: replace `VrfPubKey` with `FixedString128Bytes` ([94b02b0](https://github.com/CareBoo/unity-algorand-sdk/commit/94b02b06f25d4b97e264f085cc96afbfdfb68862)), closes [#42](https://github.com/CareBoo/unity-algorand-sdk/issues/42)
+- **kmd:** :art: fix `KmdClient` API incorrectly using optional args ([a53998b](https://github.com/CareBoo/unity-algorand-sdk/commit/a53998b00aa103a47ad1fea014c5f6627f8a3d34)), closes [#36](https://github.com/CareBoo/unity-algorand-sdk/issues/36)
+- **serialization:** :bug: fix `TransactionId` serialization ([b7e07ca](https://github.com/CareBoo/unity-algorand-sdk/commit/b7e07caf5e8b8b5b0327c15c618a75263726dc18))
+- **transaction:** :bug: fix `OnCompletion` having incorrect byte values ([514a378](https://github.com/CareBoo/unity-algorand-sdk/commit/514a378dce9c0669002960f6ef76d453a54fe0f0))
+- **transaction:** :bug: fix incorrect constructor in `Transaction.ApplicationCall` ([98b5829](https://github.com/CareBoo/unity-algorand-sdk/commit/98b58295d7676d73a924a5d837b7f9b0dc8a62c9))
+
+### Code Refactoring
+
+- **algod:** :recycle: replace `AccountParticipation` with `Transaction.KeyRegistration.Params` ([3b624ee](https://github.com/CareBoo/unity-algorand-sdk/commit/3b624eec4974e28b0cc31b019d41f37dc60207ca))
+
+### Features
+
+- **transaction:** :sparkles: add `RegisterAccountOnline` and `RegisterAccountOffline` APIs ([71d42c1](https://github.com/CareBoo/unity-algorand-sdk/commit/71d42c1d832212ddaa5ee872f8e332af570854ac))
+- **transaction:** :sparkles: add `Transaction.AppCreate` and `Transaction.AppConfigure` APIs ([c64469a](https://github.com/CareBoo/unity-algorand-sdk/commit/c64469ac3e696c518d7d644d1e5b219bfd25d4b5))
+- **transaction:** :sparkles: add `Transaction.AssetCreate` `Transaction.AssetConfigure` and `Transaction.AssetDelete` API ([259b37b](https://github.com/CareBoo/unity-algorand-sdk/commit/259b37b336a91a9d718343b4f189e4f9313a940c))
+- **transaction:** :sparkles: add `Transaction.AssetFreeze` API ([160f837](https://github.com/CareBoo/unity-algorand-sdk/commit/160f83777f78b7a0fd53fd60b5241d766f4e6c17))
+- **transaction:** :sparkles: add `Transaction.Payment` API ([88e918d](https://github.com/CareBoo/unity-algorand-sdk/commit/88e918dca1b6cc5376f138c5a010a50d8c504a21))
+- **transaction:** :sparkles: implement address from application id ([9e3c883](https://github.com/CareBoo/unity-algorand-sdk/commit/9e3c8839abc58e11583e4974858cb794ac1cadc8))
+- **transaction:** :sparkles: implement AssetClawback and AssetAccept ([c3578ec](https://github.com/CareBoo/unity-algorand-sdk/commit/c3578ec748160017c3da76dbcc35aee66515fc74)), closes [#24](https://github.com/CareBoo/unity-algorand-sdk/issues/24) [#25](https://github.com/CareBoo/unity-algorand-sdk/issues/25)
+- **transaction:** :sparkles: implement atomic transfers ([21f7ee3](https://github.com/CareBoo/unity-algorand-sdk/commit/21f7ee34c14b0e9b99ba193f7b73215798dc5a76)), closes [#45](https://github.com/CareBoo/unity-algorand-sdk/issues/45)
+- **transaction:** :sparkles: use `TransactionParams` in Transaction constructors ([a966320](https://github.com/CareBoo/unity-algorand-sdk/commit/a966320a0ba5f45225c77db23ef0742c43b73cfa))
+
+### BREAKING CHANGES
+
+- **algod:** `AccountParticipation` no longer exists
+- **transaction:** All transaction constructors have been changed to use `TransactionParams`
+
+# [1.0.0-exp.26](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.25...v1.0.0-exp.26) (2021-10-13)
+
+### Bug Fixes
+
+- **indexer:** :bug: add token back to indexer ([023cb05](https://github.com/CareBoo/unity-algorand-sdk/commit/023cb05f173242f2c3f234f8203fcf2c03ea5369))
+- **indexer:** :bug: fix indexer requires token ([57f6114](https://github.com/CareBoo/unity-algorand-sdk/commit/57f61141f9c7763bb10a3a9deac07dcbc65ea6a9))
+- **json:** :bug: fix `PrivateKey` JSON deserialization err ([cb327e0](https://github.com/CareBoo/unity-algorand-sdk/commit/cb327e0f38ef61e43f5c5e38c3090ab02b83693d))
+- **json:** :bug: fix empty json objects missing begin object '{' char ([af9a2f1](https://github.com/CareBoo/unity-algorand-sdk/commit/af9a2f1cdc7b02a16e1ef052a1156ddee0d0a2a8))
+- **kmd:** :bug: fix `GenerateKeyRequest` to use `wallet_handle_token` not password ([a86c25e](https://github.com/CareBoo/unity-algorand-sdk/commit/a86c25ea9b233dd755f234d64d36467415ce6ebb))
+- **kmd:** :bug: fix `ImportKeyRequest` to use wallet_handle_token not password ([f020a03](https://github.com/CareBoo/unity-algorand-sdk/commit/f020a03fb19c9cf89452066d6dbd3cf278eb9f7f))
+- **kmd:** :bug: fix `KmdClient.SignTransaction` returning a signed transaction message ([f0a354c](https://github.com/CareBoo/unity-algorand-sdk/commit/f0a354caeafd05ae7a984451582e8d53b82bbd6b))
+- **kmd:** :bug: fix `WalletHandle` not added to formatter cache ([4c30939](https://github.com/CareBoo/unity-algorand-sdk/commit/4c309395b3f7076aa4db1e6ebfb552d59fad57b0))
+- **kmd:** :bug: fix multisig ([fc7bcd6](https://github.com/CareBoo/unity-algorand-sdk/commit/fc7bcd6f647c399b3edebb52ccd65fccf715393e))
+
+### Code Refactoring
+
+- **kmd:** :recycle: replace `Request` with explicit method params ([030a0a9](https://github.com/CareBoo/unity-algorand-sdk/commit/030a0a9486f6270e6e867ad1efbad73b90e0ecfb))
+
+### Features
+
+- **json:** :sparkles: implement `JsonReader.Skip` ([0d6e6ab](https://github.com/CareBoo/unity-algorand-sdk/commit/0d6e6ab4c3b75e96c5e18b105019acb9c50180ac))
+- **serialization:** :sparkles: add support for deserializing `byte[]` ([3ef497f](https://github.com/CareBoo/unity-algorand-sdk/commit/3ef497f3e1f6d31b23fc9bcef77c66f975e242b5))
+- **transaction:** :sparkles: add `GetSignature` and `ToRaw` extensions to `ITransaction` ([e4a3ad5](https://github.com/CareBoo/unity-algorand-sdk/commit/e4a3ad5e15e10155d9cb39dcaf61afc77989950e))
+
+### BREAKING CHANGES
+
+- **indexer:** Removed token from IndexerClient constructor
+- **kmd:** changes `IKmdClient` API to use parameters instead of `Request` objs
+
+# [1.0.0-exp.25](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.24...v1.0.0-exp.25) (2021-10-08)
+
+### Bug Fixes
+
+- :bug: fix keyworded enum types formatting as numbers ([d686c13](https://github.com/CareBoo/unity-algorand-sdk/commit/d686c134dff5e0d657f974600c5948b86f506f0f))
+- **algod:** :bug: fix pending transactions not returning messagepack ([dca09f8](https://github.com/CareBoo/unity-algorand-sdk/commit/dca09f8d6c2e1781097f3386355852b7179f01d9))
+- **indexer:** :bug: add missing fields to `Account` model ([5732a1d](https://github.com/CareBoo/unity-algorand-sdk/commit/5732a1d7b6a57d300e8e8b4662696e180c0c2ecb))
+- **indexer:** :bug: fix `HealthCheck` missing serialization logic ([f5165c6](https://github.com/CareBoo/unity-algorand-sdk/commit/f5165c681387450a791f191a2ae88a060741a9de))
+- **indexer:** :fire: fix huge issue with indexer where query parameters were in body ([7bcca20](https://github.com/CareBoo/unity-algorand-sdk/commit/7bcca2022b8c1238cd35f225fccef80ada562143))
+- **serialization:** :bug: fix `Block` not having a formatter ([dec6176](https://github.com/CareBoo/unity-algorand-sdk/commit/dec61762ddfba5c7f43223175c8c63f2d0b3609e))
+- **serialization:** :bug: fix `BlockResponse` Serialization ([1252a16](https://github.com/CareBoo/unity-algorand-sdk/commit/1252a1634d6bb2fa00f78c1628ce7dbf33da6a56))
+- **serialization:** :bug: fix `JsonWriter` not writing to `NativeText` ([2b61659](https://github.com/CareBoo/unity-algorand-sdk/commit/2b61659ea6801947f7b31069ecade0d6cb5f1e09))
+- **serialization:** :bug: fix discrepancy between `TransactionId` and `TransactinIdResponse` ([d0c0370](https://github.com/CareBoo/unity-algorand-sdk/commit/d0c0370c0578e6d2296d0667557148e711c67174))
+- **serialization:** :bug: fix issue where fixed strings were incorrectly being added to the queryparams ([a3e6fd9](https://github.com/CareBoo/unity-algorand-sdk/commit/a3e6fd9dbaf62d6e4bb05432568c0de36e3abb35))
+- **serialization:** :bug: fix missing `AlgoApiObject` on all Transaction Params ([a11015f](https://github.com/CareBoo/unity-algorand-sdk/commit/a11015ff3da75db5ab5d6f7c809a89f50fe1142b))
+
+### Features
+
+- **networking:** :sparkles: add `ApiResponse` API to `ApiResponse<>` ([8556c53](https://github.com/CareBoo/unity-algorand-sdk/commit/8556c53616646d9b39d9a4a88488b66acb6ac421))
+- **serialization:** :sparkles: add support for generically serializing byte enums to strings ([424c8b4](https://github.com/CareBoo/unity-algorand-sdk/commit/424c8b49c2a567c015a356db3b12a4d4d035dd61))
+- **serialization:** :sparkles: finish implementing `MessagePackReader.Integers` and `MessagePackWriter.Integers` ([37d8f20](https://github.com/CareBoo/unity-algorand-sdk/commit/37d8f20eba237ad28fcf84f83cdbc989b0168a86))
+- **serialization:** :sparkles: finish implementing serializer/deserializer methods in `EnumFormatter` ([3af569f](https://github.com/CareBoo/unity-algorand-sdk/commit/3af569f180d26f5501a48d1eb43a00327bdd5921))
+
+### Reverts
+
+- **demo:** :fire: remove bossroom assets... too big to be a sample ([e53192d](https://github.com/CareBoo/unity-algorand-sdk/commit/e53192daaba120f53d5c8f7312d2b199a8f4e564))
+
+### BREAKING CHANGES
+
+- **indexer:** indexer queries are now given as optional arguments
+
+# [1.0.0-exp.24](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.23...v1.0.0-exp.24) (2021-10-05)
+
+### Bug Fixes
+
+- :bug: fix signatures ([2fb4614](https://github.com/CareBoo/unity-algorand-sdk/commit/2fb461459ac58266c1078bdb16607d65a25d8553))
+
+### Features
+
+- **kmd:** :sparkles: add `Error` to `ErrorMessage` which is used for kmd ([3c37a94](https://github.com/CareBoo/unity-algorand-sdk/commit/3c37a947ed4ff34b2b008562e8a40e6eaa142078))
+- **kmd:** :sparkles: implement `APIV1DELETEKeyResponse` ([81f6c1e](https://github.com/CareBoo/unity-algorand-sdk/commit/81f6c1e14cf23ca1bca6a6e22ee76a3196a26f6f))
+- **kmd:** :sparkles: implement `APIV1DELETEMultisigResponse` ([4c1d6db](https://github.com/CareBoo/unity-algorand-sdk/commit/4c1d6db3848c387d244bbb624030cd0fb2614dec))
+- **kmd:** :sparkles: implement `APIV1GETWalletsResponse` ([9025e9a](https://github.com/CareBoo/unity-algorand-sdk/commit/9025e9a2dbf20fa2ed951d5ba602017901257984))
+- **kmd:** :sparkles: implement `APIV1Wallet` ([e514183](https://github.com/CareBoo/unity-algorand-sdk/commit/e5141835d7db31cb7d4274b0e4c80976ce40291c))
+- **kmd:** :sparkles: implement `APIV1WalletHandle` ([8bae4b4](https://github.com/CareBoo/unity-algorand-sdk/commit/8bae4b4e3385ef981a9375a791cdd3cb5e867578))
+- **kmd:** :sparkles: implement `CreateWalletRequest` ([63882eb](https://github.com/CareBoo/unity-algorand-sdk/commit/63882eb7f363f34e510629c41276b6deeeadc718))
+- **kmd:** :sparkles: implement `CreateWalletRequest` api fields ([f32094f](https://github.com/CareBoo/unity-algorand-sdk/commit/f32094f9235dd2c09e32935cea80e747bd0af597))
+- **kmd:** :sparkles: implement `CreateWalletResponse` ([2579231](https://github.com/CareBoo/unity-algorand-sdk/commit/2579231460707e0824699c897deb136e29e2755e))
+- **kmd:** :sparkles: implement `DeleteKeyRequest` ([5c89319](https://github.com/CareBoo/unity-algorand-sdk/commit/5c8931958bf638375843e8b57ef484dae713d936))
+- **kmd:** :sparkles: implement `DeleteMultiSigRequest` ([15afda0](https://github.com/CareBoo/unity-algorand-sdk/commit/15afda09b50ebf543a05b95c5970cc61f6e68d7d))
+- **kmd:** :sparkles: implement `ExportKeyRequest` ([a8b1131](https://github.com/CareBoo/unity-algorand-sdk/commit/a8b11314d037e7e8ece0273dd82b27f511433582))
+- **kmd:** :sparkles: implement `ExportKeyResponse.Equals` ([010e656](https://github.com/CareBoo/unity-algorand-sdk/commit/010e656a3ddd7a9abea101a86828ad6c7b635c45))
+- **kmd:** :sparkles: implement `ExportKeyResponse` ([db01766](https://github.com/CareBoo/unity-algorand-sdk/commit/db01766b0ad407e9088a1f2d1ba8487da5500b31))
+- **kmd:** :sparkles: implement `ExportMasterKeyRequest` ([2a8ed81](https://github.com/CareBoo/unity-algorand-sdk/commit/2a8ed81b3b0577329dc862cea9d4de7a7c7b59fb))
+- **kmd:** :sparkles: implement `ExportMasterKeyResponse` ([2843847](https://github.com/CareBoo/unity-algorand-sdk/commit/2843847d11145f3ee143d6f1a072fd59999e32f3))
+- **kmd:** :sparkles: implement `ExportMultiSigRequest` ([e67c925](https://github.com/CareBoo/unity-algorand-sdk/commit/e67c925bce69227c730971840ec07984cb14711b))
+- **kmd:** :sparkles: implement `ExportMultiSigResponse` ([bac0edb](https://github.com/CareBoo/unity-algorand-sdk/commit/bac0edb70256ceb82916eac7c6e29ef2f52aaf69))
+- **kmd:** :sparkles: implement `GenerateKeyResponse` ([1d6795f](https://github.com/CareBoo/unity-algorand-sdk/commit/1d6795ffdfa76e0c20f2ec56ba4dea36ac7303aa))
+- **kmd:** :sparkles: implement `GenerateMasterKeyRequest` ([6503dd8](https://github.com/CareBoo/unity-algorand-sdk/commit/6503dd8ef729d2a5460bcded8fad46efea99e77a))
+- **kmd:** :sparkles: implement `ImportKeyRequest` ([521f7c1](https://github.com/CareBoo/unity-algorand-sdk/commit/521f7c1af4183cfa00d4f6ad2e4e6d7ac81dbfde))
+- **kmd:** :sparkles: implement `ImportKeyResponse` ([83798a6](https://github.com/CareBoo/unity-algorand-sdk/commit/83798a65359906741b908e752d83f73ae0273613))
+- **kmd:** :sparkles: implement `ImportMultiSigRequest` ([5eb5d42](https://github.com/CareBoo/unity-algorand-sdk/commit/5eb5d42d7d67919d9b7357708e5d3a68861877d5))
+- **kmd:** :sparkles: implement `ImportMultiSigResponse` ([001f3ea](https://github.com/CareBoo/unity-algorand-sdk/commit/001f3eaffcf58aa5050cb8c5632dfff300adf69d))
+- **kmd:** :sparkles: implement `InitWalletHandleTokenRequest` ([36dd459](https://github.com/CareBoo/unity-algorand-sdk/commit/36dd459e9923e3539ef291e4fdf0f8ea4c3afc09))
+- **kmd:** :sparkles: implement `InitWalletHandleTokenResponse` ([26db31b](https://github.com/CareBoo/unity-algorand-sdk/commit/26db31bea84cb50e16d0194e8bf7b147469d1971))
+- **kmd:** :sparkles: implement `KmdClient` ([7433060](https://github.com/CareBoo/unity-algorand-sdk/commit/743306013c6d5d7473990b9c8ad4f5055b036ba0)), closes [#13](https://github.com/CareBoo/unity-algorand-sdk/issues/13)
+- **kmd:** :sparkles: implement `ListKeysRequest` ([b55fe67](https://github.com/CareBoo/unity-algorand-sdk/commit/b55fe67f5dd3a3b5316bef1dd32ecd421081214a))
+- **kmd:** :sparkles: implement `ListKeysResponse` ([0096bd5](https://github.com/CareBoo/unity-algorand-sdk/commit/0096bd59eeb9ed56e65e1abb5cdda262c63979dc))
+- **kmd:** :sparkles: implement `ListMultiSigRequest` ([ce667d1](https://github.com/CareBoo/unity-algorand-sdk/commit/ce667d10e43c7cb55e2b6b247760bfba92ad706d))
+- **kmd:** :sparkles: implement `ListMultiSigResponse` ([550a0ed](https://github.com/CareBoo/unity-algorand-sdk/commit/550a0edb96b79b14ad139d7fc72828b59184b2c4))
+- **kmd:** :sparkles: implement `ListWalletsRequest` ([b3b5023](https://github.com/CareBoo/unity-algorand-sdk/commit/b3b5023fd1a4374f99fe787c31648ba87502c598))
+- **kmd:** :sparkles: implement `ReleaseWalletHandleTokenRequest` ([ff024de](https://github.com/CareBoo/unity-algorand-sdk/commit/ff024de546b8faddcecf248dd3ae4b2f2f8b8d04))
+- **kmd:** :sparkles: implement `ReleaseWalletHandleTokenResponse` ([719c393](https://github.com/CareBoo/unity-algorand-sdk/commit/719c39331096dd0058cb1fb6a85abc8a4ca48b20))
+- **kmd:** :sparkles: implement `RenameWalletRequest` ([c5a9f3b](https://github.com/CareBoo/unity-algorand-sdk/commit/c5a9f3b549b482223e9bde8fa0c7324849b29408))
+- **kmd:** :sparkles: implement `RenameWalletResponse` ([6e5b55e](https://github.com/CareBoo/unity-algorand-sdk/commit/6e5b55ef118d6e94816c4e47b942c759158ee5ea))
+- **kmd:** :sparkles: implement `RenewWalletHandleTokenRequest` ([0a0d589](https://github.com/CareBoo/unity-algorand-sdk/commit/0a0d589b48b63e51eb90e4ab142f58090ebac76c))
+- **kmd:** :sparkles: implement `RenewWalletHandleTokenResponse` ([d85e5f5](https://github.com/CareBoo/unity-algorand-sdk/commit/d85e5f5e5dbbe0ad9fb1b0afdae48bd87e70959e))
+- **kmd:** :sparkles: implement `SignMultiSigRequest` ([e1dfee9](https://github.com/CareBoo/unity-algorand-sdk/commit/e1dfee9f4e7b2fb51c32b9fa881b4c6ec70e979d))
+- **kmd:** :sparkles: implement `SignMultiSigResponse` ([83ea09f](https://github.com/CareBoo/unity-algorand-sdk/commit/83ea09fb0da43e0fa99545ea667012a996e1b8a6))
+- **kmd:** :sparkles: implement `SignProgramMultiSigRequest` ([063ed1d](https://github.com/CareBoo/unity-algorand-sdk/commit/063ed1d0ee411b1dd17ea5fb21da348bed78c3f1))
+- **kmd:** :sparkles: implement `SignProgramMultiSigResponse` ([b5e5b5e](https://github.com/CareBoo/unity-algorand-sdk/commit/b5e5b5ebe9b81cac41264343de6e3dcde3765736))
+- **kmd:** :sparkles: implement `SignProgramRequest` ([52ccb07](https://github.com/CareBoo/unity-algorand-sdk/commit/52ccb07a62a1986ba3344e5c87d537f46fab499c))
+- **kmd:** :sparkles: implement `SignTransactionRequest` ([c542582](https://github.com/CareBoo/unity-algorand-sdk/commit/c54258248defcff86d9484c423e91603ab0c78ad))
+- **kmd:** :sparkles: implement `SignTransactionResponse` ([d7080ab](https://github.com/CareBoo/unity-algorand-sdk/commit/d7080ab90dd16f4b4d51570540a62ab6322d5256))
+- **kmd:** :sparkles: implement `VersionsRequest` ([f70f0fd](https://github.com/CareBoo/unity-algorand-sdk/commit/f70f0fde67adf73fea202917c985f2372ea24d0c))
+- **kmd:** :sparkles: implement `VersionsResponse` ([7c85ec2](https://github.com/CareBoo/unity-algorand-sdk/commit/7c85ec249642d8749c8fea7ec73f8e5dd28eb46c))
+- **kmd:** :sparkles: implement `WalletInfoResponse` ([6b3edc7](https://github.com/CareBoo/unity-algorand-sdk/commit/6b3edc798c63d6518f29d9050bf81f953079876c))
+- **kmd:** implement `SignProgramResponse` ([978a31d](https://github.com/CareBoo/unity-algorand-sdk/commit/978a31d0fa9e5af12872dc5efcba055405f96e5c))
+- **serialization:** :sparkles: add formatters for `PrivateKey`, `PublicKey`, and `Signature` ([2dedd67](https://github.com/CareBoo/unity-algorand-sdk/commit/2dedd67f4aa6676744fb48082343d68d96c4a805))
+- **serialization:** :tada: update formatter cache ([029f841](https://github.com/CareBoo/unity-algorand-sdk/commit/029f8419b54810d582c3550b8a3b2e193946bf5a))
+
+# [1.0.0-exp.23](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.22...v1.0.0-exp.23) (2021-10-03)
+
+### Bug Fixes
+
+- :bug: fix `RawTransaction.Equals` ([f6bd889](https://github.com/CareBoo/unity-algorand-sdk/commit/f6bd889c737f970c835d3273f7c28b002794ed3f))
+- **indexer:** :bug: fix transaction formatters missing valid msgpack fields ([bf917ac](https://github.com/CareBoo/unity-algorand-sdk/commit/bf917ac30f964b9102c293d00a60d6f0072e75bd))
+- **indexer:** :sparkles: fix `TealValue` msgpack fieldnames ([2a6ef27](https://github.com/CareBoo/unity-algorand-sdk/commit/2a6ef27e4f465c73a3cb744eae12267929c06f07))
+- **serialization:** :bug: fix `SignedTransaction` serialization ([f4bde8d](https://github.com/CareBoo/unity-algorand-sdk/commit/f4bde8d4fd65e6146df35a6ce0890ed4417a235a))
+
+### Code Refactoring
+
+- :fire: remove some verify methods in the transaction ([70a8308](https://github.com/CareBoo/unity-algorand-sdk/commit/70a830830d3778a23d32fd9985d5d424972dd99f))
+- :recycle: convert all `SignedTransaction<>` to a single `SignedTransaction` ([26fa65a](https://github.com/CareBoo/unity-algorand-sdk/commit/26fa65a53fa4cb2f4e8d81aa9ec2adc537d09b01))
+- :recycle: rename `RawSignedTransaction` -> `SignedTransaction` ([059c6a3](https://github.com/CareBoo/unity-algorand-sdk/commit/059c6a369bd3f5e6d2b65965927cffd8bce65a49))
+- :recycle: rename `RawTransaction` -> `Transaction` ([bade09e](https://github.com/CareBoo/unity-algorand-sdk/commit/bade09e7edc7df1d6dcbeb932f38fe7c199b21bb))
+- :recycle: rename AlgoApiKeyAttribute -> AlgoApiFieldAttribute ([1b37028](https://github.com/CareBoo/unity-algorand-sdk/commit/1b370289ba2ffe8457f35c998aed6efcfe01931c))
+- **algod:** :recycle: rename `Block` -> `BlockResponse` ([eca9fb6](https://github.com/CareBoo/unity-algorand-sdk/commit/eca9fb6c2be3a99272067d308a089148a1680427))
+
+### Features
+
+- :sparkles: add readOnly support ([6070565](https://github.com/CareBoo/unity-algorand-sdk/commit/6070565057130a23b52575126774a6d1fa58718a))
+- **indexer:** :recycle: rename `ApplicationStateSchema` -> `StateSchema` ([7b02f70](https://github.com/CareBoo/unity-algorand-sdk/commit/7b02f70dbac6c3a67a0168107103a43be0a262ad))
+- **indexer:** :sparkles: add `IIndexerClient` ([093153e](https://github.com/CareBoo/unity-algorand-sdk/commit/093153e104a09e4d9f3cafe27ea494d44fe35840))
+- **indexer:** :sparkles: implement `AccountQuery` ([bda5301](https://github.com/CareBoo/unity-algorand-sdk/commit/bda5301687bf0a90d51860cd96074118639cc722))
+- **indexer:** :sparkles: implement `AccountResponse` ([09d7fb9](https://github.com/CareBoo/unity-algorand-sdk/commit/09d7fb9b53afba88181a98ee66a4f95633ae7257))
+- **indexer:** :sparkles: implement `AccountsQuery` ([e7d56e2](https://github.com/CareBoo/unity-algorand-sdk/commit/e7d56e29b559af8288e334e4006fe44bbab496b6))
+- **indexer:** :sparkles: implement `AccountsResponse` ([ea01260](https://github.com/CareBoo/unity-algorand-sdk/commit/ea01260b0cc63fb0ee873b3f62c0a243fe20da30))
+- **indexer:** :sparkles: implement `AddressRole` ([3325b60](https://github.com/CareBoo/unity-algorand-sdk/commit/3325b60757eac9400e5bf227639c2946b8f36a2d))
+- **indexer:** :sparkles: implement `Application` ([144d04d](https://github.com/CareBoo/unity-algorand-sdk/commit/144d04d940c2361b636e3cff21a6134b08515980))
+- **indexer:** :sparkles: implement `ApplicationLocalState` ([9ad284f](https://github.com/CareBoo/unity-algorand-sdk/commit/9ad284f734a27fb2cfc61a203f9400f397f63d31))
+- **indexer:** :sparkles: implement `ApplicationQuery` ([de02370](https://github.com/CareBoo/unity-algorand-sdk/commit/de02370084ddf28ebf5473fd9016d0f634537c24))
+- **indexer:** :sparkles: implement `ApplicationResponse` ([fa34b20](https://github.com/CareBoo/unity-algorand-sdk/commit/fa34b201d734a2deae62731ce224841ea9c00895))
+- **indexer:** :sparkles: implement `ApplicationsQuery` ([914ca8b](https://github.com/CareBoo/unity-algorand-sdk/commit/914ca8b4b483f25d91be6e59b953a0d3b3fb2426))
+- **indexer:** :sparkles: implement `ApplicationsResponse` ([e342cdc](https://github.com/CareBoo/unity-algorand-sdk/commit/e342cdc68d34e2582b0965af801eed60569fbd5e))
+- **indexer:** :sparkles: implement `Asset` ([161f361](https://github.com/CareBoo/unity-algorand-sdk/commit/161f3618265027bf37f025c90326b3b96df24e8f))
+- **indexer:** :sparkles: implement `AssetHolding` ([203785a](https://github.com/CareBoo/unity-algorand-sdk/commit/203785a112052f38c796bb6d9a5cef3a884cdbac))
+- **indexer:** :sparkles: implement `AssetParams` ([ac78bfe](https://github.com/CareBoo/unity-algorand-sdk/commit/ac78bfedb61875fabb480e602eb9866f37bdd926))
+- **indexer:** :sparkles: implement `AssetQuery` ([c8eda94](https://github.com/CareBoo/unity-algorand-sdk/commit/c8eda9423f316cc766f02e88ce6a0dea5805bde5))
+- **indexer:** :sparkles: implement `AssetResponse` ([cd8e48f](https://github.com/CareBoo/unity-algorand-sdk/commit/cd8e48ff76f0959f848fc1dc5eb4f6cede1a6afd))
+- **indexer:** :sparkles: implement `AssetsResponse` ([ade022d](https://github.com/CareBoo/unity-algorand-sdk/commit/ade022d73f1d0557b2259c676a5b3fd1493b8fb5))
+- **indexer:** :sparkles: implement `BalancesQuery` ([b8f167e](https://github.com/CareBoo/unity-algorand-sdk/commit/b8f167eeea4dceb2493accf20dac409a0903950b))
+- **indexer:** :sparkles: implement `BalancesResponse` ([c7ae299](https://github.com/CareBoo/unity-algorand-sdk/commit/c7ae29964bb26898f5d86519167eacd247265017))
+- **indexer:** :sparkles: implement `Block` ([2533f24](https://github.com/CareBoo/unity-algorand-sdk/commit/2533f240584fe2022c4a2d64d90ebf2f9555da59))
+- **indexer:** :sparkles: implement `BlockRewards` ([bb49cb0](https://github.com/CareBoo/unity-algorand-sdk/commit/bb49cb05bdade80cb283d9624eb751d9fd9bd112))
+- **indexer:** :sparkles: implement `BlockUpgradeStatus` ([e9a0423](https://github.com/CareBoo/unity-algorand-sdk/commit/e9a0423125b1e2f2d5c2a0794cd9c705f84667c4))
+- **indexer:** :sparkles: implement `BlockUpgradeVote` ([de5e72e](https://github.com/CareBoo/unity-algorand-sdk/commit/de5e72e097ee4abff6db3d0fe6bf1b5ba0067c6a))
+- **indexer:** :sparkles: implement `ErrorResponse` msgpack fields ([358e6a6](https://github.com/CareBoo/unity-algorand-sdk/commit/358e6a6475f716e0df55ed75ee8f0173c885d1c1))
+- **indexer:** :sparkles: implement `EvalDelta` msgpack fields ([45b2df2](https://github.com/CareBoo/unity-algorand-sdk/commit/45b2df29af0e15759fafab566ca52b320f5e3adc))
+- **indexer:** :sparkles: implement `EvalDeltaKeyValue` msgpack fields ([bd3c230](https://github.com/CareBoo/unity-algorand-sdk/commit/bd3c2304f227c5e252f6b269d3c33468e9e796a3))
+- **indexer:** :sparkles: implement `HealthCheck` ([a164577](https://github.com/CareBoo/unity-algorand-sdk/commit/a1645779a235d1e8c5201af61671292065f37cda))
+- **indexer:** :sparkles: implement `IndexerClient.GetAccount` ([88ba11a](https://github.com/CareBoo/unity-algorand-sdk/commit/88ba11ac8d2dbf0d1aae786bb7f904a3c872fc53))
+- **indexer:** :sparkles: implement `IndexerClient.GetAccounts` ([2e427f1](https://github.com/CareBoo/unity-algorand-sdk/commit/2e427f11f1a834d3d63c9f3eb3090f4330136342))
+- **indexer:** :sparkles: implement `IndexerClient.GetHealth` ([0883ff0](https://github.com/CareBoo/unity-algorand-sdk/commit/0883ff0b17fb2123bf251ffbe0ada58f25cf4ecc))
+- **indexer:** :sparkles: implement `IndexerClient` ([d7fd35a](https://github.com/CareBoo/unity-algorand-sdk/commit/d7fd35a195b216ffef6371ba099355b51a85f852))
+- **indexer:** :sparkles: implement `LogicSig` json fields ([b22297c](https://github.com/CareBoo/unity-algorand-sdk/commit/b22297c25e71bbee318e779281904090d2cb79d7))
+- **indexer:** :sparkles: implement `MiniAssetHolding` ([59941b8](https://github.com/CareBoo/unity-algorand-sdk/commit/59941b8002cfbcb37a24b1a80ecb96dc9cf9620f))
+- **indexer:** :sparkles: implement `MultiSig.SubSignature` ([ef526ec](https://github.com/CareBoo/unity-algorand-sdk/commit/ef526ec427cb3e280ad7336ad6f65c748070a577))
+- **indexer:** :sparkles: implement `MultiSig` ([df959a7](https://github.com/CareBoo/unity-algorand-sdk/commit/df959a75a1898605840402cc2805b5fd2b0cc4f9))
+- **indexer:** :sparkles: implement `OnCompletion` ([04227b9](https://github.com/CareBoo/unity-algorand-sdk/commit/04227b95db85508f8f258963454a3095263dd80e))
+- **indexer:** :sparkles: implement `TealKeyValue` msgPack fields ([e521553](https://github.com/CareBoo/unity-algorand-sdk/commit/e5215533bc5a0c25f71fbc38584b35d3a9b910b2))
+- **indexer:** :sparkles: implement `Transaction.ApplicationCall` ([5a5e819](https://github.com/CareBoo/unity-algorand-sdk/commit/5a5e819ec408c44a0999f38db7bab3b4c16c2d0e))
+- **indexer:** :sparkles: implement `Transaction.ApplicationCall` model fields ([69d64e8](https://github.com/CareBoo/unity-algorand-sdk/commit/69d64e8b14d0b6bf3da90ce4e782d13c9364745a))
+- **indexer:** :sparkles: implement `Transaction.AssetConfiguration` model fields ([baf7c2e](https://github.com/CareBoo/unity-algorand-sdk/commit/baf7c2ea37cdc40c9e890c7c84e9ae51478df06c))
+- **indexer:** :sparkles: implement `Transaction.AssetFreeze` model fields ([be45b90](https://github.com/CareBoo/unity-algorand-sdk/commit/be45b901e4478e404cd6aac77996de78470b75b1))
+- **indexer:** :sparkles: implement `Transaction.AssetTransfer` model fields ([84aa15e](https://github.com/CareBoo/unity-algorand-sdk/commit/84aa15eef120f882177b4f57800036dccb91a6b5))
+- **indexer:** :sparkles: implement `Transaction.KeyRegistration` ([69e004e](https://github.com/CareBoo/unity-algorand-sdk/commit/69e004eb56759117e9fc7bdba8adc67d4ac30ddd))
+- **indexer:** :sparkles: implement `Transaction.KeyRegistration` model fields ([44029ca](https://github.com/CareBoo/unity-algorand-sdk/commit/44029ca8048cd9baf31d1a9aff9eea3b335ec93d))
+- **indexer:** :sparkles: implement `TransactionResponse` ([430a1fa](https://github.com/CareBoo/unity-algorand-sdk/commit/430a1fa205e194766d22aa565a552769bebfc919))
+- **indexer:** :sparkles: implement `TransactionsQuery` ([9ec7f4f](https://github.com/CareBoo/unity-algorand-sdk/commit/9ec7f4f5ec8e8df560ae6ea4a6b6bb548c203680))
+- **indexer:** :sparkles: implement AssetsQuery ([e8d6e55](https://github.com/CareBoo/unity-algorand-sdk/commit/e8d6e550bc757c03c4f5bbff484d9e17e5283b09))
+- **indexer:** :sparkles: implement TransactionsResponse ([e1a46f8](https://github.com/CareBoo/unity-algorand-sdk/commit/e1a46f877be174bf7605b1b8dac8f146cf850c62))
+- **json:** :sparkles: implement `JsonWriter.WriteRaw` ([1643bad](https://github.com/CareBoo/unity-algorand-sdk/commit/1643badcf0069875a579da604ad0e2b5fb89d466))
+- **json:** :sparkles: implement `ReadRaw` ([384abf8](https://github.com/CareBoo/unity-algorand-sdk/commit/384abf82e09f38724218d47675452c9f26595e21))
+- **msgpack:** :sparkles: implement `MessagePackReader.ReadRaw` ([c2dec22](https://github.com/CareBoo/unity-algorand-sdk/commit/c2dec22a8c520aa953964f449ebc84cac5b89dff))
+- **msgpack:** :sparkles: implement `MessagePackWriter.WriteRaw` ([d5ae90e](https://github.com/CareBoo/unity-algorand-sdk/commit/d5ae90e320d855f0e8f3a5f59e87934f4390ff50))
+- **serialization:** :sparkles: implement `AlgoApiObject` ([74456b6](https://github.com/CareBoo/unity-algorand-sdk/commit/74456b60bb235eaf89b26d809adb2141b82d57f8))
+- **serialization:** :sparkles: implement `Timestamp` ([cc1159b](https://github.com/CareBoo/unity-algorand-sdk/commit/cc1159b510aefc79c53fbe35154c5cf422e68f5f))
+
+### BREAKING CHANGES
+
+- remove `Transaction.VerifySignature`, `SignedTransaction.Verify`
+- signed transactions are now represented by `SignedTransaction` (non-generic)
+- renamed `RawSignedTransaction` -> `SignedTransaction`
+- `RawTransaction` renamed to `Transaction`
+- AlgoApiKeyAttribute -> AlgoApiFieldAttribute
+- **algod:** `Block` renamed to `BlockResponse`
+
+# [1.0.0-exp.22](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.21...v1.0.0-exp.22) (2021-09-28)
+
+### Bug Fixes
+
+- :bug: fix crash on ArrayComparer.Equals ([8ca1b06](https://github.com/CareBoo/unity-algorand-sdk/commit/8ca1b06daedcbdf97650f4b79bd72a134238bec0))
+- :bug: fix issues with codegen and AOT compilation ([d2f9bdc](https://github.com/CareBoo/unity-algorand-sdk/commit/d2f9bdc8f8c77b8afb690162c3fafda81b5f8c48))
+
+# [1.0.0-exp.21](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.20...v1.0.0-exp.21) (2021-09-28)
+
+### Features
+
+- :sparkles: update AlgoApiFormatterLookup ([cc112e5](https://github.com/CareBoo/unity-algorand-sdk/commit/cc112e55d4489e30afd2854757e482cf9d37c8ee))
+
+# [1.0.0-exp.20](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.19...v1.0.0-exp.20) (2021-09-28)
+
+### Features
+
+- :sparkles: add FixedBytesFormatter ([941eb3f](https://github.com/CareBoo/unity-algorand-sdk/commit/941eb3f83b4b82d58431bc49b7f402e1ecfbccea))
+
+### BREAKING CHANGES
+
+- Replace Buffer with GetUnsafePtr
+
+# [1.0.0-exp.19](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.18...v1.0.0-exp.19) (2021-09-25)
+
+### Bug Fixes
+
+- :bug: fix compile errs ([7a03ed9](https://github.com/CareBoo/unity-algorand-sdk/commit/7a03ed99a5cd7d3657df89c58a989ee0e33ced66))
+
+# [1.0.0-exp.18](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.17...v1.0.0-exp.18) (2021-09-25)
+
+### Features
+
+- :sparkles: add LogicSig implementation ([51a21e0](https://github.com/CareBoo/unity-algorand-sdk/commit/51a21e02f98bb221ca2e14cbb8d1243f7b15b5ef))
+
+# [1.0.0-exp.17](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.16...v1.0.0-exp.17) (2021-09-20)
+
+### Features
+
+- :sparkles: implement asset configuration transaction ([4f9ec58](https://github.com/CareBoo/unity-algorand-sdk/commit/4f9ec587932ed51da9bbbeaa1ddf3653a346c978)), closes [#27](https://github.com/CareBoo/unity-algorand-sdk/issues/27)
+- :sparkles: implement AssetFreezeTransaction ([e3233bf](https://github.com/CareBoo/unity-algorand-sdk/commit/e3233bf9c8258eab91e8141c561d837f26780172)), closes [#26](https://github.com/CareBoo/unity-algorand-sdk/issues/26)
+- :sparkles: implement AssetTransfer Transaction ([62a1841](https://github.com/CareBoo/unity-algorand-sdk/commit/62a1841332811753f48ac7fdccb1eec117607f3a)), closes [#23](https://github.com/CareBoo/unity-algorand-sdk/issues/23)
+
+# [1.0.0-exp.16](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.15...v1.0.0-exp.16) (2021-09-19)
+
+### Code Refactoring
+
+- remove .NET 4.8 requirement ([9f55707](https://github.com/CareBoo/unity-algorand-sdk/commit/9f55707ba4f8a3d9b12fb7530b6ceec40c95219b)), closes [#19](https://github.com/CareBoo/unity-algorand-sdk/issues/19) [#9](https://github.com/CareBoo/unity-algorand-sdk/issues/9)
+
+### BREAKING CHANGES
+
+- Algo Serializer API has completely changed...
+
+# [1.0.0-exp.15](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.14...v1.0.0-exp.15) (2021-09-03)
+
+### Code Refactoring
+
+- :fire: remove unnecessary `SendTransactionRaw` ([09b3bdc](https://github.com/CareBoo/unity-algorand-sdk/commit/09b3bdc0dfbeb2b47603b3cfc92be0478120bd09))
+
+### BREAKING CHANGES
+
+- Removes the `SendTransactionRaw` method from `AlgodClient`
+
+# [1.0.0-exp.14](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.13...v1.0.0-exp.14) (2021-08-30)
+
+### Features
+
+- **algod:** implement Algod Client ([a7c9e90](https://github.com/CareBoo/unity-algorand-sdk/commit/a7c9e90e2f61a715488bfd8f0095c0206ae6e739)), closes [#10](https://github.com/CareBoo/unity-algorand-sdk/issues/10) [#16](https://github.com/CareBoo/unity-algorand-sdk/issues/16) [#18](https://github.com/CareBoo/unity-algorand-sdk/issues/18)
+
+# [1.0.0-exp.13](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.12...v1.0.0-exp.13) (2021-08-07)
+
+### Bug Fixes
+
+- :white_check_mark: Fix CI tests on Github Actions can't find libsodium ([20c4ad5](https://github.com/CareBoo/unity-algorand-sdk/commit/20c4ad56edf57cef595c2f4078bba4e15d893602)), closes [#12](https://github.com/CareBoo/unity-algorand-sdk/issues/12)
+
+# [1.0.0-exp.12](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.11...v1.0.0-exp.12) (2021-08-04)
+
+### Features
+
+- Add signed transaction support for payment transactions ([c07d370](https://github.com/CareBoo/unity-algorand-sdk/commit/c07d3705f70bcc33c245aa120c667a7dcc28d6e1))
+
+# [1.0.0-exp.11](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.10...v1.0.0-exp.11) (2021-08-03)
+
+### Features
+
+- :sparkles: Add basic signed transaction support ([bb5900f](https://github.com/CareBoo/unity-algorand-sdk/commit/bb5900fa66bc9501c3d9da26e1e984ddd1fb2cc0))
+
+# [1.0.0-exp.10](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.9...v1.0.0-exp.10) (2021-08-03)
+
+### Features
+
+- :sparkles: Add IEquatable, GetHashCode for RawTransaction ([885928e](https://github.com/CareBoo/unity-algorand-sdk/commit/885928e3c69dbc3742d11369d5e316853d6a8e8c))
+
+# [1.0.0-exp.9](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.8...v1.0.0-exp.9) (2021-08-02)
+
+### Features
+
+- :sparkles: Add basic transaction support for message pack serialization and deserialization ([63243ed](https://github.com/CareBoo/unity-algorand-sdk/commit/63243ed492919522a752784756de2633d17a79fa))
+
+# [1.0.0-exp.8](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.7...v1.0.0-exp.8) (2021-07-25)
+
+### Features
+
+- :sparkles: Added Transaction Header, Payment ([d3ebced](https://github.com/CareBoo/unity-algorand-sdk/commit/d3ebcedd3f86bdfabbb9f90a97e655fcadac1145))
+
+# [1.0.0-exp.7](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.6...v1.0.0-exp.7) (2021-07-24)
+
+### Features
+
+- :sparkles: Add Account.Generate ([95233bf](https://github.com/CareBoo/unity-algorand-sdk/commit/95233bf877ee70d6e67f91baaf6f9e640b0a9141))
+
+# [1.0.0-exp.6](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.5...v1.0.0-exp.6) (2021-07-24)
+
+### Features
+
+- :construction_worker: Add npmjs support ([56f60f0](https://github.com/CareBoo/unity-algorand-sdk/commit/56f60f0804c3cac377c78a5c47eea17785b29f9e))
+- :heavy_plus_sign: Add libsodium ios, android, and windows ([00c9511](https://github.com/CareBoo/unity-algorand-sdk/commit/00c95113a152f01e737e56be6a31b3207aed57ff))
+- :sparkles: Add Address struct ([d92b903](https://github.com/CareBoo/unity-algorand-sdk/commit/d92b90356cbf0070dd737a838eae417212a84a18))
+- :sparkles: Add checksums ([2bc2189](https://github.com/CareBoo/unity-algorand-sdk/commit/2bc2189174e48de3324aa8ca4e3bbce22ca4e1c8))
+- :sparkles: Add Sha512 interop ([86aabf5](https://github.com/CareBoo/unity-algorand-sdk/commit/86aabf5b0936cea36881cfaad1e1d87245755c92))
+- :sparkles: Add start of Native Integration with Libsodium ([55e325f](https://github.com/CareBoo/unity-algorand-sdk/commit/55e325f4249603da679a66ece605f6ba8d5d762d))
+
+# [1.0.0-exp.6](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.5...v1.0.0-exp.6) (2021-07-23)
+
+### Features
+
+- :construction_worker: Add npmjs support ([56f60f0](https://github.com/CareBoo/unity-algorand-sdk/commit/56f60f0804c3cac377c78a5c47eea17785b29f9e))
+- :heavy_plus_sign: Add libsodium ios, android, and windows ([00c9511](https://github.com/CareBoo/unity-algorand-sdk/commit/00c95113a152f01e737e56be6a31b3207aed57ff))
+- :sparkles: Add checksums ([2bc2189](https://github.com/CareBoo/unity-algorand-sdk/commit/2bc2189174e48de3324aa8ca4e3bbce22ca4e1c8))
+- :sparkles: Add Sha512 interop ([86aabf5](https://github.com/CareBoo/unity-algorand-sdk/commit/86aabf5b0936cea36881cfaad1e1d87245755c92))
+- :sparkles: Add start of Native Integration with Libsodium ([55e325f](https://github.com/CareBoo/unity-algorand-sdk/commit/55e325f4249603da679a66ece605f6ba8d5d762d))
+
+# [1.0.0-exp.6](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.5...v1.0.0-exp.6) (2021-07-21)
+
+### Features
+
+- :construction_worker: Add npmjs support ([56f60f0](https://github.com/CareBoo/unity-algorand-sdk/commit/56f60f0804c3cac377c78a5c47eea17785b29f9e))
+- :heavy_plus_sign: Add libsodium ios, android, and windows ([00c9511](https://github.com/CareBoo/unity-algorand-sdk/commit/00c95113a152f01e737e56be6a31b3207aed57ff))
+- :sparkles: Add Sha512 interop ([86aabf5](https://github.com/CareBoo/unity-algorand-sdk/commit/86aabf5b0936cea36881cfaad1e1d87245755c92))
+- :sparkles: Add start of Native Integration with Libsodium ([55e325f](https://github.com/CareBoo/unity-algorand-sdk/commit/55e325f4249603da679a66ece605f6ba8d5d762d))
+
+# [1.0.0-exp.6](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.5...v1.0.0-exp.6) (2021-07-20)
+
+### Features
+
+- :construction_worker: Add npmjs support ([56f60f0](https://github.com/CareBoo/unity-algorand-sdk/commit/56f60f0804c3cac377c78a5c47eea17785b29f9e))
+- :heavy_plus_sign: Add libsodium ios, android, and windows ([00c9511](https://github.com/CareBoo/unity-algorand-sdk/commit/00c95113a152f01e737e56be6a31b3207aed57ff))
+- :sparkles: Add start of Native Integration with Libsodium ([55e325f](https://github.com/CareBoo/unity-algorand-sdk/commit/55e325f4249603da679a66ece605f6ba8d5d762d))
+
+# [1.0.0-exp.6](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.5...v1.0.0-exp.6) (2021-07-20)
+
+### Features
+
+- :construction_worker: Add npmjs support ([56f60f0](https://github.com/CareBoo/unity-algorand-sdk/commit/56f60f0804c3cac377c78a5c47eea17785b29f9e))
+- :heavy_plus_sign: Add libsodium ios, android, and windows ([00c9511](https://github.com/CareBoo/unity-algorand-sdk/commit/00c95113a152f01e737e56be6a31b3207aed57ff))
+- :sparkles: Add start of Native Integration with Libsodium ([55e325f](https://github.com/CareBoo/unity-algorand-sdk/commit/55e325f4249603da679a66ece605f6ba8d5d762d))
+
+# [1.0.0-exp.5](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.4...v1.0.0-exp.5) (2021-07-12)
+
+### Bug Fixes
+
+- :bug: Fix repository ([e765589](https://github.com/CareBoo/unity-algorand-sdk/commit/e765589b92849e23b7d080f335067cba1c1a8b62))
+
+# [1.0.0-exp.4](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.3...v1.0.0-exp.4) (2021-07-12)
+
+### Bug Fixes
+
+- :bug: Fix npm release ([9e68078](https://github.com/CareBoo/unity-algorand-sdk/commit/9e68078b5f7f75a7670e7cf03dc1ee5137709bf1))
+
+# [1.0.0-exp.3](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.2...v1.0.0-exp.3) (2021-07-12)
+
+### Bug Fixes
+
+- :triangular_flag_on_post: Update package registry ([a0800bc](https://github.com/CareBoo/unity-algorand-sdk/commit/a0800bc57c6fde758182075a90e2fbd96ce67be8))
+
+# [1.0.0-exp.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.1...v1.0.0-exp.2) (2021-07-12)
+
+### Features
+
+- :sparkles: Add Mnemonic.FromString and Mnemonic.ToString ([d3a88c6](https://github.com/CareBoo/unity-algorand-sdk/commit/d3a88c6026ff3162a46f1e3d13ca54d103d43aaf))
+
+# 1.0.0-exp.1 (2021-05-18)
+
+### Features
+
+- Add Mnemonic and Key datastructs ([4370f74](https://github.com/CareBoo/Algorand.SDK.Unity/commit/4370f74c4e5f5ed9977dc4954313bf57e7023547))

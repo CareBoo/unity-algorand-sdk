@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 using AlgoSdk.LowLevel;
 using Unity.Collections;
 using Unity.Jobs;
-using UnityEngine.Assertions;
+using UnityEngine;
 using static AlgoSdk.Crypto.sodium;
 
 namespace AlgoSdk.Crypto
@@ -12,11 +12,10 @@ namespace AlgoSdk.Crypto
     {
         public struct KeyPair : INativeDisposable
         {
-
             public readonly SecretKeyHandle SecretKey;
             public readonly PublicKey PublicKey;
 
-            public KeyPair(SecretKeyHandle secretKey, in PublicKey publicKey)
+            public KeyPair(SecretKeyHandle secretKey, PublicKey publicKey)
             {
                 SecretKey = secretKey;
                 PublicKey = publicKey;
@@ -39,10 +38,14 @@ namespace AlgoSdk.Crypto
             }
         }
 
-        public struct SecretKeyHandle : INativeDisposable
+        public struct SecretKeyHandle
+            : INativeDisposable
         {
             public const int KeySize = (32 + 32);
+
             SecureMemoryHandle handle;
+
+            public IntPtr Ptr => handle.Ptr;
 
             public static SecretKeyHandle Create()
             {
@@ -69,30 +72,36 @@ namespace AlgoSdk.Crypto
                 return new SecretKeyHandle() { handle = secureMemoryHandle };
             }
 
-            public Signature Sign<TMessage>(in TMessage message)
+            public Signature Sign<TMessage>(TMessage message)
                 where TMessage : IByteArray
             {
                 var signature = new Signature();
-                crypto_sign_ed25519_detached(&signature, out var signatureLength, (byte*)message.GetUnsafePtr(), (ulong)message.Length, this);
-                Assert.AreEqual(signatureLength, (ulong)signature.Length);
+#if (UNITY_WEBGL && !UNITY_EDITOR)
+                crypto_sign_ed25519_detached(
+                    &signature, 
+                    message.GetUnsafePtr(), 
+                    (UIntPtr)message.Length, 
+                    Ptr);
+#else
+                crypto_sign_ed25519_detached(
+                    &signature,
+                    out _,
+                    message.GetUnsafePtr(),
+                    (UIntPtr)message.Length,
+                    Ptr);
+#endif
                 return signature;
-            }
-
-            public Seed ToSeed()
-            {
-                var seed = new Seed();
-                crypto_sign_ed25519_sk_to_seed(&seed, this);
-                return seed;
             }
         }
 
         [StructLayout(LayoutKind.Explicit, Size = Size)]
+        [Serializable]
         public struct Seed
             : IByteArray
             , IEquatable<Seed>
         {
-            [FieldOffset(0)] internal FixedBytes16 offset0000;
-            [FieldOffset(16)] internal FixedBytes16 offset0016;
+            [FieldOffset(0), SerializeField] internal FixedBytes16 offset0000;
+            [FieldOffset(16), SerializeField] internal FixedBytes16 offset0016;
 
             public const int Size = 32;
 
@@ -131,19 +140,23 @@ namespace AlgoSdk.Crypto
                 var sk = SecretKeyHandle.Create();
                 fixed (Seed* seedPtr = &this)
                 {
-                    int error = crypto_sign_ed25519_seed_keypair(&pk, sk, seedPtr);
+                    int error = crypto_sign_ed25519_seed_keypair(
+                        &pk,
+                        sk.Ptr,
+                        seedPtr);
                 }
                 return new KeyPair(sk, pk);
             }
         }
 
+        [Serializable]
         [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
         public struct PublicKey
             : IByteArray
             , IEquatable<PublicKey>
         {
-            [FieldOffset(0)] internal FixedBytes16 offset0000;
-            [FieldOffset(16)] internal FixedBytes16 offset0016;
+            [FieldOffset(0), SerializeField] internal FixedBytes16 offset0000;
+            [FieldOffset(16), SerializeField] internal FixedBytes16 offset0016;
 
             public const int SizeBytes = 32;
 
@@ -171,32 +184,33 @@ namespace AlgoSdk.Crypto
 
             public override bool Equals(object obj)
             {
-                return ByteArray.Equals(in this, obj);
+                return ByteArray.Equals(this, obj);
             }
 
             public override int GetHashCode()
             {
-                return ByteArray.GetHashCode(in this);
+                return ByteArray.GetHashCode(this);
             }
 
             public static bool operator ==(in PublicKey x, in PublicKey y)
             {
-                return ByteArray.Equals(in x, in y);
+                return ByteArray.Equals(x, y);
             }
 
             public static bool operator !=(in PublicKey x, in PublicKey y)
             {
-                return !ByteArray.Equals(in x, in y);
+                return !ByteArray.Equals(x, y);
             }
         }
 
+        [Serializable]
         [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
         public struct Signature
             : IByteArray
             , IEquatable<Signature>
         {
             public const int SizeBytes = 64;
-            [FieldOffset(0)] internal FixedBytes64 buffer;
+            [FieldOffset(0), SerializeField] internal FixedBytes64 buffer;
 
             public byte this[int index]
             {
@@ -217,34 +231,38 @@ namespace AlgoSdk.Crypto
             {
                 fixed (Signature* s = &this)
                 {
-                    var error = crypto_sign_ed25519_verify_detached(s, (byte*)message.GetUnsafePtr(), (ulong)message.Length, &pk);
+                    var error = crypto_sign_ed25519_verify_detached(
+                        s,
+                        message.GetUnsafePtr(),
+                        (UIntPtr)message.Length,
+                        &pk);
                     return error == 0;
                 }
             }
 
             public bool Equals(Signature other)
             {
-                return ByteArray.Equals(in this, in other);
+                return ByteArray.Equals(this, other);
             }
 
             public override bool Equals(object obj)
             {
-                return ByteArray.Equals(in this, obj);
+                return ByteArray.Equals(this, obj);
             }
 
             public override int GetHashCode()
             {
-                return ByteArray.GetHashCode(in this);
+                return ByteArray.GetHashCode(this);
             }
 
             public static bool operator ==(in Signature x, in Signature y)
             {
-                return ByteArray.Equals(in x, in y);
+                return ByteArray.Equals(x, y);
             }
 
             public static bool operator !=(in Signature x, in Signature y)
             {
-                return !ByteArray.Equals(in x, in y);
+                return !ByteArray.Equals(x, y);
             }
         }
     }

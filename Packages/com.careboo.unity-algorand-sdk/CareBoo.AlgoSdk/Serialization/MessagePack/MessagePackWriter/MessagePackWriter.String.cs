@@ -4,34 +4,42 @@ namespace AlgoSdk.MessagePack
 {
     public partial struct MessagePackWriter
     {
-        public unsafe void WriteString<T>(in T fs)
-            where T : struct, INativeList<byte>, IUTF8Bytes
+        public void WriteStringHeader(int length)
         {
-            var chars = fs.GetUnsafePtr();
-            var byteCount = fs.Length;
-            if (byteCount <= MessagePackRange.MaxFixStringLength)
+            if (length <= MessagePackRange.MaxFixStringLength)
             {
-                data.Add((byte)(MessagePackCode.MinFixStr | byteCount));
-                data.AddRange(chars, byteCount);
+                data.Add((byte)(MessagePackCode.MinFixStr | length));
             }
-            else if (byteCount <= byte.MaxValue)
+            else if (length <= byte.MaxValue)
             {
                 data.Add(MessagePackCode.Str8);
-                data.Add(unchecked((byte)byteCount));
-                data.AddRange(chars, byteCount);
+                data.Add(unchecked((byte)length));
             }
-            else if (byteCount <= ushort.MaxValue)
+            else if (length <= ushort.MaxValue)
             {
                 data.Add(MessagePackCode.Str16);
-                WriteBigEndian((ushort)byteCount);
-                data.AddRange(chars, byteCount);
+                WriteBigEndian((ushort)length);
             }
             else
             {
                 data.Add(MessagePackCode.Str32);
-                WriteBigEndian((ushort)byteCount);
-                data.AddRange(chars, byteCount);
+                WriteBigEndian((uint)length);
             }
+        }
+
+        public void WriteString(string s)
+        {
+            using var text = new NativeText(s, Allocator.Temp);
+            WriteString(text);
+        }
+
+        public unsafe void WriteString<T>(T fs)
+            where T : struct, INativeList<byte>, IUTF8Bytes
+        {
+            var ptr = fs.GetUnsafePtr();
+            var length = fs.Length;
+            WriteStringHeader(length);
+            data.AddRange(ptr, length);
         }
     }
 }

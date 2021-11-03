@@ -3,6 +3,8 @@
 - name: Scripting API
   href: api/
 - name: Changelog
-  href: CHANGELOG.md
+  href: changelog/
+- name: License
+  href: license/
 - name: GitHub
   href: https://github.com/CareBoo/unity-algorand-sdk

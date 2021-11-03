@@ -1,5 +1,6 @@
 using System;
 using Unity.Collections;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -7,6 +8,7 @@ namespace AlgoSdk
     /// A response from <see cref="IAlgodClient.StartCatchup"/>
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct CatchupMessage
         : IEquatable<CatchupMessage>
     {
@@ -14,6 +16,7 @@ namespace AlgoSdk
         /// Catchup start response string
         /// </summary>
         [AlgoApiField("catchup-message", null)]
+        [Tooltip("Catchup start response string")]
         public FixedString512Bytes Message;
 
         public bool Equals(CatchupMessage other)

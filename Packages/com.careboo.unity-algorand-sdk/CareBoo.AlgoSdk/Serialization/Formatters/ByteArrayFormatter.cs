@@ -40,7 +40,7 @@ namespace AlgoSdk.Formatters
         {
             var s = System.Convert.ToBase64String(value);
             using var t = new NativeText(s, Allocator.Temp);
-            writer.WriteString(in t);
+            writer.WriteString(t);
         }
 
         public void Serialize(ref MessagePackWriter writer, byte[] value)
@@ -95,12 +95,9 @@ namespace AlgoSdk.Formatters
             }
         }
 
-        public void Serialize(ref MessagePackWriter writer, TByteArray value)
+        public unsafe void Serialize(ref MessagePackWriter writer, TByteArray value)
         {
-            unsafe
-            {
-                writer.WriteBytes(value.GetUnsafePtr(), value.Length);
-            }
+            writer.WriteBytes(value.GetUnsafePtr(), value.Length);
         }
     }
 }

@@ -6,14 +6,16 @@ namespace AlgoSdk
     [AlgoApiFormatter(typeof(OptionalFormatter<bool>))]
     [AlgoApiFormatter(typeof(OptionalFormatter<ulong>))]
     [AlgoApiFormatter(typeof(OptionalFormatter<uint>))]
+    [Serializable]
     public struct Optional<T>
         : IEquatable<Optional<T>>
         where T : struct, IEquatable<T>
     {
         public static Optional<T> Empty => default;
 
-        public readonly T Value;
-        public readonly bool HasValue;
+        public T Value;
+
+        public bool HasValue;
 
         public Optional(T value)
         {

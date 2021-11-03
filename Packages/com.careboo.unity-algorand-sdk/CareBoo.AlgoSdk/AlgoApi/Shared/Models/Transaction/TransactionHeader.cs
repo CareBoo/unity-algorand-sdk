@@ -2,6 +2,7 @@ using System;
 using AlgoSdk.Crypto;
 using Unity.Collections;
 using Unity.Mathematics;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -182,35 +183,61 @@ namespace AlgoSdk
     /// <remarks>
     /// For the most part, this is used internally in the sdk and shouldn't be used directly.
     /// </remarks>
+    [Serializable]
     public struct TransactionHeader
         : IEquatable<TransactionHeader>
     {
+        [Tooltip("Paid by the sender to the FeeSink to prevent denial-of-service. The minimum fee on Algorand is currently 1000 microAlgos.")]
         public ulong Fee;
+        [Tooltip("The first round for when the transaction is valid. If the transaction is sent prior to this round it will be rejected by the network.")]
         public ulong FirstValidRound;
+        [Tooltip("The hash of the genesis block of the network for which the transaction is valid.")]
         public GenesisHash GenesisHash;
+        [Tooltip("The ending round for which the transaction is valid. After this round, the transaction will be rejected by the network.")]
         public ulong LastValidRound;
+        [Tooltip("The address of the account that pays the fee and amount.")]
         public Address Sender;
+        [Tooltip("Specifies the type of transaction. This value is automatically generated using any of the developer tools.")]
         public TransactionType TransactionType;
 
+        [Tooltip("The human-readable string that identifies the network for the transaction. The genesis ID is found in the genesis block.")]
         public FixedString32Bytes GenesisId;
+        [Tooltip("The group specifies that the transaction is part of a group and, if so, specifies the hash of the transaction group.")]
         public Sha512_256_Hash Group;
+        [Tooltip("A lease enforces mutual exclusion of transactions. If this field is nonzero, then once the transaction is confirmed, it acquires the lease identified by the (Sender, Lease) pair of the transaction until the LastValid round passes. While this transaction possesses the lease, no other transaction specifying this lease can be confirmed. A lease is often used in the context of Algorand Smart Contracts to prevent replay attacks.")]
         public Sha512_256_Hash Lease;
+        [Tooltip("Any data up to 1000 bytes.")]
         public byte[] Note;
+        [Tooltip("Specifies the authorized address. This address will be used to authorize all future transactions.")]
         public Address RekeyTo;
 
+        [NonSerialized]
         public TransactionId Id;
+        [NonSerialized]
         public Address AuthAddress;
+        [NonSerialized]
         public ulong CloseRewards;
+        [NonSerialized]
         public ulong ClosingAmount;
+        [NonSerialized]
         public ulong ConfirmedRound;
+        [NonSerialized]
         public ulong CreatedApplicationIndex;
+        [NonSerialized]
         public ulong CreatedAssetIndex;
+        [NonSerialized]
         public ulong IntraRoundOffset;
+        [NonSerialized]
         public EvalDeltaKeyValue[] GlobalStateDelta;
+        [NonSerialized]
         public AccountStateDelta[] LocalStateDelta;
+        [NonSerialized]
         public ulong ReceiverRewards;
+        [NonSerialized]
         public ulong RoundTime;
+        [NonSerialized]
         public ulong SenderRewards;
+        [NonSerialized]
         public OnCompletion OnCompletion;
 
 

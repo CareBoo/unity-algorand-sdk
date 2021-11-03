@@ -5,24 +5,17 @@ using static AlgoSdk.Crypto.sodium;
 
 namespace AlgoSdk.Crypto
 {
-    public struct SecureMemoryHandle : INativeDisposable
+    public struct SecureMemoryHandle
+        : INativeDisposable
     {
+#if (!UNITY_WEBGL || UNITY_EDITOR)
         static SecureMemoryHandle()
         {
             sodium_init();
         }
+#endif
 
         public IntPtr Ptr;
-
-        internal struct DisposeJob : IJob
-        {
-            public SecureMemoryHandle keyHandle;
-
-            public void Execute()
-            {
-                keyHandle.Dispose();
-            }
-        }
 
         internal SecureMemoryHandle(IntPtr ptr)
         {
@@ -35,7 +28,13 @@ namespace AlgoSdk.Crypto
             return new SecureMemoryHandle(ptr);
         }
 
-        public bool IsCreated => Ptr != IntPtr.Zero;
+        public bool IsCreated
+        {
+            get
+            {
+                return Ptr != IntPtr.Zero;
+            }
+        }
 
         public JobHandle Dispose(JobHandle inputDeps)
         {
@@ -49,6 +48,16 @@ namespace AlgoSdk.Crypto
 
             sodium_free(Ptr);
             Ptr = IntPtr.Zero;
+        }
+
+        internal struct DisposeJob : IJob
+        {
+            public SecureMemoryHandle keyHandle;
+
+            public void Execute()
+            {
+                keyHandle.Dispose();
+            }
         }
     }
 }

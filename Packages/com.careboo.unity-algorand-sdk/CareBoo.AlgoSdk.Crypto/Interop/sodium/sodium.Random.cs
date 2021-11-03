@@ -6,6 +6,6 @@ namespace AlgoSdk.Crypto
     internal static unsafe partial class sodium
     {
         [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
-        internal static unsafe extern void randombytes_buf(void* buf, UIntPtr size);
+        internal static extern void randombytes_buf(void* buf, UIntPtr size);
     }
 }

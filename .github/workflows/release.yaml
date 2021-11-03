@@ -27,13 +27,26 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Move Documentation folder
-        if: steps.semantic.outputs.new_release_published == 'true'
-        run: mv Packages/com.careboo.unity-algorand-sdk/Documentation Packages/com.careboo.unity-algorand-sdk/~Documentation
-
       - name: Move README.md
         if: steps.semantic.outputs.new_release_published == 'true'
         run: mv README.md Packages/com.careboo.unity-algorand-sdk/README.md
+      
+      - name: Move LICENSE.md
+        if: steps.semantic.outputs.new_release_published == 'true'
+        run: mv LICENSE.md Packages/com.careboo.unity-algorand-sdk/LICENSE.md
+
+      - name: Move Documentation folder
+        if: steps.semantic.outputs.new_release_published == 'true'
+        run: |
+          mv Packages/com.careboo.unity-algorand-sdk/Documentation Packages/com.careboo.unity-algorand-sdk/~Documentation
+          rm Packages/com.careboo.unity-algorand-sdk/Documentation.meta
+          rm Packages/com.careboo.unity-algorand-sdk/~Documentation/**/*.meta
+          
+      - name: Replace Version
+        if: steps.semantic.outputs.new_release_published == 'true'
+        run: ./scripts/replace_version
+        env:
+          VERSION: ${{ steps.semantic.outputs.new_release_version }}
 
       - name: Setup npm for npmjs
         uses: actions/setup-node@v2
@@ -72,6 +85,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           lfs: true
+          ref: ${{ github.ref }}
 
       - name: Get package version
         id: version
@@ -91,9 +105,9 @@ jobs:
 
       - name: Use README.md as index.md
         run: cp README.md Packages/com.careboo.unity-algorand-sdk/Documentation/index.md
-
-      - name: Move CHANGELOG.md
-        run: cp Packages/com.careboo.unity-algorand-sdk/CHANGELOG.md Packages/com.careboo.unity-algorand-sdk/Documentation/CHANGELOG.md
+          
+      - name: Copy LICENSE to package
+        run: cp LICENSE.md Packages/com.careboo.unity-algorand-sdk/LICENSE.md
 
       - name: Update sitemap with version
         if: ${{ matrix.tag == 'version' }}
@@ -149,7 +163,6 @@ jobs:
           publish_branch: gh-pages
           publish_dir: _site_version
           destination_dir: ${{ steps.version.outputs.prop }}
-          keep_files: true
 
   deploy_docs_branch:
     name: Deploy Branch Docs
@@ -177,4 +190,3 @@ jobs:
           publish_branch: gh-pages
           publish_dir: _site_branch
           destination_dir: ${{ steps.branch.outputs.name }}
-          keep_files: true
