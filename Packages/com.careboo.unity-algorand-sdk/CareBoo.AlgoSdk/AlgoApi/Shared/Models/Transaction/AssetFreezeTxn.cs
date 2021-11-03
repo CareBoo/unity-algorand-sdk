@@ -1,6 +1,7 @@
 using System;
 using AlgoSdk.Crypto;
 using Unity.Collections;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -75,12 +76,15 @@ namespace AlgoSdk
     }
 
     [AlgoApiObject]
+    [Serializable]
     public struct AssetFreezeTxn
         : IAssetFreezeTxn
         , IEquatable<AssetFreezeTxn>
     {
+        [SerializeField]
         internal TransactionHeader header;
 
+        [SerializeField]
         Params @params;
 
         [AlgoApiField("fee", "fee")]
@@ -200,16 +204,20 @@ namespace AlgoSdk
         }
 
         [AlgoApiObject]
+        [Serializable]
         public struct Params
             : IEquatable<Params>
         {
             [AlgoApiField("address", "fadd")]
+            [Tooltip("The address of the account whose asset is being frozen or unfrozen.")]
             public Address FreezeAccount;
 
             [AlgoApiField("asset-id", "faid")]
+            [Tooltip("The asset ID being frozen or unfrozen.")]
             public ulong FreezeAsset;
 
             [AlgoApiField("new-freeze-status", "afrz")]
+            [Tooltip("True to freeze the asset.")]
             public Optional<bool> AssetFrozen;
 
             public bool Equals(Params other)

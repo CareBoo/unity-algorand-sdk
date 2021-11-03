@@ -8,6 +8,7 @@ namespace AlgoSdk
     /// This is used as a wrapper around <see cref="Transaction"/> for the Algorand API.
     /// </summary>
     [AlgoApiFormatter(typeof(SignedTransactionFormatter))]
+    [Serializable]
     public struct SignedTransaction
         : IEquatable<SignedTransaction>
     {
@@ -41,6 +42,7 @@ namespace AlgoSdk
     [AlgoApiFormatter(typeof(SignedTransactionFormatter<AssetTransferTxn>))]
     [AlgoApiFormatter(typeof(SignedTransactionFormatter<KeyRegTxn>))]
     [AlgoApiFormatter(typeof(SignedTransactionFormatter<PaymentTxn>))]
+    [Serializable]
     public struct Signed<TTransaction>
         : IEquatable<Signed<TTransaction>>
         where TTransaction : struct, ITransaction, IEquatable<TTransaction>

@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -6,6 +7,7 @@ namespace AlgoSdk
     /// Application state delta for an account <see cref="Address"/>.
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct AccountStateDelta
         : IEquatable<AccountStateDelta>
     {

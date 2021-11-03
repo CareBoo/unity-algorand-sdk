@@ -14,6 +14,7 @@ namespace AlgoSdk
         public static Optional<T> Empty => default;
 
         public T Value;
+
         public bool HasValue;
 
         public Optional(T value)

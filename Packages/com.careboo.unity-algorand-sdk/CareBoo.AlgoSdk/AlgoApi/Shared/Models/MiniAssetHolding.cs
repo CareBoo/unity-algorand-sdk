@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -6,6 +7,7 @@ namespace AlgoSdk
     /// A simplified version of AssetHolding
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct MiniAssetHolding
         : IEquatable<MiniAssetHolding>
     {
@@ -19,6 +21,7 @@ namespace AlgoSdk
         /// Whether or not this asset holding is currently deleted from its account.
         /// </summary>
         [AlgoApiField("deleted", null)]
+        [Tooltip("Whether or not this asset holding is currently deleted from its account.")]
         public Optional<bool> Deleted;
 
         [AlgoApiField("is-frozen", null)]
@@ -28,12 +31,14 @@ namespace AlgoSdk
         /// Round during which the account opted into the asset.
         /// </summary>
         [AlgoApiField("opted-in-at-round", null)]
+        [Tooltip("Round during which the account opted into the asset.")]
         public ulong OptedInAtRound;
 
         /// <summary>
         /// Round during which the account opted out of the asset.
         /// </summary>
         [AlgoApiField("opted-out-at-round", null)]
+        [Tooltip("Round during which the account opted out of the asset.")]
         public ulong OptedOutAtRound;
 
         public bool Equals(MiniAssetHolding other)

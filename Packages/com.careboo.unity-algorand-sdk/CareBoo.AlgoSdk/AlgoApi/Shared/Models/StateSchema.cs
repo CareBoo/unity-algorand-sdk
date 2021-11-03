@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -14,12 +15,14 @@ namespace AlgoSdk
         /// Maximum number of integer values that may be stored in the [global || local] application key/value store. Immutable.
         /// </summary>
         [AlgoApiField("num-byte-slice", "nbs")]
+        [Tooltip("Maximum number of integer values that may be stored in the [global || local] application key/value store. Immutable.")]
         public ulong NumByteSlices;
 
         /// <summary>
         /// Maximum number of byte slices values that may be stored in the [global || local] application key/value store. Immutable.
         /// </summary>
         [AlgoApiField("num-uint", "nui")]
+        [Tooltip("Maximum number of byte slices values that may be stored in the [global || local] application key/value store. Immutable.")]
         public ulong NumUints;
 
         public bool Equals(StateSchema other)

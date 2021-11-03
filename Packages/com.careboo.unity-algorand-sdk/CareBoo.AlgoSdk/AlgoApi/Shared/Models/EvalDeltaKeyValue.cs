@@ -7,6 +7,7 @@ namespace AlgoSdk
     /// EvalDeltaKeyValue
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct EvalDeltaKeyValue
         : IEquatable<EvalDeltaKeyValue>
     {

@@ -1,5 +1,6 @@
 using System;
 using Unity.Collections;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -7,6 +8,7 @@ namespace AlgoSdk
     /// DryrunTxnResult contains any <see cref="LogicSig"/> or ApplicationCall program debug information and state updates from a dryrun.
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct DryrunTxnResult
         : IEquatable<DryrunTxnResult>
     {
@@ -20,12 +22,14 @@ namespace AlgoSdk
         /// Execution cost of app call transaction
         /// </summary>
         [AlgoApiField("cost", null)]
+        [Tooltip("Execution cost of app call transaction")]
         public ulong Cost;
 
         /// <summary>
         /// Disassembled program line by line.
         /// </summary>
         [AlgoApiField("disassembly", null)]
+        [Tooltip("Disassembled program line by line.")]
         public FixedString128Bytes[] Disassembly;
 
         [AlgoApiField("global-delta", null)]

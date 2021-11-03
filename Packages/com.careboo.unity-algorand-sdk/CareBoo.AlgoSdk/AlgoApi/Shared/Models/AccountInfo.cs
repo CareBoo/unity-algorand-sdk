@@ -1,5 +1,6 @@
 using System;
 using Unity.Collections;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -15,42 +16,49 @@ namespace AlgoSdk
         /// The public key of the account.
         /// </summary>
         [AlgoApiField("address", null)]
+        [Tooltip("The public key of the account.")]
         public Address Address;
 
         /// <summary>
         /// The amount of microalgos belonging to this account including pending rewards.
         /// </summary>
         [AlgoApiField("amount", null)]
+        [Tooltip("The amount of microalgos belonging to this account including pending rewards.")]
         public ulong Amount;
 
         /// <summary>
         /// The amount of microalgos belonging to this account not including pending rewards.
         /// </summary>
         [AlgoApiField("amount-without-pending-rewards", null)]
+        [Tooltip("The amount of microalgos belonging to this account not including pending rewards.")]
         public ulong AmountWithoutPendingRewards;
 
         /// <summary>
         /// Local application data stored in this account.
         /// </summary>
         [AlgoApiField("apps-local-state", null)]
+        [Tooltip("Local application data stored in this account.")]
         public ApplicationLocalState[] ApplicationsLocalState;
 
         /// <summary>
         /// The total number of extra program pages for this account.
         /// </summary>
         [AlgoApiField("apps-total-extra-pages", null)]
+        [Tooltip("The total number of extra program pages for this account.")]
         public ulong ApplicationsTotalExtraPages;
 
         /// <summary>
         /// The sum of all local and global schemas in this account.
         /// </summary>
         [AlgoApiField("apps-total-schema", null)]
+        [Tooltip("The sum of all local and global schemas in this account.")]
         public StateSchema ApplicationsTotalSchema;
 
         /// <summary>
         /// Assets held by this account.
         /// </summary>
         [AlgoApiField("assets", null)]
+        [Tooltip("Assets held by this account.")]
         public AssetHolding[] Assets;
 
         /// <summary>
@@ -59,36 +67,42 @@ namespace AlgoSdk
         /// This field can be updated in any transaction by setting the RekeyTo field.
         /// </summary>
         [AlgoApiField("auth-addr", null)]
+        [Tooltip("The address against which signing should be checked. If empty, the address of the current account is used. This field can be updated in any transaction by setting the RekeyTo field.")]
         public Address AuthAddress;
 
         /// <summary>
         /// Round during which this account was most recently closed.
         /// </summary>
         [AlgoApiField("closed-at-round", null, readOnly: true)]
+        [Tooltip("Round during which this account was most recently closed.")]
         public ulong ClosedAtRound;
 
         /// <summary>
         /// Parameters of applications created by this account including app global data.
         /// </summary>
         [AlgoApiField("created-apps", null)]
+        [Tooltip("Parameters of applications created by this account including app global data.")]
         public Application[] CreatedApplications;
 
         /// <summary>
         /// Parameters of assets created by this account.
         /// </summary>
         [AlgoApiField("created-assets", null)]
+        [Tooltip("Parameters of assets created by this account.")]
         public Asset[] CreatedAssets;
 
         /// <summary>
         /// Round during which this account first appeared in a transaction.
         /// </summary>
         [AlgoApiField("created-at-round", null, readOnly: true)]
+        [Tooltip("Round during which this account first appeared in a transaction.")]
         public ulong CreatedAtRound;
 
         /// <summary>
         /// Whether or not this account is currently closed.
         /// </summary>
         [AlgoApiField("deleted", null, readOnly: true)]
+        [Tooltip("Whether or not this account is currently closed.")]
         public Optional<bool> Deleted;
 
         /// <summary>
@@ -101,24 +115,28 @@ namespace AlgoSdk
         /// Amount of MicroAlgos of pending rewards in this account.
         /// </summary>
         [AlgoApiField("pending-rewards", null)]
+        [Tooltip("Amount of MicroAlgos of pending rewards in this account.")]
         public ulong PendingRewards;
 
         /// <summary>
         /// Used as part of the rewards computation. Only applicable to accounts which are participating.
         /// </summary>
         [AlgoApiField("reward-base", null)]
+        [Tooltip("Used as part of the rewards computation. Only applicable to accounts which are participating.")]
         public ulong RewardBase;
 
         /// <summary>
         /// Total rewards of MicroAlgos the account has received, including pending rewards.
         /// </summary>
         [AlgoApiField("rewards", null)]
+        [Tooltip("Total rewards of MicroAlgos the account has received, including pending rewards.")]
         public ulong Rewards;
 
         /// <summary>
         /// The round for which this information is relevant.
         /// </summary>
         [AlgoApiField("round", null)]
+        [Tooltip("The round for which this information is relevant.")]
         public ulong Round;
 
         /// <summary>
@@ -130,6 +148,7 @@ namespace AlgoSdk
         /// </list>
         /// </summary>
         [AlgoApiField("sig-type", null)]
+        [Tooltip("Indicates what type of signature is used by this account")]
         public SignatureType SignatureType;
 
         /// <summary>
@@ -150,6 +169,7 @@ namespace AlgoSdk
         /// </list>
         /// </summary>
         [AlgoApiField("status", null)]
+        [Tooltip("Delegation status of the account's MicroAlgos")]
         public FixedString32Bytes Status;
 
         public bool Equals(AccountInfo other)

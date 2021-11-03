@@ -14,7 +14,6 @@ namespace AlgoSdk.Editor
     {
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
-            EditorGUI.BeginProperty(position, label, property);
             position = EditorGUI.PrefixLabel(position, label);
             var lengthProperty = property.FindPropertyRelative("utf8LengthInBytes");
             var byteProperties = new SerializedBytes(property);
@@ -38,7 +37,6 @@ namespace AlgoSdk.Editor
             finally
             {
                 text.Dispose();
-                EditorGUI.EndProperty();
             }
         }
     }

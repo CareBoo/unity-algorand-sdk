@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 using Unity.Collections.LowLevel.Unsafe;
+using UnityEditor;
 
 namespace AlgoSdk.Editor
 {
+    [CustomPropertyDrawer(typeof(Mnemonic))]
     public class MnemonicDrawer : BytesTextDrawer
     {
         protected unsafe override List<byte> GetBytes(string s)

@@ -34,9 +34,8 @@ namespace AlgoSdk.Editor
     {
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
-            EditorGUI.BeginProperty(position, label, property);
-            var byteProperties = new SerializedBytes(property);
             position = EditorGUI.PrefixLabel(position, label);
+            var byteProperties = new SerializedBytes(property);
             var text = GetString(byteProperties.GetBytes());
             text = EditorGUI.DelayedTextField(position, text);
             try
@@ -47,7 +46,6 @@ namespace AlgoSdk.Editor
             {
                 Debug.LogError($"Invalid input for property at {property.propertyPath}:\n{ex}");
             }
-            EditorGUI.EndProperty();
         }
 
         protected abstract string GetString(List<byte> bytes);

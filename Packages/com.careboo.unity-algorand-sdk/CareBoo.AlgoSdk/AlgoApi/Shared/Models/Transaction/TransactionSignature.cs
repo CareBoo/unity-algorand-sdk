@@ -6,6 +6,7 @@ namespace AlgoSdk
     /// An untyped wrapper around different transaction signatures.
     /// </summary>
     [AlgoApiObject]
+    [Serializable]
     public struct TransactionSignature
         : IEquatable<TransactionSignature>
     {
