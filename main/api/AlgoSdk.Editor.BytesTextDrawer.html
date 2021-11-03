@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class KeywordByteEnumFormatter&lt;T&gt;
+    <title>Class BytesTextDrawer
    | Unity Algorand SDK </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class KeywordByteEnumFormatter&lt;T&gt;
+    <meta name="title" content="Class BytesTextDrawer
    | Unity Algorand SDK ">
     <meta name="generator" content="docfx 2.58.5.0">
     
@@ -78,87 +78,39 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="AlgoSdk.Formatters.KeywordByteEnumFormatter`1">
+            <article class="content wrap" id="_content" data-uid="AlgoSdk.Editor.BytesTextDrawer">
   
   
-  <h1 id="AlgoSdk_Formatters_KeywordByteEnumFormatter_1" data-uid="AlgoSdk.Formatters.KeywordByteEnumFormatter`1" class="text-break">Class KeywordByteEnumFormatter&lt;T&gt;
+  <h1 id="AlgoSdk_Editor_BytesTextDrawer" data-uid="AlgoSdk.Editor.BytesTextDrawer" class="text-break">Class BytesTextDrawer
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">KeywordByteEnumFormatter&lt;T&gt;</span></div>
-      <div class="level2"><a class="xref" href="AlgoSdk.Formatters.AddressRoleFormatter.html">AddressRoleFormatter</a></div>
-      <div class="level2"><a class="xref" href="AlgoSdk.Formatters.OnCompletionFormatter.html">OnCompletionFormatter</a></div>
-      <div class="level2"><a class="xref" href="AlgoSdk.Formatters.SignatureTypeFormatter.html">SignatureTypeFormatter</a></div>
-      <div class="level2"><a class="xref" href="AlgoSdk.Formatters.TransactionTypeFormatter.html">TransactionTypeFormatter</a></div>
+    <div class="level1"><span class="xref">BytesTextDrawer</span></div>
+      <div class="level2"><a class="xref" href="AlgoSdk.Editor.Base32Drawer.html">Base32Drawer</a></div>
+      <div class="level2"><a class="xref" href="AlgoSdk.Editor.Base64Drawer.html">Base64Drawer</a></div>
+      <div class="level2"><a class="xref" href="AlgoSdk.Editor.BytesTextDrawer-1.html">BytesTextDrawer&lt;T&gt;</a></div>
+      <div class="level2"><a class="xref" href="AlgoSdk.Editor.MnemonicDrawer.html">MnemonicDrawer</a></div>
   </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="AlgoSdk.IAlgoApiFormatter-1.html">IAlgoApiFormatter</a>&lt;T&gt;</div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.Formatters.html">AlgoSdk.Formatters</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.Editor.html">AlgoSdk.Editor</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="AlgoSdk_Formatters_KeywordByteEnumFormatter_1_syntax">Syntax</h5>
+  <h5 id="AlgoSdk_Editor_BytesTextDrawer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class KeywordByteEnumFormatter&lt;T&gt; : IAlgoApiFormatter&lt;T&gt; where T : Enum</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class BytesTextDrawer : PropertyDrawer</code></pre>
   </div>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="constructors">Constructors
-  </h3>
-  
-  
-  <a id="AlgoSdk_Formatters_KeywordByteEnumFormatter_1__ctor_" data-uid="AlgoSdk.Formatters.KeywordByteEnumFormatter`1.#ctor*"></a>
-  <h4 id="AlgoSdk_Formatters_KeywordByteEnumFormatter_1__ctor_System_String___" data-uid="AlgoSdk.Formatters.KeywordByteEnumFormatter`1.#ctor(System.String[])">KeywordByteEnumFormatter(String[])</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KeywordByteEnumFormatter(string[] typeToString)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span>[]</td>
-        <td><span class="parametername">typeToString</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="AlgoSdk_Formatters_KeywordByteEnumFormatter_1_Deserialize_" data-uid="AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Deserialize*"></a>
-  <h4 id="AlgoSdk_Formatters_KeywordByteEnumFormatter_1_Deserialize_JsonReader__" data-uid="AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Deserialize(JsonReader@)">Deserialize(ref JsonReader)</h4>
+  <a id="AlgoSdk_Editor_BytesTextDrawer_GetBytes_" data-uid="AlgoSdk.Editor.BytesTextDrawer.GetBytes*"></a>
+  <h4 id="AlgoSdk_Editor_BytesTextDrawer_GetBytes_System_String_" data-uid="AlgoSdk.Editor.BytesTextDrawer.GetBytes(System.String)">GetBytes(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual T Deserialize(ref JsonReader reader)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract List&lt;byte&gt; GetBytes(string s)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -171,8 +123,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">JsonReader</span></td>
-        <td><span class="parametername">reader</span></td>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">s</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -187,20 +139,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
+        <td><span class="xref">List</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="AlgoSdk_Formatters_KeywordByteEnumFormatter_1_Deserialize_" data-uid="AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Deserialize*"></a>
-  <h4 id="AlgoSdk_Formatters_KeywordByteEnumFormatter_1_Deserialize_MessagePackReader__" data-uid="AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Deserialize(MessagePackReader@)">Deserialize(ref MessagePackReader)</h4>
+  <a id="AlgoSdk_Editor_BytesTextDrawer_GetString_" data-uid="AlgoSdk.Editor.BytesTextDrawer.GetString*"></a>
+  <h4 id="AlgoSdk_Editor_BytesTextDrawer_GetString_List_System_Byte__" data-uid="AlgoSdk.Editor.BytesTextDrawer.GetString(List{System.Byte})">GetString(List&lt;Byte&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual T Deserialize(ref MessagePackReader reader)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract string GetString(List&lt;byte&gt; bytes)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -213,8 +165,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">MessagePackReader</span></td>
-        <td><span class="parametername">reader</span></td>
+        <td><span class="xref">List</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="parametername">bytes</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -229,20 +181,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="AlgoSdk_Formatters_KeywordByteEnumFormatter_1_Serialize_" data-uid="AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Serialize*"></a>
-  <h4 id="AlgoSdk_Formatters_KeywordByteEnumFormatter_1_Serialize_JsonWriter___0_" data-uid="AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Serialize(JsonWriter@,`0)">Serialize(ref JsonWriter, T)</h4>
+  <a id="AlgoSdk_Editor_BytesTextDrawer_OnGUI_" data-uid="AlgoSdk.Editor.BytesTextDrawer.OnGUI*"></a>
+  <h4 id="AlgoSdk_Editor_BytesTextDrawer_OnGUI_Rect_SerializedProperty_GUIContent_" data-uid="AlgoSdk.Editor.BytesTextDrawer.OnGUI(Rect,SerializedProperty,GUIContent)">OnGUI(Rect, SerializedProperty, GUIContent)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void Serialize(ref JsonWriter writer, T value)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -255,53 +207,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">JsonWriter</span></td>
-        <td><span class="parametername">writer</span></td>
+        <td><span class="xref">Rect</span></td>
+        <td><span class="parametername">position</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_Formatters_KeywordByteEnumFormatter_1_Serialize_" data-uid="AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Serialize*"></a>
-  <h4 id="AlgoSdk_Formatters_KeywordByteEnumFormatter_1_Serialize_MessagePackWriter___0_" data-uid="AlgoSdk.Formatters.KeywordByteEnumFormatter`1.Serialize(MessagePackWriter@,`0)">Serialize(ref MessagePackWriter, T)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void Serialize(ref MessagePackWriter writer, T value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">MessagePackWriter</span></td>
-        <td><span class="parametername">writer</span></td>
+        <td><span class="xref">SerializedProperty</span></td>
+        <td><span class="parametername">property</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">value</span></td>
+        <td><span class="xref">GUIContent</span></td>
+        <td><span class="parametername">label</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="AlgoSdk.IAlgoApiFormatter-1.html">IAlgoApiFormatter&lt;T&gt;</a>
-  </div>
 </article>
           </div>
           
