@@ -55,7 +55,7 @@ namespace AlgoSdk.Formatters
 
         public virtual void Serialize(ref JsonWriter writer, T value)
         {
-            var b = UnsafeUtility.As<T, int>(ref value);
+            var b = UnsafeUtility.As<T, byte>(ref value);
             if (b == 0)
             {
                 writer.WriteNull();
@@ -67,7 +67,7 @@ namespace AlgoSdk.Formatters
 
         public virtual void Serialize(ref MessagePackWriter writer, T value)
         {
-            var b = UnsafeUtility.As<T, int>(ref value);
+            var b = UnsafeUtility.As<T, byte>(ref value);
             if (b == 0)
             {
                 writer.WriteNil();
