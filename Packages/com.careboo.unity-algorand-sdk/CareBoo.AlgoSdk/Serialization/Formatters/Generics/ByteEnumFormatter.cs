@@ -74,9 +74,6 @@ namespace AlgoSdk.Formatters
                 return;
             }
 
-            UnityEngine.Debug.Log(
-                $"Debugging {nameof(KeywordByteEnumFormatter<T>)}.{nameof(Serialize)}:\n" +
-                $"b: {b}\ns: {typeToString[b]}");
             writer.WriteString(typeToString[b]);
         }
     }
