@@ -5,6 +5,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [1.1.1-pre.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.1.0...v1.1.1-pre.1) (2021-11-05)
+
+
+### Bug Fixes
+
+* **logging:** remove unnecessary debug logs ([7550061](https://github.com/CareBoo/unity-algorand-sdk/commit/755006192bec926fff6b77249961de592845aaa1))
+* **msgpack:** fix enum serialization when using IL2CPP ([0c1a4d0](https://github.com/CareBoo/unity-algorand-sdk/commit/0c1a4d0a128baed173a60db3d1b9ee788c836e6b))
+* **plugins:** remove "lib" prefix from certain plugins ([0ecf98f](https://github.com/CareBoo/unity-algorand-sdk/commit/0ecf98f052b0f6a9c2fb1b376fd29d7e4578112e)), closes [#55](https://github.com/CareBoo/unity-algorand-sdk/issues/55)
+* **plugins:** remove unnecessary android static library plugin ([fc09b66](https://github.com/CareBoo/unity-algorand-sdk/commit/fc09b668dc4b58896678ccf51e70ed10f8f95383))
+
 # [1.1.0](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0...v1.1.0) (2021-11-03)
 
 
