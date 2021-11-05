@@ -2,11 +2,11 @@
   "sitemap": {
     "fileOptions": {
       "api/*": {
-        "baseUrl": "https://CareBoo.github.io/unity-algorand-sdk/1.1.0/",
+        "baseUrl": "https://CareBoo.github.io/unity-algorand-sdk/1.1.1-pre.1/",
         "changefreq": "daily"
       }
     },
-    "baseUrl": "https://CareBoo.github.io/unity-algorand-sdk/1.1.0/",
+    "baseUrl": "https://CareBoo.github.io/unity-algorand-sdk/1.1.1-pre.1/",
     "changefreq": "weekly"
   },
   "homepages": [],
@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "changelog/CHANGELOG.html",
-          "hash": "5boRPGZsCaULTx3xkEH6JJ6d+KjCL0wfeTAQjQfDSRU="
+          "hash": "4XT6MwiReeHoQXgJw6wVyxhHDe+eph6psZCwbRebAW0="
         }
       },
       "is_incremental": false,
