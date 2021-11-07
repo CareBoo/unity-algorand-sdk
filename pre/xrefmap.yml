@@ -1632,6 +1632,22 @@ references:
   fullName.vb: AlgoSdk.AlgoApiRequest.Sent(Of TProgress).GetAwaiter
   nameWithType: AlgoApiRequest.Sent<TProgress>.GetAwaiter
   nameWithType.vb: AlgoApiRequest.Sent(Of TProgress).GetAwaiter
+- uid: AlgoSdk.AlgoApiRequest.SetHeaders(AlgoSdk.Header[])
+  name: SetHeaders(Header[])
+  href: api/AlgoSdk.AlgoApiRequest.html#AlgoSdk_AlgoApiRequest_SetHeaders_AlgoSdk_Header___
+  commentId: M:AlgoSdk.AlgoApiRequest.SetHeaders(AlgoSdk.Header[])
+  name.vb: SetHeaders(Header())
+  fullName: AlgoSdk.AlgoApiRequest.SetHeaders(AlgoSdk.Header[])
+  fullName.vb: AlgoSdk.AlgoApiRequest.SetHeaders(AlgoSdk.Header())
+  nameWithType: AlgoApiRequest.SetHeaders(Header[])
+  nameWithType.vb: AlgoApiRequest.SetHeaders(Header())
+- uid: AlgoSdk.AlgoApiRequest.SetHeaders*
+  name: SetHeaders
+  href: api/AlgoSdk.AlgoApiRequest.html#AlgoSdk_AlgoApiRequest_SetHeaders_
+  commentId: Overload:AlgoSdk.AlgoApiRequest.SetHeaders
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiRequest.SetHeaders
+  nameWithType: AlgoApiRequest.SetHeaders
 - uid: AlgoSdk.AlgoApiRequest.SetJsonBody(NativeText)
   name: SetJsonBody(NativeText)
   href: api/AlgoSdk.AlgoApiRequest.html#AlgoSdk_AlgoApiRequest_SetJsonBody_NativeText_
@@ -2150,12 +2166,15 @@ references:
   commentId: T:AlgoSdk.AlgodClient
   fullName: AlgoSdk.AlgodClient
   nameWithType: AlgodClient
-- uid: AlgoSdk.AlgodClient.#ctor(System.String,System.String)
-  name: AlgodClient(String, String)
-  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient__ctor_System_String_System_String_
-  commentId: M:AlgoSdk.AlgodClient.#ctor(System.String,System.String)
-  fullName: AlgoSdk.AlgodClient.AlgodClient(System.String, System.String)
-  nameWithType: AlgodClient.AlgodClient(String, String)
+- uid: AlgoSdk.AlgodClient.#ctor(System.String,System.String,AlgoSdk.Header[])
+  name: AlgodClient(String, String, Header[])
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient__ctor_System_String_System_String_AlgoSdk_Header___
+  commentId: M:AlgoSdk.AlgodClient.#ctor(System.String,System.String,AlgoSdk.Header[])
+  name.vb: AlgodClient(String, String, Header())
+  fullName: AlgoSdk.AlgodClient.AlgodClient(System.String, System.String, AlgoSdk.Header[])
+  fullName.vb: AlgoSdk.AlgodClient.AlgodClient(System.String, System.String, AlgoSdk.Header())
+  nameWithType: AlgodClient.AlgodClient(String, String, Header[])
+  nameWithType.vb: AlgodClient.AlgodClient(String, String, Header())
 - uid: AlgoSdk.AlgodClient.#ctor*
   name: AlgodClient
   href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient__ctor_
@@ -2410,6 +2429,19 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AlgodClient.GetVersions
   nameWithType: AlgodClient.GetVersions
+- uid: AlgoSdk.AlgodClient.Headers
+  name: Headers
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_Headers
+  commentId: P:AlgoSdk.AlgodClient.Headers
+  fullName: AlgoSdk.AlgodClient.Headers
+  nameWithType: AlgodClient.Headers
+- uid: AlgoSdk.AlgodClient.Headers*
+  name: Headers
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_Headers_
+  commentId: Overload:AlgoSdk.AlgodClient.Headers
+  isSpec: "True"
+  fullName: AlgoSdk.AlgodClient.Headers
+  nameWithType: AlgodClient.Headers
 - uid: AlgoSdk.AlgodClient.RegisterParticipationKeys(System.String,System.UInt64,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.Boolean})
   name: RegisterParticipationKeys(String, UInt64, Optional<UInt64>, Optional<Boolean>, Optional<Boolean>)
   href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_RegisterParticipationKeys_System_String_System_UInt64_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_Boolean__
@@ -9199,62 +9231,6 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Formatters.StringFormatter.Serialize
   nameWithType: StringFormatter.Serialize
-- uid: AlgoSdk.Formatters.TealValueFormatter
-  name: TealValueFormatter
-  href: api/AlgoSdk.Formatters.TealValueFormatter.html
-  commentId: T:AlgoSdk.Formatters.TealValueFormatter
-  fullName: AlgoSdk.Formatters.TealValueFormatter
-  nameWithType: TealValueFormatter
-- uid: AlgoSdk.Formatters.TealValueFormatter.Deserialize(JsonReader@)
-  name: Deserialize(ref JsonReader)
-  href: api/AlgoSdk.Formatters.TealValueFormatter.html#AlgoSdk_Formatters_TealValueFormatter_Deserialize_JsonReader__
-  commentId: M:AlgoSdk.Formatters.TealValueFormatter.Deserialize(JsonReader@)
-  name.vb: Deserialize(ByRef JsonReader)
-  fullName: AlgoSdk.Formatters.TealValueFormatter.Deserialize(ref JsonReader)
-  fullName.vb: AlgoSdk.Formatters.TealValueFormatter.Deserialize(ByRef JsonReader)
-  nameWithType: TealValueFormatter.Deserialize(ref JsonReader)
-  nameWithType.vb: TealValueFormatter.Deserialize(ByRef JsonReader)
-- uid: AlgoSdk.Formatters.TealValueFormatter.Deserialize(MessagePackReader@)
-  name: Deserialize(ref MessagePackReader)
-  href: api/AlgoSdk.Formatters.TealValueFormatter.html#AlgoSdk_Formatters_TealValueFormatter_Deserialize_MessagePackReader__
-  commentId: M:AlgoSdk.Formatters.TealValueFormatter.Deserialize(MessagePackReader@)
-  name.vb: Deserialize(ByRef MessagePackReader)
-  fullName: AlgoSdk.Formatters.TealValueFormatter.Deserialize(ref MessagePackReader)
-  fullName.vb: AlgoSdk.Formatters.TealValueFormatter.Deserialize(ByRef MessagePackReader)
-  nameWithType: TealValueFormatter.Deserialize(ref MessagePackReader)
-  nameWithType.vb: TealValueFormatter.Deserialize(ByRef MessagePackReader)
-- uid: AlgoSdk.Formatters.TealValueFormatter.Deserialize*
-  name: Deserialize
-  href: api/AlgoSdk.Formatters.TealValueFormatter.html#AlgoSdk_Formatters_TealValueFormatter_Deserialize_
-  commentId: Overload:AlgoSdk.Formatters.TealValueFormatter.Deserialize
-  isSpec: "True"
-  fullName: AlgoSdk.Formatters.TealValueFormatter.Deserialize
-  nameWithType: TealValueFormatter.Deserialize
-- uid: AlgoSdk.Formatters.TealValueFormatter.Serialize(JsonWriter@,AlgoSdk.TealValue)
-  name: Serialize(ref JsonWriter, TealValue)
-  href: api/AlgoSdk.Formatters.TealValueFormatter.html#AlgoSdk_Formatters_TealValueFormatter_Serialize_JsonWriter__AlgoSdk_TealValue_
-  commentId: M:AlgoSdk.Formatters.TealValueFormatter.Serialize(JsonWriter@,AlgoSdk.TealValue)
-  name.vb: Serialize(ByRef JsonWriter, TealValue)
-  fullName: AlgoSdk.Formatters.TealValueFormatter.Serialize(ref JsonWriter, AlgoSdk.TealValue)
-  fullName.vb: AlgoSdk.Formatters.TealValueFormatter.Serialize(ByRef JsonWriter, AlgoSdk.TealValue)
-  nameWithType: TealValueFormatter.Serialize(ref JsonWriter, TealValue)
-  nameWithType.vb: TealValueFormatter.Serialize(ByRef JsonWriter, TealValue)
-- uid: AlgoSdk.Formatters.TealValueFormatter.Serialize(MessagePackWriter@,AlgoSdk.TealValue)
-  name: Serialize(ref MessagePackWriter, TealValue)
-  href: api/AlgoSdk.Formatters.TealValueFormatter.html#AlgoSdk_Formatters_TealValueFormatter_Serialize_MessagePackWriter__AlgoSdk_TealValue_
-  commentId: M:AlgoSdk.Formatters.TealValueFormatter.Serialize(MessagePackWriter@,AlgoSdk.TealValue)
-  name.vb: Serialize(ByRef MessagePackWriter, TealValue)
-  fullName: AlgoSdk.Formatters.TealValueFormatter.Serialize(ref MessagePackWriter, AlgoSdk.TealValue)
-  fullName.vb: AlgoSdk.Formatters.TealValueFormatter.Serialize(ByRef MessagePackWriter, AlgoSdk.TealValue)
-  nameWithType: TealValueFormatter.Serialize(ref MessagePackWriter, TealValue)
-  nameWithType.vb: TealValueFormatter.Serialize(ByRef MessagePackWriter, TealValue)
-- uid: AlgoSdk.Formatters.TealValueFormatter.Serialize*
-  name: Serialize
-  href: api/AlgoSdk.Formatters.TealValueFormatter.html#AlgoSdk_Formatters_TealValueFormatter_Serialize_
-  commentId: Overload:AlgoSdk.Formatters.TealValueFormatter.Serialize
-  isSpec: "True"
-  fullName: AlgoSdk.Formatters.TealValueFormatter.Serialize
-  nameWithType: TealValueFormatter.Serialize
 - uid: AlgoSdk.Formatters.TransactionIdFormatter
   name: TransactionIdFormatter
   href: api/AlgoSdk.Formatters.TransactionIdFormatter.html
@@ -9828,6 +9804,81 @@ references:
   commentId: F:AlgoSdk.GenesisInformation.rwd
   fullName: AlgoSdk.GenesisInformation.rwd
   nameWithType: GenesisInformation.rwd
+- uid: AlgoSdk.Header
+  name: Header
+  href: api/AlgoSdk.Header.html
+  commentId: T:AlgoSdk.Header
+  fullName: AlgoSdk.Header
+  nameWithType: Header
+- uid: AlgoSdk.Header.#ctor(System.String,System.String)
+  name: Header(String, String)
+  href: api/AlgoSdk.Header.html#AlgoSdk_Header__ctor_System_String_System_String_
+  commentId: M:AlgoSdk.Header.#ctor(System.String,System.String)
+  fullName: AlgoSdk.Header.Header(System.String, System.String)
+  nameWithType: Header.Header(String, String)
+- uid: AlgoSdk.Header.#ctor*
+  name: Header
+  href: api/AlgoSdk.Header.html#AlgoSdk_Header__ctor_
+  commentId: Overload:AlgoSdk.Header.#ctor
+  isSpec: "True"
+  fullName: AlgoSdk.Header.Header
+  nameWithType: Header.Header
+- uid: AlgoSdk.Header.Deconstruct(System.String@,System.String@)
+  name: Deconstruct(out String, out String)
+  href: api/AlgoSdk.Header.html#AlgoSdk_Header_Deconstruct_System_String__System_String__
+  commentId: M:AlgoSdk.Header.Deconstruct(System.String@,System.String@)
+  name.vb: Deconstruct(ByRef String, ByRef String)
+  fullName: AlgoSdk.Header.Deconstruct(out System.String, out System.String)
+  fullName.vb: AlgoSdk.Header.Deconstruct(ByRef System.String, ByRef System.String)
+  nameWithType: Header.Deconstruct(out String, out String)
+  nameWithType.vb: Header.Deconstruct(ByRef String, ByRef String)
+- uid: AlgoSdk.Header.Deconstruct*
+  name: Deconstruct
+  href: api/AlgoSdk.Header.html#AlgoSdk_Header_Deconstruct_
+  commentId: Overload:AlgoSdk.Header.Deconstruct
+  isSpec: "True"
+  fullName: AlgoSdk.Header.Deconstruct
+  nameWithType: Header.Deconstruct
+- uid: AlgoSdk.Header.Key
+  name: Key
+  href: api/AlgoSdk.Header.html#AlgoSdk_Header_Key
+  commentId: F:AlgoSdk.Header.Key
+  fullName: AlgoSdk.Header.Key
+  nameWithType: Header.Key
+- uid: AlgoSdk.Header.op_Implicit(AlgoSdk.Header)~System.ValueTuple{System.String,System.String}
+  name: Implicit(Header to (String, String))
+  href: api/AlgoSdk.Header.html#AlgoSdk_Header_op_Implicit_AlgoSdk_Header__System_ValueTuple_System_String_System_String_
+  commentId: M:AlgoSdk.Header.op_Implicit(AlgoSdk.Header)~System.ValueTuple{System.String,System.String}
+  name.vb: Widening(Header to (String, String)(Of String, String))
+  fullName: AlgoSdk.Header.Implicit(AlgoSdk.Header to System.ValueTuple<System.String, System.String>)
+  fullName.vb: AlgoSdk.Header.Widening(AlgoSdk.Header to System.ValueTuple(Of System.String, System.String))
+  nameWithType: Header.Implicit(Header to (String, String))
+  nameWithType.vb: Header.Widening(Header to (String, String)(Of String, String))
+- uid: AlgoSdk.Header.op_Implicit(System.ValueTuple{System.String,System.String})~AlgoSdk.Header
+  name: Implicit((String, String) to Header)
+  href: api/AlgoSdk.Header.html#AlgoSdk_Header_op_Implicit_System_ValueTuple_System_String_System_String___AlgoSdk_Header
+  commentId: M:AlgoSdk.Header.op_Implicit(System.ValueTuple{System.String,System.String})~AlgoSdk.Header
+  name.vb: Widening((String, String)(Of String, String) to Header)
+  fullName: AlgoSdk.Header.Implicit(System.ValueTuple<System.String, System.String> to AlgoSdk.Header)
+  fullName.vb: AlgoSdk.Header.Widening(System.ValueTuple(Of System.String, System.String) to AlgoSdk.Header)
+  nameWithType: Header.Implicit((String, String) to Header)
+  nameWithType.vb: Header.Widening((String, String)(Of String, String) to Header)
+- uid: AlgoSdk.Header.op_Implicit*
+  name: Implicit
+  href: api/AlgoSdk.Header.html#AlgoSdk_Header_op_Implicit_
+  commentId: Overload:AlgoSdk.Header.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: AlgoSdk.Header.Implicit
+  fullName.vb: AlgoSdk.Header.Widening
+  nameWithType: Header.Implicit
+  nameWithType.vb: Header.Widening
+- uid: AlgoSdk.Header.Value
+  name: Value
+  href: api/AlgoSdk.Header.html#AlgoSdk_Header_Value
+  commentId: F:AlgoSdk.Header.Value
+  fullName: AlgoSdk.Header.Value
+  nameWithType: Header.Value
 - uid: AlgoSdk.HealthCheck
   name: HealthCheck
   href: api/AlgoSdk.HealthCheck.html
@@ -9908,6 +9959,19 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.IAlgoApiClient.Address
   nameWithType: IAlgoApiClient.Address
+- uid: AlgoSdk.IAlgoApiClient.Headers
+  name: Headers
+  href: api/AlgoSdk.IAlgoApiClient.html#AlgoSdk_IAlgoApiClient_Headers
+  commentId: P:AlgoSdk.IAlgoApiClient.Headers
+  fullName: AlgoSdk.IAlgoApiClient.Headers
+  nameWithType: IAlgoApiClient.Headers
+- uid: AlgoSdk.IAlgoApiClient.Headers*
+  name: Headers
+  href: api/AlgoSdk.IAlgoApiClient.html#AlgoSdk_IAlgoApiClient_Headers_
+  commentId: Overload:AlgoSdk.IAlgoApiClient.Headers
+  isSpec: "True"
+  fullName: AlgoSdk.IAlgoApiClient.Headers
+  nameWithType: IAlgoApiClient.Headers
 - uid: AlgoSdk.IAlgoApiClient.Token
   name: Token
   href: api/AlgoSdk.IAlgoApiClient.html#AlgoSdk_IAlgoApiClient_Token
@@ -11748,12 +11812,15 @@ references:
   commentId: T:AlgoSdk.IndexerClient
   fullName: AlgoSdk.IndexerClient
   nameWithType: IndexerClient
-- uid: AlgoSdk.IndexerClient.#ctor(System.String,System.String)
-  name: IndexerClient(String, String)
-  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient__ctor_System_String_System_String_
-  commentId: M:AlgoSdk.IndexerClient.#ctor(System.String,System.String)
-  fullName: AlgoSdk.IndexerClient.IndexerClient(System.String, System.String)
-  nameWithType: IndexerClient.IndexerClient(String, String)
+- uid: AlgoSdk.IndexerClient.#ctor(System.String,System.String,AlgoSdk.Header[])
+  name: IndexerClient(String, String, Header[])
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient__ctor_System_String_System_String_AlgoSdk_Header___
+  commentId: M:AlgoSdk.IndexerClient.#ctor(System.String,System.String,AlgoSdk.Header[])
+  name.vb: IndexerClient(String, String, Header())
+  fullName: AlgoSdk.IndexerClient.IndexerClient(System.String, System.String, AlgoSdk.Header[])
+  fullName.vb: AlgoSdk.IndexerClient.IndexerClient(System.String, System.String, AlgoSdk.Header())
+  nameWithType: IndexerClient.IndexerClient(String, String, Header[])
+  nameWithType.vb: IndexerClient.IndexerClient(String, String, Header())
 - uid: AlgoSdk.IndexerClient.#ctor*
   name: IndexerClient
   href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient__ctor_
@@ -11973,6 +12040,19 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.IndexerClient.GetTransactions
   nameWithType: IndexerClient.GetTransactions
+- uid: AlgoSdk.IndexerClient.Headers
+  name: Headers
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_Headers
+  commentId: P:AlgoSdk.IndexerClient.Headers
+  fullName: AlgoSdk.IndexerClient.Headers
+  nameWithType: IndexerClient.Headers
+- uid: AlgoSdk.IndexerClient.Headers*
+  name: Headers
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_Headers_
+  commentId: Overload:AlgoSdk.IndexerClient.Headers
+  isSpec: "True"
+  fullName: AlgoSdk.IndexerClient.Headers
+  nameWithType: IndexerClient.Headers
 - uid: AlgoSdk.IndexerClient.Token
   name: Token
   href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_Token
@@ -13516,12 +13596,15 @@ references:
   commentId: T:AlgoSdk.KmdClient
   fullName: AlgoSdk.KmdClient
   nameWithType: KmdClient
-- uid: AlgoSdk.KmdClient.#ctor(System.String,System.String)
-  name: KmdClient(String, String)
-  href: api/AlgoSdk.KmdClient.html#AlgoSdk_KmdClient__ctor_System_String_System_String_
-  commentId: M:AlgoSdk.KmdClient.#ctor(System.String,System.String)
-  fullName: AlgoSdk.KmdClient.KmdClient(System.String, System.String)
-  nameWithType: KmdClient.KmdClient(String, String)
+- uid: AlgoSdk.KmdClient.#ctor(System.String,System.String,AlgoSdk.Header[])
+  name: KmdClient(String, String, Header[])
+  href: api/AlgoSdk.KmdClient.html#AlgoSdk_KmdClient__ctor_System_String_System_String_AlgoSdk_Header___
+  commentId: M:AlgoSdk.KmdClient.#ctor(System.String,System.String,AlgoSdk.Header[])
+  name.vb: KmdClient(String, String, Header())
+  fullName: AlgoSdk.KmdClient.KmdClient(System.String, System.String, AlgoSdk.Header[])
+  fullName.vb: AlgoSdk.KmdClient.KmdClient(System.String, System.String, AlgoSdk.Header())
+  nameWithType: KmdClient.KmdClient(String, String, Header[])
+  nameWithType.vb: KmdClient.KmdClient(String, String, Header())
 - uid: AlgoSdk.KmdClient.#ctor*
   name: KmdClient
   href: api/AlgoSdk.KmdClient.html#AlgoSdk_KmdClient__ctor_
@@ -13649,6 +13732,19 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.KmdClient.GetSwaggerSpec
   nameWithType: KmdClient.GetSwaggerSpec
+- uid: AlgoSdk.KmdClient.Headers
+  name: Headers
+  href: api/AlgoSdk.KmdClient.html#AlgoSdk_KmdClient_Headers
+  commentId: P:AlgoSdk.KmdClient.Headers
+  fullName: AlgoSdk.KmdClient.Headers
+  nameWithType: KmdClient.Headers
+- uid: AlgoSdk.KmdClient.Headers*
+  name: Headers
+  href: api/AlgoSdk.KmdClient.html#AlgoSdk_KmdClient_Headers_
+  commentId: Overload:AlgoSdk.KmdClient.Headers
+  isSpec: "True"
+  fullName: AlgoSdk.KmdClient.Headers
+  nameWithType: KmdClient.Headers
 - uid: AlgoSdk.KmdClient.ImportKey(AlgoSdk.PrivateKey,FixedString128Bytes)
   name: ImportKey(PrivateKey, FixedString128Bytes)
   href: api/AlgoSdk.KmdClient.html#AlgoSdk_KmdClient_ImportKey_AlgoSdk_PrivateKey_FixedString128Bytes_
@@ -30715,14 +30811,7 @@ references:
 - uid: AlgoSdk.TealValue.Bytes
   name: Bytes
   href: api/AlgoSdk.TealValue.html#AlgoSdk_TealValue_Bytes
-  commentId: P:AlgoSdk.TealValue.Bytes
-  fullName: AlgoSdk.TealValue.Bytes
-  nameWithType: TealValue.Bytes
-- uid: AlgoSdk.TealValue.Bytes*
-  name: Bytes
-  href: api/AlgoSdk.TealValue.html#AlgoSdk_TealValue_Bytes_
-  commentId: Overload:AlgoSdk.TealValue.Bytes
-  isSpec: "True"
+  commentId: F:AlgoSdk.TealValue.Bytes
   fullName: AlgoSdk.TealValue.Bytes
   nameWithType: TealValue.Bytes
 - uid: AlgoSdk.TealValue.Equals(AlgoSdk.TealValue)
@@ -30744,19 +30833,12 @@ references:
   commentId: F:AlgoSdk.TealValue.Type
   fullName: AlgoSdk.TealValue.Type
   nameWithType: TealValue.Type
-- uid: AlgoSdk.TealValue.Uint
-  name: Uint
-  href: api/AlgoSdk.TealValue.html#AlgoSdk_TealValue_Uint
-  commentId: P:AlgoSdk.TealValue.Uint
-  fullName: AlgoSdk.TealValue.Uint
-  nameWithType: TealValue.Uint
-- uid: AlgoSdk.TealValue.Uint*
-  name: Uint
-  href: api/AlgoSdk.TealValue.html#AlgoSdk_TealValue_Uint_
-  commentId: Overload:AlgoSdk.TealValue.Uint
-  isSpec: "True"
-  fullName: AlgoSdk.TealValue.Uint
-  nameWithType: TealValue.Uint
+- uid: AlgoSdk.TealValue.UintValue
+  name: UintValue
+  href: api/AlgoSdk.TealValue.html#AlgoSdk_TealValue_UintValue
+  commentId: F:AlgoSdk.TealValue.UintValue
+  fullName: AlgoSdk.TealValue.UintValue
+  nameWithType: TealValue.UintValue
 - uid: AlgoSdk.TealValueType
   name: TealValueType
   href: api/AlgoSdk.TealValueType.html
