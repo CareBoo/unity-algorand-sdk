@@ -58,7 +58,7 @@ namespace AlgoSdk
                 $"\terror: {completedRequest.error}\n" +
                 $"\tmethod: {completedRequest.method}\n" +
                 $"\tdownloadHandler.error: {completedRequest.downloadHandler?.error}" +
-                $"\tGetResponseHeaders(): {{\n\t\t{string.Join(",\n\t\t", completedRequest.GetResponseHeaders().Select(kvp => $"{kvp.Key}: {kvp.Value}"))}\n\t}}"
+                $"\tGetResponseHeaders(): {{\n\t\t{string.Join(",\n\t\t", completedRequest.GetResponseHeaders()?.Select(kvp => $"{kvp.Key}: {kvp.Value}"))}\n\t}}"
             );
         }
 

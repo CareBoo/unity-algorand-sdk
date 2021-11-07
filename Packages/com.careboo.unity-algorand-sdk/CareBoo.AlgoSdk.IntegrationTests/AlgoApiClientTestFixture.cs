@@ -92,7 +92,7 @@ public abstract class AlgoApiClientTestFixture
     async static UniTask CheckAlgodService()
     {
         if (string.IsNullOrWhiteSpace(AlgoApiClientSettings.Algod.Address))
-            return;
+            Assert.Ignore("Ignoring test because Algod Service has no Address.");
         var healthResponse = await AlgoApiClientSettings.Algod.GetHealth();
         if (healthResponse.Status != UnityWebRequest.Result.Success)
             Assert.Ignore($"Ignoring test because of {healthResponse.Status}: {healthResponse.ResponseCode} when trying to check health of algod service\nError:\n{healthResponse.Error}");
@@ -112,7 +112,7 @@ public abstract class AlgoApiClientTestFixture
     async static UniTask CheckIndexerService()
     {
         if (string.IsNullOrWhiteSpace(AlgoApiClientSettings.Indexer.Address))
-            return;
+            Assert.Ignore("Ignoring test because Indexer Service has no Address.");
         var healthResponse = await AlgoApiClientSettings.Indexer.GetHealth();
         if (healthResponse.Status != UnityWebRequest.Result.Success)
             Assert.Ignore($"Ignoring test because of {healthResponse.Status}: {healthResponse.ResponseCode} when trying to check health of indexer service");
@@ -127,7 +127,7 @@ public abstract class AlgoApiClientTestFixture
     async static UniTask CheckKmdService()
     {
         if (string.IsNullOrWhiteSpace(AlgoApiClientSettings.Kmd.Address))
-            return;
+            Assert.Ignore("Ignoring test because Kmd Service has no Address.");
         var healthResponse = await AlgoApiClientSettings.Kmd.Versions();
         if (healthResponse.Status != UnityWebRequest.Result.Success)
             Assert.Ignore($"Ignoring test because of {healthResponse.Status}: {healthResponse.ResponseCode} when trying to check health of kmd service");

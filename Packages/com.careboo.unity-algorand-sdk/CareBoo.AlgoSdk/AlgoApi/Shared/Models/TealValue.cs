@@ -1,5 +1,4 @@
 using System;
-using System.Runtime.InteropServices;
 using AlgoSdk.Formatters;
 using AlgoSdk.LowLevel;
 using UnityEngine;
@@ -20,8 +19,7 @@ namespace AlgoSdk
     /// <summary>
     /// Represents a TEAL value.
     /// </summary>
-    [StructLayout(LayoutKind.Explicit)]
-    [AlgoApiFormatter(typeof(TealValueFormatter))]
+    [AlgoApiObject]
     [Serializable]
     public struct TealValue
         : IEquatable<TealValue>
@@ -29,51 +27,23 @@ namespace AlgoSdk
         /// <summary>
         /// [tb] bytes value.
         /// </summary>
-        [FieldOffset(0), SerializeField] TealBytes bytes;
+        [AlgoApiField("bytes", "tb")]
+        [SerializeField]
+        public TealBytes Bytes;
 
         /// <summary>
         /// [ui] uint value.
         /// </summary>
-        [FieldOffset(0), SerializeField] ulong uintValue;
+        [AlgoApiField("uint", "ui")]
+        [SerializeField]
+        public ulong UintValue;
 
         /// <summary>
         /// See <see cref="TealValueType"/>
         /// </summary>
-        [FieldOffset(64)] public TealValueType Type;
-
-        public TealBytes Bytes
-        {
-            get
-            {
-                if (Type != TealValueType.Bytes)
-                    throw new NotSupportedException(
-                        $"You cannot access {nameof(TealValue)}.{nameof(Bytes)} when {nameof(TealValue)}.{nameof(Type)} == {Type}"
-                    );
-                return bytes;
-            }
-            set
-            {
-                Type = TealValueType.Bytes;
-                bytes = value;
-            }
-        }
-
-        public ulong Uint
-        {
-            get
-            {
-                if (Type != TealValueType.Uint)
-                    throw new NotSupportedException(
-                        $"You cannot access {nameof(TealValue)}.{nameof(Uint)} when {nameof(TealValue)}.{nameof(Type)} == {Type}"
-                    );
-                return uintValue;
-            }
-            set
-            {
-                Type = TealValueType.Uint;
-                uintValue = value;
-            }
-        }
+        [AlgoApiField("type", "tt")]
+        [SerializeField]
+        public TealValueType Type;
 
         public bool Equals(TealValue other)
         {
@@ -81,8 +51,8 @@ namespace AlgoSdk
 
             return Type switch
             {
-                TealValueType.Bytes => bytes.Equals(other.bytes),
-                TealValueType.Uint => uintValue == other.uintValue,
+                TealValueType.Bytes => Bytes.Equals(other.Bytes),
+                TealValueType.Uint => UintValue == other.UintValue,
                 _ => true
             };
         }
@@ -94,8 +64,8 @@ namespace AlgoSdk
         : IEquatable<TealBytes>
         , IByteArray
     {
-        public const int SizeBytes = 64;
-        public FixedBytes64 Bytes;
+        public const int SizeBytes = 128;
+        public FixedBytes128 Bytes;
         public byte this[int index] { get => this.GetByteAt(index); set => this.SetByteAt(index, value); }
 
         public unsafe void* GetUnsafePtr()
