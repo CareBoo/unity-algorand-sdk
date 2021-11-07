@@ -3553,7 +3553,19 @@
       "output": {
         ".html": {
           "relative_path": "manual/toc.html",
-          "hash": "ACkLHOaDg3ZinHSC53K86GG+6IbfXc+LHoO2OIpjJyQ="
+          "hash": "xEipxunBpGpekhStDUoMXa4FctnUoy1sdfM8w/irIQo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/troubleshooting.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/troubleshooting.html",
+          "hash": "Ov1elE2wlow4DTI11d3arHxstEOeSJxqhKxdbma/op0="
         }
       },
       "is_incremental": false,
@@ -3633,7 +3645,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 5,
+          "total_file_count": 6,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
