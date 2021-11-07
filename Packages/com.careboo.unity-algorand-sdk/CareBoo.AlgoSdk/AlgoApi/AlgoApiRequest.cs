@@ -36,6 +36,24 @@ namespace AlgoSdk
         }
 
         /// <summary>
+        /// Set additional headers on this request
+        /// </summary>
+        /// <param name="headers">The headers in format "key:value"</param>
+        /// <returns>this request with headers set</returns>
+        public AlgoApiRequest SetHeaders(params Header[] headers)
+        {
+            if (headers == null)
+                return this;
+
+            for (var i = 0; i < headers.Length; i++)
+            {
+                var (key, value) = headers[i];
+                unityWebRequest.SetRequestHeader(key, value);
+            }
+            return this;
+        }
+
+        /// <summary>
         /// Send the request.
         /// </summary>
         /// <param name="cancellationToken">An optional cancellation token</param>

@@ -19,16 +19,6 @@ public enum AlgoServices : byte
 [TestFixture]
 public abstract class AlgoApiClientTestFixture
 {
-    protected const string SandboxToken = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-
-    protected static readonly Mnemonic AccountMnemonic = "fluid eight extra cancel energy syrup pledge latin coral name vacant napkin beach script unfold weekend earn act attend student double potato west abandon shallow";
-
-    protected static readonly AlgodClient algod = new AlgodClient("http://localhost:4001", SandboxToken);
-
-    protected static readonly KmdClient kmd = new KmdClient("http://localhost:4002", SandboxToken);
-
-    protected static readonly IndexerClient indexer = new IndexerClient("http://localhost:8980", null);
-
     protected static void AssertOkay(ErrorResponse error)
     {
         Assert.IsFalse(error.IsError, error.Message);
@@ -46,20 +36,20 @@ public abstract class AlgoApiClientTestFixture
         ErrorResponse error = default;
         do
         {
-            (error, pending) = await algod.GetPendingTransaction(txid);
+            (error, pending) = await AlgoApiClientSettings.Algod.GetPendingTransaction(txid);
             AssertOkay(error);
         }
         while (pending.ConfirmedRound == 0 && await WaitMs(1000));
         return pending;
     }
 
-    protected static readonly PrivateKey AccountPrivateKey = AccountMnemonic.ToPrivateKey();
+    protected static readonly PrivateKey AccountPrivateKey = AlgoApiClientSettings.AccountMnemonic.ToPrivateKey();
 
     protected static async UniTask<TransactionIdResponse> MakePaymentTransaction(ulong amt)
     {
         using var keyPair = AccountPrivateKey
             .ToKeyPair();
-        var (error, txnParams) = await algod.GetSuggestedParams();
+        var (error, txnParams) = await AlgoApiClientSettings.Algod.GetSuggestedParams();
         AssertOkay(error);
         var txn = Transaction.Payment(
             sender: keyPair.PublicKey,
@@ -72,7 +62,7 @@ public abstract class AlgoApiClientTestFixture
         var serialized = AlgoApiSerializer.SerializeMessagePack(signedTxn, Allocator.Temp);
         Debug.Log(System.Convert.ToBase64String(serialized.ToArray()));
         TransactionIdResponse txidResponse = default;
-        (error, txidResponse) = await algod.SendTransaction(signedTxn);
+        (error, txidResponse) = await AlgoApiClientSettings.Algod.SendTransaction(signedTxn);
         AssertOkay(error);
         return txidResponse;
     }
@@ -101,17 +91,19 @@ public abstract class AlgoApiClientTestFixture
 
     async static UniTask CheckAlgodService()
     {
-        var healthResponse = await algod.GetHealth();
+        if (string.IsNullOrWhiteSpace(AlgoApiClientSettings.Algod.Address))
+            return;
+        var healthResponse = await AlgoApiClientSettings.Algod.GetHealth();
         if (healthResponse.Status != UnityWebRequest.Result.Success)
-            Assert.Ignore($"Ignoring test because of {healthResponse.Status}: {healthResponse.ResponseCode} when trying to check health of algod service");
+            Assert.Ignore($"Ignoring test because of {healthResponse.Status}: {healthResponse.ResponseCode} when trying to check health of algod service\nError:\n{healthResponse.Error}");
         var expected = "null\n";
         var actual = healthResponse.GetText();
         if (actual != expected)
             Assert.Ignore($"Ignoring test because algod is unhealthy:\n\"{actual}\"");
 
-        var (err, info) = await algod.GetAccountInformation(AccountMnemonic.ToPrivateKey().ToAddress());
+        var (err, info) = await AlgoApiClientSettings.Algod.GetAccountInformation(AlgoApiClientSettings.AccountMnemonic.ToPrivateKey().ToAddress());
         if (err)
-            Assert.Ignore($"Ignoring test because of error on {nameof(algod.GetAccountInformation)}:\n{err}");
+            Assert.Ignore($"Ignoring test because of error on {nameof(AlgoApiClientSettings.Algod.GetAccountInformation)}:\n{err}");
 
         if (info.Amount < 10_000)
             Assert.Ignore($"Ignoring test because account has less than the min algo");
@@ -119,7 +111,9 @@ public abstract class AlgoApiClientTestFixture
 
     async static UniTask CheckIndexerService()
     {
-        var healthResponse = await indexer.GetHealth();
+        if (string.IsNullOrWhiteSpace(AlgoApiClientSettings.Indexer.Address))
+            return;
+        var healthResponse = await AlgoApiClientSettings.Indexer.GetHealth();
         if (healthResponse.Status != UnityWebRequest.Result.Success)
             Assert.Ignore($"Ignoring test because of {healthResponse.Status}: {healthResponse.ResponseCode} when trying to check health of indexer service");
         var health = healthResponse.Payload;
@@ -132,7 +126,9 @@ public abstract class AlgoApiClientTestFixture
 
     async static UniTask CheckKmdService()
     {
-        var healthResponse = await kmd.Versions();
+        if (string.IsNullOrWhiteSpace(AlgoApiClientSettings.Kmd.Address))
+            return;
+        var healthResponse = await AlgoApiClientSettings.Kmd.Versions();
         if (healthResponse.Status != UnityWebRequest.Result.Success)
             Assert.Ignore($"Ignoring test because of {healthResponse.Status}: {healthResponse.ResponseCode} when trying to check health of kmd service");
     }

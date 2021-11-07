@@ -2,7 +2,10 @@
     "name": "CareBoo.AlgoSdk.CodeGen",
     "rootNamespace": "",
     "references": [
-        "CareBoo.AlgoSdk"
+        "CareBoo.AlgoSdk",
+        "CareBoo.AlgoSdk.IntegrationTests",
+        "CareBoo.AlgoSdk.Crypto",
+        "Unity.Collections"
     ],
     "includePlatforms": [
         "Editor"

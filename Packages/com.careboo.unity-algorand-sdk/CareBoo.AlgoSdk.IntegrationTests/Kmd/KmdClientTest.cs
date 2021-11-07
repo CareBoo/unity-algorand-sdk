@@ -17,14 +17,14 @@ public class KmdClientTest : KmdClientTestFixture
     [UnityTest]
     public IEnumerator GetSwaggerSpecShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var response = await kmd.GetSwaggerSpec();
+        var response = await AlgoApiClientSettings.Kmd.GetSwaggerSpec();
         AssertOkay(response.Error);
     });
 
     [UnityTest]
     public IEnumerator GetVersionsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var response = await kmd.Versions();
+        var response = await AlgoApiClientSettings.Kmd.Versions();
         AssertOkay(response.Error);
     });
 }

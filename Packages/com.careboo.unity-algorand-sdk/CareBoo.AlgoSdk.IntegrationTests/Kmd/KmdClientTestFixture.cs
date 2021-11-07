@@ -37,21 +37,21 @@ public abstract class KmdClientTestFixture : AlgoApiClientTestFixture
         {
             wallet = await CreateWallet();
         }
-        var initWalletHandleResponse = await kmd.InitWalletHandleToken(wallet.Id, WalletPassword);
+        var initWalletHandleResponse = await AlgoApiClientSettings.Kmd.InitWalletHandleToken(wallet.Id, WalletPassword);
         walletHandleToken = initWalletHandleResponse.Payload.WalletHandleToken;
     }
 
     protected async UniTask ReleaseWalletHandleToken()
     {
         if (walletHandleToken.Length > 0)
-            await kmd.ReleaseWalletHandleToken(walletHandleToken);
+            await AlgoApiClientSettings.Kmd.ReleaseWalletHandleToken(walletHandleToken);
         walletHandleToken.Clear();
         wallet = default;
     }
 
     static async UniTask<Wallet[]> ListWallets()
     {
-        var response = await kmd.ListWallets();
+        var response = await AlgoApiClientSettings.Kmd.ListWallets();
         if (response.Status != UnityWebRequest.Result.Success)
         {
             Assert.Ignore(
@@ -63,7 +63,7 @@ public abstract class KmdClientTestFixture : AlgoApiClientTestFixture
 
     static async UniTask<Wallet> CreateWallet()
     {
-        var response = await kmd.CreateWallet(
+        var response = await AlgoApiClientSettings.Kmd.CreateWallet(
             masterDerivationKey: AlgoSdk.Crypto.Random.Bytes<PrivateKey>(),
             walletDriverName: WalletDriverName,
             walletName: WalletName,

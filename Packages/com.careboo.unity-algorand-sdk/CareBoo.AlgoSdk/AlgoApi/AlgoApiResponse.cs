@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Linq;
 using System.Text;
 using UnityEngine.Networking;
 using static UnityEngine.Networking.UnityWebRequest;
@@ -56,7 +57,8 @@ namespace AlgoSdk
                 $"\tdownloadedData: {GetText(completedRequest.downloadHandler?.data, completedRequest.ParseResponseContentType())}\n" +
                 $"\terror: {completedRequest.error}\n" +
                 $"\tmethod: {completedRequest.method}\n" +
-                $"\tdownloadHandler.error: {completedRequest.downloadHandler?.error}"
+                $"\tdownloadHandler.error: {completedRequest.downloadHandler?.error}" +
+                $"\tGetResponseHeaders(): {{\n\t\t{string.Join(",\n\t\t", completedRequest.GetResponseHeaders().Select(kvp => $"{kvp.Key}: {kvp.Value}"))}\n\t}}"
             );
         }
 

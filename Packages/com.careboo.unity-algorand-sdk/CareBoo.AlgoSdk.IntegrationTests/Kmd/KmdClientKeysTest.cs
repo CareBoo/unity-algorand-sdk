@@ -9,14 +9,14 @@ public class KmdClientKeysTest : KmdClientTestFixture
 {
     protected async UniTask<Address> GenerateKey()
     {
-        var (error, keyResponse) = await kmd.GenerateKey(walletHandleToken: walletHandleToken);
+        var (error, keyResponse) = await AlgoApiClientSettings.Kmd.GenerateKey(walletHandleToken: walletHandleToken);
         AssertOkay(error);
         return keyResponse.Address;
     }
 
     protected async UniTask<AlgoApiResponse> DeleteKey(Address address)
     {
-        return await kmd.DeleteKey(
+        return await AlgoApiClientSettings.Kmd.DeleteKey(
             address: address,
             walletHandleToken: walletHandleToken,
             walletPassword: WalletPassword
@@ -35,7 +35,7 @@ public class KmdClientKeysTest : KmdClientTestFixture
     public IEnumerator ExportKeyShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var address = await GenerateKey();
-        var response = await kmd.ExportKey(address, walletHandleToken, WalletPassword);
+        var response = await AlgoApiClientSettings.Kmd.ExportKey(address, walletHandleToken, WalletPassword);
         AssertOkay(response.Error);
         await DeleteKey(address);
     });
@@ -43,14 +43,14 @@ public class KmdClientKeysTest : KmdClientTestFixture
     [UnityTest]
     public IEnumerator ExportMasterKeyShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var response = await kmd.ExportMasterKey(walletHandleToken, WalletPassword);
+        var response = await AlgoApiClientSettings.Kmd.ExportMasterKey(walletHandleToken, WalletPassword);
         AssertOkay(response.Error);
     });
 
     [UnityTest]
     public IEnumerator ImportKeyShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var (error, importKeyResponse) = await kmd.ImportKey(
+        var (error, importKeyResponse) = await AlgoApiClientSettings.Kmd.ImportKey(
             AlgoSdk.Crypto.Random.Bytes<PrivateKey>(),
             walletHandleToken
         );
@@ -62,7 +62,7 @@ public class KmdClientKeysTest : KmdClientTestFixture
     public IEnumerator ListKeysShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var address = await GenerateKey();
-        var (error, listKeysResponse) = await kmd.ListKeys(walletHandleToken);
+        var (error, listKeysResponse) = await AlgoApiClientSettings.Kmd.ListKeys(walletHandleToken);
         await DeleteKey(address);
         AssertOkay(error);
         var addresses = listKeysResponse.Addresses;

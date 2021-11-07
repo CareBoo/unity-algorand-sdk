@@ -26,7 +26,7 @@ public class KmdClientSigTest : KmdClientTestFixture
             Version = 1,
             Threshold = 2,
         };
-        var importResponse = await kmd.ImportMultisig(
+        var importResponse = await AlgoApiClientSettings.Kmd.ImportMultisig(
             publicKeys: msig.Subsigs.Select(x => x.PublicKey).ToArray(),
             version: msig.Version,
             threshold: msig.Threshold,
@@ -34,7 +34,7 @@ public class KmdClientSigTest : KmdClientTestFixture
         );
         msigAddress = importResponse.Payload.Address;
         var importKeys = await UniTask.WhenAll(
-            privateKeys.Select(key => kmd.ImportKey(key, walletHandleToken)).ToArray()
+            privateKeys.Select(key => AlgoApiClientSettings.Kmd.ImportKey(key, walletHandleToken)).ToArray()
         );
     }
 
@@ -42,9 +42,9 @@ public class KmdClientSigTest : KmdClientTestFixture
     {
         if (!msigAddress.Equals(default))
         {
-            await kmd.DeleteMultisig(msigAddress, walletHandleToken, WalletPassword);
+            await AlgoApiClientSettings.Kmd.DeleteMultisig(msigAddress, walletHandleToken, WalletPassword);
             await UniTask.WhenAll(
-                privateKeys.Select(key => kmd.DeleteKey(key.ToAddress(), walletHandleToken, WalletPassword))
+                privateKeys.Select(key => AlgoApiClientSettings.Kmd.DeleteKey(key.ToAddress(), walletHandleToken, WalletPassword))
             );
         }
         await base.TearDownAsync();
@@ -52,7 +52,7 @@ public class KmdClientSigTest : KmdClientTestFixture
 
     protected async UniTask<PaymentTxn> GetTransaction()
     {
-        var txnParams = (await algod.GetSuggestedParams()).Payload;
+        var txnParams = (await AlgoApiClientSettings.Algod.GetSuggestedParams()).Payload;
         return Transaction.Payment(
             sender: msigAddress,
             txnParams: txnParams,
@@ -64,14 +64,14 @@ public class KmdClientSigTest : KmdClientTestFixture
     [UnityTest]
     public IEnumerator ExportMultisigShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var response = await kmd.ExportMultisig(msigAddress, walletHandleToken);
+        var response = await AlgoApiClientSettings.Kmd.ExportMultisig(msigAddress, walletHandleToken);
         AssertOkay(response.Error);
     });
 
     [UnityTest]
     public IEnumerator ListMultisigShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var response = await kmd.ListMultisig(walletHandleToken);
+        var response = await AlgoApiClientSettings.Kmd.ListMultisig(walletHandleToken);
         AssertOkay(response.Error);
         var addresses = response.Payload.Addresses;
         Assert.IsTrue(addresses.Any(a => a.Equals(msigAddress)));
@@ -85,7 +85,7 @@ public class KmdClientSigTest : KmdClientTestFixture
         var txn = await GetTransaction();
         var pubKeyAddress = (Address)keyPair.PublicKey;
         var txnBytes = AlgoApiSerializer.SerializeMessagePack(txn);
-        var response = await kmd.SignMultisig(
+        var response = await AlgoApiClientSettings.Kmd.SignMultisig(
             msig: msig,
             publicKey: keyPair.PublicKey,
             transactionData: txnBytes,
@@ -104,7 +104,7 @@ public class KmdClientSigTest : KmdClientTestFixture
         var pubKeyAddress = (Address)keyPair.PublicKey;
         txn.Sender = keyPair.PublicKey;
         var txnBytes = AlgoApiSerializer.SerializeMessagePack(txn);
-        var response = await kmd.SignProgramMultisig(
+        var response = await AlgoApiClientSettings.Kmd.SignProgramMultisig(
             msigAccount: msigAddress,
             msig: msig,
             publicKey: keyPair.PublicKey,
@@ -121,7 +121,7 @@ public class KmdClientSigTest : KmdClientTestFixture
     {
         var txn = AlgoApiSerializer.SerializeMessagePack(await GetTransaction());
         Ed25519.PublicKey pk = privateKeys[0].ToPublicKey();
-        var signResponse = await kmd.SignTransaction(
+        var signResponse = await AlgoApiClientSettings.Kmd.SignTransaction(
             pk,
             txn,
             walletHandleToken,
@@ -135,7 +135,7 @@ public class KmdClientSigTest : KmdClientTestFixture
     {
         var txn = AlgoApiSerializer.SerializeMessagePack(await GetTransaction());
         Ed25519.PublicKey pk = privateKeys[0].ToPublicKey();
-        var signResponse = await kmd.SignProgram(pk, txn, walletHandleToken, WalletPassword);
+        var signResponse = await AlgoApiClientSettings.Kmd.SignProgram(pk, txn, walletHandleToken, WalletPassword);
         AssertOkay(signResponse.Error);
     });
 }
