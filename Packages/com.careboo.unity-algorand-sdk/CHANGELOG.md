@@ -5,6 +5,24 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [1.2.0-pre.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.1.1-pre.1...v1.2.0-pre.1) (2021-11-07)
+
+
+### Bug Fixes
+
+* **json:** fix MultiSig JSON format using incorrect field names ([83d0950](https://github.com/CareBoo/unity-algorand-sdk/commit/83d09509d990f6fdbc299733a3d2deea6e89d2c7))
+* **teal:** fix `TealValue` deserialization failing when both uint and bytes values included ([22cfcd0](https://github.com/CareBoo/unity-algorand-sdk/commit/22cfcd08cfef6ba25404a6123edca3d2aff9d6fe))
+
+
+### Features
+
+* **api:** add custom Request HTTP header support ([a6f51f8](https://github.com/CareBoo/unity-algorand-sdk/commit/a6f51f8df7bd2f61b3fcf02cbc61932d849d80aa)), closes [#58](https://github.com/CareBoo/unity-algorand-sdk/issues/58)
+
+
+### Performance Improvements
+
+* **plugins:** replace debug mode libsodium libraries with release mode ([d7638c8](https://github.com/CareBoo/unity-algorand-sdk/commit/d7638c8fbe36dfd0a07bca01df8c0b46131b30af)), closes [#55](https://github.com/CareBoo/unity-algorand-sdk/issues/55)
+
 ## [1.1.1-pre.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.1.0...v1.1.1-pre.1) (2021-11-05)
 
 
