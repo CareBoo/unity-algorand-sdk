@@ -9,13 +9,13 @@ namespace AlgoSdk
         : ISignature
         , IEquatable<Multisig>
     {
-        [AlgoApiField("subsig", "subsig")]
+        [AlgoApiField("subsignature", "subsig")]
         public Subsig[] Subsigs;
 
-        [AlgoApiField("thr", "thr")]
+        [AlgoApiField("threshold", "thr")]
         public byte Threshold;
 
-        [AlgoApiField("v", "v")]
+        [AlgoApiField("version", "v")]
         public byte Version;
 
         public bool Equals(Multisig other)
@@ -47,10 +47,10 @@ namespace AlgoSdk
         public struct Subsig
             : IEquatable<Subsig>
         {
-            [AlgoApiField("pk", "pk")]
+            [AlgoApiField("public-key", "pk")]
             public Ed25519.PublicKey PublicKey;
 
-            [AlgoApiField("s", "s")]
+            [AlgoApiField("signature", "s")]
             public Sig Sig;
 
             public bool Equals(Subsig other)

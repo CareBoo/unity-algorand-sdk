@@ -76,6 +76,13 @@ public class IndexerClientTest : IndexerClientTestFixture
         AssertOkay(response.Error);
     });
 
+    [UnityTest]
+    public IEnumerator GetLogicSigTransactionsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
+    {
+        var response = await AlgoApiClientSettings.Indexer.GetTransactions(sigType: SignatureType.LogicSig);
+        AssertOkay(response.Error);
+    });
+
 
     [UnityTest]
     public IEnumerator GetHealthShouldReturnOkay() => UniTask.ToCoroutine(async () =>

@@ -18,7 +18,7 @@ public abstract class KmdClientTestFixture : AlgoApiClientTestFixture
 
     protected override async UniTask SetUpAsync()
     {
-        await CheckServices();
+        CheckServices();
         await InitWalletHandleToken();
     }
 

@@ -4,9 +4,10 @@ public abstract class IndexerClientTestFixture : AlgoApiClientTestFixture
 {
     protected override AlgoServices RequiresServices => AlgoServices.Indexer | AlgoServices.Algod;
 
-    protected override async UniTask SetUpAsync()
+    protected override UniTask SetUpAsync()
     {
-        await CheckServices();
+        CheckServices();
+        return UniTask.CompletedTask;
     }
 
     protected override UniTask TearDownAsync() => UniTask.CompletedTask;

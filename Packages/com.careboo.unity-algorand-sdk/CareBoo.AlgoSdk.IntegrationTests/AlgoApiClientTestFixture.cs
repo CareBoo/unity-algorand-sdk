@@ -79,57 +79,31 @@ public abstract class AlgoApiClientTestFixture
 
     protected abstract UniTask TearDownAsync();
 
-    protected async UniTask CheckServices()
+    protected void CheckServices()
     {
         if (RequiresServices.HasFlag(AlgoServices.Algod))
-            await CheckAlgodService();
+            CheckAlgodService();
         if (RequiresServices.HasFlag(AlgoServices.Indexer))
-            await CheckIndexerService();
+            CheckIndexerService();
         if (RequiresServices.HasFlag(AlgoServices.Kmd))
-            await CheckKmdService();
+            CheckKmdService();
     }
 
-    async static UniTask CheckAlgodService()
+    static void CheckAlgodService()
     {
         if (string.IsNullOrWhiteSpace(AlgoApiClientSettings.Algod.Address))
             Assert.Ignore("Ignoring test because Algod Service has no Address.");
-        var healthResponse = await AlgoApiClientSettings.Algod.GetHealth();
-        if (healthResponse.Status != UnityWebRequest.Result.Success)
-            Assert.Ignore($"Ignoring test because of {healthResponse.Status}: {healthResponse.ResponseCode} when trying to check health of algod service\nError:\n{healthResponse.Error}");
-        var expected = "null\n";
-        var actual = healthResponse.GetText();
-        if (actual != expected)
-            Assert.Ignore($"Ignoring test because algod is unhealthy:\n\"{actual}\"");
-
-        var (err, info) = await AlgoApiClientSettings.Algod.GetAccountInformation(AlgoApiClientSettings.AccountMnemonic.ToPrivateKey().ToAddress());
-        if (err)
-            Assert.Ignore($"Ignoring test because of error on {nameof(AlgoApiClientSettings.Algod.GetAccountInformation)}:\n{err}");
-
-        if (info.Amount < 10_000)
-            Assert.Ignore($"Ignoring test because account has less than the min algo");
     }
 
-    async static UniTask CheckIndexerService()
+    static void CheckIndexerService()
     {
         if (string.IsNullOrWhiteSpace(AlgoApiClientSettings.Indexer.Address))
             Assert.Ignore("Ignoring test because Indexer Service has no Address.");
-        var healthResponse = await AlgoApiClientSettings.Indexer.GetHealth();
-        if (healthResponse.Status != UnityWebRequest.Result.Success)
-            Assert.Ignore($"Ignoring test because of {healthResponse.Status}: {healthResponse.ResponseCode} when trying to check health of indexer service");
-        var health = healthResponse.Payload;
-        if (health.DatabaseAvailable)
-            return;
-
-        using var healthJson = AlgoApiSerializer.SerializeJson(health, Allocator.Persistent);
-        Assert.Ignore($"Ignoring test because indexer is unhealthy:\n\"{healthJson}\"");
     }
 
-    async static UniTask CheckKmdService()
+    static void CheckKmdService()
     {
         if (string.IsNullOrWhiteSpace(AlgoApiClientSettings.Kmd.Address))
             Assert.Ignore("Ignoring test because Kmd Service has no Address.");
-        var healthResponse = await AlgoApiClientSettings.Kmd.Versions();
-        if (healthResponse.Status != UnityWebRequest.Result.Success)
-            Assert.Ignore($"Ignoring test because of {healthResponse.Status}: {healthResponse.ResponseCode} when trying to check health of kmd service");
     }
 }

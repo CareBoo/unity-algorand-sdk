@@ -9,9 +9,10 @@ public abstract class AlgodClientTestFixture : AlgoApiClientTestFixture
 {
     protected override AlgoServices RequiresServices => AlgoServices.Algod;
 
-    protected override async UniTask SetUpAsync()
+    protected override UniTask SetUpAsync()
     {
-        await CheckServices();
+        CheckServices();
+        return UniTask.CompletedTask;
     }
 
     protected override async UniTask TearDownAsync()
