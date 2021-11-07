@@ -21,4 +21,4 @@ If the data is in JSON or plaintext format, then it will show in the logs as the
 If the data is in Message Pack format, it will show as base-64 encoded byte string.
 
 > [!Note]
-> When debugging Message Pack, it can be useful to use a visualizer like [this one](https://msgpack.dbrgn.ch/).
+> When debugging Message Pack, it can be useful to use a visualizer like the one at https://msgpack.dbrgn.ch/.
