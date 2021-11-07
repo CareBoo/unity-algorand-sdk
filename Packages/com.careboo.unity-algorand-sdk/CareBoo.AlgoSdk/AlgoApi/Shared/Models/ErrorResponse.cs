@@ -41,7 +41,7 @@ namespace AlgoSdk
             return Message;
         }
 
-        public bool IsError => Code >= 400;
+        public bool IsError => Code >= 400 || Code == 0;
 
         public static implicit operator bool(ErrorResponse error)
         {

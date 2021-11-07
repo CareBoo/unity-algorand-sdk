@@ -27,8 +27,8 @@ namespace AlgoSdk
             error = status switch
             {
                 Result.ProtocolError => AlgoApiSerializer.Deserialize<ErrorResponse>(data, contentType).WithCode(responseCode),
-                Result.ConnectionError => new ErrorResponse { Message = "Failed to communicate with the server", Code = responseCode },
-                Result.DataProcessingError => new ErrorResponse { Message = "Error processing data", Code = responseCode },
+                Result.ConnectionError => new ErrorResponse { Message = $"Failed to communicate with the server: {completedRequest.error}", Code = responseCode },
+                Result.DataProcessingError => new ErrorResponse { Message = $"Error processing data: {completedRequest.error}", Code = responseCode },
                 _ => default
             };
             completedRequest.Dispose();
