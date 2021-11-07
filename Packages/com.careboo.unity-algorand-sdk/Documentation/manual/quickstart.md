@@ -1,10 +1,9 @@
-Quickstart
-==========
+# Quickstart
 
-Install
--------
+## Install
 
 This SDK is provided as a UPM package in the following locations:
+
 - [Open UPM](https://openupm.com/packages/com.careboo.unity-algorand-sdk)
 - [NPM Registry](https://www.npmjs.com/package/com.careboo.unity-algorand-sdk)
 - [GitHub Package Registry](https://github.com/CareBoo/unity-algorand-sdk/packages/894742)
@@ -20,8 +19,7 @@ Then use the Open UPM CLI at the root of your Unity project to install.
 
 Alternatively, this SDK is [available in the Unity Asset Store]().
 
-Create an Account
------------------
+## Create an Account
 
 The following code will generate a new account:
 
@@ -44,19 +42,17 @@ Save your address and passphrase in a separate place.
 > For the [Algorand open source wallet](https://developer.algorand.org/articles/algorand-wallet-now-open-source/),
 > click [here](https://github.com/algorand/algorand-wallet).
 
-Fund the Account
-----------------
+## Fund the Account
 
 Before sending transactions to the Algorand network, the account must be funded to cover the minimal transaction fees that exist on Algorand. To fund the account use the [Algorand faucet](https://dispenser.testnet.aws.algodev.network/).
 
-Connect to a Node
------------------
+## Connect to a Node
 
 > [!Note]
 > Prerequisites:
+>
 > - [Docker Compose](https://docs.docker.com/compose/install/)
 > - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-
 
 The easiest way to access a node in development is via the Algorand Sandbox.
 
@@ -113,8 +109,18 @@ Add the `AlgodCheck` component to a `GameObject` in a new scene, and press **Pla
 `Connected to algod!` message in the editor console. If you cannot connect, or the node is not healthy,
 then you should see an error message in the console.
 
-Check Your Balance
-------------------
+> [!Note]
+> It's possible the node you're connecting to may require different HTTP request headers for authentication.
+> In that case you can specify the explicit HTTP headers using key-value string tuples:
+>
+> ```csharp
+> algod = new AlgodClient(
+>    "https://testnet-algorand.api.purestake.io/ps2/v2/status",
+>    ("x-api-key", "my-super-secret-api-key")
+> );
+> ```
+
+## Check Your Balance
 
 To verify your funds were added to your account, add the following method to your `AlgodCheck` script.
 Replace the address with the address of the account you generated earlier.
@@ -147,10 +153,10 @@ public void Start()
 
 Your balance should appear in the editor console when you press **Play** again.
 
-Send a Transaction
-------------------
+## Send a Transaction
 
 The process for sending a transaction will look like
+
 1. Get the suggested `TransactionParams` from `AlgodClient.GetSuggestedParams()`. This contains information like the fee, the hash of the genesis block, and the latest round number.
 2. Create a transaction using the static creation methods found in the `Transaction` class. For a payment transaction, we're going to use `Transaction.Payment(Address sender, TransactionParams txnParams, Address receiver, ulong amount)`.
 3. Sign the transaction using either a secret key or a wallet.
@@ -231,8 +237,7 @@ public void Update()
 Now press **Play** again, then press the spacebar. After a couple seconds, your transaction should be confirmed and you should see a
 "Successfully made payment!" message in the editor console.
 
-Complete Example
-----------------
+## Complete Example
 
 Here is the final code for `AlgodCheck` component.
 
