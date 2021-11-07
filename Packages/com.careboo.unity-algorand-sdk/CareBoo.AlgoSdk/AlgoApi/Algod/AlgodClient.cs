@@ -30,11 +30,20 @@ namespace AlgoSdk
         /// <param name="address">url of the algod service, including the port, e.g. <c>"http://localhost:4001"</c></param>
         /// <param name="token">token used in authenticating to the algod service</param>
         /// <param name="headers">extra headers to add to the requests. e.g. <c>("x-api-key, my-api-key")</c></param>
-        public AlgodClient(string address, string token = null, params Header[] headers)
+        public AlgodClient(string address, string token, params Header[] headers)
         {
             this.address = address.TrimEnd('/');
             this.token = token;
             this.headers = headers;
+        }
+
+        /// <summary>
+        /// Create a new algod client
+        /// </summary>
+        /// <param name="address">url of the algod service, including the port, e.g. <c>"http://localhost:4001"</c></param>
+        /// <param name="headers">extra headers to add to the requests. e.g. <c>("x-api-key, my-api-key")</c></param>
+        public AlgodClient(string address, params Header[] headers) : this(address, null, headers)
+        {
         }
 
         public string Address => address;

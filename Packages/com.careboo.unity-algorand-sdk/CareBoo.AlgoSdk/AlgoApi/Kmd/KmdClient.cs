@@ -37,6 +37,15 @@ namespace AlgoSdk
             this.headers = headers;
         }
 
+        /// <summary>
+        /// Create a new kmd client
+        /// </summary>
+        /// <param name="address">url of the service, including the port, e.g. <c>"http://localhost:4001"</c></param>
+        /// <param name="headers">extra headers to add to the requests. e.g. <c>("x-api-key, my-api-key")</c></param>
+        public KmdClient(string address, params Header[] headers) : this(address, null, headers)
+        {
+        }
+
         public string Address => address;
 
         public string Token => token;
