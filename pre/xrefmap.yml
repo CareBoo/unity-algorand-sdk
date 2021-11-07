@@ -2166,6 +2166,15 @@ references:
   commentId: T:AlgoSdk.AlgodClient
   fullName: AlgoSdk.AlgodClient
   nameWithType: AlgodClient
+- uid: AlgoSdk.AlgodClient.#ctor(System.String,AlgoSdk.Header[])
+  name: AlgodClient(String, Header[])
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient__ctor_System_String_AlgoSdk_Header___
+  commentId: M:AlgoSdk.AlgodClient.#ctor(System.String,AlgoSdk.Header[])
+  name.vb: AlgodClient(String, Header())
+  fullName: AlgoSdk.AlgodClient.AlgodClient(System.String, AlgoSdk.Header[])
+  fullName.vb: AlgoSdk.AlgodClient.AlgodClient(System.String, AlgoSdk.Header())
+  nameWithType: AlgodClient.AlgodClient(String, Header[])
+  nameWithType.vb: AlgodClient.AlgodClient(String, Header())
 - uid: AlgoSdk.AlgodClient.#ctor(System.String,System.String,AlgoSdk.Header[])
   name: AlgodClient(String, String, Header[])
   href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient__ctor_System_String_System_String_AlgoSdk_Header___
@@ -11812,6 +11821,15 @@ references:
   commentId: T:AlgoSdk.IndexerClient
   fullName: AlgoSdk.IndexerClient
   nameWithType: IndexerClient
+- uid: AlgoSdk.IndexerClient.#ctor(System.String,AlgoSdk.Header[])
+  name: IndexerClient(String, Header[])
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient__ctor_System_String_AlgoSdk_Header___
+  commentId: M:AlgoSdk.IndexerClient.#ctor(System.String,AlgoSdk.Header[])
+  name.vb: IndexerClient(String, Header())
+  fullName: AlgoSdk.IndexerClient.IndexerClient(System.String, AlgoSdk.Header[])
+  fullName.vb: AlgoSdk.IndexerClient.IndexerClient(System.String, AlgoSdk.Header())
+  nameWithType: IndexerClient.IndexerClient(String, Header[])
+  nameWithType.vb: IndexerClient.IndexerClient(String, Header())
 - uid: AlgoSdk.IndexerClient.#ctor(System.String,System.String,AlgoSdk.Header[])
   name: IndexerClient(String, String, Header[])
   href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient__ctor_System_String_System_String_AlgoSdk_Header___
@@ -13596,6 +13614,15 @@ references:
   commentId: T:AlgoSdk.KmdClient
   fullName: AlgoSdk.KmdClient
   nameWithType: KmdClient
+- uid: AlgoSdk.KmdClient.#ctor(System.String,AlgoSdk.Header[])
+  name: KmdClient(String, Header[])
+  href: api/AlgoSdk.KmdClient.html#AlgoSdk_KmdClient__ctor_System_String_AlgoSdk_Header___
+  commentId: M:AlgoSdk.KmdClient.#ctor(System.String,AlgoSdk.Header[])
+  name.vb: KmdClient(String, Header())
+  fullName: AlgoSdk.KmdClient.KmdClient(System.String, AlgoSdk.Header[])
+  fullName.vb: AlgoSdk.KmdClient.KmdClient(System.String, AlgoSdk.Header())
+  nameWithType: KmdClient.KmdClient(String, Header[])
+  nameWithType.vb: KmdClient.KmdClient(String, Header())
 - uid: AlgoSdk.KmdClient.#ctor(System.String,System.String,AlgoSdk.Header[])
   name: KmdClient(String, String, Header[])
   href: api/AlgoSdk.KmdClient.html#AlgoSdk_KmdClient__ctor_System_String_System_String_AlgoSdk_Header___
