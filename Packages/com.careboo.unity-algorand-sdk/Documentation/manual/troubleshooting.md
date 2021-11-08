@@ -20,5 +20,5 @@ completed request
 If the data is in JSON or plaintext format, then it will show in the logs as the raw JSON text.
 If the data is in Message Pack format, it will show as base-64 encoded byte string.
 
-> [!Note]
+> [!Tip]
 > When debugging Message Pack, it can be useful to use a visualizer like the one at https://msgpack.dbrgn.ch/.

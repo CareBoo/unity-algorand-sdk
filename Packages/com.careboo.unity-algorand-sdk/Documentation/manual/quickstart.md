@@ -1,23 +1,6 @@
 # Quickstart
 
-## Install
-
-This SDK is provided as a UPM package in the following locations:
-
-- [Open UPM](https://openupm.com/packages/com.careboo.unity-algorand-sdk)
-- [NPM Registry](https://www.npmjs.com/package/com.careboo.unity-algorand-sdk)
-- [GitHub Package Registry](https://github.com/CareBoo/unity-algorand-sdk/packages/894742)
-
-The easiest way to install is to use Open UPM as it manages your scopes automatically.
-You can [install Open UPM here](https://openupm.com/docs/getting-started.html).
-Then use the Open UPM CLI at the root of your Unity project to install.
-
-```sh
-> cd <your unity project>
-> openupm add com.careboo.unity-algorand-sdk
-```
-
-Alternatively, this SDK is [available in the Unity Asset Store]().
+[!include[Installation](~/index.md)]
 
 ## Create an Account
 
