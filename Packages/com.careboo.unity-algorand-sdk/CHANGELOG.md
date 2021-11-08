@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [1.2.0-pre.3](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.2.0-pre.2...v1.2.0-pre.3) (2021-11-08)
+
+
+### Bug Fixes
+
+* **web response:** fix `ErrorResponse.IsError` not returning `true` when `responseCode == 0` ([3e1c8d6](https://github.com/CareBoo/unity-algorand-sdk/commit/3e1c8d6aefb868683ef1dc241173674990081c70)), closes [#58](https://github.com/CareBoo/unity-algorand-sdk/issues/58)
+
 # [1.2.0-pre.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.2.0-pre.1...v1.2.0-pre.2) (2021-11-07)
 
 
