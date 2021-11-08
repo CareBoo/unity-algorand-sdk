@@ -10,18 +10,18 @@ public class AlgodClientApplicationTest : AlgodClientTestFixture
     public IEnumerator CreatingThenDeletingAppShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         using var keyPair = AccountPrivateKey.ToKeyPair();
-        var (_, compileResult) = await algod.TealCompile(TealCodeCases.SmartContract.ApprovalSrc);
+        var (_, compileResult) = await AlgoApiClientSettings.Algod.TealCompile(TealCodeCases.SmartContract.ApprovalSrc);
         var approval = System.Convert.FromBase64String(compileResult.CompiledBytesBase64);
-        (_, compileResult) = await algod.TealCompile(TealCodeCases.SmartContract.ClearStateSrc);
+        (_, compileResult) = await AlgoApiClientSettings.Algod.TealCompile(TealCodeCases.SmartContract.ClearStateSrc);
         var clearstate = System.Convert.FromBase64String(compileResult.CompiledBytesBase64);
-        var (_, txnParams) = await algod.GetSuggestedParams();
+        var (_, txnParams) = await AlgoApiClientSettings.Algod.GetSuggestedParams();
         var createTxn = Transaction.AppCreate(
             keyPair.PublicKey,
             txnParams,
             approvalProgram: approval,
             clearStateProgram: clearstate
         ).Sign(keyPair.SecretKey);
-        var (createError, txid) = await algod.SendTransaction(createTxn);
+        var (createError, txid) = await AlgoApiClientSettings.Algod.SendTransaction(createTxn);
         AssertOkay(createError);
         var created = await WaitForTransaction(txid);
         var deleteTxn = Transaction.AppDelete(
@@ -29,7 +29,7 @@ public class AlgodClientApplicationTest : AlgodClientTestFixture
             txnParams,
             created.ApplicationIndex
         ).Sign(keyPair.SecretKey);
-        var (deleteError, deleteId) = await algod.SendTransaction(deleteTxn);
+        var (deleteError, deleteId) = await AlgoApiClientSettings.Algod.SendTransaction(deleteTxn);
         AssertOkay(deleteError);
         var deleted = await WaitForTransaction(deleteId);
     });
@@ -38,10 +38,10 @@ public class AlgodClientApplicationTest : AlgodClientTestFixture
     public IEnumerator DeletingAllAppsForAccountShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         using var keyPair = AccountPrivateKey.ToKeyPair();
-        var (error, accountInfo) = await algod.GetAccountInformation(keyPair.PublicKey);
+        var (error, accountInfo) = await AlgoApiClientSettings.Algod.GetAccountInformation(keyPair.PublicKey);
         AssertOkay(error);
         Assume.That(accountInfo.CreatedApplications != null, "account has no transactions to delete");
-        var (_, txnParams) = await algod.GetSuggestedParams();
+        var (_, txnParams) = await AlgoApiClientSettings.Algod.GetSuggestedParams();
         foreach (var app in accountInfo.CreatedApplications)
         {
             var deleteTxn = Transaction.AppDelete(
@@ -49,7 +49,7 @@ public class AlgodClientApplicationTest : AlgodClientTestFixture
                 txnParams,
                 app.Id
             ).Sign(keyPair.SecretKey);
-            var (deleteError, deleteId) = await algod.SendTransaction(deleteTxn);
+            var (deleteError, deleteId) = await AlgoApiClientSettings.Algod.SendTransaction(deleteTxn);
             AssertOkay(deleteError);
         }
     });

@@ -21,15 +21,29 @@ namespace AlgoSdk
         [SerializeField]
         string token;
 
+        [SerializeField]
+        Header[] headers;
+
         /// <summary>
         /// Create a new algod client
         /// </summary>
         /// <param name="address">url of the algod service, including the port, e.g. <c>"http://localhost:4001"</c></param>
         /// <param name="token">token used in authenticating to the algod service</param>
-        public AlgodClient(string address, string token = null)
+        /// <param name="headers">extra headers to add to the requests. e.g. <c>("x-api-key, my-api-key")</c></param>
+        public AlgodClient(string address, string token, params Header[] headers)
         {
             this.address = address.TrimEnd('/');
             this.token = token;
+            this.headers = headers;
+        }
+
+        /// <summary>
+        /// Create a new algod client
+        /// </summary>
+        /// <param name="address">url of the algod service, including the port, e.g. <c>"http://localhost:4001"</c></param>
+        /// <param name="headers">extra headers to add to the requests. e.g. <c>("x-api-key, my-api-key")</c></param>
+        public AlgodClient(string address, params Header[] headers) : this(address, null, headers)
+        {
         }
 
         public string Address => address;
@@ -37,6 +51,8 @@ namespace AlgoSdk
         public string Token => token;
 
         public string TokenHeader => "X-Algo-API-Token";
+
+        public Header[] Headers => headers;
 
         public async UniTask<AlgoApiResponse<AlgoApiObject>> GetGenesisInformation()
         {

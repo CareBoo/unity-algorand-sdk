@@ -135,6 +135,8 @@ namespace AlgoSdk
 
         public static Mnemonic FromString(string mnemonicString)
         {
+            if (string.IsNullOrEmpty(mnemonicString))
+                return default;
             var words = mnemonicString.Split(' ');
             if (words.Length != 25)
                 throw new ArgumentException($"Mnemonic must be 25 words, but was {words.Length} words...");

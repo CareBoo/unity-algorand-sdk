@@ -8,10 +8,7 @@ public class AlgodCheck : MonoBehaviour
 
     public void Start()
     {
-        algod = new AlgodClient(
-            address: "http://localhost:4001",
-            token: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-        );
+        algod = new AlgodClient(address: "testnet-algorand.api.purestake.io/ps2", token: "my private API key");
         CheckAlgodStatus().Forget();
         CheckBalance().Forget();
     }

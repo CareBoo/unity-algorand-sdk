@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Linq;
 using System.Text;
 using UnityEngine.Networking;
 using static UnityEngine.Networking.UnityWebRequest;
@@ -26,8 +27,8 @@ namespace AlgoSdk
             error = status switch
             {
                 Result.ProtocolError => AlgoApiSerializer.Deserialize<ErrorResponse>(data, contentType).WithCode(responseCode),
-                Result.ConnectionError => new ErrorResponse { Message = "Failed to communicate with the server", Code = responseCode },
-                Result.DataProcessingError => new ErrorResponse { Message = "Error processing data", Code = responseCode },
+                Result.ConnectionError => new ErrorResponse { Message = $"Failed to communicate with the server: {completedRequest.error}", Code = responseCode },
+                Result.DataProcessingError => new ErrorResponse { Message = $"Error processing data: {completedRequest.error}", Code = responseCode },
                 _ => default
             };
             completedRequest.Dispose();
@@ -56,7 +57,8 @@ namespace AlgoSdk
                 $"\tdownloadedData: {GetText(completedRequest.downloadHandler?.data, completedRequest.ParseResponseContentType())}\n" +
                 $"\terror: {completedRequest.error}\n" +
                 $"\tmethod: {completedRequest.method}\n" +
-                $"\tdownloadHandler.error: {completedRequest.downloadHandler?.error}"
+                $"\tdownloadHandler.error: {completedRequest.downloadHandler?.error}\n" +
+                $"\tGetResponseHeaders(): {{\n\t\t{string.Join(",\n\t\t", completedRequest.GetResponseHeaders()?.Select(kvp => $"{kvp.Key}: {kvp.Value}") ?? new string[0])}\n\t}}"
             );
         }
 

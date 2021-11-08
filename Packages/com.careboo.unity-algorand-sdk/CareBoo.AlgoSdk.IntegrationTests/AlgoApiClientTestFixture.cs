@@ -19,15 +19,11 @@ public enum AlgoServices : byte
 [TestFixture]
 public abstract class AlgoApiClientTestFixture
 {
-    protected const string SandboxToken = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-
-    protected static readonly Mnemonic AccountMnemonic = "fluid eight extra cancel energy syrup pledge latin coral name vacant napkin beach script unfold weekend earn act attend student double potato west abandon shallow";
-
-    protected static readonly AlgodClient algod = new AlgodClient("http://localhost:4001", SandboxToken);
-
-    protected static readonly KmdClient kmd = new KmdClient("http://localhost:4002", SandboxToken);
-
-    protected static readonly IndexerClient indexer = new IndexerClient("http://localhost:8980", null);
+    [OneTimeSetUp]
+    public void OneTimeSetUp()
+    {
+        CheckServices();
+    }
 
     protected static void AssertOkay(ErrorResponse error)
     {
@@ -46,20 +42,20 @@ public abstract class AlgoApiClientTestFixture
         ErrorResponse error = default;
         do
         {
-            (error, pending) = await algod.GetPendingTransaction(txid);
+            (error, pending) = await AlgoApiClientSettings.Algod.GetPendingTransaction(txid);
             AssertOkay(error);
         }
         while (pending.ConfirmedRound == 0 && await WaitMs(1000));
         return pending;
     }
 
-    protected static readonly PrivateKey AccountPrivateKey = AccountMnemonic.ToPrivateKey();
+    protected static readonly PrivateKey AccountPrivateKey = AlgoApiClientSettings.AccountMnemonic.ToPrivateKey();
 
     protected static async UniTask<TransactionIdResponse> MakePaymentTransaction(ulong amt)
     {
         using var keyPair = AccountPrivateKey
             .ToKeyPair();
-        var (error, txnParams) = await algod.GetSuggestedParams();
+        var (error, txnParams) = await AlgoApiClientSettings.Algod.GetSuggestedParams();
         AssertOkay(error);
         var txn = Transaction.Payment(
             sender: keyPair.PublicKey,
@@ -72,7 +68,7 @@ public abstract class AlgoApiClientTestFixture
         var serialized = AlgoApiSerializer.SerializeMessagePack(signedTxn, Allocator.Temp);
         Debug.Log(System.Convert.ToBase64String(serialized.ToArray()));
         TransactionIdResponse txidResponse = default;
-        (error, txidResponse) = await algod.SendTransaction(signedTxn);
+        (error, txidResponse) = await AlgoApiClientSettings.Algod.SendTransaction(signedTxn);
         AssertOkay(error);
         return txidResponse;
     }
@@ -89,51 +85,31 @@ public abstract class AlgoApiClientTestFixture
 
     protected abstract UniTask TearDownAsync();
 
-    protected async UniTask CheckServices()
+    protected void CheckServices()
     {
         if (RequiresServices.HasFlag(AlgoServices.Algod))
-            await CheckAlgodService();
+            CheckAlgodService();
         if (RequiresServices.HasFlag(AlgoServices.Indexer))
-            await CheckIndexerService();
+            CheckIndexerService();
         if (RequiresServices.HasFlag(AlgoServices.Kmd))
-            await CheckKmdService();
+            CheckKmdService();
     }
 
-    async static UniTask CheckAlgodService()
+    static void CheckAlgodService()
     {
-        var healthResponse = await algod.GetHealth();
-        if (healthResponse.Status != UnityWebRequest.Result.Success)
-            Assert.Ignore($"Ignoring test because of {healthResponse.Status}: {healthResponse.ResponseCode} when trying to check health of algod service");
-        var expected = "null\n";
-        var actual = healthResponse.GetText();
-        if (actual != expected)
-            Assert.Ignore($"Ignoring test because algod is unhealthy:\n\"{actual}\"");
-
-        var (err, info) = await algod.GetAccountInformation(AccountMnemonic.ToPrivateKey().ToAddress());
-        if (err)
-            Assert.Ignore($"Ignoring test because of error on {nameof(algod.GetAccountInformation)}:\n{err}");
-
-        if (info.Amount < 10_000)
-            Assert.Ignore($"Ignoring test because account has less than the min algo");
+        if (string.IsNullOrWhiteSpace(AlgoApiClientSettings.Algod.Address))
+            Assert.Ignore("Ignoring test because Algod Service has no Address.");
     }
 
-    async static UniTask CheckIndexerService()
+    static void CheckIndexerService()
     {
-        var healthResponse = await indexer.GetHealth();
-        if (healthResponse.Status != UnityWebRequest.Result.Success)
-            Assert.Ignore($"Ignoring test because of {healthResponse.Status}: {healthResponse.ResponseCode} when trying to check health of indexer service");
-        var health = healthResponse.Payload;
-        if (health.DatabaseAvailable)
-            return;
-
-        using var healthJson = AlgoApiSerializer.SerializeJson(health, Allocator.Persistent);
-        Assert.Ignore($"Ignoring test because indexer is unhealthy:\n\"{healthJson}\"");
+        if (string.IsNullOrWhiteSpace(AlgoApiClientSettings.Indexer.Address))
+            Assert.Ignore("Ignoring test because Indexer Service has no Address.");
     }
 
-    async static UniTask CheckKmdService()
+    static void CheckKmdService()
     {
-        var healthResponse = await kmd.Versions();
-        if (healthResponse.Status != UnityWebRequest.Result.Success)
-            Assert.Ignore($"Ignoring test because of {healthResponse.Status}: {healthResponse.ResponseCode} when trying to check health of kmd service");
+        if (string.IsNullOrWhiteSpace(AlgoApiClientSettings.Kmd.Address))
+            Assert.Ignore("Ignoring test because Kmd Service has no Address.");
     }
 }
