@@ -345,6 +345,51 @@ to Algorand REST services.</p>
   </table>
   
   
+  <a id="AlgoSdk_AlgoApiRequest_SetHeaders_" data-uid="AlgoSdk.AlgoApiRequest.SetHeaders*"></a>
+  <h4 id="AlgoSdk_AlgoApiRequest_SetHeaders_AlgoSdk_Header___" data-uid="AlgoSdk.AlgoApiRequest.SetHeaders(AlgoSdk.Header[])">SetHeaders(Header[])</h4>
+  <div class="markdown level1 summary"><p>Set additional headers on this request</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly AlgoApiRequest SetHeaders(params Header[] headers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Header.html">Header</a>[]</td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The headers in format &quot;key:value&quot;</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.html">AlgoApiRequest</a></td>
+        <td><p>this request with headers set</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_AlgoApiRequest_SetJsonBody_" data-uid="AlgoSdk.AlgoApiRequest.SetJsonBody*"></a>
   <h4 id="AlgoSdk_AlgoApiRequest_SetJsonBody_NativeText_" data-uid="AlgoSdk.AlgoApiRequest.SetJsonBody(NativeText)">SetJsonBody(NativeText)</h4>
   <div class="markdown level1 summary"><p>Set body of the request, and set its content type header to &quot;application/json&quot;</p>

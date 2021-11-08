@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "changelog/CHANGELOG.html",
-          "hash": "5boRPGZsCaULTx3xkEH6JJ6d+KjCL0wfeTAQjQfDSRU="
+          "hash": "4x3AA6gvBaPLadxar8cDF/Yxr9rawlJwM32R5J5S4WU="
         }
       },
       "is_incremental": false,
@@ -439,7 +439,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AlgoApiRequest.html",
-          "hash": "XSwyUSZRrzsfyyfbdpxr6f2DC24U30jibpr/38L4V9w="
+          "hash": "+EqwMswVhe/lJnGlMJkPwqn4ZKZBhUxA0Qz/f7Y7YJ4="
         }
       },
       "is_incremental": false,
@@ -487,7 +487,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AlgodClient.html",
-          "hash": "XyV0TDzAAWUXl331ruZuujkdc6PzyUIwjm2JxUnNPj8="
+          "hash": "ZTWu8QHkwNs7caNjSW/aL7DxNYkiekUpoBLlaVa032c="
         }
       },
       "is_incremental": false,
@@ -1743,18 +1743,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.Formatters.TealValueFormatter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AlgoSdk.Formatters.TealValueFormatter.html",
-          "hash": "LMYHLYAkBdu5fP7INVeslpzdEqFvaczAVZb9PRG7cf8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/AlgoSdk.Formatters.TransactionIdFormatter.yml",
       "output": {
         ".html": {
@@ -1831,7 +1819,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Formatters.html",
-          "hash": "2XH6b9M/VbbtyXzRTiKS63VWzETxPspXLssFL58OAD4="
+          "hash": "wK8UbPeOLg5kqzc244STT+OUIWrCTKXPolumpKmsjqg="
         }
       },
       "is_incremental": false,
@@ -1911,6 +1899,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Header.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Header.html",
+          "hash": "0pGWO/TfTKA+gMUKqz+IxWOr9Wdaps3TEwGcgjeebaQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/AlgoSdk.HealthCheck.yml",
       "output": {
         ".html": {
@@ -1927,7 +1927,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.IAlgoApiClient.html",
-          "hash": "oi5h2Mz1x8kiUNeXiL1kID8puKxxVQd4xGWbzH/FV+0="
+          "hash": "/Wg7RVQtbgGcxR/mVGFenDRxbh5CSyrsrKhjJ5NKHB8="
         }
       },
       "is_incremental": false,
@@ -1975,7 +1975,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.IAlgodClient.html",
-          "hash": "CjujeXb/Ul98HkgS01ruvtrxiizv6P0dvVA0LTLHt2w="
+          "hash": "HE8EEWgOsD8m/uJqd3SrVPL4Iy1eDElrUhPNcQ9n7eE="
         }
       },
       "is_incremental": false,
@@ -2071,7 +2071,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.IIndexerClient.html",
-          "hash": "+Ki5Pp53HRhyL1CUuJR97iUp/s8VaL43fwtjgXXP+Kc="
+          "hash": "uwd5j6ZNjVRtEiBMFigTxSGFVSWwdsLiAjQzUfLELiA="
         }
       },
       "is_incremental": false,
@@ -2107,7 +2107,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.IKmdClient.html",
-          "hash": "Cde0k1HnUJzZ1S6EuZorG3z2pyZbntn0Q/x3Q9Ja9Y8="
+          "hash": "Mo3FWZntu+Cmel9GDWpxZ41+Ygw6LmjyQjQryeX4Czw="
         }
       },
       "is_incremental": false,
@@ -2215,7 +2215,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.IndexerClient.html",
-          "hash": "JsHCWOW5OtW0JII4CNw6QLx8O6n36612ktKUAVm6Puc="
+          "hash": "RKAGUBD2iXfVbkgkILT9Nq3YtJG0A/7aDTBdUlFBIBs="
         }
       },
       "is_incremental": false,
@@ -2395,7 +2395,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.KmdClient.html",
-          "hash": "a92PYvmejVhrBDfOr9KgFez+pNFLaJ7Ydorf4YmLsFE="
+          "hash": "wtj1MgI9FmRz1yy6Ap9BsfqTycr46KWCKie7TSHvvdM="
         }
       },
       "is_incremental": false,
@@ -3163,7 +3163,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.TealBytes.html",
-          "hash": "CKywr4wOrRQ/GNvWjuDyleVhuD+mbQbii5OmmJ+k/3I="
+          "hash": "GcNukDkHTh48QpawA8QdQua5BrA7DF+7wrmFafWRxk4="
         }
       },
       "is_incremental": false,
@@ -3199,7 +3199,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.TealValue.html",
-          "hash": "t0X88EQpUpbeBjATRxnm69BaXYYZHUQV+sn9vS3fMsU="
+          "hash": "EcgadEx5HQoCjuwLuhkPWc1kosEwcIR3C6lLIXU51Y0="
         }
       },
       "is_incremental": false,
@@ -3475,7 +3475,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.html",
-          "hash": "4QiSN4oU1dhQHYSyKhWlzlU+sz/scvbqzuU4Mm1f2V8="
+          "hash": "KDOZCE8Op7Onu7c8X0a7rD1lfmaerGUGwArgnxE50oA="
         }
       },
       "is_incremental": false,
@@ -3487,7 +3487,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "QYDGSaEKuHscPCGE2btEN99TO4a+rEauIkTb/JhVhCA="
+          "hash": "O5R0/HakaGVOIAHUYlU1yWKbHFgMaaE5Km+qG52cmkE="
         }
       },
       "is_incremental": false,
@@ -3541,7 +3541,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/quickstart.html",
-          "hash": "6KmfkHuVVbW9k1bgW0ojYhDmhX0CaMuau3kA//E+qfY="
+          "hash": "KgakvFNcxYlq+50ATY7tIfKDmxY6KSCZ8DjyCueoksk="
         }
       },
       "is_incremental": false,
@@ -3553,7 +3553,19 @@
       "output": {
         ".html": {
           "relative_path": "manual/toc.html",
-          "hash": "ACkLHOaDg3ZinHSC53K86GG+6IbfXc+LHoO2OIpjJyQ="
+          "hash": "xEipxunBpGpekhStDUoMXa4FctnUoy1sdfM8w/irIQo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/troubleshooting.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/troubleshooting.html",
+          "hash": "vh3tNBzNPwePiQ8qUJZMR9gIpqr0icSUYRn2ieedYl8="
         }
       },
       "is_incremental": false,
@@ -3633,7 +3645,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 5,
+          "total_file_count": 6,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {

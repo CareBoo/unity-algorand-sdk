@@ -105,13 +105,48 @@
   
   
   <a id="AlgoSdk_IndexerClient__ctor_" data-uid="AlgoSdk.IndexerClient.#ctor*"></a>
-  <h4 id="AlgoSdk_IndexerClient__ctor_System_String_System_String_" data-uid="AlgoSdk.IndexerClient.#ctor(System.String,System.String)">IndexerClient(String, String)</h4>
+  <h4 id="AlgoSdk_IndexerClient__ctor_System_String_AlgoSdk_Header___" data-uid="AlgoSdk.IndexerClient.#ctor(System.String,AlgoSdk.Header[])">IndexerClient(String, Header[])</h4>
   <div class="markdown level1 summary"><p>Create a new indexer client</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IndexerClient(string address, string token)</code></pre>
+    <pre><code class="lang-csharp hljs">public IndexerClient(string address, params Header[] headers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>url of the service, including the port, e.g. <code>&quot;http://localhost:4001&quot;</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Header.html">Header</a>[]</td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>extra headers to add to the requests. e.g. <code>(&quot;x-api-key&quot;, &quot;my-private-key&quot;)</code></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_IndexerClient__ctor_" data-uid="AlgoSdk.IndexerClient.#ctor*"></a>
+  <h4 id="AlgoSdk_IndexerClient__ctor_System_String_System_String_AlgoSdk_Header___" data-uid="AlgoSdk.IndexerClient.#ctor(System.String,System.String,AlgoSdk.Header[])">IndexerClient(String, String, Header[])</h4>
+  <div class="markdown level1 summary"><p>Create a new indexer client</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IndexerClient(string address, string token = null, params Header[] headers)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -133,6 +168,12 @@
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">token</span></td>
         <td><p>token used in authenticating to the service</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Header.html">Header</a>[]</td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>extra headers to add to the requests. e.g. <code>(&quot;x-api-key&quot;, &quot;my-private-key&quot;)</code></p>
 </td>
       </tr>
     </tbody>
@@ -160,6 +201,31 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_IndexerClient_Headers_" data-uid="AlgoSdk.IndexerClient.Headers*"></a>
+  <h4 id="AlgoSdk_IndexerClient_Headers" data-uid="AlgoSdk.IndexerClient.Headers">Headers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly Header[] Headers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Header.html">Header</a>[]</td>
         <td></td>
       </tr>
     </tbody>
