@@ -31,7 +31,7 @@ namespace AlgoSdk
         public static string GetUrl<T>(this T client, string endpoint)
             where T : IAlgoApiClient
         {
-            return client.Address.TrimEnd('/') + endpoint;
+            return $"{client.Address?.TrimEnd('/')}{endpoint}";
         }
 
         public static AlgoApiRequest Get<T>(this T client, string endpoint)

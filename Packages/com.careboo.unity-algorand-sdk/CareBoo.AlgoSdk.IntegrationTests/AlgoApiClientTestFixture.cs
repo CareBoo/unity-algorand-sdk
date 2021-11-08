@@ -19,6 +19,12 @@ public enum AlgoServices : byte
 [TestFixture]
 public abstract class AlgoApiClientTestFixture
 {
+    [OneTimeSetUp]
+    public void OneTimeSetUp()
+    {
+        CheckServices();
+    }
+
     protected static void AssertOkay(ErrorResponse error)
     {
         Assert.IsFalse(error.IsError, error.Message);
