@@ -9882,6 +9882,19 @@ references:
   fullName.vb: AlgoSdk.Header.Widening
   nameWithType: Header.Implicit
   nameWithType.vb: Header.Widening
+- uid: AlgoSdk.Header.ToString
+  name: ToString()
+  href: api/AlgoSdk.Header.html#AlgoSdk_Header_ToString
+  commentId: M:AlgoSdk.Header.ToString
+  fullName: AlgoSdk.Header.ToString()
+  nameWithType: Header.ToString()
+- uid: AlgoSdk.Header.ToString*
+  name: ToString
+  href: api/AlgoSdk.Header.html#AlgoSdk_Header_ToString_
+  commentId: Overload:AlgoSdk.Header.ToString
+  isSpec: "True"
+  fullName: AlgoSdk.Header.ToString
+  nameWithType: Header.ToString
 - uid: AlgoSdk.Header.Value
   name: Value
   href: api/AlgoSdk.Header.html#AlgoSdk_Header_Value
