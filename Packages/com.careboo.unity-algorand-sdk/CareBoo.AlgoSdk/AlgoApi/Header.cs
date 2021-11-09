@@ -24,6 +24,11 @@ namespace AlgoSdk
             value = Value;
         }
 
+        public override string ToString()
+        {
+            return $"{Key}:{Value}";
+        }
+
         public static implicit operator Header((string, string) tuple)
         {
             var (key, value) = tuple;

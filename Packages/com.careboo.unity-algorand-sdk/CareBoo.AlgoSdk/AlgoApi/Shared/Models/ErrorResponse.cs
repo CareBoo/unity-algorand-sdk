@@ -41,7 +41,7 @@ namespace AlgoSdk
             return Message;
         }
 
-        public bool IsError => Code >= 400 || Code == 0;
+        public bool IsError => Code >= 400 || !string.IsNullOrWhiteSpace(Message);
 
         public static implicit operator bool(ErrorResponse error)
         {

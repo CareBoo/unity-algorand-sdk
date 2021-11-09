@@ -174,7 +174,9 @@ namespace AlgoSdk
                 ;
             var endpoint = $"/v2/register-participation-keys/{accountAddress}{queryBuilder}";
             return await AlgoApiRequest.Post(this.GetUrl(endpoint))
-                .Send();
+                .SetHeaders(Headers)
+                .Send()
+                ;
         }
 
         public async UniTask<AlgoApiResponse> ShutDown(Optional<ulong> timeout = default)
