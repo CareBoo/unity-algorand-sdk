@@ -142,7 +142,7 @@ then you should see an error message in the console.
 >
 > ```csharp
 > algod = new AlgodClient(
->    "https://testnet-algorand.api.purestake.io/ps2/v2/status",
+>    "https://testnet-algorand.api.purestake.io/ps2/v2",
 >    ("x-api-key", "my-super-secret-api-key")
 > );
 > ```
