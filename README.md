@@ -1,5 +1,7 @@
 # Unity Algorand SDK
 
+[![Test Status](https://github.com/CareBoo/unity-algorand-sdk/actions/workflows/test.yaml/badge.svg)](https://github.com/CareBoo/unity-algorand-sdk/actions/workflows/test.yaml)
+[![openupm](https://img.shields.io/npm/v/com.careboo.unity-algorand-sdk?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.careboo.unity-algorand-sdk/)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 > [!Caution]
