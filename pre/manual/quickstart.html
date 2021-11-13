@@ -79,19 +79,40 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="quickstart">Quickstart</h1>
 
-<h2 id="install">Install</h2>
+<h2 id="installation">Installation</h2>
 <p>This SDK is provided as a UPM package in the following locations:</p>
 <ul>
 <li><a href="https://openupm.com/packages/com.careboo.unity-algorand-sdk">Open UPM</a></li>
 <li><a href="https://www.npmjs.com/package/com.careboo.unity-algorand-sdk">NPM Registry</a></li>
 <li><a href="https://github.com/CareBoo/unity-algorand-sdk/packages/894742">GitHub Package Registry</a></li>
 </ul>
+<h3 id="open-upm">Open UPM</h3>
 <p>The easiest way to install is to use Open UPM as it manages your scopes automatically.
 You can <a href="https://openupm.com/docs/getting-started.html">install Open UPM here</a>.
 Then use the Open UPM CLI at the root of your Unity project to install.</p>
 <pre><code class="lang-sh">&gt; cd &lt;your unity project&gt;
 &gt; openupm add com.careboo.unity-algorand-sdk
-</code></pre><p>Alternatively, this SDK is <a href="">available in the Unity Asset Store</a>.</p>
+</code></pre><h3 id="manually-adding-upm-scopes">Manually Adding UPM Scopes</h3>
+<p>If you don&#39;t want to use Open UPM, it&#39;s straightforward to manually add the UPM registry scopes
+required for this package.</p>
+<ol>
+<li>In the Unity Editor, click on Edit -&gt; Project Settings -&gt; Package Manager.</li>
+<li>Under the Scoped Registries tab, click the <code>+</code> button to add a new Scoped Registry.</li>
+<li>Set the following values for the Scoped Registry:</li>
+</ol>
+<pre><code class="lang-yml">Name: Open UPM
+URL: https://package.openupm.com
+Scopes:
+  - com.cysharp.unitask
+  - com.careboo.unity-algorand-sdk
+</code></pre><ol>
+<li>Click on Window -&gt; Package Manager, and the <code>Algorand SDK</code> package should appear in the
+<code>Packages: My Registries</code> tab.</li>
+<li>Install the latest version of the <code>Algorand SDK</code>.</li>
+</ol>
+<p>For more details, see <a href="https://docs.unity3d.com/Manual/upm-scoped.html">Unity&#39;s official documentation on Scoped Registries</a>.</p>
+<h3 id="unity-asset-store">Unity Asset Store</h3>
+<p>This SDK will soon be <a href="https://u3d.as/2GBr">available in the Unity Asset Store</a>.</p>
 <h2 id="create-an-account">Create an Account</h2>
 <p>The following code will generate a new account:</p>
 <pre><code class="lang-csharp">// using AlgoSdk;
@@ -164,7 +185,7 @@ then you should see an error message in the console.</p>
 <div class="NOTE"><h5>Note</h5><p>It&#39;s possible the node you&#39;re connecting to may require different HTTP request headers for authentication.
 In that case you can specify the explicit HTTP headers using key-value string tuples:</p>
 <pre><code class="lang-csharp">algod = new AlgodClient(
-   &quot;https://testnet-algorand.api.purestake.io/ps2/v2/status&quot;,
+   &quot;https://testnet-algorand.api.purestake.io/ps2&quot;,
    (&quot;x-api-key&quot;, &quot;my-super-secret-api-key&quot;)
 );
 </code></pre></div>
@@ -382,7 +403,7 @@ public class AlgodCheck : MonoBehaviour
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/CareBoo/unity-algorand-sdk/blob/exp/Packages/com.careboo.unity-algorand-sdk/Documentation/manual/quickstart.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/CareBoo/unity-algorand-sdk/blob/main/Packages/com.careboo.unity-algorand-sdk/Documentation/manual/quickstart.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
