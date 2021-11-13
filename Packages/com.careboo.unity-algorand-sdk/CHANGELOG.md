@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [1.2.2-pre.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.2.1...v1.2.2-pre.1) (2021-11-13)
+
+
+### Bug Fixes
+
+* **assetparams:** change size of URL FixedString to 128 bytes ([c964899](https://github.com/CareBoo/unity-algorand-sdk/commit/c96489905b62b5c3ecef1aeabd3e56fa4f15dc28))
+
 ## [1.2.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.2.0...v1.2.1) (2021-11-09)
 
 
