@@ -5,7 +5,6 @@ using Cysharp.Threading.Tasks;
 using NUnit.Framework;
 using Unity.Collections;
 using UnityEngine;
-using UnityEngine.Networking;
 using UnityEngine.TestTools;
 
 [System.Flags]
