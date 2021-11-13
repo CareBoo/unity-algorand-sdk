@@ -127,13 +127,13 @@ namespace AlgoSdk
         /// </summary>
         [AlgoApiField("url", "au")]
         [Tooltip("URL where more information about the asset can be retrieved. Included only when the URL is composed of printable utf-8 characters.")]
-        public FixedString64Bytes Url;
+        public FixedString128Bytes Url;
 
         /// <summary>
         /// Base64 encoded URL where more information about the asset can be retrieved.
         /// </summary>
         [AlgoApiField("url-b64", null, readOnly: true)]
-        public FixedString64Bytes UrlBase64
+        public FixedString128Bytes UrlBase64
         {
             get
             {
