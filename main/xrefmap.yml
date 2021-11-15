@@ -13141,6 +13141,12 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Json.JsonWriter.WriteNumber
   nameWithType: JsonWriter.WriteNumber
+- uid: AlgoSdk.Json.JsonWriter.WriteObjectKey(System.String)
+  name: WriteObjectKey(String)
+  href: api/AlgoSdk.Json.JsonWriter.html#AlgoSdk_Json_JsonWriter_WriteObjectKey_System_String_
+  commentId: M:AlgoSdk.Json.JsonWriter.WriteObjectKey(System.String)
+  fullName: AlgoSdk.Json.JsonWriter.WriteObjectKey(System.String)
+  nameWithType: JsonWriter.WriteObjectKey(String)
 - uid: AlgoSdk.Json.JsonWriter.WriteObjectKey*
   name: WriteObjectKey
   href: api/AlgoSdk.Json.JsonWriter.html#AlgoSdk_Json_JsonWriter_WriteObjectKey_
