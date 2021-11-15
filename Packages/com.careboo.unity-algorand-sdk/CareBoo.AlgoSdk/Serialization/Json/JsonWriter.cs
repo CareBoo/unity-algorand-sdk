@@ -84,6 +84,13 @@ namespace AlgoSdk.Json
             return this;
         }
 
+        public JsonWriter WriteObjectKey(string s)
+        {
+            WriteString(s);
+            WriteChar(':');
+            return this;
+        }
+
         public JsonWriter BeginNextItem() => WriteChar(',');
 
         public JsonWriter WriteChar(char c)

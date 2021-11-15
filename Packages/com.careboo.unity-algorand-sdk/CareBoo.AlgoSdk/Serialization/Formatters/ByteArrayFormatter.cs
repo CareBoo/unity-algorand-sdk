@@ -9,22 +9,21 @@ namespace AlgoSdk.Formatters
     {
         public byte[] Deserialize(ref JsonReader reader)
         {
+            if (reader.TryReadNull())
+                return null;
+
             if (reader.Peek() == JsonToken.ArrayBegin)
-            {
                 return ArrayFormatter<byte>.Instance.Deserialize(ref reader);
-            }
-            else
+
+            var b64 = new NativeText(Allocator.Temp);
+            try
             {
-                var b64 = new NativeText(Allocator.Temp);
-                try
-                {
-                    reader.ReadString(ref b64).ThrowIfError(reader.Char, reader.Position);
-                    return System.Convert.FromBase64String(b64.ToString());
-                }
-                finally
-                {
-                    b64.Dispose();
-                }
+                reader.ReadString(ref b64).ThrowIfError(reader.Char, reader.Position);
+                return System.Convert.FromBase64String(b64.ToString());
+            }
+            finally
+            {
+                b64.Dispose();
             }
         }
 
