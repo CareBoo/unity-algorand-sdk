@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [1.2.2-pre.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.2.2-pre.1...v1.2.2-pre.2) (2021-11-15)
+
+
+### Bug Fixes
+
+* **algoapiobject:** fix compile err ([13692b8](https://github.com/CareBoo/unity-algorand-sdk/commit/13692b812ef959e501dcc27607e41e9e67b41d7e))
+
 ## [1.2.2-pre.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.2.1...v1.2.2-pre.1) (2021-11-13)
 
 
