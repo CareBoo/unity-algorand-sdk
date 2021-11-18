@@ -118,6 +118,13 @@ namespace AlgoSdk
             return address.ToPublicKey();
         }
 
+        public static implicit operator Address(Sha512_256_Hash checksum)
+        {
+            var result = Address.Empty;
+            checksum.CopyTo(ref result);
+            return result;
+        }
+
         public static bool operator ==(in Address a1, in Address a2)
         {
             return a1.Equals(a2);

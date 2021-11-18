@@ -31,23 +31,32 @@ namespace AlgoSdk
                 ;
         }
 
+        /// <summary>
+        /// Determines if transactions from the sender can by signed by this <see cref="LogicSig"/>.
+        /// </summary>
+        /// <param name="sender">The <see cref="Transaction.Sender"/></param>
+        /// <returns><c>true</c> if this <see cref="LogicSig"/> can sign for the sender.</returns>
         public bool IsValid(Address sender)
         {
-            using var programByteArray = new NativeByteArray(Program, Allocator.Temp);
+            using var programByteArray = Logic.GetSignBytes(Program, Allocator.Temp);
             return (!Sig.Equals(default) && Sig.Verify(programByteArray, sender))
                 || (!Multisig.Equals(default) && Multisig.Verify(programByteArray))
                 || VerifyProgram(programByteArray, sender)
                 ;
         }
 
-        bool VerifyProgram(NativeByteArray programByteArray, Ed25519.PublicKey sender)
+        /// <summary>
+        /// Get the <see cref="Address"/> of this logicsig.
+        /// </summary>
+        /// <returns>An <see cref="Address"/> from the checksum of the logic sig.</returns>
+        public Address GetAddress()
         {
-            Sha512_256_Hash programHash = default;
-            unsafe
-            {
-                programHash = Sha512.Hash256Truncated(programByteArray.GetUnsafePtr(), programByteArray.Length);
-            }
-            return ByteArray.Equals(programHash, sender);
+            return Logic.GetAddress(Program);
+        }
+
+        bool VerifyProgram(NativeByteArray bytes, Address sender)
+        {
+            return GetAddress().Equals(Sha512.Hash256Truncated(bytes));
         }
     }
 }
