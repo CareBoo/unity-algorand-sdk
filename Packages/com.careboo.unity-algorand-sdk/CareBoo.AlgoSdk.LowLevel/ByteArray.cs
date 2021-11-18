@@ -158,6 +158,22 @@ namespace AlgoSdk.LowLevel
             return result;
         }
 
+        public static NativeArray<byte> ToNativeArray<TByteArray>(this TByteArray bytes, Allocator allocator)
+            where TByteArray : struct, IArray<byte>
+        {
+            var arr = new NativeArray<byte>(bytes.Length, Allocator.Temp);
+            try
+            {
+                for (var i = 0; i < arr.Length; i++)
+                    arr[i] = bytes[i];
+                return arr;
+            }
+            finally
+            {
+                arr.Dispose();
+            }
+        }
+
         public static byte[] ToArray<TByteArray>(this TByteArray bytes)
             where TByteArray : struct, IArray<byte>
         {

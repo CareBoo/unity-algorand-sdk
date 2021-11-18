@@ -29,6 +29,11 @@ namespace AlgoSdk.LowLevel
             data = new NativeArray<byte>(arr, allocator);
         }
 
+        public NativeByteArray(NativeArray<byte> data)
+        {
+            this.data = data;
+        }
+
         public unsafe void* GetUnsafePtr() => data.GetUnsafePtr();
 
         public bool Equals(NativeByteArray other)
