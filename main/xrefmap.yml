@@ -653,6 +653,15 @@ references:
   fullName.vb: AlgoSdk.Address.Widening(Ed25519.PublicKey to AlgoSdk.Address)
   nameWithType: Address.Implicit(Ed25519.PublicKey to Address)
   nameWithType.vb: Address.Widening(Ed25519.PublicKey to Address)
+- uid: AlgoSdk.Address.op_Implicit(Sha512_256_Hash)~AlgoSdk.Address
+  name: Implicit(Sha512_256_Hash to Address)
+  href: api/AlgoSdk.Address.html#AlgoSdk_Address_op_Implicit_Sha512_256_Hash__AlgoSdk_Address
+  commentId: M:AlgoSdk.Address.op_Implicit(Sha512_256_Hash)~AlgoSdk.Address
+  name.vb: Widening(Sha512_256_Hash to Address)
+  fullName: AlgoSdk.Address.Implicit(Sha512_256_Hash to AlgoSdk.Address)
+  fullName.vb: AlgoSdk.Address.Widening(Sha512_256_Hash to AlgoSdk.Address)
+  nameWithType: Address.Implicit(Sha512_256_Hash to Address)
+  nameWithType.vb: Address.Widening(Sha512_256_Hash to Address)
 - uid: AlgoSdk.Address.op_Implicit(System.String)~AlgoSdk.Address
   name: Implicit(String to Address)
   href: api/AlgoSdk.Address.html#AlgoSdk_Address_op_Implicit_System_String__AlgoSdk_Address
@@ -14225,6 +14234,75 @@ references:
   commentId: F:AlgoSdk.ListWalletsResponse.Wallets
   fullName: AlgoSdk.ListWalletsResponse.Wallets
   nameWithType: ListWalletsResponse.Wallets
+- uid: AlgoSdk.Logic
+  name: Logic
+  href: api/AlgoSdk.Logic.html
+  commentId: T:AlgoSdk.Logic
+  fullName: AlgoSdk.Logic
+  nameWithType: Logic
+- uid: AlgoSdk.Logic.GetAddress(System.Byte[])
+  name: GetAddress(Byte[])
+  href: api/AlgoSdk.Logic.html#AlgoSdk_Logic_GetAddress_System_Byte___
+  commentId: M:AlgoSdk.Logic.GetAddress(System.Byte[])
+  name.vb: GetAddress(Byte())
+  fullName: AlgoSdk.Logic.GetAddress(System.Byte[])
+  fullName.vb: AlgoSdk.Logic.GetAddress(System.Byte())
+  nameWithType: Logic.GetAddress(Byte[])
+  nameWithType.vb: Logic.GetAddress(Byte())
+- uid: AlgoSdk.Logic.GetAddress*
+  name: GetAddress
+  href: api/AlgoSdk.Logic.html#AlgoSdk_Logic_GetAddress_
+  commentId: Overload:AlgoSdk.Logic.GetAddress
+  isSpec: "True"
+  fullName: AlgoSdk.Logic.GetAddress
+  nameWithType: Logic.GetAddress
+- uid: AlgoSdk.Logic.GetSignBytes(System.Byte[],Allocator)
+  name: GetSignBytes(Byte[], Allocator)
+  href: api/AlgoSdk.Logic.html#AlgoSdk_Logic_GetSignBytes_System_Byte___Allocator_
+  commentId: M:AlgoSdk.Logic.GetSignBytes(System.Byte[],Allocator)
+  name.vb: GetSignBytes(Byte(), Allocator)
+  fullName: AlgoSdk.Logic.GetSignBytes(System.Byte[], Allocator)
+  fullName.vb: AlgoSdk.Logic.GetSignBytes(System.Byte(), Allocator)
+  nameWithType: Logic.GetSignBytes(Byte[], Allocator)
+  nameWithType.vb: Logic.GetSignBytes(Byte(), Allocator)
+- uid: AlgoSdk.Logic.GetSignBytes*
+  name: GetSignBytes
+  href: api/AlgoSdk.Logic.html#AlgoSdk_Logic_GetSignBytes_
+  commentId: Overload:AlgoSdk.Logic.GetSignBytes
+  isSpec: "True"
+  fullName: AlgoSdk.Logic.GetSignBytes
+  nameWithType: Logic.GetSignBytes
+- uid: AlgoSdk.Logic.Sign(System.Byte[],AlgoSdk.Multisig,AlgoSdk.PrivateKey)
+  name: Sign(Byte[], Multisig, PrivateKey)
+  href: api/AlgoSdk.Logic.html#AlgoSdk_Logic_Sign_System_Byte___AlgoSdk_Multisig_AlgoSdk_PrivateKey_
+  commentId: M:AlgoSdk.Logic.Sign(System.Byte[],AlgoSdk.Multisig,AlgoSdk.PrivateKey)
+  name.vb: Sign(Byte(), Multisig, PrivateKey)
+  fullName: AlgoSdk.Logic.Sign(System.Byte[], AlgoSdk.Multisig, AlgoSdk.PrivateKey)
+  fullName.vb: AlgoSdk.Logic.Sign(System.Byte(), AlgoSdk.Multisig, AlgoSdk.PrivateKey)
+  nameWithType: Logic.Sign(Byte[], Multisig, PrivateKey)
+  nameWithType.vb: Logic.Sign(Byte(), Multisig, PrivateKey)
+- uid: AlgoSdk.Logic.Sign(System.Byte[],SecretKeyHandle)
+  name: Sign(Byte[], SecretKeyHandle)
+  href: api/AlgoSdk.Logic.html#AlgoSdk_Logic_Sign_System_Byte___SecretKeyHandle_
+  commentId: M:AlgoSdk.Logic.Sign(System.Byte[],SecretKeyHandle)
+  name.vb: Sign(Byte(), SecretKeyHandle)
+  fullName: AlgoSdk.Logic.Sign(System.Byte[], SecretKeyHandle)
+  fullName.vb: AlgoSdk.Logic.Sign(System.Byte(), SecretKeyHandle)
+  nameWithType: Logic.Sign(Byte[], SecretKeyHandle)
+  nameWithType.vb: Logic.Sign(Byte(), SecretKeyHandle)
+- uid: AlgoSdk.Logic.Sign*
+  name: Sign
+  href: api/AlgoSdk.Logic.html#AlgoSdk_Logic_Sign_
+  commentId: Overload:AlgoSdk.Logic.Sign
+  isSpec: "True"
+  fullName: AlgoSdk.Logic.Sign
+  nameWithType: Logic.Sign
+- uid: AlgoSdk.Logic.SigningPrefix
+  name: SigningPrefix
+  href: api/AlgoSdk.Logic.html#AlgoSdk_Logic_SigningPrefix
+  commentId: F:AlgoSdk.Logic.SigningPrefix
+  fullName: AlgoSdk.Logic.SigningPrefix
+  nameWithType: Logic.SigningPrefix
 - uid: AlgoSdk.LogicSig
   name: LogicSig
   href: api/AlgoSdk.LogicSig.html
@@ -14250,6 +14328,19 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.LogicSig.Equals
   nameWithType: LogicSig.Equals
+- uid: AlgoSdk.LogicSig.GetAddress
+  name: GetAddress()
+  href: api/AlgoSdk.LogicSig.html#AlgoSdk_LogicSig_GetAddress
+  commentId: M:AlgoSdk.LogicSig.GetAddress
+  fullName: AlgoSdk.LogicSig.GetAddress()
+  nameWithType: LogicSig.GetAddress()
+- uid: AlgoSdk.LogicSig.GetAddress*
+  name: GetAddress
+  href: api/AlgoSdk.LogicSig.html#AlgoSdk_LogicSig_GetAddress_
+  commentId: Overload:AlgoSdk.LogicSig.GetAddress
+  isSpec: "True"
+  fullName: AlgoSdk.LogicSig.GetAddress
+  nameWithType: LogicSig.GetAddress
 - uid: AlgoSdk.LogicSig.IsValid(AlgoSdk.Address)
   name: IsValid(Address)
   href: api/AlgoSdk.LogicSig.html#AlgoSdk_LogicSig_IsValid_AlgoSdk_Address_
@@ -14518,6 +14609,22 @@ references:
   fullName.vb: AlgoSdk.LowLevel.ByteArray.ToBase64(Of TByteArray)(TByteArray)
   nameWithType: ByteArray.ToBase64<TByteArray>(TByteArray)
   nameWithType.vb: ByteArray.ToBase64(Of TByteArray)(TByteArray)
+- uid: AlgoSdk.LowLevel.ByteArray.ToNativeArray*
+  name: ToNativeArray
+  href: api/AlgoSdk.LowLevel.ByteArray.html#AlgoSdk_LowLevel_ByteArray_ToNativeArray_
+  commentId: Overload:AlgoSdk.LowLevel.ByteArray.ToNativeArray
+  isSpec: "True"
+  fullName: AlgoSdk.LowLevel.ByteArray.ToNativeArray
+  nameWithType: ByteArray.ToNativeArray
+- uid: AlgoSdk.LowLevel.ByteArray.ToNativeArray``1(``0,Allocator)
+  name: ToNativeArray<TByteArray>(TByteArray, Allocator)
+  href: api/AlgoSdk.LowLevel.ByteArray.html#AlgoSdk_LowLevel_ByteArray_ToNativeArray__1___0_Allocator_
+  commentId: M:AlgoSdk.LowLevel.ByteArray.ToNativeArray``1(``0,Allocator)
+  name.vb: ToNativeArray(Of TByteArray)(TByteArray, Allocator)
+  fullName: AlgoSdk.LowLevel.ByteArray.ToNativeArray<TByteArray>(TByteArray, Allocator)
+  fullName.vb: AlgoSdk.LowLevel.ByteArray.ToNativeArray(Of TByteArray)(TByteArray, Allocator)
+  nameWithType: ByteArray.ToNativeArray<TByteArray>(TByteArray, Allocator)
+  nameWithType.vb: ByteArray.ToNativeArray(Of TByteArray)(TByteArray, Allocator)
 - uid: AlgoSdk.LowLevel.ByteArrayComparer`1
   name: ByteArrayComparer<T>
   href: api/AlgoSdk.LowLevel.ByteArrayComparer-1.html
@@ -14746,6 +14853,15 @@ references:
   commentId: T:AlgoSdk.LowLevel.NativeByteArray
   fullName: AlgoSdk.LowLevel.NativeByteArray
   nameWithType: NativeByteArray
+- uid: AlgoSdk.LowLevel.NativeByteArray.#ctor(NativeArray{System.Byte})
+  name: NativeByteArray(NativeArray<Byte>)
+  href: api/AlgoSdk.LowLevel.NativeByteArray.html#AlgoSdk_LowLevel_NativeByteArray__ctor_NativeArray_System_Byte__
+  commentId: M:AlgoSdk.LowLevel.NativeByteArray.#ctor(NativeArray{System.Byte})
+  name.vb: NativeByteArray(NativeArray(Of Byte))
+  fullName: AlgoSdk.LowLevel.NativeByteArray.NativeByteArray(NativeArray<System.Byte>)
+  fullName.vb: AlgoSdk.LowLevel.NativeByteArray.NativeByteArray(NativeArray(Of System.Byte))
+  nameWithType: NativeByteArray.NativeByteArray(NativeArray<Byte>)
+  nameWithType.vb: NativeByteArray.NativeByteArray(NativeArray(Of Byte))
 - uid: AlgoSdk.LowLevel.NativeByteArray.#ctor(System.Byte[],Allocator)
   name: NativeByteArray(Byte[], Allocator)
   href: api/AlgoSdk.LowLevel.NativeByteArray.html#AlgoSdk_LowLevel_NativeByteArray__ctor_System_Byte___Allocator_
@@ -28858,6 +28974,28 @@ references:
   commentId: T:AlgoSdk.Multisig
   fullName: AlgoSdk.Multisig
   nameWithType: Multisig
+- uid: AlgoSdk.Multisig.#ctor(System.Byte,System.Byte,AlgoSdk.Address[])
+  name: Multisig(Byte, Byte, Address[])
+  href: api/AlgoSdk.Multisig.html#AlgoSdk_Multisig__ctor_System_Byte_System_Byte_AlgoSdk_Address___
+  commentId: M:AlgoSdk.Multisig.#ctor(System.Byte,System.Byte,AlgoSdk.Address[])
+  name.vb: Multisig(Byte, Byte, Address())
+  fullName: AlgoSdk.Multisig.Multisig(System.Byte, System.Byte, AlgoSdk.Address[])
+  fullName.vb: AlgoSdk.Multisig.Multisig(System.Byte, System.Byte, AlgoSdk.Address())
+  nameWithType: Multisig.Multisig(Byte, Byte, Address[])
+  nameWithType.vb: Multisig.Multisig(Byte, Byte, Address())
+- uid: AlgoSdk.Multisig.#ctor*
+  name: Multisig
+  href: api/AlgoSdk.Multisig.html#AlgoSdk_Multisig__ctor_
+  commentId: Overload:AlgoSdk.Multisig.#ctor
+  isSpec: "True"
+  fullName: AlgoSdk.Multisig.Multisig
+  nameWithType: Multisig.Multisig
+- uid: AlgoSdk.Multisig.AddressPrefix
+  name: AddressPrefix
+  href: api/AlgoSdk.Multisig.html#AlgoSdk_Multisig_AddressPrefix
+  commentId: F:AlgoSdk.Multisig.AddressPrefix
+  fullName: AlgoSdk.Multisig.AddressPrefix
+  nameWithType: Multisig.AddressPrefix
 - uid: AlgoSdk.Multisig.Equals(AlgoSdk.Multisig)
   name: Equals(Multisig)
   href: api/AlgoSdk.Multisig.html#AlgoSdk_Multisig_Equals_AlgoSdk_Multisig_
@@ -28871,6 +29009,19 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Multisig.Equals
   nameWithType: Multisig.Equals
+- uid: AlgoSdk.Multisig.GetAddress
+  name: GetAddress()
+  href: api/AlgoSdk.Multisig.html#AlgoSdk_Multisig_GetAddress
+  commentId: M:AlgoSdk.Multisig.GetAddress
+  fullName: AlgoSdk.Multisig.GetAddress()
+  nameWithType: Multisig.GetAddress()
+- uid: AlgoSdk.Multisig.GetAddress*
+  name: GetAddress
+  href: api/AlgoSdk.Multisig.html#AlgoSdk_Multisig_GetAddress_
+  commentId: Overload:AlgoSdk.Multisig.GetAddress
+  isSpec: "True"
+  fullName: AlgoSdk.Multisig.GetAddress
+  nameWithType: Multisig.GetAddress
 - uid: AlgoSdk.Multisig.Subsig
   name: Multisig.Subsig
   href: api/AlgoSdk.Multisig.Subsig.html
@@ -28899,6 +29050,15 @@ references:
   fullName.vb: AlgoSdk.Multisig.Subsig.Widening(AlgoSdk.Address to AlgoSdk.Multisig.Subsig)
   nameWithType: Multisig.Subsig.Implicit(Address to Multisig.Subsig)
   nameWithType.vb: Multisig.Subsig.Widening(Address to Multisig.Subsig)
+- uid: AlgoSdk.Multisig.Subsig.op_Implicit(AlgoSdk.Multisig.Subsig)~AlgoSdk.Address
+  name: Implicit(Multisig.Subsig to Address)
+  href: api/AlgoSdk.Multisig.Subsig.html#AlgoSdk_Multisig_Subsig_op_Implicit_AlgoSdk_Multisig_Subsig__AlgoSdk_Address
+  commentId: M:AlgoSdk.Multisig.Subsig.op_Implicit(AlgoSdk.Multisig.Subsig)~AlgoSdk.Address
+  name.vb: Widening(Multisig.Subsig to Address)
+  fullName: AlgoSdk.Multisig.Subsig.Implicit(AlgoSdk.Multisig.Subsig to AlgoSdk.Address)
+  fullName.vb: AlgoSdk.Multisig.Subsig.Widening(AlgoSdk.Multisig.Subsig to AlgoSdk.Address)
+  nameWithType: Multisig.Subsig.Implicit(Multisig.Subsig to Address)
+  nameWithType.vb: Multisig.Subsig.Widening(Multisig.Subsig to Address)
 - uid: AlgoSdk.Multisig.Subsig.op_Implicit*
   name: Implicit
   href: api/AlgoSdk.Multisig.Subsig.html#AlgoSdk_Multisig_Subsig_op_Implicit_

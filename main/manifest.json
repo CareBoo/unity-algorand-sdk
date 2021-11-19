@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "changelog/CHANGELOG.html",
-          "hash": "NhrmTMHODCqYsY50iC04iIQpASCCBWGgxe8ACD/G6es="
+          "hash": "PwgHzTCo+bwyoJWKJCxI3DS2a6xikiPAouWyZ+ZQ8jY="
         }
       },
       "is_incremental": false,
@@ -151,7 +151,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Address.html",
-          "hash": "6zIyKk3zFqaaYu20YtlmXghNdPAcHoRH0PkEOWyqg64="
+          "hash": "LakgOE3mJUBRm4ie34lasbXSPTauLCFEOvf20QERuB4="
         }
       },
       "is_incremental": false,
@@ -2475,11 +2475,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Logic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Logic.html",
+          "hash": "T8OukSzzSeTiE5XVHyjOEQJWcrGRL8TPmkwNkHR2Aio="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/AlgoSdk.LogicSig.yml",
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.LogicSig.html",
-          "hash": "xUQvBTEwt/o+iF2Jua3r26EHIjjsHu+w48luF1RZSw0="
+          "hash": "1PDdjP4VZ5ZEHvbGarixTjeIxMQcgn2MQCEYulZHznY="
         }
       },
       "is_incremental": false,
@@ -2491,7 +2503,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.LowLevel.ByteArray.html",
-          "hash": "ch2feUnufkpFN8oCt51DQaR1F1hwyjiW0EEgk4o/EAw="
+          "hash": "vPJrd5P1+T6L/OA2fu238gWvPR566ea7fpZYh+KqEVw="
         }
       },
       "is_incremental": false,
@@ -2599,7 +2611,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.LowLevel.NativeByteArray.html",
-          "hash": "QCuBRll4pMioc+QJs5R91kVHuNk/VAkoQFOoNjQYf7g="
+          "hash": "n9NwDwJFkjWV0bnjaqZRDmDN+BVVWYKOlJ/xrtYgHks="
         }
       },
       "is_incremental": false,
@@ -2791,7 +2803,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Multisig.Subsig.html",
-          "hash": "Ul9vhSGVetMqss0BGLFc7TC0K9jr/PD20GfayywEFyI="
+          "hash": "08Vlw5xkdc8Bmusp4DE7TpKgvVWvk1iiku9zo/++GtM="
         }
       },
       "is_incremental": false,
@@ -2803,7 +2815,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Multisig.html",
-          "hash": "5oIYYst6JUjFewKHutktJMWryG/shm1CUtCwki/i1vU="
+          "hash": "Q8ytPxy21XTT75fn327lWe5ODgFMIKfzivMWngLWmGU="
         }
       },
       "is_incremental": false,
@@ -3475,7 +3487,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.html",
-          "hash": "KDOZCE8Op7Onu7c8X0a7rD1lfmaerGUGwArgnxE50oA="
+          "hash": "k6XhJwXASeMwB4GEQ84mFX2xkJAxioemwQhqzqd34i8="
         }
       },
       "is_incremental": false,
@@ -3487,7 +3499,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "O5R0/HakaGVOIAHUYlU1yWKbHFgMaaE5Km+qG52cmkE="
+          "hash": "x7Rxper2Aqa48hKbtLf+qBA2FF3AZhkSqRfyXXqbGso="
         }
       },
       "is_incremental": false,
@@ -3651,7 +3663,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 285,
+          "total_file_count": 286,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
