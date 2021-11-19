@@ -5,6 +5,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [1.3.0](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.2.2...v1.3.0) (2021-11-19)
+
+
+### Features
+
+* **logic:** add `Logic.Sign` for signing programs with private keys ([131ef28](https://github.com/CareBoo/unity-algorand-sdk/commit/131ef285fbb5c18bff3850ebceb7ae8420d2dc69))
+* **logic:** add `LogicSig.GetAddress` ([9628a9a](https://github.com/CareBoo/unity-algorand-sdk/commit/9628a9ac857254d69f42bc4ebca500d2098865d0))
+* **multisig:** add `Multisig.GetAddress` ([e490459](https://github.com/CareBoo/unity-algorand-sdk/commit/e4904598e21caef8bac504b8b0f1917a1b465b9a))
+
 ## [1.2.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.2.1...v1.2.2) (2021-11-15)
 
 
