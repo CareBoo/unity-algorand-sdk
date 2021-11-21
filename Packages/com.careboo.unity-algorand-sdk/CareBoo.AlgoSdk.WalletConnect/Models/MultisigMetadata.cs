@@ -1,6 +1,6 @@
 using System;
 
-namespace AlgoSdk
+namespace AlgoSdk.WalletConnect
 {
     [AlgoApiObject]
     public struct MultisigMetadata

@@ -1,7 +1,7 @@
 using AlgoSdk.Json;
 using AlgoSdk.MessagePack;
 
-namespace AlgoSdk
+namespace AlgoSdk.WalletConnect
 {
     public class SignTxnParamsFormatter : IAlgoApiFormatter<SignTxnParams>
     {

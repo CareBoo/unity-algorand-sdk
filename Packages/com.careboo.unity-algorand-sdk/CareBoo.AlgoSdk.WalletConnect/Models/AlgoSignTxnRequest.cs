@@ -1,6 +1,6 @@
 using System;
 
-namespace AlgoSdk
+namespace AlgoSdk.WalletConnect
 {
     [AlgoApiFormatter(typeof(JsonRpcRequestFormatter<AlgoSignTxnRequest, SignTxnParams>))]
     public struct AlgoSignTxnRequest

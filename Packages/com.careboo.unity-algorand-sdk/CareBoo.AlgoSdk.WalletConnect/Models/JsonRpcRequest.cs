@@ -1,4 +1,4 @@
-namespace AlgoSdk
+namespace AlgoSdk.WalletConnect
 {
     public interface JsonRpcRequest<T>
     {

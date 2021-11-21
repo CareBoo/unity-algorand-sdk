@@ -1,7 +1,7 @@
 using AlgoSdk.Json;
 using AlgoSdk.MessagePack;
 
-namespace AlgoSdk
+namespace AlgoSdk.WalletConnect
 {
     public class JsonRpcRequestFormatter<T, U> : IAlgoApiFormatter<T>
         where T : JsonRpcRequest<U>

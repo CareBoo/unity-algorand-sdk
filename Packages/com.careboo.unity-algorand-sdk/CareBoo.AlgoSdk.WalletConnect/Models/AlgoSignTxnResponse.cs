@@ -1,4 +1,4 @@
-namespace AlgoSdk
+namespace AlgoSdk.WalletConnect
 {
     [AlgoApiFormatter(typeof(JsonRpcResponseFormatter<AlgoSignTxnResponse, byte[][]>))]
     public struct AlgoSignTxnResponse

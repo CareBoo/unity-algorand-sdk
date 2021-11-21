@@ -1,6 +1,6 @@
 using System;
 
-namespace AlgoSdk
+namespace AlgoSdk.WalletConnect
 {
     [AlgoApiFormatter(typeof(SignTxnParamsFormatter))]
     public struct SignTxnParams
