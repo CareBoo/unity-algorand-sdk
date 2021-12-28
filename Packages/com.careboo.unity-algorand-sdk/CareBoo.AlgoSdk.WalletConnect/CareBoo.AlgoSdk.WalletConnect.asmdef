@@ -5,7 +5,8 @@
         "CareBoo.AlgoSdk",
         "CareBoo.AlgoSdk.Crypto",
         "CareBoo.AlgoSdk.LowLevel",
-        "UniTask"
+        "UniTask",
+        "Unity.Collections"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -1,6 +1,7 @@
 using System;
 using static AlgoSdk.Crypto.sodium;
 using Unity.Collections.LowLevel.Unsafe;
+using AlgoSdk.LowLevel;
 
 namespace AlgoSdk.Crypto
 {
@@ -19,6 +20,12 @@ namespace AlgoSdk.Crypto
             T result = default;
             randombytes_buf(&result, (UIntPtr)size);
             return result;
+        }
+
+        public static void Randomize<T>(T bytes)
+            where T : struct, IByteArray
+        {
+            randombytes_buf(bytes.GetUnsafePtr(), (UIntPtr)bytes.Length);
         }
     }
 }

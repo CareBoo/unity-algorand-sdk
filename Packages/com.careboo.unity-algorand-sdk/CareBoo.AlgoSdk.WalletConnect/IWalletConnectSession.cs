@@ -12,9 +12,8 @@ namespace AlgoSdk.WalletConnect
         UnityEvent<TSession> OnSend { get; set; }
         UnityEvent<WalletConnectSessionData> OnSessionUpdate { get; set; }
 
-        string Uri { get; }
+        string Url { get; }
         Address[] Accounts { get; }
-
-        UniTask CreateSession(int chainId);
+        string Version { get; }
     }
 }
