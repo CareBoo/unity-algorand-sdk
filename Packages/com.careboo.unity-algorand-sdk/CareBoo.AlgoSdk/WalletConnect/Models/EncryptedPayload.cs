@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Security.Cryptography;
 
 namespace AlgoSdk.WalletConnect
@@ -19,12 +20,16 @@ namespace AlgoSdk.WalletConnect
             using var hmac = new HMACSHA256(key);
             hmac.Initialize();
 
-            byte[] toSign = new byte[Iv.Length + Data.Length];
-
-            Buffer.BlockCopy(Data, 0, toSign, 0, Data.Length);
-            Buffer.BlockCopy(Iv, 0, toSign, Data.Length, Iv.Length);
+            byte[] toSign = GetSignData();
 
             return hmac.ComputeHash(toSign);
+        }
+
+        public void ValidateHmac(byte[] key)
+        {
+            var computedHmac = Sign(key);
+            if (!ArrayComparer.Equals(Signature, computedHmac))
+                throw new InvalidDataException("HMAC given does not match the hmac computed with key");
         }
 
         public static implicit operator EncryptedPayload((byte[] iv, byte[] encryptedData) encryptResult)
@@ -34,6 +39,14 @@ namespace AlgoSdk.WalletConnect
                 Iv = encryptResult.iv,
                 Data = encryptResult.encryptedData
             };
+        }
+
+        byte[] GetSignData()
+        {
+            var result = new byte[Iv.Length + Data.Length];
+            Buffer.BlockCopy(Data, 0, result, 0, Data.Length);
+            Buffer.BlockCopy(Iv, 0, result, Data.Length, Iv.Length);
+            return result;
         }
     }
 }

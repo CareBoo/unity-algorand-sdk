@@ -12,6 +12,20 @@ namespace AlgoSdk.WalletConnect
             return encryptedPayload;
         }
 
+        public static byte[] DecryptWithKey(byte[] key, EncryptedPayload encryptedData)
+        {
+            encryptedData.ValidateHmac(key);
+
+            using var cryptor = CreateCipher();
+            var decryptor = cryptor.CreateDecryptor(cryptor.Key, cryptor.IV);
+
+            using var encryptedStream = new MemoryStream(encryptedData.Data);
+            using var decryptedStream = new MemoryStream();
+            using var cs = new CryptoStream(encryptedStream, decryptor, CryptoStreamMode.Read);
+            cs.CopyTo(decryptedStream);
+            return decryptedStream.ToArray();
+        }
+
         static EncryptedPayload Encrypt(byte[] key, byte[] data)
         {
             using var ms = new MemoryStream();

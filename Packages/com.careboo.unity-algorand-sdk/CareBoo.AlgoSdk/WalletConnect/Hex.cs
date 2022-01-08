@@ -1,9 +1,12 @@
 using System;
+using UnityEngine;
 
 namespace AlgoSdk.WalletConnect
 {
+    [Serializable]
     public struct Hex
     {
+        [SerializeField]
         byte[] data;
 
         public override string ToString()

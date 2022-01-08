@@ -1,5 +1,6 @@
 using System;
 using Netcode.Transports.WebSocket;
+using WebSocketSharp;
 
 namespace AlgoSdk.WalletConnect
 {
@@ -12,8 +13,14 @@ namespace AlgoSdk.WalletConnect
             if (url.StartsWith("http"))
                 url = url.Replace("http", "ws");
             client = WebSocketClientFactory.Create(url);
+        }
+
+        public void Open()
+        {
             client.Connect();
         }
+
+        public bool Connected => client.ReadyState == WebSocketState.Open;
 
         public void Dispose()
         {
