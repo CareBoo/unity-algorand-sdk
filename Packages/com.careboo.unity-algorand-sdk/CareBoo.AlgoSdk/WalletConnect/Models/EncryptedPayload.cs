@@ -4,12 +4,16 @@ using System.Security.Cryptography;
 
 namespace AlgoSdk.WalletConnect
 {
+    [AlgoApiObject]
     public struct EncryptedPayload
     {
+        [AlgoApiField("iv", null)]
         public byte[] Iv;
 
+        [AlgoApiField("hmac", null)]
         public byte[] Signature;
 
+        [AlgoApiField("data", null)]
         public byte[] Data;
 
         public byte[] Sign(byte[] key)

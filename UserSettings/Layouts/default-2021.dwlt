@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 586
-    y: 191
+    x: 0
+    y: 66
     width: 1728
     height: 980
   m_ShowMode: 4
@@ -23,7 +23,7 @@ MonoBehaviour:
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 0
+  m_Maximized: 1
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 106
+  controlID: 15
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -64,12 +64,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1178
+    x: 1179
     y: 0
-    width: 550
+    width: 549
     height: 930
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -93,7 +93,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 285
-    height: 556
+    height: 557
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
@@ -111,23 +111,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 556
-    width: 1178
-    height: 374
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 13}
+    y: 557
+    width: 1179
+    height: 373
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -218,12 +218,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1178
+    width: 1179
     height: 930
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 107
+  controlID: 16
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,12 +243,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1178
-    height: 556
+    width: 1179
+    height: 557
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 108
+  controlID: 17
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -266,8 +266,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 285
     y: 0
-    width: 893
-    height: 556
+    width: 894
+    height: 557
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 12}
@@ -297,20 +297,20 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 286
-    y: 19
-    width: 891
-    height: 535
+    x: 285
+    y: 96
+    width: 892
+    height: 536
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 131
+    ID: 115
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
-    - 348.5
+    - 349.5
     - 116.5
     relativeSizes:
     - 0.75
@@ -321,7 +321,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 465
+    lastTotalSize: 466
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -331,15 +331,1023 @@ MonoBehaviour:
     oldSplitSize: 0
   m_TestTypeToolbarIndex: 1
   m_PlayModeTestListGUI:
-    m_Window: {fileID: 0}
-    m_NewResultList: []
+    m_Window: {fileID: 12}
+    m_NewResultList:
+    - id: 1006
+      uniqueId: '[com.careboo.unity-algorand-sdk][suite]'
+      name: com.careboo.unity-algorand-sdk
+      fullName: com.careboo.unity-algorand-sdk
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1058
+      uniqueId: '[CareBoo.AlgoSdk.IntegrationTests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.IntegrationTests.dll][suite]'
+      name: CareBoo.AlgoSdk.IntegrationTests.dll
+      fullName: /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.IntegrationTests.dll
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1006
+      parentUniqueId: '[com.careboo.unity-algorand-sdk][suite]'
+    - id: 1007
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientApplicationTest][suite]
+      name: AlgodClientApplicationTest
+      fullName: AlgodClientApplicationTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1058
+      parentUniqueId: '[CareBoo.AlgoSdk.IntegrationTests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.IntegrationTests.dll][suite]'
+    - id: 1008
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/AlgodClientApplicationTest/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientApplicationTest.CreatingThenDeletingAppShouldReturnOkay]
+      name: CreatingThenDeletingAppShouldReturnOkay
+      fullName: AlgodClientApplicationTest.CreatingThenDeletingAppShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientApplicationTest][suite]
+    - id: 1009
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/AlgodClientApplicationTest/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientApplicationTest.DeletingAllAppsForAccountShouldReturnOkay]
+      name: DeletingAllAppsForAccountShouldReturnOkay
+      fullName: AlgodClientApplicationTest.DeletingAllAppsForAccountShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientApplicationTest][suite]
+    - id: 1010
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientAssetTest][suite]
+      name: AlgodClientAssetTest
+      fullName: AlgodClientAssetTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1058
+      parentUniqueId: '[CareBoo.AlgoSdk.IntegrationTests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.IntegrationTests.dll][suite]'
+    - id: 1011
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/AlgodClientAssetTest/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientAssetTest.CreatingConfiguringThenDeletingNftShouldReturnOkay]
+      name: CreatingConfiguringThenDeletingNftShouldReturnOkay
+      fullName: AlgodClientAssetTest.CreatingConfiguringThenDeletingNftShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1010
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientAssetTest][suite]
+    - id: 1012
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest][suite]
+      name: AlgodClientTest
+      fullName: AlgodClientTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1058
+      parentUniqueId: '[CareBoo.AlgoSdk.IntegrationTests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.IntegrationTests.dll][suite]'
+    - id: 1015
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/AlgodClientTest/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest.GetAccountInformationShouldReturnOk]
+      name: GetAccountInformationShouldReturnOk
+      fullName: AlgodClientTest.GetAccountInformationShouldReturnOk
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1012
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest][suite]
+    - id: 1017
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/AlgodClientTest/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest.GetBlockShouldReturnOkay]
+      name: GetBlockShouldReturnOkay
+      fullName: AlgodClientTest.GetBlockShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1012
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest][suite]
+    - id: 1019
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/AlgodClientTest/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest.GetCurrentStatusShouldReturnOkay]
+      name: GetCurrentStatusShouldReturnOkay
+      fullName: AlgodClientTest.GetCurrentStatusShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1012
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest][suite]
+    - id: 1013
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/AlgodClientTest/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest.GetGenesisInformationShouldReturnOk]
+      name: GetGenesisInformationShouldReturnOk
+      fullName: AlgodClientTest.GetGenesisInformationShouldReturnOk
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1012
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest][suite]
+    - id: 1022
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/AlgodClientTest/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest.GetMerkleProofShouldReturnOkay]
+      name: GetMerkleProofShouldReturnOkay
+      fullName: AlgodClientTest.GetMerkleProofShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1012
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest][suite]
+    - id: 1016
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/AlgodClientTest/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest.GetPendingTransactionsShouldReturnOkay]
+      name: GetPendingTransactionsShouldReturnOkay
+      fullName: AlgodClientTest.GetPendingTransactionsShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1012
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest][suite]
+    - id: 1014
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/AlgodClientTest/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest.GetSwaggerSpecShouldReturnOk]
+      name: GetSwaggerSpecShouldReturnOk
+      fullName: AlgodClientTest.GetSwaggerSpecShouldReturnOk
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1012
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest][suite]
+    - id: 1021
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/AlgodClientTest/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest.GetTransactionParamsShouldReturnOkay]
+      name: GetTransactionParamsShouldReturnOkay
+      fullName: AlgodClientTest.GetTransactionParamsShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1012
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest][suite]
+    - id: 1020
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/AlgodClientTest/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest.GetVersionsShouldReturnOkay]
+      name: GetVersionsShouldReturnOkay
+      fullName: AlgodClientTest.GetVersionsShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1012
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest][suite]
+    - id: 1012
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/AlgodClientTest/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest.RegisterParticipationKeysShouldReturnOkay]
+      name: RegisterParticipationKeysShouldReturnOkay
+      fullName: AlgodClientTest.RegisterParticipationKeysShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: Register Participation keys isn't supported yet in the algod sandbox...
+        :(
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 1
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1006
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest][suite]
+    - id: 1025
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/AlgodClientTest/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest.SendTransactionGroupShouldReturnOkay]
+      name: SendTransactionGroupShouldReturnOkay
+      fullName: AlgodClientTest.SendTransactionGroupShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1012
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest][suite]
+    - id: 1024
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/AlgodClientTest/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest.TealCompileShouldReturnOkay]
+      name: TealCompileShouldReturnOkay
+      fullName: AlgodClientTest.TealCompileShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1012
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest][suite]
+    - id: 1023
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/AlgodClientTest/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest.TransferFundsShouldReturnTransactionId]
+      name: TransferFundsShouldReturnTransactionId
+      fullName: AlgodClientTest.TransferFundsShouldReturnTransactionId
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1012
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][AlgodClientTest][suite]
+    - id: 1026
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][IndexerClientTest][suite]
+      name: IndexerClientTest
+      fullName: IndexerClientTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1058
+      parentUniqueId: '[CareBoo.AlgoSdk.IntegrationTests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.IntegrationTests.dll][suite]'
+    - id: 1029
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/IndexerClientTest/[CareBoo.AlgoSdk.IntegrationTests][IndexerClientTest.GetAccountsGreaterThan1000AlgoShouldReturnOkay]
+      name: GetAccountsGreaterThan1000AlgoShouldReturnOkay
+      fullName: IndexerClientTest.GetAccountsGreaterThan1000AlgoShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1026
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][IndexerClientTest][suite]
+    - id: 1027
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/IndexerClientTest/[CareBoo.AlgoSdk.IntegrationTests][IndexerClientTest.GetAccountShouldReturnOkay]
+      name: GetAccountShouldReturnOkay
+      fullName: IndexerClientTest.GetAccountShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1026
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][IndexerClientTest][suite]
+    - id: 1030
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/IndexerClientTest/[CareBoo.AlgoSdk.IntegrationTests][IndexerClientTest.GetAccountsPaginatedShouldReturnOkay]
+      name: GetAccountsPaginatedShouldReturnOkay
+      fullName: IndexerClientTest.GetAccountsPaginatedShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1026
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][IndexerClientTest][suite]
+    - id: 1028
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/IndexerClientTest/[CareBoo.AlgoSdk.IntegrationTests][IndexerClientTest.GetAccountsShouldReturnOkay]
+      name: GetAccountsShouldReturnOkay
+      fullName: IndexerClientTest.GetAccountsShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1026
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][IndexerClientTest][suite]
+    - id: 1031
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/IndexerClientTest/[CareBoo.AlgoSdk.IntegrationTests][IndexerClientTest.GetAccountTransactionsShouldReturnOkay]
+      name: GetAccountTransactionsShouldReturnOkay
+      fullName: IndexerClientTest.GetAccountTransactionsShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1026
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][IndexerClientTest][suite]
+    - id: 1032
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/IndexerClientTest/[CareBoo.AlgoSdk.IntegrationTests][IndexerClientTest.GetApplicationsShouldReturnOkay]
+      name: GetApplicationsShouldReturnOkay
+      fullName: IndexerClientTest.GetApplicationsShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1026
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][IndexerClientTest][suite]
+    - id: 1033
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/IndexerClientTest/[CareBoo.AlgoSdk.IntegrationTests][IndexerClientTest.GetAssetsShouldReturnOkay]
+      name: GetAssetsShouldReturnOkay
+      fullName: IndexerClientTest.GetAssetsShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1026
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][IndexerClientTest][suite]
+    - id: 1036
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/IndexerClientTest/[CareBoo.AlgoSdk.IntegrationTests][IndexerClientTest.GetHealthShouldReturnOkay]
+      name: GetHealthShouldReturnOkay
+      fullName: IndexerClientTest.GetHealthShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1026
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][IndexerClientTest][suite]
+    - id: 1035
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/IndexerClientTest/[CareBoo.AlgoSdk.IntegrationTests][IndexerClientTest.GetLogicSigTransactionsShouldReturnOkay]
+      name: GetLogicSigTransactionsShouldReturnOkay
+      fullName: IndexerClientTest.GetLogicSigTransactionsShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1026
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][IndexerClientTest][suite]
+    - id: 1034
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/IndexerClientTest/[CareBoo.AlgoSdk.IntegrationTests][IndexerClientTest.GetTransactionsShouldReturnOkay]
+      name: GetTransactionsShouldReturnOkay
+      fullName: IndexerClientTest.GetTransactionsShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1026
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][IndexerClientTest][suite]
+    - id: 1037
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][KmdClientKeysTest][suite]
+      name: KmdClientKeysTest
+      fullName: KmdClientKeysTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1058
+      parentUniqueId: '[CareBoo.AlgoSdk.IntegrationTests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.IntegrationTests.dll][suite]'
+    - id: 1038
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/KmdClientKeysTest/[CareBoo.AlgoSdk.IntegrationTests][KmdClientKeysTest.DeleteKeyShouldReturnOkay]
+      name: DeleteKeyShouldReturnOkay
+      fullName: KmdClientKeysTest.DeleteKeyShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][KmdClientKeysTest][suite]
+    - id: 1039
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/KmdClientKeysTest/[CareBoo.AlgoSdk.IntegrationTests][KmdClientKeysTest.ExportKeyShouldReturnOkay]
+      name: ExportKeyShouldReturnOkay
+      fullName: KmdClientKeysTest.ExportKeyShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][KmdClientKeysTest][suite]
+    - id: 1040
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/KmdClientKeysTest/[CareBoo.AlgoSdk.IntegrationTests][KmdClientKeysTest.ExportMasterKeyShouldReturnOkay]
+      name: ExportMasterKeyShouldReturnOkay
+      fullName: KmdClientKeysTest.ExportMasterKeyShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][KmdClientKeysTest][suite]
+    - id: 1041
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/KmdClientKeysTest/[CareBoo.AlgoSdk.IntegrationTests][KmdClientKeysTest.ImportKeyShouldReturnOkay]
+      name: ImportKeyShouldReturnOkay
+      fullName: KmdClientKeysTest.ImportKeyShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][KmdClientKeysTest][suite]
+    - id: 1042
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/KmdClientKeysTest/[CareBoo.AlgoSdk.IntegrationTests][KmdClientKeysTest.ListKeysShouldReturnOkay]
+      name: ListKeysShouldReturnOkay
+      fullName: KmdClientKeysTest.ListKeysShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][KmdClientKeysTest][suite]
+    - id: 1043
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][KmdClientSigTest][suite]
+      name: KmdClientSigTest
+      fullName: KmdClientSigTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1058
+      parentUniqueId: '[CareBoo.AlgoSdk.IntegrationTests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.IntegrationTests.dll][suite]'
+    - id: 1044
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/KmdClientSigTest/[CareBoo.AlgoSdk.IntegrationTests][KmdClientSigTest.ExportMultisigShouldReturnOkay]
+      name: ExportMultisigShouldReturnOkay
+      fullName: KmdClientSigTest.ExportMultisigShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1043
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][KmdClientSigTest][suite]
+    - id: 1045
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/KmdClientSigTest/[CareBoo.AlgoSdk.IntegrationTests][KmdClientSigTest.ListMultisigShouldReturnOkay]
+      name: ListMultisigShouldReturnOkay
+      fullName: KmdClientSigTest.ListMultisigShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1043
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][KmdClientSigTest][suite]
+    - id: 1046
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/KmdClientSigTest/[CareBoo.AlgoSdk.IntegrationTests][KmdClientSigTest.SignMultisigShouldReturnOkay]
+      name: SignMultisigShouldReturnOkay
+      fullName: KmdClientSigTest.SignMultisigShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1043
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][KmdClientSigTest][suite]
+    - id: 1047
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/KmdClientSigTest/[CareBoo.AlgoSdk.IntegrationTests][KmdClientSigTest.SignProgramMultisigShouldReturnOkay]
+      name: SignProgramMultisigShouldReturnOkay
+      fullName: KmdClientSigTest.SignProgramMultisigShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1043
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][KmdClientSigTest][suite]
+    - id: 1049
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/KmdClientSigTest/[CareBoo.AlgoSdk.IntegrationTests][KmdClientSigTest.SignProgramShouldReturnOkay]
+      name: SignProgramShouldReturnOkay
+      fullName: KmdClientSigTest.SignProgramShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1043
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][KmdClientSigTest][suite]
+    - id: 1048
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/KmdClientSigTest/[CareBoo.AlgoSdk.IntegrationTests][KmdClientSigTest.SignTransactionShouldReturnOkay]
+      name: SignTransactionShouldReturnOkay
+      fullName: KmdClientSigTest.SignTransactionShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1043
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][KmdClientSigTest][suite]
+    - id: 1050
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][KmdClientTest][suite]
+      name: KmdClientTest
+      fullName: KmdClientTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1058
+      parentUniqueId: '[CareBoo.AlgoSdk.IntegrationTests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.IntegrationTests.dll][suite]'
+    - id: 1051
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/KmdClientTest/[CareBoo.AlgoSdk.IntegrationTests][KmdClientTest.GetSwaggerSpecShouldReturnOkay]
+      name: GetSwaggerSpecShouldReturnOkay
+      fullName: KmdClientTest.GetSwaggerSpecShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1050
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][KmdClientTest][suite]
+    - id: 1052
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/KmdClientTest/[CareBoo.AlgoSdk.IntegrationTests][KmdClientTest.GetVersionsShouldReturnOkay]
+      name: GetVersionsShouldReturnOkay
+      fullName: KmdClientTest.GetVersionsShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1050
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][KmdClientTest][suite]
+    - id: 1053
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][KmdClientWalletTest][suite]
+      name: KmdClientWalletTest
+      fullName: KmdClientWalletTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1058
+      parentUniqueId: '[CareBoo.AlgoSdk.IntegrationTests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.IntegrationTests.dll][suite]'
+    - id: 1057
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/KmdClientWalletTest/[CareBoo.AlgoSdk.IntegrationTests][KmdClientWalletTest.ListWalletsShouldReturnOkay]
+      name: ListWalletsShouldReturnOkay
+      fullName: KmdClientWalletTest.ListWalletsShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1053
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][KmdClientWalletTest][suite]
+    - id: 1055
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/KmdClientWalletTest/[CareBoo.AlgoSdk.IntegrationTests][KmdClientWalletTest.RenameWalletShouldReturnOkay]
+      name: RenameWalletShouldReturnOkay
+      fullName: KmdClientWalletTest.RenameWalletShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1053
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][KmdClientWalletTest][suite]
+    - id: 1056
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/KmdClientWalletTest/[CareBoo.AlgoSdk.IntegrationTests][KmdClientWalletTest.RenewWalletHandleTokenShouldReturnOkay]
+      name: RenewWalletHandleTokenShouldReturnOkay
+      fullName: KmdClientWalletTest.RenewWalletHandleTokenShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1053
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][KmdClientWalletTest][suite]
+    - id: 1054
+      uniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/KmdClientWalletTest/[CareBoo.AlgoSdk.IntegrationTests][KmdClientWalletTest.WalletInfoShouldReturnOkay]
+      name: WalletInfoShouldReturnOkay
+      fullName: KmdClientWalletTest.WalletInfoShouldReturnOkay
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1053
+      parentUniqueId: CareBoo.AlgoSdk.IntegrationTests.dll/[CareBoo.AlgoSdk.IntegrationTests][KmdClientWalletTest][suite]
+    - id: 1065
+      uniqueId: '[CareBoo.AlgoSdk.Crypto.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Crypto.Tests.dll][suite]'
+      name: CareBoo.AlgoSdk.Crypto.Tests.dll
+      fullName: /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Crypto.Tests.dll
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1006
+      parentUniqueId: '[com.careboo.unity-algorand-sdk][suite]'
+    - id: 1059
+      uniqueId: CareBoo.AlgoSdk.Crypto.Tests.dll/[CareBoo.AlgoSdk.Crypto.Tests][Ed25519Test][suite]
+      name: Ed25519Test
+      fullName: Ed25519Test
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1065
+      parentUniqueId: '[CareBoo.AlgoSdk.Crypto.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Crypto.Tests.dll][suite]'
+    - id: 1060
+      uniqueId: CareBoo.AlgoSdk.Crypto.Tests.dll/Ed25519Test/[CareBoo.AlgoSdk.Crypto.Tests][Ed25519Test.GenerateKeyPairGivesValidKeys]
+      name: GenerateKeyPairGivesValidKeys
+      fullName: Ed25519Test.GenerateKeyPairGivesValidKeys
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1059
+      parentUniqueId: CareBoo.AlgoSdk.Crypto.Tests.dll/[CareBoo.AlgoSdk.Crypto.Tests][Ed25519Test][suite]
+    - id: 1061
+      uniqueId: CareBoo.AlgoSdk.Crypto.Tests.dll/Ed25519Test/[CareBoo.AlgoSdk.Crypto.Tests][Ed25519Test.SigningMessageThenVerifyingReturnsTrue]
+      name: SigningMessageThenVerifyingReturnsTrue
+      fullName: Ed25519Test.SigningMessageThenVerifyingReturnsTrue
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1059
+      parentUniqueId: CareBoo.AlgoSdk.Crypto.Tests.dll/[CareBoo.AlgoSdk.Crypto.Tests][Ed25519Test][suite]
+    - id: 1062
+      uniqueId: CareBoo.AlgoSdk.Crypto.Tests.dll/[CareBoo.AlgoSdk.Crypto.Tests][Sha512Test][suite]
+      name: Sha512Test
+      fullName: Sha512Test
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1065
+      parentUniqueId: '[CareBoo.AlgoSdk.Crypto.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Crypto.Tests.dll][suite]'
+    - id: 1064
+      uniqueId: CareBoo.AlgoSdk.Crypto.Tests.dll/Sha512Test/[CareBoo.AlgoSdk.Crypto.Tests][Sha512Test.Sha512_256GeneratesValidHash]
+      name: Sha512_256GeneratesValidHash
+      fullName: Sha512Test.Sha512_256GeneratesValidHash
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1062
+      parentUniqueId: CareBoo.AlgoSdk.Crypto.Tests.dll/[CareBoo.AlgoSdk.Crypto.Tests][Sha512Test][suite]
+    - id: 1063
+      uniqueId: CareBoo.AlgoSdk.Crypto.Tests.dll/Sha512Test/[CareBoo.AlgoSdk.Crypto.Tests][Sha512Test.Sha512IsTruncatedTo32Bytes]
+      name: Sha512IsTruncatedTo32Bytes
+      fullName: Sha512Test.Sha512IsTruncatedTo32Bytes
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1062
+      parentUniqueId: CareBoo.AlgoSdk.Crypto.Tests.dll/[CareBoo.AlgoSdk.Crypto.Tests][Sha512Test][suite]
     m_ResultText: 
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 
+      m_SelectedIDs: f6b5e9ff
+      m_LastClickedID: -1460746
+      m_ExpandedIDs: f288c691f093e2f9433b74279816883484c3466caaa6ed6dffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -363,7 +1371,8 @@ MonoBehaviour:
       NotRunHidden: 0
       m_SearchString: 
       selectedCategoryMask: 0
-      availableCategories: []
+      availableCategories:
+      - Uncategorized
     m_SelectedOption: 0
   m_EditModeTestListGUI:
     m_Window: {fileID: 12}
@@ -373,7 +1382,7 @@ MonoBehaviour:
       name: com.careboo.unity-algorand-sdk
       fullName: com.careboo.unity-algorand-sdk
       resultStatus: 1
-      duration: 2.536246
+      duration: 8.966531
       messages: 
       output: 
       stacktrace: 
@@ -384,12 +1393,12 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    - id: 1003
-      uniqueId: '[CareBoo.AlgoSdk.WalletConnect.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.WalletConnect.Tests.dll][suite]'
-      name: CareBoo.AlgoSdk.WalletConnect.Tests.dll
-      fullName: /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.WalletConnect.Tests.dll
+    - id: 1102
+      uniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
+      name: CareBoo.AlgoSdk.Tests.dll
+      fullName: /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll
       resultStatus: 1
-      duration: 2.5166652
+      duration: 8.951986
       messages: 
       output: 
       stacktrace: 
@@ -398,14 +1407,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1000
+      parentId: 1062
       parentUniqueId: '[com.careboo.unity-algorand-sdk][suite]'
-    - id: 1002
-      uniqueId: CareBoo.AlgoSdk.WalletConnect.Tests.dll/[CareBoo.AlgoSdk.WalletConnect.Tests][NetworkMessageTest][suite]
-      name: NetworkMessageTest
-      fullName: NetworkMessageTest
+    - id: 1064
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][AccountTest][suite]
+      name: AccountTest
+      fullName: AccountTest
       resultStatus: 1
-      duration: 0.0165077
+      duration: 0.0770591
       messages: 
       output: 
       stacktrace: 
@@ -414,49 +1423,24 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1003
-      parentUniqueId: '[CareBoo.AlgoSdk.WalletConnect.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.WalletConnect.Tests.dll][suite]'
-    - id: 1003
-      uniqueId: CareBoo.AlgoSdk.WalletConnect.Tests.dll/NetworkMessageTest/[CareBoo.AlgoSdk.WalletConnect.Tests][NetworkMessageTest.NetworkMessageShouldDeserializeFromJsonProperly]
-      name: NetworkMessageShouldDeserializeFromJsonProperly
-      fullName: NetworkMessageTest.NetworkMessageShouldDeserializeFromJsonProperly
+      parentId: 1102
+      parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
+    - id: 1065
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/AccountTest/[CareBoo.AlgoSdk.Tests][AccountTest.GenerateAccount]
+      name: GenerateAccount
+      fullName: AccountTest.GenerateAccount
       resultStatus: 1
-      duration: 0.0092207
+      duration: 0.0702737
       messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1002
-      parentUniqueId: CareBoo.AlgoSdk.WalletConnect.Tests.dll/[CareBoo.AlgoSdk.WalletConnect.Tests][NetworkMessageTest][suite]
-    - id: 1004
-      uniqueId: CareBoo.AlgoSdk.WalletConnect.Tests.dll/[CareBoo.AlgoSdk.WalletConnect.Tests][WalletConnectTest][suite]
-      name: WalletConnectTest
-      fullName: WalletConnectTest
-      resultStatus: 1
-      duration: 2.5156348
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1006
-      parentUniqueId: '[CareBoo.AlgoSdk.WalletConnect.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.WalletConnect.Tests.dll][suite]'
-    - id: 1005
-      uniqueId: CareBoo.AlgoSdk.WalletConnect.Tests.dll/WalletConnectTest/[CareBoo.AlgoSdk.WalletConnect.Tests][WalletConnectTest.TestConnection]
-      name: TestConnection
-      fullName: WalletConnectTest.TestConnection
-      resultStatus: 1
-      duration: 2.5057075
-      messages: 
-      output: 'ClientId: 0Error: Payload: Reason: Type: Open
+      output: 'My address: TQSSF3DR7TMHP56BBLYLUP2OBPS665Q3G47POLE5OHGTQLQDNZXEZW4KZI
+
+        My
+        private key: SrnTxUk2gjz0Kekha3GGdjE/w6VQR2xlzGXEYNiadaOcJSLscfzYd/fBCvC6P04L5e92Gzc+9yydcc04LgNubg==
+
+        My
+        passphrase: citizen exclude title goose afford august exile truck goddess
+        shield drip blast lazy ignore lunch elder pulse cover cream arrange radio
+        grit brick absent beach
 
 '
       stacktrace: 
@@ -466,20 +1450,627 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1004
-      parentUniqueId: CareBoo.AlgoSdk.WalletConnect.Tests.dll/[CareBoo.AlgoSdk.WalletConnect.Tests][WalletConnectTest][suite]
-    m_ResultText: 'TestConnection (2.506s)
+      parentId: 1064
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][AccountTest][suite]
+    - id: 1066
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][AddressTest][suite]
+      name: AddressTest
+      fullName: AddressTest
+      resultStatus: 1
+      duration: 0.0259171
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1102
+      parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
+    - id: 1067
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/AddressTest/[CareBoo.AlgoSdk.Tests][AddressTest.AddressFromStringShouldBeValid]
+      name: AddressFromStringShouldBeValid
+      fullName: AddressTest.AddressFromStringShouldBeValid
+      resultStatus: 1
+      duration: 0.0084011
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1066
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][AddressTest][suite]
+    - id: 1068
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/AddressTest/[CareBoo.AlgoSdk.Tests][AddressTest.AddressToStringShouldBeValid]
+      name: AddressToStringShouldBeValid
+      fullName: AddressTest.AddressToStringShouldBeValid
+      resultStatus: 1
+      duration: 0.0001747
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1066
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][AddressTest][suite]
+    - id: 1069
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][ApplicationTest][suite]
+      name: ApplicationTest
+      fullName: ApplicationTest
+      resultStatus: 1
+      duration: 0.003509
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1102
+      parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
+    - id: 1070
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/ApplicationTest/[CareBoo.AlgoSdk.Tests][ApplicationTest.ApplicationGetAddressFromIdShouldBeValid]
+      name: ApplicationGetAddressFromIdShouldBeValid
+      fullName: ApplicationTest.ApplicationGetAddressFromIdShouldBeValid
+      resultStatus: 1
+      duration: 0.0012571
+      messages: 
+      output: 'WCS6TVPJRBSARHLN2326LRU5BYVJZUKI2VJ53CAWKYYHDE455ZGKANWMGM
 
-      ---
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1069
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][ApplicationTest][suite]
+    - id: 1071
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][BlockTest][suite]
+      name: BlockTest
+      fullName: BlockTest
+      resultStatus: 1
+      duration: 0.29053
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1102
+      parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
+    - id: 1073
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/BlockTest/[CareBoo.AlgoSdk.Tests][BlockTest.DefaultFixedStringsShouldBeEqual]
+      name: DefaultFixedStringsShouldBeEqual
+      fullName: BlockTest.DefaultFixedStringsShouldBeEqual
+      resultStatus: 1
+      duration: 0.0004679
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1071
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][BlockTest][suite]
+    - id: 1072
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/BlockTest/[CareBoo.AlgoSdk.Tests][BlockTest.DeserializingBlockFromMessagePackShouldThrowNoErrors]
+      name: DeserializingBlockFromMessagePackShouldThrowNoErrors
+      fullName: BlockTest.DeserializingBlockFromMessagePackShouldThrowNoErrors
+      resultStatus: 1
+      duration: 0.2873712
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1071
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][BlockTest][suite]
+    - id: 1074
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][JsonReaderTest][suite]
+      name: JsonReaderTest
+      fullName: JsonReaderTest
+      resultStatus: 1
+      duration: 0.0109617
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1102
+      parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
+    - id: 1076
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/JsonReaderTest/[CareBoo.AlgoSdk.Tests][JsonReaderTest.CheckValue]
+      name: CheckValue
+      fullName: JsonReaderTest.CheckValue
+      resultStatus: 1
+      duration: 0.0009918
+      messages: 
+      output: '4
 
-      ClientId: 0Error: Payload:
-      Reason: Type: Open'
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1074
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][JsonReaderTest][suite]
+    - id: 1075
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/JsonReaderTest/[CareBoo.AlgoSdk.Tests][JsonReaderTest.ValidJsonShouldBeParsedWithoutErrs]
+      name: ValidJsonShouldBeParsedWithoutErrs
+      fullName: JsonReaderTest.ValidJsonShouldBeParsedWithoutErrs
+      resultStatus: 1
+      duration: 0.0025443
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1074
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][JsonReaderTest][suite]
+    - id: 1077
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][LogicSigTest][suite]
+      name: LogicSigTest
+      fullName: LogicSigTest
+      resultStatus: 1
+      duration: 0.0042661
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1102
+      parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
+    - id: 1078
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/LogicSigTest/[CareBoo.AlgoSdk.Tests][LogicSigTest.GetAddressShouldReturnValidAddress]
+      name: GetAddressShouldReturnValidAddress
+      fullName: LogicSigTest.GetAddressShouldReturnValidAddress
+      resultStatus: 1
+      duration: 0.0005044
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1077
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][LogicSigTest][suite]
+    - id: 1079
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][MnemonicTest][suite]
+      name: MnemonicTest
+      fullName: MnemonicTest
+      resultStatus: 1
+      duration: 0.0087545
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1102
+      parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
+    - id: 1080
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/MnemonicTest/[CareBoo.AlgoSdk.Tests][MnemonicTest.CanGenerateMnemonicFromString]
+      name: CanGenerateMnemonicFromString
+      fullName: MnemonicTest.CanGenerateMnemonicFromString
+      resultStatus: 1
+      duration: 0.0028513
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1079
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][MnemonicTest][suite]
+    - id: 1081
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/MnemonicTest/[CareBoo.AlgoSdk.Tests][MnemonicTest.MnemonicsFromTheSameStringShouldBeEqual]
+      name: MnemonicsFromTheSameStringShouldBeEqual
+      fullName: MnemonicTest.MnemonicsFromTheSameStringShouldBeEqual
+      resultStatus: 1
+      duration: 0.0022556
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1079
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][MnemonicTest][suite]
+    - id: 1083
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/MnemonicTest/[CareBoo.AlgoSdk.Tests][MnemonicTest.MnemonicToKeyShouldGenerateValidKey]
+      name: MnemonicToKeyShouldGenerateValidKey
+      fullName: MnemonicTest.MnemonicToKeyShouldGenerateValidKey
+      resultStatus: 1
+      duration: 0.0003784
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1079
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][MnemonicTest][suite]
+    - id: 1082
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/MnemonicTest/[CareBoo.AlgoSdk.Tests][MnemonicTest.ShortWordShouldEqualWord]
+      name: ShortWordShouldEqualWord
+      fullName: MnemonicTest.ShortWordShouldEqualWord
+      resultStatus: 1
+      duration: 0.000108
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1079
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][MnemonicTest][suite]
+    - id: 1084
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][MultisigAddressTest][suite]
+      name: MultisigAddressTest
+      fullName: MultisigAddressTest
+      resultStatus: 1
+      duration: 0.0026938
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1102
+      parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
+    - id: 1085
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/MultisigAddressTest/[CareBoo.AlgoSdk.Tests][MultisigAddressTest.MultisigGetAddressShouldReturnValidAddress]
+      name: MultisigGetAddressShouldReturnValidAddress
+      fullName: MultisigAddressTest.MultisigGetAddressShouldReturnValidAddress
+      resultStatus: 1
+      duration: 0.0005822
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1084
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][MultisigAddressTest][suite]
+    - id: 1098
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][NetworkMessageTest][suite]
+      name: NetworkMessageTest
+      fullName: NetworkMessageTest
+      resultStatus: 1
+      duration: 0.0024993
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1102
+      parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
+    - id: 1099
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/NetworkMessageTest/[CareBoo.AlgoSdk.Tests][NetworkMessageTest.NetworkMessageShouldDeserializeFromJsonProperly]
+      name: NetworkMessageShouldDeserializeFromJsonProperly
+      fullName: NetworkMessageTest.NetworkMessageShouldDeserializeFromJsonProperly
+      resultStatus: 1
+      duration: 0.0003037
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1098
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][NetworkMessageTest][suite]
+    - id: 1086
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][PrivateKeyTest][suite]
+      name: PrivateKeyTest
+      fullName: PrivateKeyTest
+      resultStatus: 1
+      duration: 0.006694
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1102
+      parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
+    - id: 1088
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/PrivateKeyTest/[CareBoo.AlgoSdk.Tests][PrivateKeyTest.PrivateKeyToMnemonicCheckSumShouldBeValid]
+      name: PrivateKeyToMnemonicCheckSumShouldBeValid
+      fullName: PrivateKeyTest.PrivateKeyToMnemonicCheckSumShouldBeValid
+      resultStatus: 1
+      duration: 0.0011987
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1086
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][PrivateKeyTest][suite]
+    - id: 1087
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/PrivateKeyTest/[CareBoo.AlgoSdk.Tests][PrivateKeyTest.PrivateKeyToMnemonicShouldBeValid]
+      name: PrivateKeyToMnemonicShouldBeValid
+      fullName: PrivateKeyTest.PrivateKeyToMnemonicShouldBeValid
+      resultStatus: 1
+      duration: 0.00134
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1086
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][PrivateKeyTest][suite]
+    - id: 1089
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/PrivateKeyTest/[CareBoo.AlgoSdk.Tests][PrivateKeyTest.PrivateKeyToStringShouldBeValid]
+      name: PrivateKeyToStringShouldBeValid
+      fullName: PrivateKeyTest.PrivateKeyToStringShouldBeValid
+      resultStatus: 1
+      duration: 0.0001649
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1086
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][PrivateKeyTest][suite]
+    - id: 1090
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][RawTransactionTest][suite]
+      name: RawTransactionTest
+      fullName: RawTransactionTest
+      resultStatus: 1
+      duration: 0.0108324
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1102
+      parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
+    - id: 1091
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/RawTransactionTest/[CareBoo.AlgoSdk.Tests][RawTransactionTest.SerializedTransactionShouldEqualDeserializedTransaction]
+      name: SerializedTransactionShouldEqualDeserializedTransaction
+      fullName: RawTransactionTest.SerializedTransactionShouldEqualDeserializedTransaction
+      resultStatus: 1
+      duration: 0.0088008
+      messages: 
+      output: 'iKNhbXTNnECjZmVlIKJmds0D8aJnaMQgMDZWUA1hc/nuM+ggmrRuIk3KPKIR6iui9rZQpt0XgBWibHbNJyWjcmN2xCD7skD9dY/bVwYHzb9CWWgypcHAf9Tjw1ZIx7cTHYgbmaNzbmTEIPKam34tAZuwHkgkBSfKRx/ixKGTATaNqMw9lKz777LcpHR5cGWjcGF5
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1090
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][RawTransactionTest][suite]
+    - id: 1092
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/RawTransactionTest/[CareBoo.AlgoSdk.Tests][RawTransactionTest.SizeOfRawTransactionShouldBeUnder4KB]
+      name: SizeOfRawTransactionShouldBeUnder4KB
+      fullName: RawTransactionTest.SizeOfRawTransactionShouldBeUnder4KB
+      resultStatus: 1
+      duration: 0.0003606
+      messages: 
+      output: 'Size of Transaction: 1456
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1090
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][RawTransactionTest][suite]
+    - id: 1093
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][SignedTransactionTest][suite]
+      name: SignedTransactionTest
+      fullName: SignedTransactionTest
+      resultStatus: 1
+      duration: 0.0079601
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1102
+      parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
+    - id: 1095
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/SignedTransactionTest/[CareBoo.AlgoSdk.Tests][SignedTransactionTest.SerializedSignedTransactionShouldEqualDeserializedSignedTransaction]
+      name: SerializedSignedTransactionShouldEqualDeserializedSignedTransaction
+      fullName: SignedTransactionTest.SerializedSignedTransactionShouldEqualDeserializedSignedTransaction
+      resultStatus: 1
+      duration: 0.0056626
+      messages: 
+      output: 'Serialized bytes: gqNzaWfEQBEM8GfyyV5UhdeB4hLmVhEpMzR0BJDwTMoHSxKk/p/WRnrtNhB+TLm6+HRI5C63Kh6XA/px+ZRiq5OHHt6ejAejdHhuiaNhbXTOAA9CQKNmZWXNA+iiZnbOArjPuqNnZW6qc2FuZG5ldC12MaJnaMQgm0XImxCpIDneMMenkOlyixCtRKRVd0mbH8vV/QLYB1WibHbOArjToqNyY3bEIGtbIYIzsqxuqptgkdf6h7xLnhhJINl9mDs97BqCLsUYo3NuZMQgXiHqpDPs77ZSeXWxPw4OmMrNAprM5/5qetieOFmtWiukdHlwZaNwYXk=
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1093
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][SignedTransactionTest][suite]
+    - id: 1094
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/SignedTransactionTest/[CareBoo.AlgoSdk.Tests][SignedTransactionTest.SizeOfSignedTransactionShouldBeUnder4KB]
+      name: SizeOfSignedTransactionShouldBeUnder4KB
+      fullName: SignedTransactionTest.SizeOfSignedTransactionShouldBeUnder4KB
+      resultStatus: 1
+      duration: 0.0003493
+      messages: 
+      output: 'Size of SignedTransaction: 1456
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1093
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][SignedTransactionTest][suite]
+    - id: 1096
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][TransactionIdTest][suite]
+      name: TransactionIdTest
+      fullName: TransactionIdTest
+      resultStatus: 1
+      duration: 0.0025362
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1102
+      parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
+    - id: 1097
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/TransactionIdTest/[CareBoo.AlgoSdk.Tests][TransactionIdTest.TestTransactionIdCanBeDeserializedFromString]
+      name: TestTransactionIdCanBeDeserializedFromString
+      fullName: TransactionIdTest.TestTransactionIdCanBeDeserializedFromString
+      resultStatus: 1
+      duration: 0.0007361
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1096
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][TransactionIdTest][suite]
+    - id: 1100
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][WalletConnectTest][suite]
+      name: WalletConnectTest
+      fullName: WalletConnectTest
+      resultStatus: 1
+      duration: 8.949449
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1102
+      parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
+    - id: 1101
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/WalletConnectTest/[CareBoo.AlgoSdk.Tests][WalletConnectTest.TestConnection]
+      name: TestConnection
+      fullName: WalletConnectTest.TestConnection
+      resultStatus: 1
+      duration: 8.928663
+      messages: 
+      output: "ClientId: 0\nError: \nPayload: \nReason: \nType: Nothing\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1100
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][WalletConnectTest][suite]
+    m_ResultText: "TestConnection (8.929s)\n---\nClientId: 0\nError: \nPayload: \nReason:
+      \nType: Nothing"
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 004159b8
-      m_LastClickedID: -1202110208
-      m_ExpandedIDs: 04599a885843a51f433b7427eca58c36ffffff7f
+      m_SelectedIDs: 8a50ee93
+      m_LastClickedID: -1813098358
+      m_ExpandedIDs: 04599a885843a51f433b7427eca58c3684c3466cffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -521,14 +2112,14 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
     m_Text: Project
-    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 575
-    width: 1177
-    height: 353
+    y: 841
+    width: 1746
+    height: 486
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -546,22 +2137,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk.WalletConnect.Tests
+    - Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk.Tests
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk.WalletConnect.Tests
+  - Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk.Tests
   m_LastFoldersGridSize: 16
   m_LastProjectPath: /Users/jason/Projects/CareBoo/Unity.AlgoSdk
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 127}
-    m_SelectedIDs: 884f0000
-    m_LastClickedID: 20360
-    m_ExpandedIDs: 000000005a4f00005c4f00005e4f0000604f0000624f0000644f0000664f0000684f000000ca9a3bffffff7f
+    m_SelectedIDs: 704f0000
+    m_LastClickedID: 20336
+    m_ExpandedIDs: 00000000604f0000624f0000644f0000664f0000684f00006a4f00006c4f00006e4f0000704f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -589,7 +2180,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005a4f00005c4f00005e4f0000604f0000624f0000644f0000664f0000684f0000
+    m_ExpandedIDs: 00000000604f0000624f0000644f0000664f0000684f00006a4f00006c4f00006e4f0000704f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -633,7 +2224,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 5}
+      m_ClientGUIView: {fileID: 0}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -661,13 +2252,13 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Inspector
-    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 1179
-    y: 19
-    width: 549
+    y: 96
+    width: 548
     height: 909
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -702,14 +2293,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Hierarchy
-    m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 586
-    y: 221
+    x: 0
+    y: 96
     width: 284
-    height: 535
+    height: 536
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -717,7 +2308,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 4cfaffff
       m_LastClickedID: 0
       m_ExpandedIDs: 38fbffff
       m_RenameOverlay:
@@ -759,7 +2350,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
-    m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -1064,7 +2655,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Game
-    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
@@ -1097,10 +2688,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -766
-    m_HBaseRangeMax: 766
-    m_VBaseRangeMin: -395
-    m_VBaseRangeMax: 395
+    m_HBaseRangeMin: -383
+    m_HBaseRangeMax: 383
+    m_VBaseRangeMin: -192.25
+    m_VBaseRangeMax: 192.25
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1117,24 +2708,24 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 0
+      y: 21
       width: 1532
-      height: 790
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 766, y: 395}
+      height: 769
+    m_Scale: {x: 2, y: 2}
+    m_Translation: {x: 766, y: 384.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -766
-      y: -395
-      width: 1532
-      height: 790
+      x: -383
+      y: -192.25
+      width: 766
+      height: 384.5
     m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1532, y: 790}
+  m_defaultScale: 2
+  m_LastWindowPixelSize: {x: 3064, y: 1580}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -1156,14 +2747,14 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Console
-    m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000, type: 0}
+    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 652
-    width: 1282.5
-    height: 353
+    y: 653
+    width: 1178
+    height: 352
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
