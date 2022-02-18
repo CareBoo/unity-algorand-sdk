@@ -1,10 +1,14 @@
 namespace AlgoSdk.WalletConnect
 {
-    public interface JsonRpcRequest<T>
+    public interface JsonRpcRequest<T> : JsonRpcRequest
+    {
+        T Params { get; set; }
+    }
+
+    public interface JsonRpcRequest
     {
         ulong Id { get; set; }
         string JsonRpc { get; }
         string Method { get; }
-        T Params { get; set; }
     }
 }

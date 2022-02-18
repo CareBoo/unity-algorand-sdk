@@ -69,6 +69,18 @@ namespace AlgoSdk
         }
 
         /// <summary>
+        /// Deserialize JSON encoded as UTF8 bytes
+        /// </summary>
+        /// <param name="bytes">UTF8 Bytes that can be decoded into JSON</param>
+        /// <typeparam name="T">The type to deserialize the data into</typeparam>
+        /// <returns>The data deserialized as T</returns>
+        public static T DeserializeJson<T>(byte[] bytes)
+        {
+            using var nativeByteArray = new NativeArray<byte>(bytes, Allocator.Temp);
+            return DeserializeJson<T>(nativeByteArray);
+        }
+
+        /// <summary>
         /// Deserialize JSON text into an object
         /// </summary>
         /// <typeparam name="T">The type of the object that will be deserialized into</typeparam>

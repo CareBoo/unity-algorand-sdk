@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 using UnityEngine;
 
 namespace AlgoSdk.WalletConnect
@@ -32,5 +33,8 @@ namespace AlgoSdk.WalletConnect
             get => payload;
             set => payload = value;
         }
+
+        public byte[] ToByteArray() =>
+            Encoding.UTF8.GetBytes(JsonUtility.ToJson(this));
     }
 }
