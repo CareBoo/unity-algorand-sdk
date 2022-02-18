@@ -54,6 +54,7 @@ jobs:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           useNetworkHost: true
           customImage: unityci/editor:${{ matrix.unityVersion }}-${{ matrix.targetPlatform }}-0
+          checkName: Test Results ${{ matrix.unityVersion }} ${{ matrix.targetPlatform }}
       - name: Upload Test Results Artifacts
         uses: actions/upload-artifact@v1
         with:
