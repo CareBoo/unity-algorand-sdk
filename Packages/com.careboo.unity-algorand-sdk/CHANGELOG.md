@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [1.4.0-exp.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.3.0...v1.4.0-exp.1) (2022-02-18)
+
+
+### Features
+
+* **walletconnect:** add WebSocket support ([e0d2e6d](https://github.com/CareBoo/unity-algorand-sdk/commit/e0d2e6dcdd058ee7544b6f233e02461f87c12ffd)), closes [#59](https://github.com/CareBoo/unity-algorand-sdk/issues/59)
+
 # [1.3.0](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.2.2...v1.3.0) (2021-11-19)
 
 
