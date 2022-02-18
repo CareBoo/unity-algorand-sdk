@@ -10,8 +10,10 @@ using AlgoSdk;
 using UnityEngine;
 using AlgoSdk.LowLevel;
 using Unity.Collections;
+using WebSocketSharp;
 
 [TestFixture]
+[Ignore("This test is only used for manual testing of walletconnect")]
 public class WalletConnectTest
 {
     const string connectionRequestJson = @"
@@ -61,7 +63,14 @@ public class WalletConnectTest
             Topic = topic
         };
         var messageData = Encoding.UTF8.GetBytes(JsonUtility.ToJson(message));
-        client.Send(new ArraySegment<byte>(messageData));
+        try
+        {
+            client.Send(new ArraySegment<byte>(messageData));
+        }
+        catch (WebSocketException)
+        {
+            Assert.Ignore("Unable to send message using websockets.");
+        }
         await WaitForMessage(bridgeUrl, topic, key);
         var responseEvent = client.Poll();
         UnityEngine.Debug.Log(
