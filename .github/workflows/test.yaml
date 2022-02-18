@@ -11,7 +11,7 @@ env:
 
 jobs:
   testAllModes:
-    name: Test ${{ matrix.targetPlatform }}
+    name: Test ${{ matrix.unityVersion}} ${{ matrix.targetPlatform }}
     runs-on: ubuntu-latest
 
     strategy:
