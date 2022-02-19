@@ -3,19 +3,19 @@ using AlgoSdk.MessagePack;
 
 namespace AlgoSdk.WalletConnect
 {
-    public class SignTxnParamsFormatter : IAlgoApiFormatter<SignTxnParams>
+    public class SignTxnsParamsFormatter : IAlgoApiFormatter<SignTxnsParams>
     {
-        public SignTxnParams Deserialize(ref JsonReader reader)
+        public SignTxnsParams Deserialize(ref JsonReader reader)
         {
             throw new System.NotSupportedException();
         }
 
-        public SignTxnParams Deserialize(ref MessagePackReader reader)
+        public SignTxnsParams Deserialize(ref MessagePackReader reader)
         {
             throw new System.NotSupportedException();
         }
 
-        public void Serialize(ref JsonWriter writer, SignTxnParams value)
+        public void Serialize(ref JsonWriter writer, SignTxnsParams value)
         {
             writer.BeginArray();
 
@@ -24,13 +24,13 @@ namespace AlgoSdk.WalletConnect
             if (!value.Options.Equals(default))
             {
                 writer.BeginNextItem();
-                AlgoApiFormatterCache<SignTxnOpts>.Formatter.Serialize(ref writer, value.Options);
+                AlgoApiFormatterCache<SignTxnsOpts>.Formatter.Serialize(ref writer, value.Options);
             }
 
             writer.EndArray();
         }
 
-        public void Serialize(ref MessagePackWriter writer, SignTxnParams value)
+        public void Serialize(ref MessagePackWriter writer, SignTxnsParams value)
         {
             throw new System.NotSupportedException();
         }

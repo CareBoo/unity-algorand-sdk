@@ -1,36 +1,21 @@
-using System.Collections;
-using Cysharp.Threading.Tasks;
-using NUnit.Framework;
-using UnityEngine.TestTools;
-using Netcode.Transports.WebSocket;
-using AlgoSdk.WalletConnect;
-using System.Text;
 using System;
+using System.Collections;
+using System.Text;
 using AlgoSdk;
-using UnityEngine;
 using AlgoSdk.LowLevel;
+using AlgoSdk.WalletConnect;
+using Cysharp.Threading.Tasks;
+using Netcode.Transports.WebSocket;
+using NUnit.Framework;
 using Unity.Collections;
+using UnityEngine;
+using UnityEngine.TestTools;
 using WebSocketSharp;
 
 [TestFixture]
 [Ignore("This test is only used for manual testing of walletconnect")]
 public class WalletConnectTest
 {
-    const string connectionRequestJson = @"
-{
-    ""id"": 1,
-    ""jsonrpc"": ""2.0"",
-    ""method"": ""wc_sessionRequest"",
-    ""params"": [
-        {
-            ""peerId"": """",
-            ""peerMeta"": """",
-            ""chainId"": null
-        }
-    ]
-}
-";
-
     [UnityTest]
     public IEnumerator TestConnection() => UniTask.ToCoroutine(async () =>
     {
@@ -73,7 +58,7 @@ public class WalletConnectTest
         }
         await WaitForMessage(bridgeUrl, topic, key);
         var responseEvent = client.Poll();
-        UnityEngine.Debug.Log(
+        Debug.Log(
             $"ClientId: {responseEvent.ClientId}" +
             $"\nError: {responseEvent.Error}" +
             $"\nPayload: {(responseEvent.Payload == null ? "" : Encoding.UTF8.GetString(responseEvent.Payload))}" +
@@ -90,7 +75,7 @@ public class WalletConnectTest
             await UniTask.Delay(500);
             count++;
             responseEvent = client.Poll();
-            UnityEngine.Debug.Log(
+            Debug.Log(
                 $"ClientId: {responseEvent.ClientId}" +
                 $"\nError: {responseEvent.Error}" +
                 $"\nPayload: {(responseEvent.Payload == null ? "" : Encoding.UTF8.GetString(responseEvent.Payload))}" +
@@ -114,7 +99,7 @@ public class WalletConnectTest
         client.Send(new ArraySegment<byte>(messageData));
 
         var responseEvent = client.Poll();
-        UnityEngine.Debug.Log(
+        Debug.Log(
             $"ClientId: {responseEvent.ClientId}" +
             $"\nError: {responseEvent.Error}" +
             $"\nPayload: {(responseEvent.Payload == null ? "" : Encoding.UTF8.GetString(responseEvent.Payload))}" +
@@ -131,7 +116,7 @@ public class WalletConnectTest
             await UniTask.Delay(500);
             count++;
             responseEvent = client.Poll();
-            UnityEngine.Debug.Log(
+            Debug.Log(
                 $"ClientId: {responseEvent.ClientId}" +
                 $"\nError: {responseEvent.Error}" +
                 $"\nPayload: {(responseEvent.Payload == null ? "" : Encoding.UTF8.GetString(responseEvent.Payload))}" +
