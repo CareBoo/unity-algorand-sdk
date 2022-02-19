@@ -5,6 +5,11 @@ on:
     branches:
       - main
   pull_request:
+    paths:
+      - "**.cs"
+      - "**.dll"
+      - "Packages/packages-lock.json"
+      - "**/Plugins/**"
 
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE_2020 }}
