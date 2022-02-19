@@ -4,7 +4,7 @@ using UnityEngine;
 namespace AlgoSdk.WalletConnect
 {
     [Serializable]
-    public struct SavedSession : IWalletConnectSession
+    public struct SavedSession : IWalletConnectSessionData
     {
         [SerializeField]
         string clientId;
@@ -35,6 +35,12 @@ namespace AlgoSdk.WalletConnect
 
         [SerializeField]
         ClientMeta walletMeta;
+
+        [SerializeField]
+        string url;
+
+        [SerializeField]
+        string version;
 
         public string ClientId
         {
@@ -94,6 +100,18 @@ namespace AlgoSdk.WalletConnect
         {
             get => walletMeta;
             set => walletMeta = value;
+        }
+
+        public string Url
+        {
+            get => url;
+            set => url = value;
+        }
+
+        public string Version
+        {
+            get => version;
+            set => version = value;
         }
     }
 }

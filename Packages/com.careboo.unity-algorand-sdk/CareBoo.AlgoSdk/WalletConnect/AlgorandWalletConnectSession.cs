@@ -1,16 +1,17 @@
 using System;
+using System.Collections;
 using System.Text;
 using AlgoSdk.LowLevel;
 using Cysharp.Threading.Tasks;
 using Netcode.Transports.WebSocket;
-using static Netcode.Transports.WebSocket.WebSocketEvent;
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using static Netcode.Transports.WebSocket.WebSocketEvent;
 
 namespace AlgoSdk.WalletConnect
 {
-    public class AlgorandWalletConnectSession : IWalletConnectSession<AlgorandWalletConnectSession>
+    public class AlgorandWalletConnectSession : IActiveWalletConnectSession<AlgorandWalletConnectSession>
     {
         public const int AlgorandChainId = 4160;
 
@@ -18,94 +19,79 @@ namespace AlgoSdk.WalletConnect
 
         public UnityEvent OnSessionDisconnect { get; set; } = new UnityEvent();
 
-        public UnityEvent<AlgorandWalletConnectSession> OnSend { get; set; } = new UnityEvent<AlgorandWalletConnectSession>();
-
         public UnityEvent<WalletConnectSessionData> OnSessionUpdate { get; set; } = new UnityEvent<WalletConnectSessionData>();
 
-        public string Url => $"wc:{PeerId}@{Version}?bridge={BridgeUrl}&key={Key}";
+        public string Url => session.Url;
 
-        public Address[] Accounts { get; private set; }
+        public Address[] Accounts => session.Accounts;
 
-        public string Version => "1";
+        public string Version => session.Version;
 
         public bool SessionConnected { get; private set; }
 
-        public int ChainId { get; private set; }
+        public int ChainId => session.ChainId;
 
-        public long HandshakeId { get; private set; }
+        public long HandshakeId => session.HandshakeId;
 
-        public int NetworkId { get; private set; }
+        public int NetworkId => session.NetworkId;
 
-        public string PeerId { get; private set; }
+        public string PeerId => session.PeerId;
 
-        public string ClientId { get; private set; }
+        public string ClientId => session.ClientId;
 
-        public string BridgeUrl { get; private set; }
+        public string BridgeUrl => session.BridgeUrl;
 
-        public Hex Key { get; private set; }
+        public Hex Key => session.Key;
 
-        public ClientMeta DappMeta { get; private set; }
+        public ClientMeta DappMeta => session.DappMeta;
 
-        public ClientMeta WalletMeta { get; private set; }
+        public ClientMeta WalletMeta => session.WalletMeta;
 
         IWebSocketClient webSocketClient;
+
+        SavedSession session;
+
+        IEnumerator pollingUpdate;
 
         protected AlgorandWalletConnectSession(
             ClientMeta clientMeta,
             string bridgeUrl = null
         )
         {
-            DappMeta = clientMeta;
-            PeerId = Guid.NewGuid().ToString();
-            ClientId = Guid.NewGuid().ToString();
-
             using var secret = new NativeByteArray(32, Allocator.Temp);
-            AlgoSdk.Crypto.Random.Randomize(secret);
-            Key = secret.ToArray();
+            Crypto.Random.Randomize(secret);
 
-            BridgeUrl = bridgeUrl ?? DefaultBridge.GetRandomBridgeUrl();
+            session = new SavedSession
+            {
+                ClientId = Guid.NewGuid().ToString(),
+                BridgeUrl = bridgeUrl ?? DefaultBridge.GetRandomBridgeUrl(),
+                Key = secret.ToArray(),
+                PeerId = Guid.NewGuid().ToString(),
+                ChainId = AlgorandChainId,
+                DappMeta = clientMeta,
+                Version = "1"
+            };
+            session.Url = $"wc:{session.PeerId}@{session.Version}?bridge={session.BridgeUrl}&key={session.Key}";
         }
 
         protected AlgorandWalletConnectSession(
             SavedSession savedSession
         )
         {
-            ClientId = savedSession.ClientId;
-            BridgeUrl = savedSession.BridgeUrl;
-            Key = savedSession.Key;
-            PeerId = savedSession.PeerId;
-            NetworkId = savedSession.NetworkId;
-            Accounts = savedSession.Accounts;
-            ChainId = savedSession.ChainId;
-            DappMeta = savedSession.DappMeta;
-            WalletMeta = savedSession.WalletMeta;
-
-            SessionConnected = true;
+            session = savedSession;
         }
 
         public void Dispose()
         {
-            throw new System.NotImplementedException();
+            webSocketClient.Close();
         }
 
         public SavedSession Save()
         {
-            return new SavedSession
-            {
-                ClientId = ClientId,
-                BridgeUrl = BridgeUrl,
-                Key = Key,
-                PeerId = PeerId,
-                HandshakeId = HandshakeId,
-                NetworkId = NetworkId,
-                Accounts = Accounts,
-                ChainId = ChainId,
-                DappMeta = DappMeta,
-                WalletMeta = WalletMeta,
-            };
+            return session;
         }
 
-        async UniTask StartSession()
+        async UniTask ConnectToBridgeServer()
         {
             webSocketClient = WebSocketClientFactory.Create(BridgeUrl.Replace("http", "ws"));
             webSocketClient.Connect();
@@ -114,10 +100,12 @@ namespace AlgoSdk.WalletConnect
                 var response = webSocketClient.Poll();
                 switch (response.Type)
                 {
-                    case WebSocketEventType.Open: return;
-                    case WebSocketEventType.Nothing: break;
+                    case WebSocketEventType.Open:
+                        return;
+                    case WebSocketEventType.Nothing:
+                        break;
                     default:
-                        throw new Exception($"Could not start session: {response.Error}");
+                        throw new Exception($"Could not connect to bridge server: {response.Error}");
                 }
                 await UniTask.Yield();
             }
@@ -137,29 +125,23 @@ namespace AlgoSdk.WalletConnect
             webSocketClient.Send(new ArraySegment<byte>(msgData));
         }
 
-        void GenerateKey()
-        {
-            using var secret = new NativeByteArray(32, Allocator.Temp);
-            AlgoSdk.Crypto.Random.Randomize(secret);
-            Key = secret.Data.ToArray();
-        }
-
-        public static async UniTask<AlgorandWalletConnectSession> StartNew(
+        public static async UniTask<AlgorandWalletConnectSession> StartNewSession(
             ClientMeta clientMeta,
             string bridgeUrl = null
         )
         {
             var session = new AlgorandWalletConnectSession(clientMeta, bridgeUrl);
-            await session.StartSession();
+            await session.ConnectToBridgeServer();
             return session;
         }
 
-        public static async UniTask<AlgorandWalletConnectSession> StartSaved(
+        public static async UniTask<AlgorandWalletConnectSession> ContinueSavedSession(
             SavedSession savedSession
         )
         {
             var session = new AlgorandWalletConnectSession(savedSession);
-            await session.StartSession();
+            await session.ConnectToBridgeServer();
+            session.SessionConnected = true;
             return session;
         }
     }
