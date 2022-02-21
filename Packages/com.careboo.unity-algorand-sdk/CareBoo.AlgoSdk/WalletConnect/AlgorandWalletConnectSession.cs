@@ -213,8 +213,7 @@ namespace AlgoSdk.WalletConnect
                 await RequestWalletConnection(cancellationToken);
         }
 
-        async UniTaskVoid PollWebSocketEvents(CancellationToken cancellationToken)
-        {
+        async UniTaskVoid PollWebSocketEvents(CancellationToken cancellationToken) {
             try
             {
                 while (true)
