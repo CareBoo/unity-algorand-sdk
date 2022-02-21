@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Struct WCSessionRequestResponse
+    <title>Interface IJsonRpcRequest
    | Unity Algorand SDK </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Struct WCSessionRequestResponse
+    <meta name="title" content="Interface IJsonRpcRequest
    | Unity Algorand SDK ">
     <meta name="generator" content="docfx 2.59.0.0">
     
@@ -78,19 +78,99 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="AlgoSdk.WalletConnect.WCSessionRequestResponse">
+            <article class="content wrap" id="_content" data-uid="AlgoSdk.WalletConnect.IJsonRpcRequest">
   
   
-  <h1 id="AlgoSdk_WalletConnect_WCSessionRequestResponse" data-uid="AlgoSdk.WalletConnect.WCSessionRequestResponse" class="text-break">Struct WCSessionRequestResponse
+  <h1 id="AlgoSdk_WalletConnect_IJsonRpcRequest" data-uid="AlgoSdk.WalletConnect.IJsonRpcRequest" class="text-break">Interface IJsonRpcRequest
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.WalletConnect.html">AlgoSdk.WalletConnect</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="AlgoSdk_WalletConnect_WCSessionRequestResponse_syntax">Syntax</h5>
+  <h5 id="AlgoSdk_WalletConnect_IJsonRpcRequest_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct WCSessionRequestResponse</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IJsonRpcRequest</code></pre>
   </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="AlgoSdk_WalletConnect_IJsonRpcRequest_Id_" data-uid="AlgoSdk.WalletConnect.IJsonRpcRequest.Id*"></a>
+  <h4 id="AlgoSdk_WalletConnect_IJsonRpcRequest_Id" data-uid="AlgoSdk.WalletConnect.IJsonRpcRequest.Id">Id</h4>
+  <div class="markdown level1 summary"><p>The id of this request. Used to keep track of the correct response.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ulong Id { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_WalletConnect_IJsonRpcRequest_JsonRpc_" data-uid="AlgoSdk.WalletConnect.IJsonRpcRequest.JsonRpc*"></a>
+  <h4 id="AlgoSdk_WalletConnect_IJsonRpcRequest_JsonRpc" data-uid="AlgoSdk.WalletConnect.IJsonRpcRequest.JsonRpc">JsonRpc</h4>
+  <div class="markdown level1 summary"><p>The JsonRpc version of this request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string JsonRpc { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_WalletConnect_IJsonRpcRequest_Method_" data-uid="AlgoSdk.WalletConnect.IJsonRpcRequest.Method*"></a>
+  <h4 id="AlgoSdk_WalletConnect_IJsonRpcRequest_Method" data-uid="AlgoSdk.WalletConnect.IJsonRpcRequest.Method">Method</h4>
+  <div class="markdown level1 summary"><p>The method name to call in this request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Method { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           

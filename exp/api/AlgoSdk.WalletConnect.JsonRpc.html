@@ -100,14 +100,13 @@
   </h3>
   
   
-  <a id="AlgoSdk_WalletConnect_JsonRpc_ToJsonRpcResponse_" data-uid="AlgoSdk.WalletConnect.JsonRpc.ToJsonRpcResponse*"></a>
-  <h4 id="AlgoSdk_WalletConnect_JsonRpc_ToJsonRpcResponse__1_AlgoSdk_WalletConnect_EncryptedPayload_AlgoSdk_WalletConnect_Hex_" data-uid="AlgoSdk.WalletConnect.JsonRpc.ToJsonRpcResponse``1(AlgoSdk.WalletConnect.EncryptedPayload,AlgoSdk.WalletConnect.Hex)">ToJsonRpcResponse&lt;T&gt;(EncryptedPayload, Hex)</h4>
+  <a id="AlgoSdk_WalletConnect_JsonRpc_ReadJsonRpcPayload_" data-uid="AlgoSdk.WalletConnect.JsonRpc.ReadJsonRpcPayload*"></a>
+  <h4 id="AlgoSdk_WalletConnect_JsonRpc_ReadJsonRpcPayload_WebSocketEvent_AlgoSdk_WalletConnect_Hex_" data-uid="AlgoSdk.WalletConnect.JsonRpc.ReadJsonRpcPayload(WebSocketEvent,AlgoSdk.WalletConnect.Hex)">ReadJsonRpcPayload(WebSocketEvent, Hex)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ToJsonRpcResponse&lt;T&gt;(this EncryptedPayload encryptedPayload, Hex key)
-    where T : JsonRpcResponse</code></pre>
+    <pre><code class="lang-csharp hljs">public static Either&lt;JsonRpcResponse, JsonRpcRequest&gt; ReadJsonRpcPayload(this WebSocketEvent response, Hex encryptionKey)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,13 +119,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="AlgoSdk.WalletConnect.EncryptedPayload.html">EncryptedPayload</a></td>
-        <td><span class="parametername">encryptedPayload</span></td>
+        <td><span class="xref">WebSocketEvent</span></td>
+        <td><span class="parametername">response</span></td>
         <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="AlgoSdk.WalletConnect.Hex.html">Hex</a></td>
-        <td><span class="parametername">key</span></td>
+        <td><span class="parametername">encryptionKey</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -141,36 +140,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
+        <td><a class="xref" href="AlgoSdk.Either-2.html">Either</a>&lt;<a class="xref" href="AlgoSdk.WalletConnect.JsonRpcResponse.html">JsonRpcResponse</a>, <a class="xref" href="AlgoSdk.WalletConnect.JsonRpcRequest.html">JsonRpcRequest</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="AlgoSdk_WalletConnect_JsonRpc_ToWalletConnectMessage_" data-uid="AlgoSdk.WalletConnect.JsonRpc.ToWalletConnectMessage*"></a>
-  <h4 id="AlgoSdk_WalletConnect_JsonRpc_ToWalletConnectMessage__1___0_AlgoSdk_WalletConnect_Hex_System_String_" data-uid="AlgoSdk.WalletConnect.JsonRpc.ToWalletConnectMessage``1(``0,AlgoSdk.WalletConnect.Hex,System.String)">ToWalletConnectMessage&lt;T&gt;(T, Hex, String)</h4>
+  <a id="AlgoSdk_WalletConnect_JsonRpc_SerializeAsNetworkMessage_" data-uid="AlgoSdk.WalletConnect.JsonRpc.SerializeAsNetworkMessage*"></a>
+  <h4 id="AlgoSdk_WalletConnect_JsonRpc_SerializeAsNetworkMessage__1___0_AlgoSdk_WalletConnect_Hex_System_String_" data-uid="AlgoSdk.WalletConnect.JsonRpc.SerializeAsNetworkMessage``1(``0,AlgoSdk.WalletConnect.Hex,System.String)">SerializeAsNetworkMessage&lt;T&gt;(T, Hex, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static NetworkMessage ToWalletConnectMessage&lt;T&gt;(this T request, Hex key, string topic)
-    where T : JsonRpcRequest</code></pre>
+    <pre><code class="lang-csharp hljs">public static byte[] SerializeAsNetworkMessage&lt;T&gt;(this T request, Hex encryptionKey, string topic)
+    where T : IJsonRpcRequest</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,7 +173,7 @@
       </tr>
       <tr>
         <td><a class="xref" href="AlgoSdk.WalletConnect.Hex.html">Hex</a></td>
-        <td><span class="parametername">key</span></td>
+        <td><span class="parametername">encryptionKey</span></td>
         <td></td>
       </tr>
       <tr>
@@ -209,7 +193,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="AlgoSdk.WalletConnect.NetworkMessage.html">NetworkMessage</a></td>
+        <td><span class="xref">System.Byte</span>[]</td>
         <td></td>
       </tr>
     </tbody>

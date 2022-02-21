@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Struct SignTxnParams
+    <title>Class WalletConnectRpc.Algorand
    | Unity Algorand SDK </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Struct SignTxnParams
+    <meta name="title" content="Class WalletConnectRpc.Algorand
    | Unity Algorand SDK ">
     <meta name="generator" content="docfx 2.59.0.0">
     
@@ -78,33 +78,34 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="AlgoSdk.WalletConnect.SignTxnParams">
+            <article class="content wrap" id="_content" data-uid="AlgoSdk.WalletConnect.WalletConnectRpc.Algorand">
   
   
-  <h1 id="AlgoSdk_WalletConnect_SignTxnParams" data-uid="AlgoSdk.WalletConnect.SignTxnParams" class="text-break">Struct SignTxnParams
+  <h1 id="AlgoSdk_WalletConnect_WalletConnectRpc_Algorand" data-uid="AlgoSdk.WalletConnect.WalletConnectRpc.Algorand" class="text-break">Class WalletConnectRpc.Algorand
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.WalletConnect.SignTxnParams.html">SignTxnParams</a>&gt;</div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">WalletConnectRpc.Algorand</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.WalletConnect.html">AlgoSdk.WalletConnect</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="AlgoSdk_WalletConnect_SignTxnParams_syntax">Syntax</h5>
+  <h5 id="AlgoSdk_WalletConnect_WalletConnectRpc_Algorand_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct SignTxnParams</code></pre>
+    <pre><code class="lang-csharp hljs">public static class Algorand</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="AlgoSdk_WalletConnect_SignTxnParams_Options" data-uid="AlgoSdk.WalletConnect.SignTxnParams.Options">Options</h4>
+  <h4 id="AlgoSdk_WalletConnect_WalletConnectRpc_Algorand_ChainId" data-uid="AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.ChainId">ChainId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SignTxnOpts Options</code></pre>
+    <pre><code class="lang-csharp hljs">public const int ChainId = 4160</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -116,31 +117,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="AlgoSdk.WalletConnect.SignTxnOpts.html">SignTxnOpts</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_WalletConnect_SignTxnParams_Transactions" data-uid="AlgoSdk.WalletConnect.SignTxnParams.Transactions">Transactions</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public WalletTransaction[] Transactions</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.WalletConnect.WalletTransaction.html">WalletTransaction</a>[]</td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -149,13 +126,14 @@
   </h3>
   
   
-  <a id="AlgoSdk_WalletConnect_SignTxnParams_Equals_" data-uid="AlgoSdk.WalletConnect.SignTxnParams.Equals*"></a>
-  <h4 id="AlgoSdk_WalletConnect_SignTxnParams_Equals_AlgoSdk_WalletConnect_SignTxnParams_" data-uid="AlgoSdk.WalletConnect.SignTxnParams.Equals(AlgoSdk.WalletConnect.SignTxnParams)">Equals(SignTxnParams)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="AlgoSdk_WalletConnect_WalletConnectRpc_Algorand_SignTransactions_" data-uid="AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.SignTransactions*"></a>
+  <h4 id="AlgoSdk_WalletConnect_WalletConnectRpc_Algorand_SignTransactions_AlgoSdk_WalletConnect_WalletTransaction___AlgoSdk_WalletConnect_SignTxnsOpts_" data-uid="AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.SignTransactions(AlgoSdk.WalletConnect.WalletTransaction[],AlgoSdk.WalletConnect.SignTxnsOpts)">SignTransactions(WalletTransaction[], SignTxnsOpts)</h4>
+  <div class="markdown level1 summary"><p>Builds a <a class="xref" href="AlgoSdk.WalletConnect.JsonRpcRequest.html">JsonRpcRequest</a> used for signing transactions.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(SignTxnParams other)</code></pre>
+    <pre><code class="lang-csharp hljs">public static JsonRpcRequest SignTransactions(WalletTransaction[] transactions, SignTxnsOpts options = default(SignTxnsOpts))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -168,9 +146,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="AlgoSdk.WalletConnect.SignTxnParams.html">SignTxnParams</a></td>
-        <td><span class="parametername">other</span></td>
-        <td></td>
+        <td><a class="xref" href="AlgoSdk.WalletConnect.WalletTransaction.html">WalletTransaction</a>[]</td>
+        <td><span class="parametername">transactions</span></td>
+        <td><p>The atomic transaction group of [1,16] transactions. Contains information about how to sign
+each transaction, and which ones to sign.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.WalletConnect.SignTxnsOpts.html">SignTxnsOpts</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Optional options for signing the transactions, e.g. adding a message to the transaction group.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -184,15 +170,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><a class="xref" href="AlgoSdk.WalletConnect.JsonRpcRequest.html">JsonRpcRequest</a></td>
+        <td><p>A <a class="xref" href="AlgoSdk.WalletConnect.JsonRpcRequest.html">JsonRpcRequest</a> used for signing Algorand transactions.</p>
+</td>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">IEquatable&lt;&gt;</span>
-  </div>
 </article>
           </div>
           

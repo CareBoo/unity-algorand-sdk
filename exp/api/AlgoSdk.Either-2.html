@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IWalletConnectSession&lt;TSession&gt;
+    <title>Struct Either&lt;T, U&gt;
    | Unity Algorand SDK </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IWalletConnectSession&lt;TSession&gt;
+    <meta name="title" content="Struct Either&lt;T, U&gt;
    | Unity Algorand SDK ">
     <meta name="generator" content="docfx 2.59.0.0">
     
@@ -78,51 +78,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="AlgoSdk.WalletConnect.IWalletConnectSession`1">
+            <article class="content wrap" id="_content" data-uid="AlgoSdk.Either`2">
   
   
-  <h1 id="AlgoSdk_WalletConnect_IWalletConnectSession_1" data-uid="AlgoSdk.WalletConnect.IWalletConnectSession`1" class="text-break">Interface IWalletConnectSession&lt;TSession&gt;
+  <h1 id="AlgoSdk_Either_2" data-uid="AlgoSdk.Either`2" class="text-break">Struct Either&lt;T, U&gt;
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSession.html#AlgoSdk_WalletConnect_IWalletConnectSession_ClientId">IWalletConnectSession.ClientId</a>
-    </div>
-    <div>
-      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSession.html#AlgoSdk_WalletConnect_IWalletConnectSession_BridgeUrl">IWalletConnectSession.BridgeUrl</a>
-    </div>
-    <div>
-      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSession.html#AlgoSdk_WalletConnect_IWalletConnectSession_Key">IWalletConnectSession.Key</a>
-    </div>
-    <div>
-      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSession.html#AlgoSdk_WalletConnect_IWalletConnectSession_PeerId">IWalletConnectSession.PeerId</a>
-    </div>
-    <div>
-      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSession.html#AlgoSdk_WalletConnect_IWalletConnectSession_HandshakeId">IWalletConnectSession.HandshakeId</a>
-    </div>
-    <div>
-      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSession.html#AlgoSdk_WalletConnect_IWalletConnectSession_NetworkId">IWalletConnectSession.NetworkId</a>
-    </div>
-    <div>
-      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSession.html#AlgoSdk_WalletConnect_IWalletConnectSession_Accounts">IWalletConnectSession.Accounts</a>
-    </div>
-    <div>
-      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSession.html#AlgoSdk_WalletConnect_IWalletConnectSession_ChainId">IWalletConnectSession.ChainId</a>
-    </div>
-    <div>
-      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSession.html#AlgoSdk_WalletConnect_IWalletConnectSession_DappMeta">IWalletConnectSession.DappMeta</a>
-    </div>
-    <div>
-      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSession.html#AlgoSdk_WalletConnect_IWalletConnectSession_WalletMeta">IWalletConnectSession.WalletMeta</a>
-    </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.WalletConnect.html">AlgoSdk.WalletConnect</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="AlgoSdk_WalletConnect_IWalletConnectSession_1_syntax">Syntax</h5>
+  <h5 id="AlgoSdk_Either_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IWalletConnectSession&lt;TSession&gt; : IWalletConnectSession where TSession : IWalletConnectSession&lt;TSession&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct Either&lt;T, U&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -134,7 +101,67 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">TSession</span></td>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">U</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="AlgoSdk_Either_2__ctor_" data-uid="AlgoSdk.Either`2.#ctor*"></a>
+  <h4 id="AlgoSdk_Either_2__ctor__0_" data-uid="AlgoSdk.Either`2.#ctor(`0)">Either(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Either(T value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Either_2__ctor_" data-uid="AlgoSdk.Either`2.#ctor*"></a>
+  <h4 id="AlgoSdk_Either_2__ctor__1_" data-uid="AlgoSdk.Either`2.#ctor(`1)">Either(U)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Either(U value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">U</span></td>
+        <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -143,13 +170,13 @@
   </h3>
   
   
-  <a id="AlgoSdk_WalletConnect_IWalletConnectSession_1_OnSend_" data-uid="AlgoSdk.WalletConnect.IWalletConnectSession`1.OnSend*"></a>
-  <h4 id="AlgoSdk_WalletConnect_IWalletConnectSession_1_OnSend" data-uid="AlgoSdk.WalletConnect.IWalletConnectSession`1.OnSend">OnSend</h4>
+  <a id="AlgoSdk_Either_2_IsValue1_" data-uid="AlgoSdk.Either`2.IsValue1*"></a>
+  <h4 id="AlgoSdk_Either_2_IsValue1" data-uid="AlgoSdk.Either`2.IsValue1">IsValue1</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">UnityEvent&lt;TSession&gt; OnSend { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsValue1 { readonly get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -161,20 +188,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UnityEvent</span>&lt;TSession&gt;</td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="AlgoSdk_WalletConnect_IWalletConnectSession_1_OnSessionConnect_" data-uid="AlgoSdk.WalletConnect.IWalletConnectSession`1.OnSessionConnect*"></a>
-  <h4 id="AlgoSdk_WalletConnect_IWalletConnectSession_1_OnSessionConnect" data-uid="AlgoSdk.WalletConnect.IWalletConnectSession`1.OnSessionConnect">OnSessionConnect</h4>
+  <a id="AlgoSdk_Either_2_IsValue2_" data-uid="AlgoSdk.Either`2.IsValue2*"></a>
+  <h4 id="AlgoSdk_Either_2_IsValue2" data-uid="AlgoSdk.Either`2.IsValue2">IsValue2</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">UnityEvent&lt;TSession&gt; OnSessionConnect { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsValue2 { readonly get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -186,20 +213,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UnityEvent</span>&lt;TSession&gt;</td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="AlgoSdk_WalletConnect_IWalletConnectSession_1_OnSessionDisconnect_" data-uid="AlgoSdk.WalletConnect.IWalletConnectSession`1.OnSessionDisconnect*"></a>
-  <h4 id="AlgoSdk_WalletConnect_IWalletConnectSession_1_OnSessionDisconnect" data-uid="AlgoSdk.WalletConnect.IWalletConnectSession`1.OnSessionDisconnect">OnSessionDisconnect</h4>
+  <a id="AlgoSdk_Either_2_Value1_" data-uid="AlgoSdk.Either`2.Value1*"></a>
+  <h4 id="AlgoSdk_Either_2_Value1" data-uid="AlgoSdk.Either`2.Value1">Value1</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">UnityEvent OnSessionDisconnect { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public T Value1 { readonly get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -211,20 +238,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UnityEvent</span></td>
+        <td><span class="xref">T</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="AlgoSdk_WalletConnect_IWalletConnectSession_1_OnSessionUpdate_" data-uid="AlgoSdk.WalletConnect.IWalletConnectSession`1.OnSessionUpdate*"></a>
-  <h4 id="AlgoSdk_WalletConnect_IWalletConnectSession_1_OnSessionUpdate" data-uid="AlgoSdk.WalletConnect.IWalletConnectSession`1.OnSessionUpdate">OnSessionUpdate</h4>
+  <a id="AlgoSdk_Either_2_Value2_" data-uid="AlgoSdk.Either`2.Value2*"></a>
+  <h4 id="AlgoSdk_Either_2_Value2" data-uid="AlgoSdk.Either`2.Value2">Value2</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">UnityEvent&lt;WalletConnectSessionData&gt; OnSessionUpdate { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public U Value2 { readonly get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -236,47 +263,83 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UnityEvent</span>&lt;<a class="xref" href="AlgoSdk.WalletConnect.WalletConnectSessionData.html">WalletConnectSessionData</a>&gt;</td>
+        <td><span class="xref">U</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="AlgoSdk_Either_2_TryGetValue1_" data-uid="AlgoSdk.Either`2.TryGetValue1*"></a>
+  <h4 id="AlgoSdk_Either_2_TryGetValue1__0__" data-uid="AlgoSdk.Either`2.TryGetValue1(`0@)">TryGetValue1(out T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetValue1(out T value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="AlgoSdk_WalletConnect_IWalletConnectSession_1_Url_" data-uid="AlgoSdk.WalletConnect.IWalletConnectSession`1.Url*"></a>
-  <h4 id="AlgoSdk_WalletConnect_IWalletConnectSession_1_Url" data-uid="AlgoSdk.WalletConnect.IWalletConnectSession`1.Url">Url</h4>
+  <a id="AlgoSdk_Either_2_TryGetValue2_" data-uid="AlgoSdk.Either`2.TryGetValue2*"></a>
+  <h4 id="AlgoSdk_Either_2_TryGetValue2__1__" data-uid="AlgoSdk.Either`2.TryGetValue2(`1@)">TryGetValue2(out U)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string Url { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool TryGetValue2(out U value)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">U</span></td>
+        <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="AlgoSdk_WalletConnect_IWalletConnectSession_1_Version_" data-uid="AlgoSdk.WalletConnect.IWalletConnectSession`1.Version*"></a>
-  <h4 id="AlgoSdk_WalletConnect_IWalletConnectSession_1_Version" data-uid="AlgoSdk.WalletConnect.IWalletConnectSession`1.Version">Version</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string Version { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -286,7 +349,51 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  
+  
+  <a id="AlgoSdk_Either_2_op_Implicit_" data-uid="AlgoSdk.Either`2.op_Implicit*"></a>
+  <h4 id="AlgoSdk_Either_2_op_Implicit_AlgoSdk_Either__0__1___AlgoSdk_Either__1__0_" data-uid="AlgoSdk.Either`2.op_Implicit(AlgoSdk.Either{`0,`1})~AlgoSdk.Either{`1,`0}">Implicit(Either&lt;T, U&gt; to Either&lt;U, T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Either&lt;U, T&gt;(Either&lt;T, U&gt; either)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Either-2.html">Either</a>&lt;T, U&gt;</td>
+        <td><span class="parametername">either</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Either-2.html">Either</a>&lt;U, T&gt;</td>
         <td></td>
       </tr>
     </tbody>

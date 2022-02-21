@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "changelog/CHANGELOG.html",
-          "hash": "42CjtWQZExezZSJBYWKNJ2LYaATp5eGlS7YP8W98sDA="
+          "hash": "f5N4tutcN+/HBulTQG8ul7oW9lHazC/6EYh9kheEyaQ="
         }
       },
       "is_incremental": false,
@@ -355,7 +355,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AlgoApiObject.html",
-          "hash": "Gq6sCCdl83JCuR+qKGdJSES3ZE0QTrV4jpNrRw+xNUQ="
+          "hash": "MNRIeRv/9BLSqjZFoVKOGXOBqTKvuxAO6SX1shtSmPs="
         }
       },
       "is_incremental": false,
@@ -475,7 +475,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AlgoApiSerializer.html",
-          "hash": "3wRseDfRNhkMoJPiAVFQkxHFb7l3W6IlVh0y0s3uAlg="
+          "hash": "fRM1cuDyxy64wooC8v0qD6+/zUxLz6uvLqfJeKEONjk="
         }
       },
       "is_incremental": false,
@@ -1316,6 +1316,30 @@
         ".html": {
           "relative_path": "api/AlgoSdk.Editor.html",
           "hash": "SjiGTkYAEPK9pbDsX4K/56qBcMd3VgfLBo6BMc4EMlo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Either-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Either-2.html",
+          "hash": "1twRrWbn2vG0/nMdl6Pr+d8H9778Db68hh/bY4hovU4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.EitherFormatter-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.EitherFormatter-2.html",
+          "hash": "sExOXHpOkjmGmfDPacaP9TVCBoQOCxEMw3B7ekIPEHI="
         }
       },
       "is_incremental": false,
@@ -2259,6 +2283,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.IntEnumFormatter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.IntEnumFormatter-1.html",
+          "hash": "wPaJfgWpXFeWYBGWyjJn20jHn6VdUk3/oGI9KBmWWBM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/AlgoSdk.Json.JsonReadError.yml",
       "output": {
         ".html": {
@@ -2299,7 +2335,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Json.JsonReader.html",
-          "hash": "9xKVkEN+xu3KEgopUoENdulmyej7IBgxKB9FUP6c8zo="
+          "hash": "1I8zg9F5at0cEn3eybeDut4vqmhXWr5CEZmcXhSXTbs="
         }
       },
       "is_incremental": false,
@@ -2335,7 +2371,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Json.JsonWriter.html",
-          "hash": "tsS6Czd5qUlE1n82qv/nho4Kk7KekkMUPIflkGRFJvI="
+          "hash": "0V2bzk3SoQiwEeMX95RA83NmQjG6R6FeslIXhT8Atb8="
         }
       },
       "is_incremental": false,
@@ -2707,7 +2743,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.MessagePack.MessagePackReader.html",
-          "hash": "3PTmr+P3RQL2VWOT/1Q3zZvFZ88cE6xLSCguVp83Slk="
+          "hash": "kISWgaTMqYjI3WclrIDpSpxY+Uvn5rqBGD7Kp9KRmII="
         }
       },
       "is_incremental": false,
@@ -3459,23 +3495,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.WalletConnect.AlgoSignTxnRequest.yml",
+      "source_relative_path": "api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AlgoSdk.WalletConnect.AlgoSignTxnRequest.html",
-          "hash": "Ppn+C/VBNgv1NcM09JPWuhEWiqFsGYPIF0CyQqcQDGo="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.WalletConnect.AlgoSignTxnResponse.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AlgoSdk.WalletConnect.AlgoSignTxnResponse.html",
-          "hash": "3/QdKoB/IxAuMspq7RH4NdhtXGCtYyUMAa1X68DlIuc="
+          "relative_path": "api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status.html",
+          "hash": "3HFgZUTNi8Rx2Xx9Qhwa4LRC7CP8saV0bZtIlxqqk+A="
         }
       },
       "is_incremental": false,
@@ -3487,7 +3511,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html",
-          "hash": "vpGvwMhFUGSgqQUJnKTRIQ9vlWbsbimAquksi1aUj6w="
+          "hash": "DGDWVlNy29oZ0/6r7S9OldFjieIEYdvUZ7jgvFv+QIc="
         }
       },
       "is_incremental": false,
@@ -3543,11 +3567,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.WalletConnect.IWalletConnectSession-1.yml",
+      "source_relative_path": "api/AlgoSdk.WalletConnect.IActiveWalletConnectSession-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AlgoSdk.WalletConnect.IWalletConnectSession-1.html",
-          "hash": "fOdqMxgFfeSaSyriRRV8qxbGIuKzXO0ym7yNoaJO3yY="
+          "relative_path": "api/AlgoSdk.WalletConnect.IActiveWalletConnectSession-1.html",
+          "hash": "Nab94iD8e74Enpl7/hCnX82jAMiVKdycuZgcENd+AnM="
         }
       },
       "is_incremental": false,
@@ -3555,11 +3579,59 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.WalletConnect.IWalletConnectSession.yml",
+      "source_relative_path": "api/AlgoSdk.WalletConnect.IJsonRpcRequest-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AlgoSdk.WalletConnect.IWalletConnectSession.html",
-          "hash": "ZNafLp2NUBg/vjsb5V91Wa3nY/0NOlt6Qahy4xbWrC8="
+          "relative_path": "api/AlgoSdk.WalletConnect.IJsonRpcRequest-1.html",
+          "hash": "JiJocIUbHIZu7TYdGzQf4Lw5SQEls0Sr01DleYO9mi8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.WalletConnect.IJsonRpcRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.WalletConnect.IJsonRpcRequest.html",
+          "hash": "oSpNz+OmpVJnaAwoLdllH+woOMR0WpNhu8cVLWCJUg8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.WalletConnect.IJsonRpcResponse-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.WalletConnect.IJsonRpcResponse-1.html",
+          "hash": "zOvv9IPfY7sQrZpQcFVK2KlhNVj7XdfXCwAdsUwcV+s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.WalletConnect.IJsonRpcResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.WalletConnect.IJsonRpcResponse.html",
+          "hash": "pWRq1suQ0CtmFSoetHKm2hWpbWSxy4+8+C/iLFT4tKk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.WalletConnect.IWalletConnectSessionData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.WalletConnect.IWalletConnectSessionData.html",
+          "hash": "gwh1wtS+Kv4u1mJocWO++BMALXRwt31VKjkUR3QkKrM="
         }
       },
       "is_incremental": false,
@@ -3571,7 +3643,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.JsonRpc.html",
-          "hash": "Ur4SDzHEFfUkMYGcftHG+d4H8Z77QJJtB+5RvHyniY0="
+          "hash": "I4s9oxkb3nz9bM2eff6UClCopHYPgf8dH+4YHrBNcTk="
         }
       },
       "is_incremental": false,
@@ -3579,11 +3651,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.WalletConnect.JsonRpcRequest-1.yml",
+      "source_relative_path": "api/AlgoSdk.WalletConnect.JsonRpcError.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AlgoSdk.WalletConnect.JsonRpcRequest-1.html",
-          "hash": "6a1ghnupT+6eoGQpRbAoS7vS47quBve4uuRwzBNIEns="
+          "relative_path": "api/AlgoSdk.WalletConnect.JsonRpcError.html",
+          "hash": "VoCSZDNbNzrM85Y0p7VBhi57Jvm/tMr3t+qzFn4d+Xs="
         }
       },
       "is_incremental": false,
@@ -3595,31 +3667,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.JsonRpcRequest.html",
-          "hash": "LVtOEM9FLEd3k8MQJf7qki3AaGYyQEI3w0lSfAYU1Zg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.WalletConnect.JsonRpcRequestFormatter-2.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AlgoSdk.WalletConnect.JsonRpcRequestFormatter-2.html",
-          "hash": "JESoKIzHsELWVM9QI7z0pPe+d8gEw2vatmIJKtAl7ak="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.WalletConnect.JsonRpcResponse-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AlgoSdk.WalletConnect.JsonRpcResponse-1.html",
-          "hash": "KX4xoEvOkY4uBa8DzUsjkZQ539QPVy5Cq0ZIDWbwfPg="
+          "hash": "DBv9ttwX7dit3h3ARPO62Xpmf3TUY276JfCOM2CKnuI="
         }
       },
       "is_incremental": false,
@@ -3631,19 +3679,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.JsonRpcResponse.html",
-          "hash": "uo6oBDRZ9p9jmQxczyZ1zzhMAlCNafGpftrm0zVKIeg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.WalletConnect.JsonRpcResponseFormatter-2.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AlgoSdk.WalletConnect.JsonRpcResponseFormatter-2.html",
-          "hash": "XJ5+vIlz5GaiEWLboqEEkbq3rpVk5tBH479lOdzJeS0="
+          "hash": "g3ioWk47AN/0/L4PXRLLQqnbMcwiGFDhH1FLgfRYaA4="
         }
       },
       "is_incremental": false,
@@ -3655,7 +3691,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.MultisigMetadata.html",
-          "hash": "gY1oThTYf3QrAw7oAOrFHnzMHp2nAylZ8ZkCei/UzJA="
+          "hash": "lqwsRvfdUlGiiHKzbVsZzSA5OrSG9thViOJ2AGL7L2g="
         }
       },
       "is_incremental": false,
@@ -3667,7 +3703,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.NetworkMessage.html",
-          "hash": "yb+Wk81izYEphboLXf+SGWKkhWFIoXYI/SUw69Lmlbs="
+          "hash": "v6OV3ab0D12n5VlJjIym+deav0NSeVW8xDRhAeMXUiM="
         }
       },
       "is_incremental": false,
@@ -3691,7 +3727,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.SavedSession.html",
-          "hash": "47yFZ+MJ3PDl5D3GavU8FUfP5Z2vZqCO9XhP0yMnJpU="
+          "hash": "yei7wrUOO2kUotzF3LD5aTqCS+3IT1R/4pG+ISgQeUs="
         }
       },
       "is_incremental": false,
@@ -3699,11 +3735,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.WalletConnect.SignTxnOpts.yml",
+      "source_relative_path": "api/AlgoSdk.WalletConnect.SignTxnsError.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AlgoSdk.WalletConnect.SignTxnOpts.html",
-          "hash": "mr7wT808ZfMyKgWXd2Y76EVg8DQclfr5n6Y9pVoF+9M="
+          "relative_path": "api/AlgoSdk.WalletConnect.SignTxnsError.html",
+          "hash": "QF/c9D7esl8oyLcDiGNZyB69fFxFrUj9uw6i3ODmE+w="
         }
       },
       "is_incremental": false,
@@ -3711,11 +3747,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.WalletConnect.SignTxnParams.yml",
+      "source_relative_path": "api/AlgoSdk.WalletConnect.SignTxnsErrorCode.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AlgoSdk.WalletConnect.SignTxnParams.html",
-          "hash": "9xjKpLag/FHRMS5kY9tqsOuYqbM5H1+q/w/JE2EE+5Q="
+          "relative_path": "api/AlgoSdk.WalletConnect.SignTxnsErrorCode.html",
+          "hash": "gF2soMDSXqNR5VUPQDd1zLC5X6WMSPN7o6TZ2EWFXKE="
         }
       },
       "is_incremental": false,
@@ -3723,47 +3759,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.WalletConnect.SignTxnParamsFormatter.yml",
+      "source_relative_path": "api/AlgoSdk.WalletConnect.SignTxnsOpts.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AlgoSdk.WalletConnect.SignTxnParamsFormatter.html",
-          "hash": "krwTYrcMropDU7+IrPhRD5rNfeC2hTsvPTwqFaRFz58="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.WalletConnect.WCSessionRequestParams.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AlgoSdk.WalletConnect.WCSessionRequestParams.html",
-          "hash": "77zkra/O99D63H2pOK1o9jtyv2MwrcHVExfh2s7B7j0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.WalletConnect.WCSessionRequestRequest.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AlgoSdk.WalletConnect.WCSessionRequestRequest.html",
-          "hash": "OUu9Luz1iMQsgzES1erjhJo5z89ANs/l2kBqF8rj1dY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.WalletConnect.WCSessionRequestResponse.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AlgoSdk.WalletConnect.WCSessionRequestResponse.html",
-          "hash": "gVXUXgdrVhdprK7qwMwBGYR7jqmhwPJrkztUQZfBG2c="
+          "relative_path": "api/AlgoSdk.WalletConnect.SignTxnsOpts.html",
+          "hash": "cUrNkP3+q8rg+ODj6YdTCXN6INvxj5w9Yvs3lmxNbXk="
         }
       },
       "is_incremental": false,
@@ -3783,11 +3783,47 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.html",
+          "hash": "GCHXSh2dD4i/lhnCPyCONJxnCBGBW/uwaXiDKAS+8Go="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.WalletConnect.WalletConnectRpc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.WalletConnect.WalletConnectRpc.html",
+          "hash": "3b4t9iNVgpZdOrDXRK0OYp6+S1Sng0IdpG5x9P847KY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/AlgoSdk.WalletConnect.WalletConnectSessionData.yml",
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.WalletConnectSessionData.html",
-          "hash": "MR67ePBr+wftS2MvbR9380QhgD3X+eO0VUxbByampjU="
+          "hash": "yexvnculy+Q0VkPbRmNBRtvX3Pmey9pcxkk6hpYVMWY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.WalletConnect.WalletConnectSessionRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.WalletConnect.WalletConnectSessionRequest.html",
+          "hash": "snjRdTR5SdpoFOhUhRj4fIMZdcz24YCja71QWYvaSMY="
         }
       },
       "is_incremental": false,
@@ -3799,7 +3835,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.WalletTransaction.html",
-          "hash": "IS74cvP5q52T/0E7M1m4LjupYX1RSVVsOPKWMDxZfpI="
+          "hash": "3Qc5RRA7JhIpKhL9Neb1yTL+I2bXa7uqf30OgDyCV3M="
         }
       },
       "is_incremental": false,
@@ -3823,7 +3859,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.html",
-          "hash": "5SGU7u2S6cuhBYRLhzbr23iKUiijWgw7oKPgpVe7VZ8="
+          "hash": "yOxbAUwq+d4wVj0VBLZmkiEYqxZuIoqebRdhLybMqRI="
         }
       },
       "is_incremental": false,
@@ -3871,7 +3907,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.html",
-          "hash": "MXiGyrOc+Cc6rVkZfzKq4593f24CTP/pa5nzyIUZKSk="
+          "hash": "OsGRdb9Hs7wXpPYrYEoD/epP428JwBGzGMdJW/MRm+U="
         }
       },
       "is_incremental": false,
@@ -3883,7 +3919,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "BaWZaiP185D4p8t2gDjMS1DuDIawAKylXvK4IpYUpwc="
+          "hash": "QcFCqxo7uU/QBdiebUjB5y9hJQqFpYQSkHTZp6ig3wc="
         }
       },
       "is_incremental": false,
@@ -4047,7 +4083,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 321,
+          "total_file_count": 324,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

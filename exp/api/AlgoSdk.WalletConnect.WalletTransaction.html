@@ -83,7 +83,9 @@
   
   <h1 id="AlgoSdk_WalletConnect_WalletTransaction" data-uid="AlgoSdk.WalletConnect.WalletTransaction" class="text-break">Struct WalletTransaction
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A struct representing the serialized data for a WalletConnect Transaction</p>
+<p>see <a href="https://developer.algorand.org/docs/get-details/walletconnect/walletconnect-schema/">https://developer.algorand.org/docs/get-details/walletconnect/walletconnect-schema/</a></p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -100,7 +102,9 @@
   
   
   <h4 id="AlgoSdk_WalletConnect_WalletTransaction_AuthAddr" data-uid="AlgoSdk.WalletConnect.WalletTransaction.AuthAddr">AuthAddr</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Optional <a class="xref" href="AlgoSdk.Address.html">Address</a> used to sign the transaction when
+the account is rekeyed. Also called the signor/sgnr.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -124,7 +128,8 @@
   
   
   <h4 id="AlgoSdk_WalletConnect_WalletTransaction_Message" data-uid="AlgoSdk.WalletConnect.WalletTransaction.Message">Message</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Optional message explaining the reason of the transaction.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -147,32 +152,9 @@
   </table>
   
   
-  <h4 id="AlgoSdk_WalletConnect_WalletTransaction_MessagePackTxn" data-uid="AlgoSdk.WalletConnect.WalletTransaction.MessagePackTxn">MessagePackTxn</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] MessagePackTxn</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Byte</span>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="AlgoSdk_WalletConnect_WalletTransaction_Msig" data-uid="AlgoSdk.WalletConnect.WalletTransaction.Msig">Msig</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Optional multisig metadata used to sign the transaction.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -196,7 +178,8 @@
   
   
   <h4 id="AlgoSdk_WalletConnect_WalletTransaction_Signers" data-uid="AlgoSdk.WalletConnect.WalletTransaction.Signers">Signers</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Optional list of addresses that must sign the transactions.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -213,6 +196,31 @@
     <tbody>
       <tr>
         <td><a class="xref" href="AlgoSdk.Address.html">Address</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_WalletConnect_WalletTransaction_Txn" data-uid="AlgoSdk.WalletConnect.WalletTransaction.Txn">Txn</h4>
+  <div class="markdown level1 summary"><p>A transaction in canonical messagepack format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] Txn</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
         <td></td>
       </tr>
     </tbody>

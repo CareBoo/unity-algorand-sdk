@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface JsonRpcRequest
+    <title>Struct JsonRpcRequest
    | Unity Algorand SDK </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface JsonRpcRequest
+    <meta name="title" content="Struct JsonRpcRequest
    | Unity Algorand SDK ">
     <meta name="generator" content="docfx 2.59.0.0">
     
@@ -81,15 +81,21 @@
             <article class="content wrap" id="_content" data-uid="AlgoSdk.WalletConnect.JsonRpcRequest">
   
   
-  <h1 id="AlgoSdk_WalletConnect_JsonRpcRequest" data-uid="AlgoSdk.WalletConnect.JsonRpcRequest" class="text-break">Interface JsonRpcRequest
+  <h1 id="AlgoSdk_WalletConnect_JsonRpcRequest" data-uid="AlgoSdk.WalletConnect.JsonRpcRequest" class="text-break">Struct JsonRpcRequest
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="AlgoSdk.WalletConnect.IJsonRpcRequest-1.html">IJsonRpcRequest</a>&lt;<a class="xref" href="AlgoSdk.AlgoApiObject.html">AlgoApiObject</a>[]&gt;</div>
+    <div><a class="xref" href="AlgoSdk.WalletConnect.IJsonRpcRequest.html">IJsonRpcRequest</a></div>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.WalletConnect.JsonRpcRequest.html">JsonRpcRequest</a>&gt;</div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.WalletConnect.html">AlgoSdk.WalletConnect</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_WalletConnect_JsonRpcRequest_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface JsonRpcRequest</code></pre>
+    <pre><code class="lang-csharp hljs">public struct JsonRpcRequest : IJsonRpcRequest&lt;AlgoApiObject[]&gt;, IJsonRpcRequest</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -101,7 +107,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ulong Id { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong Id { readonly get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -126,7 +132,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string JsonRpc { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string JsonRpc { readonly get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,7 +157,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string Method { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Method { readonly get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -168,6 +174,85 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="AlgoSdk_WalletConnect_JsonRpcRequest_Params_" data-uid="AlgoSdk.WalletConnect.JsonRpcRequest.Params*"></a>
+  <h4 id="AlgoSdk_WalletConnect_JsonRpcRequest_Params" data-uid="AlgoSdk.WalletConnect.JsonRpcRequest.Params">Params</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiObject[] Params { readonly get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiObject.html">AlgoApiObject</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="AlgoSdk_WalletConnect_JsonRpcRequest_Equals_" data-uid="AlgoSdk.WalletConnect.JsonRpcRequest.Equals*"></a>
+  <h4 id="AlgoSdk_WalletConnect_JsonRpcRequest_Equals_AlgoSdk_WalletConnect_JsonRpcRequest_" data-uid="AlgoSdk.WalletConnect.JsonRpcRequest.Equals(AlgoSdk.WalletConnect.JsonRpcRequest)">Equals(JsonRpcRequest)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(JsonRpcRequest other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.WalletConnect.JsonRpcRequest.html">JsonRpcRequest</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="AlgoSdk.WalletConnect.IJsonRpcRequest-1.html">IJsonRpcRequest&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="AlgoSdk.WalletConnect.IJsonRpcRequest.html">IJsonRpcRequest</a>
+  </div>
+  <div>
+      <span class="xref">IEquatable&lt;&gt;</span>
+  </div>
 </article>
           </div>
           
