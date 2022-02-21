@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [1.4.0-exp.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.4.0-exp.1...v1.4.0-exp.2) (2022-02-21)
+
+
+### Features
+
+* **walletconnect:** add Algorand WalletConnect client ([#67](https://github.com/CareBoo/unity-algorand-sdk/issues/67)) ([3028858](https://github.com/CareBoo/unity-algorand-sdk/commit/3028858017859fd99a637c05fcd018f1d4c528ea)), closes [#65](https://github.com/CareBoo/unity-algorand-sdk/issues/65)
+
 # [1.4.0-exp.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.3.0...v1.4.0-exp.1) (2022-02-18)
 
 
