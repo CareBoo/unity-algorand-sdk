@@ -1,6 +1,8 @@
+using System;
+
 namespace AlgoSdk.WalletConnect
 {
-    public interface JsonRpcRequest<T> : JsonRpcRequest
+    public interface IJsonRpcRequest<T> : IJsonRpcRequest
     {
         /// <summary>
         /// Parameters for this request.
@@ -8,7 +10,7 @@ namespace AlgoSdk.WalletConnect
         T Params { get; set; }
     }
 
-    public interface JsonRpcRequest
+    public interface IJsonRpcRequest
     {
         /// <summary>
         /// The id of this request. Used to keep track of the correct response.
@@ -24,5 +26,27 @@ namespace AlgoSdk.WalletConnect
         /// The method name to call in this request.
         /// </summary>
         string Method { get; }
+    }
+
+    public struct JsonRpcRequest
+        : IJsonRpcRequest<AlgoApiObject>
+        , IEquatable<JsonRpcRequest>
+    {
+        public ulong Id { get; set; }
+
+        public string JsonRpc { get; set; }
+
+        public string Method { get; set; }
+
+        public AlgoApiObject Params { get; set; }
+
+        public bool Equals(JsonRpcRequest other)
+        {
+            return Params.Equals(other.Params)
+                && Id.Equals(other.Id)
+                && StringComparer.Equals(JsonRpc, other.JsonRpc)
+                && StringComparer.Equals(Method, other.Method)
+                ;
+        }
     }
 }

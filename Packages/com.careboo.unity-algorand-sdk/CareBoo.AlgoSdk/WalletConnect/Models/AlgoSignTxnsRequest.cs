@@ -7,7 +7,7 @@ namespace AlgoSdk.WalletConnect
     /// </summary>
     [AlgoApiFormatter(typeof(JsonRpcRequestFormatter<AlgoSignTxnsRequest, SignTxnsParams>))]
     public struct AlgoSignTxnsRequest
-        : JsonRpcRequest<SignTxnsParams>
+        : IJsonRpcRequest<SignTxnsParams>
         , IEquatable<AlgoSignTxnsRequest>
     {
         public ulong Id { get; set; }

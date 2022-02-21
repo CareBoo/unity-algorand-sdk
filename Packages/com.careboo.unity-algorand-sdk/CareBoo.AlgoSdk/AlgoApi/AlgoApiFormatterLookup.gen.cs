@@ -168,6 +168,7 @@ namespace AlgoSdk
             AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.WalletConnect.AlgoSignTxnsRequest), new AlgoSdk.WalletConnect.JsonRpcRequestFormatter<AlgoSdk.WalletConnect.AlgoSignTxnsRequest, AlgoSdk.WalletConnect.SignTxnsParams>());
             AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.WalletConnect.AlgoSignTxnsResponse), new AlgoSdk.WalletConnect.JsonRpcResponseFormatter<AlgoSdk.WalletConnect.AlgoSignTxnsResponse, byte[][]>());
             AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.CompiledTeal), new AlgoSdk.CompiledTealFormatter());
+            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.Either<AlgoSdk.WalletConnect.JsonRpcResponse, AlgoSdk.WalletConnect.JsonRpcRequest>), new AlgoSdk.EitherFormatter<AlgoSdk.WalletConnect.JsonRpcResponse, AlgoSdk.WalletConnect.JsonRpcRequest>());
             AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.ErrorResponse), new AlgoSdk.Formatters.ErrorResponseFormatter());
             AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.EvalDeltaAction), new AlgoSdk.Formatters.ByteEnumFormatter<AlgoSdk.EvalDeltaAction>());
             AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.GenesisHash), new AlgoSdk.Formatters.GenesisHashFormatter());

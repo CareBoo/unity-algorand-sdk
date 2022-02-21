@@ -6,9 +6,9 @@ namespace AlgoSdk.WalletConnect
     public interface IActiveWalletConnectSession<TSession> : IWalletConnectSessionData, IDisposable
         where TSession : IActiveWalletConnectSession<TSession>
     {
-        UnityEvent<TSession> OnSessionConnect { get; set; }
-        UnityEvent OnSessionDisconnect { get; set; }
-        UnityEvent<WalletConnectSessionData> OnSessionUpdate { get; set; }
+        UnityEvent<TSession> OnSessionConnect { get; }
+        UnityEvent<string> OnSessionDisconnect { get; }
+        UnityEvent<WalletConnectSessionData> OnSessionUpdate { get; }
     }
 
     public interface IWalletConnectSessionData

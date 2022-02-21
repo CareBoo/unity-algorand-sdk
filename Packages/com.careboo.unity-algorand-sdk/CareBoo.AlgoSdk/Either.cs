@@ -25,5 +25,26 @@ namespace AlgoSdk
             IsValue1 = false;
             IsValue2 = true;
         }
+
+        public bool TryGetValue1(out T value)
+        {
+            value = Value1;
+            return IsValue1;
+        }
+
+        public bool TryGetValue2(out U value)
+        {
+            value = Value2;
+            return IsValue2;
+        }
+
+        public static implicit operator Either<U, T>(Either<T, U> either)
+        {
+            if (either.IsValue1)
+                return new Either<U, T>(either.Value1);
+            if (either.IsValue2)
+                return new Either<U, T>(either.Value2);
+            return default;
+        }
     }
 }

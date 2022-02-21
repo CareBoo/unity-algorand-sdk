@@ -4,7 +4,7 @@ namespace AlgoSdk.WalletConnect
 {
     [AlgoApiFormatter(typeof(JsonRpcRequestFormatter<WCSessionRequestRequest, WCSessionRequestParams>))]
     public struct WCSessionRequestRequest
-        : JsonRpcRequest<WCSessionRequestParams>
+        : IJsonRpcRequest<WCSessionRequestParams>
         , IEquatable<WCSessionRequestRequest>
     {
         public ulong Id { get; set; }

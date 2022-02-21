@@ -5,7 +5,7 @@ namespace AlgoSdk.WalletConnect
     public interface IJsonRpcResponse<T> : IJsonRpcResponse
     {
         /// <summary>
-        /// The result of the corresponding <see cref="JsonRpcRequest"/>.
+        /// The result of the corresponding <see cref="IJsonRpcRequest"/>.
         /// </summary>
         T Result { get; set; }
     }
@@ -14,7 +14,7 @@ namespace AlgoSdk.WalletConnect
     {
         /// <summary>
         /// The Id of the response.
-        /// It should be the same as the ID of the corresponding <see cref="JsonRpcRequest"/>.
+        /// It should be the same as the ID of the corresponding <see cref="IJsonRpcRequest"/>.
         /// </summary>
         ulong Id { get; set; }
 
