@@ -42,6 +42,7 @@ namespace AlgoSdk.WalletConnect
         }
     }
 
+    [AlgoApiFormatter(typeof(IntEnumFormatter<SignTxnsErrorCode>))]
     public enum SignTxnsErrorCode
     {
         /// <summary>
