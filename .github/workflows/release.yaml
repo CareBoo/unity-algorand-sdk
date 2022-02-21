@@ -167,7 +167,7 @@ jobs:
 
   deploy_docs_branch:
     name: Deploy Branch Docs
-    needs: build_docs
+    needs: deploy_docs_version
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
