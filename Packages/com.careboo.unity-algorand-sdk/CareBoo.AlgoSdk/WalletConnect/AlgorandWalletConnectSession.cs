@@ -223,7 +223,7 @@ namespace AlgoSdk.WalletConnect
                     HandleResponseOrRequest(responseOrRequest);
                 }
             }
-            catch (Exception ex) when (ex is not OperationCanceledException)
+            catch (Exception ex) when (!(ex is OperationCanceledException))
             {
                 OnSessionDisconnect.Invoke(ex.Message);
                 ConnectionStatus = Status.NotConnected;
