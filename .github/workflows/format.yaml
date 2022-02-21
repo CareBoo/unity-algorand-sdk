@@ -7,21 +7,19 @@ jobs:
   dotnet-format:
     runs-on: windows-latest
     steps:
-      - name: Install dotnet-format
-        run: dotnet tool install -g dotnet-format
-
       - name: Checkout repo
         uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
 
-      - uses: renanrcp/dotnet-format-problem-matcher@v.1.3.1
+      - name: Add Problem Matcher
+        uses: renanrcp/dotnet-format-problem-matcher@v.1.3.1
+
+      - name: Get Changed C# Files
+        uses: tj-actions/changed-files@v16
+        id: changed_csharp_files
+        with:
+          files: |
+            *.cs
 
       - name: Run dotnet format
         id: format
-        uses: jfversluis/dotnet-format@v1.0.5
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          action: "check"
-          only-changed-files: true
-          workspaceIsFolder: true
+        run: dotnet format whitespace . --folder --include ${{ steps.changed_csharp_files.outputs.all_changed_files }}
