@@ -24,3 +24,4 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           action: "check"
           only-changed-files: true
+          workspaceIsFolder: true
