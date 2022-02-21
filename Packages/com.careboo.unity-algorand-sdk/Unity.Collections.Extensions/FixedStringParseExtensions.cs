@@ -5,8 +5,6 @@ namespace Unity.Collections
         internal static bool ParseUlongInternal<T>(ref T fs, ref int offset, out ulong value)
             where T : struct, INativeList<byte>, IUTF8Bytes
         {
-            int resetOffset = offset;
-
             int digitOffset = offset;
             value = 0;
             var rune = fs.Peek(offset);

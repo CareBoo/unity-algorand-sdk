@@ -20,29 +20,34 @@ namespace AlgoSdk.WalletConnect
         /// <summary>
         /// The JsonRpc version of this request.
         /// </summary>
-        string JsonRpc { get; }
+        string JsonRpc { get; set; }
 
         /// <summary>
         /// The method name to call in this request.
         /// </summary>
-        string Method { get; }
+        string Method { get; set; }
     }
 
+    [AlgoApiObject]
     public struct JsonRpcRequest
-        : IJsonRpcRequest<AlgoApiObject>
+        : IJsonRpcRequest<AlgoApiObject[]>
         , IEquatable<JsonRpcRequest>
     {
+        [AlgoApiField("id", null)]
         public ulong Id { get; set; }
 
+        [AlgoApiField("jsonrpc", null)]
         public string JsonRpc { get; set; }
 
+        [AlgoApiField("method", null)]
         public string Method { get; set; }
 
-        public AlgoApiObject Params { get; set; }
+        [AlgoApiField("params", null)]
+        public AlgoApiObject[] Params { get; set; }
 
         public bool Equals(JsonRpcRequest other)
         {
-            return Params.Equals(other.Params)
+            return ArrayComparer.Equals(Params, other.Params)
                 && Id.Equals(other.Id)
                 && StringComparer.Equals(JsonRpc, other.JsonRpc)
                 && StringComparer.Equals(Method, other.Method)

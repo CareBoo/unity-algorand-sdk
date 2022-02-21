@@ -11,77 +11,59 @@ using Unity.Collections;
 using UnityEngine;
 using UnityEngine.TestTools;
 using WebSocketSharp;
+using static Netcode.Transports.WebSocket.WebSocketEvent;
 
 [TestFixture]
 [Ignore("This test is only used for manual testing of walletconnect")]
 public class WalletConnectTest
 {
+    static readonly ClientMeta DappMeta = new ClientMeta
+    {
+        Description = "This is a test request",
+        Url = "www.example.com",
+        IconUrls = new[] { "www.example.com/icon1.png", "www.example.com/icon2.png" },
+        Name = "test"
+    };
+
     [UnityTest]
     public IEnumerator TestConnection() => UniTask.ToCoroutine(async () =>
     {
         var topic = Guid.NewGuid().ToString();
+        var dappId = Guid.NewGuid().ToString();
         var bridgeUrl = DefaultBridge.GetRandomBridgeUrl().Replace("http", "ws");
         var client = WebSocketClientFactory.Create(bridgeUrl);
         client.Connect();
-        var sessionRequest = new WCSessionRequestRequest
-        {
-            Id = 4,
-            Params = new WCSessionRequestParams
-            {
-                PeerId = Guid.NewGuid().ToString(),
-                PeerMeta = new ClientMeta
-                {
-                    Description = "This is a test request",
-                    Url = "www.example.com",
-                    IconUrls = new[] { "www.example.com/icon1.png", "www.example.com/icon2.png" },
-                    Name = "test"
-                }
-            }
-        };
+        var sessionRequest = WalletConnectRpc.SessionRequest(
+            peerId: dappId,
+            peerMeta: DappMeta,
+            chainId: WalletConnectRpc.Algorand.ChainId
+        );
         var data = Encoding.UTF8.GetBytes(AlgoApiSerializer.SerializeJson(sessionRequest));
         var key = GetKey();
-        var encryptedPayload = AesCipher.EncryptWithKey(key, data);
-        var message = new NetworkMessage
-        {
-            Payload = AlgoApiSerializer.SerializeJson(encryptedPayload),
-            Type = "pub",
-            Topic = topic
-        };
-        var messageData = Encoding.UTF8.GetBytes(JsonUtility.ToJson(message));
+        var msg = sessionRequest.SerializeAsNetworkMessage(key, topic);
+        Debug.Log(Encoding.UTF8.GetString(msg));
         try
         {
-            client.Send(new ArraySegment<byte>(messageData));
+            client.Send(new ArraySegment<byte>(msg));
         }
         catch (WebSocketException)
         {
             Assert.Ignore("Unable to send message using websockets.");
         }
-        await WaitForMessage(bridgeUrl, topic, key);
         var responseEvent = client.Poll();
-        Debug.Log(
-            $"ClientId: {responseEvent.ClientId}" +
-            $"\nError: {responseEvent.Error}" +
-            $"\nPayload: {(responseEvent.Payload == null ? "" : Encoding.UTF8.GetString(responseEvent.Payload))}" +
-            $"\nReason: {responseEvent.Reason}" +
-            $"\nType: {responseEvent.Type}"
-        );
+        Log(responseEvent, "dapp");
+        await WaitForMessage(bridgeUrl, topic, key);
         var count = 0;
         while (
             (responseEvent.Type == WebSocketEvent.WebSocketEventType.Open
             || responseEvent.Type == WebSocketEvent.WebSocketEventType.Nothing)
-            && count < 10
+            && count < 1
         )
         {
             await UniTask.Delay(500);
             count++;
             responseEvent = client.Poll();
-            Debug.Log(
-                $"ClientId: {responseEvent.ClientId}" +
-                $"\nError: {responseEvent.Error}" +
-                $"\nPayload: {(responseEvent.Payload == null ? "" : Encoding.UTF8.GetString(responseEvent.Payload))}" +
-                $"\nReason: {responseEvent.Reason}" +
-                $"\nType: {responseEvent.Type}"
-            );
+            Log(responseEvent, "dapp");
         }
     });
 
@@ -95,17 +77,11 @@ public class WalletConnectTest
             Type = "sub",
             Topic = topic
         };
-        var messageData = Encoding.UTF8.GetBytes(JsonUtility.ToJson(message));
+        var messageData = Encoding.UTF8.GetBytes(AlgoApiSerializer.SerializeJson(message));
         client.Send(new ArraySegment<byte>(messageData));
 
         var responseEvent = client.Poll();
-        Debug.Log(
-            $"ClientId: {responseEvent.ClientId}" +
-            $"\nError: {responseEvent.Error}" +
-            $"\nPayload: {(responseEvent.Payload == null ? "" : Encoding.UTF8.GetString(responseEvent.Payload))}" +
-            $"\nReason: {responseEvent.Reason}" +
-            $"\nType: {responseEvent.Type}"
-        );
+        Log(responseEvent, "wallet");
         var count = 0;
         while (
             (responseEvent.Type == WebSocketEvent.WebSocketEventType.Open
@@ -116,13 +92,7 @@ public class WalletConnectTest
             await UniTask.Delay(500);
             count++;
             responseEvent = client.Poll();
-            Debug.Log(
-                $"ClientId: {responseEvent.ClientId}" +
-                $"\nError: {responseEvent.Error}" +
-                $"\nPayload: {(responseEvent.Payload == null ? "" : Encoding.UTF8.GetString(responseEvent.Payload))}" +
-                $"\nReason: {responseEvent.Reason}" +
-                $"\nType: {responseEvent.Type}"
-            );
+            Log(responseEvent, "wallet");
         }
     }
 
@@ -131,5 +101,17 @@ public class WalletConnectTest
         using var secret = new NativeByteArray(32, Allocator.Temp);
         AlgoSdk.Crypto.Random.Randomize(secret);
         return secret.ToArray();
+    }
+
+    void Log(WebSocketEvent webSocketEvent, string clientId)
+    {
+        var details = webSocketEvent.Type switch
+        {
+            WebSocketEventType.Close => webSocketEvent.Reason,
+            WebSocketEventType.Error => webSocketEvent.Error,
+            WebSocketEventType.Payload => $"[Payload: {Encoding.UTF8.GetString(webSocketEvent.Payload)}] [Error: {webSocketEvent.Error}] [Reason: {webSocketEvent.Reason}]",
+            _ => ""
+        };
+        Debug.Log($"{clientId} WebSocketEvent {webSocketEvent.Type}: {details}");
     }
 }

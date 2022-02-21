@@ -13,7 +13,11 @@ namespace AlgoSdk.Json
             this.offset = 0;
         }
 
-        public int Position => offset;
+        public int Position
+        {
+            get => offset;
+            set => offset = value;
+        }
 
         public char Char => text.Peek(offset).ToChar();
 

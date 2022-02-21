@@ -15,7 +15,7 @@ namespace AlgoSdk.WalletConnect
             using var encryptedPayloadJson = AlgoApiSerializer.SerializeJson(encryptedPayload, Allocator.Temp);
             var networkMessage = new NetworkMessage
             {
-                Payload = new AlgoApiObject(encryptedPayloadJson.AsArray().ToArray(), ContentType.Json),
+                Payload = encryptedPayloadJson.ToString(),
                 Type = "pub",
                 Topic = topic
             };
@@ -26,7 +26,7 @@ namespace AlgoSdk.WalletConnect
         public static Either<JsonRpcResponse, JsonRpcRequest> ReadJsonRpcPayload(this WebSocketEvent response, Hex encryptionKey)
         {
             var networkMessage = AlgoApiSerializer.DeserializeJson<NetworkMessage>(response.Payload);
-            var encryptedPayload = AlgoApiSerializer.DeserializeJson<EncryptedPayload>(networkMessage.Payload.Json);
+            var encryptedPayload = AlgoApiSerializer.DeserializeJson<EncryptedPayload>(networkMessage.Payload);
             var responseData = AesCipher.DecryptWithKey(encryptionKey, encryptedPayload);
             return AlgoApiSerializer.DeserializeJson<Either<JsonRpcResponse, JsonRpcRequest>>(responseData);
         }
@@ -36,5 +36,6 @@ namespace AlgoSdk.WalletConnect
 namespace AlgoSdk
 {
     [AlgoApiFormatter(typeof(EitherFormatter<JsonRpcResponse, JsonRpcRequest>))]
+    [AlgoApiFormatter(typeof(EitherFormatter<JsonRpcRequest, JsonRpcResponse>))]
     public partial struct Either<T, U> { }
 }

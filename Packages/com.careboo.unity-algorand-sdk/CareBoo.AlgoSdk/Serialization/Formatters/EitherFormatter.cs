@@ -50,6 +50,7 @@ namespace AlgoSdk
 
         bool TryDeserialize<TValue>(ref JsonReader reader, out TValue value, out Exception exception)
         {
+            var startingPosition = reader.Position;
             try
             {
                 value = AlgoApiFormatterCache<TValue>.Formatter.Deserialize(ref reader);
@@ -58,6 +59,7 @@ namespace AlgoSdk
             }
             catch (Exception ex)
             {
+                reader.Position = startingPosition;
                 value = default;
                 exception = ex;
                 return false;
@@ -66,6 +68,7 @@ namespace AlgoSdk
 
         bool TryDeserialize<TValue>(ref MessagePackReader reader, out TValue value, out Exception exception)
         {
+            var startingPosition = reader.Position;
             try
             {
                 value = AlgoApiFormatterCache<TValue>.Formatter.Deserialize(ref reader);
@@ -74,6 +77,7 @@ namespace AlgoSdk
             }
             catch (Exception ex)
             {
+                reader.Position = startingPosition;
                 value = default;
                 exception = ex;
                 return false;

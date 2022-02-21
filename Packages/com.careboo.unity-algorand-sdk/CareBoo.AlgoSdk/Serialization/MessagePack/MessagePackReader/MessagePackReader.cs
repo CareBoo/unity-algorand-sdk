@@ -15,6 +15,12 @@ namespace AlgoSdk.MessagePack
             this.offset = 0;
         }
 
+        public int Position
+        {
+            get => offset;
+            set => offset = value;
+        }
+
         public byte Peek()
         {
             if (TryPeek(out byte code))

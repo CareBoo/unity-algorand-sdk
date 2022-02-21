@@ -24,15 +24,18 @@ namespace AlgoSdk.WalletConnect
         string JsonRpc { get; set; }
     }
 
-    [AlgoApiFormatter(typeof(JsonRpcResponseFormatter<JsonRpcResponse, AlgoApiObject>))]
+    [AlgoApiObject]
     public struct JsonRpcResponse
         : IJsonRpcResponse<AlgoApiObject>
         , IEquatable<JsonRpcResponse>
     {
+        [AlgoApiField("id", null)]
         public ulong Id { get; set; }
 
+        [AlgoApiField("jsonrpc", null)]
         public string JsonRpc { get; set; }
 
+        [AlgoApiField("result", null)]
         public AlgoApiObject Result { get; set; }
 
         public bool Equals(JsonRpcResponse other)

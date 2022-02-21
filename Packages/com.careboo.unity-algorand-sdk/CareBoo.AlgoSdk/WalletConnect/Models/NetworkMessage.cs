@@ -15,7 +15,7 @@ namespace AlgoSdk.WalletConnect
         public string Type;
 
         [AlgoApiField("payload", null)]
-        public AlgoApiObject Payload;
+        public string Payload;
 
         public bool Equals(NetworkMessage other)
         {

@@ -147,19 +147,8 @@ namespace AlgoSdk
         {
             if (!value.IsJson || value.Json == null)
                 throw new ArgumentException("cannot serialize non-json to json...", nameof(value));
-            var json = new NativeText(value.Json.Length, Allocator.Temp);
-            try
-            {
-                for (var i = 0; i < value.Json.Length; i++)
-                {
-                    json.AppendRawByte(value.Json[i]);
-                }
-                writer.WriteRaw(json);
-            }
-            finally
-            {
-                json.Dispose();
-            }
+            using var json = new NativeArray<byte>(value.Json, Allocator.Temp);
+            writer.WriteRaw(json);
         }
 
         public void Serialize(ref MessagePackWriter writer, AlgoApiObject value)

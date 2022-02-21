@@ -3,8 +3,8 @@ using System;
 namespace AlgoSdk.WalletConnect
 {
     [AlgoApiObject]
-    public struct WCSessionRequestParams
-        : IEquatable<WCSessionRequestParams>
+    public struct WalletConnectSessionRequest
+        : IEquatable<WalletConnectSessionRequest>
     {
         [AlgoApiField("peerId", null)]
         public string PeerId;
@@ -15,7 +15,7 @@ namespace AlgoSdk.WalletConnect
         [AlgoApiField("chainId", null)]
         public Optional<int> ChainId;
 
-        public bool Equals(WCSessionRequestParams other)
+        public bool Equals(WalletConnectSessionRequest other)
         {
             return StringComparer.Equals(PeerId, other.PeerId)
                 && PeerMeta.Equals(other.PeerMeta)

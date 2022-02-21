@@ -1,6 +1,7 @@
 using System;
 using System.Threading;
 using AlgoSdk.LowLevel;
+using AlgoSdk.WalletConnect;
 using Cysharp.Threading.Tasks;
 using Netcode.Transports.WebSocket;
 using Unity.Collections;
@@ -11,8 +12,6 @@ namespace AlgoSdk.WalletConnect
 {
     public class AlgorandWalletConnectSession : IActiveWalletConnectSession<AlgorandWalletConnectSession>
     {
-        public const int AlgorandChainId = 4160;
-
         const string SessionUpdateMethod = "wc_sessionUpdate";
 
         public UnityEvent<AlgorandWalletConnectSession> OnSessionConnect { get; private set; } = new UnityEvent<AlgorandWalletConnectSession>();
@@ -55,6 +54,11 @@ namespace AlgoSdk.WalletConnect
 
         CancellationTokenSource pollCancellationTokenSource;
 
+        /// <summary>
+        /// Create a new session.
+        /// </summary>
+        /// <param name="clientMeta">The metadata of the Dapp.</param>
+        /// <param name="bridgeUrl">An optional wallet connect bridgeurl. e.g. https://bridge.walletconnect.org</param>
         public AlgorandWalletConnectSession(ClientMeta clientMeta, string bridgeUrl = null)
         {
             using var secret = new NativeByteArray(32, Allocator.Temp);
@@ -66,13 +70,16 @@ namespace AlgoSdk.WalletConnect
                 BridgeUrl = bridgeUrl ?? DefaultBridge.GetRandomBridgeUrl(),
                 Key = secret.ToArray(),
                 PeerId = Guid.NewGuid().ToString(),
-                ChainId = AlgorandChainId,
                 DappMeta = clientMeta,
                 Version = "1"
             };
             session.Url = $"wc:{session.PeerId}@{session.Version}?bridge={session.BridgeUrl}&key={session.Key}";
         }
 
+        /// <summary>
+        /// Continue an existing session.
+        /// </summary>
+        /// <param name="savedSession">A previously existing session.</param>
         public AlgorandWalletConnectSession(SavedSession savedSession)
         {
             session = savedSession;
@@ -84,12 +91,22 @@ namespace AlgoSdk.WalletConnect
                 Disconnect();
         }
 
+        /// <summary>
+        /// Save the current session's state.
+        /// </summary>
+        /// <returns>A <see cref="SavedSession"/> that can be used for continuing an existing session later.</returns>
         public SavedSession Save()
         {
             return session;
         }
 
-        public async UniTask Connect()
+        /// <summary>
+        /// Initiate a wallet connect session
+        /// </summary>
+        /// <param name="cancellationToken">
+        /// An optional <see cref="CancellationToken"/> that can be used for things like timeouts.
+        /// </param>
+        public async UniTask Connect(CancellationToken cancellationToken = default)
         {
             if (ConnectionStatus != Status.NotConnected)
                 throw new InvalidOperationException($"Session connection status is {ConnectionStatus}");
@@ -99,7 +116,7 @@ namespace AlgoSdk.WalletConnect
                 using var timeout = new CancellationTokenSource();
                 timeout.CancelAfterSlim(TimeSpan.FromMinutes(1));
                 await ConnectToBridgeServer(timeout.Token);
-                await ConnectToSession();
+                await ConnectToSession(cancellationToken);
             }
             catch (Exception ex)
             {
@@ -112,6 +129,10 @@ namespace AlgoSdk.WalletConnect
             OnSessionConnect.Invoke(this);
         }
 
+        /// <summary>
+        /// Disconnect from a <see cref="Status.Connected"/> or <see cref="Status.Connecting"/> session.
+        /// </summary>
+        /// <param name="reason">An optional reason to inform the web socket client.</param>
         public void Disconnect(string reason = default)
         {
             if (ConnectionStatus == Status.NotConnected)
@@ -121,6 +142,47 @@ namespace AlgoSdk.WalletConnect
             if (webSocketClient.ReadyState == WebSocketSharp.WebSocketState.Open)
                 webSocketClient.Close(reason: reason);
             ConnectionStatus = Status.NotConnected;
+        }
+
+        /// <summary>
+        /// Sign a group of transactions.
+        /// </summary>
+        /// <param name="options">Optional sign transaction options.</param>
+        /// <param name="cancellationToken">
+        /// Optional cancellation token used for interrupting this request.
+        /// It's recommended to use <see cref="CancellationTokenSourceExtensions.CancelAfterSlim"/> for UniTask. 
+        /// https://github.com/Cysharp/UniTask#timeout-handling
+        /// </param>
+        /// <param name="transactions">
+        /// The atomic transaction group of [1,16] transactions. Contains information about how to sign
+        /// each transaction, and which ones to sign.
+        /// </param>
+        /// <returns>
+        /// Either the result of the request or a <see cref="JsonRpcError"/> if the request was invalid.
+        /// 
+        /// The result is an array of the same length as the number of transactions provided in
+        /// <see cref="AlgoSignTxnsRequest.Params"/>.
+        /// 
+        /// For every index in this result, the value is
+        /// <list type="bullet">
+        ///     <item><c>null</c> if the wallet was not requested to sign this transaction</item>
+        ///     <item>the canonical message pack encoding of the signed transaction</item>
+        /// </list>
+        /// </returns>
+        public async UniTask<Either<byte[][], SignTxnsError>> SignTransactions(
+            SignTxnsOpts options = default,
+            CancellationToken cancellationToken = default,
+            params WalletTransaction[] transactions
+            )
+        {
+            if (ConnectionStatus == Status.NotConnected)
+                throw new InvalidOperationException($"Session connection status is {ConnectionStatus}");
+
+            var request = WalletConnectRpc.Algorand.SignTransactions(transactions, options);
+            var listeningForResponse = ListenForResponse(request, cancellationToken);
+            PublishRequest(request);
+            var response = await listeningForResponse;
+            return AlgoApiSerializer.DeserializeJson<Either<byte[][], SignTxnsError>>(response.Result.Json);
         }
 
         async UniTask ConnectToBridgeServer(CancellationToken cancellationToken)
@@ -145,10 +207,10 @@ namespace AlgoSdk.WalletConnect
             }
         }
 
-        async UniTask ConnectToSession()
+        async UniTask ConnectToSession(CancellationToken cancellationToken = default)
         {
             if (Accounts == null)
-                await RequestWalletConnection();
+                await RequestWalletConnection(cancellationToken);
         }
 
         async UniTaskVoid PollWebSocketEvents(CancellationToken cancellationToken)
@@ -168,20 +230,15 @@ namespace AlgoSdk.WalletConnect
             }
         }
 
-        async UniTask RequestWalletConnection()
+        async UniTask RequestWalletConnection(CancellationToken cancellationToken = default)
         {
-            var request = new WCSessionRequestRequest
-            {
-                Id = (ulong)UnityEngine.Random.Range(1, int.MaxValue),
-                Params = new WCSessionRequestParams
-                {
-                    PeerId = ClientId,
-                    PeerMeta = DappMeta,
-                    ChainId = AlgorandChainId
-                }
-            };
+            var request = WalletConnectRpc.SessionRequest(
+                peerId: ClientId,
+                peerMeta: DappMeta,
+                chainId: WalletConnectRpc.Algorand.ChainId
+            );
             PublishRequest(request);
-            var response = await PollUntilResponse(request.Id);
+            var response = await PollUntilResponse(request.Id, cancellationToken);
             var sessionData = AlgoApiSerializer.DeserializeJson<WalletConnectSessionData>(response.Result.Json);
             UpdateSession(sessionData);
         }
@@ -220,17 +277,24 @@ namespace AlgoSdk.WalletConnect
             }
         }
 
-        async UniTask<TResult> PublishRequestAndListenForResponse<TRequest, TResult>(TRequest request, CancellationToken cancellationToken = default)
+        void PublishRequest<TRequest>(TRequest request)
             where TRequest : IJsonRpcRequest
         {
-            AlgoApiObject result = default;
+            var requestMessage = request.SerializeAsNetworkMessage(Key, PeerId);
+            webSocketClient.Send(new ArraySegment<byte>(requestMessage));
+        }
+
+        async UniTask<JsonRpcResponse> ListenForResponse<TRequest>(TRequest request, CancellationToken cancellationToken = default)
+            where TRequest : IJsonRpcRequest
+        {
+            JsonRpcResponse matchingResponse = default;
             var receivedResponse = false;
             var disconnected = false;
             void onResponse(JsonRpcResponse response)
             {
                 if (response.Id != request.Id) return;
                 receivedResponse = true;
-                result = response.Result;
+                matchingResponse = response;
             }
             void onDisconnect(string reason)
             {
@@ -241,7 +305,6 @@ namespace AlgoSdk.WalletConnect
 
             try
             {
-                PublishRequest(request);
                 await UniTask.WaitUntil(() => receivedResponse || disconnected, cancellationToken: cancellationToken);
             }
             finally
@@ -252,14 +315,7 @@ namespace AlgoSdk.WalletConnect
 
             if (disconnected)
                 throw new Exception("Server disconnected before request could be finished.");
-            return AlgoApiSerializer.DeserializeJson<TResult>(result.Json);
-        }
-
-        void PublishRequest<TRequest>(TRequest request)
-            where TRequest : IJsonRpcRequest
-        {
-            var requestMessage = request.SerializeAsNetworkMessage(Key, PeerId);
-            webSocketClient.Send(new ArraySegment<byte>(requestMessage));
+            return matchingResponse;
         }
 
         void HandleResponseOrRequest(Either<JsonRpcResponse, JsonRpcRequest> eitherResponseOrRequest)
@@ -279,11 +335,11 @@ namespace AlgoSdk.WalletConnect
             switch (request.Method)
             {
                 case SessionUpdateMethod:
-                    var sessionUpdateParams = AlgoApiSerializer.DeserializeJson<WalletConnectSessionData[]>(request.Params.Json);
-                    if (sessionUpdateParams == null || sessionUpdateParams.Length != 1)
-                        throw new NotSupportedException($"The JsonRpcRequest method \"{SessionUpdateMethod}\" only supports arrays of length 1.");
-                    UpdateSession(sessionUpdateParams[0]);
-                    OnSessionUpdate.Invoke(sessionUpdateParams[0]);
+                    if (request.Params == null || request.Params.Length != 1)
+                        throw new NotSupportedException($"The JsonRpcRequest method \"{SessionUpdateMethod}\" only supports params of length 1.");
+                    var sessonUpdate = AlgoApiSerializer.DeserializeJson<WalletConnectSessionData>(request.Params[0].Json);
+                    UpdateSession(sessonUpdate);
+                    OnSessionUpdate.Invoke(sessonUpdate);
                     break;
                 default:
                     throw new NotSupportedException($"The JsonRpcRequest method \"{request.Method}\" is not supported");
@@ -294,6 +350,9 @@ namespace AlgoSdk.WalletConnect
         {
             if (!sessionData.IsApproved)
                 throw new Exception("Wallet denied connection request.");
+
+            if (sessionData.ChainId != WalletConnectRpc.Algorand.ChainId)
+                throw new NotSupportedException($"ChainId {sessionData.ChainId} is not supported. Algorand's chain id is {WalletConnectRpc.Algorand.ChainId}");
 
             session.PeerId = sessionData.PeerId;
             session.WalletMeta = sessionData.PeerMeta;
@@ -319,4 +378,10 @@ namespace AlgoSdk.WalletConnect
             Connected
         }
     }
+}
+
+namespace AlgoSdk
+{
+    [AlgoApiFormatter(typeof(EitherFormatter<byte[][], SignTxnsError>))]
+    public partial struct Either<T, U> { }
 }

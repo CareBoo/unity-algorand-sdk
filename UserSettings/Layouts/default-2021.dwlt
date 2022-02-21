@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 107
+  controlID: 22
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 422
     height: 762
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 108
+  controlID: 23
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 109
+  controlID: 24
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -306,7 +306,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 133
+    ID: 139
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -1381,9 +1381,9 @@ MonoBehaviour:
       uniqueId: '[com.careboo.unity-algorand-sdk][suite]'
       name: com.careboo.unity-algorand-sdk
       fullName: com.careboo.unity-algorand-sdk
-      resultStatus: 1
-      duration: 7.665644
-      messages: 
+      resultStatus: 2
+      duration: 0.3566209
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1397,9 +1397,9 @@ MonoBehaviour:
       uniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
       name: CareBoo.AlgoSdk.Tests.dll
       fullName: /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll
-      resultStatus: 1
-      duration: 7.6467247
-      messages: 
+      resultStatus: 2
+      duration: 0.3359517
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1414,7 +1414,7 @@ MonoBehaviour:
       name: AccountTest
       fullName: AccountTest
       resultStatus: 1
-      duration: 0.0770591
+      duration: 0.0228154
       messages: 
       output: 
       stacktrace: 
@@ -1430,17 +1430,17 @@ MonoBehaviour:
       name: GenerateAccount
       fullName: AccountTest.GenerateAccount
       resultStatus: 1
-      duration: 0.0702737
+      duration: 0.0131248
       messages: 
-      output: 'My address: TQSSF3DR7TMHP56BBLYLUP2OBPS665Q3G47POLE5OHGTQLQDNZXEZW4KZI
+      output: 'My address: 75IIJ5IA2JQDXC3KPSRYKOI4URXMAWISBN5BMH2Z724667S3GMQZJ2YEWM
 
         My
-        private key: SrnTxUk2gjz0Kekha3GGdjE/w6VQR2xlzGXEYNiadaOcJSLscfzYd/fBCvC6P04L5e92Gzc+9yydcc04LgNubg==
+        private key: GDVdUL5xMmmga2qk/9b0GOOFbH5KCUBlgR21BRAbD3r/UIT1ANJgO4tqfKOFORykbsBZEgt6Fh9Z/rnvflszIQ==
 
         My
-        passphrase: citizen exclude title goose afford august exile truck goddess
-        shield drip blast lazy ignore lunch elder pulse cover cream arrange radio
-        grit brick absent beach
+        passphrase: perfect inquiry choice brief gossip bottom fringe heavy virus
+        fossil kidney cover armed open fault announce pool airport mom forget cactus
+        short spare about priority
 
 '
       stacktrace: 
@@ -1457,7 +1457,7 @@ MonoBehaviour:
       name: AddressTest
       fullName: AddressTest
       resultStatus: 1
-      duration: 0.0259171
+      duration: 0.021236
       messages: 
       output: 
       stacktrace: 
@@ -1473,7 +1473,7 @@ MonoBehaviour:
       name: AddressFromStringShouldBeValid
       fullName: AddressTest.AddressFromStringShouldBeValid
       resultStatus: 1
-      duration: 0.0084011
+      duration: 0.007944
       messages: 
       output: 
       stacktrace: 
@@ -1490,7 +1490,7 @@ MonoBehaviour:
       name: AddressToStringShouldBeValid
       fullName: AddressTest.AddressToStringShouldBeValid
       resultStatus: 1
-      duration: 0.0001747
+      duration: 0.000161
       messages: 
       output: 
       stacktrace: 
@@ -1507,7 +1507,7 @@ MonoBehaviour:
       name: ApplicationTest
       fullName: ApplicationTest
       resultStatus: 1
-      duration: 0.003509
+      duration: 0.0070003
       messages: 
       output: 
       stacktrace: 
@@ -1523,7 +1523,7 @@ MonoBehaviour:
       name: ApplicationGetAddressFromIdShouldBeValid
       fullName: ApplicationTest.ApplicationGetAddressFromIdShouldBeValid
       resultStatus: 1
-      duration: 0.0012571
+      duration: 0.0013548
       messages: 
       output: 'WCS6TVPJRBSARHLN2326LRU5BYVJZUKI2VJ53CAWKYYHDE455ZGKANWMGM
 
@@ -1542,7 +1542,7 @@ MonoBehaviour:
       name: BlockTest
       fullName: BlockTest
       resultStatus: 1
-      duration: 0.29053
+      duration: 0.3034666
       messages: 
       output: 
       stacktrace: 
@@ -1558,7 +1558,7 @@ MonoBehaviour:
       name: DefaultFixedStringsShouldBeEqual
       fullName: BlockTest.DefaultFixedStringsShouldBeEqual
       resultStatus: 1
-      duration: 0.0004679
+      duration: 0.00051
       messages: 
       output: 
       stacktrace: 
@@ -1575,7 +1575,7 @@ MonoBehaviour:
       name: DeserializingBlockFromMessagePackShouldThrowNoErrors
       fullName: BlockTest.DeserializingBlockFromMessagePackShouldThrowNoErrors
       resultStatus: 1
-      duration: 0.2873712
+      duration: 0.3009123
       messages: 
       output: 
       stacktrace: 
@@ -1587,12 +1587,77 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1071
       parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][BlockTest][suite]
+    - id: 1012
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][EitherTest][suite]
+      name: EitherTest
+      fullName: EitherTest
+      resultStatus: 2
+      duration: 0.3348231
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1042
+      parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
+    - id: 1013
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/EitherTest/[CareBoo.AlgoSdk.Tests][EitherTest.JsonOfType2ShouldDeserializeToEitherWithValue2]
+      name: JsonOfType2ShouldDeserializeToEitherWithValue2
+      fullName: EitherTest.JsonOfType2ShouldDeserializeToEitherWithValue2
+      resultStatus: 2
+      duration: 0.3253408
+      messages: "System.AggregateException : Could not deserialize either AlgoSdk.WalletConnect.JsonRpcResponse
+        or AlgoSdk.WalletConnect.JsonRpcRequest (IncorrectType on char '\"' at pos:
+        1) (Specified method is not supported.)\n  ----> AlgoSdk.Json.JsonReadException
+        : IncorrectType on char '\"' at pos: 1"
+      output: '
+
+        {"test":"hello"}
+
+        {"test":"hello"}
+
+
+        "test"
+
+        {"id":1566479282,"jsonrpc":"2.0","method":"test_64848218-9fad-4090-8c01-69af23169bd8","params":}
+
+'
+      stacktrace: "  at AlgoSdk.EitherFormatter`2[T,U].Deserialize (AlgoSdk.Json.JsonReader&
+        reader) [0x00037] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/EitherFormatter.cs:17
+        \n  at AlgoSdk.AlgoApiSerializer.DeserializeJson[T] (Unity.Collections.NativeText
+        text) [0x00009] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/AlgoApiSerializer.cs:92
+        \n  at AlgoSdk.AlgoApiSerializer.DeserializeJson[T] (System.String text)
+        [0x0000a] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/AlgoApiSerializer.cs:104
+        \n  at EitherTest.JsonOfType2ShouldDeserializeToEitherWithValue2 () [0x0007e]
+        in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk.Tests/EitherTest.cs:24
+        \n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\n 
+        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
+        System.Globalization.CultureInfo culture) [0x0006a] in <c601d84e56504c3dba1634d3be4a96be>:0
+        \n--JsonReadException\n  at AlgoSdk.Json.JsonReadErrorExtensions.ThrowIfError
+        (AlgoSdk.Json.JsonReadError err, System.Char c, System.Int32 pos) [0x0000c]
+        in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReadError.cs:31
+        \n  at AlgoSdk.WalletConnect.JsonRpcResponseFormatter`2[T,U].Deserialize
+        (AlgoSdk.Json.JsonReader& reader) [0x0000c] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/WalletConnect/Serialization/JsonRpcResponseFormatter.cs:12
+        \n  at AlgoSdk.EitherFormatter`2[T,U].TryDeserialize[TValue] (AlgoSdk.Json.JsonReader&
+        reader, TValue& value, System.Exception& exception) [0x00009] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/EitherFormatter.cs:56 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1012
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][EitherTest][suite]
     - id: 1074
       uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][JsonReaderTest][suite]
       name: JsonReaderTest
       fullName: JsonReaderTest
       resultStatus: 1
-      duration: 0.0109617
+      duration: 0.0063263
       messages: 
       output: 
       stacktrace: 
@@ -1608,7 +1673,7 @@ MonoBehaviour:
       name: CheckValue
       fullName: JsonReaderTest.CheckValue
       resultStatus: 1
-      duration: 0.0009918
+      duration: 0.0009119
       messages: 
       output: '4
 
@@ -1627,7 +1692,7 @@ MonoBehaviour:
       name: ValidJsonShouldBeParsedWithoutErrs
       fullName: JsonReaderTest.ValidJsonShouldBeParsedWithoutErrs
       resultStatus: 1
-      duration: 0.0025443
+      duration: 0.0026483
       messages: 
       output: 
       stacktrace: 
@@ -1644,7 +1709,7 @@ MonoBehaviour:
       name: LogicSigTest
       fullName: LogicSigTest
       resultStatus: 1
-      duration: 0.0042661
+      duration: 0.0054948
       messages: 
       output: 
       stacktrace: 
@@ -1660,7 +1725,7 @@ MonoBehaviour:
       name: GetAddressShouldReturnValidAddress
       fullName: LogicSigTest.GetAddressShouldReturnValidAddress
       resultStatus: 1
-      duration: 0.0005044
+      duration: 0.0004897
       messages: 
       output: 
       stacktrace: 
@@ -1677,7 +1742,7 @@ MonoBehaviour:
       name: MnemonicTest
       fullName: MnemonicTest
       resultStatus: 1
-      duration: 0.0087545
+      duration: 0.0082809
       messages: 
       output: 
       stacktrace: 
@@ -1693,7 +1758,7 @@ MonoBehaviour:
       name: CanGenerateMnemonicFromString
       fullName: MnemonicTest.CanGenerateMnemonicFromString
       resultStatus: 1
-      duration: 0.0028513
+      duration: 0.002647
       messages: 
       output: 
       stacktrace: 
@@ -1710,7 +1775,7 @@ MonoBehaviour:
       name: MnemonicsFromTheSameStringShouldBeEqual
       fullName: MnemonicTest.MnemonicsFromTheSameStringShouldBeEqual
       resultStatus: 1
-      duration: 0.0022556
+      duration: 0.0023757
       messages: 
       output: 
       stacktrace: 
@@ -1727,7 +1792,7 @@ MonoBehaviour:
       name: MnemonicToKeyShouldGenerateValidKey
       fullName: MnemonicTest.MnemonicToKeyShouldGenerateValidKey
       resultStatus: 1
-      duration: 0.0003784
+      duration: 0.0003841
       messages: 
       output: 
       stacktrace: 
@@ -1744,7 +1809,7 @@ MonoBehaviour:
       name: ShortWordShouldEqualWord
       fullName: MnemonicTest.ShortWordShouldEqualWord
       resultStatus: 1
-      duration: 0.000108
+      duration: 0.0001101
       messages: 
       output: 
       stacktrace: 
@@ -1761,7 +1826,7 @@ MonoBehaviour:
       name: MultisigAddressTest
       fullName: MultisigAddressTest
       resultStatus: 1
-      duration: 0.0026938
+      duration: 0.0044556
       messages: 
       output: 
       stacktrace: 
@@ -1777,7 +1842,7 @@ MonoBehaviour:
       name: MultisigGetAddressShouldReturnValidAddress
       fullName: MultisigAddressTest.MultisigGetAddressShouldReturnValidAddress
       resultStatus: 1
-      duration: 0.0005822
+      duration: 0.0006266
       messages: 
       output: 
       stacktrace: 
@@ -1794,7 +1859,7 @@ MonoBehaviour:
       name: NetworkMessageTest
       fullName: NetworkMessageTest
       resultStatus: 1
-      duration: 0.0024993
+      duration: 0.009023
       messages: 
       output: 
       stacktrace: 
@@ -1810,9 +1875,11 @@ MonoBehaviour:
       name: NetworkMessageShouldDeserializeFromJsonProperly
       fullName: NetworkMessageTest.NetworkMessageShouldDeserializeFromJsonProperly
       resultStatus: 1
-      duration: 0.0003037
+      duration: 0.0058955
       messages: 
-      output: 
+      output: '{"payload":"{\"data\":\"821d513e79c0d5d20ca5763a7c9c9ef90399acdcc696d2057641e3fcd140db08f78bfc58f943a94af3c63d8049b42ce41d43557e0326d391e921fc90339876824ceda8793b6f673e91c20ce4d1beca79f5ebe969baddef885c15e393b7ed734b234ff291d1e2ed18cb3e3a4bef3b44a51986fcfd78f34e15db69e83ab0fcc18bb41c9dbf3d5444afa9dff7795fb709698981102bd58fc534bf4cb61167bc38477a6ff02908f3292e84cf782c8f367ae4c54dd3304403e459d56cdecadeadb84781f358d0c33862bd9df573bc5908247a\",\"hmac\":\"78b397e3503175891e00da8708ab35104f0838e4910e7db5979f3c1710f98e40\",\"iv\":\"12a0fbda5d7cdca8a7eaacf34055c106\"}","topic":"4d83acea-ff18-4409-8b0c-0ad2e56846ca","type":"pub"}
+
+'
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -1827,7 +1894,7 @@ MonoBehaviour:
       name: PrivateKeyTest
       fullName: PrivateKeyTest
       resultStatus: 1
-      duration: 0.006694
+      duration: 0.0050728
       messages: 
       output: 
       stacktrace: 
@@ -1843,7 +1910,7 @@ MonoBehaviour:
       name: PrivateKeyToMnemonicCheckSumShouldBeValid
       fullName: PrivateKeyTest.PrivateKeyToMnemonicCheckSumShouldBeValid
       resultStatus: 1
-      duration: 0.0011987
+      duration: 0.0011693
       messages: 
       output: 
       stacktrace: 
@@ -1860,7 +1927,7 @@ MonoBehaviour:
       name: PrivateKeyToMnemonicShouldBeValid
       fullName: PrivateKeyTest.PrivateKeyToMnemonicShouldBeValid
       resultStatus: 1
-      duration: 0.00134
+      duration: 0.0013681
       messages: 
       output: 
       stacktrace: 
@@ -1877,7 +1944,7 @@ MonoBehaviour:
       name: PrivateKeyToStringShouldBeValid
       fullName: PrivateKeyTest.PrivateKeyToStringShouldBeValid
       resultStatus: 1
-      duration: 0.0001649
+      duration: 0.0001486
       messages: 
       output: 
       stacktrace: 
@@ -1894,7 +1961,7 @@ MonoBehaviour:
       name: RawTransactionTest
       fullName: RawTransactionTest
       resultStatus: 1
-      duration: 0.0108324
+      duration: 0.0117228
       messages: 
       output: 
       stacktrace: 
@@ -1910,9 +1977,9 @@ MonoBehaviour:
       name: SerializedTransactionShouldEqualDeserializedTransaction
       fullName: RawTransactionTest.SerializedTransactionShouldEqualDeserializedTransaction
       resultStatus: 1
-      duration: 0.0088008
+      duration: 0.0093025
       messages: 
-      output: 'iKNhbXTNnECjZmVlIKJmds0D8aJnaMQgMDZWUA1hc/nuM+ggmrRuIk3KPKIR6iui9rZQpt0XgBWibHbNJyWjcmN2xCD7skD9dY/bVwYHzb9CWWgypcHAf9Tjw1ZIx7cTHYgbmaNzbmTEIPKam34tAZuwHkgkBSfKRx/ixKGTATaNqMw9lKz777LcpHR5cGWjcGF5
+      output: 'iKNhbXTNnECjZmVlIKJmds0D8aJnaMQg43eRIEUHiv6LuHZSlqQuxO/OWYPUm1bIF8iY2IkOK6SibHbNJyWjcmN2xCARXNpVDNj5sy9UN0T0xzcNVjg+fWVEmSojdRE14UllFaNzbmTEIANMxxAiYbN7uOlkgdrG/jj1NZ5J5AUkz18KJwmnY+skpHR5cGWjcGF5
 
 '
       stacktrace: 
@@ -1929,7 +1996,7 @@ MonoBehaviour:
       name: SizeOfRawTransactionShouldBeUnder4KB
       fullName: RawTransactionTest.SizeOfRawTransactionShouldBeUnder4KB
       resultStatus: 1
-      duration: 0.0003606
+      duration: 0.0003493
       messages: 
       output: 'Size of Transaction: 1456
 
@@ -1948,7 +2015,7 @@ MonoBehaviour:
       name: SignedTransactionTest
       fullName: SignedTransactionTest
       resultStatus: 1
-      duration: 0.0079601
+      duration: 0.0085701
       messages: 
       output: 
       stacktrace: 
@@ -1964,9 +2031,9 @@ MonoBehaviour:
       name: SerializedSignedTransactionShouldEqualDeserializedSignedTransaction
       fullName: SignedTransactionTest.SerializedSignedTransactionShouldEqualDeserializedSignedTransaction
       resultStatus: 1
-      duration: 0.0056626
+      duration: 0.0059492
       messages: 
-      output: 'Serialized bytes: gqNzaWfEQBEM8GfyyV5UhdeB4hLmVhEpMzR0BJDwTMoHSxKk/p/WRnrtNhB+TLm6+HRI5C63Kh6XA/px+ZRiq5OHHt6ejAejdHhuiaNhbXTOAA9CQKNmZWXNA+iiZnbOArjPuqNnZW6qc2FuZG5ldC12MaJnaMQgm0XImxCpIDneMMenkOlyixCtRKRVd0mbH8vV/QLYB1WibHbOArjToqNyY3bEIGtbIYIzsqxuqptgkdf6h7xLnhhJINl9mDs97BqCLsUYo3NuZMQgXiHqpDPs77ZSeXWxPw4OmMrNAprM5/5qetieOFmtWiukdHlwZaNwYXk=
+      output: 'Serialized bytes: gqNzaWfEQCjOSHYtjJeileKdAi90jy/7Pa2/Bdu08ssXr7LfqN7gK0pO8N/vy3d4aAiO4bEJdDU05RarFOwuaFiLrKLdOAqjdHhuiaNhbXTOAA9CQKNmZWXNA+iiZnbOArjPuqNnZW6qc2FuZG5ldC12MaJnaMQgm0XImxCpIDneMMenkOlyixCtRKRVd0mbH8vV/QLYB1WibHbOArjToqNyY3bEIPS0qmRLEClEr3Xir1i++omhCNZW3k12d0bP7WAZ6Taso3NuZMQg/NZf7VDA9sqGO0AXYLC7ppgeWqiOOF0XJngO/jSJUS6kdHlwZaNwYXk=
 
 '
       stacktrace: 
@@ -1983,7 +2050,7 @@ MonoBehaviour:
       name: SizeOfSignedTransactionShouldBeUnder4KB
       fullName: SignedTransactionTest.SizeOfSignedTransactionShouldBeUnder4KB
       resultStatus: 1
-      duration: 0.0003493
+      duration: 0.0003577
       messages: 
       output: 'Size of SignedTransaction: 1456
 
@@ -2002,7 +2069,7 @@ MonoBehaviour:
       name: TransactionIdTest
       fullName: TransactionIdTest
       resultStatus: 1
-      duration: 0.0025362
+      duration: 0.0156859
       messages: 
       output: 
       stacktrace: 
@@ -2018,7 +2085,7 @@ MonoBehaviour:
       name: TestTransactionIdCanBeDeserializedFromString
       fullName: TransactionIdTest.TestTransactionIdCanBeDeserializedFromString
       resultStatus: 1
-      duration: 0.0007361
+      duration: 0.0008324
       messages: 
       output: 
       stacktrace: 
@@ -2035,7 +2102,7 @@ MonoBehaviour:
       name: WalletConnectTest
       fullName: WalletConnectTest
       resultStatus: 1
-      duration: 7.645063
+      duration: 3.2575147
       messages: 
       output: 
       stacktrace: 
@@ -2051,19 +2118,12 @@ MonoBehaviour:
       name: TestConnection
       fullName: WalletConnectTest.TestConnection
       resultStatus: 1
-      duration: 7.6318355
+      duration: 3.2413948
       messages: 
-      output: "ClientId: 0\nError: \nPayload: \nReason: \nType: Open\nClientId: 0\nError:
-        \nPayload: {\"topic\":\"a26c9fa0-7726-4afc-8185-43ac620c188e\",\"type\":\"pub\",\"payload\":\"{\\\"data\\\":\\\"ywdcLgbee/92fnPMNE9B9kJCW2isYctZwKEMJ9P6qn07oWFKDs65ExW0KGlFwieCJkrSPRQ+ym6NxLALh1oD8g==\\\",\\\"hmac\\\":\\\"yiXH34Ediig98KIUNXT9IKOU0axrl1tc8vwqqe8Qhb0=\\\",\\\"iv\\\":\\\"bZycvwZXzCcOUcizgdGdfg==\\\"}\"}\nReason:
-        \nType: Payload\nClientId: 0\nError: \nPayload: \nReason: \nType: Open\nClientId:
-        0\nError: \nPayload: \nReason: \nType: Nothing\nClientId: 0\nError: \nPayload:
-        \nReason: \nType: Nothing\nClientId: 0\nError: \nPayload: \nReason: \nType:
-        Nothing\nClientId: 0\nError: \nPayload: \nReason: \nType: Nothing\nClientId:
-        0\nError: \nPayload: \nReason: \nType: Nothing\nClientId: 0\nError: \nPayload:
-        \nReason: \nType: Nothing\nClientId: 0\nError: \nPayload: \nReason: \nType:
-        Nothing\nClientId: 0\nError: \nPayload: \nReason: \nType: Nothing\nClientId:
-        0\nError: \nPayload: \nReason: \nType: Nothing\nClientId: 0\nError: \nPayload:
-        \nReason: \nType: Nothing\n"
+      output: "{\"payload\":\"{\\\"data\\\":\\\"2DqBvGIBcM1nEoTwgow5o4kZOdt6ILrled+WtcVzM6wc7TQc+3V81lWE7mAyxk5Tz66wrm/6p00znfrfxA85+g==\\\",\\\"hmac\\\":\\\"xdoDoq82qFtiAgZeitwAZkzzVKt2FD+xlAnZaFnamII=\\\",\\\"iv\\\":\\\"eJ/t5Cj15g2bDOFBaNpo8Q==\\\"}\",\"topic\":\"e3aea919-cd3c-43f7-b37d-a712febe86fc\",\"type\":\"pub\"}\ndapp
+        WebSocketEvent Open: \nwallet WebSocketEvent Open: \nwallet WebSocketEvent
+        Payload: [Payload: {\"payload\":\"{\\\"data\\\":\\\"2DqBvGIBcM1nEoTwgow5o4kZOdt6ILrled+WtcVzM6wc7TQc+3V81lWE7mAyxk5Tz66wrm/6p00znfrfxA85+g==\\\",\\\"hmac\\\":\\\"xdoDoq82qFtiAgZeitwAZkzzVKt2FD+xlAnZaFnamII=\\\",\\\"iv\\\":\\\"eJ/t5Cj15g2bDOFBaNpo8Q==\\\"}\",\"topic\":\"e3aea919-cd3c-43f7-b37d-a712febe86fc\",\"type\":\"pub\"}]
+        [Error: ] [Reason: ]\ndapp WebSocketEvent Nothing: \n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2073,23 +2133,51 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1100
       parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][WalletConnectTest][suite]
-    m_ResultText: "TestConnection (7.632s)\n---\nClientId: 0\nError: \nPayload: \nReason:
-      \nType: Open\nClientId: 0\nError: \nPayload: {\"topic\":\"a26c9fa0-7726-4afc-8185-43ac620c188e\",\"type\":\"pub\",\"payload\":\"{\\\"data\\\":\\\"ywdcLgbee/92fnPMNE9B9kJCW2isYctZwKEMJ9P6qn07oWFKDs65ExW0KGlFwieCJkrSPRQ+ym6NxLALh1oD8g==\\\",\\\"hmac\\\":\\\"yiXH34Ediig98KIUNXT9IKOU0axrl1tc8vwqqe8Qhb0=\\\",\\\"iv\\\":\\\"bZycvwZXzCcOUcizgdGdfg==\\\"}\"}\nReason:
-      \nType: Payload\nClientId: 0\nError: \nPayload: \nReason: \nType: Open\nClientId:
-      0\nError: \nPayload: \nReason: \nType: Nothing\nClientId: 0\nError: \nPayload:
-      \nReason: \nType: Nothing\nClientId: 0\nError: \nPayload: \nReason: \nType:
-      Nothing\nClientId: 0\nError: \nPayload: \nReason: \nType: Nothing\nClientId:
-      0\nError: \nPayload: \nReason: \nType: Nothing\nClientId: 0\nError: \nPayload:
-      \nReason: \nType: Nothing\nClientId: 0\nError: \nPayload: \nReason: \nType:
-      Nothing\nClientId: 0\nError: \nPayload: \nReason: \nType: Nothing\nClientId:
-      0\nError: \nPayload: \nReason: \nType: Nothing\nClientId: 0\nError: \nPayload:
-      \nReason: \nType: Nothing"
-    m_ResultStacktrace: 
+    m_ResultText: "JsonOfType2ShouldDeserializeToEitherWithValue2 (0.325s)\n---\nSystem.AggregateException
+      : Could not deserialize either AlgoSdk.WalletConnect.JsonRpcResponse or AlgoSdk.WalletConnect.JsonRpcRequest
+      (IncorrectType on char '\"' at pos: 1) (Specified method is not supported.)\n 
+      ----> AlgoSdk.Json.JsonReadException : IncorrectType on char '\"' at pos: 1\n---\nat
+      AlgoSdk.EitherFormatter`2[T,U].Deserialize (AlgoSdk.Json.JsonReader& reader)
+      [0x00037] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/EitherFormatter.cs:17
+      \n  at AlgoSdk.AlgoApiSerializer.DeserializeJson[T] (Unity.Collections.NativeText
+      text) [0x00009] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/AlgoApiSerializer.cs:92
+      \n  at AlgoSdk.AlgoApiSerializer.DeserializeJson[T] (System.String text) [0x0000a]
+      in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/AlgoApiSerializer.cs:104
+      \n  at EitherTest.JsonOfType2ShouldDeserializeToEitherWithValue2 () [0x0007e]
+      in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk.Tests/EitherTest.cs:24
+      \n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\n 
+      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
+      culture) [0x0006a] in <c601d84e56504c3dba1634d3be4a96be>:0 \n--JsonReadException\n 
+      at AlgoSdk.Json.JsonReadErrorExtensions.ThrowIfError (AlgoSdk.Json.JsonReadError
+      err, System.Char c, System.Int32 pos) [0x0000c] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReadError.cs:31
+      \n  at AlgoSdk.WalletConnect.JsonRpcResponseFormatter`2[T,U].Deserialize (AlgoSdk.Json.JsonReader&
+      reader) [0x0000c] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/WalletConnect/Serialization/JsonRpcResponseFormatter.cs:12
+      \n  at AlgoSdk.EitherFormatter`2[T,U].TryDeserialize[TValue] (AlgoSdk.Json.JsonReader&
+      reader, TValue& value, System.Exception& exception) [0x00009] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/EitherFormatter.cs:56\n---\n{\"test\":\"hello\"}\n{\"test\":\"hello\"}\n\n\"test\"\n{\"id\":1566479282,\"jsonrpc\":\"2.0\",\"method\":\"test_64848218-9fad-4090-8c01-69af23169bd8\",\"params\":}"
+    m_ResultStacktrace: "  at AlgoSdk.EitherFormatter`2[T,U].Deserialize (AlgoSdk.Json.JsonReader&
+      reader) [0x00037] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/EitherFormatter.cs:17
+      \n  at AlgoSdk.AlgoApiSerializer.DeserializeJson[T] (Unity.Collections.NativeText
+      text) [0x00009] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/AlgoApiSerializer.cs:92
+      \n  at AlgoSdk.AlgoApiSerializer.DeserializeJson[T] (System.String text) [0x0000a]
+      in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/AlgoApiSerializer.cs:104
+      \n  at EitherTest.JsonOfType2ShouldDeserializeToEitherWithValue2 () [0x0007e]
+      in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk.Tests/EitherTest.cs:24
+      \n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\n 
+      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
+      culture) [0x0006a] in <c601d84e56504c3dba1634d3be4a96be>:0 \n--JsonReadException\n 
+      at AlgoSdk.Json.JsonReadErrorExtensions.ThrowIfError (AlgoSdk.Json.JsonReadError
+      err, System.Char c, System.Int32 pos) [0x0000c] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReadError.cs:31
+      \n  at AlgoSdk.WalletConnect.JsonRpcResponseFormatter`2[T,U].Deserialize (AlgoSdk.Json.JsonReader&
+      reader) [0x0000c] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/WalletConnect/Serialization/JsonRpcResponseFormatter.cs:12
+      \n  at AlgoSdk.EitherFormatter`2[T,U].TryDeserialize[TValue] (AlgoSdk.Json.JsonReader&
+      reader, TValue& value, System.Exception& exception) [0x00009] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/EitherFormatter.cs:56 "
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 8a50ee93
-      m_LastClickedID: -1813098358
-      m_ExpandedIDs: 04599a885843a51f433b7427eca58c3684c3466cffffff7f
+      m_SelectedIDs: 1ce9c356
+      m_LastClickedID: 1455679772
+      m_ExpandedIDs: ceed088804599a88f288c6915843a51f433b7427eca58c36a2876a4e84c3466cffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2154,24 +2242,24 @@ MonoBehaviour:
     m_SceneHandles: 
     m_ShowAllHits: 0
     m_SkipHidden: 0
-    m_SearchArea: 1
+    m_SearchArea: 2
     m_Folders:
-    - Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/WalletConnect/Models
+    - Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/WalletConnect/Serialization
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/WalletConnect/Models
+  - Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/WalletConnect/Serialization
   m_LastFoldersGridSize: 16
   m_LastProjectPath: /Users/jason/Projects/CareBoo/Unity.AlgoSdk
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 127}
-    m_SelectedIDs: 6a650000
-    m_LastClickedID: 25962
-    m_ExpandedIDs: 000000001c65000022650000486500004a65000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 162.19379}
+    m_SelectedIDs: 64650000
+    m_LastClickedID: 25956
+    m_ExpandedIDs: 00000000286500002e650000566500005865000060650000746500008865000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2226,19 +2314,19 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: JsonRpcResult
-      m_OriginalName: JsonRpcResult
+      m_Name: EitherTest
+      m_OriginalName: EitherTest
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 26074
+      m_UserData: 26138
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -2327,9 +2415,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: da650000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: eee4ffff
+      m_ExpandedIDs: 5eb2ffffa8b2ffff5eb3ffffb0b3ffffd6b4ffff20b5ffffd0b5ffff1ab6ffffc8b6ffff12b7ffffceb7ffff20b8ffffdab8ffff24b9ffffe6b9ffff38baffff08bbffff52bbffff02bcffff4cbcffff06bdffff50bdfffffebdffff48befffff6beffff40bfffff22c0ffff6cc0ffff4ec1ffffa4c1ffff5ec2ffffa8c2ffff62c3ffffacc3ffff82c4ffff34c5ffffeec5ffff38c6ffff80c7ffffcac7ffff84c8ffffcec8ffff0cc9ffff56c9ffff04caffff4ecafffffccaffff46cbffff00ccffff52ccffff64ceffffaeceffff5ecfffffa8cfffff58d0ffffa2d0ffff52d1ffffa4d1ffff60d2ffffb6d2ffff64d3ffffaed3ffffded5ffff28d6ffffd6d6ffff20d7ffffced7ffff18d8ffff56d8ffffa0d8ffff56d9fffff8d9ffffe8e4ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2771,9 +2859,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 653
-    width: 1178
-    height: 352
+    y: 845
+    width: 1746
+    height: 482
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
