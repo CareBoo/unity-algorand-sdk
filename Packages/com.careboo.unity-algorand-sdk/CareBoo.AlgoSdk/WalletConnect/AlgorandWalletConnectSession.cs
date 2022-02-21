@@ -297,7 +297,6 @@ namespace AlgoSdk.WalletConnect
 
             session.PeerId = sessionData.PeerId;
             session.WalletMeta = sessionData.PeerMeta;
-            session.NetworkId = sessionData.NetworkId;
             session.ChainId = sessionData.ChainId;
             session.Accounts = sessionData.Accounts;
         }
