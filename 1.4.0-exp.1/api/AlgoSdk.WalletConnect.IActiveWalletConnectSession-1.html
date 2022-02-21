@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Struct AlgoSignTxnResponse
+    <title>Interface IActiveWalletConnectSession&lt;TSession&gt;
    | Unity Algorand SDK </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Struct AlgoSignTxnResponse
+    <meta name="title" content="Interface IActiveWalletConnectSession&lt;TSession&gt;
    | Unity Algorand SDK ">
     <meta name="generator" content="docfx 2.59.0.0">
     
@@ -78,35 +78,84 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="AlgoSdk.WalletConnect.AlgoSignTxnResponse">
+            <article class="content wrap" id="_content" data-uid="AlgoSdk.WalletConnect.IActiveWalletConnectSession`1">
   
   
-  <h1 id="AlgoSdk_WalletConnect_AlgoSignTxnResponse" data-uid="AlgoSdk.WalletConnect.AlgoSignTxnResponse" class="text-break">Struct AlgoSignTxnResponse
+  <h1 id="AlgoSdk_WalletConnect_IActiveWalletConnectSession_1" data-uid="AlgoSdk.WalletConnect.IActiveWalletConnectSession`1" class="text-break">Interface IActiveWalletConnectSession&lt;TSession&gt;
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="AlgoSdk.WalletConnect.JsonRpcResponse-1.html">JsonRpcResponse</a>&lt;<span class="xref">System.Byte</span>[][]&gt;</div>
-    <div><a class="xref" href="AlgoSdk.WalletConnect.JsonRpcResponse.html">JsonRpcResponse</a></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_ClientId">IWalletConnectSessionData.ClientId</a>
+    </div>
+    <div>
+      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_BridgeUrl">IWalletConnectSessionData.BridgeUrl</a>
+    </div>
+    <div>
+      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_Key">IWalletConnectSessionData.Key</a>
+    </div>
+    <div>
+      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_PeerId">IWalletConnectSessionData.PeerId</a>
+    </div>
+    <div>
+      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_HandshakeId">IWalletConnectSessionData.HandshakeId</a>
+    </div>
+    <div>
+      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_NetworkId">IWalletConnectSessionData.NetworkId</a>
+    </div>
+    <div>
+      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_Accounts">IWalletConnectSessionData.Accounts</a>
+    </div>
+    <div>
+      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_ChainId">IWalletConnectSessionData.ChainId</a>
+    </div>
+    <div>
+      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_DappMeta">IWalletConnectSessionData.DappMeta</a>
+    </div>
+    <div>
+      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_WalletMeta">IWalletConnectSessionData.WalletMeta</a>
+    </div>
+    <div>
+      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_Url">IWalletConnectSessionData.Url</a>
+    </div>
+    <div>
+      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_Version">IWalletConnectSessionData.Version</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.WalletConnect.html">AlgoSdk.WalletConnect</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="AlgoSdk_WalletConnect_AlgoSignTxnResponse_syntax">Syntax</h5>
+  <h5 id="AlgoSdk_WalletConnect_IActiveWalletConnectSession_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct AlgoSignTxnResponse : JsonRpcResponse&lt;byte[][]&gt;, JsonRpcResponse</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IActiveWalletConnectSession&lt;TSession&gt; : IWalletConnectSessionData where TSession : IActiveWalletConnectSession&lt;TSession&gt;</code></pre>
   </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TSession</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
   
-  <a id="AlgoSdk_WalletConnect_AlgoSignTxnResponse_Id_" data-uid="AlgoSdk.WalletConnect.AlgoSignTxnResponse.Id*"></a>
-  <h4 id="AlgoSdk_WalletConnect_AlgoSignTxnResponse_Id" data-uid="AlgoSdk.WalletConnect.AlgoSignTxnResponse.Id">Id</h4>
+  <a id="AlgoSdk_WalletConnect_IActiveWalletConnectSession_1_OnSessionConnect_" data-uid="AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionConnect*"></a>
+  <h4 id="AlgoSdk_WalletConnect_IActiveWalletConnectSession_1_OnSessionConnect" data-uid="AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionConnect">OnSessionConnect</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong Id { readonly get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">UnityEvent&lt;TSession&gt; OnSessionConnect { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -118,20 +167,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="xref">UnityEvent</span>&lt;TSession&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="AlgoSdk_WalletConnect_AlgoSignTxnResponse_JsonRpc_" data-uid="AlgoSdk.WalletConnect.AlgoSignTxnResponse.JsonRpc*"></a>
-  <h4 id="AlgoSdk_WalletConnect_AlgoSignTxnResponse_JsonRpc" data-uid="AlgoSdk.WalletConnect.AlgoSignTxnResponse.JsonRpc">JsonRpc</h4>
+  <a id="AlgoSdk_WalletConnect_IActiveWalletConnectSession_1_OnSessionDisconnect_" data-uid="AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionDisconnect*"></a>
+  <h4 id="AlgoSdk_WalletConnect_IActiveWalletConnectSession_1_OnSessionDisconnect" data-uid="AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionDisconnect">OnSessionDisconnect</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string JsonRpc { readonly get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">UnityEvent&lt;string&gt; OnSessionDisconnect { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -143,20 +192,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">UnityEvent</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="AlgoSdk_WalletConnect_AlgoSignTxnResponse_Result_" data-uid="AlgoSdk.WalletConnect.AlgoSignTxnResponse.Result*"></a>
-  <h4 id="AlgoSdk_WalletConnect_AlgoSignTxnResponse_Result" data-uid="AlgoSdk.WalletConnect.AlgoSignTxnResponse.Result">Result</h4>
+  <a id="AlgoSdk_WalletConnect_IActiveWalletConnectSession_1_OnSessionUpdate_" data-uid="AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionUpdate*"></a>
+  <h4 id="AlgoSdk_WalletConnect_IActiveWalletConnectSession_1_OnSessionUpdate" data-uid="AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionUpdate">OnSessionUpdate</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[][] Result { readonly get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">UnityEvent&lt;WalletConnectSessionData&gt; OnSessionUpdate { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -168,18 +217,11 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Byte</span>[][]</td>
+        <td><span class="xref">UnityEvent</span>&lt;<a class="xref" href="AlgoSdk.WalletConnect.WalletConnectSessionData.html">WalletConnectSessionData</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="AlgoSdk.WalletConnect.JsonRpcResponse-1.html">JsonRpcResponse&lt;T&gt;</a>
-  </div>
-  <div>
-      <a class="xref" href="AlgoSdk.WalletConnect.JsonRpcResponse.html">JsonRpcResponse</a>
-  </div>
 </article>
           </div>
           

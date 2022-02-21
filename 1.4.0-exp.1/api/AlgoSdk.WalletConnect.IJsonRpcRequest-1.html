@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface JsonRpcResponse&lt;T&gt;
+    <title>Interface IJsonRpcRequest&lt;T&gt;
    | Unity Algorand SDK </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface JsonRpcResponse&lt;T&gt;
+    <meta name="title" content="Interface IJsonRpcRequest&lt;T&gt;
    | Unity Algorand SDK ">
     <meta name="generator" content="docfx 2.59.0.0">
     
@@ -78,27 +78,30 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="AlgoSdk.WalletConnect.JsonRpcResponse`1">
+            <article class="content wrap" id="_content" data-uid="AlgoSdk.WalletConnect.IJsonRpcRequest`1">
   
   
-  <h1 id="AlgoSdk_WalletConnect_JsonRpcResponse_1" data-uid="AlgoSdk.WalletConnect.JsonRpcResponse`1" class="text-break">Interface JsonRpcResponse&lt;T&gt;
+  <h1 id="AlgoSdk_WalletConnect_IJsonRpcRequest_1" data-uid="AlgoSdk.WalletConnect.IJsonRpcRequest`1" class="text-break">Interface IJsonRpcRequest&lt;T&gt;
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="AlgoSdk.WalletConnect.JsonRpcResponse.html#AlgoSdk_WalletConnect_JsonRpcResponse_Id">JsonRpcResponse.Id</a>
+      <a class="xref" href="AlgoSdk.WalletConnect.IJsonRpcRequest.html#AlgoSdk_WalletConnect_IJsonRpcRequest_Id">IJsonRpcRequest.Id</a>
     </div>
     <div>
-      <a class="xref" href="AlgoSdk.WalletConnect.JsonRpcResponse.html#AlgoSdk_WalletConnect_JsonRpcResponse_JsonRpc">JsonRpcResponse.JsonRpc</a>
+      <a class="xref" href="AlgoSdk.WalletConnect.IJsonRpcRequest.html#AlgoSdk_WalletConnect_IJsonRpcRequest_JsonRpc">IJsonRpcRequest.JsonRpc</a>
+    </div>
+    <div>
+      <a class="xref" href="AlgoSdk.WalletConnect.IJsonRpcRequest.html#AlgoSdk_WalletConnect_IJsonRpcRequest_Method">IJsonRpcRequest.Method</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.WalletConnect.html">AlgoSdk.WalletConnect</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="AlgoSdk_WalletConnect_JsonRpcResponse_1_syntax">Syntax</h5>
+  <h5 id="AlgoSdk_WalletConnect_IJsonRpcRequest_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface JsonRpcResponse&lt;T&gt; : JsonRpcResponse</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IJsonRpcRequest&lt;T&gt; : IJsonRpcRequest</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -119,13 +122,14 @@
   </h3>
   
   
-  <a id="AlgoSdk_WalletConnect_JsonRpcResponse_1_Result_" data-uid="AlgoSdk.WalletConnect.JsonRpcResponse`1.Result*"></a>
-  <h4 id="AlgoSdk_WalletConnect_JsonRpcResponse_1_Result" data-uid="AlgoSdk.WalletConnect.JsonRpcResponse`1.Result">Result</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="AlgoSdk_WalletConnect_IJsonRpcRequest_1_Params_" data-uid="AlgoSdk.WalletConnect.IJsonRpcRequest`1.Params*"></a>
+  <h4 id="AlgoSdk_WalletConnect_IJsonRpcRequest_1_Params" data-uid="AlgoSdk.WalletConnect.IJsonRpcRequest`1.Params">Params</h4>
+  <div class="markdown level1 summary"><p>Parameters for this request.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">T Result { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">T Params { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

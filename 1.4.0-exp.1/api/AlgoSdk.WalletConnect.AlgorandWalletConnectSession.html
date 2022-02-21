@@ -92,15 +92,15 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSession-1.html">IWalletConnectSession</a>&lt;<a class="xref" href="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html">AlgorandWalletConnectSession</a>&gt;</div>
-    <div><a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSession.html">IWalletConnectSession</a></div>
+    <div><a class="xref" href="AlgoSdk.WalletConnect.IActiveWalletConnectSession-1.html">IActiveWalletConnectSession</a>&lt;<a class="xref" href="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html">AlgorandWalletConnectSession</a>&gt;</div>
+    <div><a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSessionData.html">IWalletConnectSessionData</a></div>
     <div><span class="xref">IDisposable</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.WalletConnect.html">AlgoSdk.WalletConnect</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class AlgorandWalletConnectSession : IWalletConnectSession&lt;AlgorandWalletConnectSession&gt;, IWalletConnectSession</code></pre>
+    <pre><code class="lang-csharp hljs">public class AlgorandWalletConnectSession : IActiveWalletConnectSession&lt;AlgorandWalletConnectSession&gt;, IWalletConnectSessionData</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -108,11 +108,12 @@
   
   <a id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession__ctor_" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.#ctor*"></a>
   <h4 id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession__ctor_AlgoSdk_WalletConnect_ClientMeta_System_String_" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.#ctor(AlgoSdk.WalletConnect.ClientMeta,System.String)">AlgorandWalletConnectSession(ClientMeta, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Create a new session.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected AlgorandWalletConnectSession(ClientMeta clientMeta, string bridgeUrl = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgorandWalletConnectSession(ClientMeta clientMeta, string bridgeUrl = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -127,12 +128,14 @@
       <tr>
         <td><a class="xref" href="AlgoSdk.WalletConnect.ClientMeta.html">ClientMeta</a></td>
         <td><span class="parametername">clientMeta</span></td>
-        <td></td>
+        <td><p>The metadata of the Dapp.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">bridgeUrl</span></td>
-        <td></td>
+        <td><p>An optional wallet connect bridgeurl. e.g. <a href="https://bridge.walletconnect.org">https://bridge.walletconnect.org</a></p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -140,11 +143,12 @@
   
   <a id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession__ctor_" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.#ctor*"></a>
   <h4 id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession__ctor_AlgoSdk_WalletConnect_SavedSession_" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.#ctor(AlgoSdk.WalletConnect.SavedSession)">AlgorandWalletConnectSession(SavedSession)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Continue an existing session.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected AlgorandWalletConnectSession(SavedSession savedSession)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgorandWalletConnectSession(SavedSession savedSession)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,33 +163,8 @@
       <tr>
         <td><a class="xref" href="AlgoSdk.WalletConnect.SavedSession.html">SavedSession</a></td>
         <td><span class="parametername">savedSession</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="fields">Fields
-  </h3>
-  
-  
-  <h4 id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_AlgorandChainId" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.AlgorandChainId">AlgorandChainId</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int AlgorandChainId = 4160</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>A previously existing session.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -293,6 +272,31 @@
   </table>
   
   
+  <a id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_ConnectionStatus_" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.ConnectionStatus*"></a>
+  <h4 id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_ConnectionStatus" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.ConnectionStatus">ConnectionStatus</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgorandWalletConnectSession.Status ConnectionStatus { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status.html">AlgorandWalletConnectSession.Status</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_DappMeta_" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.DappMeta*"></a>
   <h4 id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_DappMeta" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.DappMeta">DappMeta</h4>
   <div class="markdown level1 summary"></div>
@@ -393,13 +397,13 @@
   </table>
   
   
-  <a id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_OnSend_" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnSend*"></a>
-  <h4 id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_OnSend" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnSend">OnSend</h4>
+  <a id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_OnResponseReceived_" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnResponseReceived*"></a>
+  <h4 id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_OnResponseReceived" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnResponseReceived">OnResponseReceived</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnityEvent&lt;AlgorandWalletConnectSession&gt; OnSend { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public UnityEvent&lt;JsonRpcResponse&gt; OnResponseReceived { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -411,7 +415,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UnityEvent</span>&lt;<a class="xref" href="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html">AlgorandWalletConnectSession</a>&gt;</td>
+        <td><span class="xref">UnityEvent</span>&lt;<a class="xref" href="AlgoSdk.WalletConnect.JsonRpcResponse.html">JsonRpcResponse</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -424,7 +428,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnityEvent&lt;AlgorandWalletConnectSession&gt; OnSessionConnect { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public UnityEvent&lt;AlgorandWalletConnectSession&gt; OnSessionConnect { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -449,7 +453,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnityEvent OnSessionDisconnect { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public UnityEvent&lt;string&gt; OnSessionDisconnect { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -461,7 +465,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UnityEvent</span></td>
+        <td><span class="xref">UnityEvent</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -474,7 +478,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnityEvent&lt;WalletConnectSessionData&gt; OnSessionUpdate { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public UnityEvent&lt;WalletConnectSessionData&gt; OnSessionUpdate { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -512,31 +516,6 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_SessionConnected_" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.SessionConnected*"></a>
-  <h4 id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_SessionConnected" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.SessionConnected">SessionConnected</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool SessionConnected { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -620,6 +599,79 @@
   </h3>
   
   
+  <a id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Connect_" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Connect*"></a>
+  <h4 id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Connect_CancellationToken_" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Connect(CancellationToken)">Connect(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Initiate a wallet connect session</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async UniTask Connect(CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional <see cref="!:CancellationToken"></see> that can be used for things like timeouts.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Disconnect_" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Disconnect*"></a>
+  <h4 id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Disconnect_System_String_" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Disconnect(System.String)">Disconnect(String)</h4>
+  <div class="markdown level1 summary"><p>Disconnect from a <a class="xref" href="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Status_Connected">Connected</a> or <a class="xref" href="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Status_Connecting">Connecting</a> session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Disconnect(string reason = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">reason</span></td>
+        <td><p>An optional reason to inform the web socket client.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Dispose_" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Dispose*"></a>
   <h4 id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Dispose" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Dispose">Dispose()</h4>
   <div class="markdown level1 summary"></div>
@@ -632,7 +684,8 @@
   
   <a id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Save_" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Save*"></a>
   <h4 id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Save" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Save">Save()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Save the current session&apos;s state.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -649,19 +702,21 @@
     <tbody>
       <tr>
         <td><a class="xref" href="AlgoSdk.WalletConnect.SavedSession.html">SavedSession</a></td>
-        <td></td>
+        <td><p>A <a class="xref" href="AlgoSdk.WalletConnect.SavedSession.html">SavedSession</a> that can be used for continuing an existing session later.</p>
+</td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_StartNew_" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.StartNew*"></a>
-  <h4 id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_StartNew_AlgoSdk_WalletConnect_ClientMeta_System_String_" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.StartNew(AlgoSdk.WalletConnect.ClientMeta,System.String)">StartNew(ClientMeta, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_SignTransactions_" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.SignTransactions*"></a>
+  <h4 id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_SignTransactions_AlgoSdk_WalletConnect_SignTxnsOpts_CancellationToken_AlgoSdk_WalletConnect_WalletTransaction___" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.SignTransactions(AlgoSdk.WalletConnect.SignTxnsOpts,CancellationToken,AlgoSdk.WalletConnect.WalletTransaction[])">SignTransactions(SignTxnsOpts, CancellationToken, WalletTransaction[])</h4>
+  <div class="markdown level1 summary"><p>Sign a group of transactions.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static async UniTask&lt;AlgorandWalletConnectSession&gt; StartNew(ClientMeta clientMeta, string bridgeUrl = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public async UniTask&lt;Either&lt;byte[][], SignTxnsError&gt;&gt; SignTransactions(SignTxnsOpts options = default(SignTxnsOpts), CancellationToken cancellationToken = null, params WalletTransaction[] transactions)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -674,14 +729,25 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="AlgoSdk.WalletConnect.ClientMeta.html">ClientMeta</a></td>
-        <td><span class="parametername">clientMeta</span></td>
-        <td></td>
+        <td><a class="xref" href="AlgoSdk.WalletConnect.SignTxnsOpts.html">SignTxnsOpts</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Optional sign transaction options.</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">bridgeUrl</span></td>
-        <td></td>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>Optional cancellation token used for interrupting this request.
+It&apos;s recommended to use <see cref="!:CancellationTokenSourceExtensions.CancelAfterSlim"></see> for UniTask. 
+<a href="https://github.com/Cysharp/UniTask#timeout-handling">https://github.com/Cysharp/UniTask#timeout-handling</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.WalletConnect.WalletTransaction.html">WalletTransaction</a>[]</td>
+        <td><span class="parametername">transactions</span></td>
+        <td><p>The atomic transaction group of [1,16] transactions. Contains information about how to sign
+each transaction, and which ones to sign.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -695,59 +761,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html">AlgorandWalletConnectSession</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_StartSaved_" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.StartSaved*"></a>
-  <h4 id="AlgoSdk_WalletConnect_AlgorandWalletConnectSession_StartSaved_AlgoSdk_WalletConnect_SavedSession_" data-uid="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.StartSaved(AlgoSdk.WalletConnect.SavedSession)">StartSaved(SavedSession)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static async UniTask&lt;AlgorandWalletConnectSession&gt; StartSaved(SavedSession savedSession)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.WalletConnect.SavedSession.html">SavedSession</a></td>
-        <td><span class="parametername">savedSession</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html">AlgorandWalletConnectSession</a>&gt;</td>
-        <td></td>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.Either-2.html">Either</a>&lt;<span class="xref">System.Byte</span>[][], <a class="xref" href="AlgoSdk.WalletConnect.SignTxnsError.html">SignTxnsError</a>&gt;&gt;</td>
+        <td><p>Either the result of the request or a <a class="xref" href="AlgoSdk.WalletConnect.JsonRpcError.html">JsonRpcError</a> if the request was invalid.</p>
+<p>The result is an array of the same length as the number of transactions provided in
+<see cref="!:AlgoSignTxnsRequest.Params"></see>.</p>
+<p>For every index in this result, the value is
+<ul><li></li><li></li></ul></p>
+</td>
       </tr>
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSession-1.html">IWalletConnectSession&lt;TSession&gt;</a>
+      <a class="xref" href="AlgoSdk.WalletConnect.IActiveWalletConnectSession-1.html">IActiveWalletConnectSession&lt;TSession&gt;</a>
   </div>
   <div>
-      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSession.html">IWalletConnectSession</a>
+      <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSessionData.html">IWalletConnectSessionData</a>
   </div>
   <div>
       <span class="xref">IDisposable</span>
