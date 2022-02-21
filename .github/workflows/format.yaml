@@ -20,3 +20,4 @@ jobs:
         uses: xt0rted/dotnet-format@v1
         with:
           only-changed-files: "true"
+          version: "3.3.111304"
