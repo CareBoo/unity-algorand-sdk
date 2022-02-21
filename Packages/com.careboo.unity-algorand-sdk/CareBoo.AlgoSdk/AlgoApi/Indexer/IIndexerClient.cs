@@ -9,7 +9,7 @@ namespace AlgoSdk
         /// <summary>
         /// Get a health status of the indexer service.
         /// </summary>
-        /// <returns>a <see cref="HealthCheck"> response detailing the status of the health</returns>
+        /// <returns>a <see cref="HealthCheck"/> response detailing the status of the health</returns>
         UniTask<AlgoApiResponse<HealthCheck>> GetHealth();
 
         /// <summary>
