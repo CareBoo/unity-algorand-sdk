@@ -2,16 +2,29 @@ using System;
 
 namespace AlgoSdk.WalletConnect
 {
+    /// <summary>
+    /// This struct represents metadata required for signing transactions sent by
+    /// multisig accounts via WalletConnect. See <see cref="Multisig"/> for more information.
+    /// </summary>
     [AlgoApiObject]
     public struct MultisigMetadata
         : IEquatable<MultisigMetadata>
     {
+        /// <summary>
+        /// Version of the multisig.
+        /// </summary>
         [AlgoApiField("version", null)]
         public byte Version;
 
+        /// <summary>
+        /// Number of signatures required for valid transaction.
+        /// </summary>
         [AlgoApiField("threshold", null)]
         public byte Threshold;
 
+        /// <summary>
+        /// The signers of this multisig.
+        /// </summary>
         [AlgoApiField("addrs", null)]
         public Address[] Addresses;
 

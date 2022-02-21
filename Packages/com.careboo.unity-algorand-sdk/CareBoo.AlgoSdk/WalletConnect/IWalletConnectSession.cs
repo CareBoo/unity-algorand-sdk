@@ -3,19 +3,15 @@ using UnityEngine.Events;
 
 namespace AlgoSdk.WalletConnect
 {
-    public interface IWalletConnectSession<TSession> : IWalletConnectSession, IDisposable
-        where TSession : IWalletConnectSession<TSession>
+    public interface IActiveWalletConnectSession<TSession> : IWalletConnectSessionData, IDisposable
+        where TSession : IActiveWalletConnectSession<TSession>
     {
-        UnityEvent<TSession> OnSessionConnect { get; set; }
-        UnityEvent OnSessionDisconnect { get; set; }
-        UnityEvent<TSession> OnSend { get; set; }
-        UnityEvent<WalletConnectSessionData> OnSessionUpdate { get; set; }
-
-        string Url { get; }
-        string Version { get; }
+        UnityEvent<TSession> OnSessionConnect { get; }
+        UnityEvent<string> OnSessionDisconnect { get; }
+        UnityEvent<WalletConnectSessionData> OnSessionUpdate { get; }
     }
 
-    public interface IWalletConnectSession
+    public interface IWalletConnectSessionData
     {
         /// <summary>
         /// The UUID of this client.
@@ -66,5 +62,15 @@ namespace AlgoSdk.WalletConnect
         /// Meta information about the Wallet connected in this session.
         /// </summary>
         ClientMeta WalletMeta { get; }
+
+        /// <summary>
+        /// Url that wallets will connect to.
+        /// </summary>
+        string Url { get; }
+
+        /// <summary>
+        /// WalletConnect protocol Version.
+        /// </summary>
+        string Version { get; }
     }
 }

@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Text;
 using AlgoSdk;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
@@ -25,7 +26,7 @@ public abstract class AlgodClientTestFixture : AlgoApiClientTestFixture
     protected static async UniTask<Address[]> GetAddresses()
     {
         var genesisResponse = await AlgoApiClientSettings.Algod.GetGenesisInformation();
-        var genesisInfo = JsonUtility.FromJson<GenesisInformation>(genesisResponse.Payload.Json);
+        var genesisInfo = JsonUtility.FromJson<GenesisInformation>(Encoding.UTF8.GetString(genesisResponse.Payload.Json));
         return genesisInfo.alloc
             .Where(a => a.comment.Contains("Wallet"))
             .Select(a => (Address)a.addr)

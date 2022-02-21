@@ -1,4 +1,5 @@
 using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 using Unity.Jobs;
 
 namespace AlgoSdk.Json
@@ -29,10 +30,24 @@ namespace AlgoSdk.Json
             return this;
         }
 
+        public JsonWriter WriteRaw(NativeArray<byte> raw)
+        {
+            unsafe
+            {
+                text.Append((byte*)raw.GetUnsafeReadOnlyPtr(), raw.Length);
+            }
+            return this;
+        }
+
         public JsonWriter WriteString(string s)
         {
             WriteChar('"');
-            text.Append(s);
+            foreach (var c in s)
+            {
+                if (c == '"')
+                    text.Append('\\'.ToRune());
+                text.Append(c.ToRune());
+            }
             WriteChar('"');
             return this;
         }
@@ -41,7 +56,16 @@ namespace AlgoSdk.Json
             where T : struct, INativeList<byte>, IUTF8Bytes
         {
             WriteChar('"');
-            text.Append(fs);
+            int index = 0;
+            var rune = fs.Read(ref index);
+            while (!rune.Equals(Unicode.BadRune))
+            {
+                var c = rune.ToChar();
+                if (c == '"')
+                    text.Append('\\'.ToRune());
+                text.Append(rune);
+                rune = fs.Read(ref index);
+            }
             WriteChar('"');
             return this;
         }

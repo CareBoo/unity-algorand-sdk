@@ -121,7 +121,7 @@ namespace AlgoSdk
             try
             {
                 reader.ReadRaw(ref json).ThrowIfError(reader.Char, reader.Position);
-                return new AlgoApiObject { Json = json.ToString() };
+                return json;
             }
             finally
             {
@@ -135,7 +135,7 @@ namespace AlgoSdk
             try
             {
                 reader.ReadRaw(msgPack);
-                return new AlgoApiObject { MessagePack = msgPack.ToArray() };
+                return msgPack;
             }
             finally
             {
@@ -145,15 +145,15 @@ namespace AlgoSdk
 
         public void Serialize(ref JsonWriter writer, AlgoApiObject value)
         {
-            if (!value.IsJson)
+            if (!value.IsJson || value.Json == null)
                 throw new ArgumentException("cannot serialize non-json to json...", nameof(value));
-            using var json = new NativeText(value.Json, Allocator.Temp);
+            using var json = new NativeArray<byte>(value.Json, Allocator.Temp);
             writer.WriteRaw(json);
         }
 
         public void Serialize(ref MessagePackWriter writer, AlgoApiObject value)
         {
-            if (!value.IsMessagePack)
+            if (!value.IsMessagePack || value.MessagePack == null)
                 throw new ArgumentException("cannot serialize non-msgpack to msgpack...", nameof(value));
             using var msgPack = new NativeArray<byte>(value.MessagePack, Allocator.Temp);
             writer.WriteRaw(msgPack);

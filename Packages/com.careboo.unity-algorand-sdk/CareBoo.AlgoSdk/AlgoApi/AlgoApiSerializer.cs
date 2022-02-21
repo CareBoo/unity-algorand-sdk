@@ -93,6 +93,18 @@ namespace AlgoSdk
         }
 
         /// <summary>
+        /// Deserialize JSON text into an object
+        /// </summary>
+        /// <typeparam name="T">The type of the object that will be deserialized into</typeparam>
+        /// <param name="text">The JSON text</param>
+        /// <returns>The data deserialized as T</returns>
+        public static T DeserializeJson<T>(string text)
+        {
+            using var nativeText = new NativeText(text, Allocator.Temp);
+            return DeserializeJson<T>(nativeText);
+        }
+
+        /// <summary>
         /// Deserialize messagepack bytes into an object
         /// </summary>
         /// <typeparam name="T">The type of the object that will be deserialized into</typeparam>
