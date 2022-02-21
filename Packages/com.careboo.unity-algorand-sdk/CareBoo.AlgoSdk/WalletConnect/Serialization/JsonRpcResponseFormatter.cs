@@ -4,7 +4,7 @@ using AlgoSdk.MessagePack;
 namespace AlgoSdk.WalletConnect
 {
     public class JsonRpcResponseFormatter<T, U> : IAlgoApiFormatter<T>
-        where T : struct, JsonRpcResponse<U>
+        where T : struct, IJsonRpcResponse<U>
     {
         public T Deserialize(ref JsonReader reader)
         {

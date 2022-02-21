@@ -3,12 +3,15 @@
     "enableAnalyzersSupport": true
   },
   "FormattingOptions": {
-    "enableEditorConfigSupport": true,
     "OrganizeImports": true
   },
   "RenameOptions": {
     "RenameInComments": true,
     "RenameOverloads": true,
     "RenameInStrings": true
+  },
+  "ImplementTypeOptions": {
+    "PropertyGenerationBehavior": "PreferAutoProperties",
+    "InsertionBehavior": "WithOtherMembersOfTheSameKind"
   }
 }

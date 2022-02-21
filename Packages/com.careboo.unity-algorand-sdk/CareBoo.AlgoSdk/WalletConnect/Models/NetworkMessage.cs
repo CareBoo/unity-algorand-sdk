@@ -4,34 +4,25 @@ using UnityEngine;
 
 namespace AlgoSdk.WalletConnect
 {
-    [Serializable]
+    [AlgoApiObject]
     public struct NetworkMessage
+        : IEquatable<NetworkMessage>
     {
-        [SerializeField]
-        private string topic;
+        [AlgoApiField("topic", null)]
+        public string Topic;
 
-        [SerializeField]
-        private string type;
+        [AlgoApiField("type", null)]
+        public string Type;
 
-        [SerializeField]
-        private string payload;
+        [AlgoApiField("payload", null)]
+        public AlgoApiObject Payload;
 
-        public string Topic
+        public bool Equals(NetworkMessage other)
         {
-            get => topic;
-            set => topic = value;
-        }
-
-        public string Type
-        {
-            get => type;
-            set => type = value;
-        }
-
-        public string Payload
-        {
-            get => payload;
-            set => payload = value;
+            return StringComparer.Equals(Topic, other.Topic)
+                && StringComparer.Equals(Type, other.Type)
+                && Payload.Equals(other.Payload)
+                ;
         }
 
         public byte[] ToByteArray() =>

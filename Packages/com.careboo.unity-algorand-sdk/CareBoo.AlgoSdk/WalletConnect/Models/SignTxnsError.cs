@@ -7,13 +7,11 @@ namespace AlgoSdk.WalletConnect
     /// </summary>
     [AlgoApiObject]
     public struct SignTxnsError
-        : IEquatable<SignTxnsError>
+        : JsonRpcError
+        , IEquatable<SignTxnsError>
     {
-        /// <summary>
-        /// A human-readable message of the error.
-        /// </summary>
         [AlgoApiField("message", null)]
-        public string Message;
+        public string Message { get; set; }
 
         /// <summary>
         /// The integer error code of the error.
