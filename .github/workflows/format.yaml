@@ -5,20 +5,20 @@ on:
 
 jobs:
   dotnet-format:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
+      - name: Install dotnet-format
+        run: dotnet tool install -g dotnet-format
+
       - name: Checkout repo
         uses: actions/checkout@v2
-
-      - name: Add dotnet-format problem matcher
-        uses: xt0rted/dotnet-format-problem-matcher@v1
         with:
-          version: 3.3.111304
-
-      - name: Restore dotnet tools
-        uses: xt0rted/dotnet-tool-restore@v1
+          ref: ${{ github.head_ref }}
 
       - name: Run dotnet format
-        uses: xt0rted/dotnet-format@v1
+        id: format
+        uses: jfversluis/dotnet-format@v1.0.5
         with:
-          only-changed-files: "true"
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          action: "check"
+          only-changed-files: true
