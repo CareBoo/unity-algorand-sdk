@@ -22,4 +22,4 @@ jobs:
 
       - name: Run dotnet format
         id: format
-        run: dotnet format whitespace . --folder --include ${{ steps.changed_csharp_files.outputs.all_changed_files }}
+        run: dotnet format whitespace . --folder --verify-no-changes --include ${{ steps.changed_csharp_files.outputs.all_changed_files }}
