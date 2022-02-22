@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [1.4.0-exp.3](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.4.0-exp.2...v1.4.0-exp.3) (2022-02-22)
+
+
+### Features
+
+* **walletconnect:** add QR Code Generator support ([#68](https://github.com/CareBoo/unity-algorand-sdk/issues/68)) ([1f84dcf](https://github.com/CareBoo/unity-algorand-sdk/commit/1f84dcf165fdb6c58989ff0cb2cf2ba1d02f5c3f)), closes [#51](https://github.com/CareBoo/unity-algorand-sdk/issues/51)
+
 # [1.4.0-exp.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.4.0-exp.1...v1.4.0-exp.2) (2022-02-21)
 
 
