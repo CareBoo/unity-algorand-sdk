@@ -12,13 +12,7 @@ namespace AlgoSdk.WalletConnect
             using var requestJson = AlgoApiSerializer.SerializeJson(request, Allocator.Temp);
             var payloadData = requestJson.AsArray().ToArray();
             var encryptedPayload = AesCipher.EncryptWithKey(encryptionKey, payloadData);
-            using var encryptedPayloadJson = AlgoApiSerializer.SerializeJson(encryptedPayload, Allocator.Temp);
-            var networkMessage = new NetworkMessage
-            {
-                Payload = encryptedPayloadJson.ToString(),
-                Type = "pub",
-                Topic = topic
-            };
+            var networkMessage = NetworkMessage.PublishToTopic(encryptedPayload, topic);
             using var networkMessageJson = AlgoApiSerializer.SerializeJson(networkMessage, Allocator.Temp);
             return networkMessageJson.AsArray().ToArray();
         }

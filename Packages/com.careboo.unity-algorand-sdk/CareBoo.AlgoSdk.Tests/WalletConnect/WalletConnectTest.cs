@@ -71,12 +71,7 @@ public class WalletConnectTest
     {
         var client = WebSocketClientFactory.Create(bridgeUrl);
         client.Connect();
-        var message = new NetworkMessage
-        {
-            Payload = "",
-            Type = "sub",
-            Topic = topic
-        };
+        var message = NetworkMessage.SubscribeToTopic(topic);
         var messageData = Encoding.UTF8.GetBytes(AlgoApiSerializer.SerializeJson(message));
         client.Send(new ArraySegment<byte>(messageData));
 
