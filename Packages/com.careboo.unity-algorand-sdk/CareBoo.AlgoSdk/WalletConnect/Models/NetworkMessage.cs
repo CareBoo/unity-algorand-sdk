@@ -1,6 +1,4 @@
 using System;
-using System.Text;
-using UnityEngine;
 
 namespace AlgoSdk.WalletConnect
 {
@@ -25,7 +23,25 @@ namespace AlgoSdk.WalletConnect
                 ;
         }
 
-        public byte[] ToByteArray() =>
-            Encoding.UTF8.GetBytes(JsonUtility.ToJson(this));
+        public static NetworkMessage SubscribeToTopic(string topic)
+        {
+            return new NetworkMessage
+            {
+                Topic = topic,
+                Type = "sub",
+                Payload = ""
+            };
+        }
+
+        public static NetworkMessage PublishToTopic<T>(T payload, string topic)
+        {
+            var payloadJson = AlgoApiSerializer.SerializeJson(payload);
+            return new NetworkMessage
+            {
+                Topic = topic,
+                Type = "pub",
+                Payload = payloadJson
+            };
+        }
     }
 }

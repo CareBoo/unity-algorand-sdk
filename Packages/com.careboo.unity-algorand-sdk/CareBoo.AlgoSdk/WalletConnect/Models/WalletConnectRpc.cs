@@ -13,7 +13,7 @@ namespace AlgoSdk.WalletConnect
         /// <param name="peerMeta">The metadata of the client.</param>
         /// <param name="chainId">The id of the blockchain this request is for.</param>
         /// <returns>A <see cref="JsonRpcRequest"/> that can be used to start a new WalletConnect session.</returns>
-        public static JsonRpcRequest SessionRequest(string peerId, ClientMeta peerMeta, int chainId)
+        public static JsonRpcRequest SessionRequest(string peerId, ClientMeta peerMeta, Optional<int> chainId = default)
         {
             var sessionRequest = new WalletConnectSessionRequest
             {

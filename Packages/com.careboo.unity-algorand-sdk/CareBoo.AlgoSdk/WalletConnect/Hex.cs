@@ -13,7 +13,9 @@ namespace AlgoSdk.WalletConnect
         {
             if (data == null)
                 return null;
-            return BitConverter.ToString(data).Replace("-", "");
+            return BitConverter.ToString(data)
+                .Replace("-", "")
+                ;
         }
 
         public static implicit operator byte[](Hex hex)
