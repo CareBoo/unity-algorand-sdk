@@ -34194,6 +34194,19 @@ references:
   commentId: F:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status.Unknown
   fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status.Unknown
   nameWithType: AlgorandWalletConnectSession.Status.Unknown
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Topic
+  name: Topic
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Topic
+  commentId: P:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Topic
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Topic
+  nameWithType: AlgorandWalletConnectSession.Topic
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Topic*
+  name: Topic
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Topic_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Topic
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Topic
+  nameWithType: AlgorandWalletConnectSession.Topic
 - uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Url
   name: Url
   href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Url
@@ -35072,19 +35085,35 @@ references:
   commentId: F:AlgoSdk.WalletConnect.NetworkMessage.Payload
   fullName: AlgoSdk.WalletConnect.NetworkMessage.Payload
   nameWithType: NetworkMessage.Payload
-- uid: AlgoSdk.WalletConnect.NetworkMessage.ToByteArray
-  name: ToByteArray()
-  href: api/AlgoSdk.WalletConnect.NetworkMessage.html#AlgoSdk_WalletConnect_NetworkMessage_ToByteArray
-  commentId: M:AlgoSdk.WalletConnect.NetworkMessage.ToByteArray
-  fullName: AlgoSdk.WalletConnect.NetworkMessage.ToByteArray()
-  nameWithType: NetworkMessage.ToByteArray()
-- uid: AlgoSdk.WalletConnect.NetworkMessage.ToByteArray*
-  name: ToByteArray
-  href: api/AlgoSdk.WalletConnect.NetworkMessage.html#AlgoSdk_WalletConnect_NetworkMessage_ToByteArray_
-  commentId: Overload:AlgoSdk.WalletConnect.NetworkMessage.ToByteArray
+- uid: AlgoSdk.WalletConnect.NetworkMessage.PublishToTopic*
+  name: PublishToTopic
+  href: api/AlgoSdk.WalletConnect.NetworkMessage.html#AlgoSdk_WalletConnect_NetworkMessage_PublishToTopic_
+  commentId: Overload:AlgoSdk.WalletConnect.NetworkMessage.PublishToTopic
   isSpec: "True"
-  fullName: AlgoSdk.WalletConnect.NetworkMessage.ToByteArray
-  nameWithType: NetworkMessage.ToByteArray
+  fullName: AlgoSdk.WalletConnect.NetworkMessage.PublishToTopic
+  nameWithType: NetworkMessage.PublishToTopic
+- uid: AlgoSdk.WalletConnect.NetworkMessage.PublishToTopic``1(``0,System.String)
+  name: PublishToTopic<T>(T, String)
+  href: api/AlgoSdk.WalletConnect.NetworkMessage.html#AlgoSdk_WalletConnect_NetworkMessage_PublishToTopic__1___0_System_String_
+  commentId: M:AlgoSdk.WalletConnect.NetworkMessage.PublishToTopic``1(``0,System.String)
+  name.vb: PublishToTopic(Of T)(T, String)
+  fullName: AlgoSdk.WalletConnect.NetworkMessage.PublishToTopic<T>(T, System.String)
+  fullName.vb: AlgoSdk.WalletConnect.NetworkMessage.PublishToTopic(Of T)(T, System.String)
+  nameWithType: NetworkMessage.PublishToTopic<T>(T, String)
+  nameWithType.vb: NetworkMessage.PublishToTopic(Of T)(T, String)
+- uid: AlgoSdk.WalletConnect.NetworkMessage.SubscribeToTopic(System.String)
+  name: SubscribeToTopic(String)
+  href: api/AlgoSdk.WalletConnect.NetworkMessage.html#AlgoSdk_WalletConnect_NetworkMessage_SubscribeToTopic_System_String_
+  commentId: M:AlgoSdk.WalletConnect.NetworkMessage.SubscribeToTopic(System.String)
+  fullName: AlgoSdk.WalletConnect.NetworkMessage.SubscribeToTopic(System.String)
+  nameWithType: NetworkMessage.SubscribeToTopic(String)
+- uid: AlgoSdk.WalletConnect.NetworkMessage.SubscribeToTopic*
+  name: SubscribeToTopic
+  href: api/AlgoSdk.WalletConnect.NetworkMessage.html#AlgoSdk_WalletConnect_NetworkMessage_SubscribeToTopic_
+  commentId: Overload:AlgoSdk.WalletConnect.NetworkMessage.SubscribeToTopic
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.NetworkMessage.SubscribeToTopic
+  nameWithType: NetworkMessage.SubscribeToTopic
 - uid: AlgoSdk.WalletConnect.NetworkMessage.Topic
   name: Topic
   href: api/AlgoSdk.WalletConnect.NetworkMessage.html#AlgoSdk_WalletConnect_NetworkMessage_Topic
@@ -35097,6 +35126,25 @@ references:
   commentId: F:AlgoSdk.WalletConnect.NetworkMessage.Type
   fullName: AlgoSdk.WalletConnect.NetworkMessage.Type
   nameWithType: NetworkMessage.Type
+- uid: AlgoSdk.WalletConnect.QrCode
+  name: QrCode
+  href: api/AlgoSdk.WalletConnect.QrCode.html
+  commentId: T:AlgoSdk.WalletConnect.QrCode
+  fullName: AlgoSdk.WalletConnect.QrCode
+  nameWithType: QrCode
+- uid: AlgoSdk.WalletConnect.QrCode.Generate(System.String)
+  name: Generate(String)
+  href: api/AlgoSdk.WalletConnect.QrCode.html#AlgoSdk_WalletConnect_QrCode_Generate_System_String_
+  commentId: M:AlgoSdk.WalletConnect.QrCode.Generate(System.String)
+  fullName: AlgoSdk.WalletConnect.QrCode.Generate(System.String)
+  nameWithType: QrCode.Generate(String)
+- uid: AlgoSdk.WalletConnect.QrCode.Generate*
+  name: Generate
+  href: api/AlgoSdk.WalletConnect.QrCode.html#AlgoSdk_WalletConnect_QrCode_Generate_
+  commentId: Overload:AlgoSdk.WalletConnect.QrCode.Generate
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.QrCode.Generate
+  nameWithType: QrCode.Generate
 - uid: AlgoSdk.WalletConnect.RpcPayload
   name: RpcPayload
   href: api/AlgoSdk.WalletConnect.RpcPayload.html
@@ -35460,12 +35508,15 @@ references:
   commentId: M:AlgoSdk.WalletConnect.WalletConnectRpc.SessionRequest(AlgoSdk.WalletConnect.WalletConnectSessionRequest)
   fullName: AlgoSdk.WalletConnect.WalletConnectRpc.SessionRequest(AlgoSdk.WalletConnect.WalletConnectSessionRequest)
   nameWithType: WalletConnectRpc.SessionRequest(WalletConnectSessionRequest)
-- uid: AlgoSdk.WalletConnect.WalletConnectRpc.SessionRequest(System.String,AlgoSdk.WalletConnect.ClientMeta,System.Int32)
-  name: SessionRequest(String, ClientMeta, Int32)
-  href: api/AlgoSdk.WalletConnect.WalletConnectRpc.html#AlgoSdk_WalletConnect_WalletConnectRpc_SessionRequest_System_String_AlgoSdk_WalletConnect_ClientMeta_System_Int32_
-  commentId: M:AlgoSdk.WalletConnect.WalletConnectRpc.SessionRequest(System.String,AlgoSdk.WalletConnect.ClientMeta,System.Int32)
-  fullName: AlgoSdk.WalletConnect.WalletConnectRpc.SessionRequest(System.String, AlgoSdk.WalletConnect.ClientMeta, System.Int32)
-  nameWithType: WalletConnectRpc.SessionRequest(String, ClientMeta, Int32)
+- uid: AlgoSdk.WalletConnect.WalletConnectRpc.SessionRequest(System.String,AlgoSdk.WalletConnect.ClientMeta,AlgoSdk.Optional{System.Int32})
+  name: SessionRequest(String, ClientMeta, Optional<Int32>)
+  href: api/AlgoSdk.WalletConnect.WalletConnectRpc.html#AlgoSdk_WalletConnect_WalletConnectRpc_SessionRequest_System_String_AlgoSdk_WalletConnect_ClientMeta_AlgoSdk_Optional_System_Int32__
+  commentId: M:AlgoSdk.WalletConnect.WalletConnectRpc.SessionRequest(System.String,AlgoSdk.WalletConnect.ClientMeta,AlgoSdk.Optional{System.Int32})
+  name.vb: SessionRequest(String, ClientMeta, Optional(Of Int32))
+  fullName: AlgoSdk.WalletConnect.WalletConnectRpc.SessionRequest(System.String, AlgoSdk.WalletConnect.ClientMeta, AlgoSdk.Optional<System.Int32>)
+  fullName.vb: AlgoSdk.WalletConnect.WalletConnectRpc.SessionRequest(System.String, AlgoSdk.WalletConnect.ClientMeta, AlgoSdk.Optional(Of System.Int32))
+  nameWithType: WalletConnectRpc.SessionRequest(String, ClientMeta, Optional<Int32>)
+  nameWithType.vb: WalletConnectRpc.SessionRequest(String, ClientMeta, Optional(Of Int32))
 - uid: AlgoSdk.WalletConnect.WalletConnectRpc.SessionRequest*
   name: SessionRequest
   href: api/AlgoSdk.WalletConnect.WalletConnectRpc.html#AlgoSdk_WalletConnect_WalletConnectRpc_SessionRequest_

@@ -215,14 +215,36 @@
   </table>
   
   
-  <a id="AlgoSdk_WalletConnect_NetworkMessage_ToByteArray_" data-uid="AlgoSdk.WalletConnect.NetworkMessage.ToByteArray*"></a>
-  <h4 id="AlgoSdk_WalletConnect_NetworkMessage_ToByteArray" data-uid="AlgoSdk.WalletConnect.NetworkMessage.ToByteArray">ToByteArray()</h4>
+  <a id="AlgoSdk_WalletConnect_NetworkMessage_PublishToTopic_" data-uid="AlgoSdk.WalletConnect.NetworkMessage.PublishToTopic*"></a>
+  <h4 id="AlgoSdk_WalletConnect_NetworkMessage_PublishToTopic__1___0_System_String_" data-uid="AlgoSdk.WalletConnect.NetworkMessage.PublishToTopic``1(``0,System.String)">PublishToTopic&lt;T&gt;(T, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] ToByteArray()</code></pre>
+    <pre><code class="lang-csharp hljs">public static NetworkMessage PublishToTopic&lt;T&gt;(T payload, string topic)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">payload</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">topic</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -233,7 +255,64 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Byte</span>[]</td>
+        <td><a class="xref" href="AlgoSdk.WalletConnect.NetworkMessage.html">NetworkMessage</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_WalletConnect_NetworkMessage_SubscribeToTopic_" data-uid="AlgoSdk.WalletConnect.NetworkMessage.SubscribeToTopic*"></a>
+  <h4 id="AlgoSdk_WalletConnect_NetworkMessage_SubscribeToTopic_System_String_" data-uid="AlgoSdk.WalletConnect.NetworkMessage.SubscribeToTopic(System.String)">SubscribeToTopic(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NetworkMessage SubscribeToTopic(string topic)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">topic</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.WalletConnect.NetworkMessage.html">NetworkMessage</a></td>
         <td></td>
       </tr>
     </tbody>
