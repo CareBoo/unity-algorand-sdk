@@ -15,6 +15,7 @@ namespace AlgoSdk.WalletConnect
                 return null;
             return BitConverter.ToString(data)
                 .Replace("-", "")
+                .ToLower()
                 ;
         }
 

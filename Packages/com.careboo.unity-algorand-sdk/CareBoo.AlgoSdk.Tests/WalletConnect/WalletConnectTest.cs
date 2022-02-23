@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Text;
 using AlgoSdk;
-using AlgoSdk.LowLevel;
 using AlgoSdk.WalletConnect;
 using Cysharp.Threading.Tasks;
 using Netcode.Transports.WebSocket;
@@ -10,7 +9,6 @@ using NUnit.Framework;
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.TestTools;
-using WebSocketSharp;
 using static Netcode.Transports.WebSocket.WebSocketEvent;
 
 [TestFixture]
@@ -26,76 +24,25 @@ public class WalletConnectTest
     };
 
     [UnityTest]
+    [Timeout(10000)]
     public IEnumerator TestConnection() => UniTask.ToCoroutine(async () =>
     {
-        var topic = Guid.NewGuid().ToString();
-        var dappId = Guid.NewGuid().ToString();
-        var bridgeUrl = DefaultBridge.GetRandomBridgeUrl().Replace("http", "ws");
-        var client = WebSocketClientFactory.Create(bridgeUrl);
-        client.Connect();
-        var sessionRequest = WalletConnectRpc.SessionRequest(
-            peerId: dappId,
-            peerMeta: DappMeta,
-            chainId: WalletConnectRpc.Algorand.ChainId
-        );
-        var data = Encoding.UTF8.GetBytes(AlgoApiSerializer.SerializeJson(sessionRequest));
-        var key = GetKey();
-        var msg = sessionRequest.SerializeAsNetworkMessage(key, topic);
-        Debug.Log(Encoding.UTF8.GetString(msg));
-        try
-        {
-            client.Send(new ArraySegment<byte>(msg));
-        }
-        catch (WebSocketException)
-        {
-            Assert.Ignore("Unable to send message using websockets.");
-        }
-        var responseEvent = client.Poll();
-        Log(responseEvent, "dapp");
-        await WaitForMessage(bridgeUrl, topic, key);
-        var count = 0;
-        while (
-            (responseEvent.Type == WebSocketEvent.WebSocketEventType.Open
-            || responseEvent.Type == WebSocketEvent.WebSocketEventType.Nothing)
-            && count < 1
-        )
-        {
-            await UniTask.Delay(500);
-            count++;
-            responseEvent = client.Poll();
-            Log(responseEvent, "dapp");
-        }
+        await WaitForMessage("", "", "");
     });
 
-    async UniTask WaitForMessage(string bridgeUrl, string topic, Hex key)
+    async UniTask WaitForMessage(string bridgeUrl, string topic, string peerId)
     {
-        var client = WebSocketClientFactory.Create(bridgeUrl);
+        var client = WebSocketClientFactory.Create(bridgeUrl.Replace("http", "ws"));
         client.Connect();
+        await client.PollUntilOpen();
         var message = NetworkMessage.SubscribeToTopic(topic);
-        var messageData = Encoding.UTF8.GetBytes(AlgoApiSerializer.SerializeJson(message));
-        client.Send(new ArraySegment<byte>(messageData));
-
-        var responseEvent = client.Poll();
-        Log(responseEvent, "wallet");
-        var count = 0;
-        while (
-            (responseEvent.Type == WebSocketEvent.WebSocketEventType.Open
-            || responseEvent.Type == WebSocketEvent.WebSocketEventType.Nothing)
-            && count < 10
-        )
-        {
-            await UniTask.Delay(500);
-            count++;
-            responseEvent = client.Poll();
-            Log(responseEvent, "wallet");
-        }
-    }
-
-    Hex GetKey()
-    {
-        using var secret = new NativeByteArray(32, Allocator.Temp);
-        AlgoSdk.Crypto.Random.Randomize(secret);
-        return secret.ToArray();
+        using var messageData = AlgoApiSerializer.SerializeJson(message, Allocator.Persistent);
+        Debug.Log(messageData);
+        client.Send(new ArraySegment<byte>(messageData.AsArray().ToArray()));
+        var evt = await client.PollUntilPayload();
+        Log(evt, "wallet");
+        var sendMessage = NetworkMessage.PublishToTopic((AlgoApiObject)"{\"test\":1}", peerId);
+        client.Send(sendMessage);
     }
 
     void Log(WebSocketEvent webSocketEvent, string clientId)

@@ -19,7 +19,7 @@ namespace AlgoSdk.WalletConnect
         string peerId;
 
         [SerializeField]
-        long handshakeId;
+        ulong handshakeId;
 
         [SerializeField]
         int networkId;
@@ -35,12 +35,6 @@ namespace AlgoSdk.WalletConnect
 
         [SerializeField]
         ClientMeta walletMeta;
-
-        [SerializeField]
-        string url;
-
-        [SerializeField]
-        string version;
 
         public string ClientId
         {
@@ -66,7 +60,7 @@ namespace AlgoSdk.WalletConnect
             set => peerId = value;
         }
 
-        public long HandshakeId
+        public ulong HandshakeId
         {
             get => handshakeId;
             set => handshakeId = value;
@@ -100,18 +94,6 @@ namespace AlgoSdk.WalletConnect
         {
             get => walletMeta;
             set => walletMeta = value;
-        }
-
-        public string Url
-        {
-            get => url;
-            set => url = value;
-        }
-
-        public string Version
-        {
-            get => version;
-            set => version = value;
         }
     }
 }

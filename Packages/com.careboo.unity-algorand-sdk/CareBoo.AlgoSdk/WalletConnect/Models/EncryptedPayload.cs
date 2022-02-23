@@ -33,7 +33,7 @@ namespace AlgoSdk.WalletConnect
         {
             var computedHmac = Sign(key);
             if (!ArrayComparer.Equals(Signature, computedHmac))
-                throw new InvalidDataException("HMAC given does not match the hmac computed with key");
+                throw new InvalidDataException("HMAC given does not match the HMAC computed with key");
         }
 
         public static implicit operator EncryptedPayload((byte[] iv, byte[] encryptedData) encryptResult)

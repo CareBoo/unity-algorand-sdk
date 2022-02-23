@@ -31,10 +31,9 @@ public class WalletConnectManager : MonoBehaviour
     async UniTaskVoid StartWalletConnect()
     {
         session = new AlgorandWalletConnectSession(DappMeta, BridgeUrl);
-        var connecting = session.Connect();
-        Debug.Log($"session url: {session.Url}");
-        qrCode = QrCode.Generate(session.Url);
-        await connecting;
-        qrCode = null;
+        var url = await session.StartConnection();
+        UnityEngine.Debug.Log(url);
+        qrCode = QrCode.Generate(url);
+        await session.WaitForConnectionApproval();
     }
 }

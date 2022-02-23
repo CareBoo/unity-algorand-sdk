@@ -1,4 +1,5 @@
 using System;
+using Unity.Collections;
 
 namespace AlgoSdk.WalletConnect
 {
@@ -42,6 +43,13 @@ namespace AlgoSdk.WalletConnect
                 Type = "pub",
                 Payload = payloadJson
             };
+        }
+
+        public static NetworkMessage PublishToTopicEncrypted(JsonRpcRequest request, Hex encryptionKey, string topic)
+        {
+            using var requestJson = AlgoApiSerializer.SerializeJson(request, Allocator.Temp);
+            var encryptedPayload = AesCipher.EncryptWithKey(encryptionKey, requestJson.ToByteArray());
+            return PublishToTopic(encryptedPayload, topic);
         }
     }
 }
