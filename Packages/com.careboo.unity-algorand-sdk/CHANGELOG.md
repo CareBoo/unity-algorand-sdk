@@ -5,6 +5,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [1.4.0-pre.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.3.0...v1.4.0-pre.1) (2022-02-24)
+
+
+### Features
+
+* **walletconnect:** add Algorand WalletConnect client ([#67](https://github.com/CareBoo/unity-algorand-sdk/issues/67)) ([3028858](https://github.com/CareBoo/unity-algorand-sdk/commit/3028858017859fd99a637c05fcd018f1d4c528ea)), closes [#65](https://github.com/CareBoo/unity-algorand-sdk/issues/65)
+* **walletconnect:** add QR Code Generator support ([#68](https://github.com/CareBoo/unity-algorand-sdk/issues/68)) ([1f84dcf](https://github.com/CareBoo/unity-algorand-sdk/commit/1f84dcf165fdb6c58989ff0cb2cf2ba1d02f5c3f)), closes [#51](https://github.com/CareBoo/unity-algorand-sdk/issues/51)
+* **walletconnect:** add WalletConnect support  ([#69](https://github.com/CareBoo/unity-algorand-sdk/issues/69)) ([c650b15](https://github.com/CareBoo/unity-algorand-sdk/commit/c650b15bba0cd97cf592da87c365934ad91bfa6b)), closes [#11](https://github.com/CareBoo/unity-algorand-sdk/issues/11)
+* **walletconnect:** add WebSocket support ([e0d2e6d](https://github.com/CareBoo/unity-algorand-sdk/commit/e0d2e6dcdd058ee7544b6f233e02461f87c12ffd)), closes [#59](https://github.com/CareBoo/unity-algorand-sdk/issues/59)
+
 # [1.4.0-exp.4](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.4.0-exp.3...v1.4.0-exp.4) (2022-02-24)
 
 
