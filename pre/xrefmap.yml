@@ -653,6 +653,15 @@ references:
   fullName.vb: AlgoSdk.Address.Widening(Ed25519.PublicKey to AlgoSdk.Address)
   nameWithType: Address.Implicit(Ed25519.PublicKey to Address)
   nameWithType.vb: Address.Widening(Ed25519.PublicKey to Address)
+- uid: AlgoSdk.Address.op_Implicit(Sha512_256_Hash)~AlgoSdk.Address
+  name: Implicit(Sha512_256_Hash to Address)
+  href: api/AlgoSdk.Address.html#AlgoSdk_Address_op_Implicit_Sha512_256_Hash__AlgoSdk_Address
+  commentId: M:AlgoSdk.Address.op_Implicit(Sha512_256_Hash)~AlgoSdk.Address
+  name.vb: Widening(Sha512_256_Hash to Address)
+  fullName: AlgoSdk.Address.Implicit(Sha512_256_Hash to AlgoSdk.Address)
+  fullName.vb: AlgoSdk.Address.Widening(Sha512_256_Hash to AlgoSdk.Address)
+  nameWithType: Address.Implicit(Sha512_256_Hash to Address)
+  nameWithType.vb: Address.Widening(Sha512_256_Hash to Address)
 - uid: AlgoSdk.Address.op_Implicit(System.String)~AlgoSdk.Address
   name: Implicit(String to Address)
   href: api/AlgoSdk.Address.html#AlgoSdk_Address_op_Implicit_System_String__AlgoSdk_Address
@@ -1213,6 +1222,22 @@ references:
   commentId: T:AlgoSdk.AlgoApiObject
   fullName: AlgoSdk.AlgoApiObject
   nameWithType: AlgoApiObject
+- uid: AlgoSdk.AlgoApiObject.#ctor(System.Byte[],AlgoSdk.ContentType)
+  name: AlgoApiObject(Byte[], ContentType)
+  href: api/AlgoSdk.AlgoApiObject.html#AlgoSdk_AlgoApiObject__ctor_System_Byte___AlgoSdk_ContentType_
+  commentId: M:AlgoSdk.AlgoApiObject.#ctor(System.Byte[],AlgoSdk.ContentType)
+  name.vb: AlgoApiObject(Byte(), ContentType)
+  fullName: AlgoSdk.AlgoApiObject.AlgoApiObject(System.Byte[], AlgoSdk.ContentType)
+  fullName.vb: AlgoSdk.AlgoApiObject.AlgoApiObject(System.Byte(), AlgoSdk.ContentType)
+  nameWithType: AlgoApiObject.AlgoApiObject(Byte[], ContentType)
+  nameWithType.vb: AlgoApiObject.AlgoApiObject(Byte(), ContentType)
+- uid: AlgoSdk.AlgoApiObject.#ctor*
+  name: AlgoApiObject
+  href: api/AlgoSdk.AlgoApiObject.html#AlgoSdk_AlgoApiObject__ctor_
+  commentId: Overload:AlgoSdk.AlgoApiObject.#ctor
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiObject.AlgoApiObject
+  nameWithType: AlgoApiObject.AlgoApiObject
 - uid: AlgoSdk.AlgoApiObject.Equals(AlgoSdk.AlgoApiObject)
   name: Equals(AlgoApiObject)
   href: api/AlgoSdk.AlgoApiObject.html#AlgoSdk_AlgoApiObject_Equals_AlgoSdk_AlgoApiObject_
@@ -1255,15 +1280,84 @@ references:
 - uid: AlgoSdk.AlgoApiObject.Json
   name: Json
   href: api/AlgoSdk.AlgoApiObject.html#AlgoSdk_AlgoApiObject_Json
-  commentId: F:AlgoSdk.AlgoApiObject.Json
+  commentId: P:AlgoSdk.AlgoApiObject.Json
+  fullName: AlgoSdk.AlgoApiObject.Json
+  nameWithType: AlgoApiObject.Json
+- uid: AlgoSdk.AlgoApiObject.Json*
+  name: Json
+  href: api/AlgoSdk.AlgoApiObject.html#AlgoSdk_AlgoApiObject_Json_
+  commentId: Overload:AlgoSdk.AlgoApiObject.Json
+  isSpec: "True"
   fullName: AlgoSdk.AlgoApiObject.Json
   nameWithType: AlgoApiObject.Json
 - uid: AlgoSdk.AlgoApiObject.MessagePack
   name: MessagePack
   href: api/AlgoSdk.AlgoApiObject.html#AlgoSdk_AlgoApiObject_MessagePack
-  commentId: F:AlgoSdk.AlgoApiObject.MessagePack
+  commentId: P:AlgoSdk.AlgoApiObject.MessagePack
   fullName: AlgoSdk.AlgoApiObject.MessagePack
   nameWithType: AlgoApiObject.MessagePack
+- uid: AlgoSdk.AlgoApiObject.MessagePack*
+  name: MessagePack
+  href: api/AlgoSdk.AlgoApiObject.html#AlgoSdk_AlgoApiObject_MessagePack_
+  commentId: Overload:AlgoSdk.AlgoApiObject.MessagePack
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiObject.MessagePack
+  nameWithType: AlgoApiObject.MessagePack
+- uid: AlgoSdk.AlgoApiObject.op_Implicit(NativeArray{System.Byte})~AlgoSdk.AlgoApiObject
+  name: Implicit(NativeArray<Byte> to AlgoApiObject)
+  href: api/AlgoSdk.AlgoApiObject.html#AlgoSdk_AlgoApiObject_op_Implicit_NativeArray_System_Byte___AlgoSdk_AlgoApiObject
+  commentId: M:AlgoSdk.AlgoApiObject.op_Implicit(NativeArray{System.Byte})~AlgoSdk.AlgoApiObject
+  name.vb: Widening(NativeArray(Of Byte) to AlgoApiObject)
+  fullName: AlgoSdk.AlgoApiObject.Implicit(NativeArray<System.Byte> to AlgoSdk.AlgoApiObject)
+  fullName.vb: AlgoSdk.AlgoApiObject.Widening(NativeArray(Of System.Byte) to AlgoSdk.AlgoApiObject)
+  nameWithType: AlgoApiObject.Implicit(NativeArray<Byte> to AlgoApiObject)
+  nameWithType.vb: AlgoApiObject.Widening(NativeArray(Of Byte) to AlgoApiObject)
+- uid: AlgoSdk.AlgoApiObject.op_Implicit(NativeList{System.Byte})~AlgoSdk.AlgoApiObject
+  name: Implicit(NativeList<Byte> to AlgoApiObject)
+  href: api/AlgoSdk.AlgoApiObject.html#AlgoSdk_AlgoApiObject_op_Implicit_NativeList_System_Byte___AlgoSdk_AlgoApiObject
+  commentId: M:AlgoSdk.AlgoApiObject.op_Implicit(NativeList{System.Byte})~AlgoSdk.AlgoApiObject
+  name.vb: Widening(NativeList(Of Byte) to AlgoApiObject)
+  fullName: AlgoSdk.AlgoApiObject.Implicit(NativeList<System.Byte> to AlgoSdk.AlgoApiObject)
+  fullName.vb: AlgoSdk.AlgoApiObject.Widening(NativeList(Of System.Byte) to AlgoSdk.AlgoApiObject)
+  nameWithType: AlgoApiObject.Implicit(NativeList<Byte> to AlgoApiObject)
+  nameWithType.vb: AlgoApiObject.Widening(NativeList(Of Byte) to AlgoApiObject)
+- uid: AlgoSdk.AlgoApiObject.op_Implicit(NativeText)~AlgoSdk.AlgoApiObject
+  name: Implicit(NativeText to AlgoApiObject)
+  href: api/AlgoSdk.AlgoApiObject.html#AlgoSdk_AlgoApiObject_op_Implicit_NativeText__AlgoSdk_AlgoApiObject
+  commentId: M:AlgoSdk.AlgoApiObject.op_Implicit(NativeText)~AlgoSdk.AlgoApiObject
+  name.vb: Widening(NativeText to AlgoApiObject)
+  fullName: AlgoSdk.AlgoApiObject.Implicit(NativeText to AlgoSdk.AlgoApiObject)
+  fullName.vb: AlgoSdk.AlgoApiObject.Widening(NativeText to AlgoSdk.AlgoApiObject)
+  nameWithType: AlgoApiObject.Implicit(NativeText to AlgoApiObject)
+  nameWithType.vb: AlgoApiObject.Widening(NativeText to AlgoApiObject)
+- uid: AlgoSdk.AlgoApiObject.op_Implicit(System.Byte[])~AlgoSdk.AlgoApiObject
+  name: Implicit(Byte[] to AlgoApiObject)
+  href: api/AlgoSdk.AlgoApiObject.html#AlgoSdk_AlgoApiObject_op_Implicit_System_Byte____AlgoSdk_AlgoApiObject
+  commentId: M:AlgoSdk.AlgoApiObject.op_Implicit(System.Byte[])~AlgoSdk.AlgoApiObject
+  name.vb: Widening(Byte() to AlgoApiObject)
+  fullName: AlgoSdk.AlgoApiObject.Implicit(System.Byte[] to AlgoSdk.AlgoApiObject)
+  fullName.vb: AlgoSdk.AlgoApiObject.Widening(System.Byte() to AlgoSdk.AlgoApiObject)
+  nameWithType: AlgoApiObject.Implicit(Byte[] to AlgoApiObject)
+  nameWithType.vb: AlgoApiObject.Widening(Byte() to AlgoApiObject)
+- uid: AlgoSdk.AlgoApiObject.op_Implicit(System.String)~AlgoSdk.AlgoApiObject
+  name: Implicit(String to AlgoApiObject)
+  href: api/AlgoSdk.AlgoApiObject.html#AlgoSdk_AlgoApiObject_op_Implicit_System_String__AlgoSdk_AlgoApiObject
+  commentId: M:AlgoSdk.AlgoApiObject.op_Implicit(System.String)~AlgoSdk.AlgoApiObject
+  name.vb: Widening(String to AlgoApiObject)
+  fullName: AlgoSdk.AlgoApiObject.Implicit(System.String to AlgoSdk.AlgoApiObject)
+  fullName.vb: AlgoSdk.AlgoApiObject.Widening(System.String to AlgoSdk.AlgoApiObject)
+  nameWithType: AlgoApiObject.Implicit(String to AlgoApiObject)
+  nameWithType.vb: AlgoApiObject.Widening(String to AlgoApiObject)
+- uid: AlgoSdk.AlgoApiObject.op_Implicit*
+  name: Implicit
+  href: api/AlgoSdk.AlgoApiObject.html#AlgoSdk_AlgoApiObject_op_Implicit_
+  commentId: Overload:AlgoSdk.AlgoApiObject.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: AlgoSdk.AlgoApiObject.Implicit
+  fullName.vb: AlgoSdk.AlgoApiObject.Widening
+  nameWithType: AlgoApiObject.Implicit
+  nameWithType.vb: AlgoApiObject.Widening
 - uid: AlgoSdk.AlgoApiObjectAttribute
   name: AlgoApiObjectAttribute
   href: api/AlgoSdk.AlgoApiObjectAttribute.html
@@ -2094,6 +2188,24 @@ references:
   fullName.vb: AlgoSdk.AlgoApiSerializer.DeserializeJson(Of T)(NativeText)
   nameWithType: AlgoApiSerializer.DeserializeJson<T>(NativeText)
   nameWithType.vb: AlgoApiSerializer.DeserializeJson(Of T)(NativeText)
+- uid: AlgoSdk.AlgoApiSerializer.DeserializeJson``1(System.Byte[])
+  name: DeserializeJson<T>(Byte[])
+  href: api/AlgoSdk.AlgoApiSerializer.html#AlgoSdk_AlgoApiSerializer_DeserializeJson__1_System_Byte___
+  commentId: M:AlgoSdk.AlgoApiSerializer.DeserializeJson``1(System.Byte[])
+  name.vb: DeserializeJson(Of T)(Byte())
+  fullName: AlgoSdk.AlgoApiSerializer.DeserializeJson<T>(System.Byte[])
+  fullName.vb: AlgoSdk.AlgoApiSerializer.DeserializeJson(Of T)(System.Byte())
+  nameWithType: AlgoApiSerializer.DeserializeJson<T>(Byte[])
+  nameWithType.vb: AlgoApiSerializer.DeserializeJson(Of T)(Byte())
+- uid: AlgoSdk.AlgoApiSerializer.DeserializeJson``1(System.String)
+  name: DeserializeJson<T>(String)
+  href: api/AlgoSdk.AlgoApiSerializer.html#AlgoSdk_AlgoApiSerializer_DeserializeJson__1_System_String_
+  commentId: M:AlgoSdk.AlgoApiSerializer.DeserializeJson``1(System.String)
+  name.vb: DeserializeJson(Of T)(String)
+  fullName: AlgoSdk.AlgoApiSerializer.DeserializeJson<T>(System.String)
+  fullName.vb: AlgoSdk.AlgoApiSerializer.DeserializeJson(Of T)(System.String)
+  nameWithType: AlgoApiSerializer.DeserializeJson<T>(String)
+  nameWithType.vb: AlgoApiSerializer.DeserializeJson(Of T)(String)
 - uid: AlgoSdk.AlgoApiSerializer.DeserializeMessagePack*
   name: DeserializeMessagePack
   href: api/AlgoSdk.AlgoApiSerializer.html#AlgoSdk_AlgoApiSerializer_DeserializeMessagePack_
@@ -6424,6 +6536,22 @@ references:
   fullName.vb: AlgoSdk.Crypto.Random.Bytes(Of T)()
   nameWithType: Random.Bytes<T>()
   nameWithType.vb: Random.Bytes(Of T)()
+- uid: AlgoSdk.Crypto.Random.Randomize*
+  name: Randomize
+  href: api/AlgoSdk.Crypto.Random.html#AlgoSdk_Crypto_Random_Randomize_
+  commentId: Overload:AlgoSdk.Crypto.Random.Randomize
+  isSpec: "True"
+  fullName: AlgoSdk.Crypto.Random.Randomize
+  nameWithType: Random.Randomize
+- uid: AlgoSdk.Crypto.Random.Randomize``1(``0)
+  name: Randomize<T>(T)
+  href: api/AlgoSdk.Crypto.Random.html#AlgoSdk_Crypto_Random_Randomize__1___0_
+  commentId: M:AlgoSdk.Crypto.Random.Randomize``1(``0)
+  name.vb: Randomize(Of T)(T)
+  fullName: AlgoSdk.Crypto.Random.Randomize<T>(T)
+  fullName.vb: AlgoSdk.Crypto.Random.Randomize(Of T)(T)
+  nameWithType: Random.Randomize<T>(T)
+  nameWithType.vb: Random.Randomize(Of T)(T)
 - uid: AlgoSdk.Crypto.SecureMemoryHandle
   name: SecureMemoryHandle
   href: api/AlgoSdk.Crypto.SecureMemoryHandle.html
@@ -7403,6 +7531,244 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Editor.SerializedBytes.SetBytes
   nameWithType: SerializedBytes.SetBytes
+- uid: AlgoSdk.Either`2
+  name: Either<T, U>
+  href: api/AlgoSdk.Either-2.html
+  commentId: T:AlgoSdk.Either`2
+  name.vb: Either(Of T, U)
+  fullName: AlgoSdk.Either<T, U>
+  fullName.vb: AlgoSdk.Either(Of T, U)
+  nameWithType: Either<T, U>
+  nameWithType.vb: Either(Of T, U)
+- uid: AlgoSdk.Either`2.#ctor(`0)
+  name: Either(T)
+  href: api/AlgoSdk.Either-2.html#AlgoSdk_Either_2__ctor__0_
+  commentId: M:AlgoSdk.Either`2.#ctor(`0)
+  fullName: AlgoSdk.Either<T, U>.Either(T)
+  fullName.vb: AlgoSdk.Either(Of T, U).Either(T)
+  nameWithType: Either<T, U>.Either(T)
+  nameWithType.vb: Either(Of T, U).Either(T)
+- uid: AlgoSdk.Either`2.#ctor(`1)
+  name: Either(U)
+  href: api/AlgoSdk.Either-2.html#AlgoSdk_Either_2__ctor__1_
+  commentId: M:AlgoSdk.Either`2.#ctor(`1)
+  fullName: AlgoSdk.Either<T, U>.Either(U)
+  fullName.vb: AlgoSdk.Either(Of T, U).Either(U)
+  nameWithType: Either<T, U>.Either(U)
+  nameWithType.vb: Either(Of T, U).Either(U)
+- uid: AlgoSdk.Either`2.#ctor*
+  name: Either
+  href: api/AlgoSdk.Either-2.html#AlgoSdk_Either_2__ctor_
+  commentId: Overload:AlgoSdk.Either`2.#ctor
+  isSpec: "True"
+  fullName: AlgoSdk.Either<T, U>.Either
+  fullName.vb: AlgoSdk.Either(Of T, U).Either
+  nameWithType: Either<T, U>.Either
+  nameWithType.vb: Either(Of T, U).Either
+- uid: AlgoSdk.Either`2.Deconstruct(`0@,`1@)
+  name: Deconstruct(out T, out U)
+  href: api/AlgoSdk.Either-2.html#AlgoSdk_Either_2_Deconstruct__0___1__
+  commentId: M:AlgoSdk.Either`2.Deconstruct(`0@,`1@)
+  name.vb: Deconstruct(ByRef T, ByRef U)
+  fullName: AlgoSdk.Either<T, U>.Deconstruct(out T, out U)
+  fullName.vb: AlgoSdk.Either(Of T, U).Deconstruct(ByRef T, ByRef U)
+  nameWithType: Either<T, U>.Deconstruct(out T, out U)
+  nameWithType.vb: Either(Of T, U).Deconstruct(ByRef T, ByRef U)
+- uid: AlgoSdk.Either`2.Deconstruct*
+  name: Deconstruct
+  href: api/AlgoSdk.Either-2.html#AlgoSdk_Either_2_Deconstruct_
+  commentId: Overload:AlgoSdk.Either`2.Deconstruct
+  isSpec: "True"
+  fullName: AlgoSdk.Either<T, U>.Deconstruct
+  fullName.vb: AlgoSdk.Either(Of T, U).Deconstruct
+  nameWithType: Either<T, U>.Deconstruct
+  nameWithType.vb: Either(Of T, U).Deconstruct
+- uid: AlgoSdk.Either`2.IsValue1
+  name: IsValue1
+  href: api/AlgoSdk.Either-2.html#AlgoSdk_Either_2_IsValue1
+  commentId: P:AlgoSdk.Either`2.IsValue1
+  fullName: AlgoSdk.Either<T, U>.IsValue1
+  fullName.vb: AlgoSdk.Either(Of T, U).IsValue1
+  nameWithType: Either<T, U>.IsValue1
+  nameWithType.vb: Either(Of T, U).IsValue1
+- uid: AlgoSdk.Either`2.IsValue1*
+  name: IsValue1
+  href: api/AlgoSdk.Either-2.html#AlgoSdk_Either_2_IsValue1_
+  commentId: Overload:AlgoSdk.Either`2.IsValue1
+  isSpec: "True"
+  fullName: AlgoSdk.Either<T, U>.IsValue1
+  fullName.vb: AlgoSdk.Either(Of T, U).IsValue1
+  nameWithType: Either<T, U>.IsValue1
+  nameWithType.vb: Either(Of T, U).IsValue1
+- uid: AlgoSdk.Either`2.IsValue2
+  name: IsValue2
+  href: api/AlgoSdk.Either-2.html#AlgoSdk_Either_2_IsValue2
+  commentId: P:AlgoSdk.Either`2.IsValue2
+  fullName: AlgoSdk.Either<T, U>.IsValue2
+  fullName.vb: AlgoSdk.Either(Of T, U).IsValue2
+  nameWithType: Either<T, U>.IsValue2
+  nameWithType.vb: Either(Of T, U).IsValue2
+- uid: AlgoSdk.Either`2.IsValue2*
+  name: IsValue2
+  href: api/AlgoSdk.Either-2.html#AlgoSdk_Either_2_IsValue2_
+  commentId: Overload:AlgoSdk.Either`2.IsValue2
+  isSpec: "True"
+  fullName: AlgoSdk.Either<T, U>.IsValue2
+  fullName.vb: AlgoSdk.Either(Of T, U).IsValue2
+  nameWithType: Either<T, U>.IsValue2
+  nameWithType.vb: Either(Of T, U).IsValue2
+- uid: AlgoSdk.Either`2.op_Implicit(AlgoSdk.Either{`0,`1})~AlgoSdk.Either{`1,`0}
+  name: Implicit(Either<T, U> to Either<U, T>)
+  href: api/AlgoSdk.Either-2.html#AlgoSdk_Either_2_op_Implicit_AlgoSdk_Either__0__1___AlgoSdk_Either__1__0_
+  commentId: M:AlgoSdk.Either`2.op_Implicit(AlgoSdk.Either{`0,`1})~AlgoSdk.Either{`1,`0}
+  name.vb: Widening(Either(Of T, U) to Either(Of U, T))
+  fullName: AlgoSdk.Either<T, U>.Implicit(AlgoSdk.Either<T, U> to AlgoSdk.Either<U, T>)
+  fullName.vb: AlgoSdk.Either(Of T, U).Widening(AlgoSdk.Either(Of T, U) to AlgoSdk.Either(Of U, T))
+  nameWithType: Either<T, U>.Implicit(Either<T, U> to Either<U, T>)
+  nameWithType.vb: Either(Of T, U).Widening(Either(Of T, U) to Either(Of U, T))
+- uid: AlgoSdk.Either`2.op_Implicit*
+  name: Implicit
+  href: api/AlgoSdk.Either-2.html#AlgoSdk_Either_2_op_Implicit_
+  commentId: Overload:AlgoSdk.Either`2.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: AlgoSdk.Either<T, U>.Implicit
+  fullName.vb: AlgoSdk.Either(Of T, U).Widening
+  nameWithType: Either<T, U>.Implicit
+  nameWithType.vb: Either(Of T, U).Widening
+- uid: AlgoSdk.Either`2.TryGetValue1(`0@)
+  name: TryGetValue1(out T)
+  href: api/AlgoSdk.Either-2.html#AlgoSdk_Either_2_TryGetValue1__0__
+  commentId: M:AlgoSdk.Either`2.TryGetValue1(`0@)
+  name.vb: TryGetValue1(ByRef T)
+  fullName: AlgoSdk.Either<T, U>.TryGetValue1(out T)
+  fullName.vb: AlgoSdk.Either(Of T, U).TryGetValue1(ByRef T)
+  nameWithType: Either<T, U>.TryGetValue1(out T)
+  nameWithType.vb: Either(Of T, U).TryGetValue1(ByRef T)
+- uid: AlgoSdk.Either`2.TryGetValue1*
+  name: TryGetValue1
+  href: api/AlgoSdk.Either-2.html#AlgoSdk_Either_2_TryGetValue1_
+  commentId: Overload:AlgoSdk.Either`2.TryGetValue1
+  isSpec: "True"
+  fullName: AlgoSdk.Either<T, U>.TryGetValue1
+  fullName.vb: AlgoSdk.Either(Of T, U).TryGetValue1
+  nameWithType: Either<T, U>.TryGetValue1
+  nameWithType.vb: Either(Of T, U).TryGetValue1
+- uid: AlgoSdk.Either`2.TryGetValue2(`1@)
+  name: TryGetValue2(out U)
+  href: api/AlgoSdk.Either-2.html#AlgoSdk_Either_2_TryGetValue2__1__
+  commentId: M:AlgoSdk.Either`2.TryGetValue2(`1@)
+  name.vb: TryGetValue2(ByRef U)
+  fullName: AlgoSdk.Either<T, U>.TryGetValue2(out U)
+  fullName.vb: AlgoSdk.Either(Of T, U).TryGetValue2(ByRef U)
+  nameWithType: Either<T, U>.TryGetValue2(out U)
+  nameWithType.vb: Either(Of T, U).TryGetValue2(ByRef U)
+- uid: AlgoSdk.Either`2.TryGetValue2*
+  name: TryGetValue2
+  href: api/AlgoSdk.Either-2.html#AlgoSdk_Either_2_TryGetValue2_
+  commentId: Overload:AlgoSdk.Either`2.TryGetValue2
+  isSpec: "True"
+  fullName: AlgoSdk.Either<T, U>.TryGetValue2
+  fullName.vb: AlgoSdk.Either(Of T, U).TryGetValue2
+  nameWithType: Either<T, U>.TryGetValue2
+  nameWithType.vb: Either(Of T, U).TryGetValue2
+- uid: AlgoSdk.Either`2.Value1
+  name: Value1
+  href: api/AlgoSdk.Either-2.html#AlgoSdk_Either_2_Value1
+  commentId: P:AlgoSdk.Either`2.Value1
+  fullName: AlgoSdk.Either<T, U>.Value1
+  fullName.vb: AlgoSdk.Either(Of T, U).Value1
+  nameWithType: Either<T, U>.Value1
+  nameWithType.vb: Either(Of T, U).Value1
+- uid: AlgoSdk.Either`2.Value1*
+  name: Value1
+  href: api/AlgoSdk.Either-2.html#AlgoSdk_Either_2_Value1_
+  commentId: Overload:AlgoSdk.Either`2.Value1
+  isSpec: "True"
+  fullName: AlgoSdk.Either<T, U>.Value1
+  fullName.vb: AlgoSdk.Either(Of T, U).Value1
+  nameWithType: Either<T, U>.Value1
+  nameWithType.vb: Either(Of T, U).Value1
+- uid: AlgoSdk.Either`2.Value2
+  name: Value2
+  href: api/AlgoSdk.Either-2.html#AlgoSdk_Either_2_Value2
+  commentId: P:AlgoSdk.Either`2.Value2
+  fullName: AlgoSdk.Either<T, U>.Value2
+  fullName.vb: AlgoSdk.Either(Of T, U).Value2
+  nameWithType: Either<T, U>.Value2
+  nameWithType.vb: Either(Of T, U).Value2
+- uid: AlgoSdk.Either`2.Value2*
+  name: Value2
+  href: api/AlgoSdk.Either-2.html#AlgoSdk_Either_2_Value2_
+  commentId: Overload:AlgoSdk.Either`2.Value2
+  isSpec: "True"
+  fullName: AlgoSdk.Either<T, U>.Value2
+  fullName.vb: AlgoSdk.Either(Of T, U).Value2
+  nameWithType: Either<T, U>.Value2
+  nameWithType.vb: Either(Of T, U).Value2
+- uid: AlgoSdk.EitherFormatter`2
+  name: EitherFormatter<T, U>
+  href: api/AlgoSdk.EitherFormatter-2.html
+  commentId: T:AlgoSdk.EitherFormatter`2
+  name.vb: EitherFormatter(Of T, U)
+  fullName: AlgoSdk.EitherFormatter<T, U>
+  fullName.vb: AlgoSdk.EitherFormatter(Of T, U)
+  nameWithType: EitherFormatter<T, U>
+  nameWithType.vb: EitherFormatter(Of T, U)
+- uid: AlgoSdk.EitherFormatter`2.Deserialize(JsonReader@)
+  name: Deserialize(ref JsonReader)
+  href: api/AlgoSdk.EitherFormatter-2.html#AlgoSdk_EitherFormatter_2_Deserialize_JsonReader__
+  commentId: M:AlgoSdk.EitherFormatter`2.Deserialize(JsonReader@)
+  name.vb: Deserialize(ByRef JsonReader)
+  fullName: AlgoSdk.EitherFormatter<T, U>.Deserialize(ref JsonReader)
+  fullName.vb: AlgoSdk.EitherFormatter(Of T, U).Deserialize(ByRef JsonReader)
+  nameWithType: EitherFormatter<T, U>.Deserialize(ref JsonReader)
+  nameWithType.vb: EitherFormatter(Of T, U).Deserialize(ByRef JsonReader)
+- uid: AlgoSdk.EitherFormatter`2.Deserialize(MessagePackReader@)
+  name: Deserialize(ref MessagePackReader)
+  href: api/AlgoSdk.EitherFormatter-2.html#AlgoSdk_EitherFormatter_2_Deserialize_MessagePackReader__
+  commentId: M:AlgoSdk.EitherFormatter`2.Deserialize(MessagePackReader@)
+  name.vb: Deserialize(ByRef MessagePackReader)
+  fullName: AlgoSdk.EitherFormatter<T, U>.Deserialize(ref MessagePackReader)
+  fullName.vb: AlgoSdk.EitherFormatter(Of T, U).Deserialize(ByRef MessagePackReader)
+  nameWithType: EitherFormatter<T, U>.Deserialize(ref MessagePackReader)
+  nameWithType.vb: EitherFormatter(Of T, U).Deserialize(ByRef MessagePackReader)
+- uid: AlgoSdk.EitherFormatter`2.Deserialize*
+  name: Deserialize
+  href: api/AlgoSdk.EitherFormatter-2.html#AlgoSdk_EitherFormatter_2_Deserialize_
+  commentId: Overload:AlgoSdk.EitherFormatter`2.Deserialize
+  isSpec: "True"
+  fullName: AlgoSdk.EitherFormatter<T, U>.Deserialize
+  fullName.vb: AlgoSdk.EitherFormatter(Of T, U).Deserialize
+  nameWithType: EitherFormatter<T, U>.Deserialize
+  nameWithType.vb: EitherFormatter(Of T, U).Deserialize
+- uid: AlgoSdk.EitherFormatter`2.Serialize(JsonWriter@,AlgoSdk.Either{`0,`1})
+  name: Serialize(ref JsonWriter, Either<T, U>)
+  href: api/AlgoSdk.EitherFormatter-2.html#AlgoSdk_EitherFormatter_2_Serialize_JsonWriter__AlgoSdk_Either__0__1__
+  commentId: M:AlgoSdk.EitherFormatter`2.Serialize(JsonWriter@,AlgoSdk.Either{`0,`1})
+  name.vb: Serialize(ByRef JsonWriter, Either(Of T, U))
+  fullName: AlgoSdk.EitherFormatter<T, U>.Serialize(ref JsonWriter, AlgoSdk.Either<T, U>)
+  fullName.vb: AlgoSdk.EitherFormatter(Of T, U).Serialize(ByRef JsonWriter, AlgoSdk.Either(Of T, U))
+  nameWithType: EitherFormatter<T, U>.Serialize(ref JsonWriter, Either<T, U>)
+  nameWithType.vb: EitherFormatter(Of T, U).Serialize(ByRef JsonWriter, Either(Of T, U))
+- uid: AlgoSdk.EitherFormatter`2.Serialize(MessagePackWriter@,AlgoSdk.Either{`0,`1})
+  name: Serialize(ref MessagePackWriter, Either<T, U>)
+  href: api/AlgoSdk.EitherFormatter-2.html#AlgoSdk_EitherFormatter_2_Serialize_MessagePackWriter__AlgoSdk_Either__0__1__
+  commentId: M:AlgoSdk.EitherFormatter`2.Serialize(MessagePackWriter@,AlgoSdk.Either{`0,`1})
+  name.vb: Serialize(ByRef MessagePackWriter, Either(Of T, U))
+  fullName: AlgoSdk.EitherFormatter<T, U>.Serialize(ref MessagePackWriter, AlgoSdk.Either<T, U>)
+  fullName.vb: AlgoSdk.EitherFormatter(Of T, U).Serialize(ByRef MessagePackWriter, AlgoSdk.Either(Of T, U))
+  nameWithType: EitherFormatter<T, U>.Serialize(ref MessagePackWriter, Either<T, U>)
+  nameWithType.vb: EitherFormatter(Of T, U).Serialize(ByRef MessagePackWriter, Either(Of T, U))
+- uid: AlgoSdk.EitherFormatter`2.Serialize*
+  name: Serialize
+  href: api/AlgoSdk.EitherFormatter-2.html#AlgoSdk_EitherFormatter_2_Serialize_
+  commentId: Overload:AlgoSdk.EitherFormatter`2.Serialize
+  isSpec: "True"
+  fullName: AlgoSdk.EitherFormatter<T, U>.Serialize
+  fullName.vb: AlgoSdk.EitherFormatter(Of T, U).Serialize
+  nameWithType: EitherFormatter<T, U>.Serialize
+  nameWithType.vb: EitherFormatter(Of T, U).Serialize
 - uid: AlgoSdk.Endianness
   name: Endianness
   href: api/AlgoSdk.Endianness.html
@@ -12229,6 +12595,69 @@ references:
   fullName.vb: AlgoSdk.IntEnumComparer(Of T).Instance
   nameWithType: IntEnumComparer<T>.Instance
   nameWithType.vb: IntEnumComparer(Of T).Instance
+- uid: AlgoSdk.IntEnumFormatter`1
+  name: IntEnumFormatter<T>
+  href: api/AlgoSdk.IntEnumFormatter-1.html
+  commentId: T:AlgoSdk.IntEnumFormatter`1
+  name.vb: IntEnumFormatter(Of T)
+  fullName: AlgoSdk.IntEnumFormatter<T>
+  fullName.vb: AlgoSdk.IntEnumFormatter(Of T)
+  nameWithType: IntEnumFormatter<T>
+  nameWithType.vb: IntEnumFormatter(Of T)
+- uid: AlgoSdk.IntEnumFormatter`1.Deserialize(JsonReader@)
+  name: Deserialize(ref JsonReader)
+  href: api/AlgoSdk.IntEnumFormatter-1.html#AlgoSdk_IntEnumFormatter_1_Deserialize_JsonReader__
+  commentId: M:AlgoSdk.IntEnumFormatter`1.Deserialize(JsonReader@)
+  name.vb: Deserialize(ByRef JsonReader)
+  fullName: AlgoSdk.IntEnumFormatter<T>.Deserialize(ref JsonReader)
+  fullName.vb: AlgoSdk.IntEnumFormatter(Of T).Deserialize(ByRef JsonReader)
+  nameWithType: IntEnumFormatter<T>.Deserialize(ref JsonReader)
+  nameWithType.vb: IntEnumFormatter(Of T).Deserialize(ByRef JsonReader)
+- uid: AlgoSdk.IntEnumFormatter`1.Deserialize(MessagePackReader@)
+  name: Deserialize(ref MessagePackReader)
+  href: api/AlgoSdk.IntEnumFormatter-1.html#AlgoSdk_IntEnumFormatter_1_Deserialize_MessagePackReader__
+  commentId: M:AlgoSdk.IntEnumFormatter`1.Deserialize(MessagePackReader@)
+  name.vb: Deserialize(ByRef MessagePackReader)
+  fullName: AlgoSdk.IntEnumFormatter<T>.Deserialize(ref MessagePackReader)
+  fullName.vb: AlgoSdk.IntEnumFormatter(Of T).Deserialize(ByRef MessagePackReader)
+  nameWithType: IntEnumFormatter<T>.Deserialize(ref MessagePackReader)
+  nameWithType.vb: IntEnumFormatter(Of T).Deserialize(ByRef MessagePackReader)
+- uid: AlgoSdk.IntEnumFormatter`1.Deserialize*
+  name: Deserialize
+  href: api/AlgoSdk.IntEnumFormatter-1.html#AlgoSdk_IntEnumFormatter_1_Deserialize_
+  commentId: Overload:AlgoSdk.IntEnumFormatter`1.Deserialize
+  isSpec: "True"
+  fullName: AlgoSdk.IntEnumFormatter<T>.Deserialize
+  fullName.vb: AlgoSdk.IntEnumFormatter(Of T).Deserialize
+  nameWithType: IntEnumFormatter<T>.Deserialize
+  nameWithType.vb: IntEnumFormatter(Of T).Deserialize
+- uid: AlgoSdk.IntEnumFormatter`1.Serialize(JsonWriter@,`0)
+  name: Serialize(ref JsonWriter, T)
+  href: api/AlgoSdk.IntEnumFormatter-1.html#AlgoSdk_IntEnumFormatter_1_Serialize_JsonWriter___0_
+  commentId: M:AlgoSdk.IntEnumFormatter`1.Serialize(JsonWriter@,`0)
+  name.vb: Serialize(ByRef JsonWriter, T)
+  fullName: AlgoSdk.IntEnumFormatter<T>.Serialize(ref JsonWriter, T)
+  fullName.vb: AlgoSdk.IntEnumFormatter(Of T).Serialize(ByRef JsonWriter, T)
+  nameWithType: IntEnumFormatter<T>.Serialize(ref JsonWriter, T)
+  nameWithType.vb: IntEnumFormatter(Of T).Serialize(ByRef JsonWriter, T)
+- uid: AlgoSdk.IntEnumFormatter`1.Serialize(MessagePackWriter@,`0)
+  name: Serialize(ref MessagePackWriter, T)
+  href: api/AlgoSdk.IntEnumFormatter-1.html#AlgoSdk_IntEnumFormatter_1_Serialize_MessagePackWriter___0_
+  commentId: M:AlgoSdk.IntEnumFormatter`1.Serialize(MessagePackWriter@,`0)
+  name.vb: Serialize(ByRef MessagePackWriter, T)
+  fullName: AlgoSdk.IntEnumFormatter<T>.Serialize(ref MessagePackWriter, T)
+  fullName.vb: AlgoSdk.IntEnumFormatter(Of T).Serialize(ByRef MessagePackWriter, T)
+  nameWithType: IntEnumFormatter<T>.Serialize(ref MessagePackWriter, T)
+  nameWithType.vb: IntEnumFormatter(Of T).Serialize(ByRef MessagePackWriter, T)
+- uid: AlgoSdk.IntEnumFormatter`1.Serialize*
+  name: Serialize
+  href: api/AlgoSdk.IntEnumFormatter-1.html#AlgoSdk_IntEnumFormatter_1_Serialize_
+  commentId: Overload:AlgoSdk.IntEnumFormatter`1.Serialize
+  isSpec: "True"
+  fullName: AlgoSdk.IntEnumFormatter<T>.Serialize
+  fullName.vb: AlgoSdk.IntEnumFormatter(Of T).Serialize
+  nameWithType: IntEnumFormatter<T>.Serialize
+  nameWithType.vb: IntEnumFormatter(Of T).Serialize
 - uid: AlgoSdk.IPaginatedResponse
   name: IPaginatedResponse
   href: api/AlgoSdk.IPaginatedResponse.html
@@ -13163,6 +13592,15 @@ references:
   fullName.vb: AlgoSdk.Json.JsonWriter.WriteObjectKey(Of T)(T)
   nameWithType: JsonWriter.WriteObjectKey<T>(T)
   nameWithType.vb: JsonWriter.WriteObjectKey(Of T)(T)
+- uid: AlgoSdk.Json.JsonWriter.WriteRaw(NativeArray{System.Byte})
+  name: WriteRaw(NativeArray<Byte>)
+  href: api/AlgoSdk.Json.JsonWriter.html#AlgoSdk_Json_JsonWriter_WriteRaw_NativeArray_System_Byte__
+  commentId: M:AlgoSdk.Json.JsonWriter.WriteRaw(NativeArray{System.Byte})
+  name.vb: WriteRaw(NativeArray(Of Byte))
+  fullName: AlgoSdk.Json.JsonWriter.WriteRaw(NativeArray<System.Byte>)
+  fullName.vb: AlgoSdk.Json.JsonWriter.WriteRaw(NativeArray(Of System.Byte))
+  nameWithType: JsonWriter.WriteRaw(NativeArray<Byte>)
+  nameWithType.vb: JsonWriter.WriteRaw(NativeArray(Of Byte))
 - uid: AlgoSdk.Json.JsonWriter.WriteRaw(NativeText)
   name: WriteRaw(NativeText)
   href: api/AlgoSdk.Json.JsonWriter.html#AlgoSdk_Json_JsonWriter_WriteRaw_NativeText_
@@ -14225,6 +14663,75 @@ references:
   commentId: F:AlgoSdk.ListWalletsResponse.Wallets
   fullName: AlgoSdk.ListWalletsResponse.Wallets
   nameWithType: ListWalletsResponse.Wallets
+- uid: AlgoSdk.Logic
+  name: Logic
+  href: api/AlgoSdk.Logic.html
+  commentId: T:AlgoSdk.Logic
+  fullName: AlgoSdk.Logic
+  nameWithType: Logic
+- uid: AlgoSdk.Logic.GetAddress(System.Byte[])
+  name: GetAddress(Byte[])
+  href: api/AlgoSdk.Logic.html#AlgoSdk_Logic_GetAddress_System_Byte___
+  commentId: M:AlgoSdk.Logic.GetAddress(System.Byte[])
+  name.vb: GetAddress(Byte())
+  fullName: AlgoSdk.Logic.GetAddress(System.Byte[])
+  fullName.vb: AlgoSdk.Logic.GetAddress(System.Byte())
+  nameWithType: Logic.GetAddress(Byte[])
+  nameWithType.vb: Logic.GetAddress(Byte())
+- uid: AlgoSdk.Logic.GetAddress*
+  name: GetAddress
+  href: api/AlgoSdk.Logic.html#AlgoSdk_Logic_GetAddress_
+  commentId: Overload:AlgoSdk.Logic.GetAddress
+  isSpec: "True"
+  fullName: AlgoSdk.Logic.GetAddress
+  nameWithType: Logic.GetAddress
+- uid: AlgoSdk.Logic.GetSignBytes(System.Byte[],Allocator)
+  name: GetSignBytes(Byte[], Allocator)
+  href: api/AlgoSdk.Logic.html#AlgoSdk_Logic_GetSignBytes_System_Byte___Allocator_
+  commentId: M:AlgoSdk.Logic.GetSignBytes(System.Byte[],Allocator)
+  name.vb: GetSignBytes(Byte(), Allocator)
+  fullName: AlgoSdk.Logic.GetSignBytes(System.Byte[], Allocator)
+  fullName.vb: AlgoSdk.Logic.GetSignBytes(System.Byte(), Allocator)
+  nameWithType: Logic.GetSignBytes(Byte[], Allocator)
+  nameWithType.vb: Logic.GetSignBytes(Byte(), Allocator)
+- uid: AlgoSdk.Logic.GetSignBytes*
+  name: GetSignBytes
+  href: api/AlgoSdk.Logic.html#AlgoSdk_Logic_GetSignBytes_
+  commentId: Overload:AlgoSdk.Logic.GetSignBytes
+  isSpec: "True"
+  fullName: AlgoSdk.Logic.GetSignBytes
+  nameWithType: Logic.GetSignBytes
+- uid: AlgoSdk.Logic.Sign(System.Byte[],AlgoSdk.Multisig,AlgoSdk.PrivateKey)
+  name: Sign(Byte[], Multisig, PrivateKey)
+  href: api/AlgoSdk.Logic.html#AlgoSdk_Logic_Sign_System_Byte___AlgoSdk_Multisig_AlgoSdk_PrivateKey_
+  commentId: M:AlgoSdk.Logic.Sign(System.Byte[],AlgoSdk.Multisig,AlgoSdk.PrivateKey)
+  name.vb: Sign(Byte(), Multisig, PrivateKey)
+  fullName: AlgoSdk.Logic.Sign(System.Byte[], AlgoSdk.Multisig, AlgoSdk.PrivateKey)
+  fullName.vb: AlgoSdk.Logic.Sign(System.Byte(), AlgoSdk.Multisig, AlgoSdk.PrivateKey)
+  nameWithType: Logic.Sign(Byte[], Multisig, PrivateKey)
+  nameWithType.vb: Logic.Sign(Byte(), Multisig, PrivateKey)
+- uid: AlgoSdk.Logic.Sign(System.Byte[],SecretKeyHandle)
+  name: Sign(Byte[], SecretKeyHandle)
+  href: api/AlgoSdk.Logic.html#AlgoSdk_Logic_Sign_System_Byte___SecretKeyHandle_
+  commentId: M:AlgoSdk.Logic.Sign(System.Byte[],SecretKeyHandle)
+  name.vb: Sign(Byte(), SecretKeyHandle)
+  fullName: AlgoSdk.Logic.Sign(System.Byte[], SecretKeyHandle)
+  fullName.vb: AlgoSdk.Logic.Sign(System.Byte(), SecretKeyHandle)
+  nameWithType: Logic.Sign(Byte[], SecretKeyHandle)
+  nameWithType.vb: Logic.Sign(Byte(), SecretKeyHandle)
+- uid: AlgoSdk.Logic.Sign*
+  name: Sign
+  href: api/AlgoSdk.Logic.html#AlgoSdk_Logic_Sign_
+  commentId: Overload:AlgoSdk.Logic.Sign
+  isSpec: "True"
+  fullName: AlgoSdk.Logic.Sign
+  nameWithType: Logic.Sign
+- uid: AlgoSdk.Logic.SigningPrefix
+  name: SigningPrefix
+  href: api/AlgoSdk.Logic.html#AlgoSdk_Logic_SigningPrefix
+  commentId: F:AlgoSdk.Logic.SigningPrefix
+  fullName: AlgoSdk.Logic.SigningPrefix
+  nameWithType: Logic.SigningPrefix
 - uid: AlgoSdk.LogicSig
   name: LogicSig
   href: api/AlgoSdk.LogicSig.html
@@ -14250,6 +14757,19 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.LogicSig.Equals
   nameWithType: LogicSig.Equals
+- uid: AlgoSdk.LogicSig.GetAddress
+  name: GetAddress()
+  href: api/AlgoSdk.LogicSig.html#AlgoSdk_LogicSig_GetAddress
+  commentId: M:AlgoSdk.LogicSig.GetAddress
+  fullName: AlgoSdk.LogicSig.GetAddress()
+  nameWithType: LogicSig.GetAddress()
+- uid: AlgoSdk.LogicSig.GetAddress*
+  name: GetAddress
+  href: api/AlgoSdk.LogicSig.html#AlgoSdk_LogicSig_GetAddress_
+  commentId: Overload:AlgoSdk.LogicSig.GetAddress
+  isSpec: "True"
+  fullName: AlgoSdk.LogicSig.GetAddress
+  nameWithType: LogicSig.GetAddress
 - uid: AlgoSdk.LogicSig.IsValid(AlgoSdk.Address)
   name: IsValid(Address)
   href: api/AlgoSdk.LogicSig.html#AlgoSdk_LogicSig_IsValid_AlgoSdk_Address_
@@ -14518,6 +15038,22 @@ references:
   fullName.vb: AlgoSdk.LowLevel.ByteArray.ToBase64(Of TByteArray)(TByteArray)
   nameWithType: ByteArray.ToBase64<TByteArray>(TByteArray)
   nameWithType.vb: ByteArray.ToBase64(Of TByteArray)(TByteArray)
+- uid: AlgoSdk.LowLevel.ByteArray.ToNativeArray*
+  name: ToNativeArray
+  href: api/AlgoSdk.LowLevel.ByteArray.html#AlgoSdk_LowLevel_ByteArray_ToNativeArray_
+  commentId: Overload:AlgoSdk.LowLevel.ByteArray.ToNativeArray
+  isSpec: "True"
+  fullName: AlgoSdk.LowLevel.ByteArray.ToNativeArray
+  nameWithType: ByteArray.ToNativeArray
+- uid: AlgoSdk.LowLevel.ByteArray.ToNativeArray``1(``0,Allocator)
+  name: ToNativeArray<TByteArray>(TByteArray, Allocator)
+  href: api/AlgoSdk.LowLevel.ByteArray.html#AlgoSdk_LowLevel_ByteArray_ToNativeArray__1___0_Allocator_
+  commentId: M:AlgoSdk.LowLevel.ByteArray.ToNativeArray``1(``0,Allocator)
+  name.vb: ToNativeArray(Of TByteArray)(TByteArray, Allocator)
+  fullName: AlgoSdk.LowLevel.ByteArray.ToNativeArray<TByteArray>(TByteArray, Allocator)
+  fullName.vb: AlgoSdk.LowLevel.ByteArray.ToNativeArray(Of TByteArray)(TByteArray, Allocator)
+  nameWithType: ByteArray.ToNativeArray<TByteArray>(TByteArray, Allocator)
+  nameWithType.vb: ByteArray.ToNativeArray(Of TByteArray)(TByteArray, Allocator)
 - uid: AlgoSdk.LowLevel.ByteArrayComparer`1
   name: ByteArrayComparer<T>
   href: api/AlgoSdk.LowLevel.ByteArrayComparer-1.html
@@ -14746,6 +15282,15 @@ references:
   commentId: T:AlgoSdk.LowLevel.NativeByteArray
   fullName: AlgoSdk.LowLevel.NativeByteArray
   nameWithType: NativeByteArray
+- uid: AlgoSdk.LowLevel.NativeByteArray.#ctor(NativeArray{System.Byte})
+  name: NativeByteArray(NativeArray<Byte>)
+  href: api/AlgoSdk.LowLevel.NativeByteArray.html#AlgoSdk_LowLevel_NativeByteArray__ctor_NativeArray_System_Byte__
+  commentId: M:AlgoSdk.LowLevel.NativeByteArray.#ctor(NativeArray{System.Byte})
+  name.vb: NativeByteArray(NativeArray(Of Byte))
+  fullName: AlgoSdk.LowLevel.NativeByteArray.NativeByteArray(NativeArray<System.Byte>)
+  fullName.vb: AlgoSdk.LowLevel.NativeByteArray.NativeByteArray(NativeArray(Of System.Byte))
+  nameWithType: NativeByteArray.NativeByteArray(NativeArray<Byte>)
+  nameWithType.vb: NativeByteArray.NativeByteArray(NativeArray(Of Byte))
 - uid: AlgoSdk.LowLevel.NativeByteArray.#ctor(System.Byte[],Allocator)
   name: NativeByteArray(Byte[], Allocator)
   href: api/AlgoSdk.LowLevel.NativeByteArray.html#AlgoSdk_LowLevel_NativeByteArray__ctor_System_Byte___Allocator_
@@ -14768,6 +15313,19 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.LowLevel.NativeByteArray.NativeByteArray
   nameWithType: NativeByteArray.NativeByteArray
+- uid: AlgoSdk.LowLevel.NativeByteArray.Data
+  name: Data
+  href: api/AlgoSdk.LowLevel.NativeByteArray.html#AlgoSdk_LowLevel_NativeByteArray_Data
+  commentId: P:AlgoSdk.LowLevel.NativeByteArray.Data
+  fullName: AlgoSdk.LowLevel.NativeByteArray.Data
+  nameWithType: NativeByteArray.Data
+- uid: AlgoSdk.LowLevel.NativeByteArray.Data*
+  name: Data
+  href: api/AlgoSdk.LowLevel.NativeByteArray.html#AlgoSdk_LowLevel_NativeByteArray_Data_
+  commentId: Overload:AlgoSdk.LowLevel.NativeByteArray.Data
+  isSpec: "True"
+  fullName: AlgoSdk.LowLevel.NativeByteArray.Data
+  nameWithType: NativeByteArray.Data
 - uid: AlgoSdk.LowLevel.NativeByteArray.Dispose
   name: Dispose()
   href: api/AlgoSdk.LowLevel.NativeByteArray.html#AlgoSdk_LowLevel_NativeByteArray_Dispose
@@ -15493,6 +16051,19 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.MessagePack.MessagePackReader.Peek
   nameWithType: MessagePackReader.Peek
+- uid: AlgoSdk.MessagePack.MessagePackReader.Position
+  name: Position
+  href: api/AlgoSdk.MessagePack.MessagePackReader.html#AlgoSdk_MessagePack_MessagePackReader_Position
+  commentId: P:AlgoSdk.MessagePack.MessagePackReader.Position
+  fullName: AlgoSdk.MessagePack.MessagePackReader.Position
+  nameWithType: MessagePackReader.Position
+- uid: AlgoSdk.MessagePack.MessagePackReader.Position*
+  name: Position
+  href: api/AlgoSdk.MessagePack.MessagePackReader.html#AlgoSdk_MessagePack_MessagePackReader_Position_
+  commentId: Overload:AlgoSdk.MessagePack.MessagePackReader.Position
+  isSpec: "True"
+  fullName: AlgoSdk.MessagePack.MessagePackReader.Position
+  nameWithType: MessagePackReader.Position
 - uid: AlgoSdk.MessagePack.MessagePackReader.ReadArrayHeader
   name: ReadArrayHeader()
   href: api/AlgoSdk.MessagePack.MessagePackReader.html#AlgoSdk_MessagePack_MessagePackReader_ReadArrayHeader
@@ -28858,6 +29429,28 @@ references:
   commentId: T:AlgoSdk.Multisig
   fullName: AlgoSdk.Multisig
   nameWithType: Multisig
+- uid: AlgoSdk.Multisig.#ctor(System.Byte,System.Byte,AlgoSdk.Address[])
+  name: Multisig(Byte, Byte, Address[])
+  href: api/AlgoSdk.Multisig.html#AlgoSdk_Multisig__ctor_System_Byte_System_Byte_AlgoSdk_Address___
+  commentId: M:AlgoSdk.Multisig.#ctor(System.Byte,System.Byte,AlgoSdk.Address[])
+  name.vb: Multisig(Byte, Byte, Address())
+  fullName: AlgoSdk.Multisig.Multisig(System.Byte, System.Byte, AlgoSdk.Address[])
+  fullName.vb: AlgoSdk.Multisig.Multisig(System.Byte, System.Byte, AlgoSdk.Address())
+  nameWithType: Multisig.Multisig(Byte, Byte, Address[])
+  nameWithType.vb: Multisig.Multisig(Byte, Byte, Address())
+- uid: AlgoSdk.Multisig.#ctor*
+  name: Multisig
+  href: api/AlgoSdk.Multisig.html#AlgoSdk_Multisig__ctor_
+  commentId: Overload:AlgoSdk.Multisig.#ctor
+  isSpec: "True"
+  fullName: AlgoSdk.Multisig.Multisig
+  nameWithType: Multisig.Multisig
+- uid: AlgoSdk.Multisig.AddressPrefix
+  name: AddressPrefix
+  href: api/AlgoSdk.Multisig.html#AlgoSdk_Multisig_AddressPrefix
+  commentId: F:AlgoSdk.Multisig.AddressPrefix
+  fullName: AlgoSdk.Multisig.AddressPrefix
+  nameWithType: Multisig.AddressPrefix
 - uid: AlgoSdk.Multisig.Equals(AlgoSdk.Multisig)
   name: Equals(Multisig)
   href: api/AlgoSdk.Multisig.html#AlgoSdk_Multisig_Equals_AlgoSdk_Multisig_
@@ -28871,6 +29464,19 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Multisig.Equals
   nameWithType: Multisig.Equals
+- uid: AlgoSdk.Multisig.GetAddress
+  name: GetAddress()
+  href: api/AlgoSdk.Multisig.html#AlgoSdk_Multisig_GetAddress
+  commentId: M:AlgoSdk.Multisig.GetAddress
+  fullName: AlgoSdk.Multisig.GetAddress()
+  nameWithType: Multisig.GetAddress()
+- uid: AlgoSdk.Multisig.GetAddress*
+  name: GetAddress
+  href: api/AlgoSdk.Multisig.html#AlgoSdk_Multisig_GetAddress_
+  commentId: Overload:AlgoSdk.Multisig.GetAddress
+  isSpec: "True"
+  fullName: AlgoSdk.Multisig.GetAddress
+  nameWithType: Multisig.GetAddress
 - uid: AlgoSdk.Multisig.Subsig
   name: Multisig.Subsig
   href: api/AlgoSdk.Multisig.Subsig.html
@@ -28899,6 +29505,15 @@ references:
   fullName.vb: AlgoSdk.Multisig.Subsig.Widening(AlgoSdk.Address to AlgoSdk.Multisig.Subsig)
   nameWithType: Multisig.Subsig.Implicit(Address to Multisig.Subsig)
   nameWithType.vb: Multisig.Subsig.Widening(Address to Multisig.Subsig)
+- uid: AlgoSdk.Multisig.Subsig.op_Implicit(AlgoSdk.Multisig.Subsig)~AlgoSdk.Address
+  name: Implicit(Multisig.Subsig to Address)
+  href: api/AlgoSdk.Multisig.Subsig.html#AlgoSdk_Multisig_Subsig_op_Implicit_AlgoSdk_Multisig_Subsig__AlgoSdk_Address
+  commentId: M:AlgoSdk.Multisig.Subsig.op_Implicit(AlgoSdk.Multisig.Subsig)~AlgoSdk.Address
+  name.vb: Widening(Multisig.Subsig to Address)
+  fullName: AlgoSdk.Multisig.Subsig.Implicit(AlgoSdk.Multisig.Subsig to AlgoSdk.Address)
+  fullName.vb: AlgoSdk.Multisig.Subsig.Widening(AlgoSdk.Multisig.Subsig to AlgoSdk.Address)
+  nameWithType: Multisig.Subsig.Implicit(Multisig.Subsig to Address)
+  nameWithType.vb: Multisig.Subsig.Widening(Multisig.Subsig to Address)
 - uid: AlgoSdk.Multisig.Subsig.op_Implicit*
   name: Implicit
   href: api/AlgoSdk.Multisig.Subsig.html#AlgoSdk_Multisig_Subsig_op_Implicit_
@@ -33248,6 +33863,2210 @@ references:
   commentId: F:AlgoSdk.Wallet.SupportedTransactions
   fullName: AlgoSdk.Wallet.SupportedTransactions
   nameWithType: Wallet.SupportedTransactions
+- uid: AlgoSdk.WalletConnect
+  name: AlgoSdk.WalletConnect
+  href: api/AlgoSdk.WalletConnect.html
+  commentId: N:AlgoSdk.WalletConnect
+  fullName: AlgoSdk.WalletConnect
+  nameWithType: AlgoSdk.WalletConnect
+- uid: AlgoSdk.WalletConnect.AesCipher
+  name: AesCipher
+  href: api/AlgoSdk.WalletConnect.AesCipher.html
+  commentId: T:AlgoSdk.WalletConnect.AesCipher
+  fullName: AlgoSdk.WalletConnect.AesCipher
+  nameWithType: AesCipher
+- uid: AlgoSdk.WalletConnect.AesCipher.DecryptWithKey(System.Byte[],AlgoSdk.WalletConnect.EncryptedPayload)
+  name: DecryptWithKey(Byte[], EncryptedPayload)
+  href: api/AlgoSdk.WalletConnect.AesCipher.html#AlgoSdk_WalletConnect_AesCipher_DecryptWithKey_System_Byte___AlgoSdk_WalletConnect_EncryptedPayload_
+  commentId: M:AlgoSdk.WalletConnect.AesCipher.DecryptWithKey(System.Byte[],AlgoSdk.WalletConnect.EncryptedPayload)
+  name.vb: DecryptWithKey(Byte(), EncryptedPayload)
+  fullName: AlgoSdk.WalletConnect.AesCipher.DecryptWithKey(System.Byte[], AlgoSdk.WalletConnect.EncryptedPayload)
+  fullName.vb: AlgoSdk.WalletConnect.AesCipher.DecryptWithKey(System.Byte(), AlgoSdk.WalletConnect.EncryptedPayload)
+  nameWithType: AesCipher.DecryptWithKey(Byte[], EncryptedPayload)
+  nameWithType.vb: AesCipher.DecryptWithKey(Byte(), EncryptedPayload)
+- uid: AlgoSdk.WalletConnect.AesCipher.DecryptWithKey*
+  name: DecryptWithKey
+  href: api/AlgoSdk.WalletConnect.AesCipher.html#AlgoSdk_WalletConnect_AesCipher_DecryptWithKey_
+  commentId: Overload:AlgoSdk.WalletConnect.AesCipher.DecryptWithKey
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AesCipher.DecryptWithKey
+  nameWithType: AesCipher.DecryptWithKey
+- uid: AlgoSdk.WalletConnect.AesCipher.EncryptWithKey(System.Byte[],System.Byte[])
+  name: EncryptWithKey(Byte[], Byte[])
+  href: api/AlgoSdk.WalletConnect.AesCipher.html#AlgoSdk_WalletConnect_AesCipher_EncryptWithKey_System_Byte___System_Byte___
+  commentId: M:AlgoSdk.WalletConnect.AesCipher.EncryptWithKey(System.Byte[],System.Byte[])
+  name.vb: EncryptWithKey(Byte(), Byte())
+  fullName: AlgoSdk.WalletConnect.AesCipher.EncryptWithKey(System.Byte[], System.Byte[])
+  fullName.vb: AlgoSdk.WalletConnect.AesCipher.EncryptWithKey(System.Byte(), System.Byte())
+  nameWithType: AesCipher.EncryptWithKey(Byte[], Byte[])
+  nameWithType.vb: AesCipher.EncryptWithKey(Byte(), Byte())
+- uid: AlgoSdk.WalletConnect.AesCipher.EncryptWithKey*
+  name: EncryptWithKey
+  href: api/AlgoSdk.WalletConnect.AesCipher.html#AlgoSdk_WalletConnect_AesCipher_EncryptWithKey_
+  commentId: Overload:AlgoSdk.WalletConnect.AesCipher.EncryptWithKey
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AesCipher.EncryptWithKey
+  nameWithType: AesCipher.EncryptWithKey
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession
+  name: AlgorandWalletConnectSession
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html
+  commentId: T:AlgoSdk.WalletConnect.AlgorandWalletConnectSession
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession
+  nameWithType: AlgorandWalletConnectSession
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.#ctor(AlgoSdk.WalletConnect.ClientMeta,System.String)
+  name: AlgorandWalletConnectSession(ClientMeta, String)
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession__ctor_AlgoSdk_WalletConnect_ClientMeta_System_String_
+  commentId: M:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.#ctor(AlgoSdk.WalletConnect.ClientMeta,System.String)
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.AlgorandWalletConnectSession(AlgoSdk.WalletConnect.ClientMeta, System.String)
+  nameWithType: AlgorandWalletConnectSession.AlgorandWalletConnectSession(ClientMeta, String)
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.#ctor(AlgoSdk.WalletConnect.SavedSession)
+  name: AlgorandWalletConnectSession(SavedSession)
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession__ctor_AlgoSdk_WalletConnect_SavedSession_
+  commentId: M:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.#ctor(AlgoSdk.WalletConnect.SavedSession)
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.AlgorandWalletConnectSession(AlgoSdk.WalletConnect.SavedSession)
+  nameWithType: AlgorandWalletConnectSession.AlgorandWalletConnectSession(SavedSession)
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.#ctor*
+  name: AlgorandWalletConnectSession
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession__ctor_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.#ctor
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.AlgorandWalletConnectSession
+  nameWithType: AlgorandWalletConnectSession.AlgorandWalletConnectSession
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Accounts
+  name: Accounts
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Accounts
+  commentId: P:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Accounts
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Accounts
+  nameWithType: AlgorandWalletConnectSession.Accounts
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Accounts*
+  name: Accounts
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Accounts_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Accounts
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Accounts
+  nameWithType: AlgorandWalletConnectSession.Accounts
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.BridgeUrl
+  name: BridgeUrl
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_BridgeUrl
+  commentId: P:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.BridgeUrl
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.BridgeUrl
+  nameWithType: AlgorandWalletConnectSession.BridgeUrl
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.BridgeUrl*
+  name: BridgeUrl
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_BridgeUrl_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.BridgeUrl
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.BridgeUrl
+  nameWithType: AlgorandWalletConnectSession.BridgeUrl
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.ChainId
+  name: ChainId
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_ChainId
+  commentId: P:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.ChainId
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.ChainId
+  nameWithType: AlgorandWalletConnectSession.ChainId
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.ChainId*
+  name: ChainId
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_ChainId_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.ChainId
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.ChainId
+  nameWithType: AlgorandWalletConnectSession.ChainId
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.ClientId
+  name: ClientId
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_ClientId
+  commentId: P:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.ClientId
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.ClientId
+  nameWithType: AlgorandWalletConnectSession.ClientId
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.ClientId*
+  name: ClientId
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_ClientId_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.ClientId
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.ClientId
+  nameWithType: AlgorandWalletConnectSession.ClientId
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.ConnectionStatus
+  name: ConnectionStatus
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_ConnectionStatus
+  commentId: P:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.ConnectionStatus
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.ConnectionStatus
+  nameWithType: AlgorandWalletConnectSession.ConnectionStatus
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.ConnectionStatus*
+  name: ConnectionStatus
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_ConnectionStatus_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.ConnectionStatus
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.ConnectionStatus
+  nameWithType: AlgorandWalletConnectSession.ConnectionStatus
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.DappMeta
+  name: DappMeta
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_DappMeta
+  commentId: P:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.DappMeta
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.DappMeta
+  nameWithType: AlgorandWalletConnectSession.DappMeta
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.DappMeta*
+  name: DappMeta
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_DappMeta_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.DappMeta
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.DappMeta
+  nameWithType: AlgorandWalletConnectSession.DappMeta
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Disconnect(System.String)
+  name: Disconnect(String)
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Disconnect_System_String_
+  commentId: M:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Disconnect(System.String)
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Disconnect(System.String)
+  nameWithType: AlgorandWalletConnectSession.Disconnect(String)
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Disconnect*
+  name: Disconnect
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Disconnect_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Disconnect
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Disconnect
+  nameWithType: AlgorandWalletConnectSession.Disconnect
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Dispose
+  name: Dispose()
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Dispose
+  commentId: M:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Dispose
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Dispose()
+  nameWithType: AlgorandWalletConnectSession.Dispose()
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Dispose*
+  name: Dispose
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Dispose_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Dispose
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Dispose
+  nameWithType: AlgorandWalletConnectSession.Dispose
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.HandshakeId
+  name: HandshakeId
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_HandshakeId
+  commentId: P:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.HandshakeId
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.HandshakeId
+  nameWithType: AlgorandWalletConnectSession.HandshakeId
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.HandshakeId*
+  name: HandshakeId
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_HandshakeId_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.HandshakeId
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.HandshakeId
+  nameWithType: AlgorandWalletConnectSession.HandshakeId
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.HandshakeTopic
+  name: HandshakeTopic
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_HandshakeTopic
+  commentId: P:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.HandshakeTopic
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.HandshakeTopic
+  nameWithType: AlgorandWalletConnectSession.HandshakeTopic
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.HandshakeTopic*
+  name: HandshakeTopic
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_HandshakeTopic_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.HandshakeTopic
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.HandshakeTopic
+  nameWithType: AlgorandWalletConnectSession.HandshakeTopic
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Key
+  name: Key
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Key
+  commentId: P:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Key
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Key
+  nameWithType: AlgorandWalletConnectSession.Key
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Key*
+  name: Key
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Key_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Key
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Key
+  nameWithType: AlgorandWalletConnectSession.Key
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.NetworkId
+  name: NetworkId
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_NetworkId
+  commentId: P:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.NetworkId
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.NetworkId
+  nameWithType: AlgorandWalletConnectSession.NetworkId
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.NetworkId*
+  name: NetworkId
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_NetworkId_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.NetworkId
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.NetworkId
+  nameWithType: AlgorandWalletConnectSession.NetworkId
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnResponseReceived
+  name: OnResponseReceived
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_OnResponseReceived
+  commentId: P:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnResponseReceived
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnResponseReceived
+  nameWithType: AlgorandWalletConnectSession.OnResponseReceived
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnResponseReceived*
+  name: OnResponseReceived
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_OnResponseReceived_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnResponseReceived
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnResponseReceived
+  nameWithType: AlgorandWalletConnectSession.OnResponseReceived
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnSessionConnect
+  name: OnSessionConnect
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_OnSessionConnect
+  commentId: P:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnSessionConnect
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnSessionConnect
+  nameWithType: AlgorandWalletConnectSession.OnSessionConnect
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnSessionConnect*
+  name: OnSessionConnect
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_OnSessionConnect_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnSessionConnect
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnSessionConnect
+  nameWithType: AlgorandWalletConnectSession.OnSessionConnect
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnSessionDisconnect
+  name: OnSessionDisconnect
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_OnSessionDisconnect
+  commentId: P:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnSessionDisconnect
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnSessionDisconnect
+  nameWithType: AlgorandWalletConnectSession.OnSessionDisconnect
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnSessionDisconnect*
+  name: OnSessionDisconnect
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_OnSessionDisconnect_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnSessionDisconnect
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnSessionDisconnect
+  nameWithType: AlgorandWalletConnectSession.OnSessionDisconnect
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnSessionUpdate
+  name: OnSessionUpdate
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_OnSessionUpdate
+  commentId: P:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnSessionUpdate
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnSessionUpdate
+  nameWithType: AlgorandWalletConnectSession.OnSessionUpdate
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnSessionUpdate*
+  name: OnSessionUpdate
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_OnSessionUpdate_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnSessionUpdate
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.OnSessionUpdate
+  nameWithType: AlgorandWalletConnectSession.OnSessionUpdate
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.PeerId
+  name: PeerId
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_PeerId
+  commentId: P:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.PeerId
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.PeerId
+  nameWithType: AlgorandWalletConnectSession.PeerId
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.PeerId*
+  name: PeerId
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_PeerId_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.PeerId
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.PeerId
+  nameWithType: AlgorandWalletConnectSession.PeerId
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Save
+  name: Save()
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Save
+  commentId: M:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Save
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Save()
+  nameWithType: AlgorandWalletConnectSession.Save()
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Save*
+  name: Save
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Save_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Save
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Save
+  nameWithType: AlgorandWalletConnectSession.Save
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.SignTransactions(AlgoSdk.WalletConnect.WalletTransaction[],AlgoSdk.WalletConnect.SignTxnsOpts,CancellationToken)
+  name: SignTransactions(WalletTransaction[], SignTxnsOpts, CancellationToken)
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_SignTransactions_AlgoSdk_WalletConnect_WalletTransaction___AlgoSdk_WalletConnect_SignTxnsOpts_CancellationToken_
+  commentId: M:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.SignTransactions(AlgoSdk.WalletConnect.WalletTransaction[],AlgoSdk.WalletConnect.SignTxnsOpts,CancellationToken)
+  name.vb: SignTransactions(WalletTransaction(), SignTxnsOpts, CancellationToken)
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.SignTransactions(AlgoSdk.WalletConnect.WalletTransaction[], AlgoSdk.WalletConnect.SignTxnsOpts, CancellationToken)
+  fullName.vb: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.SignTransactions(AlgoSdk.WalletConnect.WalletTransaction(), AlgoSdk.WalletConnect.SignTxnsOpts, CancellationToken)
+  nameWithType: AlgorandWalletConnectSession.SignTransactions(WalletTransaction[], SignTxnsOpts, CancellationToken)
+  nameWithType.vb: AlgorandWalletConnectSession.SignTransactions(WalletTransaction(), SignTxnsOpts, CancellationToken)
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.SignTransactions*
+  name: SignTransactions
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_SignTransactions_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.SignTransactions
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.SignTransactions
+  nameWithType: AlgorandWalletConnectSession.SignTransactions
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.StartConnection(CancellationToken)
+  name: StartConnection(CancellationToken)
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_StartConnection_CancellationToken_
+  commentId: M:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.StartConnection(CancellationToken)
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.StartConnection(CancellationToken)
+  nameWithType: AlgorandWalletConnectSession.StartConnection(CancellationToken)
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.StartConnection*
+  name: StartConnection
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_StartConnection_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.StartConnection
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.StartConnection
+  nameWithType: AlgorandWalletConnectSession.StartConnection
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status
+  name: AlgorandWalletConnectSession.Status
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status.html
+  commentId: T:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status
+  nameWithType: AlgorandWalletConnectSession.Status
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status.Connected
+  name: Connected
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Status_Connected
+  commentId: F:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status.Connected
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status.Connected
+  nameWithType: AlgorandWalletConnectSession.Status.Connected
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status.NoConnection
+  name: NoConnection
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Status_NoConnection
+  commentId: F:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status.NoConnection
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status.NoConnection
+  nameWithType: AlgorandWalletConnectSession.Status.NoConnection
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status.RequestingConnection
+  name: RequestingConnection
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Status_RequestingConnection
+  commentId: F:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status.RequestingConnection
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status.RequestingConnection
+  nameWithType: AlgorandWalletConnectSession.Status.RequestingConnection
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status.Unknown
+  name: Unknown
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Status_Unknown
+  commentId: F:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status.Unknown
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Status.Unknown
+  nameWithType: AlgorandWalletConnectSession.Status.Unknown
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Version
+  name: Version
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Version
+  commentId: P:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Version
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Version
+  nameWithType: AlgorandWalletConnectSession.Version
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Version*
+  name: Version
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_Version_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Version
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.Version
+  nameWithType: AlgorandWalletConnectSession.Version
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.WaitForConnectionApproval(CancellationToken)
+  name: WaitForConnectionApproval(CancellationToken)
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_WaitForConnectionApproval_CancellationToken_
+  commentId: M:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.WaitForConnectionApproval(CancellationToken)
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.WaitForConnectionApproval(CancellationToken)
+  nameWithType: AlgorandWalletConnectSession.WaitForConnectionApproval(CancellationToken)
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.WaitForConnectionApproval*
+  name: WaitForConnectionApproval
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_WaitForConnectionApproval_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.WaitForConnectionApproval
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.WaitForConnectionApproval
+  nameWithType: AlgorandWalletConnectSession.WaitForConnectionApproval
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.WalletMeta
+  name: WalletMeta
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_WalletMeta
+  commentId: P:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.WalletMeta
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.WalletMeta
+  nameWithType: AlgorandWalletConnectSession.WalletMeta
+- uid: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.WalletMeta*
+  name: WalletMeta
+  href: api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html#AlgoSdk_WalletConnect_AlgorandWalletConnectSession_WalletMeta_
+  commentId: Overload:AlgoSdk.WalletConnect.AlgorandWalletConnectSession.WalletMeta
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AlgorandWalletConnectSession.WalletMeta
+  nameWithType: AlgorandWalletConnectSession.WalletMeta
+- uid: AlgoSdk.WalletConnect.ClientMeta
+  name: ClientMeta
+  href: api/AlgoSdk.WalletConnect.ClientMeta.html
+  commentId: T:AlgoSdk.WalletConnect.ClientMeta
+  fullName: AlgoSdk.WalletConnect.ClientMeta
+  nameWithType: ClientMeta
+- uid: AlgoSdk.WalletConnect.ClientMeta.Description
+  name: Description
+  href: api/AlgoSdk.WalletConnect.ClientMeta.html#AlgoSdk_WalletConnect_ClientMeta_Description
+  commentId: F:AlgoSdk.WalletConnect.ClientMeta.Description
+  fullName: AlgoSdk.WalletConnect.ClientMeta.Description
+  nameWithType: ClientMeta.Description
+- uid: AlgoSdk.WalletConnect.ClientMeta.Equals(AlgoSdk.WalletConnect.ClientMeta)
+  name: Equals(ClientMeta)
+  href: api/AlgoSdk.WalletConnect.ClientMeta.html#AlgoSdk_WalletConnect_ClientMeta_Equals_AlgoSdk_WalletConnect_ClientMeta_
+  commentId: M:AlgoSdk.WalletConnect.ClientMeta.Equals(AlgoSdk.WalletConnect.ClientMeta)
+  fullName: AlgoSdk.WalletConnect.ClientMeta.Equals(AlgoSdk.WalletConnect.ClientMeta)
+  nameWithType: ClientMeta.Equals(ClientMeta)
+- uid: AlgoSdk.WalletConnect.ClientMeta.Equals*
+  name: Equals
+  href: api/AlgoSdk.WalletConnect.ClientMeta.html#AlgoSdk_WalletConnect_ClientMeta_Equals_
+  commentId: Overload:AlgoSdk.WalletConnect.ClientMeta.Equals
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.ClientMeta.Equals
+  nameWithType: ClientMeta.Equals
+- uid: AlgoSdk.WalletConnect.ClientMeta.IconUrls
+  name: IconUrls
+  href: api/AlgoSdk.WalletConnect.ClientMeta.html#AlgoSdk_WalletConnect_ClientMeta_IconUrls
+  commentId: F:AlgoSdk.WalletConnect.ClientMeta.IconUrls
+  fullName: AlgoSdk.WalletConnect.ClientMeta.IconUrls
+  nameWithType: ClientMeta.IconUrls
+- uid: AlgoSdk.WalletConnect.ClientMeta.Name
+  name: Name
+  href: api/AlgoSdk.WalletConnect.ClientMeta.html#AlgoSdk_WalletConnect_ClientMeta_Name
+  commentId: F:AlgoSdk.WalletConnect.ClientMeta.Name
+  fullName: AlgoSdk.WalletConnect.ClientMeta.Name
+  nameWithType: ClientMeta.Name
+- uid: AlgoSdk.WalletConnect.ClientMeta.Url
+  name: Url
+  href: api/AlgoSdk.WalletConnect.ClientMeta.html#AlgoSdk_WalletConnect_ClientMeta_Url
+  commentId: F:AlgoSdk.WalletConnect.ClientMeta.Url
+  fullName: AlgoSdk.WalletConnect.ClientMeta.Url
+  nameWithType: ClientMeta.Url
+- uid: AlgoSdk.WalletConnect.DefaultBridge
+  name: DefaultBridge
+  href: api/AlgoSdk.WalletConnect.DefaultBridge.html
+  commentId: T:AlgoSdk.WalletConnect.DefaultBridge
+  fullName: AlgoSdk.WalletConnect.DefaultBridge
+  nameWithType: DefaultBridge
+- uid: AlgoSdk.WalletConnect.DefaultBridge.BridgeUrls
+  name: BridgeUrls
+  href: api/AlgoSdk.WalletConnect.DefaultBridge.html#AlgoSdk_WalletConnect_DefaultBridge_BridgeUrls
+  commentId: F:AlgoSdk.WalletConnect.DefaultBridge.BridgeUrls
+  fullName: AlgoSdk.WalletConnect.DefaultBridge.BridgeUrls
+  nameWithType: DefaultBridge.BridgeUrls
+- uid: AlgoSdk.WalletConnect.DefaultBridge.Domain
+  name: Domain
+  href: api/AlgoSdk.WalletConnect.DefaultBridge.html#AlgoSdk_WalletConnect_DefaultBridge_Domain
+  commentId: F:AlgoSdk.WalletConnect.DefaultBridge.Domain
+  fullName: AlgoSdk.WalletConnect.DefaultBridge.Domain
+  nameWithType: DefaultBridge.Domain
+- uid: AlgoSdk.WalletConnect.DefaultBridge.GetRandomBridgeUrl
+  name: GetRandomBridgeUrl()
+  href: api/AlgoSdk.WalletConnect.DefaultBridge.html#AlgoSdk_WalletConnect_DefaultBridge_GetRandomBridgeUrl
+  commentId: M:AlgoSdk.WalletConnect.DefaultBridge.GetRandomBridgeUrl
+  fullName: AlgoSdk.WalletConnect.DefaultBridge.GetRandomBridgeUrl()
+  nameWithType: DefaultBridge.GetRandomBridgeUrl()
+- uid: AlgoSdk.WalletConnect.DefaultBridge.GetRandomBridgeUrl*
+  name: GetRandomBridgeUrl
+  href: api/AlgoSdk.WalletConnect.DefaultBridge.html#AlgoSdk_WalletConnect_DefaultBridge_GetRandomBridgeUrl_
+  commentId: Overload:AlgoSdk.WalletConnect.DefaultBridge.GetRandomBridgeUrl
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.DefaultBridge.GetRandomBridgeUrl
+  nameWithType: DefaultBridge.GetRandomBridgeUrl
+- uid: AlgoSdk.WalletConnect.DefaultBridge.MainBridge
+  name: MainBridge
+  href: api/AlgoSdk.WalletConnect.DefaultBridge.html#AlgoSdk_WalletConnect_DefaultBridge_MainBridge
+  commentId: F:AlgoSdk.WalletConnect.DefaultBridge.MainBridge
+  fullName: AlgoSdk.WalletConnect.DefaultBridge.MainBridge
+  nameWithType: DefaultBridge.MainBridge
+- uid: AlgoSdk.WalletConnect.EncryptedPayload
+  name: EncryptedPayload
+  href: api/AlgoSdk.WalletConnect.EncryptedPayload.html
+  commentId: T:AlgoSdk.WalletConnect.EncryptedPayload
+  fullName: AlgoSdk.WalletConnect.EncryptedPayload
+  nameWithType: EncryptedPayload
+- uid: AlgoSdk.WalletConnect.EncryptedPayload.Data
+  name: Data
+  href: api/AlgoSdk.WalletConnect.EncryptedPayload.html#AlgoSdk_WalletConnect_EncryptedPayload_Data
+  commentId: F:AlgoSdk.WalletConnect.EncryptedPayload.Data
+  fullName: AlgoSdk.WalletConnect.EncryptedPayload.Data
+  nameWithType: EncryptedPayload.Data
+- uid: AlgoSdk.WalletConnect.EncryptedPayload.Iv
+  name: Iv
+  href: api/AlgoSdk.WalletConnect.EncryptedPayload.html#AlgoSdk_WalletConnect_EncryptedPayload_Iv
+  commentId: F:AlgoSdk.WalletConnect.EncryptedPayload.Iv
+  fullName: AlgoSdk.WalletConnect.EncryptedPayload.Iv
+  nameWithType: EncryptedPayload.Iv
+- uid: AlgoSdk.WalletConnect.EncryptedPayload.op_Implicit(System.ValueTuple{System.Byte[],System.Byte[]})~AlgoSdk.WalletConnect.EncryptedPayload
+  name: Implicit((Byte[] iv, Byte[] encryptedData) to EncryptedPayload)
+  href: api/AlgoSdk.WalletConnect.EncryptedPayload.html#AlgoSdk_WalletConnect_EncryptedPayload_op_Implicit_System_ValueTuple_System_Byte___System_Byte_____AlgoSdk_WalletConnect_EncryptedPayload
+  commentId: M:AlgoSdk.WalletConnect.EncryptedPayload.op_Implicit(System.ValueTuple{System.Byte[],System.Byte[]})~AlgoSdk.WalletConnect.EncryptedPayload
+  name.vb: Widening((iv As Byte(), encryptedData As Byte())(Of Byte(), Byte()) to EncryptedPayload)
+  fullName: AlgoSdk.WalletConnect.EncryptedPayload.Implicit(System.ValueTuple<System.Byte[], System.Byte[]> to AlgoSdk.WalletConnect.EncryptedPayload)
+  fullName.vb: AlgoSdk.WalletConnect.EncryptedPayload.Widening(System.ValueTuple(Of System.Byte(), System.Byte()) to AlgoSdk.WalletConnect.EncryptedPayload)
+  nameWithType: EncryptedPayload.Implicit((Byte[] iv, Byte[] encryptedData) to EncryptedPayload)
+  nameWithType.vb: EncryptedPayload.Widening((iv As Byte(), encryptedData As Byte())(Of Byte(), Byte()) to EncryptedPayload)
+- uid: AlgoSdk.WalletConnect.EncryptedPayload.op_Implicit*
+  name: Implicit
+  href: api/AlgoSdk.WalletConnect.EncryptedPayload.html#AlgoSdk_WalletConnect_EncryptedPayload_op_Implicit_
+  commentId: Overload:AlgoSdk.WalletConnect.EncryptedPayload.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: AlgoSdk.WalletConnect.EncryptedPayload.Implicit
+  fullName.vb: AlgoSdk.WalletConnect.EncryptedPayload.Widening
+  nameWithType: EncryptedPayload.Implicit
+  nameWithType.vb: EncryptedPayload.Widening
+- uid: AlgoSdk.WalletConnect.EncryptedPayload.Sign(System.Byte[])
+  name: Sign(Byte[])
+  href: api/AlgoSdk.WalletConnect.EncryptedPayload.html#AlgoSdk_WalletConnect_EncryptedPayload_Sign_System_Byte___
+  commentId: M:AlgoSdk.WalletConnect.EncryptedPayload.Sign(System.Byte[])
+  name.vb: Sign(Byte())
+  fullName: AlgoSdk.WalletConnect.EncryptedPayload.Sign(System.Byte[])
+  fullName.vb: AlgoSdk.WalletConnect.EncryptedPayload.Sign(System.Byte())
+  nameWithType: EncryptedPayload.Sign(Byte[])
+  nameWithType.vb: EncryptedPayload.Sign(Byte())
+- uid: AlgoSdk.WalletConnect.EncryptedPayload.Sign*
+  name: Sign
+  href: api/AlgoSdk.WalletConnect.EncryptedPayload.html#AlgoSdk_WalletConnect_EncryptedPayload_Sign_
+  commentId: Overload:AlgoSdk.WalletConnect.EncryptedPayload.Sign
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.EncryptedPayload.Sign
+  nameWithType: EncryptedPayload.Sign
+- uid: AlgoSdk.WalletConnect.EncryptedPayload.Signature
+  name: Signature
+  href: api/AlgoSdk.WalletConnect.EncryptedPayload.html#AlgoSdk_WalletConnect_EncryptedPayload_Signature
+  commentId: F:AlgoSdk.WalletConnect.EncryptedPayload.Signature
+  fullName: AlgoSdk.WalletConnect.EncryptedPayload.Signature
+  nameWithType: EncryptedPayload.Signature
+- uid: AlgoSdk.WalletConnect.EncryptedPayload.ValidateHmac(System.Byte[])
+  name: ValidateHmac(Byte[])
+  href: api/AlgoSdk.WalletConnect.EncryptedPayload.html#AlgoSdk_WalletConnect_EncryptedPayload_ValidateHmac_System_Byte___
+  commentId: M:AlgoSdk.WalletConnect.EncryptedPayload.ValidateHmac(System.Byte[])
+  name.vb: ValidateHmac(Byte())
+  fullName: AlgoSdk.WalletConnect.EncryptedPayload.ValidateHmac(System.Byte[])
+  fullName.vb: AlgoSdk.WalletConnect.EncryptedPayload.ValidateHmac(System.Byte())
+  nameWithType: EncryptedPayload.ValidateHmac(Byte[])
+  nameWithType.vb: EncryptedPayload.ValidateHmac(Byte())
+- uid: AlgoSdk.WalletConnect.EncryptedPayload.ValidateHmac*
+  name: ValidateHmac
+  href: api/AlgoSdk.WalletConnect.EncryptedPayload.html#AlgoSdk_WalletConnect_EncryptedPayload_ValidateHmac_
+  commentId: Overload:AlgoSdk.WalletConnect.EncryptedPayload.ValidateHmac
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.EncryptedPayload.ValidateHmac
+  nameWithType: EncryptedPayload.ValidateHmac
+- uid: AlgoSdk.WalletConnect.Formatters
+  name: AlgoSdk.WalletConnect.Formatters
+  href: api/AlgoSdk.WalletConnect.Formatters.html
+  commentId: N:AlgoSdk.WalletConnect.Formatters
+  fullName: AlgoSdk.WalletConnect.Formatters
+  nameWithType: AlgoSdk.WalletConnect.Formatters
+- uid: AlgoSdk.WalletConnect.Formatters.HexFormatter
+  name: HexFormatter
+  href: api/AlgoSdk.WalletConnect.Formatters.HexFormatter.html
+  commentId: T:AlgoSdk.WalletConnect.Formatters.HexFormatter
+  fullName: AlgoSdk.WalletConnect.Formatters.HexFormatter
+  nameWithType: HexFormatter
+- uid: AlgoSdk.WalletConnect.Formatters.HexFormatter.Deserialize(JsonReader@)
+  name: Deserialize(ref JsonReader)
+  href: api/AlgoSdk.WalletConnect.Formatters.HexFormatter.html#AlgoSdk_WalletConnect_Formatters_HexFormatter_Deserialize_JsonReader__
+  commentId: M:AlgoSdk.WalletConnect.Formatters.HexFormatter.Deserialize(JsonReader@)
+  name.vb: Deserialize(ByRef JsonReader)
+  fullName: AlgoSdk.WalletConnect.Formatters.HexFormatter.Deserialize(ref JsonReader)
+  fullName.vb: AlgoSdk.WalletConnect.Formatters.HexFormatter.Deserialize(ByRef JsonReader)
+  nameWithType: HexFormatter.Deserialize(ref JsonReader)
+  nameWithType.vb: HexFormatter.Deserialize(ByRef JsonReader)
+- uid: AlgoSdk.WalletConnect.Formatters.HexFormatter.Deserialize(MessagePackReader@)
+  name: Deserialize(ref MessagePackReader)
+  href: api/AlgoSdk.WalletConnect.Formatters.HexFormatter.html#AlgoSdk_WalletConnect_Formatters_HexFormatter_Deserialize_MessagePackReader__
+  commentId: M:AlgoSdk.WalletConnect.Formatters.HexFormatter.Deserialize(MessagePackReader@)
+  name.vb: Deserialize(ByRef MessagePackReader)
+  fullName: AlgoSdk.WalletConnect.Formatters.HexFormatter.Deserialize(ref MessagePackReader)
+  fullName.vb: AlgoSdk.WalletConnect.Formatters.HexFormatter.Deserialize(ByRef MessagePackReader)
+  nameWithType: HexFormatter.Deserialize(ref MessagePackReader)
+  nameWithType.vb: HexFormatter.Deserialize(ByRef MessagePackReader)
+- uid: AlgoSdk.WalletConnect.Formatters.HexFormatter.Deserialize*
+  name: Deserialize
+  href: api/AlgoSdk.WalletConnect.Formatters.HexFormatter.html#AlgoSdk_WalletConnect_Formatters_HexFormatter_Deserialize_
+  commentId: Overload:AlgoSdk.WalletConnect.Formatters.HexFormatter.Deserialize
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.Formatters.HexFormatter.Deserialize
+  nameWithType: HexFormatter.Deserialize
+- uid: AlgoSdk.WalletConnect.Formatters.HexFormatter.Serialize(JsonWriter@,AlgoSdk.WalletConnect.Hex)
+  name: Serialize(ref JsonWriter, Hex)
+  href: api/AlgoSdk.WalletConnect.Formatters.HexFormatter.html#AlgoSdk_WalletConnect_Formatters_HexFormatter_Serialize_JsonWriter__AlgoSdk_WalletConnect_Hex_
+  commentId: M:AlgoSdk.WalletConnect.Formatters.HexFormatter.Serialize(JsonWriter@,AlgoSdk.WalletConnect.Hex)
+  name.vb: Serialize(ByRef JsonWriter, Hex)
+  fullName: AlgoSdk.WalletConnect.Formatters.HexFormatter.Serialize(ref JsonWriter, AlgoSdk.WalletConnect.Hex)
+  fullName.vb: AlgoSdk.WalletConnect.Formatters.HexFormatter.Serialize(ByRef JsonWriter, AlgoSdk.WalletConnect.Hex)
+  nameWithType: HexFormatter.Serialize(ref JsonWriter, Hex)
+  nameWithType.vb: HexFormatter.Serialize(ByRef JsonWriter, Hex)
+- uid: AlgoSdk.WalletConnect.Formatters.HexFormatter.Serialize(MessagePackWriter@,AlgoSdk.WalletConnect.Hex)
+  name: Serialize(ref MessagePackWriter, Hex)
+  href: api/AlgoSdk.WalletConnect.Formatters.HexFormatter.html#AlgoSdk_WalletConnect_Formatters_HexFormatter_Serialize_MessagePackWriter__AlgoSdk_WalletConnect_Hex_
+  commentId: M:AlgoSdk.WalletConnect.Formatters.HexFormatter.Serialize(MessagePackWriter@,AlgoSdk.WalletConnect.Hex)
+  name.vb: Serialize(ByRef MessagePackWriter, Hex)
+  fullName: AlgoSdk.WalletConnect.Formatters.HexFormatter.Serialize(ref MessagePackWriter, AlgoSdk.WalletConnect.Hex)
+  fullName.vb: AlgoSdk.WalletConnect.Formatters.HexFormatter.Serialize(ByRef MessagePackWriter, AlgoSdk.WalletConnect.Hex)
+  nameWithType: HexFormatter.Serialize(ref MessagePackWriter, Hex)
+  nameWithType.vb: HexFormatter.Serialize(ByRef MessagePackWriter, Hex)
+- uid: AlgoSdk.WalletConnect.Formatters.HexFormatter.Serialize*
+  name: Serialize
+  href: api/AlgoSdk.WalletConnect.Formatters.HexFormatter.html#AlgoSdk_WalletConnect_Formatters_HexFormatter_Serialize_
+  commentId: Overload:AlgoSdk.WalletConnect.Formatters.HexFormatter.Serialize
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.Formatters.HexFormatter.Serialize
+  nameWithType: HexFormatter.Serialize
+- uid: AlgoSdk.WalletConnect.Hex
+  name: Hex
+  href: api/AlgoSdk.WalletConnect.Hex.html
+  commentId: T:AlgoSdk.WalletConnect.Hex
+  fullName: AlgoSdk.WalletConnect.Hex
+  nameWithType: Hex
+- uid: AlgoSdk.WalletConnect.Hex.Data
+  name: Data
+  href: api/AlgoSdk.WalletConnect.Hex.html#AlgoSdk_WalletConnect_Hex_Data
+  commentId: P:AlgoSdk.WalletConnect.Hex.Data
+  fullName: AlgoSdk.WalletConnect.Hex.Data
+  nameWithType: Hex.Data
+- uid: AlgoSdk.WalletConnect.Hex.Data*
+  name: Data
+  href: api/AlgoSdk.WalletConnect.Hex.html#AlgoSdk_WalletConnect_Hex_Data_
+  commentId: Overload:AlgoSdk.WalletConnect.Hex.Data
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.Hex.Data
+  nameWithType: Hex.Data
+- uid: AlgoSdk.WalletConnect.Hex.Equals(AlgoSdk.WalletConnect.Hex)
+  name: Equals(Hex)
+  href: api/AlgoSdk.WalletConnect.Hex.html#AlgoSdk_WalletConnect_Hex_Equals_AlgoSdk_WalletConnect_Hex_
+  commentId: M:AlgoSdk.WalletConnect.Hex.Equals(AlgoSdk.WalletConnect.Hex)
+  fullName: AlgoSdk.WalletConnect.Hex.Equals(AlgoSdk.WalletConnect.Hex)
+  nameWithType: Hex.Equals(Hex)
+- uid: AlgoSdk.WalletConnect.Hex.Equals*
+  name: Equals
+  href: api/AlgoSdk.WalletConnect.Hex.html#AlgoSdk_WalletConnect_Hex_Equals_
+  commentId: Overload:AlgoSdk.WalletConnect.Hex.Equals
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.Hex.Equals
+  nameWithType: Hex.Equals
+- uid: AlgoSdk.WalletConnect.Hex.FromString(System.String)
+  name: FromString(String)
+  href: api/AlgoSdk.WalletConnect.Hex.html#AlgoSdk_WalletConnect_Hex_FromString_System_String_
+  commentId: M:AlgoSdk.WalletConnect.Hex.FromString(System.String)
+  fullName: AlgoSdk.WalletConnect.Hex.FromString(System.String)
+  nameWithType: Hex.FromString(String)
+- uid: AlgoSdk.WalletConnect.Hex.FromString*
+  name: FromString
+  href: api/AlgoSdk.WalletConnect.Hex.html#AlgoSdk_WalletConnect_Hex_FromString_
+  commentId: Overload:AlgoSdk.WalletConnect.Hex.FromString
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.Hex.FromString
+  nameWithType: Hex.FromString
+- uid: AlgoSdk.WalletConnect.Hex.op_Implicit(AlgoSdk.WalletConnect.Hex)~System.Byte[]
+  name: Implicit(Hex to Byte[])
+  href: api/AlgoSdk.WalletConnect.Hex.html#AlgoSdk_WalletConnect_Hex_op_Implicit_AlgoSdk_WalletConnect_Hex__System_Byte__
+  commentId: M:AlgoSdk.WalletConnect.Hex.op_Implicit(AlgoSdk.WalletConnect.Hex)~System.Byte[]
+  name.vb: Widening(Hex to Byte())
+  fullName: AlgoSdk.WalletConnect.Hex.Implicit(AlgoSdk.WalletConnect.Hex to System.Byte[])
+  fullName.vb: AlgoSdk.WalletConnect.Hex.Widening(AlgoSdk.WalletConnect.Hex to System.Byte())
+  nameWithType: Hex.Implicit(Hex to Byte[])
+  nameWithType.vb: Hex.Widening(Hex to Byte())
+- uid: AlgoSdk.WalletConnect.Hex.op_Implicit(System.Byte[])~AlgoSdk.WalletConnect.Hex
+  name: Implicit(Byte[] to Hex)
+  href: api/AlgoSdk.WalletConnect.Hex.html#AlgoSdk_WalletConnect_Hex_op_Implicit_System_Byte____AlgoSdk_WalletConnect_Hex
+  commentId: M:AlgoSdk.WalletConnect.Hex.op_Implicit(System.Byte[])~AlgoSdk.WalletConnect.Hex
+  name.vb: Widening(Byte() to Hex)
+  fullName: AlgoSdk.WalletConnect.Hex.Implicit(System.Byte[] to AlgoSdk.WalletConnect.Hex)
+  fullName.vb: AlgoSdk.WalletConnect.Hex.Widening(System.Byte() to AlgoSdk.WalletConnect.Hex)
+  nameWithType: Hex.Implicit(Byte[] to Hex)
+  nameWithType.vb: Hex.Widening(Byte() to Hex)
+- uid: AlgoSdk.WalletConnect.Hex.op_Implicit*
+  name: Implicit
+  href: api/AlgoSdk.WalletConnect.Hex.html#AlgoSdk_WalletConnect_Hex_op_Implicit_
+  commentId: Overload:AlgoSdk.WalletConnect.Hex.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: AlgoSdk.WalletConnect.Hex.Implicit
+  fullName.vb: AlgoSdk.WalletConnect.Hex.Widening
+  nameWithType: Hex.Implicit
+  nameWithType.vb: Hex.Widening
+- uid: AlgoSdk.WalletConnect.Hex.ToString
+  name: ToString()
+  href: api/AlgoSdk.WalletConnect.Hex.html#AlgoSdk_WalletConnect_Hex_ToString
+  commentId: M:AlgoSdk.WalletConnect.Hex.ToString
+  fullName: AlgoSdk.WalletConnect.Hex.ToString()
+  nameWithType: Hex.ToString()
+- uid: AlgoSdk.WalletConnect.Hex.ToString*
+  name: ToString
+  href: api/AlgoSdk.WalletConnect.Hex.html#AlgoSdk_WalletConnect_Hex_ToString_
+  commentId: Overload:AlgoSdk.WalletConnect.Hex.ToString
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.Hex.ToString
+  nameWithType: Hex.ToString
+- uid: AlgoSdk.WalletConnect.IActiveWalletConnectSession`1
+  name: IActiveWalletConnectSession<TSession>
+  href: api/AlgoSdk.WalletConnect.IActiveWalletConnectSession-1.html
+  commentId: T:AlgoSdk.WalletConnect.IActiveWalletConnectSession`1
+  name.vb: IActiveWalletConnectSession(Of TSession)
+  fullName: AlgoSdk.WalletConnect.IActiveWalletConnectSession<TSession>
+  fullName.vb: AlgoSdk.WalletConnect.IActiveWalletConnectSession(Of TSession)
+  nameWithType: IActiveWalletConnectSession<TSession>
+  nameWithType.vb: IActiveWalletConnectSession(Of TSession)
+- uid: AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionConnect
+  name: OnSessionConnect
+  href: api/AlgoSdk.WalletConnect.IActiveWalletConnectSession-1.html#AlgoSdk_WalletConnect_IActiveWalletConnectSession_1_OnSessionConnect
+  commentId: P:AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionConnect
+  fullName: AlgoSdk.WalletConnect.IActiveWalletConnectSession<TSession>.OnSessionConnect
+  fullName.vb: AlgoSdk.WalletConnect.IActiveWalletConnectSession(Of TSession).OnSessionConnect
+  nameWithType: IActiveWalletConnectSession<TSession>.OnSessionConnect
+  nameWithType.vb: IActiveWalletConnectSession(Of TSession).OnSessionConnect
+- uid: AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionConnect*
+  name: OnSessionConnect
+  href: api/AlgoSdk.WalletConnect.IActiveWalletConnectSession-1.html#AlgoSdk_WalletConnect_IActiveWalletConnectSession_1_OnSessionConnect_
+  commentId: Overload:AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionConnect
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IActiveWalletConnectSession<TSession>.OnSessionConnect
+  fullName.vb: AlgoSdk.WalletConnect.IActiveWalletConnectSession(Of TSession).OnSessionConnect
+  nameWithType: IActiveWalletConnectSession<TSession>.OnSessionConnect
+  nameWithType.vb: IActiveWalletConnectSession(Of TSession).OnSessionConnect
+- uid: AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionDisconnect
+  name: OnSessionDisconnect
+  href: api/AlgoSdk.WalletConnect.IActiveWalletConnectSession-1.html#AlgoSdk_WalletConnect_IActiveWalletConnectSession_1_OnSessionDisconnect
+  commentId: P:AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionDisconnect
+  fullName: AlgoSdk.WalletConnect.IActiveWalletConnectSession<TSession>.OnSessionDisconnect
+  fullName.vb: AlgoSdk.WalletConnect.IActiveWalletConnectSession(Of TSession).OnSessionDisconnect
+  nameWithType: IActiveWalletConnectSession<TSession>.OnSessionDisconnect
+  nameWithType.vb: IActiveWalletConnectSession(Of TSession).OnSessionDisconnect
+- uid: AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionDisconnect*
+  name: OnSessionDisconnect
+  href: api/AlgoSdk.WalletConnect.IActiveWalletConnectSession-1.html#AlgoSdk_WalletConnect_IActiveWalletConnectSession_1_OnSessionDisconnect_
+  commentId: Overload:AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionDisconnect
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IActiveWalletConnectSession<TSession>.OnSessionDisconnect
+  fullName.vb: AlgoSdk.WalletConnect.IActiveWalletConnectSession(Of TSession).OnSessionDisconnect
+  nameWithType: IActiveWalletConnectSession<TSession>.OnSessionDisconnect
+  nameWithType.vb: IActiveWalletConnectSession(Of TSession).OnSessionDisconnect
+- uid: AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionUpdate
+  name: OnSessionUpdate
+  href: api/AlgoSdk.WalletConnect.IActiveWalletConnectSession-1.html#AlgoSdk_WalletConnect_IActiveWalletConnectSession_1_OnSessionUpdate
+  commentId: P:AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionUpdate
+  fullName: AlgoSdk.WalletConnect.IActiveWalletConnectSession<TSession>.OnSessionUpdate
+  fullName.vb: AlgoSdk.WalletConnect.IActiveWalletConnectSession(Of TSession).OnSessionUpdate
+  nameWithType: IActiveWalletConnectSession<TSession>.OnSessionUpdate
+  nameWithType.vb: IActiveWalletConnectSession(Of TSession).OnSessionUpdate
+- uid: AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionUpdate*
+  name: OnSessionUpdate
+  href: api/AlgoSdk.WalletConnect.IActiveWalletConnectSession-1.html#AlgoSdk_WalletConnect_IActiveWalletConnectSession_1_OnSessionUpdate_
+  commentId: Overload:AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionUpdate
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IActiveWalletConnectSession<TSession>.OnSessionUpdate
+  fullName.vb: AlgoSdk.WalletConnect.IActiveWalletConnectSession(Of TSession).OnSessionUpdate
+  nameWithType: IActiveWalletConnectSession<TSession>.OnSessionUpdate
+  nameWithType.vb: IActiveWalletConnectSession(Of TSession).OnSessionUpdate
+- uid: AlgoSdk.WalletConnect.IJsonRpcError
+  name: IJsonRpcError
+  href: api/AlgoSdk.WalletConnect.IJsonRpcError.html
+  commentId: T:AlgoSdk.WalletConnect.IJsonRpcError
+  fullName: AlgoSdk.WalletConnect.IJsonRpcError
+  nameWithType: IJsonRpcError
+- uid: AlgoSdk.WalletConnect.IJsonRpcError.Code
+  name: Code
+  href: api/AlgoSdk.WalletConnect.IJsonRpcError.html#AlgoSdk_WalletConnect_IJsonRpcError_Code
+  commentId: P:AlgoSdk.WalletConnect.IJsonRpcError.Code
+  fullName: AlgoSdk.WalletConnect.IJsonRpcError.Code
+  nameWithType: IJsonRpcError.Code
+- uid: AlgoSdk.WalletConnect.IJsonRpcError.Code*
+  name: Code
+  href: api/AlgoSdk.WalletConnect.IJsonRpcError.html#AlgoSdk_WalletConnect_IJsonRpcError_Code_
+  commentId: Overload:AlgoSdk.WalletConnect.IJsonRpcError.Code
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IJsonRpcError.Code
+  nameWithType: IJsonRpcError.Code
+- uid: AlgoSdk.WalletConnect.IJsonRpcError.Data
+  name: Data
+  href: api/AlgoSdk.WalletConnect.IJsonRpcError.html#AlgoSdk_WalletConnect_IJsonRpcError_Data
+  commentId: P:AlgoSdk.WalletConnect.IJsonRpcError.Data
+  fullName: AlgoSdk.WalletConnect.IJsonRpcError.Data
+  nameWithType: IJsonRpcError.Data
+- uid: AlgoSdk.WalletConnect.IJsonRpcError.Data*
+  name: Data
+  href: api/AlgoSdk.WalletConnect.IJsonRpcError.html#AlgoSdk_WalletConnect_IJsonRpcError_Data_
+  commentId: Overload:AlgoSdk.WalletConnect.IJsonRpcError.Data
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IJsonRpcError.Data
+  nameWithType: IJsonRpcError.Data
+- uid: AlgoSdk.WalletConnect.IJsonRpcError.Message
+  name: Message
+  href: api/AlgoSdk.WalletConnect.IJsonRpcError.html#AlgoSdk_WalletConnect_IJsonRpcError_Message
+  commentId: P:AlgoSdk.WalletConnect.IJsonRpcError.Message
+  fullName: AlgoSdk.WalletConnect.IJsonRpcError.Message
+  nameWithType: IJsonRpcError.Message
+- uid: AlgoSdk.WalletConnect.IJsonRpcError.Message*
+  name: Message
+  href: api/AlgoSdk.WalletConnect.IJsonRpcError.html#AlgoSdk_WalletConnect_IJsonRpcError_Message_
+  commentId: Overload:AlgoSdk.WalletConnect.IJsonRpcError.Message
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IJsonRpcError.Message
+  nameWithType: IJsonRpcError.Message
+- uid: AlgoSdk.WalletConnect.IJsonRpcRequest
+  name: IJsonRpcRequest
+  href: api/AlgoSdk.WalletConnect.IJsonRpcRequest.html
+  commentId: T:AlgoSdk.WalletConnect.IJsonRpcRequest
+  fullName: AlgoSdk.WalletConnect.IJsonRpcRequest
+  nameWithType: IJsonRpcRequest
+- uid: AlgoSdk.WalletConnect.IJsonRpcRequest.Id
+  name: Id
+  href: api/AlgoSdk.WalletConnect.IJsonRpcRequest.html#AlgoSdk_WalletConnect_IJsonRpcRequest_Id
+  commentId: P:AlgoSdk.WalletConnect.IJsonRpcRequest.Id
+  fullName: AlgoSdk.WalletConnect.IJsonRpcRequest.Id
+  nameWithType: IJsonRpcRequest.Id
+- uid: AlgoSdk.WalletConnect.IJsonRpcRequest.Id*
+  name: Id
+  href: api/AlgoSdk.WalletConnect.IJsonRpcRequest.html#AlgoSdk_WalletConnect_IJsonRpcRequest_Id_
+  commentId: Overload:AlgoSdk.WalletConnect.IJsonRpcRequest.Id
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IJsonRpcRequest.Id
+  nameWithType: IJsonRpcRequest.Id
+- uid: AlgoSdk.WalletConnect.IJsonRpcRequest.JsonRpc
+  name: JsonRpc
+  href: api/AlgoSdk.WalletConnect.IJsonRpcRequest.html#AlgoSdk_WalletConnect_IJsonRpcRequest_JsonRpc
+  commentId: P:AlgoSdk.WalletConnect.IJsonRpcRequest.JsonRpc
+  fullName: AlgoSdk.WalletConnect.IJsonRpcRequest.JsonRpc
+  nameWithType: IJsonRpcRequest.JsonRpc
+- uid: AlgoSdk.WalletConnect.IJsonRpcRequest.JsonRpc*
+  name: JsonRpc
+  href: api/AlgoSdk.WalletConnect.IJsonRpcRequest.html#AlgoSdk_WalletConnect_IJsonRpcRequest_JsonRpc_
+  commentId: Overload:AlgoSdk.WalletConnect.IJsonRpcRequest.JsonRpc
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IJsonRpcRequest.JsonRpc
+  nameWithType: IJsonRpcRequest.JsonRpc
+- uid: AlgoSdk.WalletConnect.IJsonRpcRequest.Method
+  name: Method
+  href: api/AlgoSdk.WalletConnect.IJsonRpcRequest.html#AlgoSdk_WalletConnect_IJsonRpcRequest_Method
+  commentId: P:AlgoSdk.WalletConnect.IJsonRpcRequest.Method
+  fullName: AlgoSdk.WalletConnect.IJsonRpcRequest.Method
+  nameWithType: IJsonRpcRequest.Method
+- uid: AlgoSdk.WalletConnect.IJsonRpcRequest.Method*
+  name: Method
+  href: api/AlgoSdk.WalletConnect.IJsonRpcRequest.html#AlgoSdk_WalletConnect_IJsonRpcRequest_Method_
+  commentId: Overload:AlgoSdk.WalletConnect.IJsonRpcRequest.Method
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IJsonRpcRequest.Method
+  nameWithType: IJsonRpcRequest.Method
+- uid: AlgoSdk.WalletConnect.IJsonRpcRequest`1
+  name: IJsonRpcRequest<T>
+  href: api/AlgoSdk.WalletConnect.IJsonRpcRequest-1.html
+  commentId: T:AlgoSdk.WalletConnect.IJsonRpcRequest`1
+  name.vb: IJsonRpcRequest(Of T)
+  fullName: AlgoSdk.WalletConnect.IJsonRpcRequest<T>
+  fullName.vb: AlgoSdk.WalletConnect.IJsonRpcRequest(Of T)
+  nameWithType: IJsonRpcRequest<T>
+  nameWithType.vb: IJsonRpcRequest(Of T)
+- uid: AlgoSdk.WalletConnect.IJsonRpcRequest`1.Params
+  name: Params
+  href: api/AlgoSdk.WalletConnect.IJsonRpcRequest-1.html#AlgoSdk_WalletConnect_IJsonRpcRequest_1_Params
+  commentId: P:AlgoSdk.WalletConnect.IJsonRpcRequest`1.Params
+  fullName: AlgoSdk.WalletConnect.IJsonRpcRequest<T>.Params
+  fullName.vb: AlgoSdk.WalletConnect.IJsonRpcRequest(Of T).Params
+  nameWithType: IJsonRpcRequest<T>.Params
+  nameWithType.vb: IJsonRpcRequest(Of T).Params
+- uid: AlgoSdk.WalletConnect.IJsonRpcRequest`1.Params*
+  name: Params
+  href: api/AlgoSdk.WalletConnect.IJsonRpcRequest-1.html#AlgoSdk_WalletConnect_IJsonRpcRequest_1_Params_
+  commentId: Overload:AlgoSdk.WalletConnect.IJsonRpcRequest`1.Params
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IJsonRpcRequest<T>.Params
+  fullName.vb: AlgoSdk.WalletConnect.IJsonRpcRequest(Of T).Params
+  nameWithType: IJsonRpcRequest<T>.Params
+  nameWithType.vb: IJsonRpcRequest(Of T).Params
+- uid: AlgoSdk.WalletConnect.IJsonRpcResponse
+  name: IJsonRpcResponse
+  href: api/AlgoSdk.WalletConnect.IJsonRpcResponse.html
+  commentId: T:AlgoSdk.WalletConnect.IJsonRpcResponse
+  fullName: AlgoSdk.WalletConnect.IJsonRpcResponse
+  nameWithType: IJsonRpcResponse
+- uid: AlgoSdk.WalletConnect.IJsonRpcResponse.Error
+  name: Error
+  href: api/AlgoSdk.WalletConnect.IJsonRpcResponse.html#AlgoSdk_WalletConnect_IJsonRpcResponse_Error
+  commentId: P:AlgoSdk.WalletConnect.IJsonRpcResponse.Error
+  fullName: AlgoSdk.WalletConnect.IJsonRpcResponse.Error
+  nameWithType: IJsonRpcResponse.Error
+- uid: AlgoSdk.WalletConnect.IJsonRpcResponse.Error*
+  name: Error
+  href: api/AlgoSdk.WalletConnect.IJsonRpcResponse.html#AlgoSdk_WalletConnect_IJsonRpcResponse_Error_
+  commentId: Overload:AlgoSdk.WalletConnect.IJsonRpcResponse.Error
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IJsonRpcResponse.Error
+  nameWithType: IJsonRpcResponse.Error
+- uid: AlgoSdk.WalletConnect.IJsonRpcResponse.Id
+  name: Id
+  href: api/AlgoSdk.WalletConnect.IJsonRpcResponse.html#AlgoSdk_WalletConnect_IJsonRpcResponse_Id
+  commentId: P:AlgoSdk.WalletConnect.IJsonRpcResponse.Id
+  fullName: AlgoSdk.WalletConnect.IJsonRpcResponse.Id
+  nameWithType: IJsonRpcResponse.Id
+- uid: AlgoSdk.WalletConnect.IJsonRpcResponse.Id*
+  name: Id
+  href: api/AlgoSdk.WalletConnect.IJsonRpcResponse.html#AlgoSdk_WalletConnect_IJsonRpcResponse_Id_
+  commentId: Overload:AlgoSdk.WalletConnect.IJsonRpcResponse.Id
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IJsonRpcResponse.Id
+  nameWithType: IJsonRpcResponse.Id
+- uid: AlgoSdk.WalletConnect.IJsonRpcResponse.IsError
+  name: IsError
+  href: api/AlgoSdk.WalletConnect.IJsonRpcResponse.html#AlgoSdk_WalletConnect_IJsonRpcResponse_IsError
+  commentId: P:AlgoSdk.WalletConnect.IJsonRpcResponse.IsError
+  fullName: AlgoSdk.WalletConnect.IJsonRpcResponse.IsError
+  nameWithType: IJsonRpcResponse.IsError
+- uid: AlgoSdk.WalletConnect.IJsonRpcResponse.IsError*
+  name: IsError
+  href: api/AlgoSdk.WalletConnect.IJsonRpcResponse.html#AlgoSdk_WalletConnect_IJsonRpcResponse_IsError_
+  commentId: Overload:AlgoSdk.WalletConnect.IJsonRpcResponse.IsError
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IJsonRpcResponse.IsError
+  nameWithType: IJsonRpcResponse.IsError
+- uid: AlgoSdk.WalletConnect.IJsonRpcResponse.JsonRpc
+  name: JsonRpc
+  href: api/AlgoSdk.WalletConnect.IJsonRpcResponse.html#AlgoSdk_WalletConnect_IJsonRpcResponse_JsonRpc
+  commentId: P:AlgoSdk.WalletConnect.IJsonRpcResponse.JsonRpc
+  fullName: AlgoSdk.WalletConnect.IJsonRpcResponse.JsonRpc
+  nameWithType: IJsonRpcResponse.JsonRpc
+- uid: AlgoSdk.WalletConnect.IJsonRpcResponse.JsonRpc*
+  name: JsonRpc
+  href: api/AlgoSdk.WalletConnect.IJsonRpcResponse.html#AlgoSdk_WalletConnect_IJsonRpcResponse_JsonRpc_
+  commentId: Overload:AlgoSdk.WalletConnect.IJsonRpcResponse.JsonRpc
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IJsonRpcResponse.JsonRpc
+  nameWithType: IJsonRpcResponse.JsonRpc
+- uid: AlgoSdk.WalletConnect.IJsonRpcResponse`1
+  name: IJsonRpcResponse<T>
+  href: api/AlgoSdk.WalletConnect.IJsonRpcResponse-1.html
+  commentId: T:AlgoSdk.WalletConnect.IJsonRpcResponse`1
+  name.vb: IJsonRpcResponse(Of T)
+  fullName: AlgoSdk.WalletConnect.IJsonRpcResponse<T>
+  fullName.vb: AlgoSdk.WalletConnect.IJsonRpcResponse(Of T)
+  nameWithType: IJsonRpcResponse<T>
+  nameWithType.vb: IJsonRpcResponse(Of T)
+- uid: AlgoSdk.WalletConnect.IJsonRpcResponse`1.Result
+  name: Result
+  href: api/AlgoSdk.WalletConnect.IJsonRpcResponse-1.html#AlgoSdk_WalletConnect_IJsonRpcResponse_1_Result
+  commentId: P:AlgoSdk.WalletConnect.IJsonRpcResponse`1.Result
+  fullName: AlgoSdk.WalletConnect.IJsonRpcResponse<T>.Result
+  fullName.vb: AlgoSdk.WalletConnect.IJsonRpcResponse(Of T).Result
+  nameWithType: IJsonRpcResponse<T>.Result
+  nameWithType.vb: IJsonRpcResponse(Of T).Result
+- uid: AlgoSdk.WalletConnect.IJsonRpcResponse`1.Result*
+  name: Result
+  href: api/AlgoSdk.WalletConnect.IJsonRpcResponse-1.html#AlgoSdk_WalletConnect_IJsonRpcResponse_1_Result_
+  commentId: Overload:AlgoSdk.WalletConnect.IJsonRpcResponse`1.Result
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IJsonRpcResponse<T>.Result
+  fullName.vb: AlgoSdk.WalletConnect.IJsonRpcResponse(Of T).Result
+  nameWithType: IJsonRpcResponse<T>.Result
+  nameWithType.vb: IJsonRpcResponse(Of T).Result
+- uid: AlgoSdk.WalletConnect.IWalletConnectSessionData
+  name: IWalletConnectSessionData
+  href: api/AlgoSdk.WalletConnect.IWalletConnectSessionData.html
+  commentId: T:AlgoSdk.WalletConnect.IWalletConnectSessionData
+  fullName: AlgoSdk.WalletConnect.IWalletConnectSessionData
+  nameWithType: IWalletConnectSessionData
+- uid: AlgoSdk.WalletConnect.IWalletConnectSessionData.Accounts
+  name: Accounts
+  href: api/AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_Accounts
+  commentId: P:AlgoSdk.WalletConnect.IWalletConnectSessionData.Accounts
+  fullName: AlgoSdk.WalletConnect.IWalletConnectSessionData.Accounts
+  nameWithType: IWalletConnectSessionData.Accounts
+- uid: AlgoSdk.WalletConnect.IWalletConnectSessionData.Accounts*
+  name: Accounts
+  href: api/AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_Accounts_
+  commentId: Overload:AlgoSdk.WalletConnect.IWalletConnectSessionData.Accounts
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IWalletConnectSessionData.Accounts
+  nameWithType: IWalletConnectSessionData.Accounts
+- uid: AlgoSdk.WalletConnect.IWalletConnectSessionData.BridgeUrl
+  name: BridgeUrl
+  href: api/AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_BridgeUrl
+  commentId: P:AlgoSdk.WalletConnect.IWalletConnectSessionData.BridgeUrl
+  fullName: AlgoSdk.WalletConnect.IWalletConnectSessionData.BridgeUrl
+  nameWithType: IWalletConnectSessionData.BridgeUrl
+- uid: AlgoSdk.WalletConnect.IWalletConnectSessionData.BridgeUrl*
+  name: BridgeUrl
+  href: api/AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_BridgeUrl_
+  commentId: Overload:AlgoSdk.WalletConnect.IWalletConnectSessionData.BridgeUrl
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IWalletConnectSessionData.BridgeUrl
+  nameWithType: IWalletConnectSessionData.BridgeUrl
+- uid: AlgoSdk.WalletConnect.IWalletConnectSessionData.ChainId
+  name: ChainId
+  href: api/AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_ChainId
+  commentId: P:AlgoSdk.WalletConnect.IWalletConnectSessionData.ChainId
+  fullName: AlgoSdk.WalletConnect.IWalletConnectSessionData.ChainId
+  nameWithType: IWalletConnectSessionData.ChainId
+- uid: AlgoSdk.WalletConnect.IWalletConnectSessionData.ChainId*
+  name: ChainId
+  href: api/AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_ChainId_
+  commentId: Overload:AlgoSdk.WalletConnect.IWalletConnectSessionData.ChainId
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IWalletConnectSessionData.ChainId
+  nameWithType: IWalletConnectSessionData.ChainId
+- uid: AlgoSdk.WalletConnect.IWalletConnectSessionData.ClientId
+  name: ClientId
+  href: api/AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_ClientId
+  commentId: P:AlgoSdk.WalletConnect.IWalletConnectSessionData.ClientId
+  fullName: AlgoSdk.WalletConnect.IWalletConnectSessionData.ClientId
+  nameWithType: IWalletConnectSessionData.ClientId
+- uid: AlgoSdk.WalletConnect.IWalletConnectSessionData.ClientId*
+  name: ClientId
+  href: api/AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_ClientId_
+  commentId: Overload:AlgoSdk.WalletConnect.IWalletConnectSessionData.ClientId
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IWalletConnectSessionData.ClientId
+  nameWithType: IWalletConnectSessionData.ClientId
+- uid: AlgoSdk.WalletConnect.IWalletConnectSessionData.DappMeta
+  name: DappMeta
+  href: api/AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_DappMeta
+  commentId: P:AlgoSdk.WalletConnect.IWalletConnectSessionData.DappMeta
+  fullName: AlgoSdk.WalletConnect.IWalletConnectSessionData.DappMeta
+  nameWithType: IWalletConnectSessionData.DappMeta
+- uid: AlgoSdk.WalletConnect.IWalletConnectSessionData.DappMeta*
+  name: DappMeta
+  href: api/AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_DappMeta_
+  commentId: Overload:AlgoSdk.WalletConnect.IWalletConnectSessionData.DappMeta
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IWalletConnectSessionData.DappMeta
+  nameWithType: IWalletConnectSessionData.DappMeta
+- uid: AlgoSdk.WalletConnect.IWalletConnectSessionData.HandshakeId
+  name: HandshakeId
+  href: api/AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_HandshakeId
+  commentId: P:AlgoSdk.WalletConnect.IWalletConnectSessionData.HandshakeId
+  fullName: AlgoSdk.WalletConnect.IWalletConnectSessionData.HandshakeId
+  nameWithType: IWalletConnectSessionData.HandshakeId
+- uid: AlgoSdk.WalletConnect.IWalletConnectSessionData.HandshakeId*
+  name: HandshakeId
+  href: api/AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_HandshakeId_
+  commentId: Overload:AlgoSdk.WalletConnect.IWalletConnectSessionData.HandshakeId
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IWalletConnectSessionData.HandshakeId
+  nameWithType: IWalletConnectSessionData.HandshakeId
+- uid: AlgoSdk.WalletConnect.IWalletConnectSessionData.Key
+  name: Key
+  href: api/AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_Key
+  commentId: P:AlgoSdk.WalletConnect.IWalletConnectSessionData.Key
+  fullName: AlgoSdk.WalletConnect.IWalletConnectSessionData.Key
+  nameWithType: IWalletConnectSessionData.Key
+- uid: AlgoSdk.WalletConnect.IWalletConnectSessionData.Key*
+  name: Key
+  href: api/AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_Key_
+  commentId: Overload:AlgoSdk.WalletConnect.IWalletConnectSessionData.Key
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IWalletConnectSessionData.Key
+  nameWithType: IWalletConnectSessionData.Key
+- uid: AlgoSdk.WalletConnect.IWalletConnectSessionData.NetworkId
+  name: NetworkId
+  href: api/AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_NetworkId
+  commentId: P:AlgoSdk.WalletConnect.IWalletConnectSessionData.NetworkId
+  fullName: AlgoSdk.WalletConnect.IWalletConnectSessionData.NetworkId
+  nameWithType: IWalletConnectSessionData.NetworkId
+- uid: AlgoSdk.WalletConnect.IWalletConnectSessionData.NetworkId*
+  name: NetworkId
+  href: api/AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_NetworkId_
+  commentId: Overload:AlgoSdk.WalletConnect.IWalletConnectSessionData.NetworkId
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IWalletConnectSessionData.NetworkId
+  nameWithType: IWalletConnectSessionData.NetworkId
+- uid: AlgoSdk.WalletConnect.IWalletConnectSessionData.PeerId
+  name: PeerId
+  href: api/AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_PeerId
+  commentId: P:AlgoSdk.WalletConnect.IWalletConnectSessionData.PeerId
+  fullName: AlgoSdk.WalletConnect.IWalletConnectSessionData.PeerId
+  nameWithType: IWalletConnectSessionData.PeerId
+- uid: AlgoSdk.WalletConnect.IWalletConnectSessionData.PeerId*
+  name: PeerId
+  href: api/AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_PeerId_
+  commentId: Overload:AlgoSdk.WalletConnect.IWalletConnectSessionData.PeerId
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IWalletConnectSessionData.PeerId
+  nameWithType: IWalletConnectSessionData.PeerId
+- uid: AlgoSdk.WalletConnect.IWalletConnectSessionData.WalletMeta
+  name: WalletMeta
+  href: api/AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_WalletMeta
+  commentId: P:AlgoSdk.WalletConnect.IWalletConnectSessionData.WalletMeta
+  fullName: AlgoSdk.WalletConnect.IWalletConnectSessionData.WalletMeta
+  nameWithType: IWalletConnectSessionData.WalletMeta
+- uid: AlgoSdk.WalletConnect.IWalletConnectSessionData.WalletMeta*
+  name: WalletMeta
+  href: api/AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_WalletMeta_
+  commentId: Overload:AlgoSdk.WalletConnect.IWalletConnectSessionData.WalletMeta
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.IWalletConnectSessionData.WalletMeta
+  nameWithType: IWalletConnectSessionData.WalletMeta
+- uid: AlgoSdk.WalletConnect.JsonRpc
+  name: JsonRpc
+  href: api/AlgoSdk.WalletConnect.JsonRpc.html
+  commentId: T:AlgoSdk.WalletConnect.JsonRpc
+  fullName: AlgoSdk.WalletConnect.JsonRpc
+  nameWithType: JsonRpc
+- uid: AlgoSdk.WalletConnect.JsonRpc.ReadJsonRpcPayload(WebSocketEvent,AlgoSdk.WalletConnect.Hex)
+  name: ReadJsonRpcPayload(WebSocketEvent, Hex)
+  href: api/AlgoSdk.WalletConnect.JsonRpc.html#AlgoSdk_WalletConnect_JsonRpc_ReadJsonRpcPayload_WebSocketEvent_AlgoSdk_WalletConnect_Hex_
+  commentId: M:AlgoSdk.WalletConnect.JsonRpc.ReadJsonRpcPayload(WebSocketEvent,AlgoSdk.WalletConnect.Hex)
+  fullName: AlgoSdk.WalletConnect.JsonRpc.ReadJsonRpcPayload(WebSocketEvent, AlgoSdk.WalletConnect.Hex)
+  nameWithType: JsonRpc.ReadJsonRpcPayload(WebSocketEvent, Hex)
+- uid: AlgoSdk.WalletConnect.JsonRpc.ReadJsonRpcPayload*
+  name: ReadJsonRpcPayload
+  href: api/AlgoSdk.WalletConnect.JsonRpc.html#AlgoSdk_WalletConnect_JsonRpc_ReadJsonRpcPayload_
+  commentId: Overload:AlgoSdk.WalletConnect.JsonRpc.ReadJsonRpcPayload
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.JsonRpc.ReadJsonRpcPayload
+  nameWithType: JsonRpc.ReadJsonRpcPayload
+- uid: AlgoSdk.WalletConnect.JsonRpc.ToNetworkMessage*
+  name: ToNetworkMessage
+  href: api/AlgoSdk.WalletConnect.JsonRpc.html#AlgoSdk_WalletConnect_JsonRpc_ToNetworkMessage_
+  commentId: Overload:AlgoSdk.WalletConnect.JsonRpc.ToNetworkMessage
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.JsonRpc.ToNetworkMessage
+  nameWithType: JsonRpc.ToNetworkMessage
+- uid: AlgoSdk.WalletConnect.JsonRpc.ToNetworkMessage``1(``0,AlgoSdk.WalletConnect.Hex,System.String)
+  name: ToNetworkMessage<T>(T, Hex, String)
+  href: api/AlgoSdk.WalletConnect.JsonRpc.html#AlgoSdk_WalletConnect_JsonRpc_ToNetworkMessage__1___0_AlgoSdk_WalletConnect_Hex_System_String_
+  commentId: M:AlgoSdk.WalletConnect.JsonRpc.ToNetworkMessage``1(``0,AlgoSdk.WalletConnect.Hex,System.String)
+  name.vb: ToNetworkMessage(Of T)(T, Hex, String)
+  fullName: AlgoSdk.WalletConnect.JsonRpc.ToNetworkMessage<T>(T, AlgoSdk.WalletConnect.Hex, System.String)
+  fullName.vb: AlgoSdk.WalletConnect.JsonRpc.ToNetworkMessage(Of T)(T, AlgoSdk.WalletConnect.Hex, System.String)
+  nameWithType: JsonRpc.ToNetworkMessage<T>(T, Hex, String)
+  nameWithType.vb: JsonRpc.ToNetworkMessage(Of T)(T, Hex, String)
+- uid: AlgoSdk.WalletConnect.JsonRpcError
+  name: JsonRpcError
+  href: api/AlgoSdk.WalletConnect.JsonRpcError.html
+  commentId: T:AlgoSdk.WalletConnect.JsonRpcError
+  fullName: AlgoSdk.WalletConnect.JsonRpcError
+  nameWithType: JsonRpcError
+- uid: AlgoSdk.WalletConnect.JsonRpcError.Code
+  name: Code
+  href: api/AlgoSdk.WalletConnect.JsonRpcError.html#AlgoSdk_WalletConnect_JsonRpcError_Code
+  commentId: P:AlgoSdk.WalletConnect.JsonRpcError.Code
+  fullName: AlgoSdk.WalletConnect.JsonRpcError.Code
+  nameWithType: JsonRpcError.Code
+- uid: AlgoSdk.WalletConnect.JsonRpcError.Code*
+  name: Code
+  href: api/AlgoSdk.WalletConnect.JsonRpcError.html#AlgoSdk_WalletConnect_JsonRpcError_Code_
+  commentId: Overload:AlgoSdk.WalletConnect.JsonRpcError.Code
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.JsonRpcError.Code
+  nameWithType: JsonRpcError.Code
+- uid: AlgoSdk.WalletConnect.JsonRpcError.Data
+  name: Data
+  href: api/AlgoSdk.WalletConnect.JsonRpcError.html#AlgoSdk_WalletConnect_JsonRpcError_Data
+  commentId: P:AlgoSdk.WalletConnect.JsonRpcError.Data
+  fullName: AlgoSdk.WalletConnect.JsonRpcError.Data
+  nameWithType: JsonRpcError.Data
+- uid: AlgoSdk.WalletConnect.JsonRpcError.Data*
+  name: Data
+  href: api/AlgoSdk.WalletConnect.JsonRpcError.html#AlgoSdk_WalletConnect_JsonRpcError_Data_
+  commentId: Overload:AlgoSdk.WalletConnect.JsonRpcError.Data
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.JsonRpcError.Data
+  nameWithType: JsonRpcError.Data
+- uid: AlgoSdk.WalletConnect.JsonRpcError.Equals(AlgoSdk.WalletConnect.JsonRpcError)
+  name: Equals(JsonRpcError)
+  href: api/AlgoSdk.WalletConnect.JsonRpcError.html#AlgoSdk_WalletConnect_JsonRpcError_Equals_AlgoSdk_WalletConnect_JsonRpcError_
+  commentId: M:AlgoSdk.WalletConnect.JsonRpcError.Equals(AlgoSdk.WalletConnect.JsonRpcError)
+  fullName: AlgoSdk.WalletConnect.JsonRpcError.Equals(AlgoSdk.WalletConnect.JsonRpcError)
+  nameWithType: JsonRpcError.Equals(JsonRpcError)
+- uid: AlgoSdk.WalletConnect.JsonRpcError.Equals*
+  name: Equals
+  href: api/AlgoSdk.WalletConnect.JsonRpcError.html#AlgoSdk_WalletConnect_JsonRpcError_Equals_
+  commentId: Overload:AlgoSdk.WalletConnect.JsonRpcError.Equals
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.JsonRpcError.Equals
+  nameWithType: JsonRpcError.Equals
+- uid: AlgoSdk.WalletConnect.JsonRpcError.Message
+  name: Message
+  href: api/AlgoSdk.WalletConnect.JsonRpcError.html#AlgoSdk_WalletConnect_JsonRpcError_Message
+  commentId: P:AlgoSdk.WalletConnect.JsonRpcError.Message
+  fullName: AlgoSdk.WalletConnect.JsonRpcError.Message
+  nameWithType: JsonRpcError.Message
+- uid: AlgoSdk.WalletConnect.JsonRpcError.Message*
+  name: Message
+  href: api/AlgoSdk.WalletConnect.JsonRpcError.html#AlgoSdk_WalletConnect_JsonRpcError_Message_
+  commentId: Overload:AlgoSdk.WalletConnect.JsonRpcError.Message
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.JsonRpcError.Message
+  nameWithType: JsonRpcError.Message
+- uid: AlgoSdk.WalletConnect.JsonRpcRequest
+  name: JsonRpcRequest
+  href: api/AlgoSdk.WalletConnect.JsonRpcRequest.html
+  commentId: T:AlgoSdk.WalletConnect.JsonRpcRequest
+  fullName: AlgoSdk.WalletConnect.JsonRpcRequest
+  nameWithType: JsonRpcRequest
+- uid: AlgoSdk.WalletConnect.JsonRpcRequest.Equals(AlgoSdk.WalletConnect.JsonRpcRequest)
+  name: Equals(JsonRpcRequest)
+  href: api/AlgoSdk.WalletConnect.JsonRpcRequest.html#AlgoSdk_WalletConnect_JsonRpcRequest_Equals_AlgoSdk_WalletConnect_JsonRpcRequest_
+  commentId: M:AlgoSdk.WalletConnect.JsonRpcRequest.Equals(AlgoSdk.WalletConnect.JsonRpcRequest)
+  fullName: AlgoSdk.WalletConnect.JsonRpcRequest.Equals(AlgoSdk.WalletConnect.JsonRpcRequest)
+  nameWithType: JsonRpcRequest.Equals(JsonRpcRequest)
+- uid: AlgoSdk.WalletConnect.JsonRpcRequest.Equals*
+  name: Equals
+  href: api/AlgoSdk.WalletConnect.JsonRpcRequest.html#AlgoSdk_WalletConnect_JsonRpcRequest_Equals_
+  commentId: Overload:AlgoSdk.WalletConnect.JsonRpcRequest.Equals
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.JsonRpcRequest.Equals
+  nameWithType: JsonRpcRequest.Equals
+- uid: AlgoSdk.WalletConnect.JsonRpcRequest.Id
+  name: Id
+  href: api/AlgoSdk.WalletConnect.JsonRpcRequest.html#AlgoSdk_WalletConnect_JsonRpcRequest_Id
+  commentId: P:AlgoSdk.WalletConnect.JsonRpcRequest.Id
+  fullName: AlgoSdk.WalletConnect.JsonRpcRequest.Id
+  nameWithType: JsonRpcRequest.Id
+- uid: AlgoSdk.WalletConnect.JsonRpcRequest.Id*
+  name: Id
+  href: api/AlgoSdk.WalletConnect.JsonRpcRequest.html#AlgoSdk_WalletConnect_JsonRpcRequest_Id_
+  commentId: Overload:AlgoSdk.WalletConnect.JsonRpcRequest.Id
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.JsonRpcRequest.Id
+  nameWithType: JsonRpcRequest.Id
+- uid: AlgoSdk.WalletConnect.JsonRpcRequest.JsonRpc
+  name: JsonRpc
+  href: api/AlgoSdk.WalletConnect.JsonRpcRequest.html#AlgoSdk_WalletConnect_JsonRpcRequest_JsonRpc
+  commentId: P:AlgoSdk.WalletConnect.JsonRpcRequest.JsonRpc
+  fullName: AlgoSdk.WalletConnect.JsonRpcRequest.JsonRpc
+  nameWithType: JsonRpcRequest.JsonRpc
+- uid: AlgoSdk.WalletConnect.JsonRpcRequest.JsonRpc*
+  name: JsonRpc
+  href: api/AlgoSdk.WalletConnect.JsonRpcRequest.html#AlgoSdk_WalletConnect_JsonRpcRequest_JsonRpc_
+  commentId: Overload:AlgoSdk.WalletConnect.JsonRpcRequest.JsonRpc
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.JsonRpcRequest.JsonRpc
+  nameWithType: JsonRpcRequest.JsonRpc
+- uid: AlgoSdk.WalletConnect.JsonRpcRequest.Method
+  name: Method
+  href: api/AlgoSdk.WalletConnect.JsonRpcRequest.html#AlgoSdk_WalletConnect_JsonRpcRequest_Method
+  commentId: P:AlgoSdk.WalletConnect.JsonRpcRequest.Method
+  fullName: AlgoSdk.WalletConnect.JsonRpcRequest.Method
+  nameWithType: JsonRpcRequest.Method
+- uid: AlgoSdk.WalletConnect.JsonRpcRequest.Method*
+  name: Method
+  href: api/AlgoSdk.WalletConnect.JsonRpcRequest.html#AlgoSdk_WalletConnect_JsonRpcRequest_Method_
+  commentId: Overload:AlgoSdk.WalletConnect.JsonRpcRequest.Method
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.JsonRpcRequest.Method
+  nameWithType: JsonRpcRequest.Method
+- uid: AlgoSdk.WalletConnect.JsonRpcRequest.Params
+  name: Params
+  href: api/AlgoSdk.WalletConnect.JsonRpcRequest.html#AlgoSdk_WalletConnect_JsonRpcRequest_Params
+  commentId: P:AlgoSdk.WalletConnect.JsonRpcRequest.Params
+  fullName: AlgoSdk.WalletConnect.JsonRpcRequest.Params
+  nameWithType: JsonRpcRequest.Params
+- uid: AlgoSdk.WalletConnect.JsonRpcRequest.Params*
+  name: Params
+  href: api/AlgoSdk.WalletConnect.JsonRpcRequest.html#AlgoSdk_WalletConnect_JsonRpcRequest_Params_
+  commentId: Overload:AlgoSdk.WalletConnect.JsonRpcRequest.Params
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.JsonRpcRequest.Params
+  nameWithType: JsonRpcRequest.Params
+- uid: AlgoSdk.WalletConnect.JsonRpcResponse
+  name: JsonRpcResponse
+  href: api/AlgoSdk.WalletConnect.JsonRpcResponse.html
+  commentId: T:AlgoSdk.WalletConnect.JsonRpcResponse
+  fullName: AlgoSdk.WalletConnect.JsonRpcResponse
+  nameWithType: JsonRpcResponse
+- uid: AlgoSdk.WalletConnect.JsonRpcResponse.Equals(AlgoSdk.WalletConnect.JsonRpcResponse)
+  name: Equals(JsonRpcResponse)
+  href: api/AlgoSdk.WalletConnect.JsonRpcResponse.html#AlgoSdk_WalletConnect_JsonRpcResponse_Equals_AlgoSdk_WalletConnect_JsonRpcResponse_
+  commentId: M:AlgoSdk.WalletConnect.JsonRpcResponse.Equals(AlgoSdk.WalletConnect.JsonRpcResponse)
+  fullName: AlgoSdk.WalletConnect.JsonRpcResponse.Equals(AlgoSdk.WalletConnect.JsonRpcResponse)
+  nameWithType: JsonRpcResponse.Equals(JsonRpcResponse)
+- uid: AlgoSdk.WalletConnect.JsonRpcResponse.Equals*
+  name: Equals
+  href: api/AlgoSdk.WalletConnect.JsonRpcResponse.html#AlgoSdk_WalletConnect_JsonRpcResponse_Equals_
+  commentId: Overload:AlgoSdk.WalletConnect.JsonRpcResponse.Equals
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.JsonRpcResponse.Equals
+  nameWithType: JsonRpcResponse.Equals
+- uid: AlgoSdk.WalletConnect.JsonRpcResponse.Error
+  name: Error
+  href: api/AlgoSdk.WalletConnect.JsonRpcResponse.html#AlgoSdk_WalletConnect_JsonRpcResponse_Error
+  commentId: P:AlgoSdk.WalletConnect.JsonRpcResponse.Error
+  fullName: AlgoSdk.WalletConnect.JsonRpcResponse.Error
+  nameWithType: JsonRpcResponse.Error
+- uid: AlgoSdk.WalletConnect.JsonRpcResponse.Error*
+  name: Error
+  href: api/AlgoSdk.WalletConnect.JsonRpcResponse.html#AlgoSdk_WalletConnect_JsonRpcResponse_Error_
+  commentId: Overload:AlgoSdk.WalletConnect.JsonRpcResponse.Error
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.JsonRpcResponse.Error
+  nameWithType: JsonRpcResponse.Error
+- uid: AlgoSdk.WalletConnect.JsonRpcResponse.Id
+  name: Id
+  href: api/AlgoSdk.WalletConnect.JsonRpcResponse.html#AlgoSdk_WalletConnect_JsonRpcResponse_Id
+  commentId: P:AlgoSdk.WalletConnect.JsonRpcResponse.Id
+  fullName: AlgoSdk.WalletConnect.JsonRpcResponse.Id
+  nameWithType: JsonRpcResponse.Id
+- uid: AlgoSdk.WalletConnect.JsonRpcResponse.Id*
+  name: Id
+  href: api/AlgoSdk.WalletConnect.JsonRpcResponse.html#AlgoSdk_WalletConnect_JsonRpcResponse_Id_
+  commentId: Overload:AlgoSdk.WalletConnect.JsonRpcResponse.Id
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.JsonRpcResponse.Id
+  nameWithType: JsonRpcResponse.Id
+- uid: AlgoSdk.WalletConnect.JsonRpcResponse.IsError
+  name: IsError
+  href: api/AlgoSdk.WalletConnect.JsonRpcResponse.html#AlgoSdk_WalletConnect_JsonRpcResponse_IsError
+  commentId: P:AlgoSdk.WalletConnect.JsonRpcResponse.IsError
+  fullName: AlgoSdk.WalletConnect.JsonRpcResponse.IsError
+  nameWithType: JsonRpcResponse.IsError
+- uid: AlgoSdk.WalletConnect.JsonRpcResponse.IsError*
+  name: IsError
+  href: api/AlgoSdk.WalletConnect.JsonRpcResponse.html#AlgoSdk_WalletConnect_JsonRpcResponse_IsError_
+  commentId: Overload:AlgoSdk.WalletConnect.JsonRpcResponse.IsError
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.JsonRpcResponse.IsError
+  nameWithType: JsonRpcResponse.IsError
+- uid: AlgoSdk.WalletConnect.JsonRpcResponse.JsonRpc
+  name: JsonRpc
+  href: api/AlgoSdk.WalletConnect.JsonRpcResponse.html#AlgoSdk_WalletConnect_JsonRpcResponse_JsonRpc
+  commentId: P:AlgoSdk.WalletConnect.JsonRpcResponse.JsonRpc
+  fullName: AlgoSdk.WalletConnect.JsonRpcResponse.JsonRpc
+  nameWithType: JsonRpcResponse.JsonRpc
+- uid: AlgoSdk.WalletConnect.JsonRpcResponse.JsonRpc*
+  name: JsonRpc
+  href: api/AlgoSdk.WalletConnect.JsonRpcResponse.html#AlgoSdk_WalletConnect_JsonRpcResponse_JsonRpc_
+  commentId: Overload:AlgoSdk.WalletConnect.JsonRpcResponse.JsonRpc
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.JsonRpcResponse.JsonRpc
+  nameWithType: JsonRpcResponse.JsonRpc
+- uid: AlgoSdk.WalletConnect.JsonRpcResponse.Result
+  name: Result
+  href: api/AlgoSdk.WalletConnect.JsonRpcResponse.html#AlgoSdk_WalletConnect_JsonRpcResponse_Result
+  commentId: P:AlgoSdk.WalletConnect.JsonRpcResponse.Result
+  fullName: AlgoSdk.WalletConnect.JsonRpcResponse.Result
+  nameWithType: JsonRpcResponse.Result
+- uid: AlgoSdk.WalletConnect.JsonRpcResponse.Result*
+  name: Result
+  href: api/AlgoSdk.WalletConnect.JsonRpcResponse.html#AlgoSdk_WalletConnect_JsonRpcResponse_Result_
+  commentId: Overload:AlgoSdk.WalletConnect.JsonRpcResponse.Result
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.JsonRpcResponse.Result
+  nameWithType: JsonRpcResponse.Result
+- uid: AlgoSdk.WalletConnect.MultisigMetadata
+  name: MultisigMetadata
+  href: api/AlgoSdk.WalletConnect.MultisigMetadata.html
+  commentId: T:AlgoSdk.WalletConnect.MultisigMetadata
+  fullName: AlgoSdk.WalletConnect.MultisigMetadata
+  nameWithType: MultisigMetadata
+- uid: AlgoSdk.WalletConnect.MultisigMetadata.Addresses
+  name: Addresses
+  href: api/AlgoSdk.WalletConnect.MultisigMetadata.html#AlgoSdk_WalletConnect_MultisigMetadata_Addresses
+  commentId: F:AlgoSdk.WalletConnect.MultisigMetadata.Addresses
+  fullName: AlgoSdk.WalletConnect.MultisigMetadata.Addresses
+  nameWithType: MultisigMetadata.Addresses
+- uid: AlgoSdk.WalletConnect.MultisigMetadata.Equals(AlgoSdk.WalletConnect.MultisigMetadata)
+  name: Equals(MultisigMetadata)
+  href: api/AlgoSdk.WalletConnect.MultisigMetadata.html#AlgoSdk_WalletConnect_MultisigMetadata_Equals_AlgoSdk_WalletConnect_MultisigMetadata_
+  commentId: M:AlgoSdk.WalletConnect.MultisigMetadata.Equals(AlgoSdk.WalletConnect.MultisigMetadata)
+  fullName: AlgoSdk.WalletConnect.MultisigMetadata.Equals(AlgoSdk.WalletConnect.MultisigMetadata)
+  nameWithType: MultisigMetadata.Equals(MultisigMetadata)
+- uid: AlgoSdk.WalletConnect.MultisigMetadata.Equals*
+  name: Equals
+  href: api/AlgoSdk.WalletConnect.MultisigMetadata.html#AlgoSdk_WalletConnect_MultisigMetadata_Equals_
+  commentId: Overload:AlgoSdk.WalletConnect.MultisigMetadata.Equals
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.MultisigMetadata.Equals
+  nameWithType: MultisigMetadata.Equals
+- uid: AlgoSdk.WalletConnect.MultisigMetadata.op_Implicit(AlgoSdk.Multisig)~AlgoSdk.WalletConnect.MultisigMetadata
+  name: Implicit(Multisig to MultisigMetadata)
+  href: api/AlgoSdk.WalletConnect.MultisigMetadata.html#AlgoSdk_WalletConnect_MultisigMetadata_op_Implicit_AlgoSdk_Multisig__AlgoSdk_WalletConnect_MultisigMetadata
+  commentId: M:AlgoSdk.WalletConnect.MultisigMetadata.op_Implicit(AlgoSdk.Multisig)~AlgoSdk.WalletConnect.MultisigMetadata
+  name.vb: Widening(Multisig to MultisigMetadata)
+  fullName: AlgoSdk.WalletConnect.MultisigMetadata.Implicit(AlgoSdk.Multisig to AlgoSdk.WalletConnect.MultisigMetadata)
+  fullName.vb: AlgoSdk.WalletConnect.MultisigMetadata.Widening(AlgoSdk.Multisig to AlgoSdk.WalletConnect.MultisigMetadata)
+  nameWithType: MultisigMetadata.Implicit(Multisig to MultisigMetadata)
+  nameWithType.vb: MultisigMetadata.Widening(Multisig to MultisigMetadata)
+- uid: AlgoSdk.WalletConnect.MultisigMetadata.op_Implicit(AlgoSdk.WalletConnect.MultisigMetadata)~AlgoSdk.Multisig
+  name: Implicit(MultisigMetadata to Multisig)
+  href: api/AlgoSdk.WalletConnect.MultisigMetadata.html#AlgoSdk_WalletConnect_MultisigMetadata_op_Implicit_AlgoSdk_WalletConnect_MultisigMetadata__AlgoSdk_Multisig
+  commentId: M:AlgoSdk.WalletConnect.MultisigMetadata.op_Implicit(AlgoSdk.WalletConnect.MultisigMetadata)~AlgoSdk.Multisig
+  name.vb: Widening(MultisigMetadata to Multisig)
+  fullName: AlgoSdk.WalletConnect.MultisigMetadata.Implicit(AlgoSdk.WalletConnect.MultisigMetadata to AlgoSdk.Multisig)
+  fullName.vb: AlgoSdk.WalletConnect.MultisigMetadata.Widening(AlgoSdk.WalletConnect.MultisigMetadata to AlgoSdk.Multisig)
+  nameWithType: MultisigMetadata.Implicit(MultisigMetadata to Multisig)
+  nameWithType.vb: MultisigMetadata.Widening(MultisigMetadata to Multisig)
+- uid: AlgoSdk.WalletConnect.MultisigMetadata.op_Implicit*
+  name: Implicit
+  href: api/AlgoSdk.WalletConnect.MultisigMetadata.html#AlgoSdk_WalletConnect_MultisigMetadata_op_Implicit_
+  commentId: Overload:AlgoSdk.WalletConnect.MultisigMetadata.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: AlgoSdk.WalletConnect.MultisigMetadata.Implicit
+  fullName.vb: AlgoSdk.WalletConnect.MultisigMetadata.Widening
+  nameWithType: MultisigMetadata.Implicit
+  nameWithType.vb: MultisigMetadata.Widening
+- uid: AlgoSdk.WalletConnect.MultisigMetadata.Threshold
+  name: Threshold
+  href: api/AlgoSdk.WalletConnect.MultisigMetadata.html#AlgoSdk_WalletConnect_MultisigMetadata_Threshold
+  commentId: F:AlgoSdk.WalletConnect.MultisigMetadata.Threshold
+  fullName: AlgoSdk.WalletConnect.MultisigMetadata.Threshold
+  nameWithType: MultisigMetadata.Threshold
+- uid: AlgoSdk.WalletConnect.MultisigMetadata.Version
+  name: Version
+  href: api/AlgoSdk.WalletConnect.MultisigMetadata.html#AlgoSdk_WalletConnect_MultisigMetadata_Version
+  commentId: F:AlgoSdk.WalletConnect.MultisigMetadata.Version
+  fullName: AlgoSdk.WalletConnect.MultisigMetadata.Version
+  nameWithType: MultisigMetadata.Version
+- uid: AlgoSdk.WalletConnect.NetworkMessage
+  name: NetworkMessage
+  href: api/AlgoSdk.WalletConnect.NetworkMessage.html
+  commentId: T:AlgoSdk.WalletConnect.NetworkMessage
+  fullName: AlgoSdk.WalletConnect.NetworkMessage
+  nameWithType: NetworkMessage
+- uid: AlgoSdk.WalletConnect.NetworkMessage.Equals(AlgoSdk.WalletConnect.NetworkMessage)
+  name: Equals(NetworkMessage)
+  href: api/AlgoSdk.WalletConnect.NetworkMessage.html#AlgoSdk_WalletConnect_NetworkMessage_Equals_AlgoSdk_WalletConnect_NetworkMessage_
+  commentId: M:AlgoSdk.WalletConnect.NetworkMessage.Equals(AlgoSdk.WalletConnect.NetworkMessage)
+  fullName: AlgoSdk.WalletConnect.NetworkMessage.Equals(AlgoSdk.WalletConnect.NetworkMessage)
+  nameWithType: NetworkMessage.Equals(NetworkMessage)
+- uid: AlgoSdk.WalletConnect.NetworkMessage.Equals*
+  name: Equals
+  href: api/AlgoSdk.WalletConnect.NetworkMessage.html#AlgoSdk_WalletConnect_NetworkMessage_Equals_
+  commentId: Overload:AlgoSdk.WalletConnect.NetworkMessage.Equals
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.NetworkMessage.Equals
+  nameWithType: NetworkMessage.Equals
+- uid: AlgoSdk.WalletConnect.NetworkMessage.IsSilent
+  name: IsSilent
+  href: api/AlgoSdk.WalletConnect.NetworkMessage.html#AlgoSdk_WalletConnect_NetworkMessage_IsSilent
+  commentId: F:AlgoSdk.WalletConnect.NetworkMessage.IsSilent
+  fullName: AlgoSdk.WalletConnect.NetworkMessage.IsSilent
+  nameWithType: NetworkMessage.IsSilent
+- uid: AlgoSdk.WalletConnect.NetworkMessage.Payload
+  name: Payload
+  href: api/AlgoSdk.WalletConnect.NetworkMessage.html#AlgoSdk_WalletConnect_NetworkMessage_Payload
+  commentId: F:AlgoSdk.WalletConnect.NetworkMessage.Payload
+  fullName: AlgoSdk.WalletConnect.NetworkMessage.Payload
+  nameWithType: NetworkMessage.Payload
+- uid: AlgoSdk.WalletConnect.NetworkMessage.PublishToTopic*
+  name: PublishToTopic
+  href: api/AlgoSdk.WalletConnect.NetworkMessage.html#AlgoSdk_WalletConnect_NetworkMessage_PublishToTopic_
+  commentId: Overload:AlgoSdk.WalletConnect.NetworkMessage.PublishToTopic
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.NetworkMessage.PublishToTopic
+  nameWithType: NetworkMessage.PublishToTopic
+- uid: AlgoSdk.WalletConnect.NetworkMessage.PublishToTopic``1(``0,System.String)
+  name: PublishToTopic<T>(T, String)
+  href: api/AlgoSdk.WalletConnect.NetworkMessage.html#AlgoSdk_WalletConnect_NetworkMessage_PublishToTopic__1___0_System_String_
+  commentId: M:AlgoSdk.WalletConnect.NetworkMessage.PublishToTopic``1(``0,System.String)
+  name.vb: PublishToTopic(Of T)(T, String)
+  fullName: AlgoSdk.WalletConnect.NetworkMessage.PublishToTopic<T>(T, System.String)
+  fullName.vb: AlgoSdk.WalletConnect.NetworkMessage.PublishToTopic(Of T)(T, System.String)
+  nameWithType: NetworkMessage.PublishToTopic<T>(T, String)
+  nameWithType.vb: NetworkMessage.PublishToTopic(Of T)(T, String)
+- uid: AlgoSdk.WalletConnect.NetworkMessage.PublishToTopicEncrypted*
+  name: PublishToTopicEncrypted
+  href: api/AlgoSdk.WalletConnect.NetworkMessage.html#AlgoSdk_WalletConnect_NetworkMessage_PublishToTopicEncrypted_
+  commentId: Overload:AlgoSdk.WalletConnect.NetworkMessage.PublishToTopicEncrypted
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.NetworkMessage.PublishToTopicEncrypted
+  nameWithType: NetworkMessage.PublishToTopicEncrypted
+- uid: AlgoSdk.WalletConnect.NetworkMessage.PublishToTopicEncrypted``1(``0,AlgoSdk.WalletConnect.Hex,System.String)
+  name: PublishToTopicEncrypted<T>(T, Hex, String)
+  href: api/AlgoSdk.WalletConnect.NetworkMessage.html#AlgoSdk_WalletConnect_NetworkMessage_PublishToTopicEncrypted__1___0_AlgoSdk_WalletConnect_Hex_System_String_
+  commentId: M:AlgoSdk.WalletConnect.NetworkMessage.PublishToTopicEncrypted``1(``0,AlgoSdk.WalletConnect.Hex,System.String)
+  name.vb: PublishToTopicEncrypted(Of T)(T, Hex, String)
+  fullName: AlgoSdk.WalletConnect.NetworkMessage.PublishToTopicEncrypted<T>(T, AlgoSdk.WalletConnect.Hex, System.String)
+  fullName.vb: AlgoSdk.WalletConnect.NetworkMessage.PublishToTopicEncrypted(Of T)(T, AlgoSdk.WalletConnect.Hex, System.String)
+  nameWithType: NetworkMessage.PublishToTopicEncrypted<T>(T, Hex, String)
+  nameWithType.vb: NetworkMessage.PublishToTopicEncrypted(Of T)(T, Hex, String)
+- uid: AlgoSdk.WalletConnect.NetworkMessage.SubscribeToTopic(System.String)
+  name: SubscribeToTopic(String)
+  href: api/AlgoSdk.WalletConnect.NetworkMessage.html#AlgoSdk_WalletConnect_NetworkMessage_SubscribeToTopic_System_String_
+  commentId: M:AlgoSdk.WalletConnect.NetworkMessage.SubscribeToTopic(System.String)
+  fullName: AlgoSdk.WalletConnect.NetworkMessage.SubscribeToTopic(System.String)
+  nameWithType: NetworkMessage.SubscribeToTopic(String)
+- uid: AlgoSdk.WalletConnect.NetworkMessage.SubscribeToTopic*
+  name: SubscribeToTopic
+  href: api/AlgoSdk.WalletConnect.NetworkMessage.html#AlgoSdk_WalletConnect_NetworkMessage_SubscribeToTopic_
+  commentId: Overload:AlgoSdk.WalletConnect.NetworkMessage.SubscribeToTopic
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.NetworkMessage.SubscribeToTopic
+  nameWithType: NetworkMessage.SubscribeToTopic
+- uid: AlgoSdk.WalletConnect.NetworkMessage.Topic
+  name: Topic
+  href: api/AlgoSdk.WalletConnect.NetworkMessage.html#AlgoSdk_WalletConnect_NetworkMessage_Topic
+  commentId: F:AlgoSdk.WalletConnect.NetworkMessage.Topic
+  fullName: AlgoSdk.WalletConnect.NetworkMessage.Topic
+  nameWithType: NetworkMessage.Topic
+- uid: AlgoSdk.WalletConnect.NetworkMessage.Type
+  name: Type
+  href: api/AlgoSdk.WalletConnect.NetworkMessage.html#AlgoSdk_WalletConnect_NetworkMessage_Type
+  commentId: F:AlgoSdk.WalletConnect.NetworkMessage.Type
+  fullName: AlgoSdk.WalletConnect.NetworkMessage.Type
+  nameWithType: NetworkMessage.Type
+- uid: AlgoSdk.WalletConnect.QrCode
+  name: QrCode
+  href: api/AlgoSdk.WalletConnect.QrCode.html
+  commentId: T:AlgoSdk.WalletConnect.QrCode
+  fullName: AlgoSdk.WalletConnect.QrCode
+  nameWithType: QrCode
+- uid: AlgoSdk.WalletConnect.QrCode.Generate(System.String)
+  name: Generate(String)
+  href: api/AlgoSdk.WalletConnect.QrCode.html#AlgoSdk_WalletConnect_QrCode_Generate_System_String_
+  commentId: M:AlgoSdk.WalletConnect.QrCode.Generate(System.String)
+  fullName: AlgoSdk.WalletConnect.QrCode.Generate(System.String)
+  nameWithType: QrCode.Generate(String)
+- uid: AlgoSdk.WalletConnect.QrCode.Generate*
+  name: Generate
+  href: api/AlgoSdk.WalletConnect.QrCode.html#AlgoSdk_WalletConnect_QrCode_Generate_
+  commentId: Overload:AlgoSdk.WalletConnect.QrCode.Generate
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.QrCode.Generate
+  nameWithType: QrCode.Generate
+- uid: AlgoSdk.WalletConnect.RpcPayload
+  name: RpcPayload
+  href: api/AlgoSdk.WalletConnect.RpcPayload.html
+  commentId: T:AlgoSdk.WalletConnect.RpcPayload
+  fullName: AlgoSdk.WalletConnect.RpcPayload
+  nameWithType: RpcPayload
+- uid: AlgoSdk.WalletConnect.RpcPayload.GenerateId
+  name: GenerateId()
+  href: api/AlgoSdk.WalletConnect.RpcPayload.html#AlgoSdk_WalletConnect_RpcPayload_GenerateId
+  commentId: M:AlgoSdk.WalletConnect.RpcPayload.GenerateId
+  fullName: AlgoSdk.WalletConnect.RpcPayload.GenerateId()
+  nameWithType: RpcPayload.GenerateId()
+- uid: AlgoSdk.WalletConnect.RpcPayload.GenerateId*
+  name: GenerateId
+  href: api/AlgoSdk.WalletConnect.RpcPayload.html#AlgoSdk_WalletConnect_RpcPayload_GenerateId_
+  commentId: Overload:AlgoSdk.WalletConnect.RpcPayload.GenerateId
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.RpcPayload.GenerateId
+  nameWithType: RpcPayload.GenerateId
+- uid: AlgoSdk.WalletConnect.RpcPayload.IdRandomPartSize
+  name: IdRandomPartSize
+  href: api/AlgoSdk.WalletConnect.RpcPayload.html#AlgoSdk_WalletConnect_RpcPayload_IdRandomPartSize
+  commentId: F:AlgoSdk.WalletConnect.RpcPayload.IdRandomPartSize
+  fullName: AlgoSdk.WalletConnect.RpcPayload.IdRandomPartSize
+  nameWithType: RpcPayload.IdRandomPartSize
+- uid: AlgoSdk.WalletConnect.SavedSession
+  name: SavedSession
+  href: api/AlgoSdk.WalletConnect.SavedSession.html
+  commentId: T:AlgoSdk.WalletConnect.SavedSession
+  fullName: AlgoSdk.WalletConnect.SavedSession
+  nameWithType: SavedSession
+- uid: AlgoSdk.WalletConnect.SavedSession.Accounts
+  name: Accounts
+  href: api/AlgoSdk.WalletConnect.SavedSession.html#AlgoSdk_WalletConnect_SavedSession_Accounts
+  commentId: P:AlgoSdk.WalletConnect.SavedSession.Accounts
+  fullName: AlgoSdk.WalletConnect.SavedSession.Accounts
+  nameWithType: SavedSession.Accounts
+- uid: AlgoSdk.WalletConnect.SavedSession.Accounts*
+  name: Accounts
+  href: api/AlgoSdk.WalletConnect.SavedSession.html#AlgoSdk_WalletConnect_SavedSession_Accounts_
+  commentId: Overload:AlgoSdk.WalletConnect.SavedSession.Accounts
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.SavedSession.Accounts
+  nameWithType: SavedSession.Accounts
+- uid: AlgoSdk.WalletConnect.SavedSession.BridgeUrl
+  name: BridgeUrl
+  href: api/AlgoSdk.WalletConnect.SavedSession.html#AlgoSdk_WalletConnect_SavedSession_BridgeUrl
+  commentId: P:AlgoSdk.WalletConnect.SavedSession.BridgeUrl
+  fullName: AlgoSdk.WalletConnect.SavedSession.BridgeUrl
+  nameWithType: SavedSession.BridgeUrl
+- uid: AlgoSdk.WalletConnect.SavedSession.BridgeUrl*
+  name: BridgeUrl
+  href: api/AlgoSdk.WalletConnect.SavedSession.html#AlgoSdk_WalletConnect_SavedSession_BridgeUrl_
+  commentId: Overload:AlgoSdk.WalletConnect.SavedSession.BridgeUrl
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.SavedSession.BridgeUrl
+  nameWithType: SavedSession.BridgeUrl
+- uid: AlgoSdk.WalletConnect.SavedSession.ChainId
+  name: ChainId
+  href: api/AlgoSdk.WalletConnect.SavedSession.html#AlgoSdk_WalletConnect_SavedSession_ChainId
+  commentId: P:AlgoSdk.WalletConnect.SavedSession.ChainId
+  fullName: AlgoSdk.WalletConnect.SavedSession.ChainId
+  nameWithType: SavedSession.ChainId
+- uid: AlgoSdk.WalletConnect.SavedSession.ChainId*
+  name: ChainId
+  href: api/AlgoSdk.WalletConnect.SavedSession.html#AlgoSdk_WalletConnect_SavedSession_ChainId_
+  commentId: Overload:AlgoSdk.WalletConnect.SavedSession.ChainId
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.SavedSession.ChainId
+  nameWithType: SavedSession.ChainId
+- uid: AlgoSdk.WalletConnect.SavedSession.ClientId
+  name: ClientId
+  href: api/AlgoSdk.WalletConnect.SavedSession.html#AlgoSdk_WalletConnect_SavedSession_ClientId
+  commentId: P:AlgoSdk.WalletConnect.SavedSession.ClientId
+  fullName: AlgoSdk.WalletConnect.SavedSession.ClientId
+  nameWithType: SavedSession.ClientId
+- uid: AlgoSdk.WalletConnect.SavedSession.ClientId*
+  name: ClientId
+  href: api/AlgoSdk.WalletConnect.SavedSession.html#AlgoSdk_WalletConnect_SavedSession_ClientId_
+  commentId: Overload:AlgoSdk.WalletConnect.SavedSession.ClientId
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.SavedSession.ClientId
+  nameWithType: SavedSession.ClientId
+- uid: AlgoSdk.WalletConnect.SavedSession.DappMeta
+  name: DappMeta
+  href: api/AlgoSdk.WalletConnect.SavedSession.html#AlgoSdk_WalletConnect_SavedSession_DappMeta
+  commentId: P:AlgoSdk.WalletConnect.SavedSession.DappMeta
+  fullName: AlgoSdk.WalletConnect.SavedSession.DappMeta
+  nameWithType: SavedSession.DappMeta
+- uid: AlgoSdk.WalletConnect.SavedSession.DappMeta*
+  name: DappMeta
+  href: api/AlgoSdk.WalletConnect.SavedSession.html#AlgoSdk_WalletConnect_SavedSession_DappMeta_
+  commentId: Overload:AlgoSdk.WalletConnect.SavedSession.DappMeta
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.SavedSession.DappMeta
+  nameWithType: SavedSession.DappMeta
+- uid: AlgoSdk.WalletConnect.SavedSession.HandshakeId
+  name: HandshakeId
+  href: api/AlgoSdk.WalletConnect.SavedSession.html#AlgoSdk_WalletConnect_SavedSession_HandshakeId
+  commentId: P:AlgoSdk.WalletConnect.SavedSession.HandshakeId
+  fullName: AlgoSdk.WalletConnect.SavedSession.HandshakeId
+  nameWithType: SavedSession.HandshakeId
+- uid: AlgoSdk.WalletConnect.SavedSession.HandshakeId*
+  name: HandshakeId
+  href: api/AlgoSdk.WalletConnect.SavedSession.html#AlgoSdk_WalletConnect_SavedSession_HandshakeId_
+  commentId: Overload:AlgoSdk.WalletConnect.SavedSession.HandshakeId
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.SavedSession.HandshakeId
+  nameWithType: SavedSession.HandshakeId
+- uid: AlgoSdk.WalletConnect.SavedSession.Key
+  name: Key
+  href: api/AlgoSdk.WalletConnect.SavedSession.html#AlgoSdk_WalletConnect_SavedSession_Key
+  commentId: P:AlgoSdk.WalletConnect.SavedSession.Key
+  fullName: AlgoSdk.WalletConnect.SavedSession.Key
+  nameWithType: SavedSession.Key
+- uid: AlgoSdk.WalletConnect.SavedSession.Key*
+  name: Key
+  href: api/AlgoSdk.WalletConnect.SavedSession.html#AlgoSdk_WalletConnect_SavedSession_Key_
+  commentId: Overload:AlgoSdk.WalletConnect.SavedSession.Key
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.SavedSession.Key
+  nameWithType: SavedSession.Key
+- uid: AlgoSdk.WalletConnect.SavedSession.NetworkId
+  name: NetworkId
+  href: api/AlgoSdk.WalletConnect.SavedSession.html#AlgoSdk_WalletConnect_SavedSession_NetworkId
+  commentId: P:AlgoSdk.WalletConnect.SavedSession.NetworkId
+  fullName: AlgoSdk.WalletConnect.SavedSession.NetworkId
+  nameWithType: SavedSession.NetworkId
+- uid: AlgoSdk.WalletConnect.SavedSession.NetworkId*
+  name: NetworkId
+  href: api/AlgoSdk.WalletConnect.SavedSession.html#AlgoSdk_WalletConnect_SavedSession_NetworkId_
+  commentId: Overload:AlgoSdk.WalletConnect.SavedSession.NetworkId
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.SavedSession.NetworkId
+  nameWithType: SavedSession.NetworkId
+- uid: AlgoSdk.WalletConnect.SavedSession.PeerId
+  name: PeerId
+  href: api/AlgoSdk.WalletConnect.SavedSession.html#AlgoSdk_WalletConnect_SavedSession_PeerId
+  commentId: P:AlgoSdk.WalletConnect.SavedSession.PeerId
+  fullName: AlgoSdk.WalletConnect.SavedSession.PeerId
+  nameWithType: SavedSession.PeerId
+- uid: AlgoSdk.WalletConnect.SavedSession.PeerId*
+  name: PeerId
+  href: api/AlgoSdk.WalletConnect.SavedSession.html#AlgoSdk_WalletConnect_SavedSession_PeerId_
+  commentId: Overload:AlgoSdk.WalletConnect.SavedSession.PeerId
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.SavedSession.PeerId
+  nameWithType: SavedSession.PeerId
+- uid: AlgoSdk.WalletConnect.SavedSession.WalletMeta
+  name: WalletMeta
+  href: api/AlgoSdk.WalletConnect.SavedSession.html#AlgoSdk_WalletConnect_SavedSession_WalletMeta
+  commentId: P:AlgoSdk.WalletConnect.SavedSession.WalletMeta
+  fullName: AlgoSdk.WalletConnect.SavedSession.WalletMeta
+  nameWithType: SavedSession.WalletMeta
+- uid: AlgoSdk.WalletConnect.SavedSession.WalletMeta*
+  name: WalletMeta
+  href: api/AlgoSdk.WalletConnect.SavedSession.html#AlgoSdk_WalletConnect_SavedSession_WalletMeta_
+  commentId: Overload:AlgoSdk.WalletConnect.SavedSession.WalletMeta
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.SavedSession.WalletMeta
+  nameWithType: SavedSession.WalletMeta
+- uid: AlgoSdk.WalletConnect.SignTxnsError
+  name: SignTxnsError
+  href: api/AlgoSdk.WalletConnect.SignTxnsError.html
+  commentId: T:AlgoSdk.WalletConnect.SignTxnsError
+  fullName: AlgoSdk.WalletConnect.SignTxnsError
+  nameWithType: SignTxnsError
+- uid: AlgoSdk.WalletConnect.SignTxnsError.Code
+  name: Code
+  href: api/AlgoSdk.WalletConnect.SignTxnsError.html#AlgoSdk_WalletConnect_SignTxnsError_Code
+  commentId: P:AlgoSdk.WalletConnect.SignTxnsError.Code
+  fullName: AlgoSdk.WalletConnect.SignTxnsError.Code
+  nameWithType: SignTxnsError.Code
+- uid: AlgoSdk.WalletConnect.SignTxnsError.Code*
+  name: Code
+  href: api/AlgoSdk.WalletConnect.SignTxnsError.html#AlgoSdk_WalletConnect_SignTxnsError_Code_
+  commentId: Overload:AlgoSdk.WalletConnect.SignTxnsError.Code
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.SignTxnsError.Code
+  nameWithType: SignTxnsError.Code
+- uid: AlgoSdk.WalletConnect.SignTxnsError.Data
+  name: Data
+  href: api/AlgoSdk.WalletConnect.SignTxnsError.html#AlgoSdk_WalletConnect_SignTxnsError_Data
+  commentId: P:AlgoSdk.WalletConnect.SignTxnsError.Data
+  fullName: AlgoSdk.WalletConnect.SignTxnsError.Data
+  nameWithType: SignTxnsError.Data
+- uid: AlgoSdk.WalletConnect.SignTxnsError.Data*
+  name: Data
+  href: api/AlgoSdk.WalletConnect.SignTxnsError.html#AlgoSdk_WalletConnect_SignTxnsError_Data_
+  commentId: Overload:AlgoSdk.WalletConnect.SignTxnsError.Data
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.SignTxnsError.Data
+  nameWithType: SignTxnsError.Data
+- uid: AlgoSdk.WalletConnect.SignTxnsError.Equals(AlgoSdk.WalletConnect.SignTxnsError)
+  name: Equals(SignTxnsError)
+  href: api/AlgoSdk.WalletConnect.SignTxnsError.html#AlgoSdk_WalletConnect_SignTxnsError_Equals_AlgoSdk_WalletConnect_SignTxnsError_
+  commentId: M:AlgoSdk.WalletConnect.SignTxnsError.Equals(AlgoSdk.WalletConnect.SignTxnsError)
+  fullName: AlgoSdk.WalletConnect.SignTxnsError.Equals(AlgoSdk.WalletConnect.SignTxnsError)
+  nameWithType: SignTxnsError.Equals(SignTxnsError)
+- uid: AlgoSdk.WalletConnect.SignTxnsError.Equals*
+  name: Equals
+  href: api/AlgoSdk.WalletConnect.SignTxnsError.html#AlgoSdk_WalletConnect_SignTxnsError_Equals_
+  commentId: Overload:AlgoSdk.WalletConnect.SignTxnsError.Equals
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.SignTxnsError.Equals
+  nameWithType: SignTxnsError.Equals
+- uid: AlgoSdk.WalletConnect.SignTxnsError.ErrorCode
+  name: ErrorCode
+  href: api/AlgoSdk.WalletConnect.SignTxnsError.html#AlgoSdk_WalletConnect_SignTxnsError_ErrorCode
+  commentId: P:AlgoSdk.WalletConnect.SignTxnsError.ErrorCode
+  fullName: AlgoSdk.WalletConnect.SignTxnsError.ErrorCode
+  nameWithType: SignTxnsError.ErrorCode
+- uid: AlgoSdk.WalletConnect.SignTxnsError.ErrorCode*
+  name: ErrorCode
+  href: api/AlgoSdk.WalletConnect.SignTxnsError.html#AlgoSdk_WalletConnect_SignTxnsError_ErrorCode_
+  commentId: Overload:AlgoSdk.WalletConnect.SignTxnsError.ErrorCode
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.SignTxnsError.ErrorCode
+  nameWithType: SignTxnsError.ErrorCode
+- uid: AlgoSdk.WalletConnect.SignTxnsError.Message
+  name: Message
+  href: api/AlgoSdk.WalletConnect.SignTxnsError.html#AlgoSdk_WalletConnect_SignTxnsError_Message
+  commentId: P:AlgoSdk.WalletConnect.SignTxnsError.Message
+  fullName: AlgoSdk.WalletConnect.SignTxnsError.Message
+  nameWithType: SignTxnsError.Message
+- uid: AlgoSdk.WalletConnect.SignTxnsError.Message*
+  name: Message
+  href: api/AlgoSdk.WalletConnect.SignTxnsError.html#AlgoSdk_WalletConnect_SignTxnsError_Message_
+  commentId: Overload:AlgoSdk.WalletConnect.SignTxnsError.Message
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.SignTxnsError.Message
+  nameWithType: SignTxnsError.Message
+- uid: AlgoSdk.WalletConnect.SignTxnsError.op_Implicit(AlgoSdk.WalletConnect.JsonRpcError)~AlgoSdk.WalletConnect.SignTxnsError
+  name: Implicit(JsonRpcError to SignTxnsError)
+  href: api/AlgoSdk.WalletConnect.SignTxnsError.html#AlgoSdk_WalletConnect_SignTxnsError_op_Implicit_AlgoSdk_WalletConnect_JsonRpcError__AlgoSdk_WalletConnect_SignTxnsError
+  commentId: M:AlgoSdk.WalletConnect.SignTxnsError.op_Implicit(AlgoSdk.WalletConnect.JsonRpcError)~AlgoSdk.WalletConnect.SignTxnsError
+  name.vb: Widening(JsonRpcError to SignTxnsError)
+  fullName: AlgoSdk.WalletConnect.SignTxnsError.Implicit(AlgoSdk.WalletConnect.JsonRpcError to AlgoSdk.WalletConnect.SignTxnsError)
+  fullName.vb: AlgoSdk.WalletConnect.SignTxnsError.Widening(AlgoSdk.WalletConnect.JsonRpcError to AlgoSdk.WalletConnect.SignTxnsError)
+  nameWithType: SignTxnsError.Implicit(JsonRpcError to SignTxnsError)
+  nameWithType.vb: SignTxnsError.Widening(JsonRpcError to SignTxnsError)
+- uid: AlgoSdk.WalletConnect.SignTxnsError.op_Implicit(AlgoSdk.WalletConnect.SignTxnsError)~System.Boolean
+  name: Implicit(SignTxnsError to Boolean)
+  href: api/AlgoSdk.WalletConnect.SignTxnsError.html#AlgoSdk_WalletConnect_SignTxnsError_op_Implicit_AlgoSdk_WalletConnect_SignTxnsError__System_Boolean
+  commentId: M:AlgoSdk.WalletConnect.SignTxnsError.op_Implicit(AlgoSdk.WalletConnect.SignTxnsError)~System.Boolean
+  name.vb: Widening(SignTxnsError to Boolean)
+  fullName: AlgoSdk.WalletConnect.SignTxnsError.Implicit(AlgoSdk.WalletConnect.SignTxnsError to System.Boolean)
+  fullName.vb: AlgoSdk.WalletConnect.SignTxnsError.Widening(AlgoSdk.WalletConnect.SignTxnsError to System.Boolean)
+  nameWithType: SignTxnsError.Implicit(SignTxnsError to Boolean)
+  nameWithType.vb: SignTxnsError.Widening(SignTxnsError to Boolean)
+- uid: AlgoSdk.WalletConnect.SignTxnsError.op_Implicit(AlgoSdk.WalletConnect.SignTxnsError)~System.String
+  name: Implicit(SignTxnsError to String)
+  href: api/AlgoSdk.WalletConnect.SignTxnsError.html#AlgoSdk_WalletConnect_SignTxnsError_op_Implicit_AlgoSdk_WalletConnect_SignTxnsError__System_String
+  commentId: M:AlgoSdk.WalletConnect.SignTxnsError.op_Implicit(AlgoSdk.WalletConnect.SignTxnsError)~System.String
+  name.vb: Widening(SignTxnsError to String)
+  fullName: AlgoSdk.WalletConnect.SignTxnsError.Implicit(AlgoSdk.WalletConnect.SignTxnsError to System.String)
+  fullName.vb: AlgoSdk.WalletConnect.SignTxnsError.Widening(AlgoSdk.WalletConnect.SignTxnsError to System.String)
+  nameWithType: SignTxnsError.Implicit(SignTxnsError to String)
+  nameWithType.vb: SignTxnsError.Widening(SignTxnsError to String)
+- uid: AlgoSdk.WalletConnect.SignTxnsError.op_Implicit*
+  name: Implicit
+  href: api/AlgoSdk.WalletConnect.SignTxnsError.html#AlgoSdk_WalletConnect_SignTxnsError_op_Implicit_
+  commentId: Overload:AlgoSdk.WalletConnect.SignTxnsError.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: AlgoSdk.WalletConnect.SignTxnsError.Implicit
+  fullName.vb: AlgoSdk.WalletConnect.SignTxnsError.Widening
+  nameWithType: SignTxnsError.Implicit
+  nameWithType.vb: SignTxnsError.Widening
+- uid: AlgoSdk.WalletConnect.SignTxnsError.ToString
+  name: ToString()
+  href: api/AlgoSdk.WalletConnect.SignTxnsError.html#AlgoSdk_WalletConnect_SignTxnsError_ToString
+  commentId: M:AlgoSdk.WalletConnect.SignTxnsError.ToString
+  fullName: AlgoSdk.WalletConnect.SignTxnsError.ToString()
+  nameWithType: SignTxnsError.ToString()
+- uid: AlgoSdk.WalletConnect.SignTxnsError.ToString*
+  name: ToString
+  href: api/AlgoSdk.WalletConnect.SignTxnsError.html#AlgoSdk_WalletConnect_SignTxnsError_ToString_
+  commentId: Overload:AlgoSdk.WalletConnect.SignTxnsError.ToString
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.SignTxnsError.ToString
+  nameWithType: SignTxnsError.ToString
+- uid: AlgoSdk.WalletConnect.SignTxnsErrorCode
+  name: SignTxnsErrorCode
+  href: api/AlgoSdk.WalletConnect.SignTxnsErrorCode.html
+  commentId: T:AlgoSdk.WalletConnect.SignTxnsErrorCode
+  fullName: AlgoSdk.WalletConnect.SignTxnsErrorCode
+  nameWithType: SignTxnsErrorCode
+- uid: AlgoSdk.WalletConnect.SignTxnsErrorCode.InvalidInput
+  name: InvalidInput
+  href: api/AlgoSdk.WalletConnect.SignTxnsErrorCode.html#AlgoSdk_WalletConnect_SignTxnsErrorCode_InvalidInput
+  commentId: F:AlgoSdk.WalletConnect.SignTxnsErrorCode.InvalidInput
+  fullName: AlgoSdk.WalletConnect.SignTxnsErrorCode.InvalidInput
+  nameWithType: SignTxnsErrorCode.InvalidInput
+- uid: AlgoSdk.WalletConnect.SignTxnsErrorCode.TooManyTransactions
+  name: TooManyTransactions
+  href: api/AlgoSdk.WalletConnect.SignTxnsErrorCode.html#AlgoSdk_WalletConnect_SignTxnsErrorCode_TooManyTransactions
+  commentId: F:AlgoSdk.WalletConnect.SignTxnsErrorCode.TooManyTransactions
+  fullName: AlgoSdk.WalletConnect.SignTxnsErrorCode.TooManyTransactions
+  nameWithType: SignTxnsErrorCode.TooManyTransactions
+- uid: AlgoSdk.WalletConnect.SignTxnsErrorCode.Unauthorized
+  name: Unauthorized
+  href: api/AlgoSdk.WalletConnect.SignTxnsErrorCode.html#AlgoSdk_WalletConnect_SignTxnsErrorCode_Unauthorized
+  commentId: F:AlgoSdk.WalletConnect.SignTxnsErrorCode.Unauthorized
+  fullName: AlgoSdk.WalletConnect.SignTxnsErrorCode.Unauthorized
+  nameWithType: SignTxnsErrorCode.Unauthorized
+- uid: AlgoSdk.WalletConnect.SignTxnsErrorCode.UninitializedWallet
+  name: UninitializedWallet
+  href: api/AlgoSdk.WalletConnect.SignTxnsErrorCode.html#AlgoSdk_WalletConnect_SignTxnsErrorCode_UninitializedWallet
+  commentId: F:AlgoSdk.WalletConnect.SignTxnsErrorCode.UninitializedWallet
+  fullName: AlgoSdk.WalletConnect.SignTxnsErrorCode.UninitializedWallet
+  nameWithType: SignTxnsErrorCode.UninitializedWallet
+- uid: AlgoSdk.WalletConnect.SignTxnsErrorCode.Unknown
+  name: Unknown
+  href: api/AlgoSdk.WalletConnect.SignTxnsErrorCode.html#AlgoSdk_WalletConnect_SignTxnsErrorCode_Unknown
+  commentId: F:AlgoSdk.WalletConnect.SignTxnsErrorCode.Unknown
+  fullName: AlgoSdk.WalletConnect.SignTxnsErrorCode.Unknown
+  nameWithType: SignTxnsErrorCode.Unknown
+- uid: AlgoSdk.WalletConnect.SignTxnsErrorCode.UnsupportedOperation
+  name: UnsupportedOperation
+  href: api/AlgoSdk.WalletConnect.SignTxnsErrorCode.html#AlgoSdk_WalletConnect_SignTxnsErrorCode_UnsupportedOperation
+  commentId: F:AlgoSdk.WalletConnect.SignTxnsErrorCode.UnsupportedOperation
+  fullName: AlgoSdk.WalletConnect.SignTxnsErrorCode.UnsupportedOperation
+  nameWithType: SignTxnsErrorCode.UnsupportedOperation
+- uid: AlgoSdk.WalletConnect.SignTxnsErrorCode.UserRejectedRequest
+  name: UserRejectedRequest
+  href: api/AlgoSdk.WalletConnect.SignTxnsErrorCode.html#AlgoSdk_WalletConnect_SignTxnsErrorCode_UserRejectedRequest
+  commentId: F:AlgoSdk.WalletConnect.SignTxnsErrorCode.UserRejectedRequest
+  fullName: AlgoSdk.WalletConnect.SignTxnsErrorCode.UserRejectedRequest
+  nameWithType: SignTxnsErrorCode.UserRejectedRequest
+- uid: AlgoSdk.WalletConnect.SignTxnsOpts
+  name: SignTxnsOpts
+  href: api/AlgoSdk.WalletConnect.SignTxnsOpts.html
+  commentId: T:AlgoSdk.WalletConnect.SignTxnsOpts
+  fullName: AlgoSdk.WalletConnect.SignTxnsOpts
+  nameWithType: SignTxnsOpts
+- uid: AlgoSdk.WalletConnect.SignTxnsOpts.Equals(AlgoSdk.WalletConnect.SignTxnsOpts)
+  name: Equals(SignTxnsOpts)
+  href: api/AlgoSdk.WalletConnect.SignTxnsOpts.html#AlgoSdk_WalletConnect_SignTxnsOpts_Equals_AlgoSdk_WalletConnect_SignTxnsOpts_
+  commentId: M:AlgoSdk.WalletConnect.SignTxnsOpts.Equals(AlgoSdk.WalletConnect.SignTxnsOpts)
+  fullName: AlgoSdk.WalletConnect.SignTxnsOpts.Equals(AlgoSdk.WalletConnect.SignTxnsOpts)
+  nameWithType: SignTxnsOpts.Equals(SignTxnsOpts)
+- uid: AlgoSdk.WalletConnect.SignTxnsOpts.Equals*
+  name: Equals
+  href: api/AlgoSdk.WalletConnect.SignTxnsOpts.html#AlgoSdk_WalletConnect_SignTxnsOpts_Equals_
+  commentId: Overload:AlgoSdk.WalletConnect.SignTxnsOpts.Equals
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.SignTxnsOpts.Equals
+  nameWithType: SignTxnsOpts.Equals
+- uid: AlgoSdk.WalletConnect.SignTxnsOpts.Message
+  name: Message
+  href: api/AlgoSdk.WalletConnect.SignTxnsOpts.html#AlgoSdk_WalletConnect_SignTxnsOpts_Message
+  commentId: F:AlgoSdk.WalletConnect.SignTxnsOpts.Message
+  fullName: AlgoSdk.WalletConnect.SignTxnsOpts.Message
+  nameWithType: SignTxnsOpts.Message
+- uid: AlgoSdk.WalletConnect.WalletConnectError
+  name: WalletConnectError
+  href: api/AlgoSdk.WalletConnect.WalletConnectError.html
+  commentId: T:AlgoSdk.WalletConnect.WalletConnectError
+  fullName: AlgoSdk.WalletConnect.WalletConnectError
+  nameWithType: WalletConnectError
+- uid: AlgoSdk.WalletConnect.WalletConnectRpc
+  name: WalletConnectRpc
+  href: api/AlgoSdk.WalletConnect.WalletConnectRpc.html
+  commentId: T:AlgoSdk.WalletConnect.WalletConnectRpc
+  fullName: AlgoSdk.WalletConnect.WalletConnectRpc
+  nameWithType: WalletConnectRpc
+- uid: AlgoSdk.WalletConnect.WalletConnectRpc.Algorand
+  name: WalletConnectRpc.Algorand
+  href: api/AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.html
+  commentId: T:AlgoSdk.WalletConnect.WalletConnectRpc.Algorand
+  fullName: AlgoSdk.WalletConnect.WalletConnectRpc.Algorand
+  nameWithType: WalletConnectRpc.Algorand
+- uid: AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.ChainId
+  name: ChainId
+  href: api/AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.html#AlgoSdk_WalletConnect_WalletConnectRpc_Algorand_ChainId
+  commentId: F:AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.ChainId
+  fullName: AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.ChainId
+  nameWithType: WalletConnectRpc.Algorand.ChainId
+- uid: AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.SignTransactions(AlgoSdk.WalletConnect.WalletTransaction[],AlgoSdk.WalletConnect.SignTxnsOpts)
+  name: SignTransactions(WalletTransaction[], SignTxnsOpts)
+  href: api/AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.html#AlgoSdk_WalletConnect_WalletConnectRpc_Algorand_SignTransactions_AlgoSdk_WalletConnect_WalletTransaction___AlgoSdk_WalletConnect_SignTxnsOpts_
+  commentId: M:AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.SignTransactions(AlgoSdk.WalletConnect.WalletTransaction[],AlgoSdk.WalletConnect.SignTxnsOpts)
+  name.vb: SignTransactions(WalletTransaction(), SignTxnsOpts)
+  fullName: AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.SignTransactions(AlgoSdk.WalletConnect.WalletTransaction[], AlgoSdk.WalletConnect.SignTxnsOpts)
+  fullName.vb: AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.SignTransactions(AlgoSdk.WalletConnect.WalletTransaction(), AlgoSdk.WalletConnect.SignTxnsOpts)
+  nameWithType: WalletConnectRpc.Algorand.SignTransactions(WalletTransaction[], SignTxnsOpts)
+  nameWithType.vb: WalletConnectRpc.Algorand.SignTransactions(WalletTransaction(), SignTxnsOpts)
+- uid: AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.SignTransactions*
+  name: SignTransactions
+  href: api/AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.html#AlgoSdk_WalletConnect_WalletConnectRpc_Algorand_SignTransactions_
+  commentId: Overload:AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.SignTransactions
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.SignTransactions
+  nameWithType: WalletConnectRpc.Algorand.SignTransactions
+- uid: AlgoSdk.WalletConnect.WalletConnectRpc.GetRandomId
+  name: GetRandomId()
+  href: api/AlgoSdk.WalletConnect.WalletConnectRpc.html#AlgoSdk_WalletConnect_WalletConnectRpc_GetRandomId
+  commentId: M:AlgoSdk.WalletConnect.WalletConnectRpc.GetRandomId
+  fullName: AlgoSdk.WalletConnect.WalletConnectRpc.GetRandomId()
+  nameWithType: WalletConnectRpc.GetRandomId()
+- uid: AlgoSdk.WalletConnect.WalletConnectRpc.GetRandomId*
+  name: GetRandomId
+  href: api/AlgoSdk.WalletConnect.WalletConnectRpc.html#AlgoSdk_WalletConnect_WalletConnectRpc_GetRandomId_
+  commentId: Overload:AlgoSdk.WalletConnect.WalletConnectRpc.GetRandomId
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.WalletConnectRpc.GetRandomId
+  nameWithType: WalletConnectRpc.GetRandomId
+- uid: AlgoSdk.WalletConnect.WalletConnectRpc.SessionRequest(AlgoSdk.WalletConnect.WalletConnectSessionRequest,System.UInt64)
+  name: SessionRequest(WalletConnectSessionRequest, UInt64)
+  href: api/AlgoSdk.WalletConnect.WalletConnectRpc.html#AlgoSdk_WalletConnect_WalletConnectRpc_SessionRequest_AlgoSdk_WalletConnect_WalletConnectSessionRequest_System_UInt64_
+  commentId: M:AlgoSdk.WalletConnect.WalletConnectRpc.SessionRequest(AlgoSdk.WalletConnect.WalletConnectSessionRequest,System.UInt64)
+  fullName: AlgoSdk.WalletConnect.WalletConnectRpc.SessionRequest(AlgoSdk.WalletConnect.WalletConnectSessionRequest, System.UInt64)
+  nameWithType: WalletConnectRpc.SessionRequest(WalletConnectSessionRequest, UInt64)
+- uid: AlgoSdk.WalletConnect.WalletConnectRpc.SessionRequest(System.String,AlgoSdk.WalletConnect.ClientMeta,AlgoSdk.Optional{System.Int32},System.UInt64)
+  name: SessionRequest(String, ClientMeta, Optional<Int32>, UInt64)
+  href: api/AlgoSdk.WalletConnect.WalletConnectRpc.html#AlgoSdk_WalletConnect_WalletConnectRpc_SessionRequest_System_String_AlgoSdk_WalletConnect_ClientMeta_AlgoSdk_Optional_System_Int32__System_UInt64_
+  commentId: M:AlgoSdk.WalletConnect.WalletConnectRpc.SessionRequest(System.String,AlgoSdk.WalletConnect.ClientMeta,AlgoSdk.Optional{System.Int32},System.UInt64)
+  name.vb: SessionRequest(String, ClientMeta, Optional(Of Int32), UInt64)
+  fullName: AlgoSdk.WalletConnect.WalletConnectRpc.SessionRequest(System.String, AlgoSdk.WalletConnect.ClientMeta, AlgoSdk.Optional<System.Int32>, System.UInt64)
+  fullName.vb: AlgoSdk.WalletConnect.WalletConnectRpc.SessionRequest(System.String, AlgoSdk.WalletConnect.ClientMeta, AlgoSdk.Optional(Of System.Int32), System.UInt64)
+  nameWithType: WalletConnectRpc.SessionRequest(String, ClientMeta, Optional<Int32>, UInt64)
+  nameWithType.vb: WalletConnectRpc.SessionRequest(String, ClientMeta, Optional(Of Int32), UInt64)
+- uid: AlgoSdk.WalletConnect.WalletConnectRpc.SessionRequest*
+  name: SessionRequest
+  href: api/AlgoSdk.WalletConnect.WalletConnectRpc.html#AlgoSdk_WalletConnect_WalletConnectRpc_SessionRequest_
+  commentId: Overload:AlgoSdk.WalletConnect.WalletConnectRpc.SessionRequest
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.WalletConnectRpc.SessionRequest
+  nameWithType: WalletConnectRpc.SessionRequest
+- uid: AlgoSdk.WalletConnect.WalletConnectSessionData
+  name: WalletConnectSessionData
+  href: api/AlgoSdk.WalletConnect.WalletConnectSessionData.html
+  commentId: T:AlgoSdk.WalletConnect.WalletConnectSessionData
+  fullName: AlgoSdk.WalletConnect.WalletConnectSessionData
+  nameWithType: WalletConnectSessionData
+- uid: AlgoSdk.WalletConnect.WalletConnectSessionData.Accounts
+  name: Accounts
+  href: api/AlgoSdk.WalletConnect.WalletConnectSessionData.html#AlgoSdk_WalletConnect_WalletConnectSessionData_Accounts
+  commentId: F:AlgoSdk.WalletConnect.WalletConnectSessionData.Accounts
+  fullName: AlgoSdk.WalletConnect.WalletConnectSessionData.Accounts
+  nameWithType: WalletConnectSessionData.Accounts
+- uid: AlgoSdk.WalletConnect.WalletConnectSessionData.ChainId
+  name: ChainId
+  href: api/AlgoSdk.WalletConnect.WalletConnectSessionData.html#AlgoSdk_WalletConnect_WalletConnectSessionData_ChainId
+  commentId: F:AlgoSdk.WalletConnect.WalletConnectSessionData.ChainId
+  fullName: AlgoSdk.WalletConnect.WalletConnectSessionData.ChainId
+  nameWithType: WalletConnectSessionData.ChainId
+- uid: AlgoSdk.WalletConnect.WalletConnectSessionData.Equals(AlgoSdk.WalletConnect.WalletConnectSessionData)
+  name: Equals(WalletConnectSessionData)
+  href: api/AlgoSdk.WalletConnect.WalletConnectSessionData.html#AlgoSdk_WalletConnect_WalletConnectSessionData_Equals_AlgoSdk_WalletConnect_WalletConnectSessionData_
+  commentId: M:AlgoSdk.WalletConnect.WalletConnectSessionData.Equals(AlgoSdk.WalletConnect.WalletConnectSessionData)
+  fullName: AlgoSdk.WalletConnect.WalletConnectSessionData.Equals(AlgoSdk.WalletConnect.WalletConnectSessionData)
+  nameWithType: WalletConnectSessionData.Equals(WalletConnectSessionData)
+- uid: AlgoSdk.WalletConnect.WalletConnectSessionData.Equals*
+  name: Equals
+  href: api/AlgoSdk.WalletConnect.WalletConnectSessionData.html#AlgoSdk_WalletConnect_WalletConnectSessionData_Equals_
+  commentId: Overload:AlgoSdk.WalletConnect.WalletConnectSessionData.Equals
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.WalletConnectSessionData.Equals
+  nameWithType: WalletConnectSessionData.Equals
+- uid: AlgoSdk.WalletConnect.WalletConnectSessionData.IsApproved
+  name: IsApproved
+  href: api/AlgoSdk.WalletConnect.WalletConnectSessionData.html#AlgoSdk_WalletConnect_WalletConnectSessionData_IsApproved
+  commentId: F:AlgoSdk.WalletConnect.WalletConnectSessionData.IsApproved
+  fullName: AlgoSdk.WalletConnect.WalletConnectSessionData.IsApproved
+  nameWithType: WalletConnectSessionData.IsApproved
+- uid: AlgoSdk.WalletConnect.WalletConnectSessionData.PeerId
+  name: PeerId
+  href: api/AlgoSdk.WalletConnect.WalletConnectSessionData.html#AlgoSdk_WalletConnect_WalletConnectSessionData_PeerId
+  commentId: F:AlgoSdk.WalletConnect.WalletConnectSessionData.PeerId
+  fullName: AlgoSdk.WalletConnect.WalletConnectSessionData.PeerId
+  nameWithType: WalletConnectSessionData.PeerId
+- uid: AlgoSdk.WalletConnect.WalletConnectSessionData.PeerMeta
+  name: PeerMeta
+  href: api/AlgoSdk.WalletConnect.WalletConnectSessionData.html#AlgoSdk_WalletConnect_WalletConnectSessionData_PeerMeta
+  commentId: F:AlgoSdk.WalletConnect.WalletConnectSessionData.PeerMeta
+  fullName: AlgoSdk.WalletConnect.WalletConnectSessionData.PeerMeta
+  nameWithType: WalletConnectSessionData.PeerMeta
+- uid: AlgoSdk.WalletConnect.WalletConnectSessionRequest
+  name: WalletConnectSessionRequest
+  href: api/AlgoSdk.WalletConnect.WalletConnectSessionRequest.html
+  commentId: T:AlgoSdk.WalletConnect.WalletConnectSessionRequest
+  fullName: AlgoSdk.WalletConnect.WalletConnectSessionRequest
+  nameWithType: WalletConnectSessionRequest
+- uid: AlgoSdk.WalletConnect.WalletConnectSessionRequest.ChainId
+  name: ChainId
+  href: api/AlgoSdk.WalletConnect.WalletConnectSessionRequest.html#AlgoSdk_WalletConnect_WalletConnectSessionRequest_ChainId
+  commentId: F:AlgoSdk.WalletConnect.WalletConnectSessionRequest.ChainId
+  fullName: AlgoSdk.WalletConnect.WalletConnectSessionRequest.ChainId
+  nameWithType: WalletConnectSessionRequest.ChainId
+- uid: AlgoSdk.WalletConnect.WalletConnectSessionRequest.Equals(AlgoSdk.WalletConnect.WalletConnectSessionRequest)
+  name: Equals(WalletConnectSessionRequest)
+  href: api/AlgoSdk.WalletConnect.WalletConnectSessionRequest.html#AlgoSdk_WalletConnect_WalletConnectSessionRequest_Equals_AlgoSdk_WalletConnect_WalletConnectSessionRequest_
+  commentId: M:AlgoSdk.WalletConnect.WalletConnectSessionRequest.Equals(AlgoSdk.WalletConnect.WalletConnectSessionRequest)
+  fullName: AlgoSdk.WalletConnect.WalletConnectSessionRequest.Equals(AlgoSdk.WalletConnect.WalletConnectSessionRequest)
+  nameWithType: WalletConnectSessionRequest.Equals(WalletConnectSessionRequest)
+- uid: AlgoSdk.WalletConnect.WalletConnectSessionRequest.Equals*
+  name: Equals
+  href: api/AlgoSdk.WalletConnect.WalletConnectSessionRequest.html#AlgoSdk_WalletConnect_WalletConnectSessionRequest_Equals_
+  commentId: Overload:AlgoSdk.WalletConnect.WalletConnectSessionRequest.Equals
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.WalletConnectSessionRequest.Equals
+  nameWithType: WalletConnectSessionRequest.Equals
+- uid: AlgoSdk.WalletConnect.WalletConnectSessionRequest.PeerId
+  name: PeerId
+  href: api/AlgoSdk.WalletConnect.WalletConnectSessionRequest.html#AlgoSdk_WalletConnect_WalletConnectSessionRequest_PeerId
+  commentId: F:AlgoSdk.WalletConnect.WalletConnectSessionRequest.PeerId
+  fullName: AlgoSdk.WalletConnect.WalletConnectSessionRequest.PeerId
+  nameWithType: WalletConnectSessionRequest.PeerId
+- uid: AlgoSdk.WalletConnect.WalletConnectSessionRequest.PeerMeta
+  name: PeerMeta
+  href: api/AlgoSdk.WalletConnect.WalletConnectSessionRequest.html#AlgoSdk_WalletConnect_WalletConnectSessionRequest_PeerMeta
+  commentId: F:AlgoSdk.WalletConnect.WalletConnectSessionRequest.PeerMeta
+  fullName: AlgoSdk.WalletConnect.WalletConnectSessionRequest.PeerMeta
+  nameWithType: WalletConnectSessionRequest.PeerMeta
+- uid: AlgoSdk.WalletConnect.WalletTransaction
+  name: WalletTransaction
+  href: api/AlgoSdk.WalletConnect.WalletTransaction.html
+  commentId: T:AlgoSdk.WalletConnect.WalletTransaction
+  fullName: AlgoSdk.WalletConnect.WalletTransaction
+  nameWithType: WalletTransaction
+- uid: AlgoSdk.WalletConnect.WalletTransaction.AuthAddr
+  name: AuthAddr
+  href: api/AlgoSdk.WalletConnect.WalletTransaction.html#AlgoSdk_WalletConnect_WalletTransaction_AuthAddr
+  commentId: F:AlgoSdk.WalletConnect.WalletTransaction.AuthAddr
+  fullName: AlgoSdk.WalletConnect.WalletTransaction.AuthAddr
+  nameWithType: WalletTransaction.AuthAddr
+- uid: AlgoSdk.WalletConnect.WalletTransaction.Equals(AlgoSdk.WalletConnect.WalletTransaction)
+  name: Equals(WalletTransaction)
+  href: api/AlgoSdk.WalletConnect.WalletTransaction.html#AlgoSdk_WalletConnect_WalletTransaction_Equals_AlgoSdk_WalletConnect_WalletTransaction_
+  commentId: M:AlgoSdk.WalletConnect.WalletTransaction.Equals(AlgoSdk.WalletConnect.WalletTransaction)
+  fullName: AlgoSdk.WalletConnect.WalletTransaction.Equals(AlgoSdk.WalletConnect.WalletTransaction)
+  nameWithType: WalletTransaction.Equals(WalletTransaction)
+- uid: AlgoSdk.WalletConnect.WalletTransaction.Equals*
+  name: Equals
+  href: api/AlgoSdk.WalletConnect.WalletTransaction.html#AlgoSdk_WalletConnect_WalletTransaction_Equals_
+  commentId: Overload:AlgoSdk.WalletConnect.WalletTransaction.Equals
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.WalletTransaction.Equals
+  nameWithType: WalletTransaction.Equals
+- uid: AlgoSdk.WalletConnect.WalletTransaction.Message
+  name: Message
+  href: api/AlgoSdk.WalletConnect.WalletTransaction.html#AlgoSdk_WalletConnect_WalletTransaction_Message
+  commentId: F:AlgoSdk.WalletConnect.WalletTransaction.Message
+  fullName: AlgoSdk.WalletConnect.WalletTransaction.Message
+  nameWithType: WalletTransaction.Message
+- uid: AlgoSdk.WalletConnect.WalletTransaction.Msig
+  name: Msig
+  href: api/AlgoSdk.WalletConnect.WalletTransaction.html#AlgoSdk_WalletConnect_WalletTransaction_Msig
+  commentId: F:AlgoSdk.WalletConnect.WalletTransaction.Msig
+  fullName: AlgoSdk.WalletConnect.WalletTransaction.Msig
+  nameWithType: WalletTransaction.Msig
+- uid: AlgoSdk.WalletConnect.WalletTransaction.New*
+  name: New
+  href: api/AlgoSdk.WalletConnect.WalletTransaction.html#AlgoSdk_WalletConnect_WalletTransaction_New_
+  commentId: Overload:AlgoSdk.WalletConnect.WalletTransaction.New
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.WalletTransaction.New
+  nameWithType: WalletTransaction.New
+- uid: AlgoSdk.WalletConnect.WalletTransaction.New``1(``0,System.String,AlgoSdk.Address,AlgoSdk.WalletConnect.MultisigMetadata,AlgoSdk.Address[])
+  name: New<T>(T, String, Address, MultisigMetadata, Address[])
+  href: api/AlgoSdk.WalletConnect.WalletTransaction.html#AlgoSdk_WalletConnect_WalletTransaction_New__1___0_System_String_AlgoSdk_Address_AlgoSdk_WalletConnect_MultisigMetadata_AlgoSdk_Address___
+  commentId: M:AlgoSdk.WalletConnect.WalletTransaction.New``1(``0,System.String,AlgoSdk.Address,AlgoSdk.WalletConnect.MultisigMetadata,AlgoSdk.Address[])
+  name.vb: New(Of T)(T, String, Address, MultisigMetadata, Address())
+  fullName: AlgoSdk.WalletConnect.WalletTransaction.New<T>(T, System.String, AlgoSdk.Address, AlgoSdk.WalletConnect.MultisigMetadata, AlgoSdk.Address[])
+  fullName.vb: AlgoSdk.WalletConnect.WalletTransaction.New(Of T)(T, System.String, AlgoSdk.Address, AlgoSdk.WalletConnect.MultisigMetadata, AlgoSdk.Address())
+  nameWithType: WalletTransaction.New<T>(T, String, Address, MultisigMetadata, Address[])
+  nameWithType.vb: WalletTransaction.New(Of T)(T, String, Address, MultisigMetadata, Address())
+- uid: AlgoSdk.WalletConnect.WalletTransaction.Signers
+  name: Signers
+  href: api/AlgoSdk.WalletConnect.WalletTransaction.html#AlgoSdk_WalletConnect_WalletTransaction_Signers
+  commentId: F:AlgoSdk.WalletConnect.WalletTransaction.Signers
+  fullName: AlgoSdk.WalletConnect.WalletTransaction.Signers
+  nameWithType: WalletTransaction.Signers
+- uid: AlgoSdk.WalletConnect.WalletTransaction.Txn
+  name: Txn
+  href: api/AlgoSdk.WalletConnect.WalletTransaction.html#AlgoSdk_WalletConnect_WalletTransaction_Txn
+  commentId: F:AlgoSdk.WalletConnect.WalletTransaction.Txn
+  fullName: AlgoSdk.WalletConnect.WalletTransaction.Txn
+  nameWithType: WalletTransaction.Txn
+- uid: AlgoSdk.WalletConnect.WebSocketExtensions
+  name: WebSocketExtensions
+  href: api/AlgoSdk.WalletConnect.WebSocketExtensions.html
+  commentId: T:AlgoSdk.WalletConnect.WebSocketExtensions
+  fullName: AlgoSdk.WalletConnect.WebSocketExtensions
+  nameWithType: WebSocketExtensions
+- uid: AlgoSdk.WalletConnect.WebSocketExtensions.PollUntilOpen(IWebSocketClient,CancellationToken)
+  name: PollUntilOpen(IWebSocketClient, CancellationToken)
+  href: api/AlgoSdk.WalletConnect.WebSocketExtensions.html#AlgoSdk_WalletConnect_WebSocketExtensions_PollUntilOpen_IWebSocketClient_CancellationToken_
+  commentId: M:AlgoSdk.WalletConnect.WebSocketExtensions.PollUntilOpen(IWebSocketClient,CancellationToken)
+  fullName: AlgoSdk.WalletConnect.WebSocketExtensions.PollUntilOpen(IWebSocketClient, CancellationToken)
+  nameWithType: WebSocketExtensions.PollUntilOpen(IWebSocketClient, CancellationToken)
+- uid: AlgoSdk.WalletConnect.WebSocketExtensions.PollUntilOpen*
+  name: PollUntilOpen
+  href: api/AlgoSdk.WalletConnect.WebSocketExtensions.html#AlgoSdk_WalletConnect_WebSocketExtensions_PollUntilOpen_
+  commentId: Overload:AlgoSdk.WalletConnect.WebSocketExtensions.PollUntilOpen
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.WebSocketExtensions.PollUntilOpen
+  nameWithType: WebSocketExtensions.PollUntilOpen
+- uid: AlgoSdk.WalletConnect.WebSocketExtensions.PollUntilPayload(IWebSocketClient,CancellationToken)
+  name: PollUntilPayload(IWebSocketClient, CancellationToken)
+  href: api/AlgoSdk.WalletConnect.WebSocketExtensions.html#AlgoSdk_WalletConnect_WebSocketExtensions_PollUntilPayload_IWebSocketClient_CancellationToken_
+  commentId: M:AlgoSdk.WalletConnect.WebSocketExtensions.PollUntilPayload(IWebSocketClient,CancellationToken)
+  fullName: AlgoSdk.WalletConnect.WebSocketExtensions.PollUntilPayload(IWebSocketClient, CancellationToken)
+  nameWithType: WebSocketExtensions.PollUntilPayload(IWebSocketClient, CancellationToken)
+- uid: AlgoSdk.WalletConnect.WebSocketExtensions.PollUntilPayload*
+  name: PollUntilPayload
+  href: api/AlgoSdk.WalletConnect.WebSocketExtensions.html#AlgoSdk_WalletConnect_WebSocketExtensions_PollUntilPayload_
+  commentId: Overload:AlgoSdk.WalletConnect.WebSocketExtensions.PollUntilPayload
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.WebSocketExtensions.PollUntilPayload
+  nameWithType: WebSocketExtensions.PollUntilPayload
+- uid: AlgoSdk.WalletConnect.WebSocketExtensions.Send(IWebSocketClient,AlgoSdk.WalletConnect.NetworkMessage)
+  name: Send(IWebSocketClient, NetworkMessage)
+  href: api/AlgoSdk.WalletConnect.WebSocketExtensions.html#AlgoSdk_WalletConnect_WebSocketExtensions_Send_IWebSocketClient_AlgoSdk_WalletConnect_NetworkMessage_
+  commentId: M:AlgoSdk.WalletConnect.WebSocketExtensions.Send(IWebSocketClient,AlgoSdk.WalletConnect.NetworkMessage)
+  fullName: AlgoSdk.WalletConnect.WebSocketExtensions.Send(IWebSocketClient, AlgoSdk.WalletConnect.NetworkMessage)
+  nameWithType: WebSocketExtensions.Send(IWebSocketClient, NetworkMessage)
+- uid: AlgoSdk.WalletConnect.WebSocketExtensions.Send*
+  name: Send
+  href: api/AlgoSdk.WalletConnect.WebSocketExtensions.html#AlgoSdk_WalletConnect_WebSocketExtensions_Send_
+  commentId: Overload:AlgoSdk.WalletConnect.WebSocketExtensions.Send
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.WebSocketExtensions.Send
+  nameWithType: WebSocketExtensions.Send
+- uid: AlgoSdk.WalletConnect.WebSocketTransport
+  name: WebSocketTransport
+  href: api/AlgoSdk.WalletConnect.WebSocketTransport.html
+  commentId: T:AlgoSdk.WalletConnect.WebSocketTransport
+  fullName: AlgoSdk.WalletConnect.WebSocketTransport
+  nameWithType: WebSocketTransport
+- uid: AlgoSdk.WalletConnect.WebSocketTransport.#ctor(System.String)
+  name: WebSocketTransport(String)
+  href: api/AlgoSdk.WalletConnect.WebSocketTransport.html#AlgoSdk_WalletConnect_WebSocketTransport__ctor_System_String_
+  commentId: M:AlgoSdk.WalletConnect.WebSocketTransport.#ctor(System.String)
+  fullName: AlgoSdk.WalletConnect.WebSocketTransport.WebSocketTransport(System.String)
+  nameWithType: WebSocketTransport.WebSocketTransport(String)
+- uid: AlgoSdk.WalletConnect.WebSocketTransport.#ctor*
+  name: WebSocketTransport
+  href: api/AlgoSdk.WalletConnect.WebSocketTransport.html#AlgoSdk_WalletConnect_WebSocketTransport__ctor_
+  commentId: Overload:AlgoSdk.WalletConnect.WebSocketTransport.#ctor
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.WebSocketTransport.WebSocketTransport
+  nameWithType: WebSocketTransport.WebSocketTransport
+- uid: AlgoSdk.WalletConnect.WebSocketTransport.Connected
+  name: Connected
+  href: api/AlgoSdk.WalletConnect.WebSocketTransport.html#AlgoSdk_WalletConnect_WebSocketTransport_Connected
+  commentId: P:AlgoSdk.WalletConnect.WebSocketTransport.Connected
+  fullName: AlgoSdk.WalletConnect.WebSocketTransport.Connected
+  nameWithType: WebSocketTransport.Connected
+- uid: AlgoSdk.WalletConnect.WebSocketTransport.Connected*
+  name: Connected
+  href: api/AlgoSdk.WalletConnect.WebSocketTransport.html#AlgoSdk_WalletConnect_WebSocketTransport_Connected_
+  commentId: Overload:AlgoSdk.WalletConnect.WebSocketTransport.Connected
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.WebSocketTransport.Connected
+  nameWithType: WebSocketTransport.Connected
+- uid: AlgoSdk.WalletConnect.WebSocketTransport.Dispose
+  name: Dispose()
+  href: api/AlgoSdk.WalletConnect.WebSocketTransport.html#AlgoSdk_WalletConnect_WebSocketTransport_Dispose
+  commentId: M:AlgoSdk.WalletConnect.WebSocketTransport.Dispose
+  fullName: AlgoSdk.WalletConnect.WebSocketTransport.Dispose()
+  nameWithType: WebSocketTransport.Dispose()
+- uid: AlgoSdk.WalletConnect.WebSocketTransport.Dispose*
+  name: Dispose
+  href: api/AlgoSdk.WalletConnect.WebSocketTransport.html#AlgoSdk_WalletConnect_WebSocketTransport_Dispose_
+  commentId: Overload:AlgoSdk.WalletConnect.WebSocketTransport.Dispose
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.WebSocketTransport.Dispose
+  nameWithType: WebSocketTransport.Dispose
+- uid: AlgoSdk.WalletConnect.WebSocketTransport.Open
+  name: Open()
+  href: api/AlgoSdk.WalletConnect.WebSocketTransport.html#AlgoSdk_WalletConnect_WebSocketTransport_Open
+  commentId: M:AlgoSdk.WalletConnect.WebSocketTransport.Open
+  fullName: AlgoSdk.WalletConnect.WebSocketTransport.Open()
+  nameWithType: WebSocketTransport.Open()
+- uid: AlgoSdk.WalletConnect.WebSocketTransport.Open*
+  name: Open
+  href: api/AlgoSdk.WalletConnect.WebSocketTransport.html#AlgoSdk_WalletConnect_WebSocketTransport_Open_
+  commentId: Overload:AlgoSdk.WalletConnect.WebSocketTransport.Open
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.WebSocketTransport.Open
+  nameWithType: WebSocketTransport.Open
 - uid: AlgoSdk.WalletHandle
   name: WalletHandle
   href: api/AlgoSdk.WalletHandle.html

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct NativeByteArray
    | Unity Algorand SDK ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../resources/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -98,10 +98,37 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_LowLevel_NativeByteArray_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct NativeByteArray : IByteArray, IContiguousArray&lt;byte&gt;, IArray&lt;byte&gt;, IEquatable&lt;NativeByteArray&gt;, INativeDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public struct NativeByteArray : IByteArray, IContiguousArray&lt;byte&gt;, IArray&lt;byte&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
+  
+  
+  <a id="AlgoSdk_LowLevel_NativeByteArray__ctor_" data-uid="AlgoSdk.LowLevel.NativeByteArray.#ctor*"></a>
+  <h4 id="AlgoSdk_LowLevel_NativeByteArray__ctor_NativeArray_System_Byte__" data-uid="AlgoSdk.LowLevel.NativeByteArray.#ctor(NativeArray{System.Byte})">NativeByteArray(NativeArray&lt;Byte&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NativeByteArray(NativeArray&lt;byte&gt; data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NativeArray</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="AlgoSdk_LowLevel_NativeByteArray__ctor_" data-uid="AlgoSdk.LowLevel.NativeByteArray.#ctor*"></a>
@@ -168,6 +195,31 @@
   </table>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="AlgoSdk_LowLevel_NativeByteArray_Data_" data-uid="AlgoSdk.LowLevel.NativeByteArray.Data*"></a>
+  <h4 id="AlgoSdk_LowLevel_NativeByteArray_Data" data-uid="AlgoSdk.LowLevel.NativeByteArray.Data">Data</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly NativeArray&lt;byte&gt;.ReadOnly Data { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NativeArray.ReadOnly</span>&lt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="AlgoSdk_LowLevel_NativeByteArray_Item_" data-uid="AlgoSdk.LowLevel.NativeByteArray.Item*"></a>
