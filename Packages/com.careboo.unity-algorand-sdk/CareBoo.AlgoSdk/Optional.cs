@@ -4,6 +4,7 @@ using AlgoSdk.Formatters;
 namespace AlgoSdk
 {
     [AlgoApiFormatter(typeof(OptionalFormatter<bool>))]
+    [AlgoApiFormatter(typeof(OptionalFormatter<int>))]
     [AlgoApiFormatter(typeof(OptionalFormatter<ulong>))]
     [AlgoApiFormatter(typeof(OptionalFormatter<uint>))]
     [Serializable]

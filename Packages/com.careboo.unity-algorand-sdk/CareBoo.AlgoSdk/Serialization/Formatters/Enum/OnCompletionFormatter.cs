@@ -1,5 +1,4 @@
 using AlgoSdk.MessagePack;
-using Unity.Collections;
 
 namespace AlgoSdk.Formatters
 {
