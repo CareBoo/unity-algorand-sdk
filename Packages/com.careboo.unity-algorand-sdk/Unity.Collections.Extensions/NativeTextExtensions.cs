@@ -17,4 +17,9 @@ public static class NativeTextExtensions
 #endif
         return array;
     }
+
+    public static byte[] ToByteArray(this NativeText text)
+    {
+        return text.AsArray().ToArray();
+    }
 }

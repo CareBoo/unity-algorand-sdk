@@ -8,17 +8,17 @@ namespace AlgoSdk.WalletConnect
     public struct EncryptedPayload
     {
         [AlgoApiField("iv", null)]
-        public byte[] Iv;
+        public Hex Iv;
 
         [AlgoApiField("hmac", null)]
-        public byte[] Signature;
+        public Hex Signature;
 
         [AlgoApiField("data", null)]
-        public byte[] Data;
+        public Hex Data;
 
         public byte[] Sign(byte[] key)
         {
-            if (Iv == null || Data == null || key == null)
+            if (Iv.Data == null || Data.Data == null || key == null)
                 return null;
 
             using var hmac = new HMACSHA256(key);
@@ -32,8 +32,8 @@ namespace AlgoSdk.WalletConnect
         public void ValidateHmac(byte[] key)
         {
             var computedHmac = Sign(key);
-            if (!ArrayComparer.Equals(Signature, computedHmac))
-                throw new InvalidDataException("HMAC given does not match the hmac computed with key");
+            if (!Signature.Equals(computedHmac))
+                throw new InvalidDataException("HMAC given does not match the HMAC computed with key");
         }
 
         public static implicit operator EncryptedPayload((byte[] iv, byte[] encryptedData) encryptResult)
@@ -47,9 +47,9 @@ namespace AlgoSdk.WalletConnect
 
         byte[] GetSignData()
         {
-            var result = new byte[Iv.Length + Data.Length];
-            Buffer.BlockCopy(Data, 0, result, 0, Data.Length);
-            Buffer.BlockCopy(Iv, 0, result, Data.Length, Iv.Length);
+            var result = new byte[Iv.Data.Length + Data.Data.Length];
+            Buffer.BlockCopy(Data, 0, result, 0, Data.Data.Length);
+            Buffer.BlockCopy(Iv, 0, result, Data.Data.Length, Iv.Data.Length);
             return result;
         }
     }

@@ -6,15 +6,13 @@ namespace AlgoSdk.WalletConnect
 {
     public static class JsonRpc
     {
-        public static byte[] SerializeAsNetworkMessage<T>(this T request, Hex encryptionKey, string topic)
+        public static NetworkMessage ToNetworkMessage<T>(this T request, Hex encryptionKey, string topic)
             where T : IJsonRpcRequest
         {
             using var requestJson = AlgoApiSerializer.SerializeJson(request, Allocator.Temp);
             var payloadData = requestJson.AsArray().ToArray();
             var encryptedPayload = AesCipher.EncryptWithKey(encryptionKey, payloadData);
-            var networkMessage = NetworkMessage.PublishToTopic(encryptedPayload, topic);
-            using var networkMessageJson = AlgoApiSerializer.SerializeJson(networkMessage, Allocator.Temp);
-            return networkMessageJson.AsArray().ToArray();
+            return NetworkMessage.PublishToTopic(encryptedPayload, topic);
         }
 
         public static Either<JsonRpcResponse, JsonRpcRequest> ReadJsonRpcPayload(this WebSocketEvent response, Hex encryptionKey)

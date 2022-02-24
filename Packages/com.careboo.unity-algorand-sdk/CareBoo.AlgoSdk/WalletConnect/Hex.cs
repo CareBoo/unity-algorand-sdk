@@ -1,13 +1,17 @@
 using System;
+using AlgoSdk.WalletConnect.Formatters;
 using UnityEngine;
 
 namespace AlgoSdk.WalletConnect
 {
     [Serializable]
-    public struct Hex
+    [AlgoApiFormatter(typeof(HexFormatter))]
+    public struct Hex : IEquatable<Hex>
     {
         [SerializeField]
         byte[] data;
+
+        public byte[] Data => data;
 
         public override string ToString()
         {
@@ -34,6 +38,11 @@ namespace AlgoSdk.WalletConnect
             for (var i = 0; i < s.Length; i += 2)
                 data[i / 2] = Convert.ToByte(s.Substring(i, 2), 16);
             return data;
+        }
+
+        public bool Equals(Hex other)
+        {
+            return ArrayComparer.Equals(data, other.data);
         }
     }
 }

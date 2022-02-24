@@ -38,6 +38,12 @@ namespace AlgoSdk
             return IsValue2;
         }
 
+        public void Deconstruct(out T value1, out U value2)
+        {
+            value1 = Value1;
+            value2 = Value2;
+        }
+
         public static implicit operator Either<U, T>(Either<T, U> either)
         {
             if (either.IsValue1)

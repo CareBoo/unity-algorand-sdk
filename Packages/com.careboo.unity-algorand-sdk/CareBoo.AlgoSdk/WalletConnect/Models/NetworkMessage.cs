@@ -1,4 +1,5 @@
 using System;
+using Unity.Collections;
 
 namespace AlgoSdk.WalletConnect
 {
@@ -14,6 +15,9 @@ namespace AlgoSdk.WalletConnect
 
         [AlgoApiField("payload", null)]
         public string Payload;
+
+        [AlgoApiField("silent", null)]
+        public Optional<bool> IsSilent;
 
         public bool Equals(NetworkMessage other)
         {
@@ -42,6 +46,13 @@ namespace AlgoSdk.WalletConnect
                 Type = "pub",
                 Payload = payloadJson
             };
+        }
+
+        public static NetworkMessage PublishToTopicEncrypted<T>(T payload, Hex encryptionKey, string topic)
+        {
+            using var payloadJson = AlgoApiSerializer.SerializeJson(payload, Allocator.Temp);
+            var encryptedPayload = AesCipher.EncryptWithKey(encryptionKey, payloadJson.ToByteArray());
+            return PublishToTopic(encryptedPayload, topic);
         }
     }
 }

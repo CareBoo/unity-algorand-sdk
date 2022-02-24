@@ -1,8 +1,8 @@
 using System;
 using System.Collections;
 using System.Text;
+using System.Threading;
 using AlgoSdk;
-using AlgoSdk.LowLevel;
 using AlgoSdk.WalletConnect;
 using Cysharp.Threading.Tasks;
 using Netcode.Transports.WebSocket;
@@ -10,7 +10,6 @@ using NUnit.Framework;
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.TestTools;
-using WebSocketSharp;
 using static Netcode.Transports.WebSocket.WebSocketEvent;
 
 [TestFixture]
@@ -28,74 +27,33 @@ public class WalletConnectTest
     [UnityTest]
     public IEnumerator TestConnection() => UniTask.ToCoroutine(async () =>
     {
-        var topic = Guid.NewGuid().ToString();
-        var dappId = Guid.NewGuid().ToString();
-        var bridgeUrl = DefaultBridge.GetRandomBridgeUrl().Replace("http", "ws");
-        var client = WebSocketClientFactory.Create(bridgeUrl);
-        client.Connect();
-        var sessionRequest = WalletConnectRpc.SessionRequest(
-            peerId: dappId,
-            peerMeta: DappMeta,
-            chainId: WalletConnectRpc.Algorand.ChainId
-        );
-        var data = Encoding.UTF8.GetBytes(AlgoApiSerializer.SerializeJson(sessionRequest));
-        var key = GetKey();
-        var msg = sessionRequest.SerializeAsNetworkMessage(key, topic);
-        Debug.Log(Encoding.UTF8.GetString(msg));
-        try
-        {
-            client.Send(new ArraySegment<byte>(msg));
-        }
-        catch (WebSocketException)
-        {
-            Assert.Ignore("Unable to send message using websockets.");
-        }
-        var responseEvent = client.Poll();
-        Log(responseEvent, "dapp");
-        await WaitForMessage(bridgeUrl, topic, key);
-        var count = 0;
-        while (
-            (responseEvent.Type == WebSocketEvent.WebSocketEventType.Open
-            || responseEvent.Type == WebSocketEvent.WebSocketEventType.Nothing)
-            && count < 1
-        )
-        {
-            await UniTask.Delay(500);
-            count++;
-            responseEvent = client.Poll();
-            Log(responseEvent, "dapp");
-        }
+        var timeout = new CancellationTokenSource();
+        timeout.CancelAfterSlim(TimeSpan.FromSeconds(10));
+        var session = new AlgorandWalletConnectSession(DappMeta);
+        await session.StartConnection(timeout.Token);
+        await WaitForRequest(session, timeout.Token);
+        await session.WaitForConnectionApproval(timeout.Token);
     });
 
-    async UniTask WaitForMessage(string bridgeUrl, string topic, Hex key)
+    async UniTask<string> WaitForRequest(AlgorandWalletConnectSession session, CancellationToken cancellationToken = default)
     {
-        var client = WebSocketClientFactory.Create(bridgeUrl);
+        var peerId = Guid.NewGuid().ToString();
+        var client = WebSocketClientFactory.Create(session.BridgeUrl.Replace("http", "ws"));
         client.Connect();
-        var message = NetworkMessage.SubscribeToTopic(topic);
-        var messageData = Encoding.UTF8.GetBytes(AlgoApiSerializer.SerializeJson(message));
-        client.Send(new ArraySegment<byte>(messageData));
-
-        var responseEvent = client.Poll();
-        Log(responseEvent, "wallet");
-        var count = 0;
-        while (
-            (responseEvent.Type == WebSocketEvent.WebSocketEventType.Open
-            || responseEvent.Type == WebSocketEvent.WebSocketEventType.Nothing)
-            && count < 10
-        )
-        {
-            await UniTask.Delay(500);
-            count++;
-            responseEvent = client.Poll();
-            Log(responseEvent, "wallet");
-        }
-    }
-
-    Hex GetKey()
-    {
-        using var secret = new NativeByteArray(32, Allocator.Temp);
-        AlgoSdk.Crypto.Random.Randomize(secret);
-        return secret.ToArray();
+        await client.PollUntilOpen(cancellationToken);
+        var message = NetworkMessage.SubscribeToTopic(session.HandshakeTopic);
+        using var messageData = AlgoApiSerializer.SerializeJson(message, Allocator.Persistent);
+        Debug.Log(messageData);
+        client.Send(message);
+        var evt = await client.PollUntilPayload(cancellationToken);
+        Log(evt, "wallet");
+        if (!evt.ReadJsonRpcPayload(session.Key).TryGetValue2(out var request))
+            throw new Exception("payload was a response!");
+        var approveResult = $"{{\"peerId\":\"{peerId}\",\"peerMeta\":{{\"description\":\"test\",\"url\":\"https://www.example.com\",\"icons\":[],\"name\":\"Test\"}},\"approved\":true,\"chainId\":4160,\"accounts\":[\"WHJRSOUX4P7HQBNGR6ZC3FKS3P3CUZUEZTL3LPN44JS37UTYZ4BLH2TLHA\"]}}";
+        var jsonRpcResponse = new JsonRpcResponse { Id = session.HandshakeId, JsonRpc = "2.0", Result = approveResult };
+        var sendMessage = NetworkMessage.PublishToTopicEncrypted(jsonRpcResponse, session.Key, session.ClientId);
+        client.Send(sendMessage);
+        return peerId;
     }
 
     void Log(WebSocketEvent webSocketEvent, string clientId)

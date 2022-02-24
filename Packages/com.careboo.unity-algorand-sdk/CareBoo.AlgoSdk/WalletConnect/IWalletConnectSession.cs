@@ -36,7 +36,7 @@ namespace AlgoSdk.WalletConnect
         /// <summary>
         /// 
         /// </summary>
-        long HandshakeId { get; }
+        ulong HandshakeId { get; }
 
         /// <summary>
         /// The ID of the network connected (test, beta, main, ...)
@@ -62,15 +62,5 @@ namespace AlgoSdk.WalletConnect
         /// Meta information about the Wallet connected in this session.
         /// </summary>
         ClientMeta WalletMeta { get; }
-
-        /// <summary>
-        /// Url that wallets will connect to.
-        /// </summary>
-        string Url { get; }
-
-        /// <summary>
-        /// WalletConnect protocol Version.
-        /// </summary>
-        string Version { get; }
     }
 }
