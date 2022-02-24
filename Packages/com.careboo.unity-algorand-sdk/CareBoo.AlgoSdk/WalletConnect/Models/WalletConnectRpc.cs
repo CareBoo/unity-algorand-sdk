@@ -13,7 +13,7 @@ namespace AlgoSdk.WalletConnect
         /// <param name="peerMeta">The metadata of the client.</param>
         /// <param name="chainId">The id of the blockchain this request is for.</param>
         /// <returns>A <see cref="JsonRpcRequest"/> that can be used to start a new WalletConnect session.</returns>
-        public static JsonRpcRequest SessionRequest(string peerId, ClientMeta peerMeta, Optional<int> chainId = default)
+        public static JsonRpcRequest SessionRequest(string peerId, ClientMeta peerMeta, Optional<int> chainId = default, ulong id = default)
         {
             var sessionRequest = new WalletConnectSessionRequest
             {
@@ -21,7 +21,7 @@ namespace AlgoSdk.WalletConnect
                 PeerMeta = peerMeta,
                 ChainId = chainId
             };
-            return SessionRequest(sessionRequest);
+            return SessionRequest(sessionRequest, id);
         }
 
         /// <summary>
@@ -29,7 +29,7 @@ namespace AlgoSdk.WalletConnect
         /// </summary>
         /// <param name="sessionRequest">Parameters required to create the request.</param>
         /// <returns>A <see cref="JsonRpcRequest"/> that can be used to start a new WalletConnect session.</returns>
-        public static JsonRpcRequest SessionRequest(WalletConnectSessionRequest sessionRequest)
+        public static JsonRpcRequest SessionRequest(WalletConnectSessionRequest sessionRequest, ulong id = default)
         {
             const string method = "wc_sessionRequest";
             var requestParams = new AlgoApiObject[]
@@ -38,14 +38,18 @@ namespace AlgoSdk.WalletConnect
             };
             return new JsonRpcRequest
             {
-                Id = GetRandomId(),
+                Id = id > 0 ? id : GetRandomId(),
                 JsonRpc = jsonRpcVersion,
                 Method = method,
                 Params = requestParams
             };
         }
 
-        static ulong GetRandomId() => (ulong)UnityEngine.Random.Range(1, int.MaxValue);
+        /// <summary>
+        /// Gets a random, valid JsonRpcRequest id.
+        /// </summary>
+        /// <returns>a <see cref="ulong"/> in the range [1, <see cref="int.MaxValue"/>]</returns>
+        public static ulong GetRandomId() => (ulong)UnityEngine.Random.Range(1, int.MaxValue);
 
         public static class Algorand
         {

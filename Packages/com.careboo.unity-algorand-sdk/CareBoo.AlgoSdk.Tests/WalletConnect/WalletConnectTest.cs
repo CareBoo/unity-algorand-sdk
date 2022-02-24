@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Text;
+using System.Threading;
 using AlgoSdk;
 using AlgoSdk.WalletConnect;
 using Cysharp.Threading.Tasks;
@@ -24,25 +25,35 @@ public class WalletConnectTest
     };
 
     [UnityTest]
-    [Timeout(10000)]
     public IEnumerator TestConnection() => UniTask.ToCoroutine(async () =>
     {
-        await WaitForMessage("", "", "");
+        var timeout = new CancellationTokenSource();
+        timeout.CancelAfterSlim(TimeSpan.FromSeconds(10));
+        var session = new AlgorandWalletConnectSession(DappMeta);
+        await session.StartConnection(timeout.Token);
+        await WaitForRequest(session, timeout.Token);
+        await session.WaitForConnectionApproval(timeout.Token);
     });
 
-    async UniTask WaitForMessage(string bridgeUrl, string topic, string peerId)
+    async UniTask<string> WaitForRequest(AlgorandWalletConnectSession session, CancellationToken cancellationToken = default)
     {
-        var client = WebSocketClientFactory.Create(bridgeUrl.Replace("http", "ws"));
+        var peerId = Guid.NewGuid().ToString();
+        var client = WebSocketClientFactory.Create(session.BridgeUrl.Replace("http", "ws"));
         client.Connect();
-        await client.PollUntilOpen();
-        var message = NetworkMessage.SubscribeToTopic(topic);
+        await client.PollUntilOpen(cancellationToken);
+        var message = NetworkMessage.SubscribeToTopic(session.HandshakeTopic);
         using var messageData = AlgoApiSerializer.SerializeJson(message, Allocator.Persistent);
         Debug.Log(messageData);
-        client.Send(new ArraySegment<byte>(messageData.AsArray().ToArray()));
-        var evt = await client.PollUntilPayload();
+        client.Send(message);
+        var evt = await client.PollUntilPayload(cancellationToken);
         Log(evt, "wallet");
-        var sendMessage = NetworkMessage.PublishToTopic((AlgoApiObject)"{\"test\":1}", peerId);
+        if (!evt.ReadJsonRpcPayload(session.Key).TryGetValue2(out var request))
+            throw new Exception("payload was a response!");
+        var approveResult = $"{{\"peerId\":\"{peerId}\",\"peerMeta\":{{\"description\":\"test\",\"url\":\"https://www.example.com\",\"icons\":[],\"name\":\"Test\"}},\"approved\":true,\"chainId\":4160,\"accounts\":[\"WHJRSOUX4P7HQBNGR6ZC3FKS3P3CUZUEZTL3LPN44JS37UTYZ4BLH2TLHA\"]}}";
+        var jsonRpcResponse = new JsonRpcResponse { Id = session.HandshakeId, JsonRpc = "2.0", Result = approveResult };
+        var sendMessage = NetworkMessage.PublishToTopicEncrypted(jsonRpcResponse, session.Key, session.ClientId);
         client.Send(sendMessage);
+        return peerId;
     }
 
     void Log(WebSocketEvent webSocketEvent, string clientId)

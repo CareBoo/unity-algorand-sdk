@@ -16,6 +16,9 @@ namespace AlgoSdk.WalletConnect
         [AlgoApiField("payload", null)]
         public string Payload;
 
+        [AlgoApiField("silent", null)]
+        public Optional<bool> IsSilent;
+
         public bool Equals(NetworkMessage other)
         {
             return StringComparer.Equals(Topic, other.Topic)
@@ -45,10 +48,10 @@ namespace AlgoSdk.WalletConnect
             };
         }
 
-        public static NetworkMessage PublishToTopicEncrypted(JsonRpcRequest request, Hex encryptionKey, string topic)
+        public static NetworkMessage PublishToTopicEncrypted<T>(T payload, Hex encryptionKey, string topic)
         {
-            using var requestJson = AlgoApiSerializer.SerializeJson(request, Allocator.Temp);
-            var encryptedPayload = AesCipher.EncryptWithKey(encryptionKey, requestJson.ToByteArray());
+            using var payloadJson = AlgoApiSerializer.SerializeJson(payload, Allocator.Temp);
+            var encryptedPayload = AesCipher.EncryptWithKey(encryptionKey, payloadJson.ToByteArray());
             return PublishToTopic(encryptedPayload, topic);
         }
     }

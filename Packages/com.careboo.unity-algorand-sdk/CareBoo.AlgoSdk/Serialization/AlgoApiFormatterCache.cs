@@ -54,6 +54,7 @@ namespace AlgoSdk
             AddFormatter<FixedList128Bytes<byte>>(new FixedBytesFormatter<FixedList128Bytes<byte>>());
             AddFormatter<FixedList512Bytes<byte>>(new FixedBytesFormatter<FixedList512Bytes<byte>>());
             AddFormatter<FixedList4096Bytes<byte>>(new FixedBytesFormatter<FixedList4096Bytes<byte>>());
+            AddFormatter<AlgoSdk.WalletConnect.WalletTransaction[]>(ArrayFormatter<AlgoSdk.WalletConnect.WalletTransaction>.Instance);
         }
 
         static void AddFormatter(Type t, object formatter)

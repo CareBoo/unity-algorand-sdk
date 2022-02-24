@@ -22,6 +22,16 @@ namespace AlgoSdk.WalletConnect
         /// The JsonRpc version.
         /// </summary>
         string JsonRpc { get; set; }
+
+        /// <summary>
+        /// An error object if an error occurred.
+        /// </summary>
+        JsonRpcError Error { get; set; }
+
+        /// <summary>
+        /// Returns <c>true</c> if this is an error response.
+        /// </summary>
+        bool IsError { get; }
     }
 
     [AlgoApiObject]
@@ -38,11 +48,17 @@ namespace AlgoSdk.WalletConnect
         [AlgoApiField("result", null)]
         public AlgoApiObject Result { get; set; }
 
+        [AlgoApiField("error", null)]
+        public JsonRpcError Error { get; set; }
+
+        public bool IsError => !Error.Equals(default);
+
         public bool Equals(JsonRpcResponse other)
         {
             return Result.Equals(other.Result)
                 && Id.Equals(other.Id)
                 && StringComparer.Equals(JsonRpc, other.JsonRpc)
+                && Error.Equals(other.Error)
                 ;
         }
     }

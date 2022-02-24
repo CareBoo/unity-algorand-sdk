@@ -7,7 +7,7 @@ namespace AlgoSdk.WalletConnect
     /// </summary>
     [AlgoApiObject]
     public struct SignTxnsError
-        : JsonRpcError
+        : IJsonRpcError
         , IEquatable<SignTxnsError>
     {
         [AlgoApiField("message", null)]
@@ -17,22 +17,27 @@ namespace AlgoSdk.WalletConnect
         /// The integer error code of the error.
         /// </summary>
         [AlgoApiField("code", null)]
-        public int RawErrorCode;
+        public int Code { get; set; }
 
         /// <summary>
         /// Any other useful information about the error.
         /// </summary>
         [AlgoApiField("data", null)]
-        public AlgoApiObject Data;
+        public AlgoApiObject Data { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Code} {ErrorCode}: {Message}";
+        }
 
         /// <summary>
-        /// The standard error code parsed from <see cref="RawErrorCode"/>.
+        /// The standard error code parsed from <see cref="Code"/>.
         /// </summary>
         /// <returns>
-        /// <see cref="RawErrorCode"/> cast to <see cref="SignTxnsErrorCode"/> if known, else <see cref="SignTxnsErrorCode.Unknown"/>.
+        /// <see cref="Code"/> cast to <see cref="SignTxnsErrorCode"/> if known, else <see cref="SignTxnsErrorCode.Unknown"/>.
         /// </returns>
-        public SignTxnsErrorCode ErrorCode => Enum.IsDefined(typeof(SignTxnsErrorCode), RawErrorCode)
-            ? (SignTxnsErrorCode)RawErrorCode
+        public SignTxnsErrorCode ErrorCode => Enum.IsDefined(typeof(SignTxnsErrorCode), Code)
+            ? (SignTxnsErrorCode)Code
             : SignTxnsErrorCode.Unknown
             ;
 
@@ -40,9 +45,28 @@ namespace AlgoSdk.WalletConnect
         {
             throw new NotImplementedException();
         }
+
+        public static implicit operator bool(SignTxnsError err)
+        {
+            return err.Message != null;
+        }
+
+        public static implicit operator string(SignTxnsError err)
+        {
+            return err.ToString();
+        }
+
+        public static implicit operator SignTxnsError(JsonRpcError err)
+        {
+            return new SignTxnsError
+            {
+                Message = err.Message,
+                Code = err.Code,
+                Data = err.Data
+            };
+        }
     }
 
-    [AlgoApiFormatter(typeof(IntEnumFormatter<SignTxnsErrorCode>))]
     public enum SignTxnsErrorCode
     {
         /// <summary>
