@@ -1,0 +1,3368 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct Transaction
+   | Unity Algorand SDK </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct Transaction
+   | Unity Algorand SDK ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AlgoSdk.Transaction">
+  
+  
+  <h1 id="AlgoSdk_Transaction" data-uid="AlgoSdk.Transaction" class="text-break">Struct Transaction
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="AlgoSdk.IAppCallTxn.html">IAppCallTxn</a></div>
+    <div><a class="xref" href="AlgoSdk.IAssetConfigTxn.html">IAssetConfigTxn</a></div>
+    <div><a class="xref" href="AlgoSdk.IAssetFreezeTxn.html">IAssetFreezeTxn</a></div>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.Transaction.html">Transaction</a>&gt;</div>
+    <div><a class="xref" href="AlgoSdk.ITransaction.html">ITransaction</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="AlgoSdk_Transaction_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct Transaction : IAppCallTxn, IAssetConfigTxn, IAssetFreezeTxn, ITransaction</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="AlgoSdk_Transaction_ApplicationCallParams" data-uid="AlgoSdk.Transaction.ApplicationCallParams">ApplicationCallParams</h4>
+  <div class="markdown level1 summary"><p>Params found in Application Call Transactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AppCallTxn.Params ApplicationCallParams</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AppCallTxn.Params.html">AppCallTxn.Params</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_Transaction_AssetConfigurationParams" data-uid="AlgoSdk.Transaction.AssetConfigurationParams">AssetConfigurationParams</h4>
+  <div class="markdown level1 summary"><p>Params found in Asset Configuration Transactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetConfigTxn.Params AssetConfigurationParams</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AssetConfigTxn.Params.html">AssetConfigTxn.Params</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_Transaction_AssetFreezeParams" data-uid="AlgoSdk.Transaction.AssetFreezeParams">AssetFreezeParams</h4>
+  <div class="markdown level1 summary"><p>Params found in Asset Freeze Transactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetFreezeTxn.Params AssetFreezeParams</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AssetFreezeTxn.Params.html">AssetFreezeTxn.Params</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_Transaction_AssetTransferParams" data-uid="AlgoSdk.Transaction.AssetTransferParams">AssetTransferParams</h4>
+  <div class="markdown level1 summary"><p>Params found in Asset Transfer Transactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetTransferTxn.Params AssetTransferParams</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AssetTransferTxn.Params.html">AssetTransferTxn.Params</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_Transaction_HeaderParams" data-uid="AlgoSdk.Transaction.HeaderParams">HeaderParams</h4>
+  <div class="markdown level1 summary"><p>Params found in all transactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionHeader HeaderParams</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionHeader.html">TransactionHeader</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_Transaction_KeyRegistrationParams" data-uid="AlgoSdk.Transaction.KeyRegistrationParams">KeyRegistrationParams</h4>
+  <div class="markdown level1 summary"><p>Params found in Key Registration Transactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyRegTxn.Params KeyRegistrationParams</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.KeyRegTxn.Params.html">KeyRegTxn.Params</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_Transaction_PaymentParams" data-uid="AlgoSdk.Transaction.PaymentParams">PaymentParams</h4>
+  <div class="markdown level1 summary"><p>Params found in Payment Transactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PaymentTxn.Params PaymentParams</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.PaymentTxn.Params.html">PaymentTxn.Params</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_Transaction_Signature" data-uid="AlgoSdk.Transaction.Signature">Signature</h4>
+  <div class="markdown level1 summary"><p>The signature used for this Transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionSignature Signature</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionSignature.html">TransactionSignature</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_Transaction_SignaturePrefix" data-uid="AlgoSdk.Transaction.SignaturePrefix">SignaturePrefix</h4>
+  <div class="markdown level1 summary"><p>Prefix bytes for signing transaction bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly byte[] SignaturePrefix</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="AlgoSdk_Transaction_Accounts_" data-uid="AlgoSdk.Transaction.Accounts*"></a>
+  <h4 id="AlgoSdk_Transaction_Accounts" data-uid="AlgoSdk.Transaction.Accounts">Accounts</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address[] Accounts { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_Amount_" data-uid="AlgoSdk.Transaction.Amount*"></a>
+  <h4 id="AlgoSdk_Transaction_Amount" data-uid="AlgoSdk.Transaction.Amount">Amount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong Amount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_AppArguments_" data-uid="AlgoSdk.Transaction.AppArguments*"></a>
+  <h4 id="AlgoSdk_Transaction_AppArguments" data-uid="AlgoSdk.Transaction.AppArguments">AppArguments</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CompiledTeal AppArguments { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.CompiledTeal.html">CompiledTeal</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_ApplicationId_" data-uid="AlgoSdk.Transaction.ApplicationId*"></a>
+  <h4 id="AlgoSdk_Transaction_ApplicationId" data-uid="AlgoSdk.Transaction.ApplicationId">ApplicationId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong ApplicationId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_ApprovalProgram_" data-uid="AlgoSdk.Transaction.ApprovalProgram*"></a>
+  <h4 id="AlgoSdk_Transaction_ApprovalProgram" data-uid="AlgoSdk.Transaction.ApprovalProgram">ApprovalProgram</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CompiledTeal ApprovalProgram { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.CompiledTeal.html">CompiledTeal</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_AssetAmount_" data-uid="AlgoSdk.Transaction.AssetAmount*"></a>
+  <h4 id="AlgoSdk_Transaction_AssetAmount" data-uid="AlgoSdk.Transaction.AssetAmount">AssetAmount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong AssetAmount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_AssetCloseTo_" data-uid="AlgoSdk.Transaction.AssetCloseTo*"></a>
+  <h4 id="AlgoSdk_Transaction_AssetCloseTo" data-uid="AlgoSdk.Transaction.AssetCloseTo">AssetCloseTo</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address AssetCloseTo { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_AssetFrozen_" data-uid="AlgoSdk.Transaction.AssetFrozen*"></a>
+  <h4 id="AlgoSdk_Transaction_AssetFrozen" data-uid="AlgoSdk.Transaction.AssetFrozen">AssetFrozen</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Optional&lt;bool&gt; AssetFrozen { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_AssetParams_" data-uid="AlgoSdk.Transaction.AssetParams*"></a>
+  <h4 id="AlgoSdk_Transaction_AssetParams" data-uid="AlgoSdk.Transaction.AssetParams">AssetParams</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetParams AssetParams { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AssetParams.html">AssetParams</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_AssetReceiver_" data-uid="AlgoSdk.Transaction.AssetReceiver*"></a>
+  <h4 id="AlgoSdk_Transaction_AssetReceiver" data-uid="AlgoSdk.Transaction.AssetReceiver">AssetReceiver</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address AssetReceiver { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_AssetSender_" data-uid="AlgoSdk.Transaction.AssetSender*"></a>
+  <h4 id="AlgoSdk_Transaction_AssetSender" data-uid="AlgoSdk.Transaction.AssetSender">AssetSender</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address AssetSender { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_AuthAddress_" data-uid="AlgoSdk.Transaction.AuthAddress*"></a>
+  <h4 id="AlgoSdk_Transaction_AuthAddress" data-uid="AlgoSdk.Transaction.AuthAddress">AuthAddress</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address AuthAddress { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_ClearStateProgram_" data-uid="AlgoSdk.Transaction.ClearStateProgram*"></a>
+  <h4 id="AlgoSdk_Transaction_ClearStateProgram" data-uid="AlgoSdk.Transaction.ClearStateProgram">ClearStateProgram</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CompiledTeal ClearStateProgram { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.CompiledTeal.html">CompiledTeal</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_CloseRemainderTo_" data-uid="AlgoSdk.Transaction.CloseRemainderTo*"></a>
+  <h4 id="AlgoSdk_Transaction_CloseRemainderTo" data-uid="AlgoSdk.Transaction.CloseRemainderTo">CloseRemainderTo</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address CloseRemainderTo { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_CloseRewards_" data-uid="AlgoSdk.Transaction.CloseRewards*"></a>
+  <h4 id="AlgoSdk_Transaction_CloseRewards" data-uid="AlgoSdk.Transaction.CloseRewards">CloseRewards</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong CloseRewards { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_ClosingAmount_" data-uid="AlgoSdk.Transaction.ClosingAmount*"></a>
+  <h4 id="AlgoSdk_Transaction_ClosingAmount" data-uid="AlgoSdk.Transaction.ClosingAmount">ClosingAmount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong ClosingAmount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_ConfigAsset_" data-uid="AlgoSdk.Transaction.ConfigAsset*"></a>
+  <h4 id="AlgoSdk_Transaction_ConfigAsset" data-uid="AlgoSdk.Transaction.ConfigAsset">ConfigAsset</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong ConfigAsset { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_ConfirmedRound_" data-uid="AlgoSdk.Transaction.ConfirmedRound*"></a>
+  <h4 id="AlgoSdk_Transaction_ConfirmedRound" data-uid="AlgoSdk.Transaction.ConfirmedRound">ConfirmedRound</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong ConfirmedRound { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_CreatedApplicationIndex_" data-uid="AlgoSdk.Transaction.CreatedApplicationIndex*"></a>
+  <h4 id="AlgoSdk_Transaction_CreatedApplicationIndex" data-uid="AlgoSdk.Transaction.CreatedApplicationIndex">CreatedApplicationIndex</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong CreatedApplicationIndex { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_CreatedAssetIndex_" data-uid="AlgoSdk.Transaction.CreatedAssetIndex*"></a>
+  <h4 id="AlgoSdk_Transaction_CreatedAssetIndex" data-uid="AlgoSdk.Transaction.CreatedAssetIndex">CreatedAssetIndex</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong CreatedAssetIndex { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_ExtraProgramPages_" data-uid="AlgoSdk.Transaction.ExtraProgramPages*"></a>
+  <h4 id="AlgoSdk_Transaction_ExtraProgramPages" data-uid="AlgoSdk.Transaction.ExtraProgramPages">ExtraProgramPages</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong ExtraProgramPages { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_Fee_" data-uid="AlgoSdk.Transaction.Fee*"></a>
+  <h4 id="AlgoSdk_Transaction_Fee" data-uid="AlgoSdk.Transaction.Fee">Fee</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong Fee { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_FirstValidRound_" data-uid="AlgoSdk.Transaction.FirstValidRound*"></a>
+  <h4 id="AlgoSdk_Transaction_FirstValidRound" data-uid="AlgoSdk.Transaction.FirstValidRound">FirstValidRound</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong FirstValidRound { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_ForeignApps_" data-uid="AlgoSdk.Transaction.ForeignApps*"></a>
+  <h4 id="AlgoSdk_Transaction_ForeignApps" data-uid="AlgoSdk.Transaction.ForeignApps">ForeignApps</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong[] ForeignApps { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_ForeignAssets_" data-uid="AlgoSdk.Transaction.ForeignAssets*"></a>
+  <h4 id="AlgoSdk_Transaction_ForeignAssets" data-uid="AlgoSdk.Transaction.ForeignAssets">ForeignAssets</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong[] ForeignAssets { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_FreezeAccount_" data-uid="AlgoSdk.Transaction.FreezeAccount*"></a>
+  <h4 id="AlgoSdk_Transaction_FreezeAccount" data-uid="AlgoSdk.Transaction.FreezeAccount">FreezeAccount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address FreezeAccount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_FreezeAsset_" data-uid="AlgoSdk.Transaction.FreezeAsset*"></a>
+  <h4 id="AlgoSdk_Transaction_FreezeAsset" data-uid="AlgoSdk.Transaction.FreezeAsset">FreezeAsset</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong FreezeAsset { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_GenesisHash_" data-uid="AlgoSdk.Transaction.GenesisHash*"></a>
+  <h4 id="AlgoSdk_Transaction_GenesisHash" data-uid="AlgoSdk.Transaction.GenesisHash">GenesisHash</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GenesisHash GenesisHash { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.GenesisHash.html">GenesisHash</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_GenesisId_" data-uid="AlgoSdk.Transaction.GenesisId*"></a>
+  <h4 id="AlgoSdk_Transaction_GenesisId" data-uid="AlgoSdk.Transaction.GenesisId">GenesisId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FixedString32Bytes GenesisId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">FixedString32Bytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_GlobalStateDelta_" data-uid="AlgoSdk.Transaction.GlobalStateDelta*"></a>
+  <h4 id="AlgoSdk_Transaction_GlobalStateDelta" data-uid="AlgoSdk.Transaction.GlobalStateDelta">GlobalStateDelta</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EvalDeltaKeyValue[] GlobalStateDelta { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.EvalDeltaKeyValue.html">EvalDeltaKeyValue</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_GlobalStateSchema_" data-uid="AlgoSdk.Transaction.GlobalStateSchema*"></a>
+  <h4 id="AlgoSdk_Transaction_GlobalStateSchema" data-uid="AlgoSdk.Transaction.GlobalStateSchema">GlobalStateSchema</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StateSchema GlobalStateSchema { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.StateSchema.html">StateSchema</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_Group_" data-uid="AlgoSdk.Transaction.Group*"></a>
+  <h4 id="AlgoSdk_Transaction_Group" data-uid="AlgoSdk.Transaction.Group">Group</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Sha512_256_Hash Group { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Sha512_256_Hash</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_Id_" data-uid="AlgoSdk.Transaction.Id*"></a>
+  <h4 id="AlgoSdk_Transaction_Id" data-uid="AlgoSdk.Transaction.Id">Id</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionId Id { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionId.html">TransactionId</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_IntraRoundOffset_" data-uid="AlgoSdk.Transaction.IntraRoundOffset*"></a>
+  <h4 id="AlgoSdk_Transaction_IntraRoundOffset" data-uid="AlgoSdk.Transaction.IntraRoundOffset">IntraRoundOffset</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong IntraRoundOffset { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_LastValidRound_" data-uid="AlgoSdk.Transaction.LastValidRound*"></a>
+  <h4 id="AlgoSdk_Transaction_LastValidRound" data-uid="AlgoSdk.Transaction.LastValidRound">LastValidRound</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong LastValidRound { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_Lease_" data-uid="AlgoSdk.Transaction.Lease*"></a>
+  <h4 id="AlgoSdk_Transaction_Lease" data-uid="AlgoSdk.Transaction.Lease">Lease</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Sha512_256_Hash Lease { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Sha512_256_Hash</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_LocalStateDelta_" data-uid="AlgoSdk.Transaction.LocalStateDelta*"></a>
+  <h4 id="AlgoSdk_Transaction_LocalStateDelta" data-uid="AlgoSdk.Transaction.LocalStateDelta">LocalStateDelta</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AccountStateDelta[] LocalStateDelta { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AccountStateDelta.html">AccountStateDelta</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_LocalStateSchema_" data-uid="AlgoSdk.Transaction.LocalStateSchema*"></a>
+  <h4 id="AlgoSdk_Transaction_LocalStateSchema" data-uid="AlgoSdk.Transaction.LocalStateSchema">LocalStateSchema</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StateSchema LocalStateSchema { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.StateSchema.html">StateSchema</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_NonParticipation_" data-uid="AlgoSdk.Transaction.NonParticipation*"></a>
+  <h4 id="AlgoSdk_Transaction_NonParticipation" data-uid="AlgoSdk.Transaction.NonParticipation">NonParticipation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Optional&lt;bool&gt; NonParticipation { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_Note_" data-uid="AlgoSdk.Transaction.Note*"></a>
+  <h4 id="AlgoSdk_Transaction_Note" data-uid="AlgoSdk.Transaction.Note">Note</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] Note { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_OnComplete_" data-uid="AlgoSdk.Transaction.OnComplete*"></a>
+  <h4 id="AlgoSdk_Transaction_OnComplete" data-uid="AlgoSdk.Transaction.OnComplete">OnComplete</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnCompletion OnComplete { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.OnCompletion.html">OnCompletion</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_Receiver_" data-uid="AlgoSdk.Transaction.Receiver*"></a>
+  <h4 id="AlgoSdk_Transaction_Receiver" data-uid="AlgoSdk.Transaction.Receiver">Receiver</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address Receiver { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_ReceiverRewards_" data-uid="AlgoSdk.Transaction.ReceiverRewards*"></a>
+  <h4 id="AlgoSdk_Transaction_ReceiverRewards" data-uid="AlgoSdk.Transaction.ReceiverRewards">ReceiverRewards</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong ReceiverRewards { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_RekeyTo_" data-uid="AlgoSdk.Transaction.RekeyTo*"></a>
+  <h4 id="AlgoSdk_Transaction_RekeyTo" data-uid="AlgoSdk.Transaction.RekeyTo">RekeyTo</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address RekeyTo { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_RoundTime_" data-uid="AlgoSdk.Transaction.RoundTime*"></a>
+  <h4 id="AlgoSdk_Transaction_RoundTime" data-uid="AlgoSdk.Transaction.RoundTime">RoundTime</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong RoundTime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_SelectionParticipationKey_" data-uid="AlgoSdk.Transaction.SelectionParticipationKey*"></a>
+  <h4 id="AlgoSdk_Transaction_SelectionParticipationKey" data-uid="AlgoSdk.Transaction.SelectionParticipationKey">SelectionParticipationKey</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VrfPubKey SelectionParticipationKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.VrfPubKey.html">VrfPubKey</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_Sender_" data-uid="AlgoSdk.Transaction.Sender*"></a>
+  <h4 id="AlgoSdk_Transaction_Sender" data-uid="AlgoSdk.Transaction.Sender">Sender</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address Sender { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_SenderRewards_" data-uid="AlgoSdk.Transaction.SenderRewards*"></a>
+  <h4 id="AlgoSdk_Transaction_SenderRewards" data-uid="AlgoSdk.Transaction.SenderRewards">SenderRewards</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong SenderRewards { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_TransactionType_" data-uid="AlgoSdk.Transaction.TransactionType*"></a>
+  <h4 id="AlgoSdk_Transaction_TransactionType" data-uid="AlgoSdk.Transaction.TransactionType">TransactionType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionType TransactionType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionType.html">TransactionType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_VoteFirst_" data-uid="AlgoSdk.Transaction.VoteFirst*"></a>
+  <h4 id="AlgoSdk_Transaction_VoteFirst" data-uid="AlgoSdk.Transaction.VoteFirst">VoteFirst</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong VoteFirst { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_VoteKeyDilution_" data-uid="AlgoSdk.Transaction.VoteKeyDilution*"></a>
+  <h4 id="AlgoSdk_Transaction_VoteKeyDilution" data-uid="AlgoSdk.Transaction.VoteKeyDilution">VoteKeyDilution</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong VoteKeyDilution { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_VoteLast_" data-uid="AlgoSdk.Transaction.VoteLast*"></a>
+  <h4 id="AlgoSdk_Transaction_VoteLast" data-uid="AlgoSdk.Transaction.VoteLast">VoteLast</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong VoteLast { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_VoteParticipationKey_" data-uid="AlgoSdk.Transaction.VoteParticipationKey*"></a>
+  <h4 id="AlgoSdk_Transaction_VoteParticipationKey" data-uid="AlgoSdk.Transaction.VoteParticipationKey">VoteParticipationKey</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Ed25519.PublicKey VoteParticipationKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Ed25519.PublicKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_XferAsset_" data-uid="AlgoSdk.Transaction.XferAsset*"></a>
+  <h4 id="AlgoSdk_Transaction_XferAsset" data-uid="AlgoSdk.Transaction.XferAsset">XferAsset</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong XferAsset { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="AlgoSdk_Transaction_AppCall_" data-uid="AlgoSdk.Transaction.AppCall*"></a>
+  <h4 id="AlgoSdk_Transaction_AppCall_AlgoSdk_Address_AlgoSdk_TransactionParams_System_UInt64_AlgoSdk_OnCompletion_System_Byte___AlgoSdk_Address___System_UInt64___System_UInt64___" data-uid="AlgoSdk.Transaction.AppCall(AlgoSdk.Address,AlgoSdk.TransactionParams,System.UInt64,AlgoSdk.OnCompletion,System.Byte[],AlgoSdk.Address[],System.UInt64[],System.UInt64[])">AppCall(Address, TransactionParams, UInt64, OnCompletion, Byte[], Address[], UInt64[], UInt64[])</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="AlgoSdk.AppCallTxn.html">AppCallTxn</a> used to call an application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AppCallTxn AppCall(Address sender, TransactionParams txnParams, ulong applicationId, OnCompletion onComplete = OnCompletion.NoOp, byte[] appArguments = null, Address[] accounts = null, ulong[] foreignApps = null, ulong[] foreignAssets = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td><p>ID of the application being configured.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.OnCompletion.html">OnCompletion</a></td>
+        <td><span class="parametername">onComplete</span></td>
+        <td><p>Defines what additional actions occur with the transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">appArguments</span></td>
+        <td><p>Transaction specific arguments accessed from the application&apos;s approval-program and clear-state-program.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a>[]</td>
+        <td><span class="parametername">accounts</span></td>
+        <td><p>List of accounts in addition to the sender that may be accessed from the application&apos;s approval-program and clear-state-program.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span>[]</td>
+        <td><span class="parametername">foreignApps</span></td>
+        <td><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span>[]</td>
+        <td><span class="parametername">foreignAssets</span></td>
+        <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AppCallTxn.html">AppCallTxn</a></td>
+        <td><p>An <a class="xref" href="AlgoSdk.AppCallTxn.html">AppCallTxn</a> used to call an application.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_AppClearState_" data-uid="AlgoSdk.Transaction.AppClearState*"></a>
+  <h4 id="AlgoSdk_Transaction_AppClearState_AlgoSdk_Address_AlgoSdk_TransactionParams_System_UInt64_System_Byte___AlgoSdk_Address___System_UInt64___System_UInt64___" data-uid="AlgoSdk.Transaction.AppClearState(AlgoSdk.Address,AlgoSdk.TransactionParams,System.UInt64,System.Byte[],AlgoSdk.Address[],System.UInt64[],System.UInt64[])">AppClearState(Address, TransactionParams, UInt64, Byte[], Address[], UInt64[], UInt64[])</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="AlgoSdk.AppCallTxn.html">AppCallTxn</a> with params to clear state with your account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AppCallTxn AppClearState(Address sender, TransactionParams txnParams, ulong applicationId, byte[] appArguments = null, Address[] accounts = null, ulong[] foreignApps = null, ulong[] foreignAssets = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td><p>ID of the application being configured.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">appArguments</span></td>
+        <td><p>Transaction specific arguments accessed from the application&apos;s approval-program and clear-state-program.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a>[]</td>
+        <td><span class="parametername">accounts</span></td>
+        <td><p>List of accounts in addition to the sender that may be accessed from the application&apos;s approval-program and clear-state-program.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span>[]</td>
+        <td><span class="parametername">foreignApps</span></td>
+        <td><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span>[]</td>
+        <td><span class="parametername">foreignAssets</span></td>
+        <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AppCallTxn.html">AppCallTxn</a></td>
+        <td><p>An <a class="xref" href="AlgoSdk.AppCallTxn.html">AppCallTxn</a> with params to clear app state with your account.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_AppCloseOut_" data-uid="AlgoSdk.Transaction.AppCloseOut*"></a>
+  <h4 id="AlgoSdk_Transaction_AppCloseOut_AlgoSdk_Address_AlgoSdk_TransactionParams_System_UInt64_System_Byte___AlgoSdk_Address___System_UInt64___System_UInt64___" data-uid="AlgoSdk.Transaction.AppCloseOut(AlgoSdk.Address,AlgoSdk.TransactionParams,System.UInt64,System.Byte[],AlgoSdk.Address[],System.UInt64[],System.UInt64[])">AppCloseOut(Address, TransactionParams, UInt64, Byte[], Address[], UInt64[], UInt64[])</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="AlgoSdk.AppCallTxn.html">AppCallTxn</a> with params to close out state with your account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AppCallTxn AppCloseOut(Address sender, TransactionParams txnParams, ulong applicationId, byte[] appArguments = null, Address[] accounts = null, ulong[] foreignApps = null, ulong[] foreignAssets = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td><p>ID of the application being configured.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">appArguments</span></td>
+        <td><p>Transaction specific arguments accessed from the application&apos;s approval-program and clear-state-program.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a>[]</td>
+        <td><span class="parametername">accounts</span></td>
+        <td><p>List of accounts in addition to the sender that may be accessed from the application&apos;s approval-program and clear-state-program.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span>[]</td>
+        <td><span class="parametername">foreignApps</span></td>
+        <td><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span>[]</td>
+        <td><span class="parametername">foreignAssets</span></td>
+        <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AppCallTxn.html">AppCallTxn</a></td>
+        <td><p>An <a class="xref" href="AlgoSdk.AppCallTxn.html">AppCallTxn</a> with params set to close out state with your account.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_AppCreate_" data-uid="AlgoSdk.Transaction.AppCreate*"></a>
+  <h4 id="AlgoSdk_Transaction_AppCreate_AlgoSdk_Address_AlgoSdk_TransactionParams_System_Byte___System_Byte___AlgoSdk_StateSchema_AlgoSdk_StateSchema_System_UInt64_" data-uid="AlgoSdk.Transaction.AppCreate(AlgoSdk.Address,AlgoSdk.TransactionParams,System.Byte[],System.Byte[],AlgoSdk.StateSchema,AlgoSdk.StateSchema,System.UInt64)">AppCreate(Address, TransactionParams, Byte[], Byte[], StateSchema, StateSchema, UInt64)</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="AlgoSdk.AppCallTxn.html">AppCallTxn</a> with params to create apps.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AppCallTxn AppCreate(Address sender, TransactionParams txnParams, byte[] approvalProgram, byte[] clearStateProgram, StateSchema globalStateSchema = default(StateSchema), StateSchema localStateSchema = default(StateSchema), ulong extraProgramPages = 0UL)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">approvalProgram</span></td>
+        <td><p>Logic executed for every application transaction, except when on-completion is set to &quot;clear&quot;. It can read and write global state for the application, as well as account-specific local state. Approval programs may reject the transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">clearStateProgram</span></td>
+        <td><p>Logic executed for application transactions with on-completion set to &quot;clear&quot;. It can read and write global state for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.StateSchema.html">StateSchema</a></td>
+        <td><span class="parametername">globalStateSchema</span></td>
+        <td><p>Holds the maximum number of global state values defined within a <a class="xref" href="AlgoSdk.StateSchema.html">StateSchema</a> object.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.StateSchema.html">StateSchema</a></td>
+        <td><span class="parametername">localStateSchema</span></td>
+        <td><p>Holds the maximum number of local state values defined within a <a class="xref" href="AlgoSdk.StateSchema.html">StateSchema</a> object.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">extraProgramPages</span></td>
+        <td><p>Number of additional pages allocated to the application&apos;s approval and clear state programs. Each ExtraProgramPages is 2048 bytes. The sum of ApprovalProgram and ClearStateProgram may not exceed 2048*(1+ExtraProgramPages) bytes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AppCallTxn.html">AppCallTxn</a></td>
+        <td><p>An <a class="xref" href="AlgoSdk.AppCallTxn.html">AppCallTxn</a> with params set to create apps</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_AppDelete_" data-uid="AlgoSdk.Transaction.AppDelete*"></a>
+  <h4 id="AlgoSdk_Transaction_AppDelete_AlgoSdk_Address_AlgoSdk_TransactionParams_System_UInt64_System_Byte___AlgoSdk_Address___System_UInt64___System_UInt64___" data-uid="AlgoSdk.Transaction.AppDelete(AlgoSdk.Address,AlgoSdk.TransactionParams,System.UInt64,System.Byte[],AlgoSdk.Address[],System.UInt64[],System.UInt64[])">AppDelete(Address, TransactionParams, UInt64, Byte[], Address[], UInt64[], UInt64[])</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="AlgoSdk.AppCallTxn.html">AppCallTxn</a> used to delete an application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AppCallTxn AppDelete(Address sender, TransactionParams txnParams, ulong applicationId, byte[] appArguments = null, Address[] accounts = null, ulong[] foreignApps = null, ulong[] foreignAssets = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td><p>ID of the application being configured.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">appArguments</span></td>
+        <td><p>Transaction specific arguments accessed from the application&apos;s approval-program and clear-state-program.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a>[]</td>
+        <td><span class="parametername">accounts</span></td>
+        <td><p>List of accounts in addition to the sender that may be accessed from the application&apos;s approval-program and clear-state-program.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span>[]</td>
+        <td><span class="parametername">foreignApps</span></td>
+        <td><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span>[]</td>
+        <td><span class="parametername">foreignAssets</span></td>
+        <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AppCallTxn.html">AppCallTxn</a></td>
+        <td><p>An <a class="xref" href="AlgoSdk.AppCallTxn.html">AppCallTxn</a> with params to delete an application.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_AppOptIn_" data-uid="AlgoSdk.Transaction.AppOptIn*"></a>
+  <h4 id="AlgoSdk_Transaction_AppOptIn_AlgoSdk_Address_AlgoSdk_TransactionParams_System_UInt64_System_Byte___AlgoSdk_Address___System_UInt64___System_UInt64___" data-uid="AlgoSdk.Transaction.AppOptIn(AlgoSdk.Address,AlgoSdk.TransactionParams,System.UInt64,System.Byte[],AlgoSdk.Address[],System.UInt64[],System.UInt64[])">AppOptIn(Address, TransactionParams, UInt64, Byte[], Address[], UInt64[], UInt64[])</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="AlgoSdk.AppCallTxn.html">AppCallTxn</a> used to opt in to an application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AppCallTxn AppOptIn(Address sender, TransactionParams txnParams, ulong applicationId, byte[] appArguments = null, Address[] accounts = null, ulong[] foreignApps = null, ulong[] foreignAssets = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td><p>ID of the application being configured.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">appArguments</span></td>
+        <td><p>Transaction specific arguments accessed from the application&apos;s approval-program and clear-state-program.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a>[]</td>
+        <td><span class="parametername">accounts</span></td>
+        <td><p>List of accounts in addition to the sender that may be accessed from the application&apos;s approval-program and clear-state-program.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span>[]</td>
+        <td><span class="parametername">foreignApps</span></td>
+        <td><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span>[]</td>
+        <td><span class="parametername">foreignAssets</span></td>
+        <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AppCallTxn.html">AppCallTxn</a></td>
+        <td><p>An <a class="xref" href="AlgoSdk.AppCallTxn.html">AppCallTxn</a> with params to opt in to an application.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_AppUpdateTxn_" data-uid="AlgoSdk.Transaction.AppUpdateTxn*"></a>
+  <h4 id="AlgoSdk_Transaction_AppUpdateTxn_AlgoSdk_Address_AlgoSdk_TransactionParams_System_UInt64_System_Byte___System_Byte___System_UInt64_System_Byte___AlgoSdk_Address___System_UInt64___System_UInt64___" data-uid="AlgoSdk.Transaction.AppUpdateTxn(AlgoSdk.Address,AlgoSdk.TransactionParams,System.UInt64,System.Byte[],System.Byte[],System.UInt64,System.Byte[],AlgoSdk.Address[],System.UInt64[],System.UInt64[])">AppUpdateTxn(Address, TransactionParams, UInt64, Byte[], Byte[], UInt64, Byte[], Address[], UInt64[], UInt64[])</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="AlgoSdk.AppCallTxn.html">AppCallTxn</a> used to update an application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AppCallTxn AppUpdateTxn(Address sender, TransactionParams txnParams, ulong applicationId, byte[] approvalProgram = null, byte[] clearStateProgram = null, ulong extraProgramPages = 0UL, byte[] appArguments = null, Address[] accounts = null, ulong[] foreignApps = null, ulong[] foreignAssets = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td><p>ID of the application being configured.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">approvalProgram</span></td>
+        <td><p>Logic executed for every application transaction, except when on-completion is set to &quot;clear&quot;. It can read and write global state for the application, as well as account-specific local state. Approval programs may reject the transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">clearStateProgram</span></td>
+        <td><p>Logic executed for application transactions with on-completion set to &quot;clear&quot;. It can read and write global state for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">extraProgramPages</span></td>
+        <td><p>Number of additional pages allocated to the application&apos;s approval and clear state programs. Each ExtraProgramPages is 2048 bytes. The sum of ApprovalProgram and ClearStateProgram may not exceed 2048*(1+ExtraProgramPages) bytes.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">appArguments</span></td>
+        <td><p>Transaction specific arguments accessed from the application&apos;s approval-program and clear-state-program.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a>[]</td>
+        <td><span class="parametername">accounts</span></td>
+        <td><p>List of accounts in addition to the sender that may be accessed from the application&apos;s approval-program and clear-state-program.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span>[]</td>
+        <td><span class="parametername">foreignApps</span></td>
+        <td><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span>[]</td>
+        <td><span class="parametername">foreignAssets</span></td>
+        <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AppCallTxn.html">AppCallTxn</a></td>
+        <td><p>An <a class="xref" href="AlgoSdk.AppCallTxn.html">AppCallTxn</a> with params to update an application.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_AssetAccept_" data-uid="AlgoSdk.Transaction.AssetAccept*"></a>
+  <h4 id="AlgoSdk_Transaction_AssetAccept_AlgoSdk_Address_AlgoSdk_TransactionParams_System_UInt64_" data-uid="AlgoSdk.Transaction.AssetAccept(AlgoSdk.Address,AlgoSdk.TransactionParams,System.UInt64)">AssetAccept(Address, TransactionParams, UInt64)</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="AlgoSdk.AssetTransferTxn.html">AssetTransferTxn</a> for opting in to an asset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AssetTransferTxn AssetAccept(Address sender, TransactionParams txnParams, ulong xferAsset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">xferAsset</span></td>
+        <td><p>The unique ID of the asset to opt-in to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AssetTransferTxn.html">AssetTransferTxn</a></td>
+        <td><p>An <a class="xref" href="AlgoSdk.AssetTransferTxn.html">AssetTransferTxn</a> for opting in to an asset.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_AssetClawback_" data-uid="AlgoSdk.Transaction.AssetClawback*"></a>
+  <h4 id="AlgoSdk_Transaction_AssetClawback_AlgoSdk_Address_AlgoSdk_TransactionParams_System_UInt64_System_UInt64_AlgoSdk_Address_AlgoSdk_Address_" data-uid="AlgoSdk.Transaction.AssetClawback(AlgoSdk.Address,AlgoSdk.TransactionParams,System.UInt64,System.UInt64,AlgoSdk.Address,AlgoSdk.Address)">AssetClawback(Address, TransactionParams, UInt64, UInt64, Address, Address)</h4>
+  <div class="markdown level1 summary"><p>Creates a form of <a class="xref" href="AlgoSdk.AssetTransferTxn.html">AssetTransferTxn</a> to clawback assets from an account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AssetTransferTxn AssetClawback(Address sender, TransactionParams txnParams, ulong xferAsset, ulong assetAmount, Address assetSender, Address assetReceiver)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The sender of this transaction must be the clawback account specified in the asset configuration.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">xferAsset</span></td>
+        <td><p>The unique ID of the asset to be transferred.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">assetAmount</span></td>
+        <td><p>The amount of the asset to be transferred.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">assetSender</span></td>
+        <td><p>The address from which the funds will be withdrawn.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">assetReceiver</span></td>
+        <td><p>The recipient of the asset transfer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AssetTransferTxn.html">AssetTransferTxn</a></td>
+        <td><p>A form of <a class="xref" href="AlgoSdk.AssetTransferTxn.html">AssetTransferTxn</a> to clawback assets from an account</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_AssetConfigure_" data-uid="AlgoSdk.Transaction.AssetConfigure*"></a>
+  <h4 id="AlgoSdk_Transaction_AssetConfigure_AlgoSdk_Address_AlgoSdk_TransactionParams_System_UInt64_AlgoSdk_AssetParams_" data-uid="AlgoSdk.Transaction.AssetConfigure(AlgoSdk.Address,AlgoSdk.TransactionParams,System.UInt64,AlgoSdk.AssetParams)">AssetConfigure(Address, TransactionParams, UInt64, AssetParams)</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="AlgoSdk.AssetConfigTxn.html">AssetConfigTxn</a> that will configure an asset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AssetConfigTxn AssetConfigure(Address sender, TransactionParams txnParams, ulong assetId, AssetParams assetParams)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">assetId</span></td>
+        <td><p>The unique asset id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AssetParams.html">AssetParams</a></td>
+        <td><span class="parametername">assetParams</span></td>
+        <td><p>See <a class="xref" href="AlgoSdk.Transaction.html#AlgoSdk_Transaction_AssetParams">AssetParams</a> for all available fields.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AssetConfigTxn.html">AssetConfigTxn</a></td>
+        <td><p>An <a class="xref" href="AlgoSdk.AssetConfigTxn.html">AssetConfigTxn</a> that will configure an asset.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_AssetCreate_" data-uid="AlgoSdk.Transaction.AssetCreate*"></a>
+  <h4 id="AlgoSdk_Transaction_AssetCreate_AlgoSdk_Address_AlgoSdk_TransactionParams_AlgoSdk_AssetParams_" data-uid="AlgoSdk.Transaction.AssetCreate(AlgoSdk.Address,AlgoSdk.TransactionParams,AlgoSdk.AssetParams)">AssetCreate(Address, TransactionParams, AssetParams)</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="AlgoSdk.AssetConfigTxn.html">AssetConfigTxn</a> that will create an asset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AssetConfigTxn AssetCreate(Address sender, TransactionParams txnParams, AssetParams assetParams)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AssetParams.html">AssetParams</a></td>
+        <td><span class="parametername">assetParams</span></td>
+        <td><p>See <a class="xref" href="AlgoSdk.Transaction.html#AlgoSdk_Transaction_AssetParams">AssetParams</a> for all available fields.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AssetConfigTxn.html">AssetConfigTxn</a></td>
+        <td><p>An <a class="xref" href="AlgoSdk.AssetConfigTxn.html">AssetConfigTxn</a> that will create an asset.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_AssetDelete_" data-uid="AlgoSdk.Transaction.AssetDelete*"></a>
+  <h4 id="AlgoSdk_Transaction_AssetDelete_AlgoSdk_Address_AlgoSdk_TransactionParams_System_UInt64_" data-uid="AlgoSdk.Transaction.AssetDelete(AlgoSdk.Address,AlgoSdk.TransactionParams,System.UInt64)">AssetDelete(Address, TransactionParams, UInt64)</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="AlgoSdk.AssetConfigTxn.html">AssetConfigTxn</a> that will delete an asset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AssetConfigTxn AssetDelete(Address sender, TransactionParams txnParams, ulong assetId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">assetId</span></td>
+        <td><p>The unique asset id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AssetConfigTxn.html">AssetConfigTxn</a></td>
+        <td><p>An <a class="xref" href="AlgoSdk.AssetConfigTxn.html">AssetConfigTxn</a> that will delete an asset.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_AssetFreeze_" data-uid="AlgoSdk.Transaction.AssetFreeze*"></a>
+  <h4 id="AlgoSdk_Transaction_AssetFreeze_AlgoSdk_Address_AlgoSdk_TransactionParams_AlgoSdk_Address_System_UInt64_System_Boolean_" data-uid="AlgoSdk.Transaction.AssetFreeze(AlgoSdk.Address,AlgoSdk.TransactionParams,AlgoSdk.Address,System.UInt64,System.Boolean)">AssetFreeze(Address, TransactionParams, Address, UInt64, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="AlgoSdk.AssetFreezeTxn.html">AssetFreezeTxn</a> which is used to freeze or unfreeze an asset from transfers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AssetFreezeTxn AssetFreeze(Address sender, TransactionParams txnParams, Address freezeAccount, ulong freezeAsset, bool assetFrozen)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">freezeAccount</span></td>
+        <td><p>The address of the account whose asset is being frozen or unfrozen.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">freezeAsset</span></td>
+        <td><p>The asset ID being frozen or unfrozen.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">assetFrozen</span></td>
+        <td><p>True to freeze the asset.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AssetFreezeTxn.html">AssetFreezeTxn</a></td>
+        <td><p>An <a class="xref" href="AlgoSdk.AssetFreezeTxn.html">AssetFreezeTxn</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_AssetTransfer_" data-uid="AlgoSdk.Transaction.AssetTransfer*"></a>
+  <h4 id="AlgoSdk_Transaction_AssetTransfer_AlgoSdk_Address_AlgoSdk_TransactionParams_System_UInt64_System_UInt64_AlgoSdk_Address_" data-uid="AlgoSdk.Transaction.AssetTransfer(AlgoSdk.Address,AlgoSdk.TransactionParams,System.UInt64,System.UInt64,AlgoSdk.Address)">AssetTransfer(Address, TransactionParams, UInt64, UInt64, Address)</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="AlgoSdk.AssetTransferTxn.html">AssetTransferTxn</a> for transferring an asset to another account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AssetTransferTxn AssetTransfer(Address sender, TransactionParams txnParams, ulong xferAsset, ulong assetAmount, Address assetReceiver)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and sends the asset amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">xferAsset</span></td>
+        <td><p>The unique ID of the asset to be transferred.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">assetAmount</span></td>
+        <td><p>The amount of the asset to be transferred. A zero amount transferred to self allocates that asset in the account&apos;s Asset map.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">assetReceiver</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AssetTransferTxn.html">AssetTransferTxn</a></td>
+        <td><p>An <a class="xref" href="AlgoSdk.AssetTransferTxn.html">AssetTransferTxn</a> for transferring an asset to another account.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_CopyFrom_" data-uid="AlgoSdk.Transaction.CopyFrom*"></a>
+  <h4 id="AlgoSdk_Transaction_CopyFrom_AlgoSdk_Transaction_" data-uid="AlgoSdk.Transaction.CopyFrom(AlgoSdk.Transaction)">CopyFrom(Transaction)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyFrom(Transaction transaction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Transaction.html">Transaction</a></td>
+        <td><span class="parametername">transaction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_CopyTo_" data-uid="AlgoSdk.Transaction.CopyTo*"></a>
+  <h4 id="AlgoSdk_Transaction_CopyTo_AlgoSdk_Transaction__" data-uid="AlgoSdk.Transaction.CopyTo(AlgoSdk.Transaction@)">CopyTo(ref Transaction)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyTo(ref Transaction transaction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Transaction.html">Transaction</a></td>
+        <td><span class="parametername">transaction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_Equals_" data-uid="AlgoSdk.Transaction.Equals*"></a>
+  <h4 id="AlgoSdk_Transaction_Equals_AlgoSdk_Transaction_" data-uid="AlgoSdk.Transaction.Equals(AlgoSdk.Transaction)">Equals(Transaction)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Transaction other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Transaction.html">Transaction</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_EstimateBlockSizeBytes_" data-uid="AlgoSdk.Transaction.EstimateBlockSizeBytes*"></a>
+  <h4 id="AlgoSdk_Transaction_EstimateBlockSizeBytes" data-uid="AlgoSdk.Transaction.EstimateBlockSizeBytes">EstimateBlockSizeBytes()</h4>
+  <div class="markdown level1 summary"><p>Estimate the size this transaction will take up in a block in bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int EstimateBlockSizeBytes()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>Size in bytes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_GetGroupId_" data-uid="AlgoSdk.Transaction.GetGroupId*"></a>
+  <h4 id="AlgoSdk_Transaction_GetGroupId_AlgoSdk_Transaction___" data-uid="AlgoSdk.Transaction.GetGroupId(AlgoSdk.Transaction[])">GetGroupId(Transaction[])</h4>
+  <div class="markdown level1 summary"><p>Calculates the group id for atomic transfers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionId GetGroupId(params Transaction[] txns)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Transaction.html">Transaction</a>[]</td>
+        <td><span class="parametername">txns</span></td>
+        <td><p>The transactions belonging to this group. Cannot be more than <a class="xref" href="AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_MaxSize">MaxSize</a> transactions.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionId.html">TransactionId</a></td>
+        <td><p>A <a class="xref" href="AlgoSdk.TransactionId.html">TransactionId</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_GetGroupId_" data-uid="AlgoSdk.Transaction.GetGroupId*"></a>
+  <h4 id="AlgoSdk_Transaction_GetGroupId_AlgoSdk_TransactionId___" data-uid="AlgoSdk.Transaction.GetGroupId(AlgoSdk.TransactionId[])">GetGroupId(TransactionId[])</h4>
+  <div class="markdown level1 summary"><p>Calculates the group id for atomic transfers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionId GetGroupId(params TransactionId[] txids)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionId.html">TransactionId</a>[]</td>
+        <td><span class="parametername">txids</span></td>
+        <td><p>The transaction ids belonging to this group. Cannot be more than <a class="xref" href="AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_MaxSize">MaxSize</a> transactions.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionId.html">TransactionId</a></td>
+        <td><p>A <a class="xref" href="AlgoSdk.TransactionId.html">TransactionId</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_GetId_" data-uid="AlgoSdk.Transaction.GetId*"></a>
+  <h4 id="AlgoSdk_Transaction_GetId" data-uid="AlgoSdk.Transaction.GetId">GetId()</h4>
+  <div class="markdown level1 summary"><p>Calculate the ID for this transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionId GetId()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionId.html">TransactionId</a></td>
+        <td><p>A <a class="xref" href="AlgoSdk.TransactionId.html">TransactionId</a> calculated from its current parameters.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_GetSignature_" data-uid="AlgoSdk.Transaction.GetSignature*"></a>
+  <h4 id="AlgoSdk_Transaction_GetSignature_Ed25519_SecretKeyHandle_" data-uid="AlgoSdk.Transaction.GetSignature(Ed25519.SecretKeyHandle)">GetSignature(Ed25519.SecretKeyHandle)</h4>
+  <div class="markdown level1 summary"><p>Get the signature of this transaction using a private key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Sig GetSignature(Ed25519.SecretKeyHandle secretKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Ed25519.SecretKeyHandle</span></td>
+        <td><span class="parametername">secretKey</span></td>
+        <td><p>The private key to use to sign this transaction.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Sig.html">Sig</a></td>
+        <td><p>A <a class="xref" href="AlgoSdk.Sig.html">Sig</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_KeyRegOffline_" data-uid="AlgoSdk.Transaction.KeyRegOffline*"></a>
+  <h4 id="AlgoSdk_Transaction_KeyRegOffline_AlgoSdk_Address_AlgoSdk_TransactionParams_" data-uid="AlgoSdk.Transaction.KeyRegOffline(AlgoSdk.Address,AlgoSdk.TransactionParams)">KeyRegOffline(Address, TransactionParams)</h4>
+  <div class="markdown level1 summary"><p>Register account offline for participation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static KeyRegTxn KeyRegOffline(Address account, TransactionParams txnParams)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">account</span></td>
+        <td><p>Account to register offline. This is the sender of the transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.KeyRegTxn.html">KeyRegTxn</a></td>
+        <td><p>A <a class="xref" href="AlgoSdk.KeyRegTxn.html">KeyRegTxn</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_KeyRegOnline_" data-uid="AlgoSdk.Transaction.KeyRegOnline*"></a>
+  <h4 id="AlgoSdk_Transaction_KeyRegOnline_AlgoSdk_Address_AlgoSdk_TransactionParams_AlgoSdk_AccountParticipation_" data-uid="AlgoSdk.Transaction.KeyRegOnline(AlgoSdk.Address,AlgoSdk.TransactionParams,AlgoSdk.AccountParticipation)">KeyRegOnline(Address, TransactionParams, AccountParticipation)</h4>
+  <div class="markdown level1 summary"><p>Register account online for participation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static KeyRegTxn KeyRegOnline(Address account, TransactionParams txnParams, AccountParticipation accountParticipation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">account</span></td>
+        <td><p>Account to register online. This is the sender of the transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AccountParticipation.html">AccountParticipation</a></td>
+        <td><span class="parametername">accountParticipation</span></td>
+        <td><p>See <a class="xref" href="AlgoSdk.AccountParticipation.html">AccountParticipation</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.KeyRegTxn.html">KeyRegTxn</a></td>
+        <td><p>A <a class="xref" href="AlgoSdk.KeyRegTxn.html">KeyRegTxn</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_Payment_" data-uid="AlgoSdk.Transaction.Payment*"></a>
+  <h4 id="AlgoSdk_Transaction_Payment_AlgoSdk_Address_AlgoSdk_TransactionParams_AlgoSdk_Address_System_UInt64_AlgoSdk_Address_" data-uid="AlgoSdk.Transaction.Payment(AlgoSdk.Address,AlgoSdk.TransactionParams,AlgoSdk.Address,System.UInt64,AlgoSdk.Address)">Payment(Address, TransactionParams, Address, UInt64, Address)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="AlgoSdk.PaymentTxn.html">PaymentTxn</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PaymentTxn Payment(Address sender, TransactionParams txnParams, Address receiver, ulong amount, Address closeRemainderTo = default(Address))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">receiver</span></td>
+        <td><p>The address of the account that receives the amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">amount</span></td>
+        <td><p>The total amount to be sent in microAlgos.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">closeRemainderTo</span></td>
+        <td><p>When set, it indicates that the transaction is requesting that the Sender account should be closed, and all remaining funds, after the fee and amount are paid, be transferred to this address.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.PaymentTxn.html">PaymentTxn</a></td>
+        <td><p>A <a class="xref" href="AlgoSdk.PaymentTxn.html">PaymentTxn</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_Sign_" data-uid="AlgoSdk.Transaction.Sign*"></a>
+  <h4 id="AlgoSdk_Transaction_Sign_Ed25519_SecretKeyHandle_" data-uid="AlgoSdk.Transaction.Sign(Ed25519.SecretKeyHandle)">Sign(Ed25519.SecretKeyHandle)</h4>
+  <div class="markdown level1 summary"><p>Sign this transaction with a private key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SignedTransaction Sign(Ed25519.SecretKeyHandle secretKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Ed25519.SecretKeyHandle</span></td>
+        <td><span class="parametername">secretKey</span></td>
+        <td><p>The account private key to use to sign this transaction.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.SignedTransaction.html">SignedTransaction</a></td>
+        <td><p>A <a class="xref" href="AlgoSdk.SignedTransaction.html">SignedTransaction</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_ToSignatureMessage_" data-uid="AlgoSdk.Transaction.ToSignatureMessage*"></a>
+  <h4 id="AlgoSdk_Transaction_ToSignatureMessage_Allocator_" data-uid="AlgoSdk.Transaction.ToSignatureMessage(Allocator)">ToSignatureMessage(Allocator)</h4>
+  <div class="markdown level1 summary"><p>Serializes this transaction to a message to use for signing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NativeByteArray ToSignatureMessage(Allocator allocator)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Allocator</span></td>
+        <td><span class="parametername">allocator</span></td>
+        <td><p>How memory should be allocated for the returned byte array.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NativeByteArray</span></td>
+        <td><p>A <see cref="!:NativeByteArray"></see></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Transaction_ToTypedTxn_" data-uid="AlgoSdk.Transaction.ToTypedTxn*"></a>
+  <h4 id="AlgoSdk_Transaction_ToTypedTxn__1" data-uid="AlgoSdk.Transaction.ToTypedTxn``1">ToTypedTxn&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"><p>Converts this transaction to a specific transaction type implementing <a class="xref" href="AlgoSdk.ITransaction.html">ITransaction</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T ToTypedTxn&lt;T&gt;()
+    where T : struct, ITransaction</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>A typed transaction implementing <a class="xref" href="AlgoSdk.ITransaction.html">ITransaction</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the transaction to convert to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="AlgoSdk.IAppCallTxn.html">IAppCallTxn</a>
+  </div>
+  <div>
+      <a class="xref" href="AlgoSdk.IAssetConfigTxn.html">IAssetConfigTxn</a>
+  </div>
+  <div>
+      <a class="xref" href="AlgoSdk.IAssetFreezeTxn.html">IAssetFreezeTxn</a>
+  </div>
+  <div>
+      <span class="xref">IEquatable&lt;&gt;</span>
+  </div>
+  <div>
+      <a class="xref" href="AlgoSdk.ITransaction.html">ITransaction</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
