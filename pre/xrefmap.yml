@@ -1590,6 +1590,101 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AlgoApiRequest.Awaiter.UnsafeOnCompleted
   nameWithType: AlgoApiRequest.Awaiter.UnsafeOnCompleted
+- uid: AlgoSdk.AlgoApiRequest.Awaiter`1
+  name: AlgoApiRequest.Awaiter<TResponse>
+  href: api/AlgoSdk.AlgoApiRequest.Awaiter-1.html
+  commentId: T:AlgoSdk.AlgoApiRequest.Awaiter`1
+  name.vb: AlgoApiRequest.Awaiter(Of TResponse)
+  fullName: AlgoSdk.AlgoApiRequest.Awaiter<TResponse>
+  fullName.vb: AlgoSdk.AlgoApiRequest.Awaiter(Of TResponse)
+  nameWithType: AlgoApiRequest.Awaiter<TResponse>
+  nameWithType.vb: AlgoApiRequest.Awaiter(Of TResponse)
+- uid: AlgoSdk.AlgoApiRequest.Awaiter`1.#ctor(UniTask{UnityWebRequest}.Awaiter)
+  name: Awaiter(UniTask<UnityWebRequest>.Awaiter)
+  href: api/AlgoSdk.AlgoApiRequest.Awaiter-1.html#AlgoSdk_AlgoApiRequest_Awaiter_1__ctor_UniTask_UnityWebRequest__Awaiter_
+  commentId: M:AlgoSdk.AlgoApiRequest.Awaiter`1.#ctor(UniTask{UnityWebRequest}.Awaiter)
+  name.vb: Awaiter(UniTask(Of UnityWebRequest).Awaiter)
+  fullName: AlgoSdk.AlgoApiRequest.Awaiter<TResponse>.Awaiter(UniTask<UnityWebRequest>.Awaiter)
+  fullName.vb: AlgoSdk.AlgoApiRequest.Awaiter(Of TResponse).Awaiter(UniTask(Of UnityWebRequest).Awaiter)
+  nameWithType: AlgoApiRequest.Awaiter<TResponse>.Awaiter(UniTask<UnityWebRequest>.Awaiter)
+  nameWithType.vb: AlgoApiRequest.Awaiter(Of TResponse).Awaiter(UniTask(Of UnityWebRequest).Awaiter)
+- uid: AlgoSdk.AlgoApiRequest.Awaiter`1.#ctor*
+  name: Awaiter
+  href: api/AlgoSdk.AlgoApiRequest.Awaiter-1.html#AlgoSdk_AlgoApiRequest_Awaiter_1__ctor_
+  commentId: Overload:AlgoSdk.AlgoApiRequest.Awaiter`1.#ctor
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiRequest.Awaiter<TResponse>.Awaiter
+  fullName.vb: AlgoSdk.AlgoApiRequest.Awaiter(Of TResponse).Awaiter
+  nameWithType: AlgoApiRequest.Awaiter<TResponse>.Awaiter
+  nameWithType.vb: AlgoApiRequest.Awaiter(Of TResponse).Awaiter
+- uid: AlgoSdk.AlgoApiRequest.Awaiter`1.GetResult
+  name: GetResult()
+  href: api/AlgoSdk.AlgoApiRequest.Awaiter-1.html#AlgoSdk_AlgoApiRequest_Awaiter_1_GetResult
+  commentId: M:AlgoSdk.AlgoApiRequest.Awaiter`1.GetResult
+  fullName: AlgoSdk.AlgoApiRequest.Awaiter<TResponse>.GetResult()
+  fullName.vb: AlgoSdk.AlgoApiRequest.Awaiter(Of TResponse).GetResult()
+  nameWithType: AlgoApiRequest.Awaiter<TResponse>.GetResult()
+  nameWithType.vb: AlgoApiRequest.Awaiter(Of TResponse).GetResult()
+- uid: AlgoSdk.AlgoApiRequest.Awaiter`1.GetResult*
+  name: GetResult
+  href: api/AlgoSdk.AlgoApiRequest.Awaiter-1.html#AlgoSdk_AlgoApiRequest_Awaiter_1_GetResult_
+  commentId: Overload:AlgoSdk.AlgoApiRequest.Awaiter`1.GetResult
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiRequest.Awaiter<TResponse>.GetResult
+  fullName.vb: AlgoSdk.AlgoApiRequest.Awaiter(Of TResponse).GetResult
+  nameWithType: AlgoApiRequest.Awaiter<TResponse>.GetResult
+  nameWithType.vb: AlgoApiRequest.Awaiter(Of TResponse).GetResult
+- uid: AlgoSdk.AlgoApiRequest.Awaiter`1.IsCompleted
+  name: IsCompleted
+  href: api/AlgoSdk.AlgoApiRequest.Awaiter-1.html#AlgoSdk_AlgoApiRequest_Awaiter_1_IsCompleted
+  commentId: P:AlgoSdk.AlgoApiRequest.Awaiter`1.IsCompleted
+  fullName: AlgoSdk.AlgoApiRequest.Awaiter<TResponse>.IsCompleted
+  fullName.vb: AlgoSdk.AlgoApiRequest.Awaiter(Of TResponse).IsCompleted
+  nameWithType: AlgoApiRequest.Awaiter<TResponse>.IsCompleted
+  nameWithType.vb: AlgoApiRequest.Awaiter(Of TResponse).IsCompleted
+- uid: AlgoSdk.AlgoApiRequest.Awaiter`1.IsCompleted*
+  name: IsCompleted
+  href: api/AlgoSdk.AlgoApiRequest.Awaiter-1.html#AlgoSdk_AlgoApiRequest_Awaiter_1_IsCompleted_
+  commentId: Overload:AlgoSdk.AlgoApiRequest.Awaiter`1.IsCompleted
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiRequest.Awaiter<TResponse>.IsCompleted
+  fullName.vb: AlgoSdk.AlgoApiRequest.Awaiter(Of TResponse).IsCompleted
+  nameWithType: AlgoApiRequest.Awaiter<TResponse>.IsCompleted
+  nameWithType.vb: AlgoApiRequest.Awaiter(Of TResponse).IsCompleted
+- uid: AlgoSdk.AlgoApiRequest.Awaiter`1.OnCompleted(Action)
+  name: OnCompleted(Action)
+  href: api/AlgoSdk.AlgoApiRequest.Awaiter-1.html#AlgoSdk_AlgoApiRequest_Awaiter_1_OnCompleted_Action_
+  commentId: M:AlgoSdk.AlgoApiRequest.Awaiter`1.OnCompleted(Action)
+  fullName: AlgoSdk.AlgoApiRequest.Awaiter<TResponse>.OnCompleted(Action)
+  fullName.vb: AlgoSdk.AlgoApiRequest.Awaiter(Of TResponse).OnCompleted(Action)
+  nameWithType: AlgoApiRequest.Awaiter<TResponse>.OnCompleted(Action)
+  nameWithType.vb: AlgoApiRequest.Awaiter(Of TResponse).OnCompleted(Action)
+- uid: AlgoSdk.AlgoApiRequest.Awaiter`1.OnCompleted*
+  name: OnCompleted
+  href: api/AlgoSdk.AlgoApiRequest.Awaiter-1.html#AlgoSdk_AlgoApiRequest_Awaiter_1_OnCompleted_
+  commentId: Overload:AlgoSdk.AlgoApiRequest.Awaiter`1.OnCompleted
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiRequest.Awaiter<TResponse>.OnCompleted
+  fullName.vb: AlgoSdk.AlgoApiRequest.Awaiter(Of TResponse).OnCompleted
+  nameWithType: AlgoApiRequest.Awaiter<TResponse>.OnCompleted
+  nameWithType.vb: AlgoApiRequest.Awaiter(Of TResponse).OnCompleted
+- uid: AlgoSdk.AlgoApiRequest.Awaiter`1.UnsafeOnCompleted(Action)
+  name: UnsafeOnCompleted(Action)
+  href: api/AlgoSdk.AlgoApiRequest.Awaiter-1.html#AlgoSdk_AlgoApiRequest_Awaiter_1_UnsafeOnCompleted_Action_
+  commentId: M:AlgoSdk.AlgoApiRequest.Awaiter`1.UnsafeOnCompleted(Action)
+  fullName: AlgoSdk.AlgoApiRequest.Awaiter<TResponse>.UnsafeOnCompleted(Action)
+  fullName.vb: AlgoSdk.AlgoApiRequest.Awaiter(Of TResponse).UnsafeOnCompleted(Action)
+  nameWithType: AlgoApiRequest.Awaiter<TResponse>.UnsafeOnCompleted(Action)
+  nameWithType.vb: AlgoApiRequest.Awaiter(Of TResponse).UnsafeOnCompleted(Action)
+- uid: AlgoSdk.AlgoApiRequest.Awaiter`1.UnsafeOnCompleted*
+  name: UnsafeOnCompleted
+  href: api/AlgoSdk.AlgoApiRequest.Awaiter-1.html#AlgoSdk_AlgoApiRequest_Awaiter_1_UnsafeOnCompleted_
+  commentId: Overload:AlgoSdk.AlgoApiRequest.Awaiter`1.UnsafeOnCompleted
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiRequest.Awaiter<TResponse>.UnsafeOnCompleted
+  fullName.vb: AlgoSdk.AlgoApiRequest.Awaiter(Of TResponse).UnsafeOnCompleted
+  nameWithType: AlgoApiRequest.Awaiter<TResponse>.UnsafeOnCompleted
+  nameWithType.vb: AlgoApiRequest.Awaiter(Of TResponse).UnsafeOnCompleted
 - uid: AlgoSdk.AlgoApiRequest.Delete(System.String)
   name: Delete(String)
   href: api/AlgoSdk.AlgoApiRequest.html#AlgoSdk_AlgoApiRequest_Delete_System_String_
@@ -1670,6 +1765,35 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AlgoApiRequest.Sent.Sent
   nameWithType: AlgoApiRequest.Sent.Sent
+- uid: AlgoSdk.AlgoApiRequest.Sent.AsyncOperation
+  name: AsyncOperation
+  href: api/AlgoSdk.AlgoApiRequest.Sent.html#AlgoSdk_AlgoApiRequest_Sent_AsyncOperation
+  commentId: P:AlgoSdk.AlgoApiRequest.Sent.AsyncOperation
+  fullName: AlgoSdk.AlgoApiRequest.Sent.AsyncOperation
+  nameWithType: AlgoApiRequest.Sent.AsyncOperation
+- uid: AlgoSdk.AlgoApiRequest.Sent.AsyncOperation*
+  name: AsyncOperation
+  href: api/AlgoSdk.AlgoApiRequest.Sent.html#AlgoSdk_AlgoApiRequest_Sent_AsyncOperation_
+  commentId: Overload:AlgoSdk.AlgoApiRequest.Sent.AsyncOperation
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiRequest.Sent.AsyncOperation
+  nameWithType: AlgoApiRequest.Sent.AsyncOperation
+- uid: AlgoSdk.AlgoApiRequest.Sent.CastResponse*
+  name: CastResponse
+  href: api/AlgoSdk.AlgoApiRequest.Sent.html#AlgoSdk_AlgoApiRequest_Sent_CastResponse_
+  commentId: Overload:AlgoSdk.AlgoApiRequest.Sent.CastResponse
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiRequest.Sent.CastResponse
+  nameWithType: AlgoApiRequest.Sent.CastResponse
+- uid: AlgoSdk.AlgoApiRequest.Sent.CastResponse``1
+  name: CastResponse<TResponse>()
+  href: api/AlgoSdk.AlgoApiRequest.Sent.html#AlgoSdk_AlgoApiRequest_Sent_CastResponse__1
+  commentId: M:AlgoSdk.AlgoApiRequest.Sent.CastResponse``1
+  name.vb: CastResponse(Of TResponse)()
+  fullName: AlgoSdk.AlgoApiRequest.Sent.CastResponse<TResponse>()
+  fullName.vb: AlgoSdk.AlgoApiRequest.Sent.CastResponse(Of TResponse)()
+  nameWithType: AlgoApiRequest.Sent.CastResponse<TResponse>()
+  nameWithType.vb: AlgoApiRequest.Sent.CastResponse(Of TResponse)()
 - uid: AlgoSdk.AlgoApiRequest.Sent.GetAwaiter
   name: GetAwaiter()
   href: api/AlgoSdk.AlgoApiRequest.Sent.html#AlgoSdk_AlgoApiRequest_Sent_GetAwaiter
@@ -1683,49 +1807,340 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AlgoApiRequest.Sent.GetAwaiter
   nameWithType: AlgoApiRequest.Sent.GetAwaiter
+- uid: AlgoSdk.AlgoApiRequest.Sent.WithCancellation(CancellationToken)
+  name: WithCancellation(CancellationToken)
+  href: api/AlgoSdk.AlgoApiRequest.Sent.html#AlgoSdk_AlgoApiRequest_Sent_WithCancellation_CancellationToken_
+  commentId: M:AlgoSdk.AlgoApiRequest.Sent.WithCancellation(CancellationToken)
+  fullName: AlgoSdk.AlgoApiRequest.Sent.WithCancellation(CancellationToken)
+  nameWithType: AlgoApiRequest.Sent.WithCancellation(CancellationToken)
+- uid: AlgoSdk.AlgoApiRequest.Sent.WithCancellation*
+  name: WithCancellation
+  href: api/AlgoSdk.AlgoApiRequest.Sent.html#AlgoSdk_AlgoApiRequest_Sent_WithCancellation_
+  commentId: Overload:AlgoSdk.AlgoApiRequest.Sent.WithCancellation
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiRequest.Sent.WithCancellation
+  nameWithType: AlgoApiRequest.Sent.WithCancellation
+- uid: AlgoSdk.AlgoApiRequest.Sent.WithProgress*
+  name: WithProgress
+  href: api/AlgoSdk.AlgoApiRequest.Sent.html#AlgoSdk_AlgoApiRequest_Sent_WithProgress_
+  commentId: Overload:AlgoSdk.AlgoApiRequest.Sent.WithProgress
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiRequest.Sent.WithProgress
+  nameWithType: AlgoApiRequest.Sent.WithProgress
+- uid: AlgoSdk.AlgoApiRequest.Sent.WithProgress``1(``0)
+  name: WithProgress<TProgress>(TProgress)
+  href: api/AlgoSdk.AlgoApiRequest.Sent.html#AlgoSdk_AlgoApiRequest_Sent_WithProgress__1___0_
+  commentId: M:AlgoSdk.AlgoApiRequest.Sent.WithProgress``1(``0)
+  name.vb: WithProgress(Of TProgress)(TProgress)
+  fullName: AlgoSdk.AlgoApiRequest.Sent.WithProgress<TProgress>(TProgress)
+  fullName.vb: AlgoSdk.AlgoApiRequest.Sent.WithProgress(Of TProgress)(TProgress)
+  nameWithType: AlgoApiRequest.Sent.WithProgress<TProgress>(TProgress)
+  nameWithType.vb: AlgoApiRequest.Sent.WithProgress(Of TProgress)(TProgress)
 - uid: AlgoSdk.AlgoApiRequest.Sent`1
-  name: AlgoApiRequest.Sent<TProgress>
+  name: AlgoApiRequest.Sent<TResponse>
   href: api/AlgoSdk.AlgoApiRequest.Sent-1.html
   commentId: T:AlgoSdk.AlgoApiRequest.Sent`1
-  name.vb: AlgoApiRequest.Sent(Of TProgress)
-  fullName: AlgoSdk.AlgoApiRequest.Sent<TProgress>
-  fullName.vb: AlgoSdk.AlgoApiRequest.Sent(Of TProgress)
-  nameWithType: AlgoApiRequest.Sent<TProgress>
-  nameWithType.vb: AlgoApiRequest.Sent(Of TProgress)
-- uid: AlgoSdk.AlgoApiRequest.Sent`1.#ctor(UnityWebRequestAsyncOperation,`0,CancellationToken)
-  name: Sent(UnityWebRequestAsyncOperation, TProgress, CancellationToken)
-  href: api/AlgoSdk.AlgoApiRequest.Sent-1.html#AlgoSdk_AlgoApiRequest_Sent_1__ctor_UnityWebRequestAsyncOperation__0_CancellationToken_
-  commentId: M:AlgoSdk.AlgoApiRequest.Sent`1.#ctor(UnityWebRequestAsyncOperation,`0,CancellationToken)
-  fullName: AlgoSdk.AlgoApiRequest.Sent<TProgress>.Sent(UnityWebRequestAsyncOperation, TProgress, CancellationToken)
-  fullName.vb: AlgoSdk.AlgoApiRequest.Sent(Of TProgress).Sent(UnityWebRequestAsyncOperation, TProgress, CancellationToken)
-  nameWithType: AlgoApiRequest.Sent<TProgress>.Sent(UnityWebRequestAsyncOperation, TProgress, CancellationToken)
-  nameWithType.vb: AlgoApiRequest.Sent(Of TProgress).Sent(UnityWebRequestAsyncOperation, TProgress, CancellationToken)
+  name.vb: AlgoApiRequest.Sent(Of TResponse)
+  fullName: AlgoSdk.AlgoApiRequest.Sent<TResponse>
+  fullName.vb: AlgoSdk.AlgoApiRequest.Sent(Of TResponse)
+  nameWithType: AlgoApiRequest.Sent<TResponse>
+  nameWithType.vb: AlgoApiRequest.Sent(Of TResponse)
+- uid: AlgoSdk.AlgoApiRequest.Sent`1.#ctor(UnityWebRequestAsyncOperation,CancellationToken)
+  name: Sent(UnityWebRequestAsyncOperation, CancellationToken)
+  href: api/AlgoSdk.AlgoApiRequest.Sent-1.html#AlgoSdk_AlgoApiRequest_Sent_1__ctor_UnityWebRequestAsyncOperation_CancellationToken_
+  commentId: M:AlgoSdk.AlgoApiRequest.Sent`1.#ctor(UnityWebRequestAsyncOperation,CancellationToken)
+  fullName: AlgoSdk.AlgoApiRequest.Sent<TResponse>.Sent(UnityWebRequestAsyncOperation, CancellationToken)
+  fullName.vb: AlgoSdk.AlgoApiRequest.Sent(Of TResponse).Sent(UnityWebRequestAsyncOperation, CancellationToken)
+  nameWithType: AlgoApiRequest.Sent<TResponse>.Sent(UnityWebRequestAsyncOperation, CancellationToken)
+  nameWithType.vb: AlgoApiRequest.Sent(Of TResponse).Sent(UnityWebRequestAsyncOperation, CancellationToken)
 - uid: AlgoSdk.AlgoApiRequest.Sent`1.#ctor*
   name: Sent
   href: api/AlgoSdk.AlgoApiRequest.Sent-1.html#AlgoSdk_AlgoApiRequest_Sent_1__ctor_
   commentId: Overload:AlgoSdk.AlgoApiRequest.Sent`1.#ctor
   isSpec: "True"
-  fullName: AlgoSdk.AlgoApiRequest.Sent<TProgress>.Sent
-  fullName.vb: AlgoSdk.AlgoApiRequest.Sent(Of TProgress).Sent
-  nameWithType: AlgoApiRequest.Sent<TProgress>.Sent
-  nameWithType.vb: AlgoApiRequest.Sent(Of TProgress).Sent
+  fullName: AlgoSdk.AlgoApiRequest.Sent<TResponse>.Sent
+  fullName.vb: AlgoSdk.AlgoApiRequest.Sent(Of TResponse).Sent
+  nameWithType: AlgoApiRequest.Sent<TResponse>.Sent
+  nameWithType.vb: AlgoApiRequest.Sent(Of TResponse).Sent
+- uid: AlgoSdk.AlgoApiRequest.Sent`1.AsyncOperation
+  name: AsyncOperation
+  href: api/AlgoSdk.AlgoApiRequest.Sent-1.html#AlgoSdk_AlgoApiRequest_Sent_1_AsyncOperation
+  commentId: P:AlgoSdk.AlgoApiRequest.Sent`1.AsyncOperation
+  fullName: AlgoSdk.AlgoApiRequest.Sent<TResponse>.AsyncOperation
+  fullName.vb: AlgoSdk.AlgoApiRequest.Sent(Of TResponse).AsyncOperation
+  nameWithType: AlgoApiRequest.Sent<TResponse>.AsyncOperation
+  nameWithType.vb: AlgoApiRequest.Sent(Of TResponse).AsyncOperation
+- uid: AlgoSdk.AlgoApiRequest.Sent`1.AsyncOperation*
+  name: AsyncOperation
+  href: api/AlgoSdk.AlgoApiRequest.Sent-1.html#AlgoSdk_AlgoApiRequest_Sent_1_AsyncOperation_
+  commentId: Overload:AlgoSdk.AlgoApiRequest.Sent`1.AsyncOperation
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiRequest.Sent<TResponse>.AsyncOperation
+  fullName.vb: AlgoSdk.AlgoApiRequest.Sent(Of TResponse).AsyncOperation
+  nameWithType: AlgoApiRequest.Sent<TResponse>.AsyncOperation
+  nameWithType.vb: AlgoApiRequest.Sent(Of TResponse).AsyncOperation
 - uid: AlgoSdk.AlgoApiRequest.Sent`1.GetAwaiter
   name: GetAwaiter()
   href: api/AlgoSdk.AlgoApiRequest.Sent-1.html#AlgoSdk_AlgoApiRequest_Sent_1_GetAwaiter
   commentId: M:AlgoSdk.AlgoApiRequest.Sent`1.GetAwaiter
-  fullName: AlgoSdk.AlgoApiRequest.Sent<TProgress>.GetAwaiter()
-  fullName.vb: AlgoSdk.AlgoApiRequest.Sent(Of TProgress).GetAwaiter()
-  nameWithType: AlgoApiRequest.Sent<TProgress>.GetAwaiter()
-  nameWithType.vb: AlgoApiRequest.Sent(Of TProgress).GetAwaiter()
+  fullName: AlgoSdk.AlgoApiRequest.Sent<TResponse>.GetAwaiter()
+  fullName.vb: AlgoSdk.AlgoApiRequest.Sent(Of TResponse).GetAwaiter()
+  nameWithType: AlgoApiRequest.Sent<TResponse>.GetAwaiter()
+  nameWithType.vb: AlgoApiRequest.Sent(Of TResponse).GetAwaiter()
 - uid: AlgoSdk.AlgoApiRequest.Sent`1.GetAwaiter*
   name: GetAwaiter
   href: api/AlgoSdk.AlgoApiRequest.Sent-1.html#AlgoSdk_AlgoApiRequest_Sent_1_GetAwaiter_
   commentId: Overload:AlgoSdk.AlgoApiRequest.Sent`1.GetAwaiter
   isSpec: "True"
-  fullName: AlgoSdk.AlgoApiRequest.Sent<TProgress>.GetAwaiter
-  fullName.vb: AlgoSdk.AlgoApiRequest.Sent(Of TProgress).GetAwaiter
-  nameWithType: AlgoApiRequest.Sent<TProgress>.GetAwaiter
-  nameWithType.vb: AlgoApiRequest.Sent(Of TProgress).GetAwaiter
+  fullName: AlgoSdk.AlgoApiRequest.Sent<TResponse>.GetAwaiter
+  fullName.vb: AlgoSdk.AlgoApiRequest.Sent(Of TResponse).GetAwaiter
+  nameWithType: AlgoApiRequest.Sent<TResponse>.GetAwaiter
+  nameWithType.vb: AlgoApiRequest.Sent(Of TResponse).GetAwaiter
+- uid: AlgoSdk.AlgoApiRequest.Sent`1.op_Implicit(AlgoSdk.AlgoApiRequest.Sent)~AlgoSdk.AlgoApiRequest.Sent{`0}
+  name: Implicit(AlgoApiRequest.Sent to AlgoApiRequest.Sent<TResponse>)
+  href: api/AlgoSdk.AlgoApiRequest.Sent-1.html#AlgoSdk_AlgoApiRequest_Sent_1_op_Implicit_AlgoSdk_AlgoApiRequest_Sent__AlgoSdk_AlgoApiRequest_Sent__0_
+  commentId: M:AlgoSdk.AlgoApiRequest.Sent`1.op_Implicit(AlgoSdk.AlgoApiRequest.Sent)~AlgoSdk.AlgoApiRequest.Sent{`0}
+  name.vb: Widening(AlgoApiRequest.Sent to AlgoApiRequest.Sent(Of TResponse))
+  fullName: AlgoSdk.AlgoApiRequest.Sent<TResponse>.Implicit(AlgoSdk.AlgoApiRequest.Sent to AlgoSdk.AlgoApiRequest.Sent<TResponse>)
+  fullName.vb: AlgoSdk.AlgoApiRequest.Sent(Of TResponse).Widening(AlgoSdk.AlgoApiRequest.Sent to AlgoSdk.AlgoApiRequest.Sent(Of TResponse))
+  nameWithType: AlgoApiRequest.Sent<TResponse>.Implicit(AlgoApiRequest.Sent to AlgoApiRequest.Sent<TResponse>)
+  nameWithType.vb: AlgoApiRequest.Sent(Of TResponse).Widening(AlgoApiRequest.Sent to AlgoApiRequest.Sent(Of TResponse))
+- uid: AlgoSdk.AlgoApiRequest.Sent`1.op_Implicit*
+  name: Implicit
+  href: api/AlgoSdk.AlgoApiRequest.Sent-1.html#AlgoSdk_AlgoApiRequest_Sent_1_op_Implicit_
+  commentId: Overload:AlgoSdk.AlgoApiRequest.Sent`1.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: AlgoSdk.AlgoApiRequest.Sent<TResponse>.Implicit
+  fullName.vb: AlgoSdk.AlgoApiRequest.Sent(Of TResponse).Widening
+  nameWithType: AlgoApiRequest.Sent<TResponse>.Implicit
+  nameWithType.vb: AlgoApiRequest.Sent(Of TResponse).Widening
+- uid: AlgoSdk.AlgoApiRequest.Sent`1.WithCancellation(CancellationToken)
+  name: WithCancellation(CancellationToken)
+  href: api/AlgoSdk.AlgoApiRequest.Sent-1.html#AlgoSdk_AlgoApiRequest_Sent_1_WithCancellation_CancellationToken_
+  commentId: M:AlgoSdk.AlgoApiRequest.Sent`1.WithCancellation(CancellationToken)
+  fullName: AlgoSdk.AlgoApiRequest.Sent<TResponse>.WithCancellation(CancellationToken)
+  fullName.vb: AlgoSdk.AlgoApiRequest.Sent(Of TResponse).WithCancellation(CancellationToken)
+  nameWithType: AlgoApiRequest.Sent<TResponse>.WithCancellation(CancellationToken)
+  nameWithType.vb: AlgoApiRequest.Sent(Of TResponse).WithCancellation(CancellationToken)
+- uid: AlgoSdk.AlgoApiRequest.Sent`1.WithCancellation*
+  name: WithCancellation
+  href: api/AlgoSdk.AlgoApiRequest.Sent-1.html#AlgoSdk_AlgoApiRequest_Sent_1_WithCancellation_
+  commentId: Overload:AlgoSdk.AlgoApiRequest.Sent`1.WithCancellation
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiRequest.Sent<TResponse>.WithCancellation
+  fullName.vb: AlgoSdk.AlgoApiRequest.Sent(Of TResponse).WithCancellation
+  nameWithType: AlgoApiRequest.Sent<TResponse>.WithCancellation
+  nameWithType.vb: AlgoApiRequest.Sent(Of TResponse).WithCancellation
+- uid: AlgoSdk.AlgoApiRequest.Sent`1.WithProgress*
+  name: WithProgress
+  href: api/AlgoSdk.AlgoApiRequest.Sent-1.html#AlgoSdk_AlgoApiRequest_Sent_1_WithProgress_
+  commentId: Overload:AlgoSdk.AlgoApiRequest.Sent`1.WithProgress
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiRequest.Sent<TResponse>.WithProgress
+  fullName.vb: AlgoSdk.AlgoApiRequest.Sent(Of TResponse).WithProgress
+  nameWithType: AlgoApiRequest.Sent<TResponse>.WithProgress
+  nameWithType.vb: AlgoApiRequest.Sent(Of TResponse).WithProgress
+- uid: AlgoSdk.AlgoApiRequest.Sent`1.WithProgress``1(``0)
+  name: WithProgress<TProgress>(TProgress)
+  href: api/AlgoSdk.AlgoApiRequest.Sent-1.html#AlgoSdk_AlgoApiRequest_Sent_1_WithProgress__1___0_
+  commentId: M:AlgoSdk.AlgoApiRequest.Sent`1.WithProgress``1(``0)
+  name.vb: WithProgress(Of TProgress)(TProgress)
+  fullName: AlgoSdk.AlgoApiRequest.Sent<TResponse>.WithProgress<TProgress>(TProgress)
+  fullName.vb: AlgoSdk.AlgoApiRequest.Sent(Of TResponse).WithProgress(Of TProgress)(TProgress)
+  nameWithType: AlgoApiRequest.Sent<TResponse>.WithProgress<TProgress>(TProgress)
+  nameWithType.vb: AlgoApiRequest.Sent(Of TResponse).WithProgress(Of TProgress)(TProgress)
+- uid: AlgoSdk.AlgoApiRequest.SentWithProgress`1
+  name: AlgoApiRequest.SentWithProgress<TProgress>
+  href: api/AlgoSdk.AlgoApiRequest.SentWithProgress-1.html
+  commentId: T:AlgoSdk.AlgoApiRequest.SentWithProgress`1
+  name.vb: AlgoApiRequest.SentWithProgress(Of TProgress)
+  fullName: AlgoSdk.AlgoApiRequest.SentWithProgress<TProgress>
+  fullName.vb: AlgoSdk.AlgoApiRequest.SentWithProgress(Of TProgress)
+  nameWithType: AlgoApiRequest.SentWithProgress<TProgress>
+  nameWithType.vb: AlgoApiRequest.SentWithProgress(Of TProgress)
+- uid: AlgoSdk.AlgoApiRequest.SentWithProgress`1.#ctor(UnityWebRequestAsyncOperation,`0,CancellationToken)
+  name: SentWithProgress(UnityWebRequestAsyncOperation, TProgress, CancellationToken)
+  href: api/AlgoSdk.AlgoApiRequest.SentWithProgress-1.html#AlgoSdk_AlgoApiRequest_SentWithProgress_1__ctor_UnityWebRequestAsyncOperation__0_CancellationToken_
+  commentId: M:AlgoSdk.AlgoApiRequest.SentWithProgress`1.#ctor(UnityWebRequestAsyncOperation,`0,CancellationToken)
+  fullName: AlgoSdk.AlgoApiRequest.SentWithProgress<TProgress>.SentWithProgress(UnityWebRequestAsyncOperation, TProgress, CancellationToken)
+  fullName.vb: AlgoSdk.AlgoApiRequest.SentWithProgress(Of TProgress).SentWithProgress(UnityWebRequestAsyncOperation, TProgress, CancellationToken)
+  nameWithType: AlgoApiRequest.SentWithProgress<TProgress>.SentWithProgress(UnityWebRequestAsyncOperation, TProgress, CancellationToken)
+  nameWithType.vb: AlgoApiRequest.SentWithProgress(Of TProgress).SentWithProgress(UnityWebRequestAsyncOperation, TProgress, CancellationToken)
+- uid: AlgoSdk.AlgoApiRequest.SentWithProgress`1.#ctor*
+  name: SentWithProgress
+  href: api/AlgoSdk.AlgoApiRequest.SentWithProgress-1.html#AlgoSdk_AlgoApiRequest_SentWithProgress_1__ctor_
+  commentId: Overload:AlgoSdk.AlgoApiRequest.SentWithProgress`1.#ctor
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiRequest.SentWithProgress<TProgress>.SentWithProgress
+  fullName.vb: AlgoSdk.AlgoApiRequest.SentWithProgress(Of TProgress).SentWithProgress
+  nameWithType: AlgoApiRequest.SentWithProgress<TProgress>.SentWithProgress
+  nameWithType.vb: AlgoApiRequest.SentWithProgress(Of TProgress).SentWithProgress
+- uid: AlgoSdk.AlgoApiRequest.SentWithProgress`1.AsyncOperation
+  name: AsyncOperation
+  href: api/AlgoSdk.AlgoApiRequest.SentWithProgress-1.html#AlgoSdk_AlgoApiRequest_SentWithProgress_1_AsyncOperation
+  commentId: P:AlgoSdk.AlgoApiRequest.SentWithProgress`1.AsyncOperation
+  fullName: AlgoSdk.AlgoApiRequest.SentWithProgress<TProgress>.AsyncOperation
+  fullName.vb: AlgoSdk.AlgoApiRequest.SentWithProgress(Of TProgress).AsyncOperation
+  nameWithType: AlgoApiRequest.SentWithProgress<TProgress>.AsyncOperation
+  nameWithType.vb: AlgoApiRequest.SentWithProgress(Of TProgress).AsyncOperation
+- uid: AlgoSdk.AlgoApiRequest.SentWithProgress`1.AsyncOperation*
+  name: AsyncOperation
+  href: api/AlgoSdk.AlgoApiRequest.SentWithProgress-1.html#AlgoSdk_AlgoApiRequest_SentWithProgress_1_AsyncOperation_
+  commentId: Overload:AlgoSdk.AlgoApiRequest.SentWithProgress`1.AsyncOperation
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiRequest.SentWithProgress<TProgress>.AsyncOperation
+  fullName.vb: AlgoSdk.AlgoApiRequest.SentWithProgress(Of TProgress).AsyncOperation
+  nameWithType: AlgoApiRequest.SentWithProgress<TProgress>.AsyncOperation
+  nameWithType.vb: AlgoApiRequest.SentWithProgress(Of TProgress).AsyncOperation
+- uid: AlgoSdk.AlgoApiRequest.SentWithProgress`1.CastResponse*
+  name: CastResponse
+  href: api/AlgoSdk.AlgoApiRequest.SentWithProgress-1.html#AlgoSdk_AlgoApiRequest_SentWithProgress_1_CastResponse_
+  commentId: Overload:AlgoSdk.AlgoApiRequest.SentWithProgress`1.CastResponse
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiRequest.SentWithProgress<TProgress>.CastResponse
+  fullName.vb: AlgoSdk.AlgoApiRequest.SentWithProgress(Of TProgress).CastResponse
+  nameWithType: AlgoApiRequest.SentWithProgress<TProgress>.CastResponse
+  nameWithType.vb: AlgoApiRequest.SentWithProgress(Of TProgress).CastResponse
+- uid: AlgoSdk.AlgoApiRequest.SentWithProgress`1.CastResponse``1
+  name: CastResponse<TResponse>()
+  href: api/AlgoSdk.AlgoApiRequest.SentWithProgress-1.html#AlgoSdk_AlgoApiRequest_SentWithProgress_1_CastResponse__1
+  commentId: M:AlgoSdk.AlgoApiRequest.SentWithProgress`1.CastResponse``1
+  name.vb: CastResponse(Of TResponse)()
+  fullName: AlgoSdk.AlgoApiRequest.SentWithProgress<TProgress>.CastResponse<TResponse>()
+  fullName.vb: AlgoSdk.AlgoApiRequest.SentWithProgress(Of TProgress).CastResponse(Of TResponse)()
+  nameWithType: AlgoApiRequest.SentWithProgress<TProgress>.CastResponse<TResponse>()
+  nameWithType.vb: AlgoApiRequest.SentWithProgress(Of TProgress).CastResponse(Of TResponse)()
+- uid: AlgoSdk.AlgoApiRequest.SentWithProgress`1.GetAwaiter
+  name: GetAwaiter()
+  href: api/AlgoSdk.AlgoApiRequest.SentWithProgress-1.html#AlgoSdk_AlgoApiRequest_SentWithProgress_1_GetAwaiter
+  commentId: M:AlgoSdk.AlgoApiRequest.SentWithProgress`1.GetAwaiter
+  fullName: AlgoSdk.AlgoApiRequest.SentWithProgress<TProgress>.GetAwaiter()
+  fullName.vb: AlgoSdk.AlgoApiRequest.SentWithProgress(Of TProgress).GetAwaiter()
+  nameWithType: AlgoApiRequest.SentWithProgress<TProgress>.GetAwaiter()
+  nameWithType.vb: AlgoApiRequest.SentWithProgress(Of TProgress).GetAwaiter()
+- uid: AlgoSdk.AlgoApiRequest.SentWithProgress`1.GetAwaiter*
+  name: GetAwaiter
+  href: api/AlgoSdk.AlgoApiRequest.SentWithProgress-1.html#AlgoSdk_AlgoApiRequest_SentWithProgress_1_GetAwaiter_
+  commentId: Overload:AlgoSdk.AlgoApiRequest.SentWithProgress`1.GetAwaiter
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiRequest.SentWithProgress<TProgress>.GetAwaiter
+  fullName.vb: AlgoSdk.AlgoApiRequest.SentWithProgress(Of TProgress).GetAwaiter
+  nameWithType: AlgoApiRequest.SentWithProgress<TProgress>.GetAwaiter
+  nameWithType.vb: AlgoApiRequest.SentWithProgress(Of TProgress).GetAwaiter
+- uid: AlgoSdk.AlgoApiRequest.SentWithProgress`1.WithCancellation(CancellationToken)
+  name: WithCancellation(CancellationToken)
+  href: api/AlgoSdk.AlgoApiRequest.SentWithProgress-1.html#AlgoSdk_AlgoApiRequest_SentWithProgress_1_WithCancellation_CancellationToken_
+  commentId: M:AlgoSdk.AlgoApiRequest.SentWithProgress`1.WithCancellation(CancellationToken)
+  fullName: AlgoSdk.AlgoApiRequest.SentWithProgress<TProgress>.WithCancellation(CancellationToken)
+  fullName.vb: AlgoSdk.AlgoApiRequest.SentWithProgress(Of TProgress).WithCancellation(CancellationToken)
+  nameWithType: AlgoApiRequest.SentWithProgress<TProgress>.WithCancellation(CancellationToken)
+  nameWithType.vb: AlgoApiRequest.SentWithProgress(Of TProgress).WithCancellation(CancellationToken)
+- uid: AlgoSdk.AlgoApiRequest.SentWithProgress`1.WithCancellation*
+  name: WithCancellation
+  href: api/AlgoSdk.AlgoApiRequest.SentWithProgress-1.html#AlgoSdk_AlgoApiRequest_SentWithProgress_1_WithCancellation_
+  commentId: Overload:AlgoSdk.AlgoApiRequest.SentWithProgress`1.WithCancellation
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiRequest.SentWithProgress<TProgress>.WithCancellation
+  fullName.vb: AlgoSdk.AlgoApiRequest.SentWithProgress(Of TProgress).WithCancellation
+  nameWithType: AlgoApiRequest.SentWithProgress<TProgress>.WithCancellation
+  nameWithType.vb: AlgoApiRequest.SentWithProgress(Of TProgress).WithCancellation
+- uid: AlgoSdk.AlgoApiRequest.SentWithProgress`2
+  name: AlgoApiRequest.SentWithProgress<TResponse, TProgress>
+  href: api/AlgoSdk.AlgoApiRequest.SentWithProgress-2.html
+  commentId: T:AlgoSdk.AlgoApiRequest.SentWithProgress`2
+  name.vb: AlgoApiRequest.SentWithProgress(Of TResponse, TProgress)
+  fullName: AlgoSdk.AlgoApiRequest.SentWithProgress<TResponse, TProgress>
+  fullName.vb: AlgoSdk.AlgoApiRequest.SentWithProgress(Of TResponse, TProgress)
+  nameWithType: AlgoApiRequest.SentWithProgress<TResponse, TProgress>
+  nameWithType.vb: AlgoApiRequest.SentWithProgress(Of TResponse, TProgress)
+- uid: AlgoSdk.AlgoApiRequest.SentWithProgress`2.#ctor(UnityWebRequestAsyncOperation,`1,CancellationToken)
+  name: SentWithProgress(UnityWebRequestAsyncOperation, TProgress, CancellationToken)
+  href: api/AlgoSdk.AlgoApiRequest.SentWithProgress-2.html#AlgoSdk_AlgoApiRequest_SentWithProgress_2__ctor_UnityWebRequestAsyncOperation__1_CancellationToken_
+  commentId: M:AlgoSdk.AlgoApiRequest.SentWithProgress`2.#ctor(UnityWebRequestAsyncOperation,`1,CancellationToken)
+  fullName: AlgoSdk.AlgoApiRequest.SentWithProgress<TResponse, TProgress>.SentWithProgress(UnityWebRequestAsyncOperation, TProgress, CancellationToken)
+  fullName.vb: AlgoSdk.AlgoApiRequest.SentWithProgress(Of TResponse, TProgress).SentWithProgress(UnityWebRequestAsyncOperation, TProgress, CancellationToken)
+  nameWithType: AlgoApiRequest.SentWithProgress<TResponse, TProgress>.SentWithProgress(UnityWebRequestAsyncOperation, TProgress, CancellationToken)
+  nameWithType.vb: AlgoApiRequest.SentWithProgress(Of TResponse, TProgress).SentWithProgress(UnityWebRequestAsyncOperation, TProgress, CancellationToken)
+- uid: AlgoSdk.AlgoApiRequest.SentWithProgress`2.#ctor*
+  name: SentWithProgress
+  href: api/AlgoSdk.AlgoApiRequest.SentWithProgress-2.html#AlgoSdk_AlgoApiRequest_SentWithProgress_2__ctor_
+  commentId: Overload:AlgoSdk.AlgoApiRequest.SentWithProgress`2.#ctor
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiRequest.SentWithProgress<TResponse, TProgress>.SentWithProgress
+  fullName.vb: AlgoSdk.AlgoApiRequest.SentWithProgress(Of TResponse, TProgress).SentWithProgress
+  nameWithType: AlgoApiRequest.SentWithProgress<TResponse, TProgress>.SentWithProgress
+  nameWithType.vb: AlgoApiRequest.SentWithProgress(Of TResponse, TProgress).SentWithProgress
+- uid: AlgoSdk.AlgoApiRequest.SentWithProgress`2.AsyncOperation
+  name: AsyncOperation
+  href: api/AlgoSdk.AlgoApiRequest.SentWithProgress-2.html#AlgoSdk_AlgoApiRequest_SentWithProgress_2_AsyncOperation
+  commentId: P:AlgoSdk.AlgoApiRequest.SentWithProgress`2.AsyncOperation
+  fullName: AlgoSdk.AlgoApiRequest.SentWithProgress<TResponse, TProgress>.AsyncOperation
+  fullName.vb: AlgoSdk.AlgoApiRequest.SentWithProgress(Of TResponse, TProgress).AsyncOperation
+  nameWithType: AlgoApiRequest.SentWithProgress<TResponse, TProgress>.AsyncOperation
+  nameWithType.vb: AlgoApiRequest.SentWithProgress(Of TResponse, TProgress).AsyncOperation
+- uid: AlgoSdk.AlgoApiRequest.SentWithProgress`2.AsyncOperation*
+  name: AsyncOperation
+  href: api/AlgoSdk.AlgoApiRequest.SentWithProgress-2.html#AlgoSdk_AlgoApiRequest_SentWithProgress_2_AsyncOperation_
+  commentId: Overload:AlgoSdk.AlgoApiRequest.SentWithProgress`2.AsyncOperation
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiRequest.SentWithProgress<TResponse, TProgress>.AsyncOperation
+  fullName.vb: AlgoSdk.AlgoApiRequest.SentWithProgress(Of TResponse, TProgress).AsyncOperation
+  nameWithType: AlgoApiRequest.SentWithProgress<TResponse, TProgress>.AsyncOperation
+  nameWithType.vb: AlgoApiRequest.SentWithProgress(Of TResponse, TProgress).AsyncOperation
+- uid: AlgoSdk.AlgoApiRequest.SentWithProgress`2.GetAwaiter
+  name: GetAwaiter()
+  href: api/AlgoSdk.AlgoApiRequest.SentWithProgress-2.html#AlgoSdk_AlgoApiRequest_SentWithProgress_2_GetAwaiter
+  commentId: M:AlgoSdk.AlgoApiRequest.SentWithProgress`2.GetAwaiter
+  fullName: AlgoSdk.AlgoApiRequest.SentWithProgress<TResponse, TProgress>.GetAwaiter()
+  fullName.vb: AlgoSdk.AlgoApiRequest.SentWithProgress(Of TResponse, TProgress).GetAwaiter()
+  nameWithType: AlgoApiRequest.SentWithProgress<TResponse, TProgress>.GetAwaiter()
+  nameWithType.vb: AlgoApiRequest.SentWithProgress(Of TResponse, TProgress).GetAwaiter()
+- uid: AlgoSdk.AlgoApiRequest.SentWithProgress`2.GetAwaiter*
+  name: GetAwaiter
+  href: api/AlgoSdk.AlgoApiRequest.SentWithProgress-2.html#AlgoSdk_AlgoApiRequest_SentWithProgress_2_GetAwaiter_
+  commentId: Overload:AlgoSdk.AlgoApiRequest.SentWithProgress`2.GetAwaiter
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiRequest.SentWithProgress<TResponse, TProgress>.GetAwaiter
+  fullName.vb: AlgoSdk.AlgoApiRequest.SentWithProgress(Of TResponse, TProgress).GetAwaiter
+  nameWithType: AlgoApiRequest.SentWithProgress<TResponse, TProgress>.GetAwaiter
+  nameWithType.vb: AlgoApiRequest.SentWithProgress(Of TResponse, TProgress).GetAwaiter
+- uid: AlgoSdk.AlgoApiRequest.SentWithProgress`2.op_Implicit(AlgoSdk.AlgoApiRequest.SentWithProgress{`1})~AlgoSdk.AlgoApiRequest.SentWithProgress{`0,`1}
+  name: Implicit(AlgoApiRequest.SentWithProgress<TProgress> to AlgoApiRequest.SentWithProgress<TResponse, TProgress>)
+  href: api/AlgoSdk.AlgoApiRequest.SentWithProgress-2.html#AlgoSdk_AlgoApiRequest_SentWithProgress_2_op_Implicit_AlgoSdk_AlgoApiRequest_SentWithProgress__1___AlgoSdk_AlgoApiRequest_SentWithProgress__0__1_
+  commentId: M:AlgoSdk.AlgoApiRequest.SentWithProgress`2.op_Implicit(AlgoSdk.AlgoApiRequest.SentWithProgress{`1})~AlgoSdk.AlgoApiRequest.SentWithProgress{`0,`1}
+  name.vb: Widening(AlgoApiRequest.SentWithProgress(Of TProgress) to AlgoApiRequest.SentWithProgress(Of TResponse, TProgress))
+  fullName: AlgoSdk.AlgoApiRequest.SentWithProgress<TResponse, TProgress>.Implicit(AlgoSdk.AlgoApiRequest.SentWithProgress<TProgress> to AlgoSdk.AlgoApiRequest.SentWithProgress<TResponse, TProgress>)
+  fullName.vb: AlgoSdk.AlgoApiRequest.SentWithProgress(Of TResponse, TProgress).Widening(AlgoSdk.AlgoApiRequest.SentWithProgress(Of TProgress) to AlgoSdk.AlgoApiRequest.SentWithProgress(Of TResponse, TProgress))
+  nameWithType: AlgoApiRequest.SentWithProgress<TResponse, TProgress>.Implicit(AlgoApiRequest.SentWithProgress<TProgress> to AlgoApiRequest.SentWithProgress<TResponse, TProgress>)
+  nameWithType.vb: AlgoApiRequest.SentWithProgress(Of TResponse, TProgress).Widening(AlgoApiRequest.SentWithProgress(Of TProgress) to AlgoApiRequest.SentWithProgress(Of TResponse, TProgress))
+- uid: AlgoSdk.AlgoApiRequest.SentWithProgress`2.op_Implicit*
+  name: Implicit
+  href: api/AlgoSdk.AlgoApiRequest.SentWithProgress-2.html#AlgoSdk_AlgoApiRequest_SentWithProgress_2_op_Implicit_
+  commentId: Overload:AlgoSdk.AlgoApiRequest.SentWithProgress`2.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: AlgoSdk.AlgoApiRequest.SentWithProgress<TResponse, TProgress>.Implicit
+  fullName.vb: AlgoSdk.AlgoApiRequest.SentWithProgress(Of TResponse, TProgress).Widening
+  nameWithType: AlgoApiRequest.SentWithProgress<TResponse, TProgress>.Implicit
+  nameWithType.vb: AlgoApiRequest.SentWithProgress(Of TResponse, TProgress).Widening
+- uid: AlgoSdk.AlgoApiRequest.SentWithProgress`2.WithCancellation(CancellationToken)
+  name: WithCancellation(CancellationToken)
+  href: api/AlgoSdk.AlgoApiRequest.SentWithProgress-2.html#AlgoSdk_AlgoApiRequest_SentWithProgress_2_WithCancellation_CancellationToken_
+  commentId: M:AlgoSdk.AlgoApiRequest.SentWithProgress`2.WithCancellation(CancellationToken)
+  fullName: AlgoSdk.AlgoApiRequest.SentWithProgress<TResponse, TProgress>.WithCancellation(CancellationToken)
+  fullName.vb: AlgoSdk.AlgoApiRequest.SentWithProgress(Of TResponse, TProgress).WithCancellation(CancellationToken)
+  nameWithType: AlgoApiRequest.SentWithProgress<TResponse, TProgress>.WithCancellation(CancellationToken)
+  nameWithType.vb: AlgoApiRequest.SentWithProgress(Of TResponse, TProgress).WithCancellation(CancellationToken)
+- uid: AlgoSdk.AlgoApiRequest.SentWithProgress`2.WithCancellation*
+  name: WithCancellation
+  href: api/AlgoSdk.AlgoApiRequest.SentWithProgress-2.html#AlgoSdk_AlgoApiRequest_SentWithProgress_2_WithCancellation_
+  commentId: Overload:AlgoSdk.AlgoApiRequest.SentWithProgress`2.WithCancellation
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiRequest.SentWithProgress<TResponse, TProgress>.WithCancellation
+  fullName.vb: AlgoSdk.AlgoApiRequest.SentWithProgress(Of TResponse, TProgress).WithCancellation
+  nameWithType: AlgoApiRequest.SentWithProgress<TResponse, TProgress>.WithCancellation
+  nameWithType.vb: AlgoApiRequest.SentWithProgress(Of TResponse, TProgress).WithCancellation
 - uid: AlgoSdk.AlgoApiRequest.SetHeaders(AlgoSdk.Header[])
   name: SetHeaders(Header[])
   href: api/AlgoSdk.AlgoApiRequest.html#AlgoSdk_AlgoApiRequest_SetHeaders_AlgoSdk_Header___

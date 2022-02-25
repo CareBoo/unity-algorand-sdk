@@ -291,7 +291,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;CatchupMessage&gt;&gt; AbortCatchup(string catchpoint)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;CatchupMessage&gt; AbortCatchup(string catchpoint)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -320,7 +320,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.CatchupMessage.html">CatchupMessage</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.CatchupMessage.html">CatchupMessage</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -333,7 +333,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;AccountInfo&gt;&gt; GetAccountInformation(Address accountAddress)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;AccountInfo&gt; GetAccountInformation(Address accountAddress)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -362,7 +362,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.AccountInfo.html">AccountInfo</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.AccountInfo.html">AccountInfo</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -375,7 +375,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;Application&gt;&gt; GetApplication(ulong applicationId)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;Application&gt; GetApplication(ulong applicationId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -404,7 +404,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.Application.html">Application</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.Application.html">Application</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -417,7 +417,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;Asset&gt;&gt; GetAsset(ulong assetId)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;Asset&gt; GetAsset(ulong assetId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -446,7 +446,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.Asset.html">Asset</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.Asset.html">Asset</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -459,7 +459,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;BlockResponse&gt;&gt; GetBlock(ulong round)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;BlockResponse&gt; GetBlock(ulong round)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -488,7 +488,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.BlockResponse.html">BlockResponse</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.BlockResponse.html">BlockResponse</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -501,7 +501,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;Status&gt;&gt; GetCurrentStatus()</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;Status&gt; GetCurrentStatus()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -513,7 +513,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.Status.html">Status</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.Status.html">Status</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -526,7 +526,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;AlgoApiObject&gt;&gt; GetGenesisInformation()</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;AlgoApiObject&gt; GetGenesisInformation()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -538,7 +538,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.AlgoApiObject.html">AlgoApiObject</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.AlgoApiObject.html">AlgoApiObject</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -551,7 +551,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&gt; GetHealth()</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent GetHealth()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -563,7 +563,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse.html">AlgoApiResponse</a>&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent.html">AlgoApiRequest.Sent</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -576,7 +576,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;LedgerSupply&gt;&gt; GetLedgerSupply()</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;LedgerSupply&gt; GetLedgerSupply()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -588,7 +588,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.LedgerSupply.html">LedgerSupply</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.LedgerSupply.html">LedgerSupply</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -601,7 +601,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;MerkleProof&gt;&gt; GetMerkleProof(ulong round, TransactionId txid)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;MerkleProof&gt; GetMerkleProof(ulong round, TransactionId txid)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -635,7 +635,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.MerkleProof.html">MerkleProof</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.MerkleProof.html">MerkleProof</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -648,7 +648,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&gt; GetMetrics()</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent GetMetrics()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -660,7 +660,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse.html">AlgoApiResponse</a>&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent.html">AlgoApiRequest.Sent</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -673,7 +673,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;PendingTransaction&gt;&gt; GetPendingTransaction(TransactionId txid)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;PendingTransaction&gt; GetPendingTransaction(TransactionId txid)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -702,7 +702,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.PendingTransaction.html">PendingTransaction</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.PendingTransaction.html">PendingTransaction</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -715,7 +715,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;PendingTransactions&gt;&gt; GetPendingTransactions(ulong max = 0UL)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;PendingTransactions&gt; GetPendingTransactions(ulong max = 0UL)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -744,7 +744,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.PendingTransactions.html">PendingTransactions</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.PendingTransactions.html">PendingTransactions</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -757,7 +757,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;PendingTransactions&gt;&gt; GetPendingTransactionsByAccount(Address accountAddress, ulong max = 0UL)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;PendingTransactions&gt; GetPendingTransactionsByAccount(Address accountAddress, ulong max = 0UL)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -791,7 +791,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.PendingTransactions.html">PendingTransactions</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.PendingTransactions.html">PendingTransactions</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -804,7 +804,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;Status&gt;&gt; GetStatusAfterWaitingForRound(ulong round)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;Status&gt; GetStatusAfterWaitingForRound(ulong round)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -833,7 +833,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.Status.html">Status</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.Status.html">Status</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -846,7 +846,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;TransactionParams&gt;&gt; GetSuggestedParams()</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;TransactionParams&gt; GetSuggestedParams()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -858,7 +858,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -871,7 +871,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;AlgoApiObject&gt;&gt; GetSwaggerSpec()</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;AlgoApiObject&gt; GetSwaggerSpec()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -883,7 +883,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.AlgoApiObject.html">AlgoApiObject</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.AlgoApiObject.html">AlgoApiObject</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -896,7 +896,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;Version&gt;&gt; GetVersions()</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;Version&gt; GetVersions()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -908,7 +908,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.Version.html">Version</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.Version.html">Version</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -921,7 +921,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;TransactionIdResponse&gt;&gt; RegisterParticipationKeys(string accountAddress, ulong fee = 1000UL, Optional&lt;ulong&gt; keyDilution = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; noWait = default(Optional&lt;bool&gt;), Optional&lt;bool&gt; roundLastValid = default(Optional&lt;bool&gt;))</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;TransactionIdResponse&gt; RegisterParticipationKeys(string accountAddress, ulong fee = 1000UL, Optional&lt;ulong&gt; keyDilution = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; noWait = default(Optional&lt;bool&gt;), Optional&lt;bool&gt; roundLastValid = default(Optional&lt;bool&gt;))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -970,7 +970,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.TransactionIdResponse.html">TransactionIdResponse</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.TransactionIdResponse.html">TransactionIdResponse</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -983,7 +983,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;TransactionIdResponse&gt;&gt; SendTransaction&lt;T&gt;(Signed&lt;T&gt; txn)
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;TransactionIdResponse&gt; SendTransaction&lt;T&gt;(Signed&lt;T&gt; txn)
     where T : struct, ITransaction, IEquatable&lt;T&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -1013,7 +1013,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.TransactionIdResponse.html">TransactionIdResponse</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.TransactionIdResponse.html">TransactionIdResponse</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1041,7 +1041,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;TransactionIdResponse&gt;&gt; SendTransactions(params SignedTransaction[] txns)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;TransactionIdResponse&gt; SendTransactions(params SignedTransaction[] txns)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1070,7 +1070,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.TransactionIdResponse.html">TransactionIdResponse</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.TransactionIdResponse.html">TransactionIdResponse</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1083,7 +1083,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&gt; ShutDown(Optional&lt;ulong&gt; timeout = default(Optional&lt;ulong&gt;))</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent ShutDown(Optional&lt;ulong&gt; timeout = default(Optional&lt;ulong&gt;))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1112,7 +1112,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse.html">AlgoApiResponse</a>&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent.html">AlgoApiRequest.Sent</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1125,7 +1125,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;CatchupMessage&gt;&gt; StartCatchup(string catchpoint)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;CatchupMessage&gt; StartCatchup(string catchpoint)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1154,7 +1154,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.CatchupMessage.html">CatchupMessage</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.CatchupMessage.html">CatchupMessage</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1167,7 +1167,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;TealCompilationResult&gt;&gt; TealCompile(string source)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;TealCompilationResult&gt; TealCompile(string source)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1196,7 +1196,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.TealCompilationResult.html">TealCompilationResult</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.TealCompilationResult.html">TealCompilationResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1209,7 +1209,7 @@ required to create and send transactions.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;DryrunResults&gt;&gt; TealDryrun(Optional&lt;DryrunRequest&gt; dryrunRequest = default(Optional&lt;DryrunRequest&gt;))</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;DryrunResults&gt; TealDryrun(Optional&lt;DryrunRequest&gt; dryrunRequest = default(Optional&lt;DryrunRequest&gt;))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1238,7 +1238,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.DryrunResults.html">DryrunResults</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.DryrunResults.html">DryrunResults</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

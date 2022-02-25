@@ -290,7 +290,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;AccountResponse&gt;&gt; GetAccount(Address accountAddress, Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;))</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;AccountResponse&gt; GetAccount(Address accountAddress, Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -329,7 +329,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.AccountResponse.html">AccountResponse</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.AccountResponse.html">AccountResponse</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -342,7 +342,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;AccountsResponse&gt;&gt; GetAccounts(Optional&lt;ulong&gt; applicationId = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), Address authAddr = default(Address), Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;))</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;AccountsResponse&gt; GetAccounts(Optional&lt;ulong&gt; applicationId = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), Address authAddr = default(Address), Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -411,7 +411,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.AccountsResponse.html">AccountsResponse</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.AccountsResponse.html">AccountsResponse</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -424,7 +424,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;TransactionsResponse&gt;&gt; GetAccountTransactions(Address accountAddress, DateTime afterTime = null, Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), DateTime beforeTime = null, Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;), string notePrefix = null, Optional&lt;bool&gt; rekeyTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;), SignatureType sigType = SignatureType.None, TransactionType txType = TransactionType.None, TransactionId txid = default(TransactionId))</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;TransactionsResponse&gt; GetAccountTransactions(Address accountAddress, DateTime afterTime = null, Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), DateTime beforeTime = null, Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;), string notePrefix = null, Optional&lt;bool&gt; rekeyTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;), SignatureType sigType = SignatureType.None, TransactionType txType = TransactionType.None, TransactionId txid = default(TransactionId))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -528,7 +528,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.TransactionsResponse.html">TransactionsResponse</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.TransactionsResponse.html">TransactionsResponse</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -541,7 +541,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;ApplicationResponse&gt;&gt; GetApplication(ulong applicationId, Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;))</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;ApplicationResponse&gt; GetApplication(ulong applicationId, Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -575,7 +575,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.ApplicationResponse.html">ApplicationResponse</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.ApplicationResponse.html">ApplicationResponse</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -588,7 +588,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;ApplicationsResponse&gt;&gt; GetApplications(Optional&lt;ulong&gt; applicationId = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;))</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;ApplicationsResponse&gt; GetApplications(Optional&lt;ulong&gt; applicationId = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -632,7 +632,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.ApplicationsResponse.html">ApplicationsResponse</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.ApplicationsResponse.html">ApplicationsResponse</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -645,7 +645,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;AssetResponse&gt;&gt; GetAsset(ulong assetId, Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;))</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;AssetResponse&gt; GetAsset(ulong assetId, Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -679,7 +679,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.AssetResponse.html">AssetResponse</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.AssetResponse.html">AssetResponse</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -692,7 +692,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;BalancesResponse&gt;&gt; GetAssetBalances(ulong assetId, Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;))</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;BalancesResponse&gt; GetAssetBalances(ulong assetId, Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -751,7 +751,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.BalancesResponse.html">BalancesResponse</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.BalancesResponse.html">BalancesResponse</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -764,7 +764,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;AssetsResponse&gt;&gt; GetAssets(Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), Address creator = default(Address), Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), string name = null, Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;), string unit = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;AssetsResponse&gt; GetAssets(Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), Address creator = default(Address), Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), string name = null, Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;), string unit = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -823,7 +823,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.AssetsResponse.html">AssetsResponse</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.AssetsResponse.html">AssetsResponse</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -836,7 +836,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;TransactionsResponse&gt;&gt; GetAssetTransactions(ulong assetId, Address address = default(Address), AddressRole addressRole = AddressRole.None, DateTime afterTime = null, DateTime beforeTime = null, Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; excludeCloseTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;), string notePrefix = null, Optional&lt;bool&gt; rekeyTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;), SignatureType sigType = SignatureType.None, TransactionType txType = TransactionType.None, TransactionId txid = default(TransactionId))</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;TransactionsResponse&gt; GetAssetTransactions(ulong assetId, Address address = default(Address), AddressRole addressRole = AddressRole.None, DateTime afterTime = null, DateTime beforeTime = null, Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; excludeCloseTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;), string notePrefix = null, Optional&lt;bool&gt; rekeyTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;), SignatureType sigType = SignatureType.None, TransactionType txType = TransactionType.None, TransactionId txid = default(TransactionId))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -950,7 +950,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.TransactionsResponse.html">TransactionsResponse</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.TransactionsResponse.html">TransactionsResponse</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -963,7 +963,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;Block&gt;&gt; GetBlock(ulong round)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;Block&gt; GetBlock(ulong round)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -992,7 +992,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.Block.html">Block</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.Block.html">Block</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1005,7 +1005,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;HealthCheck&gt;&gt; GetHealth()</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;HealthCheck&gt; GetHealth()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1017,7 +1017,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.HealthCheck.html">HealthCheck</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.HealthCheck.html">HealthCheck</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1030,7 +1030,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;TransactionResponse&gt;&gt; GetTransaction(TransactionId txid)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;TransactionResponse&gt; GetTransaction(TransactionId txid)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1059,7 +1059,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.TransactionResponse.html">TransactionResponse</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.TransactionResponse.html">TransactionResponse</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1072,7 +1072,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async UniTask&lt;AlgoApiResponse&lt;TransactionsResponse&gt;&gt; GetTransactions(Address address = default(Address), AddressRole addressRole = AddressRole.None, DateTime afterTime = null, Optional&lt;ulong&gt; applicationId = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), DateTime beforeTime = null, Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; excludeCloseTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;), string notePrefix = null, Optional&lt;bool&gt; rekeyTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;), SignatureType sigType = SignatureType.None, TransactionType txType = TransactionType.None, TransactionId txid = default(TransactionId))</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;TransactionsResponse&gt; GetTransactions(Address address = default(Address), AddressRole addressRole = AddressRole.None, DateTime afterTime = null, Optional&lt;ulong&gt; applicationId = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), DateTime beforeTime = null, Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; excludeCloseTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;), string notePrefix = null, Optional&lt;bool&gt; rekeyTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;), SignatureType sigType = SignatureType.None, TransactionType txType = TransactionType.None, TransactionId txid = default(TransactionId))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1191,7 +1191,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiResponse-1.html">AlgoApiResponse</a>&lt;<a class="xref" href="AlgoSdk.TransactionsResponse.html">TransactionsResponse</a>&gt;&gt;</td>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.TransactionsResponse.html">TransactionsResponse</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
