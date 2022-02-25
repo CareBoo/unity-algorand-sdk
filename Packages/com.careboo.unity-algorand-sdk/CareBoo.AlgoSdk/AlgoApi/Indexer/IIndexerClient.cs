@@ -10,7 +10,7 @@ namespace AlgoSdk
         /// Get a health status of the indexer service.
         /// </summary>
         /// <returns>a <see cref="HealthCheck"/> response detailing the status of the health</returns>
-        UniTask<AlgoApiResponse<HealthCheck>> GetHealth();
+        AlgoApiRequest.Sent<HealthCheck> GetHealth();
 
         /// <summary>
         /// Search for accounts.
@@ -43,7 +43,7 @@ namespace AlgoSdk
         /// reasons, this parameter may be disabled on some
         /// configurations.
         /// </param>
-        UniTask<AlgoApiResponse<AccountsResponse>> GetAccounts(
+        AlgoApiRequest.Sent<AccountsResponse> GetAccounts(
             Optional<ulong> applicationId = default,
             Optional<ulong> assetId = default,
             Address authAddr = default,
@@ -65,7 +65,7 @@ namespace AlgoSdk
         /// application localstates.
         /// </param>
         /// <param name="round">Include results for the specified round.</param>
-        UniTask<AlgoApiResponse<AccountResponse>> GetAccount(
+        AlgoApiRequest.Sent<AccountResponse> GetAccount(
             Address accountAddress,
             Optional<bool> includeAll = default,
             Optional<ulong> round = default
@@ -104,7 +104,7 @@ namespace AlgoSdk
         /// <param name="sigType">Filter transactions using the given <see cref="SignatureType"/></param>
         /// <param name="txType"></param>
         /// <param name="txid">Lookup the specific transaction by ID.</param>
-        UniTask<AlgoApiResponse<TransactionsResponse>> GetAccountTransactions(
+        AlgoApiRequest.Sent<TransactionsResponse> GetAccountTransactions(
             Address accountAddress,
             DateTime afterTime = default,
             Optional<ulong> assetId = default,
@@ -137,7 +137,7 @@ namespace AlgoSdk
         /// The next page of results. Use the next token provided by the
         /// previous results.
         /// </param>
-        UniTask<AlgoApiResponse<ApplicationsResponse>> GetApplications(
+        AlgoApiRequest.Sent<ApplicationsResponse> GetApplications(
             Optional<ulong> applicationId = default,
             Optional<bool> includeAll = default,
             Optional<ulong> limit = default,
@@ -153,7 +153,7 @@ namespace AlgoSdk
         /// destroyed assets, opted-out asset holdings, and closed-out
         /// application localstates.
         /// </param>
-        UniTask<AlgoApiResponse<ApplicationResponse>> GetApplication(
+        AlgoApiRequest.Sent<ApplicationResponse> GetApplication(
             ulong applicationId,
             Optional<bool> includeAll = default
         );
@@ -175,7 +175,7 @@ namespace AlgoSdk
         /// previous results.
         /// </param>
         /// <param name="unit">Filter just assets with the given unit.</param>
-        UniTask<AlgoApiResponse<AssetsResponse>> GetAssets(
+        AlgoApiRequest.Sent<AssetsResponse> GetAssets(
             Optional<ulong> assetId = default,
             Address creator = default,
             Optional<bool> includeAll = default,
@@ -194,7 +194,7 @@ namespace AlgoSdk
         /// destroyed assets, opted-out asset holdings, and closed-out
         /// application localstates.
         /// </param>
-        UniTask<AlgoApiResponse<AssetResponse>> GetAsset(
+        AlgoApiRequest.Sent<AssetResponse> GetAsset(
             ulong assetId,
             Optional<bool> includeAll = default
         );
@@ -209,7 +209,7 @@ namespace AlgoSdk
         /// <param name="limit">Maximum number of results to return.</param>
         /// <param name="next">The next page of results. Use the next token provided by the previous results.</param>
         /// <param name="round">Include results for the specified round.</param>
-        UniTask<AlgoApiResponse<BalancesResponse>> GetAssetBalances(
+        AlgoApiRequest.Sent<BalancesResponse> GetAssetBalances(
             ulong assetId,
             Optional<ulong> currencyGreaterThan = default,
             Optional<ulong> currencyLessThan = default,
@@ -240,7 +240,7 @@ namespace AlgoSdk
         /// <param name="sigType">SigType filters just results using the specified type of signature.</param>
         /// <param name="txType"></param>
         /// <param name="txid">Lookup the specific transaction by ID.</param>
-        UniTask<AlgoApiResponse<TransactionsResponse>> GetAssetTransactions(
+        AlgoApiRequest.Sent<TransactionsResponse> GetAssetTransactions(
             ulong assetId,
             Address address = default,
             AddressRole addressRole = default,
@@ -265,7 +265,7 @@ namespace AlgoSdk
         /// Lookup block.
         /// </summary>
         /// <param name="round">Round number</param>
-        UniTask<AlgoApiResponse<Block>> GetBlock(ulong round);
+        AlgoApiRequest.Sent<Block> GetBlock(ulong round);
 
         /// <summary>
         /// Search for transactions.
@@ -289,7 +289,7 @@ namespace AlgoSdk
         /// <param name="sigType">SigType filters just results using the specified type of signature.</param>
         /// <param name="txType"></param>
         /// <param name="txid">Lookup the specific transaction by ID.</param>
-        UniTask<AlgoApiResponse<TransactionsResponse>> GetTransactions(
+        AlgoApiRequest.Sent<TransactionsResponse> GetTransactions(
             Address address = default,
             AddressRole addressRole = default,
             DateTime afterTime = default,
@@ -315,6 +315,6 @@ namespace AlgoSdk
         /// Lookup a single transaction.
         /// </summary>
         /// <param name="txid"></param>
-        UniTask<AlgoApiResponse<TransactionResponse>> GetTransaction(TransactionId txid);
+        AlgoApiRequest.Sent<TransactionResponse> GetTransaction(TransactionId txid);
     }
 }

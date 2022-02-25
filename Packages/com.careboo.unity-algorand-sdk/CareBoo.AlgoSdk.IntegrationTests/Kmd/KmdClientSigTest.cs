@@ -4,6 +4,7 @@ using AlgoSdk;
 using AlgoSdk.Crypto;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
+using Unity.Collections;
 using UnityEngine.TestTools;
 
 public class KmdClientSigTest : KmdClientTestFixture
@@ -34,7 +35,7 @@ public class KmdClientSigTest : KmdClientTestFixture
         );
         msigAddress = importResponse.Payload.Address;
         var importKeys = await UniTask.WhenAll(
-            privateKeys.Select(key => AlgoApiClientSettings.Kmd.ImportKey(key, walletHandleToken)).ToArray()
+            privateKeys.Select(key => ImportKey(key, walletHandleToken)).ToArray()
         );
     }
 
@@ -44,7 +45,7 @@ public class KmdClientSigTest : KmdClientTestFixture
         {
             await AlgoApiClientSettings.Kmd.DeleteMultisig(msigAddress, walletHandleToken, WalletPassword);
             await UniTask.WhenAll(
-                privateKeys.Select(key => AlgoApiClientSettings.Kmd.DeleteKey(key.ToAddress(), walletHandleToken, WalletPassword))
+                privateKeys.Select(key => DeleteKey(key, walletHandleToken))
             );
         }
         await base.TearDownAsync();
@@ -60,6 +61,12 @@ public class KmdClientSigTest : KmdClientTestFixture
             amount: 30000
         );
     }
+
+    async UniTask<AlgoApiResponse<ImportKeyResponse>> ImportKey(PrivateKey key, FixedString128Bytes walletHandleToken) =>
+        await AlgoApiClientSettings.Kmd.ImportKey(key, walletHandleToken);
+
+    async UniTask<AlgoApiResponse<ImportKeyResponse>> DeleteKey(PrivateKey key, FixedString128Bytes walletHandleToken) =>
+        await AlgoApiClientSettings.Kmd.DeleteKey(key.ToAddress(), walletHandleToken, WalletPassword);
 
     [UnityTest]
     public IEnumerator ExportMultisigShouldReturnOkay() => UniTask.ToCoroutine(async () =>

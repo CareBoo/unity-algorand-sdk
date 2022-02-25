@@ -1,5 +1,4 @@
 using System;
-using Cysharp.Threading.Tasks;
 using Unity.Collections;
 using UnityEngine;
 
@@ -53,14 +52,14 @@ namespace AlgoSdk
 
         public Header[] Headers => headers;
 
-        public async UniTask<AlgoApiResponse<HealthCheck>> GetHealth()
+        public AlgoApiRequest.Sent<HealthCheck> GetHealth()
         {
-            return await this
+            return this
                 .Get("/health")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<AccountsResponse>> GetAccounts(
+        public AlgoApiRequest.Sent<AccountsResponse> GetAccounts(
             Optional<ulong> applicationId = default,
             Optional<ulong> assetId = default,
             Address authAddr = default,
@@ -85,12 +84,12 @@ namespace AlgoSdk
                 .Add("round", round)
                 .ToString()
                 ;
-            return await this
+            return this
                 .Get("/v2/accounts" + query)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<AccountResponse>> GetAccount(
+        public AlgoApiRequest.Sent<AccountResponse> GetAccount(
             Address accountAddress,
             Optional<bool> includeAll = default,
             Optional<ulong> round = default
@@ -102,12 +101,12 @@ namespace AlgoSdk
                 .Add("round", round)
                 .ToString()
                 ;
-            return await this
+            return this
                 .Get($"/v2/accounts/{accountAddress}{query}")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<TransactionsResponse>> GetAccountTransactions(
+        public AlgoApiRequest.Sent<TransactionsResponse> GetAccountTransactions(
             Address accountAddress,
             DateTime afterTime = default,
             Optional<ulong> assetId = default,
@@ -145,12 +144,12 @@ namespace AlgoSdk
                 .Add("txid", txid)
                 .ToString()
                 ;
-            return await this
+            return this
                 .Get($"/v2/accounts/{accountAddress}/transactions{query}")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<ApplicationsResponse>> GetApplications(
+        public AlgoApiRequest.Sent<ApplicationsResponse> GetApplications(
             Optional<ulong> applicationId = default,
             Optional<bool> includeAll = default,
             Optional<ulong> limit = default,
@@ -165,12 +164,12 @@ namespace AlgoSdk
                 .Add("next", next)
                 .ToString()
                 ;
-            return await this
+            return this
                 .Get("/v2/applications" + query)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<ApplicationResponse>> GetApplication(
+        public AlgoApiRequest.Sent<ApplicationResponse> GetApplication(
             ulong applicationId,
             Optional<bool> includeAll = default
         )
@@ -179,12 +178,12 @@ namespace AlgoSdk
             var query = queryBuilder
                 .Add("include-all", includeAll)
                 ;
-            return await this
+            return this
                 .Get($"/v2/applications/{applicationId}{query}")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<AssetsResponse>> GetAssets(
+        public AlgoApiRequest.Sent<AssetsResponse> GetAssets(
             Optional<ulong> assetId = default,
             Address creator = default,
             Optional<bool> includeAll = default,
@@ -204,12 +203,12 @@ namespace AlgoSdk
                 .Add("unit", unit)
                 .ToString()
                 ;
-            return await this
+            return this
                 .Get($"/v2/assets{query}")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<AssetResponse>> GetAsset(
+        public AlgoApiRequest.Sent<AssetResponse> GetAsset(
             ulong assetId,
             Optional<bool> includeAll = default
         )
@@ -218,12 +217,12 @@ namespace AlgoSdk
             var query = queryBuilder
                 .Add("include-all", includeAll)
                 ;
-            return await this
+            return this
                 .Get($"/v2/assets/{assetId}{query}")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<BalancesResponse>> GetAssetBalances(
+        public AlgoApiRequest.Sent<BalancesResponse> GetAssetBalances(
             ulong assetId,
             Optional<ulong> currencyGreaterThan = default,
             Optional<ulong> currencyLessThan = default,
@@ -243,12 +242,12 @@ namespace AlgoSdk
                 .Add("round", round)
                 .ToString()
                 ;
-            return await this
+            return this
                 .Get($"/v2/assets/{assetId}/balances{query}")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<TransactionsResponse>> GetAssetTransactions(
+        public AlgoApiRequest.Sent<TransactionsResponse> GetAssetTransactions(
             ulong assetId,
             Address address = default,
             AddressRole addressRole = default,
@@ -290,17 +289,17 @@ namespace AlgoSdk
                 .Add("txid", txid)
                 .ToString()
                 ;
-            return await this
+            return this
                 .Get($"/v2/assets/{assetId}/transactions{query}")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<Block>> GetBlock(ulong round)
+        public AlgoApiRequest.Sent<Block> GetBlock(ulong round)
         {
-            return await this.Get($"/v2/blocks/{round}").Send();
+            return this.Get($"/v2/blocks/{round}").Send();
         }
 
-        public async UniTask<AlgoApiResponse<TransactionsResponse>> GetTransactions(
+        public AlgoApiRequest.Sent<TransactionsResponse> GetTransactions(
             Address address = default,
             AddressRole addressRole = default,
             DateTime afterTime = default,
@@ -345,14 +344,14 @@ namespace AlgoSdk
                 .Add("txid", txid)
                 .ToString()
                 ;
-            return await this
+            return this
                 .Get("/v2/transactions" + query)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<TransactionResponse>> GetTransaction(TransactionId txid)
+        public AlgoApiRequest.Sent<TransactionResponse> GetTransaction(TransactionId txid)
         {
-            return await this
+            return this
                 .Get($"/v2/transactions/{txid}")
                 .Send();
         }

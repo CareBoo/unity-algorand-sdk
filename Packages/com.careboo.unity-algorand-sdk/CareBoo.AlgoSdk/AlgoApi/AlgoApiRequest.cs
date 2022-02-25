@@ -69,11 +69,11 @@ namespace AlgoSdk
         /// <typeparam name="TProgress">A progress callback implementing <see cref="IProgress{System.Single}"/></typeparam>
         /// <param name="progress">The progress callback</param>
         /// <param name="cancellationToken">An optional cancellation token</param>
-        /// <returns>A <see cref="Sent{TProgress}"/> request</returns>
-        public Sent<TProgress> Send<TProgress>(TProgress progress, CancellationToken cancellationToken = default)
+        /// <returns>A <see cref="SentWithProgress{TProgress}"/> request</returns>
+        public SentWithProgress<TProgress> Send<TProgress>(TProgress progress, CancellationToken cancellationToken = default)
             where TProgress : IProgress<float>
         {
-            return new Sent<TProgress>(unityWebRequest.SendWebRequest(), progress, cancellationToken);
+            return new SentWithProgress<TProgress>(unityWebRequest.SendWebRequest(), progress, cancellationToken);
         }
 
         /// <summary>
@@ -186,10 +186,12 @@ namespace AlgoSdk
         /// <summary>
         /// A wrapper around the <see cref="UnityWebRequestAsyncOperation"/> handling the sent request.
         /// </summary>
-        public ref struct Sent
+        public readonly ref struct Sent
         {
-            UnityWebRequestAsyncOperation asyncOperation;
-            CancellationToken cancellationToken;
+            readonly UnityWebRequestAsyncOperation asyncOperation;
+            readonly CancellationToken cancellationToken;
+
+            public UnityWebRequestAsyncOperation AsyncOperation => asyncOperation;
 
             public Sent(
                 UnityWebRequestAsyncOperation asyncOperation,
@@ -198,6 +200,22 @@ namespace AlgoSdk
             {
                 this.asyncOperation = asyncOperation;
                 this.cancellationToken = cancellationToken;
+            }
+
+            public Sent WithCancellation(CancellationToken cancellationToken)
+            {
+                return new Sent(asyncOperation, cancellationToken);
+            }
+
+            public SentWithProgress<TProgress> WithProgress<TProgress>(TProgress progress)
+                where TProgress : IProgress<float>
+            {
+                return new SentWithProgress<TProgress>(asyncOperation, progress, cancellationToken);
+            }
+
+            public Sent<TResponse> CastResponse<TResponse>()
+            {
+                return new Sent<TResponse>(asyncOperation, cancellationToken);
             }
 
             public Awaiter GetAwaiter()
@@ -212,13 +230,60 @@ namespace AlgoSdk
         /// <summary>
         /// A wrapper around the <see cref="UnityWebRequestAsyncOperation"/> handling the sent request.
         /// </summary>
-        public ref struct Sent<TProgress> where TProgress : IProgress<float>
+        public readonly ref struct Sent<TResponse>
         {
-            UnityWebRequestAsyncOperation asyncOperation;
-            TProgress progress;
-            CancellationToken cancellationToken;
+            readonly UnityWebRequestAsyncOperation asyncOperation;
+            readonly CancellationToken cancellationToken;
+
+            public UnityWebRequestAsyncOperation AsyncOperation => asyncOperation;
 
             public Sent(
+                UnityWebRequestAsyncOperation asyncOperation,
+                CancellationToken cancellationToken = default
+            )
+            {
+                this.asyncOperation = asyncOperation;
+                this.cancellationToken = cancellationToken;
+            }
+
+            public Sent<TResponse> WithCancellation(CancellationToken cancellationToken)
+            {
+                return new Sent<TResponse>(asyncOperation, cancellationToken);
+            }
+
+            public SentWithProgress<TResponse, TProgress> WithProgress<TProgress>(TProgress progress)
+                where TProgress : IProgress<float>
+            {
+                return new SentWithProgress<TResponse, TProgress>(asyncOperation, progress, cancellationToken);
+            }
+
+            public Awaiter<TResponse> GetAwaiter()
+            {
+                var uniTaskAwaiter = asyncOperation
+                    .ToUniTask(cancellationToken: cancellationToken)
+                    .GetAwaiter();
+                return new Awaiter<TResponse>(uniTaskAwaiter);
+            }
+
+            public static implicit operator Sent<TResponse>(Sent sent)
+            {
+                return sent.CastResponse<TResponse>();
+            }
+        }
+
+        /// <summary>
+        /// A wrapper around the <see cref="UnityWebRequestAsyncOperation"/> handling the sent request.
+        /// </summary>
+        public readonly ref struct SentWithProgress<TProgress>
+            where TProgress : IProgress<float>
+        {
+            readonly UnityWebRequestAsyncOperation asyncOperation;
+            readonly TProgress progress;
+            readonly CancellationToken cancellationToken;
+
+            public UnityWebRequestAsyncOperation AsyncOperation => asyncOperation;
+
+            public SentWithProgress(
                 UnityWebRequestAsyncOperation asyncOperation,
                 TProgress progress,
                 CancellationToken cancellationToken = default
@@ -227,6 +292,16 @@ namespace AlgoSdk
                 this.asyncOperation = asyncOperation;
                 this.progress = progress;
                 this.cancellationToken = cancellationToken;
+            }
+
+            public SentWithProgress<TProgress> WithCancellation(CancellationToken cancellationToken)
+            {
+                return new SentWithProgress<TProgress>(asyncOperation, progress, cancellationToken);
+            }
+
+            public SentWithProgress<TResponse, TProgress> CastResponse<TResponse>()
+            {
+                return new SentWithProgress<TResponse, TProgress>(asyncOperation, progress, cancellationToken);
             }
 
             public Awaiter GetAwaiter()
@@ -239,9 +314,52 @@ namespace AlgoSdk
         }
 
         /// <summary>
+        /// A wrapper around the <see cref="UnityWebRequestAsyncOperation"/> handling the sent request.
+        /// </summary>
+        public readonly ref struct SentWithProgress<TResponse, TProgress>
+            where TProgress : IProgress<float>
+        {
+            readonly UnityWebRequestAsyncOperation asyncOperation;
+            readonly TProgress progress;
+            readonly CancellationToken cancellationToken;
+
+            public UnityWebRequestAsyncOperation AsyncOperation => asyncOperation;
+
+            public SentWithProgress(
+                UnityWebRequestAsyncOperation asyncOperation,
+                TProgress progress,
+                CancellationToken cancellationToken = default
+            )
+            {
+                this.asyncOperation = asyncOperation;
+                this.progress = progress;
+                this.cancellationToken = cancellationToken;
+            }
+
+            public SentWithProgress<TResponse, TProgress> WithCancellation(CancellationToken cancellationToken)
+            {
+                return new SentWithProgress<TResponse, TProgress>(asyncOperation, progress, cancellationToken);
+            }
+
+            public Awaiter<TResponse> GetAwaiter()
+            {
+                var uniTaskAwaiter = asyncOperation
+                    .ToUniTask(progress: progress, cancellationToken: cancellationToken)
+                    .GetAwaiter();
+                return new Awaiter<TResponse>(uniTaskAwaiter);
+            }
+
+            public static implicit operator SentWithProgress<TResponse, TProgress>(SentWithProgress<TProgress> sent)
+            {
+                return sent.CastResponse<TResponse>();
+            }
+        }
+
+        /// <summary>
         /// A Task Awaiter for <see cref="UnityWebRequest"/>
         /// </summary>
-        public readonly struct Awaiter : ICriticalNotifyCompletion
+        public readonly struct Awaiter
+            : ICriticalNotifyCompletion
         {
             readonly UniTask<UnityWebRequest>.Awaiter uniTaskAwaiter;
 
@@ -253,6 +371,47 @@ namespace AlgoSdk
             public bool IsCompleted => uniTaskAwaiter.IsCompleted;
 
             public AlgoApiResponse GetResult()
+            {
+                UnityWebRequest completedRequest;
+                try
+                {
+                    completedRequest = uniTaskAwaiter.GetResult();
+                }
+                catch (UnityWebRequestException webErr)
+                {
+                    completedRequest = webErr.UnityWebRequest;
+                }
+                return new AlgoApiResponse(completedRequest);
+            }
+
+            public void OnCompleted(Action continuation)
+            {
+                UnsafeOnCompleted(continuation);
+            }
+
+            public void UnsafeOnCompleted(Action continuation)
+            {
+                uniTaskAwaiter.UnsafeOnCompleted(continuation);
+            }
+        }
+
+
+        /// <summary>
+        /// A Task Awaiter for <see cref="UnityWebRequest"/>
+        /// </summary>
+        public readonly struct Awaiter<TResponse>
+            : ICriticalNotifyCompletion
+        {
+            readonly UniTask<UnityWebRequest>.Awaiter uniTaskAwaiter;
+
+            public Awaiter(UniTask<UnityWebRequest>.Awaiter uniTaskAwaiter)
+            {
+                this.uniTaskAwaiter = uniTaskAwaiter;
+            }
+
+            public bool IsCompleted => uniTaskAwaiter.IsCompleted;
+
+            public AlgoApiResponse<TResponse> GetResult()
             {
                 UnityWebRequest completedRequest;
                 try

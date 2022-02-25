@@ -1,5 +1,4 @@
 using System;
-using Cysharp.Threading.Tasks;
 using Unity.Collections;
 using UnityEngine;
 
@@ -54,112 +53,112 @@ namespace AlgoSdk
 
         public Header[] Headers => headers;
 
-        public async UniTask<AlgoApiResponse<AlgoApiObject>> GetGenesisInformation()
+        public AlgoApiRequest.Sent<AlgoApiObject> GetGenesisInformation()
         {
-            return await this
+            return this
                 .Get("/genesis")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse> GetHealth()
+        public AlgoApiRequest.Sent GetHealth()
         {
-            return await this
+            return this
                 .Get("/health")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse> GetMetrics()
+        public AlgoApiRequest.Sent GetMetrics()
         {
-            return await this
+            return this
                 .Get("/metrics")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<AlgoApiObject>> GetSwaggerSpec()
+        public AlgoApiRequest.Sent<AlgoApiObject> GetSwaggerSpec()
         {
-            return await this
+            return this
                 .Get("/swagger.json")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<AccountInfo>> GetAccountInformation(Address accountAddress)
+        public AlgoApiRequest.Sent<AccountInfo> GetAccountInformation(Address accountAddress)
         {
-            return await this
+            return this
                 .Get($"/v2/accounts/{accountAddress}")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<PendingTransactions>> GetPendingTransactions(ulong max = 0)
+        public AlgoApiRequest.Sent<PendingTransactions> GetPendingTransactions(ulong max = 0)
         {
-            return await this
+            return this
                 .Get($"/v2/transactions/pending?max={max}&format=msgpack")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<PendingTransactions>> GetPendingTransactionsByAccount(Address accountAddress, ulong max = 0)
+        public AlgoApiRequest.Sent<PendingTransactions> GetPendingTransactionsByAccount(Address accountAddress, ulong max = 0)
         {
-            return await this
+            return this
                 .Get($"/v2/accounts/{accountAddress}/transactions/pending?max={max}&format=msgpack")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<PendingTransaction>> GetPendingTransaction(TransactionId txid)
+        public AlgoApiRequest.Sent<PendingTransaction> GetPendingTransaction(TransactionId txid)
         {
-            return await this
+            return this
                 .Get($"/v2/transactions/pending/{txid}?format=msgpack")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<Application>> GetApplication(ulong applicationId)
+        public AlgoApiRequest.Sent<Application> GetApplication(ulong applicationId)
         {
-            return await this
+            return this
                 .Get($"/v2/applications/{applicationId}")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<Asset>> GetAsset(ulong assetId)
+        public AlgoApiRequest.Sent<Asset> GetAsset(ulong assetId)
         {
-            return await this
+            return this
                 .Get($"/v2/assets/{assetId}")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<BlockResponse>> GetBlock(ulong round)
+        public AlgoApiRequest.Sent<BlockResponse> GetBlock(ulong round)
         {
-            return await this
+            return this
                 .Get($"/v2/blocks/{round}?format=msgpack")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<MerkleProof>> GetMerkleProof(ulong round, TransactionId txid)
+        public AlgoApiRequest.Sent<MerkleProof> GetMerkleProof(ulong round, TransactionId txid)
         {
-            return await this
+            return this
                 .Get($"/v2/blocks/{round}/transactions/{txid}/proof")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<CatchupMessage>> StartCatchup(string catchpoint)
+        public AlgoApiRequest.Sent<CatchupMessage> StartCatchup(string catchpoint)
         {
-            return await this
+            return this
                 .Post($"/v2/catchup/{catchpoint}")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<CatchupMessage>> AbortCatchup(string catchpoint)
+        public AlgoApiRequest.Sent<CatchupMessage> AbortCatchup(string catchpoint)
         {
-            return await this
+            return this
                 .Delete($"/v2/catchup/{catchpoint}")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<LedgerSupply>> GetLedgerSupply()
+        public AlgoApiRequest.Sent<LedgerSupply> GetLedgerSupply()
         {
-            return await this
+            return this
                 .Get("/v2/ledger/supply")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<TransactionIdResponse>> RegisterParticipationKeys(
+        public AlgoApiRequest.Sent<TransactionIdResponse> RegisterParticipationKeys(
             string accountAddress,
             ulong fee = 1000,
             Optional<ulong> keyDilution = default,
@@ -173,67 +172,67 @@ namespace AlgoSdk
                 .Add("round-last-valid", roundLastValid)
                 ;
             var endpoint = $"/v2/register-participation-keys/{accountAddress}{queryBuilder}";
-            return await AlgoApiRequest.Post(this.GetUrl(endpoint))
+            return AlgoApiRequest.Post(this.GetUrl(endpoint))
                 .SetHeaders(Headers)
                 .Send()
                 ;
         }
 
-        public async UniTask<AlgoApiResponse> ShutDown(Optional<ulong> timeout = default)
+        public AlgoApiRequest.Sent ShutDown(Optional<ulong> timeout = default)
         {
-            return await this
+            return this
                 .Post("/v2/shutdown")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<Status>> GetCurrentStatus()
+        public AlgoApiRequest.Sent<Status> GetCurrentStatus()
         {
-            return await this
+            return this
                 .Get("/v2/status")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<Status>> GetStatusAfterWaitingForRound(ulong round)
+        public AlgoApiRequest.Sent<Status> GetStatusAfterWaitingForRound(ulong round)
         {
-            return await this
+            return this
                 .Get($"/v2/status/wait-for-block-after/{round}")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<TealCompilationResult>> TealCompile(string source)
+        public AlgoApiRequest.Sent<TealCompilationResult> TealCompile(string source)
         {
-            return await this
+            return this
                 .Post("/v2/teal/compile")
                 .SetPlainTextBody(source)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<DryrunResults>> TealDryrun(Optional<DryrunRequest> dryrunRequest = default)
+        public AlgoApiRequest.Sent<DryrunResults> TealDryrun(Optional<DryrunRequest> dryrunRequest = default)
         {
             const string endpoint = "/v2/teal/dryrun";
             using var data = AlgoApiSerializer.SerializeMessagePack(dryrunRequest.Value, Allocator.Persistent);
             return dryrunRequest.HasValue
-                ? await this
+                ? this
                     .Post(endpoint)
                     .SetMessagePackBody(data.AsArray().AsReadOnly())
                     .Send()
-                : await this
+                : this
                     .Post(endpoint)
                     .Send()
                 ;
         }
 
-        public async UniTask<AlgoApiResponse<TransactionIdResponse>> SendTransaction<T>(Signed<T> txn)
+        public AlgoApiRequest.Sent<TransactionIdResponse> SendTransaction<T>(Signed<T> txn)
             where T : struct, ITransaction, IEquatable<T>
         {
             using var data = AlgoApiSerializer.SerializeMessagePack(txn, Allocator.Persistent);
-            return await this
+            return this
                 .Post("/v2/transactions")
                 .SetMessagePackBody(data.AsArray().AsReadOnly())
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<TransactionIdResponse>> SendTransactions(
+        public AlgoApiRequest.Sent<TransactionIdResponse> SendTransactions(
             params SignedTransaction[] txns
         )
         {
@@ -245,22 +244,22 @@ namespace AlgoSdk
                     bytes.AddRange(data);
                 }
             }
-            return await this
+            return this
                 .Post("/v2/transactions")
                 .SetMessagePackBody(bytes.AsArray().AsReadOnly())
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<TransactionParams>> GetSuggestedParams()
+        public AlgoApiRequest.Sent<TransactionParams> GetSuggestedParams()
         {
-            return await this
+            return this
                 .Get("/v2/transactions/params")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<Version>> GetVersions()
+        public AlgoApiRequest.Sent<Version> GetVersions()
         {
-            return await this
+            return this
                 .Get("/versions")
                 .Send();
         }
