@@ -9,7 +9,8 @@
         "CareBoo.AlgoSdk.Crypto",
         "CareBoo.AlgoSdk.LowLevel",
         "UniTask",
-        "UnityEditor.TestRunner"
+        "UnityEditor.TestRunner",
+        "CareBoo.WebSocket"
     ],
     "includePlatforms": [
         "Editor"

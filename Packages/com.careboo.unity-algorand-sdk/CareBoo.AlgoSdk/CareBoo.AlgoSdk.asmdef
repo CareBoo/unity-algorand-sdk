@@ -7,7 +7,8 @@
         "Unity.Mathematics",
         "CareBoo.AlgoSdk.Crypto",
         "CareBoo.AlgoSdk.LowLevel",
-        "UniTask"
+        "UniTask",
+        "CareBoo.WebSocket"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
