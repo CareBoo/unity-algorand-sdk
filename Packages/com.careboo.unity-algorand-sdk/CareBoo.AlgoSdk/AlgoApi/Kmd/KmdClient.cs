@@ -1,6 +1,5 @@
 using System;
 using AlgoSdk.Crypto;
-using Cysharp.Threading.Tasks;
 using Unity.Collections;
 using UnityEngine;
 
@@ -54,26 +53,26 @@ namespace AlgoSdk
 
         public Header[] Headers => headers;
 
-        public async UniTask<AlgoApiResponse<AlgoApiObject>> GetSwaggerSpec()
+        public AlgoApiRequest.Sent<AlgoApiObject> GetSwaggerSpec()
         {
-            return await this
+            return this
                 .Get("/swagger.json")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<GenerateKeyResponse>> GenerateKey(
+        public AlgoApiRequest.Sent<GenerateKeyResponse> GenerateKey(
             FixedString128Bytes walletHandleToken,
             Optional<bool> displayMnemonic = default
         )
         {
             var request = new GenerateKeyRequest { DisplayMnemonic = displayMnemonic, WalletHandleToken = walletHandleToken };
-            return await this
+            return this
                 .Post("/v1/key")
                 .SetJsonBody(request)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse> DeleteKey(
+        public AlgoApiRequest.Sent DeleteKey(
             Address address,
             FixedString128Bytes walletHandleToken,
             FixedString128Bytes walletPassword
@@ -85,13 +84,13 @@ namespace AlgoSdk
                 WalletHandleToken = walletHandleToken,
                 WalletPassword = walletPassword
             };
-            return await this
+            return this
                 .Delete("/v1/key")
                 .SetJsonBody(request)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<ExportKeyResponse>> ExportKey(
+        public AlgoApiRequest.Sent<ExportKeyResponse> ExportKey(
             Address address,
             FixedString128Bytes walletHandleToken,
             FixedString128Bytes walletPassword
@@ -103,13 +102,13 @@ namespace AlgoSdk
                 WalletHandleToken = walletHandleToken,
                 WalletPassword = walletPassword
             };
-            return await this
+            return this
                 .Post("/v1/key/export")
                 .SetJsonBody(request)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<ImportKeyResponse>> ImportKey(
+        public AlgoApiRequest.Sent<ImportKeyResponse> ImportKey(
             PrivateKey privateKey,
             FixedString128Bytes walletHandleToken
         )
@@ -119,24 +118,24 @@ namespace AlgoSdk
                 PrivateKey = privateKey,
                 WalletHandleToken = walletHandleToken
             };
-            return await this
+            return this
                 .Post("/v1/key/import")
                 .SetJsonBody(request)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<ListKeysResponse>> ListKeys(
+        public AlgoApiRequest.Sent<ListKeysResponse> ListKeys(
             FixedString128Bytes walletHandleToken
         )
         {
             var request = new ListKeysRequest { WalletHandleToken = walletHandleToken };
-            return await this
+            return this
                 .Post("/v1/key/list")
                 .SetJsonBody(request)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<ExportMasterKeyResponse>> ExportMasterKey(
+        public AlgoApiRequest.Sent<ExportMasterKeyResponse> ExportMasterKey(
             FixedString128Bytes walletHandleToken,
             FixedString128Bytes walletPassword
         )
@@ -146,13 +145,13 @@ namespace AlgoSdk
                 WalletHandleToken = walletHandleToken,
                 WalletPassword = walletPassword
             };
-            return await this
+            return this
                 .Post("/v1/master-key/export")
                 .SetJsonBody(request)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse> DeleteMultisig(
+        public AlgoApiRequest.Sent DeleteMultisig(
             Address address,
             FixedString128Bytes walletHandleToken,
             FixedString128Bytes walletPassword
@@ -164,13 +163,13 @@ namespace AlgoSdk
                 WalletHandleToken = walletHandleToken,
                 WalletPassword = walletPassword
             };
-            return await this
+            return this
                 .Delete("/v1/multisig")
                 .SetJsonBody(request)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<ExportMultisigResponse>> ExportMultisig(
+        public AlgoApiRequest.Sent<ExportMultisigResponse> ExportMultisig(
             Address address,
             FixedString128Bytes walletHandleToken
         )
@@ -180,13 +179,13 @@ namespace AlgoSdk
                 Address = address,
                 WalletHandleToken = walletHandleToken
             };
-            return await this
+            return this
                 .Post("/v1/multisig/export")
                 .SetJsonBody(request)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<ImportMultisigResponse>> ImportMultisig(
+        public AlgoApiRequest.Sent<ImportMultisigResponse> ImportMultisig(
             Ed25519.PublicKey[] publicKeys,
             byte threshold,
             FixedString128Bytes walletHandleToken,
@@ -200,24 +199,24 @@ namespace AlgoSdk
                 Threshold = threshold,
                 WalletHandleToken = walletHandleToken
             };
-            return await this
+            return this
                 .Post("/v1/multisig/import")
                 .SetJsonBody(request)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<ListMultisigResponse>> ListMultisig(
+        public AlgoApiRequest.Sent<ListMultisigResponse> ListMultisig(
             FixedString128Bytes walletHandleToken
         )
         {
             var request = new ListMultisigRequest { WalletHandleToken = walletHandleToken };
-            return await this
+            return this
                 .Post("/v1/multisig/list")
                 .SetJsonBody(request)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<SignMultisigResponse>> SignMultisig(
+        public AlgoApiRequest.Sent<SignMultisigResponse> SignMultisig(
             Multisig msig,
             Ed25519.PublicKey publicKey,
             byte[] transactionData,
@@ -233,13 +232,13 @@ namespace AlgoSdk
                 WalletHandleToken = walletHandleToken,
                 WalletPassword = walletPassword
             };
-            return await this
+            return this
                 .Post("/v1/multisig/sign")
                 .SetJsonBody(request)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<SignProgramMultisigResponse>> SignProgramMultisig(
+        public AlgoApiRequest.Sent<SignProgramMultisigResponse> SignProgramMultisig(
             Address msigAccount,
             byte[] programData,
             Multisig msig,
@@ -257,13 +256,13 @@ namespace AlgoSdk
                 WalletHandleToken = walletHandleToken,
                 WalletPassword = walletPassword
             };
-            return await this
+            return this
                 .Post("/v1/multisig/signprogram")
                 .SetJsonBody(request)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<SignProgramResponse>> SignProgram(
+        public AlgoApiRequest.Sent<SignProgramResponse> SignProgram(
             Address account,
             byte[] programData,
             FixedString128Bytes walletHandleToken,
@@ -277,13 +276,13 @@ namespace AlgoSdk
                 WalletHandleToken = walletHandleToken,
                 WalletPassword = walletPassword
             };
-            return await this
+            return this
                 .Post("/v1/program/sign")
                 .SetJsonBody(request)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<SignTransactionResponse>> SignTransaction(
+        public AlgoApiRequest.Sent<SignTransactionResponse> SignTransaction(
             Address account,
             byte[] transactionData,
             FixedString128Bytes walletHandleToken,
@@ -297,13 +296,13 @@ namespace AlgoSdk
                 WalletHandleToken = walletHandleToken,
                 WalletPassword = walletPassword
             };
-            return await this
+            return this
                 .Post("/v1/transaction/sign")
                 .SetJsonBody(request)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<CreateWalletResponse>> CreateWallet(
+        public AlgoApiRequest.Sent<CreateWalletResponse> CreateWallet(
             PrivateKey masterDerivationKey,
             FixedString128Bytes walletDriverName,
             FixedString128Bytes walletName,
@@ -317,24 +316,24 @@ namespace AlgoSdk
                 WalletName = walletName,
                 WalletPassword = walletPassword
             };
-            return await this
+            return this
                 .Post("/v1/wallet")
                 .SetJsonBody(request)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<WalletInfoResponse>> WalletInfo(
+        public AlgoApiRequest.Sent<WalletInfoResponse> WalletInfo(
             FixedString128Bytes walletHandleToken
         )
         {
             var request = new WalletInfoRequest { WalletHandleToken = walletHandleToken };
-            return await this
+            return this
                 .Post("/v1/wallet/info")
                 .SetJsonBody(request)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<InitWalletHandleTokenResponse>> InitWalletHandleToken(
+        public AlgoApiRequest.Sent<InitWalletHandleTokenResponse> InitWalletHandleToken(
             FixedString128Bytes walletId,
             FixedString128Bytes walletPassword
         )
@@ -344,24 +343,24 @@ namespace AlgoSdk
                 WalletId = walletId,
                 WalletPassword = walletPassword
             };
-            return await this
+            return this
                 .Post("/v1/wallet/init")
                 .SetJsonBody(request)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse> ReleaseWalletHandleToken(
+        public AlgoApiRequest.Sent ReleaseWalletHandleToken(
             FixedString128Bytes walletHandleToken
         )
         {
             var request = new ReleaseWalletHandleTokenRequest { WalletHandleToken = walletHandleToken };
-            return await this
+            return this
                 .Post("/v1/wallet/release")
                 .SetJsonBody(request)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<RenameWalletResponse>> RenameWallet(
+        public AlgoApiRequest.Sent<RenameWalletResponse> RenameWallet(
             FixedString128Bytes walletId,
             FixedString128Bytes newName,
             FixedString128Bytes walletPassword
@@ -373,33 +372,33 @@ namespace AlgoSdk
                 WalletName = newName,
                 WalletPassword = walletPassword
             };
-            return await this
+            return this
                 .Post("/v1/wallet/rename")
                 .SetJsonBody(request)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<RenewWalletHandleTokenResponse>> RenewWalletHandleToken(
+        public AlgoApiRequest.Sent<RenewWalletHandleTokenResponse> RenewWalletHandleToken(
             FixedString128Bytes walletHandleToken
         )
         {
             var request = new RenewWalletHandleTokenRequest { WalletHandleToken = walletHandleToken };
-            return await this
+            return this
                 .Post("/v1/wallet/renew")
                 .SetJsonBody(request)
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<ListWalletsResponse>> ListWallets()
+        public AlgoApiRequest.Sent<ListWalletsResponse> ListWallets()
         {
-            return await this
+            return this
                 .Get("/v1/wallets")
                 .Send();
         }
 
-        public async UniTask<AlgoApiResponse<VersionsResponse>> Versions()
+        public AlgoApiRequest.Sent<VersionsResponse> Versions()
         {
-            return await this
+            return this
                 .Get("/versions")
                 .Send();
         }

@@ -10,7 +10,7 @@ namespace AlgoSdk
         /// Gets the current swagger spec.
         /// </summary>
         /// <returns>The entire swagger spec in json.</returns>
-        UniTask<AlgoApiResponse<AlgoApiObject>> GetSwaggerSpec();
+        AlgoApiRequest.Sent<AlgoApiObject> GetSwaggerSpec();
 
         /// <summary>
         /// Generates the next key in the deterministic key sequence (as determined by the master derivation key) and adds it to the wallet, returning the public key.
@@ -18,7 +18,7 @@ namespace AlgoSdk
         /// <param name="walletHandleToken"></param>
         /// <param name="displayMnemonic">whether or not to display the mnemonic</param>
         /// <returns></returns>
-        UniTask<AlgoApiResponse<GenerateKeyResponse>> GenerateKey(
+        AlgoApiRequest.Sent<GenerateKeyResponse> GenerateKey(
             FixedString128Bytes walletHandleToken,
             Optional<bool> displayMnemonic = default
         );
@@ -30,7 +30,7 @@ namespace AlgoSdk
         /// <param name="walletHandleToken"></param>
         /// <param name="walletPassword"></param>
         /// <returns></returns>
-        UniTask<AlgoApiResponse> DeleteKey(
+        AlgoApiRequest.Sent DeleteKey(
             Address address,
             FixedString128Bytes walletHandleToken,
             FixedString128Bytes walletPassword
@@ -44,7 +44,7 @@ namespace AlgoSdk
         /// <param name="walletHandleToken"></param>
         /// <param name="walletPassword"></param>
         /// <returns></returns>
-        UniTask<AlgoApiResponse<ExportKeyResponse>> ExportKey(
+        AlgoApiRequest.Sent<ExportKeyResponse> ExportKey(
             Address address,
             FixedString128Bytes walletHandleToken,
             FixedString128Bytes walletPassword
@@ -56,7 +56,7 @@ namespace AlgoSdk
         /// <param name="privateKey">key to import</param>
         /// <param name="walletPassword"></param>
         /// <returns></returns>
-        UniTask<AlgoApiResponse<ImportKeyResponse>> ImportKey(
+        AlgoApiRequest.Sent<ImportKeyResponse> ImportKey(
             PrivateKey privateKey,
             FixedString128Bytes walletPassword
         );
@@ -66,7 +66,7 @@ namespace AlgoSdk
         /// </summary>
         /// <param name="walletHandleToken"></param>
         /// <returns></returns>
-        UniTask<AlgoApiResponse<ListKeysResponse>> ListKeys(
+        AlgoApiRequest.Sent<ListKeysResponse> ListKeys(
             FixedString128Bytes walletHandleToken
         );
 
@@ -76,7 +76,7 @@ namespace AlgoSdk
         /// <param name="walletHandleToken"></param>
         /// <param name="walletPassword"></param>
         /// <returns></returns>
-        UniTask<AlgoApiResponse<ExportMasterKeyResponse>> ExportMasterKey(
+        AlgoApiRequest.Sent<ExportMasterKeyResponse> ExportMasterKey(
             FixedString128Bytes walletHandleToken,
             FixedString128Bytes walletPassword
         );
@@ -88,7 +88,7 @@ namespace AlgoSdk
         /// <param name="walletHandleToken"></param>
         /// <param name="walletPassword"></param>
         /// <returns></returns>
-        UniTask<AlgoApiResponse> DeleteMultisig(
+        AlgoApiRequest.Sent DeleteMultisig(
             Address address,
             FixedString128Bytes walletHandleToken,
             FixedString128Bytes walletPassword
@@ -100,7 +100,7 @@ namespace AlgoSdk
         /// <param name="address">public key for the key to export multisig preimage information</param>
         /// <param name="walletHandleToken"></param>
         /// <returns></returns>
-        UniTask<AlgoApiResponse<ExportMultisigResponse>> ExportMultisig(
+        AlgoApiRequest.Sent<ExportMultisigResponse> ExportMultisig(
             Address address,
             FixedString128Bytes walletHandleToken
         );
@@ -113,7 +113,7 @@ namespace AlgoSdk
         /// <param name="threshold">Number of valid signatures required</param>
         /// <param name="walletHandleToken"></param>
         /// <returns></returns>
-        UniTask<AlgoApiResponse<ImportMultisigResponse>> ImportMultisig(
+        AlgoApiRequest.Sent<ImportMultisigResponse> ImportMultisig(
             Ed25519.PublicKey[] publicKeys,
             byte threshold,
             FixedString128Bytes walletHandleToken,
@@ -125,7 +125,7 @@ namespace AlgoSdk
         /// </summary>
         /// <param name="walletHandleToken"></param>
         /// <returns></returns>
-        UniTask<AlgoApiResponse<ListMultisigResponse>> ListMultisig(
+        AlgoApiRequest.Sent<ListMultisigResponse> ListMultisig(
             FixedString128Bytes walletHandleToken
         );
 
@@ -141,7 +141,7 @@ namespace AlgoSdk
         /// <param name="walletHandleToken"></param>
         /// <param name="walletPassword"></param>
         /// <returns></returns>
-        UniTask<AlgoApiResponse<SignMultisigResponse>> SignMultisig(
+        AlgoApiRequest.Sent<SignMultisigResponse> SignMultisig(
             Multisig msig,
             Ed25519.PublicKey publicKey,
             byte[] transactionData,
@@ -162,7 +162,7 @@ namespace AlgoSdk
         /// <param name="walletHandleToken"></param>
         /// <param name="walletPassword"></param>
         /// <returns></returns>
-        UniTask<AlgoApiResponse<SignProgramMultisigResponse>> SignProgramMultisig(
+        AlgoApiRequest.Sent<SignProgramMultisigResponse> SignProgramMultisig(
             Address msigAccount,
             byte[] programData,
             Multisig msig,
@@ -182,7 +182,7 @@ namespace AlgoSdk
         /// <param name="walletHandleToken"></param>
         /// <param name="walletPassword"></param>
         /// <returns></returns>
-        UniTask<AlgoApiResponse<SignProgramResponse>> SignProgram(
+        AlgoApiRequest.Sent<SignProgramResponse> SignProgram(
             Address account,
             byte[] programData,
             FixedString128Bytes walletHandleToken,
@@ -197,7 +197,7 @@ namespace AlgoSdk
         /// <param name="walletHandleToken"></param>
         /// <param name="walletPassword"></param>
         /// <returns></returns>
-        UniTask<AlgoApiResponse<SignTransactionResponse>> SignTransaction(
+        AlgoApiRequest.Sent<SignTransactionResponse> SignTransaction(
             Address account,
             byte[] transactionData,
             FixedString128Bytes walletHandleToken,
@@ -215,7 +215,7 @@ namespace AlgoSdk
         /// <param name="walletName"></param>
         /// <param name="walletPassword"></param>
         /// <returns></returns>
-        UniTask<AlgoApiResponse<CreateWalletResponse>> CreateWallet(
+        AlgoApiRequest.Sent<CreateWalletResponse> CreateWallet(
             PrivateKey masterDerivationKey,
             FixedString128Bytes walletDriverName,
             FixedString128Bytes walletName,
@@ -230,7 +230,7 @@ namespace AlgoSdk
         /// </remarks>
         /// <param name="walletHandleToken"></param>
         /// <returns></returns>
-        UniTask<AlgoApiResponse<WalletInfoResponse>> WalletInfo(
+        AlgoApiRequest.Sent<WalletInfoResponse> WalletInfo(
             FixedString128Bytes walletHandleToken
         );
 
@@ -245,7 +245,7 @@ namespace AlgoSdk
         /// <param name="walletId"></param>
         /// <param name="walletPassword"></param>
         /// <returns></returns>
-        UniTask<AlgoApiResponse<InitWalletHandleTokenResponse>> InitWalletHandleToken(
+        AlgoApiRequest.Sent<InitWalletHandleTokenResponse> InitWalletHandleToken(
             FixedString128Bytes walletId,
             FixedString128Bytes walletPassword
         );
@@ -258,7 +258,7 @@ namespace AlgoSdk
         /// </remarks>
         /// <param name="walletHandleToken"></param>
         /// <returns></returns>
-        UniTask<AlgoApiResponse> ReleaseWalletHandleToken(
+        AlgoApiRequest.Sent ReleaseWalletHandleToken(
             FixedString128Bytes walletHandleToken
         );
 
@@ -272,7 +272,7 @@ namespace AlgoSdk
         /// <param name="walletName"></param>
         /// <param name="walletPassword"></param>
         /// <returns></returns>
-        UniTask<AlgoApiResponse<RenameWalletResponse>> RenameWallet(
+        AlgoApiRequest.Sent<RenameWalletResponse> RenameWallet(
             FixedString128Bytes walletId,
             FixedString128Bytes walletName,
             FixedString128Bytes walletPassword
@@ -286,7 +286,7 @@ namespace AlgoSdk
         /// </remarks>
         /// <param name="walletHandleToken"></param>
         /// <returns></returns>
-        UniTask<AlgoApiResponse<RenewWalletHandleTokenResponse>> RenewWalletHandleToken(
+        AlgoApiRequest.Sent<RenewWalletHandleTokenResponse> RenewWalletHandleToken(
             FixedString128Bytes walletHandleToken
         );
 
@@ -297,12 +297,12 @@ namespace AlgoSdk
         /// Lists all of the wallets that kmd is aware of.
         /// </remarks>
         /// <returns></returns>
-        UniTask<AlgoApiResponse<ListWalletsResponse>> ListWallets();
+        AlgoApiRequest.Sent<ListWalletsResponse> ListWallets();
 
         /// <summary>
         /// Retrieves the current version of the kmd service
         /// </summary>
         /// <returns></returns>
-        UniTask<AlgoApiResponse<VersionsResponse>> Versions();
+        AlgoApiRequest.Sent<VersionsResponse> Versions();
     }
 }

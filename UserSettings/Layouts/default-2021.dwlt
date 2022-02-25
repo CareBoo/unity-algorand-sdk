@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 0
+    x: -1
     y: 53
     width: 2560
     height: 1315
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Inspector
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 22
+  controlID: 134
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -92,7 +92,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 422
+    width: 421
     height: 762
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -120,14 +120,14 @@ MonoBehaviour:
     y: 762
     width: 1747
     height: 503
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 13}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 23
+  controlID: 70
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 24
+  controlID: 43
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -259,23 +259,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
+  m_Name: GameView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 422
+    x: 421
     y: 0
-    width: 1325
+    width: 1326
     height: 762
-  m_MinSize: {x: 102, y: 121}
+  m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 12}
-  m_Selected: 2
+  m_Selected: 1
   m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
@@ -297,16 +297,16 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 422
+    x: 420
     y: 83
-    width: 1323
+    width: 1324
     height: 741
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 139
+    ID: 144
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -1381,9 +1381,9 @@ MonoBehaviour:
       uniqueId: '[com.careboo.unity-algorand-sdk][suite]'
       name: com.careboo.unity-algorand-sdk
       fullName: com.careboo.unity-algorand-sdk
-      resultStatus: 2
-      duration: 0.3566209
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 3.0677865
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1393,13 +1393,13 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    - id: 1102
+    - id: 1042
       uniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
       name: CareBoo.AlgoSdk.Tests.dll
       fullName: /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll
-      resultStatus: 2
-      duration: 0.3359517
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 3.0464408
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1407,14 +1407,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1062
+      parentId: 1000
       parentUniqueId: '[com.careboo.unity-algorand-sdk][suite]'
-    - id: 1064
+    - id: 1002
       uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][AccountTest][suite]
       name: AccountTest
       fullName: AccountTest
       resultStatus: 1
-      duration: 0.0228154
+      duration: 0.0122013
       messages: 
       output: 
       stacktrace: 
@@ -1423,24 +1423,24 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1102
+      parentId: 1042
       parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
-    - id: 1065
+    - id: 1003
       uniqueId: CareBoo.AlgoSdk.Tests.dll/AccountTest/[CareBoo.AlgoSdk.Tests][AccountTest.GenerateAccount]
       name: GenerateAccount
       fullName: AccountTest.GenerateAccount
       resultStatus: 1
-      duration: 0.0131248
+      duration: 0.0080692
       messages: 
-      output: 'My address: 75IIJ5IA2JQDXC3KPSRYKOI4URXMAWISBN5BMH2Z724667S3GMQZJ2YEWM
+      output: 'My address: 3EZRWWR5LBWGZSUO7YLMHPLFSJVZNQSD7BEIHFYKPM673P2WEBJKQBHOHE
 
         My
-        private key: GDVdUL5xMmmga2qk/9b0GOOFbH5KCUBlgR21BRAbD3r/UIT1ANJgO4tqfKOFORykbsBZEgt6Fh9Z/rnvflszIQ==
+        private key: Ew7XM0eQUaZdWd4m/8nMJ+pQfdxEx62oCJcJ8B40B37ZMxtaPVhsbMqO/hbDvWWSa5bCQ/hIg5cKez39v1YgUg==
 
         My
-        passphrase: perfect inquiry choice brief gossip bottom fringe heavy virus
-        fossil kidney cover armed open fault announce pool airport mom forget cactus
-        short spare about priority
+        passphrase: second found okay afford permit hat slab tattoo tooth child toy
+        pen peace butter cheap shrug between cargo slide above digital snack usual
+        about mimic
 
 '
       stacktrace: 
@@ -1450,14 +1450,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1064
+      parentId: 1002
       parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][AccountTest][suite]
-    - id: 1066
+    - id: 1004
       uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][AddressTest][suite]
       name: AddressTest
       fullName: AddressTest
       resultStatus: 1
-      duration: 0.021236
+      duration: 0.0152009
       messages: 
       output: 
       stacktrace: 
@@ -1466,14 +1466,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1102
+      parentId: 1042
       parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
-    - id: 1067
+    - id: 1005
       uniqueId: CareBoo.AlgoSdk.Tests.dll/AddressTest/[CareBoo.AlgoSdk.Tests][AddressTest.AddressFromStringShouldBeValid]
       name: AddressFromStringShouldBeValid
       fullName: AddressTest.AddressFromStringShouldBeValid
       resultStatus: 1
-      duration: 0.007944
+      duration: 0.0023451
       messages: 
       output: 
       stacktrace: 
@@ -1483,14 +1483,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1066
+      parentId: 1004
       parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][AddressTest][suite]
-    - id: 1068
+    - id: 1006
       uniqueId: CareBoo.AlgoSdk.Tests.dll/AddressTest/[CareBoo.AlgoSdk.Tests][AddressTest.AddressToStringShouldBeValid]
       name: AddressToStringShouldBeValid
       fullName: AddressTest.AddressToStringShouldBeValid
       resultStatus: 1
-      duration: 0.000161
+      duration: 0.0001872
       messages: 
       output: 
       stacktrace: 
@@ -1500,14 +1500,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1066
+      parentId: 1004
       parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][AddressTest][suite]
-    - id: 1069
+    - id: 1007
       uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][ApplicationTest][suite]
       name: ApplicationTest
       fullName: ApplicationTest
       resultStatus: 1
-      duration: 0.0070003
+      duration: 0.0060217
       messages: 
       output: 
       stacktrace: 
@@ -1516,14 +1516,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1102
+      parentId: 1042
       parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
-    - id: 1070
+    - id: 1008
       uniqueId: CareBoo.AlgoSdk.Tests.dll/ApplicationTest/[CareBoo.AlgoSdk.Tests][ApplicationTest.ApplicationGetAddressFromIdShouldBeValid]
       name: ApplicationGetAddressFromIdShouldBeValid
       fullName: ApplicationTest.ApplicationGetAddressFromIdShouldBeValid
       resultStatus: 1
-      duration: 0.0013548
+      duration: 0.001353
       messages: 
       output: 'WCS6TVPJRBSARHLN2326LRU5BYVJZUKI2VJ53CAWKYYHDE455ZGKANWMGM
 
@@ -1535,65 +1535,15 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1069
+      parentId: 1007
       parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][ApplicationTest][suite]
-    - id: 1071
+    - id: 1009
       uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][BlockTest][suite]
       name: BlockTest
       fullName: BlockTest
       resultStatus: 1
-      duration: 0.3034666
+      duration: 0.0169687
       messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1102
-      parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
-    - id: 1073
-      uniqueId: CareBoo.AlgoSdk.Tests.dll/BlockTest/[CareBoo.AlgoSdk.Tests][BlockTest.DefaultFixedStringsShouldBeEqual]
-      name: DefaultFixedStringsShouldBeEqual
-      fullName: BlockTest.DefaultFixedStringsShouldBeEqual
-      resultStatus: 1
-      duration: 0.00051
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1071
-      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][BlockTest][suite]
-    - id: 1072
-      uniqueId: CareBoo.AlgoSdk.Tests.dll/BlockTest/[CareBoo.AlgoSdk.Tests][BlockTest.DeserializingBlockFromMessagePackShouldThrowNoErrors]
-      name: DeserializingBlockFromMessagePackShouldThrowNoErrors
-      fullName: BlockTest.DeserializingBlockFromMessagePackShouldThrowNoErrors
-      resultStatus: 1
-      duration: 0.3009123
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1071
-      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][BlockTest][suite]
-    - id: 1012
-      uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][EitherTest][suite]
-      name: EitherTest
-      fullName: EitherTest
-      resultStatus: 2
-      duration: 0.3348231
-      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1603,61 +1553,46 @@ MonoBehaviour:
       categories: []
       parentId: 1042
       parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
-    - id: 1013
-      uniqueId: CareBoo.AlgoSdk.Tests.dll/EitherTest/[CareBoo.AlgoSdk.Tests][EitherTest.JsonOfType2ShouldDeserializeToEitherWithValue2]
-      name: JsonOfType2ShouldDeserializeToEitherWithValue2
-      fullName: EitherTest.JsonOfType2ShouldDeserializeToEitherWithValue2
-      resultStatus: 2
-      duration: 0.3253408
-      messages: "System.AggregateException : Could not deserialize either AlgoSdk.WalletConnect.JsonRpcResponse
-        or AlgoSdk.WalletConnect.JsonRpcRequest (IncorrectType on char '\"' at pos:
-        1) (Specified method is not supported.)\n  ----> AlgoSdk.Json.JsonReadException
-        : IncorrectType on char '\"' at pos: 1"
-      output: '
-
-        {"test":"hello"}
-
-        {"test":"hello"}
-
-
-        "test"
-
-        {"id":1566479282,"jsonrpc":"2.0","method":"test_64848218-9fad-4090-8c01-69af23169bd8","params":}
-
-'
-      stacktrace: "  at AlgoSdk.EitherFormatter`2[T,U].Deserialize (AlgoSdk.Json.JsonReader&
-        reader) [0x00037] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/EitherFormatter.cs:17
-        \n  at AlgoSdk.AlgoApiSerializer.DeserializeJson[T] (Unity.Collections.NativeText
-        text) [0x00009] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/AlgoApiSerializer.cs:92
-        \n  at AlgoSdk.AlgoApiSerializer.DeserializeJson[T] (System.String text)
-        [0x0000a] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/AlgoApiSerializer.cs:104
-        \n  at EitherTest.JsonOfType2ShouldDeserializeToEitherWithValue2 () [0x0007e]
-        in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk.Tests/EitherTest.cs:24
-        \n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\n 
-        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
-        System.Globalization.CultureInfo culture) [0x0006a] in <c601d84e56504c3dba1634d3be4a96be>:0
-        \n--JsonReadException\n  at AlgoSdk.Json.JsonReadErrorExtensions.ThrowIfError
-        (AlgoSdk.Json.JsonReadError err, System.Char c, System.Int32 pos) [0x0000c]
-        in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReadError.cs:31
-        \n  at AlgoSdk.WalletConnect.JsonRpcResponseFormatter`2[T,U].Deserialize
-        (AlgoSdk.Json.JsonReader& reader) [0x0000c] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/WalletConnect/Serialization/JsonRpcResponseFormatter.cs:12
-        \n  at AlgoSdk.EitherFormatter`2[T,U].TryDeserialize[TValue] (AlgoSdk.Json.JsonReader&
-        reader, TValue& value, System.Exception& exception) [0x00009] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/EitherFormatter.cs:56 "
+    - id: 1011
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/BlockTest/[CareBoo.AlgoSdk.Tests][BlockTest.DefaultFixedStringsShouldBeEqual]
+      name: DefaultFixedStringsShouldBeEqual
+      fullName: BlockTest.DefaultFixedStringsShouldBeEqual
+      resultStatus: 1
+      duration: 0.0005083
+      messages: 
+      output: 
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1012
-      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][EitherTest][suite]
-    - id: 1074
-      uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][JsonReaderTest][suite]
-      name: JsonReaderTest
-      fullName: JsonReaderTest
+      parentId: 1009
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][BlockTest][suite]
+    - id: 1010
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/BlockTest/[CareBoo.AlgoSdk.Tests][BlockTest.DeserializingBlockFromMessagePackShouldThrowNoErrors]
+      name: DeserializingBlockFromMessagePackShouldThrowNoErrors
+      fullName: BlockTest.DeserializingBlockFromMessagePackShouldThrowNoErrors
       resultStatus: 1
-      duration: 0.0063263
+      duration: 0.0143197
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1009
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][BlockTest][suite]
+    - id: 1012
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][EitherTest][suite]
+      name: EitherTest
+      fullName: EitherTest
+      resultStatus: 1
+      duration: 0.0107024
       messages: 
       output: 
       stacktrace: 
@@ -1666,14 +1601,64 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1102
+      parentId: 1042
       parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
-    - id: 1076
+    - id: 1014
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/EitherTest/[CareBoo.AlgoSdk.Tests][EitherTest.JsonOfType1ShouldDeserializeToEitherWithValue1]
+      name: JsonOfType1ShouldDeserializeToEitherWithValue1
+      fullName: EitherTest.JsonOfType1ShouldDeserializeToEitherWithValue1
+      resultStatus: 1
+      duration: 0.000436
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1012
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][EitherTest][suite]
+    - id: 1013
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/EitherTest/[CareBoo.AlgoSdk.Tests][EitherTest.JsonOfType2ShouldDeserializeToEitherWithValue2]
+      name: JsonOfType2ShouldDeserializeToEitherWithValue2
+      fullName: EitherTest.JsonOfType2ShouldDeserializeToEitherWithValue2
+      resultStatus: 1
+      duration: 0.0079752
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1012
+      parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][EitherTest][suite]
+    - id: 1014
+      uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][JsonReaderTest][suite]
+      name: JsonReaderTest
+      fullName: JsonReaderTest
+      resultStatus: 1
+      duration: 0.0056229
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1042
+      parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
+    - id: 1016
       uniqueId: CareBoo.AlgoSdk.Tests.dll/JsonReaderTest/[CareBoo.AlgoSdk.Tests][JsonReaderTest.CheckValue]
       name: CheckValue
       fullName: JsonReaderTest.CheckValue
       resultStatus: 1
-      duration: 0.0009119
+      duration: 0.0006716
       messages: 
       output: '4
 
@@ -1685,14 +1670,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1074
+      parentId: 1014
       parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][JsonReaderTest][suite]
-    - id: 1075
+    - id: 1015
       uniqueId: CareBoo.AlgoSdk.Tests.dll/JsonReaderTest/[CareBoo.AlgoSdk.Tests][JsonReaderTest.ValidJsonShouldBeParsedWithoutErrs]
       name: ValidJsonShouldBeParsedWithoutErrs
       fullName: JsonReaderTest.ValidJsonShouldBeParsedWithoutErrs
       resultStatus: 1
-      duration: 0.0026483
+      duration: 0.002474
       messages: 
       output: 
       stacktrace: 
@@ -1702,14 +1687,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1074
+      parentId: 1014
       parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][JsonReaderTest][suite]
-    - id: 1077
+    - id: 1017
       uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][LogicSigTest][suite]
       name: LogicSigTest
       fullName: LogicSigTest
       resultStatus: 1
-      duration: 0.0054948
+      duration: 0.002602
       messages: 
       output: 
       stacktrace: 
@@ -1718,14 +1703,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1102
+      parentId: 1042
       parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
-    - id: 1078
+    - id: 1018
       uniqueId: CareBoo.AlgoSdk.Tests.dll/LogicSigTest/[CareBoo.AlgoSdk.Tests][LogicSigTest.GetAddressShouldReturnValidAddress]
       name: GetAddressShouldReturnValidAddress
       fullName: LogicSigTest.GetAddressShouldReturnValidAddress
       resultStatus: 1
-      duration: 0.0004897
+      duration: 0.0006062
       messages: 
       output: 
       stacktrace: 
@@ -1735,14 +1720,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1077
+      parentId: 1017
       parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][LogicSigTest][suite]
-    - id: 1079
+    - id: 1019
       uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][MnemonicTest][suite]
       name: MnemonicTest
       fullName: MnemonicTest
       resultStatus: 1
-      duration: 0.0082809
+      duration: 0.0088318
       messages: 
       output: 
       stacktrace: 
@@ -1751,14 +1736,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1102
+      parentId: 1042
       parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
-    - id: 1080
+    - id: 1020
       uniqueId: CareBoo.AlgoSdk.Tests.dll/MnemonicTest/[CareBoo.AlgoSdk.Tests][MnemonicTest.CanGenerateMnemonicFromString]
       name: CanGenerateMnemonicFromString
       fullName: MnemonicTest.CanGenerateMnemonicFromString
       resultStatus: 1
-      duration: 0.002647
+      duration: 0.0028978
       messages: 
       output: 
       stacktrace: 
@@ -1768,14 +1753,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1079
+      parentId: 1019
       parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][MnemonicTest][suite]
-    - id: 1081
+    - id: 1021
       uniqueId: CareBoo.AlgoSdk.Tests.dll/MnemonicTest/[CareBoo.AlgoSdk.Tests][MnemonicTest.MnemonicsFromTheSameStringShouldBeEqual]
       name: MnemonicsFromTheSameStringShouldBeEqual
       fullName: MnemonicTest.MnemonicsFromTheSameStringShouldBeEqual
       resultStatus: 1
-      duration: 0.0023757
+      duration: 0.0017253
       messages: 
       output: 
       stacktrace: 
@@ -1785,14 +1770,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1079
+      parentId: 1019
       parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][MnemonicTest][suite]
-    - id: 1083
+    - id: 1023
       uniqueId: CareBoo.AlgoSdk.Tests.dll/MnemonicTest/[CareBoo.AlgoSdk.Tests][MnemonicTest.MnemonicToKeyShouldGenerateValidKey]
       name: MnemonicToKeyShouldGenerateValidKey
       fullName: MnemonicTest.MnemonicToKeyShouldGenerateValidKey
       resultStatus: 1
-      duration: 0.0003841
+      duration: 0.0004441
       messages: 
       output: 
       stacktrace: 
@@ -1802,14 +1787,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1079
+      parentId: 1019
       parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][MnemonicTest][suite]
-    - id: 1082
+    - id: 1022
       uniqueId: CareBoo.AlgoSdk.Tests.dll/MnemonicTest/[CareBoo.AlgoSdk.Tests][MnemonicTest.ShortWordShouldEqualWord]
       name: ShortWordShouldEqualWord
       fullName: MnemonicTest.ShortWordShouldEqualWord
       resultStatus: 1
-      duration: 0.0001101
+      duration: 0.0000969
       messages: 
       output: 
       stacktrace: 
@@ -1819,14 +1804,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1079
+      parentId: 1019
       parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][MnemonicTest][suite]
-    - id: 1084
+    - id: 1024
       uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][MultisigAddressTest][suite]
       name: MultisigAddressTest
       fullName: MultisigAddressTest
       resultStatus: 1
-      duration: 0.0044556
+      duration: 0.0040812
       messages: 
       output: 
       stacktrace: 
@@ -1835,14 +1820,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1102
+      parentId: 1042
       parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
-    - id: 1085
+    - id: 1025
       uniqueId: CareBoo.AlgoSdk.Tests.dll/MultisigAddressTest/[CareBoo.AlgoSdk.Tests][MultisigAddressTest.MultisigGetAddressShouldReturnValidAddress]
       name: MultisigGetAddressShouldReturnValidAddress
       fullName: MultisigAddressTest.MultisigGetAddressShouldReturnValidAddress
       resultStatus: 1
-      duration: 0.0006266
+      duration: 0.000612
       messages: 
       output: 
       stacktrace: 
@@ -1852,14 +1837,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1084
+      parentId: 1024
       parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][MultisigAddressTest][suite]
-    - id: 1098
+    - id: 1038
       uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][NetworkMessageTest][suite]
       name: NetworkMessageTest
       fullName: NetworkMessageTest
       resultStatus: 1
-      duration: 0.009023
+      duration: 0.0059274
       messages: 
       output: 
       stacktrace: 
@@ -1868,14 +1853,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1102
+      parentId: 1042
       parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
-    - id: 1099
+    - id: 1039
       uniqueId: CareBoo.AlgoSdk.Tests.dll/NetworkMessageTest/[CareBoo.AlgoSdk.Tests][NetworkMessageTest.NetworkMessageShouldDeserializeFromJsonProperly]
       name: NetworkMessageShouldDeserializeFromJsonProperly
       fullName: NetworkMessageTest.NetworkMessageShouldDeserializeFromJsonProperly
       resultStatus: 1
-      duration: 0.0058955
+      duration: 0.0030261
       messages: 
       output: '{"payload":"{\"data\":\"821d513e79c0d5d20ca5763a7c9c9ef90399acdcc696d2057641e3fcd140db08f78bfc58f943a94af3c63d8049b42ce41d43557e0326d391e921fc90339876824ceda8793b6f673e91c20ce4d1beca79f5ebe969baddef885c15e393b7ed734b234ff291d1e2ed18cb3e3a4bef3b44a51986fcfd78f34e15db69e83ab0fcc18bb41c9dbf3d5444afa9dff7795fb709698981102bd58fc534bf4cb61167bc38477a6ff02908f3292e84cf782c8f367ae4c54dd3304403e459d56cdecadeadb84781f358d0c33862bd9df573bc5908247a\",\"hmac\":\"78b397e3503175891e00da8708ab35104f0838e4910e7db5979f3c1710f98e40\",\"iv\":\"12a0fbda5d7cdca8a7eaacf34055c106\"}","topic":"4d83acea-ff18-4409-8b0c-0ad2e56846ca","type":"pub"}
 
@@ -1887,14 +1872,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1098
+      parentId: 1038
       parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][NetworkMessageTest][suite]
-    - id: 1086
+    - id: 1026
       uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][PrivateKeyTest][suite]
       name: PrivateKeyTest
       fullName: PrivateKeyTest
       resultStatus: 1
-      duration: 0.0050728
+      duration: 0.0081677
       messages: 
       output: 
       stacktrace: 
@@ -1903,14 +1888,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1102
+      parentId: 1042
       parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
-    - id: 1088
+    - id: 1028
       uniqueId: CareBoo.AlgoSdk.Tests.dll/PrivateKeyTest/[CareBoo.AlgoSdk.Tests][PrivateKeyTest.PrivateKeyToMnemonicCheckSumShouldBeValid]
       name: PrivateKeyToMnemonicCheckSumShouldBeValid
       fullName: PrivateKeyTest.PrivateKeyToMnemonicCheckSumShouldBeValid
       resultStatus: 1
-      duration: 0.0011693
+      duration: 0.001295
       messages: 
       output: 
       stacktrace: 
@@ -1920,14 +1905,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1086
+      parentId: 1026
       parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][PrivateKeyTest][suite]
-    - id: 1087
+    - id: 1027
       uniqueId: CareBoo.AlgoSdk.Tests.dll/PrivateKeyTest/[CareBoo.AlgoSdk.Tests][PrivateKeyTest.PrivateKeyToMnemonicShouldBeValid]
       name: PrivateKeyToMnemonicShouldBeValid
       fullName: PrivateKeyTest.PrivateKeyToMnemonicShouldBeValid
       resultStatus: 1
-      duration: 0.0013681
+      duration: 0.0014712
       messages: 
       output: 
       stacktrace: 
@@ -1937,14 +1922,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1086
+      parentId: 1026
       parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][PrivateKeyTest][suite]
-    - id: 1089
+    - id: 1029
       uniqueId: CareBoo.AlgoSdk.Tests.dll/PrivateKeyTest/[CareBoo.AlgoSdk.Tests][PrivateKeyTest.PrivateKeyToStringShouldBeValid]
       name: PrivateKeyToStringShouldBeValid
       fullName: PrivateKeyTest.PrivateKeyToStringShouldBeValid
       resultStatus: 1
-      duration: 0.0001486
+      duration: 0.0001605
       messages: 
       output: 
       stacktrace: 
@@ -1954,14 +1939,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1086
+      parentId: 1026
       parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][PrivateKeyTest][suite]
-    - id: 1090
+    - id: 1030
       uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][RawTransactionTest][suite]
       name: RawTransactionTest
       fullName: RawTransactionTest
       resultStatus: 1
-      duration: 0.0117228
+      duration: 0.0132891
       messages: 
       output: 
       stacktrace: 
@@ -1970,16 +1955,16 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1102
+      parentId: 1042
       parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
-    - id: 1091
+    - id: 1031
       uniqueId: CareBoo.AlgoSdk.Tests.dll/RawTransactionTest/[CareBoo.AlgoSdk.Tests][RawTransactionTest.SerializedTransactionShouldEqualDeserializedTransaction]
       name: SerializedTransactionShouldEqualDeserializedTransaction
       fullName: RawTransactionTest.SerializedTransactionShouldEqualDeserializedTransaction
       resultStatus: 1
-      duration: 0.0093025
+      duration: 0.0102733
       messages: 
-      output: 'iKNhbXTNnECjZmVlIKJmds0D8aJnaMQg43eRIEUHiv6LuHZSlqQuxO/OWYPUm1bIF8iY2IkOK6SibHbNJyWjcmN2xCARXNpVDNj5sy9UN0T0xzcNVjg+fWVEmSojdRE14UllFaNzbmTEIANMxxAiYbN7uOlkgdrG/jj1NZ5J5AUkz18KJwmnY+skpHR5cGWjcGF5
+      output: 'iKNhbXTNnECjZmVlIKJmds0D8aJnaMQgJbrmR0R1DbTsfCQoOe2zMWSNdwWzcJRB+WFde7EOKTGibHbNJyWjcmN2xCCfB0rfHFNZonhPxnXNbcq4ZdHOecSJKQUB0mkfZALvvKNzbmTEID4Xw00rxqiNLzPiemSnQkIwan3VjVTJsldzPCyqKXNFpHR5cGWjcGF5
 
 '
       stacktrace: 
@@ -1989,14 +1974,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1090
+      parentId: 1030
       parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][RawTransactionTest][suite]
-    - id: 1092
+    - id: 1032
       uniqueId: CareBoo.AlgoSdk.Tests.dll/RawTransactionTest/[CareBoo.AlgoSdk.Tests][RawTransactionTest.SizeOfRawTransactionShouldBeUnder4KB]
       name: SizeOfRawTransactionShouldBeUnder4KB
       fullName: RawTransactionTest.SizeOfRawTransactionShouldBeUnder4KB
       resultStatus: 1
-      duration: 0.0003493
+      duration: 0.000587
       messages: 
       output: 'Size of Transaction: 1456
 
@@ -2008,14 +1993,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1090
+      parentId: 1030
       parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][RawTransactionTest][suite]
-    - id: 1093
+    - id: 1033
       uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][SignedTransactionTest][suite]
       name: SignedTransactionTest
       fullName: SignedTransactionTest
       resultStatus: 1
-      duration: 0.0085701
+      duration: 0.0172094
       messages: 
       output: 
       stacktrace: 
@@ -2024,16 +2009,16 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1102
+      parentId: 1042
       parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
-    - id: 1095
+    - id: 1035
       uniqueId: CareBoo.AlgoSdk.Tests.dll/SignedTransactionTest/[CareBoo.AlgoSdk.Tests][SignedTransactionTest.SerializedSignedTransactionShouldEqualDeserializedSignedTransaction]
       name: SerializedSignedTransactionShouldEqualDeserializedSignedTransaction
       fullName: SignedTransactionTest.SerializedSignedTransactionShouldEqualDeserializedSignedTransaction
       resultStatus: 1
-      duration: 0.0059492
+      duration: 0.0071706
       messages: 
-      output: 'Serialized bytes: gqNzaWfEQCjOSHYtjJeileKdAi90jy/7Pa2/Bdu08ssXr7LfqN7gK0pO8N/vy3d4aAiO4bEJdDU05RarFOwuaFiLrKLdOAqjdHhuiaNhbXTOAA9CQKNmZWXNA+iiZnbOArjPuqNnZW6qc2FuZG5ldC12MaJnaMQgm0XImxCpIDneMMenkOlyixCtRKRVd0mbH8vV/QLYB1WibHbOArjToqNyY3bEIPS0qmRLEClEr3Xir1i++omhCNZW3k12d0bP7WAZ6Taso3NuZMQg/NZf7VDA9sqGO0AXYLC7ppgeWqiOOF0XJngO/jSJUS6kdHlwZaNwYXk=
+      output: 'Serialized bytes: gqNzaWfEQBBwYii64+iLSBMqZdAX5C1JlqnuTJBR6sUFQwFhiGDiJGYJLfOMBsGb1MKuUiklzyAxzHHk0muq29qnRrA/YAijdHhuiaNhbXTOAA9CQKNmZWXNA+iiZnbOArjPuqNnZW6qc2FuZG5ldC12MaJnaMQgm0XImxCpIDneMMenkOlyixCtRKRVd0mbH8vV/QLYB1WibHbOArjToqNyY3bEINb/dIAhrwGf9FmgvxmpXP1BeXAWg5Cx7RQeQxBqykg6o3NuZMQgdIlnICYAypLSAHEiBocsa4i3L8qgUK06Dap8PPyG8ZSkdHlwZaNwYXk=
 
 '
       stacktrace: 
@@ -2043,14 +2028,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1093
+      parentId: 1033
       parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][SignedTransactionTest][suite]
-    - id: 1094
+    - id: 1034
       uniqueId: CareBoo.AlgoSdk.Tests.dll/SignedTransactionTest/[CareBoo.AlgoSdk.Tests][SignedTransactionTest.SizeOfSignedTransactionShouldBeUnder4KB]
       name: SizeOfSignedTransactionShouldBeUnder4KB
       fullName: SignedTransactionTest.SizeOfSignedTransactionShouldBeUnder4KB
       resultStatus: 1
-      duration: 0.0003577
+      duration: 0.0005443
       messages: 
       output: 'Size of SignedTransaction: 1456
 
@@ -2062,14 +2047,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1093
+      parentId: 1033
       parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][SignedTransactionTest][suite]
-    - id: 1096
+    - id: 1036
       uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][TransactionIdTest][suite]
       name: TransactionIdTest
       fullName: TransactionIdTest
       resultStatus: 1
-      duration: 0.0156859
+      duration: 0.0074234
       messages: 
       output: 
       stacktrace: 
@@ -2078,14 +2063,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1102
+      parentId: 1042
       parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
-    - id: 1097
+    - id: 1037
       uniqueId: CareBoo.AlgoSdk.Tests.dll/TransactionIdTest/[CareBoo.AlgoSdk.Tests][TransactionIdTest.TestTransactionIdCanBeDeserializedFromString]
       name: TestTransactionIdCanBeDeserializedFromString
       fullName: TransactionIdTest.TestTransactionIdCanBeDeserializedFromString
       resultStatus: 1
-      duration: 0.0008324
+      duration: 0.000943
       messages: 
       output: 
       stacktrace: 
@@ -2095,14 +2080,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1096
+      parentId: 1036
       parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][TransactionIdTest][suite]
-    - id: 1100
+    - id: 1040
       uniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][WalletConnectTest][suite]
       name: WalletConnectTest
       fullName: WalletConnectTest
       resultStatus: 1
-      duration: 3.2575147
+      duration: 3.0449471
       messages: 
       output: 
       stacktrace: 
@@ -2111,19 +2096,41 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1102
+      parentId: 1042
       parentUniqueId: '[CareBoo.AlgoSdk.Tests][/Users/jason/Projects/CareBoo/Unity.AlgoSdk/Library/ScriptAssemblies/CareBoo.AlgoSdk.Tests.dll][suite]'
-    - id: 1101
+    - id: 1041
       uniqueId: CareBoo.AlgoSdk.Tests.dll/WalletConnectTest/[CareBoo.AlgoSdk.Tests][WalletConnectTest.TestConnection]
       name: TestConnection
       fullName: WalletConnectTest.TestConnection
       resultStatus: 1
-      duration: 3.2413948
+      duration: 3.030213
       messages: 
-      output: "{\"payload\":\"{\\\"data\\\":\\\"2DqBvGIBcM1nEoTwgow5o4kZOdt6ILrled+WtcVzM6wc7TQc+3V81lWE7mAyxk5Tz66wrm/6p00znfrfxA85+g==\\\",\\\"hmac\\\":\\\"xdoDoq82qFtiAgZeitwAZkzzVKt2FD+xlAnZaFnamII=\\\",\\\"iv\\\":\\\"eJ/t5Cj15g2bDOFBaNpo8Q==\\\"}\",\"topic\":\"e3aea919-cd3c-43f7-b37d-a712febe86fc\",\"type\":\"pub\"}\ndapp
-        WebSocketEvent Open: \nwallet WebSocketEvent Open: \nwallet WebSocketEvent
-        Payload: [Payload: {\"payload\":\"{\\\"data\\\":\\\"2DqBvGIBcM1nEoTwgow5o4kZOdt6ILrled+WtcVzM6wc7TQc+3V81lWE7mAyxk5Tz66wrm/6p00znfrfxA85+g==\\\",\\\"hmac\\\":\\\"xdoDoq82qFtiAgZeitwAZkzzVKt2FD+xlAnZaFnamII=\\\",\\\"iv\\\":\\\"eJ/t5Cj15g2bDOFBaNpo8Q==\\\"}\",\"topic\":\"e3aea919-cd3c-43f7-b37d-a712febe86fc\",\"type\":\"pub\"}]
-        [Error: ] [Reason: ]\ndapp WebSocketEvent Nothing: \n"
+      output: 'requesting connection with params: {"id":1534596677,"jsonrpc":"2.0","method":"wc_sessionRequest","params":[{"peerId":"3af1e7db-1a5a-40b3-934e-86f658bfa82e","peerMeta":{"description":"This
+        is a test request","icons":["www.example.com/icon1.png","www.example.com/icon2.png"],"name":"test","url":"www.example.com"}}]}
+
+        RequestHandshake
+        NetworkMessage: {"payload":"{\"data\":\"468E3615FCA8430433D8D01C9EE21344BBA1BD2CE027BC34F8B8D51B5920B96F2A4EC6BB4B28BCCEC30D97CCB82C03CB9F0FC1B7F2986927F9C87EA8E73727E55C7AFE29CD532F8815BEF7FDB82546E3B16DE64DB54F9458169DAE161AB06E48E9D057B99BAFD0D94E59EB4472299BE47E78D84E2CFECC581FF41C7B584E1B559114DEA73BF9869E6F0EFB98EAB3AA111C0B5BDF9DBBA91305B4EFB031DE4B09A7BAFF81EE542696D572E30785922899C47C3E38EEFF7107665A6634CBBADF3DA465787361EB36E275CF4FAC6DB2DE45A4FF45D9684535EB9BF01E1B560C3B04EC19F88C356B2CCBBA4086C0005234DE06C92D6CBA79E93F4221DCD747621BE5C8ABFBE16CFC0CB6B947436E1EB5F0979EB1BFAB4BBCD4368EA143296CE937E3\",\"hmac\":\"DC42CF1154C669AF9B9910B36333E28D1F0B8B551811F36A879B24DFCF0D22EF\",\"iv\":\"2A21013C6B1DC2A87F4C6584DD37BDD5\"}","topic":"7af0329e-808a-4851-b2b0-505cefbe17a2","type":"pub"}
+
+        {"payload":"","topic":"7af0329e-808a-4851-b2b0-505cefbe17a2","type":"sub"}
+
+        wallet
+        WebSocketEvent Payload: [Payload: {"payload":"{\"data\":\"468E3615FCA8430433D8D01C9EE21344BBA1BD2CE027BC34F8B8D51B5920B96F2A4EC6BB4B28BCCEC30D97CCB82C03CB9F0FC1B7F2986927F9C87EA8E73727E55C7AFE29CD532F8815BEF7FDB82546E3B16DE64DB54F9458169DAE161AB06E48E9D057B99BAFD0D94E59EB4472299BE47E78D84E2CFECC581FF41C7B584E1B559114DEA73BF9869E6F0EFB98EAB3AA111C0B5BDF9DBBA91305B4EFB031DE4B09A7BAFF81EE542696D572E30785922899C47C3E38EEFF7107665A6634CBBADF3DA465787361EB36E275CF4FAC6DB2DE45A4FF45D9684535EB9BF01E1B560C3B04EC19F88C356B2CCBBA4086C0005234DE06C92D6CBA79E93F4221DCD747621BE5C8ABFBE16CFC0CB6B947436E1EB5F0979EB1BFAB4BBCD4368EA143296CE937E3\",\"hmac\":\"DC42CF1154C669AF9B9910B36333E28D1F0B8B551811F36A879B24DFCF0D22EF\",\"iv\":\"2A21013C6B1DC2A87F4C6584DD37BDD5\"}","topic":"7af0329e-808a-4851-b2b0-505cefbe17a2","type":"pub"}]
+        [Error: ] [Reason: ]
+
+        Hello world!!
+
+        {"id":1534596677,"jsonrpc":"2.0","method":"wc_sessionRequest","params":[{"peerId":"3af1e7db-1a5a-40b3-934e-86f658bfa82e","peerMeta":{"description":"This
+        is a test request","icons":["www.example.com/icon1.png","www.example.com/icon2.png"],"name":"test","url":"www.example.com"}}]}
+
+        Hello
+        world!!
+
+        {"id":1534596677,"jsonrpc":"2.0","result":{"peerId":"2f0f5fb9-86eb-444d-b7de-c55fadab1ba0","peerMeta":{"description":"test","url":"https://www.example.com","icons":[],"name":"Test"},"approved":true,"chainId":4160,"accounts":["WHJRSOUX4P7HQBNGR6ZC3FKS3P3CUZUEZTL3LPN44JS37UTYZ4BLH2TLHA"]}}
+
+        Got
+        response: {"id":1534596677,"jsonrpc":"2.0","result"::{"peerId":"2f0f5fb9-86eb-444d-b7de-c55fadab1ba0","peerMeta":{"description":"test","url":"https://www.example.com","icons":[],"name":"Test"},"approved":true,"chainId":4160,"accounts":["WHJRSOUX4P7HQBNGR6ZC3FKS3P3CUZUEZTL3LPN44JS37UTYZ4BLH2TLHA"]}}
+
+'
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2131,52 +2138,42 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1100
+      parentId: 1040
       parentUniqueId: CareBoo.AlgoSdk.Tests.dll/[CareBoo.AlgoSdk.Tests][WalletConnectTest][suite]
-    m_ResultText: "JsonOfType2ShouldDeserializeToEitherWithValue2 (0.325s)\n---\nSystem.AggregateException
-      : Could not deserialize either AlgoSdk.WalletConnect.JsonRpcResponse or AlgoSdk.WalletConnect.JsonRpcRequest
-      (IncorrectType on char '\"' at pos: 1) (Specified method is not supported.)\n 
-      ----> AlgoSdk.Json.JsonReadException : IncorrectType on char '\"' at pos: 1\n---\nat
-      AlgoSdk.EitherFormatter`2[T,U].Deserialize (AlgoSdk.Json.JsonReader& reader)
-      [0x00037] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/EitherFormatter.cs:17
-      \n  at AlgoSdk.AlgoApiSerializer.DeserializeJson[T] (Unity.Collections.NativeText
-      text) [0x00009] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/AlgoApiSerializer.cs:92
-      \n  at AlgoSdk.AlgoApiSerializer.DeserializeJson[T] (System.String text) [0x0000a]
-      in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/AlgoApiSerializer.cs:104
-      \n  at EitherTest.JsonOfType2ShouldDeserializeToEitherWithValue2 () [0x0007e]
-      in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk.Tests/EitherTest.cs:24
-      \n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\n 
-      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
-      culture) [0x0006a] in <c601d84e56504c3dba1634d3be4a96be>:0 \n--JsonReadException\n 
-      at AlgoSdk.Json.JsonReadErrorExtensions.ThrowIfError (AlgoSdk.Json.JsonReadError
-      err, System.Char c, System.Int32 pos) [0x0000c] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReadError.cs:31
-      \n  at AlgoSdk.WalletConnect.JsonRpcResponseFormatter`2[T,U].Deserialize (AlgoSdk.Json.JsonReader&
-      reader) [0x0000c] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/WalletConnect/Serialization/JsonRpcResponseFormatter.cs:12
-      \n  at AlgoSdk.EitherFormatter`2[T,U].TryDeserialize[TValue] (AlgoSdk.Json.JsonReader&
-      reader, TValue& value, System.Exception& exception) [0x00009] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/EitherFormatter.cs:56\n---\n{\"test\":\"hello\"}\n{\"test\":\"hello\"}\n\n\"test\"\n{\"id\":1566479282,\"jsonrpc\":\"2.0\",\"method\":\"test_64848218-9fad-4090-8c01-69af23169bd8\",\"params\":}"
-    m_ResultStacktrace: "  at AlgoSdk.EitherFormatter`2[T,U].Deserialize (AlgoSdk.Json.JsonReader&
-      reader) [0x00037] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/EitherFormatter.cs:17
-      \n  at AlgoSdk.AlgoApiSerializer.DeserializeJson[T] (Unity.Collections.NativeText
-      text) [0x00009] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/AlgoApiSerializer.cs:92
-      \n  at AlgoSdk.AlgoApiSerializer.DeserializeJson[T] (System.String text) [0x0000a]
-      in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/AlgoApiSerializer.cs:104
-      \n  at EitherTest.JsonOfType2ShouldDeserializeToEitherWithValue2 () [0x0007e]
-      in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk.Tests/EitherTest.cs:24
-      \n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\n 
-      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
-      culture) [0x0006a] in <c601d84e56504c3dba1634d3be4a96be>:0 \n--JsonReadException\n 
-      at AlgoSdk.Json.JsonReadErrorExtensions.ThrowIfError (AlgoSdk.Json.JsonReadError
-      err, System.Char c, System.Int32 pos) [0x0000c] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Json/JsonReadError.cs:31
-      \n  at AlgoSdk.WalletConnect.JsonRpcResponseFormatter`2[T,U].Deserialize (AlgoSdk.Json.JsonReader&
-      reader) [0x0000c] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/WalletConnect/Serialization/JsonRpcResponseFormatter.cs:12
-      \n  at AlgoSdk.EitherFormatter`2[T,U].TryDeserialize[TValue] (AlgoSdk.Json.JsonReader&
-      reader, TValue& value, System.Exception& exception) [0x00009] in /Users/jason/Projects/CareBoo/Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/Serialization/Formatters/EitherFormatter.cs:56 "
+    m_ResultText: 'TestConnection (3.030s)
+
+      ---
+
+      requesting connection
+      with params: {"id":1534596677,"jsonrpc":"2.0","method":"wc_sessionRequest","params":[{"peerId":"3af1e7db-1a5a-40b3-934e-86f658bfa82e","peerMeta":{"description":"This
+      is a test request","icons":["www.example.com/icon1.png","www.example.com/icon2.png"],"name":"test","url":"www.example.com"}}]}
+
+      RequestHandshake
+      NetworkMessage: {"payload":"{\"data\":\"468E3615FCA8430433D8D01C9EE21344BBA1BD2CE027BC34F8B8D51B5920B96F2A4EC6BB4B28BCCEC30D97CCB82C03CB9F0FC1B7F2986927F9C87EA8E73727E55C7AFE29CD532F8815BEF7FDB82546E3B16DE64DB54F9458169DAE161AB06E48E9D057B99BAFD0D94E59EB4472299BE47E78D84E2CFECC581FF41C7B584E1B559114DEA73BF9869E6F0EFB98EAB3AA111C0B5BDF9DBBA91305B4EFB031DE4B09A7BAFF81EE542696D572E30785922899C47C3E38EEFF7107665A6634CBBADF3DA465787361EB36E275CF4FAC6DB2DE45A4FF45D9684535EB9BF01E1B560C3B04EC19F88C356B2CCBBA4086C0005234DE06C92D6CBA79E93F4221DCD747621BE5C8ABFBE16CFC0CB6B947436E1EB5F0979EB1BFAB4BBCD4368EA143296CE937E3\",\"hmac\":\"DC42CF1154C669AF9B9910B36333E28D1F0B8B551811F36A879B24DFCF0D22EF\",\"iv\":\"2A21013C6B1DC2A87F4C6584DD37BDD5\"}","topic":"7af0329e-808a-4851-b2b0-505cefbe17a2","type":"pub"}
+
+      {"payload":"","topic":"7af0329e-808a-4851-b2b0-505cefbe17a2","type":"sub"}
+
+      wallet
+      WebSocketEvent Payload: [Payload: {"payload":"{\"data\":\"468E3615FCA8430433D8D01C9EE21344BBA1BD2CE027BC34F8B8D51B5920B96F2A4EC6BB4B28BCCEC30D97CCB82C03CB9F0FC1B7F2986927F9C87EA8E73727E55C7AFE29CD532F8815BEF7FDB82546E3B16DE64DB54F9458169DAE161AB06E48E9D057B99BAFD0D94E59EB4472299BE47E78D84E2CFECC581FF41C7B584E1B559114DEA73BF9869E6F0EFB98EAB3AA111C0B5BDF9DBBA91305B4EFB031DE4B09A7BAFF81EE542696D572E30785922899C47C3E38EEFF7107665A6634CBBADF3DA465787361EB36E275CF4FAC6DB2DE45A4FF45D9684535EB9BF01E1B560C3B04EC19F88C356B2CCBBA4086C0005234DE06C92D6CBA79E93F4221DCD747621BE5C8ABFBE16CFC0CB6B947436E1EB5F0979EB1BFAB4BBCD4368EA143296CE937E3\",\"hmac\":\"DC42CF1154C669AF9B9910B36333E28D1F0B8B551811F36A879B24DFCF0D22EF\",\"iv\":\"2A21013C6B1DC2A87F4C6584DD37BDD5\"}","topic":"7af0329e-808a-4851-b2b0-505cefbe17a2","type":"pub"}]
+      [Error: ] [Reason: ]
+
+      Hello world!!
+
+      {"id":1534596677,"jsonrpc":"2.0","method":"wc_sessionRequest","params":[{"peerId":"3af1e7db-1a5a-40b3-934e-86f658bfa82e","peerMeta":{"description":"This
+      is a test request","icons":["www.example.com/icon1.png","www.example.com/icon2.png"],"name":"test","url":"www.example.com"}}]}
+
+      Hello
+      world!!
+
+      {"id":1534596677,"jsonrpc":"2.0","result":{"peerId":"2f0f5fb9-86eb-444d-b7de-c55fadab1ba0","peerMeta":{"description":"test","url":"https://www.example.com","icons":[],"name":"Test"},"approved":true,"chainId":4160,"accounts":["WHJRSOUX4P7HQBNGR6ZC3FKS3P3CUZUEZTL3LPN44JS37UTYZ4BLH2TLHA"]}}
+
+      Got
+      response: {"id":1534596677,"jsonrpc":"2.0","result"::{"peerId":"2f0f5fb9-86eb-444d-b7de-c55fadab1ba0","peerMeta":{"description":"test","url":"https://www.example.com","icons":[],"name":"Test"},"approved":true,"chainId":4160,"accounts":["WHJRSOUX4P7HQBNGR6ZC3FKS3P3CUZUEZTL3LPN44JS37UTYZ4BLH2TLHA"]}}'
+    m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 1ce9c356
-      m_LastClickedID: 1455679772
+      m_SelectedIDs: 8a50ee93
+      m_LastClickedID: -1813098358
       m_ExpandedIDs: ceed088804599a88f288c6915843a51f433b7427eca58c36a2876a4e84c3466cffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -2223,7 +2220,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
+    x: -1
     y: 845
     width: 1746
     height: 482
@@ -2256,10 +2253,10 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 162.19379}
-    m_SelectedIDs: 64650000
-    m_LastClickedID: 25956
-    m_ExpandedIDs: 00000000286500002e650000566500005865000060650000746500008865000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 39}
+    m_SelectedIDs: 724f0000
+    m_LastClickedID: 20338
+    m_ExpandedIDs: 000000003c4f00004a4f00004c4f0000744f0000764f00007e4f0000964f0000525000006050000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2287,7 +2284,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 000000003c4f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2312,21 +2309,21 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 724f0000
+    m_LastClickedInstanceID: 20338
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: EitherTest
-      m_OriginalName: EitherTest
+      m_Name: Serialization
+      m_OriginalName: Serialization
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 26138
+      m_UserData: 20338
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -2363,7 +2360,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1747
+    x: 1746
     y: 83
     width: 812
     height: 1244
@@ -2404,9 +2401,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
+    x: -1
     y: 83
-    width: 421
+    width: 420
     height: 741
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -2415,9 +2412,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 724f0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 5eb2ffffa8b2ffff5eb3ffffb0b3ffffd6b4ffff20b5ffffd0b5ffff1ab6ffffc8b6ffff12b7ffffceb7ffff20b8ffffdab8ffff24b9ffffe6b9ffff38baffff08bbffff52bbffff02bcffff4cbcffff06bdffff50bdfffffebdffff48befffff6beffff40bfffff22c0ffff6cc0ffff4ec1ffffa4c1ffff5ec2ffffa8c2ffff62c3ffffacc3ffff82c4ffff34c5ffffeec5ffff38c6ffff80c7ffffcac7ffff84c8ffffcec8ffff0cc9ffff56c9ffff04caffff4ecafffffccaffff46cbffff00ccffff52ccffff64ceffffaeceffff5ecfffffa8cfffff58d0ffffa2d0ffff52d1ffffa4d1ffff60d2ffffb6d2ffff64d3ffffaed3ffffded5ffff28d6ffffd6d6ffff20d7ffffced7ffff18d8ffff56d8ffffa0d8ffff56d9fffff8d9ffffe8e4ffff
+      m_ExpandedIDs: 089bffffcc9bffff909cffff549dffff0c9effff1c9fffffe09fffff5ea3ffffaca4ffffdea5ffff98a6fffffab6ffff14b7ffffc6b7ffff26bafffff0baffffa2bbffff54bcffff80bdffff3ebeffff80beffff32bffffff0bfffffdae4ffffcaedffff14eefffffaeeffff44effffffeefffffacf0ffffeaf0ffff34f1ffffe2f1ffff2cf2ffff72f2ffffc4f2ffffecf3ffff36f4ffffe4f4ffff2ef5ffff36fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2461,10 +2458,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 285.5
-    y: 96
-    width: 890.5
-    height: 535
+    x: 420
+    y: 83
+    width: 1324
+    height: 741
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2766,10 +2763,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 507
-    y: 94
-    width: 1532
-    height: 790
+    x: 420
+    y: 83
+    width: 1324
+    height: 741
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2780,10 +2777,10 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1532, y: 769}
+  m_TargetSize: {x: 1324, y: 720}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
-  m_RenderIMGUI: 0
+  m_RenderIMGUI: 1
   m_EnterPlayModeBehavior: 0
   m_UseMipMap: 0
   m_VSyncEnabled: 0
@@ -2795,10 +2792,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -766
-    m_HBaseRangeMax: 766
-    m_VBaseRangeMin: -384.5
-    m_VBaseRangeMax: 384.5
+    m_HBaseRangeMin: -662
+    m_HBaseRangeMax: 662
+    m_VBaseRangeMin: -360
+    m_VBaseRangeMax: 360
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -2816,23 +2813,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1532
-      height: 769
+      width: 1324
+      height: 720
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 766, y: 384.5}
+    m_Translation: {x: 662, y: 360}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -766
-      y: -384.5
-      width: 1532
-      height: 769
+      x: -662
+      y: -360
+      width: 1324
+      height: 720
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1532, y: 790}
+  m_LastWindowPixelSize: {x: 1324, y: 741}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -2858,7 +2855,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
+    x: -1
     y: 845
     width: 1746
     height: 482
