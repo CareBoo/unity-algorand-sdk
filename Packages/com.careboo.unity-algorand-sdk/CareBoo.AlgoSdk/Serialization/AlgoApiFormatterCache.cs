@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using AlgoSdk.Crypto;
 using AlgoSdk.Formatters;
 using Unity.Collections;
@@ -20,9 +21,6 @@ namespace AlgoSdk
 
     public partial class AlgoApiFormatterLookup
     {
-        public const string EnsureLookupMethodName = nameof(EnsureLookupInitialized);
-        public const string LookupFieldName = nameof(lookup);
-        public const string InitLookupMethodName = nameof(InitLookup);
         public const string AddFormatterMethodName = nameof(AddFormatter);
 
         static Dictionary<Type, object> lookup;
@@ -57,14 +55,14 @@ namespace AlgoSdk
             AddFormatter<AlgoSdk.WalletConnect.WalletTransaction[]>(ArrayFormatter<AlgoSdk.WalletConnect.WalletTransaction>.Instance);
         }
 
-        static void AddFormatter(Type t, object formatter)
+        public static void AddFormatter(Type t, object formatter)
         {
             if (lookup.ContainsKey(t))
                 return;
             lookup.Add(t, formatter);
         }
 
-        static void AddFormatter<T>(IAlgoApiFormatter<T> formatter)
+        public static void AddFormatter<T>(IAlgoApiFormatter<T> formatter)
         {
             var type = typeof(T);
             AddFormatter(type, formatter);
@@ -73,15 +71,20 @@ namespace AlgoSdk
         public static IAlgoApiFormatter<T> GetFormatter<T>()
         {
             if (lookup == null)
-                EnsureLookupInitialized();
+                InitLookup();
 
-            if (lookup.TryGetValue(typeof(T), out var formatter)
+            var type = typeof(T);
+            RuntimeHelpers.RunClassConstructor(type.TypeHandle);
+
+            if (lookup.TryGetValue(type, out var formatter)
                 && formatter is IAlgoApiFormatter<T> algoApiFormatter)
             {
                 return algoApiFormatter;
             }
-            if (formatter == null) return null;
-            throw new InvalidCastException($"formatter '{(formatter?.GetType().FullName ?? "void")}' cannot be cast to '{typeof(IAlgoApiFormatter<T>).FullName}'...");
+            if (formatter == null)
+                return null;
+
+            throw new InvalidCastException($"formatter '{formatter.GetType().FullName}' cannot be cast to '{typeof(IAlgoApiFormatter<T>).FullName}'...");
         }
     }
 }
