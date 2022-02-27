@@ -12,32 +12,31 @@ namespace AlgoSdk.Editor.CodeGen
             Type formatterType
         )
         {
-            var formatterTypeReference = new CodeTypeReference(formatterType);
-            if (formatterType.IsGenericTypeDefinition)
-                formatterTypeReference.TypeArguments.AddRange(FormatterTypeParameters(type, formatterType));
-            CreateType = formatterTypeReference;
+            var constructedFormatterType = ConstructFormatterType(type, formatterType);
+            CreateType = new CodeTypeReference(constructedFormatterType.FullNameExpression());
         }
 
-        public static CodeTypeReference[] FormatterTypeParameters(Type type, Type formatterType)
+        public static Type ConstructFormatterType(Type type, Type formatterType)
         {
             if (!formatterType.IsGenericTypeDefinition)
-                return new CodeTypeReference[0];
+                return formatterType;
 
             var formatterTypeArgumentCount = formatterType.GenericTypeArguments.Length;
             if (type.IsGenericType)
             {
-                var typeArgs = new List<CodeTypeReference>();
+                var typeArgs = new List<Type>();
                 var typeArgumentCount = type.GenericTypeArguments.Length;
-                var namedTypeParameters = new NamedTypeParameters(type);
 
                 if (formatterTypeArgumentCount == typeArgumentCount + 1)
-                    typeArgs.Add(new CodeTypeReference(type.Name, namedTypeParameters));
-                typeArgs.AddRange(namedTypeParameters.AsReferences());
-                return typeArgs.ToArray();
+                {
+                    typeArgs.Add(type);
+                }
+                typeArgs.AddRange(type.GenericTypeArguments);
+                return formatterType.MakeGenericType(typeArgs.ToArray());
             }
             else if (formatterTypeArgumentCount == 1)
             {
-                return new[] { new CodeTypeReference(type) };
+                return formatterType.MakeGenericType(type);
             }
             throw new ArgumentException($"Got incorrect number of type arguments {formatterTypeArgumentCount} for formatter {formatterType.FullName}", nameof(formatterType));
         }
