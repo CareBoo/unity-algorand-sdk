@@ -21,7 +21,7 @@ namespace AlgoSdk.Editor.CodeGen
 
             if (type.IsGenericType)
             {
-                var typeParams = new IndexedTypeParameters(type);
+                var typeParams = new NamedTypeParameters(type);
                 TypeParameters.AddRange(typeParams);
                 var outputTypeParams = new CodeTypeParameter[TypeParameters.Count];
                 for (var i = 0; i < outputTypeParams.Length; i++)

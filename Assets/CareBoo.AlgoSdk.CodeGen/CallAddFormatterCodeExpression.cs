@@ -10,7 +10,7 @@ namespace AlgoSdk.Editor.CodeGen
                 targetObject: new CodeTypeReferenceExpression(typeof(AlgoApiFormatterLookup)),
                 methodName: AlgoApiFormatterLookup.AddFormatterMethodName,
                 // params
-                new CodeTypeOfExpression(type),
+                new CodeTypeOfExpression(new CodeTypeReference(type.FullNameExpression())),
                 formatterExpression
             )
         { }

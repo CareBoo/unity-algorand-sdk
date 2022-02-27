@@ -28,11 +28,11 @@ namespace AlgoSdk.Editor.CodeGen
             {
                 var typeArgs = new List<CodeTypeReference>();
                 var typeArgumentCount = type.GenericTypeArguments.Length;
-                var typeParams = type.GenericTypeArguments.Select(t => new CodeTypeReference(t)).ToArray();
+                var namedTypeParameters = new NamedTypeParameters(type);
 
                 if (formatterTypeArgumentCount == typeArgumentCount + 1)
-                    typeArgs.Add(new CodeTypeReference(type.Name, typeParams));
-                typeArgs.AddRange(typeParams);
+                    typeArgs.Add(new CodeTypeReference(type.Name, namedTypeParameters));
+                typeArgs.AddRange(namedTypeParameters.AsReferences());
                 return typeArgs.ToArray();
             }
             else if (formatterTypeArgumentCount == 1)
