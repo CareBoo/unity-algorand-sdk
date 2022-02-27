@@ -1,6 +1,7 @@
 using System;
 using System.CodeDom;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace AlgoSdk.Editor.CodeGen
 {
@@ -27,11 +28,11 @@ namespace AlgoSdk.Editor.CodeGen
             {
                 var typeArgs = new List<CodeTypeReference>();
                 var typeArgumentCount = type.GenericTypeArguments.Length;
-                var indexedTypeParams = new IndexedTypeParameters(typeArgumentCount);
+                var typeParams = type.GenericTypeArguments.Select(t => new CodeTypeReference(t)).ToArray();
 
                 if (formatterTypeArgumentCount == typeArgumentCount + 1)
-                    typeArgs.Add(new CodeTypeReference(type.Name, indexedTypeParams));
-                typeArgs.AddRange(indexedTypeParams.AsReferences());
+                    typeArgs.Add(new CodeTypeReference(type.Name, typeParams));
+                typeArgs.AddRange(typeParams);
                 return typeArgs.ToArray();
             }
             else if (formatterTypeArgumentCount == 1)
