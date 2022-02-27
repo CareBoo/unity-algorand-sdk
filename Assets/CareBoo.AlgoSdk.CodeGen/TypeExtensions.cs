@@ -17,19 +17,15 @@ namespace AlgoSdk.Editor.CodeGen
                         string genericArguments = type.GetGenericArguments()
                                             .Select(FullNameExpression)
                                             .Aggregate((x1, x2) => $"{x1}, {x2}");
-                        name = $"{type.FullName.Substring(0, type.FullName.IndexOf("`"))}<{genericArguments}>";
+                        name = $"{type.SafeFullName().Substring(0, type.SafeFullName().IndexOf("`"))}<{genericArguments}>";
                     }
                     else if (type.IsArray)
                     {
                         string elementType = FullNameExpression(type.GetElementType());
                         name = $"{elementType}[]";
                     }
-                    else if (type.IsGenericTypeParameter)
-                    {
-                        name = type.Name;
-                    }
                     else
-                        name = type.FullName;
+                        name = type.SafeFullName();
                     return name.Replace('+', '.');
                 }
                 catch (Exception ex)
@@ -43,6 +39,11 @@ namespace AlgoSdk.Editor.CodeGen
         public static string NameExpression(this Type type)
         {
             return type.FullNameExpression().Split(".").Last();
+        }
+
+        public static string SafeFullName(this Type type)
+        {
+            return type.FullName ?? type.Name;
         }
     }
 }
