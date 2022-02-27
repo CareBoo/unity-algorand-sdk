@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using AlgoSdk.Formatters;
+using UnityEngine;
 
 namespace AlgoSdk.Editor.CodeGen
 {
@@ -184,22 +185,30 @@ namespace AlgoSdk.Editor.CodeGen
 
         protected string Format(Type type)
         {
-            string name;
-            if (type.IsGenericType)
+            try
             {
-                string genericArguments = type.GetGenericArguments()
-                                    .Select(Format)
-                                    .Aggregate((x1, x2) => $"{x1}, {x2}");
-                name = $"{type.FullName.Substring(0, type.FullName.IndexOf("`"))}<{genericArguments}>";
+                string name;
+                if (type.IsGenericType)
+                {
+                    string genericArguments = type.GetGenericArguments()
+                                        .Select(Format)
+                                        .Aggregate((x1, x2) => $"{x1}, {x2}");
+                    name = $"{type.FullName.Substring(0, type.FullName.IndexOf("`"))}<{genericArguments}>";
+                }
+                else if (type.IsArray)
+                {
+                    string elementType = Format(type.GetElementType());
+                    name = $"{elementType}[]";
+                }
+                else
+                    name = type.FullName;
+                return name.Replace('+', '.');
             }
-            else if (type.IsArray)
+            catch (Exception ex)
             {
-                string elementType = Format(type.GetElementType());
-                name = $"{elementType}[]";
+                Debug.LogError($"Got exception while formatting type {type}: {ex}");
+                return null;
             }
-            else
-                name = type.FullName;
-            return name.Replace('+', '.');
         }
 
         protected string FormatForTypeDeclaration(Type type)
