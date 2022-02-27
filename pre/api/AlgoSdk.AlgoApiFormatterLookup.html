@@ -94,7 +94,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_AlgoApiFormatterLookup_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class AlgoApiFormatterLookup</code></pre>
+    <pre><code class="lang-csharp hljs">public class AlgoApiFormatterLookup : Dictionary&lt;Type, object&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -105,79 +105,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string AddFormatterMethodName = &quot;AddFormatter&quot;</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_AlgoApiFormatterLookup_EnsureLookupMethodName" data-uid="AlgoSdk.AlgoApiFormatterLookup.EnsureLookupMethodName">EnsureLookupMethodName</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string EnsureLookupMethodName = &quot;EnsureLookupInitialized&quot;</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_AlgoApiFormatterLookup_InitLookupMethodName" data-uid="AlgoSdk.AlgoApiFormatterLookup.InitLookupMethodName">InitLookupMethodName</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string InitLookupMethodName = &quot;InitLookup&quot;</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_AlgoApiFormatterLookup_LookupFieldName" data-uid="AlgoSdk.AlgoApiFormatterLookup.LookupFieldName">LookupFieldName</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string LookupFieldName = &quot;&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public const string AddFormatterMethodName = &quot;Add&quot;</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -198,13 +126,55 @@
   </h3>
   
   
-  <a id="AlgoSdk_AlgoApiFormatterLookup_GetFormatter_" data-uid="AlgoSdk.AlgoApiFormatterLookup.GetFormatter*"></a>
-  <h4 id="AlgoSdk_AlgoApiFormatterLookup_GetFormatter__1" data-uid="AlgoSdk.AlgoApiFormatterLookup.GetFormatter``1">GetFormatter&lt;T&gt;()</h4>
+  <a id="AlgoSdk_AlgoApiFormatterLookup_Add_" data-uid="AlgoSdk.AlgoApiFormatterLookup.Add*"></a>
+  <h4 id="AlgoSdk_AlgoApiFormatterLookup_Add__1_AlgoSdk_IAlgoApiFormatter___0__" data-uid="AlgoSdk.AlgoApiFormatterLookup.Add``1(AlgoSdk.IAlgoApiFormatter{``0})">Add&lt;T&gt;(IAlgoApiFormatter&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IAlgoApiFormatter&lt;T&gt; GetFormatter&lt;T&gt;()</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Add&lt;T&gt;(IAlgoApiFormatter&lt;T&gt; formatter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.IAlgoApiFormatter-1.html">IAlgoApiFormatter</a>&lt;T&gt;</td>
+        <td><span class="parametername">formatter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiFormatterLookup_Get_" data-uid="AlgoSdk.AlgoApiFormatterLookup.Get*"></a>
+  <h4 id="AlgoSdk_AlgoApiFormatterLookup_Get__1" data-uid="AlgoSdk.AlgoApiFormatterLookup.Get``1">Get&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IAlgoApiFormatter&lt;T&gt; Get&lt;T&gt;()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
