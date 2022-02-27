@@ -1,6 +1,5 @@
 using System;
 using System.Linq;
-using UnityEngine;
 
 namespace AlgoSdk.Editor.CodeGen
 {
@@ -9,41 +8,54 @@ namespace AlgoSdk.Editor.CodeGen
         public static string FullNameExpression(this Type type)
         {
             {
-                try
+                string name;
+                if (type.IsGenericType)
                 {
-                    string name;
-                    if (type.IsGenericType)
-                    {
-                        string genericArguments = type.GetGenericArguments()
-                                            .Select(FullNameExpression)
-                                            .Aggregate((x1, x2) => $"{x1}, {x2}");
-                        name = $"{type.SafeFullName().Substring(0, type.SafeFullName().IndexOf("`"))}<{genericArguments}>";
-                    }
-                    else if (type.IsArray)
-                    {
-                        string elementType = FullNameExpression(type.GetElementType());
-                        name = $"{elementType}[]";
-                    }
-                    else
-                        name = type.SafeFullName();
-                    return name.Replace('+', '.');
+                    string genericArguments = type.GetGenericArguments()
+                                        .Select(FullNameExpression)
+                                        .Aggregate((x1, x2) => $"{x1}, {x2}");
+                    name = $"{type.SafeFullName().Substring(0, type.SafeFullName().IndexOf("`"))}<{genericArguments}>";
                 }
-                catch (Exception ex)
+                else if (type.IsArray)
                 {
-                    Debug.LogError($"Got exception while formatting type {type}: {ex}");
-                    return null;
+                    string elementType = FullNameExpression(type.GetElementType());
+                    name = $"{elementType}[]";
                 }
+                else if (type.IsGenericTypeParameter)
+                {
+                    name = type.Name;
+                }
+                else
+                    name = type.SafeFullName();
+                return name.Replace('+', '.');
             }
         }
 
         public static string NameExpression(this Type type)
         {
-            return type.FullNameExpression().Split(".").Last();
+            {
+                string name;
+                if (type.IsGenericType)
+                {
+                    string genericArguments = type.GetGenericArguments()
+                                        .Select(NameExpression)
+                                        .Aggregate((x1, x2) => $"{x1}, {x2}");
+                    name = $"{type.Name.Substring(0, type.Name.IndexOf("`"))}<{genericArguments}>";
+                }
+                else if (type.IsArray)
+                {
+                    string elementType = NameExpression(type.GetElementType());
+                    name = $"{elementType}[]";
+                }
+                else
+                    name = type.Name;
+                return name.Replace('+', '.');
+            }
         }
 
         public static string SafeFullName(this Type type)
         {
-            return type.FullName ?? type.Name;
+            return type.FullName ?? $"{type.Namespace}.{type.Name}";
         }
     }
 }

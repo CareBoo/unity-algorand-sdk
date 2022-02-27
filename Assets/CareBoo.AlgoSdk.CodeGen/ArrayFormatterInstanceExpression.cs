@@ -9,14 +9,16 @@ namespace AlgoSdk.Editor.CodeGen
     {
         public ArrayFormatterInstanceExpression(Type arrayType)
             : base(
-                targetObject: new CodeTypeReferenceExpression(typeof(ArrayFormatter<>).MakeGenericType(arrayType.GetElementType()).FullNameExpression()),
+                targetObject: ArrayFormatterTypeReference(arrayType),
                 fieldName: nameof(ArrayFormatter<int>.Instance)
             )
         { }
 
-        static CodeTypeReferenceExpression(Type arrayType)
+        static CodeTypeReferenceExpression ArrayFormatterTypeReference(Type arrayType)
         {
-            var formatterType = typeof(ArrayFormatter<>).MakeGenericType(arrayType.GetElementType());
+            var elementType = arrayType;
+            var formatterType = typeof(ArrayFormatter<>).MakeGenericType(elementType);
+            return new CodeTypeReferenceExpression(formatterType.FullNameExpression());
         }
     }
 }

@@ -12,8 +12,6 @@ namespace AlgoSdk.Editor.CodeGen
     {
         const string OutputFileName = "AlgoApiFormatters.gen.cs";
 
-        static string PathToProject => Path.GetDirectoryName(UnityEngine.Application.dataPath);
-
         [MenuItem("AlgoSdk/GenerateFormatterCache")]
         public static void GenerateFormatterCache()
         {
@@ -26,11 +24,6 @@ namespace AlgoSdk.Editor.CodeGen
                 .ToArray()
                 ;
 
-            // foreach (var filePath in createdFiles)
-            // {
-            //     var relPath = Path.GetRelativePath(PathToProject, filePath);
-            //     AssetDatabase.ImportAsset(relPath);
-            // }
             AssetDatabase.Refresh();
         }
 

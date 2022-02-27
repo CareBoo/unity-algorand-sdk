@@ -19,17 +19,6 @@ namespace AlgoSdk.Editor.CodeGen
             IsStruct = type.IsValueType;
             IsPartial = true;
 
-            if (type.IsGenericType)
-            {
-                var typeParams = new NamedTypeParameters(type);
-                TypeParameters.AddRange(typeParams);
-                var outputTypeParams = new CodeTypeParameter[TypeParameters.Count];
-                for (var i = 0; i < outputTypeParams.Length; i++)
-                    outputTypeParams[i] = TypeParameters[i];
-
-                UnityEngine.Debug.Log($"{type.FullNameExpression()} TypeParameters:\n{string.Join(", ", outputTypeParams.Select(t => t.Name))}");
-            }
-
             Members.Add(new FormatterStaticFieldInitializerExpression(type));
             Members.Add(new InitFormattersCodeMemberMethod(type));
 
