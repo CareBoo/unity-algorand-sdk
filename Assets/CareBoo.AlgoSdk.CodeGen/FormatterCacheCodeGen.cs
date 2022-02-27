@@ -17,25 +17,17 @@ namespace AlgoSdk.Editor.CodeGen
         [MenuItem("AlgoSdk/GenerateFormatterCache")]
         public static void GenerateFormatterCache()
         {
-
-            var algoApiObjCompileUnits = TypeCache.GetTypesWithAttribute(typeof(AlgoApiObjectAttribute))
-                .OrderBy(t => t.Name)
-                .Where(t => !t.IsNested)
-                .Select(t => new AlgoApiObjectCompileUnit(t))
-                .Cast<AlgoApiCompileUnit>()
-                ;
-            var algoApiFormatterCompileUnits = TypeCache.GetTypesWithAttribute(typeof(AlgoApiFormatterAttribute))
-                .OrderBy(t => t.Name)
-                .Where(t => !t.IsNested)
-                .Select(t => new AlgoApiFormatterCompileUnit(t))
-                .Cast<AlgoApiCompileUnit>()
+            var createdFiles = TypeCache.GetTypesWithAttribute(typeof(AlgoApiObjectAttribute))
+                .Concat(TypeCache.GetTypesWithAttribute(typeof(AlgoApiFormatterAttribute)))
+                .Select(t => new AlgoApiCompileUnit(t))
+                .Where(cu => cu.IsValid)
+                .Select(ExportToDirectory)
+                .Where(filePath => filePath != null)
                 ;
 
-            foreach (var compileUnit in algoApiObjCompileUnits.Concat(algoApiFormatterCompileUnits).Where(c => c.CompileUnit != null))
+            foreach (var filePath in createdFiles)
             {
-                var createdPath = ExportToDirectory(compileUnit);
-                if (createdPath == null) continue;
-                var relPath = Path.GetRelativePath(PathToProject, createdPath);
+                var relPath = Path.GetRelativePath(PathToProject, filePath);
                 AssetDatabase.ImportAsset(relPath, ImportAssetOptions.ForceUpdate);
             }
             AssetDatabase.Refresh();
@@ -54,7 +46,7 @@ namespace AlgoSdk.Editor.CodeGen
                 var tw = new IndentedTextWriter(stream);
                 var options = new CodeGeneratorOptions();
                 options.BracingStyle = "C";
-                codeProvider.GenerateCodeFromCompileUnit(compileUnit.CompileUnit, tw, options);
+                codeProvider.GenerateCodeFromCompileUnit(compileUnit, tw, options);
                 return outputPath;
             }
             catch (Exception ex)
