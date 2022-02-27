@@ -28,7 +28,7 @@ namespace AlgoSdk.Editor.CodeGen
                 .Cast<AlgoApiCompileUnit>()
                 ;
 
-            foreach (var compileUnit in algoApiObjCompileUnits.Concat(algoApiFormatterCompileUnits))
+            foreach (var compileUnit in algoApiObjCompileUnits.Concat(algoApiFormatterCompileUnits).Where(c => c.CompileUnit != null))
             {
                 var createdPath = ExportToDirectory(compileUnit);
                 var relPath = Path.GetRelativePath(PathToProject, createdPath);
