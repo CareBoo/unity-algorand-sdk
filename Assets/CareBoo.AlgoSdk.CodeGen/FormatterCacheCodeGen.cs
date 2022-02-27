@@ -28,7 +28,7 @@ namespace AlgoSdk.Editor.CodeGen
             foreach (var filePath in createdFiles)
             {
                 var relPath = Path.GetRelativePath(PathToProject, filePath);
-                AssetDatabase.ImportAsset(relPath, ImportAssetOptions.ForceUpdate);
+                AssetDatabase.ImportAsset(relPath);
             }
             AssetDatabase.Refresh();
         }
