@@ -12,7 +12,7 @@ namespace AlgoSdk.Editor.CodeGen
     {
         const string OutputFileName = "AlgoApiFormatters.gen.cs";
 
-        static string PathToProject => Path.GetPathRoot(UnityEngine.Application.dataPath);
+        static string PathToProject => Path.GetDirectoryName(UnityEngine.Application.dataPath);
 
         [MenuItem("AlgoSdk/GenerateFormatterCache")]
         public static void GenerateFormatterCache()
@@ -37,7 +37,6 @@ namespace AlgoSdk.Editor.CodeGen
         {
             try
             {
-                Debug.Log($"Exporting compile unit for type: {compileUnit.Type.FullNameExpression()}");
                 var sourcePath = compileUnit.SourceInfo.AbsoluteFilePath;
                 var sourceDir = Path.GetDirectoryName(sourcePath);
                 var filenameWithoutExtension = Path.GetFileNameWithoutExtension(sourcePath);
