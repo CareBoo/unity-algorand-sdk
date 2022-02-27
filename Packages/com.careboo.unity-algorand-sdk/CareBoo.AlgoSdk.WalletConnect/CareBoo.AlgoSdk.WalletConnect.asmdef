@@ -1,19 +1,21 @@
 {
-    "name": "CareBoo.AlgoSdk",
-    "rootNamespace": "AlgoSdk",
+    "name": "CareBoo.AlgoSdk.WalletConnect",
+    "rootNamespace": "AlgoSdk.WalletConnect",
     "references": [
-        "Unity.Burst",
-        "Unity.Collections",
-        "Unity.Mathematics",
-        "CareBoo.AlgoSdk.Crypto",
+        "CareBoo.AlgoSdk",
+        "UniTask",
+        "CareBoo.WebSocket",
         "CareBoo.AlgoSdk.LowLevel",
-        "UniTask"
+        "CareBoo.AlgoSdk.Crypto",
+        "Unity.Collections"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": true,
     "overrideReferences": true,
-    "precompiledReferences": [],
+    "precompiledReferences": [
+        "zxing.dll"
+    ],
     "autoReferenced": true,
     "defineConstraints": [],
     "versionDefines": [],

@@ -1,7 +1,7 @@
 using AlgoSdk.Json;
 using AlgoSdk.MessagePack;
 
-namespace AlgoSdk.WalletConnect.Formatters
+namespace AlgoSdk.Formatters
 {
     public sealed class HexFormatter : IAlgoApiFormatter<Hex>
     {

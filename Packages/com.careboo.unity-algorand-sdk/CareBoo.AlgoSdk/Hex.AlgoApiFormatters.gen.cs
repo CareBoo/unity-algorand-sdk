@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlgoSdk.WalletConnect
+namespace AlgoSdk
 {
     
     
@@ -19,8 +19,8 @@ namespace AlgoSdk.WalletConnect
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.WalletConnect.Hex>(new AlgoSdk.WalletConnect.Formatters.HexFormatter());
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.WalletConnect.Hex[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.WalletConnect.Hex>.Instance);
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Hex>(new AlgoSdk.Formatters.HexFormatter());
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Hex[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.Hex>.Instance);
             return true;
         }
     }
