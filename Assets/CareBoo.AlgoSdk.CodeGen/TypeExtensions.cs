@@ -21,12 +21,8 @@ namespace AlgoSdk.Editor.CodeGen
                     string elementType = FullNameExpression(type.GetElementType());
                     name = $"{elementType}[]";
                 }
-                else if (type.IsGenericTypeParameter)
-                {
-                    name = type.Name;
-                }
                 else
-                    name = type.SafeFullName();
+                    name = type.FullName ?? type.Name;
                 return name.Replace('+', '.');
             }
         }
