@@ -20,9 +20,17 @@ namespace AlgoSdk.Editor.CodeGen
             IsPartial = true;
 
             if (type.IsGenericType)
-                TypeParameters.AddRange(new IndexedTypeParameters(type.GenericTypeArguments.Length));
+            {
+                var typeParams = new IndexedTypeParameters(type);
+                TypeParameters.AddRange(typeParams);
+                var outputTypeParams = new CodeTypeParameter[TypeParameters.Count];
+                for (var i = 0; i < outputTypeParams.Length; i++)
+                    outputTypeParams[i] = TypeParameters[i];
 
-            Members.Add(new FormatterStaticFieldInitializerExpression());
+                UnityEngine.Debug.Log($"{type.FullNameExpression()} TypeParameters:\n{string.Join(", ", outputTypeParams.Select(t => t.Name))}");
+            }
+
+            Members.Add(new FormatterStaticFieldInitializerExpression(type));
             Members.Add(new InitFormattersCodeMemberMethod(type));
 
             var nestedTypeDeclarations = type.GetNestedTypes()

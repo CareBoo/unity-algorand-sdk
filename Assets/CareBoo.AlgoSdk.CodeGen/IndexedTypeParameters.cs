@@ -1,3 +1,4 @@
+using System;
 using System.CodeDom;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,6 +10,10 @@ namespace AlgoSdk.Editor.CodeGen
         : IEnumerable<CodeTypeParameter>
     {
         readonly IEnumerable<CodeTypeParameter> typeParams;
+
+        public IndexedTypeParameters(Type type) : this(type.GenericTypeArguments.Length)
+        {
+        }
 
         public IndexedTypeParameters(int count)
         {
