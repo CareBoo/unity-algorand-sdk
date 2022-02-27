@@ -55,7 +55,14 @@ namespace AlgoSdk.Editor.CodeGen
             var tw = new IndentedTextWriter(stream);
             var options = new CodeGeneratorOptions();
             options.BracingStyle = "C";
-            codeProvider.GenerateCodeFromCompileUnit(compileUnit.CompileUnit, tw, options);
+            try
+            {
+                codeProvider.GenerateCodeFromCompileUnit(compileUnit.CompileUnit, tw, options);
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"got error while exporting type {compileUnit.Type}: {ex}");
+            }
             return outputPath;
         }
     }
