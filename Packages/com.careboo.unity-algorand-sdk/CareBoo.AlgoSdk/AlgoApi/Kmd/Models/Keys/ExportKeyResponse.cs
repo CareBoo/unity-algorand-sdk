@@ -4,7 +4,7 @@ using AlgoSdk.Crypto;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct ExportKeyResponse
+    public partial struct ExportKeyResponse
         : IEquatable<ExportKeyResponse>
     {
         [AlgoApiField("error", null)]

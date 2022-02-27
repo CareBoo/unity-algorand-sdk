@@ -5,7 +5,7 @@ using UnityEngine;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct ExportKeyRequest
+    public partial struct ExportKeyRequest
         : IEquatable<ExportKeyRequest>
     {
         [AlgoApiField("address", null)]

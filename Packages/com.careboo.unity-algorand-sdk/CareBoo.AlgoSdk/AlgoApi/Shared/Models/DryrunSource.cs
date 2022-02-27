@@ -9,7 +9,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct DryrunSource
+    public partial struct DryrunSource
         : IEquatable<DryrunSource>
     {
         [AlgoApiField("app-index", null)]

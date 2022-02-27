@@ -4,7 +4,7 @@ using Unity.Collections;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct DeleteKeyRequest
+    public partial struct DeleteKeyRequest
         : IEquatable<DeleteKeyRequest>
     {
         [AlgoApiField("address", null)]

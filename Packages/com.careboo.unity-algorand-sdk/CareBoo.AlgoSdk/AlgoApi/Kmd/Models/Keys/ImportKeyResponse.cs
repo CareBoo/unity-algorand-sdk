@@ -3,7 +3,7 @@ using System;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct ImportKeyResponse
+    public partial struct ImportKeyResponse
         : IEquatable<ImportKeyResponse>
     {
         [AlgoApiField("address", null)]

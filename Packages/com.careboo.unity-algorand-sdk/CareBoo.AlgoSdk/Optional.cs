@@ -5,7 +5,7 @@ namespace AlgoSdk
 {
     [AlgoApiFormatter(typeof(OptionalFormatter<>))]
     [Serializable]
-    public struct Optional<T>
+    public partial struct Optional<T>
         : IEquatable<Optional<T>>
         where T : struct, IEquatable<T>
     {

@@ -8,7 +8,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct MerkleProof
+    public partial struct MerkleProof
         : IEquatable<MerkleProof>
     {
         /// <summary>

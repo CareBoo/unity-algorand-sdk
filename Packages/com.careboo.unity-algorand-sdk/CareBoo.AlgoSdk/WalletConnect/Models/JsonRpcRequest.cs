@@ -29,7 +29,7 @@ namespace AlgoSdk.WalletConnect
     }
 
     [AlgoApiObject]
-    public struct JsonRpcRequest
+    public partial struct JsonRpcRequest
         : IJsonRpcRequest<AlgoApiObject[]>
         , IEquatable<JsonRpcRequest>
     {

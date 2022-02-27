@@ -8,7 +8,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct AccountStateDelta
+    public partial struct AccountStateDelta
         : IEquatable<AccountStateDelta>
     {
         [AlgoApiField("address", null)]

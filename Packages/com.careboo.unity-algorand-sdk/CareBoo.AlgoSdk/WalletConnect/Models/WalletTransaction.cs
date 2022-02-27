@@ -8,7 +8,7 @@ namespace AlgoSdk.WalletConnect
     /// see https://developer.algorand.org/docs/get-details/walletconnect/walletconnect-schema/
     /// </summary>
     [AlgoApiObject]
-    public struct WalletTransaction
+    public partial struct WalletTransaction
         : IEquatable<WalletTransaction>
     {
         /// <summary>

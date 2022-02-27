@@ -6,7 +6,7 @@ namespace AlgoSdk.WalletConnect
 {
     [Serializable]
     [AlgoApiFormatter(typeof(HexFormatter))]
-    public struct Hex : IEquatable<Hex>
+    public partial struct Hex : IEquatable<Hex>
     {
         [SerializeField]
         byte[] data;

@@ -6,7 +6,7 @@ namespace AlgoSdk.WalletConnect
     /// Error obtained from a <see cref="AlgoSignTxnsRequest"/>
     /// </summary>
     [AlgoApiObject]
-    public struct SignTxnsError
+    public partial struct SignTxnsError
         : IJsonRpcError
         , IEquatable<SignTxnsError>
     {

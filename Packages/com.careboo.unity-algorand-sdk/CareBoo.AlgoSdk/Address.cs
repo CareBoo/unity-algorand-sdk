@@ -14,7 +14,7 @@ namespace AlgoSdk
     [Serializable]
     [AlgoApiFormatter(typeof(AddressFormatter))]
     [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
-    public struct Address
+    public partial struct Address
         : IByteArray
         , IEquatable<Address>
     {
@@ -160,7 +160,7 @@ namespace AlgoSdk
 
         [Serializable]
         [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
-        public struct CheckSum
+        public partial struct CheckSum
         : IByteArray
         , IEquatable<CheckSum>
         {

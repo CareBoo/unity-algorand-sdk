@@ -3,7 +3,7 @@ using System;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct RenameWalletResponse
+    public partial struct RenameWalletResponse
         : IEquatable<RenameWalletResponse>
     {
         [AlgoApiField("error", null)]

@@ -27,6 +27,7 @@ namespace AlgoSdk.Editor.CodeGen
             var ns = new CodeNamespace(type.Namespace);
             ns.Types.Add(typeDeclaration);
             Namespaces.Add(ns);
+            IsValid = true;
         }
 
         protected ProvideSourceInfoAttribute GetSourceInfo(Type type) =>

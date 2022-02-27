@@ -9,7 +9,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct DryrunTxnResult
+    public partial struct DryrunTxnResult
         : IEquatable<DryrunTxnResult>
     {
         [AlgoApiField("app-call-messages", null)]

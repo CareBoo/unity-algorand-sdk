@@ -9,7 +9,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct DryrunResults
+    public partial struct DryrunResults
         : IEquatable<DryrunResults>
     {
         [AlgoApiField("error", null)]

@@ -4,7 +4,7 @@ using Unity.Collections;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct VersionsResponse
+    public partial struct VersionsResponse
         : IEquatable<VersionsResponse>
     {
         [AlgoApiField("versions", null)]

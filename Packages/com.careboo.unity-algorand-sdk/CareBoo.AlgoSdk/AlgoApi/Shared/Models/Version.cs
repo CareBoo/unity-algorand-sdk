@@ -8,7 +8,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct Version
+    public partial struct Version
         : IEquatable<Version>
     {
         /// <summary>

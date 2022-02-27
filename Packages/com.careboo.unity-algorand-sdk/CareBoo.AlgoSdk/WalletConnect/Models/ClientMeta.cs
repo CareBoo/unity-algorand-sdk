@@ -4,7 +4,7 @@ namespace AlgoSdk.WalletConnect
 {
     [Serializable]
     [AlgoApiObject]
-    public struct ClientMeta
+    public partial struct ClientMeta
         : IEquatable<ClientMeta>
     {
         [AlgoApiField("description", null)]

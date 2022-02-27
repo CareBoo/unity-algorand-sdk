@@ -20,7 +20,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct EvalDelta
+    public partial struct EvalDelta
         : IEquatable<EvalDelta>
     {
         [AlgoApiField("action", "at")]

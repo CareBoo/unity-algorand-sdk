@@ -5,7 +5,7 @@ using Unity.Collections;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct ImportMultisigRequest
+    public partial struct ImportMultisigRequest
         : IEquatable<ImportMultisigRequest>
     {
         [AlgoApiField("multisig_version", null)]

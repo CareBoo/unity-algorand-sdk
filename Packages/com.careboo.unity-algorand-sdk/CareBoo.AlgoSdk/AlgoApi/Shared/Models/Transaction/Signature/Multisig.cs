@@ -6,7 +6,7 @@ using Unity.Collections;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct Multisig
+    public partial struct Multisig
         : ISignature
         , IEquatable<Multisig>
     {
@@ -115,7 +115,7 @@ namespace AlgoSdk
         }
 
         [AlgoApiObject]
-        public struct Subsig
+        public partial struct Subsig
             : IEquatable<Subsig>
         {
             /// <summary>

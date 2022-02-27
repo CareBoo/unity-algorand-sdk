@@ -4,7 +4,7 @@ using Unity.Collections;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct RenameWalletRequest
+    public partial struct RenameWalletRequest
         : IEquatable<RenameWalletRequest>
     {
         [AlgoApiField("wallet_id", null)]

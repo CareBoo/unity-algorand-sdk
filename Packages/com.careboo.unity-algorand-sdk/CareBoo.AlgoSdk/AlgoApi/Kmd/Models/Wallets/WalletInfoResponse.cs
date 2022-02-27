@@ -3,7 +3,7 @@ using System;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct WalletInfoResponse
+    public partial struct WalletInfoResponse
         : IEquatable<WalletInfoResponse>
     {
         [AlgoApiField("wallet_handle", null)]

@@ -5,7 +5,7 @@ using Unity.Collections;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct SignTransactionRequest
+    public partial struct SignTransactionRequest
         : IEquatable<SignTransactionRequest>
     {
         [AlgoApiField("public_key", null)]

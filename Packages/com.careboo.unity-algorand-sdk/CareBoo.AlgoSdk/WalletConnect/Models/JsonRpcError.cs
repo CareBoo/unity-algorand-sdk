@@ -21,7 +21,7 @@ namespace AlgoSdk.WalletConnect
     }
 
     [AlgoApiObject]
-    public struct JsonRpcError
+    public partial struct JsonRpcError
         : IEquatable<JsonRpcError>
     {
         [AlgoApiField("code", null)]

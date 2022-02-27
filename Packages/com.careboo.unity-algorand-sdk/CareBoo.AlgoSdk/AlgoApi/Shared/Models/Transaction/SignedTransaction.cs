@@ -38,7 +38,7 @@ namespace AlgoSdk
     /// <typeparam name="TTransaction">The type of the transaction backing this struct.</typeparam>
     [AlgoApiFormatter(typeof(SignedTransactionFormatter<>))]
     [Serializable]
-    public struct Signed<TTransaction>
+    public partial struct Signed<TTransaction>
         : IEquatable<Signed<TTransaction>>
         where TTransaction : struct, ITransaction, IEquatable<TTransaction>
     {

@@ -8,7 +8,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct MiniAssetHolding
+    public partial struct MiniAssetHolding
         : IEquatable<MiniAssetHolding>
     {
         [AlgoApiField("address", null)]

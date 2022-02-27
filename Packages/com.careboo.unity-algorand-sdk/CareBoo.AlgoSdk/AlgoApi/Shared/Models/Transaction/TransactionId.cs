@@ -15,7 +15,7 @@ namespace AlgoSdk
     [AlgoApiFormatter(typeof(TransactionIdFormatter))]
     [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
     [Serializable]
-    public struct TransactionId
+    public partial struct TransactionId
         : IByteArray
         , IEquatable<TransactionId>
     {

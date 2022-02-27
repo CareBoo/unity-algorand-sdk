@@ -7,7 +7,7 @@ namespace AlgoSdk
     /// The node status from <see cref="IAlgodClient.GetCurrentStatus"/> and <see cref="IAlgodClient.GetStatusAfterWaitingForRound(ulong)"/>
     /// </summary>
     [AlgoApiObject]
-    public struct Status
+    public partial struct Status
         : IEquatable<Status>
     {
         /// <summary>

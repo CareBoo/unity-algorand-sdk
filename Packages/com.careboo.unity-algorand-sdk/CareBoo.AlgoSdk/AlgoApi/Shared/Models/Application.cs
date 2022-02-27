@@ -13,7 +13,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct Application
+    public partial struct Application
         : IEquatable<Application>
     {
         /// <summary>

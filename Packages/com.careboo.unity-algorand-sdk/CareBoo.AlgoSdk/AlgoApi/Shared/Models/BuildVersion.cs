@@ -8,7 +8,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct BuildVersion
+    public partial struct BuildVersion
         : IEquatable<BuildVersion>
     {
         [AlgoApiField("branch", null)]

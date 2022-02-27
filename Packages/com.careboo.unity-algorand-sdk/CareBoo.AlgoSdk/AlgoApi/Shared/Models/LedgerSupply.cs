@@ -8,7 +8,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct LedgerSupply
+    public partial struct LedgerSupply
         : IEquatable<LedgerSupply>
     {
         [AlgoApiField("current_round", null)]

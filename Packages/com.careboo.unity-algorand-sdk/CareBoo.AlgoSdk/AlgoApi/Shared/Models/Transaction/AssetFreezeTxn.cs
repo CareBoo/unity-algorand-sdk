@@ -77,7 +77,7 @@ namespace AlgoSdk
 
     [AlgoApiObject]
     [Serializable]
-    public struct AssetFreezeTxn
+    public partial struct AssetFreezeTxn
         : IAssetFreezeTxn
         , IEquatable<AssetFreezeTxn>
     {
@@ -205,7 +205,7 @@ namespace AlgoSdk
 
         [AlgoApiObject]
         [Serializable]
-        public struct Params
+        public partial struct Params
             : IEquatable<Params>
         {
             [AlgoApiField("address", "fadd")]

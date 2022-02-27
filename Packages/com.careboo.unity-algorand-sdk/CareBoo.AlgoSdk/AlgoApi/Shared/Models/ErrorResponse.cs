@@ -9,7 +9,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiFormatter(typeof(ErrorResponseFormatter))]
     [Serializable]
-    public struct ErrorResponse
+    public partial struct ErrorResponse
         : IEquatable<ErrorResponse>
     {
         public string Data;

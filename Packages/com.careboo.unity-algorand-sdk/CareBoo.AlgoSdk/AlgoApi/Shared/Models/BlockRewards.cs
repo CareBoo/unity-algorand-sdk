@@ -37,7 +37,7 @@ namespace AlgoSdk
     }
 
     [AlgoApiObject]
-    public struct BlockRewards
+    public partial struct BlockRewards
         : IEquatable<BlockRewards>
         , IBlockRewards
     {

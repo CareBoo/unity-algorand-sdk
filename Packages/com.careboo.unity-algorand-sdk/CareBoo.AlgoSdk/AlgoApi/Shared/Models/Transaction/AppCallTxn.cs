@@ -401,7 +401,7 @@ namespace AlgoSdk
 
     [AlgoApiObject]
     [Serializable]
-    public struct AppCallTxn
+    public partial struct AppCallTxn
           : IAppCallTxn
           , IEquatable<AppCallTxn>
     {
@@ -586,7 +586,7 @@ namespace AlgoSdk
 
         [AlgoApiObject]
         [Serializable]
-        public struct Params
+        public partial struct Params
             : IEquatable<Params>
         {
             [AlgoApiField("application-id", "apid")]

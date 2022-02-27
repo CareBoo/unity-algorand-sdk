@@ -10,7 +10,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct TransactionParams
+    public partial struct TransactionParams
         : IEquatable<TransactionParams>
     {
         /// <summary>

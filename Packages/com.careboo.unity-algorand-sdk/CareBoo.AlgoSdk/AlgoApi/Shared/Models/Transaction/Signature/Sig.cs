@@ -8,7 +8,7 @@ namespace AlgoSdk
 {
     [Serializable]
     [AlgoApiFormatter(typeof(ByteArrayFormatter<Sig>))]
-    public struct Sig
+    public partial struct Sig
         : ISignature
         , IEquatable<Sig>
         , IByteArray

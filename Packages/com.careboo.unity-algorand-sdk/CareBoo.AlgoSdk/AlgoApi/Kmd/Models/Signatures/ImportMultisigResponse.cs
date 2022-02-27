@@ -3,7 +3,7 @@ using System;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct ImportMultisigResponse
+    public partial struct ImportMultisigResponse
         : IEquatable<ImportMultisigResponse>
     {
         [AlgoApiField("address", null)]

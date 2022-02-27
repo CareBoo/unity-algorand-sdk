@@ -7,7 +7,7 @@ using static AlgoSdk.Crypto.Ed25519;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct LogicSig
+    public partial struct LogicSig
         : ISignature
         , IEquatable<LogicSig>
     {

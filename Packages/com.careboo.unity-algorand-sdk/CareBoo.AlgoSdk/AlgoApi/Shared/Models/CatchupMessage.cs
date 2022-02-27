@@ -9,7 +9,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct CatchupMessage
+    public partial struct CatchupMessage
         : IEquatable<CatchupMessage>
     {
         /// <summary>

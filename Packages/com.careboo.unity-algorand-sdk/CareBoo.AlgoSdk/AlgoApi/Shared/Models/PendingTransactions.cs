@@ -8,7 +8,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct PendingTransactions
+    public partial struct PendingTransactions
         : IEquatable<PendingTransactions>
     {
         /// <summary>

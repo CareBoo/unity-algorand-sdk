@@ -3,7 +3,7 @@ using System;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct SignProgramMultisigResponse
+    public partial struct SignProgramMultisigResponse
         : IEquatable<SignProgramMultisigResponse>
     {
         [AlgoApiField("multisig", null)]

@@ -4,7 +4,7 @@ using AlgoSdk.Crypto;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct ExportMultisigResponse
+    public partial struct ExportMultisigResponse
         : IEquatable<ExportMultisigResponse>
     {
         [AlgoApiField("error", null)]

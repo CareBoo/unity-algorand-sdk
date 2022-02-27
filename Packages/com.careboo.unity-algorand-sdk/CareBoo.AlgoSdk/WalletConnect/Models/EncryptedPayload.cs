@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 namespace AlgoSdk.WalletConnect
 {
     [AlgoApiObject]
-    public struct EncryptedPayload
+    public partial struct EncryptedPayload
     {
         [AlgoApiField("iv", null)]
         public Hex Iv;

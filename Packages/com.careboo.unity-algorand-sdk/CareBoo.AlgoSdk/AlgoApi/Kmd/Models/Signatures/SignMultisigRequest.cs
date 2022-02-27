@@ -5,7 +5,7 @@ using Unity.Collections;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct SignMultisigRequest
+    public partial struct SignMultisigRequest
         : IEquatable<SignMultisigRequest>
     {
         [AlgoApiField("partial_multisig", null)]

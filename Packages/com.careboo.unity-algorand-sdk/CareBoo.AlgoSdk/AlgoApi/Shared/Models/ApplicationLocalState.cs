@@ -8,7 +8,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct ApplicationLocalState
+    public partial struct ApplicationLocalState
         : IEquatable<ApplicationLocalState>
     {
         /// <summary>

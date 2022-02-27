@@ -8,7 +8,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct EvalDeltaKeyValue
+    public partial struct EvalDeltaKeyValue
         : IEquatable<EvalDeltaKeyValue>
     {
         [AlgoApiField("key", "key")]

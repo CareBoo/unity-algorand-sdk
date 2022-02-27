@@ -4,7 +4,7 @@ using Unity.Collections;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct TransactionsResponse
+    public partial struct TransactionsResponse
         : IEquatable<TransactionsResponse>
         , IPaginatedResponse
     {

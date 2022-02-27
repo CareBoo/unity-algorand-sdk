@@ -8,7 +8,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct StateSchema
+    public partial struct StateSchema
         : IEquatable<StateSchema>
     {
         /// <summary>

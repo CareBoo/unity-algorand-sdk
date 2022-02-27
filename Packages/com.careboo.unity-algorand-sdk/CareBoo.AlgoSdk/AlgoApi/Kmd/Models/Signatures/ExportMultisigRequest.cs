@@ -4,7 +4,7 @@ using Unity.Collections;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct ExportMultisigRequest
+    public partial struct ExportMultisigRequest
         : IEquatable<ExportMultisigRequest>
     {
         [AlgoApiField("address", null)]
