@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 
 namespace AlgoSdk
 {
-    [AttributeUsage(AttributeTargets.Struct | AttributeTargets.Class | AttributeTargets.Enum, Inherited = false, AllowMultiple = true)]
+    [AttributeUsage(AttributeTargets.Struct | AttributeTargets.Class | AttributeTargets.Enum, Inherited = false, AllowMultiple = false)]
     [Conditional("UNITY_EDITOR")]
     public sealed class AlgoApiFormatterAttribute : ProvideSourceInfoAttribute
     {
@@ -13,11 +13,13 @@ namespace AlgoSdk
 
         public AlgoApiFormatterAttribute(
             Type formatterType,
+            [CallerMemberName] string member = "",
             [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0)
+            [CallerLineNumber] int lineNumber = 0
+        ) : base(member, filePath, lineNumber)
         {
             if (!formatterType.GetInterfaces().Any(t => t.IsGenericType && t.GetGenericTypeDefinition() == typeof(IAlgoApiFormatter<>)))
-                UnityEngine.Debug.LogError($"`{nameof(formatterType)}` given for `{typeof(AlgoApiFormatterAttribute)}` at {filePath} line {lineNumber} doesn't implement `{typeof(IAlgoApiFormatter<>)}`");
+                UnityEngine.Debug.LogError($"`{nameof(formatterType)}` given for `{typeof(AlgoApiFormatterAttribute)}` at {AbsoluteFilePath} line {LineNumber} doesn't implement `{typeof(IAlgoApiFormatter<>)}`");
 
             this.formatterType = formatterType;
         }

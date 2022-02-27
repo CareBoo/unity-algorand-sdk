@@ -2,33 +2,22 @@ using System;
 using System.CodeDom;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Reflection;
 using AlgoSdk.Formatters;
-using Microsoft.CSharp;
-using UnityEngine;
 
 namespace AlgoSdk.Editor.CodeGen
 {
-    public interface IAlgoApiCompileUnit
-    {
-        Type Type { get; }
-        ProvideSourceInfoAttribute SourceInfo { get; }
-        CodeCompileUnit CompileUnit { get; }
-    }
-
     /// <summary>
     /// Extends a partial class or struct
     /// </summary>
-    public abstract class AlgoApiCompileUnit : IAlgoApiCompileUnit
+    public abstract class AlgoApiCompileUnit
     {
         const string InitializeFormatterStaticMethodName = "__generated__InitializeAlgoApiFormatter";
         const string FormatterStaticFieldName = "__generated__DidGenerateFields";
 
         public Type Type { get; protected set; }
         public ProvideSourceInfoAttribute SourceInfo { get; protected set; }
-        public CodeTypeDeclaration TargetType { get; protected set; }
         public CodeCompileUnit CompileUnit { get; protected set; }
 
         public AlgoApiCompileUnit(Type type)
@@ -49,10 +38,10 @@ namespace AlgoSdk.Editor.CodeGen
                 return null;
             var unit = new CodeCompileUnit();
             var ns = new CodeNamespace(type.Namespace);
-            TargetType = ExtendPartialClassOrStructTypeDeclaration(type);
-            TargetType.Members.Add(FormatterStaticFieldExpression());
-            TargetType.Members.Add(InitializeFormatterStaticMethodExpression(type));
-            ns.Types.Add(TargetType);
+            var targetType = ExtendPartialClassOrStructTypeDeclaration(type);
+            targetType.Members.Add(FormatterStaticFieldExpression());
+            targetType.Members.Add(InitializeFormatterStaticMethodExpression(type));
+            ns.Types.Add(targetType);
             unit.Namespaces.Add(ns);
             return unit;
         }
@@ -155,11 +144,42 @@ namespace AlgoSdk.Editor.CodeGen
             var formatterAttribute = type.GetCustomAttributes<AlgoApiFormatterAttribute>().First();
             var formatterType = formatterAttribute.FormatterType;
             var formatterTypeReference = new CodeTypeReference(formatterType);
-            var typeParams = new CodeTypeReference[TargetType.TypeParameters.Count];
-            for (var i = 0; i < typeParams.Length; i++)
-                typeParams[i] = new CodeTypeReference(TargetType.TypeParameters[i]);
-            formatterTypeReference.TypeArguments.Add(new CodeTypeReference(TargetType.Name, typeParams));
+            if (formatterType.IsGenericTypeDefinition)
+                formatterTypeReference.TypeArguments.AddRange(FormatterTypeParameters(type, formatterType));
             return new CodeObjectCreateExpression(formatterTypeReference);
         }
+
+        protected CodeTypeReference[] FormatterTypeParameters(Type type, Type formatterType)
+        {
+            if (!formatterType.IsGenericTypeDefinition)
+                return new CodeTypeReference[0];
+
+            var formatterTypeArgumentCount = formatterType.GenericTypeArguments.Length;
+            if (type.IsGenericType)
+            {
+                var typeArgs = new List<CodeTypeReference>();
+                var typeArgumentCount = type.GenericTypeArguments.Length;
+                var indexedTypeParams = GetIndexedTypeParameters(typeArgumentCount)
+                    .Select(tp => new CodeTypeReference(tp))
+                    .ToArray()
+                    ;
+
+                if (formatterTypeArgumentCount == typeArgumentCount + 1)
+                    typeArgs.Add(new CodeTypeReference(type.Name, indexedTypeParams));
+                typeArgs.AddRange(indexedTypeParams);
+                return typeArgs.ToArray();
+            }
+            else if (formatterTypeArgumentCount == 1)
+            {
+                return new[] { new CodeTypeReference(type) };
+            }
+            throw new ArgumentException($"Got incorrect number of type arguments {formatterTypeArgumentCount} for formatter {formatterType.FullName}", nameof(formatterType));
+        }
+
+        protected IEnumerable<CodeTypeParameter> GetIndexedTypeParameters(int count) =>
+            Enumerable.Range(0, count)
+                .Select(i => $"T{i}")
+                .Select(name => new CodeTypeParameter(name))
+                ;
     }
 }

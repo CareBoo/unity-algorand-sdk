@@ -1,5 +1,6 @@
 namespace AlgoSdk
 {
+    [AlgoApiFormatter(typeof(EitherFormatter<,>))]
     public partial struct Either<T, U>
     {
         public T Value1 { get; private set; }

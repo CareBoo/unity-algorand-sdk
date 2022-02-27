@@ -24,10 +24,3 @@ namespace AlgoSdk.WalletConnect
         }
     }
 }
-
-namespace AlgoSdk
-{
-    [AlgoApiFormatter(typeof(EitherFormatter<JsonRpcResponse, JsonRpcRequest>))]
-    [AlgoApiFormatter(typeof(EitherFormatter<JsonRpcRequest, JsonRpcResponse>))]
-    public partial struct Either<T, U> { }
-}

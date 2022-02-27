@@ -42,11 +42,11 @@ namespace AlgoSdk.Editor.CodeGen
                 Debug.Log($"Skipping exporting compile unit for type {compileUnit.Type.FullName} because could not generate its compile unit.");
 
             var sourcePath = compileUnit.SourceInfo.AbsoluteFilePath;
+            Debug.Log($"Found attribute at {sourcePath}");
+            Debug.Log($"DirectoryName: {Path.GetDirectoryName(sourcePath)}");
+            var sourceDir = Path.GetDirectoryName(sourcePath);
             var filenameWithoutExtension = Path.GetFileNameWithoutExtension(sourcePath);
-            var outputDir = Path.Combine(Path.GetPathRoot(sourcePath), filenameWithoutExtension);
-            if (!Directory.Exists(outputDir))
-                Directory.CreateDirectory(outputDir);
-            var outputPath = Path.Combine(outputDir, OutputFileName);
+            var outputPath = Path.Combine(sourceDir, $"{filenameWithoutExtension}.{OutputFileName}");
             var codeProvider = new CSharpCodeProvider();
             using var stream = new StreamWriter(outputPath, append: false);
             var tw = new IndentedTextWriter(stream);
