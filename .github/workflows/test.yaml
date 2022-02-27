@@ -24,12 +24,12 @@ jobs:
       matrix:
         unityVersion: [2020.3.27f1, 2021.2.9f1]
         targetPlatform:
-          - mac-mono
-          - windows-mono
+          # - mac-mono
+          # - windows-mono
           - linux-il2cpp
-          - ios
-          - android
-          - webgl
+          # - ios
+          # - android
+          # - webgl
 
     steps:
       - name: Checkout repository
