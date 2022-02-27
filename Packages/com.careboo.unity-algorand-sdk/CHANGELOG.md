@@ -5,6 +5,25 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [2.0.0-pre.3](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.2...v2.0.0-pre.3) (2022-02-27)
+
+
+### Bug Fixes
+
+* **walletconnect:** fix issue where new WalletConnect assembly was not compiling in Unity 2020.3 ([0a1ec26](https://github.com/CareBoo/unity-algorand-sdk/commit/0a1ec269d60e6a8d7cec50ea8496b9539b78916b))
+
+
+### Code Refactoring
+
+* **walletconnect:** move WalletConnect code to its own assembly ([e6668cd](https://github.com/CareBoo/unity-algorand-sdk/commit/e6668cd68b99f81fdd8afedfcae35141e70b2284))
+
+
+### BREAKING CHANGES
+
+* **walletconnect:** Code in the AlgoSdk.WalletConnect namespace are now in the
+CareBoo.AlgoSdk.WalletConnect assembly. Additionally, Hex has been moved to the AlgoSdk namespace
+and remains in the CareBoo.AlgoSdk assembly.
+
 # [2.0.0-pre.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.1...v2.0.0-pre.2) (2022-02-25)
 
 
