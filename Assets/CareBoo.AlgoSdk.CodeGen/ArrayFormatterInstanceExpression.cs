@@ -9,7 +9,7 @@ namespace AlgoSdk.Editor.CodeGen
     {
         public ArrayFormatterInstanceExpression(Type arrayType)
             : base(
-                targetObject: new CodeTypeReferenceExpression(typeof(ArrayFormatter<>).MakeGenericType(arrayType.GetElementType())),
+                targetObject: new CodeTypeReferenceExpression(typeof(ArrayFormatter<>).MakeGenericType(arrayType.GetElementType()).FullNameExpression()),
                 fieldName: nameof(ArrayFormatter<int>.Instance)
             )
         { }
