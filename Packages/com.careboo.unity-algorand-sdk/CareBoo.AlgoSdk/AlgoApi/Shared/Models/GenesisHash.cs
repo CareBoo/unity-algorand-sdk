@@ -12,7 +12,7 @@ namespace AlgoSdk
     /// </summary>
     [Serializable]
     [AlgoApiFormatter(typeof(GenesisHashFormatter))]
-    public struct GenesisHash
+    public partial struct GenesisHash
         : IByteArray
         , IEquatable<GenesisHash>
     {

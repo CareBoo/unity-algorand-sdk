@@ -8,7 +8,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct ApplicationParams
+    public partial struct ApplicationParams
         : IEquatable<ApplicationParams>
     {
         /// <summary>

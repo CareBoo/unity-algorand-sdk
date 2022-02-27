@@ -4,7 +4,7 @@ using Unity.Collections;
 namespace AlgoSdk.WalletConnect
 {
     [AlgoApiObject]
-    public struct NetworkMessage
+    public partial struct NetworkMessage
         : IEquatable<NetworkMessage>
     {
         [AlgoApiField("topic", null)]

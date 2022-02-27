@@ -7,7 +7,7 @@ namespace AlgoSdk
     /// A transaction found in a <see cref="BlockResponse"/> from <see cref="IAlgodClient.GetBlock"/>.
     /// </summary>
     [AlgoApiObject]
-    public struct BlockTransaction
+    public partial struct BlockTransaction
         : IEquatable<BlockTransaction>
     {
         /// <summary>

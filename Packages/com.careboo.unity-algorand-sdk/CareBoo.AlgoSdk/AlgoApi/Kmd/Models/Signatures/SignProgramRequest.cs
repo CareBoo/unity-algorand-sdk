@@ -4,7 +4,7 @@ using Unity.Collections;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct SignProgramRequest
+    public partial struct SignProgramRequest
         : IEquatable<SignProgramRequest>
     {
         [AlgoApiField("address", null)]

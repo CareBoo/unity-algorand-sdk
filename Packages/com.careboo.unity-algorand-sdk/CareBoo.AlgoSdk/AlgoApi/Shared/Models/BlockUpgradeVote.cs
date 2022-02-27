@@ -23,7 +23,7 @@ namespace AlgoSdk
 
     [AlgoApiObject]
     [Serializable]
-    public struct BlockUpgradeVote
+    public partial struct BlockUpgradeVote
         : IEquatable<BlockUpgradeVote>
         , IBlockUpgradeVote
     {

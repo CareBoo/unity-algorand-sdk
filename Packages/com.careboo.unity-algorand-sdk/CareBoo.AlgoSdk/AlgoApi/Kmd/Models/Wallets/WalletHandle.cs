@@ -3,7 +3,7 @@ using System;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct WalletHandle
+    public partial struct WalletHandle
         : IEquatable<WalletHandle>
     {
         [AlgoApiField("expires_seconds", null)]

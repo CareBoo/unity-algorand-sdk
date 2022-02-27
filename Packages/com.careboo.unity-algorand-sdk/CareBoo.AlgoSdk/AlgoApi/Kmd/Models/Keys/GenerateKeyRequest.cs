@@ -4,7 +4,7 @@ using Unity.Collections;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct GenerateKeyRequest
+    public partial struct GenerateKeyRequest
         : IEquatable<GenerateKeyRequest>
     {
 

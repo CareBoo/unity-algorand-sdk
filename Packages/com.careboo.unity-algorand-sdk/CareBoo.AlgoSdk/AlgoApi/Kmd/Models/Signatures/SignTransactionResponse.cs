@@ -3,7 +3,7 @@ using System;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct SignTransactionResponse
+    public partial struct SignTransactionResponse
         : IEquatable<SignTransactionResponse>
     {
         [AlgoApiField("signed_transaction", null)]

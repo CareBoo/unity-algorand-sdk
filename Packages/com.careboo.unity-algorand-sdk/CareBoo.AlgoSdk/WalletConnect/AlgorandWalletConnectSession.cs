@@ -3,7 +3,6 @@ using System.Text;
 using System.Threading;
 using AlgoSdk.Json;
 using AlgoSdk.LowLevel;
-using AlgoSdk.WalletConnect;
 using Cysharp.Threading.Tasks;
 using Netcode.Transports.WebSocket;
 using Unity.Collections;
@@ -400,11 +399,4 @@ namespace AlgoSdk.WalletConnect
             Connected
         }
     }
-}
-
-namespace AlgoSdk
-{
-    [AlgoApiFormatter(typeof(EitherFormatter<byte[][], SignTxnsError>))]
-    [AlgoApiFormatter(typeof(EitherFormatter<SignTxnsError, byte[][]>))]
-    public partial struct Either<T, U> { }
 }

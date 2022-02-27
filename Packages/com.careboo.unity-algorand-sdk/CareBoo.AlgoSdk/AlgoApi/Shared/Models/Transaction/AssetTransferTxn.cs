@@ -161,7 +161,7 @@ namespace AlgoSdk
 
     [AlgoApiObject]
     [Serializable]
-    public struct AssetTransferTxn
+    public partial struct AssetTransferTxn
         : IAssetTransferTxn
         , IEquatable<AssetTransferTxn>
     {
@@ -310,7 +310,7 @@ namespace AlgoSdk
         }
 
         [AlgoApiObject]
-        public struct Params
+        public partial struct Params
             : IEquatable<Params>
         {
             [AlgoApiField("asset-id", "xaid")]

@@ -6,7 +6,7 @@ namespace AlgoSdk.WalletConnect
     /// Options for an <see cref="AlgoSignTxnsRequest"/>.
     /// </summary>
     [AlgoApiObject]
-    public struct SignTxnsOpts
+    public partial struct SignTxnsOpts
         : IEquatable<SignTxnsOpts>
     {
         /// <summary>

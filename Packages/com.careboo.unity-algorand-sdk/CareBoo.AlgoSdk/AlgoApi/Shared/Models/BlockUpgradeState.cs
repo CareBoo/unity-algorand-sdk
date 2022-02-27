@@ -34,7 +34,7 @@ namespace AlgoSdk
 
     [AlgoApiObject]
     [Serializable]
-    public struct BlockUpgradeState
+    public partial struct BlockUpgradeState
         : IEquatable<BlockUpgradeState>
         , IBlockUpgradeState
     {

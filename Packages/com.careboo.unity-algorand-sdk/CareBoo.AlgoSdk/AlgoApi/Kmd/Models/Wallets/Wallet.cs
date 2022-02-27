@@ -5,7 +5,7 @@ namespace AlgoSdk
 {
     [AlgoApiObject]
     [Serializable]
-    public struct Wallet
+    public partial struct Wallet
         : IEquatable<Wallet>
     {
         [AlgoApiField("driver_name", null)]

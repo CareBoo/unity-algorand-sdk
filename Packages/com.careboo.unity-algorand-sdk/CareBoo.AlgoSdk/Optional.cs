@@ -3,12 +3,9 @@ using AlgoSdk.Formatters;
 
 namespace AlgoSdk
 {
-    [AlgoApiFormatter(typeof(OptionalFormatter<bool>))]
-    [AlgoApiFormatter(typeof(OptionalFormatter<int>))]
-    [AlgoApiFormatter(typeof(OptionalFormatter<ulong>))]
-    [AlgoApiFormatter(typeof(OptionalFormatter<uint>))]
+    [AlgoApiFormatter(typeof(OptionalFormatter<>))]
     [Serializable]
-    public struct Optional<T>
+    public partial struct Optional<T>
         : IEquatable<Optional<T>>
         where T : struct, IEquatable<T>
     {

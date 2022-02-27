@@ -3,7 +3,7 @@ using System;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct ExportMasterKeyResponse
+    public partial struct ExportMasterKeyResponse
         : IEquatable<ExportMasterKeyResponse>
     {
         [AlgoApiField("master_derivation_key", null)]

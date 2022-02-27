@@ -7,7 +7,7 @@ namespace AlgoSdk.WalletConnect
     /// multisig accounts via WalletConnect. See <see cref="Multisig"/> for more information.
     /// </summary>
     [AlgoApiObject]
-    public struct MultisigMetadata
+    public partial struct MultisigMetadata
         : IEquatable<MultisigMetadata>
     {
         /// <summary>

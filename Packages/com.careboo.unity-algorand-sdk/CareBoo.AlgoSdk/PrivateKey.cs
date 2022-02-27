@@ -1,10 +1,10 @@
 using System;
 using System.Runtime.InteropServices;
-using Unity.Collections;
-using UnityEngine;
-using AlgoSdk.LowLevel;
 using AlgoSdk.Crypto;
 using AlgoSdk.Formatters;
+using AlgoSdk.LowLevel;
+using Unity.Collections;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -14,7 +14,7 @@ namespace AlgoSdk
     [Serializable]
     [AlgoApiFormatter(typeof(PrivateKeyFormatter))]
     [StructLayout(LayoutKind.Explicit, Size = 32)]
-    public struct PrivateKey
+    public partial struct PrivateKey
         : IEquatable<PrivateKey>
         , IByteArray
     {

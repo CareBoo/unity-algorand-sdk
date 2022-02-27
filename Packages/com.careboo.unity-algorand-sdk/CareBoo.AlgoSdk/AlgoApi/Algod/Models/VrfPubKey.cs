@@ -13,7 +13,7 @@ namespace AlgoSdk
     [AlgoApiFormatter(typeof(ByteArrayFormatter<VrfPubKey>))]
     [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
     [Serializable]
-    public struct VrfPubKey
+    public partial struct VrfPubKey
         : IEquatable<VrfPubKey>
         , IByteArray
     {

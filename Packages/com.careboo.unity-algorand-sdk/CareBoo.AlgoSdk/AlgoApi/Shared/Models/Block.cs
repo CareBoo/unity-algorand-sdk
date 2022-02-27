@@ -10,7 +10,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct Block
+    public partial struct Block
         : IEquatable<Block>
         , IBlockRewards
         , IBlockUpgradeState

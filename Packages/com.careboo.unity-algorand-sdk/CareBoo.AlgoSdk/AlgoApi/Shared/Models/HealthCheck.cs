@@ -7,7 +7,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct HealthCheck
+    public partial struct HealthCheck
         : IEquatable<HealthCheck>
     {
         [AlgoApiField("data", "data")]

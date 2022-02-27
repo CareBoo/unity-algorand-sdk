@@ -3,7 +3,7 @@ using System;
 namespace AlgoSdk.WalletConnect
 {
     [AlgoApiObject]
-    public struct WalletConnectSessionData
+    public partial struct WalletConnectSessionData
         : IEquatable<WalletConnectSessionData>
     {
         [AlgoApiField("peerId", null)]

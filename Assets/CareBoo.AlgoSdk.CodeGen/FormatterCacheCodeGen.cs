@@ -1,271 +1,61 @@
-using System.CodeDom;
-using UnityEditor;
-using System.Linq;
-using System.Reflection;
-using System.Collections.Generic;
 using System;
-using System.IO;
-using Microsoft.CSharp;
 using System.CodeDom.Compiler;
-using AlgoSdk.Formatters;
+using System.IO;
+using System.Linq;
+using Microsoft.CSharp;
+using UnityEditor;
+using UnityEngine;
 
 namespace AlgoSdk.Editor.CodeGen
 {
     public class FormatterCacheCodeGen
     {
-        const string outputFileName = "AlgoApiFormatterLookup.gen.cs";
-        CodeCompileUnit targetUnit;
-        CodeTypeDeclaration targetClass;
-        CodeFieldReferenceExpression lookupField;
-        HashSet<Type> AddedTypes = new HashSet<Type>();
-
-        public FormatterCacheCodeGen()
-        {
-            targetUnit = new CodeCompileUnit();
-            CodeNamespace ns = new CodeNamespace(typeof(AlgoApiFormatterLookup).Namespace);
-            targetClass = new CodeTypeDeclaration(nameof(AlgoApiFormatterLookup));
-            targetClass.IsClass = true;
-            targetClass.IsPartial = true;
-            targetClass.TypeAttributes = TypeAttributes.Public | TypeAttributes.Sealed;
-            ns.Types.Add(targetClass);
-            targetUnit.Namespaces.Add(ns);
-            lookupField = new CodeFieldReferenceExpression(new CodeTypeReferenceExpression(typeof(AlgoApiFormatterLookup)), AlgoApiFormatterLookup.LookupFieldName);
-        }
-
-        public void CreateEnsureFormatterLookup(
-            IEnumerable<Type> algoApiObjTypes,
-            IEnumerable<Type> algoApiFormatterTypes)
-        {
-            var ensureLookupsMethod = new CodeMemberMethod();
-            ensureLookupsMethod.Name = AlgoApiFormatterLookup.EnsureLookupMethodName;
-            ensureLookupsMethod.Attributes = MemberAttributes.Private | MemberAttributes.Static;
-            ensureLookupsMethod.ReturnType = new CodeTypeReference(typeof(void));
-            var initLookupMethod = new CodeMethodInvokeExpression(
-                new CodeTypeReferenceExpression(typeof(AlgoApiFormatterLookup)),
-                AlgoApiFormatterLookup.InitLookupMethodName);
-            ensureLookupsMethod.Statements.Add(initLookupMethod);
-            foreach (var statement in algoApiObjTypes.SelectMany(GetLookupAddExpressionForAlgoApiObjType))
-                ensureLookupsMethod.Statements.Add(statement);
-            foreach (var statement in algoApiFormatterTypes.SelectMany(GetLookupAddExpressionForAlgoApiFormatterType))
-                ensureLookupsMethod.Statements.Add(statement);
-
-            targetClass.Members.Add(ensureLookupsMethod);
-        }
-
-        public string ExportToDirectory(string filePath)
-        {
-            var codeProvider = new CSharpCodeProvider();
-            using var stream = new StreamWriter(filePath, append: false);
-            var tw = new IndentedTextWriter(stream);
-            var options = new CodeGeneratorOptions();
-            options.BracingStyle = "C";
-            codeProvider.GenerateCodeFromCompileUnit(targetUnit, tw, options);
-            return filePath;
-        }
-
-        IEnumerable<CodeExpression> GetLookupAddExpressionForAlgoApiObjType(Type algoApiObjType)
-        {
-            var result = new List<CodeExpression>();
-            var fieldKeys = GetKeyProps(algoApiObjType);
-            var createFormatterExpression = GetCreateFormatterExpression(algoApiObjType, fieldKeys);
-
-            if (AddedTypes.Add(algoApiObjType))
-            {
-                result.Add(
-                   AddFormatterExpression(
-                       algoApiObjType,
-                       createFormatterExpression)
-               );
-            }
-            foreach (var type in fieldKeys.Select(x => x.type).Where(x => x.IsArray))
-            {
-                createFormatterExpression = new CodeObjectCreateExpression(
-                    typeof(ArrayFormatter<>).MakeGenericType(type.GetElementType())
-                );
-                if (AddedTypes.Add(type))
-                {
-                    result.Add(
-                       AddFormatterExpression(
-                           type,
-                           createFormatterExpression
-                       )
-                   );
-                }
-            }
-            return result;
-        }
-
-        IEnumerable<CodeExpression> GetLookupAddExpressionForAlgoApiFormatterType(Type algoApiFormatterType)
-        {
-            var result = new List<CodeExpression>();
-            var formatterAttributes = algoApiFormatterType.GetCustomAttributes<AlgoApiFormatterAttribute>();
-            foreach (var formatterType in formatterAttributes.Select(x => x.FormatterType))
-            {
-                if (algoApiFormatterType.IsGenericType)
-                {
-                    algoApiFormatterType = formatterType.GetInterfaces()
-                        .Single(t => t.GetGenericTypeDefinition() == typeof(IAlgoApiFormatter<>))
-                        .GetGenericArguments()
-                        .First();
-                }
-                var typeofExpression = new CodeTypeOfExpression(new CodeTypeReference(algoApiFormatterType));
-                CodeExpression formatterExpression = new CodeObjectCreateExpression(formatterType);
-                if (AddedTypes.Add(algoApiFormatterType))
-                {
-                    result.Add(AddFormatterExpression(algoApiFormatterType, formatterExpression));
-                }
-            }
-            return result;
-        }
-
-        CodeExpression AddFormatterExpression(Type type, CodeExpression formatterExpression)
-        {
-            return new CodeMethodInvokeExpression(
-                new CodeTypeReferenceExpression(typeof(AlgoApiFormatterLookup)),
-                AlgoApiFormatterLookup.AddFormatterMethodName,
-                new CodeTypeOfExpression(new CodeTypeReference(type)),
-                formatterExpression);
-        }
-
-        CodeExpression GetCreateFormatterExpression(Type algoApiObjType, List<(AlgoApiField, MemberInfo, Type)> fieldKeys)
-        {
-            CodeExpression createdFormatterExpression = new CodeObjectCreateExpression(
-                typeof(AlgoApiObjectFormatter<>).MakeGenericType(algoApiObjType));
-            foreach (var (key, member, type) in fieldKeys)
-            {
-                createdFormatterExpression = new CodeMethodInvokeExpression(
-                    createdFormatterExpression,
-                    nameof(AlgoApiObjectFormatter<int>.Assign),
-                    GetAssignParamsExpressions(key, member, type));
-            }
-            return createdFormatterExpression;
-        }
-
-        CodeExpression[] GetAssignParamsExpressions(AlgoApiField key, MemberInfo member, Type memberType)
-        {
-            var declaringType = member.DeclaringType;
-            var memberName = member.Name;
-            var expressions = new List<CodeExpression>()
-            {
-                new CodePrimitiveExpression(key.JsonKeyName),
-                new CodePrimitiveExpression(key.MessagePackKeyName),
-                new CodeSnippetExpression($"({Format(declaringType)} x) => x.{memberName}"),
-                new CodeSnippetExpression($"(ref {Format(declaringType)} x, {Format(memberType)} value) => x.{memberName} = value"),
-            };
-            var equalityComparerType = GetEqualityComparerType(memberType);
-            if (equalityComparerType != null)
-            {
-                var equalityComparer = new CodePropertyReferenceExpression(
-                    new CodeTypeReferenceExpression(equalityComparerType),
-                    "Instance");
-                expressions.Add(equalityComparer);
-            }
-            expressions.Add(new CodePrimitiveExpression(key.ReadOnly));
-            return expressions.ToArray();
-        }
-
-        List<(AlgoApiField key, MemberInfo member, Type type)> GetKeyProps(Type algoApiObjType)
-        {
-            var fields = algoApiObjType.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance)
-                .Select(f => ((MemberInfo)f, f.FieldType));
-            var props = algoApiObjType.GetProperties(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance)
-                .Select(p => ((MemberInfo)p, p.PropertyType));
-            return props.Concat(fields)
-                .Select(GetKeyProp)
-                .Where(x => x.key != null)
-                .ToList();
-        }
-
-        (AlgoApiField key, MemberInfo member, Type type) GetKeyProp((MemberInfo member, Type type) prop)
-        {
-            return (KeyFromMember(prop.member), prop.member, prop.type);
-        }
-
-        Type GetEqualityComparerType(Type type)
-        {
-            if (equalityComparerLookup.TryGetValue(type, out var elementComparerType))
-                return elementComparerType;
-
-            var equatableType = typeof(IEquatable<>).MakeGenericType(type);
-            if (type.IsValueType && type.GetInterfaces().Any(t => t == equatableType))
-                return null;
-
-            if (type.IsArray)
-            {
-                var elementType = type.GetElementType();
-                elementComparerType = GetEqualityComparerType(elementType);
-                return elementComparerType == null
-                    ? typeof(ArrayComparer<>).MakeGenericType(elementType)
-                    : typeof(ArrayComparer<,>).MakeGenericType(elementType, elementComparerType)
-                    ;
-            }
-
-            if (type.IsEnum)
-            {
-                var underlyingTypeCode = Type.GetTypeCode(type.GetEnumUnderlyingType());
-                return underlyingTypeCode switch
-                {
-                    TypeCode.Byte => typeof(ByteEnumComparer<>).MakeGenericType(type),
-                    TypeCode.Int32 => typeof(IntEnumComparer<>).MakeGenericType(type),
-                    _ => throw new NotSupportedException($"{underlyingTypeCode} doesn't have an enum comparer...")
-                };
-            }
-
-            throw new NotSupportedException($"Could not find equality comparer or it doesn't implement `IEquatable<>` for type '{type.FullName}'");
-        }
-
-        string Format(Type type)
-        {
-            string name;
-            if (type.IsGenericType)
-            {
-                string genericArguments = type.GetGenericArguments()
-                                    .Select(Format)
-                                    .Aggregate((x1, x2) => $"{x1}, {x2}");
-                name = $"{type.FullName.Substring(0, type.FullName.IndexOf("`"))}<{genericArguments}>";
-            }
-            else if (type.IsArray)
-            {
-                string elementType = Format(type.GetElementType());
-                name = $"{elementType}[]";
-            }
-            else
-                name = type.FullName;
-            return name.Replace('+', '.');
-        }
-
-        AlgoApiField KeyFromMember(MemberInfo member)
-        {
-            return member.GetCustomAttribute<AlgoApiField>();
-        }
+        const string OutputFileName = "AlgoApiFormatters.gen.cs";
 
         [MenuItem("AlgoSdk/GenerateFormatterCache")]
         public static void GenerateFormatterCache()
         {
-            var relPath = Path.Combine("Packages/com.careboo.unity-algorand-sdk/CareBoo.AlgoSdk/AlgoApi/", outputFileName);
-            var fullPath = UnityEngine.Application.dataPath;
-            fullPath = fullPath.Substring(0, fullPath.Length - "Assets".Length);
-            fullPath = Path.Combine(fullPath, relPath);
+            var createdFiles = TypeCache.GetTypesWithAttribute(typeof(AlgoApiObjectAttribute))
+                .Concat(TypeCache.GetTypesWithAttribute(typeof(AlgoApiFormatterAttribute)))
+                .Select(t => new AlgoApiCompileUnit(t))
+                .Where(cu => cu.IsValid)
+                .GroupBy(cu => cu.SourceInfo.AbsoluteFilePath)
+                .Select(grouping => grouping.Aggregate(MergeCompileUnit))
+                .Select(ExportToDirectory)
+                .Where(filePath => filePath != null)
+                .ToArray()
+                ;
 
-            var algoApiObjTypes = TypeCache.GetTypesWithAttribute(typeof(AlgoApiObjectAttribute)).OrderBy(t => t.Name);
-            var algoFormatterTypes = TypeCache.GetTypesWithAttribute(typeof(AlgoApiFormatterAttribute)).OrderBy(t => t.Name);
-            var codegen = new FormatterCacheCodeGen();
-            codegen.CreateEnsureFormatterLookup(
-                algoApiObjTypes,
-                algoFormatterTypes);
-            var createdFile = codegen.ExportToDirectory(fullPath);
-            AssetDatabase.ImportAsset(relPath, ImportAssetOptions.ForceUpdate);
             AssetDatabase.Refresh();
         }
 
-        static string Format(IEnumerable<Type> types)
+        static AlgoApiCompileUnit MergeCompileUnit(AlgoApiCompileUnit cu1, AlgoApiCompileUnit cu2)
         {
-            return string.Join(",\n", types.Select((t, i) => $"{i}. {t}"));
+            cu1.Namespaces.AddRange(cu2.Namespaces);
+            return cu1;
         }
 
-        static readonly Dictionary<Type, Type> equalityComparerLookup = new Dictionary<Type, Type>()
+        static string ExportToDirectory(AlgoApiCompileUnit compileUnit)
         {
-            {typeof(string), typeof(StringComparer)}
-        };
+            try
+            {
+                var sourcePath = compileUnit.SourceInfo.AbsoluteFilePath;
+                var sourceDir = Path.GetDirectoryName(sourcePath);
+                var filenameWithoutExtension = Path.GetFileNameWithoutExtension(sourcePath);
+                var outputPath = Path.Combine(sourceDir, $"{filenameWithoutExtension}.{OutputFileName}");
+                var codeProvider = new CSharpCodeProvider();
+                using var stream = new StreamWriter(outputPath, append: false);
+                var tw = new IndentedTextWriter(stream);
+                var options = new CodeGeneratorOptions();
+                options.BracingStyle = "C";
+                codeProvider.GenerateCodeFromCompileUnit(compileUnit, tw, options);
+                return outputPath;
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"got error while exporting type {compileUnit.Type}: {ex}");
+                return null;
+            }
+        }
     }
 }

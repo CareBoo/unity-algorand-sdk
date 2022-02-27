@@ -3,7 +3,7 @@ using System;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct ApplicationResponse
+    public partial struct ApplicationResponse
         : IEquatable<ApplicationResponse>
         , IIndexerResponse
     {

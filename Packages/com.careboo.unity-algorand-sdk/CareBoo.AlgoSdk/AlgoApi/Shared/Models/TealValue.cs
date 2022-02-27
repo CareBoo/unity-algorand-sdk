@@ -21,7 +21,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct TealValue
+    public partial struct TealValue
         : IEquatable<TealValue>
     {
         /// <summary>
@@ -60,7 +60,7 @@ namespace AlgoSdk
 
     [Serializable]
     [AlgoApiFormatter(typeof(ByteArrayFormatter<TealBytes>))]
-    public struct TealBytes
+    public partial struct TealBytes
         : IEquatable<TealBytes>
         , IByteArray
     {

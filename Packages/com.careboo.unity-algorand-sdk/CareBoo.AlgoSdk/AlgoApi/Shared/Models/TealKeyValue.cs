@@ -9,7 +9,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct TealKeyValue
+    public partial struct TealKeyValue
         : IEquatable<TealKeyValue>
     {
         [AlgoApiField("key", "key")]

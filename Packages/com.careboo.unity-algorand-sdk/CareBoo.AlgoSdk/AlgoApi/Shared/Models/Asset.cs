@@ -8,7 +8,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct Asset
+    public partial struct Asset
         : IEquatable<Asset>
     {
         /// <summary>

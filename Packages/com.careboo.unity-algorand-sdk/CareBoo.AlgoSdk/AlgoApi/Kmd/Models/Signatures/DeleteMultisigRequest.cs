@@ -4,7 +4,7 @@ using Unity.Collections;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct DeleteMultisigRequest
+    public partial struct DeleteMultisigRequest
         : IEquatable<DeleteMultisigRequest>
     {
         [AlgoApiField("address", null)]

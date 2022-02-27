@@ -8,7 +8,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct TransactionIdResponse
+    public partial struct TransactionIdResponse
         : IEquatable<TransactionIdResponse>
     {
         /// <summary>

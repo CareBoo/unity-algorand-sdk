@@ -8,7 +8,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct BlockResponse
+    public partial struct BlockResponse
         : IEquatable<BlockResponse>
     {
         /// <summary>

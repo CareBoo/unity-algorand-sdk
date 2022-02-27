@@ -7,7 +7,7 @@ namespace AlgoSdk
     /// </summary>
     [Serializable]
     [AlgoApiFormatter(typeof(CompiledTealFormatter))]
-    public struct CompiledTeal
+    public partial struct CompiledTeal
         : IEquatable<CompiledTeal>
         , IEquatable<byte[]>
     {

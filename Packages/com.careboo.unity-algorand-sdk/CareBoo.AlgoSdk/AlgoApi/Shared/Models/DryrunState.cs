@@ -9,7 +9,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct DryrunState
+    public partial struct DryrunState
         : IEquatable<DryrunState>
     {
         /// <summary>

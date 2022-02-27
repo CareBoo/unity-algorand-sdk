@@ -12,7 +12,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct TransactionGroup
+    public partial struct TransactionGroup
         : IEquatable<TransactionGroup>
     {
         /// <summary>

@@ -126,7 +126,7 @@ namespace AlgoSdk
 
     [AlgoApiObject]
     [Serializable]
-    public struct KeyRegTxn
+    public partial struct KeyRegTxn
            : IKeyRegTxn
            , IEquatable<KeyRegTxn>
     {
@@ -282,7 +282,7 @@ namespace AlgoSdk
 
         [AlgoApiObject]
         [Serializable]
-        public struct Params
+        public partial struct Params
             : IEquatable<Params>
         {
             [AlgoApiField("vote-participation-key", "votekey")]

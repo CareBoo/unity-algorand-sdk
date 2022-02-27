@@ -9,7 +9,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct AccountParticipation
+    public partial struct AccountParticipation
         : IEquatable<AccountParticipation>
     {
         /// <summary>

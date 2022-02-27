@@ -106,7 +106,7 @@ namespace AlgoSdk
 
     [AlgoApiObject]
     [Serializable]
-    public struct AssetConfigTxn
+    public partial struct AssetConfigTxn
         : IAssetConfigTxn
         , IEquatable<AssetConfigTxn>
     {
@@ -228,7 +228,7 @@ namespace AlgoSdk
 
         [AlgoApiObject]
         [Serializable]
-        public struct Params
+        public partial struct Params
             : IEquatable<Params>
         {
             [AlgoApiField("asset-id", "xaid")]

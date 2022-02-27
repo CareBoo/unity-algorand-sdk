@@ -8,7 +8,7 @@ namespace AlgoSdk
     /// A non-deserialized object from an algorand service.
     /// </summary>
     [AlgoApiFormatter(typeof(AlgoApiObjectFormatter))]
-    public struct AlgoApiObject
+    public partial struct AlgoApiObject
         : IEquatable<AlgoApiObject>
     {
         /// <summary>

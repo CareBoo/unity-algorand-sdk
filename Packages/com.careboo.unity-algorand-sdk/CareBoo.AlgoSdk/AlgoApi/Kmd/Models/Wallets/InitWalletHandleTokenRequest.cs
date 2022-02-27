@@ -4,7 +4,7 @@ using Unity.Collections;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct InitWalletHandleTokenRequest
+    public partial struct InitWalletHandleTokenRequest
         : IEquatable<InitWalletHandleTokenRequest>
     {
         [AlgoApiField("wallet_id", null)]

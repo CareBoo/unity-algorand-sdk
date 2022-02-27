@@ -7,7 +7,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct TransactionSignature
+    public partial struct TransactionSignature
         : IEquatable<TransactionSignature>
     {
         [AlgoApiField("logicsig", null, readOnly: true)]

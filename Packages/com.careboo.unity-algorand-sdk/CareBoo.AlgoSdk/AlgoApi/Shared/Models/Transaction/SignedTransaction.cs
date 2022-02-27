@@ -9,7 +9,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiFormatter(typeof(SignedTransactionFormatter))]
     [Serializable]
-    public struct SignedTransaction
+    public partial struct SignedTransaction
         : IEquatable<SignedTransaction>
     {
         /// <summary>
@@ -36,14 +36,9 @@ namespace AlgoSdk
     /// A typed signed transaction.
     /// </summary>
     /// <typeparam name="TTransaction">The type of the transaction backing this struct.</typeparam>
-    [AlgoApiFormatter(typeof(SignedTransactionFormatter<AppCallTxn>))]
-    [AlgoApiFormatter(typeof(SignedTransactionFormatter<AssetConfigTxn>))]
-    [AlgoApiFormatter(typeof(SignedTransactionFormatter<AssetFreezeTxn>))]
-    [AlgoApiFormatter(typeof(SignedTransactionFormatter<AssetTransferTxn>))]
-    [AlgoApiFormatter(typeof(SignedTransactionFormatter<KeyRegTxn>))]
-    [AlgoApiFormatter(typeof(SignedTransactionFormatter<PaymentTxn>))]
+    [AlgoApiFormatter(typeof(SignedTransactionFormatter<>))]
     [Serializable]
-    public struct Signed<TTransaction>
+    public partial struct Signed<TTransaction>
         : IEquatable<Signed<TTransaction>>
         where TTransaction : struct, ITransaction, IEquatable<TTransaction>
     {

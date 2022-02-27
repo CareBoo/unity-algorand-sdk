@@ -8,7 +8,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct TealCompilationResult
+    public partial struct TealCompilationResult
         : IEquatable<TealCompilationResult>
     {
         /// <summary>

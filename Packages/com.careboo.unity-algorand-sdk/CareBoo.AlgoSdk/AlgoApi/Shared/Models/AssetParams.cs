@@ -11,7 +11,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public struct AssetParams
+    public partial struct AssetParams
         : IEquatable<AssetParams>
     {
         /// <summary>

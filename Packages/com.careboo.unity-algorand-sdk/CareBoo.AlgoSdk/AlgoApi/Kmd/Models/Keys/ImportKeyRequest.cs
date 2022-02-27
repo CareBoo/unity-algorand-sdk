@@ -4,7 +4,7 @@ using Unity.Collections;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public struct ImportKeyRequest
+    public partial struct ImportKeyRequest
         : IEquatable<ImportKeyRequest>
     {
         [AlgoApiField("private_key", null)]

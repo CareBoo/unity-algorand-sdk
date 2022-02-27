@@ -1,6 +1,6 @@
 {
     "name": "CareBoo.AlgoSdk.CodeGen",
-    "rootNamespace": "",
+    "rootNamespace": "AlgoSdk.Editor.CodeGen",
     "references": [
         "CareBoo.AlgoSdk",
         "CareBoo.AlgoSdk.IntegrationTests",

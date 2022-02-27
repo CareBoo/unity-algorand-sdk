@@ -77,7 +77,7 @@ namespace AlgoSdk
 
     [AlgoApiObject]
     [Serializable]
-    public struct PaymentTxn
+    public partial struct PaymentTxn
         : IPaymentTxn
         , IEquatable<PaymentTxn>
     {
@@ -213,7 +213,7 @@ namespace AlgoSdk
 
         [AlgoApiObject]
         [Serializable]
-        public struct Params
+        public partial struct Params
             : IEquatable<Params>
         {
             [AlgoApiField("receiver", "rcv")]
