@@ -11,6 +11,7 @@ namespace AlgoSdk.Editor.CodeGen
         {
             Name = FieldName;
             Attributes = MemberAttributes.Private | MemberAttributes.Static | MemberAttributes.Final;
+            Type = new CodeTypeReference(typeof(bool));
 
             InitExpression = new CodeMethodInvokeExpression(
                 targetObject: new CodeSnippetExpression(type.NameExpression()),

@@ -25,11 +25,11 @@ namespace AlgoSdk.Editor.CodeGen
                 .Where(filePath => filePath != null)
                 ;
 
-            foreach (var filePath in createdFiles)
-            {
-                var relPath = Path.GetRelativePath(PathToProject, filePath);
-                AssetDatabase.ImportAsset(relPath);
-            }
+            // foreach (var filePath in createdFiles)
+            // {
+            //     var relPath = Path.GetRelativePath(PathToProject, filePath);
+            //     AssetDatabase.ImportAsset(relPath);
+            // }
             AssetDatabase.Refresh();
         }
 
