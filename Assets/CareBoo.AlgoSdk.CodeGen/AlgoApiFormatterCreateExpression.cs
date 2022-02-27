@@ -22,17 +22,19 @@ namespace AlgoSdk.Editor.CodeGen
                 return formatterType;
 
             var formatterTypeArgumentCount = formatterType.GenericTypeArguments.Length;
-            var typeArgs = new List<Type>();
             var typeArgumentCount = type.GenericTypeArguments.Length;
 
+            var offset = 0;
             if (formatterTypeArgumentCount == typeArgumentCount + 1)
             {
-                typeArgs.Add(type);
+                offset = 1;
+                formatterType.GenericTypeArguments[0] = type;
             }
-            typeArgs.AddRange(type.GenericTypeArguments);
-            if (typeArgs.Count != formatterTypeArgumentCount)
-                throw new ArgumentException($"Got {typeArgs.Count} type arguments instead of {formatterTypeArgumentCount} for formatter {formatterType.FullName}", nameof(formatterType));
-            return formatterType.MakeGenericType(typeArgs.ToArray());
+            for (var i = 0; i < type.GenericTypeArguments.Length; i++)
+            {
+                formatterType.GenericTypeArguments[i + offset] = type.GenericTypeArguments[i];
+            }
+            return formatterType;
         }
     }
 }
