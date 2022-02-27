@@ -319,7 +319,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AlgoApiFormatterAttribute.html",
-          "hash": "JraijK/vIhFlnR+Psa9v/k7onDYR0zXnTA+Eq9zXyyY="
+          "hash": "bzcB1p3h1pRHDOeacJOsFEJHt3AL7QzThqFOZOI8dME="
         }
       },
       "is_incremental": false,
@@ -343,7 +343,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AlgoApiFormatterLookup.html",
-          "hash": "BLIXiK8NVMhd7B1IDK/oSnHKFi07IWF1Be626ET0C1M="
+          "hash": "13bNS3yXROwSdqOsd3tjraWZwn76Aq8kuZ5Z+aMnEUY="
         }
       },
       "is_incremental": false,
@@ -367,7 +367,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AlgoApiObjectAttribute.html",
-          "hash": "HnRbZZngGObO+QUbr6yw05eHYoHVHf65F63/bY6B4Hc="
+          "hash": "JvfmgVRy0gp/0sWLKt9URGV1mVkXiR7ZXYrqeWaRFCA="
         }
       },
       "is_incremental": false,
@@ -1995,6 +1995,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.IAlgoApiFormattable-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.IAlgoApiFormattable-1.html",
+          "hash": "v0TI3Wge7v6Cs3ynI+7sCcK/fpm6oFTo+SrgoFFQYWE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/AlgoSdk.IAlgoApiFormatter-1.yml",
       "output": {
         ".html": {
@@ -2972,6 +2984,18 @@
         ".html": {
           "relative_path": "api/AlgoSdk.PrivateKey.html",
           "hash": "rW+RnvrlyHOhSRTUoU1GqQnrsqwz/+S4HUluDZK8dDM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.ProvideSourceInfoAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.ProvideSourceInfoAttribute.html",
+          "hash": "m3kLR14fWvT/UWhym64kPNX9XZ1KSkg1bdN/Rz+hgTo="
         }
       },
       "is_incremental": false,
@@ -4003,7 +4027,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.html",
-          "hash": "mQpvWkm9qX4hpyob7CqrT73tp6H8CMujbP5z/YyEBvY="
+          "hash": "FSuvlLex/lbRQFp62DwgKERLp+J8OO+0fm7O4T71jMw="
         }
       },
       "is_incremental": false,
@@ -4015,7 +4039,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "qbmVxvi2IfPUkqCUdm9SJzBd8tN/bgGWpyG1+W9uLOA="
+          "hash": "efR0QkDPYdag/7oMx0gW7JQQDrwTkE+bWqujKdVhSQY="
         }
       },
       "is_incremental": false,
@@ -4179,7 +4203,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 329,
+          "total_file_count": 331,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

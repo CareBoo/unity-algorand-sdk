@@ -1127,12 +1127,12 @@ references:
   commentId: T:AlgoSdk.AlgoApiFormatterAttribute
   fullName: AlgoSdk.AlgoApiFormatterAttribute
   nameWithType: AlgoApiFormatterAttribute
-- uid: AlgoSdk.AlgoApiFormatterAttribute.#ctor(Type,System.String,System.Int32)
-  name: AlgoApiFormatterAttribute(Type, String, Int32)
-  href: api/AlgoSdk.AlgoApiFormatterAttribute.html#AlgoSdk_AlgoApiFormatterAttribute__ctor_Type_System_String_System_Int32_
-  commentId: M:AlgoSdk.AlgoApiFormatterAttribute.#ctor(Type,System.String,System.Int32)
-  fullName: AlgoSdk.AlgoApiFormatterAttribute.AlgoApiFormatterAttribute(Type, System.String, System.Int32)
-  nameWithType: AlgoApiFormatterAttribute.AlgoApiFormatterAttribute(Type, String, Int32)
+- uid: AlgoSdk.AlgoApiFormatterAttribute.#ctor(Type,System.String,System.String,System.Int32)
+  name: AlgoApiFormatterAttribute(Type, String, String, Int32)
+  href: api/AlgoSdk.AlgoApiFormatterAttribute.html#AlgoSdk_AlgoApiFormatterAttribute__ctor_Type_System_String_System_String_System_Int32_
+  commentId: M:AlgoSdk.AlgoApiFormatterAttribute.#ctor(Type,System.String,System.String,System.Int32)
+  fullName: AlgoSdk.AlgoApiFormatterAttribute.AlgoApiFormatterAttribute(Type, System.String, System.String, System.Int32)
+  nameWithType: AlgoApiFormatterAttribute.AlgoApiFormatterAttribute(Type, String, String, Int32)
 - uid: AlgoSdk.AlgoApiFormatterAttribute.#ctor*
   name: AlgoApiFormatterAttribute
   href: api/AlgoSdk.AlgoApiFormatterAttribute.html#AlgoSdk_AlgoApiFormatterAttribute__ctor_
@@ -1176,46 +1176,44 @@ references:
   commentId: T:AlgoSdk.AlgoApiFormatterLookup
   fullName: AlgoSdk.AlgoApiFormatterLookup
   nameWithType: AlgoApiFormatterLookup
+- uid: AlgoSdk.AlgoApiFormatterLookup.Add*
+  name: Add
+  href: api/AlgoSdk.AlgoApiFormatterLookup.html#AlgoSdk_AlgoApiFormatterLookup_Add_
+  commentId: Overload:AlgoSdk.AlgoApiFormatterLookup.Add
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiFormatterLookup.Add
+  nameWithType: AlgoApiFormatterLookup.Add
+- uid: AlgoSdk.AlgoApiFormatterLookup.Add``1(AlgoSdk.IAlgoApiFormatter{``0})
+  name: Add<T>(IAlgoApiFormatter<T>)
+  href: api/AlgoSdk.AlgoApiFormatterLookup.html#AlgoSdk_AlgoApiFormatterLookup_Add__1_AlgoSdk_IAlgoApiFormatter___0__
+  commentId: M:AlgoSdk.AlgoApiFormatterLookup.Add``1(AlgoSdk.IAlgoApiFormatter{``0})
+  name.vb: Add(Of T)(IAlgoApiFormatter(Of T))
+  fullName: AlgoSdk.AlgoApiFormatterLookup.Add<T>(AlgoSdk.IAlgoApiFormatter<T>)
+  fullName.vb: AlgoSdk.AlgoApiFormatterLookup.Add(Of T)(AlgoSdk.IAlgoApiFormatter(Of T))
+  nameWithType: AlgoApiFormatterLookup.Add<T>(IAlgoApiFormatter<T>)
+  nameWithType.vb: AlgoApiFormatterLookup.Add(Of T)(IAlgoApiFormatter(Of T))
 - uid: AlgoSdk.AlgoApiFormatterLookup.AddFormatterMethodName
   name: AddFormatterMethodName
   href: api/AlgoSdk.AlgoApiFormatterLookup.html#AlgoSdk_AlgoApiFormatterLookup_AddFormatterMethodName
   commentId: F:AlgoSdk.AlgoApiFormatterLookup.AddFormatterMethodName
   fullName: AlgoSdk.AlgoApiFormatterLookup.AddFormatterMethodName
   nameWithType: AlgoApiFormatterLookup.AddFormatterMethodName
-- uid: AlgoSdk.AlgoApiFormatterLookup.EnsureLookupMethodName
-  name: EnsureLookupMethodName
-  href: api/AlgoSdk.AlgoApiFormatterLookup.html#AlgoSdk_AlgoApiFormatterLookup_EnsureLookupMethodName
-  commentId: F:AlgoSdk.AlgoApiFormatterLookup.EnsureLookupMethodName
-  fullName: AlgoSdk.AlgoApiFormatterLookup.EnsureLookupMethodName
-  nameWithType: AlgoApiFormatterLookup.EnsureLookupMethodName
-- uid: AlgoSdk.AlgoApiFormatterLookup.GetFormatter*
-  name: GetFormatter
-  href: api/AlgoSdk.AlgoApiFormatterLookup.html#AlgoSdk_AlgoApiFormatterLookup_GetFormatter_
-  commentId: Overload:AlgoSdk.AlgoApiFormatterLookup.GetFormatter
+- uid: AlgoSdk.AlgoApiFormatterLookup.Get*
+  name: Get
+  href: api/AlgoSdk.AlgoApiFormatterLookup.html#AlgoSdk_AlgoApiFormatterLookup_Get_
+  commentId: Overload:AlgoSdk.AlgoApiFormatterLookup.Get
   isSpec: "True"
-  fullName: AlgoSdk.AlgoApiFormatterLookup.GetFormatter
-  nameWithType: AlgoApiFormatterLookup.GetFormatter
-- uid: AlgoSdk.AlgoApiFormatterLookup.GetFormatter``1
-  name: GetFormatter<T>()
-  href: api/AlgoSdk.AlgoApiFormatterLookup.html#AlgoSdk_AlgoApiFormatterLookup_GetFormatter__1
-  commentId: M:AlgoSdk.AlgoApiFormatterLookup.GetFormatter``1
-  name.vb: GetFormatter(Of T)()
-  fullName: AlgoSdk.AlgoApiFormatterLookup.GetFormatter<T>()
-  fullName.vb: AlgoSdk.AlgoApiFormatterLookup.GetFormatter(Of T)()
-  nameWithType: AlgoApiFormatterLookup.GetFormatter<T>()
-  nameWithType.vb: AlgoApiFormatterLookup.GetFormatter(Of T)()
-- uid: AlgoSdk.AlgoApiFormatterLookup.InitLookupMethodName
-  name: InitLookupMethodName
-  href: api/AlgoSdk.AlgoApiFormatterLookup.html#AlgoSdk_AlgoApiFormatterLookup_InitLookupMethodName
-  commentId: F:AlgoSdk.AlgoApiFormatterLookup.InitLookupMethodName
-  fullName: AlgoSdk.AlgoApiFormatterLookup.InitLookupMethodName
-  nameWithType: AlgoApiFormatterLookup.InitLookupMethodName
-- uid: AlgoSdk.AlgoApiFormatterLookup.LookupFieldName
-  name: LookupFieldName
-  href: api/AlgoSdk.AlgoApiFormatterLookup.html#AlgoSdk_AlgoApiFormatterLookup_LookupFieldName
-  commentId: F:AlgoSdk.AlgoApiFormatterLookup.LookupFieldName
-  fullName: AlgoSdk.AlgoApiFormatterLookup.LookupFieldName
-  nameWithType: AlgoApiFormatterLookup.LookupFieldName
+  fullName: AlgoSdk.AlgoApiFormatterLookup.Get
+  nameWithType: AlgoApiFormatterLookup.Get
+- uid: AlgoSdk.AlgoApiFormatterLookup.Get``1
+  name: Get<T>()
+  href: api/AlgoSdk.AlgoApiFormatterLookup.html#AlgoSdk_AlgoApiFormatterLookup_Get__1
+  commentId: M:AlgoSdk.AlgoApiFormatterLookup.Get``1
+  name.vb: Get(Of T)()
+  fullName: AlgoSdk.AlgoApiFormatterLookup.Get<T>()
+  fullName.vb: AlgoSdk.AlgoApiFormatterLookup.Get(Of T)()
+  nameWithType: AlgoApiFormatterLookup.Get<T>()
+  nameWithType.vb: AlgoApiFormatterLookup.Get(Of T)()
 - uid: AlgoSdk.AlgoApiObject
   name: AlgoApiObject
   href: api/AlgoSdk.AlgoApiObject.html
@@ -1364,6 +1362,19 @@ references:
   commentId: T:AlgoSdk.AlgoApiObjectAttribute
   fullName: AlgoSdk.AlgoApiObjectAttribute
   nameWithType: AlgoApiObjectAttribute
+- uid: AlgoSdk.AlgoApiObjectAttribute.#ctor(System.String,System.String,System.Int32)
+  name: AlgoApiObjectAttribute(String, String, Int32)
+  href: api/AlgoSdk.AlgoApiObjectAttribute.html#AlgoSdk_AlgoApiObjectAttribute__ctor_System_String_System_String_System_Int32_
+  commentId: M:AlgoSdk.AlgoApiObjectAttribute.#ctor(System.String,System.String,System.Int32)
+  fullName: AlgoSdk.AlgoApiObjectAttribute.AlgoApiObjectAttribute(System.String, System.String, System.Int32)
+  nameWithType: AlgoApiObjectAttribute.AlgoApiObjectAttribute(String, String, Int32)
+- uid: AlgoSdk.AlgoApiObjectAttribute.#ctor*
+  name: AlgoApiObjectAttribute
+  href: api/AlgoSdk.AlgoApiObjectAttribute.html#AlgoSdk_AlgoApiObjectAttribute__ctor_
+  commentId: Overload:AlgoSdk.AlgoApiObjectAttribute.#ctor
+  isSpec: "True"
+  fullName: AlgoSdk.AlgoApiObjectAttribute.AlgoApiObjectAttribute
+  nameWithType: AlgoApiObjectAttribute.AlgoApiObjectAttribute
 - uid: AlgoSdk.AlgoApiObjectFormatter
   name: AlgoApiObjectFormatter
   href: api/AlgoSdk.AlgoApiObjectFormatter.html
@@ -10801,6 +10812,32 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.IAlgoApiClient.TokenHeader
   nameWithType: IAlgoApiClient.TokenHeader
+- uid: AlgoSdk.IAlgoApiFormattable`1
+  name: IAlgoApiFormattable<T>
+  href: api/AlgoSdk.IAlgoApiFormattable-1.html
+  commentId: T:AlgoSdk.IAlgoApiFormattable`1
+  name.vb: IAlgoApiFormattable(Of T)
+  fullName: AlgoSdk.IAlgoApiFormattable<T>
+  fullName.vb: AlgoSdk.IAlgoApiFormattable(Of T)
+  nameWithType: IAlgoApiFormattable<T>
+  nameWithType.vb: IAlgoApiFormattable(Of T)
+- uid: AlgoSdk.IAlgoApiFormattable`1.GetAlgoApiFormatter
+  name: GetAlgoApiFormatter()
+  href: api/AlgoSdk.IAlgoApiFormattable-1.html#AlgoSdk_IAlgoApiFormattable_1_GetAlgoApiFormatter
+  commentId: M:AlgoSdk.IAlgoApiFormattable`1.GetAlgoApiFormatter
+  fullName: AlgoSdk.IAlgoApiFormattable<T>.GetAlgoApiFormatter()
+  fullName.vb: AlgoSdk.IAlgoApiFormattable(Of T).GetAlgoApiFormatter()
+  nameWithType: IAlgoApiFormattable<T>.GetAlgoApiFormatter()
+  nameWithType.vb: IAlgoApiFormattable(Of T).GetAlgoApiFormatter()
+- uid: AlgoSdk.IAlgoApiFormattable`1.GetAlgoApiFormatter*
+  name: GetAlgoApiFormatter
+  href: api/AlgoSdk.IAlgoApiFormattable-1.html#AlgoSdk_IAlgoApiFormattable_1_GetAlgoApiFormatter_
+  commentId: Overload:AlgoSdk.IAlgoApiFormattable`1.GetAlgoApiFormatter
+  isSpec: "True"
+  fullName: AlgoSdk.IAlgoApiFormattable<T>.GetAlgoApiFormatter
+  fullName.vb: AlgoSdk.IAlgoApiFormattable(Of T).GetAlgoApiFormatter
+  nameWithType: IAlgoApiFormattable<T>.GetAlgoApiFormatter
+  nameWithType.vb: IAlgoApiFormattable(Of T).GetAlgoApiFormatter
 - uid: AlgoSdk.IAlgoApiFormatter`1
   name: IAlgoApiFormatter<T>
   href: api/AlgoSdk.IAlgoApiFormatter-1.html
@@ -30691,6 +30728,77 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.PrivateKey.ToString
   nameWithType: PrivateKey.ToString
+- uid: AlgoSdk.ProvideSourceInfoAttribute
+  name: ProvideSourceInfoAttribute
+  href: api/AlgoSdk.ProvideSourceInfoAttribute.html
+  commentId: T:AlgoSdk.ProvideSourceInfoAttribute
+  fullName: AlgoSdk.ProvideSourceInfoAttribute
+  nameWithType: ProvideSourceInfoAttribute
+- uid: AlgoSdk.ProvideSourceInfoAttribute.#ctor(System.String,System.String,System.Int32)
+  name: ProvideSourceInfoAttribute(String, String, Int32)
+  href: api/AlgoSdk.ProvideSourceInfoAttribute.html#AlgoSdk_ProvideSourceInfoAttribute__ctor_System_String_System_String_System_Int32_
+  commentId: M:AlgoSdk.ProvideSourceInfoAttribute.#ctor(System.String,System.String,System.Int32)
+  fullName: AlgoSdk.ProvideSourceInfoAttribute.ProvideSourceInfoAttribute(System.String, System.String, System.Int32)
+  nameWithType: ProvideSourceInfoAttribute.ProvideSourceInfoAttribute(String, String, Int32)
+- uid: AlgoSdk.ProvideSourceInfoAttribute.#ctor*
+  name: ProvideSourceInfoAttribute
+  href: api/AlgoSdk.ProvideSourceInfoAttribute.html#AlgoSdk_ProvideSourceInfoAttribute__ctor_
+  commentId: Overload:AlgoSdk.ProvideSourceInfoAttribute.#ctor
+  isSpec: "True"
+  fullName: AlgoSdk.ProvideSourceInfoAttribute.ProvideSourceInfoAttribute
+  nameWithType: ProvideSourceInfoAttribute.ProvideSourceInfoAttribute
+- uid: AlgoSdk.ProvideSourceInfoAttribute.AbsoluteFilePath
+  name: AbsoluteFilePath
+  href: api/AlgoSdk.ProvideSourceInfoAttribute.html#AlgoSdk_ProvideSourceInfoAttribute_AbsoluteFilePath
+  commentId: P:AlgoSdk.ProvideSourceInfoAttribute.AbsoluteFilePath
+  fullName: AlgoSdk.ProvideSourceInfoAttribute.AbsoluteFilePath
+  nameWithType: ProvideSourceInfoAttribute.AbsoluteFilePath
+- uid: AlgoSdk.ProvideSourceInfoAttribute.AbsoluteFilePath*
+  name: AbsoluteFilePath
+  href: api/AlgoSdk.ProvideSourceInfoAttribute.html#AlgoSdk_ProvideSourceInfoAttribute_AbsoluteFilePath_
+  commentId: Overload:AlgoSdk.ProvideSourceInfoAttribute.AbsoluteFilePath
+  isSpec: "True"
+  fullName: AlgoSdk.ProvideSourceInfoAttribute.AbsoluteFilePath
+  nameWithType: ProvideSourceInfoAttribute.AbsoluteFilePath
+- uid: AlgoSdk.ProvideSourceInfoAttribute.AssetPath
+  name: AssetPath
+  href: api/AlgoSdk.ProvideSourceInfoAttribute.html#AlgoSdk_ProvideSourceInfoAttribute_AssetPath
+  commentId: P:AlgoSdk.ProvideSourceInfoAttribute.AssetPath
+  fullName: AlgoSdk.ProvideSourceInfoAttribute.AssetPath
+  nameWithType: ProvideSourceInfoAttribute.AssetPath
+- uid: AlgoSdk.ProvideSourceInfoAttribute.AssetPath*
+  name: AssetPath
+  href: api/AlgoSdk.ProvideSourceInfoAttribute.html#AlgoSdk_ProvideSourceInfoAttribute_AssetPath_
+  commentId: Overload:AlgoSdk.ProvideSourceInfoAttribute.AssetPath
+  isSpec: "True"
+  fullName: AlgoSdk.ProvideSourceInfoAttribute.AssetPath
+  nameWithType: ProvideSourceInfoAttribute.AssetPath
+- uid: AlgoSdk.ProvideSourceInfoAttribute.LineNumber
+  name: LineNumber
+  href: api/AlgoSdk.ProvideSourceInfoAttribute.html#AlgoSdk_ProvideSourceInfoAttribute_LineNumber
+  commentId: P:AlgoSdk.ProvideSourceInfoAttribute.LineNumber
+  fullName: AlgoSdk.ProvideSourceInfoAttribute.LineNumber
+  nameWithType: ProvideSourceInfoAttribute.LineNumber
+- uid: AlgoSdk.ProvideSourceInfoAttribute.LineNumber*
+  name: LineNumber
+  href: api/AlgoSdk.ProvideSourceInfoAttribute.html#AlgoSdk_ProvideSourceInfoAttribute_LineNumber_
+  commentId: Overload:AlgoSdk.ProvideSourceInfoAttribute.LineNumber
+  isSpec: "True"
+  fullName: AlgoSdk.ProvideSourceInfoAttribute.LineNumber
+  nameWithType: ProvideSourceInfoAttribute.LineNumber
+- uid: AlgoSdk.ProvideSourceInfoAttribute.Member
+  name: Member
+  href: api/AlgoSdk.ProvideSourceInfoAttribute.html#AlgoSdk_ProvideSourceInfoAttribute_Member
+  commentId: P:AlgoSdk.ProvideSourceInfoAttribute.Member
+  fullName: AlgoSdk.ProvideSourceInfoAttribute.Member
+  nameWithType: ProvideSourceInfoAttribute.Member
+- uid: AlgoSdk.ProvideSourceInfoAttribute.Member*
+  name: Member
+  href: api/AlgoSdk.ProvideSourceInfoAttribute.html#AlgoSdk_ProvideSourceInfoAttribute_Member_
+  commentId: Overload:AlgoSdk.ProvideSourceInfoAttribute.Member
+  isSpec: "True"
+  fullName: AlgoSdk.ProvideSourceInfoAttribute.Member
+  nameWithType: ProvideSourceInfoAttribute.Member
 - uid: AlgoSdk.ReleaseWalletHandleTokenRequest
   name: ReleaseWalletHandleTokenRequest
   href: api/AlgoSdk.ReleaseWalletHandleTokenRequest.html
