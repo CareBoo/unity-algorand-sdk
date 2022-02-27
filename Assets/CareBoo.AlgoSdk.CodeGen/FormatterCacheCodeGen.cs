@@ -23,6 +23,7 @@ namespace AlgoSdk.Editor.CodeGen
                 .Where(cu => cu.IsValid)
                 .Select(ExportToDirectory)
                 .Where(filePath => filePath != null)
+                .ToArray()
                 ;
 
             // foreach (var filePath in createdFiles)
