@@ -32,6 +32,7 @@ namespace AlgoSdk.Editor.CodeGen
             foreach (var compileUnit in algoApiObjCompileUnits.Concat(algoApiFormatterCompileUnits).Where(c => c.CompileUnit != null))
             {
                 var createdPath = ExportToDirectory(compileUnit);
+                if (createdPath == null) continue;
                 var relPath = Path.GetRelativePath(PathToProject, createdPath);
                 AssetDatabase.ImportAsset(relPath, ImportAssetOptions.ForceUpdate);
             }
@@ -40,31 +41,27 @@ namespace AlgoSdk.Editor.CodeGen
 
         static string ExportToDirectory(AlgoApiCompileUnit compileUnit)
         {
-            if (compileUnit.CompileUnit == null)
-            {
-                Debug.Log($"Skipping exporting compile unit for type {compileUnit.Type.FullName} because could not generate its compile unit.");
-            }
-
-            var sourcePath = compileUnit.SourceInfo.AbsoluteFilePath;
-            Debug.Log($"Found attribute at {sourcePath}");
-            Debug.Log($"DirectoryName: {Path.GetDirectoryName(sourcePath)}");
-            var sourceDir = Path.GetDirectoryName(sourcePath);
-            var filenameWithoutExtension = Path.GetFileNameWithoutExtension(sourcePath);
-            var outputPath = Path.Combine(sourceDir, $"{filenameWithoutExtension}.{OutputFileName}");
-            var codeProvider = new CSharpCodeProvider();
-            using var stream = new StreamWriter(outputPath, append: false);
-            var tw = new IndentedTextWriter(stream);
-            var options = new CodeGeneratorOptions();
-            options.BracingStyle = "C";
             try
             {
+                var sourcePath = compileUnit.SourceInfo.AbsoluteFilePath;
+                Debug.Log($"Found attribute at {sourcePath}");
+                Debug.Log($"DirectoryName: {Path.GetDirectoryName(sourcePath)}");
+                var sourceDir = Path.GetDirectoryName(sourcePath);
+                var filenameWithoutExtension = Path.GetFileNameWithoutExtension(sourcePath);
+                var outputPath = Path.Combine(sourceDir, $"{filenameWithoutExtension}.{OutputFileName}");
+                var codeProvider = new CSharpCodeProvider();
+                using var stream = new StreamWriter(outputPath, append: false);
+                var tw = new IndentedTextWriter(stream);
+                var options = new CodeGeneratorOptions();
+                options.BracingStyle = "C";
                 codeProvider.GenerateCodeFromCompileUnit(compileUnit.CompileUnit, tw, options);
+                return outputPath;
             }
             catch (Exception ex)
             {
                 Debug.LogError($"got error while exporting type {compileUnit.Type}: {ex}");
+                return null;
             }
-            return outputPath;
         }
     }
 }
