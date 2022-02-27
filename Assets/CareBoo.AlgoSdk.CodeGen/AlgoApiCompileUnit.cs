@@ -205,7 +205,7 @@ namespace AlgoSdk.Editor.CodeGen
         protected string FormatForTypeDeclaration(Type type)
         {
             var fullName = Format(type);
-            return fullName.Substring(type.Namespace.Length);
+            return fullName.Substring(type.Namespace.Length + 1);
         }
     }
 }
