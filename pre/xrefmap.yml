@@ -9363,6 +9363,62 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Formatters.GenesisHashFormatter.Serialize
   nameWithType: GenesisHashFormatter.Serialize
+- uid: AlgoSdk.Formatters.HexFormatter
+  name: HexFormatter
+  href: api/AlgoSdk.Formatters.HexFormatter.html
+  commentId: T:AlgoSdk.Formatters.HexFormatter
+  fullName: AlgoSdk.Formatters.HexFormatter
+  nameWithType: HexFormatter
+- uid: AlgoSdk.Formatters.HexFormatter.Deserialize(JsonReader@)
+  name: Deserialize(ref JsonReader)
+  href: api/AlgoSdk.Formatters.HexFormatter.html#AlgoSdk_Formatters_HexFormatter_Deserialize_JsonReader__
+  commentId: M:AlgoSdk.Formatters.HexFormatter.Deserialize(JsonReader@)
+  name.vb: Deserialize(ByRef JsonReader)
+  fullName: AlgoSdk.Formatters.HexFormatter.Deserialize(ref JsonReader)
+  fullName.vb: AlgoSdk.Formatters.HexFormatter.Deserialize(ByRef JsonReader)
+  nameWithType: HexFormatter.Deserialize(ref JsonReader)
+  nameWithType.vb: HexFormatter.Deserialize(ByRef JsonReader)
+- uid: AlgoSdk.Formatters.HexFormatter.Deserialize(MessagePackReader@)
+  name: Deserialize(ref MessagePackReader)
+  href: api/AlgoSdk.Formatters.HexFormatter.html#AlgoSdk_Formatters_HexFormatter_Deserialize_MessagePackReader__
+  commentId: M:AlgoSdk.Formatters.HexFormatter.Deserialize(MessagePackReader@)
+  name.vb: Deserialize(ByRef MessagePackReader)
+  fullName: AlgoSdk.Formatters.HexFormatter.Deserialize(ref MessagePackReader)
+  fullName.vb: AlgoSdk.Formatters.HexFormatter.Deserialize(ByRef MessagePackReader)
+  nameWithType: HexFormatter.Deserialize(ref MessagePackReader)
+  nameWithType.vb: HexFormatter.Deserialize(ByRef MessagePackReader)
+- uid: AlgoSdk.Formatters.HexFormatter.Deserialize*
+  name: Deserialize
+  href: api/AlgoSdk.Formatters.HexFormatter.html#AlgoSdk_Formatters_HexFormatter_Deserialize_
+  commentId: Overload:AlgoSdk.Formatters.HexFormatter.Deserialize
+  isSpec: "True"
+  fullName: AlgoSdk.Formatters.HexFormatter.Deserialize
+  nameWithType: HexFormatter.Deserialize
+- uid: AlgoSdk.Formatters.HexFormatter.Serialize(JsonWriter@,AlgoSdk.Hex)
+  name: Serialize(ref JsonWriter, Hex)
+  href: api/AlgoSdk.Formatters.HexFormatter.html#AlgoSdk_Formatters_HexFormatter_Serialize_JsonWriter__AlgoSdk_Hex_
+  commentId: M:AlgoSdk.Formatters.HexFormatter.Serialize(JsonWriter@,AlgoSdk.Hex)
+  name.vb: Serialize(ByRef JsonWriter, Hex)
+  fullName: AlgoSdk.Formatters.HexFormatter.Serialize(ref JsonWriter, AlgoSdk.Hex)
+  fullName.vb: AlgoSdk.Formatters.HexFormatter.Serialize(ByRef JsonWriter, AlgoSdk.Hex)
+  nameWithType: HexFormatter.Serialize(ref JsonWriter, Hex)
+  nameWithType.vb: HexFormatter.Serialize(ByRef JsonWriter, Hex)
+- uid: AlgoSdk.Formatters.HexFormatter.Serialize(MessagePackWriter@,AlgoSdk.Hex)
+  name: Serialize(ref MessagePackWriter, Hex)
+  href: api/AlgoSdk.Formatters.HexFormatter.html#AlgoSdk_Formatters_HexFormatter_Serialize_MessagePackWriter__AlgoSdk_Hex_
+  commentId: M:AlgoSdk.Formatters.HexFormatter.Serialize(MessagePackWriter@,AlgoSdk.Hex)
+  name.vb: Serialize(ByRef MessagePackWriter, Hex)
+  fullName: AlgoSdk.Formatters.HexFormatter.Serialize(ref MessagePackWriter, AlgoSdk.Hex)
+  fullName.vb: AlgoSdk.Formatters.HexFormatter.Serialize(ByRef MessagePackWriter, AlgoSdk.Hex)
+  nameWithType: HexFormatter.Serialize(ref MessagePackWriter, Hex)
+  nameWithType.vb: HexFormatter.Serialize(ByRef MessagePackWriter, Hex)
+- uid: AlgoSdk.Formatters.HexFormatter.Serialize*
+  name: Serialize
+  href: api/AlgoSdk.Formatters.HexFormatter.html#AlgoSdk_Formatters_HexFormatter_Serialize_
+  commentId: Overload:AlgoSdk.Formatters.HexFormatter.Serialize
+  isSpec: "True"
+  fullName: AlgoSdk.Formatters.HexFormatter.Serialize
+  nameWithType: HexFormatter.Serialize
 - uid: AlgoSdk.Formatters.Int16Formatter
   name: Int16Formatter
   href: api/AlgoSdk.Formatters.Int16Formatter.html
@@ -10754,6 +10810,92 @@ references:
   commentId: F:AlgoSdk.HealthCheck.Version
   fullName: AlgoSdk.HealthCheck.Version
   nameWithType: HealthCheck.Version
+- uid: AlgoSdk.Hex
+  name: Hex
+  href: api/AlgoSdk.Hex.html
+  commentId: T:AlgoSdk.Hex
+  fullName: AlgoSdk.Hex
+  nameWithType: Hex
+- uid: AlgoSdk.Hex.Data
+  name: Data
+  href: api/AlgoSdk.Hex.html#AlgoSdk_Hex_Data
+  commentId: P:AlgoSdk.Hex.Data
+  fullName: AlgoSdk.Hex.Data
+  nameWithType: Hex.Data
+- uid: AlgoSdk.Hex.Data*
+  name: Data
+  href: api/AlgoSdk.Hex.html#AlgoSdk_Hex_Data_
+  commentId: Overload:AlgoSdk.Hex.Data
+  isSpec: "True"
+  fullName: AlgoSdk.Hex.Data
+  nameWithType: Hex.Data
+- uid: AlgoSdk.Hex.Equals(AlgoSdk.Hex)
+  name: Equals(Hex)
+  href: api/AlgoSdk.Hex.html#AlgoSdk_Hex_Equals_AlgoSdk_Hex_
+  commentId: M:AlgoSdk.Hex.Equals(AlgoSdk.Hex)
+  fullName: AlgoSdk.Hex.Equals(AlgoSdk.Hex)
+  nameWithType: Hex.Equals(Hex)
+- uid: AlgoSdk.Hex.Equals*
+  name: Equals
+  href: api/AlgoSdk.Hex.html#AlgoSdk_Hex_Equals_
+  commentId: Overload:AlgoSdk.Hex.Equals
+  isSpec: "True"
+  fullName: AlgoSdk.Hex.Equals
+  nameWithType: Hex.Equals
+- uid: AlgoSdk.Hex.FromString(System.String)
+  name: FromString(String)
+  href: api/AlgoSdk.Hex.html#AlgoSdk_Hex_FromString_System_String_
+  commentId: M:AlgoSdk.Hex.FromString(System.String)
+  fullName: AlgoSdk.Hex.FromString(System.String)
+  nameWithType: Hex.FromString(String)
+- uid: AlgoSdk.Hex.FromString*
+  name: FromString
+  href: api/AlgoSdk.Hex.html#AlgoSdk_Hex_FromString_
+  commentId: Overload:AlgoSdk.Hex.FromString
+  isSpec: "True"
+  fullName: AlgoSdk.Hex.FromString
+  nameWithType: Hex.FromString
+- uid: AlgoSdk.Hex.op_Implicit(AlgoSdk.Hex)~System.Byte[]
+  name: Implicit(Hex to Byte[])
+  href: api/AlgoSdk.Hex.html#AlgoSdk_Hex_op_Implicit_AlgoSdk_Hex__System_Byte__
+  commentId: M:AlgoSdk.Hex.op_Implicit(AlgoSdk.Hex)~System.Byte[]
+  name.vb: Widening(Hex to Byte())
+  fullName: AlgoSdk.Hex.Implicit(AlgoSdk.Hex to System.Byte[])
+  fullName.vb: AlgoSdk.Hex.Widening(AlgoSdk.Hex to System.Byte())
+  nameWithType: Hex.Implicit(Hex to Byte[])
+  nameWithType.vb: Hex.Widening(Hex to Byte())
+- uid: AlgoSdk.Hex.op_Implicit(System.Byte[])~AlgoSdk.Hex
+  name: Implicit(Byte[] to Hex)
+  href: api/AlgoSdk.Hex.html#AlgoSdk_Hex_op_Implicit_System_Byte____AlgoSdk_Hex
+  commentId: M:AlgoSdk.Hex.op_Implicit(System.Byte[])~AlgoSdk.Hex
+  name.vb: Widening(Byte() to Hex)
+  fullName: AlgoSdk.Hex.Implicit(System.Byte[] to AlgoSdk.Hex)
+  fullName.vb: AlgoSdk.Hex.Widening(System.Byte() to AlgoSdk.Hex)
+  nameWithType: Hex.Implicit(Byte[] to Hex)
+  nameWithType.vb: Hex.Widening(Byte() to Hex)
+- uid: AlgoSdk.Hex.op_Implicit*
+  name: Implicit
+  href: api/AlgoSdk.Hex.html#AlgoSdk_Hex_op_Implicit_
+  commentId: Overload:AlgoSdk.Hex.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: AlgoSdk.Hex.Implicit
+  fullName.vb: AlgoSdk.Hex.Widening
+  nameWithType: Hex.Implicit
+  nameWithType.vb: Hex.Widening
+- uid: AlgoSdk.Hex.ToString
+  name: ToString()
+  href: api/AlgoSdk.Hex.html#AlgoSdk_Hex_ToString
+  commentId: M:AlgoSdk.Hex.ToString
+  fullName: AlgoSdk.Hex.ToString()
+  nameWithType: Hex.ToString()
+- uid: AlgoSdk.Hex.ToString*
+  name: ToString
+  href: api/AlgoSdk.Hex.html#AlgoSdk_Hex_ToString_
+  commentId: Overload:AlgoSdk.Hex.ToString
+  isSpec: "True"
+  fullName: AlgoSdk.Hex.ToString
+  nameWithType: Hex.ToString
 - uid: AlgoSdk.IAlgoApiClient
   name: IAlgoApiClient
   href: api/AlgoSdk.IAlgoApiClient.html
@@ -34942,154 +35084,6 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.WalletConnect.EncryptedPayload.ValidateHmac
   nameWithType: EncryptedPayload.ValidateHmac
-- uid: AlgoSdk.WalletConnect.Formatters
-  name: AlgoSdk.WalletConnect.Formatters
-  href: api/AlgoSdk.WalletConnect.Formatters.html
-  commentId: N:AlgoSdk.WalletConnect.Formatters
-  fullName: AlgoSdk.WalletConnect.Formatters
-  nameWithType: AlgoSdk.WalletConnect.Formatters
-- uid: AlgoSdk.WalletConnect.Formatters.HexFormatter
-  name: HexFormatter
-  href: api/AlgoSdk.WalletConnect.Formatters.HexFormatter.html
-  commentId: T:AlgoSdk.WalletConnect.Formatters.HexFormatter
-  fullName: AlgoSdk.WalletConnect.Formatters.HexFormatter
-  nameWithType: HexFormatter
-- uid: AlgoSdk.WalletConnect.Formatters.HexFormatter.Deserialize(JsonReader@)
-  name: Deserialize(ref JsonReader)
-  href: api/AlgoSdk.WalletConnect.Formatters.HexFormatter.html#AlgoSdk_WalletConnect_Formatters_HexFormatter_Deserialize_JsonReader__
-  commentId: M:AlgoSdk.WalletConnect.Formatters.HexFormatter.Deserialize(JsonReader@)
-  name.vb: Deserialize(ByRef JsonReader)
-  fullName: AlgoSdk.WalletConnect.Formatters.HexFormatter.Deserialize(ref JsonReader)
-  fullName.vb: AlgoSdk.WalletConnect.Formatters.HexFormatter.Deserialize(ByRef JsonReader)
-  nameWithType: HexFormatter.Deserialize(ref JsonReader)
-  nameWithType.vb: HexFormatter.Deserialize(ByRef JsonReader)
-- uid: AlgoSdk.WalletConnect.Formatters.HexFormatter.Deserialize(MessagePackReader@)
-  name: Deserialize(ref MessagePackReader)
-  href: api/AlgoSdk.WalletConnect.Formatters.HexFormatter.html#AlgoSdk_WalletConnect_Formatters_HexFormatter_Deserialize_MessagePackReader__
-  commentId: M:AlgoSdk.WalletConnect.Formatters.HexFormatter.Deserialize(MessagePackReader@)
-  name.vb: Deserialize(ByRef MessagePackReader)
-  fullName: AlgoSdk.WalletConnect.Formatters.HexFormatter.Deserialize(ref MessagePackReader)
-  fullName.vb: AlgoSdk.WalletConnect.Formatters.HexFormatter.Deserialize(ByRef MessagePackReader)
-  nameWithType: HexFormatter.Deserialize(ref MessagePackReader)
-  nameWithType.vb: HexFormatter.Deserialize(ByRef MessagePackReader)
-- uid: AlgoSdk.WalletConnect.Formatters.HexFormatter.Deserialize*
-  name: Deserialize
-  href: api/AlgoSdk.WalletConnect.Formatters.HexFormatter.html#AlgoSdk_WalletConnect_Formatters_HexFormatter_Deserialize_
-  commentId: Overload:AlgoSdk.WalletConnect.Formatters.HexFormatter.Deserialize
-  isSpec: "True"
-  fullName: AlgoSdk.WalletConnect.Formatters.HexFormatter.Deserialize
-  nameWithType: HexFormatter.Deserialize
-- uid: AlgoSdk.WalletConnect.Formatters.HexFormatter.Serialize(JsonWriter@,AlgoSdk.WalletConnect.Hex)
-  name: Serialize(ref JsonWriter, Hex)
-  href: api/AlgoSdk.WalletConnect.Formatters.HexFormatter.html#AlgoSdk_WalletConnect_Formatters_HexFormatter_Serialize_JsonWriter__AlgoSdk_WalletConnect_Hex_
-  commentId: M:AlgoSdk.WalletConnect.Formatters.HexFormatter.Serialize(JsonWriter@,AlgoSdk.WalletConnect.Hex)
-  name.vb: Serialize(ByRef JsonWriter, Hex)
-  fullName: AlgoSdk.WalletConnect.Formatters.HexFormatter.Serialize(ref JsonWriter, AlgoSdk.WalletConnect.Hex)
-  fullName.vb: AlgoSdk.WalletConnect.Formatters.HexFormatter.Serialize(ByRef JsonWriter, AlgoSdk.WalletConnect.Hex)
-  nameWithType: HexFormatter.Serialize(ref JsonWriter, Hex)
-  nameWithType.vb: HexFormatter.Serialize(ByRef JsonWriter, Hex)
-- uid: AlgoSdk.WalletConnect.Formatters.HexFormatter.Serialize(MessagePackWriter@,AlgoSdk.WalletConnect.Hex)
-  name: Serialize(ref MessagePackWriter, Hex)
-  href: api/AlgoSdk.WalletConnect.Formatters.HexFormatter.html#AlgoSdk_WalletConnect_Formatters_HexFormatter_Serialize_MessagePackWriter__AlgoSdk_WalletConnect_Hex_
-  commentId: M:AlgoSdk.WalletConnect.Formatters.HexFormatter.Serialize(MessagePackWriter@,AlgoSdk.WalletConnect.Hex)
-  name.vb: Serialize(ByRef MessagePackWriter, Hex)
-  fullName: AlgoSdk.WalletConnect.Formatters.HexFormatter.Serialize(ref MessagePackWriter, AlgoSdk.WalletConnect.Hex)
-  fullName.vb: AlgoSdk.WalletConnect.Formatters.HexFormatter.Serialize(ByRef MessagePackWriter, AlgoSdk.WalletConnect.Hex)
-  nameWithType: HexFormatter.Serialize(ref MessagePackWriter, Hex)
-  nameWithType.vb: HexFormatter.Serialize(ByRef MessagePackWriter, Hex)
-- uid: AlgoSdk.WalletConnect.Formatters.HexFormatter.Serialize*
-  name: Serialize
-  href: api/AlgoSdk.WalletConnect.Formatters.HexFormatter.html#AlgoSdk_WalletConnect_Formatters_HexFormatter_Serialize_
-  commentId: Overload:AlgoSdk.WalletConnect.Formatters.HexFormatter.Serialize
-  isSpec: "True"
-  fullName: AlgoSdk.WalletConnect.Formatters.HexFormatter.Serialize
-  nameWithType: HexFormatter.Serialize
-- uid: AlgoSdk.WalletConnect.Hex
-  name: Hex
-  href: api/AlgoSdk.WalletConnect.Hex.html
-  commentId: T:AlgoSdk.WalletConnect.Hex
-  fullName: AlgoSdk.WalletConnect.Hex
-  nameWithType: Hex
-- uid: AlgoSdk.WalletConnect.Hex.Data
-  name: Data
-  href: api/AlgoSdk.WalletConnect.Hex.html#AlgoSdk_WalletConnect_Hex_Data
-  commentId: P:AlgoSdk.WalletConnect.Hex.Data
-  fullName: AlgoSdk.WalletConnect.Hex.Data
-  nameWithType: Hex.Data
-- uid: AlgoSdk.WalletConnect.Hex.Data*
-  name: Data
-  href: api/AlgoSdk.WalletConnect.Hex.html#AlgoSdk_WalletConnect_Hex_Data_
-  commentId: Overload:AlgoSdk.WalletConnect.Hex.Data
-  isSpec: "True"
-  fullName: AlgoSdk.WalletConnect.Hex.Data
-  nameWithType: Hex.Data
-- uid: AlgoSdk.WalletConnect.Hex.Equals(AlgoSdk.WalletConnect.Hex)
-  name: Equals(Hex)
-  href: api/AlgoSdk.WalletConnect.Hex.html#AlgoSdk_WalletConnect_Hex_Equals_AlgoSdk_WalletConnect_Hex_
-  commentId: M:AlgoSdk.WalletConnect.Hex.Equals(AlgoSdk.WalletConnect.Hex)
-  fullName: AlgoSdk.WalletConnect.Hex.Equals(AlgoSdk.WalletConnect.Hex)
-  nameWithType: Hex.Equals(Hex)
-- uid: AlgoSdk.WalletConnect.Hex.Equals*
-  name: Equals
-  href: api/AlgoSdk.WalletConnect.Hex.html#AlgoSdk_WalletConnect_Hex_Equals_
-  commentId: Overload:AlgoSdk.WalletConnect.Hex.Equals
-  isSpec: "True"
-  fullName: AlgoSdk.WalletConnect.Hex.Equals
-  nameWithType: Hex.Equals
-- uid: AlgoSdk.WalletConnect.Hex.FromString(System.String)
-  name: FromString(String)
-  href: api/AlgoSdk.WalletConnect.Hex.html#AlgoSdk_WalletConnect_Hex_FromString_System_String_
-  commentId: M:AlgoSdk.WalletConnect.Hex.FromString(System.String)
-  fullName: AlgoSdk.WalletConnect.Hex.FromString(System.String)
-  nameWithType: Hex.FromString(String)
-- uid: AlgoSdk.WalletConnect.Hex.FromString*
-  name: FromString
-  href: api/AlgoSdk.WalletConnect.Hex.html#AlgoSdk_WalletConnect_Hex_FromString_
-  commentId: Overload:AlgoSdk.WalletConnect.Hex.FromString
-  isSpec: "True"
-  fullName: AlgoSdk.WalletConnect.Hex.FromString
-  nameWithType: Hex.FromString
-- uid: AlgoSdk.WalletConnect.Hex.op_Implicit(AlgoSdk.WalletConnect.Hex)~System.Byte[]
-  name: Implicit(Hex to Byte[])
-  href: api/AlgoSdk.WalletConnect.Hex.html#AlgoSdk_WalletConnect_Hex_op_Implicit_AlgoSdk_WalletConnect_Hex__System_Byte__
-  commentId: M:AlgoSdk.WalletConnect.Hex.op_Implicit(AlgoSdk.WalletConnect.Hex)~System.Byte[]
-  name.vb: Widening(Hex to Byte())
-  fullName: AlgoSdk.WalletConnect.Hex.Implicit(AlgoSdk.WalletConnect.Hex to System.Byte[])
-  fullName.vb: AlgoSdk.WalletConnect.Hex.Widening(AlgoSdk.WalletConnect.Hex to System.Byte())
-  nameWithType: Hex.Implicit(Hex to Byte[])
-  nameWithType.vb: Hex.Widening(Hex to Byte())
-- uid: AlgoSdk.WalletConnect.Hex.op_Implicit(System.Byte[])~AlgoSdk.WalletConnect.Hex
-  name: Implicit(Byte[] to Hex)
-  href: api/AlgoSdk.WalletConnect.Hex.html#AlgoSdk_WalletConnect_Hex_op_Implicit_System_Byte____AlgoSdk_WalletConnect_Hex
-  commentId: M:AlgoSdk.WalletConnect.Hex.op_Implicit(System.Byte[])~AlgoSdk.WalletConnect.Hex
-  name.vb: Widening(Byte() to Hex)
-  fullName: AlgoSdk.WalletConnect.Hex.Implicit(System.Byte[] to AlgoSdk.WalletConnect.Hex)
-  fullName.vb: AlgoSdk.WalletConnect.Hex.Widening(System.Byte() to AlgoSdk.WalletConnect.Hex)
-  nameWithType: Hex.Implicit(Byte[] to Hex)
-  nameWithType.vb: Hex.Widening(Byte() to Hex)
-- uid: AlgoSdk.WalletConnect.Hex.op_Implicit*
-  name: Implicit
-  href: api/AlgoSdk.WalletConnect.Hex.html#AlgoSdk_WalletConnect_Hex_op_Implicit_
-  commentId: Overload:AlgoSdk.WalletConnect.Hex.op_Implicit
-  isSpec: "True"
-  name.vb: Widening
-  fullName: AlgoSdk.WalletConnect.Hex.Implicit
-  fullName.vb: AlgoSdk.WalletConnect.Hex.Widening
-  nameWithType: Hex.Implicit
-  nameWithType.vb: Hex.Widening
-- uid: AlgoSdk.WalletConnect.Hex.ToString
-  name: ToString()
-  href: api/AlgoSdk.WalletConnect.Hex.html#AlgoSdk_WalletConnect_Hex_ToString
-  commentId: M:AlgoSdk.WalletConnect.Hex.ToString
-  fullName: AlgoSdk.WalletConnect.Hex.ToString()
-  nameWithType: Hex.ToString()
-- uid: AlgoSdk.WalletConnect.Hex.ToString*
-  name: ToString
-  href: api/AlgoSdk.WalletConnect.Hex.html#AlgoSdk_WalletConnect_Hex_ToString_
-  commentId: Overload:AlgoSdk.WalletConnect.Hex.ToString
-  isSpec: "True"
-  fullName: AlgoSdk.WalletConnect.Hex.ToString
-  nameWithType: Hex.ToString
 - uid: AlgoSdk.WalletConnect.IActiveWalletConnectSession`1
   name: IActiveWalletConnectSession<TSession>
   href: api/AlgoSdk.WalletConnect.IActiveWalletConnectSession-1.html
@@ -35492,11 +35486,11 @@ references:
   commentId: T:AlgoSdk.WalletConnect.JsonRpc
   fullName: AlgoSdk.WalletConnect.JsonRpc
   nameWithType: JsonRpc
-- uid: AlgoSdk.WalletConnect.JsonRpc.ReadJsonRpcPayload(WebSocketEvent,AlgoSdk.WalletConnect.Hex)
+- uid: AlgoSdk.WalletConnect.JsonRpc.ReadJsonRpcPayload(WebSocketEvent,AlgoSdk.Hex)
   name: ReadJsonRpcPayload(WebSocketEvent, Hex)
-  href: api/AlgoSdk.WalletConnect.JsonRpc.html#AlgoSdk_WalletConnect_JsonRpc_ReadJsonRpcPayload_WebSocketEvent_AlgoSdk_WalletConnect_Hex_
-  commentId: M:AlgoSdk.WalletConnect.JsonRpc.ReadJsonRpcPayload(WebSocketEvent,AlgoSdk.WalletConnect.Hex)
-  fullName: AlgoSdk.WalletConnect.JsonRpc.ReadJsonRpcPayload(WebSocketEvent, AlgoSdk.WalletConnect.Hex)
+  href: api/AlgoSdk.WalletConnect.JsonRpc.html#AlgoSdk_WalletConnect_JsonRpc_ReadJsonRpcPayload_WebSocketEvent_AlgoSdk_Hex_
+  commentId: M:AlgoSdk.WalletConnect.JsonRpc.ReadJsonRpcPayload(WebSocketEvent,AlgoSdk.Hex)
+  fullName: AlgoSdk.WalletConnect.JsonRpc.ReadJsonRpcPayload(WebSocketEvent, AlgoSdk.Hex)
   nameWithType: JsonRpc.ReadJsonRpcPayload(WebSocketEvent, Hex)
 - uid: AlgoSdk.WalletConnect.JsonRpc.ReadJsonRpcPayload*
   name: ReadJsonRpcPayload
@@ -35512,13 +35506,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.WalletConnect.JsonRpc.ToNetworkMessage
   nameWithType: JsonRpc.ToNetworkMessage
-- uid: AlgoSdk.WalletConnect.JsonRpc.ToNetworkMessage``1(``0,AlgoSdk.WalletConnect.Hex,System.String)
+- uid: AlgoSdk.WalletConnect.JsonRpc.ToNetworkMessage``1(``0,AlgoSdk.Hex,System.String)
   name: ToNetworkMessage<T>(T, Hex, String)
-  href: api/AlgoSdk.WalletConnect.JsonRpc.html#AlgoSdk_WalletConnect_JsonRpc_ToNetworkMessage__1___0_AlgoSdk_WalletConnect_Hex_System_String_
-  commentId: M:AlgoSdk.WalletConnect.JsonRpc.ToNetworkMessage``1(``0,AlgoSdk.WalletConnect.Hex,System.String)
+  href: api/AlgoSdk.WalletConnect.JsonRpc.html#AlgoSdk_WalletConnect_JsonRpc_ToNetworkMessage__1___0_AlgoSdk_Hex_System_String_
+  commentId: M:AlgoSdk.WalletConnect.JsonRpc.ToNetworkMessage``1(``0,AlgoSdk.Hex,System.String)
   name.vb: ToNetworkMessage(Of T)(T, Hex, String)
-  fullName: AlgoSdk.WalletConnect.JsonRpc.ToNetworkMessage<T>(T, AlgoSdk.WalletConnect.Hex, System.String)
-  fullName.vb: AlgoSdk.WalletConnect.JsonRpc.ToNetworkMessage(Of T)(T, AlgoSdk.WalletConnect.Hex, System.String)
+  fullName: AlgoSdk.WalletConnect.JsonRpc.ToNetworkMessage<T>(T, AlgoSdk.Hex, System.String)
+  fullName.vb: AlgoSdk.WalletConnect.JsonRpc.ToNetworkMessage(Of T)(T, AlgoSdk.Hex, System.String)
   nameWithType: JsonRpc.ToNetworkMessage<T>(T, Hex, String)
   nameWithType.vb: JsonRpc.ToNetworkMessage(Of T)(T, Hex, String)
 - uid: AlgoSdk.WalletConnect.JsonRpcError
@@ -35853,13 +35847,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.WalletConnect.NetworkMessage.PublishToTopicEncrypted
   nameWithType: NetworkMessage.PublishToTopicEncrypted
-- uid: AlgoSdk.WalletConnect.NetworkMessage.PublishToTopicEncrypted``1(``0,AlgoSdk.WalletConnect.Hex,System.String)
+- uid: AlgoSdk.WalletConnect.NetworkMessage.PublishToTopicEncrypted``1(``0,AlgoSdk.Hex,System.String)
   name: PublishToTopicEncrypted<T>(T, Hex, String)
-  href: api/AlgoSdk.WalletConnect.NetworkMessage.html#AlgoSdk_WalletConnect_NetworkMessage_PublishToTopicEncrypted__1___0_AlgoSdk_WalletConnect_Hex_System_String_
-  commentId: M:AlgoSdk.WalletConnect.NetworkMessage.PublishToTopicEncrypted``1(``0,AlgoSdk.WalletConnect.Hex,System.String)
+  href: api/AlgoSdk.WalletConnect.NetworkMessage.html#AlgoSdk_WalletConnect_NetworkMessage_PublishToTopicEncrypted__1___0_AlgoSdk_Hex_System_String_
+  commentId: M:AlgoSdk.WalletConnect.NetworkMessage.PublishToTopicEncrypted``1(``0,AlgoSdk.Hex,System.String)
   name.vb: PublishToTopicEncrypted(Of T)(T, Hex, String)
-  fullName: AlgoSdk.WalletConnect.NetworkMessage.PublishToTopicEncrypted<T>(T, AlgoSdk.WalletConnect.Hex, System.String)
-  fullName.vb: AlgoSdk.WalletConnect.NetworkMessage.PublishToTopicEncrypted(Of T)(T, AlgoSdk.WalletConnect.Hex, System.String)
+  fullName: AlgoSdk.WalletConnect.NetworkMessage.PublishToTopicEncrypted<T>(T, AlgoSdk.Hex, System.String)
+  fullName.vb: AlgoSdk.WalletConnect.NetworkMessage.PublishToTopicEncrypted(Of T)(T, AlgoSdk.Hex, System.String)
   nameWithType: NetworkMessage.PublishToTopicEncrypted<T>(T, Hex, String)
   nameWithType.vb: NetworkMessage.PublishToTopicEncrypted(Of T)(T, Hex, String)
 - uid: AlgoSdk.WalletConnect.NetworkMessage.SubscribeToTopic(System.String)
