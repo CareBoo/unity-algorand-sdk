@@ -200,6 +200,10 @@ namespace AlgoSdk.Editor.CodeGen
                     string elementType = Format(type.GetElementType());
                     name = $"{elementType}[]";
                 }
+                else if (type.IsGenericTypeParameter)
+                {
+                    name = type.Name;
+                }
                 else
                     name = type.FullName;
                 return name.Replace('+', '.');

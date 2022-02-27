@@ -20,11 +20,13 @@ namespace AlgoSdk.Editor.CodeGen
 
             var algoApiObjCompileUnits = TypeCache.GetTypesWithAttribute(typeof(AlgoApiObjectAttribute))
                 .OrderBy(t => t.Name)
+                .Where(t => !t.IsNested)
                 .Select(t => new AlgoApiObjectCompileUnit(t))
                 .Cast<AlgoApiCompileUnit>()
                 ;
             var algoApiFormatterCompileUnits = TypeCache.GetTypesWithAttribute(typeof(AlgoApiFormatterAttribute))
                 .OrderBy(t => t.Name)
+                .Where(t => !t.IsNested)
                 .Select(t => new AlgoApiFormatterCompileUnit(t))
                 .Cast<AlgoApiCompileUnit>()
                 ;
@@ -44,8 +46,6 @@ namespace AlgoSdk.Editor.CodeGen
             try
             {
                 var sourcePath = compileUnit.SourceInfo.AbsoluteFilePath;
-                Debug.Log($"Found attribute at {sourcePath}");
-                Debug.Log($"DirectoryName: {Path.GetDirectoryName(sourcePath)}");
                 var sourceDir = Path.GetDirectoryName(sourcePath);
                 var filenameWithoutExtension = Path.GetFileNameWithoutExtension(sourcePath);
                 var outputPath = Path.Combine(sourceDir, $"{filenameWithoutExtension}.{OutputFileName}");
