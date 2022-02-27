@@ -1,8 +1,8 @@
 using System;
-using AlgoSdk.WalletConnect.Formatters;
+using AlgoSdk.Formatters;
 using UnityEngine;
 
-namespace AlgoSdk.WalletConnect
+namespace AlgoSdk
 {
     [Serializable]
     [AlgoApiFormatter(typeof(HexFormatter))]
