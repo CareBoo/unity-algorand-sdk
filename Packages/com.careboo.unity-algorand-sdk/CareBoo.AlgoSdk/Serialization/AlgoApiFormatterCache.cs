@@ -13,70 +13,61 @@ namespace AlgoSdk
 
         static AlgoApiFormatterCache()
         {
-            Formatter = AlgoApiFormatterLookup.GetFormatter<T>();
+            Formatter = AlgoApiFormatterLookup.Get<T>();
             if (Formatter == null)
                 throw new NotImplementedException($"Formatter for type {typeof(T)} could not be found...");
         }
     }
 
-    public partial class AlgoApiFormatterLookup
+    public class AlgoApiFormatterLookup : Dictionary<Type, object>
     {
-        public const string AddFormatterMethodName = nameof(AddFormatter);
 
-        static Dictionary<Type, object> lookup;
+        public const string AddFormatterMethodName = nameof(Add);
 
-        static void InitLookup()
+        static AlgoApiFormatterLookup Instance;
+
+        static AlgoApiFormatterLookup()
         {
-            lookup = new Dictionary<Type, object>();
-            AddFormatter<ulong>(new UInt64Formatter());
-            AddFormatter<uint>(new UInt32Formatter());
-            AddFormatter<ushort>(new UInt16Formatter());
-            AddFormatter<byte>(new UInt8Formatter());
-            AddFormatter<long>(new Int64Formatter());
-            AddFormatter<int>(new Int32Formatter());
-            AddFormatter<short>(new Int16Formatter());
-            AddFormatter<sbyte>(new Int8Formatter());
-            AddFormatter<bool>(new BoolFormatter());
-            AddFormatter<string>(new StringFormatter());
-            AddFormatter<Sha512_256_Hash>(ByteArrayFormatter<Sha512_256_Hash>.Instance);
-            AddFormatter<Ed25519.PublicKey>(ByteArrayFormatter<Ed25519.PublicKey>.Instance);
-            AddFormatter<byte[]>(new ByteArrayFormatter());
-            AddFormatter<byte[][]>(ArrayFormatter<byte[]>.Instance);
-            AddFormatter<FixedString32Bytes>(new FixedStringFormatter<FixedString32Bytes>());
-            AddFormatter<FixedString64Bytes>(new FixedStringFormatter<FixedString64Bytes>());
-            AddFormatter<FixedString128Bytes>(new FixedStringFormatter<FixedString128Bytes>());
-            AddFormatter<FixedString512Bytes>(new FixedStringFormatter<FixedString512Bytes>());
-            AddFormatter<FixedString4096Bytes>(new FixedStringFormatter<FixedString4096Bytes>());
-            AddFormatter<FixedList32Bytes<byte>>(new FixedBytesFormatter<FixedList32Bytes<byte>>());
-            AddFormatter<FixedList64Bytes<byte>>(new FixedBytesFormatter<FixedList64Bytes<byte>>());
-            AddFormatter<FixedList128Bytes<byte>>(new FixedBytesFormatter<FixedList128Bytes<byte>>());
-            AddFormatter<FixedList512Bytes<byte>>(new FixedBytesFormatter<FixedList512Bytes<byte>>());
-            AddFormatter<FixedList4096Bytes<byte>>(new FixedBytesFormatter<FixedList4096Bytes<byte>>());
-            AddFormatter<AlgoSdk.WalletConnect.WalletTransaction[]>(ArrayFormatter<AlgoSdk.WalletConnect.WalletTransaction>.Instance);
+            Instance = new AlgoApiFormatterLookup();
+            Add<ulong>(new UInt64Formatter());
+            Add<uint>(new UInt32Formatter());
+            Add<ushort>(new UInt16Formatter());
+            Add<byte>(new UInt8Formatter());
+            Add<long>(new Int64Formatter());
+            Add<int>(new Int32Formatter());
+            Add<short>(new Int16Formatter());
+            Add<sbyte>(new Int8Formatter());
+            Add<bool>(new BoolFormatter());
+            Add<string>(new StringFormatter());
+            Add<Sha512_256_Hash>(ByteArrayFormatter<Sha512_256_Hash>.Instance);
+            Add<Ed25519.PublicKey>(ByteArrayFormatter<Ed25519.PublicKey>.Instance);
+            Add<byte[]>(new ByteArrayFormatter());
+            Add<byte[][]>(ArrayFormatter<byte[]>.Instance);
+            Add<FixedString32Bytes>(new FixedStringFormatter<FixedString32Bytes>());
+            Add<FixedString64Bytes>(new FixedStringFormatter<FixedString64Bytes>());
+            Add<FixedString128Bytes>(new FixedStringFormatter<FixedString128Bytes>());
+            Add<FixedString512Bytes>(new FixedStringFormatter<FixedString512Bytes>());
+            Add<FixedString4096Bytes>(new FixedStringFormatter<FixedString4096Bytes>());
+            Add<FixedList32Bytes<byte>>(new FixedBytesFormatter<FixedList32Bytes<byte>>());
+            Add<FixedList64Bytes<byte>>(new FixedBytesFormatter<FixedList64Bytes<byte>>());
+            Add<FixedList128Bytes<byte>>(new FixedBytesFormatter<FixedList128Bytes<byte>>());
+            Add<FixedList512Bytes<byte>>(new FixedBytesFormatter<FixedList512Bytes<byte>>());
+            Add<FixedList4096Bytes<byte>>(new FixedBytesFormatter<FixedList4096Bytes<byte>>());
         }
 
-        public static void AddFormatter(Type t, object formatter)
-        {
-            if (lookup.ContainsKey(t))
-                return;
-            lookup.Add(t, formatter);
-        }
-
-        public static void AddFormatter<T>(IAlgoApiFormatter<T> formatter)
+        public static void Add<T>(IAlgoApiFormatter<T> formatter)
         {
             var type = typeof(T);
-            AddFormatter(type, formatter);
+            if (Instance.ContainsKey(type)) return;
+            Instance.Add(type, formatter);
         }
 
-        public static IAlgoApiFormatter<T> GetFormatter<T>()
+        public static IAlgoApiFormatter<T> Get<T>()
         {
-            if (lookup == null)
-                InitLookup();
-
             var type = typeof(T);
-            RuntimeHelpers.RunClassConstructor(type.TypeHandle);
+            EnsureStaticConstructor(type);
 
-            if (lookup.TryGetValue(type, out var formatter)
+            if (Instance.TryGetValue(type, out var formatter)
                 && formatter is IAlgoApiFormatter<T> algoApiFormatter)
             {
                 return algoApiFormatter;
@@ -85,6 +76,14 @@ namespace AlgoSdk
                 return null;
 
             throw new InvalidCastException($"formatter '{formatter.GetType().FullName}' cannot be cast to '{typeof(IAlgoApiFormatter<T>).FullName}'...");
+        }
+
+        static void EnsureStaticConstructor(Type type)
+        {
+            if (type.IsArray)
+                type = type.GetElementType();
+
+            RuntimeHelpers.RunClassConstructor(type.TypeHandle);
         }
     }
 }

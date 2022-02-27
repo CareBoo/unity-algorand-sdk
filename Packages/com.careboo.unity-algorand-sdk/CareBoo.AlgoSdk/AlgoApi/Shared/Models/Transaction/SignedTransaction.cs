@@ -9,7 +9,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiFormatter(typeof(SignedTransactionFormatter))]
     [Serializable]
-    public struct SignedTransaction
+    public partial struct SignedTransaction
         : IEquatable<SignedTransaction>
     {
         /// <summary>

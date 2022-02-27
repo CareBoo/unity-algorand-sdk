@@ -10,17 +10,17 @@
 
 namespace AlgoSdk
 {
-    
-    
+
+
     public partial struct BlockResponse
     {
-        
+
         private static bool @__generated__IsValid = BlockResponse.@__generated__InitializeAlgoApiFormatters();
-        
+
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.BlockResponse), new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.BlockResponse>().Assign("block", "block", (AlgoSdk.BlockResponse x) => x.BlockHeader, (ref AlgoSdk.BlockResponse x, AlgoSdk.Block value) => x.BlockHeader = value, false).Assign(null, "cert", (AlgoSdk.BlockResponse x) => x.Cert, (ref AlgoSdk.BlockResponse x, AlgoSdk.AlgoApiObject value) => x.Cert = value, false));
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.BlockResponse[]), AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.BlockResponse[]>.Instance);
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.BlockResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.BlockResponse>().Assign("block", "block", (AlgoSdk.BlockResponse x) => x.BlockHeader, (ref AlgoSdk.BlockResponse x, AlgoSdk.Block value) => x.BlockHeader = value, false).Assign(null, "cert", (AlgoSdk.BlockResponse x) => x.Cert, (ref AlgoSdk.BlockResponse x, AlgoSdk.AlgoApiObject value) => x.Cert = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.BlockResponse[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.BlockResponse>.Instance);
             return true;
         }
     }

@@ -10,17 +10,17 @@
 
 namespace AlgoSdk
 {
-    
-    
+
+
     public partial struct ImportKeyRequest
     {
-        
+
         private static bool @__generated__IsValid = ImportKeyRequest.@__generated__InitializeAlgoApiFormatters();
-        
+
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.ImportKeyRequest), new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.ImportKeyRequest>().Assign("private_key", null, (AlgoSdk.ImportKeyRequest x) => x.PrivateKey, (ref AlgoSdk.ImportKeyRequest x, AlgoSdk.PrivateKey value) => x.PrivateKey = value, false).Assign("wallet_handle_token", null, (AlgoSdk.ImportKeyRequest x) => x.WalletHandleToken, (ref AlgoSdk.ImportKeyRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value, false));
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.ImportKeyRequest[]), AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.ImportKeyRequest[]>.Instance);
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ImportKeyRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.ImportKeyRequest>().Assign("private_key", null, (AlgoSdk.ImportKeyRequest x) => x.PrivateKey, (ref AlgoSdk.ImportKeyRequest x, AlgoSdk.PrivateKey value) => x.PrivateKey = value, false).Assign("wallet_handle_token", null, (AlgoSdk.ImportKeyRequest x) => x.WalletHandleToken, (ref AlgoSdk.ImportKeyRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ImportKeyRequest[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.ImportKeyRequest>.Instance);
             return true;
         }
     }

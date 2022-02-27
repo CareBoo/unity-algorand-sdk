@@ -10,17 +10,17 @@
 
 namespace AlgoSdk
 {
-    
-    
+
+
     public partial struct CatchupMessage
     {
-        
+
         private static bool @__generated__IsValid = CatchupMessage.@__generated__InitializeAlgoApiFormatters();
-        
+
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.CatchupMessage), new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.CatchupMessage>().Assign("catchup-message", null, (AlgoSdk.CatchupMessage x) => x.Message, (ref AlgoSdk.CatchupMessage x, Unity.Collections.FixedString512Bytes value) => x.Message = value, false));
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.CatchupMessage[]), AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.CatchupMessage[]>.Instance);
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.CatchupMessage>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.CatchupMessage>().Assign("catchup-message", null, (AlgoSdk.CatchupMessage x) => x.Message, (ref AlgoSdk.CatchupMessage x, Unity.Collections.FixedString512Bytes value) => x.Message = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.CatchupMessage[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.CatchupMessage>.Instance);
             return true;
         }
     }

@@ -10,17 +10,17 @@
 
 namespace AlgoSdk
 {
-    
-    
+
+
     public partial struct PrivateKey
     {
-        
+
         private static bool @__generated__IsValid = PrivateKey.@__generated__InitializeAlgoApiFormatters();
-        
+
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.PrivateKey), new AlgoSdk.Formatters.PrivateKeyFormatter());
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.PrivateKey[]), AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.PrivateKey[]>.Instance);
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.PrivateKey>(new AlgoSdk.Formatters.PrivateKeyFormatter());
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.PrivateKey[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.PrivateKey>.Instance);
             return true;
         }
     }

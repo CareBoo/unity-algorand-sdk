@@ -10,17 +10,17 @@
 
 namespace AlgoSdk
 {
-    
-    
+
+
     public partial struct AccountParticipation
     {
-        
+
         private static bool @__generated__IsValid = AccountParticipation.@__generated__InitializeAlgoApiFormatters();
-        
+
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.AccountParticipation), new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.AccountParticipation>().Assign("vote-participation-key", "votekey", (AlgoSdk.AccountParticipation x) => x.VoteParticipationKey, (ref AlgoSdk.AccountParticipation x, AlgoSdk.Crypto.Ed25519.PublicKey value) => x.VoteParticipationKey = value, false).Assign("selection-participation-key", "selkey", (AlgoSdk.AccountParticipation x) => x.SelectionParticipationKey, (ref AlgoSdk.AccountParticipation x, AlgoSdk.VrfPubKey value) => x.SelectionParticipationKey = value, false).Assign("vote-first-valid", "votefst", (AlgoSdk.AccountParticipation x) => x.VoteFirst, (ref AlgoSdk.AccountParticipation x, System.UInt64 value) => x.VoteFirst = value, false).Assign("vote-last-valid", "votelst", (AlgoSdk.AccountParticipation x) => x.VoteLast, (ref AlgoSdk.AccountParticipation x, System.UInt64 value) => x.VoteLast = value, false).Assign("vote-key-dilution", "votekd", (AlgoSdk.AccountParticipation x) => x.VoteKeyDilution, (ref AlgoSdk.AccountParticipation x, System.UInt64 value) => x.VoteKeyDilution = value, false));
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.AccountParticipation[]), AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.AccountParticipation[]>.Instance);
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.AccountParticipation>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.AccountParticipation>().Assign("vote-participation-key", "votekey", (AlgoSdk.AccountParticipation x) => x.VoteParticipationKey, (ref AlgoSdk.AccountParticipation x, AlgoSdk.Crypto.Ed25519.PublicKey value) => x.VoteParticipationKey = value, false).Assign("selection-participation-key", "selkey", (AlgoSdk.AccountParticipation x) => x.SelectionParticipationKey, (ref AlgoSdk.AccountParticipation x, AlgoSdk.VrfPubKey value) => x.SelectionParticipationKey = value, false).Assign("vote-first-valid", "votefst", (AlgoSdk.AccountParticipation x) => x.VoteFirst, (ref AlgoSdk.AccountParticipation x, System.UInt64 value) => x.VoteFirst = value, false).Assign("vote-last-valid", "votelst", (AlgoSdk.AccountParticipation x) => x.VoteLast, (ref AlgoSdk.AccountParticipation x, System.UInt64 value) => x.VoteLast = value, false).Assign("vote-key-dilution", "votekd", (AlgoSdk.AccountParticipation x) => x.VoteKeyDilution, (ref AlgoSdk.AccountParticipation x, System.UInt64 value) => x.VoteKeyDilution = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.AccountParticipation[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.AccountParticipation>.Instance);
             return true;
         }
     }

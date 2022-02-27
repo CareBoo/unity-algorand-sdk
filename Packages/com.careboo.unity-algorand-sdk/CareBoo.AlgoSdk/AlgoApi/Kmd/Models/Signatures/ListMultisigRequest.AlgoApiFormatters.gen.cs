@@ -10,17 +10,17 @@
 
 namespace AlgoSdk
 {
-    
-    
+
+
     public partial struct ListMultisigRequest
     {
-        
+
         private static bool @__generated__IsValid = ListMultisigRequest.@__generated__InitializeAlgoApiFormatters();
-        
+
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.ListMultisigRequest), new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.ListMultisigRequest>().Assign("wallet_handle_token", null, (AlgoSdk.ListMultisigRequest x) => x.WalletHandleToken, (ref AlgoSdk.ListMultisigRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value, false));
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.ListMultisigRequest[]), AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.ListMultisigRequest[]>.Instance);
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ListMultisigRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.ListMultisigRequest>().Assign("wallet_handle_token", null, (AlgoSdk.ListMultisigRequest x) => x.WalletHandleToken, (ref AlgoSdk.ListMultisigRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ListMultisigRequest[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.ListMultisigRequest>.Instance);
             return true;
         }
     }

@@ -10,17 +10,17 @@
 
 namespace AlgoSdk
 {
-    
-    
+
+
     public partial struct ReleaseWalletHandleTokenRequest
     {
-        
+
         private static bool @__generated__IsValid = ReleaseWalletHandleTokenRequest.@__generated__InitializeAlgoApiFormatters();
-        
+
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.ReleaseWalletHandleTokenRequest), new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.ReleaseWalletHandleTokenRequest>().Assign("wallet_handle_token", null, (AlgoSdk.ReleaseWalletHandleTokenRequest x) => x.WalletHandleToken, (ref AlgoSdk.ReleaseWalletHandleTokenRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value, false));
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.ReleaseWalletHandleTokenRequest[]), AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.ReleaseWalletHandleTokenRequest[]>.Instance);
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ReleaseWalletHandleTokenRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.ReleaseWalletHandleTokenRequest>().Assign("wallet_handle_token", null, (AlgoSdk.ReleaseWalletHandleTokenRequest x) => x.WalletHandleToken, (ref AlgoSdk.ReleaseWalletHandleTokenRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ReleaseWalletHandleTokenRequest[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.ReleaseWalletHandleTokenRequest>.Instance);
             return true;
         }
     }

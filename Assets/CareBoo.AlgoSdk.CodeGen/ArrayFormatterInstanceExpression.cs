@@ -16,7 +16,7 @@ namespace AlgoSdk.Editor.CodeGen
 
         static CodeTypeReferenceExpression ArrayFormatterTypeReference(Type arrayType)
         {
-            var elementType = arrayType;
+            var elementType = arrayType.GetElementType();
             var formatterType = typeof(ArrayFormatter<>).MakeGenericType(elementType);
             return new CodeTypeReferenceExpression(formatterType.FullNameExpression());
         }

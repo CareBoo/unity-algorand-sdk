@@ -10,17 +10,17 @@
 
 namespace AlgoSdk
 {
-    
-    
+
+
     public partial struct ListKeysResponse
     {
-        
+
         private static bool @__generated__IsValid = ListKeysResponse.@__generated__InitializeAlgoApiFormatters();
-        
+
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.ListKeysResponse), new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.ListKeysResponse>().Assign("addresses", null, (AlgoSdk.ListKeysResponse x) => x.Addresses, (ref AlgoSdk.ListKeysResponse x, AlgoSdk.Address[] value) => x.Addresses = value, AlgoSdk.ArrayComparer<AlgoSdk.Address>.Instance, false).Assign("error", null, (AlgoSdk.ListKeysResponse x) => x.Error, (ref AlgoSdk.ListKeysResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value, false).Assign("message", null, (AlgoSdk.ListKeysResponse x) => x.Message, (ref AlgoSdk.ListKeysResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance, false));
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.ListKeysResponse[]), AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.ListKeysResponse[]>.Instance);
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ListKeysResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.ListKeysResponse>().Assign("addresses", null, (AlgoSdk.ListKeysResponse x) => x.Addresses, (ref AlgoSdk.ListKeysResponse x, AlgoSdk.Address[] value) => x.Addresses = value, AlgoSdk.ArrayComparer<AlgoSdk.Address>.Instance, false).Assign("error", null, (AlgoSdk.ListKeysResponse x) => x.Error, (ref AlgoSdk.ListKeysResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value, false).Assign("message", null, (AlgoSdk.ListKeysResponse x) => x.Message, (ref AlgoSdk.ListKeysResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ListKeysResponse[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.ListKeysResponse>.Instance);
             return true;
         }
     }

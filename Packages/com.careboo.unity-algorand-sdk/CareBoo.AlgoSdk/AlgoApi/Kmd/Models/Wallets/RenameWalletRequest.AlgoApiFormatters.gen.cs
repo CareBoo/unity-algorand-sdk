@@ -10,17 +10,17 @@
 
 namespace AlgoSdk
 {
-    
-    
+
+
     public partial struct RenameWalletRequest
     {
-        
+
         private static bool @__generated__IsValid = RenameWalletRequest.@__generated__InitializeAlgoApiFormatters();
-        
+
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.RenameWalletRequest), new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.RenameWalletRequest>().Assign("wallet_id", null, (AlgoSdk.RenameWalletRequest x) => x.WalletId, (ref AlgoSdk.RenameWalletRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletId = value, false).Assign("wallet_name", null, (AlgoSdk.RenameWalletRequest x) => x.WalletName, (ref AlgoSdk.RenameWalletRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletName = value, false).Assign("wallet_password", null, (AlgoSdk.RenameWalletRequest x) => x.WalletPassword, (ref AlgoSdk.RenameWalletRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletPassword = value, false));
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.RenameWalletRequest[]), AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.RenameWalletRequest[]>.Instance);
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.RenameWalletRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.RenameWalletRequest>().Assign("wallet_id", null, (AlgoSdk.RenameWalletRequest x) => x.WalletId, (ref AlgoSdk.RenameWalletRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletId = value, false).Assign("wallet_name", null, (AlgoSdk.RenameWalletRequest x) => x.WalletName, (ref AlgoSdk.RenameWalletRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletName = value, false).Assign("wallet_password", null, (AlgoSdk.RenameWalletRequest x) => x.WalletPassword, (ref AlgoSdk.RenameWalletRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletPassword = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.RenameWalletRequest[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.RenameWalletRequest>.Instance);
             return true;
         }
     }

@@ -10,17 +10,17 @@
 
 namespace AlgoSdk
 {
-    
-    
+
+
     public partial struct CompiledTeal
     {
-        
+
         private static bool @__generated__IsValid = CompiledTeal.@__generated__InitializeAlgoApiFormatters();
-        
+
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.CompiledTeal), new AlgoSdk.CompiledTealFormatter());
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.CompiledTeal[]), AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.CompiledTeal[]>.Instance);
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.CompiledTeal>(new AlgoSdk.CompiledTealFormatter());
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.CompiledTeal[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.CompiledTeal>.Instance);
             return true;
         }
     }

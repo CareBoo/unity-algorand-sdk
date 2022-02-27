@@ -10,17 +10,17 @@
 
 namespace AlgoSdk
 {
-    
-    
+
+
     public partial struct GenesisHash
     {
-        
+
         private static bool @__generated__IsValid = GenesisHash.@__generated__InitializeAlgoApiFormatters();
-        
+
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.GenesisHash), new AlgoSdk.Formatters.GenesisHashFormatter());
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.GenesisHash[]), AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.GenesisHash[]>.Instance);
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.GenesisHash>(new AlgoSdk.Formatters.GenesisHashFormatter());
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.GenesisHash[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.GenesisHash>.Instance);
             return true;
         }
     }

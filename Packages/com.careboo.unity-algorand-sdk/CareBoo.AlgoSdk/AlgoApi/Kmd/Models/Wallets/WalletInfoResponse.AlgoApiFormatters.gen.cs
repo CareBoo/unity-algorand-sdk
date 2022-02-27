@@ -10,17 +10,17 @@
 
 namespace AlgoSdk
 {
-    
-    
+
+
     public partial struct WalletInfoResponse
     {
-        
+
         private static bool @__generated__IsValid = WalletInfoResponse.@__generated__InitializeAlgoApiFormatters();
-        
+
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.WalletInfoResponse), new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.WalletInfoResponse>().Assign("wallet_handle", null, (AlgoSdk.WalletInfoResponse x) => x.WalletHandle, (ref AlgoSdk.WalletInfoResponse x, AlgoSdk.WalletHandle value) => x.WalletHandle = value, false).Assign("error", null, (AlgoSdk.WalletInfoResponse x) => x.Error, (ref AlgoSdk.WalletInfoResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value, false).Assign("message", null, (AlgoSdk.WalletInfoResponse x) => x.Message, (ref AlgoSdk.WalletInfoResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance, false));
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.WalletInfoResponse[]), AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.WalletInfoResponse[]>.Instance);
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.WalletInfoResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.WalletInfoResponse>().Assign("wallet_handle", null, (AlgoSdk.WalletInfoResponse x) => x.WalletHandle, (ref AlgoSdk.WalletInfoResponse x, AlgoSdk.WalletHandle value) => x.WalletHandle = value, false).Assign("error", null, (AlgoSdk.WalletInfoResponse x) => x.Error, (ref AlgoSdk.WalletInfoResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value, false).Assign("message", null, (AlgoSdk.WalletInfoResponse x) => x.Message, (ref AlgoSdk.WalletInfoResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.WalletInfoResponse[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.WalletInfoResponse>.Instance);
             return true;
         }
     }

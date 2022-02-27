@@ -10,17 +10,17 @@
 
 namespace AlgoSdk.WalletConnect
 {
-    
-    
+
+
     public partial struct NetworkMessage
     {
-        
+
         private static bool @__generated__IsValid = NetworkMessage.@__generated__InitializeAlgoApiFormatters();
-        
+
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.WalletConnect.NetworkMessage), new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.WalletConnect.NetworkMessage>().Assign("topic", null, (AlgoSdk.WalletConnect.NetworkMessage x) => x.Topic, (ref AlgoSdk.WalletConnect.NetworkMessage x, System.String value) => x.Topic = value, AlgoSdk.StringComparer.Instance, false).Assign("type", null, (AlgoSdk.WalletConnect.NetworkMessage x) => x.Type, (ref AlgoSdk.WalletConnect.NetworkMessage x, System.String value) => x.Type = value, AlgoSdk.StringComparer.Instance, false).Assign("payload", null, (AlgoSdk.WalletConnect.NetworkMessage x) => x.Payload, (ref AlgoSdk.WalletConnect.NetworkMessage x, System.String value) => x.Payload = value, AlgoSdk.StringComparer.Instance, false).Assign("silent", null, (AlgoSdk.WalletConnect.NetworkMessage x) => x.IsSilent, (ref AlgoSdk.WalletConnect.NetworkMessage x, AlgoSdk.Optional<System.Boolean> value) => x.IsSilent = value, false));
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.WalletConnect.NetworkMessage[]), AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.WalletConnect.NetworkMessage[]>.Instance);
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.WalletConnect.NetworkMessage>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.WalletConnect.NetworkMessage>().Assign("topic", null, (AlgoSdk.WalletConnect.NetworkMessage x) => x.Topic, (ref AlgoSdk.WalletConnect.NetworkMessage x, System.String value) => x.Topic = value, AlgoSdk.StringComparer.Instance, false).Assign("type", null, (AlgoSdk.WalletConnect.NetworkMessage x) => x.Type, (ref AlgoSdk.WalletConnect.NetworkMessage x, System.String value) => x.Type = value, AlgoSdk.StringComparer.Instance, false).Assign("payload", null, (AlgoSdk.WalletConnect.NetworkMessage x) => x.Payload, (ref AlgoSdk.WalletConnect.NetworkMessage x, System.String value) => x.Payload = value, AlgoSdk.StringComparer.Instance, false).Assign("silent", null, (AlgoSdk.WalletConnect.NetworkMessage x) => x.IsSilent, (ref AlgoSdk.WalletConnect.NetworkMessage x, AlgoSdk.Optional<System.Boolean> value) => x.IsSilent = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.WalletConnect.NetworkMessage[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.WalletConnect.NetworkMessage>.Instance);
             return true;
         }
     }

@@ -10,17 +10,17 @@
 
 namespace AlgoSdk
 {
-    
-    
+
+
     public partial struct Either<T, U>
     {
-        
+
         private static bool @__generated__IsValid = Either<T, U>.@__generated__InitializeAlgoApiFormatters();
-        
+
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.Either<T, U>), new AlgoSdk.EitherFormatter<T, U>());
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.Either<T, U>[]), AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.Either<T, U>[]>.Instance);
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Either<T, U>>(new AlgoSdk.EitherFormatter<T, U>());
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Either<T, U>[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.Either<T, U>>.Instance);
             return true;
         }
     }

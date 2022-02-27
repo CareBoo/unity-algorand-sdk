@@ -10,17 +10,17 @@
 
 namespace AlgoSdk
 {
-    
-    
+
+
     public partial struct AccountStateDelta
     {
-        
+
         private static bool @__generated__IsValid = AccountStateDelta.@__generated__InitializeAlgoApiFormatters();
-        
+
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.AccountStateDelta), new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.AccountStateDelta>().Assign("address", null, (AlgoSdk.AccountStateDelta x) => x.Address, (ref AlgoSdk.AccountStateDelta x, AlgoSdk.Address value) => x.Address = value, false).Assign("delta", null, (AlgoSdk.AccountStateDelta x) => x.Delta, (ref AlgoSdk.AccountStateDelta x, AlgoSdk.EvalDeltaKeyValue[] value) => x.Delta = value, AlgoSdk.ArrayComparer<AlgoSdk.EvalDeltaKeyValue>.Instance, false));
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.AccountStateDelta[]), AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.AccountStateDelta[]>.Instance);
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.AccountStateDelta>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.AccountStateDelta>().Assign("address", null, (AlgoSdk.AccountStateDelta x) => x.Address, (ref AlgoSdk.AccountStateDelta x, AlgoSdk.Address value) => x.Address = value, false).Assign("delta", null, (AlgoSdk.AccountStateDelta x) => x.Delta, (ref AlgoSdk.AccountStateDelta x, AlgoSdk.EvalDeltaKeyValue[] value) => x.Delta = value, AlgoSdk.ArrayComparer<AlgoSdk.EvalDeltaKeyValue>.Instance, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.AccountStateDelta[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.AccountStateDelta>.Instance);
             return true;
         }
     }

@@ -10,17 +10,17 @@
 
 namespace AlgoSdk.WalletConnect
 {
-    
-    
+
+
     public partial struct SignTxnsOpts
     {
-        
+
         private static bool @__generated__IsValid = SignTxnsOpts.@__generated__InitializeAlgoApiFormatters();
-        
+
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.WalletConnect.SignTxnsOpts), new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.WalletConnect.SignTxnsOpts>().Assign("message", null, (AlgoSdk.WalletConnect.SignTxnsOpts x) => x.Message, (ref AlgoSdk.WalletConnect.SignTxnsOpts x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance, false));
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.WalletConnect.SignTxnsOpts[]), AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.WalletConnect.SignTxnsOpts[]>.Instance);
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.WalletConnect.SignTxnsOpts>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.WalletConnect.SignTxnsOpts>().Assign("message", null, (AlgoSdk.WalletConnect.SignTxnsOpts x) => x.Message, (ref AlgoSdk.WalletConnect.SignTxnsOpts x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.WalletConnect.SignTxnsOpts[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.WalletConnect.SignTxnsOpts>.Instance);
             return true;
         }
     }

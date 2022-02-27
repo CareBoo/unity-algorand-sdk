@@ -10,17 +10,17 @@
 
 namespace AlgoSdk
 {
-    
-    
+
+
     public partial struct TransactionId
     {
-        
+
         private static bool @__generated__IsValid = TransactionId.@__generated__InitializeAlgoApiFormatters();
-        
+
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.TransactionId), new AlgoSdk.Formatters.TransactionIdFormatter());
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.TransactionId[]), AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.TransactionId[]>.Instance);
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.TransactionId>(new AlgoSdk.Formatters.TransactionIdFormatter());
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.TransactionId[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.TransactionId>.Instance);
             return true;
         }
     }

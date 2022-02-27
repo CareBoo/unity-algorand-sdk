@@ -10,17 +10,17 @@
 
 namespace AlgoSdk
 {
-    
-    
+
+
     public partial struct BalancesResponse
     {
-        
+
         private static bool @__generated__IsValid = BalancesResponse.@__generated__InitializeAlgoApiFormatters();
-        
+
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.BalancesResponse), new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.BalancesResponse>().Assign("balances", null, (AlgoSdk.BalancesResponse x) => x.Balances, (ref AlgoSdk.BalancesResponse x, AlgoSdk.MiniAssetHolding[] value) => x.Balances = value, AlgoSdk.ArrayComparer<AlgoSdk.MiniAssetHolding>.Instance, false).Assign("current-round", null, (AlgoSdk.BalancesResponse x) => x.CurrentRound, (ref AlgoSdk.BalancesResponse x, System.UInt64 value) => x.CurrentRound = value, false).Assign("next-token", null, (AlgoSdk.BalancesResponse x) => x.NextToken, (ref AlgoSdk.BalancesResponse x, Unity.Collections.FixedString128Bytes value) => x.NextToken = value, false));
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.BalancesResponse[]), AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.BalancesResponse[]>.Instance);
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.BalancesResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.BalancesResponse>().Assign("balances", null, (AlgoSdk.BalancesResponse x) => x.Balances, (ref AlgoSdk.BalancesResponse x, AlgoSdk.MiniAssetHolding[] value) => x.Balances = value, AlgoSdk.ArrayComparer<AlgoSdk.MiniAssetHolding>.Instance, false).Assign("current-round", null, (AlgoSdk.BalancesResponse x) => x.CurrentRound, (ref AlgoSdk.BalancesResponse x, System.UInt64 value) => x.CurrentRound = value, false).Assign("next-token", null, (AlgoSdk.BalancesResponse x) => x.NextToken, (ref AlgoSdk.BalancesResponse x, Unity.Collections.FixedString128Bytes value) => x.NextToken = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.BalancesResponse[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.BalancesResponse>.Instance);
             return true;
         }
     }

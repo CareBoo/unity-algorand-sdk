@@ -10,17 +10,17 @@
 
 namespace AlgoSdk
 {
-    
-    
+
+
     public partial struct AlgoApiObject
     {
-        
+
         private static bool @__generated__IsValid = AlgoApiObject.@__generated__InitializeAlgoApiFormatters();
-        
+
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.AlgoApiObject), new AlgoSdk.AlgoApiObjectFormatter());
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.AlgoApiObject[]), AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.AlgoApiObject[]>.Instance);
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.AlgoApiObject>(new AlgoSdk.AlgoApiObjectFormatter());
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.AlgoApiObject[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.AlgoApiObject>.Instance);
             return true;
         }
     }

@@ -10,17 +10,17 @@
 
 namespace AlgoSdk
 {
-    
-    
+
+
     public partial struct DryrunTxnResult
     {
-        
+
         private static bool @__generated__IsValid = DryrunTxnResult.@__generated__InitializeAlgoApiFormatters();
-        
+
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.DryrunTxnResult), new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.DryrunTxnResult>().Assign("app-call-messages", null, (AlgoSdk.DryrunTxnResult x) => x.AppCallMessages, (ref AlgoSdk.DryrunTxnResult x, Unity.Collections.FixedString128Bytes[] value) => x.AppCallMessages = value, AlgoSdk.ArrayComparer<Unity.Collections.FixedString128Bytes>.Instance, false).Assign("app-call-trace", null, (AlgoSdk.DryrunTxnResult x) => x.AppCallTrace, (ref AlgoSdk.DryrunTxnResult x, AlgoSdk.DryrunState[] value) => x.AppCallTrace = value, AlgoSdk.ArrayComparer<AlgoSdk.DryrunState>.Instance, false).Assign("cost", null, (AlgoSdk.DryrunTxnResult x) => x.Cost, (ref AlgoSdk.DryrunTxnResult x, System.UInt64 value) => x.Cost = value, false).Assign("disassembly", null, (AlgoSdk.DryrunTxnResult x) => x.Disassembly, (ref AlgoSdk.DryrunTxnResult x, Unity.Collections.FixedString128Bytes[] value) => x.Disassembly = value, AlgoSdk.ArrayComparer<Unity.Collections.FixedString128Bytes>.Instance, false).Assign("global-delta", null, (AlgoSdk.DryrunTxnResult x) => x.GlobalDelta, (ref AlgoSdk.DryrunTxnResult x, AlgoSdk.EvalDeltaKeyValue[] value) => x.GlobalDelta = value, AlgoSdk.ArrayComparer<AlgoSdk.EvalDeltaKeyValue>.Instance, false).Assign("local-deltas", null, (AlgoSdk.DryrunTxnResult x) => x.LocalDeltas, (ref AlgoSdk.DryrunTxnResult x, AlgoSdk.AccountStateDelta[] value) => x.LocalDeltas = value, AlgoSdk.ArrayComparer<AlgoSdk.AccountStateDelta>.Instance, false).Assign("logic-sig-messages", null, (AlgoSdk.DryrunTxnResult x) => x.LogicSigMessages, (ref AlgoSdk.DryrunTxnResult x, Unity.Collections.FixedString128Bytes[] value) => x.LogicSigMessages = value, AlgoSdk.ArrayComparer<Unity.Collections.FixedString128Bytes>.Instance, false).Assign("logic-sig-trace", null, (AlgoSdk.DryrunTxnResult x) => x.LogicSigTrace, (ref AlgoSdk.DryrunTxnResult x, AlgoSdk.DryrunState[] value) => x.LogicSigTrace = value, AlgoSdk.ArrayComparer<AlgoSdk.DryrunState>.Instance, false));
-            AlgoSdk.AlgoApiFormatterLookup.AddFormatter(typeof(AlgoSdk.DryrunTxnResult[]), AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.DryrunTxnResult[]>.Instance);
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.DryrunTxnResult>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.DryrunTxnResult>().Assign("app-call-messages", null, (AlgoSdk.DryrunTxnResult x) => x.AppCallMessages, (ref AlgoSdk.DryrunTxnResult x, Unity.Collections.FixedString128Bytes[] value) => x.AppCallMessages = value, AlgoSdk.ArrayComparer<Unity.Collections.FixedString128Bytes>.Instance, false).Assign("app-call-trace", null, (AlgoSdk.DryrunTxnResult x) => x.AppCallTrace, (ref AlgoSdk.DryrunTxnResult x, AlgoSdk.DryrunState[] value) => x.AppCallTrace = value, AlgoSdk.ArrayComparer<AlgoSdk.DryrunState>.Instance, false).Assign("cost", null, (AlgoSdk.DryrunTxnResult x) => x.Cost, (ref AlgoSdk.DryrunTxnResult x, System.UInt64 value) => x.Cost = value, false).Assign("disassembly", null, (AlgoSdk.DryrunTxnResult x) => x.Disassembly, (ref AlgoSdk.DryrunTxnResult x, Unity.Collections.FixedString128Bytes[] value) => x.Disassembly = value, AlgoSdk.ArrayComparer<Unity.Collections.FixedString128Bytes>.Instance, false).Assign("global-delta", null, (AlgoSdk.DryrunTxnResult x) => x.GlobalDelta, (ref AlgoSdk.DryrunTxnResult x, AlgoSdk.EvalDeltaKeyValue[] value) => x.GlobalDelta = value, AlgoSdk.ArrayComparer<AlgoSdk.EvalDeltaKeyValue>.Instance, false).Assign("local-deltas", null, (AlgoSdk.DryrunTxnResult x) => x.LocalDeltas, (ref AlgoSdk.DryrunTxnResult x, AlgoSdk.AccountStateDelta[] value) => x.LocalDeltas = value, AlgoSdk.ArrayComparer<AlgoSdk.AccountStateDelta>.Instance, false).Assign("logic-sig-messages", null, (AlgoSdk.DryrunTxnResult x) => x.LogicSigMessages, (ref AlgoSdk.DryrunTxnResult x, Unity.Collections.FixedString128Bytes[] value) => x.LogicSigMessages = value, AlgoSdk.ArrayComparer<Unity.Collections.FixedString128Bytes>.Instance, false).Assign("logic-sig-trace", null, (AlgoSdk.DryrunTxnResult x) => x.LogicSigTrace, (ref AlgoSdk.DryrunTxnResult x, AlgoSdk.DryrunState[] value) => x.LogicSigTrace = value, AlgoSdk.ArrayComparer<AlgoSdk.DryrunState>.Instance, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.DryrunTxnResult[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.DryrunTxnResult>.Instance);
             return true;
         }
     }
