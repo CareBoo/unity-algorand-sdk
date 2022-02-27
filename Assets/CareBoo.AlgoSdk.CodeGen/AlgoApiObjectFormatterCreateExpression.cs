@@ -26,7 +26,7 @@ namespace AlgoSdk.Editor.CodeGen
                 expression = new CodeMethodInvokeExpression(
                     expression,
                     nameof(AlgoApiObjectFormatter<int>.Assign),
-                    GetAssignParamsExpressions(field)
+                    GetAssignParamsExpressions(type, field)
                 );
             }
         }
@@ -36,17 +36,16 @@ namespace AlgoSdk.Editor.CodeGen
             return src?.expression;
         }
 
-        static CodeExpression[] GetAssignParamsExpressions(AlgoApiObjectFieldKey field)
+        static CodeExpression[] GetAssignParamsExpressions(Type type, AlgoApiObjectFieldKey field)
         {
-            var declaringType = field.MemberInfo.DeclaringType;
             var memberName = field.MemberInfo.Name;
             var memberType = field.MemberType;
             var expressions = new List<CodeExpression>()
             {
                 new CodePrimitiveExpression(field.Attribute.JsonKeyName),
                 new CodePrimitiveExpression(field.Attribute.MessagePackKeyName),
-                new CodeSnippetExpression($"({declaringType.FullNameExpression()} x) => x.{memberName}"),
-                new CodeSnippetExpression($"(ref {declaringType.FullNameExpression()} x, {memberType.FullNameExpression()} value) => x.{memberName} = value"),
+                new CodeSnippetExpression($"({type.FullNameExpression()} x) => x.{memberName}"),
+                new CodeSnippetExpression($"(ref {type.FullNameExpression()} x, {memberType.FullNameExpression()} value) => x.{memberName} = value"),
             };
             var equalityComparerType = GetEqualityComparerType(memberType);
             if (equalityComparerType != null)

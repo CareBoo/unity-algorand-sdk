@@ -11,13 +11,9 @@ namespace AlgoSdk.Editor.CodeGen
         {
             Name = FieldName;
             Attributes = MemberAttributes.Private | MemberAttributes.Static | MemberAttributes.Final;
-            Type = new CodeTypeReference(typeof(bool));
 
-            var targetType = new CodeTypeReferenceExpression(type);
-            if (type.IsGenericTypeDefinition)
-                targetType.Type.TypeArguments.AddRange(new IndexedTypeParameters(type));
             InitExpression = new CodeMethodInvokeExpression(
-                targetObject: targetType,
+                targetObject: new CodeSnippetExpression(type.NameExpression()),
                 methodName: InitFormattersCodeMemberMethod.MethodName
             );
         }
