@@ -13,5 +13,10 @@ namespace AlgoSdk.Editor.CodeGen
                 fieldName: nameof(ArrayFormatter<int>.Instance)
             )
         { }
+
+        static CodeTypeReferenceExpression(Type arrayType)
+        {
+            var formatterType = typeof(ArrayFormatter<>).MakeGenericType(arrayType.GetElementType());
+        }
     }
 }
