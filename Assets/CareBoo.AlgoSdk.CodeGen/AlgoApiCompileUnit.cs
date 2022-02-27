@@ -14,6 +14,8 @@ namespace AlgoSdk.Editor.CodeGen
         public ProvideSourceInfoAttribute SourceInfo { get; protected set; }
         public bool IsValid { get; protected set; }
 
+        public FormatterCodeTypeDeclaration TypeDeclaration { get; protected set; }
+
         public AlgoApiCompileUnit(Type type)
         {
             Type = type;
@@ -21,11 +23,11 @@ namespace AlgoSdk.Editor.CodeGen
 
             if (type.IsNested) return;
 
-            var typeDeclaration = new FormatterCodeTypeDeclaration(type);
-            if (!typeDeclaration.IsValid) return;
+            TypeDeclaration = new FormatterCodeTypeDeclaration(type);
+            if (!TypeDeclaration.IsValid) return;
 
             var ns = new CodeNamespace(type.Namespace);
-            ns.Types.Add(typeDeclaration);
+            ns.Types.Add(TypeDeclaration);
             Namespaces.Add(ns);
             IsValid = true;
         }

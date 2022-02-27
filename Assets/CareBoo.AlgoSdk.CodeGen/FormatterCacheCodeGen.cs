@@ -19,12 +19,20 @@ namespace AlgoSdk.Editor.CodeGen
                 .Concat(TypeCache.GetTypesWithAttribute(typeof(AlgoApiFormatterAttribute)))
                 .Select(t => new AlgoApiCompileUnit(t))
                 .Where(cu => cu.IsValid)
+                .GroupBy(cu => cu.SourceInfo.AbsoluteFilePath)
+                .Select(grouping => grouping.Aggregate(MergeCompileUnit))
                 .Select(ExportToDirectory)
                 .Where(filePath => filePath != null)
                 .ToArray()
                 ;
 
             AssetDatabase.Refresh();
+        }
+
+        static AlgoApiCompileUnit MergeCompileUnit(AlgoApiCompileUnit cu1, AlgoApiCompileUnit cu2)
+        {
+            cu1.Namespaces.AddRange(cu2.Namespaces);
+            return cu1;
         }
 
         static string ExportToDirectory(AlgoApiCompileUnit compileUnit)

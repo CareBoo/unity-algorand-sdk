@@ -12,6 +12,23 @@ namespace AlgoSdk
 {
     
     
+    public partial struct Signed<TTransaction>
+    {
+        
+        private static bool @__generated__IsValid = Signed<TTransaction>.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Signed<TTransaction>>(new AlgoSdk.Formatters.SignedTransactionFormatter<TTransaction>());
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Signed<TTransaction>[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.Signed<TTransaction>>.Instance);
+            return true;
+        }
+    }
+}
+namespace AlgoSdk
+{
+    
+    
     public partial struct SignedTransaction
     {
         
