@@ -6,16 +6,19 @@ using System.Linq;
 
 namespace AlgoSdk.Editor.CodeGen
 {
-    public class IndexedTypeParameters
+    public class NamedTypeParameters
         : IEnumerable<CodeTypeParameter>
     {
         readonly IEnumerable<CodeTypeParameter> typeParams;
 
-        public IndexedTypeParameters(Type type) : this(type.GenericTypeArguments.Length)
+        public NamedTypeParameters(Type type)
         {
+            typeParams = type.GenericTypeArguments
+                .Select(t => new CodeTypeParameter(t.Name))
+                ;
         }
 
-        public IndexedTypeParameters(int count)
+        public NamedTypeParameters(int count)
         {
             typeParams = Enumerable.Range(0, count)
                 .Select(i => $"T{i}")
@@ -35,14 +38,14 @@ namespace AlgoSdk.Editor.CodeGen
 
         public IEnumerable<CodeTypeReference> AsReferences() => typeParams.Select(x => new CodeTypeReference(x));
 
-        public static implicit operator CodeTypeParameter[](IndexedTypeParameters indexed)
+        public static implicit operator CodeTypeParameter[](NamedTypeParameters named)
         {
-            return indexed.ToArray();
+            return named.ToArray();
         }
 
-        public static implicit operator CodeTypeReference[](IndexedTypeParameters indexed)
+        public static implicit operator CodeTypeReference[](NamedTypeParameters named)
         {
-            return indexed.AsReferences().ToArray();
+            return named.AsReferences().ToArray();
         }
     }
 }
