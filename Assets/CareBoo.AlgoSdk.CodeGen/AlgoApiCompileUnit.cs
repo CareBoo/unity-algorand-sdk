@@ -54,7 +54,7 @@ namespace AlgoSdk.Editor.CodeGen
 
         protected CodeTypeDeclaration ExtendPartialClassOrStructTypeDeclaration(Type type)
         {
-            var targetType = new CodeTypeDeclaration(type.Name);
+            var targetType = new CodeTypeDeclaration(FormatForTypeDeclaration(type));
             targetType.IsClass = type.IsClass;
             targetType.IsEnum = false;
             targetType.IsStruct = type.IsValueType;
@@ -181,5 +181,31 @@ namespace AlgoSdk.Editor.CodeGen
                 .Select(i => $"T{i}")
                 .Select(name => new CodeTypeParameter(name))
                 ;
+
+        protected string Format(Type type)
+        {
+            string name;
+            if (type.IsGenericType)
+            {
+                string genericArguments = type.GetGenericArguments()
+                                    .Select(Format)
+                                    .Aggregate((x1, x2) => $"{x1}, {x2}");
+                name = $"{type.FullName.Substring(0, type.FullName.IndexOf("`"))}<{genericArguments}>";
+            }
+            else if (type.IsArray)
+            {
+                string elementType = Format(type.GetElementType());
+                name = $"{elementType}[]";
+            }
+            else
+                name = type.FullName;
+            return name.Replace('+', '.');
+        }
+
+        protected string FormatForTypeDeclaration(Type type)
+        {
+            var fullName = Format(type);
+            return fullName.Substring(type.Namespace.Length);
+        }
     }
 }

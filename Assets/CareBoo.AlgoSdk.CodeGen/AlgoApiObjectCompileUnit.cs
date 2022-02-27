@@ -119,25 +119,5 @@ namespace AlgoSdk.Editor.CodeGen
 
             throw new NotSupportedException($"Could not find equality comparer or it doesn't implement `IEquatable<>` for type '{type.FullName}'");
         }
-
-        string Format(Type type)
-        {
-            string name;
-            if (type.IsGenericType)
-            {
-                string genericArguments = type.GetGenericArguments()
-                                    .Select(Format)
-                                    .Aggregate((x1, x2) => $"{x1}, {x2}");
-                name = $"{type.FullName.Substring(0, type.FullName.IndexOf("`"))}<{genericArguments}>";
-            }
-            else if (type.IsArray)
-            {
-                string elementType = Format(type.GetElementType());
-                name = $"{elementType}[]";
-            }
-            else
-                name = type.FullName;
-            return name.Replace('+', '.');
-        }
     }
 }

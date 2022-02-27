@@ -16,6 +16,7 @@ namespace AlgoSdk.Editor.CodeGen
         [MenuItem("AlgoSdk/GenerateFormatterCache")]
         public static void GenerateFormatterCache()
         {
+
             var algoApiObjCompileUnits = TypeCache.GetTypesWithAttribute(typeof(AlgoApiObjectAttribute))
                 .OrderBy(t => t.Name)
                 .Select(t => new AlgoApiObjectCompileUnit(t))
@@ -39,7 +40,9 @@ namespace AlgoSdk.Editor.CodeGen
         static string ExportToDirectory(AlgoApiCompileUnit compileUnit)
         {
             if (compileUnit.CompileUnit == null)
+            {
                 Debug.Log($"Skipping exporting compile unit for type {compileUnit.Type.FullName} because could not generate its compile unit.");
+            }
 
             var sourcePath = compileUnit.SourceInfo.AbsoluteFilePath;
             Debug.Log($"Found attribute at {sourcePath}");
