@@ -10,13 +10,13 @@
 
 namespace AlgoSdk.WalletConnect
 {
-
-
+    
+    
     public partial struct Hex
     {
-
+        
         private static bool @__generated__IsValid = Hex.@__generated__InitializeAlgoApiFormatters();
-
+        
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.WalletConnect.Hex>(new AlgoSdk.WalletConnect.Formatters.HexFormatter());

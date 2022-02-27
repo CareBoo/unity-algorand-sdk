@@ -10,13 +10,13 @@
 
 namespace AlgoSdk
 {
-
-
+    
+    
     public partial struct BlockUpgradeVote
     {
-
+        
         private static bool @__generated__IsValid = BlockUpgradeVote.@__generated__InitializeAlgoApiFormatters();
-
+        
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.BlockUpgradeVote>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.BlockUpgradeVote>().Assign("upgrade-approve", null, (AlgoSdk.BlockUpgradeVote x) => x.UpgradeApprove, (ref AlgoSdk.BlockUpgradeVote x, AlgoSdk.Optional<System.Boolean> value) => x.UpgradeApprove = value, false).Assign("upgrade-delay", null, (AlgoSdk.BlockUpgradeVote x) => x.UpgradeDelay, (ref AlgoSdk.BlockUpgradeVote x, System.UInt64 value) => x.UpgradeDelay = value, false).Assign("upgrade-propose", null, (AlgoSdk.BlockUpgradeVote x) => x.UpgradePropose, (ref AlgoSdk.BlockUpgradeVote x, AlgoSdk.Address value) => x.UpgradePropose = value, false));

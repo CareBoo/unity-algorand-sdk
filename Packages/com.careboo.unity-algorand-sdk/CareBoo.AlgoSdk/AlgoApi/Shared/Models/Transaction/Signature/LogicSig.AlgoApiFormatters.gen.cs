@@ -10,13 +10,13 @@
 
 namespace AlgoSdk
 {
-
-
+    
+    
     public partial struct LogicSig
     {
-
+        
         private static bool @__generated__IsValid = LogicSig.@__generated__InitializeAlgoApiFormatters();
-
+        
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.LogicSig>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.LogicSig>().Assign("logicsig", "l", (AlgoSdk.LogicSig x) => x.Program, (ref AlgoSdk.LogicSig x, System.Byte[] value) => x.Program = value, AlgoSdk.ArrayComparer<byte>.Instance, false).Assign("args", "arg", (AlgoSdk.LogicSig x) => x.Args, (ref AlgoSdk.LogicSig x, Unity.Collections.FixedList128Bytes<System.Byte>[] value) => x.Args = value, AlgoSdk.ArrayComparer<Unity.Collections.FixedList128Bytes<byte>>.Instance, false).Assign("signature", "sig", (AlgoSdk.LogicSig x) => x.Sig, (ref AlgoSdk.LogicSig x, AlgoSdk.Sig value) => x.Sig = value, false).Assign("multisig-signature", "msig", (AlgoSdk.LogicSig x) => x.Multisig, (ref AlgoSdk.LogicSig x, AlgoSdk.Multisig value) => x.Multisig = value, false));

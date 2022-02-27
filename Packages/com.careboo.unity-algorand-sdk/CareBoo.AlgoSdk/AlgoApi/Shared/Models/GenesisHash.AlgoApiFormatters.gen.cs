@@ -10,13 +10,13 @@
 
 namespace AlgoSdk
 {
-
-
+    
+    
     public partial struct GenesisHash
     {
-
+        
         private static bool @__generated__IsValid = GenesisHash.@__generated__InitializeAlgoApiFormatters();
-
+        
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.GenesisHash>(new AlgoSdk.Formatters.GenesisHashFormatter());

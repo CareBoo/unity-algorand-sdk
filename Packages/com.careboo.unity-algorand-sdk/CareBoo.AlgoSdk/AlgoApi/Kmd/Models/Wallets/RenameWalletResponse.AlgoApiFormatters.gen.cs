@@ -10,13 +10,13 @@
 
 namespace AlgoSdk
 {
-
-
+    
+    
     public partial struct RenameWalletResponse
     {
-
+        
         private static bool @__generated__IsValid = RenameWalletResponse.@__generated__InitializeAlgoApiFormatters();
-
+        
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.RenameWalletResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.RenameWalletResponse>().Assign("error", null, (AlgoSdk.RenameWalletResponse x) => x.Error, (ref AlgoSdk.RenameWalletResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value, false).Assign("message", null, (AlgoSdk.RenameWalletResponse x) => x.Message, (ref AlgoSdk.RenameWalletResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance, false).Assign("wallet", null, (AlgoSdk.RenameWalletResponse x) => x.Wallet, (ref AlgoSdk.RenameWalletResponse x, AlgoSdk.Wallet value) => x.Wallet = value, false));

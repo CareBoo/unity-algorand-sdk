@@ -10,13 +10,13 @@
 
 namespace AlgoSdk
 {
-
-
+    
+    
     public partial struct TransactionResponse
     {
-
+        
         private static bool @__generated__IsValid = TransactionResponse.@__generated__InitializeAlgoApiFormatters();
-
+        
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.TransactionResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.TransactionResponse>().Assign("transaction", null, (AlgoSdk.TransactionResponse x) => x.Transaction, (ref AlgoSdk.TransactionResponse x, AlgoSdk.Transaction value) => x.Transaction = value, false).Assign("current-round", null, (AlgoSdk.TransactionResponse x) => x.CurrentRound, (ref AlgoSdk.TransactionResponse x, System.UInt64 value) => x.CurrentRound = value, false));

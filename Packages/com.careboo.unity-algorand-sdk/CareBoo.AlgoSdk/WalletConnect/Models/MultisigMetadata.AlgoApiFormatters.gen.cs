@@ -10,13 +10,13 @@
 
 namespace AlgoSdk.WalletConnect
 {
-
-
+    
+    
     public partial struct MultisigMetadata
     {
-
+        
         private static bool @__generated__IsValid = MultisigMetadata.@__generated__InitializeAlgoApiFormatters();
-
+        
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.WalletConnect.MultisigMetadata>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.WalletConnect.MultisigMetadata>().Assign("version", null, (AlgoSdk.WalletConnect.MultisigMetadata x) => x.Version, (ref AlgoSdk.WalletConnect.MultisigMetadata x, System.Byte value) => x.Version = value, false).Assign("threshold", null, (AlgoSdk.WalletConnect.MultisigMetadata x) => x.Threshold, (ref AlgoSdk.WalletConnect.MultisigMetadata x, System.Byte value) => x.Threshold = value, false).Assign("addrs", null, (AlgoSdk.WalletConnect.MultisigMetadata x) => x.Addresses, (ref AlgoSdk.WalletConnect.MultisigMetadata x, AlgoSdk.Address[] value) => x.Addresses = value, AlgoSdk.ArrayComparer<AlgoSdk.Address>.Instance, false));

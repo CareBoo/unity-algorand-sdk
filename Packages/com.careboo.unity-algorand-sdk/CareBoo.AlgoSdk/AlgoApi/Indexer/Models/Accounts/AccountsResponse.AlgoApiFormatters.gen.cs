@@ -10,13 +10,13 @@
 
 namespace AlgoSdk
 {
-
-
+    
+    
     public partial struct AccountsResponse
     {
-
+        
         private static bool @__generated__IsValid = AccountsResponse.@__generated__InitializeAlgoApiFormatters();
-
+        
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.AccountsResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.AccountsResponse>().Assign("accounts", null, (AlgoSdk.AccountsResponse x) => x.Accounts, (ref AlgoSdk.AccountsResponse x, AlgoSdk.AccountInfo[] value) => x.Accounts = value, AlgoSdk.ArrayComparer<AlgoSdk.AccountInfo>.Instance, false).Assign("current-round", null, (AlgoSdk.AccountsResponse x) => x.CurrentRound, (ref AlgoSdk.AccountsResponse x, System.UInt64 value) => x.CurrentRound = value, false).Assign("next-token", null, (AlgoSdk.AccountsResponse x) => x.NextToken, (ref AlgoSdk.AccountsResponse x, Unity.Collections.FixedString128Bytes value) => x.NextToken = value, false));

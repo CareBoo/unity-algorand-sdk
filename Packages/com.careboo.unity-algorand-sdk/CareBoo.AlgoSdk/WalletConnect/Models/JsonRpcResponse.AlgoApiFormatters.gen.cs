@@ -10,13 +10,13 @@
 
 namespace AlgoSdk.WalletConnect
 {
-
-
+    
+    
     public partial struct JsonRpcResponse
     {
-
+        
         private static bool @__generated__IsValid = JsonRpcResponse.@__generated__InitializeAlgoApiFormatters();
-
+        
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.WalletConnect.JsonRpcResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.WalletConnect.JsonRpcResponse>().Assign("id", null, (AlgoSdk.WalletConnect.JsonRpcResponse x) => x.Id, (ref AlgoSdk.WalletConnect.JsonRpcResponse x, System.UInt64 value) => x.Id = value, false).Assign("jsonrpc", null, (AlgoSdk.WalletConnect.JsonRpcResponse x) => x.JsonRpc, (ref AlgoSdk.WalletConnect.JsonRpcResponse x, System.String value) => x.JsonRpc = value, AlgoSdk.StringComparer.Instance, false).Assign("result", null, (AlgoSdk.WalletConnect.JsonRpcResponse x) => x.Result, (ref AlgoSdk.WalletConnect.JsonRpcResponse x, AlgoSdk.AlgoApiObject value) => x.Result = value, false).Assign("error", null, (AlgoSdk.WalletConnect.JsonRpcResponse x) => x.Error, (ref AlgoSdk.WalletConnect.JsonRpcResponse x, AlgoSdk.WalletConnect.JsonRpcError value) => x.Error = value, false));

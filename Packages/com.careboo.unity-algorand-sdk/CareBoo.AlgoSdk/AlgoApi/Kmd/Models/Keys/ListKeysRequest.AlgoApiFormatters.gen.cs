@@ -10,13 +10,13 @@
 
 namespace AlgoSdk
 {
-
-
+    
+    
     public partial struct ListKeysRequest
     {
-
+        
         private static bool @__generated__IsValid = ListKeysRequest.@__generated__InitializeAlgoApiFormatters();
-
+        
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ListKeysRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.ListKeysRequest>().Assign("wallet_handle_token", null, (AlgoSdk.ListKeysRequest x) => x.WalletHandleToken, (ref AlgoSdk.ListKeysRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value, false));

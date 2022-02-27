@@ -10,13 +10,13 @@
 
 namespace AlgoSdk
 {
-
-
+    
+    
     public partial struct Application
     {
-
+        
         private static bool @__generated__IsValid = Application.@__generated__InitializeAlgoApiFormatters();
-
+        
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Application>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Application>().Assign("created-at-round", null, (AlgoSdk.Application x) => x.CreatedAtRound, (ref AlgoSdk.Application x, System.UInt64 value) => x.CreatedAtRound = value, false).Assign("deleted", null, (AlgoSdk.Application x) => x.Deleted, (ref AlgoSdk.Application x, AlgoSdk.Optional<System.Boolean> value) => x.Deleted = value, false).Assign("deleted-at-round", null, (AlgoSdk.Application x) => x.DeletedAtRound, (ref AlgoSdk.Application x, System.UInt64 value) => x.DeletedAtRound = value, false).Assign("id", null, (AlgoSdk.Application x) => x.Id, (ref AlgoSdk.Application x, System.UInt64 value) => x.Id = value, false).Assign("params", null, (AlgoSdk.Application x) => x.Params, (ref AlgoSdk.Application x, AlgoSdk.ApplicationParams value) => x.Params = value, false));

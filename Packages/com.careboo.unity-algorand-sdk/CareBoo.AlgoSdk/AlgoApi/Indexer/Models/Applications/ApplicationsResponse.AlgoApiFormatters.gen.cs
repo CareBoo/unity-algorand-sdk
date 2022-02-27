@@ -10,13 +10,13 @@
 
 namespace AlgoSdk
 {
-
-
+    
+    
     public partial struct ApplicationsResponse
     {
-
+        
         private static bool @__generated__IsValid = ApplicationsResponse.@__generated__InitializeAlgoApiFormatters();
-
+        
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ApplicationsResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.ApplicationsResponse>().Assign("applications", null, (AlgoSdk.ApplicationsResponse x) => x.Applications, (ref AlgoSdk.ApplicationsResponse x, AlgoSdk.Application[] value) => x.Applications = value, AlgoSdk.ArrayComparer<AlgoSdk.Application>.Instance, false).Assign("current-round", null, (AlgoSdk.ApplicationsResponse x) => x.CurrentRound, (ref AlgoSdk.ApplicationsResponse x, System.UInt64 value) => x.CurrentRound = value, false).Assign("next-token", null, (AlgoSdk.ApplicationsResponse x) => x.NextToken, (ref AlgoSdk.ApplicationsResponse x, Unity.Collections.FixedString128Bytes value) => x.NextToken = value, false));

@@ -10,13 +10,13 @@
 
 namespace AlgoSdk
 {
-
-
+    
+    
     public partial struct WalletHandle
     {
-
+        
         private static bool @__generated__IsValid = WalletHandle.@__generated__InitializeAlgoApiFormatters();
-
+        
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.WalletHandle>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.WalletHandle>().Assign("expires_seconds", null, (AlgoSdk.WalletHandle x) => x.ExpiresSeconds, (ref AlgoSdk.WalletHandle x, System.UInt64 value) => x.ExpiresSeconds = value, false).Assign("wallet", null, (AlgoSdk.WalletHandle x) => x.Wallet, (ref AlgoSdk.WalletHandle x, AlgoSdk.Wallet value) => x.Wallet = value, false));

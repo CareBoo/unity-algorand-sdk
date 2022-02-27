@@ -10,13 +10,13 @@
 
 namespace AlgoSdk
 {
-
-
+    
+    
     public partial struct AssetResponse
     {
-
+        
         private static bool @__generated__IsValid = AssetResponse.@__generated__InitializeAlgoApiFormatters();
-
+        
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.AssetResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.AssetResponse>().Assign("asset", null, (AlgoSdk.AssetResponse x) => x.Asset, (ref AlgoSdk.AssetResponse x, AlgoSdk.Asset value) => x.Asset = value, false).Assign("current-round", null, (AlgoSdk.AssetResponse x) => x.CurrentRound, (ref AlgoSdk.AssetResponse x, System.UInt64 value) => x.CurrentRound = value, false));

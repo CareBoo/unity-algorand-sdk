@@ -10,13 +10,13 @@
 
 namespace AlgoSdk
 {
-
-
+    
+    
     public partial struct Sig
     {
-
+        
         private static bool @__generated__IsValid = Sig.@__generated__InitializeAlgoApiFormatters();
-
+        
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Sig>(new AlgoSdk.Formatters.ByteArrayFormatter<AlgoSdk.Sig>());

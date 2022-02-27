@@ -10,13 +10,13 @@
 
 namespace AlgoSdk
 {
-
-
+    
+    
     public partial struct TealCompilationResult
     {
-
+        
         private static bool @__generated__IsValid = TealCompilationResult.@__generated__InitializeAlgoApiFormatters();
-
+        
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.TealCompilationResult>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.TealCompilationResult>().Assign("hash", null, (AlgoSdk.TealCompilationResult x) => x.Hash, (ref AlgoSdk.TealCompilationResult x, System.String value) => x.Hash = value, AlgoSdk.StringComparer.Instance, false).Assign("result", null, (AlgoSdk.TealCompilationResult x) => x.CompiledBytesBase64, (ref AlgoSdk.TealCompilationResult x, System.String value) => x.CompiledBytesBase64 = value, AlgoSdk.StringComparer.Instance, false));

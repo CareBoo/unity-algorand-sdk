@@ -10,13 +10,13 @@
 
 namespace AlgoSdk
 {
-
-
+    
+    
     public partial struct TransactionGroup
     {
-
+        
         private static bool @__generated__IsValid = TransactionGroup.@__generated__InitializeAlgoApiFormatters();
-
+        
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.TransactionGroup>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.TransactionGroup>().Assign("txlist", "txlist", (AlgoSdk.TransactionGroup x) => x.Txns, (ref AlgoSdk.TransactionGroup x, AlgoSdk.TransactionId[] value) => x.Txns = value, AlgoSdk.ArrayComparer<AlgoSdk.TransactionId>.Instance, false));

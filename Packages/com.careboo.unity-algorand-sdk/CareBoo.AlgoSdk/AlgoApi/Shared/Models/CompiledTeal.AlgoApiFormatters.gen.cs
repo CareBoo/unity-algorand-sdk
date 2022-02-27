@@ -10,13 +10,13 @@
 
 namespace AlgoSdk
 {
-
-
+    
+    
     public partial struct CompiledTeal
     {
-
+        
         private static bool @__generated__IsValid = CompiledTeal.@__generated__InitializeAlgoApiFormatters();
-
+        
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.CompiledTeal>(new AlgoSdk.CompiledTealFormatter());

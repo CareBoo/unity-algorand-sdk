@@ -10,13 +10,13 @@
 
 namespace AlgoSdk
 {
-
-
+    
+    
     public partial struct ErrorResponse
     {
-
+        
         private static bool @__generated__IsValid = ErrorResponse.@__generated__InitializeAlgoApiFormatters();
-
+        
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ErrorResponse>(new AlgoSdk.Formatters.ErrorResponseFormatter());

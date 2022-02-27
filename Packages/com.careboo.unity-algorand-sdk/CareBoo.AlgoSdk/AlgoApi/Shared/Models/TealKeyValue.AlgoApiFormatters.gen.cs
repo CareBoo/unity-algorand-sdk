@@ -10,13 +10,13 @@
 
 namespace AlgoSdk
 {
-
-
+    
+    
     public partial struct TealKeyValue
     {
-
+        
         private static bool @__generated__IsValid = TealKeyValue.@__generated__InitializeAlgoApiFormatters();
-
+        
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.TealKeyValue>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.TealKeyValue>().Assign("key", "key", (AlgoSdk.TealKeyValue x) => x.Key, (ref AlgoSdk.TealKeyValue x, Unity.Collections.FixedString128Bytes value) => x.Key = value, false).Assign("value", "value", (AlgoSdk.TealKeyValue x) => x.Value, (ref AlgoSdk.TealKeyValue x, AlgoSdk.TealValue value) => x.Value = value, false));

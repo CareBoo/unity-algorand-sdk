@@ -10,13 +10,13 @@
 
 namespace AlgoSdk
 {
-
-
+    
+    
     public partial struct TransactionSignature
     {
-
+        
         private static bool @__generated__IsValid = TransactionSignature.@__generated__InitializeAlgoApiFormatters();
-
+        
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.TransactionSignature>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.TransactionSignature>().Assign("logicsig", null, (AlgoSdk.TransactionSignature x) => x.LogicSig, (ref AlgoSdk.TransactionSignature x, AlgoSdk.LogicSig value) => x.LogicSig = value, false).Assign("multisig", null, (AlgoSdk.TransactionSignature x) => x.Multisig, (ref AlgoSdk.TransactionSignature x, AlgoSdk.Multisig value) => x.Multisig = value, false).Assign("sig", null, (AlgoSdk.TransactionSignature x) => x.Sig, (ref AlgoSdk.TransactionSignature x, AlgoSdk.Sig value) => x.Sig = value, false));

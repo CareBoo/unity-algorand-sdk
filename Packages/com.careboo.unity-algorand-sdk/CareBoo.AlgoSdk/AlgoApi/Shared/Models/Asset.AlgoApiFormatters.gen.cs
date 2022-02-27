@@ -10,13 +10,13 @@
 
 namespace AlgoSdk
 {
-
-
+    
+    
     public partial struct Asset
     {
-
+        
         private static bool @__generated__IsValid = Asset.@__generated__InitializeAlgoApiFormatters();
-
+        
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Asset>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Asset>().Assign("created-at-round", null, (AlgoSdk.Asset x) => x.CreatedAtRound, (ref AlgoSdk.Asset x, System.UInt64 value) => x.CreatedAtRound = value, false).Assign("deleted", null, (AlgoSdk.Asset x) => x.Deleted, (ref AlgoSdk.Asset x, AlgoSdk.Optional<System.Boolean> value) => x.Deleted = value, false).Assign("destroyed-at-round", null, (AlgoSdk.Asset x) => x.DestroyedAtRound, (ref AlgoSdk.Asset x, System.UInt64 value) => x.DestroyedAtRound = value, false).Assign("index", null, (AlgoSdk.Asset x) => x.Index, (ref AlgoSdk.Asset x, System.UInt64 value) => x.Index = value, false).Assign("params", null, (AlgoSdk.Asset x) => x.Params, (ref AlgoSdk.Asset x, AlgoSdk.AssetParams value) => x.Params = value, false));

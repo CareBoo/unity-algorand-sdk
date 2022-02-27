@@ -10,13 +10,13 @@
 
 namespace AlgoSdk
 {
-
-
+    
+    
     public partial struct VrfPubKey
     {
-
+        
         private static bool @__generated__IsValid = VrfPubKey.@__generated__InitializeAlgoApiFormatters();
-
+        
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.VrfPubKey>(new AlgoSdk.Formatters.ByteArrayFormatter<AlgoSdk.VrfPubKey>());
