@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [2.0.0-pre.5](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.4...v2.0.0-pre.5) (2022-02-28)
+
+
+### Features
+
+* **accounts:** add `AccountInfo.EstimateMinBalance` ([51d471b](https://github.com/CareBoo/unity-algorand-sdk/commit/51d471bf2991fd7c406ff3dcbac140b8b8085f38))
+* **transaction:** reduce generic constraints related to `ITransaction` ([42dfe82](https://github.com/CareBoo/unity-algorand-sdk/commit/42dfe8207c98c0ddda420ff6be480e0d2c70409c))
+
 # [2.0.0-pre.4](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.3...v2.0.0-pre.4) (2022-02-28)
 
 
