@@ -107,7 +107,7 @@ namespace AlgoSdk.Formatters
 
     public class SignedTransactionFormatter<TTransaction>
         : IAlgoApiFormatter<Signed<TTransaction>>
-        where TTransaction : struct, ITransaction, IEquatable<TTransaction>
+        where TTransaction : ITransaction
     {
         static readonly FixedString32Bytes TxnKey = "txn";
         static readonly FixedString32Bytes SigKey = "sig";

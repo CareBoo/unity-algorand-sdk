@@ -40,7 +40,7 @@ namespace AlgoSdk
     [Serializable]
     public partial struct Signed<TTransaction>
         : IEquatable<Signed<TTransaction>>
-        where TTransaction : struct, ITransaction, IEquatable<TTransaction>
+        where TTransaction : ITransaction
     {
         /// <summary>
         /// The typed transaction that was signed.

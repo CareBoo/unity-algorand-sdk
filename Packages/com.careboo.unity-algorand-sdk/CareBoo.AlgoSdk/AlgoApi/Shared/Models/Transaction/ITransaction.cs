@@ -82,7 +82,7 @@ namespace AlgoSdk
             this T txn,
             Ed25519.SecretKeyHandle secretKey
             )
-            where T : struct, ITransaction, IEquatable<T>
+            where T : ITransaction
         {
             var signature = txn.GetSignature(secretKey);
             return new Signed<T> { Transaction = txn, Signature = signature };
@@ -92,7 +92,7 @@ namespace AlgoSdk
             this T txn,
             Ed25519.SecretKeyHandle secretKey
             )
-            where T : struct, ITransaction, IEquatable<T>
+            where T : ITransaction
         {
             using var msg = txn.ToSignatureMessage(Allocator.Temp);
             return secretKey.Sign(msg);
@@ -102,7 +102,7 @@ namespace AlgoSdk
             this T txn,
             Allocator allocator
             )
-            where T : struct, ITransaction, IEquatable<T>
+            where T : ITransaction
         {
             using var data = AlgoApiSerializer.SerializeMessagePack(txn, Allocator.Temp);
             var result = new NativeByteArray(Transaction.SignaturePrefix.Length + data.Length, allocator);
@@ -117,14 +117,14 @@ namespace AlgoSdk
             this T txn,
             TransactionParams txnParams
             )
-            where T : struct, ITransaction, IEquatable<T>
+            where T : ITransaction
         {
             var fee = txnParams.FlatFee ? txnParams.Fee : txnParams.Fee * (ulong)txn.EstimateBlockSizeBytes();
             return math.max(fee, txnParams.MinFee);
         }
 
         public static int EstimateBlockSizeBytes<T>(this T txn)
-            where T : struct, ITransaction, IEquatable<T>
+            where T : ITransaction
         {
             var keyPair = AlgoSdk.Crypto.Random.Bytes<Ed25519.Seed>().ToKeyPair();
             var signedTxn = txn.Sign(keyPair.SecretKey);
@@ -133,7 +133,7 @@ namespace AlgoSdk
         }
 
         public static TransactionId GetId<T>(this T txn)
-            where T : struct, ITransaction, IEquatable<T>
+            where T : ITransaction
         {
             using var txnData = txn.ToSignatureMessage(Allocator.Temp);
             return Sha512.Hash256Truncated(txnData);
