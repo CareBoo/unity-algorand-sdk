@@ -9,6 +9,7 @@ namespace AlgoSdk.Formatters
         const string MessageKey = "message";
         const string DataKey = "data";
         const string IsErrorKey = "error";
+        const string CodeKey = "statusCode";
 
         public ErrorResponse Deserialize(ref JsonReader reader)
         {
@@ -25,6 +26,9 @@ namespace AlgoSdk.Formatters
                 var key = stringFormatter.Deserialize(ref reader);
                 switch (key)
                 {
+                    case CodeKey:
+                        result.Code = AlgoApiFormatterCache<int>.Formatter.Deserialize(ref reader);
+                        break;
                     case MessageKey:
                         result.Message = stringFormatter.Deserialize(ref reader);
                         break;
@@ -56,6 +60,9 @@ namespace AlgoSdk.Formatters
                 var key = stringFormatter.Deserialize(ref reader);
                 switch (key)
                 {
+                    case CodeKey:
+                        result.Code = AlgoApiFormatterCache<int>.Formatter.Deserialize(ref reader);
+                        break;
                     case MessageKey:
                         result.Message = stringFormatter.Deserialize(ref reader);
                         break;
@@ -77,12 +84,12 @@ namespace AlgoSdk.Formatters
 
         public void Serialize(ref JsonWriter writer, ErrorResponse value)
         {
-            throw new System.NotSupportedException($"{nameof(ErrorResponse)} is read only");
+            throw new NotSupportedException($"{nameof(ErrorResponse)} is read only");
         }
 
         public void Serialize(ref MessagePackWriter writer, ErrorResponse value)
         {
-            throw new System.NotSupportedException($"{nameof(ErrorResponse)} is read only");
+            throw new NotSupportedException($"{nameof(ErrorResponse)} is read only");
         }
 
         bool FoundAllFields(ErrorResponse error)
