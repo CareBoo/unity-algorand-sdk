@@ -172,6 +172,49 @@ namespace AlgoSdk
         [Tooltip("Delegation status of the account's MicroAlgos")]
         public FixedString32Bytes Status;
 
+        /// <summary>
+        /// Estimate the minimum balance of the account in MicroAlgos.
+        /// </summary>
+        /// <remarks>
+        /// <list type="table">
+        ///     <listheader>
+        ///         <term>Account Data Type</term>
+        ///         <description>Cost Per Item (MicroAlgos)</description>
+        ///     </listheader>
+        ///     <item>
+        ///         <term>Assets Opted In or Created</term>
+        ///         <description>100,000</description>
+        ///     </item>
+        ///     <item>
+        ///         <term>Applications Opted In or Created</term>
+        ///         <description>100,000</description>
+        ///     </item>
+        ///     <item>
+        ///         <term>Applications Extra Program Pages</term>
+        ///         <description>100,000</description>
+        ///     </item>
+        ///     <item>
+        ///         <term>Applications Stored Uints</term>
+        ///         <description>28,500</description>
+        ///     </item>
+        ///     <item>
+        ///         <term>Applications Stored Byteslices</term>
+        ///         <description>50,000</description>
+        ///     </item>
+        /// </list>
+        /// </remarks>
+        /// <returns>The sum of all the costs per data item in the account.</returns>
+        public ulong EstimateMinBalance()
+        {
+            return 100_000L * (ulong)(Assets?.LongLength ?? 0L)
+                + 100_000L * (ulong)(ApplicationsLocalState?.LongLength ?? 0L)
+                + 100_000L * (ulong)(CreatedApplications?.LongLength ?? 0L)
+                + 100_000L * ApplicationsTotalExtraPages
+                + 28_500L * ApplicationsTotalSchema.NumUints
+                + 50_000L * ApplicationsTotalSchema.NumByteSlices
+                ;
+        }
+
         public bool Equals(AccountInfo other)
         {
             return Address.Equals(other.Address);
