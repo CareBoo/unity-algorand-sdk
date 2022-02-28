@@ -107,7 +107,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static int EstimateBlockSizeBytes&lt;T&gt;(this T txn)
-    where T : struct, ITransaction, IEquatable&lt;T&gt;</code></pre>
+    where T : ITransaction</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -165,7 +165,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TransactionId GetId&lt;T&gt;(this T txn)
-    where T : struct, ITransaction, IEquatable&lt;T&gt;</code></pre>
+    where T : ITransaction</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -223,7 +223,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Sig GetSignature&lt;T&gt;(this T txn, Ed25519.SecretKeyHandle secretKey)
-    where T : struct, ITransaction, IEquatable&lt;T&gt;</code></pre>
+    where T : ITransaction</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -286,7 +286,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static ulong GetSuggestedFee&lt;T&gt;(this T txn, TransactionParams txnParams)
-    where T : struct, ITransaction, IEquatable&lt;T&gt;</code></pre>
+    where T : ITransaction</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -349,7 +349,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Signed&lt;T&gt; Sign&lt;T&gt;(this T txn, Ed25519.SecretKeyHandle secretKey)
-    where T : struct, ITransaction, IEquatable&lt;T&gt;</code></pre>
+    where T : ITransaction</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -412,7 +412,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static NativeByteArray ToSignatureMessage&lt;T&gt;(this T txn, Allocator allocator)
-    where T : struct, ITransaction, IEquatable&lt;T&gt;</code></pre>
+    where T : ITransaction</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

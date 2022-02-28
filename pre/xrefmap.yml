@@ -123,6 +123,19 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AccountInfo.Equals
   nameWithType: AccountInfo.Equals
+- uid: AlgoSdk.AccountInfo.EstimateMinBalance
+  name: EstimateMinBalance()
+  href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_EstimateMinBalance
+  commentId: M:AlgoSdk.AccountInfo.EstimateMinBalance
+  fullName: AlgoSdk.AccountInfo.EstimateMinBalance()
+  nameWithType: AccountInfo.EstimateMinBalance()
+- uid: AlgoSdk.AccountInfo.EstimateMinBalance*
+  name: EstimateMinBalance
+  href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_EstimateMinBalance_
+  commentId: Overload:AlgoSdk.AccountInfo.EstimateMinBalance
+  isSpec: "True"
+  fullName: AlgoSdk.AccountInfo.EstimateMinBalance
+  nameWithType: AccountInfo.EstimateMinBalance
 - uid: AlgoSdk.AccountInfo.Participation
   name: Participation
   href: api/AlgoSdk.AccountInfo.html#AlgoSdk_AccountInfo_Participation
