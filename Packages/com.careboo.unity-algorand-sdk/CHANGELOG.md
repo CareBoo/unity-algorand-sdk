@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [2.0.0-pre.4](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.3...v2.0.0-pre.4) (2022-02-28)
+
+
+### Features
+
+* **api:** add `statusCode` deserialization field to `ErrorResponseFormatter` ([3f69600](https://github.com/CareBoo/unity-algorand-sdk/commit/3f696004496166a1c767e8a3887a3294209ef2b9))
+
 # [2.0.0-pre.3](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.2...v2.0.0-pre.3) (2022-02-27)
 
 
