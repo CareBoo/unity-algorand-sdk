@@ -53,8 +53,10 @@ jobs:
           lfs: true
           ref: ${{ github.ref }}
 
-      - name: Remove symlinks
-        run: sed -i '' Documentation\~/**/*
+      - name: Remove index.md symlink
+        run: |
+          cd Documentation\~
+          ln -f "$(readlink index.md)" index.md
 
       - name: Setup npm
         uses: actions/setup-node@v2
