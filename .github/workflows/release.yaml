@@ -11,13 +11,17 @@ on:
       - "[0-9]+.x.x"
 
 jobs:
-  release:
-    name: Release New Version
+  semantic_release:
+    name: Semantic Release
     runs-on: ubuntu-latest
+    outputs:
+      new_release_published: needs.semantic_release.outputs.new_release_published
+      new_release_version: needs.semantic_release.outputs.new_release_version
+
     steps:
       - uses: actions/checkout@v2
 
-      - name: Semantic release
+      - name: Semantic Release
         id: semantic
         uses: cycjimmy/semantic-release-action@v2
         with:
@@ -27,55 +31,37 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Move README.md
-        if: steps.semantic.outputs.new_release_published == 'true'
-        run: mv README.md Packages/com.careboo.unity-algorand-sdk/README.md
-
-      - name: Move LICENSE.md
-        if: steps.semantic.outputs.new_release_published == 'true'
-        run: mv LICENSE.md Packages/com.careboo.unity-algorand-sdk/LICENSE.md
-
-      - name: Move Documentation folder
-        if: steps.semantic.outputs.new_release_published == 'true'
-        run: |
-          mv Packages/com.careboo.unity-algorand-sdk/Documentation Packages/com.careboo.unity-algorand-sdk/~Documentation
-          rm Packages/com.careboo.unity-algorand-sdk/Documentation.meta
-          rm Packages/com.careboo.unity-algorand-sdk/~Documentation/**/*.meta
-
-      - name: Replace Version
-        if: steps.semantic.outputs.new_release_published == 'true'
-        run: ./scripts/replace_version
-        env:
-          VERSION: ${{ steps.semantic.outputs.new_release_version }}
-
-      - name: Setup npm for npmjs
-        uses: actions/setup-node@v2
-        if: steps.semantic.outputs.new_release_published == 'true'
+  publish_npm:
+    name: Publish Package to ${{ matrix.registry }}
+    runs-on: ubuntu-latest
+    needs: semantic_release
+    if: needs.semantic_release.outputs.new_release_published == 'true'
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - registry: https://registry.npmjs.org/
+            token: ${{ secrets.NPM_TOKEN }}
+          - registry: https://npm.pkg.github.com/@careboo
+            token: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
-          node-version: "12.x"
-          registry-url: https://registry.npmjs.org/
+          lfs: true
+          ref: ${{ github.ref }}
 
-      - name: Publish to npmjs
-        if: steps.semantic.outputs.new_release_published == 'true'
-        run: ./scripts/release_npmjs
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Setup npm for GPR
+      - name: Setup npm
         uses: actions/setup-node@v2
-        if: steps.semantic.outputs.new_release_published == 'true'
-        with:
-          registry-url: "https://npm.pkg.github.com"
 
-      - name: Publish to GPR
-        if: steps.semantic.outputs.new_release_published == 'true'
-        run: ./scripts/release_gpr
+      - name: Publish to ${{ matrix.registry }}
+        run: npm publish --access=public --registry=${{ matrix.registry }}
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ matrix.token }}
 
   build_docs:
     name: Build Docs
-    needs: release
+    needs: semantic_release
     runs-on: windows-latest
     strategy:
       matrix:
@@ -103,17 +89,16 @@ jobs:
       - name: Install DocFX
         run: choco install -y docfx
 
-      - name: Use README.md as index.md
-        run: cp README.md Packages/com.careboo.unity-algorand-sdk/Documentation/index.md
-
-      - name: Copy LICENSE to package
-        run: cp LICENSE.md Packages/com.careboo.unity-algorand-sdk/LICENSE.md
+      - name: Rename TableOfContents.md to toc.md
+        run: |
+          cd Documentation\~
+          mv TableOfContents.md toc.md
 
       - name: Update sitemap with version
         if: ${{ matrix.tag == 'version' }}
         uses: jossef/action-set-json-field@v1
         with:
-          file: Packages/com.careboo.unity-algorand-sdk/Documentation/docfx.json
+          file: .docfx/docfx.json
           field: build.sitemap.baseUrl
           value: https://CareBoo.github.io/unity-algorand-sdk/${{ steps.version.outputs.prop }}/
 
@@ -121,18 +106,18 @@ jobs:
         if: ${{ matrix.tag == 'branch' }}
         uses: jossef/action-set-json-field@v1
         with:
-          file: Packages/com.careboo.unity-algorand-sdk/Documentation/docfx.json
+          file: .docfx/docfx.json
           field: build.sitemap.baseUrl
           value: https://CareBoo.github.io/unity-algorand-sdk/${{ steps.branch.outputs.branch }}/
 
       - name: Build
-        run: docfx Packages/com.careboo.unity-algorand-sdk/Documentation/docfx.json
+        run: docfx .docfx/docfx.json
 
       - name: Upload site artifact
         uses: actions/upload-artifact@v1
         with:
           name: _site_${{ matrix.tag }}
-          path: Packages/com.careboo.unity-algorand-sdk/_site
+          path: .docfx/_site
 
   deploy_docs_version:
     name: Deploy Version Docs
@@ -154,7 +139,7 @@ jobs:
         id: version
         uses: notiz-dev/github-action-json-property@release
         with:
-          path: "Packages/com.careboo.unity-algorand-sdk/package.json"
+          path: "package.json"
           prop_path: "version"
 
       - name: Deploy Docs Version

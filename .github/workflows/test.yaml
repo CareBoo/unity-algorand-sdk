@@ -8,7 +8,7 @@ on:
     paths:
       - "**.cs"
       - "**.dll"
-      - "Packages/packages-lock.json"
+      - "AlgoSdk~/Packages/packages-lock.json"
       - "**/Plugins/**"
 
 env:
@@ -44,7 +44,7 @@ jobs:
       - name: Cache Library
         uses: actions/cache@v2.1.1
         with:
-          path: Library
+          path: AlgoSdk\~/Library
           key: Library-${{ matrix.unityVersion }}-${{ matrix.targetPlatform }}-${{ steps.get-date.outputs.date }}
           restore-keys: |
             Library-${{ matrix.unityVersion }}-${{ matrix.targetPlatform }}-
@@ -54,6 +54,7 @@ jobs:
       - uses: game-ci/unity-test-runner@v2
         id: tests
         with:
+          projectPath: ./AlgoSdk\~
           artifactsPath: TestResults
           customParameters: -batchMode -burst-disable-compilation -enableCodeCoverage -coverageOptions generateAdditionalMetrics;enableCyclomaticComplexity;assemblyFilters:${{ steps.assemblyFilters.outputs.result }}
           githubToken: ${{ secrets.GITHUB_TOKEN }}
@@ -69,14 +70,14 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: Unity ${{ matrix.unityVersion }} ${{ matrix.targetPlatform }} Code Coverage
-          path: ./CodeCoverage
+          path: AlgoSdk\~/CodeCoverage
       - name: Upload PlayMode Test Coverage Report
         uses: codecov/codecov-action@v1
         with:
           flags: unittests
-          file: ./CodeCoverage/workspace-opencov/PlayMode/TestCoverageResults_0000.xml
+          file: AlgoSdk\~/CodeCoverage/workspace-opencov/PlayMode/TestCoverageResults_0000.xml
       - name: Upload EditMode Test Coverage Report
         uses: codecov/codecov-action@v1
         with:
           flags: unittests
-          file: ./CodeCoverage/workspace-opencov/EditMode/TestCoverageResults_0000.xml
+          file: AlgoSdk\~/CodeCoverage/workspace-opencov/EditMode/TestCoverageResults_0000.xml
