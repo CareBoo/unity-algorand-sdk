@@ -15,8 +15,8 @@ jobs:
     name: Semantic Release
     runs-on: ubuntu-latest
     outputs:
-      new_release_published: needs.semantic_release.outputs.new_release_published
-      new_release_version: needs.semantic_release.outputs.new_release_version
+      new_release_published: steps.semantic.outputs.new_release_published
+      new_release_version: steps.semantic.outputs.new_release_version
 
     steps:
       - uses: actions/checkout@v2
@@ -91,7 +91,7 @@ jobs:
 
       - name: Rename TableOfContents.md to toc.md
         run: |
-          cd Documentation\~
+          cd Documentation~
           mv TableOfContents.md toc.md
 
       - name: Update sitemap with version
