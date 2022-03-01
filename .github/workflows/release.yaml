@@ -53,6 +53,9 @@ jobs:
           lfs: true
           ref: ${{ github.ref }}
 
+      - name: Remove symlinks
+        run: sed -i '' **/*
+
       - name: Setup npm
         uses: actions/setup-node@v2
         with:
@@ -117,7 +120,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: _site_${{ matrix.tag }}
-          path: .docfx/_site
+          path: _site
 
   deploy_docs_version:
     name: Deploy Version Docs
