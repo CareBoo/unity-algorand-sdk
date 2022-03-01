@@ -209,10 +209,8 @@ namespace AlgoSdk.WalletConnect
             var msg = NetworkMessage.PublishToTopicEncrypted(request, Key, PeerId);
             webSocketClient.Send(msg);
             var response = await listeningForResponse;
-            return response.IsError
-                ? (SignTxnsError)response.Error
-                : AlgoApiSerializer.DeserializeJson<byte[][]>(response.Result.Json)
-                ;
+            if (response.IsError) return (SignTxnsError)response.Error;
+            return AlgoApiSerializer.DeserializeJson<byte[][]>(response.Result.Json);
         }
 
         static SavedSession InitSession(ClientMeta dappMeta, string bridgeUrl)
