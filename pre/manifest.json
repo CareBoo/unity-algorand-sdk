@@ -4462,7 +4462,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.html",
-          "hash": "Ce7xLMg7CaTM7SK4XEwAz2SLKQHRsECIa3pm59CGXp8="
+          "hash": "T6LPWfMyr1WaqeseIK7hKAehU34QDTileE+fgeeZtoo="
         }
       },
       "is_incremental": false,
@@ -5242,7 +5242,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WebSocketSharp.html",
-          "hash": "5YS6TDPze9EdWXOKXHN20Fk0Gz3M1OynjPRDuowLoKg="
+          "hash": "6fsRfxCND3TbZ1nvufLvxoUWWjfuSY43mTRG0oGdpYs="
         }
       },
       "is_incremental": false,
@@ -5261,9 +5261,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "changelog/toc.yml",
       "output": {
@@ -5276,9 +5273,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "license/toc.yml",
       "output": {
@@ -5291,9 +5285,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "manual/toc.yml",
       "output": {
