@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:navrel" content="">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -95,7 +95,9 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_KmdClient_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct KmdClient : IKmdClient, IAlgoApiClient</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+[Serializable]
+public struct KmdClient : IKmdClient, IAlgoApiClient</code></pre>
   </div>
   <h5 id="AlgoSdk_KmdClient_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>The kmd service is responsible for managing keys and wallets</p>
@@ -127,6 +129,82 @@
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">address</span></td>
         <td><p>url of the service, including the port, e.g. <code>&quot;http://localhost:4001&quot;</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Header.html">Header</a>[]</td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>extra headers to add to the requests. e.g. <code>(&quot;x-api-key, my-api-key&quot;)</code></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KmdClient__ctor_" data-uid="AlgoSdk.KmdClient.#ctor*"></a>
+  <h4 id="AlgoSdk_KmdClient__ctor_System_String_AlgoSdk_Header___" data-uid="AlgoSdk.KmdClient.#ctor(System.String,AlgoSdk.Header[])">KmdClient(String, Header[])</h4>
+  <div class="markdown level1 summary"><p>Create a new kmd client</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KmdClient(string address, params Header[] headers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>url of the service, including the port, e.g. <code>&quot;http://localhost:4001&quot;</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Header.html">Header</a>[]</td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>extra headers to add to the requests. e.g. <code>(&quot;x-api-key, my-api-key&quot;)</code></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KmdClient__ctor_" data-uid="AlgoSdk.KmdClient.#ctor*"></a>
+  <h4 id="AlgoSdk_KmdClient__ctor_System_String_System_String_AlgoSdk_Header___" data-uid="AlgoSdk.KmdClient.#ctor(System.String,System.String,AlgoSdk.Header[])">KmdClient(String, String, Header[])</h4>
+  <div class="markdown level1 summary"><p>Create a new kmd client</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KmdClient(string address, string token = null, params Header[] headers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>url of the service, including the port, e.g. <code>&quot;http://localhost:4001&quot;</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">token</span></td>
+        <td><p>token used in authenticating to the service</p>
 </td>
       </tr>
       <tr>
@@ -207,6 +285,56 @@
   </table>
   
   
+  <a id="AlgoSdk_KmdClient_Address_" data-uid="AlgoSdk.KmdClient.Address*"></a>
+  <h4 id="AlgoSdk_KmdClient_Address" data-uid="AlgoSdk.KmdClient.Address">Address</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string Address { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KmdClient_Headers_" data-uid="AlgoSdk.KmdClient.Headers*"></a>
+  <h4 id="AlgoSdk_KmdClient_Headers" data-uid="AlgoSdk.KmdClient.Headers">Headers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly Header[] Headers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Header.html">Header</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_KmdClient_Headers_" data-uid="AlgoSdk.KmdClient.Headers*"></a>
   <h4 id="AlgoSdk_KmdClient_Headers" data-uid="AlgoSdk.KmdClient.Headers">Headers</h4>
   <div class="markdown level1 summary"></div>
@@ -239,6 +367,56 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly string Token { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KmdClient_Token_" data-uid="AlgoSdk.KmdClient.Token*"></a>
+  <h4 id="AlgoSdk_KmdClient_Token" data-uid="AlgoSdk.KmdClient.Token">Token</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string Token { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KmdClient_TokenHeader_" data-uid="AlgoSdk.KmdClient.TokenHeader*"></a>
+  <h4 id="AlgoSdk_KmdClient_TokenHeader" data-uid="AlgoSdk.KmdClient.TokenHeader">TokenHeader</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string TokenHeader { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -341,6 +519,63 @@
   </table>
   
   
+  <a id="AlgoSdk_KmdClient_CreateWallet_" data-uid="AlgoSdk.KmdClient.CreateWallet*"></a>
+  <h4 id="AlgoSdk_KmdClient_CreateWallet_AlgoSdk_PrivateKey_FixedString128Bytes_FixedString128Bytes_FixedString128Bytes_" data-uid="AlgoSdk.KmdClient.CreateWallet(AlgoSdk.PrivateKey,FixedString128Bytes,FixedString128Bytes,FixedString128Bytes)">CreateWallet(PrivateKey, FixedString128Bytes, FixedString128Bytes, FixedString128Bytes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;CreateWalletResponse&gt; CreateWallet(PrivateKey masterDerivationKey, FixedString128Bytes walletDriverName, FixedString128Bytes walletName, FixedString128Bytes walletPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.PrivateKey.html">PrivateKey</a></td>
+        <td><span class="parametername">masterDerivationKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletDriverName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.CreateWalletResponse.html">CreateWalletResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_KmdClient_DeleteKey_" data-uid="AlgoSdk.KmdClient.DeleteKey*"></a>
   <h4 id="AlgoSdk_KmdClient_DeleteKey_AlgoSdk_Address_FixedString128Bytes_FixedString128Bytes_" data-uid="AlgoSdk.KmdClient.DeleteKey(AlgoSdk.Address,FixedString128Bytes,FixedString128Bytes)">DeleteKey(Address, FixedString128Bytes, FixedString128Bytes)</h4>
   <div class="markdown level1 summary"></div>
@@ -348,6 +583,110 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent DeleteKey(Address address, FixedString128Bytes walletHandleToken, FixedString128Bytes walletPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">address</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletHandleToken</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent.html">AlgoApiRequest.Sent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KmdClient_DeleteKey_" data-uid="AlgoSdk.KmdClient.DeleteKey*"></a>
+  <h4 id="AlgoSdk_KmdClient_DeleteKey_AlgoSdk_Address_FixedString128Bytes_FixedString128Bytes_" data-uid="AlgoSdk.KmdClient.DeleteKey(AlgoSdk.Address,FixedString128Bytes,FixedString128Bytes)">DeleteKey(Address, FixedString128Bytes, FixedString128Bytes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent DeleteKey(Address address, FixedString128Bytes walletHandleToken, FixedString128Bytes walletPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">address</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletHandleToken</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent.html">AlgoApiRequest.Sent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KmdClient_DeleteMultisig_" data-uid="AlgoSdk.KmdClient.DeleteMultisig*"></a>
+  <h4 id="AlgoSdk_KmdClient_DeleteMultisig_AlgoSdk_Address_FixedString128Bytes_FixedString128Bytes_" data-uid="AlgoSdk.KmdClient.DeleteMultisig(AlgoSdk.Address,FixedString128Bytes,FixedString128Bytes)">DeleteMultisig(Address, FixedString128Bytes, FixedString128Bytes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent DeleteMultisig(Address address, FixedString128Bytes walletHandleToken, FixedString128Bytes walletPassword)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -497,6 +836,58 @@
   </table>
   
   
+  <a id="AlgoSdk_KmdClient_ExportKey_" data-uid="AlgoSdk.KmdClient.ExportKey*"></a>
+  <h4 id="AlgoSdk_KmdClient_ExportKey_AlgoSdk_Address_FixedString128Bytes_FixedString128Bytes_" data-uid="AlgoSdk.KmdClient.ExportKey(AlgoSdk.Address,FixedString128Bytes,FixedString128Bytes)">ExportKey(Address, FixedString128Bytes, FixedString128Bytes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;ExportKeyResponse&gt; ExportKey(Address address, FixedString128Bytes walletHandleToken, FixedString128Bytes walletPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">address</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletHandleToken</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.ExportKeyResponse.html">ExportKeyResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_KmdClient_ExportMasterKey_" data-uid="AlgoSdk.KmdClient.ExportMasterKey*"></a>
   <h4 id="AlgoSdk_KmdClient_ExportMasterKey_FixedString128Bytes_FixedString128Bytes_" data-uid="AlgoSdk.KmdClient.ExportMasterKey(FixedString128Bytes,FixedString128Bytes)">ExportMasterKey(FixedString128Bytes, FixedString128Bytes)</h4>
   <div class="markdown level1 summary"></div>
@@ -538,6 +929,100 @@
     <tbody>
       <tr>
         <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.ExportMasterKeyResponse.html">ExportMasterKeyResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KmdClient_ExportMasterKey_" data-uid="AlgoSdk.KmdClient.ExportMasterKey*"></a>
+  <h4 id="AlgoSdk_KmdClient_ExportMasterKey_FixedString128Bytes_FixedString128Bytes_" data-uid="AlgoSdk.KmdClient.ExportMasterKey(FixedString128Bytes,FixedString128Bytes)">ExportMasterKey(FixedString128Bytes, FixedString128Bytes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;ExportMasterKeyResponse&gt; ExportMasterKey(FixedString128Bytes walletHandleToken, FixedString128Bytes walletPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletHandleToken</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.ExportMasterKeyResponse.html">ExportMasterKeyResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KmdClient_ExportMultisig_" data-uid="AlgoSdk.KmdClient.ExportMultisig*"></a>
+  <h4 id="AlgoSdk_KmdClient_ExportMultisig_AlgoSdk_Address_FixedString128Bytes_" data-uid="AlgoSdk.KmdClient.ExportMultisig(AlgoSdk.Address,FixedString128Bytes)">ExportMultisig(Address, FixedString128Bytes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;ExportMultisigResponse&gt; ExportMultisig(Address address, FixedString128Bytes walletHandleToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">address</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletHandleToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.ExportMultisigResponse.html">ExportMultisigResponse</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -638,6 +1123,53 @@
   </table>
   
   
+  <a id="AlgoSdk_KmdClient_GenerateKey_" data-uid="AlgoSdk.KmdClient.GenerateKey*"></a>
+  <h4 id="AlgoSdk_KmdClient_GenerateKey_FixedString128Bytes_AlgoSdk_Optional_System_Boolean__" data-uid="AlgoSdk.KmdClient.GenerateKey(FixedString128Bytes,AlgoSdk.Optional{System.Boolean})">GenerateKey(FixedString128Bytes, Optional&lt;Boolean&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;GenerateKeyResponse&gt; GenerateKey(FixedString128Bytes walletHandleToken, Optional&lt;bool&gt; displayMnemonic = default(Optional&lt;bool&gt;))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletHandleToken</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">displayMnemonic</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.GenerateKeyResponse.html">GenerateKeyResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_KmdClient_GetSwaggerSpec_" data-uid="AlgoSdk.KmdClient.GetSwaggerSpec*"></a>
   <h4 id="AlgoSdk_KmdClient_GetSwaggerSpec" data-uid="AlgoSdk.KmdClient.GetSwaggerSpec">GetSwaggerSpec()</h4>
   <div class="markdown level1 summary"></div>
@@ -657,6 +1189,78 @@
     <tbody>
       <tr>
         <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.AlgoApiObject.html">AlgoApiObject</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KmdClient_GetSwaggerSpec_" data-uid="AlgoSdk.KmdClient.GetSwaggerSpec*"></a>
+  <h4 id="AlgoSdk_KmdClient_GetSwaggerSpec" data-uid="AlgoSdk.KmdClient.GetSwaggerSpec">GetSwaggerSpec()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;AlgoApiObject&gt; GetSwaggerSpec()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.AlgoApiObject.html">AlgoApiObject</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KmdClient_ImportKey_" data-uid="AlgoSdk.KmdClient.ImportKey*"></a>
+  <h4 id="AlgoSdk_KmdClient_ImportKey_AlgoSdk_PrivateKey_FixedString128Bytes_" data-uid="AlgoSdk.KmdClient.ImportKey(AlgoSdk.PrivateKey,FixedString128Bytes)">ImportKey(PrivateKey, FixedString128Bytes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;ImportKeyResponse&gt; ImportKey(PrivateKey privateKey, FixedString128Bytes walletHandleToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.PrivateKey.html">PrivateKey</a></td>
+        <td><span class="parametername">privateKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletHandleToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.ImportKeyResponse.html">ImportKeyResponse</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -767,6 +1371,63 @@
   </table>
   
   
+  <a id="AlgoSdk_KmdClient_ImportMultisig_" data-uid="AlgoSdk.KmdClient.ImportMultisig*"></a>
+  <h4 id="AlgoSdk_KmdClient_ImportMultisig_Ed25519_PublicKey___System_Byte_FixedString128Bytes_System_Byte_" data-uid="AlgoSdk.KmdClient.ImportMultisig(Ed25519.PublicKey[],System.Byte,FixedString128Bytes,System.Byte)">ImportMultisig(Ed25519.PublicKey[], Byte, FixedString128Bytes, Byte)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;ImportMultisigResponse&gt; ImportMultisig(Ed25519.PublicKey[] publicKeys, byte threshold, FixedString128Bytes walletHandleToken, byte version = 1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Ed25519.PublicKey</span>[]</td>
+        <td><span class="parametername">publicKeys</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td><span class="parametername">threshold</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletHandleToken</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.ImportMultisigResponse.html">ImportMultisigResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_KmdClient_InitWalletHandleToken_" data-uid="AlgoSdk.KmdClient.InitWalletHandleToken*"></a>
   <h4 id="AlgoSdk_KmdClient_InitWalletHandleToken_FixedString128Bytes_FixedString128Bytes_" data-uid="AlgoSdk.KmdClient.InitWalletHandleToken(FixedString128Bytes,FixedString128Bytes)">InitWalletHandleToken(FixedString128Bytes, FixedString128Bytes)</h4>
   <div class="markdown level1 summary"></div>
@@ -808,6 +1469,95 @@
     <tbody>
       <tr>
         <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.InitWalletHandleTokenResponse.html">InitWalletHandleTokenResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KmdClient_InitWalletHandleToken_" data-uid="AlgoSdk.KmdClient.InitWalletHandleToken*"></a>
+  <h4 id="AlgoSdk_KmdClient_InitWalletHandleToken_FixedString128Bytes_FixedString128Bytes_" data-uid="AlgoSdk.KmdClient.InitWalletHandleToken(FixedString128Bytes,FixedString128Bytes)">InitWalletHandleToken(FixedString128Bytes, FixedString128Bytes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;InitWalletHandleTokenResponse&gt; InitWalletHandleToken(FixedString128Bytes walletId, FixedString128Bytes walletPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.InitWalletHandleTokenResponse.html">InitWalletHandleTokenResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KmdClient_ListKeys_" data-uid="AlgoSdk.KmdClient.ListKeys*"></a>
+  <h4 id="AlgoSdk_KmdClient_ListKeys_FixedString128Bytes_" data-uid="AlgoSdk.KmdClient.ListKeys(FixedString128Bytes)">ListKeys(FixedString128Bytes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;ListKeysResponse&gt; ListKeys(FixedString128Bytes walletHandleToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletHandleToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.ListKeysResponse.html">ListKeysResponse</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -898,6 +1648,48 @@
   </table>
   
   
+  <a id="AlgoSdk_KmdClient_ListMultisig_" data-uid="AlgoSdk.KmdClient.ListMultisig*"></a>
+  <h4 id="AlgoSdk_KmdClient_ListMultisig_FixedString128Bytes_" data-uid="AlgoSdk.KmdClient.ListMultisig(FixedString128Bytes)">ListMultisig(FixedString128Bytes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;ListMultisigResponse&gt; ListMultisig(FixedString128Bytes walletHandleToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletHandleToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.ListMultisigResponse.html">ListMultisigResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_KmdClient_ListWallets_" data-uid="AlgoSdk.KmdClient.ListWallets*"></a>
   <h4 id="AlgoSdk_KmdClient_ListWallets" data-uid="AlgoSdk.KmdClient.ListWallets">ListWallets()</h4>
   <div class="markdown level1 summary"></div>
@@ -917,6 +1709,73 @@
     <tbody>
       <tr>
         <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.ListWalletsResponse.html">ListWalletsResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KmdClient_ListWallets_" data-uid="AlgoSdk.KmdClient.ListWallets*"></a>
+  <h4 id="AlgoSdk_KmdClient_ListWallets" data-uid="AlgoSdk.KmdClient.ListWallets">ListWallets()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;ListWalletsResponse&gt; ListWallets()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.ListWalletsResponse.html">ListWalletsResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KmdClient_ReleaseWalletHandleToken_" data-uid="AlgoSdk.KmdClient.ReleaseWalletHandleToken*"></a>
+  <h4 id="AlgoSdk_KmdClient_ReleaseWalletHandleToken_FixedString128Bytes_" data-uid="AlgoSdk.KmdClient.ReleaseWalletHandleToken(FixedString128Bytes)">ReleaseWalletHandleToken(FixedString128Bytes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent ReleaseWalletHandleToken(FixedString128Bytes walletHandleToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletHandleToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent.html">AlgoApiRequest.Sent</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1011,6 +1870,100 @@
     <tbody>
       <tr>
         <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.RenameWalletResponse.html">RenameWalletResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KmdClient_RenameWallet_" data-uid="AlgoSdk.KmdClient.RenameWallet*"></a>
+  <h4 id="AlgoSdk_KmdClient_RenameWallet_FixedString128Bytes_FixedString128Bytes_FixedString128Bytes_" data-uid="AlgoSdk.KmdClient.RenameWallet(FixedString128Bytes,FixedString128Bytes,FixedString128Bytes)">RenameWallet(FixedString128Bytes, FixedString128Bytes, FixedString128Bytes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;RenameWalletResponse&gt; RenameWallet(FixedString128Bytes walletId, FixedString128Bytes newName, FixedString128Bytes walletPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">newName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.RenameWalletResponse.html">RenameWalletResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KmdClient_RenewWalletHandleToken_" data-uid="AlgoSdk.KmdClient.RenewWalletHandleToken*"></a>
+  <h4 id="AlgoSdk_KmdClient_RenewWalletHandleToken_FixedString128Bytes_" data-uid="AlgoSdk.KmdClient.RenewWalletHandleToken(FixedString128Bytes)">RenewWalletHandleToken(FixedString128Bytes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;RenewWalletHandleTokenResponse&gt; RenewWalletHandleToken(FixedString128Bytes walletHandleToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletHandleToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.RenewWalletHandleTokenResponse.html">RenewWalletHandleTokenResponse</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1115,6 +2068,125 @@
     <tbody>
       <tr>
         <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.SignMultisigResponse.html">SignMultisigResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KmdClient_SignMultisig_" data-uid="AlgoSdk.KmdClient.SignMultisig*"></a>
+  <h4 id="AlgoSdk_KmdClient_SignMultisig_AlgoSdk_Multisig_Ed25519_PublicKey_System_Byte___FixedString128Bytes_FixedString128Bytes_" data-uid="AlgoSdk.KmdClient.SignMultisig(AlgoSdk.Multisig,Ed25519.PublicKey,System.Byte[],FixedString128Bytes,FixedString128Bytes)">SignMultisig(Multisig, Ed25519.PublicKey, Byte[], FixedString128Bytes, FixedString128Bytes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;SignMultisigResponse&gt; SignMultisig(Multisig msig, Ed25519.PublicKey publicKey, byte[] transactionData, FixedString128Bytes walletHandleToken, FixedString128Bytes walletPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Multisig.html">Multisig</a></td>
+        <td><span class="parametername">msig</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Ed25519.PublicKey</span></td>
+        <td><span class="parametername">publicKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">transactionData</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletHandleToken</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.SignMultisigResponse.html">SignMultisigResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KmdClient_SignProgram_" data-uid="AlgoSdk.KmdClient.SignProgram*"></a>
+  <h4 id="AlgoSdk_KmdClient_SignProgram_AlgoSdk_Address_System_Byte___FixedString128Bytes_FixedString128Bytes_" data-uid="AlgoSdk.KmdClient.SignProgram(AlgoSdk.Address,System.Byte[],FixedString128Bytes,FixedString128Bytes)">SignProgram(Address, Byte[], FixedString128Bytes, FixedString128Bytes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;SignProgramResponse&gt; SignProgram(Address account, byte[] programData, FixedString128Bytes walletHandleToken, FixedString128Bytes walletPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">account</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">programData</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletHandleToken</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.SignProgramResponse.html">SignProgramResponse</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1245,6 +2317,130 @@
   </table>
   
   
+  <a id="AlgoSdk_KmdClient_SignProgramMultisig_" data-uid="AlgoSdk.KmdClient.SignProgramMultisig*"></a>
+  <h4 id="AlgoSdk_KmdClient_SignProgramMultisig_AlgoSdk_Address_System_Byte___AlgoSdk_Multisig_Ed25519_PublicKey_FixedString128Bytes_FixedString128Bytes_" data-uid="AlgoSdk.KmdClient.SignProgramMultisig(AlgoSdk.Address,System.Byte[],AlgoSdk.Multisig,Ed25519.PublicKey,FixedString128Bytes,FixedString128Bytes)">SignProgramMultisig(Address, Byte[], Multisig, Ed25519.PublicKey, FixedString128Bytes, FixedString128Bytes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;SignProgramMultisigResponse&gt; SignProgramMultisig(Address msigAccount, byte[] programData, Multisig msig, Ed25519.PublicKey publicKey, FixedString128Bytes walletHandleToken, FixedString128Bytes walletPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">msigAccount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">programData</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Multisig.html">Multisig</a></td>
+        <td><span class="parametername">msig</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Ed25519.PublicKey</span></td>
+        <td><span class="parametername">publicKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletHandleToken</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.SignProgramMultisigResponse.html">SignProgramMultisigResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KmdClient_SignTransaction_" data-uid="AlgoSdk.KmdClient.SignTransaction*"></a>
+  <h4 id="AlgoSdk_KmdClient_SignTransaction_AlgoSdk_Address_System_Byte___FixedString128Bytes_FixedString128Bytes_" data-uid="AlgoSdk.KmdClient.SignTransaction(AlgoSdk.Address,System.Byte[],FixedString128Bytes,FixedString128Bytes)">SignTransaction(Address, Byte[], FixedString128Bytes, FixedString128Bytes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;SignTransactionResponse&gt; SignTransaction(Address account, byte[] transactionData, FixedString128Bytes walletHandleToken, FixedString128Bytes walletPassword)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">account</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">transactionData</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletHandleToken</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletPassword</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.SignTransactionResponse.html">SignTransactionResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_KmdClient_SignTransaction_" data-uid="AlgoSdk.KmdClient.SignTransaction*"></a>
   <h4 id="AlgoSdk_KmdClient_SignTransaction_AlgoSdk_Address_System_Byte___FixedString128Bytes_FixedString128Bytes_" data-uid="AlgoSdk.KmdClient.SignTransaction(AlgoSdk.Address,System.Byte[],FixedString128Bytes,FixedString128Bytes)">SignTransaction(Address, Byte[], FixedString128Bytes, FixedString128Bytes)</h4>
   <div class="markdown level1 summary"></div>
@@ -1321,6 +2517,73 @@
     <tbody>
       <tr>
         <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.VersionsResponse.html">VersionsResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KmdClient_Versions_" data-uid="AlgoSdk.KmdClient.Versions*"></a>
+  <h4 id="AlgoSdk_KmdClient_Versions" data-uid="AlgoSdk.KmdClient.Versions">Versions()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;VersionsResponse&gt; Versions()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.VersionsResponse.html">VersionsResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KmdClient_WalletInfo_" data-uid="AlgoSdk.KmdClient.WalletInfo*"></a>
+  <h4 id="AlgoSdk_KmdClient_WalletInfo_FixedString128Bytes_" data-uid="AlgoSdk.KmdClient.WalletInfo(FixedString128Bytes)">WalletInfo(FixedString128Bytes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;WalletInfoResponse&gt; WalletInfo(FixedString128Bytes walletHandleToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td><span class="parametername">walletHandleToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.WalletInfoResponse.html">WalletInfoResponse</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

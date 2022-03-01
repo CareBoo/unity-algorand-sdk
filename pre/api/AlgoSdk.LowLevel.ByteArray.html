@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:navrel" content="">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -132,6 +132,38 @@
   </table>
   
   
+  <a id="AlgoSdk_LowLevel_ByteArray_CheckElementAccess_" data-uid="AlgoSdk.LowLevel.ByteArray.CheckElementAccess*"></a>
+  <h4 id="AlgoSdk_LowLevel_ByteArray_CheckElementAccess_System_Int32_System_Int32_" data-uid="AlgoSdk.LowLevel.ByteArray.CheckElementAccess(System.Int32,System.Int32)">CheckElementAccess(Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CheckElementAccess(int index, int length)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">length</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_LowLevel_ByteArray_CopyFrom_" data-uid="AlgoSdk.LowLevel.ByteArray.CopyFrom*"></a>
   <h4 id="AlgoSdk_LowLevel_ByteArray_CopyFrom__1___0__NativeArray_System_Byte__System_Int32_System_Int32_" data-uid="AlgoSdk.LowLevel.ByteArray.CopyFrom``1(``0@,NativeArray{System.Byte},System.Int32,System.Int32)">CopyFrom&lt;T&gt;(ref T, NativeArray&lt;Byte&gt;, Int32, Int32)</h4>
   <div class="markdown level1 summary"></div>
@@ -158,6 +190,122 @@
       </tr>
       <tr>
         <td><span class="xref">NativeArray</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">start</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">length</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_LowLevel_ByteArray_CopyFrom_" data-uid="AlgoSdk.LowLevel.ByteArray.CopyFrom*"></a>
+  <h4 id="AlgoSdk_LowLevel_ByteArray_CopyFrom__1___0__NativeArray_System_Byte__System_Int32_System_Int32_" data-uid="AlgoSdk.LowLevel.ByteArray.CopyFrom``1(``0@,NativeArray{System.Byte},System.Int32,System.Int32)">CopyFrom&lt;T&gt;(ref T, NativeArray&lt;Byte&gt;, Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CopyFrom&lt;T&gt;(this ref T target, NativeArray&lt;byte&gt; source, int start, int length = 2147483647)
+    where T : struct, IByteArray</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">target</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">NativeArray</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">start</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">length</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_LowLevel_ByteArray_CopyFrom_" data-uid="AlgoSdk.LowLevel.ByteArray.CopyFrom*"></a>
+  <h4 id="AlgoSdk_LowLevel_ByteArray_CopyFrom__1___0__System_Byte___System_Int32_System_Int32_" data-uid="AlgoSdk.LowLevel.ByteArray.CopyFrom``1(``0@,System.Byte[],System.Int32,System.Int32)">CopyFrom&lt;T&gt;(ref T, Byte[], Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CopyFrom&lt;T&gt;(this ref T target, byte[] source, int start, int length = 2147483647)
+    where T : struct, IByteArray</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">target</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
         <td><span class="parametername">source</span></td>
         <td></td>
       </tr>
@@ -310,6 +458,120 @@
   </table>
   
   
+  <a id="AlgoSdk_LowLevel_ByteArray_CopyFrom_" data-uid="AlgoSdk.LowLevel.ByteArray.CopyFrom*"></a>
+  <h4 id="AlgoSdk_LowLevel_ByteArray_CopyFrom__2___0____1_System_Int32_System_Int32_" data-uid="AlgoSdk.LowLevel.ByteArray.CopyFrom``2(``0@,``1,System.Int32,System.Int32)">CopyFrom&lt;T, U&gt;(ref T, U, Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CopyFrom&lt;T, U&gt;(this ref T target, U source, int start, int length = 2147483647)
+    where T : struct, IByteArray where U : struct, IByteArray</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">target</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">U</span></td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">start</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">length</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">U</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_LowLevel_ByteArray_CopyTo_" data-uid="AlgoSdk.LowLevel.ByteArray.CopyTo*"></a>
+  <h4 id="AlgoSdk_LowLevel_ByteArray_CopyTo__2___0___1__" data-uid="AlgoSdk.LowLevel.ByteArray.CopyTo``2(``0,``1@)">CopyTo&lt;T, U&gt;(T, ref U)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CopyTo&lt;T, U&gt;(this T from, ref U to)
+    where T : struct, IByteArray where U : struct, IByteArray</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">from</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">U</span></td>
+        <td><span class="parametername">to</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">U</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_LowLevel_ByteArray_CopyTo_" data-uid="AlgoSdk.LowLevel.ByteArray.CopyTo*"></a>
   <h4 id="AlgoSdk_LowLevel_ByteArray_CopyTo__2___0___1__" data-uid="AlgoSdk.LowLevel.ByteArray.CopyTo``2(``0,``1@)">CopyTo&lt;T, U&gt;(T, ref U)</h4>
   <div class="markdown level1 summary"></div>
@@ -424,6 +686,68 @@
   </table>
   
   
+  <a id="AlgoSdk_LowLevel_ByteArray_CopyTo_" data-uid="AlgoSdk.LowLevel.ByteArray.CopyTo*"></a>
+  <h4 id="AlgoSdk_LowLevel_ByteArray_CopyTo__2___0___1__System_Int32_System_Int32_" data-uid="AlgoSdk.LowLevel.ByteArray.CopyTo``2(``0,``1@,System.Int32,System.Int32)">CopyTo&lt;T, U&gt;(T, ref U, Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CopyTo&lt;T, U&gt;(this T source, ref U target, int start, int length = 2147483647)
+    where T : struct, IByteArray where U : struct, IByteArray</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">U</span></td>
+        <td><span class="parametername">target</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">start</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">length</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">U</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_LowLevel_ByteArray_Equals_" data-uid="AlgoSdk.LowLevel.ByteArray.Equals*"></a>
   <h4 id="AlgoSdk_LowLevel_ByteArray_Equals__1___0___0_" data-uid="AlgoSdk.LowLevel.ByteArray.Equals``1(``0,``0)">Equals&lt;TByteArray&gt;(TByteArray, TByteArray)</h4>
   <div class="markdown level1 summary"></div>
@@ -451,6 +775,132 @@
       <tr>
         <td><span class="xref">TByteArray</span></td>
         <td><span class="parametername">y</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TByteArray</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_LowLevel_ByteArray_Equals_" data-uid="AlgoSdk.LowLevel.ByteArray.Equals*"></a>
+  <h4 id="AlgoSdk_LowLevel_ByteArray_Equals__1___0___0_" data-uid="AlgoSdk.LowLevel.ByteArray.Equals``1(``0,``0)">Equals&lt;TByteArray&gt;(TByteArray, TByteArray)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Equals&lt;TByteArray&gt;(TByteArray x, TByteArray y)
+    where TByteArray : struct, IByteArray</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TByteArray</span></td>
+        <td><span class="parametername">x</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TByteArray</span></td>
+        <td><span class="parametername">y</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TByteArray</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_LowLevel_ByteArray_Equals_" data-uid="AlgoSdk.LowLevel.ByteArray.Equals*"></a>
+  <h4 id="AlgoSdk_LowLevel_ByteArray_Equals__1___0_System_Object_" data-uid="AlgoSdk.LowLevel.ByteArray.Equals``1(``0,System.Object)">Equals&lt;TByteArray&gt;(TByteArray, Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Equals&lt;TByteArray&gt;(TByteArray x, object obj)
+    where TByteArray : struct, IByteArray</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TByteArray</span></td>
+        <td><span class="parametername">x</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -617,6 +1067,73 @@
   </table>
   
   
+  <a id="AlgoSdk_LowLevel_ByteArray_EqualsOther_" data-uid="AlgoSdk.LowLevel.ByteArray.EqualsOther*"></a>
+  <h4 id="AlgoSdk_LowLevel_ByteArray_EqualsOther__2___0___1_" data-uid="AlgoSdk.LowLevel.ByteArray.EqualsOther``2(``0,``1)">EqualsOther&lt;T, U&gt;(T, U)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool EqualsOther&lt;T, U&gt;(T x, U y)
+    where T : struct, IByteArray where U : struct, IByteArray</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">x</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">U</span></td>
+        <td><span class="parametername">y</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">U</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_LowLevel_ByteArray_FromBase64_" data-uid="AlgoSdk.LowLevel.ByteArray.FromBase64*"></a>
   <h4 id="AlgoSdk_LowLevel_ByteArray_FromBase64__1_System_String_" data-uid="AlgoSdk.LowLevel.ByteArray.FromBase64``1(System.String)">FromBase64&lt;TByteArray&gt;(String)</h4>
   <div class="markdown level1 summary"></div>
@@ -654,6 +1171,127 @@
     <tbody>
       <tr>
         <td><span class="xref">TByteArray</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TByteArray</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_LowLevel_ByteArray_FromBase64_" data-uid="AlgoSdk.LowLevel.ByteArray.FromBase64*"></a>
+  <h4 id="AlgoSdk_LowLevel_ByteArray_FromBase64__1_System_String_" data-uid="AlgoSdk.LowLevel.ByteArray.FromBase64``1(System.String)">FromBase64&lt;TByteArray&gt;(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TByteArray FromBase64&lt;TByteArray&gt;(string b64)
+    where TByteArray : struct, IByteArray</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">b64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TByteArray</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TByteArray</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_LowLevel_ByteArray_GetByteAt_" data-uid="AlgoSdk.LowLevel.ByteArray.GetByteAt*"></a>
+  <h4 id="AlgoSdk_LowLevel_ByteArray_GetByteAt__1___0__System_Int32_" data-uid="AlgoSdk.LowLevel.ByteArray.GetByteAt``1(``0@,System.Int32)">GetByteAt&lt;TByteArray&gt;(ref TByteArray, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte GetByteAt&lt;TByteArray&gt;(this ref TByteArray bytes, int index)
+    where TByteArray : struct, IByteArray</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TByteArray</span></td>
+        <td><span class="parametername">bytes</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -796,6 +1434,64 @@
   </table>
   
   
+  <a id="AlgoSdk_LowLevel_ByteArray_GetHashCode_" data-uid="AlgoSdk.LowLevel.ByteArray.GetHashCode*"></a>
+  <h4 id="AlgoSdk_LowLevel_ByteArray_GetHashCode__1___0_" data-uid="AlgoSdk.LowLevel.ByteArray.GetHashCode``1(``0)">GetHashCode&lt;TByteArray&gt;(TByteArray)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetHashCode&lt;TByteArray&gt;(TByteArray bytes)
+    where TByteArray : struct, IByteArray</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TByteArray</span></td>
+        <td><span class="parametername">bytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TByteArray</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_LowLevel_ByteArray_ReadByteAt_" data-uid="AlgoSdk.LowLevel.ByteArray.ReadByteAt*"></a>
   <h4 id="AlgoSdk_LowLevel_ByteArray_ReadByteAt__1___0_System_Int32_" data-uid="AlgoSdk.LowLevel.ByteArray.ReadByteAt``1(``0,System.Int32)">ReadByteAt&lt;TByteArray&gt;(TByteArray, Int32)</h4>
   <div class="markdown level1 summary"></div>
@@ -838,6 +1534,122 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Byte</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TByteArray</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_LowLevel_ByteArray_ReadByteAt_" data-uid="AlgoSdk.LowLevel.ByteArray.ReadByteAt*"></a>
+  <h4 id="AlgoSdk_LowLevel_ByteArray_ReadByteAt__1___0_System_Int32_" data-uid="AlgoSdk.LowLevel.ByteArray.ReadByteAt``1(``0,System.Int32)">ReadByteAt&lt;TByteArray&gt;(TByteArray, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte ReadByteAt&lt;TByteArray&gt;(TByteArray bytes, int index)
+    where TByteArray : struct, IByteArray</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TByteArray</span></td>
+        <td><span class="parametername">bytes</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TByteArray</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_LowLevel_ByteArray_SetByteAt_" data-uid="AlgoSdk.LowLevel.ByteArray.SetByteAt*"></a>
+  <h4 id="AlgoSdk_LowLevel_ByteArray_SetByteAt__1___0__System_Int32_System_Byte_" data-uid="AlgoSdk.LowLevel.ByteArray.SetByteAt``1(``0@,System.Int32,System.Byte)">SetByteAt&lt;TByteArray&gt;(ref TByteArray, Int32, Byte)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetByteAt&lt;TByteArray&gt;(this ref TByteArray bytes, int index, byte value)
+    where TByteArray : struct, IByteArray</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TByteArray</span></td>
+        <td><span class="parametername">bytes</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -970,6 +1782,64 @@
   </table>
   
   
+  <a id="AlgoSdk_LowLevel_ByteArray_ToArray_" data-uid="AlgoSdk.LowLevel.ByteArray.ToArray*"></a>
+  <h4 id="AlgoSdk_LowLevel_ByteArray_ToArray__1___0_" data-uid="AlgoSdk.LowLevel.ByteArray.ToArray``1(``0)">ToArray&lt;TByteArray&gt;(TByteArray)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static byte[] ToArray&lt;TByteArray&gt;(this TByteArray bytes)
+    where TByteArray : struct, IArray&lt;byte&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TByteArray</span></td>
+        <td><span class="parametername">bytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TByteArray</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_LowLevel_ByteArray_ToBase64_" data-uid="AlgoSdk.LowLevel.ByteArray.ToBase64*"></a>
   <h4 id="AlgoSdk_LowLevel_ByteArray_ToBase64__1___0_" data-uid="AlgoSdk.LowLevel.ByteArray.ToBase64``1(``0)">ToBase64&lt;TByteArray&gt;(TByteArray)</h4>
   <div class="markdown level1 summary"></div>
@@ -1007,6 +1877,127 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TByteArray</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_LowLevel_ByteArray_ToBase64_" data-uid="AlgoSdk.LowLevel.ByteArray.ToBase64*"></a>
+  <h4 id="AlgoSdk_LowLevel_ByteArray_ToBase64__1___0_" data-uid="AlgoSdk.LowLevel.ByteArray.ToBase64``1(``0)">ToBase64&lt;TByteArray&gt;(TByteArray)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ToBase64&lt;TByteArray&gt;(this TByteArray bytes)
+    where TByteArray : struct, IArray&lt;byte&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TByteArray</span></td>
+        <td><span class="parametername">bytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TByteArray</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_LowLevel_ByteArray_ToNativeArray_" data-uid="AlgoSdk.LowLevel.ByteArray.ToNativeArray*"></a>
+  <h4 id="AlgoSdk_LowLevel_ByteArray_ToNativeArray__1___0_Allocator_" data-uid="AlgoSdk.LowLevel.ByteArray.ToNativeArray``1(``0,Allocator)">ToNativeArray&lt;TByteArray&gt;(TByteArray, Allocator)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NativeArray&lt;byte&gt; ToNativeArray&lt;TByteArray&gt;(this TByteArray bytes, Allocator allocator)
+    where TByteArray : struct, IArray&lt;byte&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TByteArray</span></td>
+        <td><span class="parametername">bytes</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Allocator</span></td>
+        <td><span class="parametername">allocator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NativeArray</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>

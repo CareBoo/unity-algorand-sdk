@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:navrel" content="">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -116,7 +116,31 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IntPtr</span></td>
+        <td><span class="xref">System.IntPtr</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_Crypto_SecureMemoryHandle_Ptr" data-uid="AlgoSdk.Crypto.SecureMemoryHandle.Ptr">Ptr</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IntPtr Ptr</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IntPtr</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -148,12 +172,37 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="AlgoSdk_Crypto_SecureMemoryHandle_IsCreated_" data-uid="AlgoSdk.Crypto.SecureMemoryHandle.IsCreated*"></a>
+  <h4 id="AlgoSdk_Crypto_SecureMemoryHandle_IsCreated" data-uid="AlgoSdk.Crypto.SecureMemoryHandle.IsCreated">IsCreated</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool IsCreated { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="AlgoSdk_Crypto_SecureMemoryHandle_Create_" data-uid="AlgoSdk.Crypto.SecureMemoryHandle.Create*"></a>
-  <h4 id="AlgoSdk_Crypto_SecureMemoryHandle_Create_UIntPtr_" data-uid="AlgoSdk.Crypto.SecureMemoryHandle.Create(UIntPtr)">Create(UIntPtr)</h4>
+  <h4 id="AlgoSdk_Crypto_SecureMemoryHandle_Create_System_UIntPtr_" data-uid="AlgoSdk.Crypto.SecureMemoryHandle.Create(System.UIntPtr)">Create(UIntPtr)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -171,7 +220,49 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UIntPtr</span></td>
+        <td><span class="xref">System.UIntPtr</span></td>
+        <td><span class="parametername">sizeBytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Crypto.SecureMemoryHandle.html">SecureMemoryHandle</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Crypto_SecureMemoryHandle_Create_" data-uid="AlgoSdk.Crypto.SecureMemoryHandle.Create*"></a>
+  <h4 id="AlgoSdk_Crypto_SecureMemoryHandle_Create_System_UIntPtr_" data-uid="AlgoSdk.Crypto.SecureMemoryHandle.Create(System.UIntPtr)">Create(UIntPtr)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SecureMemoryHandle Create(UIntPtr sizeBytes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UIntPtr</span></td>
         <td><span class="parametername">sizeBytes</span></td>
         <td></td>
       </tr>
@@ -202,6 +293,58 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
   </div>
+  
+  
+  <a id="AlgoSdk_Crypto_SecureMemoryHandle_Dispose_" data-uid="AlgoSdk.Crypto.SecureMemoryHandle.Dispose*"></a>
+  <h4 id="AlgoSdk_Crypto_SecureMemoryHandle_Dispose" data-uid="AlgoSdk.Crypto.SecureMemoryHandle.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  
+  
+  <a id="AlgoSdk_Crypto_SecureMemoryHandle_Dispose_" data-uid="AlgoSdk.Crypto.SecureMemoryHandle.Dispose*"></a>
+  <h4 id="AlgoSdk_Crypto_SecureMemoryHandle_Dispose_JobHandle_" data-uid="AlgoSdk.Crypto.SecureMemoryHandle.Dispose(JobHandle)">Dispose(JobHandle)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JobHandle Dispose(JobHandle inputDeps)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">JobHandle</span></td>
+        <td><span class="parametername">inputDeps</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">JobHandle</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="AlgoSdk_Crypto_SecureMemoryHandle_Dispose_" data-uid="AlgoSdk.Crypto.SecureMemoryHandle.Dispose*"></a>

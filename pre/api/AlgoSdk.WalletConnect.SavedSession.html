@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:navrel" content="">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -93,7 +93,9 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_WalletConnect_SavedSession_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct SavedSession : IWalletConnectSessionData</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+[Serializable]
+public struct SavedSession : IWalletConnectSessionData</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -118,6 +120,56 @@
     <tbody>
       <tr>
         <td><a class="xref" href="AlgoSdk.Address.html">Address</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_WalletConnect_SavedSession_Accounts_" data-uid="AlgoSdk.WalletConnect.SavedSession.Accounts*"></a>
+  <h4 id="AlgoSdk_WalletConnect_SavedSession_Accounts" data-uid="AlgoSdk.WalletConnect.SavedSession.Accounts">Accounts</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address[] Accounts { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_WalletConnect_SavedSession_BridgeUrl_" data-uid="AlgoSdk.WalletConnect.SavedSession.BridgeUrl*"></a>
+  <h4 id="AlgoSdk_WalletConnect_SavedSession_BridgeUrl" data-uid="AlgoSdk.WalletConnect.SavedSession.BridgeUrl">BridgeUrl</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string BridgeUrl { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -174,6 +226,31 @@
   </table>
   
   
+  <a id="AlgoSdk_WalletConnect_SavedSession_ChainId_" data-uid="AlgoSdk.WalletConnect.SavedSession.ChainId*"></a>
+  <h4 id="AlgoSdk_WalletConnect_SavedSession_ChainId" data-uid="AlgoSdk.WalletConnect.SavedSession.ChainId">ChainId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ChainId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_WalletConnect_SavedSession_ClientId_" data-uid="AlgoSdk.WalletConnect.SavedSession.ClientId*"></a>
   <h4 id="AlgoSdk_WalletConnect_SavedSession_ClientId" data-uid="AlgoSdk.WalletConnect.SavedSession.ClientId">ClientId</h4>
   <div class="markdown level1 summary"></div>
@@ -193,6 +270,56 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_WalletConnect_SavedSession_ClientId_" data-uid="AlgoSdk.WalletConnect.SavedSession.ClientId*"></a>
+  <h4 id="AlgoSdk_WalletConnect_SavedSession_ClientId" data-uid="AlgoSdk.WalletConnect.SavedSession.ClientId">ClientId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ClientId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_WalletConnect_SavedSession_DappMeta_" data-uid="AlgoSdk.WalletConnect.SavedSession.DappMeta*"></a>
+  <h4 id="AlgoSdk_WalletConnect_SavedSession_DappMeta" data-uid="AlgoSdk.WalletConnect.SavedSession.DappMeta">DappMeta</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ClientMeta DappMeta { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.WalletConnect.ClientMeta.html">ClientMeta</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -249,6 +376,56 @@
   </table>
   
   
+  <a id="AlgoSdk_WalletConnect_SavedSession_HandshakeId_" data-uid="AlgoSdk.WalletConnect.SavedSession.HandshakeId*"></a>
+  <h4 id="AlgoSdk_WalletConnect_SavedSession_HandshakeId" data-uid="AlgoSdk.WalletConnect.SavedSession.HandshakeId">HandshakeId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong HandshakeId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_WalletConnect_SavedSession_Key_" data-uid="AlgoSdk.WalletConnect.SavedSession.Key*"></a>
+  <h4 id="AlgoSdk_WalletConnect_SavedSession_Key" data-uid="AlgoSdk.WalletConnect.SavedSession.Key">Key</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Hex Key { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Hex.html">Hex</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_WalletConnect_SavedSession_Key_" data-uid="AlgoSdk.WalletConnect.SavedSession.Key*"></a>
   <h4 id="AlgoSdk_WalletConnect_SavedSession_Key" data-uid="AlgoSdk.WalletConnect.SavedSession.Key">Key</h4>
   <div class="markdown level1 summary"></div>
@@ -299,6 +476,31 @@
   </table>
   
   
+  <a id="AlgoSdk_WalletConnect_SavedSession_NetworkId_" data-uid="AlgoSdk.WalletConnect.SavedSession.NetworkId*"></a>
+  <h4 id="AlgoSdk_WalletConnect_SavedSession_NetworkId" data-uid="AlgoSdk.WalletConnect.SavedSession.NetworkId">NetworkId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int NetworkId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_WalletConnect_SavedSession_PeerId_" data-uid="AlgoSdk.WalletConnect.SavedSession.PeerId*"></a>
   <h4 id="AlgoSdk_WalletConnect_SavedSession_PeerId" data-uid="AlgoSdk.WalletConnect.SavedSession.PeerId">PeerId</h4>
   <div class="markdown level1 summary"></div>
@@ -318,6 +520,56 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_WalletConnect_SavedSession_PeerId_" data-uid="AlgoSdk.WalletConnect.SavedSession.PeerId*"></a>
+  <h4 id="AlgoSdk_WalletConnect_SavedSession_PeerId" data-uid="AlgoSdk.WalletConnect.SavedSession.PeerId">PeerId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PeerId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_WalletConnect_SavedSession_WalletMeta_" data-uid="AlgoSdk.WalletConnect.SavedSession.WalletMeta*"></a>
+  <h4 id="AlgoSdk_WalletConnect_SavedSession_WalletMeta" data-uid="AlgoSdk.WalletConnect.SavedSession.WalletMeta">WalletMeta</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ClientMeta WalletMeta { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.WalletConnect.ClientMeta.html">ClientMeta</a></td>
         <td></td>
       </tr>
     </tbody>

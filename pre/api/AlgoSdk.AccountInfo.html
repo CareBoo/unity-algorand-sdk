@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:navrel" content="">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -88,16 +88,43 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.AccountInfo.html">AccountInfo</a>&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="AlgoSdk.AccountInfo.html">AccountInfo</a>&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_AccountInfo_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct AccountInfo</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+[Serializable]
+public struct AccountInfo : IEquatable&lt;AccountInfo&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="AlgoSdk_AccountInfo_Address" data-uid="AlgoSdk.AccountInfo.Address">Address</h4>
+  <div class="markdown level1 summary"><p>The public key of the account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address Address</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="AlgoSdk_AccountInfo_Address" data-uid="AlgoSdk.AccountInfo.Address">Address</h4>
@@ -132,6 +159,56 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ulong Amount</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_AccountInfo_Amount" data-uid="AlgoSdk.AccountInfo.Amount">Amount</h4>
+  <div class="markdown level1 summary"><p>The amount of microalgos belonging to this account including pending rewards.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong Amount</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_AccountInfo_AmountWithoutPendingRewards" data-uid="AlgoSdk.AccountInfo.AmountWithoutPendingRewards">AmountWithoutPendingRewards</h4>
+  <div class="markdown level1 summary"><p>The amount of microalgos belonging to this account not including pending rewards.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong AmountWithoutPendingRewards</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -200,6 +277,56 @@
   </table>
   
   
+  <h4 id="AlgoSdk_AccountInfo_ApplicationsLocalState" data-uid="AlgoSdk.AccountInfo.ApplicationsLocalState">ApplicationsLocalState</h4>
+  <div class="markdown level1 summary"><p>Local application data stored in this account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ApplicationLocalState[] ApplicationsLocalState</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.ApplicationLocalState.html">ApplicationLocalState</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_AccountInfo_ApplicationsTotalExtraPages" data-uid="AlgoSdk.AccountInfo.ApplicationsTotalExtraPages">ApplicationsTotalExtraPages</h4>
+  <div class="markdown level1 summary"><p>The total number of extra program pages for this account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong ApplicationsTotalExtraPages</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="AlgoSdk_AccountInfo_ApplicationsTotalExtraPages" data-uid="AlgoSdk.AccountInfo.ApplicationsTotalExtraPages">ApplicationsTotalExtraPages</h4>
   <div class="markdown level1 summary"><p>The total number of extra program pages for this account.</p>
 </div>
@@ -244,6 +371,56 @@
     <tbody>
       <tr>
         <td><a class="xref" href="AlgoSdk.StateSchema.html">StateSchema</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_AccountInfo_ApplicationsTotalSchema" data-uid="AlgoSdk.AccountInfo.ApplicationsTotalSchema">ApplicationsTotalSchema</h4>
+  <div class="markdown level1 summary"><p>The sum of all local and global schemas in this account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StateSchema ApplicationsTotalSchema</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.StateSchema.html">StateSchema</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_AccountInfo_Assets" data-uid="AlgoSdk.AccountInfo.Assets">Assets</h4>
+  <div class="markdown level1 summary"><p>Assets held by this account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetHolding[] Assets</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AssetHolding.html">AssetHolding</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -302,6 +479,33 @@ This field can be updated in any transaction by setting the RekeyTo field.</p>
   </table>
   
   
+  <h4 id="AlgoSdk_AccountInfo_AuthAddress" data-uid="AlgoSdk.AccountInfo.AuthAddress">AuthAddress</h4>
+  <div class="markdown level1 summary"><p>The address against which signing should be checked.
+If empty, the address of the current account is used.
+This field can be updated in any transaction by setting the RekeyTo field.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address AuthAddress</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="AlgoSdk_AccountInfo_ClosedAtRound" data-uid="AlgoSdk.AccountInfo.ClosedAtRound">ClosedAtRound</h4>
   <div class="markdown level1 summary"><p>Round during which this account was most recently closed.</p>
 </div>
@@ -321,6 +525,56 @@ This field can be updated in any transaction by setting the RekeyTo field.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_AccountInfo_ClosedAtRound" data-uid="AlgoSdk.AccountInfo.ClosedAtRound">ClosedAtRound</h4>
+  <div class="markdown level1 summary"><p>Round during which this account was most recently closed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong ClosedAtRound</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_AccountInfo_CreatedApplications" data-uid="AlgoSdk.AccountInfo.CreatedApplications">CreatedApplications</h4>
+  <div class="markdown level1 summary"><p>Parameters of applications created by this account including app global data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Application[] CreatedApplications</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Application.html">Application</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -377,6 +631,31 @@ This field can be updated in any transaction by setting the RekeyTo field.</p>
   </table>
   
   
+  <h4 id="AlgoSdk_AccountInfo_CreatedAssets" data-uid="AlgoSdk.AccountInfo.CreatedAssets">CreatedAssets</h4>
+  <div class="markdown level1 summary"><p>Parameters of assets created by this account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Asset[] CreatedAssets</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Asset.html">Asset</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="AlgoSdk_AccountInfo_CreatedAtRound" data-uid="AlgoSdk.AccountInfo.CreatedAtRound">CreatedAtRound</h4>
   <div class="markdown level1 summary"><p>Round during which this account first appeared in a transaction.</p>
 </div>
@@ -396,6 +675,56 @@ This field can be updated in any transaction by setting the RekeyTo field.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_AccountInfo_CreatedAtRound" data-uid="AlgoSdk.AccountInfo.CreatedAtRound">CreatedAtRound</h4>
+  <div class="markdown level1 summary"><p>Round during which this account first appeared in a transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong CreatedAtRound</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_AccountInfo_Deleted" data-uid="AlgoSdk.AccountInfo.Deleted">Deleted</h4>
+  <div class="markdown level1 summary"><p>Whether or not this account is currently closed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Optional&lt;bool&gt; Deleted</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -452,6 +781,31 @@ This field can be updated in any transaction by setting the RekeyTo field.</p>
   </table>
   
   
+  <h4 id="AlgoSdk_AccountInfo_Participation" data-uid="AlgoSdk.AccountInfo.Participation">Participation</h4>
+  <div class="markdown level1 summary"><p>See <a class="xref" href="AlgoSdk.AccountParticipation.html">AccountParticipation</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AccountParticipation Participation</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AccountParticipation.html">AccountParticipation</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="AlgoSdk_AccountInfo_PendingRewards" data-uid="AlgoSdk.AccountInfo.PendingRewards">PendingRewards</h4>
   <div class="markdown level1 summary"><p>Amount of MicroAlgos of pending rewards in this account.</p>
 </div>
@@ -459,6 +813,56 @@ This field can be updated in any transaction by setting the RekeyTo field.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ulong PendingRewards</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_AccountInfo_PendingRewards" data-uid="AlgoSdk.AccountInfo.PendingRewards">PendingRewards</h4>
+  <div class="markdown level1 summary"><p>Amount of MicroAlgos of pending rewards in this account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong PendingRewards</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_AccountInfo_RewardBase" data-uid="AlgoSdk.AccountInfo.RewardBase">RewardBase</h4>
+  <div class="markdown level1 summary"><p>Used as part of the rewards computation. Only applicable to accounts which are participating.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong RewardBase</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -527,6 +931,56 @@ This field can be updated in any transaction by setting the RekeyTo field.</p>
   </table>
   
   
+  <h4 id="AlgoSdk_AccountInfo_Rewards" data-uid="AlgoSdk.AccountInfo.Rewards">Rewards</h4>
+  <div class="markdown level1 summary"><p>Total rewards of MicroAlgos the account has received, including pending rewards.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong Rewards</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_AccountInfo_Round" data-uid="AlgoSdk.AccountInfo.Round">Round</h4>
+  <div class="markdown level1 summary"><p>The round for which this information is relevant.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong Round</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="AlgoSdk_AccountInfo_Round" data-uid="AlgoSdk.AccountInfo.Round">Round</h4>
   <div class="markdown level1 summary"><p>The round for which this information is relevant.</p>
 </div>
@@ -572,6 +1026,58 @@ This field can be updated in any transaction by setting the RekeyTo field.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="AlgoSdk.SignatureType.html">SignatureType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_AccountInfo_SignatureType" data-uid="AlgoSdk.AccountInfo.SignatureType">SignatureType</h4>
+  <div class="markdown level1 summary"><p>Indicates what type of signature is used by this account, must be one of:
+<ul><li></li><li></li><li></li></ul></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SignatureType SignatureType</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.SignatureType.html">SignatureType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_AccountInfo_Status" data-uid="AlgoSdk.AccountInfo.Status">Status</h4>
+  <div class="markdown level1 summary"><p>Delegation status of the account&apos;s MicroAlgos
+<table><tbody><tr><td>Offline</td><td>indicates that the associated account is delegated.</td></tr><tr><td>Online</td><td>indicates that the associated account used as part of the delegation pool.</td></tr><tr><td>NotParticipating</td><td>indicates that the associated account is neither a delegator nor a delegate.</td></tr></tbody></table></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FixedString32Bytes Status</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">FixedString32Bytes</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -648,6 +1154,78 @@ This field can be updated in any transaction by setting the RekeyTo field.</p>
   </table>
   
   
+  <a id="AlgoSdk_AccountInfo_Equals_" data-uid="AlgoSdk.AccountInfo.Equals*"></a>
+  <h4 id="AlgoSdk_AccountInfo_Equals_AlgoSdk_AccountInfo_" data-uid="AlgoSdk.AccountInfo.Equals(AlgoSdk.AccountInfo)">Equals(AccountInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(AccountInfo other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AccountInfo.html">AccountInfo</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AccountInfo_EstimateMinBalance_" data-uid="AlgoSdk.AccountInfo.EstimateMinBalance*"></a>
+  <h4 id="AlgoSdk_AccountInfo_EstimateMinBalance" data-uid="AlgoSdk.AccountInfo.EstimateMinBalance">EstimateMinBalance()</h4>
+  <div class="markdown level1 summary"><p>Estimate the minimum balance of the account in MicroAlgos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong EstimateMinBalance()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><p>The sum of all the costs per data item in the account.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AlgoSdk_AccountInfo_EstimateMinBalance_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><table><thead><tr><th>Account Data Type</th><th>Cost Per Item (MicroAlgos)</th></tr></thead><tbody><tr><td>Assets Opted In or Created</td><td>100,000</td></tr><tr><td>Applications Opted In or Created</td><td>100,000</td></tr><tr><td>Applications Extra Program Pages</td><td>100,000</td></tr><tr><td>Applications Stored Uints</td><td>28,500</td></tr><tr><td>Applications Stored Byteslices</td><td>50,000</td></tr></tbody></table>
+</div>
+  
+  
   <a id="AlgoSdk_AccountInfo_EstimateMinBalance_" data-uid="AlgoSdk.AccountInfo.EstimateMinBalance*"></a>
   <h4 id="AlgoSdk_AccountInfo_EstimateMinBalance" data-uid="AlgoSdk.AccountInfo.EstimateMinBalance">EstimateMinBalance()</h4>
   <div class="markdown level1 summary"><p>Estimate the minimum balance of the account in MicroAlgos.</p>
@@ -678,7 +1256,7 @@ This field can be updated in any transaction by setting the RekeyTo field.</p>
 </div>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">IEquatable&lt;&gt;</span>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
 </article>
           </div>

@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:navrel" content="">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -88,7 +88,7 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.Block.html">Block</a>&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="AlgoSdk.Block.html">Block</a>&gt;</div>
     <div><a class="xref" href="AlgoSdk.IBlockRewards.html">IBlockRewards</a></div>
     <div><a class="xref" href="AlgoSdk.IBlockUpgradeState.html">IBlockUpgradeState</a></div>
     <div><a class="xref" href="AlgoSdk.IBlockUpgradeVote.html">IBlockUpgradeVote</a></div>
@@ -97,7 +97,9 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_Block_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct Block : IBlockRewards, IBlockUpgradeState, IBlockUpgradeVote</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+[Serializable]
+public struct Block : IEquatable&lt;Block&gt;, IBlockRewards, IBlockUpgradeState, IBlockUpgradeVote</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -121,6 +123,55 @@
     <tbody>
       <tr>
         <td><a class="xref" href="AlgoSdk.AlgoApiObject.html">AlgoApiObject</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_Block_Cc" data-uid="AlgoSdk.Block.Cc">Cc</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiObject Cc</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiObject.html">AlgoApiObject</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_Block_GenesisHash" data-uid="AlgoSdk.Block.GenesisHash">GenesisHash</h4>
+  <div class="markdown level1 summary"><p>[gh] hash to which this block belongs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GenesisHash GenesisHash</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.GenesisHash.html">GenesisHash</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -177,6 +228,31 @@
   </table>
   
   
+  <h4 id="AlgoSdk_Block_GenesisId" data-uid="AlgoSdk.Block.GenesisId">GenesisId</h4>
+  <div class="markdown level1 summary"><p>[gen] ID to which this block belongs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FixedString64Bytes GenesisId</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">FixedString64Bytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="AlgoSdk_Block_PreviousBlockHash" data-uid="AlgoSdk.Block.PreviousBlockHash">PreviousBlockHash</h4>
   <div class="markdown level1 summary"><p>[prev] Previous block hash.</p>
 </div>
@@ -196,6 +272,56 @@
     <tbody>
       <tr>
         <td><span class="xref">Sha512_256_Hash</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_Block_PreviousBlockHash" data-uid="AlgoSdk.Block.PreviousBlockHash">PreviousBlockHash</h4>
+  <div class="markdown level1 summary"><p>[prev] Previous block hash.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Sha512_256_Hash PreviousBlockHash</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Sha512_256_Hash</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_Block_Rewards" data-uid="AlgoSdk.Block.Rewards">Rewards</h4>
+  <div class="markdown level1 summary"><p>See <a class="xref" href="AlgoSdk.BlockRewards.html">BlockRewards</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BlockRewards Rewards</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.BlockRewards.html">BlockRewards</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -252,6 +378,56 @@
   </table>
   
   
+  <h4 id="AlgoSdk_Block_RootTransaction" data-uid="AlgoSdk.Block.RootTransaction">RootTransaction</h4>
+  <div class="markdown level1 summary"><p>[txn] TransactionsRoot authenticates the set of transactions appearing in the block. More specifically, it&apos;s the root of a merkle tree whose leaves are the block&apos;s Txids, in lexicographic order. For the empty block, it&apos;s 0. Note that the TxnRoot does not authenticate the signatures on the transactions, only the transactions themselves. Two blocks with the same transactions but in a different order and with different signatures will have the same TxnRoot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Sha512_256_Hash RootTransaction</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Sha512_256_Hash</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_Block_Round" data-uid="AlgoSdk.Block.Round">Round</h4>
+  <div class="markdown level1 summary"><p>[rnd] Current round on which this block was appended to the chain.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong Round</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="AlgoSdk_Block_Round" data-uid="AlgoSdk.Block.Round">Round</h4>
   <div class="markdown level1 summary"><p>[rnd] Current round on which this block was appended to the chain.</p>
 </div>
@@ -296,6 +472,56 @@
     <tbody>
       <tr>
         <td><span class="xref">Sha512_256_Hash</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_Block_Seed" data-uid="AlgoSdk.Block.Seed">Seed</h4>
+  <div class="markdown level1 summary"><p>[seed] Sortition seed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Sha512_256_Hash Seed</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Sha512_256_Hash</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_Block_Timestamp" data-uid="AlgoSdk.Block.Timestamp">Timestamp</h4>
+  <div class="markdown level1 summary"><p>[ts] Block creation timestamp in seconds since epoch</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong Timestamp</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -355,6 +581,59 @@
 </div>
   
   
+  <h4 id="AlgoSdk_Block_TransactionCounter" data-uid="AlgoSdk.Block.TransactionCounter">TransactionCounter</h4>
+  <div class="markdown level1 summary"><p>[tc] TxnCounter counts the number of transactions committed in the ledger, from the time at which support for this feature was introduced.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong TransactionCounter</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AlgoSdk_Block_TransactionCounter_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Specifically, TxnCounter is the number of the next transaction that will be committed after this block. It is 0 when no transactions have ever been committed (since TxnCounter started being supported).</p>
+</div>
+  
+  
+  <h4 id="AlgoSdk_Block_Transactions" data-uid="AlgoSdk.Block.Transactions">Transactions</h4>
+  <div class="markdown level1 summary"><p>[txns] list of transactions corresponding to a given round.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BlockTransaction[] Transactions</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.BlockTransaction.html">BlockTransaction</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="AlgoSdk_Block_Transactions" data-uid="AlgoSdk.Block.Transactions">Transactions</h4>
   <div class="markdown level1 summary"><p>[txns] list of transactions corresponding to a given round.</p>
 </div>
@@ -399,6 +678,56 @@
     <tbody>
       <tr>
         <td><a class="xref" href="AlgoSdk.BlockUpgradeState.html">BlockUpgradeState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_Block_UpgradeState" data-uid="AlgoSdk.Block.UpgradeState">UpgradeState</h4>
+  <div class="markdown level1 summary"><p>See <a class="xref" href="AlgoSdk.BlockUpgradeState.html">BlockUpgradeState</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BlockUpgradeState UpgradeState</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.BlockUpgradeState.html">BlockUpgradeState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_Block_UpgradeVote" data-uid="AlgoSdk.Block.UpgradeVote">UpgradeVote</h4>
+  <div class="markdown level1 summary"><p>See <a class="xref" href="AlgoSdk.BlockUpgradeVote.html">BlockUpgradeVote</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BlockUpgradeVote UpgradeVote</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.BlockUpgradeVote.html">BlockUpgradeVote</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -457,6 +786,56 @@
   </table>
   
   
+  <a id="AlgoSdk_Block_CurrentProtocol_" data-uid="AlgoSdk.Block.CurrentProtocol*"></a>
+  <h4 id="AlgoSdk_Block_CurrentProtocol" data-uid="AlgoSdk.Block.CurrentProtocol">CurrentProtocol</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FixedString128Bytes CurrentProtocol { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Block_FeeSink_" data-uid="AlgoSdk.Block.FeeSink*"></a>
+  <h4 id="AlgoSdk_Block_FeeSink" data-uid="AlgoSdk.Block.FeeSink">FeeSink</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address FeeSink { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_Block_FeeSink_" data-uid="AlgoSdk.Block.FeeSink*"></a>
   <h4 id="AlgoSdk_Block_FeeSink" data-uid="AlgoSdk.Block.FeeSink">FeeSink</h4>
   <div class="markdown level1 summary"></div>
@@ -507,6 +886,31 @@
   </table>
   
   
+  <a id="AlgoSdk_Block_NextProtocol_" data-uid="AlgoSdk.Block.NextProtocol*"></a>
+  <h4 id="AlgoSdk_Block_NextProtocol" data-uid="AlgoSdk.Block.NextProtocol">NextProtocol</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FixedString128Bytes NextProtocol { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_Block_NextProtocolApprovals_" data-uid="AlgoSdk.Block.NextProtocolApprovals*"></a>
   <h4 id="AlgoSdk_Block_NextProtocolApprovals" data-uid="AlgoSdk.Block.NextProtocolApprovals">NextProtocolApprovals</h4>
   <div class="markdown level1 summary"></div>
@@ -514,6 +918,56 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ulong NextProtocolApprovals { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Block_NextProtocolApprovals_" data-uid="AlgoSdk.Block.NextProtocolApprovals*"></a>
+  <h4 id="AlgoSdk_Block_NextProtocolApprovals" data-uid="AlgoSdk.Block.NextProtocolApprovals">NextProtocolApprovals</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong NextProtocolApprovals { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Block_NextProtocolSwitchOn_" data-uid="AlgoSdk.Block.NextProtocolSwitchOn*"></a>
+  <h4 id="AlgoSdk_Block_NextProtocolSwitchOn" data-uid="AlgoSdk.Block.NextProtocolSwitchOn">NextProtocolSwitchOn</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong NextProtocolSwitchOn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -582,6 +1036,31 @@
   </table>
   
   
+  <a id="AlgoSdk_Block_NextProtocolVoteBefore_" data-uid="AlgoSdk.Block.NextProtocolVoteBefore*"></a>
+  <h4 id="AlgoSdk_Block_NextProtocolVoteBefore" data-uid="AlgoSdk.Block.NextProtocolVoteBefore">NextProtocolVoteBefore</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong NextProtocolVoteBefore { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_Block_RewardsCalculationRound_" data-uid="AlgoSdk.Block.RewardsCalculationRound*"></a>
   <h4 id="AlgoSdk_Block_RewardsCalculationRound" data-uid="AlgoSdk.Block.RewardsCalculationRound">RewardsCalculationRound</h4>
   <div class="markdown level1 summary"></div>
@@ -589,6 +1068,56 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ulong RewardsCalculationRound { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Block_RewardsCalculationRound_" data-uid="AlgoSdk.Block.RewardsCalculationRound*"></a>
+  <h4 id="AlgoSdk_Block_RewardsCalculationRound" data-uid="AlgoSdk.Block.RewardsCalculationRound">RewardsCalculationRound</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong RewardsCalculationRound { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Block_RewardsLevel_" data-uid="AlgoSdk.Block.RewardsLevel*"></a>
+  <h4 id="AlgoSdk_Block_RewardsLevel" data-uid="AlgoSdk.Block.RewardsLevel">RewardsLevel</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong RewardsLevel { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -657,6 +1186,31 @@
   </table>
   
   
+  <a id="AlgoSdk_Block_RewardsPool_" data-uid="AlgoSdk.Block.RewardsPool*"></a>
+  <h4 id="AlgoSdk_Block_RewardsPool" data-uid="AlgoSdk.Block.RewardsPool">RewardsPool</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address RewardsPool { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_Block_RewardsRate_" data-uid="AlgoSdk.Block.RewardsRate*"></a>
   <h4 id="AlgoSdk_Block_RewardsRate" data-uid="AlgoSdk.Block.RewardsRate">RewardsRate</h4>
   <div class="markdown level1 summary"></div>
@@ -664,6 +1218,56 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ulong RewardsRate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Block_RewardsRate_" data-uid="AlgoSdk.Block.RewardsRate*"></a>
+  <h4 id="AlgoSdk_Block_RewardsRate" data-uid="AlgoSdk.Block.RewardsRate">RewardsRate</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong RewardsRate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Block_RewardsResidue_" data-uid="AlgoSdk.Block.RewardsResidue*"></a>
+  <h4 id="AlgoSdk_Block_RewardsResidue" data-uid="AlgoSdk.Block.RewardsResidue">RewardsResidue</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong RewardsResidue { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -732,6 +1336,31 @@
   </table>
   
   
+  <a id="AlgoSdk_Block_UpgradeApprove_" data-uid="AlgoSdk.Block.UpgradeApprove*"></a>
+  <h4 id="AlgoSdk_Block_UpgradeApprove" data-uid="AlgoSdk.Block.UpgradeApprove">UpgradeApprove</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Optional&lt;bool&gt; UpgradeApprove { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_Block_UpgradeDelay_" data-uid="AlgoSdk.Block.UpgradeDelay*"></a>
   <h4 id="AlgoSdk_Block_UpgradeDelay" data-uid="AlgoSdk.Block.UpgradeDelay">UpgradeDelay</h4>
   <div class="markdown level1 summary"></div>
@@ -751,6 +1380,56 @@
     <tbody>
       <tr>
         <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Block_UpgradeDelay_" data-uid="AlgoSdk.Block.UpgradeDelay*"></a>
+  <h4 id="AlgoSdk_Block_UpgradeDelay" data-uid="AlgoSdk.Block.UpgradeDelay">UpgradeDelay</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong UpgradeDelay { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Block_UpgradePropose_" data-uid="AlgoSdk.Block.UpgradePropose*"></a>
+  <h4 id="AlgoSdk_Block_UpgradePropose" data-uid="AlgoSdk.Block.UpgradePropose">UpgradePropose</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address UpgradePropose { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -824,9 +1503,51 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="AlgoSdk_Block_Equals_" data-uid="AlgoSdk.Block.Equals*"></a>
+  <h4 id="AlgoSdk_Block_Equals_AlgoSdk_Block_" data-uid="AlgoSdk.Block.Equals(AlgoSdk.Block)">Equals(Block)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Block other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Block.html">Block</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">IEquatable&lt;&gt;</span>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
   <div>
       <a class="xref" href="AlgoSdk.IBlockRewards.html">IBlockRewards</a>

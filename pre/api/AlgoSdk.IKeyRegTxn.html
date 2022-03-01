@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:navrel" content="">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -163,6 +163,58 @@
   </table>
   
   
+  <a id="AlgoSdk_IKeyRegTxn_NonParticipation_" data-uid="AlgoSdk.IKeyRegTxn.NonParticipation*"></a>
+  <h4 id="AlgoSdk_IKeyRegTxn_NonParticipation" data-uid="AlgoSdk.IKeyRegTxn.NonParticipation">NonParticipation</h4>
+  <div class="markdown level1 summary"><p>All new Algorand accounts are participating by default. This means that they earn rewards. Mark an account nonparticipating by setting this value to <code>true</code> and this account will no longer earn rewards. It is unlikely that you will ever need to do this and exists mainly for economic-related functions on the network.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Optional&lt;bool&gt; NonParticipation { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_IKeyRegTxn_SelectionParticipationKey_" data-uid="AlgoSdk.IKeyRegTxn.SelectionParticipationKey*"></a>
+  <h4 id="AlgoSdk_IKeyRegTxn_SelectionParticipationKey" data-uid="AlgoSdk.IKeyRegTxn.SelectionParticipationKey">SelectionParticipationKey</h4>
+  <div class="markdown level1 summary"><p>The VRF public key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">VrfPubKey SelectionParticipationKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.VrfPubKey.html">VrfPubKey</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_IKeyRegTxn_SelectionParticipationKey_" data-uid="AlgoSdk.IKeyRegTxn.SelectionParticipationKey*"></a>
   <h4 id="AlgoSdk_IKeyRegTxn_SelectionParticipationKey" data-uid="AlgoSdk.IKeyRegTxn.SelectionParticipationKey">SelectionParticipationKey</h4>
   <div class="markdown level1 summary"><p>The VRF public key.</p>
@@ -197,6 +249,58 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">ulong VoteFirst { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_IKeyRegTxn_VoteFirst_" data-uid="AlgoSdk.IKeyRegTxn.VoteFirst*"></a>
+  <h4 id="AlgoSdk_IKeyRegTxn_VoteFirst" data-uid="AlgoSdk.IKeyRegTxn.VoteFirst">VoteFirst</h4>
+  <div class="markdown level1 summary"><p>The first round that the participation key is valid. Not to be confused with the <a class="xref" href="AlgoSdk.ITransaction.html#AlgoSdk_ITransaction_FirstValidRound">FirstValidRound</a> of the keyreg transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ulong VoteFirst { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_IKeyRegTxn_VoteKeyDilution_" data-uid="AlgoSdk.IKeyRegTxn.VoteKeyDilution*"></a>
+  <h4 id="AlgoSdk_IKeyRegTxn_VoteKeyDilution" data-uid="AlgoSdk.IKeyRegTxn.VoteKeyDilution">VoteKeyDilution</h4>
+  <div class="markdown level1 summary"><p>This is the dilution for the 2-level participation key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ulong VoteKeyDilution { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -261,6 +365,58 @@
     <tbody>
       <tr>
         <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_IKeyRegTxn_VoteLast_" data-uid="AlgoSdk.IKeyRegTxn.VoteLast*"></a>
+  <h4 id="AlgoSdk_IKeyRegTxn_VoteLast" data-uid="AlgoSdk.IKeyRegTxn.VoteLast">VoteLast</h4>
+  <div class="markdown level1 summary"><p>The last round that the participation key is valid. Not to be confused with the <a class="xref" href="AlgoSdk.ITransaction.html#AlgoSdk_ITransaction_LastValidRound">LastValidRound</a> of the keyreg transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ulong VoteLast { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_IKeyRegTxn_VoteParticipationKey_" data-uid="AlgoSdk.IKeyRegTxn.VoteParticipationKey*"></a>
+  <h4 id="AlgoSdk_IKeyRegTxn_VoteParticipationKey" data-uid="AlgoSdk.IKeyRegTxn.VoteParticipationKey">VoteParticipationKey</h4>
+  <div class="markdown level1 summary"><p>The root participation public key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Ed25519.PublicKey VoteParticipationKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Ed25519.PublicKey</span></td>
         <td></td>
       </tr>
     </tbody>

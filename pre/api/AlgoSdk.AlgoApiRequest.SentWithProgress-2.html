@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:navrel" content="">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -151,6 +151,43 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiRequest_SentWithProgress_2__ctor_" data-uid="AlgoSdk.AlgoApiRequest.SentWithProgress`2.#ctor*"></a>
+  <h4 id="AlgoSdk_AlgoApiRequest_SentWithProgress_2__ctor_UnityWebRequestAsyncOperation__1_CancellationToken_" data-uid="AlgoSdk.AlgoApiRequest.SentWithProgress`2.#ctor(UnityWebRequestAsyncOperation,`1,CancellationToken)">SentWithProgress(UnityWebRequestAsyncOperation, TProgress, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SentWithProgress(UnityWebRequestAsyncOperation asyncOperation, TProgress progress, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityWebRequestAsyncOperation</span></td>
+        <td><span class="parametername">asyncOperation</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TProgress</span></td>
+        <td><span class="parametername">progress</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -178,8 +215,58 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiRequest_SentWithProgress_2_AsyncOperation_" data-uid="AlgoSdk.AlgoApiRequest.SentWithProgress`2.AsyncOperation*"></a>
+  <h4 id="AlgoSdk_AlgoApiRequest_SentWithProgress_2_AsyncOperation" data-uid="AlgoSdk.AlgoApiRequest.SentWithProgress`2.AsyncOperation">AsyncOperation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly UnityWebRequestAsyncOperation AsyncOperation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityWebRequestAsyncOperation</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="AlgoSdk_AlgoApiRequest_SentWithProgress_2_GetAwaiter_" data-uid="AlgoSdk.AlgoApiRequest.SentWithProgress`2.GetAwaiter*"></a>
+  <h4 id="AlgoSdk_AlgoApiRequest_SentWithProgress_2_GetAwaiter" data-uid="AlgoSdk.AlgoApiRequest.SentWithProgress`2.GetAwaiter">GetAwaiter()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly AlgoApiRequest.Awaiter&lt;TResponse&gt; GetAwaiter()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Awaiter-1.html">AlgoApiRequest.Awaiter</a>&lt;TResponse&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="AlgoSdk_AlgoApiRequest_SentWithProgress_2_GetAwaiter_" data-uid="AlgoSdk.AlgoApiRequest.SentWithProgress`2.GetAwaiter*"></a>
@@ -247,8 +334,92 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiRequest_SentWithProgress_2_WithCancellation_" data-uid="AlgoSdk.AlgoApiRequest.SentWithProgress`2.WithCancellation*"></a>
+  <h4 id="AlgoSdk_AlgoApiRequest_SentWithProgress_2_WithCancellation_CancellationToken_" data-uid="AlgoSdk.AlgoApiRequest.SentWithProgress`2.WithCancellation(CancellationToken)">WithCancellation(CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly AlgoApiRequest.SentWithProgress&lt;TResponse, TProgress&gt; WithCancellation(CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.SentWithProgress-2.html">AlgoApiRequest.SentWithProgress</a>&lt;TResponse, TProgress&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="operators">Operators
   </h3>
+  
+  
+  <a id="AlgoSdk_AlgoApiRequest_SentWithProgress_2_op_Implicit_" data-uid="AlgoSdk.AlgoApiRequest.SentWithProgress`2.op_Implicit*"></a>
+  <h4 id="AlgoSdk_AlgoApiRequest_SentWithProgress_2_op_Implicit_AlgoSdk_AlgoApiRequest_SentWithProgress__1___AlgoSdk_AlgoApiRequest_SentWithProgress__0__1_" data-uid="AlgoSdk.AlgoApiRequest.SentWithProgress`2.op_Implicit(AlgoSdk.AlgoApiRequest.SentWithProgress{`1})~AlgoSdk.AlgoApiRequest.SentWithProgress{`0,`1}">Implicit(AlgoApiRequest.SentWithProgress&lt;TProgress&gt; to AlgoApiRequest.SentWithProgress&lt;TResponse, TProgress&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator AlgoApiRequest.SentWithProgress&lt;TResponse, TProgress&gt;(AlgoApiRequest.SentWithProgress&lt;TProgress&gt; sent)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.SentWithProgress-1.html">AlgoApiRequest.SentWithProgress</a>&lt;TProgress&gt;</td>
+        <td><span class="parametername">sent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.SentWithProgress-2.html">AlgoApiRequest.SentWithProgress</a>&lt;TResponse, TProgress&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="AlgoSdk_AlgoApiRequest_SentWithProgress_2_op_Implicit_" data-uid="AlgoSdk.AlgoApiRequest.SentWithProgress`2.op_Implicit*"></a>

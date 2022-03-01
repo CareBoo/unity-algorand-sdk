@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:navrel" content="">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -121,6 +121,59 @@
   </table>
   
   
+  <a id="AlgoSdk_WalletConnect_IJsonRpcResponse_Error_" data-uid="AlgoSdk.WalletConnect.IJsonRpcResponse.Error*"></a>
+  <h4 id="AlgoSdk_WalletConnect_IJsonRpcResponse_Error" data-uid="AlgoSdk.WalletConnect.IJsonRpcResponse.Error">Error</h4>
+  <div class="markdown level1 summary"><p>An error object if an error occurred.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">JsonRpcError Error { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.WalletConnect.JsonRpcError.html">JsonRpcError</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_WalletConnect_IJsonRpcResponse_Id_" data-uid="AlgoSdk.WalletConnect.IJsonRpcResponse.Id*"></a>
+  <h4 id="AlgoSdk_WalletConnect_IJsonRpcResponse_Id" data-uid="AlgoSdk.WalletConnect.IJsonRpcResponse.Id">Id</h4>
+  <div class="markdown level1 summary"><p>The Id of the response.
+It should be the same as the ID of the corresponding <a class="xref" href="AlgoSdk.WalletConnect.IJsonRpcRequest.html">IJsonRpcRequest</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ulong Id { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_WalletConnect_IJsonRpcResponse_Id_" data-uid="AlgoSdk.WalletConnect.IJsonRpcResponse.Id*"></a>
   <h4 id="AlgoSdk_WalletConnect_IJsonRpcResponse_Id" data-uid="AlgoSdk.WalletConnect.IJsonRpcResponse.Id">Id</h4>
   <div class="markdown level1 summary"><p>The Id of the response.
@@ -168,6 +221,58 @@ It should be the same as the ID of the corresponding <a class="xref" href="AlgoS
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_WalletConnect_IJsonRpcResponse_IsError_" data-uid="AlgoSdk.WalletConnect.IJsonRpcResponse.IsError*"></a>
+  <h4 id="AlgoSdk_WalletConnect_IJsonRpcResponse_IsError" data-uid="AlgoSdk.WalletConnect.IJsonRpcResponse.IsError">IsError</h4>
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if this is an error response.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_WalletConnect_IJsonRpcResponse_JsonRpc_" data-uid="AlgoSdk.WalletConnect.IJsonRpcResponse.JsonRpc*"></a>
+  <h4 id="AlgoSdk_WalletConnect_IJsonRpcResponse_JsonRpc" data-uid="AlgoSdk.WalletConnect.IJsonRpcResponse.JsonRpc">JsonRpc</h4>
+  <div class="markdown level1 summary"><p>The JsonRpc version.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string JsonRpc { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>

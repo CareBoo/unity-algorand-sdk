@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:navrel" content="">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -88,16 +88,48 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiObject.html">AlgoApiObject</a>&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="AlgoSdk.AlgoApiObject.html">AlgoApiObject</a>&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_AlgoApiObject_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct AlgoApiObject</code></pre>
+    <pre><code class="lang-csharp hljs">public struct AlgoApiObject : IEquatable&lt;AlgoApiObject&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
+  
+  
+  <a id="AlgoSdk_AlgoApiObject__ctor_" data-uid="AlgoSdk.AlgoApiObject.#ctor*"></a>
+  <h4 id="AlgoSdk_AlgoApiObject__ctor_System_Byte___AlgoSdk_ContentType_" data-uid="AlgoSdk.AlgoApiObject.#ctor(System.Byte[],AlgoSdk.ContentType)">AlgoApiObject(Byte[], ContentType)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiObject(byte[] data, ContentType contentType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.ContentType.html">ContentType</a></td>
+        <td><span class="parametername">contentType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="AlgoSdk_AlgoApiObject__ctor_" data-uid="AlgoSdk.AlgoApiObject.#ctor*"></a>
@@ -160,6 +192,58 @@
   </table>
   
   
+  <a id="AlgoSdk_AlgoApiObject_IsJson_" data-uid="AlgoSdk.AlgoApiObject.IsJson*"></a>
+  <h4 id="AlgoSdk_AlgoApiObject_IsJson" data-uid="AlgoSdk.AlgoApiObject.IsJson">IsJson</h4>
+  <div class="markdown level1 summary"><p><see cref="!:true"></see> if this is a json object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool IsJson { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiObject_IsMessagePack_" data-uid="AlgoSdk.AlgoApiObject.IsMessagePack*"></a>
+  <h4 id="AlgoSdk_AlgoApiObject_IsMessagePack" data-uid="AlgoSdk.AlgoApiObject.IsMessagePack">IsMessagePack</h4>
+  <div class="markdown level1 summary"><p><see cref="!:true"></see> if this is a messagepack object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool IsMessagePack { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_AlgoApiObject_IsMessagePack_" data-uid="AlgoSdk.AlgoApiObject.IsMessagePack*"></a>
   <h4 id="AlgoSdk_AlgoApiObject_IsMessagePack" data-uid="AlgoSdk.AlgoApiObject.IsMessagePack">IsMessagePack</h4>
   <div class="markdown level1 summary"><p><see cref="!:true"></see> if this is a messagepack object.</p>
@@ -188,7 +272,33 @@
   
   <a id="AlgoSdk_AlgoApiObject_Json_" data-uid="AlgoSdk.AlgoApiObject.Json*"></a>
   <h4 id="AlgoSdk_AlgoApiObject_Json" data-uid="AlgoSdk.AlgoApiObject.Json">Json</h4>
-  <div class="markdown level1 summary"><p>Raw json if the response had <a class="xref" href="AlgoSdk.ContentType.html#AlgoSdk_ContentType_Json">Json</a> encoded as UTF8.</p>
+  <div class="markdown level1 summary"><p>Raw json if the response had <see cref="!:ContentType.Json"></see> encoded as UTF8.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly byte[] Json { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiObject_Json_" data-uid="AlgoSdk.AlgoApiObject.Json*"></a>
+  <h4 id="AlgoSdk_AlgoApiObject_Json" data-uid="AlgoSdk.AlgoApiObject.Json">Json</h4>
+  <div class="markdown level1 summary"><p>Raw json if the response had <see cref="!:ContentType.Json"></see> encoded as UTF8.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -214,7 +324,33 @@
   
   <a id="AlgoSdk_AlgoApiObject_MessagePack_" data-uid="AlgoSdk.AlgoApiObject.MessagePack*"></a>
   <h4 id="AlgoSdk_AlgoApiObject_MessagePack" data-uid="AlgoSdk.AlgoApiObject.MessagePack">MessagePack</h4>
-  <div class="markdown level1 summary"><p>Raw message pack if the response had <a class="xref" href="AlgoSdk.ContentType.html#AlgoSdk_ContentType_MessagePack">MessagePack</a></p>
+  <div class="markdown level1 summary"><p>Raw message pack if the response had <see cref="!:ContentType.MessagePack"></see></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly byte[] MessagePack { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiObject_MessagePack_" data-uid="AlgoSdk.AlgoApiObject.MessagePack*"></a>
+  <h4 id="AlgoSdk_AlgoApiObject_MessagePack" data-uid="AlgoSdk.AlgoApiObject.MessagePack">MessagePack</h4>
+  <div class="markdown level1 summary"><p>Raw message pack if the response had <see cref="!:ContentType.MessagePack"></see></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -238,6 +374,48 @@
   </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="AlgoSdk_AlgoApiObject_Equals_" data-uid="AlgoSdk.AlgoApiObject.Equals*"></a>
+  <h4 id="AlgoSdk_AlgoApiObject_Equals_AlgoSdk_AlgoApiObject_" data-uid="AlgoSdk.AlgoApiObject.Equals(AlgoSdk.AlgoApiObject)">Equals(AlgoApiObject)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(AlgoApiObject other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiObject.html">AlgoApiObject</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="AlgoSdk_AlgoApiObject_Equals_" data-uid="AlgoSdk.AlgoApiObject.Equals*"></a>
@@ -304,6 +482,90 @@
     <tbody>
       <tr>
         <td><span class="xref">NativeArray</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="parametername">msgpack</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiObject.html">AlgoApiObject</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiObject_op_Implicit_" data-uid="AlgoSdk.AlgoApiObject.op_Implicit*"></a>
+  <h4 id="AlgoSdk_AlgoApiObject_op_Implicit_NativeArray_System_Byte___AlgoSdk_AlgoApiObject" data-uid="AlgoSdk.AlgoApiObject.op_Implicit(NativeArray{System.Byte})~AlgoSdk.AlgoApiObject">Implicit(NativeArray&lt;Byte&gt; to AlgoApiObject)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator AlgoApiObject(NativeArray&lt;byte&gt; msgpack)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NativeArray</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="parametername">msgpack</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiObject.html">AlgoApiObject</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiObject_op_Implicit_" data-uid="AlgoSdk.AlgoApiObject.op_Implicit*"></a>
+  <h4 id="AlgoSdk_AlgoApiObject_op_Implicit_NativeList_System_Byte___AlgoSdk_AlgoApiObject" data-uid="AlgoSdk.AlgoApiObject.op_Implicit(NativeList{System.Byte})~AlgoSdk.AlgoApiObject">Implicit(NativeList&lt;Byte&gt; to AlgoApiObject)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator AlgoApiObject(NativeList&lt;byte&gt; msgpack)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NativeList</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
         <td><span class="parametername">msgpack</span></td>
         <td></td>
       </tr>
@@ -411,6 +673,90 @@
   
   
   <a id="AlgoSdk_AlgoApiObject_op_Implicit_" data-uid="AlgoSdk.AlgoApiObject.op_Implicit*"></a>
+  <h4 id="AlgoSdk_AlgoApiObject_op_Implicit_NativeText__AlgoSdk_AlgoApiObject" data-uid="AlgoSdk.AlgoApiObject.op_Implicit(NativeText)~AlgoSdk.AlgoApiObject">Implicit(NativeText to AlgoApiObject)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator AlgoApiObject(NativeText json)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NativeText</span></td>
+        <td><span class="parametername">json</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiObject.html">AlgoApiObject</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiObject_op_Implicit_" data-uid="AlgoSdk.AlgoApiObject.op_Implicit*"></a>
+  <h4 id="AlgoSdk_AlgoApiObject_op_Implicit_System_Byte____AlgoSdk_AlgoApiObject" data-uid="AlgoSdk.AlgoApiObject.op_Implicit(System.Byte[])~AlgoSdk.AlgoApiObject">Implicit(Byte[] to AlgoApiObject)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator AlgoApiObject(byte[] msgpack)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">msgpack</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiObject.html">AlgoApiObject</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiObject_op_Implicit_" data-uid="AlgoSdk.AlgoApiObject.op_Implicit*"></a>
   <h4 id="AlgoSdk_AlgoApiObject_op_Implicit_System_Byte____AlgoSdk_AlgoApiObject" data-uid="AlgoSdk.AlgoApiObject.op_Implicit(System.Byte[])~AlgoSdk.AlgoApiObject">Implicit(Byte[] to AlgoApiObject)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -492,9 +838,51 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiObject_op_Implicit_" data-uid="AlgoSdk.AlgoApiObject.op_Implicit*"></a>
+  <h4 id="AlgoSdk_AlgoApiObject_op_Implicit_System_String__AlgoSdk_AlgoApiObject" data-uid="AlgoSdk.AlgoApiObject.op_Implicit(System.String)~AlgoSdk.AlgoApiObject">Implicit(String to AlgoApiObject)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator AlgoApiObject(string json)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">json</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiObject.html">AlgoApiObject</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">IEquatable&lt;&gt;</span>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
 </article>
           </div>

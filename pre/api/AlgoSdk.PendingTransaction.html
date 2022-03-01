@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:navrel" content="">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -88,13 +88,15 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.PendingTransaction.html">PendingTransaction</a>&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="AlgoSdk.PendingTransaction.html">PendingTransaction</a>&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_PendingTransaction_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct PendingTransaction</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+[Serializable]
+public struct PendingTransaction : IEquatable&lt;PendingTransaction&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -107,6 +109,56 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ulong ApplicationIndex</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_PendingTransaction_ApplicationIndex" data-uid="AlgoSdk.PendingTransaction.ApplicationIndex">ApplicationIndex</h4>
+  <div class="markdown level1 summary"><p>The application index if the transaction was found and it created an application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong ApplicationIndex</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_PendingTransaction_AssetClosingAmount" data-uid="AlgoSdk.PendingTransaction.AssetClosingAmount">AssetClosingAmount</h4>
+  <div class="markdown level1 summary"><p>The number of the asset&apos;s unit that were transferred to the close-to address.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong AssetClosingAmount</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,6 +227,31 @@
   </table>
   
   
+  <h4 id="AlgoSdk_PendingTransaction_AssetIndex" data-uid="AlgoSdk.PendingTransaction.AssetIndex">AssetIndex</h4>
+  <div class="markdown level1 summary"><p>The asset index if the transaction was found and it created an asset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong AssetIndex</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="AlgoSdk_PendingTransaction_CloseRewards" data-uid="AlgoSdk.PendingTransaction.CloseRewards">CloseRewards</h4>
   <div class="markdown level1 summary"><p>Rewards in microalgos applied to the close remainder to account.</p>
 </div>
@@ -182,6 +259,56 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ulong CloseRewards</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_PendingTransaction_CloseRewards" data-uid="AlgoSdk.PendingTransaction.CloseRewards">CloseRewards</h4>
+  <div class="markdown level1 summary"><p>Rewards in microalgos applied to the close remainder to account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong CloseRewards</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_PendingTransaction_ClosingAmount" data-uid="AlgoSdk.PendingTransaction.ClosingAmount">ClosingAmount</h4>
+  <div class="markdown level1 summary"><p>Closing amount for the transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong ClosingAmount</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -250,6 +377,31 @@
   </table>
   
   
+  <h4 id="AlgoSdk_PendingTransaction_ConfirmedRound" data-uid="AlgoSdk.PendingTransaction.ConfirmedRound">ConfirmedRound</h4>
+  <div class="markdown level1 summary"><p>The round where this transaction was confirmed, if present.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong ConfirmedRound</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="AlgoSdk_PendingTransaction_GlobalStateDelta" data-uid="AlgoSdk.PendingTransaction.GlobalStateDelta">GlobalStateDelta</h4>
   <div class="markdown level1 summary"><p>[gd] Global state key/value changes for the application being executed by this transaction.</p>
 </div>
@@ -269,6 +421,56 @@
     <tbody>
       <tr>
         <td><a class="xref" href="AlgoSdk.EvalDeltaKeyValue.html">EvalDeltaKeyValue</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_PendingTransaction_GlobalStateDelta" data-uid="AlgoSdk.PendingTransaction.GlobalStateDelta">GlobalStateDelta</h4>
+  <div class="markdown level1 summary"><p>[gd] Global state key/value changes for the application being executed by this transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EvalDeltaKeyValue[] GlobalStateDelta</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.EvalDeltaKeyValue.html">EvalDeltaKeyValue</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_PendingTransaction_InnerTransactions" data-uid="AlgoSdk.PendingTransaction.InnerTransactions">InnerTransactions</h4>
+  <div class="markdown level1 summary"><p>Inner transactions produced by application execution.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PendingTransaction[] InnerTransactions</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.PendingTransaction.html">PendingTransaction</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -325,6 +527,31 @@
   </table>
   
   
+  <h4 id="AlgoSdk_PendingTransaction_LocalStateDelta" data-uid="AlgoSdk.PendingTransaction.LocalStateDelta">LocalStateDelta</h4>
+  <div class="markdown level1 summary"><p>[ld] Local state key/value changes for the application being executed by this transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AccountStateDelta[] LocalStateDelta</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AccountStateDelta.html">AccountStateDelta</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="AlgoSdk_PendingTransaction_Logs" data-uid="AlgoSdk.PendingTransaction.Logs">Logs</h4>
   <div class="markdown level1 summary"><p>[lg] Logs for the application being executed by this transaction.</p>
 </div>
@@ -344,6 +571,56 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_PendingTransaction_Logs" data-uid="AlgoSdk.PendingTransaction.Logs">Logs</h4>
+  <div class="markdown level1 summary"><p>[lg] Logs for the application being executed by this transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] Logs</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_PendingTransaction_PoolError" data-uid="AlgoSdk.PendingTransaction.PoolError">PoolError</h4>
+  <div class="markdown level1 summary"><p>Indicates that the transaction was kicked out of this node&apos;s transaction pool (and specifies why that happened). An empty string indicates the transaction wasn&apos;t kicked out of this node&apos;s txpool due to an error.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FixedString128Bytes PoolError</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">FixedString128Bytes</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -400,6 +677,31 @@
   </table>
   
   
+  <h4 id="AlgoSdk_PendingTransaction_ReceiverRewards" data-uid="AlgoSdk.PendingTransaction.ReceiverRewards">ReceiverRewards</h4>
+  <div class="markdown level1 summary"><p>Rewards in microalgos applied to the receiver account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong ReceiverRewards</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="AlgoSdk_PendingTransaction_SenderRewards" data-uid="AlgoSdk.PendingTransaction.SenderRewards">SenderRewards</h4>
   <div class="markdown level1 summary"><p>Rewards in microalgos applied to the sender account.</p>
 </div>
@@ -419,6 +721,56 @@
     <tbody>
       <tr>
         <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_PendingTransaction_SenderRewards" data-uid="AlgoSdk.PendingTransaction.SenderRewards">SenderRewards</h4>
+  <div class="markdown level1 summary"><p>Rewards in microalgos applied to the sender account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong SenderRewards</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_PendingTransaction_Transaction" data-uid="AlgoSdk.PendingTransaction.Transaction">Transaction</h4>
+  <div class="markdown level1 summary"><p>The raw signed transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SignedTransaction Transaction</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.SignedTransaction.html">SignedTransaction</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -492,9 +844,51 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="AlgoSdk_PendingTransaction_Equals_" data-uid="AlgoSdk.PendingTransaction.Equals*"></a>
+  <h4 id="AlgoSdk_PendingTransaction_Equals_AlgoSdk_PendingTransaction_" data-uid="AlgoSdk.PendingTransaction.Equals(AlgoSdk.PendingTransaction)">Equals(PendingTransaction)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(PendingTransaction other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.PendingTransaction.html">PendingTransaction</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">IEquatable&lt;&gt;</span>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
 </article>
           </div>

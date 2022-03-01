@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:navrel" content="">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -158,6 +158,64 @@
   </table>
   
   
+  <a id="AlgoSdk_TransactionExtensions_EstimateBlockSizeBytes_" data-uid="AlgoSdk.TransactionExtensions.EstimateBlockSizeBytes*"></a>
+  <h4 id="AlgoSdk_TransactionExtensions_EstimateBlockSizeBytes__1___0_" data-uid="AlgoSdk.TransactionExtensions.EstimateBlockSizeBytes``1(``0)">EstimateBlockSizeBytes&lt;T&gt;(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int EstimateBlockSizeBytes&lt;T&gt;(this T txn)
+    where T : ITransaction</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_TransactionExtensions_GetId_" data-uid="AlgoSdk.TransactionExtensions.GetId*"></a>
   <h4 id="AlgoSdk_TransactionExtensions_GetId__1___0_" data-uid="AlgoSdk.TransactionExtensions.GetId``1(``0)">GetId&lt;T&gt;(T)</h4>
   <div class="markdown level1 summary"></div>
@@ -195,6 +253,127 @@
     <tbody>
       <tr>
         <td><a class="xref" href="AlgoSdk.TransactionId.html">TransactionId</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_TransactionExtensions_GetId_" data-uid="AlgoSdk.TransactionExtensions.GetId*"></a>
+  <h4 id="AlgoSdk_TransactionExtensions_GetId__1___0_" data-uid="AlgoSdk.TransactionExtensions.GetId``1(``0)">GetId&lt;T&gt;(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionId GetId&lt;T&gt;(this T txn)
+    where T : ITransaction</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionId.html">TransactionId</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_TransactionExtensions_GetSignature_" data-uid="AlgoSdk.TransactionExtensions.GetSignature*"></a>
+  <h4 id="AlgoSdk_TransactionExtensions_GetSignature__1___0_Ed25519_SecretKeyHandle_" data-uid="AlgoSdk.TransactionExtensions.GetSignature``1(``0,Ed25519.SecretKeyHandle)">GetSignature&lt;T&gt;(T, Ed25519.SecretKeyHandle)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Sig GetSignature&lt;T&gt;(this T txn, Ed25519.SecretKeyHandle secretKey)
+    where T : ITransaction</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Ed25519.SecretKeyHandle</span></td>
+        <td><span class="parametername">secretKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Sig.html">Sig</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -342,6 +521,69 @@
   </table>
   
   
+  <a id="AlgoSdk_TransactionExtensions_GetSuggestedFee_" data-uid="AlgoSdk.TransactionExtensions.GetSuggestedFee*"></a>
+  <h4 id="AlgoSdk_TransactionExtensions_GetSuggestedFee__1___0_AlgoSdk_TransactionParams_" data-uid="AlgoSdk.TransactionExtensions.GetSuggestedFee``1(``0,AlgoSdk.TransactionParams)">GetSuggestedFee&lt;T&gt;(T, TransactionParams)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ulong GetSuggestedFee&lt;T&gt;(this T txn, TransactionParams txnParams)
+    where T : ITransaction</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_TransactionExtensions_Sign_" data-uid="AlgoSdk.TransactionExtensions.Sign*"></a>
   <h4 id="AlgoSdk_TransactionExtensions_Sign__1___0_Ed25519_SecretKeyHandle_" data-uid="AlgoSdk.TransactionExtensions.Sign``1(``0,Ed25519.SecretKeyHandle)">Sign&lt;T&gt;(T, Ed25519.SecretKeyHandle)</h4>
   <div class="markdown level1 summary"></div>
@@ -384,6 +626,132 @@
     <tbody>
       <tr>
         <td><a class="xref" href="AlgoSdk.Signed-1.html">Signed</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_TransactionExtensions_Sign_" data-uid="AlgoSdk.TransactionExtensions.Sign*"></a>
+  <h4 id="AlgoSdk_TransactionExtensions_Sign__1___0_Ed25519_SecretKeyHandle_" data-uid="AlgoSdk.TransactionExtensions.Sign``1(``0,Ed25519.SecretKeyHandle)">Sign&lt;T&gt;(T, Ed25519.SecretKeyHandle)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Signed&lt;T&gt; Sign&lt;T&gt;(this T txn, Ed25519.SecretKeyHandle secretKey)
+    where T : ITransaction</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Ed25519.SecretKeyHandle</span></td>
+        <td><span class="parametername">secretKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Signed-1.html">Signed</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_TransactionExtensions_ToSignatureMessage_" data-uid="AlgoSdk.TransactionExtensions.ToSignatureMessage*"></a>
+  <h4 id="AlgoSdk_TransactionExtensions_ToSignatureMessage__1___0_Allocator_" data-uid="AlgoSdk.TransactionExtensions.ToSignatureMessage``1(``0,Allocator)">ToSignatureMessage&lt;T&gt;(T, Allocator)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NativeByteArray ToSignatureMessage&lt;T&gt;(this T txn, Allocator allocator)
+    where T : ITransaction</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Allocator</span></td>
+        <td><span class="parametername">allocator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NativeByteArray</span></td>
         <td></td>
       </tr>
     </tbody>

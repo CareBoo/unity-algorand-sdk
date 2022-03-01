@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:navrel" content="">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -87,13 +87,15 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.KeyRegTxn.Params.html">KeyRegTxn.Params</a>&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="AlgoSdk.KeyRegTxn.Params.html">KeyRegTxn.Params</a>&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_KeyRegTxn_Params_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct Params</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+[Serializable]
+public struct Params : IEquatable&lt;KeyRegTxn.Params&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -117,6 +119,54 @@
     <tbody>
       <tr>
         <td><a class="xref" href="AlgoSdk.AccountParticipation.html">AccountParticipation</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_KeyRegTxn_Params_AccountParticipation" data-uid="AlgoSdk.KeyRegTxn.Params.AccountParticipation">AccountParticipation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AccountParticipation AccountParticipation</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AccountParticipation.html">AccountParticipation</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="AlgoSdk_KeyRegTxn_Params_NonParticipation" data-uid="AlgoSdk.KeyRegTxn.Params.NonParticipation">NonParticipation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Optional&lt;bool&gt; NonParticipation</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -174,6 +224,31 @@
   </table>
   
   
+  <a id="AlgoSdk_KeyRegTxn_Params_SelectionParticipationKey_" data-uid="AlgoSdk.KeyRegTxn.Params.SelectionParticipationKey*"></a>
+  <h4 id="AlgoSdk_KeyRegTxn_Params_SelectionParticipationKey" data-uid="AlgoSdk.KeyRegTxn.Params.SelectionParticipationKey">SelectionParticipationKey</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VrfPubKey SelectionParticipationKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.VrfPubKey.html">VrfPubKey</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_KeyRegTxn_Params_VoteFirst_" data-uid="AlgoSdk.KeyRegTxn.Params.VoteFirst*"></a>
   <h4 id="AlgoSdk_KeyRegTxn_Params_VoteFirst" data-uid="AlgoSdk.KeyRegTxn.Params.VoteFirst">VoteFirst</h4>
   <div class="markdown level1 summary"></div>
@@ -181,6 +256,56 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ulong VoteFirst { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KeyRegTxn_Params_VoteFirst_" data-uid="AlgoSdk.KeyRegTxn.Params.VoteFirst*"></a>
+  <h4 id="AlgoSdk_KeyRegTxn_Params_VoteFirst" data-uid="AlgoSdk.KeyRegTxn.Params.VoteFirst">VoteFirst</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong VoteFirst { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KeyRegTxn_Params_VoteKeyDilution_" data-uid="AlgoSdk.KeyRegTxn.Params.VoteKeyDilution*"></a>
+  <h4 id="AlgoSdk_KeyRegTxn_Params_VoteKeyDilution" data-uid="AlgoSdk.KeyRegTxn.Params.VoteKeyDilution">VoteKeyDilution</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong VoteKeyDilution { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -243,6 +368,56 @@
     <tbody>
       <tr>
         <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KeyRegTxn_Params_VoteLast_" data-uid="AlgoSdk.KeyRegTxn.Params.VoteLast*"></a>
+  <h4 id="AlgoSdk_KeyRegTxn_Params_VoteLast" data-uid="AlgoSdk.KeyRegTxn.Params.VoteLast">VoteLast</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong VoteLast { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_KeyRegTxn_Params_VoteParticipationKey_" data-uid="AlgoSdk.KeyRegTxn.Params.VoteParticipationKey*"></a>
+  <h4 id="AlgoSdk_KeyRegTxn_Params_VoteParticipationKey" data-uid="AlgoSdk.KeyRegTxn.Params.VoteParticipationKey">VoteParticipationKey</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Ed25519.PublicKey VoteParticipationKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Ed25519.PublicKey</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -316,9 +491,51 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="AlgoSdk_KeyRegTxn_Params_Equals_" data-uid="AlgoSdk.KeyRegTxn.Params.Equals*"></a>
+  <h4 id="AlgoSdk_KeyRegTxn_Params_Equals_AlgoSdk_KeyRegTxn_Params_" data-uid="AlgoSdk.KeyRegTxn.Params.Equals(AlgoSdk.KeyRegTxn.Params)">Equals(KeyRegTxn.Params)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(KeyRegTxn.Params other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.KeyRegTxn.Params.html">KeyRegTxn.Params</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">IEquatable&lt;&gt;</span>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
 </article>
           </div>
