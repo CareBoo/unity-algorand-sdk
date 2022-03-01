@@ -362,9 +362,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "ManagedReference",
       "source_relative_path": "api/AlgoSdk.AlgoApiField-1.MessagePackDeserializer.yml",
       "output": {
@@ -413,9 +410,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "ManagedReference",
       "source_relative_path": "api/AlgoSdk.AlgoApiField-1.SerializePredicate.yml",
       "output": {
@@ -1724,6 +1718,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "ManagedReference",
       "source_relative_path": "api/AlgoSdk.EvalDeltaAction.yml",
       "output": {
@@ -3584,6 +3581,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "ManagedReference",
       "source_relative_path": "api/AlgoSdk.SignatureType.yml",
       "output": {
@@ -4465,7 +4465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.html",
-          "hash": "kN+x+rRzKz9+lfjJ6mAlnZ6wL79i96s3NIq4/WlIy+M="
+          "hash": "T6LPWfMyr1WaqeseIK7hKAehU34QDTileE+fgeeZtoo="
         }
       },
       "is_incremental": false,
@@ -4646,9 +4646,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "ManagedReference",
       "source_relative_path": "api/WebSocketSharp.CompressionMethod.yml",
       "output": {
@@ -4709,9 +4706,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "ManagedReference",
       "source_relative_path": "api/WebSocketSharp.LogLevel.yml",
       "output": {
@@ -4760,9 +4754,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "ManagedReference",
       "source_relative_path": "api/WebSocketSharp.Net.AuthenticationSchemes.yml",
       "output": {
@@ -5291,6 +5282,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "changelog/toc.yml",
       "output": {
@@ -5303,6 +5297,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "license/toc.yml",
       "output": {
@@ -5315,6 +5312,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "manual/toc.yml",
       "output": {
