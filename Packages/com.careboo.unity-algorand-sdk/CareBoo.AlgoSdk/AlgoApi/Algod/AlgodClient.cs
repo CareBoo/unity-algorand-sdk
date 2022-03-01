@@ -1,5 +1,7 @@
 using System;
+using AlgoSdk.LowLevel;
 using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 
 namespace AlgoSdk
@@ -226,10 +228,13 @@ namespace AlgoSdk
             where T : struct, ITransaction, IEquatable<T>
         {
             using var data = AlgoApiSerializer.SerializeMessagePack(txn, Allocator.Persistent);
-            return this
-                .Post("/v2/transactions")
-                .SetMessagePackBody(data.AsArray().AsReadOnly())
-                .Send();
+            return SendTransactions(data.AsArray().AsReadOnly());
+        }
+
+        public AlgoApiRequest.Sent<TransactionIdResponse> SendTransaction(byte[] txn)
+        {
+            using var data = new NativeArray<byte>(txn, Allocator.Persistent);
+            return SendTransactions(data.AsReadOnly());
         }
 
         public AlgoApiRequest.Sent<TransactionIdResponse> SendTransactions(
@@ -239,15 +244,16 @@ namespace AlgoSdk
             using var bytes = new NativeList<byte>(Allocator.Persistent);
             for (var i = 0; i < txns.Length; i++)
             {
-                using (var data = AlgoApiSerializer.SerializeMessagePack(txns[i], Allocator.Temp))
-                {
-                    bytes.AddRange(data);
-                }
+                using var data = AlgoApiSerializer.SerializeMessagePack(txns[i], Allocator.Temp);
+                bytes.AddRange(data);
             }
-            return this
-                .Post("/v2/transactions")
-                .SetMessagePackBody(bytes.AsArray().AsReadOnly())
-                .Send();
+            return SendTransactions(bytes.AsArray().AsReadOnly());
+        }
+
+        public AlgoApiRequest.Sent<TransactionIdResponse> SendTransactions(params byte[][] signedTxns)
+        {
+            using var bytes = NativeArrayUtil.ConcatAll(signedTxns, Allocator.Persistent);
+            return SendTransactions(bytes.AsReadOnly());
         }
 
         public AlgoApiRequest.Sent<TransactionParams> GetSuggestedParams()
@@ -261,6 +267,14 @@ namespace AlgoSdk
         {
             return this
                 .Get("/versions")
+                .Send();
+        }
+
+        AlgoApiRequest.Sent<TransactionIdResponse> SendTransactions(NativeArray<byte>.ReadOnly rawTxnData)
+        {
+            return this
+                .Post("/v2/transactions")
+                .SetMessagePackBody(rawTxnData)
                 .Send();
         }
     }
