@@ -1,5 +1,4 @@
 using System;
-using Cysharp.Threading.Tasks;
 using static UnityEngine.Networking.UnityWebRequest;
 
 namespace AlgoSdk
@@ -177,7 +176,7 @@ namespace AlgoSdk
         AlgoApiRequest.Sent<DryrunResults> TealDryrun(Optional<DryrunRequest> request = default);
 
         /// <summary>
-        /// Broadcasts a raw transaction to the network.
+        /// Broadcasts a signed transaction to the network.
         /// </summary>
         /// <typeparam name="T">The type of the transaction; must implement <see cref="ITransaction"/></typeparam>
         /// <param name="txn">The byte encoded signed transaction to broadcast to network</param>
@@ -186,11 +185,25 @@ namespace AlgoSdk
             where T : struct, ITransaction, IEquatable<T>;
 
         /// <summary>
+        /// Broadcasts a msgpack-encoded, signed transaction to the network.
+        /// </summary>
+        /// <param name="txn">The byte encoded signed transaction to broadcast to network</param>
+        /// <returns>Transaction ID of the submission.</returns>
+        AlgoApiRequest.Sent<TransactionIdResponse> SendTransaction(byte[] txn);
+
+        /// <summary>
         /// Broadcasts a group of transactions to the network.
         /// </summary>
         /// <param name="signedTxns">The signed transactions in the same order as they were when using <see cref="Transaction.GetGroupId(TransactionId[])"/></param>
         /// <returns>Transaction ID of the submission.</returns>
         AlgoApiRequest.Sent<TransactionIdResponse> SendTransactions(params SignedTransaction[] signedTxns);
+
+        /// <summary>
+        /// Broadcasts a group of msgpack-encoded, signed transactions to the network.
+        /// </summary>
+        /// <param name="signedTxns">The signed transactions in the same order as they were when using <see cref="Transaction.GetGroupId(TransactionId[])"/></param>
+        /// <returns>Transaction ID of the submission.</returns>
+        AlgoApiRequest.Sent<TransactionIdResponse> SendTransactions(params byte[][] signedTxns);
 
         /// <summary>
         /// Get parameters for constructing a new transaction
