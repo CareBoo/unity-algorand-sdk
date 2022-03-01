@@ -1,0 +1,14 @@
+.docfx/**
+.github/**
+.husky/**
+.vscode/**
+AlgoSdk~/**
+Media~/**
+scripts/**
+.czrc
+.editorconfig
+.gitattributes
+.gitignore
+.npmignore
+.releaserc.json
+omnisharp.json
