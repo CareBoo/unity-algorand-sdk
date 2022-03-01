@@ -5,6 +5,25 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [2.0.0-pre.6](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.5...v2.0.0-pre.6) (2022-03-01)
+
+
+### Bug Fixes
+
+* **walletconnect:** fix compile issue for unity 2020 ([e26836a](https://github.com/CareBoo/unity-algorand-sdk/commit/e26836a3265c04f9908d813080c8c7f915891aeb))
+
+
+### Features
+
+* **algod:** add overloads for `IAlgodClient.SendTransactions` that allow sending raw msgpack ([4befeeb](https://github.com/CareBoo/unity-algorand-sdk/commit/4befeebdb8f1bc635ed35344eaa8a2d6a762cae6))
+* **lowlevel:** add `NativeArrayUtil.ConcatAll` ([10644db](https://github.com/CareBoo/unity-algorand-sdk/commit/10644db4c6e6a5256a3ffd2ea7a1441f0ac4499c))
+* **models:** add implicit operators for either value type in an either ([84cfbcf](https://github.com/CareBoo/unity-algorand-sdk/commit/84cfbcfc488b18a411d50d0c6792da1778703ec8))
+
+
+### BREAKING CHANGES
+
+* **lowlevel:** Remove unused struct `NativeReferenceOfDisposable` from AlgoSdk.LowLevel
+
 # [2.0.0-pre.5](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.4...v2.0.0-pre.5) (2022-02-28)
 
 
