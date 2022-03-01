@@ -78,7 +78,7 @@ jobs:
         if: ${{ matrix.tag == 'version' }}
         uses: notiz-dev/github-action-json-property@release
         with:
-          path: "Packages/com.careboo.unity-algorand-sdk/package.json"
+          path: "package.json"
           prop_path: "version"
 
       - name: Get branch
