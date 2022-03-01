@@ -210,8 +210,8 @@ namespace AlgoSdk.WalletConnect
             webSocketClient.Send(msg);
             var response = await listeningForResponse;
             return response.IsError
-                ? new Either<SignTxnsError, byte[][]>(response.Error)
-                : new Either<SignTxnsError, byte[][]>(AlgoApiSerializer.DeserializeJson<byte[][]>(response.Result.Json))
+                ? (SignTxnsError)response.Error
+                : AlgoApiSerializer.DeserializeJson<byte[][]>(response.Result.Json)
                 ;
         }
 
