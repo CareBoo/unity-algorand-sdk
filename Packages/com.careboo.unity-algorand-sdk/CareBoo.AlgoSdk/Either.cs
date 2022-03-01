@@ -53,5 +53,15 @@ namespace AlgoSdk
                 return new Either<U, T>(either.Value2);
             return default;
         }
+
+        public static implicit operator Either<T, U>(T value1)
+        {
+            return new Either<T, U>(value1);
+        }
+
+        public static implicit operator Either<T, U>(U value2)
+        {
+            return new Either<T, U>(value2);
+        }
     }
 }
