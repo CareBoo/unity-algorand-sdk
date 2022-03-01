@@ -1,0 +1,21 @@
+{
+    "name": "CareBoo.AlgoSdk.CodeGen",
+    "rootNamespace": "AlgoSdk.Editor.CodeGen",
+    "references": [
+        "CareBoo.AlgoSdk",
+        "CareBoo.AlgoSdk.IntegrationTests",
+        "CareBoo.AlgoSdk.Crypto",
+        "Unity.Collections"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

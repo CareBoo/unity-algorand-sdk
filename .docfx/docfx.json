@@ -27,7 +27,7 @@
     },
     "content": [
       {
-        "files": ["toc.yml"]
+        "files": ["toc.yml", "index.md"]
       },
       {
         "src": "manual",

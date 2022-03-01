@@ -5,16 +5,17 @@
 > [!Caution]
 > This package has not been audited and isn't suitable for production use.
 
-Integrate Algorand blockchain services into your game.
+[Algorand](https://www.algorand.com/) is a Pure Proof-of-Stake blockchain overseen by the Algorand Foundation.
+This [Unity software](https://unity.com/) package allows you to create and sign transactions, use Algorand's
+[REST APIs](https://developer.algorand.org/docs/rest-apis/restendpoints/),
+and connect to any Algorand wallet supporting [WalletConnect](https://developer.algorand.org/docs/get-details/walletconnect/).
 
-Supported Build Targets:
+## Supported Targets
 
-- [x] Windows
-- [x] Mac OS
-- [x] Linux
-- [x] Android
-- [x] iOS
-- [x] WebGL
+| Unity Version | Windows            | Mac OS             | Linux              | Android            | iOS                | WebGL              |
+| ------------- | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
+| 2020.3        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| 2021.2        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ## Installation
 
@@ -64,12 +65,9 @@ This SDK will soon be [available in the Unity Asset Store](https://u3d.as/2GBr).
 
 ## Getting Started
 
-The [Manual](https://careboo.github.io/unity-algorand-sdk/main/) is the best place to start.
-Check out the [Quickstart Guide](https://careboo.github.io/unity-algorand-sdk/main/manual/quickstart.html).
+The [Quickstart Guide](Documentation~/quickstart.md) is the best place to start. Documentation is
+generated per release branch and version. The documentation for a specific version or branch
+can be found at `https://careboo.github.io/unity-algorand-sdk/{version}/`, e.g.
+https://careboo.github.io/unity-algorand-sdk/main/.
 
 There's a Demo game you can try out in the [demo branch](https://github.com/CareBoo/unity-algorand-sdk/tree/demo).
-
-> [!Note]
-> The documentation is generated per release branch and version. The documentation for a specific version/branch
-> can be found at `https://careboo.github.io/unity-algorand-sdk/{version}/`, e.g.
-> https://careboo.github.io/unity-algorand-sdk/1.0.0-pre.3/
