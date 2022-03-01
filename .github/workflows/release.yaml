@@ -54,7 +54,7 @@ jobs:
           ref: ${{ github.ref }}
 
       - name: Remove symlinks
-        run: sed -i '' **/*
+        run: sed -i '' Documentation\~/**/*
 
       - name: Setup npm
         uses: actions/setup-node@v2
