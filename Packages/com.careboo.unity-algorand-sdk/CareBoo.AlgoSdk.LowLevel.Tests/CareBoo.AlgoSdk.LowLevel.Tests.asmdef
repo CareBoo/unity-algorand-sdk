@@ -1,0 +1,24 @@
+{
+    "name": "CareBoo.AlgoSdk.LowLevel.Tests",
+    "rootNamespace": "",
+    "references": [
+        "CareBoo.AlgoSdk.LowLevel",
+        "UnityEditor.TestRunner",
+        "Unity.Collections"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
