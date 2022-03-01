@@ -41,8 +41,10 @@ jobs:
       matrix:
         include:
           - registry: https://registry.npmjs.org/
+            scope: ""
             token: NPM_TOKEN
-          - registry: https://npm.pkg.github.com/@careboo
+          - registry: https://npm.pkg.github.com/
+            scope: "@careboo"
             token: GITHUB_TOKEN
     steps:
       - name: Checkout
@@ -53,9 +55,12 @@ jobs:
 
       - name: Setup npm
         uses: actions/setup-node@v2
+        with:
+          node-version: "14.x"
+          registry-url: ${{ matrix.registry }}
 
       - name: Publish to ${{ matrix.registry }}
-        run: npm publish --access=public --registry=${{ matrix.registry }}
+        run: npm publish --access=public --registry=${{ matrix.registry }}${{ matrix.scope }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets[matrix.token] }}
 
@@ -88,11 +93,6 @@ jobs:
 
       - name: Install DocFX
         run: choco install -y docfx
-
-      - name: Rename TableOfContents.md to toc.md
-        run: |
-          cd Documentation~
-          mv TableOfContents.md toc.md
 
       - name: Update sitemap with version
         if: ${{ matrix.tag == 'version' }}

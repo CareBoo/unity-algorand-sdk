@@ -30,6 +30,11 @@
         "files": ["../toc.yml"]
       },
       {
+        "src": "manual",
+        "files": ["toc.yml"],
+        "dest": "manual"
+      },
+      {
         "src": "changelog",
         "files": ["toc.yml"],
         "dest": "changelog"
@@ -56,7 +61,8 @@
       },
       {
         "src": "../Documentation~",
-        "files": ["*.md"],
+        "files": ["*"],
+        "exclude": ["TableOfContents.md"],
         "dest": "manual"
       }
     ],
