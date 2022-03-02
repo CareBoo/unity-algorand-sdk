@@ -21,8 +21,4 @@ do
     cp -RvL "$item" $unitask_target
 done
 
-
-rm -rf $algosdk_src/*
-rm -rf $unitask_src/*
-
 cd -
