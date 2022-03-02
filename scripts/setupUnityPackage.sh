@@ -22,12 +22,7 @@ do
 done
 
 
-touch packageMetaFiles
-
-echo "$algosdk_target.meta" >> packageMetaFiles
-find "$algosdk_target" -type f -name "*.meta" >> packageMetaFiles
-
-echo "$unitask_target.meta" >> packageMetaFiles
-find "$unitask_target" -type f -name "*.meta" >> packageMetaFiles
+rm -rf $algosdk_src/*
+rm -rf $unitask_src/*
 
 cd -
