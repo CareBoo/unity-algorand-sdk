@@ -36,6 +36,6 @@ packager_dir="$packager_dir/$packager-1.2.5"
 mkdir -p dist
 workdir="$(pwd)"
 cd "$packager_dir"
-dotnet run --project "$packager" unpack "$workdir/UniTask.unitypackage" "$workdir/$unitask_dir"
-dotnet run --project "$packager" pack "$workdir/dist/unity-algorand-sdk.unitypackage" "$workdir/$algosdk_dir" "$workdir/$unitask_dir"
+dotnet run -f netcoreapp2.1 --project "$packager" unpack "$workdir/UniTask.unitypackage" "$workdir/$unitask_dir"
+dotnet run -f netcoreapp2.1 --project "$packager" pack "$workdir/dist/unity-algorand-sdk.unitypackage" "$workdir/$algosdk_dir" "$workdir/$unitask_dir"
 cd -
