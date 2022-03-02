@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="">
+    <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -87,7 +87,7 @@
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">Base64Encoding</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
@@ -152,58 +152,6 @@
   </table>
   
   
-  <a id="AlgoSdk_Base64Encoding_Base64ToUtf8_" data-uid="AlgoSdk.Base64Encoding.Base64ToUtf8*"></a>
-  <h4 id="AlgoSdk_Base64Encoding_Base64ToUtf8__2___0____1__" data-uid="AlgoSdk.Base64Encoding.Base64ToUtf8``2(``0@,``1@)">Base64ToUtf8&lt;T, U&gt;(ref T, ref U)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Base64ToUtf8&lt;T, U&gt;(this ref T src, ref U tar)
-    where T : struct, IUTF8Bytes, INativeList&lt;byte&gt; where U : struct, IUTF8Bytes, INativeList&lt;byte&gt;</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">src</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">U</span></td>
-        <td><span class="parametername">tar</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="parametername">U</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="AlgoSdk_Base64Encoding_CopyFromBase64_" data-uid="AlgoSdk.Base64Encoding.CopyFromBase64*"></a>
   <h4 id="AlgoSdk_Base64Encoding_CopyFromBase64__2___0____1_System_Int32_" data-uid="AlgoSdk.Base64Encoding.CopyFromBase64``2(``0@,``1,System.Int32)">CopyFromBase64&lt;TByteArray, T&gt;(ref TByteArray, T, Int32)</h4>
   <div class="markdown level1 summary"></div>
@@ -234,64 +182,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">maxLength</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TByteArray</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_Base64Encoding_CopyFromBase64_" data-uid="AlgoSdk.Base64Encoding.CopyFromBase64*"></a>
-  <h4 id="AlgoSdk_Base64Encoding_CopyFromBase64__2___0____1_System_Int32_" data-uid="AlgoSdk.Base64Encoding.CopyFromBase64``2(``0@,``1,System.Int32)">CopyFromBase64&lt;TByteArray, T&gt;(ref TByteArray, T, Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void CopyFromBase64&lt;TByteArray, T&gt;(this ref TByteArray bytes, T s, int maxLength = 2147483647)
-    where TByteArray : struct, IArray&lt;byte&gt; where T : struct, IUTF8Bytes, INativeList&lt;byte&gt;</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TByteArray</span></td>
-        <td><span class="parametername">bytes</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">s</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">maxLength</span></td>
         <td></td>
       </tr>
@@ -364,110 +255,6 @@
       </tr>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_Base64Encoding_CopyToBase64_" data-uid="AlgoSdk.Base64Encoding.CopyToBase64*"></a>
-  <h4 id="AlgoSdk_Base64Encoding_CopyToBase64__2___0___1__" data-uid="AlgoSdk.Base64Encoding.CopyToBase64``2(``0,``1@)">CopyToBase64&lt;TBytes, T&gt;(TBytes, ref T)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void CopyToBase64&lt;TBytes, T&gt;(this TBytes bytes, ref T s)
-    where TBytes : struct, IArray&lt;byte&gt; where T : struct, IUTF8Bytes, INativeList&lt;byte&gt;</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TBytes</span></td>
-        <td><span class="parametername">bytes</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">s</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TBytes</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_Base64Encoding_Utf8ToBase64_" data-uid="AlgoSdk.Base64Encoding.Utf8ToBase64*"></a>
-  <h4 id="AlgoSdk_Base64Encoding_Utf8ToBase64__2___0____1__" data-uid="AlgoSdk.Base64Encoding.Utf8ToBase64``2(``0@,``1@)">Utf8ToBase64&lt;T, U&gt;(ref T, ref U)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Utf8ToBase64&lt;T, U&gt;(this ref T src, ref U tar)
-    where T : struct, IUTF8Bytes, INativeList&lt;byte&gt; where U : struct, IUTF8Bytes, INativeList&lt;byte&gt;</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">src</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">U</span></td>
-        <td><span class="parametername">tar</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="parametername">U</span></td>
         <td></td>
       </tr>
     </tbody>

@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="">
+    <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -117,15 +117,12 @@
     <div>
       <a class="xref" href="AlgoSdk.WalletConnect.IWalletConnectSessionData.html#AlgoSdk_WalletConnect_IWalletConnectSessionData_WalletMeta">IWalletConnectSessionData.WalletMeta</a>
     </div>
-    <div>
-      <span class="xref">System.IDisposable.Dispose()</span>
-    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.WalletConnect.html">AlgoSdk.WalletConnect</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_WalletConnect_IActiveWalletConnectSession_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IActiveWalletConnectSession&lt;TSession&gt; : IWalletConnectSessionData, IDisposable where TSession : IActiveWalletConnectSession&lt;TSession&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IActiveWalletConnectSession&lt;TSession&gt; : IWalletConnectSessionData where TSession : IActiveWalletConnectSession&lt;TSession&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -171,31 +168,6 @@
   </table>
   
   
-  <a id="AlgoSdk_WalletConnect_IActiveWalletConnectSession_1_OnSessionConnect_" data-uid="AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionConnect*"></a>
-  <h4 id="AlgoSdk_WalletConnect_IActiveWalletConnectSession_1_OnSessionConnect" data-uid="AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionConnect">OnSessionConnect</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">UnityEvent&lt;TSession&gt; OnSessionConnect { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEvent</span>&lt;TSession&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="AlgoSdk_WalletConnect_IActiveWalletConnectSession_1_OnSessionDisconnect_" data-uid="AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionDisconnect*"></a>
   <h4 id="AlgoSdk_WalletConnect_IActiveWalletConnectSession_1_OnSessionDisconnect" data-uid="AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionDisconnect">OnSessionDisconnect</h4>
   <div class="markdown level1 summary"></div>
@@ -214,57 +186,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UnityEvent</span>&lt;<span class="xref">System.String</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_WalletConnect_IActiveWalletConnectSession_1_OnSessionDisconnect_" data-uid="AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionDisconnect*"></a>
-  <h4 id="AlgoSdk_WalletConnect_IActiveWalletConnectSession_1_OnSessionDisconnect" data-uid="AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionDisconnect">OnSessionDisconnect</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">UnityEvent&lt;string&gt; OnSessionDisconnect { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEvent</span>&lt;<span class="xref">System.String</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_WalletConnect_IActiveWalletConnectSession_1_OnSessionUpdate_" data-uid="AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionUpdate*"></a>
-  <h4 id="AlgoSdk_WalletConnect_IActiveWalletConnectSession_1_OnSessionUpdate" data-uid="AlgoSdk.WalletConnect.IActiveWalletConnectSession`1.OnSessionUpdate">OnSessionUpdate</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">UnityEvent&lt;WalletConnectSessionData&gt; OnSessionUpdate { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEvent</span>&lt;<a class="xref" href="AlgoSdk.WalletConnect.WalletConnectSessionData.html">WalletConnectSessionData</a>&gt;</td>
+        <td><span class="xref">UnityEvent</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

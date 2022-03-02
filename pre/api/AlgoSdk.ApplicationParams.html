@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="">
+    <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -88,15 +88,13 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="AlgoSdk.ApplicationParams.html">ApplicationParams</a>&gt;</div>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.ApplicationParams.html">ApplicationParams</a>&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_ApplicationParams_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
-[Serializable]
-public struct ApplicationParams : IEquatable&lt;ApplicationParams&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct ApplicationParams</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -127,56 +125,6 @@ public struct ApplicationParams : IEquatable&lt;ApplicationParams&gt;</code></pr
   </table>
   
   
-  <h4 id="AlgoSdk_ApplicationParams_ApprovalProgram" data-uid="AlgoSdk.ApplicationParams.ApprovalProgram">ApprovalProgram</h4>
-  <div class="markdown level1 summary"><p>Logic executed for every application transaction, except when on-completion is set to &quot;clear&quot;. It can read and write global state for the application, as well as account-specific local state. Approval programs may reject the transaction.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CompiledTeal ApprovalProgram</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.CompiledTeal.html">CompiledTeal</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_ApplicationParams_ClearStateProgram" data-uid="AlgoSdk.ApplicationParams.ClearStateProgram">ClearStateProgram</h4>
-  <div class="markdown level1 summary"><p>Logic executed for application transactions with on-completion set to &quot;clear&quot;. It can read and write global state for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CompiledTeal ClearStateProgram</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.CompiledTeal.html">CompiledTeal</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="AlgoSdk_ApplicationParams_ClearStateProgram" data-uid="AlgoSdk.ApplicationParams.ClearStateProgram">ClearStateProgram</h4>
   <div class="markdown level1 summary"><p>Logic executed for application transactions with on-completion set to &quot;clear&quot;. It can read and write global state for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.</p>
 </div>
@@ -227,31 +175,6 @@ public struct ApplicationParams : IEquatable&lt;ApplicationParams&gt;</code></pr
   </table>
   
   
-  <h4 id="AlgoSdk_ApplicationParams_Creator" data-uid="AlgoSdk.ApplicationParams.Creator">Creator</h4>
-  <div class="markdown level1 summary"><p>The address that created this application. This is the address where the parameters and global state for this application can be found.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address Creator</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="AlgoSdk_ApplicationParams_ExtraProgramPages" data-uid="AlgoSdk.ApplicationParams.ExtraProgramPages">ExtraProgramPages</h4>
   <div class="markdown level1 summary"><p>[epp] the amount of extra program pages available to this app.</p>
 </div>
@@ -270,57 +193,7 @@ public struct ApplicationParams : IEquatable&lt;ApplicationParams&gt;</code></pr
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_ApplicationParams_ExtraProgramPages" data-uid="AlgoSdk.ApplicationParams.ExtraProgramPages">ExtraProgramPages</h4>
-  <div class="markdown level1 summary"><p>[epp] the amount of extra program pages available to this app.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong ExtraProgramPages</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_ApplicationParams_GlobalState" data-uid="AlgoSdk.ApplicationParams.GlobalState">GlobalState</h4>
-  <div class="markdown level1 summary"><p>global state</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TealKeyValue[] GlobalState</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.TealKeyValue.html">TealKeyValue</a>[]</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -359,56 +232,6 @@ public struct ApplicationParams : IEquatable&lt;ApplicationParams&gt;</code></pr
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public StateSchema GlobalStateSchema</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.StateSchema.html">StateSchema</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_ApplicationParams_GlobalStateSchema" data-uid="AlgoSdk.ApplicationParams.GlobalStateSchema">GlobalStateSchema</h4>
-  <div class="markdown level1 summary"><p>global schema</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StateSchema GlobalStateSchema</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.StateSchema.html">StateSchema</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_ApplicationParams_LocalStateSchema" data-uid="AlgoSdk.ApplicationParams.LocalStateSchema">LocalStateSchema</h4>
-  <div class="markdown level1 summary"><p>local schema</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StateSchema LocalStateSchema</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -489,56 +312,14 @@ public struct ApplicationParams : IEquatable&lt;ApplicationParams&gt;</code></pr
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_ApplicationParams_Equals_" data-uid="AlgoSdk.ApplicationParams.Equals*"></a>
-  <h4 id="AlgoSdk_ApplicationParams_Equals_AlgoSdk_ApplicationParams_" data-uid="AlgoSdk.ApplicationParams.Equals(AlgoSdk.ApplicationParams)">Equals(ApplicationParams)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(ApplicationParams other)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.ApplicationParams.html">ApplicationParams</a></td>
-        <td><span class="parametername">other</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">System.IEquatable&lt;T&gt;</span>
+      <span class="xref">IEquatable&lt;&gt;</span>
   </div>
 </article>
           </div>

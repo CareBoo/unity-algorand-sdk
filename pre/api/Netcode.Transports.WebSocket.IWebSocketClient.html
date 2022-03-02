@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="">
+    <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -120,56 +120,6 @@
   </table>
   
   
-  <a id="Netcode_Transports_WebSocket_IWebSocketClient_EventQueue_" data-uid="Netcode.Transports.WebSocket.IWebSocketClient.EventQueue*"></a>
-  <h4 id="Netcode_Transports_WebSocket_IWebSocketClient_EventQueue" data-uid="Netcode.Transports.WebSocket.IWebSocketClient.EventQueue">EventQueue</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Queue&lt;WebSocketEvent&gt; EventQueue { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Queue</span>&lt;<a class="xref" href="Netcode.Transports.WebSocket.WebSocketEvent.html">WebSocketEvent</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Netcode_Transports_WebSocket_IWebSocketClient_ReadyState_" data-uid="Netcode.Transports.WebSocket.IWebSocketClient.ReadyState*"></a>
-  <h4 id="Netcode_Transports_WebSocket_IWebSocketClient_ReadyState" data-uid="Netcode.Transports.WebSocket.IWebSocketClient.ReadyState">ReadyState</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">WebSocketState ReadyState { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">WebSocketState</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Netcode_Transports_WebSocket_IWebSocketClient_ReadyState_" data-uid="Netcode.Transports.WebSocket.IWebSocketClient.ReadyState*"></a>
   <h4 id="Netcode_Transports_WebSocket_IWebSocketClient_ReadyState" data-uid="Netcode.Transports.WebSocket.IWebSocketClient.ReadyState">ReadyState</h4>
   <div class="markdown level1 summary"></div>
@@ -213,32 +163,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Netcode_Transports_WebSocket_IWebSocketClient_WaitTime_" data-uid="Netcode.Transports.WebSocket.IWebSocketClient.WaitTime*"></a>
-  <h4 id="Netcode_Transports_WebSocket_IWebSocketClient_WaitTime" data-uid="Netcode.Transports.WebSocket.IWebSocketClient.WaitTime">WaitTime</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ulong WaitTime { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -271,54 +196,12 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">reason</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Netcode_Transports_WebSocket_IWebSocketClient_Close_" data-uid="Netcode.Transports.WebSocket.IWebSocketClient.Close*"></a>
-  <h4 id="Netcode_Transports_WebSocket_IWebSocketClient_Close_CloseStatusCode_System_String_" data-uid="Netcode.Transports.WebSocket.IWebSocketClient.Close(CloseStatusCode,System.String)">Close(CloseStatusCode, String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Close(CloseStatusCode code = null, string reason = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">CloseStatusCode</span></td>
-        <td><span class="parametername">code</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">reason</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Netcode_Transports_WebSocket_IWebSocketClient_Connect_" data-uid="Netcode.Transports.WebSocket.IWebSocketClient.Connect*"></a>
-  <h4 id="Netcode_Transports_WebSocket_IWebSocketClient_Connect" data-uid="Netcode.Transports.WebSocket.IWebSocketClient.Connect">Connect()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Connect()</code></pre>
-  </div>
   
   
   <a id="Netcode_Transports_WebSocket_IWebSocketClient_Connect_" data-uid="Netcode.Transports.WebSocket.IWebSocketClient.Connect*"></a>
@@ -356,33 +239,8 @@
   </table>
   
   
-  <a id="Netcode_Transports_WebSocket_IWebSocketClient_Poll_" data-uid="Netcode.Transports.WebSocket.IWebSocketClient.Poll*"></a>
-  <h4 id="Netcode_Transports_WebSocket_IWebSocketClient_Poll" data-uid="Netcode.Transports.WebSocket.IWebSocketClient.Poll">Poll()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">WebSocketEvent Poll()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Netcode.Transports.WebSocket.WebSocketEvent.html">WebSocketEvent</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Netcode_Transports_WebSocket_IWebSocketClient_Send_" data-uid="Netcode.Transports.WebSocket.IWebSocketClient.Send*"></a>
-  <h4 id="Netcode_Transports_WebSocket_IWebSocketClient_Send_System_ArraySegment_System_Byte__" data-uid="Netcode.Transports.WebSocket.IWebSocketClient.Send(System.ArraySegment{System.Byte})">Send(ArraySegment&lt;Byte&gt;)</h4>
+  <h4 id="Netcode_Transports_WebSocket_IWebSocketClient_Send_ArraySegment_System_Byte__" data-uid="Netcode.Transports.WebSocket.IWebSocketClient.Send(ArraySegment{System.Byte})">Send(ArraySegment&lt;Byte&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -400,34 +258,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
-        <td><span class="parametername">data</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Netcode_Transports_WebSocket_IWebSocketClient_Send_" data-uid="Netcode.Transports.WebSocket.IWebSocketClient.Send*"></a>
-  <h4 id="Netcode_Transports_WebSocket_IWebSocketClient_Send_System_ArraySegment_System_Byte__" data-uid="Netcode.Transports.WebSocket.IWebSocketClient.Send(System.ArraySegment{System.Byte})">Send(ArraySegment&lt;Byte&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Send(ArraySegment&lt;byte&gt; data)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="xref">ArraySegment</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
         <td><span class="parametername">data</span></td>
         <td></td>
       </tr>

@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="">
+    <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -114,33 +114,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_ITransaction_Fee_" data-uid="AlgoSdk.ITransaction.Fee*"></a>
-  <h4 id="AlgoSdk_ITransaction_Fee" data-uid="AlgoSdk.ITransaction.Fee">Fee</h4>
-  <div class="markdown level1 summary"><p>Paid by the sender to the FeeSink to prevent denial-of-service. The minimum fee on Algorand is currently 1000 microAlgos.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ulong Fee { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -166,59 +140,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_ITransaction_FirstValidRound_" data-uid="AlgoSdk.ITransaction.FirstValidRound*"></a>
-  <h4 id="AlgoSdk_ITransaction_FirstValidRound" data-uid="AlgoSdk.ITransaction.FirstValidRound">FirstValidRound</h4>
-  <div class="markdown level1 summary"><p>The first round for when the transaction is valid. If the transaction is sent prior to this round it will be rejected by the network.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ulong FirstValidRound { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_ITransaction_GenesisHash_" data-uid="AlgoSdk.ITransaction.GenesisHash*"></a>
-  <h4 id="AlgoSdk_ITransaction_GenesisHash" data-uid="AlgoSdk.ITransaction.GenesisHash">GenesisHash</h4>
-  <div class="markdown level1 summary"><p>The hash of the genesis block of the network for which the transaction is valid.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">GenesisHash GenesisHash { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.GenesisHash.html">GenesisHash</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -277,58 +199,6 @@
   </table>
   
   
-  <a id="AlgoSdk_ITransaction_GenesisId_" data-uid="AlgoSdk.ITransaction.GenesisId*"></a>
-  <h4 id="AlgoSdk_ITransaction_GenesisId" data-uid="AlgoSdk.ITransaction.GenesisId">GenesisId</h4>
-  <div class="markdown level1 summary"><p>The human-readable string that identifies the network for the transaction. The genesis ID is found in the genesis block.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">FixedString32Bytes GenesisId { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">FixedString32Bytes</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_ITransaction_Group_" data-uid="AlgoSdk.ITransaction.Group*"></a>
-  <h4 id="AlgoSdk_ITransaction_Group" data-uid="AlgoSdk.ITransaction.Group">Group</h4>
-  <div class="markdown level1 summary"><p>The group specifies that the transaction is part of a group and, if so, specifies the hash of the transaction group. See <a class="xref" href="AlgoSdk.Transaction.html#AlgoSdk_Transaction_GetGroupId_AlgoSdk_Transaction___">GetGroupId(Transaction[])</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Sha512_256_Hash Group { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Sha512_256_Hash</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="AlgoSdk_ITransaction_Group_" data-uid="AlgoSdk.ITransaction.Group*"></a>
   <h4 id="AlgoSdk_ITransaction_Group" data-uid="AlgoSdk.ITransaction.Group">Group</h4>
   <div class="markdown level1 summary"><p>The group specifies that the transaction is part of a group and, if so, specifies the hash of the transaction group. See <a class="xref" href="AlgoSdk.Transaction.html#AlgoSdk_Transaction_GetGroupId_AlgoSdk_Transaction___">GetGroupId(Transaction[])</a>.</p>
@@ -374,59 +244,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_ITransaction_LastValidRound_" data-uid="AlgoSdk.ITransaction.LastValidRound*"></a>
-  <h4 id="AlgoSdk_ITransaction_LastValidRound" data-uid="AlgoSdk.ITransaction.LastValidRound">LastValidRound</h4>
-  <div class="markdown level1 summary"><p>The ending round for which the transaction is valid. After this round, the transaction will be rejected by the network.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ulong LastValidRound { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_ITransaction_Lease_" data-uid="AlgoSdk.ITransaction.Lease*"></a>
-  <h4 id="AlgoSdk_ITransaction_Lease" data-uid="AlgoSdk.ITransaction.Lease">Lease</h4>
-  <div class="markdown level1 summary"><p>A lease enforces mutual exclusion of transactions. If this field is nonzero, then once the transaction is confirmed, it acquires the lease identified by the (Sender, Lease) pair of the transaction until the LastValid round passes. While this transaction possesses the lease, no other transaction specifying this lease can be confirmed. A lease is often used in the context of Algorand Smart Contracts to prevent replay attacks.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Sha512_256_Hash Lease { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Sha512_256_Hash</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -478,59 +296,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Byte</span>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_ITransaction_Note_" data-uid="AlgoSdk.ITransaction.Note*"></a>
-  <h4 id="AlgoSdk_ITransaction_Note" data-uid="AlgoSdk.ITransaction.Note">Note</h4>
-  <div class="markdown level1 summary"><p>Any data up to 1000 bytes.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">byte[] Note { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Byte</span>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_ITransaction_RekeyTo_" data-uid="AlgoSdk.ITransaction.RekeyTo*"></a>
-  <h4 id="AlgoSdk_ITransaction_RekeyTo" data-uid="AlgoSdk.ITransaction.RekeyTo">RekeyTo</h4>
-  <div class="markdown level1 summary"><p>Specifies the authorized address. This address will be used to authorize all future transactions.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Address RekeyTo { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -583,58 +349,6 @@
     <tbody>
       <tr>
         <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_ITransaction_Sender_" data-uid="AlgoSdk.ITransaction.Sender*"></a>
-  <h4 id="AlgoSdk_ITransaction_Sender" data-uid="AlgoSdk.ITransaction.Sender">Sender</h4>
-  <div class="markdown level1 summary"><p>The address of the account that pays the fee and amount.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Address Sender { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_ITransaction_TransactionType_" data-uid="AlgoSdk.ITransaction.TransactionType*"></a>
-  <h4 id="AlgoSdk_ITransaction_TransactionType" data-uid="AlgoSdk.ITransaction.TransactionType">TransactionType</h4>
-  <div class="markdown level1 summary"><p>Specifies the type of transaction. This value is automatically generated using any of the developer tools.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">TransactionType TransactionType { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.TransactionType.html">TransactionType</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -677,64 +391,6 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void CopyFrom(Transaction transaction)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Transaction.html">Transaction</a></td>
-        <td><span class="parametername">transaction</span></td>
-        <td><p>A raw transaction with all possible transaction fields.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_ITransaction_CopyFrom_" data-uid="AlgoSdk.ITransaction.CopyFrom*"></a>
-  <h4 id="AlgoSdk_ITransaction_CopyFrom_AlgoSdk_Transaction_" data-uid="AlgoSdk.ITransaction.CopyFrom(AlgoSdk.Transaction)">CopyFrom(Transaction)</h4>
-  <div class="markdown level1 summary"><p>Copy relevant fields to this transaction.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void CopyFrom(Transaction transaction)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Transaction.html">Transaction</a></td>
-        <td><span class="parametername">transaction</span></td>
-        <td><p>A raw transaction with all possible transaction fields.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_ITransaction_CopyTo_" data-uid="AlgoSdk.ITransaction.CopyTo*"></a>
-  <h4 id="AlgoSdk_ITransaction_CopyTo_AlgoSdk_Transaction__" data-uid="AlgoSdk.ITransaction.CopyTo(AlgoSdk.Transaction@)">CopyTo(ref Transaction)</h4>
-  <div class="markdown level1 summary"><p>Copy this transactions fields to a <a class="xref" href="AlgoSdk.Transaction.html">Transaction</a> which contains all possible transaction fields.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void CopyTo(ref Transaction transaction)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
