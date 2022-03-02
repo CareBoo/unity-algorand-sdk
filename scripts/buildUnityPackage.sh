@@ -28,8 +28,8 @@ mkdir -p "$unitask_dir"
 tmpdir="$HOME"
 packager="UnityPackager"
 packager_dir="$tmpdir/$packager"
-mkdir -p "$packager_dir"
 wget -c "https://github.com/TwoTenPvP/UnityPackager/archive/refs/tags/v1.2.5.tar.gz" -O - | tar -xz -C "$packager_dir"
+packager_dir="$packager_dir/$packager-1.2.5"
 
 
 mkdir -p dist
