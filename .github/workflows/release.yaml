@@ -18,7 +18,7 @@ jobs:
       new_release_published: ${{ steps.semantic.outputs.new_release_published }}
       new_release_version: ${{ steps.semantic.outputs.new_release_version }}
       new_release_channel: ${{ steps.semantic.outputs.new_release_channel }}
-
+    steps:
       - name: Checkout Unity Algorand SDK
         uses: actions/checkout@v2
 
@@ -28,9 +28,9 @@ jobs:
       - name: Build .unitypackage
         uses: pCYSl5EDgo/create-unitypackage@v1
         with:
-          package-path: 'dist/unity-algorand-sdk.unitypackage'
-          include-files: 'Unity.AlgoSdk/packageMetaFiles'
-          project-folder: 'Unity.AlgoSdk'
+          package-path: "dist/unity-algorand-sdk.unitypackage"
+          include-files: "Unity.AlgoSdk/packageMetaFiles"
+          project-folder: "Unity.AlgoSdk"
 
       - name: Upload .unitypackage
         uses: actions/upload-artifact@v2
