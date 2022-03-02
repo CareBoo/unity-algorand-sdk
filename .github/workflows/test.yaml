@@ -49,7 +49,7 @@ jobs:
           restore-keys: |
             Library-${{ matrix.unityVersion }}-${{ matrix.targetPlatform }}-
             Library-${{ matrix.unityVersion }}-
-      - run: ./scripts/coverageAssemblyFilters
+      - run: ./scripts/coverageAssemblyFilters.sh
         id: assemblyFilters
       - uses: game-ci/unity-test-runner@v2
         id: tests

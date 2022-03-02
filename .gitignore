@@ -64,7 +64,8 @@ crashlytics-build.properties
 # mono crash reports
 mono_crash*
 
-# node modules
+# node modules / artifacts
+dist/
 node_modules/
 
 .DS_Store
