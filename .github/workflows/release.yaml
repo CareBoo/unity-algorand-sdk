@@ -137,30 +137,26 @@ jobs:
     needs: build_docs
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - name: Download Branch Docs site artifact
+        uses: actions/download-artifact@v1
         with:
-          lfs: true
-          ref: ${{ github.ref }}
+          name: _site_branch
+
+      - name: Deploy Docs Branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: _site_branch
+          output_dir: ${{ needs.build_docs.outputs.branch }}
 
       - name: Download Version Docs site artifact
         uses: actions/download-artifact@v1
         with:
           name: _site_version
 
-      - name: Download Branch Docs site artifact
-        uses: actions/download-artifact@v1
-        with:
-          name: _site_branch
-
-      - name: Prepare Docs Directory
-        run: |
-          mkdir docs
-          mv _site_version docs/${{ needs.build_docs.outputs.version }}
-          mv _site_branch docs/${{ needs.build_docs.outputs.branch }}
-
-      - name: Deploy Docs
+      - name: Deploy Docs Version
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+          publish_dir: _site_version
+          output_dir: ${{ needs.build_docs.outputs.version }}
