@@ -9,22 +9,19 @@ unitask_target="Unity.AlgoSdk/Assets/UniTask"
 
 for item in $algosdk_src/*
 do
-    cp -fRv "$item" $algosdk_target
+    cp -fRvL "$item" $algosdk_target
 done
 
 for item in $unitask_src/*
 do
-    cp -fRv "$item" $unitask_target
+    cp -fRvL "$item" $unitask_target
 done
 
 mkdir -p dist
 touch dist/packageMetaFiles
 
 echo "$algosdk_target.meta" >> dist/packageMetaFiles
-for metaFile in $algosdk_target/**/*.meta
-do
-    echo "$metaFile" >> dist/packageMetaFiles
-done
+find
 
 echo "$unitask_target.meta" >> dist/packageMetaFiles
 for metaFile in $unitask_target/**/*.meta
