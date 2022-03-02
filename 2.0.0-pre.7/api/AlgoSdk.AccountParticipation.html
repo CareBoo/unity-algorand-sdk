@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="">
+    <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -88,15 +88,13 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="AlgoSdk.AccountParticipation.html">AccountParticipation</a>&gt;</div>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.AccountParticipation.html">AccountParticipation</a>&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_AccountParticipation_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
-[Serializable]
-public struct AccountParticipation : IEquatable&lt;AccountParticipation&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct AccountParticipation</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -127,31 +125,6 @@ public struct AccountParticipation : IEquatable&lt;AccountParticipation&gt;</cod
   </table>
   
   
-  <h4 id="AlgoSdk_AccountParticipation_SelectionParticipationKey" data-uid="AlgoSdk.AccountParticipation.SelectionParticipationKey">SelectionParticipationKey</h4>
-  <div class="markdown level1 summary"><p>Selection public key (if any) currently registered for this round.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public VrfPubKey SelectionParticipationKey</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.VrfPubKey.html">VrfPubKey</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="AlgoSdk_AccountParticipation_VoteFirst" data-uid="AlgoSdk.AccountParticipation.VoteFirst">VoteFirst</h4>
   <div class="markdown level1 summary"><p>First round for which this participation is valid.</p>
 </div>
@@ -170,32 +143,7 @@ public struct AccountParticipation : IEquatable&lt;AccountParticipation&gt;</cod
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_AccountParticipation_VoteFirst" data-uid="AlgoSdk.AccountParticipation.VoteFirst">VoteFirst</h4>
-  <div class="markdown level1 summary"><p>First round for which this participation is valid.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong VoteFirst</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -220,32 +168,7 @@ public struct AccountParticipation : IEquatable&lt;AccountParticipation&gt;</cod
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_AccountParticipation_VoteKeyDilution" data-uid="AlgoSdk.AccountParticipation.VoteKeyDilution">VoteKeyDilution</h4>
-  <div class="markdown level1 summary"><p>Number of subkeys in each batch of participation keys.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong VoteKeyDilution</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -270,57 +193,7 @@ public struct AccountParticipation : IEquatable&lt;AccountParticipation&gt;</cod
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_AccountParticipation_VoteLast" data-uid="AlgoSdk.AccountParticipation.VoteLast">VoteLast</h4>
-  <div class="markdown level1 summary"><p>Last round for which this participation is valid.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong VoteLast</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_AccountParticipation_VoteParticipationKey" data-uid="AlgoSdk.AccountParticipation.VoteParticipationKey">VoteParticipationKey</h4>
-  <div class="markdown level1 summary"><p>Root participation public key (if any) currently registered for this round.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Ed25519.PublicKey VoteParticipationKey</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Ed25519.PublicKey</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -389,56 +262,14 @@ public struct AccountParticipation : IEquatable&lt;AccountParticipation&gt;</cod
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_AccountParticipation_Equals_" data-uid="AlgoSdk.AccountParticipation.Equals*"></a>
-  <h4 id="AlgoSdk_AccountParticipation_Equals_AlgoSdk_AccountParticipation_" data-uid="AlgoSdk.AccountParticipation.Equals(AlgoSdk.AccountParticipation)">Equals(AccountParticipation)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(AccountParticipation other)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.AccountParticipation.html">AccountParticipation</a></td>
-        <td><span class="parametername">other</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">System.IEquatable&lt;T&gt;</span>
+      <span class="xref">IEquatable&lt;&gt;</span>
   </div>
 </article>
           </div>

@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="">
+    <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -121,32 +121,6 @@
   </table>
   
   
-  <a id="AlgoSdk_IBlockRewards_FeeSink_" data-uid="AlgoSdk.IBlockRewards.FeeSink*"></a>
-  <h4 id="AlgoSdk_IBlockRewards_FeeSink" data-uid="AlgoSdk.IBlockRewards.FeeSink">FeeSink</h4>
-  <div class="markdown level1 summary"><p>[fees] accepts transaction fees, it can only spend to the incentive pool.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Address FeeSink { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="AlgoSdk_IBlockRewards_RewardsCalculationRound_" data-uid="AlgoSdk.IBlockRewards.RewardsCalculationRound*"></a>
   <h4 id="AlgoSdk_IBlockRewards_RewardsCalculationRound" data-uid="AlgoSdk.IBlockRewards.RewardsCalculationRound">RewardsCalculationRound</h4>
   <div class="markdown level1 summary"><p>[rwcalr] number of leftover MicroAlgos after the distribution of rewards-rate MicroAlgos for every reward unit in the next round.</p>
@@ -166,33 +140,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_IBlockRewards_RewardsCalculationRound_" data-uid="AlgoSdk.IBlockRewards.RewardsCalculationRound*"></a>
-  <h4 id="AlgoSdk_IBlockRewards_RewardsCalculationRound" data-uid="AlgoSdk.IBlockRewards.RewardsCalculationRound">RewardsCalculationRound</h4>
-  <div class="markdown level1 summary"><p>[rwcalr] number of leftover MicroAlgos after the distribution of rewards-rate MicroAlgos for every reward unit in the next round.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ulong RewardsCalculationRound { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -218,59 +166,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_IBlockRewards_RewardsLevel_" data-uid="AlgoSdk.IBlockRewards.RewardsLevel*"></a>
-  <h4 id="AlgoSdk_IBlockRewards_RewardsLevel" data-uid="AlgoSdk.IBlockRewards.RewardsLevel">RewardsLevel</h4>
-  <div class="markdown level1 summary"><p>[earn] How many rewards, in MicroAlgos, have been distributed to each RewardUnit of MicroAlgos since genesis.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ulong RewardsLevel { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_IBlockRewards_RewardsPool_" data-uid="AlgoSdk.IBlockRewards.RewardsPool*"></a>
-  <h4 id="AlgoSdk_IBlockRewards_RewardsPool" data-uid="AlgoSdk.IBlockRewards.RewardsPool">RewardsPool</h4>
-  <div class="markdown level1 summary"><p>[rwd] accepts periodic injections from the fee-sink and continually redistributes them as rewards.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Address RewardsPool { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -322,33 +218,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_IBlockRewards_RewardsRate_" data-uid="AlgoSdk.IBlockRewards.RewardsRate*"></a>
-  <h4 id="AlgoSdk_IBlockRewards_RewardsRate" data-uid="AlgoSdk.IBlockRewards.RewardsRate">RewardsRate</h4>
-  <div class="markdown level1 summary"><p>[rate] Number of new MicroAlgos added to the participation stake from rewards at the next round.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ulong RewardsRate { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -374,33 +244,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_IBlockRewards_RewardsResidue_" data-uid="AlgoSdk.IBlockRewards.RewardsResidue*"></a>
-  <h4 id="AlgoSdk_IBlockRewards_RewardsResidue" data-uid="AlgoSdk.IBlockRewards.RewardsResidue">RewardsResidue</h4>
-  <div class="markdown level1 summary"><p>[frac] Number of leftover MicroAlgos after the distribution of RewardsRate/rewardUnits MicroAlgos for every reward unit in the next round.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ulong RewardsResidue { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>

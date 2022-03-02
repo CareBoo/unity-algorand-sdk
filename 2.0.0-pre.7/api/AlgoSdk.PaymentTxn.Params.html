@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="">
+    <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -87,15 +87,13 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="AlgoSdk.PaymentTxn.Params.html">PaymentTxn.Params</a>&gt;</div>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.PaymentTxn.Params.html">PaymentTxn.Params</a>&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_PaymentTxn_Params_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
-[Serializable]
-public struct Params : IEquatable&lt;PaymentTxn.Params&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct Params</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -118,31 +116,7 @@ public struct Params : IEquatable&lt;PaymentTxn.Params&gt;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_PaymentTxn_Params_Amount" data-uid="AlgoSdk.PaymentTxn.Params.Amount">Amount</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong Amount</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -154,8 +128,7 @@ public struct Params : IEquatable&lt;PaymentTxn.Params&gt;</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[NonSerialized]
-public ulong CloseAmount</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong CloseAmount</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -167,32 +140,7 @@ public ulong CloseAmount</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_PaymentTxn_Params_CloseAmount" data-uid="AlgoSdk.PaymentTxn.Params.CloseAmount">CloseAmount</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[NonSerialized]
-public ulong CloseAmount</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -205,54 +153,6 @@ public ulong CloseAmount</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Address CloseRemainderTo</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_PaymentTxn_Params_CloseRemainderTo" data-uid="AlgoSdk.PaymentTxn.Params.CloseRemainderTo">CloseRemainderTo</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address CloseRemainderTo</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_PaymentTxn_Params_Receiver" data-uid="AlgoSdk.PaymentTxn.Params.Receiver">Receiver</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address Receiver</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -332,56 +232,14 @@ public ulong CloseAmount</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_PaymentTxn_Params_Equals_" data-uid="AlgoSdk.PaymentTxn.Params.Equals*"></a>
-  <h4 id="AlgoSdk_PaymentTxn_Params_Equals_AlgoSdk_PaymentTxn_Params_" data-uid="AlgoSdk.PaymentTxn.Params.Equals(AlgoSdk.PaymentTxn.Params)">Equals(PaymentTxn.Params)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(PaymentTxn.Params other)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.PaymentTxn.Params.html">PaymentTxn.Params</a></td>
-        <td><span class="parametername">other</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">System.IEquatable&lt;T&gt;</span>
+      <span class="xref">IEquatable&lt;&gt;</span>
   </div>
 </article>
           </div>

@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="">
+    <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -89,15 +89,13 @@
     <h5>Implements</h5>
     <div><a class="xref" href="AlgoSdk.IAssetTransferTxn.html">IAssetTransferTxn</a></div>
     <div><a class="xref" href="AlgoSdk.ITransaction.html">ITransaction</a></div>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="AlgoSdk.AssetTransferTxn.html">AssetTransferTxn</a>&gt;</div>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.AssetTransferTxn.html">AssetTransferTxn</a>&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_AssetTransferTxn_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
-[Serializable]
-public struct AssetTransferTxn : IAssetTransferTxn, ITransaction, IEquatable&lt;AssetTransferTxn&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct AssetTransferTxn : IAssetTransferTxn, ITransaction</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -121,32 +119,7 @@ public struct AssetTransferTxn : IAssetTransferTxn, ITransaction, IEquatable&lt;
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_AssetTransferTxn_AssetAmount_" data-uid="AlgoSdk.AssetTransferTxn.AssetAmount*"></a>
-  <h4 id="AlgoSdk_AssetTransferTxn_AssetAmount" data-uid="AlgoSdk.AssetTransferTxn.AssetAmount">AssetAmount</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong AssetAmount { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -160,56 +133,6 @@ public struct AssetTransferTxn : IAssetTransferTxn, ITransaction, IEquatable&lt;
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Address AssetCloseTo { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_AssetTransferTxn_AssetCloseTo_" data-uid="AlgoSdk.AssetTransferTxn.AssetCloseTo*"></a>
-  <h4 id="AlgoSdk_AssetTransferTxn_AssetCloseTo" data-uid="AlgoSdk.AssetTransferTxn.AssetCloseTo">AssetCloseTo</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address AssetCloseTo { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_AssetTransferTxn_AssetReceiver_" data-uid="AlgoSdk.AssetTransferTxn.AssetReceiver*"></a>
-  <h4 id="AlgoSdk_AssetTransferTxn_AssetReceiver" data-uid="AlgoSdk.AssetTransferTxn.AssetReceiver">AssetReceiver</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address AssetReceiver { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -278,31 +201,6 @@ public struct AssetTransferTxn : IAssetTransferTxn, ITransaction, IEquatable&lt;
   </table>
   
   
-  <a id="AlgoSdk_AssetTransferTxn_AssetSender_" data-uid="AlgoSdk.AssetTransferTxn.AssetSender*"></a>
-  <h4 id="AlgoSdk_AssetTransferTxn_AssetSender" data-uid="AlgoSdk.AssetTransferTxn.AssetSender">AssetSender</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address AssetSender { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="AlgoSdk_AssetTransferTxn_CloseAmount_" data-uid="AlgoSdk.AssetTransferTxn.CloseAmount*"></a>
   <h4 id="AlgoSdk_AssetTransferTxn_CloseAmount" data-uid="AlgoSdk.AssetTransferTxn.CloseAmount">CloseAmount</h4>
   <div class="markdown level1 summary"></div>
@@ -321,32 +219,7 @@ public struct AssetTransferTxn : IAssetTransferTxn, ITransaction, IEquatable&lt;
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_AssetTransferTxn_CloseAmount_" data-uid="AlgoSdk.AssetTransferTxn.CloseAmount*"></a>
-  <h4 id="AlgoSdk_AssetTransferTxn_CloseAmount" data-uid="AlgoSdk.AssetTransferTxn.CloseAmount">CloseAmount</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong CloseAmount { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -371,32 +244,7 @@ public struct AssetTransferTxn : IAssetTransferTxn, ITransaction, IEquatable&lt;
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_AssetTransferTxn_Fee_" data-uid="AlgoSdk.AssetTransferTxn.Fee*"></a>
-  <h4 id="AlgoSdk_AssetTransferTxn_Fee" data-uid="AlgoSdk.AssetTransferTxn.Fee">Fee</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong Fee { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -421,57 +269,7 @@ public struct AssetTransferTxn : IAssetTransferTxn, ITransaction, IEquatable&lt;
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_AssetTransferTxn_FirstValidRound_" data-uid="AlgoSdk.AssetTransferTxn.FirstValidRound*"></a>
-  <h4 id="AlgoSdk_AssetTransferTxn_FirstValidRound" data-uid="AlgoSdk.AssetTransferTxn.FirstValidRound">FirstValidRound</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong FirstValidRound { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_AssetTransferTxn_GenesisHash_" data-uid="AlgoSdk.AssetTransferTxn.GenesisHash*"></a>
-  <h4 id="AlgoSdk_AssetTransferTxn_GenesisHash" data-uid="AlgoSdk.AssetTransferTxn.GenesisHash">GenesisHash</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GenesisHash GenesisHash { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.GenesisHash.html">GenesisHash</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -528,56 +326,6 @@ public struct AssetTransferTxn : IAssetTransferTxn, ITransaction, IEquatable&lt;
   </table>
   
   
-  <a id="AlgoSdk_AssetTransferTxn_GenesisId_" data-uid="AlgoSdk.AssetTransferTxn.GenesisId*"></a>
-  <h4 id="AlgoSdk_AssetTransferTxn_GenesisId" data-uid="AlgoSdk.AssetTransferTxn.GenesisId">GenesisId</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FixedString32Bytes GenesisId { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">FixedString32Bytes</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_AssetTransferTxn_Group_" data-uid="AlgoSdk.AssetTransferTxn.Group*"></a>
-  <h4 id="AlgoSdk_AssetTransferTxn_Group" data-uid="AlgoSdk.AssetTransferTxn.Group">Group</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Sha512_256_Hash Group { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Sha512_256_Hash</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="AlgoSdk_AssetTransferTxn_Group_" data-uid="AlgoSdk.AssetTransferTxn.Group*"></a>
   <h4 id="AlgoSdk_AssetTransferTxn_Group" data-uid="AlgoSdk.AssetTransferTxn.Group">Group</h4>
   <div class="markdown level1 summary"></div>
@@ -621,57 +369,7 @@ public struct AssetTransferTxn : IAssetTransferTxn, ITransaction, IEquatable&lt;
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_AssetTransferTxn_LastValidRound_" data-uid="AlgoSdk.AssetTransferTxn.LastValidRound*"></a>
-  <h4 id="AlgoSdk_AssetTransferTxn_LastValidRound" data-uid="AlgoSdk.AssetTransferTxn.LastValidRound">LastValidRound</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong LastValidRound { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_AssetTransferTxn_Lease_" data-uid="AlgoSdk.AssetTransferTxn.Lease*"></a>
-  <h4 id="AlgoSdk_AssetTransferTxn_Lease" data-uid="AlgoSdk.AssetTransferTxn.Lease">Lease</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Sha512_256_Hash Lease { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Sha512_256_Hash</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -721,32 +419,7 @@ public struct AssetTransferTxn : IAssetTransferTxn, ITransaction, IEquatable&lt;
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Byte</span>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_AssetTransferTxn_Note_" data-uid="AlgoSdk.AssetTransferTxn.Note*"></a>
-  <h4 id="AlgoSdk_AssetTransferTxn_Note" data-uid="AlgoSdk.AssetTransferTxn.Note">Note</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] Note { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Byte</span>[]</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -760,56 +433,6 @@ public struct AssetTransferTxn : IAssetTransferTxn, ITransaction, IEquatable&lt;
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Address RekeyTo { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_AssetTransferTxn_RekeyTo_" data-uid="AlgoSdk.AssetTransferTxn.RekeyTo*"></a>
-  <h4 id="AlgoSdk_AssetTransferTxn_RekeyTo" data-uid="AlgoSdk.AssetTransferTxn.RekeyTo">RekeyTo</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address RekeyTo { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_AssetTransferTxn_Sender_" data-uid="AlgoSdk.AssetTransferTxn.Sender*"></a>
-  <h4 id="AlgoSdk_AssetTransferTxn_Sender" data-uid="AlgoSdk.AssetTransferTxn.Sender">Sender</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address Sender { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -878,31 +501,6 @@ public struct AssetTransferTxn : IAssetTransferTxn, ITransaction, IEquatable&lt;
   </table>
   
   
-  <a id="AlgoSdk_AssetTransferTxn_TransactionType_" data-uid="AlgoSdk.AssetTransferTxn.TransactionType*"></a>
-  <h4 id="AlgoSdk_AssetTransferTxn_TransactionType" data-uid="AlgoSdk.AssetTransferTxn.TransactionType">TransactionType</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TransactionType TransactionType { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.TransactionType.html">TransactionType</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="AlgoSdk_AssetTransferTxn_XferAsset_" data-uid="AlgoSdk.AssetTransferTxn.XferAsset*"></a>
   <h4 id="AlgoSdk_AssetTransferTxn_XferAsset" data-uid="AlgoSdk.AssetTransferTxn.XferAsset">XferAsset</h4>
   <div class="markdown level1 summary"></div>
@@ -921,32 +519,7 @@ public struct AssetTransferTxn : IAssetTransferTxn, ITransaction, IEquatable&lt;
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_AssetTransferTxn_XferAsset_" data-uid="AlgoSdk.AssetTransferTxn.XferAsset*"></a>
-  <h4 id="AlgoSdk_AssetTransferTxn_XferAsset" data-uid="AlgoSdk.AssetTransferTxn.XferAsset">XferAsset</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong XferAsset { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -982,60 +555,6 @@ public struct AssetTransferTxn : IAssetTransferTxn, ITransaction, IEquatable&lt;
   </table>
   
   
-  <a id="AlgoSdk_AssetTransferTxn_CopyFrom_" data-uid="AlgoSdk.AssetTransferTxn.CopyFrom*"></a>
-  <h4 id="AlgoSdk_AssetTransferTxn_CopyFrom_AlgoSdk_Transaction_" data-uid="AlgoSdk.AssetTransferTxn.CopyFrom(AlgoSdk.Transaction)">CopyFrom(Transaction)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void CopyFrom(Transaction transaction)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Transaction.html">Transaction</a></td>
-        <td><span class="parametername">transaction</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_AssetTransferTxn_CopyTo_" data-uid="AlgoSdk.AssetTransferTxn.CopyTo*"></a>
-  <h4 id="AlgoSdk_AssetTransferTxn_CopyTo_AlgoSdk_Transaction__" data-uid="AlgoSdk.AssetTransferTxn.CopyTo(AlgoSdk.Transaction@)">CopyTo(ref Transaction)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void CopyTo(ref Transaction transaction)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Transaction.html">Transaction</a></td>
-        <td><span class="parametername">transaction</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="AlgoSdk_AssetTransferTxn_CopyTo_" data-uid="AlgoSdk.AssetTransferTxn.CopyTo*"></a>
   <h4 id="AlgoSdk_AssetTransferTxn_CopyTo_AlgoSdk_Transaction__" data-uid="AlgoSdk.AssetTransferTxn.CopyTo(AlgoSdk.Transaction@)">CopyTo(ref Transaction)</h4>
   <div class="markdown level1 summary"></div>
@@ -1098,49 +617,7 @@ public struct AssetTransferTxn : IAssetTransferTxn, ITransaction, IEquatable&lt;
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_AssetTransferTxn_Equals_" data-uid="AlgoSdk.AssetTransferTxn.Equals*"></a>
-  <h4 id="AlgoSdk_AssetTransferTxn_Equals_AlgoSdk_AssetTransferTxn_" data-uid="AlgoSdk.AssetTransferTxn.Equals(AlgoSdk.AssetTransferTxn)">Equals(AssetTransferTxn)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(AssetTransferTxn other)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.AssetTransferTxn.html">AssetTransferTxn</a></td>
-        <td><span class="parametername">other</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1153,7 +630,7 @@ public struct AssetTransferTxn : IAssetTransferTxn, ITransaction, IEquatable&lt;
       <a class="xref" href="AlgoSdk.ITransaction.html">ITransaction</a>
   </div>
   <div>
-      <span class="xref">System.IEquatable&lt;T&gt;</span>
+      <span class="xref">IEquatable&lt;&gt;</span>
   </div>
 </article>
           </div>

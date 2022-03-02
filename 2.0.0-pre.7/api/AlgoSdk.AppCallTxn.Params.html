@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="">
+    <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -87,15 +87,13 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="AlgoSdk.AppCallTxn.Params.html">AppCallTxn.Params</a>&gt;</div>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.AppCallTxn.Params.html">AppCallTxn.Params</a>&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_AppCallTxn_Params_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
-[Serializable]
-public struct Params : IEquatable&lt;AppCallTxn.Params&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct Params</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -125,54 +123,6 @@ public struct Params : IEquatable&lt;AppCallTxn.Params&gt;</code></pre>
   </table>
   
   
-  <h4 id="AlgoSdk_AppCallTxn_Params_Accounts" data-uid="AlgoSdk.AppCallTxn.Params.Accounts">Accounts</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address[] Accounts</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Address.html">Address</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_AppCallTxn_Params_AppArguments" data-uid="AlgoSdk.AppCallTxn.Params.AppArguments">AppArguments</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CompiledTeal AppArguments</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.CompiledTeal.html">CompiledTeal</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="AlgoSdk_AppCallTxn_Params_AppArguments" data-uid="AlgoSdk.AppCallTxn.Params.AppArguments">AppArguments</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -214,31 +164,7 @@ public struct Params : IEquatable&lt;AppCallTxn.Params&gt;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_AppCallTxn_Params_ApplicationId" data-uid="AlgoSdk.AppCallTxn.Params.ApplicationId">ApplicationId</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong ApplicationId</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -251,54 +177,6 @@ public struct Params : IEquatable&lt;AppCallTxn.Params&gt;</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public CompiledTeal ApprovalProgram</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.CompiledTeal.html">CompiledTeal</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_AppCallTxn_Params_ApprovalProgram" data-uid="AlgoSdk.AppCallTxn.Params.ApprovalProgram">ApprovalProgram</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CompiledTeal ApprovalProgram</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.CompiledTeal.html">CompiledTeal</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_AppCallTxn_Params_ClearStateProgram" data-uid="AlgoSdk.AppCallTxn.Params.ClearStateProgram">ClearStateProgram</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CompiledTeal ClearStateProgram</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -358,31 +236,7 @@ public struct Params : IEquatable&lt;AppCallTxn.Params&gt;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_AppCallTxn_Params_ExtraProgramPages" data-uid="AlgoSdk.AppCallTxn.Params.ExtraProgramPages">ExtraProgramPages</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong ExtraProgramPages</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -406,31 +260,7 @@ public struct Params : IEquatable&lt;AppCallTxn.Params&gt;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_AppCallTxn_Params_ForeignApps" data-uid="AlgoSdk.AppCallTxn.Params.ForeignApps">ForeignApps</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong[] ForeignApps</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span>[]</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -454,55 +284,7 @@ public struct Params : IEquatable&lt;AppCallTxn.Params&gt;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_AppCallTxn_Params_ForeignAssets" data-uid="AlgoSdk.AppCallTxn.Params.ForeignAssets">ForeignAssets</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong[] ForeignAssets</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_AppCallTxn_Params_GlobalStateSchema" data-uid="AlgoSdk.AppCallTxn.Params.GlobalStateSchema">GlobalStateSchema</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StateSchema GlobalStateSchema</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.StateSchema.html">StateSchema</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -551,54 +333,6 @@ public struct Params : IEquatable&lt;AppCallTxn.Params&gt;</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="AlgoSdk.StateSchema.html">StateSchema</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_AppCallTxn_Params_LocalStateSchema" data-uid="AlgoSdk.AppCallTxn.Params.LocalStateSchema">LocalStateSchema</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StateSchema LocalStateSchema</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.StateSchema.html">StateSchema</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_AppCallTxn_Params_OnComplete" data-uid="AlgoSdk.AppCallTxn.Params.OnComplete">OnComplete</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OnCompletion OnComplete</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.OnCompletion.html">OnCompletion</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -666,56 +400,14 @@ public struct Params : IEquatable&lt;AppCallTxn.Params&gt;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_AppCallTxn_Params_Equals_" data-uid="AlgoSdk.AppCallTxn.Params.Equals*"></a>
-  <h4 id="AlgoSdk_AppCallTxn_Params_Equals_AlgoSdk_AppCallTxn_Params_" data-uid="AlgoSdk.AppCallTxn.Params.Equals(AlgoSdk.AppCallTxn.Params)">Equals(AppCallTxn.Params)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(AppCallTxn.Params other)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.AppCallTxn.Params.html">AppCallTxn.Params</a></td>
-        <td><span class="parametername">other</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">System.IEquatable&lt;T&gt;</span>
+      <span class="xref">IEquatable&lt;&gt;</span>
   </div>
 </article>
           </div>

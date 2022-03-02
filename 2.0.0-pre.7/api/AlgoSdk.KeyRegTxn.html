@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="">
+    <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -89,15 +89,13 @@
     <h5>Implements</h5>
     <div><a class="xref" href="AlgoSdk.IKeyRegTxn.html">IKeyRegTxn</a></div>
     <div><a class="xref" href="AlgoSdk.ITransaction.html">ITransaction</a></div>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="AlgoSdk.KeyRegTxn.html">KeyRegTxn</a>&gt;</div>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.KeyRegTxn.html">KeyRegTxn</a>&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_KeyRegTxn_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
-[Serializable]
-public struct KeyRegTxn : IKeyRegTxn, ITransaction, IEquatable&lt;KeyRegTxn&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct KeyRegTxn : IKeyRegTxn, ITransaction</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -128,31 +126,6 @@ public struct KeyRegTxn : IKeyRegTxn, ITransaction, IEquatable&lt;KeyRegTxn&gt;<
   </table>
   
   
-  <a id="AlgoSdk_KeyRegTxn_AccountParticipation_" data-uid="AlgoSdk.KeyRegTxn.AccountParticipation*"></a>
-  <h4 id="AlgoSdk_KeyRegTxn_AccountParticipation" data-uid="AlgoSdk.KeyRegTxn.AccountParticipation">AccountParticipation</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AccountParticipation AccountParticipation { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.AccountParticipation.html">AccountParticipation</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="AlgoSdk_KeyRegTxn_Fee_" data-uid="AlgoSdk.KeyRegTxn.Fee*"></a>
   <h4 id="AlgoSdk_KeyRegTxn_Fee" data-uid="AlgoSdk.KeyRegTxn.Fee">Fee</h4>
   <div class="markdown level1 summary"></div>
@@ -171,32 +144,7 @@ public struct KeyRegTxn : IKeyRegTxn, ITransaction, IEquatable&lt;KeyRegTxn&gt;<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_KeyRegTxn_Fee_" data-uid="AlgoSdk.KeyRegTxn.Fee*"></a>
-  <h4 id="AlgoSdk_KeyRegTxn_Fee" data-uid="AlgoSdk.KeyRegTxn.Fee">Fee</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong Fee { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -221,57 +169,7 @@ public struct KeyRegTxn : IKeyRegTxn, ITransaction, IEquatable&lt;KeyRegTxn&gt;<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_KeyRegTxn_FirstValidRound_" data-uid="AlgoSdk.KeyRegTxn.FirstValidRound*"></a>
-  <h4 id="AlgoSdk_KeyRegTxn_FirstValidRound" data-uid="AlgoSdk.KeyRegTxn.FirstValidRound">FirstValidRound</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong FirstValidRound { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_KeyRegTxn_GenesisHash_" data-uid="AlgoSdk.KeyRegTxn.GenesisHash*"></a>
-  <h4 id="AlgoSdk_KeyRegTxn_GenesisHash" data-uid="AlgoSdk.KeyRegTxn.GenesisHash">GenesisHash</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GenesisHash GenesisHash { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.GenesisHash.html">GenesisHash</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -328,56 +226,6 @@ public struct KeyRegTxn : IKeyRegTxn, ITransaction, IEquatable&lt;KeyRegTxn&gt;<
   </table>
   
   
-  <a id="AlgoSdk_KeyRegTxn_GenesisId_" data-uid="AlgoSdk.KeyRegTxn.GenesisId*"></a>
-  <h4 id="AlgoSdk_KeyRegTxn_GenesisId" data-uid="AlgoSdk.KeyRegTxn.GenesisId">GenesisId</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FixedString32Bytes GenesisId { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">FixedString32Bytes</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_KeyRegTxn_Group_" data-uid="AlgoSdk.KeyRegTxn.Group*"></a>
-  <h4 id="AlgoSdk_KeyRegTxn_Group" data-uid="AlgoSdk.KeyRegTxn.Group">Group</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Sha512_256_Hash Group { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Sha512_256_Hash</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="AlgoSdk_KeyRegTxn_Group_" data-uid="AlgoSdk.KeyRegTxn.Group*"></a>
   <h4 id="AlgoSdk_KeyRegTxn_Group" data-uid="AlgoSdk.KeyRegTxn.Group">Group</h4>
   <div class="markdown level1 summary"></div>
@@ -421,57 +269,7 @@ public struct KeyRegTxn : IKeyRegTxn, ITransaction, IEquatable&lt;KeyRegTxn&gt;<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_KeyRegTxn_LastValidRound_" data-uid="AlgoSdk.KeyRegTxn.LastValidRound*"></a>
-  <h4 id="AlgoSdk_KeyRegTxn_LastValidRound" data-uid="AlgoSdk.KeyRegTxn.LastValidRound">LastValidRound</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong LastValidRound { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_KeyRegTxn_Lease_" data-uid="AlgoSdk.KeyRegTxn.Lease*"></a>
-  <h4 id="AlgoSdk_KeyRegTxn_Lease" data-uid="AlgoSdk.KeyRegTxn.Lease">Lease</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Sha512_256_Hash Lease { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Sha512_256_Hash</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -521,32 +319,7 @@ public struct KeyRegTxn : IKeyRegTxn, ITransaction, IEquatable&lt;KeyRegTxn&gt;<
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_KeyRegTxn_NonParticipation_" data-uid="AlgoSdk.KeyRegTxn.NonParticipation*"></a>
-  <h4 id="AlgoSdk_KeyRegTxn_NonParticipation" data-uid="AlgoSdk.KeyRegTxn.NonParticipation">NonParticipation</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Optional&lt;bool&gt; NonParticipation { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -571,57 +344,7 @@ public struct KeyRegTxn : IKeyRegTxn, ITransaction, IEquatable&lt;KeyRegTxn&gt;<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Byte</span>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_KeyRegTxn_Note_" data-uid="AlgoSdk.KeyRegTxn.Note*"></a>
-  <h4 id="AlgoSdk_KeyRegTxn_Note" data-uid="AlgoSdk.KeyRegTxn.Note">Note</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] Note { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Byte</span>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_KeyRegTxn_RekeyTo_" data-uid="AlgoSdk.KeyRegTxn.RekeyTo*"></a>
-  <h4 id="AlgoSdk_KeyRegTxn_RekeyTo" data-uid="AlgoSdk.KeyRegTxn.RekeyTo">RekeyTo</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address RekeyTo { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -678,56 +401,6 @@ public struct KeyRegTxn : IKeyRegTxn, ITransaction, IEquatable&lt;KeyRegTxn&gt;<
   </table>
   
   
-  <a id="AlgoSdk_KeyRegTxn_SelectionParticipationKey_" data-uid="AlgoSdk.KeyRegTxn.SelectionParticipationKey*"></a>
-  <h4 id="AlgoSdk_KeyRegTxn_SelectionParticipationKey" data-uid="AlgoSdk.KeyRegTxn.SelectionParticipationKey">SelectionParticipationKey</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public VrfPubKey SelectionParticipationKey { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.VrfPubKey.html">VrfPubKey</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_KeyRegTxn_Sender_" data-uid="AlgoSdk.KeyRegTxn.Sender*"></a>
-  <h4 id="AlgoSdk_KeyRegTxn_Sender" data-uid="AlgoSdk.KeyRegTxn.Sender">Sender</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address Sender { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="AlgoSdk_KeyRegTxn_Sender_" data-uid="AlgoSdk.KeyRegTxn.Sender*"></a>
   <h4 id="AlgoSdk_KeyRegTxn_Sender" data-uid="AlgoSdk.KeyRegTxn.Sender">Sender</h4>
   <div class="markdown level1 summary"></div>
@@ -778,31 +451,6 @@ public struct KeyRegTxn : IKeyRegTxn, ITransaction, IEquatable&lt;KeyRegTxn&gt;<
   </table>
   
   
-  <a id="AlgoSdk_KeyRegTxn_TransactionType_" data-uid="AlgoSdk.KeyRegTxn.TransactionType*"></a>
-  <h4 id="AlgoSdk_KeyRegTxn_TransactionType" data-uid="AlgoSdk.KeyRegTxn.TransactionType">TransactionType</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TransactionType TransactionType { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.TransactionType.html">TransactionType</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="AlgoSdk_KeyRegTxn_VoteFirst_" data-uid="AlgoSdk.KeyRegTxn.VoteFirst*"></a>
   <h4 id="AlgoSdk_KeyRegTxn_VoteFirst" data-uid="AlgoSdk.KeyRegTxn.VoteFirst">VoteFirst</h4>
   <div class="markdown level1 summary"></div>
@@ -821,32 +469,7 @@ public struct KeyRegTxn : IKeyRegTxn, ITransaction, IEquatable&lt;KeyRegTxn&gt;<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_KeyRegTxn_VoteFirst_" data-uid="AlgoSdk.KeyRegTxn.VoteFirst*"></a>
-  <h4 id="AlgoSdk_KeyRegTxn_VoteFirst" data-uid="AlgoSdk.KeyRegTxn.VoteFirst">VoteFirst</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong VoteFirst { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -871,32 +494,7 @@ public struct KeyRegTxn : IKeyRegTxn, ITransaction, IEquatable&lt;KeyRegTxn&gt;<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_KeyRegTxn_VoteKeyDilution_" data-uid="AlgoSdk.KeyRegTxn.VoteKeyDilution*"></a>
-  <h4 id="AlgoSdk_KeyRegTxn_VoteKeyDilution" data-uid="AlgoSdk.KeyRegTxn.VoteKeyDilution">VoteKeyDilution</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong VoteKeyDilution { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -921,57 +519,7 @@ public struct KeyRegTxn : IKeyRegTxn, ITransaction, IEquatable&lt;KeyRegTxn&gt;<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_KeyRegTxn_VoteLast_" data-uid="AlgoSdk.KeyRegTxn.VoteLast*"></a>
-  <h4 id="AlgoSdk_KeyRegTxn_VoteLast" data-uid="AlgoSdk.KeyRegTxn.VoteLast">VoteLast</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong VoteLast { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_KeyRegTxn_VoteParticipationKey_" data-uid="AlgoSdk.KeyRegTxn.VoteParticipationKey*"></a>
-  <h4 id="AlgoSdk_KeyRegTxn_VoteParticipationKey" data-uid="AlgoSdk.KeyRegTxn.VoteParticipationKey">VoteParticipationKey</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Ed25519.PublicKey VoteParticipationKey { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Ed25519.PublicKey</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1032,60 +580,6 @@ public struct KeyRegTxn : IKeyRegTxn, ITransaction, IEquatable&lt;KeyRegTxn&gt;<
   </table>
   
   
-  <a id="AlgoSdk_KeyRegTxn_CopyFrom_" data-uid="AlgoSdk.KeyRegTxn.CopyFrom*"></a>
-  <h4 id="AlgoSdk_KeyRegTxn_CopyFrom_AlgoSdk_Transaction_" data-uid="AlgoSdk.KeyRegTxn.CopyFrom(AlgoSdk.Transaction)">CopyFrom(Transaction)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void CopyFrom(Transaction transaction)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Transaction.html">Transaction</a></td>
-        <td><span class="parametername">transaction</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_KeyRegTxn_CopyTo_" data-uid="AlgoSdk.KeyRegTxn.CopyTo*"></a>
-  <h4 id="AlgoSdk_KeyRegTxn_CopyTo_AlgoSdk_Transaction__" data-uid="AlgoSdk.KeyRegTxn.CopyTo(AlgoSdk.Transaction@)">CopyTo(ref Transaction)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void CopyTo(ref Transaction transaction)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Transaction.html">Transaction</a></td>
-        <td><span class="parametername">transaction</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="AlgoSdk_KeyRegTxn_CopyTo_" data-uid="AlgoSdk.KeyRegTxn.CopyTo*"></a>
   <h4 id="AlgoSdk_KeyRegTxn_CopyTo_AlgoSdk_Transaction__" data-uid="AlgoSdk.KeyRegTxn.CopyTo(AlgoSdk.Transaction@)">CopyTo(ref Transaction)</h4>
   <div class="markdown level1 summary"></div>
@@ -1148,49 +642,7 @@ public struct KeyRegTxn : IKeyRegTxn, ITransaction, IEquatable&lt;KeyRegTxn&gt;<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_KeyRegTxn_Equals_" data-uid="AlgoSdk.KeyRegTxn.Equals*"></a>
-  <h4 id="AlgoSdk_KeyRegTxn_Equals_AlgoSdk_KeyRegTxn_" data-uid="AlgoSdk.KeyRegTxn.Equals(AlgoSdk.KeyRegTxn)">Equals(KeyRegTxn)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(KeyRegTxn other)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.KeyRegTxn.html">KeyRegTxn</a></td>
-        <td><span class="parametername">other</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1203,7 +655,7 @@ public struct KeyRegTxn : IKeyRegTxn, ITransaction, IEquatable&lt;KeyRegTxn&gt;<
       <a class="xref" href="AlgoSdk.ITransaction.html">ITransaction</a>
   </div>
   <div>
-      <span class="xref">System.IEquatable&lt;T&gt;</span>
+      <span class="xref">IEquatable&lt;&gt;</span>
   </div>
 </article>
           </div>

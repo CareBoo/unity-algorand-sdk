@@ -10,14 +10,14 @@
     <meta name="title" content="Unity Algorand SDK | Unity Algorand SDK ">
     <meta name="generator" content="docfx 2.59.0.0">
     
-    <link rel="shortcut icon" href="../resources/favicon.png">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="">
+    <link rel="shortcut icon" href="resources/favicon.png">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
-    <meta property="docfx:rel" content="../">
+    <meta property="docfx:rel" content="">
     <meta property="docfx:newtab" content="true">
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
@@ -34,8 +34,8 @@
                 <span class="icon-bar"></span>
               </button>
               
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="resources/logo.svg" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -67,14 +67,7 @@
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
-        </div>
-        <div class="article row grid-right">
+        <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="unity-algorand-sdk">Unity Algorand SDK</h1>
@@ -82,16 +75,44 @@
 <p><a href="https://github.com/CareBoo/unity-algorand-sdk/actions/workflows/test.yaml"><img src="https://github.com/CareBoo/unity-algorand-sdk/actions/workflows/test.yaml/badge.svg" alt="Test Status"></a> <a href="https://openupm.com/packages/com.careboo.unity-algorand-sdk/"><img src="https://img.shields.io/npm/v/com.careboo.unity-algorand-sdk?label=openupm&amp;registry_uri=https://package.openupm.com" alt="openupm"></a> <a href="http://commitizen.github.io/cz-cli/"><img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" alt="Commitizen friendly"></a></p>
 <div class="CAUTION"><h5>Caution</h5><p>This package has not been audited and isn&#39;t suitable for production use.</p>
 </div>
-<p>Integrate Algorand blockchain services into your game.</p>
-<p>Supported Build Targets:</p>
-<ul>
-<li>[x] Windows</li>
-<li>[x] Mac OS</li>
-<li>[x] Linux</li>
-<li>[x] Android</li>
-<li>[x] iOS</li>
-<li>[x] WebGL</li>
-</ul>
+<p><a href="https://www.algorand.com/">Algorand</a> is a Pure Proof-of-Stake blockchain overseen by the Algorand Foundation.
+This <a href="https://unity.com/">Unity software</a> package allows you to create and sign transactions, use Algorand&#39;s
+<a href="https://developer.algorand.org/docs/rest-apis/restendpoints/">REST APIs</a>,
+and connect to any Algorand wallet supporting <a href="https://developer.algorand.org/docs/get-details/walletconnect/">WalletConnect</a>.</p>
+<h2 id="supported-targets">Supported Targets</h2>
+<table>
+<thead>
+<tr>
+<th>Unity Version</th>
+<th>Windows</th>
+<th>Mac OS</th>
+<th>Linux</th>
+<th>Android</th>
+<th>iOS</th>
+<th>WebGL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2020.3</td>
+<td><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td><span class="emoji" shortcode="white_check_mark">✅</span></td>
+</tr>
+<tr>
+<td>2021.2</td>
+<td><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td><span class="emoji" shortcode="white_check_mark">✅</span></td>
+</tr>
+</tbody>
+</table>
 <h2 id="installation">Installation</h2>
 <p>This SDK is provided as a UPM package in the following locations:</p>
 <ul>
@@ -127,13 +148,11 @@ Scopes:
 <h3 id="unity-asset-store">Unity Asset Store</h3>
 <p>This SDK will soon be <a href="https://u3d.as/2GBr">available in the Unity Asset Store</a>.</p>
 <h2 id="getting-started">Getting Started</h2>
-<p>The <a href="https://careboo.github.io/unity-algorand-sdk/main/">Manual</a> is the best place to start.
-Check out the <a href="https://careboo.github.io/unity-algorand-sdk/main/manual/quickstart.html">Quickstart Guide</a>.</p>
-<p>There&#39;s a Demo game you can try out in the <a href="https://github.com/CareBoo/unity-algorand-sdk/tree/demo">demo branch</a>.</p>
-<div class="NOTE"><h5>Note</h5><p>The documentation is generated per release branch and version. The documentation for a specific version/branch
+<p>The <a href="Documentation~/quickstart.md">Quickstart Guide</a> is the best place to start. Documentation is
+generated per release branch and version. The documentation for a specific version or branch
 can be found at <code>https://careboo.github.io/unity-algorand-sdk/{version}/</code>, e.g.
-<a href="https://careboo.github.io/unity-algorand-sdk/1.0.0-pre.3/">https://careboo.github.io/unity-algorand-sdk/1.0.0-pre.3/</a></p>
-</div>
+<a href="https://careboo.github.io/unity-algorand-sdk/main/">https://careboo.github.io/unity-algorand-sdk/main/</a>.</p>
+<p>There&#39;s a Demo game you can try out in the <a href="https://github.com/CareBoo/unity-algorand-sdk/tree/demo">demo branch</a>.</p>
 </article>
           </div>
           
@@ -142,7 +161,7 @@ can be found at <code>https://careboo.github.io/unity-algorand-sdk/{version}/</c
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/CareBoo/unity-algorand-sdk/blob/main/Documentation~/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/CareBoo/unity-algorand-sdk/blob/main/.docfx/index.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -169,8 +188,8 @@ can be found at <code>https://careboo.github.io/unity-algorand-sdk/{version}/</c
       </footer>
     </div>
     
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
   </body>
 </html>

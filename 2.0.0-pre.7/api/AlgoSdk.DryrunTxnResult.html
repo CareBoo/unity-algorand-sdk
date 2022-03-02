@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="">
+    <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -88,15 +88,13 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="AlgoSdk.DryrunTxnResult.html">DryrunTxnResult</a>&gt;</div>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.DryrunTxnResult.html">DryrunTxnResult</a>&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_DryrunTxnResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
-[Serializable]
-public struct DryrunTxnResult : IEquatable&lt;DryrunTxnResult&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct DryrunTxnResult</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -126,54 +124,6 @@ public struct DryrunTxnResult : IEquatable&lt;DryrunTxnResult&gt;</code></pre>
   </table>
   
   
-  <h4 id="AlgoSdk_DryrunTxnResult_AppCallMessages" data-uid="AlgoSdk.DryrunTxnResult.AppCallMessages">AppCallMessages</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FixedString128Bytes[] AppCallMessages</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">FixedString128Bytes</span>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_DryrunTxnResult_AppCallTrace" data-uid="AlgoSdk.DryrunTxnResult.AppCallTrace">AppCallTrace</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DryrunState[] AppCallTrace</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.DryrunState.html">DryrunState</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="AlgoSdk_DryrunTxnResult_AppCallTrace" data-uid="AlgoSdk.DryrunTxnResult.AppCallTrace">AppCallTrace</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -216,57 +166,7 @@ public struct DryrunTxnResult : IEquatable&lt;DryrunTxnResult&gt;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_DryrunTxnResult_Cost" data-uid="AlgoSdk.DryrunTxnResult.Cost">Cost</h4>
-  <div class="markdown level1 summary"><p>Execution cost of app call transaction</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong Cost</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_DryrunTxnResult_Disassembly" data-uid="AlgoSdk.DryrunTxnResult.Disassembly">Disassembly</h4>
-  <div class="markdown level1 summary"><p>Disassembled program line by line.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FixedString128Bytes[] Disassembly</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">FixedString128Bytes</span>[]</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -322,54 +222,6 @@ public struct DryrunTxnResult : IEquatable&lt;DryrunTxnResult&gt;</code></pre>
   </table>
   
   
-  <h4 id="AlgoSdk_DryrunTxnResult_GlobalDelta" data-uid="AlgoSdk.DryrunTxnResult.GlobalDelta">GlobalDelta</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EvalDeltaKeyValue[] GlobalDelta</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.EvalDeltaKeyValue.html">EvalDeltaKeyValue</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_DryrunTxnResult_LocalDeltas" data-uid="AlgoSdk.DryrunTxnResult.LocalDeltas">LocalDeltas</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AccountStateDelta[] LocalDeltas</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.AccountStateDelta.html">AccountStateDelta</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="AlgoSdk_DryrunTxnResult_LocalDeltas" data-uid="AlgoSdk.DryrunTxnResult.LocalDeltas">LocalDeltas</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -412,54 +264,6 @@ public struct DryrunTxnResult : IEquatable&lt;DryrunTxnResult&gt;</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">FixedString128Bytes</span>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_DryrunTxnResult_LogicSigMessages" data-uid="AlgoSdk.DryrunTxnResult.LogicSigMessages">LogicSigMessages</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FixedString128Bytes[] LogicSigMessages</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">FixedString128Bytes</span>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_DryrunTxnResult_LogicSigTrace" data-uid="AlgoSdk.DryrunTxnResult.LogicSigTrace">LogicSigTrace</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DryrunState[] LogicSigTrace</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.DryrunState.html">DryrunState</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -527,56 +331,14 @@ public struct DryrunTxnResult : IEquatable&lt;DryrunTxnResult&gt;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_DryrunTxnResult_Equals_" data-uid="AlgoSdk.DryrunTxnResult.Equals*"></a>
-  <h4 id="AlgoSdk_DryrunTxnResult_Equals_AlgoSdk_DryrunTxnResult_" data-uid="AlgoSdk.DryrunTxnResult.Equals(AlgoSdk.DryrunTxnResult)">Equals(DryrunTxnResult)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(DryrunTxnResult other)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.DryrunTxnResult.html">DryrunTxnResult</a></td>
-        <td><span class="parametername">other</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">System.IEquatable&lt;T&gt;</span>
+      <span class="xref">IEquatable&lt;&gt;</span>
   </div>
 </article>
           </div>

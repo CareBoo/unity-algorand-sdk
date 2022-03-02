@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="">
+    <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -87,16 +87,14 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="AlgoSdk.BlockUpgradeVote.html">BlockUpgradeVote</a>&gt;</div>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.BlockUpgradeVote.html">BlockUpgradeVote</a>&gt;</div>
     <div><a class="xref" href="AlgoSdk.IBlockUpgradeVote.html">IBlockUpgradeVote</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_BlockUpgradeVote_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
-[Serializable]
-public struct BlockUpgradeVote : IEquatable&lt;BlockUpgradeVote&gt;, IBlockUpgradeVote</code></pre>
+    <pre><code class="lang-csharp hljs">public struct BlockUpgradeVote : IBlockUpgradeVote</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -120,32 +118,7 @@ public struct BlockUpgradeVote : IEquatable&lt;BlockUpgradeVote&gt;, IBlockUpgra
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_BlockUpgradeVote_UpgradeApprove_" data-uid="AlgoSdk.BlockUpgradeVote.UpgradeApprove*"></a>
-  <h4 id="AlgoSdk_BlockUpgradeVote_UpgradeApprove" data-uid="AlgoSdk.BlockUpgradeVote.UpgradeApprove">UpgradeApprove</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Optional&lt;bool&gt; UpgradeApprove { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -170,57 +143,7 @@ public struct BlockUpgradeVote : IEquatable&lt;BlockUpgradeVote&gt;, IBlockUpgra
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_BlockUpgradeVote_UpgradeDelay_" data-uid="AlgoSdk.BlockUpgradeVote.UpgradeDelay*"></a>
-  <h4 id="AlgoSdk_BlockUpgradeVote_UpgradeDelay" data-uid="AlgoSdk.BlockUpgradeVote.UpgradeDelay">UpgradeDelay</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong UpgradeDelay { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt64</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_BlockUpgradeVote_UpgradePropose_" data-uid="AlgoSdk.BlockUpgradeVote.UpgradePropose*"></a>
-  <h4 id="AlgoSdk_BlockUpgradeVote_UpgradePropose" data-uid="AlgoSdk.BlockUpgradeVote.UpgradePropose">UpgradePropose</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address UpgradePropose { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -289,56 +212,14 @@ public struct BlockUpgradeVote : IEquatable&lt;BlockUpgradeVote&gt;, IBlockUpgra
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_BlockUpgradeVote_Equals_" data-uid="AlgoSdk.BlockUpgradeVote.Equals*"></a>
-  <h4 id="AlgoSdk_BlockUpgradeVote_Equals_AlgoSdk_BlockUpgradeVote_" data-uid="AlgoSdk.BlockUpgradeVote.Equals(AlgoSdk.BlockUpgradeVote)">Equals(BlockUpgradeVote)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(BlockUpgradeVote other)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.BlockUpgradeVote.html">BlockUpgradeVote</a></td>
-        <td><span class="parametername">other</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">System.IEquatable&lt;T&gt;</span>
+      <span class="xref">IEquatable&lt;&gt;</span>
   </div>
   <div>
       <a class="xref" href="AlgoSdk.IBlockUpgradeVote.html">IBlockUpgradeVote</a>

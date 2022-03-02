@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="">
+    <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -88,15 +88,13 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="AlgoSdk.TransactionSignature.html">TransactionSignature</a>&gt;</div>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.TransactionSignature.html">TransactionSignature</a>&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_TransactionSignature_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
-[Serializable]
-public struct TransactionSignature : IEquatable&lt;TransactionSignature&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct TransactionSignature</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -126,30 +124,6 @@ public struct TransactionSignature : IEquatable&lt;TransactionSignature&gt;</cod
   </table>
   
   
-  <h4 id="AlgoSdk_TransactionSignature_LogicSig" data-uid="AlgoSdk.TransactionSignature.LogicSig">LogicSig</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LogicSig LogicSig</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.LogicSig.html">LogicSig</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="AlgoSdk_TransactionSignature_Multisig" data-uid="AlgoSdk.TransactionSignature.Multisig">Multisig</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -168,54 +142,6 @@ public struct TransactionSignature : IEquatable&lt;TransactionSignature&gt;</cod
     <tbody>
       <tr>
         <td><a class="xref" href="AlgoSdk.Multisig.html">Multisig</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_TransactionSignature_Multisig" data-uid="AlgoSdk.TransactionSignature.Multisig">Multisig</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Multisig Multisig</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Multisig.html">Multisig</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="AlgoSdk_TransactionSignature_Sig" data-uid="AlgoSdk.TransactionSignature.Sig">Sig</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Sig Sig</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Sig.html">Sig</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -283,49 +209,7 @@ public struct TransactionSignature : IEquatable&lt;TransactionSignature&gt;</cod
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_TransactionSignature_Equals_" data-uid="AlgoSdk.TransactionSignature.Equals*"></a>
-  <h4 id="AlgoSdk_TransactionSignature_Equals_AlgoSdk_TransactionSignature_" data-uid="AlgoSdk.TransactionSignature.Equals(AlgoSdk.TransactionSignature)">Equals(TransactionSignature)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(TransactionSignature other)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.TransactionSignature.html">TransactionSignature</a></td>
-        <td><span class="parametername">other</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -377,48 +261,6 @@ public struct TransactionSignature : IEquatable&lt;TransactionSignature&gt;</cod
   
   
   <a id="AlgoSdk_TransactionSignature_op_Implicit_" data-uid="AlgoSdk.TransactionSignature.op_Implicit*"></a>
-  <h4 id="AlgoSdk_TransactionSignature_op_Implicit_AlgoSdk_LogicSig__AlgoSdk_TransactionSignature" data-uid="AlgoSdk.TransactionSignature.op_Implicit(AlgoSdk.LogicSig)~AlgoSdk.TransactionSignature">Implicit(LogicSig to TransactionSignature)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator TransactionSignature(LogicSig lsig)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.LogicSig.html">LogicSig</a></td>
-        <td><span class="parametername">lsig</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.TransactionSignature.html">TransactionSignature</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_TransactionSignature_op_Implicit_" data-uid="AlgoSdk.TransactionSignature.op_Implicit*"></a>
   <h4 id="AlgoSdk_TransactionSignature_op_Implicit_AlgoSdk_Multisig__AlgoSdk_TransactionSignature" data-uid="AlgoSdk.TransactionSignature.op_Implicit(AlgoSdk.Multisig)~AlgoSdk.TransactionSignature">Implicit(Multisig to TransactionSignature)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -439,90 +281,6 @@ public struct TransactionSignature : IEquatable&lt;TransactionSignature&gt;</cod
       <tr>
         <td><a class="xref" href="AlgoSdk.Multisig.html">Multisig</a></td>
         <td><span class="parametername">msig</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.TransactionSignature.html">TransactionSignature</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_TransactionSignature_op_Implicit_" data-uid="AlgoSdk.TransactionSignature.op_Implicit*"></a>
-  <h4 id="AlgoSdk_TransactionSignature_op_Implicit_AlgoSdk_Multisig__AlgoSdk_TransactionSignature" data-uid="AlgoSdk.TransactionSignature.op_Implicit(AlgoSdk.Multisig)~AlgoSdk.TransactionSignature">Implicit(Multisig to TransactionSignature)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator TransactionSignature(Multisig msig)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Multisig.html">Multisig</a></td>
-        <td><span class="parametername">msig</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.TransactionSignature.html">TransactionSignature</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_TransactionSignature_op_Implicit_" data-uid="AlgoSdk.TransactionSignature.op_Implicit*"></a>
-  <h4 id="AlgoSdk_TransactionSignature_op_Implicit_AlgoSdk_Sig__AlgoSdk_TransactionSignature" data-uid="AlgoSdk.TransactionSignature.op_Implicit(AlgoSdk.Sig)~AlgoSdk.TransactionSignature">Implicit(Sig to TransactionSignature)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator TransactionSignature(Sig sig)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Sig.html">Sig</a></td>
-        <td><span class="parametername">sig</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -586,7 +344,7 @@ public struct TransactionSignature : IEquatable&lt;TransactionSignature&gt;</cod
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">System.IEquatable&lt;T&gt;</span>
+      <span class="xref">IEquatable&lt;&gt;</span>
   </div>
 </article>
           </div>

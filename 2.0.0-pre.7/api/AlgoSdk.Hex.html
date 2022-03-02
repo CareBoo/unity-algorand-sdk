@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="">
+    <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../">
@@ -87,15 +87,13 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="AlgoSdk.Hex.html">Hex</a>&gt;</div>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.Hex.html">Hex</a>&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_Hex_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
-[Serializable]
-public struct Hex : IEquatable&lt;Hex&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct Hex</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -119,32 +117,7 @@ public struct Hex : IEquatable&lt;Hex&gt;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Byte</span>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_Hex_Data_" data-uid="AlgoSdk.Hex.Data*"></a>
-  <h4 id="AlgoSdk_Hex_Data" data-uid="AlgoSdk.Hex.Data">Data</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly byte[] Data { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Byte</span>[]</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -188,49 +161,7 @@ public struct Hex : IEquatable&lt;Hex&gt;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_Hex_Equals_" data-uid="AlgoSdk.Hex.Equals*"></a>
-  <h4 id="AlgoSdk_Hex_Equals_AlgoSdk_Hex_" data-uid="AlgoSdk.Hex.Equals(AlgoSdk.Hex)">Equals(Hex)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(Hex other)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Hex.html">Hex</a></td>
-        <td><span class="parametername">other</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -256,49 +187,7 @@ public struct Hex : IEquatable&lt;Hex&gt;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">s</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Hex.html">Hex</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_Hex_FromString_" data-uid="AlgoSdk.Hex.FromString*"></a>
-  <h4 id="AlgoSdk_Hex_FromString_System_String_" data-uid="AlgoSdk.Hex.FromString(System.String)">FromString(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Hex FromString(string s)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">s</span></td>
         <td></td>
       </tr>
@@ -339,40 +228,13 @@ public struct Hex : IEquatable&lt;Hex&gt;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">System.ValueType.ToString()</span></div>
-  
-  
-  <a id="AlgoSdk_Hex_ToString_" data-uid="AlgoSdk.Hex.ToString*"></a>
-  <h4 id="AlgoSdk_Hex_ToString" data-uid="AlgoSdk.Hex.ToString">ToString()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">System.ValueType.ToString()</span></div>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetype.tostring#system-valuetype-tostring">ValueType.ToString()</a></div>
   <h3 id="operators">Operators
   </h3>
   
@@ -412,49 +274,7 @@ public struct Hex : IEquatable&lt;Hex&gt;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Byte</span>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_Hex_op_Implicit_" data-uid="AlgoSdk.Hex.op_Implicit*"></a>
-  <h4 id="AlgoSdk_Hex_op_Implicit_AlgoSdk_Hex__System_Byte__" data-uid="AlgoSdk.Hex.op_Implicit(AlgoSdk.Hex)~System.Byte[]">Implicit(Hex to Byte[])</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator byte[](Hex hex)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Hex.html">Hex</a></td>
-        <td><span class="parametername">hex</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Byte</span>[]</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -480,49 +300,7 @@ public struct Hex : IEquatable&lt;Hex&gt;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Byte</span>[]</td>
-        <td><span class="parametername">data</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="AlgoSdk.Hex.html">Hex</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="AlgoSdk_Hex_op_Implicit_" data-uid="AlgoSdk.Hex.op_Implicit*"></a>
-  <h4 id="AlgoSdk_Hex_op_Implicit_System_Byte____AlgoSdk_Hex" data-uid="AlgoSdk.Hex.op_Implicit(System.Byte[])~AlgoSdk.Hex">Implicit(Byte[] to Hex)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Hex(byte[] data)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Byte</span>[]</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
         <td><span class="parametername">data</span></td>
         <td></td>
       </tr>
@@ -545,7 +323,7 @@ public struct Hex : IEquatable&lt;Hex&gt;</code></pre>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">System.IEquatable&lt;T&gt;</span>
+      <span class="xref">IEquatable&lt;&gt;</span>
   </div>
 </article>
           </div>
