@@ -65,9 +65,18 @@ This SDK will soon be [available in the Unity Asset Store](https://u3d.as/2GBr).
 
 ## Getting Started
 
+### Documentation
+
 The [Quickstart Guide](Documentation~/quickstart.md) is the best place to start. Documentation is
 generated per release branch and version. The documentation for a specific version or branch
-can be found at `https://careboo.github.io/unity-algorand-sdk/{version}/`, e.g.
-https://careboo.github.io/unity-algorand-sdk/main/.
+can be found at
+
+```
+https://careboo.github.io/unity-algorand-sdk/{version}/
+```
+
+e.g. https://careboo.github.io/unity-algorand-sdk/main/.
+
+### Demo
 
 There's a Demo game you can try out in the [demo branch](https://github.com/CareBoo/unity-algorand-sdk/tree/demo).

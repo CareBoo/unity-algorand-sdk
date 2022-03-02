@@ -83,6 +83,9 @@ jobs:
           lfs: true
           ref: ${{ github.ref }}
 
+      - name: Rename README.md
+        run: mv README.md index.md
+
       - name: Get package version
         id: version
         if: ${{ matrix.tag == 'version' }}

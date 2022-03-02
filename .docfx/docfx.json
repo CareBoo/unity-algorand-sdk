@@ -27,7 +27,7 @@
     },
     "content": [
       {
-        "files": ["toc.yml", "index.md"]
+        "files": ["toc.yml", "../index.md"]
       },
       {
         "src": "manual",
@@ -61,7 +61,7 @@
       },
       {
         "src": "../Documentation~",
-        "files": ["*"],
+        "files": ["*.md"],
         "exclude": ["TableOfContents.md"],
         "dest": "manual"
       }

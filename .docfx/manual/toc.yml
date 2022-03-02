@@ -1,6 +1,4 @@
-- name: Unity Algorand SDK
-  href: index.html
 - name: Quickstart
-  href: quickstart.html
+  href: ../../Documentation~/quickstart.md
 - name: Troubleshooting
-  href: troubleshooting.html
+  href: ../../Documentation~/troubleshooting.md
