@@ -30,6 +30,11 @@
         "files": ["toc.yml", "../index.md"]
       },
       {
+        "src": "..",
+        "files": "index.md",
+        "dest": "."
+      },
+      {
         "src": "manual",
         "files": ["toc.yml"],
         "dest": "manual"
