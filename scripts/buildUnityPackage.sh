@@ -2,10 +2,14 @@
 
 set -euo pipefail
 
-algosdk_src="Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk"
-algosdk_target="Unity.AlgoSdk/Assets/AlgoSdk"
-unitask_src="Unity.AlgoSdk/Packages/com.cysharp.unitask"
-unitask_target="Unity.AlgoSdk/Assets/UniTask"
+cd Unity.AlgoSdk
+
+algosdk_src="Packages/com.careboo.unity-algorand-sdk"
+algosdk_target="Assets/AlgoSDK"
+
+unitask_src="Packages/com.cysharp.unitask"
+unitask_target="Assets/UniTask"
+
 
 for item in $algosdk_src/*
 do
@@ -17,14 +21,13 @@ do
     cp -fRvL "$item" $unitask_target
 done
 
-mkdir -p dist
-touch dist/packageMetaFiles
 
-echo "$algosdk_target.meta" >> dist/packageMetaFiles
-find
+touch packageMetaFiles
 
-echo "$unitask_target.meta" >> dist/packageMetaFiles
-for metaFile in $unitask_target/**/*.meta
-do
-    echo "$metaFile" >> dist/packageMetaFiles
-done
+echo "$algosdk_target.meta" >> packageMetaFiles
+find "$algosdk_target" -type f -name "*.meta" >> packageMetaFiles
+
+echo "$unitask_target.meta" >> packageMetaFiles
+find "$unitask_target" -type f -name "*.meta" >> packageMetaFiles
+
+cd -
