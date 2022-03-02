@@ -1,28 +1,21 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 set -euo pipefail
 
-
-algosdk_target="Unity.AlgoSdk/Assets/unity-algorand-sdk"
-for entry in Runtime Editor Tests README.md CHANGELOG.md LICENSE.md "Third Party Notices.md" package.json
-do
-cp -fRv "$entry" "$algosdk_target"
-cp -fv "$entry.meta" "$algosdk_target"
-done
-for entry in "Documentation~"
-do
-cp -fRv "$entry" "$algosdk_target"
-done
-
+algosdk_src="Unity.AlgoSdk/Packages/com.careboo.unity-algorand-sdk"
+algosdk_target="Unity.AlgoSdk/Assets/AlgoSdk"
 unitask_src="Unity.AlgoSdk/Packages/com.cysharp.unitask"
 unitask_target="Unity.AlgoSdk/Assets/UniTask"
-mkdir -p "$unitask_target"
-for entry in Runtime Editor package.json
+
+for item in $algosdk_src/*
 do
-    cp -fRv "$unitask_src/$entry" "$unitask_target"
-    cp -fv "$unitask_src/$entry.meta" "$unitask_target"
+    cp -fRv "$item" $algosdk_target
 done
 
+for item in $unitask_src/*
+do
+    cp -fRv "$item" $unitask_target
+done
 
 mkdir -p dist
 touch dist/packageMetaFiles
