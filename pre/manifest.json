@@ -4154,9 +4154,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "changelog/toc.yml",
       "output": {
@@ -4169,45 +4166,24 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "index.md",
-      "output": {
-        ".html": {
-          "relative_path": "index.html",
-          "hash": "Yqbf1YNz/JCv8HalcxTiafRoMIYkU0bm80GsKrcsvU0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "license/toc.yml",
       "output": {
         ".html": {
           "relative_path": "license/toc.html",
-          "hash": "w1gCSlweAYAIHzJTzHx6nPUpaI/v9FzeJs7SRARy97c="
+          "hash": "cmGgIt/71MSJAluxbFMTOinAUQN0cisll8KQQqI9yD0="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "manual/toc.yml",
       "output": {
         ".html": {
           "relative_path": "manual/toc.html",
-          "hash": "yC0QgSadC8lFun4eOcZXiDX0ijT7+xdABmjIzd8Qvnc="
+          "hash": "xEipxunBpGpekhStDUoMXa4FctnUoy1sdfM8w/irIQo="
         }
       },
       "is_incremental": false,
@@ -4258,15 +4234,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "oqtlCiltqnzOxPjkUnS/4LPkD8XkIASfsxpY41SCYx0="
+          "hash": "m4SOx9G2npI7vLspzglmkZypuKtM6qCTtqdFd1kTNmc="
         }
       },
       "is_incremental": false,
@@ -4287,7 +4260,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 6,
+          "total_file_count": 5,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
