@@ -18,11 +18,14 @@ do
 cp -fRv "$entry" "$algosdk_dir"
 done
 
-
-unitask_url="https://github.com/Cysharp/UniTask/releases/download/2.2.5/UniTask.2.2.5.unitypackage"
-wget -O UniTask.unitypackage "$unitask_url"
+unitask_root="Unity.AlgoSdk/Packages/com.cysharp.unitask"
 unitask_dir="UniTask"
 mkdir -p "$unitask_dir"
+for entry in Runtime Editor package.json
+do
+    cp -fRv "$unitask_root/$entry" "$unitask_dir"
+    cp -fv "$unitask_root/$entry.meta" "$unitask_dir"
+done
 
 
 tmpdir="$HOME"
@@ -36,6 +39,9 @@ packager_dir="$packager_dir/$packager-1.2.5"
 mkdir -p dist
 workdir="$(pwd)"
 cd "$packager_dir"
-dotnet run -f netcoreapp2.1 --project "$packager" unpack "$workdir/UniTask.unitypackage" "$workdir/$unitask_dir"
+ls "$workdir"
+ls "$workdir/$algosdk_dir"
+ls "$workdir/$unitask_dir"
+echo "Packing $workdir/$algosdk_dir and $workdir/$unitask_dir"
 dotnet run -f netcoreapp2.1 --project "$packager" pack "$workdir/dist/unity-algorand-sdk.unitypackage" "$workdir/$algosdk_dir" "$workdir/$unitask_dir"
 cd -
