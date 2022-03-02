@@ -31,12 +31,6 @@
       }
     ],
     [
-      "@semantic-release/exec",
-      {
-        "prepareCmd": "./scripts/buildUnityPackage.sh"
-      }
-    ],
-    [
       "@semantic-release/github",
       {
         "assets": ["dist/*.tgz", "dist/*.unitypackage"]
