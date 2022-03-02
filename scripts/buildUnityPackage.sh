@@ -6,7 +6,7 @@ echo "Building unity package using unity packager"
 echo "dotnet installed at \"$(which dotnet)\""
 
 exporter="UnityPackager"
-exporter_dir="$HOME/TwoTenPvP/UnityPackager"
+exporter_dir="$UNITY_PACKAGE_EXPORTER"
 if [ ! -d "$exporter_dir" ]
 then
     echo "Could not find package exporter_dir at $exporter_dir" 1>&2
