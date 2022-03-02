@@ -31,6 +31,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Echo Release Outputs
+        run: |
+          echo "new_release_published: \"${{ steps.semantic.outputs.new_release_published }}\""
+
   publish_npm:
     name: Publish Package to ${{ matrix.registry }}
     runs-on: ubuntu-latest
@@ -95,7 +99,7 @@ jobs:
 
       - name: Get branch
         id: branch
-        run: echo "::set-output name=name::${GITHUB_REF#refs/heads/}"
+        run: echo "::set-output name=branch::${GITHUB_REF#refs/heads/}"
 
       - name: Install DocFX
         run: choco install -y docfx
@@ -147,7 +151,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: _site_branch
-          output_dir: ${{ needs.build_docs.outputs.branch }}
+          destination_dir: ${{ needs.build_docs.outputs.branch }}
 
       - name: Download Version Docs site artifact
         uses: actions/download-artifact@v1
@@ -159,4 +163,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: _site_version
-          output_dir: ${{ needs.build_docs.outputs.version }}
+          destination_dir: ${{ needs.build_docs.outputs.version }}
