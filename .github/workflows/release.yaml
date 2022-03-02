@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: Lachee/Unity-Package-Exporter
-          path: ${{ github.env.home }}/Lachee/Unity-Package-Exporter
+          path: ${{ github.env['HOME'] }}/Lachee/Unity-Package-Exporter
 
       - name: Checkout Unity Algorand SDK
         uses: actions/checkout@v2
