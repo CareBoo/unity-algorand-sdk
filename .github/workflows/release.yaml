@@ -19,12 +19,6 @@ jobs:
       new_release_version: ${{ steps.semantic.outputs.new_release_version }}
       new_release_channel: ${{ steps.semantic.outputs.new_release_channel }}
 
-    steps:
-      - name: Setup .NET Core SDK
-        uses: actions/setup-dotnet@v2
-        with:
-          dotnet-version: "2.1.x"
-
       - name: Checkout Unity Algorand SDK
         uses: actions/checkout@v2
 
