@@ -112,6 +112,8 @@ jobs:
 
       - name: Get branch
         id: branch
+        env:
+          GITHUB_REF: ${{ github.ref }}
         run: echo "::set-output name=branch::${GITHUB_REF#refs/heads/}"
 
       - name: Install DocFX
