@@ -13,12 +13,12 @@ unitask_target="Assets/UniTask"
 
 for item in $algosdk_src/*
 do
-    cp -fRvL "$item" "$algosdk_target/$item"
+    cp -fRvL "$item" "$algosdk_target/"
 done
 
 for item in $unitask_src/*
 do
-    cp -fRvL "$item" "$unitask_target/$item"
+    cp -fRvL "$item" "$unitask_target/"
 done
 
 
