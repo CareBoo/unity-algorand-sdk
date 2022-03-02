@@ -23,19 +23,11 @@ jobs:
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v2
 
-      - name: Checkout Unity Package Exporter
-        uses: actions/checkout@v2
-        with:
-          repository: Lachee/Unity-Package-Exporter
-          path: Unity-Package-Exporter
-
       - name: Checkout Unity Algorand SDK
         uses: actions/checkout@v2
 
       - name: Try Build package
         run: ./scripts/buildUnityPackage.sh
-        env:
-          UNITY_PACKAGE_EXPORTER: ./Unity-Package-Exporter
 
       - name: Semantic Release
         id: semantic
@@ -47,7 +39,6 @@ jobs:
             @semantic-release/exec
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          UNITY_PACKAGE_EXPORTER: ./Unity-Package-Exporter
 
   npm_publish:
     name: Publish Package to ${{ matrix.registry }}

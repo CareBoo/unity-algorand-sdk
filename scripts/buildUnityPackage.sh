@@ -2,21 +2,11 @@
 
 set -euo pipefail
 
-echo "Building unity package using unity packager"
-echo "dotnet installed at \"$(which dotnet)\""
 
-exporter="UnityPackager"
-exporter_dir="$UNITY_PACKAGE_EXPORTER"
-if [ ! -d "$exporter_dir" ]
-then
-    echo "Could not find package exporter_dir at $exporter_dir" 1>&2
-    exit 1
-else
-    echo "Found package exporter_dir at $exporter_dir"
-fi
+echo "Building unity package using unity packager"
+
 
 algosdk_dir="unity-algorand-sdk"
-echo "Making Unity Algorand SDK dir at $algosdk_dir"
 mkdir -p "$algosdk_dir"
 for entry in Runtime Editor Tests README.md CHANGELOG.md LICENSE.md "Third Party Notices.md" package.json
 do
@@ -27,20 +17,23 @@ for entry in "Documentation~"
 do
 cp -fRv "$entry" "$algosdk_dir"
 done
-echo "Made Unity Algorand SDK dir"
 
 
 unitask_url="https://github.com/Cysharp/UniTask/releases/download/2.2.5/UniTask.2.2.5.unitypackage"
 wget -O UniTask.unitypackage "$unitask_url"
 unitask_dir="UniTask"
-echo "Making UniTask directory at $unitask_dir"
 mkdir -p "$unitask_dir"
-echo "Made unitask dir"
+
+
+tmpdir="$HOME"
+packager="UnityPackager"
+packager_dir="$tmpdir/$packager"
+wget -c "https://github.com/TwoTenPvP/UnityPackager/archive/refs/tags/v1.2.5.tar.gz" -O - | tar -xz -C "$packager_dir"
+
 
 mkdir -p dist
-
 workdir="$(pwd)"
-cd "$exporter_dir"
-dotnet run --project "$exporter" unpack "$workdir/UniTask.unitypackage" "$workdir/$unitask_dir"
-dotnet run --project "$exporter" pack "$workdir/dist/unity-algorand-sdk.unitypackage" "$workdir/$algosdk_dir" "$workdir/$unitask_dir"
+cd "$packager_dir"
+dotnet run --project "$packager" unpack "$workdir/UniTask.unitypackage" "$workdir/$unitask_dir"
+dotnet run --project "$packager" pack "$workdir/dist/unity-algorand-sdk.unitypackage" "$workdir/$algosdk_dir" "$workdir/$unitask_dir"
 cd -
