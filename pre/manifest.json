@@ -2,11 +2,11 @@
   "sitemap": {
     "fileOptions": {
       "api/*": {
-        "baseUrl": "https://CareBoo.github.io/unity-algorand-sdk//",
+        "baseUrl": "https://careboo.github.io/unity-algorand-sdk/pre/",
         "changefreq": "weekly"
       }
     },
-    "baseUrl": "https://CareBoo.github.io/unity-algorand-sdk//",
+    "baseUrl": "https://careboo.github.io/unity-algorand-sdk/pre/",
     "changefreq": "monthly"
   },
   "homepages": [],
@@ -80,6 +80,18 @@
         ".html": {
           "relative_path": "license/Third Party Notices.html",
           "hash": "tAMtnB6jQb841U2Zjodi2y/dhOiXvTQXRGaC35TZSuw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "9Yjn+R/2ibBMi8Uui4CX5FUbtAGd/ezlkVU4Ge2ayy0="
         }
       },
       "is_incremental": false,
@@ -4260,7 +4272,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 5,
+          "total_file_count": 6,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
