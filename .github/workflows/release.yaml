@@ -30,6 +30,8 @@ jobs:
           targetPlatform: StandaloneLinux64
           projectPath: Unity.AlgoSdk
           buildMethod: UnityPackage.Build
+          versioning: None
+          allowDirtyBuild: true
 
       - name: Upload .unitypackage
         uses: actions/upload-artifact@v2
