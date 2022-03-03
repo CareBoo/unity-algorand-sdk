@@ -2,13 +2,13 @@
     "name": "CareBoo.AlgoSdk.Crypto.Tests",
     "rootNamespace": "",
     "references": [
-        "UnityEngine.TestRunner",
-        "CareBoo.AlgoSdk.Crypto",
-        "Unity.Collections",
-        "Unity.Burst",
-        "Unity.Mathematics",
-        "CareBoo.AlgoSdk.LowLevel",
-        "UnityEditor.TestRunner"
+        "GUID:27619889b8ba8c24980f49ee34dbb44a",
+        "GUID:f8b80ea32105bf74aa022a9a7e066bc1",
+        "GUID:e0cd26848372d4e5c891c569017e11f1",
+        "GUID:2665a8d13d1b3f18800f46e256720795",
+        "GUID:d8b63aba1907145bea998dd612889d6b",
+        "GUID:9f8c967ec86c9324c9b2928ff73b4cf1",
+        "GUID:0acc523941302664db1f4e527237feb3"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

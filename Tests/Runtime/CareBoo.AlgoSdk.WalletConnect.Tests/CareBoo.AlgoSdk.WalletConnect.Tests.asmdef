@@ -2,13 +2,12 @@
     "name": "CareBoo.AlgoSdk.WalletConnect.Test",
     "rootNamespace": "",
     "references": [
-        "UnityEditor.TestRunner",
-        "UnityEngine.TestRunner",
-        "CareBoo.AlgoSdk.WalletConnect",
-        "CareBoo.WebSocket",
-        "UniTask",
-        "CareBoo.AlgoSdk",
-        "Unity.Collections"
+        "GUID:0acc523941302664db1f4e527237feb3",
+        "GUID:27619889b8ba8c24980f49ee34dbb44a",
+        "GUID:7d7102a6f2a084a30ad9e7734dd7ec17",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:45ab5c0c2cb4a0e4ba897b731349c490",
+        "GUID:e0cd26848372d4e5c891c569017e11f1"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
