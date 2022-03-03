@@ -22,9 +22,9 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: Unity.AlgoSdk/Library
-          key: Library-build_unitypackage-2020.3.30f1-Unity.AlgoSdk-StandaloneLinux64
+          key: Library-build_unitypackage-2021.2.13f1-Unity.AlgoSdk-StandaloneLinux64
           restore-keys: |
-            Library-build_unitypackage-2020.3.30f1-Unity.AlgoSdk-
+            Library-build_unitypackage-2021.2.13f1-Unity.AlgoSdk-
 
       - name: Setup .unitypackage
         run: ./scripts/setupUnityPackage.sh
@@ -35,7 +35,7 @@ jobs:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE_2020 }}
         with:
           targetPlatform: StandaloneLinux64
-          unityVersion: 2020.3.30f1
+          unityVersion: 2021.2.13f1
           projectPath: Unity.AlgoSdk
           buildMethod: UnityPackage.Build
           versioning: None
