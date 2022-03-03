@@ -2,13 +2,11 @@
     "name": "CareBoo.AlgoSdk.LowLevel.Tests",
     "rootNamespace": "",
     "references": [
-        "CareBoo.AlgoSdk.LowLevel",
-        "UnityEditor.TestRunner",
-        "Unity.Collections"
+        "GUID:9f8c967ec86c9324c9b2928ff73b4cf1",
+        "GUID:0acc523941302664db1f4e527237feb3",
+        "GUID:e0cd26848372d4e5c891c569017e11f1"
     ],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": true,
     "overrideReferences": true,
