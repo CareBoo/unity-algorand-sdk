@@ -41,11 +41,16 @@ jobs:
           versioning: None
           allowDirtyBuild: true
 
-      - name: Upload .unitypackage
+      - name: Move .unitypackage for artifacting
+        run: |
+          mkdir dist
+          mv Unity.AlgoSdk/unity-algorand-sdk.unitypackage dist
+
+      - name: Upload dist
         uses: actions/upload-artifact@v2
         with:
-          name: unity-algorand-sdk.unitypackage
-          path: Unity.AlgoSdk/unity-algorand-sdk.unitypackage
+          name: dist
+          path: dist
 
   semantic_release:
     name: Semantic Release
@@ -59,10 +64,10 @@ jobs:
       - name: Checkout Unity Algorand SDK
         uses: actions/checkout@v2
 
-      - name: Download .unitypackage
+      - name: Download dist
         uses: actions/download-artifact@v3
         with:
-          name: unity-algorand-sdk.unitypackage
+          name: dist
           path: dist
 
       - name: Semantic Release
@@ -74,6 +79,12 @@ jobs:
             @semantic-release/git
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload dist
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist
+          path: dist
 
   npm_publish:
     name: Publish Package to ${{ matrix.registry }}
