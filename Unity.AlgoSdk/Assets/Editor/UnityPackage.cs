@@ -6,10 +6,11 @@ public static class UnityPackage
 
     static readonly string[] exportedAssets = new[]
     {
-        "Assets/AlgoSdk",
-        "Assets/UniTask"
+        "Packages/com.careboo.unity-algorand-sdk",
+        "Packages/com.cysharp.unitask"
     };
 
+    [MenuItem("AlgoSdk/Package")]
     public static void Build()
     {
         AssetDatabase.ExportPackage(

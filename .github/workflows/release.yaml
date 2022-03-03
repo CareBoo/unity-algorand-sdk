@@ -26,9 +26,6 @@ jobs:
           restore-keys: |
             Library-build_unitypackage-2021.2.13f1-Unity.AlgoSdk-
 
-      - name: Setup .unitypackage
-        run: ./scripts/setupUnityPackage.sh
-
       - name: Package .unitypackage
         uses: game-ci/unity-builder@v2
         env:
@@ -150,6 +147,7 @@ jobs:
 
       - name: Get branch
         id: branch
+        shell: bash
         env:
           GITHUB_REF: ${{ github.ref }}
         run: echo "::set-output name=branch::${GITHUB_REF#refs/heads/}"
