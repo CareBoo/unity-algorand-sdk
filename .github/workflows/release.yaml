@@ -19,6 +19,13 @@ jobs:
         with:
           lfs: true
 
+      - uses: actions/cache@v2
+        with:
+          path: Unity.AlgoSdk/Library
+          key: Library-build_unitypackage-Unity.AlgoSdk-StandaloneLinux64
+          restore-keys: |
+            Library-build_unitypackage-Unity.AlgoSdk-
+
       - name: Setup .unitypackage
         run: ./scripts/setupUnityPackage.sh
 
