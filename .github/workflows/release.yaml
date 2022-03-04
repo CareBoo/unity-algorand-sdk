@@ -46,7 +46,7 @@ jobs:
     if: needs.release.outputs.new_release_published == 'true'
     runs-on: windows-latest
     outputs:
-      version: ${{ steps.version.outputs.prop }}
+      version: ${{ needs.release.outputs.new_release_version }}
       branch: ${{ steps.branch.outputs.branch }}
     steps:
       - name: Checkout
@@ -57,13 +57,6 @@ jobs:
 
       - name: Rename README.md
         run: mv README.md index.md
-
-      - name: Get package version
-        id: version
-        uses: notiz-dev/github-action-json-property@release
-        with:
-          path: "package.json"
-          prop_path: "version"
 
       - name: Get branch
         id: branch
@@ -96,7 +89,7 @@ jobs:
         with:
           file: .docfx/docfx.json
           field: build.sitemap.baseUrl
-          value: https://careboo.github.io/unity-algorand-sdk/${{ steps.version.outputs.prop }}/
+          value: https://careboo.github.io/unity-algorand-sdk/${{ needs.release.outputs.new_release_version }}/
 
       - name: Build Version Docs
         run: docfx .docfx/docfx.json
