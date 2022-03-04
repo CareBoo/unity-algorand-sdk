@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct Sig
    | Unity Algorand SDK ">
-    <meta name="generator" content="docfx 2.59.0.0">
+    <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../resources/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -88,21 +88,24 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="AlgoSdk.ISignature.html">ISignature</a></div>
-    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.Sig.html">Sig</a>&gt;</div>
-    <div><span class="xref">IByteArray</span></div>
+    <div><a class="xref" href="AlgoSdk.LowLevel.IByteArray.html">IByteArray</a></div>
+    <div><a class="xref" href="AlgoSdk.LowLevel.IContiguousArray-1.html">IContiguousArray</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</div>
+    <div><a class="xref" href="AlgoSdk.LowLevel.IArray-1.html">IArray</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_Sig_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct Sig : ISignature</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+[AlgoApiFormatter(typeof(ByteArrayFormatter&lt;Sig&gt;))]
+public struct Sig : ISignature, IEquatable&lt;Sig&gt;, IByteArray, IContiguousArray&lt;byte&gt;, IArray&lt;byte&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   
   
   <a id="AlgoSdk_Sig__ctor_" data-uid="AlgoSdk.Sig.#ctor*"></a>
-  <h4 id="AlgoSdk_Sig__ctor_Ed25519_Signature__" data-uid="AlgoSdk.Sig.#ctor(Ed25519.Signature@)">Sig(in Ed25519.Signature)</h4>
+  <h4 id="AlgoSdk_Sig__ctor_Ed25519_Signature__" data-uid="AlgoSdk.Sig.#ctor(Ed25519.Signature@)">Sig(Ed25519.Signature)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -178,7 +181,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly int Length { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int Length { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -403,7 +406,7 @@
   
   
   <a id="AlgoSdk_Sig_op_Equality_" data-uid="AlgoSdk.Sig.op_Equality*"></a>
-  <h4 id="AlgoSdk_Sig_op_Equality_AlgoSdk_Sig__AlgoSdk_Sig__" data-uid="AlgoSdk.Sig.op_Equality(AlgoSdk.Sig@,AlgoSdk.Sig@)">Equality(in Sig, in Sig)</h4>
+  <h4 id="AlgoSdk_Sig_op_Equality_AlgoSdk_Sig__AlgoSdk_Sig__" data-uid="AlgoSdk.Sig.op_Equality(AlgoSdk.Sig@,AlgoSdk.Sig@)">Equality(Sig, Sig)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -534,7 +537,7 @@
   
   
   <a id="AlgoSdk_Sig_op_Inequality_" data-uid="AlgoSdk.Sig.op_Inequality*"></a>
-  <h4 id="AlgoSdk_Sig_op_Inequality_AlgoSdk_Sig__AlgoSdk_Sig__" data-uid="AlgoSdk.Sig.op_Inequality(AlgoSdk.Sig@,AlgoSdk.Sig@)">Inequality(in Sig, in Sig)</h4>
+  <h4 id="AlgoSdk_Sig_op_Inequality_AlgoSdk_Sig__AlgoSdk_Sig__" data-uid="AlgoSdk.Sig.op_Inequality(AlgoSdk.Sig@,AlgoSdk.Sig@)">Inequality(Sig, Sig)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -583,10 +586,13 @@
       <a class="xref" href="AlgoSdk.ISignature.html">ISignature</a>
   </div>
   <div>
-      <span class="xref">IEquatable&lt;&gt;</span>
+      <a class="xref" href="AlgoSdk.LowLevel.IByteArray.html">IByteArray</a>
   </div>
   <div>
-      <span class="xref">IByteArray</span>
+      <a class="xref" href="AlgoSdk.LowLevel.IContiguousArray-1.html">IContiguousArray&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="AlgoSdk.LowLevel.IArray-1.html">IArray&lt;T&gt;</a>
   </div>
 </article>
           </div>

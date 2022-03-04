@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct Transaction
    | Unity Algorand SDK ">
-    <meta name="generator" content="docfx 2.59.0.0">
+    <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../resources/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -87,17 +87,18 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="AlgoSdk.IAppCallTxn.html">IAppCallTxn</a></div>
     <div><a class="xref" href="AlgoSdk.IAssetConfigTxn.html">IAssetConfigTxn</a></div>
+    <div><a class="xref" href="AlgoSdk.IAppCallTxn.html">IAppCallTxn</a></div>
     <div><a class="xref" href="AlgoSdk.IAssetFreezeTxn.html">IAssetFreezeTxn</a></div>
-    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.Transaction.html">Transaction</a>&gt;</div>
     <div><a class="xref" href="AlgoSdk.ITransaction.html">ITransaction</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_Transaction_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct Transaction : IAppCallTxn, IAssetConfigTxn, IAssetFreezeTxn, ITransaction</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiObject(&quot;&quot;, &quot;&quot;, 0)]
+[Serializable]
+public struct Transaction : IAssetConfigTxn, IAppCallTxn, IAssetFreezeTxn, IEquatable&lt;Transaction&gt;, ITransaction</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -109,7 +110,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AppCallTxn.Params ApplicationCallParams</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;application-transaction&quot;, null, true)]
+public AppCallTxn.Params ApplicationCallParams</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -134,7 +136,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AssetConfigTxn.Params AssetConfigurationParams</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;asset-config-transaction&quot;, null, true)]
+public AssetConfigTxn.Params AssetConfigurationParams</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +162,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AssetFreezeTxn.Params AssetFreezeParams</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;asset-freeze-transaction&quot;, null, true)]
+public AssetFreezeTxn.Params AssetFreezeParams</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -184,7 +188,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AssetTransferTxn.Params AssetTransferParams</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;asset-transfer-transaction&quot;, null, true)]
+public AssetTransferTxn.Params AssetTransferParams</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,7 +239,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KeyRegTxn.Params KeyRegistrationParams</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;keyreg-transaction&quot;, null, true)]
+public KeyRegTxn.Params KeyRegistrationParams</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -259,7 +265,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PaymentTxn.Params PaymentParams</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;payment-transaction&quot;, null, true)]
+public PaymentTxn.Params PaymentParams</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -284,7 +291,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TransactionSignature Signature</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;signature&quot;, null, true)]
+public TransactionSignature Signature</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -336,7 +344,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address[] Accounts { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;apat&quot;, false)]
+public Address[] Accounts { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -361,7 +370,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong Amount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;amt&quot;, false)]
+public ulong Amount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -386,7 +396,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CompiledTeal AppArguments { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;apaa&quot;, false)]
+public CompiledTeal AppArguments { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -411,7 +422,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong ApplicationId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;apid&quot;, false)]
+public ulong ApplicationId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -436,7 +448,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CompiledTeal ApprovalProgram { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;apap&quot;, false)]
+public CompiledTeal ApprovalProgram { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -461,7 +474,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong AssetAmount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;aamt&quot;, false)]
+public ulong AssetAmount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -486,7 +500,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address AssetCloseTo { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;aclose&quot;, false)]
+public Address AssetCloseTo { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -511,7 +526,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Optional&lt;bool&gt; AssetFrozen { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;afrz&quot;, false)]
+public Optional&lt;bool&gt; AssetFrozen { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -536,7 +552,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AssetParams AssetParams { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;apar&quot;, false)]
+public AssetParams AssetParams { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -561,7 +578,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address AssetReceiver { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;arcv&quot;, false)]
+public Address AssetReceiver { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -586,7 +604,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address AssetSender { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;asnd&quot;, false)]
+public Address AssetSender { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -611,7 +630,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address AuthAddress { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;auth-addr&quot;, &quot;sgnr&quot;, true)]
+public Address AuthAddress { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -636,7 +656,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CompiledTeal ClearStateProgram { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;apsu&quot;, false)]
+public CompiledTeal ClearStateProgram { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -661,7 +682,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address CloseRemainderTo { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;close&quot;, false)]
+public Address CloseRemainderTo { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -686,7 +708,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong CloseRewards { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;close-rewards&quot;, &quot;rc&quot;, true)]
+public ulong CloseRewards { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -711,7 +734,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong ClosingAmount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;closing-amount&quot;, &quot;ca&quot;, true)]
+public ulong ClosingAmount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -736,7 +760,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong ConfigAsset { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;caid&quot;, false)]
+public ulong ConfigAsset { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -761,7 +786,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong ConfirmedRound { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;confirmed-round&quot;, null, true)]
+public ulong ConfirmedRound { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -786,7 +812,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong CreatedApplicationIndex { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;created-application-index&quot;, null, true)]
+public ulong CreatedApplicationIndex { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -811,7 +838,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong CreatedAssetIndex { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;created-asset-index&quot;, null, true)]
+public ulong CreatedAssetIndex { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -836,7 +864,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong ExtraProgramPages { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;apep&quot;, false)]
+public ulong ExtraProgramPages { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -861,7 +890,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong Fee { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;fee&quot;, &quot;fee&quot;, false)]
+public ulong Fee { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -886,7 +916,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong FirstValidRound { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;first-valid&quot;, &quot;fv&quot;, false)]
+public ulong FirstValidRound { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -911,7 +942,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong[] ForeignApps { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;apfa&quot;, false)]
+public ulong[] ForeignApps { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -936,7 +968,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong[] ForeignAssets { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;apas&quot;, false)]
+public ulong[] ForeignAssets { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -961,7 +994,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address FreezeAccount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;fadd&quot;, false)]
+public Address FreezeAccount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -986,7 +1020,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong FreezeAsset { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;faid&quot;, false)]
+public ulong FreezeAsset { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1011,7 +1046,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GenesisHash GenesisHash { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;genesis-hash&quot;, &quot;gh&quot;, false)]
+public GenesisHash GenesisHash { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1036,7 +1072,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FixedString32Bytes GenesisId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;genesis-id&quot;, &quot;gen&quot;, false)]
+public FixedString32Bytes GenesisId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1061,7 +1098,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EvalDeltaKeyValue[] GlobalStateDelta { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;global-state-delta&quot;, &quot;gd&quot;, true)]
+public EvalDeltaKeyValue[] GlobalStateDelta { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1086,7 +1124,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StateSchema GlobalStateSchema { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;apgs&quot;, false)]
+public StateSchema GlobalStateSchema { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1111,7 +1150,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Sha512_256_Hash Group { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;group&quot;, &quot;grp&quot;, false)]
+public Sha512_256_Hash Group { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1136,7 +1176,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TransactionId Id { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;id&quot;, &quot;id&quot;, true)]
+public TransactionId Id { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1161,7 +1202,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong IntraRoundOffset { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;intra-round-offset&quot;, null, true)]
+public ulong IntraRoundOffset { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1186,7 +1228,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong LastValidRound { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;last-valid&quot;, &quot;lv&quot;, false)]
+public ulong LastValidRound { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1211,7 +1254,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Sha512_256_Hash Lease { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;lease&quot;, &quot;lx&quot;, false)]
+public Sha512_256_Hash Lease { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1236,7 +1280,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AccountStateDelta[] LocalStateDelta { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;local-state-delta&quot;, &quot;ld&quot;, true)]
+public AccountStateDelta[] LocalStateDelta { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1261,7 +1306,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StateSchema LocalStateSchema { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;apls&quot;, false)]
+public StateSchema LocalStateSchema { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1286,7 +1332,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Optional&lt;bool&gt; NonParticipation { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;nonpart&quot;, false)]
+public Optional&lt;bool&gt; NonParticipation { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1311,7 +1358,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] Note { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;note&quot;, &quot;note&quot;, false)]
+public byte[] Note { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1336,7 +1384,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OnCompletion OnComplete { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;on-completion&quot;, &quot;apan&quot;, false)]
+public OnCompletion OnComplete { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1361,7 +1410,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address Receiver { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;rcv&quot;, false)]
+public Address Receiver { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1386,7 +1436,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong ReceiverRewards { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;receiver-rewards&quot;, &quot;rr&quot;, true)]
+public ulong ReceiverRewards { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1411,7 +1462,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address RekeyTo { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;rekey-to&quot;, &quot;rekey&quot;, false)]
+public Address RekeyTo { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1436,7 +1488,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong RoundTime { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;round-time&quot;, null, true)]
+public ulong RoundTime { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1461,7 +1514,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public VrfPubKey SelectionParticipationKey { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;selkey&quot;, false)]
+public VrfPubKey SelectionParticipationKey { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1486,7 +1540,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address Sender { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;sender&quot;, &quot;snd&quot;, false)]
+public Address Sender { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1511,7 +1566,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong SenderRewards { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;sender-rewards&quot;, &quot;rs&quot;, true)]
+public ulong SenderRewards { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1536,7 +1592,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TransactionType TransactionType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;tx-type&quot;, &quot;type&quot;, false)]
+public TransactionType TransactionType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1561,7 +1618,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong VoteFirst { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;votefst&quot;, false)]
+public ulong VoteFirst { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1586,7 +1644,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong VoteKeyDilution { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;votekd&quot;, false)]
+public ulong VoteKeyDilution { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1611,7 +1670,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong VoteLast { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;votelst&quot;, false)]
+public ulong VoteLast { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1636,7 +1696,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Ed25519.PublicKey VoteParticipationKey { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;votekey&quot;, false)]
+public Ed25519.PublicKey VoteParticipationKey { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1661,7 +1722,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong XferAsset { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(null, &quot;xaid&quot;, false)]
+public ulong XferAsset { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3263,8 +3325,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">NativeByteArray</span></td>
-        <td><p>A <see cref="!:NativeByteArray"></see></p>
+        <td><a class="xref" href="AlgoSdk.LowLevel.NativeByteArray.html">NativeByteArray</a></td>
+        <td><p>A <a class="xref" href="AlgoSdk.LowLevel.NativeByteArray.html">NativeByteArray</a></p>
 </td>
       </tr>
     </tbody>
@@ -3315,16 +3377,13 @@
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="AlgoSdk.IAppCallTxn.html">IAppCallTxn</a>
-  </div>
-  <div>
       <a class="xref" href="AlgoSdk.IAssetConfigTxn.html">IAssetConfigTxn</a>
   </div>
   <div>
-      <a class="xref" href="AlgoSdk.IAssetFreezeTxn.html">IAssetFreezeTxn</a>
+      <a class="xref" href="AlgoSdk.IAppCallTxn.html">IAppCallTxn</a>
   </div>
   <div>
-      <span class="xref">IEquatable&lt;&gt;</span>
+      <a class="xref" href="AlgoSdk.IAssetFreezeTxn.html">IAssetFreezeTxn</a>
   </div>
   <div>
       <a class="xref" href="AlgoSdk.ITransaction.html">ITransaction</a>

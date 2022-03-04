@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct AccountInfo
    | Unity Algorand SDK ">
-    <meta name="generator" content="docfx 2.59.0.0">
+    <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../resources/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -86,15 +86,13 @@
   <div class="markdown level0 summary"><p>Information regarding an Algorand account at a given round.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.AccountInfo.html">AccountInfo</a>&gt;</div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_AccountInfo_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct AccountInfo</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiObject(&quot;&quot;, &quot;&quot;, 0)]
+[Serializable]
+public struct AccountInfo : IEquatable&lt;AccountInfo&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -106,7 +104,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address Address</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;address&quot;, null, false)]
+public Address Address</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,7 +130,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong Amount</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;amount&quot;, null, false)]
+public ulong Amount</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,7 +156,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong AmountWithoutPendingRewards</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;amount-without-pending-rewards&quot;, null, false)]
+public ulong AmountWithoutPendingRewards</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,7 +182,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ApplicationLocalState[] ApplicationsLocalState</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;apps-local-state&quot;, null, false)]
+public ApplicationLocalState[] ApplicationsLocalState</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,7 +208,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong ApplicationsTotalExtraPages</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;apps-total-extra-pages&quot;, null, false)]
+public ulong ApplicationsTotalExtraPages</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,7 +234,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StateSchema ApplicationsTotalSchema</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;apps-total-schema&quot;, null, false)]
+public StateSchema ApplicationsTotalSchema</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -256,7 +260,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AssetHolding[] Assets</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;assets&quot;, null, false)]
+public AssetHolding[] Assets</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -283,7 +288,8 @@ This field can be updated in any transaction by setting the RekeyTo field.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address AuthAddress</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;auth-addr&quot;, null, false)]
+public Address AuthAddress</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -308,7 +314,8 @@ This field can be updated in any transaction by setting the RekeyTo field.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong ClosedAtRound</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;closed-at-round&quot;, null, true)]
+public ulong ClosedAtRound</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -333,7 +340,8 @@ This field can be updated in any transaction by setting the RekeyTo field.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Application[] CreatedApplications</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;created-apps&quot;, null, false)]
+public Application[] CreatedApplications</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -358,7 +366,8 @@ This field can be updated in any transaction by setting the RekeyTo field.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Asset[] CreatedAssets</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;created-assets&quot;, null, false)]
+public Asset[] CreatedAssets</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -383,7 +392,8 @@ This field can be updated in any transaction by setting the RekeyTo field.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong CreatedAtRound</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;created-at-round&quot;, null, true)]
+public ulong CreatedAtRound</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -408,7 +418,8 @@ This field can be updated in any transaction by setting the RekeyTo field.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Optional&lt;bool&gt; Deleted</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;deleted&quot;, null, true)]
+public Optional&lt;bool&gt; Deleted</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -433,7 +444,8 @@ This field can be updated in any transaction by setting the RekeyTo field.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AccountParticipation Participation</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;participation&quot;, null, false)]
+public AccountParticipation Participation</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -458,7 +470,8 @@ This field can be updated in any transaction by setting the RekeyTo field.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong PendingRewards</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;pending-rewards&quot;, null, false)]
+public ulong PendingRewards</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -483,7 +496,8 @@ This field can be updated in any transaction by setting the RekeyTo field.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong RewardBase</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;reward-base&quot;, null, false)]
+public ulong RewardBase</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -508,7 +522,8 @@ This field can be updated in any transaction by setting the RekeyTo field.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong Rewards</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;rewards&quot;, null, false)]
+public ulong Rewards</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -533,7 +548,8 @@ This field can be updated in any transaction by setting the RekeyTo field.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong Round</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;round&quot;, null, false)]
+public ulong Round</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -559,7 +575,8 @@ This field can be updated in any transaction by setting the RekeyTo field.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SignatureType SignatureType</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;sig-type&quot;, null, false)]
+public SignatureType SignatureType</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -585,7 +602,8 @@ This field can be updated in any transaction by setting the RekeyTo field.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FixedString32Bytes Status</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;status&quot;, null, false)]
+public FixedString32Bytes Status</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -676,10 +694,6 @@ This field can be updated in any transaction by setting the RekeyTo field.</p>
   <h5 id="AlgoSdk_AccountInfo_EstimateMinBalance_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><table><thead><tr><th>Account Data Type</th><th>Cost Per Item (MicroAlgos)</th></tr></thead><tbody><tr><td>Assets Opted In or Created</td><td>100,000</td></tr><tr><td>Applications Opted In or Created</td><td>100,000</td></tr><tr><td>Applications Extra Program Pages</td><td>100,000</td></tr><tr><td>Applications Stored Uints</td><td>28,500</td></tr><tr><td>Applications Stored Byteslices</td><td>50,000</td></tr></tbody></table>
 </div>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">IEquatable&lt;&gt;</span>
-  </div>
 </article>
           </div>
           

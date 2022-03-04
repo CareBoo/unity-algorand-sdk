@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct AlgoApiRequest
    | Unity Algorand SDK ">
-    <meta name="generator" content="docfx 2.59.0.0">
+    <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../resources/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -91,7 +91,7 @@ to Algorand REST services.</p>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_AlgoApiRequest_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ref readonly struct AlgoApiRequest</code></pre>
+    <pre><code class="lang-csharp hljs">public struct AlgoApiRequest</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -239,7 +239,7 @@ to Algorand REST services.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly AlgoApiRequest.Sent Send(CancellationToken cancellationToken = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent Send(CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -279,12 +279,12 @@ to Algorand REST services.</p>
   
   <a id="AlgoSdk_AlgoApiRequest_Send_" data-uid="AlgoSdk.AlgoApiRequest.Send*"></a>
   <h4 id="AlgoSdk_AlgoApiRequest_Send__1___0_CancellationToken_" data-uid="AlgoSdk.AlgoApiRequest.Send``1(``0,CancellationToken)">Send&lt;TProgress&gt;(TProgress, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Send the request and check progress callbacks using <see cref="!:IProgress&lt;System.Single>"></see></p>
+  <div class="markdown level1 summary"><p>Send the request and check progress callbacks using <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iprogress-1">IProgress&lt;T&gt;</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly AlgoApiRequest.SentWithProgress&lt;TProgress&gt; Send&lt;TProgress&gt;(TProgress progress, CancellationToken cancellationToken = null)
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.SentWithProgress&lt;TProgress&gt; Send&lt;TProgress&gt;(TProgress progress, CancellationToken cancellationToken = null)
     where TProgress : IProgress&lt;float&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -338,7 +338,7 @@ to Algorand REST services.</p>
     <tbody>
       <tr>
         <td><span class="parametername">TProgress</span></td>
-        <td><p>A progress callback implementing <see cref="!:IProgress&lt;System.Single>"></see></p>
+        <td><p>A progress callback implementing <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iprogress-1">IProgress&lt;T&gt;</a></p>
 </td>
       </tr>
     </tbody>
@@ -352,7 +352,7 @@ to Algorand REST services.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly AlgoApiRequest SetHeaders(params Header[] headers)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest SetHeaders(params Header[] headers)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -397,7 +397,7 @@ to Algorand REST services.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly AlgoApiRequest SetJsonBody(NativeText json)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest SetJsonBody(NativeText json)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -442,7 +442,7 @@ to Algorand REST services.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly AlgoApiRequest SetJsonBody(string json)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest SetJsonBody(string json)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -487,7 +487,7 @@ to Algorand REST services.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly AlgoApiRequest SetJsonBody&lt;TBody&gt;(TBody value)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest SetJsonBody&lt;TBody&gt;(TBody value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -548,7 +548,7 @@ to Algorand REST services.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly AlgoApiRequest SetMessagePackBody(NativeArray&lt;byte&gt;.ReadOnly bytes)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest SetMessagePackBody(NativeArray&lt;byte&gt;.ReadOnly bytes)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -593,7 +593,7 @@ to Algorand REST services.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly AlgoApiRequest SetPlainTextBody(string plainText)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest SetPlainTextBody(string plainText)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -638,7 +638,7 @@ to Algorand REST services.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly AlgoApiRequest SetRawBody(byte[] data, ContentType contentType)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest SetRawBody(byte[] data, ContentType contentType)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -689,7 +689,7 @@ to Algorand REST services.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly AlgoApiRequest SetToken(string tokenHeader, string token)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest SetToken(string tokenHeader, string token)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

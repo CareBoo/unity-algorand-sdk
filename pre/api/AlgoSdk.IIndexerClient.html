@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IIndexerClient
    | Unity Algorand SDK ">
-    <meta name="generator" content="docfx 2.59.0.0">
+    <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../resources/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -270,13 +270,13 @@ configurations.</p>
   
   
   <a id="AlgoSdk_IIndexerClient_GetAccountTransactions_" data-uid="AlgoSdk.IIndexerClient.GetAccountTransactions*"></a>
-  <h4 id="AlgoSdk_IIndexerClient_GetAccountTransactions_AlgoSdk_Address_DateTime_AlgoSdk_Optional_System_UInt64__DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__System_String_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_AlgoSdk_TransactionType_AlgoSdk_TransactionId_" data-uid="AlgoSdk.IIndexerClient.GetAccountTransactions(AlgoSdk.Address,DateTime,AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)">GetAccountTransactions(Address, DateTime, Optional&lt;UInt64&gt;, DateTime, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;FixedString128Bytes&gt;, String, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, SignatureType, TransactionType, TransactionId)</h4>
+  <h4 id="AlgoSdk_IIndexerClient_GetAccountTransactions_AlgoSdk_Address_System_DateTime_AlgoSdk_Optional_System_UInt64__System_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__System_String_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_AlgoSdk_TransactionType_AlgoSdk_TransactionId_" data-uid="AlgoSdk.IIndexerClient.GetAccountTransactions(AlgoSdk.Address,System.DateTime,AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)">GetAccountTransactions(Address, DateTime, Optional&lt;UInt64&gt;, DateTime, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;FixedString128Bytes&gt;, String, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, SignatureType, TransactionType, TransactionId)</h4>
   <div class="markdown level1 summary"><p>Lookup account transactions.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;TransactionsResponse&gt; GetAccountTransactions(Address accountAddress, DateTime afterTime = null, Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), DateTime beforeTime = null, Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;), string notePrefix = null, Optional&lt;bool&gt; rekeyTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;), SignatureType sigType = SignatureType.None, TransactionType txType = TransactionType.None, TransactionId txid = default(TransactionId))</code></pre>
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;TransactionsResponse&gt; GetAccountTransactions(Address accountAddress, DateTime afterTime = default(DateTime), Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), DateTime beforeTime = default(DateTime), Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;), string notePrefix = null, Optional&lt;bool&gt; rekeyTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;), SignatureType sigType = SignatureType.None, TransactionType txType = TransactionType.None, TransactionId txid = default(TransactionId))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -295,7 +295,7 @@ configurations.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">DateTime</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
         <td><span class="parametername">afterTime</span></td>
         <td><p>Include results after the given time.</p>
 </td>
@@ -307,7 +307,7 @@ configurations.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">DateTime</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
         <td><span class="parametername">beforeTime</span></td>
         <td><p>Include results before the given time.</p>
 </td>
@@ -738,13 +738,13 @@ previous results.</p>
   
   
   <a id="AlgoSdk_IIndexerClient_GetAssetTransactions_" data-uid="AlgoSdk.IIndexerClient.GetAssetTransactions*"></a>
-  <h4 id="AlgoSdk_IIndexerClient_GetAssetTransactions_System_UInt64_AlgoSdk_Address_AlgoSdk_AddressRole_DateTime_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__System_String_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_AlgoSdk_TransactionType_AlgoSdk_TransactionId_" data-uid="AlgoSdk.IIndexerClient.GetAssetTransactions(System.UInt64,AlgoSdk.Address,AlgoSdk.AddressRole,DateTime,DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)">GetAssetTransactions(UInt64, Address, AddressRole, DateTime, DateTime, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;FixedString128Bytes&gt;, String, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, SignatureType, TransactionType, TransactionId)</h4>
+  <h4 id="AlgoSdk_IIndexerClient_GetAssetTransactions_System_UInt64_AlgoSdk_Address_AlgoSdk_AddressRole_System_DateTime_System_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__System_String_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_AlgoSdk_TransactionType_AlgoSdk_TransactionId_" data-uid="AlgoSdk.IIndexerClient.GetAssetTransactions(System.UInt64,AlgoSdk.Address,AlgoSdk.AddressRole,System.DateTime,System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)">GetAssetTransactions(UInt64, Address, AddressRole, DateTime, DateTime, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;FixedString128Bytes&gt;, String, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, SignatureType, TransactionType, TransactionId)</h4>
   <div class="markdown level1 summary"><p>Lookup transactions for an asset.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;TransactionsResponse&gt; GetAssetTransactions(ulong assetId, Address address = default(Address), AddressRole addressRole = AddressRole.None, DateTime afterTime = null, DateTime beforeTime = null, Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; excludeCloseTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;), string notePrefix = null, Optional&lt;bool&gt; rekeyTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;), SignatureType sigType = SignatureType.None, TransactionType txType = TransactionType.None, TransactionId txid = default(TransactionId))</code></pre>
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;TransactionsResponse&gt; GetAssetTransactions(ulong assetId, Address address = default(Address), AddressRole addressRole = AddressRole.None, DateTime afterTime = default(DateTime), DateTime beforeTime = default(DateTime), Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; excludeCloseTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;), string notePrefix = null, Optional&lt;bool&gt; rekeyTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;), SignatureType sigType = SignatureType.None, TransactionType txType = TransactionType.None, TransactionId txid = default(TransactionId))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -774,13 +774,13 @@ previous results.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">DateTime</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
         <td><span class="parametername">afterTime</span></td>
         <td><p>Include results after the given time.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">DateTime</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
         <td><span class="parametername">beforeTime</span></td>
         <td><p>Include results before the given time.</p>
 </td>
@@ -996,13 +996,13 @@ previous results.</p>
   
   
   <a id="AlgoSdk_IIndexerClient_GetTransactions_" data-uid="AlgoSdk.IIndexerClient.GetTransactions*"></a>
-  <h4 id="AlgoSdk_IIndexerClient_GetTransactions_AlgoSdk_Address_AlgoSdk_AddressRole_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__System_String_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_AlgoSdk_TransactionType_AlgoSdk_TransactionId_" data-uid="AlgoSdk.IIndexerClient.GetTransactions(AlgoSdk.Address,AlgoSdk.AddressRole,DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)">GetTransactions(Address, AddressRole, DateTime, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, DateTime, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;FixedString128Bytes&gt;, String, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, SignatureType, TransactionType, TransactionId)</h4>
+  <h4 id="AlgoSdk_IIndexerClient_GetTransactions_AlgoSdk_Address_AlgoSdk_AddressRole_System_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__System_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__System_String_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_AlgoSdk_TransactionType_AlgoSdk_TransactionId_" data-uid="AlgoSdk.IIndexerClient.GetTransactions(AlgoSdk.Address,AlgoSdk.AddressRole,System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)">GetTransactions(Address, AddressRole, DateTime, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, DateTime, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;FixedString128Bytes&gt;, String, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, SignatureType, TransactionType, TransactionId)</h4>
   <div class="markdown level1 summary"><p>Search for transactions.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;TransactionsResponse&gt; GetTransactions(Address address = default(Address), AddressRole addressRole = AddressRole.None, DateTime afterTime = null, Optional&lt;ulong&gt; applicationId = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), DateTime beforeTime = null, Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; excludeCloseTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;), string notePrefix = null, Optional&lt;bool&gt; rekeyTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;), SignatureType sigType = SignatureType.None, TransactionType txType = TransactionType.None, TransactionId txid = default(TransactionId))</code></pre>
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;TransactionsResponse&gt; GetTransactions(Address address = default(Address), AddressRole addressRole = AddressRole.None, DateTime afterTime = default(DateTime), Optional&lt;ulong&gt; applicationId = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), DateTime beforeTime = default(DateTime), Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; excludeCloseTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;), string notePrefix = null, Optional&lt;bool&gt; rekeyTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;), SignatureType sigType = SignatureType.None, TransactionType txType = TransactionType.None, TransactionId txid = default(TransactionId))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1027,7 +1027,7 @@ previous results.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">DateTime</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
         <td><span class="parametername">afterTime</span></td>
         <td><p>Include results after the given time.</p>
 </td>
@@ -1045,7 +1045,7 @@ previous results.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">DateTime</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
         <td><span class="parametername">beforeTime</span></td>
         <td><p>Include results before the given time.</p>
 </td>

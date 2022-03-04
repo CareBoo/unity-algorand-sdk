@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct AlgoApiRequest.Awaiter&lt;TResponse&gt;
    | Unity Algorand SDK ">
-    <meta name="generator" content="docfx 2.59.0.0">
+    <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../resources/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -86,15 +86,11 @@
   <div class="markdown level0 summary"><p>A Task Awaiter for <see cref="!:UnityWebRequest"></see></p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">ICriticalNotifyCompletion</span></div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_AlgoApiRequest_Awaiter_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly struct Awaiter&lt;TResponse&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct Awaiter&lt;TResponse&gt; : ICriticalNotifyCompletion</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,7 +146,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly bool IsCompleted { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsCompleted { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,7 +173,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly AlgoApiResponse&lt;TResponse&gt; GetResult()</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiResponse&lt;TResponse&gt; GetResult()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -197,12 +193,12 @@
   
   
   <a id="AlgoSdk_AlgoApiRequest_Awaiter_1_OnCompleted_" data-uid="AlgoSdk.AlgoApiRequest.Awaiter`1.OnCompleted*"></a>
-  <h4 id="AlgoSdk_AlgoApiRequest_Awaiter_1_OnCompleted_Action_" data-uid="AlgoSdk.AlgoApiRequest.Awaiter`1.OnCompleted(Action)">OnCompleted(Action)</h4>
+  <h4 id="AlgoSdk_AlgoApiRequest_Awaiter_1_OnCompleted_System_Action_" data-uid="AlgoSdk.AlgoApiRequest.Awaiter`1.OnCompleted(System.Action)">OnCompleted(Action)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly void OnCompleted(Action continuation)</code></pre>
+    <pre><code class="lang-csharp hljs">public void OnCompleted(Action continuation)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -215,7 +211,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Action</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">continuation</span></td>
         <td></td>
       </tr>
@@ -224,12 +220,12 @@
   
   
   <a id="AlgoSdk_AlgoApiRequest_Awaiter_1_UnsafeOnCompleted_" data-uid="AlgoSdk.AlgoApiRequest.Awaiter`1.UnsafeOnCompleted*"></a>
-  <h4 id="AlgoSdk_AlgoApiRequest_Awaiter_1_UnsafeOnCompleted_Action_" data-uid="AlgoSdk.AlgoApiRequest.Awaiter`1.UnsafeOnCompleted(Action)">UnsafeOnCompleted(Action)</h4>
+  <h4 id="AlgoSdk_AlgoApiRequest_Awaiter_1_UnsafeOnCompleted_System_Action_" data-uid="AlgoSdk.AlgoApiRequest.Awaiter`1.UnsafeOnCompleted(System.Action)">UnsafeOnCompleted(Action)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly void UnsafeOnCompleted(Action continuation)</code></pre>
+    <pre><code class="lang-csharp hljs">public void UnsafeOnCompleted(Action continuation)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -242,16 +238,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Action</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">continuation</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">ICriticalNotifyCompletion</span>
-  </div>
 </article>
           </div>
           

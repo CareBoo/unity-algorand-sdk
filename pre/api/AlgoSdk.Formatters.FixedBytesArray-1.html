@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct FixedBytesArray&lt;T&gt;
    | Unity Algorand SDK ">
-    <meta name="generator" content="docfx 2.59.0.0">
+    <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../resources/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -87,14 +87,13 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IArray</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</div>
+    <div><a class="xref" href="AlgoSdk.LowLevel.IArray-1.html">IArray</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.Formatters.html">AlgoSdk.Formatters</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_Formatters_FixedBytesArray_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct FixedBytesArray&lt;T&gt;
-    where T : struct, INativeList&lt;byte&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct FixedBytesArray&lt;T&gt; : IArray&lt;byte&gt; where T : struct, INativeList&lt;byte&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -297,7 +296,7 @@
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">IArray&lt;&gt;</span>
+      <a class="xref" href="AlgoSdk.LowLevel.IArray-1.html">IArray&lt;T&gt;</a>
   </div>
 </article>
           </div>

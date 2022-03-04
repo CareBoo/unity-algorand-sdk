@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct SecureMemoryHandle
    | Unity Algorand SDK ">
-    <meta name="generator" content="docfx 2.59.0.0">
+    <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../resources/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -85,15 +85,11 @@
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">INativeDisposable</span></div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.Crypto.html">AlgoSdk.Crypto</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_Crypto_SecureMemoryHandle_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct SecureMemoryHandle</code></pre>
+    <pre><code class="lang-csharp hljs">public struct SecureMemoryHandle : INativeDisposable</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -116,7 +112,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IntPtr</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -131,7 +127,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly bool IsCreated { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsCreated { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,7 +149,7 @@
   
   
   <a id="AlgoSdk_Crypto_SecureMemoryHandle_Create_" data-uid="AlgoSdk.Crypto.SecureMemoryHandle.Create*"></a>
-  <h4 id="AlgoSdk_Crypto_SecureMemoryHandle_Create_UIntPtr_" data-uid="AlgoSdk.Crypto.SecureMemoryHandle.Create(UIntPtr)">Create(UIntPtr)</h4>
+  <h4 id="AlgoSdk_Crypto_SecureMemoryHandle_Create_System_UIntPtr_" data-uid="AlgoSdk.Crypto.SecureMemoryHandle.Create(System.UIntPtr)">Create(UIntPtr)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -171,7 +167,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UIntPtr</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uintptr">UIntPtr</a></td>
         <td><span class="parametername">sizeBytes</span></td>
         <td></td>
       </tr>
@@ -244,10 +240,6 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">INativeDisposable</span>
-  </div>
 </article>
           </div>
           

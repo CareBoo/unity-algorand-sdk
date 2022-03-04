@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct Signed&lt;TTransaction&gt;
    | Unity Algorand SDK ">
-    <meta name="generator" content="docfx 2.59.0.0">
+    <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../resources/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -86,16 +86,13 @@
   <div class="markdown level0 summary"><p>A typed signed transaction.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.Signed-1.html">Signed</a>&lt;TTransaction&gt;&gt;</div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_Signed_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct Signed&lt;TTransaction&gt;
-    where TTransaction : ITransaction</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiFormatter(typeof(SignedTransactionFormatter&lt;&gt;))]
+[Serializable]
+public struct Signed&lt;TTransaction&gt; : IEquatable&lt;Signed&lt;TTransaction&gt;&gt; where TTransaction : ITransaction</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -278,10 +275,6 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">IEquatable&lt;&gt;</span>
-  </div>
 </article>
           </div>
           

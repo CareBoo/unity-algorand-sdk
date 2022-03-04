@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct AssetParams
    | Unity Algorand SDK ">
-    <meta name="generator" content="docfx 2.59.0.0">
+    <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../resources/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -87,15 +87,13 @@
 [apar] when part of an AssetConfig transaction.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.AssetParams.html">AssetParams</a>&gt;</div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_AssetParams_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct AssetParams</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiObject(&quot;&quot;, &quot;&quot;, 0)]
+[Serializable]
+public struct AssetParams : IEquatable&lt;AssetParams&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -107,7 +105,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address Clawback</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;clawback&quot;, &quot;c&quot;, false)]
+public Address Clawback</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -132,7 +131,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address Creator</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;creator&quot;, null, true)]
+public Address Creator</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -158,7 +158,8 @@ Minimum value: 0. Maximum value: 19.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint Decimals</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;decimals&quot;, &quot;dc&quot;, false)]
+public uint Decimals</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -183,7 +184,8 @@ Minimum value: 0. Maximum value: 19.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool DefaultFrozen</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;default-frozen&quot;, &quot;df&quot;, false)]
+public bool DefaultFrozen</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,7 +210,8 @@ Minimum value: 0. Maximum value: 19.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address Freeze</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;freeze&quot;, &quot;f&quot;, false)]
+public Address Freeze</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -233,7 +236,8 @@ Minimum value: 0. Maximum value: 19.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address Manager</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;manager&quot;, &quot;m&quot;, false)]
+public Address Manager</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -258,7 +262,8 @@ Minimum value: 0. Maximum value: 19.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Sha512_256_Hash MetadataHash</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;metadata-hash&quot;, &quot;am&quot;, false)]
+public Sha512_256_Hash MetadataHash</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -283,7 +288,8 @@ Minimum value: 0. Maximum value: 19.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FixedString64Bytes Name</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;name&quot;, &quot;an&quot;, false)]
+public FixedString64Bytes Name</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -308,7 +314,8 @@ Minimum value: 0. Maximum value: 19.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address Reserve</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;reserve&quot;, &quot;r&quot;, false)]
+public Address Reserve</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -333,7 +340,8 @@ Minimum value: 0. Maximum value: 19.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong Total</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;total&quot;, &quot;t&quot;, false)]
+public ulong Total</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -358,7 +366,8 @@ Minimum value: 0. Maximum value: 19.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FixedString32Bytes UnitName</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;unit-name&quot;, &quot;un&quot;, false)]
+public FixedString32Bytes UnitName</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -383,7 +392,8 @@ Minimum value: 0. Maximum value: 19.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FixedString128Bytes Url</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;url&quot;, &quot;au&quot;, false)]
+public FixedString128Bytes Url</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -411,7 +421,8 @@ Minimum value: 0. Maximum value: 19.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FixedString64Bytes NameBase64 { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;name-b64&quot;, null, true)]
+public FixedString64Bytes NameBase64 { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -437,7 +448,8 @@ Minimum value: 0. Maximum value: 19.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FixedString32Bytes UnitNameBase64 { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;unit-name-b64&quot;, null, true)]
+public FixedString32Bytes UnitNameBase64 { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -463,7 +475,8 @@ Minimum value: 0. Maximum value: 19.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FixedString128Bytes UrlBase64 { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;url-b64&quot;, null, true)]
+public FixedString128Bytes UrlBase64 { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -524,10 +537,6 @@ Minimum value: 0. Maximum value: 19.</p>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">IEquatable&lt;&gt;</span>
-  </div>
 </article>
           </div>
           

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct PendingTransactions
    | Unity Algorand SDK ">
-    <meta name="generator" content="docfx 2.59.0.0">
+    <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../resources/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -86,15 +86,13 @@
   <div class="markdown level0 summary"><p>A potentially truncated list of transactions currently in the node&apos;s transaction pool. You can compute whether or not the list is truncated if the number of elements in the <a class="xref" href="AlgoSdk.PendingTransactions.html#AlgoSdk_PendingTransactions_TopTransactions">TopTransactions</a> array is fewer than <a class="xref" href="AlgoSdk.PendingTransactions.html#AlgoSdk_PendingTransactions_TotalTransactions">TotalTransactions</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="AlgoSdk.PendingTransactions.html">PendingTransactions</a>&gt;</div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_PendingTransactions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct PendingTransactions</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiObject(&quot;&quot;, &quot;&quot;, 0)]
+[Serializable]
+public struct PendingTransactions : IEquatable&lt;PendingTransactions&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -106,7 +104,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SignedTransaction[] TopTransactions</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;top-transactions&quot;, &quot;top-transactions&quot;, false)]
+public SignedTransaction[] TopTransactions</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -131,7 +130,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong TotalTransactions</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;total-transactions&quot;, &quot;total-transactions&quot;, false)]
+public ulong TotalTransactions</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -192,10 +192,6 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">IEquatable&lt;&gt;</span>
-  </div>
 </article>
           </div>
           

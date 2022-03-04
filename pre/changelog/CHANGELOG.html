@@ -8,7 +8,7 @@
     <title>Changelog | Unity Algorand SDK </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Changelog | Unity Algorand SDK ">
-    <meta name="generator" content="docfx 2.59.0.0">
+    <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../resources/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -82,8 +82,18 @@
 <p>All notable changes to this package will be documented in this file.</p>
 <p>The format is based on <a href="http://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>
 and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
-<h1 id="200-pre9httpsgithubcomcareboounity-algorand-sdkcomparev200-pre8v200-pre9-2022-03-04"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.8...v2.0.0-pre.9">2.0.0-pre.9</a> (2022-03-04)</h1>
+<h1 id="200-pre10httpsgithubcomcareboounity-algorand-sdkcomparev200-pre9v200-pre10-2022-03-04"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.9...v2.0.0-pre.10">2.0.0-pre.10</a> (2022-03-04)</h1>
 <h3 id="code-refactoring">Code Refactoring</h3>
+<ul>
+<li><strong>collections:</strong> move <code>Unity.Collections</code> extensions into their own assembly (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/8d217fc9823d427e7b93fff2213a850c84d8ae4d">8d217fc</a>)</li>
+</ul>
+<h3 id="breaking-changes">BREAKING CHANGES</h3>
+<ul>
+<li><strong>collections:</strong> All of the extensions to <code>Unity.Collections</code> can now be found in
+<code>AlgoSdk.Collections</code> and the <code>CareBoo.AlgoSdk.Collections</code> assembly.</li>
+</ul>
+<h1 id="200-pre9httpsgithubcomcareboounity-algorand-sdkcomparev200-pre8v200-pre9-2022-03-04"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.8...v2.0.0-pre.9">2.0.0-pre.9</a> (2022-03-04)</h1>
+<h3 id="code-refactoring-1">Code Refactoring</h3>
 <ul>
 <li><strong>assemblies:</strong> move libraries to their own assemblies to simplify things (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/0b17ea1758dd53960a82841c4ff3caa130ab2f09">0b17ea1</a>)</li>
 <li><strong>walletconnect:</strong> remove unused enum <code>WalletConnectError</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/6df5079fa71d57fbab6dd2bd9f4320758ff349a0">6df5079</a>)</li>
@@ -93,7 +103,7 @@ and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semanti
 <ul>
 <li><strong>walletconnect:</strong> add <code>HandshakeUrl</code> struct (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/423834868759538190c6602d1dad1035b2a430a8">4238348</a>)</li>
 </ul>
-<h3 id="breaking-changes">BREAKING CHANGES</h3>
+<h3 id="breaking-changes-1">BREAKING CHANGES</h3>
 <ul>
 <li><strong>websocket:</strong> Namespace <code>Netcode.Transports.WebSocket</code> has been renamed to <code>AlgoSdk.WebSocket</code>.</li>
 <li><strong>assemblies:</strong> <code>zxing.net</code> and <code>websocket-sharp</code> are now in their own assemblies. You will need to
@@ -113,7 +123,7 @@ update them if you were using the <code>ZXing</code> or <code>WebSocket</code> n
 <ul>
 <li><strong>unitask:</strong> upgrade UniTask to version 2.3.1 (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/537d2974dc53c05972ce1ebde197e1ec80580be1">537d297</a>)</li>
 </ul>
-<h3 id="breaking-changes-1">BREAKING CHANGES</h3>
+<h3 id="breaking-changes-2">BREAKING CHANGES</h3>
 <ul>
 <li><strong>qrcode:</strong> QrCode logic has been moved from the <code>CareBoo.AlgoSdk.WalletConnect</code> assembly and
 into the <code>CareBoo.AlgoSdk.QrCode</code> assembly.</li>
@@ -136,7 +146,7 @@ re-reference it.</li>
 <li><strong>lowlevel:</strong> add <code>NativeArrayUtil.ConcatAll</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/10644db4c6e6a5256a3ffd2ea7a1441f0ac4499c">10644db</a>)</li>
 <li><strong>models:</strong> add implicit operators for either value type in an either (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/84cfbcfc488b18a411d50d0c6792da1778703ec8">84cfbcf</a>)</li>
 </ul>
-<h3 id="breaking-changes-2">BREAKING CHANGES</h3>
+<h3 id="breaking-changes-3">BREAKING CHANGES</h3>
 <ul>
 <li><strong>lowlevel:</strong> Remove unused struct <code>NativeReferenceOfDisposable</code> from AlgoSdk.LowLevel</li>
 </ul>
@@ -156,22 +166,22 @@ re-reference it.</li>
 <ul>
 <li><strong>walletconnect:</strong> fix issue where new WalletConnect assembly was not compiling in Unity 2020.3 (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/0a1ec269d60e6a8d7cec50ea8496b9539b78916b">0a1ec26</a>)</li>
 </ul>
-<h3 id="code-refactoring-1">Code Refactoring</h3>
+<h3 id="code-refactoring-2">Code Refactoring</h3>
 <ul>
 <li><strong>walletconnect:</strong> move WalletConnect code to its own assembly (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/e6668cd68b99f81fdd8afedfcae35141e70b2284">e6668cd</a>)</li>
 </ul>
-<h3 id="breaking-changes-3">BREAKING CHANGES</h3>
+<h3 id="breaking-changes-4">BREAKING CHANGES</h3>
 <ul>
 <li><strong>walletconnect:</strong> Code in the AlgoSdk.WalletConnect namespace are now in the
 CareBoo.AlgoSdk.WalletConnect assembly. Additionally, Hex has been moved to the AlgoSdk namespace
 and remains in the CareBoo.AlgoSdk assembly.</li>
 </ul>
 <h1 id="200-pre2httpsgithubcomcareboounity-algorand-sdkcomparev200-pre1v200-pre2-2022-02-25"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.1...v2.0.0-pre.2">2.0.0-pre.2</a> (2022-02-25)</h1>
-<h3 id="code-refactoring-2">Code Refactoring</h3>
+<h3 id="code-refactoring-3">Code Refactoring</h3>
 <ul>
 <li><strong>websocket:</strong> move websocket code to its own assembly definition (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/8ff6738942b65fe25b27218b80f8cdc630a698d8">8ff6738</a>)</li>
 </ul>
-<h3 id="breaking-changes-4">BREAKING CHANGES</h3>
+<h3 id="breaking-changes-5">BREAKING CHANGES</h3>
 <ul>
 <li><strong>websocket:</strong> To reference Netcode.Transports.WebSocket classes, you need to now reference the
 CareBoo.WebSocket assembly</li>
@@ -181,7 +191,7 @@ CareBoo.WebSocket assembly</li>
 <ul>
 <li><strong>api:</strong> add support for <code>CancellationToken</code> and <code>IProgress&lt;float&gt;</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/6ca2f395c072f97d5f32546feac0b8cec6c64ac9">6ca2f39</a>)</li>
 </ul>
-<h3 id="breaking-changes-5">BREAKING CHANGES</h3>
+<h3 id="breaking-changes-6">BREAKING CHANGES</h3>
 <ul>
 <li><strong>api:</strong> API is no longer returning <code>UniTask</code>, and is now returning <code>AlgoApiRequest.Sent</code>.</li>
 </ul>
@@ -373,7 +383,7 @@ CareBoo.WebSocket assembly</li>
 <li><strong>transaction:</strong> <span class="emoji" shortcode="bug">🐛</span> fix incorrect constructor in <code>Transaction.ApplicationCall</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/521fb98be04ca801296a17b4091e4b64caa48d05">521fb98</a>)</li>
 <li><strong>transaction:</strong> remove unused assetCloseTo param in <code>AssetClawback</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/ce4d004a09f32530870a28d1652bc3747fa3e928">ce4d004</a>)</li>
 </ul>
-<h3 id="code-refactoring-3">Code Refactoring</h3>
+<h3 id="code-refactoring-4">Code Refactoring</h3>
 <ul>
 <li><span class="emoji" shortcode="fire">🔥</span> remove <code>NativeSliceExtensions</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/325bfa9c03ca342bc939f7862c6beebe1796e678">325bfa9</a>)</li>
 <li><span class="emoji" shortcode="fire">🔥</span> remove some verify methods in the transaction (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/2432bdd1ec1a4a105bea297b413a80921a9d70ee">2432bdd</a>)</li>
@@ -541,7 +551,7 @@ CareBoo.WebSocket assembly</li>
 <ul>
 <li><strong>demo:</strong> <span class="emoji" shortcode="fire">🔥</span> remove bossroom assets... too big to be a sample (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/d76802948df36cc557744eaa889de43d2d253707">d768029</a>)</li>
 </ul>
-<h3 id="breaking-changes-6">BREAKING CHANGES</h3>
+<h3 id="breaking-changes-7">BREAKING CHANGES</h3>
 <ul>
 <li>Removing <code>NativeSliceExtensions</code></li>
 <li><strong>algod:</strong> <code>AccountParticipation</code> no longer exists</li>
@@ -584,11 +594,11 @@ CareBoo.WebSocket assembly</li>
 <li><strong>unity:</strong> make AlgoApiClient&#39;s Serializable (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/4a3aa11fe3ecdf46f00ef29829e1d965043ee3aa">4a3aa11</a>)</li>
 </ul>
 <h1 id="100-pre3httpsgithubcomcareboounity-algorand-sdkcomparev100-pre2v100-pre3-2021-10-25"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.2...v1.0.0-pre.3">1.0.0-pre.3</a> (2021-10-25)</h1>
-<h3 id="code-refactoring-4">Code Refactoring</h3>
+<h3 id="code-refactoring-5">Code Refactoring</h3>
 <ul>
 <li><span class="emoji" shortcode="fire">🔥</span> remove <code>NativeSliceExtensions</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/c5c77158ab8bfa6585e95f3cb01594b80758f635">c5c7715</a>)</li>
 </ul>
-<h3 id="breaking-changes-7">BREAKING CHANGES</h3>
+<h3 id="breaking-changes-8">BREAKING CHANGES</h3>
 <ul>
 <li>Removing <code>NativeSliceExtensions</code></li>
 </ul>
@@ -642,7 +652,7 @@ CareBoo.WebSocket assembly</li>
 <li><strong>transaction:</strong> <span class="emoji" shortcode="bug">🐛</span> fix <code>OnCompletion</code> having incorrect byte values (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/514a378dce9c0669002960f6ef76d453a54fe0f0">514a378</a>)</li>
 <li><strong>transaction:</strong> <span class="emoji" shortcode="bug">🐛</span> fix incorrect constructor in <code>Transaction.ApplicationCall</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/98b58295d7676d73a924a5d837b7f9b0dc8a62c9">98b5829</a>)</li>
 </ul>
-<h3 id="code-refactoring-5">Code Refactoring</h3>
+<h3 id="code-refactoring-6">Code Refactoring</h3>
 <ul>
 <li><span class="emoji" shortcode="fire">🔥</span> remove some verify methods in the transaction (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/70a830830d3778a23d32fd9985d5d424972dd99f">70a8308</a>)</li>
 <li><span class="emoji" shortcode="fire">🔥</span> remove unnecessary <code>SendTransactionRaw</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/09b3bdc0dfbeb2b47603b3cfc92be0478120bd09">09b3bdc</a>)</li>
@@ -807,7 +817,7 @@ CareBoo.WebSocket assembly</li>
 <ul>
 <li><strong>demo:</strong> <span class="emoji" shortcode="fire">🔥</span> remove bossroom assets... too big to be a sample (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/e53192daaba120f53d5c8f7312d2b199a8f4e564">e53192d</a>)</li>
 </ul>
-<h3 id="breaking-changes-8">BREAKING CHANGES</h3>
+<h3 id="breaking-changes-9">BREAKING CHANGES</h3>
 <ul>
 <li><strong>algod:</strong> <code>AccountParticipation</code> no longer exists</li>
 <li><strong>transaction:</strong> All transaction constructors have been changed to use <code>TransactionParams</code></li>
@@ -837,7 +847,7 @@ CareBoo.WebSocket assembly</li>
 <li><strong>transaction:</strong> <span class="emoji" shortcode="bug">🐛</span> fix <code>OnCompletion</code> having incorrect byte values (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/514a378dce9c0669002960f6ef76d453a54fe0f0">514a378</a>)</li>
 <li><strong>transaction:</strong> <span class="emoji" shortcode="bug">🐛</span> fix incorrect constructor in <code>Transaction.ApplicationCall</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/98b58295d7676d73a924a5d837b7f9b0dc8a62c9">98b5829</a>)</li>
 </ul>
-<h3 id="code-refactoring-6">Code Refactoring</h3>
+<h3 id="code-refactoring-7">Code Refactoring</h3>
 <ul>
 <li><strong>algod:</strong> <span class="emoji" shortcode="recycle">♻️</span> replace <code>AccountParticipation</code> with <code>Transaction.KeyRegistration.Params</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/3b624eec4974e28b0cc31b019d41f37dc60207ca">3b624ee</a>)</li>
 </ul>
@@ -853,7 +863,7 @@ CareBoo.WebSocket assembly</li>
 <li><strong>transaction:</strong> <span class="emoji" shortcode="sparkles">✨</span> implement atomic transfers (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/21f7ee34c14b0e9b99ba193f7b73215798dc5a76">21f7ee3</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/45">#45</a></li>
 <li><strong>transaction:</strong> <span class="emoji" shortcode="sparkles">✨</span> use <code>TransactionParams</code> in Transaction constructors (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/a966320a0ba5f45225c77db23ef0742c43b73cfa">a966320</a>)</li>
 </ul>
-<h3 id="breaking-changes-9">BREAKING CHANGES</h3>
+<h3 id="breaking-changes-10">BREAKING CHANGES</h3>
 <ul>
 <li><strong>algod:</strong> <code>AccountParticipation</code> no longer exists</li>
 <li><strong>transaction:</strong> All transaction constructors have been changed to use <code>TransactionParams</code></li>
@@ -871,7 +881,7 @@ CareBoo.WebSocket assembly</li>
 <li><strong>transaction:</strong> <span class="emoji" shortcode="bug">🐛</span> fix <code>OnCompletion</code> having incorrect byte values (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/514a378dce9c0669002960f6ef76d453a54fe0f0">514a378</a>)</li>
 <li><strong>transaction:</strong> <span class="emoji" shortcode="bug">🐛</span> fix incorrect constructor in <code>Transaction.ApplicationCall</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/98b58295d7676d73a924a5d837b7f9b0dc8a62c9">98b5829</a>)</li>
 </ul>
-<h3 id="code-refactoring-7">Code Refactoring</h3>
+<h3 id="code-refactoring-8">Code Refactoring</h3>
 <ul>
 <li><strong>algod:</strong> <span class="emoji" shortcode="recycle">♻️</span> replace <code>AccountParticipation</code> with <code>Transaction.KeyRegistration.Params</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/3b624eec4974e28b0cc31b019d41f37dc60207ca">3b624ee</a>)</li>
 </ul>
@@ -887,7 +897,7 @@ CareBoo.WebSocket assembly</li>
 <li><strong>transaction:</strong> <span class="emoji" shortcode="sparkles">✨</span> implement atomic transfers (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/21f7ee34c14b0e9b99ba193f7b73215798dc5a76">21f7ee3</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/45">#45</a></li>
 <li><strong>transaction:</strong> <span class="emoji" shortcode="sparkles">✨</span> use <code>TransactionParams</code> in Transaction constructors (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/a966320a0ba5f45225c77db23ef0742c43b73cfa">a966320</a>)</li>
 </ul>
-<h3 id="breaking-changes-10">BREAKING CHANGES</h3>
+<h3 id="breaking-changes-11">BREAKING CHANGES</h3>
 <ul>
 <li><strong>algod:</strong> <code>AccountParticipation</code> no longer exists</li>
 <li><strong>transaction:</strong> All transaction constructors have been changed to use <code>TransactionParams</code></li>
@@ -905,7 +915,7 @@ CareBoo.WebSocket assembly</li>
 <li><strong>kmd:</strong> <span class="emoji" shortcode="bug">🐛</span> fix <code>WalletHandle</code> not added to formatter cache (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/4c309395b3f7076aa4db1e6ebfb552d59fad57b0">4c30939</a>)</li>
 <li><strong>kmd:</strong> <span class="emoji" shortcode="bug">🐛</span> fix multisig (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/fc7bcd6f647c399b3edebb52ccd65fccf715393e">fc7bcd6</a>)</li>
 </ul>
-<h3 id="code-refactoring-8">Code Refactoring</h3>
+<h3 id="code-refactoring-9">Code Refactoring</h3>
 <ul>
 <li><strong>kmd:</strong> <span class="emoji" shortcode="recycle">♻️</span> replace <code>Request</code> with explicit method params (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/030a0a9486f6270e6e867ad1efbad73b90e0ecfb">030a0a9</a>)</li>
 </ul>
@@ -915,7 +925,7 @@ CareBoo.WebSocket assembly</li>
 <li><strong>serialization:</strong> <span class="emoji" shortcode="sparkles">✨</span> add support for deserializing <code>byte[]</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/3ef497f3e1f6d31b23fc9bcef77c66f975e242b5">3ef497f</a>)</li>
 <li><strong>transaction:</strong> <span class="emoji" shortcode="sparkles">✨</span> add <code>GetSignature</code> and <code>ToRaw</code> extensions to <code>ITransaction</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/e4a3ad5e15e10155d9cb39dcaf61afc77989950e">e4a3ad5</a>)</li>
 </ul>
-<h3 id="breaking-changes-11">BREAKING CHANGES</h3>
+<h3 id="breaking-changes-12">BREAKING CHANGES</h3>
 <ul>
 <li><strong>indexer:</strong> Removed token from IndexerClient constructor</li>
 <li><strong>kmd:</strong> changes <code>IKmdClient</code> API to use parameters instead of <code>Request</code> objs</li>
@@ -946,7 +956,7 @@ CareBoo.WebSocket assembly</li>
 <ul>
 <li><strong>demo:</strong> <span class="emoji" shortcode="fire">🔥</span> remove bossroom assets... too big to be a sample (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/e53192daaba120f53d5c8f7312d2b199a8f4e564">e53192d</a>)</li>
 </ul>
-<h3 id="breaking-changes-12">BREAKING CHANGES</h3>
+<h3 id="breaking-changes-13">BREAKING CHANGES</h3>
 <ul>
 <li><strong>indexer:</strong> indexer queries are now given as optional arguments</li>
 </ul>
@@ -1017,7 +1027,7 @@ CareBoo.WebSocket assembly</li>
 <li><strong>indexer:</strong> <span class="emoji" shortcode="sparkles">✨</span> fix <code>TealValue</code> msgpack fieldnames (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/2a6ef27e4f465c73a3cb744eae12267929c06f07">2a6ef27</a>)</li>
 <li><strong>serialization:</strong> <span class="emoji" shortcode="bug">🐛</span> fix <code>SignedTransaction</code> serialization (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/f4bde8d4fd65e6146df35a6ce0890ed4417a235a">f4bde8d</a>)</li>
 </ul>
-<h3 id="code-refactoring-9">Code Refactoring</h3>
+<h3 id="code-refactoring-10">Code Refactoring</h3>
 <ul>
 <li><span class="emoji" shortcode="fire">🔥</span> remove some verify methods in the transaction (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/70a830830d3778a23d32fd9985d5d424972dd99f">70a8308</a>)</li>
 <li><span class="emoji" shortcode="recycle">♻️</span> convert all <code>SignedTransaction&lt;&gt;</code> to a single <code>SignedTransaction</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/26fa65a53fa4cb2f4e8d81aa9ec2adc537d09b01">26fa65a</a>)</li>
@@ -1086,7 +1096,7 @@ CareBoo.WebSocket assembly</li>
 <li><strong>serialization:</strong> <span class="emoji" shortcode="sparkles">✨</span> implement <code>AlgoApiObject</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/74456b60bb235eaf89b26d809adb2141b82d57f8">74456b6</a>)</li>
 <li><strong>serialization:</strong> <span class="emoji" shortcode="sparkles">✨</span> implement <code>Timestamp</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/cc1159b510aefc79c53fbe35154c5cf422e68f5f">cc1159b</a>)</li>
 </ul>
-<h3 id="breaking-changes-13">BREAKING CHANGES</h3>
+<h3 id="breaking-changes-14">BREAKING CHANGES</h3>
 <ul>
 <li>remove <code>Transaction.VerifySignature</code>, <code>SignedTransaction.Verify</code></li>
 <li>signed transactions are now represented by <code>SignedTransaction</code> (non-generic)</li>
@@ -1111,7 +1121,7 @@ CareBoo.WebSocket assembly</li>
 <ul>
 <li><span class="emoji" shortcode="sparkles">✨</span> add FixedBytesFormatter (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/941eb3f83b4b82d58431bc49b7f402e1ecfbccea">941eb3f</a>)</li>
 </ul>
-<h3 id="breaking-changes-14">BREAKING CHANGES</h3>
+<h3 id="breaking-changes-15">BREAKING CHANGES</h3>
 <ul>
 <li>Replace Buffer with GetUnsafePtr</li>
 </ul>
@@ -1133,20 +1143,20 @@ CareBoo.WebSocket assembly</li>
 <li><span class="emoji" shortcode="sparkles">✨</span> implement AssetTransfer Transaction (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/62a1841332811753f48ac7fdccb1eec117607f3a">62a1841</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/23">#23</a></li>
 </ul>
 <h1 id="100-exp16httpsgithubcomcareboounity-algorand-sdkcomparev100-exp15v100-exp16-2021-09-19"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.15...v1.0.0-exp.16">1.0.0-exp.16</a> (2021-09-19)</h1>
-<h3 id="code-refactoring-10">Code Refactoring</h3>
+<h3 id="code-refactoring-11">Code Refactoring</h3>
 <ul>
 <li>remove .NET 4.8 requirement (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/9f55707ba4f8a3d9b12fb7530b6ceec40c95219b">9f55707</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/19">#19</a> <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/9">#9</a></li>
 </ul>
-<h3 id="breaking-changes-15">BREAKING CHANGES</h3>
+<h3 id="breaking-changes-16">BREAKING CHANGES</h3>
 <ul>
 <li>Algo Serializer API has completely changed...</li>
 </ul>
 <h1 id="100-exp15httpsgithubcomcareboounity-algorand-sdkcomparev100-exp14v100-exp15-2021-09-03"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.14...v1.0.0-exp.15">1.0.0-exp.15</a> (2021-09-03)</h1>
-<h3 id="code-refactoring-11">Code Refactoring</h3>
+<h3 id="code-refactoring-12">Code Refactoring</h3>
 <ul>
 <li><span class="emoji" shortcode="fire">🔥</span> remove unnecessary <code>SendTransactionRaw</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/09b3bdc0dfbeb2b47603b3cfc92be0478120bd09">09b3bdc</a>)</li>
 </ul>
-<h3 id="breaking-changes-16">BREAKING CHANGES</h3>
+<h3 id="breaking-changes-17">BREAKING CHANGES</h3>
 <ul>
 <li>Removes the <code>SendTransactionRaw</code> method from <code>AlgodClient</code></li>
 </ul>
