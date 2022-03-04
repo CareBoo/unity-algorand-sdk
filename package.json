@@ -20,11 +20,14 @@
     "access": "public"
   },
   "repository": "github:CareBoo/unity-algorand-sdk",
-  "changelogUrl": "https://careboo.github.io/unity-algorand-sdk/__version__/changelog",
-  "documentationUrl": "https://careboo.github.io/unity-algorand-sdk/__version__",
-  "licensesUrl": "https://careboo.github.io/unity-algorand-sdk/__version__/license",
+  "changelogUrl": "https://careboo.github.io/unity-algorand-sdk/2.0.0-pre.7/changelog",
+  "documentationUrl": "https://careboo.github.io/unity-algorand-sdk/2.0.0-pre.7",
+  "licensesUrl": "https://careboo.github.io/unity-algorand-sdk/2.0.0-pre.7/license",
   "author": {
     "name": "CareBoo",
     "url": "https://github.com/CareBoo"
+  },
+  "scripts": {
+    "version": "./scripts/setDocVersion.sh && git add package.json"
   }
 }

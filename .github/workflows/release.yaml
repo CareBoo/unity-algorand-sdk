@@ -49,8 +49,8 @@ jobs:
           name: dist
           path: dist
 
-  semantic_release:
-    name: Semantic Release
+  release:
+    name: Release
     runs-on: ubuntu-latest
     needs: build_unitypackage
     outputs:
@@ -76,6 +76,8 @@ jobs:
             @semantic-release/git
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_REGISTRY: "https://registry.npmjs.org/"
 
       - name: Upload dist
         uses: actions/upload-artifact@v2
@@ -83,47 +85,9 @@ jobs:
           name: dist
           path: dist
 
-  npm_publish:
-    name: Publish Package to ${{ matrix.registry }}
-    runs-on: ubuntu-latest
-    needs: semantic_release
-    if: needs.semantic_release.outputs.new_release_published == 'true'
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - registry: https://registry.npmjs.org/
-            scope: ""
-            token: NPM_TOKEN
-          - registry: https://npm.pkg.github.com/
-            scope: "@careboo"
-            token: GITHUB_TOKEN
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          lfs: true
-          ref: ${{ github.ref }}
-
-      - name: Setup npm
-        uses: actions/setup-node@v2
-        with:
-          node-version: "14.x"
-          registry-url: ${{ matrix.registry }}
-
-      - name: Publish to ${{ matrix.registry }}
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets[matrix.token] }}
-          RELEASE_CHANNEL: ${{ needs.semantic_release.outputs.new_release_channel }}
-        run: |
-          npm publish \
-            --access=public \
-            --tag="${RELEASE_CHANNEL:=latest}" \
-            --registry="${{ matrix.registry }}${{ matrix.scope }}"
-
   build_docs:
     name: Build Docs
-    needs: semantic_release
+    needs: release
     runs-on: windows-latest
     outputs:
       version: ${{ steps.version.outputs.prop }}
