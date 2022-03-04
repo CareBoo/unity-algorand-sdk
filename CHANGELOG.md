@@ -5,6 +5,31 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [2.0.0-pre.9](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.8...v2.0.0-pre.9) (2022-03-04)
+
+
+### Code Refactoring
+
+* **assemblies:** move libraries to their own assemblies to simplify things ([0b17ea1](https://github.com/CareBoo/unity-algorand-sdk/commit/0b17ea1758dd53960a82841c4ff3caa130ab2f09))
+* **walletconnect:** remove unused enum `WalletConnectError` ([6df5079](https://github.com/CareBoo/unity-algorand-sdk/commit/6df5079fa71d57fbab6dd2bd9f4320758ff349a0))
+* **websocket:** change namespace `Netcode.Transports.WebSocket` -> `AlgoSdk.WebSocket` ([ddb1357](https://github.com/CareBoo/unity-algorand-sdk/commit/ddb1357acf39c14f47b940998bd51268d70bac41))
+
+
+### Features
+
+* **walletconnect:** add `HandshakeUrl` struct ([4238348](https://github.com/CareBoo/unity-algorand-sdk/commit/423834868759538190c6602d1dad1035b2a430a8))
+
+
+### BREAKING CHANGES
+
+* **websocket:** Namespace `Netcode.Transports.WebSocket` has been renamed to `AlgoSdk.WebSocket`.
+* **assemblies:** `zxing.net` and `websocket-sharp` are now in their own assemblies. You will need to
+update them if you were using the `ZXing` or `WebSocket` namespaces.
+* **walletconnect:** Renamed `QrCode` -> `QrCodeUtility`. Set `autoReference = false` in
+`CareBoo.AlgoSdk.QrCode` assembly. `AlgorandWalletConnectSession.StartConnection` now returns a
+`HandshakeUrl` instead of a `System.String`.
+* **walletconnect:** `WalletConnectError` has been removed since it's not being used by the API.
+
 # [2.0.0-pre.8](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.7...v2.0.0-pre.8) (2022-03-04)
 
 
