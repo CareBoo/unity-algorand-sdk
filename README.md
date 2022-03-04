@@ -23,7 +23,6 @@ This SDK is provided as a UPM package in the following locations:
 
 - [Open UPM](https://openupm.com/packages/com.careboo.unity-algorand-sdk)
 - [NPM Registry](https://www.npmjs.com/package/com.careboo.unity-algorand-sdk)
-- [GitHub Package Registry](https://github.com/CareBoo/unity-algorand-sdk/packages/894742)
 
 ### Open UPM
 
