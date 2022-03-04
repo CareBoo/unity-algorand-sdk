@@ -1,9 +1,7 @@
 {
-    "name": "CareBoo.AlgoSdk.QrCode",
+    "name": "websocket-sharp",
     "rootNamespace": "",
-    "references": [
-        "GUID:153e18e942e4f45e68257b49629df380"
-    ],
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

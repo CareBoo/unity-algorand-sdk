@@ -1,7 +1,9 @@
 {
     "name": "CareBoo.AlgoSdk.WebSocket",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:533d98c0995854feb940a5ba96ec4e3f"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
