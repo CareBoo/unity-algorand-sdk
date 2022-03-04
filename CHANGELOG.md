@@ -5,6 +5,27 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [2.0.0-pre.8](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.7...v2.0.0-pre.8) (2022-03-04)
+
+
+### Bug Fixes
+
+* **qrcode:** replace zxing dll with its source code ([766c83e](https://github.com/CareBoo/unity-algorand-sdk/commit/766c83eae5ee0530b9bdd50aa7c337d8f5b64eb4)), closes [#84](https://github.com/CareBoo/unity-algorand-sdk/issues/84)
+* **websocket:** regenerate guids in `CareBoo.AlgoSdk.WebSocket` assembly ([3cb3180](https://github.com/CareBoo/unity-algorand-sdk/commit/3cb31803ad00da8239fc077033931badbcea3676)), closes [#83](https://github.com/CareBoo/unity-algorand-sdk/issues/83)
+
+
+### Features
+
+* **unitask:** upgrade UniTask to version 2.3.1 ([537d297](https://github.com/CareBoo/unity-algorand-sdk/commit/537d2974dc53c05972ce1ebde197e1ec80580be1))
+
+
+### BREAKING CHANGES
+
+* **qrcode:** QrCode logic has been moved from the `CareBoo.AlgoSdk.WalletConnect` assembly and
+into the `CareBoo.AlgoSdk.QrCode` assembly.
+* **websocket:** The GUID to the `CareBoo.AlgoSdk.WebSocket` assembly has changed. You may need to
+re-reference it.
+
 # [2.0.0-pre.7](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.6...v2.0.0-pre.7) (2022-03-01)
 
 
