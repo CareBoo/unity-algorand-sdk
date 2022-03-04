@@ -2,6 +2,7 @@
 .github/**
 .husky/**
 .vscode/**
+dist/**
 Documentation~/**/*.meta
 Unity.AlgoSdk/**
 Media/**
