@@ -5,6 +5,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [2.0.0-pre.10](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.9...v2.0.0-pre.10) (2022-03-04)
+
+
+### Code Refactoring
+
+* **collections:** move `Unity.Collections` extensions into their own assembly ([8d217fc](https://github.com/CareBoo/unity-algorand-sdk/commit/8d217fc9823d427e7b93fff2213a850c84d8ae4d))
+
+
+### BREAKING CHANGES
+
+* **collections:** All of the extensions to `Unity.Collections` can now be found in
+`AlgoSdk.Collections` and the `CareBoo.AlgoSdk.Collections` assembly.
+
 # [2.0.0-pre.9](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.8...v2.0.0-pre.9) (2022-03-04)
 
 
