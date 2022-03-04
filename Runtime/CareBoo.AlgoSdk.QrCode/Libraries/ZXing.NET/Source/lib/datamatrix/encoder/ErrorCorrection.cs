@@ -29,7 +29,7 @@ namespace ZXing.Datamatrix.Encoder
         /// See FACTORS.
         /// </summary>
         private static readonly int[] FACTOR_SETS
-            = {5, 7, 10, 11, 12, 14, 18, 20, 24, 28, 36, 42, 48, 56, 62, 68};
+            = { 5, 7, 10, 11, 12, 14, 18, 20, 24, 28, 36, 42, 48, 56, 62, 68 };
 
         /// <summary>
         /// Precomputed polynomial factors for ECC 200.
@@ -225,7 +225,7 @@ namespace ZXing.Datamatrix.Encoder
             char[] ecc = new char[numECWords];
             for (int i = 0; i < numECWords; i++)
             {
-                ecc[i] = (char) 0;
+                ecc[i] = (char)0;
             }
             var len = codewords.Length;
             for (int i = 0; i < len; i++)
@@ -235,7 +235,7 @@ namespace ZXing.Datamatrix.Encoder
                 {
                     if (m != 0 && poly[k] != 0)
                     {
-                        ecc[k] = (char) (ecc[k - 1] ^ ALOG[(LOG[m] + LOG[poly[k]]) % 255]);
+                        ecc[k] = (char)(ecc[k - 1] ^ ALOG[(LOG[m] + LOG[poly[k]]) % 255]);
                     }
                     else
                     {
@@ -244,11 +244,11 @@ namespace ZXing.Datamatrix.Encoder
                 }
                 if (m != 0 && poly[0] != 0)
                 {
-                    ecc[0] = (char) ALOG[(LOG[m] + LOG[poly[0]]) % 255];
+                    ecc[0] = (char)ALOG[(LOG[m] + LOG[poly[0]]) % 255];
                 }
                 else
                 {
-                    ecc[0] = (char) 0;
+                    ecc[0] = (char)0;
                 }
             }
             char[] eccReversed = new char[numECWords];

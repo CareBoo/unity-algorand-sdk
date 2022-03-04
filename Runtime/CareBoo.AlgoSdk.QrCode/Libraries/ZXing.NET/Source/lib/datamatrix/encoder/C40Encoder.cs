@@ -157,12 +157,12 @@ namespace ZXing.Datamatrix.Encoder
             }
             if (c >= '0' && c <= '9')
             {
-                sb.Append((char) (c - 48 + 4));
+                sb.Append((char)(c - 48 + 4));
                 return 1;
             }
             if (c >= 'A' && c <= 'Z')
             {
-                sb.Append((char) (c - 65 + 14));
+                sb.Append((char)(c - 65 + 14));
                 return 1;
             }
             if (c <= '\u001f')
@@ -174,39 +174,39 @@ namespace ZXing.Datamatrix.Encoder
             if (c <= '/')
             {
                 sb.Append('\u0001'); //Shift 2 Set
-                sb.Append((char) (c - 33));
+                sb.Append((char)(c - 33));
                 return 2;
             }
             if (c <= '@')
             {
                 sb.Append('\u0001'); //Shift 2 Set
-                sb.Append((char) (c - 58 + 15));
+                sb.Append((char)(c - 58 + 15));
                 return 2;
             }
             if (c <= '_')
             {
                 sb.Append('\u0001'); //Shift 2 Set
-                sb.Append((char) (c - 91 + 22));
+                sb.Append((char)(c - 91 + 22));
                 return 2;
             }
             if (c <= '\u007f')
             {
                 sb.Append('\u0002'); //Shift 3 Set
-                sb.Append((char) (c - 96));
+                sb.Append((char)(c - 96));
                 return 2;
             }
             sb.Append("\u0001\u001e"); //Shift 2, Upper Shift
             int len = 2;
-            len += encodeChar((char) (c - 128), sb);
+            len += encodeChar((char)(c - 128), sb);
             return len;
         }
 
         private static String encodeToCodewords(StringBuilder sb)
         {
             int v = (1600 * sb[0]) + (40 * sb[1]) + sb[2] + 1;
-            char cw1 = (char) (v / 256);
-            char cw2 = (char) (v % 256);
-            return new String(new char[] {cw1, cw2});
+            char cw1 = (char)(v / 256);
+            char cw2 = (char)(v % 256);
+            return new String(new char[] { cw1, cw2 });
         }
     }
 }

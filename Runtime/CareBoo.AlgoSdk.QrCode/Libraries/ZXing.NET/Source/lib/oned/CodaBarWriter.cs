@@ -27,11 +27,11 @@ namespace ZXing.OneD
     /// <author>dsbnatut@gmail.com (Kazuki Nishiura)</author>
     public sealed class CodaBarWriter : OneDimensionalCodeWriter
     {
-        private static readonly char[] START_END_CHARS = {'A', 'B', 'C', 'D'};
-        private static readonly char[] ALT_START_END_CHARS = {'T', 'N', '*', 'E'};
-        private static readonly char[] CHARS_WHICH_ARE_TEN_LENGTH_EACH_AFTER_DECODED = {'/', ':', '+', '.'};
+        private static readonly char[] START_END_CHARS = { 'A', 'B', 'C', 'D' };
+        private static readonly char[] ALT_START_END_CHARS = { 'T', 'N', '*', 'E' };
+        private static readonly char[] CHARS_WHICH_ARE_TEN_LENGTH_EACH_AFTER_DECODED = { '/', ':', '+', '.' };
         private static readonly char DEFAULT_GUARD = START_END_CHARS[0];
-        private static readonly IList<BarcodeFormat> supportedWriteFormats = new List<BarcodeFormat> {BarcodeFormat.CODABAR};
+        private static readonly IList<BarcodeFormat> supportedWriteFormats = new List<BarcodeFormat> { BarcodeFormat.CODABAR };
 
         /// <summary>
         /// returns supported formats

@@ -38,9 +38,9 @@ namespace ZXing.OneD.RSS.Expanded
     /// </summary>
     public sealed class RSSExpandedReader : AbstractRSSReader
     {
-        private static readonly int[] SYMBOL_WIDEST = {7, 5, 4, 3, 1};
-        private static readonly int[] EVEN_TOTAL_SUBSET = {4, 20, 52, 104, 204};
-        private static readonly int[] GSUM = {0, 348, 1388, 2948, 3988};
+        private static readonly int[] SYMBOL_WIDEST = { 7, 5, 4, 3, 1 };
+        private static readonly int[] EVEN_TOTAL_SUBSET = { 4, 20, 52, 104, 204 };
+        private static readonly int[] GSUM = { 0, 348, 1388, 2948, 3988 };
 
         private static readonly int[][] FINDER_PATTERNS =
         {
@@ -403,7 +403,7 @@ namespace ZXing.OneD.RSS.Expanded
             var result = new Result(
                 resultingString,
                 null,
-                new ResultPoint[] {firstPoints[0], firstPoints[1], lastPoints[0], lastPoints[1]},
+                new ResultPoint[] { firstPoints[0], firstPoints[1], lastPoints[0], lastPoints[1] },
                 BarcodeFormat.RSS_EXPANDED
             );
             result.putMetadata(ResultMetadataType.SYMBOLOGY_IDENTIFIER, "]e0");
@@ -648,7 +648,7 @@ namespace ZXing.OneD.RSS.Expanded
             if (!parseFinderValue(counters, FINDER_PATTERNS, out value))
                 return null;
 
-            return new FinderPattern(value, new int[] {start, end}, start, end, rowNumber);
+            return new FinderPattern(value, new int[] { start, end }, start, end, rowNumber);
         }
 
         internal DataCharacter decodeDataCharacter(BitArray row,
@@ -678,7 +678,7 @@ namespace ZXing.OneD.RSS.Expanded
             } //counters[] has the pixels of the module
 
             const int numModules = 17; //left and right data characters have all the same length
-            float elementWidth = (float) ZXing.Common.Detector.MathUtils.sum(counters) / (float) numModules;
+            float elementWidth = (float)ZXing.Common.Detector.MathUtils.sum(counters) / (float)numModules;
 
             // Sanity check: element width for pattern and the character should match
             float expectedElementWidth = (pattern.StartEnd[1] - pattern.StartEnd[0]) / 15.0f;
@@ -695,7 +695,7 @@ namespace ZXing.OneD.RSS.Expanded
             for (int i = 0; i < counters.Length; i++)
             {
                 float divided = 1.0f * counters[i] / elementWidth;
-                int rounded = (int) (divided + 0.5f); // Round
+                int rounded = (int)(divided + 0.5f); // Round
                 if (rounded < 1)
                 {
                     if (divided < 0.3f)

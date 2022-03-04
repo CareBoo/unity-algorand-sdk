@@ -184,91 +184,91 @@ namespace ZXing.QrCode
 
 #if !NETSTANDARD && !NETFX_CORE && !WindowsCE && !SILVERLIGHT && !PORTABLE && !UNITY
     internal class ErrorLevelConverter : TypeConverter
-   {
-      public override bool CanConvertFrom(ITypeDescriptorContext context, Type sourceType)
-      {
-         if (sourceType == typeof(ErrorCorrectionLevel))
-            return true;
-         if (sourceType == typeof(String))
-            return true;
-         return base.CanConvertFrom(context, sourceType);
-      }
+    {
+        public override bool CanConvertFrom(ITypeDescriptorContext context, Type sourceType)
+        {
+            if (sourceType == typeof(ErrorCorrectionLevel))
+                return true;
+            if (sourceType == typeof(String))
+                return true;
+            return base.CanConvertFrom(context, sourceType);
+        }
 
-      public override bool CanConvertTo(ITypeDescriptorContext context, Type destinationType)
-      {
-         if (destinationType == typeof(ErrorCorrectionLevel))
-            return true;
-         return base.CanConvertTo(context, destinationType);
-      }
+        public override bool CanConvertTo(ITypeDescriptorContext context, Type destinationType)
+        {
+            if (destinationType == typeof(ErrorCorrectionLevel))
+                return true;
+            return base.CanConvertTo(context, destinationType);
+        }
 
-      public override object ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, object value)
-      {
-         var level = value as ErrorCorrectionLevel;
-         if (level != null)
-         {
-            return level.Name;
-         }
-         if (value is String)
-         {
-            switch (value.ToString())
+        public override object ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, object value)
+        {
+            var level = value as ErrorCorrectionLevel;
+            if (level != null)
             {
-               case "L":
-                  return ErrorCorrectionLevel.L;
-               case "M":
-                  return ErrorCorrectionLevel.M;
-               case "Q":
-                  return ErrorCorrectionLevel.Q;
-               case "H":
-                  return ErrorCorrectionLevel.H;
-               default:
-                  return null;
+                return level.Name;
             }
-         }
-         return base.ConvertFrom(context, culture, value);
-      }
-
-      public override object ConvertTo(ITypeDescriptorContext context, CultureInfo culture, object value, Type destinationType)
-      {
-         if (value == null)
-            return null;
-         var level = value as ErrorCorrectionLevel;
-         if (level != null)
-         {
-            return level.Name;
-         } 
-         if (destinationType == typeof(ErrorCorrectionLevel))
-         {
-            switch (value.ToString())
+            if (value is String)
             {
-               case "L":
-                  return ErrorCorrectionLevel.L;
-               case "M":
-                  return ErrorCorrectionLevel.M;
-               case "Q":
-                  return ErrorCorrectionLevel.Q;
-               case "H":
-                  return ErrorCorrectionLevel.H;
-               default:
-                  return null;
+                switch (value.ToString())
+                {
+                    case "L":
+                        return ErrorCorrectionLevel.L;
+                    case "M":
+                        return ErrorCorrectionLevel.M;
+                    case "Q":
+                        return ErrorCorrectionLevel.Q;
+                    case "H":
+                        return ErrorCorrectionLevel.H;
+                    default:
+                        return null;
+                }
             }
-         }
-         return base.ConvertTo(context, culture, value, destinationType);
-      }
+            return base.ConvertFrom(context, culture, value);
+        }
 
-      public override bool GetStandardValuesSupported(ITypeDescriptorContext context)
-      {
-         return true;
-      }
+        public override object ConvertTo(ITypeDescriptorContext context, CultureInfo culture, object value, Type destinationType)
+        {
+            if (value == null)
+                return null;
+            var level = value as ErrorCorrectionLevel;
+            if (level != null)
+            {
+                return level.Name;
+            }
+            if (destinationType == typeof(ErrorCorrectionLevel))
+            {
+                switch (value.ToString())
+                {
+                    case "L":
+                        return ErrorCorrectionLevel.L;
+                    case "M":
+                        return ErrorCorrectionLevel.M;
+                    case "Q":
+                        return ErrorCorrectionLevel.Q;
+                    case "H":
+                        return ErrorCorrectionLevel.H;
+                    default:
+                        return null;
+                }
+            }
+            return base.ConvertTo(context, culture, value, destinationType);
+        }
 
-      public override bool GetStandardValuesExclusive(ITypeDescriptorContext context)
-      {
-         return true;
-      }
+        public override bool GetStandardValuesSupported(ITypeDescriptorContext context)
+        {
+            return true;
+        }
 
-      public override StandardValuesCollection GetStandardValues(ITypeDescriptorContext context)
-      {
-         return new StandardValuesCollection(new[] { ErrorCorrectionLevel.L, ErrorCorrectionLevel.M, ErrorCorrectionLevel.Q, ErrorCorrectionLevel.H });
-      }
-   }
+        public override bool GetStandardValuesExclusive(ITypeDescriptorContext context)
+        {
+            return true;
+        }
+
+        public override StandardValuesCollection GetStandardValues(ITypeDescriptorContext context)
+        {
+            return new StandardValuesCollection(new[] { ErrorCorrectionLevel.L, ErrorCorrectionLevel.M, ErrorCorrectionLevel.Q, ErrorCorrectionLevel.H });
+        }
+    }
 #endif
 }

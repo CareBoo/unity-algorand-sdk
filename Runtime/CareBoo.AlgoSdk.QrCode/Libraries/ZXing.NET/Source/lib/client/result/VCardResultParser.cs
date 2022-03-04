@@ -41,16 +41,16 @@ namespace ZXing.Client.Result
         private static readonly Regex COMMA = new Regex(",");
         private static readonly Regex SEMICOLON_OR_COMMA = new Regex("[;,]");
 #else
-      private static readonly Regex BEGIN_VCARD = new Regex("BEGIN:VCARD", RegexOptions.Compiled | RegexOptions.IgnoreCase);
-      private static readonly Regex VCARD_LIKE_DATE = new Regex(@"\A(?:" + "\\d{4}-?\\d{2}-?\\d{2}" + @")\z", RegexOptions.Compiled);
-      private static readonly Regex CR_LF_SPACE_TAB = new Regex("\r\n[ \t]", RegexOptions.Compiled);
-      private static readonly Regex NEWLINE_ESCAPE = new Regex("\\\\[nN]", RegexOptions.Compiled);
-      private static readonly Regex VCARD_ESCAPES = new Regex("\\\\([,;\\\\])", RegexOptions.Compiled);
-      private static readonly Regex EQUALS = new Regex("=", RegexOptions.Compiled);
-      private static readonly Regex SEMICOLON = new Regex(";", RegexOptions.Compiled);
-      private static readonly Regex UNESCAPED_SEMICOLONS = new Regex("(?<!\\\\);+", RegexOptions.Compiled);
-      private static readonly Regex COMMA = new Regex(",", RegexOptions.Compiled);
-      private static readonly Regex SEMICOLON_OR_COMMA = new Regex("[;,]", RegexOptions.Compiled);
+        private static readonly Regex BEGIN_VCARD = new Regex("BEGIN:VCARD", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        private static readonly Regex VCARD_LIKE_DATE = new Regex(@"\A(?:" + "\\d{4}-?\\d{2}-?\\d{2}" + @")\z", RegexOptions.Compiled);
+        private static readonly Regex CR_LF_SPACE_TAB = new Regex("\r\n[ \t]", RegexOptions.Compiled);
+        private static readonly Regex NEWLINE_ESCAPE = new Regex("\\\\[nN]", RegexOptions.Compiled);
+        private static readonly Regex VCARD_ESCAPES = new Regex("\\\\([,;\\\\])", RegexOptions.Compiled);
+        private static readonly Regex EQUALS = new Regex("=", RegexOptions.Compiled);
+        private static readonly Regex SEMICOLON = new Regex(";", RegexOptions.Compiled);
+        private static readonly Regex UNESCAPED_SEMICOLONS = new Regex("(?<!\\\\);+", RegexOptions.Compiled);
+        private static readonly Regex COMMA = new Regex(",", RegexOptions.Compiled);
+        private static readonly Regex SEMICOLON_OR_COMMA = new Regex("[;,]", RegexOptions.Compiled);
 #endif
 
         override public ParsedResult parse(ZXing.Result result)

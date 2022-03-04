@@ -29,8 +29,8 @@ namespace ZXing.Client.Result
         private static readonly Regex IOQ = new Regex("[IOQ]");
         private static readonly Regex AZ09 = new Regex(@"\A(?:" + "[A-Z0-9]{17}" + @")\z");
 #else
-      private static readonly Regex IOQ = new Regex("[IOQ]", RegexOptions.Compiled);
-      private static readonly Regex AZ09 = new Regex(@"\A(?:" + "[A-Z0-9]{17}" + @")\z", RegexOptions.Compiled);
+        private static readonly Regex IOQ = new Regex("[IOQ]", RegexOptions.Compiled);
+        private static readonly Regex AZ09 = new Regex(@"\A(?:" + "[A-Z0-9]{17}" + @")\z", RegexOptions.Compiled);
 #endif
 
         /// <summary>

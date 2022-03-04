@@ -40,7 +40,7 @@ namespace ZXing.Aztec
             {
                 if (Hints.ContainsKey(EncodeHintType.ERROR_CORRECTION))
                 {
-                    return (int) Hints[EncodeHintType.ERROR_CORRECTION];
+                    return (int)Hints[EncodeHintType.ERROR_CORRECTION];
                 }
                 return null;
             }
@@ -75,7 +75,7 @@ namespace ZXing.Aztec
             {
                 if (Hints.ContainsKey(EncodeHintType.AZTEC_LAYERS))
                 {
-                    return (int) Hints[EncodeHintType.AZTEC_LAYERS];
+                    return (int)Hints[EncodeHintType.AZTEC_LAYERS];
                 }
                 return null;
             }
@@ -106,7 +106,7 @@ namespace ZXing.Aztec
             {
                 if (Hints.ContainsKey(EncodeHintType.CHARACTER_SET))
                 {
-                    return (string) Hints[EncodeHintType.CHARACTER_SET];
+                    return (string)Hints[EncodeHintType.CHARACTER_SET];
                 }
                 return null;
             }

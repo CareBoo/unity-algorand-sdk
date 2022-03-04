@@ -125,7 +125,7 @@ namespace ZXing.OneD
 
                     int s_num = gaps[j].Length;
                     bool s_color = gaps[j].Color;
-                    double multiplier = (p_num > s_num) ? ((double) p_num / s_num) : ((double) s_num / p_num);
+                    double multiplier = (p_num > s_num) ? ((double)p_num / s_num) : ((double)s_num / p_num);
                     //System.out.println("multiplier: " + multiplier);
                     if ((p_color == isWhite) && (s_color == isWhite))
                     {
@@ -215,35 +215,35 @@ namespace ZXing.OneD
             }
 
             String resultString = iResult.ToString();
-//Counter counter = Counter.getInstance(25);
-//counter.addCode(iResult);
+            //Counter counter = Counter.getInstance(25);
+            //counter.addCode(iResult);
 
-//    String sRowNumber = Integer.toString(rowNumber);
-//    String url = "https://dev.aptinfo.net/p/" + resultString;
-//    final HttpRequestFactory requestFactory = new NetHttpTransport().createRequestFactory();
-//new Thread(new Runnable()
-//{
-//    @Override
-//        public void run()
-//    {
-//        try
-//        {
-//            HttpRequest request = requestFactory.buildGetRequest(new GenericUrl(url));
-//            HttpResponse httpResponse = request.execute();
-//        }
-//        catch (IOException e)
-//        {
-//            //e.printStackTrace();
-//        }
-//    }
-//}).start();
+            //    String sRowNumber = Integer.toString(rowNumber);
+            //    String url = "https://dev.aptinfo.net/p/" + resultString;
+            //    final HttpRequestFactory requestFactory = new NetHttpTransport().createRequestFactory();
+            //new Thread(new Runnable()
+            //{
+            //    @Override
+            //        public void run()
+            //    {
+            //        try
+            //        {
+            //            HttpRequest request = requestFactory.buildGetRequest(new GenericUrl(url));
+            //            HttpResponse httpResponse = request.execute();
+            //        }
+            //        catch (IOException e)
+            //        {
+            //            //e.printStackTrace();
+            //        }
+            //    }
+            //}).start();
 
-//    if ( ! counter.isCodeValid(iResult) ) {
-//        throw NotFoundException.getNotFoundInstance();
-//    }
+            //    if ( ! counter.isCodeValid(iResult) ) {
+            //        throw NotFoundException.getNotFoundInstance();
+            //    }
 
             float left = 0.0f;
-            float right = (float) (end - 1);
+            float right = (float)(end - 1);
             return new Result(
                 resultString,
                 null,
@@ -265,7 +265,7 @@ namespace ZXing.OneD
                 similars = new double[l];
             for (int i = 0; i < l; i++)
             {
-                similars[i] = (double) gaps[i].Similar;
+                similars[i] = (double)gaps[i].Similar;
             }
 
             double dMean = mean(similars);
@@ -276,7 +276,7 @@ namespace ZXing.OneD
             {
                 PixelInterval gap = gaps[i];
                 bool color = gap.Color;
-                double sim = (double) gap.Similar;
+                double sim = (double)gap.Similar;
                 if ((color == isWhite) && (!inProgress) && (sim < dMean))
                 {
                     //System.out.println("start");

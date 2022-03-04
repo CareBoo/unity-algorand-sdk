@@ -53,7 +53,7 @@ namespace ZXing.OneD.RSS.Expanded
             {
                 return false;
             }
-            ExpandedRow that = (ExpandedRow) o;
+            ExpandedRow that = (ExpandedRow)o;
             return Pairs.Equals(that.Pairs);
         }
 

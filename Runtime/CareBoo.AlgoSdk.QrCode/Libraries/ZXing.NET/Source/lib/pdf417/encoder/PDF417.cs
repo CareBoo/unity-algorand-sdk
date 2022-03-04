@@ -703,7 +703,7 @@ namespace ZXing.PDF417.Internal
 
             string macroCodeWords = getMacroBlock(ref sourceCodeWords);
 
-                errorCorrectionLevel = PDF417ErrorCorrection.getErrorCorrectionLevel(errorCorrectionLevel, sourceCodeWords);
+            errorCorrectionLevel = PDF417ErrorCorrection.getErrorCorrectionLevel(errorCorrectionLevel, sourceCodeWords);
             int errorCorrectionCodeWords = PDF417ErrorCorrection.getErrorCorrectionCodewordCount(errorCorrectionLevel);
 
             int[] dimension = determineDimensions(sourceCodeWords, errorCorrectionCodeWords, longDimension, shortDimension, ref aspectRatio);
@@ -882,7 +882,8 @@ namespace ZXing.PDF417.Internal
             }
 
             // Optional time stamp
-            if (this.metadata.Timestamp.HasValue) {
+            if (this.metadata.Timestamp.HasValue)
+            {
                 appendMacroOptionalField(PDF417OptionalMacroFields.TimeStamp, this.metadata.Timestamp.Value.ToString(), ref sourceCodeWords, macroCodewords);
             }
 

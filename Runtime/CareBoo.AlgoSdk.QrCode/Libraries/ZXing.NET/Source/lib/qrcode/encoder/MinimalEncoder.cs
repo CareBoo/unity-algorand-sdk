@@ -97,7 +97,7 @@ namespace ZXing.QrCode.Internal
                     {
                         ENCODERS.Add(Clone(Encoding.GetEncoding(name)));
                     }
-                    catch (Exception )
+                    catch (Exception)
                     {
                         // continue
                     }

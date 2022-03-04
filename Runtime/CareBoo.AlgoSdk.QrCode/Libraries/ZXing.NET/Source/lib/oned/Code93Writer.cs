@@ -143,13 +143,13 @@ namespace ZXing.OneD
                 {
                     // SOH - SUB: ($)A - ($)Z
                     extendedContent.Append('a');
-                    extendedContent.Append((char) ('A' + character - 1));
+                    extendedContent.Append((char)('A' + character - 1));
                 }
                 else if (character <= 31)
                 {
                     // ESC - US: (%)A - (%)E
                     extendedContent.Append('b');
-                    extendedContent.Append((char) ('A' + character - 27));
+                    extendedContent.Append((char)('A' + character - 27));
                 }
                 else if (character == ' ' || character == '$' || character == '%' || character == '+')
                 {
@@ -160,7 +160,7 @@ namespace ZXing.OneD
                 {
                     // ! " # & ' ( ) * ,: (/)A - (/)L
                     extendedContent.Append('c');
-                    extendedContent.Append((char) ('A' + character - '!'));
+                    extendedContent.Append((char)('A' + character - '!'));
                 }
                 else if (character <= '9')
                 {
@@ -175,7 +175,7 @@ namespace ZXing.OneD
                 {
                     // ; - ?: (%)F - (%)J
                     extendedContent.Append('b');
-                    extendedContent.Append((char) ('F' + character - ';'));
+                    extendedContent.Append((char)('F' + character - ';'));
                 }
                 else if (character == '@')
                 {
@@ -191,7 +191,7 @@ namespace ZXing.OneD
                 {
                     // [ - _: (%)K - (%)O
                     extendedContent.Append('b');
-                    extendedContent.Append((char) ('K' + character - '['));
+                    extendedContent.Append((char)('K' + character - '['));
                 }
                 else if (character == '`')
                 {
@@ -202,13 +202,13 @@ namespace ZXing.OneD
                 {
                     // a - z: (*)A - (*)Z
                     extendedContent.Append('d');
-                    extendedContent.Append((char) ('A' + character - 'a'));
+                    extendedContent.Append((char)('A' + character - 'a'));
                 }
                 else if (character <= 127)
                 {
                     // { - DEL: (%)P - (%)T
                     extendedContent.Append('b');
-                    extendedContent.Append((char) ('P' + character - '{'));
+                    extendedContent.Append((char)('P' + character - '{'));
                 }
                 else
                 {

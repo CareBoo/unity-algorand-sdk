@@ -126,9 +126,9 @@ namespace ZXing.Datamatrix
         /// standard value: Encodation.ASCII
         /// </summary>
 #if !NETSTANDARD && !NETFX_CORE && !WindowsCE && !SILVERLIGHT && !PORTABLE && !UNITY
-        [CategoryAttribute("Standard"), DescriptionAttribute("Specifies the default encodation." + 
-			" Make sure that the content fits into the encodation value, otherwise there will be an exception thrown." +
-			" Standard value: Encodation.ASCII")]
+        [CategoryAttribute("Standard"), DescriptionAttribute("Specifies the default encodation." +
+            " Make sure that the content fits into the encodation value, otherwise there will be an exception thrown." +
+            " Standard value: Encodation.ASCII")]
 #endif
         public int? DefaultEncodation
         {

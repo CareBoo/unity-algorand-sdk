@@ -185,7 +185,7 @@ namespace ZXing.Multi.QrCode.Internal
                             break;
                         }
 
-                        FinderPattern[] test = {p1, p2, p3};
+                        FinderPattern[] test = { p1, p2, p3 };
                         ResultPoint.orderBestPatterns(test);
 
                         // Calculate the distances: a = topleft-bottomleft, b=topleft-topright, c = diagonal
@@ -210,7 +210,7 @@ namespace ZXing.Multi.QrCode.Internal
                         }
 
                         // Calculate the diagonal length by assuming a 90° angle at topleft
-                        float dCpy = (float) Math.Sqrt((double) dA * dA + (double) dB * dB);
+                        float dCpy = (float)Math.Sqrt((double)dA * dA + (double)dB * dB);
                         // Compare to the real distance in %
                         float vPyC = Math.Abs((dC - dCpy) / Math.Min(dC, dCpy));
 

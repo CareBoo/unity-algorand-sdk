@@ -60,9 +60,9 @@ namespace ZXing.Client.Result
         private static readonly Regex AMPERSAND = new Regex("&");
         private static readonly Regex EQUALS = new Regex("=");
 #else
-      private static readonly Regex DIGITS = new Regex(@"\A(?:" + "\\d+" + @")\z", RegexOptions.Compiled);
-      private static readonly Regex AMPERSAND = new Regex("&", RegexOptions.Compiled);
-      private static readonly Regex EQUALS = new Regex("=", RegexOptions.Compiled);
+        private static readonly Regex DIGITS = new Regex(@"\A(?:" + "\\d+" + @")\z", RegexOptions.Compiled);
+        private static readonly Regex AMPERSAND = new Regex("&", RegexOptions.Compiled);
+        private static readonly Regex EQUALS = new Regex("=", RegexOptions.Compiled);
 #endif
 
         /// <summary>

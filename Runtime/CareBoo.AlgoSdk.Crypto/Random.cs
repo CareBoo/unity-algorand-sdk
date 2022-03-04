@@ -1,7 +1,7 @@
 using System;
-using static AlgoSdk.Crypto.sodium;
-using Unity.Collections.LowLevel.Unsafe;
 using AlgoSdk.LowLevel;
+using Unity.Collections.LowLevel.Unsafe;
+using static AlgoSdk.Crypto.sodium;
 
 namespace AlgoSdk.Crypto
 {

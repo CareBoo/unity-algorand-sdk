@@ -65,7 +65,7 @@ namespace ZXing.OneD.RSS.Expanded
             {
                 return false;
             }
-            ExpandedPair that = (ExpandedPair) o;
+            ExpandedPair that = (ExpandedPair)o;
             return
                 EqualsOrNull(LeftChar, that.LeftChar) &&
                 EqualsOrNull(RightChar, that.RightChar) &&

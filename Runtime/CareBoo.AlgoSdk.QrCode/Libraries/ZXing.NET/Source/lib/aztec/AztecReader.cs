@@ -15,9 +15,8 @@
  */
 
 using System.Collections.Generic;
-
-using ZXing.Common;
 using ZXing.Aztec.Internal;
+using ZXing.Common;
 
 namespace ZXing.Aztec
 {

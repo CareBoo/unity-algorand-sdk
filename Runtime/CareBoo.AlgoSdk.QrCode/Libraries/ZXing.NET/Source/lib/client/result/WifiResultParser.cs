@@ -28,7 +28,7 @@ namespace ZXing.Client.Result
     /// </summary>
     /// <author>Vikram Aggarwal</author>
     /// <author>Sean Owen</author>
-    /// <author>Steffen Kieß</author>
+    /// <author>Steffen Kieï¿½</author>
     public class WifiResultParser : ResultParser
     {
         /// <summary>

@@ -137,7 +137,7 @@ namespace ZXing.PDF417.Internal
                     case MODE_SHIFT_TO_BYTE_COMPACTION_MODE:
                         if (encoding == null)
                             encoding = CharacterSetECI.getEncoding(PDF417HighLevelEncoder.DEFAULT_ENCODING_NAME);
-                        result.Append(encoding.GetString(new []{(byte)codewords[codeIndex++]}, 0, 1));
+                        result.Append(encoding.GetString(new[] { (byte)codewords[codeIndex++] }, 0, 1));
                         break;
                     case NUMERIC_COMPACTION_MODE_LATCH:
                         codeIndex = numericCompaction(codewords, codeIndex, result);
@@ -221,7 +221,7 @@ namespace ZXing.PDF417.Internal
                 {
                     resultMetadata.SegmentIndex = Int32.Parse(segmentIndexString);
                 }
-                catch (Exception )
+                catch (Exception)
                 {
                     // too large; bad input?
                     return -1;

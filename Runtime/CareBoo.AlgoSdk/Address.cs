@@ -164,10 +164,10 @@ namespace AlgoSdk
         : IByteArray
         , IEquatable<CheckSum>
         {
-            [SerializeField] [FieldOffset(0)] internal byte byte0000;
-            [SerializeField] [FieldOffset(1)] internal byte byte0001;
-            [SerializeField] [FieldOffset(2)] internal byte byte0002;
-            [SerializeField] [FieldOffset(3)] internal byte byte0003;
+            [SerializeField][FieldOffset(0)] internal byte byte0000;
+            [SerializeField][FieldOffset(1)] internal byte byte0001;
+            [SerializeField][FieldOffset(2)] internal byte byte0002;
+            [SerializeField][FieldOffset(3)] internal byte byte0003;
 
             public const int SizeBytes = 4;
 

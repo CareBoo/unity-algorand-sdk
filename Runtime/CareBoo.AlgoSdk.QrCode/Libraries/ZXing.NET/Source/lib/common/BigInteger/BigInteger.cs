@@ -23,7 +23,7 @@ namespace BigIntegerLibrary
     internal sealed class BigInteger :
 #elif !(WINDOWS_PHONE || SILVERLIGHT4 || SILVERLIGHT5 || MONOTOUCH || MONOANDROID || PORTABLE || NETSTANDARD1_0)
     [Serializable]
-    internal sealed class BigInteger : ISerializable, 
+    internal sealed class BigInteger : ISerializable,
 #else
     internal sealed class BigInteger :
 #endif
