@@ -8,7 +8,6 @@ using Netcode.Transports.WebSocket;
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Networking;
 
 namespace AlgoSdk.WalletConnect
 {
@@ -119,7 +118,7 @@ namespace AlgoSdk.WalletConnect
         /// </summary>
         /// <param name="cancellationToken">An optional <see cref="CancellationToken"/> for cancelling this request early.</param>
         /// <returns>A WalletConnect Standard URI format (EIP-1328) used for handshaking.</returns>
-        public async UniTask<string> StartConnection(CancellationToken cancellationToken = default)
+        public async UniTask<HandshakeUrl> StartConnection(CancellationToken cancellationToken = default)
         {
             if (ConnectionStatus != Status.NoConnection)
                 throw new InvalidOperationException($"Session connection status is {ConnectionStatus}");
@@ -127,9 +126,8 @@ namespace AlgoSdk.WalletConnect
             await ConnectToBridgeServer(cancellationToken);
             SubscribeToMessages();
             RequestHandshake();
-            var encodedBridgeUrl = UnityWebRequest.EscapeURL(session.BridgeUrl);
             ConnectionStatus = Status.RequestingConnection;
-            return $"wc:{HandshakeTopic}@{Version}?bridge={encodedBridgeUrl}&key={session.Key}";
+            return new HandshakeUrl(HandshakeTopic, Version, BridgeUrl, Key);
         }
 
         /// <summary>

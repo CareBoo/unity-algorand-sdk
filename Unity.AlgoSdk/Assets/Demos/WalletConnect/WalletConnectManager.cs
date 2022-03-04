@@ -1,5 +1,4 @@
 using AlgoSdk;
-using AlgoSdk.QrCode;
 using AlgoSdk.WalletConnect;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -38,7 +37,7 @@ public class WalletConnectManager : MonoBehaviour
         session = new AlgorandWalletConnectSession(DappMeta, BridgeUrl);
         var url = await session.StartConnection();
         Debug.Log(url);
-        qrCode = QrCode.Generate(url);
+        qrCode = url.ToQrCodeTexture();
         await session.WaitForConnectionApproval();
         Debug.Log($"accounts:\n{AlgoApiSerializer.SerializeJson(session.Accounts)}");
     }
