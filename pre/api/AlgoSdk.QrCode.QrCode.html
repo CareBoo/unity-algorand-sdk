@@ -78,10 +78,10 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="AlgoSdk.WalletConnect.QrCode">
+            <article class="content wrap" id="_content" data-uid="AlgoSdk.QrCode.QrCode">
   
   
-  <h1 id="AlgoSdk_WalletConnect_QrCode" data-uid="AlgoSdk.WalletConnect.QrCode" class="text-break">Class QrCode
+  <h1 id="AlgoSdk_QrCode_QrCode" data-uid="AlgoSdk.QrCode.QrCode" class="text-break">Class QrCode
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
@@ -90,9 +90,9 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">QrCode</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.WalletConnect.html">AlgoSdk.WalletConnect</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.QrCode.html">AlgoSdk.QrCode</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="AlgoSdk_WalletConnect_QrCode_syntax">Syntax</h5>
+  <h5 id="AlgoSdk_QrCode_QrCode_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static class QrCode</code></pre>
   </div>
@@ -100,8 +100,65 @@
   </h3>
   
   
-  <a id="AlgoSdk_WalletConnect_QrCode_Generate_" data-uid="AlgoSdk.WalletConnect.QrCode.Generate*"></a>
-  <h4 id="AlgoSdk_WalletConnect_QrCode_Generate_System_String_" data-uid="AlgoSdk.WalletConnect.QrCode.Generate(System.String)">Generate(String)</h4>
+  <a id="AlgoSdk_QrCode_QrCode_Encode_" data-uid="AlgoSdk.QrCode.QrCode.Encode*"></a>
+  <h4 id="AlgoSdk_QrCode_QrCode_Encode_System_String_System_Int32_System_Int32_" data-uid="AlgoSdk.QrCode.QrCode.Encode(System.String,System.Int32,System.Int32)">Encode(String, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Generates a QR-Code with specified width/height.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color32[] Encode(string textForEncoding, int width, int height)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">textForEncoding</span></td>
+        <td><p>The text to encode</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width in pixels</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height in pixels</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Color32</span>[]</td>
+        <td><p>A <see cref="!:Color32"></see> flat array of the generated pixels.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_QrCode_QrCode_Generate_" data-uid="AlgoSdk.QrCode.QrCode.Generate*"></a>
+  <h4 id="AlgoSdk_QrCode_QrCode_Generate_System_String_" data-uid="AlgoSdk.QrCode.QrCode.Generate(System.String)">Generate(String)</h4>
   <div class="markdown level1 summary"><p>Generates a 256x256 QR-Code</p>
 </div>
   <div class="markdown level1 conceptual"></div>

@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "changelog/CHANGELOG.html",
-          "hash": "gdv0SYeisxplSJrCkgqe/LaZkLL6vQNMl1NaFRV0Pbk="
+          "hash": "x3uBuZIRVHTbnhnyNWMIcDToaTMAiszI7ER4CslnBpk="
         }
       },
       "is_incremental": false,
@@ -91,7 +91,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "9Yjn+R/2ibBMi8Uui4CX5FUbtAGd/ezlkVU4Ge2ayy0="
+          "hash": "NKJuqlBBnI54ht3dVnlz3NNHbe+Dmy01PJUMp2Sdyj0="
         }
       },
       "is_incremental": false,
@@ -3063,6 +3063,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.QrCode.QrCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.QrCode.QrCode.html",
+          "hash": "5s9NEd44dRWDIrF3jTFEAdf0kaeEExq25bgpcewjZ54="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.QrCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.QrCode.html",
+          "hash": "+CiBqwSextV8pvOIyMS1yXlZ73fMkzJPfEXHo0RR4Us="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/AlgoSdk.ReleaseWalletHandleTokenRequest.yml",
       "output": {
         ".html": {
@@ -3831,18 +3855,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.WalletConnect.QrCode.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AlgoSdk.WalletConnect.QrCode.html",
-          "hash": "TNjW1GKtUNEFA/mZlYZMBoKdX+dk9G8OCVRmDAJeJgs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/AlgoSdk.WalletConnect.RpcPayload.yml",
       "output": {
         ".html": {
@@ -4003,7 +4015,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.html",
-          "hash": "1V9PoafwVVpQz+ZxAaAEhyF6YnvFy9cl6ddo5LS6wVE="
+          "hash": "bEfMS577aTD8UdN8Ci/cA5/qRkVCejokdEKZw+HkFZs="
         }
       },
       "is_incremental": false,
@@ -4159,7 +4171,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "N/yVukyx33zYdApxgFz2NXtOeMy+GrzNz6sKpxTW7DI="
+          "hash": "kFVxCACdzHBKVXbWcZOuMbIzZnviekArabHvmj/Kaic="
         }
       },
       "is_incremental": false,
@@ -4278,7 +4290,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 338,
+          "total_file_count": 344,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

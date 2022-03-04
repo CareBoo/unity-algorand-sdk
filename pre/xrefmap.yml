@@ -30900,6 +30900,44 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.ProvideSourceInfoAttribute.Member
   nameWithType: ProvideSourceInfoAttribute.Member
+- uid: AlgoSdk.QrCode
+  name: AlgoSdk.QrCode
+  href: api/AlgoSdk.QrCode.html
+  commentId: N:AlgoSdk.QrCode
+  fullName: AlgoSdk.QrCode
+  nameWithType: AlgoSdk.QrCode
+- uid: AlgoSdk.QrCode.QrCode
+  name: QrCode
+  href: api/AlgoSdk.QrCode.QrCode.html
+  commentId: T:AlgoSdk.QrCode.QrCode
+  fullName: AlgoSdk.QrCode.QrCode
+  nameWithType: QrCode
+- uid: AlgoSdk.QrCode.QrCode.Encode(System.String,System.Int32,System.Int32)
+  name: Encode(String, Int32, Int32)
+  href: api/AlgoSdk.QrCode.QrCode.html#AlgoSdk_QrCode_QrCode_Encode_System_String_System_Int32_System_Int32_
+  commentId: M:AlgoSdk.QrCode.QrCode.Encode(System.String,System.Int32,System.Int32)
+  fullName: AlgoSdk.QrCode.QrCode.Encode(System.String, System.Int32, System.Int32)
+  nameWithType: QrCode.Encode(String, Int32, Int32)
+- uid: AlgoSdk.QrCode.QrCode.Encode*
+  name: Encode
+  href: api/AlgoSdk.QrCode.QrCode.html#AlgoSdk_QrCode_QrCode_Encode_
+  commentId: Overload:AlgoSdk.QrCode.QrCode.Encode
+  isSpec: "True"
+  fullName: AlgoSdk.QrCode.QrCode.Encode
+  nameWithType: QrCode.Encode
+- uid: AlgoSdk.QrCode.QrCode.Generate(System.String)
+  name: Generate(String)
+  href: api/AlgoSdk.QrCode.QrCode.html#AlgoSdk_QrCode_QrCode_Generate_System_String_
+  commentId: M:AlgoSdk.QrCode.QrCode.Generate(System.String)
+  fullName: AlgoSdk.QrCode.QrCode.Generate(System.String)
+  nameWithType: QrCode.Generate(String)
+- uid: AlgoSdk.QrCode.QrCode.Generate*
+  name: Generate
+  href: api/AlgoSdk.QrCode.QrCode.html#AlgoSdk_QrCode_QrCode_Generate_
+  commentId: Overload:AlgoSdk.QrCode.QrCode.Generate
+  isSpec: "True"
+  fullName: AlgoSdk.QrCode.QrCode.Generate
+  nameWithType: QrCode.Generate
 - uid: AlgoSdk.ReleaseWalletHandleTokenRequest
   name: ReleaseWalletHandleTokenRequest
   href: api/AlgoSdk.ReleaseWalletHandleTokenRequest.html
@@ -35840,25 +35878,6 @@ references:
   commentId: F:AlgoSdk.WalletConnect.NetworkMessage.Type
   fullName: AlgoSdk.WalletConnect.NetworkMessage.Type
   nameWithType: NetworkMessage.Type
-- uid: AlgoSdk.WalletConnect.QrCode
-  name: QrCode
-  href: api/AlgoSdk.WalletConnect.QrCode.html
-  commentId: T:AlgoSdk.WalletConnect.QrCode
-  fullName: AlgoSdk.WalletConnect.QrCode
-  nameWithType: QrCode
-- uid: AlgoSdk.WalletConnect.QrCode.Generate(System.String)
-  name: Generate(String)
-  href: api/AlgoSdk.WalletConnect.QrCode.html#AlgoSdk_WalletConnect_QrCode_Generate_System_String_
-  commentId: M:AlgoSdk.WalletConnect.QrCode.Generate(System.String)
-  fullName: AlgoSdk.WalletConnect.QrCode.Generate(System.String)
-  nameWithType: QrCode.Generate(String)
-- uid: AlgoSdk.WalletConnect.QrCode.Generate*
-  name: Generate
-  href: api/AlgoSdk.WalletConnect.QrCode.html#AlgoSdk_WalletConnect_QrCode_Generate_
-  commentId: Overload:AlgoSdk.WalletConnect.QrCode.Generate
-  isSpec: "True"
-  fullName: AlgoSdk.WalletConnect.QrCode.Generate
-  nameWithType: QrCode.Generate
 - uid: AlgoSdk.WalletConnect.RpcPayload
   name: RpcPayload
   href: api/AlgoSdk.WalletConnect.RpcPayload.html
