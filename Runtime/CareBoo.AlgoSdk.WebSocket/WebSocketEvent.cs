@@ -1,6 +1,6 @@
 using System;
 
-namespace Netcode.Transports.WebSocket
+namespace AlgoSdk.WebSocket
 {
     public class WebSocketEvent
     {

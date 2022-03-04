@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using WebSocketSharp;
 
-namespace Netcode.Transports.WebSocket
+namespace AlgoSdk.WebSocket
 {
     public interface IWebSocketClient
     {

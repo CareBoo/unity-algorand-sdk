@@ -1,9 +1,9 @@
 using System;
 using System.Threading;
+using AlgoSdk.WebSocket;
 using Cysharp.Threading.Tasks;
-using Netcode.Transports.WebSocket;
 using Unity.Collections;
-using static Netcode.Transports.WebSocket.WebSocketEvent;
+using static AlgoSdk.WebSocket.WebSocketEvent;
 
 namespace AlgoSdk.WalletConnect
 {

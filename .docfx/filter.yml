@@ -9,8 +9,5 @@ apiRules:
       uidRegex: ^System\.ValueType\..*$
       type: Method
   - exclude:
-      uidRegex: ^Netcode\..*$
-      type: Namespace
-  - exclude:
       hasAttribute:
         uid: System.ObsoleteAttribute

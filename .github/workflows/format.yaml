@@ -30,4 +30,4 @@ jobs:
           --folder \
           --verify-no-changes \
           --include ${{ steps.changed_csharp_files.outputs.all_changed_files }} \
-          --exclude Runtime/CareBoo.AlgoSdk.WebSocket Runtime/CareBoo.AlgoSdk.QrCode/Libraries Unity.AlgoSdk
+          --exclude Runtime/websocket-sharp Runtime/zxing.unity Unity.AlgoSdk

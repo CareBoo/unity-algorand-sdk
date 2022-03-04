@@ -1,5 +1,5 @@
 using AlgoSdk.WalletConnect;
-using Netcode.Transports.WebSocket;
+using AlgoSdk.WebSocket;
 using Unity.Collections;
 
 namespace AlgoSdk.WalletConnect

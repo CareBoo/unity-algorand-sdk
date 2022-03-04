@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using WebSocketSharp;
 
-namespace Netcode.Transports.WebSocket
+namespace AlgoSdk.WebSocket
 {
     public class JSWebSocketClient : IWebSocketClient
     {
