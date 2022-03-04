@@ -16,7 +16,6 @@ jobs:
 
       - name: Get Version from tag
         id: version
-        uses: actions/download-artifact@v3
         env:
           GITHUB_REF: ${{ github.ref }}
         run: echo "::set-output name=version::${GITHUB_REF#refs/tags/v}"
