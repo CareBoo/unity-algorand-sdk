@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace ZXing.Common
+   | Unity Algorand SDK </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace ZXing.Common
+   | Unity Algorand SDK ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="ZXing.Common">
+  
+  <h1 id="ZXing_Common" data-uid="ZXing.Common" class="text-break">Namespace ZXing.Common
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="ZXing.Common.BitArray.html">BitArray</a></h4>
+      <section><p>A simple, fast array of bits, represented compactly by an array of ints internally.</p>
+</section>
+      <h4><a class="xref" href="ZXing.Common.BitMatrix.html">BitMatrix</a></h4>
+      <section><p>Represents a 2D matrix of bits. In function arguments below, and throughout the common
+module, x is the column position, and y is the row position. The ordering is always x, y.
+The origin is at the top-left.</p>
+<p>Internally the bits are represented in a 1-D array of 32-bit ints. However, each row begins
+with a new int. This is done intentionally so that we can copy out a row into a BitArray very
+efficiently.</p>
+<p>The ordering of bits is row-major. Within each int, the least significant bits are used first,
+meaning they represent lower x values. This is compatible with BitArray&apos;s implementation.</p>
+</section>
+      <h4><a class="xref" href="ZXing.Common.BitSource.html">BitSource</a></h4>
+      <section><p>This provides an easy abstraction to read bits at a time from a sequence of bytes, where the
+   number of bits read is not often a multiple of 8.</p>
+
+<p>This class is thread-safe but not reentrant. Unless the caller modifies the bytes array
+it passed in, in which case all bets are off.</p>
+
+</section>
+      <h4><a class="xref" href="ZXing.Common.CharacterSetECI.html">CharacterSetECI</a></h4>
+      <section><p>Encapsulates a Character Set ECI, according to &quot;Extended Channel Interpretations&quot; 5.3.1.1
+of ISO 18004.</p>
+</section>
+      <h4><a class="xref" href="ZXing.Common.DecoderResult.html">DecoderResult</a></h4>
+      <section><p>Encapsulates the result of decoding a matrix of bits. This typically
+applies to 2D barcode formats. For now it contains the raw bytes obtained,
+as well as a String interpretation of those bytes, if applicable.
+<author>Sean Owen</author></p>
+</section>
+      <h4><a class="xref" href="ZXing.Common.DecodingOptions.html">DecodingOptions</a></h4>
+      <section><p>Defines an container for encoder options</p>
+</section>
+      <h4><a class="xref" href="ZXing.Common.DefaultGridSampler.html">DefaultGridSampler</a></h4>
+      <section></section>
+      <h4><a class="xref" href="ZXing.Common.DetectorResult.html">DetectorResult</a></h4>
+      <section><p>Encapsulates the result of detecting a barcode in an image. This includes the raw
+matrix of black/white pixels corresponding to the barcode, and possibly points of interest
+in the image, like the location of finder patterns or corners of the barcode in the image.</p>
+</section>
+      <h4><a class="xref" href="ZXing.Common.ECI.html">ECI</a></h4>
+      <section><p>Superclass of classes encapsulating types ECIs, according to &quot;Extended Channel Interpretations&quot;
+5.3 of ISO 18004.</p>
+</section>
+      <h4><a class="xref" href="ZXing.Common.EncodingOptions.html">EncodingOptions</a></h4>
+      <section><p>Defines an container for encoder options</p>
+</section>
+      <h4><a class="xref" href="ZXing.Common.GlobalHistogramBinarizer.html">GlobalHistogramBinarizer</a></h4>
+      <section><p>This Binarizer implementation uses the old ZXing global histogram approach. It is suitable
+for low-end mobile devices which don&apos;t have enough CPU or memory to use a local thresholding
+algorithm. However, because it picks a global black point, it cannot handle difficult shadows
+and gradients.</p>
+<p>Faster mobile devices and all desktop applications should probably use HybridBinarizer instead.</p>
+<author>dswitkin@google.com (Daniel Switkin)</author>
+<author>Sean Owen</author>
+</section>
+      <h4><a class="xref" href="ZXing.Common.GridSampler.html">GridSampler</a></h4>
+      <section><p>Implementations of this class can, given locations of finder patterns for a QR code in an
+image, sample the right points in the image to reconstruct the QR code, accounting for
+perspective distortion. It is abstracted since it is relatively expensive and should be allowed
+to take advantage of platform-specific optimized implementations, like Sun&apos;s Java Advanced
+Imaging library, but which may not be available in other environments such as J2ME, and vice
+versa.</p>
+<p>The implementation used can be controlled by calling {@link #setGridSampler(GridSampler)}
+with an instance of a class which implements this interface.</p>
+</section>
+      <h4><a class="xref" href="ZXing.Common.HybridBinarizer.html">HybridBinarizer</a></h4>
+      <section><p>This class implements a local thresholding algorithm, which while slower than the
+GlobalHistogramBinarizer, is fairly efficient for what it does. It is designed for
+high frequency images of barcodes with black data on white backgrounds. For this application,
+it does a much better job than a global blackpoint with severe shadows and gradients.
+However it tends to produce artifacts on lower frequency images and is therefore not
+a good general purpose binarizer for uses outside ZXing.</p>
+<p>This class extends GlobalHistogramBinarizer, using the older histogram approach for 1D readers,
+and the newer local approach for 2D readers. 1D decoding using a per-row histogram is already
+inherently local, and only fails for horizontal gradients. We can revisit that problem later,
+but for now it was not a win to use local blocks for 1D.</p>
+<p>This Binarizer is the default for the unit tests and the recommended class for library users.
+<author>dswitkin@google.com (Daniel Switkin)</author></p>
+</section>
+      <h4><a class="xref" href="ZXing.Common.PerspectiveTransform.html">PerspectiveTransform</a></h4>
+      <section><p>This class implements a perspective transform in two dimensions. Given four source and four
+   destination points, it will compute the transformation implied between them. The code is based
+   directly upon section 3.4.2 of George Wolberg&apos;s &quot;Digital Image Warping&quot;; see pages 54-56.</p>
+</section>
+      <h4><a class="xref" href="ZXing.Common.StringUtils.html">StringUtils</a></h4>
+      <section><p>Common string-related functions.</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

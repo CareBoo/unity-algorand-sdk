@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "changelog/CHANGELOG.html",
-          "hash": "x3uBuZIRVHTbnhnyNWMIcDToaTMAiszI7ER4CslnBpk="
+          "hash": "Qafkx5Q9PVcEGCY4XMyjK/HzEJjVh+AL3yGZO27Zzco="
         }
       },
       "is_incremental": false,
@@ -3063,11 +3063,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.QrCode.QrCode.yml",
+      "source_relative_path": "api/AlgoSdk.QrCode.QrCodeUtility.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AlgoSdk.QrCode.QrCode.html",
-          "hash": "5s9NEd44dRWDIrF3jTFEAdf0kaeEExq25bgpcewjZ54="
+          "relative_path": "api/AlgoSdk.QrCode.QrCodeUtility.html",
+          "hash": "6mZ8OVTuVvO6jLIl5EbfDFfjpw3BY6YGDbr68+51TUQ="
         }
       },
       "is_incremental": false,
@@ -3079,7 +3079,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.QrCode.html",
-          "hash": "+CiBqwSextV8pvOIyMS1yXlZ73fMkzJPfEXHo0RR4Us="
+          "hash": "bflGaV2SK62h4cVcPNojWGUoLldOClltcaJ8HEjc8bk="
         }
       },
       "is_incremental": false,
@@ -3655,7 +3655,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html",
-          "hash": "0anr4uUzvYO3cruWc7Lh6cGzRV0zPxagxzsPgNJpWnQ="
+          "hash": "N3zvVrzH/yUyKjmvKuL7aoMXHlX7e4/OenG5I/No2I8="
         }
       },
       "is_incremental": false,
@@ -3692,6 +3692,18 @@
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.EncryptedPayload.html",
           "hash": "OfRKYK8qRKjjGvBkmac/v/3ZtSAZ4bC5IY6MN6OYVDI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.WalletConnect.HandshakeUrl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.WalletConnect.HandshakeUrl.html",
+          "hash": "/v/op1icCiGSSKbxH1t2RJU3QcYdiX5cjN9rsx5cvFk="
         }
       },
       "is_incremental": false,
@@ -3915,18 +3927,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.WalletConnect.WalletConnectError.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AlgoSdk.WalletConnect.WalletConnectError.html",
-          "hash": "6eGqHPFu3qM4dgUHpesbsMbiK1p5KzTt+lWR+XLSB34="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.yml",
       "output": {
         ".html": {
@@ -3999,23 +3999,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.WalletConnect.WebSocketTransport.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AlgoSdk.WalletConnect.WebSocketTransport.html",
-          "hash": "1IiXLwsTYjOByxOjJKmKRbXsvTV5R3LMMHsWP4jyGQU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/AlgoSdk.WalletConnect.yml",
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.html",
-          "hash": "bEfMS577aTD8UdN8Ci/cA5/qRkVCejokdEKZw+HkFZs="
+          "hash": "NJkciQX42I7vMd4nIWZnf0V1DqHM1BeoWKhmaufWW4Q="
         }
       },
       "is_incremental": false,
@@ -4059,6 +4047,78 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.WebSocket.IWebSocketClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.WebSocket.IWebSocketClient.html",
+          "hash": "/DRPEg/xodjiktv6RtT1QvUxDY/Y8vt11d162NhPVUA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.WebSocket.NativeWebSocketClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.WebSocket.NativeWebSocketClient.html",
+          "hash": "dpC8TvKU4qfu0PunBaOQwtUjqgdsGYsJat6Q7PqZ//s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.WebSocket.WebSocketClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.WebSocket.WebSocketClientFactory.html",
+          "hash": "1U5T5t+a8DuWbeTu9A+NpxqN/XNJBgUH/8XVqIodLQc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.WebSocket.WebSocketEvent.WebSocketEventType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.WebSocket.WebSocketEvent.WebSocketEventType.html",
+          "hash": "UMoW67uExKfhfzoEeUcIvjUJ6IVa4MrtjYcga+418DY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.WebSocket.WebSocketEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.WebSocket.WebSocketEvent.html",
+          "hash": "Dl+FfcisbxgXNY2/cGEDHIr4TL0UxNs3bUW0f/WSYF0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.WebSocket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.WebSocket.html",
+          "hash": "4FN11gs9UrCYlN3z2pJxmFmclBu05MUHIp2iY81OFg0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/AlgoSdk.yml",
       "output": {
         ".html": {
@@ -4071,11 +4131,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Netcode.Transports.WebSocket.IWebSocketClient.yml",
+      "source_relative_path": "api/BigIntegerLibrary.BigIntegerException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Netcode.Transports.WebSocket.IWebSocketClient.html",
-          "hash": "sMlMW3bIa6RahHUuhaCOEQUvKl5OQCvd/kclDV21Kqo="
+          "relative_path": "api/BigIntegerLibrary.BigIntegerException.html",
+          "hash": "N36DrojM5Ok3h33sNXgQmEm8PFSPepQoqn7iG45P9Hc="
         }
       },
       "is_incremental": false,
@@ -4083,59 +4143,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Netcode.Transports.WebSocket.NativeWebSocketClient.yml",
+      "source_relative_path": "api/BigIntegerLibrary.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Netcode.Transports.WebSocket.NativeWebSocketClient.html",
-          "hash": "V6mMMpGu0y72/W/r87owUT2YLfOoG5jYX+fLDqGUkdI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Netcode.Transports.WebSocket.WebSocketClientFactory.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Netcode.Transports.WebSocket.WebSocketClientFactory.html",
-          "hash": "4uczMKqMR98RCXBAzepP3XV+eYFmuRvYiKqTpQxZh0g="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Netcode.Transports.WebSocket.WebSocketEvent.WebSocketEventType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Netcode.Transports.WebSocket.WebSocketEvent.WebSocketEventType.html",
-          "hash": "Cnb2QaZKZwv37URwmaqz+HVWLfTLl0X9pwX9rYwnWPY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Netcode.Transports.WebSocket.WebSocketEvent.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Netcode.Transports.WebSocket.WebSocketEvent.html",
-          "hash": "oEIZHztFAQMjlKNSZlIpemcoIal2XP54UmKeHQJpH00="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Netcode.Transports.WebSocket.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Netcode.Transports.WebSocket.html",
-          "hash": "MxgiWAM3WGK2SV6kabtxcQ8QwvJRfrWvHHJnqhJ+0Pw="
+          "relative_path": "api/BigIntegerLibrary.html",
+          "hash": "mcADxdC16xFJ0vaRs66mXbKp0A0zlupoQqpqrBAiRiI="
         }
       },
       "is_incremental": false,
@@ -4166,12 +4178,3315 @@
       "version": ""
     },
     {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.ByteOrder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.ByteOrder.html",
+          "hash": "8w+FaFh1B/G16FF69p91yA+N+pTLoW7CAaQ1QcxxlXc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.CloseEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.CloseEventArgs.html",
+          "hash": "Tlmq98YTH7c2RkZyYNRAAGPhp3FnL33/tF3mwE89lsY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.CloseStatusCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.CloseStatusCode.html",
+          "hash": "vvNXgf65wyP0xLrBKd8/CRfpdb65xT854mmlyMoF4rg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.CompressionMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.CompressionMethod.html",
+          "hash": "V9gj6XdVqjlQ75r2F6rpadw8+G0ke4WNnBQSFJYVCRg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.ErrorEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.ErrorEventArgs.html",
+          "hash": "gOafCg3kALoRH7l1pR4oK6CSUVvjI2OsUBHW7ddni2Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Ext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Ext.html",
+          "hash": "Stau70GtBst2XsgNcBTG4lWENay7FF94FxsZsdt6xIk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.LogData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.LogData.html",
+          "hash": "kIi+jDAzT+IHR8ESp9o2v5+w9JaMyAvkpc5WlWTVPkE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.LogLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.LogLevel.html",
+          "hash": "6C898AMzHTw0a0JqALBWFbUpF/F6uTd/wnBs6Uz8YGc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Logger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Logger.html",
+          "hash": "K+orIF74SOFgIy8FL0fAqb52V29/B7kGZe4W22Kp6ZY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.MessageEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.MessageEventArgs.html",
+          "hash": "2xFBI7/L3ClajNFWpcaNKggBnErk1FR3d/KDqxDzDNk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Net.AuthenticationSchemes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Net.AuthenticationSchemes.html",
+          "hash": "kzEd4I4YjIfnHrrJe7LZcawurnxmnmBoweHuzLFoYJE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Net.ClientSslConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Net.ClientSslConfiguration.html",
+          "hash": "CWhlwt7EFFSQ0xYx2vxTqQxpHQ7wFoyZ74u702dw4ow="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Net.Cookie.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Net.Cookie.html",
+          "hash": "8i/oX7HNUtzBU6N+N13wZkPBvrDL9KA9eJPZSRRbV7w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Net.CookieCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Net.CookieCollection.html",
+          "hash": "yohIDZfZBdSvbaJLaPhSiuNdkNE08rIHW1SvCi9WdsQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Net.CookieException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Net.CookieException.html",
+          "hash": "Z+0UQRZaTDL4XzipvY3Mx2rMszs55neAw7suejCQIS0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Net.HttpBasicIdentity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Net.HttpBasicIdentity.html",
+          "hash": "fADSH0dhbktD/7tdOtukA/jEdP7i4265+wJO+3HPYdg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Net.HttpDigestIdentity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Net.HttpDigestIdentity.html",
+          "hash": "rHTFgmVykRoGY8lUZJMtT/S8drO2iQXC5VCvLTF4DOc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Net.HttpListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Net.HttpListener.html",
+          "hash": "kJBs5p5qAIcJyOvOBRTX/8c9mi7NR2BnYWvBFu630S0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Net.HttpListenerContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Net.HttpListenerContext.html",
+          "hash": "N8wRkd7hof3LJei9q28hZQPURg/MXBqwLMtddH94vMM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Net.HttpListenerException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Net.HttpListenerException.html",
+          "hash": "Cjf91LdB0xR/3AlI+cHRzAopq/pEbBTe0WcN1XulqQY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Net.HttpListenerPrefixCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Net.HttpListenerPrefixCollection.html",
+          "hash": "fDp74fGdKfOkloZr579+9c8QugKi5XhG06MjK7EnPdI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Net.HttpListenerRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Net.HttpListenerRequest.html",
+          "hash": "l+VfN1M/aTlT9S7rf9ouPODOiL4MOThHYsoRmH3FhcQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Net.HttpListenerResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Net.HttpListenerResponse.html",
+          "hash": "chZMUIoiY69UTuJfkx0MTrD/JK+kbUp2cyEH+ph65/Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Net.HttpRequestHeader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Net.HttpRequestHeader.html",
+          "hash": "py1BwvEsI9ZHI28fHIjKcAPxgSCLKJ9H4gUsmvZKW4c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Net.HttpResponseHeader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Net.HttpResponseHeader.html",
+          "hash": "cqmnPm/W+2bqqh3T47wDmcxrnfxrBxejW5Gb7zVFL5w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Net.HttpStatusCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Net.HttpStatusCode.html",
+          "hash": "k9Xk3bgp4O8ZT5WtXnjOrW8+jFyDZjyOpMQHMzSDUZw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Net.HttpVersion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Net.HttpVersion.html",
+          "hash": "ZsH7HIRkvkFw56eJsmYjR+RTnzGUG0JxLsq9uA0b8ks="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Net.NetworkCredential.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Net.NetworkCredential.html",
+          "hash": "xsjSZ0rrud+t2XNcdur07U2GvGVRrw04lOeBPr6q+fs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Net.ServerSslConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Net.ServerSslConfiguration.html",
+          "hash": "0XGMRglpEhFiktRawW+VIBxf9R5OGBPKuQ/8h7GZZ4c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Net.WebHeaderCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Net.WebHeaderCollection.html",
+          "hash": "oqWi1wmYCCV3EO24Womh+VAj2Ly3Rk4NDR/FDUn4MDs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Net.WebSockets.HttpListenerWebSocketContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Net.WebSockets.HttpListenerWebSocketContext.html",
+          "hash": "GCXvCdIueZvrKKU0Shz+ONNwQLyYNjory3R3Uu2BqHo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Net.WebSockets.WebSocketContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Net.WebSockets.WebSocketContext.html",
+          "hash": "kITm/04P/Wm0z2RYBAo6QRt2XAvHPD24kuaq0UzVli8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Net.WebSockets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Net.WebSockets.html",
+          "hash": "xGzN+LPHnWST1IFb2MAQS4QfT8XFRuywmVZlpJt2Dns="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Net.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Net.html",
+          "hash": "GRPA6vadz0Lme+9kGUYXWPflzU0+o8Hyqz9O5v7m318="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Server.HttpRequestEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Server.HttpRequestEventArgs.html",
+          "hash": "SNX2ecIKL2cTuSGBJSjvq5GobtiJwvsNm9mpjPdDreA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Server.HttpServer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Server.HttpServer.html",
+          "hash": "QTW3D6AC48D09OrVsuPfimzJ34uKbMdD9+siwR3PB0c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Server.IWebSocketSession.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Server.IWebSocketSession.html",
+          "hash": "hZIFyLh3moU1eF7SR6W89ElpKtrGgFcMrwNP4s7kgDA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Server.WebSocketBehavior.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Server.WebSocketBehavior.html",
+          "hash": "E1+FPUadHaVMeGGn7dfGecOLYKRplJ9V94XI6XJGLHg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Server.WebSocketServer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Server.WebSocketServer.html",
+          "hash": "a4q5g6x+295RN4QuDZHq0cM+PAkWRkzap1i1v5PJMgA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Server.WebSocketServiceHost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Server.WebSocketServiceHost.html",
+          "hash": "7mlViA2wogtcjRcgmIwnlF1+vVhx/RxJqJOAkm+9//o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Server.WebSocketServiceManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Server.WebSocketServiceManager.html",
+          "hash": "yGyDJxFEDzxMJ6droIAtJCF//xuQ3nR2/Cnnlwwa+38="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Server.WebSocketSessionManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Server.WebSocketSessionManager.html",
+          "hash": "vdWkVffrU73nh9YQU4LZJvTD58YAociJbZF/5H9F82w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.Server.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.Server.html",
+          "hash": "sE5tkTl6tmfTdLWk1mOOPsl2su2isZB+F0bLhrY7EeI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.WebSocket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.WebSocket.html",
+          "hash": "kWYU6ErO9gZcZovAOJA7gn6ssQZmwpt7fQfVLlbOx5g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.WebSocketException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.WebSocketException.html",
+          "hash": "ZudVOB73ocVOUz6paX9orweZyeunge02+AiE4kPB3GE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.WebSocketState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.WebSocketState.html",
+          "hash": "4fn7R2GyiM0a4Zu1noP00BRISkFl0Sjaent/PGd3au8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WebSocketSharp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WebSocketSharp.html",
+          "hash": "xfvK8IXvNgPd/ZAFrDSk3difOdO1GJlFDWC8eaE6+gY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Aztec.AztecEncodingOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Aztec.AztecEncodingOptions.html",
+          "hash": "ReDBva+dc5tCRURFINog7+uqsFTjr8ud/uClnSDdt8I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Aztec.AztecReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Aztec.AztecReader.html",
+          "hash": "p0cmkfxfQOWghMgGd2bFKS05NJmHhUFED8M8ibCOv6g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Aztec.AztecResultMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Aztec.AztecResultMetadata.html",
+          "hash": "efHUoBZW22oT6AMqg6HhNi67VcGj3S6S5Ihs/drkfS8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Aztec.AztecWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Aztec.AztecWriter.html",
+          "hash": "09un2mIbIK9V3ycXoUAHTEiiSPzH5f0FxZRrydTskjo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Aztec.Internal.AztecCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Aztec.Internal.AztecCode.html",
+          "hash": "1B59L+kydHb0/tT8jqa89xYCDWzaOuIFCjY/xQLH5bU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Aztec.Internal.AztecDetectorResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Aztec.Internal.AztecDetectorResult.html",
+          "hash": "7e0qn9LuQdc/cVM/hUza2OAAEu2mDbVPP3k5AWmI2cQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Aztec.Internal.BinaryShiftToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Aztec.Internal.BinaryShiftToken.html",
+          "hash": "QH3qqlgRpQ5W6+mAAWqvB5fsPLHk+nPuest+fIOvb80="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Aztec.Internal.Decoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Aztec.Internal.Decoder.html",
+          "hash": "iUZkhhtjstwZMMLciBbjFkpMrCx5OxCNMv+BGehiYXc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Aztec.Internal.Detector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Aztec.Internal.Detector.html",
+          "hash": "8uSH8/q1vImaKXvJibAhSPCVgxUeafXDv8zUayWsyxo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Aztec.Internal.Encoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Aztec.Internal.Encoder.html",
+          "hash": "xlt18H4RywbhK3N04VY0DbvxjocWoGYipNUO7yp3qHw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Aztec.Internal.HighLevelEncoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Aztec.Internal.HighLevelEncoder.html",
+          "hash": "QUtvWmxC6DzXvp2/ZFpoubdSSU1aykonEe7dr2kzcT8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Aztec.Internal.SimpleToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Aztec.Internal.SimpleToken.html",
+          "hash": "IA/gKdolzzzL+ObVTFPL4f/g4Bp8OAImtfa1oCtYTKc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Aztec.Internal.Token.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Aztec.Internal.Token.html",
+          "hash": "OaPQ8qYqPRjXpsKcpdbaOYNzEuAoCgePdxxhpyjuXmY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Aztec.Internal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Aztec.Internal.html",
+          "hash": "/wZFgM5qrmU2P0Kzez8AMqW62sXg3QJycbBzIiZXy3U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Aztec.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Aztec.html",
+          "hash": "Uk6vrLFGydLpyGovIoeA2G/FstHd+RA4RvRvYoidFTU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.BarcodeFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.BarcodeFormat.html",
+          "hash": "d0QMS/YHldc0NBVS5tqfWX6M0/TuyyBC52d4TSXdQzk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.BarcodeReader-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.BarcodeReader-1.html",
+          "hash": "qRUv4dC7KBi2b0veNF9U2QmP9moVNs8zp2Q7WhI8xEk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.BarcodeReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.BarcodeReader.html",
+          "hash": "Gj5XXUSObBizTytgejCfTcuNjrpqUVzuMWFsyqZiknk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.BarcodeReaderGeneric.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.BarcodeReaderGeneric.html",
+          "hash": "fohSnJ5hChx+A9X2hDTabCiLl/YekMfbvUXA6aOEl+s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.BarcodeWriter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.BarcodeWriter-1.html",
+          "hash": "G6m2kgDsSqHbAR9jVwefRLP2g7JHpd4ON5Vc95FOXyk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.BarcodeWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.BarcodeWriter.html",
+          "hash": "BHv30syR/JIllWh2ehjshTNYYJAY9WCEn4wv2RRQl4A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.BarcodeWriterGeneric.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.BarcodeWriterGeneric.html",
+          "hash": "WNTwV8fRZqKFctCxOCbQyDyH7zaNu0EwG38LNZvnDRs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.BarcodeWriterPixelData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.BarcodeWriterPixelData.html",
+          "hash": "uI6vqPxYPLXP701j/8V661Lxo09tslNBF7xNkHCUjVU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.BarcodeWriterSvg.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.BarcodeWriterSvg.html",
+          "hash": "edWSKLfcmk7E9BbrHij8QOvAp3qZcDUTlnr+6z+ysLk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.BaseLuminanceSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.BaseLuminanceSource.html",
+          "hash": "E9Uc1Jxds2Grcc24DpF4Zgi3WFDjjW799eIVfaPKDWM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Binarizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Binarizer.html",
+          "hash": "oapetNLnY4zgZWtMg74CnSqS9p9jODAPN0ttKyCIqBk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.BinaryBitmap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.BinaryBitmap.html",
+          "hash": "pr2DUqj4+eVYaU3Le+B6/Zxa6uGviV6FIh1z6jKn0yU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Client.Result.AddressBookParsedResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Client.Result.AddressBookParsedResult.html",
+          "hash": "WlznDnAHmnu2P6ecGVjidisfZb3Cowlue+TA+FZ5tgk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Client.Result.CalendarParsedResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Client.Result.CalendarParsedResult.html",
+          "hash": "z1xrvE64F45OxtgE0R4m11oVZOYVG4t9LSXoz71DkrY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Client.Result.EmailAddressParsedResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Client.Result.EmailAddressParsedResult.html",
+          "hash": "k06lqAj2CyKUJ9dmDy514EYuAxEuVrFzYHcI9uExBsc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Client.Result.ExpandedProductParsedResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Client.Result.ExpandedProductParsedResult.html",
+          "hash": "zm4acGHGwyrSGcFFPzsN6UfKFg+BZFhfSMrw9CiJF2g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Client.Result.ExpandedProductResultParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Client.Result.ExpandedProductResultParser.html",
+          "hash": "BKhF3qiEj6sZ8VqHC60U1dN8zBMkHaMLMTLlG7xKNoI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Client.Result.GeoParsedResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Client.Result.GeoParsedResult.html",
+          "hash": "k+GlwZlyBhcTTG4DROoJiSO+xzIZG+v/SlADIu+h8mo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Client.Result.ISBNParsedResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Client.Result.ISBNParsedResult.html",
+          "hash": "pbF4HgDte5a4X/E14DLnWG0v2Z3FHimqN/xqH/1Vwe8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Client.Result.ISBNResultParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Client.Result.ISBNResultParser.html",
+          "hash": "f0o1R/i/5VUt57wIDs+p1jU4DHRsmpeJ8kVmIqNdCRM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Client.Result.ParsedResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Client.Result.ParsedResult.html",
+          "hash": "alN8T4i8YPHbg6qu/wnWBNvrcY20sm4hmigRgCPP4Ic="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Client.Result.ParsedResultType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Client.Result.ParsedResultType.html",
+          "hash": "ZnXbOauAiRBK43WY/WLWkj0EdQpv9BpAoobYgh5YQIY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Client.Result.ProductParsedResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Client.Result.ProductParsedResult.html",
+          "hash": "ySjKv/pqXV/gttPHQnrTW/PqhJN3iV3QD1lrOTduey0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Client.Result.ResultParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Client.Result.ResultParser.html",
+          "hash": "iEaDl3TBwL27cF7gZLt6J2Jf229XgTbR35o/6z9myH4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Client.Result.SMSParsedResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Client.Result.SMSParsedResult.html",
+          "hash": "8jicipCXUMGf77simgnX+tLF1wKsY1WXIUOeT/+rP/A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Client.Result.SMSTOMMSTOResultParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Client.Result.SMSTOMMSTOResultParser.html",
+          "hash": "H0AJEwrnHj24t5VeWM0LSKkOIEAvE1GCIv4KvkGmYZM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Client.Result.SMTPResultParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Client.Result.SMTPResultParser.html",
+          "hash": "CkiROKaeiu2QtWI59Z1AG4vA2x4TGD2D3Y5IewMpmQY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Client.Result.TelParsedResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Client.Result.TelParsedResult.html",
+          "hash": "lJNQFdv3UPoiZaVDuIQIfHxsH8lVcoVUtIlOVZV41tw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Client.Result.TextParsedResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Client.Result.TextParsedResult.html",
+          "hash": "GrBMrG73ZWlU4/9ekuInIeHzJzjNyZm7I8vTqoFj3y0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Client.Result.URIParsedResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Client.Result.URIParsedResult.html",
+          "hash": "S962L7KcOaJ1CvaeEzU2axh1I2Tf2sX17WkTQR3fJNs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Client.Result.VINParsedResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Client.Result.VINParsedResult.html",
+          "hash": "yY5xRPVzV+FaU7kt2vtKk8asyt46exMFH9VZQnfMlMM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Client.Result.VINResultParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Client.Result.VINResultParser.html",
+          "hash": "41bNMt5kaJnTHQgB8iHWOzJUWEB0hiiKPGR9SW8coJo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Client.Result.WifiParsedResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Client.Result.WifiParsedResult.html",
+          "hash": "yPt1joKCywjxoK3+f1nP+vPP8RfyfRZ7anrNYMAq85g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Client.Result.WifiResultParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Client.Result.WifiResultParser.html",
+          "hash": "mYusGgElFU6HOB7aXBoeadoeWv8xg9RtXXuQpMq+mso="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Client.Result.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Client.Result.html",
+          "hash": "hJYPBctASqcgIXFPgD3GkokcEyjZUsG7s1+crlXwSHY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Color32LuminanceSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Color32LuminanceSource.html",
+          "hash": "sxu9WiUyveRLpNbdfpe0xRmnVWywAh1SJBfAbQA3Dhc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Color32Renderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Color32Renderer.html",
+          "hash": "4Ud5rKbQkrBD5H+FkG5eoA6omNkprpyMxBoKLLhnrlQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Common.BitArray.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Common.BitArray.html",
+          "hash": "ywbDGr/SYbw8ABGFNjLYel3+5NY/t6FqTsan3kMuuZA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Common.BitMatrix.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Common.BitMatrix.html",
+          "hash": "usQM96Tkar/kDgdda7wVs+60eNJDvef+mGuuDkrBz6o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Common.BitSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Common.BitSource.html",
+          "hash": "buxWmD3lxA3SYGom0Ot+lmEV9fIWG6DbwFVBCGOlnHs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Common.CharacterSetECI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Common.CharacterSetECI.html",
+          "hash": "nQ8lb4SwuA/erFb5Qo6pDkx3j5H2SczmTL1ooW8RDeA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Common.DecoderResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Common.DecoderResult.html",
+          "hash": "9YIxrB7zjOVAtrqGOGye0qi8kv5vunMha/jHn0HY40M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Common.DecodingOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Common.DecodingOptions.html",
+          "hash": "KG1ZBbX9WZoBbqF8xxSnqAEjiBBRCEwHZkZ74A6h8uQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Common.DefaultGridSampler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Common.DefaultGridSampler.html",
+          "hash": "eGNtkmDTxMpHx5nRAA2D87hDiTHizOpXg8UnKsvjYBg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Common.Detector.MathUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Common.Detector.MathUtils.html",
+          "hash": "zqGBXoTmBVGkxTZLknJaOE3RcO3A7jRsQNFmHDGz32I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Common.Detector.MonochromeRectangleDetector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Common.Detector.MonochromeRectangleDetector.html",
+          "hash": "PHP/+TJDPjjFTbfkpHDtPHUBA+NdIAQKVq2sWdfTzh0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Common.Detector.WhiteRectangleDetector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Common.Detector.WhiteRectangleDetector.html",
+          "hash": "ZPXYdTjnRzGdsfV+ix8MTV1g3N7lBA3B65wRPWJaHs4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Common.Detector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Common.Detector.html",
+          "hash": "BksF6NzT2OxVLDAfQ8xkJItiPKsIyauRExjhOUxXng8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Common.DetectorResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Common.DetectorResult.html",
+          "hash": "DEVh6XU6ht8Qtt1a7pLrtPYYHnNOANtlAWBgGaIIDNM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Common.ECI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Common.ECI.html",
+          "hash": "CeIQeEf5EdrQX0ABMPNHWz0FtzjCeGM5q7NrKYS42D4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Common.EncodingOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Common.EncodingOptions.html",
+          "hash": "pokN5YBbddoFxE7EY+YphT3nQiVlN04cYAcjtFpv+y0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Common.GlobalHistogramBinarizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Common.GlobalHistogramBinarizer.html",
+          "hash": "Vq+HyviLyELHFMBT2/ELlEvJrYoMxFLxcLwSIbAhDr4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Common.GridSampler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Common.GridSampler.html",
+          "hash": "QJwN67l4VobOMVyzPXWNvUrtsw43bMH1bQCgGGTrRvY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Common.HybridBinarizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Common.HybridBinarizer.html",
+          "hash": "31XLW6tgLr/HfMHGqvhpkyruh4thGrRtA0zKutV+hEY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Common.PerspectiveTransform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Common.PerspectiveTransform.html",
+          "hash": "GJMoUoxrmtVTqD5qWCjj7c7JnDa/bhPI6Fw2DsbLqkk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Common.ReedSolomon.GenericGF.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Common.ReedSolomon.GenericGF.html",
+          "hash": "rN7mkvoLjByZM2gKelh+1gKi9huGvdeyEeytAbIXsH4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Common.ReedSolomon.ReedSolomonDecoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Common.ReedSolomon.ReedSolomonDecoder.html",
+          "hash": "TFcdYySjzEflX16OQpWd4NGqNMBoA8Xq7xrLEbs5dCI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Common.ReedSolomon.ReedSolomonEncoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Common.ReedSolomon.ReedSolomonEncoder.html",
+          "hash": "Yptra+OTnkn0Fvm3TiR8PRqiBnWQavdWDq5d/gJ+goI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Common.ReedSolomon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Common.ReedSolomon.html",
+          "hash": "kO0BrG54VxJmX2uDBNnn/raIOCmWEpx5maKrRQoA1HM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Common.StringUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Common.StringUtils.html",
+          "hash": "BK+rHFaoXsfAE9ad8PfEGiEtOFMi2Yb0oH+hgqfkol8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Common.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Common.html",
+          "hash": "rY7d7hmA5n1KQ20jn69gZbWsB0PWdaBWhXSqdU6capA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Datamatrix.DataMatrixReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Datamatrix.DataMatrixReader.html",
+          "hash": "emkv30KV8rL6809Yz1WDSnQ5bXtqNAC407nIATeI4vQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Datamatrix.DataMatrixWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Datamatrix.DataMatrixWriter.html",
+          "hash": "dR10UTIdnVQ+A3IKkym+358D5gKVOy74RRBCclsOsBg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Datamatrix.DatamatrixEncodingOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Datamatrix.DatamatrixEncodingOptions.html",
+          "hash": "lAdsNgVa47fP+dh8tt/SWtD07Wm+QpzCQuhYzRaMCNw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Datamatrix.Encoder.DefaultPlacement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Datamatrix.Encoder.DefaultPlacement.html",
+          "hash": "XLi2jVDIfqb34c9nA7hWvxfY3mkqKRqn+1cRmecPYTQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Datamatrix.Encoder.Encodation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Datamatrix.Encoder.Encodation.html",
+          "hash": "P65gPB249pGs+1Uu5dW8D/8sxwBawZ/7znRicHbm1/E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Datamatrix.Encoder.ErrorCorrection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Datamatrix.Encoder.ErrorCorrection.html",
+          "hash": "C40IpRdj08BcDIqyNcMdfwMHro/aBr8M10KbVi0tP98="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Datamatrix.Encoder.SymbolInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Datamatrix.Encoder.SymbolInfo.html",
+          "hash": "2S17JNxpLWXF2FCNIZrTcLSJcY13gma0WFNo0zbF4ds="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Datamatrix.Encoder.SymbolShapeHint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Datamatrix.Encoder.SymbolShapeHint.html",
+          "hash": "Jq4MSmARpA7h2TzTzKKQWegdVI1008xXn0OZSVyBfXY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Datamatrix.Encoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Datamatrix.Encoder.html",
+          "hash": "zWTLTm2fV2jX2XRwZa3DNCXbRpuBn9rjS7s5ONMtLn4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Datamatrix.Internal.Decoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Datamatrix.Internal.Decoder.html",
+          "hash": "iVi3nESlBBw5pgLNEnqWOweNHF+DazbFjEOHhaXUMNY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Datamatrix.Internal.Detector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Datamatrix.Internal.Detector.html",
+          "hash": "9PJs4tU3Nr40ultZQqqf13yFm4eZUevNFcO0qJ6QSAY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Datamatrix.Internal.Version.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Datamatrix.Internal.Version.html",
+          "hash": "g9LZI7qcgBlDyygNem46I0TrL1o76rZt+Ch1M90SUPg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Datamatrix.Internal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Datamatrix.Internal.html",
+          "hash": "IqdrWy6yaxk9TYJwQHPkvsbg8EonitJkaXyZMC5Hpgs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Datamatrix.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Datamatrix.html",
+          "hash": "KTlYQn4C3IzTHIz+UJTPtEIWjZLc2H1M4pOTvAVulZU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.DecodeHintType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.DecodeHintType.html",
+          "hash": "FH1ptWo1WV4S+W8cMw9IYEeg1FOJOsQpiraOjC0xtBI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Dimension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Dimension.html",
+          "hash": "Y8VZbc6M+UlPwgDYxSSh5oSHLxNgNfa0L2UJ0h4Dj2c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.EncodeHintType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.EncodeHintType.html",
+          "hash": "5c7iYWhoA/TrxIy3jXVr0UjLBNSb42epeRoXZW+dJPE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.FormatException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.FormatException.html",
+          "hash": "o6UQb5paKGhNAdYEv54uup62mpfOdEsd7e2kd/Tuz98="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.IBarcodeReader-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.IBarcodeReader-1.html",
+          "hash": "zSFg/Myt9cePSZDOBNxFsIZCto++6QQB8kJFAmUJIQA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.IBarcodeReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.IBarcodeReader.html",
+          "hash": "ARWsE7J9N/Hzsf+w64MEQBw6AkTytebYNDrwt98mI5A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.IBarcodeReaderGeneric.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.IBarcodeReaderGeneric.html",
+          "hash": "0DszCrC6FDya+xwprqWw9mppJKEa6rFEOPrItLu1BCo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.IBarcodeWriter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.IBarcodeWriter-1.html",
+          "hash": "KgO4cYcVmz9QUA75n886S5rt9pJYS/iHAsFfzl0mrrs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.IBarcodeWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.IBarcodeWriter.html",
+          "hash": "KHnRCsmcu7ouqxOqROFbpH3oAJXSpD40KY9sLGIJMOM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.IBarcodeWriterGeneric.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.IBarcodeWriterGeneric.html",
+          "hash": "zwbVKBZ7z5NH7F7O1kKhx/UFXvcOedu83/fZ6vyMv7A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.IBarcodeWriterPixelData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.IBarcodeWriterPixelData.html",
+          "hash": "+tzYsIwzyO+nGN4GSHyFtOSoPAa7MUaW4SPAdxQW/6U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.IBarcodeWriterSvg.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.IBarcodeWriterSvg.html",
+          "hash": "wbiDE8v5C0gQ9192niXFQzNTGwBLNqQdhu4u9DtMLt0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.IMB.IMBReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.IMB.IMBReader.html",
+          "hash": "2NTLnnmFzd2S/j9QO+yy9FtoFBwa5WlIS8H7eGUF4bM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.IMB.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.IMB.html",
+          "hash": "eSLScYsReNfPyEkRm/mzPUYJJs2yrmx3tYgUU6d1IjQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.InvertedLuminanceSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.InvertedLuminanceSource.html",
+          "hash": "usgIraa8NEemebQUaWl+SPAmtlfOD9TV7S6YrmddCE0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.LuminanceSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.LuminanceSource.html",
+          "hash": "uU+Hdb9dFZKsk9zzO+W3pwWsIi1ieLYC6+oCxM4IdeA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Maxicode.Internal.Decoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Maxicode.Internal.Decoder.html",
+          "hash": "OTZP1PF+mN150vY92iVylf7ZHtmimG+1avDAWFWJ+Fc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Maxicode.Internal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Maxicode.Internal.html",
+          "hash": "VSVpPo8nOTZOqeGIEhiCohOIB15kJm7aEAmYeCWaPeM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Maxicode.MaxiCodeReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Maxicode.MaxiCodeReader.html",
+          "hash": "Xi2PgAJLjmTjM2jPsGGJchwTF64qunkSYzWJ5Kw8hr8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Maxicode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Maxicode.html",
+          "hash": "PBivo1snEG+e1/B4folsugzbogTzw5Ugj+nnfRaAOcI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Multi.ByQuadrantReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Multi.ByQuadrantReader.html",
+          "hash": "aSbtwZ0y4tAMpsFXKu3G5Rz5VNPnRun1xn1lx6rV9EY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Multi.GenericMultipleBarcodeReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Multi.GenericMultipleBarcodeReader.html",
+          "hash": "3larn2QmXJRmGeYtaBW+yfniKePzEwbZxWsQ0m7FVu0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Multi.MultipleBarcodeReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Multi.MultipleBarcodeReader.html",
+          "hash": "Lb9jr8Xr5KmK72EL2gUIJaP4P2Fnkg5QNsUhg8vyEMU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Multi.QrCode.Internal.MultiDetector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Multi.QrCode.Internal.MultiDetector.html",
+          "hash": "xEYGrj1y7cx+7CQC9qPv4RxcOdAPm8aXTUVhtYn4Qc8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Multi.QrCode.Internal.MultiFinderPatternFinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Multi.QrCode.Internal.MultiFinderPatternFinder.html",
+          "hash": "vKQVlcNX/JX8FdwRt4mGCYwtWJwxqqIvIzRxWQS/X6k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Multi.QrCode.Internal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Multi.QrCode.Internal.html",
+          "hash": "crwviDZl3OfL+IxswtU/HRuj9XO2W4UwzHeUz+ETk14="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Multi.QrCode.QRCodeMultiReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Multi.QrCode.QRCodeMultiReader.html",
+          "hash": "fJngqSJxEdfbjshreRGz00DEjvV5BMhohVKYyZsa3OY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Multi.QrCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Multi.QrCode.html",
+          "hash": "S/1BS69LNpqN0dEIzq64nK4URws7ILZ5M9PQy//seJM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Multi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Multi.html",
+          "hash": "OSpPQTxR/Sv5u3ybVRQAHwUcGMrSF5eyvFA9SpjqXvM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.MultiFormatReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.MultiFormatReader.html",
+          "hash": "2d8r43K9WR2L+AVh0nxjfYf0U3phGTq1fCeUhdQaxTo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.MultiFormatWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.MultiFormatWriter.html",
+          "hash": "LwybtEMPlaV8c26CEpc1k+FYXBGZZApGZtOmChn/nNI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.CodaBarReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.CodaBarReader.html",
+          "hash": "1HPJr3bxQBqzzfvX38X4wJnd3BIWOadvNnXpd/1WC6I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.CodaBarWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.CodaBarWriter.html",
+          "hash": "WIJWGLEsJ8FQRbSUqv8KYtSJ97IQJnJShyg3vB1IvhM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.Code128EncodingOptions.Codesets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.Code128EncodingOptions.Codesets.html",
+          "hash": "e5vW4glgZNN4UwKrny5Iv+soYCAf6+IZncCpTz0kt1Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.Code128EncodingOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.Code128EncodingOptions.html",
+          "hash": "x6OTp3Y8aBpYj7FBE9Z6C3IIBQlF1Hwl8qNVENfftO0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.Code128Reader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.Code128Reader.html",
+          "hash": "6RSZ2p22Rysoj8Rtk0rmlLOTfiDYELZph3h4kyCQiQ4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.Code128Writer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.Code128Writer.html",
+          "hash": "4Lo1T344sI/en0xd7won0tcDXjCJfUU0ra4wxuLYRbA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.Code39Reader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.Code39Reader.html",
+          "hash": "ieak5c9Adq+0m8mXPTizuUrxyOTXpWjzyRdmxet5S9s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.Code39Writer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.Code39Writer.html",
+          "hash": "RGyGeTT+t/5tgx/f2wrRe9QlclU77mBkg/2aBhho0CQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.Code93Reader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.Code93Reader.html",
+          "hash": "451GhK5nDWffF4S48ZkfBaeKgvUHpsvya3Gt2ctiLTc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.Code93Writer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.Code93Writer.html",
+          "hash": "kLY1/6Tg191RKm4TsesGkqUPJhtHlmp+MsF3Oi9eVEQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.EAN13Reader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.EAN13Reader.html",
+          "hash": "9xo4jovl0Ifq9pJSCfVJtEF0CiSMBjBAi33OG9ZeqdA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.EAN13Writer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.EAN13Writer.html",
+          "hash": "1ZAUgRkDrgGB3DgrF2a/quLnLFEjWCwJ3gcTOiKcNHo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.EAN8Reader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.EAN8Reader.html",
+          "hash": "4qDcaYIJI+yaEG1K4xUTL38kmU06jOzSy0xW3g8tPh8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.EAN8Writer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.EAN8Writer.html",
+          "hash": "GqHy0mV2nGyONQbILci35U0JVX/7tDusSNVedcBlldo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.ITFReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.ITFReader.html",
+          "hash": "1Pgm6upwU8cWg+ikUf1YdjARxZiVFmQKr0xoBvESmdc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.ITFWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.ITFWriter.html",
+          "hash": "svXGYgAAhy+Zb6yjFBggTqsbgKOHj/n8m1BmHyZEsLs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.MSIReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.MSIReader.html",
+          "hash": "gz84zZfR1BzFmsm2CARHROdctRri4qctJ56ZDkPOwfI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.MSIWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.MSIWriter.html",
+          "hash": "+zYB6mS83R9OEh2zd1M6M6/zLRp7Au7OjHvbU5Nw9/0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.MultiFormatOneDReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.MultiFormatOneDReader.html",
+          "hash": "B35U1k26H/0YlN2GDHMQZmQmJw2S5wcxMCSdbbjc9Jg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.MultiFormatUPCEANReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.MultiFormatUPCEANReader.html",
+          "hash": "NpGfkkPKOPJQcninZTJ0qKGPVc+gIurJG8VTyKvbEM0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.OneDReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.OneDReader.html",
+          "hash": "ObcL6FNNsDCFSPGsR2NyGOKc1Yjg+NuZ/NL/c5/+l2Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.OneDimensionalCodeWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.OneDimensionalCodeWriter.html",
+          "hash": "vEnXmKTXK0jT42Dkhmvft6XTQvhYPIE2uR/s58YAcNE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.PharmaCodeReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.PharmaCodeReader.html",
+          "hash": "paGECWWHfyU2q6odCgnp6DOxAvyfcPFLdkaGgMan8Vk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.PlesseyWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.PlesseyWriter.html",
+          "hash": "unQWoawyph3vL4m0I6y3iaYFvjMwqda88RBYAykBHjs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.RSS.AbstractRSSReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.RSS.AbstractRSSReader.html",
+          "hash": "UrlV7J3ZCya+uW1U67U9c0y7mWl/NmbzVV255zA5leM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.RSS.DataCharacter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.RSS.DataCharacter.html",
+          "hash": "fW6/baXkfTwT+5lfzwtCkfn2ypXtTRoY/UBFv1RoL/4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.RSS.Expanded.Decoders.AbstractExpandedDecoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.RSS.Expanded.Decoders.AbstractExpandedDecoder.html",
+          "hash": "frFiSNOgAKrWw7rFxs1B34NtSN5oAQiMOS5qDLMlhik="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.RSS.Expanded.Decoders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.RSS.Expanded.Decoders.html",
+          "hash": "X9c8WAmu8MGioEoKXWre583wrjJvGogVP2Dk6U958bk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.RSS.Expanded.RSSExpandedReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.RSS.Expanded.RSSExpandedReader.html",
+          "hash": "rC9XVSdMQollWBuwnWmAheKTzVLsY+6pojneSX/nIFg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.RSS.Expanded.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.RSS.Expanded.html",
+          "hash": "jMeujcEj34LvL+gkhbw/3rcr7hmAXOrsVD6/GzpO9pE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.RSS.FinderPattern.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.RSS.FinderPattern.html",
+          "hash": "mSZAw+cdWHd1HbjJRprfmh3rc1O8KyiSkjiqPG71RS0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.RSS.RSS14Reader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.RSS.RSS14Reader.html",
+          "hash": "vXtXycpMGW+k0If61KiECYLof8HjKJZanFC6l85lRsg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.RSS.RSSUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.RSS.RSSUtils.html",
+          "hash": "VCJCtrxUCFAflOW8MiS3FoLTMsaP3Y1Vp7Lfcvtryzo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.RSS.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.RSS.html",
+          "hash": "JPDg4XSM5/1GJETdctbUf6nZ4GbPGGorr5gpnKCrHhs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.UPCAReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.UPCAReader.html",
+          "hash": "IFYLzoEi44EJETYOTmNvLB87wjO2CsFaJEZ1uuBZR8g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.UPCAWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.UPCAWriter.html",
+          "hash": "fPhlIKA/tk+blNFgVDHXRuZH+S1tOLZ6iDNbhMAEJv8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.UPCEANReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.UPCEANReader.html",
+          "hash": "mr5i1xho9pHEligEXDumCBfvzVWINGzCocF/ly0lJDA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.UPCEANWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.UPCEANWriter.html",
+          "hash": "ofzbwTc4HBfAZKpmwJ4Y9EAGt5FzmyQfqzctQSMhdq8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.UPCEReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.UPCEReader.html",
+          "hash": "kwU3eNLUm5ZVCtpdZyIbHMgu2PrK5q/7IVzYLScnxYo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.UPCEWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.UPCEWriter.html",
+          "hash": "tbTwd5ZLHLaRAOSRV0GeKNZ++n+s+67J4heZpppbe/c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.OneD.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.OneD.html",
+          "hash": "Bb4RWJvZEXu5NXR/0yQp+uk/+HEAYusjP/ki/mxkP8M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PDF417.Internal.BarcodeMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PDF417.Internal.BarcodeMetadata.html",
+          "hash": "GSv/ygG57UjTjYtf/KmeDw0dKYsUsYy6fmFQaFOh/Zs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PDF417.Internal.BarcodeValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PDF417.Internal.BarcodeValue.html",
+          "hash": "k5L2lg/wUlVFNu2nRRWLiWcrjFSOBZRmJy7Zgia3D6M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PDF417.Internal.BoundingBox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PDF417.Internal.BoundingBox.html",
+          "hash": "kQAN7HznaIuAfl/ghpeXnohGX9b/+52szdTlvkPfv8k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PDF417.Internal.Codeword.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PDF417.Internal.Codeword.html",
+          "hash": "AEPdWOjQTFQWNqv3M4hFR5R/VcTnlZunaoIoLU5XZFo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PDF417.Internal.Compaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PDF417.Internal.Compaction.html",
+          "hash": "jYntfd/zaN8x6hR+8awA98y6Cm/IVsYTb4CbF8RqLOk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PDF417.Internal.DetectionResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PDF417.Internal.DetectionResult.html",
+          "hash": "X7Jzr8rr0UfgMxryFwBHlFO9scZbq9Fw1DJK+u8zmWs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PDF417.Internal.DetectionResultColumn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PDF417.Internal.DetectionResultColumn.html",
+          "hash": "+82jgkV7/O6d6zJ7VyqTz9TxEGrJpEyg3lSOxZGh7zM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PDF417.Internal.DetectionResultRowIndicatorColumn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PDF417.Internal.DetectionResultRowIndicatorColumn.html",
+          "hash": "8D7SCYv+ZlcworebDCS3S2DBXx/QjAtuT0z1uBIgYwQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PDF417.Internal.Detector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PDF417.Internal.Detector.html",
+          "hash": "163LxgaQGd49Fkj1rnPHlqNWnEwjrbaqF0iY/zEzQto="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PDF417.Internal.Dimensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PDF417.Internal.Dimensions.html",
+          "hash": "g8OOqLK3pbhCUUNGRTS8rtXGGka63J1yLYdnOxmy774="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PDF417.Internal.EC.ErrorCorrection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PDF417.Internal.EC.ErrorCorrection.html",
+          "hash": "jaKyc5Es5DtAvMUiFr6UVYm70H78GvISoiLZXBKUEbY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PDF417.Internal.EC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PDF417.Internal.EC.html",
+          "hash": "iMKReIoeocIuExJJI4k8LFbYMjNe3dxNIOLQvgwyb1I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PDF417.Internal.PDF417AspectRatio.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PDF417.Internal.PDF417AspectRatio.html",
+          "hash": "IyQ1F3MkVIVk4jSR8+hTbtoCy5hRimnsKI432zeL9NE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PDF417.Internal.PDF417CodewordDecoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PDF417.Internal.PDF417CodewordDecoder.html",
+          "hash": "m/uO3Af84lWkKkqvnzKcw613eb6x4qNM0dMLwHBMrFs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PDF417.Internal.PDF417DetectorResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PDF417.Internal.PDF417DetectorResult.html",
+          "hash": "05j9ssO0IhTW0uQ2J5Wyq3rU2zoSyErZcNU44cs3YH8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PDF417.Internal.PDF417ErrorCorrectionLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PDF417.Internal.PDF417ErrorCorrectionLevel.html",
+          "hash": "y/S0I1mybPrahxCMerSARmYqEJeamnyKkT05j9+OBYM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PDF417.Internal.PDF417ScanningDecoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PDF417.Internal.PDF417ScanningDecoder.html",
+          "hash": "NCnjkVGVx71xBVvBPIX0pr+necoDQB7bnaHGXFV4h/Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PDF417.Internal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PDF417.Internal.html",
+          "hash": "dzDlPli0vAC6msQD73TpYx0qjIUwrGBaPkXwqHwu42s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PDF417.PDF417EncodingOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PDF417.PDF417EncodingOptions.html",
+          "hash": "tQWUQWBIKT+NZdLjYaFckHwiZLfYn/eBW8dpaJrau1Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PDF417.PDF417MacroMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PDF417.PDF417MacroMetadata.html",
+          "hash": "xs/NF46BJfUxYrCg5UtT6e3mjkAMc/ppYtJ9++jjrg4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PDF417.PDF417Reader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PDF417.PDF417Reader.html",
+          "hash": "GfOP+xH29NfA7sy3zgD5fB6JH9GmArNPxdcfAmS4Dlk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PDF417.PDF417ResultMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PDF417.PDF417ResultMetadata.html",
+          "hash": "6BfZqI1yvp7uwV2x56BYC5Ot2Bs+KdtofMSnyqjZupc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PDF417.PDF417Writer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PDF417.PDF417Writer.html",
+          "hash": "XI4b15ihITxsICgA5w31OfSlr8E/RzSatZi6OyJDMKM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PDF417.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PDF417.html",
+          "hash": "GjiNhjvPlMPTOtTyJUJMzcMPHPiF0K+LSGvwFVkEhdk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.PlanarYUVLuminanceSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.PlanarYUVLuminanceSource.html",
+          "hash": "DsPEeCWKLxF2m+YnMFwu4IJJWIqevkYEg1OZ5hUxzkY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.QrCode.Internal.AlignmentPattern.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.QrCode.Internal.AlignmentPattern.html",
+          "hash": "CGhWa58D22IyzJhuAOr7bx+6XzMI/FUBI9JauWzAwGk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.QrCode.Internal.ByteMatrix.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.QrCode.Internal.ByteMatrix.html",
+          "hash": "+ZFf0Z+FyqPfLh/BX7UCfnvkb3Y1ZV62Zn5CMsMgdK8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.QrCode.Internal.Decoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.QrCode.Internal.Decoder.html",
+          "hash": "6GcSKKmCWX3gh8LLWdS3nnOvDIzrYFHAhmgmTZsQhOY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.QrCode.Internal.Detector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.QrCode.Internal.Detector.html",
+          "hash": "FrbUWxr/SlSugAqUXQWxYkt2tB7QneKrmG6EH0A1QO0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.QrCode.Internal.Encoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.QrCode.Internal.Encoder.html",
+          "hash": "U0VaFntL+fBDiat9hxAshrfoJ2iIOkcJ24skgb9gxI4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.QrCode.Internal.ErrorCorrectionLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.QrCode.Internal.ErrorCorrectionLevel.html",
+          "hash": "7m3HDuttCYSr2hMHAcJsiOk8Ah9cbFMba/uoiLy9TJg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.QrCode.Internal.FinderPattern.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.QrCode.Internal.FinderPattern.html",
+          "hash": "zCvthCTBYRE5uzhEa/vlRA3s5LRy/8hFEVH3b/KIVDw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.QrCode.Internal.FinderPatternFinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.QrCode.Internal.FinderPatternFinder.html",
+          "hash": "S630O4puLdz7/4iO5SWhB9MjOJCHjlWRrCObSSHlV0A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.QrCode.Internal.FinderPatternInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.QrCode.Internal.FinderPatternInfo.html",
+          "hash": "eJcGuW3nH3WIVG/UIwkY/rdE884L3dE7G8O7CPAcQwc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.QrCode.Internal.MaskUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.QrCode.Internal.MaskUtil.html",
+          "hash": "rm7pPut3Twlft0y6FCfy8AaxmOYyWJe0CTXWyJQ6LYU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.QrCode.Internal.MatrixUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.QrCode.Internal.MatrixUtil.html",
+          "hash": "+iTpzUO3Djhsy7y3uByxRjsGF337B/9xMJdJFTwumaY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.QrCode.Internal.Mode.Names.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.QrCode.Internal.Mode.Names.html",
+          "hash": "pHzjTva+tmXuGmrqscHhwo1du68F5Akivl2nQn8/tjQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.QrCode.Internal.Mode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.QrCode.Internal.Mode.html",
+          "hash": "rbxfywhcTg0GaIEETN7nSGz87QLBAZHoJ/CH5VFWjvE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.QrCode.Internal.QRCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.QrCode.Internal.QRCode.html",
+          "hash": "+fVT5yPGOElZ5BAKExUNnfsCEsrU6HNYlvePqamRi3Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.QrCode.Internal.QRCodeDecoderMetaData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.QrCode.Internal.QRCodeDecoderMetaData.html",
+          "hash": "0qk4J5YJ3uroD+mLBJ6Un35OttOdAe61UAl2Ss1WDqk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.QrCode.Internal.Version.ECB.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.QrCode.Internal.Version.ECB.html",
+          "hash": "RwwXuh1NvLEEJnH+mxEndYDtY5FzuW+hgSpOBkfxraQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.QrCode.Internal.Version.ECBlocks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.QrCode.Internal.Version.ECBlocks.html",
+          "hash": "9xQhHaA/jDgyKXoBFNgFiREqdDfaj1iKUOxH+XYtGvw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.QrCode.Internal.Version.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.QrCode.Internal.Version.html",
+          "hash": "l2MA94OH+zGCCtNu7oxxVoTKtvIJOoGq3Z/OQReyGxk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.QrCode.Internal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.QrCode.Internal.html",
+          "hash": "k4GQP+RY4R98dD48LOl3rAppOXVrA5iqmFN3hDdRiQ4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.QrCode.QRCodeReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.QrCode.QRCodeReader.html",
+          "hash": "WmmUQpfLNYUDgjImuE+Sgpyigel4lPrP3BOwegr4B6I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.QrCode.QRCodeWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.QrCode.QRCodeWriter.html",
+          "hash": "/N0oYWb9lY6tQKh7aLsCl9zT0APi0dp1MiRzCcjlxkI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.QrCode.QrCodeEncodingOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.QrCode.QrCodeEncodingOptions.html",
+          "hash": "s4cU3L342B8FYEaJtB7zO6oOD3EIQlceM+xhZLWwO9c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.QrCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.QrCode.html",
+          "hash": "ygessAE8ZD4MDs4pWFRJd+XDeHy78WdhcvzpYFUVyq8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.RGBLuminanceSource.BitmapFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.RGBLuminanceSource.BitmapFormat.html",
+          "hash": "koQmKLm/QDQDFU1v265jffyl7jn88Iom+CofoOFkP1Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.RGBLuminanceSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.RGBLuminanceSource.html",
+          "hash": "OrVD0GErbDYgCxwIdPYUW6mbBCVbhoArzYQldULkB0c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Reader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Reader.html",
+          "hash": "E8A9ssljhGN1UYrSEXXlXy35WH+JMVwJ0WA+5z6JjgM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.ReaderException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.ReaderException.html",
+          "hash": "3AahJKW1RuRxKUHF1RsWQu4zkR99GFrdoj9RWAgnozg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Rendering.IBarcodeRenderer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Rendering.IBarcodeRenderer-1.html",
+          "hash": "O9rPZFigu6YqF89jL/UrHYvBPr4vrByIBkv2b4ug4to="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Rendering.PixelData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Rendering.PixelData.html",
+          "hash": "fq9MWCAvr8kSZZ+E52xrMlq97jPFjR2JOZkSZY7DGho="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Rendering.PixelDataRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Rendering.PixelDataRenderer.html",
+          "hash": "VZGTAAT9QwKe8LO28s1p/y85Itra3R5zdLmiPeZyZ6w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Rendering.SvgRenderer.SvgImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Rendering.SvgRenderer.SvgImage.html",
+          "hash": "9NjpVzQeL/gT+nEzDI+pNxT7s+R5xRsuKwkG6V8dC8M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Rendering.SvgRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Rendering.SvgRenderer.html",
+          "hash": "Q05ARAWsVhAwRXRT83qHiV1VXO370t0lxxk3XSmNWtk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Rendering.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Rendering.html",
+          "hash": "DQR7yV4qfWjNW3uctbXtHbuHJNsIbsSFk8dZTccLONU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Result.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Result.html",
+          "hash": "/w1ofUtqbKAKuPqddR1H/95dsQJzIdOQaQzGlESHSEs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.ResultMetadataType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.ResultMetadataType.html",
+          "hash": "cK28DR4yoZ2IKynOLFS2Oc6STwgRYTt99MtlGH0Jmqo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.ResultPoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.ResultPoint.html",
+          "hash": "KF4j+GWD2FcI7/HSPjF0t7/OKVULGAsj9h5zxltpsZg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.ResultPointCallback.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.ResultPointCallback.html",
+          "hash": "ce2Cac16dsxtyufNkQw4bco6MEeYEFTDLfL+9qhbhKs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.SupportClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.SupportClass.html",
+          "hash": "In15L9nA/h6kHGSIcCYjEdBnG9+1i7ZH6GhpIm6W9fI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.Writer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.Writer.html",
+          "hash": "0dMcNuhRlszU7iSVrUfgE2iPVQd06GLzM7H9YW68/8k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.WriterException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.WriterException.html",
+          "hash": "HeR2Vm+9TBpO2Iqx9/qqTeLLc5IB3UlXMRaFEZ9Wboo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ZXing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ZXing.html",
+          "hash": "CbgrLR1xAZs5POvM41sG1NKXhvIqVZXbkt7frbBnExE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "kFVxCACdzHBKVXbWcZOuMbIzZnviekArabHvmj/Kaic="
+          "hash": "99ZsFkhuMkjvEJHMofwvvwG6gU1kRehwTYQdm2DEOwg="
         }
       },
       "is_incremental": false,
@@ -4290,7 +7605,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 344,
+          "total_file_count": 617,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
