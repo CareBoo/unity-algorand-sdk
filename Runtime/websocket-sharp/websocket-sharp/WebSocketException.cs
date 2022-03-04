@@ -42,44 +42,44 @@ namespace WebSocketSharp
 
     #endregion
 
-    #region Public Constructors
+    #region Internal Constructors
 
-    public WebSocketException ()
+    internal WebSocketException ()
       : this (CloseStatusCode.Abnormal, null, null)
     {
     }
 
-    public WebSocketException (Exception innerException)
+    internal WebSocketException (Exception innerException)
       : this (CloseStatusCode.Abnormal, null, innerException)
     {
     }
 
-    public WebSocketException (string message)
+    internal WebSocketException (string message)
       : this (CloseStatusCode.Abnormal, message, null)
     {
     }
 
-    public WebSocketException (CloseStatusCode code)
+    internal WebSocketException (CloseStatusCode code)
       : this (code, null, null)
     {
     }
 
-    public WebSocketException (string message, Exception innerException)
+    internal WebSocketException (string message, Exception innerException)
       : this (CloseStatusCode.Abnormal, message, innerException)
     {
     }
 
-    public WebSocketException (CloseStatusCode code, Exception innerException)
+    internal WebSocketException (CloseStatusCode code, Exception innerException)
       : this (code, null, innerException)
     {
     }
 
-    public WebSocketException (CloseStatusCode code, string message)
+    internal WebSocketException (CloseStatusCode code, string message)
       : this (code, message, null)
     {
     }
 
-    public WebSocketException (
+    internal WebSocketException (
       CloseStatusCode code, string message, Exception innerException
     )
       : base (message ?? code.GetMessage (), innerException)

@@ -1,4 +1,6 @@
-namespace Unity.Collections
+using Unity.Collections;
+
+namespace AlgoSdk.Collections
 {
     public static class FixedStringParseExtensions
     {

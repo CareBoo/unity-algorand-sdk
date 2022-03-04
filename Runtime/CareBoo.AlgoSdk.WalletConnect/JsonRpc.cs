@@ -1,3 +1,4 @@
+using AlgoSdk.Collections;
 using AlgoSdk.WalletConnect;
 using AlgoSdk.WebSocket;
 using Unity.Collections;

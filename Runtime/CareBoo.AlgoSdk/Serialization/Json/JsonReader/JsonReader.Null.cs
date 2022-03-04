@@ -1,3 +1,4 @@
+using AlgoSdk.Collections;
 using Unity.Collections;
 
 namespace AlgoSdk.Json
