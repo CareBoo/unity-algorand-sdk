@@ -11,48 +11,9 @@ on:
       - "[0-9]+.x.x"
 
 jobs:
-  build_unitypackage:
-    name: Build .unitypackage
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          lfs: true
-
-      - uses: actions/cache@v2
-        with:
-          path: Unity.AlgoSdk/Library
-          key: Library-build_unitypackage-2021.2.13f1-Unity.AlgoSdk-StandaloneLinux64
-          restore-keys: |
-            Library-build_unitypackage-2021.2.13f1-Unity.AlgoSdk-
-
-      - name: Package .unitypackage
-        uses: game-ci/unity-builder@v2
-        env:
-          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE_2020 }}
-        with:
-          targetPlatform: StandaloneLinux64
-          unityVersion: 2021.2.13f1
-          projectPath: Unity.AlgoSdk
-          buildMethod: UnityPackage.Build
-          versioning: None
-          allowDirtyBuild: true
-
-      - name: Move .unitypackage for artifacting
-        run: |
-          mkdir dist
-          mv Unity.AlgoSdk/unity-algorand-sdk.unitypackage dist
-
-      - name: Upload dist
-        uses: actions/upload-artifact@v2
-        with:
-          name: dist
-          path: dist
-
   release:
     name: Release
     runs-on: ubuntu-latest
-    needs: build_unitypackage
     outputs:
       new_release_published: ${{ steps.semantic.outputs.new_release_published }}
       new_release_version: ${{ steps.semantic.outputs.new_release_version }}
@@ -60,12 +21,6 @@ jobs:
     steps:
       - name: Checkout Unity Algorand SDK
         uses: actions/checkout@v2
-
-      - name: Download dist
-        uses: actions/download-artifact@v3
-        with:
-          name: dist
-          path: dist
 
       - name: Semantic Release
         id: semantic
