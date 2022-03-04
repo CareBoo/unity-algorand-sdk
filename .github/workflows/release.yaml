@@ -43,6 +43,7 @@ jobs:
   build_docs:
     name: Build Docs
     needs: release
+    if: needs.release.outputs.new_release_published == 'true'
     runs-on: windows-latest
     outputs:
       version: ${{ steps.version.outputs.prop }}
