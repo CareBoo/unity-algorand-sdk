@@ -43,10 +43,9 @@ jobs:
   build_docs:
     name: Build Docs
     needs: release
-    if: needs.release.outputs.new_release_published == 'true'
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     outputs:
-      version: ${{ needs.release.outputs.new_release_version }}
+      version: ${{ steps.version.outputs.version }}
       branch: ${{ steps.branch.outputs.branch }}
     steps:
       - name: Checkout
@@ -60,13 +59,24 @@ jobs:
 
       - name: Get branch
         id: branch
-        shell: bash
         env:
           GITHUB_REF: ${{ github.ref }}
         run: echo "::set-output name=branch::${GITHUB_REF#refs/heads/}"
 
-      - name: Install DocFX
-        run: choco install -y docfx
+      - name: Get package.json
+        id: packageJson
+        run: |
+          content=`cat ./package.json`
+          # the following lines are only required for multi line json
+          content="${content//'%'/'%25'}"
+          content="${content//$'\n'/'%0A'}"
+          content="${content//$'\r'/'%0D'}"
+          # end of optional handling for multi line json
+          echo "::set-output name=packageJson::$content"
+
+      - name: Get version
+        id: version
+        run: echo "::set-output name=version::${{ fromJson(steps.packageJson.outputs.packageJson).version }}"
 
       - name: Update sitemap with branch
         uses: jossef/action-set-json-field@v1
@@ -75,8 +85,10 @@ jobs:
           field: build.sitemap.baseUrl
           value: https://careboo.github.io/unity-algorand-sdk/${{ steps.branch.outputs.branch }}/
 
-      - name: Build Branch Docs
-        run: docfx .docfx/docfx.json
+      - name: Build Branch Documentation
+        uses: nikeee/docfx-action@v1.0.0
+        with:
+          args: .docfx/docfx.json
 
       - name: Upload Branch site artifact
         uses: actions/upload-artifact@v1
@@ -89,10 +101,12 @@ jobs:
         with:
           file: .docfx/docfx.json
           field: build.sitemap.baseUrl
-          value: https://careboo.github.io/unity-algorand-sdk/${{ needs.release.outputs.new_release_version }}/
+          value: https://careboo.github.io/unity-algorand-sdk/${{ steps.version.outputs.version }}/
 
       - name: Build Version Docs
-        run: docfx .docfx/docfx.json
+        uses: nikeee/docfx-action@v1.0.0
+        with:
+          args: .docfx/docfx.json
 
       - name: Upload Version site artifact
         uses: actions/upload-artifact@v1
