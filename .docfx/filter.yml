@@ -8,7 +8,7 @@ apiRules:
   - exclude:
       uidRegex: ^System\.ValueType\..*$
       type: Method
-  -exclude:
+  - exclude:
       uidRegex: ^(?!AlgoSdk\b).*$
   - exclude:
       hasAttribute:
