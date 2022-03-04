@@ -1,0 +1,569 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AbstractRSSReader
+   | Unity Algorand SDK </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AbstractRSSReader
+   | Unity Algorand SDK ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="ZXing.OneD.RSS.AbstractRSSReader">
+  
+  
+  <h1 id="ZXing_OneD_RSS_AbstractRSSReader" data-uid="ZXing.OneD.RSS.AbstractRSSReader" class="text-break">Class AbstractRSSReader
+  </h1>
+  <div class="markdown level0 summary"><p>Superclass of <a class="xref" href="ZXing.OneD.OneDReader.html">OneDReader</a> implementations that read barcodes in the RSS family of formats.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="ZXing.OneD.OneDReader.html">OneDReader</a></div>
+    <div class="level2"><span class="xref">AbstractRSSReader</span></div>
+      <div class="level3"><a class="xref" href="ZXing.OneD.RSS.Expanded.RSSExpandedReader.html">RSSExpandedReader</a></div>
+      <div class="level3"><a class="xref" href="ZXing.OneD.RSS.RSS14Reader.html">RSS14Reader</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="ZXing.Reader.html">Reader</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="ZXing.OneD.OneDReader.html#ZXing_OneD_OneDReader_INTEGER_MATH_SHIFT">OneDReader.INTEGER_MATH_SHIFT</a>
+    </div>
+    <div>
+      <a class="xref" href="ZXing.OneD.OneDReader.html#ZXing_OneD_OneDReader_PATTERN_MATCH_RESULT_SCALE_FACTOR">OneDReader.PATTERN_MATCH_RESULT_SCALE_FACTOR</a>
+    </div>
+    <div>
+      <a class="xref" href="ZXing.OneD.OneDReader.html#ZXing_OneD_OneDReader_decode_ZXing_BinaryBitmap_">OneDReader.decode(BinaryBitmap)</a>
+    </div>
+    <div>
+      <a class="xref" href="ZXing.OneD.OneDReader.html#ZXing_OneD_OneDReader_decode_ZXing_BinaryBitmap_IDictionary_ZXing_DecodeHintType_System_Object__">OneDReader.decode(BinaryBitmap, IDictionary&lt;DecodeHintType, Object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="ZXing.OneD.OneDReader.html#ZXing_OneD_OneDReader_reset">OneDReader.reset()</a>
+    </div>
+    <div>
+      <a class="xref" href="ZXing.OneD.OneDReader.html#ZXing_OneD_OneDReader_doDecode_ZXing_BinaryBitmap_IDictionary_ZXing_DecodeHintType_System_Object__">OneDReader.doDecode(BinaryBitmap, IDictionary&lt;DecodeHintType, Object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="ZXing.OneD.OneDReader.html#ZXing_OneD_OneDReader_recordPattern_BitArray_System_Int32_System_Int32___">OneDReader.recordPattern(BitArray, Int32, Int32[])</a>
+    </div>
+    <div>
+      <a class="xref" href="ZXing.OneD.OneDReader.html#ZXing_OneD_OneDReader_recordPattern_BitArray_System_Int32_System_Int32___System_Int32_">OneDReader.recordPattern(BitArray, Int32, Int32[], Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="ZXing.OneD.OneDReader.html#ZXing_OneD_OneDReader_recordPatternInReverse_BitArray_System_Int32_System_Int32___">OneDReader.recordPatternInReverse(BitArray, Int32, Int32[])</a>
+    </div>
+    <div>
+      <a class="xref" href="ZXing.OneD.OneDReader.html#ZXing_OneD_OneDReader_patternMatchVariance_System_Int32___System_Int32___System_Int32_">OneDReader.patternMatchVariance(Int32[], Int32[], Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="ZXing.OneD.OneDReader.html#ZXing_OneD_OneDReader_decodeRow_System_Int32_BitArray_IDictionary_ZXing_DecodeHintType_System_Object__">OneDReader.decodeRow(Int32, BitArray, IDictionary&lt;DecodeHintType, Object&gt;)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ZXing.OneD.RSS.html">ZXing.OneD.RSS</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="ZXing_OneD_RSS_AbstractRSSReader_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class AbstractRSSReader : OneDReader, Reader</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="ZXing_OneD_RSS_AbstractRSSReader__ctor_" data-uid="ZXing.OneD.RSS.AbstractRSSReader.#ctor*"></a>
+  <h4 id="ZXing_OneD_RSS_AbstractRSSReader__ctor" data-uid="ZXing.OneD.RSS.AbstractRSSReader.#ctor">AbstractRSSReader()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="ZXing.OneD.RSS.AbstractRSSReader.html">AbstractRSSReader</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected AbstractRSSReader()</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="ZXing_OneD_RSS_AbstractRSSReader_count_" data-uid="ZXing.OneD.RSS.AbstractRSSReader.count*"></a>
+  <h4 id="ZXing_OneD_RSS_AbstractRSSReader_count_System_Int32___" data-uid="ZXing.OneD.RSS.AbstractRSSReader.count(System.Int32[])">count(Int32[])</h4>
+  <div class="markdown level1 summary"><p>Counts the specified array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static int count(int[] array)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>[]</td>
+        <td><span class="parametername">array</span></td>
+        <td><p>The array.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_OneD_RSS_AbstractRSSReader_decrement_" data-uid="ZXing.OneD.RSS.AbstractRSSReader.decrement*"></a>
+  <h4 id="ZXing_OneD_RSS_AbstractRSSReader_decrement_System_Int32___System_Single___" data-uid="ZXing.OneD.RSS.AbstractRSSReader.decrement(System.Int32[],System.Single[])">decrement(Int32[], Single[])</h4>
+  <div class="markdown level1 summary"><p>Decrements the specified array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static void decrement(int[] array, float[] errors)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>[]</td>
+        <td><span class="parametername">array</span></td>
+        <td><p>The array.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>[]</td>
+        <td><span class="parametername">errors</span></td>
+        <td><p>The errors.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_OneD_RSS_AbstractRSSReader_getDataCharacterCounters_" data-uid="ZXing.OneD.RSS.AbstractRSSReader.getDataCharacterCounters*"></a>
+  <h4 id="ZXing_OneD_RSS_AbstractRSSReader_getDataCharacterCounters" data-uid="ZXing.OneD.RSS.AbstractRSSReader.getDataCharacterCounters">getDataCharacterCounters()</h4>
+  <div class="markdown level1 summary"><p>Gets the data character counters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int[] getDataCharacterCounters()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_OneD_RSS_AbstractRSSReader_getDecodeFinderCounters_" data-uid="ZXing.OneD.RSS.AbstractRSSReader.getDecodeFinderCounters*"></a>
+  <h4 id="ZXing_OneD_RSS_AbstractRSSReader_getDecodeFinderCounters" data-uid="ZXing.OneD.RSS.AbstractRSSReader.getDecodeFinderCounters">getDecodeFinderCounters()</h4>
+  <div class="markdown level1 summary"><p>Gets the decode finder counters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int[] getDecodeFinderCounters()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_OneD_RSS_AbstractRSSReader_getEvenCounts_" data-uid="ZXing.OneD.RSS.AbstractRSSReader.getEvenCounts*"></a>
+  <h4 id="ZXing_OneD_RSS_AbstractRSSReader_getEvenCounts" data-uid="ZXing.OneD.RSS.AbstractRSSReader.getEvenCounts">getEvenCounts()</h4>
+  <div class="markdown level1 summary"><p>Gets the even counts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int[] getEvenCounts()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_OneD_RSS_AbstractRSSReader_getEvenRoundingErrors_" data-uid="ZXing.OneD.RSS.AbstractRSSReader.getEvenRoundingErrors*"></a>
+  <h4 id="ZXing_OneD_RSS_AbstractRSSReader_getEvenRoundingErrors" data-uid="ZXing.OneD.RSS.AbstractRSSReader.getEvenRoundingErrors">getEvenRoundingErrors()</h4>
+  <div class="markdown level1 summary"><p>Gets the even rounding errors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected float[] getEvenRoundingErrors()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_OneD_RSS_AbstractRSSReader_getOddCounts_" data-uid="ZXing.OneD.RSS.AbstractRSSReader.getOddCounts*"></a>
+  <h4 id="ZXing_OneD_RSS_AbstractRSSReader_getOddCounts" data-uid="ZXing.OneD.RSS.AbstractRSSReader.getOddCounts">getOddCounts()</h4>
+  <div class="markdown level1 summary"><p>Gets the odd counts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int[] getOddCounts()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_OneD_RSS_AbstractRSSReader_getOddRoundingErrors_" data-uid="ZXing.OneD.RSS.AbstractRSSReader.getOddRoundingErrors*"></a>
+  <h4 id="ZXing_OneD_RSS_AbstractRSSReader_getOddRoundingErrors" data-uid="ZXing.OneD.RSS.AbstractRSSReader.getOddRoundingErrors">getOddRoundingErrors()</h4>
+  <div class="markdown level1 summary"><p>Gets the odd rounding errors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected float[] getOddRoundingErrors()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_OneD_RSS_AbstractRSSReader_increment_" data-uid="ZXing.OneD.RSS.AbstractRSSReader.increment*"></a>
+  <h4 id="ZXing_OneD_RSS_AbstractRSSReader_increment_System_Int32___System_Single___" data-uid="ZXing.OneD.RSS.AbstractRSSReader.increment(System.Int32[],System.Single[])">increment(Int32[], Single[])</h4>
+  <div class="markdown level1 summary"><p>Increments the specified array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static void increment(int[] array, float[] errors)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>[]</td>
+        <td><span class="parametername">array</span></td>
+        <td><p>The array.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>[]</td>
+        <td><span class="parametername">errors</span></td>
+        <td><p>The errors.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_OneD_RSS_AbstractRSSReader_isFinderPattern_" data-uid="ZXing.OneD.RSS.AbstractRSSReader.isFinderPattern*"></a>
+  <h4 id="ZXing_OneD_RSS_AbstractRSSReader_isFinderPattern_System_Int32___" data-uid="ZXing.OneD.RSS.AbstractRSSReader.isFinderPattern(System.Int32[])">isFinderPattern(Int32[])</h4>
+  <div class="markdown level1 summary"><p>Determines whether [is finder pattern] [the specified counters].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static bool isFinderPattern(int[] counters)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>[]</td>
+        <td><span class="parametername">counters</span></td>
+        <td><p>The counters.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if [is finder pattern] [the specified counters]; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_OneD_RSS_AbstractRSSReader_parseFinderValue_" data-uid="ZXing.OneD.RSS.AbstractRSSReader.parseFinderValue*"></a>
+  <h4 id="ZXing_OneD_RSS_AbstractRSSReader_parseFinderValue_System_Int32___System_Int32_____System_Int32__" data-uid="ZXing.OneD.RSS.AbstractRSSReader.parseFinderValue(System.Int32[],System.Int32[][],System.Int32@)">parseFinderValue(Int32[], Int32[][], out Int32)</h4>
+  <div class="markdown level1 summary"><p>Parses the finder value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static bool parseFinderValue(int[] counters, int[][] finderPatterns, out int value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>[]</td>
+        <td><span class="parametername">counters</span></td>
+        <td><p>The counters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>[][]</td>
+        <td><span class="parametername">finderPatterns</span></td>
+        <td><p>The finder patterns.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="ZXing.Reader.html">Reader</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

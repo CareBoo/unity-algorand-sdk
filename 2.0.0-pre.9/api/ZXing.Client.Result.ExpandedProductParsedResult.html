@@ -1,0 +1,801 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ExpandedProductParsedResult
+   | Unity Algorand SDK </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ExpandedProductParsedResult
+   | Unity Algorand SDK ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="ZXing.Client.Result.ExpandedProductParsedResult">
+  
+  
+  <h1 id="ZXing_Client_Result_ExpandedProductParsedResult" data-uid="ZXing.Client.Result.ExpandedProductParsedResult" class="text-break">Class ExpandedProductParsedResult
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a parsed result that encodes extended product information as encoded by the RSS format, like weight, price, dates, etc.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="ZXing.Client.Result.ParsedResult.html">ParsedResult</a></div>
+    <div class="level2"><span class="xref">ExpandedProductParsedResult</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="ZXing.Client.Result.ParsedResult.html#ZXing_Client_Result_ParsedResult_displayResultValue">ParsedResult.displayResultValue</a>
+    </div>
+    <div>
+      <a class="xref" href="ZXing.Client.Result.ParsedResult.html#ZXing_Client_Result_ParsedResult_Type">ParsedResult.Type</a>
+    </div>
+    <div>
+      <a class="xref" href="ZXing.Client.Result.ParsedResult.html#ZXing_Client_Result_ParsedResult_ToString">ParsedResult.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="ZXing.Client.Result.ParsedResult.html#ZXing_Client_Result_ParsedResult_Equals_System_Object_">ParsedResult.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="ZXing.Client.Result.ParsedResult.html#ZXing_Client_Result_ParsedResult_maybeAppend_String_StringBuilder_">ParsedResult.maybeAppend(String, StringBuilder)</a>
+    </div>
+    <div>
+      <a class="xref" href="ZXing.Client.Result.ParsedResult.html#ZXing_Client_Result_ParsedResult_maybeAppend_String___StringBuilder_">ParsedResult.maybeAppend(String[], StringBuilder)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ZXing.Client.Result.html">ZXing.Client.Result</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="ZXing_Client_Result_ExpandedProductParsedResult_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ExpandedProductParsedResult : ParsedResult</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="ZXing_Client_Result_ExpandedProductParsedResult__ctor_" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.#ctor*"></a>
+  <h4 id="ZXing_Client_Result_ExpandedProductParsedResult__ctor_String_String_String_String_String_String_String_String_String_String_String_String_String_String_IDictionary_String_String__" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.#ctor(String,String,String,String,String,String,String,String,String,String,String,String,String,String,IDictionary{String,String})">ExpandedProductParsedResult(String, String, String, String, String, String, String, String, String, String, String, String, String, String, IDictionary&lt;String, String&gt;)</h4>
+  <div class="markdown level1 summary"><p>initializing constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExpandedProductParsedResult(String rawText, String productID, String sscc, String lotNumber, String productionDate, String packagingDate, String bestBeforeDate, String expirationDate, String weight, String weightType, String weightIncrement, String price, String priceIncrement, String priceCurrency, IDictionary&lt;String, String&gt; uncommonAIs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">rawText</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">productID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">sscc</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">lotNumber</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">productionDate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">packagingDate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">bestBeforeDate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">expirationDate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">weight</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">weightType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">weightIncrement</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">price</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">priceIncrement</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">priceCurrency</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">IDictionary</span>&lt;<span class="xref">String</span>, <span class="xref">String</span>&gt;</td>
+        <td><span class="parametername">uncommonAIs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="ZXing_Client_Result_ExpandedProductParsedResult_KILOGRAM" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.KILOGRAM">KILOGRAM</h4>
+  <div class="markdown level1 summary"><p>extension for kilogram weight type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static String KILOGRAM</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="ZXing_Client_Result_ExpandedProductParsedResult_POUND" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.POUND">POUND</h4>
+  <div class="markdown level1 summary"><p>extension for pounds weight type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static String POUND</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="ZXing_Client_Result_ExpandedProductParsedResult_BestBeforeDate_" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.BestBeforeDate*"></a>
+  <h4 id="ZXing_Client_Result_ExpandedProductParsedResult_BestBeforeDate" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.BestBeforeDate">BestBeforeDate</h4>
+  <div class="markdown level1 summary"><p>the best before date</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String BestBeforeDate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Client_Result_ExpandedProductParsedResult_DisplayResult_" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.DisplayResult*"></a>
+  <h4 id="ZXing_Client_Result_ExpandedProductParsedResult_DisplayResult" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.DisplayResult">DisplayResult</h4>
+  <div class="markdown level1 summary"><p>the display representation (raw text)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string DisplayResult { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="ZXing.Client.Result.ParsedResult.html#ZXing_Client_Result_ParsedResult_DisplayResult">ParsedResult.DisplayResult</a></div>
+  
+  
+  <a id="ZXing_Client_Result_ExpandedProductParsedResult_ExpirationDate_" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.ExpirationDate*"></a>
+  <h4 id="ZXing_Client_Result_ExpandedProductParsedResult_ExpirationDate" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.ExpirationDate">ExpirationDate</h4>
+  <div class="markdown level1 summary"><p>the expiration date</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String ExpirationDate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Client_Result_ExpandedProductParsedResult_LotNumber_" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.LotNumber*"></a>
+  <h4 id="ZXing_Client_Result_ExpandedProductParsedResult_LotNumber" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.LotNumber">LotNumber</h4>
+  <div class="markdown level1 summary"><p>the lot number</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String LotNumber { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Client_Result_ExpandedProductParsedResult_PackagingDate_" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.PackagingDate*"></a>
+  <h4 id="ZXing_Client_Result_ExpandedProductParsedResult_PackagingDate" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.PackagingDate">PackagingDate</h4>
+  <div class="markdown level1 summary"><p>the packaging date</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String PackagingDate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Client_Result_ExpandedProductParsedResult_Price_" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.Price*"></a>
+  <h4 id="ZXing_Client_Result_ExpandedProductParsedResult_Price" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.Price">Price</h4>
+  <div class="markdown level1 summary"><p>the price</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String Price { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Client_Result_ExpandedProductParsedResult_PriceCurrency_" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.PriceCurrency*"></a>
+  <h4 id="ZXing_Client_Result_ExpandedProductParsedResult_PriceCurrency" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.PriceCurrency">PriceCurrency</h4>
+  <div class="markdown level1 summary"><p>the price currency</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String PriceCurrency { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Client_Result_ExpandedProductParsedResult_PriceIncrement_" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.PriceIncrement*"></a>
+  <h4 id="ZXing_Client_Result_ExpandedProductParsedResult_PriceIncrement" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.PriceIncrement">PriceIncrement</h4>
+  <div class="markdown level1 summary"><p>the price increment</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String PriceIncrement { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Client_Result_ExpandedProductParsedResult_ProductID_" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.ProductID*"></a>
+  <h4 id="ZXing_Client_Result_ExpandedProductParsedResult_ProductID" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.ProductID">ProductID</h4>
+  <div class="markdown level1 summary"><p>the product id</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String ProductID { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Client_Result_ExpandedProductParsedResult_ProductionDate_" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.ProductionDate*"></a>
+  <h4 id="ZXing_Client_Result_ExpandedProductParsedResult_ProductionDate" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.ProductionDate">ProductionDate</h4>
+  <div class="markdown level1 summary"><p>the production date</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String ProductionDate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Client_Result_ExpandedProductParsedResult_RawText_" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.RawText*"></a>
+  <h4 id="ZXing_Client_Result_ExpandedProductParsedResult_RawText" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.RawText">RawText</h4>
+  <div class="markdown level1 summary"><p>the raw text</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String RawText { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Client_Result_ExpandedProductParsedResult_Sscc_" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.Sscc*"></a>
+  <h4 id="ZXing_Client_Result_ExpandedProductParsedResult_Sscc" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.Sscc">Sscc</h4>
+  <div class="markdown level1 summary"><p>the sscc</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String Sscc { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Client_Result_ExpandedProductParsedResult_UncommonAIs_" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.UncommonAIs*"></a>
+  <h4 id="ZXing_Client_Result_ExpandedProductParsedResult_UncommonAIs" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.UncommonAIs">UncommonAIs</h4>
+  <div class="markdown level1 summary"><p>the uncommon AIs</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;String, String&gt; UncommonAIs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IDictionary</span>&lt;<span class="xref">String</span>, <span class="xref">String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Client_Result_ExpandedProductParsedResult_Weight_" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.Weight*"></a>
+  <h4 id="ZXing_Client_Result_ExpandedProductParsedResult_Weight" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.Weight">Weight</h4>
+  <div class="markdown level1 summary"><p>the weight</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String Weight { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Client_Result_ExpandedProductParsedResult_WeightIncrement_" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.WeightIncrement*"></a>
+  <h4 id="ZXing_Client_Result_ExpandedProductParsedResult_WeightIncrement" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.WeightIncrement">WeightIncrement</h4>
+  <div class="markdown level1 summary"><p>the weight increment</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String WeightIncrement { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Client_Result_ExpandedProductParsedResult_WeightType_" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.WeightType*"></a>
+  <h4 id="ZXing_Client_Result_ExpandedProductParsedResult_WeightType" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.WeightType">WeightType</h4>
+  <div class="markdown level1 summary"><p>the weight type</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String WeightType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="ZXing_Client_Result_ExpandedProductParsedResult_Equals_" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.Equals*"></a>
+  <h4 id="ZXing_Client_Result_ExpandedProductParsedResult_Equals_Object_" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.Equals(Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(Object o)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Object</span></td>
+        <td><span class="parametername">o</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Client_Result_ExpandedProductParsedResult_GetHashCode_" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.GetHashCode*"></a>
+  <h4 id="ZXing_Client_Result_ExpandedProductParsedResult_GetHashCode" data-uid="ZXing.Client.Result.ExpandedProductParsedResult.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="ZXing.Client.Result.ParsedResult.html#ZXing_Client_Result_ParsedResult_GetHashCode">ParsedResult.GetHashCode()</a></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

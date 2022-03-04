@@ -1,0 +1,561 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DecodingOptions
+   | Unity Algorand SDK </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DecodingOptions
+   | Unity Algorand SDK ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="ZXing.Common.DecodingOptions">
+  
+  
+  <h1 id="ZXing_Common_DecodingOptions" data-uid="ZXing.Common.DecodingOptions" class="text-break">Class DecodingOptions
+  </h1>
+  <div class="markdown level0 summary"><p>Defines an container for encoder options</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">DecodingOptions</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ZXing.Common.html">ZXing.Common</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="ZXing_Common_DecodingOptions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DecodingOptions</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="ZXing_Common_DecodingOptions__ctor_" data-uid="ZXing.Common.DecodingOptions.#ctor*"></a>
+  <h4 id="ZXing_Common_DecodingOptions__ctor" data-uid="ZXing.Common.DecodingOptions.#ctor">DecodingOptions()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="ZXing.Common.DecodingOptions.html">DecodingOptions</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DecodingOptions()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="ZXing_Common_DecodingOptions_AllowedEANExtensions_" data-uid="ZXing.Common.DecodingOptions.AllowedEANExtensions*"></a>
+  <h4 id="ZXing_Common_DecodingOptions_AllowedEANExtensions" data-uid="ZXing.Common.DecodingOptions.AllowedEANExtensions">AllowedEANExtensions</h4>
+  <div class="markdown level1 summary"><p>Allowed extension lengths for EAN or UPC barcodes. Other formats will ignore this.
+Maps to an int[] of the allowed extension lengths, for example [2], [5], or [2, 5].
+If it is optional to have an extension, do not set this hint. If this is set,
+and a UPC or EAN barcode is found but an extension is not, then no result will be returned
+at all.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int[] AllowedEANExtensions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Common_DecodingOptions_AllowedLengths_" data-uid="ZXing.Common.DecodingOptions.AllowedLengths*"></a>
+  <h4 id="ZXing_Common_DecodingOptions_AllowedLengths" data-uid="ZXing.Common.DecodingOptions.AllowedLengths">AllowedLengths</h4>
+  <div class="markdown level1 summary"><p>Allowed lengths of encoded data -- reject anything else. Maps to an int[].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int[] AllowedLengths { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Common_DecodingOptions_AssumeCode39CheckDigit_" data-uid="ZXing.Common.DecodingOptions.AssumeCode39CheckDigit*"></a>
+  <h4 id="ZXing_Common_DecodingOptions_AssumeCode39CheckDigit" data-uid="ZXing.Common.DecodingOptions.AssumeCode39CheckDigit">AssumeCode39CheckDigit</h4>
+  <div class="markdown level1 summary"><p>Assume Code 39 codes employ a check digit. Maps to <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AssumeCode39CheckDigit { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if it should assume a Code 39 check digit; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Common_DecodingOptions_AssumeGS1_" data-uid="ZXing.Common.DecodingOptions.AssumeGS1*"></a>
+  <h4 id="ZXing_Common_DecodingOptions_AssumeGS1" data-uid="ZXing.Common.DecodingOptions.AssumeGS1">AssumeGS1</h4>
+  <div class="markdown level1 summary"><p>Assume the barcode is being processed as a GS1 barcode, and modify behavior as needed.
+For example this affects FNC1 handling for Code 128 (aka GS1-128).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AssumeGS1 { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if it should assume GS1; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Common_DecodingOptions_AssumeMSICheckDigit_" data-uid="ZXing.Common.DecodingOptions.AssumeMSICheckDigit*"></a>
+  <h4 id="ZXing_Common_DecodingOptions_AssumeMSICheckDigit" data-uid="ZXing.Common.DecodingOptions.AssumeMSICheckDigit">AssumeMSICheckDigit</h4>
+  <div class="markdown level1 summary"><p>Assume MSI codes employ a check digit. Maps to <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AssumeMSICheckDigit { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if it should assume a MSI check digit; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Common_DecodingOptions_CharacterSet_" data-uid="ZXing.Common.DecodingOptions.CharacterSet*"></a>
+  <h4 id="ZXing_Common_DecodingOptions_CharacterSet" data-uid="ZXing.Common.DecodingOptions.CharacterSet">CharacterSet</h4>
+  <div class="markdown level1 summary"><p>Specifies what character encoding to use when decoding, where applicable (type String)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CharacterSet { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The character set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Common_DecodingOptions_Hints_" data-uid="ZXing.Common.DecodingOptions.Hints*"></a>
+  <h4 id="ZXing_Common_DecodingOptions_Hints" data-uid="ZXing.Common.DecodingOptions.Hints">Hints</h4>
+  <div class="markdown level1 summary"><p>Gets the data container for all options</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;DecodeHintType, object&gt; Hints { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IDictionary</span>&lt;<a class="xref" href="ZXing.DecodeHintType.html">DecodeHintType</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Common_DecodingOptions_PossibleFormats_" data-uid="ZXing.Common.DecodingOptions.PossibleFormats*"></a>
+  <h4 id="ZXing_Common_DecodingOptions_PossibleFormats" data-uid="ZXing.Common.DecodingOptions.PossibleFormats">PossibleFormats</h4>
+  <div class="markdown level1 summary"><p>Image is known to be of one of a few possible formats.
+Maps to a {@link java.util.List} of {@link BarcodeFormat}s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;BarcodeFormat&gt; PossibleFormats { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IList</span>&lt;<a class="xref" href="ZXing.BarcodeFormat.html">BarcodeFormat</a>&gt;</td>
+        <td><p>The possible formats.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Common_DecodingOptions_PureBarcode_" data-uid="ZXing.Common.DecodingOptions.PureBarcode*"></a>
+  <h4 id="ZXing_Common_DecodingOptions_PureBarcode" data-uid="ZXing.Common.DecodingOptions.PureBarcode">PureBarcode</h4>
+  <div class="markdown level1 summary"><p>Image is a pure monochrome image of a barcode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PureBarcode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if monochrome image of a barcode; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Common_DecodingOptions_ReturnCodabarStartEnd_" data-uid="ZXing.Common.DecodingOptions.ReturnCodabarStartEnd*"></a>
+  <h4 id="ZXing_Common_DecodingOptions_ReturnCodabarStartEnd" data-uid="ZXing.Common.DecodingOptions.ReturnCodabarStartEnd">ReturnCodabarStartEnd</h4>
+  <div class="markdown level1 summary"><p>If true, return the start and end digits in a Codabar barcode instead of stripping them. They
+are alpha, whereas the rest are numeric. By default, they are stripped, but this causes them
+to not be. Doesn&apos;t matter what it maps to; use <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ReturnCodabarStartEnd { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Common_DecodingOptions_TryHarder_" data-uid="ZXing.Common.DecodingOptions.TryHarder*"></a>
+  <h4 id="ZXing_Common_DecodingOptions_TryHarder" data-uid="ZXing.Common.DecodingOptions.TryHarder">TryHarder</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a flag which cause a deeper look into the bitmap</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryHarder { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if [try harder]; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Common_DecodingOptions_TryInverted_" data-uid="ZXing.Common.DecodingOptions.TryInverted*"></a>
+  <h4 id="ZXing_Common_DecodingOptions_TryInverted" data-uid="ZXing.Common.DecodingOptions.TryInverted">TryInverted</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the image should be automatically inverted
+if no result is found in the original image.
+ATTENTION: Please be carefully because it slows down the decoding process if it is used</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryInverted { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if image should be inverted; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Common_DecodingOptions_UseCode39ExtendedMode_" data-uid="ZXing.Common.DecodingOptions.UseCode39ExtendedMode*"></a>
+  <h4 id="ZXing_Common_DecodingOptions_UseCode39ExtendedMode" data-uid="ZXing.Common.DecodingOptions.UseCode39ExtendedMode">UseCode39ExtendedMode</h4>
+  <div class="markdown level1 summary"><p>if Code39 could be detected try to use extended mode for full ASCII character set</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseCode39ExtendedMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_Common_DecodingOptions_UseCode39RelaxedExtendedMode_" data-uid="ZXing.Common.DecodingOptions.UseCode39RelaxedExtendedMode*"></a>
+  <h4 id="ZXing_Common_DecodingOptions_UseCode39RelaxedExtendedMode" data-uid="ZXing.Common.DecodingOptions.UseCode39RelaxedExtendedMode">UseCode39RelaxedExtendedMode</h4>
+  <div class="markdown level1 summary"><p>Don&apos;t fail if a Code39 is detected but can&apos;t be decoded in extended mode.
+Return the raw Code39 result instead. Maps to <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseCode39RelaxedExtendedMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="ZXing_Common_DecodingOptions_ValueChanged" data-uid="ZXing.Common.DecodingOptions.ValueChanged">ValueChanged</h4>
+  <div class="markdown level1 summary"><p>event is raised when a value is changed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;object, EventArgs&gt; ValueChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>, <span class="xref">EventArgs</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

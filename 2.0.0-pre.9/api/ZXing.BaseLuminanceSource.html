@@ -1,0 +1,740 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BaseLuminanceSource
+   | Unity Algorand SDK </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BaseLuminanceSource
+   | Unity Algorand SDK ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="ZXing.BaseLuminanceSource">
+  
+  
+  <h1 id="ZXing_BaseLuminanceSource" data-uid="ZXing.BaseLuminanceSource" class="text-break">Class BaseLuminanceSource
+  </h1>
+  <div class="markdown level0 summary"><p>The base class for luminance sources which supports 
+cropping and rotating based upon the luminance values.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="ZXing.LuminanceSource.html">LuminanceSource</a></div>
+    <div class="level2"><span class="xref">BaseLuminanceSource</span></div>
+      <div class="level3"><a class="xref" href="ZXing.Color32LuminanceSource.html">Color32LuminanceSource</a></div>
+      <div class="level3"><a class="xref" href="ZXing.PlanarYUVLuminanceSource.html">PlanarYUVLuminanceSource</a></div>
+      <div class="level3"><a class="xref" href="ZXing.RGBLuminanceSource.html">RGBLuminanceSource</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="ZXing.LuminanceSource.html#ZXing_LuminanceSource_Width">LuminanceSource.Width</a>
+    </div>
+    <div>
+      <a class="xref" href="ZXing.LuminanceSource.html#ZXing_LuminanceSource_Height">LuminanceSource.Height</a>
+    </div>
+    <div>
+      <a class="xref" href="ZXing.LuminanceSource.html#ZXing_LuminanceSource_ToString">LuminanceSource.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ZXing.html">ZXing</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="ZXing_BaseLuminanceSource_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class BaseLuminanceSource : LuminanceSource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="ZXing_BaseLuminanceSource__ctor_" data-uid="ZXing.BaseLuminanceSource.#ctor*"></a>
+  <h4 id="ZXing_BaseLuminanceSource__ctor_System_Byte___System_Int32_System_Int32_" data-uid="ZXing.BaseLuminanceSource.#ctor(System.Byte[],System.Int32,System.Int32)">BaseLuminanceSource(Byte[], Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="ZXing.BaseLuminanceSource.html">BaseLuminanceSource</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BaseLuminanceSource(byte[] luminanceArray, int width, int height)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="parametername">luminanceArray</span></td>
+        <td><p>The luminance array.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_BaseLuminanceSource__ctor_" data-uid="ZXing.BaseLuminanceSource.#ctor*"></a>
+  <h4 id="ZXing_BaseLuminanceSource__ctor_System_Int32_System_Int32_" data-uid="ZXing.BaseLuminanceSource.#ctor(System.Int32,System.Int32)">BaseLuminanceSource(Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="ZXing.BaseLuminanceSource.html">BaseLuminanceSource</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BaseLuminanceSource(int width, int height)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="ZXing_BaseLuminanceSource_BChannelWeight" data-uid="ZXing.BaseLuminanceSource.BChannelWeight">BChannelWeight</h4>
+  <div class="markdown level1 summary"><p>weight of the blue channel for calculating a gray scale image</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const int BChannelWeight = 7424</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="ZXing_BaseLuminanceSource_ChannelWeight" data-uid="ZXing.BaseLuminanceSource.ChannelWeight">ChannelWeight</h4>
+  <div class="markdown level1 summary"><p>numbers of bits which for right shifting</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const int ChannelWeight = 16</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="ZXing_BaseLuminanceSource_GChannelWeight" data-uid="ZXing.BaseLuminanceSource.GChannelWeight">GChannelWeight</h4>
+  <div class="markdown level1 summary"><p>weight of the green channel for calculating a gray scale image</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const int GChannelWeight = 38550</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="ZXing_BaseLuminanceSource_luminances" data-uid="ZXing.BaseLuminanceSource.luminances">luminances</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected byte[] luminances</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="ZXing_BaseLuminanceSource_RChannelWeight" data-uid="ZXing.BaseLuminanceSource.RChannelWeight">RChannelWeight</h4>
+  <div class="markdown level1 summary"><p>weight of the red channel for calculating a gray scale image</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected const int RChannelWeight = 19562</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="ZXing_BaseLuminanceSource_CropSupported_" data-uid="ZXing.BaseLuminanceSource.CropSupported*"></a>
+  <h4 id="ZXing_BaseLuminanceSource_CropSupported" data-uid="ZXing.BaseLuminanceSource.CropSupported">CropSupported</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool CropSupported { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Whether this subclass supports cropping.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="ZXing.LuminanceSource.html#ZXing_LuminanceSource_CropSupported">LuminanceSource.CropSupported</a></div>
+  
+  
+  <a id="ZXing_BaseLuminanceSource_InversionSupported_" data-uid="ZXing.BaseLuminanceSource.InversionSupported*"></a>
+  <h4 id="ZXing_BaseLuminanceSource_InversionSupported" data-uid="ZXing.BaseLuminanceSource.InversionSupported">InversionSupported</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool InversionSupported { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Whether this subclass supports invertion.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="ZXing.LuminanceSource.html#ZXing_LuminanceSource_InversionSupported">LuminanceSource.InversionSupported</a></div>
+  
+  
+  <a id="ZXing_BaseLuminanceSource_Matrix_" data-uid="ZXing.BaseLuminanceSource.Matrix*"></a>
+  <h4 id="ZXing_BaseLuminanceSource_Matrix" data-uid="ZXing.BaseLuminanceSource.Matrix">Matrix</h4>
+  <div class="markdown level1 summary"><p>gets the luminance matrix</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override byte[] Matrix { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="ZXing.LuminanceSource.html#ZXing_LuminanceSource_Matrix">LuminanceSource.Matrix</a></div>
+  
+  
+  <a id="ZXing_BaseLuminanceSource_RotateSupported_" data-uid="ZXing.BaseLuminanceSource.RotateSupported*"></a>
+  <h4 id="ZXing_BaseLuminanceSource_RotateSupported" data-uid="ZXing.BaseLuminanceSource.RotateSupported">RotateSupported</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool RotateSupported { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Whether this subclass supports counter-clockwise rotation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="ZXing.LuminanceSource.html#ZXing_LuminanceSource_RotateSupported">LuminanceSource.RotateSupported</a></div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="ZXing_BaseLuminanceSource_CreateLuminanceSource_" data-uid="ZXing.BaseLuminanceSource.CreateLuminanceSource*"></a>
+  <h4 id="ZXing_BaseLuminanceSource_CreateLuminanceSource_System_Byte___System_Int32_System_Int32_" data-uid="ZXing.BaseLuminanceSource.CreateLuminanceSource(System.Byte[],System.Int32,System.Int32)">CreateLuminanceSource(Byte[], Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Should create a new luminance source with the right class type.
+The method is used in methods crop and rotate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract LuminanceSource CreateLuminanceSource(byte[] newLuminances, int width, int height)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="parametername">newLuminances</span></td>
+        <td><p>The new luminances.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ZXing.LuminanceSource.html">LuminanceSource</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_BaseLuminanceSource_crop_" data-uid="ZXing.BaseLuminanceSource.crop*"></a>
+  <h4 id="ZXing_BaseLuminanceSource_crop_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="ZXing.BaseLuminanceSource.crop(System.Int32,System.Int32,System.Int32,System.Int32)">crop(Int32, Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Returns a new object with cropped image data. Implementations may keep a reference to the
+original data rather than a copy. Only callable if CropSupported is true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override LuminanceSource crop(int left, int top, int width, int height)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">left</span></td>
+        <td><p>The left coordinate, 0 &lt;= left &lt; Width.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">top</span></td>
+        <td><p>The top coordinate, 0 &lt;= top &lt;= Height.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width of the rectangle to crop.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height of the rectangle to crop.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ZXing.LuminanceSource.html">LuminanceSource</a></td>
+        <td><p>A cropped version of this object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="ZXing.LuminanceSource.html#ZXing_LuminanceSource_crop_System_Int32_System_Int32_System_Int32_System_Int32_">LuminanceSource.crop(Int32, Int32, Int32, Int32)</a></div>
+  
+  
+  <a id="ZXing_BaseLuminanceSource_getRow_" data-uid="ZXing.BaseLuminanceSource.getRow*"></a>
+  <h4 id="ZXing_BaseLuminanceSource_getRow_System_Int32_System_Byte___" data-uid="ZXing.BaseLuminanceSource.getRow(System.Int32,System.Byte[])">getRow(Int32, Byte[])</h4>
+  <div class="markdown level1 summary"><p>Fetches one row of luminance data from the underlying platform&apos;s bitmap. Values range from
+0 (black) to 255 (white). It is preferable for implementations of this method
+to only fetch this row rather than the whole image, since no 2D Readers may be installed and
+getMatrix() may never be called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override byte[] getRow(int y, byte[] row)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The row to fetch, 0 &lt;= y &lt; Height.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="parametername">row</span></td>
+        <td><p>An optional preallocated array. If null or too small, it will be ignored.
+Always use the returned object, and ignore the .length of the array.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><p>An array containing the luminance data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="ZXing.LuminanceSource.html#ZXing_LuminanceSource_getRow_System_Int32_System_Byte___">LuminanceSource.getRow(Int32, Byte[])</a></div>
+  
+  
+  <a id="ZXing_BaseLuminanceSource_invert_" data-uid="ZXing.BaseLuminanceSource.invert*"></a>
+  <h4 id="ZXing_BaseLuminanceSource_invert" data-uid="ZXing.BaseLuminanceSource.invert">invert()</h4>
+  <div class="markdown level1 summary"><p>Inverts the luminance values (newValue = 255 - oldValue)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override LuminanceSource invert()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ZXing.LuminanceSource.html">LuminanceSource</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="ZXing.LuminanceSource.html#ZXing_LuminanceSource_invert">LuminanceSource.invert()</a></div>
+  
+  
+  <a id="ZXing_BaseLuminanceSource_rotateCounterClockwise_" data-uid="ZXing.BaseLuminanceSource.rotateCounterClockwise*"></a>
+  <h4 id="ZXing_BaseLuminanceSource_rotateCounterClockwise" data-uid="ZXing.BaseLuminanceSource.rotateCounterClockwise">rotateCounterClockwise()</h4>
+  <div class="markdown level1 summary"><p>Returns a new object with rotated image data by 90 degrees counterclockwise.
+Only callable if {@link #isRotateSupported()} is true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override LuminanceSource rotateCounterClockwise()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ZXing.LuminanceSource.html">LuminanceSource</a></td>
+        <td><p>A rotated version of this object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="ZXing.LuminanceSource.html#ZXing_LuminanceSource_rotateCounterClockwise">LuminanceSource.rotateCounterClockwise()</a></div>
+  
+  
+  <a id="ZXing_BaseLuminanceSource_rotateCounterClockwise45_" data-uid="ZXing.BaseLuminanceSource.rotateCounterClockwise45*"></a>
+  <h4 id="ZXing_BaseLuminanceSource_rotateCounterClockwise45" data-uid="ZXing.BaseLuminanceSource.rotateCounterClockwise45">rotateCounterClockwise45()</h4>
+  <div class="markdown level1 summary"><p>TODO: not implemented yet</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override LuminanceSource rotateCounterClockwise45()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ZXing.LuminanceSource.html">LuminanceSource</a></td>
+        <td><p>A rotated version of this object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="ZXing.LuminanceSource.html#ZXing_LuminanceSource_rotateCounterClockwise45">LuminanceSource.rotateCounterClockwise45()</a></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

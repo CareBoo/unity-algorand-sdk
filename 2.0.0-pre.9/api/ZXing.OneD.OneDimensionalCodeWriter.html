@@ -1,0 +1,572 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class OneDimensionalCodeWriter
+   | Unity Algorand SDK </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class OneDimensionalCodeWriter
+   | Unity Algorand SDK ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="ZXing.OneD.OneDimensionalCodeWriter">
+  
+  
+  <h1 id="ZXing_OneD_OneDimensionalCodeWriter" data-uid="ZXing.OneD.OneDimensionalCodeWriter" class="text-break">Class OneDimensionalCodeWriter
+  </h1>
+  <div class="markdown level0 summary"><p><p>Encapsulates functionality and implementation that is common to one-dimensional barcodes.</p>
+<author>dsbnatut@gmail.com (Kazuki Nishiura)</author></p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">OneDimensionalCodeWriter</span></div>
+      <div class="level2"><a class="xref" href="ZXing.OneD.CodaBarWriter.html">CodaBarWriter</a></div>
+      <div class="level2"><a class="xref" href="ZXing.OneD.Code128Writer.html">Code128Writer</a></div>
+      <div class="level2"><a class="xref" href="ZXing.OneD.Code39Writer.html">Code39Writer</a></div>
+      <div class="level2"><a class="xref" href="ZXing.OneD.Code93Writer.html">Code93Writer</a></div>
+      <div class="level2"><a class="xref" href="ZXing.OneD.ITFWriter.html">ITFWriter</a></div>
+      <div class="level2"><a class="xref" href="ZXing.OneD.MSIWriter.html">MSIWriter</a></div>
+      <div class="level2"><a class="xref" href="ZXing.OneD.PlesseyWriter.html">PlesseyWriter</a></div>
+      <div class="level2"><a class="xref" href="ZXing.OneD.UPCEANWriter.html">UPCEANWriter</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="ZXing.Writer.html">Writer</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ZXing.OneD.html">ZXing.OneD</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="ZXing_OneD_OneDimensionalCodeWriter_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class OneDimensionalCodeWriter : Writer</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="ZXing_OneD_OneDimensionalCodeWriter_DefaultMargin_" data-uid="ZXing.OneD.OneDimensionalCodeWriter.DefaultMargin*"></a>
+  <h4 id="ZXing_OneD_OneDimensionalCodeWriter_DefaultMargin" data-uid="ZXing.OneD.OneDimensionalCodeWriter.DefaultMargin">DefaultMargin</h4>
+  <div class="markdown level1 summary"><p>Gets the default margin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual int DefaultMargin { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_OneD_OneDimensionalCodeWriter_SupportedWriteFormats_" data-uid="ZXing.OneD.OneDimensionalCodeWriter.SupportedWriteFormats*"></a>
+  <h4 id="ZXing_OneD_OneDimensionalCodeWriter_SupportedWriteFormats" data-uid="ZXing.OneD.OneDimensionalCodeWriter.SupportedWriteFormats">SupportedWriteFormats</h4>
+  <div class="markdown level1 summary"><p>returns supported formats</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract IList&lt;BarcodeFormat&gt; SupportedWriteFormats { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IList</span>&lt;<a class="xref" href="ZXing.BarcodeFormat.html">BarcodeFormat</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="ZXing_OneD_OneDimensionalCodeWriter_appendPattern_" data-uid="ZXing.OneD.OneDimensionalCodeWriter.appendPattern*"></a>
+  <h4 id="ZXing_OneD_OneDimensionalCodeWriter_appendPattern_System_Boolean___System_Int32_System_Int32___System_Boolean_" data-uid="ZXing.OneD.OneDimensionalCodeWriter.appendPattern(System.Boolean[],System.Int32,System.Int32[],System.Boolean)">appendPattern(Boolean[], Int32, Int32[], Boolean)</h4>
+  <div class="markdown level1 summary"><p>Appends the given pattern to the target array starting at pos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static int appendPattern(bool[] target, int pos, int[] pattern, bool startColor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>[]</td>
+        <td><span class="parametername">target</span></td>
+        <td><p>encode black/white pattern into this array</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">pos</span></td>
+        <td><p>position to start encoding at in <code>target</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>[]</td>
+        <td><span class="parametername">pattern</span></td>
+        <td><p>lengths of black/white runs to encode</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">startColor</span></td>
+        <td><p>starting color - false for white, true for black</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>the number of elements added to target.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_OneD_OneDimensionalCodeWriter_CalculateChecksumDigitModulo10_" data-uid="ZXing.OneD.OneDimensionalCodeWriter.CalculateChecksumDigitModulo10*"></a>
+  <h4 id="ZXing_OneD_OneDimensionalCodeWriter_CalculateChecksumDigitModulo10_String_" data-uid="ZXing.OneD.OneDimensionalCodeWriter.CalculateChecksumDigitModulo10(String)">CalculateChecksumDigitModulo10(String)</h4>
+  <div class="markdown level1 summary"><p>Calculates the checksum digit modulo10.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static String CalculateChecksumDigitModulo10(String contents)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">contents</span></td>
+        <td><p>The contents.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_OneD_OneDimensionalCodeWriter_checkNumeric_" data-uid="ZXing.OneD.OneDimensionalCodeWriter.checkNumeric*"></a>
+  <h4 id="ZXing_OneD_OneDimensionalCodeWriter_checkNumeric_String_" data-uid="ZXing.OneD.OneDimensionalCodeWriter.checkNumeric(String)">checkNumeric(String)</h4>
+  <div class="markdown level1 summary"><p>Throw ArgumentException if input contains characters other than digits 0-9.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static void checkNumeric(String contents)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">contents</span></td>
+        <td><p>string to check for numeric characters</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_OneD_OneDimensionalCodeWriter_encode_" data-uid="ZXing.OneD.OneDimensionalCodeWriter.encode*"></a>
+  <h4 id="ZXing_OneD_OneDimensionalCodeWriter_encode_String_" data-uid="ZXing.OneD.OneDimensionalCodeWriter.encode(String)">encode(String)</h4>
+  <div class="markdown level1 summary"><p>Encode the contents to boolean array expression of one-dimensional barcode.
+Start code and end code should be included in result, and side margins should not be included.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool[] encode(String contents)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">contents</span></td>
+        <td><p>barcode contents to encode</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>[]</td>
+        <td><p>a <code>bool[]</code> of horizontal pixels (false = white, true = black)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_OneD_OneDimensionalCodeWriter_encode_" data-uid="ZXing.OneD.OneDimensionalCodeWriter.encode*"></a>
+  <h4 id="ZXing_OneD_OneDimensionalCodeWriter_encode_String_IDictionary_ZXing_EncodeHintType_System_Object__" data-uid="ZXing.OneD.OneDimensionalCodeWriter.encode(String,IDictionary{ZXing.EncodeHintType,System.Object})">encode(String, IDictionary&lt;EncodeHintType, Object&gt;)</h4>
+  <div class="markdown level1 summary"><p>Can be overwritten if the encode requires to read the hints map. Otherwise it defaults to {@code encode}.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool[] encode(String contents, IDictionary&lt;EncodeHintType, object&gt; hints)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">contents</span></td>
+        <td><p>barcode contents to encode</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IDictionary</span>&lt;<a class="xref" href="ZXing.EncodeHintType.html">EncodeHintType</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;</td>
+        <td><span class="parametername">hints</span></td>
+        <td><p>encoding hints</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>[]</td>
+        <td><p>a <code>bool[]</code> of horizontal pixels (false = white, true = black)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_OneD_OneDimensionalCodeWriter_encode_" data-uid="ZXing.OneD.OneDimensionalCodeWriter.encode*"></a>
+  <h4 id="ZXing_OneD_OneDimensionalCodeWriter_encode_String_ZXing_BarcodeFormat_System_Int32_System_Int32_" data-uid="ZXing.OneD.OneDimensionalCodeWriter.encode(String,ZXing.BarcodeFormat,System.Int32,System.Int32)">encode(String, BarcodeFormat, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Encode a barcode using the default settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BitMatrix encode(String contents, BarcodeFormat format, int width, int height)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">contents</span></td>
+        <td><p>The contents to encode in the barcode</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ZXing.BarcodeFormat.html">BarcodeFormat</a></td>
+        <td><span class="parametername">format</span></td>
+        <td><p>The barcode format to generate</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The preferred width in pixels</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The preferred height in pixels</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BitMatrix</span></td>
+        <td><p>The generated barcode as a Matrix of unsigned bytes (0 == black, 255 == white)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="ZXing_OneD_OneDimensionalCodeWriter_encode_" data-uid="ZXing.OneD.OneDimensionalCodeWriter.encode*"></a>
+  <h4 id="ZXing_OneD_OneDimensionalCodeWriter_encode_String_ZXing_BarcodeFormat_System_Int32_System_Int32_IDictionary_ZXing_EncodeHintType_System_Object__" data-uid="ZXing.OneD.OneDimensionalCodeWriter.encode(String,ZXing.BarcodeFormat,System.Int32,System.Int32,IDictionary{ZXing.EncodeHintType,System.Object})">encode(String, BarcodeFormat, Int32, Int32, IDictionary&lt;EncodeHintType, Object&gt;)</h4>
+  <div class="markdown level1 summary"><p>Encode the contents following specified format.
+{@code width} and {@code height} are required size. This method may return bigger size
+{@code BitMatrix} when specified size is too small. The user can set both {@code width} and
+{@code height} to zero to get minimum size barcode. If negative value is set to {@code width}
+or {@code height}, {@code IllegalArgumentException} is thrown.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual BitMatrix encode(String contents, BarcodeFormat format, int width, int height, IDictionary&lt;EncodeHintType, object&gt; hints)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">String</span></td>
+        <td><span class="parametername">contents</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ZXing.BarcodeFormat.html">BarcodeFormat</a></td>
+        <td><span class="parametername">format</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">width</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">height</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">IDictionary</span>&lt;<a class="xref" href="ZXing.EncodeHintType.html">EncodeHintType</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;</td>
+        <td><span class="parametername">hints</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BitMatrix</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="ZXing.Writer.html">Writer</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
