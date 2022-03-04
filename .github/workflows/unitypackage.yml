@@ -1,13 +1,13 @@
-name: Create .unitypackage
+name: Create unitypackage
 
 on:
   release:
     types:
-      - created
+      - published
 
 jobs:
   build_unitypackage:
-    name: Build .unitypackage
+    name: Build unitypackage
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -23,23 +23,22 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: Unity.AlgoSdk/Library
-          key: Library-build_unitypackage-2021.2.13f1-Unity.AlgoSdk-StandaloneLinux64
+          key: Library-build_unitypackage-Unity.AlgoSdk-StandaloneLinux64
           restore-keys: |
-            Library-build_unitypackage-2021.2.13f1-Unity.AlgoSdk-
+            Library-build_unitypackage-Unity.AlgoSdk-
 
-      - name: Package .unitypackage
+      - name: Package unitypackage
         uses: game-ci/unity-builder@v2
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE_2020 }}
         with:
           targetPlatform: StandaloneLinux64
-          unityVersion: 2021.2.13f1
           projectPath: Unity.AlgoSdk
           buildMethod: UnityPackage.Build
           versioning: None
           allowDirtyBuild: true
 
-      - name: Move .unitypackage for artifacting
+      - name: Move unitypackage to dist folder
         run: |
           mkdir dist
           mv Unity.AlgoSdk/unity-algorand-sdk.unitypackage dist/unity-algorand-sdk-${{ steps.version.outputs.version }}.unitypackage
@@ -50,8 +49,9 @@ jobs:
           name: dist
           path: dist
 
-      - name: Add .unitypackage to Release
+      - name: Add unitypackage to Release
         uses: shogo82148/actions-upload-release-asset@v1
         with:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: dist/*.unitypackage
+          overwrite: true
