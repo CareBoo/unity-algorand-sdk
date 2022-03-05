@@ -1,9 +1,6 @@
 name: Unity Tests
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
     paths:
       - "**.cs"
