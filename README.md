@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="https://raw.githubusercontent.com/CareBoo/unity-algorand-sdk/main/Media/unity_algo_sdk_256.svg"/>
+<img src="Media/unity_algo_sdk_256.svg"/>
 
 Unity Algorand SDK
 
