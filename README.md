@@ -1,6 +1,23 @@
-# Unity Algorand SDK
+<h1 align="center">
+<img src="https://raw.githubusercontent.com/CareBoo/unity-algorand-sdk/main/Media/unity_algo_sdk_256.svg"/>
 
-[![Test Status](https://github.com/CareBoo/unity-algorand-sdk/actions/workflows/test.yaml/badge.svg)](https://github.com/CareBoo/unity-algorand-sdk/actions/workflows/test.yaml) [![openupm](https://img.shields.io/npm/v/com.careboo.unity-algorand-sdk?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.careboo.unity-algorand-sdk/) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+Unity Algorand SDK
+
+</h1>
+<p align="center">
+  <a href="LICENSE.md">
+    <img src="https://img.shields.io/github/license/CareBoo/unity-algorand-sdk"/>
+  </a>
+  <a href="https://github.com/CareBoo/unity-algorand-sdk/actions/workflows/test.yaml">
+    <img src="https://img.shields.io/github/workflow/status/careboo/unity-algorand-sdk/Unity%20Tests/main?label=tests"/>
+  </a>
+  <a href="https://www.npmjs.com/package/com.careboo.unity-algorand-sdk">
+    <img src="https://img.shields.io/npm/v/com.careboo.unity-algorand-sdk"/>
+  </a>
+  <a href="https://openupm.com/packages/com.careboo.unity-algorand-sdk/">
+    <img src="https://img.shields.io/npm/v/com.careboo.unity-algorand-sdk?label=openupm&registry_uri=https://package.openupm.com"/>
+  </a>
+</p>
 
 > [!Caution]
 > This package has not been audited and isn't suitable for production use.
@@ -18,11 +35,6 @@ and connect to any Algorand wallet supporting [WalletConnect](https://developer.
 | 2021.2        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ## Installation
-
-This SDK is provided as a UPM package in the following locations:
-
-- [Open UPM](https://openupm.com/packages/com.careboo.unity-algorand-sdk)
-- [NPM Registry](https://www.npmjs.com/package/com.careboo.unity-algorand-sdk)
 
 ### Open UPM
 
