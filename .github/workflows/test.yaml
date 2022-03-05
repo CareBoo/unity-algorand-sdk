@@ -49,7 +49,7 @@ jobs:
           restore-keys: |
             Library-${{ matrix.unityVersion }}-${{ matrix.targetPlatform }}-
             Library-${{ matrix.unityVersion }}-
-      - run: ./scripts/coverageAssemblyFilters.sh
+      - run: echo "::set-output name=result::+CareBoo.AlgoSdk*,-CareBoo.AlgoSdk*.Tests,-CareBoo.AlgoSdk*.Samples*"
         id: assemblyFilters
       - uses: game-ci/unity-test-runner@v2
         id: tests

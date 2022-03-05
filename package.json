@@ -28,6 +28,6 @@
     "url": "https://github.com/CareBoo"
   },
   "scripts": {
-    "version": "./scripts/setDocVersion.sh && git add package.json"
+    "version": "./scripts/updateVersionUrl.sh && git add package.json"
   }
 }
