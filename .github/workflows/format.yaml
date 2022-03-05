@@ -2,6 +2,8 @@ name: Format check
 
 on:
   pull_request:
+    paths:
+      - "**.cs"
 
 jobs:
   dotnet-format:
