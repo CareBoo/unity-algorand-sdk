@@ -87,9 +87,6 @@ jobs:
         with:
           lfs: true
 
-      - name: Rename README.md
-        run: mv README.md index.md
-
       - name: Build Docs
         uses: nikeee/docfx-action@v1.0.0
         with:
