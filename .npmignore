@@ -4,9 +4,9 @@
 .vscode/**
 dist/**
 Documentation~/**/*.meta
-Unity.AlgoSdk/**
-Media/**
+Samples~/**/*.meta
 scripts/**
+Unity.AlgoSdk/**
 .czrc
 .editorconfig
 .gitattributes

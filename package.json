@@ -27,6 +27,18 @@
     "name": "CareBoo",
     "url": "https://github.com/CareBoo"
   },
+  "samples": [
+    {
+      "displayName": "Your First Transaction",
+      "description": "Contains a scene for signing and submitting your first Algorand transaction.",
+      "path": "Samples~/YourFirstTransaction"
+    },
+    {
+      "displayName": "Wallet Connect",
+      "description": "Contains a scene that, when ran, will show a QR Code that can be scanned by any wallet supporting Wallet Connect for Algorand.",
+      "path": "Samples~/WalletConnect"
+    }
+  ],
   "scripts": {
     "version": "./scripts/updateVersionUrl.sh && git add package.json .docfx/docfx.json"
   }
