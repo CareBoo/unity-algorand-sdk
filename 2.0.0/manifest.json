@@ -2,11 +2,11 @@
   "sitemap": {
     "fileOptions": {
       "api/*": {
-        "baseUrl": "https://careboo.github.io/unity-algorand-sdk/2.0.0-pre.10/",
+        "baseUrl": "https://careboo.github.io/unity-algorand-sdk/2.0.0/",
         "changefreq": "weekly"
       }
     },
-    "baseUrl": "https://careboo.github.io/unity-algorand-sdk/2.0.0-pre.10/",
+    "baseUrl": "https://careboo.github.io/unity-algorand-sdk/2.0.0/",
     "changefreq": "monthly"
   },
   "homepages": [],
@@ -29,6 +29,28 @@
         ".html": {
           "relative_path": "changelog/CHANGELOG.html",
           "hash": "QG7D2byTpBzWoyOS6g3MPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../Documentation~/images/logo_256.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo_256.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../Documentation~/images/logo_256.png.meta",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo_256.png.meta"
         }
       },
       "is_incremental": false,
@@ -86,15 +108,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "../index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "KLjk18TyifZvavJOLom/1A=="
+          "hash": "nv3teKJP8aBBCuDC+amTRw=="
         }
       },
       "is_incremental": false,
@@ -4222,17 +4241,6 @@
       "output": {
         "resource": {
           "relative_path": "resources/favicon.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "resources/logo_256.svg",
-      "output": {
-        "resource": {
-          "relative_path": "resources/logo_256.svg"
         }
       },
       "is_incremental": false,
