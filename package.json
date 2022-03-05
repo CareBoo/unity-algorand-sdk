@@ -1,15 +1,33 @@
 {
-  "devDependencies": {
-    "commitizen": "^4.2.4",
-    "cz-conventional-changelog": "^3.0.1",
-    "husky": "^7.0.1"
+  "name": "com.careboo.unity-algorand-sdk",
+  "displayName": "Algorand SDK",
+  "version": "2.0.0-pre.11",
+  "unity": "2020.3",
+  "keywords": [
+    "algorand",
+    "tool",
+    "sdk",
+    "crypto",
+    "blockchain"
+  ],
+  "license": "MIT",
+  "description": "Integrate Algorand blockchain services into your game.\n\nWARNING: This package has not been audited and it should not be used in a production environment.",
+  "dependencies": {
+    "com.unity.collections": "1.1.0",
+    "com.cysharp.unitask": "2.3.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "github:CareBoo/unity-algorand-sdk",
+  "changelogUrl": "https://careboo.github.io/unity-algorand-sdk/2.0.0-pre.11/changelog",
+  "documentationUrl": "https://careboo.github.io/unity-algorand-sdk/2.0.0-pre.11",
+  "licensesUrl": "https://careboo.github.io/unity-algorand-sdk/2.0.0-pre.11/license",
+  "author": {
+    "name": "CareBoo",
+    "url": "https://github.com/CareBoo"
   },
   "scripts": {
-    "prepare": "husky install"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+    "version": "./scripts/updateVersionUrl.sh && git add package.json"
   }
 }

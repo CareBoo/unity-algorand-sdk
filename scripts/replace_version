@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-cd Packages
-
-find . -type f -name "package.json" -exec sed -i "s/__version__/$VERSION/g" {} +
-
-cd -

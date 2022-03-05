@@ -5,25 +5,31 @@ on:
     branches:
       - main
   pull_request:
+    paths:
+      - "**.cs"
+      - "**.dll"
+      - "Unity.AlgoSdk/Packages/packages-lock.json"
+      - "**/Plugins/**"
 
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE_2020 }}
 
 jobs:
   testAllModes:
-    name: Test ${{ matrix.targetPlatform }}
+    name: Test ${{ matrix.unityVersion}} ${{ matrix.targetPlatform }}
     runs-on: ubuntu-latest
 
     strategy:
       fail-fast: false
       matrix:
+        unityVersion: [2020.3.30f1, 2021.2.13f1]
         targetPlatform:
-          # - StandaloneOSX
-          # - StandaloneWindows64
-          - StandaloneLinux64
-          # - iOS
-          # - Android
-          # - WebGL
+          # - mac-mono
+          # - windows-mono
+          - linux-il2cpp
+          # - ios
+          # - android
+          # - webgl
 
     steps:
       - name: Checkout repository
@@ -38,37 +44,40 @@ jobs:
       - name: Cache Library
         uses: actions/cache@v2.1.1
         with:
-          path: Library
-          key: Library-${{ matrix.targetPlatform }}-${{ steps.get-date.outputs.date }}
+          path: Unity.AlgoSdk/Library
+          key: Library-${{ matrix.unityVersion }}-${{ matrix.targetPlatform }}-${{ steps.get-date.outputs.date }}
           restore-keys: |
-            Library-${{ matrix.targetPlatform }}-
-            Library-
-      - run: ./scripts/coverageAssemblyFilters
+            Library-${{ matrix.unityVersion }}-${{ matrix.targetPlatform }}-
+            Library-${{ matrix.unityVersion }}-
+      - run: echo "::set-output name=result::+CareBoo.AlgoSdk*,-CareBoo.AlgoSdk*.Tests,-CareBoo.AlgoSdk*.Samples*"
         id: assemblyFilters
       - uses: game-ci/unity-test-runner@v2
         id: tests
         with:
+          projectPath: ./Unity.AlgoSdk
           artifactsPath: TestResults
           customParameters: -batchMode -burst-disable-compilation -enableCodeCoverage -coverageOptions generateAdditionalMetrics;enableCyclomaticComplexity;assemblyFilters:${{ steps.assemblyFilters.outputs.result }}
           githubToken: ${{ secrets.GITHUB_TOKEN }}
-          useNetworkHost: true
+          useHostNetwork: true
+          customImage: unityci/editor:${{ matrix.unityVersion }}-${{ matrix.targetPlatform }}-0
+          checkName: Test Results ${{ matrix.unityVersion }} ${{ matrix.targetPlatform }}
       - name: Upload Test Results Artifacts
         uses: actions/upload-artifact@v1
         with:
-          name: Test results
+          name: Unity ${{ matrix.unityVersion }} ${{ matrix.targetPlatform }} Test Results
           path: ${{ steps.tests.outputs.artifactsPath }}
       - name: Upload Code Coverage Artifacts
         uses: actions/upload-artifact@v1
         with:
-          name: Code Coverage
-          path: ./CodeCoverage
+          name: Unity ${{ matrix.unityVersion }} ${{ matrix.targetPlatform }} Code Coverage
+          path: Unity.AlgoSdk/CodeCoverage
       - name: Upload PlayMode Test Coverage Report
         uses: codecov/codecov-action@v1
         with:
           flags: unittests
-          file: ./CodeCoverage/workspace-opencov/PlayMode/TestCoverageResults_0000.xml
+          file: Unity.AlgoSdk/CodeCoverage/workspace-opencov/PlayMode/TestCoverageResults_0000.xml
       - name: Upload EditMode Test Coverage Report
         uses: codecov/codecov-action@v1
         with:
           flags: unittests
-          file: ./CodeCoverage/workspace-opencov/EditMode/TestCoverageResults_0000.xml
+          file: Unity.AlgoSdk/CodeCoverage/workspace-opencov/EditMode/TestCoverageResults_0000.xml

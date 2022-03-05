@@ -1,0 +1,33 @@
+name: Format check
+
+on:
+  pull_request:
+
+jobs:
+  dotnet-format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Install Dotnet
+        uses: actions/setup-dotnet@v1
+
+      - name: Add Problem Matcher
+        uses: renanrcp/dotnet-format-problem-matcher@v.1.3.1
+
+      - name: Get Changed C# Files
+        uses: tj-actions/changed-files@v16
+        id: changed_csharp_files
+        with:
+          files: |
+            *.cs
+
+      - name: Run dotnet format
+        id: format
+        run: |
+          dotnet format whitespace . \
+          --folder \
+          --verify-no-changes \
+          --include ${{ steps.changed_csharp_files.outputs.all_changed_files }} \
+          --exclude Runtime/websocket-sharp Runtime/zxing.unity Unity.AlgoSdk

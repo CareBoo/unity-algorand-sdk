@@ -1,0 +1,15 @@
+apiRules:
+  - include:
+      uidRegex: ^AlgoSdk\b.*$
+      type: Namespace
+  - exclude:
+      uidRegex: ^System\.Object\..*$
+      type: Method
+  - exclude:
+      uidRegex: ^System\.ValueType\..*$
+      type: Method
+  - exclude:
+      uidRegex: ^(?!AlgoSdk\b).*$
+  - exclude:
+      hasAttribute:
+        uid: System.ObsoleteAttribute

@@ -1,24 +1,21 @@
 # Unity Algorand SDK
 
-[![Test Status](https://github.com/CareBoo/unity-algorand-sdk/actions/workflows/test.yaml/badge.svg)](https://github.com/CareBoo/unity-algorand-sdk/actions/workflows/test.yaml)
-
-[![openupm](https://img.shields.io/npm/v/com.careboo.unity-algorand-sdk?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.careboo.unity-algorand-sdk/)
-
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Test Status](https://github.com/CareBoo/unity-algorand-sdk/actions/workflows/test.yaml/badge.svg)](https://github.com/CareBoo/unity-algorand-sdk/actions/workflows/test.yaml) [![openupm](https://img.shields.io/npm/v/com.careboo.unity-algorand-sdk?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.careboo.unity-algorand-sdk/) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 > [!Caution]
 > This package has not been audited and isn't suitable for production use.
 
-Integrate Algorand blockchain services into your game.
+[Algorand](https://www.algorand.com/) is a Pure Proof-of-Stake blockchain overseen by the Algorand Foundation.
+This [Unity software](https://unity.com/) package allows you to create and sign transactions, use Algorand's
+[REST APIs](https://developer.algorand.org/docs/rest-apis/restendpoints/),
+and connect to any Algorand wallet supporting [WalletConnect](https://developer.algorand.org/docs/get-details/walletconnect/).
 
-Supported Build Targets:
+## Supported Targets
 
-- [x] Windows
-- [x] Mac OS
-- [x] Linux
-- [x] Android
-- [x] iOS
-- [x] WebGL
+| Unity Version | Windows            | Mac OS             | Linux              | Android            | iOS                | WebGL              |
+| ------------- | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
+| 2020.3        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| 2021.2        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ## Installation
 
@@ -26,7 +23,6 @@ This SDK is provided as a UPM package in the following locations:
 
 - [Open UPM](https://openupm.com/packages/com.careboo.unity-algorand-sdk)
 - [NPM Registry](https://www.npmjs.com/package/com.careboo.unity-algorand-sdk)
-- [GitHub Package Registry](https://github.com/CareBoo/unity-algorand-sdk/packages/894742)
 
 ### Open UPM
 
@@ -68,12 +64,17 @@ This SDK will soon be [available in the Unity Asset Store](https://u3d.as/2GBr).
 
 ## Getting Started
 
-The [Manual](https://careboo.github.io/unity-algorand-sdk/main/) is the best place to start.
-Check out the [Quickstart Guide](https://careboo.github.io/unity-algorand-sdk/main/manual/quickstart.html).
+### Documentation
+
+The [Quickstart Guide](Documentation~/quickstart.md) is the best place to start. You can view
+the documentation website for a specific version or branch at
+
+```
+https://careboo.github.io/unity-algorand-sdk/{version}/
+```
+
+e.g. https://careboo.github.io/unity-algorand-sdk/main/.
+
+### Demo
 
 There's a Demo game you can try out in the [demo branch](https://github.com/CareBoo/unity-algorand-sdk/tree/demo).
-
-> [!Note]
-> The documentation is generated per release branch and version. The documentation for a specific version/branch
-> can be found at `https://careboo.github.io/unity-algorand-sdk/{version}/`, e.g.
-> https://careboo.github.io/unity-algorand-sdk/1.0.0-pre.3/
