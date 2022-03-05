@@ -35,11 +35,6 @@
         "dest": "."
       },
       {
-        "src": "../Media",
-        "files": "*",
-        "dest": "media"
-      },
-      {
         "src": "manual",
         "files": ["toc.yml"],
         "dest": "manual"
@@ -85,7 +80,7 @@
     ],
     "resource": [
       {
-        "files": ["resources/**/**"]
+        "files": ["resources/**/*", "../Media/**/*"]
       }
     ],
     "sitemap": {
