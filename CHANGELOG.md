@@ -5,6 +5,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [2.0.0-pre.11](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.10...v2.0.0-pre.11) (2022-03-05)
+
+
+### Code Refactoring
+
+* move json, messagepack, and encoding logic into their own assemblies ([3d76a4b](https://github.com/CareBoo/unity-algorand-sdk/commit/3d76a4b551c0ca671216bb520c79a09482eca410))
+
+
+### BREAKING CHANGES
+
+* Json, MessagePack, and Encoding logic has been moved. If you were referencing them
+before you will have to target them in new assemblies now.
+
 # [2.0.0-pre.10](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.9...v2.0.0-pre.10) (2022-03-04)
 
 
