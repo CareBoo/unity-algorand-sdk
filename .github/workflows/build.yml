@@ -1,20 +1,17 @@
-name: Post Release
+name: Build
 
 on:
   release:
     types:
       - published
 
-  workflow_dispatch:
-
 jobs:
-  read_release:
-    name: Read Release
+  read_package:
+    name: Read Package
     runs-on: ubuntu-latest
     outputs:
       packageJson: ${{ steps.packageJson.outputs.packageJson }}
       version: ${{ steps.version.outputs.version }}
-      uploadUrl: ${{ github.event.release && github.event.release.upload_url || steps.uploadUrl.outputs.upload_url }}
     steps:
       - uses: actions/checkout@v2
 
@@ -33,15 +30,10 @@ jobs:
         id: version
         run: echo "::set-output name=version::${{ fromJson(steps.packageJson.outputs.packageJson).version }}"
 
-      - name: Get Release
-        id: uploadUrl
-        if: ${{ !(github.event.release) }}
-        uses: bruceadams/get-release@v1
-
   build_unitypackage:
     name: Build unitypackage
     runs-on: ubuntu-latest
-    needs: read_release
+    needs: read_package
     steps:
       - uses: actions/checkout@v2
         with:
@@ -68,7 +60,7 @@ jobs:
       - name: Move unitypackage to dist folder
         run: |
           mkdir dist
-          mv Unity.AlgoSdk/unity-algorand-sdk.unitypackage dist/unity-algorand-sdk-${{ needs.read_release.outputs.version }}.unitypackage
+          mv Unity.AlgoSdk/unity-algorand-sdk.unitypackage dist/unity-algorand-sdk-${{ needs.read_package.outputs.version }}.unitypackage
 
       - name: Upload dist
         uses: actions/upload-artifact@v2
@@ -79,14 +71,14 @@ jobs:
       - name: Add unitypackage to Release
         uses: shogo82148/actions-upload-release-asset@v1
         with:
-          upload_url: ${{ needs.read_release.outputs.uploadUrl }}
+          upload_url: ${{ github.event.release.upload_url }}
           asset_path: dist/*.unitypackage
           overwrite: true
 
   build_docs:
     name: Build Docs
     runs-on: ubuntu-latest
-    needs: read_release
+    needs: read_package
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -106,4 +98,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: _site
-          destination_dir: ${{ needs.read_release.outputs.version }}
+          destination_dir: ${{ needs.read_package.outputs.version }}
