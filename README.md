@@ -67,13 +67,11 @@ This SDK will soon be [available in the Unity Asset Store](https://u3d.as/2GBr).
 ### Documentation
 
 The [Quickstart Guide](Documentation~/quickstart.md) is the best place to start. You can view
-the documentation website for a specific version or branch at
+the documentation website for a specific version at
 
 ```
 https://careboo.github.io/unity-algorand-sdk/{version}/
 ```
-
-e.g. https://careboo.github.io/unity-algorand-sdk/main/.
 
 ### Demo
 
