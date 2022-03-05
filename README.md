@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src=".docfx/resources/logo_256.svg"/>
+<img src="Documentation~/images/logo_256.png"/>
 
 Unity Algorand SDK
 
