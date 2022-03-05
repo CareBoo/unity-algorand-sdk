@@ -108,18 +108,6 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "../index.md",
-      "output": {
-        ".html": {
-          "relative_path": "index.html",
-          "hash": "nv3teKJP8aBBCuDC+amTRw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "ManagedReference",
       "source_relative_path": "api/AlgoSdk.Account.yml",
       "output": {
@@ -4206,6 +4194,18 @@
         ".html": {
           "relative_path": "changelog/toc.html",
           "hash": "27p5b8aSHpNAlkSi+ICv6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "6w+019+vLms7An2BRKV1Ng=="
         }
       },
       "is_incremental": false,
