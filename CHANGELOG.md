@@ -5,6 +5,71 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [2.0.0](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.3.0...v2.0.0) (2022-03-05)
+
+
+### Bug Fixes
+
+* **qrcode:** replace zxing dll with its source code ([766c83e](https://github.com/CareBoo/unity-algorand-sdk/commit/766c83eae5ee0530b9bdd50aa7c337d8f5b64eb4)), closes [#84](https://github.com/CareBoo/unity-algorand-sdk/issues/84)
+* **walletconnect:** fix compile issue for unity 2020 ([e26836a](https://github.com/CareBoo/unity-algorand-sdk/commit/e26836a3265c04f9908d813080c8c7f915891aeb))
+* **walletconnect:** fix issue where new WalletConnect assembly was not compiling in Unity 2020.3 ([0a1ec26](https://github.com/CareBoo/unity-algorand-sdk/commit/0a1ec269d60e6a8d7cec50ea8496b9539b78916b))
+* **websocket:** regenerate guids in `CareBoo.AlgoSdk.WebSocket` assembly ([3cb3180](https://github.com/CareBoo/unity-algorand-sdk/commit/3cb31803ad00da8239fc077033931badbcea3676)), closes [#83](https://github.com/CareBoo/unity-algorand-sdk/issues/83)
+
+
+### Code Refactoring
+
+* **assemblies:** move libraries to their own assemblies to simplify things ([0b17ea1](https://github.com/CareBoo/unity-algorand-sdk/commit/0b17ea1758dd53960a82841c4ff3caa130ab2f09))
+* **collections:** move `Unity.Collections` extensions into their own assembly ([8d217fc](https://github.com/CareBoo/unity-algorand-sdk/commit/8d217fc9823d427e7b93fff2213a850c84d8ae4d))
+* move json, messagepack, and encoding logic into their own assemblies ([3d76a4b](https://github.com/CareBoo/unity-algorand-sdk/commit/3d76a4b551c0ca671216bb520c79a09482eca410))
+* **walletconnect:** move WalletConnect code to its own assembly ([e6668cd](https://github.com/CareBoo/unity-algorand-sdk/commit/e6668cd68b99f81fdd8afedfcae35141e70b2284))
+* **walletconnect:** remove unused enum `WalletConnectError` ([6df5079](https://github.com/CareBoo/unity-algorand-sdk/commit/6df5079fa71d57fbab6dd2bd9f4320758ff349a0))
+* **websocket:** change namespace `Netcode.Transports.WebSocket` -> `AlgoSdk.WebSocket` ([ddb1357](https://github.com/CareBoo/unity-algorand-sdk/commit/ddb1357acf39c14f47b940998bd51268d70bac41))
+* **websocket:** move websocket code to its own assembly definition ([8ff6738](https://github.com/CareBoo/unity-algorand-sdk/commit/8ff6738942b65fe25b27218b80f8cdc630a698d8))
+
+
+### Features
+
+* **accounts:** add `AccountInfo.EstimateMinBalance` ([51d471b](https://github.com/CareBoo/unity-algorand-sdk/commit/51d471bf2991fd7c406ff3dcbac140b8b8085f38))
+* **algod:** add overloads for `IAlgodClient.SendTransactions` that allow sending raw msgpack ([4befeeb](https://github.com/CareBoo/unity-algorand-sdk/commit/4befeebdb8f1bc635ed35344eaa8a2d6a762cae6))
+* **api:** add `statusCode` deserialization field to `ErrorResponseFormatter` ([3f69600](https://github.com/CareBoo/unity-algorand-sdk/commit/3f696004496166a1c767e8a3887a3294209ef2b9))
+* **api:** add support for `CancellationToken` and `IProgress<float>` ([6ca2f39](https://github.com/CareBoo/unity-algorand-sdk/commit/6ca2f395c072f97d5f32546feac0b8cec6c64ac9))
+* **dependencies:** upgrade unity collections to 1.1.0 ([88308be](https://github.com/CareBoo/unity-algorand-sdk/commit/88308be43efed0ab75c8db8942fad4d077fe4b66))
+* **lowlevel:** add `NativeArrayUtil.ConcatAll` ([10644db](https://github.com/CareBoo/unity-algorand-sdk/commit/10644db4c6e6a5256a3ffd2ea7a1441f0ac4499c))
+* **models:** add implicit operators for either value type in an either ([84cfbcf](https://github.com/CareBoo/unity-algorand-sdk/commit/84cfbcfc488b18a411d50d0c6792da1778703ec8))
+* **transaction:** reduce generic constraints related to `ITransaction` ([42dfe82](https://github.com/CareBoo/unity-algorand-sdk/commit/42dfe8207c98c0ddda420ff6be480e0d2c70409c))
+* **unitask:** upgrade UniTask to version 2.3.1 ([537d297](https://github.com/CareBoo/unity-algorand-sdk/commit/537d2974dc53c05972ce1ebde197e1ec80580be1))
+* **walletconnect:** add `HandshakeUrl` struct ([4238348](https://github.com/CareBoo/unity-algorand-sdk/commit/423834868759538190c6602d1dad1035b2a430a8))
+* **walletconnect:** add Algorand WalletConnect client ([#67](https://github.com/CareBoo/unity-algorand-sdk/issues/67)) ([3028858](https://github.com/CareBoo/unity-algorand-sdk/commit/3028858017859fd99a637c05fcd018f1d4c528ea)), closes [#65](https://github.com/CareBoo/unity-algorand-sdk/issues/65)
+* **walletconnect:** add QR Code Generator support ([#68](https://github.com/CareBoo/unity-algorand-sdk/issues/68)) ([1f84dcf](https://github.com/CareBoo/unity-algorand-sdk/commit/1f84dcf165fdb6c58989ff0cb2cf2ba1d02f5c3f)), closes [#51](https://github.com/CareBoo/unity-algorand-sdk/issues/51)
+* **walletconnect:** add WalletConnect support  ([#69](https://github.com/CareBoo/unity-algorand-sdk/issues/69)) ([c650b15](https://github.com/CareBoo/unity-algorand-sdk/commit/c650b15bba0cd97cf592da87c365934ad91bfa6b)), closes [#11](https://github.com/CareBoo/unity-algorand-sdk/issues/11)
+* **walletconnect:** add WebSocket support ([e0d2e6d](https://github.com/CareBoo/unity-algorand-sdk/commit/e0d2e6dcdd058ee7544b6f233e02461f87c12ffd)), closes [#59](https://github.com/CareBoo/unity-algorand-sdk/issues/59)
+
+
+### BREAKING CHANGES
+
+* Json, MessagePack, and Encoding logic has been moved. If you were referencing them
+before you will have to target them in new assemblies now.
+* **collections:** All of the extensions to `Unity.Collections` can now be found in
+`AlgoSdk.Collections` and the `CareBoo.AlgoSdk.Collections` assembly.
+* **websocket:** Namespace `Netcode.Transports.WebSocket` has been renamed to `AlgoSdk.WebSocket`.
+* **assemblies:** `zxing.net` and `websocket-sharp` are now in their own assemblies. You will need to
+update them if you were using the `ZXing` or `WebSocket` namespaces.
+* **walletconnect:** Renamed `QrCode` -> `QrCodeUtility`. Set `autoReference = false` in
+`CareBoo.AlgoSdk.QrCode` assembly. `AlgorandWalletConnectSession.StartConnection` now returns a
+`HandshakeUrl` instead of a `System.String`.
+* **walletconnect:** `WalletConnectError` has been removed since it's not being used by the API.
+* **qrcode:** QrCode logic has been moved from the `CareBoo.AlgoSdk.WalletConnect` assembly and
+into the `CareBoo.AlgoSdk.QrCode` assembly.
+* **websocket:** The GUID to the `CareBoo.AlgoSdk.WebSocket` assembly has changed. You may need to
+re-reference it.
+* **lowlevel:** Remove unused struct `NativeReferenceOfDisposable` from AlgoSdk.LowLevel
+* **walletconnect:** Code in the AlgoSdk.WalletConnect namespace are now in the
+CareBoo.AlgoSdk.WalletConnect assembly. Additionally, Hex has been moved to the AlgoSdk namespace
+and remains in the CareBoo.AlgoSdk assembly.
+* **websocket:** To reference Netcode.Transports.WebSocket classes, you need to now reference the
+CareBoo.WebSocket assembly
+* **api:** API is no longer returning `UniTask`, and is now returning `AlgoApiRequest.Sent`.
+
 # [2.0.0-pre.11](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.10...v2.0.0-pre.11) (2022-03-05)
 
 
