@@ -59,7 +59,7 @@ namespace AlgoSdk.WalletConnect
         /// Create a new session.
         /// </summary>
         /// <param name="clientMeta">The metadata of the Dapp.</param>
-        /// <param name="bridgeUrl">An optional wallet connect bridgeurl. e.g. https://bridge.walletconnect.org</param>
+        /// <param name="bridgeUrl">An optional WalletConnect bridgeurl. e.g. https://bridge.walletconnect.org</param>
         public AlgorandWalletConnectSession(ClientMeta clientMeta, string bridgeUrl = null)
         {
             session = InitSession(

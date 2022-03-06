@@ -34,8 +34,8 @@
       "path": "Samples~/YourFirstTransaction"
     },
     {
-      "displayName": "Wallet Connect",
-      "description": "Contains a scene that, when ran, will show a QR Code that can be scanned by any wallet supporting Wallet Connect for Algorand.",
+      "displayName": "WalletConnect",
+      "description": "Contains a scene that, when ran, will show a QR Code that can be scanned by any wallet supporting WalletConnect for Algorand.",
       "path": "Samples~/WalletConnect"
     }
   ],
