@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [2.1.0-pre.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0...v2.1.0-pre.1) (2022-03-06)
+
+
+### Features
+
+* **transaction:** add `PrivateKey.SignTransaction` method ([3d74336](https://github.com/CareBoo/unity-algorand-sdk/commit/3d74336aee240bb8357cea27b26c33cb537f3eca))
+
 # [2.0.0](https://github.com/CareBoo/unity-algorand-sdk/compare/v1.3.0...v2.0.0) (2022-03-05)
 
 
