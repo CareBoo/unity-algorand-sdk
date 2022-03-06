@@ -22,9 +22,8 @@ Unity Algorand SDK
 > [!Caution]
 > This package has not been audited and isn't suitable for production use.
 
-[Algorand](https://www.algorand.com/) is a Pure Proof-of-Stake blockchain overseen by the Algorand Foundation.
-This [Unity software](https://unity.com/) package allows you to create and sign transactions, use Algorand's
-[REST APIs](https://developer.algorand.org/docs/rest-apis/restendpoints/),
+This package serves as an SDK for [Algorand](https://www.algorand.com/), a Pure Proof-of-Stake blockchain overseen by the Algorand Foundation.
+Create and sign Algorand transactions, use Algorand's [REST APIs](https://developer.algorand.org/docs/rest-apis/restendpoints/),
 and connect to any Algorand wallet supporting [WalletConnect](https://developer.algorand.org/docs/get-details/walletconnect/).
 
 ## Supported Targets
