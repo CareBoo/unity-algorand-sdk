@@ -64,13 +64,13 @@ At any point during the session, the wallet may
 - Disconnect from the session.
 - Update information about the accounts or Wallet metadata.
 
-`AlgorandWalletConnectSession` provides events that can inform you when the Wallet does this:
+`AlgorandWalletConnectSession` provides events to handle these scenarios:
 
-|       Events        | Description                                                |
-| :-----------------: | :--------------------------------------------------------- |
-|  OnSessionConnect   | Called when the Wallet approves the connection             |
-|   OnSessionUpdate   | Called when the Wallet updates accounts or Wallet metadata |
-| OnSessionDisconnect | Called when the Wallet disconnects from the session        |
+|        Events         | Event Type                                 | Description                                                |
+| :-------------------: | :----------------------------------------- | :--------------------------------------------------------- |
+|  `OnSessionConnect`   | `UnityEvent<AlgorandWalletConnectSession>` | Called when the Wallet approves the connection             |
+|   `OnSessionUpdate`   | `UnityEvent<WalletConnectSessionData>`     | Called when the Wallet updates accounts or Wallet metadata |
+| `OnSessionDisconnect` | `UnityEvent<string>`                       | Called when the Wallet disconnects from the session        |
 
 ## Persisting Sessions
 
