@@ -1,2 +1,4 @@
+- [Algorand SDK](index.md)
 - [Quickstart](quickstart.md)
+- [Wallet Connect](wallet_connect.md)
 - [Troubleshooting](troubleshooting.md)
