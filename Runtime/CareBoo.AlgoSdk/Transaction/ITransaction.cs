@@ -98,6 +98,13 @@ namespace AlgoSdk
             return secretKey.Sign(msg);
         }
 
+        public static byte[] ToSignatureMessage<T>(this T txn)
+            where T : ITransaction
+        {
+            using var messageForSigning = txn.ToSignatureMessage(Allocator.Temp);
+            return messageForSigning.ToArray();
+        }
+
         public static NativeByteArray ToSignatureMessage<T>(
             this T txn,
             Allocator allocator
