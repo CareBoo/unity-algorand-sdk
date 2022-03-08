@@ -44,10 +44,7 @@ public class WalletConnectManager : MonoBehaviour
 
     async UniTaskVoid TestTransaction()
     {
-        var algod = new AlgodClient(
-            "https://testnet-algorand.api.purestake.io/ps2",
-            ("x-api-key", "jsxO0QnF9PcPETV0LQ2z2GgRSd18eoM9Q4VwrgLc")
-        );
+        var algod = new AlgodClient("https://node.testnet.algoexplorerapi.io");
         var (txnParamsErr, txnParams) = await algod.GetSuggestedParams();
         if (txnParamsErr)
         {
