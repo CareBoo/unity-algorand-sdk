@@ -20,7 +20,6 @@ namespace AlgoSdk
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.DryrunSource>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.DryrunSource>().Assign("app-index", null, (AlgoSdk.DryrunSource x) => x.AppIndex, (ref AlgoSdk.DryrunSource x, System.UInt64 value) => x.AppIndex = value, false).Assign("field-name", null, (AlgoSdk.DryrunSource x) => x.FieldName, (ref AlgoSdk.DryrunSource x, Unity.Collections.FixedString32Bytes value) => x.FieldName = value, false).Assign("source", null, (AlgoSdk.DryrunSource x) => x.Source, (ref AlgoSdk.DryrunSource x, System.String value) => x.Source = value, AlgoSdk.StringComparer.Instance, false).Assign("txn-index", null, (AlgoSdk.DryrunSource x) => x.TransactionIndex, (ref AlgoSdk.DryrunSource x, System.UInt64 value) => x.TransactionIndex = value, false));
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.DryrunSource[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.DryrunSource>.Instance);
             return true;
         }
     }

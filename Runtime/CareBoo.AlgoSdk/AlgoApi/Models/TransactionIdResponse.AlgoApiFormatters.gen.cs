@@ -20,7 +20,6 @@ namespace AlgoSdk
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.TransactionIdResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.TransactionIdResponse>().Assign("txId", "txId", (AlgoSdk.TransactionIdResponse x) => x.TxId, (ref AlgoSdk.TransactionIdResponse x, AlgoSdk.TransactionId value) => x.TxId = value, false));
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.TransactionIdResponse[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.TransactionIdResponse>.Instance);
             return true;
         }
     }

@@ -20,7 +20,6 @@ namespace AlgoSdk
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.TransactionId>(new AlgoSdk.Formatters.TransactionIdFormatter());
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.TransactionId[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.TransactionId>.Instance);
             return true;
         }
     }

@@ -20,7 +20,6 @@ namespace AlgoSdk.WalletConnect
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.WalletConnect.WalletTransaction>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.WalletConnect.WalletTransaction>().Assign("txn", null, (AlgoSdk.WalletConnect.WalletTransaction x) => x.Txn, (ref AlgoSdk.WalletConnect.WalletTransaction x, System.Byte[] value) => x.Txn = value, AlgoSdk.ArrayComparer<byte>.Instance, false).Assign("message", null, (AlgoSdk.WalletConnect.WalletTransaction x) => x.Message, (ref AlgoSdk.WalletConnect.WalletTransaction x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance, false).Assign("authAddr", null, (AlgoSdk.WalletConnect.WalletTransaction x) => x.AuthAddr, (ref AlgoSdk.WalletConnect.WalletTransaction x, AlgoSdk.Address value) => x.AuthAddr = value, false).Assign("msig", null, (AlgoSdk.WalletConnect.WalletTransaction x) => x.Msig, (ref AlgoSdk.WalletConnect.WalletTransaction x, AlgoSdk.WalletConnect.MultisigMetadata value) => x.Msig = value, false).Assign("signers", null, (AlgoSdk.WalletConnect.WalletTransaction x) => x.Signers, (ref AlgoSdk.WalletConnect.WalletTransaction x, AlgoSdk.Address[] value) => x.Signers = value, AlgoSdk.ArrayComparer<AlgoSdk.Address>.Instance, false));
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.WalletConnect.WalletTransaction[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.WalletConnect.WalletTransaction>.Instance);
             return true;
         }
     }

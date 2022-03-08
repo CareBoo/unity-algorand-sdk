@@ -20,7 +20,6 @@ namespace AlgoSdk
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.DeleteKeyRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.DeleteKeyRequest>().Assign("address", null, (AlgoSdk.DeleteKeyRequest x) => x.Address, (ref AlgoSdk.DeleteKeyRequest x, AlgoSdk.Address value) => x.Address = value, false).Assign("wallet_handle_token", null, (AlgoSdk.DeleteKeyRequest x) => x.WalletHandleToken, (ref AlgoSdk.DeleteKeyRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value, false).Assign("wallet_password", null, (AlgoSdk.DeleteKeyRequest x) => x.WalletPassword, (ref AlgoSdk.DeleteKeyRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletPassword = value, false));
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.DeleteKeyRequest[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.DeleteKeyRequest>.Instance);
             return true;
         }
     }

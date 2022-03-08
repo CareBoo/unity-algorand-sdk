@@ -20,7 +20,6 @@ namespace AlgoSdk
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.CompiledTeal>(new AlgoSdk.CompiledTealFormatter());
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.CompiledTeal[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.CompiledTeal>.Instance);
             return true;
         }
     }

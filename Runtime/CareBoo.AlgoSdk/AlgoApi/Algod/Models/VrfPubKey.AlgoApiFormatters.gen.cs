@@ -20,7 +20,6 @@ namespace AlgoSdk
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.VrfPubKey>(new AlgoSdk.Formatters.ByteArrayFormatter<AlgoSdk.VrfPubKey>());
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.VrfPubKey[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.VrfPubKey>.Instance);
             return true;
         }
     }

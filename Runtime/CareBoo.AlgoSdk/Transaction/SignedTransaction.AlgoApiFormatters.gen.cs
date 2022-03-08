@@ -20,7 +20,6 @@ namespace AlgoSdk
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.SignedTransaction>(new AlgoSdk.Formatters.SignedTransactionFormatter());
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.SignedTransaction[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.SignedTransaction>.Instance);
             return true;
         }
     }
@@ -37,7 +36,6 @@ namespace AlgoSdk
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Signed<TTransaction>>(new AlgoSdk.Formatters.SignedTransactionFormatter<TTransaction>());
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Signed<TTransaction>[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.Signed<TTransaction>>.Instance);
             return true;
         }
     }

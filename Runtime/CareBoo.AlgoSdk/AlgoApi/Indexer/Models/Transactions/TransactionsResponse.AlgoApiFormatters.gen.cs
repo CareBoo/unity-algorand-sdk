@@ -20,7 +20,6 @@ namespace AlgoSdk
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.TransactionsResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.TransactionsResponse>().Assign("current-round", null, (AlgoSdk.TransactionsResponse x) => x.CurrentRound, (ref AlgoSdk.TransactionsResponse x, System.UInt64 value) => x.CurrentRound = value, false).Assign("next-token", null, (AlgoSdk.TransactionsResponse x) => x.NextToken, (ref AlgoSdk.TransactionsResponse x, Unity.Collections.FixedString128Bytes value) => x.NextToken = value, false).Assign("transactions", null, (AlgoSdk.TransactionsResponse x) => x.Transactions, (ref AlgoSdk.TransactionsResponse x, AlgoSdk.Transaction[] value) => x.Transactions = value, AlgoSdk.ArrayComparer<AlgoSdk.Transaction>.Instance, false));
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.TransactionsResponse[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.TransactionsResponse>.Instance);
             return true;
         }
     }

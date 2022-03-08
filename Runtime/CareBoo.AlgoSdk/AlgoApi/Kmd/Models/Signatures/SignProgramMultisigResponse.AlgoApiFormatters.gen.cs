@@ -20,7 +20,6 @@ namespace AlgoSdk
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.SignProgramMultisigResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.SignProgramMultisigResponse>().Assign("multisig", null, (AlgoSdk.SignProgramMultisigResponse x) => x.SignedProgram, (ref AlgoSdk.SignProgramMultisigResponse x, System.Byte[] value) => x.SignedProgram = value, AlgoSdk.ArrayComparer<byte>.Instance, false).Assign("error", null, (AlgoSdk.SignProgramMultisigResponse x) => x.Error, (ref AlgoSdk.SignProgramMultisigResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value, false).Assign("message", null, (AlgoSdk.SignProgramMultisigResponse x) => x.Message, (ref AlgoSdk.SignProgramMultisigResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance, false));
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.SignProgramMultisigResponse[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.SignProgramMultisigResponse>.Instance);
             return true;
         }
     }

@@ -20,7 +20,6 @@ namespace AlgoSdk
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Sig>(new AlgoSdk.Formatters.ByteArrayFormatter<AlgoSdk.Sig>());
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Sig[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.Sig>.Instance);
             return true;
         }
     }

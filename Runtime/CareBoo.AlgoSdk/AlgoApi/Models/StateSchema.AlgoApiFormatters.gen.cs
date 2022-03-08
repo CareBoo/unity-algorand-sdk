@@ -20,7 +20,6 @@ namespace AlgoSdk
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.StateSchema>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.StateSchema>().Assign("num-byte-slice", "nbs", (AlgoSdk.StateSchema x) => x.NumByteSlices, (ref AlgoSdk.StateSchema x, System.UInt64 value) => x.NumByteSlices = value, false).Assign("num-uint", "nui", (AlgoSdk.StateSchema x) => x.NumUints, (ref AlgoSdk.StateSchema x, System.UInt64 value) => x.NumUints = value, false));
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.StateSchema[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.StateSchema>.Instance);
             return true;
         }
     }

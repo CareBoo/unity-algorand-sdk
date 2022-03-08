@@ -20,7 +20,6 @@ namespace AlgoSdk
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ApplicationLocalState>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.ApplicationLocalState>().Assign("closed-out-at-round", null, (AlgoSdk.ApplicationLocalState x) => x.ClosedOutAtRound, (ref AlgoSdk.ApplicationLocalState x, System.UInt64 value) => x.ClosedOutAtRound = value, false).Assign("deleted", null, (AlgoSdk.ApplicationLocalState x) => x.Deleted, (ref AlgoSdk.ApplicationLocalState x, AlgoSdk.Optional<System.Boolean> value) => x.Deleted = value, false).Assign("id", null, (AlgoSdk.ApplicationLocalState x) => x.Id, (ref AlgoSdk.ApplicationLocalState x, System.UInt64 value) => x.Id = value, false).Assign("key-value", null, (AlgoSdk.ApplicationLocalState x) => x.KeyValues, (ref AlgoSdk.ApplicationLocalState x, AlgoSdk.TealKeyValue[] value) => x.KeyValues = value, AlgoSdk.ArrayComparer<AlgoSdk.TealKeyValue>.Instance, false).Assign("opted-in-at-round", null, (AlgoSdk.ApplicationLocalState x) => x.OptedInAtRound, (ref AlgoSdk.ApplicationLocalState x, System.UInt64 value) => x.OptedInAtRound = value, false).Assign("schema", null, (AlgoSdk.ApplicationLocalState x) => x.Schema, (ref AlgoSdk.ApplicationLocalState x, AlgoSdk.StateSchema value) => x.Schema = value, false));
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ApplicationLocalState[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.ApplicationLocalState>.Instance);
             return true;
         }
     }

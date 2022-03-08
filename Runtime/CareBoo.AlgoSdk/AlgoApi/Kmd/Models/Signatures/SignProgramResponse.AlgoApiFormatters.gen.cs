@@ -20,7 +20,6 @@ namespace AlgoSdk
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.SignProgramResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.SignProgramResponse>().Assign("sig", null, (AlgoSdk.SignProgramResponse x) => x.SignedProgram, (ref AlgoSdk.SignProgramResponse x, AlgoSdk.Sig value) => x.SignedProgram = value, false).Assign("error", null, (AlgoSdk.SignProgramResponse x) => x.Error, (ref AlgoSdk.SignProgramResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value, false).Assign("message", null, (AlgoSdk.SignProgramResponse x) => x.Message, (ref AlgoSdk.SignProgramResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance, false));
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.SignProgramResponse[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.SignProgramResponse>.Instance);
             return true;
         }
     }

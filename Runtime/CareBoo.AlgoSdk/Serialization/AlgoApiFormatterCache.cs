@@ -21,14 +21,13 @@ namespace AlgoSdk
 
     public class AlgoApiFormatterLookup : Dictionary<Type, object>
     {
-
         public const string AddFormatterMethodName = nameof(Add);
 
         static AlgoApiFormatterLookup Instance;
 
         static AlgoApiFormatterLookup()
         {
-            Instance = new AlgoApiFormatterLookup();
+            Add<byte[]>(new ByteArrayFormatter());
             Add<ulong>(new UInt64Formatter());
             Add<uint>(new UInt32Formatter());
             Add<ushort>(new UInt16Formatter());
@@ -41,8 +40,6 @@ namespace AlgoSdk
             Add<string>(new StringFormatter());
             Add<Sha512_256_Hash>(ByteArrayFormatter<Sha512_256_Hash>.Instance);
             Add<Ed25519.PublicKey>(ByteArrayFormatter<Ed25519.PublicKey>.Instance);
-            Add<byte[]>(new ByteArrayFormatter());
-            Add<byte[][]>(ArrayFormatter<byte[]>.Instance);
             Add<FixedString32Bytes>(new FixedStringFormatter<FixedString32Bytes>());
             Add<FixedString64Bytes>(new FixedStringFormatter<FixedString64Bytes>());
             Add<FixedString128Bytes>(new FixedStringFormatter<FixedString128Bytes>());
@@ -57,9 +54,8 @@ namespace AlgoSdk
 
         public static void Add<T>(IAlgoApiFormatter<T> formatter)
         {
-            var type = typeof(T);
-            if (Instance.ContainsKey(type)) return;
-            Instance.Add(type, formatter);
+            if (!TryAdd<T>(formatter)) return;
+            TryAdd<T[]>(ArrayFormatter<T>.Instance);
         }
 
         public static IAlgoApiFormatter<T> Get<T>()
@@ -76,6 +72,14 @@ namespace AlgoSdk
                 return null;
 
             throw new InvalidCastException($"formatter '{formatter.GetType().FullName}' cannot be cast to '{typeof(IAlgoApiFormatter<T>).FullName}'...");
+        }
+
+        static bool TryAdd<T>(IAlgoApiFormatter<T> formatter)
+        {
+            var type = typeof(T);
+            if (Instance.ContainsKey(type)) return false;
+            Instance.Add(type, formatter);
+            return true;
         }
 
         static void EnsureStaticConstructor(Type type)

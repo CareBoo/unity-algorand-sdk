@@ -20,7 +20,6 @@ namespace AlgoSdk
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.CatchupMessage>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.CatchupMessage>().Assign("catchup-message", null, (AlgoSdk.CatchupMessage x) => x.Message, (ref AlgoSdk.CatchupMessage x, Unity.Collections.FixedString512Bytes value) => x.Message = value, false));
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.CatchupMessage[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.CatchupMessage>.Instance);
             return true;
         }
     }

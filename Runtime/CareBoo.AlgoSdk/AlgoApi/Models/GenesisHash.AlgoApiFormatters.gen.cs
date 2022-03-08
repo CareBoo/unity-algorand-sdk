@@ -20,7 +20,6 @@ namespace AlgoSdk
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.GenesisHash>(new AlgoSdk.Formatters.GenesisHashFormatter());
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.GenesisHash[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.GenesisHash>.Instance);
             return true;
         }
     }

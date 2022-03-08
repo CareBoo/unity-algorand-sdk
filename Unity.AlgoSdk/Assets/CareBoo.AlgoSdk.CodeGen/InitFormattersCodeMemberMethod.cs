@@ -44,9 +44,6 @@ namespace AlgoSdk.Editor.CodeGen
             {
                 return false;
             }
-            var arrayType = type.MakeArrayType();
-            var arrayExpression = new ArrayFormatterInstanceExpression(arrayType);
-            Statements.Add(new AddFormatterCodeMethodInvokeExpression(arrayType, arrayExpression));
             return true;
         }
     }
