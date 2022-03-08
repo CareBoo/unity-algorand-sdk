@@ -23,7 +23,7 @@ namespace AlgoSdk
     {
         public const string AddFormatterMethodName = nameof(Add);
 
-        static AlgoApiFormatterLookup Instance;
+        static AlgoApiFormatterLookup Instance = new AlgoApiFormatterLookup();
 
         static AlgoApiFormatterLookup()
         {
