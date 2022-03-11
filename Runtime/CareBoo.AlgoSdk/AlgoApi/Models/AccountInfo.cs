@@ -173,6 +173,16 @@ namespace AlgoSdk
         public FixedString32Bytes Status;
 
         /// <summary>
+        /// MicroAlgo balance required by the account.
+        /// </summary>
+        /// <remarks>
+        /// The requirement grows based on asset and application usage.
+        /// </remarks>
+        [AlgoApiField("min-balance", null)]
+        [Tooltip("Minimum balance of the account in MicroAlgos")]
+        public ulong MinBalance;
+
+        /// <summary>
         /// Estimate the minimum balance of the account in MicroAlgos.
         /// </summary>
         /// <remarks>
