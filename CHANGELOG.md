@@ -5,6 +5,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [2.1.0-pre.3](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0-pre.2...v2.1.0-pre.3) (2022-03-11)
+
+
+### Bug Fixes
+
+* **serialization:** fix initialization of AlgoApiFormatterLookup ([675b1d9](https://github.com/CareBoo/unity-algorand-sdk/commit/675b1d90a911629597a96127d9c62662eb48aba3))
+* **serialization:** set formatters to automatically add array formatter if it doesn't exist ([5692372](https://github.com/CareBoo/unity-algorand-sdk/commit/56923722974f710fa7583fcbf48dfa251f85dd7d))
+
+
+### Features
+
+* **api:** add min-balance field ([7f0873b](https://github.com/CareBoo/unity-algorand-sdk/commit/7f0873bbfddabf80b36e67cb85a916fb7270835a))
+* **walletconnect:** add supported wallets list ([50c6575](https://github.com/CareBoo/unity-algorand-sdk/commit/50c657580ccf5a1cb751d78cfb14201c4f8ac9fc))
+
 # [2.1.0-pre.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0-pre.1...v2.1.0-pre.2) (2022-03-06)
 
 

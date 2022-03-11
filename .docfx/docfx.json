@@ -4,8 +4,14 @@
       "src": [
         {
           "src": "..",
-          "files": ["Runtime/**/*.cs", "Editor/**/*.cs"],
-          "exclude": ["**/Libraries/**", "**/Plugins/**"]
+          "files": [
+            "Runtime/**/*.cs",
+            "Editor/**/*.cs"
+          ],
+          "exclude": [
+            "**/Libraries/**",
+            "**/Plugins/**"
+          ]
         }
       ],
       "filter": "filter.yml",
@@ -27,47 +33,69 @@
     },
     "content": [
       {
-        "files": ["toc.yml"]
+        "files": [
+          "toc.yml"
+        ]
       },
       {
         "src": "..",
-        "files": ["README.md", "../Documentation~/index.md"],
+        "files": [
+          "README.md",
+          "../Documentation~/index.md"
+        ],
         "dest": "."
       },
       {
         "src": "manual",
-        "files": ["toc.yml"],
+        "files": [
+          "toc.yml"
+        ],
         "dest": "manual"
       },
       {
         "src": "changelog",
-        "files": ["toc.yml"],
+        "files": [
+          "toc.yml"
+        ],
         "dest": "changelog"
       },
       {
         "src": "..",
-        "files": ["CHANGELOG.md"],
+        "files": [
+          "CHANGELOG.md"
+        ],
         "dest": "changelog"
       },
       {
         "src": "license",
-        "files": ["toc.yml"],
+        "files": [
+          "toc.yml"
+        ],
         "dest": "license"
       },
       {
         "src": "..",
-        "files": ["LICENSE.md", "Third Party Notices.md"],
+        "files": [
+          "LICENSE.md",
+          "Third Party Notices.md"
+        ],
         "dest": "license"
       },
       {
         "src": "api",
-        "files": ["*.yml"],
+        "files": [
+          "*.yml"
+        ],
         "dest": "api"
       },
       {
         "src": "../Documentation~",
-        "files": ["*.md"],
-        "exclude": ["TableOfContents.md"],
+        "files": [
+          "*.md"
+        ],
+        "exclude": [
+          "TableOfContents.md"
+        ],
         "dest": "manual"
       }
     ],
@@ -75,20 +103,26 @@
     "overwrite": [
       {
         "src": "..",
-        "files": ["*/CareBoo.AlgoSdk*/**/*.md"]
+        "files": [
+          "*/CareBoo.AlgoSdk*/**/*.md"
+        ]
       }
     ],
     "resource": [
       {
-        "files": ["resources/**/*"]
+        "files": [
+          "resources/**/*"
+        ]
       },
       {
         "src": "../Documentation~",
-        "files": ["images/**/*"]
+        "files": [
+          "images/**/*"
+        ]
       }
     ],
     "sitemap": {
-      "baseUrl": "https://careboo.github.io/unity-algorand-sdk/2.1.0-pre.2",
+      "baseUrl": "https://careboo.github.io/unity-algorand-sdk/2.1.0-pre.3",
       "changefreq": "monthly",
       "fileOptions": {
         "api/*": {
@@ -96,7 +130,11 @@
         }
       }
     },
-    "xref": ["https://normanderwan.github.io/UnityXrefMaps/xrefmap.yml"],
-    "xrefService": ["https://xref.docs.microsoft.com/query?uid={uid}"]
+    "xref": [
+      "https://normanderwan.github.io/UnityXrefMaps/xrefmap.yml"
+    ],
+    "xrefService": [
+      "https://xref.docs.microsoft.com/query?uid={uid}"
+    ]
   }
 }
