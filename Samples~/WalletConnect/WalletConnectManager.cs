@@ -1,3 +1,4 @@
+using System.Linq;
 using AlgoSdk;
 using AlgoSdk.WalletConnect;
 using Cysharp.Threading.Tasks;
@@ -10,13 +11,17 @@ public class WalletConnectManager : MonoBehaviour
 
     public string BridgeUrl;
 
-    string handshakeUrl;
+    string url;
 
     Texture2D qrCode;
+
+    bool launchApp;
 
     AlgorandWalletConnectSession session;
 
     TransactionStatus txnStatus;
+
+    AppEntry[] supportedWalletsForPlatform;
 
     void Start()
     {
@@ -29,20 +34,33 @@ public class WalletConnectManager : MonoBehaviour
         GUILayout.Label($"WalletConnect Connection Status: {status}");
         if (status == AlgorandWalletConnectSession.Status.RequestingConnection)
         {
-#if UNITY_IOS || UNITY_ANDROID
-            if (handshakeUrl)
+            if (launchApp && WalletRegistry.SupportedWalletsForCurrentPlatform.Length > 0)
             {
-                if (GUILayout.Button("Connect to Wallet"))
+                foreach (var wallet in WalletRegistry.SupportedWalletsForCurrentPlatform)
                 {
-                    UnityEngine.Application.OpenURL("algorand-" + handshakeUrl);
+                    if (GUILayout.Button($"Connect to {wallet.Name}"))
+                    {
+                        var scheme = UnityEngine.Application.isMobilePlatform
+                            ? wallet.Mobile.Native
+                            : wallet.Desktop.Native
+                            ;
+                        UnityEngine.Application.OpenURL(url.Replace("wc:", scheme));
+                    }
+                    if (GUILayout.Button("Show QR Code"))
+                    {
+                        launchApp = false;
+                    }
                 }
             }
-#else
-            if (qrCode)
+            else
             {
                 GUILayout.Button(qrCode, GUIStyle.none);
+                if (WalletRegistry.SupportedWalletsForCurrentPlatform.Length > 0
+                    && GUILayout.Button("Open Wallet App"))
+                {
+                    launchApp = true;
+                }
             }
-#endif
         }
 
         if (status == AlgorandWalletConnectSession.Status.Connected)
@@ -67,9 +85,9 @@ public class WalletConnectManager : MonoBehaviour
     async UniTaskVoid StartWalletConnect()
     {
         session = new AlgorandWalletConnectSession(DappMeta, BridgeUrl);
-        var url = await session.StartConnection();
-        handshakeUrl = url;
-        qrCode = url.ToQrCodeTexture();
+        var handshakeUrl = await session.StartConnection();
+        url = handshakeUrl.Url;
+        qrCode = handshakeUrl.ToQrCodeTexture();
         await session.WaitForConnectionApproval();
         Debug.Log($"accounts:\n{AlgoApiSerializer.SerializeJson(session.Accounts)}");
     }
