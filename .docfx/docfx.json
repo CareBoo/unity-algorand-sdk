@@ -105,7 +105,8 @@
     "resource": [
       {
         "files": [
-          "resources/**/*"
+          "resources/**/*",
+          "../Documentation~/images/**/*"
         ]
       }
     ],
