@@ -13,7 +13,6 @@ on:
 jobs:
   release:
     name: Release
-    id: release
     runs-on: ubuntu-latest
     outputs:
       published: ${{ steps.semantic.outputs.new_release_published }}
@@ -73,7 +72,7 @@ jobs:
           name: dist
           path: dist
 
-    build_docs:
+    buildDocs:
       name: Build Docs
       runs-on: ubuntu-latest
       needs: release
