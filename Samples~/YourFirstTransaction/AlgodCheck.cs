@@ -8,7 +8,7 @@ public class AlgodCheck : MonoBehaviour
 
     public void Start()
     {
-        algod = new AlgodClient(address: "testnet-algorand.api.purestake.io/ps2", token: "my-secret-key");
+        algod = new AlgodClient("testnet-algorand.api.purestake.io/ps2", ("X-API-Key", "my-secret-key"));
         CheckAlgodStatus().Forget();
         CheckBalance().Forget();
     }
@@ -29,9 +29,9 @@ public class AlgodCheck : MonoBehaviour
     public async UniTaskVoid CheckAlgodStatus()
     {
         var response = await algod.GetHealth();
-        if (response.Error.IsError)
+        if (response.Error)
         {
-            Debug.LogError(response.Error.Message);
+            Debug.LogError(response.Error);
         }
         else
         {
@@ -43,9 +43,9 @@ public class AlgodCheck : MonoBehaviour
     {
         var accountAddress = "FLWI6UNTQ6CXTKSHOC7QPHYD2L3JVLIPWKNR5FECHX46VOE3DMY24BJASY";
         var (error, accountInfo) = await algod.GetAccountInformation(accountAddress);
-        if (error.IsError)
+        if (error)
         {
-            Debug.LogError(error.Message);
+            Debug.LogError(error);
         }
         else
         {
@@ -62,9 +62,9 @@ public class AlgodCheck : MonoBehaviour
 
         // Get the suggested transaction params
         var (txnParamsError, txnParams) = await algod.GetSuggestedParams();
-        if (txnParamsError.IsError)
+        if (txnParamsError)
         {
-            Debug.LogError(txnParamsError.Message);
+            Debug.LogError(txnParamsError);
             return;
         }
 
@@ -79,9 +79,9 @@ public class AlgodCheck : MonoBehaviour
 
         // Send the transaction
         var (sendTxnError, txid) = await algod.SendTransaction(signedTxn);
-        if (sendTxnError.IsError)
+        if (sendTxnError)
         {
-            Debug.LogError(sendTxnError.Message);
+            Debug.LogError(sendTxnError);
             return;
         }
 
@@ -91,9 +91,9 @@ public class AlgodCheck : MonoBehaviour
         while (pending.ConfirmedRound == 0)
         {
             (error, pending) = await algod.GetPendingTransaction(txid);
-            if (error.IsError)
+            if (error)
             {
-                Debug.LogError(error.Message);
+                Debug.LogError(error);
                 return;
             }
             await UniTask.Delay(1000);
