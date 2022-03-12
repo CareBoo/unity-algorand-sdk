@@ -20,8 +20,7 @@ Save your address and passphrase in a separate place.
 > Never share your private key or mnemonic. Production environments require stringent private key management.
 > For more information on key management in community Wallets, click
 > [here](https://developer.algorand.org/ecosystem-projects/#wallets).
-> For the [Algorand open source wallet](https://developer.algorand.org/articles/algorand-wallet-now-open-source/),
-> click [here](https://github.com/algorand/algorand-wallet).
+> See [WalletConnect](walletconnect.md) for instructions on how to connect to a mobile Wallet.
 
 ## Fund the Account
 
@@ -32,10 +31,11 @@ Before sending transactions to the Algorand network, the account must be funded 
 > [!Note]
 > Prerequisites:
 >
-> - [Docker Compose](https://docs.docker.com/compose/install/)
-> - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+> - [Install Docker Compose](https://docs.docker.com/compose/install/)
+> - [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-The easiest way to access a node in development is via the Algorand Sandbox.
+The easiest way to access a node in development is via the Algorand Sandbox. Alternatively, [AlgoExplorer](https://testnet.algoexplorer.io/)
+provides [`algod`](https://testnet.algoexplorer.io/api-dev/v2) and [`indexer`](https://testnet.algoexplorer.io/api-dev/indexer-v2) nodes with limited features.
 
 ```bash
 > git clone https://github.com/algorand/sandbox.git
@@ -97,7 +97,7 @@ then you should see an error message in the console.
 > ```csharp
 > algod = new AlgodClient(
 >    "https://testnet-algorand.api.purestake.io/ps2",
->    ("x-api-key", "my-super-secret-api-key")
+>    ("X-API-Key", "my-super-secret-api-key")
 > );
 > ```
 
@@ -111,9 +111,9 @@ public async UniTaskVoid CheckBalance()
 {
     var accountAddress = "FLWI6UNTQ6CXTKSHOC7QPHYD2L3JVLIPWKNR5FECHX46VOE3DMY24BJASY";
     var (error, accountInfo) = await algod.GetAccountInformation(accountAddress);
-    if (error.IsError)
+    if (error)
     {
-        Debug.LogError(error.Message);
+        Debug.LogError(error);
     }
     else
     {
@@ -127,7 +127,6 @@ Then call it in your `Start()` method.
 ```csharp
 public void Start()
 {
-    // [...]
     CheckBalance().Forget();
 }
 ```
@@ -156,9 +155,9 @@ public async UniTaskVoid MakePayment(PrivateKey privateKey, Address receiver, ul
 
     // Get the suggested transaction params
     var (txnParamsError, txnParams) = await algod.GetSuggestedParams();
-    if (txnParamsError.IsError)
+    if (txnParamsError)
     {
-        Debug.LogError(txnParamsError.Message);
+        Debug.LogError(txnParamsError);
         return;
     }
 
@@ -173,9 +172,9 @@ public async UniTaskVoid MakePayment(PrivateKey privateKey, Address receiver, ul
 
     // Send the transaction
     var (sendTxnError, txid) = await algod.SendTransaction(signedTxn);
-    if (sendTxnError.IsError)
+    if (sendTxnError)
     {
-        Debug.LogError(sendTxnError.Message);
+        Debug.LogError(sendTxnError);
         return;
     }
 
@@ -185,9 +184,9 @@ public async UniTaskVoid MakePayment(PrivateKey privateKey, Address receiver, ul
     while (pending.ConfirmedRound == 0)
     {
         (error, pending) = await algod.GetPendingTransaction(txid);
-        if (error.IsError)
+        if (error)
         {
-            Debug.LogError(error.Message);
+            Debug.LogError(error);
             return;
         }
         await UniTask.Delay(1000);
@@ -257,9 +256,9 @@ public class AlgodCheck : MonoBehaviour
     public async UniTaskVoid CheckAlgodStatus()
     {
         var response = await algod.GetHealth();
-        if (response.Error.IsError)
+        if (response.Error)
         {
-            Debug.LogError(response.Error.Message);
+            Debug.LogError(response.Error);
         }
         else
         {
@@ -271,9 +270,9 @@ public class AlgodCheck : MonoBehaviour
     {
         var accountAddress = "FLWI6UNTQ6CXTKSHOC7QPHYD2L3JVLIPWKNR5FECHX46VOE3DMY24BJASY";
         var (error, accountInfo) = await algod.GetAccountInformation(accountAddress);
-        if (error.IsError)
+        if (error)
         {
-            Debug.LogError(error.Message);
+            Debug.LogError(error);
         }
         else
         {
@@ -290,9 +289,9 @@ public class AlgodCheck : MonoBehaviour
 
         // Get the suggested transaction params
         var (txnParamsError, txnParams) = await algod.GetSuggestedParams();
-        if (txnParamsError.IsError)
+        if (txnParamsError)
         {
-            Debug.LogError(txnParamsError.Message);
+            Debug.LogError(txnParamsError);
             return;
         }
 
@@ -307,9 +306,9 @@ public class AlgodCheck : MonoBehaviour
 
         // Send the transaction
         var (sendTxnError, txid) = await algod.SendTransaction(signedTxn);
-        if (sendTxnError.IsError)
+        if (sendTxnError)
         {
-            Debug.LogError(sendTxnError.Message);
+            Debug.LogError(sendTxnError);
             return;
         }
 
@@ -319,9 +318,9 @@ public class AlgodCheck : MonoBehaviour
         while (pending.ConfirmedRound == 0)
         {
             (error, pending) = await algod.GetPendingTransaction(txid);
-            if (error.IsError)
+            if (error)
             {
-                Debug.LogError(error.Message);
+                Debug.LogError(error);
                 return;
             }
             await UniTask.Delay(1000);
