@@ -33,17 +33,7 @@
     },
     "content": [
       {
-        "files": [
-          "toc.yml"
-        ]
-      },
-      {
-        "src": "..",
-        "files": [
-          "README.md",
-          "../Documentation~/index.md"
-        ],
-        "dest": "."
+        "files": ["toc.yml", "index.md", "../README.md"]
       },
       {
         "src": "manual",
@@ -110,6 +100,7 @@
     ],
     "resource": [
       {
+<<<<<<< HEAD
         "files": [
           "resources/**/*"
         ]
@@ -119,6 +110,9 @@
         "files": [
           "images/**/*"
         ]
+=======
+        "files": ["resources/**/*"]
+>>>>>>> 75eca8f8 (docs: fix index not rendering properly)
       }
     ],
     "sitemap": {
