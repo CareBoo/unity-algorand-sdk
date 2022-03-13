@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace AlgoSdk.WalletConnect
@@ -5,7 +6,8 @@ namespace AlgoSdk.WalletConnect
     /// <summary>
     /// Contains information about an app that supports WalletConnect
     /// </summary>
-    public struct AppEntry
+    [Serializable]
+    public class AppEntry
     {
         public string Id;
         public string Name;
@@ -18,6 +20,7 @@ namespace AlgoSdk.WalletConnect
         public AppLinkingScheme Desktop;
         public AppMetadata Metadata;
 
+        [Serializable]
         public struct ImageUrls
         {
             public string Small;
@@ -25,6 +28,7 @@ namespace AlgoSdk.WalletConnect
             public string Large;
         }
 
+        [Serializable]
         public struct AppUrls
         {
             public string Browser;
@@ -35,12 +39,14 @@ namespace AlgoSdk.WalletConnect
             public string Linux;
         }
 
+        [Serializable]
         public struct AppLinkingScheme
         {
             public string Native;
             public string Universal;
         }
 
+        [Serializable]
         public struct AppMetadata
         {
             public string ShortName;

@@ -21,8 +21,6 @@ public class WalletConnectManager : MonoBehaviour
 
     TransactionStatus txnStatus;
 
-    AppEntry[] supportedWalletsForPlatform;
-
     void Start()
     {
         StartWalletConnect().Forget();
@@ -36,20 +34,14 @@ public class WalletConnectManager : MonoBehaviour
         {
             if (launchApp && WalletRegistry.SupportedWalletsForCurrentPlatform.Length > 0)
             {
-                foreach (var wallet in WalletRegistry.SupportedWalletsForCurrentPlatform)
+                var wallet = WalletRegistry.SupportedWalletsForCurrentPlatform[0];
+                if (GUILayout.Button($"Connect to {wallet.Name}"))
                 {
-                    if (GUILayout.Button($"Connect to {wallet.Name}"))
-                    {
-                        var scheme = UnityEngine.Application.isMobilePlatform
-                            ? wallet.Mobile.Native
-                            : wallet.Desktop.Native
-                            ;
-                        UnityEngine.Application.OpenURL(url.Replace("wc:", scheme));
-                    }
-                    if (GUILayout.Button("Show QR Code"))
-                    {
-                        launchApp = false;
-                    }
+                    UnityEngine.Application.OpenURL(url);
+                }
+                if (GUILayout.Button("Show QR Code"))
+                {
+                    launchApp = false;
                 }
             }
             else
@@ -116,6 +108,9 @@ public class WalletConnectManager : MonoBehaviour
             Message = "This is a test"
         };
 
+        var signingTransactions = session.SignTransactions(new[] { walletTxn });
+        if (launchApp)
+            UnityEngine.Application.OpenURL(session.DappMeta.Url.Replace("https://", "algorand://"));
         var (err, signedTxns) = await session.SignTransactions(new[] { walletTxn });
         if (err)
         {

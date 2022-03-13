@@ -6,40 +6,6 @@ namespace AlgoSdk.WalletConnect
 {
     public static class WalletRegistry
     {
-        public static readonly AppEntry[] SupportedWallets = new[]
-        {
-            PeraWallet,
-        };
-
-        public static readonly AppEntry[] SupportedWalletsForCurrentPlatform =
-#if UNITY_ANDROID
-            WalletRegistry.SupportedWallets
-                .Where(wallet => !string.IsNullOrEmpty(wallet.App.Android))
-                .ToArray();
-#elif UNITY_IPHONE
-            WalletRegistry.SupportedWallets
-                .Where(wallet => !string.IsNullOrEmpty(wallet.App.Ios))
-                .ToArray();
-#elif UNITY_STANDALONE_OSX
-            WalletRegistry.SupportedWallets
-                .Where(wallet => !string.IsNullOrEmpty(wallet.App.Mac))
-                .ToArray();
-#elif UNITY_STANDALONE_WIN
-            WalletRegistry.SupportedWallets
-                .Where(wallet => !string.IsNullOrEmpty(wallet.App.Windows))
-                .ToArray();
-#elif UNITY_STANDALONE_LINUX
-            WalletRegistry.SupportedWallets
-                .Where(wallet => !string.IsNullOrEmpty(wallet.App.Linux))
-                .ToArray();
-#elif UNITY_WEBGL
-            WalletRegistry.SupportedWallets
-                .Where(wallet => !string.IsNullOrEmpty(wallet.App.Browser))
-                .ToArray();
-#else
-            new AppEntry[0];
-#endif
-
         public static readonly AppEntry PeraWallet = new AppEntry
         {
             Id = "23138217b046ae8d9d07e62b3337fb288c4445f92f64be067809cd0a8f9454b9",
@@ -85,5 +51,39 @@ namespace AlgoSdk.WalletConnect
                 }
             },
         };
+
+        public static readonly AppEntry[] SupportedWallets = new[]
+        {
+            PeraWallet,
+        };
+
+        public static readonly AppEntry[] SupportedWalletsForCurrentPlatform =
+#if UNITY_ANDROID
+            WalletRegistry.SupportedWallets
+                .Where(wallet => !string.IsNullOrEmpty(wallet.App.Android))
+                .ToArray();
+#elif UNITY_IPHONE
+            WalletRegistry.SupportedWallets
+                .Where(wallet => !string.IsNullOrEmpty(wallet.App.Ios))
+                .ToArray();
+#elif UNITY_STANDALONE_OSX
+            WalletRegistry.SupportedWallets
+                .Where(wallet => !string.IsNullOrEmpty(wallet.App.Mac))
+                .ToArray();
+#elif UNITY_STANDALONE_WIN
+            WalletRegistry.SupportedWallets
+                .Where(wallet => !string.IsNullOrEmpty(wallet.App.Windows))
+                .ToArray();
+#elif UNITY_STANDALONE_LINUX
+            WalletRegistry.SupportedWallets
+                .Where(wallet => !string.IsNullOrEmpty(wallet.App.Linux))
+                .ToArray();
+#elif UNITY_WEBGL
+            WalletRegistry.SupportedWallets
+                .Where(wallet => !string.IsNullOrEmpty(wallet.App.Browser))
+                .ToArray();
+#else
+            new AppEntry[0];
+#endif
     }
 }
