@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using UnityEditor;
 using UnityEditor.PackageManager;
 using UnityEngine;
@@ -18,14 +19,21 @@ public static class UnityPackage
     [MenuItem("AlgoSdk/Embed UniTask")]
     public static void EmbedUniTask()
     {
-        var packageInfo = Client.Embed("com.cysharp.unitask").Result;
-        RefreshAssets();
+        EmbedUniTaskAsync().Forget();
     }
 
     [MenuItem("AlgoSdk/Package")]
     public static void Build()
     {
-        EmbedUniTask();
+        BuildAsync().Forget();
+    }
+
+    static async UniTaskVoid BuildAsync()
+    {
+        var isEmbedded = await EmbedUniTaskAsync();
+        if (!isEmbedded)
+            return;
+
         MovePackagesIntoAssets();
         AssetDatabase.ExportPackage(
             assetPathName: "Assets/AlgoSdk",
@@ -34,6 +42,17 @@ public static class UnityPackage
         );
         AssetDatabase.Refresh(refreshOptions);
         MovePackagesBackIntoPackages();
+    }
+
+    static async UniTask<bool> EmbedUniTaskAsync()
+    {
+        var embedRequest = Client.Embed("com.cysharp.unitask");
+        await UniTask.WaitUntil(() => embedRequest.IsCompleted);
+        if (embedRequest.Error != null)
+            Debug.LogError(embedRequest.Error.message);
+        else
+            RefreshAssets();
+        return embedRequest.Error == null;
     }
 
     static void MovePackagesIntoAssets()
