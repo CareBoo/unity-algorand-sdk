@@ -21,7 +21,7 @@ public class ConfigureClientSettingsWindow : EditorWindow
 
     TextField accountAddressText;
 
-    [MenuItem("Window/AlgoSdk/Configure Client Settings")]
+    [MenuItem("AlgoSdk/Configure Client Settings")]
     static void ShowWindow()
     {
         GetWindow<ConfigureClientSettingsWindow>();
