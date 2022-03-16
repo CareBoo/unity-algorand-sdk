@@ -6,7 +6,7 @@ dist/**
 Documentation~/**/*.meta
 Samples~/**/*.meta
 scripts/**
-Unity.AlgoSdk/**
+Unity.AlgoSdk*/**
 .czrc
 .editorconfig
 .gitattributes

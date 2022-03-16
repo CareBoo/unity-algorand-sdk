@@ -1,6 +1,6 @@
 {
   "name": "com.careboo.unity-algorand-sdk",
-  "displayName": "Algorand SDK",
+  "displayName": "AlgoSdk",
   "version": "2.1.0-pre.6",
   "unity": "2020.3",
   "keywords": [
@@ -11,7 +11,7 @@
     "blockchain"
   ],
   "license": "MIT",
-  "description": "Integrate Algorand blockchain services into your game.\n\nWARNING: This package has not been audited and it should not be used in a production environment.",
+  "description": "The [Un]official Algorand SDK for Unity. Integrate blockchain services into your game.\n\nWARNING: This package has not been audited and it should not be used in a production environment.",
   "dependencies": {
     "com.unity.collections": "1.1.0",
     "com.cysharp.unitask": "2.3.1"
