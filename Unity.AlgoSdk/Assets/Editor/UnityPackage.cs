@@ -7,8 +7,7 @@ public static class UnityPackage
 {
     const string packageName = "unity-algorand-sdk";
 
-    static readonly ImportAssetOptions refreshOptions = ImportAssetOptions.ForceUpdate
-        | ImportAssetOptions.ImportRecursive
+    static readonly ImportAssetOptions refreshOptions = ImportAssetOptions.ImportRecursive
         | ImportAssetOptions.ForceSynchronousImport
         ;
 
