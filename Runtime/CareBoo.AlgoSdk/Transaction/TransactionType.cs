@@ -6,7 +6,6 @@ namespace AlgoSdk
     /// <summary>
     /// An enum representing the type of transaction.
     /// </summary>
-    [AlgoApiFormatter(typeof(TransactionTypeFormatter))]
     public enum TransactionType : byte
     {
         None,

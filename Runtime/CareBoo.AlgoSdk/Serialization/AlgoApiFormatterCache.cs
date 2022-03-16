@@ -50,6 +50,12 @@ namespace AlgoSdk
             Add<FixedList128Bytes<byte>>(new FixedBytesFormatter<FixedList128Bytes<byte>>());
             Add<FixedList512Bytes<byte>>(new FixedBytesFormatter<FixedList512Bytes<byte>>());
             Add<FixedList4096Bytes<byte>>(new FixedBytesFormatter<FixedList4096Bytes<byte>>());
+            Add<OnCompletion>(new OnCompletionFormatter());
+            Add<AddressRole>(new AddressRoleFormatter());
+            Add<EvalDeltaAction>(new ByteEnumFormatter<EvalDeltaAction>());
+            Add<TransactionType>(new TransactionTypeFormatter());
+            Add<TealValueType>(new ByteEnumFormatter<TealValueType>());
+            Add<SignatureType>(new SignatureTypeFormatter());
         }
 
         public static void Add<T>(IAlgoApiFormatter<T> formatter)

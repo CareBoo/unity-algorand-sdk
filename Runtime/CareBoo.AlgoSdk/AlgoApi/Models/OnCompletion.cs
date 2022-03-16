@@ -5,7 +5,6 @@ namespace AlgoSdk
     /// <summary>
     /// [apan] defines the what additional actions occur with the transaction.
     /// </summary>
-    [AlgoApiFormatter(typeof(OnCompletionFormatter))]
     public enum OnCompletion : byte
     {
         /// <summary>

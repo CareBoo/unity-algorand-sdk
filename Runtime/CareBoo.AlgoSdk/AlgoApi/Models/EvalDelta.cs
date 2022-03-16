@@ -6,7 +6,6 @@ namespace AlgoSdk
     /// <summary>
     /// Represents the action on the value
     /// </summary>
-    [AlgoApiFormatter(typeof(ByteEnumFormatter<EvalDeltaAction>))]
     public enum EvalDeltaAction : byte
     {
         None = 0,

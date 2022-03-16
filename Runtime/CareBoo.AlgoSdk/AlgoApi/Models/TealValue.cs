@@ -8,7 +8,6 @@ namespace AlgoSdk
     /// <summary>
     /// TEAL Value Type. Value 1 refers to bytes, value 2 refers to uint.
     /// </summary>
-    [AlgoApiFormatter(typeof(ByteEnumFormatter<TealValueType>))]
     public enum TealValueType : byte
     {
         None = 0,

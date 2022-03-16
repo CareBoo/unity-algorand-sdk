@@ -3,7 +3,6 @@ using Unity.Collections;
 
 namespace AlgoSdk
 {
-    [AlgoApiFormatter(typeof(SignatureTypeFormatter))]
     public enum SignatureType : byte
     {
         None,
