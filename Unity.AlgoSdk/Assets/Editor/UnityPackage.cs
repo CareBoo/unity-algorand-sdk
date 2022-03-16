@@ -14,6 +14,7 @@ public static class UnityPackage
             fileName: packageName + ".unitypackage",
             ExportPackageOptions.Recurse | ExportPackageOptions.IncludeDependencies
         );
+        AssetDatabase.Refresh();
         MovePackagesBackIntoPackages();
         AssetDatabase.Refresh();
     }
