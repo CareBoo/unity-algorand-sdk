@@ -84,11 +84,14 @@ public static class UnityPackage
 
     static void MovePackagesIntoAssets()
     {
-        MoveAsset("Packages/com.careboo.unity-algorand-sdk", "Assets/AlgoSdk");
+        FileUtil.MoveFileOrDirectory("Packages/com.careboo.unity-algorand-sdk", "Assets/AlgoSdk");
+        RefreshAssets();
 
         CreateFolder("Assets/AlgoSdk", "Third Party");
 
-        MoveAsset("Packages/com.cysharp.unitask", "Assets/AlgoSdk/Third Party/UniTask");
+        FileUtil.MoveFileOrDirectory("Packages/com.cysharp.unitask", "Assets/AlgoSdk/Third Party/UniTask");
+        RefreshAssets();
+
         MoveAsset("Assets/AlgoSdk/Runtime/websocket-sharp", "Assets/AlgoSdk/Third Party/websocket-sharp");
         MoveAsset("Assets/AlgoSdk/Runtime/zxing.unity", "Assets/AlgoSdk/Third Party/zxing.unity");
         MoveAsset("Assets/Samples", "Assets/AlgoSdk/Samples");
@@ -97,17 +100,21 @@ public static class UnityPackage
     static void MovePackagesBackIntoPackages()
     {
         MoveAsset("Assets/AlgoSdk/Samples", "Assets/Samples");
-        MoveAsset("Assets/AlgoSdk/Third Party/UniTask", "Packages/com.cysharp.unitask");
         MoveAsset("Assets/AlgoSdk/Third Party/websocket-sharp", "Assets/AlgoSdk/Runtime/websocket-sharp");
         MoveAsset("Assets/AlgoSdk/Third Party/zxing.unity", "Assets/AlgoSdk/Runtime/zxing.unity");
 
+        FileUtil.MoveFileOrDirectory("Assets/AlgoSdk/Third Party/UniTask", "Packages/com.cysharp.unitask");
+        RefreshAssets();
+
         DeleteAsset("Assets/AlgoSdk/Third Party");
 
-        MoveAsset("Assets/AlgoSdk", "Packages/com.careboo.unity-algorand-sdk");
+        FileUtil.MoveFileOrDirectory("Assets/AlgoSdk", "Packages/com.careboo.unity-algorand-sdk");
+        RefreshAssets();
     }
 
     static void MoveAsset(string from, string to)
     {
+        FileUtil.MoveFileOrDirectory(from, to);
         var error = AssetDatabase.MoveAsset(from, to);
         if (string.IsNullOrEmpty(error))
             RefreshAssets();
