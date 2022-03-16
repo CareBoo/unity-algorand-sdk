@@ -5,6 +5,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [2.1.0-pre.7](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0-pre.6...v2.1.0-pre.7) (2022-03-16)
+
+
+### Bug Fixes
+
+* **algod:** fix PendingTransaction fields from messagepack ([6dbf0b3](https://github.com/CareBoo/unity-algorand-sdk/commit/6dbf0b3c99f7977ce87458e51ea8a9f87d9f9075)), closes [#97](https://github.com/CareBoo/unity-algorand-sdk/issues/97)
+* **formatters:** add explicit formatters for enums ([58c4475](https://github.com/CareBoo/unity-algorand-sdk/commit/58c447540eb117eb507e8147fb58b563506da959)), closes [#99](https://github.com/CareBoo/unity-algorand-sdk/issues/99)
+* **formatters:** update AlgoApiFormatter to warn instead of error if key cannot be found ([f727135](https://github.com/CareBoo/unity-algorand-sdk/commit/f727135db83deb6aebd010da31ea3e1df91a9b94)), closes [#98](https://github.com/CareBoo/unity-algorand-sdk/issues/98)
+* **samples:** fix compile error with samples ([c7c9a0d](https://github.com/CareBoo/unity-algorand-sdk/commit/c7c9a0de2f7596a1a2a31b570ce8ee73d512d63b))
+
 # [2.1.0-pre.6](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0-pre.5...v2.1.0-pre.6) (2022-03-12)
 
 
