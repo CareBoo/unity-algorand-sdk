@@ -56,7 +56,7 @@ jobs:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE_2020 }}
         with:
           targetPlatform: StandaloneLinux64
-          projectPath: Unity.AlgoSdk
+          projectPath: Unity.AlgoSdk.AssetStore
           buildMethod: UnityPackage.Build
           versioning: None
           allowDirtyBuild: true
