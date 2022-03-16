@@ -57,7 +57,7 @@ namespace AlgoSdk
         /// <summary>
         /// [gd] Global state key/value changes for the application being executed by this transaction.
         /// </summary>
-        [AlgoApiField("global-state-delta", "gd")]
+        [AlgoApiField("global-state-delta", "global-state-delta")]
         [Tooltip("Global state key/value changes for the application being executed by this transaction.")]
         public EvalDeltaKeyValue[] GlobalStateDelta;
 
@@ -71,14 +71,14 @@ namespace AlgoSdk
         /// <summary>
         /// [ld] Local state key/value changes for the application being executed by this transaction.
         /// </summary>
-        [AlgoApiField("local-state-delta", "ld")]
+        [AlgoApiField("local-state-delta", "local-state-delta")]
         [Tooltip("Local state key/value changes for the application being executed by this transaction.")]
         public AccountStateDelta[] LocalStateDelta;
 
         /// <summary>
         /// [lg] Logs for the application being executed by this transaction.
         /// </summary>
-        [AlgoApiField("logs", "lg")]
+        [AlgoApiField("logs", "logs")]
         [Tooltip("Logs for the application being executed by this transaction.")]
         public string[] Logs;
 
