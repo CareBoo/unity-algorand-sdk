@@ -1,4 +1,6 @@
 using UnityEditor;
+using UnityEditor.PackageManager;
+using UnityEngine;
 
 public static class UnityPackage
 {
@@ -13,45 +15,80 @@ public static class UnityPackage
         | ExportPackageOptions.IncludeDependencies
         ;
 
+    [MenuItem("AlgoSdk/Embed UniTask")]
+    public static void EmbedUniTask()
+    {
+        var packageInfo = Client.Embed("com.cysharp.unitask").Result;
+        RefreshAssets();
+    }
+
     [MenuItem("AlgoSdk/Package")]
     public static void Build()
     {
+        EmbedUniTask();
         MovePackagesIntoAssets();
         AssetDatabase.ExportPackage(
             assetPathName: "Assets/AlgoSdk",
             fileName: packageName + ".unitypackage",
             exportOptions
         );
+        AssetDatabase.Refresh(refreshOptions);
         MovePackagesBackIntoPackages();
     }
 
     static void MovePackagesIntoAssets()
     {
-        AssetDatabase.MoveAsset("Packages/com.careboo.unity-algorand-sdk", "Assets/AlgoSdk");
-        AssetDatabase.Refresh(refreshOptions);
+        MoveAsset("Packages/com.careboo.unity-algorand-sdk", "Assets/AlgoSdk");
 
-        AssetDatabase.CreateFolder("Assets/AlgoSdk", "Third Party");
-        AssetDatabase.Refresh(refreshOptions);
+        CreateFolder("Assets/AlgoSdk", "Third Party");
 
-        AssetDatabase.MoveAsset("Packages/com.cysharp.unitask", "Assets/AlgoSdk/Third Party/UniTask");
-        AssetDatabase.MoveAsset("Assets/AlgoSdk/Runtime/websocket-sharp", "Assets/AlgoSdk/Third Party/websocket-sharp");
-        AssetDatabase.MoveAsset("Assets/AlgoSdk/Runtime/zxing.unity", "Assets/AlgoSdk/Third Party/zxing.unity");
-        AssetDatabase.MoveAsset("Assets/Samples", "Assets/AlgoSdk/Samples");
-        AssetDatabase.Refresh(refreshOptions);
+        MoveAsset("Packages/com.cysharp.unitask", "Assets/AlgoSdk/Third Party/UniTask");
+        MoveAsset("Assets/AlgoSdk/Runtime/websocket-sharp", "Assets/AlgoSdk/Third Party/websocket-sharp");
+        MoveAsset("Assets/AlgoSdk/Runtime/zxing.unity", "Assets/AlgoSdk/Third Party/zxing.unity");
+        MoveAsset("Assets/Samples", "Assets/AlgoSdk/Samples");
     }
 
     static void MovePackagesBackIntoPackages()
     {
-        AssetDatabase.MoveAsset("Assets/AlgoSdk/Samples", "Assets/Samples");
-        AssetDatabase.MoveAsset("Assets/AlgoSdk/Third Party/UniTask", "Packages/com.cysharp.unitask");
-        AssetDatabase.MoveAsset("Assets/AlgoSdk/Third Party/websocket-sharp", "Assets/AlgoSdk/Runtime/websocket-sharp");
-        AssetDatabase.MoveAsset("Assets/AlgoSdk/Third Party/zxing.unity", "Assets/AlgoSdk/Runtime/zxing.unity");
-        AssetDatabase.Refresh(refreshOptions);
+        MoveAsset("Assets/AlgoSdk/Samples", "Assets/Samples");
+        MoveAsset("Assets/AlgoSdk/Third Party/UniTask", "Packages/com.cysharp.unitask");
+        MoveAsset("Assets/AlgoSdk/Third Party/websocket-sharp", "Assets/AlgoSdk/Runtime/websocket-sharp");
+        MoveAsset("Assets/AlgoSdk/Third Party/zxing.unity", "Assets/AlgoSdk/Runtime/zxing.unity");
 
-        AssetDatabase.DeleteAsset("Assets/AlgoSdk/Third Party");
-        AssetDatabase.Refresh(refreshOptions);
+        DeleteAsset("Assets/AlgoSdk/Third Party");
 
-        AssetDatabase.MoveAsset("Assets/AlgoSdk", "Packages/com.careboo.unity-algorand-sdk");
+        MoveAsset("Assets/AlgoSdk", "Packages/com.careboo.unity-algorand-sdk");
+    }
+
+    static void MoveAsset(string from, string to)
+    {
+        var error = AssetDatabase.MoveAsset(from, to);
+        if (string.IsNullOrEmpty(error))
+            RefreshAssets();
+        else
+            Debug.LogError(error);
+    }
+
+    static void CreateFolder(string parent, string folderName)
+    {
+        var error = AssetDatabase.CreateFolder(parent, folderName);
+        if (string.IsNullOrEmpty(error))
+            RefreshAssets();
+        else
+            Debug.LogError(error);
+    }
+
+    static void DeleteAsset(string path)
+    {
+        var deleted = AssetDatabase.DeleteAsset(path);
+        if (deleted)
+            RefreshAssets();
+        else
+            Debug.LogError($"Could not delete asset at path: {path}");
+    }
+
+    static void RefreshAssets()
+    {
         AssetDatabase.Refresh(refreshOptions);
     }
 }
