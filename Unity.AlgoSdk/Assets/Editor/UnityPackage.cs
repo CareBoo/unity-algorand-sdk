@@ -7,6 +7,8 @@ public static class UnityPackage
 {
     const string packageName = "unity-algorand-sdk";
 
+    static string projectPath => UnityEngine.Application.persistentDataPath.Substring(0, UnityEngine.Application.persistentDataPath.Length - "Assets".Length);
+
     static readonly ImportAssetOptions refreshOptions = ImportAssetOptions.ImportRecursive
         | ImportAssetOptions.ForceSynchronousImport
         ;
@@ -34,6 +36,7 @@ public static class UnityPackage
             return;
 
         MovePackagesIntoAssets();
+        await ReinstallPackagesInAssets();
         AssetDatabase.ExportPackage(
             assetPathName: "Assets/AlgoSdk",
             fileName: packageName + ".unitypackage",
@@ -41,6 +44,7 @@ public static class UnityPackage
         );
         AssetDatabase.Refresh(refreshOptions);
         MovePackagesBackIntoPackages();
+        await ReinstallPackagesInPackages();
     }
 
     static async UniTask<bool> EmbedUniTaskAsync()
@@ -52,6 +56,30 @@ public static class UnityPackage
         else
             RefreshAssets();
         return embedRequest.Error == null;
+    }
+
+    static async UniTask ReinstallPackagesInAssets()
+    {
+        var addRequest = Client.Add($"file:{UnityEngine.Application.persistentDataPath}/AlgoSdk");
+        await UniTask.WaitUntil(() => addRequest.IsCompleted);
+        if (addRequest.Error != null)
+            Debug.LogError(addRequest.Error.message);
+        addRequest = Client.Add($"file:{UnityEngine.Application.persistentDataPath}/AlgoSdk/Third Party/UniTask");
+        await UniTask.WaitUntil(() => addRequest.IsCompleted);
+        if (addRequest.Error != null)
+            Debug.LogError(addRequest.Error.message);
+    }
+
+    static async UniTask ReinstallPackagesInPackages()
+    {
+        var addRequest = Client.Add($"file:com.careboo.unity-algorand-sdk");
+        await UniTask.WaitUntil(() => addRequest.IsCompleted);
+        if (addRequest.Error != null)
+            Debug.LogError(addRequest.Error.message);
+        addRequest = Client.Add($"file:com.cysharp.unitask");
+        await UniTask.WaitUntil(() => addRequest.IsCompleted);
+        if (addRequest.Error != null)
+            Debug.LogError(addRequest.Error.message);
     }
 
     static void MovePackagesIntoAssets()
