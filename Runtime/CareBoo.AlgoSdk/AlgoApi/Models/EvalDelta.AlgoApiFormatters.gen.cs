@@ -20,7 +20,6 @@ namespace AlgoSdk
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.EvalDelta>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.EvalDelta>().Assign("action", "at", (AlgoSdk.EvalDelta x) => x.Action, (ref AlgoSdk.EvalDelta x, AlgoSdk.EvalDeltaAction value) => x.Action = value, AlgoSdk.ByteEnumComparer<AlgoSdk.EvalDeltaAction>.Instance, false).Assign("bytes", "bs", (AlgoSdk.EvalDelta x) => x.Bytes, (ref AlgoSdk.EvalDelta x, AlgoSdk.TealBytes value) => x.Bytes = value, false).Assign("uint", "ui", (AlgoSdk.EvalDelta x) => x.UInt, (ref AlgoSdk.EvalDelta x, System.UInt64 value) => x.UInt = value, false));
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.EvalDeltaAction>(new AlgoSdk.Formatters.ByteEnumFormatter<AlgoSdk.EvalDeltaAction>());
             return true;
         }
     }
