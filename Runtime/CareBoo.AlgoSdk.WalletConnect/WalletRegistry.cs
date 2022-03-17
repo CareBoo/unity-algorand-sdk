@@ -5,6 +5,9 @@ namespace AlgoSdk.WalletConnect
 {
     public static class WalletRegistry
     {
+        /// <summary>
+        /// The official wallet from the Algorand Foundation.
+        /// </summary>
         public static readonly AppEntry PeraWallet = new AppEntry
         {
             Id = "23138217b046ae8d9d07e62b3337fb288c4445f92f64be067809cd0a8f9454b9",
@@ -51,11 +54,20 @@ namespace AlgoSdk.WalletConnect
             },
         };
 
+        /// <summary>
+        /// All supported Algorand Wallet apps.
+        /// See <see cref="SupportedWalletsForCurrentPlatform"/> if you'd like to get apps for current platform only.
+        /// </summary>
+        /// <returns><see cref="AppEntry[]"/> that can be used to launch apps on native device.</returns>
         public static readonly AppEntry[] SupportedWallets = new[]
         {
             PeraWallet,
         };
 
+        /// <summary>
+        /// Supported Algorand Wallet apps for the current unity platform.
+        /// </summary>
+        /// <returns><see cref="AppEntry[]"/> that can be used to launch apps on native device.</returns>
         public static readonly AppEntry[] SupportedWalletsForCurrentPlatform =
 #if UNITY_ANDROID
             WalletRegistry.SupportedWallets
