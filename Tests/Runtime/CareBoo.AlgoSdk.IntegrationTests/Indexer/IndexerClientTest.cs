@@ -25,6 +25,7 @@ public class IndexerClientTest : IndexerClientTestFixture
 
 
     [UnityTest]
+    [Ignore("This feature is disabled")]
     public IEnumerator GetAccountsGreaterThan1000AlgoShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var response = await AlgoApiClientSettings.Indexer.GetAccounts(currencyGreaterThan: 1000);
@@ -77,6 +78,7 @@ public class IndexerClientTest : IndexerClientTestFixture
     });
 
     [UnityTest]
+    [Ignore("This feature is disabled")]
     public IEnumerator GetLogicSigTransactionsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var response = await AlgoApiClientSettings.Indexer.GetTransactions(sigType: SignatureType.LogicSig);
