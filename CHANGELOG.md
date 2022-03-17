@@ -5,6 +5,35 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [2.1.0](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0...v2.1.0) (2022-03-17)
+
+
+### Bug Fixes
+
+* **algod:** fix PendingTransaction fields from messagepack ([6dbf0b3](https://github.com/CareBoo/unity-algorand-sdk/commit/6dbf0b3c99f7977ce87458e51ea8a9f87d9f9075)), closes [#97](https://github.com/CareBoo/unity-algorand-sdk/issues/97)
+* **build:** fix build not using the latest version of the release ([e8ee758](https://github.com/CareBoo/unity-algorand-sdk/commit/e8ee7581a4496805a60e1af0aea452f9c69969a8))
+* **docs:** update readme with png image ([a84c298](https://github.com/CareBoo/unity-algorand-sdk/commit/a84c298a62503fc14f2143d6d2808540ae9d06eb))
+* fix missing meta files from package ([a4037c9](https://github.com/CareBoo/unity-algorand-sdk/commit/a4037c94d006b3ede15348868fbb8b586b4e84b6))
+* **formatter:** make sure to skip unknown keys ([a9115af](https://github.com/CareBoo/unity-algorand-sdk/commit/a9115af470ce07e373506a9cc43edd028c96b636))
+* **formatters:** add explicit formatters for enums ([58c4475](https://github.com/CareBoo/unity-algorand-sdk/commit/58c447540eb117eb507e8147fb58b563506da959)), closes [#99](https://github.com/CareBoo/unity-algorand-sdk/issues/99)
+* **formatters:** update AlgoApiFormatter to warn instead of error if key cannot be found ([f727135](https://github.com/CareBoo/unity-algorand-sdk/commit/f727135db83deb6aebd010da31ea3e1df91a9b94)), closes [#98](https://github.com/CareBoo/unity-algorand-sdk/issues/98)
+* **kmd:** fix multisig serialization ([a48e109](https://github.com/CareBoo/unity-algorand-sdk/commit/a48e109b305f0c607e626eae64bfa6610c191503))
+* **readme:** fix missing image in readme ([a2fb33c](https://github.com/CareBoo/unity-algorand-sdk/commit/a2fb33ce7bd1ea760e098f36e809a5ec4d9ea3ab))
+* **readme:** remove unnecessary xml tag ([2f87b1a](https://github.com/CareBoo/unity-algorand-sdk/commit/2f87b1ab42c0854dedbe03da00a78f2a6fefdb87))
+* **samples:** fix compile error with samples ([c7c9a0d](https://github.com/CareBoo/unity-algorand-sdk/commit/c7c9a0de2f7596a1a2a31b570ce8ee73d512d63b))
+* **samples:** update YourFirstTransaction sample ([20cabf7](https://github.com/CareBoo/unity-algorand-sdk/commit/20cabf70da8cbf47096c5586cb8deb53b03ae233))
+* **serialization:** fix initialization of AlgoApiFormatterLookup ([675b1d9](https://github.com/CareBoo/unity-algorand-sdk/commit/675b1d90a911629597a96127d9c62662eb48aba3))
+* **serialization:** set formatters to automatically add array formatter if it doesn't exist ([5692372](https://github.com/CareBoo/unity-algorand-sdk/commit/56923722974f710fa7583fcbf48dfa251f85dd7d))
+* **websocket:** fix TLS failure in websocket-sharp for Unity 2020.3 ([bdaa92e](https://github.com/CareBoo/unity-algorand-sdk/commit/bdaa92e4f55aac89c2abf897a28bced7fc1aac65)), closes [#101](https://github.com/CareBoo/unity-algorand-sdk/issues/101)
+
+
+### Features
+
+* **api:** add min-balance field ([7f0873b](https://github.com/CareBoo/unity-algorand-sdk/commit/7f0873bbfddabf80b36e67cb85a916fb7270835a))
+* **transaction:** add `PrivateKey.SignTransaction` method ([3d74336](https://github.com/CareBoo/unity-algorand-sdk/commit/3d74336aee240bb8357cea27b26c33cb537f3eca))
+* **walletconnect:** add `LaunchApp[...]` to `AppEntry` ([f822855](https://github.com/CareBoo/unity-algorand-sdk/commit/f822855e1ab81a8a768fac359e65f87041e90de2))
+* **walletconnect:** add supported wallets list ([50c6575](https://github.com/CareBoo/unity-algorand-sdk/commit/50c657580ccf5a1cb751d78cfb14201c4f8ac9fc))
+
 # [2.1.0-pre.11](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0-pre.10...v2.1.0-pre.11) (2022-03-17)
 
 
