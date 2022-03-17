@@ -55,9 +55,14 @@ namespace AlgoSdk
                 try
                 {
                     if (jsonFieldMap.TryGetValue(key, out var field))
+                    {
                         field.DeserializeJson(ref result, ref reader);
+                    }
                     else
+                    {
+                        reader.Skip();
                         Debug.LogWarning($"Could not recognize the field \"{key}\", for any fields on {typeof(T)}");
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -80,9 +85,14 @@ namespace AlgoSdk
                 try
                 {
                     if (msgPackFieldMap.TryGetValue(key, out var field))
+                    {
                         field.DeserializeMessagePack(ref result, ref reader);
+                    }
                     else
+                    {
+                        reader.Skip();
                         Debug.LogWarning($"Could not recognize the field \"{key}\", for any fields on {typeof(T)}");
+                    }
                 }
                 catch (Exception ex)
                 {
