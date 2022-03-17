@@ -15,8 +15,6 @@ public class ConfigureClientSettingsWindow : EditorWindow
     [SerializeField]
     KmdClient kmdClient;
 
-    TextField accountAddressText;
-
     [MenuItem("AlgoSdk/Configure Client Settings")]
     static void ShowWindow()
     {
@@ -43,9 +41,14 @@ public class ConfigureClientSettingsWindow : EditorWindow
 
     void Save()
     {
-        EditorPrefs.SetString(AlgoApiClientSettings.GetKey(nameof(AlgoApiClientSettings.Algod)), JsonUtility.ToJson(algodClient));
-        EditorPrefs.SetString(AlgoApiClientSettings.GetKey(nameof(AlgoApiClientSettings.Indexer)), JsonUtility.ToJson(indexerClient));
-        EditorPrefs.SetString(AlgoApiClientSettings.GetKey(nameof(AlgoApiClientSettings.Kmd)), JsonUtility.ToJson(kmdClient));
+        var algodJson = JsonUtility.ToJson(algodClient);
+        var indexerJson = JsonUtility.ToJson(indexerClient);
+        var kmdJson = JsonUtility.ToJson(kmdClient);
+
+        Debug.Log($"Saving clients settings:\nAlgod: {algodJson}\nIndexer: {indexerJson}\nKmd: {kmdJson}");
+        EditorPrefs.SetString(AlgoApiClientSettings.GetKey(nameof(AlgoApiClientSettings.Algod)), algodJson);
+        EditorPrefs.SetString(AlgoApiClientSettings.GetKey(nameof(AlgoApiClientSettings.Indexer)), indexerJson);
+        EditorPrefs.SetString(AlgoApiClientSettings.GetKey(nameof(AlgoApiClientSettings.Kmd)), kmdJson);
     }
 
     void Load()
