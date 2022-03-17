@@ -20,7 +20,6 @@ namespace AlgoSdk
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.PrivateKey>(new AlgoSdk.Formatters.PrivateKeyFormatter());
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.PrivateKey[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.PrivateKey>.Instance);
             return true;
         }
     }

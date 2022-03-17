@@ -1,5 +1,5 @@
-using System.Text;
 using System.Collections;
+using System.Text;
 using AlgoSdk;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
@@ -10,6 +10,7 @@ using UnityEngine.TestTools;
 [System.Flags]
 public enum AlgoServices : byte
 {
+    None = 0,
     Algod = 1,
     Kmd = 2,
     Indexer = 4
@@ -48,31 +49,7 @@ public abstract class AlgoApiClientTestFixture
         return pending;
     }
 
-    protected static readonly PrivateKey AccountPrivateKey = AlgoApiClientSettings.AccountMnemonic.ToPrivateKey();
-
-    protected static async UniTask<TransactionIdResponse> MakePaymentTransaction(ulong amt)
-    {
-        using var keyPair = AccountPrivateKey
-            .ToKeyPair();
-        var (error, txnParams) = await AlgoApiClientSettings.Algod.GetSuggestedParams();
-        AssertOkay(error);
-        var txn = Transaction.Payment(
-            sender: keyPair.PublicKey,
-            txnParams: txnParams,
-            receiver: "RDSRVT3X6Y5POLDIN66TSTMUYIBVOMPEOCO4Y2CYACPFKDXZPDCZGVE4PQ",
-            amount: amt
-        );
-        txn.Note = Encoding.UTF8.GetBytes("hello");
-        var signedTxn = txn.Sign(keyPair.SecretKey);
-        var serialized = AlgoApiSerializer.SerializeMessagePack(signedTxn, Allocator.Temp);
-        Debug.Log(System.Convert.ToBase64String(serialized.ToArray()));
-        TransactionIdResponse txidResponse = default;
-        (error, txidResponse) = await AlgoApiClientSettings.Algod.SendTransaction(signedTxn);
-        AssertOkay(error);
-        return txidResponse;
-    }
-
-    abstract protected AlgoServices RequiresServices { get; }
+    virtual protected AlgoServices RequiresServices { get; }
 
     [UnitySetUp]
     public IEnumerator SetUpTest() => UniTask.ToCoroutine(SetUpAsync);

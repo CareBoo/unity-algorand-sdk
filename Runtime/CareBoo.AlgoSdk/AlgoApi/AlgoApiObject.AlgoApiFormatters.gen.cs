@@ -20,7 +20,6 @@ namespace AlgoSdk
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.AlgoApiObject>(new AlgoSdk.AlgoApiObjectFormatter());
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.AlgoApiObject[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.AlgoApiObject>.Instance);
             return true;
         }
     }

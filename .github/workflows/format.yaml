@@ -3,7 +3,10 @@ name: Format check
 on:
   pull_request:
     paths:
-      - "**.cs"
+      - "Runtime/**.cs"
+      - "Editor/**.cs"
+      - "Samples*/**.cs"
+      - "Tests/**.cs"
 
 jobs:
   dotnet-format:
@@ -23,7 +26,10 @@ jobs:
         id: changed_csharp_files
         with:
           files: |
-            *.cs
+            Runtime/**.cs
+            Editor/**.cs
+            Samples*/**.cs
+            Tests/**.cs
 
       - name: Run dotnet format
         id: format
@@ -31,5 +37,4 @@ jobs:
           dotnet format whitespace . \
           --folder \
           --verify-no-changes \
-          --include ${{ steps.changed_csharp_files.outputs.all_changed_files }} \
-          --exclude Runtime/websocket-sharp Runtime/zxing.unity Unity.AlgoSdk
+          --include ${{ steps.changed_csharp_files.outputs.all_changed_files }}

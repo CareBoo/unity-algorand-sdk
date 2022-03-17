@@ -113,6 +113,18 @@ namespace AlgoSdk
         public AlgoApiRequest SetPlainTextBody(string plainText) =>
             SetRawBody(Encoding.UTF8.GetBytes(plainText), ContentType.PlainText);
 
+
+        /// <summary>
+        /// Set body of the request and set its content type header to "application/msgpack"
+        /// </summary>
+        /// <param name="value">The value to serialize to message pack and set for the body</param>
+        /// <returns>this request with body and header set</returns>
+        public AlgoApiRequest SetMessagePackBody<TBody>(TBody value)
+        {
+            using var msgpack = AlgoApiSerializer.SerializeMessagePack(value, Allocator.Temp);
+            return SetMessagePackBody(msgpack.AsArray().AsReadOnly());
+        }
+
         /// <summary>
         /// Set body of the request and set its content type header to "application/msgpack"
         /// </summary>

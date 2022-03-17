@@ -1,6 +1,5 @@
 using AlgoSdk;
 using UnityEngine;
-using System;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -8,34 +7,16 @@ using UnityEditor;
 
 public static class AlgoApiClientSettings
 {
-    public static AlgodClient Algod => GetJson<AlgodClient>(nameof(Algod));
+    public static AlgodClient Algod => GetJson<AlgodClient>(nameof(Algod), GetSandboxAlgodClient());
 
-    public static IndexerClient Indexer => GetJson<IndexerClient>(nameof(Indexer));
+    public static IndexerClient Indexer => GetJson<IndexerClient>(nameof(Indexer), GetSandboxIndexerClient());
 
-    public static KmdClient Kmd => GetJson<KmdClient>(nameof(Kmd));
+    public static KmdClient Kmd => GetJson<KmdClient>(nameof(Kmd), GetSandboxKmdClient());
 
-    public static Mnemonic AccountMnemonic
-    {
-        get
-        {
-            var s = GetString(nameof(AccountMnemonic));
-            try
-            {
-                return s;
-            }
-            catch (ArgumentException)
-            {
-                return default;
-            }
-        }
-    }
-
-    public static Address AccountAddress => AccountMnemonic.ToPrivateKey().ToAddress();
-
-    public static T GetJson<T>(string propertyPath)
+    public static T GetJson<T>(string propertyPath, T defaultVal = default)
     {
         var json = GetString(propertyPath);
-        return string.IsNullOrEmpty(json) ? default : JsonUtility.FromJson<T>(json);
+        return string.IsNullOrEmpty(json) ? defaultVal : JsonUtility.FromJson<T>(json);
     }
 
     public static string GetString(string propertyPath)
@@ -52,5 +33,26 @@ public static class AlgoApiClientSettings
     public static string GetKey(string propertyPath)
     {
         return $"{nameof(AlgoApiClientSettings)}_{propertyPath}";
+    }
+
+    static AlgodClient GetSandboxAlgodClient()
+    {
+        return new AlgodClient(
+            address: "http://localhost:4001",
+            token: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        );
+    }
+
+    static IndexerClient GetSandboxIndexerClient()
+    {
+        return new IndexerClient(address: "http://localhost:8980");
+    }
+
+    static KmdClient GetSandboxKmdClient()
+    {
+        return new KmdClient(
+            address: "http://localhost:4002",
+            token: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        );
     }
 }

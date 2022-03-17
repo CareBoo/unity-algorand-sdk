@@ -17,9 +17,10 @@ public class KmdClientWalletTest : KmdClientTestFixture
     public IEnumerator RenameWalletShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         const string newName = "new wallet name";
+        var prevName = wallet.Name;
         var response = await AlgoApiClientSettings.Kmd.RenameWallet(wallet.Id, newName, WalletPassword);
         AssertOkay(response.Error);
-        await AlgoApiClientSettings.Kmd.RenameWallet(wallet.Id, WalletName, WalletPassword);
+        await AlgoApiClientSettings.Kmd.RenameWallet(wallet.Id, prevName, WalletPassword);
     });
 
     [UnityTest]

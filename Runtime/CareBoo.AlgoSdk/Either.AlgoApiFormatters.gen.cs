@@ -20,7 +20,6 @@ namespace AlgoSdk
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Either<T, U>>(new AlgoSdk.EitherFormatter<T, U>());
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Either<T, U>[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.Either<T, U>>.Instance);
             return true;
         }
     }

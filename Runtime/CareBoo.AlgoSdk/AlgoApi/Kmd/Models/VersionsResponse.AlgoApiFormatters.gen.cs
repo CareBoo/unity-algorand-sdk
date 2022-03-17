@@ -20,7 +20,6 @@ namespace AlgoSdk
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.VersionsResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.VersionsResponse>().Assign("versions", null, (AlgoSdk.VersionsResponse x) => x.Versions, (ref AlgoSdk.VersionsResponse x, Unity.Collections.FixedString64Bytes[] value) => x.Versions = value, AlgoSdk.ArrayComparer<Unity.Collections.FixedString64Bytes>.Instance, false));
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.VersionsResponse[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.VersionsResponse>.Instance);
             return true;
         }
     }

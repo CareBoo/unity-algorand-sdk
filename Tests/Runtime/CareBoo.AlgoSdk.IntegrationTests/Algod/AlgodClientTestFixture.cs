@@ -6,21 +6,20 @@ using NUnit.Framework;
 using UnityEngine;
 
 [TestFixture]
-public abstract class AlgodClientTestFixture : AlgoApiClientTestFixture
+public abstract class AlgodClientTestFixture : KmdClientTestFixture
 {
-    protected override AlgoServices RequiresServices => AlgoServices.Algod;
-
-    protected override UniTask SetUpAsync() => UniTask.CompletedTask;
+    protected override AlgoServices RequiresServices => AlgoServices.Algod | base.RequiresServices;
 
     protected override async UniTask TearDownAsync()
     {
-        var response = await AlgoApiClientSettings.Algod.GetPendingTransactionsByAccount(AlgoApiClientSettings.AccountAddress);
+        var response = await AlgoApiClientSettings.Algod.GetPendingTransactionsByAccount(PublicKey);
         while (response.Payload.TopTransactions != null && response.Payload.TopTransactions.Length > 0)
         {
             Debug.Log($"Waiting for pending transactions:\n{JsonUtility.ToJson(response.Payload, true)}");
             await UniTask.Delay(100);
-            response = await AlgoApiClientSettings.Algod.GetPendingTransactionsByAccount(AlgoApiClientSettings.AccountAddress);
+            response = await AlgoApiClientSettings.Algod.GetPendingTransactionsByAccount(PublicKey);
         }
+        await base.TearDownAsync();
     }
 
     protected static async UniTask<Address[]> GetAddresses()

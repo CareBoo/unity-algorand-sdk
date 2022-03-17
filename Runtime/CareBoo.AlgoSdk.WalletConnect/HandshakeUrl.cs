@@ -1,4 +1,3 @@
-using System;
 using AlgoSdk.QrCode;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -9,7 +8,8 @@ namespace AlgoSdk.WalletConnect
     /// An HTTP-escaped Url for initiating the walletconnect connection.
     /// </summary>
     /// <remarks>
-    /// Can be converted into a QrCode.
+    /// Can be converted into a QrCode or used to deeplink on mobile to
+    /// supported wallets.
     /// </remarks>
     public readonly struct HandshakeUrl
     {
@@ -30,11 +30,6 @@ namespace AlgoSdk.WalletConnect
         public Texture2D ToQrCodeTexture()
         {
             return QrCodeUtility.GenerateTexture(url);
-        }
-
-        public static implicit operator string(HandshakeUrl handshakeUrl)
-        {
-            return handshakeUrl.Url;
         }
     }
 }

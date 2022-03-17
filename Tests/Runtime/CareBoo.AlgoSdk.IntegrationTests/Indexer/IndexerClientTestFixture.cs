@@ -1,10 +1,4 @@
-using Cysharp.Threading.Tasks;
-
-public abstract class IndexerClientTestFixture : AlgoApiClientTestFixture
+public abstract class IndexerClientTestFixture : KmdClientTestFixture
 {
-    protected override AlgoServices RequiresServices => AlgoServices.Indexer | AlgoServices.Algod;
-
-    protected override UniTask SetUpAsync() => UniTask.CompletedTask;
-
-    protected override UniTask TearDownAsync() => UniTask.CompletedTask;
+    protected override AlgoServices RequiresServices => AlgoServices.Indexer | AlgoServices.Algod | base.RequiresServices;
 }

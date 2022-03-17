@@ -20,7 +20,6 @@ namespace AlgoSdk
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.WalletInfoRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.WalletInfoRequest>().Assign("wallet_handle_token", null, (AlgoSdk.WalletInfoRequest x) => x.WalletHandleToken, (ref AlgoSdk.WalletInfoRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value, false));
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.WalletInfoRequest[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.WalletInfoRequest>.Instance);
             return true;
         }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using AlgoSdk.Json;
 using AlgoSdk.MessagePack;
 using Unity.Collections;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -53,7 +54,15 @@ namespace AlgoSdk
                 reader.ReadString(ref key).ThrowIfError(reader.Char, reader.Position);
                 try
                 {
-                    jsonFieldMap.GetField(key).DeserializeJson(ref result, ref reader);
+                    if (jsonFieldMap.TryGetValue(key, out var field))
+                    {
+                        field.DeserializeJson(ref result, ref reader);
+                    }
+                    else
+                    {
+                        reader.Skip();
+                        Debug.LogWarning($"Could not recognize the field \"{key}\", for any fields on {typeof(T)}");
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -75,7 +84,15 @@ namespace AlgoSdk
                 reader.ReadString(ref key);
                 try
                 {
-                    msgPackFieldMap.GetField(key).DeserializeMessagePack(ref result, ref reader);
+                    if (msgPackFieldMap.TryGetValue(key, out var field))
+                    {
+                        field.DeserializeMessagePack(ref result, ref reader);
+                    }
+                    else
+                    {
+                        reader.Skip();
+                        Debug.LogWarning($"Could not recognize the field \"{key}\", for any fields on {typeof(T)}");
+                    }
                 }
                 catch (Exception ex)
                 {

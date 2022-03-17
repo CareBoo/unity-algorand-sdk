@@ -6,10 +6,16 @@ on:
       - main
   pull_request:
     paths:
-      - "**.cs"
-      - "**.dll"
-      - "Unity.AlgoSdk/Packages/packages-lock.json"
-      - "**/Plugins/**"
+      - "Runtime/**.cs"
+      - "Runtime/**.asmdef"
+      - "Runtime/**.dll"
+      - "Runtime/**/Plugins/**"
+      - "Editor/**.cs"
+      - "Editor/**.asmdef"
+      - "Tests/**.cs"
+      - "Tests/**.asmdef"
+      - "**/packages-lock.json"
+  workflow_dispatch:
 
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE_2020 }}
@@ -32,10 +38,14 @@ jobs:
           # - webgl
 
     steps:
-      - name: Checkout repository
+      - name: Checkout AlgoSdk
         uses: actions/checkout@v2
         with:
           lfs: true
+
+      - name: Start services
+        run: cd .services && docker-compose up --detach
+
       - name: Get Date
         id: get-date
         run: |
@@ -44,7 +54,7 @@ jobs:
       - name: Cache Library
         uses: actions/cache@v2.1.1
         with:
-          path: Unity.AlgoSdk/Library
+          path: Unity.AlgoSdk.Package/Library
           key: Library-${{ matrix.unityVersion }}-${{ matrix.targetPlatform }}-${{ steps.get-date.outputs.date }}
           restore-keys: |
             Library-${{ matrix.unityVersion }}-${{ matrix.targetPlatform }}-
@@ -54,7 +64,7 @@ jobs:
       - uses: game-ci/unity-test-runner@v2
         id: tests
         with:
-          projectPath: ./Unity.AlgoSdk
+          projectPath: ./Unity.AlgoSdk.Package
           artifactsPath: TestResults
           customParameters: -batchMode -burst-disable-compilation -enableCodeCoverage -coverageOptions generateAdditionalMetrics;enableCyclomaticComplexity;assemblyFilters:${{ steps.assemblyFilters.outputs.result }}
           githubToken: ${{ secrets.GITHUB_TOKEN }}
@@ -70,14 +80,14 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: Unity ${{ matrix.unityVersion }} ${{ matrix.targetPlatform }} Code Coverage
-          path: Unity.AlgoSdk/CodeCoverage
+          path: Unity.AlgoSdk.Package/CodeCoverage
       - name: Upload PlayMode Test Coverage Report
         uses: codecov/codecov-action@v1
         with:
           flags: unittests
-          file: Unity.AlgoSdk/CodeCoverage/workspace-opencov/PlayMode/TestCoverageResults_0000.xml
+          file: Unity.AlgoSdk.Package/CodeCoverage/workspace-opencov/PlayMode/TestCoverageResults_0000.xml
       - name: Upload EditMode Test Coverage Report
         uses: codecov/codecov-action@v1
         with:
           flags: unittests
-          file: Unity.AlgoSdk/CodeCoverage/workspace-opencov/EditMode/TestCoverageResults_0000.xml
+          file: Unity.AlgoSdk.Package/CodeCoverage/workspace-opencov/EditMode/TestCoverageResults_0000.xml

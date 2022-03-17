@@ -18,7 +18,7 @@ namespace AlgoSdk
         : IEquatable<PrivateKey>
         , IByteArray
     {
-        [SerializeField] [FieldOffset(0)] internal Ed25519.Seed seed;
+        [SerializeField, FieldOffset(0)] internal Ed25519.Seed seed;
 
         public unsafe void* GetUnsafePtr() => seed.GetUnsafePtr();
 
@@ -28,6 +28,13 @@ namespace AlgoSdk
         {
             get => seed[index];
             set => seed[index] = value;
+        }
+
+        public byte[] SignTransaction<T>(T txn)
+            where T : ITransaction
+        {
+            using var kp = ToKeyPair();
+            return AlgoApiSerializer.SerializeMessagePack(txn.Sign(kp.SecretKey));
         }
 
         public Mnemonic ToMnemonic()

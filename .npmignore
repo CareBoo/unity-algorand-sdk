@@ -1,12 +1,12 @@
 .docfx/**
 .github/**
 .husky/**
+.services/**
 .vscode/**
 dist/**
 Documentation~/**/*.meta
-Unity.AlgoSdk/**
-Media/**
 scripts/**
+Unity.AlgoSdk*/**
 .czrc
 .editorconfig
 .gitattributes

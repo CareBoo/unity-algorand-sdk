@@ -20,7 +20,6 @@ namespace AlgoSdk
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Hex>(new AlgoSdk.Formatters.HexFormatter());
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Hex[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.Hex>.Instance);
             return true;
         }
     }

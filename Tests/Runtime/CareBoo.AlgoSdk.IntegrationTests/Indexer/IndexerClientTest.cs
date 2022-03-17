@@ -10,7 +10,7 @@ public class IndexerClientTest : IndexerClientTestFixture
     [UnityTest]
     public IEnumerator GetAccountShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        Address accountAddress = AlgoApiClientSettings.AccountMnemonic.ToPrivateKey().ToPublicKey();
+        Address accountAddress = PublicKey;
         var response = await AlgoApiClientSettings.Indexer.GetAccount(accountAddress);
         AssertOkay(response.Error);
     });
@@ -25,6 +25,7 @@ public class IndexerClientTest : IndexerClientTestFixture
 
 
     [UnityTest]
+    [Ignore("This feature is disabled")]
     public IEnumerator GetAccountsGreaterThan1000AlgoShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var response = await AlgoApiClientSettings.Indexer.GetAccounts(currencyGreaterThan: 1000);
@@ -47,8 +48,8 @@ public class IndexerClientTest : IndexerClientTestFixture
     [UnityTest]
     public IEnumerator GetAccountTransactionsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        await MakePaymentTransaction(10_000);
-        Address accountAddress = AlgoApiClientSettings.AccountMnemonic.ToPrivateKey().ToPublicKey();
+        await MakePaymentTransaction(100_000);
+        Address accountAddress = PublicKey;
         var response = await AlgoApiClientSettings.Indexer.GetAccountTransactions(accountAddress);
         AssertOkay(response.Error);
     });
@@ -77,6 +78,7 @@ public class IndexerClientTest : IndexerClientTestFixture
     });
 
     [UnityTest]
+    [Ignore("This feature is disabled")]
     public IEnumerator GetLogicSigTransactionsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var response = await AlgoApiClientSettings.Indexer.GetTransactions(sigType: SignatureType.LogicSig);

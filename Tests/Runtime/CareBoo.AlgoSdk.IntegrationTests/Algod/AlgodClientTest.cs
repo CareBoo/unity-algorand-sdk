@@ -120,15 +120,14 @@ public class AlgodClientTest : AlgodClientTestFixture
         var (_, txnParams) = await AlgoApiClientSettings.Algod.GetSuggestedParams();
         var receiver = AlgoSdk.Crypto.Random.Bytes<Address>();
 
-        using var kp = AccountPrivateKey.ToKeyPair();
-        var txn1 = Transaction.Payment(kp.PublicKey, txnParams, receiver, 100_000L);
-        var txn2 = Transaction.Payment(kp.PublicKey, txnParams, receiver, 200_000L);
+        var txn1 = Transaction.Payment(PublicKey, txnParams, receiver, 100_000L);
+        var txn2 = Transaction.Payment(PublicKey, txnParams, receiver, 200_000L);
         var groupId = Transaction.GetGroupId(txn1.GetId(), txn2.GetId());
         txn1.Group = groupId;
         txn2.Group = groupId;
 
-        var signed1 = txn1.Sign(kp.SecretKey);
-        var signed2 = txn2.Sign(kp.SecretKey);
+        var signed1 = await Sign(txn1);
+        var signed2 = await Sign(txn2);
 
         var (err, txid) = await AlgoApiClientSettings.Algod.SendTransactions(signed1, signed2);
         AssertOkay(err);

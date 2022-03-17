@@ -20,7 +20,6 @@ namespace AlgoSdk.WalletConnect
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.WalletConnect.SignTxnsOpts>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.WalletConnect.SignTxnsOpts>().Assign("message", null, (AlgoSdk.WalletConnect.SignTxnsOpts x) => x.Message, (ref AlgoSdk.WalletConnect.SignTxnsOpts x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance, false));
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.WalletConnect.SignTxnsOpts[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.WalletConnect.SignTxnsOpts>.Instance);
             return true;
         }
     }

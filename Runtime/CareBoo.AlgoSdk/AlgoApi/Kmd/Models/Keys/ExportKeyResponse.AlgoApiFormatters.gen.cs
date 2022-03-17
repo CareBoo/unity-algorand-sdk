@@ -20,7 +20,6 @@ namespace AlgoSdk
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ExportKeyResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.ExportKeyResponse>().Assign("error", null, (AlgoSdk.ExportKeyResponse x) => x.Error, (ref AlgoSdk.ExportKeyResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value, false).Assign("message", null, (AlgoSdk.ExportKeyResponse x) => x.Message, (ref AlgoSdk.ExportKeyResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance, false).Assign("private_key", null, (AlgoSdk.ExportKeyResponse x) => x.PrivateKey, (ref AlgoSdk.ExportKeyResponse x, AlgoSdk.PrivateKey value) => x.PrivateKey = value, false));
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ExportKeyResponse[]>(AlgoSdk.Formatters.ArrayFormatter<AlgoSdk.ExportKeyResponse>.Instance);
             return true;
         }
     }

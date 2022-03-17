@@ -152,14 +152,24 @@ namespace AlgoSdk.WebSocket
         {
             lock (ConnectionLock)
             {
-                EventQueue.Enqueue(new WebSocketEvent()
+                var sslProtocolHack = (System.Security.Authentication.SslProtocols)(SslProtocolsHack.Tls12 | SslProtocolsHack.Tls11 | SslProtocolsHack.Tls);
+                //TlsHandshakeFailure
+                if (e.Code == 1015 && Connection.SslConfiguration.EnabledSslProtocols != sslProtocolHack)
                 {
-                    ClientId = 0,
-                    Payload = null,
-                    Type = WebSocketEvent.WebSocketEventType.Close,
-                    Error = null,
-                    Reason = e.Reason
-                });
+                    Connection.SslConfiguration.EnabledSslProtocols = sslProtocolHack;
+                    Connection.Connect();
+                }
+                else
+                {
+                    EventQueue.Enqueue(new WebSocketEvent()
+                    {
+                        ClientId = 0,
+                        Payload = null,
+                        Type = WebSocketEvent.WebSocketEventType.Close,
+                        Error = null,
+                        Reason = e.Reason
+                    });
+                }
             }
         }
 
@@ -191,6 +201,17 @@ namespace AlgoSdk.WebSocket
                     Reason = null,
                 });
             }
+        }
+
+        /// <summary>
+        /// Used as a hack to fix an issue with TLS in websocket-sharp:
+        /// https://github.com/sta/websocket-sharp/issues/219
+        /// </summary>
+        private enum SslProtocolsHack
+        {
+            Tls = 192,
+            Tls11 = 768,
+            Tls12 = 3072
         }
     }
 }

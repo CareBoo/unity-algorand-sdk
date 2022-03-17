@@ -1,2 +1,3 @@
-- [Quickstart](quickstart.md)
+- [Your First Transaction](your_first_transaction.md)
+- [WalletConnect](walletconnect.md)
 - [Troubleshooting](troubleshooting.md)
