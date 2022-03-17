@@ -1,6 +1,5 @@
 using AlgoSdk;
 using UnityEngine;
-using System;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -13,24 +12,6 @@ public static class AlgoApiClientSettings
     public static IndexerClient Indexer => GetJson<IndexerClient>(nameof(Indexer));
 
     public static KmdClient Kmd => GetJson<KmdClient>(nameof(Kmd));
-
-    public static Mnemonic AccountMnemonic
-    {
-        get
-        {
-            var s = GetString(nameof(AccountMnemonic));
-            try
-            {
-                return s;
-            }
-            catch (ArgumentException)
-            {
-                return default;
-            }
-        }
-    }
-
-    public static Address AccountAddress => AccountMnemonic.ToPrivateKey().ToAddress();
 
     public static T GetJson<T>(string propertyPath)
     {

@@ -15,6 +15,7 @@ on:
       - "Tests/**.cs"
       - "Tests/**.asmdef"
       - "**/packages-lock.json"
+  workflow_dispatch:
 
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE_2020 }}
@@ -37,10 +38,20 @@ jobs:
           # - webgl
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Algorand sandbox
+        uses: actions/checkout@v2
+        with:
+          repository: algorand/sandbox
+          path: sandbox
+
+      - name: Start sandbox in dev mode
+        run: cd sandbox && ./sandbox up dev
+
+      - name: Checkout AlgoSdk
         uses: actions/checkout@v2
         with:
           lfs: true
+
       - name: Get Date
         id: get-date
         run: |

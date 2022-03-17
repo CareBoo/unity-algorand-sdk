@@ -1,4 +1,3 @@
-using System.Linq;
 using AlgoSdk;
 using UnityEditor;
 using UnityEditor.UIElements;
@@ -15,9 +14,6 @@ public class ConfigureClientSettingsWindow : EditorWindow
 
     [SerializeField]
     KmdClient kmdClient;
-
-    [SerializeField]
-    Mnemonic accountMnemonic;
 
     TextField accountAddressText;
 
@@ -36,17 +32,11 @@ public class ConfigureClientSettingsWindow : EditorWindow
         var algodClientField = new PropertyField() { bindingPath = nameof(algodClient) };
         var indexerClientField = new PropertyField() { bindingPath = nameof(indexerClient) };
         var kmdClientField = new PropertyField() { bindingPath = nameof(kmdClient) };
-        var accountMnemonicField = new PropertyField() { bindingPath = nameof(accountMnemonic) };
-        accountAddressText = new TextField("Account Address") { isReadOnly = true };
-        var randomizeAccountMnemonicButtonField = new Button(RandomizeAccount) { text = "Randomize Account Mnemonic" };
         var saveButtonField = new Button(Save) { text = "Save" };
 
         root.Add(algodClientField);
         root.Add(indexerClientField);
         root.Add(kmdClientField);
-        root.Add(accountMnemonicField);
-        root.Add(accountAddressText);
-        root.Add(randomizeAccountMnemonicButtonField);
         root.Add(saveButtonField);
         root.Bind(new SerializedObject(this));
     }
@@ -56,7 +46,6 @@ public class ConfigureClientSettingsWindow : EditorWindow
         EditorPrefs.SetString(AlgoApiClientSettings.GetKey(nameof(AlgoApiClientSettings.Algod)), JsonUtility.ToJson(algodClient));
         EditorPrefs.SetString(AlgoApiClientSettings.GetKey(nameof(AlgoApiClientSettings.Indexer)), JsonUtility.ToJson(indexerClient));
         EditorPrefs.SetString(AlgoApiClientSettings.GetKey(nameof(AlgoApiClientSettings.Kmd)), JsonUtility.ToJson(kmdClient));
-        EditorPrefs.SetString(AlgoApiClientSettings.GetKey(nameof(AlgoApiClientSettings.AccountMnemonic)), accountMnemonic.ToString());
     }
 
     void Load()
@@ -64,16 +53,5 @@ public class ConfigureClientSettingsWindow : EditorWindow
         algodClient = AlgoApiClientSettings.Algod;
         indexerClient = AlgoApiClientSettings.Indexer;
         kmdClient = AlgoApiClientSettings.Kmd;
-        accountMnemonic = AlgoApiClientSettings.AccountMnemonic;
-    }
-
-    void Update()
-    {
-        accountAddressText.SetValueWithoutNotify(accountMnemonic.ToPrivateKey().ToAddress().ToString());
-    }
-
-    void RandomizeAccount()
-    {
-        accountMnemonic = AlgoSdk.Crypto.Random.Bytes<PrivateKey>().ToMnemonic();
     }
 }

@@ -10,7 +10,7 @@ public class IndexerClientTest : IndexerClientTestFixture
     [UnityTest]
     public IEnumerator GetAccountShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        Address accountAddress = AlgoApiClientSettings.AccountMnemonic.ToPrivateKey().ToPublicKey();
+        Address accountAddress = PublicKey;
         var response = await AlgoApiClientSettings.Indexer.GetAccount(accountAddress);
         AssertOkay(response.Error);
     });
@@ -48,7 +48,7 @@ public class IndexerClientTest : IndexerClientTestFixture
     public IEnumerator GetAccountTransactionsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         await MakePaymentTransaction(10_000);
-        Address accountAddress = AlgoApiClientSettings.AccountMnemonic.ToPrivateKey().ToPublicKey();
+        Address accountAddress = PublicKey;
         var response = await AlgoApiClientSettings.Indexer.GetAccountTransactions(accountAddress);
         AssertOkay(response.Error);
     });
