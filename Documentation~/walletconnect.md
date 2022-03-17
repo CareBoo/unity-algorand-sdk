@@ -6,10 +6,11 @@ the easiest way to handle signing transactions for the end user.
 
 ## Initiating a WalletConnect session
 
-The process for creating a WalletConnect session is:
+The general process for creating a WalletConnect session is:
 
-1. The Dapp shows the user a QR Code to initiate the handshake between Dapp and Wallet.
-2. The user reads the QR Code with their Wallet, and chooses an account to connect with Dapp.
+1. The Dapp shows the user a QR Code to initiate the handshake between Dapp and Wallet. OR on mobile, the Dapp
+   provides the user a list of wallets to open via [Mobile Linking](#mobile-linking).
+2. The user reads the QR Code with their Wallet OR selects a wallet from a list, and chooses an address to connect with Dapp.
 3. The Dapp receives the confirmation and can begin requesting the Wallet to sign transactions.
 
 In code, this process is:
@@ -40,6 +41,8 @@ Debug.Assert(session.ConnectionStatus == AlgorandWalletConnectSession.Status.Req
 
 // show the user a QR Code
 Texture2D qrCode = handshake.ToQrCodeTexture();
+// OR launch a supported wallet app
+WalletRegistry.PeraWallet.LaunchForConnect(handshake);
 
 // 2. Wait for user to approve the connection
 await session.WaitForConnectionApproval();
@@ -50,11 +53,16 @@ Debug.Assert(session.ConnectionStatus == AlgorandWalletConnectSession.Status.Con
 var someTxnToSign = Transaction.Payment(...);
 someTxnToSign.Sender = session.Accounts[0];
 var walletTransaction = WalletTransaction.New(someTxnToSign);
-var signedTxns = await session.SignTransactions(new[] { walletTransaction });
+// In the case you used a QR Code, you can await immediately.
+var signingTransactions = session.SignTransactions(new[] { walletTransaction });
+// If you are using Mobile Linking, you need to launch the app
+WalletRegistry.PeraWallet.LaunchForSigning();
+var (signErr, signedTxns) = await signingTransactions;
 ```
 
 After sending every transaction to sign, the user will be requested to approve the transaction
-in their Wallet application.
+in their Wallet application. Keep in mind that when using [Mobile Linking](#mobile-linking),
+you will need to launch the app.
 
 ## Handling Session Updates
 
@@ -102,6 +110,43 @@ PlayerPrefs.SetString("users_wallet_connect_session", savedSessionJson);
 PlayerPrefs.Save();
 ```
 
+## Mobile Linking
+
+When users are using your Dapp from a mobile application, they may want to open a native wallet
+on their device. [WalletConnect provides a protocol to do this](https://docs.walletconnect.com/mobile-linking).
+
+To begin linking on mobile, you'll need to use the `WalletRegistry` static class to find supported
+wallets for the current platform. Each time you need the user to approve a request from the wallet, you'll need
+to launch the wallet app.
+
+```csharp
+using AlgoSdk;
+using AlgoSdk.WalletConnect;
+
+var supportedWallets = WalletRegistry.SupportedWalletsForCurrentPlatform;
+
+var session = new AlgorandWalletConnectSession(...);
+var handshakeUrl = await session.StartConnection();
+var chosenWallet = AskUserToChooseWallet(supportedWallets);
+chosenWallet.LaunchForConnect(handshakeUrl);
+
+await session.WaitForConnectionApproval();
+
+AppEntry AskUserToChooseWallet(AppEntry[] supportedWallets)
+{
+    // implement UI to allow user to choose wallet
+}
+```
+
+Additionally, anytime you need to sign a transaction, you'll need to launch the wallet app again.
+
+```csharp
+var signing = await session.SignTransactions(...);
+chosenWallet.LaunchForSigning(session.Version);
+var (signErr, signedTxns) = await signing;
+```
+
 ## Additional Resources
 
 Take a look at the [official Algorand documentation on WalletConnect](https://developer.algorand.org/docs/get-details/walletconnect/) to learn more.
+The [official WalletConnect documentation]("https://docs.walletconnect.com/") is useful as well.
