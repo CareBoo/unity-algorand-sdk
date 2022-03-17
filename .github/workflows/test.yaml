@@ -45,7 +45,7 @@ jobs:
           path: sandbox
 
       - name: Start sandbox in dev mode
-        run: cd sandbox && ./sandbox up dev
+        run: cd sandbox && ./sandbox up dev -v
 
       - name: Checkout AlgoSdk
         uses: actions/checkout@v2
