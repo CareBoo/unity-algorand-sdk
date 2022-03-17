@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [2.1.0-pre.10](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0-pre.9...v2.1.0-pre.10) (2022-03-17)
+
+
+### Bug Fixes
+
+* **formatter:** make sure to skip unknown keys ([a9115af](https://github.com/CareBoo/unity-algorand-sdk/commit/a9115af470ce07e373506a9cc43edd028c96b636))
+* **kmd:** fix multisig serialization ([a48e109](https://github.com/CareBoo/unity-algorand-sdk/commit/a48e109b305f0c607e626eae64bfa6610c191503))
+
 # [2.1.0-pre.9](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0-pre.8...v2.1.0-pre.9) (2022-03-17)
 
 
