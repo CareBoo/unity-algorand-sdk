@@ -61,10 +61,8 @@ public abstract class KmdClientTestFixture : AlgoApiClientTestFixture
             amount: amt
         );
         txn.Note = Encoding.UTF8.GetBytes("hello");
-        var (signErr, signTxnResponse) = await AlgoApiClientSettings.Kmd.SignTransaction(PublicKey, txn.ToSignatureMessage(), walletHandleToken, WalletPassword);
-        AssertOkay(signErr);
-        var signedTxn = signTxnResponse.SignedTransaction;
-        Debug.Log(System.Convert.ToBase64String(signedTxn.ToArray()));
+        var signedTxn = await Sign(txn);
+        Debug.Log(System.Convert.ToBase64String(signedTxn));
         TransactionIdResponse txidResponse = default;
         (error, txidResponse) = await AlgoApiClientSettings.Algod.SendTransaction(signedTxn);
         AssertOkay(error);
@@ -73,7 +71,12 @@ public abstract class KmdClientTestFixture : AlgoApiClientTestFixture
 
     protected async UniTask<byte[]> Sign<T>(T txn) where T : ITransaction
     {
-        var (signError, signResponse) = await AlgoApiClientSettings.Kmd.SignTransaction(PublicKey, txn.ToSignatureMessage(), walletHandleToken, WalletPassword);
+        var (signError, signResponse) = await AlgoApiClientSettings.Kmd.SignTransaction(
+            PublicKey,
+            AlgoApiSerializer.SerializeMessagePack(txn),
+            walletHandleToken,
+            WalletPassword
+        );
         AssertOkay(signError);
         return signResponse.SignedTransaction;
     }

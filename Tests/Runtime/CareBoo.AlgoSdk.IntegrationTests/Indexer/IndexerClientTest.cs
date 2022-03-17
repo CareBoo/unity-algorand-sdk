@@ -48,7 +48,7 @@ public class IndexerClientTest : IndexerClientTestFixture
     [UnityTest]
     public IEnumerator GetAccountTransactionsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        await MakePaymentTransaction(10_000);
+        await MakePaymentTransaction(100_000);
         Address accountAddress = PublicKey;
         var response = await AlgoApiClientSettings.Indexer.GetAccountTransactions(accountAddress);
         AssertOkay(response.Error);
