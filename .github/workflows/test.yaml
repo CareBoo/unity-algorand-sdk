@@ -44,7 +44,7 @@ jobs:
           lfs: true
 
       - name: Start services
-        run: cd .services && docker-compose up
+        run: cd .services && docker-compose up --detach
 
       - name: Get Date
         id: get-date
