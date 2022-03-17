@@ -1,6 +1,7 @@
 .docfx/**
 .github/**
 .husky/**
+.services/**
 .vscode/**
 dist/**
 Documentation~/**/*.meta

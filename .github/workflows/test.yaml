@@ -38,19 +38,13 @@ jobs:
           # - webgl
 
     steps:
-      - name: Checkout Algorand sandbox
-        uses: actions/checkout@v2
-        with:
-          repository: algorand/sandbox
-          path: sandbox
-
-      - name: Start sandbox in dev mode
-        run: cd sandbox && ./sandbox up dev -v
-
       - name: Checkout AlgoSdk
         uses: actions/checkout@v2
         with:
           lfs: true
+
+      - name: Start services
+        run: cd sandbox && docker-compose up
 
       - name: Get Date
         id: get-date
