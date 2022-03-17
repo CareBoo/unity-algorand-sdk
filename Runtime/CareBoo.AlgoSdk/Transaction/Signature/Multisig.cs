@@ -15,19 +15,19 @@ namespace AlgoSdk
         /// <summary>
         /// Subsignatures representing this multisig.
         /// </summary>
-        [AlgoApiField("subsignature", "subsig")]
+        [AlgoApiField("subsig", "subsig")]
         public Subsig[] Subsigs;
 
         /// <summary>
         /// Number of signatures required for the multisig to be valid.
         /// </summary>
-        [AlgoApiField("threshold", "thr")]
+        [AlgoApiField("thr", "thr")]
         public byte Threshold;
 
         /// <summary>
         /// Version of the multisig.
         /// </summary>
-        [AlgoApiField("version", "v")]
+        [AlgoApiField("v", "v")]
         public byte Version;
 
         /// <summary>
@@ -121,13 +121,13 @@ namespace AlgoSdk
             /// <summary>
             /// The address for this subsig.
             /// </summary>
-            [AlgoApiField("public-key", "pk")]
+            [AlgoApiField("pk", "pk")]
             public Ed25519.PublicKey PublicKey;
 
             /// <summary>
             /// The signed message if it exists.
             /// </summary>
-            [AlgoApiField("signature", "s")]
+            [AlgoApiField("s", "s")]
             public Sig Sig;
 
             public bool Equals(Subsig other)
