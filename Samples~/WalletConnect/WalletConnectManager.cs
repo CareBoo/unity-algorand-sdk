@@ -11,7 +11,7 @@ public class WalletConnectManager : MonoBehaviour
 
     public string BridgeUrl;
 
-    string url;
+    HandshakeUrl handshake;
 
     Texture2D qrCode;
 
@@ -37,7 +37,7 @@ public class WalletConnectManager : MonoBehaviour
                 var wallet = WalletRegistry.SupportedWalletsForCurrentPlatform[0];
                 if (GUILayout.Button($"Connect to {wallet.Name}"))
                 {
-                    UnityEngine.Application.OpenURL(url);
+                    WalletRegistry.PeraWallet.LaunchForConnect(handshake);
                 }
                 if (GUILayout.Button("Show QR Code"))
                 {
@@ -77,9 +77,8 @@ public class WalletConnectManager : MonoBehaviour
     async UniTaskVoid StartWalletConnect()
     {
         session = new AlgorandWalletConnectSession(DappMeta, BridgeUrl);
-        var handshakeUrl = await session.StartConnection();
-        url = handshakeUrl.Url;
-        qrCode = handshakeUrl.ToQrCodeTexture();
+        handshake = await session.StartConnection();
+        qrCode = handshake.ToQrCodeTexture();
         await session.WaitForConnectionApproval();
         Debug.Log($"accounts:\n{AlgoApiSerializer.SerializeJson(session.Accounts)}");
     }
@@ -110,7 +109,7 @@ public class WalletConnectManager : MonoBehaviour
 
         var signingTransactions = session.SignTransactions(new[] { walletTxn });
         if (launchApp)
-            UnityEngine.Application.OpenURL(session.DappMeta.Url.Replace("https://", "algorand://"));
+            WalletRegistry.PeraWallet.LaunchForSigning();
         var (err, signedTxns) = await session.SignTransactions(new[] { walletTxn });
         if (err)
         {

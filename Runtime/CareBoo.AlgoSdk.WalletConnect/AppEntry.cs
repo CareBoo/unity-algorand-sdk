@@ -20,6 +20,33 @@ namespace AlgoSdk.WalletConnect
         public AppLinkingScheme Desktop;
         public AppMetadata Metadata;
 
+        public void LaunchForConnect(HandshakeUrl handshake) =>
+            LaunchApp(handshake.Url);
+
+        public void LaunchForSigning(string walletConnectVersion = "1") =>
+            LaunchApp($"wc:00e46b69-d0cc-4b3e-b6a2-cee442f97188@{walletConnectVersion}");
+
+        void LaunchApp(string url)
+        {
+            var deepLinkUrl = FormatUrlForDeepLink(url);
+            UnityEngine.Application.OpenURL(deepLinkUrl);
+        }
+
+        string FormatUrlForDeepLink(string url)
+        {
+#if UNITY_IPHONE
+            if (!string.IsNullOrEmpty(Mobile.Universal))
+            {
+                return $"{Mobile.Universal}/wc?uri={url}";
+            }
+            else if (!string.IsNullOrEmpty(Mobile.Native))
+            {
+                return $"{Mobile.Native}//wc?uri={url}";
+            }
+#endif
+            return url;
+        }
+
         [Serializable]
         public struct ImageUrls
         {
