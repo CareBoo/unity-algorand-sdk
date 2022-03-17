@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [2.1.0-pre.11](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0-pre.10...v2.1.0-pre.11) (2022-03-17)
+
+
+### Features
+
+* **walletconnect:** add `LaunchApp[...]` to `AppEntry` ([f822855](https://github.com/CareBoo/unity-algorand-sdk/commit/f822855e1ab81a8a768fac359e65f87041e90de2))
+
 # [2.1.0-pre.10](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0-pre.9...v2.1.0-pre.10) (2022-03-17)
 
 
