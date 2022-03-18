@@ -63,7 +63,7 @@ namespace AlgoSdk.WalletConnect
             MultisigMetadata msig = default,
             Address[] signers = default
             )
-            where T : struct, ITransaction, IEquatable<T>
+            where T : ITransaction
         {
             return new WalletTransaction
             {
