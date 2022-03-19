@@ -30,7 +30,7 @@ namespace AlgoSdk
         /// <summary>
         /// Transaction specific arguments accessed from the application's approval-program and clear-state-program.
         /// </summary>
-        CompiledTeal AppArguments { get; set; }
+        CompiledTeal[] AppArguments { get; set; }
 
         /// <summary>
         /// List of accounts in addition to the sender that may be accessed from the application's approval-program and clear-state-program.
@@ -94,7 +94,7 @@ namespace AlgoSdk
         }
 
         [AlgoApiField(null, "apaa")]
-        public CompiledTeal AppArguments
+        public CompiledTeal[] AppArguments
         {
             get => ApplicationCallParams.AppArguments;
             set => ApplicationCallParams.AppArguments = value;
@@ -156,8 +156,8 @@ namespace AlgoSdk
         public static AppCallTxn AppCreate(
             Address sender,
             TransactionParams txnParams,
-            byte[] approvalProgram,
-            byte[] clearStateProgram,
+            CompiledTeal approvalProgram,
+            CompiledTeal clearStateProgram,
             StateSchema globalStateSchema = default,
             StateSchema localStateSchema = default,
             ulong extraProgramPages = default
@@ -192,7 +192,7 @@ namespace AlgoSdk
             Address sender,
             TransactionParams txnParams,
             ulong applicationId,
-            byte[] appArguments = default,
+            CompiledTeal[] appArguments = default,
             Address[] accounts = default,
             ulong[] foreignApps = default,
             ulong[] foreignAssets = default
@@ -227,7 +227,7 @@ namespace AlgoSdk
             Address sender,
             TransactionParams txnParams,
             ulong applicationId,
-            byte[] appArguments = default,
+            CompiledTeal[] appArguments = default,
             Address[] accounts = default,
             ulong[] foreignApps = default,
             ulong[] foreignAssets = default
@@ -264,7 +264,7 @@ namespace AlgoSdk
             TransactionParams txnParams,
             ulong applicationId,
             OnCompletion onComplete = OnCompletion.NoOp,
-            byte[] appArguments = default,
+            CompiledTeal[] appArguments = default,
             Address[] accounts = default,
             ulong[] foreignApps = default,
             ulong[] foreignAssets = default
@@ -299,7 +299,7 @@ namespace AlgoSdk
             Address sender,
             TransactionParams txnParams,
             ulong applicationId,
-            byte[] appArguments = default,
+            CompiledTeal[] appArguments = default,
             Address[] accounts = default,
             ulong[] foreignApps = default,
             ulong[] foreignAssets = default
@@ -337,10 +337,10 @@ namespace AlgoSdk
             Address sender,
             TransactionParams txnParams,
             ulong applicationId,
-            byte[] approvalProgram = default,
-            byte[] clearStateProgram = default,
+            CompiledTeal approvalProgram = default,
+            CompiledTeal clearStateProgram = default,
             ulong extraProgramPages = default,
-            byte[] appArguments = default,
+            CompiledTeal[] appArguments = default,
             Address[] accounts = default,
             ulong[] foreignApps = default,
             ulong[] foreignAssets = default
@@ -378,7 +378,7 @@ namespace AlgoSdk
             Address sender,
             TransactionParams txnParams,
             ulong applicationId,
-            byte[] appArguments = default,
+            CompiledTeal[] appArguments = default,
             Address[] accounts = default,
             ulong[] foreignApps = default,
             ulong[] foreignAssets = default
@@ -517,7 +517,7 @@ namespace AlgoSdk
         }
 
         [AlgoApiField(null, "apaa")]
-        public CompiledTeal AppArguments
+        public CompiledTeal[] AppArguments
         {
             get => @params.AppArguments;
             set => @params.AppArguments = value;
@@ -607,7 +607,7 @@ namespace AlgoSdk
 
             [AlgoApiField("application-args", "apaa")]
             [Tooltip("Transaction specific arguments accessed from the application's approval-program and clear-state-program.")]
-            public CompiledTeal AppArguments;
+            public CompiledTeal[] AppArguments;
 
             [AlgoApiField("accounts", "apat")]
             [Tooltip("List of accounts in addition to the sender that may be accessed from the application's approval-program and clear-state-program.")]
@@ -638,9 +638,9 @@ namespace AlgoSdk
                 return ApplicationId.Equals(other.ApplicationId)
                     && OnComplete.Equals(other.OnComplete)
                     && ArrayComparer.Equals(Accounts, other.Accounts)
-                    && ArrayComparer.Equals(ApprovalProgram, other.ApprovalProgram)
+                    && ApprovalProgram.Equals(other.ApprovalProgram)
                     && ArrayComparer.Equals(AppArguments, other.AppArguments)
-                    && ArrayComparer.Equals(ClearStateProgram, other.ClearStateProgram)
+                    && ClearStateProgram.Equals(other.ClearStateProgram)
                     && ArrayComparer.Equals(ForeignApps, other.ForeignApps)
                     && ArrayComparer.Equals(ForeignAssets, other.ForeignAssets)
                     && GlobalStateSchema.Equals(other.GlobalStateSchema)
