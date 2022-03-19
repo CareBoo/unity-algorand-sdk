@@ -1,5 +1,4 @@
 using System;
-using AlgoSdk.Formatters;
 
 namespace AlgoSdk
 {
@@ -22,13 +21,13 @@ namespace AlgoSdk
     public partial struct EvalDelta
         : IEquatable<EvalDelta>
     {
-        [AlgoApiField("action", "at")]
+        [AlgoApiField("action", "action")]
         public EvalDeltaAction Action;
 
-        [AlgoApiField("bytes", "bs")]
+        [AlgoApiField("bytes", "bytes")]
         public TealBytes Bytes;
 
-        [AlgoApiField("uint", "ui")]
+        [AlgoApiField("uint", "uint")]
         public ulong UInt;
 
         public bool Equals(EvalDelta other)
