@@ -6,6 +6,9 @@ namespace AlgoSdk
     /// <summary>
     /// A transaction found in a <see cref="BlockResponse"/> from <see cref="IAlgodClient.GetBlock"/>.
     /// </summary>
+    /// <remarks>
+    /// This is a `SignedTxnInBlock` from the algorand go project.
+    /// </remarks>
     [AlgoApiObject]
     public partial struct BlockTransaction
         : IEquatable<BlockTransaction>
@@ -47,14 +50,32 @@ namespace AlgoSdk
             set => Transaction.Signature.LogicSig = value;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [AlgoApiField("hgi", "hgi")]
         public Optional<bool> Hgi;
 
+        /// <summary>
+        /// Receiver Rewards
+        /// </summary>
         [AlgoApiField("rr", "rr")]
-        public ulong Rr;
+        public ulong ReceiverRewards;
 
+        /// <summary>
+        /// Sender rewards
+        /// </summary>
         [AlgoApiField("rs", "rs")]
-        public ulong Rs;
+        public ulong SenderRewards;
+
+        /// <summary>
+        /// Close Rewards
+        /// </summary>
+        [AlgoApiField("rc", "rc")]
+        public ulong CloseRewards;
+
+        [AlgoApiField("dt", "dt")]
+        public EvalDelta EvalDelta;
 
         public bool Equals(BlockTransaction other)
         {
@@ -65,5 +86,11 @@ namespace AlgoSdk
         {
             return blockTxn.Transaction;
         }
+
+        [Obsolete("Replaced with SenderRewards")]
+        public ulong Rs { get => SenderRewards; set => SenderRewards = value; }
+
+        [Obsolete("Replaced with ReceiverRewards")]
+        public ulong Rr { get => ReceiverRewards; set => ReceiverRewards = value; }
     }
 }
