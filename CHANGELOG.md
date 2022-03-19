@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [2.1.1-pre.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0...v2.1.1-pre.1) (2022-03-19)
+
+
+### Bug Fixes
+
+* **appcalltxn:** fix AppArguments not in correct format ([7845c79](https://github.com/CareBoo/unity-algorand-sdk/commit/7845c7979d3c925db953dc36db4d0647ae8c5e39)), closes [#96](https://github.com/CareBoo/unity-algorand-sdk/issues/96)
+* **walletconnect:** fix issue where WalletTransaction.New requires unnecessary type constraints ([09ce3f4](https://github.com/CareBoo/unity-algorand-sdk/commit/09ce3f4b48f60fc6b544349c2dc6da8894521fcf))
+
 # [2.1.0-pre.12](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0-pre.11...v2.1.0-pre.12) (2022-03-19)
 
 
