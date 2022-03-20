@@ -45,5 +45,10 @@ namespace AlgoSdk
             for (var i = 0; i < bytes.Length; i++)
                 tar[i] = bytes[i];
         }
+
+        public static int BytesRequiredForBase64Encoding(int currentBytes)
+        {
+            return (currentBytes + 2) / 3 * 4;
+        }
     }
 }

@@ -28,8 +28,14 @@ public class WalletConnectManager : MonoBehaviour
 
     void OnGUI()
     {
+        GUI.skin.label.fontSize = 24;
+        GUI.skin.label.alignment = TextAnchor.MiddleCenter;
+        GUI.skin.button.alignment = TextAnchor.MiddleCenter;
+        GUILayout.BeginArea(new Rect(0, 0, Screen.width, Screen.height), new GUIStyle(GUI.skin.box) { normal = new GUIStyleState() { background = GUI.skin.button.normal.background } });
+        GUILayout.FlexibleSpace();
         var status = session?.ConnectionStatus ?? AlgorandWalletConnectSession.Status.Unknown;
         GUILayout.Label($"WalletConnect Connection Status: {status}");
+        GUILayout.Space(20);
         if (status == AlgorandWalletConnectSession.Status.RequestingConnection)
         {
             if (launchApp && WalletRegistry.SupportedWalletsForCurrentPlatform.Length > 0)
@@ -39,6 +45,7 @@ public class WalletConnectManager : MonoBehaviour
                 {
                     WalletRegistry.PeraWallet.LaunchForConnect(handshake);
                 }
+                GUILayout.Space(5);
                 if (GUILayout.Button("Show QR Code"))
                 {
                     launchApp = false;
@@ -46,11 +53,12 @@ public class WalletConnectManager : MonoBehaviour
             }
             else
             {
-                GUILayout.Button(qrCode, GUIStyle.none);
-                if (WalletRegistry.SupportedWalletsForCurrentPlatform.Length > 0
-                    && GUILayout.Button("Open Wallet App"))
+                GUILayout.Button(qrCode, new GUIStyle() { alignment = TextAnchor.MiddleCenter });
+                if (WalletRegistry.SupportedWalletsForCurrentPlatform.Length > 0)
                 {
-                    launchApp = true;
+                    GUILayout.Space(5);
+                    if (GUILayout.Button("Open Wallet App"))
+                        launchApp = true;
                 }
             }
         }
@@ -58,6 +66,7 @@ public class WalletConnectManager : MonoBehaviour
         if (status == AlgorandWalletConnectSession.Status.Connected)
         {
             GUILayout.Label($"Connected Account: {session.Accounts[0]}");
+            GUILayout.Space(5);
             switch (txnStatus)
             {
                 case TransactionStatus.None:
@@ -72,6 +81,8 @@ public class WalletConnectManager : MonoBehaviour
                     break;
             }
         }
+        GUILayout.FlexibleSpace();
+        GUILayout.EndArea();
     }
 
     async UniTaskVoid StartWalletConnect()

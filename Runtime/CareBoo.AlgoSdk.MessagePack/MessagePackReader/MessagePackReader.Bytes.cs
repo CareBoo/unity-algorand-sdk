@@ -43,7 +43,10 @@ namespace AlgoSdk.MessagePack
             bytes = default;
             var resetOffset = offset;
             if (!TryGetBytesLength(out int length))
+            {
+                offset = resetOffset;
                 return false;
+            }
 
             if (offset + length >= data.Length)
             {
@@ -83,8 +86,6 @@ namespace AlgoSdk.MessagePack
                     break;
                 case MessagePackCode.Bin32:
                     return TryReadBigEndian(out length);
-                default:
-                    throw InvalidCode(code);
             }
 
             length = 0;

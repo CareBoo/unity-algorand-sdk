@@ -1,6 +1,6 @@
 using AlgoSdk.Json;
-using AlgoSdk.MessagePack;
 using AlgoSdk.LowLevel;
+using AlgoSdk.MessagePack;
 using Unity.Collections;
 
 namespace AlgoSdk.Formatters
@@ -73,10 +73,39 @@ namespace AlgoSdk.Formatters
 
         public TByteArray Deserialize(ref MessagePackReader reader)
         {
-            var bytes = reader.ReadBytes();
             TByteArray result = default;
-            for (var i = 0; i < bytes.Length; i++)
-                result[i] = bytes[i];
+            if (reader.TryReadBytes(out var bytes))
+            {
+                for (var i = 0; i < bytes.Length; i++)
+                    result[i] = bytes[i];
+                return result;
+            }
+            var bytesRequiredForBase64 = Base64Encoding.BytesRequiredForBase64Encoding(result.Length);
+            if (bytesRequiredForBase64 <= FixedString64Bytes.UTF8MaxLengthInBytes)
+            {
+                var fs = new FixedString64Bytes();
+                reader.ReadString(ref fs);
+                result.CopyFromBase64(fs);
+            }
+            else if (bytesRequiredForBase64 <= FixedString128Bytes.UTF8MaxLengthInBytes)
+            {
+                var fs = new FixedString128Bytes();
+                reader.ReadString(ref fs);
+                result.CopyFromBase64(fs);
+            }
+            else
+            {
+                var text = new NativeText(Allocator.Temp);
+                try
+                {
+                    reader.ReadString(ref text);
+                    result.CopyFromBase64(text);
+                }
+                finally
+                {
+                    text.Dispose();
+                }
+            }
             return result;
         }
 
