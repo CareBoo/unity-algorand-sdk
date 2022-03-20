@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [2.2.0-pre.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.1-pre.2...v2.2.0-pre.1) (2022-03-20)
+
+
+### Features
+
+* **accounts:** add `MinBalance` to allow developers to estimate min balances ([856c11a](https://github.com/CareBoo/unity-algorand-sdk/commit/856c11ae3ae3339caf33a8f21bcca52a8d8e69d4)), closes [#104](https://github.com/CareBoo/unity-algorand-sdk/issues/104)
+
 ## [2.1.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0...v2.1.1) (2022-03-20)
 
 
