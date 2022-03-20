@@ -23,7 +23,7 @@ namespace AlgoSdk
         Address CloseRemainderTo { get; set; }
     }
 
-    public partial struct Transaction
+    public partial struct Transaction : IPaymentTxn
     {
         [AlgoApiField(null, "rcv")]
         public Address Receiver
