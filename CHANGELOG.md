@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [2.1.1-pre.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.1-pre.1...v2.1.1-pre.2) (2022-03-20)
+
+
+### Bug Fixes
+
+* **block:** fix `BlockTransaction` field names ([ead4f5d](https://github.com/CareBoo/unity-algorand-sdk/commit/ead4f5d08aa954e9db7930ef73428b8253c64699))
+* **formatters:** fix `EvalDelta` not deserializing from msgpack properly ([827e6d1](https://github.com/CareBoo/unity-algorand-sdk/commit/827e6d1e5fe7f0e89e5f9043890943a7ae6c0140)), closes [#107](https://github.com/CareBoo/unity-algorand-sdk/issues/107)
+
 ## [2.1.1-pre.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0...v2.1.1-pre.1) (2022-03-19)
 
 
