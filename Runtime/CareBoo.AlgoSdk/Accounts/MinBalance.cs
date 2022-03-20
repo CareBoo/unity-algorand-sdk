@@ -130,8 +130,8 @@ namespace AlgoSdk
                 applicationsOptedIn.HasValue ? applicationsOptedIn.Value : ApplicationsOptedIn,
                 applicationsCreated.HasValue ? applicationsCreated.Value : ApplicationsCreated,
                 applicationExtraPages.HasValue ? applicationExtraPages.Value : ApplicationExtraPages,
-                applicationSchemaUints.HasValue ? applicationSchemaUints : ApplicationSchemaUints,
-                applicationSchemaByteSlices.HasValue ? applicationSchemaByteSlices : ApplicationSchemaByteSlices
+                applicationSchemaUints.HasValue ? applicationSchemaUints.Value : ApplicationSchemaUints,
+                applicationSchemaByteSlices.HasValue ? applicationSchemaByteSlices.Value : ApplicationSchemaByteSlices
             );
         }
 
