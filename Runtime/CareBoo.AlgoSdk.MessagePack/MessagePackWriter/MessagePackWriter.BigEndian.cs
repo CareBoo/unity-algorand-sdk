@@ -12,26 +12,23 @@ namespace AlgoSdk.MessagePack
 
         public void WriteBigEndian(ushort value)
         {
-            unchecked
-            {
-                for (var i = 8; i >= 0; i -= 8)
-                    data.Add((byte)(value >> i));
-            }
+            var offset = data.Length;
+            data.Length += 2;
+            value.CopyToNativeBytesBigEndian(ref data, offset);
         }
 
         public void WriteBigEndian(uint value)
         {
-            unchecked
-            {
-                for (var i = 24; i >= 0; i -= 8)
-                    data.Add((byte)(value >> i));
-            }
+            var offset = data.Length;
+            data.Length += 4;
+            value.CopyToNativeBytesBigEndian(ref data, offset);
         }
 
         public void WriteBigEndian(ulong value)
         {
-            using var bytes = value.ToBytesBigEndian(Allocator.Temp);
-            data.AddRange(bytes);
+            var offset = data.Length;
+            data.Length += 8;
+            value.CopyToNativeBytesBigEndian(ref data, offset);
         }
     }
 }
