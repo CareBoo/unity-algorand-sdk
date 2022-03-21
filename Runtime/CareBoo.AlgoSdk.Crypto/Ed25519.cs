@@ -203,14 +203,13 @@ namespace AlgoSdk.Crypto
             }
         }
 
-        [Serializable]
         [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
         public struct Signature
             : IByteArray
             , IEquatable<Signature>
         {
             public const int SizeBytes = 64;
-            [FieldOffset(0), SerializeField] internal FixedBytes64 buffer;
+            [FieldOffset(0)] internal FixedBytes64 buffer;
 
             public byte this[int index]
             {

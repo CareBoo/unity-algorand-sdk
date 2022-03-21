@@ -16,7 +16,7 @@ namespace AlgoSdk
         , ISignedTxn<Transaction>
         , IApplyData
     {
-        SignedTransaction signedTxn;
+        SignedTxn signedTxn;
 
         ApplyData applyData;
 
@@ -44,8 +44,8 @@ namespace AlgoSdk
         [AlgoApiField("txn", "txn")]
         public Transaction Txn
         {
-            get => signedTxn.Transaction;
-            set => signedTxn.Transaction = value;
+            get => signedTxn.Txn;
+            set => signedTxn.Txn = value;
         }
 
         [AlgoApiField("sgnr", "sgnr")]
