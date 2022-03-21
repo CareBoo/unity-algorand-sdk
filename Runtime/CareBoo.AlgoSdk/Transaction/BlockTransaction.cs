@@ -147,7 +147,6 @@ namespace AlgoSdk
         public Optional<bool> Hgi { get; set; }
 
         [Obsolete("Use Txn instead.")]
-        [Tooltip("The transaction")]
         public Transaction Transaction
         {
             get => txn.Txn;
