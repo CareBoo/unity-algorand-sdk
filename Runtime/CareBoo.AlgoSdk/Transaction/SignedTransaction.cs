@@ -3,6 +3,35 @@ using AlgoSdk.Formatters;
 
 namespace AlgoSdk
 {
+    public interface ISignedTxn<TTxn>
+        where TTxn : ITransaction
+    {
+        /// <summary>
+        /// The signature used to sign the transaction if there was one.
+        /// </summary>
+        Sig Sig { get; set; }
+
+        /// <summary>
+        /// The multi-signature used to sign the transaction if there was one.
+        /// </summary>
+        Multisig Msig { get; set; }
+
+        /// <summary>
+        /// The logic sig used to sign the transaction if there was one.
+        /// </summary>
+        LogicSig Lsig { get; set; }
+
+        /// <summary>
+        /// The transaction signed.
+        /// </summary>
+        TTxn Txn { get; set; }
+
+        /// <summary>
+        /// The signer of the transaction if this account was rekeyed.
+        /// </summary>
+        Address AuthAddr { get; set; }
+    }
+
     /// <summary>
     /// An untyped signed transaction. See <see cref="Signed{}"/> for a typed version.
     /// This is used as a wrapper around <see cref="Transaction"/> for the Algorand API.
@@ -11,6 +40,7 @@ namespace AlgoSdk
     [Serializable]
     public partial struct SignedTransaction
         : IEquatable<SignedTransaction>
+        , ISignedTxn<Transaction>
     {
         /// <summary>
         /// The untyped <see cref="Transaction"/> backing this struct.
@@ -26,6 +56,32 @@ namespace AlgoSdk
             set => Transaction.Signature = value;
         }
 
+        public Transaction Txn
+        {
+            get => Transaction;
+            set => Transaction = value;
+        }
+
+        public Sig Sig
+        {
+            get => Signature.Sig;
+            set => Signature = value;
+        }
+
+        public Multisig Msig
+        {
+            get => Signature.Multisig;
+            set => Signature = value;
+        }
+
+        public LogicSig Lsig
+        {
+            get => Signature.LogicSig;
+            set => Signature = value;
+        }
+
+        public Address AuthAddr { get; set; }
+
         public bool Equals(SignedTransaction other)
         {
             return Transaction.Equals(other.Transaction);
@@ -40,6 +96,7 @@ namespace AlgoSdk
     [Serializable]
     public partial struct Signed<TTransaction>
         : IEquatable<Signed<TTransaction>>
+        , ISignedTxn<TTransaction>
         where TTransaction : ITransaction
     {
         /// <summary>
@@ -51,6 +108,32 @@ namespace AlgoSdk
         /// The signature this transaction was signed with.
         /// </summary>
         public TransactionSignature Signature;
+
+        public TTransaction Txn
+        {
+            get => Transaction;
+            set => Transaction = value;
+        }
+
+        public Sig Sig
+        {
+            get => Signature.Sig;
+            set => Signature = value;
+        }
+
+        public Multisig Msig
+        {
+            get => Signature.Multisig;
+            set => Signature = value;
+        }
+
+        public LogicSig Lsig
+        {
+            get => Signature.LogicSig;
+            set => Signature = value;
+        }
+
+        public Address AuthAddr { get; set; }
 
         public bool Equals(Signed<TTransaction> other)
         {
