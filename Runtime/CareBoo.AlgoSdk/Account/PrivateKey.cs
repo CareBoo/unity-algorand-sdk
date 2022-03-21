@@ -31,7 +31,7 @@ namespace AlgoSdk
         }
 
         public byte[] SignTransaction<T>(T txn)
-            where T : ITransaction
+            where T : ITransaction, IEquatable<T>
         {
             using var kp = ToKeyPair();
             return AlgoApiSerializer.SerializeMessagePack(txn.Sign(kp.SecretKey));

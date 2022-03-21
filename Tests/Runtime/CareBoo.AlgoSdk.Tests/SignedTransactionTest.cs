@@ -10,8 +10,8 @@ public class SignedTransactionTest
     public void SizeOfSignedTransactionShouldBeUnder4KB()
     {
         const int MAX_BYTES = 4000;
-        var size = UnsafeUtility.SizeOf<SignedTransaction>();
-        UnityEngine.Debug.Log($"Size of {nameof(SignedTransaction)}: {size}");
+        var size = UnsafeUtility.SizeOf<SignedTxn>();
+        UnityEngine.Debug.Log($"Size of {nameof(SignedTxn)}: {size}");
         Assert.IsTrue(size <= MAX_BYTES);
     }
 
@@ -36,7 +36,7 @@ public class SignedTransactionTest
         ).Sign(kp.SecretKey);
         using var serialized = AlgoApiSerializer.SerializeMessagePack(txn, Allocator.Temp);
         UnityEngine.Debug.Log($"Serialized bytes: {System.Convert.ToBase64String(serialized.ToArray())}");
-        var deserialized = AlgoApiSerializer.Deserialize<Signed<PaymentTxn>>(serialized.AsArray(), ContentType.MessagePack);
+        var deserialized = AlgoApiSerializer.Deserialize<SignedTxn<PaymentTxn>>(serialized.AsArray(), ContentType.MessagePack);
         Assert.IsTrue(txn.Equals(deserialized));
     }
 }

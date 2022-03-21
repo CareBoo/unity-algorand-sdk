@@ -110,11 +110,14 @@ namespace AlgoSdk
         /// Sign this transaction with a private key.
         /// </summary>
         /// <param name="secretKey">The account private key to use to sign this transaction.</param>
-        /// <returns>A <see cref="SignedTransaction"/>.</returns>
-        public SignedTransaction Sign(Ed25519.SecretKeyHandle secretKey)
+        /// <returns>A <see cref="SignedTxn"/>.</returns>
+        public SignedTxn Sign(Ed25519.SecretKeyHandle secretKey)
         {
-            Signature = GetSignature(secretKey);
-            return new SignedTransaction { Transaction = this };
+            return new SignedTxn
+            {
+                Txn = this,
+                Sig = GetSignature(secretKey)
+            };
         }
 
         /// <summary>

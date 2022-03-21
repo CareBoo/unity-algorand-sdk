@@ -223,7 +223,7 @@ namespace AlgoSdk
                 ;
         }
 
-        public AlgoApiRequest.Sent<TransactionIdResponse> SendTransaction<T>(Signed<T> txn)
+        public AlgoApiRequest.Sent<TransactionIdResponse> SendTransaction<T>(SignedTxn<T> txn)
             where T : struct, ITransaction, IEquatable<T>
         {
             using var data = AlgoApiSerializer.SerializeMessagePack(txn, Allocator.Persistent);
@@ -237,7 +237,7 @@ namespace AlgoSdk
         }
 
         public AlgoApiRequest.Sent<TransactionIdResponse> SendTransactions(
-            params SignedTransaction[] txns
+            params SignedTxn[] txns
         )
         {
             using var bytes = new NativeList<byte>(Allocator.Persistent);

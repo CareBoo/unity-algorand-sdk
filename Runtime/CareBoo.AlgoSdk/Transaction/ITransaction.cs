@@ -78,14 +78,18 @@ namespace AlgoSdk
 
     public static class TransactionExtensions
     {
-        public static Signed<T> Sign<T>(
+        public static SignedTxn<T> Sign<T>(
             this T txn,
             Ed25519.SecretKeyHandle secretKey
             )
-            where T : ITransaction
+            where T : ITransaction, IEquatable<T>
         {
             var signature = txn.GetSignature(secretKey);
-            return new Signed<T> { Transaction = txn, Signature = signature };
+            return new SignedTxn<T>
+            {
+                Txn = txn,
+                Sig = signature
+            };
         }
 
         public static Sig GetSignature<T>(
@@ -124,14 +128,14 @@ namespace AlgoSdk
             this T txn,
             TransactionParams txnParams
             )
-            where T : ITransaction
+            where T : ITransaction, IEquatable<T>
         {
             var fee = txnParams.FlatFee ? txnParams.Fee : txnParams.Fee * (ulong)txn.EstimateBlockSizeBytes();
             return math.max(fee, txnParams.MinFee);
         }
 
         public static int EstimateBlockSizeBytes<T>(this T txn)
-            where T : ITransaction
+            where T : ITransaction, IEquatable<T>
         {
             var keyPair = AlgoSdk.Crypto.Random.Bytes<Ed25519.Seed>().ToKeyPair();
             var signedTxn = txn.Sign(keyPair.SecretKey);

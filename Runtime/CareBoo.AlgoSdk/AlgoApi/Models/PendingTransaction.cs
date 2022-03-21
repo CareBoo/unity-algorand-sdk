@@ -108,7 +108,7 @@ namespace AlgoSdk
         /// </summary>
         [AlgoApiField("txn", "txn")]
         [Tooltip("The raw signed transaction.")]
-        public SignedTransaction Transaction;
+        public SignedTxn Transaction;
 
         public bool Equals(PendingTransaction other)
         {

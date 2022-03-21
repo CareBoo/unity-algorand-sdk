@@ -19,8 +19,8 @@ namespace AlgoSdk.Editor.CodeGen
             if (fields == null)
                 throw new ArgumentNullException(nameof(fields));
 
-            var formatterType = typeof(AlgoApiObjectFormatter<>).MakeGenericType(type);
-            expression = new CodeObjectCreateExpression(formatterType);
+            var formatterTypeReference = new CodeTypeReference(typeof(AlgoApiObjectFormatter<>).SafeFullName(), new CodeTypeReference(type.FullNameExpression()));
+            expression = new CodeObjectCreateExpression(formatterTypeReference);
             foreach (var field in fields)
             {
                 expression = new CodeMethodInvokeExpression(
@@ -65,7 +65,7 @@ namespace AlgoSdk.Editor.CodeGen
                 return elementComparerType;
 
             var equatableType = typeof(IEquatable<>).MakeGenericType(type);
-            if (type.IsValueType && type.GetInterfaces().Any(t => t == equatableType))
+            if (type.GetInterfaces().Any(t => t == equatableType))
                 return null;
 
             if (type.IsArray)
@@ -89,7 +89,7 @@ namespace AlgoSdk.Editor.CodeGen
                 };
             }
 
-            throw new NotSupportedException($"Could not find equality comparer or it doesn't implement `IEquatable<>` for type '{type.FullName}'");
+            throw new NotSupportedException($"Could not find equality comparer or it doesn't implement `IEquatable<>` for type '{type.Namespace + "." + type.Name}'");
         }
     }
 }
