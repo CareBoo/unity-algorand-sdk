@@ -1,5 +1,5 @@
 using System;
-using AlgoSdk.Collections;
+using AlgoSdk;
 using Unity.Collections;
 
 namespace AlgoSdk.WalletConnect
