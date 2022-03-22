@@ -30,11 +30,20 @@ namespace AlgoSdk
             set => seed[index] = value;
         }
 
+        [Obsolete("Use Account.SignTxn instead.")]
         public byte[] SignTransaction<T>(T txn)
             where T : ITransaction, IEquatable<T>
         {
+            using var msg = txn.ToSignatureMessage(Allocator.Temp);
+            var sig = Sign(msg);
+            return AlgoApiSerializer.SerializeMessagePack(new SignedTxn<T> { Sig = sig, Txn = txn });
+        }
+
+        public Sig Sign<T>(T msg)
+            where T : IByteArray
+        {
             using var kp = ToKeyPair();
-            return AlgoApiSerializer.SerializeMessagePack(txn.Sign(kp.SecretKey));
+            return kp.SecretKey.Sign(msg);
         }
 
         public Mnemonic ToMnemonic()

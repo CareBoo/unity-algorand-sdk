@@ -1,7 +1,6 @@
 using System;
 using System.Text;
 using AlgoSdk.Crypto;
-using AlgoSdk.LowLevel;
 using Unity.Collections;
 
 namespace AlgoSdk
@@ -62,6 +61,7 @@ namespace AlgoSdk
         /// The signature used for this Transaction.
         /// </summary>
         [AlgoApiField("signature", null, readOnly: true)]
+        [Obsolete("Use SignedTxn instead for signatures.")]
         public TransactionSignature Signature;
 
         public bool Equals(Transaction other)
@@ -77,7 +77,6 @@ namespace AlgoSdk
                     TransactionType.KeyRegistration => KeyRegistrationParams.Equals(other.KeyRegistrationParams),
                     _ => true
                 }
-                && Signature.Equals(other.Signature)
                 ;
         }
 
@@ -95,22 +94,11 @@ namespace AlgoSdk
         }
 
         /// <summary>
-        /// Estimate the size this transaction will take up in a block in bytes.
-        /// </summary>
-        /// <returns>Size in bytes.</returns>
-        public int EstimateBlockSizeBytes()
-        {
-            var rndSeed = AlgoSdk.Crypto.Random.Bytes<Ed25519.Seed>();
-            using var keyPair = rndSeed.ToKeyPair();
-            var signedTxn = Sign(keyPair.SecretKey);
-            return AlgoApiSerializer.SerializeMessagePack(signedTxn).Length;
-        }
-
-        /// <summary>
         /// Sign this transaction with a private key.
         /// </summary>
         /// <param name="secretKey">The account private key to use to sign this transaction.</param>
         /// <returns>A <see cref="SignedTxn"/>.</returns>
+        [Obsolete("Use Account.SignTxn instead")]
         public SignedTxn Sign(Ed25519.SecretKeyHandle secretKey)
         {
             return new SignedTxn
@@ -125,36 +113,11 @@ namespace AlgoSdk
         /// </summary>
         /// <param name="secretKey">The private key to use to sign this transaction.</param>
         /// <returns>A <see cref="Sig"/>.</returns>
+        [Obsolete("Use PrivateKey.Sign instead")]
         public Sig GetSignature(Ed25519.SecretKeyHandle secretKey)
         {
-            using var message = ToSignatureMessage(Allocator.Temp);
+            using var message = this.ToSignatureMessage(Allocator.Temp);
             return secretKey.Sign(message);
-        }
-
-        /// <summary>
-        /// Serializes this transaction to a message to use for signing.
-        /// </summary>
-        /// <param name="allocator">How memory should be allocated for the returned byte array.</param>
-        /// <returns>A <see cref="NativeByteArray"/></returns>
-        public NativeByteArray ToSignatureMessage(Allocator allocator)
-        {
-            using var data = AlgoApiSerializer.SerializeMessagePack(this, Allocator.Temp);
-            var result = new NativeByteArray(SignaturePrefix.Length + data.Length, allocator);
-            for (var i = 0; i < SignaturePrefix.Length; i++)
-                result[i] = SignaturePrefix[i];
-            for (var i = 0; i < data.Length; i++)
-                result[i + SignaturePrefix.Length] = data[i];
-            return result;
-        }
-
-        /// <summary>
-        /// Calculate the ID for this transaction.
-        /// </summary>
-        /// <returns>A <see cref="TransactionId"/> calculated from its current parameters.</returns>
-        public TransactionId GetId()
-        {
-            using var txnData = ToSignatureMessage(Allocator.Temp);
-            return Sha512.Hash256Truncated(txnData);
         }
 
         /// <summary>

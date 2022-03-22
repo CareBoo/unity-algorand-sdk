@@ -78,6 +78,7 @@ namespace AlgoSdk
 
     public static class TransactionExtensions
     {
+        [Obsolete("Use Account.SignTxn instead.")]
         public static SignedTxn<T> Sign<T>(
             this T txn,
             Ed25519.SecretKeyHandle secretKey
@@ -92,6 +93,7 @@ namespace AlgoSdk
             };
         }
 
+        [Obsolete("Use PrivateKey.Sign instead.")]
         public static Sig GetSignature<T>(
             this T txn,
             Ed25519.SecretKeyHandle secretKey
@@ -109,6 +111,11 @@ namespace AlgoSdk
             return messageForSigning.ToArray();
         }
 
+        /// <summary>
+        /// Serializes this transaction to a message to use for signing.
+        /// </summary>
+        /// <param name="allocator">How memory should be allocated for the returned byte array.</param>
+        /// <returns>A <see cref="NativeByteArray"/></returns>
         public static NativeByteArray ToSignatureMessage<T>(
             this T txn,
             Allocator allocator
@@ -134,15 +141,22 @@ namespace AlgoSdk
             return math.max(fee, txnParams.MinFee);
         }
 
+        /// <summary>
+        /// Estimate the size this transaction will take up in a block in bytes.
+        /// </summary>
+        /// <returns>Size in bytes.</returns>
         public static int EstimateBlockSizeBytes<T>(this T txn)
             where T : ITransaction, IEquatable<T>
         {
-            var keyPair = AlgoSdk.Crypto.Random.Bytes<Ed25519.Seed>().ToKeyPair();
-            var signedTxn = txn.Sign(keyPair.SecretKey);
-            using var signedBytes = AlgoApiSerializer.SerializeMessagePack(signedTxn, Allocator.Temp);
-            return signedBytes.Length;
+            var account = Account.GenerateAccount();
+            var signedTxn = account.SignTxn(txn);
+            return AlgoApiSerializer.SerializeMessagePack(signedTxn).Length;
         }
 
+        /// <summary>
+        /// Calculate the ID for this transaction.
+        /// </summary>
+        /// <returns>A <see cref="TransactionId"/> calculated from its current parameters.</returns>
         public static TransactionId GetId<T>(this T txn)
             where T : ITransaction
         {
