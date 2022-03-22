@@ -162,21 +162,10 @@ namespace AlgoSdk
         /// </summary>
         /// <param name="txns">The transactions belonging to this group. Cannot be more than <see cref="TransactionGroup.MaxSize"/> transactions.</param>
         /// <returns>A <see cref="TransactionId"/></returns>
+        [Obsolete("Use TransactionGroup.Of(...).GetId() instead.")]
         public static TransactionId GetGroupId(params Transaction[] txns)
         {
-            if (txns == null || txns.Length == 0)
-                throw new ArgumentException("Cannot get the group id of 0 transactions", nameof(txns));
-            if (txns.Length > TransactionGroup.MaxSize)
-                throw new ArgumentException($"Cannot get the group id of a group of more than {TransactionGroup.MaxSize} transactions", nameof(txns));
-            for (var i = 0; i < txns.Length; i++)
-                txns[i].Group = default;
-            var txnMsgs = new TransactionId[txns.Length];
-            for (var i = 0; i < txns.Length; i++)
-            {
-                txns[i].Group = default;
-                txnMsgs[i] = txns[i].GetId();
-            }
-            return GetGroupId(txnMsgs);
+            return TransactionGroup.Of(txns).GetId();
         }
 
         /// <summary>
@@ -184,25 +173,10 @@ namespace AlgoSdk
         /// </summary>
         /// <param name="txids">The transaction ids belonging to this group. Cannot be more than <see cref="TransactionGroup.MaxSize"/> transactions.</param>
         /// <returns>A <see cref="TransactionId"/></returns>
+        [Obsolete("Use TransactionGroup.Of(...).GetId() instead.")]
         public static TransactionId GetGroupId(params TransactionId[] txids)
         {
-            if (txids == null || txids.Length == 0)
-                throw new ArgumentException("Cannot get the group id of 0 transactions", nameof(txids));
-            if (txids.Length > TransactionGroup.MaxSize)
-                throw new ArgumentException($"Cannot get the group id of a group of more than {TransactionGroup.MaxSize} transactions", nameof(txids));
-            var group = new TransactionGroup { Txns = txids };
-            using var msgpack = AlgoApiSerializer.SerializeMessagePack(group, Allocator.Temp);
-            var data = new NativeByteArray(TransactionGroup.IdPrefix.Length + msgpack.Length, Allocator.Temp);
-            try
-            {
-                data.CopyFrom(TransactionGroup.IdPrefix, 0);
-                data.CopyFrom(msgpack.AsArray(), TransactionGroup.IdPrefix.Length);
-                return Sha512.Hash256Truncated(data);
-            }
-            finally
-            {
-                data.Dispose();
-            }
+            return new TransactionGroup { Txns = txids }.GetId();
         }
 
         public void CopyTo(ref Transaction transaction)

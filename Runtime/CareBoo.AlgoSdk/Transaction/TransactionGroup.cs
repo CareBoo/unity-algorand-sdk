@@ -47,6 +47,21 @@ namespace AlgoSdk
         }
 
         /// <summary>
+        /// Get a transaction group using the transaction ids given.
+        /// </summary>
+        /// <param name="txns">The transaction ids of the transactions in the group.</param>
+        /// <returns>A transaction group that can be used to generate a group id.</returns>
+        public static TransactionGroup Of(params TransactionId[] txns)
+        {
+            if (txns == null || txns.Length == 0)
+                throw new ArgumentException("Cannot get the group id of 0 transactions", nameof(txns));
+            if (txns.Length > TransactionGroup.MaxSize)
+                throw new ArgumentException($"Cannot get the group id of a group of more than {TransactionGroup.MaxSize} transactions", nameof(txns));
+
+            return new TransactionGroup { Txns = txns };
+        }
+
+        /// <summary>
         /// The list of transaction ids belonging to this group.
         /// </summary>
         [AlgoApiField("txlist", "txlist")]
