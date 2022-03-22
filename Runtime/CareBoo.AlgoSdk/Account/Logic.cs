@@ -16,7 +16,7 @@ namespace AlgoSdk
         /// </summary>
         /// <param name="program">The stateful or stateless program to get the address of.</param>
         /// <returns>An <see cref="Address"/> for a program.</returns>
-        public static Address GetAddress(byte[] program)
+        public static Address GetAddress(CompiledTeal program)
         {
             using var bytes = GetSignBytes(program, Allocator.Temp);
             return Sha512.Hash256Truncated(bytes);
@@ -28,15 +28,15 @@ namespace AlgoSdk
         /// <param name="program">The program that will be signed.</param>
         /// <param name="allocator">Defines the memory lifetime used for <see cref="NativeByteArray"/>, which must be disposed.</param>
         /// <returns>A <see cref="NativeByteArray"/>. The caller must manage its lifetime.</returns>
-        public static NativeByteArray GetSignBytes(byte[] program, Allocator allocator)
+        public static NativeByteArray GetSignBytes(CompiledTeal program, Allocator allocator)
         {
-            var bytes = new NativeByteArray(SigningPrefix.Length + program.Length, allocator);
+            var bytes = new NativeByteArray(SigningPrefix.Length + program.Bytes.Length, allocator);
             try
             {
                 for (var i = 0; i < SigningPrefix.Length; i++)
                     bytes[i] = SigningPrefix[i];
                 for (var i = SigningPrefix.Length; i < bytes.Length; i++)
-                    bytes[i] = program[i - SigningPrefix.Length];
+                    bytes[i] = program.Bytes[i - SigningPrefix.Length];
             }
             finally
             {
@@ -51,7 +51,7 @@ namespace AlgoSdk
         /// <param name="program">Program to sign</param>
         /// <param name="secretKey">Key to sign this program with.</param>
         /// <returns><see cref="Sig"/></returns>
-        public static Sig Sign(byte[] program, SecretKeyHandle secretKey)
+        public static Sig Sign(CompiledTeal program, SecretKeyHandle secretKey)
         {
             using var programSignBytes = Logic.GetSignBytes(program, Allocator.Temp);
             return secretKey.Sign(programSignBytes);
@@ -64,7 +64,7 @@ namespace AlgoSdk
         /// <param name="msig">A <see cref="Multisig"/> that contains the <see cref="PublicKey"/> matching <paramref name="privateKey"/>.</param>
         /// <param name="privateKey">The private key to sign with. Its corresponding <see cref="PublicKey"/> must be inside of <paramref name="msig"/>.</param>
         /// <returns>A tuple of the <see cref="Sig"/> from signing the program and its index in the <paramref name="msig"/></returns>
-        public static (Sig, int) Sign(byte[] program, Multisig msig, PrivateKey privateKey)
+        public static (Sig, int) Sign(CompiledTeal program, Multisig msig, PrivateKey privateKey)
         {
             if (msig.Subsigs == null)
                 throw new ArgumentException("msig has null Sub signatures", nameof(msig));

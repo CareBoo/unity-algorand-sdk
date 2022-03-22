@@ -26,6 +26,27 @@ namespace AlgoSdk
         public static readonly byte[] IdPrefix = Encoding.UTF8.GetBytes("TG");
 
         /// <summary>
+        /// Generate a TransactionGroup with the given transactions that can be used to generate a GroupId.
+        /// </summary>
+        /// <param name="txns">The transactions to use.</param>
+        /// <typeparam name="T">The type of the transactions.</typeparam>
+        public static TransactionGroup Of<T>(params T[] txns) where T : ITransaction, IEquatable<T>
+        {
+            if (txns == null || txns.Length == 0)
+                throw new ArgumentException("Cannot get the group id of 0 transactions", nameof(txns));
+            if (txns.Length > TransactionGroup.MaxSize)
+                throw new ArgumentException($"Cannot get the group id of a group of more than {TransactionGroup.MaxSize} transactions", nameof(txns));
+
+            var txnIds = new TransactionId[txns.Length];
+            for (var i = 0; i < txns.Length; i++)
+            {
+                txns[i].Group = default;
+                txnIds[i] = txns[i].GetId();
+            }
+            return new TransactionGroup { Txns = txnIds };
+        }
+
+        /// <summary>
         /// The list of transaction ids belonging to this group.
         /// </summary>
         [AlgoApiField("txlist", "txlist")]
