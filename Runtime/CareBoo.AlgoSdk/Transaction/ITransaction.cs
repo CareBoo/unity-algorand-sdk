@@ -44,7 +44,7 @@ namespace AlgoSdk
         FixedString32Bytes GenesisId { get; set; }
 
         /// <summary>
-        /// The group specifies that the transaction is part of a group and, if so, specifies the hash of the transaction group. See <see cref="Transaction.GetGroupId"/>.
+        /// The group specifies that the transaction is part of a group and, if so, specifies the hash of the transaction group. See <see cref="TransactionGroup"/>.
         /// </summary>
         Sha512_256_Hash Group { get; set; }
 

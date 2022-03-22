@@ -194,14 +194,14 @@ namespace AlgoSdk
         /// <summary>
         /// Broadcasts a group of transactions to the network.
         /// </summary>
-        /// <param name="signedTxns">The signed transactions in the same order as they were when using <see cref="Transaction.GetGroupId(TransactionId[])"/></param>
+        /// <param name="signedTxns">The signed transactions in the same order as they were in their <see cref="TransactionGroup"/></param>
         /// <returns>Transaction ID of the submission.</returns>
         AlgoApiRequest.Sent<TransactionIdResponse> SendTransactions(params SignedTxn[] signedTxns);
 
         /// <summary>
         /// Broadcasts a group of msgpack-encoded, signed transactions to the network.
         /// </summary>
-        /// <param name="signedTxns">The signed transactions in the same order as they were when using <see cref="Transaction.GetGroupId(TransactionId[])"/></param>
+        /// <param name="signedTxns">The signed transactions in the same order as they were in their <see cref="TransactionGroup"/></param>
         /// <returns>Transaction ID of the submission.</returns>
         AlgoApiRequest.Sent<TransactionIdResponse> SendTransactions(params byte[][] signedTxns);
 

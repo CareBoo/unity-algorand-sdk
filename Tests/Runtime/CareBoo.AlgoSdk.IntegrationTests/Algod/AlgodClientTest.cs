@@ -122,7 +122,7 @@ public class AlgodClientTest : AlgodClientTestFixture
 
         var txn1 = Transaction.Payment(PublicKey, txnParams, receiver, 100_000L);
         var txn2 = Transaction.Payment(PublicKey, txnParams, receiver, 200_000L);
-        var groupId = Transaction.GetGroupId(txn1.GetId(), txn2.GetId());
+        var groupId = TransactionGroup.Of(txn1, txn2).GetId();
         txn1.Group = groupId;
         txn2.Group = groupId;
 
