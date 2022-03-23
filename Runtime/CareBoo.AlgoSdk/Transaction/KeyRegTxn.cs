@@ -43,43 +43,43 @@ namespace AlgoSdk
         [AlgoApiField(null, "votekey")]
         public Ed25519.PublicKey VoteParticipationKey
         {
-            get => KeyRegistrationParams.VoteParticipationKey;
-            set => KeyRegistrationParams.VoteParticipationKey = value;
+            get => keyRegParams.VoteParticipationKey;
+            set => keyRegParams.VoteParticipationKey = value;
         }
 
         [AlgoApiField(null, "selkey")]
         public VrfPubKey SelectionParticipationKey
         {
-            get => KeyRegistrationParams.SelectionParticipationKey;
-            set => KeyRegistrationParams.SelectionParticipationKey = value;
+            get => keyRegParams.SelectionParticipationKey;
+            set => keyRegParams.SelectionParticipationKey = value;
         }
 
         [AlgoApiField(null, "votefst")]
         public ulong VoteFirst
         {
-            get => KeyRegistrationParams.VoteFirst;
-            set => KeyRegistrationParams.VoteFirst = value;
+            get => keyRegParams.VoteFirst;
+            set => keyRegParams.VoteFirst = value;
         }
 
         [AlgoApiField(null, "votelst")]
         public ulong VoteLast
         {
-            get => KeyRegistrationParams.VoteLast;
-            set => KeyRegistrationParams.VoteLast = value;
+            get => keyRegParams.VoteLast;
+            set => keyRegParams.VoteLast = value;
         }
 
         [AlgoApiField(null, "votekd")]
         public ulong VoteKeyDilution
         {
-            get => KeyRegistrationParams.VoteKeyDilution;
-            set => KeyRegistrationParams.VoteKeyDilution = value;
+            get => keyRegParams.VoteKeyDilution;
+            set => keyRegParams.VoteKeyDilution = value;
         }
 
         [AlgoApiField(null, "nonpart")]
         public Optional<bool> NonParticipation
         {
-            get => KeyRegistrationParams.NonParticipation;
-            set => KeyRegistrationParams.NonParticipation = value;
+            get => keyRegParams.NonParticipation;
+            set => keyRegParams.NonParticipation = value;
         }
 
         /// <summary>
@@ -143,7 +143,7 @@ namespace AlgoSdk
         }
 
         [AlgoApiField("fee", "fee")]
-        public ulong Fee
+        public MicroAlgos Fee
         {
             get => header.Fee;
             set => header.Fee = value;
@@ -192,14 +192,14 @@ namespace AlgoSdk
         }
 
         [AlgoApiField("group", "grp")]
-        public Sha512_256_Hash Group
+        public TransactionId Group
         {
             get => header.Group;
             set => header.Group = value;
         }
 
         [AlgoApiField("lease", "lx")]
-        public Sha512_256_Hash Lease
+        public TransactionId Lease
         {
             get => header.Lease;
             set => header.Lease = value;
@@ -263,14 +263,14 @@ namespace AlgoSdk
 
         public void CopyTo(ref Transaction transaction)
         {
-            transaction.HeaderParams = header;
-            transaction.KeyRegistrationParams = @params;
+            transaction.Header = header;
+            transaction.KeyRegParams = @params;
         }
 
         public void CopyFrom(Transaction transaction)
         {
-            header = transaction.HeaderParams;
-            @params = transaction.KeyRegistrationParams;
+            header = transaction.Header;
+            @params = transaction.KeyRegParams;
         }
 
         public bool Equals(KeyRegTxn other)

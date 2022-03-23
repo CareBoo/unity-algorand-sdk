@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -12,11 +13,18 @@ namespace AlgoSdk
         , IEquatable<ulong>
         , IWrappedValue<ulong>
     {
-        public ulong Index;
+        [SerializeField]
+        ulong index;
+
+        public ulong Index
+        {
+            get => index;
+            set => index = value;
+        }
 
         public AppIndex(ulong index)
         {
-            Index = index;
+            this.index = index;
         }
 
         ulong IWrappedValue<ulong>.WrappedValue { get => Index; set => Index = value; }

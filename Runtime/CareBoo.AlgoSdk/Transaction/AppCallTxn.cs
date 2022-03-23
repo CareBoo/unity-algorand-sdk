@@ -1,5 +1,4 @@
 using System;
-using AlgoSdk.Crypto;
 using Unity.Collections;
 using UnityEngine;
 
@@ -10,7 +9,7 @@ namespace AlgoSdk
         /// <summary>
         /// ID of the application being configured or empty if creating.
         /// </summary>
-        ulong ApplicationId { get; set; }
+        AppIndex ApplicationId { get; set; }
 
         /// <summary>
         /// Defines what additional actions occur with the transaction.
@@ -66,80 +65,80 @@ namespace AlgoSdk
     public partial struct Transaction : IAppCallTxn
     {
         [AlgoApiField(null, "apid")]
-        public ulong ApplicationId
+        public AppIndex ApplicationId
         {
-            get => ApplicationCallParams.ApplicationId;
-            set => ApplicationCallParams.ApplicationId = value;
+            get => appCallParams.ApplicationId;
+            set => appCallParams.ApplicationId = value;
         }
 
         [AlgoApiField("on-completion", "apan")]
         public OnCompletion OnComplete
         {
-            get => ApplicationCallParams.OnComplete;
-            set => ApplicationCallParams.OnComplete = value;
+            get => appCallParams.OnComplete;
+            set => appCallParams.OnComplete = value;
         }
 
         [AlgoApiField(null, "apap")]
         public CompiledTeal ApprovalProgram
         {
-            get => ApplicationCallParams.ApprovalProgram;
-            set => ApplicationCallParams.ApprovalProgram = value;
+            get => appCallParams.ApprovalProgram;
+            set => appCallParams.ApprovalProgram = value;
         }
 
         [AlgoApiField(null, "apsu")]
         public CompiledTeal ClearStateProgram
         {
-            get => ApplicationCallParams.ClearStateProgram;
-            set => ApplicationCallParams.ClearStateProgram = value;
+            get => appCallParams.ClearStateProgram;
+            set => appCallParams.ClearStateProgram = value;
         }
 
         [AlgoApiField(null, "apaa")]
         public CompiledTeal[] AppArguments
         {
-            get => ApplicationCallParams.AppArguments;
-            set => ApplicationCallParams.AppArguments = value;
+            get => appCallParams.AppArguments;
+            set => appCallParams.AppArguments = value;
         }
 
         [AlgoApiField(null, "apat")]
         public Address[] Accounts
         {
-            get => ApplicationCallParams.Accounts;
-            set => ApplicationCallParams.Accounts = value;
+            get => appCallParams.Accounts;
+            set => appCallParams.Accounts = value;
         }
 
         [AlgoApiField(null, "apfa")]
         public ulong[] ForeignApps
         {
-            get => ApplicationCallParams.ForeignApps;
-            set => ApplicationCallParams.ForeignApps = value;
+            get => appCallParams.ForeignApps;
+            set => appCallParams.ForeignApps = value;
         }
 
         [AlgoApiField(null, "apas")]
         public ulong[] ForeignAssets
         {
-            get => ApplicationCallParams.ForeignAssets;
-            set => ApplicationCallParams.ForeignAssets = value;
+            get => appCallParams.ForeignAssets;
+            set => appCallParams.ForeignAssets = value;
         }
 
         [AlgoApiField(null, "apgs")]
         public StateSchema GlobalStateSchema
         {
-            get => ApplicationCallParams.GlobalStateSchema;
-            set => ApplicationCallParams.GlobalStateSchema = value;
+            get => appCallParams.GlobalStateSchema;
+            set => appCallParams.GlobalStateSchema = value;
         }
 
         [AlgoApiField(null, "apls")]
         public StateSchema LocalStateSchema
         {
-            get => ApplicationCallParams.LocalStateSchema;
-            set => ApplicationCallParams.LocalStateSchema = value;
+            get => appCallParams.LocalStateSchema;
+            set => appCallParams.LocalStateSchema = value;
         }
 
         [AlgoApiField(null, "apep")]
         public ulong ExtraProgramPages
         {
-            get => ApplicationCallParams.ExtraProgramPages;
-            set => ApplicationCallParams.ExtraProgramPages = value;
+            get => appCallParams.ExtraProgramPages;
+            set => appCallParams.ExtraProgramPages = value;
         }
 
         /// <summary>
@@ -191,7 +190,7 @@ namespace AlgoSdk
         public static AppCallTxn AppCloseOut(
             Address sender,
             TransactionParams txnParams,
-            ulong applicationId,
+            AppIndex applicationId,
             CompiledTeal[] appArguments = default,
             Address[] accounts = default,
             ulong[] foreignApps = default,
@@ -226,7 +225,7 @@ namespace AlgoSdk
         public static AppCallTxn AppClearState(
             Address sender,
             TransactionParams txnParams,
-            ulong applicationId,
+            AppIndex applicationId,
             CompiledTeal[] appArguments = default,
             Address[] accounts = default,
             ulong[] foreignApps = default,
@@ -262,7 +261,7 @@ namespace AlgoSdk
         public static AppCallTxn AppCall(
             Address sender,
             TransactionParams txnParams,
-            ulong applicationId,
+            AppIndex applicationId,
             OnCompletion onComplete = OnCompletion.NoOp,
             CompiledTeal[] appArguments = default,
             Address[] accounts = default,
@@ -298,7 +297,7 @@ namespace AlgoSdk
         public static AppCallTxn AppOptIn(
             Address sender,
             TransactionParams txnParams,
-            ulong applicationId,
+            AppIndex applicationId,
             CompiledTeal[] appArguments = default,
             Address[] accounts = default,
             ulong[] foreignApps = default,
@@ -336,7 +335,7 @@ namespace AlgoSdk
         public static AppCallTxn AppUpdateTxn(
             Address sender,
             TransactionParams txnParams,
-            ulong applicationId,
+            AppIndex applicationId,
             CompiledTeal approvalProgram = default,
             CompiledTeal clearStateProgram = default,
             ulong extraProgramPages = default,
@@ -377,7 +376,7 @@ namespace AlgoSdk
         public static AppCallTxn AppDelete(
             Address sender,
             TransactionParams txnParams,
-            ulong applicationId,
+            AppIndex applicationId,
             CompiledTeal[] appArguments = default,
             Address[] accounts = default,
             ulong[] foreignApps = default,
@@ -412,7 +411,7 @@ namespace AlgoSdk
         Params @params;
 
         [AlgoApiField("fee", "fee")]
-        public ulong Fee
+        public MicroAlgos Fee
         {
             get => header.Fee;
             set => header.Fee = value;
@@ -461,14 +460,14 @@ namespace AlgoSdk
         }
 
         [AlgoApiField("group", "grp")]
-        public Sha512_256_Hash Group
+        public TransactionId Group
         {
             get => header.Group;
             set => header.Group = value;
         }
 
         [AlgoApiField("lease", "lx")]
-        public Sha512_256_Hash Lease
+        public TransactionId Lease
         {
             get => header.Lease;
             set => header.Lease = value;
@@ -489,7 +488,7 @@ namespace AlgoSdk
         }
 
         [AlgoApiField(null, "apid")]
-        public ulong ApplicationId
+        public AppIndex ApplicationId
         {
             get => @params.ApplicationId;
             set => @params.ApplicationId = value;
@@ -567,14 +566,14 @@ namespace AlgoSdk
 
         public void CopyTo(ref Transaction transaction)
         {
-            transaction.HeaderParams = header;
-            transaction.ApplicationCallParams = @params;
+            transaction.Header = header;
+            transaction.AppCallParams = @params;
         }
 
         public void CopyFrom(Transaction transaction)
         {
-            header = transaction.HeaderParams;
-            @params = transaction.ApplicationCallParams;
+            header = transaction.Header;
+            @params = transaction.AppCallParams;
         }
 
         public bool Equals(AppCallTxn other)
@@ -591,7 +590,7 @@ namespace AlgoSdk
         {
             [AlgoApiField("application-id", "apid")]
             [Tooltip("ID of the application being configured or empty if creating")]
-            public ulong ApplicationId;
+            public AppIndex ApplicationId;
 
             [AlgoApiField("on-completion", "apan")]
             [Tooltip("Defines what additional actions occur with the transaction.")]

@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -17,14 +18,21 @@ namespace AlgoSdk
         /// </summary>
         public const ulong PerAlgo = 1_000_000;
 
-        public ulong Amount;
+        [SerializeField]
+        ulong amount;
+
+        public ulong Amount
+        {
+            get => amount;
+            set => amount = value;
+        }
 
         public MicroAlgos(ulong amount)
         {
-            Amount = amount;
+            this.amount = amount;
         }
 
-        ulong IWrappedValue<ulong>.WrappedValue { get => Amount; set => Amount = value; }
+        ulong IWrappedValue<ulong>.WrappedValue { get => amount; set => amount = value; }
 
         public bool Equals(MicroAlgos other)
         {

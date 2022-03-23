@@ -1,11 +1,13 @@
 using System;
+using UnityEngine;
 
 namespace AlgoSdk
 {
     /// <summary>
     /// Contains information about a transaction's execution
     /// </summary>
-    public interface IApplyData
+    public interface IApplyData<TTxn> : IAppEvalDelta<TTxn>
+        where TTxn : IAppliedSignedTxn<TTxn>
     {
         /// <summary>
         /// Closing amount for transaction.
@@ -35,7 +37,7 @@ namespace AlgoSdk
         /// <summary>
         /// Application global and local state delta
         /// </summary>
-        AppEvalDelta EvalDelta { get; set; }
+        AppEvalDelta<TTxn> EvalDelta { get; set; }
 
         /// <summary>
         /// If an asset is configured or created, the id used.
@@ -49,28 +51,108 @@ namespace AlgoSdk
     }
 
     [Serializable]
-    public struct ApplyData
-        : IEquatable<ApplyData>
-        , IApplyData
+    public struct ApplyData<TTxn>
+        : IEquatable<ApplyData<TTxn>>
+        , IApplyData<TTxn>
+        where TTxn : IAppliedSignedTxn<TTxn>
     {
-        public MicroAlgos ClosingAmount { get; set; }
+        [SerializeField, Tooltip("Closing amount for transaction.")]
+        MicroAlgos closingAmount;
 
-        public ulong AssetClosingAmount { get; set; }
+        [SerializeField, Tooltip("Closing amount for asset transaction.")]
+        ulong assetClosingAmount;
 
-        public MicroAlgos SenderRewards { get; set; }
+        [SerializeField, Tooltip("Rewards applied to Sender account.")]
+        MicroAlgos senderRewards;
 
-        public MicroAlgos ReceiverRewards { get; set; }
+        [SerializeField, Tooltip("Rewards applied to Receiver account.")]
+        MicroAlgos receiverRewards;
 
-        public MicroAlgos CloseRewards { get; set; }
+        [SerializeField, Tooltip("Rewards applied to CloseRemainderTo account.")]
+        MicroAlgos closeRewards;
 
-        public AppEvalDelta EvalDelta { get; set; }
+        [SerializeField, Tooltip("Application global and local state delta.")]
+        AppEvalDelta<TTxn> evalDelta;
 
-        public AssetIndex ConfigAsset { get; set; }
+        [SerializeField, Tooltip("If an asset is configured or created, the id used.")]
+        AssetIndex configAsset;
 
-        public AppIndex ApplicationId { get; set; }
+        [SerializeField, Tooltip("If an app is called, the id used.")]
+        AppIndex applicationId;
 
+        public MicroAlgos ClosingAmount
+        {
+            get => closingAmount;
+            set => closingAmount = value;
+        }
 
-        public bool Equals(ApplyData other)
+        public ulong AssetClosingAmount
+        {
+            get => assetClosingAmount;
+            set => assetClosingAmount = value;
+        }
+
+        public MicroAlgos SenderRewards
+        {
+            get => senderRewards;
+            set => senderRewards = value;
+        }
+
+        public MicroAlgos ReceiverRewards
+        {
+            get => receiverRewards;
+            set => receiverRewards = value;
+        }
+
+        public MicroAlgos CloseRewards
+        {
+            get => closeRewards;
+            set => closeRewards = value;
+        }
+
+        public AppEvalDelta<TTxn> EvalDelta
+        {
+            get => evalDelta;
+            set => evalDelta = value;
+        }
+
+        public AssetIndex ConfigAsset
+        {
+            get => configAsset;
+            set => configAsset = value;
+        }
+
+        public AppIndex ApplicationId
+        {
+            get => applicationId;
+            set => applicationId = value;
+        }
+
+        public AppStateDelta GlobalDelta
+        {
+            get => evalDelta.GlobalDelta;
+            set => evalDelta.GlobalDelta = value;
+        }
+
+        public AccountStateDelta[] LocalDeltas
+        {
+            get => evalDelta.LocalDeltas;
+            set => evalDelta.LocalDeltas = value;
+        }
+
+        public string[] Logs
+        {
+            get => evalDelta.Logs;
+            set => evalDelta.Logs = value;
+        }
+
+        public TTxn[] InnerTxns
+        {
+            get => evalDelta.InnerTxns;
+            set => evalDelta.InnerTxns = value;
+        }
+
+        public bool Equals(ApplyData<TTxn> other)
         {
             return ClosingAmount.Equals(other.ClosingAmount)
                 && AssetClosingAmount.Equals(other.AssetClosingAmount)

@@ -4,32 +4,27 @@ using UnityEngine;
 
 namespace AlgoSdk
 {
-    public interface IBlockTransaction : IAppliedSignedTxn<AppliedSignedTxn>
-    {
-        Optional<bool> HasGenesisId { get; set; }
-        Optional<bool> HasGenesisHash { get; set; }
-    }
+    public interface IAppliedSignedTxn<TTxn>
+        : ISignedTxn
+        , IApplyData<TTxn>
+        , IEquatable<TTxn>
+        where TTxn : IAppliedSignedTxn<TTxn>
+    { }
 
     /// <summary>
-    /// A transaction found in a <see cref="BlockResponse"/> from <see cref="IAlgodClient.GetBlock"/>.
+    /// A signed transaction that has already been executed.
     /// </summary>
-    /// <remarks>
-    /// This is a <c>SignedTxnInBlock</c> from the algorand go project.
-    /// </remarks>
     [AlgoApiObject]
     [Serializable]
-    public partial struct BlockTransaction
-        : IEquatable<BlockTransaction>
-        , IBlockTransaction
+    public partial struct AppliedSignedTxn
+        : IEquatable<AppliedSignedTxn>
+        , IAppliedSignedTxn<AppliedSignedTxn>
     {
         [SerializeField]
-        AppliedSignedTxn txn;
+        SignedTxn txn;
 
         [SerializeField]
-        Optional<bool> hasGenesisId;
-
-        [SerializeField]
-        Optional<bool> hasGenesisHash;
+        ApplyData<AppliedSignedTxn> applyData;
 
         [AlgoApiField("sig", "sig")]
         public Sig Sig
@@ -69,64 +64,58 @@ namespace AlgoSdk
         [AlgoApiField("ca", "ca")]
         public MicroAlgos ClosingAmount
         {
-            get => txn.ClosingAmount;
-            set => txn.ClosingAmount = value;
+            get => applyData.ClosingAmount;
+            set => applyData.ClosingAmount = value;
         }
 
         [AlgoApiField("aca", "aca")]
         public ulong AssetClosingAmount
         {
-            get => txn.AssetClosingAmount;
-            set => txn.AssetClosingAmount = value;
-        }
-
-        [AlgoApiField("rr", "rr")]
-        public MicroAlgos ReceiverRewards
-        {
-            get => txn.ReceiverRewards;
-            set => txn.ReceiverRewards = value;
+            get => applyData.AssetClosingAmount;
+            set => applyData.AssetClosingAmount = value;
         }
 
         [AlgoApiField("rs", "rs")]
         public MicroAlgos SenderRewards
         {
-            get => txn.SenderRewards;
-            set => txn.SenderRewards = value;
+            get => applyData.SenderRewards;
+            set => applyData.SenderRewards = value;
+        }
+
+        [AlgoApiField("rr", "rr")]
+        public MicroAlgos ReceiverRewards
+        {
+            get => applyData.ReceiverRewards;
+            set => applyData.ReceiverRewards = value;
         }
 
         [AlgoApiField("rc", "rc")]
         public MicroAlgos CloseRewards
         {
-            get => txn.CloseRewards;
-            set => txn.CloseRewards = value;
+            get => applyData.CloseRewards;
+            set => applyData.CloseRewards = value;
         }
 
         [AlgoApiField("dt", "dt")]
         public AppEvalDelta<AppliedSignedTxn> EvalDelta
         {
-            get => txn.EvalDelta;
-            set => txn.EvalDelta = value;
+            get => applyData.EvalDelta;
+            set => applyData.EvalDelta = value;
         }
 
         [AlgoApiField("caid", "caid")]
         public AssetIndex ConfigAsset
         {
-            get => txn.ConfigAsset;
-            set => txn.ConfigAsset = value;
+            get => applyData.ConfigAsset;
+            set => applyData.ConfigAsset = value;
         }
 
         [AlgoApiField("apid", "apid")]
         public AppIndex ApplicationId
         {
-            get => txn.ApplicationId;
-            set => txn.ApplicationId = value;
+            get => applyData.ApplicationId;
+            set => applyData.ApplicationId = value;
         }
-
-        [AlgoApiField("hgi", "hgi")]
-        public Optional<bool> HasGenesisId { get; set; }
-
-        [AlgoApiField("hgh", "hgh")]
-        public Optional<bool> HasGenesisHash { get; set; }
 
         public TransactionSignature Signature
         {
@@ -244,71 +233,31 @@ namespace AlgoSdk
 
         public AppStateDelta GlobalDelta
         {
-            get => txn.GlobalDelta;
-            set => txn.GlobalDelta = value;
+            get => applyData.GlobalDelta;
+            set => applyData.GlobalDelta = value;
         }
 
         public AccountStateDelta[] LocalDeltas
         {
-            get => txn.LocalDeltas;
-            set => txn.LocalDeltas = value;
+            get => applyData.LocalDeltas;
+            set => applyData.LocalDeltas = value;
         }
 
         public string[] Logs
         {
-            get => txn.Logs;
-            set => txn.Logs = value;
+            get => applyData.Logs;
+            set => applyData.Logs = value;
         }
 
         public AppliedSignedTxn[] InnerTxns
         {
-            get => txn.InnerTxns;
-            set => txn.InnerTxns = value;
-        }
-
-        public bool Equals(BlockTransaction other)
-        {
-            return txn.Equals(other.txn);
+            get => applyData.InnerTxns;
+            set => applyData.InnerTxns = value;
         }
 
         public bool Equals(AppliedSignedTxn other)
         {
-            return txn.Equals(other);
+            return txn.Equals(other.txn);
         }
-
-        public static implicit operator Transaction(BlockTransaction blockTxn)
-        {
-            return blockTxn.txn.Txn;
-        }
-
-        [Obsolete("Use Msig instead")]
-        public Multisig Multisig
-        {
-            get => txn.Msig;
-            set => txn.Msig = value;
-        }
-
-        [Obsolete("Use Lsig instead")]
-        public LogicSig LogicSig
-        {
-            get => txn.Lsig;
-            set => txn.Lsig = value;
-        }
-
-        [Obsolete("Use HasGenesisId instead.")]
-        public Optional<bool> Hgi { get; set; }
-
-        [Obsolete("Use Txn instead.")]
-        public Transaction Transaction
-        {
-            get => txn.Txn;
-            set => txn.Txn = value;
-        }
-
-        [Obsolete("Replaced with SenderRewards")]
-        public ulong Rs { get => SenderRewards; set => SenderRewards = value; }
-
-        [Obsolete("Replaced with ReceiverRewards")]
-        public ulong Rr { get => ReceiverRewards; set => ReceiverRewards = value; }
     }
 }
