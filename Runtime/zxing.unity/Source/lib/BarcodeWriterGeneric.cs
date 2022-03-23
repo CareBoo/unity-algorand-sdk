@@ -15,6 +15,7 @@
  */
 
 using ZXing.Common;
+using ZXing.QrCode;
 
 namespace ZXing
 {
@@ -76,7 +77,7 @@ namespace ZXing
         /// <returns></returns>
         public BitMatrix Encode(string contents)
         {
-            var encoder = Encoder ?? new MultiFormatWriter();
+            var encoder = Encoder ?? new QRCodeWriter();
             var currentOptions = Options;
             return encoder.encode(contents, Format, currentOptions.Width, currentOptions.Height, currentOptions.Hints);
         }
