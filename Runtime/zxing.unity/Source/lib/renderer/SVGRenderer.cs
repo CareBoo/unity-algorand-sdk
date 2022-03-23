@@ -15,22 +15,9 @@
  */
 
 using System;
-using System.Collections.Generic;
 using System.Text;
-using System.IO;
-
-#if NETFX_CORE
-using Windows.UI;
-#elif SILVERLIGHT
-using System.Windows.Media;
-#elif UNITY
 using UnityEngine;
-#elif !(PORTABLE || NETSTANDARD)
-using System.Drawing;
-#endif
-
 using ZXing.Common;
-using ZXing.OneD;
 
 namespace ZXing.Rendering
 {
@@ -48,86 +35,17 @@ namespace ZXing.Rendering
         /// </summary>
         public const int DefaultFontSize = 10;
 
-#if !UNITY
-#if (PORTABLE || NETSTANDARD)
-        /// <summary>
-        /// represents a color value
-        /// </summary>
-        public struct Color
-        {
-            /// <summary>
-            /// color black
-            /// </summary>
-            public static Color Black = new Color(255, 0, 0, 0);
-            /// <summary>
-            /// color white
-            /// </summary>
-            public static Color White = new Color(255, 255, 255, 255);
-
-            /// <summary>
-            /// alpha channel
-            /// </summary>
-            public byte A;
-            /// <summary>
-            /// red channel
-            /// </summary>
-            public byte R;
-            /// <summary>
-            /// green channel
-            /// </summary>
-            public byte G;
-            /// <summary>
-            /// blur channel
-            /// </summary>
-            public byte B;
-
-            /// <summary>
-            /// initializing constructor
-            /// </summary>
-            public Color(int color)
-            {
-                A = (byte)((color & 0xFF000000) >> 24);
-                R = (byte)((color & 0x00FF0000) >> 16);
-                G = (byte)((color & 0x0000FF00) >> 8);
-                B = (byte)((color & 0x000000FF));
-            }
-
-            /// <summary>
-            /// initializing constructor
-            /// </summary>
-            public Color(byte alpha, byte red, byte green, byte blue)
-            {
-                A = alpha;
-                R = red;
-                G = green;
-                B = blue;
-            }
-        }
-#endif
         /// <summary>
         /// Gets or sets the foreground color.
         /// </summary>
         /// <value>The foreground color.</value>
-        public Color Foreground { get; set; }
+        public Color32 Foreground { get; set; }
 
         /// <summary>
         /// Gets or sets the background color.
         /// </summary>
         /// <value>The background color.</value>
-        public Color Background { get; set; }
-#else
-      /// <summary>
-      /// Gets or sets the foreground color.
-      /// </summary>
-      /// <value>The foreground color.</value>
-            public Color32 Foreground { get; set; }
-
-      /// <summary>
-      /// Gets or sets the background color.
-      /// </summary>
-      /// <value>The background color.</value>
-            public Color32 Background { get; set; }
-#endif
+        public Color32 Background { get; set; }
 
         /// <summary>
         /// Gets or sets the font family name
@@ -146,16 +64,8 @@ namespace ZXing.Rendering
         /// </summary>
         public SvgRenderer()
         {
-#if NETFX_CORE || SILVERLIGHT
-         Foreground = Colors.Black;
-         Background = Colors.White;
-#elif UNITY
-         Foreground = new Color32(0, 0, 0, 255);
-         Background = new Color32(255, 255, 255, 255);
-#else
-            Foreground = Color.Black;
-            Background = Color.White;
-#endif
+            Foreground = new Color32(0, 0, 0, 255);
+            Background = new Color32(255, 255, 255, 255);
         }
 
         /// <summary>
@@ -224,46 +134,10 @@ namespace ZXing.Rendering
                 var fontName = String.IsNullOrEmpty(FontName) ? DefaultFontName : FontName;
                 var fontSize = FontSize < 1 ? DefaultFontSize : FontSize;
 
-                content = ModifyContentDependingOnBarcodeFormat(format, content);
-
                 image.AddText(content, fontName, fontSize);
             }
 
             image.AddEnd();
-        }
-
-        private string ModifyContentDependingOnBarcodeFormat(BarcodeFormat format, string content)
-        {
-            switch (format)
-            {
-                case BarcodeFormat.UPC_E:
-                case BarcodeFormat.EAN_8:
-                    if (content.Length < 8)
-                        content = OneDimensionalCodeWriter.CalculateChecksumDigitModulo10(content);
-                    if (content.Length > 4)
-                        content = content.Insert(4, "   ");
-                    break;
-                case BarcodeFormat.EAN_13:
-                    if (content.Length < 13)
-                        content = OneDimensionalCodeWriter.CalculateChecksumDigitModulo10(content);
-                    if (content.Length > 7)
-                        content = content.Insert(7, "   ");
-                    if (content.Length > 1)
-                        content = content.Insert(1, "   ");
-                    break;
-                case BarcodeFormat.UPC_A:
-                    if (content.Length < 12)
-                        content = OneDimensionalCodeWriter.CalculateChecksumDigitModulo10(content);
-                    if (content.Length > 11)
-                        content = content.Insert(11, "   ");
-                    if (content.Length > 6)
-                        content = content.Insert(6, "   ");
-                    if (content.Length > 1)
-                        content = content.Insert(1, "   ");
-                    break;
-            }
-
-            return content;
         }
 
         private static void AppendDarkCell(SvgImage image, BitMatrix matrix, int offsetX, int offSetY)
@@ -450,53 +324,28 @@ namespace ZXing.Rendering
                 content.AppendFormat(System.Globalization.CultureInfo.InvariantCulture, "<rect x=\"{0}\" y=\"{1}\" width=\"{2}\" height=\"{3}\"/>", posX, posY, width, height);
             }
 
-#if !UNITY
-            internal static double ConvertAlpha(Color alpha)
+            internal static double ConvertAlpha(Color32 alpha)
             {
-                return Math.Round((((double)alpha.A) / (double)255), 2);
+                return Math.Round((((double)alpha.a) / (double)255), 2);
             }
 
-            internal static string GetBackgroundStyle(Color color)
-            {
-                double alpha = ConvertAlpha(color);
-                return string.Format("style=\"background-color:rgb({0},{1},{2});background-color:rgba({0}, {1}, {2}, {3});\"",
-                    color.R, color.G, color.B, alpha);
-            }
-
-            internal static string GetColorRgb(Color color)
-            {
-                return color.R + "," + color.G + "," + color.B;
-            }
-
-            internal static string GetColorRgba(Color color)
+            internal static string GetBackgroundStyle(Color32 color)
             {
                 double alpha = ConvertAlpha(color);
-                return color.R + "," + color.G + "," + color.B + "," + alpha;
+                return string.Format("style=\"background-color:rgb({0},{1},{2});background-color:rgba({0},{1},{2},{3});\"",
+                    color.r, color.g, color.b, alpha);
             }
-#else
-         internal static double ConvertAlpha(Color32 alpha)
-         {
-            return Math.Round((((double)alpha.a) / (double)255), 2);
-         }
 
-         internal static string GetBackgroundStyle(Color32 color)
-         {
-            double alpha = ConvertAlpha(color);
-            return string.Format("style=\"background-color:rgb({0},{1},{2});background-color:rgba({0},{1},{2},{3});\"",
-                color.r, color.g, color.b, alpha);
-         }
+            internal static string GetColorRgb(Color32 color)
+            {
+                return color.r + "," + color.g + "," + color.b;
+            }
 
-         internal static string GetColorRgb(Color32 color)
-         {
-            return color.r + "," + color.g + "," + color.b;
-         }
-
-         internal static string GetColorRgba(Color32 color)
-         {
-            double alpha = ConvertAlpha(color);
-            return color.r + "," + color.g + "," + color.b + "," + alpha;
-         }
-#endif
+            internal static string GetColorRgba(Color32 color)
+            {
+                double alpha = ConvertAlpha(color);
+                return color.r + "," + color.g + "," + color.b + "," + alpha;
+            }
         }
     }
 }

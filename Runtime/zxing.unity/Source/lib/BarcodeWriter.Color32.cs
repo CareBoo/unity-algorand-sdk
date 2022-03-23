@@ -14,8 +14,6 @@
  * limitations under the License.
  */
 
-using ZXing.Rendering;
-
 namespace ZXing
 {
     /// <summary>
