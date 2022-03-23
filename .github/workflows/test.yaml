@@ -35,7 +35,7 @@ jobs:
           # - windows-mono
           - linux-il2cpp
           # - ios
-          - android
+          # - android
           # - webgl
 
     steps:
