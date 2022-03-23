@@ -1,4 +1,5 @@
 using System;
+using Unity.Collections;
 
 namespace AlgoSdk
 {
@@ -31,34 +32,180 @@ namespace AlgoSdk
         Address AuthAddr { get; set; }
     }
 
+    public interface ISignedTxn
+        : ISignedTxn<Transaction>
+        , IUntypedTransaction
+    {
+        /// <summary>
+        /// The untyped signature, can be sig, multisig, or logic sig
+        /// </summary>
+        TransactionSignature Signature { get; set; }
+    }
+
     /// <summary>
     /// An untyped signed transaction. See <see cref="SignedTxn{}"/> for a typed version.
     /// </summary>
     [AlgoApiObject]
     public partial struct SignedTxn
         : IEquatable<SignedTxn>
-        , ISignedTxn<Transaction>
+        , ISignedTxn
     {
+        Transaction txn;
+        TransactionSignature signature;
+        Address authAddr;
+
         [AlgoApiField("sig", "sig")]
-        public Sig Sig { get; set; }
+        public Sig Sig
+        {
+            get => signature.Sig;
+            set => signature.Sig = value;
+        }
 
         [AlgoApiField("msig", "msig")]
-        public Multisig Msig { get; set; }
+        public Multisig Msig
+        {
+            get => signature.Multisig;
+            set => signature.Multisig = value;
+        }
 
         [AlgoApiField("lsig", "lsig")]
-        public LogicSig Lsig { get; set; }
+        public LogicSig Lsig
+        {
+            get => signature.LogicSig;
+            set => signature.LogicSig = value;
+        }
 
         [AlgoApiField("txn", "txn")]
-        public Transaction Txn { get; set; }
+        public Transaction Txn
+        {
+            get => txn;
+            set => txn = value;
+        }
 
         [AlgoApiField("sgnr", "sgnr")]
-        public Address AuthAddr { get; set; }
+        public Address AuthAddr
+        {
+            get => authAddr;
+            set => authAddr = value;
+        }
+
+        public TransactionSignature Signature
+        {
+            get => signature;
+            set => signature = value;
+        }
+
+        public TransactionHeader Header
+        {
+            get => txn.Header;
+            set => txn.Header = value;
+        }
+
+        public PaymentTxn.Params PaymentParams
+        {
+            get => txn.PaymentParams;
+            set => txn.PaymentParams = value;
+        }
+
+        public AssetConfigTxn.Params AssetConfigParams
+        {
+            get => txn.AssetConfigParams;
+            set => txn.AssetConfigParams = value;
+        }
+
+        public AssetTransferTxn.Params AssetTransferParams
+        {
+            get => txn.AssetTransferParams;
+            set => txn.AssetTransferParams = value;
+        }
+
+        public AssetFreezeTxn.Params AssetFreezeParams
+        {
+            get => txn.AssetFreezeParams;
+            set => txn.AssetFreezeParams = value;
+        }
+
+        public AppCallTxn.Params AppCallParams
+        {
+            get => txn.AppCallParams;
+            set => txn.AppCallParams = value;
+        }
+
+        public KeyRegTxn.Params KeyRegParams
+        {
+            get => txn.KeyRegParams;
+            set => txn.KeyRegParams = value;
+        }
+
+        public MicroAlgos Fee
+        {
+            get => txn.Fee;
+            set => txn.Fee = value;
+        }
+
+        public ulong FirstValidRound
+        {
+            get => txn.FirstValidRound;
+            set => txn.FirstValidRound = value;
+        }
+
+        public GenesisHash GenesisHash
+        {
+            get => txn.GenesisHash;
+            set => txn.GenesisHash = value;
+        }
+
+        public ulong LastValidRound
+        {
+            get => txn.LastValidRound;
+            set => txn.LastValidRound = value;
+        }
+
+        public Address Sender
+        {
+            get => txn.Sender;
+            set => txn.Sender = value;
+        }
+
+        public TransactionType TransactionType
+        {
+            get => txn.TransactionType;
+            set => txn.TransactionType = value;
+        }
+
+        public FixedString32Bytes GenesisId
+        {
+            get => txn.GenesisId;
+            set => txn.GenesisId = value;
+        }
+
+        public TransactionId Group
+        {
+            get => txn.Group;
+            set => txn.Group = value;
+        }
+
+        public TransactionId Lease
+        {
+            get => txn.Lease;
+            set => txn.Lease = value;
+        }
+
+        public byte[] Note
+        {
+            get => txn.Note;
+            set => txn.Note = value;
+        }
+
+        public Address RekeyTo
+        {
+            get => txn.RekeyTo;
+            set => txn.RekeyTo = value;
+        }
 
         public bool Equals(SignedTxn other)
         {
-            return Sig.Equals(other.Sig)
-                && Msig.Equals(other.Msig)
-                && Lsig.Equals(other.Lsig)
+            return Signature.Equals(other.Signature)
                 && Txn.Equals(other.Txn)
                 && AuthAddr.Equals(other.AuthAddr)
                 ;
@@ -75,26 +222,54 @@ namespace AlgoSdk
         , ISignedTxn<TTxn>
         where TTxn : ITransaction, IEquatable<TTxn>
     {
+        TTxn txn;
+        TransactionSignature signature;
+        Address authAddr;
+
         [AlgoApiField("sig", "sig")]
-        public Sig Sig { get; set; }
+        public Sig Sig
+        {
+            get => signature.Sig;
+            set => signature.Sig = value;
+        }
 
         [AlgoApiField("msig", "msig")]
-        public Multisig Msig { get; set; }
+        public Multisig Msig
+        {
+            get => signature.Multisig;
+            set => signature.Multisig = value;
+        }
 
         [AlgoApiField("lsig", "lsig")]
-        public LogicSig Lsig { get; set; }
+        public LogicSig Lsig
+        {
+            get => signature.LogicSig;
+            set => signature.LogicSig = value;
+        }
 
         [AlgoApiField("txn", "txn")]
-        public TTxn Txn { get; set; }
+        public TTxn Txn
+        {
+            get => txn;
+            set => txn = value;
+        }
 
         [AlgoApiField("sgnr", "sgnr")]
-        public Address AuthAddr { get; set; }
+        public Address AuthAddr
+        {
+            get => authAddr;
+            set => authAddr = value;
+        }
+
+        public TransactionSignature Signature
+        {
+            get => signature;
+            set => signature = value;
+        }
 
         public bool Equals(SignedTxn<TTxn> other)
         {
-            return Sig.Equals(other.Sig)
-                && Msig.Equals(other.Msig)
-                && Lsig.Equals(other.Lsig)
+            return Signature.Equals(other.Signature)
                 && Txn.Equals(other.Txn)
                 && AuthAddr.Equals(other.AuthAddr)
                 ;
@@ -104,7 +279,7 @@ namespace AlgoSdk
         {
             Transaction raw = default;
             Txn.CopyTo(ref raw);
-            return new SignedTxn { Txn = raw };
+            return new SignedTxn { Txn = raw, Signature = signature, AuthAddr = authAddr };
         }
 
         public static implicit operator SignedTxn(SignedTxn<TTxn> signedTxn) => signedTxn.ToUntyped();

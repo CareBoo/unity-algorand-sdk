@@ -1,5 +1,4 @@
 using System;
-using AlgoSdk.Crypto;
 using Unity.Collections;
 using UnityEngine;
 
@@ -15,7 +14,7 @@ namespace AlgoSdk
         /// <summary>
         /// The asset ID being frozen or unfrozen.
         /// </summary>
-        ulong FreezeAsset { get; set; }
+        AssetIndex FreezeAsset { get; set; }
 
         /// <summary>
         /// True to freeze the asset.
@@ -28,22 +27,22 @@ namespace AlgoSdk
         [AlgoApiField(null, "fadd")]
         public Address FreezeAccount
         {
-            get => AssetFreezeParams.FreezeAccount;
-            set => AssetFreezeParams.FreezeAccount = value;
+            get => assetFreezeParams.FreezeAccount;
+            set => assetFreezeParams.FreezeAccount = value;
         }
 
         [AlgoApiField(null, "faid")]
-        public ulong FreezeAsset
+        public AssetIndex FreezeAsset
         {
-            get => AssetFreezeParams.FreezeAsset;
-            set => AssetFreezeParams.FreezeAsset = value;
+            get => assetFreezeParams.FreezeAsset;
+            set => assetFreezeParams.FreezeAsset = value;
         }
 
         [AlgoApiField(null, "afrz")]
         public Optional<bool> AssetFrozen
         {
-            get => AssetFreezeParams.AssetFrozen;
-            set => AssetFreezeParams.AssetFrozen = value;
+            get => assetFreezeParams.AssetFrozen;
+            set => assetFreezeParams.AssetFrozen = value;
         }
 
         /// <summary>
@@ -59,7 +58,7 @@ namespace AlgoSdk
             Address sender,
             TransactionParams txnParams,
             Address freezeAccount,
-            ulong freezeAsset,
+            AssetIndex freezeAsset,
             bool assetFrozen
         )
         {
@@ -88,7 +87,7 @@ namespace AlgoSdk
         Params @params;
 
         [AlgoApiField("fee", "fee")]
-        public ulong Fee
+        public MicroAlgos Fee
         {
             get => header.Fee;
             set => header.Fee = value;
@@ -137,14 +136,14 @@ namespace AlgoSdk
         }
 
         [AlgoApiField("group", "grp")]
-        public Sha512_256_Hash Group
+        public TransactionId Group
         {
             get => header.Group;
             set => header.Group = value;
         }
 
         [AlgoApiField("lease", "lx")]
-        public Sha512_256_Hash Lease
+        public TransactionId Lease
         {
             get => header.Lease;
             set => header.Lease = value;
@@ -171,7 +170,7 @@ namespace AlgoSdk
         }
 
         [AlgoApiField(null, "faid")]
-        public ulong FreezeAsset
+        public AssetIndex FreezeAsset
         {
             get => @params.FreezeAsset;
             set => @params.FreezeAsset = value;
@@ -186,13 +185,13 @@ namespace AlgoSdk
 
         public void CopyTo(ref Transaction transaction)
         {
-            transaction.HeaderParams = header;
+            transaction.Header = header;
             transaction.AssetFreezeParams = @params;
         }
 
         public void CopyFrom(Transaction transaction)
         {
-            header = transaction.HeaderParams;
+            header = transaction.Header;
             @params = transaction.AssetFreezeParams;
         }
 
@@ -214,7 +213,7 @@ namespace AlgoSdk
 
             [AlgoApiField("asset-id", "faid")]
             [Tooltip("The asset ID being frozen or unfrozen.")]
-            public ulong FreezeAsset;
+            public AssetIndex FreezeAsset;
 
             [AlgoApiField("new-freeze-status", "afrz")]
             [Tooltip("True to freeze the asset.")]

@@ -1,5 +1,4 @@
 using System;
-using UnityEngine;
 
 namespace AlgoSdk
 {
@@ -15,7 +14,7 @@ namespace AlgoSdk
         public Address Address;
 
         [AlgoApiField("delta", null)]
-        public EvalDeltaKeyValue[] Delta;
+        public AppStateDelta Delta;
 
         public bool Equals(AccountStateDelta other)
         {

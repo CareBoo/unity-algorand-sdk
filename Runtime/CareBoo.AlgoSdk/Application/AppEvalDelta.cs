@@ -1,41 +1,84 @@
 using System;
+using UnityEngine;
 
 namespace AlgoSdk
 {
+    public interface IAppEvalDelta<TTxn>
+        where TTxn : IAppliedSignedTxn<TTxn>
+    {
+        /// <summary>
+        /// Global state delta
+        /// </summary>
+        AppStateDelta GlobalDelta { get; set; }
+
+        /// <summary>
+        /// Local state deltas
+        /// </summary>
+        AccountStateDelta[] LocalDeltas { get; set; }
+
+        /// <summary>
+        /// Logs from application calls
+        /// </summary>
+        string[] Logs { get; set; }
+
+        /// <summary>
+        /// The inner transactions (if any) that were evaluated.
+        /// </summary>
+        TTxn[] InnerTxns { get; set; }
+    }
+
     /// <summary>
     /// Stores <see cref="AppStateDelta"/> for an application's global key/value store,
     /// and a number of accounts holding local state for that application.
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public partial struct AppEvalDelta
-        : IEquatable<AppEvalDelta>
+    public partial struct AppEvalDelta<TTxn>
+        : IEquatable<AppEvalDelta<TTxn>>
+        , IAppEvalDelta<TTxn>
+        where TTxn : IAppliedSignedTxn<TTxn>
     {
-        /// <summary>
-        /// Global state delta
-        /// </summary>
+        [SerializeField, Tooltip("Global state delta.")]
+        AppStateDelta globalDelta;
+
+        [SerializeField, Tooltip("Local state deltas.")]
+        AccountStateDelta[] localDeltas;
+
+        [SerializeField, Tooltip("Logs from application calls.")]
+        string[] logs;
+
+        [SerializeField, Tooltip("The inner transactions (if any) that were evaluated.")]
+        TTxn[] innerTxns;
+
         [AlgoApiField("gd", "gd")]
-        public AppStateDelta GlobalDelta;
+        public AppStateDelta GlobalDelta
+        {
+            get => globalDelta;
+            set => globalDelta = value;
+        }
 
-        /// <summary>
-        /// Local state deltas
-        /// </summary>
         [AlgoApiField("ld", "ld")]
-        public AppStateDelta[] LocalDeltas;
+        public AccountStateDelta[] LocalDeltas
+        {
+            get => localDeltas;
+            set => localDeltas = value;
+        }
 
-        /// <summary>
-        /// Logs from application calls
-        /// </summary>
         [AlgoApiField("lg", "lg")]
-        public string[] Logs;
+        public string[] Logs
+        {
+            get => logs;
+            set => logs = value;
+        }
 
-        /// <summary>
-        /// The inner transactions (if any) that were evaluated.
-        /// </summary>
         [AlgoApiField("itx", "itx")]
-        public AppliedSignedTxn[] InnerTxns;
+        public TTxn[] InnerTxns
+        {
+            get => innerTxns;
+            set => innerTxns = value;
+        }
 
-        public bool Equals(AppEvalDelta other)
+        public bool Equals(AppEvalDelta<TTxn> other)
         {
             return GlobalDelta.Equals(other.GlobalDelta)
                 && ArrayComparer.Equals(LocalDeltas, other.LocalDeltas)

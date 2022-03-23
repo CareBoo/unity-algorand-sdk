@@ -1,5 +1,4 @@
 using System;
-using AlgoSdk.Crypto;
 using Unity.Collections;
 using UnityEngine;
 
@@ -10,7 +9,7 @@ namespace AlgoSdk
         /// <summary>
         /// For re-configure or destroy transactions, this is the unique asset ID. On asset creation, the ID is set to zero.
         /// </summary>
-        ulong ConfigAsset { get; set; }
+        AssetIndex ConfigAsset { get; set; }
 
         /// <summary>
         /// See <see cref="AssetParams"/> for all available fields.
@@ -21,17 +20,17 @@ namespace AlgoSdk
     public partial struct Transaction : IAssetConfigTxn
     {
         [AlgoApiField(null, "caid")]
-        public ulong ConfigAsset
+        public AssetIndex ConfigAsset
         {
-            get => AssetConfigurationParams.ConfigAsset;
-            set => AssetConfigurationParams.ConfigAsset = value;
+            get => assetConfigParams.ConfigAsset;
+            set => assetConfigParams.ConfigAsset = value;
         }
 
         [AlgoApiField(null, "apar")]
         public AssetParams AssetParams
         {
-            get => AssetConfigurationParams.AssetParams;
-            set => AssetConfigurationParams.AssetParams = value;
+            get => assetConfigParams.AssetParams;
+            set => assetConfigParams.AssetParams = value;
         }
 
         /// <summary>
@@ -67,7 +66,7 @@ namespace AlgoSdk
         public static AssetConfigTxn AssetConfigure(
             Address sender,
             TransactionParams txnParams,
-            ulong assetId,
+            AssetIndex assetId,
             AssetParams assetParams
         )
         {
@@ -91,7 +90,7 @@ namespace AlgoSdk
         public static AssetConfigTxn AssetDelete(
             Address sender,
             TransactionParams txnParams,
-            ulong assetId
+            AssetIndex assetId
         )
         {
             var txn = new AssetConfigTxn
@@ -117,7 +116,7 @@ namespace AlgoSdk
         Params @params;
 
         [AlgoApiField("fee", "fee")]
-        public ulong Fee
+        public MicroAlgos Fee
         {
             get => header.Fee;
             set => header.Fee = value;
@@ -166,14 +165,14 @@ namespace AlgoSdk
         }
 
         [AlgoApiField("group", "grp")]
-        public Sha512_256_Hash Group
+        public TransactionId Group
         {
             get => header.Group;
             set => header.Group = value;
         }
 
         [AlgoApiField("lease", "lx")]
-        public Sha512_256_Hash Lease
+        public TransactionId Lease
         {
             get => header.Lease;
             set => header.Lease = value;
@@ -194,7 +193,7 @@ namespace AlgoSdk
         }
 
         [AlgoApiField(null, "caid")]
-        public ulong ConfigAsset
+        public AssetIndex ConfigAsset
         {
             get => @params.ConfigAsset;
             set => @params.ConfigAsset = value;
@@ -209,14 +208,14 @@ namespace AlgoSdk
 
         public void CopyTo(ref Transaction transaction)
         {
-            transaction.HeaderParams = header;
-            transaction.AssetConfigurationParams = @params;
+            transaction.Header = header;
+            transaction.AssetConfigParams = @params;
         }
 
         public void CopyFrom(Transaction transaction)
         {
-            header = transaction.HeaderParams;
-            @params = transaction.AssetConfigurationParams;
+            header = transaction.Header;
+            @params = transaction.AssetConfigParams;
         }
 
         public bool Equals(AssetConfigTxn other)
@@ -233,7 +232,7 @@ namespace AlgoSdk
         {
             [AlgoApiField("asset-id", "xaid")]
             [Tooltip("For re-configure or destroy transactions, this is the unique asset ID. On asset creation, the ID is set to zero.")]
-            public ulong ConfigAsset;
+            public AssetIndex ConfigAsset;
 
             [AlgoApiField("params", "params")]
             public AssetParams AssetParams;

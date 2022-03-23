@@ -51,7 +51,7 @@ namespace AlgoSdk.Editor.CodeGen
             if (equalityComparerType != null)
             {
                 var equalityComparer = new CodePropertyReferenceExpression(
-                    new CodeTypeReferenceExpression(equalityComparerType),
+                    new CodeTypeReferenceExpression(equalityComparerType.FullNameExpression()),
                     "Instance");
                 expressions.Add(equalityComparer);
             }

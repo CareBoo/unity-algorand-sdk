@@ -53,12 +53,9 @@ public class AlgodCheck : MonoBehaviour
         }
     }
 
-    public async UniTaskVoid MakePayment(PrivateKey privateKey, Address receiver, ulong amount)
+    public async UniTaskVoid MakePayment(PrivateKey senderKey, Address receiver, ulong amount)
     {
-        // Get the secret key handle and the public key of the sender account.
-        // We'll use the secret key handle to sign the transaction.
-        // The public key will be used as the sender's Address.
-        using var keyPair = privateKey.ToKeyPair();
+        var senderAccount = new Account(senderKey);
 
         // Get the suggested transaction params
         var (txnParamsError, txnParams) = await algod.GetSuggestedParams();
@@ -70,12 +67,12 @@ public class AlgodCheck : MonoBehaviour
 
         // Construct and sign the payment transaction
         var paymentTxn = Transaction.Payment(
-            sender: keyPair.PublicKey,
+            sender: senderAccount.Address,
             txnParams: txnParams,
             receiver: receiver,
             amount: amount
         );
-        var signedTxn = paymentTxn.Sign(keyPair.SecretKey);
+        var signedTxn = senderAccount.SignTxn(paymentTxn);
 
         // Send the transaction
         var (sendTxnError, txid) = await algod.SendTransaction(signedTxn);
