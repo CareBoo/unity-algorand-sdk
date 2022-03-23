@@ -18,8 +18,9 @@ jobs:
       published: ${{ steps.semantic.outputs.new_release_published }}
       version: ${{ steps.semantic.outputs.new_release_version }}
     steps:
-      - name: Checkout Unity Algorand SDK
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+        with:
+          lfs: true
 
       - name: Semantic Release
         id: semantic
