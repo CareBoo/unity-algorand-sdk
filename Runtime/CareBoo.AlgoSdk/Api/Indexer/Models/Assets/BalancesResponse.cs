@@ -6,7 +6,7 @@ namespace AlgoSdk
     [AlgoApiObject]
     public partial struct BalancesResponse
         : IEquatable<BalancesResponse>
-        , IPaginatedResponse
+        , IPaginatedIndexerResponse<MiniAssetHolding>
     {
         [AlgoApiField("balances", null)]
         public MiniAssetHolding[] Balances { get; set; }
@@ -16,6 +16,12 @@ namespace AlgoSdk
 
         [AlgoApiField("next-token", null)]
         public FixedString128Bytes NextToken { get; set; }
+
+        MiniAssetHolding[] IPaginatedIndexerResponse<MiniAssetHolding>.Results
+        {
+            get => Balances;
+            set => Balances = value;
+        }
 
         public bool Equals(BalancesResponse other)
         {

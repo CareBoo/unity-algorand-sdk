@@ -6,7 +6,7 @@ namespace AlgoSdk
     [AlgoApiObject]
     public partial struct AssetsResponse
         : IEquatable<AssetsResponse>
-        , IPaginatedResponse
+        , IPaginatedIndexerResponse<Asset>
     {
         [AlgoApiField("assets", null)]
         public Asset[] Assets { get; set; }
@@ -16,6 +16,12 @@ namespace AlgoSdk
 
         [AlgoApiField("next-token", null)]
         public FixedString128Bytes NextToken { get; set; }
+
+        Asset[] IPaginatedIndexerResponse<Asset>.Results
+        {
+            get => Assets;
+            set => Assets = value;
+        }
 
         public bool Equals(AssetsResponse other)
         {

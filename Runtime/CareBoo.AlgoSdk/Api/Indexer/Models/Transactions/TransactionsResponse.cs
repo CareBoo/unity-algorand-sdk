@@ -6,7 +6,7 @@ namespace AlgoSdk
     [AlgoApiObject]
     public partial struct TransactionsResponse
         : IEquatable<TransactionsResponse>
-        , IPaginatedResponse
+        , IPaginatedIndexerResponse<Transaction>
     {
         [AlgoApiField("current-round", null)]
         public ulong CurrentRound { get; set; }
@@ -16,6 +16,12 @@ namespace AlgoSdk
 
         [AlgoApiField("transactions", null)]
         public Transaction[] Transactions { get; set; }
+
+        Transaction[] IPaginatedIndexerResponse<Transaction>.Results
+        {
+            get => Transactions;
+            set => Transactions = value;
+        }
 
         public bool Equals(TransactionsResponse other)
         {
