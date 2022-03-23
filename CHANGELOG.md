@@ -5,6 +5,25 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [2.2.0](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.1...v2.2.0) (2022-03-23)
+
+
+### Bug Fixes
+
+* **editor:** fix Tooltip compilation issue in unity 2020.3 ([6b71300](https://github.com/CareBoo/unity-algorand-sdk/commit/6b713003e79efdbd124820bfdc5fd236c62ddba0))
+
+
+### Features
+
+* **account:** add `IAccount`, `ISigner`, and `IAsyncSigner` interfaces ([19f139d](https://github.com/CareBoo/unity-algorand-sdk/commit/19f139db99e03e389d7f8abfad45e1bdb3b0667d)), closes [#82](https://github.com/CareBoo/unity-algorand-sdk/issues/82)
+* **account:** add `MicroAlgos` wrapper class ([57a89e6](https://github.com/CareBoo/unity-algorand-sdk/commit/57a89e61fa434a58f5034194c5630dfc2332d586))
+* **accounts:** add `MinBalance` to allow developers to estimate min balances ([856c11a](https://github.com/CareBoo/unity-algorand-sdk/commit/856c11ae3ae3339caf33a8f21bcca52a8d8e69d4)), closes [#104](https://github.com/CareBoo/unity-algorand-sdk/issues/104)
+* **application:** add `AppIndex` type ([458392b](https://github.com/CareBoo/unity-algorand-sdk/commit/458392b2f0ebb552d48fc84f92dff8e6145f7198))
+* **asset:** add `AssetIndex` type ([2c44d55](https://github.com/CareBoo/unity-algorand-sdk/commit/2c44d555680c875fb8767b452027f49768f16d67))
+* **teal:** add conversion for supported types to `CompiledTeal` ([#112](https://github.com/CareBoo/unity-algorand-sdk/issues/112)) ([5a279d2](https://github.com/CareBoo/unity-algorand-sdk/commit/5a279d297df5225a60efb1548a5bd6467f961f40)), closes [#105](https://github.com/CareBoo/unity-algorand-sdk/issues/105)
+* **transaction:** add ability to fully deserialize `BlockTransaction` ([f32da2f](https://github.com/CareBoo/unity-algorand-sdk/commit/f32da2f53938b65bd7e3bdcd19dc567f2800100d)), closes [#108](https://github.com/CareBoo/unity-algorand-sdk/issues/108)
+* **transaction:** refactor signed transaction to use `[AlgoApiObject]` ([8ff034d](https://github.com/CareBoo/unity-algorand-sdk/commit/8ff034df45af46469595cf04e2f16cf327b24826)), closes [#113](https://github.com/CareBoo/unity-algorand-sdk/issues/113) [#114](https://github.com/CareBoo/unity-algorand-sdk/issues/114)
+
 # [2.2.0-pre.4](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.2.0-pre.3...v2.2.0-pre.4) (2022-03-22)
 
 
