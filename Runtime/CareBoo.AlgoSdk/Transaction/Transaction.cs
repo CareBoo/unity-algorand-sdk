@@ -1,83 +1,163 @@
 using System;
 using System.Text;
 using AlgoSdk.Crypto;
-using AlgoSdk.LowLevel;
 using Unity.Collections;
 
 namespace AlgoSdk
 {
+    public interface IUntypedTransaction : ITransactionHeader
+    {
+        /// <summary>
+        /// Params common to all transactions
+        /// </summary>
+        TransactionHeader Header { get; set; }
+
+        /// <summary>
+        /// Params found in a payment transaction
+        /// </summary>
+        PaymentTxn.Params PaymentParams { get; set; }
+
+        /// <summary>
+        /// Params found in an asset configuration transaction
+        /// </summary>
+        AssetConfigTxn.Params AssetConfigParams { get; set; }
+
+        /// <summary>
+        /// Params found in an asset transfer transaction
+        /// </summary>
+        AssetTransferTxn.Params AssetTransferParams { get; set; }
+
+        /// <summary>
+        /// Params found in an asset freeze transaction
+        /// </summary>
+        AssetFreezeTxn.Params AssetFreezeParams { get; set; }
+
+        /// <summary>
+        /// Params found in an application call transaction
+        /// </summary>
+        AppCallTxn.Params AppCallParams { get; set; }
+
+        /// <summary>
+        /// Params found in a key registration transaction
+        /// </summary>
+        KeyRegTxn.Params KeyRegParams { get; set; }
+    }
+
     [AlgoApiObject]
     [Serializable]
     public partial struct Transaction
         : IEquatable<Transaction>
         , ITransaction
+        , IUntypedTransaction
     {
         /// <summary>
         /// Prefix bytes for signing transaction bytes.
         /// </summary>
         public static readonly byte[] SignaturePrefix = Encoding.UTF8.GetBytes("TX");
 
+        TransactionHeader header;
+        PaymentTxn.Params paymentParams;
+        AssetConfigTxn.Params assetConfigParams;
+        AssetTransferTxn.Params assetTransferParams;
+        AssetFreezeTxn.Params assetFreezeParams;
+        AppCallTxn.Params appCallParams;
+        KeyRegTxn.Params keyRegParams;
+
         /// <summary>
         /// Params found in all transactions.
         /// </summary>
-        public TransactionHeader HeaderParams;
+        [Obsolete("Use Header")]
+        public TransactionHeader HeaderParams
+        {
+            get => header;
+            set => header = value;
+        }
 
-        /// <summary>
-        /// Params found in Payment Transactions.
-        /// </summary>
+        public TransactionHeader Header
+        {
+            get => header;
+            set => header = value;
+        }
+
         [AlgoApiField("payment-transaction", null, readOnly: true)]
-        public PaymentTxn.Params PaymentParams;
+        public PaymentTxn.Params PaymentParams
+        {
+            get => paymentParams;
+            set => paymentParams = value;
+        }
 
-        /// <summary>
-        /// Params found in Asset Configuration Transactions.
-        /// </summary>
+        [Obsolete("Use AssetConfigParams")]
+        public AssetConfigTxn.Params AssetConfigurationParams
+        {
+            get => assetConfigParams;
+            set => assetConfigParams = value;
+        }
+
         [AlgoApiField("asset-config-transaction", null, readOnly: true)]
-        public AssetConfigTxn.Params AssetConfigurationParams;
+        public AssetConfigTxn.Params AssetConfigParams
+        {
+            get => assetConfigParams;
+            set => assetConfigParams = value;
+        }
 
-        /// <summary>
-        /// Params found in Asset Transfer Transactions.
-        /// </summary>
         [AlgoApiField("asset-transfer-transaction", null, readOnly: true)]
-        public AssetTransferTxn.Params AssetTransferParams;
+        public AssetTransferTxn.Params AssetTransferParams
+        {
+            get => assetTransferParams;
+            set => assetTransferParams = value;
+        }
 
-        /// <summary>
-        /// Params found in Asset Freeze Transactions.
-        /// </summary>
         [AlgoApiField("asset-freeze-transaction", null, readOnly: true)]
-        public AssetFreezeTxn.Params AssetFreezeParams;
+        public AssetFreezeTxn.Params AssetFreezeParams
+        {
+            get => assetFreezeParams;
+            set => assetFreezeParams = value;
+        }
 
-        /// <summary>
-        /// Params found in Application Call Transactions.
-        /// </summary>
+        [Obsolete("Use AppCallParams")]
+        public AppCallTxn.Params ApplicationCallParams
+        {
+            get => appCallParams;
+            set => appCallParams = value;
+        }
+
         [AlgoApiField("application-transaction", null, readOnly: true)]
-        public AppCallTxn.Params ApplicationCallParams;
+        public AppCallTxn.Params AppCallParams
+        {
+            get => appCallParams;
+            set => appCallParams = value;
+        }
 
-        /// <summary>
-        /// Params found in Key Registration Transactions.
-        /// </summary>
-        [AlgoApiField("keyreg-transaction", null, readOnly: true)]
-        public KeyRegTxn.Params KeyRegistrationParams;
+        [Obsolete("Use KeyRegParams")]
+        public KeyRegTxn.Params KeyRegistrationParams
+        {
+            get => keyRegParams;
+            set => keyRegParams = value;
+        }
 
-        /// <summary>
-        /// The signature used for this Transaction.
-        /// </summary>
+        [AlgoApiField("keyreg-transction", null, readOnly: true)]
+        public KeyRegTxn.Params KeyRegParams
+        {
+            get => keyRegParams;
+            set => keyRegParams = value;
+        }
+
         [AlgoApiField("signature", null, readOnly: true)]
         public TransactionSignature Signature;
 
         public bool Equals(Transaction other)
         {
-            return HeaderParams.Equals(other.HeaderParams)
-                && HeaderParams.TransactionType switch
+            return Header.Equals(other.Header)
+                && Header.TransactionType switch
                 {
-                    TransactionType.Payment => PaymentParams.Equals(other.PaymentParams),
-                    TransactionType.AssetConfiguration => AssetConfigurationParams.Equals(other.AssetConfigurationParams),
-                    TransactionType.ApplicationCall => ApplicationCallParams.Equals(other.ApplicationCallParams),
-                    TransactionType.AssetFreeze => AssetFreezeParams.Equals(other.AssetFreezeParams),
-                    TransactionType.AssetTransfer => AssetTransferParams.Equals(other.AssetTransferParams),
-                    TransactionType.KeyRegistration => KeyRegistrationParams.Equals(other.KeyRegistrationParams),
+                    TransactionType.Payment => paymentParams.Equals(other.paymentParams),
+                    TransactionType.AssetConfiguration => assetConfigParams.Equals(other.assetConfigParams),
+                    TransactionType.ApplicationCall => appCallParams.Equals(other.appCallParams),
+                    TransactionType.AssetFreeze => assetFreezeParams.Equals(other.assetFreezeParams),
+                    TransactionType.AssetTransfer => assetTransferParams.Equals(other.assetTransferParams),
+                    TransactionType.KeyRegistration => keyRegParams.Equals(other.keyRegParams),
                     _ => true
                 }
-                && Signature.Equals(other.Signature)
                 ;
         }
 
@@ -95,26 +175,18 @@ namespace AlgoSdk
         }
 
         /// <summary>
-        /// Estimate the size this transaction will take up in a block in bytes.
-        /// </summary>
-        /// <returns>Size in bytes.</returns>
-        public int EstimateBlockSizeBytes()
-        {
-            var rndSeed = AlgoSdk.Crypto.Random.Bytes<Ed25519.Seed>();
-            using var keyPair = rndSeed.ToKeyPair();
-            var signedTxn = Sign(keyPair.SecretKey);
-            return AlgoApiSerializer.SerializeMessagePack(signedTxn).Length;
-        }
-
-        /// <summary>
         /// Sign this transaction with a private key.
         /// </summary>
         /// <param name="secretKey">The account private key to use to sign this transaction.</param>
-        /// <returns>A <see cref="SignedTransaction"/>.</returns>
-        public SignedTransaction Sign(Ed25519.SecretKeyHandle secretKey)
+        /// <returns>A <see cref="SignedTxn"/>.</returns>
+        [Obsolete("Use Account.SignTxn instead")]
+        public SignedTxn Sign(Ed25519.SecretKeyHandle secretKey)
         {
-            Signature = GetSignature(secretKey);
-            return new SignedTransaction { Transaction = this };
+            return new SignedTxn
+            {
+                Txn = this,
+                Sig = GetSignature(secretKey)
+            };
         }
 
         /// <summary>
@@ -122,36 +194,11 @@ namespace AlgoSdk
         /// </summary>
         /// <param name="secretKey">The private key to use to sign this transaction.</param>
         /// <returns>A <see cref="Sig"/>.</returns>
+        [Obsolete("Use PrivateKey.Sign instead")]
         public Sig GetSignature(Ed25519.SecretKeyHandle secretKey)
         {
-            using var message = ToSignatureMessage(Allocator.Temp);
+            using var message = this.ToSignatureMessage(Allocator.Temp);
             return secretKey.Sign(message);
-        }
-
-        /// <summary>
-        /// Serializes this transaction to a message to use for signing.
-        /// </summary>
-        /// <param name="allocator">How memory should be allocated for the returned byte array.</param>
-        /// <returns>A <see cref="NativeByteArray"/></returns>
-        public NativeByteArray ToSignatureMessage(Allocator allocator)
-        {
-            using var data = AlgoApiSerializer.SerializeMessagePack(this, Allocator.Temp);
-            var result = new NativeByteArray(SignaturePrefix.Length + data.Length, allocator);
-            for (var i = 0; i < SignaturePrefix.Length; i++)
-                result[i] = SignaturePrefix[i];
-            for (var i = 0; i < data.Length; i++)
-                result[i + SignaturePrefix.Length] = data[i];
-            return result;
-        }
-
-        /// <summary>
-        /// Calculate the ID for this transaction.
-        /// </summary>
-        /// <returns>A <see cref="TransactionId"/> calculated from its current parameters.</returns>
-        public TransactionId GetId()
-        {
-            using var txnData = ToSignatureMessage(Allocator.Temp);
-            return Sha512.Hash256Truncated(txnData);
         }
 
         /// <summary>
@@ -159,21 +206,10 @@ namespace AlgoSdk
         /// </summary>
         /// <param name="txns">The transactions belonging to this group. Cannot be more than <see cref="TransactionGroup.MaxSize"/> transactions.</param>
         /// <returns>A <see cref="TransactionId"/></returns>
+        [Obsolete("Use TransactionGroup.Of(...).GetId() instead.")]
         public static TransactionId GetGroupId(params Transaction[] txns)
         {
-            if (txns == null || txns.Length == 0)
-                throw new ArgumentException("Cannot get the group id of 0 transactions", nameof(txns));
-            if (txns.Length > TransactionGroup.MaxSize)
-                throw new ArgumentException($"Cannot get the group id of a group of more than {TransactionGroup.MaxSize} transactions", nameof(txns));
-            for (var i = 0; i < txns.Length; i++)
-                txns[i].Group = default;
-            var txnMsgs = new TransactionId[txns.Length];
-            for (var i = 0; i < txns.Length; i++)
-            {
-                txns[i].Group = default;
-                txnMsgs[i] = txns[i].GetId();
-            }
-            return GetGroupId(txnMsgs);
+            return TransactionGroup.Of(txns).GetId();
         }
 
         /// <summary>
@@ -181,47 +217,32 @@ namespace AlgoSdk
         /// </summary>
         /// <param name="txids">The transaction ids belonging to this group. Cannot be more than <see cref="TransactionGroup.MaxSize"/> transactions.</param>
         /// <returns>A <see cref="TransactionId"/></returns>
+        [Obsolete("Use TransactionGroup.Of(...).GetId() instead.")]
         public static TransactionId GetGroupId(params TransactionId[] txids)
         {
-            if (txids == null || txids.Length == 0)
-                throw new ArgumentException("Cannot get the group id of 0 transactions", nameof(txids));
-            if (txids.Length > TransactionGroup.MaxSize)
-                throw new ArgumentException($"Cannot get the group id of a group of more than {TransactionGroup.MaxSize} transactions", nameof(txids));
-            var group = new TransactionGroup { Txns = txids };
-            using var msgpack = AlgoApiSerializer.SerializeMessagePack(group, Allocator.Temp);
-            var data = new NativeByteArray(TransactionGroup.IdPrefix.Length + msgpack.Length, Allocator.Temp);
-            try
-            {
-                data.CopyFrom(TransactionGroup.IdPrefix, 0);
-                data.CopyFrom(msgpack.AsArray(), TransactionGroup.IdPrefix.Length);
-                return Sha512.Hash256Truncated(data);
-            }
-            finally
-            {
-                data.Dispose();
-            }
+            return new TransactionGroup { Txns = txids }.GetId();
         }
 
         public void CopyTo(ref Transaction transaction)
         {
-            transaction.HeaderParams = HeaderParams;
-            transaction.PaymentParams = PaymentParams;
-            transaction.KeyRegistrationParams = KeyRegistrationParams;
-            transaction.AssetTransferParams = AssetTransferParams;
-            transaction.AssetFreezeParams = AssetFreezeParams;
-            transaction.AssetConfigurationParams = AssetConfigurationParams;
-            transaction.ApplicationCallParams = ApplicationCallParams;
+            transaction.Header = Header;
+            transaction.paymentParams = paymentParams;
+            transaction.keyRegParams = keyRegParams;
+            transaction.assetTransferParams = assetTransferParams;
+            transaction.assetFreezeParams = assetFreezeParams;
+            transaction.assetConfigParams = assetConfigParams;
+            transaction.appCallParams = appCallParams;
         }
 
         public void CopyFrom(Transaction transaction)
         {
-            HeaderParams = transaction.HeaderParams;
-            PaymentParams = transaction.PaymentParams;
-            KeyRegistrationParams = transaction.KeyRegistrationParams;
-            AssetTransferParams = transaction.AssetTransferParams;
-            AssetFreezeParams = transaction.AssetFreezeParams;
-            AssetConfigurationParams = transaction.AssetConfigurationParams;
-            ApplicationCallParams = transaction.ApplicationCallParams;
+            Header = transaction.Header;
+            paymentParams = transaction.paymentParams;
+            keyRegParams = transaction.keyRegParams;
+            assetTransferParams = transaction.assetTransferParams;
+            assetFreezeParams = transaction.assetFreezeParams;
+            assetConfigParams = transaction.assetConfigParams;
+            appCallParams = transaction.appCallParams;
         }
     }
 }

@@ -181,7 +181,7 @@ namespace AlgoSdk
         /// <typeparam name="T">The type of the transaction; must implement <see cref="ITransaction"/></typeparam>
         /// <param name="txn">The byte encoded signed transaction to broadcast to network</param>
         /// <returns>Transaction ID of the submission.</returns>
-        AlgoApiRequest.Sent<TransactionIdResponse> SendTransaction<T>(Signed<T> txn)
+        AlgoApiRequest.Sent<TransactionIdResponse> SendTransaction<T>(SignedTxn<T> txn)
             where T : struct, ITransaction, IEquatable<T>;
 
         /// <summary>
@@ -194,14 +194,14 @@ namespace AlgoSdk
         /// <summary>
         /// Broadcasts a group of transactions to the network.
         /// </summary>
-        /// <param name="signedTxns">The signed transactions in the same order as they were when using <see cref="Transaction.GetGroupId(TransactionId[])"/></param>
+        /// <param name="signedTxns">The signed transactions in the same order as they were in their <see cref="TransactionGroup"/></param>
         /// <returns>Transaction ID of the submission.</returns>
-        AlgoApiRequest.Sent<TransactionIdResponse> SendTransactions(params SignedTransaction[] signedTxns);
+        AlgoApiRequest.Sent<TransactionIdResponse> SendTransactions(params SignedTxn[] signedTxns);
 
         /// <summary>
         /// Broadcasts a group of msgpack-encoded, signed transactions to the network.
         /// </summary>
-        /// <param name="signedTxns">The signed transactions in the same order as they were when using <see cref="Transaction.GetGroupId(TransactionId[])"/></param>
+        /// <param name="signedTxns">The signed transactions in the same order as they were in their <see cref="TransactionGroup"/></param>
         /// <returns>Transaction ID of the submission.</returns>
         AlgoApiRequest.Sent<TransactionIdResponse> SendTransactions(params byte[][] signedTxns);
 

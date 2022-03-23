@@ -1,5 +1,4 @@
 using AlgoSdk;
-using AlgoSdk.LowLevel;
 using NUnit.Framework;
 using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
@@ -10,18 +9,17 @@ public class SignedTransactionTest
     public void SizeOfSignedTransactionShouldBeUnder4KB()
     {
         const int MAX_BYTES = 4000;
-        var size = UnsafeUtility.SizeOf<SignedTransaction>();
-        UnityEngine.Debug.Log($"Size of {nameof(SignedTransaction)}: {size}");
+        var size = UnsafeUtility.SizeOf<SignedTxn>();
+        UnityEngine.Debug.Log($"Size of {nameof(SignedTxn)}: {size}");
         Assert.IsTrue(size <= MAX_BYTES);
     }
 
     [Test]
     public void SerializedSignedTransactionShouldEqualDeserializedSignedTransaction()
     {
-        var seed = AlgoSdk.Crypto.Random.Bytes<PrivateKey>();
-        using var kp = seed.ToKeyPair();
+        var account = Account.GenerateAccount();
         var txn = Transaction.Payment(
-            sender: (Address)kp.PublicKey,
+            sender: account.Address,
             txnParams: new TransactionParams
             {
                 ConsensusVersion = "https://github.com/algorandfoundation/specs/tree/abc54f79f9ad679d2d22f0fb9909fb005c16f8a1",
@@ -33,10 +31,11 @@ public class SignedTransactionTest
             },
             receiver: AlgoSdk.Crypto.Random.Bytes<Address>(),
             amount: 1000000
-        ).Sign(kp.SecretKey);
-        using var serialized = AlgoApiSerializer.SerializeMessagePack(txn, Allocator.Temp);
+        );
+        var signedTxn = account.SignTxn(txn);
+        using var serialized = AlgoApiSerializer.SerializeMessagePack(signedTxn, Allocator.Temp);
         UnityEngine.Debug.Log($"Serialized bytes: {System.Convert.ToBase64String(serialized.ToArray())}");
-        var deserialized = AlgoApiSerializer.Deserialize<Signed<PaymentTxn>>(serialized.AsArray(), ContentType.MessagePack);
-        Assert.IsTrue(txn.Equals(deserialized));
+        var deserialized = AlgoApiSerializer.Deserialize<SignedTxn<PaymentTxn>>(serialized.AsArray(), ContentType.MessagePack);
+        Assert.IsTrue(signedTxn.Equals(deserialized));
     }
 }

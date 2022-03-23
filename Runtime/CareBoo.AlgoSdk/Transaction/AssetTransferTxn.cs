@@ -1,5 +1,4 @@
 using System;
-using AlgoSdk.Crypto;
 using Unity.Collections;
 using UnityEngine;
 
@@ -10,7 +9,7 @@ namespace AlgoSdk
         /// <summary>
         /// The unique ID of the asset to be transferred.
         /// </summary>
-        ulong XferAsset { get; set; }
+        AssetIndex XferAsset { get; set; }
 
         /// <summary>
         /// The amount of the asset to be transferred. A zero amount transferred to self allocates that asset in the account's Asset map.
@@ -41,38 +40,38 @@ namespace AlgoSdk
     public partial struct Transaction
     {
         [AlgoApiField(null, "xaid")]
-        public ulong XferAsset
+        public AssetIndex XferAsset
         {
-            get => AssetTransferParams.XferAsset;
-            set => AssetTransferParams.XferAsset = value;
+            get => assetTransferParams.XferAsset;
+            set => assetTransferParams.XferAsset = value;
         }
 
         [AlgoApiField(null, "aamt")]
         public ulong AssetAmount
         {
-            get => AssetTransferParams.AssetAmount;
-            set => AssetTransferParams.AssetAmount = value;
+            get => assetTransferParams.AssetAmount;
+            set => assetTransferParams.AssetAmount = value;
         }
 
         [AlgoApiField(null, "asnd")]
         public Address AssetSender
         {
-            get => AssetTransferParams.AssetSender;
-            set => AssetTransferParams.AssetSender = value;
+            get => assetTransferParams.AssetSender;
+            set => assetTransferParams.AssetSender = value;
         }
 
         [AlgoApiField(null, "arcv")]
         public Address AssetReceiver
         {
-            get => AssetTransferParams.AssetReceiver;
-            set => AssetTransferParams.AssetReceiver = value;
+            get => assetTransferParams.AssetReceiver;
+            set => assetTransferParams.AssetReceiver = value;
         }
 
         [AlgoApiField(null, "aclose")]
         public Address AssetCloseTo
         {
-            get => AssetTransferParams.AssetCloseTo;
-            set => AssetTransferParams.AssetCloseTo = value;
+            get => assetTransferParams.AssetCloseTo;
+            set => assetTransferParams.AssetCloseTo = value;
         }
 
         /// <summary>
@@ -87,7 +86,7 @@ namespace AlgoSdk
         public static AssetTransferTxn AssetTransfer(
             Address sender,
             TransactionParams txnParams,
-            ulong xferAsset,
+            AssetIndex xferAsset,
             ulong assetAmount,
             Address assetReceiver
         )
@@ -113,7 +112,7 @@ namespace AlgoSdk
         public static AssetTransferTxn AssetAccept(
             Address sender,
             TransactionParams txnParams,
-            ulong xferAsset
+            AssetIndex xferAsset
         )
         {
             var txn = new AssetTransferTxn
@@ -140,7 +139,7 @@ namespace AlgoSdk
         public static AssetTransferTxn AssetClawback(
             Address sender,
             TransactionParams txnParams,
-            ulong xferAsset,
+            AssetIndex xferAsset,
             ulong assetAmount,
             Address assetSender,
             Address assetReceiver
@@ -172,7 +171,7 @@ namespace AlgoSdk
         Params @params;
 
         [AlgoApiField("fee", "fee")]
-        public ulong Fee
+        public MicroAlgos Fee
         {
             get => header.Fee;
             set => header.Fee = value;
@@ -221,14 +220,14 @@ namespace AlgoSdk
         }
 
         [AlgoApiField("group", "grp")]
-        public Sha512_256_Hash Group
+        public TransactionId Group
         {
             get => header.Group;
             set => header.Group = value;
         }
 
         [AlgoApiField("lease", "lx")]
-        public Sha512_256_Hash Lease
+        public TransactionId Lease
         {
             get => header.Lease;
             set => header.Lease = value;
@@ -249,7 +248,7 @@ namespace AlgoSdk
         }
 
         [AlgoApiField(null, "xaid")]
-        public ulong XferAsset
+        public AssetIndex XferAsset
         {
             get => @params.XferAsset;
             set => @params.XferAsset = value;
@@ -292,13 +291,13 @@ namespace AlgoSdk
 
         public void CopyTo(ref Transaction transaction)
         {
-            transaction.HeaderParams = header;
+            transaction.Header = header;
             transaction.AssetTransferParams = @params;
         }
 
         public void CopyFrom(Transaction transaction)
         {
-            header = transaction.HeaderParams;
+            header = transaction.Header;
             @params = transaction.AssetTransferParams;
         }
 
@@ -315,7 +314,7 @@ namespace AlgoSdk
         {
             [AlgoApiField("asset-id", "xaid")]
             [Tooltip("The unique ID of the asset to be transferred.")]
-            public ulong XferAsset;
+            public AssetIndex XferAsset;
 
             [AlgoApiField("amount", "aamt")]
             [Tooltip("The amount of the asset to be transferred. A zero amount transferred to self allocates that asset in the account's Asset map.")]

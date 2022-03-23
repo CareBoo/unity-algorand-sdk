@@ -1,5 +1,4 @@
 using System;
-using AlgoSdk.Crypto;
 using Unity.Collections;
 using UnityEngine;
 
@@ -15,7 +14,7 @@ namespace AlgoSdk
         /// <summary>
         /// The total amount to be sent in microAlgos.
         /// </summary>
-        ulong Amount { get; set; }
+        MicroAlgos Amount { get; set; }
 
         /// <summary>
         /// When set, it indicates that the transaction is requesting that the <see cref="ITransaction.Sender"/> account should be closed, and all remaining funds, after the <see cref="ITransaction.Fee"/> and <see cref="Amount"/> are paid, be transferred to this address.
@@ -23,27 +22,27 @@ namespace AlgoSdk
         Address CloseRemainderTo { get; set; }
     }
 
-    public partial struct Transaction
+    public partial struct Transaction : IPaymentTxn
     {
         [AlgoApiField(null, "rcv")]
         public Address Receiver
         {
-            get => PaymentParams.Receiver;
-            set => PaymentParams.Receiver = value;
+            get => paymentParams.Receiver;
+            set => paymentParams.Receiver = value;
         }
 
         [AlgoApiField(null, "amt")]
-        public ulong Amount
+        public MicroAlgos Amount
         {
-            get => PaymentParams.Amount;
-            set => PaymentParams.Amount = value;
+            get => paymentParams.Amount;
+            set => paymentParams.Amount = value;
         }
 
         [AlgoApiField(null, "close")]
         public Address CloseRemainderTo
         {
-            get => PaymentParams.CloseRemainderTo;
-            set => PaymentParams.CloseRemainderTo = value;
+            get => paymentParams.CloseRemainderTo;
+            set => paymentParams.CloseRemainderTo = value;
         }
 
         /// <summary>
@@ -59,7 +58,7 @@ namespace AlgoSdk
             Address sender,
             TransactionParams txnParams,
             Address receiver,
-            ulong amount,
+            MicroAlgos amount,
             Address closeRemainderTo = default
         )
         {
@@ -88,7 +87,7 @@ namespace AlgoSdk
         Params @params;
 
         [AlgoApiField("fee", "fee")]
-        public ulong Fee
+        public MicroAlgos Fee
         {
             get => header.Fee;
             set => header.Fee = value;
@@ -137,14 +136,14 @@ namespace AlgoSdk
         }
 
         [AlgoApiField("group", "grp")]
-        public Sha512_256_Hash Group
+        public TransactionId Group
         {
             get => header.Group;
             set => header.Group = value;
         }
 
         [AlgoApiField("lease", "lx")]
-        public Sha512_256_Hash Lease
+        public TransactionId Lease
         {
             get => header.Lease;
             set => header.Lease = value;
@@ -172,7 +171,7 @@ namespace AlgoSdk
         }
 
         [AlgoApiField(null, "amt")]
-        public ulong Amount
+        public MicroAlgos Amount
         {
             get => @params.Amount;
             set => @params.Amount = value;
@@ -194,13 +193,13 @@ namespace AlgoSdk
 
         public void CopyTo(ref Transaction transaction)
         {
-            transaction.HeaderParams = header;
+            transaction.Header = header;
             transaction.PaymentParams = @params;
         }
 
         public void CopyFrom(Transaction transaction)
         {
-            header = transaction.HeaderParams;
+            header = transaction.Header;
             @params = transaction.PaymentParams;
         }
 
@@ -222,7 +221,7 @@ namespace AlgoSdk
 
             [AlgoApiField("amount", "amt")]
             [Tooltip("The total amount to be sent in microAlgos.")]
-            public ulong Amount;
+            public MicroAlgos Amount;
 
             [AlgoApiField("close-remainder-to", "close")]
             [Tooltip("When set, it indicates that the transaction is requesting that the Sender account should be closed, and all remaining funds, after the Fee and Amount are paid, be transferred to this address.")]

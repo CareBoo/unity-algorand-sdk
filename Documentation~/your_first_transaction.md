@@ -143,15 +143,12 @@ The process for sending a transaction will look like
 4. Send the signed transaction with `AlgodClient.SendTransaction<T>(Signed<T> txn)` and save its `TransactionId`.
 5. Wait for the transaction to be confirmed by polling `AlgodClient.GetPendingTransaction(TransactionId txid)` until it returns `PendingTransaction.ConfirmedRound > 0` marking that it was confirmed.
 
-Add a new method, `MakePayment(PrivateKey privateKey, Address receiver, ulong amount)` that will send a `PaymentTxn`.
+Add a new method, `MakePayment(PrivateKey senderKey, Address receiver, ulong amount)` that will send a `PaymentTxn`.
 
 ```csharp
-public async UniTaskVoid MakePayment(PrivateKey privateKey, Address receiver, ulong amount)
+public async UniTaskVoid MakePayment(PrivateKey senderKey, Address receiver, ulong amount)
 {
-    // Get the secret key handle and the public key of the sender account.
-    // We'll use the secret key handle to sign the transaction.
-    // The public key will be used as the sender's Address.
-    using var keyPair = privateKey.ToKeyPair();
+    var senderAccount = new Account(senderKey);
 
     // Get the suggested transaction params
     var (txnParamsError, txnParams) = await algod.GetSuggestedParams();
@@ -163,12 +160,12 @@ public async UniTaskVoid MakePayment(PrivateKey privateKey, Address receiver, ul
 
     // Construct and sign the payment transaction
     var paymentTxn = Transaction.Payment(
-        sender: keyPair.PublicKey,
+        sender: senderAccount.Address,
         txnParams: txnParams,
         receiver: receiver,
         amount: amount
     );
-    var signedTxn = paymentTxn.Sign(keyPair.SecretKey);
+    var signedTxn = senderAccount.SignTxn(paymentTxn);
 
     // Send the transaction
     var (sendTxnError, txid) = await algod.SendTransaction(signedTxn);
@@ -232,10 +229,7 @@ public class AlgodCheck : MonoBehaviour
 
     public void Start()
     {
-        algod = new AlgodClient(
-            address: "http://localhost:4001",
-            token: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-        );
+        algod = new AlgodClient("testnet-algorand.api.purestake.io/ps2", ("X-API-Key", "my-secret-key"));
         CheckAlgodStatus().Forget();
         CheckBalance().Forget();
     }
@@ -280,12 +274,9 @@ public class AlgodCheck : MonoBehaviour
         }
     }
 
-    public async UniTaskVoid MakePayment(PrivateKey privateKey, Address receiver, ulong amount)
+    public async UniTaskVoid MakePayment(PrivateKey senderKey, Address receiver, ulong amount)
     {
-        // Get the secret key handle and the public key of the sender account.
-        // We'll use the secret key handle to sign the transaction.
-        // The public key will be used as the sender's Address.
-        using var keyPair = privateKey.ToKeyPair();
+        var senderAccount = new Account(senderKey);
 
         // Get the suggested transaction params
         var (txnParamsError, txnParams) = await algod.GetSuggestedParams();
@@ -297,12 +288,12 @@ public class AlgodCheck : MonoBehaviour
 
         // Construct and sign the payment transaction
         var paymentTxn = Transaction.Payment(
-            sender: keyPair.PublicKey,
+            sender: senderAccount.Address,
             txnParams: txnParams,
             receiver: receiver,
             amount: amount
         );
-        var signedTxn = paymentTxn.Sign(keyPair.SecretKey);
+        var signedTxn = senderAccount.SignTxn(paymentTxn);
 
         // Send the transaction
         var (sendTxnError, txid) = await algod.SendTransaction(signedTxn);

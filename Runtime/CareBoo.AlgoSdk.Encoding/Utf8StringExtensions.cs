@@ -1,4 +1,5 @@
 using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 
 namespace AlgoSdk
 {
@@ -28,6 +29,20 @@ namespace AlgoSdk
                 ? fs.Append("true")
                 : fs.Append("false")
                 ;
+        }
+
+        public static byte[] ToByteArray<T>(this T text)
+            where T : struct, IUTF8Bytes, INativeList<byte>
+        {
+            var bytes = new byte[text.Length];
+            unsafe
+            {
+                fixed (byte* b = &bytes[0])
+                {
+                    UnsafeUtility.MemCpy(b, text.GetUnsafePtr(), text.Length);
+                }
+            }
+            return bytes;
         }
     }
 }

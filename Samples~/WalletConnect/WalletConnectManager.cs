@@ -131,7 +131,7 @@ public class WalletConnectManager : MonoBehaviour
         txnStatus = TransactionStatus.AwaitingConfirmation;
         using (var signedTxnData = new NativeArray<byte>(signedTxns[0], Allocator.Temp))
         {
-            var signedTxn = AlgoApiSerializer.DeserializeMessagePack<SignedTransaction>(signedTxnData);
+            var signedTxn = AlgoApiSerializer.DeserializeMessagePack<SignedTxn>(signedTxnData);
             Debug.Log($"Got signed transactions:\n{AlgoApiSerializer.SerializeJson(signedTxns)}");
             Debug.Log($"Deserialized signed txn: {AlgoApiSerializer.SerializeJson(signedTxn)}");
         }

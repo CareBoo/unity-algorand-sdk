@@ -27,7 +27,7 @@ namespace AlgoSdk
         /// </summary>
         [AlgoApiField("fee", null)]
         [Tooltip("Fee is the suggested transaction fee in units of micro-Algos per byte. Fee may fall to zero but transactions must still have a fee of at least MinFee for the current network protocol.")]
-        public ulong Fee;
+        public MicroAlgos Fee;
 
         /// <summary>
         /// The hash of the genesis block.
@@ -48,7 +48,7 @@ namespace AlgoSdk
         /// </summary>
         [AlgoApiField("min-fee", null)]
         [Tooltip("The minimum transaction fee (not per byte) required for the txn to validate for the current network protocol.")]
-        public ulong MinFee;
+        public MicroAlgos MinFee;
 
         /// <summary>
         /// Indicates the last round seen by the node

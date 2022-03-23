@@ -16,7 +16,7 @@ namespace AlgoSdk
         /// </summary>
         [AlgoApiField("top-transactions", "top-transactions")]
         [Tooltip("An array of signed transaction objects.")]
-        public SignedTransaction[] TopTransactions;
+        public SignedTxn[] TopTransactions;
 
         /// <summary>
         /// Total number of transactions in the pool.

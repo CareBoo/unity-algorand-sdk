@@ -39,7 +39,7 @@ This package supports the following build targets and Unity versions:
 
 ## Common Usages
 
-Make a payment transaction:
+### Make a payment transaction:
 
 ```csharp
 using AlgoSdk;
@@ -52,7 +52,40 @@ var microAlgosToSend = 1_000_000L;
 var paymentTxn = Transaction.Payment(sender, suggestedTxnParams, receiver, microAlgosToSend);
 ```
 
-Initiate a WalletConnect session and generate a QR Code:
+#### Sign the transaction with an account:
+
+```csharp
+var account = Account.GenerateAccount();
+var signedTxn = account.SignTxn(paymentTxn);
+```
+
+#### Sign the transaction with `kmd`:
+
+```csharp
+var kmd = new KmdClient("<host of kmd>");
+var walletToken = await kmd.InitWalletHandleToken("<your wallet id>", "<your wallet password>");
+var signedTxn = await kmd.SignTransaction(paymentTxn.Sender, paymentTxn.ToSignatureMessage(), walletToken, "<your kmd wallet password>");
+```
+
+#### Sign the transaction with WalletConnect:
+
+```csharp
+using AlgoSdk.WalletConnect;
+
+SavedSession savedSession = [...];
+var session = new AlgorandWalletConnectSession(savedSession);
+var walletTransaction = WalletTransaction.New(paymentTxn);
+var signedTxns = await session.SignTransactions(new[] { walletTransaction });
+var signedTxn = signedTxns[0];
+```
+
+#### Send the signed transaction:
+
+```csharp
+await algod.SendTransaction(signedTxn);
+```
+
+### Initiate a WalletConnect session and generate a QR Code:
 
 ```csharp
 using AlgoSdk;
@@ -72,34 +105,6 @@ var dappMeta = new ClientMeta
 var session = new AlgorandWalletConnectSession(dappMeta);
 var handshake = await session.StartConnection();
 Texture2D qrCode = handshake.ToQrCodeTexture();
-```
-
-Sign transactions with a private key, `kmd`, or WalletConnect:
-
-```csharp
-using AlgoSdk;
-using AlgoSdk.Crypto;
-using AlgoSdk.WalletConnect;
-
-PaymentTxn paymentTxn = Transaction.Payment(...);
-// Signing with a private key
-var signedTxn = myPrivateKey.Sign(paymentTxn);
-
-// Signing with kmd
-var kmd = new KmdClient("host of kmd");
-var walletToken = await kmd.InitWalletHandleToken("<your wallet id>", "<your wallet password>");
-var signedTxn = await kmd.SignTransaction(paymentTxn.Sender, paymentTxn.ToSignatureMessage(), walletToken, "<your kmd wallet password>");
-
-// Signing with WalletConnect
-SavedSession savedSession = ...;
-var session = new AlgorandWalletConnectSession(savedSession);
-var walletTransaction = WalletTransaction.New(paymentTxn);
-var signedTxns = await session.SignTransactions(new[] { walletTransaction });
-var signedTxn = signedTxns[0];
-
-// Send the transaction:
-var algod = new AlgodClient("<your client host>");
-await algod.SendTransaction(signedTxn);
 ```
 
 ## Installation
