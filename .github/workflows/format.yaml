@@ -3,6 +3,7 @@ name: Format check
 on:
   pull_request:
     paths:
+      - ".github/workflows/format.yaml"
       - "Runtime/**.cs"
       - "Editor/**.cs"
       - "Samples*/**.cs"

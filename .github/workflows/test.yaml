@@ -6,6 +6,7 @@ on:
       - main
   pull_request:
     paths:
+      - ".github/workflows/test.yaml"
       - "Runtime/**.cs"
       - "Runtime/**.asmdef"
       - "Runtime/**.dll"
