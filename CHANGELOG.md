@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [2.3.0-pre.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.2.0...v2.3.0-pre.1) (2022-03-24)
+
+
+### Features
+
+* **indexer:** add new `IIndexerResponse<T>` and `IPaginatedIndexerResponse<T>` interfaces ([3b3abda](https://github.com/CareBoo/unity-algorand-sdk/commit/3b3abda9bad5e1d8b6964e07b0bdd8533b8aa5e4))
+* **transaction:** add Indexer TransactionApplication model ([99f63fa](https://github.com/CareBoo/unity-algorand-sdk/commit/99f63fa443d4013bcda218cae45c9d1d0ed4f170))
+
 # [2.2.0](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.1...v2.2.0) (2022-03-23)
 
 
