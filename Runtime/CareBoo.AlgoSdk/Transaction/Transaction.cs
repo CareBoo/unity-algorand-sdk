@@ -63,22 +63,14 @@ namespace AlgoSdk
         AppCallTxn.Params appCallParams;
         KeyRegTxn.Params keyRegParams;
 
-        /// <summary>
-        /// Params found in all transactions.
-        /// </summary>
-        [Obsolete("Use Header")]
-        public TransactionHeader HeaderParams
-        {
-            get => header;
-            set => header = value;
-        }
-
+        /// <inheritdoc />
         public TransactionHeader Header
         {
             get => header;
             set => header = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("payment-transaction", null, readOnly: true)]
         public PaymentTxn.Params PaymentParams
         {
@@ -86,13 +78,7 @@ namespace AlgoSdk
             set => paymentParams = value;
         }
 
-        [Obsolete("Use AssetConfigParams")]
-        public AssetConfigTxn.Params AssetConfigurationParams
-        {
-            get => assetConfigParams;
-            set => assetConfigParams = value;
-        }
-
+        /// <inheritdoc />
         [AlgoApiField("asset-config-transaction", null, readOnly: true)]
         public AssetConfigTxn.Params AssetConfigParams
         {
@@ -100,6 +86,7 @@ namespace AlgoSdk
             set => assetConfigParams = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("asset-transfer-transaction", null, readOnly: true)]
         public AssetTransferTxn.Params AssetTransferParams
         {
@@ -107,6 +94,7 @@ namespace AlgoSdk
             set => assetTransferParams = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("asset-freeze-transaction", null, readOnly: true)]
         public AssetFreezeTxn.Params AssetFreezeParams
         {
@@ -121,6 +109,7 @@ namespace AlgoSdk
             set => appCallParams = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("application-transaction", null, readOnly: true)]
         public AppCallTxn.Params AppCallParams
         {
@@ -128,13 +117,7 @@ namespace AlgoSdk
             set => appCallParams = value;
         }
 
-        [Obsolete("Use KeyRegParams")]
-        public KeyRegTxn.Params KeyRegistrationParams
-        {
-            get => keyRegParams;
-            set => keyRegParams = value;
-        }
-
+        /// <inheritdoc />
         [AlgoApiField("keyreg-transction", null, readOnly: true)]
         public KeyRegTxn.Params KeyRegParams
         {
@@ -142,6 +125,7 @@ namespace AlgoSdk
             set => keyRegParams = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("signature", null, readOnly: true)]
         public TransactionSignature Signature;
 
@@ -172,6 +156,54 @@ namespace AlgoSdk
             T result = default;
             result.CopyFrom(this);
             return result;
+        }
+
+        /// <inheritdoc />
+        public void CopyTo(ref Transaction transaction)
+        {
+            transaction.Header = Header;
+            transaction.paymentParams = paymentParams;
+            transaction.keyRegParams = keyRegParams;
+            transaction.assetTransferParams = assetTransferParams;
+            transaction.assetFreezeParams = assetFreezeParams;
+            transaction.assetConfigParams = assetConfigParams;
+            transaction.appCallParams = appCallParams;
+        }
+
+        /// <inheritdoc />
+        public void CopyFrom(Transaction transaction)
+        {
+            Header = transaction.Header;
+            paymentParams = transaction.paymentParams;
+            keyRegParams = transaction.keyRegParams;
+            assetTransferParams = transaction.assetTransferParams;
+            assetFreezeParams = transaction.assetFreezeParams;
+            assetConfigParams = transaction.assetConfigParams;
+            appCallParams = transaction.appCallParams;
+        }
+
+        /// <summary>
+        /// Params found in all transactions.
+        /// </summary>
+        [Obsolete("Use Header")]
+        public TransactionHeader HeaderParams
+        {
+            get => header;
+            set => header = value;
+        }
+
+        [Obsolete("Use AssetConfigParams")]
+        public AssetConfigTxn.Params AssetConfigurationParams
+        {
+            get => assetConfigParams;
+            set => assetConfigParams = value;
+        }
+
+        [Obsolete("Use KeyRegParams")]
+        public KeyRegTxn.Params KeyRegistrationParams
+        {
+            get => keyRegParams;
+            set => keyRegParams = value;
         }
 
         /// <summary>
@@ -221,28 +253,6 @@ namespace AlgoSdk
         public static TransactionId GetGroupId(params TransactionId[] txids)
         {
             return new TransactionGroup { Txns = txids }.GetId();
-        }
-
-        public void CopyTo(ref Transaction transaction)
-        {
-            transaction.Header = Header;
-            transaction.paymentParams = paymentParams;
-            transaction.keyRegParams = keyRegParams;
-            transaction.assetTransferParams = assetTransferParams;
-            transaction.assetFreezeParams = assetFreezeParams;
-            transaction.assetConfigParams = assetConfigParams;
-            transaction.appCallParams = appCallParams;
-        }
-
-        public void CopyFrom(Transaction transaction)
-        {
-            Header = transaction.Header;
-            paymentParams = transaction.paymentParams;
-            keyRegParams = transaction.keyRegParams;
-            assetTransferParams = transaction.assetTransferParams;
-            assetFreezeParams = transaction.assetFreezeParams;
-            assetConfigParams = transaction.assetConfigParams;
-            appCallParams = transaction.appCallParams;
         }
     }
 }

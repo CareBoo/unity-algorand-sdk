@@ -64,6 +64,7 @@ namespace AlgoSdk
 
     public partial struct Transaction : IAppCallTxn
     {
+        /// <inheritdoc />
         [AlgoApiField(null, "apid")]
         public AppIndex ApplicationId
         {
@@ -71,6 +72,7 @@ namespace AlgoSdk
             set => appCallParams.ApplicationId = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("on-completion", "apan")]
         public OnCompletion OnComplete
         {
@@ -78,6 +80,7 @@ namespace AlgoSdk
             set => appCallParams.OnComplete = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "apap")]
         public CompiledTeal ApprovalProgram
         {
@@ -85,6 +88,7 @@ namespace AlgoSdk
             set => appCallParams.ApprovalProgram = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "apsu")]
         public CompiledTeal ClearStateProgram
         {
@@ -92,6 +96,7 @@ namespace AlgoSdk
             set => appCallParams.ClearStateProgram = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "apaa")]
         public CompiledTeal[] AppArguments
         {
@@ -99,6 +104,7 @@ namespace AlgoSdk
             set => appCallParams.AppArguments = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "apat")]
         public Address[] Accounts
         {
@@ -106,6 +112,7 @@ namespace AlgoSdk
             set => appCallParams.Accounts = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "apfa")]
         public ulong[] ForeignApps
         {
@@ -113,6 +120,7 @@ namespace AlgoSdk
             set => appCallParams.ForeignApps = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "apas")]
         public ulong[] ForeignAssets
         {
@@ -120,6 +128,7 @@ namespace AlgoSdk
             set => appCallParams.ForeignAssets = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "apgs")]
         public StateSchema GlobalStateSchema
         {
@@ -127,6 +136,7 @@ namespace AlgoSdk
             set => appCallParams.GlobalStateSchema = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "apls")]
         public StateSchema LocalStateSchema
         {
@@ -134,6 +144,7 @@ namespace AlgoSdk
             set => appCallParams.LocalStateSchema = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "apep")]
         public ulong ExtraProgramPages
         {
@@ -410,6 +421,7 @@ namespace AlgoSdk
         [SerializeField]
         Params @params;
 
+        /// <inheritdoc />
         [AlgoApiField("fee", "fee")]
         public MicroAlgos Fee
         {
@@ -417,6 +429,7 @@ namespace AlgoSdk
             set => header.Fee = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("first-valid", "fv")]
         public ulong FirstValidRound
         {
@@ -424,6 +437,7 @@ namespace AlgoSdk
             set => header.FirstValidRound = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("genesis-hash", "gh")]
         public GenesisHash GenesisHash
         {
@@ -431,6 +445,7 @@ namespace AlgoSdk
             set => header.GenesisHash = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("last-valid", "lv")]
         public ulong LastValidRound
         {
@@ -438,6 +453,7 @@ namespace AlgoSdk
             set => header.LastValidRound = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("sender", "snd")]
         public Address Sender
         {
@@ -445,6 +461,7 @@ namespace AlgoSdk
             set => header.Sender = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("tx-type", "type")]
         public TransactionType TransactionType
         {
@@ -452,6 +469,7 @@ namespace AlgoSdk
             internal set => header.TransactionType = TransactionType.ApplicationCall;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("genesis-id", "gen")]
         public FixedString32Bytes GenesisId
         {
@@ -459,6 +477,7 @@ namespace AlgoSdk
             set => header.GenesisId = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("group", "grp")]
         public TransactionId Group
         {
@@ -466,6 +485,7 @@ namespace AlgoSdk
             set => header.Group = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("lease", "lx")]
         public TransactionId Lease
         {
@@ -473,6 +493,7 @@ namespace AlgoSdk
             set => header.Lease = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("note", "note")]
         public byte[] Note
         {
@@ -480,6 +501,7 @@ namespace AlgoSdk
             set => header.Note = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("rekey-to", "rekey")]
         public Address RekeyTo
         {
@@ -487,6 +509,7 @@ namespace AlgoSdk
             set => header.RekeyTo = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "apid")]
         public AppIndex ApplicationId
         {
@@ -494,6 +517,7 @@ namespace AlgoSdk
             set => @params.ApplicationId = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("on-completion", "apan")]
         public OnCompletion OnComplete
         {
@@ -501,6 +525,7 @@ namespace AlgoSdk
             set => @params.OnComplete = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "apap")]
         public CompiledTeal ApprovalProgram
         {
@@ -508,6 +533,7 @@ namespace AlgoSdk
             set => @params.ApprovalProgram = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "apsu")]
         public CompiledTeal ClearStateProgram
         {
@@ -515,6 +541,7 @@ namespace AlgoSdk
             set => @params.ClearStateProgram = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "apaa")]
         public CompiledTeal[] AppArguments
         {
@@ -522,6 +549,7 @@ namespace AlgoSdk
             set => @params.AppArguments = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "apat")]
         public Address[] Accounts
         {
@@ -529,6 +557,7 @@ namespace AlgoSdk
             set => @params.Accounts = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "apfa")]
         public ulong[] ForeignApps
         {
@@ -536,6 +565,7 @@ namespace AlgoSdk
             set => @params.ForeignApps = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "apas")]
         public ulong[] ForeignAssets
         {
@@ -543,6 +573,7 @@ namespace AlgoSdk
             set => @params.ForeignAssets = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "apgs")]
         public StateSchema GlobalStateSchema
         {
@@ -550,6 +581,7 @@ namespace AlgoSdk
             set => @params.GlobalStateSchema = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "apls")]
         public StateSchema LocalStateSchema
         {
@@ -557,6 +589,7 @@ namespace AlgoSdk
             set => @params.LocalStateSchema = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "apep")]
         public ulong ExtraProgramPages
         {
@@ -564,12 +597,14 @@ namespace AlgoSdk
             set => @params.ExtraProgramPages = value;
         }
 
+        /// <inheritdoc />
         public void CopyTo(ref Transaction transaction)
         {
             transaction.Header = header;
             transaction.AppCallParams = @params;
         }
 
+        /// <inheritdoc />
         public void CopyFrom(Transaction transaction)
         {
             header = transaction.Header;

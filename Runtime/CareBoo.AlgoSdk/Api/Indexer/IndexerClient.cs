@@ -23,7 +23,7 @@ namespace AlgoSdk
         Header[] headers;
 
         /// <summary>
-        /// Create a new indexer client
+        /// Create a new indexer client with a token set for <see cref="TokenHeader"/>.
         /// </summary>
         /// <param name="address">url of the service, including the port, e.g. <c>"http://localhost:4001"</c></param>
         /// <param name="token">token used in authenticating to the service</param>
@@ -52,6 +52,7 @@ namespace AlgoSdk
 
         public Header[] Headers => headers;
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<HealthCheck> GetHealth()
         {
             return this
@@ -59,6 +60,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<AccountsResponse> GetAccounts(
             Optional<ulong> applicationId = default,
             Optional<ulong> assetId = default,
@@ -89,6 +91,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<AccountResponse> GetAccount(
             Address accountAddress,
             Optional<bool> includeAll = default,
@@ -106,6 +109,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<TransactionsResponse> GetAccountTransactions(
             Address accountAddress,
             DateTime afterTime = default,
@@ -149,6 +153,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<ApplicationsResponse> GetApplications(
             Optional<ulong> applicationId = default,
             Optional<bool> includeAll = default,
@@ -169,6 +174,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<ApplicationResponse> GetApplication(
             ulong applicationId,
             Optional<bool> includeAll = default
@@ -183,6 +189,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<AssetsResponse> GetAssets(
             Optional<ulong> assetId = default,
             Address creator = default,
@@ -208,6 +215,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<AssetResponse> GetAsset(
             ulong assetId,
             Optional<bool> includeAll = default
@@ -222,6 +230,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<BalancesResponse> GetAssetBalances(
             ulong assetId,
             Optional<ulong> currencyGreaterThan = default,
@@ -247,6 +256,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<TransactionsResponse> GetAssetTransactions(
             ulong assetId,
             Address address = default,
@@ -294,11 +304,13 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<Block> GetBlock(ulong round)
         {
             return this.Get($"/v2/blocks/{round}").Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<TransactionsResponse> GetTransactions(
             Address address = default,
             AddressRole addressRole = default,
@@ -349,6 +361,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<TransactionResponse> GetTransaction(TransactionId txid)
         {
             return this

@@ -80,72 +80,84 @@ namespace AlgoSdk
         [SerializeField, Tooltip("If an app is called, the id used.")]
         AppIndex applicationId;
 
+        /// <inheritdoc />
         public MicroAlgos ClosingAmount
         {
             get => closingAmount;
             set => closingAmount = value;
         }
 
+        /// <inheritdoc />
         public ulong AssetClosingAmount
         {
             get => assetClosingAmount;
             set => assetClosingAmount = value;
         }
 
+        /// <inheritdoc />
         public MicroAlgos SenderRewards
         {
             get => senderRewards;
             set => senderRewards = value;
         }
 
+        /// <inheritdoc />
         public MicroAlgos ReceiverRewards
         {
             get => receiverRewards;
             set => receiverRewards = value;
         }
 
+        /// <inheritdoc />
         public MicroAlgos CloseRewards
         {
             get => closeRewards;
             set => closeRewards = value;
         }
 
+        /// <inheritdoc />
         public AppEvalDelta<TTxn> EvalDelta
         {
             get => evalDelta;
             set => evalDelta = value;
         }
 
+        /// <inheritdoc />
         public AssetIndex ConfigAsset
         {
             get => configAsset;
             set => configAsset = value;
         }
 
+        /// <inheritdoc />
         public AppIndex ApplicationId
         {
             get => applicationId;
             set => applicationId = value;
         }
 
+        /// <inheritdoc />
         public AppStateDelta GlobalDelta
         {
             get => evalDelta.GlobalDelta;
             set => evalDelta.GlobalDelta = value;
         }
 
+        /// <inheritdoc />
         public AccountStateDelta[] LocalDeltas
         {
             get => evalDelta.LocalDeltas;
             set => evalDelta.LocalDeltas = value;
         }
 
+        /// <inheritdoc />
         public string[] Logs
         {
             get => evalDelta.Logs;
             set => evalDelta.Logs = value;
         }
 
+        /// <inheritdoc />
         public TTxn[] InnerTxns
         {
             get => evalDelta.InnerTxns;

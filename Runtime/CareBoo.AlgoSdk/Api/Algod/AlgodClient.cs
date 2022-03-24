@@ -25,7 +25,7 @@ namespace AlgoSdk
         Header[] headers;
 
         /// <summary>
-        /// Create a new algod client
+        /// Create a new algod client with a token set to <see cref="TokenHeader"/>.
         /// </summary>
         /// <param name="address">url of the algod service, including the port, e.g. <c>"http://localhost:4001"</c></param>
         /// <param name="token">token used in authenticating to the algod service</param>
@@ -38,7 +38,7 @@ namespace AlgoSdk
         }
 
         /// <summary>
-        /// Create a new algod client
+        /// Create a new algod client without using a token.
         /// </summary>
         /// <param name="address">url of the algod service, including the port, e.g. <c>"http://localhost:4001"</c></param>
         /// <param name="headers">extra headers to add to the requests. e.g. <c>("x-api-key, my-api-key")</c></param>
@@ -54,6 +54,7 @@ namespace AlgoSdk
 
         public Header[] Headers => headers;
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<AlgoApiObject> GetGenesisInformation()
         {
             return this
@@ -61,6 +62,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent GetHealth()
         {
             return this
@@ -68,6 +70,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent GetMetrics()
         {
             return this
@@ -75,6 +78,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<AlgoApiObject> GetSwaggerSpec()
         {
             return this
@@ -82,6 +86,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<AccountInfo> GetAccountInformation(Address accountAddress)
         {
             return this
@@ -89,6 +94,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<PendingTransactions> GetPendingTransactions(ulong max = 0)
         {
             return this
@@ -96,6 +102,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<PendingTransactions> GetPendingTransactionsByAccount(Address accountAddress, ulong max = 0)
         {
             return this
@@ -103,6 +110,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<PendingTransaction> GetPendingTransaction(TransactionId txid)
         {
             return this
@@ -110,6 +118,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<Application> GetApplication(ulong applicationId)
         {
             return this
@@ -117,6 +126,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<Asset> GetAsset(ulong assetId)
         {
             return this
@@ -124,6 +134,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<BlockResponse> GetBlock(ulong round)
         {
             return this
@@ -131,6 +142,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<MerkleProof> GetMerkleProof(ulong round, TransactionId txid)
         {
             return this
@@ -138,6 +150,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<CatchupMessage> StartCatchup(string catchpoint)
         {
             return this
@@ -145,6 +158,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<CatchupMessage> AbortCatchup(string catchpoint)
         {
             return this
@@ -152,6 +166,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<LedgerSupply> GetLedgerSupply()
         {
             return this
@@ -159,6 +174,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<TransactionIdResponse> RegisterParticipationKeys(
             string accountAddress,
             ulong fee = 1000,
@@ -179,6 +195,7 @@ namespace AlgoSdk
                 ;
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent ShutDown(Optional<ulong> timeout = default)
         {
             return this
@@ -186,6 +203,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<Status> GetCurrentStatus()
         {
             return this
@@ -193,6 +211,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<Status> GetStatusAfterWaitingForRound(ulong round)
         {
             return this
@@ -200,6 +219,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<TealCompilationResult> TealCompile(string source)
         {
             return this
@@ -208,6 +228,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<DryrunResults> TealDryrun(Optional<DryrunRequest> dryrunRequest = default)
         {
             const string endpoint = "/v2/teal/dryrun";
@@ -223,6 +244,7 @@ namespace AlgoSdk
                 ;
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<TransactionIdResponse> SendTransaction<T>(SignedTxn<T> txn)
             where T : struct, ITransaction, IEquatable<T>
         {
@@ -230,12 +252,14 @@ namespace AlgoSdk
             return SendTransactions(data.AsArray().AsReadOnly());
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<TransactionIdResponse> SendTransaction(byte[] txn)
         {
             using var data = new NativeArray<byte>(txn, Allocator.Persistent);
             return SendTransactions(data.AsReadOnly());
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<TransactionIdResponse> SendTransactions(
             params SignedTxn[] txns
         )
@@ -249,12 +273,14 @@ namespace AlgoSdk
             return SendTransactions(bytes.AsArray().AsReadOnly());
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<TransactionIdResponse> SendTransactions(params byte[][] signedTxns)
         {
             using var bytes = NativeArrayUtil.ConcatAll(signedTxns, Allocator.Persistent);
             return SendTransactions(bytes.AsReadOnly());
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<TransactionParams> GetSuggestedParams()
         {
             return this
@@ -262,6 +288,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<Version> GetVersions()
         {
             return this
@@ -269,6 +296,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         AlgoApiRequest.Sent<TransactionIdResponse> SendTransactions(NativeArray<byte>.ReadOnly rawTxnData)
         {
             return this

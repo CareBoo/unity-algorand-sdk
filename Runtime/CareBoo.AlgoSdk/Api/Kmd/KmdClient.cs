@@ -53,6 +53,7 @@ namespace AlgoSdk
 
         public Header[] Headers => headers;
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<AlgoApiObject> GetSwaggerSpec()
         {
             return this
@@ -60,6 +61,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<GenerateKeyResponse> GenerateKey(
             FixedString128Bytes walletHandleToken,
             Optional<bool> displayMnemonic = default
@@ -72,6 +74,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent DeleteKey(
             Address address,
             FixedString128Bytes walletHandleToken,
@@ -90,6 +93,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<ExportKeyResponse> ExportKey(
             Address address,
             FixedString128Bytes walletHandleToken,
@@ -108,6 +112,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<ImportKeyResponse> ImportKey(
             PrivateKey privateKey,
             FixedString128Bytes walletHandleToken
@@ -124,6 +129,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<ListKeysResponse> ListKeys(
             FixedString128Bytes walletHandleToken
         )
@@ -135,6 +141,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<ExportMasterKeyResponse> ExportMasterKey(
             FixedString128Bytes walletHandleToken,
             FixedString128Bytes walletPassword
@@ -151,6 +158,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent DeleteMultisig(
             Address address,
             FixedString128Bytes walletHandleToken,
@@ -169,6 +177,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<ExportMultisigResponse> ExportMultisig(
             Address address,
             FixedString128Bytes walletHandleToken
@@ -185,6 +194,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<ImportMultisigResponse> ImportMultisig(
             Ed25519.PublicKey[] publicKeys,
             byte threshold,
@@ -205,6 +215,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<ListMultisigResponse> ListMultisig(
             FixedString128Bytes walletHandleToken
         )
@@ -216,6 +227,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<SignMultisigResponse> SignMultisig(
             Multisig msig,
             Ed25519.PublicKey publicKey,
@@ -238,6 +250,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<SignProgramMultisigResponse> SignProgramMultisig(
             Address msigAccount,
             byte[] programData,
@@ -262,6 +275,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<SignProgramResponse> SignProgram(
             Address account,
             byte[] programData,
@@ -282,6 +296,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<SignTransactionResponse> SignTransaction(
             Address account,
             byte[] transactionData,
@@ -302,6 +317,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<CreateWalletResponse> CreateWallet(
             PrivateKey masterDerivationKey,
             FixedString128Bytes walletDriverName,
@@ -322,6 +338,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<WalletInfoResponse> WalletInfo(
             FixedString128Bytes walletHandleToken
         )
@@ -333,6 +350,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<InitWalletHandleTokenResponse> InitWalletHandleToken(
             FixedString128Bytes walletId,
             FixedString128Bytes walletPassword
@@ -349,6 +367,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent ReleaseWalletHandleToken(
             FixedString128Bytes walletHandleToken
         )
@@ -360,6 +379,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<RenameWalletResponse> RenameWallet(
             FixedString128Bytes walletId,
             FixedString128Bytes newName,
@@ -378,6 +398,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<RenewWalletHandleTokenResponse> RenewWalletHandleToken(
             FixedString128Bytes walletHandleToken
         )
@@ -389,6 +410,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<ListWalletsResponse> ListWallets()
         {
             return this
@@ -396,6 +418,7 @@ namespace AlgoSdk
                 .Send();
         }
 
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<VersionsResponse> Versions()
         {
             return this

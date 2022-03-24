@@ -54,6 +54,7 @@ namespace AlgoSdk
         TransactionSignature signature;
         Address authAddr;
 
+        /// <inheritdoc />
         [AlgoApiField("sig", "sig")]
         public Sig Sig
         {
@@ -61,6 +62,7 @@ namespace AlgoSdk
             set => signature.Sig = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("msig", "msig")]
         public Multisig Msig
         {
@@ -68,6 +70,7 @@ namespace AlgoSdk
             set => signature.Multisig = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("lsig", "lsig")]
         public LogicSig Lsig
         {
@@ -75,6 +78,7 @@ namespace AlgoSdk
             set => signature.LogicSig = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("txn", "txn")]
         public Transaction Txn
         {
@@ -82,6 +86,7 @@ namespace AlgoSdk
             set => txn = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("sgnr", "sgnr")]
         public Address AuthAddr
         {
@@ -89,114 +94,133 @@ namespace AlgoSdk
             set => authAddr = value;
         }
 
+        /// <inheritdoc />
         public TransactionSignature Signature
         {
             get => signature;
             set => signature = value;
         }
 
+        /// <inheritdoc />
         public TransactionHeader Header
         {
             get => txn.Header;
             set => txn.Header = value;
         }
 
+        /// <inheritdoc />
         public PaymentTxn.Params PaymentParams
         {
             get => txn.PaymentParams;
             set => txn.PaymentParams = value;
         }
 
+        /// <inheritdoc />
         public AssetConfigTxn.Params AssetConfigParams
         {
             get => txn.AssetConfigParams;
             set => txn.AssetConfigParams = value;
         }
 
+        /// <inheritdoc />
         public AssetTransferTxn.Params AssetTransferParams
         {
             get => txn.AssetTransferParams;
             set => txn.AssetTransferParams = value;
         }
 
+        /// <inheritdoc />
         public AssetFreezeTxn.Params AssetFreezeParams
         {
             get => txn.AssetFreezeParams;
             set => txn.AssetFreezeParams = value;
         }
 
+        /// <inheritdoc />
         public AppCallTxn.Params AppCallParams
         {
             get => txn.AppCallParams;
             set => txn.AppCallParams = value;
         }
 
+        /// <inheritdoc />
         public KeyRegTxn.Params KeyRegParams
         {
             get => txn.KeyRegParams;
             set => txn.KeyRegParams = value;
         }
 
+        /// <inheritdoc />
         public MicroAlgos Fee
         {
             get => txn.Fee;
             set => txn.Fee = value;
         }
 
+        /// <inheritdoc />
         public ulong FirstValidRound
         {
             get => txn.FirstValidRound;
             set => txn.FirstValidRound = value;
         }
 
+        /// <inheritdoc />
         public GenesisHash GenesisHash
         {
             get => txn.GenesisHash;
             set => txn.GenesisHash = value;
         }
 
+        /// <inheritdoc />
         public ulong LastValidRound
         {
             get => txn.LastValidRound;
             set => txn.LastValidRound = value;
         }
 
+        /// <inheritdoc />
         public Address Sender
         {
             get => txn.Sender;
             set => txn.Sender = value;
         }
 
+        /// <inheritdoc />
         public TransactionType TransactionType
         {
             get => txn.TransactionType;
             set => txn.TransactionType = value;
         }
 
+        /// <inheritdoc />
         public FixedString32Bytes GenesisId
         {
             get => txn.GenesisId;
             set => txn.GenesisId = value;
         }
 
+        /// <inheritdoc />
         public TransactionId Group
         {
             get => txn.Group;
             set => txn.Group = value;
         }
 
+        /// <inheritdoc />
         public TransactionId Lease
         {
             get => txn.Lease;
             set => txn.Lease = value;
         }
 
+        /// <inheritdoc />
         public byte[] Note
         {
             get => txn.Note;
             set => txn.Note = value;
         }
 
+        /// <inheritdoc />
         public Address RekeyTo
         {
             get => txn.RekeyTo;
@@ -226,6 +250,7 @@ namespace AlgoSdk
         TransactionSignature signature;
         Address authAddr;
 
+        /// <inheritdoc />
         [AlgoApiField("sig", "sig")]
         public Sig Sig
         {
@@ -233,6 +258,7 @@ namespace AlgoSdk
             set => signature.Sig = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("msig", "msig")]
         public Multisig Msig
         {
@@ -240,6 +266,7 @@ namespace AlgoSdk
             set => signature.Multisig = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("lsig", "lsig")]
         public LogicSig Lsig
         {
@@ -247,6 +274,7 @@ namespace AlgoSdk
             set => signature.LogicSig = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("txn", "txn")]
         public TTxn Txn
         {
@@ -254,6 +282,7 @@ namespace AlgoSdk
             set => txn = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("sgnr", "sgnr")]
         public Address AuthAddr
         {
@@ -261,6 +290,7 @@ namespace AlgoSdk
             set => authAddr = value;
         }
 
+        /// <inheritdoc />
         public TransactionSignature Signature
         {
             get => signature;
@@ -275,6 +305,7 @@ namespace AlgoSdk
                 ;
         }
 
+        /// <inheritdoc />
         public SignedTxn ToUntyped()
         {
             Transaction raw = default;

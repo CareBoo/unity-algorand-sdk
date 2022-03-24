@@ -26,6 +26,7 @@ namespace AlgoSdk
         [SerializeField]
         ApplyData<AppliedSignedTxn> applyData;
 
+        /// <inheritdoc />
         [AlgoApiField("sig", "sig")]
         public Sig Sig
         {
@@ -33,6 +34,7 @@ namespace AlgoSdk
             set => txn.Sig = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("msig", "msig")]
         public Multisig Msig
         {
@@ -40,6 +42,7 @@ namespace AlgoSdk
             set => txn.Msig = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("lsig", "lsig")]
         public LogicSig Lsig
         {
@@ -47,6 +50,7 @@ namespace AlgoSdk
             set => txn.Lsig = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("txn", "txn")]
         public Transaction Txn
         {
@@ -54,6 +58,7 @@ namespace AlgoSdk
             set => txn.Txn = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("sgnr", "sgnr")]
         public Address AuthAddr
         {
@@ -61,6 +66,7 @@ namespace AlgoSdk
             set => txn.AuthAddr = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("ca", "ca")]
         public MicroAlgos ClosingAmount
         {
@@ -68,6 +74,7 @@ namespace AlgoSdk
             set => applyData.ClosingAmount = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("aca", "aca")]
         public ulong AssetClosingAmount
         {
@@ -75,6 +82,7 @@ namespace AlgoSdk
             set => applyData.AssetClosingAmount = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("rs", "rs")]
         public MicroAlgos SenderRewards
         {
@@ -82,6 +90,7 @@ namespace AlgoSdk
             set => applyData.SenderRewards = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("rr", "rr")]
         public MicroAlgos ReceiverRewards
         {
@@ -89,6 +98,7 @@ namespace AlgoSdk
             set => applyData.ReceiverRewards = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("rc", "rc")]
         public MicroAlgos CloseRewards
         {
@@ -96,6 +106,7 @@ namespace AlgoSdk
             set => applyData.CloseRewards = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("dt", "dt")]
         public AppEvalDelta<AppliedSignedTxn> EvalDelta
         {
@@ -103,6 +114,7 @@ namespace AlgoSdk
             set => applyData.EvalDelta = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("caid", "caid")]
         public AssetIndex ConfigAsset
         {
@@ -110,6 +122,7 @@ namespace AlgoSdk
             set => applyData.ConfigAsset = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("apid", "apid")]
         public AppIndex ApplicationId
         {
@@ -117,138 +130,161 @@ namespace AlgoSdk
             set => applyData.ApplicationId = value;
         }
 
+        /// <inheritdoc />
         public TransactionSignature Signature
         {
             get => txn.Signature;
             set => txn.Signature = value;
         }
 
+        /// <inheritdoc />
         public TransactionHeader Header
         {
             get => txn.Header;
             set => txn.Header = value;
         }
 
+        /// <inheritdoc />
         public PaymentTxn.Params PaymentParams
         {
             get => txn.PaymentParams;
             set => txn.PaymentParams = value;
         }
 
+        /// <inheritdoc />
         public AssetConfigTxn.Params AssetConfigParams
         {
             get => txn.AssetConfigParams;
             set => txn.AssetConfigParams = value;
         }
 
+        /// <inheritdoc />
         public AssetTransferTxn.Params AssetTransferParams
         {
             get => txn.AssetTransferParams;
             set => txn.AssetTransferParams = value;
         }
 
+        /// <inheritdoc />
         public AssetFreezeTxn.Params AssetFreezeParams
         {
             get => txn.AssetFreezeParams;
             set => txn.AssetFreezeParams = value;
         }
 
+        /// <inheritdoc />
         public AppCallTxn.Params AppCallParams
         {
             get => txn.AppCallParams;
             set => txn.AppCallParams = value;
         }
 
+        /// <inheritdoc />
         public KeyRegTxn.Params KeyRegParams
         {
             get => txn.KeyRegParams;
             set => txn.KeyRegParams = value;
         }
 
+        /// <inheritdoc />
         public MicroAlgos Fee
         {
             get => txn.Fee;
             set => txn.Fee = value;
         }
 
+        /// <inheritdoc />
         public ulong FirstValidRound
         {
             get => txn.FirstValidRound;
             set => txn.FirstValidRound = value;
         }
 
+        /// <inheritdoc />
         public GenesisHash GenesisHash
         {
             get => txn.GenesisHash;
             set => txn.GenesisHash = value;
         }
 
+        /// <inheritdoc />
         public ulong LastValidRound
         {
             get => txn.LastValidRound;
             set => txn.LastValidRound = value;
         }
 
+        /// <inheritdoc />
         public Address Sender
         {
             get => txn.Sender;
             set => txn.Sender = value;
         }
 
+        /// <inheritdoc />
         public TransactionType TransactionType
         {
             get => txn.TransactionType;
             set => txn.TransactionType = value;
         }
 
+        /// <inheritdoc />
         public FixedString32Bytes GenesisId
         {
             get => txn.GenesisId;
             set => txn.GenesisId = value;
         }
 
+        /// <inheritdoc />
         public TransactionId Group
         {
             get => txn.Group;
             set => txn.Group = value;
         }
 
+        /// <inheritdoc />
         public TransactionId Lease
         {
             get => txn.Lease;
             set => txn.Lease = value;
         }
 
+        /// <inheritdoc />
         public byte[] Note
         {
             get => txn.Note;
             set => txn.Note = value;
         }
 
+        /// <inheritdoc />
         public Address RekeyTo
         {
             get => txn.RekeyTo;
             set => txn.RekeyTo = value;
         }
 
+        /// <inheritdoc />
         public AppStateDelta GlobalDelta
         {
             get => applyData.GlobalDelta;
             set => applyData.GlobalDelta = value;
         }
 
+        /// <inheritdoc />
         public AccountStateDelta[] LocalDeltas
         {
             get => applyData.LocalDeltas;
             set => applyData.LocalDeltas = value;
         }
 
+        /// <inheritdoc />
         public string[] Logs
         {
             get => applyData.Logs;
             set => applyData.Logs = value;
         }
 
+        /// <inheritdoc />
         public AppliedSignedTxn[] InnerTxns
         {
             get => applyData.InnerTxns;
