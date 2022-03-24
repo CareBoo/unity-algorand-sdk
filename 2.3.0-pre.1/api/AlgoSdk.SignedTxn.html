@@ -1,0 +1,803 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct SignedTxn
+   | Unity Algorand SDK </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct SignedTxn
+   | Unity Algorand SDK ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo_50.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AlgoSdk.SignedTxn">
+  
+  
+  <h1 id="AlgoSdk_SignedTxn" data-uid="AlgoSdk.SignedTxn" class="text-break">Struct SignedTxn
+  </h1>
+  <div class="markdown level0 summary"><p>An untyped signed transaction. See <a class="xref" href="AlgoSdk.SignedTxn-1.html">SignedTxn&lt;TTxn&gt;</a> for a typed version.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="AlgoSdk.ISignedTxn.html">ISignedTxn</a></div>
+    <div><a class="xref" href="AlgoSdk.ISignedTxn-1.html">ISignedTxn</a>&lt;<a class="xref" href="AlgoSdk.Transaction.html">Transaction</a>&gt;</div>
+    <div><a class="xref" href="AlgoSdk.IUntypedTransaction.html">IUntypedTransaction</a></div>
+    <div><a class="xref" href="AlgoSdk.ITransactionHeader.html">ITransactionHeader</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="AlgoSdk_SignedTxn_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AlgoApiObject(&quot;&quot;, &quot;&quot;, 0)]
+public struct SignedTxn : IEquatable&lt;SignedTxn&gt;, ISignedTxn, ISignedTxn&lt;Transaction&gt;, IUntypedTransaction, ITransactionHeader</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="AlgoSdk_SignedTxn_AppCallParams_" data-uid="AlgoSdk.SignedTxn.AppCallParams*"></a>
+  <h4 id="AlgoSdk_SignedTxn_AppCallParams" data-uid="AlgoSdk.SignedTxn.AppCallParams">AppCallParams</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AppCallTxn.Params AppCallParams { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AppCallTxn.Params.html">AppCallTxn.Params</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_SignedTxn_AssetConfigParams_" data-uid="AlgoSdk.SignedTxn.AssetConfigParams*"></a>
+  <h4 id="AlgoSdk_SignedTxn_AssetConfigParams" data-uid="AlgoSdk.SignedTxn.AssetConfigParams">AssetConfigParams</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetConfigTxn.Params AssetConfigParams { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AssetConfigTxn.Params.html">AssetConfigTxn.Params</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_SignedTxn_AssetFreezeParams_" data-uid="AlgoSdk.SignedTxn.AssetFreezeParams*"></a>
+  <h4 id="AlgoSdk_SignedTxn_AssetFreezeParams" data-uid="AlgoSdk.SignedTxn.AssetFreezeParams">AssetFreezeParams</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetFreezeTxn.Params AssetFreezeParams { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AssetFreezeTxn.Params.html">AssetFreezeTxn.Params</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_SignedTxn_AssetTransferParams_" data-uid="AlgoSdk.SignedTxn.AssetTransferParams*"></a>
+  <h4 id="AlgoSdk_SignedTxn_AssetTransferParams" data-uid="AlgoSdk.SignedTxn.AssetTransferParams">AssetTransferParams</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetTransferTxn.Params AssetTransferParams { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AssetTransferTxn.Params.html">AssetTransferTxn.Params</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_SignedTxn_AuthAddr_" data-uid="AlgoSdk.SignedTxn.AuthAddr*"></a>
+  <h4 id="AlgoSdk_SignedTxn_AuthAddr" data-uid="AlgoSdk.SignedTxn.AuthAddr">AuthAddr</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;sgnr&quot;, &quot;sgnr&quot;, false)]
+public Address AuthAddr { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_SignedTxn_Fee_" data-uid="AlgoSdk.SignedTxn.Fee*"></a>
+  <h4 id="AlgoSdk_SignedTxn_Fee" data-uid="AlgoSdk.SignedTxn.Fee">Fee</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MicroAlgos Fee { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.MicroAlgos.html">MicroAlgos</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_SignedTxn_FirstValidRound_" data-uid="AlgoSdk.SignedTxn.FirstValidRound*"></a>
+  <h4 id="AlgoSdk_SignedTxn_FirstValidRound" data-uid="AlgoSdk.SignedTxn.FirstValidRound">FirstValidRound</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong FirstValidRound { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_SignedTxn_GenesisHash_" data-uid="AlgoSdk.SignedTxn.GenesisHash*"></a>
+  <h4 id="AlgoSdk_SignedTxn_GenesisHash" data-uid="AlgoSdk.SignedTxn.GenesisHash">GenesisHash</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GenesisHash GenesisHash { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.GenesisHash.html">GenesisHash</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_SignedTxn_GenesisId_" data-uid="AlgoSdk.SignedTxn.GenesisId*"></a>
+  <h4 id="AlgoSdk_SignedTxn_GenesisId" data-uid="AlgoSdk.SignedTxn.GenesisId">GenesisId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FixedString32Bytes GenesisId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">FixedString32Bytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_SignedTxn_Group_" data-uid="AlgoSdk.SignedTxn.Group*"></a>
+  <h4 id="AlgoSdk_SignedTxn_Group" data-uid="AlgoSdk.SignedTxn.Group">Group</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionId Group { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionId.html">TransactionId</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_SignedTxn_Header_" data-uid="AlgoSdk.SignedTxn.Header*"></a>
+  <h4 id="AlgoSdk_SignedTxn_Header" data-uid="AlgoSdk.SignedTxn.Header">Header</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionHeader Header { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionHeader.html">TransactionHeader</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_SignedTxn_KeyRegParams_" data-uid="AlgoSdk.SignedTxn.KeyRegParams*"></a>
+  <h4 id="AlgoSdk_SignedTxn_KeyRegParams" data-uid="AlgoSdk.SignedTxn.KeyRegParams">KeyRegParams</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyRegTxn.Params KeyRegParams { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.KeyRegTxn.Params.html">KeyRegTxn.Params</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_SignedTxn_LastValidRound_" data-uid="AlgoSdk.SignedTxn.LastValidRound*"></a>
+  <h4 id="AlgoSdk_SignedTxn_LastValidRound" data-uid="AlgoSdk.SignedTxn.LastValidRound">LastValidRound</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong LastValidRound { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_SignedTxn_Lease_" data-uid="AlgoSdk.SignedTxn.Lease*"></a>
+  <h4 id="AlgoSdk_SignedTxn_Lease" data-uid="AlgoSdk.SignedTxn.Lease">Lease</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionId Lease { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionId.html">TransactionId</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_SignedTxn_Lsig_" data-uid="AlgoSdk.SignedTxn.Lsig*"></a>
+  <h4 id="AlgoSdk_SignedTxn_Lsig" data-uid="AlgoSdk.SignedTxn.Lsig">Lsig</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;lsig&quot;, &quot;lsig&quot;, false)]
+public LogicSig Lsig { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.LogicSig.html">LogicSig</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_SignedTxn_Msig_" data-uid="AlgoSdk.SignedTxn.Msig*"></a>
+  <h4 id="AlgoSdk_SignedTxn_Msig" data-uid="AlgoSdk.SignedTxn.Msig">Msig</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;msig&quot;, &quot;msig&quot;, false)]
+public Multisig Msig { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Multisig.html">Multisig</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_SignedTxn_Note_" data-uid="AlgoSdk.SignedTxn.Note*"></a>
+  <h4 id="AlgoSdk_SignedTxn_Note" data-uid="AlgoSdk.SignedTxn.Note">Note</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] Note { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_SignedTxn_PaymentParams_" data-uid="AlgoSdk.SignedTxn.PaymentParams*"></a>
+  <h4 id="AlgoSdk_SignedTxn_PaymentParams" data-uid="AlgoSdk.SignedTxn.PaymentParams">PaymentParams</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PaymentTxn.Params PaymentParams { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.PaymentTxn.Params.html">PaymentTxn.Params</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_SignedTxn_RekeyTo_" data-uid="AlgoSdk.SignedTxn.RekeyTo*"></a>
+  <h4 id="AlgoSdk_SignedTxn_RekeyTo" data-uid="AlgoSdk.SignedTxn.RekeyTo">RekeyTo</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address RekeyTo { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_SignedTxn_Sender_" data-uid="AlgoSdk.SignedTxn.Sender*"></a>
+  <h4 id="AlgoSdk_SignedTxn_Sender" data-uid="AlgoSdk.SignedTxn.Sender">Sender</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address Sender { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_SignedTxn_Sig_" data-uid="AlgoSdk.SignedTxn.Sig*"></a>
+  <h4 id="AlgoSdk_SignedTxn_Sig" data-uid="AlgoSdk.SignedTxn.Sig">Sig</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;sig&quot;, &quot;sig&quot;, false)]
+public Sig Sig { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Sig.html">Sig</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_SignedTxn_Signature_" data-uid="AlgoSdk.SignedTxn.Signature*"></a>
+  <h4 id="AlgoSdk_SignedTxn_Signature" data-uid="AlgoSdk.SignedTxn.Signature">Signature</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionSignature Signature { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionSignature.html">TransactionSignature</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_SignedTxn_TransactionType_" data-uid="AlgoSdk.SignedTxn.TransactionType*"></a>
+  <h4 id="AlgoSdk_SignedTxn_TransactionType" data-uid="AlgoSdk.SignedTxn.TransactionType">TransactionType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionType TransactionType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionType.html">TransactionType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_SignedTxn_Txn_" data-uid="AlgoSdk.SignedTxn.Txn*"></a>
+  <h4 id="AlgoSdk_SignedTxn_Txn" data-uid="AlgoSdk.SignedTxn.Txn">Txn</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;txn&quot;, &quot;txn&quot;, false)]
+public Transaction Txn { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Transaction.html">Transaction</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="AlgoSdk_SignedTxn_Equals_" data-uid="AlgoSdk.SignedTxn.Equals*"></a>
+  <h4 id="AlgoSdk_SignedTxn_Equals_AlgoSdk_SignedTxn_" data-uid="AlgoSdk.SignedTxn.Equals(AlgoSdk.SignedTxn)">Equals(SignedTxn)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(SignedTxn other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.SignedTxn.html">SignedTxn</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="AlgoSdk.ISignedTxn.html">ISignedTxn</a>
+  </div>
+  <div>
+      <a class="xref" href="AlgoSdk.ISignedTxn-1.html">ISignedTxn&lt;TTxn&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="AlgoSdk.IUntypedTransaction.html">IUntypedTransaction</a>
+  </div>
+  <div>
+      <a class="xref" href="AlgoSdk.ITransactionHeader.html">ITransactionHeader</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
