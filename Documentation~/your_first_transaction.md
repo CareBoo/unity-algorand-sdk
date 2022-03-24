@@ -133,6 +133,11 @@ public void Start()
 
 Your balance should appear in the editor console when you press **Play** again.
 
+> [!Note]
+> AlgoExplorer's `algod` node does not support the `GetAccountInformation` endpoint.
+> Instead, you'll need to use `IndexerClient.GetAccount` to get the balance of algo
+> from an account.
+
 ## Send a Transaction
 
 The process for sending a transaction will look like
