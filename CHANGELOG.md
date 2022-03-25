@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [2.3.0-pre.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.3.0-pre.1...v2.3.0-pre.2) (2022-03-25)
+
+
+### Features
+
+* **transactiongroup:** add generic methods for constructing `TransactionGroup` ([5e4b6aa](https://github.com/CareBoo/unity-algorand-sdk/commit/5e4b6aac8a9fd42e9ffe27a73623d3d81e5d848d)), closes [#126](https://github.com/CareBoo/unity-algorand-sdk/issues/126)
+
 # [2.3.0-pre.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.2.0...v2.3.0-pre.1) (2022-03-24)
 
 
