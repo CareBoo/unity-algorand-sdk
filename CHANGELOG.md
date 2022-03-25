@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [2.3.0-pre.3](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.3.0-pre.2...v2.3.0-pre.3) (2022-03-25)
+
+
+### Features
+
+* **errors:** serializer read errors now print the full message they're deserializing ([b67db2a](https://github.com/CareBoo/unity-algorand-sdk/commit/b67db2a0dd52bd3bfacc7d4b66a242beafcca950))
+* **formatter:** add `isStrict` to `AlgoApiObjectFormatter` ([d8467c6](https://github.com/CareBoo/unity-algorand-sdk/commit/d8467c632172fb41e207cc13b76d45717665f26a))
+
 # [2.3.0-pre.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.3.0-pre.1...v2.3.0-pre.2) (2022-03-25)
 
 

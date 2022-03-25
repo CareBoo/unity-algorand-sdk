@@ -1,7 +1,7 @@
 {
   "name": "com.careboo.unity-algorand-sdk",
   "displayName": "AlgoSdk",
-  "version": "2.3.0-pre.2",
+  "version": "2.3.0-pre.3",
   "unity": "2020.3",
   "keywords": [
     "algorand",
@@ -20,9 +20,9 @@
     "access": "public"
   },
   "repository": "github:CareBoo/unity-algorand-sdk",
-  "changelogUrl": "https://careboo.github.io/unity-algorand-sdk/2.3.0-pre.2/changelog",
-  "documentationUrl": "https://careboo.github.io/unity-algorand-sdk/2.3.0-pre.2",
-  "licensesUrl": "https://careboo.github.io/unity-algorand-sdk/2.3.0-pre.2/license",
+  "changelogUrl": "https://careboo.github.io/unity-algorand-sdk/2.3.0-pre.3/changelog",
+  "documentationUrl": "https://careboo.github.io/unity-algorand-sdk/2.3.0-pre.3",
+  "licensesUrl": "https://careboo.github.io/unity-algorand-sdk/2.3.0-pre.3/license",
   "author": {
     "name": "CareBoo",
     "url": "https://github.com/CareBoo"
