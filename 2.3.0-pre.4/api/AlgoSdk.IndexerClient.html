@@ -1,0 +1,1365 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct IndexerClient
+   | Unity Algorand SDK </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct IndexerClient
+   | Unity Algorand SDK ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo_50.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AlgoSdk.IndexerClient">
+  
+  
+  <h1 id="AlgoSdk_IndexerClient" data-uid="AlgoSdk.IndexerClient" class="text-break">Struct IndexerClient
+  </h1>
+  <div class="markdown level0 summary"><p>A client for accessing the indexer service</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="AlgoSdk.IIndexerClient.html">IIndexerClient</a></div>
+    <div><a class="xref" href="AlgoSdk.IAlgoApiClient.html">IAlgoApiClient</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="AlgoSdk_IndexerClient_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Serializable]
+public struct IndexerClient : IIndexerClient, IAlgoApiClient</code></pre>
+  </div>
+  <h5 id="AlgoSdk_IndexerClient_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>The indexer service is responsible for querying the blockchain</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="AlgoSdk_IndexerClient__ctor_" data-uid="AlgoSdk.IndexerClient.#ctor*"></a>
+  <h4 id="AlgoSdk_IndexerClient__ctor_System_String_AlgoSdk_Header___" data-uid="AlgoSdk.IndexerClient.#ctor(System.String,AlgoSdk.Header[])">IndexerClient(String, Header[])</h4>
+  <div class="markdown level1 summary"><p>Create a new indexer client</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IndexerClient(string address, params Header[] headers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>url of the service, including the port, e.g. <code>&quot;http://localhost:4001&quot;</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Header.html">Header</a>[]</td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>extra headers to add to the requests. e.g. <code>(&quot;x-api-key&quot;, &quot;my-private-key&quot;)</code></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_IndexerClient__ctor_" data-uid="AlgoSdk.IndexerClient.#ctor*"></a>
+  <h4 id="AlgoSdk_IndexerClient__ctor_System_String_System_String_AlgoSdk_Header___" data-uid="AlgoSdk.IndexerClient.#ctor(System.String,System.String,AlgoSdk.Header[])">IndexerClient(String, String, Header[])</h4>
+  <div class="markdown level1 summary"><p>Create a new indexer client with a token set for <a class="xref" href="AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_TokenHeader">TokenHeader</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IndexerClient(string address, string token = null, params Header[] headers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>url of the service, including the port, e.g. <code>&quot;http://localhost:4001&quot;</code></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">token</span></td>
+        <td><p>token used in authenticating to the service</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Header.html">Header</a>[]</td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>extra headers to add to the requests. e.g. <code>(&quot;x-api-key&quot;, &quot;my-private-key&quot;)</code></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="AlgoSdk_IndexerClient_Address_" data-uid="AlgoSdk.IndexerClient.Address*"></a>
+  <h4 id="AlgoSdk_IndexerClient_Address" data-uid="AlgoSdk.IndexerClient.Address">Address</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Address { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_IndexerClient_Headers_" data-uid="AlgoSdk.IndexerClient.Headers*"></a>
+  <h4 id="AlgoSdk_IndexerClient_Headers" data-uid="AlgoSdk.IndexerClient.Headers">Headers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Header[] Headers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Header.html">Header</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_IndexerClient_Token_" data-uid="AlgoSdk.IndexerClient.Token*"></a>
+  <h4 id="AlgoSdk_IndexerClient_Token" data-uid="AlgoSdk.IndexerClient.Token">Token</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Token { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_IndexerClient_TokenHeader_" data-uid="AlgoSdk.IndexerClient.TokenHeader*"></a>
+  <h4 id="AlgoSdk_IndexerClient_TokenHeader" data-uid="AlgoSdk.IndexerClient.TokenHeader">TokenHeader</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TokenHeader { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="AlgoSdk_IndexerClient_GetAccount_" data-uid="AlgoSdk.IndexerClient.GetAccount*"></a>
+  <h4 id="AlgoSdk_IndexerClient_GetAccount_AlgoSdk_Address_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__" data-uid="AlgoSdk.IndexerClient.GetAccount(AlgoSdk.Address,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64})">GetAccount(Address, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;)</h4>
+  <div class="markdown level1 summary"><p>Lookup account information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;AccountResponse&gt; GetAccount(Address accountAddress, Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">accountAddress</span></td>
+        <td><p>account address</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">includeAll</span></td>
+        <td><p>Include all items including closed accounts, deleted applications,
+destroyed assets, opted-out asset holdings, and closed-out
+application localstates.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">round</span></td>
+        <td><p>Include results for the specified round.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.AccountResponse.html">AccountResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_IndexerClient_GetAccounts_" data-uid="AlgoSdk.IndexerClient.GetAccounts*"></a>
+  <h4 id="AlgoSdk_IndexerClient_GetAccounts_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Address_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__AlgoSdk_Optional_System_UInt64__" data-uid="AlgoSdk.IndexerClient.GetAccounts(AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Address,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},AlgoSdk.Optional{System.UInt64})">GetAccounts(Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Address, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, Optional&lt;FixedString128Bytes&gt;, Optional&lt;UInt64&gt;)</h4>
+  <div class="markdown level1 summary"><p>Search for accounts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;AccountsResponse&gt; GetAccounts(Optional&lt;ulong&gt; applicationId = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), Address authAddr = default(Address), Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">applicationId</span></td>
+        <td><p>Application ID</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">assetId</span></td>
+        <td><p>Asset ID</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">authAddr</span></td>
+        <td><p>Include accounts configured to use this spending key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">currencyGreaterThan</span></td>
+        <td><p>Results should have an amount greater than this value.
+MicroAlgos are the default currency unless an asset-id is
+provided, in which case the asset will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">currencyLessThan</span></td>
+        <td><p>Results should have an amount less than this value. MicroAlgos
+are the default currency unless an asset-id is provided, in which
+case the asset will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">includeAll</span></td>
+        <td><p>Include all items including closed accounts, deleted
+applications, destroyed assets, opted-out asset holdings, and
+closed-out application localstates.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>Maximum number of results to return.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">FixedString128Bytes</span>&gt;</td>
+        <td><span class="parametername">next</span></td>
+        <td><p>The next page of results. Use the next token provided by the
+previous results.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">round</span></td>
+        <td><p>Include results for the specified round. For performance
+reasons, this parameter may be disabled on some
+configurations.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.AccountsResponse.html">AccountsResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_IndexerClient_GetAccountTransactions_" data-uid="AlgoSdk.IndexerClient.GetAccountTransactions*"></a>
+  <h4 id="AlgoSdk_IndexerClient_GetAccountTransactions_AlgoSdk_Address_System_DateTime_AlgoSdk_Optional_System_UInt64__System_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__System_String_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_AlgoSdk_TransactionType_AlgoSdk_TransactionId_" data-uid="AlgoSdk.IndexerClient.GetAccountTransactions(AlgoSdk.Address,System.DateTime,AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)">GetAccountTransactions(Address, DateTime, Optional&lt;UInt64&gt;, DateTime, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;FixedString128Bytes&gt;, String, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, SignatureType, TransactionType, TransactionId)</h4>
+  <div class="markdown level1 summary"><p>Lookup account transactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;TransactionsResponse&gt; GetAccountTransactions(Address accountAddress, DateTime afterTime = default(DateTime), Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), DateTime beforeTime = default(DateTime), Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;), string notePrefix = null, Optional&lt;bool&gt; rekeyTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;), SignatureType sigType = SignatureType.None, TransactionType txType = TransactionType.None, TransactionId txid = default(TransactionId))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">accountAddress</span></td>
+        <td><p>account address</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="parametername">afterTime</span></td>
+        <td><p>Include results after the given time.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">assetId</span></td>
+        <td><p>Asset ID</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="parametername">beforeTime</span></td>
+        <td><p>Include results before the given time.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">currencyGreaterThan</span></td>
+        <td><p>Results should have an amount greater than this value.
+MicroAlgos are the default currency unless an asset-id
+is provided, in which case the asset will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">currencyLessThan</span></td>
+        <td><p>Results should have an amount less than this value.
+MicroAlgos are the default currency unless an asset-id
+is provided, in which case the asset will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>Maximum number of results to return.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">maxRound</span></td>
+        <td><p>Include results at or before the specified max-round.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">minRound</span></td>
+        <td><p>Include results at or after the specified min-round.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">FixedString128Bytes</span>&gt;</td>
+        <td><span class="parametername">next</span></td>
+        <td><p>The next page of results. Use the next token provided
+by the previous results.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">notePrefix</span></td>
+        <td><p>Specifies a prefix which must be contained in the note
+field.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">rekeyTo</span></td>
+        <td><p>Include results which include the rekey-to field.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">round</span></td>
+        <td><p>Include results for the specified round.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.SignatureType.html">SignatureType</a></td>
+        <td><span class="parametername">sigType</span></td>
+        <td><p>Filter transactions using the given <a class="xref" href="AlgoSdk.SignatureType.html">SignatureType</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionType.html">TransactionType</a></td>
+        <td><span class="parametername">txType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionId.html">TransactionId</a></td>
+        <td><span class="parametername">txid</span></td>
+        <td><p>Lookup the specific transaction by ID.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.TransactionsResponse.html">TransactionsResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_IndexerClient_GetApplication_" data-uid="AlgoSdk.IndexerClient.GetApplication*"></a>
+  <h4 id="AlgoSdk_IndexerClient_GetApplication_System_UInt64_AlgoSdk_Optional_System_Boolean__" data-uid="AlgoSdk.IndexerClient.GetApplication(System.UInt64,AlgoSdk.Optional{System.Boolean})">GetApplication(UInt64, Optional&lt;Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Lookup application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;ApplicationResponse&gt; GetApplication(ulong applicationId, Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">includeAll</span></td>
+        <td><p>Include all items including closed accounts, deleted applications,
+destroyed assets, opted-out asset holdings, and closed-out
+application localstates.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.ApplicationResponse.html">ApplicationResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_IndexerClient_GetApplications_" data-uid="AlgoSdk.IndexerClient.GetApplications*"></a>
+  <h4 id="AlgoSdk_IndexerClient_GetApplications_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__" data-uid="AlgoSdk.IndexerClient.GetApplications(AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes})">GetApplications(Optional&lt;UInt64&gt;, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, Optional&lt;FixedString128Bytes&gt;)</h4>
+  <div class="markdown level1 summary"><p>Search for applications</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;ApplicationsResponse&gt; GetApplications(Optional&lt;ulong&gt; applicationId = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">applicationId</span></td>
+        <td><p>Application ID</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">includeAll</span></td>
+        <td><p>Include all items including closed accounts, deleted applications,
+destroyed assets, opted-out asset holdings, and closed-out
+application localstates.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>Maximum number of results to return.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">FixedString128Bytes</span>&gt;</td>
+        <td><span class="parametername">next</span></td>
+        <td><p>The next page of results. Use the next token provided by the
+previous results.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.ApplicationsResponse.html">ApplicationsResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_IndexerClient_GetAsset_" data-uid="AlgoSdk.IndexerClient.GetAsset*"></a>
+  <h4 id="AlgoSdk_IndexerClient_GetAsset_System_UInt64_AlgoSdk_Optional_System_Boolean__" data-uid="AlgoSdk.IndexerClient.GetAsset(System.UInt64,AlgoSdk.Optional{System.Boolean})">GetAsset(UInt64, Optional&lt;Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Lookup asset information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;AssetResponse&gt; GetAsset(ulong assetId, Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="parametername">assetId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">includeAll</span></td>
+        <td><p>Include all items including closed accounts, deleted applications,
+destroyed assets, opted-out asset holdings, and closed-out
+application localstates.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.AssetResponse.html">AssetResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_IndexerClient_GetAssetBalances_" data-uid="AlgoSdk.IndexerClient.GetAssetBalances*"></a>
+  <h4 id="AlgoSdk_IndexerClient_GetAssetBalances_System_UInt64_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__AlgoSdk_Optional_System_UInt64__" data-uid="AlgoSdk.IndexerClient.GetAssetBalances(System.UInt64,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},AlgoSdk.Optional{System.UInt64})">GetAssetBalances(UInt64, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, Optional&lt;FixedString128Bytes&gt;, Optional&lt;UInt64&gt;)</h4>
+  <div class="markdown level1 summary"><p>Lookup the list of accounts who hold this asset</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;BalancesResponse&gt; GetAssetBalances(ulong assetId, Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="parametername">assetId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">currencyGreaterThan</span></td>
+        <td><p>Results should have an amount greater than this value. MicroAlgos are the default currency unless an asset-id is provided, in which case the asset will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">currencyLessThan</span></td>
+        <td><p>Results should have an amount less than this value. MicroAlgos are the default currency unless an asset-id is provided, in which case the asset will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">includeAll</span></td>
+        <td><p>Include all items including closed accounts, deleted applications, destroyed assets, opted-out asset holdings, and closed-out application localstates.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>Maximum number of results to return.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">FixedString128Bytes</span>&gt;</td>
+        <td><span class="parametername">next</span></td>
+        <td><p>The next page of results. Use the next token provided by the previous results.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">round</span></td>
+        <td><p>Include results for the specified round.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.BalancesResponse.html">BalancesResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_IndexerClient_GetAssets_" data-uid="AlgoSdk.IndexerClient.GetAssets*"></a>
+  <h4 id="AlgoSdk_IndexerClient_GetAssets_AlgoSdk_Optional_System_UInt64__AlgoSdk_Address_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__System_String_AlgoSdk_Optional_FixedString128Bytes__System_String_" data-uid="AlgoSdk.IndexerClient.GetAssets(AlgoSdk.Optional{System.UInt64},AlgoSdk.Address,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},System.String,AlgoSdk.Optional{FixedString128Bytes},System.String)">GetAssets(Optional&lt;UInt64&gt;, Address, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, String, Optional&lt;FixedString128Bytes&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Search for assets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;AssetsResponse&gt; GetAssets(Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), Address creator = default(Address), Optional&lt;bool&gt; includeAll = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), string name = null, Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;), string unit = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">assetId</span></td>
+        <td><p>Asset ID</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">creator</span></td>
+        <td><p>Filter just assets with the given creator address.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">includeAll</span></td>
+        <td><p>Include all items including closed accounts, deleted applications,
+destroyed assets, opted-out asset holdings, and closed-out
+application localstates.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>Maximum number of results to return.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Filter just assets with the given name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">FixedString128Bytes</span>&gt;</td>
+        <td><span class="parametername">next</span></td>
+        <td><p>The next page of results. Use the next token provided by the
+previous results.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">unit</span></td>
+        <td><p>Filter just assets with the given unit.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.AssetsResponse.html">AssetsResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_IndexerClient_GetAssetTransactions_" data-uid="AlgoSdk.IndexerClient.GetAssetTransactions*"></a>
+  <h4 id="AlgoSdk_IndexerClient_GetAssetTransactions_System_UInt64_AlgoSdk_Address_AlgoSdk_AddressRole_System_DateTime_System_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__System_String_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_AlgoSdk_TransactionType_AlgoSdk_TransactionId_" data-uid="AlgoSdk.IndexerClient.GetAssetTransactions(System.UInt64,AlgoSdk.Address,AlgoSdk.AddressRole,System.DateTime,System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)">GetAssetTransactions(UInt64, Address, AddressRole, DateTime, DateTime, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;FixedString128Bytes&gt;, String, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, SignatureType, TransactionType, TransactionId)</h4>
+  <div class="markdown level1 summary"><p>Lookup transactions for an asset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;TransactionsResponse&gt; GetAssetTransactions(ulong assetId, Address address = default(Address), AddressRole addressRole = AddressRole.None, DateTime afterTime = default(DateTime), DateTime beforeTime = default(DateTime), Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; excludeCloseTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;), string notePrefix = null, Optional&lt;bool&gt; rekeyTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;), SignatureType sigType = SignatureType.None, TransactionType txType = TransactionType.None, TransactionId txid = default(TransactionId))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="parametername">assetId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>Only include transactions with this address in one of the transaction fields.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AddressRole.html">AddressRole</a></td>
+        <td><span class="parametername">addressRole</span></td>
+        <td><p>Combine with the address parameter to define what type of address to search for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="parametername">afterTime</span></td>
+        <td><p>Include results after the given time.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="parametername">beforeTime</span></td>
+        <td><p>Include results before the given time.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">currencyGreaterThan</span></td>
+        <td><p>Results should have an amount greater than this value. MicroAlgos are the default currency unless an asset-id is provided, in which case the asset will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">currencyLessThan</span></td>
+        <td><p>Results should have an amount less than this value. MicroAlgos are the default currency unless an asset-id is provided, in which case the asset will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">excludeCloseTo</span></td>
+        <td><p>Combine with address and address-role parameters to define what type of address to search for. The close to fields are normally treated as a receiver, if you would like to exclude them set this parameter to true.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>Maximum number of results to return.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">maxRound</span></td>
+        <td><p>Include results at or before the specified max-round.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">minRound</span></td>
+        <td><p>Include results at or after the specified min-round.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">FixedString128Bytes</span>&gt;</td>
+        <td><span class="parametername">next</span></td>
+        <td><p>The next page of results. Use the next token provided by the previous results.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">notePrefix</span></td>
+        <td><p>Specifies a prefix which must be contained in the note field.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">rekeyTo</span></td>
+        <td><p>Include results which include the rekey-to field.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">round</span></td>
+        <td><p>Include results for the specified round.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.SignatureType.html">SignatureType</a></td>
+        <td><span class="parametername">sigType</span></td>
+        <td><p>SigType filters just results using the specified type of signature.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionType.html">TransactionType</a></td>
+        <td><span class="parametername">txType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionId.html">TransactionId</a></td>
+        <td><span class="parametername">txid</span></td>
+        <td><p>Lookup the specific transaction by ID.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.TransactionsResponse.html">TransactionsResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_IndexerClient_GetBlock_" data-uid="AlgoSdk.IndexerClient.GetBlock*"></a>
+  <h4 id="AlgoSdk_IndexerClient_GetBlock_System_UInt64_" data-uid="AlgoSdk.IndexerClient.GetBlock(System.UInt64)">GetBlock(UInt64)</h4>
+  <div class="markdown level1 summary"><p>Lookup block.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;Block&gt; GetBlock(ulong round)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="parametername">round</span></td>
+        <td><p>Round number</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.Block.html">Block</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_IndexerClient_GetHealth_" data-uid="AlgoSdk.IndexerClient.GetHealth*"></a>
+  <h4 id="AlgoSdk_IndexerClient_GetHealth" data-uid="AlgoSdk.IndexerClient.GetHealth">GetHealth()</h4>
+  <div class="markdown level1 summary"><p>Get a health status of the indexer service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;HealthCheck&gt; GetHealth()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.HealthCheck.html">HealthCheck</a>&gt;</td>
+        <td><p>a <a class="xref" href="AlgoSdk.HealthCheck.html">HealthCheck</a> response detailing the status of the health</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_IndexerClient_GetTransaction_" data-uid="AlgoSdk.IndexerClient.GetTransaction*"></a>
+  <h4 id="AlgoSdk_IndexerClient_GetTransaction_AlgoSdk_TransactionId_" data-uid="AlgoSdk.IndexerClient.GetTransaction(AlgoSdk.TransactionId)">GetTransaction(TransactionId)</h4>
+  <div class="markdown level1 summary"><p>Lookup a single transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;TransactionResponse&gt; GetTransaction(TransactionId txid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionId.html">TransactionId</a></td>
+        <td><span class="parametername">txid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.TransactionResponse.html">TransactionResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_IndexerClient_GetTransactions_" data-uid="AlgoSdk.IndexerClient.GetTransactions*"></a>
+  <h4 id="AlgoSdk_IndexerClient_GetTransactions_AlgoSdk_Address_AlgoSdk_AddressRole_System_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__System_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__System_String_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_AlgoSdk_TransactionType_AlgoSdk_TransactionId_" data-uid="AlgoSdk.IndexerClient.GetTransactions(AlgoSdk.Address,AlgoSdk.AddressRole,System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)">GetTransactions(Address, AddressRole, DateTime, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, DateTime, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;FixedString128Bytes&gt;, String, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, SignatureType, TransactionType, TransactionId)</h4>
+  <div class="markdown level1 summary"><p>Search for transactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;TransactionsResponse&gt; GetTransactions(Address address = default(Address), AddressRole addressRole = AddressRole.None, DateTime afterTime = default(DateTime), Optional&lt;ulong&gt; applicationId = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), DateTime beforeTime = default(DateTime), Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; excludeCloseTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;FixedString128Bytes&gt; next = default(Optional&lt;FixedString128Bytes&gt;), string notePrefix = null, Optional&lt;bool&gt; rekeyTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;), SignatureType sigType = SignatureType.None, TransactionType txType = TransactionType.None, TransactionId txid = default(TransactionId))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>Only include transactions with this address in one of the transaction fields.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AddressRole.html">AddressRole</a></td>
+        <td><span class="parametername">addressRole</span></td>
+        <td><p>Combine with the address parameter to define what type of address to search for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="parametername">afterTime</span></td>
+        <td><p>Include results after the given time.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">applicationId</span></td>
+        <td><p>Application Id</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">assetId</span></td>
+        <td><p>Asset Id</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="parametername">beforeTime</span></td>
+        <td><p>Include results before the given time.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">currencyGreaterThan</span></td>
+        <td><p>Results should have an amount greater than this value. MicroAlgos are the default currency unless an asset-id is provided, in which case the asset will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">currencyLessThan</span></td>
+        <td><p>Results should have an amount less than this value. MicroAlgos are the default currency unless an asset-id is provided, in which case the asset will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">excludeCloseTo</span></td>
+        <td><p>Combine with address and address-role parameters to define what type of address to search for. The close to fields are normally treated as a receiver, if you would like to exclude them set this parameter to true.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>Maximum number of results to return.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">maxRound</span></td>
+        <td><p>Include results at or before the specified max-round.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">minRound</span></td>
+        <td><p>Include results at or after the specified min-round.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">FixedString128Bytes</span>&gt;</td>
+        <td><span class="parametername">next</span></td>
+        <td><p>The next page of results. Use the next token provided by the previous results.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">notePrefix</span></td>
+        <td><p>Specifies a prefix which must be contained in the note field.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">rekeyTo</span></td>
+        <td><p>Include results which include the rekey-to field.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">round</span></td>
+        <td><p>Include results for the specified round.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.SignatureType.html">SignatureType</a></td>
+        <td><span class="parametername">sigType</span></td>
+        <td><p>SigType filters just results using the specified type of signature.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionType.html">TransactionType</a></td>
+        <td><span class="parametername">txType</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionId.html">TransactionId</a></td>
+        <td><span class="parametername">txid</span></td>
+        <td><p>Lookup the specific transaction by ID.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.TransactionsResponse.html">TransactionsResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="AlgoSdk.IIndexerClient.html">IIndexerClient</a>
+  </div>
+  <div>
+      <a class="xref" href="AlgoSdk.IAlgoApiClient.html">IAlgoApiClient</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
