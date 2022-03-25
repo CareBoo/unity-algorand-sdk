@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [2.3.0-pre.4](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.3.0-pre.3...v2.3.0-pre.4) (2022-03-25)
+
+
+### Features
+
+* **account:** add fields for total assets/accounts opted-in/created ([3ea7882](https://github.com/CareBoo/unity-algorand-sdk/commit/3ea788294950d631e227ecad1af8129eb7d09bca))
+
 # [2.3.0-pre.3](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.3.0-pre.2...v2.3.0-pre.3) (2022-03-25)
 
 
