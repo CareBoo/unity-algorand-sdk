@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>WalletConnect | Unity Algorand SDK </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="WalletConnect | Unity Algorand SDK ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo_50.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="walletconnect">WalletConnect</h1>
+
+<p><a href="https://walletconnect.com/">WalletConnect</a> is the web3 standard to connect blockchain wallets to dapps.
+The Algorand Foundation&#39;s <a href="https://algorandwallet.com/">Pera Wallet</a> supports this standard, and it&#39;s
+the easiest way to handle signing transactions for the end user.</p>
+<h2 id="initiating-a-walletconnect-session">Initiating a WalletConnect session</h2>
+<p>The general process for creating a WalletConnect session is:</p>
+<ol>
+<li>The Dapp shows the user a QR Code to initiate the handshake between Dapp and Wallet. OR on mobile, the Dapp
+provides the user a list of wallets to open via <a href="#mobile-linking">Mobile Linking</a>.</li>
+<li>The user reads the QR Code with their Wallet OR selects a wallet from a list, and chooses an address to connect with Dapp.</li>
+<li>The Dapp receives the confirmation and can begin requesting the Wallet to sign transactions.</li>
+</ol>
+<p>In code, this process is:</p>
+<pre><code class="lang-csharp">using AlgoSdk;
+using AlgoSdk.WalletConnect;
+using UnityEngine;
+
+// 1. Create the session and show the user the QR Code
+var dappMeta = new ClientMeta
+{
+    Name = &quot;&lt;name of your dapp&gt;&quot;,
+    Description = &quot;&lt;description of your dapp&gt;&quot;,
+    Url = &quot;&lt;url of your dapp&gt;&quot;,
+    IconUrls = new[]
+    {
+        &quot;&lt;icon1 of your dapp&gt;&quot;, &quot;&lt;icon2 of your dapp&gt;&quot;
+    }
+};
+var session = new AlgorandWalletConnectSession(dappMeta);
+// session is in no connection status
+Debug.Assert(session.ConnectionStatus == AlgorandWalletConnectSession.Status.NoConnection);
+
+var handshake = await session.StartConnection();
+// session should now be in connecting status
+Debug.Assert(session.ConnectionStatus == AlgorandWalletConnectSession.Status.RequestingConnection);
+
+// show the user a QR Code
+Texture2D qrCode = handshake.ToQrCodeTexture();
+// OR launch a supported wallet app
+WalletRegistry.PeraWallet.LaunchForConnect(handshake);
+
+// 2. Wait for user to approve the connection
+await session.WaitForConnectionApproval();
+// session is now connected
+Debug.Assert(session.ConnectionStatus == AlgorandWalletConnectSession.Status.Connected);
+
+// 3. Send transactions to sign
+var someTxnToSign = Transaction.Payment(...);
+someTxnToSign.Sender = session.Accounts[0];
+var walletTransaction = WalletTransaction.New(someTxnToSign);
+// In the case you used a QR Code, you can await immediately.
+var signingTransactions = session.SignTransactions(new[] { walletTransaction });
+// If you are using Mobile Linking, you need to launch the app
+WalletRegistry.PeraWallet.LaunchForSigning();
+var (signErr, signedTxns) = await signingTransactions;
+</code></pre><p>After sending every transaction to sign, the user will be requested to approve the transaction
+in their Wallet application. Keep in mind that when using <a href="#mobile-linking">Mobile Linking</a>,
+you will need to launch the app.</p>
+<h2 id="handling-session-updates">Handling Session Updates</h2>
+<p>At any point during the session, the wallet may</p>
+<ul>
+<li>No longer authorize the Dapp to send transactions.</li>
+<li>Disconnect from the session.</li>
+<li>Update information about the accounts or Wallet metadata.</li>
+</ul>
+<p><code>AlgorandWalletConnectSession</code> provides events to handle these scenarios:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Events</th>
+<th style="text-align:left">Event Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>OnSessionConnect</code></td>
+<td style="text-align:left"><code>UnityEvent&lt;AlgorandWalletConnectSession&gt;</code></td>
+<td style="text-align:left">Called when the Wallet approves the connection</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>OnSessionUpdate</code></td>
+<td style="text-align:left"><code>UnityEvent&lt;WalletConnectSessionData&gt;</code></td>
+<td style="text-align:left">Called when the Wallet updates accounts or Wallet metadata</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>OnSessionDisconnect</code></td>
+<td style="text-align:left"><code>UnityEvent&lt;string&gt;</code></td>
+<td style="text-align:left">Called when the Wallet disconnects from the session</td>
+</tr>
+</tbody>
+</table>
+<h2 id="persisting-sessions">Persisting Sessions</h2>
+<p>WalletConnect sessions are designed to persist across dapp sessions. To do this, a session
+can be saved as a <code>SavedSession</code>:</p>
+<pre><code class="lang-csharp">var session = new AlgorandWalletConnectSession(...);
+var savedSession = session.Save();
+</code></pre><p>You can continue a <code>SavedSession</code> by starting the AlgorandWalletConnectSession:</p>
+<pre><code class="lang-csharp">var continuedSession = new AlgorandWalletConnectSession(savedSession);
+</code></pre><div class="NOTE"><h5>Note</h5><p>The handshake URL and QR Code generated from <code>StartConnection</code> are not persisted.
+Despite this, the session will still be able listen for the wallet&#39;s approval. This is because
+the handshake and session ids are persisted in the <code>SavedSession</code>.</p>
+</div>
+<p><code>SavedSession</code> can be serialized by Unity software, so it&#39;s trivial to store it in <code>PlayerPrefs</code> for example:</p>
+<pre><code class="lang-csharp">// storing a SavedSession
+var savedSessionJson = JsonUtility.ToJson(savedSession);
+PlayerPrefs.SetString(&quot;users_wallet_connect_session&quot;, savedSessionJson);
+PlayerPrefs.Save();
+</code></pre><h2 id="mobile-linking">Mobile Linking</h2>
+<p>When users are using your Dapp from a mobile application, they may want to open a native wallet
+on their device. <a href="https://docs.walletconnect.com/mobile-linking">WalletConnect provides a protocol to do this</a>.</p>
+<p>To begin linking on mobile, you&#39;ll need to use the <code>WalletRegistry</code> static class to find supported
+wallets for the current platform. Each time you need the user to approve a request from the wallet, you&#39;ll need
+to launch the wallet app.</p>
+<pre><code class="lang-csharp">using AlgoSdk;
+using AlgoSdk.WalletConnect;
+
+var supportedWallets = WalletRegistry.SupportedWalletsForCurrentPlatform;
+
+var session = new AlgorandWalletConnectSession(...);
+var handshakeUrl = await session.StartConnection();
+var chosenWallet = AskUserToChooseWallet(supportedWallets);
+chosenWallet.LaunchForConnect(handshakeUrl);
+
+await session.WaitForConnectionApproval();
+
+AppEntry AskUserToChooseWallet(AppEntry[] supportedWallets)
+{
+    // implement UI to allow user to choose wallet
+}
+</code></pre><p>Additionally, anytime you need to sign a transaction, you&#39;ll need to launch the wallet app again.</p>
+<pre><code class="lang-csharp">var signing = await session.SignTransactions(...);
+chosenWallet.LaunchForSigning(session.Version);
+var (signErr, signedTxns) = await signing;
+</code></pre><h2 id="additional-resources">Additional Resources</h2>
+<p>Take a look at the <a href="https://developer.algorand.org/docs/get-details/walletconnect/">official Algorand documentation on WalletConnect</a> to learn more.
+The <a href="&quot;https://docs.walletconnect.com/&quot;">official WalletConnect documentation</a> is useful as well.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/CareBoo/unity-algorand-sdk/blob/main/Documentation~/walletconnect.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
