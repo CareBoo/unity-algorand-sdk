@@ -183,6 +183,34 @@ namespace AlgoSdk
         public ulong MinBalance;
 
         /// <summary>
+        /// Total amount of apps this account is opted into.
+        /// </summary>
+        [AlgoApiField("total-apps-opted-in", null)]
+        [Tooltip("Total amount of apps this account is opted into.")]
+        public ulong TotalAppsOptedIn;
+
+        /// <summary>
+        /// Total amount of assets this account is opted into.
+        /// </summary>
+        [AlgoApiField("total-assets-opted-in", null)]
+        [Tooltip("Total amount of apps this account is opted into.")]
+        public ulong TotalAssetsOptedIn;
+
+        /// <summary>
+        /// The total number of apps this account has created.
+        /// </summary>
+        [AlgoApiField("total-created-apps", null)]
+        [Tooltip("Total amount of apps this account is opted into.")]
+        public ulong TotalCreatedApps;
+
+        /// <summary>
+        /// The total number of assets this account has created.
+        /// </summary>
+        [AlgoApiField("total-created-assets", null)]
+        [Tooltip("Total amount of apps this account is opted into.")]
+        public ulong TotalCreatedAssets;
+
+        /// <summary>
         /// Estimate the minimum balance of the account in MicroAlgos.
         /// </summary>
         /// <remarks>
