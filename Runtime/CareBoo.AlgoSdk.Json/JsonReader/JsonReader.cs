@@ -21,6 +21,8 @@ namespace AlgoSdk.Json
 
         public char Char => text.Peek(offset).ToChar();
 
+        public string Text => text.ToString();
+
         public JsonToken Peek()
         {
             if (offset >= text.Length)

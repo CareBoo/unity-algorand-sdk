@@ -16,7 +16,7 @@ namespace AlgoSdk.WalletConnect
         /// The Id of the response.
         /// It should be the same as the ID of the corresponding <see cref="IJsonRpcRequest"/>.
         /// </summary>
-        ulong Id { get; set; }
+        Optional<ulong> Id { get; set; }
 
         /// <summary>
         /// The JsonRpc version.
@@ -40,7 +40,7 @@ namespace AlgoSdk.WalletConnect
         , IEquatable<JsonRpcResponse>
     {
         [AlgoApiField("id", null)]
-        public ulong Id { get; set; }
+        public Optional<ulong> Id { get; set; }
 
         [AlgoApiField("jsonrpc", null)]
         public string JsonRpc { get; set; }

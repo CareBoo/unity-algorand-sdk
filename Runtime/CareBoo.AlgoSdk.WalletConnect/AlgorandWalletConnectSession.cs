@@ -316,7 +316,7 @@ namespace AlgoSdk.WalletConnect
                 catch (Exception e) when (e is JsonReadException || e is SerializationException || e is AggregateException)
                 {
                     var s = Encoding.UTF8.GetString(payloadEvent.Payload);
-                    Debug.LogWarning($"Did not recognize payload: {s}");
+                    Debug.LogWarning($"Did not recognize payload: {s}\n{e}");
                 }
             }
         }

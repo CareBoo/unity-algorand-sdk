@@ -1,4 +1,3 @@
-using System.Linq;
 using AlgoSdk;
 using AlgoSdk.WalletConnect;
 using Cysharp.Threading.Tasks;
@@ -17,13 +16,20 @@ public class WalletConnectManager : MonoBehaviour
 
     bool launchApp;
 
+    MicroAlgos currentBalance;
+
     AlgorandWalletConnectSession session;
 
     TransactionStatus txnStatus;
 
+    AlgodClient algod = new AlgodClient("https://node.testnet.algoexplorerapi.io");
+
+    IndexerClient indexer = new IndexerClient("https://algoindexer.testnet.algoexplorerapi.io");
+
     void Start()
     {
         StartWalletConnect().Forget();
+        PollForBalance().Forget();
     }
 
     void OnGUI()
@@ -67,6 +73,8 @@ public class WalletConnectManager : MonoBehaviour
         {
             GUILayout.Label($"Connected Account: {session.Accounts[0]}");
             GUILayout.Space(5);
+            var balanceAlgos = currentBalance / (double)MicroAlgos.PerAlgo;
+            GUILayout.Label($"Balance: {balanceAlgos:F} Algos");
             switch (txnStatus)
             {
                 case TransactionStatus.None:
@@ -94,9 +102,27 @@ public class WalletConnectManager : MonoBehaviour
         Debug.Log($"accounts:\n{AlgoApiSerializer.SerializeJson(session.Accounts)}");
     }
 
+    async UniTaskVoid PollForBalance()
+    {
+        while (true)
+        {
+            var status = session?.ConnectionStatus ?? AlgorandWalletConnectSession.Status.Unknown;
+            if (status == AlgorandWalletConnectSession.Status.Connected)
+            {
+                var (err, response) = await indexer.GetAccount(session.Accounts[0]);
+                if (err) Debug.LogError(err);
+                else
+                {
+                    currentBalance = response.Account.Amount;
+                }
+            }
+            await UniTask.Delay(1_000);
+            await UniTask.Yield();
+        }
+    }
+
     async UniTaskVoid TestTransaction()
     {
-        var algod = new AlgodClient("https://node.testnet.algoexplorerapi.io");
         var (txnParamsErr, txnParams) = await algod.GetSuggestedParams();
         if (txnParamsErr)
         {
@@ -121,7 +147,7 @@ public class WalletConnectManager : MonoBehaviour
         var signingTransactions = session.SignTransactions(new[] { walletTxn });
         if (launchApp)
             WalletRegistry.PeraWallet.LaunchForSigning();
-        var (err, signedTxns) = await session.SignTransactions(new[] { walletTxn });
+        var (err, signedTxns) = await signingTransactions;
         if (err)
         {
             txnStatus = TransactionStatus.Failed;
@@ -153,7 +179,7 @@ public class WalletConnectManager : MonoBehaviour
         }
         while (pending.ConfirmedRound <= 0)
         {
-            await UniTask.Delay(500);
+            await UniTask.Delay(1000);
             (pendingErr, pending) = await algod.GetPendingTransaction(txid);
         }
         txnStatus = TransactionStatus.Confirmed;

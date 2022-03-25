@@ -11,7 +11,7 @@ namespace AlgoSdk.Formatters
         {
             var s = new FixedString64Bytes();
             reader.ReadString(ref s)
-                .ThrowIfError(reader.Char, reader.Position);
+                .ThrowIfError(reader);
             GenesisHash result = default;
             result.CopyFromBase64(s);
             return result;

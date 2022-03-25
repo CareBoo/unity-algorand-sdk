@@ -47,11 +47,11 @@ namespace AlgoSdk
         {
             T result = default;
             if (!reader.TryRead(JsonToken.ObjectBegin))
-                JsonReadError.IncorrectType.ThrowIfError(reader.Char, reader.Position);
+                JsonReadError.IncorrectType.ThrowIfError(reader);
             while (reader.Peek() != JsonToken.ObjectEnd && reader.Peek() != JsonToken.None)
             {
                 FixedString64Bytes key = default;
-                reader.ReadString(ref key).ThrowIfError(reader.Char, reader.Position);
+                reader.ReadString(ref key).ThrowIfError(reader);
                 try
                 {
                     if (jsonFieldMap.TryGetValue(key, out var field))
@@ -70,7 +70,7 @@ namespace AlgoSdk
                 }
             }
             if (!reader.TryRead(JsonToken.ObjectEnd))
-                JsonReadError.IncorrectFormat.ThrowIfError(reader.Char, reader.Position);
+                JsonReadError.IncorrectFormat.ThrowIfError(reader);
             return result;
         }
 
@@ -137,7 +137,7 @@ namespace AlgoSdk
             var json = new NativeText(Allocator.Temp);
             try
             {
-                reader.ReadRaw(ref json).ThrowIfError(reader.Char, reader.Position);
+                reader.ReadRaw(ref json).ThrowIfError(reader);
                 return json;
             }
             finally

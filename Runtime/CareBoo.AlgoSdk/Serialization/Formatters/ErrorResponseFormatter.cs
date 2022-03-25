@@ -46,7 +46,7 @@ namespace AlgoSdk.Formatters
                 }
             }
             if (!reader.TryRead(JsonToken.ObjectEnd))
-                JsonReadError.IncorrectFormat.ThrowIfError(reader.Char, reader.Position);
+                JsonReadError.IncorrectFormat.ThrowIfError(reader);
             return result;
         }
 
