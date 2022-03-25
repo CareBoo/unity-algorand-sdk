@@ -122,7 +122,7 @@ public class WalletConnectManager : MonoBehaviour
                     currentBalance = response.Account.Amount;
                 }
             }
-            await UniTask.Delay(1_000);
+            await UniTask.Delay(4_000);
             await UniTask.Yield();
         }
     }

@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.unity.burst": "1.6.4",
+    "com.unity.burst": "1.7.0",
     "com.unity.collections": "1.0.0-pre.6",
     "com.unity.ide.vscode": "1.2.5",
     "com.unity.mobile.android-logcat": "1.2.3",
@@ -50,7 +50,9 @@
     {
       "name": "package.openupm.com",
       "url": "https://package.openupm.com",
-      "scopes": ["com.cysharp.unitask"]
+      "scopes": [
+        "com.cysharp.unitask"
+      ]
     }
   ]
 }
