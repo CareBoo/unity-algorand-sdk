@@ -14,7 +14,9 @@ public class WalletConnectManager : MonoBehaviour
 
     Texture2D qrCode;
 
-    bool launchApp;
+    bool shouldLaunchApp;
+
+    AppEntry launchedApp;
 
     MicroAlgos currentBalance;
 
@@ -44,27 +46,31 @@ public class WalletConnectManager : MonoBehaviour
         GUILayout.Space(20);
         if (status == AlgorandWalletConnectSession.Status.RequestingConnection)
         {
-            if (launchApp && WalletRegistry.SupportedWalletsForCurrentPlatform.Length > 0)
+            var supportedWallets = WalletRegistry.SupportedWalletsForCurrentPlatform;
+            if (shouldLaunchApp && supportedWallets.Length > 0)
             {
-                var wallet = WalletRegistry.SupportedWalletsForCurrentPlatform[0];
-                if (GUILayout.Button($"Connect to {wallet.Name}"))
+                foreach (var wallet in supportedWallets)
                 {
-                    WalletRegistry.PeraWallet.LaunchForConnect(handshake);
-                }
-                GUILayout.Space(5);
-                if (GUILayout.Button("Show QR Code"))
-                {
-                    launchApp = false;
+                    if (GUILayout.Button($"Connect to {wallet.Name}"))
+                    {
+                        launchedApp = wallet;
+                        wallet.LaunchForConnect(handshake);
+                    }
+                    GUILayout.Space(5);
+                    if (GUILayout.Button("Show QR Code"))
+                    {
+                        shouldLaunchApp = false;
+                    }
                 }
             }
             else
             {
                 GUILayout.Button(qrCode, new GUIStyle() { alignment = TextAnchor.MiddleCenter });
-                if (WalletRegistry.SupportedWalletsForCurrentPlatform.Length > 0)
+                if (supportedWallets.Length > 0)
                 {
                     GUILayout.Space(5);
                     if (GUILayout.Button("Open Wallet App"))
-                        launchApp = true;
+                        shouldLaunchApp = true;
                 }
             }
         }
@@ -145,8 +151,8 @@ public class WalletConnectManager : MonoBehaviour
         };
 
         var signingTransactions = session.SignTransactions(new[] { walletTxn });
-        if (launchApp)
-            WalletRegistry.PeraWallet.LaunchForSigning();
+        if (shouldLaunchApp && launchedApp != null)
+            launchedApp.LaunchForSigning();
         var (err, signedTxns) = await signingTransactions;
         if (err)
         {
