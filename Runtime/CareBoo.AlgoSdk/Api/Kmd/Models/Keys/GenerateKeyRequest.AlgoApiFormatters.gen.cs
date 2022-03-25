@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.GenerateKeyRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.GenerateKeyRequest>().Assign("display_mnemonic", null, (AlgoSdk.GenerateKeyRequest x) => x.DisplayMnemonic, (ref AlgoSdk.GenerateKeyRequest x, AlgoSdk.Optional<System.Boolean> value) => x.DisplayMnemonic = value, false).Assign("wallet_handle_token", null, (AlgoSdk.GenerateKeyRequest x) => x.WalletHandleToken, (ref AlgoSdk.GenerateKeyRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.GenerateKeyRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.GenerateKeyRequest>(false).Assign("display_mnemonic", null, (AlgoSdk.GenerateKeyRequest x) => x.DisplayMnemonic, (ref AlgoSdk.GenerateKeyRequest x, AlgoSdk.Optional<System.Boolean> value) => x.DisplayMnemonic = value, false).Assign("wallet_handle_token", null, (AlgoSdk.GenerateKeyRequest x) => x.WalletHandleToken, (ref AlgoSdk.GenerateKeyRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value, false));
             return true;
         }
     }

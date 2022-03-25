@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.GenerateKeyResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.GenerateKeyResponse>().Assign("address", null, (AlgoSdk.GenerateKeyResponse x) => x.Address, (ref AlgoSdk.GenerateKeyResponse x, AlgoSdk.Address value) => x.Address = value, false).Assign("error", null, (AlgoSdk.GenerateKeyResponse x) => x.Error, (ref AlgoSdk.GenerateKeyResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value, false).Assign("message", null, (AlgoSdk.GenerateKeyResponse x) => x.Message, (ref AlgoSdk.GenerateKeyResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.GenerateKeyResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.GenerateKeyResponse>(false).Assign("address", null, (AlgoSdk.GenerateKeyResponse x) => x.Address, (ref AlgoSdk.GenerateKeyResponse x, AlgoSdk.Address value) => x.Address = value, false).Assign("error", null, (AlgoSdk.GenerateKeyResponse x) => x.Error, (ref AlgoSdk.GenerateKeyResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value, false).Assign("message", null, (AlgoSdk.GenerateKeyResponse x) => x.Message, (ref AlgoSdk.GenerateKeyResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance, false));
             return true;
         }
     }

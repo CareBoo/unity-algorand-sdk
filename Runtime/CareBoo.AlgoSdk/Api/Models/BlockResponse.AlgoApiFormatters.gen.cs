@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.BlockResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.BlockResponse>().Assign("block", "block", (AlgoSdk.BlockResponse x) => x.BlockHeader, (ref AlgoSdk.BlockResponse x, AlgoSdk.Block value) => x.BlockHeader = value, false).Assign(null, "cert", (AlgoSdk.BlockResponse x) => x.Cert, (ref AlgoSdk.BlockResponse x, AlgoSdk.AlgoApiObject value) => x.Cert = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.BlockResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.BlockResponse>(false).Assign("block", "block", (AlgoSdk.BlockResponse x) => x.BlockHeader, (ref AlgoSdk.BlockResponse x, AlgoSdk.Block value) => x.BlockHeader = value, false).Assign(null, "cert", (AlgoSdk.BlockResponse x) => x.Cert, (ref AlgoSdk.BlockResponse x, AlgoSdk.AlgoApiObject value) => x.Cert = value, false));
             return true;
         }
     }

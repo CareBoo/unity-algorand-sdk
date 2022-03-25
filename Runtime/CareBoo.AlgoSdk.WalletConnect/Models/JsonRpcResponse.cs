@@ -34,23 +34,28 @@ namespace AlgoSdk.WalletConnect
         bool IsError { get; }
     }
 
-    [AlgoApiObject]
+    [AlgoApiObject(IsStrict = true)]
     public partial struct JsonRpcResponse
         : IJsonRpcResponse<AlgoApiObject>
         , IEquatable<JsonRpcResponse>
     {
+        /// <inheritdoc />
         [AlgoApiField("id", null)]
         public Optional<ulong> Id { get; set; }
 
+        /// <inheritdoc />
         [AlgoApiField("jsonrpc", null)]
         public string JsonRpc { get; set; }
 
+        /// <inheritdoc />
         [AlgoApiField("result", null)]
         public AlgoApiObject Result { get; set; }
 
+        /// <inheritdoc />
         [AlgoApiField("error", null)]
         public JsonRpcError Error { get; set; }
 
+        /// <inheritdoc />
         public bool IsError => !Error.Equals(default);
 
         public bool Equals(JsonRpcResponse other)

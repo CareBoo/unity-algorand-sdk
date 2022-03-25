@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ApplicationResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.ApplicationResponse>().Assign("application", null, (AlgoSdk.ApplicationResponse x) => x.Application, (ref AlgoSdk.ApplicationResponse x, AlgoSdk.Application value) => x.Application = value, false).Assign("current-round", null, (AlgoSdk.ApplicationResponse x) => x.CurrentRound, (ref AlgoSdk.ApplicationResponse x, System.UInt64 value) => x.CurrentRound = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ApplicationResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.ApplicationResponse>(false).Assign("application", null, (AlgoSdk.ApplicationResponse x) => x.Application, (ref AlgoSdk.ApplicationResponse x, AlgoSdk.Application value) => x.Application = value, false).Assign("current-round", null, (AlgoSdk.ApplicationResponse x) => x.CurrentRound, (ref AlgoSdk.ApplicationResponse x, System.UInt64 value) => x.CurrentRound = value, false));
             return true;
         }
     }

@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.AccountStateDelta>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.AccountStateDelta>().Assign("address", null, (AlgoSdk.AccountStateDelta x) => x.Address, (ref AlgoSdk.AccountStateDelta x, AlgoSdk.Address value) => x.Address = value, false).Assign("delta", null, (AlgoSdk.AccountStateDelta x) => x.Delta, (ref AlgoSdk.AccountStateDelta x, AlgoSdk.AppStateDelta value) => x.Delta = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.AccountStateDelta>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.AccountStateDelta>(false).Assign("address", null, (AlgoSdk.AccountStateDelta x) => x.Address, (ref AlgoSdk.AccountStateDelta x, AlgoSdk.Address value) => x.Address = value, false).Assign("delta", null, (AlgoSdk.AccountStateDelta x) => x.Delta, (ref AlgoSdk.AccountStateDelta x, AlgoSdk.AppStateDelta value) => x.Delta = value, false));
             return true;
         }
     }

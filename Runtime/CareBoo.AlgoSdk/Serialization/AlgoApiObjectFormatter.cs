@@ -10,8 +10,14 @@ namespace AlgoSdk
     public class AlgoApiObjectFormatter<T> : IAlgoApiFormatter<T>
         where T : struct
     {
+        readonly bool isStrict;
         readonly AlgoApiField<T>.Map<FixedString64Bytes> jsonFieldMap = new AlgoApiField<T>.Map<FixedString64Bytes>();
         readonly AlgoApiField<T>.Map<FixedString32Bytes> msgPackFieldMap = new AlgoApiField<T>.Map<FixedString32Bytes>();
+
+        public AlgoApiObjectFormatter(bool isStrict)
+        {
+            this.isStrict = isStrict;
+        }
 
         public AlgoApiObjectFormatter<T> Assign<TField>(
             string jsonKey,
@@ -60,8 +66,12 @@ namespace AlgoSdk
                     }
                     else
                     {
-                        reader.Skip();
-                        Debug.LogWarning($"Could not recognize the field \"{key}\", for any fields on {typeof(T)}");
+                        var obj = AlgoApiFormatterCache<AlgoApiObject>.Formatter.Deserialize(ref reader);
+                        var msg = $"Could not recognize the field \"{key}\", for any fields on {typeof(T)}.\njson: {System.Text.Encoding.UTF8.GetString(obj.Json)}";
+                        if (isStrict)
+                            throw new KeyNotFoundException(msg);
+                        else
+                            Debug.LogWarning(msg);
                     }
                 }
                 catch (Exception ex)
@@ -90,13 +100,17 @@ namespace AlgoSdk
                     }
                     else
                     {
-                        reader.Skip();
-                        Debug.LogWarning($"Could not recognize the field \"{key}\", for any fields on {typeof(T)}");
+                        var obj = AlgoApiFormatterCache<AlgoApiObject>.Formatter.Deserialize(ref reader);
+                        var msg = $"Could not recognize the msgpack field \"{key}\" for any fields on {typeof(T)}.\nmsgpack base64: {System.Convert.ToBase64String(obj.MessagePack)}";
+                        if (isStrict)
+                            throw new KeyNotFoundException(msg);
+                        else
+                            Debug.LogWarning(msg);
                     }
                 }
                 catch (Exception ex)
                 {
-                    throw new SerializationException($"Got exception when deserializing \"{key}\" for type {typeof(T)}", ex);
+                    throw new SerializationException($"Got exception when deserializing \"{key}\" for type {typeof(T)}.", ex);
                 }
             }
             return result;
