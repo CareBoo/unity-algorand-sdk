@@ -36,9 +36,12 @@ public class WalletConnectManager : MonoBehaviour
 
     void OnGUI()
     {
-        GUI.skin.label.fontSize = 24;
+        GUI.skin.label.fontSize = 32;
         GUI.skin.label.alignment = TextAnchor.MiddleCenter;
+        GUI.skin.button.fontSize = 48;
         GUI.skin.button.alignment = TextAnchor.MiddleCenter;
+        GUI.skin.textField.fontSize = 32;
+        GUI.skin.textField.alignment = TextAnchor.MiddleCenter;
         GUILayout.BeginArea(new Rect(0, 0, Screen.width, Screen.height), new GUIStyle(GUI.skin.box) { normal = new GUIStyleState() { background = GUI.skin.button.normal.background } });
         GUILayout.FlexibleSpace();
         var status = session?.ConnectionStatus ?? AlgorandWalletConnectSession.Status.Unknown;
@@ -69,7 +72,7 @@ public class WalletConnectManager : MonoBehaviour
                 if (supportedWallets.Length > 0)
                 {
                     GUILayout.Space(5);
-                    if (GUILayout.Button("Open Wallet App"))
+                    if (GUILayout.Button("Connect With Wallet App"))
                         shouldLaunchApp = true;
                 }
             }
@@ -150,9 +153,9 @@ public class WalletConnectManager : MonoBehaviour
             Message = "This is a test"
         };
 
-        var signingTransactions = session.SignTransactions(new[] { walletTxn });
         if (shouldLaunchApp && launchedApp != null)
             launchedApp.LaunchForSigning();
+        var signingTransactions = session.SignTransactions(new[] { walletTxn });
         var (err, signedTxns) = await signingTransactions;
         if (err)
         {

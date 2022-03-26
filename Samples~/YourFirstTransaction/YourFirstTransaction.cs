@@ -31,7 +31,10 @@ public class YourFirstTransaction : MonoBehaviour
     {
         GUI.skin.label.fontSize = 24;
         GUI.skin.label.alignment = TextAnchor.MiddleCenter;
+        GUI.skin.button.fontSize = 24;
         GUI.skin.button.alignment = TextAnchor.MiddleCenter;
+        GUI.skin.textField.fontSize = 24;
+        GUI.skin.textField.alignment = TextAnchor.MiddleCenter;
         GUILayout.BeginArea(new Rect(0, 0, Screen.width, Screen.height), new GUIStyle(GUI.skin.box) { normal = new GUIStyleState() { background = GUI.skin.button.normal.background } });
         GUILayout.FlexibleSpace();
 
