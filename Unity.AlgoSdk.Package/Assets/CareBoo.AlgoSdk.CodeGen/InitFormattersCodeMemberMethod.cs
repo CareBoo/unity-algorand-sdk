@@ -29,7 +29,7 @@ namespace AlgoSdk.Editor.CodeGen
             if (algoApiObjectAttribute != null)
             {
                 var fields = AlgoApiObjectFieldKey.GetFields(type);
-                var expression = new AlgoApiObjectFormatterCreateExpression(type, fields);
+                var expression = new AlgoApiObjectFormatterCreateExpression(algoApiObjectAttribute, type, fields);
                 Statements.Add(new AddFormatterCodeMethodInvokeExpression(type, expression));
                 foreach (var enumType in fields.Select(f => f.MemberType).Where(t => t.IsEnum))
                     AddFormatterInitStatements(enumType);

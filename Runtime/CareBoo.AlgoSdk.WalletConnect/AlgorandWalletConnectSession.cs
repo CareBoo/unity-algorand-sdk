@@ -15,38 +15,58 @@ namespace AlgoSdk.WalletConnect
     {
         const string SessionUpdateMethod = "wc_sessionUpdate";
 
+        /// <inheritdoc />
         public UnityEvent<AlgorandWalletConnectSession> OnSessionConnect { get; private set; } = new UnityEvent<AlgorandWalletConnectSession>();
 
+        /// <inheritdoc />
         public UnityEvent<string> OnSessionDisconnect { get; private set; } = new UnityEvent<string>();
 
+        /// <inheritdoc />
         public UnityEvent<WalletConnectSessionData> OnSessionUpdate { get; private set; } = new UnityEvent<WalletConnectSessionData>();
 
+        /// <summary>
+        /// Occurs when this session received a JsonRpcResponse from a request that was made.
+        /// </summary>
         public UnityEvent<JsonRpcResponse> OnResponseReceived { get; private set; } = new UnityEvent<JsonRpcResponse>();
 
+        /// <inheritdoc />
         public Address[] Accounts => session.Accounts;
 
+        /// <inheritdoc />
         public string Version => "1";
 
         public Status ConnectionStatus { get; private set; }
 
+        /// <inheritdoc />
         public int ChainId => session.ChainId;
 
+        /// <inheritdoc />
         public ulong HandshakeId => session.HandshakeId;
 
+        /// <inheritdoc />
         public int NetworkId => session.NetworkId;
 
+        /// <inheritdoc />
         public string PeerId => session.PeerId;
 
+        /// <inheritdoc />
         public string ClientId => session.ClientId;
 
+        /// <inheritdoc />
         public string BridgeUrl => session.BridgeUrl;
 
+        /// <inheritdoc />
         public Hex Key => session.Key;
 
+        /// <inheritdoc />
         public ClientMeta DappMeta => session.DappMeta;
 
+        /// <inheritdoc />
         public ClientMeta WalletMeta => session.WalletMeta;
 
+        /// <summary>
+        /// The current handshake topic if this session is handshaking.
+        /// </summary>
         public string HandshakeTopic { get; set; }
 
         IWebSocketClient webSocketClient;
@@ -296,7 +316,7 @@ namespace AlgoSdk.WalletConnect
                 catch (Exception e) when (e is JsonReadException || e is SerializationException || e is AggregateException)
                 {
                     var s = Encoding.UTF8.GetString(payloadEvent.Payload);
-                    Debug.LogWarning($"Did not recognize payload: {s}");
+                    Debug.LogWarning($"Did not recognize payload: {s}\n{e}");
                 }
             }
         }

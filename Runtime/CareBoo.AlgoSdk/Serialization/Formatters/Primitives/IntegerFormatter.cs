@@ -8,7 +8,7 @@ namespace AlgoSdk.Formatters
         public ulong Deserialize(ref JsonReader reader)
         {
             reader.ReadNumber(out ulong val)
-                .ThrowIfError(reader.Char, reader.Position);
+                .ThrowIfError(reader);
             return val;
         }
 
@@ -33,7 +33,7 @@ namespace AlgoSdk.Formatters
         public uint Deserialize(ref JsonReader reader)
         {
             reader.ReadNumber(out uint val)
-                .ThrowIfError(reader.Char, reader.Position);
+                .ThrowIfError(reader);
             return val;
         }
 
@@ -58,7 +58,7 @@ namespace AlgoSdk.Formatters
         public ushort Deserialize(ref JsonReader reader)
         {
             reader.ReadNumber(out ushort val)
-                .ThrowIfError(reader.Char, reader.Position);
+                .ThrowIfError(reader);
             return val;
         }
 
@@ -83,7 +83,7 @@ namespace AlgoSdk.Formatters
         public byte Deserialize(ref JsonReader reader)
         {
             reader.ReadNumber(out byte val)
-                .ThrowIfError(reader.Char, reader.Position);
+                .ThrowIfError(reader);
             return val;
         }
 
@@ -108,7 +108,7 @@ namespace AlgoSdk.Formatters
         public long Deserialize(ref JsonReader reader)
         {
             reader.ReadNumber(out long val)
-                .ThrowIfError(reader.Char, reader.Position);
+                .ThrowIfError(reader);
             return val;
         }
 
@@ -133,7 +133,7 @@ namespace AlgoSdk.Formatters
         public int Deserialize(ref JsonReader reader)
         {
             reader.ReadNumber(out int val)
-                .ThrowIfError(reader.Char, reader.Position);
+                .ThrowIfError(reader);
             return val;
         }
 
@@ -158,7 +158,7 @@ namespace AlgoSdk.Formatters
         public short Deserialize(ref JsonReader reader)
         {
             reader.ReadNumber(out short val)
-                .ThrowIfError(reader.Char, reader.Position);
+                .ThrowIfError(reader);
             return val;
         }
 
@@ -183,7 +183,7 @@ namespace AlgoSdk.Formatters
         public sbyte Deserialize(ref JsonReader reader)
         {
             reader.ReadNumber(out sbyte val)
-                .ThrowIfError(reader.Char, reader.Position);
+                .ThrowIfError(reader);
             return val;
         }
 

@@ -9,7 +9,7 @@ namespace AlgoSdk.Formatters
         public Address Deserialize(ref JsonReader reader)
         {
             var fs = new FixedString128Bytes();
-            reader.ReadString(ref fs).ThrowIfError(reader.Char, reader.Position);
+            reader.ReadString(ref fs).ThrowIfError(reader);
             return Address.FromString(fs);
         }
 

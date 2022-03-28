@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Multisig>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Multisig>().Assign("subsig", "subsig", (AlgoSdk.Multisig x) => x.Subsigs, (ref AlgoSdk.Multisig x, AlgoSdk.Multisig.Subsig[] value) => x.Subsigs = value, AlgoSdk.ArrayComparer<AlgoSdk.Multisig.Subsig>.Instance, false).Assign("thr", "thr", (AlgoSdk.Multisig x) => x.Threshold, (ref AlgoSdk.Multisig x, System.Byte value) => x.Threshold = value, false).Assign("v", "v", (AlgoSdk.Multisig x) => x.Version, (ref AlgoSdk.Multisig x, System.Byte value) => x.Version = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Multisig>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Multisig>(false).Assign("subsig", "subsig", (AlgoSdk.Multisig x) => x.Subsigs, (ref AlgoSdk.Multisig x, AlgoSdk.Multisig.Subsig[] value) => x.Subsigs = value, AlgoSdk.ArrayComparer<AlgoSdk.Multisig.Subsig>.Instance, false).Assign("thr", "thr", (AlgoSdk.Multisig x) => x.Threshold, (ref AlgoSdk.Multisig x, System.Byte value) => x.Threshold = value, false).Assign("v", "v", (AlgoSdk.Multisig x) => x.Version, (ref AlgoSdk.Multisig x, System.Byte value) => x.Version = value, false));
             return true;
         }
         
@@ -30,7 +30,7 @@ namespace AlgoSdk
             
             private static bool @__generated__InitializeAlgoApiFormatters()
             {
-                AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Multisig.Subsig>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Multisig.Subsig>().Assign("pk", "pk", (AlgoSdk.Multisig.Subsig x) => x.PublicKey, (ref AlgoSdk.Multisig.Subsig x, AlgoSdk.Crypto.Ed25519.PublicKey value) => x.PublicKey = value, false).Assign("s", "s", (AlgoSdk.Multisig.Subsig x) => x.Sig, (ref AlgoSdk.Multisig.Subsig x, AlgoSdk.Sig value) => x.Sig = value, false));
+                AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Multisig.Subsig>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Multisig.Subsig>(false).Assign("pk", "pk", (AlgoSdk.Multisig.Subsig x) => x.PublicKey, (ref AlgoSdk.Multisig.Subsig x, AlgoSdk.Crypto.Ed25519.PublicKey value) => x.PublicKey = value, false).Assign("s", "s", (AlgoSdk.Multisig.Subsig x) => x.Sig, (ref AlgoSdk.Multisig.Subsig x, AlgoSdk.Sig value) => x.Sig = value, false));
                 return true;
             }
         }

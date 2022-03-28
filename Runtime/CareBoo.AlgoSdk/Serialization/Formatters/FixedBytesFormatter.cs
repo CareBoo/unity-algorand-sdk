@@ -15,7 +15,7 @@ namespace AlgoSdk.Formatters
             try
             {
                 reader.ReadString(ref text)
-                    .ThrowIfError(reader.Char, reader.Position);
+                    .ThrowIfError(reader);
                 FixedBytesArray<T> bytes = default;
                 bytes.CopyFromBase64(text);
                 return bytes;

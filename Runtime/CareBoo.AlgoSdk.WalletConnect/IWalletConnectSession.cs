@@ -6,8 +6,19 @@ namespace AlgoSdk.WalletConnect
     public interface IActiveWalletConnectSession<TSession> : IWalletConnectSessionData, IDisposable
         where TSession : IActiveWalletConnectSession<TSession>
     {
+        /// <summary>
+        /// Occurs when handshake succeeds and wallet is connected.
+        /// </summary>
         UnityEvent<TSession> OnSessionConnect { get; }
+
+        /// <summary>
+        /// Occurs when wallet no longer approves connection.
+        /// </summary>
         UnityEvent<string> OnSessionDisconnect { get; }
+
+        /// <summary>
+        /// Occurs when wallet updates addresses or metadata information.
+        /// </summary>
         UnityEvent<WalletConnectSessionData> OnSessionUpdate { get; }
     }
 

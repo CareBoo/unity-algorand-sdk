@@ -14,13 +14,13 @@ namespace AlgoSdk.Editor.CodeGen
 
         CodeExpression expression;
 
-        public AlgoApiObjectFormatterCreateExpression(Type type, IEnumerable<AlgoApiObjectFieldKey> fields)
+        public AlgoApiObjectFormatterCreateExpression(AlgoApiObjectAttribute attribute, Type type, IEnumerable<AlgoApiObjectFieldKey> fields)
         {
             if (fields == null)
                 throw new ArgumentNullException(nameof(fields));
 
             var formatterTypeReference = new CodeTypeReference(typeof(AlgoApiObjectFormatter<>).SafeFullName(), new CodeTypeReference(type.FullNameExpression()));
-            expression = new CodeObjectCreateExpression(formatterTypeReference);
+            expression = new CodeObjectCreateExpression(formatterTypeReference, new CodePrimitiveExpression(attribute.IsStrict));
             foreach (var field in fields)
             {
                 expression = new CodeMethodInvokeExpression(

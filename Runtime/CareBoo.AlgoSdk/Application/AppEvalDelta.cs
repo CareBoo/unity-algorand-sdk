@@ -50,6 +50,8 @@ namespace AlgoSdk
         [SerializeField, Tooltip("The inner transactions (if any) that were evaluated.")]
         TTxn[] innerTxns;
 
+
+        /// <inheritdoc />
         [AlgoApiField("gd", "gd")]
         public AppStateDelta GlobalDelta
         {
@@ -57,6 +59,7 @@ namespace AlgoSdk
             set => globalDelta = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("ld", "ld")]
         public AccountStateDelta[] LocalDeltas
         {
@@ -64,6 +67,7 @@ namespace AlgoSdk
             set => localDeltas = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("lg", "lg")]
         public string[] Logs
         {
@@ -71,6 +75,7 @@ namespace AlgoSdk
             set => logs = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("itx", "itx")]
         public TTxn[] InnerTxns
         {

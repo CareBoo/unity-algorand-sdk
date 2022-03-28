@@ -28,20 +28,24 @@ namespace AlgoSdk.WalletConnect
         string Method { get; set; }
     }
 
-    [AlgoApiObject]
+    [AlgoApiObject(IsStrict = true)]
     public partial struct JsonRpcRequest
         : IJsonRpcRequest<AlgoApiObject[]>
         , IEquatable<JsonRpcRequest>
     {
+        /// <inheritdoc />
         [AlgoApiField("id", null)]
         public ulong Id { get; set; }
 
+        /// <inheritdoc />
         [AlgoApiField("jsonrpc", null)]
         public string JsonRpc { get; set; }
 
+        /// <inheritdoc />
         [AlgoApiField("method", null)]
         public string Method { get; set; }
 
+        /// <inheritdoc />
         [AlgoApiField("params", null)]
         public AlgoApiObject[] Params { get; set; }
 

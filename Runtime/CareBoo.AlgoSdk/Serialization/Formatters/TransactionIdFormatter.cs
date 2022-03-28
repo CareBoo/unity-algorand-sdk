@@ -9,7 +9,7 @@ namespace AlgoSdk.Formatters
         public TransactionId Deserialize(ref JsonReader reader)
         {
             var fs = new FixedString64Bytes();
-            reader.ReadString(ref fs).ThrowIfError(reader.Char, reader.Position);
+            reader.ReadString(ref fs).ThrowIfError(reader);
             return TransactionId.FromString(fs);
         }
 

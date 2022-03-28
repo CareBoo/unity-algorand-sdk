@@ -17,7 +17,7 @@
       "url": "https://package.openupm.com"
     },
     "com.unity.burst": {
-      "version": "1.6.4",
+      "version": "1.7.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {

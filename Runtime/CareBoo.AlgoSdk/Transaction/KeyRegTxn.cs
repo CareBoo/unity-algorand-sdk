@@ -40,6 +40,7 @@ namespace AlgoSdk
 
     public partial struct Transaction
     {
+        /// <inheritdoc />
         [AlgoApiField(null, "votekey")]
         public Ed25519.PublicKey VoteParticipationKey
         {
@@ -47,6 +48,7 @@ namespace AlgoSdk
             set => keyRegParams.VoteParticipationKey = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "selkey")]
         public VrfPubKey SelectionParticipationKey
         {
@@ -54,6 +56,7 @@ namespace AlgoSdk
             set => keyRegParams.SelectionParticipationKey = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "votefst")]
         public ulong VoteFirst
         {
@@ -61,6 +64,7 @@ namespace AlgoSdk
             set => keyRegParams.VoteFirst = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "votelst")]
         public ulong VoteLast
         {
@@ -68,6 +72,7 @@ namespace AlgoSdk
             set => keyRegParams.VoteLast = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "votekd")]
         public ulong VoteKeyDilution
         {
@@ -75,6 +80,7 @@ namespace AlgoSdk
             set => keyRegParams.VoteKeyDilution = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "nonpart")]
         public Optional<bool> NonParticipation
         {
@@ -136,12 +142,14 @@ namespace AlgoSdk
         [SerializeField]
         Params @params;
 
+        /// <inheritdoc />
         public AccountParticipation AccountParticipation
         {
             get => @params.AccountParticipation;
             set => @params.AccountParticipation = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("fee", "fee")]
         public MicroAlgos Fee
         {
@@ -149,6 +157,7 @@ namespace AlgoSdk
             set => header.Fee = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("first-valid", "fv")]
         public ulong FirstValidRound
         {
@@ -156,6 +165,7 @@ namespace AlgoSdk
             set => header.FirstValidRound = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("genesis-hash", "gh")]
         public GenesisHash GenesisHash
         {
@@ -163,6 +173,7 @@ namespace AlgoSdk
             set => header.GenesisHash = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("last-valid", "lv")]
         public ulong LastValidRound
         {
@@ -170,6 +181,7 @@ namespace AlgoSdk
             set => header.LastValidRound = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("sender", "snd")]
         public Address Sender
         {
@@ -177,6 +189,7 @@ namespace AlgoSdk
             set => header.Sender = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("tx-type", "type")]
         public TransactionType TransactionType
         {
@@ -184,6 +197,7 @@ namespace AlgoSdk
             internal set => header.TransactionType = TransactionType.KeyRegistration;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("genesis-id", "gen")]
         public FixedString32Bytes GenesisId
         {
@@ -191,6 +205,7 @@ namespace AlgoSdk
             set => header.GenesisId = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("group", "grp")]
         public TransactionId Group
         {
@@ -198,6 +213,7 @@ namespace AlgoSdk
             set => header.Group = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("lease", "lx")]
         public TransactionId Lease
         {
@@ -205,6 +221,7 @@ namespace AlgoSdk
             set => header.Lease = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("note", "note")]
         public byte[] Note
         {
@@ -212,6 +229,7 @@ namespace AlgoSdk
             set => header.Note = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("rekey-to", "rekey")]
         public Address RekeyTo
         {
@@ -219,6 +237,7 @@ namespace AlgoSdk
             set => header.RekeyTo = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "votekey")]
         public Ed25519.PublicKey VoteParticipationKey
         {
@@ -226,6 +245,7 @@ namespace AlgoSdk
             set => @params.VoteParticipationKey = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "selkey")]
         public VrfPubKey SelectionParticipationKey
         {
@@ -233,6 +253,7 @@ namespace AlgoSdk
             set => @params.SelectionParticipationKey = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "votefst")]
         public ulong VoteFirst
         {
@@ -240,6 +261,7 @@ namespace AlgoSdk
             set => @params.VoteFirst = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "votelst")]
         public ulong VoteLast
         {
@@ -247,6 +269,7 @@ namespace AlgoSdk
             set => @params.VoteLast = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "votekd")]
         public ulong VoteKeyDilution
         {
@@ -254,6 +277,7 @@ namespace AlgoSdk
             set => @params.VoteKeyDilution = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField(null, "nonpart")]
         public Optional<bool> NonParticipation
         {
@@ -261,12 +285,14 @@ namespace AlgoSdk
             set => @params.NonParticipation = value;
         }
 
+        /// <inheritdoc />
         public void CopyTo(ref Transaction transaction)
         {
             transaction.Header = header;
             transaction.KeyRegParams = @params;
         }
 
+        /// <inheritdoc />
         public void CopyFrom(Transaction transaction)
         {
             header = transaction.Header;

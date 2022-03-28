@@ -7,7 +7,7 @@ namespace AlgoSdk.Formatters
     {
         public Hex Deserialize(ref JsonReader reader)
         {
-            reader.ReadString(out var s).ThrowIfError(reader.Char, reader.Position);
+            reader.ReadString(out var s).ThrowIfError(reader);
             return Hex.FromString(s);
         }
 

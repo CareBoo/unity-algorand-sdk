@@ -66,6 +66,7 @@ namespace AlgoSdk
 
     public partial struct Transaction : ITransactionHeader
     {
+        /// <inheritdoc />
         [AlgoApiField("fee", "fee")]
         public MicroAlgos Fee
         {
@@ -73,6 +74,7 @@ namespace AlgoSdk
             set => header.Fee = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("first-valid", "fv")]
         public ulong FirstValidRound
         {
@@ -80,6 +82,7 @@ namespace AlgoSdk
             set => header.FirstValidRound = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("genesis-hash", "gh")]
         public GenesisHash GenesisHash
         {
@@ -87,6 +90,7 @@ namespace AlgoSdk
             set => header.GenesisHash = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("last-valid", "lv")]
         public ulong LastValidRound
         {
@@ -94,6 +98,7 @@ namespace AlgoSdk
             set => header.LastValidRound = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("sender", "snd")]
         public Address Sender
         {
@@ -101,6 +106,7 @@ namespace AlgoSdk
             set => header.Sender = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("tx-type", "type")]
         public TransactionType TransactionType
         {
@@ -108,6 +114,7 @@ namespace AlgoSdk
             set => header.TransactionType = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("genesis-id", "gen")]
         public FixedString32Bytes GenesisId
         {
@@ -115,6 +122,7 @@ namespace AlgoSdk
             set => header.GenesisId = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("grp", "grp")]
         public TransactionId Group
         {
@@ -122,6 +130,7 @@ namespace AlgoSdk
             set => header.Group = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("lx", "lx")]
         public TransactionId Lease
         {
@@ -129,6 +138,7 @@ namespace AlgoSdk
             set => header.Lease = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("group", null, readOnly: true)]
         public Sha512_256_Hash GroupHash
         {
@@ -136,6 +146,7 @@ namespace AlgoSdk
             set => header.Group = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("lease", null, readOnly: true)]
         public Sha512_256_Hash LeaseHash
         {
@@ -143,6 +154,7 @@ namespace AlgoSdk
             set => header.Lease = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("note", "note")]
         public byte[] Note
         {
@@ -150,6 +162,7 @@ namespace AlgoSdk
             set => header.Note = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("rekey-to", "rekey")]
         public Address RekeyTo
         {
@@ -157,6 +170,7 @@ namespace AlgoSdk
             set => header.RekeyTo = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("id", null, readOnly: true)]
         public TransactionId Id
         {
@@ -164,6 +178,7 @@ namespace AlgoSdk
             set => header.Id = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("auth-addr", null, readOnly: true)]
         public Address AuthAddress
         {
@@ -171,6 +186,7 @@ namespace AlgoSdk
             set => header.AuthAddress = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("close-rewards", null, readOnly: true)]
         public ulong CloseRewards
         {
@@ -178,6 +194,7 @@ namespace AlgoSdk
             set => header.CloseRewards = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("closing-amount", null, readOnly: true)]
         public ulong ClosingAmount
         {
@@ -185,6 +202,7 @@ namespace AlgoSdk
             set => header.ClosingAmount = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("confirmed-round", null, readOnly: true)]
         public ulong ConfirmedRound
         {
@@ -192,6 +210,7 @@ namespace AlgoSdk
             set => header.ConfirmedRound = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("created-application-index", null, readOnly: true)]
         public ulong CreatedApplicationIndex
         {
@@ -199,6 +218,7 @@ namespace AlgoSdk
             set => header.CreatedApplicationIndex = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("created-asset-index", null, readOnly: true)]
         public ulong CreatedAssetIndex
         {
@@ -206,6 +226,7 @@ namespace AlgoSdk
             set => header.CreatedAssetIndex = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("intra-round-offset", null, readOnly: true)]
         public ulong IntraRoundOffset
         {
@@ -213,6 +234,7 @@ namespace AlgoSdk
             set => header.IntraRoundOffset = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("global-state-delta", null, readOnly: true)]
         public EvalDeltaKeyValue[] GlobalStateDelta
         {
@@ -220,6 +242,7 @@ namespace AlgoSdk
             set => header.GlobalStateDelta = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("local-state-delta", null, readOnly: true)]
         public AccountStateDelta[] LocalStateDelta
         {
@@ -227,6 +250,7 @@ namespace AlgoSdk
             set => header.LocalStateDelta = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("receiver-rewards", null, readOnly: true)]
         public ulong ReceiverRewards
         {
@@ -234,6 +258,7 @@ namespace AlgoSdk
             set => header.ReceiverRewards = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("round-time", null, readOnly: true)]
         public ulong RoundTime
         {
@@ -241,6 +266,7 @@ namespace AlgoSdk
             set => header.RoundTime = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("sender-rewards", null, readOnly: true)]
         public ulong SenderRewards
         {
@@ -248,6 +274,7 @@ namespace AlgoSdk
             set => header.SenderRewards = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("inner-txns", null, readOnly: true)]
         public Transaction[] InnerTxns
         {
@@ -300,100 +327,126 @@ namespace AlgoSdk
         [SerializeField, Tooltip("Specifies the authorized address. This address will be used to authorize all future transactions.")]
         Address rekeyTo;
 
+        /// <inheritdoc />
         public MicroAlgos Fee
         {
             get => fee;
             set => fee = value;
         }
 
+        /// <inheritdoc />
         public ulong FirstValidRound
         {
             get => firstValidRound;
             set => firstValidRound = value;
         }
 
+        /// <inheritdoc />
         public GenesisHash GenesisHash
         {
             get => genesisHash;
             set => genesisHash = value;
         }
 
+        /// <inheritdoc />
         public ulong LastValidRound
         {
             get => lastValidRound;
             set => lastValidRound = value;
         }
 
+        /// <inheritdoc />
         public Address Sender
         {
             get => sender;
             set => sender = value;
         }
 
+        /// <inheritdoc />
         public TransactionType TransactionType
         {
             get => transactionType;
             set => transactionType = value;
         }
 
+        /// <inheritdoc />
         public FixedString32Bytes GenesisId
         {
             get => genesisId;
             set => genesisId = value;
         }
 
+        /// <inheritdoc />
         public TransactionId Group
         {
             get => group;
             set => group = value;
         }
 
+        /// <inheritdoc />
         public TransactionId Lease
         {
             get => lease;
             set => lease = value;
         }
 
+        /// <inheritdoc />
         public byte[] Note
         {
             get => note;
             set => note = value;
         }
 
+        /// <inheritdoc />
         public Address RekeyTo
         {
             get => rekeyTo;
             set => rekeyTo = value;
         }
 
+        /// <inheritdoc />
         public TransactionId Id { get; set; }
 
+        /// <inheritdoc />
         public Address AuthAddress { get; set; }
 
+        /// <inheritdoc />
         public ulong CloseRewards { get; set; }
 
+        /// <inheritdoc />
         public ulong ClosingAmount { get; set; }
 
+        /// <inheritdoc />
         public ulong ConfirmedRound { get; set; }
 
+        /// <inheritdoc />
         public ulong CreatedApplicationIndex { get; set; }
 
+        /// <inheritdoc />
         public ulong CreatedAssetIndex { get; set; }
 
+        /// <inheritdoc />
         public ulong IntraRoundOffset { get; set; }
 
+        /// <inheritdoc />
         public EvalDeltaKeyValue[] GlobalStateDelta { get; set; }
 
+        /// <inheritdoc />
         public AccountStateDelta[] LocalStateDelta { get; set; }
 
+        /// <inheritdoc />
         public ulong ReceiverRewards { get; set; }
 
+        /// <inheritdoc />
         public ulong RoundTime { get; set; }
 
+        /// <inheritdoc />
         public ulong SenderRewards { get; set; }
 
+        /// <inheritdoc />
         public OnCompletion OnCompletion { get; set; }
 
+        /// <inheritdoc />
         public Transaction[] InnerTxns { get; set; }
 
         public TransactionHeader(
