@@ -19,7 +19,7 @@ namespace AlgoSdk.WalletConnect
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.WalletConnect.JsonRpcError>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.WalletConnect.JsonRpcError>(false).Assign("code", null, (AlgoSdk.WalletConnect.JsonRpcError x) => x.Code, (ref AlgoSdk.WalletConnect.JsonRpcError x, System.Int32 value) => x.Code = value, false).Assign("message", null, (AlgoSdk.WalletConnect.JsonRpcError x) => x.Message, (ref AlgoSdk.WalletConnect.JsonRpcError x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance, false).Assign("data", null, (AlgoSdk.WalletConnect.JsonRpcError x) => x.Data, (ref AlgoSdk.WalletConnect.JsonRpcError x, AlgoSdk.AlgoApiObject value) => x.Data = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.WalletConnect.JsonRpcError>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.WalletConnect.JsonRpcError>(false).Assign("code", (AlgoSdk.WalletConnect.JsonRpcError x) => x.Code, (ref AlgoSdk.WalletConnect.JsonRpcError x, System.Int32 value) => x.Code = value).Assign("message", (AlgoSdk.WalletConnect.JsonRpcError x) => x.Message, (ref AlgoSdk.WalletConnect.JsonRpcError x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance).Assign("data", (AlgoSdk.WalletConnect.JsonRpcError x) => x.Data, (ref AlgoSdk.WalletConnect.JsonRpcError x, AlgoSdk.AlgoApiObject value) => x.Data = value));
             return true;
         }
     }

@@ -15,7 +15,7 @@ namespace AlgoSdk
         /// <summary>
         /// Catchup start response string
         /// </summary>
-        [AlgoApiField("catchup-message", null)]
+        [AlgoApiField("catchup-message")]
         [Tooltip("Catchup start response string")]
         public FixedString512Bytes Message;
 

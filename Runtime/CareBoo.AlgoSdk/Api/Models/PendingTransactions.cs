@@ -14,14 +14,14 @@ namespace AlgoSdk
         /// <summary>
         /// An array of signed transaction objects.
         /// </summary>
-        [AlgoApiField("top-transactions", "top-transactions")]
+        [AlgoApiField("top-transactions")]
         [Tooltip("An array of signed transaction objects.")]
         public SignedTxn[] TopTransactions;
 
         /// <summary>
         /// Total number of transactions in the pool.
         /// </summary>
-        [AlgoApiField("total-transactions", "total-transactions")]
+        [AlgoApiField("total-transactions")]
         [Tooltip("Total number of transactions in the pool.")]
         public ulong TotalTransactions;
 

@@ -8,22 +8,22 @@ namespace AlgoSdk
     public partial struct SignMultisigRequest
         : IEquatable<SignMultisigRequest>
     {
-        [AlgoApiField("partial_multisig", null)]
+        [AlgoApiField("partial_multisig")]
         public Multisig Multisig;
 
-        [AlgoApiField("public_key", null)]
+        [AlgoApiField("public_key")]
         public Ed25519.PublicKey PublicKey;
 
-        [AlgoApiField("signer", null)]
+        [AlgoApiField("signer")]
         public Address Signer;
 
-        [AlgoApiField("transaction", null)]
+        [AlgoApiField("transaction")]
         public byte[] Transaction;
 
-        [AlgoApiField("wallet_handle_token", null)]
+        [AlgoApiField("wallet_handle_token")]
         public FixedString128Bytes WalletHandleToken;
 
-        [AlgoApiField("wallet_password", null)]
+        [AlgoApiField("wallet_password")]
         public FixedString128Bytes WalletPassword;
 
         public bool Equals(SignMultisigRequest other)

@@ -14,16 +14,16 @@ namespace AlgoSdk
         /// <summary>
         /// See <see cref="BuildVersion"/>
         /// </summary>
-        [AlgoApiField("build", null)]
+        [AlgoApiField("build")]
         public BuildVersion Build;
 
-        [AlgoApiField("genesis_hash_b64", null)]
+        [AlgoApiField("genesis_hash_b64")]
         public FixedString64Bytes GenesisHashBase64;
 
-        [AlgoApiField("genesis_id", null)]
+        [AlgoApiField("genesis_id")]
         public FixedString32Bytes GenesisId;
 
-        [AlgoApiField("versions", null)]
+        [AlgoApiField("versions")]
         public FixedString32Bytes[] Versions;
 
         public bool Equals(Version other)

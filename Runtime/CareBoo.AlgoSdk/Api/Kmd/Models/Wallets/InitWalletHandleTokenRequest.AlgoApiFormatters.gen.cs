@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.InitWalletHandleTokenRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.InitWalletHandleTokenRequest>(false).Assign("wallet_id", null, (AlgoSdk.InitWalletHandleTokenRequest x) => x.WalletId, (ref AlgoSdk.InitWalletHandleTokenRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletId = value, false).Assign("wallet_password", null, (AlgoSdk.InitWalletHandleTokenRequest x) => x.WalletPassword, (ref AlgoSdk.InitWalletHandleTokenRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletPassword = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.InitWalletHandleTokenRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.InitWalletHandleTokenRequest>(false).Assign("wallet_id", (AlgoSdk.InitWalletHandleTokenRequest x) => x.WalletId, (ref AlgoSdk.InitWalletHandleTokenRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletId = value).Assign("wallet_password", (AlgoSdk.InitWalletHandleTokenRequest x) => x.WalletPassword, (ref AlgoSdk.InitWalletHandleTokenRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletPassword = value));
             return true;
         }
     }

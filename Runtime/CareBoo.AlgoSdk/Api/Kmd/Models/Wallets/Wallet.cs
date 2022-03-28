@@ -8,22 +8,22 @@ namespace AlgoSdk
     public partial struct Wallet
         : IEquatable<Wallet>
     {
-        [AlgoApiField("driver_name", null)]
+        [AlgoApiField("driver_name")]
         public FixedString64Bytes DriverName;
 
-        [AlgoApiField("driver_version", null)]
+        [AlgoApiField("driver_version")]
         public uint DriverVersion;
 
-        [AlgoApiField("id", null)]
+        [AlgoApiField("id")]
         public FixedString128Bytes Id;
 
-        [AlgoApiField("mnemonic_ux", null)]
+        [AlgoApiField("mnemonic_ux")]
         public Optional<bool> MnemonicUx;
 
-        [AlgoApiField("name", null)]
+        [AlgoApiField("name")]
         public FixedString64Bytes Name;
 
-        [AlgoApiField("supported_txs", null)]
+        [AlgoApiField("supported_txs")]
         public TransactionType[] SupportedTransactions;
 
         public bool Equals(Wallet other)

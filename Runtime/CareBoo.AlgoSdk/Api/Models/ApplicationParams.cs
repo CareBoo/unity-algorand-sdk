@@ -14,49 +14,49 @@ namespace AlgoSdk
         /// <summary>
         /// Logic executed for every application transaction, except when on-completion is set to "clear". It can read and write global state for the application, as well as account-specific local state. Approval programs may reject the transaction.
         /// </summary>
-        [AlgoApiField("approval-program", null)]
+        [AlgoApiField("approval-program")]
         [Tooltip("Logic executed for every application transaction, except when on-completion is set to \"clear\". It can read and write global state for the application, as well as account-specific local state. Approval programs may reject the transaction.")]
         public CompiledTeal ApprovalProgram;
 
         /// <summary>
         /// Logic executed for application transactions with on-completion set to "clear". It can read and write global state for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.
         /// </summary>
-        [AlgoApiField("clear-state-program", null)]
+        [AlgoApiField("clear-state-program")]
         [Tooltip("Logic executed for application transactions with on-completion set to \"clear\". It can read and write global state for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.")]
         public CompiledTeal ClearStateProgram;
 
         /// <summary>
         /// The address that created this application. This is the address where the parameters and global state for this application can be found.
         /// </summary>
-        [AlgoApiField("creator", null)]
+        [AlgoApiField("creator")]
         [Tooltip("The address that created this application. This is the address where the parameters and global state for this application can be found.")]
         public Address Creator;
 
         /// <summary>
         /// [epp] the amount of extra program pages available to this app.
         /// </summary>
-        [AlgoApiField("extra-program-pages", null)]
+        [AlgoApiField("extra-program-pages")]
         [Tooltip("[epp] the amount of extra program pages available to this app.")]
         public ulong ExtraProgramPages;
 
         /// <summary>
         /// global state
         /// </summary>
-        [AlgoApiField("global-state", null)]
+        [AlgoApiField("global-state")]
         [Tooltip("global state")]
         public TealKeyValue[] GlobalState;
 
         /// <summary>
         /// global schema
         /// </summary>
-        [AlgoApiField("global-state-schema", null)]
+        [AlgoApiField("global-state-schema")]
         [Tooltip("global schema")]
         public StateSchema GlobalStateSchema;
 
         /// <summary>
         /// local schema
         /// </summary>
-        [AlgoApiField("local-state-schema", null)]
+        [AlgoApiField("local-state-schema")]
         [Tooltip("local schema")]
         public StateSchema LocalStateSchema;
 

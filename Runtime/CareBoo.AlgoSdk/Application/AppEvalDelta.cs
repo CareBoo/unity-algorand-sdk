@@ -52,7 +52,7 @@ namespace AlgoSdk
 
 
         /// <inheritdoc />
-        [AlgoApiField("gd", "gd")]
+        [AlgoApiField("gd")]
         public AppStateDelta GlobalDelta
         {
             get => globalDelta;
@@ -60,7 +60,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("ld", "ld")]
+        [AlgoApiField("ld")]
         public AccountStateDelta[] LocalDeltas
         {
             get => localDeltas;
@@ -68,7 +68,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("lg", "lg")]
+        [AlgoApiField("lg")]
         public string[] Logs
         {
             get => logs;
@@ -76,7 +76,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("itx", "itx")]
+        [AlgoApiField("itx")]
         public TTxn[] InnerTxns
         {
             get => innerTxns;

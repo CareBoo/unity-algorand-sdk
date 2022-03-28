@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ImportMultisigResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.ImportMultisigResponse>(false).Assign("address", null, (AlgoSdk.ImportMultisigResponse x) => x.Address, (ref AlgoSdk.ImportMultisigResponse x, AlgoSdk.Address value) => x.Address = value, false).Assign("error", null, (AlgoSdk.ImportMultisigResponse x) => x.Error, (ref AlgoSdk.ImportMultisigResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value, false).Assign("message", null, (AlgoSdk.ImportMultisigResponse x) => x.Message, (ref AlgoSdk.ImportMultisigResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ImportMultisigResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.ImportMultisigResponse>(false).Assign("address", (AlgoSdk.ImportMultisigResponse x) => x.Address, (ref AlgoSdk.ImportMultisigResponse x, AlgoSdk.Address value) => x.Address = value).Assign("error", (AlgoSdk.ImportMultisigResponse x) => x.Error, (ref AlgoSdk.ImportMultisigResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value).Assign("message", (AlgoSdk.ImportMultisigResponse x) => x.Message, (ref AlgoSdk.ImportMultisigResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance));
             return true;
         }
     }

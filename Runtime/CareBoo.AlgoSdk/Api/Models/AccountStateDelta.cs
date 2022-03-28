@@ -10,10 +10,10 @@ namespace AlgoSdk
     public partial struct AccountStateDelta
         : IEquatable<AccountStateDelta>
     {
-        [AlgoApiField("address", null)]
+        [AlgoApiField("address")]
         public Address Address;
 
-        [AlgoApiField("delta", null)]
+        [AlgoApiField("delta")]
         public AppStateDelta Delta;
 
         public bool Equals(AccountStateDelta other)

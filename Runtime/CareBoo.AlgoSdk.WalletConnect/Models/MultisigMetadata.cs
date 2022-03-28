@@ -13,19 +13,19 @@ namespace AlgoSdk.WalletConnect
         /// <summary>
         /// Version of the multisig.
         /// </summary>
-        [AlgoApiField("version", null)]
+        [AlgoApiField("version")]
         public byte Version;
 
         /// <summary>
         /// Number of signatures required for valid transaction.
         /// </summary>
-        [AlgoApiField("threshold", null)]
+        [AlgoApiField("threshold")]
         public byte Threshold;
 
         /// <summary>
         /// The signers of this multisig.
         /// </summary>
-        [AlgoApiField("addrs", null)]
+        [AlgoApiField("addrs")]
         public Address[] Addresses;
 
         public bool Equals(MultisigMetadata other)

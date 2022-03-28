@@ -8,13 +8,13 @@ namespace AlgoSdk
         : IEquatable<BalancesResponse>
         , IPaginatedIndexerResponse<MiniAssetHolding>
     {
-        [AlgoApiField("balances", null)]
+        [AlgoApiField("balances")]
         public MiniAssetHolding[] Balances { get; set; }
 
-        [AlgoApiField("current-round", null)]
+        [AlgoApiField("current-round")]
         public ulong CurrentRound { get; set; }
 
-        [AlgoApiField("next-token", null)]
+        [AlgoApiField("next-token")]
         public FixedString128Bytes NextToken { get; set; }
 
         MiniAssetHolding[] IPaginatedIndexerResponse<MiniAssetHolding>.Results

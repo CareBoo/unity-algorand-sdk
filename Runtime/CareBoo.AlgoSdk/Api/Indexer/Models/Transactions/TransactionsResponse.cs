@@ -8,13 +8,13 @@ namespace AlgoSdk
         : IEquatable<TransactionsResponse>
         , IPaginatedIndexerResponse<Transaction>
     {
-        [AlgoApiField("current-round", null)]
+        [AlgoApiField("current-round")]
         public ulong CurrentRound { get; set; }
 
-        [AlgoApiField("next-token", null)]
+        [AlgoApiField("next-token")]
         public FixedString128Bytes NextToken { get; set; }
 
-        [AlgoApiField("transactions", null)]
+        [AlgoApiField("transactions")]
         public Transaction[] Transactions { get; set; }
 
         Transaction[] IPaginatedIndexerResponse<Transaction>.Results

@@ -8,10 +8,10 @@ namespace AlgoSdk
         : IEquatable<GenerateKeyRequest>
     {
 
-        [AlgoApiField("display_mnemonic", null)]
+        [AlgoApiField("display_mnemonic")]
         public Optional<bool> DisplayMnemonic;
 
-        [AlgoApiField("wallet_handle_token", null)]
+        [AlgoApiField("wallet_handle_token")]
         public FixedString128Bytes WalletHandleToken;
 
         public bool Equals(GenerateKeyRequest other)

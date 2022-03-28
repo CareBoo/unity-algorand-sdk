@@ -24,13 +24,13 @@ namespace AlgoSdk.WalletConnect
     public partial struct JsonRpcError
         : IEquatable<JsonRpcError>
     {
-        [AlgoApiField("code", null)]
+        [AlgoApiField("code")]
         public int Code { get; set; }
 
-        [AlgoApiField("message", null)]
+        [AlgoApiField("message")]
         public string Message { get; set; }
 
-        [AlgoApiField("data", null)]
+        [AlgoApiField("data")]
         public AlgoApiObject Data { get; set; }
 
         public bool Equals(JsonRpcError other)

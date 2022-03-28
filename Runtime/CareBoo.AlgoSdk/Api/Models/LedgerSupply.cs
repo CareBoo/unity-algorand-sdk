@@ -11,13 +11,13 @@ namespace AlgoSdk
     public partial struct LedgerSupply
         : IEquatable<LedgerSupply>
     {
-        [AlgoApiField("current_round", null)]
+        [AlgoApiField("current_round")]
         public ulong Round;
 
-        [AlgoApiField("online-money", null)]
+        [AlgoApiField("online-money")]
         public ulong OnlineMoney;
 
-        [AlgoApiField("total-money", null)]
+        [AlgoApiField("total-money")]
         public ulong TotalMoney;
 
         public bool Equals(LedgerSupply other)

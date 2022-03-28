@@ -65,42 +65,42 @@ namespace AlgoSdk
         [Tooltip("Number of leftover MicroAlgos after the distribution of RewardsRate/rewardUnits MicroAlgos for every reward unit in the next round.")]
         ulong rewardsResidue;
 
-        [AlgoApiField("fee-sink", null)]
+        [AlgoApiField("fee-sink")]
         public Address FeeSink
         {
             get => feeSink;
             set => feeSink = value;
         }
 
-        [AlgoApiField("rewards-calculation-round", null)]
+        [AlgoApiField("rewards-calculation-round")]
         public ulong RewardsCalculationRound
         {
             get => rewardsCalculationRound;
             set => rewardsCalculationRound = value;
         }
 
-        [AlgoApiField("rewards-level", null)]
+        [AlgoApiField("rewards-level")]
         public ulong RewardsLevel
         {
             get => rewardsLevel;
             set => rewardsLevel = value;
         }
 
-        [AlgoApiField("rewards-pool", null)]
+        [AlgoApiField("rewards-pool")]
         public Address RewardsPool
         {
             get => rewardsPool;
             set => rewardsPool = value;
         }
 
-        [AlgoApiField("rewards-rate", null)]
+        [AlgoApiField("rewards-rate")]
         public ulong RewardsRate
         {
             get => rewardsRate;
             set => rewardsRate = value;
         }
 
-        [AlgoApiField("rewards-residue", null)]
+        [AlgoApiField("rewards-residue")]
         public ulong RewardsResidue
         {
             get => rewardsResidue;

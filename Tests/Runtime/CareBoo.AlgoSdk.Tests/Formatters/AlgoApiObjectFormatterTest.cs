@@ -5,7 +5,7 @@ using NUnit.Framework;
 [AlgoApiObject(IsStrict = true)]
 public partial struct StrictTestObject
 {
-    [AlgoApiField("field1", "field1")]
+    [AlgoApiField("field1")]
     public int field;
 }
 

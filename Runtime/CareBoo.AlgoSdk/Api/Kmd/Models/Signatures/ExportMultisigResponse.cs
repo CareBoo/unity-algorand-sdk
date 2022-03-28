@@ -7,19 +7,19 @@ namespace AlgoSdk
     public partial struct ExportMultisigResponse
         : IEquatable<ExportMultisigResponse>
     {
-        [AlgoApiField("error", null)]
+        [AlgoApiField("error")]
         public Optional<bool> Error;
 
-        [AlgoApiField("message", null)]
+        [AlgoApiField("message")]
         public string Message;
 
-        [AlgoApiField("multisig_version", null)]
+        [AlgoApiField("multisig_version")]
         public byte MultisigVersion;
 
-        [AlgoApiField("pks", null)]
+        [AlgoApiField("pks")]
         public Ed25519.PublicKey[] Pks;
 
-        [AlgoApiField("threshold", null)]
+        [AlgoApiField("threshold")]
         public byte Threshold;
 
         public bool Equals(ExportMultisigResponse other)

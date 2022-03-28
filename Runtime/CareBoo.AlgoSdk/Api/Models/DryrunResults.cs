@@ -12,17 +12,17 @@ namespace AlgoSdk
     public partial struct DryrunResults
         : IEquatable<DryrunResults>
     {
-        [AlgoApiField("error", null)]
+        [AlgoApiField("error")]
         public string Error;
 
         /// <summary>
         /// Protocol version is the protocol version Dryrun was operated under.
         /// </summary>
-        [AlgoApiField("protocol-version", null)]
+        [AlgoApiField("protocol-version")]
         [Tooltip("Protocol version is the protocol version Dryrun was operated under.")]
         public FixedString128Bytes ProtocolVersion;
 
-        [AlgoApiField("txns", null)]
+        [AlgoApiField("txns")]
         public DryrunTxnResult[] Txns;
 
         public bool Equals(DryrunResults other)

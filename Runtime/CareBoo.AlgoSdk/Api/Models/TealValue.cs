@@ -26,21 +26,21 @@ namespace AlgoSdk
         /// <summary>
         /// [tb] bytes value.
         /// </summary>
-        [AlgoApiField("bytes", "tb")]
+        [AlgoApiField("tb")]
         [SerializeField]
         public TealBytes Bytes;
 
         /// <summary>
         /// [ui] uint value.
         /// </summary>
-        [AlgoApiField("uint", "ui")]
+        [AlgoApiField("ui")]
         [SerializeField]
         public ulong UintValue;
 
         /// <summary>
         /// See <see cref="TealValueType"/>
         /// </summary>
-        [AlgoApiField("type", "tt")]
+        [AlgoApiField("tt")]
         [SerializeField]
         public TealValueType Type;
 

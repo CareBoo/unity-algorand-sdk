@@ -10,13 +10,13 @@ namespace AlgoSdk
     public partial struct TransactionSignature
         : IEquatable<TransactionSignature>
     {
-        [AlgoApiField("logicsig", null, readOnly: true)]
+        [AlgoApiField("logicsig")]
         public LogicSig LogicSig;
 
-        [AlgoApiField("multisig", null, readOnly: true)]
+        [AlgoApiField("multisig")]
         public Multisig Multisig;
 
-        [AlgoApiField("sig", null, readOnly: true)]
+        [AlgoApiField("sig")]
         public Sig Sig;
 
         public bool Equals(TransactionSignature other)

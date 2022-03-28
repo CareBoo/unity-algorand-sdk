@@ -39,21 +39,21 @@ namespace AlgoSdk
         [Tooltip("Indicates a proposed upgrade.")]
         Address upgradePropose;
 
-        [AlgoApiField("upgrade-approve", null)]
+        [AlgoApiField("upgrade-approve")]
         public Optional<bool> UpgradeApprove
         {
             get => upgradeApprove;
             set => upgradeApprove = value;
         }
 
-        [AlgoApiField("upgrade-delay", null)]
+        [AlgoApiField("upgrade-delay")]
         public ulong UpgradeDelay
         {
             get => upgradeDelay;
             set => upgradeDelay = value;
         }
 
-        [AlgoApiField("upgrade-propose", null)]
+        [AlgoApiField("upgrade-propose")]
         public Address UpgradePropose
         {
             get => upgradePropose;

@@ -15,28 +15,28 @@ namespace AlgoSdk
         /// <summary>
         /// Evaluation error if any
         /// </summary>
-        [AlgoApiField("error", null)]
+        [AlgoApiField("error")]
         [Tooltip("Evaluation error if any")]
         public FixedString128Bytes Error;
 
         /// <summary>
         /// Line number
         /// </summary>
-        [AlgoApiField("line", null)]
+        [AlgoApiField("line")]
         [Tooltip("Line number")]
         public ulong Line;
 
         /// <summary>
         /// Program counter
         /// </summary>
-        [AlgoApiField("pc", null)]
+        [AlgoApiField("pc")]
         [Tooltip("Program counter")]
         public ulong ProgramCounter;
 
-        [AlgoApiField("scratch", null)]
+        [AlgoApiField("scratch")]
         public TealValue[] Scratch;
 
-        [AlgoApiField("stack", null)]
+        [AlgoApiField("stack")]
         public TealValue[] Stack;
 
         public bool Equals(DryrunState other)

@@ -12,20 +12,20 @@ namespace AlgoSdk
     public partial struct DryrunSource
         : IEquatable<DryrunSource>
     {
-        [AlgoApiField("app-index", null)]
+        [AlgoApiField("app-index")]
         public ulong AppIndex;
 
         /// <summary>
         /// <see cref="FieldName"/> is what kind of sources this is. If lsig then it goes into the <see cref="TransactionSignature.LogicSig"/> of the <see cref="Transaction"/> at <see cref="TransactionIndex"/> in <see cref="DryrunRequest.Transactions"/>. If approv or clearp it goes into the Approval Program or Clear State Program of <see cref="Application"/> at <see cref="AppIndex"/> in <see cref="DryrunRequest.Applications"/>.
         /// </summary>
-        [AlgoApiField("field-name", null)]
+        [AlgoApiField("field-name")]
         [Tooltip("FieldName is what kind of sources this is. If lsig then it goes into the TransactionSignature.LogicSig of the Transaction at TransactionIndex in DryrunRequest.Transactions. If approv or clearp it goes into the Approval Program or Clear State Program of Application at AppIndex in DryrunRequest.Applications.")]
         public FixedString32Bytes FieldName;
 
-        [AlgoApiField("source", null)]
+        [AlgoApiField("source")]
         public string Source;
 
-        [AlgoApiField("txn-index", null)]
+        [AlgoApiField("txn-index")]
         public ulong TransactionIndex;
 
         public bool Equals(DryrunSource other)

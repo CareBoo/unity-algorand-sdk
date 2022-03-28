@@ -6,10 +6,10 @@ namespace AlgoSdk
     public partial struct WalletHandle
         : IEquatable<WalletHandle>
     {
-        [AlgoApiField("expires_seconds", null)]
+        [AlgoApiField("expires_seconds")]
         public ulong ExpiresSeconds;
 
-        [AlgoApiField("wallet", null)]
+        [AlgoApiField("wallet")]
         public Wallet Wallet;
 
         public bool Equals(WalletHandle other)

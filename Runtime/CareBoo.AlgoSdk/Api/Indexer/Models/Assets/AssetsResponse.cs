@@ -8,13 +8,13 @@ namespace AlgoSdk
         : IEquatable<AssetsResponse>
         , IPaginatedIndexerResponse<Asset>
     {
-        [AlgoApiField("assets", null)]
+        [AlgoApiField("assets")]
         public Asset[] Assets { get; set; }
 
-        [AlgoApiField("current-round", null)]
+        [AlgoApiField("current-round")]
         public ulong CurrentRound { get; set; }
 
-        [AlgoApiField("next-token", null)]
+        [AlgoApiField("next-token")]
         public FixedString128Bytes NextToken { get; set; }
 
         Asset[] IPaginatedIndexerResponse<Asset>.Results

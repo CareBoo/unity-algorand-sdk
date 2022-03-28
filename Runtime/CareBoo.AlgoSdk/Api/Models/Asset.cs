@@ -14,32 +14,32 @@ namespace AlgoSdk
         /// <summary>
         /// Round during which this asset was created.
         /// </summary>
-        [AlgoApiField("created-at-round", null)]
+        [AlgoApiField("created-at-round")]
         [Tooltip("Round during which this asset was created.")]
         public ulong CreatedAtRound;
 
         /// <summary>
         /// Whether or not this asset is currently deleted.
         /// </summary>
-        [AlgoApiField("deleted", null)]
+        [AlgoApiField("deleted")]
         [Tooltip("Whether or not this asset is currently deleted.")]
         public Optional<bool> Deleted;
 
         /// <summary>
         /// Round during which this asset was destroyed.
         /// </summary>
-        [AlgoApiField("destroyed-at-round", null)]
+        [AlgoApiField("destroyed-at-round")]
         [Tooltip("Round during which this asset was destroyed.")]
         public ulong DestroyedAtRound;
 
         /// <summary>
         /// unique asset identifier
         /// </summary>
-        [AlgoApiField("index", null)]
+        [AlgoApiField("index")]
         [Tooltip("unique asset identifier")]
         public ulong Index;
 
-        [AlgoApiField("params", null)]
+        [AlgoApiField("params")]
         public AssetParams Params;
 
         public bool Equals(Asset other)

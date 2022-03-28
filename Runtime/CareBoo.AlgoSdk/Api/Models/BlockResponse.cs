@@ -14,14 +14,14 @@ namespace AlgoSdk
         /// <summary>
         /// Block data.
         /// </summary>
-        [AlgoApiField("block", "block")]
+        [AlgoApiField("block")]
         [Tooltip("Block data.")]
         public Block BlockHeader;
 
         /// <summary>
         /// Block certificate object.
         /// </summary>
-        [AlgoApiField(null, "cert")]
+        [AlgoApiField("cert")]
         [Tooltip("Block certificate object.")]
         public AlgoApiObject Cert;
 

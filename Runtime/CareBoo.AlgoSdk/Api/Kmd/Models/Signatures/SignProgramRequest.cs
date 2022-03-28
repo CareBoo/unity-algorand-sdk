@@ -7,16 +7,16 @@ namespace AlgoSdk
     public partial struct SignProgramRequest
         : IEquatable<SignProgramRequest>
     {
-        [AlgoApiField("address", null)]
+        [AlgoApiField("address")]
         public Address Address;
 
-        [AlgoApiField("data", null)]
+        [AlgoApiField("data")]
         public byte[] Data;
 
-        [AlgoApiField("wallet_handle_token", null)]
+        [AlgoApiField("wallet_handle_token")]
         public FixedString128Bytes WalletHandleToken;
 
-        [AlgoApiField("wallet_password", null)]
+        [AlgoApiField("wallet_password")]
         public FixedString128Bytes WalletPassword;
 
         public bool Equals(SignProgramRequest other)

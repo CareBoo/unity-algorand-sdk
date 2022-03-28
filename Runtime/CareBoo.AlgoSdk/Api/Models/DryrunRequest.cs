@@ -12,37 +12,37 @@ namespace AlgoSdk
     public partial struct DryrunRequest
         : IEquatable<DryrunRequest>
     {
-        [AlgoApiField("accounts", null)]
+        [AlgoApiField("accounts")]
         public AccountInfo[] Accounts;
 
-        [AlgoApiField("apps", null)]
+        [AlgoApiField("apps")]
         public Application[] Applications;
 
         /// <summary>
         /// LatestTimestamp is available to some TEAL scripts. Defaults to the latest confirmed timestamp this algod is attached to.
         /// </summary>
-        [AlgoApiField("latest-timestamp", null)]
+        [AlgoApiField("latest-timestamp")]
         [Tooltip("LatestTimestamp is available to some TEAL scripts. Defaults to the latest confirmed timestamp this algod is attached to.")]
         public ulong LatestTimestamp;
 
         /// <summary>
         /// ProtocolVersion specifies a specific version string to operate under, otherwise whatever the current protocol of the network this algod is running in.
         /// </summary>
-        [AlgoApiField("protocol-version", null)]
+        [AlgoApiField("protocol-version")]
         [Tooltip("ProtocolVersion specifies a specific version string to operate under, otherwise whatever the current protocol of the network this algod is running in.")]
         public FixedString64Bytes ProtocolVersion;
 
         /// <summary>
         /// Round is available to some TEAL scripts. Defaults to the current round on the network this algod is attached to.
         /// </summary>
-        [AlgoApiField("round", null)]
+        [AlgoApiField("round")]
         [Tooltip("Round is available to some TEAL scripts. Defaults to the current round on the network this algod is attached to.")]
         public ulong Round;
 
-        [AlgoApiField("sources", null)]
+        [AlgoApiField("sources")]
         public DryrunSource[] Sources;
 
-        [AlgoApiField("txns", null)]
+        [AlgoApiField("txns")]
         public Transaction[] Transactions;
 
         public bool Equals(DryrunRequest other)

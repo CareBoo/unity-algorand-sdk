@@ -6,13 +6,13 @@ namespace AlgoSdk
     public partial struct WalletInfoResponse
         : IEquatable<WalletInfoResponse>
     {
-        [AlgoApiField("wallet_handle", null)]
+        [AlgoApiField("wallet_handle")]
         public WalletHandle WalletHandle;
 
-        [AlgoApiField("error", null)]
+        [AlgoApiField("error")]
         public Optional<bool> Error;
 
-        [AlgoApiField("message", null)]
+        [AlgoApiField("message")]
         public string Message;
 
         public bool Equals(WalletInfoResponse other)

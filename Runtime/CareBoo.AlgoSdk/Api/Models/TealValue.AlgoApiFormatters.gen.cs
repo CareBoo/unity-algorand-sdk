@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.TealValue>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.TealValue>(false).Assign("bytes", "tb", (AlgoSdk.TealValue x) => x.Bytes, (ref AlgoSdk.TealValue x, AlgoSdk.TealBytes value) => x.Bytes = value, false).Assign("uint", "ui", (AlgoSdk.TealValue x) => x.UintValue, (ref AlgoSdk.TealValue x, System.UInt64 value) => x.UintValue = value, false).Assign("type", "tt", (AlgoSdk.TealValue x) => x.Type, (ref AlgoSdk.TealValue x, AlgoSdk.TealValueType value) => x.Type = value, AlgoSdk.ByteEnumComparer<AlgoSdk.TealValueType>.Instance, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.TealValue>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.TealValue>(false).Assign("tb", (AlgoSdk.TealValue x) => x.Bytes, (ref AlgoSdk.TealValue x, AlgoSdk.TealBytes value) => x.Bytes = value).Assign("ui", (AlgoSdk.TealValue x) => x.UintValue, (ref AlgoSdk.TealValue x, System.UInt64 value) => x.UintValue = value).Assign("tt", (AlgoSdk.TealValue x) => x.Type, (ref AlgoSdk.TealValue x, AlgoSdk.TealValueType value) => x.Type = value, AlgoSdk.ByteEnumComparer<AlgoSdk.TealValueType>.Instance));
             return true;
         }
     }

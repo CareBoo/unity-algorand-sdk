@@ -12,36 +12,36 @@ namespace AlgoSdk
     public partial struct DryrunTxnResult
         : IEquatable<DryrunTxnResult>
     {
-        [AlgoApiField("app-call-messages", null)]
+        [AlgoApiField("app-call-messages")]
         public FixedString128Bytes[] AppCallMessages;
 
-        [AlgoApiField("app-call-trace", null)]
+        [AlgoApiField("app-call-trace")]
         public DryrunState[] AppCallTrace;
 
         /// <summary>
         /// Execution cost of app call transaction
         /// </summary>
-        [AlgoApiField("cost", null)]
+        [AlgoApiField("cost")]
         [Tooltip("Execution cost of app call transaction")]
         public ulong Cost;
 
         /// <summary>
         /// Disassembled program line by line.
         /// </summary>
-        [AlgoApiField("disassembly", null)]
+        [AlgoApiField("disassembly")]
         [Tooltip("Disassembled program line by line.")]
         public FixedString128Bytes[] Disassembly;
 
-        [AlgoApiField("global-delta", null)]
+        [AlgoApiField("global-delta")]
         public EvalDeltaKeyValue[] GlobalDelta;
 
-        [AlgoApiField("local-deltas", null)]
+        [AlgoApiField("local-deltas")]
         public AccountStateDelta[] LocalDeltas;
 
-        [AlgoApiField("logic-sig-messages", null)]
+        [AlgoApiField("logic-sig-messages")]
         public FixedString128Bytes[] LogicSigMessages;
 
-        [AlgoApiField("logic-sig-trace", null)]
+        [AlgoApiField("logic-sig-trace")]
         public DryrunState[] LogicSigTrace;
 
         public bool Equals(DryrunTxnResult other)

@@ -6,13 +6,13 @@ namespace AlgoSdk
     public partial struct ImportKeyResponse
         : IEquatable<ImportKeyResponse>
     {
-        [AlgoApiField("address", null)]
+        [AlgoApiField("address")]
         public Address Address;
 
-        [AlgoApiField("error", null)]
+        [AlgoApiField("error")]
         public Optional<bool> Error;
 
-        [AlgoApiField("message", null)]
+        [AlgoApiField("message")]
         public string Message;
 
         public bool Equals(ImportKeyResponse other)

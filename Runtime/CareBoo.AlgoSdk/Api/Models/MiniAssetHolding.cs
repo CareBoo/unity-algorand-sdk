@@ -11,33 +11,33 @@ namespace AlgoSdk
     public partial struct MiniAssetHolding
         : IEquatable<MiniAssetHolding>
     {
-        [AlgoApiField("address", null)]
+        [AlgoApiField("address")]
         public Address Address;
 
-        [AlgoApiField("amount", null)]
+        [AlgoApiField("amount")]
         public ulong Amount;
 
         /// <summary>
         /// Whether or not this asset holding is currently deleted from its account.
         /// </summary>
-        [AlgoApiField("deleted", null)]
+        [AlgoApiField("deleted")]
         [Tooltip("Whether or not this asset holding is currently deleted from its account.")]
         public Optional<bool> Deleted;
 
-        [AlgoApiField("is-frozen", null)]
+        [AlgoApiField("is-frozen")]
         public Optional<bool> IsFrozen;
 
         /// <summary>
         /// Round during which the account opted into the asset.
         /// </summary>
-        [AlgoApiField("opted-in-at-round", null)]
+        [AlgoApiField("opted-in-at-round")]
         [Tooltip("Round during which the account opted into the asset.")]
         public ulong OptedInAtRound;
 
         /// <summary>
         /// Round during which the account opted out of the asset.
         /// </summary>
-        [AlgoApiField("opted-out-at-round", null)]
+        [AlgoApiField("opted-out-at-round")]
         [Tooltip("Round during which the account opted out of the asset.")]
         public ulong OptedOutAtRound;
 

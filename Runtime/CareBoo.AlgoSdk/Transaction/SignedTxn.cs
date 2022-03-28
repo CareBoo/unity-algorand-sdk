@@ -55,7 +55,7 @@ namespace AlgoSdk
         Address authAddr;
 
         /// <inheritdoc />
-        [AlgoApiField("sig", "sig")]
+        [AlgoApiField("sig")]
         public Sig Sig
         {
             get => signature.Sig;
@@ -63,7 +63,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("msig", "msig")]
+        [AlgoApiField("msig")]
         public Multisig Msig
         {
             get => signature.Multisig;
@@ -71,7 +71,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("lsig", "lsig")]
+        [AlgoApiField("lsig")]
         public LogicSig Lsig
         {
             get => signature.LogicSig;
@@ -79,7 +79,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("txn", "txn")]
+        [AlgoApiField("txn")]
         public Transaction Txn
         {
             get => txn;
@@ -87,7 +87,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("sgnr", "sgnr")]
+        [AlgoApiField("sgnr")]
         public Address AuthAddr
         {
             get => authAddr;
@@ -251,7 +251,7 @@ namespace AlgoSdk
         Address authAddr;
 
         /// <inheritdoc />
-        [AlgoApiField("sig", "sig")]
+        [AlgoApiField("sig")]
         public Sig Sig
         {
             get => signature.Sig;
@@ -259,7 +259,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("msig", "msig")]
+        [AlgoApiField("msig")]
         public Multisig Msig
         {
             get => signature.Multisig;
@@ -267,7 +267,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("lsig", "lsig")]
+        [AlgoApiField("lsig")]
         public LogicSig Lsig
         {
             get => signature.LogicSig;
@@ -275,7 +275,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("txn", "txn")]
+        [AlgoApiField("txn")]
         public TTxn Txn
         {
             get => txn;
@@ -283,7 +283,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("sgnr", "sgnr")]
+        [AlgoApiField("sgnr")]
         public Address AuthAddr
         {
             get => authAddr;

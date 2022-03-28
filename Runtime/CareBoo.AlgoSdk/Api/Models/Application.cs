@@ -24,35 +24,35 @@ namespace AlgoSdk
         /// <summary>
         /// Round when this application was created.
         /// </summary>
-        [AlgoApiField("created-at-round", null)]
+        [AlgoApiField("created-at-round")]
         [Tooltip("Round when this application was created.")]
         public ulong CreatedAtRound;
 
         /// <summary>
         /// Whether or not this application is currently deleted.
         /// </summary>
-        [AlgoApiField("deleted", null)]
+        [AlgoApiField("deleted")]
         [Tooltip("Whether or not this application is currently deleted.")]
         public Optional<bool> Deleted;
 
         /// <summary>
         /// Round when this application was deleted.
         /// </summary>
-        [AlgoApiField("deleted-at-round", null)]
+        [AlgoApiField("deleted-at-round")]
         [Tooltip("Round when this application was deleted.")]
         public ulong DeletedAtRound;
 
         /// <summary>
         /// [appidx] application index.
         /// </summary>
-        [AlgoApiField("id", null)]
+        [AlgoApiField("id")]
         [Tooltip("[appidx] application index.")]
         public ulong Id;
 
         /// <summary>
         /// [appparams] application parameters.
         /// </summary>
-        [AlgoApiField("params", null)]
+        [AlgoApiField("params")]
         [Tooltip("[appparams] application parameters.")]
         public ApplicationParams Params;
 

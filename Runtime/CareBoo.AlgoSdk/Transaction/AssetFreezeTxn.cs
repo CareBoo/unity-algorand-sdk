@@ -25,7 +25,7 @@ namespace AlgoSdk
     public partial struct Transaction : IAssetFreezeTxn
     {
         /// <inheritdoc />
-        [AlgoApiField(null, "fadd")]
+        [AlgoApiField("fadd")]
         public Address FreezeAccount
         {
             get => assetFreezeParams.FreezeAccount;
@@ -33,7 +33,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "faid")]
+        [AlgoApiField("faid")]
         public AssetIndex FreezeAsset
         {
             get => assetFreezeParams.FreezeAsset;
@@ -41,7 +41,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "afrz")]
+        [AlgoApiField("afrz")]
         public Optional<bool> AssetFrozen
         {
             get => assetFreezeParams.AssetFrozen;
@@ -90,7 +90,7 @@ namespace AlgoSdk
         Params @params;
 
         /// <inheritdoc />
-        [AlgoApiField("fee", "fee")]
+        [AlgoApiField("fee")]
         public MicroAlgos Fee
         {
             get => header.Fee;
@@ -98,7 +98,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("first-valid", "fv")]
+        [AlgoApiField("fv")]
         public ulong FirstValidRound
         {
             get => header.FirstValidRound;
@@ -106,7 +106,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("genesis-hash", "gh")]
+        [AlgoApiField("gh")]
         public GenesisHash GenesisHash
         {
             get => header.GenesisHash;
@@ -114,7 +114,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("last-valid", "lv")]
+        [AlgoApiField("lv")]
         public ulong LastValidRound
         {
             get => header.LastValidRound;
@@ -122,7 +122,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("sender", "snd")]
+        [AlgoApiField("snd")]
         public Address Sender
         {
             get => header.Sender;
@@ -130,7 +130,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("tx-type", "type")]
+        [AlgoApiField("type")]
         public TransactionType TransactionType
         {
             get => TransactionType.AssetFreeze;
@@ -138,7 +138,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("genesis-id", "gen")]
+        [AlgoApiField("gen")]
         public FixedString32Bytes GenesisId
         {
             get => header.GenesisId;
@@ -146,7 +146,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("group", "grp")]
+        [AlgoApiField("grp")]
         public TransactionId Group
         {
             get => header.Group;
@@ -154,7 +154,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("lease", "lx")]
+        [AlgoApiField("lx")]
         public TransactionId Lease
         {
             get => header.Lease;
@@ -162,7 +162,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("note", "note")]
+        [AlgoApiField("note")]
         public byte[] Note
         {
             get => header.Note;
@@ -170,7 +170,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("rekey-to", "rekey")]
+        [AlgoApiField("rekey")]
         public Address RekeyTo
         {
             get => header.RekeyTo;
@@ -178,7 +178,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "fadd")]
+        [AlgoApiField("fadd")]
         public Address FreezeAccount
         {
             get => @params.FreezeAccount;
@@ -186,7 +186,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "faid")]
+        [AlgoApiField("faid")]
         public AssetIndex FreezeAsset
         {
             get => @params.FreezeAsset;
@@ -194,7 +194,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "afrz")]
+        [AlgoApiField("afrz")]
         public Optional<bool> AssetFrozen
         {
             get => @params.AssetFrozen;
@@ -227,15 +227,15 @@ namespace AlgoSdk
         public partial struct Params
             : IEquatable<Params>
         {
-            [AlgoApiField("address", "fadd")]
+            [AlgoApiField("fadd")]
             [Tooltip("The address of the account whose asset is being frozen or unfrozen.")]
             public Address FreezeAccount;
 
-            [AlgoApiField("asset-id", "faid")]
+            [AlgoApiField("faid")]
             [Tooltip("The asset ID being frozen or unfrozen.")]
             public AssetIndex FreezeAsset;
 
-            [AlgoApiField("new-freeze-status", "afrz")]
+            [AlgoApiField("afrz")]
             [Tooltip("True to freeze the asset.")]
             public Optional<bool> AssetFrozen;
 

@@ -8,16 +8,16 @@ namespace AlgoSdk
     public partial struct ImportMultisigRequest
         : IEquatable<ImportMultisigRequest>
     {
-        [AlgoApiField("multisig_version", null)]
+        [AlgoApiField("multisig_version")]
         public byte Version;
 
-        [AlgoApiField("pks", null)]
+        [AlgoApiField("pks")]
         public Ed25519.PublicKey[] PublicKeys;
 
-        [AlgoApiField("threshold", null)]
+        [AlgoApiField("threshold")]
         public byte Threshold;
 
-        [AlgoApiField("wallet_handle_token", null)]
+        [AlgoApiField("wallet_handle_token")]
         public FixedString128Bytes WalletHandleToken;
 
         public bool Equals(ImportMultisigRequest other)

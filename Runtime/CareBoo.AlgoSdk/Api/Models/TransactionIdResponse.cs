@@ -14,7 +14,7 @@ namespace AlgoSdk
         /// <summary>
         /// The returned <see cref="TransactionId"/>
         /// </summary>
-        [AlgoApiField("txId", "txId")]
+        [AlgoApiField("txId")]
         [Tooltip("The returned TransactionId")]
         public TransactionId TxId;
 

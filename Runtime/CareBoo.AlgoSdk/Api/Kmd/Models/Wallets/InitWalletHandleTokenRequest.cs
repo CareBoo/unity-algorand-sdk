@@ -7,10 +7,10 @@ namespace AlgoSdk
     public partial struct InitWalletHandleTokenRequest
         : IEquatable<InitWalletHandleTokenRequest>
     {
-        [AlgoApiField("wallet_id", null)]
+        [AlgoApiField("wallet_id")]
         public FixedString128Bytes WalletId;
 
-        [AlgoApiField("wallet_password", null)]
+        [AlgoApiField("wallet_password")]
         public FixedString128Bytes WalletPassword;
 
         public bool Equals(InitWalletHandleTokenRequest other)

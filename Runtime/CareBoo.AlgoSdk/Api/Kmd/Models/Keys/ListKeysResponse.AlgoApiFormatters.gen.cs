@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ListKeysResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.ListKeysResponse>(false).Assign("addresses", null, (AlgoSdk.ListKeysResponse x) => x.Addresses, (ref AlgoSdk.ListKeysResponse x, AlgoSdk.Address[] value) => x.Addresses = value, AlgoSdk.ArrayComparer<AlgoSdk.Address>.Instance, false).Assign("error", null, (AlgoSdk.ListKeysResponse x) => x.Error, (ref AlgoSdk.ListKeysResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value, false).Assign("message", null, (AlgoSdk.ListKeysResponse x) => x.Message, (ref AlgoSdk.ListKeysResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ListKeysResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.ListKeysResponse>(false).Assign("addresses", (AlgoSdk.ListKeysResponse x) => x.Addresses, (ref AlgoSdk.ListKeysResponse x, AlgoSdk.Address[] value) => x.Addresses = value, AlgoSdk.ArrayComparer<AlgoSdk.Address>.Instance).Assign("error", (AlgoSdk.ListKeysResponse x) => x.Error, (ref AlgoSdk.ListKeysResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value).Assign("message", (AlgoSdk.ListKeysResponse x) => x.Message, (ref AlgoSdk.ListKeysResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance));
             return true;
         }
     }

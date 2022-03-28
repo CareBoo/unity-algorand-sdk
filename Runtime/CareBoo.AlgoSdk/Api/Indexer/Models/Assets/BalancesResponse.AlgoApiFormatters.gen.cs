@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.BalancesResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.BalancesResponse>(false).Assign("balances", null, (AlgoSdk.BalancesResponse x) => x.Balances, (ref AlgoSdk.BalancesResponse x, AlgoSdk.MiniAssetHolding[] value) => x.Balances = value, AlgoSdk.ArrayComparer<AlgoSdk.MiniAssetHolding>.Instance, false).Assign("current-round", null, (AlgoSdk.BalancesResponse x) => x.CurrentRound, (ref AlgoSdk.BalancesResponse x, System.UInt64 value) => x.CurrentRound = value, false).Assign("next-token", null, (AlgoSdk.BalancesResponse x) => x.NextToken, (ref AlgoSdk.BalancesResponse x, Unity.Collections.FixedString128Bytes value) => x.NextToken = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.BalancesResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.BalancesResponse>(false).Assign("balances", (AlgoSdk.BalancesResponse x) => x.Balances, (ref AlgoSdk.BalancesResponse x, AlgoSdk.MiniAssetHolding[] value) => x.Balances = value, AlgoSdk.ArrayComparer<AlgoSdk.MiniAssetHolding>.Instance).Assign("current-round", (AlgoSdk.BalancesResponse x) => x.CurrentRound, (ref AlgoSdk.BalancesResponse x, System.UInt64 value) => x.CurrentRound = value).Assign("next-token", (AlgoSdk.BalancesResponse x) => x.NextToken, (ref AlgoSdk.BalancesResponse x, Unity.Collections.FixedString128Bytes value) => x.NextToken = value));
             return true;
         }
     }

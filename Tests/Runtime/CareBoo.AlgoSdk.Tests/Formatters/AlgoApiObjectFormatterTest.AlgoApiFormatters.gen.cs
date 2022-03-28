@@ -17,7 +17,7 @@ public partial struct StrictTestObject
     
     private static bool @__generated__InitializeAlgoApiFormatters()
     {
-        AlgoSdk.AlgoApiFormatterLookup.Add<StrictTestObject>(new AlgoSdk.AlgoApiObjectFormatter<StrictTestObject>(true).Assign("field1", "field1", (StrictTestObject x) => x.field, (ref StrictTestObject x, System.Int32 value) => x.field = value, false));
+        AlgoSdk.AlgoApiFormatterLookup.Add<StrictTestObject>(new AlgoSdk.AlgoApiObjectFormatter<StrictTestObject>(true).Assign("field1", (StrictTestObject x) => x.field, (ref StrictTestObject x, System.Int32 value) => x.field = value));
         return true;
     }
 }

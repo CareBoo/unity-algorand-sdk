@@ -64,7 +64,7 @@ namespace AlgoSdk
         /// <summary>
         /// The list of transaction ids belonging to this group.
         /// </summary>
-        [AlgoApiField("txlist", "txlist")]
+        [AlgoApiField("txlist")]
         [Tooltip("The list of transaction ids belonging to this group.")]
         public TransactionId[] Txns;
 

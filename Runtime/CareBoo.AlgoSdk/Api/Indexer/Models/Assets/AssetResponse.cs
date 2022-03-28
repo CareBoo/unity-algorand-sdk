@@ -7,10 +7,10 @@ namespace AlgoSdk
         : IEquatable<AssetResponse>
         , IIndexerResponse<Asset>
     {
-        [AlgoApiField("asset", null)]
+        [AlgoApiField("asset")]
         public Asset Asset { get; set; }
 
-        [AlgoApiField("current-round", null)]
+        [AlgoApiField("current-round")]
         public ulong CurrentRound { get; set; }
 
         Asset IIndexerResponse<Asset>.Result

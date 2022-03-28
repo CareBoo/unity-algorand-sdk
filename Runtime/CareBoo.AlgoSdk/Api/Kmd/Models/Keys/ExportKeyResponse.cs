@@ -7,13 +7,13 @@ namespace AlgoSdk
     public partial struct ExportKeyResponse
         : IEquatable<ExportKeyResponse>
     {
-        [AlgoApiField("error", null)]
+        [AlgoApiField("error")]
         public Optional<bool> Error;
 
-        [AlgoApiField("message", null)]
+        [AlgoApiField("message")]
         public string Message;
 
-        [AlgoApiField("private_key", null)]
+        [AlgoApiField("private_key")]
         public PrivateKey PrivateKey;
 
         public bool Equals(ExportKeyResponse other)

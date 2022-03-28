@@ -14,14 +14,14 @@ namespace AlgoSdk
         /// <summary>
         /// base32 SHA512_256 of program bytes (Address style)
         /// </summary>
-        [AlgoApiField("hash", null)]
+        [AlgoApiField("hash")]
         [Tooltip("base32 SHA512_256 of program bytes (Address style)")]
         public string Hash;
 
         /// <summary>
         /// base64 encoded program bytes
         /// </summary>
-        [AlgoApiField("result", null)]
+        [AlgoApiField("result")]
         [Tooltip("base64 encoded program bytes")]
         public string CompiledBytesBase64;
 

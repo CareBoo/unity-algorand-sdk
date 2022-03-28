@@ -7,7 +7,7 @@ namespace AlgoSdk
     public partial struct RenewWalletHandleTokenRequest
         : IEquatable<RenewWalletHandleTokenRequest>
     {
-        [AlgoApiField("wallet_handle_token", null)]
+        [AlgoApiField("wallet_handle_token")]
         public FixedString128Bytes WalletHandleToken;
 
         public bool Equals(RenewWalletHandleTokenRequest other)

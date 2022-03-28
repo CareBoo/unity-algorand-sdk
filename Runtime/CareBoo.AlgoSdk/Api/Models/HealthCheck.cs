@@ -10,25 +10,25 @@ namespace AlgoSdk
     public partial struct HealthCheck
         : IEquatable<HealthCheck>
     {
-        [AlgoApiField("data", "data")]
+        [AlgoApiField("data")]
         public AlgoApiObject Data;
 
-        [AlgoApiField("db-available", "db-available")]
+        [AlgoApiField("db-available")]
         public bool DatabaseAvailable;
 
-        [AlgoApiField("errors", "errors")]
+        [AlgoApiField("errors")]
         public string[] Errors;
 
-        [AlgoApiField("is-migrating", "is-migrating")]
+        [AlgoApiField("is-migrating")]
         public bool IsMigrating;
 
-        [AlgoApiField("message", "message")]
+        [AlgoApiField("message")]
         public string Message;
 
-        [AlgoApiField("round", "round")]
+        [AlgoApiField("round")]
         public ulong Round;
 
-        [AlgoApiField("version", "version")]
+        [AlgoApiField("version")]
         public string Version;
 
         public bool Equals(HealthCheck other)

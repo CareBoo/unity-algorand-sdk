@@ -27,7 +27,7 @@ namespace AlgoSdk
         ApplyData<AppliedSignedTxn> applyData;
 
         /// <inheritdoc />
-        [AlgoApiField("sig", "sig")]
+        [AlgoApiField("sig")]
         public Sig Sig
         {
             get => txn.Sig;
@@ -35,7 +35,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("msig", "msig")]
+        [AlgoApiField("msig")]
         public Multisig Msig
         {
             get => txn.Msig;
@@ -43,7 +43,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("lsig", "lsig")]
+        [AlgoApiField("lsig")]
         public LogicSig Lsig
         {
             get => txn.Lsig;
@@ -51,7 +51,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("txn", "txn")]
+        [AlgoApiField("txn")]
         public Transaction Txn
         {
             get => txn.Txn;
@@ -59,7 +59,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("sgnr", "sgnr")]
+        [AlgoApiField("sgnr")]
         public Address AuthAddr
         {
             get => txn.AuthAddr;
@@ -67,7 +67,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("ca", "ca")]
+        [AlgoApiField("ca")]
         public MicroAlgos ClosingAmount
         {
             get => applyData.ClosingAmount;
@@ -75,7 +75,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("aca", "aca")]
+        [AlgoApiField("aca")]
         public ulong AssetClosingAmount
         {
             get => applyData.AssetClosingAmount;
@@ -83,7 +83,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("rs", "rs")]
+        [AlgoApiField("rs")]
         public MicroAlgos SenderRewards
         {
             get => applyData.SenderRewards;
@@ -91,7 +91,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("rr", "rr")]
+        [AlgoApiField("rr")]
         public MicroAlgos ReceiverRewards
         {
             get => applyData.ReceiverRewards;
@@ -99,7 +99,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("rc", "rc")]
+        [AlgoApiField("rc")]
         public MicroAlgos CloseRewards
         {
             get => applyData.CloseRewards;
@@ -107,7 +107,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("dt", "dt")]
+        [AlgoApiField("dt")]
         public AppEvalDelta<AppliedSignedTxn> EvalDelta
         {
             get => applyData.EvalDelta;
@@ -115,7 +115,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("caid", "caid")]
+        [AlgoApiField("caid")]
         public AssetIndex ConfigAsset
         {
             get => applyData.ConfigAsset;
@@ -123,7 +123,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("apid", "apid")]
+        [AlgoApiField("apid")]
         public AppIndex ApplicationId
         {
             get => applyData.ApplicationId;

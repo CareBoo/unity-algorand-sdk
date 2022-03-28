@@ -7,13 +7,13 @@ namespace AlgoSdk
     public partial struct DeleteKeyRequest
         : IEquatable<DeleteKeyRequest>
     {
-        [AlgoApiField("address", null)]
+        [AlgoApiField("address")]
         public Address Address;
 
-        [AlgoApiField("wallet_handle_token", null)]
+        [AlgoApiField("wallet_handle_token")]
         public FixedString128Bytes WalletHandleToken;
 
-        [AlgoApiField("wallet_password", null)]
+        [AlgoApiField("wallet_password")]
         public FixedString128Bytes WalletPassword;
 
         public bool Equals(DeleteKeyRequest other)

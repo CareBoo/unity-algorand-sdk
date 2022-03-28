@@ -25,7 +25,7 @@ namespace AlgoSdk
     public partial struct Transaction : IPaymentTxn
     {
         /// <inheritdoc />
-        [AlgoApiField(null, "rcv")]
+        [AlgoApiField("rcv")]
         public Address Receiver
         {
             get => paymentParams.Receiver;
@@ -33,7 +33,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "amt")]
+        [AlgoApiField("amt")]
         public MicroAlgos Amount
         {
             get => paymentParams.Amount;
@@ -41,7 +41,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "close")]
+        [AlgoApiField("close")]
         public Address CloseRemainderTo
         {
             get => paymentParams.CloseRemainderTo;
@@ -90,7 +90,7 @@ namespace AlgoSdk
         Params @params;
 
         /// <inheritdoc />
-        [AlgoApiField("fee", "fee")]
+        [AlgoApiField("fee")]
         public MicroAlgos Fee
         {
             get => header.Fee;
@@ -98,7 +98,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("first-valid", "fv")]
+        [AlgoApiField("fv")]
         public ulong FirstValidRound
         {
             get => header.FirstValidRound;
@@ -106,7 +106,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("genesis-hash", "gh")]
+        [AlgoApiField("gh")]
         public GenesisHash GenesisHash
         {
             get => header.GenesisHash;
@@ -114,7 +114,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("last-valid", "lv")]
+        [AlgoApiField("lv")]
         public ulong LastValidRound
         {
             get => header.LastValidRound;
@@ -122,7 +122,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("sender", "snd")]
+        [AlgoApiField("snd")]
         public Address Sender
         {
             get => header.Sender;
@@ -130,7 +130,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("tx-type", "type")]
+        [AlgoApiField("type")]
         public TransactionType TransactionType
         {
             get => TransactionType.Payment;
@@ -138,7 +138,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("genesis-id", "gen")]
+        [AlgoApiField("gen")]
         public FixedString32Bytes GenesisId
         {
             get => header.GenesisId;
@@ -146,7 +146,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("group", "grp")]
+        [AlgoApiField("grp")]
         public TransactionId Group
         {
             get => header.Group;
@@ -154,7 +154,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("lease", "lx")]
+        [AlgoApiField("lx")]
         public TransactionId Lease
         {
             get => header.Lease;
@@ -162,7 +162,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("note", "note")]
+        [AlgoApiField("note")]
         public byte[] Note
         {
             get => header.Note;
@@ -170,7 +170,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("rekey-to", "rekey")]
+        [AlgoApiField("rekey")]
         public Address RekeyTo
         {
             get => header.RekeyTo;
@@ -178,7 +178,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "rcv")]
+        [AlgoApiField("rcv")]
         public Address Receiver
         {
             get => @params.Receiver;
@@ -186,7 +186,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "amt")]
+        [AlgoApiField("amt")]
         public MicroAlgos Amount
         {
             get => @params.Amount;
@@ -194,7 +194,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "close")]
+        [AlgoApiField("close")]
         public Address CloseRemainderTo
         {
             get => @params.CloseRemainderTo;
@@ -202,7 +202,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("close-amount", "close-amount", readOnly: true)]
+        [AlgoApiField("close-amount")]
         public ulong CloseAmount
         {
             get => @params.CloseAmount;
@@ -235,19 +235,19 @@ namespace AlgoSdk
         public partial struct Params
             : IEquatable<Params>
         {
-            [AlgoApiField("receiver", "rcv")]
+            [AlgoApiField("rcv")]
             [Tooltip("The address of the account that receives the Amount.")]
             public Address Receiver;
 
-            [AlgoApiField("amount", "amt")]
+            [AlgoApiField("amt")]
             [Tooltip("The total amount to be sent in microAlgos.")]
             public MicroAlgos Amount;
 
-            [AlgoApiField("close-remainder-to", "close")]
+            [AlgoApiField("close")]
             [Tooltip("When set, it indicates that the transaction is requesting that the Sender account should be closed, and all remaining funds, after the Fee and Amount are paid, be transferred to this address.")]
             public Address CloseRemainderTo;
 
-            [AlgoApiField("close-amount", "close-amount")]
+            [AlgoApiField("close-amount")]
             [NonSerialized]
             public ulong CloseAmount;
 

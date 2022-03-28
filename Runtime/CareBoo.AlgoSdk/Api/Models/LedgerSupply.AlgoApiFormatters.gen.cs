@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.LedgerSupply>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.LedgerSupply>(false).Assign("current_round", null, (AlgoSdk.LedgerSupply x) => x.Round, (ref AlgoSdk.LedgerSupply x, System.UInt64 value) => x.Round = value, false).Assign("online-money", null, (AlgoSdk.LedgerSupply x) => x.OnlineMoney, (ref AlgoSdk.LedgerSupply x, System.UInt64 value) => x.OnlineMoney = value, false).Assign("total-money", null, (AlgoSdk.LedgerSupply x) => x.TotalMoney, (ref AlgoSdk.LedgerSupply x, System.UInt64 value) => x.TotalMoney = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.LedgerSupply>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.LedgerSupply>(false).Assign("current_round", (AlgoSdk.LedgerSupply x) => x.Round, (ref AlgoSdk.LedgerSupply x, System.UInt64 value) => x.Round = value).Assign("online-money", (AlgoSdk.LedgerSupply x) => x.OnlineMoney, (ref AlgoSdk.LedgerSupply x, System.UInt64 value) => x.OnlineMoney = value).Assign("total-money", (AlgoSdk.LedgerSupply x) => x.TotalMoney, (ref AlgoSdk.LedgerSupply x, System.UInt64 value) => x.TotalMoney = value));
             return true;
         }
     }

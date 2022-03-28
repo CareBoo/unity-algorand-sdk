@@ -46,7 +46,7 @@ namespace AlgoSdk
         /// <summary>
         /// List of accounts in addition to the sender that may be accessed from the application's approval-program and clear-state-program.
         /// </summary>
-        [AlgoApiField("accounts", null)]
+        [AlgoApiField("accounts")]
         public string[] Accounts
         {
             get => accounts;
@@ -56,7 +56,7 @@ namespace AlgoSdk
         /// <summary>
         /// Transaction specific arguments accessed from the application's approval-program and clear-state-program.
         /// </summary>
-        [AlgoApiField("application-args", null)]
+        [AlgoApiField("application-args")]
         public string[] ApplicationArgs
         {
             get => applicationArgs;
@@ -66,7 +66,7 @@ namespace AlgoSdk
         /// <summary>
         /// Id of the application being configured or empty if creating.
         /// </summary>
-        [AlgoApiField("application-id", null)]
+        [AlgoApiField("application-id")]
         public ulong ApplicationId
         {
             get => applicationId;
@@ -76,7 +76,7 @@ namespace AlgoSdk
         /// <summary>
         /// Logic executed for every application transaction, except when on-completion is set to "clear". It can read and write global state for the application, as well as account-specific local state. Approval programs may reject the transaction.
         /// </summary>
-        [AlgoApiField("approval-program", null)]
+        [AlgoApiField("approval-program")]
         public byte[] ApprovalProgram
         {
             get => approvalProgram;
@@ -86,7 +86,7 @@ namespace AlgoSdk
         /// <summary>
         /// Logic executed for application transactions with on-completion set to "clear". It can read and write global state for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.
         /// </summary>
-        [AlgoApiField("clear-state-program", null)]
+        [AlgoApiField("clear-state-program")]
         public byte[] ClearStateProgram
         {
             get => clearStateProgram;
@@ -96,7 +96,7 @@ namespace AlgoSdk
         /// <summary>
         /// Specifies the additional app program len requested in pages.
         /// </summary>
-        [AlgoApiField("extra-program-pages", null)]
+        [AlgoApiField("extra-program-pages")]
         public ulong ExtraProgramPages
         {
             get => extraProgramPages;
@@ -106,7 +106,7 @@ namespace AlgoSdk
         /// <summary>
         /// Lists the applications in addition to the application-id whose global states may be accessed by this application's approval-program and clear-state-program. The access is read-only.
         /// </summary>
-        [AlgoApiField("foreign-apps", null)]
+        [AlgoApiField("foreign-apps")]
         public ulong[] ForeignApps
         {
             get => foreignApps;
@@ -116,7 +116,7 @@ namespace AlgoSdk
         /// <summary>
         /// Lists the assets whose parameters may be accessed by this application's ApprovalProgram and ClearStateProgram. The access is read-only.
         /// </summary>
-        [AlgoApiField("foreign-assets", null)]
+        [AlgoApiField("foreign-assets")]
         public ulong[] ForeignAssets
         {
             get => foreignAssets;
@@ -126,7 +126,7 @@ namespace AlgoSdk
         /// <summary>
         /// Represents a global-state schema. These schemas determine how much storage may be used in a global-state for an application. The more space used, the larger minimum balance must be maintained in the account holding the data.
         /// </summary>
-        [AlgoApiField("global-state-schema", null)]
+        [AlgoApiField("global-state-schema")]
         public StateSchema GlobalStateSchema
         {
             get => globalStateSchema;
@@ -136,7 +136,7 @@ namespace AlgoSdk
         /// <summary>
         /// Represents a local-state schema. These schemas determine how much storage may be used in a local-state for an application. The more space used, the larger minimum balance must be maintained in the account holding the data.
         /// </summary>
-        [AlgoApiField("local-state-schema", null)]
+        [AlgoApiField("local-state-schema")]
         public StateSchema LocalStateSchema
         {
             get => localStateSchema;
@@ -146,7 +146,7 @@ namespace AlgoSdk
         /// <summary>
         /// Defines what additional actions occur with the transaction.
         /// </summary>
-        [AlgoApiField("on-completion", null)]
+        [AlgoApiField("on-completion")]
         public OnCompletion OnCompletion
         {
             get => onCompletion;

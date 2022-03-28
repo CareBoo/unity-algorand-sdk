@@ -19,7 +19,7 @@ namespace AlgoSdk
         /// <summary>
         /// Maximum number of integer values that may be stored in the [global || local] application key/value store. Immutable.
         /// </summary>
-        [AlgoApiField("num-byte-slice", "nbs")]
+        [AlgoApiField("nbs")]
         public ulong NumByteSlices
         {
             get => numByteSlices;
@@ -29,7 +29,7 @@ namespace AlgoSdk
         /// <summary>
         /// Maximum number of byte slices values that may be stored in the [global || local] application key/value store. Immutable.
         /// </summary>
-        [AlgoApiField("num-uint", "nui")]
+        [AlgoApiField("nui")]
         public ulong NumUints
         {
             get => numUints;

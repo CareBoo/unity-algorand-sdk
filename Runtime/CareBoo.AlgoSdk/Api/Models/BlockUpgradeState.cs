@@ -58,35 +58,35 @@ namespace AlgoSdk
         [Tooltip("Deadline round for this protocol upgrade (No votes will be consider after this round).")]
         ulong nextProtocolVoteBefore;
 
-        [AlgoApiField("current-protocol", null)]
+        [AlgoApiField("current-protocol")]
         public FixedString128Bytes CurrentProtocol
         {
             get => currentProtocol;
             set => currentProtocol = value;
         }
 
-        [AlgoApiField("next-protocol", null)]
+        [AlgoApiField("next-protocol")]
         public FixedString128Bytes NextProtocol
         {
             get => nextProtocol;
             set => nextProtocol = value;
         }
 
-        [AlgoApiField("next-protocol-approvals", null)]
+        [AlgoApiField("next-protocol-approvals")]
         public ulong NextProtocolApprovals
         {
             get => nextProtocolApprovals;
             set => nextProtocolApprovals = value;
         }
 
-        [AlgoApiField("next-protocol-switch-on", null)]
+        [AlgoApiField("next-protocol-switch-on")]
         public ulong NextProtocolSwitchOn
         {
             get => nextProtocolSwitchOn;
             set => nextProtocolSwitchOn = value;
         }
 
-        [AlgoApiField("next-protocol-vote-before", null)]
+        [AlgoApiField("next-protocol-vote-before")]
         public ulong NextProtocolVoteBefore
         {
             get => nextProtocolVoteBefore;

@@ -7,7 +7,7 @@ namespace AlgoSdk
     public partial struct VersionsResponse
         : IEquatable<VersionsResponse>
     {
-        [AlgoApiField("versions", null)]
+        [AlgoApiField("versions")]
         public FixedString64Bytes[] Versions;
 
         public bool Equals(VersionsResponse other)

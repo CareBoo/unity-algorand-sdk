@@ -71,7 +71,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("payment-transaction", null, readOnly: true)]
+        [AlgoApiField("payment-transaction")]
         public PaymentTxn.Params PaymentParams
         {
             get => paymentParams;
@@ -79,7 +79,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("asset-config-transaction", null, readOnly: true)]
+        [AlgoApiField("asset-config-transaction")]
         public AssetConfigTxn.Params AssetConfigParams
         {
             get => assetConfigParams;
@@ -87,7 +87,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("asset-transfer-transaction", null, readOnly: true)]
+        [AlgoApiField("asset-transfer-transaction")]
         public AssetTransferTxn.Params AssetTransferParams
         {
             get => assetTransferParams;
@@ -95,7 +95,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("asset-freeze-transaction", null, readOnly: true)]
+        [AlgoApiField("asset-freeze-transaction")]
         public AssetFreezeTxn.Params AssetFreezeParams
         {
             get => assetFreezeParams;
@@ -110,7 +110,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("application-transaction", null, readOnly: true)]
+        [AlgoApiField("application-transaction")]
         public AppCallTxn.Params AppCallParams
         {
             get => appCallParams;
@@ -118,7 +118,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("keyreg-transction", null, readOnly: true)]
+        [AlgoApiField("keyreg-transction")]
         public KeyRegTxn.Params KeyRegParams
         {
             get => keyRegParams;
@@ -126,7 +126,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("signature", null, readOnly: true)]
+        [AlgoApiField("signature")]
         public TransactionSignature Signature;
 
         public bool Equals(Transaction other)

@@ -6,13 +6,13 @@ namespace AlgoSdk
     public partial struct SignTransactionResponse
         : IEquatable<SignTransactionResponse>
     {
-        [AlgoApiField("signed_transaction", null)]
+        [AlgoApiField("signed_transaction")]
         public byte[] SignedTransaction;
 
-        [AlgoApiField("error", null)]
+        [AlgoApiField("error")]
         public Optional<bool> Error;
 
-        [AlgoApiField("message", null)]
+        [AlgoApiField("message")]
         public string Message;
 
         public bool Equals(SignTransactionResponse other)

@@ -21,13 +21,13 @@ namespace AlgoSdk
     public partial struct EvalDelta
         : IEquatable<EvalDelta>
     {
-        [AlgoApiField("action", "action")]
+        [AlgoApiField("action")]
         public EvalDeltaAction Action;
 
-        [AlgoApiField("bytes", "bytes")]
+        [AlgoApiField("bytes")]
         public TealBytes Bytes;
 
-        [AlgoApiField("uint", "uint")]
+        [AlgoApiField("uint")]
         public ulong UInt;
 
         public bool Equals(EvalDelta other)

@@ -67,7 +67,7 @@ namespace AlgoSdk
     public partial struct Transaction : ITransactionHeader
     {
         /// <inheritdoc />
-        [AlgoApiField("fee", "fee")]
+        [AlgoApiField("fee")]
         public MicroAlgos Fee
         {
             get => header.Fee;
@@ -75,7 +75,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("first-valid", "fv")]
+        [AlgoApiField("fv")]
         public ulong FirstValidRound
         {
             get => header.FirstValidRound;
@@ -83,7 +83,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("genesis-hash", "gh")]
+        [AlgoApiField("gh")]
         public GenesisHash GenesisHash
         {
             get => header.GenesisHash;
@@ -91,7 +91,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("last-valid", "lv")]
+        [AlgoApiField("lv")]
         public ulong LastValidRound
         {
             get => header.LastValidRound;
@@ -99,7 +99,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("sender", "snd")]
+        [AlgoApiField("snd")]
         public Address Sender
         {
             get => header.Sender;
@@ -107,7 +107,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("tx-type", "type")]
+        [AlgoApiField("type")]
         public TransactionType TransactionType
         {
             get => header.TransactionType;
@@ -115,7 +115,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("genesis-id", "gen")]
+        [AlgoApiField("gen")]
         public FixedString32Bytes GenesisId
         {
             get => header.GenesisId;
@@ -123,7 +123,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("grp", "grp")]
+        [AlgoApiField("grp")]
         public TransactionId Group
         {
             get => header.Group;
@@ -131,7 +131,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("lx", "lx")]
+        [AlgoApiField("lx")]
         public TransactionId Lease
         {
             get => header.Lease;
@@ -139,7 +139,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("group", null, readOnly: true)]
+        [AlgoApiField("group")]
         public Sha512_256_Hash GroupHash
         {
             get => header.Group;
@@ -147,7 +147,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("lease", null, readOnly: true)]
+        [AlgoApiField("lease")]
         public Sha512_256_Hash LeaseHash
         {
             get => header.Lease;
@@ -155,7 +155,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("note", "note")]
+        [AlgoApiField("note")]
         public byte[] Note
         {
             get => header.Note;
@@ -163,7 +163,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("rekey-to", "rekey")]
+        [AlgoApiField("rekey")]
         public Address RekeyTo
         {
             get => header.RekeyTo;
@@ -171,7 +171,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("id", null, readOnly: true)]
+        [AlgoApiField("id")]
         public TransactionId Id
         {
             get => header.Id;
@@ -179,7 +179,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("auth-addr", null, readOnly: true)]
+        [AlgoApiField("auth-addr")]
         public Address AuthAddress
         {
             get => header.AuthAddress;
@@ -187,7 +187,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("close-rewards", null, readOnly: true)]
+        [AlgoApiField("close-rewards")]
         public ulong CloseRewards
         {
             get => header.CloseRewards;
@@ -195,7 +195,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("closing-amount", null, readOnly: true)]
+        [AlgoApiField("closing-amount")]
         public ulong ClosingAmount
         {
             get => header.ClosingAmount;
@@ -203,7 +203,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("confirmed-round", null, readOnly: true)]
+        [AlgoApiField("confirmed-round")]
         public ulong ConfirmedRound
         {
             get => header.ConfirmedRound;
@@ -211,7 +211,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("created-application-index", null, readOnly: true)]
+        [AlgoApiField("created-application-index")]
         public ulong CreatedApplicationIndex
         {
             get => header.CreatedApplicationIndex;
@@ -219,7 +219,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("created-asset-index", null, readOnly: true)]
+        [AlgoApiField("created-asset-index")]
         public ulong CreatedAssetIndex
         {
             get => header.CreatedAssetIndex;
@@ -227,7 +227,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("intra-round-offset", null, readOnly: true)]
+        [AlgoApiField("intra-round-offset")]
         public ulong IntraRoundOffset
         {
             get => header.IntraRoundOffset;
@@ -235,7 +235,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("global-state-delta", null, readOnly: true)]
+        [AlgoApiField("global-state-delta")]
         public EvalDeltaKeyValue[] GlobalStateDelta
         {
             get => header.GlobalStateDelta;
@@ -243,7 +243,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("local-state-delta", null, readOnly: true)]
+        [AlgoApiField("local-state-delta")]
         public AccountStateDelta[] LocalStateDelta
         {
             get => header.LocalStateDelta;
@@ -251,7 +251,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("receiver-rewards", null, readOnly: true)]
+        [AlgoApiField("receiver-rewards")]
         public ulong ReceiverRewards
         {
             get => header.ReceiverRewards;
@@ -259,7 +259,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("round-time", null, readOnly: true)]
+        [AlgoApiField("round-time")]
         public ulong RoundTime
         {
             get => header.RoundTime;
@@ -267,7 +267,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("sender-rewards", null, readOnly: true)]
+        [AlgoApiField("sender-rewards")]
         public ulong SenderRewards
         {
             get => header.SenderRewards;
@@ -275,7 +275,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("inner-txns", null, readOnly: true)]
+        [AlgoApiField("inner-txns")]
         public Transaction[] InnerTxns
         {
             get => header.InnerTxns;

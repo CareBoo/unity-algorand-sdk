@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.BlockUpgradeVote>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.BlockUpgradeVote>(false).Assign("upgrade-approve", null, (AlgoSdk.BlockUpgradeVote x) => x.UpgradeApprove, (ref AlgoSdk.BlockUpgradeVote x, AlgoSdk.Optional<System.Boolean> value) => x.UpgradeApprove = value, false).Assign("upgrade-delay", null, (AlgoSdk.BlockUpgradeVote x) => x.UpgradeDelay, (ref AlgoSdk.BlockUpgradeVote x, System.UInt64 value) => x.UpgradeDelay = value, false).Assign("upgrade-propose", null, (AlgoSdk.BlockUpgradeVote x) => x.UpgradePropose, (ref AlgoSdk.BlockUpgradeVote x, AlgoSdk.Address value) => x.UpgradePropose = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.BlockUpgradeVote>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.BlockUpgradeVote>(false).Assign("upgrade-approve", (AlgoSdk.BlockUpgradeVote x) => x.UpgradeApprove, (ref AlgoSdk.BlockUpgradeVote x, AlgoSdk.Optional<System.Boolean> value) => x.UpgradeApprove = value).Assign("upgrade-delay", (AlgoSdk.BlockUpgradeVote x) => x.UpgradeDelay, (ref AlgoSdk.BlockUpgradeVote x, System.UInt64 value) => x.UpgradeDelay = value).Assign("upgrade-propose", (AlgoSdk.BlockUpgradeVote x) => x.UpgradePropose, (ref AlgoSdk.BlockUpgradeVote x, AlgoSdk.Address value) => x.UpgradePropose = value));
             return true;
         }
     }

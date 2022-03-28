@@ -19,7 +19,7 @@ namespace AlgoSdk.WalletConnect
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.WalletConnect.EncryptedPayload>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.WalletConnect.EncryptedPayload>(false).Assign("iv", null, (AlgoSdk.WalletConnect.EncryptedPayload x) => x.Iv, (ref AlgoSdk.WalletConnect.EncryptedPayload x, AlgoSdk.Hex value) => x.Iv = value, false).Assign("hmac", null, (AlgoSdk.WalletConnect.EncryptedPayload x) => x.Signature, (ref AlgoSdk.WalletConnect.EncryptedPayload x, AlgoSdk.Hex value) => x.Signature = value, false).Assign("data", null, (AlgoSdk.WalletConnect.EncryptedPayload x) => x.Data, (ref AlgoSdk.WalletConnect.EncryptedPayload x, AlgoSdk.Hex value) => x.Data = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.WalletConnect.EncryptedPayload>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.WalletConnect.EncryptedPayload>(false).Assign("iv", (AlgoSdk.WalletConnect.EncryptedPayload x) => x.Iv, (ref AlgoSdk.WalletConnect.EncryptedPayload x, AlgoSdk.Hex value) => x.Iv = value).Assign("hmac", (AlgoSdk.WalletConnect.EncryptedPayload x) => x.Signature, (ref AlgoSdk.WalletConnect.EncryptedPayload x, AlgoSdk.Hex value) => x.Signature = value).Assign("data", (AlgoSdk.WalletConnect.EncryptedPayload x) => x.Data, (ref AlgoSdk.WalletConnect.EncryptedPayload x, AlgoSdk.Hex value) => x.Data = value));
             return true;
         }
     }

@@ -40,7 +40,7 @@ namespace AlgoSdk
     public partial struct Transaction
     {
         /// <inheritdoc />
-        [AlgoApiField(null, "xaid")]
+        [AlgoApiField("xaid")]
         public AssetIndex XferAsset
         {
             get => assetTransferParams.XferAsset;
@@ -48,7 +48,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "aamt")]
+        [AlgoApiField("aamt")]
         public ulong AssetAmount
         {
             get => assetTransferParams.AssetAmount;
@@ -56,7 +56,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "asnd")]
+        [AlgoApiField("asnd")]
         public Address AssetSender
         {
             get => assetTransferParams.AssetSender;
@@ -64,7 +64,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "arcv")]
+        [AlgoApiField("arcv")]
         public Address AssetReceiver
         {
             get => assetTransferParams.AssetReceiver;
@@ -72,7 +72,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "aclose")]
+        [AlgoApiField("aclose")]
         public Address AssetCloseTo
         {
             get => assetTransferParams.AssetCloseTo;
@@ -176,7 +176,7 @@ namespace AlgoSdk
         Params @params;
 
         /// <inheritdoc />
-        [AlgoApiField("fee", "fee")]
+        [AlgoApiField("fee")]
         public MicroAlgos Fee
         {
             get => header.Fee;
@@ -184,7 +184,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("first-valid", "fv")]
+        [AlgoApiField("fv")]
         public ulong FirstValidRound
         {
             get => header.FirstValidRound;
@@ -192,7 +192,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("genesis-hash", "gh")]
+        [AlgoApiField("gh")]
         public GenesisHash GenesisHash
         {
             get => header.GenesisHash;
@@ -200,7 +200,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("last-valid", "lv")]
+        [AlgoApiField("lv")]
         public ulong LastValidRound
         {
             get => header.LastValidRound;
@@ -208,7 +208,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("sender", "snd")]
+        [AlgoApiField("snd")]
         public Address Sender
         {
             get => header.Sender;
@@ -216,7 +216,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("tx-type", "type")]
+        [AlgoApiField("type")]
         public TransactionType TransactionType
         {
             get => TransactionType.AssetTransfer;
@@ -224,7 +224,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("genesis-id", "gen")]
+        [AlgoApiField("gen")]
         public FixedString32Bytes GenesisId
         {
             get => header.GenesisId;
@@ -232,7 +232,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("group", "grp")]
+        [AlgoApiField("grp")]
         public TransactionId Group
         {
             get => header.Group;
@@ -240,7 +240,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("lease", "lx")]
+        [AlgoApiField("lx")]
         public TransactionId Lease
         {
             get => header.Lease;
@@ -248,7 +248,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("note", "note")]
+        [AlgoApiField("note")]
         public byte[] Note
         {
             get => header.Note;
@@ -256,7 +256,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("rekey-to", "rekey")]
+        [AlgoApiField("rekey")]
         public Address RekeyTo
         {
             get => header.RekeyTo;
@@ -264,7 +264,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "xaid")]
+        [AlgoApiField("xaid")]
         public AssetIndex XferAsset
         {
             get => @params.XferAsset;
@@ -272,7 +272,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "aamt")]
+        [AlgoApiField("aamt")]
         public ulong AssetAmount
         {
             get => @params.AssetAmount;
@@ -280,7 +280,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "asnd")]
+        [AlgoApiField("asnd")]
         public Address AssetSender
         {
             get => @params.AssetSender;
@@ -288,7 +288,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "arcv")]
+        [AlgoApiField("arcv")]
         public Address AssetReceiver
         {
             get => @params.AssetReceiver;
@@ -296,7 +296,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "aclose")]
+        [AlgoApiField("aclose")]
         public Address AssetCloseTo
         {
             get => @params.AssetCloseTo;
@@ -304,7 +304,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("close-amount", "close-amount", readOnly: true)]
+        [AlgoApiField("close-amount")]
         public ulong CloseAmount
         {
             get => @params.CloseAmount;
@@ -336,27 +336,27 @@ namespace AlgoSdk
         public partial struct Params
             : IEquatable<Params>
         {
-            [AlgoApiField("asset-id", "xaid")]
+            [AlgoApiField("xaid")]
             [Tooltip("The unique ID of the asset to be transferred.")]
             public AssetIndex XferAsset;
 
-            [AlgoApiField("amount", "aamt")]
+            [AlgoApiField("aamt")]
             [Tooltip("The amount of the asset to be transferred. A zero amount transferred to self allocates that asset in the account's Asset map.")]
             public ulong AssetAmount;
 
-            [AlgoApiField("sender", "asnd")]
+            [AlgoApiField("asnd")]
             [Tooltip("The sender of the transfer. The regular Sender field should be used and this one set to the zero value for regular transfers between accounts. If this value is nonzero, it indicates a clawback transaction where the sender is the asset's clawback address and the asset sender is the address from which the funds will be withdrawn.")]
             public Address AssetSender;
 
-            [AlgoApiField("receiver", "arcv")]
+            [AlgoApiField("arcv")]
             [Tooltip("The recipient of the asset transfer.")]
             public Address AssetReceiver;
 
-            [AlgoApiField("close-to", "aclose")]
+            [AlgoApiField("aclose")]
             [Tooltip("Specify this field to remove the asset holding from the sender account and reduce the account's minimum balance (i.e. opt-out of the asset).")]
             public Address AssetCloseTo;
 
-            [AlgoApiField("close-amount", "close-amount")]
+            [AlgoApiField("close-amount")]
             [NonSerialized]
             public ulong CloseAmount;
 

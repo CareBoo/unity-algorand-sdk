@@ -12,10 +12,10 @@ namespace AlgoSdk
     public partial struct TealKeyValue
         : IEquatable<TealKeyValue>
     {
-        [AlgoApiField("key", "key")]
+        [AlgoApiField("key")]
         public FixedString128Bytes Key;
 
-        [AlgoApiField("value", "value")]
+        [AlgoApiField("value")]
         public TealValue Value;
 
         public bool Equals(TealKeyValue other)

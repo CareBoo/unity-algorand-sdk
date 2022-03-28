@@ -6,13 +6,13 @@ namespace AlgoSdk
     public partial struct RenewWalletHandleTokenResponse
         : IEquatable<RenewWalletHandleTokenResponse>
     {
-        [AlgoApiField("error", null)]
+        [AlgoApiField("error")]
         public Optional<bool> Error;
 
-        [AlgoApiField("message", null)]
+        [AlgoApiField("message")]
         public string Message;
 
-        [AlgoApiField("wallet_handle", null)]
+        [AlgoApiField("wallet_handle")]
         public WalletHandle WalletHandle;
 
         public bool Equals(RenewWalletHandleTokenResponse other)

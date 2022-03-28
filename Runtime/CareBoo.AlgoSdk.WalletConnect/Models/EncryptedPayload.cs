@@ -7,13 +7,13 @@ namespace AlgoSdk.WalletConnect
     [AlgoApiObject]
     public partial struct EncryptedPayload
     {
-        [AlgoApiField("iv", null)]
+        [AlgoApiField("iv")]
         public Hex Iv;
 
-        [AlgoApiField("hmac", null)]
+        [AlgoApiField("hmac")]
         public Hex Signature;
 
-        [AlgoApiField("data", null)]
+        [AlgoApiField("data")]
         public Hex Data;
 
         public byte[] Sign(byte[] key)

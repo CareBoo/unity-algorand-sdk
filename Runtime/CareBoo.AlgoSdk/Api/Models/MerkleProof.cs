@@ -14,21 +14,21 @@ namespace AlgoSdk
         /// <summary>
         /// Index of the transaction in the block's payset.
         /// </summary>
-        [AlgoApiField("idx", "idx")]
+        [AlgoApiField("idx")]
         [Tooltip("Index of the transaction in the block's payset.")]
         public ulong TransactionIndex;
 
         /// <summary>
         /// Merkle proof of transaction membership.
         /// </summary>
-        [AlgoApiField("proof", "proof")]
+        [AlgoApiField("proof")]
         [Tooltip("Merkle proof of transaction membership.")]
         public string Proof;
 
         /// <summary>
         /// Hash of SignedTxnInBlock for verifying proof.
         /// </summary>
-        [AlgoApiField("stibhash", "stibhash")]
+        [AlgoApiField("stibhash")]
         [Tooltip("Hash of SignedTxnInBlock for verifying proof.")]
         public string SignedTransactionHash;
 
