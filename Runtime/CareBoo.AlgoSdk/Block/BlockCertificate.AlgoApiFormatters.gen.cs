@@ -12,14 +12,14 @@ namespace AlgoSdk
 {
     
     
-    public partial struct BlockResponse
+    public partial struct BlockCertificate
     {
         
-        private static bool @__generated__IsValid = BlockResponse.@__generated__InitializeAlgoApiFormatters();
+        private static bool @__generated__IsValid = BlockCertificate.@__generated__InitializeAlgoApiFormatters();
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.BlockResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.BlockResponse>(false).Assign("block", (AlgoSdk.BlockResponse x) => x.BlockHeader, (ref AlgoSdk.BlockResponse x, AlgoSdk.BlockHeader value) => x.BlockHeader = value).Assign("cert", (AlgoSdk.BlockResponse x) => x.Cert, (ref AlgoSdk.BlockResponse x, AlgoSdk.AlgoApiObject value) => x.Cert = value));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.BlockCertificate>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.BlockCertificate>(false));
             return true;
         }
     }
