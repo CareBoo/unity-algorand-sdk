@@ -1,0 +1,830 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct AlgoApiRequest
+   | Unity Algorand SDK </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct AlgoApiRequest
+   | Unity Algorand SDK ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo_50.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AlgoSdk.AlgoApiRequest">
+  
+  
+  <h1 id="AlgoSdk_AlgoApiRequest" data-uid="AlgoSdk.AlgoApiRequest" class="text-break">Struct AlgoApiRequest
+  </h1>
+  <div class="markdown level0 summary"><p>A wrapper around <see cref="!:UnityWebRequest"></see> for handling requests
+to Algorand REST services.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="AlgoSdk_AlgoApiRequest_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct AlgoApiRequest</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="AlgoSdk_AlgoApiRequest_Delete_" data-uid="AlgoSdk.AlgoApiRequest.Delete*"></a>
+  <h4 id="AlgoSdk_AlgoApiRequest_Delete_System_String_" data-uid="AlgoSdk.AlgoApiRequest.Delete(System.String)">Delete(String)</h4>
+  <div class="markdown level1 summary"><p>Create a DELETE request</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AlgoApiRequest Delete(string url)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">url</span></td>
+        <td><p>The url for this request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.html">AlgoApiRequest</a></td>
+        <td><p>A new DELETE request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiRequest_Get_" data-uid="AlgoSdk.AlgoApiRequest.Get*"></a>
+  <h4 id="AlgoSdk_AlgoApiRequest_Get_System_String_" data-uid="AlgoSdk.AlgoApiRequest.Get(System.String)">Get(String)</h4>
+  <div class="markdown level1 summary"><p>Create a GET request</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AlgoApiRequest Get(string url)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">url</span></td>
+        <td><p>The url for this request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.html">AlgoApiRequest</a></td>
+        <td><p>A new GET request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiRequest_Post_" data-uid="AlgoSdk.AlgoApiRequest.Post*"></a>
+  <h4 id="AlgoSdk_AlgoApiRequest_Post_System_String_" data-uid="AlgoSdk.AlgoApiRequest.Post(System.String)">Post(String)</h4>
+  <div class="markdown level1 summary"><p>Create a POST request</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AlgoApiRequest Post(string url)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">url</span></td>
+        <td><p>The url for this request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.html">AlgoApiRequest</a></td>
+        <td><p>A new POST request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiRequest_Send_" data-uid="AlgoSdk.AlgoApiRequest.Send*"></a>
+  <h4 id="AlgoSdk_AlgoApiRequest_Send_CancellationToken_" data-uid="AlgoSdk.AlgoApiRequest.Send(CancellationToken)">Send(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Send the request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent Send(CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent.html">AlgoApiRequest.Sent</a></td>
+        <td><p>A <a class="xref" href="AlgoSdk.AlgoApiRequest.Sent.html">AlgoApiRequest.Sent</a> request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiRequest_Send_" data-uid="AlgoSdk.AlgoApiRequest.Send*"></a>
+  <h4 id="AlgoSdk_AlgoApiRequest_Send__1___0_CancellationToken_" data-uid="AlgoSdk.AlgoApiRequest.Send``1(``0,CancellationToken)">Send&lt;TProgress&gt;(TProgress, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Send the request and check progress callbacks using <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iprogress-1">IProgress&lt;T&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.SentWithProgress&lt;TProgress&gt; Send&lt;TProgress&gt;(TProgress progress, CancellationToken cancellationToken = null)
+    where TProgress : IProgress&lt;float&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TProgress</span></td>
+        <td><span class="parametername">progress</span></td>
+        <td><p>The progress callback</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional cancellation token</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.SentWithProgress-1.html">AlgoApiRequest.SentWithProgress</a>&lt;TProgress&gt;</td>
+        <td><p>A <a class="xref" href="AlgoSdk.AlgoApiRequest.SentWithProgress-1.html">AlgoApiRequest.SentWithProgress&lt;TProgress&gt;</a> request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TProgress</span></td>
+        <td><p>A progress callback implementing <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iprogress-1">IProgress&lt;T&gt;</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiRequest_SetHeaders_" data-uid="AlgoSdk.AlgoApiRequest.SetHeaders*"></a>
+  <h4 id="AlgoSdk_AlgoApiRequest_SetHeaders_AlgoSdk_Header___" data-uid="AlgoSdk.AlgoApiRequest.SetHeaders(AlgoSdk.Header[])">SetHeaders(Header[])</h4>
+  <div class="markdown level1 summary"><p>Set additional headers on this request</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest SetHeaders(params Header[] headers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Header.html">Header</a>[]</td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>The headers in format &quot;key:value&quot;</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.html">AlgoApiRequest</a></td>
+        <td><p>this request with headers set</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiRequest_SetJsonBody_" data-uid="AlgoSdk.AlgoApiRequest.SetJsonBody*"></a>
+  <h4 id="AlgoSdk_AlgoApiRequest_SetJsonBody_NativeText_" data-uid="AlgoSdk.AlgoApiRequest.SetJsonBody(NativeText)">SetJsonBody(NativeText)</h4>
+  <div class="markdown level1 summary"><p>Set body of the request, and set its content type header to &quot;application/json&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest SetJsonBody(NativeText json)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NativeText</span></td>
+        <td><span class="parametername">json</span></td>
+        <td><p>The utf8 json to set the body of the request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.html">AlgoApiRequest</a></td>
+        <td><p>this request with body and header set</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiRequest_SetJsonBody_" data-uid="AlgoSdk.AlgoApiRequest.SetJsonBody*"></a>
+  <h4 id="AlgoSdk_AlgoApiRequest_SetJsonBody_System_String_" data-uid="AlgoSdk.AlgoApiRequest.SetJsonBody(System.String)">SetJsonBody(String)</h4>
+  <div class="markdown level1 summary"><p>Set body of the request, and set its content type header to &quot;application/json&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest SetJsonBody(string json)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">json</span></td>
+        <td><p>The utf8 json to set the body of the request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.html">AlgoApiRequest</a></td>
+        <td><p>this request with body and header set</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiRequest_SetJsonBody_" data-uid="AlgoSdk.AlgoApiRequest.SetJsonBody*"></a>
+  <h4 id="AlgoSdk_AlgoApiRequest_SetJsonBody__1___0_" data-uid="AlgoSdk.AlgoApiRequest.SetJsonBody``1(``0)">SetJsonBody&lt;TBody&gt;(TBody)</h4>
+  <div class="markdown level1 summary"><p>Set body of the request, and set its content type header to &quot;application/json&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest SetJsonBody&lt;TBody&gt;(TBody value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TBody</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>An object to serialize into json, then to set in the body of the request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.html">AlgoApiRequest</a></td>
+        <td><p>this request with body and header set</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TBody</span></td>
+        <td><p>Type of the object to serialize</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiRequest_SetMessagePackBody_" data-uid="AlgoSdk.AlgoApiRequest.SetMessagePackBody*"></a>
+  <h4 id="AlgoSdk_AlgoApiRequest_SetMessagePackBody_NativeArray_System_Byte__ReadOnly_" data-uid="AlgoSdk.AlgoApiRequest.SetMessagePackBody(NativeArray{System.Byte}.ReadOnly)">SetMessagePackBody(NativeArray&lt;Byte&gt;.ReadOnly)</h4>
+  <div class="markdown level1 summary"><p>Set body of the request and set its content type header to &quot;application/msgpack&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest SetMessagePackBody(NativeArray&lt;byte&gt;.ReadOnly bytes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">NativeArray.ReadOnly</span>&lt;&gt;</td>
+        <td><span class="parametername">bytes</span></td>
+        <td><p>The msgpack bytes to set for the body</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.html">AlgoApiRequest</a></td>
+        <td><p>this request with body and header set</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiRequest_SetMessagePackBody_" data-uid="AlgoSdk.AlgoApiRequest.SetMessagePackBody*"></a>
+  <h4 id="AlgoSdk_AlgoApiRequest_SetMessagePackBody__1___0_" data-uid="AlgoSdk.AlgoApiRequest.SetMessagePackBody``1(``0)">SetMessagePackBody&lt;TBody&gt;(TBody)</h4>
+  <div class="markdown level1 summary"><p>Set body of the request and set its content type header to &quot;application/msgpack&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest SetMessagePackBody&lt;TBody&gt;(TBody value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TBody</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value to serialize to message pack and set for the body</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.html">AlgoApiRequest</a></td>
+        <td><p>this request with body and header set</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TBody</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiRequest_SetPlainTextBody_" data-uid="AlgoSdk.AlgoApiRequest.SetPlainTextBody*"></a>
+  <h4 id="AlgoSdk_AlgoApiRequest_SetPlainTextBody_System_String_" data-uid="AlgoSdk.AlgoApiRequest.SetPlainTextBody(System.String)">SetPlainTextBody(String)</h4>
+  <div class="markdown level1 summary"><p>Set body of the request, and set its content type header to &quot;application/text&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest SetPlainTextBody(string plainText)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">plainText</span></td>
+        <td><p>The utf8 plaintext to use for the body</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.html">AlgoApiRequest</a></td>
+        <td><p>this request with body and header set</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiRequest_SetRawBody_" data-uid="AlgoSdk.AlgoApiRequest.SetRawBody*"></a>
+  <h4 id="AlgoSdk_AlgoApiRequest_SetRawBody_System_Byte___AlgoSdk_ContentType_" data-uid="AlgoSdk.AlgoApiRequest.SetRawBody(System.Byte[],AlgoSdk.ContentType)">SetRawBody(Byte[], ContentType)</h4>
+  <div class="markdown level1 summary"><p>Set the body and content type header of the request</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest SetRawBody(byte[] data, ContentType contentType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="parametername">data</span></td>
+        <td><p>The raw bytes to set for the body</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.ContentType.html">ContentType</a></td>
+        <td><span class="parametername">contentType</span></td>
+        <td><p>The content type to set the header of the request</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.html">AlgoApiRequest</a></td>
+        <td><p>this request with body and header set</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgoApiRequest_SetToken_" data-uid="AlgoSdk.AlgoApiRequest.SetToken*"></a>
+  <h4 id="AlgoSdk_AlgoApiRequest_SetToken_System_String_System_String_" data-uid="AlgoSdk.AlgoApiRequest.SetToken(System.String,System.String)">SetToken(String, String)</h4>
+  <div class="markdown level1 summary"><p>Set the token used for authenticating to the service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest SetToken(string tokenHeader, string token)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">tokenHeader</span></td>
+        <td><p>The name of the request header used for the token.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">token</span></td>
+        <td><p>The token used for authenticating to the service.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.html">AlgoApiRequest</a></td>
+        <td><p><see cref="!:this"></see> with token set</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
