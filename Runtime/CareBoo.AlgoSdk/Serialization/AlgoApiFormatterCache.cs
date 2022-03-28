@@ -56,6 +56,7 @@ namespace AlgoSdk
             Add<TransactionType>(new TransactionTypeFormatter());
             Add<TealValueType>(new ByteEnumFormatter<TealValueType>());
             Add<SignatureType>(new SignatureTypeFormatter());
+            Add<HashType>(new HashTypeFormatter());
         }
 
         public static void Add<T>(IAlgoApiFormatter<T> formatter)

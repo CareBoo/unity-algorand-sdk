@@ -305,7 +305,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        public AlgoApiRequest.Sent<Block> GetBlock(ulong round)
+        public AlgoApiRequest.Sent<BlockHeader> GetBlock(ulong round)
         {
             return this.Get($"/v2/blocks/{round}").Send();
         }

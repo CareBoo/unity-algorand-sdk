@@ -16,7 +16,7 @@ namespace AlgoSdk
         /// </summary>
         [AlgoApiField("block")]
         [Tooltip("Block data.")]
-        public Block BlockHeader;
+        public BlockHeader BlockHeader;
 
         /// <summary>
         /// Block certificate object.

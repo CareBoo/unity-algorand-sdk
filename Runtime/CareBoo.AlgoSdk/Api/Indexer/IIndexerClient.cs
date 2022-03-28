@@ -264,7 +264,7 @@ namespace AlgoSdk
         /// Lookup block.
         /// </summary>
         /// <param name="round">Round number</param>
-        AlgoApiRequest.Sent<Block> GetBlock(ulong round);
+        AlgoApiRequest.Sent<BlockHeader> GetBlock(ulong round);
 
         /// <summary>
         /// Search for transactions.

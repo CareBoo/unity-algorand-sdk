@@ -10,8 +10,8 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public partial struct Block
-        : IEquatable<Block>
+    public partial struct BlockHeader
+        : IEquatable<BlockHeader>
         , IBlockRewards
         , IBlockUpgradeState
         , IBlockUpgradeVote
@@ -201,7 +201,7 @@ namespace AlgoSdk
         [AlgoApiField("cc")]
         public AlgoApiObject Cc;
 
-        public bool Equals(Block other)
+        public bool Equals(BlockHeader other)
         {
             return GenesisId.Equals(other.GenesisId)
                 && GenesisHash.Equals(other.GenesisHash)
