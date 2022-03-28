@@ -5,6 +5,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [2.3.0](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.2.0...v2.3.0) (2022-03-28)
+
+
+### Features
+
+* **account:** add fields for total assets/accounts opted-in/created ([3ea7882](https://github.com/CareBoo/unity-algorand-sdk/commit/3ea788294950d631e227ecad1af8129eb7d09bca))
+* **errors:** serializer read errors now print the full message they're deserializing ([b67db2a](https://github.com/CareBoo/unity-algorand-sdk/commit/b67db2a0dd52bd3bfacc7d4b66a242beafcca950))
+* **formatter:** add `isStrict` to `AlgoApiObjectFormatter` ([d8467c6](https://github.com/CareBoo/unity-algorand-sdk/commit/d8467c632172fb41e207cc13b76d45717665f26a))
+* **indexer:** add new `IIndexerResponse<T>` and `IPaginatedIndexerResponse<T>` interfaces ([3b3abda](https://github.com/CareBoo/unity-algorand-sdk/commit/3b3abda9bad5e1d8b6964e07b0bdd8533b8aa5e4))
+* **transaction:** add Indexer TransactionApplication model ([99f63fa](https://github.com/CareBoo/unity-algorand-sdk/commit/99f63fa443d4013bcda218cae45c9d1d0ed4f170))
+* **transactiongroup:** add generic methods for constructing `TransactionGroup` ([5e4b6aa](https://github.com/CareBoo/unity-algorand-sdk/commit/5e4b6aac8a9fd42e9ffe27a73623d3d81e5d848d)), closes [#126](https://github.com/CareBoo/unity-algorand-sdk/issues/126)
+
 # [2.3.0-pre.4](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.3.0-pre.3...v2.3.0-pre.4) (2022-03-25)
 
 
