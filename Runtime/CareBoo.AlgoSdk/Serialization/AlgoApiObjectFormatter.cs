@@ -11,8 +11,7 @@ namespace AlgoSdk
         where T : struct
     {
         readonly bool isStrict;
-        readonly AlgoApiField<T>.Map<FixedString64Bytes> jsonFieldMap = new AlgoApiField<T>.Map<FixedString64Bytes>();
-        readonly AlgoApiField<T>.Map<FixedString32Bytes> msgPackFieldMap = new AlgoApiField<T>.Map<FixedString32Bytes>();
+        readonly AlgoApiField<T>.Map<FixedString64Bytes> fieldMap = new AlgoApiField<T>.Map<FixedString64Bytes>();
 
         public AlgoApiObjectFormatter(bool isStrict)
         {
@@ -20,32 +19,26 @@ namespace AlgoSdk
         }
 
         public AlgoApiObjectFormatter<T> Assign<TField>(
-            string jsonKey,
-            string messagePackKey,
+            string key,
             AlgoApiField<T>.FieldGetter<TField> getter,
-            AlgoApiField<T>.FieldSetter<TField> setter,
-            bool readOnly)
+            AlgoApiField<T>.FieldSetter<TField> setter
+        )
             where TField : IEquatable<TField>
         {
-            if (!string.IsNullOrEmpty(jsonKey))
-                jsonFieldMap.Assign(jsonKey, getter, setter, readOnly);
-            if (!string.IsNullOrEmpty(messagePackKey))
-                msgPackFieldMap.Assign(messagePackKey, getter, setter, readOnly);
+            if (!string.IsNullOrEmpty(key))
+                fieldMap.Assign(key, getter, setter);
             return this;
         }
 
         public AlgoApiObjectFormatter<T> Assign<TField>(
-            string jsonKey,
-            string messagePackKey,
+            string key,
             AlgoApiField<T>.FieldGetter<TField> getter,
             AlgoApiField<T>.FieldSetter<TField> setter,
-            IEqualityComparer<TField> comparer,
-            bool readOnly)
+            IEqualityComparer<TField> comparer
+        )
         {
-            if (!string.IsNullOrEmpty(jsonKey))
-                jsonFieldMap.Assign(jsonKey, getter, setter, comparer, readOnly);
-            if (!string.IsNullOrEmpty(messagePackKey))
-                msgPackFieldMap.Assign(messagePackKey, getter, setter, comparer, readOnly);
+            if (!string.IsNullOrEmpty(key))
+                fieldMap.Assign(key, getter, setter, comparer);
             return this;
         }
 
@@ -60,7 +53,7 @@ namespace AlgoSdk
                 reader.ReadString(ref key).ThrowIfError(reader);
                 try
                 {
-                    if (jsonFieldMap.TryGetValue(key, out var field))
+                    if (fieldMap.TryGetValue(key, out var field))
                     {
                         field.DeserializeJson(ref result, ref reader);
                     }
@@ -94,7 +87,7 @@ namespace AlgoSdk
                 reader.ReadString(ref key);
                 try
                 {
-                    if (msgPackFieldMap.TryGetValue(key, out var field))
+                    if (fieldMap.TryGetValue(key, out var field))
                     {
                         field.DeserializeMessagePack(ref result, ref reader);
                     }
@@ -118,7 +111,7 @@ namespace AlgoSdk
 
         public void Serialize(ref JsonWriter writer, T value)
         {
-            using var fieldsToSerialize = jsonFieldMap.GetFieldsToSerialize(value, Allocator.Temp);
+            using var fieldsToSerialize = fieldMap.GetFieldsToSerialize(value, Allocator.Temp);
             writer.BeginObject();
             for (var i = 0; i < fieldsToSerialize.Length; i++)
             {
@@ -126,20 +119,20 @@ namespace AlgoSdk
                     writer.BeginNextItem();
                 var key = fieldsToSerialize[i];
                 writer.WriteObjectKey(key);
-                jsonFieldMap.GetField(key).SerializeJson(value, ref writer);
+                fieldMap.GetField(key).SerializeJson(value, ref writer);
             }
             writer.EndObject();
         }
 
         public void Serialize(ref MessagePackWriter writer, T value)
         {
-            using var fieldsToSerialize = msgPackFieldMap.GetFieldsToSerialize(value, Allocator.Temp);
+            using var fieldsToSerialize = fieldMap.GetFieldsToSerialize(value, Allocator.Temp);
             writer.WriteMapHeader(fieldsToSerialize.Length);
             for (var i = 0; i < fieldsToSerialize.Length; i++)
             {
                 var key = fieldsToSerialize[i];
                 writer.WriteString(key);
-                msgPackFieldMap.GetField(key).SerializeMessagePack(value, ref writer);
+                fieldMap.GetField(key).SerializeMessagePack(value, ref writer);
             }
         }
     }

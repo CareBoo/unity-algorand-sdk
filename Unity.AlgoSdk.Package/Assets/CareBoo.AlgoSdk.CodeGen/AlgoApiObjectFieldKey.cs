@@ -9,7 +9,7 @@ namespace AlgoSdk.Editor.CodeGen
     {
         public static readonly BindingFlags BindingFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance;
 
-        public AlgoApiField Attribute { get; private set; }
+        public AlgoApiFieldAttribute Attribute { get; private set; }
         public MemberInfo MemberInfo { get; private set; }
         public Type MemberType { get; private set; }
 
@@ -17,14 +17,14 @@ namespace AlgoSdk.Editor.CodeGen
         {
             MemberInfo = fieldInfo;
             MemberType = fieldInfo.FieldType;
-            Attribute = fieldInfo.GetCustomAttribute<AlgoApiField>();
+            Attribute = fieldInfo.GetCustomAttribute<AlgoApiFieldAttribute>();
         }
 
         public AlgoApiObjectFieldKey(PropertyInfo propertyInfo)
         {
             MemberInfo = propertyInfo;
             MemberType = propertyInfo.PropertyType;
-            Attribute = propertyInfo.GetCustomAttribute<AlgoApiField>();
+            Attribute = propertyInfo.GetCustomAttribute<AlgoApiFieldAttribute>();
         }
 
         public static IEnumerable<AlgoApiObjectFieldKey> GetFields(Type type)
