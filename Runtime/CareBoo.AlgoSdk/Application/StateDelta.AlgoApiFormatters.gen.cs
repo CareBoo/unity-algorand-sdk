@@ -12,14 +12,14 @@ namespace AlgoSdk
 {
     
     
-    public partial struct AppStateDelta
+    public partial struct StateDelta
     {
         
-        private static bool @__generated__IsValid = AppStateDelta.@__generated__InitializeAlgoApiFormatters();
+        private static bool @__generated__IsValid = StateDelta.@__generated__InitializeAlgoApiFormatters();
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.AppStateDelta>(new AlgoSdk.WrappedValueFormatter<AlgoSdk.AppStateDelta, AlgoSdk.EvalDeltaKeyValue[]>());
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.StateDelta>(new AlgoSdk.StateDeltaFormatter());
             return true;
         }
     }

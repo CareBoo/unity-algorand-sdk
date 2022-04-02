@@ -15,14 +15,14 @@ namespace AlgoSdk.Formatters
 
         public KeywordByteEnumFormatter(string[] typeToString)
         {
-            this.typeToString = typeToString;
-            if (typeToString == null || typeToString.Length < 1)
-                throw new ArgumentNullException(nameof(typeToString));
+            this.typeToString = typeToString ?? throw new ArgumentNullException(nameof(typeToString));
+            if (typeToString.Length < 1)
+                throw new ArgumentException("should have a length of at least 1", nameof(typeToString));
 
             stringToType = new Dictionary<string, T>();
-            for (var i = 1; i < typeToString.Length; i++)
+            for (byte i = 1; i < typeToString.Length; i++)
             {
-                stringToType[typeToString[i]] = UnsafeUtility.As<int, T>(ref i);
+                stringToType[typeToString[i]] = UnsafeUtility.As<byte, T>(ref i);
             }
         }
 

@@ -1,3 +1,5 @@
+using Unity.Collections;
+
 namespace AlgoSdk
 {
     /// <summary>
@@ -34,5 +36,33 @@ namespace AlgoSdk
         /// Transaction to delete the application.
         /// </summary>
         Delete
+    }
+
+    public static class OnCompletionExtensions
+    {
+        public static readonly string[] TypeToString = new[]
+        {
+            "noop",
+            "optin",
+            "closeout",
+            "clear",
+            "update",
+            "delete"
+        };
+
+        public static readonly FixedString32Bytes[] TypeToFixedString = new FixedString32Bytes[]
+        {
+            "noop",
+            "optin",
+            "closeout",
+            "clear",
+            "update",
+            "delete"
+        };
+
+        public static FixedString32Bytes ToFixedString(this OnCompletion onCompletion)
+        {
+            return TypeToFixedString[(byte)onCompletion];
+        }
     }
 }

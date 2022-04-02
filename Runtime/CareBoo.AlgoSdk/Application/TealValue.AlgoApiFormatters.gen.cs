@@ -24,19 +24,3 @@ namespace AlgoSdk
         }
     }
 }
-namespace AlgoSdk
-{
-    
-    
-    public partial struct TealBytes
-    {
-        
-        private static bool @__generated__IsValid = TealBytes.@__generated__InitializeAlgoApiFormatters();
-        
-        private static bool @__generated__InitializeAlgoApiFormatters()
-        {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.TealBytes>(new AlgoSdk.Formatters.ByteArrayFormatter<AlgoSdk.TealBytes>());
-            return true;
-        }
-    }
-}

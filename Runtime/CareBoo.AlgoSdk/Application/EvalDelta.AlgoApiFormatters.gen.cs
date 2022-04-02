@@ -12,14 +12,14 @@ namespace AlgoSdk
 {
     
     
-    public partial struct EvalDelta
+    public partial struct EvalDelta<TTxn>
     {
         
-        private static bool @__generated__IsValid = EvalDelta.@__generated__InitializeAlgoApiFormatters();
+        private static bool @__generated__IsValid = EvalDelta<TTxn>.@__generated__InitializeAlgoApiFormatters();
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.EvalDelta>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.EvalDelta>(false).Assign("action", (AlgoSdk.EvalDelta x) => x.Action, (ref AlgoSdk.EvalDelta x, AlgoSdk.EvalDeltaAction value) => x.Action = value, AlgoSdk.ByteEnumComparer<AlgoSdk.EvalDeltaAction>.Instance).Assign("bytes", (AlgoSdk.EvalDelta x) => x.Bytes, (ref AlgoSdk.EvalDelta x, AlgoSdk.TealBytes value) => x.Bytes = value).Assign("uint", (AlgoSdk.EvalDelta x) => x.UInt, (ref AlgoSdk.EvalDelta x, System.UInt64 value) => x.UInt = value));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.EvalDelta<TTxn>>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.EvalDelta<TTxn>>(false).Assign("gd", (AlgoSdk.EvalDelta<TTxn> x) => x.GlobalDelta, (ref AlgoSdk.EvalDelta<TTxn> x, AlgoSdk.StateDelta value) => x.GlobalDelta = value).Assign("ld", (AlgoSdk.EvalDelta<TTxn> x) => x.LocalDeltas, (ref AlgoSdk.EvalDelta<TTxn> x, AlgoSdk.StateDelta[] value) => x.LocalDeltas = value, AlgoSdk.ArrayComparer<AlgoSdk.StateDelta>.Instance).Assign("lg", (AlgoSdk.EvalDelta<TTxn> x) => x.Logs, (ref AlgoSdk.EvalDelta<TTxn> x, System.String[] value) => x.Logs = value, AlgoSdk.ArrayComparer<System.String, AlgoSdk.StringComparer>.Instance).Assign("itx", (AlgoSdk.EvalDelta<TTxn> x) => x.InnerTxns, (ref AlgoSdk.EvalDelta<TTxn> x, TTxn[] value) => x.InnerTxns = value, AlgoSdk.ArrayComparer<TTxn>.Instance));
             return true;
         }
     }

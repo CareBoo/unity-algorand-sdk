@@ -113,7 +113,7 @@ namespace AlgoSdk
 
         /// <inheritdoc />
         [AlgoApiField("dt")]
-        public AppEvalDelta<AppliedSignedTxn> EvalDelta
+        public EvalDelta<AppliedSignedTxn> EvalDelta
         {
             get => txn.EvalDelta;
             set => txn.EvalDelta = value;
@@ -277,14 +277,14 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        public AppStateDelta GlobalDelta
+        public StateDelta GlobalDelta
         {
             get => txn.GlobalDelta;
             set => txn.GlobalDelta = value;
         }
 
         /// <inheritdoc />
-        public AccountStateDelta[] LocalDeltas
+        public StateDelta[] LocalDeltas
         {
             get => txn.LocalDeltas;
             set => txn.LocalDeltas = value;

@@ -6,9 +6,7 @@ namespace AlgoSdk
 {
     /// <summary>
     /// Params used for setting all transactions. Contains fee, genesis info, and round constraints.
-    /// Usually this is retrieved from <see cref="IAlgodClient.GetSuggestedParams"/> then modified.
     /// </summary>
-    [AlgoApiObject]
     [Serializable]
     public partial struct TransactionParams
         : IEquatable<TransactionParams>
@@ -16,7 +14,6 @@ namespace AlgoSdk
         /// <summary>
         /// Indicates the consensus protocol version as of <see cref="LastRound"/>.
         /// </summary>
-        [AlgoApiField("consensus-version")]
         [Tooltip("Indicates the consensus protocol version as of LastRound.")]
         public string ConsensusVersion;
 
@@ -25,35 +22,30 @@ namespace AlgoSdk
         /// Fee may fall to zero but transactions must still have a fee of at least
         /// <see cref="MinFee"/> for the current network protocol.
         /// </summary>
-        [AlgoApiField("fee")]
         [Tooltip("Fee is the suggested transaction fee in units of micro-Algos per byte. Fee may fall to zero but transactions must still have a fee of at least MinFee for the current network protocol.")]
         public MicroAlgos Fee;
 
         /// <summary>
         /// The hash of the genesis block.
         /// </summary>
-        [AlgoApiField("genesis-hash")]
         [Tooltip("The hash of the genesis block.")]
         public GenesisHash GenesisHash;
 
         /// <summary>
         /// An ID listed in the genesis block.
         /// </summary>
-        [AlgoApiField("genesis-id")]
         [Tooltip("An ID listed in the genesis block.")]
         public FixedString32Bytes GenesisId;
 
         /// <summary>
         /// The minimum transaction fee (not per byte) required for the txn to validate for the current network protocol.
         /// </summary>
-        [AlgoApiField("min-fee")]
         [Tooltip("The minimum transaction fee (not per byte) required for the txn to validate for the current network protocol.")]
         public MicroAlgos MinFee;
 
         /// <summary>
         /// Indicates the last round seen by the node
         /// </summary>
-        [AlgoApiField("last-round")]
         public ulong LastRound
         {
             get => prevRound;

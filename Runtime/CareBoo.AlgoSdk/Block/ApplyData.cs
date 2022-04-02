@@ -37,7 +37,7 @@ namespace AlgoSdk
         /// <summary>
         /// Application global and local state delta
         /// </summary>
-        AppEvalDelta<TTxn> EvalDelta { get; set; }
+        EvalDelta<TTxn> EvalDelta { get; set; }
 
         /// <summary>
         /// If an asset is configured or created, the id used.
@@ -72,7 +72,7 @@ namespace AlgoSdk
         MicroAlgos closeRewards;
 
         [SerializeField, Tooltip("Application global and local state delta.")]
-        AppEvalDelta<TTxn> evalDelta;
+        EvalDelta<TTxn> evalDelta;
 
         [SerializeField, Tooltip("If an asset is configured or created, the id used.")]
         AssetIndex configAsset;
@@ -116,7 +116,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        public AppEvalDelta<TTxn> EvalDelta
+        public EvalDelta<TTxn> EvalDelta
         {
             get => evalDelta;
             set => evalDelta = value;
@@ -137,14 +137,14 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        public AppStateDelta GlobalDelta
+        public StateDelta GlobalDelta
         {
             get => evalDelta.GlobalDelta;
             set => evalDelta.GlobalDelta = value;
         }
 
         /// <inheritdoc />
-        public AccountStateDelta[] LocalDeltas
+        public StateDelta[] LocalDeltas
         {
             get => evalDelta.LocalDeltas;
             set => evalDelta.LocalDeltas = value;

@@ -1,44 +1,96 @@
 using System;
+using UnityEngine;
 
 namespace AlgoSdk
 {
-    /// <summary>
-    /// Represents the action on the value
-    /// </summary>
-    public enum EvalDeltaAction : byte
+    public interface IAppEvalDelta<TTxn>
+        where TTxn : IAppliedSignedTxn<TTxn>
     {
-        None = 0,
-        SetUInt = 1,
-        SetBytes = 2,
-        Delete = 3
+        /// <summary>
+        /// Global state delta
+        /// </summary>
+        StateDelta GlobalDelta { get; set; }
+
+        /// <summary>
+        /// When decoding EvalDeltas, the integer key represents an offset into
+	    /// [txn.Sender, txn.Accounts[0], txn.Accounts[1], ...]
+        /// </summary>
+        StateDelta[] LocalDeltas { get; set; }
+
+        /// <summary>
+        /// Logs from application calls
+        /// </summary>
+        string[] Logs { get; set; }
+
+        /// <summary>
+        /// The inner transactions (if any) that were evaluated.
+        /// </summary>
+        TTxn[] InnerTxns { get; set; }
     }
 
     /// <summary>
-    /// Represents a TEAL value delta.
+    /// Stores <see cref="StateDelta"/> for an application's global key/value store,
+    /// and a number of accounts holding local state for that application.
     /// </summary>
     [AlgoApiObject]
     [Serializable]
-    public partial struct EvalDelta
-        : IEquatable<EvalDelta>
+    public partial struct EvalDelta<TTxn>
+        : IEquatable<EvalDelta<TTxn>>
+        , IAppEvalDelta<TTxn>
+        where TTxn : IAppliedSignedTxn<TTxn>
     {
-        [AlgoApiField("action")]
-        public EvalDeltaAction Action;
+        [SerializeField, Tooltip("Global state delta.")]
+        StateDelta globalDelta;
 
-        [AlgoApiField("bytes")]
-        public TealBytes Bytes;
+        [SerializeField, Tooltip("Local state deltas.")]
+        StateDelta[] localDeltas;
 
-        [AlgoApiField("uint")]
-        public ulong UInt;
+        [SerializeField, Tooltip("Logs from application calls.")]
+        string[] logs;
 
-        public bool Equals(EvalDelta other)
+        [SerializeField, Tooltip("The inner transactions (if any) that were evaluated.")]
+        TTxn[] innerTxns;
+
+
+        /// <inheritdoc />
+        [AlgoApiField("gd")]
+        public StateDelta GlobalDelta
         {
-            return Action == other.Action
-                && Action switch
-                {
-                    EvalDeltaAction.SetBytes => Bytes.Equals(other.Bytes),
-                    EvalDeltaAction.SetUInt => UInt.Equals(other.UInt),
-                    _ => true
-                };
+            get => globalDelta;
+            set => globalDelta = value;
+        }
+
+        /// <inheritdoc />
+        [AlgoApiField("ld")]
+        public StateDelta[] LocalDeltas
+        {
+            get => localDeltas;
+            set => localDeltas = value;
+        }
+
+        /// <inheritdoc />
+        [AlgoApiField("lg")]
+        public string[] Logs
+        {
+            get => logs;
+            set => logs = value;
+        }
+
+        /// <inheritdoc />
+        [AlgoApiField("itx")]
+        public TTxn[] InnerTxns
+        {
+            get => innerTxns;
+            set => innerTxns = value;
+        }
+
+        public bool Equals(EvalDelta<TTxn> other)
+        {
+            return GlobalDelta.Equals(other.GlobalDelta)
+                && ArrayComparer.Equals(LocalDeltas, other.LocalDeltas)
+                && ArrayComparer.Equals(Logs, other.Logs)
+                && ArrayComparer.Equals(InnerTxns, other.InnerTxns)
+                ;
         }
     }
 }

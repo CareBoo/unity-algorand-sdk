@@ -41,8 +41,7 @@ namespace AlgoSdk
         KeyRegTxn.Params KeyRegParams { get; set; }
     }
 
-    [AlgoApiObject]
-    [Serializable]
+    [AlgoApiObject, Serializable]
     public partial struct Transaction
         : IEquatable<Transaction>
         , ITransaction
