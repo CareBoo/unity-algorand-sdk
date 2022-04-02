@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.SignedTxn>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.SignedTxn>(false).Assign("sig", (AlgoSdk.SignedTxn x) => x.Sig, (ref AlgoSdk.SignedTxn x, AlgoSdk.Sig value) => x.Sig = value).Assign("msig", (AlgoSdk.SignedTxn x) => x.Msig, (ref AlgoSdk.SignedTxn x, AlgoSdk.Multisig value) => x.Msig = value).Assign("lsig", (AlgoSdk.SignedTxn x) => x.Lsig, (ref AlgoSdk.SignedTxn x, AlgoSdk.LogicSig value) => x.Lsig = value).Assign("txn", (AlgoSdk.SignedTxn x) => x.Txn, (ref AlgoSdk.SignedTxn x, AlgoSdk.Transaction value) => x.Txn = value).Assign("sgnr", (AlgoSdk.SignedTxn x) => x.AuthAddr, (ref AlgoSdk.SignedTxn x, AlgoSdk.Address value) => x.AuthAddr = value));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.SignedTxn>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.SignedTxn>(false).Assign("sig", (AlgoSdk.SignedTxn x) => x.Sig, (ref AlgoSdk.SignedTxn x, AlgoSdk.Sig value) => x.Sig = value).Assign("msig", (AlgoSdk.SignedTxn x) => x.Msig, (ref AlgoSdk.SignedTxn x, AlgoSdk.MultisigSig value) => x.Msig = value).Assign("lsig", (AlgoSdk.SignedTxn x) => x.Lsig, (ref AlgoSdk.SignedTxn x, AlgoSdk.LogicSig value) => x.Lsig = value).Assign("txn", (AlgoSdk.SignedTxn x) => x.Txn, (ref AlgoSdk.SignedTxn x, AlgoSdk.Transaction value) => x.Txn = value).Assign("sgnr", (AlgoSdk.SignedTxn x) => x.AuthAddr, (ref AlgoSdk.SignedTxn x, AlgoSdk.Address value) => x.AuthAddr = value));
             return true;
         }
     }
@@ -35,7 +35,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.SignedTxn<TTxn>>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.SignedTxn<TTxn>>(false).Assign("sig", (AlgoSdk.SignedTxn<TTxn> x) => x.Sig, (ref AlgoSdk.SignedTxn<TTxn> x, AlgoSdk.Sig value) => x.Sig = value).Assign("msig", (AlgoSdk.SignedTxn<TTxn> x) => x.Msig, (ref AlgoSdk.SignedTxn<TTxn> x, AlgoSdk.Multisig value) => x.Msig = value).Assign("lsig", (AlgoSdk.SignedTxn<TTxn> x) => x.Lsig, (ref AlgoSdk.SignedTxn<TTxn> x, AlgoSdk.LogicSig value) => x.Lsig = value).Assign("txn", (AlgoSdk.SignedTxn<TTxn> x) => x.Txn, (ref AlgoSdk.SignedTxn<TTxn> x, TTxn value) => x.Txn = value).Assign("sgnr", (AlgoSdk.SignedTxn<TTxn> x) => x.AuthAddr, (ref AlgoSdk.SignedTxn<TTxn> x, AlgoSdk.Address value) => x.AuthAddr = value));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.SignedTxn<TTxn>>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.SignedTxn<TTxn>>(false).Assign("sig", (AlgoSdk.SignedTxn<TTxn> x) => x.Sig, (ref AlgoSdk.SignedTxn<TTxn> x, AlgoSdk.Sig value) => x.Sig = value).Assign("msig", (AlgoSdk.SignedTxn<TTxn> x) => x.Msig, (ref AlgoSdk.SignedTxn<TTxn> x, AlgoSdk.MultisigSig value) => x.Msig = value).Assign("lsig", (AlgoSdk.SignedTxn<TTxn> x) => x.Lsig, (ref AlgoSdk.SignedTxn<TTxn> x, AlgoSdk.LogicSig value) => x.Lsig = value).Assign("txn", (AlgoSdk.SignedTxn<TTxn> x) => x.Txn, (ref AlgoSdk.SignedTxn<TTxn> x, TTxn value) => x.Txn = value).Assign("sgnr", (AlgoSdk.SignedTxn<TTxn> x) => x.AuthAddr, (ref AlgoSdk.SignedTxn<TTxn> x, AlgoSdk.Address value) => x.AuthAddr = value));
             return true;
         }
     }

@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.TransactionSignature>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.TransactionSignature>(false).Assign("logicsig", (AlgoSdk.TransactionSignature x) => x.LogicSig, (ref AlgoSdk.TransactionSignature x, AlgoSdk.LogicSig value) => x.LogicSig = value).Assign("multisig", (AlgoSdk.TransactionSignature x) => x.Multisig, (ref AlgoSdk.TransactionSignature x, AlgoSdk.Multisig value) => x.Multisig = value).Assign("sig", (AlgoSdk.TransactionSignature x) => x.Sig, (ref AlgoSdk.TransactionSignature x, AlgoSdk.Sig value) => x.Sig = value));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.TransactionSignature>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.TransactionSignature>(false).Assign("logicsig", (AlgoSdk.TransactionSignature x) => x.LogicSig, (ref AlgoSdk.TransactionSignature x, AlgoSdk.LogicSig value) => x.LogicSig = value).Assign("multisig", (AlgoSdk.TransactionSignature x) => x.Multisig, (ref AlgoSdk.TransactionSignature x, AlgoSdk.MultisigSig value) => x.Multisig = value).Assign("sig", (AlgoSdk.TransactionSignature x) => x.Sig, (ref AlgoSdk.TransactionSignature x, AlgoSdk.Sig value) => x.Sig = value));
             return true;
         }
     }

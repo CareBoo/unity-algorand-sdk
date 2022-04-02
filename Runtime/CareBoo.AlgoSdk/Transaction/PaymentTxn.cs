@@ -202,14 +202,6 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("close-amount")]
-        public ulong CloseAmount
-        {
-            get => @params.CloseAmount;
-            set => @params.CloseAmount = value;
-        }
-
-        /// <inheritdoc />
         public void CopyTo(ref Transaction transaction)
         {
             transaction.Header = header;
@@ -247,16 +239,11 @@ namespace AlgoSdk
             [Tooltip("When set, it indicates that the transaction is requesting that the Sender account should be closed, and all remaining funds, after the Fee and Amount are paid, be transferred to this address.")]
             public Address CloseRemainderTo;
 
-            [AlgoApiField("close-amount")]
-            [NonSerialized]
-            public ulong CloseAmount;
-
             public bool Equals(Params other)
             {
                 return Receiver.Equals(other.Receiver)
                     && Amount.Equals(other.Amount)
                     && CloseRemainderTo.Equals(other.CloseRemainderTo)
-                    && CloseAmount.Equals(other.CloseAmount)
                     ;
             }
         }

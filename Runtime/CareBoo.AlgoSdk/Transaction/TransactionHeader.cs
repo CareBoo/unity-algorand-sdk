@@ -1,5 +1,4 @@
 using System;
-using AlgoSdk.Crypto;
 using Unity.Collections;
 using Unity.Mathematics;
 using UnityEngine;
@@ -133,22 +132,6 @@ namespace AlgoSdk
         /// <inheritdoc />
         [AlgoApiField("lx")]
         public TransactionId Lease
-        {
-            get => header.Lease;
-            set => header.Lease = value;
-        }
-
-        /// <inheritdoc />
-        [AlgoApiField("group")]
-        public Sha512_256_Hash GroupHash
-        {
-            get => header.Group;
-            set => header.Group = value;
-        }
-
-        /// <inheritdoc />
-        [AlgoApiField("lease")]
-        public Sha512_256_Hash LeaseHash
         {
             get => header.Lease;
             set => header.Lease = value;

@@ -12,7 +12,7 @@ public class KmdClientSigTest : KmdClientTestFixture
 {
     PrivateKey[] privateKeys;
     Address msigAddress;
-    Multisig msig;
+    MultisigSig msig;
 
     protected override async UniTask SetUpAsync()
     {
@@ -20,10 +20,10 @@ public class KmdClientSigTest : KmdClientTestFixture
         privateKeys = Enumerable.Range(0, 3)
             .Select(x => AlgoSdk.Crypto.Random.Bytes<PrivateKey>())
             .ToArray();
-        msig = new Multisig
+        msig = new MultisigSig
         {
             Subsigs = privateKeys
-                .Select(x => new Multisig.Subsig { PublicKey = x.ToPublicKey() })
+                .Select(x => new MultisigSig.Subsig { PublicKey = x.ToPublicKey() })
                 .ToArray(),
             Version = 1,
             Threshold = 2,

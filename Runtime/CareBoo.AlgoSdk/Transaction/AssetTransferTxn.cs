@@ -30,14 +30,9 @@ namespace AlgoSdk
         /// Specify this field to remove the asset holding from the sender account and reduce the account's minimum balance (i.e. opt-out of the asset).
         /// </summary>
         Address AssetCloseTo { get; set; }
-
-        /// <summary>
-        /// The amount returned from the close out.
-        /// </summary>
-        ulong CloseAmount { get; set; }
     }
 
-    public partial struct Transaction
+    public partial struct Transaction : IAssetTransferTxn
     {
         /// <inheritdoc />
         [AlgoApiField("xaid")]
@@ -304,14 +299,6 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("close-amount")]
-        public ulong CloseAmount
-        {
-            get => @params.CloseAmount;
-            set => @params.CloseAmount = value;
-        }
-
-        /// <inheritdoc />
         public void CopyTo(ref Transaction transaction)
         {
             transaction.Header = header;
@@ -355,10 +342,6 @@ namespace AlgoSdk
             [AlgoApiField("aclose")]
             [Tooltip("Specify this field to remove the asset holding from the sender account and reduce the account's minimum balance (i.e. opt-out of the asset).")]
             public Address AssetCloseTo;
-
-            [AlgoApiField("close-amount")]
-            [NonSerialized]
-            public ulong CloseAmount;
 
             public bool Equals(Params other)
             {

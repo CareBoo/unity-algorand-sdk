@@ -4,7 +4,7 @@ namespace AlgoSdk.WalletConnect
 {
     /// <summary>
     /// This struct represents metadata required for signing transactions sent by
-    /// multisig accounts via WalletConnect. See <see cref="Multisig"/> for more information.
+    /// multisig accounts via WalletConnect. See <see cref="MultisigSig"/> for more information.
     /// </summary>
     [AlgoApiObject]
     public partial struct MultisigMetadata
@@ -36,7 +36,7 @@ namespace AlgoSdk.WalletConnect
                 ;
         }
 
-        public static implicit operator MultisigMetadata(Multisig msig)
+        public static implicit operator MultisigMetadata(MultisigSig msig)
         {
             var addresses = new Address[msig.Subsigs.Length];
             for (var i = 0; i < addresses.Length; i++)
@@ -49,12 +49,12 @@ namespace AlgoSdk.WalletConnect
             };
         }
 
-        public static implicit operator Multisig(MultisigMetadata msigMeta)
+        public static implicit operator MultisigSig(MultisigMetadata msigMeta)
         {
-            var subsigs = new Multisig.Subsig[msigMeta.Addresses.Length];
+            var subsigs = new MultisigSig.Subsig[msigMeta.Addresses.Length];
             for (var i = 0; i < subsigs.Length; i++)
-                subsigs[i] = new Multisig.Subsig { PublicKey = msigMeta.Addresses[i] };
-            return new Multisig
+                subsigs[i] = new MultisigSig.Subsig { PublicKey = msigMeta.Addresses[i] };
+            return new MultisigSig
             {
                 Version = msigMeta.Version,
                 Threshold = msigMeta.Threshold,

@@ -71,7 +71,6 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("payment-transaction")]
         public PaymentTxn.Params PaymentParams
         {
             get => paymentParams;
@@ -79,7 +78,6 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("asset-config-transaction")]
         public AssetConfigTxn.Params AssetConfigParams
         {
             get => assetConfigParams;
@@ -87,7 +85,6 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("asset-transfer-transaction")]
         public AssetTransferTxn.Params AssetTransferParams
         {
             get => assetTransferParams;
@@ -95,22 +92,13 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("asset-freeze-transaction")]
         public AssetFreezeTxn.Params AssetFreezeParams
         {
             get => assetFreezeParams;
             set => assetFreezeParams = value;
         }
 
-        [Obsolete("Use AppCallParams")]
-        public AppCallTxn.Params ApplicationCallParams
-        {
-            get => appCallParams;
-            set => appCallParams = value;
-        }
-
         /// <inheritdoc />
-        [AlgoApiField("application-transaction")]
         public AppCallTxn.Params AppCallParams
         {
             get => appCallParams;
@@ -118,16 +106,11 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("keyreg-transction")]
         public KeyRegTxn.Params KeyRegParams
         {
             get => keyRegParams;
             set => keyRegParams = value;
         }
-
-        /// <inheritdoc />
-        [AlgoApiField("signature")]
-        public TransactionSignature Signature;
 
         public bool Equals(Transaction other)
         {
@@ -141,8 +124,7 @@ namespace AlgoSdk
                     TransactionType.AssetTransfer => assetTransferParams.Equals(other.assetTransferParams),
                     TransactionType.KeyRegistration => keyRegParams.Equals(other.keyRegParams),
                     _ => true
-                }
-                ;
+                };
         }
 
         /// <summary>
@@ -180,79 +162,6 @@ namespace AlgoSdk
             assetFreezeParams = transaction.assetFreezeParams;
             assetConfigParams = transaction.assetConfigParams;
             appCallParams = transaction.appCallParams;
-        }
-
-        /// <summary>
-        /// Params found in all transactions.
-        /// </summary>
-        [Obsolete("Use Header")]
-        public TransactionHeader HeaderParams
-        {
-            get => header;
-            set => header = value;
-        }
-
-        [Obsolete("Use AssetConfigParams")]
-        public AssetConfigTxn.Params AssetConfigurationParams
-        {
-            get => assetConfigParams;
-            set => assetConfigParams = value;
-        }
-
-        [Obsolete("Use KeyRegParams")]
-        public KeyRegTxn.Params KeyRegistrationParams
-        {
-            get => keyRegParams;
-            set => keyRegParams = value;
-        }
-
-        /// <summary>
-        /// Sign this transaction with a private key.
-        /// </summary>
-        /// <param name="secretKey">The account private key to use to sign this transaction.</param>
-        /// <returns>A <see cref="SignedTxn"/>.</returns>
-        [Obsolete("Use Account.SignTxn instead")]
-        public SignedTxn Sign(Ed25519.SecretKeyHandle secretKey)
-        {
-            return new SignedTxn
-            {
-                Txn = this,
-                Sig = GetSignature(secretKey)
-            };
-        }
-
-        /// <summary>
-        /// Get the signature of this transaction using a private key.
-        /// </summary>
-        /// <param name="secretKey">The private key to use to sign this transaction.</param>
-        /// <returns>A <see cref="Sig"/>.</returns>
-        [Obsolete("Use PrivateKey.Sign instead")]
-        public Sig GetSignature(Ed25519.SecretKeyHandle secretKey)
-        {
-            using var message = this.ToSignatureMessage(Allocator.Temp);
-            return secretKey.Sign(message);
-        }
-
-        /// <summary>
-        /// Calculates the group id for atomic transfers.
-        /// </summary>
-        /// <param name="txns">The transactions belonging to this group. Cannot be more than <see cref="TransactionGroup.MaxSize"/> transactions.</param>
-        /// <returns>A <see cref="TransactionId"/></returns>
-        [Obsolete("Use TransactionGroup.Of(...).GetId() instead.")]
-        public static TransactionId GetGroupId(params Transaction[] txns)
-        {
-            return TransactionGroup.Of(txns).GetId();
-        }
-
-        /// <summary>
-        /// Calculates the group id for atomic transfers.
-        /// </summary>
-        /// <param name="txids">The transaction ids belonging to this group. Cannot be more than <see cref="TransactionGroup.MaxSize"/> transactions.</param>
-        /// <returns>A <see cref="TransactionId"/></returns>
-        [Obsolete("Use TransactionGroup.Of(...).GetId() instead.")]
-        public static TransactionId GetGroupId(params TransactionId[] txids)
-        {
-            return new TransactionGroup { Txns = txids }.GetId();
         }
     }
 }

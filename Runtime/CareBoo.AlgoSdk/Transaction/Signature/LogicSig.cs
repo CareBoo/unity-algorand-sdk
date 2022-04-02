@@ -21,7 +21,7 @@ namespace AlgoSdk
         public Sig Sig;
 
         [AlgoApiField("msig")]
-        public Multisig Multisig;
+        public MultisigSig Multisig;
 
         public bool Equals(LogicSig other)
         {

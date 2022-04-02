@@ -41,7 +41,7 @@ namespace AlgoSdk
 
         /// <inheritdoc />
         [AlgoApiField("msig")]
-        public Multisig Msig
+        public MultisigSig Msig
         {
             get => txn.Msig;
             set => txn.Msig = value;
@@ -318,35 +318,5 @@ namespace AlgoSdk
         {
             return blockTxn.txn.Txn;
         }
-
-        [Obsolete("Use Msig instead")]
-        public Multisig Multisig
-        {
-            get => txn.Msig;
-            set => txn.Msig = value;
-        }
-
-        [Obsolete("Use Lsig instead")]
-        public LogicSig LogicSig
-        {
-            get => txn.Lsig;
-            set => txn.Lsig = value;
-        }
-
-        [Obsolete("Use HasGenesisId instead.")]
-        public Optional<bool> Hgi { get; set; }
-
-        [Obsolete("Use Txn instead.")]
-        public Transaction Transaction
-        {
-            get => txn.Txn;
-            set => txn.Txn = value;
-        }
-
-        [Obsolete("Replaced with SenderRewards")]
-        public ulong Rs { get => SenderRewards; set => SenderRewards = value; }
-
-        [Obsolete("Replaced with ReceiverRewards")]
-        public ulong Rr { get => ReceiverRewards; set => ReceiverRewards = value; }
     }
 }

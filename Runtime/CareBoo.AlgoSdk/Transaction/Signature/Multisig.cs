@@ -6,9 +6,9 @@ using Unity.Collections;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public partial struct Multisig
+    public partial struct MultisigSig
         : ISignature
-        , IEquatable<Multisig>
+        , IEquatable<MultisigSig>
     {
         public static readonly byte[] AddressPrefix = System.Text.Encoding.UTF8.GetBytes("MultisigAddr");
 
@@ -36,7 +36,7 @@ namespace AlgoSdk
         /// <param name="version">The version of the msig protocol. The latest version is version 1.</param>
         /// <param name="threshold">The number of signatures required for this msig to be valid.</param>
         /// <param name="addresses">The addresses or public keys composing this msig. Order matters!</param>
-        public Multisig(
+        public MultisigSig(
             byte version,
             byte threshold,
             Address[] addresses
@@ -56,7 +56,7 @@ namespace AlgoSdk
             }
         }
 
-        public bool Equals(Multisig other)
+        public bool Equals(MultisigSig other)
         {
             return ArrayComparer.Equals(Subsigs, other.Subsigs)
                 && Threshold.Equals(other.Threshold)
@@ -88,7 +88,7 @@ namespace AlgoSdk
         }
 
         /// <summary>
-        /// Generate the address for this <see cref="Multisig"/>.
+        /// Generate the address for this <see cref="MultisigSig"/>.
         /// </summary>
         /// <returns>An <see cref="Address"/> made from hashing the addresses in this subsig.</returns>
         public Address GetAddress()

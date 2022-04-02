@@ -14,7 +14,7 @@ namespace AlgoSdk
         public LogicSig LogicSig;
 
         [AlgoApiField("multisig")]
-        public Multisig Multisig;
+        public MultisigSig Multisig;
 
         [AlgoApiField("sig")]
         public Sig Sig;
@@ -32,7 +32,7 @@ namespace AlgoSdk
             return new TransactionSignature { LogicSig = lsig };
         }
 
-        public static implicit operator TransactionSignature(Multisig msig)
+        public static implicit operator TransactionSignature(MultisigSig msig)
         {
             return new TransactionSignature { Multisig = msig };
         }

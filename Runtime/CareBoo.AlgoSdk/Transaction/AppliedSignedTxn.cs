@@ -36,7 +36,7 @@ namespace AlgoSdk
 
         /// <inheritdoc />
         [AlgoApiField("msig")]
-        public Multisig Msig
+        public MultisigSig Msig
         {
             get => txn.Msig;
             set => txn.Msig = value;

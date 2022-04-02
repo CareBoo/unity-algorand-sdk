@@ -9,7 +9,7 @@ namespace AlgoSdk.Kmd
         : IEquatable<SignMultisigRequest>
     {
         [AlgoApiField("partial_multisig")]
-        public Multisig Multisig;
+        public MultisigSig Multisig;
 
         [AlgoApiField("public_key")]
         public Ed25519.PublicKey PublicKey;
