@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     
     
@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.WalletHandle>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.WalletHandle>(false).Assign("expires_seconds", (AlgoSdk.WalletHandle x) => x.ExpiresSeconds, (ref AlgoSdk.WalletHandle x, System.UInt64 value) => x.ExpiresSeconds = value).Assign("wallet", (AlgoSdk.WalletHandle x) => x.Wallet, (ref AlgoSdk.WalletHandle x, AlgoSdk.Wallet value) => x.Wallet = value));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Kmd.WalletHandle>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Kmd.WalletHandle>(false).Assign("expires_seconds", (AlgoSdk.Kmd.WalletHandle x) => x.ExpiresSeconds, (ref AlgoSdk.Kmd.WalletHandle x, System.UInt64 value) => x.ExpiresSeconds = value).Assign("wallet", (AlgoSdk.Kmd.WalletHandle x) => x.Wallet, (ref AlgoSdk.Kmd.WalletHandle x, AlgoSdk.Kmd.Wallet value) => x.Wallet = value));
             return true;
         }
     }

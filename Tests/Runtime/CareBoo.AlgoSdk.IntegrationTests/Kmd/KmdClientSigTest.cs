@@ -2,6 +2,7 @@ using System.Collections;
 using System.Linq;
 using AlgoSdk;
 using AlgoSdk.Crypto;
+using AlgoSdk.Kmd;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
 using Unity.Collections;

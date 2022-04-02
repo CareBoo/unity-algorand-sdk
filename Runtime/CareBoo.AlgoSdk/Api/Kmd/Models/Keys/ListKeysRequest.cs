@@ -1,7 +1,7 @@
 using System;
 using Unity.Collections;
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     [AlgoApiObject]
     public partial struct ListKeysRequest

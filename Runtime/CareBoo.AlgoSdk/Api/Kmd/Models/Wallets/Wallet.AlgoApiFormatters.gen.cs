@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     
     
@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Wallet>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Wallet>(false).Assign("driver_name", (AlgoSdk.Wallet x) => x.DriverName, (ref AlgoSdk.Wallet x, Unity.Collections.FixedString64Bytes value) => x.DriverName = value).Assign("driver_version", (AlgoSdk.Wallet x) => x.DriverVersion, (ref AlgoSdk.Wallet x, System.UInt32 value) => x.DriverVersion = value).Assign("id", (AlgoSdk.Wallet x) => x.Id, (ref AlgoSdk.Wallet x, Unity.Collections.FixedString128Bytes value) => x.Id = value).Assign("mnemonic_ux", (AlgoSdk.Wallet x) => x.MnemonicUx, (ref AlgoSdk.Wallet x, AlgoSdk.Optional<System.Boolean> value) => x.MnemonicUx = value).Assign("name", (AlgoSdk.Wallet x) => x.Name, (ref AlgoSdk.Wallet x, Unity.Collections.FixedString64Bytes value) => x.Name = value).Assign("supported_txs", (AlgoSdk.Wallet x) => x.SupportedTransactions, (ref AlgoSdk.Wallet x, AlgoSdk.TransactionType[] value) => x.SupportedTransactions = value, AlgoSdk.ArrayComparer<AlgoSdk.TransactionType, AlgoSdk.ByteEnumComparer<AlgoSdk.TransactionType>>.Instance));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Kmd.Wallet>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Kmd.Wallet>(false).Assign("driver_name", (AlgoSdk.Kmd.Wallet x) => x.DriverName, (ref AlgoSdk.Kmd.Wallet x, Unity.Collections.FixedString64Bytes value) => x.DriverName = value).Assign("driver_version", (AlgoSdk.Kmd.Wallet x) => x.DriverVersion, (ref AlgoSdk.Kmd.Wallet x, System.UInt32 value) => x.DriverVersion = value).Assign("id", (AlgoSdk.Kmd.Wallet x) => x.Id, (ref AlgoSdk.Kmd.Wallet x, Unity.Collections.FixedString128Bytes value) => x.Id = value).Assign("mnemonic_ux", (AlgoSdk.Kmd.Wallet x) => x.MnemonicUx, (ref AlgoSdk.Kmd.Wallet x, AlgoSdk.Optional<System.Boolean> value) => x.MnemonicUx = value).Assign("name", (AlgoSdk.Kmd.Wallet x) => x.Name, (ref AlgoSdk.Kmd.Wallet x, Unity.Collections.FixedString64Bytes value) => x.Name = value).Assign("supported_txs", (AlgoSdk.Kmd.Wallet x) => x.SupportedTransactions, (ref AlgoSdk.Kmd.Wallet x, AlgoSdk.TransactionType[] value) => x.SupportedTransactions = value, AlgoSdk.ArrayComparer<AlgoSdk.TransactionType, AlgoSdk.ByteEnumComparer<AlgoSdk.TransactionType>>.Instance));
             return true;
         }
     }

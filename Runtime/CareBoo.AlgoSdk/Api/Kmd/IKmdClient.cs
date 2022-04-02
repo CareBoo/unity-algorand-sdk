@@ -1,4 +1,5 @@
 using AlgoSdk.Crypto;
+using AlgoSdk.Kmd;
 using Unity.Collections;
 
 namespace AlgoSdk

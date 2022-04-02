@@ -2,7 +2,7 @@ using System;
 using AlgoSdk.Crypto;
 using Unity.Collections;
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     [AlgoApiObject]
     public partial struct ImportMultisigRequest

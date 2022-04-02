@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     
     
@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.CreateWalletRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.CreateWalletRequest>(false).Assign("master_derivation_key", (AlgoSdk.CreateWalletRequest x) => x.MasterDerivationKey, (ref AlgoSdk.CreateWalletRequest x, AlgoSdk.PrivateKey value) => x.MasterDerivationKey = value).Assign("wallet_driver_name", (AlgoSdk.CreateWalletRequest x) => x.WalletDriverName, (ref AlgoSdk.CreateWalletRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletDriverName = value).Assign("wallet_name", (AlgoSdk.CreateWalletRequest x) => x.WalletName, (ref AlgoSdk.CreateWalletRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletName = value).Assign("wallet_password", (AlgoSdk.CreateWalletRequest x) => x.WalletPassword, (ref AlgoSdk.CreateWalletRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletPassword = value));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Kmd.CreateWalletRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Kmd.CreateWalletRequest>(false).Assign("master_derivation_key", (AlgoSdk.Kmd.CreateWalletRequest x) => x.MasterDerivationKey, (ref AlgoSdk.Kmd.CreateWalletRequest x, AlgoSdk.PrivateKey value) => x.MasterDerivationKey = value).Assign("wallet_driver_name", (AlgoSdk.Kmd.CreateWalletRequest x) => x.WalletDriverName, (ref AlgoSdk.Kmd.CreateWalletRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletDriverName = value).Assign("wallet_name", (AlgoSdk.Kmd.CreateWalletRequest x) => x.WalletName, (ref AlgoSdk.Kmd.CreateWalletRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletName = value).Assign("wallet_password", (AlgoSdk.Kmd.CreateWalletRequest x) => x.WalletPassword, (ref AlgoSdk.Kmd.CreateWalletRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletPassword = value));
             return true;
         }
     }

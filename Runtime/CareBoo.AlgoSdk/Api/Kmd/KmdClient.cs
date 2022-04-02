@@ -1,5 +1,6 @@
 using System;
 using AlgoSdk.Crypto;
+using AlgoSdk.Kmd;
 using Unity.Collections;
 using UnityEngine;
 
@@ -12,7 +13,7 @@ namespace AlgoSdk
     /// The kmd service is responsible for managing keys and wallets
     /// </remarks>
     [Serializable]
-    public struct KmdClient : IKmdClient
+    public partial struct KmdClient : IKmdClient
     {
         [SerializeField]
         string address;

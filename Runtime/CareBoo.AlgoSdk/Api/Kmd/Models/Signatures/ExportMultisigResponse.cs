@@ -1,7 +1,7 @@
 using System;
 using AlgoSdk.Crypto;
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     [AlgoApiObject]
     public partial struct ExportMultisigResponse

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     
     
@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ExportMasterKeyResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.ExportMasterKeyResponse>(false).Assign("master_derivation_key", (AlgoSdk.ExportMasterKeyResponse x) => x.MasterDerivationKey, (ref AlgoSdk.ExportMasterKeyResponse x, AlgoSdk.PrivateKey value) => x.MasterDerivationKey = value).Assign("error", (AlgoSdk.ExportMasterKeyResponse x) => x.Error, (ref AlgoSdk.ExportMasterKeyResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value).Assign("message", (AlgoSdk.ExportMasterKeyResponse x) => x.Message, (ref AlgoSdk.ExportMasterKeyResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Kmd.ExportMasterKeyResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Kmd.ExportMasterKeyResponse>(false).Assign("master_derivation_key", (AlgoSdk.Kmd.ExportMasterKeyResponse x) => x.MasterDerivationKey, (ref AlgoSdk.Kmd.ExportMasterKeyResponse x, AlgoSdk.PrivateKey value) => x.MasterDerivationKey = value).Assign("error", (AlgoSdk.Kmd.ExportMasterKeyResponse x) => x.Error, (ref AlgoSdk.Kmd.ExportMasterKeyResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value).Assign("message", (AlgoSdk.Kmd.ExportMasterKeyResponse x) => x.Message, (ref AlgoSdk.Kmd.ExportMasterKeyResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance));
             return true;
         }
     }

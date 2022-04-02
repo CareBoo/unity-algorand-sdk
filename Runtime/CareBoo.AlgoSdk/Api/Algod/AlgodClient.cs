@@ -13,7 +13,7 @@ namespace AlgoSdk
     /// required to create and send transactions.
     /// </remarks>
     [Serializable]
-    public struct AlgodClient : IAlgodClient
+    public partial struct AlgodClient : IAlgodClient
     {
         [SerializeField]
         string address;
@@ -95,14 +95,6 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        public AlgoApiRequest.Sent<PendingTransactions> GetPendingTransactions(ulong max = 0)
-        {
-            return this
-                .Get($"/v2/transactions/pending?max={max}&format=msgpack")
-                .Send();
-        }
-
-        /// <inheritdoc />
         public AlgoApiRequest.Sent<PendingTransactions> GetPendingTransactionsByAccount(Address accountAddress, ulong max = 0)
         {
             return this
@@ -147,14 +139,6 @@ namespace AlgoSdk
         {
             return this
                 .Get($"/v2/blocks/{round}/transactions/{txid}/proof")
-                .Send();
-        }
-
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<CatchupMessage> StartCatchup(string catchpoint)
-        {
-            return this
-                .Post($"/v2/catchup/{catchpoint}")
                 .Send();
         }
 

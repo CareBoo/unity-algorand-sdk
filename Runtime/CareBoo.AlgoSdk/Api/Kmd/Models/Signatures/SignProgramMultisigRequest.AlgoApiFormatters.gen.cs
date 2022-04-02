@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     
     
@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.SignProgramMultisigRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.SignProgramMultisigRequest>(false).Assign("address", (AlgoSdk.SignProgramMultisigRequest x) => x.Address, (ref AlgoSdk.SignProgramMultisigRequest x, AlgoSdk.Address value) => x.Address = value).Assign("data", (AlgoSdk.SignProgramMultisigRequest x) => x.Data, (ref AlgoSdk.SignProgramMultisigRequest x, System.Byte[] value) => x.Data = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("partial_multisig", (AlgoSdk.SignProgramMultisigRequest x) => x.Multisig, (ref AlgoSdk.SignProgramMultisigRequest x, AlgoSdk.Multisig value) => x.Multisig = value).Assign("public_key", (AlgoSdk.SignProgramMultisigRequest x) => x.PublicKey, (ref AlgoSdk.SignProgramMultisigRequest x, AlgoSdk.Crypto.Ed25519.PublicKey value) => x.PublicKey = value).Assign("wallet_handle_token", (AlgoSdk.SignProgramMultisigRequest x) => x.WalletHandleToken, (ref AlgoSdk.SignProgramMultisigRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value).Assign("wallet_password", (AlgoSdk.SignProgramMultisigRequest x) => x.WalletPassword, (ref AlgoSdk.SignProgramMultisigRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletPassword = value));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Kmd.SignProgramMultisigRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Kmd.SignProgramMultisigRequest>(false).Assign("address", (AlgoSdk.Kmd.SignProgramMultisigRequest x) => x.Address, (ref AlgoSdk.Kmd.SignProgramMultisigRequest x, AlgoSdk.Address value) => x.Address = value).Assign("data", (AlgoSdk.Kmd.SignProgramMultisigRequest x) => x.Data, (ref AlgoSdk.Kmd.SignProgramMultisigRequest x, System.Byte[] value) => x.Data = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("partial_multisig", (AlgoSdk.Kmd.SignProgramMultisigRequest x) => x.Multisig, (ref AlgoSdk.Kmd.SignProgramMultisigRequest x, AlgoSdk.Multisig value) => x.Multisig = value).Assign("public_key", (AlgoSdk.Kmd.SignProgramMultisigRequest x) => x.PublicKey, (ref AlgoSdk.Kmd.SignProgramMultisigRequest x, AlgoSdk.Crypto.Ed25519.PublicKey value) => x.PublicKey = value).Assign("wallet_handle_token", (AlgoSdk.Kmd.SignProgramMultisigRequest x) => x.WalletHandleToken, (ref AlgoSdk.Kmd.SignProgramMultisigRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value).Assign("wallet_password", (AlgoSdk.Kmd.SignProgramMultisigRequest x) => x.WalletPassword, (ref AlgoSdk.Kmd.SignProgramMultisigRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletPassword = value));
             return true;
         }
     }

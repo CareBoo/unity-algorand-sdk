@@ -2,7 +2,7 @@ using System;
 using Unity.Collections;
 using UnityEngine;
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     [AlgoApiObject]
     public partial struct ExportKeyRequest

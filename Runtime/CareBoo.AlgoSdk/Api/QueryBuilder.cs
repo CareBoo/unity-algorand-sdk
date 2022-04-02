@@ -46,6 +46,27 @@ namespace AlgoSdk
             return this;
         }
 
+        public QueryBuilder Add(string key, byte[] value) =>
+            Add(key, System.Convert.ToBase64String(value));
+
+        public QueryBuilder Add(string key, ExcludeFields value) =>
+            Add(key, value.ToOptionalFixedString());
+
+        public QueryBuilder Add(string key, ResponseFormat value) =>
+            Add(key, value.ToOptionalFixedString());
+
+        public QueryBuilder Add(string key, ExcludeAccountFields value) =>
+            Add(key, value.ToString());
+
+        public QueryBuilder Add(string key, AddressRole value) =>
+            Add(key, value.ToOptionalFixedString());
+
+        public QueryBuilder Add(string key, TransactionType value) =>
+            Add(key, value.ToOptionalFixedString());
+
+        public QueryBuilder Add(string key, SignatureType value) =>
+            Add(key, value.ToOptionalFixedString());
+
         public QueryBuilder Add<T>(string key, T value, T defaultValue = default)
             where T : struct, IEquatable<T>
         {

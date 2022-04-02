@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     
     
@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ExportMultisigResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.ExportMultisigResponse>(false).Assign("error", (AlgoSdk.ExportMultisigResponse x) => x.Error, (ref AlgoSdk.ExportMultisigResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value).Assign("message", (AlgoSdk.ExportMultisigResponse x) => x.Message, (ref AlgoSdk.ExportMultisigResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance).Assign("multisig_version", (AlgoSdk.ExportMultisigResponse x) => x.MultisigVersion, (ref AlgoSdk.ExportMultisigResponse x, System.Byte value) => x.MultisigVersion = value).Assign("pks", (AlgoSdk.ExportMultisigResponse x) => x.Pks, (ref AlgoSdk.ExportMultisigResponse x, AlgoSdk.Crypto.Ed25519.PublicKey[] value) => x.Pks = value, AlgoSdk.ArrayComparer<AlgoSdk.Crypto.Ed25519.PublicKey>.Instance).Assign("threshold", (AlgoSdk.ExportMultisigResponse x) => x.Threshold, (ref AlgoSdk.ExportMultisigResponse x, System.Byte value) => x.Threshold = value));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Kmd.ExportMultisigResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Kmd.ExportMultisigResponse>(false).Assign("error", (AlgoSdk.Kmd.ExportMultisigResponse x) => x.Error, (ref AlgoSdk.Kmd.ExportMultisigResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value).Assign("message", (AlgoSdk.Kmd.ExportMultisigResponse x) => x.Message, (ref AlgoSdk.Kmd.ExportMultisigResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance).Assign("multisig_version", (AlgoSdk.Kmd.ExportMultisigResponse x) => x.MultisigVersion, (ref AlgoSdk.Kmd.ExportMultisigResponse x, System.Byte value) => x.MultisigVersion = value).Assign("pks", (AlgoSdk.Kmd.ExportMultisigResponse x) => x.Pks, (ref AlgoSdk.Kmd.ExportMultisigResponse x, AlgoSdk.Crypto.Ed25519.PublicKey[] value) => x.Pks = value, AlgoSdk.ArrayComparer<AlgoSdk.Crypto.Ed25519.PublicKey>.Instance).Assign("threshold", (AlgoSdk.Kmd.ExportMultisigResponse x) => x.Threshold, (ref AlgoSdk.Kmd.ExportMultisigResponse x, System.Byte value) => x.Threshold = value));
             return true;
         }
     }

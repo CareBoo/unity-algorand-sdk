@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     
     
@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ImportMultisigRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.ImportMultisigRequest>(false).Assign("multisig_version", (AlgoSdk.ImportMultisigRequest x) => x.Version, (ref AlgoSdk.ImportMultisigRequest x, System.Byte value) => x.Version = value).Assign("pks", (AlgoSdk.ImportMultisigRequest x) => x.PublicKeys, (ref AlgoSdk.ImportMultisigRequest x, AlgoSdk.Crypto.Ed25519.PublicKey[] value) => x.PublicKeys = value, AlgoSdk.ArrayComparer<AlgoSdk.Crypto.Ed25519.PublicKey>.Instance).Assign("threshold", (AlgoSdk.ImportMultisigRequest x) => x.Threshold, (ref AlgoSdk.ImportMultisigRequest x, System.Byte value) => x.Threshold = value).Assign("wallet_handle_token", (AlgoSdk.ImportMultisigRequest x) => x.WalletHandleToken, (ref AlgoSdk.ImportMultisigRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Kmd.ImportMultisigRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Kmd.ImportMultisigRequest>(false).Assign("multisig_version", (AlgoSdk.Kmd.ImportMultisigRequest x) => x.Version, (ref AlgoSdk.Kmd.ImportMultisigRequest x, System.Byte value) => x.Version = value).Assign("pks", (AlgoSdk.Kmd.ImportMultisigRequest x) => x.PublicKeys, (ref AlgoSdk.Kmd.ImportMultisigRequest x, AlgoSdk.Crypto.Ed25519.PublicKey[] value) => x.PublicKeys = value, AlgoSdk.ArrayComparer<AlgoSdk.Crypto.Ed25519.PublicKey>.Instance).Assign("threshold", (AlgoSdk.Kmd.ImportMultisigRequest x) => x.Threshold, (ref AlgoSdk.Kmd.ImportMultisigRequest x, System.Byte value) => x.Threshold = value).Assign("wallet_handle_token", (AlgoSdk.Kmd.ImportMultisigRequest x) => x.WalletHandleToken, (ref AlgoSdk.Kmd.ImportMultisigRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value));
             return true;
         }
     }

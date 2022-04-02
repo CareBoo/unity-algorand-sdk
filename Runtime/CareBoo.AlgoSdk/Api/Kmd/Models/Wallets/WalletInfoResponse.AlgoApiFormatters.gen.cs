@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     
     
@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.WalletInfoResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.WalletInfoResponse>(false).Assign("wallet_handle", (AlgoSdk.WalletInfoResponse x) => x.WalletHandle, (ref AlgoSdk.WalletInfoResponse x, AlgoSdk.WalletHandle value) => x.WalletHandle = value).Assign("error", (AlgoSdk.WalletInfoResponse x) => x.Error, (ref AlgoSdk.WalletInfoResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value).Assign("message", (AlgoSdk.WalletInfoResponse x) => x.Message, (ref AlgoSdk.WalletInfoResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Kmd.WalletInfoResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Kmd.WalletInfoResponse>(false).Assign("wallet_handle", (AlgoSdk.Kmd.WalletInfoResponse x) => x.WalletHandle, (ref AlgoSdk.Kmd.WalletInfoResponse x, AlgoSdk.Kmd.WalletHandle value) => x.WalletHandle = value).Assign("error", (AlgoSdk.Kmd.WalletInfoResponse x) => x.Error, (ref AlgoSdk.Kmd.WalletInfoResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value).Assign("message", (AlgoSdk.Kmd.WalletInfoResponse x) => x.Message, (ref AlgoSdk.Kmd.WalletInfoResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance));
             return true;
         }
     }

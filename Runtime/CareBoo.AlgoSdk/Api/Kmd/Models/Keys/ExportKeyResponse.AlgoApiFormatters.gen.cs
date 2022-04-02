@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     
     
@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ExportKeyResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.ExportKeyResponse>(false).Assign("error", (AlgoSdk.ExportKeyResponse x) => x.Error, (ref AlgoSdk.ExportKeyResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value).Assign("message", (AlgoSdk.ExportKeyResponse x) => x.Message, (ref AlgoSdk.ExportKeyResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance).Assign("private_key", (AlgoSdk.ExportKeyResponse x) => x.PrivateKey, (ref AlgoSdk.ExportKeyResponse x, AlgoSdk.PrivateKey value) => x.PrivateKey = value));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Kmd.ExportKeyResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Kmd.ExportKeyResponse>(false).Assign("error", (AlgoSdk.Kmd.ExportKeyResponse x) => x.Error, (ref AlgoSdk.Kmd.ExportKeyResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value).Assign("message", (AlgoSdk.Kmd.ExportKeyResponse x) => x.Message, (ref AlgoSdk.Kmd.ExportKeyResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance).Assign("private_key", (AlgoSdk.Kmd.ExportKeyResponse x) => x.PrivateKey, (ref AlgoSdk.Kmd.ExportKeyResponse x, AlgoSdk.PrivateKey value) => x.PrivateKey = value));
             return true;
         }
     }

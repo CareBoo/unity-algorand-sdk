@@ -11,7 +11,7 @@ namespace AlgoSdk
     /// The indexer service is responsible for querying the blockchain
     /// </remarks>
     [Serializable]
-    public struct IndexerClient : IIndexerClient
+    public partial struct IndexerClient
     {
         [SerializeField]
         string address;

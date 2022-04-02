@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     
     
@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.DeleteMultisigRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.DeleteMultisigRequest>(false).Assign("address", (AlgoSdk.DeleteMultisigRequest x) => x.Address, (ref AlgoSdk.DeleteMultisigRequest x, AlgoSdk.Address value) => x.Address = value).Assign("wallet_handle_token", (AlgoSdk.DeleteMultisigRequest x) => x.WalletHandleToken, (ref AlgoSdk.DeleteMultisigRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value).Assign("wallet_password", (AlgoSdk.DeleteMultisigRequest x) => x.WalletPassword, (ref AlgoSdk.DeleteMultisigRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletPassword = value));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Kmd.DeleteMultisigRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Kmd.DeleteMultisigRequest>(false).Assign("address", (AlgoSdk.Kmd.DeleteMultisigRequest x) => x.Address, (ref AlgoSdk.Kmd.DeleteMultisigRequest x, AlgoSdk.Address value) => x.Address = value).Assign("wallet_handle_token", (AlgoSdk.Kmd.DeleteMultisigRequest x) => x.WalletHandleToken, (ref AlgoSdk.Kmd.DeleteMultisigRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value).Assign("wallet_password", (AlgoSdk.Kmd.DeleteMultisigRequest x) => x.WalletPassword, (ref AlgoSdk.Kmd.DeleteMultisigRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletPassword = value));
             return true;
         }
     }

@@ -1,6 +1,6 @@
 using System;
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     [AlgoApiObject]
     public partial struct ListMultisigResponse

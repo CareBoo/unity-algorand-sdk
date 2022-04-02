@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     
     
@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.GenerateKeyResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.GenerateKeyResponse>(false).Assign("address", (AlgoSdk.GenerateKeyResponse x) => x.Address, (ref AlgoSdk.GenerateKeyResponse x, AlgoSdk.Address value) => x.Address = value).Assign("error", (AlgoSdk.GenerateKeyResponse x) => x.Error, (ref AlgoSdk.GenerateKeyResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value).Assign("message", (AlgoSdk.GenerateKeyResponse x) => x.Message, (ref AlgoSdk.GenerateKeyResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Kmd.GenerateKeyResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Kmd.GenerateKeyResponse>(false).Assign("address", (AlgoSdk.Kmd.GenerateKeyResponse x) => x.Address, (ref AlgoSdk.Kmd.GenerateKeyResponse x, AlgoSdk.Address value) => x.Address = value).Assign("error", (AlgoSdk.Kmd.GenerateKeyResponse x) => x.Error, (ref AlgoSdk.Kmd.GenerateKeyResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value).Assign("message", (AlgoSdk.Kmd.GenerateKeyResponse x) => x.Message, (ref AlgoSdk.Kmd.GenerateKeyResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance));
             return true;
         }
     }
