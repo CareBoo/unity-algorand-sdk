@@ -1,5 +1,4 @@
 using System;
-using AlgoSdk.Crypto;
 using Unity.Collections;
 using UnityEngine;
 
@@ -10,7 +9,7 @@ namespace AlgoSdk
         /// <summary>
         /// The root participation public key.
         /// </summary>
-        Ed25519.PublicKey VoteParticipationKey { get; set; }
+        ParticipationPublicKey VoteParticipationKey { get; set; }
 
         /// <summary>
         /// The VRF public key.
@@ -42,7 +41,7 @@ namespace AlgoSdk
     {
         /// <inheritdoc />
         [AlgoApiField("votekey")]
-        public Ed25519.PublicKey VoteParticipationKey
+        public ParticipationPublicKey VoteParticipationKey
         {
             get => keyRegParams.VoteParticipationKey;
             set => keyRegParams.VoteParticipationKey = value;
@@ -239,7 +238,7 @@ namespace AlgoSdk
 
         /// <inheritdoc />
         [AlgoApiField("votekey")]
-        public Ed25519.PublicKey VoteParticipationKey
+        public ParticipationPublicKey VoteParticipationKey
         {
             get => @params.VoteParticipationKey;
             set => @params.VoteParticipationKey = value;
@@ -312,7 +311,7 @@ namespace AlgoSdk
             : IEquatable<Params>
         {
             [AlgoApiField("votekey")]
-            public Ed25519.PublicKey VoteParticipationKey
+            public ParticipationPublicKey VoteParticipationKey
             {
                 get => AccountParticipation.VoteParticipationKey;
                 set => AccountParticipation.VoteParticipationKey = value;

@@ -15,7 +15,7 @@ namespace AlgoSdk
         /// Root participation public key (if any) currently registered for this round.
         /// </summary>
         [Tooltip("Root participation public key (if any) currently registered for this round.")]
-        public Ed25519.PublicKey VoteParticipationKey;
+        public ParticipationPublicKey VoteParticipationKey;
 
         /// <summary>
         /// Selection public key (if any) currently registered for this round.
