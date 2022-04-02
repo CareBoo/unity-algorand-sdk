@@ -22,13 +22,6 @@ namespace AlgoSdk
         public Address Clawback;
 
         /// <summary>
-        /// The address that created this asset. This is the address where the parameters for this asset can be found, and also the address where unwanted asset units can be sent in the worst case.
-        /// </summary>
-        [AlgoApiField("creator")]
-        [Tooltip("The address that created this asset. This is the address where the parameters for this asset can be found, and also the address where unwanted asset units can be sent in the worst case.")]
-        public Address Creator;
-
-        /// <summary>
         /// The number of digits to use after the decimal point when displaying this asset. If 0, the asset is not divisible. If 1, the base unit of the asset is in tenths. If 2, the base unit of the asset is in hundredths, and so on. This value must be between 0 and 19 (inclusive).
         /// Minimum value: 0. Maximum value: 19.
         /// </summary>
@@ -72,21 +65,6 @@ namespace AlgoSdk
         public FixedString64Bytes Name;
 
         /// <summary>
-        /// Base64 encoded name of this asset, as supplied by the creator.
-        /// </summary>
-        [AlgoApiField("name-b64")]
-        public FixedString64Bytes NameBase64
-        {
-            get
-            {
-                FixedString64Bytes b64 = default;
-                Name.Utf8ToBase64(ref b64);
-                return b64;
-            }
-            set => value.Base64ToUtf8(ref Name);
-        }
-
-        /// <summary>
         /// Address of account holding reserve (non-minted) units of this asset.
         /// </summary>
         [AlgoApiField("r")]
@@ -108,41 +86,12 @@ namespace AlgoSdk
         public FixedString32Bytes UnitName;
 
         /// <summary>
-        /// Base64 encoded name of a unit of this asset, as supplied by the creator.
-        /// </summary>
-        [AlgoApiField("unit-name-b64")]
-        public FixedString32Bytes UnitNameBase64
-        {
-            get
-            {
-                FixedString32Bytes b64 = default;
-                UnitName.Utf8ToBase64(ref b64);
-                return b64;
-            }
-            set => value.Base64ToUtf8(ref UnitName);
-        }
-
-        /// <summary>
         /// URL where more information about the asset can be retrieved. Included only when the URL is composed of printable utf-8 characters.
         /// </summary>
         [AlgoApiField("au")]
         [Tooltip("URL where more information about the asset can be retrieved. Included only when the URL is composed of printable utf-8 characters.")]
         public FixedString128Bytes Url;
 
-        /// <summary>
-        /// Base64 encoded URL where more information about the asset can be retrieved.
-        /// </summary>
-        [AlgoApiField("url-b64")]
-        public FixedString128Bytes UrlBase64
-        {
-            get
-            {
-                FixedString64Bytes b64 = default;
-                Url.Utf8ToBase64(ref b64);
-                return b64;
-            }
-            set => value.Base64ToUtf8(ref Url);
-        }
 
         public bool Equals(AssetParams other)
         {
