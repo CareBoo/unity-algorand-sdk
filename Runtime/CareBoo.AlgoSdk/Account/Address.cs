@@ -108,6 +108,11 @@ namespace AlgoSdk
             return FromString(s);
         }
 
+        public static implicit operator string(Address addr)
+        {
+            return addr.ToString();
+        }
+
         public static implicit operator Address(Ed25519.PublicKey publicKey)
         {
             return Address.FromPublicKey(publicKey);

@@ -54,7 +54,7 @@ public class KmdClientSigTest : KmdClientTestFixture
 
     protected async UniTask<PaymentTxn> GetTransaction()
     {
-        var txnParams = (await AlgoApiClientSettings.Algod.GetSuggestedParams()).Payload;
+        var txnParams = (await AlgoApiClientSettings.Algod.TransactionParams()).Payload;
         return Transaction.Payment(
             sender: msigAddress,
             txnParams: txnParams,

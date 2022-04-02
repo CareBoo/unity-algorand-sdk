@@ -24,10 +24,10 @@ namespace AlgoSdk
         /// 
         /// </remarks>
         /// <param name="round">
-        /// 
+        /// The round in which the transaction appears.
         /// </param>
         /// <param name="txid">
-        /// 
+        /// The transaction ID for which to generate a proof.
         /// </param>
         /// <param name="format">
         /// Configures whether the response object is JSON or MessagePack encoded.
@@ -66,7 +66,7 @@ namespace AlgoSdk
         /// Given a catchpoint, it starts catching up to this catchpoint
         /// </remarks>
         /// <param name="catchpoint">
-        /// 
+        /// A catch point
         /// </param>
         /// <returns>
         /// 
@@ -82,16 +82,16 @@ namespace AlgoSdk
         /// 
         /// </remarks>
         /// <param name="round">
-        /// 
+        /// The round from which to fetch block information.
         /// </param>
         /// <param name="format">
-        /// 
+        /// Configures whether the response object is JSON or MessagePack encoded.
         /// </param>
         /// <returns>
         /// 
         /// </returns>
         AlgoApiRequest.Sent<BlockResponse> GetBlock(
-            string round,
+            ulong round,
         
             ResponseFormat format = default
         );
@@ -135,7 +135,7 @@ namespace AlgoSdk
         /// Get the list of pending transactions by address, sorted by priority, in decreasing order, truncated at the end at MAX. If MAX = 0, returns all pending transactions.
         /// </remarks>
         /// <param name="address">
-        /// 
+        /// An account public key
         /// </param>
         /// <param name="max">
         /// Truncated number of transactions to display. If max=0, returns all pending txns.
@@ -177,7 +177,7 @@ namespace AlgoSdk
         /// Given a asset ID, it returns asset information including creator, name, total supply and special addresses.
         /// </remarks>
         /// <param name="assetId">
-        /// 
+        /// An asset identifier
         /// </param>
         /// <returns>
         /// 
@@ -230,7 +230,7 @@ namespace AlgoSdk
         /// Given a application ID, it returns application information including creator, approval and clear programs, global and local schemas, and global state.
         /// </remarks>
         /// <param name="applicationId">
-        /// 
+        /// An application identifier
         /// </param>
         /// <returns>
         /// 
@@ -246,13 +246,13 @@ namespace AlgoSdk
         /// Waits for a block to appear after round {round} and returns the node's status at the time.
         /// </remarks>
         /// <param name="round">
-        /// 
+        /// The round to wait until returning status
         /// </param>
         /// <returns>
         /// 
         /// </returns>
         AlgoApiRequest.Sent<NodeStatusResponse> WaitForBlock(
-            string round
+            ulong round
         );
 
         /// <summary>
@@ -339,13 +339,13 @@ namespace AlgoSdk
         /// Given a specific account public key, this call returns the accounts status, balance and spendable amounts
         /// </remarks>
         /// <param name="address">
-        /// 
-        /// </param>
-        /// <param name="format">
-        /// 
+        /// An account public key
         /// </param>
         /// <param name="exclude">
         /// When set to `all` will exclude asset holdings, application local state, created asset parameters, any created application parameters. Defaults to `none`.
+        /// </param>
+        /// <param name="format">
+        /// Configures whether the response object is JSON or MessagePack encoded.
         /// </param>
         /// <returns>
         /// 
@@ -353,9 +353,9 @@ namespace AlgoSdk
         AlgoApiRequest.Sent<AccountResponse> AccountInformation(
             string address,
         
-            ResponseFormat format = default,
+            ExcludeFields exclude = default,
         
-            ExcludeFields exclude = default
+            ResponseFormat format = default
         );
 
         /// <summary>
@@ -382,7 +382,7 @@ namespace AlgoSdk
         /// Or the transaction may have happened sufficiently long ago that the node no longer remembers it, and this will return an error.
         /// </remarks>
         /// <param name="txid">
-        /// 
+        /// A transaction ID
         /// </param>
         /// <param name="format">
         /// Configures whether the response object is JSON or MessagePack encoded.
@@ -408,13 +408,13 @@ namespace AlgoSdk
         /// Given a specific account public key and application ID, this call returns the account's application local state and global state (AppLocalState and AppParams, if either exists). Global state will only be returned if the provided address is the application's creator.
         /// </remarks>
         /// <param name="address">
-        /// 
+        /// An account public key
         /// </param>
         /// <param name="applicationId">
         /// An application identifier
         /// </param>
         /// <param name="format">
-        /// 
+        /// Configures whether the response object is JSON or MessagePack encoded.
         /// </param>
         /// <returns>
         /// 
@@ -479,13 +479,13 @@ namespace AlgoSdk
         /// Given a specific account public key and asset ID, this call returns the account's asset holding and asset parameters (if either exist). Asset parameters will only be returned if the provided address is the asset's creator.
         /// </remarks>
         /// <param name="address">
-        /// 
+        /// An account public key
         /// </param>
         /// <param name="assetId">
         /// An asset identifier
         /// </param>
         /// <param name="format">
-        /// 
+        /// Configures whether the response object is JSON or MessagePack encoded.
         /// </param>
         /// <returns>
         /// 
@@ -554,7 +554,7 @@ namespace AlgoSdk
 
         /// <inheritdoc />
         public AlgoApiRequest.Sent<BlockResponse> GetBlock(
-            string round,
+            ulong round,
         
             ResponseFormat format = default
         )
@@ -690,7 +690,7 @@ namespace AlgoSdk
 
         /// <inheritdoc />
         public AlgoApiRequest.Sent<NodeStatusResponse> WaitForBlock(
-            string round
+            ulong round
         )
         {
             var path = $"/v2/status/wait-for-block-after/{round}";
@@ -770,9 +770,9 @@ namespace AlgoSdk
         public AlgoApiRequest.Sent<AccountResponse> AccountInformation(
             string address,
         
-            ResponseFormat format = default,
+            ExcludeFields exclude = default,
         
-            ExcludeFields exclude = default
+            ResponseFormat format = default
         )
         {
             using var queryBuilder = new QueryBuilder(Allocator.Persistent)

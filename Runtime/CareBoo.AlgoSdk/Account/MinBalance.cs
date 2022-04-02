@@ -1,3 +1,5 @@
+using AlgodAccount = AlgoSdk.Algod.Account;
+
 namespace AlgoSdk
 {
     /// <summary>
@@ -70,14 +72,14 @@ namespace AlgoSdk
         /// Get the minimum balance of an account.
         /// </summary>
         /// <param name="accountInfo">The <see cref="AccountInfo"/> to obtain the minimum balance.</param>
-        public MinBalance(AccountInfo accountInfo)
+        public MinBalance(AlgodAccount accountInfo)
         {
             Assets = (ulong)(accountInfo.Assets?.LongLength ?? 0L);
-            ApplicationsOptedIn = (ulong)(accountInfo.ApplicationsLocalState?.LongLength ?? 0L);
-            ApplicationsCreated = (ulong)(accountInfo.CreatedApplications?.LongLength ?? 0L);
-            ApplicationExtraPages = accountInfo.ApplicationsTotalExtraPages;
-            ApplicationSchemaUints = accountInfo.ApplicationsTotalSchema.NumUints;
-            ApplicationSchemaByteSlices = accountInfo.ApplicationsTotalSchema.NumByteSlices;
+            ApplicationsOptedIn = (ulong)(accountInfo.AppsLocalState?.LongLength ?? 0L);
+            ApplicationsCreated = (ulong)(accountInfo.CreatedApps?.LongLength ?? 0L);
+            ApplicationExtraPages = accountInfo.AppsTotalExtraPages;
+            ApplicationSchemaUints = accountInfo.AppsTotalSchema.NumUint;
+            ApplicationSchemaByteSlices = accountInfo.AppsTotalSchema.NumByteSlice;
         }
 
         /// <summary>

@@ -60,6 +60,16 @@ namespace AlgoSdk
             return hash.Equals(other.hash);
         }
 
+        public static implicit operator string(TransactionId txId)
+        {
+            return txId.ToString();
+        }
+
+        public static implicit operator TransactionId(string s)
+        {
+            return TransactionId.FromString(s);
+        }
+
         public static implicit operator TransactionId(Sha512_256_Hash hash) => new TransactionId { hash = hash };
         public static implicit operator Sha512_256_Hash(TransactionId txid) => txid.hash;
     }

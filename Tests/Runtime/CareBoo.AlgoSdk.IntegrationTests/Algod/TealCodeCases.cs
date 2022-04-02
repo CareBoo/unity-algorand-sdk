@@ -1,3 +1,5 @@
+using System.Text;
+
 public static class TealCodeCases
 {
     public static class SmartContract
@@ -52,10 +54,14 @@ main_l12:
 int 1
 return";
 
+        public static readonly byte[] ApprovalBytes = Encoding.UTF8.GetBytes(ApprovalSrc);
+
         public const string ClearStateSrc =
 @"#pragma version 4
 int 1
 return";
+
+        public static readonly byte[] ClearStateBytes = Encoding.UTF8.GetBytes(ClearStateSrc);
     }
 
     public static class AtomicSwap
@@ -97,6 +103,8 @@ int 3000
 ||
 &&
 return";
+
+        public static readonly byte[] SrcBytes = Encoding.UTF8.GetBytes(Src);
 
         public const string CompiledResult = "AiAD6AcBuBcmAyD2TmOfueim8Re2ESV2GjKqvwSScfbZtuOlSKmBnd39ZgrW9b1vW9b1vW9bIP56+ztC8srYFMeypK6fn0Qf1ybaZs4NQfeeN2m1/W00MQEiDDEQIxIxCTIDEhAxIDIDEhAQMQcoEi0BKRIQMQcqEjECJA0QERBD";
 
