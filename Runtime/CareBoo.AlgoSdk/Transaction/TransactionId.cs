@@ -46,7 +46,11 @@ namespace AlgoSdk
             where T : unmanaged, INativeList<byte>, IUTF8Bytes
         {
             TransactionId result = default;
-            Base32Encoding.ToBytes(fs, ref result);
+            var b64BytesSize = Base64Encoding.BytesRequiredForBase64Encoding(result.Length);
+            if (fs.Length == b64BytesSize)
+                result.CopyFromBase64(fs);
+            else
+                Base32Encoding.ToBytes(fs, ref result);
             return result;
         }
 

@@ -1,7 +1,5 @@
 using System;
 using System.Text;
-using AlgoSdk.Crypto;
-using Unity.Collections;
 
 namespace AlgoSdk
 {

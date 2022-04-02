@@ -35,7 +35,7 @@ namespace AlgoSdk
         /// </summary>
         [AlgoApiField("prev")]
         [Tooltip("Previous block hash.")]
-        public Sha512_256_Hash PreviousBlockHash;
+        public BlockHash PreviousBlockHash;
 
         /// <summary>
         /// See <see cref="BlockRewards"/>

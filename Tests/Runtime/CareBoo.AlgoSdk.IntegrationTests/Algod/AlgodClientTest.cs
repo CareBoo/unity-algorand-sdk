@@ -32,7 +32,7 @@ public class AlgodClientTest : AlgodClientTestFixture
             var response = await AlgoApiClientSettings.Algod.AccountInformation(expected);
             var accountResponse = response.Payload;
             var actual = accountResponse.WrappedValue.Address;
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected.ToString(), actual);
         }
     });
 

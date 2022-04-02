@@ -46,8 +46,12 @@ namespace AlgoSdk
             return this;
         }
 
-        public QueryBuilder Add(string key, byte[] value) =>
-            Add(key, System.Convert.ToBase64String(value));
+        public QueryBuilder Add(string key, byte[] value)
+        {
+            if (value == null)
+                return this;
+            return Add(key, System.Convert.ToBase64String(value));
+        }
 
         public QueryBuilder Add(string key, ExcludeFields value) =>
             Add(key, value.ToOptionalFixedString());
@@ -56,7 +60,7 @@ namespace AlgoSdk
             Add(key, value.ToOptionalFixedString());
 
         public QueryBuilder Add(string key, ExcludeAccountFields value) =>
-            Add(key, value.ToString());
+            Add(key, value.ToOptionalFixedString());
 
         public QueryBuilder Add(string key, AddressRole value) =>
             Add(key, value.ToOptionalFixedString());

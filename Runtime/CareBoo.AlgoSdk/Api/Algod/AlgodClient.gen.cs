@@ -283,7 +283,7 @@ namespace AlgoSdk
         /// <returns>
         /// The current swagger spec
         /// </returns>
-        AlgoApiRequest.Sent<string> SwaggerJSON(
+        AlgoApiRequest.Sent<AlgoApiObject> SwaggerJSON(
              
         );
 
@@ -439,7 +439,7 @@ namespace AlgoSdk
         /// <returns>
         /// The genesis file in json.
         /// </returns>
-        AlgoApiRequest.Sent<string> GetGenesis(
+        AlgoApiRequest.Sent<AlgoApiObject> GetGenesis(
              
         );
 
@@ -715,7 +715,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        public AlgoApiRequest.Sent<string> SwaggerJSON(
+        public AlgoApiRequest.Sent<AlgoApiObject> SwaggerJSON(
              
         )
         {
@@ -839,7 +839,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        public AlgoApiRequest.Sent<string> GetGenesis(
+        public AlgoApiRequest.Sent<AlgoApiObject> GetGenesis(
              
         )
         {

@@ -37,7 +37,7 @@ public class AlgodClientApplicationTest : AlgodClientTestFixture
     });
 
     [UnityTest]
-    public IEnumerator CallingAppWithAppArgumenmtsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
+    public IEnumerator CallingAppWithAppArgumentsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         var appId = await CreateSmartContractApp();
         var (_, txnParams) = await AlgoApiClientSettings.Algod.TransactionParams();

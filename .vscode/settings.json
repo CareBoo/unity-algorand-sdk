@@ -1,5 +1,7 @@
 {
   "files.exclude": {
+    "**/Builds": true,
+    "**/Logs": true,
     "**/.DS_Store": true,
     "**/.git": true,
     "**/.gitmodules": true,

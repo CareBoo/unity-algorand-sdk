@@ -28,16 +28,24 @@ namespace AlgoSdk.Formatters
 
         public virtual T Deserialize(ref JsonReader reader)
         {
-            if (reader.Peek() == JsonToken.Null)
+            var token = reader.Peek();
+            switch (token)
             {
-                reader.ReadNull();
-                byte nil = 0;
-                return UnsafeUtility.As<byte, T>(ref nil);
+                case JsonToken.Null:
+                    reader.ReadNull();
+                    byte nil = 0;
+                    return UnsafeUtility.As<byte, T>(ref nil);
+                case JsonToken.String:
+                    reader.ReadString(out var s);
+                    return stringToType.TryGetValue(s, out var t)
+                        ? t
+                        : throw new ArgumentException($"{s} is not a valid name for {typeof(T)}");
+                case JsonToken.Number:
+                    reader.ReadNumber(out byte b);
+                    return UnsafeUtility.As<byte, T>(ref b);
+                default:
+                    throw new NotSupportedException($"Cannot deserialize enum with JsonToken {token}");
             }
-            reader.ReadString(out var s);
-            return stringToType.TryGetValue(s, out var t)
-                ? t
-                : throw new ArgumentException($"{s} is not a valid name for {typeof(T)}");
         }
 
         public virtual T Deserialize(ref MessagePackReader reader)
@@ -83,7 +91,7 @@ namespace AlgoSdk.Formatters
     {
         public T Deserialize(ref JsonReader reader)
         {
-            reader.ReadNumber(out byte b);
+            reader.ReadNumber(out byte b).ThrowIfError(reader);
             return UnsafeUtility.As<byte, T>(ref b);
         }
 

@@ -19,59 +19,72 @@ namespace AlgoSdk
     {
         public const string AllString = "all";
 
+        public static readonly FixedString32Bytes AllFixedString = AllString;
+
         public const string AssetsString = "assets";
+
+        public static readonly FixedString32Bytes AssetsFixedString = AssetsString;
 
         public const string CreatedAssetsString = "created-assets";
 
+        public static readonly FixedString32Bytes CreatedAssetsFixedString = CreatedAssetsString;
+
         public const string AppsLocalStateString = "apps-local-state";
+
+        public static readonly FixedString32Bytes AppsLocalStateFixedString = AppsLocalStateString;
 
         public const string CreatedAppsString = "created-apps";
 
+        public static readonly FixedString32Bytes CreatedAppsFixedString = CreatedAppsString;
+
         public const string NoneString = "none";
 
-        public static string ToString(this ExcludeAccountFields exclude)
+        public static readonly FixedString32Bytes NoneFixedString = NoneString;
+
+        public static FixedString128Bytes ToFixedString(this ExcludeAccountFields exclude)
         {
+            FixedString128Bytes result = default;
             switch (exclude)
             {
                 case ExcludeAccountFields.All:
-                    return AllString;
+                    return AllFixedString;
                 case ExcludeAccountFields.None:
-                    return NoneString;
+                    return NoneFixedString;
                 case ExcludeAccountFields.Unknown:
-                    return string.Empty;
+                    return result;
             }
 
-            var text = new NativeText(Allocator.Temp);
-            try
+            if (exclude.HasFlag(ExcludeAccountFields.Assets))
             {
-                if (exclude.HasFlag(ExcludeAccountFields.Assets))
-                {
-                    text.Append(AssetsString);
-                }
-                if (exclude.HasFlag(ExcludeAccountFields.CreatedAssets))
-                {
-                    if (text.Length > 0)
-                        text.Append(",");
-                    text.Append(CreatedAssetsString);
-                }
-                if (exclude.HasFlag(ExcludeAccountFields.AppsLocalState))
-                {
-                    if (text.Length > 0)
-                        text.Append(",");
-                    text.Append(AppsLocalStateString);
-                }
-                if (exclude.HasFlag(ExcludeAccountFields.CreatedApps))
-                {
-                    if (text.Length > 0)
-                        text.Append(",");
-                    text.Append(CreatedAppsString);
-                }
-                return text.ToString();
+                result.Append(AssetsString);
             }
-            finally
+            if (exclude.HasFlag(ExcludeAccountFields.CreatedAssets))
             {
-                text.Dispose();
+                if (result.Length > 0)
+                    result.Append(",");
+                result.Append(CreatedAssetsString);
             }
+            if (exclude.HasFlag(ExcludeAccountFields.AppsLocalState))
+            {
+                if (result.Length > 0)
+                    result.Append(",");
+                result.Append(AppsLocalStateString);
+            }
+            if (exclude.HasFlag(ExcludeAccountFields.CreatedApps))
+            {
+                if (result.Length > 0)
+                    result.Append(",");
+                result.Append(CreatedAppsString);
+            }
+            return result;
+        }
+
+        public static Optional<FixedString128Bytes> ToOptionalFixedString(this ExcludeAccountFields exclude)
+        {
+            var fs = exclude.ToFixedString();
+            if (fs.Length == 0)
+                return default;
+            return fs;
         }
     }
 }

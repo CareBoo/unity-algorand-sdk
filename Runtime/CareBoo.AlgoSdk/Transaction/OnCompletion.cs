@@ -1,5 +1,3 @@
-using AlgoSdk.Formatters;
-
 namespace AlgoSdk
 {
     /// <summary>

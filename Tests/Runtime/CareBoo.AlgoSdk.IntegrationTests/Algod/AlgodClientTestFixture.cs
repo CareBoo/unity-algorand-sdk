@@ -25,7 +25,7 @@ public abstract class AlgodClientTestFixture : KmdClientTestFixture
     protected static async UniTask<Address[]> GetAddresses()
     {
         var genesisResponse = await AlgoApiClientSettings.Algod.GetGenesis();
-        var genesisInfo = JsonUtility.FromJson<GenesisInformation>(genesisResponse.Payload);
+        var genesisInfo = JsonUtility.FromJson<GenesisInformation>(Encoding.UTF8.GetString(genesisResponse.Payload.Json));
         return genesisInfo.alloc
             .Where(a => a.comment.Contains("Wallet"))
             .Select(a => (Address)a.addr)
