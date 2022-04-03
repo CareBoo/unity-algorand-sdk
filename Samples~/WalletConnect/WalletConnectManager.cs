@@ -118,7 +118,7 @@ public class WalletConnectManager : MonoBehaviour
             var status = session?.ConnectionStatus ?? AlgorandWalletConnectSession.Status.Unknown;
             if (status == AlgorandWalletConnectSession.Status.Connected)
             {
-                var (err, response) = await indexer.GetAccount(session.Accounts[0]);
+                var (err, response) = await indexer.LookupAccountByID(session.Accounts[0]);
                 if (err) Debug.LogError(err);
                 else
                 {
@@ -132,7 +132,7 @@ public class WalletConnectManager : MonoBehaviour
 
     async UniTaskVoid TestTransaction()
     {
-        var (txnParamsErr, txnParams) = await algod.GetSuggestedParams();
+        var (txnParamsErr, txnParams) = await algod.TransactionParams();
         if (txnParamsErr)
         {
             Debug.LogError((string)txnParamsErr);
@@ -171,7 +171,7 @@ public class WalletConnectManager : MonoBehaviour
             Debug.Log($"Deserialized signed txn: {AlgoApiSerializer.SerializeJson(signedTxn)}");
         }
 
-        var (txnSendErr, txid) = await algod.SendTransaction(signedTxns[0]);
+        var (txnSendErr, txid) = await algod.RawTransaction(signedTxns[0]);
         if (txnSendErr)
         {
             txnStatus = TransactionStatus.Failed;
@@ -179,7 +179,7 @@ public class WalletConnectManager : MonoBehaviour
             return;
         }
 
-        var (pendingErr, pending) = await algod.GetPendingTransaction(txid);
+        var (pendingErr, pending) = await algod.PendingTransactionInformation(txid.TxId);
         if (pendingErr)
         {
             txnStatus = TransactionStatus.Failed;
@@ -189,7 +189,7 @@ public class WalletConnectManager : MonoBehaviour
         while (pending.ConfirmedRound <= 0)
         {
             await UniTask.Delay(1000);
-            (pendingErr, pending) = await algod.GetPendingTransaction(txid);
+            (pendingErr, pending) = await algod.PendingTransactionInformation(txid.TxId);
         }
         txnStatus = TransactionStatus.Confirmed;
     }

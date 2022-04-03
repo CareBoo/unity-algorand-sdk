@@ -18,32 +18,32 @@ namespace AlgoSdk.WalletConnect
         /// Does not contain the txn prefix that is used when signing a transaction.
         /// See <see cref="AlgoApiSerializer.SerializeMessagePack"/> for serializing the transaction.
         /// </remarks>
-        [AlgoApiField("txn", null)]
+        [AlgoApiField("txn")]
         public byte[] Txn;
 
         /// <summary>
         /// Optional message explaining the reason of the transaction.
         /// </summary>
-        [AlgoApiField("message", null)]
+        [AlgoApiField("message")]
         public string Message;
 
         /// <summary>
         /// Optional <see cref="Address"/> used to sign the transaction when
         /// the account is rekeyed. Also called the signor/sgnr.
         /// </summary>
-        [AlgoApiField("authAddr", null)]
+        [AlgoApiField("authAddr")]
         public Address AuthAddr;
 
         /// <summary>
         /// Optional multisig metadata used to sign the transaction.
         /// </summary>
-        [AlgoApiField("msig", null)]
+        [AlgoApiField("msig")]
         public MultisigMetadata Msig;
 
         /// <summary>
         /// Optional list of addresses that must sign the transactions.
         /// </summary>
-        [AlgoApiField("signers", null)]
+        [AlgoApiField("signers")]
         public Address[] Signers;
 
         /// <summary>

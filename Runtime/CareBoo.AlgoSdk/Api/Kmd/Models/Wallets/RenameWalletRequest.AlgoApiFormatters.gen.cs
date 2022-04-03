@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     
     
@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.RenameWalletRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.RenameWalletRequest>(false).Assign("wallet_id", null, (AlgoSdk.RenameWalletRequest x) => x.WalletId, (ref AlgoSdk.RenameWalletRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletId = value, false).Assign("wallet_name", null, (AlgoSdk.RenameWalletRequest x) => x.WalletName, (ref AlgoSdk.RenameWalletRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletName = value, false).Assign("wallet_password", null, (AlgoSdk.RenameWalletRequest x) => x.WalletPassword, (ref AlgoSdk.RenameWalletRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletPassword = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Kmd.RenameWalletRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Kmd.RenameWalletRequest>(false).Assign("wallet_id", (AlgoSdk.Kmd.RenameWalletRequest x) => x.WalletId, (ref AlgoSdk.Kmd.RenameWalletRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletId = value).Assign("wallet_name", (AlgoSdk.Kmd.RenameWalletRequest x) => x.WalletName, (ref AlgoSdk.Kmd.RenameWalletRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletName = value).Assign("wallet_password", (AlgoSdk.Kmd.RenameWalletRequest x) => x.WalletPassword, (ref AlgoSdk.Kmd.RenameWalletRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletPassword = value));
             return true;
         }
     }

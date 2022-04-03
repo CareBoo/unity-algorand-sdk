@@ -1,18 +1,18 @@
 using System;
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     [AlgoApiObject]
     public partial struct ExportMasterKeyResponse
         : IEquatable<ExportMasterKeyResponse>
     {
-        [AlgoApiField("master_derivation_key", null)]
+        [AlgoApiField("master_derivation_key")]
         public PrivateKey MasterDerivationKey;
 
-        [AlgoApiField("error", null)]
+        [AlgoApiField("error")]
         public Optional<bool> Error;
 
-        [AlgoApiField("message", null)]
+        [AlgoApiField("message")]
         public string Message;
 
         public bool Equals(ExportMasterKeyResponse other)

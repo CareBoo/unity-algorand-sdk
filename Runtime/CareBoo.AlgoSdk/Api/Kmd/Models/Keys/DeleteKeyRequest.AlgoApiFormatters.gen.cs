@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     
     
@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.DeleteKeyRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.DeleteKeyRequest>(false).Assign("address", null, (AlgoSdk.DeleteKeyRequest x) => x.Address, (ref AlgoSdk.DeleteKeyRequest x, AlgoSdk.Address value) => x.Address = value, false).Assign("wallet_handle_token", null, (AlgoSdk.DeleteKeyRequest x) => x.WalletHandleToken, (ref AlgoSdk.DeleteKeyRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value, false).Assign("wallet_password", null, (AlgoSdk.DeleteKeyRequest x) => x.WalletPassword, (ref AlgoSdk.DeleteKeyRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletPassword = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Kmd.DeleteKeyRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Kmd.DeleteKeyRequest>(false).Assign("address", (AlgoSdk.Kmd.DeleteKeyRequest x) => x.Address, (ref AlgoSdk.Kmd.DeleteKeyRequest x, AlgoSdk.Address value) => x.Address = value).Assign("wallet_handle_token", (AlgoSdk.Kmd.DeleteKeyRequest x) => x.WalletHandleToken, (ref AlgoSdk.Kmd.DeleteKeyRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value).Assign("wallet_password", (AlgoSdk.Kmd.DeleteKeyRequest x) => x.WalletPassword, (ref AlgoSdk.Kmd.DeleteKeyRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletPassword = value));
             return true;
         }
     }

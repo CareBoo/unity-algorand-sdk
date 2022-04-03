@@ -1,6 +1,8 @@
 using System.Linq;
 using System.Text;
 using AlgoSdk;
+using AlgoSdk.Algod;
+using AlgoSdk.Kmd;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
 using Unity.Collections;
@@ -50,9 +52,9 @@ public abstract class KmdClientTestFixture : AlgoApiClientTestFixture
         wallet = default;
     }
 
-    protected async UniTask<TransactionIdResponse> MakePaymentTransaction(ulong amt)
+    protected async UniTask<PostTransactionsResponse> MakePaymentTransaction(ulong amt)
     {
-        var (error, txnParams) = await AlgoApiClientSettings.Algod.GetSuggestedParams();
+        var (error, txnParams) = await AlgoApiClientSettings.Algod.TransactionParams();
         AssertOkay(error);
         var txn = Transaction.Payment(
             sender: PublicKey,
@@ -63,8 +65,8 @@ public abstract class KmdClientTestFixture : AlgoApiClientTestFixture
         txn.Note = Encoding.UTF8.GetBytes("hello");
         var signedTxn = await Sign(txn);
         Debug.Log(System.Convert.ToBase64String(signedTxn));
-        TransactionIdResponse txidResponse = default;
-        (error, txidResponse) = await AlgoApiClientSettings.Algod.SendTransaction(signedTxn);
+        PostTransactionsResponse txidResponse = default;
+        (error, txidResponse) = await AlgoApiClientSettings.Algod.RawTransaction(signedTxn);
         AssertOkay(error);
         return txidResponse;
     }

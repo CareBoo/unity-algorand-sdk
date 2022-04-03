@@ -1,18 +1,18 @@
 using System;
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     [AlgoApiObject]
     public partial struct SignProgramResponse
         : IEquatable<SignProgramResponse>
     {
-        [AlgoApiField("sig", null)]
+        [AlgoApiField("sig")]
         public Sig SignedProgram;
 
-        [AlgoApiField("error", null)]
+        [AlgoApiField("error")]
         public Optional<bool> Error;
 
-        [AlgoApiField("message", null)]
+        [AlgoApiField("message")]
         public string Message;
 
         public bool Equals(SignProgramResponse other)

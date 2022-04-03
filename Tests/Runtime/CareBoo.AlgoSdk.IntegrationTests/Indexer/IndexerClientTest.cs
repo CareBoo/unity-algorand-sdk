@@ -11,7 +11,7 @@ public class IndexerClientTest : IndexerClientTestFixture
     public IEnumerator GetAccountShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         Address accountAddress = PublicKey;
-        var response = await AlgoApiClientSettings.Indexer.GetAccount(accountAddress);
+        var response = await AlgoApiClientSettings.Indexer.LookupAccountByID(accountAddress);
         AssertOkay(response.Error);
     });
 
@@ -19,7 +19,7 @@ public class IndexerClientTest : IndexerClientTestFixture
     [UnityTest]
     public IEnumerator GetAccountsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var response = await AlgoApiClientSettings.Indexer.GetAccounts();
+        var response = await AlgoApiClientSettings.Indexer.SearchForAccounts();
         AssertOkay(response.Error);
     });
 
@@ -28,7 +28,7 @@ public class IndexerClientTest : IndexerClientTestFixture
     [Ignore("This feature is disabled")]
     public IEnumerator GetAccountsGreaterThan1000AlgoShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var response = await AlgoApiClientSettings.Indexer.GetAccounts(currencyGreaterThan: 1000);
+        var response = await AlgoApiClientSettings.Indexer.SearchForAccounts(currencyGreaterThan: 1000);
         AssertOkay(response.Error);
     });
 
@@ -36,9 +36,9 @@ public class IndexerClientTest : IndexerClientTestFixture
     public IEnumerator GetAccountsPaginatedShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
         ulong limit = 3;
-        var firstPageResponse = await AlgoApiClientSettings.Indexer.GetAccounts(limit: limit);
+        var firstPageResponse = await AlgoApiClientSettings.Indexer.SearchForAccounts(limit: limit);
         AssertOkay(firstPageResponse.Error);
-        var secondPageResponse = await AlgoApiClientSettings.Indexer.GetAccounts(
+        var secondPageResponse = await AlgoApiClientSettings.Indexer.SearchForAccounts(
             limit: limit,
             next: firstPageResponse.Payload.NextToken);
         AssertOkay(secondPageResponse.Error);
@@ -50,7 +50,7 @@ public class IndexerClientTest : IndexerClientTestFixture
     {
         await MakePaymentTransaction(100_000);
         Address accountAddress = PublicKey;
-        var response = await AlgoApiClientSettings.Indexer.GetAccountTransactions(accountAddress);
+        var response = await AlgoApiClientSettings.Indexer.LookupAccountTransactions(accountAddress);
         AssertOkay(response.Error);
     });
 
@@ -58,7 +58,7 @@ public class IndexerClientTest : IndexerClientTestFixture
     [UnityTest]
     public IEnumerator GetApplicationsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var response = await AlgoApiClientSettings.Indexer.GetApplications();
+        var response = await AlgoApiClientSettings.Indexer.SearchForApplications();
         AssertOkay(response.Error);
     });
 
@@ -66,14 +66,14 @@ public class IndexerClientTest : IndexerClientTestFixture
     [UnityTest]
     public IEnumerator GetAssetsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var response = await AlgoApiClientSettings.Indexer.GetAssets();
+        var response = await AlgoApiClientSettings.Indexer.SearchForAssets();
         AssertOkay(response.Error);
     });
 
     [UnityTest]
     public IEnumerator GetTransactionsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var response = await AlgoApiClientSettings.Indexer.GetTransactions();
+        var response = await AlgoApiClientSettings.Indexer.SearchForTransactions();
         AssertOkay(response.Error);
     });
 
@@ -81,7 +81,7 @@ public class IndexerClientTest : IndexerClientTestFixture
     [Ignore("This feature is disabled")]
     public IEnumerator GetLogicSigTransactionsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var response = await AlgoApiClientSettings.Indexer.GetTransactions(sigType: SignatureType.LogicSig);
+        var response = await AlgoApiClientSettings.Indexer.SearchForTransactions(sigType: SignatureType.LogicSig);
         AssertOkay(response.Error);
     });
 
@@ -89,8 +89,8 @@ public class IndexerClientTest : IndexerClientTestFixture
     [UnityTest]
     public IEnumerator GetHealthShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var response = await AlgoApiClientSettings.Indexer.GetHealth();
+        var response = await AlgoApiClientSettings.Indexer.MakeHealthCheck();
         AssertOkay(response.Error);
-        Assert.IsTrue(response.Payload.DatabaseAvailable);
+        Assert.IsTrue(response.Payload.WrappedValue.DbAvailable);
     });
 }

@@ -1,4 +1,5 @@
 using System;
+using Unity.Mathematics;
 
 namespace AlgoSdk.Json
 {
@@ -14,13 +15,23 @@ namespace AlgoSdk.Json
 
     public class JsonReadException : Exception
     {
+        const int surroundingSize = 50;
+
         public JsonReadException(JsonReadError error, char c, int pos)
             : base($"{error} on char '{c}' at pos: {pos}")
         { }
 
         public JsonReadException(JsonReadError error, JsonReader context)
-            : base($"{error} on char '{context.Char}' at position: {context.Position} in JSON text:\n{context.Text}")
+            : base($"{error} on char '{context.Char}' at position: {context.Position} in JSON text:"
+                + $"\nsurrounding text: {GetSurroundingText(context)}"
+                + $"\n{context.Text}")
         { }
+
+        static string GetSurroundingText(JsonReader context)
+        {
+            var start = math.max(0, context.Position - surroundingSize);
+            return context.Text.Substring(start, surroundingSize * 2);
+        }
     }
 
     public static class JsonReadErrorExtensions

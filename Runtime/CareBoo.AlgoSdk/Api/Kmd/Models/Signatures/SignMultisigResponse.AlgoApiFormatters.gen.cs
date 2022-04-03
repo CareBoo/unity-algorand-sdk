@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     
     
@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.SignMultisigResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.SignMultisigResponse>(false).Assign("multisig", null, (AlgoSdk.SignMultisigResponse x) => x.SignedTransaction, (ref AlgoSdk.SignMultisigResponse x, System.Byte[] value) => x.SignedTransaction = value, AlgoSdk.ArrayComparer<System.Byte>.Instance, false).Assign("error", null, (AlgoSdk.SignMultisigResponse x) => x.Error, (ref AlgoSdk.SignMultisigResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value, false).Assign("message", null, (AlgoSdk.SignMultisigResponse x) => x.Message, (ref AlgoSdk.SignMultisigResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Kmd.SignMultisigResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Kmd.SignMultisigResponse>(false).Assign("multisig", (AlgoSdk.Kmd.SignMultisigResponse x) => x.SignedTransaction, (ref AlgoSdk.Kmd.SignMultisigResponse x, System.Byte[] value) => x.SignedTransaction = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("error", (AlgoSdk.Kmd.SignMultisigResponse x) => x.Error, (ref AlgoSdk.Kmd.SignMultisigResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value).Assign("message", (AlgoSdk.Kmd.SignMultisigResponse x) => x.Message, (ref AlgoSdk.Kmd.SignMultisigResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance));
             return true;
         }
     }

@@ -1,4 +1,5 @@
 using AlgoSdk.Crypto;
+using AlgoSdk.Kmd;
 using Unity.Collections;
 
 namespace AlgoSdk
@@ -141,7 +142,7 @@ namespace AlgoSdk
         /// <param name="walletPassword"></param>
         /// <returns></returns>
         AlgoApiRequest.Sent<SignMultisigResponse> SignMultisig(
-            Multisig msig,
+            MultisigSig msig,
             Ed25519.PublicKey publicKey,
             byte[] transactionData,
             FixedString128Bytes walletHandleToken,
@@ -164,7 +165,7 @@ namespace AlgoSdk
         AlgoApiRequest.Sent<SignProgramMultisigResponse> SignProgramMultisig(
             Address msigAccount,
             byte[] programData,
-            Multisig msig,
+            MultisigSig msig,
             Ed25519.PublicKey publicKey,
             FixedString128Bytes walletHandleToken,
             FixedString128Bytes walletPassword

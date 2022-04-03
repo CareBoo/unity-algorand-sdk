@@ -1,4 +1,6 @@
 using System;
+using System.Text;
+using AlgoSdk.Indexer;
 using Unity.Collections;
 using UnityEngine;
 
@@ -11,7 +13,7 @@ namespace AlgoSdk
     /// The indexer service is responsible for querying the blockchain
     /// </remarks>
     [Serializable]
-    public struct IndexerClient : IIndexerClient
+    public partial struct IndexerClient
     {
         [SerializeField]
         string address;
@@ -52,15 +54,15 @@ namespace AlgoSdk
 
         public Header[] Headers => headers;
 
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<HealthCheck> GetHealth()
+
+
+        [Obsolete("Call MakeHealthCheck instead.")]
+        public AlgoApiRequest.Sent<HealthCheckResponse> GetHealth()
         {
-            return this
-                .Get("/health")
-                .Send();
+            return MakeHealthCheck();
         }
 
-        /// <inheritdoc />
+        [Obsolete("Call SearchForAccounts instead.")]
         public AlgoApiRequest.Sent<AccountsResponse> GetAccounts(
             Optional<ulong> applicationId = default,
             Optional<ulong> assetId = default,
@@ -73,43 +75,30 @@ namespace AlgoSdk
             Optional<ulong> round = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent);
-            var query = queryBuilder
-                .Add("application-id", applicationId)
-                .Add("asset-id", assetId)
-                .Add("auth-addr", authAddr)
-                .Add("currency-greater-than", currencyGreaterThan)
-                .Add("currency-less-than", currencyLessThan)
-                .Add("include-all", includeAll)
-                .Add("limit", limit)
-                .Add("next", next)
-                .Add("round", round)
-                .ToString()
-                ;
-            return this
-                .Get("/v2/accounts" + query)
-                .Send();
+            return SearchForAccounts(
+                applicationId: applicationId,
+                assetId: assetId,
+                authAddr: authAddr,
+                currencyGreaterThan: currencyGreaterThan,
+                currencyLessThan: currencyLessThan,
+                includeAll: includeAll,
+                limit: limit,
+                next: next.HasValue ? next.Value.ToString() : null,
+                round: round
+            );
         }
 
-        /// <inheritdoc />
+        [Obsolete("Call LookupAccountByID instead.")]
         public AlgoApiRequest.Sent<AccountResponse> GetAccount(
             Address accountAddress,
             Optional<bool> includeAll = default,
             Optional<ulong> round = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent);
-            var query = queryBuilder
-                .Add("include-all", includeAll)
-                .Add("round", round)
-                .ToString()
-                ;
-            return this
-                .Get($"/v2/accounts/{accountAddress}{query}")
-                .Send();
+            return LookupAccountByID(accountAddress, round, includeAll);
         }
 
-        /// <inheritdoc />
+        [Obsolete("Call LookupAccountTransactions instead.")]
         public AlgoApiRequest.Sent<TransactionsResponse> GetAccountTransactions(
             Address accountAddress,
             DateTime afterTime = default,
@@ -129,31 +118,26 @@ namespace AlgoSdk
             TransactionId txid = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent);
-            var query = queryBuilder
-                .Add("after-time", afterTime)
-                .Add("asset-id", assetId)
-                .Add("before-time", beforeTime)
-                .Add("currency-greater-than", currencyGreaterThan)
-                .Add("currency-less-than", currencyLessThan)
-                .Add("limit", limit)
-                .Add("max-round", maxRound)
-                .Add("min-round", minRound)
-                .Add("next", next)
-                .Add("note-prefix", notePrefix)
-                .Add("rekey-to", rekeyTo)
-                .Add("round", round)
-                .Add("sig-type", sigType.ToOptionalFixedString())
-                .Add("tx-type", txType.ToOptionalFixedString())
-                .Add("txid", txid)
-                .ToString()
-                ;
-            return this
-                .Get($"/v2/accounts/{accountAddress}/transactions{query}")
-                .Send();
+            return LookupAccountTransactions(
+                accountAddress,
+                afterTime: afterTime,
+                assetId: assetId,
+                beforeTime: beforeTime,
+                currencyGreaterThan: currencyGreaterThan,
+                currencyLessThan: currencyLessThan,
+                limit: limit,
+                maxRound: maxRound,
+                minRound: minRound,
+                next: next.HasValue ? next.Value.ToString() : null,
+                notePrefix: notePrefix != null ? Encoding.UTF8.GetBytes(notePrefix) : null,
+                rekeyTo: rekeyTo,
+                round: round,
+                txType: txType,
+                txid: txid.Equals(default) ? null : txid
+            );
         }
 
-        /// <inheritdoc />
+        [Obsolete("Call SearchForApplications instead.")]
         public AlgoApiRequest.Sent<ApplicationsResponse> GetApplications(
             Optional<ulong> applicationId = default,
             Optional<bool> includeAll = default,
@@ -161,35 +145,24 @@ namespace AlgoSdk
             Optional<FixedString128Bytes> next = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent);
-            var query = queryBuilder
-                .Add("application-id", applicationId)
-                .Add("include-all", includeAll)
-                .Add("limit", limit)
-                .Add("next", next)
-                .ToString()
-                ;
-            return this
-                .Get("/v2/applications" + query)
-                .Send();
+            return SearchForApplications(
+                applicationId: applicationId,
+                includeAll: includeAll,
+                limit: limit,
+                next: next.HasValue ? next.Value.ToString() : null
+            );
         }
 
-        /// <inheritdoc />
+        [Obsolete("Call LookupApplicationByID instead.")]
         public AlgoApiRequest.Sent<ApplicationResponse> GetApplication(
             ulong applicationId,
             Optional<bool> includeAll = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent);
-            var query = queryBuilder
-                .Add("include-all", includeAll)
-                ;
-            return this
-                .Get($"/v2/applications/{applicationId}{query}")
-                .Send();
+            return LookupApplicationByID(applicationId, includeAll);
         }
 
-        /// <inheritdoc />
+        [Obsolete("Call SearchForAssets instead.")]
         public AlgoApiRequest.Sent<AssetsResponse> GetAssets(
             Optional<ulong> assetId = default,
             Address creator = default,
@@ -200,38 +173,28 @@ namespace AlgoSdk
             string unit = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent);
-            var query = queryBuilder.Add("asset-id", assetId)
-                .Add("creator", creator)
-                .Add("include-all", includeAll)
-                .Add("limit", limit)
-                .Add("name", name)
-                .Add("next", next)
-                .Add("unit", unit)
-                .ToString()
-                ;
-            return this
-                .Get($"/v2/assets{query}")
-                .Send();
+            return SearchForAssets(
+                assetId: assetId,
+                creator: creator.Equals(default) ? null : creator.ToString(),
+                includeAll: includeAll,
+                limit: limit,
+                name: name,
+                next: next.HasValue ? next.Value.ToString() : null,
+                unit: unit
+            );
         }
 
-        /// <inheritdoc />
+        [Obsolete("Call LookupAssetByID instead.")]
         public AlgoApiRequest.Sent<AssetResponse> GetAsset(
             ulong assetId,
             Optional<bool> includeAll = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent);
-            var query = queryBuilder
-                .Add("include-all", includeAll)
-                ;
-            return this
-                .Get($"/v2/assets/{assetId}{query}")
-                .Send();
+            return LookupAssetByID(assetId, includeAll);
         }
 
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<BalancesResponse> GetAssetBalances(
+        [Obsolete("Call LookupAssetBalances instead.")]
+        public AlgoApiRequest.Sent<AssetBalancesResponse> GetAssetBalances(
             ulong assetId,
             Optional<ulong> currencyGreaterThan = default,
             Optional<ulong> currencyLessThan = default,
@@ -241,22 +204,17 @@ namespace AlgoSdk
             Optional<ulong> round = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent);
-            var query = queryBuilder
-                .Add("currency-greater-than", currencyGreaterThan)
-                .Add("currency-less-than", currencyLessThan)
-                .Add("include-all", includeAll)
-                .Add("limit", limit)
-                .Add("next", next)
-                .Add("round", round)
-                .ToString()
-                ;
-            return this
-                .Get($"/v2/assets/{assetId}/balances{query}")
-                .Send();
+            return LookupAssetBalances(
+                assetId,
+                currencyGreaterThan: currencyGreaterThan,
+                currencyLessThan: currencyLessThan,
+                includeAll: includeAll,
+                limit: limit,
+                next: next.HasValue ? next.Value.ToString() : null
+            );
         }
 
-        /// <inheritdoc />
+        [Obsolete("Call LookupAssetTransactions instead.")]
         public AlgoApiRequest.Sent<TransactionsResponse> GetAssetTransactions(
             ulong assetId,
             Address address = default,
@@ -278,39 +236,35 @@ namespace AlgoSdk
             TransactionId txid = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent);
-            var query = queryBuilder
-                .Add("address", address)
-                .Add("address-role", addressRole.ToOptionalFixedString())
-                .Add("after-time", afterTime)
-                .Add("before-time", beforeTime)
-                .Add("currency-greater-than", currencyGreaterThan)
-                .Add("currency-less-than", currencyLessThan)
-                .Add("exclude-close-to", excludeCloseTo)
-                .Add("limit", limit)
-                .Add("max-round", maxRound)
-                .Add("min-round", minRound)
-                .Add("next", next)
-                .Add("note-prefix", notePrefix)
-                .Add("rekey-to", rekeyTo)
-                .Add("round", round)
-                .Add("sig-type", sigType.ToOptionalFixedString())
-                .Add("tx-type", txType.ToOptionalFixedString())
-                .Add("txid", txid)
-                .ToString()
-                ;
-            return this
-                .Get($"/v2/assets/{assetId}/transactions{query}")
-                .Send();
+            return LookupAssetTransactions(
+                assetId,
+                address: address.Equals(default) ? null : address.ToString(),
+                addressRole: addressRole,
+                afterTime: afterTime,
+                beforeTime: beforeTime,
+                currencyGreaterThan: currencyGreaterThan,
+                currencyLessThan: currencyLessThan,
+                excludeCloseTo: excludeCloseTo,
+                limit: limit,
+                maxRound: maxRound,
+                minRound: minRound,
+                next: next.HasValue ? next.Value.ToString() : null,
+                notePrefix: notePrefix != null ? Encoding.UTF8.GetBytes(notePrefix) : null,
+                rekeyTo: rekeyTo,
+                round: round,
+                sigType: sigType,
+                txType: txType,
+                txid: txid.Equals(default) ? null : txid.ToString()
+            );
         }
 
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<Block> GetBlock(ulong round)
+        [Obsolete("Call LookupBlock instead.")]
+        public AlgoApiRequest.Sent<BlockResponse> GetBlock(ulong round)
         {
-            return this.Get($"/v2/blocks/{round}").Send();
+            return LookupBlock(round);
         }
 
-        /// <inheritdoc />
+        [Obsolete("Call SearchForTransactions instead.")]
         public AlgoApiRequest.Sent<TransactionsResponse> GetTransactions(
             Address address = default,
             AddressRole addressRole = default,
@@ -333,40 +287,31 @@ namespace AlgoSdk
             TransactionId txid = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent);
-            var query = queryBuilder
-                .Add("address", address)
-                .Add("address-role", addressRole.ToOptionalFixedString())
-                .Add("after-time", afterTime)
-                .Add("application-id", applicationId)
-                .Add("asset-id", assetId)
-                .Add("before-time", beforeTime)
-                .Add("currency-greater-than", currencyGreaterThan)
-                .Add("currency-less-than", currencyLessThan)
-                .Add("exclude-close-to", excludeCloseTo)
-                .Add("limit", limit)
-                .Add("max-round", maxRound)
-                .Add("min-round", minRound)
-                .Add("next", next)
-                .Add("note-prefix", notePrefix)
-                .Add("rekey-to", rekeyTo)
-                .Add("round", round)
-                .Add("sig-type", sigType.ToOptionalFixedString())
-                .Add("tx-type", txType.ToOptionalFixedString())
-                .Add("txid", txid)
-                .ToString()
-                ;
-            return this
-                .Get("/v2/transactions" + query)
-                .Send();
+            return SearchForTransactions(
+                address: address.Equals(default) ? null : address.ToString(),
+                addressRole: addressRole,
+                afterTime: afterTime,
+                beforeTime: beforeTime,
+                currencyGreaterThan: currencyGreaterThan,
+                currencyLessThan: currencyLessThan,
+                excludeCloseTo: excludeCloseTo,
+                limit: limit,
+                maxRound: maxRound,
+                minRound: minRound,
+                next: next.HasValue ? next.Value.ToString() : null,
+                notePrefix: notePrefix != null ? Encoding.UTF8.GetBytes(notePrefix) : null,
+                rekeyTo: rekeyTo,
+                round: round,
+                sigType: sigType,
+                txType: txType,
+                txid: txid.Equals(default) ? null : txid.ToString()
+            );
         }
 
-        /// <inheritdoc />
+        [Obsolete("Call LookupTransaction instead.")]
         public AlgoApiRequest.Sent<TransactionResponse> GetTransaction(TransactionId txid)
         {
-            return this
-                .Get($"/v2/transactions/{txid}")
-                .Send();
+            return LookupTransaction(txid);
         }
     }
 }

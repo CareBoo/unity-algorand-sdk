@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     
     
@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.SignTransactionRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.SignTransactionRequest>(false).Assign("public_key", null, (AlgoSdk.SignTransactionRequest x) => x.PublicKey, (ref AlgoSdk.SignTransactionRequest x, AlgoSdk.Crypto.Ed25519.PublicKey value) => x.PublicKey = value, false).Assign("transaction", null, (AlgoSdk.SignTransactionRequest x) => x.Transaction, (ref AlgoSdk.SignTransactionRequest x, System.Byte[] value) => x.Transaction = value, AlgoSdk.ArrayComparer<System.Byte>.Instance, false).Assign("wallet_handle_token", null, (AlgoSdk.SignTransactionRequest x) => x.WalletHandleToken, (ref AlgoSdk.SignTransactionRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value, false).Assign("wallet_password", null, (AlgoSdk.SignTransactionRequest x) => x.WalletPassword, (ref AlgoSdk.SignTransactionRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletPassword = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Kmd.SignTransactionRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Kmd.SignTransactionRequest>(false).Assign("public_key", (AlgoSdk.Kmd.SignTransactionRequest x) => x.PublicKey, (ref AlgoSdk.Kmd.SignTransactionRequest x, AlgoSdk.Crypto.Ed25519.PublicKey value) => x.PublicKey = value).Assign("transaction", (AlgoSdk.Kmd.SignTransactionRequest x) => x.Transaction, (ref AlgoSdk.Kmd.SignTransactionRequest x, System.Byte[] value) => x.Transaction = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("wallet_handle_token", (AlgoSdk.Kmd.SignTransactionRequest x) => x.WalletHandleToken, (ref AlgoSdk.Kmd.SignTransactionRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value).Assign("wallet_password", (AlgoSdk.Kmd.SignTransactionRequest x) => x.WalletPassword, (ref AlgoSdk.Kmd.SignTransactionRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletPassword = value));
             return true;
         }
     }

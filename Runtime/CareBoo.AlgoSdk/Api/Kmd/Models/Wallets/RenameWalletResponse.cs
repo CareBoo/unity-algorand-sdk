@@ -1,18 +1,18 @@
 using System;
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     [AlgoApiObject]
     public partial struct RenameWalletResponse
         : IEquatable<RenameWalletResponse>
     {
-        [AlgoApiField("error", null)]
+        [AlgoApiField("error")]
         public Optional<bool> Error;
 
-        [AlgoApiField("message", null)]
+        [AlgoApiField("message")]
         public string Message;
 
-        [AlgoApiField("wallet", null)]
+        [AlgoApiField("wallet")]
         public Wallet Wallet;
 
         public bool Equals(RenameWalletResponse other)

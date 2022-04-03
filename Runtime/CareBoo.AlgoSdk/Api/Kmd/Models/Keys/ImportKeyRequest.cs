@@ -1,16 +1,16 @@
 using System;
 using Unity.Collections;
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     [AlgoApiObject]
     public partial struct ImportKeyRequest
         : IEquatable<ImportKeyRequest>
     {
-        [AlgoApiField("private_key", null)]
+        [AlgoApiField("private_key")]
         public PrivateKey PrivateKey;
 
-        [AlgoApiField("wallet_handle_token", null)]
+        [AlgoApiField("wallet_handle_token")]
         public FixedString128Bytes WalletHandleToken;
 
         public bool Equals(ImportKeyRequest other)

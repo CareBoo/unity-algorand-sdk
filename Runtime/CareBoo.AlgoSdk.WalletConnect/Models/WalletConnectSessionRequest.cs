@@ -6,13 +6,13 @@ namespace AlgoSdk.WalletConnect
     public partial struct WalletConnectSessionRequest
         : IEquatable<WalletConnectSessionRequest>
     {
-        [AlgoApiField("peerId", null)]
+        [AlgoApiField("peerId")]
         public string PeerId;
 
-        [AlgoApiField("peerMeta", null)]
+        [AlgoApiField("peerMeta")]
         public ClientMeta PeerMeta;
 
-        [AlgoApiField("chainId", null)]
+        [AlgoApiField("chainId")]
         public Optional<int> ChainId;
 
         public bool Equals(WalletConnectSessionRequest other)

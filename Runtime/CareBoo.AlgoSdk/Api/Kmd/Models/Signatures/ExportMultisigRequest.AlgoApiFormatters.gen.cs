@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     
     
@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ExportMultisigRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.ExportMultisigRequest>(false).Assign("address", null, (AlgoSdk.ExportMultisigRequest x) => x.Address, (ref AlgoSdk.ExportMultisigRequest x, AlgoSdk.Address value) => x.Address = value, false).Assign("wallet_handle_token", null, (AlgoSdk.ExportMultisigRequest x) => x.WalletHandleToken, (ref AlgoSdk.ExportMultisigRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Kmd.ExportMultisigRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Kmd.ExportMultisigRequest>(false).Assign("address", (AlgoSdk.Kmd.ExportMultisigRequest x) => x.Address, (ref AlgoSdk.Kmd.ExportMultisigRequest x, AlgoSdk.Address value) => x.Address = value).Assign("wallet_handle_token", (AlgoSdk.Kmd.ExportMultisigRequest x) => x.WalletHandleToken, (ref AlgoSdk.Kmd.ExportMultisigRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value));
             return true;
         }
     }

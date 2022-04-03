@@ -11,17 +11,17 @@ namespace AlgoSdk
         : ISignature
         , IEquatable<LogicSig>
     {
-        [AlgoApiField("logicsig", "l")]
+        [AlgoApiField("l")]
         public byte[] Program;
 
-        [AlgoApiField("args", "arg")]
+        [AlgoApiField("arg")]
         public FixedList128Bytes<byte>[] Args;
 
-        [AlgoApiField("signature", "sig")]
+        [AlgoApiField("sig")]
         public Sig Sig;
 
-        [AlgoApiField("multisig-signature", "msig")]
-        public Multisig Multisig;
+        [AlgoApiField("msig")]
+        public MultisigSig Multisig;
 
         public bool Equals(LogicSig other)
         {

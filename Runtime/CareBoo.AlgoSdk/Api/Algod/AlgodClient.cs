@@ -1,4 +1,5 @@
 using System;
+using AlgoSdk.Algod;
 using AlgoSdk.LowLevel;
 using Unity.Collections;
 using UnityEngine;
@@ -13,7 +14,7 @@ namespace AlgoSdk
     /// required to create and send transactions.
     /// </remarks>
     [Serializable]
-    public struct AlgodClient : IAlgodClient
+    public partial struct AlgodClient : IAlgodClient
     {
         [SerializeField]
         string address;
@@ -54,213 +55,123 @@ namespace AlgoSdk
 
         public Header[] Headers => headers;
 
-        /// <inheritdoc />
+
+        [Obsolete("Call AlgodClient.GetGenesis instead.")]
         public AlgoApiRequest.Sent<AlgoApiObject> GetGenesisInformation()
         {
-            return this
-                .Get("/genesis")
-                .Send();
+            return GetGenesis();
         }
 
-        /// <inheritdoc />
+        [Obsolete("Call HealthCheck instead.")]
         public AlgoApiRequest.Sent GetHealth()
         {
-            return this
-                .Get("/health")
-                .Send();
+            return HealthCheck();
         }
 
-        /// <inheritdoc />
+        [Obsolete("Call Metrics instead.")]
         public AlgoApiRequest.Sent GetMetrics()
         {
-            return this
-                .Get("/metrics")
-                .Send();
+            return Metrics();
         }
 
-        /// <inheritdoc />
+        [Obsolete("Call SwaggerJSON instead.")]
         public AlgoApiRequest.Sent<AlgoApiObject> GetSwaggerSpec()
         {
-            return this
-                .Get("/swagger.json")
-                .Send();
+            return SwaggerJSON();
         }
 
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<AccountInfo> GetAccountInformation(Address accountAddress)
+        [Obsolete("Call AccountInformation instead.")]
+        public AlgoApiRequest.Sent<AccountResponse> GetAccountInformation(Address accountAddress)
         {
-            return this
-                .Get($"/v2/accounts/{accountAddress}")
-                .Send();
+            return AccountInformation(accountAddress);
         }
 
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<PendingTransactions> GetPendingTransactions(ulong max = 0)
+        [Obsolete("Call GetPendingTransactionsByAddress instead.")]
+        public AlgoApiRequest.Sent<PendingTransactionsResponse> GetPendingTransactionsByAccount(Address accountAddress, ulong max = 0)
         {
-            return this
-                .Get($"/v2/transactions/pending?max={max}&format=msgpack")
-                .Send();
+            Optional<ulong> optionalMax = default;
+            if (max != 0)
+                optionalMax = max;
+            return GetPendingTransactionsByAddress(accountAddress, optionalMax);
         }
 
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<PendingTransactions> GetPendingTransactionsByAccount(Address accountAddress, ulong max = 0)
+        [Obsolete("Call PendingTransactionInformation instead.")]
+        public AlgoApiRequest.Sent<PendingTransactionResponse> GetPendingTransaction(TransactionId txid)
         {
-            return this
-                .Get($"/v2/accounts/{accountAddress}/transactions/pending?max={max}&format=msgpack")
-                .Send();
+            return PendingTransactionInformation(txid.ToString());
         }
 
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<PendingTransaction> GetPendingTransaction(TransactionId txid)
+        [Obsolete("Call GetApplicationByID instead.")]
+        public AlgoApiRequest.Sent<ApplicationResponse> GetApplication(ulong applicationId)
         {
-            return this
-                .Get($"/v2/transactions/pending/{txid}?format=msgpack")
-                .Send();
+            return GetApplicationByID(applicationId);
         }
 
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<Application> GetApplication(ulong applicationId)
+        [Obsolete("Call GetAssetByID instead.")]
+        public AlgoApiRequest.Sent<AssetResponse> GetAsset(ulong assetId)
         {
-            return this
-                .Get($"/v2/applications/{applicationId}")
-                .Send();
+            return GetAssetByID(assetId);
         }
 
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<Asset> GetAsset(ulong assetId)
+
+        [Obsolete("Call GetProof instead.")]
+        public AlgoApiRequest.Sent<ProofResponse> GetMerkleProof(ulong round, TransactionId txid)
         {
-            return this
-                .Get($"/v2/assets/{assetId}")
-                .Send();
+            return GetProof(round, txid);
         }
 
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<BlockResponse> GetBlock(ulong round)
+        [Obsolete("Call GetSupply instead.")]
+        public AlgoApiRequest.Sent<SupplyResponse> GetLedgerSupply()
         {
-            return this
-                .Get($"/v2/blocks/{round}?format=msgpack")
-                .Send();
+            return GetSupply();
         }
 
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<MerkleProof> GetMerkleProof(ulong round, TransactionId txid)
-        {
-            return this
-                .Get($"/v2/blocks/{round}/transactions/{txid}/proof")
-                .Send();
-        }
-
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<CatchupMessage> StartCatchup(string catchpoint)
-        {
-            return this
-                .Post($"/v2/catchup/{catchpoint}")
-                .Send();
-        }
-
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<CatchupMessage> AbortCatchup(string catchpoint)
-        {
-            return this
-                .Delete($"/v2/catchup/{catchpoint}")
-                .Send();
-        }
-
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<LedgerSupply> GetLedgerSupply()
-        {
-            return this
-                .Get("/v2/ledger/supply")
-                .Send();
-        }
-
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<TransactionIdResponse> RegisterParticipationKeys(
+        [Obsolete("Call AddParticipationKey instead.", true)]
+        public AlgoApiRequest.Sent<PostTransactionsResponse> RegisterParticipationKeys(
             string accountAddress,
             ulong fee = 1000,
             Optional<ulong> keyDilution = default,
             Optional<bool> noWait = default,
             Optional<bool> roundLastValid = default)
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
-                .Add("fee", fee, (ulong)1000)
-                .Add("key-dilution", keyDilution)
-                .Add("no-wait", noWait)
-                .Add("round-last-valid", roundLastValid)
-                ;
-            var endpoint = $"/v2/register-participation-keys/{accountAddress}{queryBuilder}";
-            return AlgoApiRequest.Post(this.GetUrl(endpoint))
-                .SetHeaders(Headers)
-                .Send()
-                ;
+            throw new NotImplementedException();
         }
 
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent ShutDown(Optional<ulong> timeout = default)
+        [Obsolete("Call ShutdownNode instead.")]
+        public AlgoApiRequest.Sent<AlgoApiObject> ShutDown(Optional<ulong> timeout = default)
         {
-            return this
-                .Post("/v2/shutdown")
-                .Send();
+            return ShutdownNode(timeout);
         }
 
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<Status> GetCurrentStatus()
+        [Obsolete("Call GetStatus instead.")]
+        public AlgoApiRequest.Sent<NodeStatusResponse> GetCurrentStatus()
         {
-            return this
-                .Get("/v2/status")
-                .Send();
+            return GetStatus();
         }
 
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<Status> GetStatusAfterWaitingForRound(ulong round)
+        [Obsolete("Call WaitForBlock instead.")]
+        public AlgoApiRequest.Sent<NodeStatusResponse> GetStatusAfterWaitingForRound(ulong round)
         {
-            return this
-                .Get($"/v2/status/wait-for-block-after/{round}")
-                .Send();
+            return WaitForBlock(round);
         }
 
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<TealCompilationResult> TealCompile(string source)
-        {
-            return this
-                .Post("/v2/teal/compile")
-                .SetPlainTextBody(source)
-                .Send();
-        }
-
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<DryrunResults> TealDryrun(Optional<DryrunRequest> dryrunRequest = default)
-        {
-            const string endpoint = "/v2/teal/dryrun";
-            using var data = AlgoApiSerializer.SerializeMessagePack(dryrunRequest.Value, Allocator.Persistent);
-            return dryrunRequest.HasValue
-                ? this
-                    .Post(endpoint)
-                    .SetMessagePackBody(data.AsArray().AsReadOnly())
-                    .Send()
-                : this
-                    .Post(endpoint)
-                    .Send()
-                ;
-        }
-
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<TransactionIdResponse> SendTransaction<T>(SignedTxn<T> txn)
+        [Obsolete("Call RawTransaction instead.")]
+        public AlgoApiRequest.Sent<PostTransactionsResponse> SendTransaction<T>(SignedTxn<T> txn)
             where T : struct, ITransaction, IEquatable<T>
         {
             using var data = AlgoApiSerializer.SerializeMessagePack(txn, Allocator.Persistent);
-            return SendTransactions(data.AsArray().AsReadOnly());
+            return RawTransaction(data.ToArray());
         }
 
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<TransactionIdResponse> SendTransaction(byte[] txn)
+        [Obsolete("Call RawTransaction instead.")]
+        public AlgoApiRequest.Sent<PostTransactionsResponse> SendTransaction(byte[] txn)
         {
             using var data = new NativeArray<byte>(txn, Allocator.Persistent);
-            return SendTransactions(data.AsReadOnly());
+            return RawTransaction(data.ToArray());
         }
 
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<TransactionIdResponse> SendTransactions(
+        [Obsolete("Call RawTransaction instead.")]
+        public AlgoApiRequest.Sent<PostTransactionsResponse> SendTransactions(
             params SignedTxn[] txns
         )
         {
@@ -273,36 +184,29 @@ namespace AlgoSdk
             return SendTransactions(bytes.AsArray().AsReadOnly());
         }
 
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<TransactionIdResponse> SendTransactions(params byte[][] signedTxns)
+        [Obsolete("Call RawTransaction instead.")]
+        public AlgoApiRequest.Sent<PostTransactionsResponse> SendTransactions(params byte[][] signedTxns)
         {
             using var bytes = NativeArrayUtil.ConcatAll(signedTxns, Allocator.Persistent);
             return SendTransactions(bytes.AsReadOnly());
         }
 
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<TransactionParams> GetSuggestedParams()
+        [Obsolete("Call TransactionParams instead.")]
+        public AlgoApiRequest.Sent<TransactionParametersResponse> GetSuggestedParams()
         {
-            return this
-                .Get("/v2/transactions/params")
-                .Send();
+            return TransactionParams();
         }
 
-        /// <inheritdoc />
-        public AlgoApiRequest.Sent<Version> GetVersions()
+        [Obsolete("Call GetVersion instead.")]
+        public AlgoApiRequest.Sent<VersionsResponse> GetVersions()
         {
-            return this
-                .Get("/versions")
-                .Send();
+            return GetVersion();
         }
 
-        /// <inheritdoc />
-        AlgoApiRequest.Sent<TransactionIdResponse> SendTransactions(NativeArray<byte>.ReadOnly rawTxnData)
+        [Obsolete("Call RawTransaction instead.")]
+        AlgoApiRequest.Sent<PostTransactionsResponse> SendTransactions(NativeArray<byte>.ReadOnly rawTxnData)
         {
-            return this
-                .Post("/v2/transactions")
-                .SetMessagePackBody(rawTxnData)
-                .Send();
+            return RawTransaction(rawTxnData.ToArray());
         }
     }
 }

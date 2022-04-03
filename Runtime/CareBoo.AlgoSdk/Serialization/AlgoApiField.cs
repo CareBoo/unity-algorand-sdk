@@ -58,7 +58,7 @@ namespace AlgoSdk
             ShouldSerialize = shouldSerialize;
         }
 
-        public static AlgoApiField<TAlgoApiObject> Assign<T>(FieldGetter<T> getter, FieldSetter<T> setter, bool readOnly)
+        public static AlgoApiField<TAlgoApiObject> Assign<T>(FieldGetter<T> getter, FieldSetter<T> setter)
             where T : IEquatable<T>
         {
             bool fieldsEqual(TAlgoApiObject messagePackObject, TAlgoApiObject other)
@@ -71,10 +71,10 @@ namespace AlgoSdk
                 var field = getter(messagePackObject);
                 return !field.Equals(default);
             }
-            return Assign(getter, setter, fieldsEqual, readOnly ? shouldSerializeReadOnly : shouldSerialize);
+            return Assign(getter, setter, fieldsEqual, shouldSerialize);
         }
 
-        public static AlgoApiField<TAlgoApiObject> Assign<T>(FieldGetter<T> getter, FieldSetter<T> setter, IEqualityComparer<T> comparer, bool readOnly)
+        public static AlgoApiField<TAlgoApiObject> Assign<T>(FieldGetter<T> getter, FieldSetter<T> setter, IEqualityComparer<T> comparer)
         {
             bool fieldsEqual(TAlgoApiObject messagePackObject, TAlgoApiObject other)
             {
@@ -84,7 +84,7 @@ namespace AlgoSdk
             {
                 return !comparer.Equals(getter(messagePackObject), default);
             }
-            return Assign(getter, setter, fieldsEqual, readOnly ? shouldSerializeReadOnly : shouldSerialize);
+            return Assign(getter, setter, fieldsEqual, shouldSerialize);
         }
 
         public static AlgoApiField<TAlgoApiObject> Assign<T>(FieldGetter<T> getter, FieldSetter<T> setter, EqualityComparer fieldsEqual, SerializePredicate shouldSerialize)
@@ -117,16 +117,16 @@ namespace AlgoSdk
         public class Map<TKey> : SortedDictionary<TKey, AlgoApiField<TAlgoApiObject>>
             where TKey : unmanaged, INativeList<byte>, IUTF8Bytes
         {
-            public Map<TKey> Assign<T>(TKey key, FieldGetter<T> getter, FieldSetter<T> setter, bool readOnly)
+            public Map<TKey> Assign<T>(TKey key, FieldGetter<T> getter, FieldSetter<T> setter)
                 where T : IEquatable<T>
             {
-                Add(key, AlgoApiField<TAlgoApiObject>.Assign(getter, setter, readOnly));
+                Add(key, AlgoApiField<TAlgoApiObject>.Assign(getter, setter));
                 return this;
             }
 
-            public Map<TKey> Assign<T>(TKey key, FieldGetter<T> getter, FieldSetter<T> setter, IEqualityComparer<T> comparer, bool readOnly)
+            public Map<TKey> Assign<T>(TKey key, FieldGetter<T> getter, FieldSetter<T> setter, IEqualityComparer<T> comparer)
             {
-                Add(key, AlgoApiField<TAlgoApiObject>.Assign(getter, setter, comparer, readOnly));
+                Add(key, AlgoApiField<TAlgoApiObject>.Assign(getter, setter, comparer));
                 return this;
             }
 

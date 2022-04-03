@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     
     
@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.InitWalletHandleTokenResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.InitWalletHandleTokenResponse>(false).Assign("wallet_handle_token", null, (AlgoSdk.InitWalletHandleTokenResponse x) => x.WalletHandleToken, (ref AlgoSdk.InitWalletHandleTokenResponse x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value, false).Assign("error", null, (AlgoSdk.InitWalletHandleTokenResponse x) => x.Error, (ref AlgoSdk.InitWalletHandleTokenResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value, false).Assign("message", null, (AlgoSdk.InitWalletHandleTokenResponse x) => x.Message, (ref AlgoSdk.InitWalletHandleTokenResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Kmd.InitWalletHandleTokenResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Kmd.InitWalletHandleTokenResponse>(false).Assign("wallet_handle_token", (AlgoSdk.Kmd.InitWalletHandleTokenResponse x) => x.WalletHandleToken, (ref AlgoSdk.Kmd.InitWalletHandleTokenResponse x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value).Assign("error", (AlgoSdk.Kmd.InitWalletHandleTokenResponse x) => x.Error, (ref AlgoSdk.Kmd.InitWalletHandleTokenResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value).Assign("message", (AlgoSdk.Kmd.InitWalletHandleTokenResponse x) => x.Message, (ref AlgoSdk.Kmd.InitWalletHandleTokenResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance));
             return true;
         }
     }

@@ -1,13 +1,13 @@
 using System;
 using Unity.Collections;
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     [AlgoApiObject]
     public partial struct WalletInfoRequest
         : IEquatable<WalletInfoRequest>
     {
-        [AlgoApiField("wallet_handle_token", null)]
+        [AlgoApiField("wallet_handle_token")]
         public FixedString128Bytes WalletHandleToken;
 
         public bool Equals(WalletInfoRequest other)

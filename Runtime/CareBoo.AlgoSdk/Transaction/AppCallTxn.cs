@@ -65,7 +65,7 @@ namespace AlgoSdk
     public partial struct Transaction : IAppCallTxn
     {
         /// <inheritdoc />
-        [AlgoApiField(null, "apid")]
+        [AlgoApiField("apid")]
         public AppIndex ApplicationId
         {
             get => appCallParams.ApplicationId;
@@ -73,7 +73,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("on-completion", "apan")]
+        [AlgoApiField("apan")]
         public OnCompletion OnComplete
         {
             get => appCallParams.OnComplete;
@@ -81,7 +81,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "apap")]
+        [AlgoApiField("apap")]
         public CompiledTeal ApprovalProgram
         {
             get => appCallParams.ApprovalProgram;
@@ -89,7 +89,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "apsu")]
+        [AlgoApiField("apsu")]
         public CompiledTeal ClearStateProgram
         {
             get => appCallParams.ClearStateProgram;
@@ -97,7 +97,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "apaa")]
+        [AlgoApiField("apaa")]
         public CompiledTeal[] AppArguments
         {
             get => appCallParams.AppArguments;
@@ -105,7 +105,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "apat")]
+        [AlgoApiField("apat")]
         public Address[] Accounts
         {
             get => appCallParams.Accounts;
@@ -113,7 +113,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "apfa")]
+        [AlgoApiField("apfa")]
         public ulong[] ForeignApps
         {
             get => appCallParams.ForeignApps;
@@ -121,7 +121,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "apas")]
+        [AlgoApiField("apas")]
         public ulong[] ForeignAssets
         {
             get => appCallParams.ForeignAssets;
@@ -129,7 +129,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "apgs")]
+        [AlgoApiField("apgs")]
         public StateSchema GlobalStateSchema
         {
             get => appCallParams.GlobalStateSchema;
@@ -137,7 +137,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "apls")]
+        [AlgoApiField("apls")]
         public StateSchema LocalStateSchema
         {
             get => appCallParams.LocalStateSchema;
@@ -145,7 +145,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "apep")]
+        [AlgoApiField("apep")]
         public ulong ExtraProgramPages
         {
             get => appCallParams.ExtraProgramPages;
@@ -422,7 +422,7 @@ namespace AlgoSdk
         Params @params;
 
         /// <inheritdoc />
-        [AlgoApiField("fee", "fee")]
+        [AlgoApiField("fee")]
         public MicroAlgos Fee
         {
             get => header.Fee;
@@ -430,7 +430,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("first-valid", "fv")]
+        [AlgoApiField("fv")]
         public ulong FirstValidRound
         {
             get => header.FirstValidRound;
@@ -438,7 +438,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("genesis-hash", "gh")]
+        [AlgoApiField("gh")]
         public GenesisHash GenesisHash
         {
             get => header.GenesisHash;
@@ -446,7 +446,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("last-valid", "lv")]
+        [AlgoApiField("lv")]
         public ulong LastValidRound
         {
             get => header.LastValidRound;
@@ -454,7 +454,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("sender", "snd")]
+        [AlgoApiField("snd")]
         public Address Sender
         {
             get => header.Sender;
@@ -462,7 +462,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("tx-type", "type")]
+        [AlgoApiField("type")]
         public TransactionType TransactionType
         {
             get => TransactionType.ApplicationCall;
@@ -470,7 +470,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("genesis-id", "gen")]
+        [AlgoApiField("gen")]
         public FixedString32Bytes GenesisId
         {
             get => header.GenesisId;
@@ -478,7 +478,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("group", "grp")]
+        [AlgoApiField("grp")]
         public TransactionId Group
         {
             get => header.Group;
@@ -486,7 +486,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("lease", "lx")]
+        [AlgoApiField("lx")]
         public TransactionId Lease
         {
             get => header.Lease;
@@ -494,7 +494,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("note", "note")]
+        [AlgoApiField("note")]
         public byte[] Note
         {
             get => header.Note;
@@ -502,7 +502,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("rekey-to", "rekey")]
+        [AlgoApiField("rekey")]
         public Address RekeyTo
         {
             get => header.RekeyTo;
@@ -510,7 +510,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "apid")]
+        [AlgoApiField("apid")]
         public AppIndex ApplicationId
         {
             get => @params.ApplicationId;
@@ -518,7 +518,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("on-completion", "apan")]
+        [AlgoApiField("apan")]
         public OnCompletion OnComplete
         {
             get => @params.OnComplete;
@@ -526,7 +526,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "apap")]
+        [AlgoApiField("apap")]
         public CompiledTeal ApprovalProgram
         {
             get => @params.ApprovalProgram;
@@ -534,7 +534,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "apsu")]
+        [AlgoApiField("apsu")]
         public CompiledTeal ClearStateProgram
         {
             get => @params.ClearStateProgram;
@@ -542,7 +542,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "apaa")]
+        [AlgoApiField("apaa")]
         public CompiledTeal[] AppArguments
         {
             get => @params.AppArguments;
@@ -550,7 +550,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "apat")]
+        [AlgoApiField("apat")]
         public Address[] Accounts
         {
             get => @params.Accounts;
@@ -558,7 +558,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "apfa")]
+        [AlgoApiField("apfa")]
         public ulong[] ForeignApps
         {
             get => @params.ForeignApps;
@@ -566,7 +566,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "apas")]
+        [AlgoApiField("apas")]
         public ulong[] ForeignAssets
         {
             get => @params.ForeignAssets;
@@ -574,7 +574,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "apgs")]
+        [AlgoApiField("apgs")]
         public StateSchema GlobalStateSchema
         {
             get => @params.GlobalStateSchema;
@@ -582,7 +582,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "apls")]
+        [AlgoApiField("apls")]
         public StateSchema LocalStateSchema
         {
             get => @params.LocalStateSchema;
@@ -590,7 +590,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "apep")]
+        [AlgoApiField("apep")]
         public ulong ExtraProgramPages
         {
             get => @params.ExtraProgramPages;
@@ -623,47 +623,47 @@ namespace AlgoSdk
         public partial struct Params
             : IEquatable<Params>
         {
-            [AlgoApiField("application-id", "apid")]
+            [AlgoApiField("apid")]
             [Tooltip("ID of the application being configured or empty if creating")]
             public AppIndex ApplicationId;
 
-            [AlgoApiField("on-completion", "apan")]
+            [AlgoApiField("apan")]
             [Tooltip("Defines what additional actions occur with the transaction.")]
             public OnCompletion OnComplete;
 
-            [AlgoApiField("approval-program", "apap")]
+            [AlgoApiField("apap")]
             [Tooltip("Logic executed for every application transaction, except when on-completion is set to \"clear\". It can read and write global state for the application, as well as account-specific local state. Approval programs may reject the transaction.")]
             public CompiledTeal ApprovalProgram;
 
-            [AlgoApiField("clear-state-program", "apsu")]
+            [AlgoApiField("apsu")]
             [Tooltip("Logic executed for application transactions with on-completion set to \"clear\". It can read and write global state for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.")]
             public CompiledTeal ClearStateProgram;
 
-            [AlgoApiField("application-args", "apaa")]
+            [AlgoApiField("apaa")]
             [Tooltip("Transaction specific arguments accessed from the application's approval-program and clear-state-program.")]
             public CompiledTeal[] AppArguments;
 
-            [AlgoApiField("accounts", "apat")]
+            [AlgoApiField("apat")]
             [Tooltip("List of accounts in addition to the sender that may be accessed from the application's approval-program and clear-state-program.")]
             public Address[] Accounts;
 
-            [AlgoApiField("foreign-apps", "apfa")]
+            [AlgoApiField("apfa")]
             [Tooltip("Lists the applications in addition to the application-id whose global states may be accessed by this application's approval-program and clear-state-program. The access is read-only.")]
             public ulong[] ForeignApps;
 
-            [AlgoApiField("foreign-assets", "apas")]
+            [AlgoApiField("apas")]
             [Tooltip("Lists the assets whose AssetParams may be accessed by this application's approval-program and clear-state-program. The access is read-only.")]
             public ulong[] ForeignAssets;
 
-            [AlgoApiField("global-state-schema", "global-state-schema")]
+            [AlgoApiField("global-state-schema")]
             [Tooltip("Holds the maximum number of global state values")]
             public StateSchema GlobalStateSchema;
 
-            [AlgoApiField("local-state-schema", "local-state-schema")]
+            [AlgoApiField("local-state-schema")]
             [Tooltip("Holds the maximum number of local state values")]
             public StateSchema LocalStateSchema;
 
-            [AlgoApiField("extra-program-pages", "epp")]
+            [AlgoApiField("epp")]
             [Tooltip("Number of additional pages allocated to the application's approval and clear state programs. Each ExtraProgramPages is 2048 bytes.")]
             public ulong ExtraProgramPages;
 

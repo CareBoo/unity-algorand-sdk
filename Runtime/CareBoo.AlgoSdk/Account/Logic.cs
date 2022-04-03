@@ -61,10 +61,10 @@ namespace AlgoSdk
         /// Signs the <paramref name="program"/> with the <paramref name="msig"/> and returns a signature and its index.
         /// </summary>
         /// <param name="program">The program to sign.</param>
-        /// <param name="msig">A <see cref="Multisig"/> that contains the <see cref="PublicKey"/> matching <paramref name="privateKey"/>.</param>
+        /// <param name="msig">A <see cref="MultisigSig"/> that contains the <see cref="PublicKey"/> matching <paramref name="privateKey"/>.</param>
         /// <param name="privateKey">The private key to sign with. Its corresponding <see cref="PublicKey"/> must be inside of <paramref name="msig"/>.</param>
         /// <returns>A tuple of the <see cref="Sig"/> from signing the program and its index in the <paramref name="msig"/></returns>
-        public static (Sig, int) Sign(CompiledTeal program, Multisig msig, PrivateKey privateKey)
+        public static (Sig, int) Sign(CompiledTeal program, MultisigSig msig, PrivateKey privateKey)
         {
             if (msig.Subsigs == null)
                 throw new ArgumentException("msig has null Sub signatures", nameof(msig));

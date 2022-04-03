@@ -2,6 +2,7 @@ using System.Collections;
 using System.Linq;
 using AlgoSdk;
 using AlgoSdk.Crypto;
+using AlgoSdk.Kmd;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
 using Unity.Collections;
@@ -11,7 +12,7 @@ public class KmdClientSigTest : KmdClientTestFixture
 {
     PrivateKey[] privateKeys;
     Address msigAddress;
-    Multisig msig;
+    MultisigSig msig;
 
     protected override async UniTask SetUpAsync()
     {
@@ -19,10 +20,10 @@ public class KmdClientSigTest : KmdClientTestFixture
         privateKeys = Enumerable.Range(0, 3)
             .Select(x => AlgoSdk.Crypto.Random.Bytes<PrivateKey>())
             .ToArray();
-        msig = new Multisig
+        msig = new MultisigSig
         {
             Subsigs = privateKeys
-                .Select(x => new Multisig.Subsig { PublicKey = x.ToPublicKey() })
+                .Select(x => new MultisigSig.Subsig { PublicKey = x.ToPublicKey() })
                 .ToArray(),
             Version = 1,
             Threshold = 2,
@@ -53,7 +54,7 @@ public class KmdClientSigTest : KmdClientTestFixture
 
     protected async UniTask<PaymentTxn> GetTransaction()
     {
-        var txnParams = (await AlgoApiClientSettings.Algod.GetSuggestedParams()).Payload;
+        var txnParams = (await AlgoApiClientSettings.Algod.TransactionParams()).Payload;
         return Transaction.Payment(
             sender: msigAddress,
             txnParams: txnParams,

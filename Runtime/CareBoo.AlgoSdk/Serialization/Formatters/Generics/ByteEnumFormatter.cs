@@ -15,29 +15,37 @@ namespace AlgoSdk.Formatters
 
         public KeywordByteEnumFormatter(string[] typeToString)
         {
-            this.typeToString = typeToString;
-            if (typeToString == null || typeToString.Length < 1)
-                throw new ArgumentNullException(nameof(typeToString));
+            this.typeToString = typeToString ?? throw new ArgumentNullException(nameof(typeToString));
+            if (typeToString.Length < 1)
+                throw new ArgumentException("should have a length of at least 1", nameof(typeToString));
 
             stringToType = new Dictionary<string, T>();
-            for (var i = 1; i < typeToString.Length; i++)
+            for (byte i = 1; i < typeToString.Length; i++)
             {
-                stringToType[typeToString[i]] = UnsafeUtility.As<int, T>(ref i);
+                stringToType[typeToString[i]] = UnsafeUtility.As<byte, T>(ref i);
             }
         }
 
         public virtual T Deserialize(ref JsonReader reader)
         {
-            if (reader.Peek() == JsonToken.Null)
+            var token = reader.Peek();
+            switch (token)
             {
-                reader.ReadNull();
-                byte nil = 0;
-                return UnsafeUtility.As<byte, T>(ref nil);
+                case JsonToken.Null:
+                    reader.ReadNull();
+                    byte nil = 0;
+                    return UnsafeUtility.As<byte, T>(ref nil);
+                case JsonToken.String:
+                    reader.ReadString(out var s);
+                    return stringToType.TryGetValue(s, out var t)
+                        ? t
+                        : throw new ArgumentException($"{s} is not a valid name for {typeof(T)}");
+                case JsonToken.Number:
+                    reader.ReadNumber(out byte b);
+                    return UnsafeUtility.As<byte, T>(ref b);
+                default:
+                    throw new NotSupportedException($"Cannot deserialize enum with JsonToken {token}");
             }
-            reader.ReadString(out var s);
-            return stringToType.TryGetValue(s, out var t)
-                ? t
-                : throw new ArgumentException($"{s} is not a valid name for {typeof(T)}");
         }
 
         public virtual T Deserialize(ref MessagePackReader reader)
@@ -83,7 +91,7 @@ namespace AlgoSdk.Formatters
     {
         public T Deserialize(ref JsonReader reader)
         {
-            reader.ReadNumber(out byte b);
+            reader.ReadNumber(out byte b).ThrowIfError(reader);
             return UnsafeUtility.As<byte, T>(ref b);
         }
 

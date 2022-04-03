@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     
     
@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.ListKeysRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.ListKeysRequest>(false).Assign("wallet_handle_token", null, (AlgoSdk.ListKeysRequest x) => x.WalletHandleToken, (ref AlgoSdk.ListKeysRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Kmd.ListKeysRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Kmd.ListKeysRequest>(false).Assign("wallet_handle_token", (AlgoSdk.Kmd.ListKeysRequest x) => x.WalletHandleToken, (ref AlgoSdk.Kmd.ListKeysRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value));
             return true;
         }
     }

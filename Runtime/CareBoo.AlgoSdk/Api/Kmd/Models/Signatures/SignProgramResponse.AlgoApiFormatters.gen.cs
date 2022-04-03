@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     
     
@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.SignProgramResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.SignProgramResponse>(false).Assign("sig", null, (AlgoSdk.SignProgramResponse x) => x.SignedProgram, (ref AlgoSdk.SignProgramResponse x, AlgoSdk.Sig value) => x.SignedProgram = value, false).Assign("error", null, (AlgoSdk.SignProgramResponse x) => x.Error, (ref AlgoSdk.SignProgramResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value, false).Assign("message", null, (AlgoSdk.SignProgramResponse x) => x.Message, (ref AlgoSdk.SignProgramResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Kmd.SignProgramResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Kmd.SignProgramResponse>(false).Assign("sig", (AlgoSdk.Kmd.SignProgramResponse x) => x.SignedProgram, (ref AlgoSdk.Kmd.SignProgramResponse x, AlgoSdk.Sig value) => x.SignedProgram = value).Assign("error", (AlgoSdk.Kmd.SignProgramResponse x) => x.Error, (ref AlgoSdk.Kmd.SignProgramResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value).Assign("message", (AlgoSdk.Kmd.SignProgramResponse x) => x.Message, (ref AlgoSdk.Kmd.SignProgramResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance));
             return true;
         }
     }

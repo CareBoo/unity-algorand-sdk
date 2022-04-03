@@ -1,18 +1,18 @@
 using System;
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     [AlgoApiObject]
     public partial struct ListKeysResponse
         : IEquatable<ListKeysResponse>
     {
-        [AlgoApiField("addresses", null)]
+        [AlgoApiField("addresses")]
         public Address[] Addresses;
 
-        [AlgoApiField("error", null)]
+        [AlgoApiField("error")]
         public Optional<bool> Error;
 
-        [AlgoApiField("message", null)]
+        [AlgoApiField("message")]
         public string Message;
 
         public bool Equals(ListKeysResponse other)

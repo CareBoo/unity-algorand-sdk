@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     
     
@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.SignProgramRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.SignProgramRequest>(false).Assign("address", null, (AlgoSdk.SignProgramRequest x) => x.Address, (ref AlgoSdk.SignProgramRequest x, AlgoSdk.Address value) => x.Address = value, false).Assign("data", null, (AlgoSdk.SignProgramRequest x) => x.Data, (ref AlgoSdk.SignProgramRequest x, System.Byte[] value) => x.Data = value, AlgoSdk.ArrayComparer<System.Byte>.Instance, false).Assign("wallet_handle_token", null, (AlgoSdk.SignProgramRequest x) => x.WalletHandleToken, (ref AlgoSdk.SignProgramRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value, false).Assign("wallet_password", null, (AlgoSdk.SignProgramRequest x) => x.WalletPassword, (ref AlgoSdk.SignProgramRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletPassword = value, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Kmd.SignProgramRequest>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Kmd.SignProgramRequest>(false).Assign("address", (AlgoSdk.Kmd.SignProgramRequest x) => x.Address, (ref AlgoSdk.Kmd.SignProgramRequest x, AlgoSdk.Address value) => x.Address = value).Assign("data", (AlgoSdk.Kmd.SignProgramRequest x) => x.Data, (ref AlgoSdk.Kmd.SignProgramRequest x, System.Byte[] value) => x.Data = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("wallet_handle_token", (AlgoSdk.Kmd.SignProgramRequest x) => x.WalletHandleToken, (ref AlgoSdk.Kmd.SignProgramRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletHandleToken = value).Assign("wallet_password", (AlgoSdk.Kmd.SignProgramRequest x) => x.WalletPassword, (ref AlgoSdk.Kmd.SignProgramRequest x, Unity.Collections.FixedString128Bytes value) => x.WalletPassword = value));
             return true;
         }
     }

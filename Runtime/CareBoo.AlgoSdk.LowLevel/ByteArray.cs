@@ -9,12 +9,22 @@ namespace AlgoSdk.LowLevel
 {
     public interface IArray<T>
     {
+        /// <summary>
+        /// The length in <see cref="T"/> of this array.
+        /// </summary>
         int Length { get; }
+
+        /// <summary>
+        /// Get/set the element at the index.
+        /// </summary>
         T this[int index] { get; set; }
     }
 
     public interface IContiguousArray<T> : IArray<T>
     {
+        /// <summary>
+        /// Gets the ptr at the beginning of this array.
+        /// </summary>
         unsafe void* GetUnsafePtr();
     }
 

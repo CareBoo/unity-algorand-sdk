@@ -108,7 +108,19 @@ namespace AlgoSdk
             if (x.Length != y.Length) return false;
 
             for (var i = 0; i < x.Length; i++)
-                if (!StringComparer.Equals(x, y))
+                if (!StringComparer.Equals(x[i], y[i]))
+                    return false;
+            return true;
+        }
+
+        public static bool Equals(byte[][] x, byte[][] y)
+        {
+            if (x == null || y == null) return x == y;
+
+            if (x.Length != y.Length) return false;
+
+            for (var i = 0; i < x.Length; i++)
+                if (!ArrayComparer.Equals(x[i], y[i]))
                     return false;
             return true;
         }

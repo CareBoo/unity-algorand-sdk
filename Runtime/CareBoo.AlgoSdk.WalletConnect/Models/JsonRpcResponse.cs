@@ -40,19 +40,19 @@ namespace AlgoSdk.WalletConnect
         , IEquatable<JsonRpcResponse>
     {
         /// <inheritdoc />
-        [AlgoApiField("id", null)]
+        [AlgoApiField("id")]
         public Optional<ulong> Id { get; set; }
 
         /// <inheritdoc />
-        [AlgoApiField("jsonrpc", null)]
+        [AlgoApiField("jsonrpc")]
         public string JsonRpc { get; set; }
 
         /// <inheritdoc />
-        [AlgoApiField("result", null)]
+        [AlgoApiField("result")]
         public AlgoApiObject Result { get; set; }
 
         /// <inheritdoc />
-        [AlgoApiField("error", null)]
+        [AlgoApiField("error")]
         public JsonRpcError Error { get; set; }
 
         /// <inheritdoc />

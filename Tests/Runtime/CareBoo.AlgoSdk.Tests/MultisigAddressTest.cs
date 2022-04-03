@@ -3,16 +3,16 @@ using NUnit.Framework;
 
 public class MultisigAddressTest
 {
-    static readonly Multisig testMsig = new Multisig
+    static readonly MultisigSig testMsig = new MultisigSig
     {
         Threshold = 3,
         Version = 1,
         Subsigs = new[]
         {
-            new Multisig.Subsig { PublicKey = (Address)"SLFVTLXHW3I2HGFRL2XJ5J3YAC3MSPNT6CX5G2KK6IKPW4SNEKXCZ6UXYQ" },
-            new Multisig.Subsig { PublicKey = (Address)"HN5XPGE25UPX62DC2COJFAFAFRBYDFZG7AJ2KIZXFE3W73VVFEYTY6Q5JQ" },
-            new Multisig.Subsig { PublicKey = (Address)"PI23UTQHCTMHAMO2AUYDGIPEAHRK25MUVV7PDH3QOHMSKGVPEWSJIIESAQ" },
-            new Multisig.Subsig { PublicKey = (Address)"VCDUTRSZEO7DWU4Z2OTZHLRZ6PEDKZVISI7EDFCB5EUZR5776Y44JBQSRI" }
+            new MultisigSig.Subsig { PublicKey = (Address)"SLFVTLXHW3I2HGFRL2XJ5J3YAC3MSPNT6CX5G2KK6IKPW4SNEKXCZ6UXYQ" },
+            new MultisigSig.Subsig { PublicKey = (Address)"HN5XPGE25UPX62DC2COJFAFAFRBYDFZG7AJ2KIZXFE3W73VVFEYTY6Q5JQ" },
+            new MultisigSig.Subsig { PublicKey = (Address)"PI23UTQHCTMHAMO2AUYDGIPEAHRK25MUVV7PDH3QOHMSKGVPEWSJIIESAQ" },
+            new MultisigSig.Subsig { PublicKey = (Address)"VCDUTRSZEO7DWU4Z2OTZHLRZ6PEDKZVISI7EDFCB5EUZR5776Y44JBQSRI" }
         }
     };
 

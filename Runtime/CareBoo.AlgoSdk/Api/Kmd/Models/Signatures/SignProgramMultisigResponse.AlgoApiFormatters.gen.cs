@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     
     
@@ -19,7 +19,7 @@ namespace AlgoSdk
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.SignProgramMultisigResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.SignProgramMultisigResponse>(false).Assign("multisig", null, (AlgoSdk.SignProgramMultisigResponse x) => x.SignedProgram, (ref AlgoSdk.SignProgramMultisigResponse x, System.Byte[] value) => x.SignedProgram = value, AlgoSdk.ArrayComparer<System.Byte>.Instance, false).Assign("error", null, (AlgoSdk.SignProgramMultisigResponse x) => x.Error, (ref AlgoSdk.SignProgramMultisigResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value, false).Assign("message", null, (AlgoSdk.SignProgramMultisigResponse x) => x.Message, (ref AlgoSdk.SignProgramMultisigResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance, false));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Kmd.SignProgramMultisigResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Kmd.SignProgramMultisigResponse>(false).Assign("multisig", (AlgoSdk.Kmd.SignProgramMultisigResponse x) => x.SignedProgram, (ref AlgoSdk.Kmd.SignProgramMultisigResponse x, System.Byte[] value) => x.SignedProgram = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("error", (AlgoSdk.Kmd.SignProgramMultisigResponse x) => x.Error, (ref AlgoSdk.Kmd.SignProgramMultisigResponse x, AlgoSdk.Optional<System.Boolean> value) => x.Error = value).Assign("message", (AlgoSdk.Kmd.SignProgramMultisigResponse x) => x.Message, (ref AlgoSdk.Kmd.SignProgramMultisigResponse x, System.String value) => x.Message = value, AlgoSdk.StringComparer.Instance));
             return true;
         }
     }

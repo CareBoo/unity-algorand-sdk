@@ -46,7 +46,11 @@ namespace AlgoSdk
             where T : unmanaged, INativeList<byte>, IUTF8Bytes
         {
             TransactionId result = default;
-            Base32Encoding.ToBytes(fs, ref result);
+            var b64BytesSize = Base64Encoding.BytesRequiredForBase64Encoding(result.Length);
+            if (fs.Length == b64BytesSize)
+                result.CopyFromBase64(fs);
+            else
+                Base32Encoding.ToBytes(fs, ref result);
             return result;
         }
 
@@ -58,6 +62,16 @@ namespace AlgoSdk
         public bool Equals(TransactionId other)
         {
             return hash.Equals(other.hash);
+        }
+
+        public static implicit operator string(TransactionId txId)
+        {
+            return txId.ToString();
+        }
+
+        public static implicit operator TransactionId(string s)
+        {
+            return TransactionId.FromString(s);
         }
 
         public static implicit operator TransactionId(Sha512_256_Hash hash) => new TransactionId { hash = hash };

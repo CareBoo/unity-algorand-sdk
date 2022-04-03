@@ -20,7 +20,7 @@ namespace AlgoSdk
     public partial struct Transaction : IAssetConfigTxn
     {
         /// <inheritdoc />
-        [AlgoApiField(null, "caid")]
+        [AlgoApiField("caid")]
         public AssetIndex ConfigAsset
         {
             get => assetConfigParams.ConfigAsset;
@@ -28,7 +28,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "apar")]
+        [AlgoApiField("apar")]
         public AssetParams AssetParams
         {
             get => assetConfigParams.AssetParams;
@@ -118,7 +118,7 @@ namespace AlgoSdk
         Params @params;
 
         /// <inheritdoc />
-        [AlgoApiField("fee", "fee")]
+        [AlgoApiField("fee")]
         public MicroAlgos Fee
         {
             get => header.Fee;
@@ -126,7 +126,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("first-valid", "fv")]
+        [AlgoApiField("fv")]
         public ulong FirstValidRound
         {
             get => header.FirstValidRound;
@@ -134,7 +134,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("genesis-hash", "gh")]
+        [AlgoApiField("gh")]
         public GenesisHash GenesisHash
         {
             get => header.GenesisHash;
@@ -142,7 +142,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("last-valid", "lv")]
+        [AlgoApiField("lv")]
         public ulong LastValidRound
         {
             get => header.LastValidRound;
@@ -150,7 +150,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("sender", "snd")]
+        [AlgoApiField("snd")]
         public Address Sender
         {
             get => header.Sender;
@@ -158,7 +158,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("tx-type", "type")]
+        [AlgoApiField("type")]
         public TransactionType TransactionType
         {
             get => TransactionType.AssetConfiguration;
@@ -166,7 +166,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("genesis-id", "gen")]
+        [AlgoApiField("gen")]
         public FixedString32Bytes GenesisId
         {
             get => header.GenesisId;
@@ -174,7 +174,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("group", "grp")]
+        [AlgoApiField("grp")]
         public TransactionId Group
         {
             get => header.Group;
@@ -182,7 +182,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("lease", "lx")]
+        [AlgoApiField("lx")]
         public TransactionId Lease
         {
             get => header.Lease;
@@ -190,7 +190,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("note", "note")]
+        [AlgoApiField("note")]
         public byte[] Note
         {
             get => header.Note;
@@ -198,7 +198,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("rekey-to", "rekey")]
+        [AlgoApiField("rekey")]
         public Address RekeyTo
         {
             get => header.RekeyTo;
@@ -206,7 +206,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "caid")]
+        [AlgoApiField("caid")]
         public AssetIndex ConfigAsset
         {
             get => @params.ConfigAsset;
@@ -214,7 +214,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "apar")]
+        [AlgoApiField("apar")]
         public AssetParams AssetParams
         {
             get => @params.AssetParams;
@@ -247,11 +247,11 @@ namespace AlgoSdk
         public partial struct Params
             : IEquatable<Params>
         {
-            [AlgoApiField("asset-id", "xaid")]
+            [AlgoApiField("xaid")]
             [Tooltip("For re-configure or destroy transactions, this is the unique asset ID. On asset creation, the ID is set to zero.")]
             public AssetIndex ConfigAsset;
 
-            [AlgoApiField("params", "params")]
+            [AlgoApiField("params")]
             public AssetParams AssetParams;
 
             public bool Equals(Params other)

@@ -1,19 +1,19 @@
 using System;
 using Unity.Collections;
 
-namespace AlgoSdk
+namespace AlgoSdk.Kmd
 {
     [AlgoApiObject]
     public partial struct RenameWalletRequest
         : IEquatable<RenameWalletRequest>
     {
-        [AlgoApiField("wallet_id", null)]
+        [AlgoApiField("wallet_id")]
         public FixedString128Bytes WalletId;
 
-        [AlgoApiField("wallet_name", null)]
+        [AlgoApiField("wallet_name")]
         public FixedString128Bytes WalletName;
 
-        [AlgoApiField("wallet_password", null)]
+        [AlgoApiField("wallet_password")]
         public FixedString128Bytes WalletPassword;
 
         public bool Equals(RenameWalletRequest other)

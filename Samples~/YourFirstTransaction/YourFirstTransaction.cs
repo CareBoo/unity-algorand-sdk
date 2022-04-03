@@ -86,21 +86,21 @@ public class YourFirstTransaction : MonoBehaviour
 
     public async UniTaskVoid CheckAlgodStatus()
     {
-        var response = await algod.GetHealth();
+        var response = await algod.HealthCheck();
         if (response.Error) algodHealth = response.Error;
         else algodHealth = "Connected";
     }
 
     public async UniTaskVoid CheckIndexerStatus()
     {
-        var response = await indexer.GetHealth();
+        var response = await indexer.MakeHealthCheck();
         if (response.Error) indexerHealth = response.Error;
         else indexerHealth = "Connected";
     }
 
     public async UniTaskVoid CheckBalance()
     {
-        var (err, resp) = await indexer.GetAccount(account.Address);
+        var (err, resp) = await indexer.LookupAccountByID(account.Address);
         if (err)
         {
             balance = 0;
@@ -117,7 +117,7 @@ public class YourFirstTransaction : MonoBehaviour
         txnStatus = "awaiting confirmation...";
 
         // Get the suggested transaction params
-        var (txnParamsError, txnParams) = await algod.GetSuggestedParams();
+        var (txnParamsError, txnParams) = await algod.TransactionParams();
         if (txnParamsError)
         {
             Debug.LogError(txnParamsError);
@@ -133,9 +133,10 @@ public class YourFirstTransaction : MonoBehaviour
             amount: payAmount
         );
         var signedTxn = account.SignTxn(paymentTxn);
+        var signedTxnBytes = AlgoApiSerializer.SerializeMessagePack(signedTxn);
 
         // Send the transaction
-        var (sendTxnError, txid) = await algod.SendTransaction(signedTxn);
+        var (sendTxnError, txid) = await algod.RawTransaction(signedTxnBytes);
         if (sendTxnError)
         {
             Debug.LogError(sendTxnError);
@@ -144,11 +145,10 @@ public class YourFirstTransaction : MonoBehaviour
         }
 
         // Wait for the transaction to be confirmed
-        PendingTransaction pending = default;
-        ErrorResponse error = default;
+        var (error, pending) = await algod.PendingTransactionInformation(txid.TxId);
         while (pending.ConfirmedRound == 0)
         {
-            (error, pending) = await algod.GetPendingTransaction(txid);
+            (error, pending) = await algod.PendingTransactionInformation(txid.TxId);
             if (error)
             {
                 Debug.LogError(error);

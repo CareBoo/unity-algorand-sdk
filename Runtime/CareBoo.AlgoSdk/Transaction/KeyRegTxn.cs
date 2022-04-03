@@ -1,5 +1,4 @@
 using System;
-using AlgoSdk.Crypto;
 using Unity.Collections;
 using UnityEngine;
 
@@ -10,7 +9,7 @@ namespace AlgoSdk
         /// <summary>
         /// The root participation public key.
         /// </summary>
-        Ed25519.PublicKey VoteParticipationKey { get; set; }
+        ParticipationPublicKey VoteParticipationKey { get; set; }
 
         /// <summary>
         /// The VRF public key.
@@ -41,15 +40,15 @@ namespace AlgoSdk
     public partial struct Transaction
     {
         /// <inheritdoc />
-        [AlgoApiField(null, "votekey")]
-        public Ed25519.PublicKey VoteParticipationKey
+        [AlgoApiField("votekey")]
+        public ParticipationPublicKey VoteParticipationKey
         {
             get => keyRegParams.VoteParticipationKey;
             set => keyRegParams.VoteParticipationKey = value;
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "selkey")]
+        [AlgoApiField("selkey")]
         public VrfPubKey SelectionParticipationKey
         {
             get => keyRegParams.SelectionParticipationKey;
@@ -57,7 +56,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "votefst")]
+        [AlgoApiField("votefst")]
         public ulong VoteFirst
         {
             get => keyRegParams.VoteFirst;
@@ -65,7 +64,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "votelst")]
+        [AlgoApiField("votelst")]
         public ulong VoteLast
         {
             get => keyRegParams.VoteLast;
@@ -73,7 +72,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "votekd")]
+        [AlgoApiField("votekd")]
         public ulong VoteKeyDilution
         {
             get => keyRegParams.VoteKeyDilution;
@@ -81,7 +80,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "nonpart")]
+        [AlgoApiField("nonpart")]
         public Optional<bool> NonParticipation
         {
             get => keyRegParams.NonParticipation;
@@ -150,7 +149,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("fee", "fee")]
+        [AlgoApiField("fee")]
         public MicroAlgos Fee
         {
             get => header.Fee;
@@ -158,7 +157,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("first-valid", "fv")]
+        [AlgoApiField("fv")]
         public ulong FirstValidRound
         {
             get => header.FirstValidRound;
@@ -166,7 +165,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("genesis-hash", "gh")]
+        [AlgoApiField("gh")]
         public GenesisHash GenesisHash
         {
             get => header.GenesisHash;
@@ -174,7 +173,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("last-valid", "lv")]
+        [AlgoApiField("lv")]
         public ulong LastValidRound
         {
             get => header.LastValidRound;
@@ -182,7 +181,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("sender", "snd")]
+        [AlgoApiField("snd")]
         public Address Sender
         {
             get => header.Sender;
@@ -190,7 +189,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("tx-type", "type")]
+        [AlgoApiField("type")]
         public TransactionType TransactionType
         {
             get => TransactionType.KeyRegistration;
@@ -198,7 +197,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("genesis-id", "gen")]
+        [AlgoApiField("gen")]
         public FixedString32Bytes GenesisId
         {
             get => header.GenesisId;
@@ -206,7 +205,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("group", "grp")]
+        [AlgoApiField("grp")]
         public TransactionId Group
         {
             get => header.Group;
@@ -214,7 +213,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("lease", "lx")]
+        [AlgoApiField("lx")]
         public TransactionId Lease
         {
             get => header.Lease;
@@ -222,7 +221,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("note", "note")]
+        [AlgoApiField("note")]
         public byte[] Note
         {
             get => header.Note;
@@ -230,7 +229,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField("rekey-to", "rekey")]
+        [AlgoApiField("rekey")]
         public Address RekeyTo
         {
             get => header.RekeyTo;
@@ -238,15 +237,15 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "votekey")]
-        public Ed25519.PublicKey VoteParticipationKey
+        [AlgoApiField("votekey")]
+        public ParticipationPublicKey VoteParticipationKey
         {
             get => @params.VoteParticipationKey;
             set => @params.VoteParticipationKey = value;
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "selkey")]
+        [AlgoApiField("selkey")]
         public VrfPubKey SelectionParticipationKey
         {
             get => @params.SelectionParticipationKey;
@@ -254,7 +253,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "votefst")]
+        [AlgoApiField("votefst")]
         public ulong VoteFirst
         {
             get => @params.VoteFirst;
@@ -262,7 +261,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "votelst")]
+        [AlgoApiField("votelst")]
         public ulong VoteLast
         {
             get => @params.VoteLast;
@@ -270,7 +269,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "votekd")]
+        [AlgoApiField("votekd")]
         public ulong VoteKeyDilution
         {
             get => @params.VoteKeyDilution;
@@ -278,7 +277,7 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
-        [AlgoApiField(null, "nonpart")]
+        [AlgoApiField("nonpart")]
         public Optional<bool> NonParticipation
         {
             get => @params.NonParticipation;
@@ -311,42 +310,42 @@ namespace AlgoSdk
         public partial struct Params
             : IEquatable<Params>
         {
-            [AlgoApiField("vote-participation-key", "votekey")]
-            public Ed25519.PublicKey VoteParticipationKey
+            [AlgoApiField("votekey")]
+            public ParticipationPublicKey VoteParticipationKey
             {
                 get => AccountParticipation.VoteParticipationKey;
                 set => AccountParticipation.VoteParticipationKey = value;
             }
 
-            [AlgoApiField("selection-participation-key", "selkey")]
+            [AlgoApiField("selkey")]
             public VrfPubKey SelectionParticipationKey
             {
                 get => AccountParticipation.SelectionParticipationKey;
                 set => AccountParticipation.SelectionParticipationKey = value;
             }
 
-            [AlgoApiField("vote-first-valid", "votefst")]
+            [AlgoApiField("votefst")]
             public ulong VoteFirst
             {
                 get => AccountParticipation.VoteFirst;
                 set => AccountParticipation.VoteFirst = value;
             }
 
-            [AlgoApiField("vote-last-valid", "votelst")]
+            [AlgoApiField("votelst")]
             public ulong VoteLast
             {
                 get => AccountParticipation.VoteLast;
                 set => AccountParticipation.VoteLast = value;
             }
 
-            [AlgoApiField("vote-key-dilution", "votekd")]
+            [AlgoApiField("votekd")]
             public ulong VoteKeyDilution
             {
                 get => AccountParticipation.VoteKeyDilution;
                 set => AccountParticipation.VoteKeyDilution = value;
             }
 
-            [AlgoApiField("non-participation", "nonpart")]
+            [AlgoApiField("nonpart")]
             [Tooltip("All new Algorand accounts are participating by default. This means that they earn rewards. Mark an account nonparticipating by setting this value to <c>true</c> and this account will no longer earn rewards. It is unlikely that you will ever need to do this and exists mainly for economic-related functions on the network.")]
             public Optional<bool> NonParticipation;
 

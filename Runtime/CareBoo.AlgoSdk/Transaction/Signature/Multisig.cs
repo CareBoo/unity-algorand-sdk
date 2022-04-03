@@ -6,28 +6,28 @@ using Unity.Collections;
 namespace AlgoSdk
 {
     [AlgoApiObject]
-    public partial struct Multisig
+    public partial struct MultisigSig
         : ISignature
-        , IEquatable<Multisig>
+        , IEquatable<MultisigSig>
     {
         public static readonly byte[] AddressPrefix = System.Text.Encoding.UTF8.GetBytes("MultisigAddr");
 
         /// <summary>
         /// Subsignatures representing this multisig.
         /// </summary>
-        [AlgoApiField("subsig", "subsig")]
+        [AlgoApiField("subsig")]
         public Subsig[] Subsigs;
 
         /// <summary>
         /// Number of signatures required for the multisig to be valid.
         /// </summary>
-        [AlgoApiField("thr", "thr")]
+        [AlgoApiField("thr")]
         public byte Threshold;
 
         /// <summary>
         /// Version of the multisig.
         /// </summary>
-        [AlgoApiField("v", "v")]
+        [AlgoApiField("v")]
         public byte Version;
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace AlgoSdk
         /// <param name="version">The version of the msig protocol. The latest version is version 1.</param>
         /// <param name="threshold">The number of signatures required for this msig to be valid.</param>
         /// <param name="addresses">The addresses or public keys composing this msig. Order matters!</param>
-        public Multisig(
+        public MultisigSig(
             byte version,
             byte threshold,
             Address[] addresses
@@ -56,7 +56,7 @@ namespace AlgoSdk
             }
         }
 
-        public bool Equals(Multisig other)
+        public bool Equals(MultisigSig other)
         {
             return ArrayComparer.Equals(Subsigs, other.Subsigs)
                 && Threshold.Equals(other.Threshold)
@@ -88,7 +88,7 @@ namespace AlgoSdk
         }
 
         /// <summary>
-        /// Generate the address for this <see cref="Multisig"/>.
+        /// Generate the address for this <see cref="MultisigSig"/>.
         /// </summary>
         /// <returns>An <see cref="Address"/> made from hashing the addresses in this subsig.</returns>
         public Address GetAddress()
@@ -121,13 +121,13 @@ namespace AlgoSdk
             /// <summary>
             /// The address for this subsig.
             /// </summary>
-            [AlgoApiField("pk", "pk")]
+            [AlgoApiField("pk")]
             public Ed25519.PublicKey PublicKey;
 
             /// <summary>
             /// The signed message if it exists.
             /// </summary>
-            [AlgoApiField("s", "s")]
+            [AlgoApiField("s")]
             public Sig Sig;
 
             public bool Equals(Subsig other)

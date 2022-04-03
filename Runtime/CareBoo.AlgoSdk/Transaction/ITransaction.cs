@@ -23,32 +23,6 @@ namespace AlgoSdk
 
     public static class TransactionExtensions
     {
-        [Obsolete("Use Account.SignTxn instead.")]
-        public static SignedTxn<T> Sign<T>(
-            this T txn,
-            Ed25519.SecretKeyHandle secretKey
-            )
-            where T : ITransaction, IEquatable<T>
-        {
-            var signature = txn.GetSignature(secretKey);
-            return new SignedTxn<T>
-            {
-                Txn = txn,
-                Sig = signature
-            };
-        }
-
-        [Obsolete("Use PrivateKey.Sign instead.")]
-        public static Sig GetSignature<T>(
-            this T txn,
-            Ed25519.SecretKeyHandle secretKey
-            )
-            where T : ITransaction
-        {
-            using var msg = txn.ToSignatureMessage(Allocator.Temp);
-            return secretKey.Sign(msg);
-        }
-
         public static byte[] ToSignatureMessage<T>(this T txn)
             where T : ITransaction
         {

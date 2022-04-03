@@ -111,7 +111,15 @@ namespace AlgoSdk
         /// <param name="plainText">The utf8 plaintext to use for the body</param>
         /// <returns>this request with body and header set</returns>
         public AlgoApiRequest SetPlainTextBody(string plainText) =>
-            SetRawBody(Encoding.UTF8.GetBytes(plainText), ContentType.PlainText);
+            SetPlainTextBody(Encoding.UTF8.GetBytes(plainText));
+
+        /// <summary>
+        /// Set body of the request, and set its content type header to "application/text"
+        /// </summary>
+        /// <param name="plainText">The utf8 plaintext to use for the body</param>
+        /// <returns>this request with body and header set</returns>
+        public AlgoApiRequest SetPlainTextBody(byte[] plainText) =>
+            SetRawBody(plainText, ContentType.PlainText);
 
 
         /// <summary>
@@ -131,7 +139,15 @@ namespace AlgoSdk
         /// <param name="bytes">The msgpack bytes to set for the body</param>
         /// <returns>this request with body and header set</returns>
         public AlgoApiRequest SetMessagePackBody(NativeArray<byte>.ReadOnly bytes) =>
-            SetRawBody(bytes.ToArray(), ContentType.MessagePack);
+            SetMessagePackBody(bytes.ToArray());
+
+        /// <summary>
+        /// Set body of the request and set its content type header to "application/msgpack"
+        /// </summary>
+        /// <param name="bytes">The msgpack bytes to set for the body</param>
+        /// <returns>this request with body and header set</returns>
+        public AlgoApiRequest SetMessagePackBody(byte[] bytes) =>
+            SetRawBody(bytes, ContentType.MessagePack);
 
         /// <summary>
         /// Set the body and content type header of the request
