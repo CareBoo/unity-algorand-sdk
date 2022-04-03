@@ -76,6 +76,22 @@ namespace AlgoSdk
         );
 
         /// <summary>
+        /// Aborts a catchpoint catchup.
+        /// </summary
+        /// <remarks>
+        /// Given a catchpoint, it aborts catching up to this catchpoint
+        /// </remarks>
+        /// <param name="catchpoint">
+        /// A catch point
+        /// </param>
+        /// <returns>
+        /// 
+        /// </returns>
+        AlgoApiRequest.Sent<CatchpointAbortResponse> AbortCatchup(
+            string catchpoint
+        );
+
+        /// <summary>
         /// Get the block for the given round.
         /// </summary
         /// <remarks>
@@ -301,6 +317,43 @@ namespace AlgoSdk
         );
 
         /// <summary>
+        /// Get participation key info given a participation ID
+        /// </summary
+        /// <remarks>
+        /// Given a participation ID, return information about that participation key
+        /// </remarks>
+        /// <param name="participationId">
+        /// 
+        /// </param>
+        /// <returns>
+        /// 
+        /// </returns>
+        AlgoApiRequest.Sent<ParticipationKeyResponse> GetParticipationKeyByID(
+            string participationId
+        );
+
+        /// <summary>
+        /// Append state proof keys to a participation key
+        /// </summary
+        /// <remarks>
+        /// Given a participation ID, append state proof keys to a particular set of participation keys
+        /// </remarks>
+        /// <param name="keymap">
+        /// The state proof keys to add to an existing participation ID
+        /// </param>
+        /// <param name="participationId">
+        /// 
+        /// </param>
+        /// <returns>
+        /// 
+        /// </returns>
+        AlgoApiRequest.Sent<ParticipationKeyResponse> AppendKeys(
+            byte[] keymap,
+        
+            string participationId
+        );
+
+        /// <summary>
         /// Return a list of participation keys
         /// </summary
         /// <remarks>
@@ -314,6 +367,22 @@ namespace AlgoSdk
         /// </returns>
         AlgoApiRequest.Sent<ParticipationKeysResponse> GetParticipationKeys(
              
+        );
+
+        /// <summary>
+        /// Add a participation key to the node
+        /// </summary
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="participationkey">
+        /// The participation key to add to the node
+        /// </param>
+        /// <returns>
+        /// 
+        /// </returns>
+        AlgoApiRequest.Sent<PostParticipationResponse> AddParticipationKey(
+            byte[] participationkey
         );
 
         /// <summary>
@@ -553,6 +622,19 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
+        public AlgoApiRequest.Sent<CatchpointAbortResponse> AbortCatchup(
+            string catchpoint
+        )
+        {
+            var path = $"/v2/catchup/{catchpoint}";
+            return this
+                .Delete(path)
+                
+                .Send()
+                ;
+        }
+
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<BlockResponse> GetBlock(
             ulong round,
         
@@ -741,6 +823,34 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
+        public AlgoApiRequest.Sent<ParticipationKeyResponse> GetParticipationKeyByID(
+            string participationId
+        )
+        {
+            var path = $"/v2/participation/{participationId}";
+            return this
+                .Get(path)
+                
+                .Send()
+                ;
+        }
+
+        /// <inheritdoc />
+        public AlgoApiRequest.Sent<ParticipationKeyResponse> AppendKeys(
+            byte[] keymap,
+        
+            string participationId
+        )
+        {
+            var path = $"/v2/participation/{participationId}";
+            return this
+                .Post(path)
+                .SetMessagePackBody(keymap)
+                .Send()
+                ;
+        }
+
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<ParticipationKeysResponse> GetParticipationKeys(
              
         )
@@ -749,6 +859,19 @@ namespace AlgoSdk
             return this
                 .Get(path)
                 
+                .Send()
+                ;
+        }
+
+        /// <inheritdoc />
+        public AlgoApiRequest.Sent<PostParticipationResponse> AddParticipationKey(
+            byte[] participationkey
+        )
+        {
+            var path = $"/v2/participation";
+            return this
+                .Post(path)
+                .SetMessagePackBody(participationkey)
                 .Send()
                 ;
         }
