@@ -17,8 +17,6 @@ namespace AlgoSdk
     /// </summary>
     public readonly struct Account
         : IAccount
-        , ISigner
-        , IAsyncSigner
     {
         readonly PrivateKey privateKey;
 
