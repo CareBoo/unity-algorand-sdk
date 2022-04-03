@@ -5,6 +5,26 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [3.0.0-pre.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.3.0-pre.4...v3.0.0-pre.1) (2022-04-03)
+
+
+### Features
+
+* **algoapi:** create separate types for REST APIs and SDK ([#129](https://github.com/CareBoo/unity-algorand-sdk/issues/129)) ([0a97a11](https://github.com/CareBoo/unity-algorand-sdk/commit/0a97a11643e45a59f749fe14ec6e8d0e5b547cb2)), closes [#120](https://github.com/CareBoo/unity-algorand-sdk/issues/120)
+
+
+### BREAKING CHANGES
+
+* **algoapi:** All APIs and return types from `AlgodClient`, `IndexerClient`, and `KmdClient` have changed. Additional breaking changes:
+- `MinBalance(AccountInfo)` constructor has changed to take an `AlgoSdk.Algod.Account` value instead.
+- Remove `PrivateKey.SignTransaction`
+- Rename `AppEvalDelta` -> `EvalDelta`
+- Rename `AppStateDelta` -> `StateDelta`
+- Rename `EvalDelta` -> `ValueDelta`
+- Rename `EvalDeltaKeyValue` -> `ValueDeltaKeyValue`
+- Remove readonly fields from all Transaction types.
+- Rename `Multisig` -> `MultisigSig`
+
 # [2.3.0-pre.4](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.3.0-pre.3...v2.3.0-pre.4) (2022-03-25)
 
 
