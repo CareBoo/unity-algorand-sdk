@@ -4,6 +4,7 @@
 .services/**
 .vscode/**
 dist/**
+*.code-workspace
 Documentation~/**/*.meta
 scripts/**
 Unity.AlgoSdk*/**

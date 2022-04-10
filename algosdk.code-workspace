@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "name": "AlgoSdk",
+      "path": "."
+    },
+    {
+      "name": "UPM",
+      "path": "Unity.AlgoSdk.Package"
+    },
+    {
+      "name": "Asset Store",
+      "path": "Unity.AlgoSdk.AssetStore"
+    }
+  ]
+}
