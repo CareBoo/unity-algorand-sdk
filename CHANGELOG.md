@@ -5,6 +5,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [3.0.0-pre.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.1...v3.0.0-pre.2) (2022-04-12)
+
+
+### Features
+
+* **atomic-txn:** add APIs for building, signing, and serializing Atomic Txns ([858ff9e](https://github.com/CareBoo/unity-algorand-sdk/commit/858ff9e0245a1de254f8e18beff62a8177943144)), closes [#131](https://github.com/CareBoo/unity-algorand-sdk/issues/131)
+* **signer:** update `ISigner` interface to be closer to signer interface in other SDKs ([a8fbe0b](https://github.com/CareBoo/unity-algorand-sdk/commit/a8fbe0bbbc7729b07beef1efc7e5d8757db0cd41)), closes [/github.com/algorand/py-algorand-sdk/blob/aba9f4ccf87d4e7f7d5d6d4826e38463b76da9b8/algosdk/atomic_transaction_composer.py#L558](https://github.com//github.com/algorand/py-algorand-sdk/blob/aba9f4ccf87d4e7f7d5d6d4826e38463b76da9b8/algosdk/atomic_transaction_composer.py/issues/L558) [#131](https://github.com/CareBoo/unity-algorand-sdk/issues/131)
+
+
+### BREAKING CHANGES
+
+* **signer:** Remove `ISigner` interfaces from `AlgoSdk.Account` and completely change the signer
+API.
+
 # [3.0.0-pre.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v2.3.0-pre.4...v3.0.0-pre.1) (2022-04-03)
 
 
