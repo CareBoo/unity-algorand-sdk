@@ -16,7 +16,7 @@ namespace AlgoSdk
         /// <param name="txnsToSign">Indexes of the transactions this signer should sign.</param>
         /// <typeparam name="T">The type of the transactions.</typeparam>
         /// <returns>An array of transactions with signatures. If the transaction at a given index was not signed, that signed transaction will have no signature.</returns>
-        SignedTxn<T>[] SignTxns<T>(T[] txns, int[] txnsToSign) where T : ITransaction, IEquatable<T>;
+        SignedTxn<T>[] SignTxns<T>(T[] txns, TxnIndices txnsToSign) where T : ITransaction, IEquatable<T>;
     }
 
     public interface IAsyncSigner
@@ -34,7 +34,7 @@ namespace AlgoSdk
         /// <returns>An array of transactions with signatures. If the transaction at a given index was not signed, that signed transaction will have no signature.</returns>
         UniTask<SignedTxn<T>[]> SignTxnsAsync<T>(
             T[] txns,
-            int[] txnsToSign,
+            TxnIndices txnsToSign,
             CancellationToken cancellationToken = default
             )
             where T : ITransaction, IEquatable<T>;
@@ -56,11 +56,11 @@ namespace AlgoSdk
         /// <returns>An array of transactions with signatures. If the transaction at a given index was not signed, that signed transaction will have no signature.</returns>
         UniTask<SignedTxn<T>[]> SignTxnsAsync<T, TProgress>(
             T[] txns,
-            int[] txnsToSign,
+            TxnIndices txnsToSign,
             TProgress progress,
             CancellationToken cancellationToken = default
             )
             where T : ITransaction, IEquatable<T>
-            where TProgress : IProgress<T>;
+            where TProgress : IProgress<float>;
     }
 }

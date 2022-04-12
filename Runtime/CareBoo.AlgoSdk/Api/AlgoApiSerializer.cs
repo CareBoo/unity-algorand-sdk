@@ -117,6 +117,18 @@ namespace AlgoSdk
         }
 
         /// <summary>
+        /// Deserialize messagepack bytes into an object
+        /// </summary>
+        /// <typeparam name="T">The type of the object that will be deserialized into</typeparam>
+        /// <param name="bytes">The messagepack bytes</param>
+        /// <returns>The data deserialized as T</returns>        
+        public static T DeserializeMessagePack<T>(byte[] bytes)
+        {
+            using var nativeBytes = new NativeArray<byte>(bytes, Allocator.Temp);
+            return DeserializeMessagePack<T>(nativeBytes);
+        }
+
+        /// <summary>
         /// Serialize an object into messagepack bytes
         /// </summary>
         /// <typeparam name="T">The type of the object that is serialized</typeparam>

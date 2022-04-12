@@ -12,6 +12,7 @@ namespace AlgoSdk
     /// </summary>
     [AlgoApiObject]
     [Serializable]
+    [Obsolete("Use Transaction.Atomic instead to build and sign transaction groups.")]
     public partial struct TransactionGroup
         : IEquatable<TransactionGroup>
     {

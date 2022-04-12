@@ -17,6 +17,8 @@ public abstract class KmdClientTestFixture : AlgoApiClientTestFixture
     public FixedString128Bytes walletHandleToken = default;
     public Wallet wallet;
 
+    public KmdAccount kmdAccount;
+
     protected override AlgoServices RequiresServices => AlgoServices.Kmd;
 
     protected Address PublicKey { get; set; }
@@ -42,6 +44,7 @@ public abstract class KmdClientTestFixture : AlgoApiClientTestFixture
         var (keysErr, keysResponse) = await AlgoApiClientSettings.Kmd.ListKeys(walletHandleToken);
         AssertOkay(keysErr);
         PublicKey = keysResponse.Addresses.First();
+        kmdAccount = new KmdAccount(AlgoApiClientSettings.Kmd, wallet.Id, WalletPassword, PublicKey, walletHandleToken);
     }
 
     protected async UniTask ReleaseWalletHandleToken()

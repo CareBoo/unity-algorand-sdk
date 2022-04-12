@@ -113,22 +113,20 @@ public class AlgodClientTest : AlgodClientTestFixture
         var (_, txnParams) = await AlgoApiClientSettings.Algod.TransactionParams();
         var receiver = AlgoSdk.Crypto.Random.Bytes<Address>();
 
-        var txn1 = Transaction.Payment(PublicKey, txnParams, receiver, 100_000L);
-        var txn2 = Transaction.Payment(PublicKey, txnParams, receiver, 200_000L);
-        var groupId = TransactionGroup.Of(txn1, txn2).GetId();
-        txn1.Group = groupId;
-        txn2.Group = groupId;
+        var buildGroup = Transaction.Atomic()
+            .AddTxn(Transaction.Payment(kmdAccount.Address, txnParams, receiver, 100_000L))
+            .AddTxn(Transaction.Payment(kmdAccount.Address, txnParams, receiver, 200_000L))
+            .Build();
+        for (var i = 0; i < buildGroup.Txns.Length; i++)
+            Assert.False(buildGroup.Txns[i].Group.Equals(default));
 
-        var signed1 = await Sign(txn1);
-        var signed2 = await Sign(txn2);
+        var signingGroup = buildGroup.SignWithAsync(kmdAccount);
+        Assert.AreEqual(signingGroup.SignedTxnIndices, TxnIndices.Select(0, 1));
 
-        var combined = new byte[signed1.Length + signed2.Length];
-        signed1.CopyTo(combined, 0);
-        signed2.CopyTo(combined, signed1.Length);
+        var signedGroup = await signingGroup.FinishSigningAsync();
 
-        var (err, txid) = await AlgoApiClientSettings.Algod.RawTransaction(combined);
+        var (err, txid) = await AlgoApiClientSettings.Algod.RawTransaction(signedGroup);
         AssertOkay(err);
         var pending = await WaitForTransaction(txid.TxId);
-        UnityEngine.Debug.Log($"pending tx count: {pending.InnerTxns?.Length ?? 0}");
     });
 }
