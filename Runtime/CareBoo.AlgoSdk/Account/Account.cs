@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using Unity.Collections;
 
@@ -17,6 +18,9 @@ namespace AlgoSdk
     /// </summary>
     public readonly struct Account
         : IAccount
+        , ISigner
+        , IAsyncSigner
+        , IAsyncSignerWithProgress
     {
         readonly PrivateKey privateKey;
 
@@ -24,6 +28,7 @@ namespace AlgoSdk
 
         readonly bool isRekeyed;
 
+        /// <inheritdoc />
         public Address Address => address;
 
         public bool IsRekeyed => isRekeyed;
@@ -66,16 +71,6 @@ namespace AlgoSdk
             address = this.address;
         }
 
-        public UniTask<SignedTxn<T>> SignTxnAsync<T>(T txn) where T : ITransaction, IEquatable<T>
-        {
-            return UniTask.FromResult(SignTxn(txn));
-        }
-
-        public UniTask<SignedTxn<T>[]> SignTxnsAsync<T>(T[] txns) where T : ITransaction, IEquatable<T>
-        {
-            return UniTask.FromResult(SignTxns(txns));
-        }
-
         public SignedTxn<T> SignTxn<T>(T txn) where T : ITransaction, IEquatable<T>
         {
             using var kp = privateKey.ToKeyPair();
@@ -84,6 +79,50 @@ namespace AlgoSdk
             return new SignedTxn<T> { Txn = txn, Sig = sig };
         }
 
+        /// <inheritdoc />
+        public SignedTxn<T>[] SignTxns<T>(T[] txns, TxnIndices txnsToSign)
+            where T : ITransaction, IEquatable<T>
+        {
+            var signed = new SignedTxn<T>[txns.Length];
+            var txnIndices = txnsToSign.GetEnumerator();
+            while (txnIndices.MoveNext())
+            {
+                var i = txnIndices.Current;
+                signed[i] = SignTxn(txns[i]);
+            }
+
+            return signed;
+        }
+
+        /// <inheritdoc />
+        public UniTask<SignedTxn<T>[]> SignTxnsAsync<T>(T[] txns, TxnIndices txnsToSign, CancellationToken cancellationToken = default)
+            where T : ITransaction, IEquatable<T>
+        {
+            return UniTask.FromResult(SignTxns(txns, txnsToSign));
+        }
+
+        /// <inheritdoc />
+        public UniTask<SignedTxn<T>[]> SignTxnsAsync<T, TProgress>(T[] txns, TxnIndices txnsToSign, TProgress progress, CancellationToken cancellationToken = default)
+            where T : ITransaction, IEquatable<T>
+            where TProgress : IProgress<float>
+        {
+            progress.Report(1f);
+            return SignTxnsAsync(txns, txnsToSign);
+        }
+
+        [Obsolete]
+        public UniTask<SignedTxn<T>> SignTxnAsync<T>(T txn) where T : ITransaction, IEquatable<T>
+        {
+            return UniTask.FromResult(SignTxn(txn));
+        }
+
+        [Obsolete("Use AtomicTxn.Signing.SignWithAsync instead")]
+        public UniTask<SignedTxn<T>[]> SignTxnsAsync<T>(T[] txns) where T : ITransaction, IEquatable<T>
+        {
+            return UniTask.FromResult(SignTxns(txns));
+        }
+
+        [Obsolete("Use AtomicTxn.Signing.SignWith instead.")]
         public SignedTxn<T>[] SignTxns<T>(T[] txns) where T : ITransaction, IEquatable<T>
         {
             var groupId = TransactionGroup.Of(txns).GetId();
