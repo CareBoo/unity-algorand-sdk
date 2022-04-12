@@ -34,6 +34,7 @@ namespace AlgoSdk
             this.walletHandleToken = walletHandleToken;
         }
 
+        /// <inheritdoc />
         public Address Address => address;
 
         public async UniTask<FixedString128Bytes> RefreshWalletHandleToken(CancellationToken cancellationToken = default)
@@ -58,6 +59,7 @@ namespace AlgoSdk
             return walletHandleToken;
         }
 
+        /// <inheritdoc />
         public async UniTask<SignedTxn<T>[]> SignTxnsAsync<T>(T[] txns, TxnIndices txnsToSign, CancellationToken cancellationToken = default)
             where T : ITransaction, IEquatable<T>
         {
