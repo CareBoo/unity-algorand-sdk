@@ -19,7 +19,7 @@ namespace AlgoSdk
     {
         /// <summary>
         /// Get a Merkle proof for a transaction in a block.
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
@@ -45,7 +45,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// 
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Special management endpoint to shutdown the node. Optionally provide a timeout parameter to indicate that the node should begin shutting down after a number of seconds.
         /// </remarks>
@@ -61,7 +61,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Starts a catchpoint catchup.
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Given a catchpoint, it starts catching up to this catchpoint
         /// </remarks>
@@ -77,7 +77,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Aborts a catchpoint catchup.
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Given a catchpoint, it aborts catching up to this catchpoint
         /// </remarks>
@@ -93,7 +93,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Get the block for the given round.
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
@@ -114,7 +114,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Get parameters for constructing a new transaction
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
@@ -130,7 +130,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Provide debugging information for a transaction (or group).
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Executes TEAL program(s) in context and returns debugging information about the execution. This endpoint is only enabled when a node's configuration file sets EnableDeveloperAPI to true.
         /// </remarks>
@@ -146,7 +146,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Get a list of unconfirmed transactions currently in the transaction pool by address.
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Get the list of pending transactions by address, sorted by priority, in decreasing order, truncated at the end at MAX. If MAX = 0, returns all pending transactions.
         /// </remarks>
@@ -172,7 +172,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Broadcasts a raw transaction to the network.
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
@@ -188,7 +188,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Get asset information.
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Given a asset ID, it returns asset information including creator, name, total supply and special addresses.
         /// </remarks>
@@ -204,7 +204,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Get a list of unconfirmed transactions currently in the transaction pool.
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Get the list of pending transactions, sorted by priority, in decreasing order, truncated at the end at MAX. If MAX = 0, returns all pending transactions.
         /// </remarks>
@@ -225,7 +225,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Get the current supply reported by the ledger.
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
@@ -241,7 +241,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Get application information.
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Given a application ID, it returns application information including creator, approval and clear programs, global and local schemas, and global state.
         /// </remarks>
@@ -257,7 +257,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Gets the node status after waiting for the given round.
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Waits for a block to appear after round {round} and returns the node's status at the time.
         /// </remarks>
@@ -273,7 +273,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Gets the current node status.
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
@@ -289,7 +289,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Gets the current swagger spec.
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Returns the entire swagger spec in json.
         /// </remarks>
@@ -305,7 +305,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Delete a given participation key by ID
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Delete a given participation key by ID
         /// </remarks>
@@ -318,7 +318,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Get participation key info given a participation ID
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Given a participation ID, return information about that participation key
         /// </remarks>
@@ -334,7 +334,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Append state proof keys to a participation key
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Given a participation ID, append state proof keys to a particular set of participation keys
         /// </remarks>
@@ -355,7 +355,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Return a list of participation keys
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Return a list of participation keys
         /// </remarks>
@@ -371,7 +371,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Add a participation key to the node
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
@@ -387,7 +387,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Compile TEAL source code to binary, produce its hash
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Given TEAL source code in plain text, return base64 encoded program bytes and base32 SHA512_256 hash of program bytes (Address style). This endpoint is only enabled when a node's configuration file sets EnableDeveloperAPI to true.
         /// </remarks>
@@ -403,7 +403,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Get account information.
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Given a specific account public key, this call returns the accounts status, balance and spendable amounts
         /// </remarks>
@@ -429,7 +429,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Returns OK if healthy.
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
@@ -442,7 +442,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Get a specific pending transaction.
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Given a transaction ID of a recently submitted transaction, it returns information about it.  There are several cases when this might succeed:
         /// - transaction committed (committed round > 0)
@@ -472,7 +472,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Get account information about a given app.
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Given a specific account public key and application ID, this call returns the account's application local state and global state (AppLocalState and AppParams, if either exists). Global state will only be returned if the provided address is the application's creator.
         /// </remarks>
@@ -498,7 +498,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Gets the genesis information.
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Returns the entire genesis file in json.
         /// </remarks>
@@ -514,7 +514,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// 
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Retrieves the supported API versions, binary build versions, and genesis information.
         /// </remarks>
@@ -530,7 +530,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Return metrics about algod functioning.
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
@@ -543,7 +543,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Get account information about a given asset.
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Given a specific account public key and asset ID, this call returns the account's asset holding and asset parameters (if either exist). Asset parameters will only be returned if the provided address is the asset's creator.
         /// </remarks>

@@ -19,7 +19,7 @@ namespace AlgoSdk
     {
         /// <summary>
         /// 
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Lookup an account's asset holdings, optionally for a specific ID.
         /// </remarks>
@@ -55,7 +55,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// 
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Lookup transactions for an asset.
         /// </remarks>
@@ -159,7 +159,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// 
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Search for assets.
         /// </remarks>
@@ -205,7 +205,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// 
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Lookup the list of accounts who hold this asset 
         /// </remarks>
@@ -246,7 +246,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// 
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Lookup an account's created application parameters, optionally for a specific ID.
         /// </remarks>
@@ -282,7 +282,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// 
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Lookup an account's asset holdings, optionally for a specific ID.
         /// </remarks>
@@ -318,7 +318,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// 
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Search for applications
         /// </remarks>
@@ -354,7 +354,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// 
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Search for accounts.
         /// </remarks>
@@ -415,7 +415,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// 
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Lookup account transactions.
         /// </remarks>
@@ -509,7 +509,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// 
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Search for transactions.
         /// </remarks>
@@ -618,7 +618,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// 
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Lookup asset information.
         /// </remarks>
@@ -639,7 +639,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// 
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Lookup application.
         /// </remarks>
@@ -660,7 +660,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// 
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Lookup an account's created asset parameters, optionally for a specific ID.
         /// </remarks>
@@ -696,7 +696,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// 
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Lookup application logs.
         /// </remarks>
@@ -742,7 +742,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// Returns 200 if healthy.
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
@@ -758,7 +758,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// 
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Lookup account information.
         /// </remarks>
@@ -789,7 +789,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// 
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Lookup block.
         /// </remarks>
@@ -805,7 +805,7 @@ namespace AlgoSdk
 
         /// <summary>
         /// 
-        /// </summary
+        /// </summary>
         /// <remarks>
         /// Lookup a single transaction.
         /// </remarks>
