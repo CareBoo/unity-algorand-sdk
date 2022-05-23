@@ -22,16 +22,5 @@ namespace AlgoSdk
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Address>(new AlgoSdk.Formatters.AddressFormatter());
             return true;
         }
-        
-        public partial struct CheckSum
-        {
-            
-            private static bool @__generated__IsValid = CheckSum.@__generated__InitializeAlgoApiFormatters();
-            
-            private static bool @__generated__InitializeAlgoApiFormatters()
-            {
-                return false;
-            }
-        }
     }
 }

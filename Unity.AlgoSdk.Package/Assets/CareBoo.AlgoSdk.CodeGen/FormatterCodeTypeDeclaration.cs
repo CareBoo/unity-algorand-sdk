@@ -19,8 +19,14 @@ namespace AlgoSdk.Editor.CodeGen
             IsStruct = type.IsValueType;
             IsPartial = true;
 
+            var initFormattersCodeMemberMethod = new InitFormattersCodeMemberMethod(type);
+            if (!initFormattersCodeMemberMethod.HasAddedFormatters)
+            {
+                IsValid = false;
+                return;
+            }
+            Members.Add(initFormattersCodeMemberMethod);
             Members.Add(new FormatterStaticFieldInitializerExpression(type));
-            Members.Add(new InitFormattersCodeMemberMethod(type));
 
             var nestedTypeDeclarations = type.GetNestedTypes()
                 .Select(t => new FormatterCodeTypeDeclaration(t))

@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.unity.burst": "1.7.0",
-    "com.unity.collections": "1.0.0-pre.6",
+    "com.unity.collections": "1.2.3",
     "com.unity.ide.vscode": "1.2.5",
     "com.unity.mobile.android-logcat": "1.2.3",
     "com.unity.nuget.mono-cecil": "1.10.2",

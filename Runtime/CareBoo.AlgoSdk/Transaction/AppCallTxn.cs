@@ -415,6 +415,8 @@ namespace AlgoSdk
           : IAppCallTxn
           , IEquatable<AppCallTxn>
     {
+        public const int MaxNumAppArguments = 16;
+
         [SerializeField]
         internal TransactionHeader header;
 

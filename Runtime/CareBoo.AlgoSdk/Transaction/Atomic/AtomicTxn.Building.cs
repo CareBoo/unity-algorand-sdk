@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
+using AlgoSdk.Abi;
 using AlgoSdk.Crypto;
 using AlgoSdk.MessagePack;
 using Unity.Collections;
+using Unity.Mathematics;
 
 namespace AlgoSdk
 {
@@ -56,15 +58,74 @@ namespace AlgoSdk
                 where T : ITransaction
             {
                 if (!txn.Group.Equals(default))
-                    throw new ArgumentException("The given transaction must have its Group field unset.", nameof(txn));
+                    throw new System.ArgumentException("The given transaction must have its Group field unset.", nameof(txn));
                 if (Txns.Count == MaxNumTxns)
-                    throw new NotSupportedException($"Atomic Transaction Groups cannot be larger than {MaxNumTxns} transactions.");
+                    throw new System.NotSupportedException($"Atomic Transaction Groups cannot be larger than {MaxNumTxns} transactions.");
 
                 Transaction raw = default;
                 txn.CopyTo(ref raw);
                 Txns.Add(raw);
 
                 return this;
+            }
+
+            /// <summary>
+            /// Encode and apply ABI Method arguments to an <see cref="AppCallTxn"/> then add the transaction to this group.
+            /// </summary>
+            /// <remarks>
+            /// The <see cref="AppCallTxn"/> must not have its <see cref="AppCallTxn.AppArguments"/> set.
+            /// </remarks>
+            /// <param name="appCallTxn">The transaction to apply these app arguments to.</param>
+            /// <param name="method">The ABI method definition.</param>
+            /// <param name="methodArgs">The list of arguments to encode.</param>
+            /// <typeparam name="T">The type of arg enumerator.</typeparam>
+            /// <returns>An Atomic Transaction in the Building state, ready to add more transactions or build.</returns>
+            public Building AddMethodCall<T>(
+                AppCallTxn appCallTxn,
+                Abi.Method method,
+                in T methodArgs
+            )
+                where T : struct, IArgEnumerator<T>
+            {
+                if (appCallTxn.AppArguments != null)
+                    throw new System.ArgumentException("The given AppCallTxn must have its AppArguments unset.", nameof(appCallTxn));
+
+                var encodedArgLength = math.min(AppCallTxn.MaxNumAppArguments, method.Arguments?.Length ?? 0 + 1);
+                var encodedArgs = new CompiledTeal[encodedArgLength];
+
+                encodedArgs[0] = (CompiledTeal)new MethodSelector(method);
+                var definitions = method.Arguments;
+                var d = 0;
+                var arg = methodArgs;
+                for (var e = 1; e < encodedArgs.Length; e++)
+                {
+                    d = e - 1;
+                    var isMaxEncodedAppArgs = e == AppCallTxn.MaxNumAppArguments - 1;
+                    var hasMoreThan1ArgLeft = d < definitions.Length - 1;
+                    if (isMaxEncodedAppArgs && hasMoreThan1ArgLeft)
+                    {
+                        var remainingDefinitions = new ArraySegment<Method.Arg>(
+                            array: definitions,
+                            offset: d,
+                            count: definitions.Length - d
+                        );
+                        using var encoded = Abi.Tuple
+                            .Of(arg)
+                            .Encode(remainingDefinitions, Allocator.Temp);
+                        encodedArgs[e] = encoded;
+                    }
+                    else
+                    {
+                        if (e > 1 && !arg.TryNext(out arg))
+                            throw new System.ArgumentException($"Not enough arguments given to this method.", nameof(methodArgs));
+                        var definition = method.Arguments[d];
+                        using var encoded = arg.Encode(definition, Allocator.Temp);
+                        encodedArgs[e] = encoded;
+                    }
+                }
+
+                appCallTxn.AppArguments = encodedArgs;
+                return AddTxn(appCallTxn);
             }
 
             /// <summary>
