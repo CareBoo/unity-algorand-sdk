@@ -62,20 +62,20 @@ public class ContractTest
                 {
                     new Method.Arg
                     {
-                        Type = "uint64",
+                        Type = AbiType.Parse("uint64"),
                         Name = "a",
                         Description = "The first term to add"
                     },
                     new Method.Arg
                     {
-                        Type = "uint64",
+                        Type = AbiType.Parse("uint64"),
                         Name = "b",
                         Description = "The second term to add"
                     }
                 },
                 Returns = new Method.Return
                 {
-                    Type = "uint128",
+                    Type = AbiType.Parse("uint128"),
                     Description = "The sum of a and b"
                 }
             },
@@ -87,20 +87,20 @@ public class ContractTest
                 {
                     new Method.Arg
                     {
-                        Type = "uint64",
+                        Type = AbiType.Parse("uint64"),
                         Name = "a",
                         Description = "The first factor to multiply"
                     },
                     new Method.Arg
                     {
-                        Type = "uint64",
+                        Type = AbiType.Parse("uint64"),
                         Name = "b",
                         Description = "The second factor to multiply"
                     }
                 },
                 Returns = new Method.Return
                 {
-                    Type = "uint128",
+                    Type = AbiType.Parse("uint128"),
                     Description = "The product of a and b"
                 }
             }

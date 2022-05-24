@@ -5,7 +5,7 @@ using Unity.Jobs;
 namespace AlgoSdk.Abi
 {
     public readonly struct Tuple<T>
-        : IAbiType
+        : IAbiValue
         where T : IArgEnumerator<T>
     {
         readonly T args;
@@ -15,64 +15,47 @@ namespace AlgoSdk.Abi
             this.args = args;
         }
 
-        public bool IsStatic
+        public NativeArray<byte> Encode(AbiType type, Allocator allocator)
         {
-            get
+            CheckType(type);
+            return Encode(type.NestedTypes, allocator);
+        }
+
+        public int Length(AbiType type)
+        {
+            CheckType(type);
+            if (type.IsStatic)
+                return type.StaticLength;
+
+            var args = this.args;
+            var length = 0;
+            for (var i = 0; i < type.NestedTypes.Length; i++)
             {
-                var arg = args;
-                do
-                {
-                    if (!arg.IsStatic)
-                        return false;
-                } while (arg.TryNext(out arg));
-                return true;
+                if (i > 0 && !args.TryNext(out args))
+                    throw new System.ArgumentException($"Not enough values in tuple to encode {type.Name}", nameof(type));
+
+                var argType = type.NestedTypes[i];
+                if (argType.IsStatic)
+                    length += argType.StaticLength;
+                else
+                    length += args.Length(argType) + 2;
             }
+            return length;
         }
 
-        public string AbiTypeName
+        public NativeArray<byte> Encode(ArraySegment<AbiType> types, Allocator allocator)
         {
-            get
-            {
-                var text = new NativeText(Allocator.Temp);
-                try
-                {
-                    text.Append("(");
-                    var arg = args;
-                    text.Append(arg.AbiTypeName);
-                    while (arg.TryNext(out arg))
-                    {
-                        text.Append(",");
-                        text.Append(arg.AbiTypeName);
-                    }
-                    text.Append(")");
-                    return text.ToString();
-                }
-                finally
-                {
-                    text.Dispose();
-                }
-            }
-        }
-
-        public NativeArray<byte> Encode(Method.Arg definition, Allocator allocator)
-        {
-            var types = definition.Type.Trim('(', ')').Split(',');
-            var definitions = new Method.Arg[types.Length];
-            for (var i = 0; i < definitions.Length; i++)
-                definitions[i] = new Method.Arg { Type = types[i] };
-            return Encode(definitions, allocator);
-        }
-
-        public int Length(Method.Arg definition)
-        {
-            using var encoded = Encode(definition, Allocator.Temp);
-            return encoded.Length;
-        }
-
-        public NativeArray<byte> Encode(ArraySegment<Method.Arg> definitions, Allocator allocator)
-        {
-            using var encoder = new Encoder(args, definitions, Allocator.Temp);
+            using var encoder = new Encoder(args, types, Allocator.Temp);
             return encoder.ToArray(allocator);
+        }
+
+        void CheckType(AbiType type)
+        {
+            if (type.ValueType != AbiValueType.Tuple)
+                throw new System.ArgumentException($"Cannot cast tuple to type {type.ValueType}", nameof(type));
+
+            if (type.NestedTypes == null || type.NestedTypes.Length == 0)
+                throw new System.ArgumentException($"Cannot encode a tuple type without any nested types.", nameof(type));
         }
 
         public struct Encoder
@@ -80,7 +63,7 @@ namespace AlgoSdk.Abi
         {
             T args;
 
-            ArraySegment<Method.Arg> definitions;
+            ArraySegment<AbiType> types;
 
             NativeList<byte> headBytes;
 
@@ -88,10 +71,10 @@ namespace AlgoSdk.Abi
 
             byte boolShift;
 
-            public Encoder(T args, ArraySegment<Method.Arg> definitions, Allocator allocator)
+            public Encoder(T args, ArraySegment<AbiType> types, Allocator allocator)
             {
                 this.args = args;
-                this.definitions = definitions;
+                this.types = types;
                 this.headBytes = new NativeList<byte>(allocator);
                 this.tailBytes = new NativeList<byte>(allocator);
                 this.boolShift = 0;
@@ -114,7 +97,7 @@ namespace AlgoSdk.Abi
 
             int Encode()
             {
-                for (var i = 0; i < definitions.Count; i++)
+                for (var i = 0; i < types.Count; i++)
                 {
                     if ((i > 0) && !args.TryNext(out args))
                         throw new System.InvalidOperationException($"Not enough arguments given to this tuple.");
@@ -139,68 +122,69 @@ namespace AlgoSdk.Abi
                 tailBytes.Dispose();
             }
 
-            void EncodeHead(int d)
+            void EncodeHead(int t)
             {
-                if (args.IsStatic)
-                    EncodeStaticHead(d);
+                if (types[t].IsStatic)
+                    EncodeStaticHead(t);
                 else
-                    EncodeDynamicHead(d);
+                    EncodeDynamicHead(t);
             }
 
-            void EncodeStaticHead(int d)
+            void EncodeStaticHead(int t)
             {
-                if (definitions[d].Type == "bool")
+                if (types[t].Name == "bool")
                 {
-                    EncodeBoolHead(d);
+                    EncodeBoolHead(t);
                 }
                 else
                 {
                     boolShift = 0;
-                    using var bytes = args.Encode(definitions[d], Allocator.Temp);
+                    using var bytes = args.Encode(types[t], Allocator.Temp);
                     headBytes.AddRange(bytes);
                 }
             }
 
-            void EncodeDynamicHead(int d)
+            void EncodeDynamicHead(int t)
             {
                 boolShift = 0;
                 var offset = headBytes.Length + tailBytes.Length;
-                var arg = args;
+                var args = this.args;
                 do
                 {
-                    offset += arg.IsStatic
-                        ? arg.Length(definitions[d])
+                    var type = types[t];
+                    offset += type.IsStatic
+                        ? args.Length(types[t])
                         : 2
                         ;
-                    d++;
-                } while (arg.TryNext(out arg));
+                    t++;
+                } while (args.TryNext(out args));
             }
 
-            void EncodeBoolHead(int d)
+            void EncodeBoolHead(int t)
             {
                 boolShift %= 8;
                 if (boolShift == 0)
                     headBytes.Add(0);
-                using var encoded = args.Encode(definitions[d], Allocator.Temp);
+                using var encoded = args.Encode(types[t], Allocator.Temp);
                 headBytes[headBytes.Length - 1] |= (byte)(encoded[0] >> boolShift);
                 boolShift++;
             }
 
-            void EncodeTail(int d)
+            void EncodeTail(int t)
             {
-                if (args.IsStatic)
-                    EncodeStaticTail(d);
+                if (types[t].IsStatic)
+                    EncodeStaticTail(t);
                 else
-                    EncodeDynamicTail(d);
+                    EncodeDynamicTail(t);
             }
 
-            void EncodeStaticTail(int d)
+            void EncodeStaticTail(int t)
             {
             }
 
-            void EncodeDynamicTail(int d)
+            void EncodeDynamicTail(int t)
             {
-                using var bytes = args.Encode(definitions[d], Allocator.Temp);
+                using var bytes = args.Encode(types[t], Allocator.Temp);
                 tailBytes.AddRange(bytes);
             }
         }

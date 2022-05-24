@@ -2,7 +2,7 @@ using Unity.Collections;
 
 namespace AlgoSdk.Abi
 {
-    public readonly struct Boolean : IAbiType
+    public readonly struct Boolean : IAbiValue
     {
         const byte EncodedTrue = 0x80;
 
@@ -19,28 +19,24 @@ namespace AlgoSdk.Abi
             this.value = value;
         }
 
-        public bool IsStatic => true;
-
-        public string AbiTypeName => "bool";
-
-        public NativeArray<byte> Encode(Method.Arg definition, Allocator allocator)
+        public NativeArray<byte> Encode(AbiType type, Allocator allocator)
         {
-            CheckType(definition);
+            CheckType(type);
             var result = new NativeArray<byte>(1, allocator);
             result[0] = value ? EncodedTrue : EncodedFalse;
             return result;
         }
 
-        public int Length(Method.Arg definition)
+        public int Length(AbiType type)
         {
-            CheckType(definition);
+            CheckType(type);
             return 1;
         }
 
-        void CheckType(Method.Arg definition)
+        void CheckType(AbiType type)
         {
-            if (definition.Type != "bool")
-                throw new System.ArgumentException($"Cannot encode {definition.Type} to ABI bool");
+            if (type.Name != "bool")
+                throw new System.ArgumentException($"Cannot encode {type} to ABI bool");
         }
 
         public static explicit operator Boolean(bool value)

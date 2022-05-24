@@ -30,7 +30,7 @@ namespace AlgoSdk.Abi
             
             private static bool @__generated__InitializeAlgoApiFormatters()
             {
-                AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Abi.Method.Arg>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Abi.Method.Arg>(false).Assign("type", (AlgoSdk.Abi.Method.Arg x) => x.Type, (ref AlgoSdk.Abi.Method.Arg x, System.String value) => x.Type = value, AlgoSdk.StringComparer.Instance).Assign("name", (AlgoSdk.Abi.Method.Arg x) => x.Name, (ref AlgoSdk.Abi.Method.Arg x, System.String value) => x.Name = value, AlgoSdk.StringComparer.Instance).Assign("desc", (AlgoSdk.Abi.Method.Arg x) => x.Description, (ref AlgoSdk.Abi.Method.Arg x, System.String value) => x.Description = value, AlgoSdk.StringComparer.Instance));
+                AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Abi.Method.Arg>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Abi.Method.Arg>(false).Assign("type", (AlgoSdk.Abi.Method.Arg x) => x.Type, (ref AlgoSdk.Abi.Method.Arg x, AlgoSdk.Abi.AbiType value) => x.Type = value).Assign("name", (AlgoSdk.Abi.Method.Arg x) => x.Name, (ref AlgoSdk.Abi.Method.Arg x, System.String value) => x.Name = value, AlgoSdk.StringComparer.Instance).Assign("desc", (AlgoSdk.Abi.Method.Arg x) => x.Description, (ref AlgoSdk.Abi.Method.Arg x, System.String value) => x.Description = value, AlgoSdk.StringComparer.Instance));
                 return true;
             }
         }
@@ -42,7 +42,7 @@ namespace AlgoSdk.Abi
             
             private static bool @__generated__InitializeAlgoApiFormatters()
             {
-                AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Abi.Method.Return>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Abi.Method.Return>(false).Assign("type", (AlgoSdk.Abi.Method.Return x) => x.Type, (ref AlgoSdk.Abi.Method.Return x, System.String value) => x.Type = value, AlgoSdk.StringComparer.Instance).Assign("desc", (AlgoSdk.Abi.Method.Return x) => x.Description, (ref AlgoSdk.Abi.Method.Return x, System.String value) => x.Description = value, AlgoSdk.StringComparer.Instance));
+                AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Abi.Method.Return>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Abi.Method.Return>(false).Assign("type", (AlgoSdk.Abi.Method.Return x) => x.Type, (ref AlgoSdk.Abi.Method.Return x, AlgoSdk.Abi.AbiType value) => x.Type = value).Assign("desc", (AlgoSdk.Abi.Method.Return x) => x.Description, (ref AlgoSdk.Abi.Method.Return x, System.String value) => x.Description = value, AlgoSdk.StringComparer.Instance));
                 return true;
             }
         }

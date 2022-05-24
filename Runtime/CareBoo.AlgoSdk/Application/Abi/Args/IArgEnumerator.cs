@@ -1,7 +1,7 @@
 namespace AlgoSdk.Abi
 {
     public interface IArgEnumerator<T>
-        : IAbiType
+        : IAbiValue
         where T : IArgEnumerator<T>
     {
         public bool TryNext(out T next);

@@ -4,7 +4,7 @@ namespace AlgoSdk.Abi
 {
     public readonly struct ArgsList<THead, TTail>
         : IArgEnumerator<ArgsList<THead, TTail>>
-        where THead : IAbiType
+        where THead : IAbiValue
         where TTail : struct, IArgEnumerator<TTail>
     {
         readonly THead head;
@@ -57,30 +57,20 @@ namespace AlgoSdk.Abi
             return false;
         }
 
-        public NativeArray<byte> Encode(Method.Arg argDefinition, Allocator allocator)
+        public NativeArray<byte> Encode(AbiType type, Allocator allocator)
         {
             return isHead
-                ? head.Encode(argDefinition, allocator)
-                : tail.Encode(argDefinition, allocator)
+                ? head.Encode(type, allocator)
+                : tail.Encode(type, allocator)
                 ;
         }
 
-        public int Length(Method.Arg argDefinition)
+        public int Length(AbiType type)
         {
             return isHead
-                ? head.Length(argDefinition)
-                : tail.Length(argDefinition)
+                ? head.Length(type)
+                : tail.Length(type)
                 ;
         }
-
-        public bool IsStatic => isHead
-            ? head.IsStatic
-            : tail.IsStatic
-            ;
-
-        public string AbiTypeName => isHead
-            ? head.AbiTypeName
-            : tail.AbiTypeName
-            ;
     }
 }

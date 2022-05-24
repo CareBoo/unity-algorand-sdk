@@ -94,32 +94,34 @@ namespace AlgoSdk
                 var encodedArgs = new CompiledTeal[encodedArgLength];
 
                 encodedArgs[0] = (CompiledTeal)new MethodSelector(method);
-                var definitions = method.Arguments;
-                var d = 0;
-                var arg = methodArgs;
+                var types = new AbiType[method.Arguments.Length];
+                for (var i = 0; i < types.Length; i++)
+                    types[i] = method.Arguments[i].Type;
+                var t = 0;
+                var args = methodArgs;
                 for (var e = 1; e < encodedArgs.Length; e++)
                 {
-                    d = e - 1;
+                    t = e - 1;
                     var isMaxEncodedAppArgs = e == AppCallTxn.MaxNumAppArguments - 1;
-                    var hasMoreThan1ArgLeft = d < definitions.Length - 1;
+                    var hasMoreThan1ArgLeft = t < types.Length - 1;
                     if (isMaxEncodedAppArgs && hasMoreThan1ArgLeft)
                     {
-                        var remainingDefinitions = new ArraySegment<Method.Arg>(
-                            array: definitions,
-                            offset: d,
-                            count: definitions.Length - d
+                        var remainingTypes = new ArraySegment<AbiType>(
+                            array: types,
+                            offset: t,
+                            count: types.Length - t
                         );
                         using var encoded = Abi.Tuple
-                            .Of(arg)
-                            .Encode(remainingDefinitions, Allocator.Temp);
+                            .Of(args)
+                            .Encode(remainingTypes, Allocator.Temp);
                         encodedArgs[e] = encoded;
                     }
                     else
                     {
-                        if (e > 1 && !arg.TryNext(out arg))
+                        if (e > 1 && !args.TryNext(out args))
                             throw new System.ArgumentException($"Not enough arguments given to this method.", nameof(methodArgs));
-                        var definition = method.Arguments[d];
-                        using var encoded = arg.Encode(definition, Allocator.Temp);
+                        var type = types[t];
+                        using var encoded = args.Encode(type, Allocator.Temp);
                         encodedArgs[e] = encoded;
                     }
                 }

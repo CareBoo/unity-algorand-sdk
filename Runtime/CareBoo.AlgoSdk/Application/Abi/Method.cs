@@ -88,10 +88,10 @@ namespace AlgoSdk.Abi
                 {
                     if (i > 0)
                         text.Append(new Unicode.Rune(','));
-                    text.Append(Arguments[i].Type);
+                    text.Append(Arguments[i].Type.Name);
                 }
                 text.Append(new Unicode.Rune(')'));
-                text.Append(Returns.Type ?? "void");
+                text.Append(Returns.Type.Name ?? "void");
             }
             catch (Exception ex)
             {
@@ -109,7 +109,7 @@ namespace AlgoSdk.Abi
             : IEquatable<Arg>
         {
             [SerializeField, Tooltip("The type of the argument.")]
-            string type;
+            AbiType type;
 
             [SerializeField, Tooltip("Optional, user-friendly name for the argument.")]
             string name;
@@ -121,7 +121,7 @@ namespace AlgoSdk.Abi
             /// The type of the argument.
             /// </summary>
             [AlgoApiField("type")]
-            public string Type
+            public AbiType Type
             {
                 get => type;
                 set => type = value;
@@ -164,7 +164,7 @@ namespace AlgoSdk.Abi
             : IEquatable<Return>
         {
             [SerializeField, Tooltip("The type of the return value, or \"void\" to indicate no return value.")]
-            string type;
+            AbiType type;
 
             [SerializeField, Tooltip("Optional, user-friendly description for the return value.")]
             string description;
@@ -173,7 +173,7 @@ namespace AlgoSdk.Abi
             /// The type of the return value, or \"void\" to indicate no return value. 
             /// </summary>
             [AlgoApiField("type")]
-            public string Type
+            public AbiType Type
             {
                 get => type;
                 set => type = value;

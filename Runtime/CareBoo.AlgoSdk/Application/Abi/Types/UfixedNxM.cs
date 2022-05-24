@@ -1,11 +1,10 @@
 using System.Numerics;
-using System.Text.RegularExpressions;
 using Unity.Collections;
 using Unity.Mathematics;
 
 namespace AlgoSdk.Abi
 {
-    public interface IUfixedNxM : IAbiType
+    public interface IUfixedNxM : IAbiValue
     {
         ushort N { get; }
         byte M { get; }
@@ -13,23 +12,15 @@ namespace AlgoSdk.Abi
 
     public readonly struct UfixedNxM : IUfixedNxM
     {
-        public static readonly Regex Pattern = new Regex(
-            @"^ufixed(?<N>\d{1,3})x(?<M>\d{1,3})$"
-        );
-
-        readonly UintN value;
+        readonly UIntN value;
 
         readonly byte precision;
 
-        public UfixedNxM(UintN value, byte precision)
+        public UfixedNxM(UIntN value, byte precision)
         {
             this.value = value;
             this.precision = precision;
         }
-
-        public bool IsStatic => true;
-
-        public string AbiTypeName => $"ufixed{N}x{M}";
 
         public ushort N => value.N;
 
@@ -37,49 +28,37 @@ namespace AlgoSdk.Abi
 
         public BigInteger Value => value.Value;
 
-        public NativeArray<byte> Encode(Method.Arg definition, Allocator allocator)
+        public NativeArray<byte> Encode(AbiType type, Allocator allocator)
         {
-            var type = definition.Type;
-            return As(type, out var n, out var m)
+            return As(type)
                 .value
-                .EncodeAs(n, allocator);
+                .Encode(AbiType.UIntN(type.N), allocator);
         }
 
-        public int Length(Method.Arg definition)
+        public int Length(AbiType type)
         {
-            var type = definition.Type;
-            return As(type, out var n, out var m)
-                .value
-                .EncodedLengthAs(n);
+            return type.StaticLength;
         }
 
-        public UfixedNxM As(string type, out ushort n, out byte m)
+        public UfixedNxM As(AbiType type)
         {
-            if (!TryParseType(type, out n, out m))
-                throw new System.ArgumentException($"{type} is not ufixedNxM", nameof(type));
+            CheckType(type);
 
-            return As(n, m);
-        }
-
-        public UfixedNxM As(ushort n, byte m)
-        {
-            var diff = m - precision;
+            var diff = type.M - precision;
             var newVal = diff >= 0
                 ? value.Value * (int)(math.pow(10, diff))
                 : value.Value / (int)(math.pow(10, -diff))
                 ;
-            return new UfixedNxM(new UintN(newVal), m);
+            return new UfixedNxM(new UIntN(newVal), (byte)type.M);
         }
 
-        bool TryParseType(string type, out ushort n, out byte m)
+        void CheckType(AbiType type)
         {
-            n = default;
-            m = default;
-            var match = Pattern.Match(type);
-            return match.Success
-                && ushort.TryParse(match.Groups["N"].Value, out n)
-                && byte.TryParse(match.Groups["M"].Value, out m)
-                ;
+            if (type.ValueType != AbiValueType.UFixedNxM)
+                throw new System.ArgumentException($"Cannot encode UFixed{N}x{M} to ${type.Name}", nameof(type));
+
+            if (type.N < N)
+                throw new System.ArgumentException($"Not enough bits in {type.Name} to fit this UFixed{N}x{M}", nameof(type));
         }
     }
 }

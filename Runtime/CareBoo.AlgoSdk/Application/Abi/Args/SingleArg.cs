@@ -4,7 +4,7 @@ namespace AlgoSdk.Abi
 {
     public readonly struct SingleArg<T>
         : IArgEnumerator<SingleArg<T>>
-        where T : IAbiType
+        where T : IAbiValue
     {
         readonly T arg;
 
@@ -25,18 +25,14 @@ namespace AlgoSdk.Abi
             return false;
         }
 
-        public NativeArray<byte> Encode(Method.Arg argDefinition, Allocator allocator)
+        public NativeArray<byte> Encode(AbiType type, Allocator allocator)
         {
-            return arg.Encode(argDefinition, allocator);
+            return arg.Encode(type, allocator);
         }
 
-        public int Length(Method.Arg argDefinition)
+        public int Length(AbiType type)
         {
-            return arg.Length(argDefinition);
+            return arg.Length(type);
         }
-
-        public bool IsStatic => arg.IsStatic;
-
-        public string AbiTypeName => arg.AbiTypeName;
     }
 }

@@ -3,7 +3,7 @@ namespace AlgoSdk.Abi
     public static partial class Args
     {
         public static SingleArg<T> Add<T>(T arg)
-            where T : IAbiType
+            where T : IAbiValue
         {
             return new SingleArg<T>(arg);
         }
@@ -12,7 +12,7 @@ namespace AlgoSdk.Abi
             this TTail tail,
             THead head
         )
-            where THead : IAbiType
+            where THead : IAbiValue
             where TTail : struct, IArgEnumerator<TTail>
         {
             return new ArgsList<THead, TTail>(head, tail);
