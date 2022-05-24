@@ -57,19 +57,19 @@ namespace AlgoSdk.Abi
             return false;
         }
 
-        public NativeArray<byte> Encode(AbiType type, Allocator allocator)
+        public NativeArray<byte> EncodeCurrent(AbiType type, Allocator allocator)
         {
             return isHead
                 ? head.Encode(type, allocator)
-                : tail.Encode(type, allocator)
+                : tail.EncodeCurrent(type, allocator)
                 ;
         }
 
-        public int Length(AbiType type)
+        public int LengthOfCurrent(AbiType type)
         {
             return isHead
                 ? head.Length(type)
-                : tail.Length(type)
+                : tail.LengthOfCurrent(type)
                 ;
         }
     }

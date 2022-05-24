@@ -38,7 +38,7 @@ namespace AlgoSdk.Abi
                 if (argType.IsStatic)
                     length += argType.StaticLength;
                 else
-                    length += args.Length(argType) + 2;
+                    length += args.LengthOfCurrent(argType) + 2;
             }
             return length;
         }
@@ -139,7 +139,7 @@ namespace AlgoSdk.Abi
                 else
                 {
                     boolShift = 0;
-                    using var bytes = args.Encode(types[t], Allocator.Temp);
+                    using var bytes = args.EncodeCurrent(types[t], Allocator.Temp);
                     headBytes.AddRange(bytes);
                 }
             }
@@ -153,7 +153,7 @@ namespace AlgoSdk.Abi
                 {
                     var type = types[t];
                     offset += type.IsStatic
-                        ? args.Length(types[t])
+                        ? args.LengthOfCurrent(types[t])
                         : 2
                         ;
                     t++;
@@ -165,7 +165,7 @@ namespace AlgoSdk.Abi
                 boolShift %= 8;
                 if (boolShift == 0)
                     headBytes.Add(0);
-                using var encoded = args.Encode(types[t], Allocator.Temp);
+                using var encoded = args.EncodeCurrent(types[t], Allocator.Temp);
                 headBytes[headBytes.Length - 1] |= (byte)(encoded[0] >> boolShift);
                 boolShift++;
             }
@@ -184,7 +184,7 @@ namespace AlgoSdk.Abi
 
             void EncodeDynamicTail(int t)
             {
-                using var bytes = args.Encode(types[t], Allocator.Temp);
+                using var bytes = args.EncodeCurrent(types[t], Allocator.Temp);
                 tailBytes.AddRange(bytes);
             }
         }

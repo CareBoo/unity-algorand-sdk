@@ -25,12 +25,12 @@ namespace AlgoSdk.Abi
             return false;
         }
 
-        public NativeArray<byte> Encode(AbiType type, Allocator allocator)
+        public NativeArray<byte> EncodeCurrent(AbiType type, Allocator allocator)
         {
             return arg.Encode(type, allocator);
         }
 
-        public int Length(AbiType type)
+        public int LengthOfCurrent(AbiType type)
         {
             return arg.Length(type);
         }

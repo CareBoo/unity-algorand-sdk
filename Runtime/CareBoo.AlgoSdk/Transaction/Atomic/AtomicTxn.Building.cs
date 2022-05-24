@@ -121,7 +121,7 @@ namespace AlgoSdk
                         if (e > 1 && !args.TryNext(out args))
                             throw new System.ArgumentException($"Not enough arguments given to this method.", nameof(methodArgs));
                         var type = types[t];
-                        using var encoded = args.Encode(type, Allocator.Temp);
+                        using var encoded = args.EncodeCurrent(type, Allocator.Temp);
                         encodedArgs[e] = encoded;
                     }
                 }

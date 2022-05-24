@@ -1,13 +1,26 @@
 using Unity.Collections;
-using Unity.Collections.LowLevel.Unsafe;
 
 namespace AlgoSdk.Abi
 {
     public readonly struct Array<T>
-        : IAbiValue
+        : IArgEnumerator<Array<T>>
+        , IAbiValue
         where T : IAbiValue
     {
         readonly T[] value;
+        readonly int current;
+
+        public Array(T[] value)
+        {
+            this.value = value ?? throw new System.ArgumentNullException(nameof(value));
+            this.current = 0;
+        }
+
+        Array(T[] value, int current)
+        {
+            this.value = value ?? throw new System.ArgumentNullException(nameof(value));
+            this.current = current;
+        }
 
         public int Count => value?.Length ?? 0;
 
@@ -31,13 +44,16 @@ namespace AlgoSdk.Abi
                 return result;
             }
 
-            var resultList = new NativeList<byte>(allocator);
+            var nestedTypes = new AbiType[Count];
             for (var i = 0; i < Count; i++)
-            {
-                using var childEncoded = value[i].Encode(elementType, Allocator.Temp);
-                resultList.AddRange(childEncoded);
-            }
-            return resultList.AsArray();
+                nestedTypes[i] = elementType;
+            return Tuple.Of(this)
+                .Encode(AbiType.Tuple(nestedTypes), allocator);
+        }
+
+        public NativeArray<byte> EncodeCurrent(AbiType type, Allocator allocator)
+        {
+            return value[current].Encode(type, allocator);
         }
 
         public int Length(AbiType type)
@@ -50,9 +66,36 @@ namespace AlgoSdk.Abi
             var length = 0;
             for (var i = 0; i < Count; i++)
             {
-                length += value[i].Length(elementType);
+                length += value[i].Length(elementType) + 2;
             }
             return length;
+        }
+
+        public int LengthOfCurrent(AbiType type)
+        {
+            return value[current].Length(type);
+        }
+
+        public bool TryNext(out Array<T> next)
+        {
+            if (current + 1 >= Count)
+            {
+                next = this;
+                return false;
+            }
+            next = new Array<T>(value, current + 1);
+            return true;
+        }
+
+        public bool TryPrev(out Array<T> prev)
+        {
+            if (current < 1)
+            {
+                prev = this;
+                return false;
+            }
+            prev = new Array<T>(value, current - 1);
+            return true;
         }
 
         void CheckType(AbiType type)
