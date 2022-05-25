@@ -224,7 +224,7 @@ namespace AlgoSdk.Abi
         ushort N { get; }
     }
 
-    public static class UintNExtensions
+    public static class UIntNExtensions
     {
         public static void CheckFitsIn<T>(this T x, AbiType type)
             where T : IUIntN

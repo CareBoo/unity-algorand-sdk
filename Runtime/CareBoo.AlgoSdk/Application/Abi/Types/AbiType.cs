@@ -52,6 +52,10 @@ namespace AlgoSdk.Abi
 
         public AbiType ElementType => nestedTypes[0];
 
+        public int ArrayLength => n;
+
+        public bool IsFixedArray => ArrayLength >= 0;
+
         public bool IsReference => name == "account"
             || name == "asset"
             || name == "application"
@@ -396,15 +400,5 @@ namespace AlgoSdk.Abi
                 AlgoApiFormatterCache<string>.Formatter.Serialize(ref writer, value.Name);
             }
         }
-    }
-
-    public enum AbiValueType
-    {
-        None,
-        UIntN,
-        Boolean,
-        UFixedNxM,
-        Array,
-        Tuple,
     }
 }

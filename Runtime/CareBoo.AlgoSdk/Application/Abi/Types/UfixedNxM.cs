@@ -4,19 +4,19 @@ using Unity.Mathematics;
 
 namespace AlgoSdk.Abi
 {
-    public interface IUfixedNxM : IAbiValue
+    public interface IUFixedNxM : IAbiValue
     {
         ushort N { get; }
         byte M { get; }
     }
 
-    public readonly struct UfixedNxM : IUfixedNxM
+    public readonly struct UFixedNxM : IUFixedNxM
     {
         readonly UIntN value;
 
         readonly byte precision;
 
-        public UfixedNxM(UIntN value, byte precision)
+        public UFixedNxM(UIntN value, byte precision)
         {
             this.value = value;
             this.precision = precision;
@@ -40,7 +40,7 @@ namespace AlgoSdk.Abi
             return type.StaticLength;
         }
 
-        public UfixedNxM As(AbiType type)
+        public UFixedNxM As(AbiType type)
         {
             CheckType(type);
 
@@ -49,7 +49,7 @@ namespace AlgoSdk.Abi
                 ? value.Value * (int)(math.pow(10, diff))
                 : value.Value / (int)(math.pow(10, -diff))
                 ;
-            return new UfixedNxM(new UIntN(newVal), (byte)type.M);
+            return new UFixedNxM(new UIntN(newVal), (byte)type.M);
         }
 
         void CheckType(AbiType type)

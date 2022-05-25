@@ -1,3 +1,6 @@
+using System.Collections;
+using System.Collections.Generic;
+using AlgoSdk.LowLevel;
 using Unity.Collections;
 
 namespace AlgoSdk.Abi
@@ -28,27 +31,17 @@ namespace AlgoSdk.Abi
         {
             CheckType(type);
             var elementType = type.NestedTypes[0];
-            if (type.IsStatic)
-            {
-                var result = new NativeArray<byte>(type.StaticLength, allocator);
-                var writeResult = result;
-                for (var i = 0; i < Count; i++)
-                {
-                    using var childEncoded = value[i].Encode(elementType, Allocator.Temp);
-                    var offset = childEncoded.Length * i;
-                    for (var j = 0; j < childEncoded.Length; j++)
-                    {
-                        result[offset + j] = childEncoded[j];
-                    }
-                }
-                return result;
-            }
+            var nestedTypes = new Repeated<AbiType>(value.Length, elementType);
+            var tupleEncoding = Tuple.Of(this).Encode(nestedTypes, allocator);
+            if (type.IsFixedArray)
+                return tupleEncoding;
 
-            var nestedTypes = new AbiType[Count];
-            for (var i = 0; i < Count; i++)
-                nestedTypes[i] = elementType;
-            return Tuple.Of(this)
-                .Encode(AbiType.Tuple(nestedTypes), allocator);
+            var result = new NativeList<byte>(allocator);
+            using var k = new UInt16((ushort)value.Length).Encode(AbiType.UIntN(16), Allocator.Temp);
+            result.AddRange(k);
+            result.AddRange(tupleEncoding);
+            tupleEncoding.Dispose();
+            return result;
         }
 
         public NativeArray<byte> EncodeCurrent(AbiType type, Allocator allocator)
@@ -114,6 +107,18 @@ namespace AlgoSdk.Abi
             {
                 throw new System.ArgumentException($"Given array type does not have an element type.", nameof(type));
             }
+        }
+    }
+
+    public static partial class Args
+    {
+        public static SingleArg<Array<T>> Add<T>(T[] x) where T : IAbiValue => Args.Add(new Array<T>(x));
+
+        public static ArgsList<Array<T>, U> Add<T, U>(this U tail, T[] x)
+            where T : IAbiValue
+            where U : struct, IArgEnumerator<U>
+        {
+            return new ArgsList<Array<T>, U>(new Array<T>(x), tail);
         }
     }
 }

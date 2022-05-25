@@ -1,4 +1,4 @@
-using System;
+using System.Collections.Generic;
 using Unity.Collections;
 using Unity.Jobs;
 
@@ -43,9 +43,10 @@ namespace AlgoSdk.Abi
             return length;
         }
 
-        public NativeArray<byte> Encode(ArraySegment<AbiType> types, Allocator allocator)
+        public NativeArray<byte> Encode<U>(U types, Allocator allocator)
+            where U : IReadOnlyList<AbiType>
         {
-            using var encoder = new Encoder(args, types, Allocator.Temp);
+            using var encoder = new Encoder<U>(args, types, Allocator.Temp);
             return encoder.ToArray(allocator);
         }
 
@@ -58,12 +59,13 @@ namespace AlgoSdk.Abi
                 throw new System.ArgumentException($"Cannot encode a tuple type without any nested types.", nameof(type));
         }
 
-        public struct Encoder
+        public struct Encoder<U>
             : INativeDisposable
+            where U : IReadOnlyList<AbiType>
         {
             T args;
 
-            ArraySegment<AbiType> types;
+            U types;
 
             NativeList<byte> headBytes;
 
@@ -71,7 +73,7 @@ namespace AlgoSdk.Abi
 
             byte boolShift;
 
-            public Encoder(T args, ArraySegment<AbiType> types, Allocator allocator)
+            public Encoder(T args, U types, Allocator allocator)
             {
                 this.args = args;
                 this.types = types;

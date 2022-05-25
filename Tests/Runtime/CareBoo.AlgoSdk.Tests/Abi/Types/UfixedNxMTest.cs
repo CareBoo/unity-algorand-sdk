@@ -3,14 +3,14 @@ using NUnit.Framework;
 using Unity.Collections;
 
 [TestFixture]
-public class UfixedNxMTest
+public class UFixedNxMTest
 {
     [Test]
     public void ChangingPrecisionToAndFromValueShouldPreserveValue()
     {
         var value = new UIntN(300);
         byte precision = 2;
-        var expected = new UfixedNxM(value, precision);
+        var expected = new UFixedNxM(value, precision);
         var actual = expected.As(AbiType.UFixedNxM(16, 1));
         var expectedEncoded = expected.Encode(AbiType.UFixedNxM(16, 2), Allocator.Temp);
         var actualEncoded = actual.Encode(AbiType.UFixedNxM(16, 2), Allocator.Temp);
@@ -23,8 +23,8 @@ public class UfixedNxMTest
     [Test]
     public void ChangingPrecisionShouldChangeValueByPowersOf10()
     {
-        var expected = new UfixedNxM(new UIntN(30), 1);
-        var actual = new UfixedNxM(new UIntN(300), 2).As(AbiType.UFixedNxM(16, 1));
+        var expected = new UFixedNxM(new UIntN(30), 1);
+        var actual = new UFixedNxM(new UIntN(300), 2).As(AbiType.UFixedNxM(16, 1));
         Assert.AreEqual(expected.Value, actual.Value);
     }
 }
