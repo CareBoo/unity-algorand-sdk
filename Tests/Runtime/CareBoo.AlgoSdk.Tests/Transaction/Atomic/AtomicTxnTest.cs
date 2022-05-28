@@ -1,8 +1,11 @@
 using System.Collections;
+using System.Linq;
 using AlgoSdk;
 using AlgoSdk.Abi;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
+using Unity.Mathematics;
+using UnityEngine;
 using UnityEngine.TestTools;
 
 [TestFixture]
@@ -129,6 +132,106 @@ public class AtomicTxnTest
                 default,
                 methodAbi,
                 Args.Empty);
+    }
+
+    [Test]
+    public void BuildingAtomicTxnWithMoreThan15ArgsShouldEncodeTheLastOnesIntoATuple()
+    {
+        var argType = AbiType.UIntN(32);
+        var methodAbi = new Method
+        {
+            Name = "test",
+            Description = "Blah blah blah",
+            Arguments = Enumerable.Range(0, 20).Select(i => new Method.Arg
+            {
+                Type = argType,
+                Name = $"arg{i}",
+                Description = $"description{i}"
+            }).ToArray(),
+            Returns = new Method.Return
+            {
+                Type = AbiType.Parse("uint8"),
+                Description = "something"
+            }
+        };
+
+        var sender = Account.GenerateAccount();
+        var receiver = Account.GenerateAccount();
+
+        var args = Args.Add(1).Add(2).Add(3).Add(4).Add(5).Add(6).Add(7).Add(8).Add(9).Add(10).Add(11).Add(12).Add(13).Add(14).Add(15).Add(16).Add(17).Add(18).Add(19).Add(20);
+
+        Assert.AreEqual(methodAbi.Arguments.Length, args.Count);
+        var group = Transaction.Atomic()
+            .AddTxn(Transaction.Payment(sender.Address, default, receiver.Address, 10000))
+            .AddMethodCall(
+                sender.Address,
+                default,
+                default,
+                methodAbi,
+                args
+                );
+
+        Assert.AreEqual(16, group[1].AppArguments.Length);
+        Assert.AreEqual((20 - 14) * argType.StaticLength, group[1].AppArguments[15].Bytes.Length);
+    }
+
+    [Test]
+    public void BuildingAtomicTxnWithReferencesShouldEncodeToUInt8()
+    {
+        var methodAbi = new Method
+        {
+            Name = "test",
+            Arguments = new[]
+            {
+                new Method.Arg
+                {
+                    Type = AbiType.AccountReference
+                },
+                new Method.Arg
+                {
+                    Type = AbiType.AssetReference
+                },
+                new Method.Arg
+                {
+                    Type = AbiType.ApplicationReference
+                },
+                new Method.Arg
+                {
+                    Type = AbiType.AccountReference
+                },
+                new Method.Arg
+                {
+                    Type = AbiType.ApplicationReference
+                },
+            }
+        };
+
+        var sender = Account.GenerateAccount();
+        AppIndex appId0 = (ulong)UnityEngine.Random.Range(0, int.MaxValue);
+        AssetIndex assetId0 = (ulong)UnityEngine.Random.Range(0, int.MaxValue);
+        AppIndex appId1 = appId0 + 1;
+        var account = Account.GenerateAccount();
+
+        var args = Args.Add(sender.Address).Add(assetId0).Add(appId0).Add(account.Address).Add(appId1);
+        var group = Transaction.Atomic()
+            .AddMethodCall(sender.Address, default, appId0, methodAbi, args);
+        var txn = group[0];
+        Assert.AreEqual(methodAbi.Arguments.Length + 1, txn.AppArguments.Length);
+        var expectedIndices = new byte[] { 0, 0, 0, 1, 1 };
+        for (var i = 1; i < txn.AppArguments.Length; i++)
+        {
+            Assert.AreEqual(1, txn.AppArguments[i].Bytes.Length);
+            Assert.AreEqual(expectedIndices[i - 1], txn.AppArguments[i].Bytes[0]);
+        }
+        for (var i = 4; i < txn.AppArguments.Length; i++)
+        {
+            Assert.AreEqual(1, txn.AppArguments[i].Bytes.Length);
+        }
+        Assert.AreEqual(1, txn.Accounts.Length);
+        Assert.AreEqual(1, txn.ForeignApps.Length);
+        Assert.AreEqual(1, txn.ForeignAssets.Length);
+        Assert.AreEqual((ulong)assetId0, txn.ForeignAssets[0]);
+        Assert.AreEqual((ulong)appId1, txn.ForeignApps[0]);
     }
 
     [UnityTest]

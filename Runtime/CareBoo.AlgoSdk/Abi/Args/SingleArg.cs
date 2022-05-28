@@ -14,6 +14,9 @@ namespace AlgoSdk.Abi
         }
 
         /// <inheritdoc />
+        public int Count => 1;
+
+        /// <inheritdoc />
         public bool TryNext(out SingleArg<T> next)
         {
             next = this;

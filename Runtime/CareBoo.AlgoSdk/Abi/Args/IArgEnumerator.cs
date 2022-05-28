@@ -38,5 +38,10 @@ namespace AlgoSdk.Abi
         /// <param name="type">The type to encode this value.</param>
         /// <returns>The length in bytes of the encoded value.</returns>
         int LengthOfCurrent(AbiType type);
+
+        /// <summary>
+        /// Returns the number of args in this enumerator
+        /// </summary>
+        int Count { get; }
     }
 }

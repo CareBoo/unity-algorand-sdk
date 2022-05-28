@@ -30,6 +30,9 @@ namespace AlgoSdk.Abi
             this.isHead = isHead;
         }
 
+        /// <inheritdoc />
+        public int Count => 1 + tail.Count;
+
         ///<inheritdoc />
         public bool TryNext(out ArgsList<THead, TTail> next)
         {

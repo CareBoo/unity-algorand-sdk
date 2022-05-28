@@ -61,7 +61,7 @@ namespace AlgoSdk.LowLevel
             else if (start + count >= Count)
                 throw new ArgumentOutOfRangeException(nameof(count));
 
-            throw new NotImplementedException();
+            return new ReadOnlySlice<T, NativeIndexer<T>>(this, start, count);
         }
     }
 }

@@ -98,9 +98,10 @@ namespace AlgoSdk.Abi
 
             appArguments.AddArray(methodSelector);
             var args = this.argValues;
-            for (var i = 0; i < appArgTypes.Count; i++)
+            var numAppArgs = math.min(MaxAbiTxnArguments, appArgTypes.Count);
+            for (var i = 0; i < numAppArgs; i++)
             {
-                if (i > 0 && args.TryNext(out args))
+                if (i > 0 && !args.TryNext(out args))
                     throw new System.ArgumentException($"Not enough args given for method abi.");
 
                 if (i == MaxAbiTxnArguments - 1 && appArgTypes.Count > MaxAbiTxnArguments)

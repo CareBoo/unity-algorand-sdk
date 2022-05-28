@@ -1,6 +1,5 @@
 using System.Numerics;
 using Unity.Collections;
-using Unity.Collections.NotBurstCompatible;
 using Unity.Mathematics;
 
 namespace AlgoSdk.Abi
@@ -24,8 +23,17 @@ namespace AlgoSdk.Abi
         public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
         {
             this.CheckFitsIn(type);
-            var result = new EncodedAbiArg(1, allocator);
-            result.Bytes.AddNoResize(value);
+            if (type.IsReference)
+            {
+                var reference = references.Encode((ulong)value, type.ReferenceType);
+                var refResult = new EncodedAbiArg(1, allocator);
+                refResult.Bytes.AddNoResize(reference);
+                return refResult;
+            }
+            var encodedLength = type.N / 8;
+            var result = new EncodedAbiArg(encodedLength, allocator);
+            result.Length = encodedLength;
+            result[encodedLength - 1] = value;
             return result;
         }
 
@@ -33,7 +41,10 @@ namespace AlgoSdk.Abi
         public int Length(AbiType type)
         {
             this.CheckFitsIn(type);
-            return 1;
+            return type.IsReference
+                ? 1
+                : type.N / 8
+                ;
         }
     }
 
@@ -64,6 +75,13 @@ namespace AlgoSdk.Abi
         public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
         {
             this.CheckFitsIn(type);
+            if (type.IsReference)
+            {
+                var reference = references.Encode((ulong)value, type.ReferenceType);
+                var refResult = new EncodedAbiArg(1, allocator);
+                refResult.Bytes.AddNoResize(reference);
+                return refResult;
+            }
             var encodedLength = type.N / 8;
             var result = new EncodedAbiArg(encodedLength, allocator);
             result.Length = encodedLength;
@@ -110,6 +128,13 @@ namespace AlgoSdk.Abi
         public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
         {
             this.CheckFitsIn(type);
+            if (type.IsReference)
+            {
+                var reference = references.Encode((ulong)value, type.ReferenceType);
+                var refResult = new EncodedAbiArg(1, allocator);
+                refResult.Bytes.AddNoResize(reference);
+                return refResult;
+            }
             var encodedLength = type.N / 8;
             var result = new EncodedAbiArg(encodedLength, allocator);
             result.Length = encodedLength;
@@ -156,6 +181,13 @@ namespace AlgoSdk.Abi
         public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
         {
             this.CheckFitsIn(type);
+            if (type.IsReference)
+            {
+                var reference = references.Encode((ulong)value, type.ReferenceType);
+                var refResult = new EncodedAbiArg(1, allocator);
+                refResult.Bytes.AddNoResize(reference);
+                return refResult;
+            }
             var encodedLength = type.N / 8;
             var result = new EncodedAbiArg(encodedLength, allocator);
             result.Length = encodedLength;
@@ -194,6 +226,13 @@ namespace AlgoSdk.Abi
         public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
         {
             this.CheckFitsIn(type);
+            if (type.IsReference)
+            {
+                var reference = references.Encode((ulong)value, type.ReferenceType);
+                var refResult = new EncodedAbiArg(1, allocator);
+                refResult.Bytes.AddNoResize(reference);
+                return refResult;
+            }
             var encodedLength = type.N / 8;
             var result = new EncodedAbiArg(encodedLength, allocator);
             result.Length = encodedLength;
@@ -233,7 +272,7 @@ namespace AlgoSdk.Abi
             switch (type.ValueType)
             {
                 case AbiValueType.UIntN when type.IsReference && 64 < x.N:
-                case AbiValueType.UIntN when type.N < x.N:
+                case AbiValueType.UIntN when !type.IsReference && type.N < x.N:
                     throw new System.ArgumentException($"Not enough bits in {type.Name} to store this value.", nameof(type));
                 case AbiValueType.UIntN:
                     break;
