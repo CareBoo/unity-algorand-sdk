@@ -117,7 +117,7 @@
       }
     ],
     "sitemap": {
-      "baseUrl": "https://careboo.github.io/unity-algorand-sdk/3.0.0-pre.2",
+      "baseUrl": "https://careboo.github.io/unity-algorand-sdk/3.0.0-pre.3",
       "changefreq": "monthly",
       "fileOptions": {
         "api/*": {
