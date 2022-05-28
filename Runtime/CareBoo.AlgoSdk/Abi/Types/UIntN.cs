@@ -188,7 +188,7 @@ namespace AlgoSdk.Abi
         public BigInteger Value => value;
 
         /// <inheritdoc />
-        public ushort N => (ushort)(value.GetByteCount() * 8);
+        public ushort N => (ushort)(value.ToByteArray().Length * 8);
 
         /// <inheritdoc />
         public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
@@ -197,19 +197,9 @@ namespace AlgoSdk.Abi
             var encodedLength = type.N / 8;
             var result = new EncodedAbiArg(encodedLength, allocator);
             result.Length = encodedLength;
-            var bytes = value.ToByteArray(isUnsigned: true, isBigEndian: true);
-            if (encodedLength == bytes.Length)
-            {
-                result.Bytes.CopyFromNBC(bytes);
-            }
-            else
-            {
-                var encoded = new NativeArray<byte>(encodedLength, allocator);
-                var offset = encoded.Length - bytes.Length;
-                for (var i = 0; i < bytes.Length; i++)
-                    encoded[i + offset] = bytes[i];
-                result.Bytes.CopyFrom(encoded);
-            }
+            var bytes = value.ToByteArray();
+            for (var i = 0; i < bytes.Length; i++)
+                result[encodedLength - 1 - i] = bytes[i];
 
             return result;
         }
