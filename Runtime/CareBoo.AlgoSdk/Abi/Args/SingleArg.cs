@@ -13,23 +13,27 @@ namespace AlgoSdk.Abi
             this.arg = arg;
         }
 
+        /// <inheritdoc />
         public bool TryNext(out SingleArg<T> next)
         {
             next = this;
             return false;
         }
 
+        /// <inheritdoc />
         public bool TryPrev(out SingleArg<T> prev)
         {
             prev = this;
             return false;
         }
 
+        /// <inheritdoc />
         public EncodedAbiArg EncodeCurrent(AbiType type, AbiReferences references, Allocator allocator)
         {
             return arg.Encode(type, references, allocator);
         }
 
+        /// <inheritdoc />
         public int LengthOfCurrent(AbiType type)
         {
             return arg.Length(type);

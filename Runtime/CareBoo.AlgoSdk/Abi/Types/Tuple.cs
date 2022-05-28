@@ -4,6 +4,9 @@ using Unity.Jobs;
 
 namespace AlgoSdk.Abi
 {
+    /// <summary>
+    /// Stores values that can be encoded as a tuple in an ABI method call.
+    /// </summary>
     public readonly struct Tuple<T>
         : IAbiValue
         where T : IArgEnumerator<T>
@@ -15,12 +18,14 @@ namespace AlgoSdk.Abi
             this.args = args;
         }
 
+        /// <inheritdoc />
         public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
         {
             CheckType(type);
             return Encode(type.NestedTypes, references, allocator);
         }
 
+        /// <inheritdoc />
         public int Length(AbiType type)
         {
             CheckType(type);

@@ -2,6 +2,9 @@ using Unity.Collections;
 
 namespace AlgoSdk.Abi
 {
+    /// <summary>
+    /// Stores a value that can be converted to an ABI "bool".
+    /// </summary>
     public readonly struct Boolean : IAbiValue
     {
         const byte EncodedTrue = 0x80;
@@ -19,6 +22,7 @@ namespace AlgoSdk.Abi
             this.value = value;
         }
 
+        /// <inheritdoc />
         public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
         {
             CheckType(type);
@@ -27,6 +31,7 @@ namespace AlgoSdk.Abi
             return result;
         }
 
+        /// <inheritdoc />
         public int Length(AbiType type)
         {
             CheckType(type);

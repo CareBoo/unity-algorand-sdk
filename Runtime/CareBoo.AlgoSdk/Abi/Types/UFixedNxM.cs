@@ -4,12 +4,24 @@ using Unity.Mathematics;
 
 namespace AlgoSdk.Abi
 {
+
+    /// <inheritdoc />
     public interface IUFixedNxM : IAbiValue
     {
+        /// <summary>
+        /// The number of bits available to this value.
+        /// </summary>
         ushort N { get; }
+
+        /// <summary>
+        /// The precision of this value (the number of digits after the decimal place).
+        /// </summary>
         byte M { get; }
     }
 
+    /// <summary>
+    /// Stores data that can be converted to a "ufixed" in an ABI method call.
+    /// </summary>
     public readonly struct UFixedNxM : IUFixedNxM
     {
         readonly UIntN value;
@@ -22,12 +34,15 @@ namespace AlgoSdk.Abi
             this.precision = precision;
         }
 
+        /// <inheritdoc />
         public ushort N => value.N;
 
+        /// <inheritdoc />
         public byte M => precision;
 
         public BigInteger Value => value.Value;
 
+        /// <inheritdoc />
         public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
         {
             return As(type)
@@ -35,6 +50,7 @@ namespace AlgoSdk.Abi
                 .Encode(AbiType.UIntN(type.N), references, allocator);
         }
 
+        /// <inheritdoc />
         public int Length(AbiType type)
         {
             return type.StaticLength;

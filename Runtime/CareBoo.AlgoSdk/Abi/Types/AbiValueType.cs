@@ -7,7 +7,6 @@ namespace AlgoSdk.Abi
         Boolean,
         UFixedNxM,
         Array,
-        Tuple,
-        Address
+        Tuple
     }
 }

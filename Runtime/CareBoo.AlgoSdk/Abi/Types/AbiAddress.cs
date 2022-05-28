@@ -1,8 +1,11 @@
-using Unity.Collections;
 using AlgoSdk.LowLevel;
+using Unity.Collections;
 
 namespace AlgoSdk.Abi
 {
+    /// <summary>
+    /// Stores data that can be converted to an address or an account reference in an ABI method call.
+    /// </summary>
     public readonly struct AbiAddress
         : IAbiValue
     {
@@ -13,6 +16,7 @@ namespace AlgoSdk.Abi
             this.value = value;
         }
 
+        /// <inheritdoc />
         public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
         {
             CheckType(type);
@@ -33,6 +37,7 @@ namespace AlgoSdk.Abi
             return result;
         }
 
+        /// <inheritdoc />
         public int Length(AbiType type)
         {
             CheckType(type);

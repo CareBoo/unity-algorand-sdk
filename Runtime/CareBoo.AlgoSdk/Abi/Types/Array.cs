@@ -1,10 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using AlgoSdk.LowLevel;
 using Unity.Collections;
 
 namespace AlgoSdk.Abi
 {
+    /// <summary>
+    /// Stores data that can be converted to an array in an ABI Method Call.
+    /// </summary>
     public readonly struct Array<T>
         : IArgEnumerator<Array<T>>
         , IAbiValue
@@ -27,6 +28,7 @@ namespace AlgoSdk.Abi
 
         public int Count => value?.Length ?? 0;
 
+        /// <inheritdoc />
         public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
         {
             CheckType(type);
@@ -46,11 +48,13 @@ namespace AlgoSdk.Abi
             return result;
         }
 
+        /// <inheritdoc />
         public EncodedAbiArg EncodeCurrent(AbiType type, AbiReferences references, Allocator allocator)
         {
             return value[current].Encode(type, references, allocator);
         }
 
+        /// <inheritdoc />
         public int Length(AbiType type)
         {
             CheckType(type);
@@ -66,11 +70,13 @@ namespace AlgoSdk.Abi
             return length;
         }
 
+        /// <inheritdoc />
         public int LengthOfCurrent(AbiType type)
         {
             return value[current].Length(type);
         }
 
+        /// <inheritdoc />
         public bool TryNext(out Array<T> next)
         {
             if (current + 1 >= Count)
@@ -82,6 +88,7 @@ namespace AlgoSdk.Abi
             return true;
         }
 
+        /// <inheritdoc />
         public bool TryPrev(out Array<T> prev)
         {
             if (current < 1)

@@ -3,12 +3,40 @@ namespace AlgoSdk.Abi
     public enum AbiTransactionType : byte
     {
         None,
+
+        /// <summary>
+        /// A payment transaction.
+        /// </summary>
         pay,
+
+        /// <summary>
+        /// A key-registration transaction.
+        /// </summary>
         keyreg,
+
+        /// <summary>
+        /// An asset transfer transactions.
+        /// </summary>
         axfer,
+
+        /// <summary>
+        /// An asset freeze transaction.
+        /// </summary>
         afrz,
+
+        /// <summary>
+        /// An asset configure transaction.
+        /// </summary>
         acfg,
+
+        /// <summary>
+        /// An applicatiopn call transaction.
+        /// </summary>
         appl,
+
+        /// <summary>
+        /// Any transaction type.
+        /// </summary>
         txn,
     }
 

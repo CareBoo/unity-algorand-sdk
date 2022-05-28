@@ -5,6 +5,9 @@ using Unity.Mathematics;
 
 namespace AlgoSdk.Abi
 {
+    /// <summary>
+    /// Stores data that can be converted to a "uint" in an ABI Method call.
+    /// </summary>
     public readonly struct UInt8 : IUIntN
     {
         readonly byte value;
@@ -14,8 +17,10 @@ namespace AlgoSdk.Abi
             this.value = value;
         }
 
+        /// <inheritdoc />
         public ushort N => 8;
 
+        /// <inheritdoc />
         public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
         {
             this.CheckFitsIn(type);
@@ -24,6 +29,7 @@ namespace AlgoSdk.Abi
             return result;
         }
 
+        /// <inheritdoc />
         public int Length(AbiType type)
         {
             this.CheckFitsIn(type);
@@ -31,6 +37,9 @@ namespace AlgoSdk.Abi
         }
     }
 
+    /// <summary>
+    /// Stores data that can be converted to a "uint" in an ABI Method call.
+    /// </summary>
     public readonly struct UInt16 : IUIntN
     {
         readonly ushort value;
@@ -40,6 +49,7 @@ namespace AlgoSdk.Abi
             this.value = value;
         }
 
+        /// <inheritdoc />
         public ushort N
         {
             get
@@ -50,6 +60,7 @@ namespace AlgoSdk.Abi
             }
         }
 
+        /// <inheritdoc />
         public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
         {
             this.CheckFitsIn(type);
@@ -60,6 +71,7 @@ namespace AlgoSdk.Abi
             return result;
         }
 
+        /// <inheritdoc />
         public int Length(AbiType type)
         {
             this.CheckFitsIn(type);
@@ -70,6 +82,9 @@ namespace AlgoSdk.Abi
         }
     }
 
+    /// <summary>
+    /// Stores data that can be converted to a "uint" in an ABI Method call.
+    /// </summary>
     public readonly struct UInt32 : IUIntN
     {
         readonly uint value;
@@ -79,6 +94,7 @@ namespace AlgoSdk.Abi
             this.value = value;
         }
 
+        /// <inheritdoc />
         public ushort N
         {
             get
@@ -90,6 +106,7 @@ namespace AlgoSdk.Abi
             }
         }
 
+        /// <inheritdoc />
         public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
         {
             this.CheckFitsIn(type);
@@ -100,6 +117,7 @@ namespace AlgoSdk.Abi
             return result;
         }
 
+        /// <inheritdoc />
         public int Length(AbiType type)
         {
             this.CheckFitsIn(type);
@@ -110,6 +128,9 @@ namespace AlgoSdk.Abi
         }
     }
 
+    /// <summary>
+    /// Stores data that can be converted to a "uint" in an ABI Method call.
+    /// </summary>
     public readonly struct UInt64 : IUIntN
     {
         readonly ulong value;
@@ -119,6 +140,7 @@ namespace AlgoSdk.Abi
             this.value = value;
         }
 
+        /// <inheritdoc />
         public ushort N
         {
             get
@@ -130,6 +152,7 @@ namespace AlgoSdk.Abi
             }
         }
 
+        /// <inheritdoc />
         public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
         {
             this.CheckFitsIn(type);
@@ -140,6 +163,7 @@ namespace AlgoSdk.Abi
             return result;
         }
 
+        /// <inheritdoc />
         public int Length(AbiType type)
         {
             return type.IsReference
@@ -149,6 +173,9 @@ namespace AlgoSdk.Abi
         }
     }
 
+    /// <summary>
+    /// Stores data that can be converted to a "uint" in an ABI Method call.
+    /// </summary>
     public readonly struct UIntN : IUIntN
     {
         readonly BigInteger value;
@@ -160,8 +187,10 @@ namespace AlgoSdk.Abi
 
         public BigInteger Value => value;
 
+        /// <inheritdoc />
         public ushort N => (ushort)(value.GetByteCount() * 8);
 
+        /// <inheritdoc />
         public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
         {
             this.CheckFitsIn(type);
@@ -185,6 +214,7 @@ namespace AlgoSdk.Abi
             return result;
         }
 
+        /// <inheritdoc />
         public int Length(AbiType type)
         {
             return type.IsReference
@@ -194,8 +224,14 @@ namespace AlgoSdk.Abi
         }
     }
 
+    /// <summary>
+    /// Stores data that can be converted to a "uint" in an ABI Method call.
+    /// </summary>
     public interface IUIntN : IAbiValue
     {
+        /// <summary>
+        /// The number of bits available to this value.
+        /// </summary>
         ushort N { get; }
     }
 
