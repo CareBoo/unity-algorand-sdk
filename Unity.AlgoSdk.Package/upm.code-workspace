@@ -1,12 +1,12 @@
 {
   "folders": [
     {
-      "name": "AlgoSdk",
-      "path": ".."
-    },
-    {
       "name": "UPM",
       "path": "."
+    },
+    {
+      "name": "AlgoSdk",
+      "path": ".."
     }
   ]
 }
