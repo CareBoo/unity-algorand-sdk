@@ -51,7 +51,7 @@ namespace AlgoSdk.LowLevel
             return indices.Dispose(inputDeps);
         }
 
-        public ListSlice<T, NativeIndexer<T>> Slice(int start, int count = -1)
+        public ReadOnlySlice<T, NativeIndexer<T>> Slice(int start, int count = -1)
         {
             if (start < 0 || start >= Count)
                 throw new ArgumentOutOfRangeException(nameof(start));

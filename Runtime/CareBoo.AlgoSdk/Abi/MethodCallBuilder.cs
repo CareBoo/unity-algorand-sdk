@@ -93,14 +93,12 @@ namespace AlgoSdk.Abi
         /// <exception cref="System.ArgumentException">Not enough arguments given to call this method.</exception>
         public AppCallTxn BuildTxn()
         {
-            var appArguments = new CompiledTeal[math.min(AppCallTxn.MaxNumAppArguments, this.appArgTypes.Count + 1)];
+            using var appArguments = new NativeListOfList<byte>(Allocator.Temp);
             using var references = new AbiReferences(sender, applicationId, Allocator.Temp);
 
-            appArguments[0] = (CompiledTeal)methodSelector;
-
-            var abiArgs = new ArraySegment<CompiledTeal>(appArguments, 1, appArguments.Length - 1);
+            appArguments.AddArray(methodSelector);
             var args = this.argValues;
-            for (var i = 0; i < abiArgs.Count; i++)
+            for (var i = 0; i < appArgTypes.Count; i++)
             {
                 if (i > 0 && args.TryNext(out args))
                     throw new System.ArgumentException($"Not enough args given for method abi.");
@@ -110,21 +108,29 @@ namespace AlgoSdk.Abi
                     using var remainingBytes = Tuple
                         .Of(args)
                         .Encode(appArgTypes.Slice(i), references, Allocator.Temp);
-                    abiArgs[i] = remainingBytes.Bytes;
+                    appArguments.Add(remainingBytes.Bytes);
+                }
+                else
+                {
+                    var type = appArgTypes[i];
+                    using var bytes = args.EncodeCurrent(type, references, Allocator.Temp);
+                    appArguments.Add(bytes);
                 }
             }
 
-
+            var tealAppArguments = new CompiledTeal[appArguments.Length];
+            for (var i = 0; i < appArguments.Length; i++)
+                tealAppArguments[i] = appArguments[i].ToArray();
             return Transaction.AppCall(
-                sender: sender,
-                txnParams: txnParams,
-                applicationId: applicationId,
-                onComplete: onComplete,
-                appArguments: appArguments,
-                accounts: references.GetForeignAccounts(),
-                foreignApps: references.GetForeignApps(),
-                foreignAssets: references.GetForeignAssets()
-            );
+                    sender: sender,
+                    txnParams: txnParams,
+                    applicationId: applicationId,
+                    onComplete: onComplete,
+                    appArguments: tealAppArguments,
+                    accounts: references.GetForeignAccounts(),
+                    foreignApps: references.GetForeignApps(),
+                    foreignAssets: references.GetForeignAssets()
+                );
         }
 
         ///<inheritdoc />

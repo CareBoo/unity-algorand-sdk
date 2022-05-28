@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace AlgoSdk.LowLevel
 {
-    public struct ListSlice<T, TList>
+    public struct ReadOnlySlice<T, TList>
         : IReadOnlyList<T>
         where TList : IReadOnlyList<T>
     {
@@ -13,7 +13,7 @@ namespace AlgoSdk.LowLevel
         readonly int start;
         readonly int count;
 
-        public ListSlice(TList list, int start, int count)
+        public ReadOnlySlice(TList list, int start, int count)
         {
             this.list = list;
             this.start = start;
@@ -24,7 +24,7 @@ namespace AlgoSdk.LowLevel
         {
             get
             {
-                if (index >= Count)
+                if (index >= Count || index < 0)
                     throw new ArgumentOutOfRangeException(nameof(index));
 
                 return list[start + index];
@@ -35,7 +35,7 @@ namespace AlgoSdk.LowLevel
 
         public IEnumerator<T> GetEnumerator()
         {
-            return new ListEnumerator<T, ListSlice<T, TList>>(this);
+            return new ListEnumerator<T, ReadOnlySlice<T, TList>>(this);
         }
 
         IEnumerator IEnumerable.GetEnumerator()

@@ -98,16 +98,16 @@ namespace AlgoSdk.LowLevel
             list.Clear();
         }
 
-        public ListSlice<T, NativeOrderedSet<T>> Slice(int start, int count)
+        public ReadOnlySlice<T, NativeOrderedSet<T>> Slice(int start, int count)
         {
             if (start > Count)
                 throw new System.ArgumentOutOfRangeException(nameof(start));
             if (start + count > Count)
                 throw new System.ArgumentOutOfRangeException(nameof(count));
-            return new ListSlice<T, NativeOrderedSet<T>>(this, start, count);
+            return new ReadOnlySlice<T, NativeOrderedSet<T>>(this, start, count);
         }
 
-        public ListSlice<T, NativeOrderedSet<T>> Slice(int start) => Slice(start, Count - start);
+        public ReadOnlySlice<T, NativeOrderedSet<T>> Slice(int start) => Slice(start, Count - start);
 
         public T[] ToArray()
         {
