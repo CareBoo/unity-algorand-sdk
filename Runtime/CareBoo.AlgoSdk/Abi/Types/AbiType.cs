@@ -392,6 +392,13 @@ namespace AlgoSdk.Abi
                     return true;
             }
 
+            var txnType = AbiTransactionTypeExtensions.Parse(type);
+            if (txnType != AbiTransactionType.None)
+            {
+                abiType = Transaction(txnType);
+                return true;
+            }
+
             var match = Patterns.UIntN.Match(type);
             if (match.Success)
                 return TryParseUIntN(match, out abiType);

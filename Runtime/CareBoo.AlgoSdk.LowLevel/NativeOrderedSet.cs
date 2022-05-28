@@ -100,6 +100,10 @@ namespace AlgoSdk.LowLevel
 
         public ListSlice<T, NativeOrderedSet<T>> Slice(int start, int count)
         {
+            if (start > Count)
+                throw new System.ArgumentOutOfRangeException(nameof(start));
+            if (start + count > Count)
+                throw new System.ArgumentOutOfRangeException(nameof(count));
             return new ListSlice<T, NativeOrderedSet<T>>(this, start, count);
         }
 

@@ -5,6 +5,8 @@ namespace AlgoSdk.Abi
     /// </summary>
     public static partial class Args
     {
+        public static EmptyArgs Empty => default;
+
         public static SingleArg<T> Add<T>(T arg)
             where T : IAbiValue
         {

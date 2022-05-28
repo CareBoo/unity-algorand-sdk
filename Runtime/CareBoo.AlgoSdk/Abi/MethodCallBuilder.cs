@@ -79,9 +79,9 @@ namespace AlgoSdk.Abi
                 throw new System.InvalidOperationException("Not enough transactions available to call method");
             for (var i = 0; i < txnArgTypes.Count; i++)
             {
-                var abiTxnType = txnArgTypes[i];
+                var abiTxnType = txnArgTypes[i].TransactionType;
                 var prevTxnType = prevTxns[p + i].TransactionType;
-                if (!abiTxnType.Equals(prevTxnType))
+                if (abiTxnType != AbiTransactionType.txn && (byte)abiTxnType != (byte)prevTxnType)
                     throw new System.InvalidCastException($"The given txn of type {prevTxnType} does not match required txn type of method abi: {abiTxnType}");
             }
         }

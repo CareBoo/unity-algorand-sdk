@@ -1,5 +1,6 @@
 using System.Collections;
 using AlgoSdk;
+using AlgoSdk.Abi;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
 using UnityEngine.TestTools;
@@ -92,6 +93,42 @@ public class AtomicTxnTest
         {
             group.FinishSigning();
         });
+    }
+
+    [Test]
+    public void BuildingTransactionWithAbiCallsShouldValidateTxnTypes()
+    {
+        var methodAbi = new Method
+        {
+            Name = "test",
+            Description = "Blah blah blah",
+            Arguments = new[]
+            {
+                new Method.Arg
+                {
+                    Type = AbiType.Parse("pay"),
+                    Name = "a",
+                    Description = "some payment txn"
+                }
+            },
+            Returns = new Method.Return
+            {
+                Type = AbiType.Parse("uint8"),
+                Description = "something"
+            }
+        };
+
+        var sender = Account.GenerateAccount();
+        var receiver = Account.GenerateAccount();
+
+        var group = Transaction.Atomic()
+            .AddTxn(Transaction.Payment(sender.Address, default, receiver.Address, 100000))
+            .AddMethodCall(
+                sender.Address,
+                default,
+                default,
+                methodAbi,
+                Args.Empty);
     }
 
     [UnityTest]

@@ -87,7 +87,7 @@ namespace AlgoSdk.Abi
         /// <returns>An array of asset indices.</returns>
         public ulong[] GetForeignAssets()
         {
-            return assets.Slice(1).ToArray();
+            return assets.Slice(0).ToArray();
         }
 
         /// <inheritdoc />
