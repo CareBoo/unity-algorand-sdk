@@ -8,5 +8,6 @@ namespace AlgoSdk.Abi
         UFixedNxM,
         Array,
         Tuple,
+        Address
     }
 }

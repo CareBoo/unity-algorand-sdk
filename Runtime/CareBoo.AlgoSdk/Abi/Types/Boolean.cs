@@ -19,11 +19,11 @@ namespace AlgoSdk.Abi
             this.value = value;
         }
 
-        public NativeArray<byte> Encode(AbiType type, Allocator allocator)
+        public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
         {
             CheckType(type);
-            var result = new NativeArray<byte>(1, allocator);
-            result[0] = value ? EncodedTrue : EncodedFalse;
+            var result = new EncodedAbiArg(1, allocator);
+            result.Bytes.AddNoResize(value ? EncodedTrue : EncodedFalse);
             return result;
         }
 

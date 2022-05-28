@@ -1,5 +1,6 @@
 using System.Numerics;
 using Unity.Collections;
+using Unity.Collections.NotBurstCompatible;
 using Unity.Mathematics;
 
 namespace AlgoSdk.Abi
@@ -15,11 +16,11 @@ namespace AlgoSdk.Abi
 
         public ushort N => 8;
 
-        public NativeArray<byte> Encode(AbiType type, Allocator allocator)
+        public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
         {
             this.CheckFitsIn(type);
-            var result = new NativeArray<byte>(1, allocator);
-            result[0] = value;
+            var result = new EncodedAbiArg(1, allocator);
+            result.Bytes.AddNoResize(value);
             return result;
         }
 
@@ -49,11 +50,12 @@ namespace AlgoSdk.Abi
             }
         }
 
-        public NativeArray<byte> Encode(AbiType type, Allocator allocator)
+        public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
         {
             this.CheckFitsIn(type);
             var encodedLength = type.N / 8;
-            var result = new NativeArray<byte>(encodedLength, allocator);
+            var result = new EncodedAbiArg(encodedLength, allocator);
+            result.Length = encodedLength;
             value.CopyToNativeBytesBigEndian(ref result, encodedLength - 2);
             return result;
         }
@@ -61,8 +63,10 @@ namespace AlgoSdk.Abi
         public int Length(AbiType type)
         {
             this.CheckFitsIn(type);
-            var encodedLength = type.N / 8;
-            return encodedLength;
+            return type.IsReference
+                ? 1
+                : type.N / 8
+                ;
         }
     }
 
@@ -86,11 +90,12 @@ namespace AlgoSdk.Abi
             }
         }
 
-        public NativeArray<byte> Encode(AbiType type, Allocator allocator)
+        public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
         {
             this.CheckFitsIn(type);
             var encodedLength = type.N / 8;
-            var result = new NativeArray<byte>(encodedLength, allocator);
+            var result = new EncodedAbiArg(encodedLength, allocator);
+            result.Length = encodedLength;
             value.CopyToNativeBytesBigEndian(ref result, encodedLength - 4);
             return result;
         }
@@ -98,8 +103,10 @@ namespace AlgoSdk.Abi
         public int Length(AbiType type)
         {
             this.CheckFitsIn(type);
-            var encodedLength = type.N / 8;
-            return encodedLength;
+            return type.IsReference
+                ? 1
+                : type.N / 8
+                ;
         }
     }
 
@@ -123,19 +130,22 @@ namespace AlgoSdk.Abi
             }
         }
 
-        public NativeArray<byte> Encode(AbiType type, Allocator allocator)
+        public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
         {
             this.CheckFitsIn(type);
             var encodedLength = type.N / 8;
-            var result = new NativeArray<byte>(encodedLength, allocator);
+            var result = new EncodedAbiArg(encodedLength, allocator);
+            result.Length = encodedLength;
             value.CopyToNativeBytesBigEndian(ref result, encodedLength - 8);
             return result;
         }
 
         public int Length(AbiType type)
         {
-            this.CheckFitsIn(type);
-            return type.N / 8;
+            return type.IsReference
+                ? 1
+                : type.N / 8
+                ;
         }
     }
 
@@ -152,27 +162,58 @@ namespace AlgoSdk.Abi
 
         public ushort N => (ushort)(value.GetByteCount() * 8);
 
-        public NativeArray<byte> Encode(AbiType type, Allocator allocator)
+        public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
         {
             this.CheckFitsIn(type);
             var encodedLength = type.N / 8;
+            var result = new EncodedAbiArg(encodedLength, allocator);
+            result.Length = encodedLength;
             var bytes = value.ToByteArray(isUnsigned: true, isBigEndian: true);
             if (encodedLength == bytes.Length)
             {
-                return new NativeArray<byte>(bytes, allocator);
+                result.Bytes.CopyFromNBC(bytes);
+            }
+            else
+            {
+                var encoded = new NativeArray<byte>(encodedLength, allocator);
+                var offset = encoded.Length - bytes.Length;
+                for (var i = 0; i < bytes.Length; i++)
+                    encoded[i + offset] = bytes[i];
+                result.Bytes.CopyFrom(encoded);
             }
 
-            var encoded = new NativeArray<byte>(encodedLength, allocator);
-            var offset = encoded.Length - bytes.Length;
-            for (var i = 0; i < bytes.Length; i++)
-                encoded[i + offset] = bytes[i];
-            return encoded;
+            return result;
         }
 
         public int Length(AbiType type)
         {
-            this.CheckFitsIn(type);
-            return type.N / 8;
+            return type.IsReference
+                ? 1
+                : type.N / 8
+                ;
+        }
+    }
+
+    public interface IUIntN : IAbiValue
+    {
+        ushort N { get; }
+    }
+
+    public static class UIntNExtensions
+    {
+        public static void CheckFitsIn<T>(this T x, AbiType type)
+            where T : IUIntN
+        {
+            switch (type.ValueType)
+            {
+                case AbiValueType.UIntN when type.IsReference && 64 < x.N:
+                case AbiValueType.UIntN when type.N < x.N:
+                    throw new System.ArgumentException($"Not enough bits in {type.Name} to store this value.", nameof(type));
+                case AbiValueType.UIntN:
+                    break;
+                default:
+                    throw new System.ArgumentException($"Cannot encode this value to type {type.Name}.", nameof(type));
+            }
         }
     }
 
@@ -216,23 +257,6 @@ namespace AlgoSdk.Abi
             where T : struct, IArgEnumerator<T>
         {
             return new ArgsList<UIntN, T>(new UIntN(head), tail);
-        }
-    }
-
-    public interface IUIntN : IAbiValue
-    {
-        ushort N { get; }
-    }
-
-    public static class UIntNExtensions
-    {
-        public static void CheckFitsIn<T>(this T x, AbiType type)
-            where T : IUIntN
-        {
-            if (type.ValueType != AbiValueType.UIntN)
-                throw new System.ArgumentException($"Cannot encode this value to type {type.Name}.", nameof(type));
-            if (type.N < x.N)
-                throw new System.ArgumentException($"Not enough bits in {type.Name} to store this value.", nameof(type));
         }
     }
 }

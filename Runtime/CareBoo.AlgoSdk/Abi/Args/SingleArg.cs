@@ -25,9 +25,9 @@ namespace AlgoSdk.Abi
             return false;
         }
 
-        public NativeArray<byte> EncodeCurrent(AbiType type, Allocator allocator)
+        public EncodedAbiArg EncodeCurrent(AbiType type, AbiReferences references, Allocator allocator)
         {
-            return arg.Encode(type, allocator);
+            return arg.Encode(type, references, allocator);
         }
 
         public int LengthOfCurrent(AbiType type)

@@ -10,10 +10,11 @@ public class UFixedNxMTest
     {
         var value = new UIntN(300);
         byte precision = 2;
+        using var references = new AbiReferences(Allocator.Temp);
         var expected = new UFixedNxM(value, precision);
         var actual = expected.As(AbiType.UFixedNxM(16, 1));
-        var expectedEncoded = expected.Encode(AbiType.UFixedNxM(16, 2), Allocator.Temp);
-        var actualEncoded = actual.Encode(AbiType.UFixedNxM(16, 2), Allocator.Temp);
+        var expectedEncoded = expected.Encode(AbiType.UFixedNxM(16, 2), references, Allocator.Temp);
+        var actualEncoded = actual.Encode(AbiType.UFixedNxM(16, 2), references, Allocator.Temp);
 
         Assert.AreEqual(expectedEncoded.Length, actualEncoded.Length);
         for (var i = 0; i < expectedEncoded.Length; i++)

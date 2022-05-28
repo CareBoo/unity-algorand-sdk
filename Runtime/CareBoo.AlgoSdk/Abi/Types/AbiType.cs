@@ -36,6 +36,12 @@ namespace AlgoSdk.Abi
         [SerializeField]
         AbiType[] nestedTypes;
 
+        [SerializeField]
+        AbiTransactionType txnType;
+
+        [SerializeField]
+        AbiReferenceType referenceType;
+
         public string Name => name;
 
         public AbiValueType ValueType => valueType;
@@ -56,10 +62,13 @@ namespace AlgoSdk.Abi
 
         public bool IsFixedArray => ArrayLength >= 0;
 
-        public bool IsReference => name == "account"
-            || name == "asset"
-            || name == "application"
-            ;
+        public bool IsReference => referenceType > 0;
+
+        public bool IsTxn => txnType > 0;
+
+        public AbiTransactionType TransactionType => txnType;
+
+        public AbiReferenceType ReferenceType => referenceType;
 
         public override string ToString()
         {
@@ -98,31 +107,34 @@ namespace AlgoSdk.Abi
             nestedTypes = new[] { Byte }
         };
 
-        public static AbiType Account => new AbiType
+        public static AbiType AccountReference => new AbiType
         {
             name = "account",
             valueType = AbiValueType.UIntN,
             isStatic = true,
             staticLength = 1,
-            n = 8
+            n = 8,
+            referenceType = AbiReferenceType.Account
         };
 
-        public static AbiType Asset => new AbiType
+        public static AbiType AssetReference => new AbiType
         {
             name = "asset",
             valueType = AbiValueType.UIntN,
             isStatic = true,
             staticLength = 1,
-            n = 8
+            n = 8,
+            referenceType = AbiReferenceType.Asset
         };
 
-        public static AbiType Application => new AbiType
+        public static AbiType ApplicationReference => new AbiType
         {
             name = "application",
             valueType = AbiValueType.UIntN,
             isStatic = true,
             staticLength = 1,
-            n = 8
+            n = 8,
+            referenceType = AbiReferenceType.Application
         };
 
         public static AbiType Boolean => new AbiType
@@ -132,6 +144,18 @@ namespace AlgoSdk.Abi
             isStatic = true,
             staticLength = 1,
         };
+
+        public static AbiType Transaction(AbiTransactionType txnType)
+        {
+            if (txnType == AbiTransactionType.None)
+                throw new System.ArgumentOutOfRangeException(nameof(txnType));
+
+            return new AbiType
+            {
+                name = txnType.ToString(),
+                txnType = txnType
+            };
+        }
 
         public static AbiType UIntN(int n)
         {
@@ -236,13 +260,13 @@ namespace AlgoSdk.Abi
                     abiType = String;
                     return true;
                 case "account":
-                    abiType = Account;
+                    abiType = AccountReference;
                     return true;
                 case "asset":
-                    abiType = Asset;
+                    abiType = AssetReference;
                     return true;
                 case "application":
-                    abiType = Application;
+                    abiType = ApplicationReference;
                     return true;
                 case "bool":
                     abiType = Boolean;

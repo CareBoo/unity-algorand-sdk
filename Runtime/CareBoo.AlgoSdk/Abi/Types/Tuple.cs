@@ -15,10 +15,10 @@ namespace AlgoSdk.Abi
             this.args = args;
         }
 
-        public NativeArray<byte> Encode(AbiType type, Allocator allocator)
+        public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
         {
             CheckType(type);
-            return Encode(type.NestedTypes, allocator);
+            return Encode(type.NestedTypes, references, allocator);
         }
 
         public int Length(AbiType type)
@@ -43,11 +43,11 @@ namespace AlgoSdk.Abi
             return length;
         }
 
-        public NativeArray<byte> Encode<U>(U types, Allocator allocator)
+        public EncodedAbiArg Encode<U>(U types, AbiReferences references, Allocator allocator)
             where U : IReadOnlyList<AbiType>
         {
-            using var encoder = new Encoder<U>(args, types, Allocator.Temp);
-            return encoder.ToArray(allocator);
+            using var encoder = new Encoder<U>(args, types, references, Allocator.Temp);
+            return encoder.Encode(allocator);
         }
 
         void CheckType(AbiType type)
@@ -59,7 +59,7 @@ namespace AlgoSdk.Abi
                 throw new System.ArgumentException($"Cannot encode a tuple type without any nested types.", nameof(type));
         }
 
-        public struct Encoder<U>
+        struct Encoder<U>
             : INativeDisposable
             where U : IReadOnlyList<AbiType>
         {
@@ -67,33 +67,39 @@ namespace AlgoSdk.Abi
 
             U types;
 
+            AbiReferences references;
+
             NativeList<byte> headBytes;
 
             NativeList<byte> tailBytes;
 
+            EncodedAbiArg result;
+
             byte boolShift;
 
-            public Encoder(T args, U types, Allocator allocator)
+            public Encoder(T args, U types, AbiReferences references, Allocator allocator)
             {
                 this.args = args;
                 this.types = types;
+                this.references = references;
                 this.headBytes = new NativeList<byte>(allocator);
                 this.tailBytes = new NativeList<byte>(allocator);
+                this.result = new EncodedAbiArg(allocator);
                 this.boolShift = 0;
             }
 
-            public NativeArray<byte> ToArray(Allocator allocator)
+            public EncodedAbiArg Encode(Allocator allocator)
             {
                 var length = headBytes.Length + tailBytes.Length;
                 if (length == 0)
                 {
                     length = Encode();
                 }
-                var result = new NativeArray<byte>(length, allocator);
+                result.Length = length;
                 for (var i = 0; i < headBytes.Length; i++)
-                    result[i] = headBytes[i];
+                    result.ElementAt(i) = headBytes[i];
                 for (var i = 0; i < tailBytes.Length; i++)
-                    result[i + headBytes.Length] = tailBytes[i];
+                    result.ElementAt(i + headBytes.Length) = tailBytes[i];
                 return result;
             }
 
@@ -141,8 +147,8 @@ namespace AlgoSdk.Abi
                 else
                 {
                     boolShift = 0;
-                    using var bytes = args.EncodeCurrent(types[t], Allocator.Temp);
-                    headBytes.AddRange(bytes);
+                    using var bytes = args.EncodeCurrent(types[t], references, Allocator.Temp);
+                    headBytes.AddRange(bytes.Bytes);
                 }
             }
 
@@ -167,7 +173,7 @@ namespace AlgoSdk.Abi
                 boolShift %= 8;
                 if (boolShift == 0)
                     headBytes.Add(0);
-                using var encoded = args.EncodeCurrent(types[t], Allocator.Temp);
+                using var encoded = args.EncodeCurrent(types[t], references, Allocator.Temp);
                 headBytes[headBytes.Length - 1] |= (byte)(encoded[0] >> boolShift);
                 boolShift++;
             }
@@ -186,8 +192,8 @@ namespace AlgoSdk.Abi
 
             void EncodeDynamicTail(int t)
             {
-                using var bytes = args.EncodeCurrent(types[t], Allocator.Temp);
-                tailBytes.AddRange(bytes);
+                using var bytes = args.EncodeCurrent(types[t], references, Allocator.Temp);
+                tailBytes.AddRange(bytes.Bytes);
             }
         }
     }

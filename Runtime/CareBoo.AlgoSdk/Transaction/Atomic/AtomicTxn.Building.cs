@@ -72,62 +72,36 @@ namespace AlgoSdk
             /// <summary>
             /// Encode and apply ABI Method arguments to an <see cref="AppCallTxn"/> then add the transaction to this group.
             /// </summary>
-            /// <remarks>
-            /// The <see cref="AppCallTxn"/> must not have its <see cref="AppCallTxn.AppArguments"/> set.
-            /// </remarks>
-            /// <param name="appCallTxn">The transaction to apply these app arguments to.</param>
+            /// <param name="sender">The address of the account that pays the fee and amount.</param>
+            /// <param name="txnParams">See <see cref="TransactionParams"/></param>
+            /// <param name="applicationId">ID of the application being configured.</param>
             /// <param name="method">The ABI method definition.</param>
             /// <param name="methodArgs">The list of arguments to encode.</param>
+            /// <param name="onComplete">Defines what additional actions occur with the transaction.</param>
             /// <typeparam name="T">The type of arg enumerator.</typeparam>
             /// <returns>An Atomic Transaction in the Building state, ready to add more transactions or build.</returns>
             public Building AddMethodCall<T>(
-                AppCallTxn appCallTxn,
+                Address sender,
+                TransactionParams txnParams,
+                AppIndex applicationId,
                 Abi.Method method,
-                in T methodArgs
+                in T methodArgs,
+                OnCompletion onComplete = OnCompletion.NoOp
             )
                 where T : struct, IArgEnumerator<T>
             {
-                if (appCallTxn.AppArguments != null)
-                    throw new System.ArgumentException("The given AppCallTxn must have its AppArguments unset.", nameof(appCallTxn));
-
-                var encodedArgLength = math.min(AppCallTxn.MaxNumAppArguments, method.Arguments?.Length ?? 0 + 1);
-                var encodedArgs = new CompiledTeal[encodedArgLength];
-
-                encodedArgs[0] = (CompiledTeal)new MethodSelector(method);
-                var types = new AbiType[method.Arguments.Length];
-                for (var i = 0; i < types.Length; i++)
-                    types[i] = method.Arguments[i].Type;
-                var t = 0;
-                var args = methodArgs;
-                for (var e = 1; e < encodedArgs.Length; e++)
-                {
-                    t = e - 1;
-                    var isMaxEncodedAppArgs = e == AppCallTxn.MaxNumAppArguments - 1;
-                    var hasMoreThan1ArgLeft = t < types.Length - 1;
-                    if (isMaxEncodedAppArgs && hasMoreThan1ArgLeft)
-                    {
-                        var remainingTypes = new ArraySegment<AbiType>(
-                            array: types,
-                            offset: t,
-                            count: types.Length - t
-                        );
-                        using var encoded = Abi.Tuple
-                            .Of(args)
-                            .Encode(remainingTypes, Allocator.Temp);
-                        encodedArgs[e] = encoded;
-                    }
-                    else
-                    {
-                        if (e > 1 && !args.TryNext(out args))
-                            throw new System.ArgumentException($"Not enough arguments given to this method.", nameof(methodArgs));
-                        var type = types[t];
-                        using var encoded = args.EncodeCurrent(type, Allocator.Temp);
-                        encodedArgs[e] = encoded;
-                    }
-                }
-
-                appCallTxn.AppArguments = encodedArgs;
-                return AddTxn(appCallTxn);
+                using var methodCallBuilder = new MethodCallBuilder<T>(
+                    sender,
+                    txnParams,
+                    applicationId,
+                    method,
+                    in methodArgs,
+                    onComplete,
+                    Allocator.Temp
+                );
+                methodCallBuilder.ValidateTxnArgs(Txns);
+                var txn = methodCallBuilder.BuildTxn();
+                return AddTxn(txn);
             }
 
             /// <summary>

@@ -1,3 +1,4 @@
+using AlgoSdk;
 using AlgoSdk.Abi;
 using NUnit.Framework;
 using Unity.Collections;
@@ -9,8 +10,9 @@ public class UintNTest
     public void Uint64EncodingShouldEqualUintNOf64Encoding()
     {
         ulong value = 123456;
-        using var expected = new UIntN(value).Encode(AbiType.UIntN(64), Allocator.Temp);
-        using var actual = new UInt64(value).Encode(AbiType.UIntN(64), Allocator.Temp);
+        using var references = new AbiReferences(Allocator.Temp);
+        using var expected = new UIntN(value).Encode(AbiType.UIntN(64), references, Allocator.Temp);
+        using var actual = new UInt64(value).Encode(AbiType.UIntN(64), references, Allocator.Temp);
 
         Assert.AreEqual(expected.Length, actual.Length);
         for (var i = 0; i < expected.Length; i++)

@@ -1,5 +1,8 @@
 namespace AlgoSdk.Abi
 {
+    /// <summary>
+    /// Utility methods used to build <see cref="IArgEnumerator{T}"/>
+    /// </summary>
     public static partial class Args
     {
         public static SingleArg<T> Add<T>(T arg)

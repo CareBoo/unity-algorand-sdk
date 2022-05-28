@@ -28,11 +28,11 @@ namespace AlgoSdk.Abi
 
         public BigInteger Value => value.Value;
 
-        public NativeArray<byte> Encode(AbiType type, Allocator allocator)
+        public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
         {
             return As(type)
                 .value
-                .Encode(AbiType.UIntN(type.N), allocator);
+                .Encode(AbiType.UIntN(type.N), references, allocator);
         }
 
         public int Length(AbiType type)

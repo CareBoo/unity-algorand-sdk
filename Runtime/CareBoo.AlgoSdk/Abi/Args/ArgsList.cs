@@ -2,6 +2,11 @@ using Unity.Collections;
 
 namespace AlgoSdk.Abi
 {
+    /// <summary>
+    /// Represents a linked-list of <see cref="IAbiValue"/> args given to call an ABI method.
+    /// </summary>
+    /// <typeparam name="THead">The type of the head argument.</typeparam>
+    /// <typeparam name="TTail">The type of the tail enumerator of arguments.</typeparam>
     public readonly struct ArgsList<THead, TTail>
         : IArgEnumerator<ArgsList<THead, TTail>>
         where THead : IAbiValue
@@ -25,6 +30,7 @@ namespace AlgoSdk.Abi
             this.isHead = isHead;
         }
 
+        ///<inheritdoc />
         public bool TryNext(out ArgsList<THead, TTail> next)
         {
             if (isHead)
@@ -41,6 +47,7 @@ namespace AlgoSdk.Abi
             return true;
         }
 
+        ///<inheritdoc />
         public bool TryPrev(out ArgsList<THead, TTail> prev)
         {
             if (isHead)
@@ -57,14 +64,16 @@ namespace AlgoSdk.Abi
             return false;
         }
 
-        public NativeArray<byte> EncodeCurrent(AbiType type, Allocator allocator)
+        ///<inheritdoc />
+        public EncodedAbiArg EncodeCurrent(AbiType type, AbiReferences references, Allocator allocator)
         {
             return isHead
-                ? head.Encode(type, allocator)
-                : tail.EncodeCurrent(type, allocator)
+                ? head.Encode(type, references, allocator)
+                : tail.EncodeCurrent(type, references, allocator)
                 ;
         }
 
+        ///<inheritdoc />
         public int LengthOfCurrent(AbiType type)
         {
             return isHead

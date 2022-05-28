@@ -27,26 +27,28 @@ namespace AlgoSdk.Abi
 
         public int Count => value?.Length ?? 0;
 
-        public NativeArray<byte> Encode(AbiType type, Allocator allocator)
+        public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
         {
             CheckType(type);
+
             var elementType = type.NestedTypes[0];
             var nestedTypes = new Repeated<AbiType>(value.Length, elementType);
-            var tupleEncoding = Tuple.Of(this).Encode(nestedTypes, allocator);
+            var tupleEncoding = Tuple.Of(this).Encode(nestedTypes, references, allocator);
             if (type.IsFixedArray)
                 return tupleEncoding;
 
-            var result = new NativeList<byte>(allocator);
-            using var k = new UInt16((ushort)value.Length).Encode(AbiType.UIntN(16), Allocator.Temp);
-            result.AddRange(k);
-            result.AddRange(tupleEncoding);
+            var result = new EncodedAbiArg(allocator);
+            using var k = new UInt16((ushort)value.Length)
+                .Encode(AbiType.UIntN(16), references, Allocator.Temp);
+            result.Bytes.AddRange(k.Bytes);
+            result.Bytes.AddRange(tupleEncoding.Bytes);
             tupleEncoding.Dispose();
             return result;
         }
 
-        public NativeArray<byte> EncodeCurrent(AbiType type, Allocator allocator)
+        public EncodedAbiArg EncodeCurrent(AbiType type, AbiReferences references, Allocator allocator)
         {
-            return value[current].Encode(type, allocator);
+            return value[current].Encode(type, references, allocator);
         }
 
         public int Length(AbiType type)
@@ -93,19 +95,18 @@ namespace AlgoSdk.Abi
 
         void CheckType(AbiType type)
         {
-            if (type.ValueType != AbiValueType.Array)
+            switch (type.ValueType)
             {
-                throw new System.ArgumentException($"Cannot encode array as type {type.ValueType}", nameof(type));
-            }
-
-            if (type.IsStatic && type.N != Count)
-            {
-                throw new System.ArgumentException($"Cannot encode array of length {value.Length} as an array of length {type.N}", nameof(type));
-            }
-
-            if (type.NestedTypes == null || type.NestedTypes.Length != 1)
-            {
-                throw new System.ArgumentException($"Given array type does not have an element type.", nameof(type));
+                case AbiValueType.Array when type.IsReference:
+                    throw new System.NotSupportedException($"{nameof(Array<T>)}<{nameof(T)}> cannot encode as account reference. Use {nameof(AbiAddress)} instead.");
+                case AbiValueType.Array when type.IsStatic && type.N != Count:
+                    throw new System.ArgumentException($"Cannot encode array of length {value.Length} as an array of length {type.N}", nameof(type));
+                case AbiValueType.Array when type.NestedTypes == null || type.NestedTypes.Length != 1:
+                    throw new System.ArgumentException($"Given array type does not have an element type.", nameof(type));
+                case AbiValueType.Array:
+                    break;
+                default:
+                    throw new System.ArgumentException($"Cannot encode array as type {type.ValueType}", nameof(type));
             }
         }
     }

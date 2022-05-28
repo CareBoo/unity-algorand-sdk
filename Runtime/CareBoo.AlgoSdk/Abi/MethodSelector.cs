@@ -6,6 +6,9 @@ using Unity.Collections;
 
 namespace AlgoSdk.Abi
 {
+    /// <summary>
+    /// Used to select a method defined in an ABI. See <see href="https://github.com/algorandfoundation/ARCs/blob/main/ARCs/arc-0004.md#method-selector">Algorand's Method Selector Spec</see> for more details.
+    /// </summary>
     [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
     public struct MethodSelector
         : IByteArray
@@ -25,6 +28,7 @@ namespace AlgoSdk.Abi
             }
         }
 
+        ///<inheritdoc />
         public byte this[int index]
         {
             get
@@ -43,8 +47,10 @@ namespace AlgoSdk.Abi
             }
         }
 
+        ///<inheritdoc />
         public int Length => SizeBytes;
 
+        ///<inheritdoc />
         public unsafe void* GetUnsafePtr()
         {
             fixed (byte* b = bytes)
