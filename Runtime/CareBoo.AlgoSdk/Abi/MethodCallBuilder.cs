@@ -25,10 +25,10 @@ namespace AlgoSdk.Abi
         readonly OnCompletion onComplete;
 
         readonly MethodSelector methodSelector;
-        readonly AbiType[] argTypes;
+        readonly IAbiType[] argTypes;
 
-        NativeIndexer<AbiType> txnArgTypes;
-        NativeIndexer<AbiType> appArgTypes;
+        NativeIndexer<IAbiType> txnArgTypes;
+        NativeIndexer<IAbiType> appArgTypes;
 
 
         public MethodCallBuilder(
@@ -48,15 +48,15 @@ namespace AlgoSdk.Abi
             this.onComplete = onComplete;
 
             this.methodSelector = new MethodSelector(method);
-            this.argTypes = new AbiType[method.Arguments?.Length ?? 0];
+            this.argTypes = new IAbiType[method.Arguments?.Length ?? 0];
             for (var i = 0; i < this.argTypes.Length; i++)
                 this.argTypes[i] = method.Arguments[i].Type;
 
-            this.txnArgTypes = new NativeIndexer<AbiType>(this.argTypes, allocator);
-            this.appArgTypes = new NativeIndexer<AbiType>(this.argTypes, allocator);
+            this.txnArgTypes = new NativeIndexer<IAbiType>(this.argTypes, allocator);
+            this.appArgTypes = new NativeIndexer<IAbiType>(this.argTypes, allocator);
             for (var i = 0; i < argTypes.Length; i++)
             {
-                if (argTypes[i].IsTxn)
+                if (argTypes[i].IsTransaction())
                     this.txnArgTypes.Add(i);
                 else
                     this.appArgTypes.Add(i);

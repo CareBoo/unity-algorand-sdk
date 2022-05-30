@@ -9,13 +9,13 @@ namespace AlgoSdk.Abi
         public int Count => 0;
 
         /// <inheritdoc />
-        public EncodedAbiArg EncodeCurrent(AbiType type, AbiReferences references, Allocator allocator)
+        public EncodedAbiArg EncodeCurrent(IAbiType type, AbiReferences references, Allocator allocator)
         {
             throw new System.NotSupportedException();
         }
 
         /// <inheritdoc />
-        public int LengthOfCurrent(AbiType type)
+        public int LengthOfCurrent(IAbiType type)
         {
             throw new System.NotSupportedException();
         }

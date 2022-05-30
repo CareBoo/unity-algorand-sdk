@@ -20,10 +20,10 @@ namespace AlgoSdk.Abi
         public ushort N => 8;
 
         /// <inheritdoc />
-        public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
+        public EncodedAbiArg Encode(IAbiType type, AbiReferences references, Allocator allocator)
         {
             this.CheckFitsIn(type);
-            if (type.IsReference)
+            if (type.IsReference())
             {
                 var reference = references.Encode((ulong)value, type.ReferenceType);
                 var refResult = new EncodedAbiArg(1, allocator);
@@ -38,10 +38,10 @@ namespace AlgoSdk.Abi
         }
 
         /// <inheritdoc />
-        public int Length(AbiType type)
+        public int Length(IAbiType type)
         {
             this.CheckFitsIn(type);
-            return type.IsReference
+            return type.IsReference()
                 ? 1
                 : type.N / 8
                 ;
@@ -72,10 +72,10 @@ namespace AlgoSdk.Abi
         }
 
         /// <inheritdoc />
-        public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
+        public EncodedAbiArg Encode(IAbiType type, AbiReferences references, Allocator allocator)
         {
             this.CheckFitsIn(type);
-            if (type.IsReference)
+            if (type.IsReference())
             {
                 var reference = references.Encode((ulong)value, type.ReferenceType);
                 var refResult = new EncodedAbiArg(1, allocator);
@@ -90,10 +90,10 @@ namespace AlgoSdk.Abi
         }
 
         /// <inheritdoc />
-        public int Length(AbiType type)
+        public int Length(IAbiType type)
         {
             this.CheckFitsIn(type);
-            return type.IsReference
+            return type.IsReference()
                 ? 1
                 : type.N / 8
                 ;
@@ -125,10 +125,10 @@ namespace AlgoSdk.Abi
         }
 
         /// <inheritdoc />
-        public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
+        public EncodedAbiArg Encode(IAbiType type, AbiReferences references, Allocator allocator)
         {
             this.CheckFitsIn(type);
-            if (type.IsReference)
+            if (type.IsReference())
             {
                 var reference = references.Encode((ulong)value, type.ReferenceType);
                 var refResult = new EncodedAbiArg(1, allocator);
@@ -143,10 +143,10 @@ namespace AlgoSdk.Abi
         }
 
         /// <inheritdoc />
-        public int Length(AbiType type)
+        public int Length(IAbiType type)
         {
             this.CheckFitsIn(type);
-            return type.IsReference
+            return type.IsReference()
                 ? 1
                 : type.N / 8
                 ;
@@ -178,10 +178,10 @@ namespace AlgoSdk.Abi
         }
 
         /// <inheritdoc />
-        public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
+        public EncodedAbiArg Encode(IAbiType type, AbiReferences references, Allocator allocator)
         {
             this.CheckFitsIn(type);
-            if (type.IsReference)
+            if (type.IsReference())
             {
                 var reference = references.Encode((ulong)value, type.ReferenceType);
                 var refResult = new EncodedAbiArg(1, allocator);
@@ -196,9 +196,9 @@ namespace AlgoSdk.Abi
         }
 
         /// <inheritdoc />
-        public int Length(AbiType type)
+        public int Length(IAbiType type)
         {
-            return type.IsReference
+            return type.IsReference()
                 ? 1
                 : type.N / 8
                 ;
@@ -223,10 +223,10 @@ namespace AlgoSdk.Abi
         public ushort N => (ushort)(value.ToByteArray().Length * 8);
 
         /// <inheritdoc />
-        public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
+        public EncodedAbiArg Encode(IAbiType type, AbiReferences references, Allocator allocator)
         {
             this.CheckFitsIn(type);
-            if (type.IsReference)
+            if (type.IsReference())
             {
                 var reference = references.Encode((ulong)value, type.ReferenceType);
                 var refResult = new EncodedAbiArg(1, allocator);
@@ -244,9 +244,9 @@ namespace AlgoSdk.Abi
         }
 
         /// <inheritdoc />
-        public int Length(AbiType type)
+        public int Length(IAbiType type)
         {
-            return type.IsReference
+            return type.IsReference()
                 ? 1
                 : type.N / 8
                 ;
@@ -266,13 +266,13 @@ namespace AlgoSdk.Abi
 
     public static class UIntNExtensions
     {
-        public static void CheckFitsIn<T>(this T x, AbiType type)
+        public static void CheckFitsIn<T>(this T x, IAbiType type)
             where T : IUIntN
         {
             switch (type.ValueType)
             {
-                case AbiValueType.UIntN when type.IsReference && 64 < x.N:
-                case AbiValueType.UIntN when !type.IsReference && type.N < x.N:
+                case AbiValueType.UIntN when type.IsReference() && 64 < x.N:
+                case AbiValueType.UIntN when !type.IsReference() && type.N < x.N:
                     throw new System.ArgumentException($"Not enough bits in {type.Name} to store this value.", nameof(type));
                 case AbiValueType.UIntN:
                     break;

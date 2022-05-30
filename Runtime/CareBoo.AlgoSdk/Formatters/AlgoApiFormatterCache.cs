@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using AlgoSdk.Abi;
 using AlgoSdk.Crypto;
 using AlgoSdk.Formatters;
 using Unity.Collections;
@@ -57,6 +58,7 @@ namespace AlgoSdk
             Add<TealValueType>(new ByteEnumFormatter<TealValueType>());
             Add<SignatureType>(new SignatureTypeFormatter());
             Add<HashType>(new HashTypeFormatter());
+            Add<IAbiType>(new AbiType.Formatter());
         }
 
         public static void Add<T>(IAlgoApiFormatter<T> formatter)

@@ -43,7 +43,7 @@ namespace AlgoSdk.Abi
         public BigInteger Value => value.Value;
 
         /// <inheritdoc />
-        public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
+        public EncodedAbiArg Encode(IAbiType type, AbiReferences references, Allocator allocator)
         {
             return As(type)
                 .value
@@ -51,12 +51,12 @@ namespace AlgoSdk.Abi
         }
 
         /// <inheritdoc />
-        public int Length(AbiType type)
+        public int Length(IAbiType type)
         {
             return type.StaticLength;
         }
 
-        public UFixedNxM As(AbiType type)
+        public UFixedNxM As(IAbiType type)
         {
             CheckType(type);
 
@@ -68,7 +68,7 @@ namespace AlgoSdk.Abi
             return new UFixedNxM(new UIntN(newVal), (byte)type.M);
         }
 
-        void CheckType(AbiType type)
+        void CheckType(IAbiType type)
         {
             if (type.ValueType != AbiValueType.UFixedNxM)
                 throw new System.ArgumentException($"Cannot encode UFixed{N}x{M} to ${type.Name}", nameof(type));

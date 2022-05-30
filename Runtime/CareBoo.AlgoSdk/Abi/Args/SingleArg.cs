@@ -31,13 +31,13 @@ namespace AlgoSdk.Abi
         }
 
         /// <inheritdoc />
-        public EncodedAbiArg EncodeCurrent(AbiType type, AbiReferences references, Allocator allocator)
+        public EncodedAbiArg EncodeCurrent(IAbiType type, AbiReferences references, Allocator allocator)
         {
             return arg.Encode(type, references, allocator);
         }
 
         /// <inheritdoc />
-        public int LengthOfCurrent(AbiType type)
+        public int LengthOfCurrent(IAbiType type)
         {
             return arg.Length(type);
         }

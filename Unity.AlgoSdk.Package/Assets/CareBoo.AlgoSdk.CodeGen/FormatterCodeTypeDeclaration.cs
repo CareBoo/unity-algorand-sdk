@@ -14,9 +14,15 @@ namespace AlgoSdk.Editor.CodeGen
 
             Name = type.NameExpression();
 
-            IsClass = type.IsClass;
+            if (type.Name == "IAbiType")
+            {
+                UnityEngine.Debug.Log($"IsClass: {type.IsClass}");
+                UnityEngine.Debug.Log($"IsInterface: {type.IsInterface}");
+            }
+            IsClass = type.IsClass && !type.IsInterface;
             IsEnum = false;
             IsStruct = type.IsValueType;
+            IsInterface = type.IsInterface;
             IsPartial = true;
 
             var initFormattersCodeMemberMethod = new InitFormattersCodeMemberMethod(type);

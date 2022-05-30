@@ -19,14 +19,14 @@ namespace AlgoSdk.Abi
         }
 
         /// <inheritdoc />
-        public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
+        public EncodedAbiArg Encode(IAbiType type, AbiReferences references, Allocator allocator)
         {
             CheckType(type);
             return Encode(type.NestedTypes, references, allocator);
         }
 
         /// <inheritdoc />
-        public int Length(AbiType type)
+        public int Length(IAbiType type)
         {
             CheckType(type);
             if (type.IsStatic)
@@ -49,13 +49,13 @@ namespace AlgoSdk.Abi
         }
 
         public EncodedAbiArg Encode<U>(U types, AbiReferences references, Allocator allocator)
-            where U : IReadOnlyList<AbiType>
+            where U : IReadOnlyList<IAbiType>
         {
             using var encoder = new Encoder<U>(args, types, references, Allocator.Temp);
             return encoder.Encode(allocator);
         }
 
-        void CheckType(AbiType type)
+        void CheckType(IAbiType type)
         {
             if (type.ValueType != AbiValueType.Tuple)
                 throw new System.ArgumentException($"Cannot cast tuple to type {type.ValueType}", nameof(type));
@@ -66,7 +66,7 @@ namespace AlgoSdk.Abi
 
         struct Encoder<U>
             : INativeDisposable
-            where U : IReadOnlyList<AbiType>
+            where U : IReadOnlyList<IAbiType>
         {
             T args;
 

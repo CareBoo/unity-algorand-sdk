@@ -136,4 +136,19 @@ namespace AlgoSdk
 
         public static bool Equals(string x, string y) => string.Equals(x, y);
     }
+
+    public struct IAbiTypeComparer : IEqualityComparer<Abi.IAbiType>
+    {
+        public static IAbiTypeComparer Instance => default;
+
+        public bool Equals(Abi.IAbiType x, Abi.IAbiType y)
+        {
+            return StringComparer.Equals(x?.Name, y?.Name);
+        }
+
+        public int GetHashCode(Abi.IAbiType obj)
+        {
+            return obj?.Name.GetHashCode() ?? 0;
+        }
+    }
 }

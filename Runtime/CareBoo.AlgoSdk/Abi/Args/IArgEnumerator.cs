@@ -30,14 +30,14 @@ namespace AlgoSdk.Abi
         /// <param name="references">Stores account, application, and asset references that are intended to be included in <see cref="AppCallTxn.Accounts"/>, <see cref="AppCallTxn.ForeignApps"/>, and <see cref="AppCallTxn.ForeignAssets"/> arguments.</param>
         /// <param name="allocator">The memory allocator to use.</param>
         /// <returns>An <see cref="EncodedAbiArg"/>.</returns>
-        EncodedAbiArg EncodeCurrent(AbiType type, AbiReferences references, Allocator allocator);
+        EncodedAbiArg EncodeCurrent(IAbiType type, AbiReferences references, Allocator allocator);
 
         /// <summary>
         /// Returns the length of the result of encoding the current argument as <see cref="AbiType"/>.
         /// </summary>
         /// <param name="type">The type to encode this value.</param>
         /// <returns>The length in bytes of the encoded value.</returns>
-        int LengthOfCurrent(AbiType type);
+        int LengthOfCurrent(IAbiType type);
 
         /// <summary>
         /// Returns the number of args in this enumerator
