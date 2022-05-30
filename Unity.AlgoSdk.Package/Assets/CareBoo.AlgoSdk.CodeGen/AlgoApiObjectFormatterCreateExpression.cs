@@ -9,7 +9,8 @@ namespace AlgoSdk.Editor.CodeGen
     {
         static readonly Dictionary<Type, Type> equalityComparerLookup = new Dictionary<Type, Type>()
         {
-            {typeof(string), typeof(StringComparer)}
+            {typeof(string), typeof(StringComparer)},
+            {typeof(Abi.IAbiType), typeof(IAbiTypeComparer)}
         };
 
         CodeExpression expression;

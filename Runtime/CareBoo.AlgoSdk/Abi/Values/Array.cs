@@ -29,12 +29,12 @@ namespace AlgoSdk.Abi
         public int Count => value?.Length ?? 0;
 
         /// <inheritdoc />
-        public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
+        public EncodedAbiArg Encode(IAbiType type, AbiReferences references, Allocator allocator)
         {
             CheckType(type);
 
             var elementType = type.NestedTypes[0];
-            var nestedTypes = new Repeated<AbiType>(value.Length, elementType);
+            var nestedTypes = new Repeated<IAbiType>(value.Length, elementType);
             var tupleEncoding = Tuple.Of(this).Encode(nestedTypes, references, allocator);
             if (type.IsFixedArray)
                 return tupleEncoding;
@@ -49,13 +49,13 @@ namespace AlgoSdk.Abi
         }
 
         /// <inheritdoc />
-        public EncodedAbiArg EncodeCurrent(AbiType type, AbiReferences references, Allocator allocator)
+        public EncodedAbiArg EncodeCurrent(IAbiType type, AbiReferences references, Allocator allocator)
         {
             return value[current].Encode(type, references, allocator);
         }
 
         /// <inheritdoc />
-        public int Length(AbiType type)
+        public int Length(IAbiType type)
         {
             CheckType(type);
             if (type.IsStatic)
@@ -71,7 +71,7 @@ namespace AlgoSdk.Abi
         }
 
         /// <inheritdoc />
-        public int LengthOfCurrent(AbiType type)
+        public int LengthOfCurrent(IAbiType type)
         {
             return value[current].Length(type);
         }
@@ -100,11 +100,11 @@ namespace AlgoSdk.Abi
             return true;
         }
 
-        void CheckType(AbiType type)
+        void CheckType(IAbiType type)
         {
             switch (type.ValueType)
             {
-                case AbiValueType.Array when type.IsReference:
+                case AbiValueType.Array when type.IsReference():
                     throw new System.NotSupportedException($"{nameof(Array<T>)}<{nameof(T)}> cannot encode as account reference. Use {nameof(AbiAddress)} instead.");
                 case AbiValueType.Array when type.IsStatic && type.N != Count:
                     throw new System.ArgumentException($"Cannot encode array of length {value.Length} as an array of length {type.N}", nameof(type));

@@ -91,7 +91,7 @@ namespace AlgoSdk.Abi
                     text.Append(Arguments[i].Type.Name);
                 }
                 text.Append(new Unicode.Rune(')'));
-                text.Append(Returns.Type.Name ?? "void");
+                text.Append(Returns.Type?.Name ?? "void");
             }
             catch (Exception ex)
             {
@@ -108,8 +108,8 @@ namespace AlgoSdk.Abi
         public partial struct Arg
             : IEquatable<Arg>
         {
-            [SerializeField, Tooltip("The type of the argument.")]
-            AbiType type;
+            [SerializeField, SerializeReference, Tooltip("The type of the argument.")]
+            IAbiType type;
 
             [SerializeField, Tooltip("Optional, user-friendly name for the argument.")]
             string name;
@@ -121,7 +121,7 @@ namespace AlgoSdk.Abi
             /// The type of the argument.
             /// </summary>
             [AlgoApiField("type")]
-            public AbiType Type
+            public IAbiType Type
             {
                 get => type;
                 set => type = value;
@@ -149,7 +149,7 @@ namespace AlgoSdk.Abi
 
             public bool Equals(Arg other)
             {
-                return StringComparer.Equals(Type, other.Type)
+                return IAbiTypeComparer.Instance.Equals(Type, other.Type)
                     && StringComparer.Equals(Name, other.Name)
                     && StringComparer.Equals(Description, other.Description)
                     ;
@@ -163,8 +163,8 @@ namespace AlgoSdk.Abi
         public partial struct Return
             : IEquatable<Return>
         {
-            [SerializeField, Tooltip("The type of the return value, or \"void\" to indicate no return value.")]
-            AbiType type;
+            [SerializeField, SerializeReference, Tooltip("The type of the return value, or \"void\" to indicate no return value.")]
+            IAbiType type;
 
             [SerializeField, Tooltip("Optional, user-friendly description for the return value.")]
             string description;
@@ -173,7 +173,7 @@ namespace AlgoSdk.Abi
             /// The type of the return value, or \"void\" to indicate no return value. 
             /// </summary>
             [AlgoApiField("type")]
-            public AbiType Type
+            public IAbiType Type
             {
                 get => type;
                 set => type = value;
@@ -191,7 +191,7 @@ namespace AlgoSdk.Abi
 
             public bool Equals(Return other)
             {
-                return StringComparer.Equals(Type, other.Type)
+                return IAbiTypeComparer.Instance.Equals(Type, other.Type)
                     && StringComparer.Equals(Description, other.Description)
                     ;
             }

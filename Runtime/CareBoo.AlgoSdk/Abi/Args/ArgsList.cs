@@ -68,7 +68,7 @@ namespace AlgoSdk.Abi
         }
 
         ///<inheritdoc />
-        public EncodedAbiArg EncodeCurrent(AbiType type, AbiReferences references, Allocator allocator)
+        public EncodedAbiArg EncodeCurrent(IAbiType type, AbiReferences references, Allocator allocator)
         {
             return isHead
                 ? head.Encode(type, references, allocator)
@@ -77,7 +77,7 @@ namespace AlgoSdk.Abi
         }
 
         ///<inheritdoc />
-        public int LengthOfCurrent(AbiType type)
+        public int LengthOfCurrent(IAbiType type)
         {
             return isHead
                 ? head.Length(type)

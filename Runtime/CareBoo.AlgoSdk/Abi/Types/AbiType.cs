@@ -1,250 +1,143 @@
-using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using AlgoSdk.Json;
 using AlgoSdk.MessagePack;
-using UnityEngine;
 
 namespace AlgoSdk.Abi
 {
-    /// <summary>
-    /// The type of an ABI value.
-    /// </summary>
-    [Serializable]
-    [AlgoApiFormatter(typeof(AbiType.Formatter))]
-    public partial struct AbiType
-        : IEquatable<AbiType>
+    public partial interface IAbiType
     {
-        [SerializeField]
-        string name;
-
-        [SerializeField]
-        AbiValueType valueType;
-
-        [SerializeField]
-        bool isStatic;
-
-        [SerializeField]
-        int staticLength;
-
-        [SerializeField]
-        int n;
-
-        [SerializeField]
-        int m;
-
-        [SerializeField]
-        AbiType[] nestedTypes;
-
-        [SerializeField]
-        AbiTransactionType txnType;
-
-        [SerializeField]
-        AbiReferenceType referenceType;
-
         /// <summary>
         /// Name of the ABI Type. See <see href="https://github.com/algorandfoundation/ARCs/blob/main/ARCs/arc-0004.md#types">this list of possible ABI types</see>.
         /// </summary>
-        public string Name => name;
+        string Name { get; }
 
         /// <summary>
         /// The type of the value this ABI will encode. Used to determine how this type is represented.
         /// </summary>
-        public AbiValueType ValueType => valueType;
+        AbiValueType ValueType { get; }
 
         /// <summary>
         /// Is the type static or dynamic length?
         /// </summary>
-        public bool IsStatic => isStatic;
+        bool IsStatic { get; }
 
         /// <summary>
         /// The length of this type in bytes if it's static, otherwise undefined.
         /// </summary>
-        public int StaticLength => staticLength;
+        int StaticLength { get; }
 
         /// <summary>
         /// Represents the "N" in "uint{N}", "ufixed{N}x{M}", or "{type}[N]"
         /// </summary>
-        public int N => n;
+        int N { get; }
 
         /// <summary>
         /// Represents the "M" in "ufixed{N}x{M}"
         /// </summary>
-        public int M => m;
+        int M { get; }
 
         /// <summary>
         /// Represents the Element type of an array, or the list of types in a tuple.
         /// </summary>
-        public AbiType[] NestedTypes => nestedTypes;
+        IAbiType[] NestedTypes { get; }
 
         /// <summary>
         /// The element type if this is an array, undefined otherwise.
         /// </summary>
-        public AbiType ElementType => nestedTypes[0];
+        IAbiType ElementType { get; }
 
         /// <summary>
         /// The length of the array if this is fixed, undefined otherwise.
         /// </summary>
-        public int ArrayLength => n;
+        int ArrayLength { get; }
 
         /// <summary>
         /// <c>true</c> if this is a fixed array (has a fixed number of elements).
         /// </summary>
-        public bool IsFixedArray => ArrayLength >= 0;
-
-        /// <summary>
-        /// <c>true</c> if this represents a reference to an account, application, or asset in other parts of the transaction.
-        /// </summary>
-        public bool IsReference => referenceType > 0;
-
-        /// <summary>
-        /// <c>true</c> if this type represents a reference to a transaction that is previously set in the Atomic Transaction Group.
-        /// </summary>
-        public bool IsTxn => txnType > 0;
+        bool IsFixedArray { get; }
 
         /// <summary>
         /// If <see cref="IsTxn"/>, then this represents the type of the transaction.
         /// </summary>
-        public AbiTransactionType TransactionType => txnType;
+        AbiTransactionType TransactionType { get; }
 
         /// <summary>
         /// If <see cref="IsReference"/>, then this represents the type of the reference.
         /// </summary>
-        public AbiReferenceType ReferenceType => referenceType;
+        AbiReferenceType ReferenceType { get; }
+    }
 
-        public override string ToString()
+    public static class AbiTypeExtensions
+    {
+        /// <summary>
+        /// Returns <c>true</c> if this is a transaction type.
+        /// </summary>
+        public static bool IsTransaction<T>(this T type)
+            where T : IAbiType
         {
-            return Name;
-        }
-
-        public bool Equals(AbiType other)
-        {
-            return string.Equals(name, other.name);
+            return type.TransactionType > 0;
         }
 
         /// <summary>
+        /// Returns <c>true</c> if this is a reference type.
+        /// </summary>
+        public static bool IsReference<T>(this T type)
+            where T : IAbiType
+        {
+            return type.ReferenceType > 0;
+        }
+    }
+    public static class AbiType
+    {
+        /// <summary>
         /// Represents a "byte".
         /// </summary>
-        public static AbiType Byte => new AbiType
-        {
-            name = "byte",
-            valueType = AbiValueType.UIntN,
-            isStatic = true,
-            staticLength = 1,
-            n = 8
-        };
+        public static ByteType Byte => default(ByteType);
 
         /// <summary>
         /// Represents an "address".
         /// </summary>
-        public static AbiType Address => new AbiType
-        {
-            name = "address",
-            valueType = AbiValueType.Array,
-            isStatic = true,
-            staticLength = 4,
-            n = 32,
-            nestedTypes = new[] { Byte }
-        };
+        public static AddressType Address => default(AddressType);
 
         /// <summary>
         /// Represents a "string".
         /// </summary>
-        public static AbiType String => new AbiType
-        {
-            name = "string",
-            valueType = AbiValueType.Array,
-            isStatic = false,
-            nestedTypes = new[] { Byte }
-        };
+        public static StringType String => default(StringType);
 
         /// <summary>
         /// Represents an "account".
         /// </summary>
-        public static AbiType AccountReference => new AbiType
-        {
-            name = "account",
-            valueType = AbiValueType.UIntN,
-            isStatic = true,
-            staticLength = 1,
-            n = 8,
-            referenceType = AbiReferenceType.Account
-        };
+        public static ReferenceType AccountReference => new ReferenceType(AbiReferenceType.Account);
 
         /// <summary>
         /// Represents an "asset".
         /// </summary>
-        public static AbiType AssetReference => new AbiType
-        {
-            name = "asset",
-            valueType = AbiValueType.UIntN,
-            isStatic = true,
-            staticLength = 1,
-            n = 8,
-            referenceType = AbiReferenceType.Asset
-        };
+        public static ReferenceType AssetReference => new ReferenceType(AbiReferenceType.Asset);
 
         /// <summary>
         /// Represents an "application".
         /// </summary>
-        public static AbiType ApplicationReference => new AbiType
-        {
-            name = "application",
-            valueType = AbiValueType.UIntN,
-            isStatic = true,
-            staticLength = 1,
-            n = 8,
-            referenceType = AbiReferenceType.Application
-        };
+        public static ReferenceType ApplicationReference => new ReferenceType(AbiReferenceType.Application);
 
         /// <summary>
         /// Represents a "bool".
         /// </summary>
-        public static AbiType Boolean => new AbiType
-        {
-            name = "bool",
-            valueType = AbiValueType.Boolean,
-            isStatic = true,
-            staticLength = 1,
-        };
+        public static BoolType Bool => default(BoolType);
 
         /// <summary>
         /// Represents a Transaction type.
         /// </summary>
         /// <param name="txnType">The type of the transaction.</param>
         /// <exception cref="System.ArgumentOutOfRangeException">Thrown when the given transaction type is <see cref="AbiTransactionType.None"/>.</exception>
-        public static AbiType Transaction(AbiTransactionType txnType)
-        {
-            if (txnType == AbiTransactionType.None)
-                throw new System.ArgumentOutOfRangeException(nameof(txnType));
-
-            return new AbiType
-            {
-                name = txnType.ToString(),
-                txnType = txnType
-            };
-        }
+        public static TransactionReferenceType Transaction(AbiTransactionType txnType) => new TransactionReferenceType(txnType);
 
         /// <summary>
         /// Represents an "uint{N}".
         /// </summary>
         /// <param name="n">The number of bits in this uint.</param>
         /// <exception cref="System.ArgumentException">Thrown when <paramref name="n"/> is not a multiple of 8, or in the range [8, 512].</exception>
-        public static AbiType UIntN(int n)
-        {
-            if (n % 8 > 0)
-                throw new System.ArgumentException($"{n} is not a multiple of 8", nameof(n));
-            if (n < 8 || n > 512)
-                throw new System.ArgumentException($"{n} is not in the range [8, 512]", nameof(n));
-            return new AbiType
-            {
-                name = $"uint{n}",
-                valueType = AbiValueType.UIntN,
-                isStatic = true,
-                staticLength = n / 8,
-                n = n
-            };
-        }
+        public static UIntType UIntN(int n) => new UIntType(n);
 
         /// <summary>
         /// Represents an "ufixed{N}x{M}".
@@ -252,36 +145,13 @@ namespace AlgoSdk.Abi
         /// <param name="n">The number of bits in this ufixed.</param>
         /// <param name="m">The precision of this ufixed (number of digits after the decimal).</param>
         /// <exception cref="System.ArgumentException">Thrown when <paramref name="m"/> is not in the range (0, 160].</exception>
-        public static AbiType UFixedNxM(int n, int m)
-        {
-            if (m <= 0 || m > 160)
-                throw new System.ArgumentException($"{m} is not in the range (0, 160]", nameof(m));
-            return new AbiType
-            {
-                name = $"ufixed{n}x{m}",
-                valueType = AbiValueType.UFixedNxM,
-                isStatic = true,
-                staticLength = n / 8,
-                n = n,
-                m = m
-            };
-        }
+        public static UFixedType UFixedNxM(int n, int m) => new UFixedType(n, m);
 
         /// <summary>
         /// Represents a "{type}[]" (variable array).
         /// </summary>
         /// <param name="elementType">The type of the elements in this array.</param>
-        public static AbiType VariableArray(AbiType elementType)
-        {
-            return new AbiType
-            {
-                name = $"{elementType.Name}[]",
-                valueType = AbiValueType.Array,
-                isStatic = false,
-                nestedTypes = new[] { elementType },
-                n = -1
-            };
-        }
+        public static VariableArrayType VariableArray(IAbiType elementType) => new VariableArrayType(elementType);
 
         /// <summary>
         /// Represents a "{type}[N]" (fixed array).
@@ -289,72 +159,22 @@ namespace AlgoSdk.Abi
         /// <param name="elementType">The type of the elements in this array.</param>
         /// <param name="length">The length of this array. Must be larger than 0.</param>
         /// <exception cref="System.ArgumentOutOfRangeException">thrown when <paramref name="length"/> is negative.</exception>
-        public static AbiType FixedArray(AbiType elementType, int length)
-        {
-            if (length < 0)
-                throw new System.ArgumentOutOfRangeException(nameof(length));
-            var isStatic = elementType.IsStatic;
-            var staticLength = elementType.ValueType == AbiValueType.Boolean
-                ? (length + 7) / 8
-                : length
-                ;
-            return new AbiType
-            {
-                name = $"{elementType.Name}[{length}]",
-                valueType = AbiValueType.Array,
-                isStatic = isStatic,
-                staticLength = staticLength,
-                nestedTypes = new[] { elementType },
-                n = length
-            };
-        }
+        public static FixedArrayType FixedArray(IAbiType elementType, int length) => new FixedArrayType(elementType, length);
 
         /// <summary>
         /// Represents a "({T1},{T2},...,{TN})" (tuple).
         /// </summary>
         /// <param name="nestedTypes">The types that make up this tuple.</param>
-        public static AbiType Tuple(AbiType[] nestedTypes)
-        {
-            var isStatic = true;
-            var staticLength = 0;
-            var boolCount = 0;
-
-            for (var i = 0; i < nestedTypes.Length; i++)
-            {
-                var type = nestedTypes[i];
-                if (!type.IsStatic)
-                {
-                    isStatic = false;
-                    staticLength = 0;
-                    break;
-                }
-
-                boolCount = type.ValueType == AbiValueType.Boolean
-                    ? boolCount + 1
-                    : 0
-                    ;
-                if (boolCount % 8 == 0)
-                    staticLength += type.StaticLength;
-            }
-
-            return new AbiType
-            {
-                name = $"({string.Join(",", nestedTypes)})",
-                valueType = AbiValueType.Tuple,
-                isStatic = isStatic,
-                staticLength = staticLength,
-                nestedTypes = nestedTypes
-            };
-        }
+        public static TupleType Tuple(IAbiType[] nestedTypes) => new TupleType(nestedTypes);
 
         /// <summary>
         /// Parse a type string into an <see cref="AbiType"/>.
         /// </summary>
         /// <param name="type">The typename to parse.</param>
         /// <exception cref="System.ArgumentException">Thrown when the given type cannot be parsed.</exception>
-        public static AbiType Parse(string type)
+        public static IAbiType Parse(string type)
         {
-            if (!TryParse(type, out AbiType abiType))
+            if (!TryParse(type, out IAbiType abiType))
                 throw new System.ArgumentException($"Could not parse {type}", nameof(type));
             return abiType;
         }
@@ -365,37 +185,37 @@ namespace AlgoSdk.Abi
         /// <param name="type">The typename to parse.</param>
         /// <param name="abiType">The returned <see cref="AbiType"/> if the typename was parsed.</param>
         /// <returns><c>true</c> if the typename could be parsed, <c>false</c> otherwise.</returns>
-        public static bool TryParse(string type, out AbiType abiType)
+        public static bool TryParse(string type, out IAbiType abiType)
         {
             switch (type)
             {
                 case "byte":
-                    abiType = Byte;
+                    abiType = new ByteType();
                     return true;
                 case "address":
-                    abiType = Address;
+                    abiType = new AddressType();
                     return true;
                 case "string":
-                    abiType = String;
+                    abiType = new StringType();
                     return true;
                 case "account":
-                    abiType = AccountReference;
+                    abiType = new ReferenceType(AbiReferenceType.Account);
                     return true;
                 case "asset":
-                    abiType = AssetReference;
+                    abiType = new ReferenceType(AbiReferenceType.Asset);
                     return true;
                 case "application":
-                    abiType = ApplicationReference;
+                    abiType = new ReferenceType(AbiReferenceType.Application);
                     return true;
                 case "bool":
-                    abiType = Boolean;
+                    abiType = new BoolType();
                     return true;
             }
 
             var txnType = AbiTransactionTypeExtensions.Parse(type);
             if (txnType != AbiTransactionType.None)
             {
-                abiType = Transaction(txnType);
+                abiType = new TransactionReferenceType(txnType);
                 return true;
             }
 
@@ -416,7 +236,7 @@ namespace AlgoSdk.Abi
             return false;
         }
 
-        static bool TryParseUIntN(Match match, out AbiType abiType)
+        static bool TryParseUIntN(Match match, out IAbiType abiType)
         {
             var nGroup = match.Groups["N"];
             if (!nGroup.Success
@@ -425,17 +245,11 @@ namespace AlgoSdk.Abi
                 abiType = default;
                 return false;
             }
-            abiType = UIntN(n);
+            abiType = new UIntType(n);
             return true;
         }
 
-        static bool TryParseBoolean(Match match, out AbiType abiType)
-        {
-            abiType = Boolean;
-            return true;
-        }
-
-        static bool TryParseUFixedNxM(Match match, out AbiType abiType)
+        static bool TryParseUFixedNxM(Match match, out IAbiType abiType)
         {
             var nGroup = match.Groups["N"];
             var mGroup = match.Groups["M"];
@@ -447,11 +261,11 @@ namespace AlgoSdk.Abi
                 abiType = default;
                 return false;
             }
-            abiType = UFixedNxM(n, m);
+            abiType = new UFixedType(n, m);
             return true;
         }
 
-        static bool TryParseArray(Match match, out AbiType abiType)
+        static bool TryParseArray(Match match, out IAbiType abiType)
         {
             var elementGroup = match.Groups["Element"];
             var lengthGroup = match.Groups["Length"];
@@ -475,15 +289,15 @@ namespace AlgoSdk.Abi
             return true;
         }
 
-        static bool TryParseTuple(Match match, out AbiType abiType)
+        static bool TryParseTuple(Match match, out IAbiType abiType)
         {
             var typeStr = match.Value.TrimStart('(').TrimEnd(')');
-            var nestedTypes = new List<AbiType>();
+            var nestedTypes = new List<IAbiType>();
             var start = 0;
             var i = 0;
             var tupleDepth = 0;
             string childType;
-            AbiType childAbiType;
+            IAbiType childAbiType;
             foreach (var c in typeStr)
             {
                 if (c == '(')
@@ -528,9 +342,9 @@ namespace AlgoSdk.Abi
             public static readonly Regex Tuple = new Regex("^(?<" + nameof(Tuple) + ">" + @"\(" + AnyType + @"\)" + ")$");
         }
 
-        public struct Formatter : IAlgoApiFormatter<AbiType>
+        public struct Formatter : IAlgoApiFormatter<IAbiType>
         {
-            public AbiType Deserialize(ref JsonReader reader)
+            public IAbiType Deserialize(ref JsonReader reader)
             {
                 return AbiType.TryParse(AlgoApiFormatterCache<string>.Formatter.Deserialize(ref reader), out var abiType)
                     ? abiType
@@ -538,7 +352,7 @@ namespace AlgoSdk.Abi
                     ;
             }
 
-            public AbiType Deserialize(ref MessagePackReader reader)
+            public IAbiType Deserialize(ref MessagePackReader reader)
             {
                 return AbiType.TryParse(AlgoApiFormatterCache<string>.Formatter.Deserialize(ref reader), out var abiType)
                     ? abiType
@@ -546,12 +360,12 @@ namespace AlgoSdk.Abi
                     ;
             }
 
-            public void Serialize(ref JsonWriter writer, AbiType value)
+            public void Serialize(ref JsonWriter writer, IAbiType value)
             {
                 AlgoApiFormatterCache<string>.Formatter.Serialize(ref writer, value.Name);
             }
 
-            public void Serialize(ref MessagePackWriter writer, AbiType value)
+            public void Serialize(ref MessagePackWriter writer, IAbiType value)
             {
                 AlgoApiFormatterCache<string>.Formatter.Serialize(ref writer, value.Name);
             }

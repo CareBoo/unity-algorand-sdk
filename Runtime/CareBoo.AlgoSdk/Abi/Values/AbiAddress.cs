@@ -17,11 +17,11 @@ namespace AlgoSdk.Abi
         }
 
         /// <inheritdoc />
-        public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
+        public EncodedAbiArg Encode(IAbiType type, AbiReferences references, Allocator allocator)
         {
             CheckType(type);
             EncodedAbiArg result;
-            if (type.IsReference)
+            if (type.IsReference())
             {
                 result = new EncodedAbiArg(1, allocator);
                 result.Bytes.AddNoResize(references.Encode(value));
@@ -38,16 +38,16 @@ namespace AlgoSdk.Abi
         }
 
         /// <inheritdoc />
-        public int Length(AbiType type)
+        public int Length(IAbiType type)
         {
             CheckType(type);
-            return type.IsReference
+            return type.IsReference()
                 ? 1
                 : 32
                 ;
         }
 
-        void CheckType(AbiType type)
+        void CheckType(IAbiType type)
         {
             switch (type.ValueType)
             {
@@ -55,7 +55,7 @@ namespace AlgoSdk.Abi
                     type.ArrayLength == 32
                     && type.ElementType.ValueType == AbiValueType.UIntN
                     && type.ElementType.N == 8
-                    && !type.IsReference
+                    && !type.IsReference()
                     ):
                 case AbiValueType.UIntN when (
                     type.N == 8

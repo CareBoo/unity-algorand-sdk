@@ -23,7 +23,7 @@ namespace AlgoSdk.Abi
         }
 
         /// <inheritdoc />
-        public EncodedAbiArg Encode(AbiType type, AbiReferences references, Allocator allocator)
+        public EncodedAbiArg Encode(IAbiType type, AbiReferences references, Allocator allocator)
         {
             CheckType(type);
             var result = new EncodedAbiArg(1, allocator);
@@ -32,13 +32,13 @@ namespace AlgoSdk.Abi
         }
 
         /// <inheritdoc />
-        public int Length(AbiType type)
+        public int Length(IAbiType type)
         {
             CheckType(type);
             return 1;
         }
 
-        void CheckType(AbiType type)
+        void CheckType(IAbiType type)
         {
             if (type.Name != "bool")
                 throw new System.ArgumentException($"Cannot encode {type} to ABI bool");
