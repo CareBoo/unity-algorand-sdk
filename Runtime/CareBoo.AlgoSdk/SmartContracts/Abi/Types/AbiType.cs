@@ -283,8 +283,8 @@ namespace AlgoSdk.Abi
                 return false;
             }
             abiType = length < 0
-                ? VariableArray(elementAbiType)
-                : FixedArray(elementAbiType, length)
+                ? (IAbiType)VariableArray(elementAbiType)
+                : (IAbiType)FixedArray(elementAbiType, length)
                 ;
             return true;
         }
