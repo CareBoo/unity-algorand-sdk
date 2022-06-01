@@ -1,4 +1,6 @@
 using System;
+using AlgoSdk.LowLevel;
+using Unity.Collections;
 using UnityEngine;
 
 namespace AlgoSdk.WalletConnect
@@ -94,6 +96,24 @@ namespace AlgoSdk.WalletConnect
         {
             get => walletMeta;
             set => walletMeta = value;
+        }
+
+        public static SavedSession InitSession(ClientMeta dappMeta, string bridgeUrl)
+        {
+            return new SavedSession
+            {
+                ClientId = Guid.NewGuid().ToString(),
+                BridgeUrl = string.IsNullOrEmpty(bridgeUrl) ? DefaultBridge.GetRandomBridgeUrl() : bridgeUrl,
+                Key = GenKey(),
+                DappMeta = dappMeta
+            };
+        }
+
+        static Hex GenKey()
+        {
+            using var secret = new NativeByteArray(32, Allocator.Temp);
+            Crypto.Random.Randomize(secret);
+            return secret.ToArray();
         }
     }
 }

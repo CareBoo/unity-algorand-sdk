@@ -7,14 +7,22 @@ using UnityEngine;
 
 namespace AlgoSdk
 {
+    [Serializable]
     public struct KmdAccount
         : IAccount
         , IAsyncSigner
     {
-        readonly KmdClient client;
-        readonly FixedString128Bytes walletId;
-        readonly FixedString128Bytes walletPassword;
-        readonly Address address;
+        [SerializeField]
+        KmdClient client;
+
+        [SerializeField]
+        FixedString128Bytes walletId;
+
+        [SerializeField]
+        FixedString128Bytes walletPassword;
+
+        [SerializeField]
+        Address address;
 
         FixedString128Bytes walletHandleToken;
 

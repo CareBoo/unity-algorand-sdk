@@ -45,6 +45,12 @@ namespace AlgoSdk
             return count;
         }
 
+        public bool ContainsIndex(int index)
+        {
+            var flag = (TxnFlags)(1 << index);
+            return (flag & indices) > 0;
+        }
+
         public static implicit operator TxnIndices(TxnFlags flags)
         {
             return new TxnIndices { indices = flags };

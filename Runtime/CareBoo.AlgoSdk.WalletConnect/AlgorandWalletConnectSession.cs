@@ -2,115 +2,125 @@ using System;
 using System.Text;
 using System.Threading;
 using AlgoSdk.Json;
-using AlgoSdk.LowLevel;
 using AlgoSdk.WebSocket;
 using Cysharp.Threading.Tasks;
-using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
 namespace AlgoSdk.WalletConnect
 {
-    public class AlgorandWalletConnectSession : IActiveWalletConnectSession<AlgorandWalletConnectSession>
+    public class AlgorandWalletConnectSession
+        : IActiveWalletConnectSession<AlgorandWalletConnectSession>
     {
         const string SessionUpdateMethod = "wc_sessionUpdate";
 
-        /// <inheritdoc />
-        public UnityEvent<AlgorandWalletConnectSession> OnSessionConnect { get; private set; } = new UnityEvent<AlgorandWalletConnectSession>();
+        SavedSession sessionData;
+
+        WalletConnectSessionEvents events;
+
+        IWebSocketClient webSocketClient;
+
+        CancellationTokenSource pollCancellationTokenSource;
 
         /// <inheritdoc />
-        public UnityEvent<string> OnSessionDisconnect { get; private set; } = new UnityEvent<string>();
+        public UnityEvent<AlgorandWalletConnectSession> OnSessionConnect => events?.OnSessionConnect;
 
         /// <inheritdoc />
-        public UnityEvent<WalletConnectSessionData> OnSessionUpdate { get; private set; } = new UnityEvent<WalletConnectSessionData>();
+        public UnityEvent<string> OnSessionDisconnect => events?.OnSessionDisconnect;
+
+        /// <inheritdoc />
+        public UnityEvent<WalletConnectSessionData> OnSessionUpdate => events?.OnSessionUpdate;
 
         /// <summary>
         /// Occurs when this session received a JsonRpcResponse from a request that was made.
         /// </summary>
-        public UnityEvent<JsonRpcResponse> OnResponseReceived { get; private set; } = new UnityEvent<JsonRpcResponse>();
+        public UnityEvent<JsonRpcResponse> OnResponseReceived { get; set; }
 
         /// <inheritdoc />
-        public Address[] Accounts => session.Accounts;
+        public Address[] Accounts => sessionData.Accounts;
 
         /// <inheritdoc />
         public string Version => "1";
 
-        public Status ConnectionStatus { get; private set; }
+        public SessionStatus ConnectionStatus { get; private set; }
 
         /// <inheritdoc />
-        public int ChainId => session.ChainId;
+        public int ChainId => sessionData.ChainId;
 
         /// <inheritdoc />
-        public ulong HandshakeId => session.HandshakeId;
+        public ulong HandshakeId => sessionData.HandshakeId;
 
         /// <inheritdoc />
-        public int NetworkId => session.NetworkId;
+        public int NetworkId => sessionData.NetworkId;
 
         /// <inheritdoc />
-        public string PeerId => session.PeerId;
+        public string PeerId => sessionData.PeerId;
 
         /// <inheritdoc />
-        public string ClientId => session.ClientId;
+        public string ClientId => sessionData.ClientId;
 
         /// <inheritdoc />
-        public string BridgeUrl => session.BridgeUrl;
+        public string BridgeUrl => sessionData.BridgeUrl;
 
         /// <inheritdoc />
-        public Hex Key => session.Key;
+        public Hex Key => sessionData.Key;
 
         /// <inheritdoc />
-        public ClientMeta DappMeta => session.DappMeta;
+        public ClientMeta DappMeta => sessionData.DappMeta;
 
         /// <inheritdoc />
-        public ClientMeta WalletMeta => session.WalletMeta;
+        public ClientMeta WalletMeta => sessionData.WalletMeta;
 
         /// <summary>
         /// The current handshake topic if this session is handshaking.
         /// </summary>
         public string HandshakeTopic { get; set; }
 
-        IWebSocketClient webSocketClient;
-
-        SavedSession session;
-
-        CancellationTokenSource pollCancellationTokenSource;
-
         /// <summary>
         /// Create a new session.
         /// </summary>
         /// <param name="clientMeta">The metadata of the Dapp.</param>
         /// <param name="bridgeUrl">An optional WalletConnect bridgeurl. e.g. https://bridge.walletconnect.org</param>
-        public AlgorandWalletConnectSession(ClientMeta clientMeta, string bridgeUrl = null)
+        public AlgorandWalletConnectSession(
+            ClientMeta clientMeta,
+            string bridgeUrl = null,
+            WalletConnectSessionEvents events = null
+            )
         {
-            session = InitSession(
+            sessionData = SavedSession.InitSession(
                 clientMeta,
                 bridgeUrl
             );
-            webSocketClient = WebSocketClientFactory.Create(session.BridgeUrl.Replace("http", "ws"));
-            ConnectionStatus = Status.NoConnection;
+            this.events = events ?? new WalletConnectSessionEvents();
+            webSocketClient = WebSocketClientFactory.Create(sessionData.BridgeUrl.Replace("http", "ws"));
+            ConnectionStatus = SessionStatus.NoConnection;
         }
 
         /// <summary>
         /// Continue an existing session.
         /// </summary>
         /// <param name="savedSession">A previously existing session.</param>
-        public AlgorandWalletConnectSession(SavedSession savedSession)
+        public AlgorandWalletConnectSession(
+            SavedSession savedSession,
+            WalletConnectSessionEvents events = null
+            )
         {
-            session = savedSession;
-            webSocketClient = WebSocketClientFactory.Create(session.BridgeUrl.Replace("http", "ws"));
+            sessionData = savedSession;
+            this.events = events ?? new WalletConnectSessionEvents();
+            webSocketClient = WebSocketClientFactory.Create(sessionData.BridgeUrl.Replace("http", "ws"));
             if (!string.IsNullOrEmpty(PeerId))
             {
-                ConnectionStatus = Status.Connected;
+                ConnectionStatus = SessionStatus.Connected;
                 pollCancellationTokenSource = new CancellationTokenSource();
                 PollWebSocketEvents(pollCancellationTokenSource.Token).Forget();
             }
             else if (HandshakeId != default)
             {
-                ConnectionStatus = Status.RequestingConnection;
+                ConnectionStatus = SessionStatus.RequestingConnection;
             }
             else
             {
-                ConnectionStatus = Status.NoConnection;
+                ConnectionStatus = SessionStatus.NoConnection;
             }
         }
 
@@ -130,7 +140,7 @@ namespace AlgoSdk.WalletConnect
         /// <returns>A <see cref="SavedSession"/> that can be used for continuing an existing session later.</returns>
         public SavedSession Save()
         {
-            return session;
+            return sessionData;
         }
 
         /// <summary>
@@ -140,13 +150,13 @@ namespace AlgoSdk.WalletConnect
         /// <returns>A WalletConnect Standard URI format (EIP-1328) used for handshaking.</returns>
         public async UniTask<HandshakeUrl> StartConnection(CancellationToken cancellationToken = default)
         {
-            if (ConnectionStatus != Status.NoConnection)
+            if (ConnectionStatus != SessionStatus.NoConnection)
                 throw new InvalidOperationException($"Session connection status is {ConnectionStatus}");
 
             await ConnectToBridgeServer(cancellationToken);
             SubscribeToMessages();
             RequestHandshake();
-            ConnectionStatus = Status.RequestingConnection;
+            ConnectionStatus = SessionStatus.RequestingConnection;
             return new HandshakeUrl(HandshakeTopic, Version, BridgeUrl, Key);
         }
 
@@ -158,7 +168,7 @@ namespace AlgoSdk.WalletConnect
         /// </param>
         public async UniTask WaitForConnectionApproval(CancellationToken cancellationToken = default)
         {
-            if (ConnectionStatus != Status.RequestingConnection)
+            if (ConnectionStatus != SessionStatus.RequestingConnection)
                 throw new InvalidOperationException($"Session connection status is {ConnectionStatus}");
 
             var handshakeResponse = await PollUntilResponse(HandshakeId, cancellationToken);
@@ -167,12 +177,12 @@ namespace AlgoSdk.WalletConnect
             HandshakeTopic = null;
             pollCancellationTokenSource = new CancellationTokenSource();
             PollWebSocketEvents(pollCancellationTokenSource.Token).Forget();
-            ConnectionStatus = Status.Connected;
+            ConnectionStatus = SessionStatus.Connected;
             OnSessionConnect.Invoke(this);
         }
 
         /// <summary>
-        /// Disconnect from a <see cref="Status.Connected"/> or <see cref="Status.RequestingConnection"/> session.
+        /// Disconnect from a <see cref="SessionStatus.Connected"/> or <see cref="SessionStatus.RequestingConnection"/> session.
         /// </summary>
         /// <param name="reason">An optional reason to inform the web socket client.</param>
         public void Disconnect(string reason = default)
@@ -180,9 +190,9 @@ namespace AlgoSdk.WalletConnect
             TryCancelPolling();
             if (webSocketClient.ReadyState == WebSocketSharp.WebSocketState.Open)
                 webSocketClient.Close(reason: reason);
-            ConnectionStatus = Status.NoConnection;
+            ConnectionStatus = SessionStatus.NoConnection;
 
-            session = InitSession(session.DappMeta, session.BridgeUrl);
+            sessionData = SavedSession.InitSession(sessionData.DappMeta, sessionData.BridgeUrl);
         }
 
         /// <summary>
@@ -216,7 +226,7 @@ namespace AlgoSdk.WalletConnect
             CancellationToken cancellationToken = default
             )
         {
-            if (ConnectionStatus == Status.NoConnection)
+            if (ConnectionStatus == SessionStatus.NoConnection)
                 throw new InvalidOperationException($"Session connection status is {ConnectionStatus}");
 
             if (ChainId != WalletConnectRpc.Algorand.ChainId)
@@ -229,24 +239,6 @@ namespace AlgoSdk.WalletConnect
             var response = await listeningForResponse;
             if (response.IsError) return (SignTxnsError)response.Error;
             return AlgoApiSerializer.DeserializeJson<byte[][]>(response.Result.Json);
-        }
-
-        static SavedSession InitSession(ClientMeta dappMeta, string bridgeUrl)
-        {
-            return new SavedSession
-            {
-                ClientId = Guid.NewGuid().ToString(),
-                BridgeUrl = string.IsNullOrEmpty(bridgeUrl) ? DefaultBridge.GetRandomBridgeUrl() : bridgeUrl,
-                Key = GenKey(),
-                DappMeta = dappMeta
-            };
-        }
-
-        static Hex GenKey()
-        {
-            using var secret = new NativeByteArray(32, Allocator.Temp);
-            Crypto.Random.Randomize(secret);
-            return secret.ToArray();
         }
 
         async UniTask ConnectToBridgeServer(CancellationToken cancellationToken = default)
@@ -280,7 +272,7 @@ namespace AlgoSdk.WalletConnect
         void RequestHandshake()
         {
             if (HandshakeId == default)
-                session.HandshakeId = WalletConnectRpc.GetRandomId();
+                sessionData.HandshakeId = WalletConnectRpc.GetRandomId();
             if (string.IsNullOrEmpty(HandshakeTopic))
                 HandshakeTopic = Guid.NewGuid().ToString();
             var request = WalletConnectRpc.SessionRequest(
@@ -391,10 +383,10 @@ namespace AlgoSdk.WalletConnect
                 return;
             }
 
-            session.PeerId = sessionData.PeerId;
-            session.WalletMeta = sessionData.PeerMeta;
-            session.ChainId = sessionData.ChainId;
-            session.Accounts = sessionData.Accounts;
+            this.sessionData.PeerId = sessionData.PeerId;
+            this.sessionData.WalletMeta = sessionData.PeerMeta;
+            this.sessionData.ChainId = sessionData.ChainId;
+            this.sessionData.Accounts = sessionData.Accounts;
         }
 
         bool TryCancelPolling()
@@ -405,14 +397,6 @@ namespace AlgoSdk.WalletConnect
             pollCancellationTokenSource.Dispose();
             pollCancellationTokenSource = null;
             return true;
-        }
-
-        public enum Status
-        {
-            Unknown,
-            NoConnection,
-            RequestingConnection,
-            Connected
         }
     }
 }

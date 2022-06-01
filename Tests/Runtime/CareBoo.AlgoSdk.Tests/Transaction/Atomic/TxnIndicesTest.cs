@@ -45,4 +45,14 @@ public class TxnIndicesTest
         }
         Assert.AreEqual(indices.Length, i);
     }
+
+    [Test]
+    [TestCase(1, true)]
+    [TestCase(2, false)]
+    public void ContainsIndexShouldReturnIfIndexInIndices(int index, bool expected)
+    {
+        var indices = TxnIndices.Select(1, 3, 4, 5, 6, 7, 9);
+        var actual = indices.ContainsIndex(index);
+        Assert.AreEqual(expected, actual);
+    }
 }

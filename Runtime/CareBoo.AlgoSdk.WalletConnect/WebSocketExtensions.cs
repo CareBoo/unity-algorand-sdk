@@ -37,6 +37,7 @@ namespace AlgoSdk.WalletConnect
             while (evt.Type == WebSocketEventType.Nothing)
             {
                 await UniTask.Yield(cancellationToken);
+                await UniTask.NextFrame(cancellationToken);
                 evt = client.Poll();
             }
             if (evt.Type == WebSocketEventType.Error)
