@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [3.0.0-pre.4](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.3...v3.0.0-pre.4) (2022-06-02)
+
+
+### Features
+
+* **abi:** add abitype inspectors ([a48d710](https://github.com/CareBoo/unity-algorand-sdk/commit/a48d7106595b1166c483d09ac4cebdde424b9fd4))
+
 # [3.0.0-pre.3](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.2...v3.0.0-pre.3) (2022-05-28)
 
 
