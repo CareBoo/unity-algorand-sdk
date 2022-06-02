@@ -7,6 +7,9 @@ namespace AlgoSdk.Editor
     [CustomPropertyDrawer(typeof(IAbiType), true)]
     public class IAbiTypeDrawer : PropertyDrawer
     {
+        public const string AssemblyName = "CareBoo.AlgoSdk ";
+        public const string Namespace = "AlgoSdk.Abi.";
+
         public enum AbiTypeOption
         {
             None,
@@ -31,7 +34,7 @@ namespace AlgoSdk.Editor
                 return;
             }
 
-            var nextAbiType = GetSelectedAbiType(property.managedReferenceValue);
+            var nextAbiType = GetSelectedAbiType(property.managedReferenceFullTypename);
             EditorGUI.BeginChangeCheck();
             nextAbiType = (AbiTypeOption)EditorGUI.EnumPopup(LabelIndent(position), nextAbiType);
             if (EditorGUI.EndChangeCheck())
@@ -44,21 +47,36 @@ namespace AlgoSdk.Editor
             return EditorGUI.GetPropertyHeight(property, label);
         }
 
-        public AbiTypeOption GetSelectedAbiType(object obj) => obj switch
+        public AbiTypeOption GetSelectedAbiType(string fullTypeName)
         {
-            ReferenceType => AbiTypeOption.Reference,
-            TransactionReferenceType => AbiTypeOption.Transaction,
-            AddressType => AbiTypeOption.Address,
-            BoolType => AbiTypeOption.Bool,
-            ByteType => AbiTypeOption.Byte,
-            FixedArrayType => AbiTypeOption.FixedArray,
-            VariableArrayType => AbiTypeOption.VariableArray,
-            StringType => AbiTypeOption.String,
-            TupleType => AbiTypeOption.Tuple,
-            UFixedType => AbiTypeOption.UFixed,
-            UIntType => AbiTypeOption.UInt,
-            _ => AbiTypeOption.None
-        };
+            switch (fullTypeName)
+            {
+                case AssemblyName + Namespace + nameof(ReferenceType):
+                    return AbiTypeOption.Reference;
+                case AssemblyName + Namespace + nameof(TransactionReferenceType):
+                    return AbiTypeOption.Transaction;
+                case AssemblyName + Namespace + nameof(AddressType):
+                    return AbiTypeOption.Address;
+                case AssemblyName + Namespace + nameof(BoolType):
+                    return AbiTypeOption.Bool;
+                case AssemblyName + Namespace + nameof(ByteType):
+                    return AbiTypeOption.Byte;
+                case AssemblyName + Namespace + nameof(FixedArrayType):
+                    return AbiTypeOption.FixedArray;
+                case AssemblyName + Namespace + nameof(VariableArrayType):
+                    return AbiTypeOption.VariableArray;
+                case AssemblyName + Namespace + nameof(StringType):
+                    return AbiTypeOption.String;
+                case AssemblyName + Namespace + nameof(TupleType):
+                    return AbiTypeOption.Tuple;
+                case AssemblyName + Namespace + nameof(UFixedType):
+                    return AbiTypeOption.UFixed;
+                case AssemblyName + Namespace + nameof(UIntType):
+                    return AbiTypeOption.UInt;
+                default:
+                    return AbiTypeOption.None;
+            }
+        }
 
         public IAbiType SelectAbiType(AbiTypeOption option) => option switch
         {
