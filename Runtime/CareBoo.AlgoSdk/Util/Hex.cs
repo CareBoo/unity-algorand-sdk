@@ -13,6 +13,11 @@ namespace AlgoSdk
 
         public byte[] Data => data;
 
+        public Hex(byte[] data)
+        {
+            this.data = data;
+        }
+
         public override string ToString()
         {
             if (data == null)

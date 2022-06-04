@@ -19,11 +19,14 @@ namespace AlgoSdk.WalletConnect
 
         AlgorandWalletConnectSession session;
 
+        CancellationTokenSource sessionCancellation;
+
         public WalletConnectAccount(SavedSession sessionData, WalletConnectSessionEvents sessionEvents = null)
         {
             this.SessionData = sessionData;
             this.sessionEvents = sessionEvents ?? new WalletConnectSessionEvents();
             session = null;
+            sessionCancellation = null;
         }
 
         public WalletConnectSessionEvents SessionEvents => sessionEvents;
@@ -41,10 +44,16 @@ namespace AlgoSdk.WalletConnect
         public void BeginSession()
         {
             session = new AlgorandWalletConnectSession(SessionData, sessionEvents);
+            sessionCancellation = new CancellationTokenSource();
         }
 
         public void EndSession()
         {
+            if (sessionCancellation != null)
+            {
+                sessionCancellation.Cancel();
+                sessionCancellation = null;
+            }
             if (session == null)
             {
                 return;
@@ -54,16 +63,23 @@ namespace AlgoSdk.WalletConnect
             session = null;
         }
 
-        public async UniTask<HandshakeUrl> StartNewWalletConnection(CancellationToken cancellationToken = default)
+        public async UniTask<HandshakeUrl> StartNewWalletConnection()
         {
             CheckSession();
-            return await session.StartConnection(cancellationToken);
+            return await session.StartConnection(sessionCancellation.Token);
         }
 
-        public async UniTask WaitForConnectionApproval(CancellationToken cancellationToken = default)
+        public HandshakeUrl ContinueHandshake()
         {
             CheckSession();
-            await session.WaitForConnectionApproval(cancellationToken);
+            return session.ContinueHandshake();
+        }
+
+        public async UniTask WaitForConnectionApproval()
+        {
+            CheckSession();
+            await session.WaitForConnectionApproval(sessionCancellation.Token);
+            SessionData = session.Save();
         }
 
         public void DisconnectWalletConnection(string reason = default)
@@ -80,6 +96,8 @@ namespace AlgoSdk.WalletConnect
             where T : ITransaction, IEquatable<T>
         {
             CheckSession();
+
+            var cancellation = CancellationTokenSource.CreateLinkedTokenSource(sessionCancellation.Token, cancellationToken);
 
             if (txns == null)
                 throw new ArgumentNullException(nameof(txns));
@@ -99,7 +117,7 @@ namespace AlgoSdk.WalletConnect
                 );
             }
 
-            var (error, signed) = await session.SignTransactions(walletTxns, cancellationToken: cancellationToken);
+            var (error, signed) = await session.SignTransactions(walletTxns, cancellationToken: cancellation.Token);
             if (error)
                 throw new Exception(error.ToString());
 

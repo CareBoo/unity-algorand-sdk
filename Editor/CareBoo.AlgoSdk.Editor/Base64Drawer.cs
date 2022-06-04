@@ -11,7 +11,7 @@ namespace AlgoSdk.Editor
     [CustomPropertyDrawer(typeof(Sig))]
     [CustomPropertyDrawer(typeof(TealBytes))]
     [CustomPropertyDrawer(typeof(VrfPubKey))]
-    public class Base64Drawer : BytesTextDrawer
+    public class Base64Drawer : FixedBytesTextDrawer
     {
         protected override List<byte> GetBytes(string s)
         {

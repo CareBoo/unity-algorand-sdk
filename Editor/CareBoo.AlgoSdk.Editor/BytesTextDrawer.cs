@@ -6,12 +6,12 @@ using UnityEngine;
 
 namespace AlgoSdk.Editor
 {
-    public abstract class BytesTextDrawer<T> : BytesTextDrawer
-        where T : struct, IByteArray
+    public abstract class BytesTextDrawer<TResult> : BytesTextDrawer
+        where TResult : struct, IByteArray
     {
         protected override string GetString(List<byte> bytes)
         {
-            T t = default;
+            TResult t = default;
             for (var i = 0; i < bytes.Count; i++)
                 t[i] = bytes[i];
             return GetString(t);
@@ -26,8 +26,14 @@ namespace AlgoSdk.Editor
             return bytes;
         }
 
-        protected abstract string GetString(T bytes);
-        protected abstract T GetByteArray(string s);
+        protected abstract string GetString(TResult bytes);
+        protected abstract TResult GetByteArray(string s);
+    }
+
+    public abstract class FixedBytesTextDrawer<TResult> : BytesTextDrawer<TResult>
+        where TResult : struct, IByteArray
+    {
+        protected override SerializedBytes GetSerializedBytes(SerializedProperty property) => new SerializedFixedBytes(property);
     }
 
     public abstract class BytesTextDrawer : PropertyDrawer
@@ -35,7 +41,7 @@ namespace AlgoSdk.Editor
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
             position = EditorGUI.PrefixLabel(position, label);
-            var byteProperties = new SerializedBytes(property);
+            var byteProperties = GetSerializedBytes(property);
             var text = GetString(byteProperties.GetBytes());
             text = EditorGUI.DelayedTextField(position, text);
             try
@@ -50,5 +56,11 @@ namespace AlgoSdk.Editor
 
         protected abstract string GetString(List<byte> bytes);
         protected abstract List<byte> GetBytes(string s);
+        protected abstract SerializedBytes GetSerializedBytes(SerializedProperty property);
+    }
+
+    public abstract class FixedBytesTextDrawer : BytesTextDrawer
+    {
+        protected override SerializedBytes GetSerializedBytes(SerializedProperty property) => new SerializedFixedBytes(property);
     }
 }

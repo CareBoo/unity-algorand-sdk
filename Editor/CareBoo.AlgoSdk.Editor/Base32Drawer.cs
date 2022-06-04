@@ -1,12 +1,12 @@
 using System.Collections.Generic;
-using UnityEditor;
 using System.Linq;
 using Unity.Collections;
+using UnityEditor;
 
 namespace AlgoSdk.Editor
 {
     [CustomPropertyDrawer(typeof(TransactionId))]
-    public class Base32Drawer : BytesTextDrawer
+    public class Base32Drawer : FixedBytesTextDrawer
     {
         protected override List<byte> GetBytes(string s)
         {

@@ -2,7 +2,6 @@ using System;
 using AlgoSdk.Crypto;
 using AlgoSdk.LowLevel;
 using Unity.Collections;
-using static AlgoSdk.Crypto.Ed25519;
 
 namespace AlgoSdk
 {

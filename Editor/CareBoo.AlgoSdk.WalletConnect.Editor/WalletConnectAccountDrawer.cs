@@ -12,8 +12,11 @@ namespace AlgoSdk.WalletConnect.Editor
 
             EditorGUILayout.Space();
 
-            if (GUILayout.Button("Connect Account"))
-                WalletConnectEditorWindow.Show((WalletConnectAccountAsset)serializedObject.targetObject);
+            if (GUILayout.Button("Connect Account")
+                && AssetDatabase.TryGetGUIDAndLocalFileIdentifier<Object>(serializedObject.targetObject, out var assetGuid, out var _))
+            {
+                WalletConnectEditorWindow.Show(assetGuid);
+            }
         }
     }
 }

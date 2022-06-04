@@ -3,7 +3,7 @@ using UnityEditor;
 namespace AlgoSdk.Editor
 {
     [CustomPropertyDrawer(typeof(Address))]
-    public class AddressDrawer : BytesTextDrawer<Address>
+    public class AddressDrawer : FixedBytesTextDrawer<Address>
     {
         protected override Address GetByteArray(string s)
         {

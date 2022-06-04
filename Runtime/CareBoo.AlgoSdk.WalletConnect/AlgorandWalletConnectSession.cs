@@ -34,7 +34,7 @@ namespace AlgoSdk.WalletConnect
         /// <summary>
         /// Occurs when this session received a JsonRpcResponse from a request that was made.
         /// </summary>
-        public UnityEvent<JsonRpcResponse> OnResponseReceived { get; set; }
+        public UnityEvent<JsonRpcResponse> OnResponseReceived { get; set; } = new UnityEvent<JsonRpcResponse>();
 
         /// <inheritdoc />
         public Address[] Accounts => sessionData.Accounts;
@@ -160,6 +160,14 @@ namespace AlgoSdk.WalletConnect
             return new HandshakeUrl(HandshakeTopic, Version, BridgeUrl, Key);
         }
 
+        public HandshakeUrl ContinueHandshake()
+        {
+            if (ConnectionStatus != SessionStatus.RequestingConnection)
+                throw new InvalidOperationException($"Session connection statys is {ConnectionStatus}");
+
+            return new HandshakeUrl(HandshakeTopic, Version, BridgeUrl, Key);
+        }
+
         /// <summary>
         /// Wait for an approval response from the handshake.
         /// </summary>
@@ -263,9 +271,13 @@ namespace AlgoSdk.WalletConnect
                     HandleResponseOrRequest(responseOrRequest);
                 }
             }
-            catch (Exception ex) when (!(ex is OperationCanceledException))
+            catch (OperationCanceledException)
             {
-                Debug.LogWarning(ex);
+                throw;
+            }
+            catch (Exception ex)
+            {
+                Debug.LogException(ex);
             }
         }
 
