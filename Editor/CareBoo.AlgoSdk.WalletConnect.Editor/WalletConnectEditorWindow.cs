@@ -1,5 +1,4 @@
 using System;
-using System.Threading.Tasks;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
@@ -20,9 +19,6 @@ namespace AlgoSdk.WalletConnect.Editor
 
         [SerializeField]
         string statusText;
-
-        [SerializeField]
-        string requestingConnectionText;
 
         VisualElement configureSessionContent;
         VisualElement connectedContent;
@@ -79,13 +75,9 @@ namespace AlgoSdk.WalletConnect.Editor
                 .Add(qrCodeImage)
                 ;
 
-            var requestingConnectionLabel = requestingHandshakeContent.Query<Label>("HandshakeStatusLabel").First();
-
             gui.Bind(serializedObject);
             var qrCodeTextureProp = serializedObject.FindProperty(nameof(qrCodeTexture));
             gui.TrackPropertyValue(qrCodeTextureProp, (prop) => qrCodeImage.image = (Texture)prop.objectReferenceValue);
-            var requestingConnectionProp = serializedObject.FindProperty(nameof(requestingConnectionText));
-            gui.TrackPropertyValue(requestingConnectionProp, (prop) => requestingConnectionLabel.text = prop.stringValue);
             rootVisualElement.Add(gui);
         }
 
@@ -93,7 +85,6 @@ namespace AlgoSdk.WalletConnect.Editor
         {
             var status = asset?.Account.ConnectionStatus ?? default;
             statusText = ObjectNames.NicifyVariableName(status.ToString());
-            requestingConnectionText = "Performing Handshake" + LoadingTextAnimationEllipses();
 
             configureSessionContent.visible = asset && status <= SessionStatus.NoConnection;
             requestingHandshakeContent.visible = asset && status == SessionStatus.RequestingConnection;
@@ -105,17 +96,6 @@ namespace AlgoSdk.WalletConnect.Editor
             asset?.Account.EndSession();
         }
 
-        string LoadingTextAnimationEllipses()
-        {
-            var time = EditorApplication.timeSinceStartup % 1;
-            if (time > 0.67)
-                return "...";
-            else if (time > 0.33)
-                return "..";
-            else
-                return ".";
-        }
-
         void StartSession()
         {
             if (!asset)
@@ -125,10 +105,8 @@ namespace AlgoSdk.WalletConnect.Editor
             switch (asset.Account.ConnectionStatus)
             {
                 case SessionStatus.NoConnection:
-                    RequestConnection();
-                    break;
                 case SessionStatus.RequestingConnection:
-                    ContinueHandshake();
+                    RequestConnection();
                     break;
             }
         }
@@ -150,43 +128,20 @@ namespace AlgoSdk.WalletConnect.Editor
             asset.Account.SessionData.BridgeUrl = DefaultBridge.GetRandomBridgeUrl();
         }
 
-        void RequestConnection()
-        {
-            RequestConnectionAsync();
-        }
-
-        async void RequestConnectionAsync()
+        async void RequestConnection()
         {
             try
             {
                 var handshakeUrl = await asset.Account.StartNewWalletConnection();
-                await PerformHandshake(handshakeUrl);
-            }
-            catch (OperationCanceledException)
-            {
-            }
-        }
-
-        void ContinueHandshake()
-        {
-            ContinueHandshakeAsync();
-        }
-
-        async void ContinueHandshakeAsync()
-        {
-            var handshakeUrl = asset.Account.ContinueHandshake();
-            await PerformHandshake(handshakeUrl);
-        }
-
-        async Task PerformHandshake(HandshakeUrl handshakeUrl)
-        {
-            try
-            {
                 qrCodeTexture = handshakeUrl.ToQrCodeTexture();
                 await asset.Account.WaitForConnectionApproval();
             }
             catch (OperationCanceledException)
             {
+            }
+            catch (Exception e)
+            {
+                Debug.LogException(e);
             }
         }
     }
