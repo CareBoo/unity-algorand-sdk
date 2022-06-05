@@ -6,7 +6,7 @@ using UnityEngine;
 namespace AlgoSdk.WalletConnect
 {
     [Serializable]
-    public struct SavedSession : IWalletConnectSessionData
+    public struct SessionData : IWalletConnectSessionData
     {
         [SerializeField]
         string clientId;
@@ -98,9 +98,9 @@ namespace AlgoSdk.WalletConnect
             set => walletMeta = value;
         }
 
-        public static SavedSession InitSession(ClientMeta dappMeta, string bridgeUrl)
+        public static SessionData InitSession(ClientMeta dappMeta, string bridgeUrl)
         {
-            return new SavedSession
+            return new SessionData
             {
                 ClientId = Guid.NewGuid().ToString(),
                 BridgeUrl = string.IsNullOrEmpty(bridgeUrl) ? DefaultBridge.GetRandomBridgeUrl() : bridgeUrl,

@@ -6,35 +6,56 @@ using UnityEngine;
 namespace AlgoSdk.WalletConnect
 {
     [Serializable]
-    public struct WalletConnectAccount
-        : IAccount
-        , IAsyncSigner
+    public class WalletConnectAccount
+        : IWalletConnectAccount
     {
         [SerializeField]
-        public SavedSession SessionData;
+        SessionData sessionData;
 
         AlgorandWalletConnectSession session;
 
         CancellationTokenSource sessionCancellation;
 
-        public WalletConnectAccount(SavedSession sessionData)
+        public WalletConnectAccount(SessionData sessionData)
         {
-            this.SessionData = sessionData;
+            this.sessionData = sessionData;
             session = null;
             sessionCancellation = null;
         }
 
-        public Address Address => SessionData.Accounts?[0] ?? Address.Empty;
+        /// <inheritdoc />
+        public Address Address => sessionData.Accounts?[0] ?? Address.Empty;
 
+        /// <inheritdoc />
         public SessionStatus ConnectionStatus => session?.ConnectionStatus ?? default;
 
+        /// <inheritdoc />
+        public SessionData SessionData => sessionData;
+
+        /// <inheritdoc />
+        public string BridgeUrl
+        {
+            get => sessionData.BridgeUrl;
+            set => sessionData.BridgeUrl = value;
+        }
+
+        /// <inheritdoc />
+        public ClientMeta DappMeta
+        {
+            get => sessionData.DappMeta;
+            set => sessionData.DappMeta = value;
+        }
+
+        /// <inheritdoc />
         public async UniTask BeginSession()
         {
             session = new AlgorandWalletConnectSession(SessionData);
             sessionCancellation = new CancellationTokenSource();
             await session.Connect(sessionCancellation.Token);
+            sessionData = session.Save();
         }
 
+        /// <inheritdoc />
         public void EndSession()
         {
             if (sessionCancellation != null)
@@ -46,30 +67,42 @@ namespace AlgoSdk.WalletConnect
             {
                 return;
             }
-            SessionData = session.Save();
+            sessionData = session.Save();
             session.Dispose();
             session = null;
         }
 
-        public HandshakeUrl RequestHandshake()
+        /// <inheritdoc />
+        public void ResetSessionData()
         {
-            CheckSession();
-            return session.RequestHandshake();
+            sessionData = SessionData.InitSession(sessionData.DappMeta, sessionData.BridgeUrl);
         }
 
-        public async UniTask WaitForWalletConnectionApproval()
+        /// <inheritdoc />
+        public HandshakeUrl RequestWalletConnection()
+        {
+            CheckSession();
+            var handshake = session.RequestHandshake();
+            sessionData = session.Save();
+            return handshake;
+        }
+
+        /// <inheritdoc />
+        public async UniTask WaitForWalletApproval()
         {
             CheckSession();
             await session.WaitForWalletConnectionApproval(sessionCancellation.Token);
-            SessionData = session.Save();
+            sessionData = session.Save();
         }
 
-        public void DisconnectWalletConnection(string reason = default)
+        /// <inheritdoc />
+        public void DisconnectWallet(string reason = default)
         {
             CheckSession();
             session.DisconnectWalletConnection(reason);
         }
 
+        /// <inheritdoc />
         public async UniTask<SignedTxn<T>[]> SignTxnsAsync<T>(
             T[] txns,
             TxnIndices txnsToSign,

@@ -8,10 +8,10 @@
         <ui:Button text="Connect New Wallet" display-tooltip-when-elided="true" name="ConnectNewWalletButton" />
     </ui:VisualElement>
     <ui:VisualElement name="ConfigureSessionContent" style="visibility: visible; display: flex; margin-top: 5px; margin-bottom: 5px;">
-        <ui:TextField picking-mode="Ignore" label="WalletConnect Bridge URL" value="filler text" text="https://bridge.walletconnect.org" name="BridgeUrlField" binding-path="Account.SessionData.bridgeUrl" is-delayed="true" readonly="false" style="justify-content: flex-start;">
+        <ui:TextField picking-mode="Ignore" label="WalletConnect Bridge URL" value="filler text" text="https://bridge.walletconnect.org" name="BridgeUrlField" binding-path="account.sessionData.bridgeUrl" is-delayed="true" readonly="false" style="justify-content: flex-start;">
             <ui:Button display-tooltip-when-elided="true" name="RandomizeButton" tooltip="Get a random, WalletConnect bridge url." />
         </ui:TextField>
-        <uie:PropertyField name="DappMetaField" binding-path="Account.SessionData.dappMeta" label="Dapp Information" />
+        <uie:PropertyField name="DappMetaField" binding-path="account.sessionData.dappMeta" label="Dapp Information" />
         <ui:VisualElement name="ButtonContent" style="align-items: center; margin-top: 5px; margin-bottom: 5px;">
             <ui:Button text="Connect" display-tooltip-when-elided="true" name="StartSessionButton" />
         </ui:VisualElement>

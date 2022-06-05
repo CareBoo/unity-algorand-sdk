@@ -17,8 +17,6 @@ namespace AlgoSdk.WalletConnect
 
         Hex key;
 
-        TimeSpan timeout;
-
         CancellationTokenSource connectionCancellation;
 
         public event Action<JsonRpcRequest> OnRequestReceived;
@@ -32,25 +30,25 @@ namespace AlgoSdk.WalletConnect
         /// </summary>
         /// <param name="url">url to connect to the websocket server</param>
         /// <param name="key">The key to use to encrypt and decrypt payloads</param>
-        public JsonRpcClient(string url, Hex key, Optional<TimeSpan> timeout = default)
+        public JsonRpcClient(string url, Hex key)
         {
             webSocketClient = WebSocketClientFactory.Create(url);
             this.key = key;
-            this.timeout = timeout.HasValue ? timeout.Value : TimeSpan.FromSeconds(60);
         }
 
         /// <summary>
         /// Connect to the Json RPC Server and begin listening for messages.
         /// </summary>
         /// <param name="clientId">The websocket topic to connect to.</param>
+        /// <param name="timeout">An optional timeout to cancel the connection early.</param>
         /// <param name="cancellationToken">An optional cancellation to stop the connection early.</param>
-        public async UniTask Connect(string clientId, CancellationToken cancellationToken = default)
+        public async UniTask Connect(
+            string clientId,
+            CancellationToken cancellationToken = default
+            )
         {
-            var timeoutSource = new CancellationTokenSource();
-            var cancellation = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, timeoutSource.Token);
-            timeoutSource.CancelAfter(timeout);
             webSocketClient.Connect();
-            await webSocketClient.PollUntilOpen(cancellation.Token);
+            await webSocketClient.PollUntilOpen(cancellationToken);
             var msg = NetworkMessage.SubscribeToTopic(clientId);
             webSocketClient.Send(msg);
             connectionCancellation = new CancellationTokenSource();
@@ -119,9 +117,20 @@ namespace AlgoSdk.WalletConnect
             )
         {
             var cancellation = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, connectionCancellation.Token);
-            cancellation.CancelAfter(timeout);
-            using var listeningForResponse = new ListenForResponseScope(id, OnResponseReceived);
-            return await listeningForResponse.WaitForResponse(cancellation.Token);
+            Optional<JsonRpcResponse> matchingResponse = default;
+            void onResponseReceived(JsonRpcResponse response)
+            {
+                if (response.Id != id)
+                    return;
+
+                matchingResponse = response;
+                OnResponseReceived -= onResponseReceived;
+            }
+            OnResponseReceived += onResponseReceived;
+            while (!matchingResponse.HasValue)
+                await UniTask.Yield(cancellation.Token);
+
+            return matchingResponse;
         }
 
         public void Dispose()
@@ -153,69 +162,33 @@ namespace AlgoSdk.WalletConnect
                     switch (evt.Type)
                     {
                         case WebSocketEventType.Payload:
-                            var responseOrRequest = evt.ReadJsonRpcPayload(key);
-                            if (responseOrRequest.TryGetValue1(out var response))
-                                OnResponseReceived.Invoke(response);
-                            else if (responseOrRequest.TryGetValue2(out var request))
-                                OnRequestReceived.Invoke(request);
+                            try
+                            {
+                                var responseOrRequest = evt.ReadJsonRpcPayload(key);
+                                if (responseOrRequest.TryGetValue1(out var response) && OnResponseReceived != null)
+                                    OnResponseReceived(response);
+                                else if (responseOrRequest.TryGetValue2(out var request) && OnRequestReceived != null)
+                                    OnRequestReceived(request);
+                            }
+                            catch (AggregateException ex)
+                            {
+                                foreach (var inner in ex.InnerExceptions)
+                                    Debug.LogWarning(inner.ToString());
+                                throw;
+                            }
                             break;
                         case WebSocketEventType.Error:
-                            Debug.LogError(evt.Error);
+                            Debug.LogWarning(evt.Error);
                             break;
                         case WebSocketEventType.Close:
-                            OnSocketClosed(evt.Reason);
+                            if (OnSocketClosed != null)
+                                OnSocketClosed(evt.Reason);
                             return;
                     }
                 }
             }
             catch (OperationCanceledException)
             {
-            }
-            catch (Exception ex)
-            {
-                Debug.LogException(ex);
-            }
-        }
-
-        public class ListenForResponseScope
-            : IDisposable
-        {
-            ulong requestId;
-            bool hasReceivedResponse;
-            Action<JsonRpcResponse> evt;
-            JsonRpcResponse response;
-
-            public ListenForResponseScope(ulong requestId, Action<JsonRpcResponse> evt)
-            {
-                this.requestId = requestId;
-                this.hasReceivedResponse = false;
-                this.evt = evt;
-                this.response = default;
-                this.evt += OnResponseReceived;
-            }
-
-            public async UniTask<JsonRpcResponse> WaitForResponse(CancellationToken cancellationToken = default)
-            {
-                while (!hasReceivedResponse)
-                {
-                    await UniTask.Yield(cancellationToken);
-                    await UniTask.NextFrame(cancellationToken);
-                }
-                return response;
-            }
-
-            public void Dispose()
-            {
-                this.evt -= OnResponseReceived;
-            }
-
-            void OnResponseReceived(JsonRpcResponse response)
-            {
-                if (response.Id != requestId)
-                    return;
-
-                this.response = response;
-                hasReceivedResponse = true;
             }
         }
     }

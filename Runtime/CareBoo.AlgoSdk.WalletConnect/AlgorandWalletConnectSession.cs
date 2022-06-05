@@ -7,7 +7,7 @@ namespace AlgoSdk.WalletConnect
     public class AlgorandWalletConnectSession
         : IActiveWalletConnectSession<AlgorandWalletConnectSession>
     {
-        SavedSession sessionData;
+        SessionData sessionData;
 
         JsonRpcClient rpc;
 
@@ -69,7 +69,7 @@ namespace AlgoSdk.WalletConnect
         /// <param name="bridgeUrl">An optional WalletConnect bridgeurl. e.g. https://bridge.walletconnect.org</param>
         public AlgorandWalletConnectSession(ClientMeta clientMeta, string bridgeUrl = null)
         {
-            sessionData = SavedSession.InitSession(
+            sessionData = SessionData.InitSession(
                 clientMeta,
                 bridgeUrl
             );
@@ -80,7 +80,7 @@ namespace AlgoSdk.WalletConnect
         /// Continue an existing session.
         /// </summary>
         /// <param name="savedSession">A previously existing session.</param>
-        public AlgorandWalletConnectSession(SavedSession savedSession)
+        public AlgorandWalletConnectSession(SessionData savedSession)
         {
             sessionData = savedSession;
             rpc = new JsonRpcClient(sessionData.BridgeUrl.Replace("http", "ws"), sessionData.Key);
@@ -95,8 +95,8 @@ namespace AlgoSdk.WalletConnect
         /// <summary>
         /// Save the current session's state.
         /// </summary>
-        /// <returns>A <see cref="SavedSession"/> that can be used for continuing an existing session later.</returns>
-        public SavedSession Save()
+        /// <returns>A <see cref="SessionData"/> that can be used for continuing an existing session later.</returns>
+        public SessionData Save()
         {
             return sessionData;
         }
@@ -111,13 +111,13 @@ namespace AlgoSdk.WalletConnect
             if (ConnectionStatus != SessionStatus.None)
                 throw new InvalidOperationException($"Session connection status is {ConnectionStatus}");
 
-            rpc.OnSocketClosed += OnSessionDisconnect;
+            rpc.OnSocketClosed += HandleSocketClosed;
             rpc.OnRequestReceived += HandleJsonRpcRequestReceived;
             await rpc.Connect(ClientId, cancellationToken);
             if (!string.IsNullOrEmpty(PeerId))
             {
                 ConnectionStatus = SessionStatus.WalletConnected;
-                OnSessionConnect(this);
+                OnSessionConnect?.Invoke(this);
             }
             else if (HandshakeId != default)
             {
@@ -173,7 +173,7 @@ namespace AlgoSdk.WalletConnect
             UpdateSession(sessionData);
             HandshakeTopic = null;
             ConnectionStatus = SessionStatus.WalletConnected;
-            OnSessionConnect(this);
+            OnSessionConnect?.Invoke(this);
         }
 
         /// <summary>
@@ -184,8 +184,8 @@ namespace AlgoSdk.WalletConnect
         {
             rpc.Disconnect(reason);
             ConnectionStatus = SessionStatus.None;
-            sessionData = SavedSession.InitSession(sessionData.DappMeta, sessionData.BridgeUrl);
-            OnSessionDisconnect(reason);
+            sessionData = SessionData.InitSession(sessionData.DappMeta, sessionData.BridgeUrl);
+            OnSessionDisconnect?.Invoke(reason);
         }
 
         /// <summary>
@@ -232,6 +232,11 @@ namespace AlgoSdk.WalletConnect
             return AlgoApiSerializer.DeserializeJson<byte[][]>(response.Result.Json);
         }
 
+        void HandleSocketClosed(string reason)
+        {
+            OnSessionDisconnect?.Invoke(reason);
+        }
+
         void HandleJsonRpcRequestReceived(JsonRpcRequest request)
         {
             switch (request.Method)
@@ -241,7 +246,7 @@ namespace AlgoSdk.WalletConnect
                         throw new NotSupportedException($"The JsonRpcRequest method \"{WalletConnectRpc.SessionUpdateMethod}\" only supports params of length 1.");
                     var sessonUpdate = AlgoApiSerializer.DeserializeJson<WalletConnectSessionData>(request.Params[0].Json);
                     UpdateSession(sessonUpdate);
-                    OnSessionUpdate.Invoke(sessonUpdate);
+                    OnSessionUpdate?.Invoke(sessonUpdate);
                     break;
                 default:
                     throw new NotSupportedException($"The JsonRpcRequest method \"{request.Method}\" is not supported");

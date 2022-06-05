@@ -36,7 +36,6 @@ namespace AlgoSdk.WalletConnect.Editor
 
         void CreateGUI()
         {
-            var serializedObject = new SerializedObject(this);
             var gui = visualTree.CloneTree();
 
             connectedContent = gui.Query<VisualElement>("ConnectedContent").First();
@@ -78,6 +77,7 @@ namespace AlgoSdk.WalletConnect.Editor
                 .Add(qrCodeImage)
                 ;
 
+            var serializedObject = new SerializedObject(this);
             gui.Bind(serializedObject);
             var qrCodeTextureProp = serializedObject.FindProperty(nameof(qrCodeTexture));
             gui.TrackPropertyValue(qrCodeTextureProp, (prop) => qrCodeImage.image = (Texture)prop.objectReferenceValue);
@@ -87,7 +87,7 @@ namespace AlgoSdk.WalletConnect.Editor
 
         void Update()
         {
-            var status = asset?.Account.ConnectionStatus ?? default;
+            var status = asset ? asset.ConnectionStatus : default;
             statusText = ObjectNames.NicifyVariableName(status.ToString());
 
             configureSessionContent.visible = asset && status <= SessionStatus.NoWalletConnected;
@@ -97,18 +97,8 @@ namespace AlgoSdk.WalletConnect.Editor
 
         void OnDestroy()
         {
-            asset?.Account.EndSession();
-        }
-
-        string LoadingTextAnimationEllipses()
-        {
-            var time = EditorApplication.timeSinceStartup % 1;
-            if (time > 0.67)
-                return "...";
-            else if (time > 0.33)
-                return "..";
-            else
-                return ".";
+            if (asset)
+                asset.EndSession();
         }
 
         void StartSession()
@@ -119,39 +109,23 @@ namespace AlgoSdk.WalletConnect.Editor
         async UniTaskVoid StartSessionAsync()
         {
             startSessionButton.SetEnabled(false);
+            await UniTask.SwitchToThreadPool();
             try
             {
-                await UniTask.SwitchToThreadPool();
-                await asset.Account.BeginSession();
-                switch (asset.Account.ConnectionStatus)
-                {
-                    case SessionStatus.NoWalletConnected:
-                    case SessionStatus.RequestingWalletConnection:
-                        RequestConnection();
-                        break;
-                }
+                await asset.BeginSession();
             }
             finally
             {
+                await UniTask.SwitchToMainThread();
                 startSessionButton.SetEnabled(true);
             }
-        }
-
-        void ResetWalletConnection()
-        {
-            if (!asset)
-                return;
-
-            asset.Account.EndSession();
-            asset.Account.SessionData = SavedSession.InitSession(asset.Account.SessionData.DappMeta, asset.Account.SessionData.BridgeUrl);
-        }
-
-        void SetRandomBridgeUrl()
-        {
-            if (!asset)
-                return;
-
-            asset.Account.SessionData.BridgeUrl = DefaultBridge.GetRandomBridgeUrl();
+            switch (asset.ConnectionStatus)
+            {
+                case SessionStatus.NoWalletConnected:
+                case SessionStatus.RequestingWalletConnection:
+                    RequestConnection();
+                    break;
+            }
         }
 
         void RequestConnection()
@@ -163,14 +137,31 @@ namespace AlgoSdk.WalletConnect.Editor
         {
             try
             {
-                await UniTask.SwitchToThreadPool();
-                var handshakeUrl = asset.Account.RequestHandshake();
+                var handshakeUrl = asset.RequestWalletConnection();
                 qrCodeTexture = handshakeUrl.ToQrCodeTexture();
-                await asset.Account.WaitForWalletConnectionApproval();
+                await UniTask.SwitchToTaskPool();
+                await asset.WaitForWalletApproval();
             }
             catch (OperationCanceledException)
             {
             }
+        }
+
+        void ResetWalletConnection()
+        {
+            if (!asset)
+                return;
+
+            asset.EndSession();
+            asset.ResetSessionData();
+        }
+
+        void SetRandomBridgeUrl()
+        {
+            if (!asset)
+                return;
+
+            asset.BridgeUrl = DefaultBridge.GetRandomBridgeUrl();
         }
     }
 }

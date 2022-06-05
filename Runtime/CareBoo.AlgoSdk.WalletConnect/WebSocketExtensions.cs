@@ -48,15 +48,10 @@ namespace AlgoSdk.WalletConnect
             CancellationToken cancellationToken = default
             )
         {
-            var evt = client.Poll();
+            WebSocketEvent evt = client.Poll();
             while (evt.Type == WebSocketEventType.Nothing)
             {
-#if UNITY_EDITOR
-                await UniTask.Delay(250, cancellationToken: cancellationToken);
-#else
                 await UniTask.Yield(cancellationToken);
-                await UniTask.NextFrame(cancellationToken);
-#endif
                 evt = client.Poll();
             }
             return evt;
