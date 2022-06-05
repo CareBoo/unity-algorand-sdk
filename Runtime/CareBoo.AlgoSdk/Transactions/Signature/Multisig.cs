@@ -97,20 +97,24 @@ namespace AlgoSdk
             if (Subsigs == null)
                 return result;
 
-            using (var listBytes = new NativeList<byte>(Allocator.Persistent))
+            using var listBytes = new NativeList<byte>(Allocator.Persistent);
+            unsafe
             {
-                using var addrPrefix = new NativeArray<byte>(AddressPrefix, Allocator.Persistent);
-                listBytes.AddRange(addrPrefix);
-                listBytes.Add(Version);
-                listBytes.Add(Threshold);
-                for (var i = 0; i < Subsigs.Length; i++)
-                {
-                    using var subsigPk = Subsigs[i].PublicKey.ToNativeArray(Allocator.Persistent);
-                    listBytes.AddRange(subsigPk);
-                }
-                var bytes = new NativeByteArray(listBytes.AsArray());
-                Sha512.Hash256Truncated(bytes).CopyTo(ref result);
+                fixed (void* a = AddressPrefix)
+                    listBytes.AddRange(a, AddressPrefix.Length);
             }
+            listBytes.Add(Version);
+            listBytes.Add(Threshold);
+            for (var i = 0; i < Subsigs.Length; i++)
+            {
+                var pubKey = Subsigs[i].PublicKey;
+                unsafe
+                {
+                    listBytes.AddRange(pubKey.GetUnsafePtr(), pubKey.Length);
+                }
+            }
+            var bytes = new NativeByteArray(listBytes.AsArray());
+            Sha512.Hash256Truncated(bytes).CopyTo(ref result);
             return result;
         }
 

@@ -31,17 +31,10 @@ namespace AlgoSdk
         public static NativeByteArray GetSignBytes(CompiledTeal program, Allocator allocator)
         {
             var bytes = new NativeByteArray(SigningPrefix.Length + program.Bytes.Length, allocator);
-            try
-            {
-                for (var i = 0; i < SigningPrefix.Length; i++)
-                    bytes[i] = SigningPrefix[i];
-                for (var i = SigningPrefix.Length; i < bytes.Length; i++)
-                    bytes[i] = program.Bytes[i - SigningPrefix.Length];
-            }
-            finally
-            {
-                bytes.Dispose();
-            }
+            for (var i = 0; i < SigningPrefix.Length; i++)
+                bytes[i] = SigningPrefix[i];
+            for (var i = SigningPrefix.Length; i < bytes.Length; i++)
+                bytes[i] = program.Bytes[i - SigningPrefix.Length];
             return bytes;
         }
 
