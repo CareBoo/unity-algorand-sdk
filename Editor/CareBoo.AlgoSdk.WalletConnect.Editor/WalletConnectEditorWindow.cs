@@ -16,15 +16,13 @@ namespace AlgoSdk.WalletConnect.Editor
         VisualTreeAsset visualTree;
 
         [SerializeField]
-        Texture qrCodeTexture;
-
-        [SerializeField]
         string statusText;
 
         VisualElement configureSessionContent;
         VisualElement connectedContent;
         VisualElement requestingHandshakeContent;
 
+        Image qrCodeImage;
         Button startSessionButton;
 
         public static void Show(string assetGuid)
@@ -70,7 +68,7 @@ namespace AlgoSdk.WalletConnect.Editor
             var cancelHandshakeButton = requestingHandshakeContent.Query<Button>("CancelHandshakeButton").First();
             cancelHandshakeButton.clicked += ResetWalletConnection;
 
-            var qrCodeImage = new Image();
+            qrCodeImage = new Image();
             requestingHandshakeContent
                 .Query<VisualElement>("QrCodeContent")
                 .First()
@@ -79,8 +77,6 @@ namespace AlgoSdk.WalletConnect.Editor
 
             var serializedObject = new SerializedObject(this);
             gui.Bind(serializedObject);
-            var qrCodeTextureProp = serializedObject.FindProperty(nameof(qrCodeTexture));
-            gui.TrackPropertyValue(qrCodeTextureProp, (prop) => qrCodeImage.image = (Texture)prop.objectReferenceValue);
 
             rootVisualElement.Add(gui);
         }
@@ -138,9 +134,11 @@ namespace AlgoSdk.WalletConnect.Editor
             try
             {
                 var handshakeUrl = asset.RequestWalletConnection();
-                qrCodeTexture = handshakeUrl.ToQrCodeTexture();
+                qrCodeImage.image = handshakeUrl.ToQrCodeTexture();
                 await UniTask.SwitchToTaskPool();
                 await asset.WaitForWalletApproval();
+                await UniTask.SwitchToMainThread();
+                qrCodeImage.image = null;
             }
             catch (OperationCanceledException)
             {
