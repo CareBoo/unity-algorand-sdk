@@ -134,7 +134,7 @@ namespace AlgoSdk.WalletConnect
         /// Start the handshake process for a new WalletConnect session.
         /// </summary>
         /// <returns>A WalletConnect Standard URI format (EIP-1328) used for handshaking.</returns>
-        public HandshakeUrl RequestHandshake()
+        public HandshakeUrl RequestWalletConnection()
         {
             switch (ConnectionStatus)
             {
@@ -163,7 +163,7 @@ namespace AlgoSdk.WalletConnect
         /// <param name="cancellationToken">
         /// An optional <see cref="CancellationToken"/> that can be used for things like timeouts.
         /// </param>
-        public async UniTask WaitForWalletConnectionApproval(CancellationToken cancellationToken = default)
+        public async UniTask WaitForWalletApproval(CancellationToken cancellationToken = default)
         {
             if (ConnectionStatus != SessionStatus.RequestingWalletConnection)
                 throw new InvalidOperationException($"Session connection status is {ConnectionStatus}");
@@ -180,7 +180,7 @@ namespace AlgoSdk.WalletConnect
         /// Disconnect from a <see cref="SessionStatus.WalletConnected"/> or <see cref="SessionStatus.RequestingWalletConnection"/> session.
         /// </summary>
         /// <param name="reason">An optional reason to inform the web socket client.</param>
-        public void DisconnectWalletConnection(string reason = default)
+        public void DisconnectWallet(string reason = default)
         {
             rpc.Disconnect(reason);
             ConnectionStatus = SessionStatus.None;
@@ -257,7 +257,7 @@ namespace AlgoSdk.WalletConnect
         {
             if (!sessionData.IsApproved)
             {
-                DisconnectWalletConnection("Session no longer approved.");
+                DisconnectWallet("Session no longer approved.");
                 return;
             }
 

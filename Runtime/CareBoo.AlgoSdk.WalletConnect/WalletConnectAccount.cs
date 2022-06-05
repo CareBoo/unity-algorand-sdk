@@ -82,7 +82,7 @@ namespace AlgoSdk.WalletConnect
         public HandshakeUrl RequestWalletConnection()
         {
             CheckSession();
-            var handshake = session.RequestHandshake();
+            var handshake = session.RequestWalletConnection();
             sessionData = session.Save();
             return handshake;
         }
@@ -91,7 +91,7 @@ namespace AlgoSdk.WalletConnect
         public async UniTask WaitForWalletApproval()
         {
             CheckSession();
-            await session.WaitForWalletConnectionApproval(sessionCancellation.Token);
+            await session.WaitForWalletApproval(sessionCancellation.Token);
             sessionData = session.Save();
         }
 
@@ -99,7 +99,7 @@ namespace AlgoSdk.WalletConnect
         public void DisconnectWallet(string reason = default)
         {
             CheckSession();
-            session.DisconnectWalletConnection(reason);
+            session.DisconnectWallet(reason);
         }
 
         /// <inheritdoc />

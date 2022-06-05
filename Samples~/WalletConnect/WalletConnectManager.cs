@@ -106,9 +106,9 @@ public class WalletConnectManager : MonoBehaviour
     {
         session = new AlgorandWalletConnectSession(DappMeta, BridgeUrl);
         await session.Connect();
-        handshake = session.RequestHandshake();
+        handshake = session.RequestWalletConnection();
         qrCode = handshake.ToQrCodeTexture();
-        await session.WaitForWalletConnectionApproval();
+        await session.WaitForWalletApproval();
         Debug.Log($"accounts:\n{AlgoApiSerializer.SerializeJson(session.Accounts)}");
     }
 
