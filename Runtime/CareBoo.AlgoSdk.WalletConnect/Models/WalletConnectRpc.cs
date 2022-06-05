@@ -6,6 +6,8 @@ namespace AlgoSdk.WalletConnect
     {
         const string jsonRpcVersion = "2.0";
 
+        public const string SessionUpdateMethod = "wc_sessionUpdate";
+
         /// <summary>
         /// Utility function for building a <see cref="JsonRpcRequest"/> used to start a new WalletConnect session.
         /// </summary>

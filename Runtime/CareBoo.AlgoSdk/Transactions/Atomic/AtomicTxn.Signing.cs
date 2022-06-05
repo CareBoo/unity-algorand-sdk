@@ -48,7 +48,7 @@ namespace AlgoSdk
             /// <returns>Msgpack encoding of the transaction group.</returns>
             public byte[] FinishSigning()
             {
-                using var signed = FinishSigning(Allocator.Temp);
+                using var signed = FinishSigning(Allocator.Persistent);
                 return signed.ToArray();
             }
 

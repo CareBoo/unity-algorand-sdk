@@ -64,7 +64,7 @@ namespace AlgoSdk
 
         public static implicit operator CompiledTeal(string x)
         {
-            using var text = new NativeText(x, Allocator.Temp);
+            using var text = new NativeText(x, Allocator.Persistent);
             return text.ToByteArray();
         }
 

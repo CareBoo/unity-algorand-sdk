@@ -97,7 +97,7 @@ namespace AlgoSdk
                     method,
                     in methodArgs,
                     onComplete,
-                    Allocator.Temp
+                    Allocator.Persistent
                 );
                 methodCallBuilder.ValidateTxnArgs(Txns);
                 var txn = methodCallBuilder.BuildTxn();
@@ -114,7 +114,7 @@ namespace AlgoSdk
             /// </returns>
             public Signing Build()
             {
-                var writer = new MessagePackWriter(Allocator.Temp);
+                var writer = new MessagePackWriter(Allocator.Persistent);
                 try
                 {
                     for (var i = 0; i < IdPrefix.Length; i++)

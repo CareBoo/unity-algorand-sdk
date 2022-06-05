@@ -9,7 +9,7 @@ namespace AlgoSdk.WalletConnect
         public static NetworkMessage ToNetworkMessage<T>(this T request, Hex encryptionKey, string topic)
             where T : IJsonRpcRequest
         {
-            using var requestJson = AlgoApiSerializer.SerializeJson(request, Allocator.Temp);
+            using var requestJson = AlgoApiSerializer.SerializeJson(request, Allocator.Persistent);
             var payloadData = requestJson.AsArray().ToArray();
             var encryptedPayload = AesCipher.EncryptWithKey(encryptionKey, payloadData);
             return NetworkMessage.PublishToTopic(encryptedPayload, topic);

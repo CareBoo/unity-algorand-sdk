@@ -10,7 +10,7 @@ public class NativeArrayUtilTest
     {
         var input = RandomBytes();
         var expected = input.SelectMany(b => b).ToArray();
-        using var actualNative = NativeArrayUtil.ConcatAll(input, Allocator.Temp);
+        using var actualNative = NativeArrayUtil.ConcatAll(input, Allocator.Persistent);
         var actual = actualNative.ToArray();
         Assert.True(expected.SequenceEqual(actual));
     }

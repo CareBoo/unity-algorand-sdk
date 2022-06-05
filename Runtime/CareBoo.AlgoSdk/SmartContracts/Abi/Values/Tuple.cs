@@ -51,7 +51,7 @@ namespace AlgoSdk.Abi
         public EncodedAbiArg Encode<U>(U types, AbiReferences references, Allocator allocator)
             where U : IReadOnlyList<IAbiType>
         {
-            using var encoder = new Encoder<U>(args, types, references, Allocator.Temp);
+            using var encoder = new Encoder<U>(args, types, references, Allocator.Persistent);
             return encoder.Encode(allocator);
         }
 
@@ -152,7 +152,7 @@ namespace AlgoSdk.Abi
                 else
                 {
                     boolShift = 0;
-                    using var bytes = args.EncodeCurrent(types[t], references, Allocator.Temp);
+                    using var bytes = args.EncodeCurrent(types[t], references, Allocator.Persistent);
                     headBytes.AddRange(bytes.Bytes);
                 }
             }
@@ -178,7 +178,7 @@ namespace AlgoSdk.Abi
                 boolShift %= 8;
                 if (boolShift == 0)
                     headBytes.Add(0);
-                using var encoded = args.EncodeCurrent(types[t], references, Allocator.Temp);
+                using var encoded = args.EncodeCurrent(types[t], references, Allocator.Persistent);
                 headBytes[headBytes.Length - 1] |= (byte)(encoded[0] >> boolShift);
                 boolShift++;
             }
@@ -197,7 +197,7 @@ namespace AlgoSdk.Abi
 
             void EncodeDynamicTail(int t)
             {
-                using var bytes = args.EncodeCurrent(types[t], references, Allocator.Temp);
+                using var bytes = args.EncodeCurrent(types[t], references, Allocator.Persistent);
                 tailBytes.AddRange(bytes.Bytes);
             }
         }

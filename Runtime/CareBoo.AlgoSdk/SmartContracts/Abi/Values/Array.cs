@@ -41,7 +41,7 @@ namespace AlgoSdk.Abi
 
             var result = new EncodedAbiArg(allocator);
             using var k = new UInt16((ushort)value.Length)
-                .Encode(AbiType.UIntN(16), references, Allocator.Temp);
+                .Encode(AbiType.UIntN(16), references, Allocator.Persistent);
             result.Bytes.AddRange(k.Bytes);
             result.Bytes.AddRange(tupleEncoding.Bytes);
             tupleEncoding.Dispose();

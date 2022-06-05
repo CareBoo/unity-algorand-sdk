@@ -19,7 +19,7 @@ namespace AlgoSdk.Abi
 
         public MethodSelector(Method method)
         {
-            using var signature = method.GetSignature(Allocator.Temp);
+            using var signature = method.GetSignature(Allocator.Persistent);
             var hash = Sha512.Hash256Truncated(signature.AsArray().AsReadOnly());
             unsafe
             {

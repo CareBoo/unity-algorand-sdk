@@ -5,7 +5,7 @@ using UnityEditor;
 namespace AlgoSdk.Editor
 {
     [CustomPropertyDrawer(typeof(Mnemonic))]
-    public class MnemonicDrawer : BytesTextDrawer
+    public class MnemonicDrawer : FixedBytesTextDrawer
     {
         protected unsafe override List<byte> GetBytes(string s)
         {

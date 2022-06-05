@@ -2,7 +2,6 @@ using System;
 using AlgoSdk.Crypto;
 using AlgoSdk.LowLevel;
 using Unity.Collections;
-using static AlgoSdk.Crypto.Ed25519;
 
 namespace AlgoSdk
 {
@@ -39,7 +38,7 @@ namespace AlgoSdk
         /// <returns><c>true</c> if this <see cref="LogicSig"/> can sign for the sender.</returns>
         public bool IsValid(Address sender)
         {
-            using var programByteArray = Logic.GetSignBytes(Program, Allocator.Temp);
+            using var programByteArray = Logic.GetSignBytes(Program, Allocator.Persistent);
             return (!Sig.Equals(default) && Sig.Verify(programByteArray, sender))
                 || (!Multisig.Equals(default) && Multisig.Verify(programByteArray))
                 || VerifyProgram(programByteArray, sender)

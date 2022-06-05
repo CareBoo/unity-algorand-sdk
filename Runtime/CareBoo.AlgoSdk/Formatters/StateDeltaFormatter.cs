@@ -13,7 +13,7 @@ namespace AlgoSdk
             if (!reader.TryRead(JsonToken.ObjectBegin))
                 JsonReadError.IncorrectType.ThrowIfError(reader);
 
-            using var map = new NativeList<ValueDeltaKeyValue>(64, Allocator.Temp);
+            using var map = new NativeList<ValueDeltaKeyValue>(64, Allocator.Persistent);
             while (reader.Peek() != JsonToken.ObjectEnd && reader.Peek() != JsonToken.None)
             {
                 FixedString64Bytes key = default;

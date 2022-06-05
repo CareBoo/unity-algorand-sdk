@@ -16,10 +16,10 @@ namespace AlgoSdk.Editor
         {
             position = EditorGUI.PrefixLabel(position, label);
             var lengthProperty = property.FindPropertyRelative("utf8LengthInBytes");
-            var byteProperties = new SerializedBytes(property);
+            var byteProperties = new SerializedFixedBytes(property);
             var bytes = byteProperties.GetBytes();
             var length = math.min(lengthProperty.intValue, bytes.Count);
-            var text = new NativeText(length, Allocator.Temp);
+            var text = new NativeText(length, Allocator.Persistent);
             try
             {
                 text.Length = length;

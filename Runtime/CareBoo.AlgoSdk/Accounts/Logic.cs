@@ -18,7 +18,7 @@ namespace AlgoSdk
         /// <returns>An <see cref="Address"/> for a program.</returns>
         public static Address GetAddress(CompiledTeal program)
         {
-            using var bytes = GetSignBytes(program, Allocator.Temp);
+            using var bytes = GetSignBytes(program, Allocator.Persistent);
             return Sha512.Hash256Truncated(bytes);
         }
 
@@ -31,17 +31,10 @@ namespace AlgoSdk
         public static NativeByteArray GetSignBytes(CompiledTeal program, Allocator allocator)
         {
             var bytes = new NativeByteArray(SigningPrefix.Length + program.Bytes.Length, allocator);
-            try
-            {
-                for (var i = 0; i < SigningPrefix.Length; i++)
-                    bytes[i] = SigningPrefix[i];
-                for (var i = SigningPrefix.Length; i < bytes.Length; i++)
-                    bytes[i] = program.Bytes[i - SigningPrefix.Length];
-            }
-            finally
-            {
-                bytes.Dispose();
-            }
+            for (var i = 0; i < SigningPrefix.Length; i++)
+                bytes[i] = SigningPrefix[i];
+            for (var i = SigningPrefix.Length; i < bytes.Length; i++)
+                bytes[i] = program.Bytes[i - SigningPrefix.Length];
             return bytes;
         }
 
@@ -53,7 +46,7 @@ namespace AlgoSdk
         /// <returns><see cref="Sig"/></returns>
         public static Sig Sign(CompiledTeal program, SecretKeyHandle secretKey)
         {
-            using var programSignBytes = Logic.GetSignBytes(program, Allocator.Temp);
+            using var programSignBytes = Logic.GetSignBytes(program, Allocator.Persistent);
             return secretKey.Sign(programSignBytes);
         }
 

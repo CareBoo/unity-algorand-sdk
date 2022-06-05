@@ -16,7 +16,7 @@ public class PendingTransactionTest
         [ValueSource(nameof(msgPackCases))] string msgPackBase64
     )
     {
-        using var bytes = new NativeArray<byte>(System.Convert.FromBase64String(msgPackBase64), Allocator.Temp);
+        using var bytes = new NativeArray<byte>(System.Convert.FromBase64String(msgPackBase64), Allocator.Persistent);
         AlgoApiSerializer.DeserializeMessagePack<PendingTransactionResponse>(bytes);
     }
 }

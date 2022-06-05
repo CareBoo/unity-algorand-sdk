@@ -22,7 +22,7 @@ public class JsonReaderTest
     {
         using var jsonText = new NativeText(
             validJson,
-            Allocator.Temp);
+            Allocator.Persistent);
         var reader = new JsonReader(jsonText);
         Assert.AreEqual(JsonToken.ObjectBegin, reader.Read());
         Assert.AreEqual(JsonToken.String, reader.Peek());

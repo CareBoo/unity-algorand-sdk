@@ -1,10 +1,12 @@
 using System;
+using AlgoSdk.LowLevel;
+using Unity.Collections;
 using UnityEngine;
 
 namespace AlgoSdk.WalletConnect
 {
     [Serializable]
-    public struct SavedSession : IWalletConnectSessionData
+    public struct SessionData : IWalletConnectSessionData
     {
         [SerializeField]
         string clientId;
@@ -94,6 +96,24 @@ namespace AlgoSdk.WalletConnect
         {
             get => walletMeta;
             set => walletMeta = value;
+        }
+
+        public static SessionData InitSession(ClientMeta dappMeta, string bridgeUrl)
+        {
+            return new SessionData
+            {
+                ClientId = Guid.NewGuid().ToString(),
+                BridgeUrl = string.IsNullOrEmpty(bridgeUrl) ? DefaultBridge.GetRandomBridgeUrl() : bridgeUrl,
+                Key = GenKey(),
+                DappMeta = dappMeta
+            };
+        }
+
+        static Hex GenKey()
+        {
+            using var secret = new NativeByteArray(32, Allocator.Persistent);
+            Crypto.Random.Randomize(secret);
+            return secret.ToArray();
         }
     }
 }

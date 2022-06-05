@@ -14,7 +14,7 @@ public class BlockTest
     [Test, TestMustExpectAllLogs]
     public void DeserializingBlockFromMessagePackShouldThrowNoLogs([ValueSource(nameof(blockMsgPackCases))] string blockMsgPackBase64)
     {
-        using var bytes = new NativeArray<byte>(System.Convert.FromBase64String(blockMsgPackBase64), Allocator.Temp);
+        using var bytes = new NativeArray<byte>(System.Convert.FromBase64String(blockMsgPackBase64), Allocator.Persistent);
         AlgoApiSerializer.DeserializeMessagePack<BlockResponse>(bytes);
     }
 

@@ -125,7 +125,7 @@ namespace AlgoSdk.Abi
                 {
                     if (!reader.TryRead(JsonToken.ObjectBegin))
                         JsonReadError.IncorrectType.ThrowIfError(reader);
-                    using var deployments = new NativeList<Deployment>(Allocator.Temp);
+                    using var deployments = new NativeList<Deployment>(Allocator.Persistent);
                     while (reader.Peek() != JsonToken.ObjectEnd
                         && reader.Peek() != JsonToken.None)
                     {

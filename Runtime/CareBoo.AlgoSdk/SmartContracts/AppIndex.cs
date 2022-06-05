@@ -51,8 +51,8 @@ namespace AlgoSdk
 
         public Address GetAppAddress()
         {
-            using var appIndexBytes = index.ToBytesBigEndian(Allocator.Temp);
-            var data = new NativeByteArray(HashPrefix.Length + appIndexBytes.Length, Allocator.Temp);
+            using var appIndexBytes = index.ToBytesBigEndian(Allocator.Persistent);
+            var data = new NativeByteArray(HashPrefix.Length + appIndexBytes.Length, Allocator.Persistent);
             try
             {
                 data.CopyFrom(HashPrefix, 0);
