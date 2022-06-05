@@ -93,8 +93,8 @@ namespace AlgoSdk.Abi
         /// <exception cref="System.ArgumentException">Not enough arguments given to call this method.</exception>
         public AppCallTxn BuildTxn()
         {
-            using var appArguments = new NativeListOfList<byte>(Allocator.Temp);
-            using var references = new AbiReferences(sender, applicationId, Allocator.Temp);
+            using var appArguments = new NativeListOfList<byte>(Allocator.Persistent);
+            using var references = new AbiReferences(sender, applicationId, Allocator.Persistent);
 
             appArguments.AddArray(methodSelector);
             var args = this.argValues;
@@ -108,13 +108,13 @@ namespace AlgoSdk.Abi
                 {
                     using var remainingBytes = Tuple
                         .Of(args)
-                        .Encode(appArgTypes.Slice(i), references, Allocator.Temp);
+                        .Encode(appArgTypes.Slice(i), references, Allocator.Persistent);
                     appArguments.Add(remainingBytes.Bytes);
                 }
                 else
                 {
                     var type = appArgTypes[i];
-                    using var bytes = args.EncodeCurrent(type, references, Allocator.Temp);
+                    using var bytes = args.EncodeCurrent(type, references, Allocator.Persistent);
                     appArguments.Add(bytes);
                 }
             }

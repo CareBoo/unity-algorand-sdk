@@ -29,7 +29,7 @@ namespace AlgoSdk.MessagePack
 
         public void WriteString(string s)
         {
-            using var text = new NativeText(s, Allocator.Temp);
+            using var text = new NativeText(s, Allocator.Persistent);
             WriteString(text);
         }
 

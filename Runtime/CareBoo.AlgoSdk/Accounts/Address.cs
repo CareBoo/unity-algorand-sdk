@@ -43,7 +43,7 @@ namespace AlgoSdk
         {
             var result = new FixedString128Bytes();
             var checksum = ComputeCheckSum(publicKey);
-            var bytes = new NativeByteArray(SizeBytes + CheckSum.SizeBytes, Allocator.Temp);
+            var bytes = new NativeByteArray(SizeBytes + CheckSum.SizeBytes, Allocator.Persistent);
             try
             {
                 bytes.CopyFrom(this, 0);
@@ -75,7 +75,7 @@ namespace AlgoSdk
                 return Address.Empty;
             Address address = default;
             CheckSum checksum = default;
-            var bytes = new NativeByteArray(SizeBytes + CheckSum.SizeBytes, Allocator.Temp);
+            var bytes = new NativeByteArray(SizeBytes + CheckSum.SizeBytes, Allocator.Persistent);
             try
             {
                 Base32Encoding.ToBytes(s, ref bytes);

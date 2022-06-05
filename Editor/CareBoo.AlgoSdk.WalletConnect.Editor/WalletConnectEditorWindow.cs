@@ -1,4 +1,5 @@
 using System;
+using Cysharp.Threading.Tasks;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
@@ -23,6 +24,8 @@ namespace AlgoSdk.WalletConnect.Editor
         VisualElement configureSessionContent;
         VisualElement connectedContent;
         VisualElement requestingHandshakeContent;
+
+        Button startSessionButton;
 
         public static void Show(string assetGuid)
         {
@@ -52,7 +55,7 @@ namespace AlgoSdk.WalletConnect.Editor
                 }
             });
 
-            var startSessionButton = configureSessionContent.Query<Button>("StartSessionButton").First();
+            startSessionButton = configureSessionContent.Query<Button>("StartSessionButton").First();
             startSessionButton.clicked += StartSession;
 
             var randomizeBridgeUrlButton = configureSessionContent.Query<Button>("RandomizeButton").First();
@@ -78,6 +81,7 @@ namespace AlgoSdk.WalletConnect.Editor
             gui.Bind(serializedObject);
             var qrCodeTextureProp = serializedObject.FindProperty(nameof(qrCodeTexture));
             gui.TrackPropertyValue(qrCodeTextureProp, (prop) => qrCodeImage.image = (Texture)prop.objectReferenceValue);
+
             rootVisualElement.Add(gui);
         }
 
@@ -86,9 +90,9 @@ namespace AlgoSdk.WalletConnect.Editor
             var status = asset?.Account.ConnectionStatus ?? default;
             statusText = ObjectNames.NicifyVariableName(status.ToString());
 
-            configureSessionContent.visible = asset && status <= SessionStatus.NoConnection;
-            requestingHandshakeContent.visible = asset && status == SessionStatus.RequestingConnection;
-            connectedContent.visible = asset && status == SessionStatus.Connected;
+            configureSessionContent.visible = asset && status <= SessionStatus.NoWalletConnected;
+            requestingHandshakeContent.visible = asset && status == SessionStatus.RequestingWalletConnection;
+            connectedContent.visible = asset && status == SessionStatus.WalletConnected;
         }
 
         void OnDestroy()
@@ -96,18 +100,40 @@ namespace AlgoSdk.WalletConnect.Editor
             asset?.Account.EndSession();
         }
 
+        string LoadingTextAnimationEllipses()
+        {
+            var time = EditorApplication.timeSinceStartup % 1;
+            if (time > 0.67)
+                return "...";
+            else if (time > 0.33)
+                return "..";
+            else
+                return ".";
+        }
+
         void StartSession()
         {
-            if (!asset)
-                return;
+            StartSessionAsync().Forget();
+        }
 
-            asset.Account.BeginSession();
-            switch (asset.Account.ConnectionStatus)
+        async UniTaskVoid StartSessionAsync()
+        {
+            startSessionButton.SetEnabled(false);
+            try
             {
-                case SessionStatus.NoConnection:
-                case SessionStatus.RequestingConnection:
-                    RequestConnection();
-                    break;
+                await UniTask.SwitchToThreadPool();
+                await asset.Account.BeginSession();
+                switch (asset.Account.ConnectionStatus)
+                {
+                    case SessionStatus.NoWalletConnected:
+                    case SessionStatus.RequestingWalletConnection:
+                        RequestConnection();
+                        break;
+                }
+            }
+            finally
+            {
+                startSessionButton.SetEnabled(true);
             }
         }
 
@@ -128,20 +154,22 @@ namespace AlgoSdk.WalletConnect.Editor
             asset.Account.SessionData.BridgeUrl = DefaultBridge.GetRandomBridgeUrl();
         }
 
-        async void RequestConnection()
+        void RequestConnection()
+        {
+            RequestConnectionAsync().Forget();
+        }
+
+        async UniTaskVoid RequestConnectionAsync()
         {
             try
             {
-                var handshakeUrl = await asset.Account.StartNewWalletConnection();
+                await UniTask.SwitchToThreadPool();
+                var handshakeUrl = asset.Account.RequestHandshake();
                 qrCodeTexture = handshakeUrl.ToQrCodeTexture();
-                await asset.Account.WaitForConnectionApproval();
+                await asset.Account.WaitForWalletConnectionApproval();
             }
             catch (OperationCanceledException)
             {
-            }
-            catch (Exception e)
-            {
-                Debug.LogException(e);
             }
         }
     }

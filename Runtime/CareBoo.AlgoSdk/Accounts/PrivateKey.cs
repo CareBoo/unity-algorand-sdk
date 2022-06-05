@@ -39,12 +39,12 @@ namespace AlgoSdk
 
         public Mnemonic ToMnemonic()
         {
-            using var bit11Array = this.ToBitArray(Allocator.Temp, bitsPerElement: 11);
+            using var bit11Array = this.ToBitArray(Allocator.Persistent, bitsPerElement: 11);
             var result = new Mnemonic();
             for (var i = 0; i < Mnemonic.ChecksumIndex; i++)
                 result[i] = (Mnemonic.Word)(bit11Array[i]);
             var checksum256 = Sha512.Hash256Truncated(this);
-            using var checksum11Bit = checksum256.ToBitArray(Allocator.Temp, bitsPerElement: 11, maxArraySize: 1);
+            using var checksum11Bit = checksum256.ToBitArray(Allocator.Persistent, bitsPerElement: 11, maxArraySize: 1);
             result[Mnemonic.ChecksumIndex] = (Mnemonic.Word)(checksum11Bit[0]);
             return result;
         }

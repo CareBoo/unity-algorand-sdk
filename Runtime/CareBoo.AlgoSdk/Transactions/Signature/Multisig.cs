@@ -97,15 +97,15 @@ namespace AlgoSdk
             if (Subsigs == null)
                 return result;
 
-            using (var listBytes = new NativeList<byte>(Allocator.Temp))
+            using (var listBytes = new NativeList<byte>(Allocator.Persistent))
             {
-                using var addrPrefix = new NativeArray<byte>(AddressPrefix, Allocator.Temp);
+                using var addrPrefix = new NativeArray<byte>(AddressPrefix, Allocator.Persistent);
                 listBytes.AddRange(addrPrefix);
                 listBytes.Add(Version);
                 listBytes.Add(Threshold);
                 for (var i = 0; i < Subsigs.Length; i++)
                 {
-                    using var subsigPk = Subsigs[i].PublicKey.ToNativeArray(Allocator.Temp);
+                    using var subsigPk = Subsigs[i].PublicKey.ToNativeArray(Allocator.Persistent);
                     listBytes.AddRange(subsigPk);
                 }
                 var bytes = new NativeByteArray(listBytes.AsArray());

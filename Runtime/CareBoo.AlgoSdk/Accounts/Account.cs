@@ -74,7 +74,7 @@ namespace AlgoSdk
         public SignedTxn<T> SignTxn<T>(T txn) where T : ITransaction, IEquatable<T>
         {
             using var kp = privateKey.ToKeyPair();
-            using var msg = txn.ToSignatureMessage(Allocator.Temp);
+            using var msg = txn.ToSignatureMessage(Allocator.Persistent);
             var sig = kp.SecretKey.Sign(msg);
             return new SignedTxn<T> { Txn = txn, Sig = sig };
         }

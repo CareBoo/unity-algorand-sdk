@@ -12,7 +12,7 @@ namespace AlgoSdk.WalletConnect
     {
         public static void Send(this IWebSocketClient client, NetworkMessage networkMessage)
         {
-            using var networkMessageData = AlgoApiSerializer.SerializeJson(networkMessage, Allocator.Temp);
+            using var networkMessageData = AlgoApiSerializer.SerializeJson(networkMessage, Allocator.Persistent);
             var networkMessageArraySegment = new ArraySegment<byte>(networkMessageData.AsArray().ToArray());
             client.Send(networkMessageArraySegment);
         }
@@ -27,26 +27,38 @@ namespace AlgoSdk.WalletConnect
             CancellationToken cancellationToken = default
             ) => client.PollUntilEvent(WebSocketEventType.Payload, cancellationToken);
 
-        static async UniTask<WebSocketEvent> PollUntilEvent(
+        public static async UniTask<WebSocketEvent> PollUntilEvent(
             this IWebSocketClient client,
             WebSocketEventType expectedEventType,
             CancellationToken cancellationToken = default
             )
         {
-            var evt = client.Poll();
-            while (evt.Type == WebSocketEventType.Nothing)
-            {
-                await UniTask.Yield(cancellationToken);
-                await UniTask.NextFrame(cancellationToken);
-                evt = client.Poll();
-            }
+            var evt = await client.PollUntilEvent(cancellationToken);
             if (evt.Type == WebSocketEventType.Error)
                 throw new Exception($"Got error web socket event: {evt.Error}");
             if (evt.Type == WebSocketEventType.Close)
                 throw new Exception($"Got web socket closed event with reason: {evt.Reason}");
             if (evt.Type != expectedEventType)
                 throw new InvalidOperationException($"Got unexpected event type {evt.Type}");
+            return evt;
+        }
 
+        public static async UniTask<WebSocketEvent> PollUntilEvent(
+            this IWebSocketClient client,
+            CancellationToken cancellationToken = default
+            )
+        {
+            var evt = client.Poll();
+            while (evt.Type == WebSocketEventType.Nothing)
+            {
+#if UNITY_EDITOR
+                await UniTask.Delay(250, cancellationToken: cancellationToken);
+#else
+                await UniTask.Yield(cancellationToken);
+                await UniTask.NextFrame(cancellationToken);
+#endif
+                evt = client.Poll();
+            }
             return evt;
         }
     }

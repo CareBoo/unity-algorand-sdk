@@ -2,7 +2,6 @@ using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace AlgoSdk.WalletConnect
 {
@@ -14,37 +13,26 @@ namespace AlgoSdk.WalletConnect
         [SerializeField]
         public SavedSession SessionData;
 
-        [SerializeField]
-        WalletConnectSessionEvents sessionEvents;
-
         AlgorandWalletConnectSession session;
 
         CancellationTokenSource sessionCancellation;
 
-        public WalletConnectAccount(SavedSession sessionData, WalletConnectSessionEvents sessionEvents = null)
+        public WalletConnectAccount(SavedSession sessionData)
         {
             this.SessionData = sessionData;
-            this.sessionEvents = sessionEvents ?? new WalletConnectSessionEvents();
             session = null;
             sessionCancellation = null;
         }
-
-        public WalletConnectSessionEvents SessionEvents => sessionEvents;
 
         public Address Address => SessionData.Accounts?[0] ?? Address.Empty;
 
         public SessionStatus ConnectionStatus => session?.ConnectionStatus ?? default;
 
-        public UnityEvent<AlgorandWalletConnectSession> OnSessionConnect => sessionEvents?.OnSessionConnect;
-
-        public UnityEvent<string> OnSessionDisconnect => sessionEvents?.OnSessionDisconnect;
-
-        public UnityEvent<WalletConnectSessionData> OnSessionUpdate => sessionEvents?.OnSessionUpdate;
-
-        public void BeginSession()
+        public async UniTask BeginSession()
         {
-            session = new AlgorandWalletConnectSession(SessionData, sessionEvents);
+            session = new AlgorandWalletConnectSession(SessionData);
             sessionCancellation = new CancellationTokenSource();
+            await session.Connect(sessionCancellation.Token);
         }
 
         public void EndSession()
@@ -63,29 +51,23 @@ namespace AlgoSdk.WalletConnect
             session = null;
         }
 
-        public async UniTask<HandshakeUrl> StartNewWalletConnection()
+        public HandshakeUrl RequestHandshake()
         {
             CheckSession();
-            return await session.StartConnection(sessionCancellation.Token);
+            return session.RequestHandshake();
         }
 
-        public HandshakeUrl ContinueHandshake()
+        public async UniTask WaitForWalletConnectionApproval()
         {
             CheckSession();
-            return session.ContinueHandshake();
-        }
-
-        public async UniTask WaitForConnectionApproval()
-        {
-            CheckSession();
-            await session.WaitForConnectionApproval(sessionCancellation.Token);
+            await session.WaitForWalletConnectionApproval(sessionCancellation.Token);
             SessionData = session.Save();
         }
 
         public void DisconnectWalletConnection(string reason = default)
         {
             CheckSession();
-            session.Disconnect(reason);
+            session.DisconnectWalletConnection(reason);
         }
 
         public async UniTask<SignedTxn<T>[]> SignTxnsAsync<T>(

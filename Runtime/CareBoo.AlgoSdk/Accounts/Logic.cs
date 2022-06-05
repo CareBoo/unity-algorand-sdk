@@ -18,7 +18,7 @@ namespace AlgoSdk
         /// <returns>An <see cref="Address"/> for a program.</returns>
         public static Address GetAddress(CompiledTeal program)
         {
-            using var bytes = GetSignBytes(program, Allocator.Temp);
+            using var bytes = GetSignBytes(program, Allocator.Persistent);
             return Sha512.Hash256Truncated(bytes);
         }
 
@@ -53,7 +53,7 @@ namespace AlgoSdk
         /// <returns><see cref="Sig"/></returns>
         public static Sig Sign(CompiledTeal program, SecretKeyHandle secretKey)
         {
-            using var programSignBytes = Logic.GetSignBytes(program, Allocator.Temp);
+            using var programSignBytes = Logic.GetSignBytes(program, Allocator.Persistent);
             return secretKey.Sign(programSignBytes);
         }
 

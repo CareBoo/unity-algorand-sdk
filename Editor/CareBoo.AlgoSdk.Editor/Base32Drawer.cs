@@ -15,7 +15,7 @@ namespace AlgoSdk.Editor
 
         protected override string GetString(List<byte> bytes)
         {
-            var t = new NativeText(Base32Encoding.ToString(bytes.ToArray()), Allocator.Temp);
+            var t = new NativeText(Base32Encoding.ToString(bytes.ToArray()), Allocator.Persistent);
             try
             {
                 Base32Encoding.TrimPadding(ref t);

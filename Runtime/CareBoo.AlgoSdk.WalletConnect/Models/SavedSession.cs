@@ -111,7 +111,7 @@ namespace AlgoSdk.WalletConnect
 
         static Hex GenKey()
         {
-            using var secret = new NativeByteArray(32, Allocator.Temp);
+            using var secret = new NativeByteArray(32, Allocator.Persistent);
             Crypto.Random.Randomize(secret);
             return secret.ToArray();
         }

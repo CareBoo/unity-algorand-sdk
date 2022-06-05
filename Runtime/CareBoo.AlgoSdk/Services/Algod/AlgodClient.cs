@@ -178,7 +178,7 @@ namespace AlgoSdk
             using var bytes = new NativeList<byte>(Allocator.Persistent);
             for (var i = 0; i < txns.Length; i++)
             {
-                using var data = AlgoApiSerializer.SerializeMessagePack(txns[i], Allocator.Temp);
+                using var data = AlgoApiSerializer.SerializeMessagePack(txns[i], Allocator.Persistent);
                 bytes.AddRange(data);
             }
             return SendTransactions(bytes.AsArray().AsReadOnly());

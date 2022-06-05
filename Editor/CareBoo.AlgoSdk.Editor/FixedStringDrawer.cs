@@ -19,7 +19,7 @@ namespace AlgoSdk.Editor
             var byteProperties = new SerializedFixedBytes(property);
             var bytes = byteProperties.GetBytes();
             var length = math.min(lengthProperty.intValue, bytes.Count);
-            var text = new NativeText(length, Allocator.Temp);
+            var text = new NativeText(length, Allocator.Persistent);
             try
             {
                 text.Length = length;

@@ -26,7 +26,7 @@ namespace AlgoSdk
         public static byte[] ToSignatureMessage<T>(this T txn)
             where T : ITransaction
         {
-            using var messageForSigning = txn.ToSignatureMessage(Allocator.Temp);
+            using var messageForSigning = txn.ToSignatureMessage(Allocator.Persistent);
             return messageForSigning.ToArray();
         }
 
@@ -41,7 +41,7 @@ namespace AlgoSdk
             )
             where T : ITransaction
         {
-            using var data = AlgoApiSerializer.SerializeMessagePack(txn, Allocator.Temp);
+            using var data = AlgoApiSerializer.SerializeMessagePack(txn, Allocator.Persistent);
             var result = new NativeByteArray(Transaction.SignaturePrefix.Length + data.Length, allocator);
             for (var i = 0; i < Transaction.SignaturePrefix.Length; i++)
                 result[i] = Transaction.SignaturePrefix[i];
@@ -79,7 +79,7 @@ namespace AlgoSdk
         public static TransactionId GetId<T>(this T txn)
             where T : ITransaction
         {
-            using var txnData = txn.ToSignatureMessage(Allocator.Temp);
+            using var txnData = txn.ToSignatureMessage(Allocator.Persistent);
             return Sha512.Hash256Truncated(txnData);
         }
     }

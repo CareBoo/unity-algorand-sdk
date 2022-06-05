@@ -101,7 +101,7 @@ namespace AlgoSdk
         /// <returns>this request with body and header set</returns>
         public AlgoApiRequest SetJsonBody<TBody>(TBody value)
         {
-            using var json = AlgoApiSerializer.SerializeJson(value, Allocator.Temp);
+            using var json = AlgoApiSerializer.SerializeJson(value, Allocator.Persistent);
             return SetJsonBody(json);
         }
 
@@ -129,7 +129,7 @@ namespace AlgoSdk
         /// <returns>this request with body and header set</returns>
         public AlgoApiRequest SetMessagePackBody<TBody>(TBody value)
         {
-            using var msgpack = AlgoApiSerializer.SerializeMessagePack(value, Allocator.Temp);
+            using var msgpack = AlgoApiSerializer.SerializeMessagePack(value, Allocator.Persistent);
             return SetMessagePackBody(msgpack.AsArray().AsReadOnly());
         }
 

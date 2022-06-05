@@ -47,7 +47,7 @@ public class WalletConnectManager : MonoBehaviour
         var status = session?.ConnectionStatus ?? SessionStatus.None;
         GUILayout.Label($"WalletConnect Connection Status: {status}");
         GUILayout.Space(20);
-        if (status == SessionStatus.RequestingConnection)
+        if (status == SessionStatus.RequestingWalletConnection)
         {
             var supportedWallets = WalletRegistry.SupportedWalletsForCurrentPlatform;
             if (shouldLaunchApp && supportedWallets.Length > 0)
@@ -78,7 +78,7 @@ public class WalletConnectManager : MonoBehaviour
             }
         }
 
-        if (status == SessionStatus.Connected)
+        if (status == SessionStatus.WalletConnected)
         {
             GUILayout.Label($"Connected Account: {session.Accounts[0]}");
             GUILayout.Space(5);
@@ -105,9 +105,10 @@ public class WalletConnectManager : MonoBehaviour
     async UniTaskVoid StartWalletConnect()
     {
         session = new AlgorandWalletConnectSession(DappMeta, BridgeUrl);
-        handshake = await session.StartConnection();
+        await session.Connect();
+        handshake = session.RequestHandshake();
         qrCode = handshake.ToQrCodeTexture();
-        await session.WaitForConnectionApproval();
+        await session.WaitForWalletConnectionApproval();
         Debug.Log($"accounts:\n{AlgoApiSerializer.SerializeJson(session.Accounts)}");
     }
 
@@ -116,7 +117,7 @@ public class WalletConnectManager : MonoBehaviour
         while (true)
         {
             var status = session?.ConnectionStatus ?? SessionStatus.None;
-            if (status == SessionStatus.Connected)
+            if (status == SessionStatus.WalletConnected)
             {
                 var (err, response) = await indexer.LookupAccountByID(session.Accounts[0]);
                 if (err) Debug.LogError(err);
@@ -164,7 +165,7 @@ public class WalletConnectManager : MonoBehaviour
             return;
         }
         txnStatus = TransactionStatus.AwaitingConfirmation;
-        using (var signedTxnData = new NativeArray<byte>(signedTxns[0], Allocator.Temp))
+        using (var signedTxnData = new NativeArray<byte>(signedTxns[0], Allocator.Persistent))
         {
             var signedTxn = AlgoApiSerializer.DeserializeMessagePack<SignedTxn>(signedTxnData);
             Debug.Log($"Got signed transactions:\n{AlgoApiSerializer.SerializeJson(signedTxns)}");

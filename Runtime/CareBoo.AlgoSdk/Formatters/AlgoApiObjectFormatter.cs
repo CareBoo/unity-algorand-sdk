@@ -111,7 +111,7 @@ namespace AlgoSdk
 
         public void Serialize(ref JsonWriter writer, T value)
         {
-            using var fieldsToSerialize = fieldMap.GetFieldsToSerialize(value, Allocator.Temp);
+            using var fieldsToSerialize = fieldMap.GetFieldsToSerialize(value, Allocator.Persistent);
             writer.BeginObject();
             for (var i = 0; i < fieldsToSerialize.Length; i++)
             {
@@ -126,7 +126,7 @@ namespace AlgoSdk
 
         public void Serialize(ref MessagePackWriter writer, T value)
         {
-            using var fieldsToSerialize = fieldMap.GetFieldsToSerialize(value, Allocator.Temp);
+            using var fieldsToSerialize = fieldMap.GetFieldsToSerialize(value, Allocator.Persistent);
             writer.WriteMapHeader(fieldsToSerialize.Length);
             for (var i = 0; i < fieldsToSerialize.Length; i++)
             {
@@ -141,7 +141,7 @@ namespace AlgoSdk
     {
         public AlgoApiObject Deserialize(ref JsonReader reader)
         {
-            var json = new NativeText(Allocator.Temp);
+            var json = new NativeText(Allocator.Persistent);
             try
             {
                 reader.ReadRaw(ref json).ThrowIfError(reader);
@@ -155,7 +155,7 @@ namespace AlgoSdk
 
         public AlgoApiObject Deserialize(ref MessagePackReader reader)
         {
-            var msgPack = new NativeList<byte>(Allocator.Temp);
+            var msgPack = new NativeList<byte>(Allocator.Persistent);
             try
             {
                 reader.ReadRaw(msgPack);
@@ -171,7 +171,7 @@ namespace AlgoSdk
         {
             if (!value.IsJson || value.Json == null)
                 throw new ArgumentException("cannot serialize non-json to json...", nameof(value));
-            using var json = new NativeArray<byte>(value.Json, Allocator.Temp);
+            using var json = new NativeArray<byte>(value.Json, Allocator.Persistent);
             writer.WriteRaw(json);
         }
 
@@ -179,7 +179,7 @@ namespace AlgoSdk
         {
             if (!value.IsMessagePack || value.MessagePack == null)
                 throw new ArgumentException("cannot serialize non-msgpack to msgpack...", nameof(value));
-            using var msgPack = new NativeArray<byte>(value.MessagePack, Allocator.Temp);
+            using var msgPack = new NativeArray<byte>(value.MessagePack, Allocator.Persistent);
             writer.WriteRaw(msgPack);
         }
     }
