@@ -5,6 +5,22 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [3.0.0-pre.5](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.4...v3.0.0-pre.5) (2022-06-05)
+
+
+### Features
+
+* **walletconnect:** add wallet connect support to UnityEditor ([#143](https://github.com/CareBoo/unity-algorand-sdk/issues/143)) ([60c13af](https://github.com/CareBoo/unity-algorand-sdk/commit/60c13af8bb06680f9add3e00a97a7c41428de2e0))
+
+
+### BREAKING CHANGES
+
+* **walletconnect:** `AlgorandWalletConnectSession` flow has been changed to reflect new `JsonRpcClient`. 
+- `StartConnection` renamed to `Connect`
+- `Disconnect` renamed to `DisconnectWallet`
+- `WaitForConnectionApproval` renamed to `WaitForWalletApproval`
+- `SavedSession` renamed to `SessionData`
+
 # [3.0.0-pre.4](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.3...v3.0.0-pre.4) (2022-06-02)
 
 
