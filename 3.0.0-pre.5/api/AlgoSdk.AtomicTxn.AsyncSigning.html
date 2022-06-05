@@ -1,0 +1,518 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct AtomicTxn.AsyncSigning
+   | Unity Algorand SDK </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct AtomicTxn.AsyncSigning
+   | Unity Algorand SDK ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo_50.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AlgoSdk.AtomicTxn.AsyncSigning">
+  
+  
+  <h1 id="AlgoSdk_AtomicTxn_AsyncSigning" data-uid="AlgoSdk.AtomicTxn.AsyncSigning" class="text-break">Struct AtomicTxn.AsyncSigning
+  </h1>
+  <div class="markdown level0 summary"><p>Represents an Atomic Txn that is being signed with asynchronous signers.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="AlgoSdk.AtomicTxn.ISigning-1.html">AtomicTxn.ISigning</a>&lt;<a class="xref" href="AlgoSdk.AtomicTxn.AsyncSigning.html">AtomicTxn.AsyncSigning</a>&gt;</div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.html">AlgoSdk</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="AlgoSdk_AtomicTxn_AsyncSigning_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct AsyncSigning : AtomicTxn.ISigning&lt;AtomicTxn.AsyncSigning&gt;</code></pre>
+  </div>
+  <h5 id="AlgoSdk_AtomicTxn_AsyncSigning_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Once all signatures have been added, serialize this transaction
+group to msgpack with <a class="xref" href="AlgoSdk.AtomicTxn.AsyncSigning.html#AlgoSdk_AtomicTxn_AsyncSigning_FinishSigningAsync">FinishSigningAsync()</a>.</p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="AlgoSdk_AtomicTxn_AsyncSigning__ctor_" data-uid="AlgoSdk.AtomicTxn.AsyncSigning.#ctor*"></a>
+  <h4 id="AlgoSdk_AtomicTxn_AsyncSigning__ctor_AlgoSdk_Transaction___AlgoSdk_TransactionSignature___AlgoSdk_TxnIndices_" data-uid="AlgoSdk.AtomicTxn.AsyncSigning.#ctor(AlgoSdk.Transaction[],AlgoSdk.TransactionSignature[],AlgoSdk.TxnIndices)">AsyncSigning(Transaction[], TransactionSignature[], TxnIndices)</h4>
+  <div class="markdown level1 summary"><p>Create a new Atomic Txn group that contains some asynchronous signers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AsyncSigning(Transaction[] txns, TransactionSignature[] sigs, TxnIndices signedIndices)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Transaction.html">Transaction</a>[]</td>
+        <td><span class="parametername">txns</span></td>
+        <td><p>Transactions that are part of this group.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionSignature.html">TransactionSignature</a>[]</td>
+        <td><span class="parametername">sigs</span></td>
+        <td><p>Existing signatures.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TxnIndices.html">TxnIndices</a></td>
+        <td><span class="parametername">signedIndices</span></td>
+        <td><p>Indices of transactions with existing signatures.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="AlgoSdk_AtomicTxn_AsyncSigning_SignedTxnIndices_" data-uid="AlgoSdk.AtomicTxn.AsyncSigning.SignedTxnIndices*"></a>
+  <h4 id="AlgoSdk_AtomicTxn_AsyncSigning_SignedTxnIndices" data-uid="AlgoSdk.AtomicTxn.AsyncSigning.SignedTxnIndices">SignedTxnIndices</h4>
+  <div class="markdown level1 summary"><p>Indices of the transactions that have already been signed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TxnIndices SignedTxnIndices { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TxnIndices.html">TxnIndices</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AtomicTxn_AsyncSigning_Sigs_" data-uid="AlgoSdk.AtomicTxn.AsyncSigning.Sigs*"></a>
+  <h4 id="AlgoSdk_AtomicTxn_AsyncSigning_Sigs" data-uid="AlgoSdk.AtomicTxn.AsyncSigning.Sigs">Sigs</h4>
+  <div class="markdown level1 summary"><p>Signatures associated with each transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionSignature[] Sigs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionSignature.html">TransactionSignature</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AtomicTxn_AsyncSigning_Txns_" data-uid="AlgoSdk.AtomicTxn.AsyncSigning.Txns*"></a>
+  <h4 id="AlgoSdk_AtomicTxn_AsyncSigning_Txns" data-uid="AlgoSdk.AtomicTxn.AsyncSigning.Txns">Txns</h4>
+  <div class="markdown level1 summary"><p>Transactions in this group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transaction[] Txns { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Transaction.html">Transaction</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="AlgoSdk_AtomicTxn_AsyncSigning_AsAsync_" data-uid="AlgoSdk.AtomicTxn.AsyncSigning.AsAsync*"></a>
+  <h4 id="AlgoSdk_AtomicTxn_AsyncSigning_AsAsync" data-uid="AlgoSdk.AtomicTxn.AsyncSigning.AsAsync">AsAsync()</h4>
+  <div class="markdown level1 summary"><p>Represent this signing atomic txn group as an async signing group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AtomicTxn.AsyncSigning AsAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AtomicTxn.AsyncSigning.html">AtomicTxn.AsyncSigning</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AlgoSdk_AtomicTxn_AsyncSigning_AsAsync_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Async signing groups will require waiting for signatures signing is finished.</p>
+</div>
+  
+  
+  <a id="AlgoSdk_AtomicTxn_AsyncSigning_FinishSigningAsync_" data-uid="AlgoSdk.AtomicTxn.AsyncSigning.FinishSigningAsync*"></a>
+  <h4 id="AlgoSdk_AtomicTxn_AsyncSigning_FinishSigningAsync" data-uid="AlgoSdk.AtomicTxn.AsyncSigning.FinishSigningAsync">FinishSigningAsync()</h4>
+  <div class="markdown level1 summary"><p>Finish signing this group and return the raw msgpack, ready to submit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UniTask&lt;byte[]&gt; FinishSigningAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]&gt;</td>
+        <td><p>Msgpack encoding of the transaction group.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AtomicTxn_AsyncSigning_FinishSigningAsync_" data-uid="AlgoSdk.AtomicTxn.AsyncSigning.FinishSigningAsync*"></a>
+  <h4 id="AlgoSdk_AtomicTxn_AsyncSigning_FinishSigningAsync_Allocator_" data-uid="AlgoSdk.AtomicTxn.AsyncSigning.FinishSigningAsync(Allocator)">FinishSigningAsync(Allocator)</h4>
+  <div class="markdown level1 summary"><p>Finish signing this group and return the msgpack of the group, ready to send to the network.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UniTask&lt;NativeList&lt;byte&gt;&gt; FinishSigningAsync(Allocator allocator)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Allocator</span></td>
+        <td><span class="parametername">allocator</span></td>
+        <td><p>Allocator to use in the returned NativeList (which must be disposed).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<span class="xref">NativeList</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;&gt;</td>
+        <td><p>A natively-allocated, msgpack-encoded transaction group, ready to send to the network.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AtomicTxn_AsyncSigning_SignWithAsync_" data-uid="AlgoSdk.AtomicTxn.AsyncSigning.SignWithAsync*"></a>
+  <h4 id="AlgoSdk_AtomicTxn_AsyncSigning_SignWithAsync__1___0_AlgoSdk_TxnIndices_CancellationToken_" data-uid="AlgoSdk.AtomicTxn.AsyncSigning.SignWithAsync``1(``0,AlgoSdk.TxnIndices,CancellationToken)">SignWithAsync&lt;T&gt;(T, TxnIndices, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Sign transactions in this group indicated by the given indices with the given signer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AtomicTxn.AsyncSigning SignWithAsync&lt;T&gt;(T signer, TxnIndices txnsToSign, CancellationToken cancellationToken = null)
+    where T : IAsyncSigner</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">signer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TxnIndices.html">TxnIndices</a></td>
+        <td><span class="parametername">txnsToSign</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AtomicTxn.AsyncSigning.html">AtomicTxn.AsyncSigning</a></td>
+        <td><p>An Async Signing Atomic Txn Group with new signatures awaiting to be added.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AtomicTxn_AsyncSigning_SignWithAsync_" data-uid="AlgoSdk.AtomicTxn.AsyncSigning.SignWithAsync*"></a>
+  <h4 id="AlgoSdk_AtomicTxn_AsyncSigning_SignWithAsync__2___0_AlgoSdk_TxnIndices___1_CancellationToken_" data-uid="AlgoSdk.AtomicTxn.AsyncSigning.SignWithAsync``2(``0,AlgoSdk.TxnIndices,``1,CancellationToken)">SignWithAsync&lt;T, TProgress&gt;(T, TxnIndices, TProgress, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Sign transactions in this group indicated by the given indices with the given signer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AtomicTxn.AsyncSigning SignWithAsync&lt;T, TProgress&gt;(T signer, TxnIndices txnsToSign, TProgress progress, CancellationToken cancellationToken = null)
+    where T : IAsyncSignerWithProgress where TProgress : IProgress&lt;float&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">signer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TxnIndices.html">TxnIndices</a></td>
+        <td><span class="parametername">txnsToSign</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TProgress</span></td>
+        <td><span class="parametername">progress</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AtomicTxn.AsyncSigning.html">AtomicTxn.AsyncSigning</a></td>
+        <td><p>An Async Signing Atomic Txn Group with new signatures awaiting to be added.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TProgress</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="AlgoSdk.AtomicTxn.ISigning-1.html">AtomicTxn.ISigning&lt;T&gt;</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
