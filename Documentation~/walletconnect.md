@@ -32,12 +32,13 @@ var dappMeta = new ClientMeta
     }
 };
 var session = new AlgorandWalletConnectSession(dappMeta);
+await session.Connect();
 // session is in no connection status
-Debug.Assert(session.ConnectionStatus == AlgorandWalletConnectSession.Status.NoConnection);
+Debug.Assert(session.ConnectionStatus == SessionStatus.NoConnection);
 
-var handshake = await session.StartConnection();
+var handshake = session.RequestWalletConnection();
 // session should now be in connecting status
-Debug.Assert(session.ConnectionStatus == AlgorandWalletConnectSession.Status.RequestingConnection);
+Debug.Assert(session.ConnectionStatus == SessionStatus.RequestingConnection);
 
 // show the user a QR Code
 Texture2D qrCode = handshake.ToQrCodeTexture();
@@ -45,9 +46,9 @@ Texture2D qrCode = handshake.ToQrCodeTexture();
 WalletRegistry.PeraWallet.LaunchForConnect(handshake);
 
 // 2. Wait for user to approve the connection
-await session.WaitForConnectionApproval();
+await session.WaitForWalletApproval();
 // session is now connected
-Debug.Assert(session.ConnectionStatus == AlgorandWalletConnectSession.Status.Connected);
+Debug.Assert(session.ConnectionStatus == SessionStatus.Connected);
 
 // 3. Send transactions to sign
 var someTxnToSign = Transaction.Payment(...);
@@ -74,34 +75,37 @@ At any point during the session, the wallet may
 
 `AlgorandWalletConnectSession` provides events to handle these scenarios:
 
-|        Events         | Event Type                                 | Description                                                |
-| :-------------------: | :----------------------------------------- | :--------------------------------------------------------- |
-|  `OnSessionConnect`   | `UnityEvent<AlgorandWalletConnectSession>` | Called when the Wallet approves the connection             |
-|   `OnSessionUpdate`   | `UnityEvent<WalletConnectSessionData>`     | Called when the Wallet updates accounts or Wallet metadata |
-| `OnSessionDisconnect` | `UnityEvent<string>`                       | Called when the Wallet disconnects from the session        |
+|        Events         | Event Type                             | Description                                                |
+| :-------------------: | :------------------------------------- | :--------------------------------------------------------- |
+|  `OnSessionConnect`   | `Action<AlgorandWalletConnectSession>` | Called when the Wallet approves the connection             |
+|   `OnSessionUpdate`   | `Action<WalletConnectSessionData>`     | Called when the Wallet updates accounts or Wallet metadata |
+| `OnSessionDisconnect` | `Action<string>`                       | Called when the Wallet disconnects from the session        |
 
 ## Persisting Sessions
 
 WalletConnect sessions are designed to persist across dapp sessions. To do this, a session
-can be saved as a `SavedSession`:
+can be saved as a `SessionData`:
 
 ```csharp
 var session = new AlgorandWalletConnectSession(...);
 var savedSession = session.Save();
 ```
 
-You can continue a `SavedSession` by starting the AlgorandWalletConnectSession:
+You can continue a saved session by starting the AlgorandWalletConnectSession:
 
 ```csharp
 var continuedSession = new AlgorandWalletConnectSession(savedSession);
+await continuedSession.Connect();
+// session should be in connected state
+Debug.Assert(session.ConnectionStatus == SessionStatus.Connected);
 ```
 
 > [!Note]
-> The handshake URL and QR Code generated from `StartConnection` are not persisted.
+> The handshake URL and QR Code generated from `RequestWalletConnection` are not persisted.
 > Despite this, the session will still be able listen for the wallet's approval. This is because
-> the handshake and session ids are persisted in the `SavedSession`.
+> the handshake and session ids are persisted in the `SessionData`.
 
-`SavedSession` can be serialized by Unity software, so it's trivial to store it in `PlayerPrefs` for example:
+`SessionData` can be serialized by Unity software, so it's trivial to store it in `PlayerPrefs` for example:
 
 ```csharp
 // storing a SavedSession
@@ -126,11 +130,12 @@ using AlgoSdk.WalletConnect;
 var supportedWallets = WalletRegistry.SupportedWalletsForCurrentPlatform;
 
 var session = new AlgorandWalletConnectSession(...);
-var handshakeUrl = await session.StartConnection();
+await session.Connect();
+var handshakeUrl = session.RequestWalletConnection();
 var chosenWallet = AskUserToChooseWallet(supportedWallets);
 chosenWallet.LaunchForConnect(handshakeUrl);
 
-await session.WaitForConnectionApproval();
+await session.WaitForWalletApproval();
 
 AppEntry AskUserToChooseWallet(AppEntry[] supportedWallets)
 {
