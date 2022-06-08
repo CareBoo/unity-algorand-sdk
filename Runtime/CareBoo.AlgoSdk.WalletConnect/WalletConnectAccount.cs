@@ -16,12 +16,7 @@ namespace AlgoSdk.WalletConnect
 
         CancellationTokenSource sessionCancellation;
 
-        public WalletConnectAccount(SessionData sessionData)
-        {
-            this.sessionData = sessionData;
-            session = null;
-            sessionCancellation = null;
-        }
+        bool beginningSession;
 
         /// <inheritdoc />
         public Address Address => sessionData.Accounts?[0] ?? Address.Empty;
@@ -30,7 +25,11 @@ namespace AlgoSdk.WalletConnect
         public SessionStatus ConnectionStatus => session?.ConnectionStatus ?? default;
 
         /// <inheritdoc />
-        public SessionData SessionData => sessionData;
+        public SessionData SessionData
+        {
+            get => sessionData;
+            set => sessionData = value;
+        }
 
         /// <inheritdoc />
         public string BridgeUrl
@@ -46,13 +45,32 @@ namespace AlgoSdk.WalletConnect
             set => sessionData.DappMeta = value;
         }
 
+        ~WalletConnectAccount()
+        {
+            EndSession();
+        }
+
         /// <inheritdoc />
         public async UniTask BeginSession()
         {
-            session = new AlgorandWalletConnectSession(SessionData);
-            sessionCancellation = new CancellationTokenSource();
-            await session.Connect(sessionCancellation.Token);
-            sessionData = session.Save();
+            if (beginningSession)
+            {
+                await UniTask.WaitWhile(() => beginningSession);
+                return;
+            }
+            beginningSession = true;
+            try
+            {
+                sessionCancellation = new CancellationTokenSource();
+                session = new AlgorandWalletConnectSession(SessionData);
+                session.OnSessionDisconnect += OnSessionDisconnect;
+                await session.Connect(sessionCancellation.Token);
+                sessionData = session.Save();
+            }
+            finally
+            {
+                beginningSession = false;
+            }
         }
 
         /// <inheritdoc />
@@ -110,16 +128,16 @@ namespace AlgoSdk.WalletConnect
             )
             where T : ITransaction, IEquatable<T>
         {
-            CheckSession();
-
-            var cancellation = CancellationTokenSource.CreateLinkedTokenSource(sessionCancellation.Token, cancellationToken);
-
             if (txns == null)
                 throw new ArgumentNullException(nameof(txns));
 
             if (txns.Length == 0 || txns.Length > 16)
                 throw new ArgumentException("Must have 1-16 transactions", nameof(txns));
 
+            if (ConnectionStatus == SessionStatus.None)
+                await BeginSession();
+
+            var cancellation = CancellationTokenSource.CreateLinkedTokenSource(sessionCancellation.Token, cancellationToken);
             var walletTxns = new WalletTransaction[txns.Length];
             for (var i = 0; i < txns.Length; i++)
             {
@@ -146,6 +164,11 @@ namespace AlgoSdk.WalletConnect
         {
             if (session == null)
                 throw new NullReferenceException("Session has not been initialized! Please call " + nameof(BeginSession) + " first.");
+        }
+
+        void OnSessionDisconnect(string reason)
+        {
+            sessionData = session.Save();
         }
     }
 }
