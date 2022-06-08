@@ -1,4 +1,5 @@
 using System;
+using Unity.Mathematics;
 
 namespace AlgoSdk.WalletConnect
 {
@@ -50,8 +51,14 @@ namespace AlgoSdk.WalletConnect
         /// <summary>
         /// Gets a random, valid JsonRpcRequest id.
         /// </summary>
-        /// <returns>a <see cref="ulong"/> in the range [1, <see cref="int.MaxValue"/>]</returns>
-        public static ulong GetRandomId() => (ulong)UnityEngine.Random.Range(1, int.MaxValue);
+        /// <returns>a <see cref="ulong"/> in the range [1, <see cref="ulong.MaxValue"/>]</returns>
+        public static ulong GetRandomId()
+        {
+            ulong x = 0;
+            while (x == 0)
+                x = AlgoSdk.Crypto.Random.Bytes<ulong>();
+            return x;
+        }
 
         public static class Algorand
         {
