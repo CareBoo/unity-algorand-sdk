@@ -159,6 +159,8 @@ namespace AlgoSdk.WalletConnect
                 while (true)
                 {
                     var evt = await webSocketClient.PollUntilEvent(cancellationToken);
+                    if (evt == null)
+                        return;
                     switch (evt.Type)
                     {
                         case WebSocketEventType.Payload:
