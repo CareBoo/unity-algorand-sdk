@@ -27,6 +27,11 @@ namespace AlgoSdk
                 && Value.Equals(other.Value);
         }
 
+        public T Else(T defaultValue)
+        {
+            return HasValue ? Value : defaultValue;
+        }
+
         public static implicit operator Optional<T>(T value)
         {
             return new Optional<T>(value);
