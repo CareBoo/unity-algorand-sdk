@@ -98,6 +98,11 @@ namespace AlgoSdk.WalletConnect
             set => walletMeta = value;
         }
 
+        public SessionData Reinitialize()
+        {
+            return InitSession(dappMeta, bridgeUrl);
+        }
+
         public static SessionData InitSession(ClientMeta dappMeta, string bridgeUrl)
         {
             return new SessionData
