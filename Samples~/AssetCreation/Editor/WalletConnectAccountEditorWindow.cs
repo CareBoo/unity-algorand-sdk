@@ -7,16 +7,31 @@ using UnityEngine.UIElements;
 
 namespace AlgoSdk.WalletConnect.Editor
 {
-    public class WalletConnectEditorWindow : EditorWindow
+    public class WalletConnectAccountEditorWindow : EditorWindow
     {
-        [SerializeField]
-        WalletConnectAccountAsset asset;
+        static readonly ClientMeta defaultDappMeta = new ClientMeta
+        {
+            Description = "This is a connection to the Unity Editor, used to interact with the Algorand Blockchain during development time.",
+            IconUrls = new[]
+            {
+                "https://unity3d.com/profiles/unity3d/themes/unity/images/pages/branding_trademarks/unity-tab.png",
+                "https://unity3d.com/profiles/unity3d/themes/unity/images/pages/branding_trademarks/unity-tab.png",
+                "https://unity3d.com/profiles/unity3d/themes/unity/images/pages/branding_trademarks/unity-tab.png"
+            },
+            Url = "https://unity.com",
+            Name = "Unity Editor"
+        };
 
         [SerializeField]
         VisualTreeAsset visualTree;
 
         [SerializeField]
+        WalletConnectAccountObject asset;
+
+        [SerializeField]
         string statusText;
+
+        WalletConnectAccountObject unsavedAsset;
 
         VisualElement configureSessionContent;
         VisualElement connectedContent;
@@ -25,11 +40,23 @@ namespace AlgoSdk.WalletConnect.Editor
         Image qrCodeImage;
         Button startSessionButton;
 
-        public static void Show(string assetGuid)
+
+        [MenuItem("AlgoSdk/Connect Account/WalletConnect")]
+        public static void ShowMenu()
         {
-            var window = GetWindow<WalletConnectEditorWindow>("Connect to wallet");
+            var window = GetWindow<WalletConnectAccountEditorWindow>("Connect Account via WalletConnect");
+            var asset = ScriptableObject.CreateInstance<WalletConnectAccountObject>();
+            asset.SessionData = SessionData.InitSession(defaultDappMeta, DefaultBridge.MainBridge);
+            window.asset = asset;
+        }
+
+        public static void ShowMenu(string assetGuid)
+        {
+            var window = GetWindow<WalletConnectAccountEditorWindow>("Connect Account via WalletConnect");
             var assetPath = AssetDatabase.GUIDToAssetPath(assetGuid);
-            window.asset = AssetDatabase.LoadAssetAtPath<WalletConnectAccountAsset>(assetPath);
+            var asset = AssetDatabase.LoadAssetAtPath<WalletConnectAccountObject>(assetPath);
+            asset.SessionData = asset.SessionData.Reinitialize();
+            window.asset = asset;
         }
 
         void CreateGUI()
@@ -42,16 +69,6 @@ namespace AlgoSdk.WalletConnect.Editor
 
             var statusTextField = gui.Query<TextField>("StatusField").First();
 
-            var assetField = gui.Query<ObjectField>("AssetField").First();
-            assetField.RegisterValueChangedCallback((evt) =>
-            {
-                configureSessionContent.Unbind();
-                if (asset)
-                {
-                    configureSessionContent.Bind(new SerializedObject(asset));
-                }
-            });
-
             startSessionButton = configureSessionContent.Query<Button>("StartSessionButton").First();
             startSessionButton.clicked += StartSession;
 
@@ -62,11 +79,11 @@ namespace AlgoSdk.WalletConnect.Editor
                 image = EditorGUIUtility.IconContent("Refresh").image
             });
 
-            var connectNewWalletButton = connectedContent.Query<Button>("ConnectNewWalletButton").First();
-            connectNewWalletButton.clicked += ResetWalletConnection;
-
             var cancelHandshakeButton = requestingHandshakeContent.Query<Button>("CancelHandshakeButton").First();
             cancelHandshakeButton.clicked += ResetWalletConnection;
+
+            var saveAssetButton = connectedContent.Query<Button>("SaveAssetButton").First();
+            saveAssetButton.clicked += SaveAsset;
 
             qrCodeImage = new Image();
             requestingHandshakeContent
@@ -78,6 +95,20 @@ namespace AlgoSdk.WalletConnect.Editor
             var serializedObject = new SerializedObject(this);
             gui.Bind(serializedObject);
 
+            var assetField = gui.Query<ObjectField>("AssetField").First();
+            assetField.RegisterValueChangedCallback((evt) =>
+            {
+                configureSessionContent.Unbind();
+                if (asset)
+                {
+                    var isSaved = AssetDatabase.Contains(asset);
+                    SetDisplay(saveAssetButton, !isSaved);
+                    assetField.SetEnabled(isSaved);
+                    configureSessionContent.Bind(new SerializedObject(asset));
+                }
+            });
+            assetField.objectType = typeof(WalletConnectAccountObject);
+
             rootVisualElement.Add(gui);
         }
 
@@ -86,9 +117,9 @@ namespace AlgoSdk.WalletConnect.Editor
             var status = asset ? asset.ConnectionStatus : default;
             statusText = ObjectNames.NicifyVariableName(status.ToString());
 
-            configureSessionContent.visible = asset && status <= SessionStatus.NoWalletConnected;
-            requestingHandshakeContent.visible = asset && status == SessionStatus.RequestingWalletConnection;
-            connectedContent.visible = asset && status == SessionStatus.WalletConnected;
+            SetDisplay(configureSessionContent, asset && status <= SessionStatus.NoWalletConnected);
+            SetDisplay(requestingHandshakeContent, asset && status == SessionStatus.RequestingWalletConnection);
+            SetDisplay(connectedContent, asset && status == SessionStatus.WalletConnected);
         }
 
         void OnDestroy()
@@ -160,6 +191,24 @@ namespace AlgoSdk.WalletConnect.Editor
                 return;
 
             asset.BridgeUrl = DefaultBridge.GetRandomBridgeUrl();
+        }
+
+        void SaveAsset()
+        {
+            if (!asset)
+                return;
+
+            var path = EditorUtility.SaveFilePanelInProject("Save WalletConnect Session", "WalletConnectAccount.asset", "asset", "Choose a location to save this connected account.");
+            if (!string.IsNullOrEmpty(path))
+            {
+                AssetDatabase.CreateAsset(asset, path);
+                Close();
+            }
+        }
+
+        void SetDisplay(VisualElement element, bool isDisplayed)
+        {
+            element.style.display = isDisplayed ? DisplayStyle.Flex : DisplayStyle.None;
         }
     }
 }

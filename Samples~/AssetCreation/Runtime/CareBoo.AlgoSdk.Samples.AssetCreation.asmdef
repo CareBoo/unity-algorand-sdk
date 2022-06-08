@@ -1,15 +1,13 @@
 {
-    "name": "CareBoo.AlgoSdk.WalletConnect.Editor",
-    "rootNamespace": "AlgoSdk.WalletConnect.Editor",
+    "name": "CareBoo.AlgoSdk.Samples.AssetCreation",
+    "rootNamespace": "",
     "references": [
         "GUID:45ab5c0c2cb4a0e4ba897b731349c490",
-        "GUID:f0420f662311c4331b69b2075b5ab52a",
         "GUID:7d7102a6f2a084a30ad9e7734dd7ec17",
+        "GUID:e0cd26848372d4e5c891c569017e11f1",
         "GUID:f51ebe6a0ceec4240a699833d6309b23"
     ],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

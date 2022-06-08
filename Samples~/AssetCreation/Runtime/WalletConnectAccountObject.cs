@@ -1,23 +1,25 @@
-using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace AlgoSdk.WalletConnect
 {
-    [CreateAssetMenu(fileName = "NewWalletConnectAccount", menuName = "AlgoSdk/Accounts/WalletConnectAccount")]
-    public class WalletConnectAccountAsset
-        : ScriptableObject
+    public class WalletConnectAccountObject
+        : AsyncSignerAccountObject
         , IWalletConnectAccount
     {
         [SerializeField]
-        WalletConnectAccount account;
+        WalletConnectAccount account = new WalletConnectAccount();
 
         /// <inheritdoc />
-        public Address Address => account.Address;
+        public override Address Address => account.Address;
 
         /// <inheritdoc />
-        public SessionData SessionData => account.SessionData;
+        public SessionData SessionData
+        {
+            get => account.SessionData;
+            set => account.SessionData = value;
+        }
 
         /// <inheritdoc />
         public string BridgeUrl
@@ -55,11 +57,10 @@ namespace AlgoSdk.WalletConnect
         public void DisconnectWallet(string reason = default) => account.DisconnectWallet(reason);
 
         /// <inheritdoc />
-        public UniTask<SignedTxn<T>[]> SignTxnsAsync<T>(
+        public override UniTask<SignedTxn<T>[]> SignTxnsAsync<T>(
             T[] txns, TxnIndices txnsToSign,
             CancellationToken cancellationToken = default
             )
-            where T : ITransaction, IEquatable<T>
         {
             return account.SignTxnsAsync(txns, txnsToSign, cancellationToken);
         }
