@@ -79,11 +79,21 @@ namespace AlgoSdk.WalletConnect
         /// <summary>
         /// Continue an existing session.
         /// </summary>
-        /// <param name="savedSession">A previously existing session.</param>
-        public AlgorandWalletConnectSession(SessionData savedSession)
+        /// <param name="sessionData">A previously existing session.</param>
+        public AlgorandWalletConnectSession(SessionData sessionData)
         {
-            sessionData = savedSession;
-            rpc = new JsonRpcClient(sessionData.BridgeUrl.Replace("http", "ws"), sessionData.Key);
+            if (string.IsNullOrEmpty(sessionData.BridgeUrl))
+                throw new ArgumentException("BridgeUrl must not be empty", nameof(sessionData));
+            if (string.IsNullOrEmpty(sessionData.DappMeta.Url))
+                throw new ArgumentException("DappMeta.Url must not be empty", nameof(sessionData));
+            if (string.IsNullOrEmpty(sessionData.DappMeta.Name))
+                throw new ArgumentException("DappMeta.Name must not be empty", nameof(sessionData));
+            if (sessionData.Key.Data == null)
+                throw new ArgumentException("Key must not be empty", nameof(sessionData));
+            if (sessionData.Key.Data.Length != 32)
+                throw new ArgumentException("Key must be 32 bytes long", nameof(sessionData));
+            this.sessionData = sessionData;
+            rpc = new JsonRpcClient(this.sessionData.BridgeUrl.Replace("http", "ws"), this.sessionData.Key);
         }
 
         public void Dispose()
