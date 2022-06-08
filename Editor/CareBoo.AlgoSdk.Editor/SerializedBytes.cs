@@ -38,12 +38,12 @@ namespace AlgoSdk.Editor
         {
             get
             {
-                foreach (SerializedProperty child in Property)
+                var property = Property.Copy();
+                var currentDepth = property.depth;
+                while (property.Next(true) && property.depth > currentDepth)
                 {
-                    if (byteRegex.IsMatch(child.name) && child.propertyType == SerializedPropertyType.Integer)
-                    {
-                        yield return child;
-                    }
+                    if (byteRegex.IsMatch(property.name) && property.propertyType == SerializedPropertyType.Integer)
+                        yield return property.Copy();
                 }
             }
         }
@@ -51,14 +51,20 @@ namespace AlgoSdk.Editor
         public override void SetBytes(List<byte> bytes)
         {
             var props = ByteProperties.ToList();
+            foreach (var prop in props)
+            {
+                if (prop.propertyType != SerializedPropertyType.Integer)
+                    UnityEngine.Debug.Log(prop.propertyPath);
+            }
             for (var i = 0; i < bytes.Count; i++)
-                props[i].intValue = bytes[i];
+                props[i].intValue = (int)bytes[i];
         }
     }
 
     public class SerializedVariableBytes : SerializedBytes
     {
         readonly string byteArrayName;
+
         public SerializedVariableBytes(SerializedProperty root, string byteArrayName) : base(root)
         {
             this.byteArrayName = byteArrayName;
