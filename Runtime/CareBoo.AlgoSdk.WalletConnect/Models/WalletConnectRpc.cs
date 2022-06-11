@@ -51,12 +51,12 @@ namespace AlgoSdk.WalletConnect
         /// <summary>
         /// Gets a random, valid JsonRpcRequest id.
         /// </summary>
-        /// <returns>a <see cref="ulong"/> in the range [1, <see cref="ulong.MaxValue"/>]</returns>
+        /// <returns>a <see cref="ulong"/> in the range [1, <see cref="uint.MaxValue"/>]</returns>
         public static ulong GetRandomId()
         {
             ulong x = 0;
             while (x == 0)
-                x = AlgoSdk.Crypto.Random.Bytes<ulong>();
+                x = AlgoSdk.Crypto.Random.Bytes<uint>();
             return x;
         }
 
