@@ -11,6 +11,7 @@ public class YourFirstTransaction : MonoBehaviour
     string algodHealth;
 
     string indexerHealth;
+
     ulong balance;
 
     Account account;
