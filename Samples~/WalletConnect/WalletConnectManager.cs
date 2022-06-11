@@ -1,3 +1,4 @@
+using System;
 using AlgoSdk;
 using AlgoSdk.WalletConnect;
 using Cysharp.Threading.Tasks;
@@ -20,7 +21,7 @@ public class WalletConnectManager : MonoBehaviour
 
     MicroAlgos currentBalance;
 
-    AlgorandWalletConnectSession session;
+    WalletConnectAccount account;
 
     TransactionStatus txnStatus;
 
@@ -44,7 +45,7 @@ public class WalletConnectManager : MonoBehaviour
         GUI.skin.textField.alignment = TextAnchor.MiddleCenter;
         GUILayout.BeginArea(new Rect(0, 0, Screen.width, Screen.height), new GUIStyle(GUI.skin.box) { normal = new GUIStyleState() { background = GUI.skin.button.normal.background } });
         GUILayout.FlexibleSpace();
-        var status = session?.ConnectionStatus ?? SessionStatus.None;
+        var status = account?.ConnectionStatus ?? SessionStatus.None;
         GUILayout.Label($"WalletConnect Connection Status: {status}");
         GUILayout.Space(20);
         if (status == SessionStatus.RequestingWalletConnection)
@@ -80,7 +81,7 @@ public class WalletConnectManager : MonoBehaviour
 
         if (status == SessionStatus.WalletConnected)
         {
-            GUILayout.Label($"Connected Account: {session.Accounts[0]}");
+            GUILayout.Label($"Connected Account: {account.Address}");
             GUILayout.Space(5);
             var balanceAlgos = currentBalance / (double)MicroAlgos.PerAlgo;
             GUILayout.Label($"Balance: {balanceAlgos:F} Algos");
@@ -104,22 +105,22 @@ public class WalletConnectManager : MonoBehaviour
 
     async UniTaskVoid StartWalletConnect()
     {
-        session = new AlgorandWalletConnectSession(DappMeta, BridgeUrl);
-        await session.Connect();
-        handshake = session.RequestWalletConnection();
+        account = new WalletConnectAccount { DappMeta = DappMeta, BridgeUrl = BridgeUrl };
+        await account.BeginSession();
+        handshake = account.RequestWalletConnection();
         qrCode = handshake.ToQrCodeTexture();
-        await session.WaitForWalletApproval();
-        Debug.Log($"accounts:\n{AlgoApiSerializer.SerializeJson(session.Accounts)}");
+        await account.WaitForWalletApproval();
+        Debug.Log($"Connected account:\n{AlgoApiSerializer.SerializeJson(account.Address)}");
     }
 
     async UniTaskVoid PollForBalance()
     {
         while (true)
         {
-            var status = session?.ConnectionStatus ?? SessionStatus.None;
+            var status = account?.ConnectionStatus ?? SessionStatus.None;
             if (status == SessionStatus.WalletConnected)
             {
-                var (err, response) = await indexer.LookupAccountByID(session.Accounts[0]);
+                var (err, response) = await indexer.LookupAccountByID(account.Address);
                 if (err) Debug.LogError(err);
                 else
                 {
@@ -141,38 +142,17 @@ public class WalletConnectManager : MonoBehaviour
             return;
         }
 
-        var txn = Transaction.Payment(
-            session.Accounts[0],
-            txnParams,
-            session.Accounts[0],
-            0
-        );
-
-        var walletTxn = new WalletTransaction
-        {
-            Txn = AlgoApiSerializer.SerializeMessagePack(txn),
-            Message = "This is a test"
-        };
-
+        var signing = Transaction.Atomic()
+            .AddTxn(Transaction.Payment(account.Address, txnParams, account.Address, 0))
+            .Build()
+            .SignWithAsync(account)
+            .FinishSigningAsync()
+            ;
         if (shouldLaunchApp && launchedApp != null)
             launchedApp.LaunchForSigning();
-        var signingTransactions = session.SignTransactions(new[] { walletTxn });
-        var (err, signedTxns) = await signingTransactions;
-        if (err)
-        {
-            txnStatus = TransactionStatus.Failed;
-            Debug.LogError(err);
-            return;
-        }
+        var signedTxns = await signing;
         txnStatus = TransactionStatus.AwaitingConfirmation;
-        using (var signedTxnData = new NativeArray<byte>(signedTxns[0], Allocator.Persistent))
-        {
-            var signedTxn = AlgoApiSerializer.DeserializeMessagePack<SignedTxn>(signedTxnData);
-            Debug.Log($"Got signed transactions:\n{AlgoApiSerializer.SerializeJson(signedTxns)}");
-            Debug.Log($"Deserialized signed txn: {AlgoApiSerializer.SerializeJson(signedTxn)}");
-        }
-
-        var (txnSendErr, txid) = await algod.RawTransaction(signedTxns[0]);
+        var (txnSendErr, txid) = await algod.RawTransaction(signedTxns);
         if (txnSendErr)
         {
             txnStatus = TransactionStatus.Failed;
