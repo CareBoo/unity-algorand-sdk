@@ -48,8 +48,10 @@ namespace AlgoSdk.WalletConnect
             CancellationToken cancellationToken = default
             )
         {
+            if (cancellationToken.IsCancellationRequested)
+                throw new OperationCanceledException();
             if (client == null)
-                return null;
+                throw new ArgumentNullException(nameof(client));
             WebSocketEvent evt = client.Poll();
             while (evt.Type == WebSocketEventType.Nothing)
             {
