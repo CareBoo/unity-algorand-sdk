@@ -16,66 +16,171 @@ namespace AlgoSdk.Json
 
         public JsonReadError ReadNumber(out sbyte value)
         {
-            var result = ReadNumber(out byte x);
-            value = unchecked((sbyte)x);
-            return result;
+            value = default;
+            var result = ReadNumber(out JsonNumber number);
+            if (result != JsonReadError.None)
+                return result;
+
+            return number.TryCast(out value)
+                ? JsonReadError.None
+                : JsonReadError.Overflow
+                ;
         }
 
         public JsonReadError ReadNumber(out byte value)
         {
-            var result = ReadNumber(out int x);
-            value = (byte)x;
-            return result;
+            value = default;
+            var result = ReadNumber(out JsonNumber number);
+            if (result != JsonReadError.None)
+                return result;
+
+            return number.TryCast(out value)
+                ? JsonReadError.None
+                : JsonReadError.Overflow
+                ;
         }
 
         public JsonReadError ReadNumber(out short value)
         {
-            var result = ReadNumber(out int x);
-            value = (short)x;
-            return result;
+            value = default;
+            var result = ReadNumber(out JsonNumber number);
+            if (result != JsonReadError.None)
+                return result;
+
+            return number.TryCast(out value)
+                ? JsonReadError.None
+                : JsonReadError.Overflow
+                ;
         }
 
         public JsonReadError ReadNumber(out ushort value)
         {
-            var result = ReadNumber(out uint x);
-            value = (ushort)x;
-            return result;
+            value = default;
+            var result = ReadNumber(out JsonNumber number);
+            if (result != JsonReadError.None)
+                return result;
+
+            return number.TryCast(out value)
+                ? JsonReadError.None
+                : JsonReadError.Overflow
+                ;
         }
 
         public JsonReadError ReadNumber(out int value)
         {
             value = default;
-            SkipWhitespace();
-            return text.Parse(ref offset, ref value) == ParseError.None
+            var result = ReadNumber(out JsonNumber number);
+            if (result != JsonReadError.None)
+                return result;
+
+            return number.TryCast(out value)
                 ? JsonReadError.None
-                : JsonReadError.ParseError;
+                : JsonReadError.Overflow
+                ;
         }
 
         public JsonReadError ReadNumber(out uint value)
         {
             value = default;
-            SkipWhitespace();
-            return text.Parse(ref offset, ref value) == ParseError.None
+            var result = ReadNumber(out JsonNumber number);
+            if (result != JsonReadError.None)
+                return result;
+
+            return number.TryCast(out value)
                 ? JsonReadError.None
-                : JsonReadError.ParseError;
+                : JsonReadError.Overflow
+                ;
         }
 
         public JsonReadError ReadNumber(out long value)
         {
             value = default;
-            SkipWhitespace();
-            return text.Parse(ref offset, ref value) == ParseError.None
+            var result = ReadNumber(out JsonNumber number);
+            if (result != JsonReadError.None)
+                return result;
+
+            return number.TryCast(out value)
                 ? JsonReadError.None
-                : JsonReadError.ParseError;
+                : JsonReadError.Overflow
+                ;
         }
 
         public JsonReadError ReadNumber(out ulong value)
         {
             value = default;
-            SkipWhitespace();
-            return text.Parse(ref offset, ref value) == ParseError.None
+            var result = ReadNumber(out JsonNumber number);
+            if (result != JsonReadError.None)
+                return result;
+
+            return number.TryCast(out value)
                 ? JsonReadError.None
-                : JsonReadError.ParseError;
+                : JsonReadError.Overflow
+                ;
+        }
+
+        public JsonReadError ReadNumber(out JsonNumber value)
+        {
+            value = default;
+            SkipWhitespace();
+            bool sign = default;
+            ulong integer = default;
+            ushort fractionDigits = default;
+            ulong fraction = default;
+            bool exponentSign = default;
+            ushort exponent = default;
+
+            int resetOffset = offset;
+            var c = (char)text.Peek(offset).value;
+            if (c == '-')
+            {
+                sign = true;
+                text.Read(ref offset);
+            }
+            else if (c == '+')
+            {
+                text.Read(ref offset);
+            }
+
+            while (offset < text.Length && Unicode.Rune.IsDigit(text.Peek(offset)))
+            {
+                integer = integer * 10 + (ulong)(text.Peek(offset).value - '0');
+                text.Read(ref offset);
+            }
+
+            if (text.Peek(offset).value == '.')
+            {
+                text.Read(ref offset);
+                while (offset < text.Length && Unicode.Rune.IsDigit(text.Peek(offset)))
+                {
+                    fraction = fraction * 10 + (ulong)(text.Peek(offset).value - '0');
+                    text.Read(ref offset);
+                    fractionDigits++;
+                }
+            }
+
+            c = (char)text.Peek(offset).value;
+            if (c == 'e' || c == 'E')
+            {
+                text.Read(ref offset);
+                c = (char)text.Peek(offset).value;
+                if (c == '-')
+                {
+                    exponentSign = true;
+                    text.Read(ref offset);
+                }
+                else if (c == '+')
+                {
+                    text.Read(ref offset);
+                }
+                while (offset < text.Length && Unicode.Rune.IsDigit(text.Peek(offset)))
+                {
+                    exponent = (ushort)(exponent * 10 + (ushort)(text.Peek(offset).value - '0'));
+                    text.Read(ref offset);
+                }
+            }
+
+            value = new JsonNumber(sign, integer, fractionDigits, fraction, exponentSign, exponent);
+            return JsonReadError.None;
         }
 
         JsonReadError SkipNumber()

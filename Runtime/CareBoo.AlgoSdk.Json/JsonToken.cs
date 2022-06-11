@@ -47,6 +47,9 @@ namespace AlgoSdk.Json
                 '9' => JsonToken.Number,
                 '-' => JsonToken.Number,
                 '.' => JsonToken.Number,
+                '+' => JsonToken.Number,
+                'e' => JsonToken.Number,
+                'E' => JsonToken.Number,
                 '\\' => JsonToken.EscapeChar,
                 _ => JsonToken.None
             };
