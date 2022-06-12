@@ -10,10 +10,9 @@ namespace AlgoSdk.Editor
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
             label.tooltip = "Base 64 encoded teal bytecode";
-            position = EditorGUI.PrefixLabel(position, label);
             property = property.FindPropertyRelative(nameof(CompiledTeal.Bytes));
             var text = GetText(property);
-            text = EditorGUI.DelayedTextField(position, text);
+            text = EditorGUI.DelayedTextField(position, label, text);
             try
             {
                 SetText(property, text);
