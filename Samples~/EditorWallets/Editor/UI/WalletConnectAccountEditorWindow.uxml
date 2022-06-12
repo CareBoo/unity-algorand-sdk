@@ -1,0 +1,27 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Label text="Connect Account via WalletConnect" display-tooltip-when-elided="true" name="Title" style="-unity-text-align: upper-center; padding-bottom: 10px; padding-top: 5px; font-size: 14px;" />
+    <ui:VisualElement name="AssetReferenceContent" style="margin-top: 5px; margin-bottom: 5px;">
+        <uie:ObjectField label="Asset" allow-scene-objects="true" name="AssetField" binding-path="asset" />
+        <ui:TextField picking-mode="Ignore" label="Connection Status" value="filler text" text="No Connection" name="StatusField" readonly="true" binding-path="statusText" />
+    </ui:VisualElement>
+    <ui:VisualElement name="ConnectedContent" style="align-items: center; display: flex; visibility: visible; margin-top: 5px; margin-bottom: 5px;">
+        <ui:VisualElement name="ButtonContent" style="flex-direction: row;">
+            <ui:Button text="Save Asset" display-tooltip-when-elided="true" name="SaveAssetButton" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="ConfigureSessionContent" style="visibility: visible; display: flex; margin-top: 5px; margin-bottom: 5px;">
+        <ui:TextField picking-mode="Ignore" label="WalletConnect Bridge URL" value="filler text" text="https://bridge.walletconnect.org" name="BridgeUrlField" binding-path="account.sessionData.bridgeUrl" is-delayed="true" readonly="false">
+            <ui:Button display-tooltip-when-elided="true" name="RandomizeButton" tooltip="Get a random, WalletConnect bridge url." />
+        </ui:TextField>
+        <uie:PropertyField name="DappMetaField" binding-path="account.sessionData.dappMeta" label="Dapp Information" />
+        <ui:VisualElement name="ButtonContent" style="align-items: center; margin-top: 5px; margin-bottom: 5px;">
+            <ui:Button text="Connect" display-tooltip-when-elided="true" name="StartSessionButton" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="RequestingHandshakeContent" style="display: flex; margin-top: 5px; margin-bottom: 5px;">
+        <ui:VisualElement name="QrCodeContent" />
+        <ui:VisualElement name="HandshakeStatusContent" style="align-items: center; justify-content: center; flex-direction: column;">
+            <ui:Button text="Cancel" display-tooltip-when-elided="true" name="CancelHandshakeButton" style="max-width: 50%; flex-grow: 0;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

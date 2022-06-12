@@ -42,6 +42,11 @@
       "displayName": "WalletConnect",
       "description": "Contains a scene that, when ran, will show a QR Code that can be scanned by any wallet supporting WalletConnect for Algorand.",
       "path": "Samples~/WalletConnect"
+    },
+    {
+      "displayName": "Editor Wallets",
+      "description": "Scripts that show proof of concepts for connecting wallets to the Unity Editor. Currently it only supports WalletConnect for connection.",
+      "path": "Samples~/EditorWallets"
     }
   ],
   "scripts": {
