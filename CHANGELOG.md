@@ -5,6 +5,38 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [3.0.0-pre.6](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.5...v3.0.0-pre.6) (2022-06-12)
+
+
+### Bug Fixes
+
+* **inspector:** fix gaps between label and property in custom property drawers ([2ad65da](https://github.com/CareBoo/unity-algorand-sdk/commit/2ad65da3a44b3ac422be11be8483b8c1b931290c))
+* **json:** fix `JsonReader.ReadNumber` for integers when given fraction with exponent ([8bf0758](https://github.com/CareBoo/unity-algorand-sdk/commit/8bf0758209d451f5310e9d64fda169758ad0f521))
+* **walletconnect:** `WalletConnectAccount.SignTxns` can now be done without calling `BeginSession` ([84bcba9](https://github.com/CareBoo/unity-algorand-sdk/commit/84bcba94c4ceab8753cfdce7addfa80bd4ac91d1))
+* **walletconnect:** add checks to `AlgorandWalletConnectSession(SessionData)` ([7d0397d](https://github.com/CareBoo/unity-algorand-sdk/commit/7d0397d23fc14d80a087d8c809bb7b9babf3b7c8))
+* **walletconnect:** fix `WalletConnectRpc.GetRandomId` throwing error when not in main thread ([133fbd6](https://github.com/CareBoo/unity-algorand-sdk/commit/133fbd6aa608f3b50e79cab1793697e8c304408f))
+* **walletconnect:** fix null reference err in `JsonRpcClient` ([72f8f1f](https://github.com/CareBoo/unity-algorand-sdk/commit/72f8f1fc481c3e6011418e7a5f91741b7effa691))
+* **walletconnect:** fix null reference in `WebSocketExtensions` ([6f23d10](https://github.com/CareBoo/unity-algorand-sdk/commit/6f23d1008427e5b560e9f85d9cafbfd40b90d69b))
+* **walletconnect:** fix random id range and parsing ([c35e2ed](https://github.com/CareBoo/unity-algorand-sdk/commit/c35e2edbf160ac7454b5a9a7fe7ec94e751b79b1))
+
+
+### Code Refactoring
+
+* **editor:** move editor-specific utilities and windows to new sample ([a345cc2](https://github.com/CareBoo/unity-algorand-sdk/commit/a345cc2142628bb912d124ebf890c7ef3014ac8d))
+
+
+### Features
+
+* **algod:** add utility method `AlgodClient.WaitForConfirmation` to wait for Txn confirmation ([1e60a2d](https://github.com/CareBoo/unity-algorand-sdk/commit/1e60a2de6c02a5456646fcae915f1cb07952598f))
+* **blockchain:** add `AlgorandNetwork` enum for describing the different networks ([52594e6](https://github.com/CareBoo/unity-algorand-sdk/commit/52594e61cae6128763e2088c385e4b7e21fb377b))
+* **util:** add `Optional<T>.Else` method ([2d6c26a](https://github.com/CareBoo/unity-algorand-sdk/commit/2d6c26a9d7182a5b61b42636c9d6727518b46a02))
+* **walletconnect:** add `SessionData.Reinitialize` method ([0d172ac](https://github.com/CareBoo/unity-algorand-sdk/commit/0d172ac0a61f7cf15291cc0602fe7e62d3392845))
+
+
+### BREAKING CHANGES
+
+* **editor:** Moved all `ScriptableObject` implementations to the `AssetCreation` sample.
+
 # [3.0.0-pre.5](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.4...v3.0.0-pre.5) (2022-06-05)
 
 
