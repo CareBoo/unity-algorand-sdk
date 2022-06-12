@@ -2,6 +2,12 @@
   href: ../index.md
 - name: Your First Transaction
   href: ../../Documentation~/your_first_transaction.md
+- name: Algorand Standard Assets
+  href: ../../Documentation~/algorand_standard_assets.md
+  items:
+    - name: Creating ASAs in the Editor
+      href: ../../Documentation~/algorand_standard_assets/creating_asas_in_editor.md
+
 - name: WalletConnect
   href: ../../Documentation~/walletconnect.md
 - name: Troubleshooting
