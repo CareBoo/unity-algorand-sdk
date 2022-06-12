@@ -40,10 +40,9 @@ namespace AlgoSdk.Editor
     {
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
-            position = EditorGUI.PrefixLabel(position, label);
             var byteProperties = GetSerializedBytes(property);
             var text = GetString(byteProperties.GetBytes());
-            text = EditorGUI.DelayedTextField(position, text);
+            text = EditorGUI.DelayedTextField(position, label, text);
             try
             {
                 byteProperties.SetBytes(GetBytes(text));
