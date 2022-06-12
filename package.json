@@ -34,6 +34,11 @@
       "path": "Samples~/YourFirstTransaction"
     },
     {
+      "displayName": "Creating ASAs",
+      "description": "Scripts that can be used to create Algorand Standard Assets (ASAs) in the Unity Editor.",
+      "path": "Samples~/CreatingAsas"
+    },
+    {
       "displayName": "WalletConnect",
       "description": "Contains a scene that, when ran, will show a QR Code that can be scanned by any wallet supporting WalletConnect for Algorand.",
       "path": "Samples~/WalletConnect"

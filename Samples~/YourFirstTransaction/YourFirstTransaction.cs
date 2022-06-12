@@ -134,10 +134,9 @@ public class YourFirstTransaction : MonoBehaviour
             amount: payAmount
         );
         var signedTxn = account.SignTxn(paymentTxn);
-        var signedTxnBytes = AlgoApiSerializer.SerializeMessagePack(signedTxn);
 
         // Send the transaction
-        var (sendTxnError, txid) = await algod.RawTransaction(signedTxnBytes);
+        var (sendTxnError, txid) = await algod.SendTransaction(signedTxn);
         if (sendTxnError)
         {
             Debug.LogError(sendTxnError);

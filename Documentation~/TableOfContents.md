@@ -1,3 +1,5 @@
 - [Your First Transaction](your_first_transaction.md)
+- [Algorand Standard Assets](algorand_standard_assets.md)
+  - [Creating ASAs in Editor](algorand_standard_assets/creating_asas_in_editor.md)
 - [WalletConnect](walletconnect.md)
 - [Troubleshooting](troubleshooting.md)
