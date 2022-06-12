@@ -85,7 +85,7 @@
       {
         "src": "../Documentation~",
         "files": [
-          "*.md"
+          "**/*.md"
         ],
         "exclude": [
           "TableOfContents.md"
