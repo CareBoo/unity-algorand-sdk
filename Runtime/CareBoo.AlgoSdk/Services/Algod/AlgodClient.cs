@@ -1,6 +1,8 @@
 using System;
+using System.Threading;
 using AlgoSdk.Algod;
 using AlgoSdk.LowLevel;
+using Cysharp.Threading.Tasks;
 using Unity.Collections;
 using UnityEngine;
 
@@ -55,6 +57,38 @@ namespace AlgoSdk
 
         public Header[] Headers => headers;
 
+        public AlgoApiRequest.Sent<PostTransactionsResponse> SendTransaction<T>(SignedTxn<T> txn)
+            where T : struct, ITransaction, IEquatable<T>
+        {
+            using var data = AlgoApiSerializer.SerializeMessagePack(txn, Allocator.Persistent);
+            return RawTransaction(data.ToArray());
+        }
+
+        /// <summary>
+        /// Utility method to wait for a transaction to be confirmed given a transaction id.
+        /// </summary>
+        /// <param name="txid">The transaction id to wait for.</param>
+        /// <param name="pollInterval">An optional <see cref="TimeSpan"/> to control how often this method polls the algod service.</param>
+        /// <param name="cancellationToken">An optional token for cancelling this task early.</param>
+        /// <returns>The algod response that either caused an error or showed a confirmed round.</returns>
+        public async UniTask<AlgoApiResponse<PendingTransactionResponse>> WaitForConfirmation(
+            string txid,
+            Optional<TimeSpan> pollInterval = default,
+            CancellationToken cancellationToken = default
+            )
+        {
+            await UniTask.Delay(TimeSpan.FromSeconds(4), cancellationToken: cancellationToken);
+            var pollInt = pollInterval.Else(TimeSpan.FromMilliseconds(100));
+            var response = await PendingTransactionInformation(txid)
+                    .WithCancellation(cancellationToken);
+            while (!response.Error && response.Payload.ConfirmedRound == default)
+            {
+                await UniTask.Delay(pollInt, cancellationToken: cancellationToken);
+                response = await PendingTransactionInformation(txid)
+                    .WithCancellation(cancellationToken);
+            }
+            return response;
+        }
 
         [Obsolete("Call AlgodClient.GetGenesis instead.")]
         public AlgoApiRequest.Sent<AlgoApiObject> GetGenesisInformation()
@@ -153,14 +187,6 @@ namespace AlgoSdk
         public AlgoApiRequest.Sent<NodeStatusResponse> GetStatusAfterWaitingForRound(ulong round)
         {
             return WaitForBlock(round);
-        }
-
-        [Obsolete("Call RawTransaction instead.")]
-        public AlgoApiRequest.Sent<PostTransactionsResponse> SendTransaction<T>(SignedTxn<T> txn)
-            where T : struct, ITransaction, IEquatable<T>
-        {
-            using var data = AlgoApiSerializer.SerializeMessagePack(txn, Allocator.Persistent);
-            return RawTransaction(data.ToArray());
         }
 
         [Obsolete("Call RawTransaction instead.")]
