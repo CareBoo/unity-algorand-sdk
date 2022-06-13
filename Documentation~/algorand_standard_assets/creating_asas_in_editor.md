@@ -69,7 +69,7 @@ This script wraps the `Account` class into a `ScriptableObject` that we can use 
 
 Let's go ahead and generate a new account that will be our `Creator` for our ASA. Right click in the project window and select `Create > Account Object`.
 
-![Create Account Object](images/select_create_account_object.png)
+![Create Account Object](../images/select_create_account_object.png)
 
 This will create a new asset in your project. Let's name it `AssetCreator`. It's `mnemonic` is currently `abandon abandon abandon [...]` because that is the zero-value `PrivateKey`. Let's add a method to this object's `ContextMenu` which should let us generate a new account. Add the following method to the `AccountObject.cs` script you wrote earlier:
 
@@ -84,7 +84,7 @@ public void GenerateNewAccount()
 
 This method, when invoked, will generate a new, random account, then it will log the account address to the console. To invoke it in the editor, we've added a `[ContextMenu(...)]` attribute. Let's go back to our `AssetCreator`, click on the `...` icon to open the context menu, and select `GenerateNewAccount`.
 
-![Generate New Account](images/select_generate_new_account.png)
+![Generate New Account](../images/select_generate_new_account.png)
 
 Your `mnemonic` and `address` should now be populated in the editor, and you should see a message in your Console window. Great! Now that our account is created, we can fund it in the test net.
 
@@ -113,7 +113,7 @@ public class AlgodClientObject
 
 Right click in the project hierarchy, and select `Create/Algod Client Object`, then name the file `TestNetAlgoExplorerAlgod`. We're going to use the AlgoExplorer TestNet `algod` service. This service has most endpoints disabled, but it's free to use and has the transaction endpoints enabled which is good for our usecase. Set the `Client/Address` field to the AlgoExplorer TestNet `algod` service address at https://node.testnet.algoexplorerapi.io. Set the `Network` field to `Test Net`. It should look like this:
 
-![TestNetAlgoExplorerAlgod](images/testnet_algoexplorer_algod.png)
+![TestNetAlgoExplorerAlgod](../images/testnet_algoexplorer_algod.png)
 
 > [Important!] When using an Algorand node in production, it's recommended to consider using multiple nodes or your own node in case of a service outtage. Algo Explorer, while convenient, should not be relied upon by every Dapp.
 
@@ -145,7 +145,7 @@ Create an instance of this asset then name it `GameToken`. You should see a `Par
 
 Your asset should look like this:
 
-![GameTokenParams](images/game_token_params.png)
+![GameTokenParams](../images/game_token_params.png)
 
 > [Tip!] Hovering your mouse over the field labels in the Inspector will show a tooltip that explains what the field is used for. Try it out by hovering your mouse over `Clawback`.
 
