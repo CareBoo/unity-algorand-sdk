@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [3.0.0-pre.7](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.6...v3.0.0-pre.7) (2022-06-13)
+
+
+### Features
+
+* **accounts:** add `MinBalance` constructor that takes an `AlgoSdk.Indexer.Account` result ([03dc71a](https://github.com/CareBoo/unity-algorand-sdk/commit/03dc71a8653a242a6a81d831db76122bc6299233))
+
 # [3.0.0-pre.6](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.5...v3.0.0-pre.6) (2022-06-12)
 
 
