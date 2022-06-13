@@ -11,13 +11,13 @@ To create an ASA, we'll need
 
 Since we'll be creating the asset in the editor, we'll need to be able to save the account information in the editor. We're going to use `ScriptableObject`s to store this data.
 
-> [Tip!] See Unity's [blog post on `ScriptableObject`s](https://unity.com/how-to/architect-game-code-scriptable-objects) to learn more about this feature.
+> [!Tip] See Unity's [blog post on `ScriptableObject`s](https://unity.com/how-to/architect-game-code-scriptable-objects) to learn more about this feature.
 
 ### Creating the `AccountObject`
 
 We'll create an `AccountObject` class that inherits from `ScriptableObject`. This will store our `PrivateKey` used for signing.
 
-> [Important!] Do **NOT** store a sensitive `PrivateKey` inside your project source. We're only storing the `PrivateKey` in this demo to keep it simple. In production, you will want to use a secure Algorand wallet to sign your transactions. This SDK currently supports KMD and WalletConnect connections. Please see the `Editor Wallet Connection` sample to see examples on how to connect your wallets in the editor.
+> [!Important] Do **NOT** store a sensitive `PrivateKey` inside your project source. We're only storing the `PrivateKey` in this demo to keep it simple. In production, you will want to use a secure Algorand wallet to sign your transactions. This SDK currently supports KMD and WalletConnect connections. Please see the `Editor Wallet Connection` sample to see examples on how to connect your wallets in the editor.
 
 Add the following, `AccountObject.cs`, to your project:
 
@@ -65,7 +65,7 @@ public class AccountObject
 
 This script wraps the `Account` class into a `ScriptableObject` that we can use to store its data in the editor. We use a `Mnemonic` to store the `PrivateKey` because it's serializable by the Unity Editor. After the `AccountObject` is deserialized, Unity regenerates the `account` field from the `mnemonic`.
 
-> [Note!] `Account` could have been made serializable in the Unity Editor. However, we have chosen not to make it serializable to avoid storing `PrivateKey`s in the editor. Do not store `PrivateKey` or `Mnemonic` outside of a Wallet that you trust.
+> [!Note] `Account` could have been made serializable in the Unity Editor. However, we have chosen not to make it serializable to avoid storing `PrivateKey`s in the editor. Do not store `PrivateKey` or `Mnemonic` outside of a Wallet that you trust.
 
 Let's go ahead and generate a new account that will be our `Creator` for our ASA. Right click in the project window and select `Create > Account Object`.
 
@@ -115,7 +115,7 @@ Right click in the project hierarchy, and select `Create/Algod Client Object`, t
 
 ![TestNetAlgoExplorerAlgod](../images/testnet_algoexplorer_algod.png)
 
-> [Important!] When using an Algorand node in production, it's recommended to consider using multiple nodes or your own node in case of a service outtage. Algo Explorer, while convenient, should not be relied upon by every Dapp.
+> [!Important] When using an Algorand node in production, it's recommended to consider using multiple nodes or your own node in case of a service outtage. Algo Explorer, while convenient, should not be relied upon by every Dapp.
 
 ## Creating the Algorand Standard Asset (ASA)
 
@@ -147,7 +147,7 @@ Your asset should look like this:
 
 ![GameTokenParams](../images/game_token_params.png)
 
-> [Tip!] Hovering your mouse over the field labels in the Inspector will show a tooltip that explains what the field is used for. Try it out by hovering your mouse over `Clawback`.
+> [!Tip] Hovering your mouse over the field labels in the Inspector will show a tooltip that explains what the field is used for. Try it out by hovering your mouse over `Clawback`.
 
 We've got a `ScriptableObject` that can be used to store our ASA information, but it hasn't been created on the TestNet yet. Let's add an editor script that will create this ASA on the testnet.
 
