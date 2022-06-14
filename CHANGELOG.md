@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [3.0.0-pre.8](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.7...v3.0.0-pre.8) (2022-06-14)
+
+
+### Features
+
+* **abi:** add `ArgsArray`, making it easy to pass in `IAbiValue` params to AtomicTxn Builder ([523d765](https://github.com/CareBoo/unity-algorand-sdk/commit/523d765cc475878676990aaa7369219a56f6f1f2))
+* **transaction:** add `SignWith` and `SignWithAsync` API to `ITransaction` ([81aa758](https://github.com/CareBoo/unity-algorand-sdk/commit/81aa758eee039e6a774522ed3d9c9a9909ef9c0b))
+
 # [3.0.0-pre.7](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.6...v3.0.0-pre.7) (2022-06-13)
 
 
