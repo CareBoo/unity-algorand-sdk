@@ -12,6 +12,7 @@ namespace AlgoSdk.Abi
 
         readonly int current;
 
+        /// <inheritdoc />
         public int Count => values?.Length ?? 0;
 
         public ArgsArray(IAbiValue[] values, int current)
@@ -20,6 +21,7 @@ namespace AlgoSdk.Abi
             this.current = current;
         }
 
+        /// <inheritdoc />
         public EncodedAbiArg EncodeCurrent(IAbiType type, AbiReferences references, Allocator allocator)
         {
             if (Count == 0)
@@ -28,6 +30,7 @@ namespace AlgoSdk.Abi
             return values[current].Encode(type, references, allocator);
         }
 
+        /// <inheritdoc />
         public int LengthOfCurrent(IAbiType type)
         {
             if (Count == 0)
@@ -36,6 +39,7 @@ namespace AlgoSdk.Abi
             return values[current].Length(type);
         }
 
+        /// <inheritdoc />
         public bool TryNext(out ArgsArray next)
         {
             var nextIndex = current + 1;
@@ -49,6 +53,7 @@ namespace AlgoSdk.Abi
             return true;
         }
 
+        /// <inheritdoc />
         public bool TryPrev(out ArgsArray prev)
         {
             var prevIndex = current - 1;
