@@ -23,6 +23,12 @@ namespace AlgoSdk
 
     public static class TransactionExtensions
     {
+        /// <summary>
+        /// Converts a transaction to bytes to prepare it for signing.
+        /// </summary>
+        /// <param name="txn">The transaction to convert.</param>
+        /// <typeparam name="T">The type of the transaction.</typeparam>
+        /// <returns>Bytes in the transaction that are used for signing.</returns>
         public static byte[] ToSignatureMessage<T>(this T txn)
             where T : ITransaction
         {

@@ -1,10 +1,8 @@
-using System;
 using System.Collections.Generic;
 using AlgoSdk.Abi;
 using AlgoSdk.Crypto;
 using AlgoSdk.MessagePack;
 using Unity.Collections;
-using Unity.Mathematics;
 
 namespace AlgoSdk
 {
@@ -76,17 +74,17 @@ namespace AlgoSdk
             /// <param name="txnParams">See <see cref="TransactionParams"/></param>
             /// <param name="applicationId">ID of the application being configured.</param>
             /// <param name="method">The ABI method definition.</param>
-            /// <param name="methodArgs">The list of arguments to encode.</param>
             /// <param name="onComplete">Defines what additional actions occur with the transaction.</param>
+            /// <param name="methodArgs">The list of arguments to encode.</param>
             /// <typeparam name="T">The type of arg enumerator.</typeparam>
             /// <returns>An Atomic Transaction in the Building state, ready to add more transactions or build.</returns>
             public Building AddMethodCall<T>(
                 Address sender,
                 TransactionParams txnParams,
                 AppIndex applicationId,
+                OnCompletion onComplete,
                 Abi.Method method,
-                in T methodArgs,
-                OnCompletion onComplete = OnCompletion.NoOp
+                in T methodArgs
             )
                 where T : struct, IArgEnumerator<T>
             {
@@ -102,6 +100,71 @@ namespace AlgoSdk
                 methodCallBuilder.ValidateTxnArgs(Txns);
                 var txn = methodCallBuilder.BuildTxn();
                 return AddTxn(txn);
+            }
+
+            /// <summary>
+            /// Encode and apply ABI Method arguments to an <see cref="AppCallTxn"/> then add the transaction to this group.
+            /// </summary>
+            /// <param name="sender">The address of the account that pays the fee and amount.</param>
+            /// <param name="txnParams">See <see cref="TransactionParams"/></param>
+            /// <param name="applicationId">ID of the application being configured.</param>
+            /// <param name="method">The ABI method definition.</param>
+            /// <param name="methodArgs">The list of arguments to encode.</param>
+            /// <typeparam name="T">The type of arg enumerator.</typeparam>
+            /// <returns>An Atomic Transaction in the Building state, ready to add more transactions or build.</returns>
+            public Building AddMethodCall<T>(
+                Address sender,
+                TransactionParams txnParams,
+                AppIndex applicationId,
+                Abi.Method method,
+                in T methodArgs
+            )
+                where T : struct, IArgEnumerator<T>
+            {
+                return AddMethodCall(sender, txnParams, applicationId, OnCompletion.NoOp, method, in methodArgs);
+            }
+
+            /// <summary>
+            /// Encode and apply ABI Method arguments to an <see cref="AppCallTxn"/> then add the transaction to this group.
+            /// </summary>
+            /// <param name="sender">The address of the account that pays the fee and amount.</param>
+            /// <param name="txnParams">See <see cref="TransactionParams"/></param>
+            /// <param name="applicationId">ID of the application being configured.</param>
+            /// <param name="method">The ABI method definition.</param>
+            /// <param name="onComplete">Defines what additional actions occur with the transaction.</param>
+            /// <param name="methodArgs">The list of arguments to encode.</param>
+            /// <returns>An Atomic Transaction in the Building state, ready to add more transactions or build.</returns>
+            public Building AddMethodCall(
+                Address sender,
+                TransactionParams txnParams,
+                AppIndex applicationId,
+                OnCompletion onComplete,
+                Abi.Method method,
+                params IAbiValue[] methodArgsParams
+            )
+            {
+                var methodArgs = new ArgsArray(methodArgsParams, 0);
+                return AddMethodCall(sender, txnParams, applicationId, onComplete, method, methodArgs);
+            }
+
+            /// <summary>
+            /// Encode and apply ABI Method arguments to an <see cref="AppCallTxn"/> then add the transaction to this group.
+            /// </summary>
+            /// <param name="sender">The address of the account that pays the fee and amount.</param>
+            /// <param name="txnParams">See <see cref="TransactionParams"/></param>
+            /// <param name="applicationId">ID of the application being configured.</param>
+            /// <param name="method">The ABI method definition.</param>
+            /// <param name="methodArgs">The list of arguments to encode.</param>
+            /// <returns>An Atomic Transaction in the Building state, ready to add more transactions or build.</returns>
+            public Building AddMethodCall(
+                Address sender,
+                TransactionParams txnParams,
+                AppIndex applicationId,
+                Abi.Method method,
+                params IAbiValue[] methodArgsParams
+            )
+            {
+                return AddMethodCall(sender, txnParams, applicationId, OnCompletion.NoOp, method, methodArgsParams);
             }
 
             /// <summary>
