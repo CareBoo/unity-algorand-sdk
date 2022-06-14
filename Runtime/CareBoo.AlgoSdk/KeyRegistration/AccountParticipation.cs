@@ -1,5 +1,4 @@
 using System;
-using AlgoSdk.Crypto;
 using UnityEngine;
 
 namespace AlgoSdk

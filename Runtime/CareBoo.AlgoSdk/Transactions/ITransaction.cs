@@ -1,6 +1,7 @@
 using System;
 using AlgoSdk.Crypto;
 using AlgoSdk.LowLevel;
+using Cysharp.Threading.Tasks;
 using Unity.Collections;
 using Unity.Mathematics;
 
@@ -56,6 +57,13 @@ namespace AlgoSdk
             return result;
         }
 
+        /// <summary>
+        /// Suggest a fee given the estimated block size in bytes of this transaction.
+        /// </summary>
+        /// <param name="txn">the transaction for which to estimate a fee.</param>
+        /// <param name="txnParams">The current suggested transaction params from the blockchain.</param>
+        /// <typeparam name="T">The type of the transaction.</typeparam>
+        /// <returns>A suggested fee in <see cref="MicroAlgos"/>.</returns>
         public static MicroAlgos GetSuggestedFee<T>(
             this T txn,
             TransactionParams txnParams
@@ -87,6 +95,40 @@ namespace AlgoSdk
         {
             using var txnData = txn.ToSignatureMessage(Allocator.Persistent);
             return Sha512.Hash256Truncated(txnData);
+        }
+
+        /// <summary>
+        /// Sign a transaction with the given signer into raw, signed bytes.
+        /// </summary>
+        /// <param name="txn">The transaction to sign.</param>
+        /// <param name="signer">The signer that will sign the transaction.</param>
+        /// <typeparam name="TTxn">The type of the transaction to sign.</typeparam>
+        /// <typeparam name="TSigner">The type of the transaction signer.</typeparam>
+        /// <returns>Raw message pack bytes, ready to push to the algod service.</returns>
+        public static byte[] SignWith<TTxn, TSigner>(this TTxn txn, TSigner signer)
+            where TTxn : ITransaction, IEquatable<TTxn>
+            where TSigner : ISigner
+        {
+            var group = new TTxn[] { txn };
+            var signed = signer.SignTxns(group, TxnIndices.Select(0))[0];
+            return AlgoApiSerializer.SerializeMessagePack(signed);
+        }
+
+        /// <summary>
+        /// Sign a transaction with the given signer into raw, signed bytes.
+        /// </summary>
+        /// <param name="txn">The transaction to sign.</param>
+        /// <param name="signer">The signer that will sign the transaction.</param>
+        /// <typeparam name="TTxn">The type of the transaction to sign.</typeparam>
+        /// <typeparam name="TSigner">The type of the transaction signer.</typeparam>
+        /// <returns>Raw message pack bytes, ready to push to the algod service.</returns>
+        public static async UniTask<byte[]> SignWithAsync<TTxn, TSigner>(this TTxn txn, TSigner signer)
+            where TTxn : ITransaction, IEquatable<TTxn>
+            where TSigner : IAsyncSigner
+        {
+            var group = new TTxn[] { txn };
+            var signedTxns = await signer.SignTxnsAsync(group, TxnIndices.Select(0));
+            return AlgoApiSerializer.SerializeMessagePack(signedTxns[0]);
         }
     }
 }

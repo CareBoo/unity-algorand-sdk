@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Text;
 using AlgoSdk;
@@ -74,16 +75,10 @@ public abstract class KmdClientTestFixture : AlgoApiClientTestFixture
         return txidResponse;
     }
 
-    protected async UniTask<byte[]> Sign<T>(T txn) where T : ITransaction
+    protected async UniTask<byte[]> Sign<T>(T txn) where T : ITransaction, IEquatable<T>
     {
-        var (signError, signResponse) = await AlgoApiClientSettings.Kmd.SignTransaction(
-            PublicKey,
-            AlgoApiSerializer.SerializeMessagePack(txn),
-            walletHandleToken,
-            WalletPassword
-        );
-        AssertOkay(signError);
-        return signResponse.SignedTransaction;
+        var kmdAccount = new KmdAccount(AlgoApiClientSettings.Kmd, wallet.Id, WalletPassword, PublicKey, walletHandleToken);
+        return await txn.SignWithAsync(kmdAccount);
     }
 
     static async UniTask<Wallet[]> ListWallets()
