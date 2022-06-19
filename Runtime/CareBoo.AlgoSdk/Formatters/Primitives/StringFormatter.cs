@@ -8,6 +8,10 @@ namespace AlgoSdk.Formatters
     {
         public string Deserialize(ref JsonReader reader)
         {
+            if (reader.TryReadNull())
+            {
+                return null;
+            }
             var text = new NativeText(Allocator.Persistent);
             try
             {
@@ -22,6 +26,10 @@ namespace AlgoSdk.Formatters
 
         public string Deserialize(ref MessagePackReader reader)
         {
+            if (reader.TryReadNil())
+            {
+                return null;
+            }
             var text = new NativeText(Allocator.Persistent);
             try
             {
