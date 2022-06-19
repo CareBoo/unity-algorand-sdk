@@ -15,7 +15,7 @@ namespace AlgoSdk
         readonly Result status;
         readonly long responseCode;
         readonly ContentType contentType;
-        ErrorResponse error;
+        readonly ErrorResponse error;
 
         public AlgoApiResponse(UnityWebRequest completedRequest)
         {
@@ -32,6 +32,15 @@ namespace AlgoSdk
                 _ => default
             };
             completedRequest.Dispose();
+        }
+
+        public AlgoApiResponse(ErrorResponse error)
+        {
+            data = null;
+            status = Result.ProtocolError;
+            responseCode = 0;
+            contentType = ContentType.None;
+            this.error = error;
         }
 
         public byte[] Data => data;
@@ -121,6 +130,11 @@ namespace AlgoSdk
         public ContentType ContentType => rawResponse.ContentType;
 
         public string GetText() => rawResponse.GetText();
+
+        public AlgoApiResponse<U> Cast<U>()
+        {
+            return new AlgoApiResponse<U>(rawResponse);
+        }
 
         public static implicit operator AlgoApiResponse<T>(AlgoApiResponse response)
         {

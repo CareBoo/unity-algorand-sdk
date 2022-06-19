@@ -57,6 +57,12 @@ namespace AlgoSdk
 
         public Header[] Headers => headers;
 
+        /// <summary>
+        /// Send a signed transaction struct
+        /// </summary>
+        /// <param name="txn">The signed transaction struct to send</param>
+        /// <typeparam name="T">The type of the signed transaction.</typeparam>
+        /// <returns>A response from the algod service.</returns>
         public AlgoApiRequest.Sent<PostTransactionsResponse> SendTransaction<T>(SignedTxn<T> txn)
             where T : struct, ITransaction, IEquatable<T>
         {
@@ -68,26 +74,42 @@ namespace AlgoSdk
         /// Utility method to wait for a transaction to be confirmed given a transaction id.
         /// </summary>
         /// <param name="txid">The transaction id to wait for.</param>
-        /// <param name="pollInterval">An optional <see cref="TimeSpan"/> to control how often this method polls the algod service.</param>
+        /// <param name="maxWaitRounds">How many rounds should this method wait for confirmation before cancelling early?</param>
         /// <param name="cancellationToken">An optional token for cancelling this task early.</param>
         /// <returns>The algod response that either caused an error or showed a confirmed round.</returns>
         public async UniTask<AlgoApiResponse<PendingTransactionResponse>> WaitForConfirmation(
             string txid,
-            Optional<TimeSpan> pollInterval = default,
+            uint maxWaitRounds = default,
             CancellationToken cancellationToken = default
             )
         {
-            await UniTask.Delay(TimeSpan.FromSeconds(4), cancellationToken: cancellationToken);
-            var pollInt = pollInterval.Else(TimeSpan.FromMilliseconds(100));
-            var response = await PendingTransactionInformation(txid)
-                    .WithCancellation(cancellationToken);
-            while (!response.Error && response.Payload.ConfirmedRound == default)
+            if (maxWaitRounds == 0)
             {
-                await UniTask.Delay(pollInt, cancellationToken: cancellationToken);
-                response = await PendingTransactionInformation(txid)
-                    .WithCancellation(cancellationToken);
+                maxWaitRounds = 1000;
             }
-            return response;
+
+            var statusResponse = await GetStatus();
+            if (statusResponse.Error)
+            {
+                return statusResponse.Cast<PendingTransactionResponse>();
+            }
+
+            var lastRound = statusResponse.Payload.LastRound;
+            var currentRound = statusResponse.Payload.LastRound + 1;
+
+            while (currentRound < lastRound + maxWaitRounds)
+            {
+                var txnInfoResponse = await PendingTransactionInformation(txid);
+                var (txnInfoError, txnInfo) = txnInfoResponse;
+                if (txnInfoError || !string.IsNullOrEmpty(txnInfo.PoolError) || txnInfo.ConfirmedRound > 0)
+                {
+                    return txnInfoResponse;
+                }
+
+                await WaitForBlock(currentRound);
+                currentRound++;
+            }
+            return new AlgoApiResponse(new ErrorResponse { Message = $"Waiting for transaction id {txid} timed out" });
         }
 
         [Obsolete("Call AlgodClient.GetGenesis instead.")]
