@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using AlgoSdk.Abi;
 using AlgoSdk.Crypto;
 using AlgoSdk.MessagePack;
 using Unity.Collections;
@@ -17,28 +16,30 @@ namespace AlgoSdk
         /// </remarks>
         public partial struct Building
         {
-            List<Transaction> txns;
+            List<Transaction> _txns;
 
             /// <summary>
             /// The current number of transactions in this group.
             /// </summary>
-            public int TxnCount => txns.Count;
+            public int TxnCount => _txns.Count;
 
             /// <summary>
             /// Get the transaction in this group at the given index.
             /// </summary>
-            public Transaction this[int i] => txns[i];
+            public Transaction this[int i] => _txns[i];
 
-            List<Transaction> Txns
+            List<Transaction> txns
             {
                 get
                 {
-                    if (txns == null)
-                        txns = new List<Transaction>(4);
+                    if (_txns == null)
+                        _txns = new List<Transaction>(4);
 
-                    return txns;
+                    return _txns;
                 }
             }
+
+            public IReadOnlyList<Transaction> Txns => txns;
 
             /// <summary>
             /// Add a transaction to this group.
@@ -57,114 +58,14 @@ namespace AlgoSdk
             {
                 if (!txn.Group.Equals(default))
                     throw new System.ArgumentException("The given transaction must have its Group field unset.", nameof(txn));
-                if (Txns.Count == MaxNumTxns)
+                if (txns.Count == MaxNumTxns)
                     throw new System.NotSupportedException($"Atomic Transaction Groups cannot be larger than {MaxNumTxns} transactions.");
 
                 Transaction raw = default;
                 txn.CopyTo(ref raw);
-                Txns.Add(raw);
+                txns.Add(raw);
 
                 return this;
-            }
-
-            /// <summary>
-            /// Encode and apply ABI Method arguments to an <see cref="AppCallTxn"/> then add the transaction to this group.
-            /// </summary>
-            /// <param name="sender">The address of the account that pays the fee and amount.</param>
-            /// <param name="txnParams">See <see cref="TransactionParams"/></param>
-            /// <param name="applicationId">ID of the application being configured.</param>
-            /// <param name="method">The ABI method definition.</param>
-            /// <param name="onComplete">Defines what additional actions occur with the transaction.</param>
-            /// <param name="methodArgs">The list of arguments to encode.</param>
-            /// <typeparam name="T">The type of arg enumerator.</typeparam>
-            /// <returns>An Atomic Transaction in the Building state, ready to add more transactions or build.</returns>
-            public Building AddMethodCall<T>(
-                Address sender,
-                TransactionParams txnParams,
-                AppIndex applicationId,
-                OnCompletion onComplete,
-                Abi.Method method,
-                in T methodArgs
-            )
-                where T : struct, IArgEnumerator<T>
-            {
-                using var methodCallBuilder = new MethodCallBuilder<T>(
-                    sender,
-                    txnParams,
-                    applicationId,
-                    method,
-                    in methodArgs,
-                    onComplete,
-                    Allocator.Persistent
-                );
-                methodCallBuilder.ValidateTxnArgs(Txns);
-                var txn = methodCallBuilder.BuildTxn();
-                return AddTxn(txn);
-            }
-
-            /// <summary>
-            /// Encode and apply ABI Method arguments to an <see cref="AppCallTxn"/> then add the transaction to this group.
-            /// </summary>
-            /// <param name="sender">The address of the account that pays the fee and amount.</param>
-            /// <param name="txnParams">See <see cref="TransactionParams"/></param>
-            /// <param name="applicationId">ID of the application being configured.</param>
-            /// <param name="method">The ABI method definition.</param>
-            /// <param name="methodArgs">The list of arguments to encode.</param>
-            /// <typeparam name="T">The type of arg enumerator.</typeparam>
-            /// <returns>An Atomic Transaction in the Building state, ready to add more transactions or build.</returns>
-            public Building AddMethodCall<T>(
-                Address sender,
-                TransactionParams txnParams,
-                AppIndex applicationId,
-                Abi.Method method,
-                in T methodArgs
-            )
-                where T : struct, IArgEnumerator<T>
-            {
-                return AddMethodCall(sender, txnParams, applicationId, OnCompletion.NoOp, method, in methodArgs);
-            }
-
-            /// <summary>
-            /// Encode and apply ABI Method arguments to an <see cref="AppCallTxn"/> then add the transaction to this group.
-            /// </summary>
-            /// <param name="sender">The address of the account that pays the fee and amount.</param>
-            /// <param name="txnParams">See <see cref="TransactionParams"/></param>
-            /// <param name="applicationId">ID of the application being configured.</param>
-            /// <param name="method">The ABI method definition.</param>
-            /// <param name="onComplete">Defines what additional actions occur with the transaction.</param>
-            /// <param name="methodArgs">The list of arguments to encode.</param>
-            /// <returns>An Atomic Transaction in the Building state, ready to add more transactions or build.</returns>
-            public Building AddMethodCall(
-                Address sender,
-                TransactionParams txnParams,
-                AppIndex applicationId,
-                OnCompletion onComplete,
-                Abi.Method method,
-                params IAbiValue[] methodArgsParams
-            )
-            {
-                var methodArgs = new ArgsArray(methodArgsParams, 0);
-                return AddMethodCall(sender, txnParams, applicationId, onComplete, method, methodArgs);
-            }
-
-            /// <summary>
-            /// Encode and apply ABI Method arguments to an <see cref="AppCallTxn"/> then add the transaction to this group.
-            /// </summary>
-            /// <param name="sender">The address of the account that pays the fee and amount.</param>
-            /// <param name="txnParams">See <see cref="TransactionParams"/></param>
-            /// <param name="applicationId">ID of the application being configured.</param>
-            /// <param name="method">The ABI method definition.</param>
-            /// <param name="methodArgs">The list of arguments to encode.</param>
-            /// <returns>An Atomic Transaction in the Building state, ready to add more transactions or build.</returns>
-            public Building AddMethodCall(
-                Address sender,
-                TransactionParams txnParams,
-                AppIndex applicationId,
-                Abi.Method method,
-                params IAbiValue[] methodArgsParams
-            )
-            {
-                return AddMethodCall(sender, txnParams, applicationId, OnCompletion.NoOp, method, methodArgsParams);
             }
 
             /// <summary>
@@ -184,15 +85,15 @@ namespace AlgoSdk
                         writer.Data.Add(IdPrefix[i]);
                     writer.WriteMapHeader(1);
                     writer.WriteString(txnGroupKey);
-                    writer.WriteArrayHeader(Txns.Count);
-                    for (var i = 0; i < Txns.Count; i++)
+                    writer.WriteArrayHeader(txns.Count);
+                    for (var i = 0; i < txns.Count; i++)
                     {
-                        AlgoApiFormatterCache<TransactionId>.Formatter.Serialize(ref writer, Txns[i].GetId());
+                        AlgoApiFormatterCache<TransactionId>.Formatter.Serialize(ref writer, txns[i].GetId());
                     }
 
                     TransactionId groupId = Sha512.Hash256Truncated(writer.Data.AsArray().AsReadOnly());
-                    var txnsArr = Txns.ToArray();
-                    for (var i = 0; i < Txns.Count; i++)
+                    var txnsArr = txns.ToArray();
+                    for (var i = 0; i < txns.Count; i++)
                     {
                         txnsArr[i].Group = groupId;
                     }

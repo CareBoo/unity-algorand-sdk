@@ -2,6 +2,7 @@ using System;
 using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
+using AlgoSdk.Experimental.Abi;
 
 namespace AlgoSdk.Editor.CodeGen
 {
@@ -10,7 +11,7 @@ namespace AlgoSdk.Editor.CodeGen
         static readonly Dictionary<Type, Type> equalityComparerLookup = new Dictionary<Type, Type>()
         {
             {typeof(string), typeof(StringComparer)},
-            {typeof(Abi.IAbiType), typeof(IAbiTypeComparer)}
+            {typeof(IAbiType), typeof(IAbiTypeComparer)}
         };
 
         CodeExpression expression;
