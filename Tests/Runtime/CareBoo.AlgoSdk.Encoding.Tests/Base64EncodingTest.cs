@@ -1,16 +1,22 @@
 using AlgoSdk;
 using NUnit.Framework;
-using Unity.Collections;
-using UnityEngine.TestTools;
 
 public class Base64Test
 {
-    [TestCase(3, 4)]
-    [TestCase(2, 4)]
-    [TestCase(4, 8)]
-    public void BytesRequiredForBase64EncodingShouldReturnCorrectValue(int bytes, int expected)
+    [Test]
+    public void BytesRequiredForBase64EncodingShouldReturnCorrectValue()
     {
-        var actual = Base64Encoding.BytesRequiredForBase64Encoding(bytes);
-        Assert.AreEqual(expected, actual);
+        var testCases = new[]
+        {
+            (bytes: 3, expected: 4),
+            (bytes: 2, expected: 4),
+            (bytes: 4, expected: 8)
+        };
+
+        foreach (var (bytes, expected) in testCases)
+        {
+            var actual = Base64Encoding.BytesRequiredForBase64Encoding(bytes);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

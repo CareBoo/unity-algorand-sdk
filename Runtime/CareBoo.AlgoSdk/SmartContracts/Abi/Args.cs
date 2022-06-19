@@ -22,5 +22,10 @@ namespace AlgoSdk.Abi
         {
             return new ArgsList<THead, TTail>(head, tail);
         }
+        
+        public static ArgsArray Of(params IAbiValue[] values)
+        {
+            return new ArgsArray(values);
+        }
     }
 }

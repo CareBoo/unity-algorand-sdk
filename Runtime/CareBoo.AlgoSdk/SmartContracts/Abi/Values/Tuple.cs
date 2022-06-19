@@ -210,5 +210,10 @@ namespace AlgoSdk.Abi
         {
             return new Tuple<T>(args);
         }
+        
+        public static Tuple<ArgsArray> Of(params IAbiValue[] args)
+        {
+            return new Tuple<ArgsArray>(new ArgsArray(args));
+        }
     }
 }

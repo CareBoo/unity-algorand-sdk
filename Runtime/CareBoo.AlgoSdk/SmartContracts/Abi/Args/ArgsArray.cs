@@ -21,6 +21,10 @@ namespace AlgoSdk.Abi
             this.current = current;
         }
 
+        public ArgsArray(IAbiValue[] values) : this(values, 0)
+        {
+        }
+
         /// <inheritdoc />
         public EncodedAbiArg EncodeCurrent(IAbiType type, AbiReferences references, Allocator allocator)
         {
