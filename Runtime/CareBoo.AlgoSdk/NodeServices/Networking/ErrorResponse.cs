@@ -5,6 +5,24 @@ using UnityEngine;
 namespace AlgoSdk
 {
     /// <summary>
+    /// An Exception thrown from an <see cref="ErrorResponse"/>.
+    /// </summary>
+    public class AlgoApiException : Exception
+    {
+        readonly ErrorResponse error;
+
+        public AlgoApiException(ErrorResponse error) : base(error.Message)
+        {
+            this.error = error;
+        }
+
+        /// <summary>
+        /// The <see cref="ErrorResponse"/> that threw this exception.
+        /// </summary>
+        public ErrorResponse Error => error;
+    }
+
+    /// <summary>
     /// An error response from algorand APIs with optional data field.
     /// </summary>
     [AlgoApiFormatter(typeof(ErrorResponseFormatter))]
@@ -39,6 +57,14 @@ namespace AlgoSdk
         public override string ToString()
         {
             return Message;
+        }
+
+        public void ThrowIfError()
+        {
+            if (this)
+            {
+                throw new AlgoApiException(this);
+            }
         }
 
         public bool IsError => Code >= 400 || !string.IsNullOrWhiteSpace(Message);
