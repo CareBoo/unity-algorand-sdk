@@ -11,16 +11,20 @@ public class TupleTest
     {
         using var references = new AbiReferences(Allocator.Persistent);
         var expected = new byte[] { 0xff, 0x00 };
-        var bools = Args.Add(Boolean.True)
-            .Add(Boolean.True)
-            .Add(Boolean.True)
-            .Add(Boolean.True)
-            .Add(Boolean.True)
-            .Add(Boolean.True)
-            .Add(Boolean.True)
-            .Add(Boolean.True)
-            .Add(Boolean.False)
-            ;
+        // var bools = Args.Add(Boolean.True)
+        //     .Add(Boolean.True)
+        //     .Add(Boolean.True)
+        //     .Add(Boolean.True)
+        //     .Add(Boolean.True)
+        //     .Add(Boolean.True)
+        //     .Add(Boolean.True)
+        //     .Add(Boolean.True)
+        //     .Add(Boolean.False)
+        //     ;
+        var bools = new IAbiValue[9];
+        for (var i = 0; i < 8; i++)
+            bools[i] = Boolean.True;
+        bools[8] = Boolean.False;
         var tuple = Tuple.Of(bools);
         var typeStr = string.Join(",", Enumerable.Range(0, 9).Select(_ => "bool"));
         typeStr = $"({typeStr})";

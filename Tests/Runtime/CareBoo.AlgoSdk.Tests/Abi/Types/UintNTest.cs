@@ -1,4 +1,3 @@
-using AlgoSdk;
 using AlgoSdk.Abi;
 using NUnit.Framework;
 using Unity.Collections;
@@ -20,20 +19,32 @@ public class UintNTest
     }
 
     [Test]
-    [TestCase(new object[] { ulong.MinValue, (ushort)8 })]
-    [TestCase(new object[] { ulong.MaxValue, (ushort)64 })]
-    public void Uint64NShouldAlwaysReturnMultipleOf8(ulong value, ushort expected)
+    public void Uint64NShouldAlwaysReturnMultipleOf8()
     {
-        var actual = new UInt64(value).N;
-        Assert.AreEqual(expected, actual);
+        var testCases = new[]
+        {
+            (value: ulong.MinValue, expected: (ushort)8),
+            (value: ulong.MaxValue, expected: (ushort)64)
+        };
+        foreach (var (value, expected) in testCases)
+        {
+            var actual = new UInt64(value).N;
+            Assert.AreEqual(expected, actual);
+        }
     }
 
     [Test]
-    [TestCase(new object[] { uint.MinValue, (ushort)8 })]
-    [TestCase(new object[] { uint.MaxValue, (ushort)32 })]
-    public void Uint32NShouldAlwaysReturnMultipleOf8(uint value, ushort expected)
+    public void Uint32NShouldAlwaysReturnMultipleOf8()
     {
-        var actual = new UInt32(value).N;
-        Assert.AreEqual(expected, actual);
+        var testCases = new[]
+        {
+            (value: uint.MinValue, expected: (ushort)8),
+            (value: uint.MaxValue, expected: (ushort)32)
+        };
+        foreach (var (value, expected) in testCases)
+        {
+            var actual = new UInt32(value).N;
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
