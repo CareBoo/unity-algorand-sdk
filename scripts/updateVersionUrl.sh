@@ -24,6 +24,6 @@ jq --arg url "$docUrl" \
 
 echo "Updating README.md..."
 host='https:\/\/careboo.github.io\/unity-algorand-sdk\/'
-sed -E -i '' \
+sed -E -i \
     's/'$host'[0-9]+\.[0-9]+/'$host''$major_minor'/g' \
     README.md
