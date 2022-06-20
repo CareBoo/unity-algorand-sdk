@@ -5,6 +5,31 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [3.0.0-pre.9](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.8...v3.0.0-pre.9) (2022-06-20)
+
+
+### Bug Fixes
+
+* **algod:** fix `AlgodClient.WaitForConfirmation` not using correct wait time ([169be0b](https://github.com/CareBoo/unity-algorand-sdk/commit/169be0b4745fdf954a2c6cacc8c6b6deabd51b36))
+* **json:** fix strings failing to be read on `null` ([dac58b7](https://github.com/CareBoo/unity-algorand-sdk/commit/dac58b7ee873a5443080429faad3efcfd6cff727))
+* **webgl:** fix webgl errors being caused in player test builds ([f7ee641](https://github.com/CareBoo/unity-algorand-sdk/commit/f7ee6419df137363d5e5e2b17d9cf5b904a4f0db))
+
+
+### Code Refactoring
+
+* **abi:** mark ABI as Experimental ([86f2c25](https://github.com/CareBoo/unity-algorand-sdk/commit/86f2c25a2e5234624b922039c1c4287353fa6537))
+
+
+### Features
+
+* **abi:** add APIs to better create Tuples from ArgsArray ([5a109ed](https://github.com/CareBoo/unity-algorand-sdk/commit/5a109ed4c45a490ff2e3113342d88121f4b04894))
+* **api:** add `AlgoApiException` that can be thrown from an `ErrorResponse` ([2eb8209](https://github.com/CareBoo/unity-algorand-sdk/commit/2eb8209386dc20b8f2cadb746a1c36db6453baa6))
+
+
+### BREAKING CHANGES
+
+* **abi:** `AlgoSdk.Abi` renamed to `AlgoSdk.Experimental.Abi`
+
 # [3.0.0-pre.8](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.7...v3.0.0-pre.8) (2022-06-14)
 
 
