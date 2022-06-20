@@ -47,12 +47,19 @@ public class TxnIndicesTest
     }
 
     [Test]
-    [TestCase(1, true)]
-    [TestCase(2, false)]
-    public void ContainsIndexShouldReturnIfIndexInIndices(int index, bool expected)
+    public void ContainsIndexShouldReturnIfIndexInIndices()
     {
+        var testCases = new[]
+        {
+            (index: 1, expected: true),
+            (index: 2, expected: false)
+        };
         var indices = TxnIndices.Select(1, 3, 4, 5, 6, 7, 9);
-        var actual = indices.ContainsIndex(index);
-        Assert.AreEqual(expected, actual);
+
+        foreach (var (index, expected) in testCases)
+        {
+            var actual = indices.ContainsIndex(index);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

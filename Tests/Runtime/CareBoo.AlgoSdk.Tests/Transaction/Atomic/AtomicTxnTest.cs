@@ -1,11 +1,9 @@
 using System.Collections;
 using System.Linq;
 using AlgoSdk;
-using AlgoSdk.Abi;
+using AlgoSdk.Experimental.Abi;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
-using Unity.Mathematics;
-using UnityEngine;
 using UnityEngine.TestTools;
 
 [TestFixture]
@@ -137,12 +135,13 @@ public class AtomicTxnTest
     [Test]
     public void BuildingAtomicTxnWithMoreThan15ArgsShouldEncodeTheLastOnesIntoATuple()
     {
+        var length = 20;
         var argType = AbiType.UIntN(32);
         var methodAbi = new Method
         {
             Name = "test",
             Description = "Blah blah blah",
-            Arguments = Enumerable.Range(0, 20).Select(i => new Method.Arg
+            Arguments = Enumerable.Range(0, length).Select(i => new Method.Arg
             {
                 Type = argType,
                 Name = $"arg{i}",
@@ -158,9 +157,11 @@ public class AtomicTxnTest
         var sender = Account.GenerateAccount();
         var receiver = Account.GenerateAccount();
 
-        var args = Args.Add(1).Add(2).Add(3).Add(4).Add(5).Add(6).Add(7).Add(8).Add(9).Add(10).Add(11).Add(12).Add(13).Add(14).Add(15).Add(16).Add(17).Add(18).Add(19).Add(20);
+        var args = new IAbiValue[length];
+        for (var i = 0; i < length; i++)
+            args[i] = new UInt32((uint)i);
 
-        Assert.AreEqual(methodAbi.Arguments.Length, args.Count);
+        Assert.AreEqual(methodAbi.Arguments.Length, args.Length);
         var group = Transaction.Atomic()
             .AddTxn(Transaction.Payment(sender.Address, default, receiver.Address, 10000))
             .AddMethodCall(

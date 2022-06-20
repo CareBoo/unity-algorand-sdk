@@ -8,29 +8,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlgoSdk.Abi
+namespace AlgoSdk.Experimental.Abi
 {
-    
-    
+
+
     public partial struct Contract
     {
-        
+
         private static bool @__generated__IsValid = Contract.@__generated__InitializeAlgoApiFormatters();
-        
+
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Abi.Contract>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Abi.Contract>(false).Assign("name", (AlgoSdk.Abi.Contract x) => x.Name, (ref AlgoSdk.Abi.Contract x, System.String value) => x.Name = value, AlgoSdk.StringComparer.Instance).Assign("desc", (AlgoSdk.Abi.Contract x) => x.Description, (ref AlgoSdk.Abi.Contract x, System.String value) => x.Description = value, AlgoSdk.StringComparer.Instance).Assign("networks", (AlgoSdk.Abi.Contract x) => x.Networks, (ref AlgoSdk.Abi.Contract x, AlgoSdk.Abi.Contract.Deployments value) => x.Networks = value).Assign("methods", (AlgoSdk.Abi.Contract x) => x.Methods, (ref AlgoSdk.Abi.Contract x, AlgoSdk.Abi.Method[] value) => x.Methods = value, AlgoSdk.ArrayComparer<AlgoSdk.Abi.Method>.Instance));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Experimental.Abi.Contract>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Experimental.Abi.Contract>(false).Assign("name", (AlgoSdk.Experimental.Abi.Contract x) => x.Name, (ref AlgoSdk.Experimental.Abi.Contract x, System.String value) => x.Name = value, AlgoSdk.StringComparer.Instance).Assign("desc", (AlgoSdk.Experimental.Abi.Contract x) => x.Description, (ref AlgoSdk.Experimental.Abi.Contract x, System.String value) => x.Description = value, AlgoSdk.StringComparer.Instance).Assign("networks", (AlgoSdk.Experimental.Abi.Contract x) => x.Networks, (ref AlgoSdk.Experimental.Abi.Contract x, AlgoSdk.Experimental.Abi.Contract.Deployments value) => x.Networks = value).Assign("methods", (AlgoSdk.Experimental.Abi.Contract x) => x.Methods, (ref AlgoSdk.Experimental.Abi.Contract x, AlgoSdk.Experimental.Abi.Method[] value) => x.Methods = value, AlgoSdk.ArrayComparer<AlgoSdk.Experimental.Abi.Method>.Instance));
             return true;
         }
-        
+
         public partial struct Deployments
         {
-            
+
             private static bool @__generated__IsValid = Deployments.@__generated__InitializeAlgoApiFormatters();
-            
+
             private static bool @__generated__InitializeAlgoApiFormatters()
             {
-                AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Abi.Contract.Deployments>(new AlgoSdk.Abi.Contract.Deployments.Formatter());
+                AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Experimental.Abi.Contract.Deployments>(new AlgoSdk.Experimental.Abi.Contract.Deployments.Formatter());
                 return true;
             }
         }

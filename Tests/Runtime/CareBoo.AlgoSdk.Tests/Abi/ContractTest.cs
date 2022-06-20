@@ -1,5 +1,5 @@
 using AlgoSdk;
-using AlgoSdk.Abi;
+using AlgoSdk.Experimental.Abi;
 using NUnit.Framework;
 
 [TestFixture]

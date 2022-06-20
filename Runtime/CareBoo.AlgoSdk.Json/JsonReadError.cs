@@ -30,7 +30,8 @@ namespace AlgoSdk.Json
         static string GetSurroundingText(JsonReader context)
         {
             var start = math.max(0, context.Position - surroundingSize);
-            return context.Text.Substring(start, surroundingSize * 2);
+            var length = math.min(surroundingSize * 2, context.Text.Length - start);
+            return context.Text.Substring(start, length);
         }
     }
 

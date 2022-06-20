@@ -1,4 +1,4 @@
-using AlgoSdk.Abi;
+using AlgoSdk.Experimental.Abi;
 using UnityEditor;
 using UnityEngine;
 
@@ -8,7 +8,7 @@ namespace AlgoSdk.Editor
     public class IAbiTypeDrawer : PropertyDrawer
     {
         public const string AssemblyName = "CareBoo.AlgoSdk ";
-        public const string Namespace = "AlgoSdk.Abi.";
+        public const string Namespace = "AlgoSdk.Experimental.Abi.";
 
         public enum AbiTypeOption
         {
