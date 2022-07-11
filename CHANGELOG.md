@@ -5,6 +5,25 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [3.0.0-pre.10](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.9...v3.0.0-pre.10) (2022-07-11)
+
+
+### Bug Fixes
+
+* **collections:** fix obsolete API in most recent Unity Collections package ([cf05ec9](https://github.com/CareBoo/unity-algorand-sdk/commit/cf05ec9bff584aa7dab37e835427e004a52d5d2d))
+* **lowlevel:** fix `NativeListOfList` not correctly assigning indices with `IIndexable<>` types ([aaa3b15](https://github.com/CareBoo/unity-algorand-sdk/commit/aaa3b15ddf906eb1cde4530a0261562584dd136b))
+* **msgpack:** fix MessagePackWriter.Bytes issue when writing empty byte array ([eef81de](https://github.com/CareBoo/unity-algorand-sdk/commit/eef81de2b80c74a6b9eac132ec33e6c7528daaf4))
+* **walletconnect:** fix `WalletConnectAccount` failing to assign Key for new session ([ccfd6db](https://github.com/CareBoo/unity-algorand-sdk/commit/ccfd6db4f66ee99c1b91157ac034f9b7ece227e0))
+
+
+### Features
+
+* **abi:** add `Decode` methods to ABI ([a83f1fe](https://github.com/CareBoo/unity-algorand-sdk/commit/a83f1fe38df6501c9941e496d31e28dbb37d059a))
+* **account:** add `IsAddressString` to `Address` ([a908586](https://github.com/CareBoo/unity-algorand-sdk/commit/a9085869a0d16737d1e3d6eb56c3fb7bc55b4a02))
+* **api:** update `AlgoApiRequest.Sent` to be convertible to UniTask ([522d4c7](https://github.com/CareBoo/unity-algorand-sdk/commit/522d4c75d3bd1761f0a9e6920227bcd606b246ec))
+* **atomictxn:** add submitted and confirmed workflow to atomic transactions ([dd59ae6](https://github.com/CareBoo/unity-algorand-sdk/commit/dd59ae6641ece47d6daaa016e7768e1416875ed1))
+* **endianness:** add new `FromBytesBigEndian` methods ([2623f43](https://github.com/CareBoo/unity-algorand-sdk/commit/2623f433abc385756be184ae6665ca0e12706f93))
+
 # [3.0.0-pre.9](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.8...v3.0.0-pre.9) (2022-06-20)
 
 
