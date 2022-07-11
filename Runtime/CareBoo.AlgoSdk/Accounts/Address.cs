@@ -68,6 +68,26 @@ namespace AlgoSdk
             return ToFixedString().ToString();
         }
 
+        public static bool IsAddressString<TString>(TString s)
+            where TString : struct, IUTF8Bytes, INativeList<byte>
+        {
+            try
+            {
+                FromString(s);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public static bool IsAddressString(string s)
+        {
+            using var text = new NativeText(s, Allocator.Persistent);
+            return IsAddressString(text);
+        }
+
         public static Address FromString<TString>(TString s)
             where TString : struct, IUTF8Bytes, INativeList<byte>
         {
