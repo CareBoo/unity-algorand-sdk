@@ -31,6 +31,11 @@ namespace AlgoSdk.MessagePack
 
         public unsafe void WriteBytes(byte[] arr)
         {
+            if (arr.Length == 0)
+            {
+                WriteBytesHeader(0);
+                return;
+            }
             fixed (byte* buffer = &arr[0])
             {
                 WriteBytes(buffer, arr.Length);
