@@ -127,6 +127,28 @@ public class AlgodClientTest : AlgodClientTestFixture
 
         var (err, txid) = await AlgoApiClientSettings.Algod.RawTransaction(signedGroup);
         AssertOkay(err);
-        var pending = await WaitForTransaction(txid.TxId);
+        var (confirmErr, confirmed) = await AlgoApiClientSettings.Algod.WaitForConfirmation(txid.TxId);
+        AssertOkay(confirmErr);
+    });
+
+    [UnityTest]
+    public IEnumerator SendTransactionGroupWithOneTransactionShouldReturnOkay() => UniTask.ToCoroutine(async () =>
+    {
+        var (_, txnParams) = await AlgoApiClientSettings.Algod.TransactionParams();
+        var receiver = AlgoSdk.Crypto.Random.Bytes<Address>();
+
+        var buildGroup = Transaction.Atomic()
+            .AddTxn(Transaction.Payment(kmdAccount.Address, txnParams, receiver, 100_000L))
+            .Build();
+
+        var signingGroup = buildGroup.SignWithAsync(kmdAccount);
+        Assert.AreEqual(signingGroup.SignedTxnIndices, TxnIndices.Select(0));
+
+        var signedGroup = await signingGroup.FinishSigningAsync();
+
+        var (err, txid) = await AlgoApiClientSettings.Algod.RawTransaction(signedGroup);
+        AssertOkay(err);
+        var (confirmErr, confirmed) = await AlgoApiClientSettings.Algod.WaitForConfirmation(txid.TxId);
+        AssertOkay(confirmErr);
     });
 }
