@@ -95,7 +95,9 @@ and a number of accounts holding local state for that application.</p>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_EvalDelta_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct EvalDelta&lt;TTxn&gt; : IEquatable&lt;EvalDelta&lt;TTxn&gt;&gt;, IAppEvalDelta&lt;TTxn&gt; where TTxn : IAppliedSignedTxn&lt;TTxn&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiObject(&quot;&quot;, &quot;&quot;, 0)]
+[Serializable]
+public struct EvalDelta&lt;TTxn&gt; : IEquatable&lt;EvalDelta&lt;TTxn&gt;&gt;, IAppEvalDelta&lt;TTxn&gt; where TTxn : IAppliedSignedTxn&lt;TTxn&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +125,8 @@ and a number of accounts holding local state for that application.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StateDelta GlobalDelta { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;gd&quot;)]
+public StateDelta GlobalDelta { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,7 +152,8 @@ and a number of accounts holding local state for that application.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TTxn[] InnerTxns { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;itx&quot;)]
+public TTxn[] InnerTxns { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -176,7 +180,8 @@ and a number of accounts holding local state for that application.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StateDelta[] LocalDeltas { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;ld&quot;)]
+public StateDelta[] LocalDeltas { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -202,7 +207,8 @@ and a number of accounts holding local state for that application.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string[] Logs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;lg&quot;)]
+public string[] Logs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

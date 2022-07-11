@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "changelog/CHANGELOG.html",
-          "hash": "TWOc2nVsK0QWqddveexg7g=="
+          "hash": "020VAVCdjGk7B4dWxcAxpw=="
         }
       },
       "is_incremental": false,
@@ -67,7 +67,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/getting_started.html",
-          "hash": "3xsD5I1h3jhe6WTWbq7byw=="
+          "hash": "GXvL8tCSWuttMF7Z85EJvg=="
         }
       },
       "is_incremental": false,
@@ -263,35 +263,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.AbiReferenceType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AlgoSdk.AbiReferenceType.html",
-          "hash": "LffFPvwI9reGEWIE+FFH0A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.AbiReferenceTypeExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AlgoSdk.AbiReferenceTypeExtensions.html",
-          "hash": "eeVsK452tzd0CbT1jAln3A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/AlgoSdk.Account.yml",
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Account.html",
-          "hash": "5a2hnvCPhj/qiVxWnp5nRA=="
+          "hash": "zgaYzSfTvgk8/A5Fa/qmig=="
         }
       },
       "is_incremental": false,
@@ -303,7 +279,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AccountParticipation.html",
-          "hash": "ws5H8GuUkAHHs0pX0p3ugA=="
+          "hash": "iHfvtu4NQkLpz4VZgp7eOg=="
         }
       },
       "is_incremental": false,
@@ -315,7 +291,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Address.CheckSum.html",
-          "hash": "AXE5RQWLcu9qvoZjV8u9Ew=="
+          "hash": "tlzGuN1ulSET2Qw+svZFOg=="
         }
       },
       "is_incremental": false,
@@ -327,7 +303,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Address.html",
-          "hash": "hx6c0iKDGlMntSmt0bOF6w=="
+          "hash": "oUI9ouNAZdUWvtGzFbuAag=="
         }
       },
       "is_incremental": false,
@@ -363,7 +339,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AlgoApiException.html",
-          "hash": "qD4Ki1BFtEFDRDrYevEGnQ=="
+          "hash": "+9fdlOXYJY2C5w6GEZBG+Q=="
         }
       },
       "is_incremental": false,
@@ -495,7 +471,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AlgoApiFieldAttribute.html",
-          "hash": "uu0dRF2RZs/rCy59fj3Cvg=="
+          "hash": "9OZMV0AoNmEx62Uq5r0qxg=="
         }
       },
       "is_incremental": false,
@@ -507,7 +483,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AlgoApiFormatterAttribute.html",
-          "hash": "dRJBDP8Kwsrj5VLWdKy1Tw=="
+          "hash": "DQOUwy0odmqmIQETWJ141Q=="
         }
       },
       "is_incremental": false,
@@ -543,7 +519,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AlgoApiObject.html",
-          "hash": "VWBIYZNA9lmvl+kUxcgXbw=="
+          "hash": "1KPissd8TzjN5NxkcNoDMQ=="
         }
       },
       "is_incremental": false,
@@ -555,7 +531,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AlgoApiObjectAttribute.html",
-          "hash": "cLPFRkaCeakZWLrxTjCIug=="
+          "hash": "AqI5Q1vKiATzp2Bp5wfEcQ=="
         }
       },
       "is_incremental": false,
@@ -591,7 +567,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AlgoApiRequest.Awaiter-1.html",
-          "hash": "RUs7qIMG11VsE99c3/ZA+w=="
+          "hash": "hqMgVHEwBcCM0Inm5vVu5A=="
         }
       },
       "is_incremental": false,
@@ -603,7 +579,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AlgoApiRequest.Awaiter.html",
-          "hash": "jxPZWGwqnBRAx2b3j5qlCQ=="
+          "hash": "jw31YkHpwFj3JHprohtkNQ=="
         }
       },
       "is_incremental": false,
@@ -615,7 +591,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AlgoApiRequest.Sent-1.html",
-          "hash": "Y1N2QK2sQ0QE9VjdHq3wvQ=="
+          "hash": "nmzAX8KpZ+4u4stYGmTNRw=="
         }
       },
       "is_incremental": false,
@@ -627,7 +603,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AlgoApiRequest.Sent.html",
-          "hash": "L4RqfxvNZxsPs4yr31LLpQ=="
+          "hash": "vgWvyrfb+RJWYiUaExtzIQ=="
         }
       },
       "is_incremental": false,
@@ -639,7 +615,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AlgoApiRequest.SentWithProgress-1.html",
-          "hash": "ZqU52nsVRg0h3gyVwpzuxg=="
+          "hash": "e03v7IN0RKWM3sRayxC9/A=="
         }
       },
       "is_incremental": false,
@@ -651,7 +627,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AlgoApiRequest.SentWithProgress-2.html",
-          "hash": "dVFfTfakGnbhn5HhrLHv0A=="
+          "hash": "8M8OAnNvq9UpdQtoCezbIQ=="
         }
       },
       "is_incremental": false,
@@ -663,7 +639,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AlgoApiRequest.html",
-          "hash": "ekxtxIdXLIIUqlMsxyrIjg=="
+          "hash": "XQDCj/UNmpBAlmKXQxYFJA=="
         }
       },
       "is_incremental": false,
@@ -711,7 +687,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.Account.html",
-          "hash": "sz5NSQkRTkzmxlrZpCVU0Q=="
+          "hash": "i6wIHKq1p7mSewyErQ3TCQ=="
         }
       },
       "is_incremental": false,
@@ -723,7 +699,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.AccountApplicationResponse.html",
-          "hash": "OQsAkX4gt4+u2aouLxa1TA=="
+          "hash": "4HmzVWMwnA3NL2uWZiHqCw=="
         }
       },
       "is_incremental": false,
@@ -735,7 +711,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.AccountAssetResponse.html",
-          "hash": "A+juSep2Kmoysk53Fxk3cA=="
+          "hash": "0vDIsSlAkHl5IrwGu2HtLA=="
         }
       },
       "is_incremental": false,
@@ -747,7 +723,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.AccountParticipation.html",
-          "hash": "l5jcGx8dXyJtLUiBnqCRLQ=="
+          "hash": "toX3CFh0KYgykToZaoyrqw=="
         }
       },
       "is_incremental": false,
@@ -759,7 +735,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.AccountResponse.html",
-          "hash": "J9cG+EV78Qgw2Gh7EyYuZA=="
+          "hash": "cseg35mI/PYB9UYUrNrXaQ=="
         }
       },
       "is_incremental": false,
@@ -771,7 +747,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.AccountStateDelta.html",
-          "hash": "CB9TAG9AIUR0q48jJ0UpUw=="
+          "hash": "VgiOmAybb3U3xtn77orZ5g=="
         }
       },
       "is_incremental": false,
@@ -783,7 +759,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.Application.html",
-          "hash": "7r/50IZ3hzZ1Ll3gT9KW6w=="
+          "hash": "NuGYzXRQy6wAndmOdvUK/Q=="
         }
       },
       "is_incremental": false,
@@ -795,7 +771,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.ApplicationLocalState.html",
-          "hash": "kQyTiH4tJ1XSJ1eG6Tp0mA=="
+          "hash": "M70XRb5r54aOmSUYqjw3hg=="
         }
       },
       "is_incremental": false,
@@ -807,7 +783,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.ApplicationParams.html",
-          "hash": "GwKFHFfbj9tGg1LlA9RlRA=="
+          "hash": "VbmZbcWsNOgoZX4aUc/kFQ=="
         }
       },
       "is_incremental": false,
@@ -819,7 +795,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.ApplicationResponse.html",
-          "hash": "3S433dRxFy9qIBRjKfNa7Q=="
+          "hash": "8prO/JBAw6qZJZjD9TfJjw=="
         }
       },
       "is_incremental": false,
@@ -831,7 +807,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.ApplicationStateSchema.html",
-          "hash": "EB/Nkfnz5DTCDBBe5hvFHw=="
+          "hash": "Y2d4kJtOWy592BApajgNmQ=="
         }
       },
       "is_incremental": false,
@@ -843,7 +819,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.Asset.html",
-          "hash": "jTcVJwi+68tLyVX7Q1N4AA=="
+          "hash": "tYYlt9HbjdExovsBpluuGA=="
         }
       },
       "is_incremental": false,
@@ -855,7 +831,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.AssetHolding.html",
-          "hash": "MktN3XdIytYXTDisPak0vg=="
+          "hash": "m1+VOCku8DPPEBdxIwWivA=="
         }
       },
       "is_incremental": false,
@@ -867,7 +843,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.AssetParams.html",
-          "hash": "bBisu/1+TN7UGbaqwEEvVg=="
+          "hash": "wqOhC0ETBrVqyWOVAIyXqQ=="
         }
       },
       "is_incremental": false,
@@ -879,7 +855,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.AssetResponse.html",
-          "hash": "BQklCa6gSUsIA98mnXCsIg=="
+          "hash": "YPIQrxnTTUDYdngRA8zkgw=="
         }
       },
       "is_incremental": false,
@@ -891,7 +867,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.BlockResponse.html",
-          "hash": "iZDyYsxtV0rViEwOJhbDIg=="
+          "hash": "BAUiWkSmO3bi7T1AZjYz3Q=="
         }
       },
       "is_incremental": false,
@@ -903,7 +879,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.BuildVersion.html",
-          "hash": "F+66PTQQkqw0PLAM4vLCTA=="
+          "hash": "a5hjB7r9S4WhwBYwfYqeLA=="
         }
       },
       "is_incremental": false,
@@ -915,7 +891,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.CatchpointAbortResponse.html",
-          "hash": "f8aOK1dtrZBmSy8L340YLg=="
+          "hash": "2p9PJlkWEIBT+KdGvbPSlQ=="
         }
       },
       "is_incremental": false,
@@ -927,7 +903,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.CatchpointStartResponse.html",
-          "hash": "8a9YVczsE6k0VAnNN0Y4Hw=="
+          "hash": "lqpRotr/SoDZ/cXAOLwYVQ=="
         }
       },
       "is_incremental": false,
@@ -939,7 +915,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.CompileResponse.html",
-          "hash": "mTwM6ygLf81fHzIhQL842Q=="
+          "hash": "0xmKHEDj0Ht3m2pqWwcIFA=="
         }
       },
       "is_incremental": false,
@@ -951,7 +927,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.DryrunRequest.html",
-          "hash": "lwUx7HlGD/bEY9anWnngww=="
+          "hash": "fHPTxQwQcCf2kdrg3jCw9g=="
         }
       },
       "is_incremental": false,
@@ -963,7 +939,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.DryrunResponse.html",
-          "hash": "AU4fz3/2+vLnTTKdk4Bdag=="
+          "hash": "/rf1FR1SIPvdR/0y1s6C1w=="
         }
       },
       "is_incremental": false,
@@ -975,7 +951,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.DryrunSource.html",
-          "hash": "Pwn1ZsAxa/R8VTR7u1+u0A=="
+          "hash": "MrDFQMvY6H4ATxktwLIIGw=="
         }
       },
       "is_incremental": false,
@@ -987,7 +963,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.DryrunState.html",
-          "hash": "DZujiUL9YjFGWMVOA0MCPA=="
+          "hash": "eQvjg5/xFCfFYydWU9ogwA=="
         }
       },
       "is_incremental": false,
@@ -999,7 +975,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.DryrunTxnResult.html",
-          "hash": "w7+1iR/pjN/G0AoTGh4RTQ=="
+          "hash": "QgKPvxAjB3i0mpMNqLVeXQ=="
         }
       },
       "is_incremental": false,
@@ -1011,7 +987,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.EvalDelta.html",
-          "hash": "ZXnAiSoE6jxRtWI0DWjSkw=="
+          "hash": "6kZvvEA5s89NwNscRdGpug=="
         }
       },
       "is_incremental": false,
@@ -1023,7 +999,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.EvalDeltaKeyValue.html",
-          "hash": "EFjPUbZbbMsaLRYuvy9Y3A=="
+          "hash": "yBe1QdHYS2kB5c5orYSwMQ=="
         }
       },
       "is_incremental": false,
@@ -1035,7 +1011,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.NodeStatusResponse.html",
-          "hash": "n4J0b7HFu6lplBWlm93aYA=="
+          "hash": "UJzRAFWwx4zZ38ZTi3ANAA=="
         }
       },
       "is_incremental": false,
@@ -1047,7 +1023,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.ParticipationKey.html",
-          "hash": "90IbQ9MwO4H4xnRfi9/eKw=="
+          "hash": "U97M64VEagEiAQ6qR/n99g=="
         }
       },
       "is_incremental": false,
@@ -1059,7 +1035,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.ParticipationKeyResponse.html",
-          "hash": "gFe61R9OtWvIhQqwRH6sag=="
+          "hash": "P3U0Vc5iJr3aYFrgCuSr+g=="
         }
       },
       "is_incremental": false,
@@ -1071,7 +1047,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.ParticipationKeysResponse.html",
-          "hash": "dvQ6CCiFMnuIUHrImJrWcw=="
+          "hash": "kdmJWMGoKusf40o6scwkGg=="
         }
       },
       "is_incremental": false,
@@ -1083,7 +1059,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.PendingTransactionResponse.html",
-          "hash": "deZdxPtV+wsfri/S+cBs7g=="
+          "hash": "A+kwCkuCnFnn4yBlrVYb5Q=="
         }
       },
       "is_incremental": false,
@@ -1095,7 +1071,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.PendingTransactionsResponse.html",
-          "hash": "jR2nc5GVwto28kJ6Jrgbpg=="
+          "hash": "vdrG/BWl8jr9qjMNjkkXhg=="
         }
       },
       "is_incremental": false,
@@ -1107,7 +1083,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.PostParticipationResponse.html",
-          "hash": "QDWL9lnqa7nHVVdnkvBMxQ=="
+          "hash": "YnuYoHXr7iaA9BUuz6b0EQ=="
         }
       },
       "is_incremental": false,
@@ -1119,7 +1095,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.PostTransactionsResponse.html",
-          "hash": "EXK4BiR/br73NuXY/i+q5A=="
+          "hash": "NhU/Bx5b9q2k5ZuYoNF23Q=="
         }
       },
       "is_incremental": false,
@@ -1131,7 +1107,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.ProofResponse.html",
-          "hash": "3p9TQGpuMIQmei7CQxnAwQ=="
+          "hash": "EzyjH/YQYLqKrgwSznhCgw=="
         }
       },
       "is_incremental": false,
@@ -1143,7 +1119,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.StateDelta.html",
-          "hash": "kAPdup9TYCDU6p2DteU2mw=="
+          "hash": "0lnJGLoSZs/XUdZHa5sI2w=="
         }
       },
       "is_incremental": false,
@@ -1155,7 +1131,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.SupplyResponse.html",
-          "hash": "kux+ye7JyJdfRQpSS3fkhw=="
+          "hash": "quYWYjZ+HZOcoCzHMUmb/Q=="
         }
       },
       "is_incremental": false,
@@ -1167,7 +1143,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.TealKeyValue.html",
-          "hash": "qWLqgdPRF01vUuDKfMIhjA=="
+          "hash": "tBm7u9svXhudrTr1KckiPw=="
         }
       },
       "is_incremental": false,
@@ -1179,7 +1155,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.TealKeyValueStore.html",
-          "hash": "WpCP/vavAOUUCyhKRdmwFA=="
+          "hash": "46iqG4n81BqUt80M+LDsaA=="
         }
       },
       "is_incremental": false,
@@ -1191,7 +1167,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.TealValue.html",
-          "hash": "ElkTd2PBkBap69rwzIWyXw=="
+          "hash": "KLebtjIQGeKLaC+99a17hw=="
         }
       },
       "is_incremental": false,
@@ -1203,7 +1179,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.TransactionParametersResponse.html",
-          "hash": "krIyOycj3HeSK6+v4Ypeag=="
+          "hash": "NMXPxQv4zXSdS/59QcV8Ww=="
         }
       },
       "is_incremental": false,
@@ -1215,7 +1191,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.Version.html",
-          "hash": "+FxWYGbfVwcEKwbcSiJXhw=="
+          "hash": "KwurUT7CIIqce2J/pEUnBQ=="
         }
       },
       "is_incremental": false,
@@ -1227,7 +1203,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Algod.VersionsResponse.html",
-          "hash": "PEDEg8TVR/HP1F8o1KrPsA=="
+          "hash": "+On1OzcLIyvPOk2sbI0PKg=="
         }
       },
       "is_incremental": false,
@@ -1251,7 +1227,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AlgodClient.html",
-          "hash": "qB7SqKY0DmT4bn9VU77Stg=="
+          "hash": "jCcQZT3cxupc1MnhaEk4Lg=="
         }
       },
       "is_incremental": false,
@@ -1275,7 +1251,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AppCallTxn.Params.html",
-          "hash": "3OaaTuwKj3BImlskxku2fw=="
+          "hash": "DNP1undMkrAoV0K5PARtkw=="
         }
       },
       "is_incremental": false,
@@ -1287,7 +1263,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AppCallTxn.html",
-          "hash": "s00nAOaUS9ODkV7Nv7N5Mw=="
+          "hash": "LzzeC4KoH1//CXChmP6pjQ=="
         }
       },
       "is_incremental": false,
@@ -1299,7 +1275,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AppIndex.html",
-          "hash": "D7Njd1Y/J5/2n4cdXovN8g=="
+          "hash": "4+lYONbRZ50iCa5ucivXDA=="
         }
       },
       "is_incremental": false,
@@ -1311,7 +1287,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AppliedSignedTxn.html",
-          "hash": "zIhYHs0Qb5Yb28fPNzZ1dg=="
+          "hash": "9R0pN2C2r83FcrwmbNQJLQ=="
         }
       },
       "is_incremental": false,
@@ -1323,7 +1299,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.ApplyData-1.html",
-          "hash": "f5SsXwrBN3J2mI767uGluQ=="
+          "hash": "B0WoV7SrOJCXleWy5PH6Ww=="
         }
       },
       "is_incremental": false,
@@ -1371,7 +1347,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AssetConfigTxn.Params.html",
-          "hash": "of95GO+YcaJEwUWYfxBkcw=="
+          "hash": "bEtvvoyehpwqtJRmwRgeHQ=="
         }
       },
       "is_incremental": false,
@@ -1383,7 +1359,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AssetConfigTxn.html",
-          "hash": "alGtex00wOX/BIIWGGWr6g=="
+          "hash": "TeUcPte5cWuoEMpKT2F3bQ=="
         }
       },
       "is_incremental": false,
@@ -1395,7 +1371,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AssetFreezeTxn.Params.html",
-          "hash": "GoaVW5TO2l+XXw5wBBHqCw=="
+          "hash": "dNQA2npPkn9dVQbmD2LPyg=="
         }
       },
       "is_incremental": false,
@@ -1407,7 +1383,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AssetFreezeTxn.html",
-          "hash": "OBw8kQs7V58rhCsZhQsqtg=="
+          "hash": "qCx0bhYa5TUWNstwkwoFsA=="
         }
       },
       "is_incremental": false,
@@ -1419,7 +1395,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AssetIndex.html",
-          "hash": "Z+VjBCO4WLWbgvE1sGQSOg=="
+          "hash": "CgC0ePze14xWeJG3VoiWMg=="
         }
       },
       "is_incremental": false,
@@ -1431,7 +1407,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AssetParams.html",
-          "hash": "qVjFETX5npjtO0uqSRWCBA=="
+          "hash": "x4BDHWIXFvyqT9uDkEf2vg=="
         }
       },
       "is_incremental": false,
@@ -1443,7 +1419,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AssetTransferTxn.Params.html",
-          "hash": "XYZhKRHbOSgVoLIlelznYw=="
+          "hash": "hLsJWDRsVE3gzxC15KXWQA=="
         }
       },
       "is_incremental": false,
@@ -1455,7 +1431,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AssetTransferTxn.html",
-          "hash": "QpJzxtna4gycnfQn9P14HQ=="
+          "hash": "Cr4/lEHxXEhrw8sUjSA3dg=="
         }
       },
       "is_incremental": false,
@@ -1467,7 +1443,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AtomicTxn.AsyncSigning.html",
-          "hash": "9KZGEdG+BUhC4YqeykFLxA=="
+          "hash": "iPiXnKIvSdUcEtXqBZjwrA=="
         }
       },
       "is_incremental": false,
@@ -1479,7 +1455,19 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AtomicTxn.Building.html",
-          "hash": "LPzJOVGhSWsQJ6UVX/80jw=="
+          "hash": "M3KBsvVObhk2YJ0wgscluw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AtomicTxn.Confirmed.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AtomicTxn.Confirmed.html",
+          "hash": "mleCZ9KSFG9dnbwDSrqr1Q=="
         }
       },
       "is_incremental": false,
@@ -1503,7 +1491,19 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.AtomicTxn.Signing.html",
-          "hash": "o5XZafsbv1Oe4ZZyqiF6eQ=="
+          "hash": "DhZO6EQZ03BSQhabQxf9Uw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.AtomicTxn.Submitted.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.AtomicTxn.Submitted.html",
+          "hash": "mQDt3HSs1YYuRowDW3cHZQ=="
         }
       },
       "is_incremental": false,
@@ -1551,7 +1551,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.BlockCertificate.html",
-          "hash": "cv00EcKE82yUSvN2UAW4xw=="
+          "hash": "t10YiuNK97d/LwyIg/bOuQ=="
         }
       },
       "is_incremental": false,
@@ -1563,7 +1563,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.BlockHash.html",
-          "hash": "gDRE4dXv1B55e7BBgRd6RQ=="
+          "hash": "GsziwcToJEnnyimaNZZMIw=="
         }
       },
       "is_incremental": false,
@@ -1575,7 +1575,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.BlockHeader.html",
-          "hash": "Wq10mJSpzu/N/SwpXj+JiA=="
+          "hash": "/8o2Kku23SKV+ZwEZnzoTA=="
         }
       },
       "is_incremental": false,
@@ -1587,7 +1587,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.BlockResponse.html",
-          "hash": "IiZJigs7BzoKY6MPC6EqoA=="
+          "hash": "TwexHa1QJDeMRq2w/EecLw=="
         }
       },
       "is_incremental": false,
@@ -1599,7 +1599,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.BlockRewards.html",
-          "hash": "Yw3J+H8LFeUYUrslPger2Q=="
+          "hash": "MHkp1eRkjTPIGbxWXD0cqQ=="
         }
       },
       "is_incremental": false,
@@ -1611,7 +1611,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.BlockTransaction.html",
-          "hash": "c0WeNbuwBNVnfk/5tZ0oZw=="
+          "hash": "gqFcGh7fUpG0OrEq1xknBg=="
         }
       },
       "is_incremental": false,
@@ -1623,7 +1623,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.BlockUpgradeState.html",
-          "hash": "q+vvp67bQ5UYWvThXVv+5Q=="
+          "hash": "kjozei3aoFSRd1QixG8adw=="
         }
       },
       "is_incremental": false,
@@ -1635,7 +1635,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.BlockUpgradeVote.html",
-          "hash": "JM0h5Bkmk8QKtrkZigxutA=="
+          "hash": "FajpJWZIhRhJOIcfOp/zsw=="
         }
       },
       "is_incremental": false,
@@ -1695,7 +1695,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.CompiledTeal.html",
-          "hash": "bC2mgzY/QGuFXTKp6O/qog=="
+          "hash": "xUBlxO6FJeeeN6xWUJf7dw=="
         }
       },
       "is_incremental": false,
@@ -1755,7 +1755,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Crypto.Ed25519.PublicKey.html",
-          "hash": "x0OFZSX4MPxDFA3Ti4/00Q=="
+          "hash": "/7M3Zv6F2HtCen2cBbNeeg=="
         }
       },
       "is_incremental": false,
@@ -1767,7 +1767,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Crypto.Ed25519.SecretKeyHandle.html",
-          "hash": "4V03brysfeeNXb8rV4LWAA=="
+          "hash": "CEmLDofpaEsAvlWOJlSwWw=="
         }
       },
       "is_incremental": false,
@@ -1779,7 +1779,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Crypto.Ed25519.Seed.html",
-          "hash": "5ZvTEYGzcVRQfqMX6GNMCQ=="
+          "hash": "bV446cgbTc8WmRXSQnmcBQ=="
         }
       },
       "is_incremental": false,
@@ -1827,7 +1827,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Crypto.SecureMemoryHandle.html",
-          "hash": "6W1VmCWRERtDipM92cebjA=="
+          "hash": "mM1Qx46IsnzoGxaloSEo1A=="
         }
       },
       "is_incremental": false,
@@ -1851,7 +1851,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Crypto.Sha512_256_Hash.html",
-          "hash": "PQ0NAifPnWACX8jxjdU+Zw=="
+          "hash": "sTN1afA6PkwzGlv809wilQ=="
         }
       },
       "is_incremental": false,
@@ -2015,30 +2015,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.Editor.IAbiTypeDrawer.AbiTypeOption.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AlgoSdk.Editor.IAbiTypeDrawer.AbiTypeOption.html",
-          "hash": "noZhqZO32B7K8TJtNbk7iQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.Editor.IAbiTypeDrawer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AlgoSdk.Editor.IAbiTypeDrawer.html",
-          "hash": "sVS7zpFaRGKkIVZUPz2KcQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/AlgoSdk.Editor.MnemonicDrawer.yml",
       "output": {
         ".html": {
@@ -2115,7 +2091,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Editor.html",
-          "hash": "cLGWb5chW848QHL02Fk+ug=="
+          "hash": "URi+8Pxdw1W+ES2HtnGg0w=="
         }
       },
       "is_incremental": false,
@@ -2127,7 +2103,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Either-2.html",
-          "hash": "2EOc5f34r9iilumd2qufsQ=="
+          "hash": "VOKKGkW3mJYARAm9xUGJbw=="
         }
       },
       "is_incremental": false,
@@ -2151,7 +2127,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Endianness.html",
-          "hash": "JRN+W0B2EEKKRMUCRxuXAA=="
+          "hash": "0ydnXdbbxmsy4Lf4QBxq6Q=="
         }
       },
       "is_incremental": false,
@@ -2163,7 +2139,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.ErrorResponse.html",
-          "hash": "/A2MgZJvT/FQDoxip4NZVQ=="
+          "hash": "QEqZRQJJT9+teluqeE8ikA=="
         }
       },
       "is_incremental": false,
@@ -2175,7 +2151,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.EvalDelta-1.html",
-          "hash": "SQUClzsOGnaloxQJos3zaA=="
+          "hash": "lco/8sJb316nAOqqo1ir2g=="
         }
       },
       "is_incremental": false,
@@ -2187,7 +2163,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.ExcludeAccountFields.html",
-          "hash": "tBg/MYIJ376tp3VB4D7sNw=="
+          "hash": "f0TYNBJPvwJnkXj8UrAR7Q=="
         }
       },
       "is_incremental": false,
@@ -2235,7 +2211,31 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.AbiAddress.html",
-          "hash": "ZU5IEenWnCkhEiCtfdB/HA=="
+          "hash": "j5IUXTfeK4ygCK11eUahZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Experimental.Abi.AbiReferenceType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Experimental.Abi.AbiReferenceType.html",
+          "hash": "wBQy6wgmXWMXxS87nvJyLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Experimental.Abi.AbiReferenceTypeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Experimental.Abi.AbiReferenceTypeExtensions.html",
+          "hash": "OXwJ6yk9b4ZykcMPxS8gFw=="
         }
       },
       "is_incremental": false,
@@ -2247,7 +2247,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.AbiReferences.html",
-          "hash": "B5N0ZrbLPduQsA9vun5woA=="
+          "hash": "iOiawfTWQzXL1ma2vetUug=="
         }
       },
       "is_incremental": false,
@@ -2307,7 +2307,19 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.AbiType.html",
-          "hash": "Hmo23gZ8nfiZzIyPY/zu+Q=="
+          "hash": "GU+zEgUuHVsx6gEw9CgxbQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Experimental.Abi.AbiTypeCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Experimental.Abi.AbiTypeCode.html",
+          "hash": "BHk4+SXvrPptZjwYk3WhvA=="
         }
       },
       "is_incremental": false,
@@ -2319,7 +2331,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.AbiTypeExtensions.html",
-          "hash": "CrKLGkxKuiarYEEx2vcu5g=="
+          "hash": "WYc+sOcYturEeF2170BLlw=="
         }
       },
       "is_incremental": false,
@@ -2343,7 +2355,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.AddressType.html",
-          "hash": "0TSVVmgJnzieFl55+SEQoQ=="
+          "hash": "ojaQlitB0X5HaicqzW6AoQ=="
         }
       },
       "is_incremental": false,
@@ -2367,7 +2379,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.ArgsArray.html",
-          "hash": "g/YJ88tqi0BAcjZkolWndQ=="
+          "hash": "jTVbYsUJiPox2lFs/847Ew=="
         }
       },
       "is_incremental": false,
@@ -2391,7 +2403,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.Array-1.html",
-          "hash": "vb4Ly0Ow0PF4MT92PHfcTA=="
+          "hash": "g3nIOQsZlgWIL1SWrUVAkQ=="
         }
       },
       "is_incremental": false,
@@ -2399,11 +2411,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.Experimental.Abi.AtomicTxnExtensions.yml",
+      "source_relative_path": "api/AlgoSdk.Experimental.Abi.ArrayExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AlgoSdk.Experimental.Abi.AtomicTxnExtensions.html",
-          "hash": "vOq5ItcMt1KYq93uPyXWXg=="
+          "relative_path": "api/AlgoSdk.Experimental.Abi.ArrayExtensions.html",
+          "hash": "+fPnAYOKsSPy2dIBXU0mKQ=="
         }
       },
       "is_incremental": false,
@@ -2415,7 +2427,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.BoolType.html",
-          "hash": "VrC3+/Q1v6UAbshhqxMGeA=="
+          "hash": "jBR5gOEfdm2foPKFljHNUw=="
         }
       },
       "is_incremental": false,
@@ -2427,7 +2439,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.Boolean.html",
-          "hash": "i5UKPYfrFWV5tW1GF22bGQ=="
+          "hash": "ZTXtBsomrz/k4yx+rddXHw=="
         }
       },
       "is_incremental": false,
@@ -2439,7 +2451,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.ByteType.html",
-          "hash": "p5dVOg1Rf2UAeskRz/i6/w=="
+          "hash": "lBlFGDfAkDcK1Gmvrailkg=="
         }
       },
       "is_incremental": false,
@@ -2451,7 +2463,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.Contract.Deployment.html",
-          "hash": "u9HJZL7wiczNvHMoDWFkMg=="
+          "hash": "eQfuKAUBlz/4P6ut4RDioA=="
         }
       },
       "is_incremental": false,
@@ -2475,7 +2487,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.Contract.Deployments.html",
-          "hash": "Dpr9+P3npD6gvMTkd6UYcg=="
+          "hash": "bZ3NV+eHOKGwRLXU2yM6SA=="
         }
       },
       "is_incremental": false,
@@ -2487,7 +2499,31 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.Contract.html",
-          "hash": "qQDWCh18C88pAwkXmGBK6g=="
+          "hash": "Jort/pqcScBL9c6GsWJSSQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Experimental.Abi.Editor.IAbiTypeDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Experimental.Abi.Editor.IAbiTypeDrawer.html",
+          "hash": "rEtGGFNSQmxd3vcOPeBOPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Experimental.Abi.Editor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Experimental.Abi.Editor.html",
+          "hash": "nvEZaZ3WOTuLn8WWV99Law=="
         }
       },
       "is_incremental": false,
@@ -2523,7 +2559,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.FixedArrayType.html",
-          "hash": "s5wId05neNq8jCHada+nvg=="
+          "hash": "Qi3MkY+xdA6guMDl2V2WTg=="
         }
       },
       "is_incremental": false,
@@ -2535,7 +2571,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.IAbiType.html",
-          "hash": "ROyLC+Wp5BpVIzwEDIYBUQ=="
+          "hash": "cgy8KDd2Ke2AeKWCiTCdsA=="
         }
       },
       "is_incremental": false,
@@ -2595,7 +2631,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.Interface.html",
-          "hash": "kvaId0hbxgktCRN3qSDJdw=="
+          "hash": "BwduuN9qjR+YMQp8zx7mEw=="
         }
       },
       "is_incremental": false,
@@ -2607,7 +2643,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.Method.Arg.html",
-          "hash": "uVbQ+5Na5lZgy7yLFGxwRQ=="
+          "hash": "DAHz0vVHNCb8DczvYuAdNQ=="
         }
       },
       "is_incremental": false,
@@ -2619,7 +2655,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.Method.Return.html",
-          "hash": "4DFuZUFX7V7kLAHw5bc1HQ=="
+          "hash": "eudNyo8liw6XQ1MwVjvveg=="
         }
       },
       "is_incremental": false,
@@ -2631,7 +2667,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.Method.html",
-          "hash": "0Fis5Y7s+NrAEtUY3cLcZg=="
+          "hash": "lu+3Z2FioJyOUIp+n3Kl6Q=="
         }
       },
       "is_incremental": false,
@@ -2651,6 +2687,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Experimental.Abi.MethodCallResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Experimental.Abi.MethodCallResult.html",
+          "hash": "6LrPOcp+ujoVUtyre6Qu+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/AlgoSdk.Experimental.Abi.MethodSelector.yml",
       "output": {
         ".html": {
@@ -2663,11 +2711,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Experimental.Abi.PackedBooleans.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Experimental.Abi.PackedBooleans.html",
+          "hash": "LlixvdP0RzVAVCKBkyL3GA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/AlgoSdk.Experimental.Abi.ReferenceType.yml",
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.ReferenceType.html",
-          "hash": "xqkVajXsFfOYfcaiGtrGIQ=="
+          "hash": "L4u1G0svYFBN9rsaDB1y9Q=="
         }
       },
       "is_incremental": false,
@@ -2687,11 +2747,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/AlgoSdk.Experimental.Abi.String.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AlgoSdk.Experimental.Abi.String.html",
+          "hash": "F2wGW1Dy7UsruKLlEvMhCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/AlgoSdk.Experimental.Abi.StringType.yml",
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.StringType.html",
-          "hash": "XyBHm2I3SbKjtuFkpUFoeQ=="
+          "hash": "Ym3dhYQ+ggKegi/pDKXx7Q=="
         }
       },
       "is_incremental": false,
@@ -2703,7 +2775,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.TransactionReferenceType.html",
-          "hash": "DMh6SWcVv2X4PhmScSjjcw=="
+          "hash": "EiO347+qhcmBcN0C3Aro5w=="
         }
       },
       "is_incremental": false,
@@ -2715,7 +2787,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.Tuple-1.html",
-          "hash": "53/qJhtbYIeuEwRvCXqy+Q=="
+          "hash": "Rr+i2uIq1IZmTMAPDYKUQQ=="
         }
       },
       "is_incremental": false,
@@ -2739,7 +2811,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.TupleType.html",
-          "hash": "XEnkNv2VQg6tm8mcjyJt2w=="
+          "hash": "yiPR4DwxdDtcrDRHzCCk7A=="
         }
       },
       "is_incremental": false,
@@ -2751,7 +2823,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.UFixedNxM.html",
-          "hash": "q2s5++SivZFV4SeTWEXpAQ=="
+          "hash": "TVxWri2hqlvJeG3uviuJng=="
         }
       },
       "is_incremental": false,
@@ -2763,7 +2835,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.UFixedType.html",
-          "hash": "XU2Rp9/de5nYGBou41IGgA=="
+          "hash": "9e2pQzpEgWxpb9WCnEB8Vw=="
         }
       },
       "is_incremental": false,
@@ -2775,7 +2847,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.UInt16.html",
-          "hash": "1RvnT0mZT84l7oqgWk4Q7w=="
+          "hash": "zS/TmxTV6F0xL/7tBGSi1Q=="
         }
       },
       "is_incremental": false,
@@ -2787,7 +2859,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.UInt32.html",
-          "hash": "UgWXs9IEUMsFwnDPCYejIQ=="
+          "hash": "uo+JylvxQbWtS3fT3vI5qQ=="
         }
       },
       "is_incremental": false,
@@ -2799,7 +2871,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.UInt64.html",
-          "hash": "1YP6J0zl7QVAe0l7XtBP4Q=="
+          "hash": "TT2wnazmsH+NarvOjQVwCA=="
         }
       },
       "is_incremental": false,
@@ -2811,7 +2883,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.UInt8.html",
-          "hash": "bm7+lvm/mBMA+2vlfQT/dg=="
+          "hash": "SqU86WO+9R/g9TGqpImF3g=="
         }
       },
       "is_incremental": false,
@@ -2823,7 +2895,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.UIntN.html",
-          "hash": "DohSNqwE6mxjlx/zTCYR3Q=="
+          "hash": "42x6inW7f/VjhZrtXsSc2w=="
         }
       },
       "is_incremental": false,
@@ -2847,7 +2919,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.UIntType.html",
-          "hash": "DiTYFQaL8jxeKvlObvgAXw=="
+          "hash": "FXNJNFy98j/zeUGiR6AmzA=="
         }
       },
       "is_incremental": false,
@@ -2859,7 +2931,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.VariableArrayType.html",
-          "hash": "e4m/EiJTWFf2dNdkWjJ/OA=="
+          "hash": "mzQFPaXTLbmo8lLV6U/Jkw=="
         }
       },
       "is_incremental": false,
@@ -2871,7 +2943,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Experimental.Abi.html",
-          "hash": "CtAteW63oL90kRWVffOEGg=="
+          "hash": "yQjQTHDO5k612JaB/Nvm2Q=="
         }
       },
       "is_incremental": false,
@@ -3267,7 +3339,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.GenesisAccountAlloc.State.html",
-          "hash": "7nWw993w6bWam+FtNk0EwQ=="
+          "hash": "o8Z/S0SjruDxTt0u1JVGWQ=="
         }
       },
       "is_incremental": false,
@@ -3279,7 +3351,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.GenesisAccountAlloc.html",
-          "hash": "hH75OBLi4TuFmdzTGaCg5Q=="
+          "hash": "DZ1WBEzoYEtBWVKsO0lLWQ=="
         }
       },
       "is_incremental": false,
@@ -3291,7 +3363,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.GenesisHash.html",
-          "hash": "mFO33Ab00yF2b1uCTkK2xg=="
+          "hash": "Z3EmeWa6r7xmP28BWHkJZw=="
         }
       },
       "is_incremental": false,
@@ -3303,7 +3375,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.GenesisInformation.html",
-          "hash": "/Bs8lbZjZyXsQcD2C4S/BQ=="
+          "hash": "FvmptXiONJBxqX4dlMZ2YQ=="
         }
       },
       "is_incremental": false,
@@ -3339,7 +3411,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Header.html",
-          "hash": "HCaKB2F9Dehn/tzr3trrjg=="
+          "hash": "J8Bhf98kM/RfG5tztjYY6Q=="
         }
       },
       "is_incremental": false,
@@ -3351,7 +3423,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Hex.html",
-          "hash": "sXnYi5wZF+b35G74R4ghJA=="
+          "hash": "d1zdfOnJ+AqEq7nKMqdaCQ=="
         }
       },
       "is_incremental": false,
@@ -3603,7 +3675,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.IIndexerClient.html",
-          "hash": "Eb3WzPH2CfQlNu709b9/CQ=="
+          "hash": "J+y2ef1hsGZb3/yw9gJpUg=="
         }
       },
       "is_incremental": false,
@@ -3711,7 +3783,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.ITransactionHeader.html",
-          "hash": "+EjuYyzQPf52m8iVb5Oeqg=="
+          "hash": "7G1LivluVvlfIKgGYKvY1A=="
         }
       },
       "is_incremental": false,
@@ -3747,7 +3819,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.Account.html",
-          "hash": "4OoAR64ZdGvGD9D9lowVDQ=="
+          "hash": "XoQGhVJXLW+00Y72BTxWBw=="
         }
       },
       "is_incremental": false,
@@ -3759,7 +3831,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.AccountParticipation.html",
-          "hash": "Z0UO8iDQ3xqVSOUxVJeZ0w=="
+          "hash": "yo4E/gBJdxDewn8Mk3F3Gw=="
         }
       },
       "is_incremental": false,
@@ -3771,7 +3843,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.AccountResponse.html",
-          "hash": "c34FgaUU/pfFDYoiItF2tg=="
+          "hash": "mEKFAH+MBAaHyLnktDmaxQ=="
         }
       },
       "is_incremental": false,
@@ -3783,7 +3855,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.AccountStateDelta.html",
-          "hash": "bzLGEsGY4yQSB7we09Ikkw=="
+          "hash": "CZ4M3fYSm0dJ9FpO1ds8Yw=="
         }
       },
       "is_incremental": false,
@@ -3795,7 +3867,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.AccountsResponse.html",
-          "hash": "zJzo+HmxTZWyopsrZmbylQ=="
+          "hash": "ocvAI208hygFwImZoW0LIA=="
         }
       },
       "is_incremental": false,
@@ -3807,7 +3879,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.Application.html",
-          "hash": "Na3rhL0g0GGBnkR//aC+tw=="
+          "hash": "1ll5bqyBlF8B0Nlv6z0oJg=="
         }
       },
       "is_incremental": false,
@@ -3819,7 +3891,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.ApplicationLocalState.html",
-          "hash": "VTCR+O70X5iJ492uDa70TA=="
+          "hash": "aXb0TpJdUpJJZ7XKuxr9Sg=="
         }
       },
       "is_incremental": false,
@@ -3831,7 +3903,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.ApplicationLocalStatesResponse.html",
-          "hash": "4igPyp71pebIEXVOOgWpvA=="
+          "hash": "15P1pyEkyK2zrLi47dy5zg=="
         }
       },
       "is_incremental": false,
@@ -3843,7 +3915,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.ApplicationLogData.html",
-          "hash": "LilXQh3r+GD2u5K7opfggg=="
+          "hash": "UoXcUy4oc3XGPEtZdBvpvg=="
         }
       },
       "is_incremental": false,
@@ -3855,7 +3927,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.ApplicationLogsResponse.html",
-          "hash": "bYcn2l1wBrj5SMF3+GmRfQ=="
+          "hash": "5Q1ZcgJJWIwX+aqKnkpm1A=="
         }
       },
       "is_incremental": false,
@@ -3867,7 +3939,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.ApplicationParams.html",
-          "hash": "X2EmJSQJOqaqbX64BkYv9w=="
+          "hash": "9ymxxrBEABbwhH1VPu01GA=="
         }
       },
       "is_incremental": false,
@@ -3879,7 +3951,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.ApplicationResponse.html",
-          "hash": "8t+P8aCC4tHcjKqG9gKSNA=="
+          "hash": "vJHcMDUEqEb/stD+GG0c+w=="
         }
       },
       "is_incremental": false,
@@ -3891,7 +3963,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.ApplicationStateSchema.html",
-          "hash": "u6rfFW9WkBvuSwGjObuZ3g=="
+          "hash": "Ly6GM/FGsbjBGdrkzxah6A=="
         }
       },
       "is_incremental": false,
@@ -3903,7 +3975,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.ApplicationsResponse.html",
-          "hash": "6Y2CkiLq6fa4+5Ub3rLttA=="
+          "hash": "wrnRX2lzFkkWsbhIo6m/Fg=="
         }
       },
       "is_incremental": false,
@@ -3915,7 +3987,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.Asset.html",
-          "hash": "jllk8WAkHCC6NTbmAaryXA=="
+          "hash": "GloO8/9A6Sm5QEZg7vsxSw=="
         }
       },
       "is_incremental": false,
@@ -3927,7 +3999,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.AssetBalancesResponse.html",
-          "hash": "Ko8kjCMHcC8xRYgoAPPC7g=="
+          "hash": "s0a/i++BDPunXH/PLPU1fQ=="
         }
       },
       "is_incremental": false,
@@ -3939,7 +4011,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.AssetHolding.html",
-          "hash": "l7AVwPyZyyunzbd6dBKoTA=="
+          "hash": "08AEImV7xXw6hTqUjWxL1A=="
         }
       },
       "is_incremental": false,
@@ -3951,7 +4023,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.AssetHoldingsResponse.html",
-          "hash": "3pkwdBoEvydTHkTN13e2QQ=="
+          "hash": "qlUioCR6tF0JUW2w359ckA=="
         }
       },
       "is_incremental": false,
@@ -3963,7 +4035,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.AssetParams.html",
-          "hash": "krG1NT6XD/4K7fEVK9cQmQ=="
+          "hash": "NLBUPr5uDUQw495eOIAIpg=="
         }
       },
       "is_incremental": false,
@@ -3975,7 +4047,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.AssetResponse.html",
-          "hash": "S+3fx2neJk1cs24Nj0SCVQ=="
+          "hash": "PFMSuOzja7BWMwHuNFNRKQ=="
         }
       },
       "is_incremental": false,
@@ -3987,7 +4059,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.AssetsResponse.html",
-          "hash": "R9oMF7hEOVnGAL/iTqFtsA=="
+          "hash": "qYZsvjHGgW6N9aKH+w4KCQ=="
         }
       },
       "is_incremental": false,
@@ -3999,7 +4071,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.Block.html",
-          "hash": "Gt7lcTw7T0hqr4MnKdxzCw=="
+          "hash": "4AYYrkSpz/Ni+neroRMjCA=="
         }
       },
       "is_incremental": false,
@@ -4011,7 +4083,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.BlockResponse.html",
-          "hash": "a/VS2HewSWXVYHj/lVFdsQ=="
+          "hash": "SIzITxJ+gKjl32ATfCiKUQ=="
         }
       },
       "is_incremental": false,
@@ -4023,7 +4095,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.BlockRewards.html",
-          "hash": "HTT/zmBZHSpHuKPAA48MgA=="
+          "hash": "y9iMV/cHKGcHUrxsF0I2lg=="
         }
       },
       "is_incremental": false,
@@ -4035,7 +4107,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.BlockUpgradeState.html",
-          "hash": "2ym4C+bMrdTNKktssbByRA=="
+          "hash": "PtGm9rGJMimhtoHCleCM0w=="
         }
       },
       "is_incremental": false,
@@ -4047,7 +4119,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.BlockUpgradeVote.html",
-          "hash": "a2xRq7Dk0mwJA6FmeSLG7A=="
+          "hash": "T7FQLr+BRLmcaUpvn9XnBg=="
         }
       },
       "is_incremental": false,
@@ -4059,7 +4131,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.EvalDelta.html",
-          "hash": "oHLhFpTLvONeMJR4DuHCYw=="
+          "hash": "gVw548Ya60udY38gSW1GoA=="
         }
       },
       "is_incremental": false,
@@ -4071,7 +4143,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.EvalDeltaKeyValue.html",
-          "hash": "xbEtPLitY1MheR/vounl1A=="
+          "hash": "q/6BAn/6dd28WWlVgjXRiw=="
         }
       },
       "is_incremental": false,
@@ -4083,7 +4155,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.HealthCheck.html",
-          "hash": "Bkw9webHQQVZcPt9kdDoMg=="
+          "hash": "+J9WwuxX8tpHgnaBony7nw=="
         }
       },
       "is_incremental": false,
@@ -4095,7 +4167,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.HealthCheckResponse.html",
-          "hash": "C+cG1UqYSQWYUp0wE5jYxQ=="
+          "hash": "bq2BL2F19c8HvtCC79CYEg=="
         }
       },
       "is_incremental": false,
@@ -4107,7 +4179,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.MiniAssetHolding.html",
-          "hash": "DXBuAcyNOba/C/lAUb/zkQ=="
+          "hash": "9+qQjmEfWZjuAQrQ62L9yQ=="
         }
       },
       "is_incremental": false,
@@ -4119,7 +4191,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.StateDelta.html",
-          "hash": "4ASLqyTEDjAnKTSzToO2XA=="
+          "hash": "Gpt7Mzrx1w/bKA3J8qZ32Q=="
         }
       },
       "is_incremental": false,
@@ -4131,7 +4203,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.StateSchema.html",
-          "hash": "2cq4uMbTDxNYg9wRenI7Uw=="
+          "hash": "el1uqc4Y7X576cox+W0+ag=="
         }
       },
       "is_incremental": false,
@@ -4143,7 +4215,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.TealKeyValue.html",
-          "hash": "rckwJwJrJxXmYVNMMhZilQ=="
+          "hash": "bdc1j0JytuJJfLsL5i9lVg=="
         }
       },
       "is_incremental": false,
@@ -4155,7 +4227,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.TealKeyValueStore.html",
-          "hash": "ehEMBheZWpXR4ZGn9jhJQQ=="
+          "hash": "mZCkRuM+hYuPQK6qi5KqDw=="
         }
       },
       "is_incremental": false,
@@ -4167,7 +4239,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.TealValue.html",
-          "hash": "sioIBXjeNGVZgxylFeklQg=="
+          "hash": "azQlpow3lAOKcMUpxcNDYw=="
         }
       },
       "is_incremental": false,
@@ -4179,7 +4251,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.Transaction.html",
-          "hash": "U5xdJrJrSj4DMa1ekAMtWQ=="
+          "hash": "4QFn0ePcID6wu6vkDO06bw=="
         }
       },
       "is_incremental": false,
@@ -4191,7 +4263,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.TransactionApplication.html",
-          "hash": "Qpf2WFeI4zLDMrRRWMk+NA=="
+          "hash": "FjWAx3uh8Y8zcUQS6KpR5w=="
         }
       },
       "is_incremental": false,
@@ -4203,7 +4275,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.TransactionAssetConfig.html",
-          "hash": "Hs++Q9GSc6Oldcd16+VK/w=="
+          "hash": "Q+guntcZhDam9NvsWiGmOQ=="
         }
       },
       "is_incremental": false,
@@ -4215,7 +4287,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.TransactionAssetFreeze.html",
-          "hash": "uXZYj0DJGtD7CyEceTa0eg=="
+          "hash": "9+kQ+Qfv6ZNiYCfRECSgVA=="
         }
       },
       "is_incremental": false,
@@ -4227,7 +4299,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.TransactionAssetTransfer.html",
-          "hash": "27SyuGiDAZUTXMz7L8/Z9A=="
+          "hash": "PkDGWo8SZFEeg7jTqutMIQ=="
         }
       },
       "is_incremental": false,
@@ -4239,7 +4311,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.TransactionKeyreg.html",
-          "hash": "JQaDUiBPSjAYQKdeqv+Pdw=="
+          "hash": "A3bA2xV9Zf7RiRkZAzKDZA=="
         }
       },
       "is_incremental": false,
@@ -4251,7 +4323,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.TransactionPayment.html",
-          "hash": "Ac1on27h2l1YBaqZ5tYgIg=="
+          "hash": "PKwd7TWIZj+lAmNO8u4BJA=="
         }
       },
       "is_incremental": false,
@@ -4263,7 +4335,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.TransactionResponse.html",
-          "hash": "4qAoHKVnP7gPAAkHH3Epig=="
+          "hash": "V4rAmsIdpImDkouon2ulBQ=="
         }
       },
       "is_incremental": false,
@@ -4275,7 +4347,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.TransactionSignature.html",
-          "hash": "+KuaY21vE9NU1hGr2vhHSw=="
+          "hash": "mSI/qEwDskd/j20zd0kjAA=="
         }
       },
       "is_incremental": false,
@@ -4287,7 +4359,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.TransactionSignatureLogicsig.html",
-          "hash": "VTV/GPSqjJxi0UX0SNIY8A=="
+          "hash": "zPD4hsT7AhIfMOpCYT/g2g=="
         }
       },
       "is_incremental": false,
@@ -4299,7 +4371,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.TransactionSignatureMultisig.html",
-          "hash": "uOHVO3JQ1Lcog1UlJNudNA=="
+          "hash": "NXlJWVN/JkA1/oJ5/FFuZA=="
         }
       },
       "is_incremental": false,
@@ -4311,7 +4383,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.TransactionSignatureMultisigSubsignature.html",
-          "hash": "j1g3/uqNuoigYuxhXi6jCA=="
+          "hash": "w02RuEpkft02CvpsG79ffA=="
         }
       },
       "is_incremental": false,
@@ -4323,7 +4395,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Indexer.TransactionsResponse.html",
-          "hash": "WyENYw0QyaS9R/BeHZ+DOg=="
+          "hash": "PaQCBcq6hwucxghzppWjIQ=="
         }
       },
       "is_incremental": false,
@@ -4347,7 +4419,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.IndexerClient.html",
-          "hash": "v/EdYtnL9DaJifDqn5HJdQ=="
+          "hash": "w2erMhtwPsd/7AR6iOx4sQ=="
         }
       },
       "is_incremental": false,
@@ -4419,7 +4491,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Json.JsonReadException.html",
-          "hash": "6obnWYy8XHv16+QvAEveVQ=="
+          "hash": "zFFUiLlaUSBcdA8vcIlF1g=="
         }
       },
       "is_incremental": false,
@@ -4503,7 +4575,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.KeyRegTxn.Params.html",
-          "hash": "f3folRV6A4Hn8+8Ai7xjFQ=="
+          "hash": "/C4E8UpEBrwRFr+L0lJXLA=="
         }
       },
       "is_incremental": false,
@@ -4515,7 +4587,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.KeyRegTxn.html",
-          "hash": "ZqafYn0QZDF2fdzKnvEJIQ=="
+          "hash": "llkLABwd44XQBOg/fvs6pA=="
         }
       },
       "is_incremental": false,
@@ -4527,7 +4599,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.CreateWalletRequest.html",
-          "hash": "IgrQ098tXk9XGkgF7M4a2A=="
+          "hash": "/v9fTEfgeyCU+ZgO9O1MQQ=="
         }
       },
       "is_incremental": false,
@@ -4539,7 +4611,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.CreateWalletResponse.html",
-          "hash": "dWxlRApBBNkrpqv17fHTpw=="
+          "hash": "fF9uST3GWaUZnzabtscKIw=="
         }
       },
       "is_incremental": false,
@@ -4551,7 +4623,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.DeleteKeyRequest.html",
-          "hash": "5LKmmzX/p7K1PkcUqnvF3A=="
+          "hash": "4QeabgAQMJNV0RcNXcuN4Q=="
         }
       },
       "is_incremental": false,
@@ -4563,7 +4635,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.DeleteMultisigRequest.html",
-          "hash": "ddf4v1BNW5q1Aiqg8Y5sLA=="
+          "hash": "/8SD1iTF9EcjR6460+nGNw=="
         }
       },
       "is_incremental": false,
@@ -4575,7 +4647,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.ExportKeyRequest.html",
-          "hash": "vNPLeqj/peK8BNNlclp+YQ=="
+          "hash": "qGecYXLQtrSvHYDQP4sLgQ=="
         }
       },
       "is_incremental": false,
@@ -4587,7 +4659,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.ExportKeyResponse.html",
-          "hash": "2mAdv/p0ezeDBOGALRciFA=="
+          "hash": "XDMXBuMhF7O9ohpFfwyPGQ=="
         }
       },
       "is_incremental": false,
@@ -4599,7 +4671,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.ExportMasterKeyRequest.html",
-          "hash": "F9V9lDAvWuF/mdjl9C0lkw=="
+          "hash": "EiD+/I1P+rxuR6ESjBM5sg=="
         }
       },
       "is_incremental": false,
@@ -4611,7 +4683,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.ExportMasterKeyResponse.html",
-          "hash": "eqsciil7OXGQn93ixHefvw=="
+          "hash": "/wt2djB8MscTDLn+r5VrPg=="
         }
       },
       "is_incremental": false,
@@ -4623,7 +4695,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.ExportMultisigRequest.html",
-          "hash": "HRn3KtO7p3azeI8zykuUVQ=="
+          "hash": "nLHlVGSo+/LQS6SsUsMYWQ=="
         }
       },
       "is_incremental": false,
@@ -4635,7 +4707,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.ExportMultisigResponse.html",
-          "hash": "raNiwa5JtOQo0cU82sSW7w=="
+          "hash": "AcmL4hiUZCNrv+TyMuB3dg=="
         }
       },
       "is_incremental": false,
@@ -4647,7 +4719,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.GenerateKeyRequest.html",
-          "hash": "yjfFlgxkZUu11Oaobcl53A=="
+          "hash": "FuGhT/gevt9rZP4WjoNuYQ=="
         }
       },
       "is_incremental": false,
@@ -4659,7 +4731,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.GenerateKeyResponse.html",
-          "hash": "3dVEk+QGP54fRhfpPNnWrQ=="
+          "hash": "PuVCFtlzcuLHAbog5ZgOZQ=="
         }
       },
       "is_incremental": false,
@@ -4671,7 +4743,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.ImportKeyRequest.html",
-          "hash": "raN7rUfsYZsBuDvMjmYkgg=="
+          "hash": "PD4qUzsQExezxBwfzVA2Mw=="
         }
       },
       "is_incremental": false,
@@ -4683,7 +4755,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.ImportKeyResponse.html",
-          "hash": "IcwhnaTdBbkkSdQsnXAApg=="
+          "hash": "A3wWXnO35fgTZXpwmFq8sA=="
         }
       },
       "is_incremental": false,
@@ -4695,7 +4767,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.ImportMultisigRequest.html",
-          "hash": "+AWSbH5bMJpNHb2RAMsj8A=="
+          "hash": "KWRWs+AWao/HKe1Jm+YOiQ=="
         }
       },
       "is_incremental": false,
@@ -4707,7 +4779,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.ImportMultisigResponse.html",
-          "hash": "HlayV8P6dF76QA47AgL4WQ=="
+          "hash": "AodhEfbFXua79jjdPWKBvw=="
         }
       },
       "is_incremental": false,
@@ -4719,7 +4791,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.InitWalletHandleTokenRequest.html",
-          "hash": "Q0AuWrb5WCOXkGyvbHGpxQ=="
+          "hash": "2CtFcz807mFzdxw4Vdu5Ug=="
         }
       },
       "is_incremental": false,
@@ -4731,7 +4803,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.InitWalletHandleTokenResponse.html",
-          "hash": "QSTEdrZYOMY6O7X0mbCxBA=="
+          "hash": "99+gayDVCU5m+JD93jUeXw=="
         }
       },
       "is_incremental": false,
@@ -4743,7 +4815,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.ListKeysRequest.html",
-          "hash": "XNeNCXPS4JQFKZ0G7cP8Tg=="
+          "hash": "pIfS2y8vlNBCJyqqxk9Sag=="
         }
       },
       "is_incremental": false,
@@ -4755,7 +4827,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.ListKeysResponse.html",
-          "hash": "k9vbqVRNLMH40WAKjkrP4Q=="
+          "hash": "O8936RX6Fc5KpvIHA3mrAA=="
         }
       },
       "is_incremental": false,
@@ -4767,7 +4839,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.ListMultisigRequest.html",
-          "hash": "5tm4M4QPE0KbXDR3UIrcag=="
+          "hash": "ACey3Db/4dRI1jbVfUjnEg=="
         }
       },
       "is_incremental": false,
@@ -4779,7 +4851,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.ListMultisigResponse.html",
-          "hash": "nO7seiHxuLwSVx0PZkWr0g=="
+          "hash": "3qCzABr5OwZiC9AetT9kfQ=="
         }
       },
       "is_incremental": false,
@@ -4791,7 +4863,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.ListWalletsResponse.html",
-          "hash": "j/S8l+2/SzEF/uNBhCfgbQ=="
+          "hash": "U0O3M40TPM5q529lvcLteg=="
         }
       },
       "is_incremental": false,
@@ -4803,7 +4875,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.ReleaseWalletHandleTokenRequest.html",
-          "hash": "KXP3YrRRNFeuz7O6MmmMsQ=="
+          "hash": "QH/tbnmVfXdX+T5IAQMSrw=="
         }
       },
       "is_incremental": false,
@@ -4815,7 +4887,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.RenameWalletRequest.html",
-          "hash": "1xHfrvfQUTW7KPQVvuKZuA=="
+          "hash": "TJv0PHi1Otyel0g9d1wWFQ=="
         }
       },
       "is_incremental": false,
@@ -4827,7 +4899,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.RenameWalletResponse.html",
-          "hash": "/JJJJftKBEvQD4ErnVdzdA=="
+          "hash": "WxbXCnR+YiOjEBcc15hcsA=="
         }
       },
       "is_incremental": false,
@@ -4839,7 +4911,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.RenewWalletHandleTokenRequest.html",
-          "hash": "Bv5WvKkZR9wEpe0Qkzcl6w=="
+          "hash": "5W5g6c0VOuAx7ws4pYHzPw=="
         }
       },
       "is_incremental": false,
@@ -4851,7 +4923,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.RenewWalletHandleTokenResponse.html",
-          "hash": "JKJvJ47b7Hzw2aw4Rm2tMw=="
+          "hash": "yhYnf7LyPqu/7R254g9Sug=="
         }
       },
       "is_incremental": false,
@@ -4863,7 +4935,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.SignMultisigRequest.html",
-          "hash": "sIXbRfHUtp4aqpdzh4JSdA=="
+          "hash": "VOyb7kZJnoMt+pxE4RJ/6w=="
         }
       },
       "is_incremental": false,
@@ -4875,7 +4947,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.SignMultisigResponse.html",
-          "hash": "bUEAZ3Ded/c3628BJoi46g=="
+          "hash": "Bexol7yb+A/ViXp2qhy0GA=="
         }
       },
       "is_incremental": false,
@@ -4887,7 +4959,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.SignProgramMultisigRequest.html",
-          "hash": "yeramOgMEjFEBFMTW1YUaQ=="
+          "hash": "XCNJTjXEfcNl45E/oqBvaw=="
         }
       },
       "is_incremental": false,
@@ -4899,7 +4971,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.SignProgramMultisigResponse.html",
-          "hash": "ZQvWcwuwSXPKQ0Xlt6Hlag=="
+          "hash": "Ko+HTLSp0uFTC7+LquGlww=="
         }
       },
       "is_incremental": false,
@@ -4911,7 +4983,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.SignProgramRequest.html",
-          "hash": "tAydkjYIsdOLLu3SHe8dWA=="
+          "hash": "n34at4aAqOkeYrTN+uxdwA=="
         }
       },
       "is_incremental": false,
@@ -4923,7 +4995,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.SignProgramResponse.html",
-          "hash": "oUrcJ88F+knQYdYZK9tQbg=="
+          "hash": "I7RcWi7SmRfRoZXEdjDjcA=="
         }
       },
       "is_incremental": false,
@@ -4935,7 +5007,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.SignTransactionRequest.html",
-          "hash": "rhjgwAQO+YE9Y3fAKX+T3Q=="
+          "hash": "YtKHZT/yBaVRv5MVVwo0jA=="
         }
       },
       "is_incremental": false,
@@ -4947,7 +5019,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.SignTransactionResponse.html",
-          "hash": "U3srM4kShbHQjmBiemawSA=="
+          "hash": "BGb2LJoosQhUACyr3+kEWw=="
         }
       },
       "is_incremental": false,
@@ -4959,7 +5031,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.VersionsResponse.html",
-          "hash": "iPiQyt9OIzsBPR3+83g/6Q=="
+          "hash": "VkMt7mDk5+fWibsAmW15Iw=="
         }
       },
       "is_incremental": false,
@@ -4971,7 +5043,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.Wallet.html",
-          "hash": "jAaLJxUSSF1f0m5TTTcsrQ=="
+          "hash": "miMvbBSTNILEP/JYWRXExg=="
         }
       },
       "is_incremental": false,
@@ -4983,7 +5055,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.WalletHandle.html",
-          "hash": "RUre3cBCiVld8JCkW6TVzA=="
+          "hash": "ybn3lOIF5GBSpw67ADCJuQ=="
         }
       },
       "is_incremental": false,
@@ -4995,7 +5067,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.WalletInfoRequest.html",
-          "hash": "Vyqwie+9K4DcdjrO/XrIuA=="
+          "hash": "kU2KKMr65jA07/bcuLptGQ=="
         }
       },
       "is_incremental": false,
@@ -5007,7 +5079,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Kmd.WalletInfoResponse.html",
-          "hash": "ONsL6UF/lfQNUOLahCM7Ug=="
+          "hash": "x+46kbmvvhgkZ0E7P6H+4A=="
         }
       },
       "is_incremental": false,
@@ -5031,7 +5103,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.KmdAccount.html",
-          "hash": "B+f6iw5tgysvzy9oUdhnxg=="
+          "hash": "iCg9vsaCfbCLNtmwBjXxjg=="
         }
       },
       "is_incremental": false,
@@ -5043,7 +5115,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.KmdClient.html",
-          "hash": "efgoRv+DTslQz3Rug0vviA=="
+          "hash": "lk3X7MY82KBTpluTuWOoZQ=="
         }
       },
       "is_incremental": false,
@@ -5067,7 +5139,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.LogicSig.html",
-          "hash": "xliOcpsR5ufyoUlmxbs/YQ=="
+          "hash": "5VNDwmhvO+gn9YZbCS3QJA=="
         }
       },
       "is_incremental": false,
@@ -5103,7 +5175,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.LowLevel.FixedBytes128.html",
-          "hash": "D4/lkpDT11k4FPkuTv+trg=="
+          "hash": "s08KU+YusYn5Pa6dyT5Rbg=="
         }
       },
       "is_incremental": false,
@@ -5115,7 +5187,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.LowLevel.FixedBytes32.html",
-          "hash": "rKRVFj6JdpDiowzKz7uYyA=="
+          "hash": "WI0/oIYcjSzQpWVMSmj/kQ=="
         }
       },
       "is_incremental": false,
@@ -5127,7 +5199,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.LowLevel.FixedBytes64.html",
-          "hash": "eVMCZcDJn5c41VtjQy8IsQ=="
+          "hash": "Zmh/jwn0vUv7uYN9Fj7GRw=="
         }
       },
       "is_incremental": false,
@@ -5415,7 +5487,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.MicroAlgos.html",
-          "hash": "T2m6tfksx74V88Pa/5idIw=="
+          "hash": "Tekeo2LUP/AdQaAHxO+GIg=="
         }
       },
       "is_incremental": false,
@@ -5451,7 +5523,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Mnemonic.html",
-          "hash": "MJibBWX0+pkyuA+p0knPUg=="
+          "hash": "qvkcGjeSZLGZKd1pIv1aVg=="
         }
       },
       "is_incremental": false,
@@ -5475,7 +5547,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.MultisigSig.Subsig.html",
-          "hash": "nSwljKloLXFwjDp3/2rkwQ=="
+          "hash": "zXKSzLHm/xa5xoe7SZxMBA=="
         }
       },
       "is_incremental": false,
@@ -5487,7 +5559,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.MultisigSig.html",
-          "hash": "9QopMN1E1mNlQqnaFmpoGw=="
+          "hash": "Ap8VzVLGqywMQZtGzLp0Jg=="
         }
       },
       "is_incremental": false,
@@ -5523,7 +5595,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Optional-1.html",
-          "hash": "1AFoAR+a6w2ukjj0MljFug=="
+          "hash": "LXKT8ot49SuMvp/FS1uzGQ=="
         }
       },
       "is_incremental": false,
@@ -5535,7 +5607,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.ParticipationPublicKey.html",
-          "hash": "IldOJQGaA8p4NU61ozUyyA=="
+          "hash": "xZ3E/CKzfmsvowvLRIpq5A=="
         }
       },
       "is_incremental": false,
@@ -5547,7 +5619,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.PaymentTxn.Params.html",
-          "hash": "bISq+rncFnidYrFPTnMQqQ=="
+          "hash": "gjQUg21gJ3H4cT5qQ9WGQg=="
         }
       },
       "is_incremental": false,
@@ -5559,7 +5631,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.PaymentTxn.html",
-          "hash": "c7T4/k1XT528uH9TQ6Da2w=="
+          "hash": "Y1q8y6R0RjRheLqZtVFPwA=="
         }
       },
       "is_incremental": false,
@@ -5571,7 +5643,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.PrivateKey.html",
-          "hash": "ZJAqjxhD5N2+Tvkxn9Bc3A=="
+          "hash": "a0+A/md4rinhs8eCJ9Kp1g=="
         }
       },
       "is_incremental": false,
@@ -5583,7 +5655,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.ProvideSourceInfoAttribute.html",
-          "hash": "3YBTJAK2UPBBwqomrSPAEg=="
+          "hash": "os9F1Z4DuDR5XOFDvf59XQ=="
         }
       },
       "is_incremental": false,
@@ -5643,7 +5715,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.SerializationException.html",
-          "hash": "TPlNCDnq0WkSouRlzQm1tQ=="
+          "hash": "j/RuZlS0pd5sYZFL4I/16w=="
         }
       },
       "is_incremental": false,
@@ -5655,7 +5727,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Sig.html",
-          "hash": "stB8KSZIJMLXk3x2Gzb0oA=="
+          "hash": "uqSLo7C6lAg4JTzk3x1Hiw=="
         }
       },
       "is_incremental": false,
@@ -5691,7 +5763,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.SignedTxn-1.html",
-          "hash": "7fgv6qrzYN1sa/Gpd4hA2g=="
+          "hash": "UEUda4g1wZISLjRz27NiKg=="
         }
       },
       "is_incremental": false,
@@ -5703,7 +5775,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.SignedTxn.html",
-          "hash": "CNbxfKi/6GrBAFoFANySbg=="
+          "hash": "8lVPuWfCbHO3KPPBWN5l3Q=="
         }
       },
       "is_incremental": false,
@@ -5715,7 +5787,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.StateDelta.html",
-          "hash": "9Rtczdn7elxOPoc8IDK/QQ=="
+          "hash": "2NRmZ4SroECWQxoWuH3orw=="
         }
       },
       "is_incremental": false,
@@ -5739,7 +5811,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.StateSchema.html",
-          "hash": "yXkEnHGoWj283ClUdfXZsg=="
+          "hash": "cecWyPaqC8vxTw+b/sHibA=="
         }
       },
       "is_incremental": false,
@@ -5763,7 +5835,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.TealBytes.html",
-          "hash": "SRa7lbGOqLliI4MUprFcxA=="
+          "hash": "LEgR+8dGT/hAz2FL2VzqTA=="
         }
       },
       "is_incremental": false,
@@ -5775,7 +5847,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.TealValue.html",
-          "hash": "H/CJzVZrULpMpj/2GgZ0Ig=="
+          "hash": "mC5V9xlFAOJiVTwOh2ZsGQ=="
         }
       },
       "is_incremental": false,
@@ -5811,7 +5883,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.Transaction.html",
-          "hash": "BHB5Ywmy/eSNnffMhtZuww=="
+          "hash": "JJsT53H6kVTrMwmBDgyC0A=="
         }
       },
       "is_incremental": false,
@@ -5831,23 +5903,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AlgoSdk.TransactionGroup.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AlgoSdk.TransactionGroup.html",
-          "hash": "wfLQ0qhv7oI5IvbBEZntUg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/AlgoSdk.TransactionHeader.yml",
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.TransactionHeader.html",
-          "hash": "PF5kfVtMIUsKJeju9IONSg=="
+          "hash": "yQa6qXs0jG4oqaI8eHDO/w=="
         }
       },
       "is_incremental": false,
@@ -5859,7 +5919,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.TransactionId.html",
-          "hash": "GKqHCoEfQowir/exJul0oA=="
+          "hash": "rUQg0hW89C525JYpQb6FKQ=="
         }
       },
       "is_incremental": false,
@@ -5871,7 +5931,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.TransactionParams.html",
-          "hash": "dLfnHvIoj/iulw9UEIiRpA=="
+          "hash": "tj/QJUg04Msv6eSvGMC9gg=="
         }
       },
       "is_incremental": false,
@@ -5883,7 +5943,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.TransactionSignature.html",
-          "hash": "RCqFffEwjuv3TJ9hfU3nPA=="
+          "hash": "1xvwGYJ5U3q5hP9rnpdOOw=="
         }
       },
       "is_incremental": false,
@@ -5919,7 +5979,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.TxnFlags.html",
-          "hash": "wfgm6Di58P+5LY+udhNAyg=="
+          "hash": "TH8aQgxsbtgQY4coHLiA7Q=="
         }
       },
       "is_incremental": false,
@@ -5967,7 +6027,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.ValueDelta.html",
-          "hash": "Ho0vnjQ03O+HjSgZjixD4w=="
+          "hash": "oWBaczUMmgHo9Qamg26aog=="
         }
       },
       "is_incremental": false,
@@ -5979,7 +6039,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.ValueDeltaKeyValue.html",
-          "hash": "sDlUnMV2+yj3Q6mP1KIr8Q=="
+          "hash": "omp4jm5aVeOWVec2cmVIgA=="
         }
       },
       "is_incremental": false,
@@ -5991,7 +6051,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.VrfPubKey.html",
-          "hash": "zTePLefthN9yONz9ZV9Xdg=="
+          "hash": "lqS6uHuQ/SV8OXS4TSTgdA=="
         }
       },
       "is_incremental": false,
@@ -6015,7 +6075,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.AlgorandWalletConnectSession.html",
-          "hash": "4kU4zo8ZqfySGB9ivA0yrg=="
+          "hash": "oUqUezvH6bS+TXCc6AsVgg=="
         }
       },
       "is_incremental": false,
@@ -6027,7 +6087,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.AppEntry.AppLinkingScheme.html",
-          "hash": "79DQj3qJS6RsyA0c/nhAjA=="
+          "hash": "+Huz91U2FoTa2Tep4tYiEw=="
         }
       },
       "is_incremental": false,
@@ -6051,7 +6111,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.AppEntry.AppMetadata.html",
-          "hash": "08fqNFQZCoej2SrohlD/Kw=="
+          "hash": "qfAcTpJmNRQzebtGwr3SqA=="
         }
       },
       "is_incremental": false,
@@ -6063,7 +6123,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.AppEntry.AppUrls.html",
-          "hash": "+/Y+9a1ou1sb7Fm8Um+nIw=="
+          "hash": "QJ2Zno1vGCewdcxMGP/ssg=="
         }
       },
       "is_incremental": false,
@@ -6075,7 +6135,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.AppEntry.ImageUrls.html",
-          "hash": "nZEva3p9sPNfiXh4hXMCBQ=="
+          "hash": "eB0nVmuA9tx2aw+910cMVg=="
         }
       },
       "is_incremental": false,
@@ -6087,7 +6147,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.AppEntry.html",
-          "hash": "497guQXE3y2Rkhn9ooLOwA=="
+          "hash": "hH0Uh0uTAXsIa69BLpEWIA=="
         }
       },
       "is_incremental": false,
@@ -6099,7 +6159,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.ClientMeta.html",
-          "hash": "czLPq9RoWFm0rf03TD2qug=="
+          "hash": "DxrwvyT14wtKFkIYSV5Ycg=="
         }
       },
       "is_incremental": false,
@@ -6123,7 +6183,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.EncryptedPayload.html",
-          "hash": "n+pUNZd2LGyFnvokn56tIQ=="
+          "hash": "dKn43nhE40qwPcgA6WUZiQ=="
         }
       },
       "is_incremental": false,
@@ -6147,7 +6207,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.IActiveWalletConnectSession-1.html",
-          "hash": "i42n/3GZUUQNAnPfCfa8oA=="
+          "hash": "1Gro1GBG5RLM98Ki3Es0Aw=="
         }
       },
       "is_incremental": false,
@@ -6255,7 +6315,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.JsonRpcClient.html",
-          "hash": "P6hIac2qGHIWlltOA2etsA=="
+          "hash": "Tg8xBQHoHgZ7gY86DqPMcw=="
         }
       },
       "is_incremental": false,
@@ -6267,7 +6327,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.JsonRpcError.html",
-          "hash": "8Sp9XvqEGWXIcfw8yn6QNA=="
+          "hash": "8E9dn0ZX0TQRluNMM1+xlg=="
         }
       },
       "is_incremental": false,
@@ -6279,7 +6339,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.JsonRpcRequest.html",
-          "hash": "8Fkv12ahMpXmg1GXLd2yCA=="
+          "hash": "AbBy1FlhLA/aRto4BqEb7Q=="
         }
       },
       "is_incremental": false,
@@ -6291,7 +6351,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.JsonRpcResponse.html",
-          "hash": "oxfIF5hy+BXfD1XrhAFgFg=="
+          "hash": "Y17dRwloLWseVUUbZmJ9AA=="
         }
       },
       "is_incremental": false,
@@ -6303,7 +6363,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.MultisigMetadata.html",
-          "hash": "xrZQW/FNfsBzFId2qcIDxw=="
+          "hash": "Te7Xa6BGhSKMpRDVIJEGug=="
         }
       },
       "is_incremental": false,
@@ -6315,7 +6375,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.NetworkMessage.html",
-          "hash": "h1WhtRJ73vvNCRgxHbG0UQ=="
+          "hash": "rWPo59Nm5gFkVOzxxCe0Lg=="
         }
       },
       "is_incremental": false,
@@ -6339,7 +6399,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.SessionData.html",
-          "hash": "8viNN2RM73yvR9v4kk0nQw=="
+          "hash": "Nyft7FYPsJFrLeSvtjxISw=="
         }
       },
       "is_incremental": false,
@@ -6363,7 +6423,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.SignTxnsError.html",
-          "hash": "8kdwbgT7RzCj7cCf9/m4pw=="
+          "hash": "n9OWPPaXnK5nuYu3p/ANHQ=="
         }
       },
       "is_incremental": false,
@@ -6387,7 +6447,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.SignTxnsOpts.html",
-          "hash": "O8AIIjWs65PmX9/JcQFvDA=="
+          "hash": "0tg2UMGaMKfd+U9NTLq8yA=="
         }
       },
       "is_incremental": false,
@@ -6399,7 +6459,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.WalletConnectAccount.html",
-          "hash": "56QzZ+36dpc3asstz5OhHA=="
+          "hash": "sihLDu+E/x/xAh8iejx8Ig=="
         }
       },
       "is_incremental": false,
@@ -6435,7 +6495,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.WalletConnectSessionData.html",
-          "hash": "H93Pc++0eZbhCEVA4/OeyQ=="
+          "hash": "0UGAKFdGtfEfiwu9rwBGmg=="
         }
       },
       "is_incremental": false,
@@ -6447,7 +6507,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.WalletConnectSessionEvents.html",
-          "hash": "msPiJ1ai7rwey4LAiiNi2Q=="
+          "hash": "DfpPdGaqSGlMxxHanT/JsA=="
         }
       },
       "is_incremental": false,
@@ -6459,7 +6519,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.WalletConnectSessionRequest.html",
-          "hash": "+NVDG20KOqIVhnoFjLoP0w=="
+          "hash": "Lj8AP6UeIW+bbWI/ebc2Qg=="
         }
       },
       "is_incremental": false,
@@ -6483,7 +6543,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WalletConnect.WalletTransaction.html",
-          "hash": "28vC/WpDTIG4VXlabxQFZw=="
+          "hash": "5gVqJPZDsbLZvm6IlrLhlA=="
         }
       },
       "is_incremental": false,
@@ -6519,7 +6579,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WebSocket.IWebSocketClient.html",
-          "hash": "njj4ug+hzWv0zVJ/nM7W0A=="
+          "hash": "Dahz0+75U39bNGhUfaEuhw=="
         }
       },
       "is_incremental": false,
@@ -6531,7 +6591,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.WebSocket.NativeWebSocketClient.html",
-          "hash": "wg2W/zYDW8kiYNB/UmeICw=="
+          "hash": "zDAN7hHecSyHi78/AmbuyA=="
         }
       },
       "is_incremental": false,
@@ -6603,7 +6663,7 @@
       "output": {
         ".html": {
           "relative_path": "api/AlgoSdk.html",
-          "hash": "Kej3VQ0btIATwTTD4ygT1w=="
+          "hash": "z7UlNTEAuepPLWkbPQ9JGQ=="
         }
       },
       "is_incremental": false,
@@ -6615,7 +6675,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "UJ9Gh90r0lVh1gm+KtrVuQ=="
+          "hash": "lT/b5sbGpNjIUXNefcBJzg=="
         }
       },
       "is_incremental": false,
@@ -6639,7 +6699,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "AIsYBl4Fb8/j6M0gPUkTTw=="
+          "hash": "+hPRclwKugx5LIpGJ964rg=="
         }
       },
       "is_incremental": false,
@@ -6724,7 +6784,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 531,
+          "total_file_count": 536,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

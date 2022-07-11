@@ -98,14 +98,15 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_Experimental_Abi_ReferenceType_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ReferenceType : IAbiType</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class ReferenceType : IAbiType</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   
   
   <a id="AlgoSdk_Experimental_Abi_ReferenceType__ctor_" data-uid="AlgoSdk.Experimental.Abi.ReferenceType.#ctor*"></a>
-  <h4 id="AlgoSdk_Experimental_Abi_ReferenceType__ctor_AlgoSdk_AbiReferenceType_" data-uid="AlgoSdk.Experimental.Abi.ReferenceType.#ctor(AlgoSdk.AbiReferenceType)">ReferenceType(AbiReferenceType)</h4>
+  <h4 id="AlgoSdk_Experimental_Abi_ReferenceType__ctor_AlgoSdk_Experimental_Abi_AbiReferenceType_" data-uid="AlgoSdk.Experimental.Abi.ReferenceType.#ctor(AlgoSdk.Experimental.Abi.AbiReferenceType)">ReferenceType(AbiReferenceType)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -123,7 +124,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="AlgoSdk.AbiReferenceType.html">AbiReferenceType</a></td>
+        <td><a class="xref" href="AlgoSdk.Experimental.Abi.AbiReferenceType.html">AbiReferenceType</a></td>
         <td><span class="parametername">referenceType</span></td>
         <td></td>
       </tr>
@@ -383,6 +384,31 @@
   </table>
   
   
+  <a id="AlgoSdk_Experimental_Abi_ReferenceType_Type_" data-uid="AlgoSdk.Experimental.Abi.ReferenceType.Type*"></a>
+  <h4 id="AlgoSdk_Experimental_Abi_ReferenceType_Type" data-uid="AlgoSdk.Experimental.Abi.ReferenceType.Type">Type</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AbiReferenceType Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Experimental.Abi.AbiReferenceType.html">AbiReferenceType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_Experimental_Abi_ReferenceType_ValueType_" data-uid="AlgoSdk.Experimental.Abi.ReferenceType.ValueType*"></a>
   <h4 id="AlgoSdk_Experimental_Abi_ReferenceType_ValueType" data-uid="AlgoSdk.Experimental.Abi.ReferenceType.ValueType">ValueType</h4>
   <div class="markdown level1 summary"></div>
@@ -402,6 +428,50 @@
     <tbody>
       <tr>
         <td><a class="xref" href="AlgoSdk.Experimental.Abi.AbiValueType.html">AbiValueType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="AlgoSdk_Experimental_Abi_ReferenceType_Decode_" data-uid="AlgoSdk.Experimental.Abi.ReferenceType.Decode*"></a>
+  <h4 id="AlgoSdk_Experimental_Abi_ReferenceType_Decode_System_Byte___" data-uid="AlgoSdk.Experimental.Abi.ReferenceType.Decode(System.Byte[])">Decode(Byte[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public (string decodeError, IAbiValue abiValue) Decode(byte[] bytes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="parametername">bytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetuple-2">ValueTuple</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="AlgoSdk.Experimental.Abi.IAbiValue.html">IAbiValue</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -428,7 +498,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="AlgoSdk.AbiReferenceType.html">AbiReferenceType</a></td>
+        <td><a class="xref" href="AlgoSdk.Experimental.Abi.AbiReferenceType.html">AbiReferenceType</a></td>
         <td></td>
       </tr>
     </tbody>

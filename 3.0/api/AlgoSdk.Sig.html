@@ -93,7 +93,8 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_Sig_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct Sig : ISignature, IEquatable&lt;Sig&gt;, IByteArray</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiFormatter(typeof(ByteArrayFormatter&lt;Sig&gt;))]
+public struct Sig : ISignature, IEquatable&lt;Sig&gt;, IByteArray</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>

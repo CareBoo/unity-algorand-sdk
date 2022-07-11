@@ -98,21 +98,22 @@
   </div>
   <h5 id="AlgoSdk_AtomicTxn_Signing_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>Once all signatures have been added, serialize this transaction
-group to msgpack with <a class="xref" href="AlgoSdk.AtomicTxn.Signing.html#AlgoSdk_AtomicTxn_Signing_FinishSigning">FinishSigning()</a>.</p>
+group to msgpack with <a class="xref" href="AlgoSdk.AtomicTxn.Signing.html#AlgoSdk_AtomicTxn_Signing_FinishSigning">FinishSigning()</a> or submit it to the network with
+<a class="xref" href="AlgoSdk.AtomicTxn.Signing.html#AlgoSdk_AtomicTxn_Signing_Submit_AlgoSdk_AlgodClient_CancellationToken_">Submit(AlgodClient, CancellationToken)</a>.</p>
 </div>
   <h3 id="constructors">Constructors
   </h3>
   
   
   <a id="AlgoSdk_AtomicTxn_Signing__ctor_" data-uid="AlgoSdk.AtomicTxn.Signing.#ctor*"></a>
-  <h4 id="AlgoSdk_AtomicTxn_Signing__ctor_AlgoSdk_Transaction___" data-uid="AlgoSdk.AtomicTxn.Signing.#ctor(AlgoSdk.Transaction[])">Signing(Transaction[])</h4>
+  <h4 id="AlgoSdk_AtomicTxn_Signing__ctor_AlgoSdk_Transaction___System_ValueTuple_System_Int32_Method____" data-uid="AlgoSdk.AtomicTxn.Signing.#ctor(AlgoSdk.Transaction[],System.ValueTuple{System.Int32,Method}[])">Signing(Transaction[], (Int32, Method)[])</h4>
   <div class="markdown level1 summary"><p>Create a new AtomicTransaction that is ready for signing.
 This assumes the given transactions already have the correct group id set.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Signing(Transaction[] txns)</code></pre>
+    <pre><code class="lang-csharp hljs">public Signing(Transaction[] txns, (int, Method)[] methodIndices)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -129,6 +130,11 @@ This assumes the given transactions already have the correct group id set.</p>
         <td><span class="parametername">txns</span></td>
         <td><p>The transactions making up this transaction group.</p>
 </td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetuple-2">ValueTuple</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>, <span class="xref">Method</span>&gt;[]</td>
+        <td><span class="parametername">methodIndices</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -311,6 +317,57 @@ This assumes the given transactions already have the correct group id set.</p>
       <tr>
         <td><span class="xref">NativeList</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
         <td><p>A natively-allocated, msgpack-encoded transaction group, ready to send to the network.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AtomicTxn_Signing_Submit_" data-uid="AlgoSdk.AtomicTxn.Signing.Submit*"></a>
+  <h4 id="AlgoSdk_AtomicTxn_Signing_Submit_AlgoSdk_AlgodClient_CancellationToken_" data-uid="AlgoSdk.AtomicTxn.Signing.Submit(AlgoSdk.AlgodClient,CancellationToken)">Submit(AlgodClient, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Submit the atomic transaction to the network.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UniTask&lt;AtomicTxn.Submitted&gt; Submit(AlgodClient algod, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgodClient.html">AlgodClient</a></td>
+        <td><span class="parametername">algod</span></td>
+        <td><p>The algod client to use</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional cancellationToken to cancel the request early.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="AlgoSdk.AtomicTxn.Submitted.html">AtomicTxn.Submitted</a>&gt;</td>
+        <td><p>A <a class="xref" href="AlgoSdk.AtomicTxn.Submitted.html">AtomicTxn.Submitted</a> atomic transaction, ready to be confirmed.</p>
 </td>
       </tr>
     </tbody>

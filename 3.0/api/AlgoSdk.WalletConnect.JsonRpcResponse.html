@@ -94,7 +94,8 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_WalletConnect_JsonRpcResponse_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct JsonRpcResponse : IJsonRpcResponse&lt;AlgoApiObject&gt;, IJsonRpcResponse, IEquatable&lt;JsonRpcResponse&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiObject(&quot;&quot;, &quot;&quot;, 0, IsStrict = true)]
+public struct JsonRpcResponse : IJsonRpcResponse&lt;AlgoApiObject&gt;, IJsonRpcResponse, IEquatable&lt;JsonRpcResponse&gt;</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -107,7 +108,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public JsonRpcError Error { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;error&quot;)]
+public JsonRpcError Error { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -134,7 +136,8 @@ It should be the same as the ID of the corresponding <a class="xref" href="AlgoS
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Optional&lt;ulong&gt; Id { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;id&quot;)]
+public Optional&lt;ulong&gt; Id { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -186,7 +189,8 @@ It should be the same as the ID of the corresponding <a class="xref" href="AlgoS
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string JsonRpc { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;jsonrpc&quot;)]
+public string JsonRpc { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -212,7 +216,8 @@ It should be the same as the ID of the corresponding <a class="xref" href="AlgoS
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AlgoApiObject Result { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;result&quot;)]
+public AlgoApiObject Result { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
