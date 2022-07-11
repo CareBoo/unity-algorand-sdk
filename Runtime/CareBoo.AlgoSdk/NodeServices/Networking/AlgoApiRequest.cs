@@ -215,7 +215,7 @@ namespace AlgoSdk
         /// <summary>
         /// A wrapper around the <see cref="UnityWebRequestAsyncOperation"/> handling the sent request.
         /// </summary>
-        public readonly ref struct Sent
+        public readonly struct Sent
         {
             readonly UnityWebRequestAsyncOperation asyncOperation;
             readonly CancellationToken cancellationToken;
@@ -247,6 +247,11 @@ namespace AlgoSdk
                 return new Sent<TResponse>(asyncOperation, cancellationToken);
             }
 
+            public async UniTask<AlgoApiResponse> ToUniTask()
+            {
+                return await this;
+            }
+
             public Awaiter GetAwaiter()
             {
                 var uniTaskAwaiter = asyncOperation
@@ -259,7 +264,7 @@ namespace AlgoSdk
         /// <summary>
         /// A wrapper around the <see cref="UnityWebRequestAsyncOperation"/> handling the sent request.
         /// </summary>
-        public readonly ref struct Sent<TResponse>
+        public readonly struct Sent<TResponse>
         {
             readonly UnityWebRequestAsyncOperation asyncOperation;
             readonly CancellationToken cancellationToken;
@@ -294,6 +299,11 @@ namespace AlgoSdk
                 return new Awaiter<TResponse>(uniTaskAwaiter);
             }
 
+            public async UniTask<AlgoApiResponse<TResponse>> ToUniTask()
+            {
+                return await this;
+            }
+
             public static implicit operator Sent<TResponse>(Sent sent)
             {
                 return sent.CastResponse<TResponse>();
@@ -303,7 +313,7 @@ namespace AlgoSdk
         /// <summary>
         /// A wrapper around the <see cref="UnityWebRequestAsyncOperation"/> handling the sent request.
         /// </summary>
-        public readonly ref struct SentWithProgress<TProgress>
+        public readonly struct SentWithProgress<TProgress>
             where TProgress : IProgress<float>
         {
             readonly UnityWebRequestAsyncOperation asyncOperation;
@@ -340,12 +350,17 @@ namespace AlgoSdk
                     .GetAwaiter();
                 return new Awaiter(uniTaskAwaiter);
             }
+
+            public async UniTask<AlgoApiResponse> ToUniTask()
+            {
+                return await this;
+            }
         }
 
         /// <summary>
         /// A wrapper around the <see cref="UnityWebRequestAsyncOperation"/> handling the sent request.
         /// </summary>
-        public readonly ref struct SentWithProgress<TResponse, TProgress>
+        public readonly struct SentWithProgress<TResponse, TProgress>
             where TProgress : IProgress<float>
         {
             readonly UnityWebRequestAsyncOperation asyncOperation;
@@ -376,6 +391,11 @@ namespace AlgoSdk
                     .ToUniTask(progress: progress, cancellationToken: cancellationToken)
                     .GetAwaiter();
                 return new Awaiter<TResponse>(uniTaskAwaiter);
+            }
+
+            public async UniTask<AlgoApiResponse<TResponse>> ToUniTask()
+            {
+                return await this;
             }
 
             public static implicit operator SentWithProgress<TResponse, TProgress>(SentWithProgress<TProgress> sent)
