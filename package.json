@@ -13,7 +13,7 @@
   "license": "MIT",
   "description": "The [Un]official Algorand SDK for Unity. Integrate blockchain services into your game.\n\nWARNING: This package has not been audited and it should not be used in a production environment.",
   "dependencies": {
-    "com.unity.collections": "1.1.0",
+    "com.unity.collections": "1.3.1",
     "com.cysharp.unitask": "2.3.1"
   },
   "publishConfig": {

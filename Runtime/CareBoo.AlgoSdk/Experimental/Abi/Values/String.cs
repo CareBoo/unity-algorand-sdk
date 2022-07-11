@@ -32,10 +32,10 @@ namespace AlgoSdk.Experimental.Abi
             var values = new UInt8[argValues.Length];
             for (var i = 0; i < values.Length; i++)
             {
-                if (argValues[i] is not UInt8 uint8)
+                if (argValues[i] is UInt8 uint8)
+                    values[i] = uint8;
+                else
                     throw new System.ArgumentException("Tuple is not tuple of uint8", nameof(tuple));
-
-                values[i] = uint8;
             }
             return new String(new Array<UInt8>(values));
         }

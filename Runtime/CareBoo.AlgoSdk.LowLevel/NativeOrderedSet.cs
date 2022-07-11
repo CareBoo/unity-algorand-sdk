@@ -11,12 +11,12 @@ namespace AlgoSdk.LowLevel
         , IReadOnlyList<T>
         where T : unmanaged, IEquatable<T>
     {
-        NativeHashSet<T> set;
+        NativeParallelHashSet<T> set;
         NativeList<T> list;
 
         public NativeOrderedSet(int initialCapacity, Allocator allocator)
         {
-            this.set = new NativeHashSet<T>(initialCapacity, allocator);
+            this.set = new NativeParallelHashSet<T>(initialCapacity, allocator);
             this.list = new NativeList<T>(initialCapacity, allocator);
         }
 
