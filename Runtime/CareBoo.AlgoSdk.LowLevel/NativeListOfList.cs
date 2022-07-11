@@ -34,21 +34,23 @@ namespace AlgoSdk.LowLevel
         public void Add<TList>(TList val)
             where TList : IIndexable<T>
         {
-            indices.Add(list.Length);
-            var offset = list.Length;
-            list.Length += val.Length;
-            for (var i = 0; i < val.Length; i++)
-                list[offset + i] = val.ElementAt(i);
+            var start = list.Length;
+            var count = val.Length;
+            indices.Add(start);
+            list.Length += count;
+            for (var i = 0; i < count; i++)
+                list[start + i] = val.ElementAt(i);
         }
 
         public void AddArray<TArray>(TArray arr)
             where TArray : IContiguousArray<T>
         {
-            indices.Add(arr.Length);
-            var offset = list.Length;
-            list.Length += arr.Length;
-            for (var i = 0; i < arr.Length; i++)
-                list[offset + i] = arr[i];
+            var start = list.Length;
+            var count = arr.Length;
+            indices.Add(start);
+            list.Length += count;
+            for (var i = 0; i < count; i++)
+                list[start + i] = arr[i];
         }
 
         public void RemoveAt(int index)
