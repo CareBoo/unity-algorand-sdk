@@ -160,5 +160,10 @@ namespace AlgoSdk
             assetConfigParams = transaction.assetConfigParams;
             appCallParams = transaction.appCallParams;
         }
+
+        public override string ToString()
+        {
+            return this.GetId();
+        }
     }
 }

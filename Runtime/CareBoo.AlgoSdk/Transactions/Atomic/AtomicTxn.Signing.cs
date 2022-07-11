@@ -1,5 +1,8 @@
 using System;
+using System.Threading;
+using AlgoSdk.Experimental.Abi;
 using AlgoSdk.MessagePack;
+using Cysharp.Threading.Tasks;
 using Unity.Collections;
 
 namespace AlgoSdk
@@ -11,23 +14,26 @@ namespace AlgoSdk
         /// </summary>
         /// <remarks>
         /// Once all signatures have been added, serialize this transaction
-        /// group to msgpack with <see cref="FinishSigning"/>.
+        /// group to msgpack with <see cref="FinishSigning"/> or submit it to the network with
+        /// <see cref="Submit"/>.
         /// </remarks>
         public partial struct Signing : ISigning<Signing>
         {
             readonly Transaction[] txns;
             readonly TransactionSignature[] sigs;
+            readonly (int, Method)[] methodIndices;
 
             /// <summary>
             /// Create a new AtomicTransaction that is ready for signing.
             /// This assumes the given transactions already have the correct group id set.
             /// </summary>
             /// <param name="txns">The transactions making up this transaction group.</param>
-            public Signing(Transaction[] txns)
+            public Signing(Transaction[] txns, (int, Method)[] methodIndices)
             {
                 this.txns = txns ?? throw new ArgumentNullException(nameof(txns));
                 this.sigs = new TransactionSignature[txns.Length];
                 this.SignedTxnIndices = TxnIndices.None;
+                this.methodIndices = methodIndices;
             }
 
             /// <inheritdoc />
@@ -40,7 +46,7 @@ namespace AlgoSdk
             public TxnIndices SignedTxnIndices { get; set; }
 
             /// <inheritdoc />
-            public AsyncSigning AsAsync() => new AsyncSigning(txns, sigs, SignedTxnIndices);
+            public AsyncSigning AsAsync() => new AsyncSigning(txns, sigs, SignedTxnIndices, methodIndices);
 
             /// <summary>
             /// Finish signing this group and return the raw msgpack, ready to submit.
@@ -70,6 +76,29 @@ namespace AlgoSdk
                     AlgoApiFormatterCache<SignedTxn>.Formatter.Serialize(ref writer, signedTxn);
                 }
                 return writer.Data;
+            }
+
+            /// <summary>
+            /// Submit the atomic transaction to the network.
+            /// </summary>
+            /// <param name="algod">The algod client to use</param>
+            /// <param name="cancellationToken">An optional cancellationToken to cancel the request early.</param>
+            /// <returns>A <see cref="Submitted"/> atomic transaction, ready to be confirmed.</returns>
+            public async UniTask<Submitted> Submit(AlgodClient algod, CancellationToken cancellationToken = default)
+            {
+                var signedBytes = FinishSigning();
+                var (submitErr, submitResponse) = await algod.RawTransaction(signedBytes)
+                    .WithCancellation(cancellationToken)
+                    ;
+                submitErr.ThrowIfError();
+
+                var txnIds = new string[txns.Length];
+                for (var i = 0; i < txns.Length; i++)
+                {
+                    txnIds[i] = txns[i].GetId();
+                }
+
+                return new Submitted(algod, txnIds, methodIndices);
             }
         }
     }
