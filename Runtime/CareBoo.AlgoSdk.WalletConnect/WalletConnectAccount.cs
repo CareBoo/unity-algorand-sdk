@@ -62,6 +62,8 @@ namespace AlgoSdk.WalletConnect
             try
             {
                 sessionCancellation = new CancellationTokenSource();
+                if (SessionData.Key.Data == null)
+                    SessionData = SessionData.InitSession(DappMeta, BridgeUrl);
                 session = new AlgorandWalletConnectSession(SessionData);
                 session.OnSessionDisconnect += OnSessionDisconnect;
                 await session.Connect(sessionCancellation.Token);
