@@ -17,9 +17,9 @@ namespace AlgoSdk.Experimental.Abi
 
         public int M => throw new NotImplementedException();
 
-        public IAbiType[] NestedTypes => new IAbiType[] { default(ByteType) };
+        public IAbiType[] NestedTypes => new IAbiType[] { AbiType.Byte };
 
-        public IAbiType ElementType => default(ByteType);
+        public IAbiType ElementType => AbiType.Byte;
 
         public int ArrayLength => throw new NotImplementedException();
 
@@ -28,5 +28,13 @@ namespace AlgoSdk.Experimental.Abi
         public AbiTransactionType TransactionType => default;
 
         public AbiReferenceType ReferenceType => default;
+
+        public (string decodeError, IAbiValue abiValue) Decode(byte[] bytes)
+        {
+            var (decodeError, tupleValue) = new VariableArrayType(new UIntType(8)).Decode(bytes);
+
+            if (decodeError != null) return (decodeError, null);
+            return (null, (String)((Tuple<ArgsArray>)tupleValue));
+        }
     }
 }

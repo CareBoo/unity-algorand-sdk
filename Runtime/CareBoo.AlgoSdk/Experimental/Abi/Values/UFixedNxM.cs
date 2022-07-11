@@ -56,6 +56,15 @@ namespace AlgoSdk.Experimental.Abi
             return type.StaticLength;
         }
 
+        public override string ToString()
+        {
+            var valueStr = value.ToString();
+            return precision > 0
+                ? valueStr.Insert(valueStr.Length - precision, ".")
+                : valueStr
+                ;
+        }
+
         public UFixedNxM As(IAbiType type)
         {
             CheckType(type);

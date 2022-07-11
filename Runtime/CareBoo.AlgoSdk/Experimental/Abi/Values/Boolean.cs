@@ -38,6 +38,11 @@ namespace AlgoSdk.Experimental.Abi
             return 1;
         }
 
+        public override string ToString()
+        {
+            return value.ToString();
+        }
+
         void CheckType(IAbiType type)
         {
             if (type.Name != "bool")

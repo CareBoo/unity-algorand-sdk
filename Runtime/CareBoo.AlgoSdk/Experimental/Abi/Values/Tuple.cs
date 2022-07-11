@@ -18,6 +18,8 @@ namespace AlgoSdk.Experimental.Abi
             this.args = args;
         }
 
+        public T Args => args;
+
         /// <inheritdoc />
         public EncodedAbiArg Encode(IAbiType type, AbiReferences references, Allocator allocator)
         {
@@ -53,6 +55,28 @@ namespace AlgoSdk.Experimental.Abi
         {
             using var encoder = new Encoder<U>(args, types, references, Allocator.Persistent);
             return encoder.Encode(allocator);
+        }
+
+        public override string ToString()
+        {
+            var text = new NativeText(Allocator.Persistent);
+            try
+            {
+                text.Append((Unicode.Rune)'(');
+                var next = this.args;
+                text.Append(next.ToString());
+                while (next.TryNext(out next))
+                {
+                    text.Append(", ");
+                    text.Append(next.ToString());
+                }
+                text.Append((Unicode.Rune)')');
+                return text.ToString();
+            }
+            finally
+            {
+                text.Dispose();
+            }
         }
 
         void CheckType(IAbiType type)

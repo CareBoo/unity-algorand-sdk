@@ -1,4 +1,4 @@
-namespace AlgoSdk
+namespace AlgoSdk.Experimental.Abi
 {
     public enum AbiReferenceType : byte
     {

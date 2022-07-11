@@ -69,7 +69,8 @@ namespace AlgoSdk.Experimental.Abi
         /// <returns>An array of account addresses.</returns>
         public Address[] GetForeignAccounts()
         {
-            return accounts.Slice(1).ToArray();
+            var result = accounts.Slice(1);
+            return result.Count > 0 ? result.ToArray() : null;
         }
 
         /// <summary>
@@ -78,7 +79,8 @@ namespace AlgoSdk.Experimental.Abi
         /// <returns>An array of app indices.</returns>
         public ulong[] GetForeignApps()
         {
-            return apps.Slice(1).ToArray();
+            var result = apps.Slice(1);
+            return result.Count > 0 ? result.ToArray() : null;
         }
 
         /// <summary>
@@ -87,7 +89,8 @@ namespace AlgoSdk.Experimental.Abi
         /// <returns>An array of asset indices.</returns>
         public ulong[] GetForeignAssets()
         {
-            return assets.Slice(0).ToArray();
+            var result = assets.Slice(0);
+            return result.Count > 0 ? result.ToArray() : null;
         }
 
         /// <inheritdoc />
