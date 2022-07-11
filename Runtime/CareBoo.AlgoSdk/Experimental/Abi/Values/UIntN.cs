@@ -16,6 +16,8 @@ namespace AlgoSdk.Experimental.Abi
             this.value = value;
         }
 
+        public byte Value => value;
+
         /// <inheritdoc />
         public ushort N => 8;
 
@@ -45,6 +47,11 @@ namespace AlgoSdk.Experimental.Abi
                 ? 1
                 : type.N / 8
                 ;
+        }
+
+        public override string ToString()
+        {
+            return value.ToString();
         }
     }
 
@@ -97,6 +104,11 @@ namespace AlgoSdk.Experimental.Abi
                 ? 1
                 : type.N / 8
                 ;
+        }
+
+        public override string ToString()
+        {
+            return value.ToString();
         }
     }
 
@@ -151,6 +163,11 @@ namespace AlgoSdk.Experimental.Abi
                 : type.N / 8
                 ;
         }
+
+        public override string ToString()
+        {
+            return value.ToString();
+        }
     }
 
     /// <summary>
@@ -203,6 +220,11 @@ namespace AlgoSdk.Experimental.Abi
                 : type.N / 8
                 ;
         }
+
+        public override string ToString()
+        {
+            return value.ToString();
+        }
     }
 
     /// <summary>
@@ -250,6 +272,11 @@ namespace AlgoSdk.Experimental.Abi
                 ? 1
                 : type.N / 8
                 ;
+        }
+
+        public override string ToString()
+        {
+            return value.ToString();
         }
     }
 

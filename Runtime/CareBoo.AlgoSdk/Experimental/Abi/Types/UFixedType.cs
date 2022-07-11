@@ -1,4 +1,5 @@
 using System;
+using System.Numerics;
 using UnityEngine;
 
 namespace AlgoSdk.Experimental.Abi
@@ -47,5 +48,17 @@ namespace AlgoSdk.Experimental.Abi
         public AbiTransactionType TransactionType => default;
 
         public AbiReferenceType ReferenceType => default;
+
+        public (string decodeError, IAbiValue abiValue) Decode(byte[] bytes)
+        {
+            var decodeError = this.CheckDecodeLength(bytes);
+            if (decodeError != null)
+            {
+                return (decodeError, null);
+            }
+
+            Endianness.FromBytesBigEndian(bytes, out BigInteger value);
+            return (null, new UFixedNxM(new UIntN(value), (byte)M));
+        }
     }
 }

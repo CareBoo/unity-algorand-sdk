@@ -26,6 +26,8 @@ namespace AlgoSdk.Experimental.Abi
             this.current = current;
         }
 
+        public T[] Value => value;
+
         public int Count => value?.Length ?? 0;
 
         /// <inheritdoc />
@@ -100,6 +102,11 @@ namespace AlgoSdk.Experimental.Abi
             return true;
         }
 
+        public override string ToString()
+        {
+            return $"{typeof(T).FullName}[{Count}]";
+        }
+
         void CheckType(IAbiType type)
         {
             switch (type.ValueType)
@@ -115,6 +122,20 @@ namespace AlgoSdk.Experimental.Abi
                 default:
                     throw new System.ArgumentException($"Cannot encode array as type {type.ValueType}", nameof(type));
             }
+        }
+    }
+
+    public static class ArrayExtensions
+    {
+        public static string GetUtf8String(this Array<UInt8> arr)
+        {
+            var bytes = new byte[arr.Count];
+            for (var i = 0; i < bytes.Length; i++)
+            {
+                bytes[i] = arr.Value[i].Value;
+            }
+            var text = System.Text.Encoding.UTF8.GetString(bytes);
+            return text;
         }
     }
 

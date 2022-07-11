@@ -15,6 +15,8 @@ namespace AlgoSdk.Experimental.Abi
         /// <inheritdoc />
         public int Count => values?.Length ?? 0;
 
+        public IAbiValue[] Values => values;
+
         public ArgsArray(IAbiValue[] values, int current)
         {
             this.values = values;

@@ -42,6 +42,13 @@ namespace AlgoSdk.Experimental.Abi
 
         public AbiTransactionType TransactionType => default;
 
+        public AbiReferenceType Type => referenceType;
+
         AbiReferenceType IAbiType.ReferenceType => referenceType;
+
+        public (string decodeError, IAbiValue abiValue) Decode(byte[] bytes)
+        {
+            throw new NotSupportedException("Reference types cannot be used as return types");
+        }
     }
 }

@@ -66,6 +66,13 @@ namespace AlgoSdk.Experimental.Abi
         /// If <see cref="IsReference"/>, then this represents the type of the reference.
         /// </summary>
         AbiReferenceType ReferenceType { get; }
+
+        /// <summary>
+        /// Decodes encoded ABI bytes into an <see cref="IAbiValue"/>.
+        /// </summary>
+        /// <param name="bytes">encoded abi bytes</param>
+        /// <returns>An untyped <see cref="IAbiValue"/> that can be cast to the correct type by the caller.</returns>
+        (string decodeError, IAbiValue abiValue) Decode(byte[] bytes);
     }
 
     public static class AbiTypeExtensions
@@ -87,23 +94,38 @@ namespace AlgoSdk.Experimental.Abi
         {
             return type.ReferenceType > 0;
         }
+
+        public static string CheckDecodeLength<T>(this T type, byte[] bytes)
+            where T : IAbiType
+        {
+            if (bytes == null)
+            {
+                return $"Cannot decode null to {type.Name}";
+            }
+            else if (type.IsStatic && bytes.Length != type.StaticLength)
+            {
+                return $"Cannot decode {bytes.Length} bytes to {type.Name} type";
+            }
+            return null;
+        }
     }
+
     public static class AbiType
     {
         /// <summary>
         /// Represents a "byte".
         /// </summary>
-        public static ByteType Byte => default(ByteType);
+        public static ByteType Byte = new ByteType();
 
         /// <summary>
         /// Represents an "address".
         /// </summary>
-        public static AddressType Address => default(AddressType);
+        public static AddressType Address = new AddressType();
 
         /// <summary>
         /// Represents a "string".
         /// </summary>
-        public static StringType String => default(StringType);
+        public static StringType String = new StringType();
 
         /// <summary>
         /// Represents an "account".
@@ -123,7 +145,7 @@ namespace AlgoSdk.Experimental.Abi
         /// <summary>
         /// Represents a "bool".
         /// </summary>
-        public static BoolType Bool => default(BoolType);
+        public static BoolType Bool = new BoolType();
 
         /// <summary>
         /// Represents a Transaction type.
@@ -190,13 +212,13 @@ namespace AlgoSdk.Experimental.Abi
             switch (type)
             {
                 case "byte":
-                    abiType = new ByteType();
+                    abiType = AbiType.Byte;
                     return true;
                 case "address":
-                    abiType = new AddressType();
+                    abiType = AbiType.Address;
                     return true;
                 case "string":
-                    abiType = new StringType();
+                    abiType = AbiType.String;
                     return true;
                 case "account":
                     abiType = new ReferenceType(AbiReferenceType.Account);
@@ -208,7 +230,7 @@ namespace AlgoSdk.Experimental.Abi
                     abiType = new ReferenceType(AbiReferenceType.Application);
                     return true;
                 case "bool":
-                    abiType = new BoolType();
+                    abiType = AbiType.Bool;
                     return true;
             }
 

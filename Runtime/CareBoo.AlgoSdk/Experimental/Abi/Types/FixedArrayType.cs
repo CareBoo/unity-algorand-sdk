@@ -44,5 +44,16 @@ namespace AlgoSdk.Experimental.Abi
         public AbiTransactionType TransactionType => default;
 
         public AbiReferenceType ReferenceType => default;
+
+        public (string decodeError, IAbiValue abiValue) Decode(byte[] bytes)
+        {
+            var decodeError = this.CheckDecodeLength(bytes);
+            if (decodeError != null) return (decodeError, null);
+
+            var nestedTypes = new IAbiType[ArrayLength];
+            for (var i = 0; i < ArrayLength; i++)
+                nestedTypes[i] = ElementType;
+            return AbiType.Tuple(nestedTypes).Decode(bytes);
+        }
     }
 }

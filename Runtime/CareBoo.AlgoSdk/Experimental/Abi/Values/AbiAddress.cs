@@ -47,6 +47,11 @@ namespace AlgoSdk.Experimental.Abi
                 ;
         }
 
+        public override string ToString()
+        {
+            return value.ToString();
+        }
+
         void CheckType(IAbiType type)
         {
             switch (type.ValueType)
