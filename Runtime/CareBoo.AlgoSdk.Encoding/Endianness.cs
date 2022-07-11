@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Numerics;
 using Unity.Collections;
 
 namespace AlgoSdk
@@ -201,6 +203,37 @@ namespace AlgoSdk
                 bytes[offset] = (byte)(value >> 8);
                 bytes[offset + 1] = (byte)(value);
             }
+        }
+
+        public static void FromBytesBigEndian(byte[] bytes, out ushort value)
+        {
+            if (BitConverter.IsLittleEndian)
+                Array.Reverse(bytes);
+
+            value = BitConverter.ToUInt16(bytes, 0);
+        }
+
+        public static void FromBytesBigEndian(byte[] bytes, out uint value)
+        {
+            if (BitConverter.IsLittleEndian)
+                Array.Reverse(bytes);
+
+            value = BitConverter.ToUInt32(bytes, 0);
+        }
+
+        public static void FromBytesBigEndian(byte[] bytes, out ulong value)
+        {
+            if (BitConverter.IsLittleEndian)
+                Array.Reverse(bytes);
+
+            value = BitConverter.ToUInt64(bytes, 0);
+        }
+
+        public static void FromBytesBigEndian(byte[] bytes, out BigInteger value)
+        {
+            if (BitConverter.IsLittleEndian)
+                Array.Reverse(bytes);
+            value = new BigInteger(bytes);
         }
     }
 }
