@@ -97,8 +97,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_SignedTxn_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiObject(&quot;&quot;, &quot;&quot;, 0)]
-public struct SignedTxn : IEquatable&lt;SignedTxn&gt;, ISignedTxn, ISignedTxn&lt;Transaction&gt;, IUntypedTransaction, ITransactionHeader</code></pre>
+    <pre><code class="lang-csharp hljs">public struct SignedTxn : IEquatable&lt;SignedTxn&gt;, ISignedTxn, ISignedTxn&lt;Transaction&gt;, IUntypedTransaction, ITransactionHeader</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -215,8 +214,7 @@ public struct SignedTxn : IEquatable&lt;SignedTxn&gt;, ISignedTxn, ISignedTxn&lt
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;sgnr&quot;)]
-public Address AuthAddr { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Address AuthAddr { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -280,7 +278,7 @@ public Address AuthAddr { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -341,7 +339,7 @@ public Address AuthAddr { get; set; }</code></pre>
   
   <a id="AlgoSdk_SignedTxn_Group_" data-uid="AlgoSdk.SignedTxn.Group*"></a>
   <h4 id="AlgoSdk_SignedTxn_Group" data-uid="AlgoSdk.SignedTxn.Group">Group</h4>
-  <div class="markdown level1 summary"><p>The group specifies that the transaction is part of a group and, if so, specifies the hash of the transaction group. See <span class="xref">AlgoSdk.TransactionGroup</span>.</p>
+  <div class="markdown level1 summary"><p>The group specifies that the transaction is part of a group and, if so, specifies the hash of the transaction group. See <a class="xref" href="AlgoSdk.TransactionGroup.html">TransactionGroup</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -436,7 +434,7 @@ public Address AuthAddr { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -476,8 +474,7 @@ public Address AuthAddr { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;lsig&quot;)]
-public LogicSig Lsig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public LogicSig Lsig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -503,8 +500,7 @@ public LogicSig Lsig { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;msig&quot;)]
-public MultisigSig Msig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public MultisigSig Msig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -634,8 +630,7 @@ public MultisigSig Msig { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;sig&quot;)]
-public Sig Sig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Sig Sig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -712,8 +707,7 @@ public Sig Sig { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;txn&quot;)]
-public Transaction Txn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Transaction Txn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

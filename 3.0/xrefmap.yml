@@ -103,6 +103,22 @@ references:
   fullName.vb: AlgoSdk.Account.SignTxn(Of T)(T)
   nameWithType: Account.SignTxn<T>(T)
   nameWithType.vb: Account.SignTxn(Of T)(T)
+- uid: AlgoSdk.Account.SignTxnAsync*
+  name: SignTxnAsync
+  href: api/AlgoSdk.Account.html#AlgoSdk_Account_SignTxnAsync_
+  commentId: Overload:AlgoSdk.Account.SignTxnAsync
+  isSpec: "True"
+  fullName: AlgoSdk.Account.SignTxnAsync
+  nameWithType: Account.SignTxnAsync
+- uid: AlgoSdk.Account.SignTxnAsync``1(``0)
+  name: SignTxnAsync<T>(T)
+  href: api/AlgoSdk.Account.html#AlgoSdk_Account_SignTxnAsync__1___0_
+  commentId: M:AlgoSdk.Account.SignTxnAsync``1(``0)
+  name.vb: SignTxnAsync(Of T)(T)
+  fullName: AlgoSdk.Account.SignTxnAsync<T>(T)
+  fullName.vb: AlgoSdk.Account.SignTxnAsync(Of T)(T)
+  nameWithType: Account.SignTxnAsync<T>(T)
+  nameWithType.vb: Account.SignTxnAsync(Of T)(T)
 - uid: AlgoSdk.Account.SignTxns*
   name: SignTxns
   href: api/AlgoSdk.Account.html#AlgoSdk_Account_SignTxns_
@@ -110,6 +126,15 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Account.SignTxns
   nameWithType: Account.SignTxns
+- uid: AlgoSdk.Account.SignTxns``1(``0[])
+  name: SignTxns<T>(T[])
+  href: api/AlgoSdk.Account.html#AlgoSdk_Account_SignTxns__1___0___
+  commentId: M:AlgoSdk.Account.SignTxns``1(``0[])
+  name.vb: SignTxns(Of T)(T())
+  fullName: AlgoSdk.Account.SignTxns<T>(T[])
+  fullName.vb: AlgoSdk.Account.SignTxns(Of T)(T())
+  nameWithType: Account.SignTxns<T>(T[])
+  nameWithType.vb: Account.SignTxns(Of T)(T())
 - uid: AlgoSdk.Account.SignTxns``1(``0[],AlgoSdk.TxnIndices)
   name: SignTxns<T>(T[], TxnIndices)
   href: api/AlgoSdk.Account.html#AlgoSdk_Account_SignTxns__1___0___AlgoSdk_TxnIndices_
@@ -126,6 +151,15 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Account.SignTxnsAsync
   nameWithType: Account.SignTxnsAsync
+- uid: AlgoSdk.Account.SignTxnsAsync``1(``0[])
+  name: SignTxnsAsync<T>(T[])
+  href: api/AlgoSdk.Account.html#AlgoSdk_Account_SignTxnsAsync__1___0___
+  commentId: M:AlgoSdk.Account.SignTxnsAsync``1(``0[])
+  name.vb: SignTxnsAsync(Of T)(T())
+  fullName: AlgoSdk.Account.SignTxnsAsync<T>(T[])
+  fullName.vb: AlgoSdk.Account.SignTxnsAsync(Of T)(T())
+  nameWithType: Account.SignTxnsAsync<T>(T[])
+  nameWithType.vb: Account.SignTxnsAsync(Of T)(T())
 - uid: AlgoSdk.Account.SignTxnsAsync``1(``0[],AlgoSdk.TxnIndices,CancellationToken)
   name: SignTxnsAsync<T>(T[], TxnIndices, CancellationToken)
   href: api/AlgoSdk.Account.html#AlgoSdk_Account_SignTxnsAsync__1___0___AlgoSdk_TxnIndices_CancellationToken_
@@ -1009,11 +1043,11 @@ references:
   commentId: T:AlgoSdk.AlgoApiFormatterAttribute
   fullName: AlgoSdk.AlgoApiFormatterAttribute
   nameWithType: AlgoApiFormatterAttribute
-- uid: AlgoSdk.AlgoApiFormatterAttribute.#ctor(System.Type,System.String,System.String,System.Int32)
+- uid: AlgoSdk.AlgoApiFormatterAttribute.#ctor(Type,System.String,System.String,System.Int32)
   name: AlgoApiFormatterAttribute(Type, String, String, Int32)
-  href: api/AlgoSdk.AlgoApiFormatterAttribute.html#AlgoSdk_AlgoApiFormatterAttribute__ctor_System_Type_System_String_System_String_System_Int32_
-  commentId: M:AlgoSdk.AlgoApiFormatterAttribute.#ctor(System.Type,System.String,System.String,System.Int32)
-  fullName: AlgoSdk.AlgoApiFormatterAttribute.AlgoApiFormatterAttribute(System.Type, System.String, System.String, System.Int32)
+  href: api/AlgoSdk.AlgoApiFormatterAttribute.html#AlgoSdk_AlgoApiFormatterAttribute__ctor_Type_System_String_System_String_System_Int32_
+  commentId: M:AlgoSdk.AlgoApiFormatterAttribute.#ctor(Type,System.String,System.String,System.Int32)
+  fullName: AlgoSdk.AlgoApiFormatterAttribute.AlgoApiFormatterAttribute(Type, System.String, System.String, System.Int32)
   nameWithType: AlgoApiFormatterAttribute.AlgoApiFormatterAttribute(Type, String, String, Int32)
 - uid: AlgoSdk.AlgoApiFormatterAttribute.#ctor*
   name: AlgoApiFormatterAttribute
@@ -1480,11 +1514,11 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AlgoApiRequest.Awaiter.IsCompleted
   nameWithType: AlgoApiRequest.Awaiter.IsCompleted
-- uid: AlgoSdk.AlgoApiRequest.Awaiter.OnCompleted(System.Action)
+- uid: AlgoSdk.AlgoApiRequest.Awaiter.OnCompleted(Action)
   name: OnCompleted(Action)
-  href: api/AlgoSdk.AlgoApiRequest.Awaiter.html#AlgoSdk_AlgoApiRequest_Awaiter_OnCompleted_System_Action_
-  commentId: M:AlgoSdk.AlgoApiRequest.Awaiter.OnCompleted(System.Action)
-  fullName: AlgoSdk.AlgoApiRequest.Awaiter.OnCompleted(System.Action)
+  href: api/AlgoSdk.AlgoApiRequest.Awaiter.html#AlgoSdk_AlgoApiRequest_Awaiter_OnCompleted_Action_
+  commentId: M:AlgoSdk.AlgoApiRequest.Awaiter.OnCompleted(Action)
+  fullName: AlgoSdk.AlgoApiRequest.Awaiter.OnCompleted(Action)
   nameWithType: AlgoApiRequest.Awaiter.OnCompleted(Action)
 - uid: AlgoSdk.AlgoApiRequest.Awaiter.OnCompleted*
   name: OnCompleted
@@ -1493,11 +1527,11 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AlgoApiRequest.Awaiter.OnCompleted
   nameWithType: AlgoApiRequest.Awaiter.OnCompleted
-- uid: AlgoSdk.AlgoApiRequest.Awaiter.UnsafeOnCompleted(System.Action)
+- uid: AlgoSdk.AlgoApiRequest.Awaiter.UnsafeOnCompleted(Action)
   name: UnsafeOnCompleted(Action)
-  href: api/AlgoSdk.AlgoApiRequest.Awaiter.html#AlgoSdk_AlgoApiRequest_Awaiter_UnsafeOnCompleted_System_Action_
-  commentId: M:AlgoSdk.AlgoApiRequest.Awaiter.UnsafeOnCompleted(System.Action)
-  fullName: AlgoSdk.AlgoApiRequest.Awaiter.UnsafeOnCompleted(System.Action)
+  href: api/AlgoSdk.AlgoApiRequest.Awaiter.html#AlgoSdk_AlgoApiRequest_Awaiter_UnsafeOnCompleted_Action_
+  commentId: M:AlgoSdk.AlgoApiRequest.Awaiter.UnsafeOnCompleted(Action)
+  fullName: AlgoSdk.AlgoApiRequest.Awaiter.UnsafeOnCompleted(Action)
   nameWithType: AlgoApiRequest.Awaiter.UnsafeOnCompleted(Action)
 - uid: AlgoSdk.AlgoApiRequest.Awaiter.UnsafeOnCompleted*
   name: UnsafeOnCompleted
@@ -1567,12 +1601,12 @@ references:
   fullName.vb: AlgoSdk.AlgoApiRequest.Awaiter(Of TResponse).IsCompleted
   nameWithType: AlgoApiRequest.Awaiter<TResponse>.IsCompleted
   nameWithType.vb: AlgoApiRequest.Awaiter(Of TResponse).IsCompleted
-- uid: AlgoSdk.AlgoApiRequest.Awaiter`1.OnCompleted(System.Action)
+- uid: AlgoSdk.AlgoApiRequest.Awaiter`1.OnCompleted(Action)
   name: OnCompleted(Action)
-  href: api/AlgoSdk.AlgoApiRequest.Awaiter-1.html#AlgoSdk_AlgoApiRequest_Awaiter_1_OnCompleted_System_Action_
-  commentId: M:AlgoSdk.AlgoApiRequest.Awaiter`1.OnCompleted(System.Action)
-  fullName: AlgoSdk.AlgoApiRequest.Awaiter<TResponse>.OnCompleted(System.Action)
-  fullName.vb: AlgoSdk.AlgoApiRequest.Awaiter(Of TResponse).OnCompleted(System.Action)
+  href: api/AlgoSdk.AlgoApiRequest.Awaiter-1.html#AlgoSdk_AlgoApiRequest_Awaiter_1_OnCompleted_Action_
+  commentId: M:AlgoSdk.AlgoApiRequest.Awaiter`1.OnCompleted(Action)
+  fullName: AlgoSdk.AlgoApiRequest.Awaiter<TResponse>.OnCompleted(Action)
+  fullName.vb: AlgoSdk.AlgoApiRequest.Awaiter(Of TResponse).OnCompleted(Action)
   nameWithType: AlgoApiRequest.Awaiter<TResponse>.OnCompleted(Action)
   nameWithType.vb: AlgoApiRequest.Awaiter(Of TResponse).OnCompleted(Action)
 - uid: AlgoSdk.AlgoApiRequest.Awaiter`1.OnCompleted*
@@ -1584,12 +1618,12 @@ references:
   fullName.vb: AlgoSdk.AlgoApiRequest.Awaiter(Of TResponse).OnCompleted
   nameWithType: AlgoApiRequest.Awaiter<TResponse>.OnCompleted
   nameWithType.vb: AlgoApiRequest.Awaiter(Of TResponse).OnCompleted
-- uid: AlgoSdk.AlgoApiRequest.Awaiter`1.UnsafeOnCompleted(System.Action)
+- uid: AlgoSdk.AlgoApiRequest.Awaiter`1.UnsafeOnCompleted(Action)
   name: UnsafeOnCompleted(Action)
-  href: api/AlgoSdk.AlgoApiRequest.Awaiter-1.html#AlgoSdk_AlgoApiRequest_Awaiter_1_UnsafeOnCompleted_System_Action_
-  commentId: M:AlgoSdk.AlgoApiRequest.Awaiter`1.UnsafeOnCompleted(System.Action)
-  fullName: AlgoSdk.AlgoApiRequest.Awaiter<TResponse>.UnsafeOnCompleted(System.Action)
-  fullName.vb: AlgoSdk.AlgoApiRequest.Awaiter(Of TResponse).UnsafeOnCompleted(System.Action)
+  href: api/AlgoSdk.AlgoApiRequest.Awaiter-1.html#AlgoSdk_AlgoApiRequest_Awaiter_1_UnsafeOnCompleted_Action_
+  commentId: M:AlgoSdk.AlgoApiRequest.Awaiter`1.UnsafeOnCompleted(Action)
+  fullName: AlgoSdk.AlgoApiRequest.Awaiter<TResponse>.UnsafeOnCompleted(Action)
+  fullName.vb: AlgoSdk.AlgoApiRequest.Awaiter(Of TResponse).UnsafeOnCompleted(Action)
   nameWithType: AlgoApiRequest.Awaiter<TResponse>.UnsafeOnCompleted(Action)
   nameWithType.vb: AlgoApiRequest.Awaiter(Of TResponse).UnsafeOnCompleted(Action)
 - uid: AlgoSdk.AlgoApiRequest.Awaiter`1.UnsafeOnCompleted*
@@ -6510,6 +6544,32 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AlgodClient.DeleteParticipationKeyByID
   nameWithType: AlgodClient.DeleteParticipationKeyByID
+- uid: AlgoSdk.AlgodClient.GetAccountInformation(AlgoSdk.Address)
+  name: GetAccountInformation(Address)
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetAccountInformation_AlgoSdk_Address_
+  commentId: M:AlgoSdk.AlgodClient.GetAccountInformation(AlgoSdk.Address)
+  fullName: AlgoSdk.AlgodClient.GetAccountInformation(AlgoSdk.Address)
+  nameWithType: AlgodClient.GetAccountInformation(Address)
+- uid: AlgoSdk.AlgodClient.GetAccountInformation*
+  name: GetAccountInformation
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetAccountInformation_
+  commentId: Overload:AlgoSdk.AlgodClient.GetAccountInformation
+  isSpec: "True"
+  fullName: AlgoSdk.AlgodClient.GetAccountInformation
+  nameWithType: AlgodClient.GetAccountInformation
+- uid: AlgoSdk.AlgodClient.GetApplication(System.UInt64)
+  name: GetApplication(UInt64)
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetApplication_System_UInt64_
+  commentId: M:AlgoSdk.AlgodClient.GetApplication(System.UInt64)
+  fullName: AlgoSdk.AlgodClient.GetApplication(System.UInt64)
+  nameWithType: AlgodClient.GetApplication(UInt64)
+- uid: AlgoSdk.AlgodClient.GetApplication*
+  name: GetApplication
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetApplication_
+  commentId: Overload:AlgoSdk.AlgodClient.GetApplication
+  isSpec: "True"
+  fullName: AlgoSdk.AlgodClient.GetApplication
+  nameWithType: AlgodClient.GetApplication
 - uid: AlgoSdk.AlgodClient.GetApplicationByID(System.UInt64)
   name: GetApplicationByID(UInt64)
   href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetApplicationByID_System_UInt64_
@@ -6523,6 +6583,19 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AlgodClient.GetApplicationByID
   nameWithType: AlgodClient.GetApplicationByID
+- uid: AlgoSdk.AlgodClient.GetAsset(System.UInt64)
+  name: GetAsset(UInt64)
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetAsset_System_UInt64_
+  commentId: M:AlgoSdk.AlgodClient.GetAsset(System.UInt64)
+  fullName: AlgoSdk.AlgodClient.GetAsset(System.UInt64)
+  nameWithType: AlgodClient.GetAsset(UInt64)
+- uid: AlgoSdk.AlgodClient.GetAsset*
+  name: GetAsset
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetAsset_
+  commentId: Overload:AlgoSdk.AlgodClient.GetAsset
+  isSpec: "True"
+  fullName: AlgoSdk.AlgodClient.GetAsset
+  nameWithType: AlgodClient.GetAsset
 - uid: AlgoSdk.AlgodClient.GetAssetByID(System.UInt64)
   name: GetAssetByID(UInt64)
   href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetAssetByID_System_UInt64_
@@ -6549,6 +6622,19 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AlgodClient.GetBlock
   nameWithType: AlgodClient.GetBlock
+- uid: AlgoSdk.AlgodClient.GetCurrentStatus
+  name: GetCurrentStatus()
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetCurrentStatus
+  commentId: M:AlgoSdk.AlgodClient.GetCurrentStatus
+  fullName: AlgoSdk.AlgodClient.GetCurrentStatus()
+  nameWithType: AlgodClient.GetCurrentStatus()
+- uid: AlgoSdk.AlgodClient.GetCurrentStatus*
+  name: GetCurrentStatus
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetCurrentStatus_
+  commentId: Overload:AlgoSdk.AlgodClient.GetCurrentStatus
+  isSpec: "True"
+  fullName: AlgoSdk.AlgodClient.GetCurrentStatus
+  nameWithType: AlgodClient.GetCurrentStatus
 - uid: AlgoSdk.AlgodClient.GetGenesis
   name: GetGenesis()
   href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetGenesis
@@ -6562,6 +6648,71 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AlgodClient.GetGenesis
   nameWithType: AlgodClient.GetGenesis
+- uid: AlgoSdk.AlgodClient.GetGenesisInformation
+  name: GetGenesisInformation()
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetGenesisInformation
+  commentId: M:AlgoSdk.AlgodClient.GetGenesisInformation
+  fullName: AlgoSdk.AlgodClient.GetGenesisInformation()
+  nameWithType: AlgodClient.GetGenesisInformation()
+- uid: AlgoSdk.AlgodClient.GetGenesisInformation*
+  name: GetGenesisInformation
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetGenesisInformation_
+  commentId: Overload:AlgoSdk.AlgodClient.GetGenesisInformation
+  isSpec: "True"
+  fullName: AlgoSdk.AlgodClient.GetGenesisInformation
+  nameWithType: AlgodClient.GetGenesisInformation
+- uid: AlgoSdk.AlgodClient.GetHealth
+  name: GetHealth()
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetHealth
+  commentId: M:AlgoSdk.AlgodClient.GetHealth
+  fullName: AlgoSdk.AlgodClient.GetHealth()
+  nameWithType: AlgodClient.GetHealth()
+- uid: AlgoSdk.AlgodClient.GetHealth*
+  name: GetHealth
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetHealth_
+  commentId: Overload:AlgoSdk.AlgodClient.GetHealth
+  isSpec: "True"
+  fullName: AlgoSdk.AlgodClient.GetHealth
+  nameWithType: AlgodClient.GetHealth
+- uid: AlgoSdk.AlgodClient.GetLedgerSupply
+  name: GetLedgerSupply()
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetLedgerSupply
+  commentId: M:AlgoSdk.AlgodClient.GetLedgerSupply
+  fullName: AlgoSdk.AlgodClient.GetLedgerSupply()
+  nameWithType: AlgodClient.GetLedgerSupply()
+- uid: AlgoSdk.AlgodClient.GetLedgerSupply*
+  name: GetLedgerSupply
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetLedgerSupply_
+  commentId: Overload:AlgoSdk.AlgodClient.GetLedgerSupply
+  isSpec: "True"
+  fullName: AlgoSdk.AlgodClient.GetLedgerSupply
+  nameWithType: AlgodClient.GetLedgerSupply
+- uid: AlgoSdk.AlgodClient.GetMerkleProof(System.UInt64,AlgoSdk.TransactionId)
+  name: GetMerkleProof(UInt64, TransactionId)
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetMerkleProof_System_UInt64_AlgoSdk_TransactionId_
+  commentId: M:AlgoSdk.AlgodClient.GetMerkleProof(System.UInt64,AlgoSdk.TransactionId)
+  fullName: AlgoSdk.AlgodClient.GetMerkleProof(System.UInt64, AlgoSdk.TransactionId)
+  nameWithType: AlgodClient.GetMerkleProof(UInt64, TransactionId)
+- uid: AlgoSdk.AlgodClient.GetMerkleProof*
+  name: GetMerkleProof
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetMerkleProof_
+  commentId: Overload:AlgoSdk.AlgodClient.GetMerkleProof
+  isSpec: "True"
+  fullName: AlgoSdk.AlgodClient.GetMerkleProof
+  nameWithType: AlgodClient.GetMerkleProof
+- uid: AlgoSdk.AlgodClient.GetMetrics
+  name: GetMetrics()
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetMetrics
+  commentId: M:AlgoSdk.AlgodClient.GetMetrics
+  fullName: AlgoSdk.AlgodClient.GetMetrics()
+  nameWithType: AlgodClient.GetMetrics()
+- uid: AlgoSdk.AlgodClient.GetMetrics*
+  name: GetMetrics
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetMetrics_
+  commentId: Overload:AlgoSdk.AlgodClient.GetMetrics
+  isSpec: "True"
+  fullName: AlgoSdk.AlgodClient.GetMetrics
+  nameWithType: AlgodClient.GetMetrics
 - uid: AlgoSdk.AlgodClient.GetParticipationKeyByID(System.String)
   name: GetParticipationKeyByID(String)
   href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetParticipationKeyByID_System_String_
@@ -6588,6 +6739,19 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AlgodClient.GetParticipationKeys
   nameWithType: AlgodClient.GetParticipationKeys
+- uid: AlgoSdk.AlgodClient.GetPendingTransaction(AlgoSdk.TransactionId)
+  name: GetPendingTransaction(TransactionId)
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetPendingTransaction_AlgoSdk_TransactionId_
+  commentId: M:AlgoSdk.AlgodClient.GetPendingTransaction(AlgoSdk.TransactionId)
+  fullName: AlgoSdk.AlgodClient.GetPendingTransaction(AlgoSdk.TransactionId)
+  nameWithType: AlgodClient.GetPendingTransaction(TransactionId)
+- uid: AlgoSdk.AlgodClient.GetPendingTransaction*
+  name: GetPendingTransaction
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetPendingTransaction_
+  commentId: Overload:AlgoSdk.AlgodClient.GetPendingTransaction
+  isSpec: "True"
+  fullName: AlgoSdk.AlgodClient.GetPendingTransaction
+  nameWithType: AlgodClient.GetPendingTransaction
 - uid: AlgoSdk.AlgodClient.GetPendingTransactions(AlgoSdk.Optional{System.UInt64},AlgoSdk.ResponseFormat)
   name: GetPendingTransactions(Optional<UInt64>, ResponseFormat)
   href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetPendingTransactions_AlgoSdk_Optional_System_UInt64__AlgoSdk_ResponseFormat_
@@ -6604,6 +6768,19 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AlgodClient.GetPendingTransactions
   nameWithType: AlgodClient.GetPendingTransactions
+- uid: AlgoSdk.AlgodClient.GetPendingTransactionsByAccount(AlgoSdk.Address,System.UInt64)
+  name: GetPendingTransactionsByAccount(Address, UInt64)
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetPendingTransactionsByAccount_AlgoSdk_Address_System_UInt64_
+  commentId: M:AlgoSdk.AlgodClient.GetPendingTransactionsByAccount(AlgoSdk.Address,System.UInt64)
+  fullName: AlgoSdk.AlgodClient.GetPendingTransactionsByAccount(AlgoSdk.Address, System.UInt64)
+  nameWithType: AlgodClient.GetPendingTransactionsByAccount(Address, UInt64)
+- uid: AlgoSdk.AlgodClient.GetPendingTransactionsByAccount*
+  name: GetPendingTransactionsByAccount
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetPendingTransactionsByAccount_
+  commentId: Overload:AlgoSdk.AlgodClient.GetPendingTransactionsByAccount
+  isSpec: "True"
+  fullName: AlgoSdk.AlgodClient.GetPendingTransactionsByAccount
+  nameWithType: AlgodClient.GetPendingTransactionsByAccount
 - uid: AlgoSdk.AlgodClient.GetPendingTransactionsByAddress(System.String,AlgoSdk.Optional{System.UInt64},AlgoSdk.ResponseFormat)
   name: GetPendingTransactionsByAddress(String, Optional<UInt64>, ResponseFormat)
   href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetPendingTransactionsByAddress_System_String_AlgoSdk_Optional_System_UInt64__AlgoSdk_ResponseFormat_
@@ -6646,6 +6823,32 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AlgodClient.GetStatus
   nameWithType: AlgodClient.GetStatus
+- uid: AlgoSdk.AlgodClient.GetStatusAfterWaitingForRound(System.UInt64)
+  name: GetStatusAfterWaitingForRound(UInt64)
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetStatusAfterWaitingForRound_System_UInt64_
+  commentId: M:AlgoSdk.AlgodClient.GetStatusAfterWaitingForRound(System.UInt64)
+  fullName: AlgoSdk.AlgodClient.GetStatusAfterWaitingForRound(System.UInt64)
+  nameWithType: AlgodClient.GetStatusAfterWaitingForRound(UInt64)
+- uid: AlgoSdk.AlgodClient.GetStatusAfterWaitingForRound*
+  name: GetStatusAfterWaitingForRound
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetStatusAfterWaitingForRound_
+  commentId: Overload:AlgoSdk.AlgodClient.GetStatusAfterWaitingForRound
+  isSpec: "True"
+  fullName: AlgoSdk.AlgodClient.GetStatusAfterWaitingForRound
+  nameWithType: AlgodClient.GetStatusAfterWaitingForRound
+- uid: AlgoSdk.AlgodClient.GetSuggestedParams
+  name: GetSuggestedParams()
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetSuggestedParams
+  commentId: M:AlgoSdk.AlgodClient.GetSuggestedParams
+  fullName: AlgoSdk.AlgodClient.GetSuggestedParams()
+  nameWithType: AlgodClient.GetSuggestedParams()
+- uid: AlgoSdk.AlgodClient.GetSuggestedParams*
+  name: GetSuggestedParams
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetSuggestedParams_
+  commentId: Overload:AlgoSdk.AlgodClient.GetSuggestedParams
+  isSpec: "True"
+  fullName: AlgoSdk.AlgodClient.GetSuggestedParams
+  nameWithType: AlgodClient.GetSuggestedParams
 - uid: AlgoSdk.AlgodClient.GetSupply
   name: GetSupply()
   href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetSupply
@@ -6659,6 +6862,19 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AlgodClient.GetSupply
   nameWithType: AlgodClient.GetSupply
+- uid: AlgoSdk.AlgodClient.GetSwaggerSpec
+  name: GetSwaggerSpec()
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetSwaggerSpec
+  commentId: M:AlgoSdk.AlgodClient.GetSwaggerSpec
+  fullName: AlgoSdk.AlgodClient.GetSwaggerSpec()
+  nameWithType: AlgodClient.GetSwaggerSpec()
+- uid: AlgoSdk.AlgodClient.GetSwaggerSpec*
+  name: GetSwaggerSpec
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetSwaggerSpec_
+  commentId: Overload:AlgoSdk.AlgodClient.GetSwaggerSpec
+  isSpec: "True"
+  fullName: AlgoSdk.AlgodClient.GetSwaggerSpec
+  nameWithType: AlgodClient.GetSwaggerSpec
 - uid: AlgoSdk.AlgodClient.GetVersion
   name: GetVersion()
   href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetVersion
@@ -6672,6 +6888,19 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AlgodClient.GetVersion
   nameWithType: AlgodClient.GetVersion
+- uid: AlgoSdk.AlgodClient.GetVersions
+  name: GetVersions()
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetVersions
+  commentId: M:AlgoSdk.AlgodClient.GetVersions
+  fullName: AlgoSdk.AlgodClient.GetVersions()
+  nameWithType: AlgodClient.GetVersions()
+- uid: AlgoSdk.AlgodClient.GetVersions*
+  name: GetVersions
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetVersions_
+  commentId: Overload:AlgoSdk.AlgodClient.GetVersions
+  isSpec: "True"
+  fullName: AlgoSdk.AlgodClient.GetVersions
+  nameWithType: AlgodClient.GetVersions
 - uid: AlgoSdk.AlgodClient.Headers
   name: Headers
   href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_Headers
@@ -6740,6 +6969,31 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AlgodClient.RawTransaction
   nameWithType: AlgodClient.RawTransaction
+- uid: AlgoSdk.AlgodClient.RegisterParticipationKeys(System.String,System.UInt64,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.Boolean})
+  name: RegisterParticipationKeys(String, UInt64, Optional<UInt64>, Optional<Boolean>, Optional<Boolean>)
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_RegisterParticipationKeys_System_String_System_UInt64_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_Boolean__
+  commentId: M:AlgoSdk.AlgodClient.RegisterParticipationKeys(System.String,System.UInt64,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.Boolean})
+  name.vb: RegisterParticipationKeys(String, UInt64, Optional(Of UInt64), Optional(Of Boolean), Optional(Of Boolean))
+  fullName: AlgoSdk.AlgodClient.RegisterParticipationKeys(System.String, System.UInt64, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.Boolean>)
+  fullName.vb: AlgoSdk.AlgodClient.RegisterParticipationKeys(System.String, System.UInt64, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.Boolean))
+  nameWithType: AlgodClient.RegisterParticipationKeys(String, UInt64, Optional<UInt64>, Optional<Boolean>, Optional<Boolean>)
+  nameWithType.vb: AlgodClient.RegisterParticipationKeys(String, UInt64, Optional(Of UInt64), Optional(Of Boolean), Optional(Of Boolean))
+- uid: AlgoSdk.AlgodClient.RegisterParticipationKeys*
+  name: RegisterParticipationKeys
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_RegisterParticipationKeys_
+  commentId: Overload:AlgoSdk.AlgodClient.RegisterParticipationKeys
+  isSpec: "True"
+  fullName: AlgoSdk.AlgodClient.RegisterParticipationKeys
+  nameWithType: AlgodClient.RegisterParticipationKeys
+- uid: AlgoSdk.AlgodClient.SendTransaction(System.Byte[])
+  name: SendTransaction(Byte[])
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_SendTransaction_System_Byte___
+  commentId: M:AlgoSdk.AlgodClient.SendTransaction(System.Byte[])
+  name.vb: SendTransaction(Byte())
+  fullName: AlgoSdk.AlgodClient.SendTransaction(System.Byte[])
+  fullName.vb: AlgoSdk.AlgodClient.SendTransaction(System.Byte())
+  nameWithType: AlgodClient.SendTransaction(Byte[])
+  nameWithType.vb: AlgodClient.SendTransaction(Byte())
 - uid: AlgoSdk.AlgodClient.SendTransaction*
   name: SendTransaction
   href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_SendTransaction_
@@ -6756,6 +7010,47 @@ references:
   fullName.vb: AlgoSdk.AlgodClient.SendTransaction(Of T)(AlgoSdk.SignedTxn(Of T))
   nameWithType: AlgodClient.SendTransaction<T>(SignedTxn<T>)
   nameWithType.vb: AlgodClient.SendTransaction(Of T)(SignedTxn(Of T))
+- uid: AlgoSdk.AlgodClient.SendTransactions(AlgoSdk.SignedTxn[])
+  name: SendTransactions(SignedTxn[])
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_SendTransactions_AlgoSdk_SignedTxn___
+  commentId: M:AlgoSdk.AlgodClient.SendTransactions(AlgoSdk.SignedTxn[])
+  name.vb: SendTransactions(SignedTxn())
+  fullName: AlgoSdk.AlgodClient.SendTransactions(AlgoSdk.SignedTxn[])
+  fullName.vb: AlgoSdk.AlgodClient.SendTransactions(AlgoSdk.SignedTxn())
+  nameWithType: AlgodClient.SendTransactions(SignedTxn[])
+  nameWithType.vb: AlgodClient.SendTransactions(SignedTxn())
+- uid: AlgoSdk.AlgodClient.SendTransactions(System.Byte[][])
+  name: SendTransactions(Byte[][])
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_SendTransactions_System_Byte_____
+  commentId: M:AlgoSdk.AlgodClient.SendTransactions(System.Byte[][])
+  name.vb: SendTransactions(Byte()())
+  fullName: AlgoSdk.AlgodClient.SendTransactions(System.Byte[][])
+  fullName.vb: AlgoSdk.AlgodClient.SendTransactions(System.Byte()())
+  nameWithType: AlgodClient.SendTransactions(Byte[][])
+  nameWithType.vb: AlgodClient.SendTransactions(Byte()())
+- uid: AlgoSdk.AlgodClient.SendTransactions*
+  name: SendTransactions
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_SendTransactions_
+  commentId: Overload:AlgoSdk.AlgodClient.SendTransactions
+  isSpec: "True"
+  fullName: AlgoSdk.AlgodClient.SendTransactions
+  nameWithType: AlgodClient.SendTransactions
+- uid: AlgoSdk.AlgodClient.ShutDown(AlgoSdk.Optional{System.UInt64})
+  name: ShutDown(Optional<UInt64>)
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_ShutDown_AlgoSdk_Optional_System_UInt64__
+  commentId: M:AlgoSdk.AlgodClient.ShutDown(AlgoSdk.Optional{System.UInt64})
+  name.vb: ShutDown(Optional(Of UInt64))
+  fullName: AlgoSdk.AlgodClient.ShutDown(AlgoSdk.Optional<System.UInt64>)
+  fullName.vb: AlgoSdk.AlgodClient.ShutDown(AlgoSdk.Optional(Of System.UInt64))
+  nameWithType: AlgodClient.ShutDown(Optional<UInt64>)
+  nameWithType.vb: AlgodClient.ShutDown(Optional(Of UInt64))
+- uid: AlgoSdk.AlgodClient.ShutDown*
+  name: ShutDown
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_ShutDown_
+  commentId: Overload:AlgoSdk.AlgodClient.ShutDown
+  isSpec: "True"
+  fullName: AlgoSdk.AlgodClient.ShutDown
+  nameWithType: AlgodClient.ShutDown
 - uid: AlgoSdk.AlgodClient.ShutdownNode(AlgoSdk.Optional{System.UInt64})
   name: ShutdownNode(Optional<UInt64>)
   href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_ShutdownNode_AlgoSdk_Optional_System_UInt64__
@@ -12449,11 +12744,11 @@ references:
   commentId: T:AlgoSdk.Crypto.SecureMemoryHandle
   fullName: AlgoSdk.Crypto.SecureMemoryHandle
   nameWithType: SecureMemoryHandle
-- uid: AlgoSdk.Crypto.SecureMemoryHandle.Create(System.UIntPtr)
+- uid: AlgoSdk.Crypto.SecureMemoryHandle.Create(UIntPtr)
   name: Create(UIntPtr)
-  href: api/AlgoSdk.Crypto.SecureMemoryHandle.html#AlgoSdk_Crypto_SecureMemoryHandle_Create_System_UIntPtr_
-  commentId: M:AlgoSdk.Crypto.SecureMemoryHandle.Create(System.UIntPtr)
-  fullName: AlgoSdk.Crypto.SecureMemoryHandle.Create(System.UIntPtr)
+  href: api/AlgoSdk.Crypto.SecureMemoryHandle.html#AlgoSdk_Crypto_SecureMemoryHandle_Create_UIntPtr_
+  commentId: M:AlgoSdk.Crypto.SecureMemoryHandle.Create(UIntPtr)
+  fullName: AlgoSdk.Crypto.SecureMemoryHandle.Create(UIntPtr)
   nameWithType: SecureMemoryHandle.Create(UIntPtr)
 - uid: AlgoSdk.Crypto.SecureMemoryHandle.Create*
   name: Create
@@ -24057,13 +24352,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.IIndexerClient.LookupAccountCreatedAssets
   nameWithType: IIndexerClient.LookupAccountCreatedAssets
-- uid: AlgoSdk.IIndexerClient.LookupAccountTransactions(System.String,System.Byte[],AlgoSdk.Optional{System.Boolean},System.String,AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.TransactionType,AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,System.String,AlgoSdk.Optional{System.UInt64})
+- uid: AlgoSdk.IIndexerClient.LookupAccountTransactions(System.String,System.Byte[],AlgoSdk.Optional{System.Boolean},System.String,AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.TransactionType,AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,System.String,AlgoSdk.Optional{System.UInt64})
   name: LookupAccountTransactions(String, Byte[], Optional<Boolean>, String, Optional<UInt64>, DateTime, TransactionType, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, SignatureType, String, Optional<UInt64>)
-  href: api/AlgoSdk.IIndexerClient.html#AlgoSdk_IIndexerClient_LookupAccountTransactions_System_String_System_Byte___AlgoSdk_Optional_System_Boolean__System_String_AlgoSdk_Optional_System_UInt64__System_DateTime_AlgoSdk_TransactionType_AlgoSdk_Optional_System_UInt64__System_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_System_String_AlgoSdk_Optional_System_UInt64__
-  commentId: M:AlgoSdk.IIndexerClient.LookupAccountTransactions(System.String,System.Byte[],AlgoSdk.Optional{System.Boolean},System.String,AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.TransactionType,AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,System.String,AlgoSdk.Optional{System.UInt64})
+  href: api/AlgoSdk.IIndexerClient.html#AlgoSdk_IIndexerClient_LookupAccountTransactions_System_String_System_Byte___AlgoSdk_Optional_System_Boolean__System_String_AlgoSdk_Optional_System_UInt64__DateTime_AlgoSdk_TransactionType_AlgoSdk_Optional_System_UInt64__DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_System_String_AlgoSdk_Optional_System_UInt64__
+  commentId: M:AlgoSdk.IIndexerClient.LookupAccountTransactions(System.String,System.Byte[],AlgoSdk.Optional{System.Boolean},System.String,AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.TransactionType,AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,System.String,AlgoSdk.Optional{System.UInt64})
   name.vb: LookupAccountTransactions(String, Byte(), Optional(Of Boolean), String, Optional(Of UInt64), DateTime, TransactionType, Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), SignatureType, String, Optional(Of UInt64))
-  fullName: AlgoSdk.IIndexerClient.LookupAccountTransactions(System.String, System.Byte[], AlgoSdk.Optional<System.Boolean>, System.String, AlgoSdk.Optional<System.UInt64>, System.DateTime, AlgoSdk.TransactionType, AlgoSdk.Optional<System.UInt64>, System.DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, System.String, AlgoSdk.Optional<System.UInt64>)
-  fullName.vb: AlgoSdk.IIndexerClient.LookupAccountTransactions(System.String, System.Byte(), AlgoSdk.Optional(Of System.Boolean), System.String, AlgoSdk.Optional(Of System.UInt64), System.DateTime, AlgoSdk.TransactionType, AlgoSdk.Optional(Of System.UInt64), System.DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, System.String, AlgoSdk.Optional(Of System.UInt64))
+  fullName: AlgoSdk.IIndexerClient.LookupAccountTransactions(System.String, System.Byte[], AlgoSdk.Optional<System.Boolean>, System.String, AlgoSdk.Optional<System.UInt64>, DateTime, AlgoSdk.TransactionType, AlgoSdk.Optional<System.UInt64>, DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, System.String, AlgoSdk.Optional<System.UInt64>)
+  fullName.vb: AlgoSdk.IIndexerClient.LookupAccountTransactions(System.String, System.Byte(), AlgoSdk.Optional(Of System.Boolean), System.String, AlgoSdk.Optional(Of System.UInt64), DateTime, AlgoSdk.TransactionType, AlgoSdk.Optional(Of System.UInt64), DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, System.String, AlgoSdk.Optional(Of System.UInt64))
   nameWithType: IIndexerClient.LookupAccountTransactions(String, Byte[], Optional<Boolean>, String, Optional<UInt64>, DateTime, TransactionType, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, SignatureType, String, Optional<UInt64>)
   nameWithType.vb: IIndexerClient.LookupAccountTransactions(String, Byte(), Optional(Of Boolean), String, Optional(Of UInt64), DateTime, TransactionType, Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), SignatureType, String, Optional(Of UInt64))
 - uid: AlgoSdk.IIndexerClient.LookupAccountTransactions*
@@ -24137,13 +24432,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.IIndexerClient.LookupAssetByID
   nameWithType: IIndexerClient.LookupAssetByID
-- uid: AlgoSdk.IIndexerClient.LookupAssetTransactions(System.UInt64,System.Byte[],AlgoSdk.Optional{System.Boolean},System.String,AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.TransactionType,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Address,AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,System.String,AlgoSdk.AddressRole,AlgoSdk.Optional{System.UInt64})
+- uid: AlgoSdk.IIndexerClient.LookupAssetTransactions(System.UInt64,System.Byte[],AlgoSdk.Optional{System.Boolean},System.String,AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.TransactionType,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Address,AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,System.String,AlgoSdk.AddressRole,AlgoSdk.Optional{System.UInt64})
   name: LookupAssetTransactions(UInt64, Byte[], Optional<Boolean>, String, Optional<UInt64>, DateTime, TransactionType, Optional<Boolean>, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Address, Optional<UInt64>, SignatureType, String, AddressRole, Optional<UInt64>)
-  href: api/AlgoSdk.IIndexerClient.html#AlgoSdk_IIndexerClient_LookupAssetTransactions_System_UInt64_System_Byte___AlgoSdk_Optional_System_Boolean__System_String_AlgoSdk_Optional_System_UInt64__System_DateTime_AlgoSdk_TransactionType_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__System_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Address_AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_System_String_AlgoSdk_AddressRole_AlgoSdk_Optional_System_UInt64__
-  commentId: M:AlgoSdk.IIndexerClient.LookupAssetTransactions(System.UInt64,System.Byte[],AlgoSdk.Optional{System.Boolean},System.String,AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.TransactionType,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Address,AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,System.String,AlgoSdk.AddressRole,AlgoSdk.Optional{System.UInt64})
+  href: api/AlgoSdk.IIndexerClient.html#AlgoSdk_IIndexerClient_LookupAssetTransactions_System_UInt64_System_Byte___AlgoSdk_Optional_System_Boolean__System_String_AlgoSdk_Optional_System_UInt64__DateTime_AlgoSdk_TransactionType_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Address_AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_System_String_AlgoSdk_AddressRole_AlgoSdk_Optional_System_UInt64__
+  commentId: M:AlgoSdk.IIndexerClient.LookupAssetTransactions(System.UInt64,System.Byte[],AlgoSdk.Optional{System.Boolean},System.String,AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.TransactionType,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Address,AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,System.String,AlgoSdk.AddressRole,AlgoSdk.Optional{System.UInt64})
   name.vb: LookupAssetTransactions(UInt64, Byte(), Optional(Of Boolean), String, Optional(Of UInt64), DateTime, TransactionType, Optional(Of Boolean), Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Address, Optional(Of UInt64), SignatureType, String, AddressRole, Optional(Of UInt64))
-  fullName: AlgoSdk.IIndexerClient.LookupAssetTransactions(System.UInt64, System.Byte[], AlgoSdk.Optional<System.Boolean>, System.String, AlgoSdk.Optional<System.UInt64>, System.DateTime, AlgoSdk.TransactionType, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, System.DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Address, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, System.String, AlgoSdk.AddressRole, AlgoSdk.Optional<System.UInt64>)
-  fullName.vb: AlgoSdk.IIndexerClient.LookupAssetTransactions(System.UInt64, System.Byte(), AlgoSdk.Optional(Of System.Boolean), System.String, AlgoSdk.Optional(Of System.UInt64), System.DateTime, AlgoSdk.TransactionType, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), System.DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Address, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, System.String, AlgoSdk.AddressRole, AlgoSdk.Optional(Of System.UInt64))
+  fullName: AlgoSdk.IIndexerClient.LookupAssetTransactions(System.UInt64, System.Byte[], AlgoSdk.Optional<System.Boolean>, System.String, AlgoSdk.Optional<System.UInt64>, DateTime, AlgoSdk.TransactionType, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Address, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, System.String, AlgoSdk.AddressRole, AlgoSdk.Optional<System.UInt64>)
+  fullName.vb: AlgoSdk.IIndexerClient.LookupAssetTransactions(System.UInt64, System.Byte(), AlgoSdk.Optional(Of System.Boolean), System.String, AlgoSdk.Optional(Of System.UInt64), DateTime, AlgoSdk.TransactionType, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Address, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, System.String, AlgoSdk.AddressRole, AlgoSdk.Optional(Of System.UInt64))
   nameWithType: IIndexerClient.LookupAssetTransactions(UInt64, Byte[], Optional<Boolean>, String, Optional<UInt64>, DateTime, TransactionType, Optional<Boolean>, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Address, Optional<UInt64>, SignatureType, String, AddressRole, Optional<UInt64>)
   nameWithType.vb: IIndexerClient.LookupAssetTransactions(UInt64, Byte(), Optional(Of Boolean), String, Optional(Of UInt64), DateTime, TransactionType, Optional(Of Boolean), Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Address, Optional(Of UInt64), SignatureType, String, AddressRole, Optional(Of UInt64))
 - uid: AlgoSdk.IIndexerClient.LookupAssetTransactions*
@@ -24240,13 +24535,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.IIndexerClient.SearchForAssets
   nameWithType: IIndexerClient.SearchForAssets
-- uid: AlgoSdk.IIndexerClient.SearchForTransactions(System.Byte[],AlgoSdk.Optional{System.Boolean},System.String,AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.TransactionType,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Address,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,System.String,AlgoSdk.AddressRole,AlgoSdk.Optional{System.UInt64})
+- uid: AlgoSdk.IIndexerClient.SearchForTransactions(System.Byte[],AlgoSdk.Optional{System.Boolean},System.String,AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.TransactionType,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Address,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,System.String,AlgoSdk.AddressRole,AlgoSdk.Optional{System.UInt64})
   name: SearchForTransactions(Byte[], Optional<Boolean>, String, Optional<UInt64>, DateTime, Optional<UInt64>, TransactionType, Optional<Boolean>, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Address, Optional<UInt64>, Optional<UInt64>, SignatureType, String, AddressRole, Optional<UInt64>)
-  href: api/AlgoSdk.IIndexerClient.html#AlgoSdk_IIndexerClient_SearchForTransactions_System_Byte___AlgoSdk_Optional_System_Boolean__System_String_AlgoSdk_Optional_System_UInt64__System_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_TransactionType_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__System_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Address_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_System_String_AlgoSdk_AddressRole_AlgoSdk_Optional_System_UInt64__
-  commentId: M:AlgoSdk.IIndexerClient.SearchForTransactions(System.Byte[],AlgoSdk.Optional{System.Boolean},System.String,AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.TransactionType,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Address,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,System.String,AlgoSdk.AddressRole,AlgoSdk.Optional{System.UInt64})
+  href: api/AlgoSdk.IIndexerClient.html#AlgoSdk_IIndexerClient_SearchForTransactions_System_Byte___AlgoSdk_Optional_System_Boolean__System_String_AlgoSdk_Optional_System_UInt64__DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_TransactionType_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Address_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_System_String_AlgoSdk_AddressRole_AlgoSdk_Optional_System_UInt64__
+  commentId: M:AlgoSdk.IIndexerClient.SearchForTransactions(System.Byte[],AlgoSdk.Optional{System.Boolean},System.String,AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.TransactionType,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Address,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,System.String,AlgoSdk.AddressRole,AlgoSdk.Optional{System.UInt64})
   name.vb: SearchForTransactions(Byte(), Optional(Of Boolean), String, Optional(Of UInt64), DateTime, Optional(Of UInt64), TransactionType, Optional(Of Boolean), Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Address, Optional(Of UInt64), Optional(Of UInt64), SignatureType, String, AddressRole, Optional(Of UInt64))
-  fullName: AlgoSdk.IIndexerClient.SearchForTransactions(System.Byte[], AlgoSdk.Optional<System.Boolean>, System.String, AlgoSdk.Optional<System.UInt64>, System.DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.TransactionType, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, System.DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Address, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, System.String, AlgoSdk.AddressRole, AlgoSdk.Optional<System.UInt64>)
-  fullName.vb: AlgoSdk.IIndexerClient.SearchForTransactions(System.Byte(), AlgoSdk.Optional(Of System.Boolean), System.String, AlgoSdk.Optional(Of System.UInt64), System.DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.TransactionType, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), System.DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Address, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, System.String, AlgoSdk.AddressRole, AlgoSdk.Optional(Of System.UInt64))
+  fullName: AlgoSdk.IIndexerClient.SearchForTransactions(System.Byte[], AlgoSdk.Optional<System.Boolean>, System.String, AlgoSdk.Optional<System.UInt64>, DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.TransactionType, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Address, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, System.String, AlgoSdk.AddressRole, AlgoSdk.Optional<System.UInt64>)
+  fullName.vb: AlgoSdk.IIndexerClient.SearchForTransactions(System.Byte(), AlgoSdk.Optional(Of System.Boolean), System.String, AlgoSdk.Optional(Of System.UInt64), DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.TransactionType, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Address, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, System.String, AlgoSdk.AddressRole, AlgoSdk.Optional(Of System.UInt64))
   nameWithType: IIndexerClient.SearchForTransactions(Byte[], Optional<Boolean>, String, Optional<UInt64>, DateTime, Optional<UInt64>, TransactionType, Optional<Boolean>, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Address, Optional<UInt64>, Optional<UInt64>, SignatureType, String, AddressRole, Optional<UInt64>)
   nameWithType.vb: IIndexerClient.SearchForTransactions(Byte(), Optional(Of Boolean), String, Optional(Of UInt64), DateTime, Optional(Of UInt64), TransactionType, Optional(Of Boolean), Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Address, Optional(Of UInt64), Optional(Of UInt64), SignatureType, String, AddressRole, Optional(Of UInt64))
 - uid: AlgoSdk.IIndexerClient.SearchForTransactions*
@@ -29012,6 +29307,205 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.IndexerClient.Address
   nameWithType: IndexerClient.Address
+- uid: AlgoSdk.IndexerClient.GetAccount(AlgoSdk.Address,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64})
+  name: GetAccount(Address, Optional<Boolean>, Optional<UInt64>)
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetAccount_AlgoSdk_Address_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__
+  commentId: M:AlgoSdk.IndexerClient.GetAccount(AlgoSdk.Address,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64})
+  name.vb: GetAccount(Address, Optional(Of Boolean), Optional(Of UInt64))
+  fullName: AlgoSdk.IndexerClient.GetAccount(AlgoSdk.Address, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>)
+  fullName.vb: AlgoSdk.IndexerClient.GetAccount(AlgoSdk.Address, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64))
+  nameWithType: IndexerClient.GetAccount(Address, Optional<Boolean>, Optional<UInt64>)
+  nameWithType.vb: IndexerClient.GetAccount(Address, Optional(Of Boolean), Optional(Of UInt64))
+- uid: AlgoSdk.IndexerClient.GetAccount*
+  name: GetAccount
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetAccount_
+  commentId: Overload:AlgoSdk.IndexerClient.GetAccount
+  isSpec: "True"
+  fullName: AlgoSdk.IndexerClient.GetAccount
+  nameWithType: IndexerClient.GetAccount
+- uid: AlgoSdk.IndexerClient.GetAccounts(AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Address,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},AlgoSdk.Optional{System.UInt64})
+  name: GetAccounts(Optional<UInt64>, Optional<UInt64>, Address, Optional<UInt64>, Optional<UInt64>, Optional<Boolean>, Optional<UInt64>, Optional<FixedString128Bytes>, Optional<UInt64>)
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetAccounts_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Address_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__AlgoSdk_Optional_System_UInt64__
+  commentId: M:AlgoSdk.IndexerClient.GetAccounts(AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Address,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},AlgoSdk.Optional{System.UInt64})
+  name.vb: GetAccounts(Optional(Of UInt64), Optional(Of UInt64), Address, Optional(Of UInt64), Optional(Of UInt64), Optional(Of Boolean), Optional(Of UInt64), Optional(Of FixedString128Bytes), Optional(Of UInt64))
+  fullName: AlgoSdk.IndexerClient.GetAccounts(AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Address, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<FixedString128Bytes>, AlgoSdk.Optional<System.UInt64>)
+  fullName.vb: AlgoSdk.IndexerClient.GetAccounts(AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Address, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of FixedString128Bytes), AlgoSdk.Optional(Of System.UInt64))
+  nameWithType: IndexerClient.GetAccounts(Optional<UInt64>, Optional<UInt64>, Address, Optional<UInt64>, Optional<UInt64>, Optional<Boolean>, Optional<UInt64>, Optional<FixedString128Bytes>, Optional<UInt64>)
+  nameWithType.vb: IndexerClient.GetAccounts(Optional(Of UInt64), Optional(Of UInt64), Address, Optional(Of UInt64), Optional(Of UInt64), Optional(Of Boolean), Optional(Of UInt64), Optional(Of FixedString128Bytes), Optional(Of UInt64))
+- uid: AlgoSdk.IndexerClient.GetAccounts*
+  name: GetAccounts
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetAccounts_
+  commentId: Overload:AlgoSdk.IndexerClient.GetAccounts
+  isSpec: "True"
+  fullName: AlgoSdk.IndexerClient.GetAccounts
+  nameWithType: IndexerClient.GetAccounts
+- uid: AlgoSdk.IndexerClient.GetAccountTransactions(AlgoSdk.Address,DateTime,AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
+  name: GetAccountTransactions(Address, DateTime, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<FixedString128Bytes>, String, Optional<Boolean>, Optional<UInt64>, SignatureType, TransactionType, TransactionId)
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetAccountTransactions_AlgoSdk_Address_DateTime_AlgoSdk_Optional_System_UInt64__DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__System_String_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_AlgoSdk_TransactionType_AlgoSdk_TransactionId_
+  commentId: M:AlgoSdk.IndexerClient.GetAccountTransactions(AlgoSdk.Address,DateTime,AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
+  name.vb: GetAccountTransactions(Address, DateTime, Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of FixedString128Bytes), String, Optional(Of Boolean), Optional(Of UInt64), SignatureType, TransactionType, TransactionId)
+  fullName: AlgoSdk.IndexerClient.GetAccountTransactions(AlgoSdk.Address, DateTime, AlgoSdk.Optional<System.UInt64>, DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<FixedString128Bytes>, System.String, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
+  fullName.vb: AlgoSdk.IndexerClient.GetAccountTransactions(AlgoSdk.Address, DateTime, AlgoSdk.Optional(Of System.UInt64), DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of FixedString128Bytes), System.String, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
+  nameWithType: IndexerClient.GetAccountTransactions(Address, DateTime, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<FixedString128Bytes>, String, Optional<Boolean>, Optional<UInt64>, SignatureType, TransactionType, TransactionId)
+  nameWithType.vb: IndexerClient.GetAccountTransactions(Address, DateTime, Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of FixedString128Bytes), String, Optional(Of Boolean), Optional(Of UInt64), SignatureType, TransactionType, TransactionId)
+- uid: AlgoSdk.IndexerClient.GetAccountTransactions*
+  name: GetAccountTransactions
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetAccountTransactions_
+  commentId: Overload:AlgoSdk.IndexerClient.GetAccountTransactions
+  isSpec: "True"
+  fullName: AlgoSdk.IndexerClient.GetAccountTransactions
+  nameWithType: IndexerClient.GetAccountTransactions
+- uid: AlgoSdk.IndexerClient.GetApplication(System.UInt64,AlgoSdk.Optional{System.Boolean})
+  name: GetApplication(UInt64, Optional<Boolean>)
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetApplication_System_UInt64_AlgoSdk_Optional_System_Boolean__
+  commentId: M:AlgoSdk.IndexerClient.GetApplication(System.UInt64,AlgoSdk.Optional{System.Boolean})
+  name.vb: GetApplication(UInt64, Optional(Of Boolean))
+  fullName: AlgoSdk.IndexerClient.GetApplication(System.UInt64, AlgoSdk.Optional<System.Boolean>)
+  fullName.vb: AlgoSdk.IndexerClient.GetApplication(System.UInt64, AlgoSdk.Optional(Of System.Boolean))
+  nameWithType: IndexerClient.GetApplication(UInt64, Optional<Boolean>)
+  nameWithType.vb: IndexerClient.GetApplication(UInt64, Optional(Of Boolean))
+- uid: AlgoSdk.IndexerClient.GetApplication*
+  name: GetApplication
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetApplication_
+  commentId: Overload:AlgoSdk.IndexerClient.GetApplication
+  isSpec: "True"
+  fullName: AlgoSdk.IndexerClient.GetApplication
+  nameWithType: IndexerClient.GetApplication
+- uid: AlgoSdk.IndexerClient.GetApplications(AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes})
+  name: GetApplications(Optional<UInt64>, Optional<Boolean>, Optional<UInt64>, Optional<FixedString128Bytes>)
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetApplications_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__
+  commentId: M:AlgoSdk.IndexerClient.GetApplications(AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes})
+  name.vb: GetApplications(Optional(Of UInt64), Optional(Of Boolean), Optional(Of UInt64), Optional(Of FixedString128Bytes))
+  fullName: AlgoSdk.IndexerClient.GetApplications(AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<FixedString128Bytes>)
+  fullName.vb: AlgoSdk.IndexerClient.GetApplications(AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of FixedString128Bytes))
+  nameWithType: IndexerClient.GetApplications(Optional<UInt64>, Optional<Boolean>, Optional<UInt64>, Optional<FixedString128Bytes>)
+  nameWithType.vb: IndexerClient.GetApplications(Optional(Of UInt64), Optional(Of Boolean), Optional(Of UInt64), Optional(Of FixedString128Bytes))
+- uid: AlgoSdk.IndexerClient.GetApplications*
+  name: GetApplications
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetApplications_
+  commentId: Overload:AlgoSdk.IndexerClient.GetApplications
+  isSpec: "True"
+  fullName: AlgoSdk.IndexerClient.GetApplications
+  nameWithType: IndexerClient.GetApplications
+- uid: AlgoSdk.IndexerClient.GetAsset(System.UInt64,AlgoSdk.Optional{System.Boolean})
+  name: GetAsset(UInt64, Optional<Boolean>)
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetAsset_System_UInt64_AlgoSdk_Optional_System_Boolean__
+  commentId: M:AlgoSdk.IndexerClient.GetAsset(System.UInt64,AlgoSdk.Optional{System.Boolean})
+  name.vb: GetAsset(UInt64, Optional(Of Boolean))
+  fullName: AlgoSdk.IndexerClient.GetAsset(System.UInt64, AlgoSdk.Optional<System.Boolean>)
+  fullName.vb: AlgoSdk.IndexerClient.GetAsset(System.UInt64, AlgoSdk.Optional(Of System.Boolean))
+  nameWithType: IndexerClient.GetAsset(UInt64, Optional<Boolean>)
+  nameWithType.vb: IndexerClient.GetAsset(UInt64, Optional(Of Boolean))
+- uid: AlgoSdk.IndexerClient.GetAsset*
+  name: GetAsset
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetAsset_
+  commentId: Overload:AlgoSdk.IndexerClient.GetAsset
+  isSpec: "True"
+  fullName: AlgoSdk.IndexerClient.GetAsset
+  nameWithType: IndexerClient.GetAsset
+- uid: AlgoSdk.IndexerClient.GetAssetBalances(System.UInt64,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},AlgoSdk.Optional{System.UInt64})
+  name: GetAssetBalances(UInt64, Optional<UInt64>, Optional<UInt64>, Optional<Boolean>, Optional<UInt64>, Optional<FixedString128Bytes>, Optional<UInt64>)
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetAssetBalances_System_UInt64_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__AlgoSdk_Optional_System_UInt64__
+  commentId: M:AlgoSdk.IndexerClient.GetAssetBalances(System.UInt64,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},AlgoSdk.Optional{System.UInt64})
+  name.vb: GetAssetBalances(UInt64, Optional(Of UInt64), Optional(Of UInt64), Optional(Of Boolean), Optional(Of UInt64), Optional(Of FixedString128Bytes), Optional(Of UInt64))
+  fullName: AlgoSdk.IndexerClient.GetAssetBalances(System.UInt64, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<FixedString128Bytes>, AlgoSdk.Optional<System.UInt64>)
+  fullName.vb: AlgoSdk.IndexerClient.GetAssetBalances(System.UInt64, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of FixedString128Bytes), AlgoSdk.Optional(Of System.UInt64))
+  nameWithType: IndexerClient.GetAssetBalances(UInt64, Optional<UInt64>, Optional<UInt64>, Optional<Boolean>, Optional<UInt64>, Optional<FixedString128Bytes>, Optional<UInt64>)
+  nameWithType.vb: IndexerClient.GetAssetBalances(UInt64, Optional(Of UInt64), Optional(Of UInt64), Optional(Of Boolean), Optional(Of UInt64), Optional(Of FixedString128Bytes), Optional(Of UInt64))
+- uid: AlgoSdk.IndexerClient.GetAssetBalances*
+  name: GetAssetBalances
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetAssetBalances_
+  commentId: Overload:AlgoSdk.IndexerClient.GetAssetBalances
+  isSpec: "True"
+  fullName: AlgoSdk.IndexerClient.GetAssetBalances
+  nameWithType: IndexerClient.GetAssetBalances
+- uid: AlgoSdk.IndexerClient.GetAssets(AlgoSdk.Optional{System.UInt64},AlgoSdk.Address,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},System.String,AlgoSdk.Optional{FixedString128Bytes},System.String)
+  name: GetAssets(Optional<UInt64>, Address, Optional<Boolean>, Optional<UInt64>, String, Optional<FixedString128Bytes>, String)
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetAssets_AlgoSdk_Optional_System_UInt64__AlgoSdk_Address_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__System_String_AlgoSdk_Optional_FixedString128Bytes__System_String_
+  commentId: M:AlgoSdk.IndexerClient.GetAssets(AlgoSdk.Optional{System.UInt64},AlgoSdk.Address,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},System.String,AlgoSdk.Optional{FixedString128Bytes},System.String)
+  name.vb: GetAssets(Optional(Of UInt64), Address, Optional(Of Boolean), Optional(Of UInt64), String, Optional(Of FixedString128Bytes), String)
+  fullName: AlgoSdk.IndexerClient.GetAssets(AlgoSdk.Optional<System.UInt64>, AlgoSdk.Address, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, System.String, AlgoSdk.Optional<FixedString128Bytes>, System.String)
+  fullName.vb: AlgoSdk.IndexerClient.GetAssets(AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Address, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), System.String, AlgoSdk.Optional(Of FixedString128Bytes), System.String)
+  nameWithType: IndexerClient.GetAssets(Optional<UInt64>, Address, Optional<Boolean>, Optional<UInt64>, String, Optional<FixedString128Bytes>, String)
+  nameWithType.vb: IndexerClient.GetAssets(Optional(Of UInt64), Address, Optional(Of Boolean), Optional(Of UInt64), String, Optional(Of FixedString128Bytes), String)
+- uid: AlgoSdk.IndexerClient.GetAssets*
+  name: GetAssets
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetAssets_
+  commentId: Overload:AlgoSdk.IndexerClient.GetAssets
+  isSpec: "True"
+  fullName: AlgoSdk.IndexerClient.GetAssets
+  nameWithType: IndexerClient.GetAssets
+- uid: AlgoSdk.IndexerClient.GetAssetTransactions(System.UInt64,AlgoSdk.Address,AlgoSdk.AddressRole,DateTime,DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
+  name: GetAssetTransactions(UInt64, Address, AddressRole, DateTime, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<Boolean>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<FixedString128Bytes>, String, Optional<Boolean>, Optional<UInt64>, SignatureType, TransactionType, TransactionId)
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetAssetTransactions_System_UInt64_AlgoSdk_Address_AlgoSdk_AddressRole_DateTime_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__System_String_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_AlgoSdk_TransactionType_AlgoSdk_TransactionId_
+  commentId: M:AlgoSdk.IndexerClient.GetAssetTransactions(System.UInt64,AlgoSdk.Address,AlgoSdk.AddressRole,DateTime,DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
+  name.vb: GetAssetTransactions(UInt64, Address, AddressRole, DateTime, DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of Boolean), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of FixedString128Bytes), String, Optional(Of Boolean), Optional(Of UInt64), SignatureType, TransactionType, TransactionId)
+  fullName: AlgoSdk.IndexerClient.GetAssetTransactions(System.UInt64, AlgoSdk.Address, AlgoSdk.AddressRole, DateTime, DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<FixedString128Bytes>, System.String, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
+  fullName.vb: AlgoSdk.IndexerClient.GetAssetTransactions(System.UInt64, AlgoSdk.Address, AlgoSdk.AddressRole, DateTime, DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of FixedString128Bytes), System.String, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
+  nameWithType: IndexerClient.GetAssetTransactions(UInt64, Address, AddressRole, DateTime, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<Boolean>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<FixedString128Bytes>, String, Optional<Boolean>, Optional<UInt64>, SignatureType, TransactionType, TransactionId)
+  nameWithType.vb: IndexerClient.GetAssetTransactions(UInt64, Address, AddressRole, DateTime, DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of Boolean), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of FixedString128Bytes), String, Optional(Of Boolean), Optional(Of UInt64), SignatureType, TransactionType, TransactionId)
+- uid: AlgoSdk.IndexerClient.GetAssetTransactions*
+  name: GetAssetTransactions
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetAssetTransactions_
+  commentId: Overload:AlgoSdk.IndexerClient.GetAssetTransactions
+  isSpec: "True"
+  fullName: AlgoSdk.IndexerClient.GetAssetTransactions
+  nameWithType: IndexerClient.GetAssetTransactions
+- uid: AlgoSdk.IndexerClient.GetBlock(System.UInt64)
+  name: GetBlock(UInt64)
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetBlock_System_UInt64_
+  commentId: M:AlgoSdk.IndexerClient.GetBlock(System.UInt64)
+  fullName: AlgoSdk.IndexerClient.GetBlock(System.UInt64)
+  nameWithType: IndexerClient.GetBlock(UInt64)
+- uid: AlgoSdk.IndexerClient.GetBlock*
+  name: GetBlock
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetBlock_
+  commentId: Overload:AlgoSdk.IndexerClient.GetBlock
+  isSpec: "True"
+  fullName: AlgoSdk.IndexerClient.GetBlock
+  nameWithType: IndexerClient.GetBlock
+- uid: AlgoSdk.IndexerClient.GetHealth
+  name: GetHealth()
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetHealth
+  commentId: M:AlgoSdk.IndexerClient.GetHealth
+  fullName: AlgoSdk.IndexerClient.GetHealth()
+  nameWithType: IndexerClient.GetHealth()
+- uid: AlgoSdk.IndexerClient.GetHealth*
+  name: GetHealth
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetHealth_
+  commentId: Overload:AlgoSdk.IndexerClient.GetHealth
+  isSpec: "True"
+  fullName: AlgoSdk.IndexerClient.GetHealth
+  nameWithType: IndexerClient.GetHealth
+- uid: AlgoSdk.IndexerClient.GetTransaction(AlgoSdk.TransactionId)
+  name: GetTransaction(TransactionId)
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetTransaction_AlgoSdk_TransactionId_
+  commentId: M:AlgoSdk.IndexerClient.GetTransaction(AlgoSdk.TransactionId)
+  fullName: AlgoSdk.IndexerClient.GetTransaction(AlgoSdk.TransactionId)
+  nameWithType: IndexerClient.GetTransaction(TransactionId)
+- uid: AlgoSdk.IndexerClient.GetTransaction*
+  name: GetTransaction
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetTransaction_
+  commentId: Overload:AlgoSdk.IndexerClient.GetTransaction
+  isSpec: "True"
+  fullName: AlgoSdk.IndexerClient.GetTransaction
+  nameWithType: IndexerClient.GetTransaction
+- uid: AlgoSdk.IndexerClient.GetTransactions(AlgoSdk.Address,AlgoSdk.AddressRole,DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
+  name: GetTransactions(Address, AddressRole, DateTime, Optional<UInt64>, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<Boolean>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<FixedString128Bytes>, String, Optional<Boolean>, Optional<UInt64>, SignatureType, TransactionType, TransactionId)
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetTransactions_AlgoSdk_Address_AlgoSdk_AddressRole_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_FixedString128Bytes__System_String_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_AlgoSdk_TransactionType_AlgoSdk_TransactionId_
+  commentId: M:AlgoSdk.IndexerClient.GetTransactions(AlgoSdk.Address,AlgoSdk.AddressRole,DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{FixedString128Bytes},System.String,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,AlgoSdk.TransactionType,AlgoSdk.TransactionId)
+  name.vb: GetTransactions(Address, AddressRole, DateTime, Optional(Of UInt64), Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of Boolean), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of FixedString128Bytes), String, Optional(Of Boolean), Optional(Of UInt64), SignatureType, TransactionType, TransactionId)
+  fullName: AlgoSdk.IndexerClient.GetTransactions(AlgoSdk.Address, AlgoSdk.AddressRole, DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<FixedString128Bytes>, System.String, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
+  fullName.vb: AlgoSdk.IndexerClient.GetTransactions(AlgoSdk.Address, AlgoSdk.AddressRole, DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of FixedString128Bytes), System.String, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, AlgoSdk.TransactionType, AlgoSdk.TransactionId)
+  nameWithType: IndexerClient.GetTransactions(Address, AddressRole, DateTime, Optional<UInt64>, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<Boolean>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<FixedString128Bytes>, String, Optional<Boolean>, Optional<UInt64>, SignatureType, TransactionType, TransactionId)
+  nameWithType.vb: IndexerClient.GetTransactions(Address, AddressRole, DateTime, Optional(Of UInt64), Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of Boolean), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of FixedString128Bytes), String, Optional(Of Boolean), Optional(Of UInt64), SignatureType, TransactionType, TransactionId)
+- uid: AlgoSdk.IndexerClient.GetTransactions*
+  name: GetTransactions
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_GetTransactions_
+  commentId: Overload:AlgoSdk.IndexerClient.GetTransactions
+  isSpec: "True"
+  fullName: AlgoSdk.IndexerClient.GetTransactions
+  nameWithType: IndexerClient.GetTransactions
 - uid: AlgoSdk.IndexerClient.Headers
   name: Headers
   href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_Headers
@@ -29105,13 +29599,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.IndexerClient.LookupAccountCreatedAssets
   nameWithType: IndexerClient.LookupAccountCreatedAssets
-- uid: AlgoSdk.IndexerClient.LookupAccountTransactions(System.String,System.Byte[],AlgoSdk.Optional{System.Boolean},System.String,AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.TransactionType,AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,System.String,AlgoSdk.Optional{System.UInt64})
+- uid: AlgoSdk.IndexerClient.LookupAccountTransactions(System.String,System.Byte[],AlgoSdk.Optional{System.Boolean},System.String,AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.TransactionType,AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,System.String,AlgoSdk.Optional{System.UInt64})
   name: LookupAccountTransactions(String, Byte[], Optional<Boolean>, String, Optional<UInt64>, DateTime, TransactionType, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, SignatureType, String, Optional<UInt64>)
-  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_LookupAccountTransactions_System_String_System_Byte___AlgoSdk_Optional_System_Boolean__System_String_AlgoSdk_Optional_System_UInt64__System_DateTime_AlgoSdk_TransactionType_AlgoSdk_Optional_System_UInt64__System_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_System_String_AlgoSdk_Optional_System_UInt64__
-  commentId: M:AlgoSdk.IndexerClient.LookupAccountTransactions(System.String,System.Byte[],AlgoSdk.Optional{System.Boolean},System.String,AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.TransactionType,AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,System.String,AlgoSdk.Optional{System.UInt64})
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_LookupAccountTransactions_System_String_System_Byte___AlgoSdk_Optional_System_Boolean__System_String_AlgoSdk_Optional_System_UInt64__DateTime_AlgoSdk_TransactionType_AlgoSdk_Optional_System_UInt64__DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_System_String_AlgoSdk_Optional_System_UInt64__
+  commentId: M:AlgoSdk.IndexerClient.LookupAccountTransactions(System.String,System.Byte[],AlgoSdk.Optional{System.Boolean},System.String,AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.TransactionType,AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,System.String,AlgoSdk.Optional{System.UInt64})
   name.vb: LookupAccountTransactions(String, Byte(), Optional(Of Boolean), String, Optional(Of UInt64), DateTime, TransactionType, Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), SignatureType, String, Optional(Of UInt64))
-  fullName: AlgoSdk.IndexerClient.LookupAccountTransactions(System.String, System.Byte[], AlgoSdk.Optional<System.Boolean>, System.String, AlgoSdk.Optional<System.UInt64>, System.DateTime, AlgoSdk.TransactionType, AlgoSdk.Optional<System.UInt64>, System.DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, System.String, AlgoSdk.Optional<System.UInt64>)
-  fullName.vb: AlgoSdk.IndexerClient.LookupAccountTransactions(System.String, System.Byte(), AlgoSdk.Optional(Of System.Boolean), System.String, AlgoSdk.Optional(Of System.UInt64), System.DateTime, AlgoSdk.TransactionType, AlgoSdk.Optional(Of System.UInt64), System.DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, System.String, AlgoSdk.Optional(Of System.UInt64))
+  fullName: AlgoSdk.IndexerClient.LookupAccountTransactions(System.String, System.Byte[], AlgoSdk.Optional<System.Boolean>, System.String, AlgoSdk.Optional<System.UInt64>, DateTime, AlgoSdk.TransactionType, AlgoSdk.Optional<System.UInt64>, DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, System.String, AlgoSdk.Optional<System.UInt64>)
+  fullName.vb: AlgoSdk.IndexerClient.LookupAccountTransactions(System.String, System.Byte(), AlgoSdk.Optional(Of System.Boolean), System.String, AlgoSdk.Optional(Of System.UInt64), DateTime, AlgoSdk.TransactionType, AlgoSdk.Optional(Of System.UInt64), DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, System.String, AlgoSdk.Optional(Of System.UInt64))
   nameWithType: IndexerClient.LookupAccountTransactions(String, Byte[], Optional<Boolean>, String, Optional<UInt64>, DateTime, TransactionType, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, SignatureType, String, Optional<UInt64>)
   nameWithType.vb: IndexerClient.LookupAccountTransactions(String, Byte(), Optional(Of Boolean), String, Optional(Of UInt64), DateTime, TransactionType, Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), SignatureType, String, Optional(Of UInt64))
 - uid: AlgoSdk.IndexerClient.LookupAccountTransactions*
@@ -29185,13 +29679,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.IndexerClient.LookupAssetByID
   nameWithType: IndexerClient.LookupAssetByID
-- uid: AlgoSdk.IndexerClient.LookupAssetTransactions(System.UInt64,System.Byte[],AlgoSdk.Optional{System.Boolean},System.String,AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.TransactionType,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Address,AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,System.String,AlgoSdk.AddressRole,AlgoSdk.Optional{System.UInt64})
+- uid: AlgoSdk.IndexerClient.LookupAssetTransactions(System.UInt64,System.Byte[],AlgoSdk.Optional{System.Boolean},System.String,AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.TransactionType,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Address,AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,System.String,AlgoSdk.AddressRole,AlgoSdk.Optional{System.UInt64})
   name: LookupAssetTransactions(UInt64, Byte[], Optional<Boolean>, String, Optional<UInt64>, DateTime, TransactionType, Optional<Boolean>, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Address, Optional<UInt64>, SignatureType, String, AddressRole, Optional<UInt64>)
-  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_LookupAssetTransactions_System_UInt64_System_Byte___AlgoSdk_Optional_System_Boolean__System_String_AlgoSdk_Optional_System_UInt64__System_DateTime_AlgoSdk_TransactionType_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__System_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Address_AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_System_String_AlgoSdk_AddressRole_AlgoSdk_Optional_System_UInt64__
-  commentId: M:AlgoSdk.IndexerClient.LookupAssetTransactions(System.UInt64,System.Byte[],AlgoSdk.Optional{System.Boolean},System.String,AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.TransactionType,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Address,AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,System.String,AlgoSdk.AddressRole,AlgoSdk.Optional{System.UInt64})
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_LookupAssetTransactions_System_UInt64_System_Byte___AlgoSdk_Optional_System_Boolean__System_String_AlgoSdk_Optional_System_UInt64__DateTime_AlgoSdk_TransactionType_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Address_AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_System_String_AlgoSdk_AddressRole_AlgoSdk_Optional_System_UInt64__
+  commentId: M:AlgoSdk.IndexerClient.LookupAssetTransactions(System.UInt64,System.Byte[],AlgoSdk.Optional{System.Boolean},System.String,AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.TransactionType,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Address,AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,System.String,AlgoSdk.AddressRole,AlgoSdk.Optional{System.UInt64})
   name.vb: LookupAssetTransactions(UInt64, Byte(), Optional(Of Boolean), String, Optional(Of UInt64), DateTime, TransactionType, Optional(Of Boolean), Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Address, Optional(Of UInt64), SignatureType, String, AddressRole, Optional(Of UInt64))
-  fullName: AlgoSdk.IndexerClient.LookupAssetTransactions(System.UInt64, System.Byte[], AlgoSdk.Optional<System.Boolean>, System.String, AlgoSdk.Optional<System.UInt64>, System.DateTime, AlgoSdk.TransactionType, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, System.DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Address, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, System.String, AlgoSdk.AddressRole, AlgoSdk.Optional<System.UInt64>)
-  fullName.vb: AlgoSdk.IndexerClient.LookupAssetTransactions(System.UInt64, System.Byte(), AlgoSdk.Optional(Of System.Boolean), System.String, AlgoSdk.Optional(Of System.UInt64), System.DateTime, AlgoSdk.TransactionType, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), System.DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Address, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, System.String, AlgoSdk.AddressRole, AlgoSdk.Optional(Of System.UInt64))
+  fullName: AlgoSdk.IndexerClient.LookupAssetTransactions(System.UInt64, System.Byte[], AlgoSdk.Optional<System.Boolean>, System.String, AlgoSdk.Optional<System.UInt64>, DateTime, AlgoSdk.TransactionType, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Address, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, System.String, AlgoSdk.AddressRole, AlgoSdk.Optional<System.UInt64>)
+  fullName.vb: AlgoSdk.IndexerClient.LookupAssetTransactions(System.UInt64, System.Byte(), AlgoSdk.Optional(Of System.Boolean), System.String, AlgoSdk.Optional(Of System.UInt64), DateTime, AlgoSdk.TransactionType, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Address, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, System.String, AlgoSdk.AddressRole, AlgoSdk.Optional(Of System.UInt64))
   nameWithType: IndexerClient.LookupAssetTransactions(UInt64, Byte[], Optional<Boolean>, String, Optional<UInt64>, DateTime, TransactionType, Optional<Boolean>, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Address, Optional<UInt64>, SignatureType, String, AddressRole, Optional<UInt64>)
   nameWithType.vb: IndexerClient.LookupAssetTransactions(UInt64, Byte(), Optional(Of Boolean), String, Optional(Of UInt64), DateTime, TransactionType, Optional(Of Boolean), Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Address, Optional(Of UInt64), SignatureType, String, AddressRole, Optional(Of UInt64))
 - uid: AlgoSdk.IndexerClient.LookupAssetTransactions*
@@ -29288,13 +29782,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.IndexerClient.SearchForAssets
   nameWithType: IndexerClient.SearchForAssets
-- uid: AlgoSdk.IndexerClient.SearchForTransactions(System.Byte[],AlgoSdk.Optional{System.Boolean},System.String,AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.TransactionType,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Address,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,System.String,AlgoSdk.AddressRole,AlgoSdk.Optional{System.UInt64})
+- uid: AlgoSdk.IndexerClient.SearchForTransactions(System.Byte[],AlgoSdk.Optional{System.Boolean},System.String,AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.TransactionType,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Address,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,System.String,AlgoSdk.AddressRole,AlgoSdk.Optional{System.UInt64})
   name: SearchForTransactions(Byte[], Optional<Boolean>, String, Optional<UInt64>, DateTime, Optional<UInt64>, TransactionType, Optional<Boolean>, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Address, Optional<UInt64>, Optional<UInt64>, SignatureType, String, AddressRole, Optional<UInt64>)
-  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_SearchForTransactions_System_Byte___AlgoSdk_Optional_System_Boolean__System_String_AlgoSdk_Optional_System_UInt64__System_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_TransactionType_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__System_DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Address_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_System_String_AlgoSdk_AddressRole_AlgoSdk_Optional_System_UInt64__
-  commentId: M:AlgoSdk.IndexerClient.SearchForTransactions(System.Byte[],AlgoSdk.Optional{System.Boolean},System.String,AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.TransactionType,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},System.DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Address,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,System.String,AlgoSdk.AddressRole,AlgoSdk.Optional{System.UInt64})
+  href: api/AlgoSdk.IndexerClient.html#AlgoSdk_IndexerClient_SearchForTransactions_System_Byte___AlgoSdk_Optional_System_Boolean__System_String_AlgoSdk_Optional_System_UInt64__DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_TransactionType_AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_UInt64__DateTime_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_Address_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_UInt64__AlgoSdk_SignatureType_System_String_AlgoSdk_AddressRole_AlgoSdk_Optional_System_UInt64__
+  commentId: M:AlgoSdk.IndexerClient.SearchForTransactions(System.Byte[],AlgoSdk.Optional{System.Boolean},System.String,AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.TransactionType,AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.UInt64},DateTime,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.Address,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.UInt64},AlgoSdk.SignatureType,System.String,AlgoSdk.AddressRole,AlgoSdk.Optional{System.UInt64})
   name.vb: SearchForTransactions(Byte(), Optional(Of Boolean), String, Optional(Of UInt64), DateTime, Optional(Of UInt64), TransactionType, Optional(Of Boolean), Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Address, Optional(Of UInt64), Optional(Of UInt64), SignatureType, String, AddressRole, Optional(Of UInt64))
-  fullName: AlgoSdk.IndexerClient.SearchForTransactions(System.Byte[], AlgoSdk.Optional<System.Boolean>, System.String, AlgoSdk.Optional<System.UInt64>, System.DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.TransactionType, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, System.DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Address, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, System.String, AlgoSdk.AddressRole, AlgoSdk.Optional<System.UInt64>)
-  fullName.vb: AlgoSdk.IndexerClient.SearchForTransactions(System.Byte(), AlgoSdk.Optional(Of System.Boolean), System.String, AlgoSdk.Optional(Of System.UInt64), System.DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.TransactionType, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), System.DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Address, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, System.String, AlgoSdk.AddressRole, AlgoSdk.Optional(Of System.UInt64))
+  fullName: AlgoSdk.IndexerClient.SearchForTransactions(System.Byte[], AlgoSdk.Optional<System.Boolean>, System.String, AlgoSdk.Optional<System.UInt64>, DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.TransactionType, AlgoSdk.Optional<System.Boolean>, AlgoSdk.Optional<System.UInt64>, DateTime, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Address, AlgoSdk.Optional<System.UInt64>, AlgoSdk.Optional<System.UInt64>, AlgoSdk.SignatureType, System.String, AlgoSdk.AddressRole, AlgoSdk.Optional<System.UInt64>)
+  fullName.vb: AlgoSdk.IndexerClient.SearchForTransactions(System.Byte(), AlgoSdk.Optional(Of System.Boolean), System.String, AlgoSdk.Optional(Of System.UInt64), DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.TransactionType, AlgoSdk.Optional(Of System.Boolean), AlgoSdk.Optional(Of System.UInt64), DateTime, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Address, AlgoSdk.Optional(Of System.UInt64), AlgoSdk.Optional(Of System.UInt64), AlgoSdk.SignatureType, System.String, AlgoSdk.AddressRole, AlgoSdk.Optional(Of System.UInt64))
   nameWithType: IndexerClient.SearchForTransactions(Byte[], Optional<Boolean>, String, Optional<UInt64>, DateTime, Optional<UInt64>, TransactionType, Optional<Boolean>, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Address, Optional<UInt64>, Optional<UInt64>, SignatureType, String, AddressRole, Optional<UInt64>)
   nameWithType.vb: IndexerClient.SearchForTransactions(Byte(), Optional(Of Boolean), String, Optional(Of UInt64), DateTime, Optional(Of UInt64), TransactionType, Optional(Of Boolean), Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Address, Optional(Of UInt64), Optional(Of UInt64), SignatureType, String, AddressRole, Optional(Of UInt64))
 - uid: AlgoSdk.IndexerClient.SearchForTransactions*
@@ -50252,11 +50746,11 @@ references:
   commentId: M:AlgoSdk.SerializationException.#ctor(System.String)
   fullName: AlgoSdk.SerializationException.SerializationException(System.String)
   nameWithType: SerializationException.SerializationException(String)
-- uid: AlgoSdk.SerializationException.#ctor(System.String,System.Exception)
+- uid: AlgoSdk.SerializationException.#ctor(System.String,Exception)
   name: SerializationException(String, Exception)
-  href: api/AlgoSdk.SerializationException.html#AlgoSdk_SerializationException__ctor_System_String_System_Exception_
-  commentId: M:AlgoSdk.SerializationException.#ctor(System.String,System.Exception)
-  fullName: AlgoSdk.SerializationException.SerializationException(System.String, System.Exception)
+  href: api/AlgoSdk.SerializationException.html#AlgoSdk_SerializationException__ctor_System_String_Exception_
+  commentId: M:AlgoSdk.SerializationException.#ctor(System.String,Exception)
+  fullName: AlgoSdk.SerializationException.SerializationException(System.String, Exception)
   nameWithType: SerializationException.SerializationException(String, Exception)
 - uid: AlgoSdk.SerializationException.#ctor*
   name: SerializationException
@@ -52496,6 +52990,225 @@ references:
   fullName.vb: AlgoSdk.TransactionExtensions.ToSignatureMessage(Of T)(T, Allocator)
   nameWithType: TransactionExtensions.ToSignatureMessage<T>(T, Allocator)
   nameWithType.vb: TransactionExtensions.ToSignatureMessage(Of T)(T, Allocator)
+- uid: AlgoSdk.TransactionGroup
+  name: TransactionGroup
+  href: api/AlgoSdk.TransactionGroup.html
+  commentId: T:AlgoSdk.TransactionGroup
+  fullName: AlgoSdk.TransactionGroup
+  nameWithType: TransactionGroup
+- uid: AlgoSdk.TransactionGroup.Equals(AlgoSdk.TransactionGroup)
+  name: Equals(TransactionGroup)
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_Equals_AlgoSdk_TransactionGroup_
+  commentId: M:AlgoSdk.TransactionGroup.Equals(AlgoSdk.TransactionGroup)
+  fullName: AlgoSdk.TransactionGroup.Equals(AlgoSdk.TransactionGroup)
+  nameWithType: TransactionGroup.Equals(TransactionGroup)
+- uid: AlgoSdk.TransactionGroup.Equals*
+  name: Equals
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_Equals_
+  commentId: Overload:AlgoSdk.TransactionGroup.Equals
+  isSpec: "True"
+  fullName: AlgoSdk.TransactionGroup.Equals
+  nameWithType: TransactionGroup.Equals
+- uid: AlgoSdk.TransactionGroup.GetId
+  name: GetId()
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_GetId
+  commentId: M:AlgoSdk.TransactionGroup.GetId
+  fullName: AlgoSdk.TransactionGroup.GetId()
+  nameWithType: TransactionGroup.GetId()
+- uid: AlgoSdk.TransactionGroup.GetId*
+  name: GetId
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_GetId_
+  commentId: Overload:AlgoSdk.TransactionGroup.GetId
+  isSpec: "True"
+  fullName: AlgoSdk.TransactionGroup.GetId
+  nameWithType: TransactionGroup.GetId
+- uid: AlgoSdk.TransactionGroup.IdPrefix
+  name: IdPrefix
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_IdPrefix
+  commentId: F:AlgoSdk.TransactionGroup.IdPrefix
+  fullName: AlgoSdk.TransactionGroup.IdPrefix
+  nameWithType: TransactionGroup.IdPrefix
+- uid: AlgoSdk.TransactionGroup.MaxSize
+  name: MaxSize
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_MaxSize
+  commentId: F:AlgoSdk.TransactionGroup.MaxSize
+  fullName: AlgoSdk.TransactionGroup.MaxSize
+  nameWithType: TransactionGroup.MaxSize
+- uid: AlgoSdk.TransactionGroup.Of(AlgoSdk.TransactionId[])
+  name: Of(TransactionId[])
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_Of_AlgoSdk_TransactionId___
+  commentId: M:AlgoSdk.TransactionGroup.Of(AlgoSdk.TransactionId[])
+  name.vb: Of(TransactionId())
+  fullName: AlgoSdk.TransactionGroup.Of(AlgoSdk.TransactionId[])
+  fullName.vb: AlgoSdk.TransactionGroup.Of(AlgoSdk.TransactionId())
+  nameWithType: TransactionGroup.Of(TransactionId[])
+  nameWithType.vb: TransactionGroup.Of(TransactionId())
+- uid: AlgoSdk.TransactionGroup.Of*
+  name: Of
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_Of_
+  commentId: Overload:AlgoSdk.TransactionGroup.Of
+  isSpec: "True"
+  fullName: AlgoSdk.TransactionGroup.Of
+  nameWithType: TransactionGroup.Of
+- uid: AlgoSdk.TransactionGroup.Of``1(``0@)
+  name: Of<T0>(T0)
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_Of__1___0__
+  commentId: M:AlgoSdk.TransactionGroup.Of``1(``0@)
+  name.vb: Of(Of T0)(ByRef T0)
+  fullName: AlgoSdk.TransactionGroup.Of<T0>(T0)
+  fullName.vb: AlgoSdk.TransactionGroup.Of(Of T0)(ByRef T0)
+  nameWithType: TransactionGroup.Of<T0>(T0)
+  nameWithType.vb: TransactionGroup.Of(Of T0)(ByRef T0)
+- uid: AlgoSdk.TransactionGroup.Of``1(``0[])
+  name: Of<T>(T[])
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_Of__1___0___
+  commentId: M:AlgoSdk.TransactionGroup.Of``1(``0[])
+  name.vb: Of(Of T)(T())
+  fullName: AlgoSdk.TransactionGroup.Of<T>(T[])
+  fullName.vb: AlgoSdk.TransactionGroup.Of(Of T)(T())
+  nameWithType: TransactionGroup.Of<T>(T[])
+  nameWithType.vb: TransactionGroup.Of(Of T)(T())
+- uid: AlgoSdk.TransactionGroup.Of``10(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@)
+  name: Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9)
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_Of__10___0____1____2____3____4____5____6____7____8____9__
+  commentId: M:AlgoSdk.TransactionGroup.Of``10(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@)
+  name.vb: Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9)
+  fullName: AlgoSdk.TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9)
+  fullName.vb: AlgoSdk.TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9)
+- uid: AlgoSdk.TransactionGroup.Of``11(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@)
+  name: Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10)
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_Of__11___0____1____2____3____4____5____6____7____8____9____10__
+  commentId: M:AlgoSdk.TransactionGroup.Of``11(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@)
+  name.vb: Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10)
+  fullName: AlgoSdk.TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10)
+  fullName.vb: AlgoSdk.TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10)
+- uid: AlgoSdk.TransactionGroup.Of``12(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@)
+  name: Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11)
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_Of__12___0____1____2____3____4____5____6____7____8____9____10____11__
+  commentId: M:AlgoSdk.TransactionGroup.Of``12(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@)
+  name.vb: Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11)
+  fullName: AlgoSdk.TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11)
+  fullName.vb: AlgoSdk.TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11)
+- uid: AlgoSdk.TransactionGroup.Of``13(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@,``12@)
+  name: Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12)
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_Of__13___0____1____2____3____4____5____6____7____8____9____10____11____12__
+  commentId: M:AlgoSdk.TransactionGroup.Of``13(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@,``12@)
+  name.vb: Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11, ByRef T12)
+  fullName: AlgoSdk.TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12)
+  fullName.vb: AlgoSdk.TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11, ByRef T12)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11, ByRef T12)
+- uid: AlgoSdk.TransactionGroup.Of``14(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@,``12@,``13@)
+  name: Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13)
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_Of__14___0____1____2____3____4____5____6____7____8____9____10____11____12____13__
+  commentId: M:AlgoSdk.TransactionGroup.Of``14(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@,``12@,``13@)
+  name.vb: Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11, ByRef T12, ByRef T13)
+  fullName: AlgoSdk.TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13)
+  fullName.vb: AlgoSdk.TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11, ByRef T12, ByRef T13)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11, ByRef T12, ByRef T13)
+- uid: AlgoSdk.TransactionGroup.Of``15(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@,``12@,``13@,``14@)
+  name: Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14)
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_Of__15___0____1____2____3____4____5____6____7____8____9____10____11____12____13____14__
+  commentId: M:AlgoSdk.TransactionGroup.Of``15(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@,``12@,``13@,``14@)
+  name.vb: Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11, ByRef T12, ByRef T13, ByRef T14)
+  fullName: AlgoSdk.TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14)
+  fullName.vb: AlgoSdk.TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11, ByRef T12, ByRef T13, ByRef T14)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11, ByRef T12, ByRef T13, ByRef T14)
+- uid: AlgoSdk.TransactionGroup.Of``16(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@,``12@,``13@,``14@,``15@)
+  name: Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15)
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_Of__16___0____1____2____3____4____5____6____7____8____9____10____11____12____13____14____15__
+  commentId: M:AlgoSdk.TransactionGroup.Of``16(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@,``12@,``13@,``14@,``15@)
+  name.vb: Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11, ByRef T12, ByRef T13, ByRef T14, ByRef T15)
+  fullName: AlgoSdk.TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15)
+  fullName.vb: AlgoSdk.TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11, ByRef T12, ByRef T13, ByRef T14, ByRef T15)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11, ByRef T12, ByRef T13, ByRef T14, ByRef T15)
+- uid: AlgoSdk.TransactionGroup.Of``2(``0@,``1@)
+  name: Of<T0, T1>(T0, T1)
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_Of__2___0____1__
+  commentId: M:AlgoSdk.TransactionGroup.Of``2(``0@,``1@)
+  name.vb: Of(Of T0, T1)(ByRef T0, ByRef T1)
+  fullName: AlgoSdk.TransactionGroup.Of<T0, T1>(T0, T1)
+  fullName.vb: AlgoSdk.TransactionGroup.Of(Of T0, T1)(ByRef T0, ByRef T1)
+  nameWithType: TransactionGroup.Of<T0, T1>(T0, T1)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1)(ByRef T0, ByRef T1)
+- uid: AlgoSdk.TransactionGroup.Of``3(``0@,``1@,``2@)
+  name: Of<T0, T1, T2>(T0, T1, T2)
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_Of__3___0____1____2__
+  commentId: M:AlgoSdk.TransactionGroup.Of``3(``0@,``1@,``2@)
+  name.vb: Of(Of T0, T1, T2)(ByRef T0, ByRef T1, ByRef T2)
+  fullName: AlgoSdk.TransactionGroup.Of<T0, T1, T2>(T0, T1, T2)
+  fullName.vb: AlgoSdk.TransactionGroup.Of(Of T0, T1, T2)(ByRef T0, ByRef T1, ByRef T2)
+  nameWithType: TransactionGroup.Of<T0, T1, T2>(T0, T1, T2)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2)(ByRef T0, ByRef T1, ByRef T2)
+- uid: AlgoSdk.TransactionGroup.Of``4(``0@,``1@,``2@,``3@)
+  name: Of<T0, T1, T2, T3>(T0, T1, T2, T3)
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_Of__4___0____1____2____3__
+  commentId: M:AlgoSdk.TransactionGroup.Of``4(``0@,``1@,``2@,``3@)
+  name.vb: Of(Of T0, T1, T2, T3)(ByRef T0, ByRef T1, ByRef T2, ByRef T3)
+  fullName: AlgoSdk.TransactionGroup.Of<T0, T1, T2, T3>(T0, T1, T2, T3)
+  fullName.vb: AlgoSdk.TransactionGroup.Of(Of T0, T1, T2, T3)(ByRef T0, ByRef T1, ByRef T2, ByRef T3)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3>(T0, T1, T2, T3)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3)(ByRef T0, ByRef T1, ByRef T2, ByRef T3)
+- uid: AlgoSdk.TransactionGroup.Of``5(``0@,``1@,``2@,``3@,``4@)
+  name: Of<T0, T1, T2, T3, T4>(T0, T1, T2, T3, T4)
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_Of__5___0____1____2____3____4__
+  commentId: M:AlgoSdk.TransactionGroup.Of``5(``0@,``1@,``2@,``3@,``4@)
+  name.vb: Of(Of T0, T1, T2, T3, T4)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4)
+  fullName: AlgoSdk.TransactionGroup.Of<T0, T1, T2, T3, T4>(T0, T1, T2, T3, T4)
+  fullName.vb: AlgoSdk.TransactionGroup.Of(Of T0, T1, T2, T3, T4)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3, T4>(T0, T1, T2, T3, T4)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3, T4)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4)
+- uid: AlgoSdk.TransactionGroup.Of``6(``0@,``1@,``2@,``3@,``4@,``5@)
+  name: Of<T0, T1, T2, T3, T4, T5>(T0, T1, T2, T3, T4, T5)
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_Of__6___0____1____2____3____4____5__
+  commentId: M:AlgoSdk.TransactionGroup.Of``6(``0@,``1@,``2@,``3@,``4@,``5@)
+  name.vb: Of(Of T0, T1, T2, T3, T4, T5)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5)
+  fullName: AlgoSdk.TransactionGroup.Of<T0, T1, T2, T3, T4, T5>(T0, T1, T2, T3, T4, T5)
+  fullName.vb: AlgoSdk.TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3, T4, T5>(T0, T1, T2, T3, T4, T5)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5)
+- uid: AlgoSdk.TransactionGroup.Of``7(``0@,``1@,``2@,``3@,``4@,``5@,``6@)
+  name: Of<T0, T1, T2, T3, T4, T5, T6>(T0, T1, T2, T3, T4, T5, T6)
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_Of__7___0____1____2____3____4____5____6__
+  commentId: M:AlgoSdk.TransactionGroup.Of``7(``0@,``1@,``2@,``3@,``4@,``5@,``6@)
+  name.vb: Of(Of T0, T1, T2, T3, T4, T5, T6)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6)
+  fullName: AlgoSdk.TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6>(T0, T1, T2, T3, T4, T5, T6)
+  fullName.vb: AlgoSdk.TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6>(T0, T1, T2, T3, T4, T5, T6)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6)
+- uid: AlgoSdk.TransactionGroup.Of``8(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@)
+  name: Of<T0, T1, T2, T3, T4, T5, T6, T7>(T0, T1, T2, T3, T4, T5, T6, T7)
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_Of__8___0____1____2____3____4____5____6____7__
+  commentId: M:AlgoSdk.TransactionGroup.Of``8(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@)
+  name.vb: Of(Of T0, T1, T2, T3, T4, T5, T6, T7)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7)
+  fullName: AlgoSdk.TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7>(T0, T1, T2, T3, T4, T5, T6, T7)
+  fullName.vb: AlgoSdk.TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7>(T0, T1, T2, T3, T4, T5, T6, T7)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7)
+- uid: AlgoSdk.TransactionGroup.Of``9(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@)
+  name: Of<T0, T1, T2, T3, T4, T5, T6, T7, T8>(T0, T1, T2, T3, T4, T5, T6, T7, T8)
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_Of__9___0____1____2____3____4____5____6____7____8__
+  commentId: M:AlgoSdk.TransactionGroup.Of``9(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@)
+  name.vb: Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8)
+  fullName: AlgoSdk.TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8>(T0, T1, T2, T3, T4, T5, T6, T7, T8)
+  fullName.vb: AlgoSdk.TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8>(T0, T1, T2, T3, T4, T5, T6, T7, T8)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8)
+- uid: AlgoSdk.TransactionGroup.Txns
+  name: Txns
+  href: api/AlgoSdk.TransactionGroup.html#AlgoSdk_TransactionGroup_Txns
+  commentId: F:AlgoSdk.TransactionGroup.Txns
+  fullName: AlgoSdk.TransactionGroup.Txns
+  nameWithType: TransactionGroup.Txns
 - uid: AlgoSdk.TransactionHeader
   name: TransactionHeader
   href: api/AlgoSdk.TransactionHeader.html
@@ -54312,6 +55025,32 @@ references:
   commentId: F:AlgoSdk.WalletConnect.AppEntry.Desktop
   fullName: AlgoSdk.WalletConnect.AppEntry.Desktop
   nameWithType: AppEntry.Desktop
+- uid: AlgoSdk.WalletConnect.AppEntry.FormatUrlForDeepLink(System.String)
+  name: FormatUrlForDeepLink(String)
+  href: api/AlgoSdk.WalletConnect.AppEntry.html#AlgoSdk_WalletConnect_AppEntry_FormatUrlForDeepLink_System_String_
+  commentId: M:AlgoSdk.WalletConnect.AppEntry.FormatUrlForDeepLink(System.String)
+  fullName: AlgoSdk.WalletConnect.AppEntry.FormatUrlForDeepLink(System.String)
+  nameWithType: AppEntry.FormatUrlForDeepLink(String)
+- uid: AlgoSdk.WalletConnect.AppEntry.FormatUrlForDeepLink*
+  name: FormatUrlForDeepLink
+  href: api/AlgoSdk.WalletConnect.AppEntry.html#AlgoSdk_WalletConnect_AppEntry_FormatUrlForDeepLink_
+  commentId: Overload:AlgoSdk.WalletConnect.AppEntry.FormatUrlForDeepLink
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AppEntry.FormatUrlForDeepLink
+  nameWithType: AppEntry.FormatUrlForDeepLink
+- uid: AlgoSdk.WalletConnect.AppEntry.FormatUrlForDeepLinkIos(System.String)
+  name: FormatUrlForDeepLinkIos(String)
+  href: api/AlgoSdk.WalletConnect.AppEntry.html#AlgoSdk_WalletConnect_AppEntry_FormatUrlForDeepLinkIos_System_String_
+  commentId: M:AlgoSdk.WalletConnect.AppEntry.FormatUrlForDeepLinkIos(System.String)
+  fullName: AlgoSdk.WalletConnect.AppEntry.FormatUrlForDeepLinkIos(System.String)
+  nameWithType: AppEntry.FormatUrlForDeepLinkIos(String)
+- uid: AlgoSdk.WalletConnect.AppEntry.FormatUrlForDeepLinkIos*
+  name: FormatUrlForDeepLinkIos
+  href: api/AlgoSdk.WalletConnect.AppEntry.html#AlgoSdk_WalletConnect_AppEntry_FormatUrlForDeepLinkIos_
+  commentId: Overload:AlgoSdk.WalletConnect.AppEntry.FormatUrlForDeepLinkIos
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.AppEntry.FormatUrlForDeepLinkIos
+  nameWithType: AppEntry.FormatUrlForDeepLinkIos
 - uid: AlgoSdk.WalletConnect.AppEntry.HomePage
   name: HomePage
   href: api/AlgoSdk.WalletConnect.AppEntry.html#AlgoSdk_WalletConnect_AppEntry_HomePage
@@ -55727,6 +56466,19 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.WalletConnect.SessionData.DappMeta
   nameWithType: SessionData.DappMeta
+- uid: AlgoSdk.WalletConnect.SessionData.GenKey
+  name: GenKey()
+  href: api/AlgoSdk.WalletConnect.SessionData.html#AlgoSdk_WalletConnect_SessionData_GenKey
+  commentId: M:AlgoSdk.WalletConnect.SessionData.GenKey
+  fullName: AlgoSdk.WalletConnect.SessionData.GenKey()
+  nameWithType: SessionData.GenKey()
+- uid: AlgoSdk.WalletConnect.SessionData.GenKey*
+  name: GenKey
+  href: api/AlgoSdk.WalletConnect.SessionData.html#AlgoSdk_WalletConnect_SessionData_GenKey_
+  commentId: Overload:AlgoSdk.WalletConnect.SessionData.GenKey
+  isSpec: "True"
+  fullName: AlgoSdk.WalletConnect.SessionData.GenKey
+  nameWithType: SessionData.GenKey
 - uid: AlgoSdk.WalletConnect.SessionData.HandshakeId
   name: HandshakeId
   href: api/AlgoSdk.WalletConnect.SessionData.html#AlgoSdk_WalletConnect_SessionData_HandshakeId
@@ -56232,12 +56984,24 @@ references:
   commentId: T:AlgoSdk.WalletConnect.WalletConnectRpc.Algorand
   fullName: AlgoSdk.WalletConnect.WalletConnectRpc.Algorand
   nameWithType: WalletConnectRpc.Algorand
+- uid: AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.BetaNetChainId
+  name: BetaNetChainId
+  href: api/AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.html#AlgoSdk_WalletConnect_WalletConnectRpc_Algorand_BetaNetChainId
+  commentId: F:AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.BetaNetChainId
+  fullName: AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.BetaNetChainId
+  nameWithType: WalletConnectRpc.Algorand.BetaNetChainId
 - uid: AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.ChainId
   name: ChainId
   href: api/AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.html#AlgoSdk_WalletConnect_WalletConnectRpc_Algorand_ChainId
   commentId: F:AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.ChainId
   fullName: AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.ChainId
   nameWithType: WalletConnectRpc.Algorand.ChainId
+- uid: AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.MainNetChainId
+  name: MainNetChainId
+  href: api/AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.html#AlgoSdk_WalletConnect_WalletConnectRpc_Algorand_MainNetChainId
+  commentId: F:AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.MainNetChainId
+  fullName: AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.MainNetChainId
+  nameWithType: WalletConnectRpc.Algorand.MainNetChainId
 - uid: AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.SignTransactions(AlgoSdk.WalletConnect.WalletTransaction[],AlgoSdk.WalletConnect.SignTxnsOpts)
   name: SignTransactions(WalletTransaction[], SignTxnsOpts)
   href: api/AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.html#AlgoSdk_WalletConnect_WalletConnectRpc_Algorand_SignTransactions_AlgoSdk_WalletConnect_WalletTransaction___AlgoSdk_WalletConnect_SignTxnsOpts_
@@ -56254,6 +57018,12 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.SignTransactions
   nameWithType: WalletConnectRpc.Algorand.SignTransactions
+- uid: AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.TestNetChainId
+  name: TestNetChainId
+  href: api/AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.html#AlgoSdk_WalletConnect_WalletConnectRpc_Algorand_TestNetChainId
+  commentId: F:AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.TestNetChainId
+  fullName: AlgoSdk.WalletConnect.WalletConnectRpc.Algorand.TestNetChainId
+  nameWithType: WalletConnectRpc.Algorand.TestNetChainId
 - uid: AlgoSdk.WalletConnect.WalletConnectRpc.GetRandomId
   name: GetRandomId()
   href: api/AlgoSdk.WalletConnect.WalletConnectRpc.html#AlgoSdk_WalletConnect_WalletConnectRpc_GetRandomId
@@ -56635,13 +57405,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.WebSocket.IWebSocketClient.ReadyState
   nameWithType: IWebSocketClient.ReadyState
-- uid: AlgoSdk.WebSocket.IWebSocketClient.Send(System.ArraySegment{System.Byte})
+- uid: AlgoSdk.WebSocket.IWebSocketClient.Send(ArraySegment{System.Byte})
   name: Send(ArraySegment<Byte>)
-  href: api/AlgoSdk.WebSocket.IWebSocketClient.html#AlgoSdk_WebSocket_IWebSocketClient_Send_System_ArraySegment_System_Byte__
-  commentId: M:AlgoSdk.WebSocket.IWebSocketClient.Send(System.ArraySegment{System.Byte})
+  href: api/AlgoSdk.WebSocket.IWebSocketClient.html#AlgoSdk_WebSocket_IWebSocketClient_Send_ArraySegment_System_Byte__
+  commentId: M:AlgoSdk.WebSocket.IWebSocketClient.Send(ArraySegment{System.Byte})
   name.vb: Send(ArraySegment(Of Byte))
-  fullName: AlgoSdk.WebSocket.IWebSocketClient.Send(System.ArraySegment<System.Byte>)
-  fullName.vb: AlgoSdk.WebSocket.IWebSocketClient.Send(System.ArraySegment(Of System.Byte))
+  fullName: AlgoSdk.WebSocket.IWebSocketClient.Send(ArraySegment<System.Byte>)
+  fullName.vb: AlgoSdk.WebSocket.IWebSocketClient.Send(ArraySegment(Of System.Byte))
   nameWithType: IWebSocketClient.Send(ArraySegment<Byte>)
   nameWithType.vb: IWebSocketClient.Send(ArraySegment(Of Byte))
 - uid: AlgoSdk.WebSocket.IWebSocketClient.Send*
@@ -56761,11 +57531,11 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.WebSocket.NativeWebSocketClient.OnMessage
   nameWithType: NativeWebSocketClient.OnMessage
-- uid: AlgoSdk.WebSocket.NativeWebSocketClient.OnOpen(System.Object,System.EventArgs)
+- uid: AlgoSdk.WebSocket.NativeWebSocketClient.OnOpen(System.Object,EventArgs)
   name: OnOpen(Object, EventArgs)
-  href: api/AlgoSdk.WebSocket.NativeWebSocketClient.html#AlgoSdk_WebSocket_NativeWebSocketClient_OnOpen_System_Object_System_EventArgs_
-  commentId: M:AlgoSdk.WebSocket.NativeWebSocketClient.OnOpen(System.Object,System.EventArgs)
-  fullName: AlgoSdk.WebSocket.NativeWebSocketClient.OnOpen(System.Object, System.EventArgs)
+  href: api/AlgoSdk.WebSocket.NativeWebSocketClient.html#AlgoSdk_WebSocket_NativeWebSocketClient_OnOpen_System_Object_EventArgs_
+  commentId: M:AlgoSdk.WebSocket.NativeWebSocketClient.OnOpen(System.Object,EventArgs)
+  fullName: AlgoSdk.WebSocket.NativeWebSocketClient.OnOpen(System.Object, EventArgs)
   nameWithType: NativeWebSocketClient.OnOpen(Object, EventArgs)
 - uid: AlgoSdk.WebSocket.NativeWebSocketClient.OnOpen*
   name: OnOpen
@@ -56800,13 +57570,13 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.WebSocket.NativeWebSocketClient.ReadyState
   nameWithType: NativeWebSocketClient.ReadyState
-- uid: AlgoSdk.WebSocket.NativeWebSocketClient.Send(System.ArraySegment{System.Byte})
+- uid: AlgoSdk.WebSocket.NativeWebSocketClient.Send(ArraySegment{System.Byte})
   name: Send(ArraySegment<Byte>)
-  href: api/AlgoSdk.WebSocket.NativeWebSocketClient.html#AlgoSdk_WebSocket_NativeWebSocketClient_Send_System_ArraySegment_System_Byte__
-  commentId: M:AlgoSdk.WebSocket.NativeWebSocketClient.Send(System.ArraySegment{System.Byte})
+  href: api/AlgoSdk.WebSocket.NativeWebSocketClient.html#AlgoSdk_WebSocket_NativeWebSocketClient_Send_ArraySegment_System_Byte__
+  commentId: M:AlgoSdk.WebSocket.NativeWebSocketClient.Send(ArraySegment{System.Byte})
   name.vb: Send(ArraySegment(Of Byte))
-  fullName: AlgoSdk.WebSocket.NativeWebSocketClient.Send(System.ArraySegment<System.Byte>)
-  fullName.vb: AlgoSdk.WebSocket.NativeWebSocketClient.Send(System.ArraySegment(Of System.Byte))
+  fullName: AlgoSdk.WebSocket.NativeWebSocketClient.Send(ArraySegment<System.Byte>)
+  fullName.vb: AlgoSdk.WebSocket.NativeWebSocketClient.Send(ArraySegment(Of System.Byte))
   nameWithType: NativeWebSocketClient.Send(ArraySegment<Byte>)
   nameWithType.vb: NativeWebSocketClient.Send(ArraySegment(Of Byte))
 - uid: AlgoSdk.WebSocket.NativeWebSocketClient.Send*

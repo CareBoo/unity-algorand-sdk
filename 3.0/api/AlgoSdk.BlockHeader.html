@@ -96,9 +96,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_BlockHeader_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiObject(&quot;&quot;, &quot;&quot;, 0)]
-[Serializable]
-public struct BlockHeader : IEquatable&lt;BlockHeader&gt;, IBlockRewards, IBlockUpgradeState, IBlockUpgradeVote</code></pre>
+    <pre><code class="lang-csharp hljs">public struct BlockHeader : IEquatable&lt;BlockHeader&gt;, IBlockRewards, IBlockUpgradeState, IBlockUpgradeVote</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -109,8 +107,7 @@ public struct BlockHeader : IEquatable&lt;BlockHeader&gt;, IBlockRewards, IBlock
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;cc&quot;)]
-public AlgoApiObject Cc</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiObject Cc</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -135,8 +132,7 @@ public AlgoApiObject Cc</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;gh&quot;)]
-public GenesisHash GenesisHash</code></pre>
+    <pre><code class="lang-csharp hljs">public GenesisHash GenesisHash</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -161,8 +157,7 @@ public GenesisHash GenesisHash</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;gen&quot;)]
-public FixedString64Bytes GenesisId</code></pre>
+    <pre><code class="lang-csharp hljs">public FixedString64Bytes GenesisId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -187,8 +182,7 @@ public FixedString64Bytes GenesisId</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;prev&quot;)]
-public BlockHash PreviousBlockHash</code></pre>
+    <pre><code class="lang-csharp hljs">public BlockHash PreviousBlockHash</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -213,8 +207,7 @@ public BlockHash PreviousBlockHash</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;rewards&quot;)]
-public BlockRewards Rewards</code></pre>
+    <pre><code class="lang-csharp hljs">public BlockRewards Rewards</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -239,8 +232,7 @@ public BlockRewards Rewards</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;txn&quot;)]
-public Sha512_256_Hash RootTransaction</code></pre>
+    <pre><code class="lang-csharp hljs">public Sha512_256_Hash RootTransaction</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -265,8 +257,7 @@ public Sha512_256_Hash RootTransaction</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;rnd&quot;)]
-public ulong Round</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong Round</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -278,7 +269,7 @@ public ulong Round</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -291,8 +282,7 @@ public ulong Round</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;seed&quot;)]
-public Sha512_256_Hash Seed</code></pre>
+    <pre><code class="lang-csharp hljs">public Sha512_256_Hash Seed</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -317,8 +307,7 @@ public Sha512_256_Hash Seed</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;ts&quot;)]
-public ulong Timestamp</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong Timestamp</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -330,7 +319,7 @@ public ulong Timestamp</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -343,8 +332,7 @@ public ulong Timestamp</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;tc&quot;)]
-public ulong TransactionCounter</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong TransactionCounter</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -356,7 +344,7 @@ public ulong TransactionCounter</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -372,8 +360,7 @@ public ulong TransactionCounter</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;txns&quot;)]
-public BlockTransaction[] Transactions</code></pre>
+    <pre><code class="lang-csharp hljs">public BlockTransaction[] Transactions</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -398,8 +385,7 @@ public BlockTransaction[] Transactions</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;upgrade-state&quot;)]
-public BlockUpgradeState UpgradeState</code></pre>
+    <pre><code class="lang-csharp hljs">public BlockUpgradeState UpgradeState</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -424,8 +410,7 @@ public BlockUpgradeState UpgradeState</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;upgrade-vote&quot;)]
-public BlockUpgradeVote UpgradeVote</code></pre>
+    <pre><code class="lang-csharp hljs">public BlockUpgradeVote UpgradeVote</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -452,8 +437,7 @@ public BlockUpgradeVote UpgradeVote</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;proto&quot;)]
-public FixedString128Bytes CurrentProtocol { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public FixedString128Bytes CurrentProtocol { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -478,8 +462,7 @@ public FixedString128Bytes CurrentProtocol { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;fees&quot;)]
-public Address FeeSink { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Address FeeSink { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -504,8 +487,7 @@ public Address FeeSink { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;nextproto&quot;)]
-public FixedString128Bytes NextProtocol { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public FixedString128Bytes NextProtocol { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -530,8 +512,7 @@ public FixedString128Bytes NextProtocol { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;nextyes&quot;)]
-public ulong NextProtocolApprovals { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong NextProtocolApprovals { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -543,7 +524,7 @@ public ulong NextProtocolApprovals { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -556,8 +537,7 @@ public ulong NextProtocolApprovals { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;nextswitch&quot;)]
-public ulong NextProtocolSwitchOn { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong NextProtocolSwitchOn { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -569,7 +549,7 @@ public ulong NextProtocolSwitchOn { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -582,8 +562,7 @@ public ulong NextProtocolSwitchOn { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;nextbefore&quot;)]
-public ulong NextProtocolVoteBefore { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong NextProtocolVoteBefore { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -595,7 +574,7 @@ public ulong NextProtocolVoteBefore { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -608,8 +587,7 @@ public ulong NextProtocolVoteBefore { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;rwcalr&quot;)]
-public ulong RewardsCalculationRound { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong RewardsCalculationRound { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -621,7 +599,7 @@ public ulong RewardsCalculationRound { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -634,8 +612,7 @@ public ulong RewardsCalculationRound { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;earn&quot;)]
-public ulong RewardsLevel { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong RewardsLevel { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -647,7 +624,7 @@ public ulong RewardsLevel { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -660,8 +637,7 @@ public ulong RewardsLevel { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;rwd&quot;)]
-public Address RewardsPool { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Address RewardsPool { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -686,8 +662,7 @@ public Address RewardsPool { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;rate&quot;)]
-public ulong RewardsRate { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong RewardsRate { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -699,7 +674,7 @@ public ulong RewardsRate { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -712,8 +687,7 @@ public ulong RewardsRate { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;frac&quot;)]
-public ulong RewardsResidue { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong RewardsResidue { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -725,7 +699,7 @@ public ulong RewardsResidue { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -738,8 +712,7 @@ public ulong RewardsResidue { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;upgradeyes&quot;)]
-public Optional&lt;bool&gt; UpgradeApprove { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Optional&lt;bool&gt; UpgradeApprove { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -764,8 +737,7 @@ public Optional&lt;bool&gt; UpgradeApprove { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;upgradedelay&quot;)]
-public ulong UpgradeDelay { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong UpgradeDelay { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -777,7 +749,7 @@ public ulong UpgradeDelay { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -790,8 +762,7 @@ public ulong UpgradeDelay { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;upgradeprop&quot;)]
-public Address UpgradePropose { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Address UpgradePropose { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

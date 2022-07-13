@@ -95,8 +95,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_AlgodClient_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
-public struct AlgodClient : IAlgodClient, IAlgoApiClient</code></pre>
+    <pre><code class="lang-csharp hljs">public struct AlgodClient : IAlgodClient, IAlgoApiClient</code></pre>
   </div>
   <h5 id="AlgoSdk_AlgodClient_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>The algod service is responsible for handling information
@@ -359,7 +358,7 @@ required to create and send transactions.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td><span class="parametername">applicationId</span></td>
         <td><p>An application identifier</p>
 </td>
@@ -418,7 +417,7 @@ required to create and send transactions.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td><span class="parametername">assetId</span></td>
         <td><p>An asset identifier</p>
 </td>
@@ -652,6 +651,90 @@ required to create and send transactions.</p>
 </div>
   
   
+  <a id="AlgoSdk_AlgodClient_GetAccountInformation_" data-uid="AlgoSdk.AlgodClient.GetAccountInformation*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetAccountInformation_AlgoSdk_Address_" data-uid="AlgoSdk.AlgodClient.GetAccountInformation(AlgoSdk.Address)">GetAccountInformation(Address)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;AccountResponse&gt; GetAccountInformation(Address accountAddress)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">accountAddress</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">AccountResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetApplication_" data-uid="AlgoSdk.AlgodClient.GetApplication*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetApplication_System_UInt64_" data-uid="AlgoSdk.AlgodClient.GetApplication(System.UInt64)">GetApplication(UInt64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;ApplicationResponse&gt; GetApplication(ulong applicationId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">ApplicationResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_AlgodClient_GetApplicationByID_" data-uid="AlgoSdk.AlgodClient.GetApplicationByID*"></a>
   <h4 id="AlgoSdk_AlgodClient_GetApplicationByID_System_UInt64_" data-uid="AlgoSdk.AlgodClient.GetApplicationByID(System.UInt64)">GetApplicationByID(UInt64)</h4>
   <div class="markdown level1 summary"><p>Get application information.</p>
@@ -672,7 +755,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td><span class="parametername">applicationId</span></td>
         <td><p>An application identifier</p>
 </td>
@@ -699,6 +782,48 @@ required to create and send transactions.</p>
 </div>
   
   
+  <a id="AlgoSdk_AlgodClient_GetAsset_" data-uid="AlgoSdk.AlgodClient.GetAsset*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetAsset_System_UInt64_" data-uid="AlgoSdk.AlgodClient.GetAsset(System.UInt64)">GetAsset(UInt64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;AssetResponse&gt; GetAsset(ulong assetId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">assetId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">AssetResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_AlgodClient_GetAssetByID_" data-uid="AlgoSdk.AlgodClient.GetAssetByID*"></a>
   <h4 id="AlgoSdk_AlgodClient_GetAssetByID_System_UInt64_" data-uid="AlgoSdk.AlgodClient.GetAssetByID(System.UInt64)">GetAssetByID(UInt64)</h4>
   <div class="markdown level1 summary"><p>Get asset information.</p>
@@ -719,7 +844,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td><span class="parametername">assetId</span></td>
         <td><p>An asset identifier</p>
 </td>
@@ -766,7 +891,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td><span class="parametername">round</span></td>
         <td><p>The round from which to fetch block information.</p>
 </td>
@@ -790,6 +915,31 @@ required to create and send transactions.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.BlockResponse.html">BlockResponse</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetCurrentStatus_" data-uid="AlgoSdk.AlgodClient.GetCurrentStatus*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetCurrentStatus" data-uid="AlgoSdk.AlgodClient.GetCurrentStatus">GetCurrentStatus()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;NodeStatusResponse&gt; GetCurrentStatus()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">NodeStatusResponse</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -824,6 +974,153 @@ required to create and send transactions.</p>
   <h5 id="AlgoSdk_AlgodClient_GetGenesis_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Returns the entire genesis file in json.</p>
 </div>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetGenesisInformation_" data-uid="AlgoSdk.AlgodClient.GetGenesisInformation*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetGenesisInformation" data-uid="AlgoSdk.AlgodClient.GetGenesisInformation">GetGenesisInformation()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;AlgoApiObject&gt; GetGenesisInformation()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.AlgoApiObject.html">AlgoApiObject</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetHealth_" data-uid="AlgoSdk.AlgodClient.GetHealth*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetHealth" data-uid="AlgoSdk.AlgodClient.GetHealth">GetHealth()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent GetHealth()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent.html">AlgoApiRequest.Sent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetLedgerSupply_" data-uid="AlgoSdk.AlgodClient.GetLedgerSupply*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetLedgerSupply" data-uid="AlgoSdk.AlgodClient.GetLedgerSupply">GetLedgerSupply()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;SupplyResponse&gt; GetLedgerSupply()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">SupplyResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetMerkleProof_" data-uid="AlgoSdk.AlgodClient.GetMerkleProof*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetMerkleProof_System_UInt64_AlgoSdk_TransactionId_" data-uid="AlgoSdk.AlgodClient.GetMerkleProof(System.UInt64,AlgoSdk.TransactionId)">GetMerkleProof(UInt64, TransactionId)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;ProofResponse&gt; GetMerkleProof(ulong round, TransactionId txid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">round</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionId.html">TransactionId</a></td>
+        <td><span class="parametername">txid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">ProofResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetMetrics_" data-uid="AlgoSdk.AlgodClient.GetMetrics*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetMetrics" data-uid="AlgoSdk.AlgodClient.GetMetrics">GetMetrics()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent GetMetrics()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent.html">AlgoApiRequest.Sent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="AlgoSdk_AlgodClient_GetParticipationKeyByID_" data-uid="AlgoSdk.AlgodClient.GetParticipationKeyByID*"></a>
@@ -901,6 +1198,48 @@ required to create and send transactions.</p>
 </div>
   
   
+  <a id="AlgoSdk_AlgodClient_GetPendingTransaction_" data-uid="AlgoSdk.AlgodClient.GetPendingTransaction*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetPendingTransaction_AlgoSdk_TransactionId_" data-uid="AlgoSdk.AlgodClient.GetPendingTransaction(AlgoSdk.TransactionId)">GetPendingTransaction(TransactionId)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;PendingTransactionResponse&gt; GetPendingTransaction(TransactionId txid)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.TransactionId.html">TransactionId</a></td>
+        <td><span class="parametername">txid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">PendingTransactionResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_AlgodClient_GetPendingTransactions_" data-uid="AlgoSdk.AlgodClient.GetPendingTransactions*"></a>
   <h4 id="AlgoSdk_AlgodClient_GetPendingTransactions_AlgoSdk_Optional_System_UInt64__AlgoSdk_ResponseFormat_" data-uid="AlgoSdk.AlgodClient.GetPendingTransactions(AlgoSdk.Optional{System.UInt64},AlgoSdk.ResponseFormat)">GetPendingTransactions(Optional&lt;UInt64&gt;, ResponseFormat)</h4>
   <div class="markdown level1 summary"><p>Get a list of unconfirmed transactions currently in the transaction pool.</p>
@@ -921,7 +1260,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
         <td><span class="parametername">max</span></td>
         <td><p>Truncated number of transactions to display. If max=0, returns all pending txns.</p>
 </td>
@@ -954,6 +1293,53 @@ required to create and send transactions.</p>
 </div>
   
   
+  <a id="AlgoSdk_AlgodClient_GetPendingTransactionsByAccount_" data-uid="AlgoSdk.AlgodClient.GetPendingTransactionsByAccount*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetPendingTransactionsByAccount_AlgoSdk_Address_System_UInt64_" data-uid="AlgoSdk.AlgodClient.GetPendingTransactionsByAccount(AlgoSdk.Address,System.UInt64)">GetPendingTransactionsByAccount(Address, UInt64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;PendingTransactionsResponse&gt; GetPendingTransactionsByAccount(Address accountAddress, ulong max = 0UL)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a></td>
+        <td><span class="parametername">accountAddress</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">max</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">PendingTransactionsResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_AlgodClient_GetPendingTransactionsByAddress_" data-uid="AlgoSdk.AlgodClient.GetPendingTransactionsByAddress*"></a>
   <h4 id="AlgoSdk_AlgodClient_GetPendingTransactionsByAddress_System_String_AlgoSdk_Optional_System_UInt64__AlgoSdk_ResponseFormat_" data-uid="AlgoSdk.AlgodClient.GetPendingTransactionsByAddress(System.String,AlgoSdk.Optional{System.UInt64},AlgoSdk.ResponseFormat)">GetPendingTransactionsByAddress(String, Optional&lt;UInt64&gt;, ResponseFormat)</h4>
   <div class="markdown level1 summary"><p>Get a list of unconfirmed transactions currently in the transaction pool by address.</p>
@@ -980,7 +1366,7 @@ required to create and send transactions.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
         <td><span class="parametername">max</span></td>
         <td><p>Truncated number of transactions to display. If max=0, returns all pending txns.</p>
 </td>
@@ -1033,7 +1419,7 @@ required to create and send transactions.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td><span class="parametername">round</span></td>
         <td><p>The round in which the transaction appears.</p>
 </td>
@@ -1095,6 +1481,73 @@ required to create and send transactions.</p>
   </table>
   
   
+  <a id="AlgoSdk_AlgodClient_GetStatusAfterWaitingForRound_" data-uid="AlgoSdk.AlgodClient.GetStatusAfterWaitingForRound*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetStatusAfterWaitingForRound_System_UInt64_" data-uid="AlgoSdk.AlgodClient.GetStatusAfterWaitingForRound(System.UInt64)">GetStatusAfterWaitingForRound(UInt64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;NodeStatusResponse&gt; GetStatusAfterWaitingForRound(ulong round)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">round</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">NodeStatusResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetSuggestedParams_" data-uid="AlgoSdk.AlgodClient.GetSuggestedParams*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetSuggestedParams" data-uid="AlgoSdk.AlgodClient.GetSuggestedParams">GetSuggestedParams()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;TransactionParametersResponse&gt; GetSuggestedParams()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">TransactionParametersResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_AlgodClient_GetSupply_" data-uid="AlgoSdk.AlgodClient.GetSupply*"></a>
   <h4 id="AlgoSdk_AlgodClient_GetSupply" data-uid="AlgoSdk.AlgodClient.GetSupply">GetSupply()</h4>
   <div class="markdown level1 summary"><p>Get the current supply reported by the ledger.</p>
@@ -1115,6 +1568,31 @@ required to create and send transactions.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">SupplyResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetSwaggerSpec_" data-uid="AlgoSdk.AlgodClient.GetSwaggerSpec*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetSwaggerSpec" data-uid="AlgoSdk.AlgodClient.GetSwaggerSpec">GetSwaggerSpec()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;AlgoApiObject&gt; GetSwaggerSpec()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.AlgoApiObject.html">AlgoApiObject</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1147,6 +1625,31 @@ required to create and send transactions.</p>
   <h5 id="AlgoSdk_AlgodClient_GetVersion_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Retrieves the supported API versions, binary build versions, and genesis information.</p>
 </div>
+  
+  
+  <a id="AlgoSdk_AlgodClient_GetVersions_" data-uid="AlgoSdk.AlgodClient.GetVersions*"></a>
+  <h4 id="AlgoSdk_AlgodClient_GetVersions" data-uid="AlgoSdk.AlgodClient.GetVersions">GetVersions()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;VersionsResponse&gt; GetVersions()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">VersionsResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="AlgoSdk_AlgodClient_HealthCheck_" data-uid="AlgoSdk.AlgodClient.HealthCheck*"></a>
@@ -1311,6 +1814,110 @@ Or the transaction may have happened sufficiently long ago that the node no long
   </table>
   
   
+  <a id="AlgoSdk_AlgodClient_RegisterParticipationKeys_" data-uid="AlgoSdk.AlgodClient.RegisterParticipationKeys*"></a>
+  <h4 id="AlgoSdk_AlgodClient_RegisterParticipationKeys_System_String_System_UInt64_AlgoSdk_Optional_System_UInt64__AlgoSdk_Optional_System_Boolean__AlgoSdk_Optional_System_Boolean__" data-uid="AlgoSdk.AlgodClient.RegisterParticipationKeys(System.String,System.UInt64,AlgoSdk.Optional{System.UInt64},AlgoSdk.Optional{System.Boolean},AlgoSdk.Optional{System.Boolean})">RegisterParticipationKeys(String, UInt64, Optional&lt;UInt64&gt;, Optional&lt;Boolean&gt;, Optional&lt;Boolean&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;PostTransactionsResponse&gt; RegisterParticipationKeys(string accountAddress, ulong fee = 1000UL, Optional&lt;ulong&gt; keyDilution = default(Optional&lt;ulong&gt;), Optional&lt;bool&gt; noWait = default(Optional&lt;bool&gt;), Optional&lt;bool&gt; roundLastValid = default(Optional&lt;bool&gt;))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">accountAddress</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">fee</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">keyDilution</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">noWait</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">roundLastValid</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">PostTransactionsResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_SendTransaction_" data-uid="AlgoSdk.AlgodClient.SendTransaction*"></a>
+  <h4 id="AlgoSdk_AlgodClient_SendTransaction_System_Byte___" data-uid="AlgoSdk.AlgodClient.SendTransaction(System.Byte[])">SendTransaction(Byte[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;PostTransactionsResponse&gt; SendTransaction(byte[] txn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="parametername">txn</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">PostTransactionsResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_AlgodClient_SendTransaction_" data-uid="AlgoSdk.AlgodClient.SendTransaction*"></a>
   <h4 id="AlgoSdk_AlgodClient_SendTransaction__1_AlgoSdk_SignedTxn___0__" data-uid="AlgoSdk.AlgodClient.SendTransaction``1(AlgoSdk.SignedTxn{``0})">SendTransaction&lt;T&gt;(SignedTxn&lt;T&gt;)</h4>
   <div class="markdown level1 summary"><p>Send a signed transaction struct</p>
@@ -1373,6 +1980,132 @@ Or the transaction may have happened sufficiently long ago that the node no long
   </table>
   
   
+  <a id="AlgoSdk_AlgodClient_SendTransactions_" data-uid="AlgoSdk.AlgodClient.SendTransactions*"></a>
+  <h4 id="AlgoSdk_AlgodClient_SendTransactions_AlgoSdk_SignedTxn___" data-uid="AlgoSdk.AlgodClient.SendTransactions(AlgoSdk.SignedTxn[])">SendTransactions(SignedTxn[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;PostTransactionsResponse&gt; SendTransactions(params SignedTxn[] txns)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.SignedTxn.html">SignedTxn</a>[]</td>
+        <td><span class="parametername">txns</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">PostTransactionsResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_SendTransactions_" data-uid="AlgoSdk.AlgodClient.SendTransactions*"></a>
+  <h4 id="AlgoSdk_AlgodClient_SendTransactions_System_Byte_____" data-uid="AlgoSdk.AlgodClient.SendTransactions(System.Byte[][])">SendTransactions(Byte[][])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;PostTransactionsResponse&gt; SendTransactions(params byte[][] signedTxns)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[][]</td>
+        <td><span class="parametername">signedTxns</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">PostTransactionsResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_AlgodClient_ShutDown_" data-uid="AlgoSdk.AlgodClient.ShutDown*"></a>
+  <h4 id="AlgoSdk_AlgodClient_ShutDown_AlgoSdk_Optional_System_UInt64__" data-uid="AlgoSdk.AlgodClient.ShutDown(AlgoSdk.Optional{System.UInt64})">ShutDown(Optional&lt;UInt64&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;AlgoApiObject&gt; ShutDown(Optional&lt;ulong&gt; timeout = default(Optional&lt;ulong&gt;))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="parametername">timeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="AlgoSdk.AlgoApiObject.html">AlgoApiObject</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="AlgoSdk_AlgodClient_ShutdownNode_" data-uid="AlgoSdk.AlgodClient.ShutdownNode*"></a>
   <h4 id="AlgoSdk_AlgodClient_ShutdownNode_AlgoSdk_Optional_System_UInt64__" data-uid="AlgoSdk.AlgodClient.ShutdownNode(AlgoSdk.Optional{System.UInt64})">ShutdownNode(Optional&lt;UInt64&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -1392,7 +2125,7 @@ Or the transaction may have happened sufficiently long ago that the node no long
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<span class="xref">System.UInt64</span>&gt;</td>
         <td><span class="parametername">timeout</span></td>
         <td></td>
       </tr>
@@ -1635,7 +2368,7 @@ Or the transaction may have happened sufficiently long ago that the node no long
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td><span class="parametername">round</span></td>
         <td><p>The round to wait until returning status</p>
 </td>

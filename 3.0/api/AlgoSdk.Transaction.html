@@ -88,10 +88,10 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="AlgoSdk.IPaymentTxn.html">IPaymentTxn</a></div>
-    <div><a class="xref" href="AlgoSdk.IAssetConfigTxn.html">IAssetConfigTxn</a></div>
-    <div><a class="xref" href="AlgoSdk.IAssetFreezeTxn.html">IAssetFreezeTxn</a></div>
     <div><a class="xref" href="AlgoSdk.IUntypedTransaction.html">IUntypedTransaction</a></div>
+    <div><a class="xref" href="AlgoSdk.IAssetConfigTxn.html">IAssetConfigTxn</a></div>
     <div><a class="xref" href="AlgoSdk.IAppCallTxn.html">IAppCallTxn</a></div>
+    <div><a class="xref" href="AlgoSdk.IAssetFreezeTxn.html">IAssetFreezeTxn</a></div>
     <div><a class="xref" href="AlgoSdk.IAssetTransferTxn.html">IAssetTransferTxn</a></div>
     <div><a class="xref" href="AlgoSdk.ITransaction.html">ITransaction</a></div>
     <div><a class="xref" href="AlgoSdk.ITransactionHeader.html">ITransactionHeader</a></div>
@@ -100,9 +100,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="AlgoSdk_Transaction_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiObject(&quot;&quot;, &quot;&quot;, 0)]
-[Serializable]
-public struct Transaction : IPaymentTxn, IAssetConfigTxn, IAssetFreezeTxn, IEquatable&lt;Transaction&gt;, IUntypedTransaction, IAppCallTxn, IAssetTransferTxn, ITransaction, ITransactionHeader</code></pre>
+    <pre><code class="lang-csharp hljs">public struct Transaction : IPaymentTxn, IEquatable&lt;Transaction&gt;, IUntypedTransaction, IAssetConfigTxn, IAppCallTxn, IAssetFreezeTxn, IAssetTransferTxn, ITransaction, ITransactionHeader</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -142,8 +140,7 @@ public struct Transaction : IPaymentTxn, IAssetConfigTxn, IAssetFreezeTxn, IEqua
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;apat&quot;)]
-public Address[] Accounts { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Address[] Accounts { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -169,8 +166,7 @@ public Address[] Accounts { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;amt&quot;)]
-public MicroAlgos Amount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public MicroAlgos Amount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -196,8 +192,7 @@ public MicroAlgos Amount { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;apaa&quot;)]
-public CompiledTeal[] AppArguments { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public CompiledTeal[] AppArguments { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -249,8 +244,7 @@ public CompiledTeal[] AppArguments { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;apid&quot;)]
-public AppIndex ApplicationId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public AppIndex ApplicationId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -276,8 +270,7 @@ public AppIndex ApplicationId { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;apap&quot;)]
-public CompiledTeal ApprovalProgram { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public CompiledTeal ApprovalProgram { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -303,8 +296,7 @@ public CompiledTeal ApprovalProgram { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;aamt&quot;)]
-public ulong AssetAmount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong AssetAmount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -316,7 +308,7 @@ public ulong AssetAmount { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -330,8 +322,7 @@ public ulong AssetAmount { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;aclose&quot;)]
-public Address AssetCloseTo { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Address AssetCloseTo { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -409,8 +400,7 @@ public Address AssetCloseTo { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;afrz&quot;)]
-public Optional&lt;bool&gt; AssetFrozen { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Optional&lt;bool&gt; AssetFrozen { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -436,8 +426,7 @@ public Optional&lt;bool&gt; AssetFrozen { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;apar&quot;)]
-public AssetParams AssetParams { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public AssetParams AssetParams { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -463,8 +452,7 @@ public AssetParams AssetParams { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;arcv&quot;)]
-public Address AssetReceiver { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Address AssetReceiver { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -490,8 +478,7 @@ public Address AssetReceiver { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;asnd&quot;)]
-public Address AssetSender { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Address AssetSender { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -543,8 +530,7 @@ public Address AssetSender { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;apsu&quot;)]
-public CompiledTeal ClearStateProgram { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public CompiledTeal ClearStateProgram { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -570,8 +556,7 @@ public CompiledTeal ClearStateProgram { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;close&quot;)]
-public Address CloseRemainderTo { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Address CloseRemainderTo { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -597,8 +582,7 @@ public Address CloseRemainderTo { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;caid&quot;)]
-public AssetIndex ConfigAsset { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public AssetIndex ConfigAsset { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -624,8 +608,7 @@ public AssetIndex ConfigAsset { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;apep&quot;)]
-public ulong ExtraProgramPages { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong ExtraProgramPages { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -637,7 +620,7 @@ public ulong ExtraProgramPages { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -651,8 +634,7 @@ public ulong ExtraProgramPages { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;fee&quot;)]
-public MicroAlgos Fee { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public MicroAlgos Fee { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -678,8 +660,7 @@ public MicroAlgos Fee { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;fv&quot;)]
-public ulong FirstValidRound { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong FirstValidRound { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -691,7 +672,7 @@ public ulong FirstValidRound { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -705,8 +686,7 @@ public ulong FirstValidRound { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;apfa&quot;)]
-public ulong[] ForeignApps { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong[] ForeignApps { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -718,7 +698,7 @@ public ulong[] ForeignApps { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="xref">System.UInt64</span>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -732,8 +712,7 @@ public ulong[] ForeignApps { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;apas&quot;)]
-public ulong[] ForeignAssets { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong[] ForeignAssets { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -745,7 +724,7 @@ public ulong[] ForeignAssets { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="xref">System.UInt64</span>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -759,8 +738,7 @@ public ulong[] ForeignAssets { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;fadd&quot;)]
-public Address FreezeAccount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Address FreezeAccount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -786,8 +764,7 @@ public Address FreezeAccount { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;faid&quot;)]
-public AssetIndex FreezeAsset { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public AssetIndex FreezeAsset { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -813,8 +790,7 @@ public AssetIndex FreezeAsset { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;gh&quot;)]
-public GenesisHash GenesisHash { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GenesisHash GenesisHash { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -840,8 +816,7 @@ public GenesisHash GenesisHash { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;gen&quot;)]
-public FixedString32Bytes GenesisId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public FixedString32Bytes GenesisId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -867,8 +842,7 @@ public FixedString32Bytes GenesisId { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;apgs&quot;)]
-public StateSchema GlobalStateSchema { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public StateSchema GlobalStateSchema { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -889,13 +863,12 @@ public StateSchema GlobalStateSchema { get; set; }</code></pre>
   
   <a id="AlgoSdk_Transaction_Group_" data-uid="AlgoSdk.Transaction.Group*"></a>
   <h4 id="AlgoSdk_Transaction_Group" data-uid="AlgoSdk.Transaction.Group">Group</h4>
-  <div class="markdown level1 summary"><p>The group specifies that the transaction is part of a group and, if so, specifies the hash of the transaction group. See <span class="xref">AlgoSdk.TransactionGroup</span>.</p>
+  <div class="markdown level1 summary"><p>The group specifies that the transaction is part of a group and, if so, specifies the hash of the transaction group. See <a class="xref" href="AlgoSdk.TransactionGroup.html">TransactionGroup</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;grp&quot;)]
-public TransactionId Group { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public TransactionId Group { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -973,8 +946,7 @@ public TransactionId Group { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;lv&quot;)]
-public ulong LastValidRound { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong LastValidRound { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -986,7 +958,7 @@ public ulong LastValidRound { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1000,8 +972,7 @@ public ulong LastValidRound { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;lx&quot;)]
-public TransactionId Lease { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public TransactionId Lease { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1027,8 +998,7 @@ public TransactionId Lease { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;apls&quot;)]
-public StateSchema LocalStateSchema { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public StateSchema LocalStateSchema { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1053,8 +1023,7 @@ public StateSchema LocalStateSchema { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;nonpart&quot;)]
-public Optional&lt;bool&gt; NonParticipation { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Optional&lt;bool&gt; NonParticipation { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1080,8 +1049,7 @@ public Optional&lt;bool&gt; NonParticipation { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;note&quot;)]
-public byte[] Note { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public byte[] Note { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1107,8 +1075,7 @@ public byte[] Note { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;apan&quot;)]
-public OnCompletion OnComplete { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public OnCompletion OnComplete { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1160,8 +1127,7 @@ public OnCompletion OnComplete { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;rcv&quot;)]
-public Address Receiver { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Address Receiver { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1187,8 +1153,7 @@ public Address Receiver { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;rekey&quot;)]
-public Address RekeyTo { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Address RekeyTo { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1213,8 +1178,7 @@ public Address RekeyTo { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;selkey&quot;)]
-public VrfPubKey SelectionParticipationKey { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public VrfPubKey SelectionParticipationKey { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1240,8 +1204,7 @@ public VrfPubKey SelectionParticipationKey { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;snd&quot;)]
-public Address Sender { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Address Sender { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1267,8 +1230,7 @@ public Address Sender { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;type&quot;)]
-public TransactionType TransactionType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public TransactionType TransactionType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1293,8 +1255,7 @@ public TransactionType TransactionType { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;votefst&quot;)]
-public ulong VoteFirst { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong VoteFirst { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1306,7 +1267,7 @@ public ulong VoteFirst { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1319,8 +1280,7 @@ public ulong VoteFirst { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;votekd&quot;)]
-public ulong VoteKeyDilution { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong VoteKeyDilution { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1332,7 +1292,7 @@ public ulong VoteKeyDilution { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1345,8 +1305,7 @@ public ulong VoteKeyDilution { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;votelst&quot;)]
-public ulong VoteLast { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong VoteLast { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1358,7 +1317,7 @@ public ulong VoteLast { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1371,8 +1330,7 @@ public ulong VoteLast { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;votekey&quot;)]
-public ParticipationPublicKey VoteParticipationKey { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ParticipationPublicKey VoteParticipationKey { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1398,8 +1356,7 @@ public ParticipationPublicKey VoteParticipationKey { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;xaid&quot;)]
-public AssetIndex XferAsset { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public AssetIndex XferAsset { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1476,13 +1433,13 @@ public AssetIndex XferAsset { get; set; }</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="xref">System.UInt64</span>[]</td>
         <td><span class="parametername">foreignApps</span></td>
         <td><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="xref">System.UInt64</span>[]</td>
         <td><span class="parametername">foreignAssets</span></td>
         <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
 </td>
@@ -1557,13 +1514,13 @@ public AssetIndex XferAsset { get; set; }</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="xref">System.UInt64</span>[]</td>
         <td><span class="parametername">foreignApps</span></td>
         <td><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="xref">System.UInt64</span>[]</td>
         <td><span class="parametername">foreignAssets</span></td>
         <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
 </td>
@@ -1638,13 +1595,13 @@ public AssetIndex XferAsset { get; set; }</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="xref">System.UInt64</span>[]</td>
         <td><span class="parametername">foreignApps</span></td>
         <td><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="xref">System.UInt64</span>[]</td>
         <td><span class="parametername">foreignAssets</span></td>
         <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
 </td>
@@ -1725,7 +1682,7 @@ public AssetIndex XferAsset { get; set; }</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td><span class="parametername">extraProgramPages</span></td>
         <td><p>Number of additional pages allocated to the application&apos;s approval and clear state programs. Each ExtraProgramPages is 2048 bytes. The sum of ApprovalProgram and ClearStateProgram may not exceed 2048*(1+ExtraProgramPages) bytes.</p>
 </td>
@@ -1800,13 +1757,13 @@ public AssetIndex XferAsset { get; set; }</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="xref">System.UInt64</span>[]</td>
         <td><span class="parametername">foreignApps</span></td>
         <td><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="xref">System.UInt64</span>[]</td>
         <td><span class="parametername">foreignAssets</span></td>
         <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
 </td>
@@ -1881,13 +1838,13 @@ public AssetIndex XferAsset { get; set; }</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="xref">System.UInt64</span>[]</td>
         <td><span class="parametername">foreignApps</span></td>
         <td><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="xref">System.UInt64</span>[]</td>
         <td><span class="parametername">foreignAssets</span></td>
         <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
 </td>
@@ -1962,7 +1919,7 @@ public AssetIndex XferAsset { get; set; }</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td><span class="parametername">extraProgramPages</span></td>
         <td><p>Number of additional pages allocated to the application&apos;s approval and clear state programs. Each ExtraProgramPages is 2048 bytes. The sum of ApprovalProgram and ClearStateProgram may not exceed 2048*(1+ExtraProgramPages) bytes.</p>
 </td>
@@ -1980,13 +1937,13 @@ public AssetIndex XferAsset { get; set; }</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="xref">System.UInt64</span>[]</td>
         <td><span class="parametername">foreignApps</span></td>
         <td><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="xref">System.UInt64</span>[]</td>
         <td><span class="parametername">foreignAssets</span></td>
         <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
 </td>
@@ -2106,7 +2063,7 @@ public AssetIndex XferAsset { get; set; }</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td><span class="parametername">assetAmount</span></td>
         <td><p>The amount of the asset to be transferred.</p>
 </td>
@@ -2427,7 +2384,7 @@ public AssetIndex XferAsset { get; set; }</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td><span class="parametername">assetAmount</span></td>
         <td><p>The amount of the asset to be transferred. A zero amount transferred to self allocates that asset in the account&apos;s Asset map.</p>
 </td>
@@ -2836,16 +2793,16 @@ See <a class="xref" href="AlgoSdk.AtomicTxn.Building.html#AlgoSdk_AtomicTxn_Buil
       <a class="xref" href="AlgoSdk.IPaymentTxn.html">IPaymentTxn</a>
   </div>
   <div>
-      <a class="xref" href="AlgoSdk.IAssetConfigTxn.html">IAssetConfigTxn</a>
-  </div>
-  <div>
-      <a class="xref" href="AlgoSdk.IAssetFreezeTxn.html">IAssetFreezeTxn</a>
-  </div>
-  <div>
       <a class="xref" href="AlgoSdk.IUntypedTransaction.html">IUntypedTransaction</a>
   </div>
   <div>
+      <a class="xref" href="AlgoSdk.IAssetConfigTxn.html">IAssetConfigTxn</a>
+  </div>
+  <div>
       <a class="xref" href="AlgoSdk.IAppCallTxn.html">IAppCallTxn</a>
+  </div>
+  <div>
+      <a class="xref" href="AlgoSdk.IAssetFreezeTxn.html">IAssetFreezeTxn</a>
   </div>
   <div>
       <a class="xref" href="AlgoSdk.IAssetTransferTxn.html">IAssetTransferTxn</a>
