@@ -1,8 +1,6 @@
-using System;
 using AlgoSdk;
 using AlgoSdk.WalletConnect;
 using Cysharp.Threading.Tasks;
-using Unity.Collections;
 using UnityEngine;
 
 public class WalletConnectManager : MonoBehaviour
