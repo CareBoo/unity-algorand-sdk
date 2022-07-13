@@ -63,6 +63,12 @@ namespace AlgoSdk.WalletConnect
         {
             public const int ChainId = 4160;
 
+            public const int MainNetChainId = 416001;
+
+            public const int TestNetChainId = 416002;
+
+            public const int BetaNetChainId = 416003;
+
             /// <summary>
             /// Builds a <see cref="JsonRpcRequest"/> used for signing transactions.
             /// </summary>
