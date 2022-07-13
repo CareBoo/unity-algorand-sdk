@@ -1,0 +1,23 @@
+using System;
+using AlgoSdk;
+using AlgoSdk.WalletConnect;
+using NUnit.Framework;
+
+[TestFixture]
+public class AppEntryTest
+{
+    [Test]
+    public void PeraWalletAppUrlShouldBeCorrect()
+    {
+        var expected = "algorand-wc://wc?uri=wc:4015f93f-b88d-48fc-8bfe-8b063cc325b6@1?bridge=https%3A%2F%2F9.bridge.walletconnect.org&key=b0576e0880e17f8400bfff92d4caaf2158cccc0f493dcf455ba76d448c9b5655&algorand=true";
+        var handshake = new HandshakeUrl(
+            "4015f93f-b88d-48fc-8bfe-8b063cc325b6",
+            "1",
+            "https://9.bridge.walletconnect.org",
+            Hex.FromString("b0576e0880e17f8400bfff92d4caaf2158cccc0f493dcf455ba76d448c9b5655")
+            );
+        var app = WalletRegistry.PeraWallet;
+        var actual = app.FormatUrlForDeepLinkIos(handshake.Url);
+        Assert.AreEqual(expected, actual);
+    }
+}
