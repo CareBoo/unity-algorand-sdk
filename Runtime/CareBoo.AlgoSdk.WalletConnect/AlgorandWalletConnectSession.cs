@@ -270,6 +270,17 @@ namespace AlgoSdk.WalletConnect
                 DisconnectWallet("Session no longer approved.");
                 return;
             }
+            switch (sessionData.ChainId)
+            {
+                case WalletConnectRpc.Algorand.TestNetChainId:
+                case WalletConnectRpc.Algorand.BetaNetChainId:
+                case WalletConnectRpc.Algorand.MainNetChainId:
+                case WalletConnectRpc.Algorand.ChainId:
+                    break;
+                default:
+                    DisconnectWallet($"Invalid chain id: {sessionData.ChainId}");
+                    return;
+            }
 
             this.sessionData.PeerId = sessionData.PeerId;
             this.sessionData.WalletMeta = sessionData.PeerMeta;
