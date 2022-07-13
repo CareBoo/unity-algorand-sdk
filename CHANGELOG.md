@@ -5,6 +5,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [3.0.0-pre.11](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.10...v3.0.0-pre.11) (2022-07-13)
+
+
+### Features
+
+* **walletconnect:** expose `FormatUrlForDeepLink` API ([f26a7fd](https://github.com/CareBoo/unity-algorand-sdk/commit/f26a7fd200f8a68a3678817468d15df01cd927d4))
+* **walletconnect:** expose `SessionData.GenKey` API ([6630652](https://github.com/CareBoo/unity-algorand-sdk/commit/6630652f34bc25905fa470ffe3485808370e341f))
+* **walletconnect:** support chain ids in ARC-0025 ([32c518e](https://github.com/CareBoo/unity-algorand-sdk/commit/32c518eb6929866993a9fd306c477f571328551d))
+
 # [3.0.0-pre.10](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.9...v3.0.0-pre.10) (2022-07-11)
 
 
