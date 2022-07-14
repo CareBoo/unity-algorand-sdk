@@ -24,71 +24,50 @@ namespace AlgoSdk
         [SerializeField]
         Address address;
 
-        FixedString128Bytes walletHandleToken;
-
         public KmdAccount(
             KmdClient client,
             FixedString128Bytes walletId,
             FixedString128Bytes walletPassword,
-            Address address,
-            FixedString128Bytes walletHandleToken = default
+            Address address
         )
         {
             this.client = client;
             this.walletId = walletId;
             this.walletPassword = walletPassword;
             this.address = address;
-
-            this.walletHandleToken = walletHandleToken;
         }
 
         /// <inheritdoc />
         public Address Address => address;
 
-        public async UniTask<FixedString128Bytes> RefreshWalletHandleToken(CancellationToken cancellationToken = default)
-        {
-            if (walletHandleToken.Length > 0)
-            {
-                var (renewErr, renewResponse) = await client.RenewWalletHandleToken(walletHandleToken).WithCancellation(cancellationToken);
-                if (renewErr)
-                {
-                    Debug.LogError(renewErr);
-                }
-            }
-            else
-            {
-                var (initErr, initResponse) = await client.InitWalletHandleToken(walletId, walletPassword).WithCancellation(cancellationToken);
-                if (initErr)
-                {
-                    Debug.LogError(initErr);
-                }
-                walletHandleToken = initResponse.WalletHandleToken;
-            }
-            return walletHandleToken;
-        }
-
         /// <inheritdoc />
         public async UniTask<SignedTxn<T>[]> SignTxnsAsync<T>(T[] txns, TxnIndices txnsToSign, CancellationToken cancellationToken = default)
             where T : ITransaction, IEquatable<T>
         {
-            var result = new SignedTxn<T>[txns.Length];
-            var indexEnum = txnsToSign.GetEnumerator();
-            ErrorResponse signErr;
-            SignTransactionResponse signResp;
-            while (indexEnum.MoveNext())
+            var (initErr, initResponse) = await client.InitWalletHandleToken(walletId, walletPassword)
+                .WithCancellation(cancellationToken);
+            initErr.ThrowIfError();
+            var walletHandleToken = initResponse.WalletHandleToken;
+            try
             {
-                var i = indexEnum.Current;
-                (signErr, signResp) = await client.SignTransaction(Address, AlgoApiSerializer.SerializeMessagePack(txns[i]), walletHandleToken, walletPassword);
-                if (signErr)
+                var result = new SignedTxn<T>[txns.Length];
+                var indexEnum = txnsToSign.GetEnumerator();
+                ErrorResponse signErr;
+                SignTransactionResponse signResp;
+                while (indexEnum.MoveNext())
                 {
-                    Debug.LogError(signErr);
-                }
-                else
-                {
+                    var i = indexEnum.Current;
+                    var serializedTxn = AlgoApiSerializer.SerializeMessagePack(txns[i]);
+                    (signErr, signResp) = await client.SignTransaction(Address, serializedTxn, walletHandleToken, walletPassword);
+                    signErr.ThrowIfError();
                     result[i] = AlgoApiSerializer.DeserializeMessagePack<SignedTxn<T>>(signResp.SignedTransaction);
                 }
+                return result;
             }
-            return result;
+            finally
+            {
+                await client.ReleaseWalletHandleToken(walletHandleToken);
+            }
         }
     }
 }

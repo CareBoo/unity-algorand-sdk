@@ -45,7 +45,7 @@ public abstract class KmdClientTestFixture : AlgoApiClientTestFixture
         var (keysErr, keysResponse) = await AlgoApiClientSettings.Kmd.ListKeys(walletHandleToken);
         AssertOkay(keysErr);
         PublicKey = keysResponse.Addresses.First();
-        kmdAccount = new KmdAccount(AlgoApiClientSettings.Kmd, wallet.Id, WalletPassword, PublicKey, walletHandleToken);
+        kmdAccount = new KmdAccount(AlgoApiClientSettings.Kmd, wallet.Id, WalletPassword, PublicKey);
     }
 
     protected async UniTask ReleaseWalletHandleToken()
@@ -77,7 +77,7 @@ public abstract class KmdClientTestFixture : AlgoApiClientTestFixture
 
     protected async UniTask<byte[]> Sign<T>(T txn) where T : ITransaction, IEquatable<T>
     {
-        var kmdAccount = new KmdAccount(AlgoApiClientSettings.Kmd, wallet.Id, WalletPassword, PublicKey, walletHandleToken);
+        var kmdAccount = new KmdAccount(AlgoApiClientSettings.Kmd, wallet.Id, WalletPassword, PublicKey);
         return await txn.SignWithAsync(kmdAccount);
     }
 
