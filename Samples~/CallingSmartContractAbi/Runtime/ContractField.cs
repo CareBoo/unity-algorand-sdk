@@ -67,7 +67,11 @@ public class ContractField : VisualElement
     private async UniTaskVoid CallMethodAsync()
     {
         returnLabel.text = "Calling method...";
+#if UNITY_RUNTIME_UI_ELEMENTS
         var index = selectedMethod.index;
+#else
+        var index = 0;
+#endif
         var abiValues = methodFields[index].GetAbiValues();
         returnLabel.text = await onMethodCall.Invoke(index, abiValues);
     }
