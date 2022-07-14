@@ -6,7 +6,9 @@ using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+#if UNITY_RUNTIME_UI_ELEMENTS
 [RequireComponent(typeof(UIDocument))]
+#endif
 public class SmartContractUI : MonoBehaviour
 {
     public KmdAccount account { get; set; }
