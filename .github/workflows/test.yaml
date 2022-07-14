@@ -28,7 +28,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        unityVersion: [2020.3.30f1, 2021.2.13f1]
+        unityVersion: [2020.3.36f1, 2021.3.6f1]
         targetPlatform:
           # - mac-mono
           # - windows-mono
