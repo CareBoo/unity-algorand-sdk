@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [3.0.0-pre.12](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.11...v3.0.0-pre.12) (2022-07-14)
+
+
+### Bug Fixes
+
+* **abi:** fix Tuple not encoding dynamic types correctly ([be125d3](https://github.com/CareBoo/unity-algorand-sdk/commit/be125d3b7908a95d8a373f30aa5b081cb358267f))
+* **kmd:** fix `KmdAccount` not renewing wallet handle tokens correctly ([1b0479d](https://github.com/CareBoo/unity-algorand-sdk/commit/1b0479dd2b54b0c0c4820018fd2d50f2440021ea))
+
 # [3.0.0-pre.11](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.10...v3.0.0-pre.11) (2022-07-13)
 
 
