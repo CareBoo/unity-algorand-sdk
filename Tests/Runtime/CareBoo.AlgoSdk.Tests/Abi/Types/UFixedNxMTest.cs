@@ -13,8 +13,8 @@ public class UFixedNxMTest
         using var references = new AbiReferences(Allocator.Persistent);
         var expected = new UFixedNxM(value, precision);
         var actual = expected.As(AbiType.UFixedNxM(16, 1));
-        var expectedEncoded = expected.Encode(AbiType.UFixedNxM(16, 2), references, Allocator.Persistent);
-        var actualEncoded = actual.Encode(AbiType.UFixedNxM(16, 2), references, Allocator.Persistent);
+        using var expectedEncoded = expected.Encode(AbiType.UFixedNxM(16, 2), references, Allocator.Persistent);
+        using var actualEncoded = actual.Encode(AbiType.UFixedNxM(16, 2), references, Allocator.Persistent);
 
         Assert.AreEqual(expectedEncoded.Length, actualEncoded.Length);
         for (var i = 0; i < expectedEncoded.Length; i++)
