@@ -6,9 +6,7 @@ using UnityEngine.UIElements;
 
 public class ContractField : VisualElement
 {
-#if UNITY_RUNTIME_UI_ELEMENTS
     private readonly DropdownField selectedMethod;
-#endif
     private readonly Button callMethod;
     private readonly MethodField[] methodFields;
     private readonly Label returnLabel;
@@ -27,7 +25,6 @@ public class ContractField : VisualElement
             methodFields[i].style.display = i > 0 ? DisplayStyle.None : DisplayStyle.Flex;
         }
 
-#if UNITY_RUNTIME_UI_ELEMENTS
         selectedMethod = new DropdownField("Method", methodChoices, 0);
         selectedMethod.RegisterValueChangedCallback(evt =>
         {
@@ -44,7 +41,6 @@ public class ContractField : VisualElement
             }
         });
         Add(selectedMethod);
-#endif
 
         callMethod = new Button(CallMethod)
         { text = "Call Method" };
@@ -67,11 +63,7 @@ public class ContractField : VisualElement
     private async UniTaskVoid CallMethodAsync()
     {
         returnLabel.text = "Calling method...";
-#if UNITY_RUNTIME_UI_ELEMENTS
         var index = selectedMethod.index;
-#else
-        var index = 0;
-#endif
         var abiValues = methodFields[index].GetAbiValues();
         returnLabel.text = await onMethodCall.Invoke(index, abiValues);
     }
