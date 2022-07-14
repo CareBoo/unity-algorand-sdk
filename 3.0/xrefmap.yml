@@ -33314,12 +33314,12 @@ references:
   commentId: T:AlgoSdk.KmdAccount
   fullName: AlgoSdk.KmdAccount
   nameWithType: KmdAccount
-- uid: AlgoSdk.KmdAccount.#ctor(AlgoSdk.KmdClient,FixedString128Bytes,FixedString128Bytes,AlgoSdk.Address,FixedString128Bytes)
-  name: KmdAccount(KmdClient, FixedString128Bytes, FixedString128Bytes, Address, FixedString128Bytes)
-  href: api/AlgoSdk.KmdAccount.html#AlgoSdk_KmdAccount__ctor_AlgoSdk_KmdClient_FixedString128Bytes_FixedString128Bytes_AlgoSdk_Address_FixedString128Bytes_
-  commentId: M:AlgoSdk.KmdAccount.#ctor(AlgoSdk.KmdClient,FixedString128Bytes,FixedString128Bytes,AlgoSdk.Address,FixedString128Bytes)
-  fullName: AlgoSdk.KmdAccount.KmdAccount(AlgoSdk.KmdClient, FixedString128Bytes, FixedString128Bytes, AlgoSdk.Address, FixedString128Bytes)
-  nameWithType: KmdAccount.KmdAccount(KmdClient, FixedString128Bytes, FixedString128Bytes, Address, FixedString128Bytes)
+- uid: AlgoSdk.KmdAccount.#ctor(AlgoSdk.KmdClient,FixedString128Bytes,FixedString128Bytes,AlgoSdk.Address)
+  name: KmdAccount(KmdClient, FixedString128Bytes, FixedString128Bytes, Address)
+  href: api/AlgoSdk.KmdAccount.html#AlgoSdk_KmdAccount__ctor_AlgoSdk_KmdClient_FixedString128Bytes_FixedString128Bytes_AlgoSdk_Address_
+  commentId: M:AlgoSdk.KmdAccount.#ctor(AlgoSdk.KmdClient,FixedString128Bytes,FixedString128Bytes,AlgoSdk.Address)
+  fullName: AlgoSdk.KmdAccount.KmdAccount(AlgoSdk.KmdClient, FixedString128Bytes, FixedString128Bytes, AlgoSdk.Address)
+  nameWithType: KmdAccount.KmdAccount(KmdClient, FixedString128Bytes, FixedString128Bytes, Address)
 - uid: AlgoSdk.KmdAccount.#ctor*
   name: KmdAccount
   href: api/AlgoSdk.KmdAccount.html#AlgoSdk_KmdAccount__ctor_
@@ -33340,19 +33340,6 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.KmdAccount.Address
   nameWithType: KmdAccount.Address
-- uid: AlgoSdk.KmdAccount.RefreshWalletHandleToken(CancellationToken)
-  name: RefreshWalletHandleToken(CancellationToken)
-  href: api/AlgoSdk.KmdAccount.html#AlgoSdk_KmdAccount_RefreshWalletHandleToken_CancellationToken_
-  commentId: M:AlgoSdk.KmdAccount.RefreshWalletHandleToken(CancellationToken)
-  fullName: AlgoSdk.KmdAccount.RefreshWalletHandleToken(CancellationToken)
-  nameWithType: KmdAccount.RefreshWalletHandleToken(CancellationToken)
-- uid: AlgoSdk.KmdAccount.RefreshWalletHandleToken*
-  name: RefreshWalletHandleToken
-  href: api/AlgoSdk.KmdAccount.html#AlgoSdk_KmdAccount_RefreshWalletHandleToken_
-  commentId: Overload:AlgoSdk.KmdAccount.RefreshWalletHandleToken
-  isSpec: "True"
-  fullName: AlgoSdk.KmdAccount.RefreshWalletHandleToken
-  nameWithType: KmdAccount.RefreshWalletHandleToken
 - uid: AlgoSdk.KmdAccount.SignTxnsAsync*
   name: SignTxnsAsync
   href: api/AlgoSdk.KmdAccount.html#AlgoSdk_KmdAccount_SignTxnsAsync_
