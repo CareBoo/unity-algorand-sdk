@@ -47,6 +47,11 @@
       "displayName": "Editor Wallets",
       "description": "Scripts that show proof of concepts for connecting wallets to the Unity Editor. Currently it only supports WalletConnect for connection.",
       "path": "Samples~/EditorWallets"
+    },
+    {
+      "displayName": "Calling Smart Contract ABI",
+      "description": "Generate a GUI from a contract.json and call its smart contract methods.",
+      "path": "Samples~/CallingSmartContractAbi"
     }
   ],
   "scripts": {
