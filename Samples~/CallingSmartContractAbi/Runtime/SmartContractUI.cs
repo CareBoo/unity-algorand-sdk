@@ -14,17 +14,24 @@ public class SmartContractUI : MonoBehaviour
     public AppIndex contractIndex { get; set; }
     public Contract contract { get; set; }
 
+#if UNITY_RUNTIME_UI_ELEMENTS
     public UIDocument document { get; protected set; }
+#endif
 
     public ContractField contractField { get; protected set; }
 
     private void Awake()
     {
+#if UNITY_RUNTIME_UI_ELEMENTS
         document = GetComponent<UIDocument>();
+#else
+        Debug.LogError("Could not find supported Runtime UI Elements. Please use Unity version 2021.3 or greater, or install the com.unity.ui package.");
+#endif
     }
 
     private void OnEnable()
     {
+#if UNITY_RUNTIME_UI_ELEMENTS
         if (contractIndex == 0)
         {
             return;
@@ -35,6 +42,7 @@ public class SmartContractUI : MonoBehaviour
             contractField = new ContractField(contract, CallContractAsync);
             document.rootVisualElement.Add(contractField);
         }
+#endif
     }
 
     private async UniTask<string> CallContractAsync(int methodIndex, IAbiValue[] methodArgs)
@@ -74,16 +82,5 @@ public class SmartContractUI : MonoBehaviour
         var (error, txnParams) = await algod.TransactionParams();
         error.ThrowIfError();
         return txnParams;
-    }
-
-    public struct PaymentTxnArgs : IEquatable<PaymentTxnArgs>
-    {
-        public Address Receiver;
-        public MicroAlgos Amount;
-
-        public bool Equals(PaymentTxnArgs other)
-        {
-            return Receiver.Equals(other.Receiver) && Amount.Equals(other.Amount);
-        }
     }
 }

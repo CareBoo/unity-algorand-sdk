@@ -14,6 +14,17 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": [],
+    "versionDefines": [
+        {
+            "name": "Unity",
+            "expression": "2021.3",
+            "define": "UNITY_RUNTIME_UI_ELEMENTS"
+        },
+        {
+            "name": "com.unity.ui",
+            "expression": "1.0.0-preview.18",
+            "define": "UNITY_RUNTIME_UI_ELEMENTS"
+        }
+    ],
     "noEngineReferences": false
 }
