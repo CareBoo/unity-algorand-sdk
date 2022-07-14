@@ -21,7 +21,6 @@ public class SmartContractUI : MonoBehaviour
     private void Awake()
     {
         document = GetComponent<UIDocument>();
-        Debug.LogError("Could not find supported Runtime UI Elements. Please use Unity version 2021.3 or greater, or install the com.unity.ui package.");
     }
 
     private void OnEnable()
