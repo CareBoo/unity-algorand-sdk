@@ -32,7 +32,7 @@ jobs:
         targetPlatform:
           # - mac-mono
           # - windows-mono
-          - linux-il2cpp
+          - linux-il2cpp-1
           # - ios
           # - android
           # - webgl
