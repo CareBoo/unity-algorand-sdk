@@ -1,0 +1,695 @@
+#pragma version 6
+txn NumAppArgs
+int 0
+==
+bnz main_l26
+txna ApplicationArgs 0
+method "add(uint64,uint64)uint64"
+==
+bnz main_l25
+txna ApplicationArgs 0
+method "sub(uint64,uint64)uint64"
+==
+bnz main_l24
+txna ApplicationArgs 0
+method "mul(uint64,uint64)uint64"
+==
+bnz main_l23
+txna ApplicationArgs 0
+method "div(uint64,uint64)uint64"
+==
+bnz main_l22
+txna ApplicationArgs 0
+method "mod(uint64,uint64)uint64"
+==
+bnz main_l21
+txna ApplicationArgs 0
+method "qrem(uint64,uint64)(uint64,uint64)"
+==
+bnz main_l20
+txna ApplicationArgs 0
+method "reverse(string)string"
+==
+bnz main_l19
+txna ApplicationArgs 0
+method "concat_strings(string[])string"
+==
+bnz main_l18
+txna ApplicationArgs 0
+method "sum_array(uint64[])uint64"
+==
+bnz main_l17
+txna ApplicationArgs 0
+method "manyargs(uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64)uint64"
+==
+bnz main_l16
+txna ApplicationArgs 0
+method "min_bal(account)uint64"
+==
+bnz main_l15
+txna ApplicationArgs 0
+method "txntest(uint64,pay,uint64)uint64"
+==
+bnz main_l14
+err
+main_l14:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+btoi
+store 79
+txna ApplicationArgs 2
+btoi
+store 81
+txn GroupIndex
+int 1
+-
+store 80
+load 79
+load 80
+load 81
+callsub txntest_11
+store 82
+byte 0x151f7c75
+load 82
+itob
+concat
+log
+int 1
+return
+main_l15:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+int 0
+getbyte
+callsub minbal_10
+store 77
+byte 0x151f7c75
+load 77
+itob
+concat
+log
+int 1
+return
+main_l16:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+btoi
+store 36
+txna ApplicationArgs 2
+btoi
+store 37
+txna ApplicationArgs 3
+btoi
+store 38
+txna ApplicationArgs 4
+btoi
+store 39
+txna ApplicationArgs 5
+btoi
+store 40
+txna ApplicationArgs 6
+btoi
+store 41
+txna ApplicationArgs 7
+btoi
+store 42
+txna ApplicationArgs 8
+btoi
+store 43
+txna ApplicationArgs 9
+btoi
+store 44
+txna ApplicationArgs 10
+btoi
+store 45
+txna ApplicationArgs 11
+btoi
+store 46
+txna ApplicationArgs 12
+btoi
+store 47
+txna ApplicationArgs 13
+btoi
+store 48
+txna ApplicationArgs 14
+btoi
+store 49
+txna ApplicationArgs 15
+store 56
+load 56
+int 0
+extract_uint64
+store 50
+load 56
+int 8
+extract_uint64
+store 51
+load 56
+int 16
+extract_uint64
+store 52
+load 56
+int 24
+extract_uint64
+store 53
+load 56
+int 32
+extract_uint64
+store 54
+load 56
+int 40
+extract_uint64
+store 55
+load 36
+load 37
+load 38
+load 39
+load 40
+load 41
+load 42
+load 43
+load 44
+load 45
+load 46
+load 47
+load 48
+load 49
+load 50
+load 51
+load 52
+load 53
+load 54
+load 55
+callsub manyargs_9
+store 57
+byte 0x151f7c75
+load 57
+itob
+concat
+log
+int 1
+return
+main_l17:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+callsub sumarray_8
+store 32
+byte 0x151f7c75
+load 32
+itob
+concat
+log
+int 1
+return
+main_l18:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+callsub concatstrings_7
+store 27
+byte 0x151f7c75
+load 27
+concat
+log
+int 1
+return
+main_l19:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+callsub reverse_6
+store 22
+byte 0x151f7c75
+load 22
+concat
+log
+int 1
+return
+main_l20:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+btoi
+store 15
+txna ApplicationArgs 2
+btoi
+store 16
+load 15
+load 16
+callsub qrem_5
+store 17
+byte 0x151f7c75
+load 17
+concat
+log
+int 1
+return
+main_l21:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+btoi
+store 12
+txna ApplicationArgs 2
+btoi
+store 13
+load 12
+load 13
+callsub mod_4
+store 14
+byte 0x151f7c75
+load 14
+itob
+concat
+log
+int 1
+return
+main_l22:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+btoi
+store 9
+txna ApplicationArgs 2
+btoi
+store 10
+load 9
+load 10
+callsub div_3
+store 11
+byte 0x151f7c75
+load 11
+itob
+concat
+log
+int 1
+return
+main_l23:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+btoi
+store 6
+txna ApplicationArgs 2
+btoi
+store 7
+load 6
+load 7
+callsub mul_2
+store 8
+byte 0x151f7c75
+load 8
+itob
+concat
+log
+int 1
+return
+main_l24:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+btoi
+store 3
+txna ApplicationArgs 2
+btoi
+store 4
+load 3
+load 4
+callsub sub_1
+store 5
+byte 0x151f7c75
+load 5
+itob
+concat
+log
+int 1
+return
+main_l25:
+txn OnCompletion
+int NoOp
+==
+txn ApplicationID
+int 0
+!=
+&&
+assert
+txna ApplicationArgs 1
+btoi
+store 0
+txna ApplicationArgs 2
+btoi
+store 1
+load 0
+load 1
+callsub add_0
+store 2
+byte 0x151f7c75
+load 2
+itob
+concat
+log
+int 1
+return
+main_l26:
+txn OnCompletion
+int NoOp
+==
+bnz main_l32
+txn OnCompletion
+int UpdateApplication
+==
+bnz main_l31
+txn OnCompletion
+int DeleteApplication
+==
+bnz main_l30
+err
+main_l30:
+txn Sender
+global CreatorAddress
+==
+return
+main_l31:
+txn Sender
+global CreatorAddress
+==
+return
+main_l32:
+txn ApplicationID
+int 0
+==
+assert
+int 1
+return
+
+// add
+add_0:
++
+retsub
+
+// sub
+sub_1:
+-
+retsub
+
+// mul
+mul_2:
+*
+retsub
+
+// div
+div_3:
+/
+retsub
+
+// mod
+mod_4:
+%
+retsub
+
+// qrem
+qrem_5:
+store 19
+store 18
+load 18
+load 19
+/
+store 20
+load 18
+load 19
+%
+store 21
+load 20
+itob
+load 21
+itob
+concat
+retsub
+
+// reverse
+reverse_6:
+store 23
+byte ""
+store 25
+int 0
+store 24
+reverse_6_l1:
+load 24
+load 23
+int 0
+extract_uint16
+<
+bz reverse_6_l3
+load 23
+int 1
+load 24
+*
+int 2
++
+getbyte
+store 26
+byte 0x00
+int 0
+load 26
+setbyte
+load 25
+concat
+store 25
+load 24
+int 1
++
+store 24
+b reverse_6_l1
+reverse_6_l3:
+load 25
+len
+itob
+extract 6 0
+load 25
+concat
+retsub
+
+// concat_strings
+concatstrings_7:
+store 28
+byte ""
+store 30
+int 0
+store 29
+concatstrings_7_l1:
+load 29
+load 28
+int 0
+extract_uint16
+<
+bz concatstrings_7_l6
+load 28
+load 28
+int 2
+load 29
+*
+int 2
++
+extract_uint16
+int 2
++
+load 29
+int 1
++
+load 28
+int 0
+extract_uint16
+==
+bnz concatstrings_7_l5
+load 28
+int 2
+load 29
+*
+int 2
++
+int 2
++
+extract_uint16
+int 2
++
+concatstrings_7_l4:
+substring3
+store 31
+load 30
+load 31
+extract 2 0
+concat
+store 30
+load 29
+int 1
++
+store 29
+b concatstrings_7_l1
+concatstrings_7_l5:
+load 28
+len
+b concatstrings_7_l4
+concatstrings_7_l6:
+load 30
+len
+itob
+extract 6 0
+load 30
+concat
+retsub
+
+// sum_array
+sumarray_8:
+store 33
+int 0
+store 35
+int 0
+store 34
+sumarray_8_l1:
+load 34
+load 33
+int 0
+extract_uint16
+<
+bz sumarray_8_l3
+load 33
+int 8
+load 34
+*
+int 2
++
+extract_uint64
+load 35
++
+store 35
+load 34
+int 1
++
+store 34
+b sumarray_8_l1
+sumarray_8_l3:
+load 35
+retsub
+
+// manyargs
+manyargs_9:
+store 76
+store 75
+store 74
+store 73
+store 72
+store 71
+store 70
+store 69
+store 68
+store 67
+store 66
+store 65
+store 64
+store 63
+store 62
+store 61
+store 60
+store 59
+store 58
+retsub
+
+// min_bal
+minbal_10:
+acct_params_get AcctMinBalance
+store 78
+retsub
+
+// txntest
+txntest_11:
+store 85
+store 84
+store 83
+load 84
+gtxns TypeEnum
+int pay
+==
+assert
+load 84
+gtxns Amount
+load 83
+==
+assert
+load 84
+gtxns Fee
+load 85
+==
+assert
+load 84
+gtxns Amount
+retsub
