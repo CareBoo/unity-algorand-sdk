@@ -41,13 +41,19 @@ namespace AlgoSdk.Experimental.Abi
             if (type.IsFixedArray)
                 return tupleEncoding;
 
-            var result = new EncodedAbiArg(allocator);
-            using var k = new UInt16((ushort)value.Length)
-                .Encode(AbiType.UIntN(16), references, Allocator.Persistent);
-            result.Bytes.AddRange(k.Bytes);
-            result.Bytes.AddRange(tupleEncoding.Bytes);
-            tupleEncoding.Dispose();
-            return result;
+            try
+            {
+                var result = new EncodedAbiArg(allocator);
+                using var k = new UInt16((ushort)value.Length)
+                    .Encode(AbiType.UIntN(16), references, Allocator.Persistent);
+                result.Bytes.AddRange(k.Bytes);
+                result.Bytes.AddRange(tupleEncoding.Bytes);
+                return result;
+            }
+            finally
+            {
+                tupleEncoding.Dispose();
+            }
         }
 
         /// <inheritdoc />

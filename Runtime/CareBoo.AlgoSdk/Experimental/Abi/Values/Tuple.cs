@@ -106,6 +106,8 @@ namespace AlgoSdk.Experimental.Abi
 
             byte boolShift;
 
+            Optional<int> headBytesTotalLength;
+
             public Encoder(T args, U types, AbiReferences references, Allocator allocator)
             {
                 this.args = args;
@@ -115,6 +117,7 @@ namespace AlgoSdk.Experimental.Abi
                 this.tailBytes = new NativeList<byte>(allocator);
                 this.result = new EncodedAbiArg(allocator);
                 this.boolShift = 0;
+                this.headBytesTotalLength = default;
             }
 
             public EncodedAbiArg Encode(Allocator allocator)
@@ -183,18 +186,14 @@ namespace AlgoSdk.Experimental.Abi
 
             void EncodeDynamicHead(int t)
             {
-                boolShift = 0;
-                var offset = headBytes.Length + tailBytes.Length;
-                var args = this.args;
-                do
+                if (!headBytesTotalLength.HasValue)
                 {
-                    var type = types[t];
-                    offset += type.IsStatic
-                        ? args.LengthOfCurrent(types[t])
-                        : 2
-                        ;
-                    t++;
-                } while (args.TryNext(out args));
+                    headBytesTotalLength = CountHeadBytesLength(t);
+                }
+                var ptr = headBytesTotalLength.Value + tailBytes.Length;
+                var offset = headBytes.Length;
+                headBytes.Length += 2;
+                Endianness.CopyToNativeBytesBigEndian((ushort)ptr, ref headBytes, offset);
             }
 
             void EncodeBoolHead(int t)
@@ -223,6 +222,32 @@ namespace AlgoSdk.Experimental.Abi
             {
                 using var bytes = args.EncodeCurrent(types[t], references, Allocator.Persistent);
                 tailBytes.AddRange(bytes.Bytes);
+            }
+
+            int CountHeadBytesLength(int t)
+            {
+                var totalLength = headBytes.Length;
+                var args = this.args;
+                do
+                {
+                    var type = types[t];
+                    if (type.Name == "bool")
+                    {
+                        boolShift %= 8;
+                        if (boolShift == 0)
+                            totalLength++;
+                        boolShift++;
+                    }
+                    else
+                    {
+                        boolShift = 0;
+                        totalLength += type.IsStatic
+                            ? args.LengthOfCurrent(type)
+                            : 2;
+                    }
+                    t++;
+                } while (args.TryNext(out args));
+                return totalLength;
             }
         }
     }
