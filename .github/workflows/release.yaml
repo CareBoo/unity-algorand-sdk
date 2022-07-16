@@ -49,7 +49,7 @@ jobs:
     name: Build unitypackage
     runs-on: ubuntu-latest
     needs: release
-    if: needs.release.outputs.published == 'true' || inputs
+    if: needs.release.outputs.published == 'true' || inputs.version
     steps:
       - uses: actions/checkout@v2
         with:
@@ -96,7 +96,7 @@ jobs:
     name: Build Docs
     runs-on: ubuntu-latest
     needs: release
-    if: needs.release.outputs.published == 'true' || inputs
+    if: needs.release.outputs.published == 'true' || inputs.version
     steps:
       - name: Checkout
         uses: actions/checkout@v2
