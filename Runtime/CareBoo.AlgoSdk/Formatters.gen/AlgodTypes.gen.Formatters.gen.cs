@@ -355,7 +355,7 @@ namespace AlgoSdk.Algod
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Algod.DryrunTxnResult>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Algod.DryrunTxnResult>(false).Assign("app-call-messages", (AlgoSdk.Algod.DryrunTxnResult x) => x.AppCallMessages, (ref AlgoSdk.Algod.DryrunTxnResult x, System.String[] value) => x.AppCallMessages = value, AlgoSdk.ArrayComparer<System.String, AlgoSdk.StringComparer>.Instance).Assign("disassembly", (AlgoSdk.Algod.DryrunTxnResult x) => x.Disassembly, (ref AlgoSdk.Algod.DryrunTxnResult x, System.String[] value) => x.Disassembly = value, AlgoSdk.ArrayComparer<System.String, AlgoSdk.StringComparer>.Instance).Assign("logs", (AlgoSdk.Algod.DryrunTxnResult x) => x.Logs, (ref AlgoSdk.Algod.DryrunTxnResult x, System.Byte[][] value) => x.Logs = value, AlgoSdk.ArrayComparer<System.Byte[], AlgoSdk.ArrayComparer<System.Byte>>.Instance).Assign("logic-sig-disassembly", (AlgoSdk.Algod.DryrunTxnResult x) => x.LogicSigDisassembly, (ref AlgoSdk.Algod.DryrunTxnResult x, System.String[] value) => x.LogicSigDisassembly = value, AlgoSdk.ArrayComparer<System.String, AlgoSdk.StringComparer>.Instance).Assign("local-deltas", (AlgoSdk.Algod.DryrunTxnResult x) => x.LocalDeltas, (ref AlgoSdk.Algod.DryrunTxnResult x, AlgoSdk.Algod.AccountStateDelta[] value) => x.LocalDeltas = value, AlgoSdk.ArrayComparer<AlgoSdk.Algod.AccountStateDelta>.Instance).Assign("logic-sig-trace", (AlgoSdk.Algod.DryrunTxnResult x) => x.LogicSigTrace, (ref AlgoSdk.Algod.DryrunTxnResult x, AlgoSdk.Algod.DryrunState[] value) => x.LogicSigTrace = value, AlgoSdk.ArrayComparer<AlgoSdk.Algod.DryrunState>.Instance).Assign("cost", (AlgoSdk.Algod.DryrunTxnResult x) => x.Cost, (ref AlgoSdk.Algod.DryrunTxnResult x, AlgoSdk.Optional<System.UInt64> value) => x.Cost = value).Assign("logic-sig-messages", (AlgoSdk.Algod.DryrunTxnResult x) => x.LogicSigMessages, (ref AlgoSdk.Algod.DryrunTxnResult x, System.String[] value) => x.LogicSigMessages = value, AlgoSdk.ArrayComparer<System.String, AlgoSdk.StringComparer>.Instance).Assign("app-call-trace", (AlgoSdk.Algod.DryrunTxnResult x) => x.AppCallTrace, (ref AlgoSdk.Algod.DryrunTxnResult x, AlgoSdk.Algod.DryrunState[] value) => x.AppCallTrace = value, AlgoSdk.ArrayComparer<AlgoSdk.Algod.DryrunState>.Instance).Assign("global-delta", (AlgoSdk.Algod.DryrunTxnResult x) => x.GlobalDelta, (ref AlgoSdk.Algod.DryrunTxnResult x, AlgoSdk.Algod.StateDelta value) => x.GlobalDelta = value));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Algod.DryrunTxnResult>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Algod.DryrunTxnResult>(false).Assign("app-call-messages", (AlgoSdk.Algod.DryrunTxnResult x) => x.AppCallMessages, (ref AlgoSdk.Algod.DryrunTxnResult x, System.String[] value) => x.AppCallMessages = value, AlgoSdk.ArrayComparer<System.String, AlgoSdk.StringComparer>.Instance).Assign("disassembly", (AlgoSdk.Algod.DryrunTxnResult x) => x.Disassembly, (ref AlgoSdk.Algod.DryrunTxnResult x, System.String[] value) => x.Disassembly = value, AlgoSdk.ArrayComparer<System.String, AlgoSdk.StringComparer>.Instance).Assign("logs", (AlgoSdk.Algod.DryrunTxnResult x) => x.Logs, (ref AlgoSdk.Algod.DryrunTxnResult x, System.Byte[][] value) => x.Logs = value, AlgoSdk.ArrayComparer<System.Byte[], AlgoSdk.ArrayComparer<System.Byte>>.Instance).Assign("logic-sig-disassembly", (AlgoSdk.Algod.DryrunTxnResult x) => x.LogicSigDisassembly, (ref AlgoSdk.Algod.DryrunTxnResult x, System.String[] value) => x.LogicSigDisassembly = value, AlgoSdk.ArrayComparer<System.String, AlgoSdk.StringComparer>.Instance).Assign("local-deltas", (AlgoSdk.Algod.DryrunTxnResult x) => x.LocalDeltas, (ref AlgoSdk.Algod.DryrunTxnResult x, AlgoSdk.Algod.AccountStateDelta[] value) => x.LocalDeltas = value, AlgoSdk.ArrayComparer<AlgoSdk.Algod.AccountStateDelta>.Instance).Assign("logic-sig-trace", (AlgoSdk.Algod.DryrunTxnResult x) => x.LogicSigTrace, (ref AlgoSdk.Algod.DryrunTxnResult x, AlgoSdk.Algod.DryrunState[] value) => x.LogicSigTrace = value, AlgoSdk.ArrayComparer<AlgoSdk.Algod.DryrunState>.Instance).Assign("cost", (AlgoSdk.Algod.DryrunTxnResult x) => x.Cost, (ref AlgoSdk.Algod.DryrunTxnResult x, AlgoSdk.Optional<System.UInt64> value) => x.Cost = value).Assign("budget-consumed", (AlgoSdk.Algod.DryrunTxnResult x) => x.BudgetConsumed, (ref AlgoSdk.Algod.DryrunTxnResult x, AlgoSdk.Optional<System.UInt64> value) => x.BudgetConsumed = value).Assign("logic-sig-messages", (AlgoSdk.Algod.DryrunTxnResult x) => x.LogicSigMessages, (ref AlgoSdk.Algod.DryrunTxnResult x, System.String[] value) => x.LogicSigMessages = value, AlgoSdk.ArrayComparer<System.String, AlgoSdk.StringComparer>.Instance).Assign("app-call-trace", (AlgoSdk.Algod.DryrunTxnResult x) => x.AppCallTrace, (ref AlgoSdk.Algod.DryrunTxnResult x, AlgoSdk.Algod.DryrunState[] value) => x.AppCallTrace = value, AlgoSdk.ArrayComparer<AlgoSdk.Algod.DryrunState>.Instance).Assign("global-delta", (AlgoSdk.Algod.DryrunTxnResult x) => x.GlobalDelta, (ref AlgoSdk.Algod.DryrunTxnResult x, AlgoSdk.Algod.StateDelta value) => x.GlobalDelta = value).Assign("budget-added", (AlgoSdk.Algod.DryrunTxnResult x) => x.BudgetAdded, (ref AlgoSdk.Algod.DryrunTxnResult x, AlgoSdk.Optional<System.UInt64> value) => x.BudgetAdded = value));
             return true;
         }
     }
@@ -451,7 +451,23 @@ namespace AlgoSdk.Algod
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Algod.CompileResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Algod.CompileResponse>(false).Assign("hash", (AlgoSdk.Algod.CompileResponse x) => x.Hash, (ref AlgoSdk.Algod.CompileResponse x, System.String value) => x.Hash = value, AlgoSdk.StringComparer.Instance).Assign("result", (AlgoSdk.Algod.CompileResponse x) => x.Result, (ref AlgoSdk.Algod.CompileResponse x, System.String value) => x.Result = value, AlgoSdk.StringComparer.Instance));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Algod.CompileResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Algod.CompileResponse>(false).Assign("hash", (AlgoSdk.Algod.CompileResponse x) => x.Hash, (ref AlgoSdk.Algod.CompileResponse x, System.String value) => x.Hash = value, AlgoSdk.StringComparer.Instance).Assign("result", (AlgoSdk.Algod.CompileResponse x) => x.Result, (ref AlgoSdk.Algod.CompileResponse x, System.String value) => x.Result = value, AlgoSdk.StringComparer.Instance).Assign("sourcemap", (AlgoSdk.Algod.CompileResponse x) => x.Sourcemap, (ref AlgoSdk.Algod.CompileResponse x, AlgoSdk.AlgoApiObject value) => x.Sourcemap = value));
+            return true;
+        }
+    }
+}
+namespace AlgoSdk.Algod
+{
+    
+    
+    public partial struct DisassembleResponse
+    {
+        
+        private static bool @__generated__IsValid = DisassembleResponse.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Algod.DisassembleResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Algod.DisassembleResponse>(false).Assign("result", (AlgoSdk.Algod.DisassembleResponse x) => x.Result, (ref AlgoSdk.Algod.DisassembleResponse x, System.String value) => x.Result = value, AlgoSdk.StringComparer.Instance));
             return true;
         }
     }
@@ -467,7 +483,7 @@ namespace AlgoSdk.Algod
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Algod.ProofResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Algod.ProofResponse>(false).Assign("proof", (AlgoSdk.Algod.ProofResponse x) => x.Proof, (ref AlgoSdk.Algod.ProofResponse x, System.Byte[] value) => x.Proof = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("stibhash", (AlgoSdk.Algod.ProofResponse x) => x.Stibhash, (ref AlgoSdk.Algod.ProofResponse x, System.Byte[] value) => x.Stibhash = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("treedepth", (AlgoSdk.Algod.ProofResponse x) => x.Treedepth, (ref AlgoSdk.Algod.ProofResponse x, System.UInt64 value) => x.Treedepth = value).Assign("idx", (AlgoSdk.Algod.ProofResponse x) => x.Idx, (ref AlgoSdk.Algod.ProofResponse x, System.UInt64 value) => x.Idx = value).Assign("hashtype", (AlgoSdk.Algod.ProofResponse x) => x.Hashtype, (ref AlgoSdk.Algod.ProofResponse x, AlgoSdk.HashType value) => x.Hashtype = value, AlgoSdk.ByteEnumComparer<AlgoSdk.HashType>.Instance));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Algod.ProofResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Algod.ProofResponse>(false).Assign("proof", (AlgoSdk.Algod.ProofResponse x) => x.Proof, (ref AlgoSdk.Algod.ProofResponse x, System.Byte[] value) => x.Proof = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("stibhash", (AlgoSdk.Algod.ProofResponse x) => x.Stibhash, (ref AlgoSdk.Algod.ProofResponse x, System.Byte[] value) => x.Stibhash = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("treedepth", (AlgoSdk.Algod.ProofResponse x) => x.Treedepth, (ref AlgoSdk.Algod.ProofResponse x, System.UInt64 value) => x.Treedepth = value).Assign("idx", (AlgoSdk.Algod.ProofResponse x) => x.Idx, (ref AlgoSdk.Algod.ProofResponse x, System.UInt64 value) => x.Idx = value).Assign("hashtype", (AlgoSdk.Algod.ProofResponse x) => x.Hashtype, (ref AlgoSdk.Algod.ProofResponse x, System.String value) => x.Hashtype = value, AlgoSdk.StringComparer.Instance));
             return true;
         }
     }
@@ -588,6 +604,22 @@ namespace AlgoSdk.Algod
 {
     
     
+    public partial struct AccountResponse
+    {
+        
+        private static bool @__generated__IsValid = AccountResponse.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Algod.AccountResponse>(new AlgoSdk.WrappedValueFormatter<AlgoSdk.Algod.AccountResponse, AlgoSdk.Algod.Account>());
+            return true;
+        }
+    }
+}
+namespace AlgoSdk.Algod
+{
+    
+    
     public partial struct StateDelta
     {
         
@@ -676,22 +708,6 @@ namespace AlgoSdk.Algod
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Algod.ParticipationKeysResponse>(new AlgoSdk.WrappedValueFormatter<AlgoSdk.Algod.ParticipationKeysResponse, AlgoSdk.Algod.ParticipationKey[]>());
-            return true;
-        }
-    }
-}
-namespace AlgoSdk.Algod
-{
-    
-    
-    public partial struct AccountResponse
-    {
-        
-        private static bool @__generated__IsValid = AccountResponse.@__generated__InitializeAlgoApiFormatters();
-        
-        private static bool @__generated__InitializeAlgoApiFormatters()
-        {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Algod.AccountResponse>(new AlgoSdk.WrappedValueFormatter<AlgoSdk.Algod.AccountResponse, AlgoSdk.Algod.Account>());
             return true;
         }
     }

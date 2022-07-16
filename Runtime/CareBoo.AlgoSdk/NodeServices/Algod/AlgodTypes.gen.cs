@@ -2013,8 +2013,11 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
         [SerializeField, Tooltip(@"")]
         DryrunState[] @logicSigTrace;
         
-        [SerializeField, Tooltip(@"Execution cost of app call transaction")]
+        [SerializeField, Tooltip(@"Net cost of app execution. Field is DEPRECATED and is subject for removal. Instead, use `budget-added` and `budget-consumed.")]
         Optional<ulong> @cost;
+        
+        [SerializeField, Tooltip(@"Budget consumed during execution of app call transaction.")]
+        Optional<ulong> @budgetConsumed;
         
         [SerializeField, Tooltip(@"")]
         string[] @logicSigMessages;
@@ -2024,6 +2027,9 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
         
         [SerializeField, Tooltip(@"")]
         StateDelta @globalDelta;
+        
+        [SerializeField, Tooltip(@"Budget added during execution of app call transaction.")]
+        Optional<ulong> @budgetAdded;
         
         /// <summary>
         ///         
@@ -2086,13 +2092,23 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
         }
 
         /// <summary>
-        /// Execution cost of app call transaction        
+        /// Net cost of app execution. Field is DEPRECATED and is subject for removal. Instead, use `budget-added` and `budget-consumed.        
         /// </summary>
         [AlgoApiField("cost")]
         public Optional<ulong> Cost
         {
             get => this.@cost;
             set => this.@cost = value;
+        }
+
+        /// <summary>
+        /// Budget consumed during execution of app call transaction.        
+        /// </summary>
+        [AlgoApiField("budget-consumed")]
+        public Optional<ulong> BudgetConsumed
+        {
+            get => this.@budgetConsumed;
+            set => this.@budgetConsumed = value;
         }
 
         /// <summary>
@@ -2125,6 +2141,16 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
             set => this.@globalDelta = value;
         }
 
+        /// <summary>
+        /// Budget added during execution of app call transaction.        
+        /// </summary>
+        [AlgoApiField("budget-added")]
+        public Optional<ulong> BudgetAdded
+        {
+            get => this.@budgetAdded;
+            set => this.@budgetAdded = value;
+        }
+
         public bool Equals(DryrunTxnResult other)
         {
             return 
@@ -2135,9 +2161,11 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ArrayComparer.Equals(LocalDeltas, other.LocalDeltas) &&
                 ArrayComparer.Equals(LogicSigTrace, other.LogicSigTrace) &&
                 Cost.Equals(other.Cost) &&
+                BudgetConsumed.Equals(other.BudgetConsumed) &&
                 ArrayComparer.Equals(LogicSigMessages, other.LogicSigMessages) &&
                 ArrayComparer.Equals(AppCallTrace, other.AppCallTrace) &&
-                GlobalDelta.Equals(other.GlobalDelta)
+                GlobalDelta.Equals(other.GlobalDelta) &&
+                BudgetAdded.Equals(other.BudgetAdded)
                 ;
         }
     }
@@ -2327,6 +2355,9 @@ The raw account uses `AssetParams` for this type.")]
         [SerializeField, Tooltip(@"base64 encoded program bytes")]
         string @result;
         
+        [SerializeField, Tooltip(@"JSON of the source map")]
+        AlgoApiObject @sourcemap;
+        
         /// <summary>
         /// base32 SHA512_256 of program bytes (Address style)        
         /// </summary>
@@ -2347,10 +2378,46 @@ The raw account uses `AssetParams` for this type.")]
             set => this.@result = value;
         }
 
+        /// <summary>
+        /// JSON of the source map        
+        /// </summary>
+        [AlgoApiField("sourcemap")]
+        public AlgoApiObject Sourcemap
+        {
+            get => this.@sourcemap;
+            set => this.@sourcemap = value;
+        }
+
         public bool Equals(CompileResponse other)
         {
             return 
                 StringComparer.Equals(Hash, other.Hash) &&
+                StringComparer.Equals(Result, other.Result) &&
+                Sourcemap.Equals(other.Sourcemap)
+                ;
+        }
+    }
+
+    [AlgoApiObject, Serializable]
+    public partial struct DisassembleResponse
+        : IEquatable<DisassembleResponse>
+    {
+        [SerializeField, Tooltip(@"disassembled Teal code")]
+        string @result;
+        
+        /// <summary>
+        /// disassembled Teal code        
+        /// </summary>
+        [AlgoApiField("result")]
+        public string Result
+        {
+            get => this.@result;
+            set => this.@result = value;
+        }
+
+        public bool Equals(DisassembleResponse other)
+        {
+            return 
                 StringComparer.Equals(Result, other.Result)
                 ;
         }
@@ -2372,10 +2439,10 @@ The raw account uses `AssetParams` for this type.")]
         [SerializeField, Tooltip(@"Index of the transaction in the block's payset.")]
         ulong @idx;
         
-        [SerializeField, Tooltip(@"The type of hash function used to create the proof, must be one of:
-* sumhash 
-* sha512_256")]
-        HashType @hashtype;
+        [SerializeField, Tooltip(@"The type of hash function used to create the proof, must be one of: 
+* sha512_256 
+* sha256")]
+        string @hashtype;
         
         /// <summary>
         /// Merkle proof of transaction membership.        
@@ -2418,12 +2485,12 @@ The raw account uses `AssetParams` for this type.")]
         }
 
         /// <summary>
-        /// The type of hash function used to create the proof, must be one of:
-        /// * sumhash 
-        /// * sha512_256        
+        /// The type of hash function used to create the proof, must be one of: 
+        /// * sha512_256 
+        /// * sha256        
         /// </summary>
         [AlgoApiField("hashtype")]
-        public HashType Hashtype
+        public string Hashtype
         {
             get => this.@hashtype;
             set => this.@hashtype = value;
@@ -2436,7 +2503,7 @@ The raw account uses `AssetParams` for this type.")]
                 ArrayComparer.Equals(Stibhash, other.Stibhash) &&
                 Treedepth.Equals(other.Treedepth) &&
                 Idx.Equals(other.Idx) &&
-                Hashtype.Equals(other.Hashtype)
+                StringComparer.Equals(Hashtype, other.Hashtype)
                 ;
         }
     }
