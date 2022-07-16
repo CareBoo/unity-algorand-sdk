@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [3.0.0-pre.13](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.12...v3.0.0-pre.13) (2022-07-16)
+
+
+### Bug Fixes
+
+* **walletconnect:** fix deep linking in iOS ([997ad45](https://github.com/CareBoo/unity-algorand-sdk/commit/997ad455e6813d9dca377d027c4cba8f13c1aa9b))
+
 # [3.0.0-pre.12](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.11...v3.0.0-pre.12) (2022-07-14)
 
 
