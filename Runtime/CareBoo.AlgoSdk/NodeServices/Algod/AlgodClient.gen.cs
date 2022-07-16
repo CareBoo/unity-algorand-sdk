@@ -29,6 +29,11 @@ namespace AlgoSdk
         /// <param name="txid">
         /// The transaction ID for which to generate a proof.
         /// </param>
+        /// <param name="hashtype">
+        /// The type of hash function used to create the proof, must be one of: 
+        /// * sha512_256 
+        /// * sha256
+        /// </param>
         /// <param name="format">
         /// Configures whether the response object is JSON or MessagePack encoded.
         /// </param>
@@ -39,6 +44,8 @@ namespace AlgoSdk
             ulong round,
         
             string txid,
+        
+            string hashtype = default,
         
             ResponseFormat format = default
         );
@@ -394,11 +401,16 @@ namespace AlgoSdk
         /// <param name="source">
         /// TEAL source code to be compiled
         /// </param>
+        /// <param name="sourcemap">
+        /// When set to `true`, returns the source map of the program as a JSON. Defaults to `false`.
+        /// </param>
         /// <returns>
         /// 
         /// </returns>
         AlgoApiRequest.Sent<CompileResponse> TealCompile(
-            byte[] source
+            byte[] source,
+        
+            Optional<bool> sourcemap = default
         );
 
         /// <summary>
@@ -529,6 +541,22 @@ namespace AlgoSdk
         );
 
         /// <summary>
+        /// Disassemble program bytes into the TEAL source code.
+        /// </summary>
+        /// <remarks>
+        /// Given the program bytes, return the TEAL source code in plain text. This endpoint is only enabled when a node's configuration file sets EnableDeveloperAPI to true.
+        /// </remarks>
+        /// <param name="source">
+        /// TEAL program binary to be disassembled
+        /// </param>
+        /// <returns>
+        /// 
+        /// </returns>
+        AlgoApiRequest.Sent<DisassembleResponse> TealDisassemble(
+            byte[] source
+        );
+
+        /// <summary>
         /// Return metrics about algod functioning.
         /// </summary>
         /// <remarks>
@@ -578,10 +606,13 @@ namespace AlgoSdk
         
             string txid,
         
+            string hashtype = default,
+        
             ResponseFormat format = default
         )
         {
             using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+                .Add("hashtype", hashtype)
                 .Add("format", format)
                 ;
             var path = $"/v2/blocks/{round}/transactions/{txid}/proof{queryBuilder}";
@@ -878,10 +909,15 @@ namespace AlgoSdk
 
         /// <inheritdoc />
         public AlgoApiRequest.Sent<CompileResponse> TealCompile(
-            byte[] source
+            byte[] source,
+        
+            Optional<bool> sourcemap = default
         )
         {
-            var path = $"/v2/teal/compile";
+            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+                .Add("sourcemap", sourcemap)
+                ;
+            var path = $"/v2/teal/compile{queryBuilder}";
             return this
                 .Post(path)
                 .SetPlainTextBody(source)
@@ -983,6 +1019,19 @@ namespace AlgoSdk
             return this
                 .Get(path)
                 
+                .Send()
+                ;
+        }
+
+        /// <inheritdoc />
+        public AlgoApiRequest.Sent<DisassembleResponse> TealDisassemble(
+            byte[] source
+        )
+        {
+            var path = $"/v2/teal/disassemble";
+            return this
+                .Post(path)
+                .SetMessagePackBody(source)
                 .Send()
                 ;
         }

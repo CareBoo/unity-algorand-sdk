@@ -57,7 +57,7 @@ namespace AlgoSdk
         /// 
         /// </summary>
         /// <remarks>
-        /// Lookup transactions for an asset.
+        /// Lookup transactions for an asset. Transactions are returned oldest to newest.
         /// </remarks>
         /// <param name="assetId">
         /// 
@@ -417,7 +417,7 @@ namespace AlgoSdk
         /// 
         /// </summary>
         /// <remarks>
-        /// Lookup account transactions.
+        /// Lookup account transactions. Transactions are returned newest to oldest.
         /// </remarks>
         /// <param name="accountId">
         /// account string
@@ -511,7 +511,7 @@ namespace AlgoSdk
         /// 
         /// </summary>
         /// <remarks>
-        /// Search for transactions.
+        /// Search for transactions. Transactions are returned oldest to newest unless the address parameter is used, in which case results are returned newest to oldest.
         /// </remarks>
         /// <param name="notePrefix">
         /// Specifies a prefix which must be contained in the note field.
