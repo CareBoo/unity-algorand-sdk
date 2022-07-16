@@ -3304,6 +3304,19 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Algod.AccountResponse.AccountResponse
   nameWithType: AccountResponse.AccountResponse
+- uid: AlgoSdk.Algod.AccountResponse.Account
+  name: Account
+  href: api/AlgoSdk.Algod.AccountResponse.html#AlgoSdk_Algod_AccountResponse_Account
+  commentId: P:AlgoSdk.Algod.AccountResponse.Account
+  fullName: AlgoSdk.Algod.AccountResponse.Account
+  nameWithType: AccountResponse.Account
+- uid: AlgoSdk.Algod.AccountResponse.Account*
+  name: Account
+  href: api/AlgoSdk.Algod.AccountResponse.html#AlgoSdk_Algod_AccountResponse_Account_
+  commentId: Overload:AlgoSdk.Algod.AccountResponse.Account
+  isSpec: "True"
+  fullName: AlgoSdk.Algod.AccountResponse.Account
+  nameWithType: AccountResponse.Account
 - uid: AlgoSdk.Algod.AccountResponse.Equals(AlgoSdk.Algod.AccountResponse)
   name: Equals(AccountResponse)
   href: api/AlgoSdk.Algod.AccountResponse.html#AlgoSdk_Algod_AccountResponse_Equals_AlgoSdk_Algod_AccountResponse_
@@ -4375,6 +4388,51 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Algod.CompileResponse.Result
   nameWithType: CompileResponse.Result
+- uid: AlgoSdk.Algod.CompileResponse.Sourcemap
+  name: Sourcemap
+  href: api/AlgoSdk.Algod.CompileResponse.html#AlgoSdk_Algod_CompileResponse_Sourcemap
+  commentId: P:AlgoSdk.Algod.CompileResponse.Sourcemap
+  fullName: AlgoSdk.Algod.CompileResponse.Sourcemap
+  nameWithType: CompileResponse.Sourcemap
+- uid: AlgoSdk.Algod.CompileResponse.Sourcemap*
+  name: Sourcemap
+  href: api/AlgoSdk.Algod.CompileResponse.html#AlgoSdk_Algod_CompileResponse_Sourcemap_
+  commentId: Overload:AlgoSdk.Algod.CompileResponse.Sourcemap
+  isSpec: "True"
+  fullName: AlgoSdk.Algod.CompileResponse.Sourcemap
+  nameWithType: CompileResponse.Sourcemap
+- uid: AlgoSdk.Algod.DisassembleResponse
+  name: DisassembleResponse
+  href: api/AlgoSdk.Algod.DisassembleResponse.html
+  commentId: T:AlgoSdk.Algod.DisassembleResponse
+  fullName: AlgoSdk.Algod.DisassembleResponse
+  nameWithType: DisassembleResponse
+- uid: AlgoSdk.Algod.DisassembleResponse.Equals(AlgoSdk.Algod.DisassembleResponse)
+  name: Equals(DisassembleResponse)
+  href: api/AlgoSdk.Algod.DisassembleResponse.html#AlgoSdk_Algod_DisassembleResponse_Equals_AlgoSdk_Algod_DisassembleResponse_
+  commentId: M:AlgoSdk.Algod.DisassembleResponse.Equals(AlgoSdk.Algod.DisassembleResponse)
+  fullName: AlgoSdk.Algod.DisassembleResponse.Equals(AlgoSdk.Algod.DisassembleResponse)
+  nameWithType: DisassembleResponse.Equals(DisassembleResponse)
+- uid: AlgoSdk.Algod.DisassembleResponse.Equals*
+  name: Equals
+  href: api/AlgoSdk.Algod.DisassembleResponse.html#AlgoSdk_Algod_DisassembleResponse_Equals_
+  commentId: Overload:AlgoSdk.Algod.DisassembleResponse.Equals
+  isSpec: "True"
+  fullName: AlgoSdk.Algod.DisassembleResponse.Equals
+  nameWithType: DisassembleResponse.Equals
+- uid: AlgoSdk.Algod.DisassembleResponse.Result
+  name: Result
+  href: api/AlgoSdk.Algod.DisassembleResponse.html#AlgoSdk_Algod_DisassembleResponse_Result
+  commentId: P:AlgoSdk.Algod.DisassembleResponse.Result
+  fullName: AlgoSdk.Algod.DisassembleResponse.Result
+  nameWithType: DisassembleResponse.Result
+- uid: AlgoSdk.Algod.DisassembleResponse.Result*
+  name: Result
+  href: api/AlgoSdk.Algod.DisassembleResponse.html#AlgoSdk_Algod_DisassembleResponse_Result_
+  commentId: Overload:AlgoSdk.Algod.DisassembleResponse.Result
+  isSpec: "True"
+  fullName: AlgoSdk.Algod.DisassembleResponse.Result
+  nameWithType: DisassembleResponse.Result
 - uid: AlgoSdk.Algod.DryrunRequest
   name: DryrunRequest
   href: api/AlgoSdk.Algod.DryrunRequest.html
@@ -4730,6 +4788,32 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Algod.DryrunTxnResult.AppCallTrace
   nameWithType: DryrunTxnResult.AppCallTrace
+- uid: AlgoSdk.Algod.DryrunTxnResult.BudgetAdded
+  name: BudgetAdded
+  href: api/AlgoSdk.Algod.DryrunTxnResult.html#AlgoSdk_Algod_DryrunTxnResult_BudgetAdded
+  commentId: P:AlgoSdk.Algod.DryrunTxnResult.BudgetAdded
+  fullName: AlgoSdk.Algod.DryrunTxnResult.BudgetAdded
+  nameWithType: DryrunTxnResult.BudgetAdded
+- uid: AlgoSdk.Algod.DryrunTxnResult.BudgetAdded*
+  name: BudgetAdded
+  href: api/AlgoSdk.Algod.DryrunTxnResult.html#AlgoSdk_Algod_DryrunTxnResult_BudgetAdded_
+  commentId: Overload:AlgoSdk.Algod.DryrunTxnResult.BudgetAdded
+  isSpec: "True"
+  fullName: AlgoSdk.Algod.DryrunTxnResult.BudgetAdded
+  nameWithType: DryrunTxnResult.BudgetAdded
+- uid: AlgoSdk.Algod.DryrunTxnResult.BudgetConsumed
+  name: BudgetConsumed
+  href: api/AlgoSdk.Algod.DryrunTxnResult.html#AlgoSdk_Algod_DryrunTxnResult_BudgetConsumed
+  commentId: P:AlgoSdk.Algod.DryrunTxnResult.BudgetConsumed
+  fullName: AlgoSdk.Algod.DryrunTxnResult.BudgetConsumed
+  nameWithType: DryrunTxnResult.BudgetConsumed
+- uid: AlgoSdk.Algod.DryrunTxnResult.BudgetConsumed*
+  name: BudgetConsumed
+  href: api/AlgoSdk.Algod.DryrunTxnResult.html#AlgoSdk_Algod_DryrunTxnResult_BudgetConsumed_
+  commentId: Overload:AlgoSdk.Algod.DryrunTxnResult.BudgetConsumed
+  isSpec: "True"
+  fullName: AlgoSdk.Algod.DryrunTxnResult.BudgetConsumed
+  nameWithType: DryrunTxnResult.BudgetConsumed
 - uid: AlgoSdk.Algod.DryrunTxnResult.Cost
   name: Cost
   href: api/AlgoSdk.Algod.DryrunTxnResult.html#AlgoSdk_Algod_DryrunTxnResult_Cost
@@ -6797,12 +6881,12 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AlgodClient.GetPendingTransactionsByAddress
   nameWithType: AlgodClient.GetPendingTransactionsByAddress
-- uid: AlgoSdk.AlgodClient.GetProof(System.UInt64,System.String,AlgoSdk.ResponseFormat)
-  name: GetProof(UInt64, String, ResponseFormat)
-  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetProof_System_UInt64_System_String_AlgoSdk_ResponseFormat_
-  commentId: M:AlgoSdk.AlgodClient.GetProof(System.UInt64,System.String,AlgoSdk.ResponseFormat)
-  fullName: AlgoSdk.AlgodClient.GetProof(System.UInt64, System.String, AlgoSdk.ResponseFormat)
-  nameWithType: AlgodClient.GetProof(UInt64, String, ResponseFormat)
+- uid: AlgoSdk.AlgodClient.GetProof(System.UInt64,System.String,System.String,AlgoSdk.ResponseFormat)
+  name: GetProof(UInt64, String, String, ResponseFormat)
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetProof_System_UInt64_System_String_System_String_AlgoSdk_ResponseFormat_
+  commentId: M:AlgoSdk.AlgodClient.GetProof(System.UInt64,System.String,System.String,AlgoSdk.ResponseFormat)
+  fullName: AlgoSdk.AlgodClient.GetProof(System.UInt64, System.String, System.String, AlgoSdk.ResponseFormat)
+  nameWithType: AlgodClient.GetProof(UInt64, String, String, ResponseFormat)
 - uid: AlgoSdk.AlgodClient.GetProof*
   name: GetProof
   href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_GetProof_
@@ -7093,15 +7177,15 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AlgodClient.SwaggerJSON
   nameWithType: AlgodClient.SwaggerJSON
-- uid: AlgoSdk.AlgodClient.TealCompile(System.Byte[])
-  name: TealCompile(Byte[])
-  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_TealCompile_System_Byte___
-  commentId: M:AlgoSdk.AlgodClient.TealCompile(System.Byte[])
-  name.vb: TealCompile(Byte())
-  fullName: AlgoSdk.AlgodClient.TealCompile(System.Byte[])
-  fullName.vb: AlgoSdk.AlgodClient.TealCompile(System.Byte())
-  nameWithType: AlgodClient.TealCompile(Byte[])
-  nameWithType.vb: AlgodClient.TealCompile(Byte())
+- uid: AlgoSdk.AlgodClient.TealCompile(System.Byte[],AlgoSdk.Optional{System.Boolean})
+  name: TealCompile(Byte[], Optional<Boolean>)
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_TealCompile_System_Byte___AlgoSdk_Optional_System_Boolean__
+  commentId: M:AlgoSdk.AlgodClient.TealCompile(System.Byte[],AlgoSdk.Optional{System.Boolean})
+  name.vb: TealCompile(Byte(), Optional(Of Boolean))
+  fullName: AlgoSdk.AlgodClient.TealCompile(System.Byte[], AlgoSdk.Optional<System.Boolean>)
+  fullName.vb: AlgoSdk.AlgodClient.TealCompile(System.Byte(), AlgoSdk.Optional(Of System.Boolean))
+  nameWithType: AlgodClient.TealCompile(Byte[], Optional<Boolean>)
+  nameWithType.vb: AlgodClient.TealCompile(Byte(), Optional(Of Boolean))
 - uid: AlgoSdk.AlgodClient.TealCompile*
   name: TealCompile
   href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_TealCompile_
@@ -7109,6 +7193,22 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.AlgodClient.TealCompile
   nameWithType: AlgodClient.TealCompile
+- uid: AlgoSdk.AlgodClient.TealDisassemble(System.Byte[])
+  name: TealDisassemble(Byte[])
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_TealDisassemble_System_Byte___
+  commentId: M:AlgoSdk.AlgodClient.TealDisassemble(System.Byte[])
+  name.vb: TealDisassemble(Byte())
+  fullName: AlgoSdk.AlgodClient.TealDisassemble(System.Byte[])
+  fullName.vb: AlgoSdk.AlgodClient.TealDisassemble(System.Byte())
+  nameWithType: AlgodClient.TealDisassemble(Byte[])
+  nameWithType.vb: AlgodClient.TealDisassemble(Byte())
+- uid: AlgoSdk.AlgodClient.TealDisassemble*
+  name: TealDisassemble
+  href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_TealDisassemble_
+  commentId: Overload:AlgoSdk.AlgodClient.TealDisassemble
+  isSpec: "True"
+  fullName: AlgoSdk.AlgodClient.TealDisassemble
+  nameWithType: AlgodClient.TealDisassemble
 - uid: AlgoSdk.AlgodClient.TealDryrun(DryrunRequest)
   name: TealDryrun(DryrunRequest)
   href: api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_TealDryrun_DryrunRequest_
@@ -23258,12 +23358,12 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.IAlgodClient.GetPendingTransactionsByAddress
   nameWithType: IAlgodClient.GetPendingTransactionsByAddress
-- uid: AlgoSdk.IAlgodClient.GetProof(System.UInt64,System.String,AlgoSdk.ResponseFormat)
-  name: GetProof(UInt64, String, ResponseFormat)
-  href: api/AlgoSdk.IAlgodClient.html#AlgoSdk_IAlgodClient_GetProof_System_UInt64_System_String_AlgoSdk_ResponseFormat_
-  commentId: M:AlgoSdk.IAlgodClient.GetProof(System.UInt64,System.String,AlgoSdk.ResponseFormat)
-  fullName: AlgoSdk.IAlgodClient.GetProof(System.UInt64, System.String, AlgoSdk.ResponseFormat)
-  nameWithType: IAlgodClient.GetProof(UInt64, String, ResponseFormat)
+- uid: AlgoSdk.IAlgodClient.GetProof(System.UInt64,System.String,System.String,AlgoSdk.ResponseFormat)
+  name: GetProof(UInt64, String, String, ResponseFormat)
+  href: api/AlgoSdk.IAlgodClient.html#AlgoSdk_IAlgodClient_GetProof_System_UInt64_System_String_System_String_AlgoSdk_ResponseFormat_
+  commentId: M:AlgoSdk.IAlgodClient.GetProof(System.UInt64,System.String,System.String,AlgoSdk.ResponseFormat)
+  fullName: AlgoSdk.IAlgodClient.GetProof(System.UInt64, System.String, System.String, AlgoSdk.ResponseFormat)
+  nameWithType: IAlgodClient.GetProof(UInt64, String, String, ResponseFormat)
 - uid: AlgoSdk.IAlgodClient.GetProof*
   name: GetProof
   href: api/AlgoSdk.IAlgodClient.html#AlgoSdk_IAlgodClient_GetProof_
@@ -23407,15 +23507,15 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.IAlgodClient.SwaggerJSON
   nameWithType: IAlgodClient.SwaggerJSON
-- uid: AlgoSdk.IAlgodClient.TealCompile(System.Byte[])
-  name: TealCompile(Byte[])
-  href: api/AlgoSdk.IAlgodClient.html#AlgoSdk_IAlgodClient_TealCompile_System_Byte___
-  commentId: M:AlgoSdk.IAlgodClient.TealCompile(System.Byte[])
-  name.vb: TealCompile(Byte())
-  fullName: AlgoSdk.IAlgodClient.TealCompile(System.Byte[])
-  fullName.vb: AlgoSdk.IAlgodClient.TealCompile(System.Byte())
-  nameWithType: IAlgodClient.TealCompile(Byte[])
-  nameWithType.vb: IAlgodClient.TealCompile(Byte())
+- uid: AlgoSdk.IAlgodClient.TealCompile(System.Byte[],AlgoSdk.Optional{System.Boolean})
+  name: TealCompile(Byte[], Optional<Boolean>)
+  href: api/AlgoSdk.IAlgodClient.html#AlgoSdk_IAlgodClient_TealCompile_System_Byte___AlgoSdk_Optional_System_Boolean__
+  commentId: M:AlgoSdk.IAlgodClient.TealCompile(System.Byte[],AlgoSdk.Optional{System.Boolean})
+  name.vb: TealCompile(Byte(), Optional(Of Boolean))
+  fullName: AlgoSdk.IAlgodClient.TealCompile(System.Byte[], AlgoSdk.Optional<System.Boolean>)
+  fullName.vb: AlgoSdk.IAlgodClient.TealCompile(System.Byte(), AlgoSdk.Optional(Of System.Boolean))
+  nameWithType: IAlgodClient.TealCompile(Byte[], Optional<Boolean>)
+  nameWithType.vb: IAlgodClient.TealCompile(Byte(), Optional(Of Boolean))
 - uid: AlgoSdk.IAlgodClient.TealCompile*
   name: TealCompile
   href: api/AlgoSdk.IAlgodClient.html#AlgoSdk_IAlgodClient_TealCompile_
@@ -23423,6 +23523,22 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.IAlgodClient.TealCompile
   nameWithType: IAlgodClient.TealCompile
+- uid: AlgoSdk.IAlgodClient.TealDisassemble(System.Byte[])
+  name: TealDisassemble(Byte[])
+  href: api/AlgoSdk.IAlgodClient.html#AlgoSdk_IAlgodClient_TealDisassemble_System_Byte___
+  commentId: M:AlgoSdk.IAlgodClient.TealDisassemble(System.Byte[])
+  name.vb: TealDisassemble(Byte())
+  fullName: AlgoSdk.IAlgodClient.TealDisassemble(System.Byte[])
+  fullName.vb: AlgoSdk.IAlgodClient.TealDisassemble(System.Byte())
+  nameWithType: IAlgodClient.TealDisassemble(Byte[])
+  nameWithType.vb: IAlgodClient.TealDisassemble(Byte())
+- uid: AlgoSdk.IAlgodClient.TealDisassemble*
+  name: TealDisassemble
+  href: api/AlgoSdk.IAlgodClient.html#AlgoSdk_IAlgodClient_TealDisassemble_
+  commentId: Overload:AlgoSdk.IAlgodClient.TealDisassemble
+  isSpec: "True"
+  fullName: AlgoSdk.IAlgodClient.TealDisassemble
+  nameWithType: IAlgodClient.TealDisassemble
 - uid: AlgoSdk.IAlgodClient.TealDryrun(DryrunRequest)
   name: TealDryrun(DryrunRequest)
   href: api/AlgoSdk.IAlgodClient.html#AlgoSdk_IAlgodClient_TealDryrun_DryrunRequest_

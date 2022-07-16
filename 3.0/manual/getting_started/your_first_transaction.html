@@ -125,19 +125,16 @@ public class AlgodCheck : MonoBehaviour
 
     public void Start()
     {
-        algod = new AlgodClient(
-            address: &quot;http://localhost:4001&quot;,
-            token: &quot;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&quot;
-        );
+        algod = new AlgodClient(&quot;testnet-algorand.api.purestake.io/ps2&quot;, (&quot;X-API-Key&quot;, &quot;my-secret-key&quot;));
         CheckAlgodStatus().Forget();
     }
 
     public async UniTaskVoid CheckAlgodStatus()
     {
-        var response = await algod.GetHealth();
-        if (response.Error.IsError)
+        var response = await algod.HealthCheck();
+        if (response.Error)
         {
-            Debug.LogError(response.Error.Message);
+            Debug.LogError(response.Error);
         }
         else
         {
@@ -161,19 +158,22 @@ Replace the address with the address of the account you generated earlier.</p>
 <pre><code class="lang-csharp">public async UniTaskVoid CheckBalance()
 {
     var accountAddress = &quot;FLWI6UNTQ6CXTKSHOC7QPHYD2L3JVLIPWKNR5FECHX46VOE3DMY24BJASY&quot;;
-    var (error, accountInfo) = await algod.GetAccountInformation(accountAddress);
+    var (error, accountInfoResponse) = await algod.AccountInformation(accountAddress);
     if (error)
     {
         Debug.LogError(error);
     }
     else
     {
-        Debug.Log($&quot;My account has {accountInfo.Amount / 1_000_000} algos&quot;);
+        MicroAlgos amount = accountInfoResponse.Account.Amount;
+        Debug.Log($&quot;My account has {amount.ToAlgos()} algos&quot;);
     }
 }
 </code></pre><p>Then call it in your <code>Start()</code> method.</p>
 <pre><code class="lang-csharp">public void Start()
 {
+    algod = new AlgodClient(&quot;testnet-algorand.api.purestake.io/ps2&quot;, (&quot;X-API-Key&quot;, &quot;my-secret-key&quot;));
+    CheckAlgodStatus().Forget();
     CheckBalance().Forget();
 }
 </code></pre><p>Your balance should appear in the editor console when you press <strong>Play</strong> again.</p>
@@ -196,12 +196,8 @@ from an account.</p>
     var senderAccount = new Account(senderKey);
 
     // Get the suggested transaction params
-    var (txnParamsError, txnParams) = await algod.GetSuggestedParams();
-    if (txnParamsError)
-    {
-        Debug.LogError(txnParamsError);
-        return;
-    }
+    var (txnParamsError, txnParams) = await algod.TransactionParams();
+    txnParamsError.ThrowIfError();
 
     // Construct and sign the payment transaction
     var paymentTxn = Transaction.Payment(
@@ -214,27 +210,13 @@ from an account.</p>
 
     // Send the transaction
     var (sendTxnError, txid) = await algod.SendTransaction(signedTxn);
-    if (sendTxnError)
-    {
-        Debug.LogError(sendTxnError);
-        return;
-    }
+    sendTxnError.ThrowIfError();
 
     // Wait for the transaction to be confirmed
-    PendingTransaction pending = default;
-    ErrorResponse error = default;
-    while (pending.ConfirmedRound == 0)
-    {
-        (error, pending) = await algod.GetPendingTransaction(txid);
-        if (error)
-        {
-            Debug.LogError(error);
-            return;
-        }
-        await UniTask.Delay(1000);
-    }
+    var (confirmErr, confirmed) = await algod.WaitForConfirmation(txid.TxId);
+    confirmErr.ThrowIfError();
 
-    Debug.Log($&quot;Successfully made payment! Confirmed on round {pending.ConfirmedRound}&quot;);
+    Debug.Log($&quot;Successfully made payment! Confirmed on round {confirmed.ConfirmedRound}&quot;);
 }
 </code></pre><p>To keep things simple, add a new <code>Update()</code> method that will invoke <code>MakePayment</code> whenever the player presses their spacebar.
 Replace the passphrase with the passphrase you generated earlier.</p>
@@ -284,7 +266,7 @@ public class AlgodCheck : MonoBehaviour
 
     public async UniTaskVoid CheckAlgodStatus()
     {
-        var response = await algod.GetHealth();
+        var response = await algod.HealthCheck();
         if (response.Error)
         {
             Debug.LogError(response.Error);
@@ -298,14 +280,15 @@ public class AlgodCheck : MonoBehaviour
     public async UniTaskVoid CheckBalance()
     {
         var accountAddress = &quot;FLWI6UNTQ6CXTKSHOC7QPHYD2L3JVLIPWKNR5FECHX46VOE3DMY24BJASY&quot;;
-        var (error, accountInfo) = await algod.GetAccountInformation(accountAddress);
+        var (error, accountInfoResponse) = await algod.AccountInformation(accountAddress);
         if (error)
         {
             Debug.LogError(error);
         }
         else
         {
-            Debug.Log($&quot;My account has {accountInfo.Amount / 1_000_000} algos&quot;);
+            MicroAlgos amount = accountInfoResponse.Account.Amount;
+            Debug.Log($&quot;My account has {amount.ToAlgos()} algos&quot;);
         }
     }
 
@@ -314,12 +297,8 @@ public class AlgodCheck : MonoBehaviour
         var senderAccount = new Account(senderKey);
 
         // Get the suggested transaction params
-        var (txnParamsError, txnParams) = await algod.GetSuggestedParams();
-        if (txnParamsError)
-        {
-            Debug.LogError(txnParamsError);
-            return;
-        }
+        var (txnParamsError, txnParams) = await algod.TransactionParams();
+        txnParamsError.ThrowIfError();
 
         // Construct and sign the payment transaction
         var paymentTxn = Transaction.Payment(
@@ -332,27 +311,13 @@ public class AlgodCheck : MonoBehaviour
 
         // Send the transaction
         var (sendTxnError, txid) = await algod.SendTransaction(signedTxn);
-        if (sendTxnError)
-        {
-            Debug.LogError(sendTxnError);
-            return;
-        }
+        sendTxnError.ThrowIfError();
 
         // Wait for the transaction to be confirmed
-        PendingTransaction pending = default;
-        ErrorResponse error = default;
-        while (pending.ConfirmedRound == 0)
-        {
-            (error, pending) = await algod.GetPendingTransaction(txid);
-            if (error)
-            {
-                Debug.LogError(error);
-                return;
-            }
-            await UniTask.Delay(1000);
-        }
+        var (confirmErr, confirmed) = await algod.WaitForConfirmation(txid.TxId);
+        confirmErr.ThrowIfError();
 
-        Debug.Log($&quot;Successfully made payment! Confirmed on round {pending.ConfirmedRound}&quot;);
+        Debug.Log($&quot;Successfully made payment! Confirmed on round {confirmed.ConfirmedRound}&quot;);
     }
 }
 </code></pre></article>

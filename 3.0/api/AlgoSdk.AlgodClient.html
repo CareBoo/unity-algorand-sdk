@@ -1400,13 +1400,13 @@ required to create and send transactions.</p>
   
   
   <a id="AlgoSdk_AlgodClient_GetProof_" data-uid="AlgoSdk.AlgodClient.GetProof*"></a>
-  <h4 id="AlgoSdk_AlgodClient_GetProof_System_UInt64_System_String_AlgoSdk_ResponseFormat_" data-uid="AlgoSdk.AlgodClient.GetProof(System.UInt64,System.String,AlgoSdk.ResponseFormat)">GetProof(UInt64, String, ResponseFormat)</h4>
+  <h4 id="AlgoSdk_AlgodClient_GetProof_System_UInt64_System_String_System_String_AlgoSdk_ResponseFormat_" data-uid="AlgoSdk.AlgodClient.GetProof(System.UInt64,System.String,System.String,AlgoSdk.ResponseFormat)">GetProof(UInt64, String, String, ResponseFormat)</h4>
   <div class="markdown level1 summary"><p>Get a Merkle proof for a transaction in a block.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;ProofResponse&gt; GetProof(ulong round, string txid, ResponseFormat format = ResponseFormat.None)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;ProofResponse&gt; GetProof(ulong round, string txid, string hashtype = null, ResponseFormat format = ResponseFormat.None)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1428,6 +1428,16 @@ required to create and send transactions.</p>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">txid</span></td>
         <td><p>The transaction ID for which to generate a proof.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">hashtype</span></td>
+        <td><p>The type of hash function used to create the proof, must be one of: </p>
+<ul>
+<li>sha512_256 </li>
+<li>sha256</li>
+</ul>
 </td>
       </tr>
       <tr>
@@ -2229,13 +2239,13 @@ Or the transaction may have happened sufficiently long ago that the node no long
   
   
   <a id="AlgoSdk_AlgodClient_TealCompile_" data-uid="AlgoSdk.AlgodClient.TealCompile*"></a>
-  <h4 id="AlgoSdk_AlgodClient_TealCompile_System_Byte___" data-uid="AlgoSdk.AlgodClient.TealCompile(System.Byte[])">TealCompile(Byte[])</h4>
+  <h4 id="AlgoSdk_AlgodClient_TealCompile_System_Byte___AlgoSdk_Optional_System_Boolean__" data-uid="AlgoSdk.AlgodClient.TealCompile(System.Byte[],AlgoSdk.Optional{System.Boolean})">TealCompile(Byte[], Optional&lt;Boolean&gt;)</h4>
   <div class="markdown level1 summary"><p>Compile TEAL source code to binary, produce its hash</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;CompileResponse&gt; TealCompile(byte[] source)</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;CompileResponse&gt; TealCompile(byte[] source, Optional&lt;bool&gt; sourcemap = default(Optional&lt;bool&gt;))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2251,6 +2261,12 @@ Or the transaction may have happened sufficiently long ago that the node no long
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
         <td><span class="parametername">source</span></td>
         <td><p>TEAL source code to be compiled</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">sourcemap</span></td>
+        <td><p>When set to <code>true</code>, returns the source map of the program as a JSON. Defaults to <code>false</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -2270,8 +2286,55 @@ Or the transaction may have happened sufficiently long ago that the node no long
       </tr>
     </tbody>
   </table>
-  <h5 id="AlgoSdk_AlgodClient_TealCompile_System_Byte____remarks">Remarks</h5>
+  <h5 id="AlgoSdk_AlgodClient_TealCompile_System_Byte___AlgoSdk_Optional_System_Boolean___remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Given TEAL source code in plain text, return base64 encoded program bytes and base32 SHA512_256 hash of program bytes (Address style). This endpoint is only enabled when a node&apos;s configuration file sets EnableDeveloperAPI to true.</p>
+</div>
+  
+  
+  <a id="AlgoSdk_AlgodClient_TealDisassemble_" data-uid="AlgoSdk.AlgodClient.TealDisassemble*"></a>
+  <h4 id="AlgoSdk_AlgodClient_TealDisassemble_System_Byte___" data-uid="AlgoSdk.AlgodClient.TealDisassemble(System.Byte[])">TealDisassemble(Byte[])</h4>
+  <div class="markdown level1 summary"><p>Disassemble program bytes into the TEAL source code.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;DisassembleResponse&gt; TealDisassemble(byte[] source)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>TEAL program binary to be disassembled</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">DisassembleResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="AlgoSdk_AlgodClient_TealDisassemble_System_Byte____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Given the program bytes, return the TEAL source code in plain text. This endpoint is only enabled when a node&apos;s configuration file sets EnableDeveloperAPI to true.</p>
 </div>
   
   
