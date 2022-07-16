@@ -15,8 +15,12 @@ on:
         description: "version (x.y.z[-channel])"
         required: true
         type: string
-      major_minor:
-        description: "major minor of version (x.y)"
+      major:
+        description: "major of version (major.minor.patch)"
+        required: true
+        type: string
+      minor:
+        description: "minor of version (major.minor.patch)"
         required: true
         type: string
 
@@ -24,10 +28,11 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    if: !inputs.version
     outputs:
       published: ${{ steps.semantic.outputs.new_release_published }}
       version: ${{ steps.semantic.outputs.new_release_version || inputs.version }}
-      major_minor: ${{ steps.semantic.outputs.new_release_major_version }}.${{ steps.semantic.outputs.new_release_minor_version || inputs.major_minor }}
+      major_minor: ${{ steps.semantic.outputs.new_release_major_version || inputs.major }}.${{ steps.semantic.outputs.new_release_minor_version || inputs.minor }}
     steps:
       - uses: actions/checkout@v2
         with:
