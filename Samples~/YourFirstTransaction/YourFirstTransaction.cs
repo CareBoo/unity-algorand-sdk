@@ -145,18 +145,13 @@ public class YourFirstTransaction : MonoBehaviour
         }
 
         // Wait for the transaction to be confirmed
-        var (error, pending) = await algod.PendingTransactionInformation(txid.TxId);
-        while (pending.ConfirmedRound == 0)
+        var (confirmErr, confirmed) = await algod.WaitForConfirmation(txid.TxId);
+        if (confirmErr)
         {
-            (error, pending) = await algod.PendingTransactionInformation(txid.TxId);
-            if (error)
-            {
-                Debug.LogError(error);
-                txnStatus = $"error: {error}";
-                return;
-            }
-            await UniTask.Delay(2000);
+            Debug.LogError(confirmErr);
+            txnStatus = $"error: {confirmErr}";
+            return;
         }
-        txnStatus = $"confirmed on round {pending.ConfirmedRound}";
+        txnStatus = $"confirmed on round {confirmed.ConfirmedRound}";
     }
 }

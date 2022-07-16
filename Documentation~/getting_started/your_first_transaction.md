@@ -64,19 +64,16 @@ public class AlgodCheck : MonoBehaviour
 
     public void Start()
     {
-        algod = new AlgodClient(
-            address: "http://localhost:4001",
-            token: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-        );
+        algod = new AlgodClient("testnet-algorand.api.purestake.io/ps2", ("X-API-Key", "my-secret-key"));
         CheckAlgodStatus().Forget();
     }
 
     public async UniTaskVoid CheckAlgodStatus()
     {
-        var response = await algod.GetHealth();
-        if (response.Error.IsError)
+        var response = await algod.HealthCheck();
+        if (response.Error)
         {
-            Debug.LogError(response.Error.Message);
+            Debug.LogError(response.Error);
         }
         else
         {
@@ -110,14 +107,15 @@ Replace the address with the address of the account you generated earlier.
 public async UniTaskVoid CheckBalance()
 {
     var accountAddress = "FLWI6UNTQ6CXTKSHOC7QPHYD2L3JVLIPWKNR5FECHX46VOE3DMY24BJASY";
-    var (error, accountInfo) = await algod.GetAccountInformation(accountAddress);
+    var (error, accountInfoResponse) = await algod.AccountInformation(accountAddress);
     if (error)
     {
         Debug.LogError(error);
     }
     else
     {
-        Debug.Log($"My account has {accountInfo.Amount / 1_000_000} algos");
+        MicroAlgos amount = accountInfoResponse.WrappedValue.Amount;
+        Debug.Log($"My account has {amount.ToAlgos()} algos");
     }
 }
 ```
@@ -127,6 +125,8 @@ Then call it in your `Start()` method.
 ```csharp
 public void Start()
 {
+    algod = new AlgodClient("testnet-algorand.api.purestake.io/ps2", ("X-API-Key", "my-secret-key"));
+    CheckAlgodStatus().Forget();
     CheckBalance().Forget();
 }
 ```
@@ -156,12 +156,8 @@ public async UniTaskVoid MakePayment(PrivateKey senderKey, Address receiver, ulo
     var senderAccount = new Account(senderKey);
 
     // Get the suggested transaction params
-    var (txnParamsError, txnParams) = await algod.GetSuggestedParams();
-    if (txnParamsError)
-    {
-        Debug.LogError(txnParamsError);
-        return;
-    }
+    var (txnParamsError, txnParams) = await algod.TransactionParams();
+    txnParamsError.ThrowIfError();
 
     // Construct and sign the payment transaction
     var paymentTxn = Transaction.Payment(
@@ -174,27 +170,13 @@ public async UniTaskVoid MakePayment(PrivateKey senderKey, Address receiver, ulo
 
     // Send the transaction
     var (sendTxnError, txid) = await algod.SendTransaction(signedTxn);
-    if (sendTxnError)
-    {
-        Debug.LogError(sendTxnError);
-        return;
-    }
+    sendTxnError.ThrowIfError();
 
     // Wait for the transaction to be confirmed
-    PendingTransaction pending = default;
-    ErrorResponse error = default;
-    while (pending.ConfirmedRound == 0)
-    {
-        (error, pending) = await algod.GetPendingTransaction(txid);
-        if (error)
-        {
-            Debug.LogError(error);
-            return;
-        }
-        await UniTask.Delay(1000);
-    }
+    var (confirmErr, confirmed) = await algod.WaitForConfirmation(txid.TxId);
+    confirmErr.ThrowIfError();
 
-    Debug.Log($"Successfully made payment! Confirmed on round {pending.ConfirmedRound}");
+    Debug.Log($"Successfully made payment! Confirmed on round {confirmed.ConfirmedRound}");
 }
 ```
 
@@ -254,7 +236,7 @@ public class AlgodCheck : MonoBehaviour
 
     public async UniTaskVoid CheckAlgodStatus()
     {
-        var response = await algod.GetHealth();
+        var response = await algod.HealthCheck();
         if (response.Error)
         {
             Debug.LogError(response.Error);
@@ -268,14 +250,15 @@ public class AlgodCheck : MonoBehaviour
     public async UniTaskVoid CheckBalance()
     {
         var accountAddress = "FLWI6UNTQ6CXTKSHOC7QPHYD2L3JVLIPWKNR5FECHX46VOE3DMY24BJASY";
-        var (error, accountInfo) = await algod.GetAccountInformation(accountAddress);
+        var (error, accountInfoResponse) = await algod.AccountInformation(accountAddress);
         if (error)
         {
             Debug.LogError(error);
         }
         else
         {
-            Debug.Log($"My account has {accountInfo.Amount / 1_000_000} algos");
+            MicroAlgos amount = accountInfoResponse.WrappedValue.Amount;
+            Debug.Log($"My account has {amount.ToAlgos()} algos");
         }
     }
 
@@ -284,12 +267,8 @@ public class AlgodCheck : MonoBehaviour
         var senderAccount = new Account(senderKey);
 
         // Get the suggested transaction params
-        var (txnParamsError, txnParams) = await algod.GetSuggestedParams();
-        if (txnParamsError)
-        {
-            Debug.LogError(txnParamsError);
-            return;
-        }
+        var (txnParamsError, txnParams) = await algod.TransactionParams();
+        txnParamsError.ThrowIfError();
 
         // Construct and sign the payment transaction
         var paymentTxn = Transaction.Payment(
@@ -302,27 +281,13 @@ public class AlgodCheck : MonoBehaviour
 
         // Send the transaction
         var (sendTxnError, txid) = await algod.SendTransaction(signedTxn);
-        if (sendTxnError)
-        {
-            Debug.LogError(sendTxnError);
-            return;
-        }
+        sendTxnError.ThrowIfError();
 
         // Wait for the transaction to be confirmed
-        PendingTransaction pending = default;
-        ErrorResponse error = default;
-        while (pending.ConfirmedRound == 0)
-        {
-            (error, pending) = await algod.GetPendingTransaction(txid);
-            if (error)
-            {
-                Debug.LogError(error);
-                return;
-            }
-            await UniTask.Delay(1000);
-        }
+        var (confirmErr, confirmed) = await algod.WaitForConfirmation(txid.TxId);
+        confirmErr.ThrowIfError();
 
-        Debug.Log($"Successfully made payment! Confirmed on round {pending.ConfirmedRound}");
+        Debug.Log($"Successfully made payment! Confirmed on round {confirmed.ConfirmedRound}");
     }
 }
 ```
