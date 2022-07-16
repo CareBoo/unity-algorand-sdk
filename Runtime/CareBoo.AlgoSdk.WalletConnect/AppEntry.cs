@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Networking;
 
 namespace AlgoSdk.WalletConnect
 {
@@ -91,6 +92,7 @@ namespace AlgoSdk.WalletConnect
 
         public string FormatUrlForDeepLinkIos(string url)
         {
+            url = UnityWebRequest.EscapeURL(url);
             if (!string.IsNullOrEmpty(Mobile.Universal))
             {
                 return $"{Mobile.Universal}/wc?uri={url}";

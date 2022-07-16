@@ -9,7 +9,7 @@ public class AppEntryTest
     [Test]
     public void PeraWalletAppUrlShouldBeCorrect()
     {
-        var expected = "algorand-wc://wc?uri=wc:4015f93f-b88d-48fc-8bfe-8b063cc325b6@1?bridge=https%3A%2F%2F9.bridge.walletconnect.org&key=b0576e0880e17f8400bfff92d4caaf2158cccc0f493dcf455ba76d448c9b5655&algorand=true";
+        var expected = "algorand-wc://wc?uri=wc%3A4015f93f-b88d-48fc-8bfe-8b063cc325b6%401%3Fbridge%3Dhttps%253A%252F%252F9.bridge.walletconnect.org%26key%3Db0576e0880e17f8400bfff92d4caaf2158cccc0f493dcf455ba76d448c9b5655%26algorand%3Dtrue";
         var handshake = new HandshakeUrl(
             "4015f93f-b88d-48fc-8bfe-8b063cc325b6",
             "1",
@@ -18,6 +18,6 @@ public class AppEntryTest
             );
         var app = WalletRegistry.PeraWallet;
         var actual = app.FormatUrlForDeepLinkIos(handshake.Url);
-        Assert.AreEqual(expected, actual);
+        StringAssert.AreEqualIgnoringCase(expected, actual);
     }
 }
