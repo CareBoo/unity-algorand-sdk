@@ -13,7 +13,7 @@ namespace AlgoSdk.WalletConnect
         /// An optional message describing the group of transactions
         /// in the <see cref="AlgoSignTxnsRequest"/>.
         /// </summary>
-        [AlgoApiField("message", null)]
+        [AlgoApiField("message")]
         public string Message;
 
         public bool Equals(SignTxnsOpts other)

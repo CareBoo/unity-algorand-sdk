@@ -1,0 +1,271 @@
+{
+  "name": "demo-abi",
+  "methods": [
+    {
+      "name": "add",
+      "args": [
+        {
+          "type": "uint64",
+          "name": "a"
+        },
+        {
+          "type": "uint64",
+          "name": "b"
+        }
+      ],
+      "returns": {
+        "type": "uint64"
+      },
+      "desc": "sum a and b, return the result"
+    },
+    {
+      "name": "sub",
+      "args": [
+        {
+          "type": "uint64",
+          "name": "a"
+        },
+        {
+          "type": "uint64",
+          "name": "b"
+        }
+      ],
+      "returns": {
+        "type": "uint64"
+      },
+      "desc": "subtract b from a, return the result"
+    },
+    {
+      "name": "mul",
+      "args": [
+        {
+          "type": "uint64",
+          "name": "a"
+        },
+        {
+          "type": "uint64",
+          "name": "b"
+        }
+      ],
+      "returns": {
+        "type": "uint64"
+      },
+      "desc": "multiply a and b, return the result"
+    },
+    {
+      "name": "div",
+      "args": [
+        {
+          "type": "uint64",
+          "name": "a"
+        },
+        {
+          "type": "uint64",
+          "name": "b"
+        }
+      ],
+      "returns": {
+        "type": "uint64"
+      },
+      "desc": "divide a by b, return the result"
+    },
+    {
+      "name": "mod",
+      "args": [
+        {
+          "type": "uint64",
+          "name": "a"
+        },
+        {
+          "type": "uint64",
+          "name": "b"
+        }
+      ],
+      "returns": {
+        "type": "uint64"
+      },
+      "desc": "modulo of a by b, return the result"
+    },
+    {
+      "name": "qrem",
+      "args": [
+        {
+          "type": "uint64",
+          "name": "a"
+        },
+        {
+          "type": "uint64",
+          "name": "b"
+        }
+      ],
+      "returns": {
+        "type": "(uint64,uint64)"
+      },
+      "desc": "divide a by b, and modulo of a by b, return the results as a tuple"
+    },
+    {
+      "name": "reverse",
+      "args": [
+        {
+          "type": "string",
+          "name": "a"
+        }
+      ],
+      "returns": {
+        "type": "string"
+      },
+      "desc": "reverse the string a, return the result"
+    },
+    {
+      "name": "concat_strings",
+      "args": [
+        {
+          "type": "string[]",
+          "name": "b"
+        }
+      ],
+      "returns": {
+        "type": "string"
+      },
+      "desc": "Accept a list of strings, return the result of concating them all"
+    },
+    {
+      "name": "sum_array",
+      "args": [
+        {
+          "type": "uint64[]",
+          "name": "a"
+        }
+      ],
+      "returns": {
+        "type": "uint64"
+      },
+      "desc": "Accept a list of uint64, return the result of summing them all"
+    },
+    {
+      "name": "manyargs",
+      "args": [
+        {
+          "type": "uint64",
+          "name": "a"
+        },
+        {
+          "type": "uint64",
+          "name": "b"
+        },
+        {
+          "type": "uint64",
+          "name": "c"
+        },
+        {
+          "type": "uint64",
+          "name": "d"
+        },
+        {
+          "type": "uint64",
+          "name": "e"
+        },
+        {
+          "type": "uint64",
+          "name": "f"
+        },
+        {
+          "type": "uint64",
+          "name": "g"
+        },
+        {
+          "type": "uint64",
+          "name": "h"
+        },
+        {
+          "type": "uint64",
+          "name": "i"
+        },
+        {
+          "type": "uint64",
+          "name": "j"
+        },
+        {
+          "type": "uint64",
+          "name": "k"
+        },
+        {
+          "type": "uint64",
+          "name": "l"
+        },
+        {
+          "type": "uint64",
+          "name": "m"
+        },
+        {
+          "type": "uint64",
+          "name": "n"
+        },
+        {
+          "type": "uint64",
+          "name": "o"
+        },
+        {
+          "type": "uint64",
+          "name": "p"
+        },
+        {
+          "type": "uint64",
+          "name": "q"
+        },
+        {
+          "type": "uint64",
+          "name": "r"
+        },
+        {
+          "type": "uint64",
+          "name": "s"
+        },
+        {
+          "type": "uint64",
+          "name": "t"
+        }
+      ],
+      "returns": {
+        "type": "uint64"
+      },
+      "desc": "Lots of args here, internally they get tuple'd after the 15th arg, but atc and router handles this for us"
+    },
+    {
+      "name": "min_bal",
+      "args": [
+        {
+          "type": "account",
+          "name": "acct"
+        }
+      ],
+      "returns": {
+        "type": "uint64"
+      },
+      "desc": "Return the minimum balance for the passed account"
+    },
+    {
+      "name": "txntest",
+      "args": [
+        {
+          "type": "uint64",
+          "name": "amt"
+        },
+        {
+          "type": "pay",
+          "name": "ptxn"
+        },
+        {
+          "type": "uint64",
+          "name": "fee"
+        }
+      ],
+      "returns": {
+        "type": "uint64"
+      },
+      "desc": "Useless method that just demonstrates specifying a transaction in the method signature"
+    }
+  ],
+  "desc": null,
+  "networks": {}
+}

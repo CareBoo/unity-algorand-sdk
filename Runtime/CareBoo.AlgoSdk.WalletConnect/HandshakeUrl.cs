@@ -24,7 +24,8 @@ namespace AlgoSdk.WalletConnect
             Hex key
         )
         {
-            url = $"wc:{topic}@{version}?bridge={UnityWebRequest.EscapeURL(bridgeUrl)}&key={key}";
+            var escapedBridgeUrl = UnityWebRequest.EscapeURL(bridgeUrl);
+            url = $"wc:{topic}@{version}?bridge={escapedBridgeUrl}&key={key}&algorand=true";
         }
 
         public Texture2D ToQrCodeTexture()

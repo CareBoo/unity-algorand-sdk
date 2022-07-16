@@ -3,7 +3,7 @@ using UnityEditor;
 namespace AlgoSdk.Editor
 {
     [CustomPropertyDrawer(typeof(PrivateKey))]
-    public class PrivateKeyDrawer : BytesTextDrawer<PrivateKey>
+    public class PrivateKeyDrawer : FixedBytesTextDrawer<PrivateKey>
     {
         protected override PrivateKey GetByteArray(string s)
         {

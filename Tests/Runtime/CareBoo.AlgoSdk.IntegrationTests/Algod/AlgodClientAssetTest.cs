@@ -11,7 +11,7 @@ public class AlgodClientAssetTest : AlgodClientTestFixture
     [UnityTest]
     public IEnumerator CreatingConfiguringThenDeletingNftShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var txnParams = (await AlgoApiClientSettings.Algod.GetSuggestedParams()).Payload;
+        var txnParams = (await AlgoApiClientSettings.Algod.TransactionParams()).Payload;
         var createAssetParams = new AssetParams
         {
             Total = 1,
@@ -25,7 +25,7 @@ public class AlgodClientAssetTest : AlgodClientTestFixture
         var bytes = AlgoApiSerializer.SerializeMessagePack(createAssetTxn);
         Debug.Log(System.Convert.ToBase64String(bytes));
         var signedCreateAssetTxn = await Sign(createAssetTxn);
-        var createResponse = await AlgoApiClientSettings.Algod.SendTransaction(signedCreateAssetTxn);
+        var createResponse = await AlgoApiClientSettings.Algod.RawTransaction(signedCreateAssetTxn);
         AssertOkay(createResponse.Error);
         var txid = createResponse.Payload.TxId;
         var assetId = (await WaitForTransaction(txid)).AssetIndex;
@@ -34,15 +34,15 @@ public class AlgodClientAssetTest : AlgodClientTestFixture
             Freeze = PublicKey,
             Manager = PublicKey,
         };
-        var configureAssetTxn = Transaction.AssetConfigure(PublicKey, txnParams, assetId, configureAssetParams);
+        var configureAssetTxn = Transaction.AssetConfigure(PublicKey, txnParams, assetId.Value, configureAssetParams);
         var signedConfigureAssetTxn = await Sign(configureAssetTxn);
-        var configureResponse = await AlgoApiClientSettings.Algod.SendTransaction(signedConfigureAssetTxn);
+        var configureResponse = await AlgoApiClientSettings.Algod.RawTransaction(signedConfigureAssetTxn);
         AssertOkay(configureResponse.Error);
         await WaitForTransaction(configureResponse.Payload.TxId);
-        var assetInfoResponse = await AlgoApiClientSettings.Algod.GetAsset(assetId);
-        var deleteAssetTxn = Transaction.AssetDelete(PublicKey, txnParams, assetId);
+        var assetInfoResponse = await AlgoApiClientSettings.Algod.GetAssetByID(assetId);
+        var deleteAssetTxn = Transaction.AssetDelete(PublicKey, txnParams, assetId.Value);
         var signedDeleteAssetTxn = await Sign(deleteAssetTxn);
-        var deleteResponse = await AlgoApiClientSettings.Algod.SendTransaction(signedDeleteAssetTxn);
+        var deleteResponse = await AlgoApiClientSettings.Algod.RawTransaction(signedDeleteAssetTxn);
         AssertOkay(deleteResponse.Error);
         await WaitForTransaction(deleteResponse.Payload.TxId);
     });

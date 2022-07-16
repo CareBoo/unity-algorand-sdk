@@ -7,16 +7,16 @@ namespace AlgoSdk.WalletConnect
     public partial struct ClientMeta
         : IEquatable<ClientMeta>
     {
-        [AlgoApiField("description", null)]
+        [AlgoApiField("description")]
         public string Description;
 
-        [AlgoApiField("url", null)]
+        [AlgoApiField("url")]
         public string Url;
 
-        [AlgoApiField("icons", null)]
+        [AlgoApiField("icons")]
         public string[] IconUrls;
 
-        [AlgoApiField("name", null)]
+        [AlgoApiField("name")]
         public string Name;
 
         public bool Equals(ClientMeta other)

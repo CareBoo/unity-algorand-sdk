@@ -6,7 +6,7 @@ namespace AlgoSdk.Json
     {
         public JsonReadError ReadString(out string value)
         {
-            var text = new NativeText(Allocator.Temp);
+            var text = new NativeText(Allocator.Persistent);
             try
             {
                 var result = ReadString(ref text);

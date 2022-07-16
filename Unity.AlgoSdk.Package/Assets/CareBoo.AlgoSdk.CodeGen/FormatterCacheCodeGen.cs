@@ -4,15 +4,17 @@ using System.IO;
 using System.Linq;
 using Microsoft.CSharp;
 using UnityEditor;
+using UnityEditor.Compilation;
 using UnityEngine;
 
 namespace AlgoSdk.Editor.CodeGen
 {
     public class FormatterCacheCodeGen
     {
-        const string OutputFileName = "AlgoApiFormatters.gen.cs";
+        const string OutputFileName = "Formatters.gen.cs";
+        const string FolderName = "Formatters.gen";
 
-        [MenuItem("AlgoSdk/GenerateFormatterCache")]
+        [MenuItem("AlgoSdk/Generate Formatter Cache")]
         public static void GenerateFormatterCache()
         {
             var createdFiles = TypeCache.GetTypesWithAttribute(typeof(AlgoApiObjectAttribute))
@@ -40,9 +42,9 @@ namespace AlgoSdk.Editor.CodeGen
             try
             {
                 var sourcePath = compileUnit.SourceInfo.AbsoluteFilePath;
-                var sourceDir = Path.GetDirectoryName(sourcePath);
+                var formatterDir = GetFormatterDir(compileUnit);
                 var filenameWithoutExtension = Path.GetFileNameWithoutExtension(sourcePath);
-                var outputPath = Path.Combine(sourceDir, $"{filenameWithoutExtension}.{OutputFileName}");
+                var outputPath = Path.Combine(formatterDir, $"{filenameWithoutExtension}.{OutputFileName}");
                 var codeProvider = new CSharpCodeProvider();
                 using var stream = new StreamWriter(outputPath, append: false);
                 var tw = new IndentedTextWriter(stream);
@@ -56,6 +58,18 @@ namespace AlgoSdk.Editor.CodeGen
                 Debug.LogError($"got error while exporting type {compileUnit.Type}: {ex}");
                 return null;
             }
+        }
+
+        static string GetFormatterDir(AlgoApiCompileUnit compileUnit)
+        {
+            var assemblyPath = CompilationPipeline.GetAssemblyDefinitionFilePathFromScriptPath(compileUnit.SourceInfo.AssetPath);
+            var assemblyDir = Path.GetDirectoryName(assemblyPath);
+            var formatterDir = Path.Combine(assemblyDir, FolderName);
+            if (!AssetDatabase.IsValidFolder(formatterDir))
+            {
+                AssetDatabase.CreateFolder(assemblyDir, FolderName);
+            }
+            return Path.Combine(Application.dataPath, "..", formatterDir);
         }
     }
 }

@@ -25,7 +25,7 @@ public class Ed25519Test
     [Test]
     public void GenerateKeyPairGivesValidKeys()
     {
-        using var msg = GetMessageBytes(Message, Allocator.Temp);
+        using var msg = GetMessageBytes(Message, Allocator.Persistent);
         foreach (var (seedStr, expectedPk, expectedSig) in ValidResults)
         {
             var seed = ByteArray.FromBase64<Seed>(seedStr);
@@ -40,7 +40,7 @@ public class Ed25519Test
     [Test]
     public void SigningMessageThenVerifyingReturnsTrue()
     {
-        using var msg = GetMessageBytes($"some_random_message{UnityEngine.Random.Range(0, int.MaxValue)}", Allocator.Temp);
+        using var msg = GetMessageBytes($"some_random_message{UnityEngine.Random.Range(0, int.MaxValue)}", Allocator.Persistent);
         var seed = AlgoSdk.Crypto.Random.Bytes<Seed>();
         using var kp = seed.ToKeyPair();
         var sig = kp.SecretKey.Sign(msg);

@@ -2,6 +2,7 @@ using System;
 using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
+using AlgoSdk.Experimental.Abi;
 
 namespace AlgoSdk.Editor.CodeGen
 {
@@ -9,7 +10,8 @@ namespace AlgoSdk.Editor.CodeGen
     {
         static readonly Dictionary<Type, Type> equalityComparerLookup = new Dictionary<Type, Type>()
         {
-            {typeof(string), typeof(StringComparer)}
+            {typeof(string), typeof(StringComparer)},
+            {typeof(IAbiType), typeof(IAbiTypeComparer)}
         };
 
         CodeExpression expression;
@@ -42,8 +44,7 @@ namespace AlgoSdk.Editor.CodeGen
             var memberType = field.MemberType;
             var expressions = new List<CodeExpression>()
             {
-                new CodePrimitiveExpression(field.Attribute.JsonKeyName),
-                new CodePrimitiveExpression(field.Attribute.MessagePackKeyName),
+                new CodePrimitiveExpression(field.Attribute.Name),
                 new CodeSnippetExpression($"({type.FullNameExpression()} x) => x.{memberName}"),
                 new CodeSnippetExpression($"(ref {type.FullNameExpression()} x, {memberType.FullNameExpression()} value) => x.{memberName} = value"),
             };
@@ -55,7 +56,6 @@ namespace AlgoSdk.Editor.CodeGen
                     "Instance");
                 expressions.Add(equalityComparer);
             }
-            expressions.Add(new CodePrimitiveExpression(field.Attribute.ReadOnly));
             return expressions.ToArray();
         }
 

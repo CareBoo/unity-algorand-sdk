@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Text;
 using AlgoSdk;
+using AlgoSdk.Algod;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
 using Unity.Collections;
@@ -30,7 +31,7 @@ public abstract class AlgoApiClientTestFixture
         Assert.IsFalse(error.IsError, error.Message);
     }
 
-    protected static async UniTask<PendingTransaction> WaitForTransaction(TransactionId txid)
+    protected static async UniTask<PendingTransactionResponse> WaitForTransaction(TransactionId txid)
     {
         async UniTask<bool> WaitMs(int ms)
         {
@@ -38,11 +39,11 @@ public abstract class AlgoApiClientTestFixture
             return true;
         }
 
-        PendingTransaction pending = default;
+        PendingTransactionResponse pending = default;
         ErrorResponse error = default;
         do
         {
-            (error, pending) = await AlgoApiClientSettings.Algod.GetPendingTransaction(txid);
+            (error, pending) = await AlgoApiClientSettings.Algod.PendingTransactionInformation(txid.ToString());
             AssertOkay(error);
         }
         while (pending.ConfirmedRound == 0 && await WaitMs(1000));

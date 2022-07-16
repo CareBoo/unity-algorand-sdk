@@ -10,16 +10,18 @@ public class RawTransactionTest
     [Test]
     public void SerializedTransactionShouldEqualDeserializedTransaction()
     {
-        var transaction = new Transaction();
-        transaction.Fee = 32;
-        transaction.FirstValidRound = 1009;
-        transaction.GenesisHash = AlgoSdk.Crypto.Random.Bytes<Sha512_256_Hash>();
-        transaction.LastValidRound = 10021;
-        transaction.Sender = AlgoSdk.Crypto.Random.Bytes<Address>();
-        transaction.TransactionType = TransactionType.Payment;
-        transaction.Receiver = AlgoSdk.Crypto.Random.Bytes<Address>();
-        transaction.Amount = 40000;
-        using var bytes = AlgoApiSerializer.SerializeMessagePack(transaction, Allocator.Temp);
+        var transaction = new Transaction
+        {
+            Fee = 32,
+            FirstValidRound = 1009,
+            GenesisHash = AlgoSdk.Crypto.Random.Bytes<Sha512_256_Hash>(),
+            LastValidRound = 10021,
+            Sender = AlgoSdk.Crypto.Random.Bytes<Address>(),
+            TransactionType = TransactionType.Payment,
+            Receiver = AlgoSdk.Crypto.Random.Bytes<Address>(),
+            Amount = 40000
+        };
+        using var bytes = AlgoApiSerializer.SerializeMessagePack(transaction, Allocator.Persistent);
         Debug.Log(System.Convert.ToBase64String(bytes.ToArray()));
         var deserialized = AlgoApiSerializer.DeserializeMessagePack<Transaction>(bytes.AsArray());
         Assert.IsTrue(transaction.Equals(deserialized));

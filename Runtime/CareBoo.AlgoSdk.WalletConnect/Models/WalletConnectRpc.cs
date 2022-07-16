@@ -6,6 +6,8 @@ namespace AlgoSdk.WalletConnect
     {
         const string jsonRpcVersion = "2.0";
 
+        public const string SessionUpdateMethod = "wc_sessionUpdate";
+
         /// <summary>
         /// Utility function for building a <see cref="JsonRpcRequest"/> used to start a new WalletConnect session.
         /// </summary>
@@ -48,12 +50,24 @@ namespace AlgoSdk.WalletConnect
         /// <summary>
         /// Gets a random, valid JsonRpcRequest id.
         /// </summary>
-        /// <returns>a <see cref="ulong"/> in the range [1, <see cref="int.MaxValue"/>]</returns>
-        public static ulong GetRandomId() => (ulong)UnityEngine.Random.Range(1, int.MaxValue);
+        /// <returns>a <see cref="ulong"/> in the range [1, <see cref="uint.MaxValue"/>]</returns>
+        public static ulong GetRandomId()
+        {
+            ulong x = 0;
+            while (x == 0)
+                x = AlgoSdk.Crypto.Random.Bytes<uint>();
+            return x;
+        }
 
         public static class Algorand
         {
             public const int ChainId = 4160;
+
+            public const int MainNetChainId = 416001;
+
+            public const int TestNetChainId = 416002;
+
+            public const int BetaNetChainId = 416003;
 
             /// <summary>
             /// Builds a <see cref="JsonRpcRequest"/> used for signing transactions.

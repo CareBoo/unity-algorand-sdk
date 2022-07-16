@@ -85,7 +85,7 @@
       {
         "src": "../Documentation~",
         "files": [
-          "*.md"
+          "**/*.md"
         ],
         "exclude": [
           "TableOfContents.md"
@@ -117,7 +117,7 @@
       }
     ],
     "sitemap": {
-      "baseUrl": "https://careboo.github.io/unity-algorand-sdk/2.3.0",
+      "baseUrl": "https://careboo.github.io/unity-algorand-sdk/3.0",
       "changefreq": "monthly",
       "fileOptions": {
         "api/*": {

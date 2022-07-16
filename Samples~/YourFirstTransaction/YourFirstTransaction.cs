@@ -11,6 +11,7 @@ public class YourFirstTransaction : MonoBehaviour
     string algodHealth;
 
     string indexerHealth;
+
     ulong balance;
 
     Account account;
@@ -86,21 +87,21 @@ public class YourFirstTransaction : MonoBehaviour
 
     public async UniTaskVoid CheckAlgodStatus()
     {
-        var response = await algod.GetHealth();
+        var response = await algod.HealthCheck();
         if (response.Error) algodHealth = response.Error;
         else algodHealth = "Connected";
     }
 
     public async UniTaskVoid CheckIndexerStatus()
     {
-        var response = await indexer.GetHealth();
+        var response = await indexer.MakeHealthCheck();
         if (response.Error) indexerHealth = response.Error;
         else indexerHealth = "Connected";
     }
 
     public async UniTaskVoid CheckBalance()
     {
-        var (err, resp) = await indexer.GetAccount(account.Address);
+        var (err, resp) = await indexer.LookupAccountByID(account.Address);
         if (err)
         {
             balance = 0;
@@ -117,7 +118,7 @@ public class YourFirstTransaction : MonoBehaviour
         txnStatus = "awaiting confirmation...";
 
         // Get the suggested transaction params
-        var (txnParamsError, txnParams) = await algod.GetSuggestedParams();
+        var (txnParamsError, txnParams) = await algod.TransactionParams();
         if (txnParamsError)
         {
             Debug.LogError(txnParamsError);
@@ -144,19 +145,13 @@ public class YourFirstTransaction : MonoBehaviour
         }
 
         // Wait for the transaction to be confirmed
-        PendingTransaction pending = default;
-        ErrorResponse error = default;
-        while (pending.ConfirmedRound == 0)
+        var (confirmErr, confirmed) = await algod.WaitForConfirmation(txid.TxId);
+        if (confirmErr)
         {
-            (error, pending) = await algod.GetPendingTransaction(txid);
-            if (error)
-            {
-                Debug.LogError(error);
-                txnStatus = $"error: {error}";
-                return;
-            }
-            await UniTask.Delay(2000);
+            Debug.LogError(confirmErr);
+            txnStatus = $"error: {confirmErr}";
+            return;
         }
-        txnStatus = $"confirmed on round {pending.ConfirmedRound}";
+        txnStatus = $"confirmed on round {confirmed.ConfirmedRound}";
     }
 }

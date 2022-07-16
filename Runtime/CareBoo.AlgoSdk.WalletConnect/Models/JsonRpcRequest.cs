@@ -15,7 +15,7 @@ namespace AlgoSdk.WalletConnect
         /// <summary>
         /// The id of this request. Used to keep track of the correct response.
         /// </summary>
-        ulong Id { get; set; }
+        Optional<ulong> Id { get; set; }
 
         /// <summary>
         /// The JsonRpc version of this request.
@@ -34,19 +34,19 @@ namespace AlgoSdk.WalletConnect
         , IEquatable<JsonRpcRequest>
     {
         /// <inheritdoc />
-        [AlgoApiField("id", null)]
-        public ulong Id { get; set; }
+        [AlgoApiField("id")]
+        public Optional<ulong> Id { get; set; }
 
         /// <inheritdoc />
-        [AlgoApiField("jsonrpc", null)]
+        [AlgoApiField("jsonrpc")]
         public string JsonRpc { get; set; }
 
         /// <inheritdoc />
-        [AlgoApiField("method", null)]
+        [AlgoApiField("method")]
         public string Method { get; set; }
 
         /// <inheritdoc />
-        [AlgoApiField("params", null)]
+        [AlgoApiField("params")]
         public AlgoApiObject[] Params { get; set; }
 
         public bool Equals(JsonRpcRequest other)

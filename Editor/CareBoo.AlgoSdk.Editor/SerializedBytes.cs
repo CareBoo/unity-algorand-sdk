@@ -1,14 +1,14 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 using UnityEditor;
 
 namespace AlgoSdk.Editor
 {
-    public class SerializedBytes
+    public abstract class SerializedBytes
     {
-        static readonly Regex byteRegex = new Regex(@"byte\d\d\d\d", RegexOptions.Compiled);
-        SerializedObject serializedObject;
-        string rootPath;
+        protected SerializedObject serializedObject;
+        protected string rootPath;
 
         public SerializedBytes(SerializedProperty root)
         {
@@ -16,23 +16,76 @@ namespace AlgoSdk.Editor
             rootPath = root.propertyPath;
         }
 
-        public List<byte> GetBytes()
+        public SerializedProperty Property => serializedObject.FindProperty(rootPath);
+
+        public abstract IEnumerable<SerializedProperty> ByteProperties { get; }
+
+        public List<byte> GetBytes() => ByteProperties
+            .Select(prop => (byte)prop.intValue)
+            .ToList()
+            ;
+
+        public abstract void SetBytes(List<byte> bytes);
+    }
+
+    public class SerializedFixedBytes : SerializedBytes
+    {
+        static readonly Regex byteRegex = new Regex(@"byte\d\d\d\d", RegexOptions.Compiled);
+
+        public SerializedFixedBytes(SerializedProperty root) : base(root) { }
+
+        public override IEnumerable<SerializedProperty> ByteProperties
         {
-            var bytes = new List<byte>();
-            var root = serializedObject.FindProperty(rootPath);
-            foreach (SerializedProperty child in root)
-                if (byteRegex.IsMatch(child.name) && child.propertyType == SerializedPropertyType.Integer)
-                    bytes.Add((byte)child.intValue);
-            return bytes;
+            get
+            {
+                var property = Property.Copy();
+                var currentDepth = property.depth;
+                while (property.Next(true) && property.depth > currentDepth)
+                {
+                    if (byteRegex.IsMatch(property.name) && property.propertyType == SerializedPropertyType.Integer)
+                        yield return property.Copy();
+                }
+            }
         }
 
-        public void SetBytes(List<byte> bytes)
+        public override void SetBytes(List<byte> bytes)
         {
-            var i = 0;
-            var root = serializedObject.FindProperty(rootPath);
-            foreach (SerializedProperty child in root)
-                if (byteRegex.IsMatch(child.name) && child.propertyType == SerializedPropertyType.Integer)
-                    child.intValue = (int)bytes[i++];
+            var props = ByteProperties.ToList();
+            foreach (var prop in props)
+            {
+                if (prop.propertyType != SerializedPropertyType.Integer)
+                    UnityEngine.Debug.Log(prop.propertyPath);
+            }
+            for (var i = 0; i < bytes.Count; i++)
+                props[i].intValue = (int)bytes[i];
+        }
+    }
+
+    public class SerializedVariableBytes : SerializedBytes
+    {
+        readonly string byteArrayName;
+
+        public SerializedVariableBytes(SerializedProperty root, string byteArrayName) : base(root)
+        {
+            this.byteArrayName = byteArrayName;
+        }
+
+        public override IEnumerable<SerializedProperty> ByteProperties
+        {
+            get
+            {
+                var arrayProp = Property.FindPropertyRelative(byteArrayName);
+                for (var i = 0; i < arrayProp.arraySize; i++)
+                    yield return arrayProp.GetArrayElementAtIndex(i);
+            }
+        }
+
+        public override void SetBytes(List<byte> bytes)
+        {
+            var arrayProp = Property.FindPropertyRelative(byteArrayName);
+            arrayProp.arraySize = bytes.Count;
+            for (var i = 0; i < bytes.Count; i++)
+                arrayProp.GetArrayElementAtIndex(i).intValue = bytes[i];
         }
     }
 }

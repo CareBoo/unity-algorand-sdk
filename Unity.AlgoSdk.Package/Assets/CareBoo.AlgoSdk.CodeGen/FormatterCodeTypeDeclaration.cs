@@ -14,13 +14,25 @@ namespace AlgoSdk.Editor.CodeGen
 
             Name = type.NameExpression();
 
-            IsClass = type.IsClass;
+            if (type.Name == "IAbiType")
+            {
+                UnityEngine.Debug.Log($"IsClass: {type.IsClass}");
+                UnityEngine.Debug.Log($"IsInterface: {type.IsInterface}");
+            }
+            IsClass = type.IsClass && !type.IsInterface;
             IsEnum = false;
             IsStruct = type.IsValueType;
+            IsInterface = type.IsInterface;
             IsPartial = true;
 
+            var initFormattersCodeMemberMethod = new InitFormattersCodeMemberMethod(type);
+            if (!initFormattersCodeMemberMethod.HasAddedFormatters)
+            {
+                IsValid = false;
+                return;
+            }
+            Members.Add(initFormattersCodeMemberMethod);
             Members.Add(new FormatterStaticFieldInitializerExpression(type));
-            Members.Add(new InitFormattersCodeMemberMethod(type));
 
             var nestedTypeDeclarations = type.GetNestedTypes()
                 .Select(t => new FormatterCodeTypeDeclaration(t))

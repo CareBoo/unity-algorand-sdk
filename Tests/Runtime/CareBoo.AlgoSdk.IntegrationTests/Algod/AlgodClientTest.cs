@@ -1,5 +1,7 @@
 using System.Collections;
+using System.Text;
 using AlgoSdk;
+using AlgoSdk.Algod;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
 using UnityEngine.TestTools;
@@ -10,14 +12,14 @@ public class AlgodClientTest : AlgodClientTestFixture
     [UnityTest]
     public IEnumerator GetGenesisInformationShouldReturnOk() => UniTask.ToCoroutine(async () =>
     {
-        var response = await AlgoApiClientSettings.Algod.GetGenesisInformation();
+        var response = await AlgoApiClientSettings.Algod.GetGenesis();
         AssertOkay(response.Error);
     });
 
     [UnityTest]
     public IEnumerator GetSwaggerSpecShouldReturnOk() => UniTask.ToCoroutine(async () =>
     {
-        var response = await AlgoApiClientSettings.Algod.GetSwaggerSpec();
+        var response = await AlgoApiClientSettings.Algod.SwaggerJSON();
         AssertOkay(response.Error);
     });
 
@@ -27,10 +29,10 @@ public class AlgodClientTest : AlgodClientTestFixture
         var addresses = await GetAddresses();
         foreach (var expected in addresses)
         {
-            var response = await AlgoApiClientSettings.Algod.GetAccountInformation(expected);
-            var account = response.Payload;
-            var actual = account.Address;
-            Assert.AreEqual(expected, actual);
+            var response = await AlgoApiClientSettings.Algod.AccountInformation(expected);
+            var accountResponse = response.Payload;
+            var actual = accountResponse.WrappedValue.Address;
+            Assert.AreEqual(expected.ToString(), actual);
         }
     });
 
@@ -45,12 +47,12 @@ public class AlgodClientTest : AlgodClientTestFixture
     [UnityTest]
     public IEnumerator GetBlockShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        TransactionIdResponse txId = await MakePaymentTransaction(100000);
-        var pendingTxn = new PendingTransaction();
+        PostTransactionsResponse txIdResponse = await MakePaymentTransaction(100000);
+        var pendingTxn = new PendingTransactionResponse();
         while (pendingTxn.ConfirmedRound <= 0)
         {
             await UniTask.Delay(100);
-            var pendingResponse = await AlgoApiClientSettings.Algod.GetPendingTransaction(txId);
+            var pendingResponse = await AlgoApiClientSettings.Algod.PendingTransactionInformation(txIdResponse.TxId);
             pendingTxn = pendingResponse.Payload;
         }
         var round = pendingTxn.ConfirmedRound;
@@ -59,41 +61,32 @@ public class AlgodClientTest : AlgodClientTestFixture
     });
 
     [UnityTest]
-    [Ignore("Register Participation keys isn't supported yet in the algod sandbox... :(")]
-    public IEnumerator RegisterParticipationKeysShouldReturnOkay() => UniTask.ToCoroutine(async () =>
-    {
-        var addresses = await GetAddresses();
-        var response = await AlgoApiClientSettings.Algod.RegisterParticipationKeys(addresses[0].ToString());
-        AssertOkay(response.Error);
-    });
-
-    [UnityTest]
     public IEnumerator GetCurrentStatusShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var response = await AlgoApiClientSettings.Algod.GetCurrentStatus();
+        var response = await AlgoApiClientSettings.Algod.GetStatus();
         AssertOkay(response.Error);
     });
 
     [UnityTest]
     public IEnumerator GetVersionsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var response = await AlgoApiClientSettings.Algod.GetVersions();
+        var response = await AlgoApiClientSettings.Algod.GetVersion();
         AssertOkay(response.Error);
     });
 
     [UnityTest]
     public IEnumerator GetTransactionParamsShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var response = await AlgoApiClientSettings.Algod.GetSuggestedParams();
+        var response = await AlgoApiClientSettings.Algod.TransactionParams();
         AssertOkay(response.Error);
     });
 
     [UnityTest]
     public IEnumerator GetMerkleProofShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        TransactionIdResponse txid = await MakePaymentTransaction(100000);
-        var pendingTxn = await WaitForTransaction(txid);
-        var response = await AlgoApiClientSettings.Algod.GetMerkleProof(pendingTxn.ConfirmedRound, txid);
+        PostTransactionsResponse txid = await MakePaymentTransaction(100000);
+        var pendingTxn = await WaitForTransaction(txid.TxId);
+        var response = await AlgoApiClientSettings.Algod.GetProof(pendingTxn.ConfirmedRound, txid.TxId);
         AssertOkay(response.Error);
     });
 
@@ -101,37 +94,61 @@ public class AlgodClientTest : AlgodClientTestFixture
     public IEnumerator TransferFundsShouldReturnTransactionId() => UniTask.ToCoroutine(async () =>
     {
         var txId = await MakePaymentTransaction(100000);
-        var pendingResponse = await AlgoApiClientSettings.Algod.GetPendingTransaction(txId);
+        var pendingResponse = await AlgoApiClientSettings.Algod.PendingTransactionInformation(txId.TxId);
         AssertOkay(pendingResponse.Error);
     });
 
     [UnityTest]
     public IEnumerator TealCompileShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var response = await AlgoApiClientSettings.Algod.TealCompile(TealCodeCases.AtomicSwap.Src);
+        var response = await AlgoApiClientSettings.Algod.TealCompile(Encoding.UTF8.GetBytes(TealCodeCases.AtomicSwap.Src));
         AssertOkay(response.Error);
-        Assert.AreEqual(TealCodeCases.AtomicSwap.CompiledResult, response.Payload.CompiledBytesBase64);
-        Assert.AreEqual(TealCodeCases.AtomicSwap.CompiledHash, response.Payload.Hash.ToString());
+        Assert.AreEqual(TealCodeCases.AtomicSwap.CompiledResult, response.Payload.Result);
+        Assert.AreEqual(TealCodeCases.AtomicSwap.CompiledHash, response.Payload.Hash);
     });
 
     [UnityTest]
     public IEnumerator SendTransactionGroupShouldReturnOkay() => UniTask.ToCoroutine(async () =>
     {
-        var (_, txnParams) = await AlgoApiClientSettings.Algod.GetSuggestedParams();
+        var (_, txnParams) = await AlgoApiClientSettings.Algod.TransactionParams();
         var receiver = AlgoSdk.Crypto.Random.Bytes<Address>();
 
-        var txn1 = Transaction.Payment(PublicKey, txnParams, receiver, 100_000L);
-        var txn2 = Transaction.Payment(PublicKey, txnParams, receiver, 200_000L);
-        var groupId = TransactionGroup.Of(txn1, txn2).GetId();
-        txn1.Group = groupId;
-        txn2.Group = groupId;
+        var buildGroup = Transaction.Atomic()
+            .AddTxn(Transaction.Payment(kmdAccount.Address, txnParams, receiver, 100_000L))
+            .AddTxn(Transaction.Payment(kmdAccount.Address, txnParams, receiver, 200_000L))
+            .Build();
+        for (var i = 0; i < buildGroup.Txns.Length; i++)
+            Assert.False(buildGroup.Txns[i].Group.Equals(default));
 
-        var signed1 = await Sign(txn1);
-        var signed2 = await Sign(txn2);
+        var signingGroup = buildGroup.SignWithAsync(kmdAccount);
+        Assert.AreEqual(signingGroup.SignedTxnIndices, TxnIndices.Select(0, 1));
 
-        var (err, txid) = await AlgoApiClientSettings.Algod.SendTransactions(signed1, signed2);
+        var signedGroup = await signingGroup.FinishSigningAsync();
+
+        var (err, txid) = await AlgoApiClientSettings.Algod.RawTransaction(signedGroup);
         AssertOkay(err);
-        var pending = await WaitForTransaction(txid);
-        UnityEngine.Debug.Log($"pending tx count: {pending.InnerTransactions?.Length ?? 0}");
+        var (confirmErr, confirmed) = await AlgoApiClientSettings.Algod.WaitForConfirmation(txid.TxId);
+        AssertOkay(confirmErr);
+    });
+
+    [UnityTest]
+    public IEnumerator SendTransactionGroupWithOneTransactionShouldReturnOkay() => UniTask.ToCoroutine(async () =>
+    {
+        var (_, txnParams) = await AlgoApiClientSettings.Algod.TransactionParams();
+        var receiver = AlgoSdk.Crypto.Random.Bytes<Address>();
+
+        var buildGroup = Transaction.Atomic()
+            .AddTxn(Transaction.Payment(kmdAccount.Address, txnParams, receiver, 100_000L))
+            .Build();
+
+        var signingGroup = buildGroup.SignWithAsync(kmdAccount);
+        Assert.AreEqual(signingGroup.SignedTxnIndices, TxnIndices.Select(0));
+
+        var signedGroup = await signingGroup.FinishSigningAsync();
+
+        var (err, txid) = await AlgoApiClientSettings.Algod.RawTransaction(signedGroup);
+        AssertOkay(err);
+        var (confirmErr, confirmed) = await AlgoApiClientSettings.Algod.WaitForConfirmation(txid.TxId);
+        AssertOkay(confirmErr);
     });
 }

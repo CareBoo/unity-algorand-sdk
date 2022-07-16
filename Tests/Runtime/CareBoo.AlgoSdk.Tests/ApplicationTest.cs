@@ -9,7 +9,7 @@ public class ApplicationTest
     public void ApplicationGetAddressFromIdShouldBeValid()
     {
         Address expected = "WCS6TVPJRBSARHLN2326LRU5BYVJZUKI2VJ53CAWKYYHDE455ZGKANWMGM";
-        var actual = AlgoSdk.Application.ComputeAddressFromId(1);
+        var actual = new AppIndex(1).GetAppAddress();
         Assert.AreEqual(expected, actual);
         Debug.Log(actual.ToString());
     }

@@ -10,19 +10,19 @@ namespace AlgoSdk.WalletConnect
         : IJsonRpcError
         , IEquatable<SignTxnsError>
     {
-        [AlgoApiField("message", null)]
+        [AlgoApiField("message")]
         public string Message { get; set; }
 
         /// <summary>
         /// The integer error code of the error.
         /// </summary>
-        [AlgoApiField("code", null)]
+        [AlgoApiField("code")]
         public int Code { get; set; }
 
         /// <summary>
         /// Any other useful information about the error.
         /// </summary>
-        [AlgoApiField("data", null)]
+        [AlgoApiField("data")]
         public AlgoApiObject Data { get; set; }
 
         public override string ToString()

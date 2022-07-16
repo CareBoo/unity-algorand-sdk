@@ -1,5 +1,4 @@
 using System;
-using UnityEngine.Events;
 
 namespace AlgoSdk.WalletConnect
 {
@@ -9,17 +8,17 @@ namespace AlgoSdk.WalletConnect
         /// <summary>
         /// Occurs when handshake succeeds and wallet is connected.
         /// </summary>
-        UnityEvent<TSession> OnSessionConnect { get; }
+        event Action<TSession> OnSessionConnect;
 
         /// <summary>
         /// Occurs when wallet no longer approves connection.
         /// </summary>
-        UnityEvent<string> OnSessionDisconnect { get; }
+        event Action<string> OnSessionDisconnect;
 
         /// <summary>
         /// Occurs when wallet updates addresses or metadata information.
         /// </summary>
-        UnityEvent<WalletConnectSessionData> OnSessionUpdate { get; }
+        event Action<WalletConnectSessionData> OnSessionUpdate;
     }
 
     public interface IWalletConnectSessionData

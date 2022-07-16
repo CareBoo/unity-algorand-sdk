@@ -6,7 +6,7 @@ namespace AlgoSdk.MessagePack
     {
         public void ReadString(out string s)
         {
-            var text = new NativeText(Allocator.Temp);
+            var text = new NativeText(Allocator.Persistent);
             try
             {
                 ReadString(ref text);

@@ -28,6 +28,24 @@ Integrate your game with [Algorand](https://www.algorand.com/), a Pure Proof-of-
 Create and sign Algorand transactions, use Algorand's [REST APIs](https://developer.algorand.org/docs/rest-apis/restendpoints/),
 and connect to any Algorand wallet supporting [WalletConnect](https://developer.algorand.org/docs/get-details/walletconnect/).
 
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Requirements](#requirements)
+- [Common Usages](#common-usages)
+  - [Make a payment transaction](#make-a-payment-transaction)
+    - [Sign the transaction with an account](#sign-the-transaction-with-an-account)
+    - [Sign the transaction with `kmd`](#sign-the-transaction-with-kmd)
+    - [Sign the transaction with WalletConnect](#sign-the-transaction-with-walletconnect)
+    - [Send the signed transaction](#send-the-signed-transaction)
+  - [Initiate a WalletConnect session and generate a QR Code](#initiate-a-walletconnect-session-and-generate-a-qr-code)
+- [Installation](#installation)
+  - [Open UPM](#open-upm)
+  - [Manually Adding UPM Scopes](#manually-adding-upm-scopes)
+  - [Unity Asset Store](#unity-asset-store)
+- [Getting Started](#getting-started)
+  - [Documentation Site](#documentation-site)
+
 ## Requirements
 
 This package supports the following build targets and Unity versions:
@@ -35,7 +53,7 @@ This package supports the following build targets and Unity versions:
 | Unity Version |      Windows       |       Mac OS       |       Linux        |      Android       |        iOS         |       WebGL        |
 | :-----------: | :----------------: | :----------------: | :----------------: | :----------------: | :----------------: | :----------------: |
 |    2020.3     | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|    2021.2     | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|    2021.3     | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ## Common Usages
 
@@ -131,13 +149,8 @@ The SDK is also available [in the Unity Asset Store](https://u3d.as/2GBr).
 
 ## Getting Started
 
-### Documentation
+Read [Getting Started](Documentation~/getting_started.md) to learn the basic workflows for developing on Algorand.
 
-The documentation built for a specific version is hosted at:
+### Documentation Site
 
-```
-https://careboo.github.io/unity-algorand-sdk/{version}/
-```
-
-Read [Your First Transaction](Documentation~/your_first_transaction.md) to learn the basics on creating, signing, and sending transactions.
-The [WalletConnect guide](Documentation~/walletconnect.md) teaches about how to implement WalletConnect in your application.
+Docs for this version were generated at https://careboo.github.io/unity-algorand-sdk/3.0.

@@ -28,7 +28,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        unityVersion: [2020.3.30f1, 2021.2.13f1]
+        unityVersion: [2020.3.36f1, 2021.3.6f1]
         targetPlatform:
           # - mac-mono
           # - windows-mono
@@ -69,7 +69,7 @@ jobs:
           customParameters: -batchMode -burst-disable-compilation -enableCodeCoverage -coverageOptions generateAdditionalMetrics;enableCyclomaticComplexity;assemblyFilters:${{ steps.assemblyFilters.outputs.result }}
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           useHostNetwork: true
-          customImage: unityci/editor:${{ matrix.unityVersion }}-${{ matrix.targetPlatform }}-0
+          customImage: unityci/editor:${{ matrix.unityVersion }}-${{ matrix.targetPlatform }}-1
           checkName: Test Results ${{ matrix.unityVersion }} ${{ matrix.targetPlatform }}
       - name: Upload Test Results Artifacts
         uses: actions/upload-artifact@v1

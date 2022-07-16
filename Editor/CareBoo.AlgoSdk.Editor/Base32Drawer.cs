@@ -1,12 +1,12 @@
 using System.Collections.Generic;
-using UnityEditor;
 using System.Linq;
 using Unity.Collections;
+using UnityEditor;
 
 namespace AlgoSdk.Editor
 {
     [CustomPropertyDrawer(typeof(TransactionId))]
-    public class Base32Drawer : BytesTextDrawer
+    public class Base32Drawer : FixedBytesTextDrawer
     {
         protected override List<byte> GetBytes(string s)
         {
@@ -15,7 +15,7 @@ namespace AlgoSdk.Editor
 
         protected override string GetString(List<byte> bytes)
         {
-            var t = new NativeText(Base32Encoding.ToString(bytes.ToArray()), Allocator.Temp);
+            var t = new NativeText(Base32Encoding.ToString(bytes.ToArray()), Allocator.Persistent);
             try
             {
                 Base32Encoding.TrimPadding(ref t);

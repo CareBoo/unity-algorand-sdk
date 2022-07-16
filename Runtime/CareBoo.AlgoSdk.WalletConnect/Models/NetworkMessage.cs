@@ -8,16 +8,16 @@ namespace AlgoSdk.WalletConnect
     public partial struct NetworkMessage
         : IEquatable<NetworkMessage>
     {
-        [AlgoApiField("topic", null)]
+        [AlgoApiField("topic")]
         public string Topic;
 
-        [AlgoApiField("type", null)]
+        [AlgoApiField("type")]
         public string Type;
 
-        [AlgoApiField("payload", null)]
+        [AlgoApiField("payload")]
         public string Payload;
 
-        [AlgoApiField("silent", null)]
+        [AlgoApiField("silent")]
         public Optional<bool> IsSilent;
 
         public bool Equals(NetworkMessage other)
@@ -51,7 +51,7 @@ namespace AlgoSdk.WalletConnect
 
         public static NetworkMessage PublishToTopicEncrypted<T>(T payload, Hex encryptionKey, string topic)
         {
-            using var payloadJson = AlgoApiSerializer.SerializeJson(payload, Allocator.Temp);
+            using var payloadJson = AlgoApiSerializer.SerializeJson(payload, Allocator.Persistent);
             var encryptedPayload = AesCipher.EncryptWithKey(encryptionKey, payloadJson.ToByteArray());
             return PublishToTopic(encryptedPayload, topic);
         }

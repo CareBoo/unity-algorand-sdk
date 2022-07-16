@@ -9,6 +9,7 @@ public class JsonReaderTest
 @"{
     ""string"": ""world\"""",
     ""int"": -100,
+    ""decimalInt"": 1.12345e+6,
     ""float"": 1.345,
     ""arr"": [
         true,
@@ -22,7 +23,7 @@ public class JsonReaderTest
     {
         using var jsonText = new NativeText(
             validJson,
-            Allocator.Temp);
+            Allocator.Persistent);
         var reader = new JsonReader(jsonText);
         Assert.AreEqual(JsonToken.ObjectBegin, reader.Read());
         Assert.AreEqual(JsonToken.String, reader.Peek());
@@ -34,6 +35,10 @@ public class JsonReaderTest
         Assert.AreEqual(JsonToken.Number, reader.Peek());
         reader.ReadNumber(out int intVal);
         Assert.AreEqual(-100, intVal);
+        Assert.AreEqual(JsonToken.String, reader.Peek());
+        AssertReadStringEqual(ref reader, "decimalInt");
+        reader.ReadNumber(out uint decIntVal);
+        Assert.AreEqual(1123450, decIntVal);
         Assert.AreEqual(JsonToken.String, reader.Peek());
         AssertReadStringEqual(ref reader, "float");
         Assert.AreEqual(JsonToken.Number, reader.Peek());

@@ -33,7 +33,7 @@ public class SignedTransactionTest
             amount: 1000000
         );
         var signedTxn = account.SignTxn(txn);
-        using var serialized = AlgoApiSerializer.SerializeMessagePack(signedTxn, Allocator.Temp);
+        using var serialized = AlgoApiSerializer.SerializeMessagePack(signedTxn, Allocator.Persistent);
         UnityEngine.Debug.Log($"Serialized bytes: {System.Convert.ToBase64String(serialized.ToArray())}");
         var deserialized = AlgoApiSerializer.Deserialize<SignedTxn<PaymentTxn>>(serialized.AsArray(), ContentType.MessagePack);
         Assert.IsTrue(signedTxn.Equals(deserialized));
