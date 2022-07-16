@@ -1,0 +1,404 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Creating ASAs in Editor | Unity Algorand SDK </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Creating ASAs in Editor | Unity Algorand SDK ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../resources/favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../resources/logo_50.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="creating-asas-in-editor">Creating ASAs in Editor</h1>
+
+<p>This guide walks you through creating an ASA in the editor with your own scripts.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>To create an ASA, we&#39;ll need</p>
+<ol>
+<li>An Account to sign the <code>AssetCreateTxn</code>.</li>
+<li>An <code>algod</code> service that we can use to broadcast the create transaction to the network.</li>
+</ol>
+<p>Since we&#39;ll be creating the asset in the editor, we&#39;ll need to be able to save the account information in the editor. We&#39;re going to use <code>ScriptableObject</code>s to store this data.</p>
+<div class="TIP"><h5>Tip</h5><p>See Unity&#39;s <a href="https://unity.com/how-to/architect-game-code-scriptable-objects">blog post on <code>ScriptableObject</code>s</a> to learn more about this feature.</p>
+</div>
+<h3 id="creating-the-accountobject">Creating the <code>AccountObject</code></h3>
+<p>We&#39;ll create an <code>AccountObject</code> class that inherits from <code>ScriptableObject</code>. This will store our <code>PrivateKey</code> used for signing.</p>
+<div class="IMPORTANT"><h5>Important</h5><p>Do <strong>NOT</strong> store a sensitive <code>PrivateKey</code> inside your project source. We&#39;re only storing the <code>PrivateKey</code> in this demo to keep it simple. In production, you will want to use a secure Algorand wallet to sign your transactions. This SDK currently supports KMD and WalletConnect connections. Please see the <code>Editor Wallet Connection</code> sample to see examples on how to connect your wallets in the editor.</p>
+</div>
+<p>Add the following, <code>AccountObject.cs</code>, to your project:</p>
+<pre><code class="lang-csharp">using System;
+using AlgoSdk;
+using UnityEngine;
+
+[CreateAssetMenu]
+public class AccountObject
+    : ScriptableObject
+    , IAccount
+    , ISigner
+    , ISerializationCallbackReceiver
+{
+    [SerializeField]
+    Mnemonic mnemonic;
+
+    [SerializeField]
+    Address address;
+
+    Account account;
+
+    public Address Address =&gt; account.Address;
+
+    public SignedTxn&lt;T&gt; SignTxn&lt;T&gt;(T txn)
+        where T : ITransaction, IEquatable&lt;T&gt; =&gt; account.SignTxn(txn);
+
+    public SignedTxn&lt;T&gt;[] SignTxns&lt;T&gt;(T[] txns, TxnIndices txnsToSign)
+        where T : ITransaction, IEquatable&lt;T&gt; =&gt; account.SignTxns(txns, txnsToSign);
+
+    void ISerializationCallbackReceiver.OnBeforeSerialize()
+    {
+        var (privateKey, publicKey) = account;
+        address = publicKey;
+        mnemonic = privateKey.ToMnemonic();
+    }
+
+    void ISerializationCallbackReceiver.OnAfterDeserialize()
+    {
+        account = new Account(mnemonic.ToPrivateKey());
+    }
+}
+</code></pre><p>This script wraps the <code>Account</code> class into a <code>ScriptableObject</code> that we can use to store its data in the editor. We use a <code>Mnemonic</code> to store the <code>PrivateKey</code> because it&#39;s serializable by the Unity Editor. After the <code>AccountObject</code> is deserialized, Unity regenerates the <code>account</code> field from the <code>mnemonic</code>.</p>
+<div class="NOTE"><h5>Note</h5><p><code>Account</code> could have been made serializable in the Unity Editor. However, we have chosen not to make it serializable to avoid storing <code>PrivateKey</code>s in the editor. Do not store <code>PrivateKey</code> or <code>Mnemonic</code> outside of a Wallet that you trust.</p>
+</div>
+<p>Let&#39;s go ahead and generate a new account that will be our <code>Creator</code> for our ASA. Right click in the project window and select <code>Create &gt; Account Object</code>.</p>
+<p><img src="../../resources/images/select_create_account_object.png" alt="Create Account Object"></p>
+<p>This will create a new asset in your project. Let&#39;s name it <code>AssetCreator</code>. It&#39;s <code>mnemonic</code> is currently <code>abandon abandon abandon [...]</code> because that is the zero-value <code>PrivateKey</code>. Let&#39;s add a method to this object&#39;s <code>ContextMenu</code> which should let us generate a new account. Add the following method to the <code>AccountObject.cs</code> script you wrote earlier:</p>
+<pre><code class="lang-csharp">[ContextMenu(nameof(GenerateNewAccount))]
+public void GenerateNewAccount()
+{
+    account = Account.GenerateAccount();
+    Debug.Log($&quot;Generated account with address: {account.Address}&quot;);
+}
+</code></pre><p>This method, when invoked, will generate a new, random account, then it will log the account address to the console. To invoke it in the editor, we&#39;ve added a <code>[ContextMenu(...)]</code> attribute. Let&#39;s go back to our <code>AssetCreator</code>, click on the <code>...</code> icon to open the context menu, and select <code>GenerateNewAccount</code>.</p>
+<p><img src="../../resources/images/select_generate_new_account.png" alt="Generate New Account"></p>
+<p>Your <code>mnemonic</code> and <code>address</code> should now be populated in the editor, and you should see a message in your Console window. Great! Now that our account is created, we can fund it in the test net.</p>
+<ol>
+<li>Copy the address in <code>AssetCreator</code>.</li>
+<li>Go to the TestNet <a href="https://bank.testnet.algorand.network">Algorand dispenser</a>.</li>
+<li>Paste in your address and select &quot;Dispense&quot;.</li>
+</ol>
+<p>Your account should now be funded to create Algorand Standard Assets. You can check the status of your account by looking at your account status on a <a href="https://testnet.algoexplorer.io">TestNet Algorand Block Explorer</a>.</p>
+<h3 id="creating-the-algodclientobject">Creating the <code>AlgodClientObject</code></h3>
+<p>Similar to the <code>AccountObject</code>, let&#39;s create an <code>AlgodClientObject</code> that inherits from <code>ScriptableObject</code> and stores our client information. Since <code>AlgodClient</code> is already serializable, this is a pretty simple script. Add the following script, <code>AlgodClientObject.cs</code> to your project:</p>
+<pre><code class="lang-csharp">using AlgoSdk;
+using UnityEngine;
+
+[CreateAssetMenu]
+public class AlgodClientObject
+    : ScriptableObject
+{
+    public AlgodClient Client;
+    public AlgorandNetwork Network;
+}
+</code></pre><p>Right click in the project hierarchy, and select <code>Create/Algod Client Object</code>, then name the file <code>TestNetAlgoExplorerAlgod</code>. We&#39;re going to use the AlgoExplorer TestNet <code>algod</code> service. This service has most endpoints disabled, but it&#39;s free to use and has the transaction endpoints enabled which is good for our usecase. Set the <code>Client/Address</code> field to the AlgoExplorer TestNet <code>algod</code> service address at <a href="https://node.testnet.algoexplorerapi.io">https://node.testnet.algoexplorerapi.io</a>. Set the <code>Network</code> field to <code>Test Net</code>. It should look like this:</p>
+<p><img src="../../resources/images/testnet_algoexplorer_algod.png" alt="TestNetAlgoExplorerAlgod"></p>
+<div class="IMPORTANT"><h5>Important</h5><p>When using an Algorand node in production, it&#39;s recommended to consider using multiple nodes or your own node in case of a service outtage. Algo Explorer, while convenient, should not be relied upon by every Dapp.</p>
+</div>
+<h2 id="creating-the-algorand-standard-asset-asa">Creating the Algorand Standard Asset (ASA)</h2>
+<p>We&#39;re not done creating <code>ScriptableObject</code>s just yet. Let&#39;s create a <code>ScriptableObject</code> that will store the state of our ASA. Create an <code>AssetObject.cs</code> script and add it to your project:</p>
+<pre><code class="lang-csharp">using AlgoSdk;
+using UnityEngine;
+
+[CreateAssetMenu]
+public class AssetObject : ScriptableObject
+{
+    public AssetIndex Index;
+    public AlgorandNetwork Network;
+    public AssetParams Params;
+}
+</code></pre><p>Create an instance of this asset then name it <code>GameToken</code>. You should see a <code>Params</code> field. Expand it, then set the following values for the asset params:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Decimals</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>Game Token</code></td>
+</tr>
+<tr>
+<td>Total</td>
+<td><code>100000</code></td>
+</tr>
+<tr>
+<td>Unit Name</td>
+<td><code>GT</code></td>
+</tr>
+</tbody>
+</table>
+<p>Your asset should look like this:</p>
+<p><img src="../../resources/images/game_token_params.png" alt="GameTokenParams"></p>
+<div class="TIP"><h5>Tip</h5><p>Hovering your mouse over the field labels in the Inspector will show a tooltip that explains what the field is used for. Try it out by hovering your mouse over <code>Clawback</code>.</p>
+</div>
+<p>We&#39;ve got a <code>ScriptableObject</code> that can be used to store our ASA information, but it hasn&#39;t been created on the TestNet yet. Let&#39;s add an editor script that will create this ASA on the testnet.</p>
+<p>Make a new folder called <code>Editor</code>, and add the following script to it (at <code>Assets/Editor/AssetCreateWindow.cs</code>). Copy the following code into the file:</p>
+<pre><code class="lang-csharp">using System;
+using AlgoSdk;
+using Cysharp.Threading.Tasks;
+using UnityEditor;
+using UnityEditor.UIElements;
+using UnityEngine;
+using UnityEngine.UIElements;
+
+public class AssetCreateWindow : EditorWindow
+{
+    [SerializeField]
+    AssetObject asset;
+
+    [SerializeField]
+    AccountObject creatorAccount;
+
+    [SerializeField]
+    AlgodClientObject algod;
+
+    public static void Show(AssetObject asset)
+    {
+        var window = GetWindow&lt;AssetCreateWindow&gt;(&quot;Create ASA&quot;);
+        window.asset = asset;
+    }
+
+    void CreateGUI()
+    {
+        var root = rootVisualElement;
+
+        var assetField = new PropertyField { bindingPath = nameof(asset) };
+        assetField.SetEnabled(false);
+        root.Add(assetField);
+        root.Add(new PropertyField { bindingPath = nameof(creatorAccount) });
+        root.Add(new PropertyField { bindingPath = nameof(algod) });
+        root.Add(new Button(CreateAsa) { text = &quot;Create&quot; });
+
+        root.Bind(new SerializedObject(this));
+    }
+
+    void CreateAsa()
+    {
+        Debug.Log(&quot;Creating ASA...&quot;);
+    }
+}
+</code></pre><p>This script creates an <code>EditorWindow</code> that we can use to create the asset. We&#39;ll use <code>AssetCreateWindow.Show</code> to show the window to the user. The <code>CreateGUI</code> method is there to define the GUI controls in the editor. We have the three fields:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>asset</code></td>
+<td>The ASA we want to create. (Read Only)</td>
+</tr>
+<tr>
+<td><code>creatorAccount</code></td>
+<td>The account we want to use to create the ASA.</td>
+</tr>
+<tr>
+<td><code>algod</code></td>
+<td>The algod service that will broadcast our transaction.</td>
+</tr>
+</tbody>
+</table>
+<p>And we have a <code>Button</code> that will trigger the <code>CreateAsa</code> method when pressed.</p>
+<p>Let&#39;s add a button to our <code>AssetObject</code> inspector that will show this window if the asset hasn&#39;t been created yet. Add another script to the <code>Editor</code> folder, this time <code>AssetObjectEditor.cs</code>:</p>
+<pre><code class="lang-csharp">using UnityEditor;
+using UnityEngine;
+
+[CustomEditor(typeof(AssetObject))]
+public class AssetObjectEditor : UnityEditor.Editor
+{
+    public override void OnInspectorGUI()
+    {
+        base.OnInspectorGUI();
+
+        var assetObject = (AssetObject)serializedObject.targetObject;
+        if (assetObject.Index == 0)
+        {
+            EditorGUILayout.Space();
+            if (GUILayout.Button(&quot;Create Asset&quot;))
+            {
+                AssetCreateWindow.Show(assetObject);
+            }
+        }
+    }
+}
+</code></pre><p>This script is very simple. It overrides the default inspector, and adds a <code>Create Asset</code> button if the asset has no asset index (i.e. it is not created yet). When the <code>GUILayout.Button</code> is clicked, we show the <code>AssetCreateWindow</code> to the user, passing in the <code>assetObject</code> reference. Try it out! Open your <code>GameToken</code> asset and click the <code>Create Asset</code> button. You should see a new window pop up that shows our previously defined properties. However, when you select <code>Create</code>, the asset isn&#39;t actually created. Let&#39;s go ahead and implement the <code>CreateAsa</code> method in the <code>AssetCreateWindow</code>.</p>
+<p>Since transactions are asynchronous by nature, let&#39;s use an <code>async</code> method to handle the asset lifetime. <code>CreateAsa</code> will call this method and let it run in the background while it handles creating the asset:</p>
+<pre><code class="lang-csharp">void CreateAsa()
+{
+    CreateAsaAsync().Forget();
+}
+
+async UniTaskVoid CreateAsaAsync()
+{
+    if (!asset)
+        throw new ArgumentNullException(nameof(asset));
+    if (!creatorAccount)
+        throw new ArgumentNullException(nameof(creatorAccount));
+    if (!algod)
+        throw new ArgumentNullException(nameof(algod));
+
+    // check algod health
+    var healthResponse = await algod.Client.HealthCheck();
+    if (healthResponse.Error)
+        throw new Exception($&quot;Algod health check failed: {healthResponse.Error}&quot;);
+
+    // get txn params
+    var (txnParamsErr, txnParams) = await algod.Client.TransactionParams();
+    if (txnParamsErr)
+        throw new Exception(txnParamsErr);
+
+    // construct and sign the transaction
+    var txn = Transaction.AssetCreate(
+        sender: creatorAccount.Address,
+        txnParams: txnParams,
+        assetParams: asset.Params
+    );
+    var signedTxn = creatorAccount.SignTxn(txn);
+
+    // send the transaction
+    var (submitTxnErr, txnId) = await algod.Client.SendTransaction(signedTxn);
+    if (submitTxnErr)
+        throw new Exception(submitTxnErr);
+    Debug.Log($&quot;Submitted txn with id: {txnId.TxId}&quot;);
+
+    // wait for confirmation
+    var (txnConfirmErr, confirmedTxn) = await algod.Client.WaitForConfirmation(txnId.TxId);
+    if (txnConfirmErr)
+        throw new Exception(txnConfirmErr);
+
+    // Apply index and network to the ASA
+    var serializedObject = new SerializedObject(asset);
+    serializedObject.Update();
+    asset.Index = confirmedTxn.AssetIndex.Value;
+    asset.Network = algod.Network;
+    serializedObject.ApplyModifiedPropertiesWithoutUndo();
+    Debug.Log(&quot;Asset Created!&quot;);
+
+    // close the window now that the asset is created.
+    Close();
+}
+</code></pre><p>Go ahead and open that window back up by clicking on the <code>Create Asset</code> button. Add your <code>AssetCreator</code> account to the <code>Creator Account</code> field, and add <code>TestNetAlgoExplorerAlgod</code> to the <code>Algod</code> field. Click the <code>Connect</code> button and wait patiently for ~5-6 seconds. TYou should see that the transaction was submitted in the editor console, followed by a confirmation that the asset was created. The window will close automatically, and if you expand the <code>Index</code> field in your <code>GameToken</code> asset, you&#39;ll see that it was updated with a number. You can see your asset on the blockchain by searching this asset index on the <a href="https://testnet.algoexplorer.io">AlgoExplorer TestNet Block Explorer</a>.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/CareBoo/unity-algorand-sdk/blob/main/Documentation~/algorand_standard_assets/creating_asas_in_editor.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
