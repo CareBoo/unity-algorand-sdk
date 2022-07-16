@@ -114,7 +114,7 @@ public async UniTaskVoid CheckBalance()
     }
     else
     {
-        MicroAlgos amount = accountInfoResponse.WrappedValue.Amount;
+        MicroAlgos amount = accountInfoResponse.Account.Amount;
         Debug.Log($"My account has {amount.ToAlgos()} algos");
     }
 }
@@ -257,7 +257,7 @@ public class AlgodCheck : MonoBehaviour
         }
         else
         {
-            MicroAlgos amount = accountInfoResponse.WrappedValue.Amount;
+            MicroAlgos amount = accountInfoResponse.Account.Amount;
             Debug.Log($"My account has {amount.ToAlgos()} algos");
         }
     }
