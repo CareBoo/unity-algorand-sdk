@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [3.0.0-pre.14](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.13...v3.0.0-pre.14) (2022-07-16)
+
+
+### Features
+
+* **algod:** add `Account` property to `Algod.AccountResponse` ([416685b](https://github.com/CareBoo/unity-algorand-sdk/commit/416685b2dc1bdd08c3a7b54eb1c495f5d27f9488))
+* **algod:** add latest algod client features ([8873de7](https://github.com/CareBoo/unity-algorand-sdk/commit/8873de74d90e176b300e10d1efba119c90b62269))
+
 # [3.0.0-pre.13](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.12...v3.0.0-pre.13) (2022-07-16)
 
 
