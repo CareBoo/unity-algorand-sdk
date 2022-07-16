@@ -34,11 +34,11 @@ var dappMeta = new ClientMeta
 var session = new AlgorandWalletConnectSession(dappMeta);
 await session.Connect();
 // session is in no connection status
-Debug.Assert(session.ConnectionStatus == SessionStatus.NoConnection);
+Debug.Assert(session.ConnectionStatus == SessionStatus.NoWalletConnected);
 
 var handshake = session.RequestWalletConnection();
 // session should now be in connecting status
-Debug.Assert(session.ConnectionStatus == SessionStatus.RequestingConnection);
+Debug.Assert(session.ConnectionStatus == SessionStatus.RequestingWalletConnection);
 
 // show the user a QR Code
 Texture2D qrCode = handshake.ToQrCodeTexture();
@@ -48,7 +48,7 @@ WalletRegistry.PeraWallet.LaunchForConnect(handshake);
 // 2. Wait for user to approve the connection
 await session.WaitForWalletApproval();
 // session is now connected
-Debug.Assert(session.ConnectionStatus == SessionStatus.Connected);
+Debug.Assert(session.ConnectionStatus == SessionStatus.WalletConnected);
 
 // 3. Send transactions to sign
 var someTxnToSign = Transaction.Payment(...);
