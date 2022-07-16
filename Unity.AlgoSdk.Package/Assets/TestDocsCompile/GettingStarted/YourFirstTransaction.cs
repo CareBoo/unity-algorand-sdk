@@ -2,13 +2,6 @@ using AlgoSdk;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-public static class YourFirstTransaction
-{
-    public static async void Main()
-    {
-
-    }
-}
 
 public class AlgodCheck : MonoBehaviour
 {
@@ -59,7 +52,7 @@ public class AlgodCheck : MonoBehaviour
         }
         else
         {
-            MicroAlgos amount = accountInfoResponse.WrappedValue.Amount;
+            MicroAlgos amount = accountInfoResponse.Account.Amount;
             Debug.Log($"My account has {amount.ToAlgos()} algos");
         }
     }
