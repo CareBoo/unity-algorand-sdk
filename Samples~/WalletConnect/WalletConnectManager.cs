@@ -1,10 +1,15 @@
 using AlgoSdk;
 using AlgoSdk.WalletConnect;
 using Cysharp.Threading.Tasks;
+using Unity.Collections;
 using UnityEngine;
+
+
+
 
 public class WalletConnectManager : MonoBehaviour
 {
+
     public ClientMeta DappMeta;
 
     public string BridgeUrl;
@@ -23,82 +28,84 @@ public class WalletConnectManager : MonoBehaviour
 
     TransactionStatus txnStatus;
 
-    AlgodClient algod = new AlgodClient("https://node.testnet.algoexplorerapi.io");
+    public string AlgoClientURL = @"https://node.testnet.algoexplorerapi.io";
 
-    IndexerClient indexer = new IndexerClient("https://algoindexer.testnet.algoexplorerapi.io");
+    public string IndexerURL = @"https://algoindexer.testnet.algoexplorerapi.io";
+
+    AlgodClient algod;
+
+    IndexerClient indexer;
+
+    [SerializeField] WalletConnectCanvas walletConnectCanvas;
+
+
 
     void Start()
     {
+        algod = new AlgodClient(@AlgoClientURL);
+
+        indexer = new IndexerClient(IndexerURL);
+
+
         StartWalletConnect().Forget();
         PollForBalance().Forget();
     }
-
-    void OnGUI()
+    private void Update()
     {
-        GUI.skin.label.fontSize = 32;
-        GUI.skin.label.alignment = TextAnchor.MiddleCenter;
-        GUI.skin.button.fontSize = 48;
-        GUI.skin.button.alignment = TextAnchor.MiddleCenter;
-        GUI.skin.textField.fontSize = 32;
-        GUI.skin.textField.alignment = TextAnchor.MiddleCenter;
-        GUILayout.BeginArea(new Rect(0, 0, Screen.width, Screen.height), new GUIStyle(GUI.skin.box) { normal = new GUIStyleState() { background = GUI.skin.button.normal.background } });
-        GUILayout.FlexibleSpace();
+
         var status = account?.ConnectionStatus ?? SessionStatus.None;
-        GUILayout.Label($"WalletConnect Connection Status: {status}");
-        GUILayout.Space(20);
-        if (status == SessionStatus.RequestingWalletConnection)
+        var supportedWallets = WalletRegistry.SupportedWalletsForCurrentPlatform;
+        switch (status)
         {
-            var supportedWallets = WalletRegistry.SupportedWalletsForCurrentPlatform;
-            if (shouldLaunchApp && supportedWallets.Length > 0)
-            {
-                foreach (var wallet in supportedWallets)
+            case SessionStatus.RequestingWalletConnection:
+                walletConnectCanvas.setConnectionStatus("Requesting Connection");
+
+                if (qrCode != null)
                 {
-                    if (GUILayout.Button($"Connect to {wallet.Name}"))
-                    {
-                        launchedApp = wallet;
-                        wallet.LaunchForConnect(handshake);
-                    }
-                    GUILayout.Space(5);
-                    if (GUILayout.Button("Show QR Code"))
-                    {
-                        shouldLaunchApp = false;
-                    }
+                    walletConnectCanvas.setQRCode(qrCode);
+                    qrCode = null;
                 }
-            }
-            else
-            {
-                GUILayout.Button(qrCode, new GUIStyle() { alignment = TextAnchor.MiddleCenter });
                 if (supportedWallets.Length > 0)
                 {
-                    GUILayout.Space(5);
-                    if (GUILayout.Button("Connect With Wallet App"))
+                    if (!shouldLaunchApp)
+                    {
+                        walletConnectCanvas.qrCodeDisplay.gameObject.SetActive(false);
+                        walletConnectCanvas.connectingTOWallet.gameObject.SetActive(true);
                         shouldLaunchApp = true;
+                    }
+                    else
+                    {
+
+                    }
                 }
-            }
+                break;
+            case SessionStatus.WalletConnected:
+                walletConnectCanvas.connectedAccount.text = $"Connected Account: {account.Address}";
+                var balanceAlgos = currentBalance / (double)MicroAlgos.PerAlgo;
+                walletConnectCanvas.amount.text = $"Balance: {balanceAlgos:F} Algos";
+                switch (txnStatus)
+                {
+                    case TransactionStatus.None:
+                        break;
+                    default:
+                        walletConnectCanvas.sendTestTransactionButton.gameObject.SetActive(false);
+                        walletConnectCanvas.transactionStatus.text = $"Transaction Status: {txnStatus}";
+                        break;
+                }
+                break;
         }
 
-        if (status == SessionStatus.WalletConnected)
-        {
-            GUILayout.Label($"Connected Account: {account.Address}");
-            GUILayout.Space(5);
-            var balanceAlgos = currentBalance / (double)MicroAlgos.PerAlgo;
-            GUILayout.Label($"Balance: {balanceAlgos:F} Algos");
-            switch (txnStatus)
-            {
-                case TransactionStatus.None:
-                    if (GUILayout.Button("Send Test Transaction"))
-                    {
-                        TestTransaction().Forget();
-                        txnStatus = TransactionStatus.RequestingSignature;
-                    }
-                    break;
-                default:
-                    GUILayout.Label($"Transaction Status: {txnStatus}");
-                    break;
-            }
-        }
-        GUILayout.FlexibleSpace();
-        GUILayout.EndArea();
+
+        walletConnectCanvas.setCanvasDisplay(status);
+
+    }
+
+
+
+    public void sendTestTransaction()
+    {
+        TestTransaction().Forget();
+        txnStatus = TransactionStatus.RequestingSignature;
     }
 
     async UniTaskVoid StartWalletConnect()
@@ -107,6 +114,7 @@ public class WalletConnectManager : MonoBehaviour
         await account.BeginSession();
         handshake = account.RequestWalletConnection();
         qrCode = handshake.ToQrCodeTexture();
+
         await account.WaitForWalletApproval();
         Debug.Log($"Connected account:\n{AlgoApiSerializer.SerializeJson(account.Address)}");
     }
