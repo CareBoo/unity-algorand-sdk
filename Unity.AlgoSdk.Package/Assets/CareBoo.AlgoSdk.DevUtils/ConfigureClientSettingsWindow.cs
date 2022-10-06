@@ -53,8 +53,5 @@ public class ConfigureClientSettingsWindow : EditorWindow
 
     void Load()
     {
-        algodClient = AlgoApiClientSettings.Algod;
-        indexerClient = AlgoApiClientSettings.Indexer;
-        kmdClient = AlgoApiClientSettings.Kmd;
     }
 }

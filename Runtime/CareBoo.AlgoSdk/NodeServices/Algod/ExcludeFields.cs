@@ -26,6 +26,19 @@ namespace AlgoSdk
             NoneString
         };
 
+        public static string ToString(this ExcludeFields excludeFields)
+        {
+            switch (excludeFields)
+            {
+                case ExcludeFields.All:
+                    return AllString;
+                case ExcludeFields.None:
+                    return NoneString;
+                default:
+                    return default;
+            }
+        }
+
         public static FixedString32Bytes ToFixedString(this ExcludeFields excludeFields)
         {
             switch (excludeFields)

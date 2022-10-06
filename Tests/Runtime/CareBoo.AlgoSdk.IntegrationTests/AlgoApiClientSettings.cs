@@ -7,16 +7,24 @@ using UnityEditor;
 
 public static class AlgoApiClientSettings
 {
-    public static AlgodClient Algod => GetJson<AlgodClient>(nameof(Algod), GetSandboxAlgodClient());
+    public static IAlgodClient Algod { get; set; } = GetSandboxAlgodClient();
+    public static IIndexerClient Indexer { get; set; } = GetSandboxIndexerClient();
+    public static KmdClient Kmd { get; set; } = GetSandboxKmdClient();
 
-    public static IndexerClient Indexer => GetJson<IndexerClient>(nameof(Indexer), GetSandboxIndexerClient());
+    public static AlgodClient DefaultAlgod { get; set; } = GetSandboxAlgodClient();
+    public static IndexerClient DefaultIndexer { get; set; } = GetSandboxIndexerClient();
 
-    public static KmdClient Kmd => GetJson<KmdClient>(nameof(Kmd), GetSandboxKmdClient());
-
-    public static T GetJson<T>(string propertyPath, T defaultVal = default)
+    public static T GetJson<T>(string propertyPath, T defaultVal)
     {
         var json = GetString(propertyPath);
         return string.IsNullOrEmpty(json) ? defaultVal : JsonUtility.FromJson<T>(json);
+    }
+
+    public static Optional<T> GetJson<T>(string propertyPath)
+        where T : struct, System.IEquatable<T>
+    {
+        var json = GetString(propertyPath);
+        return string.IsNullOrEmpty(json) ? default : JsonUtility.FromJson<T>(json);
     }
 
     public static string GetString(string propertyPath)
