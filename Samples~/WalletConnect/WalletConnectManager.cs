@@ -4,12 +4,8 @@ using Cysharp.Threading.Tasks;
 using Unity.Collections;
 using UnityEngine;
 
-
-
-
 public class WalletConnectManager : MonoBehaviour
 {
-
     public ClientMeta DappMeta;
 
     public string BridgeUrl;
@@ -38,8 +34,6 @@ public class WalletConnectManager : MonoBehaviour
 
     [SerializeField] WalletConnectCanvas walletConnectCanvas;
 
-
-
     void Start()
     {
         algod = new AlgodClient(@AlgoClientURL);
@@ -50,9 +44,9 @@ public class WalletConnectManager : MonoBehaviour
         StartWalletConnect().Forget();
         PollForBalance().Forget();
     }
-    private void Update()
-    {
 
+    void Update()
+    {
         var status = account?.ConnectionStatus ?? SessionStatus.None;
         var supportedWallets = WalletRegistry.SupportedWalletsForCurrentPlatform;
         switch (status)
@@ -73,10 +67,6 @@ public class WalletConnectManager : MonoBehaviour
                         walletConnectCanvas.connectingTOWallet.gameObject.SetActive(true);
                         shouldLaunchApp = true;
                     }
-                    else
-                    {
-
-                    }
                 }
                 break;
             case SessionStatus.WalletConnected:
@@ -95,12 +85,8 @@ public class WalletConnectManager : MonoBehaviour
                 break;
         }
 
-
         walletConnectCanvas.setCanvasDisplay(status);
-
     }
-
-
 
     public void sendTestTransaction()
     {

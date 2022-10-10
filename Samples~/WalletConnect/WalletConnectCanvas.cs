@@ -4,34 +4,18 @@ using AlgoSdk.WalletConnect;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-
-
 public class WalletConnectCanvas : MonoBehaviour
 {
-    
     public Text connectionStatus, transactionStatus, connectedAccount, amount, connectingTOWallet;
+
     public Image qrCodeDisplay;
 
     public GameObject requestingConnectionDisplay, connectedDisplay, notConnectedDisplay;
 
     public Button sendTestTransactionButton;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void setCanvasDisplay(SessionStatus status)
     {
-
         string currentStatus = "UNKNOWN";
 
         requestingConnectionDisplay.SetActive(false);
@@ -55,10 +39,7 @@ public class WalletConnectCanvas : MonoBehaviour
         }
 
         connectionStatus.text = $"Connection Status: {currentStatus}";
-
     }
-
-
 
     public void setConnectionStatus(string status)
     {
