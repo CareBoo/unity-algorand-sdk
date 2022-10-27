@@ -16,6 +16,7 @@ namespace AlgoSdk
     /// required to create and send transactions.
     /// </remarks>
     [Serializable]
+    [Obsolete("Please use Algorand.Algod.DefaultApi instead.")]
     public partial struct AlgodClient : IAlgodClient
     {
         [SerializeField]

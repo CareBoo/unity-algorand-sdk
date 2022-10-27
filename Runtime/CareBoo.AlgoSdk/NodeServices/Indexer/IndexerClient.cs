@@ -13,6 +13,7 @@ namespace AlgoSdk
     /// The indexer service is responsible for querying the blockchain
     /// </remarks>
     [Serializable]
+    [Obsolete("Please use Algorand.Indexer.DefaultApi instead.")]
     public partial struct IndexerClient
     {
         [SerializeField]
