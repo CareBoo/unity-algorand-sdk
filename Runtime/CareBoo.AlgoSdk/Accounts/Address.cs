@@ -150,6 +150,16 @@ namespace AlgoSdk
             return result;
         }
 
+        public static implicit operator Algorand.Address(Address unityAddress)
+        {
+            return unityAddress.Convert().ToDotnet<Algorand.Address>();
+        }
+
+        public static implicit operator Address(Algorand.Address from)
+        {
+            return from.Convert().ToUnity<Address>();
+        }
+
         public static bool operator ==(in Address a1, in Address a2)
         {
             return a1.Equals(a2);

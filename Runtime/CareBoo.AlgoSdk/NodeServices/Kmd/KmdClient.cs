@@ -13,7 +13,6 @@ namespace AlgoSdk
     /// The kmd service is responsible for managing keys and wallets
     /// </remarks>
     [Serializable]
-    [Obsolete("Please use Algorand.Kmd.DefaultApi instead.")]
     public partial struct KmdClient : IKmdClient
     {
         [SerializeField]

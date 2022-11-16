@@ -16,7 +16,6 @@ namespace AlgoSdk
     /// required to create and send transactions.
     /// </remarks>
     [Serializable]
-    [Obsolete("Please use Algorand.Algod.DefaultApi instead.")]
     public partial struct AlgodClient : IAlgodClient
     {
         [SerializeField]
@@ -168,13 +167,6 @@ namespace AlgoSdk
         public AlgoApiRequest.Sent<AssetResponse> GetAsset(ulong assetId)
         {
             return GetAssetByID(assetId);
-        }
-
-
-        [Obsolete("Call GetProof instead.")]
-        public AlgoApiRequest.Sent<ProofResponse> GetMerkleProof(ulong round, TransactionId txid)
-        {
-            return GetProof(round, txid);
         }
 
         [Obsolete("Call GetSupply instead.")]

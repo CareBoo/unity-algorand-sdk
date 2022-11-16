@@ -13,7 +13,6 @@ namespace AlgoSdk
     /// The indexer service is responsible for querying the blockchain
     /// </remarks>
     [Serializable]
-    [Obsolete("Please use Algorand.Indexer.DefaultApi instead.")]
     public partial struct IndexerClient
     {
         [SerializeField]
@@ -133,7 +132,7 @@ namespace AlgoSdk
                 notePrefix: notePrefix != null ? Encoding.UTF8.GetBytes(notePrefix) : null,
                 rekeyTo: rekeyTo,
                 round: round,
-                txType: txType,
+                txType: txType.ToString(),
                 txid: txid.Equals(default) ? null : txid
             );
         }
@@ -254,7 +253,7 @@ namespace AlgoSdk
                 rekeyTo: rekeyTo,
                 round: round,
                 sigType: sigType,
-                txType: txType,
+                txType: txType.ToString(),
                 txid: txid.Equals(default) ? null : txid.ToString()
             );
         }
@@ -304,7 +303,7 @@ namespace AlgoSdk
                 rekeyTo: rekeyTo,
                 round: round,
                 sigType: sigType,
-                txType: txType,
+                txType: txType.ToString(),
                 txid: txid.Equals(default) ? null : txid.ToString()
             );
         }

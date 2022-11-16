@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
-using Cysharp.Threading.Tasks;
-using System.Net;
-using System.Linq;
 
 public class UnityHttpMessageHandler : HttpMessageHandler
 {
@@ -41,19 +41,17 @@ public class UnityHttpMessageHandler : HttpMessageHandler
         LastAsyncOperation = unityWebRequest.SendWebRequest();
         Debug.Log("Sent webrequest");
         await LastAsyncOperation.WithCancellation(cancellationToken);
-        var responseMessage = new HttpResponseMessage((HttpStatusCode)unityWebRequest.responseCode)
-        {
-            Content = new ByteArrayContent(unityWebRequest.downloadHandler.data)
-        };
+        var responseCode = (HttpStatusCode)unityWebRequest.responseCode;
+        var responseContent = new ByteArrayContent(unityWebRequest.downloadHandler.data);
+        var responseMessage = new HttpResponseMessage(responseCode) { Content = responseContent };
         foreach (var header in unityWebRequest.GetResponseHeaders())
         {
             try
             {
-                var headerLower = header.Key.ToLower();
-                if (headerLower is not "content-type" && headerLower is not "content-length")
-                    responseMessage.Headers.Add(header.Key, header.Value);
-                else
+                if (IsContentHeader(header))
                     responseMessage.Content.Headers.Add(header.Key, header.Value);
+                else
+                    responseMessage.Headers.Add(header.Key, header.Value);
             }
             catch
             {
@@ -62,5 +60,11 @@ public class UnityHttpMessageHandler : HttpMessageHandler
             }
         }
         return responseMessage;
+    }
+
+    private static bool IsContentHeader(KeyValuePair<string, string> header)
+    {
+        var headerKeyLower = header.Key.ToLower();
+        return headerKeyLower == "content-type" || headerKeyLower == "content-Length";
     }
 }

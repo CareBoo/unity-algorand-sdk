@@ -134,16 +134,6 @@ public class DotnetAlgodClient
         return new AlgoApiRequest.Sent(oneTimeClient.SentWebRequest);
     }
 
-    public AlgoApiRequest.Sent<ProofResponse> GetProof(ulong round, string txid, string hashtype = null, ResponseFormat format = ResponseFormat.None)
-    {
-        if (!string.IsNullOrEmpty(hashtype))
-            throw new NotImplementedException();
-        var oneTimeClient = new AlgodApiClient(address, token, headers);
-        oneTimeClient.Api.GetProofAsync(round, txid, format.ToDotNetFormat());
-        oneTimeClient.DisposeOnFinish().Forget();
-        return new AlgoApiRequest.Sent(oneTimeClient.SentWebRequest);
-    }
-
     public AlgoApiRequest.Sent<NodeStatusResponse> GetStatus()
     {
         var oneTimeClient = new AlgodApiClient(address, token, headers);
@@ -245,5 +235,25 @@ public class DotnetAlgodClient
         oneTimeClient.Api.WaitForBlockAsync(round);
         oneTimeClient.DisposeOnFinish().Forget();
         return new AlgoApiRequest.Sent(oneTimeClient.SentWebRequest);
+    }
+
+    public AlgoApiRequest.Sent<TransactionProofResponse> GetTransactionProof(ulong round, string txid, string hashtype = null, ResponseFormat format = ResponseFormat.None)
+    {
+        throw new NotImplementedException();
+    }
+
+    public AlgoApiRequest.Sent<LightBlockHeaderProofResponse> GetLightBlockHeaderProof(ulong round)
+    {
+        throw new NotImplementedException();
+    }
+
+    public AlgoApiRequest.Sent<StateProofResponse> GetStateProof(ulong round)
+    {
+        throw new NotImplementedException();
+    }
+
+    public AlgoApiRequest.Sent<BlockHashResponse> GetBlockHash(ulong round)
+    {
+        throw new NotImplementedException();
     }
 }

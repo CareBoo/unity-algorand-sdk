@@ -15,10 +15,10 @@ using UnityEngine;
 
 namespace AlgoSdk
 {
-    public partial interface IAlgodClient : IAlgoApiClient
+    public interface IAlgodClient : IAlgoApiClient
     {
         /// <summary>
-        /// Get a Merkle proof for a transaction in a block.
+        /// Get a proof for a transaction in a block.
         /// </summary>
         /// <remarks>
         /// 
@@ -40,13 +40,13 @@ namespace AlgoSdk
         /// <returns>
         /// 
         /// </returns>
-        AlgoApiRequest.Sent<ProofResponse> GetProof(
+        AlgoApiRequest.Sent<TransactionProofResponse> GetTransactionProof(
             ulong round,
-
+        
             string txid,
-
+        
             string hashtype = default,
-
+        
             ResponseFormat format = default
         );
 
@@ -115,7 +115,7 @@ namespace AlgoSdk
         /// </returns>
         AlgoApiRequest.Sent<BlockResponse> GetBlock(
             ulong round,
-
+        
             ResponseFormat format = default
         );
 
@@ -132,7 +132,23 @@ namespace AlgoSdk
         /// 
         /// </returns>
         AlgoApiRequest.Sent<TransactionParametersResponse> TransactionParams(
+             
+        );
 
+        /// <summary>
+        /// Gets a proof for a given light block header inside a state proof commitment
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="round">
+        /// The round to which the light block header belongs.
+        /// </param>
+        /// <returns>
+        /// 
+        /// </returns>
+        AlgoApiRequest.Sent<LightBlockHeaderProofResponse> GetLightBlockHeaderProof(
+            ulong round
         );
 
         /// <summary>
@@ -171,10 +187,26 @@ namespace AlgoSdk
         /// </returns>
         AlgoApiRequest.Sent<PendingTransactionsResponse> GetPendingTransactionsByAddress(
             string address,
-
+        
             Optional<ulong> max = default,
-
+        
             ResponseFormat format = default
+        );
+
+        /// <summary>
+        /// Get a state proof that covers a given round
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="round">
+        /// The round for which a state proof is desired.
+        /// </param>
+        /// <returns>
+        /// 
+        /// </returns>
+        AlgoApiRequest.Sent<StateProofResponse> GetStateProof(
+            ulong round
         );
 
         /// <summary>
@@ -226,7 +258,7 @@ namespace AlgoSdk
         /// </returns>
         AlgoApiRequest.Sent<PendingTransactionsResponse> GetPendingTransactions(
             Optional<ulong> max = default,
-
+        
             ResponseFormat format = default
         );
 
@@ -243,7 +275,7 @@ namespace AlgoSdk
         /// 
         /// </returns>
         AlgoApiRequest.Sent<SupplyResponse> GetSupply(
-
+             
         );
 
         /// <summary>
@@ -291,7 +323,7 @@ namespace AlgoSdk
         /// 
         /// </returns>
         AlgoApiRequest.Sent<NodeStatusResponse> GetStatus(
-
+             
         );
 
         /// <summary>
@@ -307,7 +339,23 @@ namespace AlgoSdk
         /// The current swagger spec
         /// </returns>
         AlgoApiRequest.Sent<AlgoApiObject> SwaggerJSON(
+             
+        );
 
+        /// <summary>
+        /// Get the block hash for the block on the given round.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="round">
+        /// The round from which to fetch block hash information.
+        /// </param>
+        /// <returns>
+        /// 
+        /// </returns>
+        AlgoApiRequest.Sent<BlockHashResponse> GetBlockHash(
+            ulong round
         );
 
         /// <summary>
@@ -356,7 +404,7 @@ namespace AlgoSdk
         /// </returns>
         AlgoApiRequest.Sent<ParticipationKeyResponse> AppendKeys(
             byte[] keymap,
-
+        
             string participationId
         );
 
@@ -373,7 +421,7 @@ namespace AlgoSdk
         /// 
         /// </returns>
         AlgoApiRequest.Sent<ParticipationKeysResponse> GetParticipationKeys(
-
+             
         );
 
         /// <summary>
@@ -409,7 +457,7 @@ namespace AlgoSdk
         /// </returns>
         AlgoApiRequest.Sent<CompileResponse> TealCompile(
             byte[] source,
-
+        
             Optional<bool> sourcemap = default
         );
 
@@ -433,9 +481,9 @@ namespace AlgoSdk
         /// </returns>
         AlgoApiRequest.Sent<AccountResponse> AccountInformation(
             string address,
-
+        
             ExcludeFields exclude = default,
-
+        
             ResponseFormat format = default
         );
 
@@ -449,7 +497,7 @@ namespace AlgoSdk
         /// 
         /// </param>
         AlgoApiRequest.Sent HealthCheck(
-
+             
         );
 
         /// <summary>
@@ -478,7 +526,7 @@ namespace AlgoSdk
         /// </returns>
         AlgoApiRequest.Sent<PendingTransactionResponse> PendingTransactionInformation(
             string txid,
-
+        
             ResponseFormat format = default
         );
 
@@ -502,9 +550,9 @@ namespace AlgoSdk
         /// </returns>
         AlgoApiRequest.Sent<AccountApplicationResponse> AccountApplicationInformation(
             string address,
-
+        
             ulong applicationId,
-
+        
             ResponseFormat format = default
         );
 
@@ -521,7 +569,7 @@ namespace AlgoSdk
         /// The genesis file in json.
         /// </returns>
         AlgoApiRequest.Sent<AlgoApiObject> GetGenesis(
-
+             
         );
 
         /// <summary>
@@ -537,7 +585,7 @@ namespace AlgoSdk
         /// 
         /// </returns>
         AlgoApiRequest.Sent<VersionsResponse> GetVersion(
-
+             
         );
 
         /// <summary>
@@ -566,7 +614,7 @@ namespace AlgoSdk
         /// 
         /// </param>
         AlgoApiRequest.Sent Metrics(
-
+             
         );
 
         /// <summary>
@@ -589,9 +637,9 @@ namespace AlgoSdk
         /// </returns>
         AlgoApiRequest.Sent<AccountAssetResponse> AccountAssetInformation(
             string address,
-
+        
             ulong assetId,
-
+        
             ResponseFormat format = default
         );
 
@@ -601,13 +649,13 @@ namespace AlgoSdk
         : IAlgodClient
     {
         /// <inheritdoc />
-        public AlgoApiRequest.Sent<ProofResponse> GetProof(
+        public AlgoApiRequest.Sent<TransactionProofResponse> GetTransactionProof(
             ulong round,
-
+        
             string txid,
-
+        
             string hashtype = default,
-
+        
             ResponseFormat format = default
         )
         {
@@ -618,7 +666,7 @@ namespace AlgoSdk
             var path = $"/v2/blocks/{round}/transactions/{txid}/proof{queryBuilder}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
@@ -634,7 +682,7 @@ namespace AlgoSdk
             var path = $"/v2/shutdown{queryBuilder}";
             return this
                 .Post(path)
-
+                
                 .Send()
                 ;
         }
@@ -647,7 +695,7 @@ namespace AlgoSdk
             var path = $"/v2/catchup/{catchpoint}";
             return this
                 .Post(path)
-
+                
                 .Send()
                 ;
         }
@@ -660,7 +708,7 @@ namespace AlgoSdk
             var path = $"/v2/catchup/{catchpoint}";
             return this
                 .Delete(path)
-
+                
                 .Send()
                 ;
         }
@@ -668,7 +716,7 @@ namespace AlgoSdk
         /// <inheritdoc />
         public AlgoApiRequest.Sent<BlockResponse> GetBlock(
             ulong round,
-
+        
             ResponseFormat format = default
         )
         {
@@ -678,20 +726,33 @@ namespace AlgoSdk
             var path = $"/v2/blocks/{round}{queryBuilder}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
 
         /// <inheritdoc />
         public AlgoApiRequest.Sent<TransactionParametersResponse> TransactionParams(
-
+             
         )
         {
             var path = $"/v2/transactions/params";
             return this
                 .Get(path)
+                
+                .Send()
+                ;
+        }
 
+        /// <inheritdoc />
+        public AlgoApiRequest.Sent<LightBlockHeaderProofResponse> GetLightBlockHeaderProof(
+            ulong round
+        )
+        {
+            var path = $"/v2/blocks/{round}/lightheader/proof";
+            return this
+                .Get(path)
+                
                 .Send()
                 ;
         }
@@ -712,9 +773,9 @@ namespace AlgoSdk
         /// <inheritdoc />
         public AlgoApiRequest.Sent<PendingTransactionsResponse> GetPendingTransactionsByAddress(
             string address,
-
+        
             Optional<ulong> max = default,
-
+        
             ResponseFormat format = default
         )
         {
@@ -725,7 +786,20 @@ namespace AlgoSdk
             var path = $"/v2/accounts/{address}/transactions/pending{queryBuilder}";
             return this
                 .Get(path)
+                
+                .Send()
+                ;
+        }
 
+        /// <inheritdoc />
+        public AlgoApiRequest.Sent<StateProofResponse> GetStateProof(
+            ulong round
+        )
+        {
+            var path = $"/v2/stateproofs/{round}";
+            return this
+                .Get(path)
+                
                 .Send()
                 ;
         }
@@ -751,7 +825,7 @@ namespace AlgoSdk
             var path = $"/v2/assets/{assetId}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
@@ -759,7 +833,7 @@ namespace AlgoSdk
         /// <inheritdoc />
         public AlgoApiRequest.Sent<PendingTransactionsResponse> GetPendingTransactions(
             Optional<ulong> max = default,
-
+        
             ResponseFormat format = default
         )
         {
@@ -770,20 +844,20 @@ namespace AlgoSdk
             var path = $"/v2/transactions/pending{queryBuilder}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
 
         /// <inheritdoc />
         public AlgoApiRequest.Sent<SupplyResponse> GetSupply(
-
+             
         )
         {
             var path = $"/v2/ledger/supply";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
@@ -796,7 +870,7 @@ namespace AlgoSdk
             var path = $"/v2/applications/{applicationId}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
@@ -809,33 +883,46 @@ namespace AlgoSdk
             var path = $"/v2/status/wait-for-block-after/{round}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
 
         /// <inheritdoc />
         public AlgoApiRequest.Sent<NodeStatusResponse> GetStatus(
-
+             
         )
         {
             var path = $"/v2/status";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
 
         /// <inheritdoc />
         public AlgoApiRequest.Sent<AlgoApiObject> SwaggerJSON(
-
+             
         )
         {
             var path = $"/swagger.json";
             return this
                 .Get(path)
+                
+                .Send()
+                ;
+        }
 
+        /// <inheritdoc />
+        public AlgoApiRequest.Sent<BlockHashResponse> GetBlockHash(
+            ulong round
+        )
+        {
+            var path = $"/v2/blocks/{round}/hash";
+            return this
+                .Get(path)
+                
                 .Send()
                 ;
         }
@@ -848,7 +935,7 @@ namespace AlgoSdk
             var path = $"/v2/participation/{participationId}";
             return this
                 .Delete(path)
-
+                
                 .Send()
                 ;
         }
@@ -861,7 +948,7 @@ namespace AlgoSdk
             var path = $"/v2/participation/{participationId}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
@@ -869,7 +956,7 @@ namespace AlgoSdk
         /// <inheritdoc />
         public AlgoApiRequest.Sent<ParticipationKeyResponse> AppendKeys(
             byte[] keymap,
-
+        
             string participationId
         )
         {
@@ -883,13 +970,13 @@ namespace AlgoSdk
 
         /// <inheritdoc />
         public AlgoApiRequest.Sent<ParticipationKeysResponse> GetParticipationKeys(
-
+             
         )
         {
             var path = $"/v2/participation";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
@@ -910,7 +997,7 @@ namespace AlgoSdk
         /// <inheritdoc />
         public AlgoApiRequest.Sent<CompileResponse> TealCompile(
             byte[] source,
-
+        
             Optional<bool> sourcemap = default
         )
         {
@@ -928,9 +1015,9 @@ namespace AlgoSdk
         /// <inheritdoc />
         public AlgoApiRequest.Sent<AccountResponse> AccountInformation(
             string address,
-
+        
             ExcludeFields exclude = default,
-
+        
             ResponseFormat format = default
         )
         {
@@ -941,20 +1028,20 @@ namespace AlgoSdk
             var path = $"/v2/accounts/{address}{queryBuilder}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
 
         /// <inheritdoc />
         public AlgoApiRequest.Sent HealthCheck(
-
+             
         )
         {
             var path = $"/health";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
@@ -962,7 +1049,7 @@ namespace AlgoSdk
         /// <inheritdoc />
         public AlgoApiRequest.Sent<PendingTransactionResponse> PendingTransactionInformation(
             string txid,
-
+        
             ResponseFormat format = default
         )
         {
@@ -972,7 +1059,7 @@ namespace AlgoSdk
             var path = $"/v2/transactions/pending/{txid}{queryBuilder}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
@@ -980,9 +1067,9 @@ namespace AlgoSdk
         /// <inheritdoc />
         public AlgoApiRequest.Sent<AccountApplicationResponse> AccountApplicationInformation(
             string address,
-
+        
             ulong applicationId,
-
+        
             ResponseFormat format = default
         )
         {
@@ -992,33 +1079,33 @@ namespace AlgoSdk
             var path = $"/v2/accounts/{address}/applications/{applicationId}{queryBuilder}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
 
         /// <inheritdoc />
         public AlgoApiRequest.Sent<AlgoApiObject> GetGenesis(
-
+             
         )
         {
             var path = $"/genesis";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
 
         /// <inheritdoc />
         public AlgoApiRequest.Sent<VersionsResponse> GetVersion(
-
+             
         )
         {
             var path = $"/versions";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
@@ -1038,13 +1125,13 @@ namespace AlgoSdk
 
         /// <inheritdoc />
         public AlgoApiRequest.Sent Metrics(
-
+             
         )
         {
             var path = $"/metrics";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
@@ -1052,9 +1139,9 @@ namespace AlgoSdk
         /// <inheritdoc />
         public AlgoApiRequest.Sent<AccountAssetResponse> AccountAssetInformation(
             string address,
-
+        
             ulong assetId,
-
+        
             ResponseFormat format = default
         )
         {
@@ -1064,7 +1151,7 @@ namespace AlgoSdk
             var path = $"/v2/accounts/{address}/assets/{assetId}{queryBuilder}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }

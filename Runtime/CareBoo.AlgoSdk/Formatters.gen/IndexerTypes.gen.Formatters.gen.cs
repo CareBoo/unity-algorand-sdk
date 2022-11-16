@@ -19,7 +19,23 @@ namespace AlgoSdk.Indexer
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Indexer.Block>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Indexer.Block>(false).Assign("rewards", (AlgoSdk.Indexer.Block x) => x.Rewards, (ref AlgoSdk.Indexer.Block x, AlgoSdk.Indexer.BlockRewards value) => x.Rewards = value).Assign("genesis-hash", (AlgoSdk.Indexer.Block x) => x.GenesisHash, (ref AlgoSdk.Indexer.Block x, System.Byte[] value) => x.GenesisHash = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("upgrade-state", (AlgoSdk.Indexer.Block x) => x.UpgradeState, (ref AlgoSdk.Indexer.Block x, AlgoSdk.Indexer.BlockUpgradeState value) => x.UpgradeState = value).Assign("previous-block-hash", (AlgoSdk.Indexer.Block x) => x.PreviousBlockHash, (ref AlgoSdk.Indexer.Block x, System.Byte[] value) => x.PreviousBlockHash = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("seed", (AlgoSdk.Indexer.Block x) => x.Seed, (ref AlgoSdk.Indexer.Block x, System.Byte[] value) => x.Seed = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("round", (AlgoSdk.Indexer.Block x) => x.Round, (ref AlgoSdk.Indexer.Block x, System.UInt64 value) => x.Round = value).Assign("transactions-root", (AlgoSdk.Indexer.Block x) => x.TransactionsRoot, (ref AlgoSdk.Indexer.Block x, System.Byte[] value) => x.TransactionsRoot = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("genesis-id", (AlgoSdk.Indexer.Block x) => x.GenesisId, (ref AlgoSdk.Indexer.Block x, System.String value) => x.GenesisId = value, AlgoSdk.StringComparer.Instance).Assign("upgrade-vote", (AlgoSdk.Indexer.Block x) => x.UpgradeVote, (ref AlgoSdk.Indexer.Block x, AlgoSdk.Indexer.BlockUpgradeVote value) => x.UpgradeVote = value).Assign("transactions", (AlgoSdk.Indexer.Block x) => x.Transactions, (ref AlgoSdk.Indexer.Block x, AlgoSdk.Indexer.Transaction[] value) => x.Transactions = value, AlgoSdk.ArrayComparer<AlgoSdk.Indexer.Transaction>.Instance).Assign("timestamp", (AlgoSdk.Indexer.Block x) => x.Timestamp, (ref AlgoSdk.Indexer.Block x, System.UInt64 value) => x.Timestamp = value).Assign("txn-counter", (AlgoSdk.Indexer.Block x) => x.TxnCounter, (ref AlgoSdk.Indexer.Block x, AlgoSdk.Optional<System.UInt64> value) => x.TxnCounter = value));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Indexer.Block>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Indexer.Block>(false).Assign("rewards", (AlgoSdk.Indexer.Block x) => x.Rewards, (ref AlgoSdk.Indexer.Block x, AlgoSdk.Indexer.BlockRewards value) => x.Rewards = value).Assign("genesis-hash", (AlgoSdk.Indexer.Block x) => x.GenesisHash, (ref AlgoSdk.Indexer.Block x, System.Byte[] value) => x.GenesisHash = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("upgrade-state", (AlgoSdk.Indexer.Block x) => x.UpgradeState, (ref AlgoSdk.Indexer.Block x, AlgoSdk.Indexer.BlockUpgradeState value) => x.UpgradeState = value).Assign("previous-block-hash", (AlgoSdk.Indexer.Block x) => x.PreviousBlockHash, (ref AlgoSdk.Indexer.Block x, System.Byte[] value) => x.PreviousBlockHash = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("seed", (AlgoSdk.Indexer.Block x) => x.Seed, (ref AlgoSdk.Indexer.Block x, System.Byte[] value) => x.Seed = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("round", (AlgoSdk.Indexer.Block x) => x.Round, (ref AlgoSdk.Indexer.Block x, System.UInt64 value) => x.Round = value).Assign("transactions-root", (AlgoSdk.Indexer.Block x) => x.TransactionsRoot, (ref AlgoSdk.Indexer.Block x, System.Byte[] value) => x.TransactionsRoot = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("state-proof-tracking", (AlgoSdk.Indexer.Block x) => x.StateProofTracking, (ref AlgoSdk.Indexer.Block x, AlgoSdk.Indexer.StateProofTracking[] value) => x.StateProofTracking = value, AlgoSdk.ArrayComparer<AlgoSdk.Indexer.StateProofTracking>.Instance).Assign("genesis-id", (AlgoSdk.Indexer.Block x) => x.GenesisId, (ref AlgoSdk.Indexer.Block x, System.String value) => x.GenesisId = value, AlgoSdk.StringComparer.Instance).Assign("transactions-root-sha256", (AlgoSdk.Indexer.Block x) => x.TransactionsRootSha256, (ref AlgoSdk.Indexer.Block x, System.Byte[] value) => x.TransactionsRootSha256 = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("upgrade-vote", (AlgoSdk.Indexer.Block x) => x.UpgradeVote, (ref AlgoSdk.Indexer.Block x, AlgoSdk.Indexer.BlockUpgradeVote value) => x.UpgradeVote = value).Assign("participation-updates", (AlgoSdk.Indexer.Block x) => x.ParticipationUpdates, (ref AlgoSdk.Indexer.Block x, AlgoSdk.Indexer.ParticipationUpdates value) => x.ParticipationUpdates = value).Assign("transactions", (AlgoSdk.Indexer.Block x) => x.Transactions, (ref AlgoSdk.Indexer.Block x, AlgoSdk.Indexer.Transaction[] value) => x.Transactions = value, AlgoSdk.ArrayComparer<AlgoSdk.Indexer.Transaction>.Instance).Assign("timestamp", (AlgoSdk.Indexer.Block x) => x.Timestamp, (ref AlgoSdk.Indexer.Block x, System.UInt64 value) => x.Timestamp = value).Assign("txn-counter", (AlgoSdk.Indexer.Block x) => x.TxnCounter, (ref AlgoSdk.Indexer.Block x, AlgoSdk.Optional<System.UInt64> value) => x.TxnCounter = value));
+            return true;
+        }
+    }
+}
+namespace AlgoSdk.Indexer
+{
+    
+    
+    public partial struct HashFactory
+    {
+        
+        private static bool @__generated__IsValid = HashFactory.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Indexer.HashFactory>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Indexer.HashFactory>(false).Assign("hash-type", (AlgoSdk.Indexer.HashFactory x) => x.HashType, (ref AlgoSdk.Indexer.HashFactory x, AlgoSdk.Optional<System.UInt64> value) => x.HashType = value));
             return true;
         }
     }
@@ -44,6 +60,22 @@ namespace AlgoSdk.Indexer
 {
     
     
+    public partial struct ParticipationUpdates
+    {
+        
+        private static bool @__generated__IsValid = ParticipationUpdates.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Indexer.ParticipationUpdates>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Indexer.ParticipationUpdates>(false).Assign("expired-participation-accounts", (AlgoSdk.Indexer.ParticipationUpdates x) => x.ExpiredParticipationAccounts, (ref AlgoSdk.Indexer.ParticipationUpdates x, System.String[] value) => x.ExpiredParticipationAccounts = value, AlgoSdk.ArrayComparer<System.String, AlgoSdk.StringComparer>.Instance));
+            return true;
+        }
+    }
+}
+namespace AlgoSdk.Indexer
+{
+    
+    
     public partial struct ApplicationParams
     {
         
@@ -52,6 +84,22 @@ namespace AlgoSdk.Indexer
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Indexer.ApplicationParams>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Indexer.ApplicationParams>(false).Assign("creator", (AlgoSdk.Indexer.ApplicationParams x) => x.Creator, (ref AlgoSdk.Indexer.ApplicationParams x, AlgoSdk.Address value) => x.Creator = value).Assign("approval-program", (AlgoSdk.Indexer.ApplicationParams x) => x.ApprovalProgram, (ref AlgoSdk.Indexer.ApplicationParams x, AlgoSdk.CompiledTeal value) => x.ApprovalProgram = value).Assign("clear-state-program", (AlgoSdk.Indexer.ApplicationParams x) => x.ClearStateProgram, (ref AlgoSdk.Indexer.ApplicationParams x, AlgoSdk.CompiledTeal value) => x.ClearStateProgram = value).Assign("local-state-schema", (AlgoSdk.Indexer.ApplicationParams x) => x.LocalStateSchema, (ref AlgoSdk.Indexer.ApplicationParams x, AlgoSdk.Indexer.ApplicationStateSchema value) => x.LocalStateSchema = value).Assign("global-state-schema", (AlgoSdk.Indexer.ApplicationParams x) => x.GlobalStateSchema, (ref AlgoSdk.Indexer.ApplicationParams x, AlgoSdk.Indexer.ApplicationStateSchema value) => x.GlobalStateSchema = value).Assign("global-state", (AlgoSdk.Indexer.ApplicationParams x) => x.GlobalState, (ref AlgoSdk.Indexer.ApplicationParams x, AlgoSdk.Indexer.TealKeyValueStore value) => x.GlobalState = value).Assign("extra-program-pages", (AlgoSdk.Indexer.ApplicationParams x) => x.ExtraProgramPages, (ref AlgoSdk.Indexer.ApplicationParams x, AlgoSdk.Optional<System.UInt64> value) => x.ExtraProgramPages = value));
+            return true;
+        }
+    }
+}
+namespace AlgoSdk.Indexer
+{
+    
+    
+    public partial struct StateProofTracking
+    {
+        
+        private static bool @__generated__IsValid = StateProofTracking.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Indexer.StateProofTracking>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Indexer.StateProofTracking>(false).Assign("type", (AlgoSdk.Indexer.StateProofTracking x) => x.Type, (ref AlgoSdk.Indexer.StateProofTracking x, AlgoSdk.Optional<System.UInt64> value) => x.Type = value).Assign("voters-commitment", (AlgoSdk.Indexer.StateProofTracking x) => x.VotersCommitment, (ref AlgoSdk.Indexer.StateProofTracking x, System.Byte[] value) => x.VotersCommitment = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("online-total-weight", (AlgoSdk.Indexer.StateProofTracking x) => x.OnlineTotalWeight, (ref AlgoSdk.Indexer.StateProofTracking x, AlgoSdk.Optional<System.UInt64> value) => x.OnlineTotalWeight = value).Assign("next-round", (AlgoSdk.Indexer.StateProofTracking x) => x.NextRound, (ref AlgoSdk.Indexer.StateProofTracking x, AlgoSdk.Optional<System.UInt64> value) => x.NextRound = value));
             return true;
         }
     }
@@ -172,6 +220,22 @@ namespace AlgoSdk.Indexer
 {
     
     
+    public partial struct StateProofFields
+    {
+        
+        private static bool @__generated__IsValid = StateProofFields.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Indexer.StateProofFields>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Indexer.StateProofFields>(false).Assign("sig-commit", (AlgoSdk.Indexer.StateProofFields x) => x.SigCommit, (ref AlgoSdk.Indexer.StateProofFields x, System.Byte[] value) => x.SigCommit = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("signed-weight", (AlgoSdk.Indexer.StateProofFields x) => x.SignedWeight, (ref AlgoSdk.Indexer.StateProofFields x, AlgoSdk.Optional<System.UInt64> value) => x.SignedWeight = value).Assign("sig-proofs", (AlgoSdk.Indexer.StateProofFields x) => x.SigProofs, (ref AlgoSdk.Indexer.StateProofFields x, AlgoSdk.Indexer.MerkleArrayProof value) => x.SigProofs = value).Assign("part-proofs", (AlgoSdk.Indexer.StateProofFields x) => x.PartProofs, (ref AlgoSdk.Indexer.StateProofFields x, AlgoSdk.Indexer.MerkleArrayProof value) => x.PartProofs = value).Assign("salt-version", (AlgoSdk.Indexer.StateProofFields x) => x.SaltVersion, (ref AlgoSdk.Indexer.StateProofFields x, AlgoSdk.Optional<System.UInt64> value) => x.SaltVersion = value).Assign("reveals", (AlgoSdk.Indexer.StateProofFields x) => x.Reveals, (ref AlgoSdk.Indexer.StateProofFields x, AlgoSdk.Indexer.StateProofReveal[] value) => x.Reveals = value, AlgoSdk.ArrayComparer<AlgoSdk.Indexer.StateProofReveal>.Instance).Assign("positions-to-reveal", (AlgoSdk.Indexer.StateProofFields x) => x.PositionsToReveal, (ref AlgoSdk.Indexer.StateProofFields x, System.UInt64[] value) => x.PositionsToReveal = value, AlgoSdk.ArrayComparer<System.UInt64>.Instance));
+            return true;
+        }
+    }
+}
+namespace AlgoSdk.Indexer
+{
+    
+    
     public partial struct MiniAssetHolding
     {
         
@@ -180,6 +244,22 @@ namespace AlgoSdk.Indexer
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Indexer.MiniAssetHolding>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Indexer.MiniAssetHolding>(false).Assign("address", (AlgoSdk.Indexer.MiniAssetHolding x) => x.Address, (ref AlgoSdk.Indexer.MiniAssetHolding x, System.String value) => x.Address = value, AlgoSdk.StringComparer.Instance).Assign("amount", (AlgoSdk.Indexer.MiniAssetHolding x) => x.Amount, (ref AlgoSdk.Indexer.MiniAssetHolding x, System.UInt64 value) => x.Amount = value).Assign("is-frozen", (AlgoSdk.Indexer.MiniAssetHolding x) => x.IsFrozen, (ref AlgoSdk.Indexer.MiniAssetHolding x, System.Boolean value) => x.IsFrozen = value).Assign("deleted", (AlgoSdk.Indexer.MiniAssetHolding x) => x.Deleted, (ref AlgoSdk.Indexer.MiniAssetHolding x, AlgoSdk.Optional<System.Boolean> value) => x.Deleted = value).Assign("opted-in-at-round", (AlgoSdk.Indexer.MiniAssetHolding x) => x.OptedInAtRound, (ref AlgoSdk.Indexer.MiniAssetHolding x, AlgoSdk.Optional<System.UInt64> value) => x.OptedInAtRound = value).Assign("opted-out-at-round", (AlgoSdk.Indexer.MiniAssetHolding x) => x.OptedOutAtRound, (ref AlgoSdk.Indexer.MiniAssetHolding x, AlgoSdk.Optional<System.UInt64> value) => x.OptedOutAtRound = value));
+            return true;
+        }
+    }
+}
+namespace AlgoSdk.Indexer
+{
+    
+    
+    public partial struct StateProofParticipant
+    {
+        
+        private static bool @__generated__IsValid = StateProofParticipant.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Indexer.StateProofParticipant>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Indexer.StateProofParticipant>(false).Assign("verifier", (AlgoSdk.Indexer.StateProofParticipant x) => x.Verifier, (ref AlgoSdk.Indexer.StateProofParticipant x, AlgoSdk.Indexer.StateProofVerifier value) => x.Verifier = value).Assign("weight", (AlgoSdk.Indexer.StateProofParticipant x) => x.Weight, (ref AlgoSdk.Indexer.StateProofParticipant x, AlgoSdk.Optional<System.UInt64> value) => x.Weight = value));
             return true;
         }
     }
@@ -260,6 +340,22 @@ namespace AlgoSdk.Indexer
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Indexer.Asset>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Indexer.Asset>(false).Assign("index", (AlgoSdk.Indexer.Asset x) => x.Index, (ref AlgoSdk.Indexer.Asset x, System.UInt64 value) => x.Index = value).Assign("deleted", (AlgoSdk.Indexer.Asset x) => x.Deleted, (ref AlgoSdk.Indexer.Asset x, AlgoSdk.Optional<System.Boolean> value) => x.Deleted = value).Assign("created-at-round", (AlgoSdk.Indexer.Asset x) => x.CreatedAtRound, (ref AlgoSdk.Indexer.Asset x, AlgoSdk.Optional<System.UInt64> value) => x.CreatedAtRound = value).Assign("destroyed-at-round", (AlgoSdk.Indexer.Asset x) => x.DestroyedAtRound, (ref AlgoSdk.Indexer.Asset x, AlgoSdk.Optional<System.UInt64> value) => x.DestroyedAtRound = value).Assign("params", (AlgoSdk.Indexer.Asset x) => x.Params, (ref AlgoSdk.Indexer.Asset x, AlgoSdk.Indexer.AssetParams value) => x.Params = value));
+            return true;
+        }
+    }
+}
+namespace AlgoSdk.Indexer
+{
+    
+    
+    public partial struct StateProofReveal
+    {
+        
+        private static bool @__generated__IsValid = StateProofReveal.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Indexer.StateProofReveal>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Indexer.StateProofReveal>(false).Assign("position", (AlgoSdk.Indexer.StateProofReveal x) => x.Position, (ref AlgoSdk.Indexer.StateProofReveal x, AlgoSdk.Optional<System.UInt64> value) => x.Position = value).Assign("sig-slot", (AlgoSdk.Indexer.StateProofReveal x) => x.SigSlot, (ref AlgoSdk.Indexer.StateProofReveal x, AlgoSdk.Indexer.StateProofSigSlot value) => x.SigSlot = value).Assign("participant", (AlgoSdk.Indexer.StateProofReveal x) => x.Participant, (ref AlgoSdk.Indexer.StateProofReveal x, AlgoSdk.Indexer.StateProofParticipant value) => x.Participant = value));
             return true;
         }
     }
@@ -356,6 +452,22 @@ namespace AlgoSdk.Indexer
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Indexer.BlockRewards>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Indexer.BlockRewards>(false).Assign("fee-sink", (AlgoSdk.Indexer.BlockRewards x) => x.FeeSink, (ref AlgoSdk.Indexer.BlockRewards x, System.String value) => x.FeeSink = value, AlgoSdk.StringComparer.Instance).Assign("rewards-calculation-round", (AlgoSdk.Indexer.BlockRewards x) => x.RewardsCalculationRound, (ref AlgoSdk.Indexer.BlockRewards x, System.UInt64 value) => x.RewardsCalculationRound = value).Assign("rewards-level", (AlgoSdk.Indexer.BlockRewards x) => x.RewardsLevel, (ref AlgoSdk.Indexer.BlockRewards x, System.UInt64 value) => x.RewardsLevel = value).Assign("rewards-pool", (AlgoSdk.Indexer.BlockRewards x) => x.RewardsPool, (ref AlgoSdk.Indexer.BlockRewards x, System.String value) => x.RewardsPool = value, AlgoSdk.StringComparer.Instance).Assign("rewards-rate", (AlgoSdk.Indexer.BlockRewards x) => x.RewardsRate, (ref AlgoSdk.Indexer.BlockRewards x, System.UInt64 value) => x.RewardsRate = value).Assign("rewards-residue", (AlgoSdk.Indexer.BlockRewards x) => x.RewardsResidue, (ref AlgoSdk.Indexer.BlockRewards x, System.UInt64 value) => x.RewardsResidue = value));
+            return true;
+        }
+    }
+}
+namespace AlgoSdk.Indexer
+{
+    
+    
+    public partial struct StateProofSignature
+    {
+        
+        private static bool @__generated__IsValid = StateProofSignature.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Indexer.StateProofSignature>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Indexer.StateProofSignature>(false).Assign("falcon-signature", (AlgoSdk.Indexer.StateProofSignature x) => x.FalconSignature, (ref AlgoSdk.Indexer.StateProofSignature x, System.Byte[] value) => x.FalconSignature = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("merkle-array-index", (AlgoSdk.Indexer.StateProofSignature x) => x.MerkleArrayIndex, (ref AlgoSdk.Indexer.StateProofSignature x, AlgoSdk.Optional<System.UInt64> value) => x.MerkleArrayIndex = value).Assign("proof", (AlgoSdk.Indexer.StateProofSignature x) => x.Proof, (ref AlgoSdk.Indexer.StateProofSignature x, AlgoSdk.Indexer.MerkleArrayProof value) => x.Proof = value).Assign("verifying-key", (AlgoSdk.Indexer.StateProofSignature x) => x.VerifyingKey, (ref AlgoSdk.Indexer.StateProofSignature x, System.Byte[] value) => x.VerifyingKey = value, AlgoSdk.ArrayComparer<System.Byte>.Instance));
             return true;
         }
     }
@@ -499,7 +611,55 @@ namespace AlgoSdk.Indexer
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Indexer.Transaction>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Indexer.Transaction>(false).Assign("fee", (AlgoSdk.Indexer.Transaction x) => x.Fee, (ref AlgoSdk.Indexer.Transaction x, System.UInt64 value) => x.Fee = value).Assign("asset-transfer-transaction", (AlgoSdk.Indexer.Transaction x) => x.AssetTransferTransaction, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Indexer.TransactionAssetTransfer value) => x.AssetTransferTransaction = value).Assign("group", (AlgoSdk.Indexer.Transaction x) => x.Group, (ref AlgoSdk.Indexer.Transaction x, System.Byte[] value) => x.Group = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("created-application-index", (AlgoSdk.Indexer.Transaction x) => x.CreatedApplicationIndex, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Optional<System.UInt64> value) => x.CreatedApplicationIndex = value).Assign("lease", (AlgoSdk.Indexer.Transaction x) => x.Lease, (ref AlgoSdk.Indexer.Transaction x, System.Byte[] value) => x.Lease = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("genesis-hash", (AlgoSdk.Indexer.Transaction x) => x.GenesisHash, (ref AlgoSdk.Indexer.Transaction x, System.Byte[] value) => x.GenesisHash = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("logs", (AlgoSdk.Indexer.Transaction x) => x.Logs, (ref AlgoSdk.Indexer.Transaction x, System.Byte[][] value) => x.Logs = value, AlgoSdk.ArrayComparer<System.Byte[], AlgoSdk.ArrayComparer<System.Byte>>.Instance).Assign("sender-rewards", (AlgoSdk.Indexer.Transaction x) => x.SenderRewards, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Optional<System.UInt64> value) => x.SenderRewards = value).Assign("closing-amount", (AlgoSdk.Indexer.Transaction x) => x.ClosingAmount, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Optional<System.UInt64> value) => x.ClosingAmount = value).Assign("signature", (AlgoSdk.Indexer.Transaction x) => x.Signature, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Indexer.TransactionSignature value) => x.Signature = value).Assign("global-state-delta", (AlgoSdk.Indexer.Transaction x) => x.GlobalStateDelta, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Indexer.StateDelta value) => x.GlobalStateDelta = value).Assign("tx-type", (AlgoSdk.Indexer.Transaction x) => x.TxType, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.TransactionType value) => x.TxType = value, AlgoSdk.ByteEnumComparer<AlgoSdk.TransactionType>.Instance).Assign("intra-round-offset", (AlgoSdk.Indexer.Transaction x) => x.IntraRoundOffset, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Optional<System.UInt64> value) => x.IntraRoundOffset = value).Assign("payment-transaction", (AlgoSdk.Indexer.Transaction x) => x.PaymentTransaction, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Indexer.TransactionPayment value) => x.PaymentTransaction = value).Assign("keyreg-transaction", (AlgoSdk.Indexer.Transaction x) => x.KeyregTransaction, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Indexer.TransactionKeyreg value) => x.KeyregTransaction = value).Assign("confirmed-round", (AlgoSdk.Indexer.Transaction x) => x.ConfirmedRound, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Optional<System.UInt64> value) => x.ConfirmedRound = value).Assign("note", (AlgoSdk.Indexer.Transaction x) => x.Note, (ref AlgoSdk.Indexer.Transaction x, System.Byte[] value) => x.Note = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("receiver-rewards", (AlgoSdk.Indexer.Transaction x) => x.ReceiverRewards, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Optional<System.UInt64> value) => x.ReceiverRewards = value).Assign("round-time", (AlgoSdk.Indexer.Transaction x) => x.RoundTime, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Optional<System.UInt64> value) => x.RoundTime = value).Assign("inner-txns", (AlgoSdk.Indexer.Transaction x) => x.InnerTxns, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Indexer.Transaction[] value) => x.InnerTxns = value, AlgoSdk.ArrayComparer<AlgoSdk.Indexer.Transaction>.Instance).Assign("asset-config-transaction", (AlgoSdk.Indexer.Transaction x) => x.AssetConfigTransaction, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Indexer.TransactionAssetConfig value) => x.AssetConfigTransaction = value).Assign("last-valid", (AlgoSdk.Indexer.Transaction x) => x.LastValid, (ref AlgoSdk.Indexer.Transaction x, System.UInt64 value) => x.LastValid = value).Assign("close-rewards", (AlgoSdk.Indexer.Transaction x) => x.CloseRewards, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Optional<System.UInt64> value) => x.CloseRewards = value).Assign("local-state-delta", (AlgoSdk.Indexer.Transaction x) => x.LocalStateDelta, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Indexer.AccountStateDelta[] value) => x.LocalStateDelta = value, AlgoSdk.ArrayComparer<AlgoSdk.Indexer.AccountStateDelta>.Instance).Assign("id", (AlgoSdk.Indexer.Transaction x) => x.Id, (ref AlgoSdk.Indexer.Transaction x, System.String value) => x.Id = value, AlgoSdk.StringComparer.Instance).Assign("auth-addr", (AlgoSdk.Indexer.Transaction x) => x.AuthAddr, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Address value) => x.AuthAddr = value).Assign("genesis-id", (AlgoSdk.Indexer.Transaction x) => x.GenesisId, (ref AlgoSdk.Indexer.Transaction x, System.String value) => x.GenesisId = value, AlgoSdk.StringComparer.Instance).Assign("sender", (AlgoSdk.Indexer.Transaction x) => x.Sender, (ref AlgoSdk.Indexer.Transaction x, System.String value) => x.Sender = value, AlgoSdk.StringComparer.Instance).Assign("application-transaction", (AlgoSdk.Indexer.Transaction x) => x.ApplicationTransaction, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Indexer.TransactionApplication value) => x.ApplicationTransaction = value).Assign("created-asset-index", (AlgoSdk.Indexer.Transaction x) => x.CreatedAssetIndex, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Optional<System.UInt64> value) => x.CreatedAssetIndex = value).Assign("first-valid", (AlgoSdk.Indexer.Transaction x) => x.FirstValid, (ref AlgoSdk.Indexer.Transaction x, System.UInt64 value) => x.FirstValid = value).Assign("rekey-to", (AlgoSdk.Indexer.Transaction x) => x.RekeyTo, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Address value) => x.RekeyTo = value).Assign("asset-freeze-transaction", (AlgoSdk.Indexer.Transaction x) => x.AssetFreezeTransaction, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Indexer.TransactionAssetFreeze value) => x.AssetFreezeTransaction = value));
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Indexer.Transaction>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Indexer.Transaction>(false).Assign("state-proof-transaction", (AlgoSdk.Indexer.Transaction x) => x.StateProofTransaction, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Indexer.TransactionStateProof value) => x.StateProofTransaction = value).Assign("fee", (AlgoSdk.Indexer.Transaction x) => x.Fee, (ref AlgoSdk.Indexer.Transaction x, System.UInt64 value) => x.Fee = value).Assign("asset-transfer-transaction", (AlgoSdk.Indexer.Transaction x) => x.AssetTransferTransaction, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Indexer.TransactionAssetTransfer value) => x.AssetTransferTransaction = value).Assign("group", (AlgoSdk.Indexer.Transaction x) => x.Group, (ref AlgoSdk.Indexer.Transaction x, System.Byte[] value) => x.Group = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("created-application-index", (AlgoSdk.Indexer.Transaction x) => x.CreatedApplicationIndex, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Optional<System.UInt64> value) => x.CreatedApplicationIndex = value).Assign("lease", (AlgoSdk.Indexer.Transaction x) => x.Lease, (ref AlgoSdk.Indexer.Transaction x, System.Byte[] value) => x.Lease = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("genesis-hash", (AlgoSdk.Indexer.Transaction x) => x.GenesisHash, (ref AlgoSdk.Indexer.Transaction x, System.Byte[] value) => x.GenesisHash = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("logs", (AlgoSdk.Indexer.Transaction x) => x.Logs, (ref AlgoSdk.Indexer.Transaction x, System.Byte[][] value) => x.Logs = value, AlgoSdk.ArrayComparer<System.Byte[], AlgoSdk.ArrayComparer<System.Byte>>.Instance).Assign("sender-rewards", (AlgoSdk.Indexer.Transaction x) => x.SenderRewards, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Optional<System.UInt64> value) => x.SenderRewards = value).Assign("closing-amount", (AlgoSdk.Indexer.Transaction x) => x.ClosingAmount, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Optional<System.UInt64> value) => x.ClosingAmount = value).Assign("signature", (AlgoSdk.Indexer.Transaction x) => x.Signature, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Indexer.TransactionSignature value) => x.Signature = value).Assign("global-state-delta", (AlgoSdk.Indexer.Transaction x) => x.GlobalStateDelta, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Indexer.StateDelta value) => x.GlobalStateDelta = value).Assign("tx-type", (AlgoSdk.Indexer.Transaction x) => x.TxType, (ref AlgoSdk.Indexer.Transaction x, System.String value) => x.TxType = value, AlgoSdk.StringComparer.Instance).Assign("intra-round-offset", (AlgoSdk.Indexer.Transaction x) => x.IntraRoundOffset, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Optional<System.UInt64> value) => x.IntraRoundOffset = value).Assign("payment-transaction", (AlgoSdk.Indexer.Transaction x) => x.PaymentTransaction, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Indexer.TransactionPayment value) => x.PaymentTransaction = value).Assign("keyreg-transaction", (AlgoSdk.Indexer.Transaction x) => x.KeyregTransaction, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Indexer.TransactionKeyreg value) => x.KeyregTransaction = value).Assign("confirmed-round", (AlgoSdk.Indexer.Transaction x) => x.ConfirmedRound, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Optional<System.UInt64> value) => x.ConfirmedRound = value).Assign("note", (AlgoSdk.Indexer.Transaction x) => x.Note, (ref AlgoSdk.Indexer.Transaction x, System.Byte[] value) => x.Note = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("receiver-rewards", (AlgoSdk.Indexer.Transaction x) => x.ReceiverRewards, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Optional<System.UInt64> value) => x.ReceiverRewards = value).Assign("round-time", (AlgoSdk.Indexer.Transaction x) => x.RoundTime, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Optional<System.UInt64> value) => x.RoundTime = value).Assign("inner-txns", (AlgoSdk.Indexer.Transaction x) => x.InnerTxns, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Indexer.Transaction[] value) => x.InnerTxns = value, AlgoSdk.ArrayComparer<AlgoSdk.Indexer.Transaction>.Instance).Assign("asset-config-transaction", (AlgoSdk.Indexer.Transaction x) => x.AssetConfigTransaction, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Indexer.TransactionAssetConfig value) => x.AssetConfigTransaction = value).Assign("last-valid", (AlgoSdk.Indexer.Transaction x) => x.LastValid, (ref AlgoSdk.Indexer.Transaction x, System.UInt64 value) => x.LastValid = value).Assign("close-rewards", (AlgoSdk.Indexer.Transaction x) => x.CloseRewards, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Optional<System.UInt64> value) => x.CloseRewards = value).Assign("local-state-delta", (AlgoSdk.Indexer.Transaction x) => x.LocalStateDelta, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Indexer.AccountStateDelta[] value) => x.LocalStateDelta = value, AlgoSdk.ArrayComparer<AlgoSdk.Indexer.AccountStateDelta>.Instance).Assign("id", (AlgoSdk.Indexer.Transaction x) => x.Id, (ref AlgoSdk.Indexer.Transaction x, System.String value) => x.Id = value, AlgoSdk.StringComparer.Instance).Assign("auth-addr", (AlgoSdk.Indexer.Transaction x) => x.AuthAddr, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Address value) => x.AuthAddr = value).Assign("genesis-id", (AlgoSdk.Indexer.Transaction x) => x.GenesisId, (ref AlgoSdk.Indexer.Transaction x, System.String value) => x.GenesisId = value, AlgoSdk.StringComparer.Instance).Assign("sender", (AlgoSdk.Indexer.Transaction x) => x.Sender, (ref AlgoSdk.Indexer.Transaction x, System.String value) => x.Sender = value, AlgoSdk.StringComparer.Instance).Assign("application-transaction", (AlgoSdk.Indexer.Transaction x) => x.ApplicationTransaction, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Indexer.TransactionApplication value) => x.ApplicationTransaction = value).Assign("created-asset-index", (AlgoSdk.Indexer.Transaction x) => x.CreatedAssetIndex, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Optional<System.UInt64> value) => x.CreatedAssetIndex = value).Assign("first-valid", (AlgoSdk.Indexer.Transaction x) => x.FirstValid, (ref AlgoSdk.Indexer.Transaction x, System.UInt64 value) => x.FirstValid = value).Assign("rekey-to", (AlgoSdk.Indexer.Transaction x) => x.RekeyTo, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Address value) => x.RekeyTo = value).Assign("asset-freeze-transaction", (AlgoSdk.Indexer.Transaction x) => x.AssetFreezeTransaction, (ref AlgoSdk.Indexer.Transaction x, AlgoSdk.Indexer.TransactionAssetFreeze value) => x.AssetFreezeTransaction = value));
+            return true;
+        }
+    }
+}
+namespace AlgoSdk.Indexer
+{
+    
+    
+    public partial struct TransactionStateProof
+    {
+        
+        private static bool @__generated__IsValid = TransactionStateProof.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Indexer.TransactionStateProof>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Indexer.TransactionStateProof>(false).Assign("state-proof-type", (AlgoSdk.Indexer.TransactionStateProof x) => x.StateProofType, (ref AlgoSdk.Indexer.TransactionStateProof x, AlgoSdk.Optional<System.UInt64> value) => x.StateProofType = value).Assign("state-proof", (AlgoSdk.Indexer.TransactionStateProof x) => x.StateProof, (ref AlgoSdk.Indexer.TransactionStateProof x, AlgoSdk.Indexer.StateProofFields value) => x.StateProof = value).Assign("message", (AlgoSdk.Indexer.TransactionStateProof x) => x.Message, (ref AlgoSdk.Indexer.TransactionStateProof x, AlgoSdk.Indexer.IndexerStateProofMessage value) => x.Message = value));
+            return true;
+        }
+    }
+}
+namespace AlgoSdk.Indexer
+{
+    
+    
+    public partial struct StateProofSigSlot
+    {
+        
+        private static bool @__generated__IsValid = StateProofSigSlot.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Indexer.StateProofSigSlot>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Indexer.StateProofSigSlot>(false).Assign("signature", (AlgoSdk.Indexer.StateProofSigSlot x) => x.Signature, (ref AlgoSdk.Indexer.StateProofSigSlot x, AlgoSdk.Indexer.StateProofSignature value) => x.Signature = value).Assign("lower-sig-weight", (AlgoSdk.Indexer.StateProofSigSlot x) => x.LowerSigWeight, (ref AlgoSdk.Indexer.StateProofSigSlot x, AlgoSdk.Optional<System.UInt64> value) => x.LowerSigWeight = value));
+            return true;
+        }
+    }
+}
+namespace AlgoSdk.Indexer
+{
+    
+    
+    public partial struct StateProofVerifier
+    {
+        
+        private static bool @__generated__IsValid = StateProofVerifier.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Indexer.StateProofVerifier>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Indexer.StateProofVerifier>(false).Assign("commitment", (AlgoSdk.Indexer.StateProofVerifier x) => x.Commitment, (ref AlgoSdk.Indexer.StateProofVerifier x, System.Byte[] value) => x.Commitment = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("key-lifetime", (AlgoSdk.Indexer.StateProofVerifier x) => x.KeyLifetime, (ref AlgoSdk.Indexer.StateProofVerifier x, AlgoSdk.Optional<System.UInt64> value) => x.KeyLifetime = value));
             return true;
         }
     }
@@ -524,6 +684,22 @@ namespace AlgoSdk.Indexer
 {
     
     
+    public partial struct IndexerStateProofMessage
+    {
+        
+        private static bool @__generated__IsValid = IndexerStateProofMessage.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Indexer.IndexerStateProofMessage>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Indexer.IndexerStateProofMessage>(false).Assign("block-headers-commitment", (AlgoSdk.Indexer.IndexerStateProofMessage x) => x.BlockHeadersCommitment, (ref AlgoSdk.Indexer.IndexerStateProofMessage x, System.Byte[] value) => x.BlockHeadersCommitment = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("voters-commitment", (AlgoSdk.Indexer.IndexerStateProofMessage x) => x.VotersCommitment, (ref AlgoSdk.Indexer.IndexerStateProofMessage x, System.Byte[] value) => x.VotersCommitment = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("ln-proven-weight", (AlgoSdk.Indexer.IndexerStateProofMessage x) => x.LnProvenWeight, (ref AlgoSdk.Indexer.IndexerStateProofMessage x, AlgoSdk.Optional<System.UInt64> value) => x.LnProvenWeight = value).Assign("first-attested-round", (AlgoSdk.Indexer.IndexerStateProofMessage x) => x.FirstAttestedRound, (ref AlgoSdk.Indexer.IndexerStateProofMessage x, AlgoSdk.Optional<System.UInt64> value) => x.FirstAttestedRound = value).Assign("latest-attested-round", (AlgoSdk.Indexer.IndexerStateProofMessage x) => x.LatestAttestedRound, (ref AlgoSdk.Indexer.IndexerStateProofMessage x, AlgoSdk.Optional<System.UInt64> value) => x.LatestAttestedRound = value));
+            return true;
+        }
+    }
+}
+namespace AlgoSdk.Indexer
+{
+    
+    
     public partial struct BlockUpgradeState
     {
         
@@ -532,6 +708,22 @@ namespace AlgoSdk.Indexer
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Indexer.BlockUpgradeState>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Indexer.BlockUpgradeState>(false).Assign("current-protocol", (AlgoSdk.Indexer.BlockUpgradeState x) => x.CurrentProtocol, (ref AlgoSdk.Indexer.BlockUpgradeState x, System.String value) => x.CurrentProtocol = value, AlgoSdk.StringComparer.Instance).Assign("next-protocol", (AlgoSdk.Indexer.BlockUpgradeState x) => x.NextProtocol, (ref AlgoSdk.Indexer.BlockUpgradeState x, System.String value) => x.NextProtocol = value, AlgoSdk.StringComparer.Instance).Assign("next-protocol-approvals", (AlgoSdk.Indexer.BlockUpgradeState x) => x.NextProtocolApprovals, (ref AlgoSdk.Indexer.BlockUpgradeState x, AlgoSdk.Optional<System.UInt64> value) => x.NextProtocolApprovals = value).Assign("next-protocol-switch-on", (AlgoSdk.Indexer.BlockUpgradeState x) => x.NextProtocolSwitchOn, (ref AlgoSdk.Indexer.BlockUpgradeState x, AlgoSdk.Optional<System.UInt64> value) => x.NextProtocolSwitchOn = value).Assign("next-protocol-vote-before", (AlgoSdk.Indexer.BlockUpgradeState x) => x.NextProtocolVoteBefore, (ref AlgoSdk.Indexer.BlockUpgradeState x, AlgoSdk.Optional<System.UInt64> value) => x.NextProtocolVoteBefore = value));
+            return true;
+        }
+    }
+}
+namespace AlgoSdk.Indexer
+{
+    
+    
+    public partial struct MerkleArrayProof
+    {
+        
+        private static bool @__generated__IsValid = MerkleArrayProof.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Indexer.MerkleArrayProof>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Indexer.MerkleArrayProof>(false).Assign("path", (AlgoSdk.Indexer.MerkleArrayProof x) => x.Path, (ref AlgoSdk.Indexer.MerkleArrayProof x, System.Byte[][] value) => x.Path = value, AlgoSdk.ArrayComparer<System.Byte[], AlgoSdk.ArrayComparer<System.Byte>>.Instance).Assign("hash-factory", (AlgoSdk.Indexer.MerkleArrayProof x) => x.HashFactory, (ref AlgoSdk.Indexer.MerkleArrayProof x, AlgoSdk.Indexer.HashFactory value) => x.HashFactory = value).Assign("tree-depth", (AlgoSdk.Indexer.MerkleArrayProof x) => x.TreeDepth, (ref AlgoSdk.Indexer.MerkleArrayProof x, AlgoSdk.Optional<System.UInt64> value) => x.TreeDepth = value));
             return true;
         }
     }
