@@ -1,6 +1,5 @@
 using System;
 using Algorand.Unity;
-using UnityEngine.Networking;
 
 namespace AlgoSdk
 {
@@ -102,7 +101,7 @@ namespace AlgoSdk
                 else
                 {
                     headers = new (string headers, string value)[client.Headers.Length + 1];
-                    for (var i = 0; i < headers.Length; i++)
+                    for (var i = 0; i < client.Headers.Length; i++)
                         headers[i] = client.Headers[i];
                     headers[client.Headers.Length] = (client.TokenHeader, client.Token);
                     return new UnityHttpClient(address, timeout, headers);
