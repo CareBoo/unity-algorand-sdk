@@ -61,8 +61,8 @@ namespace Algorand.Unity
 
         private static Uri FormatAddress(string address)
         {
-            if (!address.EndsWith('/'))
-                address += '/';
+            if (!address.EndsWith("/"))
+                address += "/";
             var addressUri = new Uri(address);
             if (!addressUri.IsAbsoluteUri)
                 throw new ArgumentException("Given host must be an absolute path.", nameof(address));
