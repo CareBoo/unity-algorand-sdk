@@ -15,7 +15,7 @@ namespace AlgoSdk.Experimental.Abi
     {
         public const int SizeBytes = 4;
 
-        [FieldOffset(0)] unsafe fixed byte bytes[SizeBytes];
+        [FieldOffset(0)] private unsafe fixed byte bytes[SizeBytes];
 
         public MethodSelector(Method method)
         {

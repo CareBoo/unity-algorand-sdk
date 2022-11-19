@@ -17,9 +17,9 @@ namespace AlgoSdk
         /// </remarks>
         public partial struct Building
         {
-            List<Transaction> _txns;
+            private List<Transaction> _txns;
 
-            List<(int, Method)> _methodIndices;
+            private List<(int, Method)> _methodIndices;
 
             /// <summary>
             /// The current number of transactions in this group.
@@ -31,7 +31,7 @@ namespace AlgoSdk
             /// </summary>
             public Transaction this[int i] => _txns[i];
 
-            List<Transaction> txns
+            private List<Transaction> txns
             {
                 get
                 {

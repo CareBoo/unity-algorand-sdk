@@ -18,16 +18,16 @@ namespace AlgoSdk.Experimental.Abi
         : IEquatable<Contract>
     {
         [SerializeField, Tooltip("A user-friendly name for the contract")]
-        string name;
+        private string name;
 
         [SerializeField, Tooltip("Optional, user-friendly description for the interface")]
-        string description;
+        private string description;
 
         [SerializeField, Tooltip("Optional object listing the contract instances across different networks")]
-        Deployments networks;
+        private Deployments networks;
 
         [SerializeField, Tooltip("All of the methods that the contract implements")]
-        Method[] methods;
+        private Method[] methods;
 
         /// <summary>
         /// A user-friendly name for the contract
@@ -86,7 +86,7 @@ namespace AlgoSdk.Experimental.Abi
             : IEquatable<Deployments>
         {
             [SerializeField, Tooltip("Contains information about the deployed contract in the network indicated.")]
-            Deployment[] deployments;
+            private Deployment[] deployments;
 
             public Deployment this[int index]
             {
@@ -217,10 +217,10 @@ namespace AlgoSdk.Experimental.Abi
             : IEquatable<Deployment>
         {
             [SerializeField, Tooltip("The base64 genesis hash of the network.")]
-            FixedString64Bytes network;
+            private FixedString64Bytes network;
 
             [SerializeField, Tooltip("The app ID of the deployed contract in this network.")]
-            AppIndex appId;
+            private AppIndex appId;
 
             /// <summary>
             /// The base64 genesis hash of the network.

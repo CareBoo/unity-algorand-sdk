@@ -11,9 +11,9 @@ namespace AlgoSdk.Experimental.Abi
     public struct AbiReferences
         : INativeDisposable
     {
-        NativeOrderedSet<Address> accounts;
-        NativeOrderedSet<ulong> apps;
-        NativeOrderedSet<ulong> assets;
+        private NativeOrderedSet<Address> accounts;
+        private NativeOrderedSet<ulong> apps;
+        private NativeOrderedSet<ulong> assets;
 
         public AbiReferences(Allocator allocator)
         {

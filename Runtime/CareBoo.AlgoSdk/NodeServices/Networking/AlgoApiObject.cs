@@ -32,9 +32,9 @@ namespace AlgoSdk
         /// </summary>
         public bool IsJson => contentType == ContentType.Json;
 
-        readonly byte[] data;
+        private readonly byte[] data;
 
-        readonly ContentType contentType;
+        private readonly ContentType contentType;
 
         public AlgoApiObject(byte[] data, ContentType contentType)
         {

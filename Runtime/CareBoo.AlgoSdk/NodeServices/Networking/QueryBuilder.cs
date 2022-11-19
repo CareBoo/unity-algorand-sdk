@@ -8,8 +8,8 @@ namespace AlgoSdk
     internal struct QueryBuilder
         : INativeDisposable
     {
-        const string DateTimeFormat = "o";
-        NativeText text;
+        private const string DateTimeFormat = "o";
+        private NativeText text;
 
         public QueryBuilder(Allocator allocator)
         {
@@ -122,7 +122,7 @@ namespace AlgoSdk
             return text.ToString();
         }
 
-        void AddKey(string key)
+        private void AddKey(string key)
         {
             text.Append(text.Length == 0 ? '?'.ToRune() : '&'.ToRune());
             text.Append(key);

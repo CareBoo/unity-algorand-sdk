@@ -40,23 +40,23 @@ namespace AlgoSdk
     {
         [SerializeField]
         [Tooltip("The current protocol version.")]
-        FixedString128Bytes currentProtocol;
+        private FixedString128Bytes currentProtocol;
 
         [SerializeField]
         [Tooltip("The next proposed protocol version.")]
-        FixedString128Bytes nextProtocol;
+        private FixedString128Bytes nextProtocol;
 
         [SerializeField]
         [Tooltip("Number of blocks which approved the protocol upgrade.")]
-        ulong nextProtocolApprovals;
+        private ulong nextProtocolApprovals;
 
         [SerializeField]
         [Tooltip("Round on which the protocol upgrade will take effect.")]
-        ulong nextProtocolSwitchOn;
+        private ulong nextProtocolSwitchOn;
 
         [SerializeField]
         [Tooltip("Deadline round for this protocol upgrade (No votes will be consider after this round).")]
-        ulong nextProtocolVoteBefore;
+        private ulong nextProtocolVoteBefore;
 
         [AlgoApiField("current-protocol")]
         public FixedString128Bytes CurrentProtocol

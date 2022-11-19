@@ -34,7 +34,7 @@ namespace AlgoSdk
 
         public const int MaxIndex = 15;
 
-        TxnFlags indices;
+        private TxnFlags indices;
 
         public int Count()
         {
@@ -98,7 +98,7 @@ namespace AlgoSdk
 
         public struct Enumerator : IEnumerator<int>
         {
-            TxnFlags indices;
+            private TxnFlags indices;
 
             public Enumerator(TxnFlags indices)
             {

@@ -19,9 +19,9 @@ namespace AlgoSdk
         /// </remarks>
         public partial struct Signing : ISigning<Signing>
         {
-            readonly Transaction[] txns;
-            readonly TransactionSignature[] sigs;
-            readonly (int, Method)[] methodIndices;
+            private readonly Transaction[] txns;
+            private readonly TransactionSignature[] sigs;
+            private readonly (int, Method)[] methodIndices;
 
             /// <summary>
             /// Create a new AtomicTransaction that is ready for signing.

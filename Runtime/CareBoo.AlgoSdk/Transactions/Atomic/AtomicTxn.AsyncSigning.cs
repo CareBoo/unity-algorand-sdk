@@ -20,10 +20,10 @@ namespace AlgoSdk
         /// </remarks>
         public partial struct AsyncSigning : ISigning<AsyncSigning>
         {
-            readonly Transaction[] txns;
-            readonly TransactionSignature[] sigs;
-            readonly List<UniTask> asyncSignings;
-            readonly (int, Method)[] methodIndices;
+            private readonly Transaction[] txns;
+            private readonly TransactionSignature[] sigs;
+            private readonly List<UniTask> asyncSignings;
+            private readonly (int, Method)[] methodIndices;
 
             /// <summary>
             /// Create a new Atomic Txn group that contains some asynchronous signers.
@@ -145,7 +145,7 @@ namespace AlgoSdk
                 return new Submitted(algod, txnIds, methodIndices);
             }
 
-            async UniTask SetSignaturesAsync(UniTask<SignedTxn<Transaction>[]> signing, TxnIndices indices)
+            private async UniTask SetSignaturesAsync(UniTask<SignedTxn<Transaction>[]> signing, TxnIndices indices)
             {
                 var signedTxns = await signing;
                 this.SetSignatures(signedTxns, indices);

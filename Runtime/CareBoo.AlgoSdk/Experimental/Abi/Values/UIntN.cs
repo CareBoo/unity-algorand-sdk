@@ -9,7 +9,7 @@ namespace AlgoSdk.Experimental.Abi
     /// </summary>
     public readonly struct UInt8 : IUIntN
     {
-        readonly byte value;
+        private readonly byte value;
 
         public UInt8(byte value)
         {
@@ -60,7 +60,7 @@ namespace AlgoSdk.Experimental.Abi
     /// </summary>
     public readonly struct UInt16 : IUIntN
     {
-        readonly ushort value;
+        private readonly ushort value;
 
         public UInt16(ushort value)
         {
@@ -117,7 +117,7 @@ namespace AlgoSdk.Experimental.Abi
     /// </summary>
     public readonly struct UInt32 : IUIntN
     {
-        readonly uint value;
+        private readonly uint value;
 
         public UInt32(uint value)
         {
@@ -175,7 +175,7 @@ namespace AlgoSdk.Experimental.Abi
     /// </summary>
     public readonly struct UInt64 : IUIntN
     {
-        readonly ulong value;
+        private readonly ulong value;
 
         public UInt64(ulong value)
         {
@@ -232,7 +232,7 @@ namespace AlgoSdk.Experimental.Abi
     /// </summary>
     public readonly struct UIntN : IUIntN
     {
-        readonly BigInteger value;
+        private readonly BigInteger value;
 
         public UIntN(BigInteger value)
         {

@@ -9,7 +9,7 @@ namespace AlgoSdk.Experimental.Abi
     public readonly struct AbiAddress
         : IAbiValue
     {
-        readonly Address value;
+        private readonly Address value;
 
         public AbiAddress(Address value)
         {
@@ -52,7 +52,7 @@ namespace AlgoSdk.Experimental.Abi
             return value.ToString();
         }
 
-        void CheckType(IAbiType type)
+        private void CheckType(IAbiType type)
         {
             switch (type.ValueType)
             {

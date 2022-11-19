@@ -6,8 +6,7 @@ namespace AlgoSdk.Experimental.Abi
     [Serializable]
     public class ReferenceType : IAbiType
     {
-        [SerializeField]
-        AbiReferenceType referenceType;
+        [SerializeField] private AbiReferenceType referenceType;
 
         public ReferenceType(AbiReferenceType referenceType)
         {

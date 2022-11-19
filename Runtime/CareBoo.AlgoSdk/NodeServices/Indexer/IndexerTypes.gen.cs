@@ -241,12 +241,12 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 ;
         }
 
-        public static implicit operator Dotnet.Block(Block from)
+        public static explicit operator Dotnet.Block(Block from)
         {
             return from.Convert().ToDotnet<Dotnet.Block>();
         }
 
-        public static implicit operator Block(Dotnet.Block from)
+        public static explicit operator Block(Dotnet.Block from)
         {
             return from.Convert().ToUnity<Block>();
         }
@@ -329,12 +329,12 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 ;
         }
 
-        public static implicit operator Dotnet.TransactionSignatureMultisig(TransactionSignatureMultisig from)
+        public static explicit operator Dotnet.TransactionSignatureMultisig(TransactionSignatureMultisig from)
         {
             return from.Convert().ToDotnet<Dotnet.TransactionSignatureMultisig>();
         }
 
-        public static implicit operator TransactionSignatureMultisig(Dotnet.TransactionSignatureMultisig from)
+        public static explicit operator TransactionSignatureMultisig(Dotnet.TransactionSignatureMultisig from)
         {
             return from.Convert().ToUnity<TransactionSignatureMultisig>();
         }
@@ -473,12 +473,12 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 ;
         }
 
-        public static implicit operator Dotnet.ApplicationParams(ApplicationParams from)
+        public static explicit operator Dotnet.ApplicationParams(ApplicationParams from)
         {
             return from.Convert().ToDotnet<Dotnet.ApplicationParams>();
         }
 
-        public static implicit operator ApplicationParams(Dotnet.ApplicationParams from)
+        public static explicit operator ApplicationParams(Dotnet.ApplicationParams from)
         {
             return from.Convert().ToUnity<ApplicationParams>();
         }
@@ -603,12 +603,12 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 ;
         }
 
-        public static implicit operator Dotnet.TealValue(TealValue from)
+        public static explicit operator Dotnet.TealValue(TealValue from)
         {
             return from.Convert().ToDotnet<Dotnet.TealValue>();
         }
 
-        public static implicit operator TealValue(Dotnet.TealValue from)
+        public static explicit operator TealValue(Dotnet.TealValue from)
         {
             return from.Convert().ToUnity<TealValue>();
         }
@@ -680,12 +680,12 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 ;
         }
 
-        public static implicit operator Dotnet.TransactionSignatureLogicsig(TransactionSignatureLogicsig from)
+        public static explicit operator Dotnet.TransactionSignatureLogicsig(TransactionSignatureLogicsig from)
         {
             return from.Convert().ToDotnet<Dotnet.TransactionSignatureLogicsig>();
         }
 
-        public static implicit operator TransactionSignatureLogicsig(Dotnet.TransactionSignatureLogicsig from)
+        public static explicit operator TransactionSignatureLogicsig(Dotnet.TransactionSignatureLogicsig from)
         {
             return from.Convert().ToUnity<TransactionSignatureLogicsig>();
         }
@@ -743,12 +743,12 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 ;
         }
 
-        public static implicit operator Dotnet.EvalDelta(EvalDelta from)
+        public static explicit operator Dotnet.EvalDelta(EvalDelta from)
         {
             return from.Convert().ToDotnet<Dotnet.EvalDelta>();
         }
 
-        public static implicit operator EvalDelta(Dotnet.EvalDelta from)
+        public static explicit operator EvalDelta(Dotnet.EvalDelta from)
         {
             return from.Convert().ToUnity<EvalDelta>();
         }
@@ -918,12 +918,12 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 ;
         }
 
-        public static implicit operator Dotnet.TransactionApplication(TransactionApplication from)
+        public static explicit operator Dotnet.TransactionApplication(TransactionApplication from)
         {
             return from.Convert().ToDotnet<Dotnet.TransactionApplication>();
         }
 
-        public static implicit operator TransactionApplication(Dotnet.TransactionApplication from)
+        public static explicit operator TransactionApplication(Dotnet.TransactionApplication from)
         {
             return from.Convert().ToUnity<TransactionApplication>();
         }
@@ -967,12 +967,12 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 ;
         }
 
-        public static implicit operator Dotnet.ApplicationStateSchema(ApplicationStateSchema from)
+        public static explicit operator Dotnet.ApplicationStateSchema(ApplicationStateSchema from)
         {
             return from.Convert().ToDotnet<Dotnet.ApplicationStateSchema>();
         }
 
-        public static implicit operator ApplicationStateSchema(Dotnet.ApplicationStateSchema from)
+        public static explicit operator ApplicationStateSchema(Dotnet.ApplicationStateSchema from)
         {
             return from.Convert().ToUnity<ApplicationStateSchema>();
         }
@@ -1016,12 +1016,12 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 ;
         }
 
-        public static implicit operator Dotnet.TransactionAssetConfig(TransactionAssetConfig from)
+        public static explicit operator Dotnet.TransactionAssetConfig(TransactionAssetConfig from)
         {
             return from.Convert().ToDotnet<Dotnet.TransactionAssetConfig>();
         }
 
-        public static implicit operator TransactionAssetConfig(Dotnet.TransactionAssetConfig from)
+        public static explicit operator TransactionAssetConfig(Dotnet.TransactionAssetConfig from)
         {
             return from.Convert().ToUnity<TransactionAssetConfig>();
         }
@@ -1093,12 +1093,12 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 ;
         }
 
-        public static implicit operator Dotnet.TransactionPayment(TransactionPayment from)
+        public static explicit operator Dotnet.TransactionPayment(TransactionPayment from)
         {
             return from.Convert().ToDotnet<Dotnet.TransactionPayment>();
         }
 
-        public static implicit operator TransactionPayment(Dotnet.TransactionPayment from)
+        public static explicit operator TransactionPayment(Dotnet.TransactionPayment from)
         {
             return from.Convert().ToUnity<TransactionPayment>();
         }
@@ -1307,12 +1307,12 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 ;
         }
 
-        public static implicit operator Dotnet.MiniAssetHolding(MiniAssetHolding from)
+        public static explicit operator Dotnet.MiniAssetHolding(MiniAssetHolding from)
         {
             return from.Convert().ToDotnet<Dotnet.MiniAssetHolding>();
         }
 
-        public static implicit operator MiniAssetHolding(Dotnet.MiniAssetHolding from)
+        public static explicit operator MiniAssetHolding(Dotnet.MiniAssetHolding from)
         {
             return from.Convert().ToUnity<MiniAssetHolding>();
         }
@@ -1395,12 +1395,12 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 ;
         }
 
-        public static implicit operator Dotnet.ApplicationLogData(ApplicationLogData from)
+        public static explicit operator Dotnet.ApplicationLogData(ApplicationLogData from)
         {
             return from.Convert().ToDotnet<Dotnet.ApplicationLogData>();
         }
 
-        public static implicit operator ApplicationLogData(Dotnet.ApplicationLogData from)
+        public static explicit operator ApplicationLogData(Dotnet.ApplicationLogData from)
         {
             return from.Convert().ToUnity<ApplicationLogData>();
         }
@@ -1458,12 +1458,12 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 ;
         }
 
-        public static implicit operator Dotnet.TransactionAssetFreeze(TransactionAssetFreeze from)
+        public static explicit operator Dotnet.TransactionAssetFreeze(TransactionAssetFreeze from)
         {
             return from.Convert().ToDotnet<Dotnet.TransactionAssetFreeze>();
         }
 
-        public static implicit operator TransactionAssetFreeze(Dotnet.TransactionAssetFreeze from)
+        public static explicit operator TransactionAssetFreeze(Dotnet.TransactionAssetFreeze from)
         {
             return from.Convert().ToUnity<TransactionAssetFreeze>();
         }
@@ -1577,12 +1577,12 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 ;
         }
 
-        public static implicit operator Dotnet.TransactionKeyreg(TransactionKeyreg from)
+        public static explicit operator Dotnet.TransactionKeyreg(TransactionKeyreg from)
         {
             return from.Convert().ToDotnet<Dotnet.TransactionKeyreg>();
         }
 
-        public static implicit operator TransactionKeyreg(Dotnet.TransactionKeyreg from)
+        public static explicit operator TransactionKeyreg(Dotnet.TransactionKeyreg from)
         {
             return from.Convert().ToUnity<TransactionKeyreg>();
         }
@@ -1640,12 +1640,12 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 ;
         }
 
-        public static implicit operator Dotnet.TransactionSignature(TransactionSignature from)
+        public static explicit operator Dotnet.TransactionSignature(TransactionSignature from)
         {
             return from.Convert().ToDotnet<Dotnet.TransactionSignature>();
         }
 
-        public static implicit operator TransactionSignature(Dotnet.TransactionSignature from)
+        public static explicit operator TransactionSignature(Dotnet.TransactionSignature from)
         {
             return from.Convert().ToUnity<TransactionSignature>();
         }
@@ -1731,12 +1731,12 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 ;
         }
 
-        public static implicit operator Dotnet.Asset(Asset from)
+        public static explicit operator Dotnet.Asset(Asset from)
         {
             return from.Convert().ToDotnet<Dotnet.Asset>();
         }
 
-        public static implicit operator Asset(Dotnet.Asset from)
+        public static explicit operator Asset(Dotnet.Asset from)
         {
             return from.Convert().ToUnity<Asset>();
         }
@@ -1833,12 +1833,12 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 ;
         }
 
-        public static implicit operator Dotnet.TealKeyValue(TealKeyValue from)
+        public static explicit operator Dotnet.TealKeyValue(TealKeyValue from)
         {
             return from.Convert().ToDotnet<Dotnet.TealKeyValue>();
         }
 
-        public static implicit operator TealKeyValue(Dotnet.TealKeyValue from)
+        public static explicit operator TealKeyValue(Dotnet.TealKeyValue from)
         {
             return from.Convert().ToUnity<TealKeyValue>();
         }
@@ -1952,12 +1952,12 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 ;
         }
 
-        public static implicit operator Dotnet.HealthCheck(HealthCheck from)
+        public static explicit operator Dotnet.HealthCheck(HealthCheck from)
         {
             return from.Convert().ToDotnet<Dotnet.HealthCheck>();
         }
 
-        public static implicit operator HealthCheck(Dotnet.HealthCheck from)
+        public static explicit operator HealthCheck(Dotnet.HealthCheck from)
         {
             return from.Convert().ToUnity<HealthCheck>();
         }
@@ -2001,12 +2001,12 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 ;
         }
 
-        public static implicit operator Dotnet.EvalDeltaKeyValue(EvalDeltaKeyValue from)
+        public static explicit operator Dotnet.EvalDeltaKeyValue(EvalDeltaKeyValue from)
         {
             return from.Convert().ToDotnet<Dotnet.EvalDeltaKeyValue>();
         }
 
-        public static implicit operator EvalDeltaKeyValue(Dotnet.EvalDeltaKeyValue from)
+        public static explicit operator EvalDeltaKeyValue(Dotnet.EvalDeltaKeyValue from)
         {
             return from.Convert().ToUnity<EvalDeltaKeyValue>();
         }
@@ -2106,12 +2106,12 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 ;
         }
 
-        public static implicit operator Dotnet.AssetHolding(AssetHolding from)
+        public static explicit operator Dotnet.AssetHolding(AssetHolding from)
         {
             return from.Convert().ToDotnet<Dotnet.AssetHolding>();
         }
 
-        public static implicit operator AssetHolding(Dotnet.AssetHolding from)
+        public static explicit operator AssetHolding(Dotnet.AssetHolding from)
         {
             return from.Convert().ToUnity<AssetHolding>();
         }
@@ -2497,12 +2497,12 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.Account(Account from)
+        public static explicit operator Dotnet.Account(Account from)
         {
             return from.Convert().ToDotnet<Dotnet.Account>();
         }
 
-        public static implicit operator Account(Dotnet.Account from)
+        public static explicit operator Account(Dotnet.Account from)
         {
             return from.Convert().ToUnity<Account>();
         }
@@ -2602,12 +2602,12 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.BlockRewards(BlockRewards from)
+        public static explicit operator Dotnet.BlockRewards(BlockRewards from)
         {
             return from.Convert().ToDotnet<Dotnet.BlockRewards>();
         }
 
-        public static implicit operator BlockRewards(Dotnet.BlockRewards from)
+        public static explicit operator BlockRewards(Dotnet.BlockRewards from)
         {
             return from.Convert().ToUnity<BlockRewards>();
         }
@@ -2718,12 +2718,12 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.AccountStateDelta(AccountStateDelta from)
+        public static explicit operator Dotnet.AccountStateDelta(AccountStateDelta from)
         {
             return from.Convert().ToDotnet<Dotnet.AccountStateDelta>();
         }
 
-        public static implicit operator AccountStateDelta(Dotnet.AccountStateDelta from)
+        public static explicit operator AccountStateDelta(Dotnet.AccountStateDelta from)
         {
             return from.Convert().ToUnity<AccountStateDelta>();
         }
@@ -2781,12 +2781,12 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.BlockUpgradeVote(BlockUpgradeVote from)
+        public static explicit operator Dotnet.BlockUpgradeVote(BlockUpgradeVote from)
         {
             return from.Convert().ToDotnet<Dotnet.BlockUpgradeVote>();
         }
 
-        public static implicit operator BlockUpgradeVote(Dotnet.BlockUpgradeVote from)
+        public static explicit operator BlockUpgradeVote(Dotnet.BlockUpgradeVote from)
         {
             return from.Convert().ToUnity<BlockUpgradeVote>();
         }
@@ -2872,12 +2872,12 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.Application(Application from)
+        public static explicit operator Dotnet.Application(Application from)
         {
             return from.Convert().ToDotnet<Dotnet.Application>();
         }
 
-        public static implicit operator Application(Dotnet.Application from)
+        public static explicit operator Application(Dotnet.Application from)
         {
             return from.Convert().ToUnity<Application>();
         }
@@ -2921,12 +2921,12 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.StateSchema(StateSchema from)
+        public static explicit operator Dotnet.StateSchema(StateSchema from)
         {
             return from.Convert().ToDotnet<Dotnet.StateSchema>();
         }
 
-        public static implicit operator StateSchema(Dotnet.StateSchema from)
+        public static explicit operator StateSchema(Dotnet.StateSchema from)
         {
             return from.Convert().ToUnity<StateSchema>();
         }
@@ -3026,12 +3026,12 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.ApplicationLocalState(ApplicationLocalState from)
+        public static explicit operator Dotnet.ApplicationLocalState(ApplicationLocalState from)
         {
             return from.Convert().ToDotnet<Dotnet.ApplicationLocalState>();
         }
 
-        public static implicit operator ApplicationLocalState(Dotnet.ApplicationLocalState from)
+        public static explicit operator ApplicationLocalState(Dotnet.ApplicationLocalState from)
         {
             return from.Convert().ToUnity<ApplicationLocalState>();
         }
@@ -3075,12 +3075,12 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.TransactionSignatureMultisigSubsignature(TransactionSignatureMultisigSubsignature from)
+        public static explicit operator Dotnet.TransactionSignatureMultisigSubsignature(TransactionSignatureMultisigSubsignature from)
         {
             return from.Convert().ToDotnet<Dotnet.TransactionSignatureMultisigSubsignature>();
         }
 
-        public static implicit operator TransactionSignatureMultisigSubsignature(Dotnet.TransactionSignatureMultisigSubsignature from)
+        public static explicit operator TransactionSignatureMultisigSubsignature(Dotnet.TransactionSignatureMultisigSubsignature from)
         {
             return from.Convert().ToUnity<TransactionSignatureMultisigSubsignature>();
         }
@@ -3180,12 +3180,12 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.AccountParticipation(AccountParticipation from)
+        public static explicit operator Dotnet.AccountParticipation(AccountParticipation from)
         {
             return from.Convert().ToDotnet<Dotnet.AccountParticipation>();
         }
 
-        public static implicit operator AccountParticipation(Dotnet.AccountParticipation from)
+        public static explicit operator AccountParticipation(Dotnet.AccountParticipation from)
         {
             return from.Convert().ToUnity<AccountParticipation>();
         }
@@ -3285,12 +3285,12 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.TransactionAssetTransfer(TransactionAssetTransfer from)
+        public static explicit operator Dotnet.TransactionAssetTransfer(TransactionAssetTransfer from)
         {
             return from.Convert().ToDotnet<Dotnet.TransactionAssetTransfer>();
         }
 
-        public static implicit operator TransactionAssetTransfer(Dotnet.TransactionAssetTransfer from)
+        public static explicit operator TransactionAssetTransfer(Dotnet.TransactionAssetTransfer from)
         {
             return from.Convert().ToUnity<TransactionAssetTransfer>();
         }
@@ -3800,12 +3800,12 @@ Valid types, and where their fields are stored:
                 ;
         }
 
-        public static implicit operator Dotnet.Transaction(Transaction from)
+        public static explicit operator Dotnet.Transaction(Transaction from)
         {
             return from.Convert().ToDotnet<Dotnet.Transaction>();
         }
 
-        public static implicit operator Transaction(Dotnet.Transaction from)
+        public static explicit operator Transaction(Dotnet.Transaction from)
         {
             return from.Convert().ToUnity<Transaction>();
         }
@@ -4162,12 +4162,12 @@ Valid types, and where their fields are stored:
                 ;
         }
 
-        public static implicit operator Dotnet.AssetParams(AssetParams from)
+        public static explicit operator Dotnet.AssetParams(AssetParams from)
         {
             return from.Convert().ToDotnet<Dotnet.AssetParams>();
         }
 
-        public static implicit operator AssetParams(Dotnet.AssetParams from)
+        public static explicit operator AssetParams(Dotnet.AssetParams from)
         {
             return from.Convert().ToUnity<AssetParams>();
         }
@@ -4334,12 +4334,12 @@ Valid types, and where their fields are stored:
                 ;
         }
 
-        public static implicit operator Dotnet.BlockUpgradeState(BlockUpgradeState from)
+        public static explicit operator Dotnet.BlockUpgradeState(BlockUpgradeState from)
         {
             return from.Convert().ToDotnet<Dotnet.BlockUpgradeState>();
         }
 
-        public static implicit operator BlockUpgradeState(Dotnet.BlockUpgradeState from)
+        public static explicit operator BlockUpgradeState(Dotnet.BlockUpgradeState from)
         {
             return from.Convert().ToUnity<BlockUpgradeState>();
         }
@@ -4450,12 +4450,12 @@ Valid types, and where their fields are stored:
                 ;
         }
 
-        public static implicit operator Dotnet.AssetHoldingsResponse(AssetHoldingsResponse from)
+        public static explicit operator Dotnet.AssetHoldingsResponse(AssetHoldingsResponse from)
         {
             return from.Convert().ToDotnet<Dotnet.AssetHoldingsResponse>();
         }
 
-        public static implicit operator AssetHoldingsResponse(Dotnet.AssetHoldingsResponse from)
+        public static explicit operator AssetHoldingsResponse(Dotnet.AssetHoldingsResponse from)
         {
             return from.Convert().ToUnity<AssetHoldingsResponse>();
         }
@@ -4499,12 +4499,12 @@ Valid types, and where their fields are stored:
                 ;
         }
 
-        public static implicit operator Dotnet.ApplicationResponse(ApplicationResponse from)
+        public static explicit operator Dotnet.ApplicationResponse(ApplicationResponse from)
         {
             return from.Convert().ToDotnet<Dotnet.ApplicationResponse>();
         }
 
-        public static implicit operator ApplicationResponse(Dotnet.ApplicationResponse from)
+        public static explicit operator ApplicationResponse(Dotnet.ApplicationResponse from)
         {
             return from.Convert().ToUnity<ApplicationResponse>();
         }
@@ -4562,12 +4562,12 @@ Valid types, and where their fields are stored:
                 ;
         }
 
-        public static implicit operator Dotnet.TransactionsResponse(TransactionsResponse from)
+        public static explicit operator Dotnet.TransactionsResponse(TransactionsResponse from)
         {
             return from.Convert().ToDotnet<Dotnet.TransactionsResponse>();
         }
 
-        public static implicit operator TransactionsResponse(Dotnet.TransactionsResponse from)
+        public static explicit operator TransactionsResponse(Dotnet.TransactionsResponse from)
         {
             return from.Convert().ToUnity<TransactionsResponse>();
         }
@@ -4625,12 +4625,12 @@ Valid types, and where their fields are stored:
                 ;
         }
 
-        public static implicit operator Dotnet.AccountsResponse(AccountsResponse from)
+        public static explicit operator Dotnet.AccountsResponse(AccountsResponse from)
         {
             return from.Convert().ToDotnet<Dotnet.AccountsResponse>();
         }
 
-        public static implicit operator AccountsResponse(Dotnet.AccountsResponse from)
+        public static explicit operator AccountsResponse(Dotnet.AccountsResponse from)
         {
             return from.Convert().ToUnity<AccountsResponse>();
         }
@@ -4674,12 +4674,12 @@ Valid types, and where their fields are stored:
                 ;
         }
 
-        public static implicit operator Dotnet.AssetResponse(AssetResponse from)
+        public static explicit operator Dotnet.AssetResponse(AssetResponse from)
         {
             return from.Convert().ToDotnet<Dotnet.AssetResponse>();
         }
 
-        public static implicit operator AssetResponse(Dotnet.AssetResponse from)
+        public static explicit operator AssetResponse(Dotnet.AssetResponse from)
         {
             return from.Convert().ToUnity<AssetResponse>();
         }
@@ -4737,12 +4737,12 @@ Valid types, and where their fields are stored:
                 ;
         }
 
-        public static implicit operator Dotnet.AssetBalancesResponse(AssetBalancesResponse from)
+        public static explicit operator Dotnet.AssetBalancesResponse(AssetBalancesResponse from)
         {
             return from.Convert().ToDotnet<Dotnet.AssetBalancesResponse>();
         }
 
-        public static implicit operator AssetBalancesResponse(Dotnet.AssetBalancesResponse from)
+        public static explicit operator AssetBalancesResponse(Dotnet.AssetBalancesResponse from)
         {
             return from.Convert().ToUnity<AssetBalancesResponse>();
         }
@@ -4786,12 +4786,12 @@ Valid types, and where their fields are stored:
                 ;
         }
 
-        public static implicit operator Dotnet.AccountResponse(AccountResponse from)
+        public static explicit operator Dotnet.AccountResponse(AccountResponse from)
         {
             return from.Convert().ToDotnet<Dotnet.AccountResponse>();
         }
 
-        public static implicit operator AccountResponse(Dotnet.AccountResponse from)
+        public static explicit operator AccountResponse(Dotnet.AccountResponse from)
         {
             return from.Convert().ToUnity<AccountResponse>();
         }
@@ -4849,12 +4849,12 @@ Valid types, and where their fields are stored:
                 ;
         }
 
-        public static implicit operator Dotnet.ApplicationsResponse(ApplicationsResponse from)
+        public static explicit operator Dotnet.ApplicationsResponse(ApplicationsResponse from)
         {
             return from.Convert().ToDotnet<Dotnet.ApplicationsResponse>();
         }
 
-        public static implicit operator ApplicationsResponse(Dotnet.ApplicationsResponse from)
+        public static explicit operator ApplicationsResponse(Dotnet.ApplicationsResponse from)
         {
             return from.Convert().ToUnity<ApplicationsResponse>();
         }
@@ -4898,12 +4898,12 @@ Valid types, and where their fields are stored:
                 ;
         }
 
-        public static implicit operator Dotnet.TransactionResponse(TransactionResponse from)
+        public static explicit operator Dotnet.TransactionResponse(TransactionResponse from)
         {
             return from.Convert().ToDotnet<Dotnet.TransactionResponse>();
         }
 
-        public static implicit operator TransactionResponse(Dotnet.TransactionResponse from)
+        public static explicit operator TransactionResponse(Dotnet.TransactionResponse from)
         {
             return from.Convert().ToUnity<TransactionResponse>();
         }
@@ -4975,12 +4975,12 @@ Valid types, and where their fields are stored:
                 ;
         }
 
-        public static implicit operator Dotnet.ApplicationLogsResponse(ApplicationLogsResponse from)
+        public static explicit operator Dotnet.ApplicationLogsResponse(ApplicationLogsResponse from)
         {
             return from.Convert().ToDotnet<Dotnet.ApplicationLogsResponse>();
         }
 
-        public static implicit operator ApplicationLogsResponse(Dotnet.ApplicationLogsResponse from)
+        public static explicit operator ApplicationLogsResponse(Dotnet.ApplicationLogsResponse from)
         {
             return from.Convert().ToUnity<ApplicationLogsResponse>();
         }
@@ -5038,12 +5038,12 @@ Valid types, and where their fields are stored:
                 ;
         }
 
-        public static implicit operator Dotnet.AssetsResponse(AssetsResponse from)
+        public static explicit operator Dotnet.AssetsResponse(AssetsResponse from)
         {
             return from.Convert().ToDotnet<Dotnet.AssetsResponse>();
         }
 
-        public static implicit operator AssetsResponse(Dotnet.AssetsResponse from)
+        public static explicit operator AssetsResponse(Dotnet.AssetsResponse from)
         {
             return from.Convert().ToUnity<AssetsResponse>();
         }
@@ -5101,12 +5101,12 @@ Valid types, and where their fields are stored:
                 ;
         }
 
-        public static implicit operator Dotnet.ApplicationLocalStatesResponse(ApplicationLocalStatesResponse from)
+        public static explicit operator Dotnet.ApplicationLocalStatesResponse(ApplicationLocalStatesResponse from)
         {
             return from.Convert().ToDotnet<Dotnet.ApplicationLocalStatesResponse>();
         }
 
-        public static implicit operator ApplicationLocalStatesResponse(Dotnet.ApplicationLocalStatesResponse from)
+        public static explicit operator ApplicationLocalStatesResponse(Dotnet.ApplicationLocalStatesResponse from)
         {
             return from.Convert().ToUnity<ApplicationLocalStatesResponse>();
         }
@@ -5139,12 +5139,12 @@ Valid types, and where their fields are stored:
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
 
-        public static implicit operator EvalDeltaKeyValue[](StateDelta wrapper)
+        public static explicit operator EvalDeltaKeyValue[](StateDelta wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static implicit operator StateDelta(EvalDeltaKeyValue[] value)
+        public static explicit operator StateDelta(EvalDeltaKeyValue[] value)
         {
             return new StateDelta(value);
         }
@@ -5177,12 +5177,12 @@ Valid types, and where their fields are stored:
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
 
-        public static implicit operator TealKeyValue[](TealKeyValueStore wrapper)
+        public static explicit operator TealKeyValue[](TealKeyValueStore wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static implicit operator TealKeyValueStore(TealKeyValue[] value)
+        public static explicit operator TealKeyValueStore(TealKeyValue[] value)
         {
             return new TealKeyValueStore(value);
         }
@@ -5215,12 +5215,12 @@ Valid types, and where their fields are stored:
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
 
-        public static implicit operator Block(BlockResponse wrapper)
+        public static explicit operator Block(BlockResponse wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static implicit operator BlockResponse(Block value)
+        public static explicit operator BlockResponse(Block value)
         {
             return new BlockResponse(value);
         }
@@ -5253,12 +5253,12 @@ Valid types, and where their fields are stored:
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
 
-        public static implicit operator HealthCheck(HealthCheckResponse wrapper)
+        public static explicit operator HealthCheck(HealthCheckResponse wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static implicit operator HealthCheckResponse(HealthCheck value)
+        public static explicit operator HealthCheckResponse(HealthCheck value)
         {
             return new HealthCheckResponse(value);
         }

@@ -11,10 +11,10 @@ namespace AlgoSdk
         : IEquatable<StateSchema>
     {
         [SerializeField, Tooltip("Maximum number of integer values that may be stored in the [global || local] application key/value store. Immutable.")]
-        ulong numByteSlices;
+        private ulong numByteSlices;
 
         [SerializeField, Tooltip("Maximum number of byte slices values that may be stored in the [global || local] application key/value store. Immutable.")]
-        ulong numUints;
+        private ulong numUints;
 
         /// <summary>
         /// Maximum number of integer values that may be stored in the [global || local] application key/value store. Immutable.

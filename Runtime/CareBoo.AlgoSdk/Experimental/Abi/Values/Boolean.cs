@@ -7,15 +7,15 @@ namespace AlgoSdk.Experimental.Abi
     /// </summary>
     public readonly struct Boolean : IAbiValue
     {
-        const byte EncodedTrue = 0x80;
+        private const byte EncodedTrue = 0x80;
 
-        const byte EncodedFalse = 0x00;
+        private const byte EncodedFalse = 0x00;
 
         public static readonly Boolean True = new Boolean(true);
 
         public static readonly Boolean False = new Boolean(false);
 
-        readonly bool value;
+        private readonly bool value;
 
         public Boolean(bool value)
         {
@@ -43,7 +43,7 @@ namespace AlgoSdk.Experimental.Abi
             return value.ToString();
         }
 
-        void CheckType(IAbiType type)
+        private void CheckType(IAbiType type)
         {
             if (type.Name != "bool")
                 throw new System.ArgumentException($"Cannot encode {type} to ABI bool");

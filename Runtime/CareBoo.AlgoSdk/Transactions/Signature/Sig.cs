@@ -11,7 +11,7 @@ namespace AlgoSdk
         , IEquatable<Sig>
         , IByteArray
     {
-        Ed25519.Signature sig;
+        private Ed25519.Signature sig;
 
         public unsafe void* GetUnsafePtr() => sig.GetUnsafePtr();
 

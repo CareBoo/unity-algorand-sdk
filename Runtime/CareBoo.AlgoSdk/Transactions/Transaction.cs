@@ -53,13 +53,13 @@ namespace AlgoSdk
         /// </summary>
         public static readonly byte[] SignaturePrefix = Encoding.UTF8.GetBytes("TX");
 
-        TransactionHeader header;
-        PaymentTxn.Params paymentParams;
-        AssetConfigTxn.Params assetConfigParams;
-        AssetTransferTxn.Params assetTransferParams;
-        AssetFreezeTxn.Params assetFreezeParams;
-        AppCallTxn.Params appCallParams;
-        KeyRegTxn.Params keyRegParams;
+        private TransactionHeader header;
+        private PaymentTxn.Params paymentParams;
+        private AssetConfigTxn.Params assetConfigParams;
+        private AssetTransferTxn.Params assetTransferParams;
+        private AssetFreezeTxn.Params assetFreezeParams;
+        private AppCallTxn.Params appCallParams;
+        private KeyRegTxn.Params keyRegParams;
 
         /// <inheritdoc />
         public TransactionHeader Header

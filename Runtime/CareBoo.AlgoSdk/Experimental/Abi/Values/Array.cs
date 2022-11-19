@@ -11,8 +11,8 @@ namespace AlgoSdk.Experimental.Abi
         , IAbiValue
         where T : IAbiValue
     {
-        readonly T[] value;
-        readonly int current;
+        private readonly T[] value;
+        private readonly int current;
 
         public Array(T[] value)
         {
@@ -20,7 +20,7 @@ namespace AlgoSdk.Experimental.Abi
             this.current = 0;
         }
 
-        Array(T[] value, int current)
+        private Array(T[] value, int current)
         {
             this.value = value ?? throw new System.ArgumentNullException(nameof(value));
             this.current = current;
@@ -113,7 +113,7 @@ namespace AlgoSdk.Experimental.Abi
             return $"{typeof(T).FullName}[{Count}]";
         }
 
-        void CheckType(IAbiType type)
+        private void CheckType(IAbiType type)
         {
             switch (type.ValueType)
             {

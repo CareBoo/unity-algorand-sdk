@@ -9,7 +9,7 @@ namespace AlgoSdk
     /// </summary>
     public class AlgoApiException : Exception
     {
-        readonly ErrorResponse error;
+        private readonly ErrorResponse error;
 
         public AlgoApiException(ErrorResponse error) : base(error.Message)
         {

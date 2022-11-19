@@ -12,9 +12,9 @@ namespace AlgoSdk.Experimental.Abi
         where THead : IAbiValue
         where TTail : struct, IArgEnumerator<TTail>
     {
-        readonly THead head;
-        readonly TTail tail;
-        readonly bool isHead;
+        private readonly THead head;
+        private readonly TTail tail;
+        private readonly bool isHead;
 
         public ArgsList(THead head, TTail tail)
         {
@@ -23,7 +23,7 @@ namespace AlgoSdk.Experimental.Abi
             this.isHead = false;
         }
 
-        ArgsList(THead head, TTail tail, bool isHead)
+        private ArgsList(THead head, TTail tail, bool isHead)
         {
             this.head = head;
             this.tail = tail;

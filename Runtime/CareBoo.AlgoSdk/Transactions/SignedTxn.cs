@@ -46,9 +46,9 @@ namespace AlgoSdk
         : IEquatable<SignedTxn>
         , ISignedTxn
     {
-        Transaction txn;
-        TransactionSignature signature;
-        Address authAddr;
+        private Transaction txn;
+        private TransactionSignature signature;
+        private Address authAddr;
 
         /// <inheritdoc />
         [AlgoApiField("sig")]
@@ -242,9 +242,9 @@ namespace AlgoSdk
         , ISignedTxn<TTxn>
         where TTxn : ITransaction, IEquatable<TTxn>
     {
-        TTxn txn;
-        TransactionSignature signature;
-        Address authAddr;
+        private TTxn txn;
+        private TransactionSignature signature;
+        private Address authAddr;
 
         /// <inheritdoc />
         [AlgoApiField("sig")]

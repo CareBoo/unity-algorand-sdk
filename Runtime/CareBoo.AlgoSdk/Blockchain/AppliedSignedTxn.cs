@@ -20,11 +20,9 @@ namespace AlgoSdk
         : IEquatable<AppliedSignedTxn>
         , IAppliedSignedTxn<AppliedSignedTxn>
     {
-        [SerializeField]
-        SignedTxn txn;
+        [SerializeField] private SignedTxn txn;
 
-        [SerializeField]
-        ApplyData<AppliedSignedTxn> applyData;
+        [SerializeField] private ApplyData<AppliedSignedTxn> applyData;
 
         /// <inheritdoc />
         [AlgoApiField("sig")]

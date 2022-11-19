@@ -8,9 +8,9 @@ namespace AlgoSdk
     /// </summary>
     public class ModRangeAttribute : PropertyAttribute
     {
-        readonly int min;
-        readonly int max;
-        readonly int mod;
+        private readonly int min;
+        private readonly int max;
+        private readonly int mod;
 
         public ModRangeAttribute(int min, int max, int mod)
         {

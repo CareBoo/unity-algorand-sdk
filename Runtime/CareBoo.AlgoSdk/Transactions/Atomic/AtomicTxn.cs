@@ -27,6 +27,6 @@ namespace AlgoSdk
         /// </summary>
         public static readonly byte[] IdPrefix = Encoding.UTF8.GetBytes("TG");
 
-        static readonly FixedString32Bytes txnGroupKey = "txlist";
+        private static readonly FixedString32Bytes txnGroupKey = "txlist";
     }
 }

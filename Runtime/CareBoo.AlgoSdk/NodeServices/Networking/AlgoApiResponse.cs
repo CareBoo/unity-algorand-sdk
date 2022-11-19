@@ -11,11 +11,11 @@ namespace AlgoSdk
     /// </summary>
     public struct AlgoApiResponse : IAlgoApiResponse
     {
-        readonly byte[] data;
-        readonly Result status;
-        readonly long responseCode;
-        readonly ContentType contentType;
-        readonly ErrorResponse error;
+        private readonly byte[] data;
+        private readonly Result status;
+        private readonly long responseCode;
+        private readonly ContentType contentType;
+        private readonly ErrorResponse error;
 
         public AlgoApiResponse(UnityWebRequest completedRequest)
         {
@@ -57,7 +57,7 @@ namespace AlgoSdk
 
 
         [Conditional("UNITY_ALGO_SDK_DEBUG")]
-        static void DebugRequest(UnityWebRequest completedRequest)
+        private static void DebugRequest(UnityWebRequest completedRequest)
         {
             UnityEngine.Debug.Log(
                 "completed request\n" +
@@ -71,7 +71,7 @@ namespace AlgoSdk
             );
         }
 
-        static string GetText(byte[] data, ContentType contentType)
+        private static string GetText(byte[] data, ContentType contentType)
         {
             if (data == null)
                 return "";
@@ -89,9 +89,9 @@ namespace AlgoSdk
     /// <typeparam name="T">The type of the object deserialized from the response</typeparam>
     public readonly struct AlgoApiResponse<T> : IAlgoApiResponse<T>
     {
-        readonly AlgoApiResponse rawResponse;
-        readonly ErrorResponse error;
-        readonly T payload;
+        private readonly AlgoApiResponse rawResponse;
+        private readonly ErrorResponse error;
+        private readonly T payload;
 
         public AlgoApiResponse(AlgoApiResponse response)
         {

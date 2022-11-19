@@ -5,7 +5,7 @@ namespace AlgoSdk.Experimental.Abi
     /// </summary>
     public struct PackedBooleans
     {
-        byte b;
+        private byte b;
 
         public bool this[int index]
         {

@@ -8,8 +8,7 @@ namespace AlgoSdk
     [AlgoApiFormatter(typeof(HexFormatter))]
     public partial struct Hex : IEquatable<Hex>
     {
-        [SerializeField]
-        byte[] data;
+        [SerializeField] private byte[] data;
 
         public byte[] Data => data;
 

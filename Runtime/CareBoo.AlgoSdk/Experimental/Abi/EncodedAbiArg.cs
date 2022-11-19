@@ -14,7 +14,7 @@ namespace AlgoSdk.Experimental.Abi
         , IByteArray
         , INativeDisposable
     {
-        NativeList<byte> bytes;
+        private NativeList<byte> bytes;
 
         public EncodedAbiArg(
             int capacity,

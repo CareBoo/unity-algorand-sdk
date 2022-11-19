@@ -10,8 +10,8 @@ namespace AlgoSdk
     public class AlgoApiObjectFormatter<T> : IAlgoApiFormatter<T>
         where T : struct
     {
-        readonly bool isStrict;
-        readonly AlgoApiField<T>.Map<FixedString64Bytes> fieldMap = new AlgoApiField<T>.Map<FixedString64Bytes>();
+        private readonly bool isStrict;
+        private readonly AlgoApiField<T>.Map<FixedString64Bytes> fieldMap = new AlgoApiField<T>.Map<FixedString64Bytes>();
 
         public AlgoApiObjectFormatter(bool isStrict)
         {

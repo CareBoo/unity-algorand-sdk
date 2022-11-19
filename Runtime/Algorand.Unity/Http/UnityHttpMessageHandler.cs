@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -8,11 +6,14 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
 using Cysharp.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace Algorand.Unity
 {
     public class UnityHttpMessageHandler : HttpMessageHandler
     {
+        public UnityWebRequestAsyncOperation LastSentRequest { get; protected set; }
+
         protected override async Task<HttpResponseMessage> SendAsync(
             HttpRequestMessage request,
             CancellationToken cancellationToken
@@ -38,29 +39,35 @@ namespace Algorand.Unity
                 unityWebRequest.SetRequestHeader(key, value);
             }
 
-            Debug.Log("Sent webrequest");
-            await unityWebRequest.SendWebRequest().WithCancellation(cancellationToken);
-            var responseMessage = new HttpResponseMessage((HttpStatusCode)unityWebRequest.responseCode)
-            {
-                Content = new ByteArrayContent(unityWebRequest.downloadHandler.data)
-            };
+            var sentRequest = unityWebRequest.SendWebRequest();
+            LastSentRequest = sentRequest;
+            await sentRequest.WithCancellation(cancellationToken);
+            var responseCode = (HttpStatusCode)unityWebRequest.responseCode;
+            var responseContent = new ByteArrayContent(unityWebRequest.downloadHandler.data);
+            var responseMessage = new HttpResponseMessage(responseCode) { Content = responseContent };
             foreach (var header in unityWebRequest.GetResponseHeaders())
             {
                 try
                 {
-                    var headerLower = header.Key.ToLower();
-                    if (headerLower is not "content-type" && headerLower is not "content-length")
-                        responseMessage.Headers.Add(header.Key, header.Value);
-                    else
+                    if (IsContentHeader(header))
                         responseMessage.Content.Headers.Add(header.Key, header.Value);
+                    else
+                        responseMessage.Headers.Add(header.Key, header.Value);
                 }
-                catch
+                catch (System.Exception ex)
                 {
-                    Debug.LogError($"Issue with header: {header}");
+                    var aggregate = new System.Exception($"Issue with header: {header}", ex);
+                    Debug.LogException(aggregate);
                     throw;
                 }
             }
             return responseMessage;
+        }
+
+        private static bool IsContentHeader(KeyValuePair<string, string> header)
+        {
+            var headerKeyLower = header.Key.ToLower();
+            return headerKeyLower == "content-type" || headerKeyLower == "content-length";
         }
     }
 }

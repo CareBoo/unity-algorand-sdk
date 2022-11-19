@@ -15,14 +15,11 @@ namespace AlgoSdk
     [Serializable]
     public partial struct KmdClient : IKmdClient
     {
-        [SerializeField]
-        string address;
+        [SerializeField] private string address;
 
-        [SerializeField]
-        string token;
+        [SerializeField] private string token;
 
-        [SerializeField]
-        Header[] headers;
+        [SerializeField] private Header[] headers;
 
         /// <summary>
         /// Create a new kmd client

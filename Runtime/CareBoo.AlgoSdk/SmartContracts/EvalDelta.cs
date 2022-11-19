@@ -40,16 +40,16 @@ namespace AlgoSdk
         where TTxn : IAppliedSignedTxn<TTxn>
     {
         [SerializeField, Tooltip("Global state delta.")]
-        StateDelta globalDelta;
+        private StateDelta globalDelta;
 
         [SerializeField, Tooltip("Local state deltas.")]
-        StateDelta[] localDeltas;
+        private StateDelta[] localDeltas;
 
         [SerializeField, Tooltip("Logs from application calls.")]
-        string[] logs;
+        private string[] logs;
 
         [SerializeField, Tooltip("The inner transactions (if any) that were evaluated.")]
-        TTxn[] innerTxns;
+        private TTxn[] innerTxns;
 
 
         /// <inheritdoc />

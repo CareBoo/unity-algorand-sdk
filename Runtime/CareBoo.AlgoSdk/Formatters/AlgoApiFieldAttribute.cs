@@ -7,7 +7,7 @@ namespace AlgoSdk
     [Conditional("UNITY_EDITOR")]
     public sealed class AlgoApiFieldAttribute : Attribute
     {
-        readonly string name;
+        private readonly string name;
 
         public AlgoApiFieldAttribute(string name)
         {

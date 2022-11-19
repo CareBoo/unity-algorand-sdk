@@ -11,7 +11,7 @@ namespace AlgoSdk.Experimental.Abi
         : IAbiValue
         where T : IArgEnumerator<T>
     {
-        readonly T args;
+        private readonly T args;
 
         public Tuple(T args)
         {
@@ -79,7 +79,7 @@ namespace AlgoSdk.Experimental.Abi
             }
         }
 
-        void CheckType(IAbiType type)
+        private void CheckType(IAbiType type)
         {
             if (type.ValueType != AbiValueType.Tuple)
                 throw new System.ArgumentException($"Cannot cast tuple to type {type.ValueType}", nameof(type));
@@ -88,25 +88,25 @@ namespace AlgoSdk.Experimental.Abi
                 throw new System.ArgumentException($"Cannot encode a tuple type without any nested types.", nameof(type));
         }
 
-        struct Encoder<U>
+        private struct Encoder<U>
             : INativeDisposable
             where U : IReadOnlyList<IAbiType>
         {
-            T args;
+            private T args;
 
-            U types;
+            private U types;
 
-            AbiReferences references;
+            private AbiReferences references;
 
-            NativeList<byte> headBytes;
+            private NativeList<byte> headBytes;
 
-            NativeList<byte> tailBytes;
+            private NativeList<byte> tailBytes;
 
-            EncodedAbiArg result;
+            private EncodedAbiArg result;
 
-            byte boolShift;
+            private byte boolShift;
 
-            Optional<int> headBytesTotalLength;
+            private Optional<int> headBytesTotalLength;
 
             public Encoder(T args, U types, AbiReferences references, Allocator allocator)
             {
@@ -135,7 +135,7 @@ namespace AlgoSdk.Experimental.Abi
                 return result;
             }
 
-            int Encode()
+            private int Encode()
             {
                 for (var i = 0; i < types.Count; i++)
                 {
@@ -162,7 +162,7 @@ namespace AlgoSdk.Experimental.Abi
                 tailBytes.Dispose();
             }
 
-            void EncodeHead(int t)
+            private void EncodeHead(int t)
             {
                 if (types[t].IsStatic)
                     EncodeStaticHead(t);
@@ -170,7 +170,7 @@ namespace AlgoSdk.Experimental.Abi
                     EncodeDynamicHead(t);
             }
 
-            void EncodeStaticHead(int t)
+            private void EncodeStaticHead(int t)
             {
                 if (types[t].Name == "bool")
                 {
@@ -184,7 +184,7 @@ namespace AlgoSdk.Experimental.Abi
                 }
             }
 
-            void EncodeDynamicHead(int t)
+            private void EncodeDynamicHead(int t)
             {
                 if (!headBytesTotalLength.HasValue)
                 {
@@ -196,7 +196,7 @@ namespace AlgoSdk.Experimental.Abi
                 Endianness.CopyToNativeBytesBigEndian((ushort)ptr, ref headBytes, offset);
             }
 
-            void EncodeBoolHead(int t)
+            private void EncodeBoolHead(int t)
             {
                 boolShift %= 8;
                 if (boolShift == 0)
@@ -206,7 +206,7 @@ namespace AlgoSdk.Experimental.Abi
                 boolShift++;
             }
 
-            void EncodeTail(int t)
+            private void EncodeTail(int t)
             {
                 if (types[t].IsStatic)
                     EncodeStaticTail(t);
@@ -214,17 +214,17 @@ namespace AlgoSdk.Experimental.Abi
                     EncodeDynamicTail(t);
             }
 
-            void EncodeStaticTail(int t)
+            private void EncodeStaticTail(int t)
             {
             }
 
-            void EncodeDynamicTail(int t)
+            private void EncodeDynamicTail(int t)
             {
                 using var bytes = args.EncodeCurrent(types[t], references, Allocator.Persistent);
                 tailBytes.AddRange(bytes.Bytes);
             }
 
-            int CountHeadBytesLength(int t)
+            private int CountHeadBytesLength(int t)
             {
                 var totalLength = headBytes.Length;
                 var args = this.args;

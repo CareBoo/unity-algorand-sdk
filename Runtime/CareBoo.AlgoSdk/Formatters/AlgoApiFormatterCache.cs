@@ -24,7 +24,7 @@ namespace AlgoSdk
     {
         public const string AddFormatterMethodName = nameof(Add);
 
-        static AlgoApiFormatterLookup Instance = new AlgoApiFormatterLookup();
+        private static AlgoApiFormatterLookup Instance = new AlgoApiFormatterLookup();
 
         static AlgoApiFormatterLookup()
         {
@@ -83,7 +83,7 @@ namespace AlgoSdk
             throw new InvalidCastException($"formatter '{formatter.GetType().FullName}' cannot be cast to '{typeof(IAlgoApiFormatter<T>).FullName}'...");
         }
 
-        static bool TryAdd<T>(IAlgoApiFormatter<T> formatter)
+        private static bool TryAdd<T>(IAlgoApiFormatter<T> formatter)
         {
             var type = typeof(T);
             if (Instance.ContainsKey(type)) return false;
@@ -91,7 +91,7 @@ namespace AlgoSdk
             return true;
         }
 
-        static void EnsureStaticConstructor(Type type)
+        private static void EnsureStaticConstructor(Type type)
         {
             if (type.IsArray)
                 type = type.GetElementType();

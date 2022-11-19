@@ -74,7 +74,7 @@ namespace AlgoSdk.Formatters
         : IArray<byte>
         where T : struct, INativeList<byte>
     {
-        T bytes;
+        private T bytes;
 
         public FixedBytesArray(T bytes)
         {

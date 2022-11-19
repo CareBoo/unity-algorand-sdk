@@ -17,17 +17,17 @@ namespace AlgoSdk.Experimental.Abi
     {
         public const int MaxAbiTxnArguments = AppCallTxn.MaxNumAppArguments - 1;
 
-        readonly Address sender;
-        readonly TransactionParams txnParams;
-        readonly AppIndex applicationId;
-        readonly TArguments argValues;
-        readonly OnCompletion onComplete;
+        private readonly Address sender;
+        private readonly TransactionParams txnParams;
+        private readonly AppIndex applicationId;
+        private readonly TArguments argValues;
+        private readonly OnCompletion onComplete;
 
-        readonly MethodSelector methodSelector;
-        readonly IAbiType[] argTypes;
+        private readonly MethodSelector methodSelector;
+        private readonly IAbiType[] argTypes;
 
-        NativeIndexer<IAbiType> txnArgTypes;
-        NativeIndexer<IAbiType> appArgTypes;
+        private NativeIndexer<IAbiType> txnArgTypes;
+        private NativeIndexer<IAbiType> appArgTypes;
 
 
         public MethodCallBuilder(

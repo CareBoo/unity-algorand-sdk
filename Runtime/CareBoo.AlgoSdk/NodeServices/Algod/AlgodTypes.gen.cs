@@ -206,12 +206,12 @@ namespace AlgoSdk.Algod
                 ;
         }
 
-        public static implicit operator Dotnet.ApplicationParams(ApplicationParams from)
+        public static explicit operator Dotnet.ApplicationParams(ApplicationParams from)
         {
             return from.Convert().ToDotnet<Dotnet.ApplicationParams>();
         }
 
-        public static implicit operator ApplicationParams(Dotnet.ApplicationParams from)
+        public static explicit operator ApplicationParams(Dotnet.ApplicationParams from)
         {
             return from.Convert().ToUnity<ApplicationParams>();
         }
@@ -269,12 +269,12 @@ namespace AlgoSdk.Algod
                 ;
         }
 
-        public static implicit operator Dotnet.TealValue(TealValue from)
+        public static explicit operator Dotnet.TealValue(TealValue from)
         {
             return from.Convert().ToDotnet<Dotnet.TealValue>();
         }
 
-        public static implicit operator TealValue(Dotnet.TealValue from)
+        public static explicit operator TealValue(Dotnet.TealValue from)
         {
             return from.Convert().ToUnity<TealValue>();
         }
@@ -402,12 +402,12 @@ namespace AlgoSdk.Algod
                 ;
         }
 
-        public static implicit operator Dotnet.ParticipationKey(ParticipationKey from)
+        public static explicit operator Dotnet.ParticipationKey(ParticipationKey from)
         {
             return from.Convert().ToDotnet<Dotnet.ParticipationKey>();
         }
 
-        public static implicit operator ParticipationKey(Dotnet.ParticipationKey from)
+        public static explicit operator ParticipationKey(Dotnet.ParticipationKey from)
         {
             return from.Convert().ToUnity<ParticipationKey>();
         }
@@ -465,12 +465,12 @@ namespace AlgoSdk.Algod
                 ;
         }
 
-        public static implicit operator Dotnet.EvalDelta(EvalDelta from)
+        public static explicit operator Dotnet.EvalDelta(EvalDelta from)
         {
             return from.Convert().ToDotnet<Dotnet.EvalDelta>();
         }
 
-        public static implicit operator EvalDelta(Dotnet.EvalDelta from)
+        public static explicit operator EvalDelta(Dotnet.EvalDelta from)
         {
             return from.Convert().ToUnity<EvalDelta>();
         }
@@ -514,12 +514,12 @@ namespace AlgoSdk.Algod
                 ;
         }
 
-        public static implicit operator Dotnet.ApplicationStateSchema(ApplicationStateSchema from)
+        public static explicit operator Dotnet.ApplicationStateSchema(ApplicationStateSchema from)
         {
             return from.Convert().ToDotnet<Dotnet.ApplicationStateSchema>();
         }
 
-        public static implicit operator ApplicationStateSchema(Dotnet.ApplicationStateSchema from)
+        public static explicit operator ApplicationStateSchema(Dotnet.ApplicationStateSchema from)
         {
             return from.Convert().ToUnity<ApplicationStateSchema>();
         }
@@ -605,12 +605,12 @@ namespace AlgoSdk.Algod
                 ;
         }
 
-        public static implicit operator Dotnet.DryrunState(DryrunState from)
+        public static explicit operator Dotnet.DryrunState(DryrunState from)
         {
             return from.Convert().ToDotnet<Dotnet.DryrunState>();
         }
 
-        public static implicit operator DryrunState(Dotnet.DryrunState from)
+        public static explicit operator DryrunState(Dotnet.DryrunState from)
         {
             return from.Convert().ToUnity<DryrunState>();
         }
@@ -710,12 +710,12 @@ namespace AlgoSdk.Algod
                 ;
         }
 
-        public static implicit operator Dotnet.BuildVersion(BuildVersion from)
+        public static explicit operator Dotnet.BuildVersion(BuildVersion from)
         {
             return from.Convert().ToDotnet<Dotnet.BuildVersion>();
         }
 
-        public static implicit operator BuildVersion(Dotnet.BuildVersion from)
+        public static explicit operator BuildVersion(Dotnet.BuildVersion from)
         {
             return from.Convert().ToUnity<BuildVersion>();
         }
@@ -829,12 +829,12 @@ namespace AlgoSdk.Algod
                 ;
         }
 
-        public static implicit operator Dotnet.DryrunRequest(DryrunRequest from)
+        public static explicit operator Dotnet.DryrunRequest(DryrunRequest from)
         {
             return from.Convert().ToDotnet<Dotnet.DryrunRequest>();
         }
 
-        public static implicit operator DryrunRequest(Dotnet.DryrunRequest from)
+        public static explicit operator DryrunRequest(Dotnet.DryrunRequest from)
         {
             return from.Convert().ToUnity<DryrunRequest>();
         }
@@ -917,12 +917,12 @@ namespace AlgoSdk.Algod
                 ;
         }
 
-        public static implicit operator Dotnet.Asset(Asset from)
+        public static explicit operator Dotnet.Asset(Asset from)
         {
             return from.Convert().ToDotnet<Dotnet.Asset>();
         }
 
-        public static implicit operator Asset(Dotnet.Asset from)
+        public static explicit operator Asset(Dotnet.Asset from)
         {
             return from.Convert().ToUnity<Asset>();
         }
@@ -966,12 +966,12 @@ namespace AlgoSdk.Algod
                 ;
         }
 
-        public static implicit operator Dotnet.TealKeyValue(TealKeyValue from)
+        public static explicit operator Dotnet.TealKeyValue(TealKeyValue from)
         {
             return from.Convert().ToDotnet<Dotnet.TealKeyValue>();
         }
 
-        public static implicit operator TealKeyValue(Dotnet.TealKeyValue from)
+        public static explicit operator TealKeyValue(Dotnet.TealKeyValue from)
         {
             return from.Convert().ToUnity<TealKeyValue>();
         }
@@ -1251,12 +1251,12 @@ namespace AlgoSdk.Algod
                 ;
         }
 
-        public static implicit operator Dotnet.DryrunSource(DryrunSource from)
+        public static explicit operator Dotnet.DryrunSource(DryrunSource from)
         {
             return from.Convert().ToDotnet<Dotnet.DryrunSource>();
         }
 
-        public static implicit operator DryrunSource(Dotnet.DryrunSource from)
+        public static explicit operator DryrunSource(Dotnet.DryrunSource from)
         {
             return from.Convert().ToUnity<DryrunSource>();
         }
@@ -1300,12 +1300,12 @@ namespace AlgoSdk.Algod
                 ;
         }
 
-        public static implicit operator Dotnet.EvalDeltaKeyValue(EvalDeltaKeyValue from)
+        public static explicit operator Dotnet.EvalDeltaKeyValue(EvalDeltaKeyValue from)
         {
             return from.Convert().ToDotnet<Dotnet.EvalDeltaKeyValue>();
         }
 
-        public static implicit operator EvalDeltaKeyValue(Dotnet.EvalDeltaKeyValue from)
+        public static explicit operator EvalDeltaKeyValue(Dotnet.EvalDeltaKeyValue from)
         {
             return from.Convert().ToUnity<EvalDeltaKeyValue>();
         }
@@ -1363,12 +1363,12 @@ namespace AlgoSdk.Algod
                 ;
         }
 
-        public static implicit operator Dotnet.AssetHolding(AssetHolding from)
+        public static explicit operator Dotnet.AssetHolding(AssetHolding from)
         {
             return from.Convert().ToDotnet<Dotnet.AssetHolding>();
         }
 
-        public static implicit operator AssetHolding(Dotnet.AssetHolding from)
+        public static explicit operator AssetHolding(Dotnet.AssetHolding from)
         {
             return from.Convert().ToUnity<AssetHolding>();
         }
@@ -1728,12 +1728,12 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.Account(Account from)
+        public static explicit operator Dotnet.Account(Account from)
         {
             return from.Convert().ToDotnet<Dotnet.Account>();
         }
 
-        public static implicit operator Account(Dotnet.Account from)
+        public static explicit operator Account(Dotnet.Account from)
         {
             return from.Convert().ToUnity<Account>();
         }
@@ -1777,12 +1777,12 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.AccountStateDelta(AccountStateDelta from)
+        public static explicit operator Dotnet.AccountStateDelta(AccountStateDelta from)
         {
             return from.Convert().ToDotnet<Dotnet.AccountStateDelta>();
         }
 
-        public static implicit operator AccountStateDelta(Dotnet.AccountStateDelta from)
+        public static explicit operator AccountStateDelta(Dotnet.AccountStateDelta from)
         {
             return from.Convert().ToUnity<AccountStateDelta>();
         }
@@ -1879,12 +1879,12 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.Application(Application from)
+        public static explicit operator Dotnet.Application(Application from)
         {
             return from.Convert().ToDotnet<Dotnet.Application>();
         }
 
-        public static implicit operator Application(Dotnet.Application from)
+        public static explicit operator Application(Dotnet.Application from)
         {
             return from.Convert().ToUnity<Application>();
         }
@@ -1942,12 +1942,12 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.ApplicationLocalState(ApplicationLocalState from)
+        public static explicit operator Dotnet.ApplicationLocalState(ApplicationLocalState from)
         {
             return from.Convert().ToDotnet<Dotnet.ApplicationLocalState>();
         }
 
-        public static implicit operator ApplicationLocalState(Dotnet.ApplicationLocalState from)
+        public static explicit operator ApplicationLocalState(Dotnet.ApplicationLocalState from)
         {
             return from.Convert().ToUnity<ApplicationLocalState>();
         }
@@ -2047,12 +2047,12 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.AccountParticipation(AccountParticipation from)
+        public static explicit operator Dotnet.AccountParticipation(AccountParticipation from)
         {
             return from.Convert().ToDotnet<Dotnet.AccountParticipation>();
         }
 
-        public static implicit operator AccountParticipation(Dotnet.AccountParticipation from)
+        public static explicit operator AccountParticipation(Dotnet.AccountParticipation from)
         {
             return from.Convert().ToUnity<AccountParticipation>();
         }
@@ -2124,12 +2124,12 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.Version(Version from)
+        public static explicit operator Dotnet.Version(Version from)
         {
             return from.Convert().ToDotnet<Dotnet.Version>();
         }
 
-        public static implicit operator Version(Dotnet.Version from)
+        public static explicit operator Version(Dotnet.Version from)
         {
             return from.Convert().ToUnity<Version>();
         }
@@ -2355,12 +2355,12 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.AssetParams(AssetParams from)
+        public static explicit operator Dotnet.AssetParams(AssetParams from)
         {
             return from.Convert().ToDotnet<Dotnet.AssetParams>();
         }
 
-        public static implicit operator AssetParams(Dotnet.AssetParams from)
+        public static explicit operator AssetParams(Dotnet.AssetParams from)
         {
             return from.Convert().ToUnity<AssetParams>();
         }
@@ -2544,12 +2544,12 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.DryrunTxnResult(DryrunTxnResult from)
+        public static explicit operator Dotnet.DryrunTxnResult(DryrunTxnResult from)
         {
             return from.Convert().ToDotnet<Dotnet.DryrunTxnResult>();
         }
 
-        public static implicit operator DryrunTxnResult(Dotnet.DryrunTxnResult from)
+        public static explicit operator DryrunTxnResult(Dotnet.DryrunTxnResult from)
         {
             return from.Convert().ToUnity<DryrunTxnResult>();
         }
@@ -2579,12 +2579,12 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.CatchpointAbortResponse(CatchpointAbortResponse from)
+        public static explicit operator Dotnet.CatchpointAbortResponse(CatchpointAbortResponse from)
         {
             return from.Convert().ToDotnet<Dotnet.CatchpointAbortResponse>();
         }
 
-        public static implicit operator CatchpointAbortResponse(Dotnet.CatchpointAbortResponse from)
+        public static explicit operator CatchpointAbortResponse(Dotnet.CatchpointAbortResponse from)
         {
             return from.Convert().ToUnity<CatchpointAbortResponse>();
         }
@@ -2650,12 +2650,12 @@ The raw account uses `AssetParams` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.AccountAssetResponse(AccountAssetResponse from)
+        public static explicit operator Dotnet.AccountAssetResponse(AccountAssetResponse from)
         {
             return from.Convert().ToDotnet<Dotnet.AccountAssetResponse>();
         }
 
-        public static implicit operator AccountAssetResponse(Dotnet.AccountAssetResponse from)
+        public static explicit operator AccountAssetResponse(Dotnet.AccountAssetResponse from)
         {
             return from.Convert().ToUnity<AccountAssetResponse>();
         }
@@ -2834,12 +2834,12 @@ The raw account uses `AssetParams` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.CatchpointStartResponse(CatchpointStartResponse from)
+        public static explicit operator Dotnet.CatchpointStartResponse(CatchpointStartResponse from)
         {
             return from.Convert().ToDotnet<Dotnet.CatchpointStartResponse>();
         }
 
-        public static implicit operator CatchpointStartResponse(Dotnet.CatchpointStartResponse from)
+        public static explicit operator CatchpointStartResponse(Dotnet.CatchpointStartResponse from)
         {
             return from.Convert().ToUnity<CatchpointStartResponse>();
         }
@@ -2922,12 +2922,12 @@ The raw account uses `AssetParams` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.CompileResponse(CompileResponse from)
+        public static explicit operator Dotnet.CompileResponse(CompileResponse from)
         {
             return from.Convert().ToDotnet<Dotnet.CompileResponse>();
         }
 
-        public static implicit operator CompileResponse(Dotnet.CompileResponse from)
+        public static explicit operator CompileResponse(Dotnet.CompileResponse from)
         {
             return from.Convert().ToUnity<CompileResponse>();
         }
@@ -3178,12 +3178,12 @@ The raw account uses `AssetParams` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.NodeStatusResponse(NodeStatusResponse from)
+        public static explicit operator Dotnet.NodeStatusResponse(NodeStatusResponse from)
         {
             return from.Convert().ToDotnet<Dotnet.NodeStatusResponse>();
         }
 
-        public static implicit operator NodeStatusResponse(Dotnet.NodeStatusResponse from)
+        public static explicit operator NodeStatusResponse(Dotnet.NodeStatusResponse from)
         {
             return from.Convert().ToUnity<NodeStatusResponse>();
         }
@@ -3293,12 +3293,12 @@ txn to validate for the current network protocol.")]
                 ;
         }
 
-        public static implicit operator Dotnet.TransactionParametersResponse(TransactionParametersResponse from)
+        public static explicit operator Dotnet.TransactionParametersResponse(TransactionParametersResponse from)
         {
             return from.Convert().ToDotnet<Dotnet.TransactionParametersResponse>();
         }
 
-        public static implicit operator TransactionParametersResponse(Dotnet.TransactionParametersResponse from)
+        public static explicit operator TransactionParametersResponse(Dotnet.TransactionParametersResponse from)
         {
             return from.Convert().ToUnity<TransactionParametersResponse>();
         }
@@ -3356,12 +3356,12 @@ txn to validate for the current network protocol.")]
                 ;
         }
 
-        public static implicit operator Dotnet.SupplyResponse(SupplyResponse from)
+        public static explicit operator Dotnet.SupplyResponse(SupplyResponse from)
         {
             return from.Convert().ToDotnet<Dotnet.SupplyResponse>();
         }
 
-        public static implicit operator SupplyResponse(Dotnet.SupplyResponse from)
+        public static explicit operator SupplyResponse(Dotnet.SupplyResponse from)
         {
             return from.Convert().ToUnity<SupplyResponse>();
         }
@@ -3466,12 +3466,12 @@ The raw account uses `AppParams` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.AccountApplicationResponse(AccountApplicationResponse from)
+        public static explicit operator Dotnet.AccountApplicationResponse(AccountApplicationResponse from)
         {
             return from.Convert().ToDotnet<Dotnet.AccountApplicationResponse>();
         }
 
-        public static implicit operator AccountApplicationResponse(Dotnet.AccountApplicationResponse from)
+        public static explicit operator AccountApplicationResponse(Dotnet.AccountApplicationResponse from)
         {
             return from.Convert().ToUnity<AccountApplicationResponse>();
         }
@@ -3501,12 +3501,12 @@ The raw account uses `AppParams` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.PostTransactionsResponse(PostTransactionsResponse from)
+        public static explicit operator Dotnet.PostTransactionsResponse(PostTransactionsResponse from)
         {
             return from.Convert().ToDotnet<Dotnet.PostTransactionsResponse>();
         }
 
-        public static implicit operator PostTransactionsResponse(Dotnet.PostTransactionsResponse from)
+        public static explicit operator PostTransactionsResponse(Dotnet.PostTransactionsResponse from)
         {
             return from.Convert().ToUnity<PostTransactionsResponse>();
         }
@@ -3564,12 +3564,12 @@ The raw account uses `AppParams` for this type.")]
                 ;
         }
 
-        public static implicit operator Dotnet.DryrunResponse(DryrunResponse from)
+        public static explicit operator Dotnet.DryrunResponse(DryrunResponse from)
         {
             return from.Convert().ToDotnet<Dotnet.DryrunResponse>();
         }
 
-        public static implicit operator DryrunResponse(Dotnet.DryrunResponse from)
+        public static explicit operator DryrunResponse(Dotnet.DryrunResponse from)
         {
             return from.Convert().ToUnity<DryrunResponse>();
         }
@@ -3602,12 +3602,12 @@ The raw account uses `AppParams` for this type.")]
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
 
-        public static implicit operator EvalDeltaKeyValue[](StateDelta wrapper)
+        public static explicit operator EvalDeltaKeyValue[](StateDelta wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static implicit operator StateDelta(EvalDeltaKeyValue[] value)
+        public static explicit operator StateDelta(EvalDeltaKeyValue[] value)
         {
             return new StateDelta(value);
         }
@@ -3640,12 +3640,12 @@ The raw account uses `AppParams` for this type.")]
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
 
-        public static implicit operator TealKeyValue[](TealKeyValueStore wrapper)
+        public static explicit operator TealKeyValue[](TealKeyValueStore wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static implicit operator TealKeyValueStore(TealKeyValue[] value)
+        public static explicit operator TealKeyValueStore(TealKeyValue[] value)
         {
             return new TealKeyValueStore(value);
         }
@@ -3678,12 +3678,12 @@ The raw account uses `AppParams` for this type.")]
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
 
-        public static implicit operator Application(ApplicationResponse wrapper)
+        public static explicit operator Application(ApplicationResponse wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static implicit operator ApplicationResponse(Application value)
+        public static explicit operator ApplicationResponse(Application value)
         {
             return new ApplicationResponse(value);
         }
@@ -3716,12 +3716,12 @@ The raw account uses `AppParams` for this type.")]
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
 
-        public static implicit operator LightBlockHeaderProof(LightBlockHeaderProofResponse wrapper)
+        public static explicit operator LightBlockHeaderProof(LightBlockHeaderProofResponse wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static implicit operator LightBlockHeaderProofResponse(LightBlockHeaderProof value)
+        public static explicit operator LightBlockHeaderProofResponse(LightBlockHeaderProof value)
         {
             return new LightBlockHeaderProofResponse(value);
         }
@@ -3754,12 +3754,12 @@ The raw account uses `AppParams` for this type.")]
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
 
-        public static implicit operator Asset(AssetResponse wrapper)
+        public static explicit operator Asset(AssetResponse wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static implicit operator AssetResponse(Asset value)
+        public static explicit operator AssetResponse(Asset value)
         {
             return new AssetResponse(value);
         }
@@ -3792,12 +3792,12 @@ The raw account uses `AppParams` for this type.")]
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
 
-        public static implicit operator ParticipationKey(ParticipationKeyResponse wrapper)
+        public static explicit operator ParticipationKey(ParticipationKeyResponse wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static implicit operator ParticipationKeyResponse(ParticipationKey value)
+        public static explicit operator ParticipationKeyResponse(ParticipationKey value)
         {
             return new ParticipationKeyResponse(value);
         }
@@ -3830,12 +3830,12 @@ The raw account uses `AppParams` for this type.")]
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
 
-        public static implicit operator StateProof(StateProofResponse wrapper)
+        public static explicit operator StateProof(StateProofResponse wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static implicit operator StateProofResponse(StateProof value)
+        public static explicit operator StateProofResponse(StateProof value)
         {
             return new StateProofResponse(value);
         }
@@ -3868,12 +3868,12 @@ The raw account uses `AppParams` for this type.")]
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
 
-        public static implicit operator ParticipationKey[](ParticipationKeysResponse wrapper)
+        public static explicit operator ParticipationKey[](ParticipationKeysResponse wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static implicit operator ParticipationKeysResponse(ParticipationKey[] value)
+        public static explicit operator ParticipationKeysResponse(ParticipationKey[] value)
         {
             return new ParticipationKeysResponse(value);
         }
@@ -3906,12 +3906,12 @@ The raw account uses `AppParams` for this type.")]
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
 
-        public static implicit operator Account(AccountResponse wrapper)
+        public static explicit operator Account(AccountResponse wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static implicit operator AccountResponse(Account value)
+        public static explicit operator AccountResponse(Account value)
         {
             return new AccountResponse(value);
         }
@@ -3944,12 +3944,12 @@ The raw account uses `AppParams` for this type.")]
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
 
-        public static implicit operator Version(VersionsResponse wrapper)
+        public static explicit operator Version(VersionsResponse wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static implicit operator VersionsResponse(Version value)
+        public static explicit operator VersionsResponse(Version value)
         {
             return new VersionsResponse(value);
         }

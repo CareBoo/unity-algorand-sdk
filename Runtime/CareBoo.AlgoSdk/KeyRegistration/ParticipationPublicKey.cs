@@ -25,9 +25,9 @@ namespace AlgoSdk
             set => publicKey = value;
         }
 
-        [FieldOffset(0)] byte buffer;
+        [FieldOffset(0)] private byte buffer;
 
-        [FieldOffset(0), SerializeField] Ed25519.PublicKey publicKey;
+        [FieldOffset(0), SerializeField] private Ed25519.PublicKey publicKey;
 
         /// <inheritdoc />
         public unsafe void* GetUnsafePtr()

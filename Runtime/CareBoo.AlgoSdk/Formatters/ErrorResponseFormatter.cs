@@ -6,10 +6,10 @@ namespace AlgoSdk.Formatters
 {
     public class ErrorResponseFormatter : IAlgoApiFormatter<ErrorResponse>
     {
-        const string MessageKey = "message";
-        const string DataKey = "data";
-        const string IsErrorKey = "error";
-        const string CodeKey = "statusCode";
+        private const string MessageKey = "message";
+        private const string DataKey = "data";
+        private const string IsErrorKey = "error";
+        private const string CodeKey = "statusCode";
 
         public ErrorResponse Deserialize(ref JsonReader reader)
         {
@@ -92,7 +92,7 @@ namespace AlgoSdk.Formatters
             throw new NotSupportedException($"{nameof(ErrorResponse)} is read only");
         }
 
-        bool FoundAllFields(ErrorResponse error)
+        private bool FoundAllFields(ErrorResponse error)
         {
             return error.Message != null && error.Data != null;
         }

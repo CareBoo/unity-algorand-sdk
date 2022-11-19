@@ -9,7 +9,7 @@ namespace AlgoSdk
     [Conditional("UNITY_EDITOR")]
     public sealed class AlgoApiFormatterAttribute : ProvideSourceInfoAttribute
     {
-        readonly Type formatterType;
+        private readonly Type formatterType;
 
         public AlgoApiFormatterAttribute(
             Type formatterType,

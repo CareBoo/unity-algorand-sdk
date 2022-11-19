@@ -48,7 +48,7 @@ namespace AlgoSdk
                 writer.WriteNil();
         }
 
-        bool TryDeserialize<TValue>(ref JsonReader reader, out TValue value, out Exception exception)
+        private bool TryDeserialize<TValue>(ref JsonReader reader, out TValue value, out Exception exception)
         {
             var startingPosition = reader.Position;
             try
@@ -66,7 +66,7 @@ namespace AlgoSdk
             }
         }
 
-        bool TryDeserialize<TValue>(ref MessagePackReader reader, out TValue value, out Exception exception)
+        private bool TryDeserialize<TValue>(ref MessagePackReader reader, out TValue value, out Exception exception)
         {
             var startingPosition = reader.Position;
             try

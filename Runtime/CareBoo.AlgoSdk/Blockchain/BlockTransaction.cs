@@ -22,14 +22,11 @@ namespace AlgoSdk
         : IEquatable<BlockTransaction>
         , IBlockTransaction
     {
-        [SerializeField]
-        AppliedSignedTxn txn;
+        [SerializeField] private AppliedSignedTxn txn;
 
-        [SerializeField]
-        Optional<bool> hasGenesisId;
+        [SerializeField] private Optional<bool> hasGenesisId;
 
-        [SerializeField]
-        Optional<bool> hasGenesisHash;
+        [SerializeField] private Optional<bool> hasGenesisHash;
 
         /// <inheritdoc />
         [AlgoApiField("sig")]

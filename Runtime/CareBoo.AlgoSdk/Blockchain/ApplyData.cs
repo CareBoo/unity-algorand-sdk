@@ -57,28 +57,28 @@ namespace AlgoSdk
         where TTxn : IAppliedSignedTxn<TTxn>
     {
         [SerializeField, Tooltip("Closing amount for transaction.")]
-        MicroAlgos closingAmount;
+        private MicroAlgos closingAmount;
 
         [SerializeField, Tooltip("Closing amount for asset transaction.")]
-        ulong assetClosingAmount;
+        private ulong assetClosingAmount;
 
         [SerializeField, Tooltip("Rewards applied to Sender account.")]
-        MicroAlgos senderRewards;
+        private MicroAlgos senderRewards;
 
         [SerializeField, Tooltip("Rewards applied to Receiver account.")]
-        MicroAlgos receiverRewards;
+        private MicroAlgos receiverRewards;
 
         [SerializeField, Tooltip("Rewards applied to CloseRemainderTo account.")]
-        MicroAlgos closeRewards;
+        private MicroAlgos closeRewards;
 
         [SerializeField, Tooltip("Application global and local state delta.")]
-        EvalDelta<TTxn> evalDelta;
+        private EvalDelta<TTxn> evalDelta;
 
         [SerializeField, Tooltip("If an asset is configured or created, the id used.")]
-        AssetIndex configAsset;
+        private AssetIndex configAsset;
 
         [SerializeField, Tooltip("If an app is called, the id used.")]
-        AppIndex applicationId;
+        private AppIndex applicationId;
 
         /// <inheritdoc />
         public MicroAlgos ClosingAmount

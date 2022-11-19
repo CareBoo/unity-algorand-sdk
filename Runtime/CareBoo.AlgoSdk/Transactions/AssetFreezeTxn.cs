@@ -86,8 +86,7 @@ namespace AlgoSdk
         [SerializeField]
         internal TransactionHeader header;
 
-        [SerializeField]
-        Params @params;
+        [SerializeField] private Params @params;
 
         /// <inheritdoc />
         [AlgoApiField("fee")]

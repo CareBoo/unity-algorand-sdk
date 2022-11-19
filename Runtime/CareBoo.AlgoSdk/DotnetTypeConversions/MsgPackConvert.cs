@@ -14,7 +14,7 @@ namespace AlgoSdk
 
     public readonly struct MsgPackConvert<T>
     {
-        readonly T from;
+        private readonly T from;
 
         public MsgPackConvert(T from)
         {

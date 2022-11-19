@@ -78,9 +78,9 @@ namespace AlgoSdk
         [Tooltip("The first valid round for a transaction.")]
         public ulong LastValidRound;
 
-        ulong prevRound;
+        private ulong prevRound;
 
-        bool noFlatFee;
+        private bool noFlatFee;
 
         public bool Equals(TransactionParams other)
         {

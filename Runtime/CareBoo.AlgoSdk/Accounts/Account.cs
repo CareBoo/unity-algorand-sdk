@@ -22,11 +22,11 @@ namespace AlgoSdk
         , IAsyncSigner
         , IAsyncSignerWithProgress
     {
-        readonly PrivateKey privateKey;
+        private readonly PrivateKey privateKey;
 
-        readonly Address address;
+        private readonly Address address;
 
-        readonly bool isRekeyed;
+        private readonly bool isRekeyed;
 
         /// <inheritdoc />
         public Address Address => address;

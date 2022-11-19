@@ -21,7 +21,7 @@ namespace AlgoSdk
     {
         public const int SizeBytes = Sha512_256_Hash.SizeBytes;
 
-        [FieldOffset(0), SerializeField] Sha512_256_Hash hash;
+        [FieldOffset(0), SerializeField] private Sha512_256_Hash hash;
 
         public byte this[int index] { get => hash[index]; set => hash[index] = value; }
 

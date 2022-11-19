@@ -16,16 +16,16 @@ namespace AlgoSdk.Experimental.Abi
         : IEquatable<Method>
     {
         [SerializeField, Tooltip("The name of the method.")]
-        string name;
+        private string name;
 
         [SerializeField, Tooltip("Optional, user-friendly description for the method.")]
-        string description;
+        private string description;
 
         [SerializeField, Tooltip("The arguments of the method, in order.")]
-        Arg[] arguments;
+        private Arg[] arguments;
 
         [SerializeField, Tooltip("Information about the method's return value.")]
-        Return returns;
+        private Return returns;
 
         /// <summary>
         /// The name of the method.
@@ -109,13 +109,13 @@ namespace AlgoSdk.Experimental.Abi
             : IEquatable<Arg>
         {
             [SerializeField, SerializeReference, Tooltip("The type of the argument.")]
-            IAbiType type;
+            private IAbiType type;
 
             [SerializeField, Tooltip("Optional, user-friendly name for the argument.")]
-            string name;
+            private string name;
 
             [SerializeField, Tooltip("Optional, user-friendly description for the argument.")]
-            string description;
+            private string description;
 
             /// <summary>
             /// The type of the argument.
@@ -164,10 +164,10 @@ namespace AlgoSdk.Experimental.Abi
             : IEquatable<Return>
         {
             [SerializeField, SerializeReference, Tooltip("The type of the return value, or \"void\" to indicate no return value.")]
-            IAbiType type;
+            private IAbiType type;
 
             [SerializeField, Tooltip("Optional, user-friendly description for the return value.")]
-            string description;
+            private string description;
 
             /// <summary>
             /// The type of the return value, or \"void\" to indicate no return value. 

@@ -7,7 +7,7 @@ namespace AlgoSdk.Formatters
 {
     public sealed class BlockHashFormatter : IAlgoApiFormatter<BlockHash>
     {
-        static readonly FixedString32Bytes blockTag = "blk-";
+        private static readonly FixedString32Bytes blockTag = "blk-";
 
         public BlockHash Deserialize(ref JsonReader reader)
         {

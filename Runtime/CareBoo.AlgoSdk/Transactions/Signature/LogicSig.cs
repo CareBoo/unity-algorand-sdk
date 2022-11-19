@@ -55,7 +55,7 @@ namespace AlgoSdk
             return Logic.GetAddress(Program);
         }
 
-        bool VerifyProgram(NativeByteArray bytes, Address sender)
+        private bool VerifyProgram(NativeByteArray bytes, Address sender)
         {
             return GetAddress().Equals(Sha512.Hash256Truncated(bytes));
         }
