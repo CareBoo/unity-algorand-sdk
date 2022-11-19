@@ -100,6 +100,13 @@ namespace AlgoSdk
         [AlgoApiField("cc")]
         public AlgoApiObject Cc;
 
+        /// <summary>
+        /// StateProofTracking tracks the status of the state proofs, potentially
+        /// for multiple types of ASPs (Algorand's State Proofs).
+        /// </summary>
+        [AlgoApiField("spt")]
+        public StateProofTrackingDataMap StateProofTracking;
+
         /// <inheritdoc />
         [AlgoApiField("fees")]
         public Address FeeSink

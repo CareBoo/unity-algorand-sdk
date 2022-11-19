@@ -53,9 +53,10 @@ public class UnityHttpMessageHandler : HttpMessageHandler
                 else
                     responseMessage.Headers.Add(header.Key, header.Value);
             }
-            catch
+            catch (System.Exception ex)
             {
                 Debug.LogError($"Issue with header: {header}");
+                Debug.LogException(ex);
                 throw;
             }
         }
@@ -65,6 +66,6 @@ public class UnityHttpMessageHandler : HttpMessageHandler
     private static bool IsContentHeader(KeyValuePair<string, string> header)
     {
         var headerKeyLower = header.Key.ToLower();
-        return headerKeyLower == "content-type" || headerKeyLower == "content-Length";
+        return headerKeyLower == "content-type" || headerKeyLower == "content-length";
     }
 }
