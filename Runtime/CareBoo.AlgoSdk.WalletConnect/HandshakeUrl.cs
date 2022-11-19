@@ -13,7 +13,7 @@ namespace AlgoSdk.WalletConnect
     /// </remarks>
     public readonly struct HandshakeUrl
     {
-        readonly string url;
+        private readonly string url;
 
         public string Url => url;
 

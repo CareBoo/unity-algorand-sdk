@@ -9,13 +9,11 @@ public class AccountObject
     , ISigner
     , ISerializationCallbackReceiver
 {
-    [SerializeField]
-    Mnemonic mnemonic;
+    [SerializeField] private Mnemonic mnemonic;
 
-    [SerializeField]
-    Address address;
+    [SerializeField] private Address address;
 
-    Account account;
+    private Account account;
 
     public Address Address => account.Address;
 

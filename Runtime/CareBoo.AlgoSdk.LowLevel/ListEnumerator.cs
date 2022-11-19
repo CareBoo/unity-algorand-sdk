@@ -8,9 +8,9 @@ namespace AlgoSdk.LowLevel
         : IEnumerator<T>
         where TList : IReadOnlyList<T>
     {
-        readonly TList list;
+        private readonly TList list;
 
-        int current;
+        private int current;
 
         public ListEnumerator(TList list)
         {

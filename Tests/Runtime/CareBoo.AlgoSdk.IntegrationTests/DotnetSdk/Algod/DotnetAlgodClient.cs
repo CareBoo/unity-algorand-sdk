@@ -10,9 +10,9 @@ using System.IO;
 public class DotnetAlgodClient
     : IAlgodClient
 {
-    readonly string address;
-    readonly string token;
-    readonly Header[] headers;
+    private readonly string address;
+    private readonly string token;
+    private readonly Header[] headers;
 
     public string Address => address;
 

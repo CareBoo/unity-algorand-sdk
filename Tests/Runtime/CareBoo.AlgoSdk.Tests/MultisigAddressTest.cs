@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 public class MultisigAddressTest
 {
-    static readonly MultisigSig testMsig = new MultisigSig
+    private static readonly MultisigSig testMsig = new MultisigSig
     {
         Threshold = 3,
         Version = 1,
@@ -16,7 +16,7 @@ public class MultisigAddressTest
         }
     };
 
-    static readonly Address testMsigAddress = "ZYTZSDHYAT5G6SSSGM5ZCRWSARGGYCOREKTR3OVK4RWMBC6EIQCY5OVY7I";
+    private static readonly Address testMsigAddress = "ZYTZSDHYAT5G6SSSGM5ZCRWSARGGYCOREKTR3OVK4RWMBC6EIQCY5OVY7I";
 
     [Test]
     public void MultisigGetAddressShouldReturnValidAddress()

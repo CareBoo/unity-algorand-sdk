@@ -58,7 +58,7 @@ namespace AlgoSdk.MessagePack
             return true;
         }
 
-        bool TryGetBytesLength(out int length)
+        private bool TryGetBytesLength(out int length)
         {
             if (!TryRead(out byte code))
             {
@@ -92,7 +92,7 @@ namespace AlgoSdk.MessagePack
             return false;
         }
 
-        bool TryReadRawNextBinary(NativeList<byte> bytes)
+        private bool TryReadRawNextBinary(NativeList<byte> bytes)
         {
             if (!TryPeek(out var code))
                 return false;

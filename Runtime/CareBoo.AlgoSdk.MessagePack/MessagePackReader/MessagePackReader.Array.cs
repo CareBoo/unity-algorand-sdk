@@ -35,7 +35,7 @@ namespace AlgoSdk.MessagePack
             return true;
         }
 
-        bool TryReadRawNextArray(NativeList<byte> bytes)
+        private bool TryReadRawNextArray(NativeList<byte> bytes)
         {
             if (!TryPeek(out var code))
                 return false;
@@ -58,7 +58,7 @@ namespace AlgoSdk.MessagePack
             return true;
         }
 
-        bool TrySkipNextArray()
+        private bool TrySkipNextArray()
         {
             return TryReadArrayHeader(out var count) && TrySkip(count);
         }

@@ -7,7 +7,7 @@ namespace AlgoSdk.MessagePack
     public partial struct MessagePackWriter
         : INativeDisposable
     {
-        NativeList<byte> data;
+        private NativeList<byte> data;
 
         public MessagePackWriter(Allocator allocator)
         {

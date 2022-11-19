@@ -2,15 +2,15 @@ namespace AlgoSdk.Json
 {
     public readonly struct JsonNumber
     {
-        const ulong MaxUlongBefore10 = (ulong.MaxValue / 10);
-        const long MaxLongBefore10 = (long.MaxValue / 10);
+        private const ulong MaxUlongBefore10 = (ulong.MaxValue / 10);
+        private const long MaxLongBefore10 = (long.MaxValue / 10);
 
-        readonly bool sign;
-        readonly ulong integer;
-        readonly ushort fractionDigits;
-        readonly ulong fraction;
-        readonly bool exponentSign;
-        readonly ushort exponent;
+        private readonly bool sign;
+        private readonly ulong integer;
+        private readonly ushort fractionDigits;
+        private readonly ulong fraction;
+        private readonly bool exponentSign;
+        private readonly ushort exponent;
 
         public JsonNumber(
             bool sign,

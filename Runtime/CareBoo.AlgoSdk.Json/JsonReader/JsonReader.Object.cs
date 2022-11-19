@@ -4,7 +4,7 @@ namespace AlgoSdk.Json
 {
     public ref partial struct JsonReader
     {
-        JsonReadError SkipObject()
+        private JsonReadError SkipObject()
         {
             var depth = 0;
             var t = JsonToken.None;

@@ -63,7 +63,7 @@ namespace AlgoSdk.MessagePack
             return true;
         }
 
-        bool TryReadRawNextExtension(NativeList<byte> bytes)
+        private bool TryReadRawNextExtension(NativeList<byte> bytes)
         {
             if (!TryPeek(out byte code))
                 return false;

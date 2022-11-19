@@ -8,8 +8,7 @@ namespace AlgoSdk.WalletConnect
         : AsyncSignerAccountObject
         , IWalletConnectAccount
     {
-        [SerializeField]
-        WalletConnectAccount account = new WalletConnectAccount();
+        [SerializeField] private WalletConnectAccount account = new WalletConnectAccount();
 
         /// <inheritdoc />
         public override Address Address => account.Address;

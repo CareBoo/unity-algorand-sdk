@@ -7,8 +7,9 @@ namespace AlgoSdk.WalletConnect.Editor
     [CustomEditor(typeof(WalletConnectAccountObject))]
     public class WalletConnectAccountObjectEditor : UnityEditor.Editor
     {
-        bool checkingWalletStatus;
-        void OnDisable()
+        private bool checkingWalletStatus;
+
+        private void OnDisable()
         {
             var account = (WalletConnectAccountObject)serializedObject.targetObject;
             account.EndSession();
@@ -48,7 +49,7 @@ namespace AlgoSdk.WalletConnect.Editor
             }
         }
 
-        async UniTaskVoid CheckStatus()
+        private async UniTaskVoid CheckStatus()
         {
             checkingWalletStatus = true;
             var account = (WalletConnectAccountObject)serializedObject.targetObject;

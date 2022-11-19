@@ -29,7 +29,7 @@ public static class DotnetExtensions
 
 public readonly struct MsgPackConvert<T>
 {
-    readonly T value;
+    private readonly T value;
 
     public MsgPackConvert(T value)
     {

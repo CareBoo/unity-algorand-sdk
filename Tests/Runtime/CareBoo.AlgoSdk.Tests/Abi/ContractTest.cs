@@ -5,7 +5,7 @@ using NUnit.Framework;
 [TestFixture]
 public class ContractTest
 {
-    const string ExpectedJson =
+    private const string ExpectedJson =
 @"{
   ""name"": ""Calculator"",
   ""desc"": ""Contract of a basic calculator supporting additions and multiplications. Implements the Calculator interface."",
@@ -35,7 +35,7 @@ public class ContractTest
   ]
 }";
 
-    static readonly Contract ExpectedContract = new Contract
+    private static readonly Contract ExpectedContract = new Contract
     {
         Name = "Calculator",
         Description = "Contract of a basic calculator supporting additions and multiplications. Implements the Calculator interface.",

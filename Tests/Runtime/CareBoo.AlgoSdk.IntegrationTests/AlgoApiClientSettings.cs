@@ -43,7 +43,7 @@ public static class AlgoApiClientSettings
         return $"{nameof(AlgoApiClientSettings)}_{propertyPath}";
     }
 
-    static AlgodClient GetSandboxAlgodClient()
+    private static AlgodClient GetSandboxAlgodClient()
     {
         return new AlgodClient(
             address: "http://localhost:4001",
@@ -51,12 +51,12 @@ public static class AlgoApiClientSettings
         );
     }
 
-    static IndexerClient GetSandboxIndexerClient()
+    private static IndexerClient GetSandboxIndexerClient()
     {
         return new IndexerClient(address: "http://localhost:8980");
     }
 
-    static KmdClient GetSandboxKmdClient()
+    private static KmdClient GetSandboxKmdClient()
     {
         return new KmdClient(
             address: "http://localhost:4002",

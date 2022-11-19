@@ -15,7 +15,7 @@ namespace AlgoSdk.Json
 
     public class JsonReadException : Exception
     {
-        const int surroundingSize = 50;
+        private const int surroundingSize = 50;
 
         public JsonReadException(JsonReadError error, char c, int pos)
             : base($"{error} on char '{c}' at pos: {pos}")
@@ -27,7 +27,7 @@ namespace AlgoSdk.Json
                 + $"\n{context.Text}")
         { }
 
-        static string GetSurroundingText(JsonReader context)
+        private static string GetSurroundingText(JsonReader context)
         {
             var start = math.max(0, context.Position - surroundingSize);
             var length = math.min(surroundingSize * 2, context.Text.Length - start);

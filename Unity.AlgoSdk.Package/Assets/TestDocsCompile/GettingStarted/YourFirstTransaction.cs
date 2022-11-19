@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class AlgodCheck : MonoBehaviour
 {
-    AlgodClient algod;
+    private AlgodClient algod;
 
     public void Start()
     {

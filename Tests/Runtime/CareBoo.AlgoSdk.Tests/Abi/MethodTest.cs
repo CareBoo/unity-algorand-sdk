@@ -5,7 +5,7 @@ using NUnit.Framework;
 [TestFixture]
 public class MethodTest
 {
-    const string ExpectedJson =
+    private const string ExpectedJson =
 @"{
   ""name"": ""add"",
   ""desc"": ""Calculate the sum of two 64-bit integers"",
@@ -16,7 +16,7 @@ public class MethodTest
   ""returns"": { ""type"": ""uint128"", ""desc"": ""The sum of a and b"" }
 }";
 
-    static readonly Method ExpectedMethod = new Method
+    private static readonly Method ExpectedMethod = new Method
     {
         Name = "add",
         Description = "Calculate the sum of two 64-bit integers",

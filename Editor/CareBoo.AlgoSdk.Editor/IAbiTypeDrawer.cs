@@ -77,7 +77,7 @@ namespace AlgoSdk.Experimental.Abi.Editor
             _ => null
         };
 
-        static Rect LabelIndent(Rect position)
+        private static Rect LabelIndent(Rect position)
         {
             position.xMin += EditorGUIUtility.labelWidth;
             position.height = EditorGUIUtility.singleLineHeight;

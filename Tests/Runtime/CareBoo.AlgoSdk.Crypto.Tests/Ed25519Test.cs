@@ -16,7 +16,7 @@ public class Ed25519Test
 
     private const string Message = "Hello world!";
 
-    NativeByteArray GetMessageBytes(string msg, Allocator allocator)
+    private NativeByteArray GetMessageBytes(string msg, Allocator allocator)
     {
         var msgArr = Encoding.UTF8.GetBytes(msg);
         return new NativeByteArray(msgArr, allocator);

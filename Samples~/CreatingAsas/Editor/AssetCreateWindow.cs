@@ -8,14 +8,11 @@ using UnityEngine.UIElements;
 
 public class AssetCreateWindow : EditorWindow
 {
-    [SerializeField]
-    AssetObject asset;
+    [SerializeField] private AssetObject asset;
 
-    [SerializeField]
-    AccountObject creatorAccount;
+    [SerializeField] private AccountObject creatorAccount;
 
-    [SerializeField]
-    AlgodClientObject algod;
+    [SerializeField] private AlgodClientObject algod;
 
     public static void Show(AssetObject asset)
     {
@@ -23,7 +20,7 @@ public class AssetCreateWindow : EditorWindow
         window.asset = asset;
     }
 
-    void CreateGUI()
+    private void CreateGUI()
     {
         var root = rootVisualElement;
 
@@ -37,12 +34,12 @@ public class AssetCreateWindow : EditorWindow
         root.Bind(new SerializedObject(this));
     }
 
-    void CreateAsa()
+    private void CreateAsa()
     {
         CreateAsaAsync().Forget();
     }
 
-    async UniTaskVoid CreateAsaAsync()
+    private async UniTaskVoid CreateAsaAsync()
     {
         if (!asset)
             throw new ArgumentNullException(nameof(asset));

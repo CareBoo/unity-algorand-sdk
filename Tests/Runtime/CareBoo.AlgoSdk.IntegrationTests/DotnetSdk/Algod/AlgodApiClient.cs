@@ -14,9 +14,9 @@ using Cysharp.Threading.Tasks;
 
 public class AlgodApiClient : IDisposable
 {
-    readonly DefaultApi api;
-    readonly HttpClient client;
-    readonly UnityHttpMessageHandler messageHandler;
+    private readonly DefaultApi api;
+    private readonly HttpClient client;
+    private readonly UnityHttpMessageHandler messageHandler;
 
     public DefaultApi Api => api;
     public UnityWebRequestAsyncOperation SentWebRequest => messageHandler.LastAsyncOperation;

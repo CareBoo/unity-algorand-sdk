@@ -35,7 +35,7 @@ namespace AlgoSdk.MessagePack
             return true;
         }
 
-        bool TryReadRawNextMap(NativeList<byte> bytes)
+        private bool TryReadRawNextMap(NativeList<byte> bytes)
         {
             if (!TryPeek(out var code))
                 return false;
@@ -59,7 +59,7 @@ namespace AlgoSdk.MessagePack
             return true;
         }
 
-        bool TrySkipNextMap()
+        private bool TrySkipNextMap()
         {
             return TryReadMapHeader(out var count) && TrySkip(count * 2);
         }

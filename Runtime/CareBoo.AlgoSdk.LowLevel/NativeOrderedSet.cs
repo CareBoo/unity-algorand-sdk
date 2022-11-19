@@ -11,8 +11,8 @@ namespace AlgoSdk.LowLevel
         , IReadOnlyList<T>
         where T : unmanaged, IEquatable<T>
     {
-        NativeParallelHashSet<T> set;
-        NativeList<T> list;
+        private NativeParallelHashSet<T> set;
+        private NativeList<T> list;
 
         public NativeOrderedSet(int initialCapacity, Allocator allocator)
         {

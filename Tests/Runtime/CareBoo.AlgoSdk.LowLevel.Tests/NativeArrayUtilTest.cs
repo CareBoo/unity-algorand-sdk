@@ -15,7 +15,7 @@ public class NativeArrayUtilTest
         Assert.True(expected.SequenceEqual(actual));
     }
 
-    byte[][] RandomBytes()
+    private byte[][] RandomBytes()
     {
         var random = new System.Random();
         var numArrays = UnityEngine.Random.Range(3, 10);

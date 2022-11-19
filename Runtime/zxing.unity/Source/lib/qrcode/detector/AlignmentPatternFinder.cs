@@ -37,7 +37,7 @@ namespace ZXing.QrCode.Internal
     /// </author>
     /// <author>www.Redivivus.in (suraj.supekar@redivivus.in) - Ported from ZXING Java Source 
     /// </author>
-    sealed class AlignmentPatternFinder
+    internal sealed class AlignmentPatternFinder
     {
         private readonly BitMatrix image;
         private readonly IList<AlignmentPattern> possibleCenters;

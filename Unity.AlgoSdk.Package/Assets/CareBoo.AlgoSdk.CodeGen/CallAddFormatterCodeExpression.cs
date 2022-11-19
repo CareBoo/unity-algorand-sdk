@@ -13,7 +13,7 @@ namespace AlgoSdk.Editor.CodeGen
         { }
 
 
-        static CodeMethodReferenceExpression GetCodeMethodReference(Type type) =>
+        private static CodeMethodReferenceExpression GetCodeMethodReference(Type type) =>
             new CodeMethodReferenceExpression(
                 targetObject: new CodeTypeReferenceExpression(typeof(AlgoApiFormatterLookup)),
                 methodName: AlgoApiFormatterLookup.AddFormatterMethodName,

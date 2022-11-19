@@ -81,7 +81,7 @@ public abstract class KmdClientTestFixture : AlgoApiClientTestFixture
         return await txn.SignWithAsync(kmdAccount);
     }
 
-    static async UniTask<Wallet[]> ListWallets()
+    private static async UniTask<Wallet[]> ListWallets()
     {
         var response = await AlgoApiClientSettings.Kmd.ListWallets();
         if (response.Status != UnityWebRequest.Result.Success)

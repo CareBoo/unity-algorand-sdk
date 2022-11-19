@@ -19,7 +19,7 @@ namespace AlgoSdk.LowLevel
 
         public NativeArray<byte>.ReadOnly Data => data.AsReadOnly();
 
-        readonly NativeArray<byte> data;
+        private readonly NativeArray<byte> data;
 
         public NativeByteArray(int capacity, Allocator allocator)
         {

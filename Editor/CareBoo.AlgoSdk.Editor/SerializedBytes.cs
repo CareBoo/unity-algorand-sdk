@@ -30,7 +30,7 @@ namespace AlgoSdk.Editor
 
     public class SerializedFixedBytes : SerializedBytes
     {
-        static readonly Regex byteRegex = new Regex(@"byte\d\d\d\d", RegexOptions.Compiled);
+        private static readonly Regex byteRegex = new Regex(@"byte\d\d\d\d", RegexOptions.Compiled);
 
         public SerializedFixedBytes(SerializedProperty root) : base(root) { }
 
@@ -63,7 +63,7 @@ namespace AlgoSdk.Editor
 
     public class SerializedVariableBytes : SerializedBytes
     {
-        readonly string byteArrayName;
+        private readonly string byteArrayName;
 
         public SerializedVariableBytes(SerializedProperty root, string byteArrayName) : base(root)
         {

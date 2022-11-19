@@ -10,31 +10,31 @@ public class WalletConnectManager : MonoBehaviour
 
     public string BridgeUrl;
 
-    HandshakeUrl handshake;
+    private HandshakeUrl handshake;
 
-    Texture2D qrCode;
+    private Texture2D qrCode;
 
-    bool shouldLaunchApp;
+    private bool shouldLaunchApp;
 
-    AppEntry launchedApp;
+    private AppEntry launchedApp;
 
-    MicroAlgos currentBalance;
+    private MicroAlgos currentBalance;
 
-    WalletConnectAccount account;
+    private WalletConnectAccount account;
 
-    TransactionStatus txnStatus;
+    private TransactionStatus txnStatus;
 
     public string AlgoClientURL = @"https://node.testnet.algoexplorerapi.io";
 
     public string IndexerURL = @"https://algoindexer.testnet.algoexplorerapi.io";
 
-    AlgodClient algod;
+    private AlgodClient algod;
 
-    IndexerClient indexer;
+    private IndexerClient indexer;
 
-    [SerializeField] WalletConnectCanvas walletConnectCanvas;
+    [SerializeField] private WalletConnectCanvas walletConnectCanvas;
 
-    void Start()
+    private void Start()
     {
         algod = new AlgodClient(@AlgoClientURL);
 
@@ -45,7 +45,7 @@ public class WalletConnectManager : MonoBehaviour
         PollForBalance().Forget();
     }
 
-    void Update()
+    private void Update()
     {
         var status = account?.ConnectionStatus ?? SessionStatus.None;
         var supportedWallets = WalletRegistry.SupportedWalletsForCurrentPlatform;
@@ -94,7 +94,7 @@ public class WalletConnectManager : MonoBehaviour
         txnStatus = TransactionStatus.RequestingSignature;
     }
 
-    async UniTaskVoid StartWalletConnect()
+    private async UniTaskVoid StartWalletConnect()
     {
         account = new WalletConnectAccount { DappMeta = DappMeta, BridgeUrl = BridgeUrl };
         await account.BeginSession();
@@ -105,7 +105,7 @@ public class WalletConnectManager : MonoBehaviour
         Debug.Log($"Connected account:\n{AlgoApiSerializer.SerializeJson(account.Address)}");
     }
 
-    async UniTaskVoid PollForBalance()
+    private async UniTaskVoid PollForBalance()
     {
         while (true)
         {
@@ -124,7 +124,7 @@ public class WalletConnectManager : MonoBehaviour
         }
     }
 
-    async UniTaskVoid TestTransaction()
+    private async UniTaskVoid TestTransaction()
     {
         var (txnParamsErr, txnParams) = await algod.TransactionParams();
         if (txnParamsErr)
@@ -167,7 +167,7 @@ public class WalletConnectManager : MonoBehaviour
         txnStatus = TransactionStatus.Confirmed;
     }
 
-    enum TransactionStatus
+    private enum TransactionStatus
     {
         None,
         RequestingSignature,

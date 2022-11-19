@@ -8,35 +8,25 @@ namespace AlgoSdk.WalletConnect
     [Serializable]
     public struct SessionData : IWalletConnectSessionData
     {
-        [SerializeField]
-        string clientId;
+        [SerializeField] private string clientId;
 
-        [SerializeField]
-        string bridgeUrl;
+        [SerializeField] private string bridgeUrl;
 
-        [SerializeField]
-        Hex key;
+        [SerializeField] private Hex key;
 
-        [SerializeField]
-        string peerId;
+        [SerializeField] private string peerId;
 
-        [SerializeField]
-        ulong handshakeId;
+        [SerializeField] private ulong handshakeId;
 
-        [SerializeField]
-        int networkId;
+        [SerializeField] private int networkId;
 
-        [SerializeField]
-        Address[] accounts;
+        [SerializeField] private Address[] accounts;
 
-        [SerializeField]
-        int chainId;
+        [SerializeField] private int chainId;
 
-        [SerializeField]
-        ClientMeta dappMeta;
+        [SerializeField] private ClientMeta dappMeta;
 
-        [SerializeField]
-        ClientMeta walletMeta;
+        [SerializeField] private ClientMeta walletMeta;
 
         public string ClientId
         {

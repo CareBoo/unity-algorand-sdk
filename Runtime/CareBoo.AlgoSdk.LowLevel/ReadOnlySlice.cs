@@ -9,9 +9,9 @@ namespace AlgoSdk.LowLevel
         : IReadOnlyList<T>
         where TList : IReadOnlyList<T>
     {
-        readonly TList list;
-        readonly int start;
-        readonly int count;
+        private readonly TList list;
+        private readonly int start;
+        private readonly int count;
 
         public ReadOnlySlice(TList list, int start, int count)
         {

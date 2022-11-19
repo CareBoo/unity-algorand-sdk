@@ -13,11 +13,11 @@ namespace AlgoSdk.WalletConnect
     public class JsonRpcClient
         : IDisposable
     {
-        IWebSocketClient webSocketClient;
+        private IWebSocketClient webSocketClient;
 
-        Hex key;
+        private Hex key;
 
-        CancellationTokenSource connectionCancellation;
+        private CancellationTokenSource connectionCancellation;
 
         public event Action<JsonRpcRequest> OnRequestReceived;
 
@@ -146,13 +146,13 @@ namespace AlgoSdk.WalletConnect
             webSocketClient = null;
         }
 
-        void CheckConnected()
+        private void CheckConnected()
         {
             if (webSocketClient == null || webSocketClient.ReadyState != WebSocketSharp.WebSocketState.Open)
                 throw new InvalidOperationException($"{nameof(JsonRpcClient)} is not yet connected");
         }
 
-        async UniTaskVoid PollJsonRpcMessages(CancellationToken cancellationToken)
+        private async UniTaskVoid PollJsonRpcMessages(CancellationToken cancellationToken)
         {
             try
             {

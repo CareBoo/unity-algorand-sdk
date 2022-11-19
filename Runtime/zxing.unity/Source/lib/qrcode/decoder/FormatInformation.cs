@@ -31,7 +31,7 @@ namespace ZXing.QrCode.Internal
     /// </seealso>
     /// <seealso cref="ErrorCorrectionLevel">
     /// </seealso>
-    sealed class FormatInformation
+    internal sealed class FormatInformation
     {
         private const int FORMAT_INFO_MASK_QR = 0x5412;
 

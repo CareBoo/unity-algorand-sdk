@@ -6,8 +6,8 @@ namespace AlgoSdk.MessagePack
 {
     public ref partial struct MessagePackReader
     {
-        NativeArray<byte> data;
-        int offset;
+        private NativeArray<byte> data;
+        private int offset;
 
         public MessagePackReader(NativeArray<byte> data)
         {
@@ -54,7 +54,7 @@ namespace AlgoSdk.MessagePack
                 throw InsufficientBuffer();
         }
 
-        bool TryRead<T>(out T value) where T : struct
+        private bool TryRead<T>(out T value) where T : struct
         {
             value = default;
             var size = UnsafeUtility.SizeOf<T>();
@@ -242,7 +242,7 @@ namespace AlgoSdk.MessagePack
             }
         }
 
-        bool TrySkip(int count)
+        private bool TrySkip(int count)
         {
             for (var i = 0; i < count; i++)
                 if (!TrySkip())
@@ -250,7 +250,7 @@ namespace AlgoSdk.MessagePack
             return true;
         }
 
-        bool TryAdvance(int x)
+        private bool TryAdvance(int x)
         {
             var result = offset + x;
             if (result > data.Length) return false;
@@ -258,7 +258,7 @@ namespace AlgoSdk.MessagePack
             return true;
         }
 
-        bool TryAdvance(int x, NativeList<byte> buffer)
+        private bool TryAdvance(int x, NativeList<byte> buffer)
         {
             if (!TryAdvance(x)) return false;
             unsafe
@@ -268,7 +268,7 @@ namespace AlgoSdk.MessagePack
             return true;
         }
 
-        unsafe byte* GetCurrentUnsafePtr()
+        private unsafe byte* GetCurrentUnsafePtr()
         {
             return (byte*)data.GetUnsafeReadOnlyPtr() + offset;
         }

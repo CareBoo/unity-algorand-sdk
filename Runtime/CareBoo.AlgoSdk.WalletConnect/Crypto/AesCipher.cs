@@ -30,7 +30,7 @@ namespace AlgoSdk.WalletConnect
             return result;
         }
 
-        static EncryptedPayload Encrypt(byte[] key, byte[] data)
+        private static EncryptedPayload Encrypt(byte[] key, byte[] data)
         {
             using var ms = new MemoryStream();
             using var cipher = CreateCipher();
@@ -45,7 +45,7 @@ namespace AlgoSdk.WalletConnect
             return (iv, encryptedData);
         }
 
-        static AesManaged CreateCipher()
+        private static AesManaged CreateCipher()
         {
             return new AesManaged()
             {
@@ -55,7 +55,7 @@ namespace AlgoSdk.WalletConnect
             };
         }
 
-        static void Encrypt(byte[] data, MemoryStream ms, ICryptoTransform encryptor)
+        private static void Encrypt(byte[] data, MemoryStream ms, ICryptoTransform encryptor)
         {
             using var cs = new CryptoStream(ms, encryptor, CryptoStreamMode.Write);
             cs.Write(data, 0, data.Length);
