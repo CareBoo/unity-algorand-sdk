@@ -42,11 +42,15 @@ namespace AlgoSdk
 
         public static implicit operator Algorand.Signature(Sig sig)
         {
-            return new Algorand.Signature(sig.ToArray());
+            return sig == default ? null : new Algorand.Signature(sig.ToArray());
         }
 
         public static implicit operator Sig(Algorand.Signature dotnetSig)
         {
+            if (dotnetSig == null)
+            {
+                return default;
+            }
             var bytes = dotnetSig.Bytes;
             var sig = default(Sig);
             sig.CopyFrom(bytes, 0);

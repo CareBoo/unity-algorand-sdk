@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using AlgoSdk.Crypto;
 using AlgoSdk.LowLevel;
 using Unity.Collections;
@@ -69,7 +70,7 @@ namespace AlgoSdk
         /// </summary>
         /// <param name="message">The message that was signed.</param>
         /// <typeparam name="TMessage">The type of the bytearray the message is contained in.</typeparam>
-        /// <returns>true if a threshold of signatures were valid, fals otherwise</returns>
+        /// <returns>true if a threshold of signatures were valid, false otherwise</returns>
         public bool Verify<TMessage>(TMessage message)
             where TMessage : IByteArray
         {
@@ -118,6 +119,26 @@ namespace AlgoSdk
             return result;
         }
 
+        public static implicit operator Algorand.MultisigSignature(MultisigSig msig)
+        {
+            return new Algorand.MultisigSignature
+            {
+                Version = msig.Version,
+                Threshold = msig.Threshold,
+                Subsigs = msig.Subsigs.Select(s => (Algorand.MultisigSubsig)s).ToList()
+            };
+        }
+
+        public static implicit operator MultisigSig(Algorand.MultisigSignature msig)
+        {
+            return new MultisigSig
+            {
+                Subsigs = msig.Subsigs.Select(s => (Subsig)s).ToArray(),
+                Threshold = (byte)msig.Threshold,
+                Version = (byte)msig.Version
+            };
+        }
+
         [AlgoApiObject]
         public partial struct Subsig
             : IEquatable<Subsig>
@@ -147,6 +168,23 @@ namespace AlgoSdk
             public static implicit operator Address(Subsig subsig)
             {
                 return subsig.PublicKey;
+            }
+
+            public static implicit operator Algorand.MultisigSubsig(Subsig subsig)
+            {
+                return new Algorand.MultisigSubsig(subsig.PublicKey.ToArray(), subsig.Sig.ToArray());
+            }
+
+            public static implicit operator Subsig(Algorand.MultisigSubsig subsig)
+            {
+                var pk = new Ed25519.PublicKey();
+                var subsigKeyBytes = subsig.key.GetEncoded();
+                pk.CopyFrom(subsigKeyBytes, 0);
+                return new Subsig
+                {
+                    PublicKey = pk,
+                    Sig = subsig.sig
+                };
             }
         }
     }
