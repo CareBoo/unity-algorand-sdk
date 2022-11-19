@@ -15,7 +15,11 @@ namespace AlgoSdk
         , IBlockRewards
         , IBlockUpgradeState
         , IBlockUpgradeVote
+        , ITxnCommitments
     {
+        [SerializeField]
+        private TxnCommitments txnCommitments;
+
         /// <summary>
         /// [gh] hash to which this block belongs.
         /// </summary>
@@ -72,13 +76,6 @@ namespace AlgoSdk
         public BlockTransaction[] Transactions;
 
         /// <summary>
-        /// [txn] TransactionsRoot authenticates the set of transactions appearing in the block. More specifically, it's the root of a merkle tree whose leaves are the block's Txids, in lexicographic order. For the empty block, it's 0. Note that the TxnRoot does not authenticate the signatures on the transactions, only the transactions themselves. Two blocks with the same transactions but in a different order and with different signatures will have the same TxnRoot.
-        /// </summary>
-        [AlgoApiField("txn")]
-        [Tooltip("TransactionsRoot authenticates the set of transactions appearing in the block. More specifically, it's the root of a merkle tree whose leaves are the block's Txids, in lexicographic order. For the empty block, it's 0. Note that the TxnRoot does not authenticate the signatures on the transactions, only the transactions themselves. Two blocks with the same transactions but in a different order and with different signatures will have the same TxnRoot.")]
-        public Sha512_256_Hash RootTransaction;
-
-        /// <summary>
         /// [tc] TxnCounter counts the number of transactions committed in the ledger, from the time at which support for this feature was introduced.
         /// </summary>
         /// <remarks>
@@ -100,6 +97,10 @@ namespace AlgoSdk
         [AlgoApiField("upgrade-vote")]
         public BlockUpgradeVote UpgradeVote;
 
+        [AlgoApiField("cc")]
+        public AlgoApiObject Cc;
+
+        /// <inheritdoc />
         [AlgoApiField("fees")]
         public Address FeeSink
         {
@@ -107,6 +108,7 @@ namespace AlgoSdk
             set => Rewards.FeeSink = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("rwcalr")]
         public ulong RewardsCalculationRound
         {
@@ -114,6 +116,7 @@ namespace AlgoSdk
             set => Rewards.RewardsCalculationRound = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("earn")]
         public ulong RewardsLevel
         {
@@ -121,6 +124,7 @@ namespace AlgoSdk
             set => Rewards.RewardsLevel = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("rwd")]
         public Address RewardsPool
         {
@@ -128,6 +132,7 @@ namespace AlgoSdk
             set => Rewards.RewardsPool = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("rate")]
         public ulong RewardsRate
         {
@@ -135,6 +140,7 @@ namespace AlgoSdk
             set => Rewards.RewardsRate = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("frac")]
         public ulong RewardsResidue
         {
@@ -142,6 +148,7 @@ namespace AlgoSdk
             set => Rewards.RewardsResidue = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("proto")]
         public FixedString128Bytes CurrentProtocol
         {
@@ -149,6 +156,7 @@ namespace AlgoSdk
             set => UpgradeState.CurrentProtocol = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("nextproto")]
         public FixedString128Bytes NextProtocol
         {
@@ -156,6 +164,7 @@ namespace AlgoSdk
             set => UpgradeState.NextProtocol = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("nextyes")]
         public ulong NextProtocolApprovals
         {
@@ -163,6 +172,7 @@ namespace AlgoSdk
             set => UpgradeState.NextProtocolApprovals = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("nextswitch")]
         public ulong NextProtocolSwitchOn
         {
@@ -170,6 +180,7 @@ namespace AlgoSdk
             set => UpgradeState.NextProtocolSwitchOn = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("nextbefore")]
         public ulong NextProtocolVoteBefore
         {
@@ -177,6 +188,7 @@ namespace AlgoSdk
             set => UpgradeState.NextProtocolVoteBefore = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("upgradeyes")]
         public Optional<bool> UpgradeApprove
         {
@@ -184,6 +196,7 @@ namespace AlgoSdk
             set => UpgradeVote.UpgradeApprove = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("upgradedelay")]
         public ulong UpgradeDelay
         {
@@ -191,6 +204,7 @@ namespace AlgoSdk
             set => UpgradeVote.UpgradeDelay = value;
         }
 
+        /// <inheritdoc />
         [AlgoApiField("upgradeprop")]
         public Address UpgradePropose
         {
@@ -198,8 +212,21 @@ namespace AlgoSdk
             set => UpgradeVote.UpgradePropose = value;
         }
 
-        [AlgoApiField("cc")]
-        public AlgoApiObject Cc;
+        /// <inheritdoc />
+        [AlgoApiField("txn")]
+        public Digest NativeSha512_256Commitment
+        {
+            get => txnCommitments.NativeSha512_256Commitment;
+            set => txnCommitments.NativeSha512_256Commitment = value;
+        }
+
+        /// <inheritdoc />
+        [AlgoApiField("txn256")]
+        public Digest Sha256Commitment
+        {
+            get => txnCommitments.Sha256Commitment;
+            set => txnCommitments.Sha256Commitment = value;
+        }
 
         public bool Equals(BlockHeader other)
         {
@@ -209,6 +236,7 @@ namespace AlgoSdk
                 && Round.Equals(other.Round)
                 && CurrentProtocol.Equals(other.CurrentProtocol)
                 && Seed.Equals(other.Seed)
+                && txnCommitments.Equals(other.txnCommitments)
                 ;
         }
     }
