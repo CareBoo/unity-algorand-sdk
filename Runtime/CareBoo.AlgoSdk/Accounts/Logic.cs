@@ -77,5 +77,99 @@ namespace AlgoSdk
             var sig = Sign(program, keyPair.SecretKey);
             return (sig, index);
         }
+
+        /// <summary>
+        /// Creates a signature compatible with ed25519verify opcode from raw program bytes.
+        /// </summary>
+        /// <param name="sk">The secretkey handle to use to sign using the given data and the program.</param>
+        /// <param name="data">The data to sign.</param>
+        /// <param name="program">The program to hash and prepend to the signed message.</param>
+        /// <returns>A signature compatible with ed25519verify opcode.</returns>
+        public static Sig TealSignProgram(SecretKeyHandle sk, NativeArray<byte> data, CompiledTeal program)
+        {
+            var address = GetAddress(program);
+            return TealSign(sk, data, address);
+        }
+
+        /// <summary>
+        /// Creates a signature compatible with ed25519verify opcode from raw program bytes.
+        /// </summary>
+        /// <param name="sk">The secretkey handle to use to sign using the given data and the program.</param>
+        /// <param name="data">The data to sign.</param>
+        /// <param name="program">The program to hash and prepend to the signed message.</param>
+        /// <returns>A signature compatible with ed25519verify opcode.</returns>
+        public static Sig TealSignProgram(SecretKeyHandle sk, byte[] data, CompiledTeal program)
+        {
+            var address = GetAddress(program);
+            return TealSign(sk, data, address);
+        }
+
+        /// <summary>
+        /// Creates a signature compatible with ed25519verify opcode from raw program bytes.
+        /// </summary>
+        /// <typeparam name="TBytes">The type of the byte array.</typeparam>
+        /// <param name="sk">The secretkey handle to use to sign using the given data and the program.</param>
+        /// <param name="data">The data to sign.</param>
+        /// <param name="program">The program to hash and prepend to the signed message.</param>
+        /// <returns>A signature compatible with ed25519verify opcode.</returns>
+        public static Sig TealSignProgram<TBytes>(SecretKeyHandle sk, TBytes data, CompiledTeal program)
+            where TBytes : IByteArray
+        {
+            var address = GetAddress(program);
+            return TealSign(sk, data, address);
+        }
+
+        /// <summary>
+        /// Creates a signature compatible with ed25519verify opcode from the contract address.
+        /// </summary>
+        /// <param name="sk">The secretkey handle to use to sign using the given data and the program.</param>
+        /// <param name="data">The data to sign.</param>
+        /// <param name="contractAddress">The teal contract address to use to sign this data.</param>
+        /// <returns>A signature compatible with ed25519verify opcode.</returns>
+        public static Sig TealSign(SecretKeyHandle sk, NativeArray<byte> data, Address contractAddress)
+        {
+            return TealSign(sk, new NativeByteArray(data), contractAddress);
+        }
+
+        /// <summary>
+        /// Creates a signature compatible with ed25519verify opcode from the contract address.
+        /// </summary>
+        /// <param name="sk">The secretkey handle to use to sign using the given data and the program.</param>
+        /// <param name="data">The data to sign.</param>
+        /// <param name="contractAddress">The teal contract address to use to sign this data.</param>
+        /// <returns>A signature compatible with ed25519verify opcode.</returns>
+        public static Sig TealSign(SecretKeyHandle sk, byte[] data, Address contractAddress)
+        {
+            using var nativeData = new NativeByteArray(data, Allocator.Temp);
+            return TealSign(sk, data, contractAddress);
+        }
+
+        /// <summary>
+        /// Creates a signature compatible with ed25519verify opcode from the contract address.
+        /// </summary>
+        /// <typeparam name="TBytes">The type of the byte array.</typeparam>
+        /// <param name="sk">The secretkey handle to use to sign using the given data and the program.</param>
+        /// <param name="data">The data to sign.</param>
+        /// <param name="contractAddress">The teal contract address to use to sign this data.</param>
+        /// <returns>A signature compatible with ed25519verify opcode.</returns>
+        public static Sig TealSign<TBytes>(SecretKeyHandle sk, TBytes data, Address contractAddress)
+            where TBytes : IByteArray
+        {
+            var concatenated = new NativeByteArray(contractAddress.Length + data.Length, Allocator.Temp);
+            try
+            {
+                for (var i = 0; i < contractAddress.Length; i++)
+                    concatenated[i] = contractAddress[i];
+                for (var i = contractAddress.Length; i < data.Length; i++)
+                    concatenated[i] = data[i - contractAddress.Length];
+
+                return sk.Sign(concatenated);
+            }
+            finally
+            {
+                concatenated.Dispose();
+            }
+
+        }
     }
 }
