@@ -10,6 +10,7 @@ namespace AlgoSdk
     public static class Logic
     {
         public static readonly byte[] SigningPrefix = Encoding.UTF8.GetBytes("Program");
+        public static readonly byte[] LogicDataPrefix = Encoding.UTF8.GetBytes("ProgData");
 
         /// <summary>
         /// Return the <see cref="Address"/> of a program.
@@ -113,7 +114,7 @@ namespace AlgoSdk
         /// <param name="program">The program to hash and prepend to the signed message.</param>
         /// <returns>A signature compatible with ed25519verify opcode.</returns>
         public static Sig TealSignProgram<TBytes>(SecretKeyHandle sk, TBytes data, CompiledTeal program)
-            where TBytes : IByteArray
+            where TBytes : struct, IByteArray
         {
             var address = GetAddress(program);
             return TealSign(sk, data, address);
@@ -141,7 +142,7 @@ namespace AlgoSdk
         public static Sig TealSign(SecretKeyHandle sk, byte[] data, Address contractAddress)
         {
             using var nativeData = new NativeByteArray(data, Allocator.Temp);
-            return TealSign(sk, data, contractAddress);
+            return TealSign(sk, nativeData, contractAddress);
         }
 
         /// <summary>
@@ -153,23 +154,20 @@ namespace AlgoSdk
         /// <param name="contractAddress">The teal contract address to use to sign this data.</param>
         /// <returns>A signature compatible with ed25519verify opcode.</returns>
         public static Sig TealSign<TBytes>(SecretKeyHandle sk, TBytes data, Address contractAddress)
-            where TBytes : IByteArray
+            where TBytes : struct, IByteArray
         {
-            var concatenated = new NativeByteArray(contractAddress.Length + data.Length, Allocator.Temp);
+            var concatenated = new NativeByteArray(LogicDataPrefix.Length + contractAddress.Length + data.Length, Allocator.Temp);
             try
             {
-                for (var i = 0; i < contractAddress.Length; i++)
-                    concatenated[i] = contractAddress[i];
-                for (var i = contractAddress.Length; i < data.Length; i++)
-                    concatenated[i] = data[i - contractAddress.Length];
-
+                concatenated.CopyFrom(LogicDataPrefix, 0, LogicDataPrefix.Length);
+                concatenated.CopyFrom(contractAddress, LogicDataPrefix.Length, contractAddress.Length);
+                concatenated.CopyFrom(data, LogicDataPrefix.Length + contractAddress.Length, data.Length);
                 return sk.Sign(concatenated);
             }
             finally
             {
                 concatenated.Dispose();
             }
-
         }
     }
 }
