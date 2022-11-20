@@ -7,11 +7,9 @@ namespace AlgoSdk.Experimental.Abi
     [Serializable]
     public class UFixedType : IAbiType
     {
-        [SerializeField, ModRange(8, 512, 8)]
-        int n;
+        [SerializeField, ModRange(8, 512, 8)] private int n;
 
-        [SerializeField, ModRange(1, 160, 1)]
-        int m;
+        [SerializeField, ModRange(1, 160, 1)] private int m;
 
         public UFixedType(int n, int m)
         {

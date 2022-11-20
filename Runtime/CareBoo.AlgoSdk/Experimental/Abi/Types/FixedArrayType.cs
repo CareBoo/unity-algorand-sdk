@@ -6,11 +6,9 @@ namespace AlgoSdk.Experimental.Abi
     [Serializable]
     public class FixedArrayType : IAbiType
     {
-        [SerializeField, SerializeReference]
-        IAbiType elementType;
+        [SerializeField, SerializeReference] private IAbiType elementType;
 
-        [SerializeField, Min(0)]
-        int length;
+        [SerializeField, Min(0)] private int length;
 
         public FixedArrayType(IAbiType elementType, int length)
         {

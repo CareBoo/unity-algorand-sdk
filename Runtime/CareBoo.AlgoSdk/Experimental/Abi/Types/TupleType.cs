@@ -10,12 +10,11 @@ namespace AlgoSdk.Experimental.Abi
         : IAbiType
         , ISerializationCallbackReceiver
     {
-        [SerializeField, SerializeReference]
-        IAbiType[] nestedTypes;
+        [SerializeField, SerializeReference] private IAbiType[] nestedTypes;
 
-        bool isStatic;
+        private bool isStatic;
 
-        int staticLength;
+        private int staticLength;
 
         public TupleType(IAbiType[] nestedTypes)
         {
@@ -125,7 +124,7 @@ namespace AlgoSdk.Experimental.Abi
         {
         }
 
-        static void GetStaticInfo(IAbiType[] nestedTypes, out bool isStatic, out int staticLength)
+        private static void GetStaticInfo(IAbiType[] nestedTypes, out bool isStatic, out int staticLength)
         {
             if (nestedTypes == null)
             {

@@ -13,26 +13,26 @@ namespace AlgoSdk.Samples.NftViewer
 {
     public class NftViewer : MonoBehaviour
     {
-        [SerializeField] string algoClientNetworkAddress = "https://node.testnet.algoexplorerapi.io";
-        [SerializeField] string indexerNetworkAddress = "https://algoindexer.testnet.algoexplorerapi.io";
+        [SerializeField] private string algoClientNetworkAddress = "https://node.testnet.algoexplorerapi.io";
+        [SerializeField] private string indexerNetworkAddress = "https://algoindexer.testnet.algoexplorerapi.io";
 
-        AlgodClient algod;
+        private AlgodClient algod;
 
-        IndexerClient indexer;
-        string algodHealth;
-        string indexerHealth;
-        string textureStatus;
+        private IndexerClient indexer;
+        private string algodHealth;
+        private string indexerHealth;
+        private string textureStatus;
 
-        Address address;
+        private Address address;
         public string Publickey { get { return publicKey; } set { publicKey = value; } }
-        string publicKey = "HAE4ZMZI2TKTFNES33PNWC5RIK7MUOISQDRQ7LMWLKNNGMA7V5NZOGHJVY";
+        private string publicKey = "HAE4ZMZI2TKTFNES33PNWC5RIK7MUOISQDRQ7LMWLKNNGMA7V5NZOGHJVY";
 
         public List<Texture> NftTextures = new List<Texture>();
 
-        [SerializeField] Transform contentTransform;
-        [SerializeField] GameObject NftDisplayBoxPrefab;
+        [SerializeField] private Transform contentTransform;
+        [SerializeField] private GameObject NftDisplayBoxPrefab;
 
-        void Start()
+        private void Start()
         {
             algod = new AlgodClient(algoClientNetworkAddress);
             indexer = new IndexerClient(indexerNetworkAddress);
@@ -111,7 +111,7 @@ namespace AlgoSdk.Samples.NftViewer
             }
         }
 
-        string FormatNftURL(string url)
+        private string FormatNftURL(string url)
         {
             //remove the ipfs extension
             url = url.Replace("ipfs://", "");

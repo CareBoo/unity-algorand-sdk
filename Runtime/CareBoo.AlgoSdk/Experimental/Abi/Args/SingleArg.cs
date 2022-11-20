@@ -6,7 +6,7 @@ namespace AlgoSdk.Experimental.Abi
         : IArgEnumerator<SingleArg<T>>
         where T : IAbiValue
     {
-        readonly T arg;
+        private readonly T arg;
 
         public SingleArg(T arg)
         {

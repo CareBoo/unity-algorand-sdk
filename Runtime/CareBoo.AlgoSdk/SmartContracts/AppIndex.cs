@@ -23,8 +23,7 @@ namespace AlgoSdk
         /// </summary>
         public static readonly byte[] HashPrefix = Encoding.UTF8.GetBytes("appID");
 
-        [SerializeField]
-        ulong index;
+        [SerializeField] private ulong index;
 
         public ulong Index
         {
@@ -49,6 +48,10 @@ namespace AlgoSdk
             return this == other;
         }
 
+        /// <summary>
+        /// Return the escrow address of an application.
+        /// </summary>
+        /// <returns>The address corresponding to that application's escrow account.</returns>
         public Address GetAppAddress()
         {
             using var appIndexBytes = index.ToBytesBigEndian(Allocator.Persistent);

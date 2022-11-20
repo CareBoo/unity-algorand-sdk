@@ -18,8 +18,7 @@ namespace AlgoSdk
         /// </summary>
         public const ulong PerAlgo = 1_000_000;
 
-        [SerializeField]
-        ulong amount;
+        [SerializeField] private ulong amount;
 
         public ulong Amount
         {

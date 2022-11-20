@@ -5,7 +5,7 @@ using NUnit.Framework;
 [TestFixture]
 public class InterfaceTest
 {
-    const string ExpectedJson =
+    private const string ExpectedJson =
 @"{
   ""name"": ""Calculator"",
   ""desc"": ""Interface for a basic calculator supporting additions and multiplications"",
@@ -31,7 +31,7 @@ public class InterfaceTest
   ]
 }";
 
-    static readonly Interface ExpectedInterface = new Interface
+    private static readonly Interface ExpectedInterface = new Interface
     {
         Name = "Calculator",
         Description = "Interface for a basic calculator supporting additions and multiplications",

@@ -43,7 +43,7 @@ namespace AlgoSdk.Crypto
         {
             public const int KeySize = (32 + 32);
 
-            SecureMemoryHandle handle;
+            private SecureMemoryHandle handle;
 
             public IntPtr Ptr => handle.Ptr;
 
@@ -80,10 +80,10 @@ namespace AlgoSdk.Crypto
                 crypto_sign_ed25519_detached(
                     &signature, 
                     message.GetUnsafePtr(), 
-                    (UIntPtr)message.Length, 
+                    (UIntPtr)message.Length,
                     Ptr);
 #else
-                crypto_sign_ed25519_detached(
+                var errorCode = crypto_sign_ed25519_detached(
                     &signature,
                     out _,
                     message.GetUnsafePtr(),
@@ -143,7 +143,12 @@ namespace AlgoSdk.Crypto
                     int error = crypto_sign_ed25519_seed_keypair(
                         &pk,
                         sk.Ptr,
-                        seedPtr);
+                        seedPtr
+                        );
+                    if (error > 0)
+                    {
+                        throw new System.Exception($"error code {error} when converting to KeyPair");
+                    }
                 }
                 return new KeyPair(sk, pk);
             }

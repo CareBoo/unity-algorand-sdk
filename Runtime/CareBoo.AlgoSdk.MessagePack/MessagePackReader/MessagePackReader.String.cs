@@ -53,7 +53,7 @@ namespace AlgoSdk.MessagePack
             return true;
         }
 
-        bool TryGetStringLengthInBytes(out int length)
+        private bool TryGetStringLengthInBytes(out int length)
         {
             if (!TryRead(out byte code))
             {
@@ -70,7 +70,7 @@ namespace AlgoSdk.MessagePack
             return TryGetStringLengthInBytes(code, out length);
         }
 
-        bool TryGetStringLengthInBytes(byte code, out int length)
+        private bool TryGetStringLengthInBytes(byte code, out int length)
         {
             length = default;
             switch (code)
@@ -111,7 +111,7 @@ namespace AlgoSdk.MessagePack
             return false;
         }
 
-        bool TryReadRawNextString(NativeList<byte> bytes)
+        private bool TryReadRawNextString(NativeList<byte> bytes)
         {
             if (!TryPeek(out var code))
                 return false;

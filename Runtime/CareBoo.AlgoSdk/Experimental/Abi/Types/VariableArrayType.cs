@@ -6,8 +6,7 @@ namespace AlgoSdk.Experimental.Abi
     [Serializable]
     public class VariableArrayType : IAbiType
     {
-        [SerializeField, SerializeReference]
-        IAbiType elementType;
+        [SerializeField, SerializeReference] private IAbiType elementType;
 
         public VariableArrayType(IAbiType elementType)
         {

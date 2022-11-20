@@ -8,8 +8,8 @@ namespace AlgoSdk.Samples.NftViewer
 {
     public class NftDisplayBox : MonoBehaviour
     {
-        [SerializeField] Image image;
-        [SerializeField] TextMeshProUGUI nameText, idText;
+        [SerializeField] private Image image;
+        [SerializeField] private TextMeshProUGUI nameText, idText;
 
         public void SetFields(Texture texture, string name, string id)
         {

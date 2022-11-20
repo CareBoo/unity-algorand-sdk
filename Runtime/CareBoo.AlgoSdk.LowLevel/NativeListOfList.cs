@@ -7,8 +7,8 @@ namespace AlgoSdk.LowLevel
         : INativeDisposable
         where T : unmanaged
     {
-        NativeList<T> list;
-        NativeList<int> indices;
+        private NativeList<T> list;
+        private NativeList<int> indices;
 
         public NativeListOfList(Allocator allocator)
         {

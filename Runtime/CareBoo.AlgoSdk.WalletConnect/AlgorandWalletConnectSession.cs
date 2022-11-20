@@ -7,11 +7,11 @@ namespace AlgoSdk.WalletConnect
     public class AlgorandWalletConnectSession
         : IActiveWalletConnectSession<AlgorandWalletConnectSession>
     {
-        SessionData sessionData;
+        private SessionData sessionData;
 
-        JsonRpcClient rpc;
+        private JsonRpcClient rpc;
 
-        UniTask<JsonRpcResponse> listeningForApproval;
+        private UniTask<JsonRpcResponse> listeningForApproval;
 
         /// <inheritdoc />
         public event Action<AlgorandWalletConnectSession> OnSessionConnect;
@@ -242,12 +242,12 @@ namespace AlgoSdk.WalletConnect
             return AlgoApiSerializer.DeserializeJson<byte[][]>(response.Result.Json);
         }
 
-        void HandleSocketClosed(string reason)
+        private void HandleSocketClosed(string reason)
         {
             OnSessionDisconnect?.Invoke(reason);
         }
 
-        void HandleJsonRpcRequestReceived(JsonRpcRequest request)
+        private void HandleJsonRpcRequestReceived(JsonRpcRequest request)
         {
             switch (request.Method)
             {
@@ -263,7 +263,7 @@ namespace AlgoSdk.WalletConnect
             }
         }
 
-        void UpdateSession(WalletConnectSessionData sessionData)
+        private void UpdateSession(WalletConnectSessionData sessionData)
         {
             if (!sessionData.IsApproved)
             {

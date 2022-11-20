@@ -67,6 +67,16 @@ namespace AlgoSdk.LowLevel
                 throw new IndexOutOfRangeException($"Index {index} is out of range [0, {length}).");
         }
 
+        public static ref byte ElementAt<TByteArray>(this ref TByteArray byteArray, int index)
+            where TByteArray : struct, IByteArray
+        {
+            CheckElementAccess(index, byteArray.Length);
+            unsafe
+            {
+                return ref UnsafeUtility.ArrayElementAsRef<byte>(byteArray.GetUnsafePtr(), index);
+            }
+        }
+
         public static byte GetByteAt<TByteArray>(this ref TByteArray bytes, int index)
             where TByteArray : struct, IByteArray
         {

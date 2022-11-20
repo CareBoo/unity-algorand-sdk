@@ -4,7 +4,7 @@ namespace AlgoSdk.WalletConnect
 {
     public static class WalletConnectRpc
     {
-        const string jsonRpcVersion = "2.0";
+        private const string jsonRpcVersion = "2.0";
 
         public const string SessionUpdateMethod = "wc_sessionUpdate";
 

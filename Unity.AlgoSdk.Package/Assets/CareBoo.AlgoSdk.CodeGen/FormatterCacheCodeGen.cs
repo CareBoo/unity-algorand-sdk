@@ -11,8 +11,8 @@ namespace AlgoSdk.Editor.CodeGen
 {
     public class FormatterCacheCodeGen
     {
-        const string OutputFileName = "Formatters.gen.cs";
-        const string FolderName = "Formatters.gen";
+        private const string OutputFileName = "Formatters.gen.cs";
+        private const string FolderName = "Formatters.gen";
 
         [MenuItem("AlgoSdk/Generate Formatter Cache")]
         public static void GenerateFormatterCache()
@@ -31,13 +31,13 @@ namespace AlgoSdk.Editor.CodeGen
             AssetDatabase.Refresh();
         }
 
-        static AlgoApiCompileUnit MergeCompileUnit(AlgoApiCompileUnit cu1, AlgoApiCompileUnit cu2)
+        private static AlgoApiCompileUnit MergeCompileUnit(AlgoApiCompileUnit cu1, AlgoApiCompileUnit cu2)
         {
             cu1.Namespaces.AddRange(cu2.Namespaces);
             return cu1;
         }
 
-        static string ExportToDirectory(AlgoApiCompileUnit compileUnit)
+        private static string ExportToDirectory(AlgoApiCompileUnit compileUnit)
         {
             try
             {
@@ -60,7 +60,7 @@ namespace AlgoSdk.Editor.CodeGen
             }
         }
 
-        static string GetFormatterDir(AlgoApiCompileUnit compileUnit)
+        private static string GetFormatterDir(AlgoApiCompileUnit compileUnit)
         {
             var assemblyPath = CompilationPipeline.GetAssemblyDefinitionFilePathFromScriptPath(compileUnit.SourceInfo.AssetPath);
             var assemblyDir = Path.GetDirectoryName(assemblyPath);

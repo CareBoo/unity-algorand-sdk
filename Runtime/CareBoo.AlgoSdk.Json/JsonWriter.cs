@@ -7,7 +7,7 @@ namespace AlgoSdk.Json
     public struct JsonWriter
         : INativeDisposable
     {
-        NativeText text;
+        private NativeText text;
 
         public JsonWriter(Allocator allocator)
         {

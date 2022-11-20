@@ -9,9 +9,9 @@ namespace AlgoSdk
         /// </summary>
         public readonly struct Confirmed
         {
-            readonly string[] txnIds;
-            readonly MethodCallResult[] results;
-            readonly ulong confirmedRound;
+            private readonly string[] txnIds;
+            private readonly MethodCallResult[] results;
+            private readonly ulong confirmedRound;
 
             /// <summary>
             /// The confirmed transaction ids.

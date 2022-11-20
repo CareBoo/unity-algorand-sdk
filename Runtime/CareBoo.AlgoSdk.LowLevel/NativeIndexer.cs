@@ -10,8 +10,8 @@ namespace AlgoSdk.LowLevel
         : IReadOnlyList<T>
         , INativeDisposable
     {
-        readonly T[] array;
-        NativeList<int> indices;
+        private readonly T[] array;
+        private NativeList<int> indices;
 
         public NativeIndexer(
             T[] array,

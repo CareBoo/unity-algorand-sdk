@@ -11,7 +11,7 @@ namespace AlgoSdk
         , IEquatable<Sig>
         , IByteArray
     {
-        Ed25519.Signature sig;
+        private Ed25519.Signature sig;
 
         public unsafe void* GetUnsafePtr() => sig.GetUnsafePtr();
 
@@ -38,6 +38,23 @@ namespace AlgoSdk
         public static implicit operator Sig(Ed25519.Signature sig)
         {
             return new Sig(in sig);
+        }
+
+        public static implicit operator Algorand.Signature(Sig sig)
+        {
+            return sig == default ? null : new Algorand.Signature(sig.ToArray());
+        }
+
+        public static implicit operator Sig(Algorand.Signature dotnetSig)
+        {
+            if (dotnetSig == null)
+            {
+                return default;
+            }
+            var bytes = dotnetSig.Bytes;
+            var sig = default(Sig);
+            sig.CopyFrom(bytes, 0);
+            return sig;
         }
 
         public static bool operator ==(in Sig x, in Sig y)

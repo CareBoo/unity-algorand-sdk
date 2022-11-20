@@ -33,7 +33,7 @@ namespace AlgoSdk
 
         public delegate void FieldSetter<T>(ref TAlgoApiObject messagePackObject, T value);
 
-        static readonly SerializePredicate shouldSerializeReadOnly = _ => false;
+        private static readonly SerializePredicate shouldSerializeReadOnly = _ => false;
 
         public readonly MessagePackDeserializer DeserializeMessagePack;
         public readonly MessagePackSerializer SerializeMessagePack;

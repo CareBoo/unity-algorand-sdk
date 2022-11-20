@@ -9,7 +9,7 @@ namespace BigIntegerLibrary
     /// Integer inefficiently represented internally using base-10 digits, in order to allow a
     /// visual representation as a base-10 string. Only for internal use.
     /// </summary>
-    sealed class Base10BigInteger
+    internal sealed class Base10BigInteger
     {
 
         #region Fields

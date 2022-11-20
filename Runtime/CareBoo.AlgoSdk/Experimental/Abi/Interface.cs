@@ -15,13 +15,13 @@ namespace AlgoSdk.Experimental.Abi
         : IEquatable<Interface>
     {
         [SerializeField, Tooltip("A user-friendly name for the interface.")]
-        string name;
+        private string name;
 
         [SerializeField, Tooltip("Optional, user-friendly description for the interface.")]
-        string description;
+        private string description;
 
         [SerializeField, Tooltip("All of the methods that the interface contains.")]
-        Method[] methods;
+        private Method[] methods;
 
         /// <summary>
         /// A user-friendly name for the interface.

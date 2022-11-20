@@ -18,7 +18,7 @@ namespace AlgoSdk
     public interface IAlgodClient : IAlgoApiClient
     {
         /// <summary>
-        /// Get a Merkle proof for a transaction in a block.
+        /// Get a proof for a transaction in a block.
         /// </summary>
         /// <remarks>
         /// 
@@ -40,7 +40,7 @@ namespace AlgoSdk
         /// <returns>
         /// 
         /// </returns>
-        AlgoApiRequest.Sent<ProofResponse> GetProof(
+        AlgoApiRequest.Sent<TransactionProofResponse> GetTransactionProof(
             ulong round,
         
             string txid,
@@ -136,6 +136,22 @@ namespace AlgoSdk
         );
 
         /// <summary>
+        /// Gets a proof for a given light block header inside a state proof commitment
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="round">
+        /// The round to which the light block header belongs.
+        /// </param>
+        /// <returns>
+        /// 
+        /// </returns>
+        AlgoApiRequest.Sent<LightBlockHeaderProofResponse> GetLightBlockHeaderProof(
+            ulong round
+        );
+
+        /// <summary>
         /// Provide debugging information for a transaction (or group).
         /// </summary>
         /// <remarks>
@@ -175,6 +191,22 @@ namespace AlgoSdk
             Optional<ulong> max = default,
         
             ResponseFormat format = default
+        );
+
+        /// <summary>
+        /// Get a state proof that covers a given round
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="round">
+        /// The round for which a state proof is desired.
+        /// </param>
+        /// <returns>
+        /// 
+        /// </returns>
+        AlgoApiRequest.Sent<StateProofResponse> GetStateProof(
+            ulong round
         );
 
         /// <summary>
@@ -308,6 +340,22 @@ namespace AlgoSdk
         /// </returns>
         AlgoApiRequest.Sent<AlgoApiObject> SwaggerJSON(
              
+        );
+
+        /// <summary>
+        /// Get the block hash for the block on the given round.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="round">
+        /// The round from which to fetch block hash information.
+        /// </param>
+        /// <returns>
+        /// 
+        /// </returns>
+        AlgoApiRequest.Sent<BlockHashResponse> GetBlockHash(
+            ulong round
         );
 
         /// <summary>
@@ -601,7 +649,7 @@ namespace AlgoSdk
         : IAlgodClient
     {
         /// <inheritdoc />
-        public AlgoApiRequest.Sent<ProofResponse> GetProof(
+        public AlgoApiRequest.Sent<TransactionProofResponse> GetTransactionProof(
             ulong round,
         
             string txid,
@@ -697,6 +745,19 @@ namespace AlgoSdk
         }
 
         /// <inheritdoc />
+        public AlgoApiRequest.Sent<LightBlockHeaderProofResponse> GetLightBlockHeaderProof(
+            ulong round
+        )
+        {
+            var path = $"/v2/blocks/{round}/lightheader/proof";
+            return this
+                .Get(path)
+                
+                .Send()
+                ;
+        }
+
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<DryrunResponse> TealDryrun(
             DryrunRequest request = default
         )
@@ -723,6 +784,19 @@ namespace AlgoSdk
                 .Add("format", format)
                 ;
             var path = $"/v2/accounts/{address}/transactions/pending{queryBuilder}";
+            return this
+                .Get(path)
+                
+                .Send()
+                ;
+        }
+
+        /// <inheritdoc />
+        public AlgoApiRequest.Sent<StateProofResponse> GetStateProof(
+            ulong round
+        )
+        {
+            var path = $"/v2/stateproofs/{round}";
             return this
                 .Get(path)
                 
@@ -833,6 +907,19 @@ namespace AlgoSdk
         )
         {
             var path = $"/swagger.json";
+            return this
+                .Get(path)
+                
+                .Send()
+                ;
+        }
+
+        /// <inheritdoc />
+        public AlgoApiRequest.Sent<BlockHashResponse> GetBlockHash(
+            ulong round
+        )
+        {
+            var path = $"/v2/blocks/{round}/hash";
             return this
                 .Get(path)
                 

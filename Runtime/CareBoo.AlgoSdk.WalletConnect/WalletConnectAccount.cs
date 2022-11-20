@@ -9,14 +9,13 @@ namespace AlgoSdk.WalletConnect
     public class WalletConnectAccount
         : IWalletConnectAccount
     {
-        [SerializeField]
-        SessionData sessionData;
+        [SerializeField] private SessionData sessionData;
 
-        AlgorandWalletConnectSession session;
+        private AlgorandWalletConnectSession session;
 
-        CancellationTokenSource sessionCancellation;
+        private CancellationTokenSource sessionCancellation;
 
-        bool beginningSession;
+        private bool beginningSession;
 
         /// <inheritdoc />
         public Address Address => sessionData.Accounts?[0] ?? Address.Empty;
@@ -162,13 +161,13 @@ namespace AlgoSdk.WalletConnect
             return result;
         }
 
-        void CheckSession()
+        private void CheckSession()
         {
             if (session == null)
                 throw new NullReferenceException("Session has not been initialized! Please call " + nameof(BeginSession) + " first.");
         }
 
-        void OnSessionDisconnect(string reason)
+        private void OnSessionDisconnect(string reason)
         {
             sessionData = session.Save();
         }

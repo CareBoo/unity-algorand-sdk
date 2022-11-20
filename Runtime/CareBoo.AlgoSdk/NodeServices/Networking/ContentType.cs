@@ -37,7 +37,7 @@ namespace AlgoSdk
             return ToContentType(headerValue);
         }
 
-        static string PruneParametersFromContentType(string fullType)
+        private static string PruneParametersFromContentType(string fullType)
         {
             if (fullType == null) return fullType;
             for (var i = 0; i < fullType.Length; i++)
@@ -46,7 +46,7 @@ namespace AlgoSdk
             return fullType;
         }
 
-        static ContentType ToContentType(string headerValue)
+        private static ContentType ToContentType(string headerValue)
         {
             return headerValue switch
             {

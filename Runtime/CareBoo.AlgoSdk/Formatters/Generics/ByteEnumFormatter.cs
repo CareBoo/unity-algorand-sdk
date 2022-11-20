@@ -9,8 +9,8 @@ namespace AlgoSdk.Formatters
     public abstract class KeywordByteEnumFormatter<T> : IAlgoApiFormatter<T>
         where T : Enum
     {
-        readonly Dictionary<string, T> stringToType;
-        readonly string[] typeToString;
+        private readonly Dictionary<string, T> stringToType;
+        private readonly string[] typeToString;
 
 
         public KeywordByteEnumFormatter(string[] typeToString)

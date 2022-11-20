@@ -16,7 +16,7 @@ namespace AlgoSdk
         : IByteArray
         , IEquatable<GenesisHash>
     {
-        [SerializeField] Sha512_256_Hash hash;
+        [SerializeField] private Sha512_256_Hash hash;
 
         public byte this[int index] { get => hash[index]; set => hash[index] = value; }
 

@@ -21,7 +21,7 @@ namespace AlgoSdk.Editor.CodeGen
             Statements.Add(new CodeMethodReturnStatement(new CodePrimitiveExpression(HasAddedFormatters)));
         }
 
-        bool AddFormatterInitStatements(Type type)
+        private bool AddFormatterInitStatements(Type type)
         {
             var algoApiObjectAttribute = type.GetCustomAttributes<AlgoApiObjectAttribute>().FirstOrDefault();
             var algoApiFormatterAttribute = type.GetCustomAttributes<AlgoApiFormatterAttribute>().FirstOrDefault();

@@ -4,8 +4,8 @@ namespace AlgoSdk.Json
 {
     public ref partial struct JsonReader
     {
-        NativeText text;
-        int offset;
+        private NativeText text;
+        private int offset;
 
         public JsonReader(NativeText text)
         {
@@ -86,7 +86,7 @@ namespace AlgoSdk.Json
             return true;
         }
 
-        void SkipWhitespace()
+        private void SkipWhitespace()
         {
             while (offset < text.Length)
             {

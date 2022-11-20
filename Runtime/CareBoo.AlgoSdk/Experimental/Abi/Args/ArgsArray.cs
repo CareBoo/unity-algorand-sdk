@@ -8,9 +8,9 @@ namespace AlgoSdk.Experimental.Abi
     public readonly struct ArgsArray
         : IArgEnumerator<ArgsArray>
     {
-        readonly IAbiValue[] values;
+        private readonly IAbiValue[] values;
 
-        readonly int current;
+        private readonly int current;
 
         /// <inheritdoc />
         public int Count => values?.Length ?? 0;

@@ -6,8 +6,8 @@ namespace AlgoSdk.LowLevel
     public readonly struct Repeated<T>
         : IReadOnlyList<T>
     {
-        readonly int count;
-        readonly T value;
+        private readonly int count;
+        private readonly T value;
 
         public Repeated(int count, T value)
         {
@@ -42,9 +42,9 @@ namespace AlgoSdk.LowLevel
         public struct Enumerator
             : IEnumerator<T>
         {
-            readonly Repeated<T> coll;
+            private readonly Repeated<T> coll;
 
-            int counter;
+            private int counter;
 
             public Enumerator(Repeated<T> coll)
             {

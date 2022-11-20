@@ -7,8 +7,7 @@ namespace AlgoSdk.Experimental.Abi
     [Serializable]
     public class UIntType : IAbiType
     {
-        [SerializeField, ModRange(8, 512, 8)]
-        int n;
+        [SerializeField, ModRange(8, 512, 8)] private int n;
 
         public UIntType(int n)
         {

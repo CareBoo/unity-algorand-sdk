@@ -6,8 +6,7 @@ namespace AlgoSdk.Experimental.Abi
     [Serializable]
     public class TransactionReferenceType : IAbiType
     {
-        [SerializeField]
-        AbiTransactionType txnType;
+        [SerializeField] private AbiTransactionType txnType;
 
         public TransactionReferenceType(AbiTransactionType txnType)
         {

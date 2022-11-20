@@ -12,6 +12,22 @@ namespace AlgoSdk.Algod
 {
     
     
+    public partial struct StateProofMessage
+    {
+        
+        private static bool @__generated__IsValid = StateProofMessage.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Algod.StateProofMessage>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Algod.StateProofMessage>(false).Assign("BlockHeadersCommitment", (AlgoSdk.Algod.StateProofMessage x) => x.BlockHeadersCommitment, (ref AlgoSdk.Algod.StateProofMessage x, System.Byte[] value) => x.BlockHeadersCommitment = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("VotersCommitment", (AlgoSdk.Algod.StateProofMessage x) => x.VotersCommitment, (ref AlgoSdk.Algod.StateProofMessage x, System.Byte[] value) => x.VotersCommitment = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("LnProvenWeight", (AlgoSdk.Algod.StateProofMessage x) => x.LnProvenWeight, (ref AlgoSdk.Algod.StateProofMessage x, System.UInt64 value) => x.LnProvenWeight = value).Assign("FirstAttestedRound", (AlgoSdk.Algod.StateProofMessage x) => x.FirstAttestedRound, (ref AlgoSdk.Algod.StateProofMessage x, System.UInt64 value) => x.FirstAttestedRound = value).Assign("LastAttestedRound", (AlgoSdk.Algod.StateProofMessage x) => x.LastAttestedRound, (ref AlgoSdk.Algod.StateProofMessage x, System.UInt64 value) => x.LastAttestedRound = value));
+            return true;
+        }
+    }
+}
+namespace AlgoSdk.Algod
+{
+    
+    
     public partial struct ApplicationParams
     {
         
@@ -140,6 +156,22 @@ namespace AlgoSdk.Algod
 {
     
     
+    public partial struct StateProof
+    {
+        
+        private static bool @__generated__IsValid = StateProof.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Algod.StateProof>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Algod.StateProof>(false).Assign("Message", (AlgoSdk.Algod.StateProof x) => x.Message, (ref AlgoSdk.Algod.StateProof x, AlgoSdk.Algod.StateProofMessage value) => x.Message = value).Assign("StateProof", (AlgoSdk.Algod.StateProof x) => x.EncodedStateProof, (ref AlgoSdk.Algod.StateProof x, System.Byte[] value) => x.EncodedStateProof = value, AlgoSdk.ArrayComparer<System.Byte>.Instance));
+            return true;
+        }
+    }
+}
+namespace AlgoSdk.Algod
+{
+    
+    
     public partial struct Asset
     {
         
@@ -260,6 +292,22 @@ namespace AlgoSdk.Algod
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Algod.AccountStateDelta>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Algod.AccountStateDelta>(false).Assign("address", (AlgoSdk.Algod.AccountStateDelta x) => x.Address, (ref AlgoSdk.Algod.AccountStateDelta x, System.String value) => x.Address = value, AlgoSdk.StringComparer.Instance).Assign("delta", (AlgoSdk.Algod.AccountStateDelta x) => x.Delta, (ref AlgoSdk.Algod.AccountStateDelta x, AlgoSdk.Algod.StateDelta value) => x.Delta = value));
+            return true;
+        }
+    }
+}
+namespace AlgoSdk.Algod
+{
+    
+    
+    public partial struct LightBlockHeaderProof
+    {
+        
+        private static bool @__generated__IsValid = LightBlockHeaderProof.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Algod.LightBlockHeaderProof>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Algod.LightBlockHeaderProof>(false).Assign("index", (AlgoSdk.Algod.LightBlockHeaderProof x) => x.Index, (ref AlgoSdk.Algod.LightBlockHeaderProof x, System.UInt64 value) => x.Index = value).Assign("treedepth", (AlgoSdk.Algod.LightBlockHeaderProof x) => x.Treedepth, (ref AlgoSdk.Algod.LightBlockHeaderProof x, System.UInt64 value) => x.Treedepth = value).Assign("proof", (AlgoSdk.Algod.LightBlockHeaderProof x) => x.Proof, (ref AlgoSdk.Algod.LightBlockHeaderProof x, System.Byte[] value) => x.Proof = value, AlgoSdk.ArrayComparer<System.Byte>.Instance));
             return true;
         }
     }
@@ -412,6 +460,38 @@ namespace AlgoSdk.Algod
 {
     
     
+    public partial struct TransactionProofResponse
+    {
+        
+        private static bool @__generated__IsValid = TransactionProofResponse.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Algod.TransactionProofResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Algod.TransactionProofResponse>(false).Assign("proof", (AlgoSdk.Algod.TransactionProofResponse x) => x.Proof, (ref AlgoSdk.Algod.TransactionProofResponse x, System.Byte[] value) => x.Proof = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("stibhash", (AlgoSdk.Algod.TransactionProofResponse x) => x.Stibhash, (ref AlgoSdk.Algod.TransactionProofResponse x, System.Byte[] value) => x.Stibhash = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("treedepth", (AlgoSdk.Algod.TransactionProofResponse x) => x.Treedepth, (ref AlgoSdk.Algod.TransactionProofResponse x, System.UInt64 value) => x.Treedepth = value).Assign("idx", (AlgoSdk.Algod.TransactionProofResponse x) => x.Idx, (ref AlgoSdk.Algod.TransactionProofResponse x, System.UInt64 value) => x.Idx = value).Assign("hashtype", (AlgoSdk.Algod.TransactionProofResponse x) => x.Hashtype, (ref AlgoSdk.Algod.TransactionProofResponse x, System.String value) => x.Hashtype = value, AlgoSdk.StringComparer.Instance));
+            return true;
+        }
+    }
+}
+namespace AlgoSdk.Algod
+{
+    
+    
+    public partial struct BlockHashResponse
+    {
+        
+        private static bool @__generated__IsValid = BlockHashResponse.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Algod.BlockHashResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Algod.BlockHashResponse>(false).Assign("blockHash", (AlgoSdk.Algod.BlockHashResponse x) => x.BlockHash, (ref AlgoSdk.Algod.BlockHashResponse x, System.String value) => x.BlockHash = value, AlgoSdk.StringComparer.Instance));
+            return true;
+        }
+    }
+}
+namespace AlgoSdk.Algod
+{
+    
+    
     public partial struct CatchpointStartResponse
     {
         
@@ -468,22 +548,6 @@ namespace AlgoSdk.Algod
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Algod.DisassembleResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Algod.DisassembleResponse>(false).Assign("result", (AlgoSdk.Algod.DisassembleResponse x) => x.Result, (ref AlgoSdk.Algod.DisassembleResponse x, System.String value) => x.Result = value, AlgoSdk.StringComparer.Instance));
-            return true;
-        }
-    }
-}
-namespace AlgoSdk.Algod
-{
-    
-    
-    public partial struct ProofResponse
-    {
-        
-        private static bool @__generated__IsValid = ProofResponse.@__generated__InitializeAlgoApiFormatters();
-        
-        private static bool @__generated__InitializeAlgoApiFormatters()
-        {
-            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Algod.ProofResponse>(new AlgoSdk.AlgoApiObjectFormatter<AlgoSdk.Algod.ProofResponse>(false).Assign("proof", (AlgoSdk.Algod.ProofResponse x) => x.Proof, (ref AlgoSdk.Algod.ProofResponse x, System.Byte[] value) => x.Proof = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("stibhash", (AlgoSdk.Algod.ProofResponse x) => x.Stibhash, (ref AlgoSdk.Algod.ProofResponse x, System.Byte[] value) => x.Stibhash = value, AlgoSdk.ArrayComparer<System.Byte>.Instance).Assign("treedepth", (AlgoSdk.Algod.ProofResponse x) => x.Treedepth, (ref AlgoSdk.Algod.ProofResponse x, System.UInt64 value) => x.Treedepth = value).Assign("idx", (AlgoSdk.Algod.ProofResponse x) => x.Idx, (ref AlgoSdk.Algod.ProofResponse x, System.UInt64 value) => x.Idx = value).Assign("hashtype", (AlgoSdk.Algod.ProofResponse x) => x.Hashtype, (ref AlgoSdk.Algod.ProofResponse x, System.String value) => x.Hashtype = value, AlgoSdk.StringComparer.Instance));
             return true;
         }
     }
@@ -668,6 +732,22 @@ namespace AlgoSdk.Algod
 {
     
     
+    public partial struct LightBlockHeaderProofResponse
+    {
+        
+        private static bool @__generated__IsValid = LightBlockHeaderProofResponse.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Algod.LightBlockHeaderProofResponse>(new AlgoSdk.WrappedValueFormatter<AlgoSdk.Algod.LightBlockHeaderProofResponse, AlgoSdk.Algod.LightBlockHeaderProof>());
+            return true;
+        }
+    }
+}
+namespace AlgoSdk.Algod
+{
+    
+    
     public partial struct AssetResponse
     {
         
@@ -692,6 +772,22 @@ namespace AlgoSdk.Algod
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Algod.ParticipationKeyResponse>(new AlgoSdk.WrappedValueFormatter<AlgoSdk.Algod.ParticipationKeyResponse, AlgoSdk.Algod.ParticipationKey>());
+            return true;
+        }
+    }
+}
+namespace AlgoSdk.Algod
+{
+    
+    
+    public partial struct StateProofResponse
+    {
+        
+        private static bool @__generated__IsValid = StateProofResponse.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            AlgoSdk.AlgoApiFormatterLookup.Add<AlgoSdk.Algod.StateProofResponse>(new AlgoSdk.WrappedValueFormatter<AlgoSdk.Algod.StateProofResponse, AlgoSdk.Algod.StateProof>());
             return true;
         }
     }

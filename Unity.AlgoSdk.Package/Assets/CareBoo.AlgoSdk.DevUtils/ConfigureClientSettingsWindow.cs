@@ -6,22 +6,19 @@ using UnityEngine.UIElements;
 
 public class ConfigureClientSettingsWindow : EditorWindow
 {
-    [SerializeField]
-    AlgodClient algodClient;
+    [SerializeField] private AlgodClient algodClient;
 
-    [SerializeField]
-    IndexerClient indexerClient;
+    [SerializeField] private IndexerClient indexerClient;
 
-    [SerializeField]
-    KmdClient kmdClient;
+    [SerializeField] private KmdClient kmdClient;
 
     [MenuItem("AlgoSdk/Configure Client Settings")]
-    static void ShowWindow()
+    private static void ShowWindow()
     {
         GetWindow<ConfigureClientSettingsWindow>();
     }
 
-    void CreateGUI()
+    private void CreateGUI()
     {
         Load();
         VisualElement root = rootVisualElement;
@@ -39,7 +36,7 @@ public class ConfigureClientSettingsWindow : EditorWindow
         root.Bind(new SerializedObject(this));
     }
 
-    void Save()
+    private void Save()
     {
         var algodJson = JsonUtility.ToJson(algodClient);
         var indexerJson = JsonUtility.ToJson(indexerClient);
@@ -51,10 +48,7 @@ public class ConfigureClientSettingsWindow : EditorWindow
         EditorPrefs.SetString(AlgoApiClientSettings.GetKey(nameof(AlgoApiClientSettings.Kmd)), kmdJson);
     }
 
-    void Load()
+    private void Load()
     {
-        algodClient = AlgoApiClientSettings.Algod;
-        indexerClient = AlgoApiClientSettings.Indexer;
-        kmdClient = AlgoApiClientSettings.Kmd;
     }
 }

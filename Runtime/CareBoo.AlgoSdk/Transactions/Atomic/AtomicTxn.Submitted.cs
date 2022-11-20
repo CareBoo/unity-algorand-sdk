@@ -12,9 +12,9 @@ namespace AlgoSdk
         /// </summary>
         public readonly struct Submitted
         {
-            readonly AlgodClient client;
-            readonly (int, Method)[] methodIndices;
-            readonly string[] txnIds;
+            private readonly AlgodClient client;
+            private readonly (int, Method)[] methodIndices;
+            private readonly string[] txnIds;
 
             /// <summary>
             /// The algod client used to submit these transactions.

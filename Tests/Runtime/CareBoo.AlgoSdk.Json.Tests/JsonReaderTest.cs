@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class JsonReaderTest
 {
-    const string validJson =
+    private const string validJson =
 @"{
     ""string"": ""world\"""",
     ""int"": -100,
@@ -70,7 +70,7 @@ public class JsonReaderTest
         Debug.Log(expected);
     }
 
-    void AssertReadStringEqual(ref JsonReader reader, FixedString32Bytes expected)
+    private void AssertReadStringEqual(ref JsonReader reader, FixedString32Bytes expected)
     {
         var actual = new FixedString32Bytes();
         reader.ReadString(ref actual);

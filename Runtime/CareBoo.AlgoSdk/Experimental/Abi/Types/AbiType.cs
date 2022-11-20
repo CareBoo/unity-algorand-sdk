@@ -258,7 +258,7 @@ namespace AlgoSdk.Experimental.Abi
             return false;
         }
 
-        static bool TryParseUIntN(Match match, out IAbiType abiType)
+        private static bool TryParseUIntN(Match match, out IAbiType abiType)
         {
             var nGroup = match.Groups["N"];
             if (!nGroup.Success
@@ -271,7 +271,7 @@ namespace AlgoSdk.Experimental.Abi
             return true;
         }
 
-        static bool TryParseUFixedNxM(Match match, out IAbiType abiType)
+        private static bool TryParseUFixedNxM(Match match, out IAbiType abiType)
         {
             var nGroup = match.Groups["N"];
             var mGroup = match.Groups["M"];
@@ -287,7 +287,7 @@ namespace AlgoSdk.Experimental.Abi
             return true;
         }
 
-        static bool TryParseArray(Match match, out IAbiType abiType)
+        private static bool TryParseArray(Match match, out IAbiType abiType)
         {
             var elementGroup = match.Groups["Element"];
             var lengthGroup = match.Groups["Length"];
@@ -311,7 +311,7 @@ namespace AlgoSdk.Experimental.Abi
             return true;
         }
 
-        static bool TryParseTuple(Match match, out IAbiType abiType)
+        private static bool TryParseTuple(Match match, out IAbiType abiType)
         {
             var typeStr = match.Value.TrimStart('(').TrimEnd(')');
             var nestedTypes = new List<IAbiType>();

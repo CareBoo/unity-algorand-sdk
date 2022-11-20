@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class YourFirstTransaction : MonoBehaviour
 {
-    AlgodClient algod = new AlgodClient("https://node.testnet.algoexplorerapi.io");
+    private AlgodClient algod = new AlgodClient("https://node.testnet.algoexplorerapi.io");
 
-    IndexerClient indexer = new IndexerClient("https://algoindexer.testnet.algoexplorerapi.io");
+    private IndexerClient indexer = new IndexerClient("https://algoindexer.testnet.algoexplorerapi.io");
 
-    string algodHealth;
+    private string algodHealth;
 
-    string indexerHealth;
+    private string indexerHealth;
 
-    ulong balance;
+    private ulong balance;
 
-    Account account;
+    private Account account;
 
-    string recipient;
+    private string recipient;
 
-    ulong payAmount;
+    private ulong payAmount;
 
-    string txnStatus;
+    private string txnStatus;
 
     public void Start()
     {

@@ -75,7 +75,7 @@ namespace AlgoSdk.WalletConnect
         public void LaunchForSigning(string walletConnectVersion = "1") =>
             LaunchApp($"wc:00e46b69-d0cc-4b3e-b6a2-cee442f97188@{walletConnectVersion}");
 
-        void LaunchApp(string url)
+        private void LaunchApp(string url)
         {
             var deepLinkUrl = FormatUrlForDeepLink(url);
             UnityEngine.Application.OpenURL(deepLinkUrl);

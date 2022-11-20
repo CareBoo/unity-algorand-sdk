@@ -24,9 +24,9 @@ namespace AlgoSdk.Experimental.Abi
     /// </summary>
     public readonly struct UFixedNxM : IUFixedNxM
     {
-        readonly UIntN value;
+        private readonly UIntN value;
 
-        readonly byte precision;
+        private readonly byte precision;
 
         public UFixedNxM(UIntN value, byte precision)
         {
@@ -77,7 +77,7 @@ namespace AlgoSdk.Experimental.Abi
             return new UFixedNxM(new UIntN(newVal), (byte)type.M);
         }
 
-        void CheckType(IAbiType type)
+        private void CheckType(IAbiType type)
         {
             if (type.ValueType != AbiValueType.UFixedNxM)
                 throw new System.ArgumentException($"Cannot encode UFixed{N}x{M} to ${type.Name}", nameof(type));

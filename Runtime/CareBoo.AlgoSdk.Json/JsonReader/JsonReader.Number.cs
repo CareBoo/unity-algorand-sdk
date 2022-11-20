@@ -183,7 +183,7 @@ namespace AlgoSdk.Json
             return JsonReadError.None;
         }
 
-        JsonReadError SkipNumber()
+        private JsonReadError SkipNumber()
         {
             while (offset < text.Length)
             {

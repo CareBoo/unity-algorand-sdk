@@ -19,7 +19,7 @@ using ZXing.Common;
 namespace ZXing.QrCode.Internal
 {
     /// <author>Sean Owen</author>
-    sealed class BitMatrixParser
+    internal sealed class BitMatrixParser
     {
         private readonly BitMatrix bitMatrix;
         private Version parsedVersion;

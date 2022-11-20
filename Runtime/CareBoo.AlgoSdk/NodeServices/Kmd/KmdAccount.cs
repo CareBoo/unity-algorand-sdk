@@ -12,17 +12,13 @@ namespace AlgoSdk
         : IAccount
         , IAsyncSigner
     {
-        [SerializeField]
-        KmdClient client;
+        [SerializeField] private KmdClient client;
 
-        [SerializeField]
-        FixedString128Bytes walletId;
+        [SerializeField] private FixedString128Bytes walletId;
 
-        [SerializeField]
-        FixedString128Bytes walletPassword;
+        [SerializeField] private FixedString128Bytes walletPassword;
 
-        [SerializeField]
-        Address address;
+        [SerializeField] private Address address;
 
         public KmdAccount(
             KmdClient client,

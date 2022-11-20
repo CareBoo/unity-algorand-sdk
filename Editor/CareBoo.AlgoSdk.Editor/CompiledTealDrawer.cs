@@ -23,7 +23,7 @@ namespace AlgoSdk.Editor
             }
         }
 
-        string GetText(SerializedProperty property)
+        private string GetText(SerializedProperty property)
         {
             if (!property.isArray)
                 return string.Empty;
@@ -35,7 +35,7 @@ namespace AlgoSdk.Editor
             return System.Convert.ToBase64String(bytes);
         }
 
-        void SetText(SerializedProperty property, string text)
+        private void SetText(SerializedProperty property, string text)
         {
             if (string.IsNullOrEmpty(text))
             {

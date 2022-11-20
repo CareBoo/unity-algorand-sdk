@@ -8,11 +8,9 @@ namespace AlgoSdk
     public partial struct ValueDeltaKeyValue
         : IEquatable<ValueDeltaKeyValue>
     {
-        [SerializeField]
-        FixedString64Bytes key;
+        [SerializeField] private FixedString64Bytes key;
 
-        [SerializeField]
-        ValueDelta value;
+        [SerializeField] private ValueDelta value;
 
         public FixedString64Bytes Key
         {

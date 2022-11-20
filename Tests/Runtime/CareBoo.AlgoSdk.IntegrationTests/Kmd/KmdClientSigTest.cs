@@ -10,9 +10,9 @@ using UnityEngine.TestTools;
 
 public class KmdClientSigTest : KmdClientTestFixture
 {
-    PrivateKey[] privateKeys;
-    Address msigAddress;
-    MultisigSig msig;
+    private PrivateKey[] privateKeys;
+    private Address msigAddress;
+    private MultisigSig msig;
 
     protected override async UniTask SetUpAsync()
     {
@@ -63,10 +63,10 @@ public class KmdClientSigTest : KmdClientTestFixture
         );
     }
 
-    async UniTask<AlgoApiResponse<ImportKeyResponse>> ImportKey(PrivateKey key, FixedString128Bytes walletHandleToken) =>
+    private async UniTask<AlgoApiResponse<ImportKeyResponse>> ImportKey(PrivateKey key, FixedString128Bytes walletHandleToken) =>
         await AlgoApiClientSettings.Kmd.ImportKey(key, walletHandleToken);
 
-    async UniTask<AlgoApiResponse<ImportKeyResponse>> DeleteKey(PrivateKey key, FixedString128Bytes walletHandleToken) =>
+    private async UniTask<AlgoApiResponse<ImportKeyResponse>> DeleteKey(PrivateKey key, FixedString128Bytes walletHandleToken) =>
         await AlgoApiClientSettings.Kmd.DeleteKey(key.ToAddress(), walletHandleToken, WalletPassword);
 
     [UnityTest]

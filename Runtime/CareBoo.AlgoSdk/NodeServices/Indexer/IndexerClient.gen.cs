@@ -132,7 +132,7 @@ namespace AlgoSdk
         
             DateTime afterTime = default,
         
-            TransactionType txType = default,
+            string txType = default,
         
             Optional<bool> excludeCloseTo = default,
         
@@ -383,7 +383,7 @@ namespace AlgoSdk
         /// Results should have an amount less than this value. MicroAlgos are the default currency unless an asset-id is provided, in which case the asset will be used.
         /// </param>
         /// <param name="round">
-        /// Include results for the specified round. For performance reasons, this parameter may be disabled on some configurations.
+        /// Include results for the specified round. For performance reasons, this parameter may be disabled on some configurations. Using application-id or asset-id filters will return both creator and opt-in accounts. Filtering by include-all will return creator and opt-in accounts for deleted assets and accounts. Non-opt-in managers are not included in the results when asset-id is used.
         /// </param>
         /// <param name="includeAll">
         /// Include all items including closed accounts, deleted applications, destroyed assets, opted-out asset holdings, and closed-out application localstates.
@@ -486,7 +486,7 @@ namespace AlgoSdk
         
             DateTime afterTime = default,
         
-            TransactionType txType = default,
+            string txType = default,
         
             Optional<ulong> limit = default,
         
@@ -589,7 +589,7 @@ namespace AlgoSdk
         
             Optional<ulong> applicationId = default,
         
-            TransactionType txType = default,
+            string txType = default,
         
             Optional<bool> excludeCloseTo = default,
         
@@ -796,11 +796,16 @@ namespace AlgoSdk
         /// <param name="roundNumber">
         /// Round number
         /// </param>
+        /// <param name="headerOnly">
+        /// Header only flag. When this is set to true, returned block does not contain the transactions
+        /// </param>
         /// <returns>
         /// 
         /// </returns>
         AlgoApiRequest.Sent<BlockResponse> LookupBlock(
-            ulong roundNumber
+            ulong roundNumber,
+        
+            Optional<bool> headerOnly = default
         );
 
         /// <summary>
@@ -865,7 +870,7 @@ namespace AlgoSdk
         
             DateTime afterTime = default,
         
-            TransactionType txType = default,
+            string txType = default,
         
             Optional<bool> excludeCloseTo = default,
         
@@ -1120,7 +1125,7 @@ namespace AlgoSdk
         
             DateTime afterTime = default,
         
-            TransactionType txType = default,
+            string txType = default,
         
             Optional<ulong> limit = default,
         
@@ -1180,7 +1185,7 @@ namespace AlgoSdk
         
             Optional<ulong> applicationId = default,
         
-            TransactionType txType = default,
+            string txType = default,
         
             Optional<bool> excludeCloseTo = default,
         
@@ -1371,10 +1376,15 @@ namespace AlgoSdk
 
         /// <inheritdoc />
         public AlgoApiRequest.Sent<BlockResponse> LookupBlock(
-            ulong roundNumber
+            ulong roundNumber,
+        
+            Optional<bool> headerOnly = default
         )
         {
-            var path = $"/v2/blocks/{roundNumber}";
+            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+                .Add("header-only", headerOnly)
+                ;
+            var path = $"/v2/blocks/{roundNumber}{queryBuilder}";
             return this
                 .Get(path)
                 

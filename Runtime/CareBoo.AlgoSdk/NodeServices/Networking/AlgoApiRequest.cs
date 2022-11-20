@@ -16,7 +16,7 @@ namespace AlgoSdk
     /// </summary>
     public readonly ref struct AlgoApiRequest
     {
-        readonly UnityWebRequest unityWebRequest;
+        private readonly UnityWebRequest unityWebRequest;
 
         private AlgoApiRequest(ref UnityWebRequest unityWebRequest)
         {
@@ -201,7 +201,7 @@ namespace AlgoSdk
             return new AlgoApiRequest(ref webRequest);
         }
 
-        static UnityWebRequest UnityWebRequestPostWithoutBody(string url)
+        private static UnityWebRequest UnityWebRequestPostWithoutBody(string url)
         {
             return new UnityWebRequest()
             {
@@ -217,8 +217,8 @@ namespace AlgoSdk
         /// </summary>
         public readonly struct Sent
         {
-            readonly UnityWebRequestAsyncOperation asyncOperation;
-            readonly CancellationToken cancellationToken;
+            private readonly UnityWebRequestAsyncOperation asyncOperation;
+            private readonly CancellationToken cancellationToken;
 
             public UnityWebRequestAsyncOperation AsyncOperation => asyncOperation;
 
@@ -266,8 +266,8 @@ namespace AlgoSdk
         /// </summary>
         public readonly struct Sent<TResponse>
         {
-            readonly UnityWebRequestAsyncOperation asyncOperation;
-            readonly CancellationToken cancellationToken;
+            private readonly UnityWebRequestAsyncOperation asyncOperation;
+            private readonly CancellationToken cancellationToken;
 
             public UnityWebRequestAsyncOperation AsyncOperation => asyncOperation;
 
@@ -316,9 +316,9 @@ namespace AlgoSdk
         public readonly struct SentWithProgress<TProgress>
             where TProgress : IProgress<float>
         {
-            readonly UnityWebRequestAsyncOperation asyncOperation;
-            readonly TProgress progress;
-            readonly CancellationToken cancellationToken;
+            private readonly UnityWebRequestAsyncOperation asyncOperation;
+            private readonly TProgress progress;
+            private readonly CancellationToken cancellationToken;
 
             public UnityWebRequestAsyncOperation AsyncOperation => asyncOperation;
 
@@ -363,9 +363,9 @@ namespace AlgoSdk
         public readonly struct SentWithProgress<TResponse, TProgress>
             where TProgress : IProgress<float>
         {
-            readonly UnityWebRequestAsyncOperation asyncOperation;
-            readonly TProgress progress;
-            readonly CancellationToken cancellationToken;
+            private readonly UnityWebRequestAsyncOperation asyncOperation;
+            private readonly TProgress progress;
+            private readonly CancellationToken cancellationToken;
 
             public UnityWebRequestAsyncOperation AsyncOperation => asyncOperation;
 
@@ -410,7 +410,7 @@ namespace AlgoSdk
         public readonly struct Awaiter
             : ICriticalNotifyCompletion
         {
-            readonly UniTask<UnityWebRequest>.Awaiter uniTaskAwaiter;
+            private readonly UniTask<UnityWebRequest>.Awaiter uniTaskAwaiter;
 
             public Awaiter(UniTask<UnityWebRequest>.Awaiter uniTaskAwaiter)
             {
@@ -451,7 +451,7 @@ namespace AlgoSdk
         public readonly struct Awaiter<TResponse>
             : ICriticalNotifyCompletion
         {
-            readonly UniTask<UnityWebRequest>.Awaiter uniTaskAwaiter;
+            private readonly UniTask<UnityWebRequest>.Awaiter uniTaskAwaiter;
 
             public Awaiter(UniTask<UnityWebRequest>.Awaiter uniTaskAwaiter)
             {

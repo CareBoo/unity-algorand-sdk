@@ -72,19 +72,19 @@ public abstract class AlgoApiClientTestFixture
             CheckKmdService();
     }
 
-    static void CheckAlgodService()
+    private static void CheckAlgodService()
     {
         if (string.IsNullOrWhiteSpace(AlgoApiClientSettings.Algod.Address))
             Assert.Ignore("Ignoring test because Algod Service has no Address.");
     }
 
-    static void CheckIndexerService()
+    private static void CheckIndexerService()
     {
         if (string.IsNullOrWhiteSpace(AlgoApiClientSettings.Indexer.Address))
             Assert.Ignore("Ignoring test because Indexer Service has no Address.");
     }
 
-    static void CheckKmdService()
+    private static void CheckKmdService()
     {
         if (string.IsNullOrWhiteSpace(AlgoApiClientSettings.Kmd.Address))
             Assert.Ignore("Ignoring test because Kmd Service has no Address.");

@@ -8,14 +8,16 @@
         "GUID:e0cd26848372d4e5c891c569017e11f1",
         "GUID:f8b80ea32105bf74aa022a9a7e066bc1",
         "GUID:9f8c967ec86c9324c9b2928ff73b4cf1",
-        "GUID:70d524b45145c40acbd35603c8e43743"
+        "GUID:70d524b45145c40acbd35603c8e43743",
+        "GUID:049c4face043b7148b2fdb455a1dc35f"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": true,
     "overrideReferences": true,
     "precompiledReferences": [
-        "nunit.framework.dll"
+        "nunit.framework.dll",
+        "Algorand.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [

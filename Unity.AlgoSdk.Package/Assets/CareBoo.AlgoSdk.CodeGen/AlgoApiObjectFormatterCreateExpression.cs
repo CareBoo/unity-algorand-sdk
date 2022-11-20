@@ -8,13 +8,13 @@ namespace AlgoSdk.Editor.CodeGen
 {
     public class AlgoApiObjectFormatterCreateExpression
     {
-        static readonly Dictionary<Type, Type> equalityComparerLookup = new Dictionary<Type, Type>()
+        private static readonly Dictionary<Type, Type> equalityComparerLookup = new Dictionary<Type, Type>()
         {
             {typeof(string), typeof(StringComparer)},
             {typeof(IAbiType), typeof(IAbiTypeComparer)}
         };
 
-        CodeExpression expression;
+        private CodeExpression expression;
 
         public AlgoApiObjectFormatterCreateExpression(AlgoApiObjectAttribute attribute, Type type, IEnumerable<AlgoApiObjectFieldKey> fields)
         {
@@ -38,7 +38,7 @@ namespace AlgoSdk.Editor.CodeGen
             return src?.expression;
         }
 
-        static CodeExpression[] GetAssignParamsExpressions(Type type, AlgoApiObjectFieldKey field)
+        private static CodeExpression[] GetAssignParamsExpressions(Type type, AlgoApiObjectFieldKey field)
         {
             var memberName = field.MemberInfo.Name;
             var memberType = field.MemberType;
@@ -59,7 +59,7 @@ namespace AlgoSdk.Editor.CodeGen
             return expressions.ToArray();
         }
 
-        static Type GetEqualityComparerType(Type type)
+        private static Type GetEqualityComparerType(Type type)
         {
             if (equalityComparerLookup.TryGetValue(type, out var elementComparerType))
                 return elementComparerType;

@@ -29,15 +29,15 @@ namespace AlgoSdk
     {
         [SerializeField]
         [Tooltip("Indicates a yes vote for the current proposal.")]
-        Optional<bool> upgradeApprove;
+        private Optional<bool> upgradeApprove;
 
         [SerializeField]
         [Tooltip("Indicates the time between acceptance and execution.")]
-        ulong upgradeDelay;
+        private ulong upgradeDelay;
 
         [SerializeField]
         [Tooltip("Indicates a proposed upgrade.")]
-        Address upgradePropose;
+        private Address upgradePropose;
 
         [AlgoApiField("upgrade-approve")]
         public Optional<bool> UpgradeApprove

@@ -43,27 +43,27 @@ namespace AlgoSdk
     {
         [SerializeField]
         [Tooltip("accepts transaction fees, it can only spend to the incentive pool.")]
-        Address feeSink;
+        private Address feeSink;
 
         [SerializeField]
         [Tooltip("number of leftover MicroAlgos after the distribution of rewards-rate MicroAlgos for every reward unit in the next round.")]
-        ulong rewardsCalculationRound;
+        private ulong rewardsCalculationRound;
 
         [SerializeField]
         [Tooltip("How many rewards, in MicroAlgos, have been distributed to each RewardUnit of MicroAlgos since genesis.")]
-        ulong rewardsLevel;
+        private ulong rewardsLevel;
 
         [SerializeField]
         [Tooltip("accepts periodic injections from the fee-sink and continually redistributes them as rewards.")]
-        Address rewardsPool;
+        private Address rewardsPool;
 
         [SerializeField]
         [Tooltip("Number of new MicroAlgos added to the participation stake from rewards at the next round.")]
-        ulong rewardsRate;
+        private ulong rewardsRate;
 
         [SerializeField]
         [Tooltip("Number of leftover MicroAlgos after the distribution of RewardsRate/rewardUnits MicroAlgos for every reward unit in the next round.")]
-        ulong rewardsResidue;
+        private ulong rewardsResidue;
 
         [AlgoApiField("fee-sink")]
         public Address FeeSink

@@ -45,7 +45,7 @@ namespace AlgoSdk.WalletConnect
             };
         }
 
-        byte[] GetSignData()
+        private byte[] GetSignData()
         {
             var result = new byte[Iv.Data.Length + Data.Data.Length];
             Buffer.BlockCopy(Data, 0, result, 0, Data.Data.Length);
