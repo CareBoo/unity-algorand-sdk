@@ -14,5 +14,7 @@
       href: ../../Documentation~/algorand_standard_assets/creating_asas_in_editor.md
 - name: WalletConnect
   href: ../../Documentation~/walletconnect.md
+- name: Integration with the .NET SDK
+  href: ../../Documentation~/integration_with_the_dotnet_sdk.md
 - name: Troubleshooting
   href: ../../Documentation~/troubleshooting.md
