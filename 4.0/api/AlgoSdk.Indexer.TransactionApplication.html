@@ -1,0 +1,545 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct TransactionApplication
+   | Unity Algorand SDK </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct TransactionApplication
+   | Unity Algorand SDK ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo_50.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AlgoSdk.Indexer.TransactionApplication">
+  
+  
+  <h1 id="AlgoSdk_Indexer_TransactionApplication" data-uid="AlgoSdk.Indexer.TransactionApplication" class="text-break">Struct TransactionApplication
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AlgoSdk.Indexer.html">AlgoSdk.Indexer</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="AlgoSdk_Indexer_TransactionApplication_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct TransactionApplication : IEquatable&lt;TransactionApplication&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="AlgoSdk_Indexer_TransactionApplication_Accounts_" data-uid="AlgoSdk.Indexer.TransactionApplication.Accounts*"></a>
+  <h4 id="AlgoSdk_Indexer_TransactionApplication_Accounts" data-uid="AlgoSdk.Indexer.TransactionApplication.Accounts">Accounts</h4>
+  <div class="markdown level1 summary"><p>[apat] List of accounts in addition to the sender that may be accessed from the application&apos;s approval-program and clear-state-program.        </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address[] Accounts { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Address.html">Address</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Indexer_TransactionApplication_ApplicationArgs_" data-uid="AlgoSdk.Indexer.TransactionApplication.ApplicationArgs*"></a>
+  <h4 id="AlgoSdk_Indexer_TransactionApplication_ApplicationArgs" data-uid="AlgoSdk.Indexer.TransactionApplication.ApplicationArgs">ApplicationArgs</h4>
+  <div class="markdown level1 summary"><p>[apaa] transaction specific arguments accessed from the application&apos;s approval-program and clear-state-program.        </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] ApplicationArgs { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Indexer_TransactionApplication_ApplicationId_" data-uid="AlgoSdk.Indexer.TransactionApplication.ApplicationId*"></a>
+  <h4 id="AlgoSdk_Indexer_TransactionApplication_ApplicationId" data-uid="AlgoSdk.Indexer.TransactionApplication.ApplicationId">ApplicationId</h4>
+  <div class="markdown level1 summary"><p>[apid] ID of the application being configured or empty if creating.        </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong ApplicationId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Indexer_TransactionApplication_ApprovalProgram_" data-uid="AlgoSdk.Indexer.TransactionApplication.ApprovalProgram*"></a>
+  <h4 id="AlgoSdk_Indexer_TransactionApplication_ApprovalProgram" data-uid="AlgoSdk.Indexer.TransactionApplication.ApprovalProgram">ApprovalProgram</h4>
+  <div class="markdown level1 summary"><p>[apap] Logic executed for every application transaction, except when on-completion is set to &apos;clear&apos;. It can read and write global state for the application, as well as account-specific local state. Approval programs may reject the transaction.        </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CompiledTeal ApprovalProgram { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.CompiledTeal.html">CompiledTeal</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Indexer_TransactionApplication_ClearStateProgram_" data-uid="AlgoSdk.Indexer.TransactionApplication.ClearStateProgram*"></a>
+  <h4 id="AlgoSdk_Indexer_TransactionApplication_ClearStateProgram" data-uid="AlgoSdk.Indexer.TransactionApplication.ClearStateProgram">ClearStateProgram</h4>
+  <div class="markdown level1 summary"><p>[apsu] Logic executed for application transactions with on-completion set to &apos;clear&apos;. It can read and write global state for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.        </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CompiledTeal ClearStateProgram { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.CompiledTeal.html">CompiledTeal</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Indexer_TransactionApplication_ExtraProgramPages_" data-uid="AlgoSdk.Indexer.TransactionApplication.ExtraProgramPages*"></a>
+  <h4 id="AlgoSdk_Indexer_TransactionApplication_ExtraProgramPages" data-uid="AlgoSdk.Indexer.TransactionApplication.ExtraProgramPages">ExtraProgramPages</h4>
+  <div class="markdown level1 summary"><p>[epp] specifies the additional app program len requested in pages.        </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Optional&lt;ulong&gt; ExtraProgramPages { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Indexer_TransactionApplication_ForeignApps_" data-uid="AlgoSdk.Indexer.TransactionApplication.ForeignApps*"></a>
+  <h4 id="AlgoSdk_Indexer_TransactionApplication_ForeignApps" data-uid="AlgoSdk.Indexer.TransactionApplication.ForeignApps">ForeignApps</h4>
+  <div class="markdown level1 summary"><p>[apfa] Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.        </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong[] ForeignApps { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Indexer_TransactionApplication_ForeignAssets_" data-uid="AlgoSdk.Indexer.TransactionApplication.ForeignAssets*"></a>
+  <h4 id="AlgoSdk_Indexer_TransactionApplication_ForeignAssets" data-uid="AlgoSdk.Indexer.TransactionApplication.ForeignAssets">ForeignAssets</h4>
+  <div class="markdown level1 summary"><p>[apas] lists the assets whose parameters may be accessed by this application&apos;s ApprovalProgram and ClearStateProgram. The access is read-only.        </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong[] ForeignAssets { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Indexer_TransactionApplication_GlobalStateSchema_" data-uid="AlgoSdk.Indexer.TransactionApplication.GlobalStateSchema*"></a>
+  <h4 id="AlgoSdk_Indexer_TransactionApplication_GlobalStateSchema" data-uid="AlgoSdk.Indexer.TransactionApplication.GlobalStateSchema">GlobalStateSchema</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StateSchema GlobalStateSchema { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Indexer.StateSchema.html">StateSchema</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Indexer_TransactionApplication_LocalStateSchema_" data-uid="AlgoSdk.Indexer.TransactionApplication.LocalStateSchema*"></a>
+  <h4 id="AlgoSdk_Indexer_TransactionApplication_LocalStateSchema" data-uid="AlgoSdk.Indexer.TransactionApplication.LocalStateSchema">LocalStateSchema</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StateSchema LocalStateSchema { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Indexer.StateSchema.html">StateSchema</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Indexer_TransactionApplication_OnCompletion_" data-uid="AlgoSdk.Indexer.TransactionApplication.OnCompletion*"></a>
+  <h4 id="AlgoSdk_Indexer_TransactionApplication_OnCompletion" data-uid="AlgoSdk.Indexer.TransactionApplication.OnCompletion">OnCompletion</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnCompletion OnCompletion { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.OnCompletion.html">OnCompletion</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="AlgoSdk_Indexer_TransactionApplication_Equals_" data-uid="AlgoSdk.Indexer.TransactionApplication.Equals*"></a>
+  <h4 id="AlgoSdk_Indexer_TransactionApplication_Equals_AlgoSdk_Indexer_TransactionApplication_" data-uid="AlgoSdk.Indexer.TransactionApplication.Equals(AlgoSdk.Indexer.TransactionApplication)">Equals(TransactionApplication)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(TransactionApplication other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Indexer.TransactionApplication.html">TransactionApplication</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  
+  
+  <a id="AlgoSdk_Indexer_TransactionApplication_op_Explicit_" data-uid="AlgoSdk.Indexer.TransactionApplication.op_Explicit*"></a>
+  <h4 id="AlgoSdk_Indexer_TransactionApplication_op_Explicit_AlgoSdk_Indexer_TransactionApplication__Dotnet_TransactionApplication" data-uid="AlgoSdk.Indexer.TransactionApplication.op_Explicit(AlgoSdk.Indexer.TransactionApplication)~Dotnet.TransactionApplication">Explicit(TransactionApplication to Dotnet.TransactionApplication)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static explicit operator Dotnet.TransactionApplication(TransactionApplication from)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Indexer.TransactionApplication.html">TransactionApplication</a></td>
+        <td><span class="parametername">from</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Dotnet.TransactionApplication</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="AlgoSdk_Indexer_TransactionApplication_op_Explicit_" data-uid="AlgoSdk.Indexer.TransactionApplication.op_Explicit*"></a>
+  <h4 id="AlgoSdk_Indexer_TransactionApplication_op_Explicit_Dotnet_TransactionApplication__AlgoSdk_Indexer_TransactionApplication" data-uid="AlgoSdk.Indexer.TransactionApplication.op_Explicit(Dotnet.TransactionApplication)~AlgoSdk.Indexer.TransactionApplication">Explicit(Dotnet.TransactionApplication to TransactionApplication)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static explicit operator TransactionApplication(Dotnet.TransactionApplication from)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Dotnet.TransactionApplication</span></td>
+        <td><span class="parametername">from</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AlgoSdk.Indexer.TransactionApplication.html">TransactionApplication</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
