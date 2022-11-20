@@ -52,6 +52,21 @@ namespace AlgoSdk
         /// <inheritdoc />
         public Header[] Headers => headers;
 
+        public Algorand.Indexer.CommonApi ToCommonApi()
+        {
+            return (Algorand.Indexer.CommonApi)this;
+        }
+
+        public Algorand.Indexer.SearchApi ToSearchApi()
+        {
+            return (Algorand.Indexer.SearchApi)this;
+        }
+
+        public Algorand.Indexer.LookupApi ToLookupApi()
+        {
+            return (Algorand.Indexer.LookupApi)this;
+        }
+
         public static explicit operator Algorand.Indexer.CommonApi(IndexerClient indexer)
         {
             return new Algorand.Indexer.CommonApi(indexer.ToHttpClient());

@@ -26,10 +26,10 @@ jobs:
         id: changed_csharp_files
         with:
           files: |
-            Runtime/**.cs
-            Editor/**.cs
-            Samples*/**.cs
-            Tests/**.cs
+            Runtime/**/*.cs
+            Editor/**/*.cs
+            Samples*/**/*.cs
+            Tests/**/*.cs
 
       - name: Run dotnet format
         id: format

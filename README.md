@@ -21,9 +21,6 @@ Unity Algorand SDK
 
 </h1>
 
-> [!Caution]
-> This package has not been audited and isn't suitable for production use.
-
 Integrate your game with [Algorand](https://www.algorand.com/), a Pure Proof-of-Stake blockchain overseen by the Algorand Foundation.
 Create and sign Algorand transactions, use Algorand's [REST APIs](https://developer.algorand.org/docs/rest-apis/restendpoints/),
 and connect to any Algorand wallet supporting [WalletConnect](https://developer.algorand.org/docs/get-details/walletconnect/).

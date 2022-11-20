@@ -15,7 +15,15 @@
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
+    "defineConstraints": [
+        "TEXT_MESH_PRO"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.textmeshpro",
+            "expression": "3",
+            "define": "TEXT_MESH_PRO"
+        }
+    ],
     "noEngineReferences": false
 }
