@@ -109,34 +109,5 @@ namespace AlgoSdk
             progress.Report(1f);
             return SignTxnsAsync(txns, txnsToSign);
         }
-
-        [Obsolete]
-        public UniTask<SignedTxn<T>> SignTxnAsync<T>(T txn) where T : ITransaction, IEquatable<T>
-        {
-            return UniTask.FromResult(SignTxn(txn));
-        }
-
-        [Obsolete("Use AtomicTxn.Signing.SignWithAsync instead")]
-        public UniTask<SignedTxn<T>[]> SignTxnsAsync<T>(T[] txns) where T : ITransaction, IEquatable<T>
-        {
-            return UniTask.FromResult(SignTxns(txns));
-        }
-
-        [Obsolete("Use AtomicTxn.Signing.SignWith instead.")]
-        public SignedTxn<T>[] SignTxns<T>(T[] txns) where T : ITransaction, IEquatable<T>
-        {
-            var groupId = TransactionGroup.Of(txns).GetId();
-            var signedTxns = new SignedTxn<T>[txns.Length];
-            for (var i = 0; i < txns.Length; i++)
-            {
-                var txn = txns[i];
-                txn.Group = groupId;
-                signedTxns[i] = txn.Sender.Equals(Address)
-                    ? SignTxn(txn)
-                    : new SignedTxn<T> { Txn = txn }
-                    ;
-            }
-            return signedTxns;
-        }
     }
 }
