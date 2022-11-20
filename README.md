@@ -150,4 +150,4 @@ Read [Getting Started](Documentation~/getting_started.md) to learn the basic wor
 
 ### Documentation Site
 
-Docs for this version were generated at https://careboo.github.io/unity-algorand-sdk/3.0.
+Docs for this version were generated at https://careboo.github.io/unity-algorand-sdk/4.0.
