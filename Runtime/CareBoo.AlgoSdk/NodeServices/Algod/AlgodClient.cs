@@ -1,6 +1,5 @@
 using System;
 using System.Threading;
-using Algorand.Unity;
 using AlgoSdk.Algod;
 using Cysharp.Threading.Tasks;
 using Unity.Collections;
@@ -82,7 +81,7 @@ namespace AlgoSdk
             string txid,
             uint maxWaitRounds = default,
             CancellationToken cancellationToken = default
-            )
+        )
         {
             if (maxWaitRounds == 0)
             {
@@ -110,6 +109,7 @@ namespace AlgoSdk
                 await WaitForBlock(currentRound);
                 currentRound++;
             }
+
             return new AlgoApiResponse(
                 new ErrorResponse
                 {
@@ -126,7 +126,7 @@ namespace AlgoSdk
         {
             return (Algorand.Algod.DefaultApi)this;
         }
-        
+
         public static explicit operator Algorand.Algod.CommonApi(AlgodClient algod)
         {
             return new Algorand.Algod.CommonApi(algod.ToHttpClient());

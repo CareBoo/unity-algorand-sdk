@@ -14,14 +14,14 @@ namespace AlgoSdk
         /// this value is zero.
         /// </summary>
         byte[] StateProofVotersCommitment { get; set; }
-        
+
         /// <summary>
         /// StateProofOnlineTotalWeight is the total number of microalgos held by the online accounts
         /// during the StateProof round (or zero, if the merkle root is zero - no commitment for StateProof voters).
         /// This is intended for computing the threshold of votes to expect from StateProofVotersCommitment.
         /// </summary>
         MicroAlgos StateProofOnlineTotalWeight { get; set; }
-        
+
         /// <summary>
         /// StateProofNextRound is the next round for which we will accept
         /// a StateProof transaction.
@@ -36,7 +36,7 @@ namespace AlgoSdk
     [Serializable]
     public partial struct StateProofTrackingData
         : IStateProofTrackingData
-        , IEquatable<StateProofTrackingData>
+            , IEquatable<StateProofTrackingData>
     {
         [SerializeField]
         [Tooltip("StateProofVotersCommitment is the root of a vector commitment containing the " +
@@ -46,13 +46,13 @@ namespace AlgoSdk
                  "that are not a multiple of ConsensusParams.StateProofRounds, " +
                  "this value is zero.")]
         private byte[] stateProofVotersCommitment;
-        
+
         [SerializeField]
         [Tooltip("StateProofOnlineTotalWeight is the total number of microalgos held by the online accounts " +
                  "during the StateProof round (or zero, if the merkle root is zero - no commitment for StateProof voters). " +
                  "This is intended for computing the threshold of votes to expect from StateProofVotersCommitment.")]
         private MicroAlgos stateProofOnlineTotalWeight;
-        
+
         [SerializeField]
         [Tooltip("StateProofNextRound is the next round for which we will accept a StateProof transaction.")]
         private ulong stateProofNextRound;
@@ -64,23 +64,23 @@ namespace AlgoSdk
             get => stateProofVotersCommitment;
             set => stateProofVotersCommitment = value;
         }
-        
+
         /// <inehritdoc />
         [AlgoApiField("t")]
-        public MicroAlgos StateProofOnlineTotalWeight 
+        public MicroAlgos StateProofOnlineTotalWeight
         {
             get => stateProofOnlineTotalWeight;
             set => stateProofOnlineTotalWeight = value;
         }
-        
+
         /// <inehritdoc />
         [AlgoApiField("n")]
-        public ulong StateProofNextRound 
+        public ulong StateProofNextRound
         {
             get => stateProofNextRound;
             set => stateProofNextRound = value;
         }
-        
+
         public bool Equals(StateProofTrackingData other)
         {
             return ArrayComparer.Equals(StateProofVotersCommitment, other.StateProofVotersCommitment)
