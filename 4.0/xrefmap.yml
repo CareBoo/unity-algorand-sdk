@@ -103,22 +103,6 @@ references:
   fullName.vb: AlgoSdk.Account.SignTxn(Of T)(T)
   nameWithType: Account.SignTxn<T>(T)
   nameWithType.vb: Account.SignTxn(Of T)(T)
-- uid: AlgoSdk.Account.SignTxnAsync*
-  name: SignTxnAsync
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_SignTxnAsync_
-  commentId: Overload:AlgoSdk.Account.SignTxnAsync
-  isSpec: "True"
-  fullName: AlgoSdk.Account.SignTxnAsync
-  nameWithType: Account.SignTxnAsync
-- uid: AlgoSdk.Account.SignTxnAsync``1(``0)
-  name: SignTxnAsync<T>(T)
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_SignTxnAsync__1___0_
-  commentId: M:AlgoSdk.Account.SignTxnAsync``1(``0)
-  name.vb: SignTxnAsync(Of T)(T)
-  fullName: AlgoSdk.Account.SignTxnAsync<T>(T)
-  fullName.vb: AlgoSdk.Account.SignTxnAsync(Of T)(T)
-  nameWithType: Account.SignTxnAsync<T>(T)
-  nameWithType.vb: Account.SignTxnAsync(Of T)(T)
 - uid: AlgoSdk.Account.SignTxns*
   name: SignTxns
   href: api/AlgoSdk.Account.html#AlgoSdk_Account_SignTxns_
@@ -126,15 +110,6 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Account.SignTxns
   nameWithType: Account.SignTxns
-- uid: AlgoSdk.Account.SignTxns``1(``0[])
-  name: SignTxns<T>(T[])
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_SignTxns__1___0___
-  commentId: M:AlgoSdk.Account.SignTxns``1(``0[])
-  name.vb: SignTxns(Of T)(T())
-  fullName: AlgoSdk.Account.SignTxns<T>(T[])
-  fullName.vb: AlgoSdk.Account.SignTxns(Of T)(T())
-  nameWithType: Account.SignTxns<T>(T[])
-  nameWithType.vb: Account.SignTxns(Of T)(T())
 - uid: AlgoSdk.Account.SignTxns``1(``0[],AlgoSdk.TxnIndices)
   name: SignTxns<T>(T[], TxnIndices)
   href: api/AlgoSdk.Account.html#AlgoSdk_Account_SignTxns__1___0___AlgoSdk_TxnIndices_
@@ -151,15 +126,6 @@ references:
   isSpec: "True"
   fullName: AlgoSdk.Account.SignTxnsAsync
   nameWithType: Account.SignTxnsAsync
-- uid: AlgoSdk.Account.SignTxnsAsync``1(``0[])
-  name: SignTxnsAsync<T>(T[])
-  href: api/AlgoSdk.Account.html#AlgoSdk_Account_SignTxnsAsync__1___0___
-  commentId: M:AlgoSdk.Account.SignTxnsAsync``1(``0[])
-  name.vb: SignTxnsAsync(Of T)(T())
-  fullName: AlgoSdk.Account.SignTxnsAsync<T>(T[])
-  fullName.vb: AlgoSdk.Account.SignTxnsAsync(Of T)(T())
-  nameWithType: Account.SignTxnsAsync<T>(T[])
-  nameWithType.vb: Account.SignTxnsAsync(Of T)(T())
 - uid: AlgoSdk.Account.SignTxnsAsync``1(``0[],AlgoSdk.TxnIndices,CancellationToken)
   name: SignTxnsAsync<T>(T[], TxnIndices, CancellationToken)
   href: api/AlgoSdk.Account.html#AlgoSdk_Account_SignTxnsAsync__1___0___AlgoSdk_TxnIndices_CancellationToken_
