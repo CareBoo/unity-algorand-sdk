@@ -95,7 +95,7 @@
 </div>
 <p>Add the following, <code>AccountObject.cs</code>, to your project:</p>
 <pre><code class="lang-csharp">using System;
-using AlgoSdk;
+using Algorand.Unity;
 using UnityEngine;
 
 [CreateAssetMenu]
@@ -134,7 +134,8 @@ public class AccountObject
     }
 }
 </code></pre><p>This script wraps the <code>Account</code> class into a <code>ScriptableObject</code> that we can use to store its data in the editor. We use a <code>Mnemonic</code> to store the <code>PrivateKey</code> because it&#39;s serializable by the Unity Editor. After the <code>AccountObject</code> is deserialized, Unity regenerates the <code>account</code> field from the <code>mnemonic</code>.</p>
-<div class="NOTE"><h5>Note</h5><p><code>Account</code> could have been made serializable in the Unity Editor. However, we have chosen not to make it serializable to avoid storing <code>PrivateKey</code>s in the editor. Do not store <code>PrivateKey</code> or <code>Mnemonic</code> outside of a Wallet that you trust.</p>
+<div class="NOTE"><h5>Note</h5><blockquote><p><code>Account</code> could have been made serializable in the Unity Editor. However, we have chosen not to make it serializable to avoid storing <code>PrivateKey</code>s in the editor. Do not store <code>PrivateKey</code> or <code>Mnemonic</code> outside of a Wallet that you trust.</p>
+</blockquote>
 </div>
 <p>Let&#39;s go ahead and generate a new account that will be our <code>Creator</code> for our ASA. Right click in the project window and select <code>Create &gt; Account Object</code>.</p>
 <p><img src="../../resources/images/select_create_account_object.png" alt="Create Account Object"></p>
@@ -156,7 +157,7 @@ public void GenerateNewAccount()
 <p>Your account should now be funded to create Algorand Standard Assets. You can check the status of your account by looking at your account status on a <a href="https://testnet.algoexplorer.io">TestNet Algorand Block Explorer</a>.</p>
 <h3 id="creating-the-algodclientobject">Creating the <code>AlgodClientObject</code></h3>
 <p>Similar to the <code>AccountObject</code>, let&#39;s create an <code>AlgodClientObject</code> that inherits from <code>ScriptableObject</code> and stores our client information. Since <code>AlgodClient</code> is already serializable, this is a pretty simple script. Add the following script, <code>AlgodClientObject.cs</code> to your project:</p>
-<pre><code class="lang-csharp">using AlgoSdk;
+<pre><code class="lang-csharp">using Algorand.Unity;
 using UnityEngine;
 
 [CreateAssetMenu]
@@ -172,7 +173,7 @@ public class AlgodClientObject
 </div>
 <h2 id="creating-the-algorand-standard-asset-asa">Creating the Algorand Standard Asset (ASA)</h2>
 <p>We&#39;re not done creating <code>ScriptableObject</code>s just yet. Let&#39;s create a <code>ScriptableObject</code> that will store the state of our ASA. Create an <code>AssetObject.cs</code> script and add it to your project:</p>
-<pre><code class="lang-csharp">using AlgoSdk;
+<pre><code class="lang-csharp">using Algorand.Unity;
 using UnityEngine;
 
 [CreateAssetMenu]
@@ -216,7 +217,7 @@ public class AssetObject : ScriptableObject
 <p>We&#39;ve got a <code>ScriptableObject</code> that can be used to store our ASA information, but it hasn&#39;t been created on the TestNet yet. Let&#39;s add an editor script that will create this ASA on the testnet.</p>
 <p>Make a new folder called <code>Editor</code>, and add the following script to it (at <code>Assets/Editor/AssetCreateWindow.cs</code>). Copy the following code into the file:</p>
 <pre><code class="lang-csharp">using System;
-using AlgoSdk;
+using Algorand.Unity;
 using Cysharp.Threading.Tasks;
 using UnityEditor;
 using UnityEditor.UIElements;

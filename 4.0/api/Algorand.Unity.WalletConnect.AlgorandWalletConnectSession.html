@@ -1,0 +1,873 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AlgorandWalletConnectSession
+   | Unity Algorand SDK </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AlgorandWalletConnectSession
+   | Unity Algorand SDK ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo_50.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession">
+  
+  
+  <h1 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession" class="text-break">Class AlgorandWalletConnectSession
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">AlgorandWalletConnectSession</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Algorand.Unity.WalletConnect.IActiveWalletConnectSession-1.html">IActiveWalletConnectSession</a>&lt;<a class="xref" href="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.html">AlgorandWalletConnectSession</a>&gt;</div>
+    <div><a class="xref" href="Algorand.Unity.WalletConnect.IWalletConnectSessionData.html">IWalletConnectSessionData</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Algorand.Unity.WalletConnect.html">Algorand.Unity.WalletConnect</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AlgorandWalletConnectSession : IActiveWalletConnectSession&lt;AlgorandWalletConnectSession&gt;, IWalletConnectSessionData, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession__ctor_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.#ctor*"></a>
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession__ctor_Algorand_Unity_WalletConnect_ClientMeta_System_String_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.#ctor(Algorand.Unity.WalletConnect.ClientMeta,System.String)">AlgorandWalletConnectSession(ClientMeta, String)</h4>
+  <div class="markdown level1 summary"><p>Create a new session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgorandWalletConnectSession(ClientMeta clientMeta, string bridgeUrl = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.WalletConnect.ClientMeta.html">ClientMeta</a></td>
+        <td><span class="parametername">clientMeta</span></td>
+        <td><p>The metadata of the Dapp.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bridgeUrl</span></td>
+        <td><p>An optional WalletConnect bridgeurl. e.g. <a href="https://bridge.walletconnect.org">https://bridge.walletconnect.org</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession__ctor_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.#ctor*"></a>
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession__ctor_Algorand_Unity_WalletConnect_SessionData_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.#ctor(Algorand.Unity.WalletConnect.SessionData)">AlgorandWalletConnectSession(SessionData)</h4>
+  <div class="markdown level1 summary"><p>Continue an existing session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgorandWalletConnectSession(SessionData sessionData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.WalletConnect.SessionData.html">SessionData</a></td>
+        <td><span class="parametername">sessionData</span></td>
+        <td><p>A previously existing session.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_Accounts_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.Accounts*"></a>
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_Accounts" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.Accounts">Accounts</h4>
+  <div class="markdown level1 summary"><p>The accounts that the Wallet manages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address[] Accounts { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_BridgeUrl_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.BridgeUrl*"></a>
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_BridgeUrl" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.BridgeUrl">BridgeUrl</h4>
+  <div class="markdown level1 summary"><p>The bridge used to communicate with the session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string BridgeUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_ChainId_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.ChainId*"></a>
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_ChainId" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.ChainId">ChainId</h4>
+  <div class="markdown level1 summary"><p>The Identifier of the blockchain connected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ChainId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_ClientId_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.ClientId*"></a>
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_ClientId" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.ClientId">ClientId</h4>
+  <div class="markdown level1 summary"><p>The UUID of this client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ClientId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_ConnectionStatus_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.ConnectionStatus*"></a>
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_ConnectionStatus" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.ConnectionStatus">ConnectionStatus</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SessionStatus ConnectionStatus { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.WalletConnect.SessionStatus.html">SessionStatus</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_DappMeta_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.DappMeta*"></a>
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_DappMeta" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.DappMeta">DappMeta</h4>
+  <div class="markdown level1 summary"><p>Meta information about the Dapp connected in this session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ClientMeta DappMeta { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.WalletConnect.ClientMeta.html">ClientMeta</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_HandshakeId_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.HandshakeId*"></a>
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_HandshakeId" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.HandshakeId">HandshakeId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong HandshakeId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_HandshakeTopic_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.HandshakeTopic*"></a>
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_HandshakeTopic" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.HandshakeTopic">HandshakeTopic</h4>
+  <div class="markdown level1 summary"><p>The current handshake topic if this session is handshaking.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string HandshakeTopic { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_Key_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.Key*"></a>
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_Key" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.Key">Key</h4>
+  <div class="markdown level1 summary"><p>The key used to encrypt/decrypt the payloads.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Hex Key { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Hex.html">Hex</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_NetworkId_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.NetworkId*"></a>
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_NetworkId" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.NetworkId">NetworkId</h4>
+  <div class="markdown level1 summary"><p>The ID of the network connected (test, beta, main, ...)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int NetworkId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_PeerId_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.PeerId*"></a>
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_PeerId" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.PeerId">PeerId</h4>
+  <div class="markdown level1 summary"><p>The UUID of the connecting peer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PeerId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_Version_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.Version*"></a>
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_Version" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.Version">Version</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Version { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_WalletMeta_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.WalletMeta*"></a>
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_WalletMeta" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.WalletMeta">WalletMeta</h4>
+  <div class="markdown level1 summary"><p>Meta information about the Wallet connected in this session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ClientMeta WalletMeta { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.WalletConnect.ClientMeta.html">ClientMeta</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_Connect_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.Connect*"></a>
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_Connect_CancellationToken_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.Connect(CancellationToken)">Connect(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Connect to WalletConnect Bridge and begin listening for messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UniTask Connect(CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_DisconnectWallet_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.DisconnectWallet*"></a>
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_DisconnectWallet_System_String_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.DisconnectWallet(System.String)">DisconnectWallet(String)</h4>
+  <div class="markdown level1 summary"><p>Disconnect from a <a class="xref" href="Algorand.Unity.WalletConnect.SessionStatus.html#Algorand_Unity_WalletConnect_SessionStatus_WalletConnected">WalletConnected</a> or <a class="xref" href="Algorand.Unity.WalletConnect.SessionStatus.html#Algorand_Unity_WalletConnect_SessionStatus_RequestingWalletConnection">RequestingWalletConnection</a> session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DisconnectWallet(string reason = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">reason</span></td>
+        <td><p>An optional reason to inform the web socket client.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_Dispose_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.Dispose*"></a>
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_Dispose" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  
+  
+  <a id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_RequestWalletConnection_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.RequestWalletConnection*"></a>
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_RequestWalletConnection" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.RequestWalletConnection">RequestWalletConnection()</h4>
+  <div class="markdown level1 summary"><p>Start the handshake process for a new WalletConnect session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HandshakeUrl RequestWalletConnection()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.WalletConnect.HandshakeUrl.html">HandshakeUrl</a></td>
+        <td><p>A WalletConnect Standard URI format (EIP-1328) used for handshaking.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_Save_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.Save*"></a>
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_Save" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.Save">Save()</h4>
+  <div class="markdown level1 summary"><p>Save the current session&apos;s state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SessionData Save()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.WalletConnect.SessionData.html">SessionData</a></td>
+        <td><p>A <a class="xref" href="Algorand.Unity.WalletConnect.SessionData.html">SessionData</a> that can be used for continuing an existing session later.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_SignTransactions_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.SignTransactions*"></a>
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_SignTransactions_Algorand_Unity_WalletConnect_WalletTransaction___Algorand_Unity_WalletConnect_SignTxnsOpts_CancellationToken_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.SignTransactions(Algorand.Unity.WalletConnect.WalletTransaction[],Algorand.Unity.WalletConnect.SignTxnsOpts,CancellationToken)">SignTransactions(WalletTransaction[], SignTxnsOpts, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Sign a group of transactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UniTask&lt;Either&lt;SignTxnsError, byte[][]&gt;&gt; SignTransactions(WalletTransaction[] transactions, SignTxnsOpts options = default(SignTxnsOpts), CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.WalletConnect.WalletTransaction.html">WalletTransaction</a>[]</td>
+        <td><span class="parametername">transactions</span></td>
+        <td><p>The atomic transaction group of [1,16] transactions. Contains information about how to sign
+each transaction, and which ones to sign.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.WalletConnect.SignTxnsOpts.html">SignTxnsOpts</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Optional sign transaction options.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>Optional cancellation token used for interrupting this request.
+It&apos;s recommended to use <see cref="!:CancellationTokenSourceExtensions.CancelAfterSlim"></see> for UniTask. 
+<a href="https://github.com/Cysharp/UniTask#timeout-handling">https://github.com/Cysharp/UniTask#timeout-handling</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="Algorand.Unity.Either-2.html">Either</a>&lt;<a class="xref" href="Algorand.Unity.WalletConnect.SignTxnsError.html">SignTxnsError</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>[][]&gt;&gt;</td>
+        <td><p>Either the result of the request or a <a class="xref" href="Algorand.Unity.WalletConnect.IJsonRpcError.html">IJsonRpcError</a> if the request was invalid.</p>
+<p>The result is an array of the same length as the number of transactions provided in
+<see cref="!:AlgoSignTxnsRequest.Params"></see>.</p>
+<p>For every index in this result, the value is
+<ul><li></li><li></li></ul></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_WaitForWalletApproval_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.WaitForWalletApproval*"></a>
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_WaitForWalletApproval_CancellationToken_" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.WaitForWalletApproval(CancellationToken)">WaitForWalletApproval(CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Wait for an approval response from the handshake.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UniTask WaitForWalletApproval(CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional <see cref="!:CancellationToken"></see> that can be used for things like timeouts.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_OnSessionConnect" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.OnSessionConnect">OnSessionConnect</h4>
+  <div class="markdown level1 summary"><p>Occurs when handshake succeeds and wallet is connected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;AlgorandWalletConnectSession&gt; OnSessionConnect</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.html">AlgorandWalletConnectSession</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_OnSessionDisconnect" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.OnSessionDisconnect">OnSessionDisconnect</h4>
+  <div class="markdown level1 summary"><p>Occurs when wallet no longer approves connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;string&gt; OnSessionDisconnect</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Algorand_Unity_WalletConnect_AlgorandWalletConnectSession_OnSessionUpdate" data-uid="Algorand.Unity.WalletConnect.AlgorandWalletConnectSession.OnSessionUpdate">OnSessionUpdate</h4>
+  <div class="markdown level1 summary"><p>Occurs when wallet updates addresses or metadata information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;WalletConnectSessionData&gt; OnSessionUpdate</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="Algorand.Unity.WalletConnect.WalletConnectSessionData.html">WalletConnectSessionData</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Algorand.Unity.WalletConnect.IActiveWalletConnectSession-1.html">IActiveWalletConnectSession&lt;TSession&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Algorand.Unity.WalletConnect.IWalletConnectSessionData.html">IWalletConnectSessionData</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

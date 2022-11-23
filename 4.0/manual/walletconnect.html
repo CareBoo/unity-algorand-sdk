@@ -91,8 +91,8 @@ provides the user a list of wallets to open via <a href="#mobile-linking">Mobile
 <li>The Dapp receives the confirmation and can begin requesting the Wallet to sign transactions.</li>
 </ol>
 <p>In code, this process is:</p>
-<pre><code class="lang-csharp">using AlgoSdk;
-using AlgoSdk.WalletConnect;
+<pre><code class="lang-csharp">using Algorand.Unity;
+using Algorand.Unity.WalletConnect;
 using UnityEngine;
 
 // 1. Create the session and show the user the QR Code
@@ -196,8 +196,8 @@ on their device. <a href="https://docs.walletconnect.com/mobile-linking">WalletC
 <p>To begin linking on mobile, you&#39;ll need to use the <code>WalletRegistry</code> static class to find supported
 wallets for the current platform. Each time you need the user to approve a request from the wallet, you&#39;ll need
 to launch the wallet app.</p>
-<pre><code class="lang-csharp">using AlgoSdk;
-using AlgoSdk.WalletConnect;
+<pre><code class="lang-csharp">using Algorand.Unity;
+using Algorand.Unity.WalletConnect;
 
 var supportedWallets = WalletRegistry.SupportedWalletsForCurrentPlatform;
 

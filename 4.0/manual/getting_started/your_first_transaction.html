@@ -81,7 +81,7 @@
 
 <h2 id="create-an-account">Create an Account</h2>
 <p>The following code will generate a new account:</p>
-<pre><code class="lang-csharp">// using AlgoSdk;
+<pre><code class="lang-csharp">// using Algorand.Unity;
 // using UnityEngine;
 
 var (privateKey, address) = Account.GenerateAccount();
@@ -115,7 +115,7 @@ To learn more about fast catchup, see <a href="https://developer.algorand.org/do
 <p>Once the network is up and running, you should be able to connect to the <code>algod</code> service.
 Verify that the node is healthy and you can connect to it. Create a new <code>AlgodCheck</code> component
 that creates an <code>AlgodClient</code> on <code>Start()</code> and makes a <code>GetHealth()</code> request.</p>
-<pre><code class="lang-csharp">using AlgoSdk;
+<pre><code class="lang-csharp">using Algorand.Unity;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
@@ -236,7 +236,7 @@ Replace the passphrase with the passphrase you generated earlier.</p>
 &quot;Successfully made payment!&quot; message in the editor console.</p>
 <h2 id="complete-example">Complete Example</h2>
 <p>Here is the final code for <code>AlgodCheck</code> component.</p>
-<pre><code class="lang-csharp">using AlgoSdk;
+<pre><code class="lang-csharp">using Algorand.Unity;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 

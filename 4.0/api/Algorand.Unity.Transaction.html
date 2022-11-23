@@ -1,0 +1,2852 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct Transaction
+   | Unity Algorand SDK </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct Transaction
+   | Unity Algorand SDK ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo_50.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Algorand.Unity.Transaction">
+  
+  
+  <h1 id="Algorand_Unity_Transaction" data-uid="Algorand.Unity.Transaction" class="text-break">Struct Transaction
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Algorand.Unity.IAssetFreezeTxn.html">IAssetFreezeTxn</a></div>
+    <div><a class="xref" href="Algorand.Unity.IUntypedTransaction.html">IUntypedTransaction</a></div>
+    <div><a class="xref" href="Algorand.Unity.IPaymentTxn.html">IPaymentTxn</a></div>
+    <div><a class="xref" href="Algorand.Unity.IAssetTransferTxn.html">IAssetTransferTxn</a></div>
+    <div><a class="xref" href="Algorand.Unity.IAppCallTxn.html">IAppCallTxn</a></div>
+    <div><a class="xref" href="Algorand.Unity.IAssetConfigTxn.html">IAssetConfigTxn</a></div>
+    <div><a class="xref" href="Algorand.Unity.ITransaction.html">ITransaction</a></div>
+    <div><a class="xref" href="Algorand.Unity.ITransactionHeader.html">ITransactionHeader</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Algorand.Unity.html">Algorand.Unity</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Algorand_Unity_Transaction_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct Transaction : IAssetFreezeTxn, IEquatable&lt;Transaction&gt;, IUntypedTransaction, IPaymentTxn, IAssetTransferTxn, IAppCallTxn, IAssetConfigTxn, ITransaction, ITransactionHeader</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Algorand_Unity_Transaction_SignaturePrefix" data-uid="Algorand.Unity.Transaction.SignaturePrefix">SignaturePrefix</h4>
+  <div class="markdown level1 summary"><p>Prefix bytes for signing transaction bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly byte[] SignaturePrefix</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Algorand_Unity_Transaction_Accounts_" data-uid="Algorand.Unity.Transaction.Accounts*"></a>
+  <h4 id="Algorand_Unity_Transaction_Accounts" data-uid="Algorand.Unity.Transaction.Accounts">Accounts</h4>
+  <div class="markdown level1 summary"><p>List of accounts in addition to the sender that may be accessed from the application&apos;s approval-program and clear-state-program.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address[] Accounts { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_Amount_" data-uid="Algorand.Unity.Transaction.Amount*"></a>
+  <h4 id="Algorand_Unity_Transaction_Amount" data-uid="Algorand.Unity.Transaction.Amount">Amount</h4>
+  <div class="markdown level1 summary"><p>The total amount to be sent in microAlgos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MicroAlgos Amount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.MicroAlgos.html">MicroAlgos</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_AppArguments_" data-uid="Algorand.Unity.Transaction.AppArguments*"></a>
+  <h4 id="Algorand_Unity_Transaction_AppArguments" data-uid="Algorand.Unity.Transaction.AppArguments">AppArguments</h4>
+  <div class="markdown level1 summary"><p>Transaction specific arguments accessed from the application&apos;s approval-program and clear-state-program.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CompiledTeal[] AppArguments { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.CompiledTeal.html">CompiledTeal</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_AppCallParams_" data-uid="Algorand.Unity.Transaction.AppCallParams*"></a>
+  <h4 id="Algorand_Unity_Transaction_AppCallParams" data-uid="Algorand.Unity.Transaction.AppCallParams">AppCallParams</h4>
+  <div class="markdown level1 summary"><p>Params found in an application call transaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AppCallTxn.Params AppCallParams { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AppCallTxn.Params.html">AppCallTxn.Params</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_ApplicationId_" data-uid="Algorand.Unity.Transaction.ApplicationId*"></a>
+  <h4 id="Algorand_Unity_Transaction_ApplicationId" data-uid="Algorand.Unity.Transaction.ApplicationId">ApplicationId</h4>
+  <div class="markdown level1 summary"><p>ID of the application being configured or empty if creating.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AppIndex ApplicationId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AppIndex.html">AppIndex</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_ApprovalProgram_" data-uid="Algorand.Unity.Transaction.ApprovalProgram*"></a>
+  <h4 id="Algorand_Unity_Transaction_ApprovalProgram" data-uid="Algorand.Unity.Transaction.ApprovalProgram">ApprovalProgram</h4>
+  <div class="markdown level1 summary"><p>Logic executed for every application transaction, except when on-completion is set to &quot;clear&quot;. It can read and write global state for the application, as well as account-specific local state. Approval programs may reject the transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CompiledTeal ApprovalProgram { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.CompiledTeal.html">CompiledTeal</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_AssetAmount_" data-uid="Algorand.Unity.Transaction.AssetAmount*"></a>
+  <h4 id="Algorand_Unity_Transaction_AssetAmount" data-uid="Algorand.Unity.Transaction.AssetAmount">AssetAmount</h4>
+  <div class="markdown level1 summary"><p>The amount of the asset to be transferred. A zero amount transferred to self allocates that asset in the account&apos;s Asset map.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong AssetAmount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_AssetCloseTo_" data-uid="Algorand.Unity.Transaction.AssetCloseTo*"></a>
+  <h4 id="Algorand_Unity_Transaction_AssetCloseTo" data-uid="Algorand.Unity.Transaction.AssetCloseTo">AssetCloseTo</h4>
+  <div class="markdown level1 summary"><p>Specify this field to remove the asset holding from the sender account and reduce the account&apos;s minimum balance (i.e. opt-out of the asset).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address AssetCloseTo { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_AssetConfigParams_" data-uid="Algorand.Unity.Transaction.AssetConfigParams*"></a>
+  <h4 id="Algorand_Unity_Transaction_AssetConfigParams" data-uid="Algorand.Unity.Transaction.AssetConfigParams">AssetConfigParams</h4>
+  <div class="markdown level1 summary"><p>Params found in an asset configuration transaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetConfigTxn.Params AssetConfigParams { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AssetConfigTxn.Params.html">AssetConfigTxn.Params</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_AssetFreezeParams_" data-uid="Algorand.Unity.Transaction.AssetFreezeParams*"></a>
+  <h4 id="Algorand_Unity_Transaction_AssetFreezeParams" data-uid="Algorand.Unity.Transaction.AssetFreezeParams">AssetFreezeParams</h4>
+  <div class="markdown level1 summary"><p>Params found in an asset freeze transaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetFreezeTxn.Params AssetFreezeParams { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AssetFreezeTxn.Params.html">AssetFreezeTxn.Params</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_AssetFrozen_" data-uid="Algorand.Unity.Transaction.AssetFrozen*"></a>
+  <h4 id="Algorand_Unity_Transaction_AssetFrozen" data-uid="Algorand.Unity.Transaction.AssetFrozen">AssetFrozen</h4>
+  <div class="markdown level1 summary"><p>True to freeze the asset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Optional&lt;bool&gt; AssetFrozen { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_AssetParams_" data-uid="Algorand.Unity.Transaction.AssetParams*"></a>
+  <h4 id="Algorand_Unity_Transaction_AssetParams" data-uid="Algorand.Unity.Transaction.AssetParams">AssetParams</h4>
+  <div class="markdown level1 summary"><p>See <a class="xref" href="Algorand.Unity.IAssetConfigTxn.html#Algorand_Unity_IAssetConfigTxn_AssetParams">AssetParams</a> for all available fields.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetParams AssetParams { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AssetParams.html">AssetParams</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_AssetReceiver_" data-uid="Algorand.Unity.Transaction.AssetReceiver*"></a>
+  <h4 id="Algorand_Unity_Transaction_AssetReceiver" data-uid="Algorand.Unity.Transaction.AssetReceiver">AssetReceiver</h4>
+  <div class="markdown level1 summary"><p>The recipient of the asset transfer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address AssetReceiver { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_AssetSender_" data-uid="Algorand.Unity.Transaction.AssetSender*"></a>
+  <h4 id="Algorand_Unity_Transaction_AssetSender" data-uid="Algorand.Unity.Transaction.AssetSender">AssetSender</h4>
+  <div class="markdown level1 summary"><p>The sender of the transfer. The regular <see cref="!:ITransaction.Sender"></see> field should be used and this one set to the zero value for regular transfers between accounts. If this value is nonzero, it indicates a clawback transaction where the sender is the asset&apos;s clawback address and the asset sender is the address from which the funds will be withdrawn.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address AssetSender { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_AssetTransferParams_" data-uid="Algorand.Unity.Transaction.AssetTransferParams*"></a>
+  <h4 id="Algorand_Unity_Transaction_AssetTransferParams" data-uid="Algorand.Unity.Transaction.AssetTransferParams">AssetTransferParams</h4>
+  <div class="markdown level1 summary"><p>Params found in an asset transfer transaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetTransferTxn.Params AssetTransferParams { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AssetTransferTxn.Params.html">AssetTransferTxn.Params</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_ClearStateProgram_" data-uid="Algorand.Unity.Transaction.ClearStateProgram*"></a>
+  <h4 id="Algorand_Unity_Transaction_ClearStateProgram" data-uid="Algorand.Unity.Transaction.ClearStateProgram">ClearStateProgram</h4>
+  <div class="markdown level1 summary"><p>Logic executed for application transactions with on-completion set to &quot;clear&quot;. It can read and write global state for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CompiledTeal ClearStateProgram { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.CompiledTeal.html">CompiledTeal</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_CloseRemainderTo_" data-uid="Algorand.Unity.Transaction.CloseRemainderTo*"></a>
+  <h4 id="Algorand_Unity_Transaction_CloseRemainderTo" data-uid="Algorand.Unity.Transaction.CloseRemainderTo">CloseRemainderTo</h4>
+  <div class="markdown level1 summary"><p>When set, it indicates that the transaction is requesting that the <see cref="!:ITransaction.Sender"></see> account should be closed, and all remaining funds, after the <see cref="!:ITransaction.Fee"></see> and <a class="xref" href="Algorand.Unity.IPaymentTxn.html#Algorand_Unity_IPaymentTxn_Amount">Amount</a> are paid, be transferred to this address.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address CloseRemainderTo { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_ConfigAsset_" data-uid="Algorand.Unity.Transaction.ConfigAsset*"></a>
+  <h4 id="Algorand_Unity_Transaction_ConfigAsset" data-uid="Algorand.Unity.Transaction.ConfigAsset">ConfigAsset</h4>
+  <div class="markdown level1 summary"><p>For re-configure or destroy transactions, this is the unique asset ID. On asset creation, the ID is set to zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetIndex ConfigAsset { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AssetIndex.html">AssetIndex</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_ExtraProgramPages_" data-uid="Algorand.Unity.Transaction.ExtraProgramPages*"></a>
+  <h4 id="Algorand_Unity_Transaction_ExtraProgramPages" data-uid="Algorand.Unity.Transaction.ExtraProgramPages">ExtraProgramPages</h4>
+  <div class="markdown level1 summary"><p>Number of additional pages allocated to the application&apos;s approval and clear state programs. Each ExtraProgramPages is 2048 bytes. The sum of <a class="xref" href="Algorand.Unity.IAppCallTxn.html#Algorand_Unity_IAppCallTxn_ApprovalProgram">ApprovalProgram</a> and <a class="xref" href="Algorand.Unity.IAppCallTxn.html#Algorand_Unity_IAppCallTxn_ClearStateProgram">ClearStateProgram</a> may not exceed 2048*(1+ExtraProgramPages) bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong ExtraProgramPages { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_Fee_" data-uid="Algorand.Unity.Transaction.Fee*"></a>
+  <h4 id="Algorand_Unity_Transaction_Fee" data-uid="Algorand.Unity.Transaction.Fee">Fee</h4>
+  <div class="markdown level1 summary"><p>Paid by the sender to the FeeSink to prevent denial-of-service. The minimum fee on Algorand is currently 1000 microAlgos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MicroAlgos Fee { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.MicroAlgos.html">MicroAlgos</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_FirstValidRound_" data-uid="Algorand.Unity.Transaction.FirstValidRound*"></a>
+  <h4 id="Algorand_Unity_Transaction_FirstValidRound" data-uid="Algorand.Unity.Transaction.FirstValidRound">FirstValidRound</h4>
+  <div class="markdown level1 summary"><p>The first round for when the transaction is valid. If the transaction is sent prior to this round it will be rejected by the network.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong FirstValidRound { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_ForeignApps_" data-uid="Algorand.Unity.Transaction.ForeignApps*"></a>
+  <h4 id="Algorand_Unity_Transaction_ForeignApps" data-uid="Algorand.Unity.Transaction.ForeignApps">ForeignApps</h4>
+  <div class="markdown level1 summary"><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong[] ForeignApps { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_ForeignAssets_" data-uid="Algorand.Unity.Transaction.ForeignAssets*"></a>
+  <h4 id="Algorand_Unity_Transaction_ForeignAssets" data-uid="Algorand.Unity.Transaction.ForeignAssets">ForeignAssets</h4>
+  <div class="markdown level1 summary"><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong[] ForeignAssets { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_FreezeAccount_" data-uid="Algorand.Unity.Transaction.FreezeAccount*"></a>
+  <h4 id="Algorand_Unity_Transaction_FreezeAccount" data-uid="Algorand.Unity.Transaction.FreezeAccount">FreezeAccount</h4>
+  <div class="markdown level1 summary"><p>The address of the account whose asset is being frozen or unfrozen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address FreezeAccount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_FreezeAsset_" data-uid="Algorand.Unity.Transaction.FreezeAsset*"></a>
+  <h4 id="Algorand_Unity_Transaction_FreezeAsset" data-uid="Algorand.Unity.Transaction.FreezeAsset">FreezeAsset</h4>
+  <div class="markdown level1 summary"><p>The asset ID being frozen or unfrozen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetIndex FreezeAsset { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AssetIndex.html">AssetIndex</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_GenesisHash_" data-uid="Algorand.Unity.Transaction.GenesisHash*"></a>
+  <h4 id="Algorand_Unity_Transaction_GenesisHash" data-uid="Algorand.Unity.Transaction.GenesisHash">GenesisHash</h4>
+  <div class="markdown level1 summary"><p>The hash of the genesis block of the network for which the transaction is valid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GenesisHash GenesisHash { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.GenesisHash.html">GenesisHash</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_GenesisId_" data-uid="Algorand.Unity.Transaction.GenesisId*"></a>
+  <h4 id="Algorand_Unity_Transaction_GenesisId" data-uid="Algorand.Unity.Transaction.GenesisId">GenesisId</h4>
+  <div class="markdown level1 summary"><p>The human-readable string that identifies the network for the transaction. The genesis ID is found in the genesis block.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FixedString32Bytes GenesisId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">FixedString32Bytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_GlobalStateSchema_" data-uid="Algorand.Unity.Transaction.GlobalStateSchema*"></a>
+  <h4 id="Algorand_Unity_Transaction_GlobalStateSchema" data-uid="Algorand.Unity.Transaction.GlobalStateSchema">GlobalStateSchema</h4>
+  <div class="markdown level1 summary"><p>Holds the maximum number of global state values defined within a <a class="xref" href="Algorand.Unity.StateSchema.html">StateSchema</a> object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StateSchema GlobalStateSchema { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.StateSchema.html">StateSchema</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_Group_" data-uid="Algorand.Unity.Transaction.Group*"></a>
+  <h4 id="Algorand_Unity_Transaction_Group" data-uid="Algorand.Unity.Transaction.Group">Group</h4>
+  <div class="markdown level1 summary"><p>The group specifies that the transaction is part of a group and, if so, specifies the hash of the transaction group. See <a class="xref" href="Algorand.Unity.TransactionGroup.html">TransactionGroup</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionId Group { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionId.html">TransactionId</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_Header_" data-uid="Algorand.Unity.Transaction.Header*"></a>
+  <h4 id="Algorand_Unity_Transaction_Header" data-uid="Algorand.Unity.Transaction.Header">Header</h4>
+  <div class="markdown level1 summary"><p>Params common to all transactions</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionHeader Header { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionHeader.html">TransactionHeader</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_KeyRegParams_" data-uid="Algorand.Unity.Transaction.KeyRegParams*"></a>
+  <h4 id="Algorand_Unity_Transaction_KeyRegParams" data-uid="Algorand.Unity.Transaction.KeyRegParams">KeyRegParams</h4>
+  <div class="markdown level1 summary"><p>Params found in a key registration transaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyRegTxn.Params KeyRegParams { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.KeyRegTxn.Params.html">KeyRegTxn.Params</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_LastValidRound_" data-uid="Algorand.Unity.Transaction.LastValidRound*"></a>
+  <h4 id="Algorand_Unity_Transaction_LastValidRound" data-uid="Algorand.Unity.Transaction.LastValidRound">LastValidRound</h4>
+  <div class="markdown level1 summary"><p>The ending round for which the transaction is valid. After this round, the transaction will be rejected by the network.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong LastValidRound { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_Lease_" data-uid="Algorand.Unity.Transaction.Lease*"></a>
+  <h4 id="Algorand_Unity_Transaction_Lease" data-uid="Algorand.Unity.Transaction.Lease">Lease</h4>
+  <div class="markdown level1 summary"><p>A lease enforces mutual exclusion of transactions. If this field is nonzero, then once the transaction is confirmed, it acquires the lease identified by the (Sender, Lease) pair of the transaction until the LastValid round passes. While this transaction possesses the lease, no other transaction specifying this lease can be confirmed. A lease is often used in the context of Algorand Smart Contracts to prevent replay attacks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionId Lease { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionId.html">TransactionId</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_LocalStateSchema_" data-uid="Algorand.Unity.Transaction.LocalStateSchema*"></a>
+  <h4 id="Algorand_Unity_Transaction_LocalStateSchema" data-uid="Algorand.Unity.Transaction.LocalStateSchema">LocalStateSchema</h4>
+  <div class="markdown level1 summary"><p>Holds the maximum number of local state values defined within a <a class="xref" href="Algorand.Unity.StateSchema.html">StateSchema</a> object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StateSchema LocalStateSchema { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.StateSchema.html">StateSchema</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_NonParticipation_" data-uid="Algorand.Unity.Transaction.NonParticipation*"></a>
+  <h4 id="Algorand_Unity_Transaction_NonParticipation" data-uid="Algorand.Unity.Transaction.NonParticipation">NonParticipation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Optional&lt;bool&gt; NonParticipation { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_Note_" data-uid="Algorand.Unity.Transaction.Note*"></a>
+  <h4 id="Algorand_Unity_Transaction_Note" data-uid="Algorand.Unity.Transaction.Note">Note</h4>
+  <div class="markdown level1 summary"><p>Any data up to 1000 bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] Note { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_OnComplete_" data-uid="Algorand.Unity.Transaction.OnComplete*"></a>
+  <h4 id="Algorand_Unity_Transaction_OnComplete" data-uid="Algorand.Unity.Transaction.OnComplete">OnComplete</h4>
+  <div class="markdown level1 summary"><p>Defines what additional actions occur with the transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OnCompletion OnComplete { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.OnCompletion.html">OnCompletion</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_PaymentParams_" data-uid="Algorand.Unity.Transaction.PaymentParams*"></a>
+  <h4 id="Algorand_Unity_Transaction_PaymentParams" data-uid="Algorand.Unity.Transaction.PaymentParams">PaymentParams</h4>
+  <div class="markdown level1 summary"><p>Params found in a payment transaction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PaymentTxn.Params PaymentParams { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.PaymentTxn.Params.html">PaymentTxn.Params</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_Receiver_" data-uid="Algorand.Unity.Transaction.Receiver*"></a>
+  <h4 id="Algorand_Unity_Transaction_Receiver" data-uid="Algorand.Unity.Transaction.Receiver">Receiver</h4>
+  <div class="markdown level1 summary"><p>The address of the account that receives the <a class="xref" href="Algorand.Unity.IPaymentTxn.html#Algorand_Unity_IPaymentTxn_Amount">Amount</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address Receiver { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_RekeyTo_" data-uid="Algorand.Unity.Transaction.RekeyTo*"></a>
+  <h4 id="Algorand_Unity_Transaction_RekeyTo" data-uid="Algorand.Unity.Transaction.RekeyTo">RekeyTo</h4>
+  <div class="markdown level1 summary"><p>Specifies the authorized address. This address will be used to authorize all future transactions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address RekeyTo { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_SelectionParticipationKey_" data-uid="Algorand.Unity.Transaction.SelectionParticipationKey*"></a>
+  <h4 id="Algorand_Unity_Transaction_SelectionParticipationKey" data-uid="Algorand.Unity.Transaction.SelectionParticipationKey">SelectionParticipationKey</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VrfPubKey SelectionParticipationKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.VrfPubKey.html">VrfPubKey</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_Sender_" data-uid="Algorand.Unity.Transaction.Sender*"></a>
+  <h4 id="Algorand_Unity_Transaction_Sender" data-uid="Algorand.Unity.Transaction.Sender">Sender</h4>
+  <div class="markdown level1 summary"><p>The address of the account that pays the fee and amount.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address Sender { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_TransactionType_" data-uid="Algorand.Unity.Transaction.TransactionType*"></a>
+  <h4 id="Algorand_Unity_Transaction_TransactionType" data-uid="Algorand.Unity.Transaction.TransactionType">TransactionType</h4>
+  <div class="markdown level1 summary"><p>Specifies the type of transaction. This value is automatically generated using any of the developer tools.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionType TransactionType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionType.html">TransactionType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_VoteFirst_" data-uid="Algorand.Unity.Transaction.VoteFirst*"></a>
+  <h4 id="Algorand_Unity_Transaction_VoteFirst" data-uid="Algorand.Unity.Transaction.VoteFirst">VoteFirst</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong VoteFirst { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_VoteKeyDilution_" data-uid="Algorand.Unity.Transaction.VoteKeyDilution*"></a>
+  <h4 id="Algorand_Unity_Transaction_VoteKeyDilution" data-uid="Algorand.Unity.Transaction.VoteKeyDilution">VoteKeyDilution</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong VoteKeyDilution { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_VoteLast_" data-uid="Algorand.Unity.Transaction.VoteLast*"></a>
+  <h4 id="Algorand_Unity_Transaction_VoteLast" data-uid="Algorand.Unity.Transaction.VoteLast">VoteLast</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong VoteLast { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_VoteParticipationKey_" data-uid="Algorand.Unity.Transaction.VoteParticipationKey*"></a>
+  <h4 id="Algorand_Unity_Transaction_VoteParticipationKey" data-uid="Algorand.Unity.Transaction.VoteParticipationKey">VoteParticipationKey</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ParticipationPublicKey VoteParticipationKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.ParticipationPublicKey.html">ParticipationPublicKey</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_XferAsset_" data-uid="Algorand.Unity.Transaction.XferAsset*"></a>
+  <h4 id="Algorand_Unity_Transaction_XferAsset" data-uid="Algorand.Unity.Transaction.XferAsset">XferAsset</h4>
+  <div class="markdown level1 summary"><p>The unique ID of the asset to be transferred.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssetIndex XferAsset { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AssetIndex.html">AssetIndex</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Algorand_Unity_Transaction_AppCall_" data-uid="Algorand.Unity.Transaction.AppCall*"></a>
+  <h4 id="Algorand_Unity_Transaction_AppCall_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_OnCompletion_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___" data-uid="Algorand.Unity.Transaction.AppCall(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.OnCompletion,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[])">AppCall(Address, TransactionParams, AppIndex, OnCompletion, CompiledTeal[], Address[], UInt64[], UInt64[])</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a> used to call an application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AppCallTxn AppCall(Address sender, TransactionParams txnParams, AppIndex applicationId, OnCompletion onComplete = OnCompletion.NoOp, CompiledTeal[] appArguments = null, Address[] accounts = null, ulong[] foreignApps = null, ulong[] foreignAssets = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AppIndex.html">AppIndex</a></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td><p>ID of the application being configured.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.OnCompletion.html">OnCompletion</a></td>
+        <td><span class="parametername">onComplete</span></td>
+        <td><p>Defines what additional actions occur with the transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.CompiledTeal.html">CompiledTeal</a>[]</td>
+        <td><span class="parametername">appArguments</span></td>
+        <td><p>Transaction specific arguments accessed from the application&apos;s approval-program and clear-state-program.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a>[]</td>
+        <td><span class="parametername">accounts</span></td>
+        <td><p>List of accounts in addition to the sender that may be accessed from the application&apos;s approval-program and clear-state-program.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="parametername">foreignApps</span></td>
+        <td><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="parametername">foreignAssets</span></td>
+        <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a></td>
+        <td><p>An <a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a> used to call an application.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_AppClearState_" data-uid="Algorand.Unity.Transaction.AppClearState*"></a>
+  <h4 id="Algorand_Unity_Transaction_AppClearState_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___" data-uid="Algorand.Unity.Transaction.AppClearState(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[])">AppClearState(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[])</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a> with params to clear state with your account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AppCallTxn AppClearState(Address sender, TransactionParams txnParams, AppIndex applicationId, CompiledTeal[] appArguments = null, Address[] accounts = null, ulong[] foreignApps = null, ulong[] foreignAssets = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AppIndex.html">AppIndex</a></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td><p>ID of the application being configured.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.CompiledTeal.html">CompiledTeal</a>[]</td>
+        <td><span class="parametername">appArguments</span></td>
+        <td><p>Transaction specific arguments accessed from the application&apos;s approval-program and clear-state-program.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a>[]</td>
+        <td><span class="parametername">accounts</span></td>
+        <td><p>List of accounts in addition to the sender that may be accessed from the application&apos;s approval-program and clear-state-program.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="parametername">foreignApps</span></td>
+        <td><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="parametername">foreignAssets</span></td>
+        <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a></td>
+        <td><p>An <a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a> with params to clear app state with your account.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_AppCloseOut_" data-uid="Algorand.Unity.Transaction.AppCloseOut*"></a>
+  <h4 id="Algorand_Unity_Transaction_AppCloseOut_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___" data-uid="Algorand.Unity.Transaction.AppCloseOut(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[])">AppCloseOut(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[])</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a> with params to close out state with your account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AppCallTxn AppCloseOut(Address sender, TransactionParams txnParams, AppIndex applicationId, CompiledTeal[] appArguments = null, Address[] accounts = null, ulong[] foreignApps = null, ulong[] foreignAssets = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AppIndex.html">AppIndex</a></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td><p>ID of the application being configured.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.CompiledTeal.html">CompiledTeal</a>[]</td>
+        <td><span class="parametername">appArguments</span></td>
+        <td><p>Transaction specific arguments accessed from the application&apos;s approval-program and clear-state-program.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a>[]</td>
+        <td><span class="parametername">accounts</span></td>
+        <td><p>List of accounts in addition to the sender that may be accessed from the application&apos;s approval-program and clear-state-program.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="parametername">foreignApps</span></td>
+        <td><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="parametername">foreignAssets</span></td>
+        <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a></td>
+        <td><p>An <a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a> with params set to close out state with your account.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_AppCreate_" data-uid="Algorand.Unity.Transaction.AppCreate*"></a>
+  <h4 id="Algorand_Unity_Transaction_AppCreate_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_CompiledTeal_Algorand_Unity_CompiledTeal_Algorand_Unity_StateSchema_Algorand_Unity_StateSchema_System_UInt64_" data-uid="Algorand.Unity.Transaction.AppCreate(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.CompiledTeal,Algorand.Unity.CompiledTeal,Algorand.Unity.StateSchema,Algorand.Unity.StateSchema,System.UInt64)">AppCreate(Address, TransactionParams, CompiledTeal, CompiledTeal, StateSchema, StateSchema, UInt64)</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a> with params to create apps.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AppCallTxn AppCreate(Address sender, TransactionParams txnParams, CompiledTeal approvalProgram, CompiledTeal clearStateProgram, StateSchema globalStateSchema = default(StateSchema), StateSchema localStateSchema = default(StateSchema), ulong extraProgramPages = 0UL)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.CompiledTeal.html">CompiledTeal</a></td>
+        <td><span class="parametername">approvalProgram</span></td>
+        <td><p>Logic executed for every application transaction, except when on-completion is set to &quot;clear&quot;. It can read and write global state for the application, as well as account-specific local state. Approval programs may reject the transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.CompiledTeal.html">CompiledTeal</a></td>
+        <td><span class="parametername">clearStateProgram</span></td>
+        <td><p>Logic executed for application transactions with on-completion set to &quot;clear&quot;. It can read and write global state for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.StateSchema.html">StateSchema</a></td>
+        <td><span class="parametername">globalStateSchema</span></td>
+        <td><p>Holds the maximum number of global state values defined within a <a class="xref" href="Algorand.Unity.StateSchema.html">StateSchema</a> object.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.StateSchema.html">StateSchema</a></td>
+        <td><span class="parametername">localStateSchema</span></td>
+        <td><p>Holds the maximum number of local state values defined within a <a class="xref" href="Algorand.Unity.StateSchema.html">StateSchema</a> object.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="parametername">extraProgramPages</span></td>
+        <td><p>Number of additional pages allocated to the application&apos;s approval and clear state programs. Each ExtraProgramPages is 2048 bytes. The sum of ApprovalProgram and ClearStateProgram may not exceed 2048*(1+ExtraProgramPages) bytes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a></td>
+        <td><p>An <a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a> with params set to create apps</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_AppDelete_" data-uid="Algorand.Unity.Transaction.AppDelete*"></a>
+  <h4 id="Algorand_Unity_Transaction_AppDelete_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___" data-uid="Algorand.Unity.Transaction.AppDelete(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[])">AppDelete(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[])</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a> used to delete an application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AppCallTxn AppDelete(Address sender, TransactionParams txnParams, AppIndex applicationId, CompiledTeal[] appArguments = null, Address[] accounts = null, ulong[] foreignApps = null, ulong[] foreignAssets = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AppIndex.html">AppIndex</a></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td><p>ID of the application being configured.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.CompiledTeal.html">CompiledTeal</a>[]</td>
+        <td><span class="parametername">appArguments</span></td>
+        <td><p>Transaction specific arguments accessed from the application&apos;s approval-program and clear-state-program.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a>[]</td>
+        <td><span class="parametername">accounts</span></td>
+        <td><p>List of accounts in addition to the sender that may be accessed from the application&apos;s approval-program and clear-state-program.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="parametername">foreignApps</span></td>
+        <td><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="parametername">foreignAssets</span></td>
+        <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a></td>
+        <td><p>An <a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a> with params to delete an application.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_AppOptIn_" data-uid="Algorand.Unity.Transaction.AppOptIn*"></a>
+  <h4 id="Algorand_Unity_Transaction_AppOptIn_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___" data-uid="Algorand.Unity.Transaction.AppOptIn(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[])">AppOptIn(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[])</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a> used to opt in to an application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AppCallTxn AppOptIn(Address sender, TransactionParams txnParams, AppIndex applicationId, CompiledTeal[] appArguments = null, Address[] accounts = null, ulong[] foreignApps = null, ulong[] foreignAssets = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AppIndex.html">AppIndex</a></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td><p>ID of the application being configured.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.CompiledTeal.html">CompiledTeal</a>[]</td>
+        <td><span class="parametername">appArguments</span></td>
+        <td><p>Transaction specific arguments accessed from the application&apos;s approval-program and clear-state-program.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a>[]</td>
+        <td><span class="parametername">accounts</span></td>
+        <td><p>List of accounts in addition to the sender that may be accessed from the application&apos;s approval-program and clear-state-program.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="parametername">foreignApps</span></td>
+        <td><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="parametername">foreignAssets</span></td>
+        <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a></td>
+        <td><p>An <a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a> with params to opt in to an application.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_AppUpdateTxn_" data-uid="Algorand.Unity.Transaction.AppUpdateTxn*"></a>
+  <h4 id="Algorand_Unity_Transaction_AppUpdateTxn_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal_Algorand_Unity_CompiledTeal_System_UInt64_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___" data-uid="Algorand.Unity.Transaction.AppUpdateTxn(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal,Algorand.Unity.CompiledTeal,System.UInt64,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[])">AppUpdateTxn(Address, TransactionParams, AppIndex, CompiledTeal, CompiledTeal, UInt64, CompiledTeal[], Address[], UInt64[], UInt64[])</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a> used to update an application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AppCallTxn AppUpdateTxn(Address sender, TransactionParams txnParams, AppIndex applicationId, CompiledTeal approvalProgram = default(CompiledTeal), CompiledTeal clearStateProgram = default(CompiledTeal), ulong extraProgramPages = 0UL, CompiledTeal[] appArguments = null, Address[] accounts = null, ulong[] foreignApps = null, ulong[] foreignAssets = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AppIndex.html">AppIndex</a></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td><p>ID of the application being configured.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.CompiledTeal.html">CompiledTeal</a></td>
+        <td><span class="parametername">approvalProgram</span></td>
+        <td><p>Logic executed for every application transaction, except when on-completion is set to &quot;clear&quot;. It can read and write global state for the application, as well as account-specific local state. Approval programs may reject the transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.CompiledTeal.html">CompiledTeal</a></td>
+        <td><span class="parametername">clearStateProgram</span></td>
+        <td><p>Logic executed for application transactions with on-completion set to &quot;clear&quot;. It can read and write global state for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="parametername">extraProgramPages</span></td>
+        <td><p>Number of additional pages allocated to the application&apos;s approval and clear state programs. Each ExtraProgramPages is 2048 bytes. The sum of ApprovalProgram and ClearStateProgram may not exceed 2048*(1+ExtraProgramPages) bytes.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.CompiledTeal.html">CompiledTeal</a>[]</td>
+        <td><span class="parametername">appArguments</span></td>
+        <td><p>Transaction specific arguments accessed from the application&apos;s approval-program and clear-state-program.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a>[]</td>
+        <td><span class="parametername">accounts</span></td>
+        <td><p>List of accounts in addition to the sender that may be accessed from the application&apos;s approval-program and clear-state-program.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="parametername">foreignApps</span></td>
+        <td><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
+        <td><span class="parametername">foreignAssets</span></td>
+        <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a></td>
+        <td><p>An <a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a> with params to update an application.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_AssetAccept_" data-uid="Algorand.Unity.Transaction.AssetAccept*"></a>
+  <h4 id="Algorand_Unity_Transaction_AssetAccept_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AssetIndex_" data-uid="Algorand.Unity.Transaction.AssetAccept(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AssetIndex)">AssetAccept(Address, TransactionParams, AssetIndex)</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="Algorand.Unity.AssetTransferTxn.html">AssetTransferTxn</a> for opting in to an asset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AssetTransferTxn AssetAccept(Address sender, TransactionParams txnParams, AssetIndex xferAsset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AssetIndex.html">AssetIndex</a></td>
+        <td><span class="parametername">xferAsset</span></td>
+        <td><p>The unique ID of the asset to opt-in to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AssetTransferTxn.html">AssetTransferTxn</a></td>
+        <td><p>An <a class="xref" href="Algorand.Unity.AssetTransferTxn.html">AssetTransferTxn</a> for opting in to an asset.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_AssetClawback_" data-uid="Algorand.Unity.Transaction.AssetClawback*"></a>
+  <h4 id="Algorand_Unity_Transaction_AssetClawback_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AssetIndex_System_UInt64_Algorand_Unity_Address_Algorand_Unity_Address_" data-uid="Algorand.Unity.Transaction.AssetClawback(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AssetIndex,System.UInt64,Algorand.Unity.Address,Algorand.Unity.Address)">AssetClawback(Address, TransactionParams, AssetIndex, UInt64, Address, Address)</h4>
+  <div class="markdown level1 summary"><p>Creates a form of <a class="xref" href="Algorand.Unity.AssetTransferTxn.html">AssetTransferTxn</a> to clawback assets from an account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AssetTransferTxn AssetClawback(Address sender, TransactionParams txnParams, AssetIndex xferAsset, ulong assetAmount, Address assetSender, Address assetReceiver)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The sender of this transaction must be the clawback account specified in the asset configuration.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AssetIndex.html">AssetIndex</a></td>
+        <td><span class="parametername">xferAsset</span></td>
+        <td><p>The unique ID of the asset to be transferred.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="parametername">assetAmount</span></td>
+        <td><p>The amount of the asset to be transferred.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">assetSender</span></td>
+        <td><p>The address from which the funds will be withdrawn.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">assetReceiver</span></td>
+        <td><p>The recipient of the asset transfer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AssetTransferTxn.html">AssetTransferTxn</a></td>
+        <td><p>A form of <a class="xref" href="Algorand.Unity.AssetTransferTxn.html">AssetTransferTxn</a> to clawback assets from an account</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_AssetConfigure_" data-uid="Algorand.Unity.Transaction.AssetConfigure*"></a>
+  <h4 id="Algorand_Unity_Transaction_AssetConfigure_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AssetIndex_Algorand_Unity_AssetParams_" data-uid="Algorand.Unity.Transaction.AssetConfigure(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AssetIndex,Algorand.Unity.AssetParams)">AssetConfigure(Address, TransactionParams, AssetIndex, AssetParams)</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="Algorand.Unity.AssetConfigTxn.html">AssetConfigTxn</a> that will configure an asset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AssetConfigTxn AssetConfigure(Address sender, TransactionParams txnParams, AssetIndex assetId, AssetParams assetParams)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AssetIndex.html">AssetIndex</a></td>
+        <td><span class="parametername">assetId</span></td>
+        <td><p>The unique asset id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AssetParams.html">AssetParams</a></td>
+        <td><span class="parametername">assetParams</span></td>
+        <td><p>See <a class="xref" href="Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_AssetParams">AssetParams</a> for all available fields.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AssetConfigTxn.html">AssetConfigTxn</a></td>
+        <td><p>An <a class="xref" href="Algorand.Unity.AssetConfigTxn.html">AssetConfigTxn</a> that will configure an asset.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_AssetCreate_" data-uid="Algorand.Unity.Transaction.AssetCreate*"></a>
+  <h4 id="Algorand_Unity_Transaction_AssetCreate_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AssetParams_" data-uid="Algorand.Unity.Transaction.AssetCreate(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AssetParams)">AssetCreate(Address, TransactionParams, AssetParams)</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="Algorand.Unity.AssetConfigTxn.html">AssetConfigTxn</a> that will create an asset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AssetConfigTxn AssetCreate(Address sender, TransactionParams txnParams, AssetParams assetParams)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AssetParams.html">AssetParams</a></td>
+        <td><span class="parametername">assetParams</span></td>
+        <td><p>See <a class="xref" href="Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_AssetParams">AssetParams</a> for all available fields.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AssetConfigTxn.html">AssetConfigTxn</a></td>
+        <td><p>An <a class="xref" href="Algorand.Unity.AssetConfigTxn.html">AssetConfigTxn</a> that will create an asset.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_AssetDelete_" data-uid="Algorand.Unity.Transaction.AssetDelete*"></a>
+  <h4 id="Algorand_Unity_Transaction_AssetDelete_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AssetIndex_" data-uid="Algorand.Unity.Transaction.AssetDelete(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AssetIndex)">AssetDelete(Address, TransactionParams, AssetIndex)</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="Algorand.Unity.AssetConfigTxn.html">AssetConfigTxn</a> that will delete an asset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AssetConfigTxn AssetDelete(Address sender, TransactionParams txnParams, AssetIndex assetId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AssetIndex.html">AssetIndex</a></td>
+        <td><span class="parametername">assetId</span></td>
+        <td><p>The unique asset id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AssetConfigTxn.html">AssetConfigTxn</a></td>
+        <td><p>An <a class="xref" href="Algorand.Unity.AssetConfigTxn.html">AssetConfigTxn</a> that will delete an asset.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_AssetFreeze_" data-uid="Algorand.Unity.Transaction.AssetFreeze*"></a>
+  <h4 id="Algorand_Unity_Transaction_AssetFreeze_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_Address_Algorand_Unity_AssetIndex_System_Boolean_" data-uid="Algorand.Unity.Transaction.AssetFreeze(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.Address,Algorand.Unity.AssetIndex,System.Boolean)">AssetFreeze(Address, TransactionParams, Address, AssetIndex, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="Algorand.Unity.AssetFreezeTxn.html">AssetFreezeTxn</a> which is used to freeze or unfreeze an asset from transfers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AssetFreezeTxn AssetFreeze(Address sender, TransactionParams txnParams, Address freezeAccount, AssetIndex freezeAsset, bool assetFrozen)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">freezeAccount</span></td>
+        <td><p>The address of the account whose asset is being frozen or unfrozen.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AssetIndex.html">AssetIndex</a></td>
+        <td><span class="parametername">freezeAsset</span></td>
+        <td><p>The asset ID being frozen or unfrozen.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">assetFrozen</span></td>
+        <td><p>True to freeze the asset.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AssetFreezeTxn.html">AssetFreezeTxn</a></td>
+        <td><p>An <a class="xref" href="Algorand.Unity.AssetFreezeTxn.html">AssetFreezeTxn</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_AssetTransfer_" data-uid="Algorand.Unity.Transaction.AssetTransfer*"></a>
+  <h4 id="Algorand_Unity_Transaction_AssetTransfer_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AssetIndex_System_UInt64_Algorand_Unity_Address_" data-uid="Algorand.Unity.Transaction.AssetTransfer(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AssetIndex,System.UInt64,Algorand.Unity.Address)">AssetTransfer(Address, TransactionParams, AssetIndex, UInt64, Address)</h4>
+  <div class="markdown level1 summary"><p>Create an <a class="xref" href="Algorand.Unity.AssetTransferTxn.html">AssetTransferTxn</a> for transferring an asset to another account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AssetTransferTxn AssetTransfer(Address sender, TransactionParams txnParams, AssetIndex xferAsset, ulong assetAmount, Address assetReceiver)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and sends the asset amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AssetIndex.html">AssetIndex</a></td>
+        <td><span class="parametername">xferAsset</span></td>
+        <td><p>The unique ID of the asset to be transferred.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="parametername">assetAmount</span></td>
+        <td><p>The amount of the asset to be transferred. A zero amount transferred to self allocates that asset in the account&apos;s Asset map.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">assetReceiver</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AssetTransferTxn.html">AssetTransferTxn</a></td>
+        <td><p>An <a class="xref" href="Algorand.Unity.AssetTransferTxn.html">AssetTransferTxn</a> for transferring an asset to another account.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_Atomic_" data-uid="Algorand.Unity.Transaction.Atomic*"></a>
+  <h4 id="Algorand_Unity_Transaction_Atomic" data-uid="Algorand.Unity.Transaction.Atomic">Atomic()</h4>
+  <div class="markdown level1 summary"><p>Initialize a new Atomic Txn in the building stage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AtomicTxn.Building Atomic()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AtomicTxn.Building.html">AtomicTxn.Building</a></td>
+        <td><p>An Atomic Txn in the building stage.
+See <a class="xref" href="Algorand.Unity.AtomicTxn.Building.html#Algorand_Unity_AtomicTxn_Building_AddTxn__1___0_">AddTxn&lt;T&gt;(T)</a> for adding transactions to this transaction group.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_CopyFrom_" data-uid="Algorand.Unity.Transaction.CopyFrom*"></a>
+  <h4 id="Algorand_Unity_Transaction_CopyFrom_Algorand_Unity_Transaction_" data-uid="Algorand.Unity.Transaction.CopyFrom(Algorand.Unity.Transaction)">CopyFrom(Transaction)</h4>
+  <div class="markdown level1 summary"><p>Copy relevant fields to this transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyFrom(Transaction transaction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Transaction.html">Transaction</a></td>
+        <td><span class="parametername">transaction</span></td>
+        <td><p>A raw transaction with all possible transaction fields.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_CopyTo_" data-uid="Algorand.Unity.Transaction.CopyTo*"></a>
+  <h4 id="Algorand_Unity_Transaction_CopyTo_Algorand_Unity_Transaction__" data-uid="Algorand.Unity.Transaction.CopyTo(Algorand.Unity.Transaction@)">CopyTo(ref Transaction)</h4>
+  <div class="markdown level1 summary"><p>Copy this transactions fields to a <a class="xref" href="Algorand.Unity.Transaction.html">Transaction</a> which contains all possible transaction fields.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyTo(ref Transaction transaction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Transaction.html">Transaction</a></td>
+        <td><span class="parametername">transaction</span></td>
+        <td><p>A raw transaction with all possible transaction fields.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_Equals_" data-uid="Algorand.Unity.Transaction.Equals*"></a>
+  <h4 id="Algorand_Unity_Transaction_Equals_Algorand_Unity_Transaction_" data-uid="Algorand.Unity.Transaction.Equals(Algorand.Unity.Transaction)">Equals(Transaction)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Transaction other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Transaction.html">Transaction</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_KeyRegOffline_" data-uid="Algorand.Unity.Transaction.KeyRegOffline*"></a>
+  <h4 id="Algorand_Unity_Transaction_KeyRegOffline_Algorand_Unity_Address_Algorand_Unity_TransactionParams_" data-uid="Algorand.Unity.Transaction.KeyRegOffline(Algorand.Unity.Address,Algorand.Unity.TransactionParams)">KeyRegOffline(Address, TransactionParams)</h4>
+  <div class="markdown level1 summary"><p>Register account offline for participation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static KeyRegTxn KeyRegOffline(Address account, TransactionParams txnParams)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">account</span></td>
+        <td><p>Account to register offline. This is the sender of the transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.KeyRegTxn.html">KeyRegTxn</a></td>
+        <td><p>A <a class="xref" href="Algorand.Unity.KeyRegTxn.html">KeyRegTxn</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_KeyRegOnline_" data-uid="Algorand.Unity.Transaction.KeyRegOnline*"></a>
+  <h4 id="Algorand_Unity_Transaction_KeyRegOnline_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AccountParticipation_" data-uid="Algorand.Unity.Transaction.KeyRegOnline(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AccountParticipation)">KeyRegOnline(Address, TransactionParams, AccountParticipation)</h4>
+  <div class="markdown level1 summary"><p>Register account online for participation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static KeyRegTxn KeyRegOnline(Address account, TransactionParams txnParams, AccountParticipation accountParticipation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">account</span></td>
+        <td><p>Account to register online. This is the sender of the transaction.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AccountParticipation.html">AccountParticipation</a></td>
+        <td><span class="parametername">accountParticipation</span></td>
+        <td><p>See <a class="xref" href="Algorand.Unity.AccountParticipation.html">AccountParticipation</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.KeyRegTxn.html">KeyRegTxn</a></td>
+        <td><p>A <a class="xref" href="Algorand.Unity.KeyRegTxn.html">KeyRegTxn</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_Payment_" data-uid="Algorand.Unity.Transaction.Payment*"></a>
+  <h4 id="Algorand_Unity_Transaction_Payment_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_Address_Algorand_Unity_MicroAlgos_Algorand_Unity_Address_" data-uid="Algorand.Unity.Transaction.Payment(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.Address,Algorand.Unity.MicroAlgos,Algorand.Unity.Address)">Payment(Address, TransactionParams, Address, MicroAlgos, Address)</h4>
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="Algorand.Unity.PaymentTxn.html">PaymentTxn</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PaymentTxn Payment(Address sender, TransactionParams txnParams, Address receiver, MicroAlgos amount, Address closeRemainderTo = default(Address))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address of the account that pays the fee and amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></td>
+        <td><span class="parametername">txnParams</span></td>
+        <td><p>See <a class="xref" href="Algorand.Unity.TransactionParams.html">TransactionParams</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">receiver</span></td>
+        <td><p>The address of the account that receives the amount.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.MicroAlgos.html">MicroAlgos</a></td>
+        <td><span class="parametername">amount</span></td>
+        <td><p>The total amount to be sent in microAlgos.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">closeRemainderTo</span></td>
+        <td><p>When set, it indicates that the transaction is requesting that the Sender account should be closed, and all remaining funds, after the fee and amount are paid, be transferred to this address.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.PaymentTxn.html">PaymentTxn</a></td>
+        <td><p>A <a class="xref" href="Algorand.Unity.PaymentTxn.html">PaymentTxn</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_ToString_" data-uid="Algorand.Unity.Transaction.ToString*"></a>
+  <h4 id="Algorand_Unity_Transaction_ToString" data-uid="Algorand.Unity.Transaction.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring#system-valuetype-tostring">ValueType.ToString()</a></div>
+  
+  
+  <a id="Algorand_Unity_Transaction_ToTypedTxn_" data-uid="Algorand.Unity.Transaction.ToTypedTxn*"></a>
+  <h4 id="Algorand_Unity_Transaction_ToTypedTxn__1" data-uid="Algorand.Unity.Transaction.ToTypedTxn``1">ToTypedTxn&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"><p>Converts this transaction to a specific transaction type implementing <a class="xref" href="Algorand.Unity.ITransaction.html">ITransaction</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T ToTypedTxn&lt;T&gt;()
+    where T : struct, ITransaction</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>A typed transaction implementing <a class="xref" href="Algorand.Unity.ITransaction.html">ITransaction</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the transaction to convert to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Algorand.Unity.IAssetFreezeTxn.html">IAssetFreezeTxn</a>
+  </div>
+  <div>
+      <a class="xref" href="Algorand.Unity.IUntypedTransaction.html">IUntypedTransaction</a>
+  </div>
+  <div>
+      <a class="xref" href="Algorand.Unity.IPaymentTxn.html">IPaymentTxn</a>
+  </div>
+  <div>
+      <a class="xref" href="Algorand.Unity.IAssetTransferTxn.html">IAssetTransferTxn</a>
+  </div>
+  <div>
+      <a class="xref" href="Algorand.Unity.IAppCallTxn.html">IAppCallTxn</a>
+  </div>
+  <div>
+      <a class="xref" href="Algorand.Unity.IAssetConfigTxn.html">IAssetConfigTxn</a>
+  </div>
+  <div>
+      <a class="xref" href="Algorand.Unity.ITransaction.html">ITransaction</a>
+  </div>
+  <div>
+      <a class="xref" href="Algorand.Unity.ITransactionHeader.html">ITransactionHeader</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Generated by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

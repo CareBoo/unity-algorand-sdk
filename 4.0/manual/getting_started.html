@@ -92,29 +92,29 @@
 <tbody>
 <tr>
 <td><code>algod</code> (Algo Daemon)</td>
-<td>Make and monitor <a class="xref" href="../api/AlgoSdk.Transaction.html">Transactions</a>. Any sort of writing to the blockchain happens via this service.</td>
-<td><a class="xref" href="../api/AlgoSdk.AlgodClient.html"><code>AlgodClient</code></a></td>
+<td>Make and monitor <a class="xref" href="../api/Algorand.Unity.Transaction.html">Transactions</a>. Any sort of writing to the blockchain happens via this service.</td>
+<td><a class="xref" href="../api/Algorand.Unity.AlgodClient.html"><code>AlgodClient</code></a></td>
 </tr>
 <tr>
 <td><code>indexer</code></td>
 <td>Query the Algorand Blockchain. Used to determine things like account balance, whether or not an account has a token, or the state of a smart contract.</td>
-<td><a class="xref" href="../api/AlgoSdk.IndexerClient.html"><code>IndexerClient</code></a></td>
+<td><a class="xref" href="../api/Algorand.Unity.IndexerClient.html"><code>IndexerClient</code></a></td>
 </tr>
 <tr>
 <td><code>kmd</code> (Key Management Daemon)</td>
 <td>Manage private keys securely in a wallet. Useful when you need basic wallet features, or when developing locally.</td>
-<td><a class="xref" href="../api/AlgoSdk.KmdClient.html"><code>KmdClient</code></a></td>
+<td><a class="xref" href="../api/Algorand.Unity.KmdClient.html"><code>KmdClient</code></a></td>
 </tr>
 </tbody>
 </table>
 <p>When developing locally, it&#39;s <strong>very</strong> important to have an Algorand node setup for quick iteration and testing. See <a href="getting_started/developing_with_sandbox.html">Developing with Algorand Sandbox</a> for a guide on setting up a local Algorand network for this purpose.</p>
 <h2 id="how-do-i-write-to-an-algorand-blockchain">How do I write to an Algorand Blockchain?</h2>
-<p>A blockchain is a ledger made up of transactions. Any write to a blockchain (not just the Algorand blockchain) requires making a <a class="xref" href="../api/AlgoSdk.Transaction.html">Transaction</a>. To make a transaction:</p>
+<p>A blockchain is a ledger made up of transactions. Any write to a blockchain (not just the Algorand blockchain) requires making a <a class="xref" href="../api/Algorand.Unity.Transaction.html">Transaction</a>. To make a transaction:</p>
 <ol>
-<li>Define/construct your transaction using static methods on <a class="xref" href="../api/AlgoSdk.Transaction.html"><code>Transaction</code></a> class.</li>
-<li>Sign your transaction with a <a class="xref" href="../api/AlgoSdk.ISigner.html"><code>Signer</code></a> or <a class="xref" href="../api/AlgoSdk.IAsyncSigner.html"><code>AsyncSigner</code></a>.</li>
-<li>Send the transaction using <code>algod</code> service via <a class="xref" href="../api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_RawTransaction_"><code>AlgodClient.RawTransaction</code></a>.</li>
-<li>Wait for the transaction to be confirmed via <a class="xref" href="../api/AlgoSdk.AlgodClient.html#AlgoSdk_AlgodClient_WaitForConfirmation_"><code>AlgodClient.WaitForConfirmation</code></a>.</li>
+<li>Define/construct your transaction using static methods on <a class="xref" href="../api/Algorand.Unity.Transaction.html"><code>Transaction</code></a> class.</li>
+<li>Sign your transaction with a <a class="xref" href="../api/Algorand.Unity.ISigner.html"><code>Signer</code></a> or <a class="xref" href="../api/Algorand.Unity.IAsyncSigner.html"><code>AsyncSigner</code></a>.</li>
+<li>Send the transaction using <code>algod</code> service via <a class="xref" href="../api/Algorand.Unity.AlgodClient.html#Algorand_Unity_AlgodClient_RawTransaction_"><code>AlgodClient.RawTransaction</code></a>.</li>
+<li>Wait for the transaction to be confirmed via <a class="xref" href="../api/Algorand.Unity.AlgodClient.html#Algorand_Unity_AlgodClient_WaitForConfirmation_"><code>AlgodClient.WaitForConfirmation</code></a>.</li>
 </ol>
 <p>See <a href="getting_started/your_first_transaction.html">Your First Transaction</a> for an in-depth guide on making your first transaction.</p>
 <h2 id="how-do-i-create-an-nft-or-other-kind-of-token">How do I create an NFT or other kind of Token?</h2>
@@ -134,13 +134,13 @@
 <tr>
 <td>Stateful</td>
 <td>Application, Smart Contract</td>
-<td><a class="xref" href="../api/AlgoSdk.Transaction.html#AlgoSdk_Transaction_AppCreate_"><code>Transaction.AppCreate</code></a></td>
+<td><a class="xref" href="../api/Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_AppCreate_"><code>Transaction.AppCreate</code></a></td>
 <td><a href="https://developer.algorand.org/docs/get-details/dapps/smart-contracts/#smart-contracts">See docs</a></td>
 </tr>
 <tr>
 <td>Stateless</td>
 <td>Logicsig, Smart Signature</td>
-<td><a class="xref" href="../api/AlgoSdk.LogicSig.html"><code>LogicSig</code></a></td>
+<td><a class="xref" href="../api/Algorand.Unity.LogicSig.html"><code>LogicSig</code></a></td>
 <td><a href="https://developer.algorand.org/docs/get-details/dapps/smart-contracts/#smart-signatures">See docs</a></td>
 </tr>
 </tbody>
@@ -148,8 +148,8 @@
 <p>All smart contracts are written using <a href="https://developer.algorand.org/docs/get-details/dapps/avm/teal/">TEAL</a>. To use a smart contract:</p>
 <ol>
 <li>Use your favorite tool to write TEAL source code. (Some may like <a href="https://pyteal.readthedocs.io/en/stable/">PyTEAL</a> or <a href="https://developer.algorand.org/docs/get-started/dapps/reach/">Reach</a>).</li>
-<li>Compile the source code using <a href="xref:AlgoSdk.AlgodClient.TealCompile"><code>AlgodClient.TealCompile</code></a>.</li>
-<li>Use the compiled program in your <a class="xref" href="../api/AlgoSdk.LogicSig.html"><code>LogicSig</code></a> or <a class="xref" href="../api/AlgoSdk.Transaction.html#AlgoSdk_Transaction_AppCreate_"><code>Transaction.AppCreate</code></a>.</li>
+<li>Compile the source code using <a href="xref:Algorand.Unity.AlgodClient.TealCompile"><code>AlgodClient.TealCompile</code></a>.</li>
+<li>Use the compiled program in your <a class="xref" href="../api/Algorand.Unity.LogicSig.html"><code>LogicSig</code></a> or <a class="xref" href="../api/Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_AppCreate_"><code>Transaction.AppCreate</code></a>.</li>
 </ol>
 </article>
           </div>

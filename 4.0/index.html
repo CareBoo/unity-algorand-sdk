@@ -177,7 +177,7 @@ and connect to any Algorand wallet supporting <a href="https://developer.algoran
 </table>
 <h2 id="common-usages">Common Usages</h2>
 <h3 id="make-a-payment-transaction">Make a payment transaction:</h3>
-<pre><code class="lang-csharp">using AlgoSdk;
+<pre><code class="lang-csharp">using Algorand.Unity;
 
 var sender = &quot;&lt;your sender address&gt;&quot;;
 var receiver = &quot;&lt;your receiver address&gt;&quot;;
@@ -193,7 +193,7 @@ var signedTxn = account.SignTxn(paymentTxn);
 var walletToken = await kmd.InitWalletHandleToken(&quot;&lt;your wallet id&gt;&quot;, &quot;&lt;your wallet password&gt;&quot;);
 var signedTxn = await kmd.SignTransaction(paymentTxn.Sender, paymentTxn.ToSignatureMessage(), walletToken, &quot;&lt;your kmd wallet password&gt;&quot;);
 </code></pre><h4 id="sign-the-transaction-with-walletconnect">Sign the transaction with WalletConnect:</h4>
-<pre><code class="lang-csharp">using AlgoSdk.WalletConnect;
+<pre><code class="lang-csharp">using Algorand.Unity.WalletConnect;
 
 SavedSession savedSession = [...];
 var session = new AlgorandWalletConnectSession(savedSession);
@@ -203,8 +203,8 @@ var signedTxn = signedTxns[0];
 </code></pre><h4 id="send-the-signed-transaction">Send the signed transaction:</h4>
 <pre><code class="lang-csharp">await algod.SendTransaction(signedTxn);
 </code></pre><h3 id="initiate-a-walletconnect-session-and-generate-a-qr-code">Initiate a WalletConnect session and generate a QR Code:</h3>
-<pre><code class="lang-csharp">using AlgoSdk;
-using AlgoSdk.WalletConnect;
+<pre><code class="lang-csharp">using Algorand.Unity;
+using Algorand.Unity.WalletConnect;
 using UnityEngine;
 
 var dappMeta = new ClientMeta
