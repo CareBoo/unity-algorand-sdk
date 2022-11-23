@@ -1,4 +1,24 @@
 # Changelog
+All notable changes to this package will be documented in this file.
+
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+
+
+# [4.0.0-pre.3](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.2...v4.0.0-pre.3) (2022-11-23)
+
+
+### Code Refactoring
+
+* rename `AlgoSdk` to `Algorand.Unity` ([#167](https://github.com/CareBoo/unity-algorand-sdk/issues/167)) ([d135635](https://github.com/CareBoo/unity-algorand-sdk/commit/d1356352b1f099d328797fb0f202b7507cfa9a79))
+
+
+### BREAKING CHANGES
+
+* All `AlgoSdk` namespaces are now renamed to `Algorand.Unity`. A simple find and
+replace should fix it.
+
+# Changelog
 
 All notable changes to this package will be documented in this file.
 
