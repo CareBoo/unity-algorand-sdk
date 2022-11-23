@@ -1,0 +1,21 @@
+{
+    "name": "Algorand.Unity.CodeGen",
+    "rootNamespace": "Algorand.Unity.Editor.CodeGen",
+    "references": [
+        "Algorand.Unity",
+        "Algorand.Unity.IntegrationTests",
+        "Algorand.Unity.Crypto",
+        "Unity.Collections"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -5,7 +5,7 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace AlgoSdk.WalletConnect.Editor
+namespace Algorand.Unity.WalletConnect.Editor
 {
     public class WalletConnectAccountEditorWindow : EditorWindow
     {
@@ -38,7 +38,7 @@ namespace AlgoSdk.WalletConnect.Editor
         private Button startSessionButton;
 
 
-        [MenuItem("AlgoSdk/Connect Account/WalletConnect")]
+        [MenuItem("Algorand.Unity/Connect Account/WalletConnect")]
         public static void ShowMenu()
         {
             var window = GetWindow<WalletConnectAccountEditorWindow>("Connect Account via WalletConnect");

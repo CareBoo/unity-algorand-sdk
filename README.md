@@ -57,7 +57,7 @@ This package supports the following build targets and Unity versions:
 ### Make a payment transaction:
 
 ```csharp
-using AlgoSdk;
+using Algorand.Unity;
 
 var sender = "<your sender address>";
 var receiver = "<your receiver address>";
@@ -85,7 +85,7 @@ var signedTxn = await kmd.SignTransaction(paymentTxn.Sender, paymentTxn.ToSignat
 #### Sign the transaction with WalletConnect:
 
 ```csharp
-using AlgoSdk.WalletConnect;
+using Algorand.Unity.WalletConnect;
 
 SavedSession savedSession = [...];
 var session = new AlgorandWalletConnectSession(savedSession);
@@ -103,8 +103,8 @@ await algod.SendTransaction(signedTxn);
 ### Initiate a WalletConnect session and generate a QR Code:
 
 ```csharp
-using AlgoSdk;
-using AlgoSdk.WalletConnect;
+using Algorand.Unity;
+using Algorand.Unity.WalletConnect;
 using UnityEngine;
 
 var dappMeta = new ClientMeta

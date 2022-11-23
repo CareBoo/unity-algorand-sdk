@@ -16,8 +16,8 @@ The general process for creating a WalletConnect session is:
 In code, this process is:
 
 ```csharp
-using AlgoSdk;
-using AlgoSdk.WalletConnect;
+using Algorand.Unity;
+using Algorand.Unity.WalletConnect;
 using UnityEngine;
 
 // 1. Create the session and show the user the QR Code
@@ -124,8 +124,8 @@ wallets for the current platform. Each time you need the user to approve a reque
 to launch the wallet app.
 
 ```csharp
-using AlgoSdk;
-using AlgoSdk.WalletConnect;
+using Algorand.Unity;
+using Algorand.Unity.WalletConnect;
 
 var supportedWallets = WalletRegistry.SupportedWalletsForCurrentPlatform;
 

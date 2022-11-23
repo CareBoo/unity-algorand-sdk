@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace AlgoSdk
+namespace Algorand.Unity
 {
     public abstract class BaseAccountObject
         : ScriptableObject

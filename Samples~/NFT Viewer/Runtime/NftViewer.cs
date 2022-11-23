@@ -1,15 +1,15 @@
-using AlgoSdk;
-using AlgoSdk.Crypto;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using Cysharp.Threading.Tasks;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
-using AlgoSdk.LowLevel;
+using Algorand.Unity;
+using Algorand.Unity.Crypto;
+using Algorand.Unity.LowLevel;
+using Cysharp.Threading.Tasks;
+using UnityEngine;
 using UnityEngine.Networking;
 
-namespace AlgoSdk.Samples.NftViewer
+namespace Algorand.Unity.Samples.NftViewer
 {
     public class NftViewer : MonoBehaviour
     {
@@ -74,7 +74,7 @@ namespace AlgoSdk.Samples.NftViewer
 
             var (err, resp) = await indexer.SearchForAssets(creator: address);
             Debug.Log("getting NFTs");
-            foreach (AlgoSdk.Indexer.Asset asset in resp.Assets)
+            foreach (Algorand.Unity.Indexer.Asset asset in resp.Assets)
             {
                 if (!asset.Params.Url.Contains("ipfs"))
                     continue;

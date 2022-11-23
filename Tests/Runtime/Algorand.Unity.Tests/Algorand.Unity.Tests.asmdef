@@ -1,0 +1,27 @@
+{
+    "name": "Algorand.Unity.Tests",
+    "rootNamespace": "",
+    "references": [
+        "GUID:45ab5c0c2cb4a0e4ba897b731349c490",
+        "GUID:2665a8d13d1b3f18800f46e256720795",
+        "GUID:e0cd26848372d4e5c891c569017e11f1",
+        "GUID:27619889b8ba8c24980f49ee34dbb44a",
+        "GUID:f8b80ea32105bf74aa022a9a7e066bc1",
+        "GUID:9f8c967ec86c9324c9b2928ff73b4cf1",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:d8b63aba1907145bea998dd612889d6b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,5 +1,5 @@
 using System;
-using AlgoSdk;
+using Algorand.Unity;
 using Cysharp.Threading.Tasks;
 using UnityEditor;
 using UnityEditor.UIElements;

@@ -1,0 +1,28 @@
+using Algorand.Unity;
+using NUnit.Framework;
+using Unity.Collections;
+using UnityEngine.TestTools;
+
+public class BlockTest
+{
+    private static readonly string[] blockMsgPackCases = new[]
+    {
+        "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"
+    };
+
+    [Test, TestMustExpectAllLogs]
+    public void DeserializingBlockFromMessagePackShouldThrowNoLogs([ValueSource(nameof(blockMsgPackCases))] string blockMsgPackBase64)
+    {
+        using var bytes = new NativeArray<byte>(System.Convert.FromBase64String(blockMsgPackBase64), Allocator.Persistent);
+        AlgoApiSerializer.DeserializeMessagePack<BlockResponse>(bytes);
+    }
+
+    [Test]
+    public void DefaultFixedStringsShouldBeEqual()
+    {
+        var fs = new FixedString32Bytes();
+        var defaultFs = default(FixedString32Bytes);
+        Assert.IsTrue(defaultFs == fs);
+    }
+}

@@ -1,4 +1,4 @@
-using AlgoSdk;
+using Algorand.Unity;
 using UnityEngine;
 
 [CreateAssetMenu]

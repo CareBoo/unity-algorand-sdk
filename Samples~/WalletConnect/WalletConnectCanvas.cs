@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using AlgoSdk.WalletConnect;
+using Algorand.Unity.WalletConnect;
 using UnityEngine;
 using UnityEngine.UI;
 

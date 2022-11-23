@@ -62,10 +62,10 @@ jobs:
 
       - uses: actions/cache@v2
         with:
-          path: Unity.AlgoSdk.AssetStore/Library
-          key: Library-build_unitypackage-Unity.AlgoSdk.AssetStore-StandaloneLinux64
+          path: Algorand.Unity.AssetStore/Library
+          key: Library-build_unitypackage-Algorand.Unity.AssetStore-StandaloneLinux64
           restore-keys: |
-            Library-build_unitypackage-Unity.AlgoSdk.AssetStore-
+            Library-build_unitypackage-Algorand.Unity.AssetStore-
 
       - name: Package unitypackage
         uses: game-ci/unity-builder@v2
@@ -73,7 +73,7 @@ jobs:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE_2020 }}
         with:
           targetPlatform: StandaloneLinux64
-          projectPath: Unity.AlgoSdk.AssetStore
+          projectPath: Algorand.Unity.AssetStore
           buildMethod: UnityPackage.Build
           versioning: None
           allowDirtyBuild: true
@@ -81,7 +81,7 @@ jobs:
       - name: Move unitypackage to dist folder
         run: |
           mkdir dist
-          mv Unity.AlgoSdk.AssetStore/unity-algorand-sdk.unitypackage dist/unity-algorand-sdk-${{ needs.release.outputs.version }}.unitypackage
+          mv Algorand.Unity.AssetStore/unity-algorand-sdk.unitypackage dist/unity-algorand-sdk-${{ needs.release.outputs.version }}.unitypackage
 
       - name: Upload dist
         uses: actions/upload-artifact@v2

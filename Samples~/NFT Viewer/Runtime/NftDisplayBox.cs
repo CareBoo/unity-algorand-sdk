@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
-namespace AlgoSdk.Samples.NftViewer
+namespace Algorand.Unity.Samples.NftViewer
 {
     public class NftDisplayBox : MonoBehaviour
     {
