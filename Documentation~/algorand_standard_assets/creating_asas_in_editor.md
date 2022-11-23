@@ -25,7 +25,7 @@ Add the following, `AccountObject.cs`, to your project:
 
 ```csharp
 using System;
-using AlgoSdk;
+using Algorand.Unity;
 using UnityEngine;
 
 [CreateAssetMenu]
@@ -67,8 +67,7 @@ public class AccountObject
 
 This script wraps the `Account` class into a `ScriptableObject` that we can use to store its data in the editor. We use a `Mnemonic` to store the `PrivateKey` because it's serializable by the Unity Editor. After the `AccountObject` is deserialized, Unity regenerates the `account` field from the `mnemonic`.
 
-> [!Note]
-> `Account` could have been made serializable in the Unity Editor. However, we have chosen not to make it serializable to avoid storing `PrivateKey`s in the editor. Do not store `PrivateKey` or `Mnemonic` outside of a Wallet that you trust.
+> [!Note] > `Account` could have been made serializable in the Unity Editor. However, we have chosen not to make it serializable to avoid storing `PrivateKey`s in the editor. Do not store `PrivateKey` or `Mnemonic` outside of a Wallet that you trust.
 
 Let's go ahead and generate a new account that will be our `Creator` for our ASA. Right click in the project window and select `Create > Account Object`.
 
@@ -102,7 +101,7 @@ Your account should now be funded to create Algorand Standard Assets. You can ch
 Similar to the `AccountObject`, let's create an `AlgodClientObject` that inherits from `ScriptableObject` and stores our client information. Since `AlgodClient` is already serializable, this is a pretty simple script. Add the following script, `AlgodClientObject.cs` to your project:
 
 ```csharp
-using AlgoSdk;
+using Algorand.Unity;
 using UnityEngine;
 
 [CreateAssetMenu]
@@ -126,7 +125,7 @@ Right click in the project hierarchy, and select `Create/Algod Client Object`, t
 We're not done creating `ScriptableObject`s just yet. Let's create a `ScriptableObject` that will store the state of our ASA. Create an `AssetObject.cs` script and add it to your project:
 
 ```csharp
-using AlgoSdk;
+using Algorand.Unity;
 using UnityEngine;
 
 [CreateAssetMenu]
@@ -160,7 +159,7 @@ Make a new folder called `Editor`, and add the following script to it (at `Asset
 
 ```csharp
 using System;
-using AlgoSdk;
+using Algorand.Unity;
 using Cysharp.Threading.Tasks;
 using UnityEditor;
 using UnityEditor.UIElements;

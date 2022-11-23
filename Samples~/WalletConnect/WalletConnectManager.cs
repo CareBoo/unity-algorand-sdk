@@ -1,5 +1,5 @@
-using AlgoSdk;
-using AlgoSdk.WalletConnect;
+using Algorand.Unity;
+using Algorand.Unity.WalletConnect;
 using Cysharp.Threading.Tasks;
 using Unity.Collections;
 using UnityEngine;

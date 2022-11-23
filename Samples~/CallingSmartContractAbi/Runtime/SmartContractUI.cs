@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
-using AlgoSdk;
-using AlgoSdk.Experimental.Abi;
+using Algorand.Unity;
+using Algorand.Unity.Experimental.Abi;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UIElements;

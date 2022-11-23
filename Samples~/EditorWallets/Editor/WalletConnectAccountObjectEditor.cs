@@ -2,7 +2,7 @@ using Cysharp.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
 
-namespace AlgoSdk.WalletConnect.Editor
+namespace Algorand.Unity.WalletConnect.Editor
 {
     [CustomEditor(typeof(WalletConnectAccountObject))]
     public class WalletConnectAccountObjectEditor : UnityEditor.Editor

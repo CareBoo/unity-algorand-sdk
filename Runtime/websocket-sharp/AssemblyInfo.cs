@@ -1,3 +1,3 @@
 using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("CareBoo.AlgoSdk.WebSocket")]
+[assembly: InternalsVisibleTo("Algorand.Unity.WebSocket")]

@@ -5,7 +5,7 @@
 The following code will generate a new account:
 
 ```csharp
-// using AlgoSdk;
+// using Algorand.Unity;
 // using UnityEngine;
 
 var (privateKey, address) = Account.GenerateAccount();
@@ -54,7 +54,7 @@ Verify that the node is healthy and you can connect to it. Create a new `AlgodCh
 that creates an `AlgodClient` on `Start()` and makes a `GetHealth()` request.
 
 ```csharp
-using AlgoSdk;
+using Algorand.Unity;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
@@ -206,7 +206,7 @@ Now press **Play** again, then press the spacebar. After a couple seconds, your 
 Here is the final code for `AlgodCheck` component.
 
 ```csharp
-using AlgoSdk;
+using Algorand.Unity;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 

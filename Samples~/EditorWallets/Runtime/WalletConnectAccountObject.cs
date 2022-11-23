@@ -2,7 +2,7 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace AlgoSdk.WalletConnect
+namespace Algorand.Unity.WalletConnect
 {
     public class WalletConnectAccountObject
         : AsyncSignerAccountObject

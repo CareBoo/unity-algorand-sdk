@@ -1,0 +1,16 @@
+{
+    "name": "Algorand.Unity.QrCode",
+    "rootNamespace": "",
+    "references": [
+        "GUID:153e18e942e4f45e68257b49629df380"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

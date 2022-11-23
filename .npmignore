@@ -7,7 +7,7 @@ dist/**
 *.code-workspace
 Documentation~/**/*.meta
 scripts/**
-Unity.AlgoSdk*/**
+Algorand.Unity*/**
 .czrc
 .editorconfig
 .gitattributes

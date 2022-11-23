@@ -1,4 +1,4 @@
-using AlgoSdk.Experimental.Abi;
+using Algorand.Unity.Experimental.Abi;
 using UnityEngine.UIElements;
 
 public partial class ArgField
@@ -7,7 +7,7 @@ public partial class ArgField
     {
         private readonly TextField textField;
 
-        public override IAbiValue Value => new AlgoSdk.Experimental.Abi.UInt64(
+        public override IAbiValue Value => new Algorand.Unity.Experimental.Abi.UInt64(
             ulong.TryParse(textField.text, out var x)
                 ? x
                 : 0
