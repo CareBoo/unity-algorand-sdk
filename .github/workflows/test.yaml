@@ -76,18 +76,3 @@ jobs:
         with:
           name: Unity ${{ matrix.unityVersion }} ${{ matrix.targetPlatform }} Test Results
           path: ${{ steps.tests.outputs.artifactsPath }}
-      - name: Upload Code Coverage Artifacts
-        uses: actions/upload-artifact@v1
-        with:
-          name: Unity ${{ matrix.unityVersion }} ${{ matrix.targetPlatform }} Code Coverage
-          path: Algorand.Unity.Package/CodeCoverage
-      - name: Upload PlayMode Test Coverage Report
-        uses: codecov/codecov-action@v1
-        with:
-          flags: unittests
-          file: Algorand.Unity.Package/CodeCoverage/workspace-opencov/PlayMode/TestCoverageResults_0000.xml
-      - name: Upload EditMode Test Coverage Report
-        uses: codecov/codecov-action@v1
-        with:
-          flags: unittests
-          file: Algorand.Unity.Package/CodeCoverage/workspace-opencov/EditMode/TestCoverageResults_0000.xml

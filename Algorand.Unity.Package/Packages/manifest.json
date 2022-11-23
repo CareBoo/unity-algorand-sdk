@@ -10,7 +10,7 @@
     "com.unity.settings-manager": "1.0.3",
     "com.unity.test-framework": "1.1.33",
     "com.unity.test-framework.performance": "2.8.1-preview",
-    "com.unity.testtools.codecoverage": "1.0.1",
+    "com.unity.testtools.codecoverage": "1.2.2",
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.6.4",
     "com.unity.toolchain.macos-x86_64-linux-x86_64": "1.0.0",
@@ -52,9 +52,7 @@
     {
       "name": "package.openupm.com",
       "url": "https://package.openupm.com",
-      "scopes": [
-        "com.cysharp.unitask"
-      ]
+      "scopes": ["com.cysharp.unitask"]
     }
   ]
 }
