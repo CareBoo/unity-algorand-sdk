@@ -1,15 +1,15 @@
 # Developing with Algorand Sandbox
 
-The [Algorand Sandbox](https://github.com/algorand/sandbox) allows developers to run a local network of the Algorand Blockchain on their machine. This is the **easiest** fastest way to iterate and develop using the Algorand blockchain.
+The [Algorand Sandbox](https://github.com/algorand/sandbox) allows developers to run a local network of the Algorand Blockchain on their machine. This is the **easiest** way to iterate and develop using the Algorand blockchain.
 
 ## Starting the Sandbox
 
-You can follow the instructions to run the sandbox at its [GitHub Repository](https://github.com/algorand/sandbox). However, I've found the easiest way to setup the sandbox is to run it via `docker-compose`.
+You can follow the instructions to run the sandbox at its [GitHub Repository](https://github.com/algorand/sandbox). However, you can also setup the sandbox via `docker-compose`.
 
 ### Running via Docker Compose
 
 1. [Install `docker`](https://docs.docker.com/get-docker/) which should come with an installation of `docker-compose`.
-2. Add the following `docker-compose.yml` file to the your project.
+2. Add the following `docker-compose.yml` file to your project.
 
    ```yaml
    version: "3"
@@ -60,7 +60,7 @@ You can follow the instructions to run the sandbox at its [GitHub Repository](ht
 
 ## Connecting
 
-If you've setup the sandbox services using the above guides, you should have access to node services locally on your machine with the following configurations
+If you've setup the sandbox services using the above instructions, you should have access to node services locally on your machine with the following configurations
 
 | Service   | Address               | Token                                                                | Client Create Expression                                                                                       |
 | --------- | --------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
