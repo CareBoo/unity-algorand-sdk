@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [4.0.0-pre.5](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.4...v4.0.0-pre.5) (2022-11-25)
+
+
+### Features
+
+* **dotnet:** add conversion from `Algorand.Unity.Account` to `Algorand.Algod.Model.Account` ([9691d0e](https://github.com/CareBoo/unity-algorand-sdk/commit/9691d0ebef048e939d3fdf810f5517d3d2465edb))
+
 # [4.0.0-pre.4](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.3...v4.0.0-pre.4) (2022-11-25)
 
 
