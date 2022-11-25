@@ -1,5 +1,5 @@
 <h1 id="unity-algorand-sdk" align="center">
-<img src="Documentation~/images/algorand_logo_mark_white.svg"/>
+<img src="Documentation~/images/algorand_logo_mark.svg"/>
 <br/>
 Unity Algorand SDK
 
