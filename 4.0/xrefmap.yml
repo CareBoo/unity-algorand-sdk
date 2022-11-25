@@ -87,6 +87,25 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Account.IsRekeyed
   nameWithType: Account.IsRekeyed
+- uid: Algorand.Unity.Account.op_Explicit(Algorand.Unity.Account)~Algorand.Algod.Model.Account
+  name: Explicit(Account to Algod.Model.Account)
+  href: api/Algorand.Unity.Account.html#Algorand_Unity_Account_op_Explicit_Algorand_Unity_Account__Algorand_Algod_Model_Account
+  commentId: M:Algorand.Unity.Account.op_Explicit(Algorand.Unity.Account)~Algorand.Algod.Model.Account
+  name.vb: Narrowing(Account to Algod.Model.Account)
+  fullName: Algorand.Unity.Account.Explicit(Algorand.Unity.Account to Algorand.Algod.Model.Account)
+  fullName.vb: Algorand.Unity.Account.Narrowing(Algorand.Unity.Account to Algorand.Algod.Model.Account)
+  nameWithType: Account.Explicit(Account to Algod.Model.Account)
+  nameWithType.vb: Account.Narrowing(Account to Algod.Model.Account)
+- uid: Algorand.Unity.Account.op_Explicit*
+  name: Explicit
+  href: api/Algorand.Unity.Account.html#Algorand_Unity_Account_op_Explicit_
+  commentId: Overload:Algorand.Unity.Account.op_Explicit
+  isSpec: "True"
+  name.vb: Narrowing
+  fullName: Algorand.Unity.Account.Explicit
+  fullName.vb: Algorand.Unity.Account.Narrowing
+  nameWithType: Account.Explicit
+  nameWithType.vb: Account.Narrowing
 - uid: Algorand.Unity.Account.SignTxn*
   name: SignTxn
   href: api/Algorand.Unity.Account.html#Algorand_Unity_Account_SignTxn_
