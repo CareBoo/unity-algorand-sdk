@@ -1,6 +1,7 @@
 using Algorand.Unity.Crypto;
 using Algorand.Unity.LowLevel;
 using NUnit.Framework;
+using Org.BouncyCastle.Crypto.Digests;
 
 public class Sha512Test
 {
@@ -25,6 +26,19 @@ public class Sha512Test
             var hash = Sha512.Hash256Truncated(seed);
             var actual = hash.ToBase64();
             Assert.AreEqual(expected, actual);
+        }
+    }
+
+    [Test]
+    public void Sha512_256BouncyCastleGeneratesValidHash()
+    {
+        foreach (var (seed, expected) in ValidHashes)
+        {
+            var digester = new Sha512tDigest(256);
+            digester.BlockUpdate(seed.ToArray(), 0, seed.Length);
+            var output = new byte[32];
+            digester.DoFinal(output, 0);
+            Assert.AreEqual(expected, System.Convert.ToBase64String(output));
         }
     }
 }

@@ -1,5 +1,6 @@
 <h1 id="unity-algorand-sdk" align="center">
 <picture>
+  <source media="(prefers-color-scheme: light)" srcset="Documentation~/images/algorand_logo_mark_black.svg">
   <source media="(prefers-color-scheme: dark)" srcset="Documentation~/images/algorand_logo_mark_white.svg">
   <img alt="The Algorand Logo" src="Documentation~/images/algorand_logo_mark_black.svg"/>
 </picture>

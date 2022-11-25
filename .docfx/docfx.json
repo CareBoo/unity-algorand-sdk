@@ -113,7 +113,7 @@
         "files": [
           "images/**/*"
         ],
-        "dest": "resources"
+        "dest": "Documentation~"
       }
     ],
     "sitemap": {
@@ -125,6 +125,10 @@
         }
       }
     },
+    "template": [
+      "default",
+      "templates/darkerfx"
+    ],
     "xref": [
       "https://normanderwan.github.io/UnityXrefMaps/xrefmap.yml"
     ],
