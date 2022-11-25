@@ -54077,6 +54077,34 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.PrivateKey.Length
   nameWithType: PrivateKey.Length
+- uid: Algorand.Unity.PrivateKey.op_Explicit(Algorand.Unity.PrivateKey)~Algorand.Crypto.KeyPair
+  name: Explicit(PrivateKey to Crypto.KeyPair)
+  href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_op_Explicit_Algorand_Unity_PrivateKey__Algorand_Crypto_KeyPair
+  commentId: M:Algorand.Unity.PrivateKey.op_Explicit(Algorand.Unity.PrivateKey)~Algorand.Crypto.KeyPair
+  name.vb: Narrowing(PrivateKey to Crypto.KeyPair)
+  fullName: Algorand.Unity.PrivateKey.Explicit(Algorand.Unity.PrivateKey to Algorand.Crypto.KeyPair)
+  fullName.vb: Algorand.Unity.PrivateKey.Narrowing(Algorand.Unity.PrivateKey to Algorand.Crypto.KeyPair)
+  nameWithType: PrivateKey.Explicit(PrivateKey to Crypto.KeyPair)
+  nameWithType.vb: PrivateKey.Narrowing(PrivateKey to Crypto.KeyPair)
+- uid: Algorand.Unity.PrivateKey.op_Explicit(Algorand.Unity.PrivateKey)~Algorand.Utils.Crypto.FixedSecureRandom
+  name: Explicit(PrivateKey to Utils.Crypto.FixedSecureRandom)
+  href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_op_Explicit_Algorand_Unity_PrivateKey__Algorand_Utils_Crypto_FixedSecureRandom
+  commentId: M:Algorand.Unity.PrivateKey.op_Explicit(Algorand.Unity.PrivateKey)~Algorand.Utils.Crypto.FixedSecureRandom
+  name.vb: Narrowing(PrivateKey to Utils.Crypto.FixedSecureRandom)
+  fullName: Algorand.Unity.PrivateKey.Explicit(Algorand.Unity.PrivateKey to Algorand.Utils.Crypto.FixedSecureRandom)
+  fullName.vb: Algorand.Unity.PrivateKey.Narrowing(Algorand.Unity.PrivateKey to Algorand.Utils.Crypto.FixedSecureRandom)
+  nameWithType: PrivateKey.Explicit(PrivateKey to Utils.Crypto.FixedSecureRandom)
+  nameWithType.vb: PrivateKey.Narrowing(PrivateKey to Utils.Crypto.FixedSecureRandom)
+- uid: Algorand.Unity.PrivateKey.op_Explicit*
+  name: Explicit
+  href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_op_Explicit_
+  commentId: Overload:Algorand.Unity.PrivateKey.op_Explicit
+  isSpec: "True"
+  name.vb: Narrowing
+  fullName: Algorand.Unity.PrivateKey.Explicit
+  fullName.vb: Algorand.Unity.PrivateKey.Narrowing
+  nameWithType: PrivateKey.Explicit
+  nameWithType.vb: PrivateKey.Narrowing
 - uid: Algorand.Unity.PrivateKey.Sign*
   name: Sign
   href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_Sign_
