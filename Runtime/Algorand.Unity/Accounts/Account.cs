@@ -1,5 +1,6 @@
 using System;
 using System.Threading;
+using Algorand.Unity.LowLevel;
 using Cysharp.Threading.Tasks;
 using Unity.Collections;
 
@@ -108,6 +109,11 @@ namespace Algorand.Unity
         {
             progress.Report(1f);
             return SignTxnsAsync(txns, txnsToSign);
+        }
+
+        public static explicit operator Algorand.Algod.Model.Account(Account from)
+        {
+            return new Algorand.Algod.Model.Account(from.privateKey.ToArray());
         }
     }
 }

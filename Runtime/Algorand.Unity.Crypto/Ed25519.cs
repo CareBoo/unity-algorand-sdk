@@ -8,9 +8,9 @@ using static Algorand.Unity.Crypto.sodium;
 
 namespace Algorand.Unity.Crypto
 {
-    public unsafe static class Ed25519
+    public static class Ed25519
     {
-        public struct KeyPair : INativeDisposable
+        public readonly struct KeyPair : INativeDisposable
         {
             public readonly SecretKeyHandle SecretKey;
             public readonly PublicKey PublicKey;
@@ -72,7 +72,7 @@ namespace Algorand.Unity.Crypto
                 return new SecretKeyHandle() { handle = secureMemoryHandle };
             }
 
-            public Signature Sign<TMessage>(TMessage message)
+            public unsafe Signature Sign<TMessage>(TMessage message)
                 where TMessage : IByteArray
             {
                 var signature = new Signature();
@@ -138,18 +138,22 @@ namespace Algorand.Unity.Crypto
             {
                 var pk = new PublicKey();
                 var sk = SecretKeyHandle.Create();
-                fixed (Seed* seedPtr = &this)
+                unsafe
                 {
-                    int error = crypto_sign_ed25519_seed_keypair(
-                        &pk,
-                        sk.Ptr,
-                        seedPtr
-                        );
-                    if (error > 0)
+                    fixed (Seed* seedPtr = &this)
                     {
-                        throw new System.Exception($"error code {error} when converting to KeyPair");
+                        int error = crypto_sign_ed25519_seed_keypair(
+                            &pk,
+                            sk.Ptr,
+                            seedPtr
+                        );
+                        if (error > 0)
+                        {
+                            throw new System.Exception($"error code {error} when converting to KeyPair");
+                        }
                     }
                 }
+
                 return new KeyPair(sk, pk);
             }
         }
@@ -233,14 +237,17 @@ namespace Algorand.Unity.Crypto
             public bool Verify<TMessage>(TMessage message, PublicKey pk)
                 where TMessage : IByteArray
             {
-                fixed (Signature* s = &this)
+                unsafe
                 {
-                    var error = crypto_sign_ed25519_verify_detached(
-                        s,
-                        message.GetUnsafePtr(),
-                        (UIntPtr)message.Length,
-                        &pk);
-                    return error == 0;
+                    fixed (Signature* s = &this)
+                    {
+                        var error = crypto_sign_ed25519_verify_detached(
+                            s,
+                            message.GetUnsafePtr(),
+                            (UIntPtr)message.Length,
+                            &pk);
+                        return error == 0;
+                    }
                 }
             }
 
