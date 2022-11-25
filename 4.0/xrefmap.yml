@@ -54096,6 +54096,15 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.PrivateKey.Length
   nameWithType: PrivateKey.Length
+- uid: Algorand.Unity.PrivateKey.op_Explicit(Algorand.Crypto.KeyPair)~Algorand.Unity.PrivateKey
+  name: Explicit(Crypto.KeyPair to PrivateKey)
+  href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_op_Explicit_Algorand_Crypto_KeyPair__Algorand_Unity_PrivateKey
+  commentId: M:Algorand.Unity.PrivateKey.op_Explicit(Algorand.Crypto.KeyPair)~Algorand.Unity.PrivateKey
+  name.vb: Narrowing(Crypto.KeyPair to PrivateKey)
+  fullName: Algorand.Unity.PrivateKey.Explicit(Algorand.Crypto.KeyPair to Algorand.Unity.PrivateKey)
+  fullName.vb: Algorand.Unity.PrivateKey.Narrowing(Algorand.Crypto.KeyPair to Algorand.Unity.PrivateKey)
+  nameWithType: PrivateKey.Explicit(Crypto.KeyPair to PrivateKey)
+  nameWithType.vb: PrivateKey.Narrowing(Crypto.KeyPair to PrivateKey)
 - uid: Algorand.Unity.PrivateKey.op_Explicit(Algorand.Unity.PrivateKey)~Algorand.Crypto.KeyPair
   name: Explicit(PrivateKey to Crypto.KeyPair)
   href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_op_Explicit_Algorand_Unity_PrivateKey__Algorand_Crypto_KeyPair

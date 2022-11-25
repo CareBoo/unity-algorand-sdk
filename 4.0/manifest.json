@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "changelog/CHANGELOG.html",
-          "hash": "neN3mL+oa1d5iz+tVvhoIQ=="
+          "hash": "YWFeOyuX8GFM1nH5PScT/Q=="
         }
       },
       "is_incremental": false,
@@ -105,10 +105,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "../Documentation~/images/algorand_logo_mark.svg",
+      "source_relative_path": "../Documentation~/images/algorand_logo_mark_black.svg",
       "output": {
         "resource": {
-          "relative_path": "resources/images/algorand_logo_mark.svg"
+          "relative_path": "resources/images/algorand_logo_mark_black.svg"
         }
       },
       "is_incremental": false,
@@ -116,10 +116,21 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "../Documentation~/images/algorand_logo_mark.svg.meta",
+      "source_relative_path": "../Documentation~/images/algorand_logo_mark_white.svg",
       "output": {
         "resource": {
-          "relative_path": "resources/images/algorand_logo_mark.svg.meta"
+          "relative_path": "resources/images/algorand_logo_mark_white.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../Documentation~/images/algorand_logo_mark_white.svg.meta",
+      "output": {
+        "resource": {
+          "relative_path": "resources/images/algorand_logo_mark_white.svg.meta"
         }
       },
       "is_incremental": false,
@@ -5958,7 +5969,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.PrivateKey.html",
-          "hash": "QjCWzpII+EbRCDeCqKKNPQ=="
+          "hash": "zVRTn4BFX8WOpOs4MLivXQ=="
         }
       },
       "is_incremental": false,
@@ -7098,7 +7109,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "E8uMaVRlyPsE4m38kyqWQw=="
+          "hash": "QHL7Kmfd/Gw/uKBDFnhkuA=="
         }
       },
       "is_incremental": false,
