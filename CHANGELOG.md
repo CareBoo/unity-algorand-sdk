@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [4.0.0-pre.6](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.5...v4.0.0-pre.6) (2022-11-25)
+
+
+### Features
+
+* **dotnet:** add conversion from `Algorand.Crypto.KeyPair` to `Algorand.Unity.PrivateKey` ([cfa72ff](https://github.com/CareBoo/unity-algorand-sdk/commit/cfa72ff97a393513df63b6da09b0cd7c3f87513e))
+
 # [4.0.0-pre.5](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.4...v4.0.0-pre.5) (2022-11-25)
 
 
