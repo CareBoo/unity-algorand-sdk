@@ -1,27 +1,35 @@
-const sw = document.getElementById("switch-style"), b = document.body;
+const sw = document.getElementById("switch-style"), sw_mobile = document.getElementById("switch-style-m"), b = document.body;
+if (b) {
+  function toggleTheme(target, dark) {
+    target.classList.toggle("dark-theme", dark)
+    target.classList.toggle("light-theme", !dark)
+  }
 
-if (sw && b) {
-    if (window.localStorage && localStorage.getItem("theme") === "theme-dark") {
-        // Browser supports local storage and dark mode is configured.
-        sw.checked = true;
+  function switchEventListener() {
+    toggleTheme(b, this.checked);
+    if (window.localStorage) {
+      this.checked ? localStorage.setItem("theme", "dark-theme") : localStorage.setItem("theme", "light-theme")
     }
-    else {
-        // Browser does not support local storage, or no stored theme setting is
-        // present. Determine dark mode based on browser settings. Browsers
-        // which don't support media matching will default to light theme, in
-        // line with what most people would expect from a web page.
-        sw.checked = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    }
+  }
 
-    b.classList.toggle("theme-dark", sw.checked)
-    b.classList.toggle("theme-light", !sw.checked)
+  var isDarkTheme = !window.localStorage || !window.localStorage.getItem("theme") || window.localStorage && localStorage.getItem("theme") === "dark-theme";
 
-    sw.addEventListener("change", function () {
-        b.classList.toggle("theme-dark", this.checked)
-        b.classList.toggle("theme-light", !this.checked)
+  if(sw && sw_mobile){
+    sw.checked = isDarkTheme;
+    sw_mobile.checked = isDarkTheme;
 
-        if (window.localStorage) {
-            localStorage.setItem("theme", this.checked ? "theme-dark" : "theme-light");
-        }
-    })
+    sw.addEventListener("change", switchEventListener);
+    sw_mobile.addEventListener("change", switchEventListener);
+    
+    // sync state between switches
+    sw.addEventListener("change", function() {
+      sw_mobile.checked = this.checked;
+    });
+
+    sw_mobile.addEventListener("change", function() {
+      sw.checked = this.checked;
+    });
+  }
+
+  toggleTheme(b, isDarkTheme);
 }
