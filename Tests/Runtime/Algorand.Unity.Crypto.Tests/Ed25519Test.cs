@@ -3,8 +3,6 @@ using Algorand.Unity.LowLevel;
 using NUnit.Framework;
 using Unity.Collections;
 using static Algorand.Unity.Crypto.Ed25519;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Crypto.Signers;
 
 public class Ed25519Test
 {

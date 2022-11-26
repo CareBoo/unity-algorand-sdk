@@ -106,7 +106,7 @@ namespace Algorand.Unity
                     return txnInfoResponse;
                 }
 
-                await WaitForBlock(currentRound);
+                await WaitForBlock(currentRound).WithCancellation(cancellationToken);
                 currentRound++;
             }
 
