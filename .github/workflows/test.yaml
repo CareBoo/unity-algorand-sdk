@@ -23,7 +23,7 @@ env:
 jobs:
   testAllModes:
     name: Test ${{ matrix.unityVersion}} ${{ matrix.targetPlatform }}
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     strategy:
       fail-fast: false
@@ -42,9 +42,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           lfs: true
-
-      - name: Setup Docker
-        uses: docker-practice/actions-setup-docker@master
 
       - name: Start services
         run: cd .services && docker-compose up --detach
