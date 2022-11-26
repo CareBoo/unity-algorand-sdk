@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [4.0.0-pre.8](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.7...v4.0.0-pre.8) (2022-11-26)
+
+
+### Bug Fixes
+
+* **algod:** fix `WaitForConfirmation` not respecting `cancellationToken` ([d0b76cd](https://github.com/CareBoo/unity-algorand-sdk/commit/d0b76cd74318f7c03bdd2f03c4e9338d5b4eddf6))
+
 # [4.0.0-pre.7](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.6...v4.0.0-pre.7) (2022-11-26)
 
 
