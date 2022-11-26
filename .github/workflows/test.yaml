@@ -43,6 +43,9 @@ jobs:
         with:
           lfs: true
 
+      - name: Setup Docker
+        uses: docker-practice/actions-setup-docker@master
+
       - name: Start services
         run: cd .services && docker-compose up --detach
 
