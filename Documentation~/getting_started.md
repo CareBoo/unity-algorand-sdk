@@ -4,11 +4,11 @@
 
 All connections to an Algorand Network is via a node that exists on that network. Nodes provide three REST services:
 
-| Service                       | Purpose                                                                                                                                                | Client Class                                         |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- |
-| `algod` (Algo Daemon)         | Make and monitor [Transactions](xref:Algorand.Unity.Transaction). Any sort of writing to the blockchain happens via this service.                      | [`AlgodClient`](xref:Algorand.Unity.AlgodClient)     |
-| `indexer`                     | Query the Algorand Blockchain. Used to determine things like account balance, whether or not an account has a token, or the state of a smart contract. | [`IndexerClient`](xref:Algorand.Unity.IndexerClient) |
-| `kmd` (Key Management Daemon) | Manage private keys securely in a wallet. Useful when you need basic wallet features, or when developing locally.                                      | [`KmdClient`](xref:Algorand.Unity.KmdClient)         |
+| Service                       | Client                                               | Purpose                                                                                 |
+| ----------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `algod` (Algo Daemon)         | [`AlgodClient`](xref:Algorand.Unity.AlgodClient)     | Send and monitor [Transactions](xref:Algorand.Unity.Transaction).                       |
+| `indexer`                     | [`IndexerClient`](xref:Algorand.Unity.IndexerClient) | Query the Algorand Blockchain and lookup account, asset, or smart contract information. |
+| `kmd` (Key Management Daemon) | [`KmdClient`](xref:Algorand.Unity.KmdClient)         | Manage private keys and accounts securely in a wallet hosted by the node.               |
 
 When developing locally, it's **very** important to have an Algorand node setup for quick iteration and testing. See [Developing with Algorand Sandbox](getting_started/developing_with_sandbox.md) for a guide on setting up a local Algorand network for this purpose.
 
