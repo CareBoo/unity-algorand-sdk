@@ -53,12 +53,13 @@ This package supports the following build targets and Unity versions:
 
 | Unity Version |      Windows       |       Mac OS       |       Linux        |      Android       |        iOS         |           WebGL            |
 | :-----------: | :----------------: | :----------------: | :----------------: | :----------------: | :----------------: | :------------------------: |
-|    2020.3     | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :eight_pointed_black_star: |
+|    2020.3     | :white_check_mark: |        :x:         | :white_check_mark: | :white_check_mark: | :white_check_mark: | :eight_pointed_black_star: |
 |    2021.3     | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :eight_pointed_black_star: |
 |    2022.1     | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :eight_pointed_black_star: |
 
 - :white_check_mark: All APIs are supported.
 - :eight_pointed_black_star: `Algorand.*.*Api` clients are not supported.
+- :x: Not supported. Use at your own risk.
 
 ## Common Usages
 
