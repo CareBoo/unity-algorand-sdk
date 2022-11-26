@@ -41,6 +41,7 @@ body.theme-dark {
     --theme-inline-code: inherit;
     --theme-inline-code-background: #454545;
     --theme-code-border: #404040;
+    --theme-code-color: inherit;
     --theme-border-subnav: #404040;
     --theme-border-footer: #404040;
 }
@@ -69,6 +70,7 @@ body.theme-light {
     --theme-inline-code: #c7254e;
     --theme-inline-code-background: #f9f2f4;
     --theme-code-border: #e7e7e7;
+    --theme-code-color: #333;
     --theme-border-footer: #e7e7e7;
 }
 
@@ -426,6 +428,10 @@ pre {
     padding: 0;
     border: 1px solid var(--theme-code-border);
     background-color: inherit;
+}
+
+legend, pre {
+    color: var(--theme-code-color);
 }
 
 /*
