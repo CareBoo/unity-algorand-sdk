@@ -1,6 +1,8 @@
 using System.Text;
 using Algorand.Unity.LowLevel;
 using NUnit.Framework;
+using Org.BouncyCastle.Crypto.Parameters;
+using Org.BouncyCastle.Crypto.Signers;
 using Unity.Collections;
 using static Algorand.Unity.Crypto.Ed25519;
 
