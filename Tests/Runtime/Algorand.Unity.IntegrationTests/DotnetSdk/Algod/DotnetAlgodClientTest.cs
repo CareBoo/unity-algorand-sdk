@@ -1,25 +1,22 @@
 using System.Collections;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using NUnit.Framework;
-using UnityEngine;
 using UnityEngine.TestTools;
 
 [TestFixture]
 public class DotnetAlgodClientTest : AlgodClientTestFixture
 {
-    [Test]
-    public void InstantiatingClientShouldThrowNoErrors()
-    {
-        var defaultAlgod = AlgoApiClientSettings.DefaultAlgod;
-        var api = (Algorand.Algod.DefaultApi)defaultAlgod;
-    }
-
     [UnityTest]
     public IEnumerator SendSimpleRequestShouldThrowNoErrors() => UniTask.ToCoroutine(async () =>
     {
-        var defaultAlgod = AlgoApiClientSettings.DefaultAlgod;
-        var api = (Algorand.Algod.DefaultApi)defaultAlgod;
+#if UNITY_WEBGL && !UNITY_EDITOR
+        Assert.Ignore("HttpClient is not supported in WebGL");
+#else
+        SynchronizationContext.SetSynchronizationContext(new UniTaskSynchronizationContext());
+        var api = AlgoApiClientSettings.DefaultAlgod.ToDefaultApi();
         var response = await api.GetStatusAsync();
-        Debug.Log($"Last Round: {response.LastRound}");
+        Assert.Greater(response.LastRound, 0);
+#endif
     });
 }
