@@ -28,11 +28,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        unityVersion: [2020.3.42f1, 2021.3.14f1, 2022.1.0f1]
+        unityVersion: [2020.3.42f1, 2021.3.14f1]
         targetPlatform:
-          - mac-mono
+          # - mac-mono
           # - windows-mono
-          # - linux-il2cpp
+          - linux-il2cpp
           # - ios
           # - android
           # - webgl
