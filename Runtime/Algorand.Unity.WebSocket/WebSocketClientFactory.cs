@@ -10,7 +10,7 @@ namespace Algorand.Unity.WebSocket
 {
     public class WebSocketClientFactory
     {
-#if UNITY_WEBGL
+#if UNITY_WEBGL && !UNITY_EDITOR
         public static JSWebSocketClient Client = new JSWebSocketClient();
 
         internal delegate void OnOpenCallback();
@@ -67,7 +67,7 @@ namespace Algorand.Unity.WebSocket
 
         public static IWebSocketClient Create(string url)
         {
-#if UNITY_WEBGL
+#if UNITY_WEBGL && !UNITY_EDITOR
             _SetUrl(url);
             _SetOnOpen(OnOpenEvent);
             _SetOnMessage(OnMessageEvent);

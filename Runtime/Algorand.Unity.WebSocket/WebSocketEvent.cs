@@ -1,5 +1,3 @@
-using System;
-
 namespace Algorand.Unity.WebSocket
 {
     public class WebSocketEvent
