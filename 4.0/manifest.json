@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "changelog/CHANGELOG.html",
-          "hash": "nDVjy8ukUlmB64w7lOZdvA=="
+          "hash": "zUbl2ambrvjPLycDBd+ZqA=="
         }
       },
       "is_incremental": false,
@@ -219,7 +219,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/integration_with_the_dotnet_sdk.html",
-          "hash": "Grjfg8jF2H5Yp8+9XeRdmg=="
+          "hash": "JvJjaEQV6smo7Q56ELCkpA=="
         }
       },
       "is_incremental": false,
@@ -270,7 +270,7 @@
       "output": {
         ".html": {
           "relative_path": "license/Third Party Notices.html",
-          "hash": "danwepiU9ifZkHuPxPh5iQ=="
+          "hash": "grSe05uc6bM3shRjpWBgJg=="
         }
       },
       "is_incremental": false,
@@ -318,7 +318,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Address.html",
-          "hash": "SVXUnMeJOxQne91Jxyv1Xg=="
+          "hash": "EqqXKIPBRNGQKvomvCTbRg=="
         }
       },
       "is_incremental": false,
@@ -702,7 +702,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.Account.html",
-          "hash": "EiqB3NWMeQg0GYd5F6jJRg=="
+          "hash": "NqJxR0YvfVdGXfIDJT5QbA=="
         }
       },
       "is_incremental": false,
@@ -714,7 +714,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.AccountApplicationResponse.html",
-          "hash": "BcQG6H+370R15vLjTBVByg=="
+          "hash": "GZsSiqCK4a9d2aDwNUOldQ=="
         }
       },
       "is_incremental": false,
@@ -726,7 +726,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.AccountAssetResponse.html",
-          "hash": "kcL3NZ4lYd3L6TDS0zUbRg=="
+          "hash": "VvzPhbMA+AqlJ99S/xNEkw=="
         }
       },
       "is_incremental": false,
@@ -738,7 +738,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.AccountParticipation.html",
-          "hash": "qtAjC6aPv5BH4xr7sgNIHA=="
+          "hash": "teeVwc0iIgCcz/H+FFvrZg=="
         }
       },
       "is_incremental": false,
@@ -750,7 +750,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.AccountResponse.html",
-          "hash": "cfKQ3eS0sXC3D2GGrK2v1A=="
+          "hash": "RHeWJzUgQOvbNJq1eWK9MA=="
         }
       },
       "is_incremental": false,
@@ -762,7 +762,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.AccountStateDelta.html",
-          "hash": "RT+WMN8BtQzwjrIxAiPX5Q=="
+          "hash": "VCwJpi8Ls506jevqm2757g=="
         }
       },
       "is_incremental": false,
@@ -774,7 +774,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.Application.html",
-          "hash": "oDaOGGjKuDuGBUwXbjsMGg=="
+          "hash": "rfZ+fwEz7INEadDfPH8DMw=="
         }
       },
       "is_incremental": false,
@@ -786,7 +786,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.ApplicationLocalState.html",
-          "hash": "jk9h804EFooskHoPhzxAgw=="
+          "hash": "PA6KzhYxi8c4TuwlRlya4g=="
         }
       },
       "is_incremental": false,
@@ -798,7 +798,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.ApplicationParams.html",
-          "hash": "ZbuS9XriZXycg2EIwVZH2A=="
+          "hash": "wS5HwpLztmiU/b0rdh3+Aw=="
         }
       },
       "is_incremental": false,
@@ -810,7 +810,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.ApplicationResponse.html",
-          "hash": "b5pcuilsqsLdikHzFF0SfA=="
+          "hash": "O2dTi0UUM3u8H/ESG4dOYg=="
         }
       },
       "is_incremental": false,
@@ -822,7 +822,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.ApplicationStateSchema.html",
-          "hash": "YBIx2OCdJw+OZCaoo4asYw=="
+          "hash": "f3XGaBglj1gQoU4Q20bgEA=="
         }
       },
       "is_incremental": false,
@@ -834,7 +834,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.Asset.html",
-          "hash": "d0zZkwsyyNB6sRuBu6FEvA=="
+          "hash": "asjtes2YMlodLTaIUuZGgQ=="
         }
       },
       "is_incremental": false,
@@ -846,7 +846,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.AssetHolding.html",
-          "hash": "su6OXzZeO+umig0FT7jjUQ=="
+          "hash": "7L8pCBt+3fiscT/ojke9jQ=="
         }
       },
       "is_incremental": false,
@@ -858,7 +858,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.AssetParams.html",
-          "hash": "sqPtxu1fPz3WkFrh0M2d1Q=="
+          "hash": "yTevuJCqyC/nsIwWm/9tmg=="
         }
       },
       "is_incremental": false,
@@ -870,7 +870,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.AssetResponse.html",
-          "hash": "Z0sNUHImYj80+NkBE9LCIw=="
+          "hash": "OiYCxsokBc7fp3MDFsYT6A=="
         }
       },
       "is_incremental": false,
@@ -902,11 +902,59 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Box.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Box.html",
+          "hash": "K/KpdAEhR0BykkAZXQCBuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.BoxDescriptor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.BoxDescriptor.html",
+          "hash": "jqTmCJiCotCmB92EszWteA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.BoxResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.BoxResponse.html",
+          "hash": "98SE/93OSvdopdM74dmY/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.BoxesResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.BoxesResponse.html",
+          "hash": "K1KfTtR0YmokcWQOzZmywQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Algorand.Unity.Algod.BuildVersion.yml",
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.BuildVersion.html",
-          "hash": "uzLDmEE7O94JhL+tnpMdMw=="
+          "hash": "eo9LwMqn7V0iXwM5rQRxUA=="
         }
       },
       "is_incremental": false,
@@ -918,7 +966,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.CatchpointAbortResponse.html",
-          "hash": "Y6lcSJMOl7FnyN1ONut+Bw=="
+          "hash": "W9IFKVNrOjux+IWkNQFZbQ=="
         }
       },
       "is_incremental": false,
@@ -930,7 +978,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.CatchpointStartResponse.html",
-          "hash": "lNz3Y/TmYJpUOdILBMWuNw=="
+          "hash": "5UmwjIenLY3xRKXJPgClEA=="
         }
       },
       "is_incremental": false,
@@ -942,7 +990,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.CompileResponse.html",
-          "hash": "MnCqCMrkuBrvjd0y19Zj0Q=="
+          "hash": "r9+BIjkqWYTp1Tbjb3LiYQ=="
         }
       },
       "is_incremental": false,
@@ -966,7 +1014,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.DryrunRequest.html",
-          "hash": "wnSemvD2XcLXLVJTVGaHNg=="
+          "hash": "INR0qYMwt4EYV7T6XeBEcQ=="
         }
       },
       "is_incremental": false,
@@ -978,7 +1026,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.DryrunResponse.html",
-          "hash": "3KTLGDNZe0zZuYnFSyV5iA=="
+          "hash": "YWawVtNuTAkAP99gu41iTg=="
         }
       },
       "is_incremental": false,
@@ -990,7 +1038,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.DryrunSource.html",
-          "hash": "eKEOpLIFU5jhXVi2G7bfvw=="
+          "hash": "MtAHh1dpkpKXU+qu9PzNYA=="
         }
       },
       "is_incremental": false,
@@ -1002,7 +1050,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.DryrunState.html",
-          "hash": "0OI9l2yssNK43e4yAbu96A=="
+          "hash": "2qX8OZX85qAjKV4VJ0tr9A=="
         }
       },
       "is_incremental": false,
@@ -1014,7 +1062,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.DryrunTxnResult.html",
-          "hash": "gCDxMZHlvbJBG5/nbhyASg=="
+          "hash": "scd2mtDxf6aR2P8B61BCAA=="
         }
       },
       "is_incremental": false,
@@ -1026,7 +1074,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.EvalDelta.html",
-          "hash": "Pwau1UZdrYPdXt9XMDHtOQ=="
+          "hash": "p950NNMhmmWlrSbMkpU+2Q=="
         }
       },
       "is_incremental": false,
@@ -1038,7 +1086,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.EvalDeltaKeyValue.html",
-          "hash": "T6uQQ6C8VsGZmIgkddT7mQ=="
+          "hash": "uhGvbbICM6EbvuNpXSwz+A=="
         }
       },
       "is_incremental": false,
@@ -1062,7 +1110,403 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.LightBlockHeaderProofResponse.html",
-          "hash": "2SMkL77KK3ms4puX3GBLBQ=="
+          "hash": "ATb827c6VPDNhs0T/lxEYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.AccountApplicationResponseExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.AccountApplicationResponseExtensions.html",
+          "hash": "5n61s0HZxU/bjM8vLOTBJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.AccountAssetResponseExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.AccountAssetResponseExtensions.html",
+          "hash": "ubLqEo3kJGfZpz74yoOLJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.AccountExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.AccountExtensions.html",
+          "hash": "UznnhDuZWOwOAW8QYrkrng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.AccountParticipationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.AccountParticipationExtensions.html",
+          "hash": "DhYVbcnLwoQkvLVPPSM3qA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.AccountStateDeltaExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.AccountStateDeltaExtensions.html",
+          "hash": "E6hkHzHDtPBnQn+MGqFJ1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.ApplicationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.ApplicationExtensions.html",
+          "hash": "mWGfKevjK+kr8VToIPjzfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.ApplicationLocalStateExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.ApplicationLocalStateExtensions.html",
+          "hash": "Ak1sV0vbDVtW2uJXZ4xJvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.ApplicationParamsExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.ApplicationParamsExtensions.html",
+          "hash": "CGrXouJ8kP3g5JgdgW6UqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.ApplicationStateSchemaExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.ApplicationStateSchemaExtensions.html",
+          "hash": "RoDyZZSgWp/mLPBpaBnxkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.AssetExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.AssetExtensions.html",
+          "hash": "LCEW8sKHdzgingotDBEgyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.AssetHoldingExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.AssetHoldingExtensions.html",
+          "hash": "h3FXQybnZUQ7KRWjbtvEng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.AssetParamsExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.AssetParamsExtensions.html",
+          "hash": "RUTjlqtkR6Q3qrd94HNzKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.BuildVersionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.BuildVersionExtensions.html",
+          "hash": "h4+JD/qINOfVFkYIz9zY9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.CatchpointAbortResponseExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.CatchpointAbortResponseExtensions.html",
+          "hash": "vNklTSCUR0C0CG2L6aNIiA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.CatchpointStartResponseExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.CatchpointStartResponseExtensions.html",
+          "hash": "U1lmL4cT47JsLRfTjOPasw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.CompileResponseExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.CompileResponseExtensions.html",
+          "hash": "FUI6EzVifqS5Ghrh04OWjA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.DryrunRequestExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.DryrunRequestExtensions.html",
+          "hash": "aKiuVAHtEMMHmAeFI/jA5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.DryrunResponseExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.DryrunResponseExtensions.html",
+          "hash": "WT+HyImZ059p12PDz/eQyw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.DryrunSourceExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.DryrunSourceExtensions.html",
+          "hash": "sbUjw9a09ldxNDo+CMRIRw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.DryrunStateExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.DryrunStateExtensions.html",
+          "hash": "wjFSjIwINBm1rQEb4Glrrg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.DryrunTxnResultExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.DryrunTxnResultExtensions.html",
+          "hash": "o+LdpRxUT/IZvaxSWNrEZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.EvalDeltaExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.EvalDeltaExtensions.html",
+          "hash": "0DFV4pqT76OMDmEB6+o5Gg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.EvalDeltaKeyValueExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.EvalDeltaKeyValueExtensions.html",
+          "hash": "+gTnKpgDYO1LtK7gTBjIMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.NodeStatusResponseExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.NodeStatusResponseExtensions.html",
+          "hash": "zeWLiWNUsenwKRKHsxco/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.ParticipationKeyExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.ParticipationKeyExtensions.html",
+          "hash": "sN/NF6F374g6bp4D9LxfyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.PostTransactionsResponseExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.PostTransactionsResponseExtensions.html",
+          "hash": "4RKzwcapDsICgqICXpvJ2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.StateDeltaExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.StateDeltaExtensions.html",
+          "hash": "JZBxZEtnoW0HK8oEKMTCDQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.SupplyResponseExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.SupplyResponseExtensions.html",
+          "hash": "IcwSJXNn0HfeKcJeCrcDzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.TealKeyValueExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.TealKeyValueExtensions.html",
+          "hash": "s7A1muAPwpwlVscgD6SniA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.TealValueExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.TealValueExtensions.html",
+          "hash": "a8QbnMRyLxlg1sSE0kqMKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.TransactionParametersResponseExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.TransactionParametersResponseExtensions.html",
+          "hash": "EOEsnxpzVL8ozfNFnUzfdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.VersionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.VersionExtensions.html",
+          "hash": "yWO3aQaARptsxeqWuh9t7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Algod.Net.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Algod.Net.html",
+          "hash": "/54MoGLbOJqaerit3kes0w=="
         }
       },
       "is_incremental": false,
@@ -1074,7 +1518,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.NodeStatusResponse.html",
-          "hash": "DIXbs2uGJM5iBywHF4FTBw=="
+          "hash": "7hPMyexiA4PWlIOQSrbKJw=="
         }
       },
       "is_incremental": false,
@@ -1086,7 +1530,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.ParticipationKey.html",
-          "hash": "doPgAn8FIOO1eE4Z790XCg=="
+          "hash": "/9yOdMGlDwuJTvQvC7Z0UA=="
         }
       },
       "is_incremental": false,
@@ -1098,7 +1542,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.ParticipationKeyResponse.html",
-          "hash": "29DrBjiYAuPHcVBovXAQXg=="
+          "hash": "pvlcCLX/wrNr3A+Ee6T8MA=="
         }
       },
       "is_incremental": false,
@@ -1110,7 +1554,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.ParticipationKeysResponse.html",
-          "hash": "Q36JHrvZFElNkTq1WwytTA=="
+          "hash": "EJEQZW+AZ96Ld08mJKa1yQ=="
         }
       },
       "is_incremental": false,
@@ -1158,7 +1602,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.PostTransactionsResponse.html",
-          "hash": "lRQ3Hbb9fClql8m809bVmw=="
+          "hash": "Bijt6TYAhjBF22m+hL621Q=="
         }
       },
       "is_incremental": false,
@@ -1170,7 +1614,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.StateDelta.html",
-          "hash": "bMB97qT+EGLhjr73xpStAw=="
+          "hash": "kOvc6RNsAj3231YvM2TO3w=="
         }
       },
       "is_incremental": false,
@@ -1182,7 +1626,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.StateProof.html",
-          "hash": "V0+wXWRJ6amCLSbda4geFw=="
+          "hash": "BsFAUBElCX2hojasN6OBPg=="
         }
       },
       "is_incremental": false,
@@ -1206,7 +1650,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.StateProofResponse.html",
-          "hash": "6mi8/ZqQwdq3BsTsGpovdw=="
+          "hash": "aJ7rXXe+tXBLT1ORvoVfvw=="
         }
       },
       "is_incremental": false,
@@ -1218,7 +1662,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.SupplyResponse.html",
-          "hash": "ujYLTmjuBDHhzqsbdyJelg=="
+          "hash": "FoS9IO55uklB3aKs3yXL3g=="
         }
       },
       "is_incremental": false,
@@ -1230,7 +1674,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.TealKeyValue.html",
-          "hash": "Vg+hQcozJeN0JkFko7ZCFw=="
+          "hash": "pXpFgAwXhFgwp6nuP7oliw=="
         }
       },
       "is_incremental": false,
@@ -1242,7 +1686,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.TealKeyValueStore.html",
-          "hash": "Vaw75dQef7bMN+SROoOEjw=="
+          "hash": "fi5rZn8KB2qMp03BVzOVkQ=="
         }
       },
       "is_incremental": false,
@@ -1254,7 +1698,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.TealValue.html",
-          "hash": "3LTLbX3ucb/eOJPfctFy8w=="
+          "hash": "QF/9Kbc7ip325ghaWOmQgA=="
         }
       },
       "is_incremental": false,
@@ -1266,7 +1710,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.TransactionParametersResponse.html",
-          "hash": "YcpNJOh5uks6XHN1G8TSvg=="
+          "hash": "+8ZAVXwcuolboLRuigmjyQ=="
         }
       },
       "is_incremental": false,
@@ -1290,7 +1734,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.Version.html",
-          "hash": "UVHjpWbRincwxOuT+nvY0g=="
+          "hash": "D+216dY3a41dtLTO+DKkxQ=="
         }
       },
       "is_incremental": false,
@@ -1302,7 +1746,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.VersionsResponse.html",
-          "hash": "kKBOXWd2vqUOxjNTXJBjdg=="
+          "hash": "X9caoLHITP/PXXQlCPlhCg=="
         }
       },
       "is_incremental": false,
@@ -1314,7 +1758,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Algod.html",
-          "hash": "ceXFX0xdpxVV+uT2zuwVNA=="
+          "hash": "zfQm86DwGHuDe+GeqrXLvg=="
         }
       },
       "is_incremental": false,
@@ -1326,7 +1770,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.AlgodClient.html",
-          "hash": "vOXUBuWnwrSY4uKbBcXYKA=="
+          "hash": "ubSdxTuvzWiLOfPk5V3F5Q=="
         }
       },
       "is_incremental": false,
@@ -1794,7 +2238,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.CompiledTeal.html",
-          "hash": "agovB+RYrOmYU7F9vfExNw=="
+          "hash": "zKNBBrXqtSsWgWkl3UdcHg=="
         }
       },
       "is_incremental": false,
@@ -1831,18 +2275,6 @@
         ".html": {
           "relative_path": "api/Algorand.Unity.ContentTypeExtensions.html",
           "hash": "jI/+LAVmsrY5mFKa6Gp6oQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Algorand.Unity.ConversionExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Algorand.Unity.ConversionExtensions.html",
-          "hash": "7vpViTWWksqdrLcAuUKyyA=="
         }
       },
       "is_incremental": false,
@@ -3630,7 +4062,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.IAlgodClient.html",
-          "hash": "THevhtKHitisbMZ+orGDbw=="
+          "hash": "7hIJ2Zy6s+lPyERD0g/Cgw=="
         }
       },
       "is_incremental": false,
@@ -3810,7 +4242,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.IIndexerClient.html",
-          "hash": "Zek/Vlke8Kx302s4IJqwPw=="
+          "hash": "hl5WV+M3Lho6C/JUHOsoYg=="
         }
       },
       "is_incremental": false,
@@ -3978,7 +4410,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.Account.html",
-          "hash": "tS1KsQ49XJcPc4M8G3wLeg=="
+          "hash": "JqfI2YcUY0kkBDV2wKGqpQ=="
         }
       },
       "is_incremental": false,
@@ -3990,7 +4422,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.AccountParticipation.html",
-          "hash": "kLVO4sxx7AXiELONy1nZtA=="
+          "hash": "pAQPEPu1MZJsLIVC8jZrNA=="
         }
       },
       "is_incremental": false,
@@ -4002,7 +4434,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.AccountResponse.html",
-          "hash": "5SZYlCokyyU8sYL1l9K1Vw=="
+          "hash": "pRFptuWzikiHlvZHN9QWgw=="
         }
       },
       "is_incremental": false,
@@ -4014,7 +4446,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.AccountStateDelta.html",
-          "hash": "cBTJJEGHsZNVwRM83AYiSA=="
+          "hash": "R1uzztFqgVF60JJqDhCCpQ=="
         }
       },
       "is_incremental": false,
@@ -4026,7 +4458,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.AccountsResponse.html",
-          "hash": "jR7iMck76Ul0RkmT6eCFDg=="
+          "hash": "EUIhiTZR1LGqVIaexEKmVw=="
         }
       },
       "is_incremental": false,
@@ -4038,7 +4470,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.Application.html",
-          "hash": "2A9uSu83W3XCaY96fEGfKA=="
+          "hash": "stO7VJOwhx74OyLyCdJ3mA=="
         }
       },
       "is_incremental": false,
@@ -4050,7 +4482,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.ApplicationLocalState.html",
-          "hash": "xkGJY7ttW5eyL3+83vqXIg=="
+          "hash": "OCG/R5Ha1TEbnP7hq4jCMg=="
         }
       },
       "is_incremental": false,
@@ -4062,7 +4494,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.ApplicationLocalStatesResponse.html",
-          "hash": "Jx47QhAnrRPjSHXh+ZA3cQ=="
+          "hash": "ZJetKVAxBrrrWzML0/f/sw=="
         }
       },
       "is_incremental": false,
@@ -4074,7 +4506,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.ApplicationLogData.html",
-          "hash": "IEPj8SYM1yXrrOQVFdJ+8A=="
+          "hash": "/wlYORRZf65IdXFjOrjqtA=="
         }
       },
       "is_incremental": false,
@@ -4086,7 +4518,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.ApplicationLogsResponse.html",
-          "hash": "2h7ZA/DIrNwtXdhH/NdzDQ=="
+          "hash": "4RpqRw+uk0lr5h6YxsXXlg=="
         }
       },
       "is_incremental": false,
@@ -4098,7 +4530,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.ApplicationParams.html",
-          "hash": "hVdsEMjWjcx1HpYl26FGPA=="
+          "hash": "I/FGMezXcRNW4Ny9pH98MQ=="
         }
       },
       "is_incremental": false,
@@ -4110,7 +4542,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.ApplicationResponse.html",
-          "hash": "7clbRgh4+H+q84A9Xxyxug=="
+          "hash": "SLWY5fCTIC5KUavIj5PpzA=="
         }
       },
       "is_incremental": false,
@@ -4122,7 +4554,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.ApplicationStateSchema.html",
-          "hash": "5zNzpiGYhSi9eYBjUfLBQw=="
+          "hash": "Ic//TCkkUX7AOP1hLn9l+g=="
         }
       },
       "is_incremental": false,
@@ -4134,7 +4566,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.ApplicationsResponse.html",
-          "hash": "cOR7S8o+sXlog4psm4rEsw=="
+          "hash": "OKuBJXCnYZglUmrSRYipQA=="
         }
       },
       "is_incremental": false,
@@ -4146,7 +4578,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.Asset.html",
-          "hash": "AWqYd6sjixct1WoBu88V2w=="
+          "hash": "35Y2fmU7IoicGDa+rCsP9A=="
         }
       },
       "is_incremental": false,
@@ -4158,7 +4590,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.AssetBalancesResponse.html",
-          "hash": "l/zpe6eQeuGBjbZJI9MtBg=="
+          "hash": "1WIB99fUzfsI8mlxQ9j11w=="
         }
       },
       "is_incremental": false,
@@ -4170,7 +4602,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.AssetHolding.html",
-          "hash": "9W6JD1VB31jOtFVVN10b0w=="
+          "hash": "cGpd0NFD0bT+75m18MKmKA=="
         }
       },
       "is_incremental": false,
@@ -4182,7 +4614,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.AssetHoldingsResponse.html",
-          "hash": "kBXYWkczf0A8gCTq0TjR1A=="
+          "hash": "GuYAsKEbg1D165qBfCGM1w=="
         }
       },
       "is_incremental": false,
@@ -4194,7 +4626,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.AssetParams.html",
-          "hash": "If3FiQysZIPFc3gwimHUvQ=="
+          "hash": "byjfbV/2WnO73WW7nX2myg=="
         }
       },
       "is_incremental": false,
@@ -4206,7 +4638,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.AssetResponse.html",
-          "hash": "2GhZ4L58XI60+nofFQOzqA=="
+          "hash": "5Asy6aZWF16yhgt3+g+BaQ=="
         }
       },
       "is_incremental": false,
@@ -4218,7 +4650,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.AssetsResponse.html",
-          "hash": "RRx7WNTxRvVpItRzOm1rqg=="
+          "hash": "FwWK9oPy6ahn8GnA3NRq9g=="
         }
       },
       "is_incremental": false,
@@ -4230,7 +4662,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.Block.html",
-          "hash": "leprB+AfJeWW5REnyFFSfw=="
+          "hash": "8NZOM55yRxEBcc5Fr21gFQ=="
         }
       },
       "is_incremental": false,
@@ -4242,7 +4674,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.BlockResponse.html",
-          "hash": "Osr0sgyy0sT/tM+G5EHOvQ=="
+          "hash": "mkC6M6v8d2K0soUbeIsvCw=="
         }
       },
       "is_incremental": false,
@@ -4254,7 +4686,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.BlockRewards.html",
-          "hash": "FSKAaA5wd5B94jV51aK1fw=="
+          "hash": "RLXYXKeOO5L6Xewmzgp/iQ=="
         }
       },
       "is_incremental": false,
@@ -4266,7 +4698,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.BlockUpgradeState.html",
-          "hash": "5gHV+P2xCdg/gZElGBafvg=="
+          "hash": "KJVJgNd/j0UsCh9yH9HPGg=="
         }
       },
       "is_incremental": false,
@@ -4278,7 +4710,55 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.BlockUpgradeVote.html",
-          "hash": "LY8M3PYyG1Q7zN1Worc7mw=="
+          "hash": "FKovEBJJgY7hJaCkgNY9OA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Box.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Box.html",
+          "hash": "RP0Wwb+FNqxgwAbkKRhu1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.BoxDescriptor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.BoxDescriptor.html",
+          "hash": "gOKFqyZL0RsTntmhEHLizw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.BoxResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.BoxResponse.html",
+          "hash": "1SotRmSO5xnXp04X4Z1ndA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.BoxesResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.BoxesResponse.html",
+          "hash": "N5XyEZtBmD47b6w2LcEIqQ=="
         }
       },
       "is_incremental": false,
@@ -4290,7 +4770,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.EvalDelta.html",
-          "hash": "HUZB2uDcKkSpPvjL1aBHww=="
+          "hash": "cUpdFAGQ5bw7zh/++mZXOA=="
         }
       },
       "is_incremental": false,
@@ -4302,7 +4782,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.EvalDeltaKeyValue.html",
-          "hash": "4y1Uv4EJPPyyZb0q9uvIzA=="
+          "hash": "0n4ApmiNVN3wg8wyzrwIEg=="
         }
       },
       "is_incremental": false,
@@ -4326,7 +4806,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.HealthCheck.html",
-          "hash": "fFBCO20A5ibhQybXVHwmNQ=="
+          "hash": "O+AgJDv6VvKSUoiWeOFF8Q=="
         }
       },
       "is_incremental": false,
@@ -4338,7 +4818,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.HealthCheckResponse.html",
-          "hash": "+K4wS/8n5Z4KSVm6TTxGsQ=="
+          "hash": "6yinlkUDcyTgtOfYVoEfhQ=="
         }
       },
       "is_incremental": false,
@@ -4374,7 +4854,559 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.MiniAssetHolding.html",
-          "hash": "BqjugIKJiaPbm3iZ8wCRXw=="
+          "hash": "c1tqxsYpWUQR54plimqSgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.AccountExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.AccountExtensions.html",
+          "hash": "P7UjLJDx1vWRE0f7Re4emQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.AccountParticipationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.AccountParticipationExtensions.html",
+          "hash": "y9au0qZr+D/uBuAuLdHMig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.AccountResponseExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.AccountResponseExtensions.html",
+          "hash": "8WbnbRZJAiZnVx0gR6uVUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.AccountStateDeltaExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.AccountStateDeltaExtensions.html",
+          "hash": "epjq6OXHYYlshod4jlkugw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.AccountsResponseExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.AccountsResponseExtensions.html",
+          "hash": "6yCEGqey28i0850opmRTSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.ApplicationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.ApplicationExtensions.html",
+          "hash": "609DscKjoMaRXM+Z7vQerQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.ApplicationLocalStateExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.ApplicationLocalStateExtensions.html",
+          "hash": "dQxtuUfjwfyN/etE2ofeNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.ApplicationLocalStatesResponseExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.ApplicationLocalStatesResponseExtensions.html",
+          "hash": "NCtqWmvinCVF/EFf7ttfzQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.ApplicationLogDataExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.ApplicationLogDataExtensions.html",
+          "hash": "LQFCg9GGDontmgHF+DAlMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.ApplicationLogsResponseExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.ApplicationLogsResponseExtensions.html",
+          "hash": "VTQ3hgZDsAnOfLluuodCYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.ApplicationParamsExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.ApplicationParamsExtensions.html",
+          "hash": "2VAHoO6x/GRw7v3UKvhTHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.ApplicationResponseExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.ApplicationResponseExtensions.html",
+          "hash": "9WdmVQTFK28fCbKEzmZiBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.ApplicationStateSchemaExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.ApplicationStateSchemaExtensions.html",
+          "hash": "RBAUFQxHg0+opzPH0SjtnA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.ApplicationsResponseExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.ApplicationsResponseExtensions.html",
+          "hash": "/aL0+LRLZkyY04BowEDzVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.AssetBalancesResponseExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.AssetBalancesResponseExtensions.html",
+          "hash": "4eMIl7jYB8btvr9KiPEExg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.AssetExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.AssetExtensions.html",
+          "hash": "5FzbE7suMjDmgmVmAYlx4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.AssetHoldingExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.AssetHoldingExtensions.html",
+          "hash": "8TuhhraoD3otPN/o8OsUsQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.AssetHoldingsResponseExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.AssetHoldingsResponseExtensions.html",
+          "hash": "QZa5HMAceSvNWZtWldWqJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.AssetParamsExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.AssetParamsExtensions.html",
+          "hash": "i9CD434c7xhzsnmWACA7Rg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.AssetResponseExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.AssetResponseExtensions.html",
+          "hash": "/9xWHTqJDDJTs98qHagndg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.AssetsResponseExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.AssetsResponseExtensions.html",
+          "hash": "V9/IFhgmXdTUlt07YsKhMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.BlockExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.BlockExtensions.html",
+          "hash": "9M57k8caVVfi/q3QAnbokA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.BlockRewardsExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.BlockRewardsExtensions.html",
+          "hash": "WdeGGpUSby9V+Xn0v2T8oQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.BlockUpgradeStateExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.BlockUpgradeStateExtensions.html",
+          "hash": "O/CTdwmJDHH6fl8sReMdSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.BlockUpgradeVoteExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.BlockUpgradeVoteExtensions.html",
+          "hash": "uBhzIXYyJdQ6OX3KM9f4+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.EvalDeltaExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.EvalDeltaExtensions.html",
+          "hash": "8bqAlvl9K6K93zG3ebfYxw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.EvalDeltaKeyValueExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.EvalDeltaKeyValueExtensions.html",
+          "hash": "/qdd2lAt0vibSevlF2rSTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.HealthCheckExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.HealthCheckExtensions.html",
+          "hash": "jnTRrS4OiB/8EmepV/3Wgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.MiniAssetHoldingExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.MiniAssetHoldingExtensions.html",
+          "hash": "M9uvtROxqnts+DygGBdxfQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.StateSchemaExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.StateSchemaExtensions.html",
+          "hash": "jfvZYEWcvVkAiqYrVl0Zzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.TealKeyValueExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.TealKeyValueExtensions.html",
+          "hash": "DaUNNSmPelRtB5bcT+cEoA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.TealValueExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.TealValueExtensions.html",
+          "hash": "U/T8DwmTPQnaP5yBG0r2pQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.TransactionApplicationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.TransactionApplicationExtensions.html",
+          "hash": "B+hcz44+YG/gyWrTPWMtSQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.TransactionAssetConfigExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.TransactionAssetConfigExtensions.html",
+          "hash": "Z6IRxIdH6tWP9AXx1HAleA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.TransactionAssetFreezeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.TransactionAssetFreezeExtensions.html",
+          "hash": "sgRgxVQjuEFJShgNPLw7CQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.TransactionAssetTransferExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.TransactionAssetTransferExtensions.html",
+          "hash": "Gx2XCUIiTPiw4DLbd7sutg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.TransactionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.TransactionExtensions.html",
+          "hash": "DzcWrAcXVuncXh+WeXMRtQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.TransactionKeyregExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.TransactionKeyregExtensions.html",
+          "hash": "Knu6mEzHP+pcxEnCBHdKmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.TransactionPaymentExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.TransactionPaymentExtensions.html",
+          "hash": "NMtb3/5p9pg+D2nE3typrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.TransactionResponseExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.TransactionResponseExtensions.html",
+          "hash": "J9C4ciWeQs4UTd0XouVAEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.TransactionSignatureExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.TransactionSignatureExtensions.html",
+          "hash": "S+VT1jEB5WvGuiqAqnw8ZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.TransactionSignatureLogicsigExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.TransactionSignatureLogicsigExtensions.html",
+          "hash": "4AF+1gO3d+k6X9z0GShqmg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.TransactionSignatureMultisigExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.TransactionSignatureMultisigExtensions.html",
+          "hash": "VaW3cYyTH6ft8Y4ldGGKKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.TransactionSignatureMultisigSubsignatureExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.TransactionSignatureMultisigSubsignatureExtensions.html",
+          "hash": "LPSGREAxoBoH2ZKQ+pbumg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.TransactionsResponseExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.TransactionsResponseExtensions.html",
+          "hash": "o2/R6UmfrnQStVls6DneSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Indexer.Net.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Indexer.Net.html",
+          "hash": "p2gAn19mSYAu7pD8N2AEdw=="
         }
       },
       "is_incremental": false,
@@ -4398,7 +5430,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.StateDelta.html",
-          "hash": "mGQ18vaAlGk0Du1M6qfgHQ=="
+          "hash": "+LiH7dbcw0F/AMVtLH57mQ=="
         }
       },
       "is_incremental": false,
@@ -4494,7 +5526,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.StateSchema.html",
-          "hash": "ItDeSBX7psij1UzSOzDYQw=="
+          "hash": "KiDg3SzdmPxU1ki9UCBuEA=="
         }
       },
       "is_incremental": false,
@@ -4506,7 +5538,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.TealKeyValue.html",
-          "hash": "g0IyQO89AvoTmp5pdbUl9g=="
+          "hash": "bZnJR96YfaytJcHcsyD9hw=="
         }
       },
       "is_incremental": false,
@@ -4518,7 +5550,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.TealKeyValueStore.html",
-          "hash": "VRUw8XRZTBI7gWPyUdGb7A=="
+          "hash": "PPb6c8t+nOyu6rNAYrJ0zQ=="
         }
       },
       "is_incremental": false,
@@ -4530,7 +5562,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.TealValue.html",
-          "hash": "nEToQeCvkb4XesVgKtvnxA=="
+          "hash": "fmoUcdJ+lPMNvjeILWTWlw=="
         }
       },
       "is_incremental": false,
@@ -4542,7 +5574,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.Transaction.html",
-          "hash": "ogF1DWSXxaajnGzGZpf6jw=="
+          "hash": "6sRDIZFoE/cFM2eF1XkeMg=="
         }
       },
       "is_incremental": false,
@@ -4554,7 +5586,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.TransactionApplication.html",
-          "hash": "KeB3in3FVkN9HCn0clmh7A=="
+          "hash": "8UvcqipZstBjl4OaLdjb5A=="
         }
       },
       "is_incremental": false,
@@ -4566,7 +5598,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.TransactionAssetConfig.html",
-          "hash": "8iHUjkSOYCHtNCkNkiwHyQ=="
+          "hash": "ORqgExsRFPXowvJUN0XsMw=="
         }
       },
       "is_incremental": false,
@@ -4578,7 +5610,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.TransactionAssetFreeze.html",
-          "hash": "M8dLjMrSETJ/OcEnu/2E8w=="
+          "hash": "Duv4IdHKfGPnA8b3xczH1w=="
         }
       },
       "is_incremental": false,
@@ -4590,7 +5622,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.TransactionAssetTransfer.html",
-          "hash": "ob/qUMuSN4Xp9GIq0vbzfg=="
+          "hash": "BhW0+I17ZE3hvzT+KuLNvA=="
         }
       },
       "is_incremental": false,
@@ -4602,7 +5634,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.TransactionKeyreg.html",
-          "hash": "hE3QrvcWlA4dDVNAsQQi0A=="
+          "hash": "016FapctsPgff7R2TY0l4A=="
         }
       },
       "is_incremental": false,
@@ -4614,7 +5646,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.TransactionPayment.html",
-          "hash": "QxYwMGT5pLZ6WrC8QJ7Y/Q=="
+          "hash": "ZNsiL1upqixJVbxYx5bH4A=="
         }
       },
       "is_incremental": false,
@@ -4626,7 +5658,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.TransactionResponse.html",
-          "hash": "5cl/SeuDJF3cm+Q8MfJbLg=="
+          "hash": "9qSkwa+sYqZRnrDilYPtFA=="
         }
       },
       "is_incremental": false,
@@ -4638,7 +5670,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.TransactionSignature.html",
-          "hash": "SYep0F79YxLDiKFCGtOXXg=="
+          "hash": "+tKo3iaIRsse711QgqVwcw=="
         }
       },
       "is_incremental": false,
@@ -4650,7 +5682,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.TransactionSignatureLogicsig.html",
-          "hash": "dTMICVSY1r/w9eXkV3OQ7A=="
+          "hash": "3oPoDxzTHPHvy7A5RG9xzg=="
         }
       },
       "is_incremental": false,
@@ -4662,7 +5694,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.TransactionSignatureMultisig.html",
-          "hash": "5sHZsZDPxQyNJrUmL/vzeg=="
+          "hash": "SP07DgBQn3hZ7P2Wv000Vg=="
         }
       },
       "is_incremental": false,
@@ -4674,7 +5706,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.TransactionSignatureMultisigSubsignature.html",
-          "hash": "muZXx1bolK9lHwHPykXu4Q=="
+          "hash": "1vosQ3JiPM7e01/NYk0JHw=="
         }
       },
       "is_incremental": false,
@@ -4698,7 +5730,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.TransactionsResponse.html",
-          "hash": "1AgTh5aGnby9McWbbNngSw=="
+          "hash": "7VPKBY6ZvbodGhXbIjM7YA=="
         }
       },
       "is_incremental": false,
@@ -4710,7 +5742,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Indexer.html",
-          "hash": "ZlK3HkRvArrmJAt/QrQEAg=="
+          "hash": "kxgvNgr/7RQ/N4MFZmczSA=="
         }
       },
       "is_incremental": false,
@@ -4722,7 +5754,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.IndexerClient.html",
-          "hash": "LYKnV+9Brkxo/lrdE1U5gQ=="
+          "hash": "U7XbRsdePk9RyuaR12uvgw=="
         }
       },
       "is_incremental": false,
@@ -5846,18 +6878,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Algorand.Unity.MsgPackConvert-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Algorand.Unity.MsgPackConvert-1.html",
-          "hash": "BOhenjIOcCXEdYIad35RkA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Algorand.Unity.MultisigSig.Subsig.yml",
       "output": {
         ".html": {
@@ -5875,6 +6895,126 @@
         ".html": {
           "relative_path": "api/Algorand.Unity.MultisigSig.html",
           "hash": "M7cpJlp0znoLLhcFkCEiJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Net.AddressExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Net.AddressExtensions.html",
+          "hash": "xTAzux3jKNi0KILpZ5bnsA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Net.AlgoApiClientExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Net.AlgoApiClientExtensions.html",
+          "hash": "5omzuxfp1JXJ85KptXrMpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Net.AlgodClientExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Net.AlgodClientExtensions.html",
+          "hash": "+YPGzGz3DUO9xn+BywzOGQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Net.CompiledTealExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Net.CompiledTealExtensions.html",
+          "hash": "6ikha82kLr9GAGTeHKuBkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Net.ConversionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Net.ConversionExtensions.html",
+          "hash": "iLzK3tuE9w8Q5b+DD8zv2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Net.IndexerClientExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Net.IndexerClientExtensions.html",
+          "hash": "X2O9FDCzlSTElJ5X3zy4ug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Net.MsgPackConvert-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Net.MsgPackConvert-1.html",
+          "hash": "YH9VbsjRySjs4xQbXGh85g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Net.UnityHttpClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Net.UnityHttpClient.html",
+          "hash": "EtLJrV3YbSBj84bM6QrGJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Net.UnityHttpMessageHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Net.UnityHttpMessageHandler.html",
+          "hash": "3JA+tKgWKaKHczZuOKRSSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Net.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Net.html",
+          "hash": "R0l12rr4LIkEtOBHfXZvZQ=="
         }
       },
       "is_incremental": false,
@@ -6222,7 +7362,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.TokenizedClientExtensions.html",
-          "hash": "kAo+k9j6aVcAaU1FcSVorQ=="
+          "hash": "o5qG/X7NZIP1bpeoagpInQ=="
         }
       },
       "is_incremental": false,
@@ -6379,30 +7519,6 @@
         ".html": {
           "relative_path": "api/Algorand.Unity.TxnIndices.html",
           "hash": "pZH3UXZ2dGvO1V2w3wqPzg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Algorand.Unity.UnityHttpClient.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Algorand.Unity.UnityHttpClient.html",
-          "hash": "7g6dnzzYV5ifpx1CCcwUPg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Algorand.Unity.UnityHttpMessageHandler.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Algorand.Unity.UnityHttpMessageHandler.html",
-          "hash": "ZqHvpEWcGp+NyUED27zahg=="
         }
       },
       "is_incremental": false,
@@ -7062,7 +8178,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.html",
-          "hash": "9q20l7vpTfLbMlfeW+QEUA=="
+          "hash": "65IVDmzvZ2T4rSKda/+nug=="
         }
       },
       "is_incremental": false,
@@ -7074,7 +8190,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "SqkM3NDKQYvns/Ojxd78Xw=="
+          "hash": "sx3Gh49ahpqYuGAmmfQmwQ=="
         }
       },
       "is_incremental": false,
@@ -7183,7 +8299,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 568,
+          "total_file_count": 661,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

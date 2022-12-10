@@ -593,6 +593,58 @@
 </div>
   
   
+  <a id="Algorand_Unity_IIndexerClient_LookupApplicationBoxByIDAndName_" data-uid="Algorand.Unity.IIndexerClient.LookupApplicationBoxByIDAndName*"></a>
+  <h4 id="Algorand_Unity_IIndexerClient_LookupApplicationBoxByIDAndName_System_UInt64_System_String_" data-uid="Algorand.Unity.IIndexerClient.LookupApplicationBoxByIDAndName(System.UInt64,System.String)">LookupApplicationBoxByIDAndName(UInt64, String)</h4>
+  <div class="markdown level1 summary"><p>Get box information for a given application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;BoxResponse&gt; LookupApplicationBoxByIDAndName(ulong applicationId, string boxName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">boxName</span></td>
+        <td><p>A box name in goal-arg form &apos;encoding:value&apos;. For ints, use the form &apos;int:1234&apos;. For raw bytes, use the form &apos;b64:A==&apos;. For printable strings, use the form &apos;str:hello&apos;. For addresses, use the form &apos;addr:XYZ...&apos;.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">BoxResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_IIndexerClient_LookupApplicationBoxByIDAndName_System_UInt64_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Given an application ID and box name, returns base64 encoded box name and value. Box names must be in the goal app call arg form &apos;encoding:value&apos;. For ints, use the form &apos;int:1234&apos;. For raw bytes, encode base 64 and use &apos;b64&apos; prefix as in &apos;b64:A==&apos;. For printable strings, use the form &apos;str:hello&apos;. For addresses, use the form &apos;addr:XYZ...&apos;.</p>
+</div>
+  
+  
   <a id="Algorand_Unity_IIndexerClient_LookupApplicationByID_" data-uid="Algorand.Unity.IIndexerClient.LookupApplicationByID*"></a>
   <h4 id="Algorand_Unity_IIndexerClient_LookupApplicationByID_System_UInt64_Algorand_Unity_Optional_System_Boolean__" data-uid="Algorand.Unity.IIndexerClient.LookupApplicationByID(System.UInt64,Algorand.Unity.Optional{System.Boolean})">LookupApplicationByID(UInt64, Optional&lt;Boolean&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -1222,6 +1274,64 @@
   </table>
   <h5 id="Algorand_Unity_IIndexerClient_SearchForAccounts_System_String_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_ExcludeAccountFields_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_Boolean___remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Search for accounts.</p>
+</div>
+  
+  
+  <a id="Algorand_Unity_IIndexerClient_SearchForApplicationBoxes_" data-uid="Algorand.Unity.IIndexerClient.SearchForApplicationBoxes*"></a>
+  <h4 id="Algorand_Unity_IIndexerClient_SearchForApplicationBoxes_System_UInt64_Algorand_Unity_Optional_System_UInt64__System_String_" data-uid="Algorand.Unity.IIndexerClient.SearchForApplicationBoxes(System.UInt64,Algorand.Unity.Optional{System.UInt64},System.String)">SearchForApplicationBoxes(UInt64, Optional&lt;UInt64&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Get box names for a given application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;BoxesResponse&gt; SearchForApplicationBoxes(ulong applicationId, Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), string next = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">limit</span></td>
+        <td><p>Maximum number of results to return. There could be additional pages even if the limit is not reached.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">next</span></td>
+        <td><p>The next page of results. Use the next token provided by the previous results.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">BoxesResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_IIndexerClient_SearchForApplicationBoxes_System_UInt64_Algorand_Unity_Optional_System_UInt64__System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Given an application ID, returns the box names of that application sorted lexicographically.</p>
 </div>
   
   

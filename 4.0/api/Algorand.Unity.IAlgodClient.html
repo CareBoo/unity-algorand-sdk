@@ -475,6 +475,112 @@
 </div>
   
   
+  <a id="Algorand_Unity_IAlgodClient_GetApplicationBoxByName_" data-uid="Algorand.Unity.IAlgodClient.GetApplicationBoxByName*"></a>
+  <h4 id="Algorand_Unity_IAlgodClient_GetApplicationBoxByName_System_UInt64_System_String_" data-uid="Algorand.Unity.IAlgodClient.GetApplicationBoxByName(System.UInt64,System.String)">GetApplicationBoxByName(UInt64, String)</h4>
+  <div class="markdown level1 summary"><p>Get box information for a given application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;BoxResponse&gt; GetApplicationBoxByName(ulong applicationId, string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td><p>An application identifier</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>A box name, in the goal app call arg form &apos;encoding:value&apos;. For ints, use the form &apos;int:1234&apos;. For raw bytes, use the form &apos;b64:A==&apos;. For printable strings, use the form &apos;str:hello&apos;. For addresses, use the form &apos;addr:XYZ...&apos;.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">BoxResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_IAlgodClient_GetApplicationBoxByName_System_UInt64_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Given an application ID and box name, it returns the box name and value (each base64 encoded). Box names must be in the goal app call arg encoding form &apos;encoding:value&apos;. For ints, use the form &apos;int:1234&apos;. For raw bytes, use the form &apos;b64:A==&apos;. For printable strings, use the form &apos;str:hello&apos;. For addresses, use the form &apos;addr:XYZ...&apos;.</p>
+</div>
+  
+  
+  <a id="Algorand_Unity_IAlgodClient_GetApplicationBoxes_" data-uid="Algorand.Unity.IAlgodClient.GetApplicationBoxes*"></a>
+  <h4 id="Algorand_Unity_IAlgodClient_GetApplicationBoxes_System_UInt64_Algorand_Unity_Optional_System_UInt64__" data-uid="Algorand.Unity.IAlgodClient.GetApplicationBoxes(System.UInt64,Algorand.Unity.Optional{System.UInt64})">GetApplicationBoxes(UInt64, Optional&lt;UInt64&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get all box names for a given application.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AlgoApiRequest.Sent&lt;BoxesResponse&gt; GetApplicationBoxes(ulong applicationId, Optional&lt;ulong&gt; max = default(Optional&lt;ulong&gt;))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="parametername">applicationId</span></td>
+        <td><p>An application identifier</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">max</span></td>
+        <td><p>Max number of box names to return. If max is not set, or max == 0, returns all box-names.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">BoxesResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_IAlgodClient_GetApplicationBoxes_System_UInt64_Algorand_Unity_Optional_System_UInt64___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Given an application ID, return all Box names. No particular ordering is guaranteed. Request fails when client or server-side configured limits prevent returning all Box names.</p>
+</div>
+  
+  
   <a id="Algorand_Unity_IAlgodClient_GetApplicationByID_" data-uid="Algorand.Unity.IAlgodClient.GetApplicationByID*"></a>
   <h4 id="Algorand_Unity_IAlgodClient_GetApplicationByID_System_UInt64_" data-uid="Algorand.Unity.IAlgodClient.GetApplicationByID(System.UInt64)">GetApplicationByID(UInt64)</h4>
   <div class="markdown level1 summary"><p>Get application information.</p>

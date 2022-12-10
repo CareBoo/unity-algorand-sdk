@@ -78,17 +78,30 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="integration-with-the-net-sdk">Integration with the .NET SDK</h1>
 
-<p>This SDK embeds the latest <a href="https://github.com/FrankSzendzielarz/dotnet-algorand-sdk">.NET Algorand SDK</a> for usage with its models and classes. Most models and clients in the <code>Algorand.Unity.Algod</code> and <code>Algorand.Unity.Indexer</code> namespace have explicit conversions to corresponding models and apis in the <code>Algorand.Algod</code> and <code>Algorand.Indexer</code> namespaces.</p>
-<div class="WARNING"><h5>Warning</h5><p>Using .NET SDK client types and signing methods are not supported for the WebGL build target.</p>
+<p>This SDK embeds the latest <a href="https://github.com/FrankSzendzielarz/dotnet-algorand-sdk">.NET Algorand SDK</a> for usage with its models and classes. Most models and clients in the <code>Algorand.Unity.Algod</code> and <code>Algorand.Unity.Indexer</code> namespace have <code>ToUnity</code> and <code>ToDotnet</code> extension methods implemented in the <code>Algorand.Unity.Net</code> assembly.</p>
+<h2 id="requirements">Requirements</h2>
+<ol>
+<li>Your scripts must exist under an Assembly Definition that references the <code>Algorand_1.0.0.14.dll</code> assembly and the <code>Algorand.Unity</code> and <code>Algorand.Unity.Net</code> assembly definitions.</li>
+<li>Enable the extension methods with</li>
+</ol>
+<pre><code class="lang-csharp">using Algorand.Unity.Net;
+</code></pre><div class="WARNING"><h5>Warning</h5><p>Using .NET SDK client types and signing methods are not supported for the WebGL build target. Because of this, the <code>Algorand.Unity.Net</code> assembly won&#39;t compile for the WebGL build target.</p>
 </div>
-<p>For example, you can convert <code>Algorand.Unity.AlgodClient</code> to <code>Algorand.Algod.DefaultApi</code>:</p>
-<pre><code class="lang-csharp">var sandboxAlgodClient = new Algorand.Unity.AlgodClient(
+<h2 id="examples">Examples</h2>
+<h3 id="algorandunityalgodclient-to-algorandalgoddefaultapi"><code>Algorand.Unity.AlgodClient</code> to <code>Algorand.Algod.DefaultApi</code>:</h3>
+<pre><code class="lang-csharp">Algorand.Unity.AlgodClient sandboxAlgodClient = new Algorand.Unity.AlgodClient(
     &quot;http://localhost:4001&quot;,
     &quot;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&quot;);
-var sandboxAlgodDefaultApi = sandboxAlgodClient.ToDefaultApi();
-</code></pre><p>or convert <code>Algorand.Unity.IndexerClient</code> to <code>Algorand.Indexer.LookupApi</code>:</p>
-<pre><code class="lang-csharp">var sandboxIndexerClient = new Algorand.Unity.IndexerClient(&quot;http://localhost:8980&quot;);
-var sandboxIndexerLookupApi = sandboxIndexerClient.ToLookupApi();
+Algorand.Algod.DefaultApi sandboxAlgodDefaultApi = sandboxAlgodClient.ToDefaultApi();
+</code></pre><h3 id="algorandunityindexerclient-to-algorandindexerlookupapi"><code>Algorand.Unity.IndexerClient</code> to <code>Algorand.Indexer.LookupApi</code>:</h3>
+<pre><code class="lang-csharp">Algorand.Unity.IndexerClient sandboxIndexerClient = new Algorand.Unity.IndexerClient(&quot;http://localhost:8980&quot;);
+Algorand.Indexer.LookupApi sandboxIndexerLookupApi = sandboxIndexerClient.ToLookupApi();
+</code></pre><h3 id="algorandunityaddress-to-algorandaddress-read-only"><code>Algorand.Unity.Address</code> to <code>Algorand.Address</code> (Read-Only)</h3>
+<pre><code class="lang-csharp">Algorand.Unity.Address myAddress = Algorand.Unity.Address.FromString(&quot;VHHZTDDT3GEPZ4LXCDHGBGFFJEGIKJLBFGXKQIDD6XK26P5B7ZWY5EFCNE&quot;);
+Algorand.Address dotnetAddress = myAddress.ToDotnet();
+</code></pre><h3 id="algorandtealprogram-to-algorandunitycompiledteal"><code>Algorand.TEALProgram</code> to <code>Algorand.Unity.CompiledTeal</code></h3>
+<pre><code class="lang-csharp">TEALProgram teal = new TEALProgram(new byte[] {/* ... */ });
+CompiledTeal unityTeal = teal.ToUnity();
 </code></pre></article>
           </div>
           
