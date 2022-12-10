@@ -1,8 +1,8 @@
 #if UNITY_WEBGL && !UNITY_EDITOR
 using System;
 using System.Collections.Generic;
+using System.Net.WebSockets;
 using System.Runtime.InteropServices;
-using WebSocketSharp;
 
 namespace Algorand.Unity.WebSocket
 {
@@ -14,7 +14,7 @@ namespace Algorand.Unity.WebSocket
         internal static extern void _Connect();
 
         [DllImport("__Internal")]
-        internal static extern void _Close(CloseStatusCode code = CloseStatusCode.Normal, string reason = null);
+        internal static extern void _Close(WebSocketCloseStatus code = WebSocketCloseStatus.NormalClosure, string reason = null);
 
         [DllImport("__Internal")]
         internal static extern void _Send(byte[] data, int offset, int count);
@@ -31,7 +31,7 @@ namespace Algorand.Unity.WebSocket
             _Connect();
         }
 
-        public void Close(CloseStatusCode code = CloseStatusCode.Normal, string reason = null)
+        public void Close(WebSocketCloseStatus code = WebSocketCloseStatus.NormalClosure, string reason = null)
         {
             _Close(code, reason);
         }
@@ -49,7 +49,7 @@ namespace Algorand.Unity.WebSocket
             }
             else
             {
-                return new WebSocketEvent()
+                return new WebSocketEvent
                 {
                     ClientId = 0,
                     Payload = null,
@@ -62,7 +62,7 @@ namespace Algorand.Unity.WebSocket
 
         public void OnOpen()
         {
-            EventQueue.Enqueue(new WebSocketEvent()
+            EventQueue.Enqueue(new WebSocketEvent
             {
                 ClientId = 0,
                 Payload = null,
@@ -74,7 +74,7 @@ namespace Algorand.Unity.WebSocket
 
         public void OnMessage(ArraySegment<byte> data)
         {
-            EventQueue.Enqueue(new WebSocketEvent()
+            EventQueue.Enqueue(new WebSocketEvent
             {
                 ClientId = 0,
                 Payload = data.Array,
@@ -86,7 +86,7 @@ namespace Algorand.Unity.WebSocket
 
         public void OnError(string error)
         {
-            EventQueue.Enqueue(new WebSocketEvent()
+            EventQueue.Enqueue(new WebSocketEvent
             {
                 ClientId = 0,
                 Payload = null,
@@ -96,15 +96,15 @@ namespace Algorand.Unity.WebSocket
             });
         }
 
-        public void OnClose(CloseStatusCode code)
+        public void OnClose(WebSocketCloseStatus code)
         {
-            EventQueue.Enqueue(new WebSocketEvent()
+            EventQueue.Enqueue(new WebSocketEvent
             {
                 ClientId = 0,
                 Payload = null,
                 Type = WebSocketEvent.WebSocketEventType.Close,
                 Error = null,
-                Reason = null
+                Reason = code.ToString()
             });
         }
     }

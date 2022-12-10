@@ -1,7 +1,6 @@
 using Algorand.Unity;
 using Algorand.Unity.WalletConnect;
 using Cysharp.Threading.Tasks;
-using Unity.Collections;
 using UnityEngine;
 
 public class WalletConnectManager : MonoBehaviour
@@ -97,7 +96,9 @@ public class WalletConnectManager : MonoBehaviour
     private async UniTaskVoid StartWalletConnect()
     {
         account = new WalletConnectAccount { DappMeta = DappMeta, BridgeUrl = BridgeUrl };
+        Debug.Log($"Beginning session. Status: {account}");
         await account.BeginSession();
+        Debug.Log("Session began. Requesting Wallet Connection");
         handshake = account.RequestWalletConnection();
         qrCode = handshake.ToQrCodeTexture();
 

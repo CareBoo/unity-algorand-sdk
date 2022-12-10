@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using WebSocketSharp;
+using System.Net.WebSockets;
 
 namespace Algorand.Unity.WebSocket
 {
@@ -8,11 +8,10 @@ namespace Algorand.Unity.WebSocket
     {
         Queue<WebSocketEvent> EventQueue { get; }
 
-        ulong WaitTime { get; }
         WebSocketState ReadyState { get; }
 
         void Connect();
-        void Close(CloseStatusCode code = CloseStatusCode.Normal, string reason = null);
+        void Close(WebSocketCloseStatus code = WebSocketCloseStatus.NormalClosure, string reason = null);
         void Send(ArraySegment<byte> data);
         WebSocketEvent Poll();
     }
