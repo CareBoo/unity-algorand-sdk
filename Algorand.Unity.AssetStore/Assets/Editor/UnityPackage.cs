@@ -5,9 +5,7 @@ public static class UnityPackage
 {
     const string packageName = "unity-algorand-sdk";
 
-    static readonly ExportPackageOptions exportOptions = ExportPackageOptions.Recurse
-        | ExportPackageOptions.IncludeDependencies
-        ;
+    static readonly ExportPackageOptions exportOptions = ExportPackageOptions.Recurse;
 
 
     [MenuItem("Algorand.Unity/Package")]
