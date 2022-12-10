@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [4.0.0-pre.10](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.9...v4.0.0-pre.10) (2022-12-10)
+
+
+### Bug Fixes
+
+* **webgl:** use `NativeWebSocketClient` in editor ([5188e5f](https://github.com/CareBoo/unity-algorand-sdk/commit/5188e5fd633d9eaed29d801715ef634667331eb9)), closes [#170](https://github.com/CareBoo/unity-algorand-sdk/issues/170)
+
 # [4.0.0-pre.9](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.8...v4.0.0-pre.9) (2022-11-26)
 
 
