@@ -151,7 +151,7 @@ required for this package. See [Unity's official documentation on Scoped Registr
 
 ### Unity Asset Store
 
-The SDK is also available [in the Unity Asset Store](https://u3d.as/2GBr).
+Coming Soon!
 
 ## Getting Started
 

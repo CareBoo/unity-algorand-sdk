@@ -54,8 +54,12 @@ namespace Algorand.Unity.WalletConnect
         {
             if (beginningSession)
             {
-                await UniTask.WaitWhile(() => beginningSession);
-                return;
+                while (beginningSession)
+                {
+                    await UniTask.Yield();
+                    await UniTask.NextFrame();
+                    return;
+                }
             }
             beginningSession = true;
             try

@@ -1,8 +1,8 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using WebSocketSharp;
+using System.Net.WebSockets;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 
 namespace Algorand.Unity.WebSocket
 {
@@ -10,50 +10,33 @@ namespace Algorand.Unity.WebSocket
     {
         private static readonly object ConnectionLock = new object();
 
-        private WebSocketSharp.WebSocket Connection = null;
+        private ClientWebSocket Connection;
+        private readonly Uri uri;
         public Queue<WebSocketEvent> EventQueue { get; } = new Queue<WebSocketEvent>();
 
-        public ulong WaitTime
-        {
-            get
-            {
-                return (ulong)Connection.WaitTime.Milliseconds;
-            }
-        }
-
-        public WebSocketState ReadyState
-        {
-            get
-            {
-                return Connection?.ReadyState ?? WebSocketState.Closed;
-            }
-        }
+        public WebSocketState ReadyState => Connection?.State ?? WebSocketState.Closed;
 
         public NativeWebSocketClient(string url)
         {
-            Connection = new WebSocketSharp.WebSocket(url);
-
-            Connection.OnOpen += OnOpen;
-            Connection.OnMessage += OnMessage;
-            Connection.OnError += OnError;
-            Connection.OnClose += OnClose;
+            uri = new Uri(url);
+            Connection = new ClientWebSocket();
         }
 
         public void Connect()
         {
-            if (ReadyState == WebSocketSharp.WebSocketState.Open)
+            if (ReadyState == WebSocketState.Open)
             {
                 throw new InvalidOperationException("Socket is already open");
             }
 
-            if (ReadyState == WebSocketSharp.WebSocketState.Closing)
+            if (ReadyState == WebSocketState.CloseSent)
             {
                 throw new InvalidOperationException("Socket is closing");
             }
 
             try
             {
-                Connection.Connect();
+                ConnectAsync().Forget();
             }
             catch (Exception e)
             {
@@ -61,53 +44,82 @@ namespace Algorand.Unity.WebSocket
             }
         }
 
-        public void Close(CloseStatusCode code = CloseStatusCode.Normal, string reason = null)
+        private async UniTaskVoid ConnectAsync()
         {
-            if (ReadyState == WebSocketSharp.WebSocketState.Closing)
+            await Connection.ConnectAsync(uri, CancellationToken.None);
+            OnOpen();
+            var buffer = new byte[1024 * 4];
+            try
+            {
+                while (true)
+                {
+                    var result = await Connection.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
+                    if (Connection.CloseStatus.HasValue)
+                    {
+                        OnClose();
+                        break;
+                    }
+                    var payload = new byte[result.Count];
+                    for (var i = 0; i < payload.Length; i++)
+                    {
+                        payload[i] = buffer[i];
+                    }
+
+                    OnMessage(payload);
+                }
+            }
+            catch (Exception e)
+            {
+                OnError(e.Message);
+            }
+        }
+
+        public void Close(WebSocketCloseStatus code = WebSocketCloseStatus.NormalClosure, string reason = null)
+        {
+            if (ReadyState == WebSocketState.CloseSent)
             {
                 throw new InvalidOperationException("Socket is already closing");
             }
 
-            if (ReadyState == WebSocketSharp.WebSocketState.Closed)
+            if (ReadyState == WebSocketState.Closed)
             {
                 throw new InvalidOperationException("Socket is already closed");
             }
 
+            CloseAsync(code, reason).Forget();
+        }
+
+        private async UniTaskVoid CloseAsync(WebSocketCloseStatus code, string reason)
+        {
             try
             {
-                Connection.Close(code, reason);
+                await Connection.CloseAsync(code, reason, default);
             }
             catch (Exception e)
             {
-                throw new WebSocketException("Could not close socket", e);
+                OnError(e.Message);
             }
         }
 
         public void Send(ArraySegment<byte> data)
         {
-            if (ReadyState != WebSocketSharp.WebSocketState.Open)
+            if (ReadyState != WebSocketState.Open)
             {
                 throw new WebSocketException("Socket is not open");
             }
 
+            SendAsync(data).Forget();
+        }
+
+        private async UniTaskVoid SendAsync(ArraySegment<byte> data)
+        {
             try
             {
-                if (data.Offset > 0 || data.Count < data.Array.Length)
-                {
-                    // STA Websockets cant take offsets nor buffer lenghts.
-                    byte[] buf = new byte[data.Count];
-                    Buffer.BlockCopy(data.Array, data.Offset, buf, 0, data.Count);
-
-                    Connection.Send(buf);
-                }
-                else
-                {
-                    Connection.Send(data.Array);
-                }
+                await Connection.SendAsync(data, WebSocketMessageType.Binary, true, CancellationToken.None);
             }
             catch (Exception e)
             {
-                throw new WebSocketException("Unknown error while sending the message", e);
+                OnError(e.Message);
             }
         }
 
@@ -115,13 +127,9 @@ namespace Algorand.Unity.WebSocket
         {
             lock (ConnectionLock)
             {
-                if (EventQueue.Count > 0)
-                {
-                    return EventQueue.Dequeue();
-                }
-                else
-                {
-                    return new WebSocketEvent()
+                return EventQueue.Count > 0
+                    ? EventQueue.Dequeue()
+                    : new WebSocketEvent
                     {
                         ClientId = 0,
                         Payload = null,
@@ -129,15 +137,14 @@ namespace Algorand.Unity.WebSocket
                         Error = null,
                         Reason = null
                     };
-                }
             }
         }
 
-        public void OnOpen(object sender, EventArgs e)
+        private void OnOpen()
         {
             lock (ConnectionLock)
             {
-                EventQueue.Enqueue(new WebSocketEvent()
+                EventQueue.Enqueue(new WebSocketEvent
                 {
                     ClientId = 0,
                     Payload = null,
@@ -148,70 +155,49 @@ namespace Algorand.Unity.WebSocket
             }
         }
 
-        public void OnClose(object sender, CloseEventArgs e)
+        private void OnClose()
         {
             lock (ConnectionLock)
             {
-                var sslProtocolHack = (System.Security.Authentication.SslProtocols)(SslProtocolsHack.Tls12 | SslProtocolsHack.Tls11 | SslProtocolsHack.Tls);
-                //TlsHandshakeFailure
-                if (e.Code == 1015 && Connection.SslConfiguration.EnabledSslProtocols != sslProtocolHack)
+                EventQueue.Enqueue(new WebSocketEvent
                 {
-                    Connection.SslConfiguration.EnabledSslProtocols = sslProtocolHack;
-                    Connection.Connect();
-                }
-                else
-                {
-                    EventQueue.Enqueue(new WebSocketEvent()
-                    {
-                        ClientId = 0,
-                        Payload = null,
-                        Type = WebSocketEvent.WebSocketEventType.Close,
-                        Error = null,
-                        Reason = e.Reason
-                    });
-                }
+                    ClientId = 0,
+                    Payload = null,
+                    Type = WebSocketEvent.WebSocketEventType.Close,
+                    Error = null,
+                    Reason = Connection.CloseStatusDescription
+                });
             }
         }
 
-        public void OnError(object sender, ErrorEventArgs e)
+        private void OnError(string message)
         {
             lock (ConnectionLock)
             {
-                EventQueue.Enqueue(new WebSocketEvent()
+                EventQueue.Enqueue(new WebSocketEvent
                 {
                     ClientId = 0,
                     Payload = null,
                     Type = WebSocketEvent.WebSocketEventType.Error,
-                    Error = e.Message,
+                    Error = message,
                     Reason = null,
                 });
             }
         }
 
-        public void OnMessage(object sender, MessageEventArgs e)
+        private void OnMessage(byte[] payload)
         {
             lock (ConnectionLock)
             {
-                EventQueue.Enqueue(new WebSocketEvent()
+                EventQueue.Enqueue(new WebSocketEvent
                 {
                     ClientId = 0,
-                    Payload = e.RawData,
+                    Payload = payload,
                     Type = WebSocketEvent.WebSocketEventType.Payload,
                     Error = null,
                     Reason = null,
                 });
             }
-        }
-
-        /// <summary>
-        /// Used as a hack to fix an issue with TLS in websocket-sharp:
-        /// https://github.com/sta/websocket-sharp/issues/219
-        /// </summary>
-        private enum SslProtocolsHack
-        {
-            Tls = 192,
-            Tls11 = 768,
-            Tls12 = 3072
         }
     }
 }

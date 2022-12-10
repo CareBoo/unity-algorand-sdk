@@ -1,9 +1,9 @@
-#if UNITY_WEBGL
+#if UNITY_WEBGL && !UNITY_EDITOR
 using System;
-using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using System.Net.WebSockets;
 using AOT;
-using WebSocketSharp;
+using UnityEngine;
 #endif
 
 namespace Algorand.Unity.WebSocket
@@ -54,12 +54,7 @@ namespace Algorand.Unity.WebSocket
         [MonoPInvokeCallback(typeof(OnCloseCallback))]
         internal static void OnCloseEvent(int disconnectCode)
         {
-            CloseStatusCode code = (CloseStatusCode)disconnectCode;
-
-            if (!Enum.IsDefined(typeof(CloseStatusCode), code))
-            {
-                code = CloseStatusCode.Undefined;
-            }
+            WebSocketCloseStatus code = (WebSocketCloseStatus)disconnectCode;
 
             Client.OnClose(code);
         }

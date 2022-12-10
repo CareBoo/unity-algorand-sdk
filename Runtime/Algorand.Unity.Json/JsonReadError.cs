@@ -17,15 +17,28 @@ namespace Algorand.Unity.Json
     {
         private const int surroundingSize = 50;
 
+        public readonly char invalidChar;
+
+        public readonly int position;
+
+        public readonly string text;
+
         public JsonReadException(JsonReadError error, char c, int pos)
-            : base($"{error} on char '{c}' at pos: {pos}")
-        { }
+            : base($"{error} on char {c.ToString()} at pos: {pos.ToString()}")
+        {
+            invalidChar = c;
+            position = pos;
+        }
 
         public JsonReadException(JsonReadError error, JsonReader context)
-            : base($"{error} on char '{context.Char}' at position: {context.Position} in JSON text:"
-                + $"\nsurrounding text: {GetSurroundingText(context)}"
-                + $"\n{context.Text}")
-        { }
+            : base($"{error} on char {context.Char.ToString()} at position: {context.Position.ToString()} in JSON text:"
+                   + $"\nsurrounding text: {GetSurroundingText(context)}"
+                   + $"\n{context.Text}")
+        {
+            invalidChar = context.Char;
+            position = context.Position;
+            text = context.Text;
+        }
 
         private static string GetSurroundingText(JsonReader context)
         {

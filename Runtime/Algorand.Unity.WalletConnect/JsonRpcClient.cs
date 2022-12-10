@@ -1,4 +1,5 @@
 using System;
+using System.Net.WebSockets;
 using System.Threading;
 using Algorand.Unity.WebSocket;
 using Cysharp.Threading.Tasks;
@@ -49,6 +50,7 @@ namespace Algorand.Unity.WalletConnect
         {
             webSocketClient.Connect();
             await webSocketClient.PollUntilOpen(cancellationToken);
+            Debug.Log($"client open with status: {webSocketClient.ReadyState}");
             var msg = NetworkMessage.SubscribeToTopic(clientId);
             webSocketClient.Send(msg);
             connectionCancellation = new CancellationTokenSource();
@@ -138,7 +140,7 @@ namespace Algorand.Unity.WalletConnect
             connectionCancellation?.Cancel();
             connectionCancellation = null;
 
-            if (webSocketClient != null && webSocketClient.ReadyState == WebSocketSharp.WebSocketState.Open)
+            if (webSocketClient != null && webSocketClient.ReadyState == WebSocketState.Open)
             {
                 webSocketClient.Close(reason: "session being disposed");
             }
@@ -148,8 +150,16 @@ namespace Algorand.Unity.WalletConnect
 
         private void CheckConnected()
         {
-            if (webSocketClient == null || webSocketClient.ReadyState != WebSocketSharp.WebSocketState.Open)
-                throw new InvalidOperationException($"{nameof(JsonRpcClient)} is not yet connected");
+            if (webSocketClient == null)
+            {
+                throw new InvalidOperationException($"{nameof(JsonRpcClient)}.{nameof(webSocketClient)} is null. Can't connect.");
+            }
+
+            var readyState = webSocketClient.ReadyState;
+            if (readyState != WebSocketState.Open && readyState != WebSocketState.Connecting)
+            {
+                throw new InvalidOperationException($"{nameof(JsonRpcClient)} is not open. Current state: {readyState}");
+            }
         }
 
         private async UniTaskVoid PollJsonRpcMessages(CancellationToken cancellationToken)
