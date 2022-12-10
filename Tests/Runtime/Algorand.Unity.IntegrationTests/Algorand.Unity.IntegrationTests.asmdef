@@ -17,7 +17,7 @@
     "overrideReferences": true,
     "precompiledReferences": [
         "nunit.framework.dll",
-        "Algorand.dll"
+        "Algorand_1.0.0.14.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [

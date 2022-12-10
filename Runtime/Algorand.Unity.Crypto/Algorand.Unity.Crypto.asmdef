@@ -12,7 +12,7 @@
     "allowUnsafeCode": true,
     "overrideReferences": true,
     "precompiledReferences": [
-        "BouncyCastle.Crypto.dll"
+        "BouncyCastle.Crypto_1.8.8.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [],

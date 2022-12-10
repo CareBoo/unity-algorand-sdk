@@ -18,8 +18,8 @@
     "allowUnsafeCode": true,
     "overrideReferences": true,
     "precompiledReferences": [
-        "Algorand.dll",
-        "BouncyCastle.Crypto.dll"
+        "Algorand_1.0.0.14.dll",
+        "BouncyCastle.Crypto_1.8.8.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [],
