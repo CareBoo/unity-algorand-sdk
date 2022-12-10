@@ -1,8 +1,6 @@
 using System.Text;
 using Algorand.Unity.LowLevel;
 using NUnit.Framework;
-using Org.BouncyCastle.Crypto.Parameters;
-using Org.BouncyCastle.Crypto.Signers;
 using Unity.Collections;
 using static Algorand.Unity.Crypto.Ed25519;
 
@@ -41,29 +39,6 @@ public class Ed25519Test
             Assert.AreEqual(expectedPk, publicKey.ToBase64());
             Assert.AreEqual(expectedSig, sig.ToBase64());
         }
-    }
-
-    [Test]
-    public void GenerateBouncyCastleKeyPairGivesValidKeys()
-    {
-#if UNITY_WEBGL && !UNITY_EDITOR
-        Assert.Ignore("Bouncy castle signing does not work in a webgl build.");
-#else
-        using var msg = GetMessageBytes(Message, Allocator.Persistent);
-        foreach (var (seedStr, expectedPk, expectedSig) in ValidResults)
-        {
-            var seed = ByteArray.FromBase64<Seed>(seedStr).ToArray();
-            var sk = new Ed25519PrivateKeyParameters(seed, 0);
-            var pk = sk.GeneratePublicKey();
-            var pkBytes = pk.GetEncoded();
-            var signer = new Ed25519Signer();
-            signer.Init(true, sk);
-            signer.BlockUpdate(msg.ToArray(), 0, msg.Length);
-            var sig = signer.GenerateSignature();
-            Assert.AreEqual(expectedPk, System.Convert.ToBase64String(pkBytes));
-            Assert.AreEqual(expectedSig, System.Convert.ToBase64String(sig));
-        }
-#endif
     }
 
     [Test]

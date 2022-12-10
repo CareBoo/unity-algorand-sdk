@@ -253,6 +253,23 @@ namespace Algorand.Unity.Indexer
 {
     
     
+    public partial struct Box
+    {
+        
+        private static bool @__generated__IsValid = Box.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Indexer.Box>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Indexer.Box>(false).Assign("name", (Algorand.Unity.Indexer.Box x) => x.Name, (ref Algorand.Unity.Indexer.Box x, System.Byte[] value) => x.Name = value, Algorand.Unity.ArrayComparer<System.Byte>.Instance).Assign("value", (Algorand.Unity.Indexer.Box x) => x.Value, (ref Algorand.Unity.Indexer.Box x, System.Byte[] value) => x.Value = value, Algorand.Unity.ArrayComparer<System.Byte>.Instance));
+            return true;
+        }
+    }
+}
+
+namespace Algorand.Unity.Indexer
+{
+    
+    
     public partial struct MiniAssetHolding
     {
         
@@ -464,7 +481,7 @@ namespace Algorand.Unity.Indexer
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Indexer.Account>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Indexer.Account>(false).Assign("amount", (Algorand.Unity.Indexer.Account x) => x.Amount, (ref Algorand.Unity.Indexer.Account x, System.UInt64 value) => x.Amount = value).Assign("deleted", (Algorand.Unity.Indexer.Account x) => x.Deleted, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.Optional<System.Boolean> value) => x.Deleted = value).Assign("address", (Algorand.Unity.Indexer.Account x) => x.Address, (ref Algorand.Unity.Indexer.Account x, System.String value) => x.Address = value, Algorand.Unity.StringComparer.Instance).Assign("rewards", (Algorand.Unity.Indexer.Account x) => x.Rewards, (ref Algorand.Unity.Indexer.Account x, System.UInt64 value) => x.Rewards = value).Assign("closed-at-round", (Algorand.Unity.Indexer.Account x) => x.ClosedAtRound, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.Optional<System.UInt64> value) => x.ClosedAtRound = value).Assign("amount-without-pending-rewards", (Algorand.Unity.Indexer.Account x) => x.AmountWithoutPendingRewards, (ref Algorand.Unity.Indexer.Account x, System.UInt64 value) => x.AmountWithoutPendingRewards = value).Assign("apps-total-extra-pages", (Algorand.Unity.Indexer.Account x) => x.AppsTotalExtraPages, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.Optional<System.UInt64> value) => x.AppsTotalExtraPages = value).Assign("total-assets-opted-in", (Algorand.Unity.Indexer.Account x) => x.TotalAssetsOptedIn, (ref Algorand.Unity.Indexer.Account x, System.UInt64 value) => x.TotalAssetsOptedIn = value).Assign("assets", (Algorand.Unity.Indexer.Account x) => x.Assets, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.Indexer.AssetHolding[] value) => x.Assets = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Indexer.AssetHolding>.Instance).Assign("created-at-round", (Algorand.Unity.Indexer.Account x) => x.CreatedAtRound, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.Optional<System.UInt64> value) => x.CreatedAtRound = value).Assign("participation", (Algorand.Unity.Indexer.Account x) => x.Participation, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.Indexer.AccountParticipation value) => x.Participation = value).Assign("apps-total-schema", (Algorand.Unity.Indexer.Account x) => x.AppsTotalSchema, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.Indexer.ApplicationStateSchema value) => x.AppsTotalSchema = value).Assign("total-apps-opted-in", (Algorand.Unity.Indexer.Account x) => x.TotalAppsOptedIn, (ref Algorand.Unity.Indexer.Account x, System.UInt64 value) => x.TotalAppsOptedIn = value).Assign("round", (Algorand.Unity.Indexer.Account x) => x.Round, (ref Algorand.Unity.Indexer.Account x, System.UInt64 value) => x.Round = value).Assign("pending-rewards", (Algorand.Unity.Indexer.Account x) => x.PendingRewards, (ref Algorand.Unity.Indexer.Account x, System.UInt64 value) => x.PendingRewards = value).Assign("created-apps", (Algorand.Unity.Indexer.Account x) => x.CreatedApps, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.Indexer.Application[] value) => x.CreatedApps = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Indexer.Application>.Instance).Assign("status", (Algorand.Unity.Indexer.Account x) => x.Status, (ref Algorand.Unity.Indexer.Account x, System.String value) => x.Status = value, Algorand.Unity.StringComparer.Instance).Assign("sig-type", (Algorand.Unity.Indexer.Account x) => x.SigType, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.SignatureType value) => x.SigType = value, Algorand.Unity.ByteEnumComparer<Algorand.Unity.SignatureType>.Instance).Assign("auth-addr", (Algorand.Unity.Indexer.Account x) => x.AuthAddr, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.Address value) => x.AuthAddr = value).Assign("total-created-assets", (Algorand.Unity.Indexer.Account x) => x.TotalCreatedAssets, (ref Algorand.Unity.Indexer.Account x, System.UInt64 value) => x.TotalCreatedAssets = value).Assign("reward-base", (Algorand.Unity.Indexer.Account x) => x.RewardBase, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.Optional<System.UInt64> value) => x.RewardBase = value).Assign("created-assets", (Algorand.Unity.Indexer.Account x) => x.CreatedAssets, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.Indexer.Asset[] value) => x.CreatedAssets = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Indexer.Asset>.Instance).Assign("apps-local-state", (Algorand.Unity.Indexer.Account x) => x.AppsLocalState, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.Indexer.ApplicationLocalState[] value) => x.AppsLocalState = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Indexer.ApplicationLocalState>.Instance).Assign("total-created-apps", (Algorand.Unity.Indexer.Account x) => x.TotalCreatedApps, (ref Algorand.Unity.Indexer.Account x, System.UInt64 value) => x.TotalCreatedApps = value));
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Indexer.Account>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Indexer.Account>(false).Assign("amount", (Algorand.Unity.Indexer.Account x) => x.Amount, (ref Algorand.Unity.Indexer.Account x, System.UInt64 value) => x.Amount = value).Assign("deleted", (Algorand.Unity.Indexer.Account x) => x.Deleted, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.Optional<System.Boolean> value) => x.Deleted = value).Assign("address", (Algorand.Unity.Indexer.Account x) => x.Address, (ref Algorand.Unity.Indexer.Account x, System.String value) => x.Address = value, Algorand.Unity.StringComparer.Instance).Assign("rewards", (Algorand.Unity.Indexer.Account x) => x.Rewards, (ref Algorand.Unity.Indexer.Account x, System.UInt64 value) => x.Rewards = value).Assign("closed-at-round", (Algorand.Unity.Indexer.Account x) => x.ClosedAtRound, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.Optional<System.UInt64> value) => x.ClosedAtRound = value).Assign("amount-without-pending-rewards", (Algorand.Unity.Indexer.Account x) => x.AmountWithoutPendingRewards, (ref Algorand.Unity.Indexer.Account x, System.UInt64 value) => x.AmountWithoutPendingRewards = value).Assign("apps-total-extra-pages", (Algorand.Unity.Indexer.Account x) => x.AppsTotalExtraPages, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.Optional<System.UInt64> value) => x.AppsTotalExtraPages = value).Assign("total-assets-opted-in", (Algorand.Unity.Indexer.Account x) => x.TotalAssetsOptedIn, (ref Algorand.Unity.Indexer.Account x, System.UInt64 value) => x.TotalAssetsOptedIn = value).Assign("assets", (Algorand.Unity.Indexer.Account x) => x.Assets, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.Indexer.AssetHolding[] value) => x.Assets = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Indexer.AssetHolding>.Instance).Assign("created-at-round", (Algorand.Unity.Indexer.Account x) => x.CreatedAtRound, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.Optional<System.UInt64> value) => x.CreatedAtRound = value).Assign("participation", (Algorand.Unity.Indexer.Account x) => x.Participation, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.Indexer.AccountParticipation value) => x.Participation = value).Assign("total-box-bytes", (Algorand.Unity.Indexer.Account x) => x.TotalBoxBytes, (ref Algorand.Unity.Indexer.Account x, System.UInt64 value) => x.TotalBoxBytes = value).Assign("apps-total-schema", (Algorand.Unity.Indexer.Account x) => x.AppsTotalSchema, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.Indexer.ApplicationStateSchema value) => x.AppsTotalSchema = value).Assign("total-apps-opted-in", (Algorand.Unity.Indexer.Account x) => x.TotalAppsOptedIn, (ref Algorand.Unity.Indexer.Account x, System.UInt64 value) => x.TotalAppsOptedIn = value).Assign("round", (Algorand.Unity.Indexer.Account x) => x.Round, (ref Algorand.Unity.Indexer.Account x, System.UInt64 value) => x.Round = value).Assign("pending-rewards", (Algorand.Unity.Indexer.Account x) => x.PendingRewards, (ref Algorand.Unity.Indexer.Account x, System.UInt64 value) => x.PendingRewards = value).Assign("created-apps", (Algorand.Unity.Indexer.Account x) => x.CreatedApps, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.Indexer.Application[] value) => x.CreatedApps = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Indexer.Application>.Instance).Assign("total-boxes", (Algorand.Unity.Indexer.Account x) => x.TotalBoxes, (ref Algorand.Unity.Indexer.Account x, System.UInt64 value) => x.TotalBoxes = value).Assign("status", (Algorand.Unity.Indexer.Account x) => x.Status, (ref Algorand.Unity.Indexer.Account x, System.String value) => x.Status = value, Algorand.Unity.StringComparer.Instance).Assign("sig-type", (Algorand.Unity.Indexer.Account x) => x.SigType, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.SignatureType value) => x.SigType = value, Algorand.Unity.ByteEnumComparer<Algorand.Unity.SignatureType>.Instance).Assign("auth-addr", (Algorand.Unity.Indexer.Account x) => x.AuthAddr, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.Address value) => x.AuthAddr = value).Assign("total-created-assets", (Algorand.Unity.Indexer.Account x) => x.TotalCreatedAssets, (ref Algorand.Unity.Indexer.Account x, System.UInt64 value) => x.TotalCreatedAssets = value).Assign("reward-base", (Algorand.Unity.Indexer.Account x) => x.RewardBase, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.Optional<System.UInt64> value) => x.RewardBase = value).Assign("created-assets", (Algorand.Unity.Indexer.Account x) => x.CreatedAssets, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.Indexer.Asset[] value) => x.CreatedAssets = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Indexer.Asset>.Instance).Assign("apps-local-state", (Algorand.Unity.Indexer.Account x) => x.AppsLocalState, (ref Algorand.Unity.Indexer.Account x, Algorand.Unity.Indexer.ApplicationLocalState[] value) => x.AppsLocalState = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Indexer.ApplicationLocalState>.Instance).Assign("total-created-apps", (Algorand.Unity.Indexer.Account x) => x.TotalCreatedApps, (ref Algorand.Unity.Indexer.Account x, System.UInt64 value) => x.TotalCreatedApps = value));
             return true;
         }
     }
@@ -584,6 +601,23 @@ namespace Algorand.Unity.Indexer
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Indexer.ApplicationLocalState>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Indexer.ApplicationLocalState>(false).Assign("id", (Algorand.Unity.Indexer.ApplicationLocalState x) => x.Id, (ref Algorand.Unity.Indexer.ApplicationLocalState x, System.UInt64 value) => x.Id = value).Assign("deleted", (Algorand.Unity.Indexer.ApplicationLocalState x) => x.Deleted, (ref Algorand.Unity.Indexer.ApplicationLocalState x, Algorand.Unity.Optional<System.Boolean> value) => x.Deleted = value).Assign("opted-in-at-round", (Algorand.Unity.Indexer.ApplicationLocalState x) => x.OptedInAtRound, (ref Algorand.Unity.Indexer.ApplicationLocalState x, Algorand.Unity.Optional<System.UInt64> value) => x.OptedInAtRound = value).Assign("closed-out-at-round", (Algorand.Unity.Indexer.ApplicationLocalState x) => x.ClosedOutAtRound, (ref Algorand.Unity.Indexer.ApplicationLocalState x, Algorand.Unity.Optional<System.UInt64> value) => x.ClosedOutAtRound = value).Assign("schema", (Algorand.Unity.Indexer.ApplicationLocalState x) => x.Schema, (ref Algorand.Unity.Indexer.ApplicationLocalState x, Algorand.Unity.Indexer.ApplicationStateSchema value) => x.Schema = value).Assign("key-value", (Algorand.Unity.Indexer.ApplicationLocalState x) => x.KeyValue, (ref Algorand.Unity.Indexer.ApplicationLocalState x, Algorand.Unity.Indexer.TealKeyValueStore value) => x.KeyValue = value));
+            return true;
+        }
+    }
+}
+
+namespace Algorand.Unity.Indexer
+{
+    
+    
+    public partial struct BoxDescriptor
+    {
+        
+        private static bool @__generated__IsValid = BoxDescriptor.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Indexer.BoxDescriptor>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Indexer.BoxDescriptor>(false).Assign("name", (Algorand.Unity.Indexer.BoxDescriptor x) => x.Name, (ref Algorand.Unity.Indexer.BoxDescriptor x, System.Byte[] value) => x.Name = value, Algorand.Unity.ArrayComparer<System.Byte>.Instance));
             return true;
         }
     }
@@ -865,6 +899,23 @@ namespace Algorand.Unity.Indexer
 {
     
     
+    public partial struct BoxesResponse
+    {
+        
+        private static bool @__generated__IsValid = BoxesResponse.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Indexer.BoxesResponse>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Indexer.BoxesResponse>(false).Assign("application-id", (Algorand.Unity.Indexer.BoxesResponse x) => x.ApplicationId, (ref Algorand.Unity.Indexer.BoxesResponse x, System.UInt64 value) => x.ApplicationId = value).Assign("boxes", (Algorand.Unity.Indexer.BoxesResponse x) => x.Boxes, (ref Algorand.Unity.Indexer.BoxesResponse x, Algorand.Unity.Indexer.BoxDescriptor[] value) => x.Boxes = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Indexer.BoxDescriptor>.Instance).Assign("next-token", (Algorand.Unity.Indexer.BoxesResponse x) => x.NextToken, (ref Algorand.Unity.Indexer.BoxesResponse x, System.String value) => x.NextToken = value, Algorand.Unity.StringComparer.Instance));
+            return true;
+        }
+    }
+}
+
+namespace Algorand.Unity.Indexer
+{
+    
+    
     public partial struct AssetBalancesResponse
     {
         
@@ -1043,6 +1094,23 @@ namespace Algorand.Unity.Indexer
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Indexer.HealthCheckResponse>(new Algorand.Unity.WrappedValueFormatter<Algorand.Unity.Indexer.HealthCheckResponse, Algorand.Unity.Indexer.HealthCheck>());
+            return true;
+        }
+    }
+}
+
+namespace Algorand.Unity.Indexer
+{
+    
+    
+    public partial struct BoxResponse
+    {
+        
+        private static bool @__generated__IsValid = BoxResponse.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Indexer.BoxResponse>(new Algorand.Unity.WrappedValueFormatter<Algorand.Unity.Indexer.BoxResponse, Algorand.Unity.Indexer.Box>());
             return true;
         }
     }

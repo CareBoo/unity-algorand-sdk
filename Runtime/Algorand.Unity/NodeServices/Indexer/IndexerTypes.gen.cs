@@ -23,51 +23,51 @@ namespace Algorand.Unity.Indexer
     {
         [SerializeField, Tooltip(@"")]
         BlockRewards @rewards;
-
+        
         [SerializeField, Tooltip(@"[gh] hash to which this block belongs.")]
         byte[] @genesisHash;
-
+        
         [SerializeField, Tooltip(@"")]
         BlockUpgradeState @upgradeState;
-
+        
         [SerializeField, Tooltip(@"[prev] Previous block hash.")]
         byte[] @previousBlockHash;
-
+        
         [SerializeField, Tooltip(@"[seed] Sortition seed.")]
         byte[] @seed;
-
+        
         [SerializeField, Tooltip(@"[rnd] Current round on which this block was appended to the chain.")]
         ulong @round;
-
+        
         [SerializeField, Tooltip(@"[txn] TransactionsRoot authenticates the set of transactions appearing in the block. More specifically, it's the root of a merkle tree whose leaves are the block's Txids, in lexicographic order. For the empty block, it's 0. Note that the TxnRoot does not authenticate the signatures on the transactions, only the transactions themselves. Two blocks with the same transactions but in a different order and with different signatures will have the same TxnRoot.")]
         byte[] @transactionsRoot;
-
+        
         [SerializeField, Tooltip(@"Tracks the status of state proofs.")]
         StateProofTracking[] @stateProofTracking;
-
+        
         [SerializeField, Tooltip(@"[gen] ID to which this block belongs.")]
         string @genesisId;
-
+        
         [SerializeField, Tooltip(@"[txn256] TransactionsRootSHA256 is an auxiliary TransactionRoot, built using a vector commitment instead of a merkle tree, and SHA256 hash function instead of the default SHA512_256. This commitment can be used on environments where only the SHA256 function exists.")]
         byte[] @transactionsRootSha256;
-
+        
         [SerializeField, Tooltip(@"")]
         BlockUpgradeVote @upgradeVote;
-
+        
         [SerializeField, Tooltip(@"")]
         ParticipationUpdates @participationUpdates;
-
+        
         [SerializeField, Tooltip(@"[txns] list of transactions corresponding to a given round.")]
         Transaction[] @transactions;
-
+        
         [SerializeField, Tooltip(@"[ts] Block creation timestamp in seconds since eposh")]
         ulong @timestamp;
-
+        
         [SerializeField, Tooltip(@"[tc] TxnCounter counts the number of transactions committed in the ledger, from the time at which support for this feature was introduced.
 
 Specifically, TxnCounter is the number of the next transaction that will be committed after this block.  It is 0 when no transactions have ever been committed (since TxnCounter started being supported).")]
         Optional<ulong> @txnCounter;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -222,7 +222,7 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(Block other)
         {
-            return
+            return 
                 Rewards.Equals(other.Rewards) &&
                 ArrayComparer.Equals(GenesisHash, other.GenesisHash) &&
                 UpgradeState.Equals(other.UpgradeState) &&
@@ -240,16 +240,6 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 TxnCounter.Equals(other.TxnCounter)
                 ;
         }
-
-        public static explicit operator Dotnet.Block(Block from)
-        {
-            return from.Convert().ToDotnet<Dotnet.Block>();
-        }
-
-        public static explicit operator Block(Dotnet.Block from)
-        {
-            return from.Convert().ToUnity<Block>();
-        }
     }
 
     [AlgoApiObject, Serializable]
@@ -258,7 +248,7 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"[t]")]
         Optional<ulong> @hashType;
-
+        
         /// <summary>
         /// [t]        
         /// </summary>
@@ -271,7 +261,7 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(HashFactory other)
         {
-            return
+            return 
                 HashType.Equals(other.HashType)
                 ;
         }
@@ -283,13 +273,13 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"[subsig] holds pairs of public key and signatures.")]
         TransactionSignatureMultisigSubsignature[] @subsignature;
-
+        
         [SerializeField, Tooltip(@"[thr]")]
         Optional<ulong> @threshold;
-
+        
         [SerializeField, Tooltip(@"[v]")]
         Optional<ulong> @version;
-
+        
         /// <summary>
         /// [subsig] holds pairs of public key and signatures.        
         /// </summary>
@@ -322,21 +312,11 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(TransactionSignatureMultisig other)
         {
-            return
+            return 
                 ArrayComparer.Equals(Subsignature, other.Subsignature) &&
                 Threshold.Equals(other.Threshold) &&
                 Version.Equals(other.Version)
                 ;
-        }
-
-        public static explicit operator Dotnet.TransactionSignatureMultisig(TransactionSignatureMultisig from)
-        {
-            return from.Convert().ToDotnet<Dotnet.TransactionSignatureMultisig>();
-        }
-
-        public static explicit operator TransactionSignatureMultisig(Dotnet.TransactionSignatureMultisig from)
-        {
-            return from.Convert().ToUnity<TransactionSignatureMultisig>();
         }
     }
 
@@ -346,7 +326,7 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"[partupdrmv] a list of online accounts that needs to be converted to offline since their participation key expired.")]
         string[] @expiredParticipationAccounts;
-
+        
         /// <summary>
         /// [partupdrmv] a list of online accounts that needs to be converted to offline since their participation key expired.        
         /// </summary>
@@ -359,7 +339,7 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(ParticipationUpdates other)
         {
-            return
+            return 
                 ArrayComparer.Equals(ExpiredParticipationAccounts, other.ExpiredParticipationAccounts)
                 ;
         }
@@ -371,25 +351,25 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"The address that created this application. This is the address where the parameters and global state for this application can be found.")]
         Address @creator;
-
+        
         [SerializeField, Tooltip(@"[approv] approval program.")]
         CompiledTeal @approvalProgram;
-
+        
         [SerializeField, Tooltip(@"[clearp] approval program.")]
         CompiledTeal @clearStateProgram;
-
+        
         [SerializeField, Tooltip(@"[lsch] local schema")]
         ApplicationStateSchema @localStateSchema;
-
+        
         [SerializeField, Tooltip(@"[gsch] global schema")]
         ApplicationStateSchema @globalStateSchema;
-
+        
         [SerializeField, Tooltip(@"[gs] global schema")]
         TealKeyValueStore @globalState;
-
+        
         [SerializeField, Tooltip(@"[epp] the amount of extra program pages available to this app.")]
         Optional<ulong> @extraProgramPages;
-
+        
         /// <summary>
         /// The address that created this application. This is the address where the parameters and global state for this application can be found.        
         /// </summary>
@@ -462,7 +442,7 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(ApplicationParams other)
         {
-            return
+            return 
                 Creator.Equals(other.Creator) &&
                 ApprovalProgram.Equals(other.ApprovalProgram) &&
                 ClearStateProgram.Equals(other.ClearStateProgram) &&
@@ -472,16 +452,6 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 ExtraProgramPages.Equals(other.ExtraProgramPages)
                 ;
         }
-
-        public static explicit operator Dotnet.ApplicationParams(ApplicationParams from)
-        {
-            return from.Convert().ToDotnet<Dotnet.ApplicationParams>();
-        }
-
-        public static explicit operator ApplicationParams(Dotnet.ApplicationParams from)
-        {
-            return from.Convert().ToUnity<ApplicationParams>();
-        }
     }
 
     [AlgoApiObject, Serializable]
@@ -490,16 +460,16 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"State Proof Type. Note the raw object uses map with this as key.")]
         Optional<ulong> @type;
-
+        
         [SerializeField, Tooltip(@"[v] Root of a vector commitment containing online accounts that will help sign the proof.")]
         byte[] @votersCommitment;
-
+        
         [SerializeField, Tooltip(@"[t] The total number of microalgos held by the online accounts during the StateProof round.")]
         Optional<ulong> @onlineTotalWeight;
-
+        
         [SerializeField, Tooltip(@"[n] Next round for which we will accept a state proof transaction.")]
         Optional<ulong> @nextRound;
-
+        
         /// <summary>
         /// State Proof Type. Note the raw object uses map with this as key.        
         /// </summary>
@@ -542,7 +512,7 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(StateProofTracking other)
         {
-            return
+            return 
                 Type.Equals(other.Type) &&
                 ArrayComparer.Equals(VotersCommitment, other.VotersCommitment) &&
                 OnlineTotalWeight.Equals(other.OnlineTotalWeight) &&
@@ -557,13 +527,13 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"[tt] value type. Value `1` refers to **bytes**, value `2` refers to **uint**")]
         ulong @type;
-
+        
         [SerializeField, Tooltip(@"[tb] bytes value.")]
         string @bytes;
-
+        
         [SerializeField, Tooltip(@"[ui] uint value.")]
         ulong @uint;
-
+        
         /// <summary>
         /// [tt] value type. Value `1` refers to **bytes**, value `2` refers to **uint**        
         /// </summary>
@@ -596,21 +566,11 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(TealValue other)
         {
-            return
+            return 
                 Type.Equals(other.Type) &&
                 StringComparer.Equals(Bytes, other.Bytes) &&
                 Uint.Equals(other.Uint)
                 ;
-        }
-
-        public static explicit operator Dotnet.TealValue(TealValue from)
-        {
-            return from.Convert().ToDotnet<Dotnet.TealValue>();
-        }
-
-        public static explicit operator TealValue(Dotnet.TealValue from)
-        {
-            return from.Convert().ToUnity<TealValue>();
         }
     }
 
@@ -620,16 +580,16 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"[arg] Logic arguments, base64 encoded.")]
         string[] @args;
-
+        
         [SerializeField, Tooltip(@"[l] Program signed by a signature or multi signature, or hashed to be the address of ana ccount. Base64 encoded TEAL program.")]
         byte[] @logic;
-
+        
         [SerializeField, Tooltip(@"")]
         TransactionSignatureMultisig @multisigSignature;
-
+        
         [SerializeField, Tooltip(@"[sig] ed25519 signature.")]
         byte[] @signature;
-
+        
         /// <summary>
         /// [arg] Logic arguments, base64 encoded.        
         /// </summary>
@@ -672,22 +632,12 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(TransactionSignatureLogicsig other)
         {
-            return
+            return 
                 ArrayComparer.Equals(Args, other.Args) &&
                 ArrayComparer.Equals(Logic, other.Logic) &&
                 MultisigSignature.Equals(other.MultisigSignature) &&
                 ArrayComparer.Equals(Signature, other.Signature)
                 ;
-        }
-
-        public static explicit operator Dotnet.TransactionSignatureLogicsig(TransactionSignatureLogicsig from)
-        {
-            return from.Convert().ToDotnet<Dotnet.TransactionSignatureLogicsig>();
-        }
-
-        public static explicit operator TransactionSignatureLogicsig(Dotnet.TransactionSignatureLogicsig from)
-        {
-            return from.Convert().ToUnity<TransactionSignatureLogicsig>();
         }
     }
 
@@ -697,13 +647,13 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"[at] delta action.")]
         ulong @action;
-
+        
         [SerializeField, Tooltip(@"[bs] bytes value.")]
         string @bytes;
-
+        
         [SerializeField, Tooltip(@"[ui] uint value.")]
         Optional<ulong> @uint;
-
+        
         /// <summary>
         /// [at] delta action.        
         /// </summary>
@@ -736,21 +686,11 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(EvalDelta other)
         {
-            return
+            return 
                 Action.Equals(other.Action) &&
                 StringComparer.Equals(Bytes, other.Bytes) &&
                 Uint.Equals(other.Uint)
                 ;
-        }
-
-        public static explicit operator Dotnet.EvalDelta(EvalDelta from)
-        {
-            return from.Convert().ToDotnet<Dotnet.EvalDelta>();
-        }
-
-        public static explicit operator EvalDelta(Dotnet.EvalDelta from)
-        {
-            return from.Convert().ToUnity<EvalDelta>();
         }
     }
 
@@ -760,37 +700,37 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"[apid] ID of the application being configured or empty if creating.")]
         ulong @applicationId;
-
+        
         [SerializeField, Tooltip(@"[apap] Logic executed for every application transaction, except when on-completion is set to 'clear'. It can read and write global state for the application, as well as account-specific local state. Approval programs may reject the transaction.")]
         CompiledTeal @approvalProgram;
-
+        
         [SerializeField, Tooltip(@"[apfa] Lists the applications in addition to the application-id whose global states may be accessed by this application's approval-program and clear-state-program. The access is read-only.")]
         ulong[] @foreignApps;
-
+        
         [SerializeField, Tooltip(@"[apaa] transaction specific arguments accessed from the application's approval-program and clear-state-program.")]
         string[] @applicationArgs;
-
+        
         [SerializeField, Tooltip(@"")]
         OnCompletion @onCompletion;
-
+        
         [SerializeField, Tooltip(@"")]
         StateSchema @globalStateSchema;
-
+        
         [SerializeField, Tooltip(@"[epp] specifies the additional app program len requested in pages.")]
         Optional<ulong> @extraProgramPages;
-
+        
         [SerializeField, Tooltip(@"[apas] lists the assets whose parameters may be accessed by this application's ApprovalProgram and ClearStateProgram. The access is read-only.")]
         ulong[] @foreignAssets;
-
+        
         [SerializeField, Tooltip(@"")]
         StateSchema @localStateSchema;
-
+        
         [SerializeField, Tooltip(@"[apat] List of accounts in addition to the sender that may be accessed from the application's approval-program and clear-state-program.")]
         Address[] @accounts;
-
+        
         [SerializeField, Tooltip(@"[apsu] Logic executed for application transactions with on-completion set to 'clear'. It can read and write global state for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.")]
         CompiledTeal @clearStateProgram;
-
+        
         /// <summary>
         /// [apid] ID of the application being configured or empty if creating.        
         /// </summary>
@@ -903,7 +843,7 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(TransactionApplication other)
         {
-            return
+            return 
                 ApplicationId.Equals(other.ApplicationId) &&
                 ApprovalProgram.Equals(other.ApprovalProgram) &&
                 ArrayComparer.Equals(ForeignApps, other.ForeignApps) &&
@@ -917,16 +857,6 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 ClearStateProgram.Equals(other.ClearStateProgram)
                 ;
         }
-
-        public static explicit operator Dotnet.TransactionApplication(TransactionApplication from)
-        {
-            return from.Convert().ToDotnet<Dotnet.TransactionApplication>();
-        }
-
-        public static explicit operator TransactionApplication(Dotnet.TransactionApplication from)
-        {
-            return from.Convert().ToUnity<TransactionApplication>();
-        }
     }
 
     [AlgoApiObject, Serializable]
@@ -935,10 +865,10 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"[nui] num of uints.")]
         ulong @numUint;
-
+        
         [SerializeField, Tooltip(@"[nbs] num of byte slices.")]
         ulong @numByteSlice;
-
+        
         /// <summary>
         /// [nui] num of uints.        
         /// </summary>
@@ -961,20 +891,10 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(ApplicationStateSchema other)
         {
-            return
+            return 
                 NumUint.Equals(other.NumUint) &&
                 NumByteSlice.Equals(other.NumByteSlice)
                 ;
-        }
-
-        public static explicit operator Dotnet.ApplicationStateSchema(ApplicationStateSchema from)
-        {
-            return from.Convert().ToDotnet<Dotnet.ApplicationStateSchema>();
-        }
-
-        public static explicit operator ApplicationStateSchema(Dotnet.ApplicationStateSchema from)
-        {
-            return from.Convert().ToUnity<ApplicationStateSchema>();
         }
     }
 
@@ -984,10 +904,10 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"[xaid] ID of the asset being configured or empty if creating.")]
         Optional<ulong> @assetId;
-
+        
         [SerializeField, Tooltip(@"")]
         AssetParams @params;
-
+        
         /// <summary>
         /// [xaid] ID of the asset being configured or empty if creating.        
         /// </summary>
@@ -1010,20 +930,10 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(TransactionAssetConfig other)
         {
-            return
+            return 
                 AssetId.Equals(other.AssetId) &&
                 Params.Equals(other.Params)
                 ;
-        }
-
-        public static explicit operator Dotnet.TransactionAssetConfig(TransactionAssetConfig from)
-        {
-            return from.Convert().ToDotnet<Dotnet.TransactionAssetConfig>();
-        }
-
-        public static explicit operator TransactionAssetConfig(Dotnet.TransactionAssetConfig from)
-        {
-            return from.Convert().ToUnity<TransactionAssetConfig>();
         }
     }
 
@@ -1033,16 +943,16 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"[amt] number of MicroAlgos intended to be transferred.")]
         ulong @amount;
-
+        
         [SerializeField, Tooltip(@"Number of MicroAlgos that were sent to the close-remainder-to address when closing the sender account.")]
         Optional<ulong> @closeAmount;
-
+        
         [SerializeField, Tooltip(@"[close] when set, indicates that the sending account should be closed and all remaining funds be transferred to this address.")]
         string @closeRemainderTo;
-
+        
         [SerializeField, Tooltip(@"[rcv] receiver's address.")]
         string @receiver;
-
+        
         /// <summary>
         /// [amt] number of MicroAlgos intended to be transferred.        
         /// </summary>
@@ -1085,22 +995,12 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(TransactionPayment other)
         {
-            return
+            return 
                 Amount.Equals(other.Amount) &&
                 CloseAmount.Equals(other.CloseAmount) &&
                 StringComparer.Equals(CloseRemainderTo, other.CloseRemainderTo) &&
                 StringComparer.Equals(Receiver, other.Receiver)
                 ;
-        }
-
-        public static explicit operator Dotnet.TransactionPayment(TransactionPayment from)
-        {
-            return from.Convert().ToDotnet<Dotnet.TransactionPayment>();
-        }
-
-        public static explicit operator TransactionPayment(Dotnet.TransactionPayment from)
-        {
-            return from.Convert().ToUnity<TransactionPayment>();
         }
     }
 
@@ -1110,25 +1010,25 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"[c]")]
         byte[] @sigCommit;
-
+        
         [SerializeField, Tooltip(@"[w]")]
         Optional<ulong> @signedWeight;
-
+        
         [SerializeField, Tooltip(@"[S]")]
         MerkleArrayProof @sigProofs;
-
+        
         [SerializeField, Tooltip(@"[P]")]
         MerkleArrayProof @partProofs;
-
+        
         [SerializeField, Tooltip(@"[v] Salt version of the merkle signature.")]
         Optional<ulong> @saltVersion;
-
+        
         [SerializeField, Tooltip(@"[r] Note that this is actually stored as a map[uint64] - Reveal in the actual msgp")]
         StateProofReveal[] @reveals;
-
+        
         [SerializeField, Tooltip(@"[pr] Sequence of reveal positions.")]
         ulong[] @positionsToReveal;
-
+        
         /// <summary>
         /// [c]        
         /// </summary>
@@ -1201,7 +1101,7 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(StateProofFields other)
         {
-            return
+            return 
                 ArrayComparer.Equals(SigCommit, other.SigCommit) &&
                 SignedWeight.Equals(other.SignedWeight) &&
                 SigProofs.Equals(other.SigProofs) &&
@@ -1214,27 +1114,66 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     }
 
     [AlgoApiObject, Serializable]
+    public partial struct Box
+        : IEquatable<Box>
+    {
+        [SerializeField, Tooltip(@"[name] box name, base64 encoded")]
+        byte[] @name;
+        
+        [SerializeField, Tooltip(@"[value] box value, base64 encoded.")]
+        byte[] @value;
+        
+        /// <summary>
+        /// [name] box name, base64 encoded        
+        /// </summary>
+        [AlgoApiField("name")]
+        public byte[] Name
+        {
+            get => this.@name;
+            set => this.@name = value;
+        }
+
+        /// <summary>
+        /// [value] box value, base64 encoded.        
+        /// </summary>
+        [AlgoApiField("value")]
+        public byte[] Value
+        {
+            get => this.@value;
+            set => this.@value = value;
+        }
+
+        public bool Equals(Box other)
+        {
+            return 
+                ArrayComparer.Equals(Name, other.Name) &&
+                ArrayComparer.Equals(Value, other.Value)
+                ;
+        }
+    }
+
+    [AlgoApiObject, Serializable]
     public partial struct MiniAssetHolding
         : IEquatable<MiniAssetHolding>
     {
         [SerializeField, Tooltip(@"")]
         string @address;
-
+        
         [SerializeField, Tooltip(@"")]
         ulong @amount;
-
+        
         [SerializeField, Tooltip(@"")]
         bool @isFrozen;
-
+        
         [SerializeField, Tooltip(@"Whether or not this asset holding is currently deleted from its account.")]
         Optional<bool> @deleted;
-
+        
         [SerializeField, Tooltip(@"Round during which the account opted into the asset.")]
         Optional<ulong> @optedInAtRound;
-
+        
         [SerializeField, Tooltip(@"Round during which the account opted out of the asset.")]
         Optional<ulong> @optedOutAtRound;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -1297,7 +1236,7 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(MiniAssetHolding other)
         {
-            return
+            return 
                 StringComparer.Equals(Address, other.Address) &&
                 Amount.Equals(other.Amount) &&
                 IsFrozen.Equals(other.IsFrozen) &&
@@ -1305,16 +1244,6 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 OptedInAtRound.Equals(other.OptedInAtRound) &&
                 OptedOutAtRound.Equals(other.OptedOutAtRound)
                 ;
-        }
-
-        public static explicit operator Dotnet.MiniAssetHolding(MiniAssetHolding from)
-        {
-            return from.Convert().ToDotnet<Dotnet.MiniAssetHolding>();
-        }
-
-        public static explicit operator MiniAssetHolding(Dotnet.MiniAssetHolding from)
-        {
-            return from.Convert().ToUnity<MiniAssetHolding>();
         }
     }
 
@@ -1324,10 +1253,10 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"[p]")]
         StateProofVerifier @verifier;
-
+        
         [SerializeField, Tooltip(@"[w]")]
         Optional<ulong> @weight;
-
+        
         /// <summary>
         /// [p]        
         /// </summary>
@@ -1350,7 +1279,7 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(StateProofParticipant other)
         {
-            return
+            return 
                 Verifier.Equals(other.Verifier) &&
                 Weight.Equals(other.Weight)
                 ;
@@ -1363,10 +1292,10 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"Transaction ID")]
         string @txid;
-
+        
         [SerializeField, Tooltip(@"[lg] Logs for the application being executed by the transaction.")]
         byte[][] @logs;
-
+        
         /// <summary>
         /// Transaction ID        
         /// </summary>
@@ -1389,20 +1318,10 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(ApplicationLogData other)
         {
-            return
+            return 
                 StringComparer.Equals(Txid, other.Txid) &&
                 ArrayComparer.Equals(Logs, other.Logs)
                 ;
-        }
-
-        public static explicit operator Dotnet.ApplicationLogData(ApplicationLogData from)
-        {
-            return from.Convert().ToDotnet<Dotnet.ApplicationLogData>();
-        }
-
-        public static explicit operator ApplicationLogData(Dotnet.ApplicationLogData from)
-        {
-            return from.Convert().ToUnity<ApplicationLogData>();
         }
     }
 
@@ -1412,13 +1331,13 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"[fadd] Address of the account whose asset is being frozen or thawed.")]
         string @address;
-
+        
         [SerializeField, Tooltip(@"[faid] ID of the asset being frozen or thawed.")]
         ulong @assetId;
-
+        
         [SerializeField, Tooltip(@"[afrz] The new freeze status.")]
         bool @newFreezeStatus;
-
+        
         /// <summary>
         /// [fadd] Address of the account whose asset is being frozen or thawed.        
         /// </summary>
@@ -1451,21 +1370,11 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(TransactionAssetFreeze other)
         {
-            return
+            return 
                 StringComparer.Equals(Address, other.Address) &&
                 AssetId.Equals(other.AssetId) &&
                 NewFreezeStatus.Equals(other.NewFreezeStatus)
                 ;
-        }
-
-        public static explicit operator Dotnet.TransactionAssetFreeze(TransactionAssetFreeze from)
-        {
-            return from.Convert().ToDotnet<Dotnet.TransactionAssetFreeze>();
-        }
-
-        public static explicit operator TransactionAssetFreeze(Dotnet.TransactionAssetFreeze from)
-        {
-            return from.Convert().ToUnity<TransactionAssetFreeze>();
         }
     }
 
@@ -1475,25 +1384,25 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"[nonpart] Mark the account as participating or non-participating.")]
         Optional<bool> @nonParticipation;
-
+        
         [SerializeField, Tooltip(@"[selkey] Public key used with the Verified Random Function (VRF) result during committee selection.")]
         byte[] @selectionParticipationKey;
-
+        
         [SerializeField, Tooltip(@"[votefst] First round this participation key is valid.")]
         Optional<ulong> @voteFirstValid;
-
+        
         [SerializeField, Tooltip(@"[votekd] Number of subkeys in each batch of participation keys.")]
         Optional<ulong> @voteKeyDilution;
-
+        
         [SerializeField, Tooltip(@"[votelst] Last round this participation key is valid.")]
         Optional<ulong> @voteLastValid;
-
+        
         [SerializeField, Tooltip(@"[votekey] Participation public key used in key registration transactions.")]
         byte[] @voteParticipationKey;
-
+        
         [SerializeField, Tooltip(@"[sprfkey] State proof key used in key registration transactions.")]
         byte[] @stateProofKey;
-
+        
         /// <summary>
         /// [nonpart] Mark the account as participating or non-participating.        
         /// </summary>
@@ -1566,7 +1475,7 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(TransactionKeyreg other)
         {
-            return
+            return 
                 NonParticipation.Equals(other.NonParticipation) &&
                 ArrayComparer.Equals(SelectionParticipationKey, other.SelectionParticipationKey) &&
                 VoteFirstValid.Equals(other.VoteFirstValid) &&
@@ -1576,16 +1485,6 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 ArrayComparer.Equals(StateProofKey, other.StateProofKey)
                 ;
         }
-
-        public static explicit operator Dotnet.TransactionKeyreg(TransactionKeyreg from)
-        {
-            return from.Convert().ToDotnet<Dotnet.TransactionKeyreg>();
-        }
-
-        public static explicit operator TransactionKeyreg(Dotnet.TransactionKeyreg from)
-        {
-            return from.Convert().ToUnity<TransactionKeyreg>();
-        }
     }
 
     [AlgoApiObject, Serializable]
@@ -1594,13 +1493,13 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"")]
         TransactionSignatureLogicsig @logicsig;
-
+        
         [SerializeField, Tooltip(@"")]
         TransactionSignatureMultisig @multisig;
-
+        
         [SerializeField, Tooltip(@"[sig] Standard ed25519 signature.")]
         byte[] @sig;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -1633,21 +1532,11 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(TransactionSignature other)
         {
-            return
+            return 
                 Logicsig.Equals(other.Logicsig) &&
                 Multisig.Equals(other.Multisig) &&
                 ArrayComparer.Equals(Sig, other.Sig)
                 ;
-        }
-
-        public static explicit operator Dotnet.TransactionSignature(TransactionSignature from)
-        {
-            return from.Convert().ToDotnet<Dotnet.TransactionSignature>();
-        }
-
-        public static explicit operator TransactionSignature(Dotnet.TransactionSignature from)
-        {
-            return from.Convert().ToUnity<TransactionSignature>();
         }
     }
 
@@ -1657,19 +1546,19 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"unique asset identifier")]
         ulong @index;
-
+        
         [SerializeField, Tooltip(@"Whether or not this asset is currently deleted.")]
         Optional<bool> @deleted;
-
+        
         [SerializeField, Tooltip(@"Round during which this asset was created.")]
         Optional<ulong> @createdAtRound;
-
+        
         [SerializeField, Tooltip(@"Round during which this asset was destroyed.")]
         Optional<ulong> @destroyedAtRound;
-
+        
         [SerializeField, Tooltip(@"")]
         AssetParams @params;
-
+        
         /// <summary>
         /// unique asset identifier        
         /// </summary>
@@ -1722,23 +1611,13 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(Asset other)
         {
-            return
+            return 
                 Index.Equals(other.Index) &&
                 Deleted.Equals(other.Deleted) &&
                 CreatedAtRound.Equals(other.CreatedAtRound) &&
                 DestroyedAtRound.Equals(other.DestroyedAtRound) &&
                 Params.Equals(other.Params)
                 ;
-        }
-
-        public static explicit operator Dotnet.Asset(Asset from)
-        {
-            return from.Convert().ToDotnet<Dotnet.Asset>();
-        }
-
-        public static explicit operator Asset(Dotnet.Asset from)
-        {
-            return from.Convert().ToUnity<Asset>();
         }
     }
 
@@ -1748,13 +1627,13 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"The position in the signature and participants arrays corresponding to this entry.")]
         Optional<ulong> @position;
-
+        
         [SerializeField, Tooltip(@"[s]")]
         StateProofSigSlot @sigSlot;
-
+        
         [SerializeField, Tooltip(@"[p]")]
         StateProofParticipant @participant;
-
+        
         /// <summary>
         /// The position in the signature and participants arrays corresponding to this entry.        
         /// </summary>
@@ -1787,7 +1666,7 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(StateProofReveal other)
         {
-            return
+            return 
                 Position.Equals(other.Position) &&
                 SigSlot.Equals(other.SigSlot) &&
                 Participant.Equals(other.Participant)
@@ -1801,10 +1680,10 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"")]
         string @key;
-
+        
         [SerializeField, Tooltip(@"")]
         TealValue @value;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -1827,20 +1706,10 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(TealKeyValue other)
         {
-            return
+            return 
                 StringComparer.Equals(Key, other.Key) &&
                 Value.Equals(other.Value)
                 ;
-        }
-
-        public static explicit operator Dotnet.TealKeyValue(TealKeyValue from)
-        {
-            return from.Convert().ToDotnet<Dotnet.TealKeyValue>();
-        }
-
-        public static explicit operator TealKeyValue(Dotnet.TealKeyValue from)
-        {
-            return from.Convert().ToUnity<TealKeyValue>();
         }
     }
 
@@ -1850,25 +1719,25 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"Current version.")]
         string @version;
-
+        
         [SerializeField, Tooltip(@"")]
         AlgoApiObject @data;
-
+        
         [SerializeField, Tooltip(@"")]
         ulong @round;
-
+        
         [SerializeField, Tooltip(@"")]
         bool @isMigrating;
-
+        
         [SerializeField, Tooltip(@"")]
         bool @dbAvailable;
-
+        
         [SerializeField, Tooltip(@"")]
         string @message;
-
+        
         [SerializeField, Tooltip(@"")]
         string[] @errors;
-
+        
         /// <summary>
         /// Current version.        
         /// </summary>
@@ -1941,7 +1810,7 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(HealthCheck other)
         {
-            return
+            return 
                 StringComparer.Equals(Version, other.Version) &&
                 Data.Equals(other.Data) &&
                 Round.Equals(other.Round) &&
@@ -1951,16 +1820,6 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 ArrayComparer.Equals(Errors, other.Errors)
                 ;
         }
-
-        public static explicit operator Dotnet.HealthCheck(HealthCheck from)
-        {
-            return from.Convert().ToDotnet<Dotnet.HealthCheck>();
-        }
-
-        public static explicit operator HealthCheck(Dotnet.HealthCheck from)
-        {
-            return from.Convert().ToUnity<HealthCheck>();
-        }
     }
 
     [AlgoApiObject, Serializable]
@@ -1969,10 +1828,10 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"")]
         string @key;
-
+        
         [SerializeField, Tooltip(@"")]
         EvalDelta @value;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -1995,20 +1854,10 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(EvalDeltaKeyValue other)
         {
-            return
+            return 
                 StringComparer.Equals(Key, other.Key) &&
                 Value.Equals(other.Value)
                 ;
-        }
-
-        public static explicit operator Dotnet.EvalDeltaKeyValue(EvalDeltaKeyValue from)
-        {
-            return from.Convert().ToDotnet<Dotnet.EvalDeltaKeyValue>();
-        }
-
-        public static explicit operator EvalDeltaKeyValue(Dotnet.EvalDeltaKeyValue from)
-        {
-            return from.Convert().ToUnity<EvalDeltaKeyValue>();
         }
     }
 
@@ -2018,22 +1867,22 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"[a] number of units held.")]
         ulong @amount;
-
+        
         [SerializeField, Tooltip(@"Asset ID of the holding.")]
         ulong @assetId;
-
+        
         [SerializeField, Tooltip(@"[f] whether or not the holding is frozen.")]
         bool @isFrozen;
-
+        
         [SerializeField, Tooltip(@"Whether or not the asset holding is currently deleted from its account.")]
         Optional<bool> @deleted;
-
+        
         [SerializeField, Tooltip(@"Round during which the account opted into this asset holding.")]
         Optional<ulong> @optedInAtRound;
-
+        
         [SerializeField, Tooltip(@"Round during which the account opted out of this asset holding.")]
         Optional<ulong> @optedOutAtRound;
-
+        
         /// <summary>
         /// [a] number of units held.        
         /// </summary>
@@ -2096,7 +1945,7 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
 
         public bool Equals(AssetHolding other)
         {
-            return
+            return 
                 Amount.Equals(other.Amount) &&
                 AssetId.Equals(other.AssetId) &&
                 IsFrozen.Equals(other.IsFrozen) &&
@@ -2104,16 +1953,6 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
                 OptedInAtRound.Equals(other.OptedInAtRound) &&
                 OptedOutAtRound.Equals(other.OptedOutAtRound)
                 ;
-        }
-
-        public static explicit operator Dotnet.AssetHolding(AssetHolding from)
-        {
-            return from.Convert().ToDotnet<Dotnet.AssetHolding>();
-        }
-
-        public static explicit operator AssetHolding(Dotnet.AssetHolding from)
-        {
-            return from.Convert().ToUnity<AssetHolding>();
         }
     }
 
@@ -2123,93 +1962,99 @@ Specifically, TxnCounter is the number of the next transaction that will be comm
     {
         [SerializeField, Tooltip(@"[algo] total number of MicroAlgos in the account")]
         ulong @amount;
-
+        
         [SerializeField, Tooltip(@"Whether or not this account is currently closed.")]
         Optional<bool> @deleted;
-
+        
         [SerializeField, Tooltip(@"the account public key")]
         string @address;
-
+        
         [SerializeField, Tooltip(@"[ern] total rewards of MicroAlgos the account has received, including pending rewards.")]
         ulong @rewards;
-
+        
         [SerializeField, Tooltip(@"Round during which this account was most recently closed.")]
         Optional<ulong> @closedAtRound;
-
+        
         [SerializeField, Tooltip(@"specifies the amount of MicroAlgos in the account, without the pending rewards.")]
         ulong @amountWithoutPendingRewards;
-
+        
         [SerializeField, Tooltip(@"[teap] the sum of all extra application program pages for this account.")]
         Optional<ulong> @appsTotalExtraPages;
-
+        
         [SerializeField, Tooltip(@"The count of all assets that have been opted in, equivalent to the count of AssetHolding objects held by this account.")]
         ulong @totalAssetsOptedIn;
-
+        
         [SerializeField, Tooltip(@"[asset] assets held by this account.
 
 Note the raw object uses `map[int] -> AssetHolding` for this type.")]
         AssetHolding[] @assets;
-
+        
         [SerializeField, Tooltip(@"Round during which this account first appeared in a transaction.")]
         Optional<ulong> @createdAtRound;
-
+        
         [SerializeField, Tooltip(@"")]
         AccountParticipation @participation;
-
+        
+        [SerializeField, Tooltip(@"For app-accounts only. The total number of bytes allocated for the keys and values of boxes which belong to the associated application.")]
+        ulong @totalBoxBytes;
+        
         [SerializeField, Tooltip(@"[tsch] stores the sum of all of the local schemas and global schemas in this account.
 
 Note: the raw account uses `StateSchema` for this type.")]
         ApplicationStateSchema @appsTotalSchema;
-
+        
         [SerializeField, Tooltip(@"The count of all applications that have been opted in, equivalent to the count of application local data (AppLocalState objects) stored in this account.")]
         ulong @totalAppsOptedIn;
-
+        
         [SerializeField, Tooltip(@"The round for which this information is relevant.")]
         ulong @round;
-
+        
         [SerializeField, Tooltip(@"amount of MicroAlgos of pending rewards in this account.")]
         ulong @pendingRewards;
-
+        
         [SerializeField, Tooltip(@"[appp] parameters of applications created by this account including app global data.
 
 Note: the raw account uses `map[int] -> AppParams` for this type.")]
         Application[] @createdApps;
-
+        
+        [SerializeField, Tooltip(@"For app-accounts only. The total number of boxes which belong to the associated application.")]
+        ulong @totalBoxes;
+        
         [SerializeField, Tooltip(@"[onl] delegation status of the account's MicroAlgos
 * Offline - indicates that the associated account is delegated.
 *  Online  - indicates that the associated account used as part of the delegation pool.
 *   NotParticipating - indicates that the associated account is neither a delegator nor a delegate.")]
         string @status;
-
+        
         [SerializeField, Tooltip(@"Indicates what type of signature is used by this account, must be one of:
 * sig
 * msig
 * lsig
 * or null if unknown")]
         SignatureType @sigType;
-
+        
         [SerializeField, Tooltip(@"[spend] the address against which signing should be checked. If empty, the address of the current account is used. This field can be updated in any transaction by setting the RekeyTo field.")]
         Address @authAddr;
-
+        
         [SerializeField, Tooltip(@"The count of all assets (AssetParams objects) created by this account.")]
         ulong @totalCreatedAssets;
-
+        
         [SerializeField, Tooltip(@"[ebase] used as part of the rewards computation. Only applicable to accounts which are participating.")]
         Optional<ulong> @rewardBase;
-
+        
         [SerializeField, Tooltip(@"[apar] parameters of assets created by this account.
 
 Note: the raw account uses `map[int] -> Asset` for this type.")]
         Asset[] @createdAssets;
-
+        
         [SerializeField, Tooltip(@"[appl] applications local data stored in this account.
 
 Note the raw object uses `map[int] -> AppLocalState` for this type.")]
         ApplicationLocalState[] @appsLocalState;
-
+        
         [SerializeField, Tooltip(@"The count of all apps (AppParams objects) created by this account.")]
         ulong @totalCreatedApps;
-
+        
         /// <summary>
         /// [algo] total number of MicroAlgos in the account        
         /// </summary>
@@ -2323,6 +2168,16 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
         }
 
         /// <summary>
+        /// For app-accounts only. The total number of bytes allocated for the keys and values of boxes which belong to the associated application.        
+        /// </summary>
+        [AlgoApiField("total-box-bytes")]
+        public ulong TotalBoxBytes
+        {
+            get => this.@totalBoxBytes;
+            set => this.@totalBoxBytes = value;
+        }
+
+        /// <summary>
         /// [tsch] stores the sum of all of the local schemas and global schemas in this account.
         /// 
         /// Note: the raw account uses `StateSchema` for this type.        
@@ -2374,6 +2229,16 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
         {
             get => this.@createdApps;
             set => this.@createdApps = value;
+        }
+
+        /// <summary>
+        /// For app-accounts only. The total number of boxes which belong to the associated application.        
+        /// </summary>
+        [AlgoApiField("total-boxes")]
+        public ulong TotalBoxes
+        {
+            get => this.@totalBoxes;
+            set => this.@totalBoxes = value;
         }
 
         /// <summary>
@@ -2469,7 +2334,7 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
 
         public bool Equals(Account other)
         {
-            return
+            return 
                 Amount.Equals(other.Amount) &&
                 Deleted.Equals(other.Deleted) &&
                 StringComparer.Equals(Address, other.Address) &&
@@ -2481,11 +2346,13 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ArrayComparer.Equals(Assets, other.Assets) &&
                 CreatedAtRound.Equals(other.CreatedAtRound) &&
                 Participation.Equals(other.Participation) &&
+                TotalBoxBytes.Equals(other.TotalBoxBytes) &&
                 AppsTotalSchema.Equals(other.AppsTotalSchema) &&
                 TotalAppsOptedIn.Equals(other.TotalAppsOptedIn) &&
                 Round.Equals(other.Round) &&
                 PendingRewards.Equals(other.PendingRewards) &&
                 ArrayComparer.Equals(CreatedApps, other.CreatedApps) &&
+                TotalBoxes.Equals(other.TotalBoxes) &&
                 StringComparer.Equals(Status, other.Status) &&
                 SigType.Equals(other.SigType) &&
                 AuthAddr.Equals(other.AuthAddr) &&
@@ -2496,16 +2363,6 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 TotalCreatedApps.Equals(other.TotalCreatedApps)
                 ;
         }
-
-        public static explicit operator Dotnet.Account(Account from)
-        {
-            return from.Convert().ToDotnet<Dotnet.Account>();
-        }
-
-        public static explicit operator Account(Dotnet.Account from)
-        {
-            return from.Convert().ToUnity<Account>();
-        }
     }
 
     [AlgoApiObject, Serializable]
@@ -2514,22 +2371,22 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
     {
         [SerializeField, Tooltip(@"[fees] accepts transaction fees, it can only spend to the incentive pool.")]
         string @feeSink;
-
+        
         [SerializeField, Tooltip(@"[rwcalr] number of leftover MicroAlgos after the distribution of rewards-rate MicroAlgos for every reward unit in the next round.")]
         ulong @rewardsCalculationRound;
-
+        
         [SerializeField, Tooltip(@"[earn] How many rewards, in MicroAlgos, have been distributed to each RewardUnit of MicroAlgos since genesis.")]
         ulong @rewardsLevel;
-
+        
         [SerializeField, Tooltip(@"[rwd] accepts periodic injections from the fee-sink and continually redistributes them as rewards.")]
         string @rewardsPool;
-
+        
         [SerializeField, Tooltip(@"[rate] Number of new MicroAlgos added to the participation stake from rewards at the next round.")]
         ulong @rewardsRate;
-
+        
         [SerializeField, Tooltip(@"[frac] Number of leftover MicroAlgos after the distribution of RewardsRate/rewardUnits MicroAlgos for every reward unit in the next round.")]
         ulong @rewardsResidue;
-
+        
         /// <summary>
         /// [fees] accepts transaction fees, it can only spend to the incentive pool.        
         /// </summary>
@@ -2592,7 +2449,7 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
 
         public bool Equals(BlockRewards other)
         {
-            return
+            return 
                 StringComparer.Equals(FeeSink, other.FeeSink) &&
                 RewardsCalculationRound.Equals(other.RewardsCalculationRound) &&
                 RewardsLevel.Equals(other.RewardsLevel) &&
@@ -2600,16 +2457,6 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 RewardsRate.Equals(other.RewardsRate) &&
                 RewardsResidue.Equals(other.RewardsResidue)
                 ;
-        }
-
-        public static explicit operator Dotnet.BlockRewards(BlockRewards from)
-        {
-            return from.Convert().ToDotnet<Dotnet.BlockRewards>();
-        }
-
-        public static explicit operator BlockRewards(Dotnet.BlockRewards from)
-        {
-            return from.Convert().ToUnity<BlockRewards>();
         }
     }
 
@@ -2619,16 +2466,16 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
     {
         [SerializeField, Tooltip(@"")]
         byte[] @falconSignature;
-
+        
         [SerializeField, Tooltip(@"")]
         Optional<ulong> @merkleArrayIndex;
-
+        
         [SerializeField, Tooltip(@"")]
         MerkleArrayProof @proof;
-
+        
         [SerializeField, Tooltip(@"[vkey]")]
         byte[] @verifyingKey;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -2671,7 +2518,7 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
 
         public bool Equals(StateProofSignature other)
         {
-            return
+            return 
                 ArrayComparer.Equals(FalconSignature, other.FalconSignature) &&
                 MerkleArrayIndex.Equals(other.MerkleArrayIndex) &&
                 Proof.Equals(other.Proof) &&
@@ -2686,10 +2533,10 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
     {
         [SerializeField, Tooltip(@"")]
         string @address;
-
+        
         [SerializeField, Tooltip(@"")]
         StateDelta @delta;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -2712,20 +2559,10 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
 
         public bool Equals(AccountStateDelta other)
         {
-            return
+            return 
                 StringComparer.Equals(Address, other.Address) &&
                 Delta.Equals(other.Delta)
                 ;
-        }
-
-        public static explicit operator Dotnet.AccountStateDelta(AccountStateDelta from)
-        {
-            return from.Convert().ToDotnet<Dotnet.AccountStateDelta>();
-        }
-
-        public static explicit operator AccountStateDelta(Dotnet.AccountStateDelta from)
-        {
-            return from.Convert().ToUnity<AccountStateDelta>();
         }
     }
 
@@ -2735,13 +2572,13 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
     {
         [SerializeField, Tooltip(@"[upgradeyes] Indicates a yes vote for the current proposal.")]
         Optional<bool> @upgradeApprove;
-
+        
         [SerializeField, Tooltip(@"[upgradedelay] Indicates the time between acceptance and execution.")]
         Optional<ulong> @upgradeDelay;
-
+        
         [SerializeField, Tooltip(@"[upgradeprop] Indicates a proposed upgrade.")]
         string @upgradePropose;
-
+        
         /// <summary>
         /// [upgradeyes] Indicates a yes vote for the current proposal.        
         /// </summary>
@@ -2774,21 +2611,11 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
 
         public bool Equals(BlockUpgradeVote other)
         {
-            return
+            return 
                 UpgradeApprove.Equals(other.UpgradeApprove) &&
                 UpgradeDelay.Equals(other.UpgradeDelay) &&
                 StringComparer.Equals(UpgradePropose, other.UpgradePropose)
                 ;
-        }
-
-        public static explicit operator Dotnet.BlockUpgradeVote(BlockUpgradeVote from)
-        {
-            return from.Convert().ToDotnet<Dotnet.BlockUpgradeVote>();
-        }
-
-        public static explicit operator BlockUpgradeVote(Dotnet.BlockUpgradeVote from)
-        {
-            return from.Convert().ToUnity<BlockUpgradeVote>();
         }
     }
 
@@ -2798,19 +2625,19 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
     {
         [SerializeField, Tooltip(@"[appidx] application index.")]
         ulong @id;
-
+        
         [SerializeField, Tooltip(@"Whether or not this application is currently deleted.")]
         Optional<bool> @deleted;
-
+        
         [SerializeField, Tooltip(@"Round when this application was created.")]
         Optional<ulong> @createdAtRound;
-
+        
         [SerializeField, Tooltip(@"Round when this application was deleted.")]
         Optional<ulong> @deletedAtRound;
-
+        
         [SerializeField, Tooltip(@"[appparams] application parameters.")]
         ApplicationParams @params;
-
+        
         /// <summary>
         /// [appidx] application index.        
         /// </summary>
@@ -2863,23 +2690,13 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
 
         public bool Equals(Application other)
         {
-            return
+            return 
                 Id.Equals(other.Id) &&
                 Deleted.Equals(other.Deleted) &&
                 CreatedAtRound.Equals(other.CreatedAtRound) &&
                 DeletedAtRound.Equals(other.DeletedAtRound) &&
                 Params.Equals(other.Params)
                 ;
-        }
-
-        public static explicit operator Dotnet.Application(Application from)
-        {
-            return from.Convert().ToDotnet<Dotnet.Application>();
-        }
-
-        public static explicit operator Application(Dotnet.Application from)
-        {
-            return from.Convert().ToUnity<Application>();
         }
     }
 
@@ -2889,10 +2706,10 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
     {
         [SerializeField, Tooltip(@"Maximum number of TEAL uints that may be stored in the key/value store.")]
         ulong @numUint;
-
+        
         [SerializeField, Tooltip(@"Maximum number of TEAL byte slices that may be stored in the key/value store.")]
         ulong @numByteSlice;
-
+        
         /// <summary>
         /// Maximum number of TEAL uints that may be stored in the key/value store.        
         /// </summary>
@@ -2915,20 +2732,10 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
 
         public bool Equals(StateSchema other)
         {
-            return
+            return 
                 NumUint.Equals(other.NumUint) &&
                 NumByteSlice.Equals(other.NumByteSlice)
                 ;
-        }
-
-        public static explicit operator Dotnet.StateSchema(StateSchema from)
-        {
-            return from.Convert().ToDotnet<Dotnet.StateSchema>();
-        }
-
-        public static explicit operator StateSchema(Dotnet.StateSchema from)
-        {
-            return from.Convert().ToUnity<StateSchema>();
         }
     }
 
@@ -2938,22 +2745,22 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
     {
         [SerializeField, Tooltip(@"The application which this local state is for.")]
         ulong @id;
-
+        
         [SerializeField, Tooltip(@"Whether or not the application local state is currently deleted from its account.")]
         Optional<bool> @deleted;
-
+        
         [SerializeField, Tooltip(@"Round when the account opted into the application.")]
         Optional<ulong> @optedInAtRound;
-
+        
         [SerializeField, Tooltip(@"Round when account closed out of the application.")]
         Optional<ulong> @closedOutAtRound;
-
+        
         [SerializeField, Tooltip(@"[hsch] schema.")]
         ApplicationStateSchema @schema;
-
+        
         [SerializeField, Tooltip(@"[tkv] storage.")]
         TealKeyValueStore @keyValue;
-
+        
         /// <summary>
         /// The application which this local state is for.        
         /// </summary>
@@ -3016,7 +2823,7 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
 
         public bool Equals(ApplicationLocalState other)
         {
-            return
+            return 
                 Id.Equals(other.Id) &&
                 Deleted.Equals(other.Deleted) &&
                 OptedInAtRound.Equals(other.OptedInAtRound) &&
@@ -3025,15 +2832,30 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 KeyValue.Equals(other.KeyValue)
                 ;
         }
+    }
 
-        public static explicit operator Dotnet.ApplicationLocalState(ApplicationLocalState from)
+    [AlgoApiObject, Serializable]
+    public partial struct BoxDescriptor
+        : IEquatable<BoxDescriptor>
+    {
+        [SerializeField, Tooltip(@"Base64 encoded box name")]
+        byte[] @name;
+        
+        /// <summary>
+        /// Base64 encoded box name        
+        /// </summary>
+        [AlgoApiField("name")]
+        public byte[] Name
         {
-            return from.Convert().ToDotnet<Dotnet.ApplicationLocalState>();
+            get => this.@name;
+            set => this.@name = value;
         }
 
-        public static explicit operator ApplicationLocalState(Dotnet.ApplicationLocalState from)
+        public bool Equals(BoxDescriptor other)
         {
-            return from.Convert().ToUnity<ApplicationLocalState>();
+            return 
+                ArrayComparer.Equals(Name, other.Name)
+                ;
         }
     }
 
@@ -3043,10 +2865,10 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
     {
         [SerializeField, Tooltip(@"[pk]")]
         byte[] @publicKey;
-
+        
         [SerializeField, Tooltip(@"[s]")]
         byte[] @signature;
-
+        
         /// <summary>
         /// [pk]        
         /// </summary>
@@ -3069,20 +2891,10 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
 
         public bool Equals(TransactionSignatureMultisigSubsignature other)
         {
-            return
+            return 
                 ArrayComparer.Equals(PublicKey, other.PublicKey) &&
                 ArrayComparer.Equals(Signature, other.Signature)
                 ;
-        }
-
-        public static explicit operator Dotnet.TransactionSignatureMultisigSubsignature(TransactionSignatureMultisigSubsignature from)
-        {
-            return from.Convert().ToDotnet<Dotnet.TransactionSignatureMultisigSubsignature>();
-        }
-
-        public static explicit operator TransactionSignatureMultisigSubsignature(Dotnet.TransactionSignatureMultisigSubsignature from)
-        {
-            return from.Convert().ToUnity<TransactionSignatureMultisigSubsignature>();
         }
     }
 
@@ -3092,22 +2904,22 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
     {
         [SerializeField, Tooltip(@"[sel] Selection public key (if any) currently registered for this round.")]
         byte[] @selectionParticipationKey;
-
+        
         [SerializeField, Tooltip(@"[voteFst] First round for which this participation is valid.")]
         ulong @voteFirstValid;
-
+        
         [SerializeField, Tooltip(@"[voteKD] Number of subkeys in each batch of participation keys.")]
         ulong @voteKeyDilution;
-
+        
         [SerializeField, Tooltip(@"[voteLst] Last round for which this participation is valid.")]
         ulong @voteLastValid;
-
+        
         [SerializeField, Tooltip(@"[vote] root participation public key (if any) currently registered for this round.")]
         byte[] @voteParticipationKey;
-
+        
         [SerializeField, Tooltip(@"[stprf] Root of the state proof key (if any)")]
         byte[] @stateProofKey;
-
+        
         /// <summary>
         /// [sel] Selection public key (if any) currently registered for this round.        
         /// </summary>
@@ -3170,7 +2982,7 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
 
         public bool Equals(AccountParticipation other)
         {
-            return
+            return 
                 ArrayComparer.Equals(SelectionParticipationKey, other.SelectionParticipationKey) &&
                 VoteFirstValid.Equals(other.VoteFirstValid) &&
                 VoteKeyDilution.Equals(other.VoteKeyDilution) &&
@@ -3178,16 +2990,6 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ArrayComparer.Equals(VoteParticipationKey, other.VoteParticipationKey) &&
                 ArrayComparer.Equals(StateProofKey, other.StateProofKey)
                 ;
-        }
-
-        public static explicit operator Dotnet.AccountParticipation(AccountParticipation from)
-        {
-            return from.Convert().ToDotnet<Dotnet.AccountParticipation>();
-        }
-
-        public static explicit operator AccountParticipation(Dotnet.AccountParticipation from)
-        {
-            return from.Convert().ToUnity<AccountParticipation>();
         }
     }
 
@@ -3197,22 +2999,22 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
     {
         [SerializeField, Tooltip(@"[aamt] Amount of asset to transfer. A zero amount transferred to self allocates that asset in the account's Assets map.")]
         ulong @amount;
-
+        
         [SerializeField, Tooltip(@"[xaid] ID of the asset being transferred.")]
         ulong @assetId;
-
+        
         [SerializeField, Tooltip(@"Number of assets transfered to the close-to account as part of the transaction.")]
         Optional<ulong> @closeAmount;
-
+        
         [SerializeField, Tooltip(@"[aclose] Indicates that the asset should be removed from the account's Assets map, and specifies where the remaining asset holdings should be transferred.  It's always valid to transfer remaining asset holdings to the creator account.")]
         string @closeTo;
-
+        
         [SerializeField, Tooltip(@"[arcv] Recipient address of the transfer.")]
         string @receiver;
-
+        
         [SerializeField, Tooltip(@"[asnd] The effective sender during a clawback transactions. If this is not a zero value, the real transaction sender must be the Clawback address from the AssetParams.")]
         string @sender;
-
+        
         /// <summary>
         /// [aamt] Amount of asset to transfer. A zero amount transferred to self allocates that asset in the account's Assets map.        
         /// </summary>
@@ -3275,7 +3077,7 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
 
         public bool Equals(TransactionAssetTransfer other)
         {
-            return
+            return 
                 Amount.Equals(other.Amount) &&
                 AssetId.Equals(other.AssetId) &&
                 CloseAmount.Equals(other.CloseAmount) &&
@@ -3283,16 +3085,6 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 StringComparer.Equals(Receiver, other.Receiver) &&
                 StringComparer.Equals(Sender, other.Sender)
                 ;
-        }
-
-        public static explicit operator Dotnet.TransactionAssetTransfer(TransactionAssetTransfer from)
-        {
-            return from.Convert().ToDotnet<Dotnet.TransactionAssetTransfer>();
-        }
-
-        public static explicit operator TransactionAssetTransfer(Dotnet.TransactionAssetTransfer from)
-        {
-            return from.Convert().ToUnity<TransactionAssetTransfer>();
         }
     }
 
@@ -3302,40 +3094,40 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
     {
         [SerializeField, Tooltip(@"")]
         TransactionStateProof @stateProofTransaction;
-
+        
         [SerializeField, Tooltip(@"[fee] Transaction fee.")]
         ulong @fee;
-
+        
         [SerializeField, Tooltip(@"")]
         TransactionAssetTransfer @assetTransferTransaction;
-
+        
         [SerializeField, Tooltip(@"[grp] Base64 encoded byte array of a sha512/256 digest. When present indicates that this transaction is part of a transaction group and the value is the sha512/256 hash of the transactions in that group.")]
         byte[] @group;
-
+        
         [SerializeField, Tooltip(@"Specifies an application index (ID) if an application was created with this transaction.")]
         Optional<ulong> @createdApplicationIndex;
-
+        
         [SerializeField, Tooltip(@"[lx] Base64 encoded 32-byte array. Lease enforces mutual exclusion of transactions.  If this field is nonzero, then once the transaction is confirmed, it acquires the lease identified by the (Sender, Lease) pair of the transaction until the LastValid round passes.  While this transaction possesses the lease, no other transaction specifying this lease can be confirmed.")]
         byte[] @lease;
-
+        
         [SerializeField, Tooltip(@"[gh] Hash of genesis block.")]
         byte[] @genesisHash;
-
+        
         [SerializeField, Tooltip(@"[lg] Logs for the application being executed by this transaction.")]
         byte[][] @logs;
-
+        
         [SerializeField, Tooltip(@"[rs] rewards applied to sender account.")]
         Optional<ulong> @senderRewards;
-
+        
         [SerializeField, Tooltip(@"[ca] closing amount for transaction.")]
         Optional<ulong> @closingAmount;
-
+        
         [SerializeField, Tooltip(@"")]
         TransactionSignature @signature;
-
+        
         [SerializeField, Tooltip(@"[gd] Global state key/value changes for the application being executed by this transaction.")]
         StateDelta @globalStateDelta;
-
+        
         [SerializeField, Tooltip(@"[type] Indicates what type of transaction this is. Different types have different fields.
 
 Valid types, and where their fields are stored:
@@ -3347,70 +3139,70 @@ Valid types, and where their fields are stored:
 * [appl] application-transaction
 * [stpf] state-proof-transaction")]
         string @txType;
-
+        
         [SerializeField, Tooltip(@"Offset into the round where this transaction was confirmed.")]
         Optional<ulong> @intraRoundOffset;
-
+        
         [SerializeField, Tooltip(@"")]
         TransactionPayment @paymentTransaction;
-
+        
         [SerializeField, Tooltip(@"")]
         TransactionKeyreg @keyregTransaction;
-
+        
         [SerializeField, Tooltip(@"Round when the transaction was confirmed.")]
         Optional<ulong> @confirmedRound;
-
+        
         [SerializeField, Tooltip(@"[note] Free form data.")]
         byte[] @note;
-
+        
         [SerializeField, Tooltip(@"[rr] rewards applied to receiver account.")]
         Optional<ulong> @receiverRewards;
-
+        
         [SerializeField, Tooltip(@"Time when the block this transaction is in was confirmed.")]
         Optional<ulong> @roundTime;
-
+        
         [SerializeField, Tooltip(@"Inner transactions produced by application execution.")]
         Transaction[] @innerTxns;
-
+        
         [SerializeField, Tooltip(@"")]
         TransactionAssetConfig @assetConfigTransaction;
-
+        
         [SerializeField, Tooltip(@"[lv] Last valid round for this transaction.")]
         ulong @lastValid;
-
+        
         [SerializeField, Tooltip(@"[rc] rewards applied to close-remainder-to account.")]
         Optional<ulong> @closeRewards;
-
+        
         [SerializeField, Tooltip(@"[ld] Local state key/value changes for the application being executed by this transaction.")]
         AccountStateDelta[] @localStateDelta;
-
+        
         [SerializeField, Tooltip(@"Transaction ID")]
         string @id;
-
+        
         [SerializeField, Tooltip(@"[sgnr] this is included with signed transactions when the signing address does not equal the sender. The backend can use this to ensure that auth addr is equal to the accounts auth addr.")]
         Address @authAddr;
-
+        
         [SerializeField, Tooltip(@"[gen] genesis block ID.")]
         string @genesisId;
-
+        
         [SerializeField, Tooltip(@"[snd] Sender's address.")]
         string @sender;
-
+        
         [SerializeField, Tooltip(@"")]
         TransactionApplication @applicationTransaction;
-
+        
         [SerializeField, Tooltip(@"Specifies an asset index (ID) if an asset was created with this transaction.")]
         Optional<ulong> @createdAssetIndex;
-
+        
         [SerializeField, Tooltip(@"[fv] First valid round for this transaction.")]
         ulong @firstValid;
-
+        
         [SerializeField, Tooltip(@"[rekey] when included in a valid transaction, the accounts auth addr will be updated with this value and future signatures must be signed with the key represented by this address.")]
         Address @rekeyTo;
-
+        
         [SerializeField, Tooltip(@"")]
         TransactionAssetFreeze @assetFreezeTransaction;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -3762,7 +3554,7 @@ Valid types, and where their fields are stored:
 
         public bool Equals(Transaction other)
         {
-            return
+            return 
                 StateProofTransaction.Equals(other.StateProofTransaction) &&
                 Fee.Equals(other.Fee) &&
                 AssetTransferTransaction.Equals(other.AssetTransferTransaction) &&
@@ -3799,16 +3591,6 @@ Valid types, and where their fields are stored:
                 AssetFreezeTransaction.Equals(other.AssetFreezeTransaction)
                 ;
         }
-
-        public static explicit operator Dotnet.Transaction(Transaction from)
-        {
-            return from.Convert().ToDotnet<Dotnet.Transaction>();
-        }
-
-        public static explicit operator Transaction(Dotnet.Transaction from)
-        {
-            return from.Convert().ToUnity<Transaction>();
-        }
     }
 
     [AlgoApiObject, Serializable]
@@ -3817,13 +3599,13 @@ Valid types, and where their fields are stored:
     {
         [SerializeField, Tooltip(@"[sptype] Type of the state proof. Integer representing an entry defined in protocol/stateproof.go")]
         Optional<ulong> @stateProofType;
-
+        
         [SerializeField, Tooltip(@"")]
         StateProofFields @stateProof;
-
+        
         [SerializeField, Tooltip(@"[spmsg]")]
         IndexerStateProofMessage @message;
-
+        
         /// <summary>
         /// [sptype] Type of the state proof. Integer representing an entry defined in protocol/stateproof.go        
         /// </summary>
@@ -3856,7 +3638,7 @@ Valid types, and where their fields are stored:
 
         public bool Equals(TransactionStateProof other)
         {
-            return
+            return 
                 StateProofType.Equals(other.StateProofType) &&
                 StateProof.Equals(other.StateProof) &&
                 Message.Equals(other.Message)
@@ -3870,10 +3652,10 @@ Valid types, and where their fields are stored:
     {
         [SerializeField, Tooltip(@"")]
         StateProofSignature @signature;
-
+        
         [SerializeField, Tooltip(@"[l] The total weight of signatures in the lower-numbered slots.")]
         Optional<ulong> @lowerSigWeight;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -3896,7 +3678,7 @@ Valid types, and where their fields are stored:
 
         public bool Equals(StateProofSigSlot other)
         {
-            return
+            return 
                 Signature.Equals(other.Signature) &&
                 LowerSigWeight.Equals(other.LowerSigWeight)
                 ;
@@ -3909,10 +3691,10 @@ Valid types, and where their fields are stored:
     {
         [SerializeField, Tooltip(@"[cmt] Represents the root of the vector commitment tree.")]
         byte[] @commitment;
-
+        
         [SerializeField, Tooltip(@"[lf] Key lifetime.")]
         Optional<ulong> @keyLifetime;
-
+        
         /// <summary>
         /// [cmt] Represents the root of the vector commitment tree.        
         /// </summary>
@@ -3935,7 +3717,7 @@ Valid types, and where their fields are stored:
 
         public bool Equals(StateProofVerifier other)
         {
-            return
+            return 
                 ArrayComparer.Equals(Commitment, other.Commitment) &&
                 KeyLifetime.Equals(other.KeyLifetime)
                 ;
@@ -3948,49 +3730,49 @@ Valid types, and where their fields are stored:
     {
         [SerializeField, Tooltip(@"[df] Whether holdings of this asset are frozen by default.")]
         Optional<bool> @defaultFrozen;
-
+        
         [SerializeField, Tooltip(@"The address that created this asset. This is the address where the parameters for this asset can be found, and also the address where unwanted asset units can be sent in the worst case.")]
         string @creator;
-
+        
         [SerializeField, Tooltip(@"[dc] The number of digits to use after the decimal point when displaying this asset. If 0, the asset is not divisible. If 1, the base unit of the asset is in tenths. If 2, the base unit of the asset is in hundredths, and so on. This value must be between 0 and 19 (inclusive).")]
         ulong @decimals;
-
+        
         [SerializeField, Tooltip(@"[f] Address of account used to freeze holdings of this asset.  If empty, freezing is not permitted.")]
         string @freeze;
-
+        
         [SerializeField, Tooltip(@"[r] Address of account holding reserve (non-minted) units of this asset.")]
         string @reserve;
-
+        
         [SerializeField, Tooltip(@"Base64 encoded name of a unit of this asset, as supplied by the creator.")]
         byte[] @unitNameB64;
-
+        
         [SerializeField, Tooltip(@"[an] Name of this asset, as supplied by the creator. Included only when the asset name is composed of printable utf-8 characters.")]
         string @name;
-
+        
         [SerializeField, Tooltip(@"Base64 encoded URL where more information about the asset can be retrieved.")]
         byte[] @urlB64;
-
+        
         [SerializeField, Tooltip(@"[t] The total number of units of this asset.")]
         ulong @total;
-
+        
         [SerializeField, Tooltip(@"[m] Address of account used to manage the keys of this asset and to destroy it.")]
         string @manager;
-
+        
         [SerializeField, Tooltip(@"Base64 encoded name of this asset, as supplied by the creator.")]
         byte[] @nameB64;
-
+        
         [SerializeField, Tooltip(@"[au] URL where more information about the asset can be retrieved. Included only when the URL is composed of printable utf-8 characters.")]
         string @url;
-
+        
         [SerializeField, Tooltip(@"[un] Name of a unit of this asset, as supplied by the creator. Included only when the name of a unit of this asset is composed of printable utf-8 characters.")]
         string @unitName;
-
+        
         [SerializeField, Tooltip(@"[c] Address of account used to clawback holdings of this asset.  If empty, clawback is not permitted.")]
         string @clawback;
-
+        
         [SerializeField, Tooltip(@"[am] A commitment to some unspecified asset metadata. The format of this metadata is up to the application.")]
         byte[] @metadataHash;
-
+        
         /// <summary>
         /// [df] Whether holdings of this asset are frozen by default.        
         /// </summary>
@@ -4143,7 +3925,7 @@ Valid types, and where their fields are stored:
 
         public bool Equals(AssetParams other)
         {
-            return
+            return 
                 DefaultFrozen.Equals(other.DefaultFrozen) &&
                 StringComparer.Equals(Creator, other.Creator) &&
                 Decimals.Equals(other.Decimals) &&
@@ -4161,16 +3943,6 @@ Valid types, and where their fields are stored:
                 ArrayComparer.Equals(MetadataHash, other.MetadataHash)
                 ;
         }
-
-        public static explicit operator Dotnet.AssetParams(AssetParams from)
-        {
-            return from.Convert().ToDotnet<Dotnet.AssetParams>();
-        }
-
-        public static explicit operator AssetParams(Dotnet.AssetParams from)
-        {
-            return from.Convert().ToUnity<AssetParams>();
-        }
     }
 
     [AlgoApiObject, Serializable]
@@ -4179,19 +3951,19 @@ Valid types, and where their fields are stored:
     {
         [SerializeField, Tooltip(@"[b]")]
         byte[] @blockHeadersCommitment;
-
+        
         [SerializeField, Tooltip(@"[v]")]
         byte[] @votersCommitment;
-
+        
         [SerializeField, Tooltip(@"[P]")]
         Optional<ulong> @lnProvenWeight;
-
+        
         [SerializeField, Tooltip(@"[f]")]
         Optional<ulong> @firstAttestedRound;
-
+        
         [SerializeField, Tooltip(@"[l]")]
         Optional<ulong> @latestAttestedRound;
-
+        
         /// <summary>
         /// [b]        
         /// </summary>
@@ -4244,7 +4016,7 @@ Valid types, and where their fields are stored:
 
         public bool Equals(IndexerStateProofMessage other)
         {
-            return
+            return 
                 ArrayComparer.Equals(BlockHeadersCommitment, other.BlockHeadersCommitment) &&
                 ArrayComparer.Equals(VotersCommitment, other.VotersCommitment) &&
                 LnProvenWeight.Equals(other.LnProvenWeight) &&
@@ -4260,19 +4032,19 @@ Valid types, and where their fields are stored:
     {
         [SerializeField, Tooltip(@"[proto] The current protocol version.")]
         string @currentProtocol;
-
+        
         [SerializeField, Tooltip(@"[nextproto] The next proposed protocol version.")]
         string @nextProtocol;
-
+        
         [SerializeField, Tooltip(@"[nextyes] Number of blocks which approved the protocol upgrade.")]
         Optional<ulong> @nextProtocolApprovals;
-
+        
         [SerializeField, Tooltip(@"[nextswitch] Round on which the protocol upgrade will take effect.")]
         Optional<ulong> @nextProtocolSwitchOn;
-
+        
         [SerializeField, Tooltip(@"[nextbefore] Deadline round for this protocol upgrade (No votes will be consider after this round).")]
         Optional<ulong> @nextProtocolVoteBefore;
-
+        
         /// <summary>
         /// [proto] The current protocol version.        
         /// </summary>
@@ -4325,23 +4097,13 @@ Valid types, and where their fields are stored:
 
         public bool Equals(BlockUpgradeState other)
         {
-            return
+            return 
                 StringComparer.Equals(CurrentProtocol, other.CurrentProtocol) &&
                 StringComparer.Equals(NextProtocol, other.NextProtocol) &&
                 NextProtocolApprovals.Equals(other.NextProtocolApprovals) &&
                 NextProtocolSwitchOn.Equals(other.NextProtocolSwitchOn) &&
                 NextProtocolVoteBefore.Equals(other.NextProtocolVoteBefore)
                 ;
-        }
-
-        public static explicit operator Dotnet.BlockUpgradeState(BlockUpgradeState from)
-        {
-            return from.Convert().ToDotnet<Dotnet.BlockUpgradeState>();
-        }
-
-        public static explicit operator BlockUpgradeState(Dotnet.BlockUpgradeState from)
-        {
-            return from.Convert().ToUnity<BlockUpgradeState>();
         }
     }
 
@@ -4351,13 +4113,13 @@ Valid types, and where their fields are stored:
     {
         [SerializeField, Tooltip(@"[pth]")]
         byte[][] @path;
-
+        
         [SerializeField, Tooltip(@"")]
         HashFactory @hashFactory;
-
+        
         [SerializeField, Tooltip(@"[td]")]
         Optional<ulong> @treeDepth;
-
+        
         /// <summary>
         /// [pth]        
         /// </summary>
@@ -4390,7 +4152,7 @@ Valid types, and where their fields are stored:
 
         public bool Equals(MerkleArrayProof other)
         {
-            return
+            return 
                 ArrayComparer.Equals(Path, other.Path) &&
                 HashFactory.Equals(other.HashFactory) &&
                 TreeDepth.Equals(other.TreeDepth)
@@ -4404,13 +4166,13 @@ Valid types, and where their fields are stored:
     {
         [SerializeField, Tooltip(@"Round at which the results were computed.")]
         ulong @currentRound;
-
+        
         [SerializeField, Tooltip(@"Used for pagination, when making another request provide this token with the next parameter.")]
         string @nextToken;
-
+        
         [SerializeField, Tooltip(@"")]
         AssetHolding[] @assets;
-
+        
         /// <summary>
         /// Round at which the results were computed.        
         /// </summary>
@@ -4443,21 +4205,11 @@ Valid types, and where their fields are stored:
 
         public bool Equals(AssetHoldingsResponse other)
         {
-            return
+            return 
                 CurrentRound.Equals(other.CurrentRound) &&
                 StringComparer.Equals(NextToken, other.NextToken) &&
                 ArrayComparer.Equals(Assets, other.Assets)
                 ;
-        }
-
-        public static explicit operator Dotnet.AssetHoldingsResponse(AssetHoldingsResponse from)
-        {
-            return from.Convert().ToDotnet<Dotnet.AssetHoldingsResponse>();
-        }
-
-        public static explicit operator AssetHoldingsResponse(Dotnet.AssetHoldingsResponse from)
-        {
-            return from.Convert().ToUnity<AssetHoldingsResponse>();
         }
     }
 
@@ -4467,10 +4219,10 @@ Valid types, and where their fields are stored:
     {
         [SerializeField, Tooltip(@"")]
         Application @application;
-
+        
         [SerializeField, Tooltip(@"Round at which the results were computed.")]
         ulong @currentRound;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -4493,20 +4245,10 @@ Valid types, and where their fields are stored:
 
         public bool Equals(ApplicationResponse other)
         {
-            return
+            return 
                 Application.Equals(other.Application) &&
                 CurrentRound.Equals(other.CurrentRound)
                 ;
-        }
-
-        public static explicit operator Dotnet.ApplicationResponse(ApplicationResponse from)
-        {
-            return from.Convert().ToDotnet<Dotnet.ApplicationResponse>();
-        }
-
-        public static explicit operator ApplicationResponse(Dotnet.ApplicationResponse from)
-        {
-            return from.Convert().ToUnity<ApplicationResponse>();
         }
     }
 
@@ -4516,13 +4258,13 @@ Valid types, and where their fields are stored:
     {
         [SerializeField, Tooltip(@"Round at which the results were computed.")]
         ulong @currentRound;
-
+        
         [SerializeField, Tooltip(@"Used for pagination, when making another request provide this token with the next parameter.")]
         string @nextToken;
-
+        
         [SerializeField, Tooltip(@"")]
         Transaction[] @transactions;
-
+        
         /// <summary>
         /// Round at which the results were computed.        
         /// </summary>
@@ -4555,21 +4297,11 @@ Valid types, and where their fields are stored:
 
         public bool Equals(TransactionsResponse other)
         {
-            return
+            return 
                 CurrentRound.Equals(other.CurrentRound) &&
                 StringComparer.Equals(NextToken, other.NextToken) &&
                 ArrayComparer.Equals(Transactions, other.Transactions)
                 ;
-        }
-
-        public static explicit operator Dotnet.TransactionsResponse(TransactionsResponse from)
-        {
-            return from.Convert().ToDotnet<Dotnet.TransactionsResponse>();
-        }
-
-        public static explicit operator TransactionsResponse(Dotnet.TransactionsResponse from)
-        {
-            return from.Convert().ToUnity<TransactionsResponse>();
         }
     }
 
@@ -4579,13 +4311,13 @@ Valid types, and where their fields are stored:
     {
         [SerializeField, Tooltip(@"")]
         Account[] @accounts;
-
+        
         [SerializeField, Tooltip(@"Round at which the results were computed.")]
         ulong @currentRound;
-
+        
         [SerializeField, Tooltip(@"Used for pagination, when making another request provide this token with the next parameter.")]
         string @nextToken;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -4618,21 +4350,11 @@ Valid types, and where their fields are stored:
 
         public bool Equals(AccountsResponse other)
         {
-            return
+            return 
                 ArrayComparer.Equals(Accounts, other.Accounts) &&
                 CurrentRound.Equals(other.CurrentRound) &&
                 StringComparer.Equals(NextToken, other.NextToken)
                 ;
-        }
-
-        public static explicit operator Dotnet.AccountsResponse(AccountsResponse from)
-        {
-            return from.Convert().ToDotnet<Dotnet.AccountsResponse>();
-        }
-
-        public static explicit operator AccountsResponse(Dotnet.AccountsResponse from)
-        {
-            return from.Convert().ToUnity<AccountsResponse>();
         }
     }
 
@@ -4642,10 +4364,10 @@ Valid types, and where their fields are stored:
     {
         [SerializeField, Tooltip(@"")]
         Asset @asset;
-
+        
         [SerializeField, Tooltip(@"Round at which the results were computed.")]
         ulong @currentRound;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -4668,20 +4390,63 @@ Valid types, and where their fields are stored:
 
         public bool Equals(AssetResponse other)
         {
-            return
+            return 
                 Asset.Equals(other.Asset) &&
                 CurrentRound.Equals(other.CurrentRound)
                 ;
         }
+    }
 
-        public static explicit operator Dotnet.AssetResponse(AssetResponse from)
+    [AlgoApiObject, Serializable]
+    public partial struct BoxesResponse
+        : IEquatable<BoxesResponse>
+    {
+        [SerializeField, Tooltip(@"[appidx] application index.")]
+        ulong @applicationId;
+        
+        [SerializeField, Tooltip(@"")]
+        BoxDescriptor[] @boxes;
+        
+        [SerializeField, Tooltip(@"Used for pagination, when making another request provide this token with the next parameter.")]
+        string @nextToken;
+        
+        /// <summary>
+        /// [appidx] application index.        
+        /// </summary>
+        [AlgoApiField("application-id")]
+        public ulong ApplicationId
         {
-            return from.Convert().ToDotnet<Dotnet.AssetResponse>();
+            get => this.@applicationId;
+            set => this.@applicationId = value;
         }
 
-        public static explicit operator AssetResponse(Dotnet.AssetResponse from)
+        /// <summary>
+        ///         
+        /// </summary>
+        [AlgoApiField("boxes")]
+        public BoxDescriptor[] Boxes
         {
-            return from.Convert().ToUnity<AssetResponse>();
+            get => this.@boxes;
+            set => this.@boxes = value;
+        }
+
+        /// <summary>
+        /// Used for pagination, when making another request provide this token with the next parameter.        
+        /// </summary>
+        [AlgoApiField("next-token")]
+        public string NextToken
+        {
+            get => this.@nextToken;
+            set => this.@nextToken = value;
+        }
+
+        public bool Equals(BoxesResponse other)
+        {
+            return 
+                ApplicationId.Equals(other.ApplicationId) &&
+                ArrayComparer.Equals(Boxes, other.Boxes) &&
+                StringComparer.Equals(NextToken, other.NextToken)
+                ;
         }
     }
 
@@ -4691,13 +4456,13 @@ Valid types, and where their fields are stored:
     {
         [SerializeField, Tooltip(@"")]
         MiniAssetHolding[] @balances;
-
+        
         [SerializeField, Tooltip(@"Round at which the results were computed.")]
         ulong @currentRound;
-
+        
         [SerializeField, Tooltip(@"Used for pagination, when making another request provide this token with the next parameter.")]
         string @nextToken;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -4730,21 +4495,11 @@ Valid types, and where their fields are stored:
 
         public bool Equals(AssetBalancesResponse other)
         {
-            return
+            return 
                 ArrayComparer.Equals(Balances, other.Balances) &&
                 CurrentRound.Equals(other.CurrentRound) &&
                 StringComparer.Equals(NextToken, other.NextToken)
                 ;
-        }
-
-        public static explicit operator Dotnet.AssetBalancesResponse(AssetBalancesResponse from)
-        {
-            return from.Convert().ToDotnet<Dotnet.AssetBalancesResponse>();
-        }
-
-        public static explicit operator AssetBalancesResponse(Dotnet.AssetBalancesResponse from)
-        {
-            return from.Convert().ToUnity<AssetBalancesResponse>();
         }
     }
 
@@ -4754,10 +4509,10 @@ Valid types, and where their fields are stored:
     {
         [SerializeField, Tooltip(@"")]
         Account @account;
-
+        
         [SerializeField, Tooltip(@"Round at which the results were computed.")]
         ulong @currentRound;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -4780,20 +4535,10 @@ Valid types, and where their fields are stored:
 
         public bool Equals(AccountResponse other)
         {
-            return
+            return 
                 Account.Equals(other.Account) &&
                 CurrentRound.Equals(other.CurrentRound)
                 ;
-        }
-
-        public static explicit operator Dotnet.AccountResponse(AccountResponse from)
-        {
-            return from.Convert().ToDotnet<Dotnet.AccountResponse>();
-        }
-
-        public static explicit operator AccountResponse(Dotnet.AccountResponse from)
-        {
-            return from.Convert().ToUnity<AccountResponse>();
         }
     }
 
@@ -4803,13 +4548,13 @@ Valid types, and where their fields are stored:
     {
         [SerializeField, Tooltip(@"")]
         Application[] @applications;
-
+        
         [SerializeField, Tooltip(@"Round at which the results were computed.")]
         ulong @currentRound;
-
+        
         [SerializeField, Tooltip(@"Used for pagination, when making another request provide this token with the next parameter.")]
         string @nextToken;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -4842,21 +4587,11 @@ Valid types, and where their fields are stored:
 
         public bool Equals(ApplicationsResponse other)
         {
-            return
+            return 
                 ArrayComparer.Equals(Applications, other.Applications) &&
                 CurrentRound.Equals(other.CurrentRound) &&
                 StringComparer.Equals(NextToken, other.NextToken)
                 ;
-        }
-
-        public static explicit operator Dotnet.ApplicationsResponse(ApplicationsResponse from)
-        {
-            return from.Convert().ToDotnet<Dotnet.ApplicationsResponse>();
-        }
-
-        public static explicit operator ApplicationsResponse(Dotnet.ApplicationsResponse from)
-        {
-            return from.Convert().ToUnity<ApplicationsResponse>();
         }
     }
 
@@ -4866,10 +4601,10 @@ Valid types, and where their fields are stored:
     {
         [SerializeField, Tooltip(@"")]
         Transaction @transaction;
-
+        
         [SerializeField, Tooltip(@"Round at which the results were computed.")]
         ulong @currentRound;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -4892,20 +4627,10 @@ Valid types, and where their fields are stored:
 
         public bool Equals(TransactionResponse other)
         {
-            return
+            return 
                 Transaction.Equals(other.Transaction) &&
                 CurrentRound.Equals(other.CurrentRound)
                 ;
-        }
-
-        public static explicit operator Dotnet.TransactionResponse(TransactionResponse from)
-        {
-            return from.Convert().ToDotnet<Dotnet.TransactionResponse>();
-        }
-
-        public static explicit operator TransactionResponse(Dotnet.TransactionResponse from)
-        {
-            return from.Convert().ToUnity<TransactionResponse>();
         }
     }
 
@@ -4915,16 +4640,16 @@ Valid types, and where their fields are stored:
     {
         [SerializeField, Tooltip(@"[appidx] application index.")]
         ulong @applicationId;
-
+        
         [SerializeField, Tooltip(@"Round at which the results were computed.")]
         ulong @currentRound;
-
+        
         [SerializeField, Tooltip(@"Used for pagination, when making another request provide this token with the next parameter.")]
         string @nextToken;
-
+        
         [SerializeField, Tooltip(@"")]
         ApplicationLogData[] @logData;
-
+        
         /// <summary>
         /// [appidx] application index.        
         /// </summary>
@@ -4967,22 +4692,12 @@ Valid types, and where their fields are stored:
 
         public bool Equals(ApplicationLogsResponse other)
         {
-            return
+            return 
                 ApplicationId.Equals(other.ApplicationId) &&
                 CurrentRound.Equals(other.CurrentRound) &&
                 StringComparer.Equals(NextToken, other.NextToken) &&
                 ArrayComparer.Equals(LogData, other.LogData)
                 ;
-        }
-
-        public static explicit operator Dotnet.ApplicationLogsResponse(ApplicationLogsResponse from)
-        {
-            return from.Convert().ToDotnet<Dotnet.ApplicationLogsResponse>();
-        }
-
-        public static explicit operator ApplicationLogsResponse(Dotnet.ApplicationLogsResponse from)
-        {
-            return from.Convert().ToUnity<ApplicationLogsResponse>();
         }
     }
 
@@ -4992,13 +4707,13 @@ Valid types, and where their fields are stored:
     {
         [SerializeField, Tooltip(@"")]
         Asset[] @assets;
-
+        
         [SerializeField, Tooltip(@"Round at which the results were computed.")]
         ulong @currentRound;
-
+        
         [SerializeField, Tooltip(@"Used for pagination, when making another request provide this token with the next parameter.")]
         string @nextToken;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -5031,21 +4746,11 @@ Valid types, and where their fields are stored:
 
         public bool Equals(AssetsResponse other)
         {
-            return
+            return 
                 ArrayComparer.Equals(Assets, other.Assets) &&
                 CurrentRound.Equals(other.CurrentRound) &&
                 StringComparer.Equals(NextToken, other.NextToken)
                 ;
-        }
-
-        public static explicit operator Dotnet.AssetsResponse(AssetsResponse from)
-        {
-            return from.Convert().ToDotnet<Dotnet.AssetsResponse>();
-        }
-
-        public static explicit operator AssetsResponse(Dotnet.AssetsResponse from)
-        {
-            return from.Convert().ToUnity<AssetsResponse>();
         }
     }
 
@@ -5055,13 +4760,13 @@ Valid types, and where their fields are stored:
     {
         [SerializeField, Tooltip(@"")]
         ApplicationLocalState[] @appsLocalStates;
-
+        
         [SerializeField, Tooltip(@"Round at which the results were computed.")]
         ulong @currentRound;
-
+        
         [SerializeField, Tooltip(@"Used for pagination, when making another request provide this token with the next parameter.")]
         string @nextToken;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -5094,21 +4799,11 @@ Valid types, and where their fields are stored:
 
         public bool Equals(ApplicationLocalStatesResponse other)
         {
-            return
+            return 
                 ArrayComparer.Equals(AppsLocalStates, other.AppsLocalStates) &&
                 CurrentRound.Equals(other.CurrentRound) &&
                 StringComparer.Equals(NextToken, other.NextToken)
                 ;
-        }
-
-        public static explicit operator Dotnet.ApplicationLocalStatesResponse(ApplicationLocalStatesResponse from)
-        {
-            return from.Convert().ToDotnet<Dotnet.ApplicationLocalStatesResponse>();
-        }
-
-        public static explicit operator ApplicationLocalStatesResponse(Dotnet.ApplicationLocalStatesResponse from)
-        {
-            return from.Convert().ToUnity<ApplicationLocalStatesResponse>();
         }
     }
 
@@ -5138,18 +4833,18 @@ Valid types, and where their fields are stored:
         {
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
-
-        public static explicit operator EvalDeltaKeyValue[](StateDelta wrapper)
+        
+        public static implicit operator EvalDeltaKeyValue[](StateDelta wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static explicit operator StateDelta(EvalDeltaKeyValue[] value)
+        public static implicit operator StateDelta(EvalDeltaKeyValue[] value)
         {
             return new StateDelta(value);
         }
     }
-
+    
     /// <summary>
     /// Represents a key-value store for use in an application.    
     /// </summary>
@@ -5176,18 +4871,18 @@ Valid types, and where their fields are stored:
         {
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
-
-        public static explicit operator TealKeyValue[](TealKeyValueStore wrapper)
+        
+        public static implicit operator TealKeyValue[](TealKeyValueStore wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static explicit operator TealKeyValueStore(TealKeyValue[] value)
+        public static implicit operator TealKeyValueStore(TealKeyValue[] value)
         {
             return new TealKeyValueStore(value);
         }
     }
-
+    
     /// <summary>
     /// (empty)    
     /// </summary>
@@ -5214,18 +4909,18 @@ Valid types, and where their fields are stored:
         {
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
-
-        public static explicit operator Block(BlockResponse wrapper)
+        
+        public static implicit operator Block(BlockResponse wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static explicit operator BlockResponse(Block value)
+        public static implicit operator BlockResponse(Block value)
         {
             return new BlockResponse(value);
         }
     }
-
+    
     /// <summary>
     /// (empty)    
     /// </summary>
@@ -5252,16 +4947,54 @@ Valid types, and where their fields are stored:
         {
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
-
-        public static explicit operator HealthCheck(HealthCheckResponse wrapper)
+        
+        public static implicit operator HealthCheck(HealthCheckResponse wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static explicit operator HealthCheckResponse(HealthCheck value)
+        public static implicit operator HealthCheckResponse(HealthCheck value)
         {
             return new HealthCheckResponse(value);
         }
     }
+    
+    /// <summary>
+    /// Box information    
+    /// </summary>
+    [Serializable, AlgoApiFormatter(typeof(WrappedValueFormatter<BoxResponse, Box>))]
+    public partial struct BoxResponse
+        : IEquatable<BoxResponse>
+        , IWrappedValue<Box>
+    {
+        [SerializeField]
+        Box @value;
 
+        public BoxResponse(Box value)
+        {
+            this.@value = value;
+        }
+
+        public Box WrappedValue
+        {
+            get => this.@value;
+            set => this.@value = value;
+        }
+
+        public bool Equals(BoxResponse other)
+        {
+            return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
+        }
+        
+        public static implicit operator Box(BoxResponse wrapper)
+        {
+            return wrapper.WrappedValue;
+        }
+
+        public static implicit operator BoxResponse(Box value)
+        {
+            return new BoxResponse(value);
+        }
+    }
+    
 }

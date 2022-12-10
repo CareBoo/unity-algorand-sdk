@@ -8,7 +8,7 @@ using UnityEngine.Networking;
 using Cysharp.Threading.Tasks;
 using System.Collections.Generic;
 
-namespace Algorand.Unity
+namespace Algorand.Unity.Net
 {
     public class UnityHttpMessageHandler : HttpMessageHandler
     {
@@ -19,10 +19,7 @@ namespace Algorand.Unity
             CancellationToken cancellationToken
             )
         {
-            var requestBytes = request.Content != null
-                ? request.Content.ReadAsByteArrayAsync().Result
-                : null
-                ;
+            var requestBytes = request.Content?.ReadAsByteArrayAsync().Result;
             using var uploadHandler = new UploadHandlerRaw(requestBytes);
             using var downloadHandler = new DownloadHandlerBuffer();
             using var unityWebRequest = new UnityWebRequest
@@ -32,10 +29,9 @@ namespace Algorand.Unity
                 uploadHandler = uploadHandler,
                 downloadHandler = downloadHandler,
             };
-            foreach (var header in request.Headers)
+            foreach (var (key, enumerable) in request.Headers)
             {
-                var key = header.Key;
-                var value = header.Value.First();
+                var value = enumerable.First();
                 unityWebRequest.SetRequestHeader(key, value);
             }
 

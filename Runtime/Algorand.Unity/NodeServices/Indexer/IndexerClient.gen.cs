@@ -43,13 +43,13 @@ namespace Algorand.Unity
         /// </returns>
         AlgoApiRequest.Sent<ApplicationLocalStatesResponse> LookupAccountAppLocalStates(
             string accountId,
-
+        
             Optional<ulong> applicationId = default,
-
+        
             Optional<bool> includeAll = default,
-
+        
             Optional<ulong> limit = default,
-
+        
             string next = default
         );
 
@@ -121,39 +121,39 @@ namespace Algorand.Unity
         /// </returns>
         AlgoApiRequest.Sent<TransactionsResponse> LookupAssetTransactions(
             ulong assetId,
-
+        
             byte[] notePrefix = default,
-
+        
             Optional<bool> rekeyTo = default,
-
+        
             string next = default,
-
+        
             Optional<ulong> maxRound = default,
-
+        
             DateTime afterTime = default,
-
+        
             string txType = default,
-
+        
             Optional<bool> excludeCloseTo = default,
-
+        
             Optional<ulong> limit = default,
-
+        
             DateTime beforeTime = default,
-
+        
             Optional<ulong> minRound = default,
-
+        
             Optional<ulong> currencyGreaterThan = default,
-
+        
             Address address = default,
-
+        
             Optional<ulong> currencyLessThan = default,
-
+        
             SignatureType sigType = default,
-
+        
             string txid = default,
-
+        
             AddressRole addressRole = default,
-
+        
             Optional<ulong> round = default
         );
 
@@ -189,17 +189,17 @@ namespace Algorand.Unity
         /// </returns>
         AlgoApiRequest.Sent<AssetsResponse> SearchForAssets(
             Optional<bool> includeAll = default,
-
+        
             Optional<ulong> limit = default,
-
+        
             string next = default,
-
+        
             string creator = default,
-
+        
             string name = default,
-
+        
             string unit = default,
-
+        
             Optional<ulong> assetId = default
         );
 
@@ -232,15 +232,15 @@ namespace Algorand.Unity
         /// </returns>
         AlgoApiRequest.Sent<AssetBalancesResponse> LookupAssetBalances(
             ulong assetId,
-
+        
             Optional<bool> includeAll = default,
-
+        
             Optional<ulong> limit = default,
-
+        
             string next = default,
-
+        
             Optional<ulong> currencyGreaterThan = default,
-
+        
             Optional<ulong> currencyLessThan = default
         );
 
@@ -270,14 +270,35 @@ namespace Algorand.Unity
         /// </returns>
         AlgoApiRequest.Sent<ApplicationsResponse> LookupAccountCreatedApplications(
             string accountId,
-
+        
             Optional<ulong> applicationId = default,
-
+        
             Optional<bool> includeAll = default,
-
+        
             Optional<ulong> limit = default,
-
+        
             string next = default
+        );
+
+        /// <summary>
+        /// Get box information for a given application.
+        /// </summary>
+        /// <remarks>
+        /// Given an application ID and box name, returns base64 encoded box name and value. Box names must be in the goal app call arg form 'encoding:value'. For ints, use the form 'int:1234'. For raw bytes, encode base 64 and use 'b64' prefix as in 'b64:A=='. For printable strings, use the form 'str:hello'. For addresses, use the form 'addr:XYZ...'.
+        /// </remarks>
+        /// <param name="applicationId">
+        /// 
+        /// </param>
+        /// <param name="boxName">
+        /// A box name in goal-arg form 'encoding:value'. For ints, use the form 'int:1234'. For raw bytes, use the form 'b64:A=='. For printable strings, use the form 'str:hello'. For addresses, use the form 'addr:XYZ...'.
+        /// </param>
+        /// <returns>
+        /// 
+        /// </returns>
+        AlgoApiRequest.Sent<BoxResponse> LookupApplicationBoxByIDAndName(
+            ulong applicationId,
+        
+            string boxName
         );
 
         /// <summary>
@@ -306,13 +327,13 @@ namespace Algorand.Unity
         /// </returns>
         AlgoApiRequest.Sent<AssetHoldingsResponse> LookupAccountAssets(
             string accountId,
-
+        
             Optional<ulong> assetId = default,
-
+        
             Optional<bool> includeAll = default,
-
+        
             Optional<ulong> limit = default,
-
+        
             string next = default
         );
 
@@ -342,13 +363,13 @@ namespace Algorand.Unity
         /// </returns>
         AlgoApiRequest.Sent<ApplicationsResponse> SearchForApplications(
             Optional<ulong> applicationId = default,
-
+        
             string creator = default,
-
+        
             Optional<bool> includeAll = default,
-
+        
             Optional<ulong> limit = default,
-
+        
             string next = default
         );
 
@@ -393,23 +414,23 @@ namespace Algorand.Unity
         /// </returns>
         AlgoApiRequest.Sent<AccountsResponse> SearchForAccounts(
             string next = default,
-
+        
             Optional<ulong> applicationId = default,
-
+        
             Optional<ulong> limit = default,
-
+        
             Optional<ulong> currencyGreaterThan = default,
-
+        
             Address authAddr = default,
-
+        
             Optional<ulong> assetId = default,
-
+        
             ExcludeAccountFields exclude = default,
-
+        
             Optional<ulong> currencyLessThan = default,
-
+        
             Optional<ulong> round = default,
-
+        
             Optional<bool> includeAll = default
         );
 
@@ -475,35 +496,35 @@ namespace Algorand.Unity
         /// </returns>
         AlgoApiRequest.Sent<TransactionsResponse> LookupAccountTransactions(
             string accountId,
-
+        
             byte[] notePrefix = default,
-
+        
             Optional<bool> rekeyTo = default,
-
+        
             string next = default,
-
+        
             Optional<ulong> maxRound = default,
-
+        
             DateTime afterTime = default,
-
+        
             string txType = default,
-
+        
             Optional<ulong> limit = default,
-
+        
             DateTime beforeTime = default,
-
+        
             Optional<ulong> minRound = default,
-
+        
             Optional<ulong> currencyGreaterThan = default,
-
+        
             Optional<ulong> assetId = default,
-
+        
             Optional<ulong> currencyLessThan = default,
-
+        
             SignatureType sigType = default,
-
+        
             string txid = default,
-
+        
             Optional<ulong> round = default
         );
 
@@ -578,41 +599,41 @@ namespace Algorand.Unity
         /// </returns>
         AlgoApiRequest.Sent<TransactionsResponse> SearchForTransactions(
             byte[] notePrefix = default,
-
+        
             Optional<bool> rekeyTo = default,
-
+        
             string next = default,
-
+        
             Optional<ulong> maxRound = default,
-
+        
             DateTime afterTime = default,
-
+        
             Optional<ulong> applicationId = default,
-
+        
             string txType = default,
-
+        
             Optional<bool> excludeCloseTo = default,
-
+        
             Optional<ulong> limit = default,
-
+        
             DateTime beforeTime = default,
-
+        
             Optional<ulong> minRound = default,
-
+        
             Optional<ulong> currencyGreaterThan = default,
-
+        
             Address address = default,
-
+        
             Optional<ulong> assetId = default,
-
+        
             Optional<ulong> currencyLessThan = default,
-
+        
             SignatureType sigType = default,
-
+        
             string txid = default,
-
+        
             AddressRole addressRole = default,
-
+        
             Optional<ulong> round = default
         );
 
@@ -633,7 +654,7 @@ namespace Algorand.Unity
         /// </returns>
         AlgoApiRequest.Sent<AssetResponse> LookupAssetByID(
             ulong assetId,
-
+        
             Optional<bool> includeAll = default
         );
 
@@ -654,8 +675,34 @@ namespace Algorand.Unity
         /// </returns>
         AlgoApiRequest.Sent<ApplicationResponse> LookupApplicationByID(
             ulong applicationId,
-
+        
             Optional<bool> includeAll = default
+        );
+
+        /// <summary>
+        /// Get box names for a given application.
+        /// </summary>
+        /// <remarks>
+        /// Given an application ID, returns the box names of that application sorted lexicographically.
+        /// </remarks>
+        /// <param name="applicationId">
+        /// 
+        /// </param>
+        /// <param name="limit">
+        /// Maximum number of results to return. There could be additional pages even if the limit is not reached.
+        /// </param>
+        /// <param name="next">
+        /// The next page of results. Use the next token provided by the previous results.
+        /// </param>
+        /// <returns>
+        /// 
+        /// </returns>
+        AlgoApiRequest.Sent<BoxesResponse> SearchForApplicationBoxes(
+            ulong applicationId,
+        
+            Optional<ulong> limit = default,
+        
+            string next = default
         );
 
         /// <summary>
@@ -684,13 +731,13 @@ namespace Algorand.Unity
         /// </returns>
         AlgoApiRequest.Sent<AssetsResponse> LookupAccountCreatedAssets(
             string accountId,
-
+        
             Optional<ulong> assetId = default,
-
+        
             Optional<bool> includeAll = default,
-
+        
             Optional<ulong> limit = default,
-
+        
             string next = default
         );
 
@@ -726,17 +773,17 @@ namespace Algorand.Unity
         /// </returns>
         AlgoApiRequest.Sent<ApplicationLogsResponse> LookupApplicationLogsByID(
             ulong applicationId,
-
+        
             Optional<ulong> limit = default,
-
+        
             string next = default,
-
+        
             string txid = default,
-
+        
             Optional<ulong> minRound = default,
-
+        
             Optional<ulong> maxRound = default,
-
+        
             Address senderAddress = default
         );
 
@@ -753,7 +800,7 @@ namespace Algorand.Unity
         /// 
         /// </returns>
         AlgoApiRequest.Sent<HealthCheckResponse> MakeHealthCheck(
-
+             
         );
 
         /// <summary>
@@ -779,11 +826,11 @@ namespace Algorand.Unity
         /// </returns>
         AlgoApiRequest.Sent<AccountResponse> LookupAccountByID(
             string accountId,
-
+        
             Optional<ulong> round = default,
-
+        
             Optional<bool> includeAll = default,
-
+        
             ExcludeAccountFields exclude = default
         );
 
@@ -804,7 +851,7 @@ namespace Algorand.Unity
         /// </returns>
         AlgoApiRequest.Sent<BlockResponse> LookupBlock(
             ulong roundNumber,
-
+        
             Optional<bool> headerOnly = default
         );
 
@@ -832,13 +879,13 @@ namespace Algorand.Unity
         /// <inheritdoc />
         public AlgoApiRequest.Sent<ApplicationLocalStatesResponse> LookupAccountAppLocalStates(
             string accountId,
-
+        
             Optional<ulong> applicationId = default,
-
+        
             Optional<bool> includeAll = default,
-
+        
             Optional<ulong> limit = default,
-
+        
             string next = default
         )
         {
@@ -851,7 +898,7 @@ namespace Algorand.Unity
             var path = $"/v2/accounts/{accountId}/apps-local-state{queryBuilder}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
@@ -859,39 +906,39 @@ namespace Algorand.Unity
         /// <inheritdoc />
         public AlgoApiRequest.Sent<TransactionsResponse> LookupAssetTransactions(
             ulong assetId,
-
+        
             byte[] notePrefix = default,
-
+        
             Optional<bool> rekeyTo = default,
-
+        
             string next = default,
-
+        
             Optional<ulong> maxRound = default,
-
+        
             DateTime afterTime = default,
-
+        
             string txType = default,
-
+        
             Optional<bool> excludeCloseTo = default,
-
+        
             Optional<ulong> limit = default,
-
+        
             DateTime beforeTime = default,
-
+        
             Optional<ulong> minRound = default,
-
+        
             Optional<ulong> currencyGreaterThan = default,
-
+        
             Address address = default,
-
+        
             Optional<ulong> currencyLessThan = default,
-
+        
             SignatureType sigType = default,
-
+        
             string txid = default,
-
+        
             AddressRole addressRole = default,
-
+        
             Optional<ulong> round = default
         )
         {
@@ -917,7 +964,7 @@ namespace Algorand.Unity
             var path = $"/v2/assets/{assetId}/transactions{queryBuilder}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
@@ -925,17 +972,17 @@ namespace Algorand.Unity
         /// <inheritdoc />
         public AlgoApiRequest.Sent<AssetsResponse> SearchForAssets(
             Optional<bool> includeAll = default,
-
+        
             Optional<ulong> limit = default,
-
+        
             string next = default,
-
+        
             string creator = default,
-
+        
             string name = default,
-
+        
             string unit = default,
-
+        
             Optional<ulong> assetId = default
         )
         {
@@ -951,7 +998,7 @@ namespace Algorand.Unity
             var path = $"/v2/assets{queryBuilder}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
@@ -959,15 +1006,15 @@ namespace Algorand.Unity
         /// <inheritdoc />
         public AlgoApiRequest.Sent<AssetBalancesResponse> LookupAssetBalances(
             ulong assetId,
-
+        
             Optional<bool> includeAll = default,
-
+        
             Optional<ulong> limit = default,
-
+        
             string next = default,
-
+        
             Optional<ulong> currencyGreaterThan = default,
-
+        
             Optional<ulong> currencyLessThan = default
         )
         {
@@ -981,7 +1028,7 @@ namespace Algorand.Unity
             var path = $"/v2/assets/{assetId}/balances{queryBuilder}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
@@ -989,13 +1036,13 @@ namespace Algorand.Unity
         /// <inheritdoc />
         public AlgoApiRequest.Sent<ApplicationsResponse> LookupAccountCreatedApplications(
             string accountId,
-
+        
             Optional<ulong> applicationId = default,
-
+        
             Optional<bool> includeAll = default,
-
+        
             Optional<ulong> limit = default,
-
+        
             string next = default
         )
         {
@@ -1008,7 +1055,25 @@ namespace Algorand.Unity
             var path = $"/v2/accounts/{accountId}/created-applications{queryBuilder}";
             return this
                 .Get(path)
+                
+                .Send()
+                ;
+        }
 
+        /// <inheritdoc />
+        public AlgoApiRequest.Sent<BoxResponse> LookupApplicationBoxByIDAndName(
+            ulong applicationId,
+        
+            string boxName
+        )
+        {
+            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+                .Add("box-name", boxName)
+                ;
+            var path = $"/v2/applications/{applicationId}/box{queryBuilder}";
+            return this
+                .Get(path)
+                
                 .Send()
                 ;
         }
@@ -1016,13 +1081,13 @@ namespace Algorand.Unity
         /// <inheritdoc />
         public AlgoApiRequest.Sent<AssetHoldingsResponse> LookupAccountAssets(
             string accountId,
-
+        
             Optional<ulong> assetId = default,
-
+        
             Optional<bool> includeAll = default,
-
+        
             Optional<ulong> limit = default,
-
+        
             string next = default
         )
         {
@@ -1035,7 +1100,7 @@ namespace Algorand.Unity
             var path = $"/v2/accounts/{accountId}/assets{queryBuilder}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
@@ -1043,13 +1108,13 @@ namespace Algorand.Unity
         /// <inheritdoc />
         public AlgoApiRequest.Sent<ApplicationsResponse> SearchForApplications(
             Optional<ulong> applicationId = default,
-
+        
             string creator = default,
-
+        
             Optional<bool> includeAll = default,
-
+        
             Optional<ulong> limit = default,
-
+        
             string next = default
         )
         {
@@ -1063,7 +1128,7 @@ namespace Algorand.Unity
             var path = $"/v2/applications{queryBuilder}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
@@ -1071,23 +1136,23 @@ namespace Algorand.Unity
         /// <inheritdoc />
         public AlgoApiRequest.Sent<AccountsResponse> SearchForAccounts(
             string next = default,
-
+        
             Optional<ulong> applicationId = default,
-
+        
             Optional<ulong> limit = default,
-
+        
             Optional<ulong> currencyGreaterThan = default,
-
+        
             Address authAddr = default,
-
+        
             Optional<ulong> assetId = default,
-
+        
             ExcludeAccountFields exclude = default,
-
+        
             Optional<ulong> currencyLessThan = default,
-
+        
             Optional<ulong> round = default,
-
+        
             Optional<bool> includeAll = default
         )
         {
@@ -1106,7 +1171,7 @@ namespace Algorand.Unity
             var path = $"/v2/accounts{queryBuilder}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
@@ -1114,35 +1179,35 @@ namespace Algorand.Unity
         /// <inheritdoc />
         public AlgoApiRequest.Sent<TransactionsResponse> LookupAccountTransactions(
             string accountId,
-
+        
             byte[] notePrefix = default,
-
+        
             Optional<bool> rekeyTo = default,
-
+        
             string next = default,
-
+        
             Optional<ulong> maxRound = default,
-
+        
             DateTime afterTime = default,
-
+        
             string txType = default,
-
+        
             Optional<ulong> limit = default,
-
+        
             DateTime beforeTime = default,
-
+        
             Optional<ulong> minRound = default,
-
+        
             Optional<ulong> currencyGreaterThan = default,
-
+        
             Optional<ulong> assetId = default,
-
+        
             Optional<ulong> currencyLessThan = default,
-
+        
             SignatureType sigType = default,
-
+        
             string txid = default,
-
+        
             Optional<ulong> round = default
         )
         {
@@ -1166,7 +1231,7 @@ namespace Algorand.Unity
             var path = $"/v2/accounts/{accountId}/transactions{queryBuilder}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
@@ -1174,41 +1239,41 @@ namespace Algorand.Unity
         /// <inheritdoc />
         public AlgoApiRequest.Sent<TransactionsResponse> SearchForTransactions(
             byte[] notePrefix = default,
-
+        
             Optional<bool> rekeyTo = default,
-
+        
             string next = default,
-
+        
             Optional<ulong> maxRound = default,
-
+        
             DateTime afterTime = default,
-
+        
             Optional<ulong> applicationId = default,
-
+        
             string txType = default,
-
+        
             Optional<bool> excludeCloseTo = default,
-
+        
             Optional<ulong> limit = default,
-
+        
             DateTime beforeTime = default,
-
+        
             Optional<ulong> minRound = default,
-
+        
             Optional<ulong> currencyGreaterThan = default,
-
+        
             Address address = default,
-
+        
             Optional<ulong> assetId = default,
-
+        
             Optional<ulong> currencyLessThan = default,
-
+        
             SignatureType sigType = default,
-
+        
             string txid = default,
-
+        
             AddressRole addressRole = default,
-
+        
             Optional<ulong> round = default
         )
         {
@@ -1236,7 +1301,7 @@ namespace Algorand.Unity
             var path = $"/v2/transactions{queryBuilder}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
@@ -1244,7 +1309,7 @@ namespace Algorand.Unity
         /// <inheritdoc />
         public AlgoApiRequest.Sent<AssetResponse> LookupAssetByID(
             ulong assetId,
-
+        
             Optional<bool> includeAll = default
         )
         {
@@ -1254,7 +1319,7 @@ namespace Algorand.Unity
             var path = $"/v2/assets/{assetId}{queryBuilder}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
@@ -1262,7 +1327,7 @@ namespace Algorand.Unity
         /// <inheritdoc />
         public AlgoApiRequest.Sent<ApplicationResponse> LookupApplicationByID(
             ulong applicationId,
-
+        
             Optional<bool> includeAll = default
         )
         {
@@ -1272,7 +1337,28 @@ namespace Algorand.Unity
             var path = $"/v2/applications/{applicationId}{queryBuilder}";
             return this
                 .Get(path)
+                
+                .Send()
+                ;
+        }
 
+        /// <inheritdoc />
+        public AlgoApiRequest.Sent<BoxesResponse> SearchForApplicationBoxes(
+            ulong applicationId,
+        
+            Optional<ulong> limit = default,
+        
+            string next = default
+        )
+        {
+            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+                .Add("limit", limit)
+                .Add("next", next)
+                ;
+            var path = $"/v2/applications/{applicationId}/boxes{queryBuilder}";
+            return this
+                .Get(path)
+                
                 .Send()
                 ;
         }
@@ -1280,13 +1366,13 @@ namespace Algorand.Unity
         /// <inheritdoc />
         public AlgoApiRequest.Sent<AssetsResponse> LookupAccountCreatedAssets(
             string accountId,
-
+        
             Optional<ulong> assetId = default,
-
+        
             Optional<bool> includeAll = default,
-
+        
             Optional<ulong> limit = default,
-
+        
             string next = default
         )
         {
@@ -1299,7 +1385,7 @@ namespace Algorand.Unity
             var path = $"/v2/accounts/{accountId}/created-assets{queryBuilder}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
@@ -1307,17 +1393,17 @@ namespace Algorand.Unity
         /// <inheritdoc />
         public AlgoApiRequest.Sent<ApplicationLogsResponse> LookupApplicationLogsByID(
             ulong applicationId,
-
+        
             Optional<ulong> limit = default,
-
+        
             string next = default,
-
+        
             string txid = default,
-
+        
             Optional<ulong> minRound = default,
-
+        
             Optional<ulong> maxRound = default,
-
+        
             Address senderAddress = default
         )
         {
@@ -1332,20 +1418,20 @@ namespace Algorand.Unity
             var path = $"/v2/applications/{applicationId}/logs{queryBuilder}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
 
         /// <inheritdoc />
         public AlgoApiRequest.Sent<HealthCheckResponse> MakeHealthCheck(
-
+             
         )
         {
             var path = $"/health";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
@@ -1353,11 +1439,11 @@ namespace Algorand.Unity
         /// <inheritdoc />
         public AlgoApiRequest.Sent<AccountResponse> LookupAccountByID(
             string accountId,
-
+        
             Optional<ulong> round = default,
-
+        
             Optional<bool> includeAll = default,
-
+        
             ExcludeAccountFields exclude = default
         )
         {
@@ -1369,7 +1455,7 @@ namespace Algorand.Unity
             var path = $"/v2/accounts/{accountId}{queryBuilder}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
@@ -1377,7 +1463,7 @@ namespace Algorand.Unity
         /// <inheritdoc />
         public AlgoApiRequest.Sent<BlockResponse> LookupBlock(
             ulong roundNumber,
-
+        
             Optional<bool> headerOnly = default
         )
         {
@@ -1387,7 +1473,7 @@ namespace Algorand.Unity
             var path = $"/v2/blocks/{roundNumber}{queryBuilder}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }
@@ -1400,7 +1486,7 @@ namespace Algorand.Unity
             var path = $"/v2/transactions/{txid}";
             return this
                 .Get(path)
-
+                
                 .Send()
                 ;
         }

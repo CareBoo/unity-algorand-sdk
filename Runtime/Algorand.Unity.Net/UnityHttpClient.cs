@@ -1,7 +1,7 @@
 using System;
 using System.Net.Http;
 
-namespace Algorand.Unity
+namespace Algorand.Unity.Net
 {
     public class UnityHttpClient : HttpClient
     {

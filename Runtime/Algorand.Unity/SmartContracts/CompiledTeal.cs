@@ -73,15 +73,5 @@ namespace Algorand.Unity
         public static implicit operator CompiledTeal(NativeArray<byte>.ReadOnly x) => x.ToArray();
 
         public static implicit operator CompiledTeal(NativeList<byte> x) => x.ToArray();
-
-        public static implicit operator Algorand.TEALProgram(CompiledTeal from)
-        {
-            return from.Convert().ToDotnet<Algorand.TEALProgram>();
-        }
-
-        public static implicit operator CompiledTeal(Algorand.TEALProgram from)
-        {
-            return from.Convert().ToUnity<CompiledTeal>();
-        }
     }
 }

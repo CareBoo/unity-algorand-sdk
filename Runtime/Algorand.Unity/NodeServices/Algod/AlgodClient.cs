@@ -116,25 +116,5 @@ namespace Algorand.Unity
                     Message = $"Waiting for transaction id {txid} timed out"
                 });
         }
-
-        public Algorand.Algod.CommonApi ToCommonApi()
-        {
-            return (Algorand.Algod.CommonApi)this;
-        }
-
-        public Algorand.Algod.DefaultApi ToDefaultApi()
-        {
-            return (Algorand.Algod.DefaultApi)this;
-        }
-
-        public static explicit operator Algorand.Algod.CommonApi(AlgodClient algod)
-        {
-            return new Algorand.Algod.CommonApi(algod.ToHttpClient());
-        }
-
-        public static explicit operator Algorand.Algod.DefaultApi(AlgodClient algod)
-        {
-            return new Algorand.Algod.DefaultApi(algod.ToHttpClient());
-        }
     }
 }

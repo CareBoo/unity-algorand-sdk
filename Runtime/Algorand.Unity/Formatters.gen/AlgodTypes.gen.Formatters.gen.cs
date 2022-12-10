@@ -134,6 +134,23 @@ namespace Algorand.Unity.Algod
 {
     
     
+    public partial struct Box
+    {
+        
+        private static bool @__generated__IsValid = Box.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.Box>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.Box>(false).Assign("name", (Algorand.Unity.Algod.Box x) => x.Name, (ref Algorand.Unity.Algod.Box x, System.Byte[] value) => x.Name = value, Algorand.Unity.ArrayComparer<System.Byte>.Instance).Assign("value", (Algorand.Unity.Algod.Box x) => x.Value, (ref Algorand.Unity.Algod.Box x, System.Byte[] value) => x.Value = value, Algorand.Unity.ArrayComparer<System.Byte>.Instance));
+            return true;
+        }
+    }
+}
+
+namespace Algorand.Unity.Algod
+{
+    
+    
     public partial struct BuildVersion
     {
         
@@ -175,7 +192,7 @@ namespace Algorand.Unity.Algod
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.StateProof>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.StateProof>(false).Assign("Message", (Algorand.Unity.Algod.StateProof x) => x.Message, (ref Algorand.Unity.Algod.StateProof x, Algorand.Unity.Algod.StateProofMessage value) => x.Message = value).Assign("StateProof", (Algorand.Unity.Algod.StateProof x) => x.EncodedStateProof, (ref Algorand.Unity.Algod.StateProof x, System.Byte[] value) => x.EncodedStateProof = value, Algorand.Unity.ArrayComparer<System.Byte>.Instance));
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.StateProof>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.StateProof>(false).Assign("Message", (Algorand.Unity.Algod.StateProof x) => x.Message, (ref Algorand.Unity.Algod.StateProof x, Algorand.Unity.Algod.StateProofMessage value) => x.Message = value).Assign("StateProof", (Algorand.Unity.Algod.StateProof x) => x.Encoded, (ref Algorand.Unity.Algod.StateProof x, System.Byte[] value) => x.Encoded = value, Algorand.Unity.ArrayComparer<System.Byte>.Instance));
             return true;
         }
     }
@@ -294,7 +311,7 @@ namespace Algorand.Unity.Algod
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.Account>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.Account>(false).Assign("amount", (Algorand.Unity.Algod.Account x) => x.Amount, (ref Algorand.Unity.Algod.Account x, System.UInt64 value) => x.Amount = value).Assign("address", (Algorand.Unity.Algod.Account x) => x.Address, (ref Algorand.Unity.Algod.Account x, System.String value) => x.Address = value, Algorand.Unity.StringComparer.Instance).Assign("rewards", (Algorand.Unity.Algod.Account x) => x.Rewards, (ref Algorand.Unity.Algod.Account x, System.UInt64 value) => x.Rewards = value).Assign("amount-without-pending-rewards", (Algorand.Unity.Algod.Account x) => x.AmountWithoutPendingRewards, (ref Algorand.Unity.Algod.Account x, System.UInt64 value) => x.AmountWithoutPendingRewards = value).Assign("apps-total-extra-pages", (Algorand.Unity.Algod.Account x) => x.AppsTotalExtraPages, (ref Algorand.Unity.Algod.Account x, Algorand.Unity.Optional<System.UInt64> value) => x.AppsTotalExtraPages = value).Assign("total-assets-opted-in", (Algorand.Unity.Algod.Account x) => x.TotalAssetsOptedIn, (ref Algorand.Unity.Algod.Account x, System.UInt64 value) => x.TotalAssetsOptedIn = value).Assign("assets", (Algorand.Unity.Algod.Account x) => x.Assets, (ref Algorand.Unity.Algod.Account x, Algorand.Unity.Algod.AssetHolding[] value) => x.Assets = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Algod.AssetHolding>.Instance).Assign("participation", (Algorand.Unity.Algod.Account x) => x.Participation, (ref Algorand.Unity.Algod.Account x, Algorand.Unity.Algod.AccountParticipation value) => x.Participation = value).Assign("apps-total-schema", (Algorand.Unity.Algod.Account x) => x.AppsTotalSchema, (ref Algorand.Unity.Algod.Account x, Algorand.Unity.Algod.ApplicationStateSchema value) => x.AppsTotalSchema = value).Assign("total-apps-opted-in", (Algorand.Unity.Algod.Account x) => x.TotalAppsOptedIn, (ref Algorand.Unity.Algod.Account x, System.UInt64 value) => x.TotalAppsOptedIn = value).Assign("round", (Algorand.Unity.Algod.Account x) => x.Round, (ref Algorand.Unity.Algod.Account x, System.UInt64 value) => x.Round = value).Assign("pending-rewards", (Algorand.Unity.Algod.Account x) => x.PendingRewards, (ref Algorand.Unity.Algod.Account x, System.UInt64 value) => x.PendingRewards = value).Assign("created-apps", (Algorand.Unity.Algod.Account x) => x.CreatedApps, (ref Algorand.Unity.Algod.Account x, Algorand.Unity.Algod.Application[] value) => x.CreatedApps = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Algod.Application>.Instance).Assign("status", (Algorand.Unity.Algod.Account x) => x.Status, (ref Algorand.Unity.Algod.Account x, System.String value) => x.Status = value, Algorand.Unity.StringComparer.Instance).Assign("sig-type", (Algorand.Unity.Algod.Account x) => x.SigType, (ref Algorand.Unity.Algod.Account x, Algorand.Unity.SignatureType value) => x.SigType = value, Algorand.Unity.ByteEnumComparer<Algorand.Unity.SignatureType>.Instance).Assign("auth-addr", (Algorand.Unity.Algod.Account x) => x.AuthAddr, (ref Algorand.Unity.Algod.Account x, Algorand.Unity.Address value) => x.AuthAddr = value).Assign("total-created-assets", (Algorand.Unity.Algod.Account x) => x.TotalCreatedAssets, (ref Algorand.Unity.Algod.Account x, System.UInt64 value) => x.TotalCreatedAssets = value).Assign("min-balance", (Algorand.Unity.Algod.Account x) => x.MinBalance, (ref Algorand.Unity.Algod.Account x, System.UInt64 value) => x.MinBalance = value).Assign("reward-base", (Algorand.Unity.Algod.Account x) => x.RewardBase, (ref Algorand.Unity.Algod.Account x, Algorand.Unity.Optional<System.UInt64> value) => x.RewardBase = value).Assign("created-assets", (Algorand.Unity.Algod.Account x) => x.CreatedAssets, (ref Algorand.Unity.Algod.Account x, Algorand.Unity.Algod.Asset[] value) => x.CreatedAssets = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Algod.Asset>.Instance).Assign("apps-local-state", (Algorand.Unity.Algod.Account x) => x.AppsLocalState, (ref Algorand.Unity.Algod.Account x, Algorand.Unity.Algod.ApplicationLocalState[] value) => x.AppsLocalState = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Algod.ApplicationLocalState>.Instance).Assign("total-created-apps", (Algorand.Unity.Algod.Account x) => x.TotalCreatedApps, (ref Algorand.Unity.Algod.Account x, System.UInt64 value) => x.TotalCreatedApps = value));
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.Account>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.Account>(false).Assign("amount", (Algorand.Unity.Algod.Account x) => x.Amount, (ref Algorand.Unity.Algod.Account x, System.UInt64 value) => x.Amount = value).Assign("address", (Algorand.Unity.Algod.Account x) => x.Address, (ref Algorand.Unity.Algod.Account x, System.String value) => x.Address = value, Algorand.Unity.StringComparer.Instance).Assign("rewards", (Algorand.Unity.Algod.Account x) => x.Rewards, (ref Algorand.Unity.Algod.Account x, System.UInt64 value) => x.Rewards = value).Assign("amount-without-pending-rewards", (Algorand.Unity.Algod.Account x) => x.AmountWithoutPendingRewards, (ref Algorand.Unity.Algod.Account x, System.UInt64 value) => x.AmountWithoutPendingRewards = value).Assign("apps-total-extra-pages", (Algorand.Unity.Algod.Account x) => x.AppsTotalExtraPages, (ref Algorand.Unity.Algod.Account x, Algorand.Unity.Optional<System.UInt64> value) => x.AppsTotalExtraPages = value).Assign("total-assets-opted-in", (Algorand.Unity.Algod.Account x) => x.TotalAssetsOptedIn, (ref Algorand.Unity.Algod.Account x, System.UInt64 value) => x.TotalAssetsOptedIn = value).Assign("assets", (Algorand.Unity.Algod.Account x) => x.Assets, (ref Algorand.Unity.Algod.Account x, Algorand.Unity.Algod.AssetHolding[] value) => x.Assets = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Algod.AssetHolding>.Instance).Assign("participation", (Algorand.Unity.Algod.Account x) => x.Participation, (ref Algorand.Unity.Algod.Account x, Algorand.Unity.Algod.AccountParticipation value) => x.Participation = value).Assign("total-box-bytes", (Algorand.Unity.Algod.Account x) => x.TotalBoxBytes, (ref Algorand.Unity.Algod.Account x, Algorand.Unity.Optional<System.UInt64> value) => x.TotalBoxBytes = value).Assign("apps-total-schema", (Algorand.Unity.Algod.Account x) => x.AppsTotalSchema, (ref Algorand.Unity.Algod.Account x, Algorand.Unity.Algod.ApplicationStateSchema value) => x.AppsTotalSchema = value).Assign("total-apps-opted-in", (Algorand.Unity.Algod.Account x) => x.TotalAppsOptedIn, (ref Algorand.Unity.Algod.Account x, System.UInt64 value) => x.TotalAppsOptedIn = value).Assign("round", (Algorand.Unity.Algod.Account x) => x.Round, (ref Algorand.Unity.Algod.Account x, System.UInt64 value) => x.Round = value).Assign("pending-rewards", (Algorand.Unity.Algod.Account x) => x.PendingRewards, (ref Algorand.Unity.Algod.Account x, System.UInt64 value) => x.PendingRewards = value).Assign("created-apps", (Algorand.Unity.Algod.Account x) => x.CreatedApps, (ref Algorand.Unity.Algod.Account x, Algorand.Unity.Algod.Application[] value) => x.CreatedApps = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Algod.Application>.Instance).Assign("total-boxes", (Algorand.Unity.Algod.Account x) => x.TotalBoxes, (ref Algorand.Unity.Algod.Account x, Algorand.Unity.Optional<System.UInt64> value) => x.TotalBoxes = value).Assign("status", (Algorand.Unity.Algod.Account x) => x.Status, (ref Algorand.Unity.Algod.Account x, System.String value) => x.Status = value, Algorand.Unity.StringComparer.Instance).Assign("sig-type", (Algorand.Unity.Algod.Account x) => x.SigType, (ref Algorand.Unity.Algod.Account x, Algorand.Unity.SignatureType value) => x.SigType = value, Algorand.Unity.ByteEnumComparer<Algorand.Unity.SignatureType>.Instance).Assign("auth-addr", (Algorand.Unity.Algod.Account x) => x.AuthAddr, (ref Algorand.Unity.Algod.Account x, Algorand.Unity.Address value) => x.AuthAddr = value).Assign("total-created-assets", (Algorand.Unity.Algod.Account x) => x.TotalCreatedAssets, (ref Algorand.Unity.Algod.Account x, System.UInt64 value) => x.TotalCreatedAssets = value).Assign("min-balance", (Algorand.Unity.Algod.Account x) => x.MinBalance, (ref Algorand.Unity.Algod.Account x, System.UInt64 value) => x.MinBalance = value).Assign("reward-base", (Algorand.Unity.Algod.Account x) => x.RewardBase, (ref Algorand.Unity.Algod.Account x, Algorand.Unity.Optional<System.UInt64> value) => x.RewardBase = value).Assign("created-assets", (Algorand.Unity.Algod.Account x) => x.CreatedAssets, (ref Algorand.Unity.Algod.Account x, Algorand.Unity.Algod.Asset[] value) => x.CreatedAssets = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Algod.Asset>.Instance).Assign("apps-local-state", (Algorand.Unity.Algod.Account x) => x.AppsLocalState, (ref Algorand.Unity.Algod.Account x, Algorand.Unity.Algod.ApplicationLocalState[] value) => x.AppsLocalState = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Algod.ApplicationLocalState>.Instance).Assign("total-created-apps", (Algorand.Unity.Algod.Account x) => x.TotalCreatedApps, (ref Algorand.Unity.Algod.Account x, System.UInt64 value) => x.TotalCreatedApps = value));
             return true;
         }
     }
@@ -363,6 +380,23 @@ namespace Algorand.Unity.Algod
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.ApplicationLocalState>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.ApplicationLocalState>(false).Assign("id", (Algorand.Unity.Algod.ApplicationLocalState x) => x.Id, (ref Algorand.Unity.Algod.ApplicationLocalState x, System.UInt64 value) => x.Id = value).Assign("schema", (Algorand.Unity.Algod.ApplicationLocalState x) => x.Schema, (ref Algorand.Unity.Algod.ApplicationLocalState x, Algorand.Unity.Algod.ApplicationStateSchema value) => x.Schema = value).Assign("key-value", (Algorand.Unity.Algod.ApplicationLocalState x) => x.KeyValue, (ref Algorand.Unity.Algod.ApplicationLocalState x, Algorand.Unity.Algod.TealKeyValueStore value) => x.KeyValue = value));
+            return true;
+        }
+    }
+}
+
+namespace Algorand.Unity.Algod
+{
+    
+    
+    public partial struct BoxDescriptor
+    {
+        
+        private static bool @__generated__IsValid = BoxDescriptor.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.BoxDescriptor>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.BoxDescriptor>(false).Assign("name", (Algorand.Unity.Algod.BoxDescriptor x) => x.Name, (ref Algorand.Unity.Algod.BoxDescriptor x, System.Byte[] value) => x.Name = value, Algorand.Unity.ArrayComparer<System.Byte>.Instance));
             return true;
         }
     }
@@ -491,6 +525,23 @@ namespace Algorand.Unity.Algod
 {
     
     
+    public partial struct BoxesResponse
+    {
+        
+        private static bool @__generated__IsValid = BoxesResponse.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.BoxesResponse>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.BoxesResponse>(false).Assign("boxes", (Algorand.Unity.Algod.BoxesResponse x) => x.Boxes, (ref Algorand.Unity.Algod.BoxesResponse x, Algorand.Unity.Algod.BoxDescriptor[] value) => x.Boxes = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Algod.BoxDescriptor>.Instance));
+            return true;
+        }
+    }
+}
+
+namespace Algorand.Unity.Algod
+{
+    
+    
     public partial struct TransactionProofResponse
     {
         
@@ -600,7 +651,7 @@ namespace Algorand.Unity.Algod
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.NodeStatusResponse>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.NodeStatusResponse>(false).Assign("stopped-at-unsupported-round", (Algorand.Unity.Algod.NodeStatusResponse x) => x.StoppedAtUnsupportedRound, (ref Algorand.Unity.Algod.NodeStatusResponse x, System.Boolean value) => x.StoppedAtUnsupportedRound = value).Assign("catchpoint-total-blocks", (Algorand.Unity.Algod.NodeStatusResponse x) => x.CatchpointTotalBlocks, (ref Algorand.Unity.Algod.NodeStatusResponse x, Algorand.Unity.Optional<System.UInt64> value) => x.CatchpointTotalBlocks = value).Assign("last-version", (Algorand.Unity.Algod.NodeStatusResponse x) => x.LastVersion, (ref Algorand.Unity.Algod.NodeStatusResponse x, System.String value) => x.LastVersion = value, Algorand.Unity.StringComparer.Instance).Assign("next-version-round", (Algorand.Unity.Algod.NodeStatusResponse x) => x.NextVersionRound, (ref Algorand.Unity.Algod.NodeStatusResponse x, System.UInt64 value) => x.NextVersionRound = value).Assign("catchpoint-total-accounts", (Algorand.Unity.Algod.NodeStatusResponse x) => x.CatchpointTotalAccounts, (ref Algorand.Unity.Algod.NodeStatusResponse x, Algorand.Unity.Optional<System.UInt64> value) => x.CatchpointTotalAccounts = value).Assign("time-since-last-round", (Algorand.Unity.Algod.NodeStatusResponse x) => x.TimeSinceLastRound, (ref Algorand.Unity.Algod.NodeStatusResponse x, System.UInt64 value) => x.TimeSinceLastRound = value).Assign("next-version", (Algorand.Unity.Algod.NodeStatusResponse x) => x.NextVersion, (ref Algorand.Unity.Algod.NodeStatusResponse x, System.String value) => x.NextVersion = value, Algorand.Unity.StringComparer.Instance).Assign("catchpoint-verified-accounts", (Algorand.Unity.Algod.NodeStatusResponse x) => x.CatchpointVerifiedAccounts, (ref Algorand.Unity.Algod.NodeStatusResponse x, Algorand.Unity.Optional<System.UInt64> value) => x.CatchpointVerifiedAccounts = value).Assign("catchup-time", (Algorand.Unity.Algod.NodeStatusResponse x) => x.CatchupTime, (ref Algorand.Unity.Algod.NodeStatusResponse x, System.UInt64 value) => x.CatchupTime = value).Assign("last-catchpoint", (Algorand.Unity.Algod.NodeStatusResponse x) => x.LastCatchpoint, (ref Algorand.Unity.Algod.NodeStatusResponse x, System.String value) => x.LastCatchpoint = value, Algorand.Unity.StringComparer.Instance).Assign("last-round", (Algorand.Unity.Algod.NodeStatusResponse x) => x.LastRound, (ref Algorand.Unity.Algod.NodeStatusResponse x, System.UInt64 value) => x.LastRound = value).Assign("next-version-supported", (Algorand.Unity.Algod.NodeStatusResponse x) => x.NextVersionSupported, (ref Algorand.Unity.Algod.NodeStatusResponse x, System.Boolean value) => x.NextVersionSupported = value).Assign("catchpoint", (Algorand.Unity.Algod.NodeStatusResponse x) => x.Catchpoint, (ref Algorand.Unity.Algod.NodeStatusResponse x, System.String value) => x.Catchpoint = value, Algorand.Unity.StringComparer.Instance).Assign("catchpoint-acquired-blocks", (Algorand.Unity.Algod.NodeStatusResponse x) => x.CatchpointAcquiredBlocks, (ref Algorand.Unity.Algod.NodeStatusResponse x, Algorand.Unity.Optional<System.UInt64> value) => x.CatchpointAcquiredBlocks = value).Assign("catchpoint-processed-accounts", (Algorand.Unity.Algod.NodeStatusResponse x) => x.CatchpointProcessedAccounts, (ref Algorand.Unity.Algod.NodeStatusResponse x, Algorand.Unity.Optional<System.UInt64> value) => x.CatchpointProcessedAccounts = value));
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.NodeStatusResponse>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.NodeStatusResponse>(false).Assign("stopped-at-unsupported-round", (Algorand.Unity.Algod.NodeStatusResponse x) => x.StoppedAtUnsupportedRound, (ref Algorand.Unity.Algod.NodeStatusResponse x, System.Boolean value) => x.StoppedAtUnsupportedRound = value).Assign("catchpoint-total-blocks", (Algorand.Unity.Algod.NodeStatusResponse x) => x.CatchpointTotalBlocks, (ref Algorand.Unity.Algod.NodeStatusResponse x, Algorand.Unity.Optional<System.UInt64> value) => x.CatchpointTotalBlocks = value).Assign("last-version", (Algorand.Unity.Algod.NodeStatusResponse x) => x.LastVersion, (ref Algorand.Unity.Algod.NodeStatusResponse x, System.String value) => x.LastVersion = value, Algorand.Unity.StringComparer.Instance).Assign("next-version-round", (Algorand.Unity.Algod.NodeStatusResponse x) => x.NextVersionRound, (ref Algorand.Unity.Algod.NodeStatusResponse x, System.UInt64 value) => x.NextVersionRound = value).Assign("catchpoint-total-accounts", (Algorand.Unity.Algod.NodeStatusResponse x) => x.CatchpointTotalAccounts, (ref Algorand.Unity.Algod.NodeStatusResponse x, Algorand.Unity.Optional<System.UInt64> value) => x.CatchpointTotalAccounts = value).Assign("time-since-last-round", (Algorand.Unity.Algod.NodeStatusResponse x) => x.TimeSinceLastRound, (ref Algorand.Unity.Algod.NodeStatusResponse x, System.UInt64 value) => x.TimeSinceLastRound = value).Assign("next-version", (Algorand.Unity.Algod.NodeStatusResponse x) => x.NextVersion, (ref Algorand.Unity.Algod.NodeStatusResponse x, System.String value) => x.NextVersion = value, Algorand.Unity.StringComparer.Instance).Assign("catchpoint-verified-kvs", (Algorand.Unity.Algod.NodeStatusResponse x) => x.CatchpointVerifiedKvs, (ref Algorand.Unity.Algod.NodeStatusResponse x, Algorand.Unity.Optional<System.UInt64> value) => x.CatchpointVerifiedKvs = value).Assign("catchpoint-processed-kvs", (Algorand.Unity.Algod.NodeStatusResponse x) => x.CatchpointProcessedKvs, (ref Algorand.Unity.Algod.NodeStatusResponse x, Algorand.Unity.Optional<System.UInt64> value) => x.CatchpointProcessedKvs = value).Assign("catchpoint-verified-accounts", (Algorand.Unity.Algod.NodeStatusResponse x) => x.CatchpointVerifiedAccounts, (ref Algorand.Unity.Algod.NodeStatusResponse x, Algorand.Unity.Optional<System.UInt64> value) => x.CatchpointVerifiedAccounts = value).Assign("catchup-time", (Algorand.Unity.Algod.NodeStatusResponse x) => x.CatchupTime, (ref Algorand.Unity.Algod.NodeStatusResponse x, System.UInt64 value) => x.CatchupTime = value).Assign("last-catchpoint", (Algorand.Unity.Algod.NodeStatusResponse x) => x.LastCatchpoint, (ref Algorand.Unity.Algod.NodeStatusResponse x, System.String value) => x.LastCatchpoint = value, Algorand.Unity.StringComparer.Instance).Assign("last-round", (Algorand.Unity.Algod.NodeStatusResponse x) => x.LastRound, (ref Algorand.Unity.Algod.NodeStatusResponse x, System.UInt64 value) => x.LastRound = value).Assign("next-version-supported", (Algorand.Unity.Algod.NodeStatusResponse x) => x.NextVersionSupported, (ref Algorand.Unity.Algod.NodeStatusResponse x, System.Boolean value) => x.NextVersionSupported = value).Assign("catchpoint", (Algorand.Unity.Algod.NodeStatusResponse x) => x.Catchpoint, (ref Algorand.Unity.Algod.NodeStatusResponse x, System.String value) => x.Catchpoint = value, Algorand.Unity.StringComparer.Instance).Assign("catchpoint-acquired-blocks", (Algorand.Unity.Algod.NodeStatusResponse x) => x.CatchpointAcquiredBlocks, (ref Algorand.Unity.Algod.NodeStatusResponse x, Algorand.Unity.Optional<System.UInt64> value) => x.CatchpointAcquiredBlocks = value).Assign("catchpoint-processed-accounts", (Algorand.Unity.Algod.NodeStatusResponse x) => x.CatchpointProcessedAccounts, (ref Algorand.Unity.Algod.NodeStatusResponse x, Algorand.Unity.Optional<System.UInt64> value) => x.CatchpointProcessedAccounts = value).Assign("catchpoint-total-kvs", (Algorand.Unity.Algod.NodeStatusResponse x) => x.CatchpointTotalKvs, (ref Algorand.Unity.Algod.NodeStatusResponse x, Algorand.Unity.Optional<System.UInt64> value) => x.CatchpointTotalKvs = value));
             return true;
         }
     }
@@ -873,6 +924,23 @@ namespace Algorand.Unity.Algod
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.VersionsResponse>(new Algorand.Unity.WrappedValueFormatter<Algorand.Unity.Algod.VersionsResponse, Algorand.Unity.Algod.Version>());
+            return true;
+        }
+    }
+}
+
+namespace Algorand.Unity.Algod
+{
+    
+    
+    public partial struct BoxResponse
+    {
+        
+        private static bool @__generated__IsValid = BoxResponse.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.BoxResponse>(new Algorand.Unity.WrappedValueFormatter<Algorand.Unity.Algod.BoxResponse, Algorand.Unity.Algod.Box>());
             return true;
         }
     }

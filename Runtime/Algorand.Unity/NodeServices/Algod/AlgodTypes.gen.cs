@@ -23,19 +23,19 @@ namespace Algorand.Unity.Algod
     {
         [SerializeField, Tooltip(@"The vector commitment root on all light block headers within a state proof interval.")]
         byte[] @blockHeadersCommitment;
-
+        
         [SerializeField, Tooltip(@"The vector commitment root of the top N accounts to sign the next StateProof.")]
         byte[] @votersCommitment;
-
+        
         [SerializeField, Tooltip(@"An integer value representing the natural log of the proven weight with 16 bits of precision. This value would be used to verify the next state proof.")]
         ulong @lnProvenWeight;
-
+        
         [SerializeField, Tooltip(@"The first round the message attests to.")]
         ulong @firstAttestedRound;
-
+        
         [SerializeField, Tooltip(@"The last round the message attests to.")]
         ulong @lastAttestedRound;
-
+        
         /// <summary>
         /// The vector commitment root on all light block headers within a state proof interval.        
         /// </summary>
@@ -88,7 +88,7 @@ namespace Algorand.Unity.Algod
 
         public bool Equals(StateProofMessage other)
         {
-            return
+            return 
                 ArrayComparer.Equals(BlockHeadersCommitment, other.BlockHeadersCommitment) &&
                 ArrayComparer.Equals(VotersCommitment, other.VotersCommitment) &&
                 LnProvenWeight.Equals(other.LnProvenWeight) &&
@@ -104,25 +104,25 @@ namespace Algorand.Unity.Algod
     {
         [SerializeField, Tooltip(@"The address that created this application. This is the address where the parameters and global state for this application can be found.")]
         Address @creator;
-
+        
         [SerializeField, Tooltip(@"[approv] approval program.")]
         CompiledTeal @approvalProgram;
-
+        
         [SerializeField, Tooltip(@"[clearp] approval program.")]
         CompiledTeal @clearStateProgram;
-
+        
         [SerializeField, Tooltip(@"[epp] the amount of extra program pages available to this app.")]
         Optional<ulong> @extraProgramPages;
-
+        
         [SerializeField, Tooltip(@"[lsch] local schema")]
         ApplicationStateSchema @localStateSchema;
-
+        
         [SerializeField, Tooltip(@"[gsch] global schema")]
         ApplicationStateSchema @globalStateSchema;
-
+        
         [SerializeField, Tooltip(@"[gs] global schema")]
         TealKeyValueStore @globalState;
-
+        
         /// <summary>
         /// The address that created this application. This is the address where the parameters and global state for this application can be found.        
         /// </summary>
@@ -195,7 +195,7 @@ namespace Algorand.Unity.Algod
 
         public bool Equals(ApplicationParams other)
         {
-            return
+            return 
                 Creator.Equals(other.Creator) &&
                 ApprovalProgram.Equals(other.ApprovalProgram) &&
                 ClearStateProgram.Equals(other.ClearStateProgram) &&
@@ -205,16 +205,6 @@ namespace Algorand.Unity.Algod
                 GlobalState.Equals(other.GlobalState)
                 ;
         }
-
-        public static explicit operator Dotnet.ApplicationParams(ApplicationParams from)
-        {
-            return from.Convert().ToDotnet<Dotnet.ApplicationParams>();
-        }
-
-        public static explicit operator ApplicationParams(Dotnet.ApplicationParams from)
-        {
-            return from.Convert().ToUnity<ApplicationParams>();
-        }
     }
 
     [AlgoApiObject, Serializable]
@@ -223,13 +213,13 @@ namespace Algorand.Unity.Algod
     {
         [SerializeField, Tooltip(@"[tt] value type. Value `1` refers to **bytes**, value `2` refers to **uint**")]
         ulong @type;
-
+        
         [SerializeField, Tooltip(@"[tb] bytes value.")]
         string @bytes;
-
+        
         [SerializeField, Tooltip(@"[ui] uint value.")]
         ulong @uint;
-
+        
         /// <summary>
         /// [tt] value type. Value `1` refers to **bytes**, value `2` refers to **uint**        
         /// </summary>
@@ -262,21 +252,11 @@ namespace Algorand.Unity.Algod
 
         public bool Equals(TealValue other)
         {
-            return
+            return 
                 Type.Equals(other.Type) &&
                 StringComparer.Equals(Bytes, other.Bytes) &&
                 Uint.Equals(other.Uint)
                 ;
-        }
-
-        public static explicit operator Dotnet.TealValue(TealValue from)
-        {
-            return from.Convert().ToDotnet<Dotnet.TealValue>();
-        }
-
-        public static explicit operator TealValue(Dotnet.TealValue from)
-        {
-            return from.Convert().ToUnity<TealValue>();
         }
     }
 
@@ -286,28 +266,28 @@ namespace Algorand.Unity.Algod
     {
         [SerializeField, Tooltip(@"The key's ParticipationID.")]
         string @id;
-
+        
         [SerializeField, Tooltip(@"Address the key was generated for.")]
         Address @address;
-
+        
         [SerializeField, Tooltip(@"When registered, this is the first round it may be used.")]
         Optional<ulong> @effectiveFirstValid;
-
+        
         [SerializeField, Tooltip(@"When registered, this is the last round it may be used.")]
         Optional<ulong> @effectiveLastValid;
-
+        
         [SerializeField, Tooltip(@"Round when this key was last used to vote.")]
         Optional<ulong> @lastVote;
-
+        
         [SerializeField, Tooltip(@"Round when this key was last used to propose a block.")]
         Optional<ulong> @lastBlockProposal;
-
+        
         [SerializeField, Tooltip(@"Round when this key was last used to generate a state proof.")]
         Optional<ulong> @lastStateProof;
-
+        
         [SerializeField, Tooltip(@"Key information stored on the account.")]
         AccountParticipation @key;
-
+        
         /// <summary>
         /// The key's ParticipationID.        
         /// </summary>
@@ -390,7 +370,7 @@ namespace Algorand.Unity.Algod
 
         public bool Equals(ParticipationKey other)
         {
-            return
+            return 
                 StringComparer.Equals(Id, other.Id) &&
                 Address.Equals(other.Address) &&
                 EffectiveFirstValid.Equals(other.EffectiveFirstValid) &&
@@ -401,16 +381,6 @@ namespace Algorand.Unity.Algod
                 Key.Equals(other.Key)
                 ;
         }
-
-        public static explicit operator Dotnet.ParticipationKey(ParticipationKey from)
-        {
-            return from.Convert().ToDotnet<Dotnet.ParticipationKey>();
-        }
-
-        public static explicit operator ParticipationKey(Dotnet.ParticipationKey from)
-        {
-            return from.Convert().ToUnity<ParticipationKey>();
-        }
     }
 
     [AlgoApiObject, Serializable]
@@ -419,13 +389,13 @@ namespace Algorand.Unity.Algod
     {
         [SerializeField, Tooltip(@"[at] delta action.")]
         ulong @action;
-
+        
         [SerializeField, Tooltip(@"[bs] bytes value.")]
         string @bytes;
-
+        
         [SerializeField, Tooltip(@"[ui] uint value.")]
         Optional<ulong> @uint;
-
+        
         /// <summary>
         /// [at] delta action.        
         /// </summary>
@@ -458,21 +428,11 @@ namespace Algorand.Unity.Algod
 
         public bool Equals(EvalDelta other)
         {
-            return
+            return 
                 Action.Equals(other.Action) &&
                 StringComparer.Equals(Bytes, other.Bytes) &&
                 Uint.Equals(other.Uint)
                 ;
-        }
-
-        public static explicit operator Dotnet.EvalDelta(EvalDelta from)
-        {
-            return from.Convert().ToDotnet<Dotnet.EvalDelta>();
-        }
-
-        public static explicit operator EvalDelta(Dotnet.EvalDelta from)
-        {
-            return from.Convert().ToUnity<EvalDelta>();
         }
     }
 
@@ -482,10 +442,10 @@ namespace Algorand.Unity.Algod
     {
         [SerializeField, Tooltip(@"[nui] num of uints.")]
         ulong @numUint;
-
+        
         [SerializeField, Tooltip(@"[nbs] num of byte slices.")]
         ulong @numByteSlice;
-
+        
         /// <summary>
         /// [nui] num of uints.        
         /// </summary>
@@ -508,20 +468,10 @@ namespace Algorand.Unity.Algod
 
         public bool Equals(ApplicationStateSchema other)
         {
-            return
+            return 
                 NumUint.Equals(other.NumUint) &&
                 NumByteSlice.Equals(other.NumByteSlice)
                 ;
-        }
-
-        public static explicit operator Dotnet.ApplicationStateSchema(ApplicationStateSchema from)
-        {
-            return from.Convert().ToDotnet<Dotnet.ApplicationStateSchema>();
-        }
-
-        public static explicit operator ApplicationStateSchema(Dotnet.ApplicationStateSchema from)
-        {
-            return from.Convert().ToUnity<ApplicationStateSchema>();
         }
     }
 
@@ -531,19 +481,19 @@ namespace Algorand.Unity.Algod
     {
         [SerializeField, Tooltip(@"Line number")]
         ulong @line;
-
+        
         [SerializeField, Tooltip(@"Program counter")]
         ulong @pc;
-
+        
         [SerializeField, Tooltip(@"")]
         TealValue[] @stack;
-
+        
         [SerializeField, Tooltip(@"")]
         TealValue[] @scratch;
-
+        
         [SerializeField, Tooltip(@"Evaluation error if any")]
         string @error;
-
+        
         /// <summary>
         /// Line number        
         /// </summary>
@@ -596,7 +546,7 @@ namespace Algorand.Unity.Algod
 
         public bool Equals(DryrunState other)
         {
-            return
+            return 
                 Line.Equals(other.Line) &&
                 Pc.Equals(other.Pc) &&
                 ArrayComparer.Equals(Stack, other.Stack) &&
@@ -604,15 +554,44 @@ namespace Algorand.Unity.Algod
                 StringComparer.Equals(Error, other.Error)
                 ;
         }
+    }
 
-        public static explicit operator Dotnet.DryrunState(DryrunState from)
+    [AlgoApiObject, Serializable]
+    public partial struct Box
+        : IEquatable<Box>
+    {
+        [SerializeField, Tooltip(@"[name] box name, base64 encoded")]
+        byte[] @name;
+        
+        [SerializeField, Tooltip(@"[value] box value, base64 encoded.")]
+        byte[] @value;
+        
+        /// <summary>
+        /// [name] box name, base64 encoded        
+        /// </summary>
+        [AlgoApiField("name")]
+        public byte[] Name
         {
-            return from.Convert().ToDotnet<Dotnet.DryrunState>();
+            get => this.@name;
+            set => this.@name = value;
         }
 
-        public static explicit operator DryrunState(Dotnet.DryrunState from)
+        /// <summary>
+        /// [value] box value, base64 encoded.        
+        /// </summary>
+        [AlgoApiField("value")]
+        public byte[] Value
         {
-            return from.Convert().ToUnity<DryrunState>();
+            get => this.@value;
+            set => this.@value = value;
+        }
+
+        public bool Equals(Box other)
+        {
+            return 
+                ArrayComparer.Equals(Name, other.Name) &&
+                ArrayComparer.Equals(Value, other.Value)
+                ;
         }
     }
 
@@ -622,22 +601,22 @@ namespace Algorand.Unity.Algod
     {
         [SerializeField, Tooltip(@"")]
         string @branch;
-
+        
         [SerializeField, Tooltip(@"")]
         ulong @build_number;
-
+        
         [SerializeField, Tooltip(@"")]
         string @channel;
-
+        
         [SerializeField, Tooltip(@"")]
         string @commit_hash;
-
+        
         [SerializeField, Tooltip(@"")]
         ulong @major;
-
+        
         [SerializeField, Tooltip(@"")]
         ulong @minor;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -700,7 +679,7 @@ namespace Algorand.Unity.Algod
 
         public bool Equals(BuildVersion other)
         {
-            return
+            return 
                 StringComparer.Equals(Branch, other.Branch) &&
                 Build_number.Equals(other.Build_number) &&
                 StringComparer.Equals(Channel, other.Channel) &&
@@ -708,16 +687,6 @@ namespace Algorand.Unity.Algod
                 Major.Equals(other.Major) &&
                 Minor.Equals(other.Minor)
                 ;
-        }
-
-        public static explicit operator Dotnet.BuildVersion(BuildVersion from)
-        {
-            return from.Convert().ToDotnet<Dotnet.BuildVersion>();
-        }
-
-        public static explicit operator BuildVersion(Dotnet.BuildVersion from)
-        {
-            return from.Convert().ToUnity<BuildVersion>();
         }
     }
 
@@ -727,25 +696,25 @@ namespace Algorand.Unity.Algod
     {
         [SerializeField, Tooltip(@"")]
         byte[][] @txns;
-
+        
         [SerializeField, Tooltip(@"")]
         Account[] @accounts;
-
+        
         [SerializeField, Tooltip(@"")]
         Application[] @apps;
-
+        
         [SerializeField, Tooltip(@"ProtocolVersion specifies a specific version string to operate under, otherwise whatever the current protocol of the network this algod is running in.")]
         string @protocolVersion;
-
+        
         [SerializeField, Tooltip(@"Round is available to some TEAL scripts. Defaults to the current round on the network this algod is attached to.")]
         ulong @round;
-
+        
         [SerializeField, Tooltip(@"LatestTimestamp is available to some TEAL scripts. Defaults to the latest confirmed timestamp this algod is attached to.")]
         ulong @latestTimestamp;
-
+        
         [SerializeField, Tooltip(@"")]
         DryrunSource[] @sources;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -818,7 +787,7 @@ namespace Algorand.Unity.Algod
 
         public bool Equals(DryrunRequest other)
         {
-            return
+            return 
                 ArrayComparer.Equals(Txns, other.Txns) &&
                 ArrayComparer.Equals(Accounts, other.Accounts) &&
                 ArrayComparer.Equals(Apps, other.Apps) &&
@@ -828,16 +797,6 @@ namespace Algorand.Unity.Algod
                 ArrayComparer.Equals(Sources, other.Sources)
                 ;
         }
-
-        public static explicit operator Dotnet.DryrunRequest(DryrunRequest from)
-        {
-            return from.Convert().ToDotnet<Dotnet.DryrunRequest>();
-        }
-
-        public static explicit operator DryrunRequest(Dotnet.DryrunRequest from)
-        {
-            return from.Convert().ToUnity<DryrunRequest>();
-        }
     }
 
     [AlgoApiObject, Serializable]
@@ -846,10 +805,10 @@ namespace Algorand.Unity.Algod
     {
         [SerializeField, Tooltip(@"")]
         StateProofMessage @message;
-
+        
         [SerializeField, Tooltip(@"The encoded StateProof for the message.")]
-        byte[] @stateProof;
-
+        byte[] @encoded;
+        
         /// <summary>
         ///         
         /// </summary>
@@ -864,17 +823,17 @@ namespace Algorand.Unity.Algod
         /// The encoded StateProof for the message.        
         /// </summary>
         [AlgoApiField("StateProof")]
-        public byte[] EncodedStateProof
+        public byte[] Encoded
         {
-            get => this.@stateProof;
-            set => this.@stateProof = value;
+            get => this.@encoded;
+            set => this.@encoded = value;
         }
 
         public bool Equals(StateProof other)
         {
-            return
+            return 
                 Message.Equals(other.Message) &&
-                ArrayComparer.Equals(EncodedStateProof, other.EncodedStateProof)
+                ArrayComparer.Equals(Encoded, other.Encoded)
                 ;
         }
     }
@@ -885,10 +844,10 @@ namespace Algorand.Unity.Algod
     {
         [SerializeField, Tooltip(@"unique asset identifier")]
         ulong @index;
-
+        
         [SerializeField, Tooltip(@"")]
         AssetParams @params;
-
+        
         /// <summary>
         /// unique asset identifier        
         /// </summary>
@@ -911,20 +870,10 @@ namespace Algorand.Unity.Algod
 
         public bool Equals(Asset other)
         {
-            return
+            return 
                 Index.Equals(other.Index) &&
                 Params.Equals(other.Params)
                 ;
-        }
-
-        public static explicit operator Dotnet.Asset(Asset from)
-        {
-            return from.Convert().ToDotnet<Dotnet.Asset>();
-        }
-
-        public static explicit operator Asset(Dotnet.Asset from)
-        {
-            return from.Convert().ToUnity<Asset>();
         }
     }
 
@@ -934,10 +883,10 @@ namespace Algorand.Unity.Algod
     {
         [SerializeField, Tooltip(@"")]
         string @key;
-
+        
         [SerializeField, Tooltip(@"")]
         TealValue @value;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -960,20 +909,10 @@ namespace Algorand.Unity.Algod
 
         public bool Equals(TealKeyValue other)
         {
-            return
+            return 
                 StringComparer.Equals(Key, other.Key) &&
                 Value.Equals(other.Value)
                 ;
-        }
-
-        public static explicit operator Dotnet.TealKeyValue(TealKeyValue from)
-        {
-            return from.Convert().ToDotnet<Dotnet.TealKeyValue>();
-        }
-
-        public static explicit operator TealKeyValue(Dotnet.TealKeyValue from)
-        {
-            return from.Convert().ToUnity<TealKeyValue>();
         }
     }
 
@@ -984,46 +923,46 @@ namespace Algorand.Unity.Algod
         [SerializeField, Tooltip(@"Indicates that the transaction was kicked out of this node's transaction pool (and specifies why that happened).  An empty string indicates the transaction wasn't kicked out of this node's txpool due to an error.
 ")]
         string @poolError;
-
+        
         [SerializeField, Tooltip(@"[lg] Logs for the application being executed by this transaction.")]
         byte[][] @logs;
-
+        
         [SerializeField, Tooltip(@"Rewards in microalgos applied to the sender account.")]
         Optional<ulong> @senderRewards;
-
+        
         [SerializeField, Tooltip(@"Closing amount for the transaction.")]
         Optional<ulong> @closingAmount;
-
+        
         [SerializeField, Tooltip(@"The raw signed transaction.")]
         SignedTxn @txn;
-
+        
         [SerializeField, Tooltip(@"[gd] Global state key/value changes for the application being executed by this transaction.")]
         StateDelta @globalStateDelta;
-
+        
         [SerializeField, Tooltip(@"The number of the asset's unit that were transferred to the close-to address.")]
         Optional<ulong> @assetClosingAmount;
-
+        
         [SerializeField, Tooltip(@"The round where this transaction was confirmed, if present.")]
         Optional<ulong> @confirmedRound;
-
+        
         [SerializeField, Tooltip(@"The application index if the transaction was found and it created an application.")]
         Optional<ulong> @applicationIndex;
-
+        
         [SerializeField, Tooltip(@"Rewards in microalgos applied to the receiver account.")]
         Optional<ulong> @receiverRewards;
-
+        
         [SerializeField, Tooltip(@"Inner transactions produced by application execution.")]
         PendingTransactionResponse[] @innerTxns;
-
+        
         [SerializeField, Tooltip(@"The asset index if the transaction was found and it created an asset.")]
         Optional<ulong> @assetIndex;
-
+        
         [SerializeField, Tooltip(@"Rewards in microalgos applied to the close remainder to account.")]
         Optional<ulong> @closeRewards;
-
+        
         [SerializeField, Tooltip(@"[ld] Local state key/value changes for the application being executed by this transaction.")]
         AccountStateDelta[] @localStateDelta;
-
+        
         /// <summary>
         /// Indicates that the transaction was kicked out of this node's transaction pool (and specifies why that happened).  An empty string indicates the transaction wasn't kicked out of this node's txpool due to an error.        
         /// </summary>
@@ -1166,7 +1105,7 @@ namespace Algorand.Unity.Algod
 
         public bool Equals(PendingTransactionResponse other)
         {
-            return
+            return 
                 StringComparer.Equals(PoolError, other.PoolError) &&
                 ArrayComparer.Equals(Logs, other.Logs) &&
                 SenderRewards.Equals(other.SenderRewards) &&
@@ -1191,16 +1130,16 @@ namespace Algorand.Unity.Algod
     {
         [SerializeField, Tooltip(@"FieldName is what kind of sources this is. If lsig then it goes into the transactions[this.TxnIndex].LogicSig. If approv or clearp it goes into the Approval Program or Clear State Program of application[this.AppIndex].")]
         string @fieldName;
-
+        
         [SerializeField, Tooltip(@"")]
         string @source;
-
+        
         [SerializeField, Tooltip(@"")]
         ulong @txnIndex;
-
+        
         [SerializeField, Tooltip(@"")]
         ulong @appIndex;
-
+        
         /// <summary>
         /// FieldName is what kind of sources this is. If lsig then it goes into the transactions[this.TxnIndex].LogicSig. If approv or clearp it goes into the Approval Program or Clear State Program of application[this.AppIndex].        
         /// </summary>
@@ -1243,22 +1182,12 @@ namespace Algorand.Unity.Algod
 
         public bool Equals(DryrunSource other)
         {
-            return
+            return 
                 StringComparer.Equals(FieldName, other.FieldName) &&
                 StringComparer.Equals(Source, other.Source) &&
                 TxnIndex.Equals(other.TxnIndex) &&
                 AppIndex.Equals(other.AppIndex)
                 ;
-        }
-
-        public static explicit operator Dotnet.DryrunSource(DryrunSource from)
-        {
-            return from.Convert().ToDotnet<Dotnet.DryrunSource>();
-        }
-
-        public static explicit operator DryrunSource(Dotnet.DryrunSource from)
-        {
-            return from.Convert().ToUnity<DryrunSource>();
         }
     }
 
@@ -1268,10 +1197,10 @@ namespace Algorand.Unity.Algod
     {
         [SerializeField, Tooltip(@"")]
         string @key;
-
+        
         [SerializeField, Tooltip(@"")]
         EvalDelta @value;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -1294,20 +1223,10 @@ namespace Algorand.Unity.Algod
 
         public bool Equals(EvalDeltaKeyValue other)
         {
-            return
+            return 
                 StringComparer.Equals(Key, other.Key) &&
                 Value.Equals(other.Value)
                 ;
-        }
-
-        public static explicit operator Dotnet.EvalDeltaKeyValue(EvalDeltaKeyValue from)
-        {
-            return from.Convert().ToDotnet<Dotnet.EvalDeltaKeyValue>();
-        }
-
-        public static explicit operator EvalDeltaKeyValue(Dotnet.EvalDeltaKeyValue from)
-        {
-            return from.Convert().ToUnity<EvalDeltaKeyValue>();
         }
     }
 
@@ -1317,13 +1236,13 @@ namespace Algorand.Unity.Algod
     {
         [SerializeField, Tooltip(@"[a] number of units held.")]
         ulong @amount;
-
+        
         [SerializeField, Tooltip(@"Asset ID of the holding.")]
         AssetIndex @assetId;
-
+        
         [SerializeField, Tooltip(@"[f] whether or not the holding is frozen.")]
         bool @isFrozen;
-
+        
         /// <summary>
         /// [a] number of units held.        
         /// </summary>
@@ -1356,21 +1275,11 @@ namespace Algorand.Unity.Algod
 
         public bool Equals(AssetHolding other)
         {
-            return
+            return 
                 Amount.Equals(other.Amount) &&
                 AssetId.Equals(other.AssetId) &&
                 IsFrozen.Equals(other.IsFrozen)
                 ;
-        }
-
-        public static explicit operator Dotnet.AssetHolding(AssetHolding from)
-        {
-            return from.Convert().ToDotnet<Dotnet.AssetHolding>();
-        }
-
-        public static explicit operator AssetHolding(Dotnet.AssetHolding from)
-        {
-            return from.Convert().ToUnity<AssetHolding>();
         }
     }
 
@@ -1380,88 +1289,94 @@ namespace Algorand.Unity.Algod
     {
         [SerializeField, Tooltip(@"[algo] total number of MicroAlgos in the account")]
         ulong @amount;
-
+        
         [SerializeField, Tooltip(@"the account public key")]
         string @address;
-
+        
         [SerializeField, Tooltip(@"[ern] total rewards of MicroAlgos the account has received, including pending rewards.")]
         ulong @rewards;
-
+        
         [SerializeField, Tooltip(@"specifies the amount of MicroAlgos in the account, without the pending rewards.")]
         ulong @amountWithoutPendingRewards;
-
+        
         [SerializeField, Tooltip(@"[teap] the sum of all extra application program pages for this account.")]
         Optional<ulong> @appsTotalExtraPages;
-
+        
         [SerializeField, Tooltip(@"The count of all assets that have been opted in, equivalent to the count of AssetHolding objects held by this account.")]
         ulong @totalAssetsOptedIn;
-
+        
         [SerializeField, Tooltip(@"[asset] assets held by this account.
 
 Note the raw object uses `map[int] -> AssetHolding` for this type.")]
         AssetHolding[] @assets;
-
+        
         [SerializeField, Tooltip(@"")]
         AccountParticipation @participation;
-
+        
+        [SerializeField, Tooltip(@"[tbxb] The total number of bytes used by this account's app's box keys and values.")]
+        Optional<ulong> @totalBoxBytes;
+        
         [SerializeField, Tooltip(@"[tsch] stores the sum of all of the local schemas and global schemas in this account.
 
 Note: the raw account uses `StateSchema` for this type.")]
         ApplicationStateSchema @appsTotalSchema;
-
+        
         [SerializeField, Tooltip(@"The count of all applications that have been opted in, equivalent to the count of application local data (AppLocalState objects) stored in this account.")]
         ulong @totalAppsOptedIn;
-
+        
         [SerializeField, Tooltip(@"The round for which this information is relevant.")]
         ulong @round;
-
+        
         [SerializeField, Tooltip(@"amount of MicroAlgos of pending rewards in this account.")]
         ulong @pendingRewards;
-
+        
         [SerializeField, Tooltip(@"[appp] parameters of applications created by this account including app global data.
 
 Note: the raw account uses `map[int] -> AppParams` for this type.")]
         Application[] @createdApps;
-
+        
+        [SerializeField, Tooltip(@"[tbx] The number of existing boxes created by this account's app.")]
+        Optional<ulong> @totalBoxes;
+        
         [SerializeField, Tooltip(@"[onl] delegation status of the account's MicroAlgos
 * Offline - indicates that the associated account is delegated.
 *  Online  - indicates that the associated account used as part of the delegation pool.
 *   NotParticipating - indicates that the associated account is neither a delegator nor a delegate.")]
         string @status;
-
+        
         [SerializeField, Tooltip(@"Indicates what type of signature is used by this account, must be one of:
 * sig
 * msig
 * lsig")]
         SignatureType @sigType;
-
+        
         [SerializeField, Tooltip(@"[spend] the address against which signing should be checked. If empty, the address of the current account is used. This field can be updated in any transaction by setting the RekeyTo field.")]
         Address @authAddr;
-
+        
         [SerializeField, Tooltip(@"The count of all assets (AssetParams objects) created by this account.")]
         ulong @totalCreatedAssets;
-
+        
         [SerializeField, Tooltip(@"MicroAlgo balance required by the account.
 
 The requirement grows based on asset and application usage.")]
         ulong @minBalance;
-
+        
         [SerializeField, Tooltip(@"[ebase] used as part of the rewards computation. Only applicable to accounts which are participating.")]
         Optional<ulong> @rewardBase;
-
+        
         [SerializeField, Tooltip(@"[apar] parameters of assets created by this account.
 
 Note: the raw account uses `map[int] -> Asset` for this type.")]
         Asset[] @createdAssets;
-
+        
         [SerializeField, Tooltip(@"[appl] applications local data stored in this account.
 
 Note the raw object uses `map[int] -> AppLocalState` for this type.")]
         ApplicationLocalState[] @appsLocalState;
-
+        
         [SerializeField, Tooltip(@"The count of all apps (AppParams objects) created by this account.")]
         ulong @totalCreatedApps;
-
+        
         /// <summary>
         /// [algo] total number of MicroAlgos in the account        
         /// </summary>
@@ -1545,6 +1460,16 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
         }
 
         /// <summary>
+        /// [tbxb] The total number of bytes used by this account's app's box keys and values.        
+        /// </summary>
+        [AlgoApiField("total-box-bytes")]
+        public Optional<ulong> TotalBoxBytes
+        {
+            get => this.@totalBoxBytes;
+            set => this.@totalBoxBytes = value;
+        }
+
+        /// <summary>
         /// [tsch] stores the sum of all of the local schemas and global schemas in this account.
         /// 
         /// Note: the raw account uses `StateSchema` for this type.        
@@ -1596,6 +1521,16 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
         {
             get => this.@createdApps;
             set => this.@createdApps = value;
+        }
+
+        /// <summary>
+        /// [tbx] The number of existing boxes created by this account's app.        
+        /// </summary>
+        [AlgoApiField("total-boxes")]
+        public Optional<ulong> TotalBoxes
+        {
+            get => this.@totalBoxes;
+            set => this.@totalBoxes = value;
         }
 
         /// <summary>
@@ -1702,7 +1637,7 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
 
         public bool Equals(Account other)
         {
-            return
+            return 
                 Amount.Equals(other.Amount) &&
                 StringComparer.Equals(Address, other.Address) &&
                 Rewards.Equals(other.Rewards) &&
@@ -1711,11 +1646,13 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 TotalAssetsOptedIn.Equals(other.TotalAssetsOptedIn) &&
                 ArrayComparer.Equals(Assets, other.Assets) &&
                 Participation.Equals(other.Participation) &&
+                TotalBoxBytes.Equals(other.TotalBoxBytes) &&
                 AppsTotalSchema.Equals(other.AppsTotalSchema) &&
                 TotalAppsOptedIn.Equals(other.TotalAppsOptedIn) &&
                 Round.Equals(other.Round) &&
                 PendingRewards.Equals(other.PendingRewards) &&
                 ArrayComparer.Equals(CreatedApps, other.CreatedApps) &&
+                TotalBoxes.Equals(other.TotalBoxes) &&
                 StringComparer.Equals(Status, other.Status) &&
                 SigType.Equals(other.SigType) &&
                 AuthAddr.Equals(other.AuthAddr) &&
@@ -1727,16 +1664,6 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 TotalCreatedApps.Equals(other.TotalCreatedApps)
                 ;
         }
-
-        public static explicit operator Dotnet.Account(Account from)
-        {
-            return from.Convert().ToDotnet<Dotnet.Account>();
-        }
-
-        public static explicit operator Account(Dotnet.Account from)
-        {
-            return from.Convert().ToUnity<Account>();
-        }
     }
 
     [AlgoApiObject, Serializable]
@@ -1745,10 +1672,10 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
     {
         [SerializeField, Tooltip(@"")]
         string @address;
-
+        
         [SerializeField, Tooltip(@"")]
         StateDelta @delta;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -1771,20 +1698,10 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
 
         public bool Equals(AccountStateDelta other)
         {
-            return
+            return 
                 StringComparer.Equals(Address, other.Address) &&
                 Delta.Equals(other.Delta)
                 ;
-        }
-
-        public static explicit operator Dotnet.AccountStateDelta(AccountStateDelta from)
-        {
-            return from.Convert().ToDotnet<Dotnet.AccountStateDelta>();
-        }
-
-        public static explicit operator AccountStateDelta(Dotnet.AccountStateDelta from)
-        {
-            return from.Convert().ToUnity<AccountStateDelta>();
         }
     }
 
@@ -1794,13 +1711,13 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
     {
         [SerializeField, Tooltip(@"The index of the light block header in the vector commitment tree")]
         ulong @index;
-
+        
         [SerializeField, Tooltip(@"Represents the depth of the tree that is being proven, i.e. the number of edges from a leaf to the root.")]
         ulong @treedepth;
-
+        
         [SerializeField, Tooltip(@"The encoded proof.")]
         byte[] @proof;
-
+        
         /// <summary>
         /// The index of the light block header in the vector commitment tree        
         /// </summary>
@@ -1833,7 +1750,7 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
 
         public bool Equals(LightBlockHeaderProof other)
         {
-            return
+            return 
                 Index.Equals(other.Index) &&
                 Treedepth.Equals(other.Treedepth) &&
                 ArrayComparer.Equals(Proof, other.Proof)
@@ -1847,10 +1764,10 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
     {
         [SerializeField, Tooltip(@"[appidx] application index.")]
         ulong @id;
-
+        
         [SerializeField, Tooltip(@"[appparams] application parameters.")]
         ApplicationParams @params;
-
+        
         /// <summary>
         /// [appidx] application index.        
         /// </summary>
@@ -1873,20 +1790,10 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
 
         public bool Equals(Application other)
         {
-            return
+            return 
                 Id.Equals(other.Id) &&
                 Params.Equals(other.Params)
                 ;
-        }
-
-        public static explicit operator Dotnet.Application(Application from)
-        {
-            return from.Convert().ToDotnet<Dotnet.Application>();
-        }
-
-        public static explicit operator Application(Dotnet.Application from)
-        {
-            return from.Convert().ToUnity<Application>();
         }
     }
 
@@ -1896,13 +1803,13 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
     {
         [SerializeField, Tooltip(@"The application which this local state is for.")]
         ulong @id;
-
+        
         [SerializeField, Tooltip(@"[hsch] schema.")]
         ApplicationStateSchema @schema;
-
+        
         [SerializeField, Tooltip(@"[tkv] storage.")]
         TealKeyValueStore @keyValue;
-
+        
         /// <summary>
         /// The application which this local state is for.        
         /// </summary>
@@ -1935,21 +1842,36 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
 
         public bool Equals(ApplicationLocalState other)
         {
-            return
+            return 
                 Id.Equals(other.Id) &&
                 Schema.Equals(other.Schema) &&
                 KeyValue.Equals(other.KeyValue)
                 ;
         }
+    }
 
-        public static explicit operator Dotnet.ApplicationLocalState(ApplicationLocalState from)
+    [AlgoApiObject, Serializable]
+    public partial struct BoxDescriptor
+        : IEquatable<BoxDescriptor>
+    {
+        [SerializeField, Tooltip(@"Base64 encoded box name")]
+        byte[] @name;
+        
+        /// <summary>
+        /// Base64 encoded box name        
+        /// </summary>
+        [AlgoApiField("name")]
+        public byte[] Name
         {
-            return from.Convert().ToDotnet<Dotnet.ApplicationLocalState>();
+            get => this.@name;
+            set => this.@name = value;
         }
 
-        public static explicit operator ApplicationLocalState(Dotnet.ApplicationLocalState from)
+        public bool Equals(BoxDescriptor other)
         {
-            return from.Convert().ToUnity<ApplicationLocalState>();
+            return 
+                ArrayComparer.Equals(Name, other.Name)
+                ;
         }
     }
 
@@ -1959,22 +1881,22 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
     {
         [SerializeField, Tooltip(@"[sel] Selection public key (if any) currently registered for this round.")]
         byte[] @selectionParticipationKey;
-
+        
         [SerializeField, Tooltip(@"[voteFst] First round for which this participation is valid.")]
         ulong @voteFirstValid;
-
+        
         [SerializeField, Tooltip(@"[voteKD] Number of subkeys in each batch of participation keys.")]
         ulong @voteKeyDilution;
-
+        
         [SerializeField, Tooltip(@"[voteLst] Last round for which this participation is valid.")]
         ulong @voteLastValid;
-
+        
         [SerializeField, Tooltip(@"[vote] root participation public key (if any) currently registered for this round.")]
         byte[] @voteParticipationKey;
-
+        
         [SerializeField, Tooltip(@"[stprf] Root of the state proof key (if any)")]
         byte[] @stateProofKey;
-
+        
         /// <summary>
         /// [sel] Selection public key (if any) currently registered for this round.        
         /// </summary>
@@ -2037,7 +1959,7 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
 
         public bool Equals(AccountParticipation other)
         {
-            return
+            return 
                 ArrayComparer.Equals(SelectionParticipationKey, other.SelectionParticipationKey) &&
                 VoteFirstValid.Equals(other.VoteFirstValid) &&
                 VoteKeyDilution.Equals(other.VoteKeyDilution) &&
@@ -2045,16 +1967,6 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ArrayComparer.Equals(VoteParticipationKey, other.VoteParticipationKey) &&
                 ArrayComparer.Equals(StateProofKey, other.StateProofKey)
                 ;
-        }
-
-        public static explicit operator Dotnet.AccountParticipation(AccountParticipation from)
-        {
-            return from.Convert().ToDotnet<Dotnet.AccountParticipation>();
-        }
-
-        public static explicit operator AccountParticipation(Dotnet.AccountParticipation from)
-        {
-            return from.Convert().ToUnity<AccountParticipation>();
         }
     }
 
@@ -2064,16 +1976,16 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
     {
         [SerializeField, Tooltip(@"")]
         BuildVersion @build;
-
+        
         [SerializeField, Tooltip(@"")]
         byte[] @genesis_hash_b64;
-
+        
         [SerializeField, Tooltip(@"")]
         string @genesis_id;
-
+        
         [SerializeField, Tooltip(@"")]
         string[] @versions;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -2116,22 +2028,12 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
 
         public bool Equals(Version other)
         {
-            return
+            return 
                 Build.Equals(other.Build) &&
                 ArrayComparer.Equals(Genesis_hash_b64, other.Genesis_hash_b64) &&
                 StringComparer.Equals(Genesis_id, other.Genesis_id) &&
                 ArrayComparer.Equals(Versions, other.Versions)
                 ;
-        }
-
-        public static explicit operator Dotnet.Version(Version from)
-        {
-            return from.Convert().ToDotnet<Dotnet.Version>();
-        }
-
-        public static explicit operator Version(Dotnet.Version from)
-        {
-            return from.Convert().ToUnity<Version>();
         }
     }
 
@@ -2141,49 +2043,49 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
     {
         [SerializeField, Tooltip(@"[df] Whether holdings of this asset are frozen by default.")]
         Optional<bool> @defaultFrozen;
-
+        
         [SerializeField, Tooltip(@"The address that created this asset. This is the address where the parameters for this asset can be found, and also the address where unwanted asset units can be sent in the worst case.")]
         string @creator;
-
+        
         [SerializeField, Tooltip(@"[dc] The number of digits to use after the decimal point when displaying this asset. If 0, the asset is not divisible. If 1, the base unit of the asset is in tenths. If 2, the base unit of the asset is in hundredths, and so on. This value must be between 0 and 19 (inclusive).")]
         ulong @decimals;
-
+        
         [SerializeField, Tooltip(@"[f] Address of account used to freeze holdings of this asset.  If empty, freezing is not permitted.")]
         string @freeze;
-
+        
         [SerializeField, Tooltip(@"[r] Address of account holding reserve (non-minted) units of this asset.")]
         string @reserve;
-
+        
         [SerializeField, Tooltip(@"Base64 encoded name of a unit of this asset, as supplied by the creator.")]
         byte[] @unitNameB64;
-
+        
         [SerializeField, Tooltip(@"[an] Name of this asset, as supplied by the creator. Included only when the asset name is composed of printable utf-8 characters.")]
         string @name;
-
+        
         [SerializeField, Tooltip(@"Base64 encoded URL where more information about the asset can be retrieved.")]
         byte[] @urlB64;
-
+        
         [SerializeField, Tooltip(@"[t] The total number of units of this asset.")]
         ulong @total;
-
+        
         [SerializeField, Tooltip(@"[m] Address of account used to manage the keys of this asset and to destroy it.")]
         string @manager;
-
+        
         [SerializeField, Tooltip(@"Base64 encoded name of this asset, as supplied by the creator.")]
         byte[] @nameB64;
-
+        
         [SerializeField, Tooltip(@"[au] URL where more information about the asset can be retrieved. Included only when the URL is composed of printable utf-8 characters.")]
         string @url;
-
+        
         [SerializeField, Tooltip(@"[un] Name of a unit of this asset, as supplied by the creator. Included only when the name of a unit of this asset is composed of printable utf-8 characters.")]
         string @unitName;
-
+        
         [SerializeField, Tooltip(@"[c] Address of account used to clawback holdings of this asset.  If empty, clawback is not permitted.")]
         string @clawback;
-
+        
         [SerializeField, Tooltip(@"[am] A commitment to some unspecified asset metadata. The format of this metadata is up to the application.")]
         byte[] @metadataHash;
-
+        
         /// <summary>
         /// [df] Whether holdings of this asset are frozen by default.        
         /// </summary>
@@ -2336,7 +2238,7 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
 
         public bool Equals(AssetParams other)
         {
-            return
+            return 
                 DefaultFrozen.Equals(other.DefaultFrozen) &&
                 StringComparer.Equals(Creator, other.Creator) &&
                 Decimals.Equals(other.Decimals) &&
@@ -2354,16 +2256,6 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ArrayComparer.Equals(MetadataHash, other.MetadataHash)
                 ;
         }
-
-        public static explicit operator Dotnet.AssetParams(AssetParams from)
-        {
-            return from.Convert().ToDotnet<Dotnet.AssetParams>();
-        }
-
-        public static explicit operator AssetParams(Dotnet.AssetParams from)
-        {
-            return from.Convert().ToUnity<AssetParams>();
-        }
     }
 
     [AlgoApiObject, Serializable]
@@ -2372,40 +2264,40 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
     {
         [SerializeField, Tooltip(@"")]
         string[] @appCallMessages;
-
+        
         [SerializeField, Tooltip(@"Disassembled program line by line.")]
         string[] @disassembly;
-
+        
         [SerializeField, Tooltip(@"")]
         byte[][] @logs;
-
+        
         [SerializeField, Tooltip(@"Disassembled lsig program line by line.")]
         string[] @logicSigDisassembly;
-
+        
         [SerializeField, Tooltip(@"")]
         AccountStateDelta[] @localDeltas;
-
+        
         [SerializeField, Tooltip(@"")]
         DryrunState[] @logicSigTrace;
-
+        
         [SerializeField, Tooltip(@"Net cost of app execution. Field is DEPRECATED and is subject for removal. Instead, use `budget-added` and `budget-consumed.")]
         Optional<ulong> @cost;
-
+        
         [SerializeField, Tooltip(@"Budget consumed during execution of app call transaction.")]
         Optional<ulong> @budgetConsumed;
-
+        
         [SerializeField, Tooltip(@"")]
         string[] @logicSigMessages;
-
+        
         [SerializeField, Tooltip(@"")]
         DryrunState[] @appCallTrace;
-
+        
         [SerializeField, Tooltip(@"")]
         StateDelta @globalDelta;
-
+        
         [SerializeField, Tooltip(@"Budget added during execution of app call transaction.")]
         Optional<ulong> @budgetAdded;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -2528,7 +2420,7 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
 
         public bool Equals(DryrunTxnResult other)
         {
-            return
+            return 
                 ArrayComparer.Equals(AppCallMessages, other.AppCallMessages) &&
                 ArrayComparer.Equals(Disassembly, other.Disassembly) &&
                 ArrayComparer.Equals(Logs, other.Logs) &&
@@ -2543,16 +2435,6 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 BudgetAdded.Equals(other.BudgetAdded)
                 ;
         }
-
-        public static explicit operator Dotnet.DryrunTxnResult(DryrunTxnResult from)
-        {
-            return from.Convert().ToDotnet<Dotnet.DryrunTxnResult>();
-        }
-
-        public static explicit operator DryrunTxnResult(Dotnet.DryrunTxnResult from)
-        {
-            return from.Convert().ToUnity<DryrunTxnResult>();
-        }
     }
 
     [AlgoApiObject, Serializable]
@@ -2561,7 +2443,7 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
     {
         [SerializeField, Tooltip(@"Catchup abort response string")]
         string @catchupMessage;
-
+        
         /// <summary>
         /// Catchup abort response string        
         /// </summary>
@@ -2574,19 +2456,9 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
 
         public bool Equals(CatchpointAbortResponse other)
         {
-            return
+            return 
                 StringComparer.Equals(CatchupMessage, other.CatchupMessage)
                 ;
-        }
-
-        public static explicit operator Dotnet.CatchpointAbortResponse(CatchpointAbortResponse from)
-        {
-            return from.Convert().ToDotnet<Dotnet.CatchpointAbortResponse>();
-        }
-
-        public static explicit operator CatchpointAbortResponse(Dotnet.CatchpointAbortResponse from)
-        {
-            return from.Convert().ToUnity<CatchpointAbortResponse>();
         }
     }
 
@@ -2596,17 +2468,17 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
     {
         [SerializeField, Tooltip(@"The round for which this information is relevant.")]
         ulong @round;
-
+        
         [SerializeField, Tooltip(@"[asset] Details about the asset held by this account.
 
 The raw account uses `AssetHolding` for this type.")]
         AssetHolding @assetHolding;
-
+        
         [SerializeField, Tooltip(@"[apar] parameters of the asset created by this account.
 
 The raw account uses `AssetParams` for this type.")]
         AssetParams @createdAsset;
-
+        
         /// <summary>
         /// The round for which this information is relevant.        
         /// </summary>
@@ -2643,21 +2515,11 @@ The raw account uses `AssetParams` for this type.")]
 
         public bool Equals(AccountAssetResponse other)
         {
-            return
+            return 
                 Round.Equals(other.Round) &&
                 AssetHolding.Equals(other.AssetHolding) &&
                 CreatedAsset.Equals(other.CreatedAsset)
                 ;
-        }
-
-        public static explicit operator Dotnet.AccountAssetResponse(AccountAssetResponse from)
-        {
-            return from.Convert().ToDotnet<Dotnet.AccountAssetResponse>();
-        }
-
-        public static explicit operator AccountAssetResponse(Dotnet.AccountAssetResponse from)
-        {
-            return from.Convert().ToUnity<AccountAssetResponse>();
         }
     }
 
@@ -2667,10 +2529,10 @@ The raw account uses `AssetParams` for this type.")]
     {
         [SerializeField, Tooltip(@"Block header data.")]
         BlockHeader @block;
-
+        
         [SerializeField, Tooltip(@"Optional certificate object. This is only included when the format is set to message pack.")]
         BlockCertificate @cert;
-
+        
         /// <summary>
         /// Block header data.        
         /// </summary>
@@ -2693,9 +2555,34 @@ The raw account uses `AssetParams` for this type.")]
 
         public bool Equals(BlockResponse other)
         {
-            return
+            return 
                 Block.Equals(other.Block) &&
                 Cert.Equals(other.Cert)
+                ;
+        }
+    }
+
+    [AlgoApiObject, Serializable]
+    public partial struct BoxesResponse
+        : IEquatable<BoxesResponse>
+    {
+        [SerializeField, Tooltip(@"")]
+        BoxDescriptor[] @boxes;
+        
+        /// <summary>
+        ///         
+        /// </summary>
+        [AlgoApiField("boxes")]
+        public BoxDescriptor[] Boxes
+        {
+            get => this.@boxes;
+            set => this.@boxes = value;
+        }
+
+        public bool Equals(BoxesResponse other)
+        {
+            return 
+                ArrayComparer.Equals(Boxes, other.Boxes)
                 ;
         }
     }
@@ -2706,21 +2593,21 @@ The raw account uses `AssetParams` for this type.")]
     {
         [SerializeField, Tooltip(@"Proof of transaction membership.")]
         byte[] @proof;
-
+        
         [SerializeField, Tooltip(@"Hash of SignedTxnInBlock for verifying proof.")]
         byte[] @stibhash;
-
+        
         [SerializeField, Tooltip(@"Represents the depth of the tree that is being proven, i.e. the number of edges from a leaf to the root.")]
         ulong @treedepth;
-
+        
         [SerializeField, Tooltip(@"Index of the transaction in the block's payset.")]
         ulong @idx;
-
+        
         [SerializeField, Tooltip(@"The type of hash function used to create the proof, must be one of: 
 * sha512_256 
 * sha256")]
         string @hashtype;
-
+        
         /// <summary>
         /// Proof of transaction membership.        
         /// </summary>
@@ -2775,7 +2662,7 @@ The raw account uses `AssetParams` for this type.")]
 
         public bool Equals(TransactionProofResponse other)
         {
-            return
+            return 
                 ArrayComparer.Equals(Proof, other.Proof) &&
                 ArrayComparer.Equals(Stibhash, other.Stibhash) &&
                 Treedepth.Equals(other.Treedepth) &&
@@ -2791,7 +2678,7 @@ The raw account uses `AssetParams` for this type.")]
     {
         [SerializeField, Tooltip(@"Block header hash.")]
         string @blockHash;
-
+        
         /// <summary>
         /// Block header hash.        
         /// </summary>
@@ -2804,7 +2691,7 @@ The raw account uses `AssetParams` for this type.")]
 
         public bool Equals(BlockHashResponse other)
         {
-            return
+            return 
                 StringComparer.Equals(BlockHash, other.BlockHash)
                 ;
         }
@@ -2816,7 +2703,7 @@ The raw account uses `AssetParams` for this type.")]
     {
         [SerializeField, Tooltip(@"Catchup start response string")]
         string @catchupMessage;
-
+        
         /// <summary>
         /// Catchup start response string        
         /// </summary>
@@ -2829,19 +2716,9 @@ The raw account uses `AssetParams` for this type.")]
 
         public bool Equals(CatchpointStartResponse other)
         {
-            return
+            return 
                 StringComparer.Equals(CatchupMessage, other.CatchupMessage)
                 ;
-        }
-
-        public static explicit operator Dotnet.CatchpointStartResponse(CatchpointStartResponse from)
-        {
-            return from.Convert().ToDotnet<Dotnet.CatchpointStartResponse>();
-        }
-
-        public static explicit operator CatchpointStartResponse(Dotnet.CatchpointStartResponse from)
-        {
-            return from.Convert().ToUnity<CatchpointStartResponse>();
         }
     }
 
@@ -2851,7 +2728,7 @@ The raw account uses `AssetParams` for this type.")]
     {
         [SerializeField, Tooltip(@"encoding of the participation ID.")]
         string @partId;
-
+        
         /// <summary>
         /// encoding of the participation ID.        
         /// </summary>
@@ -2864,7 +2741,7 @@ The raw account uses `AssetParams` for this type.")]
 
         public bool Equals(PostParticipationResponse other)
         {
-            return
+            return 
                 StringComparer.Equals(PartId, other.PartId)
                 ;
         }
@@ -2876,13 +2753,13 @@ The raw account uses `AssetParams` for this type.")]
     {
         [SerializeField, Tooltip(@"base32 SHA512_256 of program bytes (Address style)")]
         string @hash;
-
+        
         [SerializeField, Tooltip(@"base64 encoded program bytes")]
         string @result;
-
+        
         [SerializeField, Tooltip(@"JSON of the source map")]
         AlgoApiObject @sourcemap;
-
+        
         /// <summary>
         /// base32 SHA512_256 of program bytes (Address style)        
         /// </summary>
@@ -2915,21 +2792,11 @@ The raw account uses `AssetParams` for this type.")]
 
         public bool Equals(CompileResponse other)
         {
-            return
+            return 
                 StringComparer.Equals(Hash, other.Hash) &&
                 StringComparer.Equals(Result, other.Result) &&
                 Sourcemap.Equals(other.Sourcemap)
                 ;
-        }
-
-        public static explicit operator Dotnet.CompileResponse(CompileResponse from)
-        {
-            return from.Convert().ToDotnet<Dotnet.CompileResponse>();
-        }
-
-        public static explicit operator CompileResponse(Dotnet.CompileResponse from)
-        {
-            return from.Convert().ToUnity<CompileResponse>();
         }
     }
 
@@ -2939,7 +2806,7 @@ The raw account uses `AssetParams` for this type.")]
     {
         [SerializeField, Tooltip(@"disassembled Teal code")]
         string @result;
-
+        
         /// <summary>
         /// disassembled Teal code        
         /// </summary>
@@ -2952,7 +2819,7 @@ The raw account uses `AssetParams` for this type.")]
 
         public bool Equals(DisassembleResponse other)
         {
-            return
+            return 
                 StringComparer.Equals(Result, other.Result)
                 ;
         }
@@ -2964,49 +2831,58 @@ The raw account uses `AssetParams` for this type.")]
     {
         [SerializeField, Tooltip(@"StoppedAtUnsupportedRound indicates that the node does not support the new rounds and has stopped making progress")]
         bool @stoppedAtUnsupportedRound;
-
+        
         [SerializeField, Tooltip(@"The total number of blocks that are required to complete the current catchpoint catchup")]
         Optional<ulong> @catchpointTotalBlocks;
-
+        
         [SerializeField, Tooltip(@"LastVersion indicates the last consensus version supported")]
         string @lastVersion;
-
+        
         [SerializeField, Tooltip(@"NextVersionRound is the round at which the next consensus version will apply")]
         ulong @nextVersionRound;
-
+        
         [SerializeField, Tooltip(@"The total number of accounts included in the current catchpoint")]
         Optional<ulong> @catchpointTotalAccounts;
-
+        
         [SerializeField, Tooltip(@"TimeSinceLastRound in nanoseconds")]
         ulong @timeSinceLastRound;
-
+        
         [SerializeField, Tooltip(@"NextVersion of consensus protocol to use")]
         string @nextVersion;
-
+        
+        [SerializeField, Tooltip(@"The number of key-values (KVs) from the current catchpoint that have been verified so far as part of the catchup")]
+        Optional<ulong> @catchpointVerifiedKvs;
+        
+        [SerializeField, Tooltip(@"The number of key-values (KVs) from the current catchpoint that have been processed so far as part of the catchup")]
+        Optional<ulong> @catchpointProcessedKvs;
+        
         [SerializeField, Tooltip(@"The number of accounts from the current catchpoint that have been verified so far as part of the catchup")]
         Optional<ulong> @catchpointVerifiedAccounts;
-
+        
         [SerializeField, Tooltip(@"CatchupTime in nanoseconds")]
         ulong @catchupTime;
-
+        
         [SerializeField, Tooltip(@"The last catchpoint seen by the node")]
         string @lastCatchpoint;
-
+        
         [SerializeField, Tooltip(@"LastRound indicates the last round seen")]
         ulong @lastRound;
-
+        
         [SerializeField, Tooltip(@"NextVersionSupported indicates whether the next consensus version is supported by this node")]
         bool @nextVersionSupported;
-
+        
         [SerializeField, Tooltip(@"The current catchpoint that is being caught up to")]
         string @catchpoint;
-
+        
         [SerializeField, Tooltip(@"The number of blocks that have already been obtained by the node as part of the catchup")]
         Optional<ulong> @catchpointAcquiredBlocks;
-
+        
         [SerializeField, Tooltip(@"The number of accounts from the current catchpoint that have been processed so far as part of the catchup")]
         Optional<ulong> @catchpointProcessedAccounts;
-
+        
+        [SerializeField, Tooltip(@"The total number of key-values (KVs) included in the current catchpoint")]
+        Optional<ulong> @catchpointTotalKvs;
+        
         /// <summary>
         /// StoppedAtUnsupportedRound indicates that the node does not support the new rounds and has stopped making progress        
         /// </summary>
@@ -3075,6 +2951,26 @@ The raw account uses `AssetParams` for this type.")]
         {
             get => this.@nextVersion;
             set => this.@nextVersion = value;
+        }
+
+        /// <summary>
+        /// The number of key-values (KVs) from the current catchpoint that have been verified so far as part of the catchup        
+        /// </summary>
+        [AlgoApiField("catchpoint-verified-kvs")]
+        public Optional<ulong> CatchpointVerifiedKvs
+        {
+            get => this.@catchpointVerifiedKvs;
+            set => this.@catchpointVerifiedKvs = value;
+        }
+
+        /// <summary>
+        /// The number of key-values (KVs) from the current catchpoint that have been processed so far as part of the catchup        
+        /// </summary>
+        [AlgoApiField("catchpoint-processed-kvs")]
+        public Optional<ulong> CatchpointProcessedKvs
+        {
+            get => this.@catchpointProcessedKvs;
+            set => this.@catchpointProcessedKvs = value;
         }
 
         /// <summary>
@@ -3157,9 +3053,19 @@ The raw account uses `AssetParams` for this type.")]
             set => this.@catchpointProcessedAccounts = value;
         }
 
+        /// <summary>
+        /// The total number of key-values (KVs) included in the current catchpoint        
+        /// </summary>
+        [AlgoApiField("catchpoint-total-kvs")]
+        public Optional<ulong> CatchpointTotalKvs
+        {
+            get => this.@catchpointTotalKvs;
+            set => this.@catchpointTotalKvs = value;
+        }
+
         public bool Equals(NodeStatusResponse other)
         {
-            return
+            return 
                 StoppedAtUnsupportedRound.Equals(other.StoppedAtUnsupportedRound) &&
                 CatchpointTotalBlocks.Equals(other.CatchpointTotalBlocks) &&
                 StringComparer.Equals(LastVersion, other.LastVersion) &&
@@ -3167,6 +3073,8 @@ The raw account uses `AssetParams` for this type.")]
                 CatchpointTotalAccounts.Equals(other.CatchpointTotalAccounts) &&
                 TimeSinceLastRound.Equals(other.TimeSinceLastRound) &&
                 StringComparer.Equals(NextVersion, other.NextVersion) &&
+                CatchpointVerifiedKvs.Equals(other.CatchpointVerifiedKvs) &&
+                CatchpointProcessedKvs.Equals(other.CatchpointProcessedKvs) &&
                 CatchpointVerifiedAccounts.Equals(other.CatchpointVerifiedAccounts) &&
                 CatchupTime.Equals(other.CatchupTime) &&
                 StringComparer.Equals(LastCatchpoint, other.LastCatchpoint) &&
@@ -3174,18 +3082,9 @@ The raw account uses `AssetParams` for this type.")]
                 NextVersionSupported.Equals(other.NextVersionSupported) &&
                 StringComparer.Equals(Catchpoint, other.Catchpoint) &&
                 CatchpointAcquiredBlocks.Equals(other.CatchpointAcquiredBlocks) &&
-                CatchpointProcessedAccounts.Equals(other.CatchpointProcessedAccounts)
+                CatchpointProcessedAccounts.Equals(other.CatchpointProcessedAccounts) &&
+                CatchpointTotalKvs.Equals(other.CatchpointTotalKvs)
                 ;
-        }
-
-        public static explicit operator Dotnet.NodeStatusResponse(NodeStatusResponse from)
-        {
-            return from.Convert().ToDotnet<Dotnet.NodeStatusResponse>();
-        }
-
-        public static explicit operator NodeStatusResponse(Dotnet.NodeStatusResponse from)
-        {
-            return from.Convert().ToUnity<NodeStatusResponse>();
         }
     }
 
@@ -3196,26 +3095,26 @@ The raw account uses `AssetParams` for this type.")]
         [SerializeField, Tooltip(@"ConsensusVersion indicates the consensus protocol version
 as of LastRound.")]
         string @consensusVersion;
-
+        
         [SerializeField, Tooltip(@"Fee is the suggested transaction fee
 Fee is in units of micro-Algos per byte.
 Fee may fall to zero but transactions must still have a fee of
 at least MinTxnFee for the current network protocol.")]
         ulong @fee;
-
+        
         [SerializeField, Tooltip(@"GenesisHash is the hash of the genesis block.")]
         byte[] @genesisHash;
-
+        
         [SerializeField, Tooltip(@"GenesisID is an ID listed in the genesis block.")]
         string @genesisId;
-
+        
         [SerializeField, Tooltip(@"LastRound indicates the last round seen")]
         ulong @lastRound;
-
+        
         [SerializeField, Tooltip(@"The minimum transaction fee (not per byte) required for the
 txn to validate for the current network protocol.")]
         ulong @minFee;
-
+        
         /// <summary>
         /// ConsensusVersion indicates the consensus protocol version
         /// as of LastRound.        
@@ -3283,7 +3182,7 @@ txn to validate for the current network protocol.")]
 
         public bool Equals(TransactionParametersResponse other)
         {
-            return
+            return 
                 StringComparer.Equals(ConsensusVersion, other.ConsensusVersion) &&
                 Fee.Equals(other.Fee) &&
                 ArrayComparer.Equals(GenesisHash, other.GenesisHash) &&
@@ -3291,16 +3190,6 @@ txn to validate for the current network protocol.")]
                 LastRound.Equals(other.LastRound) &&
                 MinFee.Equals(other.MinFee)
                 ;
-        }
-
-        public static explicit operator Dotnet.TransactionParametersResponse(TransactionParametersResponse from)
-        {
-            return from.Convert().ToDotnet<Dotnet.TransactionParametersResponse>();
-        }
-
-        public static explicit operator TransactionParametersResponse(Dotnet.TransactionParametersResponse from)
-        {
-            return from.Convert().ToUnity<TransactionParametersResponse>();
         }
     }
 
@@ -3310,13 +3199,13 @@ txn to validate for the current network protocol.")]
     {
         [SerializeField, Tooltip(@"Round")]
         ulong @current_round;
-
+        
         [SerializeField, Tooltip(@"OnlineMoney")]
         ulong @onlineMoney;
-
+        
         [SerializeField, Tooltip(@"TotalMoney")]
         ulong @totalMoney;
-
+        
         /// <summary>
         /// Round        
         /// </summary>
@@ -3349,21 +3238,11 @@ txn to validate for the current network protocol.")]
 
         public bool Equals(SupplyResponse other)
         {
-            return
+            return 
                 Current_round.Equals(other.Current_round) &&
                 OnlineMoney.Equals(other.OnlineMoney) &&
                 TotalMoney.Equals(other.TotalMoney)
                 ;
-        }
-
-        public static explicit operator Dotnet.SupplyResponse(SupplyResponse from)
-        {
-            return from.Convert().ToDotnet<Dotnet.SupplyResponse>();
-        }
-
-        public static explicit operator SupplyResponse(Dotnet.SupplyResponse from)
-        {
-            return from.Convert().ToUnity<SupplyResponse>();
         }
     }
 
@@ -3373,10 +3252,10 @@ txn to validate for the current network protocol.")]
     {
         [SerializeField, Tooltip(@"An array of signed transaction objects.")]
         SignedTxn[] @topTransactions;
-
+        
         [SerializeField, Tooltip(@"Total number of transactions in the pool.")]
         ulong @totalTransactions;
-
+        
         /// <summary>
         /// An array of signed transaction objects.        
         /// </summary>
@@ -3399,7 +3278,7 @@ txn to validate for the current network protocol.")]
 
         public bool Equals(PendingTransactionsResponse other)
         {
-            return
+            return 
                 ArrayComparer.Equals(TopTransactions, other.TopTransactions) &&
                 TotalTransactions.Equals(other.TotalTransactions)
                 ;
@@ -3412,17 +3291,17 @@ txn to validate for the current network protocol.")]
     {
         [SerializeField, Tooltip(@"The round for which this information is relevant.")]
         ulong @round;
-
+        
         [SerializeField, Tooltip(@"[appl] the application local data stored in this account.
 
 The raw account uses `AppLocalState` for this type.")]
         ApplicationLocalState @appLocalState;
-
+        
         [SerializeField, Tooltip(@"[appp] parameters of the application created by this account including app global data.
 
 The raw account uses `AppParams` for this type.")]
         ApplicationParams @createdApp;
-
+        
         /// <summary>
         /// The round for which this information is relevant.        
         /// </summary>
@@ -3459,21 +3338,11 @@ The raw account uses `AppParams` for this type.")]
 
         public bool Equals(AccountApplicationResponse other)
         {
-            return
+            return 
                 Round.Equals(other.Round) &&
                 AppLocalState.Equals(other.AppLocalState) &&
                 CreatedApp.Equals(other.CreatedApp)
                 ;
-        }
-
-        public static explicit operator Dotnet.AccountApplicationResponse(AccountApplicationResponse from)
-        {
-            return from.Convert().ToDotnet<Dotnet.AccountApplicationResponse>();
-        }
-
-        public static explicit operator AccountApplicationResponse(Dotnet.AccountApplicationResponse from)
-        {
-            return from.Convert().ToUnity<AccountApplicationResponse>();
         }
     }
 
@@ -3483,7 +3352,7 @@ The raw account uses `AppParams` for this type.")]
     {
         [SerializeField, Tooltip(@"encoding of the transaction hash.")]
         string @txId;
-
+        
         /// <summary>
         /// encoding of the transaction hash.        
         /// </summary>
@@ -3496,19 +3365,9 @@ The raw account uses `AppParams` for this type.")]
 
         public bool Equals(PostTransactionsResponse other)
         {
-            return
+            return 
                 StringComparer.Equals(TxId, other.TxId)
                 ;
-        }
-
-        public static explicit operator Dotnet.PostTransactionsResponse(PostTransactionsResponse from)
-        {
-            return from.Convert().ToDotnet<Dotnet.PostTransactionsResponse>();
-        }
-
-        public static explicit operator PostTransactionsResponse(Dotnet.PostTransactionsResponse from)
-        {
-            return from.Convert().ToUnity<PostTransactionsResponse>();
         }
     }
 
@@ -3518,13 +3377,13 @@ The raw account uses `AppParams` for this type.")]
     {
         [SerializeField, Tooltip(@"")]
         DryrunTxnResult[] @txns;
-
+        
         [SerializeField, Tooltip(@"")]
         string @error;
-
+        
         [SerializeField, Tooltip(@"Protocol version is the protocol version Dryrun was operated under.")]
         string @protocolVersion;
-
+        
         /// <summary>
         ///         
         /// </summary>
@@ -3557,21 +3416,11 @@ The raw account uses `AppParams` for this type.")]
 
         public bool Equals(DryrunResponse other)
         {
-            return
+            return 
                 ArrayComparer.Equals(Txns, other.Txns) &&
                 StringComparer.Equals(Error, other.Error) &&
                 StringComparer.Equals(ProtocolVersion, other.ProtocolVersion)
                 ;
-        }
-
-        public static explicit operator Dotnet.DryrunResponse(DryrunResponse from)
-        {
-            return from.Convert().ToDotnet<Dotnet.DryrunResponse>();
-        }
-
-        public static explicit operator DryrunResponse(Dotnet.DryrunResponse from)
-        {
-            return from.Convert().ToUnity<DryrunResponse>();
         }
     }
 
@@ -3601,18 +3450,18 @@ The raw account uses `AppParams` for this type.")]
         {
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
-
-        public static explicit operator EvalDeltaKeyValue[](StateDelta wrapper)
+        
+        public static implicit operator EvalDeltaKeyValue[](StateDelta wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static explicit operator StateDelta(EvalDeltaKeyValue[] value)
+        public static implicit operator StateDelta(EvalDeltaKeyValue[] value)
         {
             return new StateDelta(value);
         }
     }
-
+    
     /// <summary>
     /// Represents a key-value store for use in an application.    
     /// </summary>
@@ -3639,18 +3488,18 @@ The raw account uses `AppParams` for this type.")]
         {
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
-
-        public static explicit operator TealKeyValue[](TealKeyValueStore wrapper)
+        
+        public static implicit operator TealKeyValue[](TealKeyValueStore wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static explicit operator TealKeyValueStore(TealKeyValue[] value)
+        public static implicit operator TealKeyValueStore(TealKeyValue[] value)
         {
             return new TealKeyValueStore(value);
         }
     }
-
+    
     /// <summary>
     /// Application information    
     /// </summary>
@@ -3677,18 +3526,18 @@ The raw account uses `AppParams` for this type.")]
         {
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
-
-        public static explicit operator Application(ApplicationResponse wrapper)
+        
+        public static implicit operator Application(ApplicationResponse wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static explicit operator ApplicationResponse(Application value)
+        public static implicit operator ApplicationResponse(Application value)
         {
             return new ApplicationResponse(value);
         }
     }
-
+    
     /// <summary>
     /// Proof of a light block header.    
     /// </summary>
@@ -3715,18 +3564,18 @@ The raw account uses `AppParams` for this type.")]
         {
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
-
-        public static explicit operator LightBlockHeaderProof(LightBlockHeaderProofResponse wrapper)
+        
+        public static implicit operator LightBlockHeaderProof(LightBlockHeaderProofResponse wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static explicit operator LightBlockHeaderProofResponse(LightBlockHeaderProof value)
+        public static implicit operator LightBlockHeaderProofResponse(LightBlockHeaderProof value)
         {
             return new LightBlockHeaderProofResponse(value);
         }
     }
-
+    
     /// <summary>
     /// Asset information    
     /// </summary>
@@ -3753,18 +3602,18 @@ The raw account uses `AppParams` for this type.")]
         {
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
-
-        public static explicit operator Asset(AssetResponse wrapper)
+        
+        public static implicit operator Asset(AssetResponse wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static explicit operator AssetResponse(Asset value)
+        public static implicit operator AssetResponse(Asset value)
         {
             return new AssetResponse(value);
         }
     }
-
+    
     /// <summary>
     /// A detailed description of a participation ID    
     /// </summary>
@@ -3791,18 +3640,18 @@ The raw account uses `AppParams` for this type.")]
         {
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
-
-        public static explicit operator ParticipationKey(ParticipationKeyResponse wrapper)
+        
+        public static implicit operator ParticipationKey(ParticipationKeyResponse wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static explicit operator ParticipationKeyResponse(ParticipationKey value)
+        public static implicit operator ParticipationKeyResponse(ParticipationKey value)
         {
             return new ParticipationKeyResponse(value);
         }
     }
-
+    
     /// <summary>
     /// StateProofResponse wraps the StateProof type in a response.    
     /// </summary>
@@ -3829,18 +3678,18 @@ The raw account uses `AppParams` for this type.")]
         {
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
-
-        public static explicit operator StateProof(StateProofResponse wrapper)
+        
+        public static implicit operator StateProof(StateProofResponse wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static explicit operator StateProofResponse(StateProof value)
+        public static implicit operator StateProofResponse(StateProof value)
         {
             return new StateProofResponse(value);
         }
     }
-
+    
     /// <summary>
     /// A list of participation keys    
     /// </summary>
@@ -3867,18 +3716,18 @@ The raw account uses `AppParams` for this type.")]
         {
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
-
-        public static explicit operator ParticipationKey[](ParticipationKeysResponse wrapper)
+        
+        public static implicit operator ParticipationKey[](ParticipationKeysResponse wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static explicit operator ParticipationKeysResponse(ParticipationKey[] value)
+        public static implicit operator ParticipationKeysResponse(ParticipationKey[] value)
         {
             return new ParticipationKeysResponse(value);
         }
     }
-
+    
     /// <summary>
     /// AccountResponse wraps the Account type in a response.    
     /// </summary>
@@ -3905,18 +3754,18 @@ The raw account uses `AppParams` for this type.")]
         {
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
-
-        public static explicit operator Account(AccountResponse wrapper)
+        
+        public static implicit operator Account(AccountResponse wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static explicit operator AccountResponse(Account value)
+        public static implicit operator AccountResponse(Account value)
         {
             return new AccountResponse(value);
         }
     }
-
+    
     /// <summary>
     /// VersionsResponse is the response to 'GET /versions'    
     /// </summary>
@@ -3943,16 +3792,54 @@ The raw account uses `AppParams` for this type.")]
         {
             return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
         }
-
-        public static explicit operator Version(VersionsResponse wrapper)
+        
+        public static implicit operator Version(VersionsResponse wrapper)
         {
             return wrapper.WrappedValue;
         }
 
-        public static explicit operator VersionsResponse(Version value)
+        public static implicit operator VersionsResponse(Version value)
         {
             return new VersionsResponse(value);
         }
     }
+    
+    /// <summary>
+    /// Box information    
+    /// </summary>
+    [Serializable, AlgoApiFormatter(typeof(WrappedValueFormatter<BoxResponse, Box>))]
+    public partial struct BoxResponse
+        : IEquatable<BoxResponse>
+        , IWrappedValue<Box>
+    {
+        [SerializeField]
+        Box @value;
 
+        public BoxResponse(Box value)
+        {
+            this.@value = value;
+        }
+
+        public Box WrappedValue
+        {
+            get => this.@value;
+            set => this.@value = value;
+        }
+
+        public bool Equals(BoxResponse other)
+        {
+            return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
+        }
+        
+        public static implicit operator Box(BoxResponse wrapper)
+        {
+            return wrapper.WrappedValue;
+        }
+
+        public static implicit operator BoxResponse(Box value)
+        {
+            return new BoxResponse(value);
+        }
+    }
+    
 }
