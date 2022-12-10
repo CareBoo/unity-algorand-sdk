@@ -5,6 +5,25 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [4.0.0-pre.11](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.10...v4.0.0-pre.11) (2022-12-10)
+
+
+### Code Refactoring
+
+* **dotnet:** move all dotnet conversions to `Algorand.Unity.Net` ([b0f7124](https://github.com/CareBoo/unity-algorand-sdk/commit/b0f7124bb89508ade1fe175b093479d07c77675c))
+
+
+### Features
+
+* **dotnet:** update `Algorand.dll` to 1.0.0.14 ([13cf117](https://github.com/CareBoo/unity-algorand-sdk/commit/13cf1177f8e008ace56ec9ed5bcd9646626140f5))
+
+
+### BREAKING CHANGES
+
+* **dotnet:** Removed all explicit/implicit operators to convert Algorand.Unity types to Algorand
+types. All conversions now can be done with `ToUnity` and `ToDotnet` extension methods by
+referencing the `Algorand.Unity.Net` assembly.
+
 # [4.0.0-pre.10](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.9...v4.0.0-pre.10) (2022-12-10)
 
 
