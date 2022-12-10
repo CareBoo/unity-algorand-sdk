@@ -34453,6 +34453,24 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Json.JsonReadException.JsonReadException
   nameWithType: JsonReadException.JsonReadException
+- uid: Algorand.Unity.Json.JsonReadException.invalidChar
+  name: invalidChar
+  href: api/Algorand.Unity.Json.JsonReadException.html#Algorand_Unity_Json_JsonReadException_invalidChar
+  commentId: F:Algorand.Unity.Json.JsonReadException.invalidChar
+  fullName: Algorand.Unity.Json.JsonReadException.invalidChar
+  nameWithType: JsonReadException.invalidChar
+- uid: Algorand.Unity.Json.JsonReadException.position
+  name: position
+  href: api/Algorand.Unity.Json.JsonReadException.html#Algorand_Unity_Json_JsonReadException_position
+  commentId: F:Algorand.Unity.Json.JsonReadException.position
+  fullName: Algorand.Unity.Json.JsonReadException.position
+  nameWithType: JsonReadException.position
+- uid: Algorand.Unity.Json.JsonReadException.text
+  name: text
+  href: api/Algorand.Unity.Json.JsonReadException.html#Algorand_Unity_Json_JsonReadException_text
+  commentId: F:Algorand.Unity.Json.JsonReadException.text
+  fullName: Algorand.Unity.Json.JsonReadException.text
+  nameWithType: JsonReadException.text
 - uid: Algorand.Unity.Json.JsonToken
   name: JsonToken
   href: api/Algorand.Unity.Json.JsonToken.html
@@ -61307,12 +61325,12 @@ references:
   commentId: T:Algorand.Unity.WebSocket.IWebSocketClient
   fullName: Algorand.Unity.WebSocket.IWebSocketClient
   nameWithType: IWebSocketClient
-- uid: Algorand.Unity.WebSocket.IWebSocketClient.Close(CloseStatusCode,System.String)
-  name: Close(CloseStatusCode, String)
-  href: api/Algorand.Unity.WebSocket.IWebSocketClient.html#Algorand_Unity_WebSocket_IWebSocketClient_Close_CloseStatusCode_System_String_
-  commentId: M:Algorand.Unity.WebSocket.IWebSocketClient.Close(CloseStatusCode,System.String)
-  fullName: Algorand.Unity.WebSocket.IWebSocketClient.Close(CloseStatusCode, System.String)
-  nameWithType: IWebSocketClient.Close(CloseStatusCode, String)
+- uid: Algorand.Unity.WebSocket.IWebSocketClient.Close(WebSocketCloseStatus,System.String)
+  name: Close(WebSocketCloseStatus, String)
+  href: api/Algorand.Unity.WebSocket.IWebSocketClient.html#Algorand_Unity_WebSocket_IWebSocketClient_Close_WebSocketCloseStatus_System_String_
+  commentId: M:Algorand.Unity.WebSocket.IWebSocketClient.Close(WebSocketCloseStatus,System.String)
+  fullName: Algorand.Unity.WebSocket.IWebSocketClient.Close(WebSocketCloseStatus, System.String)
+  nameWithType: IWebSocketClient.Close(WebSocketCloseStatus, String)
 - uid: Algorand.Unity.WebSocket.IWebSocketClient.Close*
   name: Close
   href: api/Algorand.Unity.WebSocket.IWebSocketClient.html#Algorand_Unity_WebSocket_IWebSocketClient_Close_
@@ -61388,19 +61406,6 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.WebSocket.IWebSocketClient.Send
   nameWithType: IWebSocketClient.Send
-- uid: Algorand.Unity.WebSocket.IWebSocketClient.WaitTime
-  name: WaitTime
-  href: api/Algorand.Unity.WebSocket.IWebSocketClient.html#Algorand_Unity_WebSocket_IWebSocketClient_WaitTime
-  commentId: P:Algorand.Unity.WebSocket.IWebSocketClient.WaitTime
-  fullName: Algorand.Unity.WebSocket.IWebSocketClient.WaitTime
-  nameWithType: IWebSocketClient.WaitTime
-- uid: Algorand.Unity.WebSocket.IWebSocketClient.WaitTime*
-  name: WaitTime
-  href: api/Algorand.Unity.WebSocket.IWebSocketClient.html#Algorand_Unity_WebSocket_IWebSocketClient_WaitTime_
-  commentId: Overload:Algorand.Unity.WebSocket.IWebSocketClient.WaitTime
-  isSpec: "True"
-  fullName: Algorand.Unity.WebSocket.IWebSocketClient.WaitTime
-  nameWithType: IWebSocketClient.WaitTime
 - uid: Algorand.Unity.WebSocket.NativeWebSocketClient
   name: NativeWebSocketClient
   href: api/Algorand.Unity.WebSocket.NativeWebSocketClient.html
@@ -61420,12 +61425,12 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.WebSocket.NativeWebSocketClient.NativeWebSocketClient
   nameWithType: NativeWebSocketClient.NativeWebSocketClient
-- uid: Algorand.Unity.WebSocket.NativeWebSocketClient.Close(CloseStatusCode,System.String)
-  name: Close(CloseStatusCode, String)
-  href: api/Algorand.Unity.WebSocket.NativeWebSocketClient.html#Algorand_Unity_WebSocket_NativeWebSocketClient_Close_CloseStatusCode_System_String_
-  commentId: M:Algorand.Unity.WebSocket.NativeWebSocketClient.Close(CloseStatusCode,System.String)
-  fullName: Algorand.Unity.WebSocket.NativeWebSocketClient.Close(CloseStatusCode, System.String)
-  nameWithType: NativeWebSocketClient.Close(CloseStatusCode, String)
+- uid: Algorand.Unity.WebSocket.NativeWebSocketClient.Close(WebSocketCloseStatus,System.String)
+  name: Close(WebSocketCloseStatus, String)
+  href: api/Algorand.Unity.WebSocket.NativeWebSocketClient.html#Algorand_Unity_WebSocket_NativeWebSocketClient_Close_WebSocketCloseStatus_System_String_
+  commentId: M:Algorand.Unity.WebSocket.NativeWebSocketClient.Close(WebSocketCloseStatus,System.String)
+  fullName: Algorand.Unity.WebSocket.NativeWebSocketClient.Close(WebSocketCloseStatus, System.String)
+  nameWithType: NativeWebSocketClient.Close(WebSocketCloseStatus, String)
 - uid: Algorand.Unity.WebSocket.NativeWebSocketClient.Close*
   name: Close
   href: api/Algorand.Unity.WebSocket.NativeWebSocketClient.html#Algorand_Unity_WebSocket_NativeWebSocketClient_Close_
@@ -61459,58 +61464,6 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.WebSocket.NativeWebSocketClient.EventQueue
   nameWithType: NativeWebSocketClient.EventQueue
-- uid: Algorand.Unity.WebSocket.NativeWebSocketClient.OnClose(System.Object,CloseEventArgs)
-  name: OnClose(Object, CloseEventArgs)
-  href: api/Algorand.Unity.WebSocket.NativeWebSocketClient.html#Algorand_Unity_WebSocket_NativeWebSocketClient_OnClose_System_Object_CloseEventArgs_
-  commentId: M:Algorand.Unity.WebSocket.NativeWebSocketClient.OnClose(System.Object,CloseEventArgs)
-  fullName: Algorand.Unity.WebSocket.NativeWebSocketClient.OnClose(System.Object, CloseEventArgs)
-  nameWithType: NativeWebSocketClient.OnClose(Object, CloseEventArgs)
-- uid: Algorand.Unity.WebSocket.NativeWebSocketClient.OnClose*
-  name: OnClose
-  href: api/Algorand.Unity.WebSocket.NativeWebSocketClient.html#Algorand_Unity_WebSocket_NativeWebSocketClient_OnClose_
-  commentId: Overload:Algorand.Unity.WebSocket.NativeWebSocketClient.OnClose
-  isSpec: "True"
-  fullName: Algorand.Unity.WebSocket.NativeWebSocketClient.OnClose
-  nameWithType: NativeWebSocketClient.OnClose
-- uid: Algorand.Unity.WebSocket.NativeWebSocketClient.OnError(System.Object,ErrorEventArgs)
-  name: OnError(Object, ErrorEventArgs)
-  href: api/Algorand.Unity.WebSocket.NativeWebSocketClient.html#Algorand_Unity_WebSocket_NativeWebSocketClient_OnError_System_Object_ErrorEventArgs_
-  commentId: M:Algorand.Unity.WebSocket.NativeWebSocketClient.OnError(System.Object,ErrorEventArgs)
-  fullName: Algorand.Unity.WebSocket.NativeWebSocketClient.OnError(System.Object, ErrorEventArgs)
-  nameWithType: NativeWebSocketClient.OnError(Object, ErrorEventArgs)
-- uid: Algorand.Unity.WebSocket.NativeWebSocketClient.OnError*
-  name: OnError
-  href: api/Algorand.Unity.WebSocket.NativeWebSocketClient.html#Algorand_Unity_WebSocket_NativeWebSocketClient_OnError_
-  commentId: Overload:Algorand.Unity.WebSocket.NativeWebSocketClient.OnError
-  isSpec: "True"
-  fullName: Algorand.Unity.WebSocket.NativeWebSocketClient.OnError
-  nameWithType: NativeWebSocketClient.OnError
-- uid: Algorand.Unity.WebSocket.NativeWebSocketClient.OnMessage(System.Object,MessageEventArgs)
-  name: OnMessage(Object, MessageEventArgs)
-  href: api/Algorand.Unity.WebSocket.NativeWebSocketClient.html#Algorand_Unity_WebSocket_NativeWebSocketClient_OnMessage_System_Object_MessageEventArgs_
-  commentId: M:Algorand.Unity.WebSocket.NativeWebSocketClient.OnMessage(System.Object,MessageEventArgs)
-  fullName: Algorand.Unity.WebSocket.NativeWebSocketClient.OnMessage(System.Object, MessageEventArgs)
-  nameWithType: NativeWebSocketClient.OnMessage(Object, MessageEventArgs)
-- uid: Algorand.Unity.WebSocket.NativeWebSocketClient.OnMessage*
-  name: OnMessage
-  href: api/Algorand.Unity.WebSocket.NativeWebSocketClient.html#Algorand_Unity_WebSocket_NativeWebSocketClient_OnMessage_
-  commentId: Overload:Algorand.Unity.WebSocket.NativeWebSocketClient.OnMessage
-  isSpec: "True"
-  fullName: Algorand.Unity.WebSocket.NativeWebSocketClient.OnMessage
-  nameWithType: NativeWebSocketClient.OnMessage
-- uid: Algorand.Unity.WebSocket.NativeWebSocketClient.OnOpen(System.Object,EventArgs)
-  name: OnOpen(Object, EventArgs)
-  href: api/Algorand.Unity.WebSocket.NativeWebSocketClient.html#Algorand_Unity_WebSocket_NativeWebSocketClient_OnOpen_System_Object_EventArgs_
-  commentId: M:Algorand.Unity.WebSocket.NativeWebSocketClient.OnOpen(System.Object,EventArgs)
-  fullName: Algorand.Unity.WebSocket.NativeWebSocketClient.OnOpen(System.Object, EventArgs)
-  nameWithType: NativeWebSocketClient.OnOpen(Object, EventArgs)
-- uid: Algorand.Unity.WebSocket.NativeWebSocketClient.OnOpen*
-  name: OnOpen
-  href: api/Algorand.Unity.WebSocket.NativeWebSocketClient.html#Algorand_Unity_WebSocket_NativeWebSocketClient_OnOpen_
-  commentId: Overload:Algorand.Unity.WebSocket.NativeWebSocketClient.OnOpen
-  isSpec: "True"
-  fullName: Algorand.Unity.WebSocket.NativeWebSocketClient.OnOpen
-  nameWithType: NativeWebSocketClient.OnOpen
 - uid: Algorand.Unity.WebSocket.NativeWebSocketClient.Poll
   name: Poll()
   href: api/Algorand.Unity.WebSocket.NativeWebSocketClient.html#Algorand_Unity_WebSocket_NativeWebSocketClient_Poll
@@ -61553,19 +61506,6 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.WebSocket.NativeWebSocketClient.Send
   nameWithType: NativeWebSocketClient.Send
-- uid: Algorand.Unity.WebSocket.NativeWebSocketClient.WaitTime
-  name: WaitTime
-  href: api/Algorand.Unity.WebSocket.NativeWebSocketClient.html#Algorand_Unity_WebSocket_NativeWebSocketClient_WaitTime
-  commentId: P:Algorand.Unity.WebSocket.NativeWebSocketClient.WaitTime
-  fullName: Algorand.Unity.WebSocket.NativeWebSocketClient.WaitTime
-  nameWithType: NativeWebSocketClient.WaitTime
-- uid: Algorand.Unity.WebSocket.NativeWebSocketClient.WaitTime*
-  name: WaitTime
-  href: api/Algorand.Unity.WebSocket.NativeWebSocketClient.html#Algorand_Unity_WebSocket_NativeWebSocketClient_WaitTime_
-  commentId: Overload:Algorand.Unity.WebSocket.NativeWebSocketClient.WaitTime
-  isSpec: "True"
-  fullName: Algorand.Unity.WebSocket.NativeWebSocketClient.WaitTime
-  nameWithType: NativeWebSocketClient.WaitTime
 - uid: Algorand.Unity.WebSocket.WebSocketClientFactory
   name: WebSocketClientFactory
   href: api/Algorand.Unity.WebSocket.WebSocketClientFactory.html

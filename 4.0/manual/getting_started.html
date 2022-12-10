@@ -84,25 +84,25 @@
 <thead>
 <tr>
 <th>Service</th>
+<th>Client</th>
 <th>Purpose</th>
-<th>Client Class</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>algod</code> (Algo Daemon)</td>
-<td>Make and monitor <a class="xref" href="../api/Algorand.Unity.Transaction.html">Transactions</a>. Any sort of writing to the blockchain happens via this service.</td>
 <td><a class="xref" href="../api/Algorand.Unity.AlgodClient.html"><code>AlgodClient</code></a></td>
+<td>Send and monitor <a class="xref" href="../api/Algorand.Unity.Transaction.html">Transactions</a>.</td>
 </tr>
 <tr>
 <td><code>indexer</code></td>
-<td>Query the Algorand Blockchain. Used to determine things like account balance, whether or not an account has a token, or the state of a smart contract.</td>
 <td><a class="xref" href="../api/Algorand.Unity.IndexerClient.html"><code>IndexerClient</code></a></td>
+<td>Query the Algorand Blockchain and lookup account, asset, or smart contract information.</td>
 </tr>
 <tr>
 <td><code>kmd</code> (Key Management Daemon)</td>
-<td>Manage private keys securely in a wallet. Useful when you need basic wallet features, or when developing locally.</td>
 <td><a class="xref" href="../api/Algorand.Unity.KmdClient.html"><code>KmdClient</code></a></td>
+<td>Manage private keys and accounts securely in a wallet hosted by the node.</td>
 </tr>
 </tbody>
 </table>

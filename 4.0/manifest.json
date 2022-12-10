@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "changelog/CHANGELOG.html",
-          "hash": "27srfeqPjrF4hKCbzVudcg=="
+          "hash": "nDVjy8ukUlmB64w7lOZdvA=="
         }
       },
       "is_incremental": false,
@@ -70,7 +70,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/getting_started.html",
-          "hash": "lxNBxgkgvnqqjoONyQd3Gg=="
+          "hash": "85RZrQaUuV4bD+LNU5JEPw=="
         }
       },
       "is_incremental": false,
@@ -105,10 +105,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "../Documentation~/images/algorand_logo_mark_black.svg",
+      "source_relative_path": "../Documentation~/images/algorand_logo_mark.svg",
       "output": {
         "resource": {
-          "relative_path": "Documentation~/images/algorand_logo_mark_black.svg"
+          "relative_path": "Documentation~/images/algorand_logo_mark.svg"
         }
       },
       "is_incremental": false,
@@ -116,32 +116,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "../Documentation~/images/algorand_logo_mark_black.svg.meta",
+      "source_relative_path": "../Documentation~/images/algorand_logo_mark.svg.meta",
       "output": {
         "resource": {
-          "relative_path": "Documentation~/images/algorand_logo_mark_black.svg.meta"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../Documentation~/images/algorand_logo_mark_white.svg",
-      "output": {
-        "resource": {
-          "relative_path": "Documentation~/images/algorand_logo_mark_white.svg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../Documentation~/images/algorand_logo_mark_white.svg.meta",
-      "output": {
-        "resource": {
-          "relative_path": "Documentation~/images/algorand_logo_mark_white.svg.meta"
+          "relative_path": "Documentation~/images/algorand_logo_mark.svg.meta"
         }
       },
       "is_incremental": false,
@@ -292,7 +270,7 @@
       "output": {
         ".html": {
           "relative_path": "license/Third Party Notices.html",
-          "hash": "frx/IBiP1TpV4LqXl1yjUQ=="
+          "hash": "danwepiU9ifZkHuPxPh5iQ=="
         }
       },
       "is_incremental": false,
@@ -4816,7 +4794,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Json.JsonReadException.html",
-          "hash": "PLSKCwwFAq/NhxC4nfJpPg=="
+          "hash": "6hvBD5oo1qh3mQej11X8xA=="
         }
       },
       "is_incremental": false,
@@ -7000,7 +6978,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.WebSocket.IWebSocketClient.html",
-          "hash": "jiLHF+3ih3ZdPTOtGT498A=="
+          "hash": "UtRDfHL/x/2pmXF7+jP7HA=="
         }
       },
       "is_incremental": false,
@@ -7012,7 +6990,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.WebSocket.NativeWebSocketClient.html",
-          "hash": "MtD1b/qXkp56BBex4DHP6g=="
+          "hash": "mI7WhvKmwHWi8UR5QhXMPA=="
         }
       },
       "is_incremental": false,
@@ -7120,7 +7098,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "wSl2bKci+r3BnfS9z1ruRg=="
+          "hash": "2r1TybaHGNAe2YmA855BHg=="
         }
       },
       "is_incremental": false,

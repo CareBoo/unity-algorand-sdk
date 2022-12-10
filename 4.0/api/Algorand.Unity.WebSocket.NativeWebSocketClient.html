@@ -180,42 +180,17 @@
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Algorand_Unity_WebSocket_NativeWebSocketClient_WaitTime_" data-uid="Algorand.Unity.WebSocket.NativeWebSocketClient.WaitTime*"></a>
-  <h4 id="Algorand_Unity_WebSocket_NativeWebSocketClient_WaitTime" data-uid="Algorand.Unity.WebSocket.NativeWebSocketClient.WaitTime">WaitTime</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong WaitTime { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="Algorand_Unity_WebSocket_NativeWebSocketClient_Close_" data-uid="Algorand.Unity.WebSocket.NativeWebSocketClient.Close*"></a>
-  <h4 id="Algorand_Unity_WebSocket_NativeWebSocketClient_Close_CloseStatusCode_System_String_" data-uid="Algorand.Unity.WebSocket.NativeWebSocketClient.Close(CloseStatusCode,System.String)">Close(CloseStatusCode, String)</h4>
+  <h4 id="Algorand_Unity_WebSocket_NativeWebSocketClient_Close_WebSocketCloseStatus_System_String_" data-uid="Algorand.Unity.WebSocket.NativeWebSocketClient.Close(WebSocketCloseStatus,System.String)">Close(WebSocketCloseStatus, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Close(CloseStatusCode code = null, string reason = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Close(WebSocketCloseStatus code = null, string reason = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -228,7 +203,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">CloseStatusCode</span></td>
+        <td><span class="xref">WebSocketCloseStatus</span></td>
         <td><span class="parametername">code</span></td>
         <td></td>
       </tr>
@@ -249,134 +224,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Connect()</code></pre>
   </div>
-  
-  
-  <a id="Algorand_Unity_WebSocket_NativeWebSocketClient_OnClose_" data-uid="Algorand.Unity.WebSocket.NativeWebSocketClient.OnClose*"></a>
-  <h4 id="Algorand_Unity_WebSocket_NativeWebSocketClient_OnClose_System_Object_CloseEventArgs_" data-uid="Algorand.Unity.WebSocket.NativeWebSocketClient.OnClose(System.Object,CloseEventArgs)">OnClose(Object, CloseEventArgs)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnClose(object sender, CloseEventArgs e)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">sender</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">CloseEventArgs</span></td>
-        <td><span class="parametername">e</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Algorand_Unity_WebSocket_NativeWebSocketClient_OnError_" data-uid="Algorand.Unity.WebSocket.NativeWebSocketClient.OnError*"></a>
-  <h4 id="Algorand_Unity_WebSocket_NativeWebSocketClient_OnError_System_Object_ErrorEventArgs_" data-uid="Algorand.Unity.WebSocket.NativeWebSocketClient.OnError(System.Object,ErrorEventArgs)">OnError(Object, ErrorEventArgs)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnError(object sender, ErrorEventArgs e)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">sender</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">ErrorEventArgs</span></td>
-        <td><span class="parametername">e</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Algorand_Unity_WebSocket_NativeWebSocketClient_OnMessage_" data-uid="Algorand.Unity.WebSocket.NativeWebSocketClient.OnMessage*"></a>
-  <h4 id="Algorand_Unity_WebSocket_NativeWebSocketClient_OnMessage_System_Object_MessageEventArgs_" data-uid="Algorand.Unity.WebSocket.NativeWebSocketClient.OnMessage(System.Object,MessageEventArgs)">OnMessage(Object, MessageEventArgs)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnMessage(object sender, MessageEventArgs e)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">sender</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">MessageEventArgs</span></td>
-        <td><span class="parametername">e</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Algorand_Unity_WebSocket_NativeWebSocketClient_OnOpen_" data-uid="Algorand.Unity.WebSocket.NativeWebSocketClient.OnOpen*"></a>
-  <h4 id="Algorand_Unity_WebSocket_NativeWebSocketClient_OnOpen_System_Object_EventArgs_" data-uid="Algorand.Unity.WebSocket.NativeWebSocketClient.OnOpen(System.Object,EventArgs)">OnOpen(Object, EventArgs)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnOpen(object sender, EventArgs e)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">sender</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">EventArgs</span></td>
-        <td><span class="parametername">e</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Algorand_Unity_WebSocket_NativeWebSocketClient_Poll_" data-uid="Algorand.Unity.WebSocket.NativeWebSocketClient.Poll*"></a>
