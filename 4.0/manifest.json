@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "changelog/CHANGELOG.html",
-          "hash": "zUbl2ambrvjPLycDBd+ZqA=="
+          "hash": "Pfg+BznLSWSPUnHHSTSp2w=="
         }
       },
       "is_incremental": false,
@@ -270,7 +270,7 @@
       "output": {
         ".html": {
           "relative_path": "license/Third Party Notices.html",
-          "hash": "grSe05uc6bM3shRjpWBgJg=="
+          "hash": "X3xZDxUH9HQvsOUX3A615w=="
         }
       },
       "is_incremental": false,
@@ -282,7 +282,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Account.html",
-          "hash": "3k2S/46a7HsQlIl0Vtz8/Q=="
+          "hash": "8QQbarNTam+E1+b4V1+bBQ=="
         }
       },
       "is_incremental": false,
@@ -6474,7 +6474,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.LogicSig.html",
-          "hash": "wHa5xrjIQTBF8GxSzCr9Lg=="
+          "hash": "gllzBfgJXuNqWHJjyuzYDw=="
         }
       },
       "is_incremental": false,
@@ -6882,7 +6882,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.MultisigSig.Subsig.html",
-          "hash": "aAIRrIdyKTr0BB3Zb0BPgA=="
+          "hash": "l52e75eT60mJGo5Pdu8eRQ=="
         }
       },
       "is_incremental": false,
@@ -6894,7 +6894,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.MultisigSig.html",
-          "hash": "M7cpJlp0znoLLhcFkCEiJw=="
+          "hash": "DWN04Sw9ng72Qow/1A3y1A=="
         }
       },
       "is_incremental": false,
@@ -6986,6 +6986,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Net.PrivateKeyExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Net.PrivateKeyExtensions.html",
+          "hash": "1w75qgiJjIiKXB5ckZybAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Net.SignatureExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Net.SignatureExtensions.html",
+          "hash": "C3buXkNDWN2tQ/qHyR/upA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Algorand.Unity.Net.UnityHttpClient.yml",
       "output": {
         ".html": {
@@ -7014,7 +7038,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Net.html",
-          "hash": "R0l12rr4LIkEtOBHfXZvZQ=="
+          "hash": "nCpWfin3v0S8BJ2Ff7OP3Q=="
         }
       },
       "is_incremental": false,
@@ -7098,7 +7122,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.PrivateKey.html",
-          "hash": "2lL2aCrRf4lWWm0RRPJdNw=="
+          "hash": "TnbJ2BwsCdahGxtYycOb/g=="
         }
       },
       "is_incremental": false,
@@ -7182,7 +7206,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Sig.html",
-          "hash": "ZwSicQWRO8dRLHnJFVIl9g=="
+          "hash": "IRBOve4FhOUS4t08g8haIQ=="
         }
       },
       "is_incremental": false,
@@ -8190,7 +8214,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "sx3Gh49ahpqYuGAmmfQmwQ=="
+          "hash": "T4yPAn2r4Ce9YUD23jNEGw=="
         }
       },
       "is_incremental": false,
@@ -8214,7 +8238,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "2r1TybaHGNAe2YmA855BHg=="
+          "hash": "Sss52bicfVNL9t7lvEob5g=="
         }
       },
       "is_incremental": false,
@@ -8299,7 +8323,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 661,
+          "total_file_count": 663,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

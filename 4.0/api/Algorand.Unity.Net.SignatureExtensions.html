@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Struct MultisigSig
+    <title>Class SignatureExtensions
    | Unity Algorand SDK </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Struct MultisigSig
+    <meta name="title" content="Class SignatureExtensions
    | Unity Algorand SDK ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -77,35 +77,35 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Algorand.Unity.MultisigSig">
+            <article class="content wrap" id="_content" data-uid="Algorand.Unity.Net.SignatureExtensions">
   
   
-  <h1 id="Algorand_Unity_MultisigSig" data-uid="Algorand.Unity.MultisigSig" class="text-break">Struct MultisigSig
+  <h1 id="Algorand_Unity_Net_SignatureExtensions" data-uid="Algorand.Unity.Net.SignatureExtensions" class="text-break">Class SignatureExtensions
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Algorand.Unity.ISignature.html">ISignature</a></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">SignatureExtensions</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Algorand.Unity.html">Algorand.Unity</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Algorand.Unity.Net.html">Algorand.Unity.Net</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Algorand_Unity_MultisigSig_syntax">Syntax</h5>
+  <h5 id="Algorand_Unity_Net_SignatureExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct MultisigSig : ISignature, IEquatable&lt;MultisigSig&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static class SignatureExtensions</code></pre>
   </div>
-  <h3 id="constructors">Constructors
+  <h3 id="methods">Methods
   </h3>
   
   
-  <a id="Algorand_Unity_MultisigSig__ctor_" data-uid="Algorand.Unity.MultisigSig.#ctor*"></a>
-  <h4 id="Algorand_Unity_MultisigSig__ctor_System_Byte_System_Byte_Algorand_Unity_Address___" data-uid="Algorand.Unity.MultisigSig.#ctor(System.Byte,System.Byte,Algorand.Unity.Address[])">MultisigSig(Byte, Byte, Address[])</h4>
-  <div class="markdown level1 summary"><p>Create a new multisig</p>
-</div>
+  <a id="Algorand_Unity_Net_SignatureExtensions_ToDotnet_" data-uid="Algorand.Unity.Net.SignatureExtensions.ToDotnet*"></a>
+  <h4 id="Algorand_Unity_Net_SignatureExtensions_ToDotnet_Algorand_Unity_LogicSig_" data-uid="Algorand.Unity.Net.SignatureExtensions.ToDotnet(Algorand.Unity.LogicSig)">ToDotnet(LogicSig)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MultisigSig(byte version, byte threshold, Address[] addresses)</code></pre>
+    <pre><code class="lang-csharp hljs">public static LogicsigSignature ToDotnet(this LogicSig from)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -118,137 +118,36 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a></td>
-        <td><span class="parametername">version</span></td>
-        <td><p>The version of the msig protocol. The latest version is version 1.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a></td>
-        <td><span class="parametername">threshold</span></td>
-        <td><p>The number of signatures required for this msig to be valid.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a>[]</td>
-        <td><span class="parametername">addresses</span></td>
-        <td><p>The addresses or public keys composing this msig. Order matters!</p>
-</td>
+        <td><a class="xref" href="Algorand.Unity.LogicSig.html">LogicSig</a></td>
+        <td><span class="parametername">from</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="fields">Fields
-  </h3>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">LogicsigSignature</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
-  <h4 id="Algorand_Unity_MultisigSig_AddressPrefix" data-uid="Algorand.Unity.MultisigSig.AddressPrefix">AddressPrefix</h4>
+  <a id="Algorand_Unity_Net_SignatureExtensions_ToDotnet_" data-uid="Algorand.Unity.Net.SignatureExtensions.ToDotnet*"></a>
+  <h4 id="Algorand_Unity_Net_SignatureExtensions_ToDotnet_Algorand_Unity_MultisigSig_" data-uid="Algorand.Unity.Net.SignatureExtensions.ToDotnet(Algorand.Unity.MultisigSig)">ToDotnet(MultisigSig)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly byte[] AddressPrefix</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Algorand_Unity_MultisigSig_Subsigs" data-uid="Algorand.Unity.MultisigSig.Subsigs">Subsigs</h4>
-  <div class="markdown level1 summary"><p>Subsignatures representing this multisig.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MultisigSig.Subsig[] Subsigs</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Algorand.Unity.MultisigSig.Subsig.html">MultisigSig.Subsig</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Algorand_Unity_MultisigSig_Threshold" data-uid="Algorand.Unity.MultisigSig.Threshold">Threshold</h4>
-  <div class="markdown level1 summary"><p>Number of signatures required for the multisig to be valid.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte Threshold</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Algorand_Unity_MultisigSig_Version" data-uid="Algorand.Unity.MultisigSig.Version">Version</h4>
-  <div class="markdown level1 summary"><p>Version of the multisig.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte Version</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  
-  
-  <a id="Algorand_Unity_MultisigSig_Equals_" data-uid="Algorand.Unity.MultisigSig.Equals*"></a>
-  <h4 id="Algorand_Unity_MultisigSig_Equals_Algorand_Unity_MultisigSig_" data-uid="Algorand.Unity.MultisigSig.Equals(Algorand.Unity.MultisigSig)">Equals(MultisigSig)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(MultisigSig other)</code></pre>
+    <pre><code class="lang-csharp hljs">public static MultisigSignature ToDotnet(this MultisigSig from)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -262,7 +161,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Algorand.Unity.MultisigSig.html">MultisigSig</a></td>
-        <td><span class="parametername">other</span></td>
+        <td><span class="parametername">from</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -277,49 +176,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="xref">MultisigSignature</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Algorand_Unity_MultisigSig_GetAddress_" data-uid="Algorand.Unity.MultisigSig.GetAddress*"></a>
-  <h4 id="Algorand_Unity_MultisigSig_GetAddress" data-uid="Algorand.Unity.MultisigSig.GetAddress">GetAddress()</h4>
-  <div class="markdown level1 summary"><p>Generate the address for this <a class="xref" href="Algorand.Unity.MultisigSig.html">MultisigSig</a>.</p>
-</div>
+  <a id="Algorand_Unity_Net_SignatureExtensions_ToDotnet_" data-uid="Algorand.Unity.Net.SignatureExtensions.ToDotnet*"></a>
+  <h4 id="Algorand_Unity_Net_SignatureExtensions_ToDotnet_Algorand_Unity_MultisigSig_Subsig_" data-uid="Algorand.Unity.Net.SignatureExtensions.ToDotnet(Algorand.Unity.MultisigSig.Subsig)">ToDotnet(MultisigSig.Subsig)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address GetAddress()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
-        <td><p>An <a class="xref" href="Algorand.Unity.Address.html">Address</a> made from hashing the addresses in this subsig.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Algorand_Unity_MultisigSig_Verify_" data-uid="Algorand.Unity.MultisigSig.Verify*"></a>
-  <h4 id="Algorand_Unity_MultisigSig_Verify__1___0_" data-uid="Algorand.Unity.MultisigSig.Verify``1(``0)">Verify&lt;TMessage&gt;(TMessage)</h4>
-  <div class="markdown level1 summary"><p>Verify this msig against the message.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Verify&lt;TMessage&gt;(TMessage message)
-    where TMessage : IByteArray</code></pre>
+    <pre><code class="lang-csharp hljs">public static MultisigSubsig ToDotnet(this MultisigSig.Subsig from)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -332,10 +202,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TMessage</span></td>
-        <td><span class="parametername">message</span></td>
-        <td><p>The message that was signed.</p>
-</td>
+        <td><a class="xref" href="Algorand.Unity.MultisigSig.Subsig.html">MultisigSig.Subsig</a></td>
+        <td><span class="parametername">from</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -349,32 +218,221 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p>true if a threshold of signatures were valid, false otherwise</p>
-</td>
+        <td><span class="xref">MultisigSubsig</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="typeParameters">Type Parameters</h5>
+  
+  
+  <a id="Algorand_Unity_Net_SignatureExtensions_ToDotnet_" data-uid="Algorand.Unity.Net.SignatureExtensions.ToDotnet*"></a>
+  <h4 id="Algorand_Unity_Net_SignatureExtensions_ToDotnet_Algorand_Unity_Sig_" data-uid="Algorand.Unity.Net.SignatureExtensions.ToDotnet(Algorand.Unity.Sig)">ToDotnet(Sig)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Signature ToDotnet(this Sig from)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
+        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">TMessage</span></td>
-        <td><p>The type of the bytearray the message is contained in.</p>
-</td>
+        <td><a class="xref" href="Algorand.Unity.Sig.html">Sig</a></td>
+        <td><span class="parametername">from</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Algorand.Unity.ISignature.html">ISignature</a>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Signature</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Net_SignatureExtensions_ToUnity_" data-uid="Algorand.Unity.Net.SignatureExtensions.ToUnity*"></a>
+  <h4 id="Algorand_Unity_Net_SignatureExtensions_ToUnity_LogicsigSignature_" data-uid="Algorand.Unity.Net.SignatureExtensions.ToUnity(LogicsigSignature)">ToUnity(LogicsigSignature)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static LogicSig ToUnity(this LogicsigSignature from)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">LogicsigSignature</span></td>
+        <td><span class="parametername">from</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.LogicSig.html">LogicSig</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Net_SignatureExtensions_ToUnity_" data-uid="Algorand.Unity.Net.SignatureExtensions.ToUnity*"></a>
+  <h4 id="Algorand_Unity_Net_SignatureExtensions_ToUnity_MultisigSignature_" data-uid="Algorand.Unity.Net.SignatureExtensions.ToUnity(MultisigSignature)">ToUnity(MultisigSignature)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MultisigSig ToUnity(this MultisigSignature from)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MultisigSignature</span></td>
+        <td><span class="parametername">from</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.MultisigSig.html">MultisigSig</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Net_SignatureExtensions_ToUnity_" data-uid="Algorand.Unity.Net.SignatureExtensions.ToUnity*"></a>
+  <h4 id="Algorand_Unity_Net_SignatureExtensions_ToUnity_MultisigSubsig_" data-uid="Algorand.Unity.Net.SignatureExtensions.ToUnity(MultisigSubsig)">ToUnity(MultisigSubsig)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MultisigSig.Subsig ToUnity(this MultisigSubsig from)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MultisigSubsig</span></td>
+        <td><span class="parametername">from</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.MultisigSig.Subsig.html">MultisigSig.Subsig</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Net_SignatureExtensions_ToUnity_" data-uid="Algorand.Unity.Net.SignatureExtensions.ToUnity*"></a>
+  <h4 id="Algorand_Unity_Net_SignatureExtensions_ToUnity_Signature_" data-uid="Algorand.Unity.Net.SignatureExtensions.ToUnity(Signature)">ToUnity(Signature)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Sig ToUnity(this Signature from)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Signature</span></td>
+        <td><span class="parametername">from</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Sig.html">Sig</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           

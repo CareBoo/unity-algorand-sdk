@@ -87,25 +87,6 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Account.IsRekeyed
   nameWithType: Account.IsRekeyed
-- uid: Algorand.Unity.Account.op_Explicit(Algorand.Unity.Account)~Algorand.Algod.Model.Account
-  name: Explicit(Account to Algod.Model.Account)
-  href: api/Algorand.Unity.Account.html#Algorand_Unity_Account_op_Explicit_Algorand_Unity_Account__Algorand_Algod_Model_Account
-  commentId: M:Algorand.Unity.Account.op_Explicit(Algorand.Unity.Account)~Algorand.Algod.Model.Account
-  name.vb: Narrowing(Account to Algod.Model.Account)
-  fullName: Algorand.Unity.Account.Explicit(Algorand.Unity.Account to Algorand.Algod.Model.Account)
-  fullName.vb: Algorand.Unity.Account.Narrowing(Algorand.Unity.Account to Algorand.Algod.Model.Account)
-  nameWithType: Account.Explicit(Account to Algod.Model.Account)
-  nameWithType.vb: Account.Narrowing(Account to Algod.Model.Account)
-- uid: Algorand.Unity.Account.op_Explicit*
-  name: Explicit
-  href: api/Algorand.Unity.Account.html#Algorand_Unity_Account_op_Explicit_
-  commentId: Overload:Algorand.Unity.Account.op_Explicit
-  isSpec: "True"
-  name.vb: Narrowing
-  fullName: Algorand.Unity.Account.Explicit
-  fullName.vb: Algorand.Unity.Account.Narrowing
-  nameWithType: Account.Explicit
-  nameWithType.vb: Account.Narrowing
 - uid: Algorand.Unity.Account.SignTxn*
   name: SignTxn
   href: api/Algorand.Unity.Account.html#Algorand_Unity_Account_SignTxn_
@@ -38135,34 +38116,6 @@ references:
   commentId: F:Algorand.Unity.LogicSig.Multisig
   fullName: Algorand.Unity.LogicSig.Multisig
   nameWithType: LogicSig.Multisig
-- uid: Algorand.Unity.LogicSig.op_Implicit(Algorand.LogicsigSignature)~Algorand.Unity.LogicSig
-  name: Implicit(LogicsigSignature to LogicSig)
-  href: api/Algorand.Unity.LogicSig.html#Algorand_Unity_LogicSig_op_Implicit_Algorand_LogicsigSignature__Algorand_Unity_LogicSig
-  commentId: M:Algorand.Unity.LogicSig.op_Implicit(Algorand.LogicsigSignature)~Algorand.Unity.LogicSig
-  name.vb: Widening(LogicsigSignature to LogicSig)
-  fullName: Algorand.Unity.LogicSig.Implicit(Algorand.LogicsigSignature to Algorand.Unity.LogicSig)
-  fullName.vb: Algorand.Unity.LogicSig.Widening(Algorand.LogicsigSignature to Algorand.Unity.LogicSig)
-  nameWithType: LogicSig.Implicit(LogicsigSignature to LogicSig)
-  nameWithType.vb: LogicSig.Widening(LogicsigSignature to LogicSig)
-- uid: Algorand.Unity.LogicSig.op_Implicit(Algorand.Unity.LogicSig)~Algorand.LogicsigSignature
-  name: Implicit(LogicSig to LogicsigSignature)
-  href: api/Algorand.Unity.LogicSig.html#Algorand_Unity_LogicSig_op_Implicit_Algorand_Unity_LogicSig__Algorand_LogicsigSignature
-  commentId: M:Algorand.Unity.LogicSig.op_Implicit(Algorand.Unity.LogicSig)~Algorand.LogicsigSignature
-  name.vb: Widening(LogicSig to LogicsigSignature)
-  fullName: Algorand.Unity.LogicSig.Implicit(Algorand.Unity.LogicSig to Algorand.LogicsigSignature)
-  fullName.vb: Algorand.Unity.LogicSig.Widening(Algorand.Unity.LogicSig to Algorand.LogicsigSignature)
-  nameWithType: LogicSig.Implicit(LogicSig to LogicsigSignature)
-  nameWithType.vb: LogicSig.Widening(LogicSig to LogicsigSignature)
-- uid: Algorand.Unity.LogicSig.op_Implicit*
-  name: Implicit
-  href: api/Algorand.Unity.LogicSig.html#Algorand_Unity_LogicSig_op_Implicit_
-  commentId: Overload:Algorand.Unity.LogicSig.op_Implicit
-  isSpec: "True"
-  name.vb: Widening
-  fullName: Algorand.Unity.LogicSig.Implicit
-  fullName.vb: Algorand.Unity.LogicSig.Widening
-  nameWithType: LogicSig.Implicit
-  nameWithType.vb: LogicSig.Widening
 - uid: Algorand.Unity.LogicSig.Program
   name: Program
   href: api/Algorand.Unity.LogicSig.html#Algorand_Unity_LogicSig_Program
@@ -54013,34 +53966,6 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.MultisigSig.GetAddress
   nameWithType: MultisigSig.GetAddress
-- uid: Algorand.Unity.MultisigSig.op_Implicit(Algorand.MultisigSignature)~Algorand.Unity.MultisigSig
-  name: Implicit(MultisigSignature to MultisigSig)
-  href: api/Algorand.Unity.MultisigSig.html#Algorand_Unity_MultisigSig_op_Implicit_Algorand_MultisigSignature__Algorand_Unity_MultisigSig
-  commentId: M:Algorand.Unity.MultisigSig.op_Implicit(Algorand.MultisigSignature)~Algorand.Unity.MultisigSig
-  name.vb: Widening(MultisigSignature to MultisigSig)
-  fullName: Algorand.Unity.MultisigSig.Implicit(Algorand.MultisigSignature to Algorand.Unity.MultisigSig)
-  fullName.vb: Algorand.Unity.MultisigSig.Widening(Algorand.MultisigSignature to Algorand.Unity.MultisigSig)
-  nameWithType: MultisigSig.Implicit(MultisigSignature to MultisigSig)
-  nameWithType.vb: MultisigSig.Widening(MultisigSignature to MultisigSig)
-- uid: Algorand.Unity.MultisigSig.op_Implicit(Algorand.Unity.MultisigSig)~Algorand.MultisigSignature
-  name: Implicit(MultisigSig to MultisigSignature)
-  href: api/Algorand.Unity.MultisigSig.html#Algorand_Unity_MultisigSig_op_Implicit_Algorand_Unity_MultisigSig__Algorand_MultisigSignature
-  commentId: M:Algorand.Unity.MultisigSig.op_Implicit(Algorand.Unity.MultisigSig)~Algorand.MultisigSignature
-  name.vb: Widening(MultisigSig to MultisigSignature)
-  fullName: Algorand.Unity.MultisigSig.Implicit(Algorand.Unity.MultisigSig to Algorand.MultisigSignature)
-  fullName.vb: Algorand.Unity.MultisigSig.Widening(Algorand.Unity.MultisigSig to Algorand.MultisigSignature)
-  nameWithType: MultisigSig.Implicit(MultisigSig to MultisigSignature)
-  nameWithType.vb: MultisigSig.Widening(MultisigSig to MultisigSignature)
-- uid: Algorand.Unity.MultisigSig.op_Implicit*
-  name: Implicit
-  href: api/Algorand.Unity.MultisigSig.html#Algorand_Unity_MultisigSig_op_Implicit_
-  commentId: Overload:Algorand.Unity.MultisigSig.op_Implicit
-  isSpec: "True"
-  name.vb: Widening
-  fullName: Algorand.Unity.MultisigSig.Implicit
-  fullName.vb: Algorand.Unity.MultisigSig.Widening
-  nameWithType: MultisigSig.Implicit
-  nameWithType.vb: MultisigSig.Widening
 - uid: Algorand.Unity.MultisigSig.Subsig
   name: MultisigSig.Subsig
   href: api/Algorand.Unity.MultisigSig.Subsig.html
@@ -54060,15 +53985,6 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.MultisigSig.Subsig.Equals
   nameWithType: MultisigSig.Subsig.Equals
-- uid: Algorand.Unity.MultisigSig.Subsig.op_Implicit(Algorand.MultisigSubsig)~Algorand.Unity.MultisigSig.Subsig
-  name: Implicit(MultisigSubsig to MultisigSig.Subsig)
-  href: api/Algorand.Unity.MultisigSig.Subsig.html#Algorand_Unity_MultisigSig_Subsig_op_Implicit_Algorand_MultisigSubsig__Algorand_Unity_MultisigSig_Subsig
-  commentId: M:Algorand.Unity.MultisigSig.Subsig.op_Implicit(Algorand.MultisigSubsig)~Algorand.Unity.MultisigSig.Subsig
-  name.vb: Widening(MultisigSubsig to MultisigSig.Subsig)
-  fullName: Algorand.Unity.MultisigSig.Subsig.Implicit(Algorand.MultisigSubsig to Algorand.Unity.MultisigSig.Subsig)
-  fullName.vb: Algorand.Unity.MultisigSig.Subsig.Widening(Algorand.MultisigSubsig to Algorand.Unity.MultisigSig.Subsig)
-  nameWithType: MultisigSig.Subsig.Implicit(MultisigSubsig to MultisigSig.Subsig)
-  nameWithType.vb: MultisigSig.Subsig.Widening(MultisigSubsig to MultisigSig.Subsig)
 - uid: Algorand.Unity.MultisigSig.Subsig.op_Implicit(Algorand.Unity.Address)~Algorand.Unity.MultisigSig.Subsig
   name: Implicit(Address to MultisigSig.Subsig)
   href: api/Algorand.Unity.MultisigSig.Subsig.html#Algorand_Unity_MultisigSig_Subsig_op_Implicit_Algorand_Unity_Address__Algorand_Unity_MultisigSig_Subsig
@@ -54078,15 +53994,6 @@ references:
   fullName.vb: Algorand.Unity.MultisigSig.Subsig.Widening(Algorand.Unity.Address to Algorand.Unity.MultisigSig.Subsig)
   nameWithType: MultisigSig.Subsig.Implicit(Address to MultisigSig.Subsig)
   nameWithType.vb: MultisigSig.Subsig.Widening(Address to MultisigSig.Subsig)
-- uid: Algorand.Unity.MultisigSig.Subsig.op_Implicit(Algorand.Unity.MultisigSig.Subsig)~Algorand.MultisigSubsig
-  name: Implicit(MultisigSig.Subsig to MultisigSubsig)
-  href: api/Algorand.Unity.MultisigSig.Subsig.html#Algorand_Unity_MultisigSig_Subsig_op_Implicit_Algorand_Unity_MultisigSig_Subsig__Algorand_MultisigSubsig
-  commentId: M:Algorand.Unity.MultisigSig.Subsig.op_Implicit(Algorand.Unity.MultisigSig.Subsig)~Algorand.MultisigSubsig
-  name.vb: Widening(MultisigSig.Subsig to MultisigSubsig)
-  fullName: Algorand.Unity.MultisigSig.Subsig.Implicit(Algorand.Unity.MultisigSig.Subsig to Algorand.MultisigSubsig)
-  fullName.vb: Algorand.Unity.MultisigSig.Subsig.Widening(Algorand.Unity.MultisigSig.Subsig to Algorand.MultisigSubsig)
-  nameWithType: MultisigSig.Subsig.Implicit(MultisigSig.Subsig to MultisigSubsig)
-  nameWithType.vb: MultisigSig.Subsig.Widening(MultisigSig.Subsig to MultisigSubsig)
 - uid: Algorand.Unity.MultisigSig.Subsig.op_Implicit(Algorand.Unity.MultisigSig.Subsig)~Algorand.Unity.Address
   name: Implicit(MultisigSig.Subsig to Address)
   href: api/Algorand.Unity.MultisigSig.Subsig.html#Algorand_Unity_MultisigSig_Subsig_op_Implicit_Algorand_Unity_MultisigSig_Subsig__Algorand_Unity_Address
@@ -54414,6 +54321,106 @@ references:
   fullName.vb: Algorand.Unity.Net.MsgPackConvert(Of TIn).ToUnity(Of TOut)()
   nameWithType: MsgPackConvert<TIn>.ToUnity<TOut>()
   nameWithType.vb: MsgPackConvert(Of TIn).ToUnity(Of TOut)()
+- uid: Algorand.Unity.Net.PrivateKeyExtensions
+  name: PrivateKeyExtensions
+  href: api/Algorand.Unity.Net.PrivateKeyExtensions.html
+  commentId: T:Algorand.Unity.Net.PrivateKeyExtensions
+  fullName: Algorand.Unity.Net.PrivateKeyExtensions
+  nameWithType: PrivateKeyExtensions
+- uid: Algorand.Unity.Net.PrivateKeyExtensions.ToDotnet(Algorand.Unity.PrivateKey)
+  name: ToDotnet(PrivateKey)
+  href: api/Algorand.Unity.Net.PrivateKeyExtensions.html#Algorand_Unity_Net_PrivateKeyExtensions_ToDotnet_Algorand_Unity_PrivateKey_
+  commentId: M:Algorand.Unity.Net.PrivateKeyExtensions.ToDotnet(Algorand.Unity.PrivateKey)
+  fullName: Algorand.Unity.Net.PrivateKeyExtensions.ToDotnet(Algorand.Unity.PrivateKey)
+  nameWithType: PrivateKeyExtensions.ToDotnet(PrivateKey)
+- uid: Algorand.Unity.Net.PrivateKeyExtensions.ToDotnet*
+  name: ToDotnet
+  href: api/Algorand.Unity.Net.PrivateKeyExtensions.html#Algorand_Unity_Net_PrivateKeyExtensions_ToDotnet_
+  commentId: Overload:Algorand.Unity.Net.PrivateKeyExtensions.ToDotnet
+  isSpec: "True"
+  fullName: Algorand.Unity.Net.PrivateKeyExtensions.ToDotnet
+  nameWithType: PrivateKeyExtensions.ToDotnet
+- uid: Algorand.Unity.Net.PrivateKeyExtensions.ToUnity(KeyPair)
+  name: ToUnity(KeyPair)
+  href: api/Algorand.Unity.Net.PrivateKeyExtensions.html#Algorand_Unity_Net_PrivateKeyExtensions_ToUnity_KeyPair_
+  commentId: M:Algorand.Unity.Net.PrivateKeyExtensions.ToUnity(KeyPair)
+  fullName: Algorand.Unity.Net.PrivateKeyExtensions.ToUnity(KeyPair)
+  nameWithType: PrivateKeyExtensions.ToUnity(KeyPair)
+- uid: Algorand.Unity.Net.PrivateKeyExtensions.ToUnity*
+  name: ToUnity
+  href: api/Algorand.Unity.Net.PrivateKeyExtensions.html#Algorand_Unity_Net_PrivateKeyExtensions_ToUnity_
+  commentId: Overload:Algorand.Unity.Net.PrivateKeyExtensions.ToUnity
+  isSpec: "True"
+  fullName: Algorand.Unity.Net.PrivateKeyExtensions.ToUnity
+  nameWithType: PrivateKeyExtensions.ToUnity
+- uid: Algorand.Unity.Net.SignatureExtensions
+  name: SignatureExtensions
+  href: api/Algorand.Unity.Net.SignatureExtensions.html
+  commentId: T:Algorand.Unity.Net.SignatureExtensions
+  fullName: Algorand.Unity.Net.SignatureExtensions
+  nameWithType: SignatureExtensions
+- uid: Algorand.Unity.Net.SignatureExtensions.ToDotnet(Algorand.Unity.LogicSig)
+  name: ToDotnet(LogicSig)
+  href: api/Algorand.Unity.Net.SignatureExtensions.html#Algorand_Unity_Net_SignatureExtensions_ToDotnet_Algorand_Unity_LogicSig_
+  commentId: M:Algorand.Unity.Net.SignatureExtensions.ToDotnet(Algorand.Unity.LogicSig)
+  fullName: Algorand.Unity.Net.SignatureExtensions.ToDotnet(Algorand.Unity.LogicSig)
+  nameWithType: SignatureExtensions.ToDotnet(LogicSig)
+- uid: Algorand.Unity.Net.SignatureExtensions.ToDotnet(Algorand.Unity.MultisigSig)
+  name: ToDotnet(MultisigSig)
+  href: api/Algorand.Unity.Net.SignatureExtensions.html#Algorand_Unity_Net_SignatureExtensions_ToDotnet_Algorand_Unity_MultisigSig_
+  commentId: M:Algorand.Unity.Net.SignatureExtensions.ToDotnet(Algorand.Unity.MultisigSig)
+  fullName: Algorand.Unity.Net.SignatureExtensions.ToDotnet(Algorand.Unity.MultisigSig)
+  nameWithType: SignatureExtensions.ToDotnet(MultisigSig)
+- uid: Algorand.Unity.Net.SignatureExtensions.ToDotnet(Algorand.Unity.MultisigSig.Subsig)
+  name: ToDotnet(MultisigSig.Subsig)
+  href: api/Algorand.Unity.Net.SignatureExtensions.html#Algorand_Unity_Net_SignatureExtensions_ToDotnet_Algorand_Unity_MultisigSig_Subsig_
+  commentId: M:Algorand.Unity.Net.SignatureExtensions.ToDotnet(Algorand.Unity.MultisigSig.Subsig)
+  fullName: Algorand.Unity.Net.SignatureExtensions.ToDotnet(Algorand.Unity.MultisigSig.Subsig)
+  nameWithType: SignatureExtensions.ToDotnet(MultisigSig.Subsig)
+- uid: Algorand.Unity.Net.SignatureExtensions.ToDotnet(Algorand.Unity.Sig)
+  name: ToDotnet(Sig)
+  href: api/Algorand.Unity.Net.SignatureExtensions.html#Algorand_Unity_Net_SignatureExtensions_ToDotnet_Algorand_Unity_Sig_
+  commentId: M:Algorand.Unity.Net.SignatureExtensions.ToDotnet(Algorand.Unity.Sig)
+  fullName: Algorand.Unity.Net.SignatureExtensions.ToDotnet(Algorand.Unity.Sig)
+  nameWithType: SignatureExtensions.ToDotnet(Sig)
+- uid: Algorand.Unity.Net.SignatureExtensions.ToDotnet*
+  name: ToDotnet
+  href: api/Algorand.Unity.Net.SignatureExtensions.html#Algorand_Unity_Net_SignatureExtensions_ToDotnet_
+  commentId: Overload:Algorand.Unity.Net.SignatureExtensions.ToDotnet
+  isSpec: "True"
+  fullName: Algorand.Unity.Net.SignatureExtensions.ToDotnet
+  nameWithType: SignatureExtensions.ToDotnet
+- uid: Algorand.Unity.Net.SignatureExtensions.ToUnity(LogicsigSignature)
+  name: ToUnity(LogicsigSignature)
+  href: api/Algorand.Unity.Net.SignatureExtensions.html#Algorand_Unity_Net_SignatureExtensions_ToUnity_LogicsigSignature_
+  commentId: M:Algorand.Unity.Net.SignatureExtensions.ToUnity(LogicsigSignature)
+  fullName: Algorand.Unity.Net.SignatureExtensions.ToUnity(LogicsigSignature)
+  nameWithType: SignatureExtensions.ToUnity(LogicsigSignature)
+- uid: Algorand.Unity.Net.SignatureExtensions.ToUnity(MultisigSignature)
+  name: ToUnity(MultisigSignature)
+  href: api/Algorand.Unity.Net.SignatureExtensions.html#Algorand_Unity_Net_SignatureExtensions_ToUnity_MultisigSignature_
+  commentId: M:Algorand.Unity.Net.SignatureExtensions.ToUnity(MultisigSignature)
+  fullName: Algorand.Unity.Net.SignatureExtensions.ToUnity(MultisigSignature)
+  nameWithType: SignatureExtensions.ToUnity(MultisigSignature)
+- uid: Algorand.Unity.Net.SignatureExtensions.ToUnity(MultisigSubsig)
+  name: ToUnity(MultisigSubsig)
+  href: api/Algorand.Unity.Net.SignatureExtensions.html#Algorand_Unity_Net_SignatureExtensions_ToUnity_MultisigSubsig_
+  commentId: M:Algorand.Unity.Net.SignatureExtensions.ToUnity(MultisigSubsig)
+  fullName: Algorand.Unity.Net.SignatureExtensions.ToUnity(MultisigSubsig)
+  nameWithType: SignatureExtensions.ToUnity(MultisigSubsig)
+- uid: Algorand.Unity.Net.SignatureExtensions.ToUnity(Signature)
+  name: ToUnity(Signature)
+  href: api/Algorand.Unity.Net.SignatureExtensions.html#Algorand_Unity_Net_SignatureExtensions_ToUnity_Signature_
+  commentId: M:Algorand.Unity.Net.SignatureExtensions.ToUnity(Signature)
+  fullName: Algorand.Unity.Net.SignatureExtensions.ToUnity(Signature)
+  nameWithType: SignatureExtensions.ToUnity(Signature)
+- uid: Algorand.Unity.Net.SignatureExtensions.ToUnity*
+  name: ToUnity
+  href: api/Algorand.Unity.Net.SignatureExtensions.html#Algorand_Unity_Net_SignatureExtensions_ToUnity_
+  commentId: Overload:Algorand.Unity.Net.SignatureExtensions.ToUnity
+  isSpec: "True"
+  fullName: Algorand.Unity.Net.SignatureExtensions.ToUnity
+  nameWithType: SignatureExtensions.ToUnity
 - uid: Algorand.Unity.Net.UnityHttpClient
   name: UnityHttpClient
   href: api/Algorand.Unity.Net.UnityHttpClient.html
@@ -55158,43 +55165,6 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.PrivateKey.Length
   nameWithType: PrivateKey.Length
-- uid: Algorand.Unity.PrivateKey.op_Explicit(Algorand.Crypto.KeyPair)~Algorand.Unity.PrivateKey
-  name: Explicit(Crypto.KeyPair to PrivateKey)
-  href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_op_Explicit_Algorand_Crypto_KeyPair__Algorand_Unity_PrivateKey
-  commentId: M:Algorand.Unity.PrivateKey.op_Explicit(Algorand.Crypto.KeyPair)~Algorand.Unity.PrivateKey
-  name.vb: Narrowing(Crypto.KeyPair to PrivateKey)
-  fullName: Algorand.Unity.PrivateKey.Explicit(Algorand.Crypto.KeyPair to Algorand.Unity.PrivateKey)
-  fullName.vb: Algorand.Unity.PrivateKey.Narrowing(Algorand.Crypto.KeyPair to Algorand.Unity.PrivateKey)
-  nameWithType: PrivateKey.Explicit(Crypto.KeyPair to PrivateKey)
-  nameWithType.vb: PrivateKey.Narrowing(Crypto.KeyPair to PrivateKey)
-- uid: Algorand.Unity.PrivateKey.op_Explicit(Algorand.Unity.PrivateKey)~Algorand.Crypto.KeyPair
-  name: Explicit(PrivateKey to Crypto.KeyPair)
-  href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_op_Explicit_Algorand_Unity_PrivateKey__Algorand_Crypto_KeyPair
-  commentId: M:Algorand.Unity.PrivateKey.op_Explicit(Algorand.Unity.PrivateKey)~Algorand.Crypto.KeyPair
-  name.vb: Narrowing(PrivateKey to Crypto.KeyPair)
-  fullName: Algorand.Unity.PrivateKey.Explicit(Algorand.Unity.PrivateKey to Algorand.Crypto.KeyPair)
-  fullName.vb: Algorand.Unity.PrivateKey.Narrowing(Algorand.Unity.PrivateKey to Algorand.Crypto.KeyPair)
-  nameWithType: PrivateKey.Explicit(PrivateKey to Crypto.KeyPair)
-  nameWithType.vb: PrivateKey.Narrowing(PrivateKey to Crypto.KeyPair)
-- uid: Algorand.Unity.PrivateKey.op_Explicit(Algorand.Unity.PrivateKey)~Algorand.Utils.Crypto.FixedSecureRandom
-  name: Explicit(PrivateKey to Utils.Crypto.FixedSecureRandom)
-  href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_op_Explicit_Algorand_Unity_PrivateKey__Algorand_Utils_Crypto_FixedSecureRandom
-  commentId: M:Algorand.Unity.PrivateKey.op_Explicit(Algorand.Unity.PrivateKey)~Algorand.Utils.Crypto.FixedSecureRandom
-  name.vb: Narrowing(PrivateKey to Utils.Crypto.FixedSecureRandom)
-  fullName: Algorand.Unity.PrivateKey.Explicit(Algorand.Unity.PrivateKey to Algorand.Utils.Crypto.FixedSecureRandom)
-  fullName.vb: Algorand.Unity.PrivateKey.Narrowing(Algorand.Unity.PrivateKey to Algorand.Utils.Crypto.FixedSecureRandom)
-  nameWithType: PrivateKey.Explicit(PrivateKey to Utils.Crypto.FixedSecureRandom)
-  nameWithType.vb: PrivateKey.Narrowing(PrivateKey to Utils.Crypto.FixedSecureRandom)
-- uid: Algorand.Unity.PrivateKey.op_Explicit*
-  name: Explicit
-  href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_op_Explicit_
-  commentId: Overload:Algorand.Unity.PrivateKey.op_Explicit
-  isSpec: "True"
-  name.vb: Narrowing
-  fullName: Algorand.Unity.PrivateKey.Explicit
-  fullName.vb: Algorand.Unity.PrivateKey.Narrowing
-  nameWithType: PrivateKey.Explicit
-  nameWithType.vb: PrivateKey.Narrowing
 - uid: Algorand.Unity.PrivateKey.Sign*
   name: Sign
   href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_Sign_
@@ -55608,24 +55578,6 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Sig.Equality
   nameWithType: Sig.Equality
-- uid: Algorand.Unity.Sig.op_Implicit(Algorand.Signature)~Algorand.Unity.Sig
-  name: Implicit(Signature to Sig)
-  href: api/Algorand.Unity.Sig.html#Algorand_Unity_Sig_op_Implicit_Algorand_Signature__Algorand_Unity_Sig
-  commentId: M:Algorand.Unity.Sig.op_Implicit(Algorand.Signature)~Algorand.Unity.Sig
-  name.vb: Widening(Signature to Sig)
-  fullName: Algorand.Unity.Sig.Implicit(Algorand.Signature to Algorand.Unity.Sig)
-  fullName.vb: Algorand.Unity.Sig.Widening(Algorand.Signature to Algorand.Unity.Sig)
-  nameWithType: Sig.Implicit(Signature to Sig)
-  nameWithType.vb: Sig.Widening(Signature to Sig)
-- uid: Algorand.Unity.Sig.op_Implicit(Algorand.Unity.Sig)~Algorand.Signature
-  name: Implicit(Sig to Signature)
-  href: api/Algorand.Unity.Sig.html#Algorand_Unity_Sig_op_Implicit_Algorand_Unity_Sig__Algorand_Signature
-  commentId: M:Algorand.Unity.Sig.op_Implicit(Algorand.Unity.Sig)~Algorand.Signature
-  name.vb: Widening(Sig to Signature)
-  fullName: Algorand.Unity.Sig.Implicit(Algorand.Unity.Sig to Algorand.Signature)
-  fullName.vb: Algorand.Unity.Sig.Widening(Algorand.Unity.Sig to Algorand.Signature)
-  nameWithType: Sig.Implicit(Sig to Signature)
-  nameWithType.vb: Sig.Widening(Sig to Signature)
 - uid: Algorand.Unity.Sig.op_Implicit(Algorand.Unity.Sig)~Ed25519.Signature
   name: Implicit(Sig to Ed25519.Signature)
   href: api/Algorand.Unity.Sig.html#Algorand_Unity_Sig_op_Implicit_Algorand_Unity_Sig__Ed25519_Signature
