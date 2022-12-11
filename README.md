@@ -44,7 +44,7 @@ and connect to any Algorand wallet supporting [WalletConnect](https://developer.
   - [Unity Asset Store](#unity-asset-store)
 - [Getting Started](#getting-started)
   - [Documentation Site](#documentation-site)
-  - [WebGL WalletConnect Sample](#webgl-walletconnect-sample)
+  - [WalletConnect Sample](#walletconnect-sample)
 
 ## Requirements
 
@@ -160,8 +160,8 @@ Read [Getting Started](Documentation~/getting_started.md) to learn the basic wor
 
 Docs for this version were generated at https://careboo.github.io/unity-algorand-sdk/4.0.
 
-### WebGL WalletConnect Sample
+### WalletConnect Sample
 
 Take a look at the WebGL WalletConnect Sample built from the Samples directory here:
 
-https://careboo.github.io/unity-algorand-sdk/demos/webgl
+https://careboo.github.io/unity-algorand-sdk/demos/walletconnect
