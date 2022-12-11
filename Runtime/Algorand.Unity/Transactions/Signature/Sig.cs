@@ -40,23 +40,6 @@ namespace Algorand.Unity
             return new Sig(in sig);
         }
 
-        public static implicit operator Algorand.Signature(Sig sig)
-        {
-            return sig == default ? null : new Algorand.Signature(sig.ToArray());
-        }
-
-        public static implicit operator Sig(Algorand.Signature dotnetSig)
-        {
-            if (dotnetSig == null)
-            {
-                return default;
-            }
-            var bytes = dotnetSig.Bytes;
-            var sig = default(Sig);
-            sig.CopyFrom(bytes, 0);
-            return sig;
-        }
-
         public static bool operator ==(in Sig x, in Sig y)
         {
             return x.sig == y.sig;

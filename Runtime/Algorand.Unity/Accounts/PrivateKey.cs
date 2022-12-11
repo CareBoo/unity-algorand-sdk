@@ -91,23 +91,5 @@ namespace Algorand.Unity
                 key[i] = bytes[i];
             return key;
         }
-
-        public static explicit operator Algorand.Utils.Crypto.FixedSecureRandom(PrivateKey pk)
-        {
-            return new Algorand.Utils.Crypto.FixedSecureRandom(pk.ToArray());
-        }
-
-        public static explicit operator PrivateKey(Algorand.Crypto.KeyPair kp)
-        {
-            var pkBytes = kp.ClearTextPrivateKey;
-            var result = new PrivateKey();
-            result.CopyFrom(pkBytes, 0, 32);
-            return result;
-        }
-
-        public static explicit operator Algorand.Crypto.KeyPair(PrivateKey pk)
-        {
-            return new Algorand.Crypto.KeyPair((Algorand.Utils.Crypto.FixedSecureRandom)pk);
-        }
     }
 }

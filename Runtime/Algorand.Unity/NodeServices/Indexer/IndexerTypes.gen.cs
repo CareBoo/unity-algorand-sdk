@@ -13,8 +13,6 @@ using Algorand.Unity.LowLevel;
 using Unity.Collections;
 using UnityEngine;
 
-using Dotnet = Algorand.Indexer.Model;
-
 namespace Algorand.Unity.Indexer
 {
     [AlgoApiObject, Serializable]

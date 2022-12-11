@@ -13,8 +13,6 @@ using Algorand.Unity.LowLevel;
 using Unity.Collections;
 using UnityEngine;
 
-using Dotnet = Algorand.Algod.Model;
-
 namespace Algorand.Unity.Algod
 {
     [AlgoApiObject, Serializable]

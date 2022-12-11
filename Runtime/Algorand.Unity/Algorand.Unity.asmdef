@@ -17,10 +17,7 @@
     "excludePlatforms": [],
     "allowUnsafeCode": true,
     "overrideReferences": true,
-    "precompiledReferences": [
-        "Algorand_1.0.0.14.dll",
-        "BouncyCastle.Crypto_1.8.8.dll"
-    ],
+    "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
     "versionDefines": [],
