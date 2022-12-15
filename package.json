@@ -52,6 +52,11 @@
       "displayName": "Calling Smart Contract ABI",
       "description": "Generate a GUI from a contract.json and call its smart contract methods.",
       "path": "Samples~/CallingSmartContractAbi"
+    },
+    {
+      "displayName": "NFT Viewer",
+      "description": "Display NFTs following ARC-0064 in an Account.",
+      "path": "Samples~/NFT Viewer"
     }
   ],
   "scripts": {
