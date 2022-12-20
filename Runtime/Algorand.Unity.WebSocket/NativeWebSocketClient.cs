@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net.WebSockets;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using UnityEngine;
 
 namespace Algorand.Unity.WebSocket
 {
@@ -12,6 +14,7 @@ namespace Algorand.Unity.WebSocket
 
         private ClientWebSocket Connection;
         private readonly Uri uri;
+        private readonly ArraySegment<byte> buffer;
         public Queue<WebSocketEvent> EventQueue { get; } = new Queue<WebSocketEvent>();
 
         public WebSocketState ReadyState => Connection?.State ?? WebSocketState.Closed;
@@ -20,6 +23,8 @@ namespace Algorand.Unity.WebSocket
         {
             uri = new Uri(url);
             Connection = new ClientWebSocket();
+            Connection.Options.KeepAliveInterval = TimeSpan.Zero;
+            buffer = System.Net.WebSockets.WebSocket.CreateClientBuffer(8 * 1024, 8 * 1024);
         }
 
         public void Connect()
@@ -48,23 +53,27 @@ namespace Algorand.Unity.WebSocket
         {
             await Connection.ConnectAsync(uri, CancellationToken.None);
             OnOpen();
-            var buffer = new byte[1024 * 4];
             try
             {
                 while (true)
                 {
-                    var result = await Connection.ReceiveAsync(new ArraySegment<byte>(buffer), CancellationToken.None);
-                    if (Connection.CloseStatus.HasValue)
+                    using var ms = new MemoryStream();
+                    WebSocketReceiveResult result;
+                    do
+                    {
+                        result = await Connection.ReceiveAsync(buffer, CancellationToken.None);
+                        ms.Write(buffer.Array, buffer.Offset, result.Count);
+                    } while (!result.EndOfMessage);
+
+                    ms.Seek(0, SeekOrigin.Begin);
+                    
+                    if (Connection.CloseStatus.HasValue || result.CloseStatus.HasValue)
                     {
                         OnClose();
                         break;
                     }
-                    var payload = new byte[result.Count];
-                    for (var i = 0; i < payload.Length; i++)
-                    {
-                        payload[i] = buffer[i];
-                    }
 
+                    var payload = ms.ToArray();
                     OnMessage(payload);
                 }
             }

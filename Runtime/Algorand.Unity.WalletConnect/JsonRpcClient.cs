@@ -1,6 +1,7 @@
 using System;
 using System.Net.WebSockets;
 using System.Threading;
+using Algorand.Unity.Json;
 using Algorand.Unity.WebSocket;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -187,6 +188,10 @@ namespace Algorand.Unity.WalletConnect
                                 foreach (var inner in ex.InnerExceptions)
                                     Debug.LogWarning(inner.ToString());
                                 throw;
+                            }
+                            catch (JsonReadException ex)
+                            {
+                                Debug.LogWarning($"Response from JsonRpcServer was not Json:\n\"{System.Text.Encoding.UTF8.GetString(evt.Payload)}\"\nError:\n{ex}");
                             }
                             break;
                         case WebSocketEventType.Error:
