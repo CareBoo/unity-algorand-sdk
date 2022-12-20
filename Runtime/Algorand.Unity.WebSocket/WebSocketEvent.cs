@@ -1,6 +1,6 @@
 namespace Algorand.Unity.WebSocket
 {
-    public class WebSocketEvent
+    public struct WebSocketEvent
     {
         public enum WebSocketEventType
         {

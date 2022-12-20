@@ -4,7 +4,6 @@ using System.IO;
 using System.Net.WebSockets;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using UnityEngine;
 
 namespace Algorand.Unity.WebSocket
 {
