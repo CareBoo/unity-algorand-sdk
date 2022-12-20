@@ -51,7 +51,6 @@ namespace Algorand.Unity.WalletConnect
         {
             webSocketClient.Connect();
             await webSocketClient.PollUntilOpen(cancellationToken);
-            Debug.Log($"client open with status: {webSocketClient.ReadyState}");
             var msg = NetworkMessage.SubscribeToTopic(clientId);
             webSocketClient.Send(msg);
             connectionCancellation = new CancellationTokenSource();
