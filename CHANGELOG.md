@@ -5,6 +5,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [4.0.0-pre.13](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.12...v4.0.0-pre.13) (2022-12-20)
+
+
+### Bug Fixes
+
+* **crypto:** add universal sodium binary ([d3dc173](https://github.com/CareBoo/unity-algorand-sdk/commit/d3dc17329d8aa2e4504f74f6f688614ed72ffdc3)), closes [#174](https://github.com/CareBoo/unity-algorand-sdk/issues/174)
+* **walletconnect:** handle server error messages in payloads ([4b4b4e1](https://github.com/CareBoo/unity-algorand-sdk/commit/4b4b4e16a80c2d188eccdc6441ab4f7dc4e84ea8)), closes [#173](https://github.com/CareBoo/unity-algorand-sdk/issues/173)
+
+
+### Performance Improvements
+
+* **websocket:** change `WebSocketEvent` to be a struct ([1ae34c2](https://github.com/CareBoo/unity-algorand-sdk/commit/1ae34c232ab27f38d0d2bf151a32850bfde297b2))
+
 # [4.0.0-pre.12](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.11...v4.0.0-pre.12) (2022-12-11)
 
 
