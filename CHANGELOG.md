@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [4.0.0-pre.14](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.13...v4.0.0-pre.14) (2022-12-21)
+
+
+### Features
+
+* **algod:** add `LedgerStateDelta` APIs and Models ([321b013](https://github.com/CareBoo/unity-algorand-sdk/commit/321b0132a046e03866101e5b16252c397eb05d17))
+* **dotnet:** update `Algorand.dll` to version 1.0.0.15 ([3ce4d6c](https://github.com/CareBoo/unity-algorand-sdk/commit/3ce4d6ce6205c3d1f1eea37d145ae156dc8db6ce))
+
 # [4.0.0-pre.13](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.12...v4.0.0-pre.13) (2022-12-20)
 
 
