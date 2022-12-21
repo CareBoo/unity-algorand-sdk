@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class AlgodClientExtensions
+    <title>Struct KvDelta
    | Unity Algorand SDK </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class AlgodClientExtensions
+    <meta name="title" content="Struct KvDelta
    | Unity Algorand SDK ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -77,36 +77,84 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Algorand.Unity.Net.AlgodClientExtensions">
+            <article class="content wrap" id="_content" data-uid="Algorand.Unity.Algod.KvDelta">
   
   
-  <h1 id="Algorand_Unity_Net_AlgodClientExtensions" data-uid="Algorand.Unity.Net.AlgodClientExtensions" class="text-break">Class AlgodClientExtensions
+  <h1 id="Algorand_Unity_Algod_KvDelta" data-uid="Algorand.Unity.Algod.KvDelta" class="text-break">Struct KvDelta
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">AlgodClientExtensions</span></div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Algorand.Unity.Net.html">Algorand.Unity.Net</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Algorand.Unity.Algod.html">Algorand.Unity.Algod</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Algorand_Unity_Net_AlgodClientExtensions_syntax">Syntax</h5>
+  <h5 id="Algorand_Unity_Algod_KvDelta_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class AlgodClientExtensions</code></pre>
+    <pre><code class="lang-csharp hljs">public struct KvDelta : IEquatable&lt;KvDelta&gt;</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="properties">Properties
   </h3>
   
   
-  <a id="Algorand_Unity_Net_AlgodClientExtensions_ToDefaultApi_" data-uid="Algorand.Unity.Net.AlgodClientExtensions.ToDefaultApi*"></a>
-  <h4 id="Algorand_Unity_Net_AlgodClientExtensions_ToDefaultApi_Algorand_Unity_AlgodClient_" data-uid="Algorand.Unity.Net.AlgodClientExtensions.ToDefaultApi(Algorand.Unity.AlgodClient)">ToDefaultApi(AlgodClient)</h4>
-  <div class="markdown level1 summary"><p>Convert <a class="xref" href="Algorand.Unity.AlgodClient.html">AlgodClient</a> to the Algorand2 <see cref="!:DefaultApi"></see>.</p>
+  <a id="Algorand_Unity_Algod_KvDelta_Key_" data-uid="Algorand.Unity.Algod.KvDelta.Key*"></a>
+  <h4 id="Algorand_Unity_Algod_KvDelta_Key" data-uid="Algorand.Unity.Algod.KvDelta.Key">Key</h4>
+  <div class="markdown level1 summary"><p>The key, base64 encoded.        </p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static DefaultApi ToDefaultApi(this AlgodClient algod)</code></pre>
+    <pre><code class="lang-csharp hljs">public byte[] Key { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Algod_KvDelta_Value_" data-uid="Algorand.Unity.Algod.KvDelta.Value*"></a>
+  <h4 id="Algorand_Unity_Algod_KvDelta_Value" data-uid="Algorand.Unity.Algod.KvDelta.Value">Value</h4>
+  <div class="markdown level1 summary"><p>The new value of the KV store entry, base64 encoded.        </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] Value { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Algorand_Unity_Algod_KvDelta_Equals_" data-uid="Algorand.Unity.Algod.KvDelta.Equals*"></a>
+  <h4 id="Algorand_Unity_Algod_KvDelta_Equals_Algorand_Unity_Algod_KvDelta_" data-uid="Algorand.Unity.Algod.KvDelta.Equals(Algorand.Unity.Algod.KvDelta)">Equals(KvDelta)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(KvDelta other)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -119,10 +167,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Algorand.Unity.AlgodClient.html">AlgodClient</a></td>
-        <td><span class="parametername">algod</span></td>
-        <td><p>The Unity Serializable <a class="xref" href="Algorand.Unity.AlgodClient.html">AlgodClient</a>.</p>
-</td>
+        <td><a class="xref" href="Algorand.Unity.Algod.KvDelta.html">KvDelta</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -136,9 +183,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">DefaultApi</span></td>
-        <td><p>An Algorand2 <see cref="!:DefaultApi"></see></p>
-</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

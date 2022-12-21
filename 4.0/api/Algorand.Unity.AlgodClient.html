@@ -981,6 +981,53 @@ required to create and send transactions.</p>
 </div>
   
   
+  <a id="Algorand_Unity_AlgodClient_GetLedgerStateDelta_" data-uid="Algorand.Unity.AlgodClient.GetLedgerStateDelta*"></a>
+  <h4 id="Algorand_Unity_AlgodClient_GetLedgerStateDelta_System_UInt64_" data-uid="Algorand.Unity.AlgodClient.GetLedgerStateDelta(System.UInt64)">GetLedgerStateDelta(UInt64)</h4>
+  <div class="markdown level1 summary"><p>Get a LedgerStateDelta object for a given round</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;LedgerStateDeltaResponse&gt; GetLedgerStateDelta(ulong round)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="parametername">round</span></td>
+        <td><p>The round for which the deltas are desired.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">LedgerStateDeltaResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_AlgodClient_GetLedgerStateDelta_System_UInt64__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Get ledger deltas for a round.</p>
+</div>
+  
+  
   <a id="Algorand_Unity_AlgodClient_GetLightBlockHeaderProof_" data-uid="Algorand.Unity.AlgodClient.GetLightBlockHeaderProof*"></a>
   <h4 id="Algorand_Unity_AlgodClient_GetLightBlockHeaderProof_System_UInt64_" data-uid="Algorand.Unity.AlgodClient.GetLightBlockHeaderProof(System.UInt64)">GetLightBlockHeaderProof(UInt64)</h4>
   <div class="markdown level1 summary"><p>Gets a proof for a given light block header inside a state proof commitment</p>
@@ -1308,6 +1355,35 @@ required to create and send transactions.</p>
   </table>
   
   
+  <a id="Algorand_Unity_AlgodClient_GetSyncRound_" data-uid="Algorand.Unity.AlgodClient.GetSyncRound*"></a>
+  <h4 id="Algorand_Unity_AlgodClient_GetSyncRound" data-uid="Algorand.Unity.AlgodClient.GetSyncRound">GetSyncRound()</h4>
+  <div class="markdown level1 summary"><p>Returns the minimum sync round the ledger is keeping in cache.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;GetSyncRoundResponse&gt; GetSyncRound()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">GetSyncRoundResponse</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_AlgodClient_GetSyncRound_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Gets the minimum sync round for the ledger.</p>
+</div>
+  
+  
   <a id="Algorand_Unity_AlgodClient_GetTransactionProof_" data-uid="Algorand.Unity.AlgodClient.GetTransactionProof*"></a>
   <h4 id="Algorand_Unity_AlgodClient_GetTransactionProof_System_UInt64_System_String_System_String_Algorand_Unity_ResponseFormat_" data-uid="Algorand.Unity.AlgodClient.GetTransactionProof(System.UInt64,System.String,System.String,Algorand.Unity.ResponseFormat)">GetTransactionProof(UInt64, String, String, ResponseFormat)</h4>
   <div class="markdown level1 summary"><p>Get a proof for a transaction in a block.</p>
@@ -1626,6 +1702,53 @@ Or the transaction may have happened sufficiently long ago that the node no long
   </table>
   
   
+  <a id="Algorand_Unity_AlgodClient_SetSyncRound_" data-uid="Algorand.Unity.AlgodClient.SetSyncRound*"></a>
+  <h4 id="Algorand_Unity_AlgodClient_SetSyncRound_System_UInt64_" data-uid="Algorand.Unity.AlgodClient.SetSyncRound(System.UInt64)">SetSyncRound(UInt64)</h4>
+  <div class="markdown level1 summary"><p>Given a round, tells the ledger to keep that round in its cache.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent SetSyncRound(ulong round)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="parametername">round</span></td>
+        <td><p>The round for which the deltas are desired.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent.html">AlgoApiRequest.Sent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_AlgodClient_SetSyncRound_System_UInt64__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Sets the minimum sync round on the ledger.</p>
+</div>
+  
+  
   <a id="Algorand_Unity_AlgodClient_ShutdownNode_" data-uid="Algorand.Unity.AlgodClient.ShutdownNode*"></a>
   <h4 id="Algorand_Unity_AlgodClient_ShutdownNode_Algorand_Unity_Optional_System_UInt64__" data-uid="Algorand.Unity.AlgodClient.ShutdownNode(Algorand.Unity.Optional{System.UInt64})">ShutdownNode(Optional&lt;UInt64&gt;)</h4>
   <div class="markdown level1 summary"></div>
@@ -1919,6 +2042,35 @@ Or the transaction may have happened sufficiently long ago that the node no long
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Algorand_Unity_AlgodClient_UnsetSyncRound_" data-uid="Algorand.Unity.AlgodClient.UnsetSyncRound*"></a>
+  <h4 id="Algorand_Unity_AlgodClient_UnsetSyncRound" data-uid="Algorand.Unity.AlgodClient.UnsetSyncRound">UnsetSyncRound()</h4>
+  <div class="markdown level1 summary"><p>Removes minimum sync round restriction from the ledger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent UnsetSyncRound()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent.html">AlgoApiRequest.Sent</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_AlgodClient_UnsetSyncRound_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Unset the ledger sync round.</p>
+</div>
   
   
   <a id="Algorand_Unity_AlgodClient_WaitForBlock_" data-uid="Algorand.Unity.AlgodClient.WaitForBlock*"></a>

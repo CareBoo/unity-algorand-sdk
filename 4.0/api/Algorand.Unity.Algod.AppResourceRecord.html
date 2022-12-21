@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Struct DryrunTxnResult
+    <title>Struct AppResourceRecord
    | Unity Algorand SDK </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Struct DryrunTxnResult
+    <meta name="title" content="Struct AppResourceRecord
    | Unity Algorand SDK ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -77,81 +77,31 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Algorand.Unity.Algod.DryrunTxnResult">
+            <article class="content wrap" id="_content" data-uid="Algorand.Unity.Algod.AppResourceRecord">
   
   
-  <h1 id="Algorand_Unity_Algod_DryrunTxnResult" data-uid="Algorand.Unity.Algod.DryrunTxnResult" class="text-break">Struct DryrunTxnResult
+  <h1 id="Algorand_Unity_Algod_AppResourceRecord" data-uid="Algorand.Unity.Algod.AppResourceRecord" class="text-break">Struct AppResourceRecord
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Algorand.Unity.Algod.html">Algorand.Unity.Algod</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Algorand_Unity_Algod_DryrunTxnResult_syntax">Syntax</h5>
+  <h5 id="Algorand_Unity_Algod_AppResourceRecord_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct DryrunTxnResult : IEquatable&lt;DryrunTxnResult&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct AppResourceRecord : IEquatable&lt;AppResourceRecord&gt;</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   
   
-  <a id="Algorand_Unity_Algod_DryrunTxnResult_AppCallMessages_" data-uid="Algorand.Unity.Algod.DryrunTxnResult.AppCallMessages*"></a>
-  <h4 id="Algorand_Unity_Algod_DryrunTxnResult_AppCallMessages" data-uid="Algorand.Unity.Algod.DryrunTxnResult.AppCallMessages">AppCallMessages</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string[] AppCallMessages { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Algorand_Unity_Algod_DryrunTxnResult_AppCallTrace_" data-uid="Algorand.Unity.Algod.DryrunTxnResult.AppCallTrace*"></a>
-  <h4 id="Algorand_Unity_Algod_DryrunTxnResult_AppCallTrace" data-uid="Algorand.Unity.Algod.DryrunTxnResult.AppCallTrace">AppCallTrace</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DryrunState[] AppCallTrace { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Algorand.Unity.Algod.DryrunState.html">DryrunState</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Algorand_Unity_Algod_DryrunTxnResult_BudgetAdded_" data-uid="Algorand.Unity.Algod.DryrunTxnResult.BudgetAdded*"></a>
-  <h4 id="Algorand_Unity_Algod_DryrunTxnResult_BudgetAdded" data-uid="Algorand.Unity.Algod.DryrunTxnResult.BudgetAdded">BudgetAdded</h4>
-  <div class="markdown level1 summary"><p>Budget added during execution of app call transaction.        </p>
+  <a id="Algorand_Unity_Algod_AppResourceRecord_Address_" data-uid="Algorand.Unity.Algod.AppResourceRecord.Address*"></a>
+  <h4 id="Algorand_Unity_Algod_AppResourceRecord_Address" data-uid="Algorand.Unity.Algod.AppResourceRecord.Address">Address</h4>
+  <div class="markdown level1 summary"><p>App account address        </p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Optional&lt;ulong&gt; BudgetAdded { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Address { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -163,21 +113,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Algorand_Unity_Algod_DryrunTxnResult_BudgetConsumed_" data-uid="Algorand.Unity.Algod.DryrunTxnResult.BudgetConsumed*"></a>
-  <h4 id="Algorand_Unity_Algod_DryrunTxnResult_BudgetConsumed" data-uid="Algorand.Unity.Algod.DryrunTxnResult.BudgetConsumed">BudgetConsumed</h4>
-  <div class="markdown level1 summary"><p>Budget consumed during execution of app call transaction.        </p>
+  <a id="Algorand_Unity_Algod_AppResourceRecord_AppDeleted_" data-uid="Algorand.Unity.Algod.AppResourceRecord.AppDeleted*"></a>
+  <h4 id="Algorand_Unity_Algod_AppResourceRecord_AppDeleted" data-uid="Algorand.Unity.Algod.AppResourceRecord.AppDeleted">AppDeleted</h4>
+  <div class="markdown level1 summary"><p>Whether the app was deleted        </p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Optional&lt;ulong&gt; BudgetConsumed { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool AppDeleted { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,21 +139,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Algorand_Unity_Algod_DryrunTxnResult_Disassembly_" data-uid="Algorand.Unity.Algod.DryrunTxnResult.Disassembly*"></a>
-  <h4 id="Algorand_Unity_Algod_DryrunTxnResult_Disassembly" data-uid="Algorand.Unity.Algod.DryrunTxnResult.Disassembly">Disassembly</h4>
-  <div class="markdown level1 summary"><p>Disassembled program line by line.        </p>
+  <a id="Algorand_Unity_Algod_AppResourceRecord_AppIndex_" data-uid="Algorand.Unity.Algod.AppResourceRecord.AppIndex*"></a>
+  <h4 id="Algorand_Unity_Algod_AppResourceRecord_AppIndex" data-uid="Algorand.Unity.Algod.AppResourceRecord.AppIndex">AppIndex</h4>
+  <div class="markdown level1 summary"><p>App index        </p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string[] Disassembly { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong AppIndex { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -215,71 +165,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Algorand_Unity_Algod_DryrunTxnResult_GlobalDelta_" data-uid="Algorand.Unity.Algod.DryrunTxnResult.GlobalDelta*"></a>
-  <h4 id="Algorand_Unity_Algod_DryrunTxnResult_GlobalDelta" data-uid="Algorand.Unity.Algod.DryrunTxnResult.GlobalDelta">GlobalDelta</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StateDelta GlobalDelta { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Algorand.Unity.Algod.StateDelta.html">StateDelta</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Algorand_Unity_Algod_DryrunTxnResult_LocalDeltas_" data-uid="Algorand.Unity.Algod.DryrunTxnResult.LocalDeltas*"></a>
-  <h4 id="Algorand_Unity_Algod_DryrunTxnResult_LocalDeltas" data-uid="Algorand.Unity.Algod.DryrunTxnResult.LocalDeltas">LocalDeltas</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AccountStateDelta[] LocalDeltas { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Algorand.Unity.Algod.AccountStateDelta.html">AccountStateDelta</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Algorand_Unity_Algod_DryrunTxnResult_LogicSigDisassembly_" data-uid="Algorand.Unity.Algod.DryrunTxnResult.LogicSigDisassembly*"></a>
-  <h4 id="Algorand_Unity_Algod_DryrunTxnResult_LogicSigDisassembly" data-uid="Algorand.Unity.Algod.DryrunTxnResult.LogicSigDisassembly">LogicSigDisassembly</h4>
-  <div class="markdown level1 summary"><p>Disassembled lsig program line by line.        </p>
+  <a id="Algorand_Unity_Algod_AppResourceRecord_AppLocalState_" data-uid="Algorand.Unity.Algod.AppResourceRecord.AppLocalState*"></a>
+  <h4 id="Algorand_Unity_Algod_AppResourceRecord_AppLocalState" data-uid="Algorand.Unity.Algod.AppResourceRecord.AppLocalState">AppLocalState</h4>
+  <div class="markdown level1 summary"><p>App local state        </p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string[] LogicSigDisassembly { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ApplicationLocalState AppLocalState { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -291,20 +191,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><a class="xref" href="Algorand.Unity.Algod.ApplicationLocalState.html">ApplicationLocalState</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Algorand_Unity_Algod_DryrunTxnResult_LogicSigMessages_" data-uid="Algorand.Unity.Algod.DryrunTxnResult.LogicSigMessages*"></a>
-  <h4 id="Algorand_Unity_Algod_DryrunTxnResult_LogicSigMessages" data-uid="Algorand.Unity.Algod.DryrunTxnResult.LogicSigMessages">LogicSigMessages</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Algorand_Unity_Algod_AppResourceRecord_AppLocalStateDeleted_" data-uid="Algorand.Unity.Algod.AppResourceRecord.AppLocalStateDeleted*"></a>
+  <h4 id="Algorand_Unity_Algod_AppResourceRecord_AppLocalStateDeleted" data-uid="Algorand.Unity.Algod.AppResourceRecord.AppLocalStateDeleted">AppLocalStateDeleted</h4>
+  <div class="markdown level1 summary"><p>Whether the app local state was deleted        </p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string[] LogicSigMessages { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool AppLocalStateDeleted { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -316,20 +217,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Algorand_Unity_Algod_DryrunTxnResult_LogicSigTrace_" data-uid="Algorand.Unity.Algod.DryrunTxnResult.LogicSigTrace*"></a>
-  <h4 id="Algorand_Unity_Algod_DryrunTxnResult_LogicSigTrace" data-uid="Algorand.Unity.Algod.DryrunTxnResult.LogicSigTrace">LogicSigTrace</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Algorand_Unity_Algod_AppResourceRecord_AppParams_" data-uid="Algorand.Unity.Algod.AppResourceRecord.AppParams*"></a>
+  <h4 id="Algorand_Unity_Algod_AppResourceRecord_AppParams" data-uid="Algorand.Unity.Algod.AppResourceRecord.AppParams">AppParams</h4>
+  <div class="markdown level1 summary"><p>App params        </p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DryrunState[] LogicSigTrace { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ApplicationParams AppParams { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -341,32 +243,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Algorand.Unity.Algod.DryrunState.html">DryrunState</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Algorand_Unity_Algod_DryrunTxnResult_Logs_" data-uid="Algorand.Unity.Algod.DryrunTxnResult.Logs*"></a>
-  <h4 id="Algorand_Unity_Algod_DryrunTxnResult_Logs" data-uid="Algorand.Unity.Algod.DryrunTxnResult.Logs">Logs</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[][] Logs { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>[][]</td>
+        <td><a class="xref" href="Algorand.Unity.Algod.ApplicationParams.html">ApplicationParams</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -375,13 +252,13 @@
   </h3>
   
   
-  <a id="Algorand_Unity_Algod_DryrunTxnResult_Equals_" data-uid="Algorand.Unity.Algod.DryrunTxnResult.Equals*"></a>
-  <h4 id="Algorand_Unity_Algod_DryrunTxnResult_Equals_Algorand_Unity_Algod_DryrunTxnResult_" data-uid="Algorand.Unity.Algod.DryrunTxnResult.Equals(Algorand.Unity.Algod.DryrunTxnResult)">Equals(DryrunTxnResult)</h4>
+  <a id="Algorand_Unity_Algod_AppResourceRecord_Equals_" data-uid="Algorand.Unity.Algod.AppResourceRecord.Equals*"></a>
+  <h4 id="Algorand_Unity_Algod_AppResourceRecord_Equals_Algorand_Unity_Algod_AppResourceRecord_" data-uid="Algorand.Unity.Algod.AppResourceRecord.Equals(Algorand.Unity.Algod.AppResourceRecord)">Equals(AppResourceRecord)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(DryrunTxnResult other)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Equals(AppResourceRecord other)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -394,7 +271,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Algorand.Unity.Algod.DryrunTxnResult.html">DryrunTxnResult</a></td>
+        <td><a class="xref" href="Algorand.Unity.Algod.AppResourceRecord.html">AppResourceRecord</a></td>
         <td><span class="parametername">other</span></td>
         <td></td>
       </tr>
