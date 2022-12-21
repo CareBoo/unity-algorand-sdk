@@ -29,9 +29,10 @@ namespace Algorand.Unity.Net
                 uploadHandler = uploadHandler,
                 downloadHandler = downloadHandler,
             };
-            foreach (var (key, enumerable) in request.Headers)
+            foreach (var header in request.Headers)
             {
-                var value = enumerable.First();
+                var key = header.Key;
+                var value = header.Value.First();
                 unityWebRequest.SetRequestHeader(key, value);
             }
 

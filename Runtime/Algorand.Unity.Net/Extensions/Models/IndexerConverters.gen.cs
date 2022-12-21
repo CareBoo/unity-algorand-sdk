@@ -602,4 +602,5 @@ namespace Algorand.Unity.Indexer.Net
             return from.Convert().ToUnity<ApplicationLocalStatesResponse>();
         }
     }
+
 }
