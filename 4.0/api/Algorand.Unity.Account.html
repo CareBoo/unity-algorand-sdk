@@ -87,8 +87,11 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Algorand.Unity.IAccount.html">IAccount</a></div>
+    <div><a class="xref" href="Algorand.Unity.IAccountSigner.html">IAccountSigner</a></div>
     <div><a class="xref" href="Algorand.Unity.ISigner.html">ISigner</a></div>
+    <div><a class="xref" href="Algorand.Unity.IAsyncAccountSigner.html">IAsyncAccountSigner</a></div>
+    <div><a class="xref" href="Algorand.Unity.IAsyncAccountSignerWithProgress.html">IAsyncAccountSignerWithProgress</a></div>
+    <div><a class="xref" href="Algorand.Unity.IAccount.html">IAccount</a></div>
     <div><a class="xref" href="Algorand.Unity.IAsyncSignerWithProgress.html">IAsyncSignerWithProgress</a></div>
     <div><a class="xref" href="Algorand.Unity.IAsyncSigner.html">IAsyncSigner</a></div>
   </div>
@@ -96,7 +99,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Algorand_Unity_Account_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct Account : IAccount, ISigner, IAsyncSignerWithProgress, IAsyncSigner</code></pre>
+    <pre><code class="lang-csharp hljs">public struct Account : IAccountSigner, ISigner, IAsyncAccountSigner, IAsyncAccountSignerWithProgress, IAccount, IAsyncSignerWithProgress, IAsyncSigner</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -572,10 +575,19 @@
 </div>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Algorand.Unity.IAccount.html">IAccount</a>
+      <a class="xref" href="Algorand.Unity.IAccountSigner.html">IAccountSigner</a>
   </div>
   <div>
       <a class="xref" href="Algorand.Unity.ISigner.html">ISigner</a>
+  </div>
+  <div>
+      <a class="xref" href="Algorand.Unity.IAsyncAccountSigner.html">IAsyncAccountSigner</a>
+  </div>
+  <div>
+      <a class="xref" href="Algorand.Unity.IAsyncAccountSignerWithProgress.html">IAsyncAccountSignerWithProgress</a>
+  </div>
+  <div>
+      <a class="xref" href="Algorand.Unity.IAccount.html">IAccount</a>
   </div>
   <div>
       <a class="xref" href="Algorand.Unity.IAsyncSignerWithProgress.html">IAsyncSignerWithProgress</a>

@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "changelog/CHANGELOG.html",
-          "hash": "woxsZZ+SjZ8PJH79VGmBhw=="
+          "hash": "vIA2eVJwOFPNI1WFWHiQ/A=="
         }
       },
       "is_incremental": false,
@@ -282,7 +282,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Account.html",
-          "hash": "8QQbarNTam+E1+b4V1+bBQ=="
+          "hash": "nzzTF7VvfFCwkVWXXUyU0g=="
         }
       },
       "is_incremental": false,
@@ -4382,6 +4382,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.IAccountSigner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.IAccountSigner.html",
+          "hash": "FE7iyZecfndVwdJQdJ397g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Algorand.Unity.IAlgoApiClient.yml",
       "output": {
         ".html": {
@@ -4531,6 +4543,30 @@
         ".html": {
           "relative_path": "api/Algorand.Unity.IAssetTransferTxn.html",
           "hash": "uYhVCoG0L+/TNoPXogfl4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.IAsyncAccountSigner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.IAsyncAccountSigner.html",
+          "hash": "pl0opcLfon092YM3em9oag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.IAsyncAccountSignerWithProgress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.IAsyncAccountSignerWithProgress.html",
+          "hash": "JpRoZXR4Af5h6U4xRYs+kw=="
         }
       },
       "is_incremental": false,
@@ -6810,7 +6846,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.KmdAccount.html",
-          "hash": "2htn07H+3PDv3mdTNTMIgA=="
+          "hash": "X9sa848IkHR4Wotlq4Z0AA=="
         }
       },
       "is_incremental": false,
@@ -8190,7 +8226,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.WalletConnect.IWalletConnectAccount.html",
-          "hash": "nVJGA8dEL1i7rfeLO8RmYQ=="
+          "hash": "L7SmDm6St28odoDcfRLkPA=="
         }
       },
       "is_incremental": false,
@@ -8370,7 +8406,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.WalletConnect.WalletConnectAccount.html",
-          "hash": "mbEqVMLtbGqxNHr0nPWyuA=="
+          "hash": "vNKzYvungge6ftGGqgPLjg=="
         }
       },
       "is_incremental": false,
@@ -8574,7 +8610,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.html",
-          "hash": "65IVDmzvZ2T4rSKda/+nug=="
+          "hash": "TgjkvxF4xLQxGLrh96Zcww=="
         }
       },
       "is_incremental": false,
@@ -8586,7 +8622,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "HZW0pDoQg5RNlN6wuAkJaw=="
+          "hash": "Ui8JlYKoowAuy2RS2NWqPg=="
         }
       },
       "is_incremental": false,
@@ -8610,7 +8646,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "vtvc64NP1C9R6n59jGyQgg=="
+          "hash": "ockRdLYBLLwpncxcZtj1yQ=="
         }
       },
       "is_incremental": false,
@@ -8695,7 +8731,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 694,
+          "total_file_count": 697,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

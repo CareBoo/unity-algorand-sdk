@@ -87,17 +87,17 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Algorand.Unity.IAsyncSigner.html#Algorand_Unity_IAsyncSigner_SignTxnsAsync__1___0___Algorand_Unity_TxnIndices_CancellationToken_">IAsyncSigner.SignTxnsAsync&lt;T&gt;(T[], TxnIndices, CancellationToken)</a>
+      <a class="xref" href="Algorand.Unity.IAccount.html#Algorand_Unity_IAccount_Address">IAccount.Address</a>
     </div>
     <div>
-      <a class="xref" href="Algorand.Unity.IAccount.html#Algorand_Unity_IAccount_Address">IAccount.Address</a>
+      <a class="xref" href="Algorand.Unity.IAsyncSigner.html#Algorand_Unity_IAsyncSigner_SignTxnsAsync__1___0___Algorand_Unity_TxnIndices_CancellationToken_">IAsyncSigner.SignTxnsAsync&lt;T&gt;(T[], TxnIndices, CancellationToken)</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Algorand.Unity.WalletConnect.html">Algorand.Unity.WalletConnect</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Algorand_Unity_WalletConnect_IWalletConnectAccount_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IWalletConnectAccount : IAsyncSigner, IAccount</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IWalletConnectAccount : IAsyncAccountSigner, IAccount, IAsyncSigner</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>

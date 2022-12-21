@@ -25925,6 +25925,12 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.IAccount.Address
   nameWithType: IAccount.Address
+- uid: Algorand.Unity.IAccountSigner
+  name: IAccountSigner
+  href: api/Algorand.Unity.IAccountSigner.html
+  commentId: T:Algorand.Unity.IAccountSigner
+  fullName: Algorand.Unity.IAccountSigner
+  nameWithType: IAccountSigner
 - uid: Algorand.Unity.IAlgoApiClient
   name: IAlgoApiClient
   href: api/Algorand.Unity.IAlgoApiClient.html
@@ -27275,6 +27281,18 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.IAssetTransferTxn.XferAsset
   nameWithType: IAssetTransferTxn.XferAsset
+- uid: Algorand.Unity.IAsyncAccountSigner
+  name: IAsyncAccountSigner
+  href: api/Algorand.Unity.IAsyncAccountSigner.html
+  commentId: T:Algorand.Unity.IAsyncAccountSigner
+  fullName: Algorand.Unity.IAsyncAccountSigner
+  nameWithType: IAsyncAccountSigner
+- uid: Algorand.Unity.IAsyncAccountSignerWithProgress
+  name: IAsyncAccountSignerWithProgress
+  href: api/Algorand.Unity.IAsyncAccountSignerWithProgress.html
+  commentId: T:Algorand.Unity.IAsyncAccountSignerWithProgress
+  fullName: Algorand.Unity.IAsyncAccountSignerWithProgress
+  nameWithType: IAsyncAccountSignerWithProgress
 - uid: Algorand.Unity.IAsyncSigner
   name: IAsyncSigner
   href: api/Algorand.Unity.IAsyncSigner.html
