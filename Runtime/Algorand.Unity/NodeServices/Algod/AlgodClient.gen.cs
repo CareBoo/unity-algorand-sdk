@@ -99,6 +99,35 @@ namespace Algorand.Unity
         );
 
         /// <summary>
+        /// Removes minimum sync round restriction from the ledger.
+        /// </summary>
+        /// <remarks>
+        /// Unset the ledger sync round.
+        /// </remarks>
+        /// <param name="">
+        /// Unset the ledger sync round.
+        /// </param>
+        AlgoApiRequest.Sent UnsetSyncRound(
+             
+        );
+
+        /// <summary>
+        /// Returns the minimum sync round the ledger is keeping in cache.
+        /// </summary>
+        /// <remarks>
+        /// Gets the minimum sync round for the ledger.
+        /// </remarks>
+        /// <param name="">
+        /// Gets the minimum sync round for the ledger.
+        /// </param>
+        /// <returns>
+        /// 
+        /// </returns>
+        AlgoApiRequest.Sent<GetSyncRoundResponse> GetSyncRound(
+             
+        );
+
+        /// <summary>
         /// Get the block for the given round.
         /// </summary>
         /// <remarks>
@@ -138,6 +167,19 @@ namespace Algorand.Unity
             ulong applicationId,
         
             string name
+        );
+
+        /// <summary>
+        /// Given a round, tells the ledger to keep that round in its cache.
+        /// </summary>
+        /// <remarks>
+        /// Sets the minimum sync round on the ledger.
+        /// </remarks>
+        /// <param name="round">
+        /// The round for which the deltas are desired.
+        /// </param>
+        AlgoApiRequest.Sent SetSyncRound(
+            ulong round
         );
 
         /// <summary>
@@ -483,6 +525,22 @@ namespace Algorand.Unity
         );
 
         /// <summary>
+        /// Get a LedgerStateDelta object for a given round
+        /// </summary>
+        /// <remarks>
+        /// Get ledger deltas for a round.
+        /// </remarks>
+        /// <param name="round">
+        /// The round for which the deltas are desired.
+        /// </param>
+        /// <returns>
+        /// 
+        /// </returns>
+        AlgoApiRequest.Sent<LedgerStateDeltaResponse> GetLedgerStateDelta(
+            ulong round
+        );
+
+        /// <summary>
         /// Compile TEAL source code to binary, produce its hash
         /// </summary>
         /// <remarks>
@@ -756,6 +814,32 @@ namespace Algorand.Unity
         }
 
         /// <inheritdoc />
+        public AlgoApiRequest.Sent UnsetSyncRound(
+             
+        )
+        {
+            var path = $"/v2/ledger/sync";
+            return this
+                .Delete(path)
+                
+                .Send()
+                ;
+        }
+
+        /// <inheritdoc />
+        public AlgoApiRequest.Sent<GetSyncRoundResponse> GetSyncRound(
+             
+        )
+        {
+            var path = $"/v2/ledger/sync";
+            return this
+                .Get(path)
+                
+                .Send()
+                ;
+        }
+
+        /// <inheritdoc />
         public AlgoApiRequest.Sent<BlockResponse> GetBlock(
             ulong round,
         
@@ -786,6 +870,19 @@ namespace Algorand.Unity
             var path = $"/v2/applications/{applicationId}/box{queryBuilder}";
             return this
                 .Get(path)
+                
+                .Send()
+                ;
+        }
+
+        /// <inheritdoc />
+        public AlgoApiRequest.Sent SetSyncRound(
+            ulong round
+        )
+        {
+            var path = $"/v2/ledger/sync/{round}";
+            return this
+                .Post(path)
                 
                 .Send()
                 ;
@@ -1068,6 +1165,19 @@ namespace Algorand.Unity
             return this
                 .Post(path)
                 .SetMessagePackBody(participationkey)
+                .Send()
+                ;
+        }
+
+        /// <inheritdoc />
+        public AlgoApiRequest.Sent<LedgerStateDeltaResponse> GetLedgerStateDelta(
+            ulong round
+        )
+        {
+            var path = $"/v2/deltas/{round}";
+            return this
+                .Get(path)
+                
                 .Send()
                 ;
         }

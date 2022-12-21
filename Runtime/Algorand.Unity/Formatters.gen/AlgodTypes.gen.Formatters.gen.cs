@@ -49,6 +49,23 @@ namespace Algorand.Unity.Algod
 {
     
     
+    public partial struct AccountDeltas
+    {
+        
+        private static bool @__generated__IsValid = AccountDeltas.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.AccountDeltas>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.AccountDeltas>(false).Assign("accounts", (Algorand.Unity.Algod.AccountDeltas x) => x.Accounts, (ref Algorand.Unity.Algod.AccountDeltas x, Algorand.Unity.Algod.AccountBalanceRecord[] value) => x.Accounts = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Algod.AccountBalanceRecord>.Instance).Assign("apps", (Algorand.Unity.Algod.AccountDeltas x) => x.Apps, (ref Algorand.Unity.Algod.AccountDeltas x, Algorand.Unity.Algod.AppResourceRecord[] value) => x.Apps = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Algod.AppResourceRecord>.Instance).Assign("assets", (Algorand.Unity.Algod.AccountDeltas x) => x.Assets, (ref Algorand.Unity.Algod.AccountDeltas x, Algorand.Unity.Algod.AssetResourceRecord[] value) => x.Assets = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Algod.AssetResourceRecord>.Instance));
+            return true;
+        }
+    }
+}
+
+namespace Algorand.Unity.Algod
+{
+    
+    
     public partial struct TealValue
     {
         
@@ -100,6 +117,23 @@ namespace Algorand.Unity.Algod
 {
     
     
+    public partial struct KvDelta
+    {
+        
+        private static bool @__generated__IsValid = KvDelta.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.KvDelta>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.KvDelta>(false).Assign("key", (Algorand.Unity.Algod.KvDelta x) => x.Key, (ref Algorand.Unity.Algod.KvDelta x, System.Byte[] value) => x.Key = value, Algorand.Unity.ArrayComparer<System.Byte>.Instance).Assign("value", (Algorand.Unity.Algod.KvDelta x) => x.Value, (ref Algorand.Unity.Algod.KvDelta x, System.Byte[] value) => x.Value = value, Algorand.Unity.ArrayComparer<System.Byte>.Instance));
+            return true;
+        }
+    }
+}
+
+namespace Algorand.Unity.Algod
+{
+    
+    
     public partial struct ApplicationStateSchema
     {
         
@@ -108,6 +142,23 @@ namespace Algorand.Unity.Algod
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.ApplicationStateSchema>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.ApplicationStateSchema>(false).Assign("num-uint", (Algorand.Unity.Algod.ApplicationStateSchema x) => x.NumUint, (ref Algorand.Unity.Algod.ApplicationStateSchema x, System.UInt64 value) => x.NumUint = value).Assign("num-byte-slice", (Algorand.Unity.Algod.ApplicationStateSchema x) => x.NumByteSlice, (ref Algorand.Unity.Algod.ApplicationStateSchema x, System.UInt64 value) => x.NumByteSlice = value));
+            return true;
+        }
+    }
+}
+
+namespace Algorand.Unity.Algod
+{
+    
+    
+    public partial struct ModifiedApp
+    {
+        
+        private static bool @__generated__IsValid = ModifiedApp.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.ModifiedApp>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.ModifiedApp>(false).Assign("id", (Algorand.Unity.Algod.ModifiedApp x) => x.Id, (ref Algorand.Unity.Algod.ModifiedApp x, System.UInt64 value) => x.Id = value).Assign("created", (Algorand.Unity.Algod.ModifiedApp x) => x.Created, (ref Algorand.Unity.Algod.ModifiedApp x, System.Boolean value) => x.Created = value).Assign("creator", (Algorand.Unity.Algod.ModifiedApp x) => x.Creator, (ref Algorand.Unity.Algod.ModifiedApp x, System.String value) => x.Creator = value, Algorand.Unity.StringComparer.Instance));
             return true;
         }
     }
@@ -142,6 +193,23 @@ namespace Algorand.Unity.Algod
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.Box>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.Box>(false).Assign("name", (Algorand.Unity.Algod.Box x) => x.Name, (ref Algorand.Unity.Algod.Box x, System.Byte[] value) => x.Name = value, Algorand.Unity.ArrayComparer<System.Byte>.Instance).Assign("value", (Algorand.Unity.Algod.Box x) => x.Value, (ref Algorand.Unity.Algod.Box x, System.Byte[] value) => x.Value = value, Algorand.Unity.ArrayComparer<System.Byte>.Instance));
+            return true;
+        }
+    }
+}
+
+namespace Algorand.Unity.Algod
+{
+    
+    
+    public partial struct AppResourceRecord
+    {
+        
+        private static bool @__generated__IsValid = AppResourceRecord.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.AppResourceRecord>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.AppResourceRecord>(false).Assign("app-index", (Algorand.Unity.Algod.AppResourceRecord x) => x.AppIndex, (ref Algorand.Unity.Algod.AppResourceRecord x, System.UInt64 value) => x.AppIndex = value).Assign("address", (Algorand.Unity.Algod.AppResourceRecord x) => x.Address, (ref Algorand.Unity.Algod.AppResourceRecord x, System.String value) => x.Address = value, Algorand.Unity.StringComparer.Instance).Assign("app-deleted", (Algorand.Unity.Algod.AppResourceRecord x) => x.AppDeleted, (ref Algorand.Unity.Algod.AppResourceRecord x, System.Boolean value) => x.AppDeleted = value).Assign("app-local-state-deleted", (Algorand.Unity.Algod.AppResourceRecord x) => x.AppLocalStateDeleted, (ref Algorand.Unity.Algod.AppResourceRecord x, System.Boolean value) => x.AppLocalStateDeleted = value).Assign("app-params", (Algorand.Unity.Algod.AppResourceRecord x) => x.AppParams, (ref Algorand.Unity.Algod.AppResourceRecord x, Algorand.Unity.Algod.ApplicationParams value) => x.AppParams = value).Assign("app-local-state", (Algorand.Unity.Algod.AppResourceRecord x) => x.AppLocalState, (ref Algorand.Unity.Algod.AppResourceRecord x, Algorand.Unity.Algod.ApplicationLocalState value) => x.AppLocalState = value));
             return true;
         }
     }
@@ -236,6 +304,23 @@ namespace Algorand.Unity.Algod
 {
     
     
+    public partial struct TxLease
+    {
+        
+        private static bool @__generated__IsValid = TxLease.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.TxLease>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.TxLease>(false).Assign("sender", (Algorand.Unity.Algod.TxLease x) => x.Sender, (ref Algorand.Unity.Algod.TxLease x, System.String value) => x.Sender = value, Algorand.Unity.StringComparer.Instance).Assign("lease", (Algorand.Unity.Algod.TxLease x) => x.Lease, (ref Algorand.Unity.Algod.TxLease x, System.Byte[] value) => x.Lease = value, Algorand.Unity.ArrayComparer<System.Byte>.Instance).Assign("expiration", (Algorand.Unity.Algod.TxLease x) => x.Expiration, (ref Algorand.Unity.Algod.TxLease x, System.UInt64 value) => x.Expiration = value));
+            return true;
+        }
+    }
+}
+
+namespace Algorand.Unity.Algod
+{
+    
+    
     public partial struct PendingTransactionResponse
     {
         
@@ -261,6 +346,23 @@ namespace Algorand.Unity.Algod
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.DryrunSource>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.DryrunSource>(false).Assign("field-name", (Algorand.Unity.Algod.DryrunSource x) => x.FieldName, (ref Algorand.Unity.Algod.DryrunSource x, System.String value) => x.FieldName = value, Algorand.Unity.StringComparer.Instance).Assign("source", (Algorand.Unity.Algod.DryrunSource x) => x.Source, (ref Algorand.Unity.Algod.DryrunSource x, System.String value) => x.Source = value, Algorand.Unity.StringComparer.Instance).Assign("txn-index", (Algorand.Unity.Algod.DryrunSource x) => x.TxnIndex, (ref Algorand.Unity.Algod.DryrunSource x, System.UInt64 value) => x.TxnIndex = value).Assign("app-index", (Algorand.Unity.Algod.DryrunSource x) => x.AppIndex, (ref Algorand.Unity.Algod.DryrunSource x, System.UInt64 value) => x.AppIndex = value));
+            return true;
+        }
+    }
+}
+
+namespace Algorand.Unity.Algod
+{
+    
+    
+    public partial struct ModifiedAsset
+    {
+        
+        private static bool @__generated__IsValid = ModifiedAsset.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.ModifiedAsset>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.ModifiedAsset>(false).Assign("id", (Algorand.Unity.Algod.ModifiedAsset x) => x.Id, (ref Algorand.Unity.Algod.ModifiedAsset x, System.UInt64 value) => x.Id = value).Assign("created", (Algorand.Unity.Algod.ModifiedAsset x) => x.Created, (ref Algorand.Unity.Algod.ModifiedAsset x, System.Boolean value) => x.Created = value).Assign("creator", (Algorand.Unity.Algod.ModifiedAsset x) => x.Creator, (ref Algorand.Unity.Algod.ModifiedAsset x, System.String value) => x.Creator = value, Algorand.Unity.StringComparer.Instance));
             return true;
         }
     }
@@ -321,6 +423,23 @@ namespace Algorand.Unity.Algod
 {
     
     
+    public partial struct AccountTotals
+    {
+        
+        private static bool @__generated__IsValid = AccountTotals.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.AccountTotals>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.AccountTotals>(false).Assign("online", (Algorand.Unity.Algod.AccountTotals x) => x.Online, (ref Algorand.Unity.Algod.AccountTotals x, System.UInt64 value) => x.Online = value).Assign("offline", (Algorand.Unity.Algod.AccountTotals x) => x.Offline, (ref Algorand.Unity.Algod.AccountTotals x, System.UInt64 value) => x.Offline = value).Assign("not-participating", (Algorand.Unity.Algod.AccountTotals x) => x.NotParticipating, (ref Algorand.Unity.Algod.AccountTotals x, System.UInt64 value) => x.NotParticipating = value).Assign("rewards-level", (Algorand.Unity.Algod.AccountTotals x) => x.RewardsLevel, (ref Algorand.Unity.Algod.AccountTotals x, System.UInt64 value) => x.RewardsLevel = value));
+            return true;
+        }
+    }
+}
+
+namespace Algorand.Unity.Algod
+{
+    
+    
     public partial struct AccountStateDelta
     {
         
@@ -329,6 +448,40 @@ namespace Algorand.Unity.Algod
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.AccountStateDelta>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.AccountStateDelta>(false).Assign("address", (Algorand.Unity.Algod.AccountStateDelta x) => x.Address, (ref Algorand.Unity.Algod.AccountStateDelta x, System.String value) => x.Address = value, Algorand.Unity.StringComparer.Instance).Assign("delta", (Algorand.Unity.Algod.AccountStateDelta x) => x.Delta, (ref Algorand.Unity.Algod.AccountStateDelta x, Algorand.Unity.Algod.StateDelta value) => x.Delta = value));
+            return true;
+        }
+    }
+}
+
+namespace Algorand.Unity.Algod
+{
+    
+    
+    public partial struct AccountBalanceRecord
+    {
+        
+        private static bool @__generated__IsValid = AccountBalanceRecord.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.AccountBalanceRecord>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.AccountBalanceRecord>(false).Assign("address", (Algorand.Unity.Algod.AccountBalanceRecord x) => x.Address, (ref Algorand.Unity.Algod.AccountBalanceRecord x, System.String value) => x.Address = value, Algorand.Unity.StringComparer.Instance).Assign("account-data", (Algorand.Unity.Algod.AccountBalanceRecord x) => x.AccountData, (ref Algorand.Unity.Algod.AccountBalanceRecord x, Algorand.Unity.Algod.Account value) => x.AccountData = value));
+            return true;
+        }
+    }
+}
+
+namespace Algorand.Unity.Algod
+{
+    
+    
+    public partial struct AssetResourceRecord
+    {
+        
+        private static bool @__generated__IsValid = AssetResourceRecord.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.AssetResourceRecord>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.AssetResourceRecord>(false).Assign("asset-index", (Algorand.Unity.Algod.AssetResourceRecord x) => x.AssetIndex, (ref Algorand.Unity.Algod.AssetResourceRecord x, System.UInt64 value) => x.AssetIndex = value).Assign("address", (Algorand.Unity.Algod.AssetResourceRecord x) => x.Address, (ref Algorand.Unity.Algod.AssetResourceRecord x, System.String value) => x.Address = value, Algorand.Unity.StringComparer.Instance).Assign("asset-deleted", (Algorand.Unity.Algod.AssetResourceRecord x) => x.AssetDeleted, (ref Algorand.Unity.Algod.AssetResourceRecord x, System.Boolean value) => x.AssetDeleted = value).Assign("asset-params", (Algorand.Unity.Algod.AssetResourceRecord x) => x.AssetParams, (ref Algorand.Unity.Algod.AssetResourceRecord x, Algorand.Unity.Algod.AssetParams value) => x.AssetParams = value).Assign("asset-holding-deleted", (Algorand.Unity.Algod.AssetResourceRecord x) => x.AssetHoldingDeleted, (ref Algorand.Unity.Algod.AssetResourceRecord x, System.Boolean value) => x.AssetHoldingDeleted = value).Assign("asset-holding", (Algorand.Unity.Algod.AssetResourceRecord x) => x.AssetHolding, (ref Algorand.Unity.Algod.AssetResourceRecord x, Algorand.Unity.Algod.AssetHolding value) => x.AssetHolding = value));
             return true;
         }
     }
@@ -406,6 +559,23 @@ namespace Algorand.Unity.Algod
 {
     
     
+    public partial struct LedgerStateDelta
+    {
+        
+        private static bool @__generated__IsValid = LedgerStateDelta.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.LedgerStateDelta>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.LedgerStateDelta>(false).Assign("accts", (Algorand.Unity.Algod.LedgerStateDelta x) => x.Accts, (ref Algorand.Unity.Algod.LedgerStateDelta x, Algorand.Unity.Algod.AccountDeltas value) => x.Accts = value).Assign("kv-mods", (Algorand.Unity.Algod.LedgerStateDelta x) => x.KvMods, (ref Algorand.Unity.Algod.LedgerStateDelta x, Algorand.Unity.Algod.KvDelta[] value) => x.KvMods = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Algod.KvDelta>.Instance).Assign("tx-leases", (Algorand.Unity.Algod.LedgerStateDelta x) => x.TxLeases, (ref Algorand.Unity.Algod.LedgerStateDelta x, Algorand.Unity.Algod.TxLease[] value) => x.TxLeases = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Algod.TxLease>.Instance).Assign("modified-apps", (Algorand.Unity.Algod.LedgerStateDelta x) => x.ModifiedApps, (ref Algorand.Unity.Algod.LedgerStateDelta x, Algorand.Unity.Algod.ModifiedApp[] value) => x.ModifiedApps = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Algod.ModifiedApp>.Instance).Assign("modified-assets", (Algorand.Unity.Algod.LedgerStateDelta x) => x.ModifiedAssets, (ref Algorand.Unity.Algod.LedgerStateDelta x, Algorand.Unity.Algod.ModifiedAsset[] value) => x.ModifiedAssets = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Algod.ModifiedAsset>.Instance).Assign("state-proof-next", (Algorand.Unity.Algod.LedgerStateDelta x) => x.StateProofNext, (ref Algorand.Unity.Algod.LedgerStateDelta x, Algorand.Unity.Optional<System.UInt64> value) => x.StateProofNext = value).Assign("prev-timestamp", (Algorand.Unity.Algod.LedgerStateDelta x) => x.PrevTimestamp, (ref Algorand.Unity.Algod.LedgerStateDelta x, Algorand.Unity.Optional<System.UInt64> value) => x.PrevTimestamp = value).Assign("totals", (Algorand.Unity.Algod.LedgerStateDelta x) => x.Totals, (ref Algorand.Unity.Algod.LedgerStateDelta x, Algorand.Unity.Algod.AccountTotals value) => x.Totals = value));
+            return true;
+        }
+    }
+}
+
+namespace Algorand.Unity.Algod
+{
+    
+    
     public partial struct AccountParticipation
     {
         
@@ -464,7 +634,7 @@ namespace Algorand.Unity.Algod
         
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
-            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.DryrunTxnResult>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.DryrunTxnResult>(false).Assign("app-call-messages", (Algorand.Unity.Algod.DryrunTxnResult x) => x.AppCallMessages, (ref Algorand.Unity.Algod.DryrunTxnResult x, System.String[] value) => x.AppCallMessages = value, Algorand.Unity.ArrayComparer<System.String, Algorand.Unity.StringComparer>.Instance).Assign("disassembly", (Algorand.Unity.Algod.DryrunTxnResult x) => x.Disassembly, (ref Algorand.Unity.Algod.DryrunTxnResult x, System.String[] value) => x.Disassembly = value, Algorand.Unity.ArrayComparer<System.String, Algorand.Unity.StringComparer>.Instance).Assign("logs", (Algorand.Unity.Algod.DryrunTxnResult x) => x.Logs, (ref Algorand.Unity.Algod.DryrunTxnResult x, System.Byte[][] value) => x.Logs = value, Algorand.Unity.ArrayComparer<System.Byte[], Algorand.Unity.ArrayComparer<System.Byte>>.Instance).Assign("logic-sig-disassembly", (Algorand.Unity.Algod.DryrunTxnResult x) => x.LogicSigDisassembly, (ref Algorand.Unity.Algod.DryrunTxnResult x, System.String[] value) => x.LogicSigDisassembly = value, Algorand.Unity.ArrayComparer<System.String, Algorand.Unity.StringComparer>.Instance).Assign("local-deltas", (Algorand.Unity.Algod.DryrunTxnResult x) => x.LocalDeltas, (ref Algorand.Unity.Algod.DryrunTxnResult x, Algorand.Unity.Algod.AccountStateDelta[] value) => x.LocalDeltas = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Algod.AccountStateDelta>.Instance).Assign("logic-sig-trace", (Algorand.Unity.Algod.DryrunTxnResult x) => x.LogicSigTrace, (ref Algorand.Unity.Algod.DryrunTxnResult x, Algorand.Unity.Algod.DryrunState[] value) => x.LogicSigTrace = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Algod.DryrunState>.Instance).Assign("cost", (Algorand.Unity.Algod.DryrunTxnResult x) => x.Cost, (ref Algorand.Unity.Algod.DryrunTxnResult x, Algorand.Unity.Optional<System.UInt64> value) => x.Cost = value).Assign("budget-consumed", (Algorand.Unity.Algod.DryrunTxnResult x) => x.BudgetConsumed, (ref Algorand.Unity.Algod.DryrunTxnResult x, Algorand.Unity.Optional<System.UInt64> value) => x.BudgetConsumed = value).Assign("logic-sig-messages", (Algorand.Unity.Algod.DryrunTxnResult x) => x.LogicSigMessages, (ref Algorand.Unity.Algod.DryrunTxnResult x, System.String[] value) => x.LogicSigMessages = value, Algorand.Unity.ArrayComparer<System.String, Algorand.Unity.StringComparer>.Instance).Assign("app-call-trace", (Algorand.Unity.Algod.DryrunTxnResult x) => x.AppCallTrace, (ref Algorand.Unity.Algod.DryrunTxnResult x, Algorand.Unity.Algod.DryrunState[] value) => x.AppCallTrace = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Algod.DryrunState>.Instance).Assign("global-delta", (Algorand.Unity.Algod.DryrunTxnResult x) => x.GlobalDelta, (ref Algorand.Unity.Algod.DryrunTxnResult x, Algorand.Unity.Algod.StateDelta value) => x.GlobalDelta = value).Assign("budget-added", (Algorand.Unity.Algod.DryrunTxnResult x) => x.BudgetAdded, (ref Algorand.Unity.Algod.DryrunTxnResult x, Algorand.Unity.Optional<System.UInt64> value) => x.BudgetAdded = value));
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.DryrunTxnResult>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.DryrunTxnResult>(false).Assign("app-call-messages", (Algorand.Unity.Algod.DryrunTxnResult x) => x.AppCallMessages, (ref Algorand.Unity.Algod.DryrunTxnResult x, System.String[] value) => x.AppCallMessages = value, Algorand.Unity.ArrayComparer<System.String, Algorand.Unity.StringComparer>.Instance).Assign("disassembly", (Algorand.Unity.Algod.DryrunTxnResult x) => x.Disassembly, (ref Algorand.Unity.Algod.DryrunTxnResult x, System.String[] value) => x.Disassembly = value, Algorand.Unity.ArrayComparer<System.String, Algorand.Unity.StringComparer>.Instance).Assign("logs", (Algorand.Unity.Algod.DryrunTxnResult x) => x.Logs, (ref Algorand.Unity.Algod.DryrunTxnResult x, System.Byte[][] value) => x.Logs = value, Algorand.Unity.ArrayComparer<System.Byte[], Algorand.Unity.ArrayComparer<System.Byte>>.Instance).Assign("logic-sig-disassembly", (Algorand.Unity.Algod.DryrunTxnResult x) => x.LogicSigDisassembly, (ref Algorand.Unity.Algod.DryrunTxnResult x, System.String[] value) => x.LogicSigDisassembly = value, Algorand.Unity.ArrayComparer<System.String, Algorand.Unity.StringComparer>.Instance).Assign("local-deltas", (Algorand.Unity.Algod.DryrunTxnResult x) => x.LocalDeltas, (ref Algorand.Unity.Algod.DryrunTxnResult x, Algorand.Unity.Algod.AccountStateDelta[] value) => x.LocalDeltas = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Algod.AccountStateDelta>.Instance).Assign("logic-sig-trace", (Algorand.Unity.Algod.DryrunTxnResult x) => x.LogicSigTrace, (ref Algorand.Unity.Algod.DryrunTxnResult x, Algorand.Unity.Algod.DryrunState[] value) => x.LogicSigTrace = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Algod.DryrunState>.Instance).Assign("budget-consumed", (Algorand.Unity.Algod.DryrunTxnResult x) => x.BudgetConsumed, (ref Algorand.Unity.Algod.DryrunTxnResult x, Algorand.Unity.Optional<System.UInt64> value) => x.BudgetConsumed = value).Assign("logic-sig-messages", (Algorand.Unity.Algod.DryrunTxnResult x) => x.LogicSigMessages, (ref Algorand.Unity.Algod.DryrunTxnResult x, System.String[] value) => x.LogicSigMessages = value, Algorand.Unity.ArrayComparer<System.String, Algorand.Unity.StringComparer>.Instance).Assign("app-call-trace", (Algorand.Unity.Algod.DryrunTxnResult x) => x.AppCallTrace, (ref Algorand.Unity.Algod.DryrunTxnResult x, Algorand.Unity.Algod.DryrunState[] value) => x.AppCallTrace = value, Algorand.Unity.ArrayComparer<Algorand.Unity.Algod.DryrunState>.Instance).Assign("global-delta", (Algorand.Unity.Algod.DryrunTxnResult x) => x.GlobalDelta, (ref Algorand.Unity.Algod.DryrunTxnResult x, Algorand.Unity.Algod.StateDelta value) => x.GlobalDelta = value).Assign("budget-added", (Algorand.Unity.Algod.DryrunTxnResult x) => x.BudgetAdded, (ref Algorand.Unity.Algod.DryrunTxnResult x, Algorand.Unity.Optional<System.UInt64> value) => x.BudgetAdded = value));
             return true;
         }
     }
@@ -482,6 +652,23 @@ namespace Algorand.Unity.Algod
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.CatchpointAbortResponse>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.CatchpointAbortResponse>(false).Assign("catchup-message", (Algorand.Unity.Algod.CatchpointAbortResponse x) => x.CatchupMessage, (ref Algorand.Unity.Algod.CatchpointAbortResponse x, System.String value) => x.CatchupMessage = value, Algorand.Unity.StringComparer.Instance));
+            return true;
+        }
+    }
+}
+
+namespace Algorand.Unity.Algod
+{
+    
+    
+    public partial struct GetSyncRoundResponse
+    {
+        
+        private static bool @__generated__IsValid = GetSyncRoundResponse.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.GetSyncRoundResponse>(new Algorand.Unity.AlgoApiObjectFormatter<Algorand.Unity.Algod.GetSyncRoundResponse>(false).Assign("round", (Algorand.Unity.Algod.GetSyncRoundResponse x) => x.Round, (ref Algorand.Unity.Algod.GetSyncRoundResponse x, System.UInt64 value) => x.Round = value));
             return true;
         }
     }
@@ -924,6 +1111,23 @@ namespace Algorand.Unity.Algod
         private static bool @__generated__InitializeAlgoApiFormatters()
         {
             Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.VersionsResponse>(new Algorand.Unity.WrappedValueFormatter<Algorand.Unity.Algod.VersionsResponse, Algorand.Unity.Algod.Version>());
+            return true;
+        }
+    }
+}
+
+namespace Algorand.Unity.Algod
+{
+    
+    
+    public partial struct LedgerStateDeltaResponse
+    {
+        
+        private static bool @__generated__IsValid = LedgerStateDeltaResponse.@__generated__InitializeAlgoApiFormatters();
+        
+        private static bool @__generated__InitializeAlgoApiFormatters()
+        {
+            Algorand.Unity.AlgoApiFormatterLookup.Add<Algorand.Unity.Algod.LedgerStateDeltaResponse>(new Algorand.Unity.WrappedValueFormatter<Algorand.Unity.Algod.LedgerStateDeltaResponse, Algorand.Unity.Algod.LedgerStateDelta>());
             return true;
         }
     }
