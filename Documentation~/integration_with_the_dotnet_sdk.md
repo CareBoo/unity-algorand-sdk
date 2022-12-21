@@ -4,7 +4,7 @@ This SDK embeds the latest [.NET Algorand SDK](https://github.com/FrankSzendziel
 
 ## Requirements
 
-1. Your scripts must exist under an Assembly Definition that references the `Algorand_1.0.0.14.dll` assembly and the `Algorand.Unity` and `Algorand.Unity.Net` assembly definitions.
+1. Your scripts must exist under an Assembly Definition that references the `Algorand.dll` assembly and the `Algorand.Unity` and `Algorand.Unity.Net` assembly definitions.
 2. Enable the extension methods with
 
 ```csharp

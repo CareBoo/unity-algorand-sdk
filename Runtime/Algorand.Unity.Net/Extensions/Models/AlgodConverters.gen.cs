@@ -18,6 +18,19 @@ using Dotnet = Algorand.Algod.Model;
 
 namespace Algorand.Unity.Algod.Net
 {
+    public static class StateProofMessageExtensions
+    {
+        public static Dotnet.StateProofMessage ToDotnet(this StateProofMessage from)
+        {
+            return from.Convert().ToDotnet<Dotnet.StateProofMessage>();
+        }
+
+        public static StateProofMessage ToUnity(this Dotnet.StateProofMessage from)
+        {
+            return from.Convert().ToUnity<StateProofMessage>();
+        }
+    }
+
     public static class ApplicationParamsExtensions
     {
         public static Dotnet.ApplicationParams ToDotnet(this ApplicationParams from)
@@ -28,6 +41,19 @@ namespace Algorand.Unity.Algod.Net
         public static ApplicationParams ToUnity(this Dotnet.ApplicationParams from)
         {
             return from.Convert().ToUnity<ApplicationParams>();
+        }
+    }
+
+    public static class AccountDeltasExtensions
+    {
+        public static Dotnet.AccountDeltas ToDotnet(this AccountDeltas from)
+        {
+            return from.Convert().ToDotnet<Dotnet.AccountDeltas>();
+        }
+
+        public static AccountDeltas ToUnity(this Dotnet.AccountDeltas from)
+        {
+            return from.Convert().ToUnity<AccountDeltas>();
         }
     }
 
@@ -70,6 +96,19 @@ namespace Algorand.Unity.Algod.Net
         }
     }
 
+    public static class KvDeltaExtensions
+    {
+        public static Dotnet.KvDelta ToDotnet(this KvDelta from)
+        {
+            return from.Convert().ToDotnet<Dotnet.KvDelta>();
+        }
+
+        public static KvDelta ToUnity(this Dotnet.KvDelta from)
+        {
+            return from.Convert().ToUnity<KvDelta>();
+        }
+    }
+
     public static class ApplicationStateSchemaExtensions
     {
         public static Dotnet.ApplicationStateSchema ToDotnet(this ApplicationStateSchema from)
@@ -83,6 +122,19 @@ namespace Algorand.Unity.Algod.Net
         }
     }
 
+    public static class ModifiedAppExtensions
+    {
+        public static Dotnet.ModifiedApp ToDotnet(this ModifiedApp from)
+        {
+            return from.Convert().ToDotnet<Dotnet.ModifiedApp>();
+        }
+
+        public static ModifiedApp ToUnity(this Dotnet.ModifiedApp from)
+        {
+            return from.Convert().ToUnity<ModifiedApp>();
+        }
+    }
+
     public static class DryrunStateExtensions
     {
         public static Dotnet.DryrunState ToDotnet(this DryrunState from)
@@ -93,6 +145,32 @@ namespace Algorand.Unity.Algod.Net
         public static DryrunState ToUnity(this Dotnet.DryrunState from)
         {
             return from.Convert().ToUnity<DryrunState>();
+        }
+    }
+
+    public static class BoxExtensions
+    {
+        public static Dotnet.Box ToDotnet(this Box from)
+        {
+            return from.Convert().ToDotnet<Dotnet.Box>();
+        }
+
+        public static Box ToUnity(this Dotnet.Box from)
+        {
+            return from.Convert().ToUnity<Box>();
+        }
+    }
+
+    public static class AppResourceRecordExtensions
+    {
+        public static Dotnet.AppResourceRecord ToDotnet(this AppResourceRecord from)
+        {
+            return from.Convert().ToDotnet<Dotnet.AppResourceRecord>();
+        }
+
+        public static AppResourceRecord ToUnity(this Dotnet.AppResourceRecord from)
+        {
+            return from.Convert().ToUnity<AppResourceRecord>();
         }
     }
 
@@ -122,6 +200,19 @@ namespace Algorand.Unity.Algod.Net
         }
     }
 
+    public static class StateProofExtensions
+    {
+        public static Dotnet.StateProof ToDotnet(this StateProof from)
+        {
+            return from.Convert().ToDotnet<Dotnet.StateProof>();
+        }
+
+        public static StateProof ToUnity(this Dotnet.StateProof from)
+        {
+            return from.Convert().ToUnity<StateProof>();
+        }
+    }
+
     public static class AssetExtensions
     {
         public static Dotnet.Asset ToDotnet(this Asset from)
@@ -148,6 +239,32 @@ namespace Algorand.Unity.Algod.Net
         }
     }
 
+    public static class TxLeaseExtensions
+    {
+        public static Dotnet.TxLease ToDotnet(this TxLease from)
+        {
+            return from.Convert().ToDotnet<Dotnet.TxLease>();
+        }
+
+        public static TxLease ToUnity(this Dotnet.TxLease from)
+        {
+            return from.Convert().ToUnity<TxLease>();
+        }
+    }
+
+    public static class PendingTransactionResponseExtensions
+    {
+        public static Dotnet.Transactions.IReturnableTransaction ToDotnet(this PendingTransactionResponse from)
+        {
+            return from.Convert().ToDotnet<Dotnet.Transactions.IReturnableTransaction>();
+        }
+
+        public static PendingTransactionResponse ToUnity(this Dotnet.Transactions.IReturnableTransaction from)
+        {
+            return from.Convert().ToUnity<PendingTransactionResponse>();
+        }
+    }
+
     public static class DryrunSourceExtensions
     {
         public static Dotnet.DryrunSource ToDotnet(this DryrunSource from)
@@ -158,6 +275,19 @@ namespace Algorand.Unity.Algod.Net
         public static DryrunSource ToUnity(this Dotnet.DryrunSource from)
         {
             return from.Convert().ToUnity<DryrunSource>();
+        }
+    }
+
+    public static class ModifiedAssetExtensions
+    {
+        public static Dotnet.ModifiedAsset ToDotnet(this ModifiedAsset from)
+        {
+            return from.Convert().ToDotnet<Dotnet.ModifiedAsset>();
+        }
+
+        public static ModifiedAsset ToUnity(this Dotnet.ModifiedAsset from)
+        {
+            return from.Convert().ToUnity<ModifiedAsset>();
         }
     }
 
@@ -200,6 +330,19 @@ namespace Algorand.Unity.Algod.Net
         }
     }
 
+    public static class AccountTotalsExtensions
+    {
+        public static Dotnet.AccountTotals ToDotnet(this AccountTotals from)
+        {
+            return from.Convert().ToDotnet<Dotnet.AccountTotals>();
+        }
+
+        public static AccountTotals ToUnity(this Dotnet.AccountTotals from)
+        {
+            return from.Convert().ToUnity<AccountTotals>();
+        }
+    }
+
     public static class AccountStateDeltaExtensions
     {
         public static Dotnet.AccountStateDelta ToDotnet(this AccountStateDelta from)
@@ -210,6 +353,45 @@ namespace Algorand.Unity.Algod.Net
         public static AccountStateDelta ToUnity(this Dotnet.AccountStateDelta from)
         {
             return from.Convert().ToUnity<AccountStateDelta>();
+        }
+    }
+
+    public static class AccountBalanceRecordExtensions
+    {
+        public static Dotnet.AccountBalanceRecord ToDotnet(this AccountBalanceRecord from)
+        {
+            return from.Convert().ToDotnet<Dotnet.AccountBalanceRecord>();
+        }
+
+        public static AccountBalanceRecord ToUnity(this Dotnet.AccountBalanceRecord from)
+        {
+            return from.Convert().ToUnity<AccountBalanceRecord>();
+        }
+    }
+
+    public static class AssetResourceRecordExtensions
+    {
+        public static Dotnet.AssetResourceRecord ToDotnet(this AssetResourceRecord from)
+        {
+            return from.Convert().ToDotnet<Dotnet.AssetResourceRecord>();
+        }
+
+        public static AssetResourceRecord ToUnity(this Dotnet.AssetResourceRecord from)
+        {
+            return from.Convert().ToUnity<AssetResourceRecord>();
+        }
+    }
+
+    public static class LightBlockHeaderProofExtensions
+    {
+        public static Dotnet.LightBlockHeaderProof ToDotnet(this LightBlockHeaderProof from)
+        {
+            return from.Convert().ToDotnet<Dotnet.LightBlockHeaderProof>();
+        }
+
+        public static LightBlockHeaderProof ToUnity(this Dotnet.LightBlockHeaderProof from)
+        {
+            return from.Convert().ToUnity<LightBlockHeaderProof>();
         }
     }
 
@@ -236,6 +418,32 @@ namespace Algorand.Unity.Algod.Net
         public static ApplicationLocalState ToUnity(this Dotnet.ApplicationLocalState from)
         {
             return from.Convert().ToUnity<ApplicationLocalState>();
+        }
+    }
+
+    public static class BoxDescriptorExtensions
+    {
+        public static Dotnet.BoxDescriptor ToDotnet(this BoxDescriptor from)
+        {
+            return from.Convert().ToDotnet<Dotnet.BoxDescriptor>();
+        }
+
+        public static BoxDescriptor ToUnity(this Dotnet.BoxDescriptor from)
+        {
+            return from.Convert().ToUnity<BoxDescriptor>();
+        }
+    }
+
+    public static class LedgerStateDeltaExtensions
+    {
+        public static Dotnet.LedgerStateDelta ToDotnet(this LedgerStateDelta from)
+        {
+            return from.Convert().ToDotnet<Dotnet.LedgerStateDelta>();
+        }
+
+        public static LedgerStateDelta ToUnity(this Dotnet.LedgerStateDelta from)
+        {
+            return from.Convert().ToUnity<LedgerStateDelta>();
         }
     }
 
@@ -291,16 +499,16 @@ namespace Algorand.Unity.Algod.Net
         }
     }
 
-    public static class CatchpointAbortResponseExtensions
+    public static class GetSyncRoundResponseExtensions
     {
-        public static Dotnet.CatchpointAbortResponse ToDotnet(this CatchpointAbortResponse from)
+        public static Dotnet.GetSyncRoundResponse ToDotnet(this GetSyncRoundResponse from)
         {
-            return from.Convert().ToDotnet<Dotnet.CatchpointAbortResponse>();
+            return from.Convert().ToDotnet<Dotnet.GetSyncRoundResponse>();
         }
 
-        public static CatchpointAbortResponse ToUnity(this Dotnet.CatchpointAbortResponse from)
+        public static GetSyncRoundResponse ToUnity(this Dotnet.GetSyncRoundResponse from)
         {
-            return from.Convert().ToUnity<CatchpointAbortResponse>();
+            return from.Convert().ToUnity<GetSyncRoundResponse>();
         }
     }
 
@@ -317,16 +525,42 @@ namespace Algorand.Unity.Algod.Net
         }
     }
 
-    public static class CatchpointStartResponseExtensions
+    public static class BoxesResponseExtensions
     {
-        public static Dotnet.CatchpointStartResponse ToDotnet(this CatchpointStartResponse from)
+        public static Dotnet.BoxesResponse ToDotnet(this BoxesResponse from)
         {
-            return from.Convert().ToDotnet<Dotnet.CatchpointStartResponse>();
+            return from.Convert().ToDotnet<Dotnet.BoxesResponse>();
         }
 
-        public static CatchpointStartResponse ToUnity(this Dotnet.CatchpointStartResponse from)
+        public static BoxesResponse ToUnity(this Dotnet.BoxesResponse from)
         {
-            return from.Convert().ToUnity<CatchpointStartResponse>();
+            return from.Convert().ToUnity<BoxesResponse>();
+        }
+    }
+
+    public static class TransactionProofResponseExtensions
+    {
+        public static Dotnet.TransactionProofResponse ToDotnet(this TransactionProofResponse from)
+        {
+            return from.Convert().ToDotnet<Dotnet.TransactionProofResponse>();
+        }
+
+        public static TransactionProofResponse ToUnity(this Dotnet.TransactionProofResponse from)
+        {
+            return from.Convert().ToUnity<TransactionProofResponse>();
+        }
+    }
+
+    public static class BlockHashResponseExtensions
+    {
+        public static Dotnet.BlockHashResponse ToDotnet(this BlockHashResponse from)
+        {
+            return from.Convert().ToDotnet<Dotnet.BlockHashResponse>();
+        }
+
+        public static BlockHashResponse ToUnity(this Dotnet.BlockHashResponse from)
+        {
+            return from.Convert().ToUnity<BlockHashResponse>();
         }
     }
 
@@ -340,6 +574,19 @@ namespace Algorand.Unity.Algod.Net
         public static CompileResponse ToUnity(this Dotnet.CompileResponse from)
         {
             return from.Convert().ToUnity<CompileResponse>();
+        }
+    }
+
+    public static class DisassembleResponseExtensions
+    {
+        public static Dotnet.DisassembleResponse ToDotnet(this DisassembleResponse from)
+        {
+            return from.Convert().ToDotnet<Dotnet.DisassembleResponse>();
+        }
+
+        public static DisassembleResponse ToUnity(this Dotnet.DisassembleResponse from)
+        {
+            return from.Convert().ToUnity<DisassembleResponse>();
         }
     }
 
@@ -382,6 +629,19 @@ namespace Algorand.Unity.Algod.Net
         }
     }
 
+    public static class PendingTransactionsResponseExtensions
+    {
+        public static Dotnet.PendingTransactions ToDotnet(this PendingTransactionsResponse from)
+        {
+            return from.Convert().ToDotnet<Dotnet.PendingTransactions>();
+        }
+
+        public static PendingTransactionsResponse ToUnity(this Dotnet.PendingTransactions from)
+        {
+            return from.Convert().ToUnity<PendingTransactionsResponse>();
+        }
+    }
+
     public static class AccountApplicationResponseExtensions
     {
         public static Dotnet.AccountApplicationResponse ToDotnet(this AccountApplicationResponse from)
@@ -421,16 +681,4 @@ namespace Algorand.Unity.Algod.Net
         }
     }
 
-    public static class StateDeltaExtensions
-    {
-        public static Dotnet.StateDelta ToDotnet(this StateDelta from)
-        {
-            return from.Convert().ToDotnet<Dotnet.StateDelta>();
-        }
-
-        public static StateDelta ToUnity(this Dotnet.StateDelta from)
-        {
-            return from.Convert().ToUnity<StateDelta>();
-        }
-    }
 }
