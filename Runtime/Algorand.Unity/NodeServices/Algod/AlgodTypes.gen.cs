@@ -206,6 +206,59 @@ namespace Algorand.Unity.Algod
     }
 
     [AlgoApiObject, Serializable]
+    public partial struct AccountDeltas
+        : IEquatable<AccountDeltas>
+    {
+        [SerializeField, Tooltip(@"Array of Account updates for the round")]
+        AccountBalanceRecord[] @accounts;
+        
+        [SerializeField, Tooltip(@"Array of App updates for the round.")]
+        AppResourceRecord[] @apps;
+        
+        [SerializeField, Tooltip(@"Array of Asset updates for the round.")]
+        AssetResourceRecord[] @assets;
+        
+        /// <summary>
+        /// Array of Account updates for the round        
+        /// </summary>
+        [AlgoApiField("accounts")]
+        public AccountBalanceRecord[] Accounts
+        {
+            get => this.@accounts;
+            set => this.@accounts = value;
+        }
+
+        /// <summary>
+        /// Array of App updates for the round.        
+        /// </summary>
+        [AlgoApiField("apps")]
+        public AppResourceRecord[] Apps
+        {
+            get => this.@apps;
+            set => this.@apps = value;
+        }
+
+        /// <summary>
+        /// Array of Asset updates for the round.        
+        /// </summary>
+        [AlgoApiField("assets")]
+        public AssetResourceRecord[] Assets
+        {
+            get => this.@assets;
+            set => this.@assets = value;
+        }
+
+        public bool Equals(AccountDeltas other)
+        {
+            return 
+                ArrayComparer.Equals(Accounts, other.Accounts) &&
+                ArrayComparer.Equals(Apps, other.Apps) &&
+                ArrayComparer.Equals(Assets, other.Assets)
+                ;
+        }
+    }
+
+    [AlgoApiObject, Serializable]
     public partial struct TealValue
         : IEquatable<TealValue>
     {
@@ -435,6 +488,45 @@ namespace Algorand.Unity.Algod
     }
 
     [AlgoApiObject, Serializable]
+    public partial struct KvDelta
+        : IEquatable<KvDelta>
+    {
+        [SerializeField, Tooltip(@"The key, base64 encoded.")]
+        byte[] @key;
+        
+        [SerializeField, Tooltip(@"The new value of the KV store entry, base64 encoded.")]
+        byte[] @value;
+        
+        /// <summary>
+        /// The key, base64 encoded.        
+        /// </summary>
+        [AlgoApiField("key")]
+        public byte[] Key
+        {
+            get => this.@key;
+            set => this.@key = value;
+        }
+
+        /// <summary>
+        /// The new value of the KV store entry, base64 encoded.        
+        /// </summary>
+        [AlgoApiField("value")]
+        public byte[] Value
+        {
+            get => this.@value;
+            set => this.@value = value;
+        }
+
+        public bool Equals(KvDelta other)
+        {
+            return 
+                ArrayComparer.Equals(Key, other.Key) &&
+                ArrayComparer.Equals(Value, other.Value)
+                ;
+        }
+    }
+
+    [AlgoApiObject, Serializable]
     public partial struct ApplicationStateSchema
         : IEquatable<ApplicationStateSchema>
     {
@@ -469,6 +561,59 @@ namespace Algorand.Unity.Algod
             return 
                 NumUint.Equals(other.NumUint) &&
                 NumByteSlice.Equals(other.NumByteSlice)
+                ;
+        }
+    }
+
+    [AlgoApiObject, Serializable]
+    public partial struct ModifiedApp
+        : IEquatable<ModifiedApp>
+    {
+        [SerializeField, Tooltip(@"App Id")]
+        ulong @id;
+        
+        [SerializeField, Tooltip(@"Created if true, deleted if false")]
+        bool @created;
+        
+        [SerializeField, Tooltip(@"Address of the creator.")]
+        string @creator;
+        
+        /// <summary>
+        /// App Id        
+        /// </summary>
+        [AlgoApiField("id")]
+        public ulong Id
+        {
+            get => this.@id;
+            set => this.@id = value;
+        }
+
+        /// <summary>
+        /// Created if true, deleted if false        
+        /// </summary>
+        [AlgoApiField("created")]
+        public bool Created
+        {
+            get => this.@created;
+            set => this.@created = value;
+        }
+
+        /// <summary>
+        /// Address of the creator.        
+        /// </summary>
+        [AlgoApiField("creator")]
+        public string Creator
+        {
+            get => this.@creator;
+            set => this.@creator = value;
+        }
+
+        public bool Equals(ModifiedApp other)
+        {
+            return 
+                Id.Equals(other.Id) &&
+                Created.Equals(other.Created) &&
+                StringComparer.Equals(Creator, other.Creator)
                 ;
         }
     }
@@ -589,6 +734,101 @@ namespace Algorand.Unity.Algod
             return 
                 ArrayComparer.Equals(Name, other.Name) &&
                 ArrayComparer.Equals(Value, other.Value)
+                ;
+        }
+    }
+
+    [AlgoApiObject, Serializable]
+    public partial struct AppResourceRecord
+        : IEquatable<AppResourceRecord>
+    {
+        [SerializeField, Tooltip(@"App index")]
+        ulong @appIndex;
+        
+        [SerializeField, Tooltip(@"App account address")]
+        string @address;
+        
+        [SerializeField, Tooltip(@"Whether the app was deleted")]
+        bool @appDeleted;
+        
+        [SerializeField, Tooltip(@"Whether the app local state was deleted")]
+        bool @appLocalStateDeleted;
+        
+        [SerializeField, Tooltip(@"App params")]
+        ApplicationParams @appParams;
+        
+        [SerializeField, Tooltip(@"App local state")]
+        ApplicationLocalState @appLocalState;
+        
+        /// <summary>
+        /// App index        
+        /// </summary>
+        [AlgoApiField("app-index")]
+        public ulong AppIndex
+        {
+            get => this.@appIndex;
+            set => this.@appIndex = value;
+        }
+
+        /// <summary>
+        /// App account address        
+        /// </summary>
+        [AlgoApiField("address")]
+        public string Address
+        {
+            get => this.@address;
+            set => this.@address = value;
+        }
+
+        /// <summary>
+        /// Whether the app was deleted        
+        /// </summary>
+        [AlgoApiField("app-deleted")]
+        public bool AppDeleted
+        {
+            get => this.@appDeleted;
+            set => this.@appDeleted = value;
+        }
+
+        /// <summary>
+        /// Whether the app local state was deleted        
+        /// </summary>
+        [AlgoApiField("app-local-state-deleted")]
+        public bool AppLocalStateDeleted
+        {
+            get => this.@appLocalStateDeleted;
+            set => this.@appLocalStateDeleted = value;
+        }
+
+        /// <summary>
+        /// App params        
+        /// </summary>
+        [AlgoApiField("app-params")]
+        public ApplicationParams AppParams
+        {
+            get => this.@appParams;
+            set => this.@appParams = value;
+        }
+
+        /// <summary>
+        /// App local state        
+        /// </summary>
+        [AlgoApiField("app-local-state")]
+        public ApplicationLocalState AppLocalState
+        {
+            get => this.@appLocalState;
+            set => this.@appLocalState = value;
+        }
+
+        public bool Equals(AppResourceRecord other)
+        {
+            return 
+                AppIndex.Equals(other.AppIndex) &&
+                StringComparer.Equals(Address, other.Address) &&
+                AppDeleted.Equals(other.AppDeleted) &&
+                AppLocalStateDeleted.Equals(other.AppLocalStateDeleted) &&
+                AppParams.Equals(other.AppParams) &&
+                AppLocalState.Equals(other.AppLocalState)
                 ;
         }
     }
@@ -805,7 +1045,7 @@ namespace Algorand.Unity.Algod
         StateProofMessage @message;
         
         [SerializeField, Tooltip(@"The encoded StateProof for the message.")]
-        byte[] @encoded;
+        byte[] @stateProof;
         
         /// <summary>
         ///         
@@ -823,8 +1063,8 @@ namespace Algorand.Unity.Algod
         [AlgoApiField("StateProof")]
         public byte[] Encoded
         {
-            get => this.@encoded;
-            set => this.@encoded = value;
+            get => this.@stateProof;
+            set => this.@stateProof = value;
         }
 
         public bool Equals(StateProof other)
@@ -910,6 +1150,59 @@ namespace Algorand.Unity.Algod
             return 
                 StringComparer.Equals(Key, other.Key) &&
                 Value.Equals(other.Value)
+                ;
+        }
+    }
+
+    [AlgoApiObject, Serializable]
+    public partial struct TxLease
+        : IEquatable<TxLease>
+    {
+        [SerializeField, Tooltip(@"Address of the lease sender")]
+        string @sender;
+        
+        [SerializeField, Tooltip(@"Lease data")]
+        byte[] @lease;
+        
+        [SerializeField, Tooltip(@"Round that the lease expires")]
+        ulong @expiration;
+        
+        /// <summary>
+        /// Address of the lease sender        
+        /// </summary>
+        [AlgoApiField("sender")]
+        public string Sender
+        {
+            get => this.@sender;
+            set => this.@sender = value;
+        }
+
+        /// <summary>
+        /// Lease data        
+        /// </summary>
+        [AlgoApiField("lease")]
+        public byte[] Lease
+        {
+            get => this.@lease;
+            set => this.@lease = value;
+        }
+
+        /// <summary>
+        /// Round that the lease expires        
+        /// </summary>
+        [AlgoApiField("expiration")]
+        public ulong Expiration
+        {
+            get => this.@expiration;
+            set => this.@expiration = value;
+        }
+
+        public bool Equals(TxLease other)
+        {
+            return 
+                StringComparer.Equals(Sender, other.Sender) &&
+                ArrayComparer.Equals(Lease, other.Lease) &&
+                Expiration.Equals(other.Expiration)
                 ;
         }
     }
@@ -1185,6 +1478,59 @@ namespace Algorand.Unity.Algod
                 StringComparer.Equals(Source, other.Source) &&
                 TxnIndex.Equals(other.TxnIndex) &&
                 AppIndex.Equals(other.AppIndex)
+                ;
+        }
+    }
+
+    [AlgoApiObject, Serializable]
+    public partial struct ModifiedAsset
+        : IEquatable<ModifiedAsset>
+    {
+        [SerializeField, Tooltip(@"Asset Id")]
+        ulong @id;
+        
+        [SerializeField, Tooltip(@"Created if true, deleted if false")]
+        bool @created;
+        
+        [SerializeField, Tooltip(@"Address of the creator.")]
+        string @creator;
+        
+        /// <summary>
+        /// Asset Id        
+        /// </summary>
+        [AlgoApiField("id")]
+        public ulong Id
+        {
+            get => this.@id;
+            set => this.@id = value;
+        }
+
+        /// <summary>
+        /// Created if true, deleted if false        
+        /// </summary>
+        [AlgoApiField("created")]
+        public bool Created
+        {
+            get => this.@created;
+            set => this.@created = value;
+        }
+
+        /// <summary>
+        /// Address of the creator.        
+        /// </summary>
+        [AlgoApiField("creator")]
+        public string Creator
+        {
+            get => this.@creator;
+            set => this.@creator = value;
+        }
+
+        public bool Equals(ModifiedAsset other)
+        {
+            return 
+                Id.Equals(other.Id) &&
+                Created.Equals(other.Created) &&
+                StringComparer.Equals(Creator, other.Creator)
                 ;
         }
     }
@@ -1665,6 +2011,73 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
     }
 
     [AlgoApiObject, Serializable]
+    public partial struct AccountTotals
+        : IEquatable<AccountTotals>
+    {
+        [SerializeField, Tooltip(@"Amount of stake in online accounts")]
+        ulong @online;
+        
+        [SerializeField, Tooltip(@"Amount of stake in offline accounts")]
+        ulong @offline;
+        
+        [SerializeField, Tooltip(@"Amount of stake in non-participating accounts")]
+        ulong @notParticipating;
+        
+        [SerializeField, Tooltip(@"Total number of algos received per reward unit since genesis")]
+        ulong @rewardsLevel;
+        
+        /// <summary>
+        /// Amount of stake in online accounts        
+        /// </summary>
+        [AlgoApiField("online")]
+        public ulong Online
+        {
+            get => this.@online;
+            set => this.@online = value;
+        }
+
+        /// <summary>
+        /// Amount of stake in offline accounts        
+        /// </summary>
+        [AlgoApiField("offline")]
+        public ulong Offline
+        {
+            get => this.@offline;
+            set => this.@offline = value;
+        }
+
+        /// <summary>
+        /// Amount of stake in non-participating accounts        
+        /// </summary>
+        [AlgoApiField("not-participating")]
+        public ulong NotParticipating
+        {
+            get => this.@notParticipating;
+            set => this.@notParticipating = value;
+        }
+
+        /// <summary>
+        /// Total number of algos received per reward unit since genesis        
+        /// </summary>
+        [AlgoApiField("rewards-level")]
+        public ulong RewardsLevel
+        {
+            get => this.@rewardsLevel;
+            set => this.@rewardsLevel = value;
+        }
+
+        public bool Equals(AccountTotals other)
+        {
+            return 
+                Online.Equals(other.Online) &&
+                Offline.Equals(other.Offline) &&
+                NotParticipating.Equals(other.NotParticipating) &&
+                RewardsLevel.Equals(other.RewardsLevel)
+                ;
+        }
+    }
+
+    [AlgoApiObject, Serializable]
     public partial struct AccountStateDelta
         : IEquatable<AccountStateDelta>
     {
@@ -1699,6 +2112,140 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
             return 
                 StringComparer.Equals(Address, other.Address) &&
                 Delta.Equals(other.Delta)
+                ;
+        }
+    }
+
+    [AlgoApiObject, Serializable]
+    public partial struct AccountBalanceRecord
+        : IEquatable<AccountBalanceRecord>
+    {
+        [SerializeField, Tooltip(@"Address of the updated account.")]
+        string @address;
+        
+        [SerializeField, Tooltip(@"Updated account data.")]
+        Account @accountData;
+        
+        /// <summary>
+        /// Address of the updated account.        
+        /// </summary>
+        [AlgoApiField("address")]
+        public string Address
+        {
+            get => this.@address;
+            set => this.@address = value;
+        }
+
+        /// <summary>
+        /// Updated account data.        
+        /// </summary>
+        [AlgoApiField("account-data")]
+        public Account AccountData
+        {
+            get => this.@accountData;
+            set => this.@accountData = value;
+        }
+
+        public bool Equals(AccountBalanceRecord other)
+        {
+            return 
+                StringComparer.Equals(Address, other.Address) &&
+                AccountData.Equals(other.AccountData)
+                ;
+        }
+    }
+
+    [AlgoApiObject, Serializable]
+    public partial struct AssetResourceRecord
+        : IEquatable<AssetResourceRecord>
+    {
+        [SerializeField, Tooltip(@"Index of the asset")]
+        ulong @assetIndex;
+        
+        [SerializeField, Tooltip(@"Account address of the asset")]
+        string @address;
+        
+        [SerializeField, Tooltip(@"Whether the asset was deleted")]
+        bool @assetDeleted;
+        
+        [SerializeField, Tooltip(@"Asset params")]
+        AssetParams @assetParams;
+        
+        [SerializeField, Tooltip(@"Whether the asset holding was deleted")]
+        bool @assetHoldingDeleted;
+        
+        [SerializeField, Tooltip(@"The asset holding")]
+        AssetHolding @assetHolding;
+        
+        /// <summary>
+        /// Index of the asset        
+        /// </summary>
+        [AlgoApiField("asset-index")]
+        public ulong AssetIndex
+        {
+            get => this.@assetIndex;
+            set => this.@assetIndex = value;
+        }
+
+        /// <summary>
+        /// Account address of the asset        
+        /// </summary>
+        [AlgoApiField("address")]
+        public string Address
+        {
+            get => this.@address;
+            set => this.@address = value;
+        }
+
+        /// <summary>
+        /// Whether the asset was deleted        
+        /// </summary>
+        [AlgoApiField("asset-deleted")]
+        public bool AssetDeleted
+        {
+            get => this.@assetDeleted;
+            set => this.@assetDeleted = value;
+        }
+
+        /// <summary>
+        /// Asset params        
+        /// </summary>
+        [AlgoApiField("asset-params")]
+        public AssetParams AssetParams
+        {
+            get => this.@assetParams;
+            set => this.@assetParams = value;
+        }
+
+        /// <summary>
+        /// Whether the asset holding was deleted        
+        /// </summary>
+        [AlgoApiField("asset-holding-deleted")]
+        public bool AssetHoldingDeleted
+        {
+            get => this.@assetHoldingDeleted;
+            set => this.@assetHoldingDeleted = value;
+        }
+
+        /// <summary>
+        /// The asset holding        
+        /// </summary>
+        [AlgoApiField("asset-holding")]
+        public AssetHolding AssetHolding
+        {
+            get => this.@assetHolding;
+            set => this.@assetHolding = value;
+        }
+
+        public bool Equals(AssetResourceRecord other)
+        {
+            return 
+                AssetIndex.Equals(other.AssetIndex) &&
+                StringComparer.Equals(Address, other.Address) &&
+                AssetDeleted.Equals(other.AssetDeleted) &&
+                AssetParams.Equals(other.AssetParams) &&
+                AssetHoldingDeleted.Equals(other.AssetHoldingDeleted) &&
+                AssetHolding.Equals(other.AssetHolding)
                 ;
         }
     }
@@ -1869,6 +2416,129 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
         {
             return 
                 ArrayComparer.Equals(Name, other.Name)
+                ;
+        }
+    }
+
+    [AlgoApiObject, Serializable]
+    public partial struct LedgerStateDelta
+        : IEquatable<LedgerStateDelta>
+    {
+        [SerializeField, Tooltip(@"AccountDeltas object")]
+        AccountDeltas @accts;
+        
+        [SerializeField, Tooltip(@"Array of KV Deltas")]
+        KvDelta[] @kvMods;
+        
+        [SerializeField, Tooltip(@"List of transaction leases")]
+        TxLease[] @txLeases;
+        
+        [SerializeField, Tooltip(@"List of modified Apps")]
+        ModifiedApp[] @modifiedApps;
+        
+        [SerializeField, Tooltip(@"List of modified Assets")]
+        ModifiedAsset[] @modifiedAssets;
+        
+        [SerializeField, Tooltip(@"Next round for which we expect a state proof")]
+        Optional<ulong> @stateProofNext;
+        
+        [SerializeField, Tooltip(@"Previous block timestamp")]
+        Optional<ulong> @prevTimestamp;
+        
+        [SerializeField, Tooltip(@"Account Totals")]
+        AccountTotals @totals;
+        
+        /// <summary>
+        /// AccountDeltas object        
+        /// </summary>
+        [AlgoApiField("accts")]
+        public AccountDeltas Accts
+        {
+            get => this.@accts;
+            set => this.@accts = value;
+        }
+
+        /// <summary>
+        /// Array of KV Deltas        
+        /// </summary>
+        [AlgoApiField("kv-mods")]
+        public KvDelta[] KvMods
+        {
+            get => this.@kvMods;
+            set => this.@kvMods = value;
+        }
+
+        /// <summary>
+        /// List of transaction leases        
+        /// </summary>
+        [AlgoApiField("tx-leases")]
+        public TxLease[] TxLeases
+        {
+            get => this.@txLeases;
+            set => this.@txLeases = value;
+        }
+
+        /// <summary>
+        /// List of modified Apps        
+        /// </summary>
+        [AlgoApiField("modified-apps")]
+        public ModifiedApp[] ModifiedApps
+        {
+            get => this.@modifiedApps;
+            set => this.@modifiedApps = value;
+        }
+
+        /// <summary>
+        /// List of modified Assets        
+        /// </summary>
+        [AlgoApiField("modified-assets")]
+        public ModifiedAsset[] ModifiedAssets
+        {
+            get => this.@modifiedAssets;
+            set => this.@modifiedAssets = value;
+        }
+
+        /// <summary>
+        /// Next round for which we expect a state proof        
+        /// </summary>
+        [AlgoApiField("state-proof-next")]
+        public Optional<ulong> StateProofNext
+        {
+            get => this.@stateProofNext;
+            set => this.@stateProofNext = value;
+        }
+
+        /// <summary>
+        /// Previous block timestamp        
+        /// </summary>
+        [AlgoApiField("prev-timestamp")]
+        public Optional<ulong> PrevTimestamp
+        {
+            get => this.@prevTimestamp;
+            set => this.@prevTimestamp = value;
+        }
+
+        /// <summary>
+        /// Account Totals        
+        /// </summary>
+        [AlgoApiField("totals")]
+        public AccountTotals Totals
+        {
+            get => this.@totals;
+            set => this.@totals = value;
+        }
+
+        public bool Equals(LedgerStateDelta other)
+        {
+            return 
+                Accts.Equals(other.Accts) &&
+                ArrayComparer.Equals(KvMods, other.KvMods) &&
+                ArrayComparer.Equals(TxLeases, other.TxLeases) &&
+                ArrayComparer.Equals(ModifiedApps, other.ModifiedApps) &&
+                ArrayComparer.Equals(ModifiedAssets, other.ModifiedAssets) &&
+                StateProofNext.Equals(other.StateProofNext) &&
+                PrevTimestamp.Equals(other.PrevTimestamp) &&
+                Totals.Equals(other.Totals)
                 ;
         }
     }
@@ -2278,9 +2948,6 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
         [SerializeField, Tooltip(@"")]
         DryrunState[] @logicSigTrace;
         
-        [SerializeField, Tooltip(@"Net cost of app execution. Field is DEPRECATED and is subject for removal. Instead, use `budget-added` and `budget-consumed.")]
-        Optional<ulong> @cost;
-        
         [SerializeField, Tooltip(@"Budget consumed during execution of app call transaction.")]
         Optional<ulong> @budgetConsumed;
         
@@ -2357,16 +3024,6 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
         }
 
         /// <summary>
-        /// Net cost of app execution. Field is DEPRECATED and is subject for removal. Instead, use `budget-added` and `budget-consumed.        
-        /// </summary>
-        [AlgoApiField("cost")]
-        public Optional<ulong> Cost
-        {
-            get => this.@cost;
-            set => this.@cost = value;
-        }
-
-        /// <summary>
         /// Budget consumed during execution of app call transaction.        
         /// </summary>
         [AlgoApiField("budget-consumed")]
@@ -2425,7 +3082,6 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
                 ArrayComparer.Equals(LogicSigDisassembly, other.LogicSigDisassembly) &&
                 ArrayComparer.Equals(LocalDeltas, other.LocalDeltas) &&
                 ArrayComparer.Equals(LogicSigTrace, other.LogicSigTrace) &&
-                Cost.Equals(other.Cost) &&
                 BudgetConsumed.Equals(other.BudgetConsumed) &&
                 ArrayComparer.Equals(LogicSigMessages, other.LogicSigMessages) &&
                 ArrayComparer.Equals(AppCallTrace, other.AppCallTrace) &&
@@ -2456,6 +3112,31 @@ Note the raw object uses `map[int] -> AppLocalState` for this type.")]
         {
             return 
                 StringComparer.Equals(CatchupMessage, other.CatchupMessage)
+                ;
+        }
+    }
+
+    [AlgoApiObject, Serializable]
+    public partial struct GetSyncRoundResponse
+        : IEquatable<GetSyncRoundResponse>
+    {
+        [SerializeField, Tooltip(@"The minimum sync round for the ledger.")]
+        ulong @round;
+        
+        /// <summary>
+        /// The minimum sync round for the ledger.        
+        /// </summary>
+        [AlgoApiField("round")]
+        public ulong Round
+        {
+            get => this.@round;
+            set => this.@round = value;
+        }
+
+        public bool Equals(GetSyncRoundResponse other)
+        {
+            return 
+                Round.Equals(other.Round)
                 ;
         }
     }
@@ -3799,6 +4480,44 @@ The raw account uses `AppParams` for this type.")]
         public static implicit operator VersionsResponse(Version value)
         {
             return new VersionsResponse(value);
+        }
+    }
+    
+    /// <summary>
+    /// Contains ledger deltas    
+    /// </summary>
+    [Serializable, AlgoApiFormatter(typeof(WrappedValueFormatter<LedgerStateDeltaResponse, LedgerStateDelta>))]
+    public partial struct LedgerStateDeltaResponse
+        : IEquatable<LedgerStateDeltaResponse>
+        , IWrappedValue<LedgerStateDelta>
+    {
+        [SerializeField]
+        LedgerStateDelta @value;
+
+        public LedgerStateDeltaResponse(LedgerStateDelta value)
+        {
+            this.@value = value;
+        }
+
+        public LedgerStateDelta WrappedValue
+        {
+            get => this.@value;
+            set => this.@value = value;
+        }
+
+        public bool Equals(LedgerStateDeltaResponse other)
+        {
+            return ArrayComparer.Equals(WrappedValue, other.WrappedValue);
+        }
+        
+        public static implicit operator LedgerStateDelta(LedgerStateDeltaResponse wrapper)
+        {
+            return wrapper.WrappedValue;
+        }
+
+        public static implicit operator LedgerStateDeltaResponse(LedgerStateDelta value)
+        {
+            return new LedgerStateDeltaResponse(value);
         }
     }
     
