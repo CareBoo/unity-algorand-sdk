@@ -9,8 +9,7 @@ namespace Algorand.Unity
 {
     [Serializable]
     public struct KmdAccount
-        : IAccount
-        , IAsyncSigner
+        : IAsyncAccountSigner
     {
         [SerializeField] private KmdClient client;
 

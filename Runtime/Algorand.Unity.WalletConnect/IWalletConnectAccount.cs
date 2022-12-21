@@ -3,8 +3,7 @@ using Cysharp.Threading.Tasks;
 namespace Algorand.Unity.WalletConnect
 {
     public interface IWalletConnectAccount
-        : IAsyncSigner
-        , IAccount
+        : IAsyncAccountSigner
     {
         /// <summary>
 		/// The status of the current wallet connected.

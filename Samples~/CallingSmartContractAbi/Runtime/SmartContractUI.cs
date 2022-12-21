@@ -1,4 +1,3 @@
-using System;
 using System.Linq;
 using Algorand.Unity;
 using Algorand.Unity.Experimental.Abi;
@@ -9,10 +8,11 @@ using UnityEngine.UIElements;
 [RequireComponent(typeof(UIDocument))]
 public class SmartContractUI : MonoBehaviour
 {
-    public KmdAccount account { get; set; }
+    public IAsyncAccountSigner account { get; set; }
     public AlgodClient algod { get; set; }
     public AppIndex contractIndex { get; set; }
     public Contract contract { get; set; }
+    public string error { get; set; }
 
     public UIDocument document { get; protected set; }
 
@@ -27,6 +27,18 @@ public class SmartContractUI : MonoBehaviour
     {
         if (contractIndex == 0)
         {
+            return;
+        }
+
+        if (!string.IsNullOrEmpty(error))
+        {
+            var parent = new VisualElement();
+            var title = new Label("An error occurred trying to connect to your Algorand sandbox at localhost.");
+            var message = new Label(error);
+            
+            parent.Add(title);
+            parent.Add(message);
+            document.rootVisualElement.Add(parent);
             return;
         }
 

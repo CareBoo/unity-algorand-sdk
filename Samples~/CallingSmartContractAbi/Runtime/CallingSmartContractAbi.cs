@@ -16,7 +16,7 @@ public class CallingSmartContractAbi : MonoBehaviour
 
     public SmartContractUI smartContractUI;
 
-    private KmdAccount account;
+    private IAsyncAccountSigner account;
 
     private AlgodClient algod;
 
@@ -41,19 +41,31 @@ public class CallingSmartContractAbi : MonoBehaviour
         indexer = new IndexerClient("http://localhost:8980");
     }
 
-    private async UniTaskVoid Start()
+    private void Start()
+    {
+        StartAsync().Forget();
+    }
+
+    private async UniTaskVoid StartAsync()
     {
         smartContractUI.enabled = false;
-        account = await GetKmdAccount();
-        await GetOrCreateContract();
-        smartContractUI.account = account;
-        smartContractUI.algod = algod;
-        smartContractUI.contractIndex = contractIndex;
-        smartContractUI.contract = contract;
+        try
+        {
+            account = await GetAccount();
+            await GetOrCreateContract();
+            smartContractUI.account = account;
+            smartContractUI.algod = algod;
+            smartContractUI.contractIndex = contractIndex;
+            smartContractUI.contract = contract;
+        }
+        catch (Exception ex)
+        {
+            smartContractUI.error = ex.Message;
+        }
         smartContractUI.enabled = true;
     }
 
-    private async UniTask<KmdAccount> GetKmdAccount()
+    private async UniTask<IAsyncAccountSigner> GetAccount()
     {
         var (listWalletsErr, listWalletsResponse) = await kmd.ListWallets();
         listWalletsErr.ThrowIfError();
@@ -127,16 +139,5 @@ public class CallingSmartContractAbi : MonoBehaviour
         var (error, response) = await algod.RawTransaction(signedTxn);
         error.ThrowIfError();
         return response.TxId;
-    }
-
-    public struct PaymentTxnArgs : IEquatable<PaymentTxnArgs>
-    {
-        public Address Receiver;
-        public MicroAlgos Amount;
-
-        public bool Equals(PaymentTxnArgs other)
-        {
-            return Receiver.Equals(other.Receiver) && Amount.Equals(other.Amount);
-        }
     }
 }

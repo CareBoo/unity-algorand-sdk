@@ -14,6 +14,18 @@ namespace Algorand.Unity
         Address Address { get; }
     }
 
+    public interface IAccountSigner : IAccount, ISigner
+    {
+    }
+
+    public interface IAsyncAccountSigner : IAccount, IAsyncSigner
+    {
+    }
+
+    public interface IAsyncAccountSignerWithProgress : IAccount, IAsyncSignerWithProgress
+    {
+    }
+
     /// <summary>
     /// A local, in-memory account.
     /// </summary>
@@ -22,6 +34,9 @@ namespace Algorand.Unity
         , ISigner
         , IAsyncSigner
         , IAsyncSignerWithProgress
+        , IAccountSigner
+        , IAsyncAccountSigner
+        , IAsyncAccountSignerWithProgress
     {
         private readonly PrivateKey privateKey;
 
