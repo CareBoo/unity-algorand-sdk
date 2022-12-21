@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [4.0.0-pre.15](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.14...v4.0.0-pre.15) (2022-12-21)
+
+
+### Features
+
+* **accounts:** add combined interfaces for `Account` and `Signer` ([6cfee78](https://github.com/CareBoo/unity-algorand-sdk/commit/6cfee7819b43ab94d38bc916a468088681a4b38e))
+
 # [4.0.0-pre.14](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.13...v4.0.0-pre.14) (2022-12-21)
 
 
