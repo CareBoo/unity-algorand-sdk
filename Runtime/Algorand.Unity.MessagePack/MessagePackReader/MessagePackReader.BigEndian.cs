@@ -1,5 +1,4 @@
 using System;
-using Unity.Mathematics;
 
 namespace Algorand.Unity.MessagePack
 {

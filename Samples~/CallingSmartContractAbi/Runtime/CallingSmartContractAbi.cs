@@ -26,8 +26,6 @@ public class CallingSmartContractAbi : MonoBehaviour
 
     private MicroAlgos accountBalance = 0;
 
-    private AppIndex contractIndex;
-
     private Contract contract;
 
     private void Awake()
@@ -52,15 +50,15 @@ public class CallingSmartContractAbi : MonoBehaviour
         try
         {
             account = await GetAccount();
-            await GetOrCreateContract();
             smartContractUI.account = account;
             smartContractUI.algod = algod;
-            smartContractUI.contractIndex = contractIndex;
+            smartContractUI.contractIndex = await GetOrCreateContract();
             smartContractUI.contract = contract;
         }
         catch (Exception ex)
         {
-            smartContractUI.error = ex.Message;
+            Debug.LogException(ex);
+            smartContractUI.error = ex.Message ?? ex.ToString();
         }
         smartContractUI.enabled = true;
     }
@@ -78,11 +76,12 @@ public class CallingSmartContractAbi : MonoBehaviour
         return new KmdAccount(kmd, wallet.Id, "", keysResponse.Addresses[0]);
     }
 
-    private async UniTask GetOrCreateContract()
+    private async UniTask<AppIndex> GetOrCreateContract()
     {
         var approval = await CompileTeal(approvalTeal.text);
         var clear = await CompileTeal(clearTeal.text);
-        contractIndex = (await GetContract(approval, clear)).Else(await CreateContract(approval, clear));
+        var maybeExistingContract = await GetContract(approval, clear);
+        return maybeExistingContract.Else(await CreateContract(approval, clear));
     }
 
     private async UniTask<Optional<AppIndex>> GetContract(CompiledTeal approval, CompiledTeal clear)
@@ -96,8 +95,13 @@ public class CallingSmartContractAbi : MonoBehaviour
         foreach (var application in response.Applications)
         {
             if (application.Params.ApprovalProgram.Equals(approval)
-                && application.Params.ClearStateProgram.Equals(clear))
+                && application.Params.ClearStateProgram.Equals(clear)
+                && !application.Deleted.Else(false)
+                && !application.DeletedAtRound.HasValue)
+            {
+                Debug.Log($"Found existing contract: {application.Id}");
                 return new Optional<AppIndex>((AppIndex)application.Id);
+            }
         }
         return default;
     }

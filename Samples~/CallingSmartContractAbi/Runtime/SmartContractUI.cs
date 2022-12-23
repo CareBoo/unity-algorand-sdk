@@ -14,31 +14,26 @@ public class SmartContractUI : MonoBehaviour
     public Contract contract { get; set; }
     public string error { get; set; }
 
-    public UIDocument document { get; protected set; }
-
     public ContractField contractField { get; protected set; }
-
-    private void Awake()
-    {
-        document = GetComponent<UIDocument>();
-    }
 
     private void OnEnable()
     {
-        if (contractIndex == 0)
-        {
-            return;
-        }
+
+        var document = GetComponent<UIDocument>();
 
         if (!string.IsNullOrEmpty(error))
         {
-            var parent = new VisualElement();
+            var root = document.rootVisualElement;
             var title = new Label("An error occurred trying to connect to your Algorand sandbox at localhost.");
             var message = new Label(error);
             
-            parent.Add(title);
-            parent.Add(message);
-            document.rootVisualElement.Add(parent);
+            root.Add(title);
+            root.Add(message);
+            return;
+        }
+        
+        if (contractIndex == 0)
+        {
             return;
         }
 

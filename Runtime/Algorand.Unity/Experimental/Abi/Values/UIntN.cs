@@ -1,5 +1,6 @@
 using System.Numerics;
 using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 using Unity.Mathematics;
 
 namespace Algorand.Unity.Experimental.Abi
