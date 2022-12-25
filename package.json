@@ -56,7 +56,7 @@
     {
       "displayName": "NFT Viewer",
       "description": "Display NFTs following ARC-0064 in an Account.",
-      "path": "Samples~/NFT Viewer"
+      "path": "Samples~/NFTViewer"
     }
   ],
   "scripts": {
