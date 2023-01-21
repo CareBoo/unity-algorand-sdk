@@ -20,7 +20,7 @@ Save your address and passphrase in a separate place.
 > Never share your private key or mnemonic. Production environments require stringent private key management.
 > For more information on key management in community Wallets, click
 > [here](https://developer.algorand.org/ecosystem-projects/#wallets).
-> See [WalletConnect](walletconnect.md) for instructions on how to connect to a mobile Wallet.
+> See [WalletConnect](../walletconnect.md) for instructions on how to connect to a mobile Wallet.
 
 ## Fund the Account
 

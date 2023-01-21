@@ -67,7 +67,7 @@ public class AccountObject
 
 This script wraps the `Account` class into a `ScriptableObject` that we can use to store its data in the editor. We use a `Mnemonic` to store the `PrivateKey` because it's serializable by the Unity Editor. After the `AccountObject` is deserialized, Unity regenerates the `account` field from the `mnemonic`.
 
-> [!Note] > `Account` could have been made serializable in the Unity Editor. However, we have chosen not to make it serializable to avoid storing `PrivateKey`s in the editor. Do not store `PrivateKey` or `Mnemonic` outside of a Wallet that you trust.
+> [!Note] `Account` could have been made serializable in the Unity Editor. However, we have chosen not to make it serializable to avoid storing `PrivateKey`s in the editor. Do not store `PrivateKey` or `Mnemonic` outside of a Wallet that you trust.
 
 Let's go ahead and generate a new account that will be our `Creator` for our ASA. Right click in the project window and select `Create > Account Object`.
 
