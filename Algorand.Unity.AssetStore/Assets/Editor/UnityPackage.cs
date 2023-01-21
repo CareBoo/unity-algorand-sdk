@@ -1,9 +1,14 @@
 using UnityEditor;
-using UnityEngine;
 
 public static class UnityPackage
 {
     const string packageName = "unity-algorand-sdk";
+
+    private static readonly string[] exportPaths =
+    {
+        "Packages/com.careboo.unity-algorand-sdk",
+        "Packages/com.cysharp.unitask"
+    };
 
     static readonly ExportPackageOptions exportOptions = ExportPackageOptions.Recurse;
 
@@ -12,8 +17,8 @@ public static class UnityPackage
     public static void Build()
     {
         AssetDatabase.ExportPackage(
-            assetPathName: "Assets/Algorand.Unity",
-            fileName: packageName + ".unitypackage",
+            assetPathNames: exportPaths,
+            fileName: $"{packageName}.unitypackage",
             exportOptions
         );
     }
