@@ -772,13 +772,13 @@ references:
   fullName.vb: Algorand.Unity.AlgoApiField(Of TAlgoApiObject).Assign(Of T)(Algorand.Unity.AlgoApiField(Of TAlgoApiObject).FieldGetter(Of T), Algorand.Unity.AlgoApiField(Of TAlgoApiObject).FieldSetter(Of T), Algorand.Unity.AlgoApiField(Of TAlgoApiObject).EqualityComparer, Algorand.Unity.AlgoApiField(Of TAlgoApiObject).SerializePredicate)
   nameWithType: AlgoApiField<TAlgoApiObject>.Assign<T>(AlgoApiField<TAlgoApiObject>.FieldGetter<T>, AlgoApiField<TAlgoApiObject>.FieldSetter<T>, AlgoApiField<TAlgoApiObject>.EqualityComparer, AlgoApiField<TAlgoApiObject>.SerializePredicate)
   nameWithType.vb: AlgoApiField(Of TAlgoApiObject).Assign(Of T)(AlgoApiField(Of TAlgoApiObject).FieldGetter(Of T), AlgoApiField(Of TAlgoApiObject).FieldSetter(Of T), AlgoApiField(Of TAlgoApiObject).EqualityComparer, AlgoApiField(Of TAlgoApiObject).SerializePredicate)
-- uid: Algorand.Unity.AlgoApiField`1.Assign``1(Algorand.Unity.AlgoApiField{`0}.FieldGetter{``0},Algorand.Unity.AlgoApiField{`0}.FieldSetter{``0},IEqualityComparer{``0})
+- uid: Algorand.Unity.AlgoApiField`1.Assign``1(Algorand.Unity.AlgoApiField{`0}.FieldGetter{``0},Algorand.Unity.AlgoApiField{`0}.FieldSetter{``0},System.Collections.Generic.IEqualityComparer{``0})
   name: Assign<T>(AlgoApiField<TAlgoApiObject>.FieldGetter<T>, AlgoApiField<TAlgoApiObject>.FieldSetter<T>, IEqualityComparer<T>)
-  href: api/Algorand.Unity.AlgoApiField-1.html#Algorand_Unity_AlgoApiField_1_Assign__1_Algorand_Unity_AlgoApiField__0__FieldGetter___0__Algorand_Unity_AlgoApiField__0__FieldSetter___0__IEqualityComparer___0__
-  commentId: M:Algorand.Unity.AlgoApiField`1.Assign``1(Algorand.Unity.AlgoApiField{`0}.FieldGetter{``0},Algorand.Unity.AlgoApiField{`0}.FieldSetter{``0},IEqualityComparer{``0})
+  href: api/Algorand.Unity.AlgoApiField-1.html#Algorand_Unity_AlgoApiField_1_Assign__1_Algorand_Unity_AlgoApiField__0__FieldGetter___0__Algorand_Unity_AlgoApiField__0__FieldSetter___0__System_Collections_Generic_IEqualityComparer___0__
+  commentId: M:Algorand.Unity.AlgoApiField`1.Assign``1(Algorand.Unity.AlgoApiField{`0}.FieldGetter{``0},Algorand.Unity.AlgoApiField{`0}.FieldSetter{``0},System.Collections.Generic.IEqualityComparer{``0})
   name.vb: Assign(Of T)(AlgoApiField(Of TAlgoApiObject).FieldGetter(Of T), AlgoApiField(Of TAlgoApiObject).FieldSetter(Of T), IEqualityComparer(Of T))
-  fullName: Algorand.Unity.AlgoApiField<TAlgoApiObject>.Assign<T>(Algorand.Unity.AlgoApiField<TAlgoApiObject>.FieldGetter<T>, Algorand.Unity.AlgoApiField<TAlgoApiObject>.FieldSetter<T>, IEqualityComparer<T>)
-  fullName.vb: Algorand.Unity.AlgoApiField(Of TAlgoApiObject).Assign(Of T)(Algorand.Unity.AlgoApiField(Of TAlgoApiObject).FieldGetter(Of T), Algorand.Unity.AlgoApiField(Of TAlgoApiObject).FieldSetter(Of T), IEqualityComparer(Of T))
+  fullName: Algorand.Unity.AlgoApiField<TAlgoApiObject>.Assign<T>(Algorand.Unity.AlgoApiField<TAlgoApiObject>.FieldGetter<T>, Algorand.Unity.AlgoApiField<TAlgoApiObject>.FieldSetter<T>, System.Collections.Generic.IEqualityComparer<T>)
+  fullName.vb: Algorand.Unity.AlgoApiField(Of TAlgoApiObject).Assign(Of T)(Algorand.Unity.AlgoApiField(Of TAlgoApiObject).FieldGetter(Of T), Algorand.Unity.AlgoApiField(Of TAlgoApiObject).FieldSetter(Of T), System.Collections.Generic.IEqualityComparer(Of T))
   nameWithType: AlgoApiField<TAlgoApiObject>.Assign<T>(AlgoApiField<TAlgoApiObject>.FieldGetter<T>, AlgoApiField<TAlgoApiObject>.FieldSetter<T>, IEqualityComparer<T>)
   nameWithType.vb: AlgoApiField(Of TAlgoApiObject).Assign(Of T)(AlgoApiField(Of TAlgoApiObject).FieldGetter(Of T), AlgoApiField(Of TAlgoApiObject).FieldSetter(Of T), IEqualityComparer(Of T))
 - uid: Algorand.Unity.AlgoApiField`1.DeserializeJson
@@ -877,13 +877,13 @@ references:
   fullName.vb: Algorand.Unity.AlgoApiField(Of TAlgoApiObject).Map(Of TKey).Assign(Of T)(TKey, Algorand.Unity.AlgoApiField(Of TAlgoApiObject).FieldGetter(Of T), Algorand.Unity.AlgoApiField(Of TAlgoApiObject).FieldSetter(Of T))
   nameWithType: AlgoApiField<TAlgoApiObject>.Map<TKey>.Assign<T>(TKey, AlgoApiField<TAlgoApiObject>.FieldGetter<T>, AlgoApiField<TAlgoApiObject>.FieldSetter<T>)
   nameWithType.vb: AlgoApiField(Of TAlgoApiObject).Map(Of TKey).Assign(Of T)(TKey, AlgoApiField(Of TAlgoApiObject).FieldGetter(Of T), AlgoApiField(Of TAlgoApiObject).FieldSetter(Of T))
-- uid: Algorand.Unity.AlgoApiField`1.Map`1.Assign``1(`1,Algorand.Unity.AlgoApiField{`0}.FieldGetter{``0},Algorand.Unity.AlgoApiField{`0}.FieldSetter{``0},IEqualityComparer{``0})
+- uid: Algorand.Unity.AlgoApiField`1.Map`1.Assign``1(`1,Algorand.Unity.AlgoApiField{`0}.FieldGetter{``0},Algorand.Unity.AlgoApiField{`0}.FieldSetter{``0},System.Collections.Generic.IEqualityComparer{``0})
   name: Assign<T>(TKey, AlgoApiField<TAlgoApiObject>.FieldGetter<T>, AlgoApiField<TAlgoApiObject>.FieldSetter<T>, IEqualityComparer<T>)
-  href: api/Algorand.Unity.AlgoApiField-1.Map-1.html#Algorand_Unity_AlgoApiField_1_Map_1_Assign__1__1_Algorand_Unity_AlgoApiField__0__FieldGetter___0__Algorand_Unity_AlgoApiField__0__FieldSetter___0__IEqualityComparer___0__
-  commentId: M:Algorand.Unity.AlgoApiField`1.Map`1.Assign``1(`1,Algorand.Unity.AlgoApiField{`0}.FieldGetter{``0},Algorand.Unity.AlgoApiField{`0}.FieldSetter{``0},IEqualityComparer{``0})
+  href: api/Algorand.Unity.AlgoApiField-1.Map-1.html#Algorand_Unity_AlgoApiField_1_Map_1_Assign__1__1_Algorand_Unity_AlgoApiField__0__FieldGetter___0__Algorand_Unity_AlgoApiField__0__FieldSetter___0__System_Collections_Generic_IEqualityComparer___0__
+  commentId: M:Algorand.Unity.AlgoApiField`1.Map`1.Assign``1(`1,Algorand.Unity.AlgoApiField{`0}.FieldGetter{``0},Algorand.Unity.AlgoApiField{`0}.FieldSetter{``0},System.Collections.Generic.IEqualityComparer{``0})
   name.vb: Assign(Of T)(TKey, AlgoApiField(Of TAlgoApiObject).FieldGetter(Of T), AlgoApiField(Of TAlgoApiObject).FieldSetter(Of T), IEqualityComparer(Of T))
-  fullName: Algorand.Unity.AlgoApiField<TAlgoApiObject>.Map<TKey>.Assign<T>(TKey, Algorand.Unity.AlgoApiField<TAlgoApiObject>.FieldGetter<T>, Algorand.Unity.AlgoApiField<TAlgoApiObject>.FieldSetter<T>, IEqualityComparer<T>)
-  fullName.vb: Algorand.Unity.AlgoApiField(Of TAlgoApiObject).Map(Of TKey).Assign(Of T)(TKey, Algorand.Unity.AlgoApiField(Of TAlgoApiObject).FieldGetter(Of T), Algorand.Unity.AlgoApiField(Of TAlgoApiObject).FieldSetter(Of T), IEqualityComparer(Of T))
+  fullName: Algorand.Unity.AlgoApiField<TAlgoApiObject>.Map<TKey>.Assign<T>(TKey, Algorand.Unity.AlgoApiField<TAlgoApiObject>.FieldGetter<T>, Algorand.Unity.AlgoApiField<TAlgoApiObject>.FieldSetter<T>, System.Collections.Generic.IEqualityComparer<T>)
+  fullName.vb: Algorand.Unity.AlgoApiField(Of TAlgoApiObject).Map(Of TKey).Assign(Of T)(TKey, Algorand.Unity.AlgoApiField(Of TAlgoApiObject).FieldGetter(Of T), Algorand.Unity.AlgoApiField(Of TAlgoApiObject).FieldSetter(Of T), System.Collections.Generic.IEqualityComparer(Of T))
   nameWithType: AlgoApiField<TAlgoApiObject>.Map<TKey>.Assign<T>(TKey, AlgoApiField<TAlgoApiObject>.FieldGetter<T>, AlgoApiField<TAlgoApiObject>.FieldSetter<T>, IEqualityComparer<T>)
   nameWithType.vb: AlgoApiField(Of TAlgoApiObject).Map(Of TKey).Assign(Of T)(TKey, AlgoApiField(Of TAlgoApiObject).FieldGetter(Of T), AlgoApiField(Of TAlgoApiObject).FieldSetter(Of T), IEqualityComparer(Of T))
 - uid: Algorand.Unity.AlgoApiField`1.Map`1.GetField(`1)
@@ -1363,13 +1363,13 @@ references:
   fullName.vb: Algorand.Unity.AlgoApiObjectFormatter(Of T).Assign(Of TField)(System.String, Algorand.Unity.AlgoApiField(Of T).FieldGetter(Of TField), Algorand.Unity.AlgoApiField(Of T).FieldSetter(Of TField))
   nameWithType: AlgoApiObjectFormatter<T>.Assign<TField>(String, AlgoApiField<T>.FieldGetter<TField>, AlgoApiField<T>.FieldSetter<TField>)
   nameWithType.vb: AlgoApiObjectFormatter(Of T).Assign(Of TField)(String, AlgoApiField(Of T).FieldGetter(Of TField), AlgoApiField(Of T).FieldSetter(Of TField))
-- uid: Algorand.Unity.AlgoApiObjectFormatter`1.Assign``1(System.String,Algorand.Unity.AlgoApiField{`0}.FieldGetter{``0},Algorand.Unity.AlgoApiField{`0}.FieldSetter{``0},IEqualityComparer{``0})
+- uid: Algorand.Unity.AlgoApiObjectFormatter`1.Assign``1(System.String,Algorand.Unity.AlgoApiField{`0}.FieldGetter{``0},Algorand.Unity.AlgoApiField{`0}.FieldSetter{``0},System.Collections.Generic.IEqualityComparer{``0})
   name: Assign<TField>(String, AlgoApiField<T>.FieldGetter<TField>, AlgoApiField<T>.FieldSetter<TField>, IEqualityComparer<TField>)
-  href: api/Algorand.Unity.AlgoApiObjectFormatter-1.html#Algorand_Unity_AlgoApiObjectFormatter_1_Assign__1_System_String_Algorand_Unity_AlgoApiField__0__FieldGetter___0__Algorand_Unity_AlgoApiField__0__FieldSetter___0__IEqualityComparer___0__
-  commentId: M:Algorand.Unity.AlgoApiObjectFormatter`1.Assign``1(System.String,Algorand.Unity.AlgoApiField{`0}.FieldGetter{``0},Algorand.Unity.AlgoApiField{`0}.FieldSetter{``0},IEqualityComparer{``0})
+  href: api/Algorand.Unity.AlgoApiObjectFormatter-1.html#Algorand_Unity_AlgoApiObjectFormatter_1_Assign__1_System_String_Algorand_Unity_AlgoApiField__0__FieldGetter___0__Algorand_Unity_AlgoApiField__0__FieldSetter___0__System_Collections_Generic_IEqualityComparer___0__
+  commentId: M:Algorand.Unity.AlgoApiObjectFormatter`1.Assign``1(System.String,Algorand.Unity.AlgoApiField{`0}.FieldGetter{``0},Algorand.Unity.AlgoApiField{`0}.FieldSetter{``0},System.Collections.Generic.IEqualityComparer{``0})
   name.vb: Assign(Of TField)(String, AlgoApiField(Of T).FieldGetter(Of TField), AlgoApiField(Of T).FieldSetter(Of TField), IEqualityComparer(Of TField))
-  fullName: Algorand.Unity.AlgoApiObjectFormatter<T>.Assign<TField>(System.String, Algorand.Unity.AlgoApiField<T>.FieldGetter<TField>, Algorand.Unity.AlgoApiField<T>.FieldSetter<TField>, IEqualityComparer<TField>)
-  fullName.vb: Algorand.Unity.AlgoApiObjectFormatter(Of T).Assign(Of TField)(System.String, Algorand.Unity.AlgoApiField(Of T).FieldGetter(Of TField), Algorand.Unity.AlgoApiField(Of T).FieldSetter(Of TField), IEqualityComparer(Of TField))
+  fullName: Algorand.Unity.AlgoApiObjectFormatter<T>.Assign<TField>(System.String, Algorand.Unity.AlgoApiField<T>.FieldGetter<TField>, Algorand.Unity.AlgoApiField<T>.FieldSetter<TField>, System.Collections.Generic.IEqualityComparer<TField>)
+  fullName.vb: Algorand.Unity.AlgoApiObjectFormatter(Of T).Assign(Of TField)(System.String, Algorand.Unity.AlgoApiField(Of T).FieldGetter(Of TField), Algorand.Unity.AlgoApiField(Of T).FieldSetter(Of TField), System.Collections.Generic.IEqualityComparer(Of TField))
   nameWithType: AlgoApiObjectFormatter<T>.Assign<TField>(String, AlgoApiField<T>.FieldGetter<TField>, AlgoApiField<T>.FieldSetter<TField>, IEqualityComparer<TField>)
   nameWithType.vb: AlgoApiObjectFormatter(Of T).Assign(Of TField)(String, AlgoApiField(Of T).FieldGetter(Of TField), AlgoApiField(Of T).FieldSetter(Of TField), IEqualityComparer(Of TField))
 - uid: Algorand.Unity.AlgoApiObjectFormatter`1.Deserialize(JsonReader@)
@@ -16208,13 +16208,13 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Editor.Base32Drawer.GetBytes
   nameWithType: Base32Drawer.GetBytes
-- uid: Algorand.Unity.Editor.Base32Drawer.GetString(List{System.Byte})
+- uid: Algorand.Unity.Editor.Base32Drawer.GetString(System.Collections.Generic.List{System.Byte})
   name: GetString(List<Byte>)
-  href: api/Algorand.Unity.Editor.Base32Drawer.html#Algorand_Unity_Editor_Base32Drawer_GetString_List_System_Byte__
-  commentId: M:Algorand.Unity.Editor.Base32Drawer.GetString(List{System.Byte})
+  href: api/Algorand.Unity.Editor.Base32Drawer.html#Algorand_Unity_Editor_Base32Drawer_GetString_System_Collections_Generic_List_System_Byte__
+  commentId: M:Algorand.Unity.Editor.Base32Drawer.GetString(System.Collections.Generic.List{System.Byte})
   name.vb: GetString(List(Of Byte))
-  fullName: Algorand.Unity.Editor.Base32Drawer.GetString(List<System.Byte>)
-  fullName.vb: Algorand.Unity.Editor.Base32Drawer.GetString(List(Of System.Byte))
+  fullName: Algorand.Unity.Editor.Base32Drawer.GetString(System.Collections.Generic.List<System.Byte>)
+  fullName.vb: Algorand.Unity.Editor.Base32Drawer.GetString(System.Collections.Generic.List(Of System.Byte))
   nameWithType: Base32Drawer.GetString(List<Byte>)
   nameWithType.vb: Base32Drawer.GetString(List(Of Byte))
 - uid: Algorand.Unity.Editor.Base32Drawer.GetString*
@@ -16243,13 +16243,13 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Editor.Base64Drawer.GetBytes
   nameWithType: Base64Drawer.GetBytes
-- uid: Algorand.Unity.Editor.Base64Drawer.GetString(List{System.Byte})
+- uid: Algorand.Unity.Editor.Base64Drawer.GetString(System.Collections.Generic.List{System.Byte})
   name: GetString(List<Byte>)
-  href: api/Algorand.Unity.Editor.Base64Drawer.html#Algorand_Unity_Editor_Base64Drawer_GetString_List_System_Byte__
-  commentId: M:Algorand.Unity.Editor.Base64Drawer.GetString(List{System.Byte})
+  href: api/Algorand.Unity.Editor.Base64Drawer.html#Algorand_Unity_Editor_Base64Drawer_GetString_System_Collections_Generic_List_System_Byte__
+  commentId: M:Algorand.Unity.Editor.Base64Drawer.GetString(System.Collections.Generic.List{System.Byte})
   name.vb: GetString(List(Of Byte))
-  fullName: Algorand.Unity.Editor.Base64Drawer.GetString(List<System.Byte>)
-  fullName.vb: Algorand.Unity.Editor.Base64Drawer.GetString(List(Of System.Byte))
+  fullName: Algorand.Unity.Editor.Base64Drawer.GetString(System.Collections.Generic.List<System.Byte>)
+  fullName.vb: Algorand.Unity.Editor.Base64Drawer.GetString(System.Collections.Generic.List(Of System.Byte))
   nameWithType: Base64Drawer.GetString(List<Byte>)
   nameWithType.vb: Base64Drawer.GetString(List(Of Byte))
 - uid: Algorand.Unity.Editor.Base64Drawer.GetString*
@@ -16291,13 +16291,13 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Editor.BytesTextDrawer.GetSerializedBytes
   nameWithType: BytesTextDrawer.GetSerializedBytes
-- uid: Algorand.Unity.Editor.BytesTextDrawer.GetString(List{System.Byte})
+- uid: Algorand.Unity.Editor.BytesTextDrawer.GetString(System.Collections.Generic.List{System.Byte})
   name: GetString(List<Byte>)
-  href: api/Algorand.Unity.Editor.BytesTextDrawer.html#Algorand_Unity_Editor_BytesTextDrawer_GetString_List_System_Byte__
-  commentId: M:Algorand.Unity.Editor.BytesTextDrawer.GetString(List{System.Byte})
+  href: api/Algorand.Unity.Editor.BytesTextDrawer.html#Algorand_Unity_Editor_BytesTextDrawer_GetString_System_Collections_Generic_List_System_Byte__
+  commentId: M:Algorand.Unity.Editor.BytesTextDrawer.GetString(System.Collections.Generic.List{System.Byte})
   name.vb: GetString(List(Of Byte))
-  fullName: Algorand.Unity.Editor.BytesTextDrawer.GetString(List<System.Byte>)
-  fullName.vb: Algorand.Unity.Editor.BytesTextDrawer.GetString(List(Of System.Byte))
+  fullName: Algorand.Unity.Editor.BytesTextDrawer.GetString(System.Collections.Generic.List<System.Byte>)
+  fullName.vb: Algorand.Unity.Editor.BytesTextDrawer.GetString(System.Collections.Generic.List(Of System.Byte))
   nameWithType: BytesTextDrawer.GetString(List<Byte>)
   nameWithType.vb: BytesTextDrawer.GetString(List(Of Byte))
 - uid: Algorand.Unity.Editor.BytesTextDrawer.GetString*
@@ -16371,13 +16371,13 @@ references:
   fullName.vb: Algorand.Unity.Editor.BytesTextDrawer(Of TResult).GetString(TResult)
   nameWithType: BytesTextDrawer<TResult>.GetString(TResult)
   nameWithType.vb: BytesTextDrawer(Of TResult).GetString(TResult)
-- uid: Algorand.Unity.Editor.BytesTextDrawer`1.GetString(List{System.Byte})
+- uid: Algorand.Unity.Editor.BytesTextDrawer`1.GetString(System.Collections.Generic.List{System.Byte})
   name: GetString(List<Byte>)
-  href: api/Algorand.Unity.Editor.BytesTextDrawer-1.html#Algorand_Unity_Editor_BytesTextDrawer_1_GetString_List_System_Byte__
-  commentId: M:Algorand.Unity.Editor.BytesTextDrawer`1.GetString(List{System.Byte})
+  href: api/Algorand.Unity.Editor.BytesTextDrawer-1.html#Algorand_Unity_Editor_BytesTextDrawer_1_GetString_System_Collections_Generic_List_System_Byte__
+  commentId: M:Algorand.Unity.Editor.BytesTextDrawer`1.GetString(System.Collections.Generic.List{System.Byte})
   name.vb: GetString(List(Of Byte))
-  fullName: Algorand.Unity.Editor.BytesTextDrawer<TResult>.GetString(List<System.Byte>)
-  fullName.vb: Algorand.Unity.Editor.BytesTextDrawer(Of TResult).GetString(List(Of System.Byte))
+  fullName: Algorand.Unity.Editor.BytesTextDrawer<TResult>.GetString(System.Collections.Generic.List<System.Byte>)
+  fullName.vb: Algorand.Unity.Editor.BytesTextDrawer(Of TResult).GetString(System.Collections.Generic.List(Of System.Byte))
   nameWithType: BytesTextDrawer<TResult>.GetString(List<Byte>)
   nameWithType.vb: BytesTextDrawer(Of TResult).GetString(List(Of Byte))
 - uid: Algorand.Unity.Editor.BytesTextDrawer`1.GetString*
@@ -16504,13 +16504,13 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Editor.HexDrawer.GetSerializedBytes
   nameWithType: HexDrawer.GetSerializedBytes
-- uid: Algorand.Unity.Editor.HexDrawer.GetString(List{System.Byte})
+- uid: Algorand.Unity.Editor.HexDrawer.GetString(System.Collections.Generic.List{System.Byte})
   name: GetString(List<Byte>)
-  href: api/Algorand.Unity.Editor.HexDrawer.html#Algorand_Unity_Editor_HexDrawer_GetString_List_System_Byte__
-  commentId: M:Algorand.Unity.Editor.HexDrawer.GetString(List{System.Byte})
+  href: api/Algorand.Unity.Editor.HexDrawer.html#Algorand_Unity_Editor_HexDrawer_GetString_System_Collections_Generic_List_System_Byte__
+  commentId: M:Algorand.Unity.Editor.HexDrawer.GetString(System.Collections.Generic.List{System.Byte})
   name.vb: GetString(List(Of Byte))
-  fullName: Algorand.Unity.Editor.HexDrawer.GetString(List<System.Byte>)
-  fullName.vb: Algorand.Unity.Editor.HexDrawer.GetString(List(Of System.Byte))
+  fullName: Algorand.Unity.Editor.HexDrawer.GetString(System.Collections.Generic.List<System.Byte>)
+  fullName.vb: Algorand.Unity.Editor.HexDrawer.GetString(System.Collections.Generic.List(Of System.Byte))
   nameWithType: HexDrawer.GetString(List<Byte>)
   nameWithType.vb: HexDrawer.GetString(List(Of Byte))
 - uid: Algorand.Unity.Editor.HexDrawer.GetString*
@@ -16539,13 +16539,13 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Editor.MnemonicDrawer.GetBytes
   nameWithType: MnemonicDrawer.GetBytes
-- uid: Algorand.Unity.Editor.MnemonicDrawer.GetString(List{System.Byte})
+- uid: Algorand.Unity.Editor.MnemonicDrawer.GetString(System.Collections.Generic.List{System.Byte})
   name: GetString(List<Byte>)
-  href: api/Algorand.Unity.Editor.MnemonicDrawer.html#Algorand_Unity_Editor_MnemonicDrawer_GetString_List_System_Byte__
-  commentId: M:Algorand.Unity.Editor.MnemonicDrawer.GetString(List{System.Byte})
+  href: api/Algorand.Unity.Editor.MnemonicDrawer.html#Algorand_Unity_Editor_MnemonicDrawer_GetString_System_Collections_Generic_List_System_Byte__
+  commentId: M:Algorand.Unity.Editor.MnemonicDrawer.GetString(System.Collections.Generic.List{System.Byte})
   name.vb: GetString(List(Of Byte))
-  fullName: Algorand.Unity.Editor.MnemonicDrawer.GetString(List<System.Byte>)
-  fullName.vb: Algorand.Unity.Editor.MnemonicDrawer.GetString(List(Of System.Byte))
+  fullName: Algorand.Unity.Editor.MnemonicDrawer.GetString(System.Collections.Generic.List<System.Byte>)
+  fullName.vb: Algorand.Unity.Editor.MnemonicDrawer.GetString(System.Collections.Generic.List(Of System.Byte))
   nameWithType: MnemonicDrawer.GetString(List<Byte>)
   nameWithType.vb: MnemonicDrawer.GetString(List(Of Byte))
 - uid: Algorand.Unity.Editor.MnemonicDrawer.GetString*
@@ -16676,13 +16676,13 @@ references:
   commentId: F:Algorand.Unity.Editor.SerializedBytes.serializedObject
   fullName: Algorand.Unity.Editor.SerializedBytes.serializedObject
   nameWithType: SerializedBytes.serializedObject
-- uid: Algorand.Unity.Editor.SerializedBytes.SetBytes(List{System.Byte})
+- uid: Algorand.Unity.Editor.SerializedBytes.SetBytes(System.Collections.Generic.List{System.Byte})
   name: SetBytes(List<Byte>)
-  href: api/Algorand.Unity.Editor.SerializedBytes.html#Algorand_Unity_Editor_SerializedBytes_SetBytes_List_System_Byte__
-  commentId: M:Algorand.Unity.Editor.SerializedBytes.SetBytes(List{System.Byte})
+  href: api/Algorand.Unity.Editor.SerializedBytes.html#Algorand_Unity_Editor_SerializedBytes_SetBytes_System_Collections_Generic_List_System_Byte__
+  commentId: M:Algorand.Unity.Editor.SerializedBytes.SetBytes(System.Collections.Generic.List{System.Byte})
   name.vb: SetBytes(List(Of Byte))
-  fullName: Algorand.Unity.Editor.SerializedBytes.SetBytes(List<System.Byte>)
-  fullName.vb: Algorand.Unity.Editor.SerializedBytes.SetBytes(List(Of System.Byte))
+  fullName: Algorand.Unity.Editor.SerializedBytes.SetBytes(System.Collections.Generic.List<System.Byte>)
+  fullName.vb: Algorand.Unity.Editor.SerializedBytes.SetBytes(System.Collections.Generic.List(Of System.Byte))
   nameWithType: SerializedBytes.SetBytes(List<Byte>)
   nameWithType.vb: SerializedBytes.SetBytes(List(Of Byte))
 - uid: Algorand.Unity.Editor.SerializedBytes.SetBytes*
@@ -16724,13 +16724,13 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Editor.SerializedFixedBytes.ByteProperties
   nameWithType: SerializedFixedBytes.ByteProperties
-- uid: Algorand.Unity.Editor.SerializedFixedBytes.SetBytes(List{System.Byte})
+- uid: Algorand.Unity.Editor.SerializedFixedBytes.SetBytes(System.Collections.Generic.List{System.Byte})
   name: SetBytes(List<Byte>)
-  href: api/Algorand.Unity.Editor.SerializedFixedBytes.html#Algorand_Unity_Editor_SerializedFixedBytes_SetBytes_List_System_Byte__
-  commentId: M:Algorand.Unity.Editor.SerializedFixedBytes.SetBytes(List{System.Byte})
+  href: api/Algorand.Unity.Editor.SerializedFixedBytes.html#Algorand_Unity_Editor_SerializedFixedBytes_SetBytes_System_Collections_Generic_List_System_Byte__
+  commentId: M:Algorand.Unity.Editor.SerializedFixedBytes.SetBytes(System.Collections.Generic.List{System.Byte})
   name.vb: SetBytes(List(Of Byte))
-  fullName: Algorand.Unity.Editor.SerializedFixedBytes.SetBytes(List<System.Byte>)
-  fullName.vb: Algorand.Unity.Editor.SerializedFixedBytes.SetBytes(List(Of System.Byte))
+  fullName: Algorand.Unity.Editor.SerializedFixedBytes.SetBytes(System.Collections.Generic.List<System.Byte>)
+  fullName.vb: Algorand.Unity.Editor.SerializedFixedBytes.SetBytes(System.Collections.Generic.List(Of System.Byte))
   nameWithType: SerializedFixedBytes.SetBytes(List<Byte>)
   nameWithType.vb: SerializedFixedBytes.SetBytes(List(Of Byte))
 - uid: Algorand.Unity.Editor.SerializedFixedBytes.SetBytes*
@@ -16772,13 +16772,13 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Editor.SerializedVariableBytes.ByteProperties
   nameWithType: SerializedVariableBytes.ByteProperties
-- uid: Algorand.Unity.Editor.SerializedVariableBytes.SetBytes(List{System.Byte})
+- uid: Algorand.Unity.Editor.SerializedVariableBytes.SetBytes(System.Collections.Generic.List{System.Byte})
   name: SetBytes(List<Byte>)
-  href: api/Algorand.Unity.Editor.SerializedVariableBytes.html#Algorand_Unity_Editor_SerializedVariableBytes_SetBytes_List_System_Byte__
-  commentId: M:Algorand.Unity.Editor.SerializedVariableBytes.SetBytes(List{System.Byte})
+  href: api/Algorand.Unity.Editor.SerializedVariableBytes.html#Algorand_Unity_Editor_SerializedVariableBytes_SetBytes_System_Collections_Generic_List_System_Byte__
+  commentId: M:Algorand.Unity.Editor.SerializedVariableBytes.SetBytes(System.Collections.Generic.List{System.Byte})
   name.vb: SetBytes(List(Of Byte))
-  fullName: Algorand.Unity.Editor.SerializedVariableBytes.SetBytes(List<System.Byte>)
-  fullName.vb: Algorand.Unity.Editor.SerializedVariableBytes.SetBytes(List(Of System.Byte))
+  fullName: Algorand.Unity.Editor.SerializedVariableBytes.SetBytes(System.Collections.Generic.List<System.Byte>)
+  fullName.vb: Algorand.Unity.Editor.SerializedVariableBytes.SetBytes(System.Collections.Generic.List(Of System.Byte))
   nameWithType: SerializedVariableBytes.SetBytes(List<Byte>)
   nameWithType.vb: SerializedVariableBytes.SetBytes(List(Of Byte))
 - uid: Algorand.Unity.Editor.SerializedVariableBytes.SetBytes*
