@@ -1,6 +1,6 @@
 <h1 id="unity-algorand-sdk" align="center">
 <picture>
-  <img alt="The Algorand Logo" src="Documentation~/images/algorand_logo_mark.svg"/>
+  <img alt="The Algorand Logo" src="docs/images/algorand_logo_mark.svg"/>
 </picture>
 <br/>
 Unity Algorand SDK
@@ -11,7 +11,7 @@ Unity Algorand SDK
     <img src="https://img.shields.io/github/license/CareBoo/unity-algorand-sdk"/>
   </a>
   <a href="https://github.com/CareBoo/unity-algorand-sdk/actions/workflows/test.yaml">
-    <img src="https://img.shields.io/github/workflow/status/careboo/unity-algorand-sdk/Unity%20Tests/main?label=tests"/>
+    <img src="https://img.shields.io/github/actions/workflow/status/CareBoo/unity-algorand-sdk/test.yaml?branch=main&label=tests"/>
   </a>
   <a href="https://www.npmjs.com/package/com.careboo.unity-algorand-sdk">
     <img src="https://img.shields.io/npm/v/com.careboo.unity-algorand-sdk"/>
@@ -154,7 +154,7 @@ Coming Soon!
 
 ## Getting Started
 
-Read [Getting Started](Documentation~/getting_started.md) to learn the basic workflows for developing on Algorand.
+Read [Getting Started](docs/getting_started.md) to learn the basic workflows for developing on Algorand.
 
 ### Documentation Site
 
