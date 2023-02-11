@@ -5,7 +5,7 @@
 .vscode/**
 dist/**
 *.code-workspace
-Documentation~/**/*.meta
+docs
 scripts/**
 Algorand.Unity*/**
 .czrc

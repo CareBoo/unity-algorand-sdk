@@ -83,7 +83,7 @@
         "dest": "api"
       },
       {
-        "src": "../Documentation~",
+        "src": "../docs",
         "files": [
           "**/*.md"
         ],
@@ -109,11 +109,11 @@
         ]
       },
       {
-        "src": "../Documentation~",
+        "src": "../docs",
         "files": [
           "images/**/*"
         ],
-        "dest": "Documentation~"
+        "dest": "docs"
       }
     ],
     "sitemap": {

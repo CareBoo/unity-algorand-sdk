@@ -6,6 +6,7 @@ public static class UnityPackage
 
     private static readonly string[] exportPaths =
     {
+        "Assets/Algorand.Unity",
         "Packages/com.careboo.unity-algorand-sdk",
         "Packages/com.cysharp.unitask"
     };
