@@ -1,4 +1,6 @@
+using Algorand.Unity.Readme.Editor;
 using UnityEditor;
+using UnityEngine;
 
 public static class UnityPackage
 {
@@ -22,5 +24,18 @@ public static class UnityPackage
             fileName: $"{packageName}.unitypackage",
             exportOptions
         );
+    }
+
+    [MenuItem("Algorand.Unity/Create README asset")]
+    public static void CreateReadme()
+    {
+        var readme = ScriptableObject.CreateInstance<ReadmeFile>();
+        
+        AssetDatabase.CreateAsset(readme, "Assets/Algorand.Unity/README.asset");
+        AssetDatabase.SaveAssets();
+        
+        EditorUtility.FocusProjectWindow();
+
+        Selection.activeObject = readme;
     }
 }
