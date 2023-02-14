@@ -28,222 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "changelog/CHANGELOG.html",
-          "hash": "ieGvBoFVlVyWv2HpO524bQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "../Documentation~/algorand_standard_assets.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/algorand_standard_assets.html",
-          "hash": "ou+0Mrd9km2v1oA1g4/EGg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "MissingNewLineBelowSectionHeader"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "../Documentation~/algorand_standard_assets/creating_asas_in_editor.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/algorand_standard_assets/creating_asas_in_editor.html",
-          "hash": "gAhAKz/2he16pHJJ0Zd+FQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "UidNotFound"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "../Documentation~/getting_started.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/getting_started.html",
-          "hash": "85RZrQaUuV4bD+LNU5JEPw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "../Documentation~/getting_started/developing_with_sandbox.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/getting_started/developing_with_sandbox.html",
-          "hash": "PvdUfGV5K65aZlJ22JZP3A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "../Documentation~/getting_started/your_first_transaction.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/getting_started/your_first_transaction.html",
-          "hash": "Gir9C5jVpnit5ppmOKZ+Wg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../Documentation~/images/algorand_logo_mark.svg",
-      "output": {
-        "resource": {
-          "relative_path": "Documentation~/images/algorand_logo_mark.svg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../Documentation~/images/algorand_logo_mark.svg.meta",
-      "output": {
-        "resource": {
-          "relative_path": "Documentation~/images/algorand_logo_mark.svg.meta"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../Documentation~/images/game_token_params.png",
-      "output": {
-        "resource": {
-          "relative_path": "Documentation~/images/game_token_params.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../Documentation~/images/game_token_params.png.meta",
-      "output": {
-        "resource": {
-          "relative_path": "Documentation~/images/game_token_params.png.meta"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../Documentation~/images/select_create_account_object.png",
-      "output": {
-        "resource": {
-          "relative_path": "Documentation~/images/select_create_account_object.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../Documentation~/images/select_create_account_object.png.meta",
-      "output": {
-        "resource": {
-          "relative_path": "Documentation~/images/select_create_account_object.png.meta"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../Documentation~/images/select_generate_new_account.png",
-      "output": {
-        "resource": {
-          "relative_path": "Documentation~/images/select_generate_new_account.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../Documentation~/images/select_generate_new_account.png.meta",
-      "output": {
-        "resource": {
-          "relative_path": "Documentation~/images/select_generate_new_account.png.meta"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../Documentation~/images/testnet_algoexplorer_algod.png",
-      "output": {
-        "resource": {
-          "relative_path": "Documentation~/images/testnet_algoexplorer_algod.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "../Documentation~/images/testnet_algoexplorer_algod.png.meta",
-      "output": {
-        "resource": {
-          "relative_path": "Documentation~/images/testnet_algoexplorer_algod.png.meta"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "../Documentation~/integration_with_the_dotnet_sdk.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/integration_with_the_dotnet_sdk.html",
-          "hash": "L8pHxIVaDpOTuZXvy/oZyw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "../Documentation~/troubleshooting.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/troubleshooting.html",
-          "hash": "J5h1uFym/NtGmkHWZMJBNQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "../Documentation~/walletconnect.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/walletconnect.html",
-          "hash": "JTI8B71KslxkYp0NcQWnrw=="
+          "hash": "UyJVzNP4IyOb38x7INzkmA=="
         }
       },
       "is_incremental": false,
@@ -271,6 +56,157 @@
         ".html": {
           "relative_path": "license/Third Party Notices.html",
           "hash": "X3xZDxUH9HQvsOUX3A615w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../docs/algorand_standard_assets.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/algorand_standard_assets.html",
+          "hash": "IkAz+VJlaIIzMmGy8744EQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../docs/algorand_standard_assets/creating_asas_in_editor.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/algorand_standard_assets/creating_asas_in_editor.html",
+          "hash": "3UF4zAkD4WB0YDEShIiYGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../docs/getting_started.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/getting_started.html",
+          "hash": "xvjOxxtKFbgwOVcvQtNewQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../docs/getting_started/developing_with_sandbox.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/getting_started/developing_with_sandbox.html",
+          "hash": "KlIKpAgEh5oeM6n4KohZcQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../docs/getting_started/your_first_transaction.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/getting_started/your_first_transaction.html",
+          "hash": "kjxacy6FmlMNhSJZolg9DQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../docs/images/algorand_logo_mark.svg",
+      "output": {
+        "resource": {
+          "relative_path": "docs/images/algorand_logo_mark.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../docs/images/game_token_params.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/images/game_token_params.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../docs/images/select_create_account_object.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/images/select_create_account_object.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../docs/images/select_generate_new_account.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/images/select_generate_new_account.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../docs/images/testnet_algoexplorer_algod.png",
+      "output": {
+        "resource": {
+          "relative_path": "docs/images/testnet_algoexplorer_algod.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../docs/integration_with_the_dotnet_sdk.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/integration_with_the_dotnet_sdk.html",
+          "hash": "PuGUAHC565DK3wAz5LwCBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../docs/troubleshooting.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/troubleshooting.html",
+          "hash": "AmH5V4Z8aRkzQXChhCOU/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../docs/walletconnect.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/walletconnect.html",
+          "hash": "E605nEPrIuOdu8UDFZymtw=="
         }
       },
       "is_incremental": false,
@@ -2658,7 +2594,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Crypto.Ed25519.KeyPair.html",
-          "hash": "c8LaftEbFENwfEud1Ge1bA=="
+          "hash": "chBNXIo62ByA8nbP2P1lPQ=="
         }
       },
       "is_incremental": false,
@@ -2682,7 +2618,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.html",
-          "hash": "JISZyUhNmz0ci1Bgf1iKAw=="
+          "hash": "9QVlz8nBcU85ig6xK7pXbw=="
         }
       },
       "is_incremental": false,
@@ -2742,7 +2678,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Crypto.SecureMemoryHandle.html",
-          "hash": "AzhxY7GIX3VRviSREyFgBQ=="
+          "hash": "Iuzq+T4gPq6Cn21jf55IyA=="
         }
       },
       "is_incremental": false,
@@ -2754,7 +2690,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Crypto.Sha512.html",
-          "hash": "aHAgkRIIKTF8SmsA9OC/2Q=="
+          "hash": "AmKzOE4Iu+nx9xSUhbrWeg=="
         }
       },
       "is_incremental": false,
@@ -8646,7 +8582,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "ockRdLYBLLwpncxcZtj1yQ=="
+          "hash": "wGPqz5XlvUmsELIEuwFvuQ=="
         }
       },
       "is_incremental": false,
