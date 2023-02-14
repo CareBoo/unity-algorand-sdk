@@ -33,7 +33,7 @@ jobs:
       version: ${{ steps.semantic.outputs.new_release_version || inputs.version }}
       major_minor: ${{ steps.semantic.outputs.new_release_major_version || inputs.major }}.${{ steps.semantic.outputs.new_release_minor_version || inputs.minor }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           lfs: true
 
@@ -55,7 +55,7 @@ jobs:
     needs: release
     if: needs.release.outputs.published == 'true' || inputs.version
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           ref: ${{ github.ref }}
           lfs: true
@@ -103,7 +103,7 @@ jobs:
     if: needs.release.outputs.published == 'true' || inputs.version
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: ${{ github.ref }}
           lfs: true
