@@ -29,7 +29,7 @@ namespace Algorand.Unity.Crypto
         {
             unsafe
             {
-                return Hash256Truncated(bytes.GetUnsafePtr(), bytes.Length);
+                return Hash256Truncated((byte*)bytes.GetUnsafePtr(), bytes.Length);
             }
         }
 
@@ -37,20 +37,20 @@ namespace Algorand.Unity.Crypto
         {
             unsafe
             {
-                return Hash256Truncated(bytes.GetUnsafeReadOnlyPtr(), bytes.Length);
+                return Hash256Truncated((byte*)bytes.GetUnsafeReadOnlyPtr(), bytes.Length);
             }
         }
 
-        public unsafe static Sha512_256_Hash Hash256Truncated(void* ptr, int length)
+        public unsafe static Sha512_256_Hash Hash256Truncated(byte* ptr, int length)
         {
             var result = new Sha512_256_Hash();
 #if (UNITY_WEBGL && !UNITY_EDITOR)
-            crypto_hash_sha512_256(&result, ptr, (UIntPtr)length);
+            crypto_hash_sha512_256(&result, ptr, length);
 #else
             var hashState = default(crypto_hash_sha512_state);
             crypto_hash_sha512_init(&hashState);
             hashState.vector = FIPS_Sha512_256_IV;
-            crypto_hash_sha512_update(&hashState, ptr, (UIntPtr)length);
+            crypto_hash_sha512_update(&hashState, ptr, (ulong)length);
             var hash512 = new Sha512_Hash();
             crypto_hash_sha512_final(&hashState, &hash512);
             ByteArray.CopyTo(hash512, ref result);

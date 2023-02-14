@@ -13,26 +13,33 @@ namespace Algorand.Unity.Crypto
 
 #if (UNITY_WEBGL && !UNITY_EDITOR)
         [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
-        internal static unsafe extern void crypto_sign_ed25519_detached(
+        internal static extern void crypto_sign_ed25519_detached(
             void* signature,
             void* message,
-            UIntPtr messageLength,
+            int messageLength,
             IntPtr sk);
-#else
-        [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
-        internal static unsafe extern int crypto_sign_ed25519_detached(
-            void* signature,
-            out UIntPtr signatureLength_p,
-            void* message,
-            UIntPtr messageLength,
-            IntPtr sk);
-#endif
 
         [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
         internal static extern int crypto_sign_ed25519_verify_detached(
             void* signature,
             void* message,
-            UIntPtr messageLength,
+            int messageLength,
             void* pk);
+#else
+        [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
+        internal static extern int crypto_sign_ed25519_detached(
+            void* signature,
+            out ulong signatureLength_p,
+            void* message,
+            ulong messageLength,
+            IntPtr sk);
+
+        [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
+        internal static extern int crypto_sign_ed25519_verify_detached(
+            void* signature,
+            void* message,
+            ulong messageLength,
+            void* pk);
+#endif
     }
 }

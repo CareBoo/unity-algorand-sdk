@@ -24,17 +24,10 @@ namespace Algorand.Unity.Crypto
 
         public static SecureMemoryHandle Create(UIntPtr sizeBytes)
         {
-            var ptr = sodium.sodium_malloc(sizeBytes);
-            return new SecureMemoryHandle(ptr);
+            return sodium_malloc(sizeBytes);
         }
 
-        public bool IsCreated
-        {
-            get
-            {
-                return Ptr != IntPtr.Zero;
-            }
-        }
+        public bool IsCreated => Ptr != IntPtr.Zero;
 
         public JobHandle Dispose(JobHandle inputDeps)
         {
@@ -58,6 +51,16 @@ namespace Algorand.Unity.Crypto
             {
                 keyHandle.Dispose();
             }
+        }
+
+        public static implicit operator IntPtr(SecureMemoryHandle handle)
+        {
+            return handle.Ptr;
+        }
+
+        public static implicit operator SecureMemoryHandle(IntPtr ptr)
+        {
+            return new SecureMemoryHandle(ptr);
         }
     }
 }
