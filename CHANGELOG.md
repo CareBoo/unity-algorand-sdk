@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [4.0.0-pre.17](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.16...v4.0.0-pre.17) (2023-02-14)
+
+
+### Bug Fixes
+
+* **crypto:** use proper integer types in sodium interop ([4b4f6e6](https://github.com/CareBoo/unity-algorand-sdk/commit/4b4f6e63bc8e540f1ad9fb4f2538ad3c61420398)), closes [#187](https://github.com/CareBoo/unity-algorand-sdk/issues/187)
+
 # [4.0.0-pre.16](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.15...v4.0.0-pre.16) (2023-01-21)
 
 
