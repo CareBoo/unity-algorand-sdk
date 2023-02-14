@@ -10,10 +10,10 @@ namespace Algorand.Unity.Crypto
 {
     public static class Ed25519
     {
-        public readonly struct KeyPair : INativeDisposable
+        public struct KeyPair : INativeDisposable
         {
-            public readonly SecretKeyHandle SecretKey;
-            public readonly PublicKey PublicKey;
+            public SecretKeyHandle SecretKey;
+            public PublicKey PublicKey;
 
             public KeyPair(SecretKeyHandle secretKey, PublicKey publicKey)
             {
@@ -41,11 +41,13 @@ namespace Algorand.Unity.Crypto
         public struct SecretKeyHandle
             : INativeDisposable
         {
-            public const int KeySize = (32 + 32);
+            public const int KeySize = 32 + 32;
 
             private SecureMemoryHandle handle;
 
-            public IntPtr Ptr => handle.Ptr;
+            public readonly IntPtr Ptr => handle.Ptr;
+
+            public bool IsCreated => handle.IsCreated;
 
             public static SecretKeyHandle Create()
             {
@@ -69,25 +71,25 @@ namespace Algorand.Unity.Crypto
 
             public static implicit operator SecretKeyHandle(SecureMemoryHandle secureMemoryHandle)
             {
-                return new SecretKeyHandle() { handle = secureMemoryHandle };
+                return new SecretKeyHandle { handle = secureMemoryHandle };
             }
 
-            public unsafe Signature Sign<TMessage>(TMessage message)
+            public readonly unsafe Signature Sign<TMessage>(TMessage message)
                 where TMessage : IByteArray
             {
                 var signature = new Signature();
 #if (UNITY_WEBGL && !UNITY_EDITOR)
                 crypto_sign_ed25519_detached(
-                    &signature, 
-                    message.GetUnsafePtr(), 
-                    (UIntPtr)message.Length,
+                    &signature,
+                    message.GetUnsafePtr(),
+                    message.Length,
                     Ptr);
 #else
-                var errorCode = crypto_sign_ed25519_detached(
+                crypto_sign_ed25519_detached(
                     &signature,
                     out _,
                     message.GetUnsafePtr(),
-                    (UIntPtr)message.Length,
+                    (ulong)message.Length,
                     Ptr);
 #endif
                 return signature;
@@ -98,7 +100,7 @@ namespace Algorand.Unity.Crypto
         [Serializable]
         public struct Seed
             : IByteArray
-            , IEquatable<Seed>
+                , IEquatable<Seed>
         {
             [FieldOffset(0), SerializeField] internal FixedBytes16 offset0000;
             [FieldOffset(16), SerializeField] internal FixedBytes16 offset0016;
@@ -162,7 +164,7 @@ namespace Algorand.Unity.Crypto
         [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
         public struct PublicKey
             : IByteArray
-            , IEquatable<PublicKey>
+                , IEquatable<PublicKey>
         {
             [FieldOffset(0), SerializeField] internal FixedBytes16 offset0000;
             [FieldOffset(16), SerializeField] internal FixedBytes16 offset0016;
@@ -215,7 +217,7 @@ namespace Algorand.Unity.Crypto
         [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
         public struct Signature
             : IByteArray
-            , IEquatable<Signature>
+                , IEquatable<Signature>
         {
             public const int SizeBytes = 64;
             [FieldOffset(0)] internal FixedBytes64 buffer;
@@ -241,11 +243,19 @@ namespace Algorand.Unity.Crypto
                 {
                     fixed (Signature* s = &this)
                     {
+#if (UNITY_WEBGL && !UNITY_EDITOR)
                         var error = crypto_sign_ed25519_verify_detached(
                             s,
                             message.GetUnsafePtr(),
-                            (UIntPtr)message.Length,
+                            message.Length,
                             &pk);
+#else
+                        var error = crypto_sign_ed25519_verify_detached(
+                            s,
+                            message.GetUnsafePtr(),
+                            (ulong)message.Length,
+                            &pk);
+#endif
                         return error == 0;
                     }
                 }

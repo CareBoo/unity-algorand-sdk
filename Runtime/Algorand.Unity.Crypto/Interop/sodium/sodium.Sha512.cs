@@ -1,4 +1,3 @@
-using System;
 using System.Runtime.InteropServices;
 using Algorand.Unity.LowLevel;
 
@@ -11,7 +10,7 @@ namespace Algorand.Unity.Crypto
         internal static extern void crypto_hash_sha512_256(
             void* output, 
             void* @in, 
-            UIntPtr inlen);
+            int inlen);
 #else
         [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
         internal static extern int crypto_hash_sha512_init(
@@ -21,7 +20,7 @@ namespace Algorand.Unity.Crypto
         internal static extern int crypto_hash_sha512_update(
             void* state,
             void* @in,
-            UIntPtr inlen);
+            ulong inlen);
 
         [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
         internal static extern int crypto_hash_sha512_final(
