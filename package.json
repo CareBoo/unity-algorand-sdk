@@ -60,6 +60,6 @@
     }
   ],
   "scripts": {
-    "version": "./scripts/updateVersionUrl.sh && git add package.json .docfx/docfx.json README.md"
+    "version": "./scripts/updateVersionUrl.sh && git add package.json .docfx/docfx.json README.md Algorand.Unity.AssetStore/Packages/com.careboo.unity-algorand-sdk/package.json"
   }
 }
