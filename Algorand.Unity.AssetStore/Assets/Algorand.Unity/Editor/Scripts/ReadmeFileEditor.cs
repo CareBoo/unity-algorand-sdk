@@ -36,7 +36,7 @@ namespace Algorand.Unity.Readme.Editor
             using (new EditorGUILayout.HorizontalScope())
             {
                 GUILayout.FlexibleSpace();
-                if (EditorGUILayout.LinkButton("View Documentation"))
+                if (GUILayout.Button("View Documentation"))
                 {
                     string url;
                     if (File.Exists(path))
