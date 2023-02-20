@@ -1,36 +1,35 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using Algorand.Unity;
-using Algorand.Unity.Crypto;
-using Algorand.Unity.LowLevel;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.Serialization;
 
 namespace Algorand.Unity.Samples.NftViewer
 {
     public class NftViewer : MonoBehaviour
     {
-        [SerializeField] private string algoClientNetworkAddress = "https://node.testnet.algoexplorerapi.io";
-        [SerializeField] private string indexerNetworkAddress = "https://algoindexer.testnet.algoexplorerapi.io";
+        public string algoClientNetworkAddress = "https://node.testnet.algoexplorerapi.io";
+
+        public string indexerNetworkAddress = "https://algoindexer.testnet.algoexplorerapi.io";
+
+        public Transform contentTransform;
+
+        [FormerlySerializedAs("NftDisplayBoxPrefab")]
+        public GameObject nftDisplayBoxPrefab;
 
         private AlgodClient algod;
 
         private IndexerClient indexer;
+
         private string algodHealth;
+
         private string indexerHealth;
+
         private string textureStatus;
 
-        private Address address;
-        public string Publickey { get { return publicKey; } set { publicKey = value; } }
-        private string publicKey = "HAE4ZMZI2TKTFNES33PNWC5RIK7MUOISQDRQ7LMWLKNNGMA7V5NZOGHJVY";
+        public string PublicKey { get; set; } = "HAE4ZMZI2TKTFNES33PNWC5RIK7MUOISQDRQ7LMWLKNNGMA7V5NZOGHJVY";
 
         public List<Texture> NftTextures = new List<Texture>();
-
-        [SerializeField] private Transform contentTransform;
-        [SerializeField] private GameObject NftDisplayBoxPrefab;
 
         private void Start()
         {
@@ -39,8 +38,6 @@ namespace Algorand.Unity.Samples.NftViewer
 
             CheckAlgodStatus().Forget();
             CheckIndexerStatus().Forget();
-
-            address = publicKey;
         }
 
         public async UniTaskVoid CheckAlgodStatus()
@@ -53,8 +50,7 @@ namespace Algorand.Unity.Samples.NftViewer
         public async UniTaskVoid CheckIndexerStatus()
         {
             var response = await indexer.MakeHealthCheck();
-            if (response.Error) indexerHealth = response.Error;
-            else indexerHealth = "Connected";
+            indexerHealth = response.Error ? response.Error : "Connected";
         }
 
         public void LoadNFTs()
@@ -72,9 +68,9 @@ namespace Algorand.Unity.Samples.NftViewer
                 Destroy(t.gameObject);
             }
 
-            var (err, resp) = await indexer.SearchForAssets(creator: address);
+            var (err, resp) = await indexer.SearchForAssets(creator: PublicKey);
             Debug.Log("getting NFTs");
-            foreach (Algorand.Unity.Indexer.Asset asset in resp.Assets)
+            foreach (Indexer.Asset asset in resp.Assets)
             {
                 if (!asset.Params.Url.Contains("ipfs"))
                     continue;
@@ -99,12 +95,15 @@ namespace Algorand.Unity.Samples.NftViewer
                 }
                 else
                 {
-                    Texture NftTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
+                    Texture nftTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
                     Debug.Log("The Texture is loaded");
-                    NftTextures.Add(NftTexture);
+                    NftTextures.Add(nftTexture);
 
-                    GameObject displayBox = Instantiate(NftDisplayBoxPrefab, contentTransform);
-                    displayBox.GetComponent<NftDisplayBox>().SetFields(NftTexture, "Name: " + asset.Params.Name.ToString(), "ID: " + asset.Index.ToString());
+                    GameObject displayBox = Instantiate(nftDisplayBoxPrefab, contentTransform);
+                    displayBox.GetComponent<NftDisplayBox>().SetFields(
+                        nftTexture,
+                        $"Name: {asset.Params.Name}",
+                        $"ID: {asset.Index}");
                 }
 
                 Debug.Log("Done loading");
@@ -113,13 +112,7 @@ namespace Algorand.Unity.Samples.NftViewer
 
         private string FormatNftURL(string url)
         {
-            //remove the ipfs extension
-            url = url.Replace("ipfs://", "");
-
-            // add https call so that it can be loaded with a web request
-            url = "https://ipfs.io/ipfs/" + url;
-
-            return url;
+            return url.Replace("ipfs://", "https://ipfs.io/ipfs/");
         }
     }
 }
