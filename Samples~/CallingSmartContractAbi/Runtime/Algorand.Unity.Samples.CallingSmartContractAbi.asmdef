@@ -1,6 +1,6 @@
 {
     "name": "Algorand.Unity.Samples.CallingSmartContractAbi",
-    "rootNamespace": "",
+    "rootNamespace": "Algorand.Unity.Samples.CallingSmartContractAbi",
     "references": [
         "GUID:45ab5c0c2cb4a0e4ba897b731349c490",
         "GUID:f51ebe6a0ceec4240a699833d6309b23",
@@ -13,20 +13,7 @@
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": false,
-    "defineConstraints": [
-        "UNITY_RUNTIME_UI_ELEMENTS"
-    ],
-    "versionDefines": [
-        {
-            "name": "Unity",
-            "expression": "2021.2",
-            "define": "UNITY_RUNTIME_UI_ELEMENTS"
-        },
-        {
-            "name": "com.unity.ui",
-            "expression": "1.0.0-preview.18",
-            "define": "UNITY_RUNTIME_UI_ELEMENTS"
-        }
-    ],
+    "defineConstraints": [],
+    "versionDefines": [],
     "noEngineReferences": false
 }

@@ -1,20 +1,23 @@
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(AssetObject))]
-public class AssetObjectEditor : UnityEditor.Editor
+namespace Algorand.Unity.Samples.CreatingAsas.Editor
 {
-    public override void OnInspectorGUI()
+    [CustomEditor(typeof(AssetObject))]
+    public class AssetObjectEditor : UnityEditor.Editor
     {
-        base.OnInspectorGUI();
-
-        var assetObject = (AssetObject)serializedObject.targetObject;
-        if (assetObject.Index == 0)
+        public override void OnInspectorGUI()
         {
-            EditorGUILayout.Space();
-            if (GUILayout.Button("Create Asset"))
+            base.OnInspectorGUI();
+
+            var assetObject = (AssetObject)serializedObject.targetObject;
+            if (assetObject.Index == 0)
             {
-                AssetCreateWindow.Show(assetObject);
+                EditorGUILayout.Space();
+                if (GUILayout.Button("Create Asset"))
+                {
+                    AssetCreateWindow.Show(assetObject);
+                }
             }
         }
     }

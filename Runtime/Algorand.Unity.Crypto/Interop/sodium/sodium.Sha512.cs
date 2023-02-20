@@ -8,8 +8,8 @@ namespace Algorand.Unity.Crypto
 #if (UNITY_WEBGL && !UNITY_EDITOR)
         [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
         internal static extern void crypto_hash_sha512_256(
-            void* output, 
-            void* @in, 
+            void* output,
+            void* @in,
             int inlen);
 #else
         [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]

@@ -1,6 +1,6 @@
 {
     "name": "Algorand.Unity.Samples.CreatingAsas.Editor",
-    "rootNamespace": "",
+    "rootNamespace": "Algorand.Unity.Samples.CreatingAsas.Editor",
     "references": [
         "GUID:4d0305eeacd8a4c4bbdd61b73860c503",
         "GUID:45ab5c0c2cb4a0e4ba897b731349c490",

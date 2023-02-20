@@ -1,17 +1,20 @@
 using Algorand.Unity.Experimental.Abi;
 using UnityEngine.UIElements;
 
-public partial class ArgField
+namespace Algorand.Unity.Samples.CallingSmartContractAbi
 {
-    public sealed class Txn : ArgField
+    public partial class ArgField
     {
-        public override IAbiValue Value => null;
-
-        public Txn(string label, TransactionReferenceType txnRefType)
+        public sealed class Txn : ArgField
         {
-            style.flexDirection = FlexDirection.Row;
-            Add(new Label(label));
-            Add(new Label("[Previous Payment Transaction]"));
+            public override IAbiValue Value => null;
+
+            public Txn(string label, TransactionReferenceType txnRefType)
+            {
+                style.flexDirection = FlexDirection.Row;
+                Add(new Label(label));
+                Add(new Label("[Previous Payment Transaction]"));
+            }
         }
     }
 }

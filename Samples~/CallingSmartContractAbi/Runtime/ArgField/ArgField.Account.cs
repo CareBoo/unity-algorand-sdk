@@ -1,18 +1,20 @@
 using Algorand.Unity.Experimental.Abi;
 
-
-public partial class ArgField
+namespace Algorand.Unity.Samples.CallingSmartContractAbi
 {
-    public sealed class Account : ArgField
+    public partial class ArgField
     {
-        private readonly AddressField address;
-
-        public override IAbiValue Value => new AbiAddress(address.address);
-
-        public Account(string label)
+        public sealed class Account : ArgField
         {
-            address = new AddressField(label);
-            contentContainer.Add(address);
+            private readonly AddressField address;
+
+            public override IAbiValue Value => new AbiAddress(address.address);
+
+            public Account(string label)
+            {
+                address = new AddressField(label);
+                contentContainer.Add(address);
+            }
         }
     }
 }

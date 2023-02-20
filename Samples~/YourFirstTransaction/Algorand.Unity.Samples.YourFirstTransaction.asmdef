@@ -1,6 +1,6 @@
 {
     "name": "Algorand.Unity.Samples.YourFirstTransaction",
-    "rootNamespace": "",
+    "rootNamespace": "Algorand.Unity.Samples.YourFirstTransaction",
     "references": [
         "GUID:45ab5c0c2cb4a0e4ba897b731349c490",
         "GUID:f51ebe6a0ceec4240a699833d6309b23",

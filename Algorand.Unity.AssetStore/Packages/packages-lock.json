@@ -6,7 +6,9 @@
       "source": "embedded",
       "dependencies": {
         "com.unity.collections": "1.4.0",
-        "com.cysharp.unitask": "2.3.1"
+        "com.cysharp.unitask": "2.3.1",
+        "com.unity.ui": "1.0.0",
+        "com.unity.ugui": "1.0.0"
       }
     },
     "com.cysharp.unitask": {
@@ -89,15 +91,6 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.textmeshpro": {
-      "version": "3.0.6",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.ugui": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
     "com.unity.ugui": {
       "version": "1.0.0",
       "depth": 1,
@@ -106,6 +99,12 @@
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
       }
+    },
+    "com.unity.ui": {
+      "version": "2.0.0",
+      "depth": 1,
+      "source": "builtin",
+      "dependencies": {}
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
