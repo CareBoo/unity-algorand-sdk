@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [4.0.0-pre.19](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.18...v4.0.0-pre.19) (2023-02-20)
+
+
+### Bug Fixes
+
+* **asset-store:** change `LinkButton` -> `Button` ([9d7fac2](https://github.com/CareBoo/unity-algorand-sdk/commit/9d7fac22987b0a6e74f73817d7f9fa0ace404e42))
+
 # [4.0.0-pre.18](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.17...v4.0.0-pre.18) (2023-02-14)
 
 
