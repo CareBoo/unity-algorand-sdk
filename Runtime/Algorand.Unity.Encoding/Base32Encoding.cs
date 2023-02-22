@@ -220,25 +220,23 @@ namespace Algorand.Unity
 
         private static ConversionError CharToValue(char c, out int value)
         {
+            const int upperStart = 'A';
+            const int upperEnd = 'Z';
+            const int lowerStart = 'a';
+            const int lowerEnd = 'z';
+            const int letterCount = upperEnd - upperStart + 1;
+            const int digitStart = '2';
+            const int digitEnd = '7';
+            const int digitValueOffset = digitStart - letterCount;
             value = c;
-
-            switch (value)
-            {
-                //65-90 == uppercase letters
-                case < 91 and > 64:
-                    value -= 65;
-                    break;
-                //50-55 == numbers 2-7
-                case < 56 and > 49:
-                    value -= 24;
-                    break;
-                //97-122 == lowercase letters
-                case < 123 and > 96:
-                    value -= 97;
-                    break;
-                default:
-                    return ConversionError.Encoding;
-            }
+            if (value >= upperStart && value <= upperEnd)
+                value -= upperStart;
+            else if (value >= digitStart && value <= digitEnd)
+                value -= digitValueOffset;
+            else if (value >= lowerStart && value <= lowerEnd)
+                value -= lowerStart;
+            else
+                return ConversionError.Encoding;
 
             return ConversionError.None;
         }
@@ -250,23 +248,23 @@ namespace Algorand.Unity
                 throw new ArgumentException("not a valid base32 character", nameof(c));
             }
 
-            return value; 
+            return value;
         }
 
         private static ConversionError ValueToChar(byte b, out char c)
         {
+            const byte letterCount = 'z' - 'a' + 1;
+            const byte digitCount = '7' - '2' + 1;
+            const byte digitEnd = letterCount + digitCount;
+            const byte letterOffset = (int)'A';
+            const byte digitOffset = '2' - letterCount;
             c = default;
-            switch (b)
-            {
-                case < 26:
-                    c = (char)(b + 65);
-                    break;
-                case < 32:
-                    c = (char)(b + 24);
-                    break;
-                default:
-                    return ConversionError.Encoding;
-            }
+            if (b < letterCount)
+                c = (char)(b + letterOffset);
+            else if (b < digitEnd)
+                c = (char)(b + digitOffset);
+            else
+                return ConversionError.Encoding;
 
             return ConversionError.None;
         }
