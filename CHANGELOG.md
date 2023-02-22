@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [4.0.0-pre.23](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.22...v4.0.0-pre.23) (2023-02-22)
+
+
+### Bug Fixes
+
+* **2020.3:** change unsupported switch syntax to if statements ([7e57e7a](https://github.com/CareBoo/unity-algorand-sdk/commit/7e57e7a1547610809a1ad1b23206188070769bb5))
+
 # [4.0.0-pre.22](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.21...v4.0.0-pre.22) (2023-02-22)
 
 
