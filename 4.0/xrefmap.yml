@@ -579,6 +579,12 @@ references:
   commentId: F:Algorand.Unity.Address.SizeBytes
   fullName: Algorand.Unity.Address.SizeBytes
   nameWithType: Address.SizeBytes
+- uid: Algorand.Unity.Address.StringLength
+  name: StringLength
+  href: api/Algorand.Unity.Address.html#Algorand_Unity_Address_StringLength
+  commentId: F:Algorand.Unity.Address.StringLength
+  fullName: Algorand.Unity.Address.StringLength
+  nameWithType: Address.StringLength
 - uid: Algorand.Unity.Address.ToFixedString
   name: ToFixedString()
   href: api/Algorand.Unity.Address.html#Algorand_Unity_Address_ToFixedString
@@ -618,6 +624,61 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Address.ToString
   nameWithType: Address.ToString
+- uid: Algorand.Unity.Address.TryParse(System.String,Algorand.Unity.Address@)
+  name: TryParse(String, out Address)
+  href: api/Algorand.Unity.Address.html#Algorand_Unity_Address_TryParse_System_String_Algorand_Unity_Address__
+  commentId: M:Algorand.Unity.Address.TryParse(System.String,Algorand.Unity.Address@)
+  name.vb: TryParse(String, ByRef Address)
+  fullName: Algorand.Unity.Address.TryParse(System.String, out Algorand.Unity.Address)
+  fullName.vb: Algorand.Unity.Address.TryParse(System.String, ByRef Algorand.Unity.Address)
+  nameWithType: Address.TryParse(String, out Address)
+  nameWithType.vb: Address.TryParse(String, ByRef Address)
+- uid: Algorand.Unity.Address.TryParse*
+  name: TryParse
+  href: api/Algorand.Unity.Address.html#Algorand_Unity_Address_TryParse_
+  commentId: Overload:Algorand.Unity.Address.TryParse
+  isSpec: "True"
+  fullName: Algorand.Unity.Address.TryParse
+  nameWithType: Address.TryParse
+- uid: Algorand.Unity.Address.TryParse``1(``0,Algorand.Unity.Address@)
+  name: TryParse<TString>(TString, out Address)
+  href: api/Algorand.Unity.Address.html#Algorand_Unity_Address_TryParse__1___0_Algorand_Unity_Address__
+  commentId: M:Algorand.Unity.Address.TryParse``1(``0,Algorand.Unity.Address@)
+  name.vb: TryParse(Of TString)(TString, ByRef Address)
+  fullName: Algorand.Unity.Address.TryParse<TString>(TString, out Algorand.Unity.Address)
+  fullName.vb: Algorand.Unity.Address.TryParse(Of TString)(TString, ByRef Algorand.Unity.Address)
+  nameWithType: Address.TryParse<TString>(TString, out Address)
+  nameWithType.vb: Address.TryParse(Of TString)(TString, ByRef Address)
+- uid: Algorand.Unity.AddressFormatError
+  name: AddressFormatError
+  href: api/Algorand.Unity.AddressFormatError.html
+  commentId: T:Algorand.Unity.AddressFormatError
+  fullName: Algorand.Unity.AddressFormatError
+  nameWithType: AddressFormatError
+- uid: Algorand.Unity.AddressFormatError.IncorrectLength
+  name: IncorrectLength
+  href: api/Algorand.Unity.AddressFormatError.html#Algorand_Unity_AddressFormatError_IncorrectLength
+  commentId: F:Algorand.Unity.AddressFormatError.IncorrectLength
+  fullName: Algorand.Unity.AddressFormatError.IncorrectLength
+  nameWithType: AddressFormatError.IncorrectLength
+- uid: Algorand.Unity.AddressFormatError.InvalidChecksum
+  name: InvalidChecksum
+  href: api/Algorand.Unity.AddressFormatError.html#Algorand_Unity_AddressFormatError_InvalidChecksum
+  commentId: F:Algorand.Unity.AddressFormatError.InvalidChecksum
+  fullName: Algorand.Unity.AddressFormatError.InvalidChecksum
+  nameWithType: AddressFormatError.InvalidChecksum
+- uid: Algorand.Unity.AddressFormatError.None
+  name: None
+  href: api/Algorand.Unity.AddressFormatError.html#Algorand_Unity_AddressFormatError_None
+  commentId: F:Algorand.Unity.AddressFormatError.None
+  fullName: Algorand.Unity.AddressFormatError.None
+  nameWithType: AddressFormatError.None
+- uid: Algorand.Unity.AddressFormatError.NotBase32
+  name: NotBase32
+  href: api/Algorand.Unity.AddressFormatError.html#Algorand_Unity_AddressFormatError_NotBase32
+  commentId: F:Algorand.Unity.AddressFormatError.NotBase32
+  fullName: Algorand.Unity.AddressFormatError.NotBase32
+  nameWithType: AddressFormatError.NotBase32
 - uid: Algorand.Unity.AddressRole
   name: AddressRole
   href: api/Algorand.Unity.AddressRole.html
@@ -13412,6 +13473,15 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Base64Encoding.CopyFromBase64
   nameWithType: Base64Encoding.CopyFromBase64
+- uid: Algorand.Unity.Base64Encoding.CopyFromBase64``1(``0@,NativeText,System.Int32)
+  name: CopyFromBase64<TByteArray>(ref TByteArray, NativeText, Int32)
+  href: api/Algorand.Unity.Base64Encoding.html#Algorand_Unity_Base64Encoding_CopyFromBase64__1___0__NativeText_System_Int32_
+  commentId: M:Algorand.Unity.Base64Encoding.CopyFromBase64``1(``0@,NativeText,System.Int32)
+  name.vb: CopyFromBase64(Of TByteArray)(ByRef TByteArray, NativeText, Int32)
+  fullName: Algorand.Unity.Base64Encoding.CopyFromBase64<TByteArray>(ref TByteArray, NativeText, System.Int32)
+  fullName.vb: Algorand.Unity.Base64Encoding.CopyFromBase64(Of TByteArray)(ByRef TByteArray, NativeText, System.Int32)
+  nameWithType: Base64Encoding.CopyFromBase64<TByteArray>(ref TByteArray, NativeText, Int32)
+  nameWithType.vb: Base64Encoding.CopyFromBase64(Of TByteArray)(ByRef TByteArray, NativeText, Int32)
 - uid: Algorand.Unity.Base64Encoding.CopyFromBase64``2(``0@,``1,System.Int32)
   name: CopyFromBase64<TByteArray, T>(ref TByteArray, T, Int32)
   href: api/Algorand.Unity.Base64Encoding.html#Algorand_Unity_Base64Encoding_CopyFromBase64__2___0____1_System_Int32_
@@ -13428,6 +13498,15 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Base64Encoding.CopyToBase64
   nameWithType: Base64Encoding.CopyToBase64
+- uid: Algorand.Unity.Base64Encoding.CopyToBase64``1(``0,NativeText@)
+  name: CopyToBase64<TBytes>(TBytes, ref NativeText)
+  href: api/Algorand.Unity.Base64Encoding.html#Algorand_Unity_Base64Encoding_CopyToBase64__1___0_NativeText__
+  commentId: M:Algorand.Unity.Base64Encoding.CopyToBase64``1(``0,NativeText@)
+  name.vb: CopyToBase64(Of TBytes)(TBytes, ByRef NativeText)
+  fullName: Algorand.Unity.Base64Encoding.CopyToBase64<TBytes>(TBytes, ref NativeText)
+  fullName.vb: Algorand.Unity.Base64Encoding.CopyToBase64(Of TBytes)(TBytes, ByRef NativeText)
+  nameWithType: Base64Encoding.CopyToBase64<TBytes>(TBytes, ref NativeText)
+  nameWithType.vb: Base64Encoding.CopyToBase64(Of TBytes)(TBytes, ByRef NativeText)
 - uid: Algorand.Unity.Base64Encoding.CopyToBase64``2(``0,``1@)
   name: CopyToBase64<TBytes, T>(TBytes, ref T)
   href: api/Algorand.Unity.Base64Encoding.html#Algorand_Unity_Base64Encoding_CopyToBase64__2___0___1__
@@ -14824,6 +14903,56 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Collections.NativeTextExtensions.AsArray
   nameWithType: NativeTextExtensions.AsArray
+- uid: Algorand.Unity.Collections.NativeTextExtensions.Found(NativeText@,System.Int32@,System.Char,System.Char,System.Char,System.Char)
+  name: Found(ref NativeText, ref Int32, Char, Char, Char, Char)
+  href: api/Algorand.Unity.Collections.NativeTextExtensions.html#Algorand_Unity_Collections_NativeTextExtensions_Found_NativeText__System_Int32__System_Char_System_Char_System_Char_System_Char_
+  commentId: M:Algorand.Unity.Collections.NativeTextExtensions.Found(NativeText@,System.Int32@,System.Char,System.Char,System.Char,System.Char)
+  name.vb: Found(ByRef NativeText, ByRef Int32, Char, Char, Char, Char)
+  fullName: Algorand.Unity.Collections.NativeTextExtensions.Found(ref NativeText, ref System.Int32, System.Char, System.Char, System.Char, System.Char)
+  fullName.vb: Algorand.Unity.Collections.NativeTextExtensions.Found(ByRef NativeText, ByRef System.Int32, System.Char, System.Char, System.Char, System.Char)
+  nameWithType: NativeTextExtensions.Found(ref NativeText, ref Int32, Char, Char, Char, Char)
+  nameWithType.vb: NativeTextExtensions.Found(ByRef NativeText, ByRef Int32, Char, Char, Char, Char)
+- uid: Algorand.Unity.Collections.NativeTextExtensions.Found(NativeText@,System.Int32@,System.Char,System.Char,System.Char,System.Char,System.Char)
+  name: Found(ref NativeText, ref Int32, Char, Char, Char, Char, Char)
+  href: api/Algorand.Unity.Collections.NativeTextExtensions.html#Algorand_Unity_Collections_NativeTextExtensions_Found_NativeText__System_Int32__System_Char_System_Char_System_Char_System_Char_System_Char_
+  commentId: M:Algorand.Unity.Collections.NativeTextExtensions.Found(NativeText@,System.Int32@,System.Char,System.Char,System.Char,System.Char,System.Char)
+  name.vb: Found(ByRef NativeText, ByRef Int32, Char, Char, Char, Char, Char)
+  fullName: Algorand.Unity.Collections.NativeTextExtensions.Found(ref NativeText, ref System.Int32, System.Char, System.Char, System.Char, System.Char, System.Char)
+  fullName.vb: Algorand.Unity.Collections.NativeTextExtensions.Found(ByRef NativeText, ByRef System.Int32, System.Char, System.Char, System.Char, System.Char, System.Char)
+  nameWithType: NativeTextExtensions.Found(ref NativeText, ref Int32, Char, Char, Char, Char, Char)
+  nameWithType.vb: NativeTextExtensions.Found(ByRef NativeText, ByRef Int32, Char, Char, Char, Char, Char)
+- uid: Algorand.Unity.Collections.NativeTextExtensions.Found*
+  name: Found
+  href: api/Algorand.Unity.Collections.NativeTextExtensions.html#Algorand_Unity_Collections_NativeTextExtensions_Found_
+  commentId: Overload:Algorand.Unity.Collections.NativeTextExtensions.Found
+  isSpec: "True"
+  fullName: Algorand.Unity.Collections.NativeTextExtensions.Found
+  nameWithType: NativeTextExtensions.Found
+- uid: Algorand.Unity.Collections.NativeTextExtensions.Parse(NativeText@,System.Int32@,System.Int64@)
+  name: Parse(ref NativeText, ref Int32, ref Int64)
+  href: api/Algorand.Unity.Collections.NativeTextExtensions.html#Algorand_Unity_Collections_NativeTextExtensions_Parse_NativeText__System_Int32__System_Int64__
+  commentId: M:Algorand.Unity.Collections.NativeTextExtensions.Parse(NativeText@,System.Int32@,System.Int64@)
+  name.vb: Parse(ByRef NativeText, ByRef Int32, ByRef Int64)
+  fullName: Algorand.Unity.Collections.NativeTextExtensions.Parse(ref NativeText, ref System.Int32, ref System.Int64)
+  fullName.vb: Algorand.Unity.Collections.NativeTextExtensions.Parse(ByRef NativeText, ByRef System.Int32, ByRef System.Int64)
+  nameWithType: NativeTextExtensions.Parse(ref NativeText, ref Int32, ref Int64)
+  nameWithType.vb: NativeTextExtensions.Parse(ByRef NativeText, ByRef Int32, ByRef Int64)
+- uid: Algorand.Unity.Collections.NativeTextExtensions.Parse(NativeText@,System.Int32@,System.UInt64@)
+  name: Parse(ref NativeText, ref Int32, ref UInt64)
+  href: api/Algorand.Unity.Collections.NativeTextExtensions.html#Algorand_Unity_Collections_NativeTextExtensions_Parse_NativeText__System_Int32__System_UInt64__
+  commentId: M:Algorand.Unity.Collections.NativeTextExtensions.Parse(NativeText@,System.Int32@,System.UInt64@)
+  name.vb: Parse(ByRef NativeText, ByRef Int32, ByRef UInt64)
+  fullName: Algorand.Unity.Collections.NativeTextExtensions.Parse(ref NativeText, ref System.Int32, ref System.UInt64)
+  fullName.vb: Algorand.Unity.Collections.NativeTextExtensions.Parse(ByRef NativeText, ByRef System.Int32, ByRef System.UInt64)
+  nameWithType: NativeTextExtensions.Parse(ref NativeText, ref Int32, ref UInt64)
+  nameWithType.vb: NativeTextExtensions.Parse(ByRef NativeText, ByRef Int32, ByRef UInt64)
+- uid: Algorand.Unity.Collections.NativeTextExtensions.Parse*
+  name: Parse
+  href: api/Algorand.Unity.Collections.NativeTextExtensions.html#Algorand_Unity_Collections_NativeTextExtensions_Parse_
+  commentId: Overload:Algorand.Unity.Collections.NativeTextExtensions.Parse
+  isSpec: "True"
+  fullName: Algorand.Unity.Collections.NativeTextExtensions.Parse
+  nameWithType: NativeTextExtensions.Parse
 - uid: Algorand.Unity.CompiledTeal
   name: CompiledTeal
   href: api/Algorand.Unity.CompiledTeal.html
@@ -36540,6 +36669,15 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Json.JsonReader.ReadNumber
   nameWithType: JsonReader.ReadNumber
+- uid: Algorand.Unity.Json.JsonReader.ReadRaw(NativeText@)
+  name: ReadRaw(ref NativeText)
+  href: api/Algorand.Unity.Json.JsonReader.html#Algorand_Unity_Json_JsonReader_ReadRaw_NativeText__
+  commentId: M:Algorand.Unity.Json.JsonReader.ReadRaw(NativeText@)
+  name.vb: ReadRaw(ByRef NativeText)
+  fullName: Algorand.Unity.Json.JsonReader.ReadRaw(ref NativeText)
+  fullName.vb: Algorand.Unity.Json.JsonReader.ReadRaw(ByRef NativeText)
+  nameWithType: JsonReader.ReadRaw(ref NativeText)
+  nameWithType.vb: JsonReader.ReadRaw(ByRef NativeText)
 - uid: Algorand.Unity.Json.JsonReader.ReadRaw*
   name: ReadRaw
   href: api/Algorand.Unity.Json.JsonReader.html#Algorand_Unity_Json_JsonReader_ReadRaw_
@@ -36556,6 +36694,15 @@ references:
   fullName.vb: Algorand.Unity.Json.JsonReader.ReadRaw(Of T)(ByRef T)
   nameWithType: JsonReader.ReadRaw<T>(ref T)
   nameWithType.vb: JsonReader.ReadRaw(Of T)(ByRef T)
+- uid: Algorand.Unity.Json.JsonReader.ReadString(NativeText@)
+  name: ReadString(ref NativeText)
+  href: api/Algorand.Unity.Json.JsonReader.html#Algorand_Unity_Json_JsonReader_ReadString_NativeText__
+  commentId: M:Algorand.Unity.Json.JsonReader.ReadString(NativeText@)
+  name.vb: ReadString(ByRef NativeText)
+  fullName: Algorand.Unity.Json.JsonReader.ReadString(ref NativeText)
+  fullName.vb: Algorand.Unity.Json.JsonReader.ReadString(ByRef NativeText)
+  nameWithType: JsonReader.ReadString(ref NativeText)
+  nameWithType.vb: JsonReader.ReadString(ByRef NativeText)
 - uid: Algorand.Unity.Json.JsonReader.ReadString(System.String@)
   name: ReadString(out String)
   href: api/Algorand.Unity.Json.JsonReader.html#Algorand_Unity_Json_JsonReader_ReadString_System_String__
@@ -37053,6 +37200,12 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Json.JsonWriter.WriteNumber
   nameWithType: JsonWriter.WriteNumber
+- uid: Algorand.Unity.Json.JsonWriter.WriteObjectKey(NativeText)
+  name: WriteObjectKey(NativeText)
+  href: api/Algorand.Unity.Json.JsonWriter.html#Algorand_Unity_Json_JsonWriter_WriteObjectKey_NativeText_
+  commentId: M:Algorand.Unity.Json.JsonWriter.WriteObjectKey(NativeText)
+  fullName: Algorand.Unity.Json.JsonWriter.WriteObjectKey(NativeText)
+  nameWithType: JsonWriter.WriteObjectKey(NativeText)
 - uid: Algorand.Unity.Json.JsonWriter.WriteObjectKey(System.String)
   name: WriteObjectKey(String)
   href: api/Algorand.Unity.Json.JsonWriter.html#Algorand_Unity_Json_JsonWriter_WriteObjectKey_System_String_
@@ -37097,6 +37250,12 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Json.JsonWriter.WriteRaw
   nameWithType: JsonWriter.WriteRaw
+- uid: Algorand.Unity.Json.JsonWriter.WriteString(NativeText)
+  name: WriteString(NativeText)
+  href: api/Algorand.Unity.Json.JsonWriter.html#Algorand_Unity_Json_JsonWriter_WriteString_NativeText_
+  commentId: M:Algorand.Unity.Json.JsonWriter.WriteString(NativeText)
+  fullName: Algorand.Unity.Json.JsonWriter.WriteString(NativeText)
+  nameWithType: JsonWriter.WriteString(NativeText)
 - uid: Algorand.Unity.Json.JsonWriter.WriteString(System.String)
   name: WriteString(String)
   href: api/Algorand.Unity.Json.JsonWriter.html#Algorand_Unity_Json_JsonWriter_WriteString_System_String_
@@ -42031,6 +42190,15 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.MessagePack.MessagePackReader.ReadSByte
   nameWithType: MessagePackReader.ReadSByte
+- uid: Algorand.Unity.MessagePack.MessagePackReader.ReadString(NativeText@)
+  name: ReadString(ref NativeText)
+  href: api/Algorand.Unity.MessagePack.MessagePackReader.html#Algorand_Unity_MessagePack_MessagePackReader_ReadString_NativeText__
+  commentId: M:Algorand.Unity.MessagePack.MessagePackReader.ReadString(NativeText@)
+  name.vb: ReadString(ByRef NativeText)
+  fullName: Algorand.Unity.MessagePack.MessagePackReader.ReadString(ref NativeText)
+  fullName.vb: Algorand.Unity.MessagePack.MessagePackReader.ReadString(ByRef NativeText)
+  nameWithType: MessagePackReader.ReadString(ref NativeText)
+  nameWithType.vb: MessagePackReader.ReadString(ByRef NativeText)
 - uid: Algorand.Unity.MessagePack.MessagePackReader.ReadString(System.String@)
   name: ReadString(out String)
   href: api/Algorand.Unity.MessagePack.MessagePackReader.html#Algorand_Unity_MessagePack_MessagePackReader_ReadString_System_String__
@@ -42316,6 +42484,15 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.MessagePack.MessagePackReader.TryReadRaw
   nameWithType: MessagePackReader.TryReadRaw
+- uid: Algorand.Unity.MessagePack.MessagePackReader.TryReadString(NativeText@)
+  name: TryReadString(ref NativeText)
+  href: api/Algorand.Unity.MessagePack.MessagePackReader.html#Algorand_Unity_MessagePack_MessagePackReader_TryReadString_NativeText__
+  commentId: M:Algorand.Unity.MessagePack.MessagePackReader.TryReadString(NativeText@)
+  name.vb: TryReadString(ByRef NativeText)
+  fullName: Algorand.Unity.MessagePack.MessagePackReader.TryReadString(ref NativeText)
+  fullName.vb: Algorand.Unity.MessagePack.MessagePackReader.TryReadString(ByRef NativeText)
+  nameWithType: MessagePackReader.TryReadString(ref NativeText)
+  nameWithType.vb: MessagePackReader.TryReadString(ByRef NativeText)
 - uid: Algorand.Unity.MessagePack.MessagePackReader.TryReadString*
   name: TryReadString
   href: api/Algorand.Unity.MessagePack.MessagePackReader.html#Algorand_Unity_MessagePack_MessagePackReader_TryReadString_
@@ -60794,6 +60971,24 @@ references:
   commentId: T:Algorand.Unity.Utf8StringExtensions
   fullName: Algorand.Unity.Utf8StringExtensions
   nameWithType: Utf8StringExtensions
+- uid: Algorand.Unity.Utf8StringExtensions.Append(NativeText@,System.Boolean)
+  name: Append(ref NativeText, Boolean)
+  href: api/Algorand.Unity.Utf8StringExtensions.html#Algorand_Unity_Utf8StringExtensions_Append_NativeText__System_Boolean_
+  commentId: M:Algorand.Unity.Utf8StringExtensions.Append(NativeText@,System.Boolean)
+  name.vb: Append(ByRef NativeText, Boolean)
+  fullName: Algorand.Unity.Utf8StringExtensions.Append(ref NativeText, System.Boolean)
+  fullName.vb: Algorand.Unity.Utf8StringExtensions.Append(ByRef NativeText, System.Boolean)
+  nameWithType: Utf8StringExtensions.Append(ref NativeText, Boolean)
+  nameWithType.vb: Utf8StringExtensions.Append(ByRef NativeText, Boolean)
+- uid: Algorand.Unity.Utf8StringExtensions.Append(NativeText@,System.UInt64)
+  name: Append(ref NativeText, UInt64)
+  href: api/Algorand.Unity.Utf8StringExtensions.html#Algorand_Unity_Utf8StringExtensions_Append_NativeText__System_UInt64_
+  commentId: M:Algorand.Unity.Utf8StringExtensions.Append(NativeText@,System.UInt64)
+  name.vb: Append(ByRef NativeText, UInt64)
+  fullName: Algorand.Unity.Utf8StringExtensions.Append(ref NativeText, System.UInt64)
+  fullName.vb: Algorand.Unity.Utf8StringExtensions.Append(ByRef NativeText, System.UInt64)
+  nameWithType: Utf8StringExtensions.Append(ref NativeText, UInt64)
+  nameWithType.vb: Utf8StringExtensions.Append(ByRef NativeText, UInt64)
 - uid: Algorand.Unity.Utf8StringExtensions.Append*
   name: Append
   href: api/Algorand.Unity.Utf8StringExtensions.html#Algorand_Unity_Utf8StringExtensions_Append_
@@ -60819,6 +61014,12 @@ references:
   fullName.vb: Algorand.Unity.Utf8StringExtensions.Append(Of T)(ByRef T, System.UInt64)
   nameWithType: Utf8StringExtensions.Append<T>(ref T, UInt64)
   nameWithType.vb: Utf8StringExtensions.Append(Of T)(ByRef T, UInt64)
+- uid: Algorand.Unity.Utf8StringExtensions.ToByteArray(NativeText)
+  name: ToByteArray(NativeText)
+  href: api/Algorand.Unity.Utf8StringExtensions.html#Algorand_Unity_Utf8StringExtensions_ToByteArray_NativeText_
+  commentId: M:Algorand.Unity.Utf8StringExtensions.ToByteArray(NativeText)
+  fullName: Algorand.Unity.Utf8StringExtensions.ToByteArray(NativeText)
+  nameWithType: Utf8StringExtensions.ToByteArray(NativeText)
 - uid: Algorand.Unity.Utf8StringExtensions.ToByteArray*
   name: ToByteArray
   href: api/Algorand.Unity.Utf8StringExtensions.html#Algorand_Unity_Utf8StringExtensions_ToByteArray_

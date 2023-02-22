@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "changelog/CHANGELOG.html",
-          "hash": "37tuxydy6vdGBVRuSz45Xw=="
+          "hash": "I3wYhn09T26ky4cjUdQE6w=="
         }
       },
       "is_incremental": false,
@@ -254,7 +254,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Address.html",
-          "hash": "EqqXKIPBRNGQKvomvCTbRg=="
+          "hash": "gZTQa/h6D9eaeQud8T9xMA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.AddressFormatError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.AddressFormatError.html",
+          "hash": "l1NtQg+DZtB2yRYn67hHyQ=="
         }
       },
       "is_incremental": false,
@@ -2378,7 +2390,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Base32Encoding.html",
-          "hash": "zq7ROSbC3lng+1eW1L+w8Q=="
+          "hash": "j/2kQnI39KfAc8yRTSf7og=="
         }
       },
       "is_incremental": false,
@@ -2390,7 +2402,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Base64Encoding.html",
-          "hash": "MxNp5MB+jUNl9uDsXwk+rQ=="
+          "hash": "Bn4w5bwyPBqYHEAD2zDKZw=="
         }
       },
       "is_incremental": false,
@@ -2522,7 +2534,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Collections.NativeTextExtensions.html",
-          "hash": "dyR0GJnDj2P6a/6THvSq9Q=="
+          "hash": "ogDmKhuWkHuCBmXxp2uVKw=="
         }
       },
       "is_incremental": false,
@@ -4610,7 +4622,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.IKmdClient.html",
-          "hash": "Z2Q8vJNv5KdEP4hB/4JFvA=="
+          "hash": "EQL6E3DdA5BYljuNkHwLBg=="
         }
       },
       "is_incremental": false,
@@ -6182,7 +6194,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Json.JsonReader.html",
-          "hash": "+2jZIhSDtmA3y/Jr+r1B5g=="
+          "hash": "JwogGOsNQzD+5UEuH+0cgQ=="
         }
       },
       "is_incremental": false,
@@ -6218,7 +6230,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Json.JsonWriter.html",
-          "hash": "CVjnVnVK7XjMbDD/H6Hiow=="
+          "hash": "ivG+0HN4y5qPvnA8pvsjNA=="
         }
       },
       "is_incremental": false,
@@ -6794,7 +6806,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.KmdClient.html",
-          "hash": "1ICbe7nLP86dKlE6d0QMww=="
+          "hash": "EHls62ZTgzWzDfaBVDYFlA=="
         }
       },
       "is_incremental": false,
@@ -7106,7 +7118,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.MessagePack.MessagePackReader.html",
-          "hash": "+3ANpT0KqyI/xd54bUJW8Q=="
+          "hash": "hhKp4FkDzsgElV7jzmHnNQ=="
         }
       },
       "is_incremental": false,
@@ -7898,7 +7910,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Utf8StringExtensions.html",
-          "hash": "JglB7hzDpky1tvv+GWyjHQ=="
+          "hash": "TkuvWJpJqVHKBOjs+GpEkg=="
         }
       },
       "is_incremental": false,
@@ -8546,7 +8558,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.html",
-          "hash": "TgjkvxF4xLQxGLrh96Zcww=="
+          "hash": "1d0PcPbaNXKG6n5TEdNG6A=="
         }
       },
       "is_incremental": false,
@@ -8558,7 +8570,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "Ui8JlYKoowAuy2RS2NWqPg=="
+          "hash": "eQQYUT+a3PUZ8Wh1UYPDJg=="
         }
       },
       "is_incremental": false,
@@ -8667,7 +8679,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 697,
+          "total_file_count": 698,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

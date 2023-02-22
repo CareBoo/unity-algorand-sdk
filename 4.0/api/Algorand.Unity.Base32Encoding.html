@@ -173,7 +173,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ToBytes&lt;TByteArray, TString&gt;(TString s, ref TByteArray bytes)
+    <pre><code class="lang-csharp hljs">public static ConversionError ToBytes&lt;TByteArray, TString&gt;(TString s, ref TByteArray bytes)
     where TByteArray : struct, IByteArray where TString : struct, IUTF8Bytes, INativeList&lt;byte&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -194,6 +194,21 @@
       <tr>
         <td><span class="xref">TByteArray</span></td>
         <td><span class="parametername">bytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ConversionError</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -267,7 +282,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ToString&lt;TByteArray, TString&gt;(TByteArray bytes, ref TString s)
+    <pre><code class="lang-csharp hljs">public static ConversionError ToString&lt;TByteArray, TString&gt;(TByteArray bytes, ref TString s)
     where TByteArray : struct, IByteArray where TString : struct, IUTF8Bytes, INativeList&lt;byte&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -288,6 +303,21 @@
       <tr>
         <td><span class="xref">TString</span></td>
         <td><span class="parametername">s</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ConversionError</span></td>
         <td></td>
       </tr>
     </tbody>
