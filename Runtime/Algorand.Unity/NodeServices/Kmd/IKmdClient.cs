@@ -211,7 +211,7 @@ namespace Algorand.Unity
         /// Create a new wallet (collection of keys) with the given parameters.
         /// </remarks>
         /// <param name="masterDerivationKey"></param>
-        /// <param name="walletDriverName"></param>
+        /// <param name="walletDriverName">The driver used to store the wallets. Supported values are "sqlite" and "ledger".</param>
         /// <param name="walletName"></param>
         /// <param name="walletPassword"></param>
         /// <returns></returns>
