@@ -5,6 +5,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [4.0.0-pre.21](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.20...v4.0.0-pre.21) (2023-02-22)
+
+
+### Bug Fixes
+
+* **unity-collections:** support unity collections version > 2.x.x ([025a153](https://github.com/CareBoo/unity-algorand-sdk/commit/025a1533c497d2618324efde44eb7fe651de0ef1)), closes [#192](https://github.com/CareBoo/unity-algorand-sdk/issues/192)
+
+
+### Features
+
+* **account:** add `Address.TryParse` method ([e83ad26](https://github.com/CareBoo/unity-algorand-sdk/commit/e83ad26bc879281a78c3f5a63acba2799f7b4063))
+
 # [4.0.0-pre.20](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.19...v4.0.0-pre.20) (2023-02-20)
 
 
