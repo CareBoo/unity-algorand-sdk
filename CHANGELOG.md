@@ -5,6 +5,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [4.0.0-pre.22](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.21...v4.0.0-pre.22) (2023-02-22)
+
+
+### Code Refactoring
+
+* **support:** remove support for 2020.3 and add support for 2022.2 ([f000cd4](https://github.com/CareBoo/unity-algorand-sdk/commit/f000cd4f45c7b0199e3258dd1863a31863e0dfd3))
+
+
+### BREAKING CHANGES
+
+* **support:** Unity 2020.3 is no longer supported
+
 # [4.0.0-pre.21](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.20...v4.0.0-pre.21) (2023-02-22)
 
 
