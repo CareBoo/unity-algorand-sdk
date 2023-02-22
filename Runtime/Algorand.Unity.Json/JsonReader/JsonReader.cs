@@ -63,7 +63,22 @@ namespace Algorand.Unity.Json
         }
 
         public JsonReadError ReadRaw<T>(ref T value)
-            where T : struct, INativeList<byte>, IUTF8Bytes
+            where T : unmanaged, INativeList<byte>, IUTF8Bytes
+        {
+            value.Clear();
+            var startOffset = offset;
+            var skipErr = Skip();
+            if (skipErr != JsonReadError.None)
+            {
+                offset = startOffset;
+                return skipErr;
+            }
+            while (startOffset < offset)
+                value.Append(text.Read(ref startOffset));
+            return JsonReadError.None;
+        }
+
+        public JsonReadError ReadRaw(ref NativeText value)
         {
             value.Clear();
             var startOffset = offset;

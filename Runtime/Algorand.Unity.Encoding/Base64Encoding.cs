@@ -8,14 +8,31 @@ namespace Algorand.Unity
     {
         public static void CopyToBase64<TBytes, T>(this TBytes bytes, ref T s)
             where TBytes : struct, IArray<byte>
-            where T : struct, IUTF8Bytes, INativeList<byte>
+            where T : unmanaged, IUTF8Bytes, INativeList<byte>
         {
             s.CopyFrom(System.Convert.ToBase64String(bytes.ToArray()));
         }
 
         public static void CopyFromBase64<TByteArray, T>(ref this TByteArray bytes, T s, int maxLength = int.MaxValue)
             where TByteArray : struct, IArray<byte>
-            where T : struct, IUTF8Bytes, INativeList<byte>
+            where T : unmanaged, IUTF8Bytes, INativeList<byte>
+        {
+            var managedString = s.ToString();
+            var byteArr = System.Convert.FromBase64String(managedString);
+            var length = math.min(maxLength, byteArr.Length);
+            for (var i = 0; i < length; i++)
+                bytes[i] = byteArr[i];
+        }
+
+        public static void CopyToBase64<TBytes>(this TBytes bytes, ref NativeText s)
+            where TBytes : struct, IArray<byte>
+        {
+            s.CopyFrom(System.Convert.ToBase64String(bytes.ToArray()));
+        }
+
+        public static void CopyFromBase64<TByteArray>(ref this TByteArray bytes, NativeText s,
+            int maxLength = int.MaxValue)
+            where TByteArray : struct, IArray<byte>
         {
             var managedString = s.ToString();
             var byteArr = System.Convert.FromBase64String(managedString);

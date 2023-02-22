@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 using Unity.Jobs;
 
 namespace Algorand.Unity.LowLevel
@@ -16,17 +17,19 @@ namespace Algorand.Unity.LowLevel
 
         public NativeOrderedSet(int initialCapacity, Allocator allocator)
         {
-            this.set = new NativeParallelHashSet<T>(initialCapacity, allocator);
-            this.list = new NativeList<T>(initialCapacity, allocator);
+            set = new NativeParallelHashSet<T>(initialCapacity, allocator);
+            list = new NativeList<T>(initialCapacity, allocator);
         }
 
-        public T this[int index] { get => list[index]; }
+        public ref T this[int index] => ref list.ElementAt(index);
+        
+        T IReadOnlyList<T>.this[int index] => this[index];
 
         public int Capacity { get => list.Capacity; set => list.Capacity = value; }
 
         public bool IsEmpty => list.IsEmpty;
 
-        public int Length { get => list.Length; }
+        public int Length => list.Length;
 
         public int Count => Length;
 
@@ -77,7 +80,7 @@ namespace Algorand.Unity.LowLevel
                 if (this[i].Equals(element))
                     return i;
 
-            throw new System.InvalidOperationException("NativeOrderedSet is in invalid state. Set contains an element that does not exist in the list.");
+            throw new InvalidOperationException("NativeOrderedSet is in invalid state. Set contains an element that does not exist in the list.");
         }
 
         public int IndexOf(T element)
@@ -89,7 +92,7 @@ namespace Algorand.Unity.LowLevel
                 if (this[i].Equals(element))
                     return i;
 
-            throw new System.InvalidOperationException("NativeOrderedSet is in invalid state. Set contains an element that does not exist in the list.");
+            throw new InvalidOperationException("NativeOrderedSet is in invalid state. Set contains an element that does not exist in the list.");
         }
 
         public void Clear()
@@ -101,9 +104,9 @@ namespace Algorand.Unity.LowLevel
         public ReadOnlySlice<T, NativeOrderedSet<T>> Slice(int start, int count)
         {
             if (start > Count)
-                throw new System.ArgumentOutOfRangeException(nameof(start));
+                throw new ArgumentOutOfRangeException(nameof(start));
             if (start + count > Count)
-                throw new System.ArgumentOutOfRangeException(nameof(count));
+                throw new ArgumentOutOfRangeException(nameof(count));
             return new ReadOnlySlice<T, NativeOrderedSet<T>>(this, start, count);
         }
 
@@ -111,7 +114,7 @@ namespace Algorand.Unity.LowLevel
 
         public T[] ToArray()
         {
-            return list.ToArray();
+            return list.AsArray().ToArray();
         }
 
         public JobHandle Dispose(JobHandle inputDeps)

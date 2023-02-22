@@ -64,7 +64,7 @@ namespace Algorand.Unity
 
         public static implicit operator CompiledTeal(string x)
         {
-            using var text = new NativeText(x, Allocator.Persistent);
+            using var text = new NativeText(x, Allocator.Temp);
             return text.ToByteArray();
         }
 
@@ -72,6 +72,6 @@ namespace Algorand.Unity
 
         public static implicit operator CompiledTeal(NativeArray<byte>.ReadOnly x) => x.ToArray();
 
-        public static implicit operator CompiledTeal(NativeList<byte> x) => x.ToArray();
+        public static implicit operator CompiledTeal(NativeList<byte> x) => x.AsArray().ToArray();
     }
 }

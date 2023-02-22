@@ -67,7 +67,7 @@ namespace Algorand.Unity
             where T : struct, ITransaction, IEquatable<T>
         {
             using var data = AlgoApiSerializer.SerializeMessagePack(txn, Allocator.Persistent);
-            return RawTransaction(data.ToArray());
+            return RawTransaction(data.AsArray().ToArray());
         }
 
         /// <summary>

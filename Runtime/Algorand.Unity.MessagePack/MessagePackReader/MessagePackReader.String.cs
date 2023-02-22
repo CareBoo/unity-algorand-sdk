@@ -19,14 +19,47 @@ namespace Algorand.Unity.MessagePack
         }
 
         public void ReadString<T>(ref T fs)
-            where T : struct, INativeList<byte>, IUTF8Bytes
+            where T : unmanaged, INativeList<byte>, IUTF8Bytes
         {
             if (!TryReadString(ref fs))
                 throw InsufficientBuffer();
         }
 
         public bool TryReadString<T>(ref T fs)
-            where T : struct, INativeList<byte>, IUTF8Bytes
+            where T : unmanaged, INativeList<byte>, IUTF8Bytes
+        {
+            fs.Length = 0;
+            if (TryReadNil())
+                return true;
+
+            var resetOffset = offset;
+            if (!TryGetStringLengthInBytes(out var length))
+                return false;
+
+            for (var i = 0; i < length; i++)
+            {
+                if (!TryRead(out byte b))
+                {
+                    offset = resetOffset;
+                    return false;
+                }
+                var error = fs.AppendRawByte(b);
+                if (error != FormatError.None)
+                {
+                    offset = resetOffset;
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public void ReadString(ref NativeText fs)
+        {
+            if (!TryReadString(ref fs))
+                throw InsufficientBuffer();
+        }
+
+        public bool TryReadString(ref NativeText fs)
         {
             fs.Length = 0;
             if (TryReadNil())

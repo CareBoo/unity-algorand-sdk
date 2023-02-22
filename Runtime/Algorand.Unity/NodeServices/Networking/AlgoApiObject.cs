@@ -71,7 +71,7 @@ namespace Algorand.Unity
 
         public static implicit operator AlgoApiObject(NativeList<byte> msgpack)
         {
-            return new AlgoApiObject(msgpack.ToArray(), ContentType.MessagePack);
+            return new AlgoApiObject(msgpack.AsArray().ToArray(), ContentType.MessagePack);
         }
     }
 }

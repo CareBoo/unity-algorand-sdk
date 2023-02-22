@@ -23,7 +23,7 @@ namespace Algorand.Unity
             }
             if (!reader.TryRead(JsonToken.ObjectEnd))
                 JsonReadError.IncorrectFormat.ThrowIfError(reader);
-            return map.ToArray();
+            return map.AsArray().ToArray();
         }
 
         public StateDelta Deserialize(ref MessagePackReader reader)

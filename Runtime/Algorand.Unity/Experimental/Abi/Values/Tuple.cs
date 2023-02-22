@@ -180,7 +180,7 @@ namespace Algorand.Unity.Experimental.Abi
                 {
                     boolShift = 0;
                     using var bytes = args.EncodeCurrent(types[t], references, Allocator.Persistent);
-                    headBytes.AddRange(bytes.Bytes);
+                    headBytes.AddRange(bytes.Bytes.AsArray());
                 }
             }
 
@@ -221,7 +221,7 @@ namespace Algorand.Unity.Experimental.Abi
             private void EncodeDynamicTail(int t)
             {
                 using var bytes = args.EncodeCurrent(types[t], references, Allocator.Persistent);
-                tailBytes.AddRange(bytes.Bytes);
+                tailBytes.AddRange(bytes.Bytes.AsArray());
             }
 
             private int CountHeadBytesLength(int t)

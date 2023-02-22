@@ -152,7 +152,7 @@ namespace Algorand.Unity.Experimental.Abi
                     }
                     if (!reader.TryRead(JsonToken.ObjectEnd))
                         JsonReadError.IncorrectFormat.ThrowIfError(reader);
-                    return new Deployments { deployments = deployments.ToArray() };
+                    return new Deployments { deployments = deployments.AsArray().ToArray() };
                 }
 
                 public Deployments Deserialize(ref MessagePackReader reader)

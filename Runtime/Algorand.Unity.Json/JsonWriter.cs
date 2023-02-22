@@ -53,7 +53,24 @@ namespace Algorand.Unity.Json
         }
 
         public JsonWriter WriteString<T>(T fs)
-            where T : struct, INativeList<byte>, IUTF8Bytes
+            where T : unmanaged, INativeList<byte>, IUTF8Bytes
+        {
+            WriteChar('"');
+            int index = 0;
+            var rune = fs.Read(ref index);
+            while (!rune.Equals(Unicode.BadRune))
+            {
+                var c = rune.ToChar();
+                if (c == '"')
+                    text.Append('\\'.ToRune());
+                text.Append(rune);
+                rune = fs.Read(ref index);
+            }
+            WriteChar('"');
+            return this;
+        }
+
+        public JsonWriter WriteString(NativeText fs)
         {
             WriteChar('"');
             int index = 0;
@@ -101,7 +118,14 @@ namespace Algorand.Unity.Json
         }
 
         public JsonWriter WriteObjectKey<T>(T fs)
-            where T : struct, INativeList<byte>, IUTF8Bytes
+            where T : unmanaged, INativeList<byte>, IUTF8Bytes
+        {
+            WriteString(fs);
+            WriteChar(':');
+            return this;
+        }
+
+        public JsonWriter WriteObjectKey(NativeText fs)
         {
             WriteString(fs);
             WriteChar(':');

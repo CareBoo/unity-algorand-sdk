@@ -152,7 +152,7 @@ namespace Algorand.Unity
         public static byte[] SerializeMessagePack<T>(T obj)
         {
             using var listBytes = SerializeMessagePack<T>(obj, Allocator.Persistent);
-            return listBytes.ToArray();
+            return listBytes.AsArray().ToArray();
         }
 
         /// <summary>

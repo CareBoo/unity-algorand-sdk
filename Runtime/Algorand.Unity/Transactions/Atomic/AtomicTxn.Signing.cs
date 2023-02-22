@@ -55,7 +55,7 @@ namespace Algorand.Unity
             public byte[] FinishSigning()
             {
                 using var signed = FinishSigning(Allocator.Persistent);
-                return signed.ToArray();
+                return signed.AsArray().ToArray();
             }
 
             /// <summary>

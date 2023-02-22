@@ -23,7 +23,7 @@ namespace Algorand.Unity
             where TTxn : struct, ITransaction, System.IEquatable<TTxn>
         {
             using var data = AlgoApiSerializer.SerializeMessagePack(txn, Allocator.Persistent);
-            return client.RawTransaction(data.ToArray());
+            return client.RawTransaction(data.AsArray().ToArray());
         }
 
         /// <summary>

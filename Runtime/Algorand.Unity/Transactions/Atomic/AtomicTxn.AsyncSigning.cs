@@ -98,7 +98,7 @@ namespace Algorand.Unity
             public async UniTask<byte[]> FinishSigningAsync()
             {
                 using var nativeBytes = await FinishSigningAsync(Allocator.Persistent);
-                return nativeBytes.ToArray();
+                return nativeBytes.AsArray().ToArray();
             }
 
             /// <summary>
