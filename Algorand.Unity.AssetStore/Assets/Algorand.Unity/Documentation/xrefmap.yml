@@ -579,6 +579,12 @@ references:
   commentId: F:Algorand.Unity.Address.SizeBytes
   fullName: Algorand.Unity.Address.SizeBytes
   nameWithType: Address.SizeBytes
+- uid: Algorand.Unity.Address.StringLength
+  name: StringLength
+  href: api/Algorand.Unity.Address.html#Algorand_Unity_Address_StringLength
+  commentId: F:Algorand.Unity.Address.StringLength
+  fullName: Algorand.Unity.Address.StringLength
+  nameWithType: Address.StringLength
 - uid: Algorand.Unity.Address.ToFixedString
   name: ToFixedString()
   href: api/Algorand.Unity.Address.html#Algorand_Unity_Address_ToFixedString
@@ -618,6 +624,61 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Address.ToString
   nameWithType: Address.ToString
+- uid: Algorand.Unity.Address.TryParse(System.String,Algorand.Unity.Address@)
+  name: TryParse(String, out Address)
+  href: api/Algorand.Unity.Address.html#Algorand_Unity_Address_TryParse_System_String_Algorand_Unity_Address__
+  commentId: M:Algorand.Unity.Address.TryParse(System.String,Algorand.Unity.Address@)
+  name.vb: TryParse(String, ByRef Address)
+  fullName: Algorand.Unity.Address.TryParse(System.String, out Algorand.Unity.Address)
+  fullName.vb: Algorand.Unity.Address.TryParse(System.String, ByRef Algorand.Unity.Address)
+  nameWithType: Address.TryParse(String, out Address)
+  nameWithType.vb: Address.TryParse(String, ByRef Address)
+- uid: Algorand.Unity.Address.TryParse*
+  name: TryParse
+  href: api/Algorand.Unity.Address.html#Algorand_Unity_Address_TryParse_
+  commentId: Overload:Algorand.Unity.Address.TryParse
+  isSpec: "True"
+  fullName: Algorand.Unity.Address.TryParse
+  nameWithType: Address.TryParse
+- uid: Algorand.Unity.Address.TryParse``1(``0,Algorand.Unity.Address@)
+  name: TryParse<TString>(TString, out Address)
+  href: api/Algorand.Unity.Address.html#Algorand_Unity_Address_TryParse__1___0_Algorand_Unity_Address__
+  commentId: M:Algorand.Unity.Address.TryParse``1(``0,Algorand.Unity.Address@)
+  name.vb: TryParse(Of TString)(TString, ByRef Address)
+  fullName: Algorand.Unity.Address.TryParse<TString>(TString, out Algorand.Unity.Address)
+  fullName.vb: Algorand.Unity.Address.TryParse(Of TString)(TString, ByRef Algorand.Unity.Address)
+  nameWithType: Address.TryParse<TString>(TString, out Address)
+  nameWithType.vb: Address.TryParse(Of TString)(TString, ByRef Address)
+- uid: Algorand.Unity.AddressFormatError
+  name: AddressFormatError
+  href: api/Algorand.Unity.AddressFormatError.html
+  commentId: T:Algorand.Unity.AddressFormatError
+  fullName: Algorand.Unity.AddressFormatError
+  nameWithType: AddressFormatError
+- uid: Algorand.Unity.AddressFormatError.IncorrectLength
+  name: IncorrectLength
+  href: api/Algorand.Unity.AddressFormatError.html#Algorand_Unity_AddressFormatError_IncorrectLength
+  commentId: F:Algorand.Unity.AddressFormatError.IncorrectLength
+  fullName: Algorand.Unity.AddressFormatError.IncorrectLength
+  nameWithType: AddressFormatError.IncorrectLength
+- uid: Algorand.Unity.AddressFormatError.InvalidChecksum
+  name: InvalidChecksum
+  href: api/Algorand.Unity.AddressFormatError.html#Algorand_Unity_AddressFormatError_InvalidChecksum
+  commentId: F:Algorand.Unity.AddressFormatError.InvalidChecksum
+  fullName: Algorand.Unity.AddressFormatError.InvalidChecksum
+  nameWithType: AddressFormatError.InvalidChecksum
+- uid: Algorand.Unity.AddressFormatError.None
+  name: None
+  href: api/Algorand.Unity.AddressFormatError.html#Algorand_Unity_AddressFormatError_None
+  commentId: F:Algorand.Unity.AddressFormatError.None
+  fullName: Algorand.Unity.AddressFormatError.None
+  nameWithType: AddressFormatError.None
+- uid: Algorand.Unity.AddressFormatError.NotBase32
+  name: NotBase32
+  href: api/Algorand.Unity.AddressFormatError.html#Algorand_Unity_AddressFormatError_NotBase32
+  commentId: F:Algorand.Unity.AddressFormatError.NotBase32
+  fullName: Algorand.Unity.AddressFormatError.NotBase32
+  nameWithType: AddressFormatError.NotBase32
 - uid: Algorand.Unity.AddressRole
   name: AddressRole
   href: api/Algorand.Unity.AddressRole.html
@@ -15413,6 +15474,19 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.Dispose
   nameWithType: Ed25519.SecretKeyHandle.Dispose
+- uid: Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.IsCreated
+  name: IsCreated
+  href: api/Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.html#Algorand_Unity_Crypto_Ed25519_SecretKeyHandle_IsCreated
+  commentId: P:Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.IsCreated
+  fullName: Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.IsCreated
+  nameWithType: Ed25519.SecretKeyHandle.IsCreated
+- uid: Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.IsCreated*
+  name: IsCreated
+  href: api/Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.html#Algorand_Unity_Crypto_Ed25519_SecretKeyHandle_IsCreated_
+  commentId: Overload:Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.IsCreated
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.IsCreated
+  nameWithType: Ed25519.SecretKeyHandle.IsCreated
 - uid: Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.KeySize
   name: KeySize
   href: api/Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.html#Algorand_Unity_Crypto_Ed25519_SecretKeyHandle_KeySize
@@ -15792,6 +15866,34 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Crypto.SecureMemoryHandle.IsCreated
   nameWithType: SecureMemoryHandle.IsCreated
+- uid: Algorand.Unity.Crypto.SecureMemoryHandle.op_Implicit(Algorand.Unity.Crypto.SecureMemoryHandle)~IntPtr
+  name: Implicit(SecureMemoryHandle to IntPtr)
+  href: api/Algorand.Unity.Crypto.SecureMemoryHandle.html#Algorand_Unity_Crypto_SecureMemoryHandle_op_Implicit_Algorand_Unity_Crypto_SecureMemoryHandle__IntPtr
+  commentId: M:Algorand.Unity.Crypto.SecureMemoryHandle.op_Implicit(Algorand.Unity.Crypto.SecureMemoryHandle)~IntPtr
+  name.vb: Widening(SecureMemoryHandle to IntPtr)
+  fullName: Algorand.Unity.Crypto.SecureMemoryHandle.Implicit(Algorand.Unity.Crypto.SecureMemoryHandle to IntPtr)
+  fullName.vb: Algorand.Unity.Crypto.SecureMemoryHandle.Widening(Algorand.Unity.Crypto.SecureMemoryHandle to IntPtr)
+  nameWithType: SecureMemoryHandle.Implicit(SecureMemoryHandle to IntPtr)
+  nameWithType.vb: SecureMemoryHandle.Widening(SecureMemoryHandle to IntPtr)
+- uid: Algorand.Unity.Crypto.SecureMemoryHandle.op_Implicit(IntPtr)~Algorand.Unity.Crypto.SecureMemoryHandle
+  name: Implicit(IntPtr to SecureMemoryHandle)
+  href: api/Algorand.Unity.Crypto.SecureMemoryHandle.html#Algorand_Unity_Crypto_SecureMemoryHandle_op_Implicit_IntPtr__Algorand_Unity_Crypto_SecureMemoryHandle
+  commentId: M:Algorand.Unity.Crypto.SecureMemoryHandle.op_Implicit(IntPtr)~Algorand.Unity.Crypto.SecureMemoryHandle
+  name.vb: Widening(IntPtr to SecureMemoryHandle)
+  fullName: Algorand.Unity.Crypto.SecureMemoryHandle.Implicit(IntPtr to Algorand.Unity.Crypto.SecureMemoryHandle)
+  fullName.vb: Algorand.Unity.Crypto.SecureMemoryHandle.Widening(IntPtr to Algorand.Unity.Crypto.SecureMemoryHandle)
+  nameWithType: SecureMemoryHandle.Implicit(IntPtr to SecureMemoryHandle)
+  nameWithType.vb: SecureMemoryHandle.Widening(IntPtr to SecureMemoryHandle)
+- uid: Algorand.Unity.Crypto.SecureMemoryHandle.op_Implicit*
+  name: Implicit
+  href: api/Algorand.Unity.Crypto.SecureMemoryHandle.html#Algorand_Unity_Crypto_SecureMemoryHandle_op_Implicit_
+  commentId: Overload:Algorand.Unity.Crypto.SecureMemoryHandle.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Algorand.Unity.Crypto.SecureMemoryHandle.Implicit
+  fullName.vb: Algorand.Unity.Crypto.SecureMemoryHandle.Widening
+  nameWithType: SecureMemoryHandle.Implicit
+  nameWithType.vb: SecureMemoryHandle.Widening
 - uid: Algorand.Unity.Crypto.SecureMemoryHandle.Ptr
   name: Ptr
   href: api/Algorand.Unity.Crypto.SecureMemoryHandle.html#Algorand_Unity_Crypto_SecureMemoryHandle_Ptr
@@ -15998,12 +16100,12 @@ references:
   fullName.vb: Algorand.Unity.Crypto.Sha512.Hash256Truncated(NativeArray(Of System.Byte).ReadOnly)
   nameWithType: Sha512.Hash256Truncated(NativeArray<Byte>.ReadOnly)
   nameWithType.vb: Sha512.Hash256Truncated(NativeArray(Of Byte).ReadOnly)
-- uid: Algorand.Unity.Crypto.Sha512.Hash256Truncated(System.Void*,System.Int32)
-  name: Hash256Truncated(Void*, Int32)
-  href: api/Algorand.Unity.Crypto.Sha512.html#Algorand_Unity_Crypto_Sha512_Hash256Truncated_System_Void__System_Int32_
-  commentId: M:Algorand.Unity.Crypto.Sha512.Hash256Truncated(System.Void*,System.Int32)
-  fullName: Algorand.Unity.Crypto.Sha512.Hash256Truncated(System.Void*, System.Int32)
-  nameWithType: Sha512.Hash256Truncated(Void*, Int32)
+- uid: Algorand.Unity.Crypto.Sha512.Hash256Truncated(System.Byte*,System.Int32)
+  name: Hash256Truncated(Byte*, Int32)
+  href: api/Algorand.Unity.Crypto.Sha512.html#Algorand_Unity_Crypto_Sha512_Hash256Truncated_System_Byte__System_Int32_
+  commentId: M:Algorand.Unity.Crypto.Sha512.Hash256Truncated(System.Byte*,System.Int32)
+  fullName: Algorand.Unity.Crypto.Sha512.Hash256Truncated(System.Byte*, System.Int32)
+  nameWithType: Sha512.Hash256Truncated(Byte*, Int32)
 - uid: Algorand.Unity.Crypto.Sha512.Hash256Truncated*
   name: Hash256Truncated
   href: api/Algorand.Unity.Crypto.Sha512.html#Algorand_Unity_Crypto_Sha512_Hash256Truncated_

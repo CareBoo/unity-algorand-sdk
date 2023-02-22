@@ -117,6 +117,9 @@
                             <a href="Algorand.Unity.Address.CheckSum.html" title="Address.CheckSum" class="">Address.CheckSum</a>
                           </li>
                           <li class="">
+                            <a href="Algorand.Unity.AddressFormatError.html" title="AddressFormatError" class="">AddressFormatError</a>
+                          </li>
+                          <li class="">
                             <a href="Algorand.Unity.AddressRole.html" title="AddressRole" class="">AddressRole</a>
                           </li>
                           <li class="">
@@ -2606,7 +2609,7 @@ for multiple types of ASPs (Algorand&apos;s State Proofs).</p>
 
   <a id="Algorand_Unity_BlockHeader_CurrentProtocol_" data-uid="Algorand.Unity.BlockHeader.CurrentProtocol*"></a>
   <h4 id="Algorand_Unity_BlockHeader_CurrentProtocol" data-uid="Algorand.Unity.BlockHeader.CurrentProtocol">CurrentProtocol</h4>
-  <div class="markdown level1 summary"><p>Block information.</p>
+  <div class="markdown level1 summary"><p>[proto] The current protocol version.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2632,7 +2635,7 @@ for multiple types of ASPs (Algorand&apos;s State Proofs).</p>
 
   <a id="Algorand_Unity_BlockHeader_FeeSink_" data-uid="Algorand.Unity.BlockHeader.FeeSink*"></a>
   <h4 id="Algorand_Unity_BlockHeader_FeeSink" data-uid="Algorand.Unity.BlockHeader.FeeSink">FeeSink</h4>
-  <div class="markdown level1 summary"><p>Block information.</p>
+  <div class="markdown level1 summary"><p>[fees] accepts transaction fees, it can only spend to the incentive pool.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2658,7 +2661,8 @@ for multiple types of ASPs (Algorand&apos;s State Proofs).</p>
 
   <a id="Algorand_Unity_BlockHeader_NativeSha512_256Commitment_" data-uid="Algorand.Unity.BlockHeader.NativeSha512_256Commitment*"></a>
   <h4 id="Algorand_Unity_BlockHeader_NativeSha512_256Commitment" data-uid="Algorand.Unity.BlockHeader.NativeSha512_256Commitment">NativeSha512_256Commitment</h4>
-  <div class="markdown level1 summary"><p>Block information.</p>
+  <div class="markdown level1 summary"><p>Root of transaction merkle tree using SHA512_256 hash function.
+This commitment is computed based on the PaysetCommit type specified in the block&apos;s consensus protocol.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2684,7 +2688,7 @@ for multiple types of ASPs (Algorand&apos;s State Proofs).</p>
 
   <a id="Algorand_Unity_BlockHeader_NextProtocol_" data-uid="Algorand.Unity.BlockHeader.NextProtocol*"></a>
   <h4 id="Algorand_Unity_BlockHeader_NextProtocol" data-uid="Algorand.Unity.BlockHeader.NextProtocol">NextProtocol</h4>
-  <div class="markdown level1 summary"><p>Block information.</p>
+  <div class="markdown level1 summary"><p>[nextproto] The next proposed protocol version.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2710,7 +2714,7 @@ for multiple types of ASPs (Algorand&apos;s State Proofs).</p>
 
   <a id="Algorand_Unity_BlockHeader_NextProtocolApprovals_" data-uid="Algorand.Unity.BlockHeader.NextProtocolApprovals*"></a>
   <h4 id="Algorand_Unity_BlockHeader_NextProtocolApprovals" data-uid="Algorand.Unity.BlockHeader.NextProtocolApprovals">NextProtocolApprovals</h4>
-  <div class="markdown level1 summary"><p>Block information.</p>
+  <div class="markdown level1 summary"><p>[nextyes] Number of blocks which approved the protocol upgrade.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2736,7 +2740,7 @@ for multiple types of ASPs (Algorand&apos;s State Proofs).</p>
 
   <a id="Algorand_Unity_BlockHeader_NextProtocolSwitchOn_" data-uid="Algorand.Unity.BlockHeader.NextProtocolSwitchOn*"></a>
   <h4 id="Algorand_Unity_BlockHeader_NextProtocolSwitchOn" data-uid="Algorand.Unity.BlockHeader.NextProtocolSwitchOn">NextProtocolSwitchOn</h4>
-  <div class="markdown level1 summary"><p>Block information.</p>
+  <div class="markdown level1 summary"><p>[nextswitch] Round on which the protocol upgrade will take effect.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2762,7 +2766,7 @@ for multiple types of ASPs (Algorand&apos;s State Proofs).</p>
 
   <a id="Algorand_Unity_BlockHeader_NextProtocolVoteBefore_" data-uid="Algorand.Unity.BlockHeader.NextProtocolVoteBefore*"></a>
   <h4 id="Algorand_Unity_BlockHeader_NextProtocolVoteBefore" data-uid="Algorand.Unity.BlockHeader.NextProtocolVoteBefore">NextProtocolVoteBefore</h4>
-  <div class="markdown level1 summary"><p>Block information.</p>
+  <div class="markdown level1 summary"><p>[nextbefore] Deadline round for this protocol upgrade (No votes will be consider after this round).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2788,7 +2792,7 @@ for multiple types of ASPs (Algorand&apos;s State Proofs).</p>
 
   <a id="Algorand_Unity_BlockHeader_RewardsCalculationRound_" data-uid="Algorand.Unity.BlockHeader.RewardsCalculationRound*"></a>
   <h4 id="Algorand_Unity_BlockHeader_RewardsCalculationRound" data-uid="Algorand.Unity.BlockHeader.RewardsCalculationRound">RewardsCalculationRound</h4>
-  <div class="markdown level1 summary"><p>Block information.</p>
+  <div class="markdown level1 summary"><p>[rwcalr] number of leftover MicroAlgos after the distribution of rewards-rate MicroAlgos for every reward unit in the next round.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2814,7 +2818,7 @@ for multiple types of ASPs (Algorand&apos;s State Proofs).</p>
 
   <a id="Algorand_Unity_BlockHeader_RewardsLevel_" data-uid="Algorand.Unity.BlockHeader.RewardsLevel*"></a>
   <h4 id="Algorand_Unity_BlockHeader_RewardsLevel" data-uid="Algorand.Unity.BlockHeader.RewardsLevel">RewardsLevel</h4>
-  <div class="markdown level1 summary"><p>Block information.</p>
+  <div class="markdown level1 summary"><p>[earn] How many rewards, in MicroAlgos, have been distributed to each RewardUnit of MicroAlgos since genesis.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2840,7 +2844,7 @@ for multiple types of ASPs (Algorand&apos;s State Proofs).</p>
 
   <a id="Algorand_Unity_BlockHeader_RewardsPool_" data-uid="Algorand.Unity.BlockHeader.RewardsPool*"></a>
   <h4 id="Algorand_Unity_BlockHeader_RewardsPool" data-uid="Algorand.Unity.BlockHeader.RewardsPool">RewardsPool</h4>
-  <div class="markdown level1 summary"><p>Block information.</p>
+  <div class="markdown level1 summary"><p>[rwd] accepts periodic injections from the fee-sink and continually redistributes them as rewards.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2866,7 +2870,7 @@ for multiple types of ASPs (Algorand&apos;s State Proofs).</p>
 
   <a id="Algorand_Unity_BlockHeader_RewardsRate_" data-uid="Algorand.Unity.BlockHeader.RewardsRate*"></a>
   <h4 id="Algorand_Unity_BlockHeader_RewardsRate" data-uid="Algorand.Unity.BlockHeader.RewardsRate">RewardsRate</h4>
-  <div class="markdown level1 summary"><p>Block information.</p>
+  <div class="markdown level1 summary"><p>[rate] Number of new MicroAlgos added to the participation stake from rewards at the next round.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2892,7 +2896,7 @@ for multiple types of ASPs (Algorand&apos;s State Proofs).</p>
 
   <a id="Algorand_Unity_BlockHeader_RewardsResidue_" data-uid="Algorand.Unity.BlockHeader.RewardsResidue*"></a>
   <h4 id="Algorand_Unity_BlockHeader_RewardsResidue" data-uid="Algorand.Unity.BlockHeader.RewardsResidue">RewardsResidue</h4>
-  <div class="markdown level1 summary"><p>Block information.</p>
+  <div class="markdown level1 summary"><p>[frac] Number of leftover MicroAlgos after the distribution of RewardsRate/rewardUnits MicroAlgos for every reward unit in the next round.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2918,7 +2922,7 @@ for multiple types of ASPs (Algorand&apos;s State Proofs).</p>
 
   <a id="Algorand_Unity_BlockHeader_Sha256Commitment_" data-uid="Algorand.Unity.BlockHeader.Sha256Commitment*"></a>
   <h4 id="Algorand_Unity_BlockHeader_Sha256Commitment" data-uid="Algorand.Unity.BlockHeader.Sha256Commitment">Sha256Commitment</h4>
-  <div class="markdown level1 summary"><p>Block information.</p>
+  <div class="markdown level1 summary"><p>Root of transaction vector commitment merkle tree using SHA256 hash function.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2944,7 +2948,7 @@ for multiple types of ASPs (Algorand&apos;s State Proofs).</p>
 
   <a id="Algorand_Unity_BlockHeader_UpgradeApprove_" data-uid="Algorand.Unity.BlockHeader.UpgradeApprove*"></a>
   <h4 id="Algorand_Unity_BlockHeader_UpgradeApprove" data-uid="Algorand.Unity.BlockHeader.UpgradeApprove">UpgradeApprove</h4>
-  <div class="markdown level1 summary"><p>Block information.</p>
+  <div class="markdown level1 summary"><p>[upgradeyes] Indicates a yes vote for the current proposal.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2970,7 +2974,7 @@ for multiple types of ASPs (Algorand&apos;s State Proofs).</p>
 
   <a id="Algorand_Unity_BlockHeader_UpgradeDelay_" data-uid="Algorand.Unity.BlockHeader.UpgradeDelay*"></a>
   <h4 id="Algorand_Unity_BlockHeader_UpgradeDelay" data-uid="Algorand.Unity.BlockHeader.UpgradeDelay">UpgradeDelay</h4>
-  <div class="markdown level1 summary"><p>Block information.</p>
+  <div class="markdown level1 summary"><p>[upgradedelay] Indicates the time between acceptance and execution.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2996,7 +3000,7 @@ for multiple types of ASPs (Algorand&apos;s State Proofs).</p>
 
   <a id="Algorand_Unity_BlockHeader_UpgradePropose_" data-uid="Algorand.Unity.BlockHeader.UpgradePropose*"></a>
   <h4 id="Algorand_Unity_BlockHeader_UpgradePropose" data-uid="Algorand.Unity.BlockHeader.UpgradePropose">UpgradePropose</h4>
-  <div class="markdown level1 summary"><p>Block information.</p>
+  <div class="markdown level1 summary"><p>[upgradeprop] Indicates a proposed upgrade.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>

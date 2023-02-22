@@ -117,6 +117,9 @@
                             <a href="Algorand.Unity.Address.CheckSum.html" title="Address.CheckSum" class="">Address.CheckSum</a>
                           </li>
                           <li class="">
+                            <a href="Algorand.Unity.AddressFormatError.html" title="AddressFormatError" class="">AddressFormatError</a>
+                          </li>
+                          <li class="">
                             <a href="Algorand.Unity.AddressRole.html" title="AddressRole" class="">AddressRole</a>
                           </li>
                           <li class="">
@@ -2267,7 +2270,7 @@
 
 
   <h4 id="Algorand_Unity_Address_Empty" data-uid="Algorand.Unity.Address.Empty">Empty</h4>
-  <div class="markdown level1 summary"><p>A public key for an Algorand account.</p>
+  <div class="markdown level1 summary"><p>An empty address.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2292,12 +2295,37 @@
 
 
   <h4 id="Algorand_Unity_Address_SizeBytes" data-uid="Algorand.Unity.Address.SizeBytes">SizeBytes</h4>
-  <div class="markdown level1 summary"><p>A public key for an Algorand account.</p>
+  <div class="markdown level1 summary"><p>Size of an Algorand Address in Bytes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public const int SizeBytes = default(int)</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="Algorand_Unity_Address_StringLength" data-uid="Algorand.Unity.Address.StringLength">StringLength</h4>
+  <div class="markdown level1 summary"><p>Length of a formatted Address string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int StringLength = 58</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2320,7 +2348,7 @@
 
   <a id="Algorand_Unity_Address_Item_" data-uid="Algorand.Unity.Address.Item*"></a>
   <h4 id="Algorand_Unity_Address_Item_System_Int32_" data-uid="Algorand.Unity.Address.Item(System.Int32)">Item[Int32]</h4>
-  <div class="markdown level1 summary"><p>A public key for an Algorand account.</p>
+  <div class="markdown level1 summary"><p>The byte of this address at a given index.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2340,7 +2368,8 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">index</span></td>
-        <td></td>
+        <td><p>An index in the range [0, <a class="xref" href="Algorand.Unity.Address.html#Algorand_Unity_Address_Length">Length</a>).</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2363,7 +2392,7 @@
 
   <a id="Algorand_Unity_Address_Length_" data-uid="Algorand.Unity.Address.Length*"></a>
   <h4 id="Algorand_Unity_Address_Length" data-uid="Algorand.Unity.Address.Length">Length</h4>
-  <div class="markdown level1 summary"><p>A public key for an Algorand account.</p>
+  <div class="markdown level1 summary"><p>The length of an Address in Bytes = 32.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2479,7 +2508,7 @@
 
   <a id="Algorand_Unity_Address_FromPublicKey_" data-uid="Algorand.Unity.Address.FromPublicKey*"></a>
   <h4 id="Algorand_Unity_Address_FromPublicKey_Ed25519_PublicKey_" data-uid="Algorand.Unity.Address.FromPublicKey(Ed25519.PublicKey)">FromPublicKey(Ed25519.PublicKey)</h4>
-  <div class="markdown level1 summary"><p>A public key for an Algorand account.</p>
+  <div class="markdown level1 summary"><p>Gets the address representation of an ed25519 public key.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2522,7 +2551,7 @@
 
   <a id="Algorand_Unity_Address_FromString_" data-uid="Algorand.Unity.Address.FromString*"></a>
   <h4 id="Algorand_Unity_Address_FromString_System_String_" data-uid="Algorand.Unity.Address.FromString(System.String)">FromString(String)</h4>
-  <div class="markdown level1 summary"><p>A public key for an Algorand account.</p>
+  <div class="markdown level1 summary"><p>Get an address from a string. This will throw an error if the string isn&apos;t formatter properly.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2565,7 +2594,7 @@
 
   <a id="Algorand_Unity_Address_FromString_" data-uid="Algorand.Unity.Address.FromString*"></a>
   <h4 id="Algorand_Unity_Address_FromString__1___0_" data-uid="Algorand.Unity.Address.FromString``1(``0)">FromString&lt;TString&gt;(TString)</h4>
-  <div class="markdown level1 summary"><p>A public key for an Algorand account.</p>
+  <div class="markdown level1 summary"><p>Get an address from a string. This will throw an error if the string isn&apos;t formatter properly.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2652,7 +2681,7 @@
 
   <a id="Algorand_Unity_Address_GetUnsafePtr_" data-uid="Algorand.Unity.Address.GetUnsafePtr*"></a>
   <h4 id="Algorand_Unity_Address_GetUnsafePtr" data-uid="Algorand.Unity.Address.GetUnsafePtr">GetUnsafePtr()</h4>
-  <div class="markdown level1 summary"><p>A public key for an Algorand account.</p>
+  <div class="markdown level1 summary"><p>Get the pointer to this struct.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2670,7 +2699,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.void">Void</a>*</td>
-        <td></td>
+        <td><p>A pointer to this struct.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2678,7 +2708,7 @@
 
   <a id="Algorand_Unity_Address_IsAddressString_" data-uid="Algorand.Unity.Address.IsAddressString*"></a>
   <h4 id="Algorand_Unity_Address_IsAddressString_System_String_" data-uid="Algorand.Unity.Address.IsAddressString(System.String)">IsAddressString(String)</h4>
-  <div class="markdown level1 summary"><p>A public key for an Algorand account.</p>
+  <div class="markdown level1 summary"><p>Determines if the given string is a correctly formatted address.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2721,7 +2751,7 @@
 
   <a id="Algorand_Unity_Address_IsAddressString_" data-uid="Algorand.Unity.Address.IsAddressString*"></a>
   <h4 id="Algorand_Unity_Address_IsAddressString__1___0_" data-uid="Algorand.Unity.Address.IsAddressString``1(``0)">IsAddressString&lt;TString&gt;(TString)</h4>
-  <div class="markdown level1 summary"><p>A public key for an Algorand account.</p>
+  <div class="markdown level1 summary"><p>Determines if the given string is a correctly formatted address.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2780,7 +2810,7 @@
 
   <a id="Algorand_Unity_Address_ToFixedString_" data-uid="Algorand.Unity.Address.ToFixedString*"></a>
   <h4 id="Algorand_Unity_Address_ToFixedString" data-uid="Algorand.Unity.Address.ToFixedString">ToFixedString()</h4>
-  <div class="markdown level1 summary"><p>A public key for an Algorand account.</p>
+  <div class="markdown level1 summary"><p>Converts this address to a fixed string base32 representation with padding trimmed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2806,7 +2836,7 @@
 
   <a id="Algorand_Unity_Address_ToPublicKey_" data-uid="Algorand.Unity.Address.ToPublicKey*"></a>
   <h4 id="Algorand_Unity_Address_ToPublicKey" data-uid="Algorand.Unity.Address.ToPublicKey">ToPublicKey()</h4>
-  <div class="markdown level1 summary"><p>A public key for an Algorand account.</p>
+  <div class="markdown level1 summary"><p>Returns the ed25519 public key this address represents.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2832,7 +2862,7 @@
 
   <a id="Algorand_Unity_Address_ToString_" data-uid="Algorand.Unity.Address.ToString*"></a>
   <h4 id="Algorand_Unity_Address_ToString" data-uid="Algorand.Unity.Address.ToString">ToString()</h4>
-  <div class="markdown level1 summary"><p>A public key for an Algorand account.</p>
+  <div class="markdown level1 summary"><p>Converts this address to its base32 string representation with trimmed padding.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2856,6 +2886,118 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring#system-valuetype-tostring">ValueType.ToString()</a></div>
+
+
+  <a id="Algorand_Unity_Address_TryParse_" data-uid="Algorand.Unity.Address.TryParse*"></a>
+  <h4 id="Algorand_Unity_Address_TryParse_System_String_Algorand_Unity_Address__" data-uid="Algorand.Unity.Address.TryParse(System.String,Algorand.Unity.Address@)">TryParse(String, out Address)</h4>
+  <div class="markdown level1 summary"><p>Try to parse a string for an address.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AddressFormatError TryParse(string s, out Address address)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">s</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">address</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AddressFormatError.html">AddressFormatError</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Algorand_Unity_Address_TryParse_" data-uid="Algorand.Unity.Address.TryParse*"></a>
+  <h4 id="Algorand_Unity_Address_TryParse__1___0_Algorand_Unity_Address__" data-uid="Algorand.Unity.Address.TryParse``1(``0,Algorand.Unity.Address@)">TryParse&lt;TString&gt;(TString, out Address)</h4>
+  <div class="markdown level1 summary"><p>Try to parse a string for an address.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AddressFormatError TryParse&lt;TString&gt;(TString s, out Address address)
+    where TString : struct, IUTF8Bytes, INativeList&lt;byte&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TString</span></td>
+        <td><span class="parametername">s</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">address</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AddressFormatError.html">AddressFormatError</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TString</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="operators">Operators
 </h3>
 

@@ -117,6 +117,9 @@
                             <a href="Algorand.Unity.Address.CheckSum.html" title="Address.CheckSum" class="">Address.CheckSum</a>
                           </li>
                           <li class="">
+                            <a href="Algorand.Unity.AddressFormatError.html" title="AddressFormatError" class="">AddressFormatError</a>
+                          </li>
+                          <li class="">
                             <a href="Algorand.Unity.AddressRole.html" title="AddressRole" class="">AddressRole</a>
                           </li>
                           <li class="">
@@ -2273,7 +2276,8 @@
 
   <a id="Algorand_Unity_PaymentTxn_Amount_" data-uid="Algorand.Unity.PaymentTxn.Amount*"></a>
   <h4 id="Algorand_Unity_PaymentTxn_Amount" data-uid="Algorand.Unity.PaymentTxn.Amount">Amount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The total amount to be sent in microAlgos.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -2298,7 +2302,8 @@
 
   <a id="Algorand_Unity_PaymentTxn_CloseRemainderTo_" data-uid="Algorand.Unity.PaymentTxn.CloseRemainderTo*"></a>
   <h4 id="Algorand_Unity_PaymentTxn_CloseRemainderTo" data-uid="Algorand.Unity.PaymentTxn.CloseRemainderTo">CloseRemainderTo</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>When set, it indicates that the transaction is requesting that the <see cref="!:ITransaction.Sender"></see> account should be closed, and all remaining funds, after the <see cref="!:ITransaction.Fee"></see> and <a class="xref" href="Algorand.Unity.IPaymentTxn.html#Algorand_Unity_IPaymentTxn_Amount">Amount</a> are paid, be transferred to this address.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -2323,7 +2328,8 @@
 
   <a id="Algorand_Unity_PaymentTxn_Fee_" data-uid="Algorand.Unity.PaymentTxn.Fee*"></a>
   <h4 id="Algorand_Unity_PaymentTxn_Fee" data-uid="Algorand.Unity.PaymentTxn.Fee">Fee</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Paid by the sender to the FeeSink to prevent denial-of-service. The minimum fee on Algorand is currently 1000 microAlgos.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -2348,7 +2354,8 @@
 
   <a id="Algorand_Unity_PaymentTxn_FirstValidRound_" data-uid="Algorand.Unity.PaymentTxn.FirstValidRound*"></a>
   <h4 id="Algorand_Unity_PaymentTxn_FirstValidRound" data-uid="Algorand.Unity.PaymentTxn.FirstValidRound">FirstValidRound</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The first round for when the transaction is valid. If the transaction is sent prior to this round it will be rejected by the network.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -2373,7 +2380,8 @@
 
   <a id="Algorand_Unity_PaymentTxn_GenesisHash_" data-uid="Algorand.Unity.PaymentTxn.GenesisHash*"></a>
   <h4 id="Algorand_Unity_PaymentTxn_GenesisHash" data-uid="Algorand.Unity.PaymentTxn.GenesisHash">GenesisHash</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The hash of the genesis block of the network for which the transaction is valid.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -2398,7 +2406,8 @@
 
   <a id="Algorand_Unity_PaymentTxn_GenesisId_" data-uid="Algorand.Unity.PaymentTxn.GenesisId*"></a>
   <h4 id="Algorand_Unity_PaymentTxn_GenesisId" data-uid="Algorand.Unity.PaymentTxn.GenesisId">GenesisId</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The human-readable string that identifies the network for the transaction. The genesis ID is found in the genesis block.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -2423,7 +2432,8 @@
 
   <a id="Algorand_Unity_PaymentTxn_Group_" data-uid="Algorand.Unity.PaymentTxn.Group*"></a>
   <h4 id="Algorand_Unity_PaymentTxn_Group" data-uid="Algorand.Unity.PaymentTxn.Group">Group</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The group specifies that the transaction is part of a group and, if so, specifies the hash of the transaction group. See <a class="xref" href="Algorand.Unity.TransactionGroup.html">TransactionGroup</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -2448,7 +2458,8 @@
 
   <a id="Algorand_Unity_PaymentTxn_LastValidRound_" data-uid="Algorand.Unity.PaymentTxn.LastValidRound*"></a>
   <h4 id="Algorand_Unity_PaymentTxn_LastValidRound" data-uid="Algorand.Unity.PaymentTxn.LastValidRound">LastValidRound</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The ending round for which the transaction is valid. After this round, the transaction will be rejected by the network.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -2473,7 +2484,8 @@
 
   <a id="Algorand_Unity_PaymentTxn_Lease_" data-uid="Algorand.Unity.PaymentTxn.Lease*"></a>
   <h4 id="Algorand_Unity_PaymentTxn_Lease" data-uid="Algorand.Unity.PaymentTxn.Lease">Lease</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A lease enforces mutual exclusion of transactions. If this field is nonzero, then once the transaction is confirmed, it acquires the lease identified by the (Sender, Lease) pair of the transaction until the LastValid round passes. While this transaction possesses the lease, no other transaction specifying this lease can be confirmed. A lease is often used in the context of Algorand Smart Contracts to prevent replay attacks.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -2498,7 +2510,8 @@
 
   <a id="Algorand_Unity_PaymentTxn_Note_" data-uid="Algorand.Unity.PaymentTxn.Note*"></a>
   <h4 id="Algorand_Unity_PaymentTxn_Note" data-uid="Algorand.Unity.PaymentTxn.Note">Note</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Any data up to 1000 bytes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -2523,7 +2536,8 @@
 
   <a id="Algorand_Unity_PaymentTxn_Receiver_" data-uid="Algorand.Unity.PaymentTxn.Receiver*"></a>
   <h4 id="Algorand_Unity_PaymentTxn_Receiver" data-uid="Algorand.Unity.PaymentTxn.Receiver">Receiver</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The address of the account that receives the <a class="xref" href="Algorand.Unity.IPaymentTxn.html#Algorand_Unity_IPaymentTxn_Amount">Amount</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -2548,7 +2562,8 @@
 
   <a id="Algorand_Unity_PaymentTxn_RekeyTo_" data-uid="Algorand.Unity.PaymentTxn.RekeyTo*"></a>
   <h4 id="Algorand_Unity_PaymentTxn_RekeyTo" data-uid="Algorand.Unity.PaymentTxn.RekeyTo">RekeyTo</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the authorized address. This address will be used to authorize all future transactions.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -2573,7 +2588,8 @@
 
   <a id="Algorand_Unity_PaymentTxn_Sender_" data-uid="Algorand.Unity.PaymentTxn.Sender*"></a>
   <h4 id="Algorand_Unity_PaymentTxn_Sender" data-uid="Algorand.Unity.PaymentTxn.Sender">Sender</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The address of the account that pays the fee and amount.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -2598,7 +2614,8 @@
 
   <a id="Algorand_Unity_PaymentTxn_TransactionType_" data-uid="Algorand.Unity.PaymentTxn.TransactionType*"></a>
   <h4 id="Algorand_Unity_PaymentTxn_TransactionType" data-uid="Algorand.Unity.PaymentTxn.TransactionType">TransactionType</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Specifies the type of transaction. This value is automatically generated using any of the developer tools.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -2625,7 +2642,8 @@
 
   <a id="Algorand_Unity_PaymentTxn_CopyFrom_" data-uid="Algorand.Unity.PaymentTxn.CopyFrom*"></a>
   <h4 id="Algorand_Unity_PaymentTxn_CopyFrom_Algorand_Unity_Transaction_" data-uid="Algorand.Unity.PaymentTxn.CopyFrom(Algorand.Unity.Transaction)">CopyFrom(Transaction)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Copy relevant fields to this transaction.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -2644,7 +2662,8 @@
       <tr>
         <td><a class="xref" href="Algorand.Unity.Transaction.html">Transaction</a></td>
         <td><span class="parametername">transaction</span></td>
-        <td></td>
+        <td><p>A raw transaction with all possible transaction fields.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2652,7 +2671,8 @@
 
   <a id="Algorand_Unity_PaymentTxn_CopyTo_" data-uid="Algorand.Unity.PaymentTxn.CopyTo*"></a>
   <h4 id="Algorand_Unity_PaymentTxn_CopyTo_Algorand_Unity_Transaction__" data-uid="Algorand.Unity.PaymentTxn.CopyTo(Algorand.Unity.Transaction@)">CopyTo(ref Transaction)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Copy this transactions fields to a <a class="xref" href="Algorand.Unity.Transaction.html">Transaction</a> which contains all possible transaction fields.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -2671,7 +2691,8 @@
       <tr>
         <td><a class="xref" href="Algorand.Unity.Transaction.html">Transaction</a></td>
         <td><span class="parametername">transaction</span></td>
-        <td></td>
+        <td><p>A raw transaction with all possible transaction fields.</p>
+</td>
       </tr>
     </tbody>
   </table>

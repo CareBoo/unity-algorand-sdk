@@ -11,7 +11,7 @@ namespace Algorand.Unity
         {
             if (string.IsNullOrEmpty(input))
             {
-                throw new ArgumentNullException("input");
+                throw new ArgumentNullException(nameof(input));
             }
 
             input = input.TrimEnd('='); //remove padding characters
@@ -50,22 +50,20 @@ namespace Algorand.Unity
             return returnArray;
         }
 
-        public static unsafe void ToBytes<TByteArray, TString>(TString s, ref TByteArray bytes)
+        public static unsafe ConversionError ToBytes<TByteArray, TString>(TString s, ref TByteArray bytes)
             where TByteArray : struct, IByteArray
             where TString : struct, IUTF8Bytes, INativeList<byte>
         {
-            if (s.Length == 0)
-            {
-                throw new ArgumentException("argument must have a length > 0", nameof(s));
-            }
-
             var length = s.Length;
-            while (s[length - 1] == PaddingCharValue)
-                length--;
+            if (s.Length > 0)
+            {
+                while (s[length - 1] == PaddingCharValue)
+                    length--;
+            }
 
             int byteCount = length * 5 / 8; //this must be TRUNCATED
             if (bytes.Length != byteCount)
-                throw new ArgumentException($"byte count ({byteCount}) is different than expected bytes ({bytes.Length})");
+                return ConversionError.Encoding;
 
             byte curByte = 0, bitsRemaining = 8;
             int mask = 0, arrayIndex = 0;
@@ -75,7 +73,16 @@ namespace Algorand.Unity
             while (i < length)
             {
                 var error = Unicode.Utf8ToUcs(out var rune, sPtr, ref i, s.Capacity);
-                int cValue = CharToValue((char)rune.value);
+                if (error != ConversionError.None)
+                {
+                    return error;
+                }
+
+                error = CharToValue((char)rune.value, out var cValue);
+                if (error != ConversionError.None)
+                {
+                    return error;
+                }
 
                 if (bitsRemaining > 5)
                 {
@@ -98,6 +105,8 @@ namespace Algorand.Unity
             {
                 bytes[arrayIndex] = curByte;
             }
+
+            return ConversionError.None;
         }
 
         public static void TrimPadding<T>(ref T fs)
@@ -148,7 +157,7 @@ namespace Algorand.Unity
             return new string(returnArray);
         }
 
-        public static void ToString<TByteArray, TString>(TByteArray bytes, ref TString s)
+        public static ConversionError ToString<TByteArray, TString>(TByteArray bytes, ref TString s)
             where TByteArray : struct, IByteArray
             where TString : struct, IUTF8Bytes, INativeList<byte>
         {
@@ -160,16 +169,30 @@ namespace Algorand.Unity
             byte nextCharByte = 0, bitsRemaining = 5;
             int arrayIndex = 0;
 
+            ConversionError error;
+            char c;
             for (var i = 0; i < bytes.Length; i++)
             {
                 var b = bytes[i];
                 nextCharByte = (byte)(nextCharByte | (b >> (8 - bitsRemaining)));
-                s[arrayIndex++] = (byte)ValueToChar(nextCharByte);
+                error = ValueToChar(nextCharByte, out c);
+                if (error != ConversionError.None)
+                {
+                    return error;
+                }
+
+                s[arrayIndex++] = (byte)c;
 
                 if (bitsRemaining < 4)
                 {
                     nextCharByte = (byte)((b >> (3 - bitsRemaining)) & 31);
-                    s[arrayIndex++] = (byte)ValueToChar(nextCharByte);
+                    error = ValueToChar(nextCharByte, out c);
+                    if (error != ConversionError.None)
+                    {
+                        return error;
+                    }
+
+                    s[arrayIndex++] = (byte)c;
                     bitsRemaining += 5;
                 }
 
@@ -180,50 +203,82 @@ namespace Algorand.Unity
             //if we didn't end with a full char
             if (arrayIndex != s.Length)
             {
-                s[arrayIndex++] = (byte)ValueToChar(nextCharByte);
+                error = ValueToChar(nextCharByte, out c);
+                if (error != ConversionError.None)
+                {
+                    return error;
+                }
+
+                s[arrayIndex++] = (byte)c;
                 while (arrayIndex != s.Length) s[arrayIndex++] = PaddingCharValue; //padding
             }
+
+            return ConversionError.None;
         }
 
         public static readonly byte PaddingCharValue = (byte)'=';
 
+        private static ConversionError CharToValue(char c, out int value)
+        {
+            value = c;
+
+            switch (value)
+            {
+                //65-90 == uppercase letters
+                case < 91 and > 64:
+                    value -= 65;
+                    break;
+                //50-55 == numbers 2-7
+                case < 56 and > 49:
+                    value -= 24;
+                    break;
+                //97-122 == lowercase letters
+                case < 123 and > 96:
+                    value -= 97;
+                    break;
+                default:
+                    return ConversionError.Encoding;
+            }
+
+            return ConversionError.None;
+        }
+
         private static int CharToValue(char c)
         {
-            int value = (int)c;
-
-            //65-90 == uppercase letters
-            if (value < 91 && value > 64)
+            if (CharToValue(c, out var value) != ConversionError.None)
             {
-                return value - 65;
-            }
-            //50-55 == numbers 2-7
-            if (value < 56 && value > 49)
-            {
-                return value - 24;
-            }
-            //97-122 == lowercase letters
-            if (value < 123 && value > 96)
-            {
-                return value - 97;
+                throw new ArgumentException("not a valid base32 character", nameof(c));
             }
 
-            throw new ArgumentException("Character is not a Base32 character.", "c");
+            return value; 
+        }
+
+        private static ConversionError ValueToChar(byte b, out char c)
+        {
+            c = default;
+            switch (b)
+            {
+                case < 26:
+                    c = (char)(b + 65);
+                    break;
+                case < 32:
+                    c = (char)(b + 24);
+                    break;
+                default:
+                    return ConversionError.Encoding;
+            }
+
+            return ConversionError.None;
         }
 
         private static char ValueToChar(byte b)
         {
-            if (b < 26)
+            if (ValueToChar(b, out var c) != ConversionError.None)
             {
-                return (char)(b + 65);
+                throw new ArgumentException("not a valid base32 byte", nameof(b));
             }
 
-            if (b < 32)
-            {
-                return (char)(b + 24);
-            }
-
-            throw new ArgumentException("Byte is not a value Base32 value.", "b");
+            return c;
         }
-
     }
 }
