@@ -1,7 +1,7 @@
 using System;
+using System.IO;
 using UnityEditor;
 using UnityEngine;
-using System.IO;
 using PackageInfo = UnityEditor.PackageManager.PackageInfo;
 
 namespace Algorand.Unity.Readme.Editor
@@ -10,7 +10,7 @@ namespace Algorand.Unity.Readme.Editor
     public class ReadmeFileEditor : UnityEditor.Editor
     {
         public Texture2D logo;
-        
+
         public static string DocHomePath =>
             Path.Combine(Application.dataPath, "Algorand.Unity", "Documentation", "index.html");
 
@@ -28,8 +28,8 @@ namespace Algorand.Unity.Readme.Editor
                 GUILayout.FlexibleSpace();
             }
             var style = new GUIStyle(EditorStyles.label) { fontSize = 32, alignment = TextAnchor.MiddleCenter };
-            
-            GUILayout.Label("Unity Algorand SDK", style,
+
+            GUILayout.Label("Algorand SDK for Unity", style,
                 GUILayout.Height(EditorGUIUtility.singleLineHeight * 3));
             var path = DocHomePath;
 
@@ -64,7 +64,7 @@ namespace Algorand.Unity.Readme.Editor
 
             EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
             EditorGUILayout.Separator();
-            
+
             var descriptionStyle = new GUIStyle(EditorStyles.label)
             {
                 wordWrap = true,
@@ -73,7 +73,7 @@ namespace Algorand.Unity.Readme.Editor
             GUILayout.Label(
                 @"   Integrate your game with Algorand, "
                 + @"a Pure Proof-of-Stake blockchain overseen by the Algorand Foundation. "
-                + @"Create and sign Algorand transactions, use Algorand's " 
+                + @"Create and sign Algorand transactions, use Algorand's "
                 + @"REST APIs, "
                 + @"and connect to any Algorand wallet supporting "
                 + @"WalletConnect.",

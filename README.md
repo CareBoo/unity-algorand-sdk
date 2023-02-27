@@ -3,7 +3,7 @@
   <img alt="The Algorand Logo" src="docs/images/algorand_logo_mark.svg"/>
 </picture>
 <br/>
-Unity Algorand SDK
+Algorand SDK for Unity
 
 </h1>
 <p align="center">

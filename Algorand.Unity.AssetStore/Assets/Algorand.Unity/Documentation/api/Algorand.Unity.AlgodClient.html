@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Struct AlgodClient
- | Unity Algorand SDK </title>
+ | Algorand SDK for Unity </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct AlgodClient
- | Unity Algorand SDK ">
+ | Algorand SDK for Unity ">
   
     <link rel="shortcut icon" href="../resources/favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -2366,7 +2366,7 @@ required to create and send transactions.</p>
 
   <a id="Algorand_Unity_AlgodClient_Address_" data-uid="Algorand.Unity.AlgodClient.Address*"></a>
   <h4 id="Algorand_Unity_AlgodClient_Address" data-uid="Algorand.Unity.AlgodClient.Address">Address</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Address of the service, including the port</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2389,14 +2389,13 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_Address_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>e.g. <code>&quot;http://localhost:4001&quot;</code></p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_Headers_" data-uid="Algorand.Unity.AlgodClient.Headers*"></a>
   <h4 id="Algorand_Unity_AlgodClient_Headers" data-uid="Algorand.Unity.AlgodClient.Headers">Headers</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Additional headers to add to requests</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2426,7 +2425,7 @@ required to create and send transactions.</p>
 
   <a id="Algorand_Unity_AlgodClient_Token_" data-uid="Algorand.Unity.AlgodClient.Token*"></a>
   <h4 id="Algorand_Unity_AlgodClient_Token" data-uid="Algorand.Unity.AlgodClient.Token">Token</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Token used in authenticating to the service</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2456,7 +2455,7 @@ required to create and send transactions.</p>
 
   <a id="Algorand_Unity_AlgodClient_TokenHeader_" data-uid="Algorand.Unity.AlgodClient.TokenHeader*"></a>
   <h4 id="Algorand_Unity_AlgodClient_TokenHeader" data-uid="Algorand.Unity.AlgodClient.TokenHeader">TokenHeader</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Request header to use for the authenticating <a class="xref" href="Algorand.Unity.IAlgoApiClient.html#Algorand_Unity_IAlgoApiClient_Token">Token</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2488,7 +2487,7 @@ required to create and send transactions.</p>
 
   <a id="Algorand_Unity_AlgodClient_AbortCatchup_" data-uid="Algorand.Unity.AlgodClient.AbortCatchup*"></a>
   <h4 id="Algorand_Unity_AlgodClient_AbortCatchup_System_String_" data-uid="Algorand.Unity.AlgodClient.AbortCatchup(System.String)">AbortCatchup(String)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Aborts a catchpoint catchup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2508,7 +2507,8 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">catchpoint</span></td>
-        <td></td>
+        <td><p>A catch point</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2528,14 +2528,13 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_AbortCatchup_System_String__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Given a catchpoint, it aborts catching up to this catchpoint</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_AccountApplicationInformation_" data-uid="Algorand.Unity.AlgodClient.AccountApplicationInformation*"></a>
   <h4 id="Algorand_Unity_AlgodClient_AccountApplicationInformation_System_String_System_UInt64_Algorand_Unity_ResponseFormat_" data-uid="Algorand.Unity.AlgodClient.AccountApplicationInformation(System.String,System.UInt64,Algorand.Unity.ResponseFormat)">AccountApplicationInformation(String, UInt64, ResponseFormat)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Get account information about a given app.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2555,17 +2554,20 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">address</span></td>
-        <td></td>
+        <td><p>An account public key</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td><span class="parametername">applicationId</span></td>
-        <td></td>
+        <td><p>An application identifier</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.ResponseFormat.html">ResponseFormat</a></td>
         <td><span class="parametername">format</span></td>
-        <td></td>
+        <td><p>Configures whether the response object is JSON or MessagePack encoded.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2585,14 +2587,13 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_AccountApplicationInformation_System_String_System_UInt64_Algorand_Unity_ResponseFormat__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Given a specific account public key and application ID, this call returns the account&apos;s application local state and global state (AppLocalState and AppParams, if either exists). Global state will only be returned if the provided address is the application&apos;s creator.</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_AccountAssetInformation_" data-uid="Algorand.Unity.AlgodClient.AccountAssetInformation*"></a>
   <h4 id="Algorand_Unity_AlgodClient_AccountAssetInformation_System_String_System_UInt64_Algorand_Unity_ResponseFormat_" data-uid="Algorand.Unity.AlgodClient.AccountAssetInformation(System.String,System.UInt64,Algorand.Unity.ResponseFormat)">AccountAssetInformation(String, UInt64, ResponseFormat)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Get account information about a given asset.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2612,17 +2613,20 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">address</span></td>
-        <td></td>
+        <td><p>An account public key</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td><span class="parametername">assetId</span></td>
-        <td></td>
+        <td><p>An asset identifier</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.ResponseFormat.html">ResponseFormat</a></td>
         <td><span class="parametername">format</span></td>
-        <td></td>
+        <td><p>Configures whether the response object is JSON or MessagePack encoded.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2642,14 +2646,13 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_AccountAssetInformation_System_String_System_UInt64_Algorand_Unity_ResponseFormat__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Given a specific account public key and asset ID, this call returns the account&apos;s asset holding and asset parameters (if either exist). Asset parameters will only be returned if the provided address is the asset&apos;s creator.</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_AccountInformation_" data-uid="Algorand.Unity.AlgodClient.AccountInformation*"></a>
   <h4 id="Algorand_Unity_AlgodClient_AccountInformation_System_String_Algorand_Unity_ExcludeFields_Algorand_Unity_ResponseFormat_" data-uid="Algorand.Unity.AlgodClient.AccountInformation(System.String,Algorand.Unity.ExcludeFields,Algorand.Unity.ResponseFormat)">AccountInformation(String, ExcludeFields, ResponseFormat)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Get account information.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2669,17 +2672,20 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">address</span></td>
-        <td></td>
+        <td><p>An account public key</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.ExcludeFields.html">ExcludeFields</a></td>
         <td><span class="parametername">exclude</span></td>
-        <td></td>
+        <td><p>When set to <code>all</code> will exclude asset holdings, application local state, created asset parameters, any created application parameters. Defaults to <code>none</code>.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.ResponseFormat.html">ResponseFormat</a></td>
         <td><span class="parametername">format</span></td>
-        <td></td>
+        <td><p>Configures whether the response object is JSON or MessagePack encoded.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2699,14 +2705,13 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_AccountInformation_System_String_Algorand_Unity_ExcludeFields_Algorand_Unity_ResponseFormat__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Given a specific account public key, this call returns the accounts status, balance and spendable amounts</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_AddParticipationKey_" data-uid="Algorand.Unity.AlgodClient.AddParticipationKey*"></a>
   <h4 id="Algorand_Unity_AlgodClient_AddParticipationKey_System_Byte___" data-uid="Algorand.Unity.AlgodClient.AddParticipationKey(System.Byte[])">AddParticipationKey(Byte[])</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Add a participation key to the node</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2726,7 +2731,8 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
         <td><span class="parametername">participationkey</span></td>
-        <td></td>
+        <td><p>The participation key to add to the node</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2753,7 +2759,7 @@ required to create and send transactions.</p>
 
   <a id="Algorand_Unity_AlgodClient_AppendKeys_" data-uid="Algorand.Unity.AlgodClient.AppendKeys*"></a>
   <h4 id="Algorand_Unity_AlgodClient_AppendKeys_System_Byte___System_String_" data-uid="Algorand.Unity.AlgodClient.AppendKeys(System.Byte[],System.String)">AppendKeys(Byte[], String)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Append state proof keys to a participation key</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2773,7 +2779,8 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
         <td><span class="parametername">keymap</span></td>
-        <td></td>
+        <td><p>The state proof keys to add to an existing participation ID</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
@@ -2798,14 +2805,13 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_AppendKeys_System_Byte___System_String__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Given a participation ID, append state proof keys to a particular set of participation keys</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_DeleteParticipationKeyByID_" data-uid="Algorand.Unity.AlgodClient.DeleteParticipationKeyByID*"></a>
   <h4 id="Algorand_Unity_AlgodClient_DeleteParticipationKeyByID_System_String_" data-uid="Algorand.Unity.AlgodClient.DeleteParticipationKeyByID(System.String)">DeleteParticipationKeyByID(String)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Delete a given participation key by ID</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2845,14 +2851,13 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_DeleteParticipationKeyByID_System_String__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Delete a given participation key by ID</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_GetApplicationBoxByName_" data-uid="Algorand.Unity.AlgodClient.GetApplicationBoxByName*"></a>
   <h4 id="Algorand_Unity_AlgodClient_GetApplicationBoxByName_System_UInt64_System_String_" data-uid="Algorand.Unity.AlgodClient.GetApplicationBoxByName(System.UInt64,System.String)">GetApplicationBoxByName(UInt64, String)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Get box information for a given application.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2872,12 +2877,14 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td><span class="parametername">applicationId</span></td>
-        <td></td>
+        <td><p>An application identifier</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">name</span></td>
-        <td></td>
+        <td><p>A box name, in the goal app call arg form &apos;encoding:value&apos;. For ints, use the form &apos;int:1234&apos;. For raw bytes, use the form &apos;b64:A==&apos;. For printable strings, use the form &apos;str:hello&apos;. For addresses, use the form &apos;addr:XYZ...&apos;.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2897,14 +2904,13 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_GetApplicationBoxByName_System_UInt64_System_String__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Given an application ID and box name, it returns the box name and value (each base64 encoded). Box names must be in the goal app call arg encoding form &apos;encoding:value&apos;. For ints, use the form &apos;int:1234&apos;. For raw bytes, use the form &apos;b64:A==&apos;. For printable strings, use the form &apos;str:hello&apos;. For addresses, use the form &apos;addr:XYZ...&apos;.</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_GetApplicationBoxes_" data-uid="Algorand.Unity.AlgodClient.GetApplicationBoxes*"></a>
   <h4 id="Algorand_Unity_AlgodClient_GetApplicationBoxes_System_UInt64_Algorand_Unity_Optional_System_UInt64__" data-uid="Algorand.Unity.AlgodClient.GetApplicationBoxes(System.UInt64,Algorand.Unity.Optional{System.UInt64})">GetApplicationBoxes(UInt64, Optional&lt;UInt64&gt;)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Get all box names for a given application.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2924,12 +2930,14 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td><span class="parametername">applicationId</span></td>
-        <td></td>
+        <td><p>An application identifier</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
         <td><span class="parametername">max</span></td>
-        <td></td>
+        <td><p>Max number of box names to return. If max is not set, or max == 0, returns all box-names.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2949,14 +2957,13 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_GetApplicationBoxes_System_UInt64_Algorand_Unity_Optional_System_UInt64___remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Given an application ID, return all Box names. No particular ordering is guaranteed. Request fails when client or server-side configured limits prevent returning all Box names.</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_GetApplicationByID_" data-uid="Algorand.Unity.AlgodClient.GetApplicationByID*"></a>
   <h4 id="Algorand_Unity_AlgodClient_GetApplicationByID_System_UInt64_" data-uid="Algorand.Unity.AlgodClient.GetApplicationByID(System.UInt64)">GetApplicationByID(UInt64)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Get application information.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2976,7 +2983,8 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td><span class="parametername">applicationId</span></td>
-        <td></td>
+        <td><p>An application identifier</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2996,14 +3004,13 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_GetApplicationByID_System_UInt64__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Given a application ID, it returns application information including creator, approval and clear programs, global and local schemas, and global state.</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_GetAssetByID_" data-uid="Algorand.Unity.AlgodClient.GetAssetByID*"></a>
   <h4 id="Algorand_Unity_AlgodClient_GetAssetByID_System_UInt64_" data-uid="Algorand.Unity.AlgodClient.GetAssetByID(System.UInt64)">GetAssetByID(UInt64)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Get asset information.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -3023,7 +3030,8 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td><span class="parametername">assetId</span></td>
-        <td></td>
+        <td><p>An asset identifier</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3043,14 +3051,13 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_GetAssetByID_System_UInt64__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Given a asset ID, it returns asset information including creator, name, total supply and special addresses.</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_GetBlock_" data-uid="Algorand.Unity.AlgodClient.GetBlock*"></a>
   <h4 id="Algorand_Unity_AlgodClient_GetBlock_System_UInt64_Algorand_Unity_ResponseFormat_" data-uid="Algorand.Unity.AlgodClient.GetBlock(System.UInt64,Algorand.Unity.ResponseFormat)">GetBlock(UInt64, ResponseFormat)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Get the block for the given round.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -3070,12 +3077,14 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td><span class="parametername">round</span></td>
-        <td></td>
+        <td><p>The round from which to fetch block information.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.ResponseFormat.html">ResponseFormat</a></td>
         <td><span class="parametername">format</span></td>
-        <td></td>
+        <td><p>Configures whether the response object is JSON or MessagePack encoded.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3102,7 +3111,7 @@ required to create and send transactions.</p>
 
   <a id="Algorand_Unity_AlgodClient_GetBlockHash_" data-uid="Algorand.Unity.AlgodClient.GetBlockHash*"></a>
   <h4 id="Algorand_Unity_AlgodClient_GetBlockHash_System_UInt64_" data-uid="Algorand.Unity.AlgodClient.GetBlockHash(System.UInt64)">GetBlockHash(UInt64)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Get the block hash for the block on the given round.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -3122,7 +3131,8 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td><span class="parametername">round</span></td>
-        <td></td>
+        <td><p>The round from which to fetch block hash information.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3149,7 +3159,7 @@ required to create and send transactions.</p>
 
   <a id="Algorand_Unity_AlgodClient_GetGenesis_" data-uid="Algorand.Unity.AlgodClient.GetGenesis*"></a>
   <h4 id="Algorand_Unity_AlgodClient_GetGenesis" data-uid="Algorand.Unity.AlgodClient.GetGenesis">GetGenesis()</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Gets the genesis information.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -3167,19 +3177,19 @@ required to create and send transactions.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="Algorand.Unity.AlgoApiObject.html">AlgoApiObject</a>&gt;</td>
-        <td></td>
+        <td><p>The genesis file in json.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_GetGenesis_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Returns the entire genesis file in json.</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_GetLedgerStateDelta_" data-uid="Algorand.Unity.AlgodClient.GetLedgerStateDelta*"></a>
   <h4 id="Algorand_Unity_AlgodClient_GetLedgerStateDelta_System_UInt64_" data-uid="Algorand.Unity.AlgodClient.GetLedgerStateDelta(System.UInt64)">GetLedgerStateDelta(UInt64)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Get a LedgerStateDelta object for a given round</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -3199,7 +3209,8 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td><span class="parametername">round</span></td>
-        <td></td>
+        <td><p>The round for which the deltas are desired.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3219,14 +3230,13 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_GetLedgerStateDelta_System_UInt64__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Get ledger deltas for a round.</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_GetLightBlockHeaderProof_" data-uid="Algorand.Unity.AlgodClient.GetLightBlockHeaderProof*"></a>
   <h4 id="Algorand_Unity_AlgodClient_GetLightBlockHeaderProof_System_UInt64_" data-uid="Algorand.Unity.AlgodClient.GetLightBlockHeaderProof(System.UInt64)">GetLightBlockHeaderProof(UInt64)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Gets a proof for a given light block header inside a state proof commitment</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -3246,7 +3256,8 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td><span class="parametername">round</span></td>
-        <td></td>
+        <td><p>The round to which the light block header belongs.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3273,7 +3284,7 @@ required to create and send transactions.</p>
 
   <a id="Algorand_Unity_AlgodClient_GetParticipationKeyByID_" data-uid="Algorand.Unity.AlgodClient.GetParticipationKeyByID*"></a>
   <h4 id="Algorand_Unity_AlgodClient_GetParticipationKeyByID_System_String_" data-uid="Algorand.Unity.AlgodClient.GetParticipationKeyByID(System.String)">GetParticipationKeyByID(String)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Get participation key info given a participation ID</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -3313,14 +3324,13 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_GetParticipationKeyByID_System_String__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Given a participation ID, return information about that participation key</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_GetParticipationKeys_" data-uid="Algorand.Unity.AlgodClient.GetParticipationKeys*"></a>
   <h4 id="Algorand_Unity_AlgodClient_GetParticipationKeys" data-uid="Algorand.Unity.AlgodClient.GetParticipationKeys">GetParticipationKeys()</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Return a list of participation keys</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -3343,14 +3353,13 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_GetParticipationKeys_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Return a list of participation keys</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_GetPendingTransactions_" data-uid="Algorand.Unity.AlgodClient.GetPendingTransactions*"></a>
   <h4 id="Algorand_Unity_AlgodClient_GetPendingTransactions_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_ResponseFormat_" data-uid="Algorand.Unity.AlgodClient.GetPendingTransactions(Algorand.Unity.Optional{System.UInt64},Algorand.Unity.ResponseFormat)">GetPendingTransactions(Optional&lt;UInt64&gt;, ResponseFormat)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Get a list of unconfirmed transactions currently in the transaction pool.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -3370,12 +3379,14 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
         <td><span class="parametername">max</span></td>
-        <td></td>
+        <td><p>Truncated number of transactions to display. If max=0, returns all pending txns.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.ResponseFormat.html">ResponseFormat</a></td>
         <td><span class="parametername">format</span></td>
-        <td></td>
+        <td><p>Configures whether the response object is JSON or MessagePack encoded.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3395,14 +3406,13 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_GetPendingTransactions_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_ResponseFormat__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Get the list of pending transactions, sorted by priority, in decreasing order, truncated at the end at MAX. If MAX = 0, returns all pending transactions.</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_GetPendingTransactionsByAddress_" data-uid="Algorand.Unity.AlgodClient.GetPendingTransactionsByAddress*"></a>
   <h4 id="Algorand_Unity_AlgodClient_GetPendingTransactionsByAddress_System_String_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_ResponseFormat_" data-uid="Algorand.Unity.AlgodClient.GetPendingTransactionsByAddress(System.String,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.ResponseFormat)">GetPendingTransactionsByAddress(String, Optional&lt;UInt64&gt;, ResponseFormat)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Get a list of unconfirmed transactions currently in the transaction pool by address.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -3422,17 +3432,20 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">address</span></td>
-        <td></td>
+        <td><p>An account public key</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
         <td><span class="parametername">max</span></td>
-        <td></td>
+        <td><p>Truncated number of transactions to display. If max=0, returns all pending txns.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.ResponseFormat.html">ResponseFormat</a></td>
         <td><span class="parametername">format</span></td>
-        <td></td>
+        <td><p>Configures whether the response object is JSON or MessagePack encoded.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3452,14 +3465,13 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_GetPendingTransactionsByAddress_System_String_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_ResponseFormat__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Get the list of pending transactions by address, sorted by priority, in decreasing order, truncated at the end at MAX. If MAX = 0, returns all pending transactions.</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_GetStateProof_" data-uid="Algorand.Unity.AlgodClient.GetStateProof*"></a>
   <h4 id="Algorand_Unity_AlgodClient_GetStateProof_System_UInt64_" data-uid="Algorand.Unity.AlgodClient.GetStateProof(System.UInt64)">GetStateProof(UInt64)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Get a state proof that covers a given round</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -3479,7 +3491,8 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td><span class="parametername">round</span></td>
-        <td></td>
+        <td><p>The round for which a state proof is desired.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3506,7 +3519,7 @@ required to create and send transactions.</p>
 
   <a id="Algorand_Unity_AlgodClient_GetStatus_" data-uid="Algorand.Unity.AlgodClient.GetStatus*"></a>
   <h4 id="Algorand_Unity_AlgodClient_GetStatus" data-uid="Algorand.Unity.AlgodClient.GetStatus">GetStatus()</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Gets the current node status.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -3536,7 +3549,7 @@ required to create and send transactions.</p>
 
   <a id="Algorand_Unity_AlgodClient_GetSupply_" data-uid="Algorand.Unity.AlgodClient.GetSupply*"></a>
   <h4 id="Algorand_Unity_AlgodClient_GetSupply" data-uid="Algorand.Unity.AlgodClient.GetSupply">GetSupply()</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Get the current supply reported by the ledger.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -3566,7 +3579,7 @@ required to create and send transactions.</p>
 
   <a id="Algorand_Unity_AlgodClient_GetSyncRound_" data-uid="Algorand.Unity.AlgodClient.GetSyncRound*"></a>
   <h4 id="Algorand_Unity_AlgodClient_GetSyncRound" data-uid="Algorand.Unity.AlgodClient.GetSyncRound">GetSyncRound()</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Returns the minimum sync round the ledger is keeping in cache.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -3589,14 +3602,13 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_GetSyncRound_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Gets the minimum sync round for the ledger.</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_GetTransactionProof_" data-uid="Algorand.Unity.AlgodClient.GetTransactionProof*"></a>
   <h4 id="Algorand_Unity_AlgodClient_GetTransactionProof_System_UInt64_System_String_System_String_Algorand_Unity_ResponseFormat_" data-uid="Algorand.Unity.AlgodClient.GetTransactionProof(System.UInt64,System.String,System.String,Algorand.Unity.ResponseFormat)">GetTransactionProof(UInt64, String, String, ResponseFormat)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Get a proof for a transaction in a block.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -3616,22 +3628,30 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td><span class="parametername">round</span></td>
-        <td></td>
+        <td><p>The round in which the transaction appears.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">txid</span></td>
-        <td></td>
+        <td><p>The transaction ID for which to generate a proof.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">hashtype</span></td>
-        <td></td>
+        <td><p>The type of hash function used to create the proof, must be one of: </p>
+<ul>
+<li>sha512_256 </li>
+<li>sha256</li>
+</ul>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.ResponseFormat.html">ResponseFormat</a></td>
         <td><span class="parametername">format</span></td>
-        <td></td>
+        <td><p>Configures whether the response object is JSON or MessagePack encoded.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3681,14 +3701,13 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_GetVersion_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Retrieves the supported API versions, binary build versions, and genesis information.</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_HealthCheck_" data-uid="Algorand.Unity.AlgodClient.HealthCheck*"></a>
   <h4 id="Algorand_Unity_AlgodClient_HealthCheck" data-uid="Algorand.Unity.AlgodClient.HealthCheck">HealthCheck()</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Returns OK if healthy.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -3718,7 +3737,7 @@ required to create and send transactions.</p>
 
   <a id="Algorand_Unity_AlgodClient_Metrics_" data-uid="Algorand.Unity.AlgodClient.Metrics*"></a>
   <h4 id="Algorand_Unity_AlgodClient_Metrics" data-uid="Algorand.Unity.AlgodClient.Metrics">Metrics()</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Return metrics about algod functioning.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -3748,7 +3767,7 @@ required to create and send transactions.</p>
 
   <a id="Algorand_Unity_AlgodClient_PendingTransactionInformation_" data-uid="Algorand.Unity.AlgodClient.PendingTransactionInformation*"></a>
   <h4 id="Algorand_Unity_AlgodClient_PendingTransactionInformation_System_String_Algorand_Unity_ResponseFormat_" data-uid="Algorand.Unity.AlgodClient.PendingTransactionInformation(System.String,Algorand.Unity.ResponseFormat)">PendingTransactionInformation(String, ResponseFormat)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Get a specific pending transaction.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -3768,12 +3787,14 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">txid</span></td>
-        <td></td>
+        <td><p>A transaction ID</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.ResponseFormat.html">ResponseFormat</a></td>
         <td><span class="parametername">format</span></td>
-        <td></td>
+        <td><p>Configures whether the response object is JSON or MessagePack encoded.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3788,19 +3809,31 @@ required to create and send transactions.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<span class="xref">PendingTransactionResponse</span>&gt;</td>
-        <td></td>
+        <td><p>Given a transaction ID of a recently submitted transaction, it returns information about it.  There are several cases when this might succeed:</p>
+<ul>
+<li>transaction committed (committed round &gt; 0)</li>
+<li>transaction still in the pool (committed round = 0, pool error = &quot;&quot;)</li>
+<li>transaction removed from pool due to error (committed round = 0, pool error != &quot;&quot;)</li>
+</ul>
+<p>Or the transaction may have happened sufficiently long ago that the node no longer remembers it, and this will return an error.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_PendingTransactionInformation_System_String_Algorand_Unity_ResponseFormat__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Given a transaction ID of a recently submitted transaction, it returns information about it.  There are several cases when this might succeed:</p>
+<ul>
+<li>transaction committed (committed round &gt; 0)</li>
+<li>transaction still in the pool (committed round = 0, pool error = &quot;&quot;)</li>
+<li>transaction removed from pool due to error (committed round = 0, pool error != &quot;&quot;)
+Or the transaction may have happened sufficiently long ago that the node no longer remembers it, and this will return an error.</li>
+</ul>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_RawTransaction_" data-uid="Algorand.Unity.AlgodClient.RawTransaction*"></a>
   <h4 id="Algorand_Unity_AlgodClient_RawTransaction_System_Byte___" data-uid="Algorand.Unity.AlgodClient.RawTransaction(System.Byte[])">RawTransaction(Byte[])</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Broadcasts a raw transaction to the network.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -3820,7 +3853,8 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
         <td><span class="parametername">rawtxn</span></td>
-        <td></td>
+        <td><p>The byte encoded signed transaction to broadcast to network</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3913,7 +3947,7 @@ required to create and send transactions.</p>
 
   <a id="Algorand_Unity_AlgodClient_SetSyncRound_" data-uid="Algorand.Unity.AlgodClient.SetSyncRound*"></a>
   <h4 id="Algorand_Unity_AlgodClient_SetSyncRound_System_UInt64_" data-uid="Algorand.Unity.AlgodClient.SetSyncRound(System.UInt64)">SetSyncRound(UInt64)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Given a round, tells the ledger to keep that round in its cache.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -3933,7 +3967,8 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td><span class="parametername">round</span></td>
-        <td></td>
+        <td><p>The round for which the deltas are desired.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3953,8 +3988,7 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_SetSyncRound_System_UInt64__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Sets the minimum sync round on the ledger.</p>
 </div>
 
 
@@ -4000,14 +4034,13 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_ShutdownNode_Algorand_Unity_Optional_System_UInt64___remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Special management endpoint to shutdown the node. Optionally provide a timeout parameter to indicate that the node should begin shutting down after a number of seconds.</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_StartCatchup_" data-uid="Algorand.Unity.AlgodClient.StartCatchup*"></a>
   <h4 id="Algorand_Unity_AlgodClient_StartCatchup_System_String_" data-uid="Algorand.Unity.AlgodClient.StartCatchup(System.String)">StartCatchup(String)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Starts a catchpoint catchup.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -4027,7 +4060,8 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">catchpoint</span></td>
-        <td></td>
+        <td><p>A catch point</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -4047,14 +4081,13 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_StartCatchup_System_String__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Given a catchpoint, it starts catching up to this catchpoint</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_SwaggerJSON_" data-uid="Algorand.Unity.AlgodClient.SwaggerJSON*"></a>
   <h4 id="Algorand_Unity_AlgodClient_SwaggerJSON" data-uid="Algorand.Unity.AlgodClient.SwaggerJSON">SwaggerJSON()</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Gets the current swagger spec.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -4072,19 +4105,19 @@ required to create and send transactions.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Algorand.Unity.AlgoApiRequest.Sent-1.html">AlgoApiRequest.Sent</a>&lt;<a class="xref" href="Algorand.Unity.AlgoApiObject.html">AlgoApiObject</a>&gt;</td>
-        <td></td>
+        <td><p>The current swagger spec</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_SwaggerJSON_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Returns the entire swagger spec in json.</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_TealCompile_" data-uid="Algorand.Unity.AlgodClient.TealCompile*"></a>
   <h4 id="Algorand_Unity_AlgodClient_TealCompile_System_Byte___Algorand_Unity_Optional_System_Boolean__" data-uid="Algorand.Unity.AlgodClient.TealCompile(System.Byte[],Algorand.Unity.Optional{System.Boolean})">TealCompile(Byte[], Optional&lt;Boolean&gt;)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Compile TEAL source code to binary, produce its hash</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -4104,12 +4137,14 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
         <td><span class="parametername">source</span></td>
-        <td></td>
+        <td><p>TEAL source code to be compiled</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
         <td><span class="parametername">sourcemap</span></td>
-        <td></td>
+        <td><p>When set to <code>true</code>, returns the source map of the program as a JSON. Defaults to <code>false</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -4129,14 +4164,13 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_TealCompile_System_Byte___Algorand_Unity_Optional_System_Boolean___remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Given TEAL source code in plain text, return base64 encoded program bytes and base32 SHA512_256 hash of program bytes (Address style). This endpoint is only enabled when a node&apos;s configuration file sets EnableDeveloperAPI to true.</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_TealDisassemble_" data-uid="Algorand.Unity.AlgodClient.TealDisassemble*"></a>
   <h4 id="Algorand_Unity_AlgodClient_TealDisassemble_System_Byte___" data-uid="Algorand.Unity.AlgodClient.TealDisassemble(System.Byte[])">TealDisassemble(Byte[])</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Disassemble program bytes into the TEAL source code.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -4156,7 +4190,8 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
         <td><span class="parametername">source</span></td>
-        <td></td>
+        <td><p>TEAL program binary to be disassembled</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -4176,14 +4211,13 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_TealDisassemble_System_Byte____remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Given the program bytes, return the TEAL source code in plain text. This endpoint is only enabled when a node&apos;s configuration file sets EnableDeveloperAPI to true.</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_TealDryrun_" data-uid="Algorand.Unity.AlgodClient.TealDryrun*"></a>
   <h4 id="Algorand_Unity_AlgodClient_TealDryrun_DryrunRequest_" data-uid="Algorand.Unity.AlgodClient.TealDryrun(DryrunRequest)">TealDryrun(DryrunRequest)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Provide debugging information for a transaction (or group).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -4203,7 +4237,8 @@ required to create and send transactions.</p>
       <tr>
         <td><span class="xref">DryrunRequest</span></td>
         <td><span class="parametername">request</span></td>
-        <td></td>
+        <td><p>Transaction (or group) and any accompanying state-simulation data.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -4223,14 +4258,13 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_TealDryrun_DryrunRequest__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Executes TEAL program(s) in context and returns debugging information about the execution. This endpoint is only enabled when a node&apos;s configuration file sets EnableDeveloperAPI to true.</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_TransactionParams_" data-uid="Algorand.Unity.AlgodClient.TransactionParams*"></a>
   <h4 id="Algorand_Unity_AlgodClient_TransactionParams" data-uid="Algorand.Unity.AlgodClient.TransactionParams">TransactionParams()</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Get parameters for constructing a new transaction</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -4260,7 +4294,7 @@ required to create and send transactions.</p>
 
   <a id="Algorand_Unity_AlgodClient_UnsetSyncRound_" data-uid="Algorand.Unity.AlgodClient.UnsetSyncRound*"></a>
   <h4 id="Algorand_Unity_AlgodClient_UnsetSyncRound" data-uid="Algorand.Unity.AlgodClient.UnsetSyncRound">UnsetSyncRound()</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Removes minimum sync round restriction from the ledger.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -4283,14 +4317,13 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_UnsetSyncRound_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Unset the ledger sync round.</p>
 </div>
 
 
   <a id="Algorand_Unity_AlgodClient_WaitForBlock_" data-uid="Algorand.Unity.AlgodClient.WaitForBlock*"></a>
   <h4 id="Algorand_Unity_AlgodClient_WaitForBlock_System_UInt64_" data-uid="Algorand.Unity.AlgodClient.WaitForBlock(System.UInt64)">WaitForBlock(UInt64)</h4>
-  <div class="markdown level1 summary"><p>A client for accessing the algod service</p>
+  <div class="markdown level1 summary"><p>Gets the node status after waiting for the given round.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -4310,7 +4343,8 @@ required to create and send transactions.</p>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td><span class="parametername">round</span></td>
-        <td></td>
+        <td><p>The round to wait until returning status</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -4330,8 +4364,7 @@ required to create and send transactions.</p>
     </tbody>
   </table>
   <h5 id="Algorand_Unity_AlgodClient_WaitForBlock_System_UInt64__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>The algod service is responsible for handling information
-required to create and send transactions.</p>
+  <div class="markdown level1 remarks"><p>Waits for a block to appear after round {round} and returns the node&apos;s status at the time.</p>
 </div>
 
 

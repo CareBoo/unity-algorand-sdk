@@ -1,9 +1,9 @@
-# Contributing to Unity Algorand SDK
+# Contributing to Algorand SDK for Unity
 
-:tada: Thank you for taking time to contributing to Unity Algorand SDK! :tada:
+:tada: Thank you for taking time to contributing to Algorand SDK for Unity! :tada:
 
 The following is set of guidelines for contributing to the
-[Unity Algorand SDK](https://github.com/CareBoo/unity-algorand-sdk).
+[Algorand SDK for Unity](https://github.com/CareBoo/unity-algorand-sdk).
 These are guidelines, not rules. Use your best judgment, and feel free to propose
 changes to this document in a pull request.
 
@@ -63,17 +63,17 @@ Explain the problem and include additional details to help maintainers reproduce
 Provide more context by answering these questions:
 
 - **Did the problem start happening recently** (e.g. after updating to a new version) or was this always a problem?
-- If the problem started happening recently, **can you reproduce the problem in an older version of Unity Algorand SDK?** What's the most recent version in which the problem doesn't happen? You can download older versions from [the releases page](https://github.com/CareBoo/unity-algorand-sdk/releases).
+- If the problem started happening recently, **can you reproduce the problem in an older version of Algorand SDK for Unity?** What's the most recent version in which the problem doesn't happen? You can download older versions from [the releases page](https://github.com/CareBoo/unity-algorand-sdk/releases).
 - **Can you reliably reproduce the issue?** If not, provide details about how often the problem happens and under which conditions it normally happens.
 
 Include details about your configuration and environment:
 
-- **Which version of Unity Algorand SDK are you using?** You can get the exact version from the `package.json` file that ships with the package.
+- **Which version of Algorand SDK for Unity are you using?** You can get the exact version from the `package.json` file that ships with the package.
 - **What's the name and version of the OS you're using**?
 
 ### Suggesting Enhancements
 
-This section guides you through submitting an enhancement suggestion for Unity Algorand SDK, including completely new features and minor improvements to existing functionality. Following these guidelines helps maintainers and the community understand your suggestion :pencil: and find related suggestions :mag_right:.
+This section guides you through submitting an enhancement suggestion for Algorand SDK for Unity, including completely new features and minor improvements to existing functionality. Following these guidelines helps maintainers and the community understand your suggestion :pencil: and find related suggestions :mag_right:.
 
 Before creating enhancement suggestions, please check [this list](#before-submitting-an-enhancement-suggestion) as you might find out that you don't need to create one. When you are creating an enhancement suggestion, please [include as many details as possible](#how-do-i-submit-a-good-enhancement-suggestion). Fill in [the template](https://github.com/CareBoo/unity-algorand-sdk/blob/main/.github/ISSUE_TEMPLATE/feature_request.md), including the steps that you imagine you would take if the feature you're requesting existed.
 
