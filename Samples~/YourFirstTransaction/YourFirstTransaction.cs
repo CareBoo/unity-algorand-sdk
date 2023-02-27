@@ -5,6 +5,11 @@ namespace Algorand.Unity.Samples.YourFirstTransaction
 {
     public class YourFirstTransaction : MonoBehaviour
     {
+        private static GUILayoutOption[] AddressSize = { GUILayout.Width(58) };
+        private static GUILayoutOption[] MicroAlgosSize = { GUILayout.Width(50) };
+
+        public Vector2 referenceScreenResolution = new Vector2(1280, 720);
+
         private AlgodClient algod = new AlgodClient("https://node.testnet.algoexplorerapi.io");
 
         private IndexerClient indexer = new IndexerClient("https://algoindexer.testnet.algoexplorerapi.io");
@@ -13,13 +18,13 @@ namespace Algorand.Unity.Samples.YourFirstTransaction
 
         private string indexerHealth;
 
-        private ulong balance;
+        private MicroAlgos balance;
 
         private Account account;
 
         private string recipient;
 
-        private ulong payAmount;
+        private MicroAlgos payAmount;
 
         private string txnStatus;
 
@@ -27,65 +32,141 @@ namespace Algorand.Unity.Samples.YourFirstTransaction
         {
             CheckAlgodStatus().Forget();
             CheckIndexerStatus().Forget();
+            var maxAlgoAmount = 10_000_000_000 * MicroAlgos.PerAlgo;
+            Debug.Log(maxAlgoAmount);
         }
 
         public void OnGUI()
         {
-            GUI.skin.label.fontSize = 24;
-            GUI.skin.label.alignment = TextAnchor.MiddleCenter;
-            GUI.skin.button.fontSize = 24;
-            GUI.skin.button.alignment = TextAnchor.MiddleCenter;
-            GUI.skin.textField.fontSize = 24;
-            GUI.skin.textField.alignment = TextAnchor.MiddleCenter;
-            GUILayout.BeginArea(new Rect(0, 0, Screen.width, Screen.height),
-                new GUIStyle(GUI.skin.box)
-                    { normal = new GUIStyleState() { background = GUI.skin.button.normal.background } });
-            GUILayout.FlexibleSpace();
+            Vector2 scale;
+            scale.x = Screen.width / referenceScreenResolution.x;
+            scale.y = Screen.height / referenceScreenResolution.y;
+            GUIUtility.ScaleAroundPivot(scale, Vector2.zero);
 
+            var maxAddressSize = GUI.skin.textField.CalcSize(new GUIContent(Address.Empty.ToString()));
+            AddressSize[0] = GUILayout.Width(maxAddressSize.x + 16);
+
+            var maxAlgoAmount = 10_000_000_000 * MicroAlgos.PerAlgo;
+            var maxMicroAlgoSize = GUI.skin.textField.CalcSize(new GUIContent(maxAlgoAmount.ToString()));
+            MicroAlgosSize[0] = GUILayout.Width(maxMicroAlgoSize.x + 16);
+
+            using var areaScope = new GUILayout.AreaScope(
+                new Rect(
+                    5,
+                    5,
+                    referenceScreenResolution.x - 10,
+                    referenceScreenResolution.y - 10));
             GUILayout.Label($"Algod Status: {algodHealth}");
             GUILayout.Label($"Indexer Status: {indexerHealth}");
 
             GUILayout.Space(20);
 
-            GUILayout.Label("Account Address:");
-            GUILayout.TextField(account.Address.ToString());
-            GUILayout.Label($"Balance (MicroAlgos):");
-            GUILayout.TextField(balance.ToString());
+            using (new GUILayout.HorizontalScope())
+            {
+                var generateAccountButtonText =
+                    account.Address == Address.Empty ? "Generate Account" : "Regenerate Account";
+                if (GUILayout.Button(generateAccountButtonText))
+                    account = Account.GenerateAccount();
+
+                GUILayout.FlexibleSpace();
+            }
 
             GUILayout.Space(5);
 
-            GUILayout.BeginHorizontal();
-            GUILayout.FlexibleSpace();
+            if (account.Address != Address.Empty)
+            {
+                using (new GUILayout.HorizontalScope())
+                {
+                    GUILayout.Label("Account Address:");
+                    GUILayout.TextField(account.Address.ToString(), AddressSize);
+                    GUILayout.FlexibleSpace();
+                }
 
-            if (GUILayout.Button("Regenerate Account"))
-                account = Account.GenerateAccount();
-            if (GUILayout.Button("Refresh Balance"))
-                CheckBalance().Forget();
+                using (new GUILayout.HorizontalScope())
+                {
+                    GUILayout.Label("Balance (MicroAlgos):");
+                    GUILayout.TextField(balance.Amount.ToString(), MicroAlgosSize);
+                    GUILayout.FlexibleSpace();
+                }
 
-            GUILayout.FlexibleSpace();
-            GUILayout.EndHorizontal();
+                GUILayout.Space(5);
+
+                using (new GUILayout.HorizontalScope())
+                {
+                    if (GUILayout.Button("Copy address"))
+                    {
+                        GUIUtility.systemCopyBuffer = account.Address;
+                    }
+
+                    GUILayout.FlexibleSpace();
+                }
+
+                using (new GUILayout.HorizontalScope())
+                {
+                    if (GUILayout.Button("Deposit funds into Account"))
+                    {
+                        Application.OpenURL("https://bank.testnet.algorand.network");
+                    }
+
+                    GUILayout.FlexibleSpace();
+                }
+
+                using (new GUILayout.HorizontalScope())
+                {
+                    if (GUILayout.Button("Refresh Balance"))
+                    {
+                        CheckBalance().Forget();
+                    }
+
+                    GUILayout.FlexibleSpace();
+                }
+            }
+
+            if (balance <= 0)
+            {
+                return;
+            }
 
             GUILayout.Space(20);
 
-            GUILayout.Label("Recipient Address:");
-            recipient = GUILayout.TextField(recipient);
+            using (new GUILayout.HorizontalScope())
+            {
+                GUILayout.Label("Recipient Address:");
+                recipient = GUILayout.TextField(recipient, AddressSize);
+                GUILayout.FlexibleSpace();
+            }
 
             GUILayout.Space(5);
 
-            GUILayout.Label("Payment Amount (MicroAlgos):");
-            if (ulong.TryParse(GUILayout.TextField(payAmount.ToString()), out var amt))
-                payAmount = amt;
+            using (new GUILayout.HorizontalScope())
+            {
+                GUILayout.Label("Payment Amount (MicroAlgos):");
+                var payAmountText = GUILayout.TextField(payAmount.Amount.ToString(), MicroAlgosSize);
+                if (ulong.TryParse(payAmountText, out var amt))
+                {
+                    payAmount = amt;
+                }
+
+                GUILayout.FlexibleSpace();
+            }
 
             GUILayout.Space(5);
 
-            if (txnStatus != "awaiting confirmation..." && GUILayout.Button("Send payment to recipient"))
-                MakePayment().Forget();
+            if (txnStatus != "awaiting confirmation..." && account.Address != Address.Empty)
+            {
+                using (new GUILayout.HorizontalScope())
+                {
+                    if (GUILayout.Button("Send payment to recipient"))
+                    {
+                        MakePayment().Forget();
+                    }
+
+                    GUILayout.FlexibleSpace();
+                }
+            }
 
             if (txnStatus != null)
                 GUILayout.Label($"Transaction Status: {txnStatus}");
-
-            GUILayout.FlexibleSpace();
-            GUILayout.EndArea();
         }
 
         public async UniTaskVoid CheckAlgodStatus()
@@ -108,7 +189,10 @@ namespace Algorand.Unity.Samples.YourFirstTransaction
             if (err)
             {
                 balance = 0;
-                Debug.LogError(err);
+                if (!err.Message.Contains("no accounts found for address"))
+                {
+                    Debug.LogError(err);
+                }
             }
             else
             {
@@ -156,7 +240,7 @@ namespace Algorand.Unity.Samples.YourFirstTransaction
                 return;
             }
 
-            txnStatus = $"confirmed on round {confirmed.ConfirmedRound}";
+            txnStatus = $"confirmed on round {confirmed.ConfirmedRound.Value}";
         }
     }
 }
