@@ -63626,6 +63626,19 @@ references:
   commentId: F:Algorand.Unity.WalletConnect.WalletConnectRpc.Algorand.ChainId
   fullName: Algorand.Unity.WalletConnect.WalletConnectRpc.Algorand.ChainId
   nameWithType: WalletConnectRpc.Algorand.ChainId
+- uid: Algorand.Unity.WalletConnect.WalletConnectRpc.Algorand.GetNetworkFromChainId(System.Int32)
+  name: GetNetworkFromChainId(Int32)
+  href: api/Algorand.Unity.WalletConnect.WalletConnectRpc.Algorand.html#Algorand_Unity_WalletConnect_WalletConnectRpc_Algorand_GetNetworkFromChainId_System_Int32_
+  commentId: M:Algorand.Unity.WalletConnect.WalletConnectRpc.Algorand.GetNetworkFromChainId(System.Int32)
+  fullName: Algorand.Unity.WalletConnect.WalletConnectRpc.Algorand.GetNetworkFromChainId(System.Int32)
+  nameWithType: WalletConnectRpc.Algorand.GetNetworkFromChainId(Int32)
+- uid: Algorand.Unity.WalletConnect.WalletConnectRpc.Algorand.GetNetworkFromChainId*
+  name: GetNetworkFromChainId
+  href: api/Algorand.Unity.WalletConnect.WalletConnectRpc.Algorand.html#Algorand_Unity_WalletConnect_WalletConnectRpc_Algorand_GetNetworkFromChainId_
+  commentId: Overload:Algorand.Unity.WalletConnect.WalletConnectRpc.Algorand.GetNetworkFromChainId
+  isSpec: "True"
+  fullName: Algorand.Unity.WalletConnect.WalletConnectRpc.Algorand.GetNetworkFromChainId
+  nameWithType: WalletConnectRpc.Algorand.GetNetworkFromChainId
 - uid: Algorand.Unity.WalletConnect.WalletConnectRpc.Algorand.MainNetChainId
   name: MainNetChainId
   href: api/Algorand.Unity.WalletConnect.WalletConnectRpc.Algorand.html#Algorand_Unity_WalletConnect_WalletConnectRpc_Algorand_MainNetChainId
