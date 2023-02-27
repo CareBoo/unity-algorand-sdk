@@ -5,6 +5,78 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [4.0.0](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0...v4.0.0) (2023-02-27)
+
+
+### Bug Fixes
+
+* **2020.3:** change unsupported switch syntax to if statements ([7e57e7a](https://github.com/CareBoo/unity-algorand-sdk/commit/7e57e7a1547610809a1ad1b23206188070769bb5))
+* **account:** fix `TryParse` throwing `NullReferenceException` when given string is null ([142bc3b](https://github.com/CareBoo/unity-algorand-sdk/commit/142bc3bc3229de3ea9fa97f22f91ea3e68f43607))
+* **algod:** fix `WaitForConfirmation` not respecting `cancellationToken` ([d0b76cd](https://github.com/CareBoo/unity-algorand-sdk/commit/d0b76cd74318f7c03bdd2f03c4e9338d5b4eddf6))
+* **asset-store:** change `LinkButton` -> `Button` ([9d7fac2](https://github.com/CareBoo/unity-algorand-sdk/commit/9d7fac22987b0a6e74f73817d7f9fa0ace404e42))
+* **asset-store:** move bulk of asset store package to the `Packages` folder ([a78fcc8](https://github.com/CareBoo/unity-algorand-sdk/commit/a78fcc8dbbdcdbfe2d4b21aaaf0a746a7e7f05a9)), closes [#178](https://github.com/CareBoo/unity-algorand-sdk/issues/178)
+* **ci:** republish for http limit ([2d483a8](https://github.com/CareBoo/unity-algorand-sdk/commit/2d483a8c441506c6dcfce2b54eb2ad3189ee5f64))
+* **crypto:** add universal sodium binary ([d3dc173](https://github.com/CareBoo/unity-algorand-sdk/commit/d3dc17329d8aa2e4504f74f6f688614ed72ffdc3)), closes [#174](https://github.com/CareBoo/unity-algorand-sdk/issues/174)
+* **crypto:** use proper integer types in sodium interop ([4b4f6e6](https://github.com/CareBoo/unity-algorand-sdk/commit/4b4f6e63bc8e540f1ad9fb4f2538ad3c61420398)), closes [#187](https://github.com/CareBoo/unity-algorand-sdk/issues/187)
+* **dependencies:** add dependencies to ugui and ui ([0849b7c](https://github.com/CareBoo/unity-algorand-sdk/commit/0849b7caed1ccf12dd95a56fcb4d0fa352b08467))
+* **dotnet sdk:** fix incorrect input to `string.EndsWith` causing compile error in Unity 2020.3 ([c5101ea](https://github.com/CareBoo/unity-algorand-sdk/commit/c5101eab7a304993f8c320634a09146769ee2a0d))
+* **dotnet:** fix test compile err ([bc33374](https://github.com/CareBoo/unity-algorand-sdk/commit/bc3337404bb0d5e624a274f59abe4f03a8124ea3))
+* **dotnet:** use `Algorand2_Unity` instead of `Algorand2` ([3df8515](https://github.com/CareBoo/unity-algorand-sdk/commit/3df8515e0e137ab3b1b1599d1f4f32a33416b1e9))
+* **unity-collections:** support unity collections version > 2.x.x ([025a153](https://github.com/CareBoo/unity-algorand-sdk/commit/025a1533c497d2618324efde44eb7fe651de0ef1)), closes [#192](https://github.com/CareBoo/unity-algorand-sdk/issues/192)
+* **walletconnect:** fix invalid chain id in wallet connect ([abdedaf](https://github.com/CareBoo/unity-algorand-sdk/commit/abdedaf1f1d93fab1b522089c7d67b739c041443))
+* **walletconnect:** handle server error messages in payloads ([4b4b4e1](https://github.com/CareBoo/unity-algorand-sdk/commit/4b4b4e16a80c2d188eccdc6441ab4f7dc4e84ea8)), closes [#173](https://github.com/CareBoo/unity-algorand-sdk/issues/173)
+* **webgl:** use `NativeWebSocketClient` in editor ([5188e5f](https://github.com/CareBoo/unity-algorand-sdk/commit/5188e5fd633d9eaed29d801715ef634667331eb9)), closes [#170](https://github.com/CareBoo/unity-algorand-sdk/issues/170)
+
+
+### Code Refactoring
+
+* **account:** remove obsolete signing methods ([304ba87](https://github.com/CareBoo/unity-algorand-sdk/commit/304ba8790585af10781f37a0cd3bf1e5ad037e11))
+* **dotnet:** move all dotnet conversions to `Algorand.Unity.Net` ([b0f7124](https://github.com/CareBoo/unity-algorand-sdk/commit/b0f7124bb89508ade1fe175b093479d07c77675c))
+* rename `AlgoSdk` to `Algorand.Unity` ([#167](https://github.com/CareBoo/unity-algorand-sdk/issues/167)) ([d135635](https://github.com/CareBoo/unity-algorand-sdk/commit/d1356352b1f099d328797fb0f202b7507cfa9a79))
+* **sodium:** split libsodium binaries into arm64 and x86_64 ([e3a0510](https://github.com/CareBoo/unity-algorand-sdk/commit/e3a051097d21fc596cfd38f0d98f125726b70baa)), closes [#155](https://github.com/CareBoo/unity-algorand-sdk/issues/155)
+* **support:** remove support for 2020.3 and add support for 2022.2 ([f000cd4](https://github.com/CareBoo/unity-algorand-sdk/commit/f000cd4f45c7b0199e3258dd1863a31863e0dfd3))
+
+
+### Features
+
+* **account:** add `Address.TryParse` method ([e83ad26](https://github.com/CareBoo/unity-algorand-sdk/commit/e83ad26bc879281a78c3f5a63acba2799f7b4063))
+* **accounts:** add combined interfaces for `Account` and `Signer` ([6cfee78](https://github.com/CareBoo/unity-algorand-sdk/commit/6cfee7819b43ab94d38bc916a468088681a4b38e))
+* **algod:** add `LedgerStateDelta` APIs and Models ([321b013](https://github.com/CareBoo/unity-algorand-sdk/commit/321b0132a046e03866101e5b16252c397eb05d17))
+* **blockchain:** add `StateProofTracking` to the `BlockHeader` ([5d63c9a](https://github.com/CareBoo/unity-algorand-sdk/commit/5d63c9a3496efde132efd4122bc1745072c34717))
+* **blockchain:** add missing `TxnCommitments` to `BlockHeader` ([be20acb](https://github.com/CareBoo/unity-algorand-sdk/commit/be20acb321822b5e070d39f1a558ec405bc4e57f))
+* **collections:** upgrade to com.unity.collections 1.4.0 ([59663c8](https://github.com/CareBoo/unity-algorand-sdk/commit/59663c89886aad73c2b53f0c727d7b16b080c656))
+* **dotnet sdk:** add `To*API` methods to `AlgodClient` and `IndexerClient` ([7b292b6](https://github.com/CareBoo/unity-algorand-sdk/commit/7b292b66925adc41f2c6bd8016e46d4d549cf8fa))
+* **dotnet:** add ability to convert between dotnet and unity types ([8810be2](https://github.com/CareBoo/unity-algorand-sdk/commit/8810be28db61886f7f9650c4611d209033ed0004))
+* **dotnet:** add conversion from `Algorand.Crypto.KeyPair` to `Algorand.Unity.PrivateKey` ([cfa72ff](https://github.com/CareBoo/unity-algorand-sdk/commit/cfa72ff97a393513df63b6da09b0cd7c3f87513e))
+* **dotnet:** add conversion from `Algorand.Unity.Account` to `Algorand.Algod.Model.Account` ([9691d0e](https://github.com/CareBoo/unity-algorand-sdk/commit/9691d0ebef048e939d3fdf810f5517d3d2465edb))
+* **dotnet:** add conversion from `Algorand.Unity.PrivateKey` to `Algorand.Crypto` types ([#168](https://github.com/CareBoo/unity-algorand-sdk/issues/168)) ([8e8e0f5](https://github.com/CareBoo/unity-algorand-sdk/commit/8e8e0f593c5c05cf0cf70073d2cb12a382a9ac58))
+* **dotnet:** update `Algorand.dll` to 1.0.0.14 ([13cf117](https://github.com/CareBoo/unity-algorand-sdk/commit/13cf1177f8e008ace56ec9ed5bcd9646626140f5))
+* **dotnet:** update `Algorand.dll` to version 1.0.0.15 ([3ce4d6c](https://github.com/CareBoo/unity-algorand-sdk/commit/3ce4d6ce6205c3d1f1eea37d145ae156dc8db6ce))
+* **logic:** add `Logic.TealSign` methods for ed25519verify opcodes ([f9de317](https://github.com/CareBoo/unity-algorand-sdk/commit/f9de31768e92ddd6531b0c5e8e0ed1f1bf39e093))
+* **node services:** add explicit operators to convert from `IAlgoApiClient` to dotnet SDK APIs ([6a657fc](https://github.com/CareBoo/unity-algorand-sdk/commit/6a657fc9f304e59436ec49140184d0b2572511c8)), closes [#157](https://github.com/CareBoo/unity-algorand-sdk/issues/157) [#158](https://github.com/CareBoo/unity-algorand-sdk/issues/158)
+* **services:** add StateProof APIs ([f0eaaf0](https://github.com/CareBoo/unity-algorand-sdk/commit/f0eaaf0c20c0b8f1205eb7591d51cf07e502462e)), closes [#160](https://github.com/CareBoo/unity-algorand-sdk/issues/160) [#162](https://github.com/CareBoo/unity-algorand-sdk/issues/162)
+* **transactions:** add conversion from `AlgoSdk.Sig` to `Algorand.Signature` ([e414732](https://github.com/CareBoo/unity-algorand-sdk/commit/e414732f82ef351c344e00f2c52ef610235bf8f2))
+* **transactions:** add conversions between dotnet SDK and Unity SDK signatures ([be039b1](https://github.com/CareBoo/unity-algorand-sdk/commit/be039b1f98d0e65b0ae171023f3e5846e8d4aaf2))
+
+
+### Performance Improvements
+
+* **websocket:** change `WebSocketEvent` to be a struct ([1ae34c2](https://github.com/CareBoo/unity-algorand-sdk/commit/1ae34c232ab27f38d0d2bf151a32850bfde297b2))
+
+
+### BREAKING CHANGES
+
+* **support:** Unity 2020.3 is no longer supported
+* **dotnet:** Removed all explicit/implicit operators to convert Algorand.Unity types to Algorand
+types. All conversions now can be done with `ToUnity` and `ToDotnet` extension methods by
+referencing the `Algorand.Unity.Net` assembly.
+* **sodium:** Unity 2020.3 is no longer supported
+* All `AlgoSdk` namespaces are now renamed to `Algorand.Unity`. A simple find and
+replace should fix it.
+* **account:** Obsolete methods in `Account` class relating to signing have been removed.
+* **blockchain:** Removed `RootTransaction`
+* **services:** Algod no longer has `GetProof` method
+
 # [4.0.0-pre.24](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.23...v4.0.0-pre.24) (2023-02-27)
 
 
