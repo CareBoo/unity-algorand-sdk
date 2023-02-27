@@ -170,6 +170,11 @@ namespace Algorand.Unity
         /// </summary>
         public static AddressFormatError TryParse(string s, out Address address)
         {
+            if (s == null)
+            {
+                address = default;
+                return AddressFormatError.IncorrectLength;
+            }
             using var nativeS = new NativeText(s, Allocator.Temp);
             return TryParse(nativeS, out address);
         }
