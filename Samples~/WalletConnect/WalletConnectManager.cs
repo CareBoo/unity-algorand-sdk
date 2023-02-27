@@ -119,7 +119,14 @@ namespace Algorand.Unity.Samples.WalletConnect
                 if (status == SessionStatus.WalletConnected)
                 {
                     var (err, response) = await indexer.LookupAccountByID(account.Address);
-                    if (err) Debug.LogError(err);
+                    if (err)
+                    {
+                        currentBalance = 0;
+                        if (!err.Message.Contains("no accounts found for address"))
+                        {
+                            Debug.LogError(err);
+                        }
+                    }
                     else
                     {
                         currentBalance = response.Account.Amount;

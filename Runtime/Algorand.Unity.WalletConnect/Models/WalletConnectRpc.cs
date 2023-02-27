@@ -70,6 +70,17 @@ namespace Algorand.Unity.WalletConnect
 
             public const int BetaNetChainId = 416003;
 
+            public static AlgorandNetwork GetNetworkFromChainId(int chainId)
+            {
+                switch (chainId)
+                {
+                    case MainNetChainId: return AlgorandNetwork.MainNet;
+                    case TestNetChainId: return AlgorandNetwork.TestNet;
+                    case BetaNetChainId: return AlgorandNetwork.BetaNet;
+                    default: return AlgorandNetwork.None;
+                }
+            }
+
             /// <summary>
             /// Builds a <see cref="JsonRpcRequest"/> used for signing transactions.
             /// </summary>

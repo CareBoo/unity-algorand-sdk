@@ -165,6 +165,7 @@ namespace Algorand.Unity.WalletConnect
                 default:
                     throw new InvalidOperationException($"Session connection status is {ConnectionStatus}");
             }
+
             return new HandshakeUrl(HandshakeTopic, Version, BridgeUrl, Key);
         }
 
@@ -180,7 +181,8 @@ namespace Algorand.Unity.WalletConnect
                 throw new InvalidOperationException($"Session connection status is {ConnectionStatus}");
 
             var handshakeResponse = await listeningForApproval;
-            var sessionData = AlgoApiSerializer.DeserializeJson<WalletConnectSessionData>(handshakeResponse.Result.Json);
+            var sessionData =
+                AlgoApiSerializer.DeserializeJson<WalletConnectSessionData>(handshakeResponse.Result.Json);
             UpdateSession(sessionData);
             HandshakeTopic = null;
             ConnectionStatus = SessionStatus.WalletConnected;
@@ -228,13 +230,15 @@ namespace Algorand.Unity.WalletConnect
             WalletTransaction[] transactions,
             SignTxnsOpts options = default,
             CancellationToken cancellationToken = default
-            )
+        )
         {
             if (ConnectionStatus != SessionStatus.WalletConnected)
                 throw new InvalidOperationException($"Session connection status is {ConnectionStatus}");
 
-            if (ChainId != WalletConnectRpc.Algorand.ChainId)
-                throw new InvalidOperationException($"Wallet does not have Algorand as the active chain.");
+            var isNetworkAgnostic = ChainId == WalletConnectRpc.Algorand.ChainId;
+            if (!isNetworkAgnostic && WalletConnectRpc.Algorand.GetNetworkFromChainId(ChainId) == AlgorandNetwork.None)
+                throw new InvalidOperationException(
+                    $"Wallet does not have Algorand as the active chain. Active chain id is: {ChainId}.");
 
             var request = WalletConnectRpc.Algorand.SignTransactions(transactions, options);
             var response = await rpc.Send(request, PeerId, cancellationToken);
@@ -254,8 +258,10 @@ namespace Algorand.Unity.WalletConnect
             {
                 case WalletConnectRpc.SessionUpdateMethod:
                     if (request.Params == null || request.Params.Length != 1)
-                        throw new NotSupportedException($"The JsonRpcRequest method \"{WalletConnectRpc.SessionUpdateMethod}\" only supports params of length 1.");
-                    var sessonUpdate = AlgoApiSerializer.DeserializeJson<WalletConnectSessionData>(request.Params[0].Json);
+                        throw new NotSupportedException(
+                            $"The JsonRpcRequest method \"{WalletConnectRpc.SessionUpdateMethod}\" only supports params of length 1.");
+                    var sessonUpdate =
+                        AlgoApiSerializer.DeserializeJson<WalletConnectSessionData>(request.Params[0].Json);
                     UpdateSession(sessonUpdate);
                     OnSessionUpdate?.Invoke(sessonUpdate);
                     break;
@@ -271,6 +277,7 @@ namespace Algorand.Unity.WalletConnect
                 DisconnectWallet("Session no longer approved.");
                 return;
             }
+
             switch (sessionData.ChainId)
             {
                 case WalletConnectRpc.Algorand.TestNetChainId:
