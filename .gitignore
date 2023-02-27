@@ -24,6 +24,7 @@
 
 # Visual Studio cache directory
 .vs/
+.idea/
 
 # Gradle cache directory
 .gradle/
@@ -67,5 +68,11 @@ mono_crash*
 # node modules / artifacts
 dist/
 node_modules/
+
+# doc artifacts
+_site
+obj
+**/obj.meta
+.docfx/api
 
 .DS_Store

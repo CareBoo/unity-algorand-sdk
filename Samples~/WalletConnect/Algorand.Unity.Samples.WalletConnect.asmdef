@@ -1,0 +1,18 @@
+{
+    "name": "Algorand.Unity.Samples.WalletConnect",
+    "rootNamespace": "Algorand.Unity.Samples.WalletConnect",
+    "references": [
+        "GUID:45ab5c0c2cb4a0e4ba897b731349c490",
+        "GUID:7d7102a6f2a084a30ad9e7734dd7ec17",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

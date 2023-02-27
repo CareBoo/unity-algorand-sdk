@@ -1,5 +1,7 @@
 <h1 id="unity-algorand-sdk" align="center">
-<img src="Documentation~/images/logo_256.png"/>
+<picture>
+  <img alt="The Algorand Logo" src="docs/images/algorand_logo_mark.svg"/>
+</picture>
 <br/>
 Unity Algorand SDK
 
@@ -9,7 +11,7 @@ Unity Algorand SDK
     <img src="https://img.shields.io/github/license/CareBoo/unity-algorand-sdk"/>
   </a>
   <a href="https://github.com/CareBoo/unity-algorand-sdk/actions/workflows/test.yaml">
-    <img src="https://img.shields.io/github/workflow/status/careboo/unity-algorand-sdk/Unity%20Tests/main?label=tests"/>
+    <img src="https://img.shields.io/github/actions/workflow/status/CareBoo/unity-algorand-sdk/test.yaml?branch=main&label=tests"/>
   </a>
   <a href="https://www.npmjs.com/package/com.careboo.unity-algorand-sdk">
     <img src="https://img.shields.io/npm/v/com.careboo.unity-algorand-sdk"/>
@@ -20,9 +22,6 @@ Unity Algorand SDK
 </p>
 
 </h1>
-
-> [!Caution]
-> This package has not been audited and isn't suitable for production use.
 
 Integrate your game with [Algorand](https://www.algorand.com/), a Pure Proof-of-Stake blockchain overseen by the Algorand Foundation.
 Create and sign Algorand transactions, use Algorand's [REST APIs](https://developer.algorand.org/docs/rest-apis/restendpoints/),
@@ -45,22 +44,28 @@ and connect to any Algorand wallet supporting [WalletConnect](https://developer.
   - [Unity Asset Store](#unity-asset-store)
 - [Getting Started](#getting-started)
   - [Documentation Site](#documentation-site)
+  - [Samples](#samples)
 
 ## Requirements
 
 This package supports the following build targets and Unity versions:
 
-| Unity Version |      Windows       |       Mac OS       |       Linux        |      Android       |        iOS         |       WebGL        |
-| :-----------: | :----------------: | :----------------: | :----------------: | :----------------: | :----------------: | :----------------: |
-|    2020.3     | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|    2021.3     | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Unity Version |      Windows       |       Mac OS       |       Linux        |      Android       |        iOS         |           WebGL            |
+| :-----------: | :----------------: | :----------------: | :----------------: | :----------------: | :----------------: | :------------------------: |
+|    2020.3     |        :x:         |        :x:         |        :x:         |        :x:         |        :x:         |            :x:             |
+|    2021.3     | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :eight_pointed_black_star: |
+|    2022.2     | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :eight_pointed_black_star: |
+
+- :white_check_mark: All APIs are supported.
+- :eight_pointed_black_star: `Algorand.Unity.Net` is not supported. This assembly is used to enable cross-compatibility between the .NET SDK and the Unity SDK.
+- :x: Not supported. Use at your own risk.
 
 ## Common Usages
 
 ### Make a payment transaction:
 
 ```csharp
-using AlgoSdk;
+using Algorand.Unity;
 
 var sender = "<your sender address>";
 var receiver = "<your receiver address>";
@@ -88,7 +93,7 @@ var signedTxn = await kmd.SignTransaction(paymentTxn.Sender, paymentTxn.ToSignat
 #### Sign the transaction with WalletConnect:
 
 ```csharp
-using AlgoSdk.WalletConnect;
+using Algorand.Unity.WalletConnect;
 
 SavedSession savedSession = [...];
 var session = new AlgorandWalletConnectSession(savedSession);
@@ -106,8 +111,8 @@ await algod.SendTransaction(signedTxn);
 ### Initiate a WalletConnect session and generate a QR Code:
 
 ```csharp
-using AlgoSdk;
-using AlgoSdk.WalletConnect;
+using Algorand.Unity;
+using Algorand.Unity.WalletConnect;
 using UnityEngine;
 
 var dappMeta = new ClientMeta
@@ -145,12 +150,19 @@ required for this package. See [Unity's official documentation on Scoped Registr
 
 ### Unity Asset Store
 
-The SDK is also available [in the Unity Asset Store](https://u3d.as/2GBr).
+Coming Soon!
 
 ## Getting Started
 
-Read [Getting Started](Documentation~/getting_started.md) to learn the basic workflows for developing on Algorand.
+Read [Getting Started](docs/getting_started.md) to learn the basic workflows for developing on Algorand.
 
 ### Documentation Site
 
-Docs for this version were generated at https://careboo.github.io/unity-algorand-sdk/3.0.
+Docs for this version were generated at https://careboo.github.io/unity-algorand-sdk/4.0.
+
+### Samples
+
+Some of the samples are built on WebGL and hosted on GitHub Pages.
+
+- [WalletConnect](https://careboo.github.io/unity-algorand-sdk/walletconnect)
+- [ABI](https://careboo.github.io/unity-algorand-sdk/abi)

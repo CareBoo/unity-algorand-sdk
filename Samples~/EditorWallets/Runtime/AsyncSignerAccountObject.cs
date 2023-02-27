@@ -2,7 +2,7 @@ using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 
-namespace AlgoSdk
+namespace Algorand.Unity
 {
     public abstract class AsyncSignerAccountObject
         : BaseAccountObject

@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "name": "Algorand.Unity",
+      "path": "."
+    },
+    {
+      "name": "UPM",
+      "path": "Algorand.Unity.Package"
+    },
+    {
+      "name": "Asset Store",
+      "path": "Algorand.Unity.AssetStore"
+    }
+  ]
+}

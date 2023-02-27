@@ -1,6 +1,6 @@
 using UnityEngine.UIElements;
 
-namespace AlgoSdk.Editor
+namespace Algorand.Unity.Editor
 {
     public static class VisualElementExtensions
     {

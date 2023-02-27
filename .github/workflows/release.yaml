@@ -33,13 +33,13 @@ jobs:
       version: ${{ steps.semantic.outputs.new_release_version || inputs.version }}
       major_minor: ${{ steps.semantic.outputs.new_release_major_version || inputs.major }}.${{ steps.semantic.outputs.new_release_minor_version || inputs.minor }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           lfs: true
 
       - name: Semantic Release
         id: semantic
-        uses: cycjimmy/semantic-release-action@v2
+        uses: cycjimmy/semantic-release-action@v3
         with:
           extra_plugins: |
             @semantic-release/changelog
@@ -55,17 +55,17 @@ jobs:
     needs: release
     if: needs.release.outputs.published == 'true' || inputs.version
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           ref: ${{ github.ref }}
           lfs: true
 
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         with:
-          path: Unity.AlgoSdk.AssetStore/Library
-          key: Library-build_unitypackage-Unity.AlgoSdk.AssetStore-StandaloneLinux64
+          path: Algorand.Unity.AssetStore/Library
+          key: Library-build_unitypackage-Algorand.Unity.AssetStore-StandaloneLinux64
           restore-keys: |
-            Library-build_unitypackage-Unity.AlgoSdk.AssetStore-
+            Library-build_unitypackage-Algorand.Unity.AssetStore-
 
       - name: Package unitypackage
         uses: game-ci/unity-builder@v2
@@ -73,7 +73,7 @@ jobs:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE_2020 }}
         with:
           targetPlatform: StandaloneLinux64
-          projectPath: Unity.AlgoSdk.AssetStore
+          projectPath: Algorand.Unity.AssetStore
           buildMethod: UnityPackage.Build
           versioning: None
           allowDirtyBuild: true
@@ -81,7 +81,7 @@ jobs:
       - name: Move unitypackage to dist folder
         run: |
           mkdir dist
-          mv Unity.AlgoSdk.AssetStore/unity-algorand-sdk.unitypackage dist/unity-algorand-sdk-${{ needs.release.outputs.version }}.unitypackage
+          mv Algorand.Unity.AssetStore/unity-algorand-sdk.unitypackage dist/unity-algorand-sdk-${{ needs.release.outputs.version }}.unitypackage
 
       - name: Upload dist
         uses: actions/upload-artifact@v2
@@ -103,7 +103,7 @@ jobs:
     if: needs.release.outputs.published == 'true' || inputs.version
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: ${{ github.ref }}
           lfs: true

@@ -2,13 +2,16 @@ using System.IO;
 using UnityEditor.AssetImporters;
 using UnityEngine;
 
-[ScriptedImporter(1, "teal")]
-public class TealImporter : ScriptedImporter
+namespace Algorand.Unity.Samples.CallingSmartContractAbi.Editor
 {
-    public override void OnImportAsset(AssetImportContext ctx)
+    [ScriptedImporter(1, "teal")]
+    public class TealImporter : ScriptedImporter
     {
-        var text = File.ReadAllText(ctx.assetPath);
-        var textAsset = new TextAsset(text);
-        ctx.AddObjectToAsset("textAsset", textAsset);
+        public override void OnImportAsset(AssetImportContext ctx)
+        {
+            var text = File.ReadAllText(ctx.assetPath);
+            var textAsset = new TextAsset(text);
+            ctx.AddObjectToAsset("textAsset", textAsset);
+        }
     }
 }

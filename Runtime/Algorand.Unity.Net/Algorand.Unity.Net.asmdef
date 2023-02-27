@@ -1,0 +1,24 @@
+{
+    "name": "Algorand.Unity.Net",
+    "rootNamespace": "Algorand.Unity.Net",
+    "references": [
+        "GUID:45ab5c0c2cb4a0e4ba897b731349c490",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:9f8c967ec86c9324c9b2928ff73b4cf1",
+        "GUID:e0cd26848372d4e5c891c569017e11f1",
+        "GUID:f8b80ea32105bf74aa022a9a7e066bc1"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [
+        "WebGL"
+    ],
+    "allowUnsafeCode": true,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Algorand.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

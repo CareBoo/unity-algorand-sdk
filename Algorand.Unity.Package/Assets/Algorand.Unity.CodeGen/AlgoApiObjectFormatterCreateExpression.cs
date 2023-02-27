@@ -1,0 +1,95 @@
+using System;
+using System.CodeDom;
+using System.Collections.Generic;
+using System.Linq;
+using Algorand.Unity.Experimental.Abi;
+
+namespace Algorand.Unity.Editor.CodeGen
+{
+    public class AlgoApiObjectFormatterCreateExpression
+    {
+        private static readonly Dictionary<Type, Type> equalityComparerLookup = new Dictionary<Type, Type>()
+        {
+            {typeof(string), typeof(StringComparer)},
+            {typeof(IAbiType), typeof(IAbiTypeComparer)}
+        };
+
+        private CodeExpression expression;
+
+        public AlgoApiObjectFormatterCreateExpression(AlgoApiObjectAttribute attribute, Type type, IEnumerable<AlgoApiObjectFieldKey> fields)
+        {
+            if (fields == null)
+                throw new ArgumentNullException(nameof(fields));
+
+            var formatterTypeReference = new CodeTypeReference(typeof(AlgoApiObjectFormatter<>).SafeFullName(), new CodeTypeReference(type.FullNameExpression()));
+            expression = new CodeObjectCreateExpression(formatterTypeReference, new CodePrimitiveExpression(attribute.IsStrict));
+            foreach (var field in fields)
+            {
+                expression = new CodeMethodInvokeExpression(
+                    expression,
+                    nameof(AlgoApiObjectFormatter<int>.Assign),
+                    GetAssignParamsExpressions(type, field)
+                );
+            }
+        }
+
+        public static implicit operator CodeExpression(AlgoApiObjectFormatterCreateExpression src)
+        {
+            return src?.expression;
+        }
+
+        private static CodeExpression[] GetAssignParamsExpressions(Type type, AlgoApiObjectFieldKey field)
+        {
+            var memberName = field.MemberInfo.Name;
+            var memberType = field.MemberType;
+            var expressions = new List<CodeExpression>()
+            {
+                new CodePrimitiveExpression(field.Attribute.Name),
+                new CodeSnippetExpression($"({type.FullNameExpression()} x) => x.{memberName}"),
+                new CodeSnippetExpression($"(ref {type.FullNameExpression()} x, {memberType.FullNameExpression()} value) => x.{memberName} = value"),
+            };
+            var equalityComparerType = GetEqualityComparerType(memberType);
+            if (equalityComparerType != null)
+            {
+                var equalityComparer = new CodePropertyReferenceExpression(
+                    new CodeTypeReferenceExpression(equalityComparerType.FullNameExpression()),
+                    "Instance");
+                expressions.Add(equalityComparer);
+            }
+            return expressions.ToArray();
+        }
+
+        private static Type GetEqualityComparerType(Type type)
+        {
+            if (equalityComparerLookup.TryGetValue(type, out var elementComparerType))
+                return elementComparerType;
+
+            var equatableType = typeof(IEquatable<>).MakeGenericType(type);
+            if (type.GetInterfaces().Any(t => t == equatableType))
+                return null;
+
+            if (type.IsArray)
+            {
+                var elementType = type.GetElementType();
+                elementComparerType = GetEqualityComparerType(elementType);
+                return elementComparerType == null
+                    ? typeof(ArrayComparer<>).MakeGenericType(elementType)
+                    : typeof(ArrayComparer<,>).MakeGenericType(elementType, elementComparerType)
+                    ;
+            }
+
+            if (type.IsEnum)
+            {
+                var underlyingTypeCode = Type.GetTypeCode(type.GetEnumUnderlyingType());
+                return underlyingTypeCode switch
+                {
+                    TypeCode.Byte => typeof(ByteEnumComparer<>).MakeGenericType(type),
+                    TypeCode.Int32 => typeof(IntEnumComparer<>).MakeGenericType(type),
+                    _ => throw new NotSupportedException($"{underlyingTypeCode} doesn't have an enum comparer...")
+                };
+            }
+
+            throw new NotSupportedException($"Could not find equality comparer or it doesn't implement `IEquatable<>` for type '{type.Namespace + "." + type.Name}'");
+        }
+    }
+}

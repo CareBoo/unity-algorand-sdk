@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>
+
+  
+
+
+Unity Algorand SDK
+
+ | Unity Algorand SDK </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="
+
+  
+
+
+Unity Algorand SDK
+
+ | Unity Algorand SDK ">
+  
+    <link rel="shortcut icon" href="resources/favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc">
+    <meta property="docfx:tocrel" content="manual/toc">
+  
+  <meta property="docfx:rel" content="">
+  <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="index.html" title="Manual">Manual</a>
+                      </li>
+                      <li>
+                          <a href="api/Algorand.Unity.html" title="Scripting API">Scripting API</a>
+                      </li>
+                      <li>
+                          <a href="changelog/CHANGELOG.html" title="Changelog">Changelog</a>
+                      </li>
+                      <li>
+                          <a href="license/LICENSE.html" title="License">License</a>
+                      </li>
+                      <li>
+                          <a href="https://github.com/CareBoo/unity-algorand-sdk" title="GitHub">GitHub</a>
+                      </li>
+                </ul>            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <a href="manual/../index.html" title="Algorand SDK" class="">Algorand SDK</a>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="manual/getting_started.html" title="Getting Started" class="">Getting Started</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="manual/getting_started/developing_with_sandbox.html" title="Developing with Algorand Sandbox" class="">Developing with Algorand Sandbox</a>
+                          </li>
+                          <li class="">
+                            <a href="manual/getting_started/your_first_transaction.html" title="Your First Transaction" class="">Your First Transaction</a>
+                          </li>
+                        </ul>                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="manual/algorand_standard_assets.html" title="Algorand Standard Assets" class="">Algorand Standard Assets</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="manual/algorand_standard_assets/creating_asas_in_editor.html" title="Creating ASAs in the Editor" class="">Creating ASAs in the Editor</a>
+                          </li>
+                        </ul>                    </li>
+                    <li class="">
+                      <a href="manual/walletconnect.html" title="WalletConnect" class="">WalletConnect</a>
+                    </li>
+                    <li class="">
+                      <a href="manual/integration_with_the_dotnet_sdk.html" title="Integration with the .NET SDK" class="">Integration with the .NET SDK</a>
+                    </li>
+                    <li class="">
+                      <a href="manual/troubleshooting.html" title="Troubleshooting" class="">Troubleshooting</a>
+                    </li>
+                  </ul>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="unity-algorand-sdk" align="center">
+<picture>
+  <img alt="The Algorand Logo" src="docs/images/algorand_logo_mark.svg">
+</picture>
+<br>
+Unity Algorand SDK
+
+</h1>
+
+<p align="center">
+  <a href="license/LICENSE.html">
+    <img src="https://img.shields.io/github/license/CareBoo/unity-algorand-sdk">
+  </a>
+  <a href="https://github.com/CareBoo/unity-algorand-sdk/actions/workflows/test.yaml">
+    <img src="https://img.shields.io/github/actions/workflow/status/CareBoo/unity-algorand-sdk/test.yaml?branch=main&label=tests">
+  </a>
+  <a href="https://www.npmjs.com/package/com.careboo.unity-algorand-sdk">
+    <img src="https://img.shields.io/npm/v/com.careboo.unity-algorand-sdk">
+  </a>
+  <a href="https://openupm.com/packages/com.careboo.unity-algorand-sdk/">
+    <img src="https://img.shields.io/npm/v/com.careboo.unity-algorand-sdk?label=openupm&registry_uri=https://package.openupm.com">
+  </a>
+</p>
+
+
+
+<p>Integrate your game with <a href="https://www.algorand.com/">Algorand</a>, a Pure Proof-of-Stake blockchain overseen by the Algorand Foundation.
+Create and sign Algorand transactions, use Algorand&#39;s <a href="https://developer.algorand.org/docs/rest-apis/restendpoints/">REST APIs</a>,
+and connect to any Algorand wallet supporting <a href="https://developer.algorand.org/docs/get-details/walletconnect/">WalletConnect</a>.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#common-usages">Common Usages</a><ul>
+<li><a href="#make-a-payment-transaction">Make a payment transaction</a><ul>
+<li><a href="#sign-the-transaction-with-an-account">Sign the transaction with an account</a></li>
+<li><a href="#sign-the-transaction-with-kmd">Sign the transaction with <code>kmd</code></a></li>
+<li><a href="#sign-the-transaction-with-walletconnect">Sign the transaction with WalletConnect</a></li>
+<li><a href="#send-the-signed-transaction">Send the signed transaction</a></li>
+</ul>
+</li>
+<li><a href="#initiate-a-walletconnect-session-and-generate-a-qr-code">Initiate a WalletConnect session and generate a QR Code</a></li>
+</ul>
+</li>
+<li><a href="#installation">Installation</a><ul>
+<li><a href="#open-upm">Open UPM</a></li>
+<li><a href="#manually-adding-upm-scopes">Manually Adding UPM Scopes</a></li>
+<li><a href="#unity-asset-store">Unity Asset Store</a></li>
+</ul>
+</li>
+<li><a href="#getting-started">Getting Started</a><ul>
+<li><a href="#documentation-site">Documentation Site</a></li>
+<li><a href="#samples">Samples</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="requirements">Requirements</h2>
+<p>This package supports the following build targets and Unity versions:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Unity Version</th>
+<th style="text-align:center">Windows</th>
+<th style="text-align:center">Mac OS</th>
+<th style="text-align:center">Linux</th>
+<th style="text-align:center">Android</th>
+<th style="text-align:center">iOS</th>
+<th style="text-align:center">WebGL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">2020.3</td>
+<td style="text-align:center"><span class="emoji" shortcode="x">❌</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="x">❌</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="x">❌</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="x">❌</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="x">❌</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="x">❌</span></td>
+</tr>
+<tr>
+<td style="text-align:center">2021.3</td>
+<td style="text-align:center"><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="eight_pointed_black_star">✴️</span></td>
+</tr>
+<tr>
+<td style="text-align:center">2022.2</td>
+<td style="text-align:center"><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="white_check_mark">✅</span></td>
+<td style="text-align:center"><span class="emoji" shortcode="eight_pointed_black_star">✴️</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><span class="emoji" shortcode="white_check_mark">✅</span> All APIs are supported.</li>
+<li><span class="emoji" shortcode="eight_pointed_black_star">✴️</span> <code>Algorand.Unity.Net</code> is not supported. This assembly is used to enable cross-compatibility between the .NET SDK and the Unity SDK.</li>
+<li><span class="emoji" shortcode="x">❌</span> Not supported. Use at your own risk.</li>
+</ul>
+<h2 id="common-usages">Common Usages</h2>
+<h3 id="make-a-payment-transaction">Make a payment transaction:</h3>
+<pre><code class="lang-csharp">using Algorand.Unity;
+
+var sender = &quot;&lt;your sender address&gt;&quot;;
+var receiver = &quot;&lt;your receiver address&gt;&quot;;
+var algod = new AlgodClient(&quot;https://node.testnet.algoexplorerapi.io&quot;);
+var suggestedTxnParams = await algod.GetSuggestedParams();
+var microAlgosToSend = 1_000_000L;
+var paymentTxn = Transaction.Payment(sender, suggestedTxnParams, receiver, microAlgosToSend);
+</code></pre><h4 id="sign-the-transaction-with-an-account">Sign the transaction with an account:</h4>
+<pre><code class="lang-csharp">var account = Account.GenerateAccount();
+var signedTxn = account.SignTxn(paymentTxn);
+</code></pre><h4 id="sign-the-transaction-with-kmd">Sign the transaction with <code>kmd</code>:</h4>
+<pre><code class="lang-csharp">var kmd = new KmdClient(&quot;&lt;host of kmd&gt;&quot;);
+var walletToken = await kmd.InitWalletHandleToken(&quot;&lt;your wallet id&gt;&quot;, &quot;&lt;your wallet password&gt;&quot;);
+var signedTxn = await kmd.SignTransaction(paymentTxn.Sender, paymentTxn.ToSignatureMessage(), walletToken, &quot;&lt;your kmd wallet password&gt;&quot;);
+</code></pre><h4 id="sign-the-transaction-with-walletconnect">Sign the transaction with WalletConnect:</h4>
+<pre><code class="lang-csharp">using Algorand.Unity.WalletConnect;
+
+SavedSession savedSession = [...];
+var session = new AlgorandWalletConnectSession(savedSession);
+var walletTransaction = WalletTransaction.New(paymentTxn);
+var signedTxns = await session.SignTransactions(new[] { walletTransaction });
+var signedTxn = signedTxns[0];
+</code></pre><h4 id="send-the-signed-transaction">Send the signed transaction:</h4>
+<pre><code class="lang-csharp">await algod.SendTransaction(signedTxn);
+</code></pre><h3 id="initiate-a-walletconnect-session-and-generate-a-qr-code">Initiate a WalletConnect session and generate a QR Code:</h3>
+<pre><code class="lang-csharp">using Algorand.Unity;
+using Algorand.Unity.WalletConnect;
+using UnityEngine;
+
+var dappMeta = new ClientMeta
+{
+    Name = &quot;&lt;name of your dapp&gt;&quot;,
+    Description = &quot;&lt;description of your dapp&gt;&quot;,
+    Url = &quot;&lt;url of your dapp&gt;&quot;,
+    IconUrls = new[]
+    {
+        &quot;&lt;icon1 of your dapp&gt;&quot;, &quot;&lt;icon2 of your dapp&gt;&quot;
+    }
+};
+var session = new AlgorandWalletConnectSession(dappMeta);
+var handshake = await session.StartConnection();
+Texture2D qrCode = handshake.ToQrCodeTexture();
+</code></pre><h2 id="installation">Installation</h2>
+<h3 id="open-upm">Open UPM</h3>
+<p>The easiest way to install is to use Open UPM as it manages your scopes automatically.
+You can <a href="https://openupm.com/docs/getting-started.html">install Open UPM here</a>.
+Then use the Open UPM CLI at the root of your Unity project to install.</p>
+<pre><code class="lang-sh">&gt; cd &lt;your unity project&gt;
+&gt; openupm add com.careboo.unity-algorand-sdk
+</code></pre><h3 id="manually-adding-upm-scopes">Manually Adding UPM Scopes</h3>
+<p>If you don&#39;t want to use Open UPM, it&#39;s straightforward to manually add the UPM registry scopes
+required for this package. See <a href="https://docs.unity3d.com/Manual/upm-scoped.html">Unity&#39;s official documentation on Scoped Registries</a>.</p>
+<h3 id="unity-asset-store">Unity Asset Store</h3>
+<p>Coming Soon!</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>Read <a href="manual/getting_started.html">Getting Started</a> to learn the basic workflows for developing on Algorand.</p>
+<h3 id="documentation-site">Documentation Site</h3>
+<p>Docs for this version were generated at <a href="https://careboo.github.io/unity-algorand-sdk/4.0">https://careboo.github.io/unity-algorand-sdk/4.0</a>.</p>
+<h3 id="samples">Samples</h3>
+<p>Some of the samples are built on WebGL and hosted on GitHub Pages.</p>
+<ul>
+<li><a href="https://careboo.github.io/unity-algorand-sdk/walletconnect">WalletConnect</a></li>
+<li><a href="https://careboo.github.io/unity-algorand-sdk/abi">ABI</a></li>
+</ul>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/CareBoo/unity-algorand-sdk/blob/main/.docfx/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      Generated by DocFX
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

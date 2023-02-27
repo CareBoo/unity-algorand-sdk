@@ -27,3 +27,7 @@ host='https:\/\/careboo.github.io\/unity-algorand-sdk\/'
 sed -E -i \
     's/'$host'[0-9]+\.[0-9]+/'$host''$major_minor'/g' \
     README.md
+
+echo "Modifying package.json for AssetStore..."
+path='Algorand.Unity.AssetStore/Packages/com.careboo.unity-algorand-sdk'
+jq 'del(.samples)' package.json > "$path/package.json"

@@ -1,0 +1,16 @@
+{
+    "name": "Algorand.Unity.Samples.CallingSmartContractAbi.Editor",
+    "rootNamespace": "Algorand.Unity.Samples.CallingSmartContractAbi.Editor",
+    "references": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

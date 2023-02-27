@@ -1,6 +1,6 @@
 apiRules:
   - include:
-      uidRegex: ^AlgoSdk\b.*$
+      uidRegex: ^Algorand.Unity\b.*$
       type: Namespace
   - exclude:
       uidRegex: ^System\.Object\..*$
@@ -9,7 +9,7 @@ apiRules:
       uidRegex: ^System\.ValueType\..*$
       type: Method
   - exclude:
-      uidRegex: ^(?!AlgoSdk\b).*$
+      uidRegex: ^(?!Algorand.Unity\b).*$
   - exclude:
       hasAttribute:
         uid: System.ObsoleteAttribute

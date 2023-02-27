@@ -1,10 +1,12 @@
-using AlgoSdk;
 using UnityEngine;
 
-[CreateAssetMenu]
-public class AlgodClientObject
-    : ScriptableObject
+namespace Algorand.Unity.Samples.CreatingAsas
 {
-    public AlgodClient Client;
-    public AlgorandNetwork Network;
+    [CreateAssetMenu]
+    public class AlgodClientObject
+        : ScriptableObject
+    {
+        public AlgodClient Client;
+        public AlgorandNetwork Network;
+    }
 }

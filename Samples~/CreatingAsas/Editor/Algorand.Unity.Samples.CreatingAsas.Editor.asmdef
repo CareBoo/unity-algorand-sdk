@@ -1,0 +1,22 @@
+{
+    "name": "Algorand.Unity.Samples.CreatingAsas.Editor",
+    "rootNamespace": "Algorand.Unity.Samples.CreatingAsas.Editor",
+    "references": [
+        "GUID:4d0305eeacd8a4c4bbdd61b73860c503",
+        "GUID:45ab5c0c2cb4a0e4ba897b731349c490",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:f8b80ea32105bf74aa022a9a7e066bc1",
+        "GUID:e0cd26848372d4e5c891c569017e11f1"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

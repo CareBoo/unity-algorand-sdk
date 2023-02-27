@@ -1,19 +1,21 @@
 using System.Collections.Generic;
-using AlgoSdk.Experimental.Abi;
+using Algorand.Unity.Experimental.Abi;
 using UnityEngine.UIElements;
 
-public partial class ArgField
+namespace Algorand.Unity.Samples.CallingSmartContractAbi
 {
-    public sealed class Tuple : ArgField
+    public partial class ArgField
     {
-        private readonly ListView list;
-        private readonly List<ArgField> elements;
-
-        public override IAbiValue Value => throw new System.NotImplementedException();
-
-        public Tuple(string label, TupleType type)
+        public sealed class Tuple : ArgField
         {
+            private readonly ListView list;
+            private readonly List<ArgField> elements;
 
+            public override IAbiValue Value => throw new System.NotImplementedException();
+
+            public Tuple(string label, TupleType type)
+            {
+            }
         }
     }
 }

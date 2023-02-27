@@ -1,0 +1,25 @@
+{
+    "name": "Algorand.Unity",
+    "rootNamespace": "Algorand.Unity",
+    "references": [
+        "GUID:2665a8d13d1b3f18800f46e256720795",
+        "GUID:e0cd26848372d4e5c891c569017e11f1",
+        "GUID:d8b63aba1907145bea998dd612889d6b",
+        "GUID:f8b80ea32105bf74aa022a9a7e066bc1",
+        "GUID:9f8c967ec86c9324c9b2928ff73b4cf1",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:2ee6601452ca245499e63674423f6541",
+        "GUID:427b0dd64d04a4a02b8413b20fc93483",
+        "GUID:b0f3d95fe85d1421d9ef3667cce886bb",
+        "GUID:70d524b45145c40acbd35603c8e43743"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

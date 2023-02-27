@@ -5,11 +5,11 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace AlgoSdk.WalletConnect.Editor
+namespace Algorand.Unity.WalletConnect.Editor
 {
     public class WalletConnectAccountEditorWindow : EditorWindow
     {
-        static readonly ClientMeta defaultDappMeta = new ClientMeta
+        private static readonly ClientMeta defaultDappMeta = new ClientMeta
         {
             Description = "This is a connection to the Unity Editor, used to interact with the Algorand Blockchain during development time.",
             IconUrls = new[]
@@ -22,26 +22,23 @@ namespace AlgoSdk.WalletConnect.Editor
             Name = "Unity Editor"
         };
 
-        [SerializeField]
-        VisualTreeAsset visualTree;
+        [SerializeField] private VisualTreeAsset visualTree;
 
-        [SerializeField]
-        WalletConnectAccountObject asset;
+        [SerializeField] private WalletConnectAccountObject asset;
 
-        [SerializeField]
-        string statusText;
+        [SerializeField] private string statusText;
 
-        WalletConnectAccountObject unsavedAsset;
+        private WalletConnectAccountObject unsavedAsset;
 
-        VisualElement configureSessionContent;
-        VisualElement connectedContent;
-        VisualElement requestingHandshakeContent;
+        private VisualElement configureSessionContent;
+        private VisualElement connectedContent;
+        private VisualElement requestingHandshakeContent;
 
-        Image qrCodeImage;
-        Button startSessionButton;
+        private Image qrCodeImage;
+        private Button startSessionButton;
 
 
-        [MenuItem("AlgoSdk/Connect Account/WalletConnect")]
+        [MenuItem("Algorand.Unity/Connect Account/WalletConnect")]
         public static void ShowMenu()
         {
             var window = GetWindow<WalletConnectAccountEditorWindow>("Connect Account via WalletConnect");
@@ -59,7 +56,7 @@ namespace AlgoSdk.WalletConnect.Editor
             window.asset = asset;
         }
 
-        void CreateGUI()
+        private void CreateGUI()
         {
             var gui = visualTree.CloneTree();
 
@@ -112,7 +109,7 @@ namespace AlgoSdk.WalletConnect.Editor
             rootVisualElement.Add(gui);
         }
 
-        void Update()
+        private void Update()
         {
             var status = asset ? asset.ConnectionStatus : default;
             statusText = ObjectNames.NicifyVariableName(status.ToString());
@@ -122,18 +119,18 @@ namespace AlgoSdk.WalletConnect.Editor
             SetDisplay(connectedContent, asset && status == SessionStatus.WalletConnected);
         }
 
-        void OnDestroy()
+        private void OnDestroy()
         {
             if (asset)
                 asset.EndSession();
         }
 
-        void StartSession()
+        private void StartSession()
         {
             StartSessionAsync().Forget();
         }
 
-        async UniTaskVoid StartSessionAsync()
+        private async UniTaskVoid StartSessionAsync()
         {
             startSessionButton.SetEnabled(false);
             await UniTask.SwitchToThreadPool();
@@ -155,12 +152,12 @@ namespace AlgoSdk.WalletConnect.Editor
             }
         }
 
-        void RequestConnection()
+        private void RequestConnection()
         {
             RequestConnectionAsync().Forget();
         }
 
-        async UniTaskVoid RequestConnectionAsync()
+        private async UniTaskVoid RequestConnectionAsync()
         {
             try
             {
@@ -176,7 +173,7 @@ namespace AlgoSdk.WalletConnect.Editor
             }
         }
 
-        void ResetWalletConnection()
+        private void ResetWalletConnection()
         {
             if (!asset)
                 return;
@@ -185,7 +182,7 @@ namespace AlgoSdk.WalletConnect.Editor
             asset.ResetSessionData();
         }
 
-        void SetRandomBridgeUrl()
+        private void SetRandomBridgeUrl()
         {
             if (!asset)
                 return;
@@ -193,7 +190,7 @@ namespace AlgoSdk.WalletConnect.Editor
             asset.BridgeUrl = DefaultBridge.GetRandomBridgeUrl();
         }
 
-        void SaveAsset()
+        private void SaveAsset()
         {
             if (!asset)
                 return;
@@ -206,7 +203,7 @@ namespace AlgoSdk.WalletConnect.Editor
             }
         }
 
-        void SetDisplay(VisualElement element, bool isDisplayed)
+        private void SetDisplay(VisualElement element, bool isDisplayed)
         {
             element.style.display = isDisplayed ? DisplayStyle.Flex : DisplayStyle.None;
         }

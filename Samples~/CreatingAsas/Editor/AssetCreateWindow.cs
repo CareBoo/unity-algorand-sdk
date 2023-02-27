@@ -1,94 +1,93 @@
 using System;
-using AlgoSdk;
 using Cysharp.Threading.Tasks;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class AssetCreateWindow : EditorWindow
+namespace Algorand.Unity.Samples.CreatingAsas.Editor
 {
-    [SerializeField]
-    AssetObject asset;
-
-    [SerializeField]
-    AccountObject creatorAccount;
-
-    [SerializeField]
-    AlgodClientObject algod;
-
-    public static void Show(AssetObject asset)
+    public class AssetCreateWindow : EditorWindow
     {
-        var window = GetWindow<AssetCreateWindow>("Create ASA");
-        window.asset = asset;
-    }
+        [SerializeField] private AssetObject asset;
 
-    void CreateGUI()
-    {
-        var root = rootVisualElement;
+        [SerializeField] private AccountObject creatorAccount;
 
-        var assetField = new PropertyField { bindingPath = nameof(asset) };
-        assetField.SetEnabled(false);
-        root.Add(assetField);
-        root.Add(new PropertyField { bindingPath = nameof(creatorAccount) });
-        root.Add(new PropertyField { bindingPath = nameof(algod) });
-        root.Add(new Button(CreateAsa) { text = "Create" });
+        [SerializeField] private AlgodClientObject algod;
 
-        root.Bind(new SerializedObject(this));
-    }
+        public static void Show(AssetObject asset)
+        {
+            var window = GetWindow<AssetCreateWindow>("Create ASA");
+            window.asset = asset;
+        }
 
-    void CreateAsa()
-    {
-        CreateAsaAsync().Forget();
-    }
+        private void CreateGUI()
+        {
+            var root = rootVisualElement;
 
-    async UniTaskVoid CreateAsaAsync()
-    {
-        if (!asset)
-            throw new ArgumentNullException(nameof(asset));
-        if (!creatorAccount)
-            throw new ArgumentNullException(nameof(creatorAccount));
-        if (!algod)
-            throw new ArgumentNullException(nameof(algod));
+            var assetField = new PropertyField { bindingPath = nameof(asset) };
+            assetField.SetEnabled(false);
+            root.Add(assetField);
+            root.Add(new PropertyField { bindingPath = nameof(creatorAccount) });
+            root.Add(new PropertyField { bindingPath = nameof(algod) });
+            root.Add(new Button(CreateAsa) { text = "Create" });
 
-        // check algod health
-        var healthResponse = await algod.Client.HealthCheck();
-        if (healthResponse.Error)
-            throw new Exception($"Algod health check failed: {healthResponse.Error}");
+            root.Bind(new SerializedObject(this));
+        }
 
-        // get txn params
-        var (txnParamsErr, txnParams) = await algod.Client.TransactionParams();
-        if (txnParamsErr)
-            throw new Exception(txnParamsErr);
+        private void CreateAsa()
+        {
+            CreateAsaAsync().Forget();
+        }
 
-        // construct and sign the transaction
-        var txn = Transaction.AssetCreate(
-            sender: creatorAccount.Address,
-            txnParams: txnParams,
-            assetParams: asset.Params
-        );
-        var signedTxn = creatorAccount.SignTxn(txn);
+        private async UniTaskVoid CreateAsaAsync()
+        {
+            if (!asset)
+                throw new ArgumentNullException(nameof(asset));
+            if (!creatorAccount)
+                throw new ArgumentNullException(nameof(creatorAccount));
+            if (!algod)
+                throw new ArgumentNullException(nameof(algod));
 
-        // send the transaction
-        var (submitTxnErr, txnId) = await algod.Client.SendTransaction(signedTxn);
-        if (submitTxnErr)
-            throw new Exception(submitTxnErr);
-        Debug.Log($"Submitted txn with id: {txnId.TxId}");
+            // check algod health
+            var healthResponse = await algod.Client.HealthCheck();
+            if (healthResponse.Error)
+                throw new Exception($"Algod health check failed: {healthResponse.Error}");
 
-        // wait for confirmation
-        var (txnConfirmErr, confirmedTxn) = await algod.Client.WaitForConfirmation(txnId.TxId);
-        if (txnConfirmErr)
-            throw new Exception(txnConfirmErr);
+            // get txn params
+            var (txnParamsErr, txnParams) = await algod.Client.TransactionParams();
+            if (txnParamsErr)
+                throw new Exception(txnParamsErr);
 
-        // Apply index and network to the ASA
-        var serializedObject = new SerializedObject(asset);
-        serializedObject.Update();
-        asset.Index = confirmedTxn.AssetIndex.Value;
-        asset.Network = algod.Network;
-        serializedObject.ApplyModifiedPropertiesWithoutUndo();
-        Debug.Log("Asset Created!");
+            // construct and sign the transaction
+            var txn = Transaction.AssetCreate(
+                sender: creatorAccount.Address,
+                txnParams: txnParams,
+                assetParams: asset.Params
+            );
+            var signedTxn = creatorAccount.SignTxn(txn);
 
-        // close the window now that the asset is created.
-        Close();
+            // send the transaction
+            var (submitTxnErr, txnId) = await algod.Client.SendTransaction(signedTxn);
+            if (submitTxnErr)
+                throw new Exception(submitTxnErr);
+            Debug.Log($"Submitted txn with id: {txnId.TxId}");
+
+            // wait for confirmation
+            var (txnConfirmErr, confirmedTxn) = await algod.Client.WaitForConfirmation(txnId.TxId);
+            if (txnConfirmErr)
+                throw new Exception(txnConfirmErr);
+
+            // Apply index and network to the ASA
+            var serializedObject = new SerializedObject(asset);
+            serializedObject.Update();
+            asset.Index = confirmedTxn.AssetIndex.Value;
+            asset.Network = algod.Network;
+            serializedObject.ApplyModifiedPropertiesWithoutUndo();
+            Debug.Log("Asset Created!");
+
+            // close the window now that the asset is created.
+            Close();
+        }
     }
 }

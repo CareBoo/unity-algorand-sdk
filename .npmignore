@@ -5,9 +5,9 @@
 .vscode/**
 dist/**
 *.code-workspace
-Documentation~/**/*.meta
+docs
 scripts/**
-Unity.AlgoSdk*/**
+Algorand.Unity*/**
 .czrc
 .editorconfig
 .gitattributes

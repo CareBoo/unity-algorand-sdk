@@ -1,0 +1,22 @@
+{
+    "name": "Algorand.Unity.Samples.EditorWallets.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:0ed527c4e62544933a97fbaff8ea5d5a",
+        "GUID:45ab5c0c2cb4a0e4ba897b731349c490",
+        "GUID:7d7102a6f2a084a30ad9e7734dd7ec17",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:e0cd26848372d4e5c891c569017e11f1"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

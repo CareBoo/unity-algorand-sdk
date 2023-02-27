@@ -6,14 +6,14 @@ on:
       - main
   pull_request:
     paths:
-      - "Runtime/**.cs"
-      - "Runtime/**.asmdef"
-      - "Runtime/**.dll"
-      - "Runtime/**/Plugins/**"
-      - "Editor/**.cs"
-      - "Editor/**.asmdef"
-      - "Tests/**.cs"
-      - "Tests/**.asmdef"
+      - "Runtime/**/*.cs"
+      - "Runtime/**/*.asmdef"
+      - "Runtime/**/*.dll"
+      - "Runtime/**/Plugins/**/*"
+      - "Editor/**/*.cs"
+      - "Editor/**/*.asmdef"
+      - "Tests/**/*.cs"
+      - "Tests/**/*.asmdef"
       - "**/packages-lock.json"
   workflow_dispatch:
 
@@ -28,7 +28,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        unityVersion: [2020.3.36f1, 2021.3.6f1]
+        unityVersion: [2020.3.42f1, 2021.3.14f1]
         targetPlatform:
           # - mac-mono
           # - windows-mono
@@ -38,8 +38,8 @@ jobs:
           # - webgl
 
     steps:
-      - name: Checkout AlgoSdk
-        uses: actions/checkout@v2
+      - name: Checkout Algorand.Unity
+        uses: actions/checkout@v3
         with:
           lfs: true
 
@@ -52,19 +52,19 @@ jobs:
           echo "::set-output name=date::$(/bin/date -u "+%Y%m%d")"
         shell: bash
       - name: Cache Library
-        uses: actions/cache@v2.1.1
+        uses: actions/cache@v3
         with:
-          path: Unity.AlgoSdk.Package/Library
+          path: Algorand.Unity.Package/Library
           key: Library-${{ matrix.unityVersion }}-${{ matrix.targetPlatform }}-${{ steps.get-date.outputs.date }}
           restore-keys: |
             Library-${{ matrix.unityVersion }}-${{ matrix.targetPlatform }}-
             Library-${{ matrix.unityVersion }}-
-      - run: echo "::set-output name=result::+CareBoo.AlgoSdk*,-CareBoo.AlgoSdk*.Tests,-CareBoo.AlgoSdk*.Samples*"
+      - run: echo "::set-output name=result::+Algorand.Unity*,-Algorand.Unity*.Tests,-Algorand.Unity*.Samples*"
         id: assemblyFilters
       - uses: game-ci/unity-test-runner@v2
         id: tests
         with:
-          projectPath: ./Unity.AlgoSdk.Package
+          projectPath: ./Algorand.Unity.Package
           artifactsPath: TestResults
           customParameters: -batchMode -burst-disable-compilation -enableCodeCoverage -coverageOptions generateAdditionalMetrics;enableCyclomaticComplexity;assemblyFilters:${{ steps.assemblyFilters.outputs.result }}
           githubToken: ${{ secrets.GITHUB_TOKEN }}
@@ -76,18 +76,3 @@ jobs:
         with:
           name: Unity ${{ matrix.unityVersion }} ${{ matrix.targetPlatform }} Test Results
           path: ${{ steps.tests.outputs.artifactsPath }}
-      - name: Upload Code Coverage Artifacts
-        uses: actions/upload-artifact@v1
-        with:
-          name: Unity ${{ matrix.unityVersion }} ${{ matrix.targetPlatform }} Code Coverage
-          path: Unity.AlgoSdk.Package/CodeCoverage
-      - name: Upload PlayMode Test Coverage Report
-        uses: codecov/codecov-action@v1
-        with:
-          flags: unittests
-          file: Unity.AlgoSdk.Package/CodeCoverage/workspace-opencov/PlayMode/TestCoverageResults_0000.xml
-      - name: Upload EditMode Test Coverage Report
-        uses: codecov/codecov-action@v1
-        with:
-          flags: unittests
-          file: Unity.AlgoSdk.Package/CodeCoverage/workspace-opencov/EditMode/TestCoverageResults_0000.xml
