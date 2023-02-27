@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [4.0.0-pre.24](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.23...v4.0.0-pre.24) (2023-02-27)
+
+
+### Bug Fixes
+
+* **account:** fix `TryParse` throwing `NullReferenceException` when given string is null ([142bc3b](https://github.com/CareBoo/unity-algorand-sdk/commit/142bc3bc3229de3ea9fa97f22f91ea3e68f43607))
+* **walletconnect:** fix invalid chain id in wallet connect ([abdedaf](https://github.com/CareBoo/unity-algorand-sdk/commit/abdedaf1f1d93fab1b522089c7d67b739c041443))
+
 # [4.0.0-pre.23](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.22...v4.0.0-pre.23) (2023-02-22)
 
 
