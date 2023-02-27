@@ -150,7 +150,7 @@ required for this package. See [Unity's official documentation on Scoped Registr
 
 ### Unity Asset Store
 
-Coming Soon!
+[Algorand SDK for Unity](https://u3d.as/31Er) is now available!
 
 ## Getting Started
 
