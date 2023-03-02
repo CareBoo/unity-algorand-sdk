@@ -101,8 +101,8 @@ namespace Algorand.Unity.WalletConnect
 
                 const string method = "algo_signTxn";
                 AlgoApiObject[] requestParams = options.Equals(default)
-                    ? new AlgoApiObject[1] { AlgoApiSerializer.SerializeJson(transactions) }
-                    : new AlgoApiObject[2] { AlgoApiSerializer.SerializeJson(transactions), AlgoApiSerializer.SerializeJson(options) }
+                    ? new AlgoApiObject[] { AlgoApiSerializer.SerializeJson(transactions) }
+                    : new AlgoApiObject[] { AlgoApiSerializer.SerializeJson(transactions), AlgoApiSerializer.SerializeJson(options) }
                     ;
 
                 return new JsonRpcRequest

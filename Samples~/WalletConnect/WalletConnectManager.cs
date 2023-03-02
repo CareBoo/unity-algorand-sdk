@@ -1,6 +1,7 @@
 using Algorand.Unity.WalletConnect;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using System.Linq;
 using UnityEngine.Serialization;
 
 namespace Algorand.Unity.Samples.WalletConnect
@@ -108,6 +109,8 @@ namespace Algorand.Unity.Samples.WalletConnect
             qrCode = handshake.ToQrCodeTexture();
 
             await account.WaitForWalletApproval();
+            Debug.Log(
+                $"Connected account with addresses:\n{string.Join("\n", account.SessionData.Accounts.Select(a => a.ToString()))}");
             Debug.Log($"Connected account:\n{AlgoApiSerializer.SerializeJson(account.Address)}");
         }
 
@@ -149,13 +152,20 @@ namespace Algorand.Unity.Samples.WalletConnect
             }
 
             var signing = Transaction.Atomic()
-                    .AddTxn(Transaction.Payment(account.Address, txnParams, account.Address, 0))
+                    .AddTxn(
+                        Transaction.Payment(
+                            sender: account.Address,
+                            txnParams: txnParams, 
+                            receiver: account.Address,
+                            amount: 0))
                     .Build()
                     .SignWithAsync(account)
                     .FinishSigningAsync()
                 ;
             if (shouldLaunchApp && launchedApp != null)
+            {
                 launchedApp.LaunchForSigning();
+            }
             var signedTxns = await signing;
             txnStatus = TransactionStatus.AwaitingConfirmation;
             var (txnSendErr, txid) = await algod.RawTransaction(signedTxns);
