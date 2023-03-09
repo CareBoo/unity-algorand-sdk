@@ -5,6 +5,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [4.1.0-pre.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0...v4.1.0-pre.1) (2023-03-09)
+
+
+### Bug Fixes
+
+* **walletconnect:** use all addresses in a `WalletConnectAccount` as signers ([5dc7214](https://github.com/CareBoo/unity-algorand-sdk/commit/5dc7214a762e8d4eb2b3069ebb621bd723672376))
+
+
+### Features
+
+* **blockchain:** add `MicroAlgos.FromAlgos` conversion function ([055d84a](https://github.com/CareBoo/unity-algorand-sdk/commit/055d84a0121c664af51ccd033b7dd98e2f6baf57))
+
 # [4.0.0](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0...v4.0.0) (2023-02-27)
 
 
