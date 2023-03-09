@@ -20,6 +20,9 @@ namespace Algorand.Unity
 
         [SerializeField] private ulong amount;
 
+        /// <summary>
+        /// The numeric amount of MicroAlgos.
+        /// </summary>
         public ulong Amount
         {
             get => amount;
@@ -43,9 +46,28 @@ namespace Algorand.Unity
             return this == other;
         }
 
+        /// <summary>
+        /// Converts these MicroAlgos to units of Algos.
+        /// </summary>
+        /// <returns></returns>
         public double ToAlgos() => (double)Amount / PerAlgo;
 
-        public static implicit operator MicroAlgos(ulong amount) => new MicroAlgos(amount);
+        /// <summary>
+        /// Converts the given amount of algos into microalgos.
+        /// </summary>
+        /// <param name="algos">The amount of algos</param>
+        /// <returns>MicroAlgo amount of algos</returns>
+        public static MicroAlgos FromAlgos(double algos)
+        {
+            return (ulong)(algos * PerAlgo);
+        }
+
+        public static implicit operator MicroAlgos(ulong amount)
+        {
+            MicroAlgos result;
+            result.amount = amount;
+            return result;
+        }
 
         public static implicit operator ulong(MicroAlgos microAlgos) => microAlgos.Amount;
     }
