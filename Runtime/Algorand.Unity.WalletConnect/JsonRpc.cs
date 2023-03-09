@@ -9,7 +9,7 @@ namespace Algorand.Unity.WalletConnect
         public static NetworkMessage ToNetworkMessage<T>(this T request, Hex encryptionKey, string topic)
             where T : IJsonRpcRequest
         {
-            using var requestJson = AlgoApiSerializer.SerializeJson(request, Allocator.Persistent);
+            using var requestJson = AlgoApiSerializer.SerializeJson(request, Allocator.Temp);
             var payloadData = requestJson.AsArray().ToArray();
             var encryptedPayload = AesCipher.EncryptWithKey(encryptionKey, payloadData);
             return NetworkMessage.PublishToTopic(encryptedPayload, topic);

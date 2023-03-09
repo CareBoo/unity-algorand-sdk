@@ -19,7 +19,7 @@ namespace Algorand.Unity
         /// <returns>An <see cref="Address"/> for a program.</returns>
         public static Address GetAddress(CompiledTeal program)
         {
-            using var bytes = GetSignBytes(program, Allocator.Persistent);
+            using var bytes = GetSignBytes(program, Allocator.Temp);
             return Sha512.Hash256Truncated(bytes);
         }
 
@@ -47,7 +47,7 @@ namespace Algorand.Unity
         /// <returns><see cref="Sig"/></returns>
         public static Sig Sign(CompiledTeal program, SecretKeyHandle secretKey)
         {
-            using var programSignBytes = Logic.GetSignBytes(program, Allocator.Persistent);
+            using var programSignBytes = Logic.GetSignBytes(program, Allocator.Temp);
             return secretKey.Sign(programSignBytes);
         }
 

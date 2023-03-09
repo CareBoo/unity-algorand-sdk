@@ -45,7 +45,7 @@ namespace Algorand.Unity.Experimental.Abi
             {
                 var result = new EncodedAbiArg(allocator);
                 using var k = new UInt16((ushort)value.Length)
-                    .Encode(AbiType.UIntN(16), references, Allocator.Persistent);
+                    .Encode(AbiType.UIntN(16), references, Allocator.Temp);
                 result.Bytes.AddRange(k.Bytes.AsArray());
                 result.Bytes.AddRange(tupleEncoding.Bytes.AsArray());
                 return result;

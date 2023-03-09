@@ -111,7 +111,7 @@ namespace Algorand.Unity
 
         public void Serialize(ref JsonWriter writer, T value)
         {
-            using var fieldsToSerialize = fieldMap.GetFieldsToSerialize(value, Allocator.Persistent);
+            using var fieldsToSerialize = fieldMap.GetFieldsToSerialize(value, Allocator.Temp);
             writer.BeginObject();
             for (var i = 0; i < fieldsToSerialize.Length; i++)
             {
@@ -126,7 +126,7 @@ namespace Algorand.Unity
 
         public void Serialize(ref MessagePackWriter writer, T value)
         {
-            using var fieldsToSerialize = fieldMap.GetFieldsToSerialize(value, Allocator.Persistent);
+            using var fieldsToSerialize = fieldMap.GetFieldsToSerialize(value, Allocator.Temp);
             writer.WriteMapHeader(fieldsToSerialize.Length);
             for (var i = 0; i < fieldsToSerialize.Length; i++)
             {
@@ -141,7 +141,7 @@ namespace Algorand.Unity
     {
         public AlgoApiObject Deserialize(ref JsonReader reader)
         {
-            var json = new NativeText(Allocator.Persistent);
+            var json = new NativeText(Allocator.Temp);
             try
             {
                 reader.ReadRaw(ref json).ThrowIfError(reader);
@@ -155,7 +155,7 @@ namespace Algorand.Unity
 
         public AlgoApiObject Deserialize(ref MessagePackReader reader)
         {
-            var msgPack = new NativeList<byte>(Allocator.Persistent);
+            var msgPack = new NativeList<byte>(Allocator.Temp);
             try
             {
                 reader.ReadRaw(msgPack);
@@ -171,7 +171,7 @@ namespace Algorand.Unity
         {
             if (!value.IsJson || value.Json == null)
                 throw new ArgumentException("cannot serialize non-json to json...", nameof(value));
-            using var json = new NativeArray<byte>(value.Json, Allocator.Persistent);
+            using var json = new NativeArray<byte>(value.Json, Allocator.Temp);
             writer.WriteRaw(json);
         }
 
@@ -179,7 +179,7 @@ namespace Algorand.Unity
         {
             if (!value.IsMessagePack || value.MessagePack == null)
                 throw new ArgumentException("cannot serialize non-msgpack to msgpack...", nameof(value));
-            using var msgPack = new NativeArray<byte>(value.MessagePack, Allocator.Persistent);
+            using var msgPack = new NativeArray<byte>(value.MessagePack, Allocator.Temp);
             writer.WriteRaw(msgPack);
         }
     }

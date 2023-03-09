@@ -106,7 +106,7 @@ namespace Algorand.Unity.WalletConnect
 
         public static Hex GenKey()
         {
-            using var secret = new NativeByteArray(32, Allocator.Persistent);
+            using var secret = new NativeByteArray(32, Allocator.Temp);
             Crypto.Random.Randomize(secret);
             return secret.ToArray();
         }

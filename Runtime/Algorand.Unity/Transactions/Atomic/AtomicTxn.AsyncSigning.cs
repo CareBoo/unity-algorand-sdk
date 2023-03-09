@@ -97,7 +97,7 @@ namespace Algorand.Unity
             /// <returns>Msgpack encoding of the transaction group.</returns>
             public async UniTask<byte[]> FinishSigningAsync()
             {
-                using var nativeBytes = await FinishSigningAsync(Allocator.Persistent);
+                using var nativeBytes = await FinishSigningAsync(Allocator.Temp);
                 return nativeBytes.AsArray().ToArray();
             }
 

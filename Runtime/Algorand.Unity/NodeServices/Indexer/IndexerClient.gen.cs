@@ -889,7 +889,7 @@ namespace Algorand.Unity
             string next = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("application-id", applicationId)
                 .Add("include-all", includeAll)
                 .Add("limit", limit)
@@ -942,7 +942,7 @@ namespace Algorand.Unity
             Optional<ulong> round = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("limit", limit)
                 .Add("next", next)
                 .Add("note-prefix", notePrefix)
@@ -986,7 +986,7 @@ namespace Algorand.Unity
             Optional<ulong> assetId = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("include-all", includeAll)
                 .Add("limit", limit)
                 .Add("next", next)
@@ -1018,7 +1018,7 @@ namespace Algorand.Unity
             Optional<ulong> currencyLessThan = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("include-all", includeAll)
                 .Add("limit", limit)
                 .Add("next", next)
@@ -1046,7 +1046,7 @@ namespace Algorand.Unity
             string next = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("application-id", applicationId)
                 .Add("include-all", includeAll)
                 .Add("limit", limit)
@@ -1067,7 +1067,7 @@ namespace Algorand.Unity
             string boxName
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("box-name", boxName)
                 ;
             var path = $"/v2/applications/{applicationId}/box{queryBuilder}";
@@ -1091,7 +1091,7 @@ namespace Algorand.Unity
             string next = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("asset-id", assetId)
                 .Add("include-all", includeAll)
                 .Add("limit", limit)
@@ -1118,7 +1118,7 @@ namespace Algorand.Unity
             string next = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("application-id", applicationId)
                 .Add("creator", creator)
                 .Add("include-all", includeAll)
@@ -1156,7 +1156,7 @@ namespace Algorand.Unity
             Optional<bool> includeAll = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("asset-id", assetId)
                 .Add("limit", limit)
                 .Add("next", next)
@@ -1211,7 +1211,7 @@ namespace Algorand.Unity
             Optional<ulong> round = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("limit", limit)
                 .Add("next", next)
                 .Add("note-prefix", notePrefix)
@@ -1277,7 +1277,7 @@ namespace Algorand.Unity
             Optional<ulong> round = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("limit", limit)
                 .Add("next", next)
                 .Add("note-prefix", notePrefix)
@@ -1313,7 +1313,7 @@ namespace Algorand.Unity
             Optional<bool> includeAll = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("include-all", includeAll)
                 ;
             var path = $"/v2/assets/{assetId}{queryBuilder}";
@@ -1331,7 +1331,7 @@ namespace Algorand.Unity
             Optional<bool> includeAll = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("include-all", includeAll)
                 ;
             var path = $"/v2/applications/{applicationId}{queryBuilder}";
@@ -1351,7 +1351,7 @@ namespace Algorand.Unity
             string next = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("limit", limit)
                 .Add("next", next)
                 ;
@@ -1376,7 +1376,7 @@ namespace Algorand.Unity
             string next = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("asset-id", assetId)
                 .Add("include-all", includeAll)
                 .Add("limit", limit)
@@ -1407,7 +1407,7 @@ namespace Algorand.Unity
             Address senderAddress = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("limit", limit)
                 .Add("next", next)
                 .Add("txid", txid)
@@ -1447,7 +1447,7 @@ namespace Algorand.Unity
             ExcludeAccountFields exclude = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("round", round)
                 .Add("include-all", includeAll)
                 .Add("exclude", exclude)
@@ -1467,7 +1467,7 @@ namespace Algorand.Unity
             Optional<bool> headerOnly = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("header-only", headerOnly)
                 ;
             var path = $"/v2/blocks/{roundNumber}{queryBuilder}";

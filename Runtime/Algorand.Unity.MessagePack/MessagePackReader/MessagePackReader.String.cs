@@ -6,7 +6,7 @@ namespace Algorand.Unity.MessagePack
     {
         public void ReadString(out string s)
         {
-            var text = new NativeText(Allocator.Persistent);
+            var text = new NativeText(Allocator.Temp);
             try
             {
                 ReadString(ref text);

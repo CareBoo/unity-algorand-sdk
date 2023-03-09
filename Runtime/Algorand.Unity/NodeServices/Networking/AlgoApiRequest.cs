@@ -101,7 +101,7 @@ namespace Algorand.Unity
         /// <returns>this request with body and header set</returns>
         public AlgoApiRequest SetJsonBody<TBody>(TBody value)
         {
-            using var json = AlgoApiSerializer.SerializeJson(value, Allocator.Persistent);
+            using var json = AlgoApiSerializer.SerializeJson(value, Allocator.Temp);
             return SetJsonBody(json);
         }
 
@@ -129,7 +129,7 @@ namespace Algorand.Unity
         /// <returns>this request with body and header set</returns>
         public AlgoApiRequest SetMessagePackBody<TBody>(TBody value)
         {
-            using var msgpack = AlgoApiSerializer.SerializeMessagePack(value, Allocator.Persistent);
+            using var msgpack = AlgoApiSerializer.SerializeMessagePack(value, Allocator.Temp);
             return SetMessagePackBody(msgpack.AsArray().AsReadOnly());
         }
 

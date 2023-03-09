@@ -181,7 +181,7 @@ namespace Algorand.Unity.LowLevel
         public static NativeArray<byte> ToNativeArray<TByteArray>(this TByteArray bytes, Allocator allocator)
             where TByteArray : struct, IArray<byte>
         {
-            var arr = new NativeArray<byte>(bytes.Length, Allocator.Persistent);
+            var arr = new NativeArray<byte>(bytes.Length, Allocator.Temp);
             try
             {
                 for (var i = 0; i < arr.Length; i++)

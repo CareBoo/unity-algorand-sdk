@@ -19,7 +19,7 @@ namespace Algorand.Unity.Experimental.Abi
 
         public MethodSelector(Method method)
         {
-            using var signature = method.GetSignature(Allocator.Persistent);
+            using var signature = method.GetSignature(Allocator.Temp);
             var hash = Sha512.Hash256Truncated(signature.AsArray().AsReadOnly());
             unsafe
             {

@@ -13,7 +13,7 @@ namespace Algorand.Unity
             if (!reader.TryRead(JsonToken.ObjectBegin))
                 JsonReadError.IncorrectType.ThrowIfError(reader);
 
-            using var map = new NativeList<ValueDeltaKeyValue>(64, Allocator.Persistent);
+            using var map = new NativeList<ValueDeltaKeyValue>(64, Allocator.Temp);
             while (reader.Peek() != JsonToken.ObjectEnd && reader.Peek() != JsonToken.None)
             {
                 FixedString64Bytes key = default;

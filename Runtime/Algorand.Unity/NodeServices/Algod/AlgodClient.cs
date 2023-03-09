@@ -66,7 +66,7 @@ namespace Algorand.Unity
         public AlgoApiRequest.Sent<PostTransactionsResponse> SendTransaction<T>(SignedTxn<T> txn)
             where T : struct, ITransaction, IEquatable<T>
         {
-            using var data = AlgoApiSerializer.SerializeMessagePack(txn, Allocator.Persistent);
+            using var data = AlgoApiSerializer.SerializeMessagePack(txn, Allocator.Temp);
             return RawTransaction(data.AsArray().ToArray());
         }
 

@@ -110,7 +110,7 @@ namespace Algorand.Unity
                     method,
                     in methodArgs,
                     onComplete,
-                    Allocator.Persistent
+                    Allocator.Temp
                 );
                 methodCallBuilder.ValidateTxnArgs(Txns);
                 var txn = methodCallBuilder.BuildTxn();
@@ -205,7 +205,7 @@ namespace Algorand.Unity
                 {
                     return txnsArr;
                 }
-                var writer = new MessagePackWriter(Allocator.Persistent);
+                var writer = new MessagePackWriter(Allocator.Temp);
                 try
                 {
                     for (var i = 0; i < IdPrefix.Length; i++)

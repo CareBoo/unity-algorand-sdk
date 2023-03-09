@@ -98,7 +98,7 @@ namespace Algorand.Unity
             if (Subsigs == null)
                 return result;
 
-            using var listBytes = new NativeList<byte>(Allocator.Persistent);
+            using var listBytes = new NativeList<byte>(Allocator.Temp);
             unsafe
             {
                 fixed (void* a = AddressPrefix)

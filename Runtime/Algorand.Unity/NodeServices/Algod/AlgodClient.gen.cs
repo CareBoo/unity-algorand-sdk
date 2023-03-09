@@ -759,7 +759,7 @@ namespace Algorand.Unity
             ResponseFormat format = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("hashtype", hashtype)
                 .Add("format", format)
                 ;
@@ -776,7 +776,7 @@ namespace Algorand.Unity
             Optional<ulong> timeout = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("timeout", timeout)
                 ;
             var path = $"/v2/shutdown{queryBuilder}";
@@ -846,7 +846,7 @@ namespace Algorand.Unity
             ResponseFormat format = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("format", format)
                 ;
             var path = $"/v2/blocks/{round}{queryBuilder}";
@@ -864,7 +864,7 @@ namespace Algorand.Unity
             string name
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("name", name)
                 ;
             var path = $"/v2/applications/{applicationId}/box{queryBuilder}";
@@ -936,7 +936,7 @@ namespace Algorand.Unity
             ResponseFormat format = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("max", max)
                 .Add("format", format)
                 ;
@@ -994,7 +994,7 @@ namespace Algorand.Unity
             ResponseFormat format = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("max", max)
                 .Add("format", format)
                 ;
@@ -1065,7 +1065,7 @@ namespace Algorand.Unity
             Optional<ulong> max = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("max", max)
                 ;
             var path = $"/v2/applications/{applicationId}/boxes{queryBuilder}";
@@ -1189,7 +1189,7 @@ namespace Algorand.Unity
             Optional<bool> sourcemap = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("sourcemap", sourcemap)
                 ;
             var path = $"/v2/teal/compile{queryBuilder}";
@@ -1209,7 +1209,7 @@ namespace Algorand.Unity
             ResponseFormat format = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("exclude", exclude)
                 .Add("format", format)
                 ;
@@ -1241,7 +1241,7 @@ namespace Algorand.Unity
             ResponseFormat format = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("format", format)
                 ;
             var path = $"/v2/transactions/pending/{txid}{queryBuilder}";
@@ -1261,7 +1261,7 @@ namespace Algorand.Unity
             ResponseFormat format = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("format", format)
                 ;
             var path = $"/v2/accounts/{address}/applications/{applicationId}{queryBuilder}";
@@ -1333,7 +1333,7 @@ namespace Algorand.Unity
             ResponseFormat format = default
         )
         {
-            using var queryBuilder = new QueryBuilder(Allocator.Persistent)
+            using var queryBuilder = new QueryBuilder(Allocator.Temp)
                 .Add("format", format)
                 ;
             var path = $"/v2/accounts/{address}/assets/{assetId}{queryBuilder}";

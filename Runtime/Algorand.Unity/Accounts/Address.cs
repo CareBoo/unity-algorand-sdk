@@ -94,7 +94,7 @@ namespace Algorand.Unity
         {
             var result = new FixedString128Bytes();
             var checksum = ComputeCheckSum(publicKey);
-            var bytes = new NativeByteArray(SizeBytes + CheckSum.SizeBytes, Allocator.Persistent);
+            var bytes = new NativeByteArray(SizeBytes + CheckSum.SizeBytes, Allocator.Temp);
             try
             {
                 bytes.CopyFrom(this, 0);

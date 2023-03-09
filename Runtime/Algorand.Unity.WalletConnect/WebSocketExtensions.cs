@@ -12,7 +12,7 @@ namespace Algorand.Unity.WalletConnect
     {
         public static void Send(this IWebSocketClient client, NetworkMessage networkMessage)
         {
-            using var networkMessageData = AlgoApiSerializer.SerializeJson(networkMessage, Allocator.Persistent);
+            using var networkMessageData = AlgoApiSerializer.SerializeJson(networkMessage, Allocator.Temp);
             var networkMessageArraySegment = new ArraySegment<byte>(networkMessageData.AsArray().ToArray());
             client.Send(networkMessageArraySegment);
         }
