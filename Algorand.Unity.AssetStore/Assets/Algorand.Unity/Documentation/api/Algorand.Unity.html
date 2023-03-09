@@ -2343,7 +2343,8 @@ Similar to the <see cref="!:RangeAttribute"></see> but extended with mod.</p>
     <h3 id="structs">Structs
 </h3>
       <h4><a class="xref" href="Algorand.Unity.Account.html">Account</a></h4>
-      <section><p>A local, in-memory account.</p>
+      <section><p>A insecure, local, in-memory account. This is useful for creating quick accounts for developer testing, and it
+should not be used in production.</p>
 </section>
       <h4><a class="xref" href="Algorand.Unity.AccountParticipation.html">AccountParticipation</a></h4>
       <section><p>Describes the parameters used by this account in consensus protocol.</p>
@@ -2596,9 +2597,11 @@ It contains multiple commitments based on different algorithms and hash function
       <h4><a class="xref" href="Algorand.Unity.AtomicTxn.ISigning-1.html">AtomicTxn.ISigning&lt;T&gt;</a></h4>
       <section></section>
       <h4><a class="xref" href="Algorand.Unity.IAccount.html">IAccount</a></h4>
-      <section></section>
+      <section><p>An Algorand Account which has an <a class="xref" href="Algorand.Unity.IAccount.html#Algorand_Unity_IAccount_Address">Address</a> to identify it.</p>
+</section>
       <h4><a class="xref" href="Algorand.Unity.IAccountSigner.html">IAccountSigner</a></h4>
-      <section></section>
+      <section><p>A signer for a particular <a class="xref" href="Algorand.Unity.Address.html">Address</a>. There is only one valid Signer for an <a class="xref" href="Algorand.Unity.Address.html">Address</a>.</p>
+</section>
       <h4><a class="xref" href="Algorand.Unity.IAlgoApiClient.html">IAlgoApiClient</a></h4>
       <section></section>
       <h4><a class="xref" href="Algorand.Unity.IAlgoApiFormatter-1.html">IAlgoApiFormatter&lt;T&gt;</a></h4>
@@ -2625,9 +2628,12 @@ It contains multiple commitments based on different algorithms and hash function
       <h4><a class="xref" href="Algorand.Unity.IAssetTransferTxn.html">IAssetTransferTxn</a></h4>
       <section></section>
       <h4><a class="xref" href="Algorand.Unity.IAsyncAccountSigner.html">IAsyncAccountSigner</a></h4>
-      <section></section>
+      <section><p>An asynchronous signer for a particular <a class="xref" href="Algorand.Unity.Address.html">Address</a>.</p>
+</section>
       <h4><a class="xref" href="Algorand.Unity.IAsyncAccountSignerWithProgress.html">IAsyncAccountSignerWithProgress</a></h4>
-      <section></section>
+      <section><p>An asynchronous signer for a particular <a class="xref" href="Algorand.Unity.Address.html">Address</a> that contains signing functions that support
+progress updates.</p>
+</section>
       <h4><a class="xref" href="Algorand.Unity.IAsyncSigner.html">IAsyncSigner</a></h4>
       <section></section>
       <h4><a class="xref" href="Algorand.Unity.IAsyncSignerWithProgress.html">IAsyncSignerWithProgress</a></h4>

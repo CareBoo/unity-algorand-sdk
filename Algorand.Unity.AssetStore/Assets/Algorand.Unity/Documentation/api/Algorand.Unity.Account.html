@@ -2256,7 +2256,8 @@
 
   <h1 id="Algorand_Unity_Account" data-uid="Algorand.Unity.Account" class="text-break">Struct Account
 </h1>
-  <div class="markdown level0 summary"><p>A local, in-memory account.</p>
+  <div class="markdown level0 summary"><p>A insecure, local, in-memory account. This is useful for creating quick accounts for developer testing, and it
+should not be used in production.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="implements">
@@ -2373,7 +2374,8 @@
 
   <a id="Algorand_Unity_Account_IsRekeyed_" data-uid="Algorand.Unity.Account.IsRekeyed*"></a>
   <h4 id="Algorand_Unity_Account_IsRekeyed" data-uid="Algorand.Unity.Account.IsRekeyed">IsRekeyed</h4>
-  <div class="markdown level1 summary"><p>A local, in-memory account.</p>
+  <div class="markdown level1 summary"><p>A insecure, local, in-memory account. This is useful for creating quick accounts for developer testing, and it
+should not be used in production.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2401,7 +2403,7 @@
 
   <a id="Algorand_Unity_Account_Deconstruct_" data-uid="Algorand.Unity.Account.Deconstruct*"></a>
   <h4 id="Algorand_Unity_Account_Deconstruct_Algorand_Unity_PrivateKey__Algorand_Unity_Address__" data-uid="Algorand.Unity.Account.Deconstruct(Algorand.Unity.PrivateKey@,Algorand.Unity.Address@)">Deconstruct(out PrivateKey, out Address)</h4>
-  <div class="markdown level1 summary"><p>A local, in-memory account.</p>
+  <div class="markdown level1 summary"><p>Represent this account as its private key and public key.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2421,12 +2423,14 @@
       <tr>
         <td><a class="xref" href="Algorand.Unity.PrivateKey.html">PrivateKey</a></td>
         <td><span class="parametername">privateKey</span></td>
-        <td></td>
+        <td><p>The private key this account uses to sign transactions.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
         <td><span class="parametername">address</span></td>
-        <td></td>
+        <td><p>The public key or address of this account.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2460,7 +2464,7 @@
 
   <a id="Algorand_Unity_Account_SignTxn_" data-uid="Algorand.Unity.Account.SignTxn*"></a>
   <h4 id="Algorand_Unity_Account_SignTxn__1___0_" data-uid="Algorand.Unity.Account.SignTxn``1(``0)">SignTxn&lt;T&gt;(T)</h4>
-  <div class="markdown level1 summary"><p>A local, in-memory account.</p>
+  <div class="markdown level1 summary"><p>Sign a single transaction.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2481,7 +2485,8 @@
       <tr>
         <td><span class="xref">T</span></td>
         <td><span class="parametername">txn</span></td>
-        <td></td>
+        <td><p>The transaction to sign.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2496,7 +2501,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Algorand.Unity.SignedTxn-1.html">SignedTxn</a>&lt;T&gt;</td>
-        <td></td>
+        <td><p>A signed transaction, signed with this account&apos;s <a class="xref" href="Algorand.Unity.PrivateKey.html">PrivateKey</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2511,7 +2517,8 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The type of the transaction.</p>
+</td>
       </tr>
     </tbody>
   </table>

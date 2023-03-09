@@ -42973,6 +42973,19 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.MicroAlgos.Equals
   nameWithType: MicroAlgos.Equals
+- uid: Algorand.Unity.MicroAlgos.FromAlgos(System.Double)
+  name: FromAlgos(Double)
+  href: api/Algorand.Unity.MicroAlgos.html#Algorand_Unity_MicroAlgos_FromAlgos_System_Double_
+  commentId: M:Algorand.Unity.MicroAlgos.FromAlgos(System.Double)
+  fullName: Algorand.Unity.MicroAlgos.FromAlgos(System.Double)
+  nameWithType: MicroAlgos.FromAlgos(Double)
+- uid: Algorand.Unity.MicroAlgos.FromAlgos*
+  name: FromAlgos
+  href: api/Algorand.Unity.MicroAlgos.html#Algorand_Unity_MicroAlgos_FromAlgos_
+  commentId: Overload:Algorand.Unity.MicroAlgos.FromAlgos
+  isSpec: "True"
+  fullName: Algorand.Unity.MicroAlgos.FromAlgos
+  nameWithType: MicroAlgos.FromAlgos
 - uid: Algorand.Unity.MicroAlgos.op_Implicit(Algorand.Unity.MicroAlgos)~System.UInt64
   name: Implicit(MicroAlgos to UInt64)
   href: api/Algorand.Unity.MicroAlgos.html#Algorand_Unity_MicroAlgos_op_Implicit_Algorand_Unity_MicroAlgos__System_UInt64
