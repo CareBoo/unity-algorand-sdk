@@ -21,7 +21,7 @@ namespace Algorand.Unity.Samples.CreatingAsas.Editor
                     serializedObject.Update();
                 }
 
-                if (GUILayout.Button("Fund Account (TestNet)"))
+                if (GUILayout.Button("Fund Account"))
                 {
                     Application.OpenURL($"https://dispenser.testnet.aws.algodev.network/?account={accountObject.Address}");
                 }
