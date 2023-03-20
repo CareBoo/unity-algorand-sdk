@@ -1,0 +1,898 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AtomicTxn
+   | Algorand SDK for Unity </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AtomicTxn
+   | Algorand SDK for Unity ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Algorand.Unity.AtomicTxn">
+  
+  
+  <h1 id="Algorand_Unity_AtomicTxn" data-uid="Algorand.Unity.AtomicTxn" class="text-break">Class AtomicTxn
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">AtomicTxn</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Algorand.Unity.html">Algorand.Unity</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Algorand_Unity_AtomicTxn_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class AtomicTxn</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Algorand_Unity_AtomicTxn_IdPrefix" data-uid="Algorand.Unity.AtomicTxn.IdPrefix">IdPrefix</h4>
+  <div class="markdown level1 summary"><p>The prefix to use when converting this group of transactions to bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly byte[] IdPrefix</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Algorand_Unity_AtomicTxn_MaxNumTxns" data-uid="Algorand.Unity.AtomicTxn.MaxNumTxns">MaxNumTxns</h4>
+  <div class="markdown level1 summary"><p>Max number of allowed transactions in an atomic transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MaxNumTxns = 16</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Algorand_Unity_AtomicTxn_CheckTxnIndicesToSign_" data-uid="Algorand.Unity.AtomicTxn.CheckTxnIndicesToSign*"></a>
+  <h4 id="Algorand_Unity_AtomicTxn_CheckTxnIndicesToSign__1___0_Algorand_Unity_TxnIndices_" data-uid="Algorand.Unity.AtomicTxn.CheckTxnIndicesToSign``1(``0,Algorand.Unity.TxnIndices)">CheckTxnIndicesToSign&lt;TSigning&gt;(TSigning, TxnIndices)</h4>
+  <div class="markdown level1 summary"><p>Checks whether the given indices can be signed. Will throw exceptions if they cannot be signed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CheckTxnIndicesToSign&lt;TSigning&gt;(this TSigning group, TxnIndices txnsToSign)
+    where TSigning : AtomicTxn.ISigning&lt;TSigning&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TSigning</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The signing atomic txn group.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TxnIndices.html">TxnIndices</a></td>
+        <td><span class="parametername">txnsToSign</span></td>
+        <td><p>The txn indices to sign.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TSigning</span></td>
+        <td><p>The type of the signing atomic txn group.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Algorand_Unity_AtomicTxn_CheckTxnIndicesToSign__1___0_Algorand_Unity_TxnIndices__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Indices must be in range of the length of transactions and cannot be associated with
+any transactions that are already signed.</p>
+</div>
+  
+  
+  <a id="Algorand_Unity_AtomicTxn_GetTxnIndicesWithSender_" data-uid="Algorand.Unity.AtomicTxn.GetTxnIndicesWithSender*"></a>
+  <h4 id="Algorand_Unity_AtomicTxn_GetTxnIndicesWithSender__1___0_Algorand_Unity_Address_" data-uid="Algorand.Unity.AtomicTxn.GetTxnIndicesWithSender``1(``0,Algorand.Unity.Address)">GetTxnIndicesWithSender&lt;TSigning&gt;(TSigning, Address)</h4>
+  <div class="markdown level1 summary"><p>Get the transaction indices that have <a class="xref" href="Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_Sender">Sender</a> equal to the given address.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TxnIndices GetTxnIndicesWithSender&lt;TSigning&gt;(this TSigning group, Address sender)
+    where TSigning : AtomicTxn.ISigning&lt;TSigning&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TSigning</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The atomic transaction group to look for transactions.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">sender</span></td>
+        <td><p>The address to compare to the transaction&apos;s <a class="xref" href="Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_Sender">Sender</a> address.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TxnIndices.html">TxnIndices</a></td>
+        <td><p>Transaction indices flagged with the indices in the correct position.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TSigning</span></td>
+        <td><p>The type of the signing atomic txn group.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_AtomicTxn_SetSignatures_" data-uid="Algorand.Unity.AtomicTxn.SetSignatures*"></a>
+  <h4 id="Algorand_Unity_AtomicTxn_SetSignatures__1___0_Algorand_Unity_SignedTxn_Algorand_Unity_Transaction____Algorand_Unity_TxnIndices_" data-uid="Algorand.Unity.AtomicTxn.SetSignatures``1(``0,Algorand.Unity.SignedTxn{Algorand.Unity.Transaction}[],Algorand.Unity.TxnIndices)">SetSignatures&lt;TSigning&gt;(TSigning, SignedTxn&lt;Transaction&gt;[], TxnIndices)</h4>
+  <div class="markdown level1 summary"><p>Utility function to set signatures given by signers to signatures in this signing atomic txn group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetSignatures&lt;TSigning&gt;(this TSigning group, SignedTxn&lt;Transaction&gt;[] signedTxns, TxnIndices indices)
+    where TSigning : AtomicTxn.ISigning&lt;TSigning&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TSigning</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The signing atomic txn group.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.SignedTxn-1.html">SignedTxn</a>&lt;<a class="xref" href="Algorand.Unity.Transaction.html">Transaction</a>&gt;[]</td>
+        <td><span class="parametername">signedTxns</span></td>
+        <td><p>The result from signers.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TxnIndices.html">TxnIndices</a></td>
+        <td><span class="parametername">indices</span></td>
+        <td><p>The txn indices that were going to be signed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TSigning</span></td>
+        <td><p>The type of the signing atomic txn group.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_AtomicTxn_SignWith_" data-uid="Algorand.Unity.AtomicTxn.SignWith*"></a>
+  <h4 id="Algorand_Unity_AtomicTxn_SignWith__2___0___1_" data-uid="Algorand.Unity.AtomicTxn.SignWith``2(``0,``1)">SignWith&lt;TSigning, TSigner&gt;(TSigning, TSigner)</h4>
+  <div class="markdown level1 summary"><p>Sign transactions in this group where the <a class="xref" href="Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_Sender">Sender</a> equals the <a class="xref" href="Algorand.Unity.IAccount.html#Algorand_Unity_IAccount_Address">Address</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TSigning SignWith&lt;TSigning, TSigner&gt;(this TSigning group, TSigner signer)
+    where TSigning : AtomicTxn.ISigning&lt;TSigning&gt; where TSigner : IAccount, ISigner</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TSigning</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The signing atomic txn group.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TSigner</span></td>
+        <td><span class="parametername">signer</span></td>
+        <td><p>The account to sign with.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TSigning</span></td>
+        <td><p>This signing atomic txn group with new signatures added.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TSigning</span></td>
+        <td><p>The type of the signing atomic txn group.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TSigner</span></td>
+        <td><p>The type of the account signer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_AtomicTxn_SignWith_" data-uid="Algorand.Unity.AtomicTxn.SignWith*"></a>
+  <h4 id="Algorand_Unity_AtomicTxn_SignWith__2___0___1_Algorand_Unity_TxnIndices_" data-uid="Algorand.Unity.AtomicTxn.SignWith``2(``0,``1,Algorand.Unity.TxnIndices)">SignWith&lt;TSigning, TSigner&gt;(TSigning, TSigner, TxnIndices)</h4>
+  <div class="markdown level1 summary"><p>Sign transactions in this group indicated by the given indices with the given signer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TSigning SignWith&lt;TSigning, TSigner&gt;(this TSigning group, TSigner signer, TxnIndices txnsToSign)
+    where TSigning : AtomicTxn.ISigning&lt;TSigning&gt; where TSigner : ISigner</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TSigning</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The signing atomic txn group.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TSigner</span></td>
+        <td><span class="parametername">signer</span></td>
+        <td><p>The signer to sign these transactions.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TxnIndices.html">TxnIndices</a></td>
+        <td><span class="parametername">txnsToSign</span></td>
+        <td><p>The indices of the transactions to sign.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TSigning</span></td>
+        <td><p>This signing atomic txn group with new signatures added.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TSigning</span></td>
+        <td><p>The type of the signing atomic txn group.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TSigner</span></td>
+        <td><p>The type of the account signer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_AtomicTxn_SignWithAsync_" data-uid="Algorand.Unity.AtomicTxn.SignWithAsync*"></a>
+  <h4 id="Algorand_Unity_AtomicTxn_SignWithAsync__2___0___1_Algorand_Unity_TxnIndices_CancellationToken_" data-uid="Algorand.Unity.AtomicTxn.SignWithAsync``2(``0,``1,Algorand.Unity.TxnIndices,CancellationToken)">SignWithAsync&lt;TSigning, TSigner&gt;(TSigning, TSigner, TxnIndices, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Sign transactions in this group indicated by the given indices with the given signer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AtomicTxn.AsyncSigning SignWithAsync&lt;TSigning, TSigner&gt;(this TSigning group, TSigner signer, TxnIndices txnsToSign, CancellationToken cancellationToken = null)
+    where TSigning : AtomicTxn.ISigning&lt;TSigning&gt; where TSigner : IAsyncSigner</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TSigning</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The signing atomic txn group.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TSigner</span></td>
+        <td><span class="parametername">signer</span></td>
+        <td><p>The async signer account to sign the transactions.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TxnIndices.html">TxnIndices</a></td>
+        <td><span class="parametername">txnsToSign</span></td>
+        <td><p>The indices of the transactions to sign.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional cancellation token for this signer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AtomicTxn.AsyncSigning.html">AtomicTxn.AsyncSigning</a></td>
+        <td><p>An Async Signing Atomic Txn Group with new signatures awaiting to be added.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TSigning</span></td>
+        <td><p>The type of the signing atomic txn group.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TSigner</span></td>
+        <td><p>The type of the account signer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_AtomicTxn_SignWithAsync_" data-uid="Algorand.Unity.AtomicTxn.SignWithAsync*"></a>
+  <h4 id="Algorand_Unity_AtomicTxn_SignWithAsync__2___0___1_CancellationToken_" data-uid="Algorand.Unity.AtomicTxn.SignWithAsync``2(``0,``1,CancellationToken)">SignWithAsync&lt;TSigning, TSigner&gt;(TSigning, TSigner, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Sign transactions in this group where the <a class="xref" href="Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_Sender">Sender</a> equals the <a class="xref" href="Algorand.Unity.IAccount.html#Algorand_Unity_IAccount_Address">Address</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AtomicTxn.AsyncSigning SignWithAsync&lt;TSigning, TSigner&gt;(this TSigning group, TSigner signer, CancellationToken cancellationToken = null)
+    where TSigning : AtomicTxn.ISigning&lt;TSigning&gt; where TSigner : IAccount, IAsyncSigner</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TSigning</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The signing atomic txn group.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TSigner</span></td>
+        <td><span class="parametername">signer</span></td>
+        <td><p>The async signer account to sign the transactions.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional cancellation token for this signer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AtomicTxn.AsyncSigning.html">AtomicTxn.AsyncSigning</a></td>
+        <td><p>An Async Signing Atomic Txn Group with new signatures awaiting to be added.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TSigning</span></td>
+        <td><p>The type of the signing atomic txn group.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TSigner</span></td>
+        <td><p>The type of the account signer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_AtomicTxn_SignWithAsync_" data-uid="Algorand.Unity.AtomicTxn.SignWithAsync*"></a>
+  <h4 id="Algorand_Unity_AtomicTxn_SignWithAsync__3___0___1___2_CancellationToken_" data-uid="Algorand.Unity.AtomicTxn.SignWithAsync``3(``0,``1,``2,CancellationToken)">SignWithAsync&lt;TSigning, TSigner, TProgress&gt;(TSigning, TSigner, TProgress, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Sign transactions in this group where the <a class="xref" href="Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_Sender">Sender</a> equals the <a class="xref" href="Algorand.Unity.IAccount.html#Algorand_Unity_IAccount_Address">Address</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AtomicTxn.AsyncSigning SignWithAsync&lt;TSigning, TSigner, TProgress&gt;(this TSigning group, TSigner signer, TProgress progress, CancellationToken cancellationToken = null)
+    where TSigning : AtomicTxn.ISigning&lt;TSigning&gt; where TSigner : IAccount, IAsyncSignerWithProgress where TProgress : IProgress&lt;float&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TSigning</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The signing atomic txn group.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TSigner</span></td>
+        <td><span class="parametername">signer</span></td>
+        <td><p>The async signer account to sign the transactions.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TProgress</span></td>
+        <td><span class="parametername">progress</span></td>
+        <td><p>A progress token used to track progress</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional cancellation token for this signer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AtomicTxn.AsyncSigning.html">AtomicTxn.AsyncSigning</a></td>
+        <td><p>An Async Signing Atomic Txn Group with new signatures awaiting to be added.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TSigning</span></td>
+        <td><p>The type of the signing atomic txn group.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TSigner</span></td>
+        <td><p>The type of the account signer.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TProgress</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_AtomicTxn_SignWithAsync_" data-uid="Algorand.Unity.AtomicTxn.SignWithAsync*"></a>
+  <h4 id="Algorand_Unity_AtomicTxn_SignWithAsync__3___0___1_Algorand_Unity_TxnIndices___2_CancellationToken_" data-uid="Algorand.Unity.AtomicTxn.SignWithAsync``3(``0,``1,Algorand.Unity.TxnIndices,``2,CancellationToken)">SignWithAsync&lt;TSigning, TSigner, TProgress&gt;(TSigning, TSigner, TxnIndices, TProgress, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Sign transactions in this group indicated by the given indices with the given signer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AtomicTxn.AsyncSigning SignWithAsync&lt;TSigning, TSigner, TProgress&gt;(this TSigning group, TSigner signer, TxnIndices txnsToSign, TProgress progress, CancellationToken cancellationToken = null)
+    where TSigning : AtomicTxn.ISigning&lt;TSigning&gt; where TSigner : IAsyncSignerWithProgress where TProgress : IProgress&lt;float&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TSigning</span></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The signing atomic txn group.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TSigner</span></td>
+        <td><span class="parametername">signer</span></td>
+        <td><p>The async signer account to sign the transactions.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TxnIndices.html">TxnIndices</a></td>
+        <td><span class="parametername">txnsToSign</span></td>
+        <td><p>The indices of the transactions to sign.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TProgress</span></td>
+        <td><span class="parametername">progress</span></td>
+        <td><p>A progress token used to track progress</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>An optional cancellation token for this signer.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.AtomicTxn.AsyncSigning.html">AtomicTxn.AsyncSigning</a></td>
+        <td><p>An Async Signing Atomic Txn Group with new signatures awaiting to be added.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TSigning</span></td>
+        <td><p>The type of the signing atomic txn group.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TSigner</span></td>
+        <td><p>The type of the account signer.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TProgress</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              Generated by DocFX
+              
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
