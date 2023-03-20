@@ -2,11 +2,11 @@
   "sitemap": {
     "fileOptions": {
       "api/*": {
-        "baseUrl": "https://careboo.github.io/unity-algorand-sdk/4.0/",
+        "baseUrl": "https://careboo.github.io/unity-algorand-sdk/4.1/",
         "changefreq": "weekly"
       }
     },
-    "baseUrl": "https://careboo.github.io/unity-algorand-sdk/4.0/",
+    "baseUrl": "https://careboo.github.io/unity-algorand-sdk/4.1/",
     "changefreq": "monthly"
   },
   "homepages": [],
@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "changelog/CHANGELOG.html",
-          "hash": "LM8Rb1vtaIehke5pOwM11H6RiWNd1c57ugnB2+WiDU4="
+          "hash": "wsZbx3q4/GJwKvJt7Y+8lzyylK7kB+VQ5Swha2KjNjU="
         }
       },
       "is_incremental": false,
@@ -8570,7 +8570,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "6lxUBtwPX/GgdwOMtGK8F4yIS2j7zoUvuWMQl/XJPTk="
+          "hash": "H2hr15zxPdSJYGjLrfmDF2LeQpi5mTm2UvHRs258ivo="
         }
       },
       "is_incremental": false,
@@ -8603,11 +8603,11 @@
     {
       "status": {
         "can_incremental": false,
-        "details": "Cannot build incrementally because config changed.",
+        "details": "Cannot build incrementally because plugin changed.",
         "incrementalPhase": "build",
         "total_file_count": 0,
         "skipped_file_count": 0,
-        "full_build_reason_code": "ConfigChanged"
+        "full_build_reason_code": "PluginChanged"
       },
       "processors": {
         "ConceptualDocumentProcessor": {

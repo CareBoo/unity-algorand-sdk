@@ -113,8 +113,17 @@
 <p>All notable changes to this package will be documented in this file.</p>
 <p>The format is based on <a href="http://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>
 and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
-<h1 id="400httpsgithubcomcareboounity-algorand-sdkcomparev300v400-2023-02-27"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0...v4.0.0">4.0.0</a> (2023-02-27)</h1>
+<h1 id="410-pre1httpsgithubcomcareboounity-algorand-sdkcomparev400v410-pre1-2023-03-09"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0...v4.1.0-pre.1">4.1.0-pre.1</a> (2023-03-09)</h1>
 <h3 id="bug-fixes">Bug Fixes</h3>
+<ul>
+<li><strong>walletconnect:</strong> use all addresses in a <code>WalletConnectAccount</code> as signers (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/5dc7214a762e8d4eb2b3069ebb621bd723672376">5dc7214</a>)</li>
+</ul>
+<h3 id="features">Features</h3>
+<ul>
+<li><strong>blockchain:</strong> add <code>MicroAlgos.FromAlgos</code> conversion function (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/055d84a0121c664af51ccd033b7dd98e2f6baf57">055d84a</a>)</li>
+</ul>
+<h1 id="400httpsgithubcomcareboounity-algorand-sdkcomparev300v400-2023-02-27"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0...v4.0.0">4.0.0</a> (2023-02-27)</h1>
+<h3 id="bug-fixes-1">Bug Fixes</h3>
 <ul>
 <li><strong>2020.3:</strong> change unsupported switch syntax to if statements (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/7e57e7a1547610809a1ad1b23206188070769bb5">7e57e7a</a>)</li>
 <li><strong>account:</strong> fix <code>TryParse</code> throwing <code>NullReferenceException</code> when given string is null (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/142bc3bc3229de3ea9fa97f22f91ea3e68f43607">142bc3b</a>)</li>
@@ -141,7 +150,7 @@ and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semanti
 <li><strong>sodium:</strong> split libsodium binaries into arm64 and x86_64 (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/e3a051097d21fc596cfd38f0d98f125726b70baa">e3a0510</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/155">#155</a></li>
 <li><strong>support:</strong> remove support for 2020.3 and add support for 2022.2 (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/f000cd4f45c7b0199e3258dd1863a31863e0dfd3">f000cd4</a>)</li>
 </ul>
-<h3 id="features">Features</h3>
+<h3 id="features-1">Features</h3>
 <ul>
 <li><strong>account:</strong> add <code>Address.TryParse</code> method (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/e83ad26bc879281a78c3f5a63acba2799f7b4063">e83ad26</a>)</li>
 <li><strong>accounts:</strong> add combined interfaces for <code>Account</code> and <code>Signer</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/6cfee7819b43ab94d38bc916a468088681a4b38e">6cfee78</a>)</li>
@@ -180,13 +189,13 @@ replace should fix it.</li>
 <li><strong>services:</strong> Algod no longer has <code>GetProof</code> method</li>
 </ul>
 <h1 id="400-pre24httpsgithubcomcareboounity-algorand-sdkcomparev400-pre23v400-pre24-2023-02-27"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.23...v4.0.0-pre.24">4.0.0-pre.24</a> (2023-02-27)</h1>
-<h3 id="bug-fixes-1">Bug Fixes</h3>
+<h3 id="bug-fixes-2">Bug Fixes</h3>
 <ul>
 <li><strong>account:</strong> fix <code>TryParse</code> throwing <code>NullReferenceException</code> when given string is null (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/142bc3bc3229de3ea9fa97f22f91ea3e68f43607">142bc3b</a>)</li>
 <li><strong>walletconnect:</strong> fix invalid chain id in wallet connect (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/abdedaf1f1d93fab1b522089c7d67b739c041443">abdedaf</a>)</li>
 </ul>
 <h1 id="400-pre23httpsgithubcomcareboounity-algorand-sdkcomparev400-pre22v400-pre23-2023-02-22"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.22...v4.0.0-pre.23">4.0.0-pre.23</a> (2023-02-22)</h1>
-<h3 id="bug-fixes-2">Bug Fixes</h3>
+<h3 id="bug-fixes-3">Bug Fixes</h3>
 <ul>
 <li><strong>2020.3:</strong> change unsupported switch syntax to if statements (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/7e57e7a1547610809a1ad1b23206188070769bb5">7e57e7a</a>)</li>
 </ul>
@@ -200,52 +209,52 @@ replace should fix it.</li>
 <li><strong>support:</strong> Unity 2020.3 is no longer supported</li>
 </ul>
 <h1 id="400-pre21httpsgithubcomcareboounity-algorand-sdkcomparev400-pre20v400-pre21-2023-02-22"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.20...v4.0.0-pre.21">4.0.0-pre.21</a> (2023-02-22)</h1>
-<h3 id="bug-fixes-3">Bug Fixes</h3>
+<h3 id="bug-fixes-4">Bug Fixes</h3>
 <ul>
 <li><strong>unity-collections:</strong> support unity collections version &gt; 2.x.x (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/025a1533c497d2618324efde44eb7fe651de0ef1">025a153</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/192">#192</a></li>
 </ul>
-<h3 id="features-1">Features</h3>
+<h3 id="features-2">Features</h3>
 <ul>
 <li><strong>account:</strong> add <code>Address.TryParse</code> method (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/e83ad26bc879281a78c3f5a63acba2799f7b4063">e83ad26</a>)</li>
 </ul>
 <h1 id="400-pre20httpsgithubcomcareboounity-algorand-sdkcomparev400-pre19v400-pre20-2023-02-20"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.19...v4.0.0-pre.20">4.0.0-pre.20</a> (2023-02-20)</h1>
-<h3 id="bug-fixes-4">Bug Fixes</h3>
+<h3 id="bug-fixes-5">Bug Fixes</h3>
 <ul>
 <li><strong>dependencies:</strong> add dependencies to ugui and ui (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/0849b7caed1ccf12dd95a56fcb4d0fa352b08467">0849b7c</a>)</li>
 </ul>
 <h1 id="400-pre19httpsgithubcomcareboounity-algorand-sdkcomparev400-pre18v400-pre19-2023-02-20"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.18...v4.0.0-pre.19">4.0.0-pre.19</a> (2023-02-20)</h1>
-<h3 id="bug-fixes-5">Bug Fixes</h3>
+<h3 id="bug-fixes-6">Bug Fixes</h3>
 <ul>
 <li><strong>asset-store:</strong> change <code>LinkButton</code> -&gt; <code>Button</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/9d7fac22987b0a6e74f73817d7f9fa0ace404e42">9d7fac2</a>)</li>
 </ul>
 <h1 id="400-pre18httpsgithubcomcareboounity-algorand-sdkcomparev400-pre17v400-pre18-2023-02-14"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.17...v4.0.0-pre.18">4.0.0-pre.18</a> (2023-02-14)</h1>
-<h3 id="bug-fixes-6">Bug Fixes</h3>
+<h3 id="bug-fixes-7">Bug Fixes</h3>
 <ul>
 <li><strong>ci:</strong> republish for http limit (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/2d483a8c441506c6dcfce2b54eb2ad3189ee5f64">2d483a8</a>)</li>
 </ul>
 <h1 id="400-pre17httpsgithubcomcareboounity-algorand-sdkcomparev400-pre16v400-pre17-2023-02-14"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.16...v4.0.0-pre.17">4.0.0-pre.17</a> (2023-02-14)</h1>
-<h3 id="bug-fixes-7">Bug Fixes</h3>
+<h3 id="bug-fixes-8">Bug Fixes</h3>
 <ul>
 <li><strong>crypto:</strong> use proper integer types in sodium interop (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/4b4f6e63bc8e540f1ad9fb4f2538ad3c61420398">4b4f6e6</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/187">#187</a></li>
 </ul>
 <h1 id="400-pre16httpsgithubcomcareboounity-algorand-sdkcomparev400-pre15v400-pre16-2023-01-21"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.15...v4.0.0-pre.16">4.0.0-pre.16</a> (2023-01-21)</h1>
-<h3 id="bug-fixes-8">Bug Fixes</h3>
+<h3 id="bug-fixes-9">Bug Fixes</h3>
 <ul>
 <li><strong>asset-store:</strong> move bulk of asset store package to the <code>Packages</code> folder (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/a78fcc8dbbdcdbfe2d4b21aaaf0a746a7e7f05a9">a78fcc8</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/178">#178</a></li>
 </ul>
 <h1 id="400-pre15httpsgithubcomcareboounity-algorand-sdkcomparev400-pre14v400-pre15-2022-12-21"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.14...v4.0.0-pre.15">4.0.0-pre.15</a> (2022-12-21)</h1>
-<h3 id="features-2">Features</h3>
+<h3 id="features-3">Features</h3>
 <ul>
 <li><strong>accounts:</strong> add combined interfaces for <code>Account</code> and <code>Signer</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/6cfee7819b43ab94d38bc916a468088681a4b38e">6cfee78</a>)</li>
 </ul>
 <h1 id="400-pre14httpsgithubcomcareboounity-algorand-sdkcomparev400-pre13v400-pre14-2022-12-21"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.13...v4.0.0-pre.14">4.0.0-pre.14</a> (2022-12-21)</h1>
-<h3 id="features-3">Features</h3>
+<h3 id="features-4">Features</h3>
 <ul>
 <li><strong>algod:</strong> add <code>LedgerStateDelta</code> APIs and Models (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/321b0132a046e03866101e5b16252c397eb05d17">321b013</a>)</li>
 <li><strong>dotnet:</strong> update <code>Algorand.dll</code> to version 1.0.0.15 (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/3ce4d6ce6205c3d1f1eea37d145ae156dc8db6ce">3ce4d6c</a>)</li>
 </ul>
 <h1 id="400-pre13httpsgithubcomcareboounity-algorand-sdkcomparev400-pre12v400-pre13-2022-12-20"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.12...v4.0.0-pre.13">4.0.0-pre.13</a> (2022-12-20)</h1>
-<h3 id="bug-fixes-9">Bug Fixes</h3>
+<h3 id="bug-fixes-10">Bug Fixes</h3>
 <ul>
 <li><strong>crypto:</strong> add universal sodium binary (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/d3dc17329d8aa2e4504f74f6f688614ed72ffdc3">d3dc173</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/174">#174</a></li>
 <li><strong>walletconnect:</strong> handle server error messages in payloads (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/4b4b4e16a80c2d188eccdc6441ab4f7dc4e84ea8">4b4b4e1</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/173">#173</a></li>
@@ -255,7 +264,7 @@ replace should fix it.</li>
 <li><strong>websocket:</strong> change <code>WebSocketEvent</code> to be a struct (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/1ae34c232ab27f38d0d2bf151a32850bfde297b2">1ae34c2</a>)</li>
 </ul>
 <h1 id="400-pre12httpsgithubcomcareboounity-algorand-sdkcomparev400-pre11v400-pre12-2022-12-11"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.11...v4.0.0-pre.12">4.0.0-pre.12</a> (2022-12-11)</h1>
-<h3 id="bug-fixes-10">Bug Fixes</h3>
+<h3 id="bug-fixes-11">Bug Fixes</h3>
 <ul>
 <li><strong>dotnet:</strong> use <code>Algorand2_Unity</code> instead of <code>Algorand2</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/3df8515e0e137ab3b1b1599d1f4f32a33416b1e9">3df8515</a>)</li>
 </ul>
@@ -264,7 +273,7 @@ replace should fix it.</li>
 <ul>
 <li><strong>dotnet:</strong> move all dotnet conversions to <code>Algorand.Unity.Net</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/b0f7124bb89508ade1fe175b093479d07c77675c">b0f7124</a>)</li>
 </ul>
-<h3 id="features-4">Features</h3>
+<h3 id="features-5">Features</h3>
 <ul>
 <li><strong>dotnet:</strong> update <code>Algorand.dll</code> to 1.0.0.14 (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/13cf1177f8e008ace56ec9ed5bcd9646626140f5">13cf117</a>)</li>
 </ul>
@@ -275,17 +284,17 @@ types. All conversions now can be done with <code>ToUnity</code> and <code>ToDot
 referencing the <code>Algorand.Unity.Net</code> assembly.</li>
 </ul>
 <h1 id="400-pre10httpsgithubcomcareboounity-algorand-sdkcomparev400-pre9v400-pre10-2022-12-10"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.9...v4.0.0-pre.10">4.0.0-pre.10</a> (2022-12-10)</h1>
-<h3 id="bug-fixes-11">Bug Fixes</h3>
+<h3 id="bug-fixes-12">Bug Fixes</h3>
 <ul>
 <li><strong>webgl:</strong> use <code>NativeWebSocketClient</code> in editor (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/5188e5fd633d9eaed29d801715ef634667331eb9">5188e5f</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/170">#170</a></li>
 </ul>
 <h1 id="400-pre9httpsgithubcomcareboounity-algorand-sdkcomparev400-pre8v400-pre9-2022-11-26"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.8...v4.0.0-pre.9">4.0.0-pre.9</a> (2022-11-26)</h1>
-<h3 id="bug-fixes-12">Bug Fixes</h3>
+<h3 id="bug-fixes-13">Bug Fixes</h3>
 <ul>
 <li><strong>dotnet:</strong> fix test compile err (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/bc3337404bb0d5e624a274f59abe4f03a8124ea3">bc33374</a>)</li>
 </ul>
 <h1 id="400-pre8httpsgithubcomcareboounity-algorand-sdkcomparev400-pre7v400-pre8-2022-11-26"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.7...v4.0.0-pre.8">4.0.0-pre.8</a> (2022-11-26)</h1>
-<h3 id="bug-fixes-13">Bug Fixes</h3>
+<h3 id="bug-fixes-14">Bug Fixes</h3>
 <ul>
 <li><strong>algod:</strong> fix <code>WaitForConfirmation</code> not respecting <code>cancellationToken</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/d0b76cd74318f7c03bdd2f03c4e9338d5b4eddf6">d0b76cd</a>)</li>
 </ul>
@@ -299,17 +308,17 @@ referencing the <code>Algorand.Unity.Net</code> assembly.</li>
 <li><strong>sodium:</strong> Unity 2020.3 is no longer supported</li>
 </ul>
 <h1 id="400-pre6httpsgithubcomcareboounity-algorand-sdkcomparev400-pre5v400-pre6-2022-11-25"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.5...v4.0.0-pre.6">4.0.0-pre.6</a> (2022-11-25)</h1>
-<h3 id="features-5">Features</h3>
+<h3 id="features-6">Features</h3>
 <ul>
 <li><strong>dotnet:</strong> add conversion from <code>Algorand.Crypto.KeyPair</code> to <code>Algorand.Unity.PrivateKey</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/cfa72ff97a393513df63b6da09b0cd7c3f87513e">cfa72ff</a>)</li>
 </ul>
 <h1 id="400-pre5httpsgithubcomcareboounity-algorand-sdkcomparev400-pre4v400-pre5-2022-11-25"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.4...v4.0.0-pre.5">4.0.0-pre.5</a> (2022-11-25)</h1>
-<h3 id="features-6">Features</h3>
+<h3 id="features-7">Features</h3>
 <ul>
 <li><strong>dotnet:</strong> add conversion from <code>Algorand.Unity.Account</code> to <code>Algorand.Algod.Model.Account</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/9691d0ebef048e939d3fdf810f5517d3d2465edb">9691d0e</a>)</li>
 </ul>
 <h1 id="400-pre4httpsgithubcomcareboounity-algorand-sdkcomparev400-pre3v400-pre4-2022-11-25"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0-pre.3...v4.0.0-pre.4">4.0.0-pre.4</a> (2022-11-25)</h1>
-<h3 id="features-7">Features</h3>
+<h3 id="features-8">Features</h3>
 <ul>
 <li><strong>dotnet:</strong> add conversion from <code>Algorand.Unity.PrivateKey</code> to <code>Algorand.Crypto</code> types (<a href="https://github.com/CareBoo/unity-algorand-sdk/issues/168">#168</a>) (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/8e8e0f593c5c05cf0cf70073d2cb12a382a9ac58">8e8e0f5</a>)</li>
 </ul>
@@ -337,11 +346,11 @@ and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semanti
 <li><strong>account:</strong> Obsolete methods in <code>Account</code> class relating to signing have been removed.</li>
 </ul>
 <h1 id="400-pre1httpsgithubcomcareboounity-algorand-sdkcomparev300v400-pre1-2022-11-20"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0...v4.0.0-pre.1">4.0.0-pre.1</a> (2022-11-20)</h1>
-<h3 id="bug-fixes-14">Bug Fixes</h3>
+<h3 id="bug-fixes-15">Bug Fixes</h3>
 <ul>
 <li><strong>dotnet sdk:</strong> fix incorrect input to <code>string.EndsWith</code> causing compile error in Unity 2020.3 (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/c5101eab7a304993f8c320634a09146769ee2a0d">c5101ea</a>)</li>
 </ul>
-<h3 id="features-8">Features</h3>
+<h3 id="features-9">Features</h3>
 <ul>
 <li><strong>blockchain:</strong> add <code>StateProofTracking</code> to the <code>BlockHeader</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/5d63c9a3496efde132efd4122bc1745072c34717">5d63c9a</a>)</li>
 <li><strong>blockchain:</strong> add missing <code>TxnCommitments</code> to <code>BlockHeader</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/be20acb321822b5e070d39f1a558ec405bc4e57f">be20acb</a>)</li>
@@ -360,7 +369,7 @@ and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semanti
 <li><strong>services:</strong> Algod no longer has <code>GetProof</code> method</li>
 </ul>
 <h1 id="300httpsgithubcomcareboounity-algorand-sdkcomparev230v300-2022-07-16"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.3.0...v3.0.0">3.0.0</a> (2022-07-16)</h1>
-<h3 id="bug-fixes-15">Bug Fixes</h3>
+<h3 id="bug-fixes-16">Bug Fixes</h3>
 <ul>
 <li><strong>abi:</strong> fix Tuple not encoding dynamic types correctly (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/be125d3b7908a95d8a373f30aa5b081cb358267f">be125d3</a>)</li>
 <li><strong>algod:</strong> fix <code>AlgodClient.WaitForConfirmation</code> not using correct wait time (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/169be0b4745fdf954a2c6cacc8c6b6deabd51b36">169be0b</a>)</li>
@@ -386,7 +395,7 @@ and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semanti
 <li><strong>abi:</strong> mark ABI as Experimental (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/86f2c25a2e5234624b922039c1c4287353fa6537">86f2c25</a>)</li>
 <li><strong>editor:</strong> move editor-specific utilities and windows to new sample (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/a345cc2142628bb912d124ebf890c7ef3014ac8d">a345cc2</a>)</li>
 </ul>
-<h3 id="features-9">Features</h3>
+<h3 id="features-10">Features</h3>
 <ul>
 <li><strong>abi:</strong> add <code>ArgsArray</code>, making it easy to pass in <code>IAbiValue</code> params to AtomicTxn Builder (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/523d765cc475878676990aaa7369219a56f6f1f2">523d765</a>)</li>
 <li><strong>abi:</strong> add <code>Decode</code> methods to ABI (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/a83f1fe38df6501c9941e496d31e28dbb37d059a">a83f1fe</a>)</li>
@@ -442,38 +451,38 @@ API.</p>
 <li>Rename <code>Multisig</code> -&gt; <code>MultisigSig</code></li>
 </ul>
 <h1 id="300-pre14httpsgithubcomcareboounity-algorand-sdkcomparev300-pre13v300-pre14-2022-07-16"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.13...v3.0.0-pre.14">3.0.0-pre.14</a> (2022-07-16)</h1>
-<h3 id="features-10">Features</h3>
+<h3 id="features-11">Features</h3>
 <ul>
 <li><strong>algod:</strong> add <code>Account</code> property to <code>Algod.AccountResponse</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/416685b2dc1bdd08c3a7b54eb1c495f5d27f9488">416685b</a>)</li>
 <li><strong>algod:</strong> add latest algod client features (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/8873de74d90e176b300e10d1efba119c90b62269">8873de7</a>)</li>
 </ul>
 <h1 id="300-pre13httpsgithubcomcareboounity-algorand-sdkcomparev300-pre12v300-pre13-2022-07-16"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.12...v3.0.0-pre.13">3.0.0-pre.13</a> (2022-07-16)</h1>
-<h3 id="bug-fixes-16">Bug Fixes</h3>
+<h3 id="bug-fixes-17">Bug Fixes</h3>
 <ul>
 <li><strong>walletconnect:</strong> fix deep linking in iOS (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/997ad455e6813d9dca377d027c4cba8f13c1aa9b">997ad45</a>)</li>
 </ul>
 <h1 id="300-pre12httpsgithubcomcareboounity-algorand-sdkcomparev300-pre11v300-pre12-2022-07-14"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.11...v3.0.0-pre.12">3.0.0-pre.12</a> (2022-07-14)</h1>
-<h3 id="bug-fixes-17">Bug Fixes</h3>
+<h3 id="bug-fixes-18">Bug Fixes</h3>
 <ul>
 <li><strong>abi:</strong> fix Tuple not encoding dynamic types correctly (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/be125d3b7908a95d8a373f30aa5b081cb358267f">be125d3</a>)</li>
 <li><strong>kmd:</strong> fix <code>KmdAccount</code> not renewing wallet handle tokens correctly (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/1b0479dd2b54b0c0c4820018fd2d50f2440021ea">1b0479d</a>)</li>
 </ul>
 <h1 id="300-pre11httpsgithubcomcareboounity-algorand-sdkcomparev300-pre10v300-pre11-2022-07-13"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.10...v3.0.0-pre.11">3.0.0-pre.11</a> (2022-07-13)</h1>
-<h3 id="features-11">Features</h3>
+<h3 id="features-12">Features</h3>
 <ul>
 <li><strong>walletconnect:</strong> expose <code>FormatUrlForDeepLink</code> API (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/f26a7fd200f8a68a3678817468d15df01cd927d4">f26a7fd</a>)</li>
 <li><strong>walletconnect:</strong> expose <code>SessionData.GenKey</code> API (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/6630652f34bc25905fa470ffe3485808370e341f">6630652</a>)</li>
 <li><strong>walletconnect:</strong> support chain ids in ARC-0025 (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/32c518eb6929866993a9fd306c477f571328551d">32c518e</a>)</li>
 </ul>
 <h1 id="300-pre10httpsgithubcomcareboounity-algorand-sdkcomparev300-pre9v300-pre10-2022-07-11"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.9...v3.0.0-pre.10">3.0.0-pre.10</a> (2022-07-11)</h1>
-<h3 id="bug-fixes-18">Bug Fixes</h3>
+<h3 id="bug-fixes-19">Bug Fixes</h3>
 <ul>
 <li><strong>collections:</strong> fix obsolete API in most recent Unity Collections package (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/cf05ec9bff584aa7dab37e835427e004a52d5d2d">cf05ec9</a>)</li>
 <li><strong>lowlevel:</strong> fix <code>NativeListOfList</code> not correctly assigning indices with <code>IIndexable&lt;&gt;</code> types (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/aaa3b15ddf906eb1cde4530a0261562584dd136b">aaa3b15</a>)</li>
 <li><strong>msgpack:</strong> fix MessagePackWriter.Bytes issue when writing empty byte array (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/eef81de2b80c74a6b9eac132ec33e6c7528daaf4">eef81de</a>)</li>
 <li><strong>walletconnect:</strong> fix <code>WalletConnectAccount</code> failing to assign Key for new session (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/ccfd6db4f66ee99c1b91157ac034f9b7ece227e0">ccfd6db</a>)</li>
 </ul>
-<h3 id="features-12">Features</h3>
+<h3 id="features-13">Features</h3>
 <ul>
 <li><strong>abi:</strong> add <code>Decode</code> methods to ABI (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/a83f1fe38df6501c9941e496d31e28dbb37d059a">a83f1fe</a>)</li>
 <li><strong>account:</strong> add <code>IsAddressString</code> to <code>Address</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/a9085869a0d16737d1e3d6eb56c3fb7bc55b4a02">a908586</a>)</li>
@@ -482,7 +491,7 @@ API.</p>
 <li><strong>endianness:</strong> add new <code>FromBytesBigEndian</code> methods (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/2623f433abc385756be184ae6665ca0e12706f93">2623f43</a>)</li>
 </ul>
 <h1 id="300-pre9httpsgithubcomcareboounity-algorand-sdkcomparev300-pre8v300-pre9-2022-06-20"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.8...v3.0.0-pre.9">3.0.0-pre.9</a> (2022-06-20)</h1>
-<h3 id="bug-fixes-19">Bug Fixes</h3>
+<h3 id="bug-fixes-20">Bug Fixes</h3>
 <ul>
 <li><strong>algod:</strong> fix <code>AlgodClient.WaitForConfirmation</code> not using correct wait time (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/169be0b4745fdf954a2c6cacc8c6b6deabd51b36">169be0b</a>)</li>
 <li><strong>json:</strong> fix strings failing to be read on <code>null</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/dac58b7ee873a5443080429faad3efcfd6cff727">dac58b7</a>)</li>
@@ -492,7 +501,7 @@ API.</p>
 <ul>
 <li><strong>abi:</strong> mark ABI as Experimental (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/86f2c25a2e5234624b922039c1c4287353fa6537">86f2c25</a>)</li>
 </ul>
-<h3 id="features-13">Features</h3>
+<h3 id="features-14">Features</h3>
 <ul>
 <li><strong>abi:</strong> add APIs to better create Tuples from ArgsArray (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/5a109ed4c45a490ff2e3113342d88121f4b04894">5a109ed</a>)</li>
 <li><strong>api:</strong> add <code>AlgoApiException</code> that can be thrown from an <code>ErrorResponse</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/2eb8209386dc20b8f2cadb746a1c36db6453baa6">2eb8209</a>)</li>
@@ -502,18 +511,18 @@ API.</p>
 <li><strong>abi:</strong> <code>Algorand.Unity.Abi</code> renamed to <code>Algorand.Unity.Experimental.Abi</code></li>
 </ul>
 <h1 id="300-pre8httpsgithubcomcareboounity-algorand-sdkcomparev300-pre7v300-pre8-2022-06-14"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.7...v3.0.0-pre.8">3.0.0-pre.8</a> (2022-06-14)</h1>
-<h3 id="features-14">Features</h3>
+<h3 id="features-15">Features</h3>
 <ul>
 <li><strong>abi:</strong> add <code>ArgsArray</code>, making it easy to pass in <code>IAbiValue</code> params to AtomicTxn Builder (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/523d765cc475878676990aaa7369219a56f6f1f2">523d765</a>)</li>
 <li><strong>transaction:</strong> add <code>SignWith</code> and <code>SignWithAsync</code> API to <code>ITransaction</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/81aa758eee039e6a774522ed3d9c9a9909ef9c0b">81aa758</a>)</li>
 </ul>
 <h1 id="300-pre7httpsgithubcomcareboounity-algorand-sdkcomparev300-pre6v300-pre7-2022-06-13"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.6...v3.0.0-pre.7">3.0.0-pre.7</a> (2022-06-13)</h1>
-<h3 id="features-15">Features</h3>
+<h3 id="features-16">Features</h3>
 <ul>
 <li><strong>accounts:</strong> add <code>MinBalance</code> constructor that takes an <code>Algorand.Unity.Indexer.Account</code> result (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/03dc71a8653a242a6a81d831db76122bc6299233">03dc71a</a>)</li>
 </ul>
 <h1 id="300-pre6httpsgithubcomcareboounity-algorand-sdkcomparev300-pre5v300-pre6-2022-06-12"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.5...v3.0.0-pre.6">3.0.0-pre.6</a> (2022-06-12)</h1>
-<h3 id="bug-fixes-20">Bug Fixes</h3>
+<h3 id="bug-fixes-21">Bug Fixes</h3>
 <ul>
 <li><strong>inspector:</strong> fix gaps between label and property in custom property drawers (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/2ad65da3a44b3ac422be11be8483b8c1b931290c">2ad65da</a>)</li>
 <li><strong>json:</strong> fix <code>JsonReader.ReadNumber</code> for integers when given fraction with exponent (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/8bf0758209d451f5310e9d64fda169758ad0f521">8bf0758</a>)</li>
@@ -528,7 +537,7 @@ API.</p>
 <ul>
 <li><strong>editor:</strong> move editor-specific utilities and windows to new sample (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/a345cc2142628bb912d124ebf890c7ef3014ac8d">a345cc2</a>)</li>
 </ul>
-<h3 id="features-16">Features</h3>
+<h3 id="features-17">Features</h3>
 <ul>
 <li><strong>algod:</strong> add utility method <code>AlgodClient.WaitForConfirmation</code> to wait for Txn confirmation (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/1e60a2de6c02a5456646fcae915f1cb07952598f">1e60a2d</a>)</li>
 <li><strong>blockchain:</strong> add <code>AlgorandNetwork</code> enum for describing the different networks (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/52594e61cae6128763e2088c385e4b7e21fb377b">52594e6</a>)</li>
@@ -540,7 +549,7 @@ API.</p>
 <li><strong>editor:</strong> Moved all <code>ScriptableObject</code> implementations to the <code>AssetCreation</code> sample.</li>
 </ul>
 <h1 id="300-pre5httpsgithubcomcareboounity-algorand-sdkcomparev300-pre4v300-pre5-2022-06-05"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.4...v3.0.0-pre.5">3.0.0-pre.5</a> (2022-06-05)</h1>
-<h3 id="features-17">Features</h3>
+<h3 id="features-18">Features</h3>
 <ul>
 <li><strong>walletconnect:</strong> add wallet connect support to UnityEditor (<a href="https://github.com/CareBoo/unity-algorand-sdk/issues/143">#143</a>) (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/60c13af8bb06680f9add3e00a97a7c41428de2e0">60c13af</a>)</li>
 </ul>
@@ -555,17 +564,17 @@ API.</p>
 <li><code>SavedSession</code> renamed to <code>SessionData</code></li>
 </ul>
 <h1 id="300-pre4httpsgithubcomcareboounity-algorand-sdkcomparev300-pre3v300-pre4-2022-06-02"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.3...v3.0.0-pre.4">3.0.0-pre.4</a> (2022-06-02)</h1>
-<h3 id="features-18">Features</h3>
+<h3 id="features-19">Features</h3>
 <ul>
 <li><strong>abi:</strong> add abitype inspectors (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/a48d7106595b1166c483d09ac4cebdde424b9fd4">a48d710</a>)</li>
 </ul>
 <h1 id="300-pre3httpsgithubcomcareboounity-algorand-sdkcomparev300-pre2v300-pre3-2022-05-28"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.2...v3.0.0-pre.3">3.0.0-pre.3</a> (2022-05-28)</h1>
-<h3 id="features-19">Features</h3>
+<h3 id="features-20">Features</h3>
 <ul>
 <li><strong>abi:</strong> add ABI support (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/d43eed7ebbfa1e52210abb9d85153206a1504591">d43eed7</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/132">#132</a></li>
 </ul>
 <h1 id="300-pre2httpsgithubcomcareboounity-algorand-sdkcomparev300-pre1v300-pre2-2022-04-12"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0-pre.1...v3.0.0-pre.2">3.0.0-pre.2</a> (2022-04-12)</h1>
-<h3 id="features-20">Features</h3>
+<h3 id="features-21">Features</h3>
 <ul>
 <li><strong>atomic-txn:</strong> add APIs for building, signing, and serializing Atomic Txns (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/858ff9e0245a1de254f8e18beff62a8177943144">858ff9e</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/131">#131</a></li>
 <li><strong>signer:</strong> update <code>ISigner</code> interface to be closer to signer interface in other SDKs (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/a8fbe0bbbc7729b07beef1efc7e5d8757db0cd41">a8fbe0b</a>), closes <a href="https://github.com//github.com/algorand/py-algorand-sdk/blob/aba9f4ccf87d4e7f7d5d6d4826e38463b76da9b8/Algorand.Unity/atomic_transaction_composer.py/issues/L558">/github.com/algorand/py-algorand-sdk/blob/aba9f4ccf87d4e7f7d5d6d4826e38463b76da9b8/Algorand.Unity/atomic_transaction_composer.py#L558</a> <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/131">#131</a></li>
@@ -576,7 +585,7 @@ API.</p>
 API.</li>
 </ul>
 <h1 id="300-pre1httpsgithubcomcareboounity-algorand-sdkcomparev230-pre4v300-pre1-2022-04-03"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.3.0-pre.4...v3.0.0-pre.1">3.0.0-pre.1</a> (2022-04-03)</h1>
-<h3 id="features-21">Features</h3>
+<h3 id="features-22">Features</h3>
 <ul>
 <li><strong>algoapi:</strong> create separate types for REST APIs and SDK (<a href="https://github.com/CareBoo/unity-algorand-sdk/issues/129">#129</a>) (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/0a97a11643e45a59f749fe14ec6e8d0e5b547cb2">0a97a11</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/120">#120</a></li>
 </ul>
@@ -595,33 +604,33 @@ API.</li>
 <li>Rename <code>Multisig</code> -&gt; <code>MultisigSig</code></li>
 </ul>
 <h1 id="230-pre4httpsgithubcomcareboounity-algorand-sdkcomparev230-pre3v230-pre4-2022-03-25"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.3.0-pre.3...v2.3.0-pre.4">2.3.0-pre.4</a> (2022-03-25)</h1>
-<h3 id="features-22">Features</h3>
+<h3 id="features-23">Features</h3>
 <ul>
 <li><strong>account:</strong> add fields for total assets/accounts opted-in/created (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/3ea788294950d631e227ecad1af8129eb7d09bca">3ea7882</a>)</li>
 </ul>
 <h1 id="230-pre3httpsgithubcomcareboounity-algorand-sdkcomparev230-pre2v230-pre3-2022-03-25"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.3.0-pre.2...v2.3.0-pre.3">2.3.0-pre.3</a> (2022-03-25)</h1>
-<h3 id="features-23">Features</h3>
+<h3 id="features-24">Features</h3>
 <ul>
 <li><strong>errors:</strong> serializer read errors now print the full message they&#39;re deserializing (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/b67db2a0dd52bd3bfacc7d4b66a242beafcca950">b67db2a</a>)</li>
 <li><strong>formatter:</strong> add <code>isStrict</code> to <code>AlgoApiObjectFormatter</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/d8467c632172fb41e207cc13b76d45717665f26a">d8467c6</a>)</li>
 </ul>
 <h1 id="230-pre2httpsgithubcomcareboounity-algorand-sdkcomparev230-pre1v230-pre2-2022-03-25"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.3.0-pre.1...v2.3.0-pre.2">2.3.0-pre.2</a> (2022-03-25)</h1>
-<h3 id="features-24">Features</h3>
+<h3 id="features-25">Features</h3>
 <ul>
 <li><strong>transactiongroup:</strong> add generic methods for constructing <code>TransactionGroup</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/5e4b6aac8a9fd42e9ffe27a73623d3d81e5d848d">5e4b6aa</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/126">#126</a></li>
 </ul>
 <h1 id="230-pre1httpsgithubcomcareboounity-algorand-sdkcomparev220v230-pre1-2022-03-24"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.2.0...v2.3.0-pre.1">2.3.0-pre.1</a> (2022-03-24)</h1>
-<h3 id="features-25">Features</h3>
+<h3 id="features-26">Features</h3>
 <ul>
 <li><strong>indexer:</strong> add new <code>IIndexerResponse&lt;T&gt;</code> and <code>IPaginatedIndexerResponse&lt;T&gt;</code> interfaces (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/3b3abda9bad5e1d8b6964e07b0bdd8533b8aa5e4">3b3abda</a>)</li>
 <li><strong>transaction:</strong> add Indexer TransactionApplication model (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/99f63fa443d4013bcda218cae45c9d1d0ed4f170">99f63fa</a>)</li>
 </ul>
 <h1 id="220httpsgithubcomcareboounity-algorand-sdkcomparev211v220-2022-03-23"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.1...v2.2.0">2.2.0</a> (2022-03-23)</h1>
-<h3 id="bug-fixes-21">Bug Fixes</h3>
+<h3 id="bug-fixes-22">Bug Fixes</h3>
 <ul>
 <li><strong>editor:</strong> fix Tooltip compilation issue in unity 2020.3 (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/6b713003e79efdbd124820bfdc5fd236c62ddba0">6b71300</a>)</li>
 </ul>
-<h3 id="features-26">Features</h3>
+<h3 id="features-27">Features</h3>
 <ul>
 <li><strong>account:</strong> add <code>IAccount</code>, <code>ISigner</code>, and <code>IAsyncSigner</code> interfaces (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/19f139db99e03e389d7f8abfad45e1bdb3b0667d">19f139d</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/82">#82</a></li>
 <li><strong>account:</strong> add <code>MicroAlgos</code> wrapper class (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/57a89e61fa434a58f5034194c5630dfc2332d586">57a89e6</a>)</li>
@@ -633,16 +642,16 @@ API.</li>
 <li><strong>transaction:</strong> refactor signed transaction to use <code>[AlgoApiObject]</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/8ff034df45af46469595cf04e2f16cf327b24826">8ff034d</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/113">#113</a> <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/114">#114</a></li>
 </ul>
 <h1 id="220-pre4httpsgithubcomcareboounity-algorand-sdkcomparev220-pre3v220-pre4-2022-03-22"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.2.0-pre.3...v2.2.0-pre.4">2.2.0-pre.4</a> (2022-03-22)</h1>
-<h3 id="features-27">Features</h3>
+<h3 id="features-28">Features</h3>
 <ul>
 <li><strong>account:</strong> add <code>IAccount</code>, <code>ISigner</code>, and <code>IAsyncSigner</code> interfaces (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/19f139db99e03e389d7f8abfad45e1bdb3b0667d">19f139d</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/82">#82</a></li>
 </ul>
 <h1 id="220-pre3httpsgithubcomcareboounity-algorand-sdkcomparev220-pre2v220-pre3-2022-03-21"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.2.0-pre.2...v2.2.0-pre.3">2.2.0-pre.3</a> (2022-03-21)</h1>
-<h3 id="bug-fixes-22">Bug Fixes</h3>
+<h3 id="bug-fixes-23">Bug Fixes</h3>
 <ul>
 <li><strong>editor:</strong> fix Tooltip compilation issue in unity 2020.3 (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/6b713003e79efdbd124820bfdc5fd236c62ddba0">6b71300</a>)</li>
 </ul>
-<h3 id="features-28">Features</h3>
+<h3 id="features-29">Features</h3>
 <ul>
 <li><strong>account:</strong> add <code>MicroAlgos</code> wrapper class (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/57a89e61fa434a58f5034194c5630dfc2332d586">57a89e6</a>)</li>
 <li><strong>application:</strong> add <code>AppIndex</code> type (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/458392b2f0ebb552d48fc84f92dff8e6145f7198">458392b</a>)</li>
@@ -651,17 +660,17 @@ API.</li>
 <li><strong>transaction:</strong> refactor signed transaction to use <code>[AlgoApiObject]</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/8ff034df45af46469595cf04e2f16cf327b24826">8ff034d</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/113">#113</a> <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/114">#114</a></li>
 </ul>
 <h1 id="220-pre2httpsgithubcomcareboounity-algorand-sdkcomparev220-pre1v220-pre2-2022-03-20"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.2.0-pre.1...v2.2.0-pre.2">2.2.0-pre.2</a> (2022-03-20)</h1>
-<h3 id="features-29">Features</h3>
+<h3 id="features-30">Features</h3>
 <ul>
 <li><strong>teal:</strong> add conversion for supported types to <code>CompiledTeal</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/issues/112">#112</a>) (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/5a279d297df5225a60efb1548a5bd6467f961f40">5a279d2</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/105">#105</a></li>
 </ul>
 <h1 id="220-pre1httpsgithubcomcareboounity-algorand-sdkcomparev211-pre2v220-pre1-2022-03-20"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.1-pre.2...v2.2.0-pre.1">2.2.0-pre.1</a> (2022-03-20)</h1>
-<h3 id="features-30">Features</h3>
+<h3 id="features-31">Features</h3>
 <ul>
 <li><strong>accounts:</strong> add <code>MinBalance</code> to allow developers to estimate min balances (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/856c11ae3ae3339caf33a8f21bcca52a8d8e69d4">856c11a</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/104">#104</a></li>
 </ul>
 <h2 id="211httpsgithubcomcareboounity-algorand-sdkcomparev210v211-2022-03-20"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0...v2.1.1">2.1.1</a> (2022-03-20)</h2>
-<h3 id="bug-fixes-23">Bug Fixes</h3>
+<h3 id="bug-fixes-24">Bug Fixes</h3>
 <ul>
 <li><strong>appcalltxn:</strong> fix AppArguments not in correct format (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/7845c7979d3c925db953dc36db4d0647ae8c5e39">7845c79</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/96">#96</a></li>
 <li><strong>block:</strong> fix <code>BlockTransaction</code> field names (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/ead4f5d08aa954e9db7930ef73428b8253c64699">ead4f5d</a>)</li>
@@ -669,25 +678,25 @@ API.</li>
 <li><strong>walletconnect:</strong> fix issue where WalletTransaction.New requires unnecessary type constraints (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/09ce3f4b48f60fc6b544349c2dc6da8894521fcf">09ce3f4</a>)</li>
 </ul>
 <h2 id="211-pre2httpsgithubcomcareboounity-algorand-sdkcomparev211-pre1v211-pre2-2022-03-20"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.1-pre.1...v2.1.1-pre.2">2.1.1-pre.2</a> (2022-03-20)</h2>
-<h3 id="bug-fixes-24">Bug Fixes</h3>
+<h3 id="bug-fixes-25">Bug Fixes</h3>
 <ul>
 <li><strong>block:</strong> fix <code>BlockTransaction</code> field names (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/ead4f5d08aa954e9db7930ef73428b8253c64699">ead4f5d</a>)</li>
 <li><strong>formatters:</strong> fix <code>EvalDelta</code> not deserializing from msgpack properly (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/827e6d1e5fe7f0e89e5f9043890943a7ae6c0140">827e6d1</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/107">#107</a></li>
 </ul>
 <h2 id="211-pre1httpsgithubcomcareboounity-algorand-sdkcomparev210v211-pre1-2022-03-19"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0...v2.1.1-pre.1">2.1.1-pre.1</a> (2022-03-19)</h2>
-<h3 id="bug-fixes-25">Bug Fixes</h3>
-<ul>
-<li><strong>appcalltxn:</strong> fix AppArguments not in correct format (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/7845c7979d3c925db953dc36db4d0647ae8c5e39">7845c79</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/96">#96</a></li>
-<li><strong>walletconnect:</strong> fix issue where WalletTransaction.New requires unnecessary type constraints (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/09ce3f4b48f60fc6b544349c2dc6da8894521fcf">09ce3f4</a>)</li>
-</ul>
-<h1 id="210-pre12httpsgithubcomcareboounity-algorand-sdkcomparev210-pre11v210-pre12-2022-03-19"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0-pre.11...v2.1.0-pre.12">2.1.0-pre.12</a> (2022-03-19)</h1>
 <h3 id="bug-fixes-26">Bug Fixes</h3>
 <ul>
 <li><strong>appcalltxn:</strong> fix AppArguments not in correct format (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/7845c7979d3c925db953dc36db4d0647ae8c5e39">7845c79</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/96">#96</a></li>
 <li><strong>walletconnect:</strong> fix issue where WalletTransaction.New requires unnecessary type constraints (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/09ce3f4b48f60fc6b544349c2dc6da8894521fcf">09ce3f4</a>)</li>
 </ul>
-<h1 id="210httpsgithubcomcareboounity-algorand-sdkcomparev200v210-2022-03-17"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0...v2.1.0">2.1.0</a> (2022-03-17)</h1>
+<h1 id="210-pre12httpsgithubcomcareboounity-algorand-sdkcomparev210-pre11v210-pre12-2022-03-19"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0-pre.11...v2.1.0-pre.12">2.1.0-pre.12</a> (2022-03-19)</h1>
 <h3 id="bug-fixes-27">Bug Fixes</h3>
+<ul>
+<li><strong>appcalltxn:</strong> fix AppArguments not in correct format (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/7845c7979d3c925db953dc36db4d0647ae8c5e39">7845c79</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/96">#96</a></li>
+<li><strong>walletconnect:</strong> fix issue where WalletTransaction.New requires unnecessary type constraints (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/09ce3f4b48f60fc6b544349c2dc6da8894521fcf">09ce3f4</a>)</li>
+</ul>
+<h1 id="210httpsgithubcomcareboounity-algorand-sdkcomparev200v210-2022-03-17"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0...v2.1.0">2.1.0</a> (2022-03-17)</h1>
+<h3 id="bug-fixes-28">Bug Fixes</h3>
 <ul>
 <li><strong>algod:</strong> fix PendingTransaction fields from messagepack (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/6dbf0b3c99f7977ce87458e51ea8a9f87d9f9075">6dbf0b3</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/97">#97</a></li>
 <li><strong>build:</strong> fix build not using the latest version of the release (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/e8ee7581a4496805a60e1af0aea452f9c69969a8">e8ee758</a>)</li>
@@ -705,7 +714,7 @@ API.</li>
 <li><strong>serialization:</strong> set formatters to automatically add array formatter if it doesn&#39;t exist (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/56923722974f710fa7583fcbf48dfa251f85dd7d">5692372</a>)</li>
 <li><strong>websocket:</strong> fix TLS failure in websocket-sharp for Unity 2020.3 (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/bdaa92e4f55aac89c2abf897a28bced7fc1aac65">bdaa92e</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/101">#101</a></li>
 </ul>
-<h3 id="features-31">Features</h3>
+<h3 id="features-32">Features</h3>
 <ul>
 <li><strong>api:</strong> add min-balance field (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/7f0873bbfddabf80b36e67cb85a916fb7270835a">7f0873b</a>)</li>
 <li><strong>transaction:</strong> add <code>PrivateKey.SignTransaction</code> method (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/3d74336aee240bb8357cea27b26c33cb537f3eca">3d74336</a>)</li>
@@ -713,29 +722,29 @@ API.</li>
 <li><strong>walletconnect:</strong> add supported wallets list (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/50c657580ccf5a1cb751d78cfb14201c4f8ac9fc">50c6575</a>)</li>
 </ul>
 <h1 id="210-pre11httpsgithubcomcareboounity-algorand-sdkcomparev210-pre10v210-pre11-2022-03-17"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0-pre.10...v2.1.0-pre.11">2.1.0-pre.11</a> (2022-03-17)</h1>
-<h3 id="features-32">Features</h3>
+<h3 id="features-33">Features</h3>
 <ul>
 <li><strong>walletconnect:</strong> add <code>LaunchApp[...]</code> to <code>AppEntry</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/f822855e1ab81a8a768fac359e65f87041e90de2">f822855</a>)</li>
 </ul>
 <h1 id="210-pre10httpsgithubcomcareboounity-algorand-sdkcomparev210-pre9v210-pre10-2022-03-17"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0-pre.9...v2.1.0-pre.10">2.1.0-pre.10</a> (2022-03-17)</h1>
-<h3 id="bug-fixes-28">Bug Fixes</h3>
+<h3 id="bug-fixes-29">Bug Fixes</h3>
 <ul>
 <li><strong>formatter:</strong> make sure to skip unknown keys (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/a9115af470ce07e373506a9cc43edd028c96b636">a9115af</a>)</li>
 <li><strong>kmd:</strong> fix multisig serialization (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/a48e109b305f0c607e626eae64bfa6610c191503">a48e109</a>)</li>
 </ul>
 <h1 id="210-pre9httpsgithubcomcareboounity-algorand-sdkcomparev210-pre8v210-pre9-2022-03-17"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0-pre.8...v2.1.0-pre.9">2.1.0-pre.9</a> (2022-03-17)</h1>
-<h3 id="bug-fixes-29">Bug Fixes</h3>
+<h3 id="bug-fixes-30">Bug Fixes</h3>
 <ul>
 <li>fix missing meta files from package (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/a4037c94d006b3ede15348868fbb8b586b4e84b6">a4037c9</a>)</li>
 <li><strong>websocket:</strong> fix TLS failure in websocket-sharp for Unity 2020.3 (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/bdaa92e4f55aac89c2abf897a28bced7fc1aac65">bdaa92e</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/101">#101</a></li>
 </ul>
 <h1 id="210-pre8httpsgithubcomcareboounity-algorand-sdkcomparev210-pre7v210-pre8-2022-03-16"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0-pre.7...v2.1.0-pre.8">2.1.0-pre.8</a> (2022-03-16)</h1>
-<h3 id="bug-fixes-30">Bug Fixes</h3>
+<h3 id="bug-fixes-31">Bug Fixes</h3>
 <ul>
 <li><strong>build:</strong> fix build not using the latest version of the release (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/e8ee7581a4496805a60e1af0aea452f9c69969a8">e8ee758</a>)</li>
 </ul>
 <h1 id="210-pre7httpsgithubcomcareboounity-algorand-sdkcomparev210-pre6v210-pre7-2022-03-16"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0-pre.6...v2.1.0-pre.7">2.1.0-pre.7</a> (2022-03-16)</h1>
-<h3 id="bug-fixes-31">Bug Fixes</h3>
+<h3 id="bug-fixes-32">Bug Fixes</h3>
 <ul>
 <li><strong>algod:</strong> fix PendingTransaction fields from messagepack (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/6dbf0b3c99f7977ce87458e51ea8a9f87d9f9075">6dbf0b3</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/97">#97</a></li>
 <li><strong>formatters:</strong> add explicit formatters for enums (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/58c447540eb117eb507e8147fb58b563506da959">58c4475</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/99">#99</a></li>
@@ -743,43 +752,43 @@ API.</li>
 <li><strong>samples:</strong> fix compile error with samples (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/c7c9a0de2f7596a1a2a31b570ce8ee73d512d63b">c7c9a0d</a>)</li>
 </ul>
 <h1 id="210-pre6httpsgithubcomcareboounity-algorand-sdkcomparev210-pre5v210-pre6-2022-03-12"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0-pre.5...v2.1.0-pre.6">2.1.0-pre.6</a> (2022-03-12)</h1>
-<h3 id="bug-fixes-32">Bug Fixes</h3>
+<h3 id="bug-fixes-33">Bug Fixes</h3>
 <ul>
 <li><strong>docs:</strong> update readme with png image (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/a84c298a62503fc14f2143d6d2808540ae9d06eb">a84c298</a>)</li>
 </ul>
 <h1 id="210-pre5httpsgithubcomcareboounity-algorand-sdkcomparev210-pre4v210-pre5-2022-03-12"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0-pre.4...v2.1.0-pre.5">2.1.0-pre.5</a> (2022-03-12)</h1>
-<h3 id="bug-fixes-33">Bug Fixes</h3>
+<h3 id="bug-fixes-34">Bug Fixes</h3>
 <ul>
 <li><strong>readme:</strong> remove unnecessary xml tag (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/2f87b1ab42c0854dedbe03da00a78f2a6fefdb87">2f87b1a</a>)</li>
 </ul>
 <h1 id="210-pre4httpsgithubcomcareboounity-algorand-sdkcomparev210-pre3v210-pre4-2022-03-12"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0-pre.3...v2.1.0-pre.4">2.1.0-pre.4</a> (2022-03-12)</h1>
-<h3 id="bug-fixes-34">Bug Fixes</h3>
+<h3 id="bug-fixes-35">Bug Fixes</h3>
 <ul>
 <li><strong>samples:</strong> update YourFirstTransaction sample (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/20cabf70da8cbf47096c5586cb8deb53b03ae233">20cabf7</a>)</li>
 </ul>
 <h1 id="210-pre3httpsgithubcomcareboounity-algorand-sdkcomparev210-pre2v210-pre3-2022-03-11"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0-pre.2...v2.1.0-pre.3">2.1.0-pre.3</a> (2022-03-11)</h1>
-<h3 id="bug-fixes-35">Bug Fixes</h3>
+<h3 id="bug-fixes-36">Bug Fixes</h3>
 <ul>
 <li><strong>serialization:</strong> fix initialization of AlgoApiFormatterLookup (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/675b1d90a911629597a96127d9c62662eb48aba3">675b1d9</a>)</li>
 <li><strong>serialization:</strong> set formatters to automatically add array formatter if it doesn&#39;t exist (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/56923722974f710fa7583fcbf48dfa251f85dd7d">5692372</a>)</li>
 </ul>
-<h3 id="features-33">Features</h3>
+<h3 id="features-34">Features</h3>
 <ul>
 <li><strong>api:</strong> add min-balance field (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/7f0873bbfddabf80b36e67cb85a916fb7270835a">7f0873b</a>)</li>
 <li><strong>walletconnect:</strong> add supported wallets list (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/50c657580ccf5a1cb751d78cfb14201c4f8ac9fc">50c6575</a>)</li>
 </ul>
 <h1 id="210-pre2httpsgithubcomcareboounity-algorand-sdkcomparev210-pre1v210-pre2-2022-03-06"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.1.0-pre.1...v2.1.0-pre.2">2.1.0-pre.2</a> (2022-03-06)</h1>
-<h3 id="bug-fixes-36">Bug Fixes</h3>
+<h3 id="bug-fixes-37">Bug Fixes</h3>
 <ul>
 <li><strong>readme:</strong> fix missing image in readme (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/a2fb33ce7bd1ea760e098f36e809a5ec4d9ea3ab">a2fb33c</a>)</li>
 </ul>
 <h1 id="210-pre1httpsgithubcomcareboounity-algorand-sdkcomparev200v210-pre1-2022-03-06"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0...v2.1.0-pre.1">2.1.0-pre.1</a> (2022-03-06)</h1>
-<h3 id="features-34">Features</h3>
+<h3 id="features-35">Features</h3>
 <ul>
 <li><strong>transaction:</strong> add <code>PrivateKey.SignTransaction</code> method (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/3d74336aee240bb8357cea27b26c33cb537f3eca">3d74336</a>)</li>
 </ul>
 <h1 id="200httpsgithubcomcareboounity-algorand-sdkcomparev130v200-2022-03-05"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.3.0...v2.0.0">2.0.0</a> (2022-03-05)</h1>
-<h3 id="bug-fixes-37">Bug Fixes</h3>
+<h3 id="bug-fixes-38">Bug Fixes</h3>
 <ul>
 <li><strong>qrcode:</strong> replace zxing dll with its source code (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/766c83eae5ee0530b9bdd50aa7c337d8f5b64eb4">766c83e</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/84">#84</a></li>
 <li><strong>walletconnect:</strong> fix compile issue for unity 2020 (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/e26836a3265c04f9908d813080c8c7f915891aeb">e26836a</a>)</li>
@@ -796,7 +805,7 @@ API.</li>
 <li><strong>websocket:</strong> change namespace <code>Netcode.Transports.WebSocket</code> -&gt; <code>Algorand.Unity.WebSocket</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/ddb1357acf39c14f47b940998bd51268d70bac41">ddb1357</a>)</li>
 <li><strong>websocket:</strong> move websocket code to its own assembly definition (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/8ff6738942b65fe25b27218b80f8cdc630a698d8">8ff6738</a>)</li>
 </ul>
-<h3 id="features-35">Features</h3>
+<h3 id="features-36">Features</h3>
 <ul>
 <li><strong>accounts:</strong> add <code>AccountInfo.EstimateMinBalance</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/51d471bf2991fd7c406ff3dcbac140b8b8085f38">51d471b</a>)</li>
 <li><strong>algod:</strong> add overloads for <code>IAlgodClient.SendTransactions</code> that allow sending raw msgpack (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/4befeebdb8f1bc635ed35344eaa8a2d6a762cae6">4befeeb</a>)</li>
@@ -865,7 +874,7 @@ before you will have to target them in new assemblies now.</li>
 <li><strong>walletconnect:</strong> remove unused enum <code>WalletConnectError</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/6df5079fa71d57fbab6dd2bd9f4320758ff349a0">6df5079</a>)</li>
 <li><strong>websocket:</strong> change namespace <code>Netcode.Transports.WebSocket</code> -&gt; <code>Algorand.Unity.WebSocket</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/ddb1357acf39c14f47b940998bd51268d70bac41">ddb1357</a>)</li>
 </ul>
-<h3 id="features-36">Features</h3>
+<h3 id="features-37">Features</h3>
 <ul>
 <li><strong>walletconnect:</strong> add <code>HandshakeUrl</code> struct (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/423834868759538190c6602d1dad1035b2a430a8">4238348</a>)</li>
 </ul>
@@ -880,12 +889,12 @@ update them if you were using the <code>ZXing</code> or <code>WebSocket</code> n
 <li><strong>walletconnect:</strong> <code>WalletConnectError</code> has been removed since it&#39;s not being used by the API.</li>
 </ul>
 <h1 id="200-pre8httpsgithubcomcareboounity-algorand-sdkcomparev200-pre7v200-pre8-2022-03-04"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.7...v2.0.0-pre.8">2.0.0-pre.8</a> (2022-03-04)</h1>
-<h3 id="bug-fixes-38">Bug Fixes</h3>
+<h3 id="bug-fixes-39">Bug Fixes</h3>
 <ul>
 <li><strong>qrcode:</strong> replace zxing dll with its source code (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/766c83eae5ee0530b9bdd50aa7c337d8f5b64eb4">766c83e</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/84">#84</a></li>
 <li><strong>websocket:</strong> regenerate guids in <code>Algorand.Unity.WebSocket</code> assembly (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/3cb31803ad00da8239fc077033931badbcea3676">3cb3180</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/83">#83</a></li>
 </ul>
-<h3 id="features-37">Features</h3>
+<h3 id="features-38">Features</h3>
 <ul>
 <li><strong>unitask:</strong> upgrade UniTask to version 2.3.1 (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/537d2974dc53c05972ce1ebde197e1ec80580be1">537d297</a>)</li>
 </ul>
@@ -897,16 +906,16 @@ into the <code>Algorand.Unity.QrCode</code> assembly.</li>
 re-reference it.</li>
 </ul>
 <h1 id="200-pre7httpsgithubcomcareboounity-algorand-sdkcomparev200-pre6v200-pre7-2022-03-01"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.6...v2.0.0-pre.7">2.0.0-pre.7</a> (2022-03-01)</h1>
-<h3 id="features-38">Features</h3>
+<h3 id="features-39">Features</h3>
 <ul>
 <li><strong>dependencies:</strong> upgrade unity collections to 1.1.0 (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/88308be43efed0ab75c8db8942fad4d077fe4b66">88308be</a>)</li>
 </ul>
 <h1 id="200-pre6httpsgithubcomcareboounity-algorand-sdkcomparev200-pre5v200-pre6-2022-03-01"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.5...v2.0.0-pre.6">2.0.0-pre.6</a> (2022-03-01)</h1>
-<h3 id="bug-fixes-39">Bug Fixes</h3>
+<h3 id="bug-fixes-40">Bug Fixes</h3>
 <ul>
 <li><strong>walletconnect:</strong> fix compile issue for unity 2020 (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/e26836a3265c04f9908d813080c8c7f915891aeb">e26836a</a>)</li>
 </ul>
-<h3 id="features-39">Features</h3>
+<h3 id="features-40">Features</h3>
 <ul>
 <li><strong>algod:</strong> add overloads for <code>IAlgodClient.SendTransactions</code> that allow sending raw msgpack (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/4befeebdb8f1bc635ed35344eaa8a2d6a762cae6">4befeeb</a>)</li>
 <li><strong>lowlevel:</strong> add <code>NativeArrayUtil.ConcatAll</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/10644db4c6e6a5256a3ffd2ea7a1441f0ac4499c">10644db</a>)</li>
@@ -917,18 +926,18 @@ re-reference it.</li>
 <li><strong>lowlevel:</strong> Remove unused struct <code>NativeReferenceOfDisposable</code> from Algorand.Unity.LowLevel</li>
 </ul>
 <h1 id="200-pre5httpsgithubcomcareboounity-algorand-sdkcomparev200-pre4v200-pre5-2022-02-28"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.4...v2.0.0-pre.5">2.0.0-pre.5</a> (2022-02-28)</h1>
-<h3 id="features-40">Features</h3>
+<h3 id="features-41">Features</h3>
 <ul>
 <li><strong>accounts:</strong> add <code>AccountInfo.EstimateMinBalance</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/51d471bf2991fd7c406ff3dcbac140b8b8085f38">51d471b</a>)</li>
 <li><strong>transaction:</strong> reduce generic constraints related to <code>ITransaction</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/42dfe8207c98c0ddda420ff6be480e0d2c70409c">42dfe82</a>)</li>
 </ul>
 <h1 id="200-pre4httpsgithubcomcareboounity-algorand-sdkcomparev200-pre3v200-pre4-2022-02-28"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.3...v2.0.0-pre.4">2.0.0-pre.4</a> (2022-02-28)</h1>
-<h3 id="features-41">Features</h3>
+<h3 id="features-42">Features</h3>
 <ul>
 <li><strong>api:</strong> add <code>statusCode</code> deserialization field to <code>ErrorResponseFormatter</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/3f696004496166a1c767e8a3887a3294209ef2b9">3f69600</a>)</li>
 </ul>
 <h1 id="200-pre3httpsgithubcomcareboounity-algorand-sdkcomparev200-pre2v200-pre3-2022-02-27"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v2.0.0-pre.2...v2.0.0-pre.3">2.0.0-pre.3</a> (2022-02-27)</h1>
-<h3 id="bug-fixes-40">Bug Fixes</h3>
+<h3 id="bug-fixes-41">Bug Fixes</h3>
 <ul>
 <li><strong>walletconnect:</strong> fix issue where new WalletConnect assembly was not compiling in Unity 2020.3 (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/0a1ec269d60e6a8d7cec50ea8496b9539b78916b">0a1ec26</a>)</li>
 </ul>
@@ -953,7 +962,7 @@ and remains in the Algorand.Unity assembly.</li>
 CareBoo.WebSocket assembly</li>
 </ul>
 <h1 id="200-pre1httpsgithubcomcareboounity-algorand-sdkcomparev140-pre1v200-pre1-2022-02-25"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.4.0-pre.1...v2.0.0-pre.1">2.0.0-pre.1</a> (2022-02-25)</h1>
-<h3 id="features-42">Features</h3>
+<h3 id="features-43">Features</h3>
 <ul>
 <li><strong>api:</strong> add support for <code>CancellationToken</code> and <code>IProgress&lt;float&gt;</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/6ca2f395c072f97d5f32546feac0b8cec6c64ac9">6ca2f39</a>)</li>
 </ul>
@@ -962,7 +971,7 @@ CareBoo.WebSocket assembly</li>
 <li><strong>api:</strong> API is no longer returning <code>UniTask</code>, and is now returning <code>AlgoApiRequest.Sent</code>.</li>
 </ul>
 <h1 id="140-pre1httpsgithubcomcareboounity-algorand-sdkcomparev130v140-pre1-2022-02-24"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.3.0...v1.4.0-pre.1">1.4.0-pre.1</a> (2022-02-24)</h1>
-<h3 id="features-43">Features</h3>
+<h3 id="features-44">Features</h3>
 <ul>
 <li><strong>walletconnect:</strong> add Algorand WalletConnect client (<a href="https://github.com/CareBoo/unity-algorand-sdk/issues/67">#67</a>) (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/3028858017859fd99a637c05fcd018f1d4c528ea">3028858</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/65">#65</a></li>
 <li><strong>walletconnect:</strong> add QR Code Generator support (<a href="https://github.com/CareBoo/unity-algorand-sdk/issues/68">#68</a>) (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/1f84dcf165fdb6c58989ff0cb2cf2ba1d02f5c3f">1f84dcf</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/51">#51</a></li>
@@ -970,55 +979,55 @@ CareBoo.WebSocket assembly</li>
 <li><strong>walletconnect:</strong> add WebSocket support (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/e0d2e6dcdd058ee7544b6f233e02461f87c12ffd">e0d2e6d</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/59">#59</a></li>
 </ul>
 <h1 id="140-exp4httpsgithubcomcareboounity-algorand-sdkcomparev140-exp3v140-exp4-2022-02-24"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.4.0-exp.3...v1.4.0-exp.4">1.4.0-exp.4</a> (2022-02-24)</h1>
-<h3 id="features-44">Features</h3>
+<h3 id="features-45">Features</h3>
 <ul>
 <li><strong>walletconnect:</strong> add WalletConnect support (<a href="https://github.com/CareBoo/unity-algorand-sdk/issues/69">#69</a>) (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/c650b15bba0cd97cf592da87c365934ad91bfa6b">c650b15</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/11">#11</a></li>
 </ul>
 <h1 id="140-exp3httpsgithubcomcareboounity-algorand-sdkcomparev140-exp2v140-exp3-2022-02-22"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.4.0-exp.2...v1.4.0-exp.3">1.4.0-exp.3</a> (2022-02-22)</h1>
-<h3 id="features-45">Features</h3>
+<h3 id="features-46">Features</h3>
 <ul>
 <li><strong>walletconnect:</strong> add QR Code Generator support (<a href="https://github.com/CareBoo/unity-algorand-sdk/issues/68">#68</a>) (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/1f84dcf165fdb6c58989ff0cb2cf2ba1d02f5c3f">1f84dcf</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/51">#51</a></li>
 </ul>
 <h1 id="140-exp2httpsgithubcomcareboounity-algorand-sdkcomparev140-exp1v140-exp2-2022-02-21"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.4.0-exp.1...v1.4.0-exp.2">1.4.0-exp.2</a> (2022-02-21)</h1>
-<h3 id="features-46">Features</h3>
+<h3 id="features-47">Features</h3>
 <ul>
 <li><strong>walletconnect:</strong> add Algorand WalletConnect client (<a href="https://github.com/CareBoo/unity-algorand-sdk/issues/67">#67</a>) (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/3028858017859fd99a637c05fcd018f1d4c528ea">3028858</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/65">#65</a></li>
 </ul>
 <h1 id="140-exp1httpsgithubcomcareboounity-algorand-sdkcomparev130v140-exp1-2022-02-18"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.3.0...v1.4.0-exp.1">1.4.0-exp.1</a> (2022-02-18)</h1>
-<h3 id="features-47">Features</h3>
+<h3 id="features-48">Features</h3>
 <ul>
 <li><strong>walletconnect:</strong> add WebSocket support (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/e0d2e6dcdd058ee7544b6f233e02461f87c12ffd">e0d2e6d</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/59">#59</a></li>
 </ul>
 <h1 id="130httpsgithubcomcareboounity-algorand-sdkcomparev122v130-2021-11-19"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.2.2...v1.3.0">1.3.0</a> (2021-11-19)</h1>
-<h3 id="features-48">Features</h3>
+<h3 id="features-49">Features</h3>
 <ul>
 <li><strong>logic:</strong> add <code>Logic.Sign</code> for signing programs with private keys (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/131ef285fbb5c18bff3850ebceb7ae8420d2dc69">131ef28</a>)</li>
 <li><strong>logic:</strong> add <code>LogicSig.GetAddress</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/9628a9ac857254d69f42bc4ebca500d2098865d0">9628a9a</a>)</li>
 <li><strong>multisig:</strong> add <code>Multisig.GetAddress</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/e4904598e21caef8bac504b8b0f1917a1b465b9a">e490459</a>)</li>
 </ul>
 <h2 id="122httpsgithubcomcareboounity-algorand-sdkcomparev121v122-2021-11-15"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.2.1...v1.2.2">1.2.2</a> (2021-11-15)</h2>
-<h3 id="bug-fixes-41">Bug Fixes</h3>
+<h3 id="bug-fixes-42">Bug Fixes</h3>
 <ul>
 <li><strong>algoapiobject:</strong> fix compile err (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/12ca53cedde5408961eabf7d1790b39dd2cfc572">12ca53c</a>)</li>
 <li><strong>assetparams:</strong> change size of URL FixedString to 128 bytes (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/792d207e4d4d082e076f57c62ab51876c7c3ceec">792d207</a>)</li>
 </ul>
 <h2 id="122-pre2httpsgithubcomcareboounity-algorand-sdkcomparev122-pre1v122-pre2-2021-11-15"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.2.2-pre.1...v1.2.2-pre.2">1.2.2-pre.2</a> (2021-11-15)</h2>
-<h3 id="bug-fixes-42">Bug Fixes</h3>
+<h3 id="bug-fixes-43">Bug Fixes</h3>
 <ul>
 <li><strong>algoapiobject:</strong> fix compile err (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/13692b812ef959e501dcc27607e41e9e67b41d7e">13692b8</a>)</li>
 </ul>
 <h2 id="122-pre1httpsgithubcomcareboounity-algorand-sdkcomparev121v122-pre1-2021-11-13"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.2.1...v1.2.2-pre.1">1.2.2-pre.1</a> (2021-11-13)</h2>
-<h3 id="bug-fixes-43">Bug Fixes</h3>
+<h3 id="bug-fixes-44">Bug Fixes</h3>
 <ul>
 <li><strong>assetparams:</strong> change size of URL FixedString to 128 bytes (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/c96489905b62b5c3ecef1aeabd3e56fa4f15dc28">c964899</a>)</li>
 </ul>
 <h2 id="121httpsgithubcomcareboounity-algorand-sdkcomparev120v121-2021-11-09"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.2.0...v1.2.1">1.2.1</a> (2021-11-09)</h2>
-<h3 id="bug-fixes-44">Bug Fixes</h3>
+<h3 id="bug-fixes-45">Bug Fixes</h3>
 <ul>
 <li><strong>error response:</strong> fix some responses with response code 0 incorrectly treated as errors (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/e605e75ee0fef521acc9c73ee311812b9eda3fc2">e605e75</a>)</li>
 </ul>
 <h1 id="120httpsgithubcomcareboounity-algorand-sdkcomparev110v120-2021-11-08"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.1.0...v1.2.0">1.2.0</a> (2021-11-08)</h1>
-<h3 id="bug-fixes-45">Bug Fixes</h3>
+<h3 id="bug-fixes-46">Bug Fixes</h3>
 <ul>
 <li><strong>json:</strong> fix MultiSig JSON format using incorrect field names (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/83d09509d990f6fdbc299733a3d2deea6e89d2c7">83d0950</a>)</li>
 <li><strong>logging:</strong> remove unnecessary debug logs (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/755006192bec926fff6b77249961de592845aaa1">7550061</a>)</li>
@@ -1028,7 +1037,7 @@ CareBoo.WebSocket assembly</li>
 <li><strong>teal:</strong> fix <code>TealValue</code> deserialization failing when both uint and bytes values included (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/22cfcd08cfef6ba25404a6123edca3d2aff9d6fe">22cfcd0</a>)</li>
 <li><strong>web response:</strong> fix <code>ErrorResponse.IsError</code> not returning <code>true</code> when <code>responseCode == 0</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/3e1c8d6aefb868683ef1dc241173674990081c70">3e1c8d6</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/58">#58</a></li>
 </ul>
-<h3 id="features-49">Features</h3>
+<h3 id="features-50">Features</h3>
 <ul>
 <li><strong>api clients:</strong> add constructor to api clients that makes the token parameter optional (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/0bcd681ebb7f92822342a7bea5a9b448c7b03ec6">0bcd681</a>)</li>
 <li><strong>api:</strong> add custom Request HTTP header support (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/a6f51f8df7bd2f61b3fcf02cbc61932d849d80aa">a6f51f8</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/58">#58</a></li>
@@ -1038,22 +1047,22 @@ CareBoo.WebSocket assembly</li>
 <li><strong>plugins:</strong> replace debug mode libsodium libraries with release mode (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/d7638c8fbe36dfd0a07bca01df8c0b46131b30af">d7638c8</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/55">#55</a></li>
 </ul>
 <h1 id="120-pre3httpsgithubcomcareboounity-algorand-sdkcomparev120-pre2v120-pre3-2021-11-08"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.2.0-pre.2...v1.2.0-pre.3">1.2.0-pre.3</a> (2021-11-08)</h1>
-<h3 id="bug-fixes-46">Bug Fixes</h3>
+<h3 id="bug-fixes-47">Bug Fixes</h3>
 <ul>
 <li><strong>web response:</strong> fix <code>ErrorResponse.IsError</code> not returning <code>true</code> when <code>responseCode == 0</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/3e1c8d6aefb868683ef1dc241173674990081c70">3e1c8d6</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/58">#58</a></li>
 </ul>
 <h1 id="120-pre2httpsgithubcomcareboounity-algorand-sdkcomparev120-pre1v120-pre2-2021-11-07"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.2.0-pre.1...v1.2.0-pre.2">1.2.0-pre.2</a> (2021-11-07)</h1>
-<h3 id="features-50">Features</h3>
+<h3 id="features-51">Features</h3>
 <ul>
 <li><strong>api clients:</strong> add constructor to api clients that makes the token parameter optional (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/0bcd681ebb7f92822342a7bea5a9b448c7b03ec6">0bcd681</a>)</li>
 </ul>
 <h1 id="120-pre1httpsgithubcomcareboounity-algorand-sdkcomparev111-pre1v120-pre1-2021-11-07"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.1.1-pre.1...v1.2.0-pre.1">1.2.0-pre.1</a> (2021-11-07)</h1>
-<h3 id="bug-fixes-47">Bug Fixes</h3>
+<h3 id="bug-fixes-48">Bug Fixes</h3>
 <ul>
 <li><strong>json:</strong> fix MultiSig JSON format using incorrect field names (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/83d09509d990f6fdbc299733a3d2deea6e89d2c7">83d0950</a>)</li>
 <li><strong>teal:</strong> fix <code>TealValue</code> deserialization failing when both uint and bytes values included (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/22cfcd08cfef6ba25404a6123edca3d2aff9d6fe">22cfcd0</a>)</li>
 </ul>
-<h3 id="features-51">Features</h3>
+<h3 id="features-52">Features</h3>
 <ul>
 <li><strong>api:</strong> add custom Request HTTP header support (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/a6f51f8df7bd2f61b3fcf02cbc61932d849d80aa">a6f51f8</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/58">#58</a></li>
 </ul>
@@ -1062,7 +1071,7 @@ CareBoo.WebSocket assembly</li>
 <li><strong>plugins:</strong> replace debug mode libsodium libraries with release mode (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/d7638c8fbe36dfd0a07bca01df8c0b46131b30af">d7638c8</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/55">#55</a></li>
 </ul>
 <h2 id="111-pre1httpsgithubcomcareboounity-algorand-sdkcomparev110v111-pre1-2021-11-05"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.1.0...v1.1.1-pre.1">1.1.1-pre.1</a> (2021-11-05)</h2>
-<h3 id="bug-fixes-48">Bug Fixes</h3>
+<h3 id="bug-fixes-49">Bug Fixes</h3>
 <ul>
 <li><strong>logging:</strong> remove unnecessary debug logs (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/755006192bec926fff6b77249961de592845aaa1">7550061</a>)</li>
 <li><strong>msgpack:</strong> fix enum serialization when using IL2CPP (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/0c1a4d0a128baed173a60db3d1b9ee788c836e6b">0c1a4d0</a>)</li>
@@ -1070,38 +1079,38 @@ CareBoo.WebSocket assembly</li>
 <li><strong>plugins:</strong> remove unnecessary android static library plugin (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/fc09b668dc4b58896678ccf51e70ed10f8f95383">fc09b66</a>)</li>
 </ul>
 <h1 id="110httpsgithubcomcareboounity-algorand-sdkcomparev100v110-2021-11-03"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0...v1.1.0">1.1.0</a> (2021-11-03)</h1>
-<h3 id="bug-fixes-49">Bug Fixes</h3>
+<h3 id="bug-fixes-50">Bug Fixes</h3>
 <ul>
 <li>add missing meta files (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/24079419c06ea7c5608d601219239322f7d4b5ab">2407941</a>)</li>
 <li><strong>osx:</strong> fix multiple sodium.bundle plugins (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/b3b93890b5ec0bde98bbf5d35fd4246475b6cc0a">b3b9389</a>)</li>
 </ul>
-<h3 id="features-52">Features</h3>
+<h3 id="features-53">Features</h3>
 <ul>
 <li><strong>editor:</strong> Make many models serializable and add property drawers to render them in editor (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/09185fce14850cb2d4f9a42be98f077e090608ac">09185fc</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/41">#41</a></li>
 <li>support WebGL (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/18906948adbb7c5e42dd3988a738dccd14b4cd3d">1890694</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/52">#52</a></li>
 </ul>
 <h1 id="110-pre3httpsgithubcomcareboounity-algorand-sdkcomparev110-pre2v110-pre3-2021-11-03"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.1.0-pre.2...v1.1.0-pre.3">1.1.0-pre.3</a> (2021-11-03)</h1>
-<h3 id="features-53">Features</h3>
+<h3 id="features-54">Features</h3>
 <ul>
 <li><strong>editor:</strong> Make many models serializable and add property drawers to render them in editor (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/09185fce14850cb2d4f9a42be98f077e090608ac">09185fc</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/41">#41</a></li>
 </ul>
 <h1 id="110-pre2httpsgithubcomcareboounity-algorand-sdkcomparev110-pre1v110-pre2-2021-11-01"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.1.0-pre.1...v1.1.0-pre.2">1.1.0-pre.2</a> (2021-11-01)</h1>
-<h3 id="bug-fixes-50">Bug Fixes</h3>
+<h3 id="bug-fixes-51">Bug Fixes</h3>
 <ul>
 <li><strong>osx:</strong> fix multiple sodium.bundle plugins (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/b3b93890b5ec0bde98bbf5d35fd4246475b6cc0a">b3b9389</a>)</li>
 </ul>
 <h1 id="110-pre1httpsgithubcomcareboounity-algorand-sdkcomparev101-pre1v110-pre1-2021-10-31"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.1-pre.1...v1.1.0-pre.1">1.1.0-pre.1</a> (2021-10-31)</h1>
-<h3 id="features-54">Features</h3>
+<h3 id="features-55">Features</h3>
 <ul>
 <li>support WebGL (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/18906948adbb7c5e42dd3988a738dccd14b4cd3d">1890694</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/52">#52</a></li>
 </ul>
 <h2 id="101-pre1httpsgithubcomcareboounity-algorand-sdkcomparev100v101-pre1-2021-10-29"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0...v1.0.1-pre.1">1.0.1-pre.1</a> (2021-10-29)</h2>
-<h3 id="bug-fixes-51">Bug Fixes</h3>
+<h3 id="bug-fixes-52">Bug Fixes</h3>
 <ul>
 <li>add missing meta files (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/24079419c06ea7c5608d601219239322f7d4b5ab">2407941</a>)</li>
 </ul>
 <h1 id="100-2021-10-29">1.0.0 (2021-10-29)</h1>
-<h3 id="bug-fixes-52">Bug Fixes</h3>
+<h3 id="bug-fixes-53">Bug Fixes</h3>
 <ul>
 <li><span class="emoji" shortcode="bug">🐛</span> fix <code>RawTransaction.Equals</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/b0769da141c3fd40d90368a83467ea6de5167af1">b0769da</a>)</li>
 <li><span class="emoji" shortcode="bug">🐛</span> fix compile errs (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/9e59233acf1419c2543d0a9b9c0ecec9c2abdd74">9e59233</a>)</li>
@@ -1163,7 +1172,7 @@ CareBoo.WebSocket assembly</li>
 <li><strong>kmd:</strong> <span class="emoji" shortcode="recycle">♻️</span> replace <code>Request</code> with explicit method params (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/1b63b9be42288ccb4b57d02c6c945a567e8a9eb7">1b63b9b</a>)</li>
 <li>remove .NET 4.8 requirement (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/077ea1e62db9ee057a4d782f7750ffe4af9e9cbd">077ea1e</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/19">#19</a> <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/9">#9</a></li>
 </ul>
-<h3 id="features-55">Features</h3>
+<h3 id="features-56">Features</h3>
 <ul>
 <li><span class="emoji" shortcode="construction_worker">👷</span> Add npmjs support (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/42c57c389081fd2b9c25b797245f899d989f9a95">42c57c3</a>)</li>
 <li><span class="emoji" shortcode="heavy_plus_sign">➕</span> Add libsodium ios, android, and windows (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/066a8ad97732d3358ed9de8282c298015c95ccf6">066a8ad</a>)</li>
@@ -1336,26 +1345,26 @@ CareBoo.WebSocket assembly</li>
 <li>Removes the <code>SendTransactionRaw</code> method from <code>AlgodClient</code></li>
 </ul>
 <h1 id="100-pre7httpsgithubcomcareboounity-algorand-sdkcomparev100-pre6v100-pre7-2021-10-29"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.6...v1.0.0-pre.7">1.0.0-pre.7</a> (2021-10-29)</h1>
-<h3 id="bug-fixes-53">Bug Fixes</h3>
+<h3 id="bug-fixes-54">Bug Fixes</h3>
 <ul>
 <li><strong>transaction:</strong> remove unused assetCloseTo param in <code>AssetClawback</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/f45dac1328af34e1eb437431e2bc60aa71ad53af">f45dac1</a>)</li>
 </ul>
 <h1 id="100-pre6httpsgithubcomcareboounity-algorand-sdkcomparev100-pre5v100-pre6-2021-10-28"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.5...v1.0.0-pre.6">1.0.0-pre.6</a> (2021-10-28)</h1>
-<h3 id="bug-fixes-54">Bug Fixes</h3>
+<h3 id="bug-fixes-55">Bug Fixes</h3>
 <ul>
 <li><strong>indexer:</strong> fix missing <code>Version</code> field in <code>HealthCheck</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/39c3444ee0a6a628dbd80619804a12720223a2ef">39c3444</a>)</li>
 </ul>
-<h3 id="features-56">Features</h3>
+<h3 id="features-57">Features</h3>
 <ul>
 <li><strong>algod:</strong> add support for sending a group of transactions (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/a7a7695ce1e0196ca5bc3fe47e463b6a0c643f2f">a7a7695</a>)</li>
 </ul>
 <h1 id="100-pre5httpsgithubcomcareboounity-algorand-sdkcomparev100-pre4v100-pre5-2021-10-27"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.4...v1.0.0-pre.5">1.0.0-pre.5</a> (2021-10-27)</h1>
-<h3 id="bug-fixes-55">Bug Fixes</h3>
+<h3 id="bug-fixes-56">Bug Fixes</h3>
 <ul>
 <li><strong>crypto:</strong> fix libsodium not working on OSX (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/1154450267b71762195f701694616a38d47fd529">1154450</a>)</li>
 </ul>
 <h1 id="100-pre4httpsgithubcomcareboounity-algorand-sdkcomparev100-pre3v100-pre4-2021-10-27"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.3...v1.0.0-pre.4">1.0.0-pre.4</a> (2021-10-27)</h1>
-<h3 id="features-57">Features</h3>
+<h3 id="features-58">Features</h3>
 <ul>
 <li><strong>unity:</strong> make AlgoApiClient&#39;s Serializable (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/4a3aa11fe3ecdf46f00ef29829e1d965043ee3aa">4a3aa11</a>)</li>
 </ul>
@@ -1369,12 +1378,12 @@ CareBoo.WebSocket assembly</li>
 <li>Removing <code>NativeSliceExtensions</code></li>
 </ul>
 <h1 id="100-pre2httpsgithubcomcareboounity-algorand-sdkcomparev100-pre1v100-pre2-2021-10-25"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-pre.1...v1.0.0-pre.2">1.0.0-pre.2</a> (2021-10-25)</h1>
-<h3 id="bug-fixes-56">Bug Fixes</h3>
+<h3 id="bug-fixes-57">Bug Fixes</h3>
 <ul>
 <li>fix empty dirs finding their way into the project (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/82afc9d14a0374b39e63dd7581b950324e12bf39">82afc9d</a>)</li>
 </ul>
 <h1 id="100-pre1-2021-10-24">1.0.0-pre.1 (2021-10-24)</h1>
-<h3 id="bug-fixes-57">Bug Fixes</h3>
+<h3 id="bug-fixes-58">Bug Fixes</h3>
 <ul>
 <li><span class="emoji" shortcode="bug">🐛</span> fix <code>RawTransaction.Equals</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/f6bd889c737f970c835d3273f7c28b002794ed3f">f6bd889</a>)</li>
 <li><span class="emoji" shortcode="bug">🐛</span> fix compile errs (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/7a03ed99a5cd7d3657df89c58a989ee0e33ced66">7a03ed9</a>)</li>
@@ -1431,7 +1440,7 @@ CareBoo.WebSocket assembly</li>
 <li><strong>kmd:</strong> <span class="emoji" shortcode="recycle">♻️</span> replace <code>Request</code> with explicit method params (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/030a0a9486f6270e6e867ad1efbad73b90e0ecfb">030a0a9</a>)</li>
 <li>remove .NET 4.8 requirement (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/9f55707ba4f8a3d9b12fb7530b6ceec40c95219b">9f55707</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/19">#19</a> <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/9">#9</a></li>
 </ul>
-<h3 id="features-58">Features</h3>
+<h3 id="features-59">Features</h3>
 <ul>
 <li><span class="emoji" shortcode="construction_worker">👷</span> Add npmjs support (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/56f60f0804c3cac377c78a5c47eea17785b29f9e">56f60f0</a>)</li>
 <li><span class="emoji" shortcode="heavy_plus_sign">➕</span> Add libsodium ios, android, and windows (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/00c95113a152f01e737e56be6a31b3207aed57ff">00c9511</a>)</li>
@@ -1601,7 +1610,7 @@ CareBoo.WebSocket assembly</li>
 <li>Removes the <code>SendTransactionRaw</code> method from <code>AlgodClient</code></li>
 </ul>
 <h1 id="100-exp27httpsgithubcomcareboounity-algorand-sdkcomparev100-exp26v100-exp27-2021-10-24"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.26...v1.0.0-exp.27">1.0.0-exp.27</a> (2021-10-24)</h1>
-<h3 id="bug-fixes-58">Bug Fixes</h3>
+<h3 id="bug-fixes-59">Bug Fixes</h3>
 <ul>
 <li><strong>algod:</strong> <span class="emoji" shortcode="bug">🐛</span> fix <code>AlgodClient.TealCompile</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/8f5a67a694cd21496b6db7c1630324ddbfd13f1f">8f5a67a</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/20">#20</a></li>
 <li><strong>algod:</strong> <span class="emoji" shortcode="bug">🐛</span> fix <code>AssetParams</code> serialization (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/cbf9a6981c52c565eb3837186c38765e5b8bea27">cbf9a69</a>)</li>
@@ -1617,7 +1626,7 @@ CareBoo.WebSocket assembly</li>
 <ul>
 <li><strong>algod:</strong> <span class="emoji" shortcode="recycle">♻️</span> replace <code>AccountParticipation</code> with <code>Transaction.KeyRegistration.Params</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/3b624eec4974e28b0cc31b019d41f37dc60207ca">3b624ee</a>)</li>
 </ul>
-<h3 id="features-59">Features</h3>
+<h3 id="features-60">Features</h3>
 <ul>
 <li><strong>transaction:</strong> <span class="emoji" shortcode="sparkles">✨</span> add <code>RegisterAccountOnline</code> and <code>RegisterAccountOffline</code> APIs (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/71d42c1d832212ddaa5ee872f8e332af570854ac">71d42c1</a>)</li>
 <li><strong>transaction:</strong> <span class="emoji" shortcode="sparkles">✨</span> add <code>Transaction.AppCreate</code> and <code>Transaction.AppConfigure</code> APIs (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/c64469ac3e696c518d7d644d1e5b219bfd25d4b5">c64469a</a>)</li>
@@ -1635,7 +1644,7 @@ CareBoo.WebSocket assembly</li>
 <li><strong>transaction:</strong> All transaction constructors have been changed to use <code>TransactionParams</code></li>
 </ul>
 <h1 id="100-exp27httpsgithubcomcareboounity-algorand-sdkcomparev100-exp26v100-exp27-2021-10-23"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.26...v1.0.0-exp.27">1.0.0-exp.27</a> (2021-10-23)</h1>
-<h3 id="bug-fixes-59">Bug Fixes</h3>
+<h3 id="bug-fixes-60">Bug Fixes</h3>
 <ul>
 <li><strong>algod:</strong> <span class="emoji" shortcode="bug">🐛</span> fix <code>AlgodClient.TealCompile</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/8f5a67a694cd21496b6db7c1630324ddbfd13f1f">8f5a67a</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/20">#20</a></li>
 <li><strong>algod:</strong> <span class="emoji" shortcode="bug">🐛</span> fix <code>AssetParams</code> serialization (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/cbf9a6981c52c565eb3837186c38765e5b8bea27">cbf9a69</a>)</li>
@@ -1651,7 +1660,7 @@ CareBoo.WebSocket assembly</li>
 <ul>
 <li><strong>algod:</strong> <span class="emoji" shortcode="recycle">♻️</span> replace <code>AccountParticipation</code> with <code>Transaction.KeyRegistration.Params</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/3b624eec4974e28b0cc31b019d41f37dc60207ca">3b624ee</a>)</li>
 </ul>
-<h3 id="features-60">Features</h3>
+<h3 id="features-61">Features</h3>
 <ul>
 <li><strong>transaction:</strong> <span class="emoji" shortcode="sparkles">✨</span> add <code>RegisterAccountOnline</code> and <code>RegisterAccountOffline</code> APIs (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/71d42c1d832212ddaa5ee872f8e332af570854ac">71d42c1</a>)</li>
 <li><strong>transaction:</strong> <span class="emoji" shortcode="sparkles">✨</span> add <code>Transaction.AppCreate</code> and <code>Transaction.AppConfigure</code> APIs (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/c64469ac3e696c518d7d644d1e5b219bfd25d4b5">c64469a</a>)</li>
@@ -1669,7 +1678,7 @@ CareBoo.WebSocket assembly</li>
 <li><strong>transaction:</strong> All transaction constructors have been changed to use <code>TransactionParams</code></li>
 </ul>
 <h1 id="100-exp26httpsgithubcomcareboounity-algorand-sdkcomparev100-exp25v100-exp26-2021-10-13"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.25...v1.0.0-exp.26">1.0.0-exp.26</a> (2021-10-13)</h1>
-<h3 id="bug-fixes-60">Bug Fixes</h3>
+<h3 id="bug-fixes-61">Bug Fixes</h3>
 <ul>
 <li><strong>indexer:</strong> <span class="emoji" shortcode="bug">🐛</span> add token back to indexer (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/023cb05f173242f2c3f234f8203fcf2c03ea5369">023cb05</a>)</li>
 <li><strong>indexer:</strong> <span class="emoji" shortcode="bug">🐛</span> fix indexer requires token (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/57f61141f9c7763bb10a3a9deac07dcbc65ea6a9">57f6114</a>)</li>
@@ -1685,7 +1694,7 @@ CareBoo.WebSocket assembly</li>
 <ul>
 <li><strong>kmd:</strong> <span class="emoji" shortcode="recycle">♻️</span> replace <code>Request</code> with explicit method params (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/030a0a9486f6270e6e867ad1efbad73b90e0ecfb">030a0a9</a>)</li>
 </ul>
-<h3 id="features-61">Features</h3>
+<h3 id="features-62">Features</h3>
 <ul>
 <li><strong>json:</strong> <span class="emoji" shortcode="sparkles">✨</span> implement <code>JsonReader.Skip</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/0d6e6ab4c3b75e96c5e18b105019acb9c50180ac">0d6e6ab</a>)</li>
 <li><strong>serialization:</strong> <span class="emoji" shortcode="sparkles">✨</span> add support for deserializing <code>byte[]</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/3ef497f3e1f6d31b23fc9bcef77c66f975e242b5">3ef497f</a>)</li>
@@ -1697,7 +1706,7 @@ CareBoo.WebSocket assembly</li>
 <li><strong>kmd:</strong> changes <code>IKmdClient</code> API to use parameters instead of <code>Request</code> objs</li>
 </ul>
 <h1 id="100-exp25httpsgithubcomcareboounity-algorand-sdkcomparev100-exp24v100-exp25-2021-10-08"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.24...v1.0.0-exp.25">1.0.0-exp.25</a> (2021-10-08)</h1>
-<h3 id="bug-fixes-61">Bug Fixes</h3>
+<h3 id="bug-fixes-62">Bug Fixes</h3>
 <ul>
 <li><span class="emoji" shortcode="bug">🐛</span> fix keyworded enum types formatting as numbers (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/d686c134dff5e0d657f974600c5948b86f506f0f">d686c13</a>)</li>
 <li><strong>algod:</strong> <span class="emoji" shortcode="bug">🐛</span> fix pending transactions not returning messagepack (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/dca09f8d6c2e1781097f3386355852b7179f01d9">dca09f8</a>)</li>
@@ -1711,7 +1720,7 @@ CareBoo.WebSocket assembly</li>
 <li><strong>serialization:</strong> <span class="emoji" shortcode="bug">🐛</span> fix issue where fixed strings were incorrectly being added to the queryparams (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/a3e6fd9dbaf62d6e4bb05432568c0de36e3abb35">a3e6fd9</a>)</li>
 <li><strong>serialization:</strong> <span class="emoji" shortcode="bug">🐛</span> fix missing <code>AlgoApiObject</code> on all Transaction Params (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/a11015ff3da75db5ab5d6f7c809a89f50fe1142b">a11015f</a>)</li>
 </ul>
-<h3 id="features-62">Features</h3>
+<h3 id="features-63">Features</h3>
 <ul>
 <li><strong>networking:</strong> <span class="emoji" shortcode="sparkles">✨</span> add <code>ApiResponse</code> API to <code>ApiResponse&lt;&gt;</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/8556c53616646d9b39d9a4a88488b66acb6ac421">8556c53</a>)</li>
 <li><strong>serialization:</strong> <span class="emoji" shortcode="sparkles">✨</span> add support for generically serializing byte enums to strings (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/424c8b49c2a567c015a356db3b12a4d4d035dd61">424c8b4</a>)</li>
@@ -1727,11 +1736,11 @@ CareBoo.WebSocket assembly</li>
 <li><strong>indexer:</strong> indexer queries are now given as optional arguments</li>
 </ul>
 <h1 id="100-exp24httpsgithubcomcareboounity-algorand-sdkcomparev100-exp23v100-exp24-2021-10-05"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.23...v1.0.0-exp.24">1.0.0-exp.24</a> (2021-10-05)</h1>
-<h3 id="bug-fixes-62">Bug Fixes</h3>
+<h3 id="bug-fixes-63">Bug Fixes</h3>
 <ul>
 <li><span class="emoji" shortcode="bug">🐛</span> fix signatures (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/2fb461459ac58266c1078bdb16607d65a25d8553">2fb4614</a>)</li>
 </ul>
-<h3 id="features-63">Features</h3>
+<h3 id="features-64">Features</h3>
 <ul>
 <li><strong>kmd:</strong> <span class="emoji" shortcode="sparkles">✨</span> add <code>Error</code> to <code>ErrorMessage</code> which is used for kmd (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/3c37a947ed4ff34b2b008562e8a40e6eaa142078">3c37a94</a>)</li>
 <li><strong>kmd:</strong> <span class="emoji" shortcode="sparkles">✨</span> implement <code>APIV1DELETEKeyResponse</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/81f6c1e14cf23ca1bca6a6e22ee76a3196a26f6f">81f6c1e</a>)</li>
@@ -1786,7 +1795,7 @@ CareBoo.WebSocket assembly</li>
 <li><strong>serialization:</strong> <span class="emoji" shortcode="tada">🎉</span> update formatter cache (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/029f8419b54810d582c3550b8a3b2e193946bf5a">029f841</a>)</li>
 </ul>
 <h1 id="100-exp23httpsgithubcomcareboounity-algorand-sdkcomparev100-exp22v100-exp23-2021-10-03"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.22...v1.0.0-exp.23">1.0.0-exp.23</a> (2021-10-03)</h1>
-<h3 id="bug-fixes-63">Bug Fixes</h3>
+<h3 id="bug-fixes-64">Bug Fixes</h3>
 <ul>
 <li><span class="emoji" shortcode="bug">🐛</span> fix <code>RawTransaction.Equals</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/f6bd889c737f970c835d3273f7c28b002794ed3f">f6bd889</a>)</li>
 <li><strong>indexer:</strong> <span class="emoji" shortcode="bug">🐛</span> fix transaction formatters missing valid msgpack fields (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/bf917ac30f964b9102c293d00a60d6f0072e75bd">bf917ac</a>)</li>
@@ -1802,7 +1811,7 @@ CareBoo.WebSocket assembly</li>
 <li><span class="emoji" shortcode="recycle">♻️</span> rename AlgoApiKeyAttribute -&gt; AlgoApiFieldAttribute (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/1b370289ba2ffe8457f35c998aed6efcfe01931c">1b37028</a>)</li>
 <li><strong>algod:</strong> <span class="emoji" shortcode="recycle">♻️</span> rename <code>Block</code> -&gt; <code>BlockResponse</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/eca9fb6c2be3a99272067d308a089148a1680427">eca9fb6</a>)</li>
 </ul>
-<h3 id="features-64">Features</h3>
+<h3 id="features-65">Features</h3>
 <ul>
 <li><span class="emoji" shortcode="sparkles">✨</span> add readOnly support (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/6070565057130a23b52575126774a6d1fa58718a">6070565</a>)</li>
 <li><strong>indexer:</strong> <span class="emoji" shortcode="recycle">♻️</span> rename <code>ApplicationStateSchema</code> -&gt; <code>StateSchema</code> (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/7b02f70dbac6c3a67a0168107103a43be0a262ad">7b02f70</a>)</li>
@@ -1872,18 +1881,18 @@ CareBoo.WebSocket assembly</li>
 <li><strong>algod:</strong> <code>Block</code> renamed to <code>BlockResponse</code></li>
 </ul>
 <h1 id="100-exp22httpsgithubcomcareboounity-algorand-sdkcomparev100-exp21v100-exp22-2021-09-28"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.21...v1.0.0-exp.22">1.0.0-exp.22</a> (2021-09-28)</h1>
-<h3 id="bug-fixes-64">Bug Fixes</h3>
+<h3 id="bug-fixes-65">Bug Fixes</h3>
 <ul>
 <li><span class="emoji" shortcode="bug">🐛</span> fix crash on ArrayComparer.Equals (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/8ca1b06daedcbdf97650f4b79bd72a134238bec0">8ca1b06</a>)</li>
 <li><span class="emoji" shortcode="bug">🐛</span> fix issues with codegen and AOT compilation (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/d2f9bdc8f8c77b8afb690162c3fafda81b5f8c48">d2f9bdc</a>)</li>
 </ul>
 <h1 id="100-exp21httpsgithubcomcareboounity-algorand-sdkcomparev100-exp20v100-exp21-2021-09-28"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.20...v1.0.0-exp.21">1.0.0-exp.21</a> (2021-09-28)</h1>
-<h3 id="features-65">Features</h3>
+<h3 id="features-66">Features</h3>
 <ul>
 <li><span class="emoji" shortcode="sparkles">✨</span> update AlgoApiFormatterLookup (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/cc112e55d4489e30afd2854757e482cf9d37c8ee">cc112e5</a>)</li>
 </ul>
 <h1 id="100-exp20httpsgithubcomcareboounity-algorand-sdkcomparev100-exp19v100-exp20-2021-09-28"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.19...v1.0.0-exp.20">1.0.0-exp.20</a> (2021-09-28)</h1>
-<h3 id="features-66">Features</h3>
+<h3 id="features-67">Features</h3>
 <ul>
 <li><span class="emoji" shortcode="sparkles">✨</span> add FixedBytesFormatter (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/941eb3f83b4b82d58431bc49b7f402e1ecfbccea">941eb3f</a>)</li>
 </ul>
@@ -1892,17 +1901,17 @@ CareBoo.WebSocket assembly</li>
 <li>Replace Buffer with GetUnsafePtr</li>
 </ul>
 <h1 id="100-exp19httpsgithubcomcareboounity-algorand-sdkcomparev100-exp18v100-exp19-2021-09-25"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.18...v1.0.0-exp.19">1.0.0-exp.19</a> (2021-09-25)</h1>
-<h3 id="bug-fixes-65">Bug Fixes</h3>
+<h3 id="bug-fixes-66">Bug Fixes</h3>
 <ul>
 <li><span class="emoji" shortcode="bug">🐛</span> fix compile errs (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/7a03ed99a5cd7d3657df89c58a989ee0e33ced66">7a03ed9</a>)</li>
 </ul>
 <h1 id="100-exp18httpsgithubcomcareboounity-algorand-sdkcomparev100-exp17v100-exp18-2021-09-25"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.17...v1.0.0-exp.18">1.0.0-exp.18</a> (2021-09-25)</h1>
-<h3 id="features-67">Features</h3>
+<h3 id="features-68">Features</h3>
 <ul>
 <li><span class="emoji" shortcode="sparkles">✨</span> add LogicSig implementation (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/51a21e02f98bb221ca2e14cbb8d1243f7b15b5ef">51a21e0</a>)</li>
 </ul>
 <h1 id="100-exp17httpsgithubcomcareboounity-algorand-sdkcomparev100-exp16v100-exp17-2021-09-20"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.16...v1.0.0-exp.17">1.0.0-exp.17</a> (2021-09-20)</h1>
-<h3 id="features-68">Features</h3>
+<h3 id="features-69">Features</h3>
 <ul>
 <li><span class="emoji" shortcode="sparkles">✨</span> implement asset configuration transaction (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/4f9ec587932ed51da9bbbeaa1ddf3653a346c978">4f9ec58</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/27">#27</a></li>
 <li><span class="emoji" shortcode="sparkles">✨</span> implement AssetFreezeTransaction (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/e3233bf9c8258eab91e8141c561d837f26780172">e3233bf</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/26">#26</a></li>
@@ -1927,47 +1936,47 @@ CareBoo.WebSocket assembly</li>
 <li>Removes the <code>SendTransactionRaw</code> method from <code>AlgodClient</code></li>
 </ul>
 <h1 id="100-exp14httpsgithubcomcareboounity-algorand-sdkcomparev100-exp13v100-exp14-2021-08-30"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.13...v1.0.0-exp.14">1.0.0-exp.14</a> (2021-08-30)</h1>
-<h3 id="features-69">Features</h3>
+<h3 id="features-70">Features</h3>
 <ul>
 <li><strong>algod:</strong> implement Algod Client (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/a7c9e90e2f61a715488bfd8f0095c0206ae6e739">a7c9e90</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/10">#10</a> <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/16">#16</a> <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/18">#18</a></li>
 </ul>
 <h1 id="100-exp13httpsgithubcomcareboounity-algorand-sdkcomparev100-exp12v100-exp13-2021-08-07"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.12...v1.0.0-exp.13">1.0.0-exp.13</a> (2021-08-07)</h1>
-<h3 id="bug-fixes-66">Bug Fixes</h3>
+<h3 id="bug-fixes-67">Bug Fixes</h3>
 <ul>
 <li><span class="emoji" shortcode="white_check_mark">✅</span> Fix CI tests on Github Actions can&#39;t find libsodium (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/20c4ad56edf57cef595c2f4078bba4e15d893602">20c4ad5</a>), closes <a href="https://github.com/CareBoo/unity-algorand-sdk/issues/12">#12</a></li>
 </ul>
 <h1 id="100-exp12httpsgithubcomcareboounity-algorand-sdkcomparev100-exp11v100-exp12-2021-08-04"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.11...v1.0.0-exp.12">1.0.0-exp.12</a> (2021-08-04)</h1>
-<h3 id="features-70">Features</h3>
+<h3 id="features-71">Features</h3>
 <ul>
 <li>Add signed transaction support for payment transactions (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/c07d3705f70bcc33c245aa120c667a7dcc28d6e1">c07d370</a>)</li>
 </ul>
 <h1 id="100-exp11httpsgithubcomcareboounity-algorand-sdkcomparev100-exp10v100-exp11-2021-08-03"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.10...v1.0.0-exp.11">1.0.0-exp.11</a> (2021-08-03)</h1>
-<h3 id="features-71">Features</h3>
+<h3 id="features-72">Features</h3>
 <ul>
 <li><span class="emoji" shortcode="sparkles">✨</span> Add basic signed transaction support (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/bb5900fa66bc9501c3d9da26e1e984ddd1fb2cc0">bb5900f</a>)</li>
 </ul>
 <h1 id="100-exp10httpsgithubcomcareboounity-algorand-sdkcomparev100-exp9v100-exp10-2021-08-03"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.9...v1.0.0-exp.10">1.0.0-exp.10</a> (2021-08-03)</h1>
-<h3 id="features-72">Features</h3>
+<h3 id="features-73">Features</h3>
 <ul>
 <li><span class="emoji" shortcode="sparkles">✨</span> Add IEquatable, GetHashCode for RawTransaction (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/885928e3c69dbc3742d11369d5e316853d6a8e8c">885928e</a>)</li>
 </ul>
 <h1 id="100-exp9httpsgithubcomcareboounity-algorand-sdkcomparev100-exp8v100-exp9-2021-08-02"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.8...v1.0.0-exp.9">1.0.0-exp.9</a> (2021-08-02)</h1>
-<h3 id="features-73">Features</h3>
+<h3 id="features-74">Features</h3>
 <ul>
 <li><span class="emoji" shortcode="sparkles">✨</span> Add basic transaction support for message pack serialization and deserialization (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/63243ed492919522a752784756de2633d17a79fa">63243ed</a>)</li>
 </ul>
 <h1 id="100-exp8httpsgithubcomcareboounity-algorand-sdkcomparev100-exp7v100-exp8-2021-07-25"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.7...v1.0.0-exp.8">1.0.0-exp.8</a> (2021-07-25)</h1>
-<h3 id="features-74">Features</h3>
+<h3 id="features-75">Features</h3>
 <ul>
 <li><span class="emoji" shortcode="sparkles">✨</span> Added Transaction Header, Payment (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/d3ebcedd3f86bdfabbb9f90a97e655fcadac1145">d3ebced</a>)</li>
 </ul>
 <h1 id="100-exp7httpsgithubcomcareboounity-algorand-sdkcomparev100-exp6v100-exp7-2021-07-24"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.6...v1.0.0-exp.7">1.0.0-exp.7</a> (2021-07-24)</h1>
-<h3 id="features-75">Features</h3>
+<h3 id="features-76">Features</h3>
 <ul>
 <li><span class="emoji" shortcode="sparkles">✨</span> Add Account.Generate (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/95233bf877ee70d6e67f91baaf6f9e640b0a9141">95233bf</a>)</li>
 </ul>
 <h1 id="100-exp6httpsgithubcomcareboounity-algorand-sdkcomparev100-exp5v100-exp6-2021-07-24"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.5...v1.0.0-exp.6">1.0.0-exp.6</a> (2021-07-24)</h1>
-<h3 id="features-76">Features</h3>
+<h3 id="features-77">Features</h3>
 <ul>
 <li><span class="emoji" shortcode="construction_worker">👷</span> Add npmjs support (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/56f60f0804c3cac377c78a5c47eea17785b29f9e">56f60f0</a>)</li>
 <li><span class="emoji" shortcode="heavy_plus_sign">➕</span> Add libsodium ios, android, and windows (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/00c95113a152f01e737e56be6a31b3207aed57ff">00c9511</a>)</li>
@@ -1977,7 +1986,7 @@ CareBoo.WebSocket assembly</li>
 <li><span class="emoji" shortcode="sparkles">✨</span> Add start of Native Integration with Libsodium (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/55e325f4249603da679a66ece605f6ba8d5d762d">55e325f</a>)</li>
 </ul>
 <h1 id="100-exp6httpsgithubcomcareboounity-algorand-sdkcomparev100-exp5v100-exp6-2021-07-23"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.5...v1.0.0-exp.6">1.0.0-exp.6</a> (2021-07-23)</h1>
-<h3 id="features-77">Features</h3>
+<h3 id="features-78">Features</h3>
 <ul>
 <li><span class="emoji" shortcode="construction_worker">👷</span> Add npmjs support (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/56f60f0804c3cac377c78a5c47eea17785b29f9e">56f60f0</a>)</li>
 <li><span class="emoji" shortcode="heavy_plus_sign">➕</span> Add libsodium ios, android, and windows (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/00c95113a152f01e737e56be6a31b3207aed57ff">00c9511</a>)</li>
@@ -1986,7 +1995,7 @@ CareBoo.WebSocket assembly</li>
 <li><span class="emoji" shortcode="sparkles">✨</span> Add start of Native Integration with Libsodium (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/55e325f4249603da679a66ece605f6ba8d5d762d">55e325f</a>)</li>
 </ul>
 <h1 id="100-exp6httpsgithubcomcareboounity-algorand-sdkcomparev100-exp5v100-exp6-2021-07-21"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.5...v1.0.0-exp.6">1.0.0-exp.6</a> (2021-07-21)</h1>
-<h3 id="features-78">Features</h3>
+<h3 id="features-79">Features</h3>
 <ul>
 <li><span class="emoji" shortcode="construction_worker">👷</span> Add npmjs support (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/56f60f0804c3cac377c78a5c47eea17785b29f9e">56f60f0</a>)</li>
 <li><span class="emoji" shortcode="heavy_plus_sign">➕</span> Add libsodium ios, android, and windows (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/00c95113a152f01e737e56be6a31b3207aed57ff">00c9511</a>)</li>
@@ -1994,41 +2003,41 @@ CareBoo.WebSocket assembly</li>
 <li><span class="emoji" shortcode="sparkles">✨</span> Add start of Native Integration with Libsodium (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/55e325f4249603da679a66ece605f6ba8d5d762d">55e325f</a>)</li>
 </ul>
 <h1 id="100-exp6httpsgithubcomcareboounity-algorand-sdkcomparev100-exp5v100-exp6-2021-07-20"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.5...v1.0.0-exp.6">1.0.0-exp.6</a> (2021-07-20)</h1>
-<h3 id="features-79">Features</h3>
-<ul>
-<li><span class="emoji" shortcode="construction_worker">👷</span> Add npmjs support (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/56f60f0804c3cac377c78a5c47eea17785b29f9e">56f60f0</a>)</li>
-<li><span class="emoji" shortcode="heavy_plus_sign">➕</span> Add libsodium ios, android, and windows (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/00c95113a152f01e737e56be6a31b3207aed57ff">00c9511</a>)</li>
-<li><span class="emoji" shortcode="sparkles">✨</span> Add start of Native Integration with Libsodium (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/55e325f4249603da679a66ece605f6ba8d5d762d">55e325f</a>)</li>
-</ul>
-<h1 id="100-exp6httpsgithubcomcareboounity-algorand-sdkcomparev100-exp5v100-exp6-2021-07-20-1"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.5...v1.0.0-exp.6">1.0.0-exp.6</a> (2021-07-20)</h1>
 <h3 id="features-80">Features</h3>
 <ul>
 <li><span class="emoji" shortcode="construction_worker">👷</span> Add npmjs support (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/56f60f0804c3cac377c78a5c47eea17785b29f9e">56f60f0</a>)</li>
 <li><span class="emoji" shortcode="heavy_plus_sign">➕</span> Add libsodium ios, android, and windows (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/00c95113a152f01e737e56be6a31b3207aed57ff">00c9511</a>)</li>
 <li><span class="emoji" shortcode="sparkles">✨</span> Add start of Native Integration with Libsodium (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/55e325f4249603da679a66ece605f6ba8d5d762d">55e325f</a>)</li>
 </ul>
+<h1 id="100-exp6httpsgithubcomcareboounity-algorand-sdkcomparev100-exp5v100-exp6-2021-07-20-1"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.5...v1.0.0-exp.6">1.0.0-exp.6</a> (2021-07-20)</h1>
+<h3 id="features-81">Features</h3>
+<ul>
+<li><span class="emoji" shortcode="construction_worker">👷</span> Add npmjs support (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/56f60f0804c3cac377c78a5c47eea17785b29f9e">56f60f0</a>)</li>
+<li><span class="emoji" shortcode="heavy_plus_sign">➕</span> Add libsodium ios, android, and windows (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/00c95113a152f01e737e56be6a31b3207aed57ff">00c9511</a>)</li>
+<li><span class="emoji" shortcode="sparkles">✨</span> Add start of Native Integration with Libsodium (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/55e325f4249603da679a66ece605f6ba8d5d762d">55e325f</a>)</li>
+</ul>
 <h1 id="100-exp5httpsgithubcomcareboounity-algorand-sdkcomparev100-exp4v100-exp5-2021-07-12"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.4...v1.0.0-exp.5">1.0.0-exp.5</a> (2021-07-12)</h1>
-<h3 id="bug-fixes-67">Bug Fixes</h3>
+<h3 id="bug-fixes-68">Bug Fixes</h3>
 <ul>
 <li><span class="emoji" shortcode="bug">🐛</span> Fix repository (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/e765589b92849e23b7d080f335067cba1c1a8b62">e765589</a>)</li>
 </ul>
 <h1 id="100-exp4httpsgithubcomcareboounity-algorand-sdkcomparev100-exp3v100-exp4-2021-07-12"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.3...v1.0.0-exp.4">1.0.0-exp.4</a> (2021-07-12)</h1>
-<h3 id="bug-fixes-68">Bug Fixes</h3>
+<h3 id="bug-fixes-69">Bug Fixes</h3>
 <ul>
 <li><span class="emoji" shortcode="bug">🐛</span> Fix npm release (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/9e68078b5f7f75a7670e7cf03dc1ee5137709bf1">9e68078</a>)</li>
 </ul>
 <h1 id="100-exp3httpsgithubcomcareboounity-algorand-sdkcomparev100-exp2v100-exp3-2021-07-12"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.2...v1.0.0-exp.3">1.0.0-exp.3</a> (2021-07-12)</h1>
-<h3 id="bug-fixes-69">Bug Fixes</h3>
+<h3 id="bug-fixes-70">Bug Fixes</h3>
 <ul>
 <li><span class="emoji" shortcode="triangular_flag_on_post">🚩</span> Update package registry (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/a0800bc57c6fde758182075a90e2fbd96ce67be8">a0800bc</a>)</li>
 </ul>
 <h1 id="100-exp2httpsgithubcomcareboounity-algorand-sdkcomparev100-exp1v100-exp2-2021-07-12"><a href="https://github.com/CareBoo/unity-algorand-sdk/compare/v1.0.0-exp.1...v1.0.0-exp.2">1.0.0-exp.2</a> (2021-07-12)</h1>
-<h3 id="features-81">Features</h3>
+<h3 id="features-82">Features</h3>
 <ul>
 <li><span class="emoji" shortcode="sparkles">✨</span> Add Mnemonic.FromString and Mnemonic.ToString (<a href="https://github.com/CareBoo/unity-algorand-sdk/commit/d3a88c6026ff3162a46f1e3d13ca54d103d43aaf">d3a88c6</a>)</li>
 </ul>
 <h1 id="100-exp1-2021-05-18">1.0.0-exp.1 (2021-05-18)</h1>
-<h3 id="features-82">Features</h3>
+<h3 id="features-83">Features</h3>
 <ul>
 <li>Add Mnemonic and Key datastructs (<a href="https://github.com/CareBoo/Algorand.SDK.Unity/commit/4370f74c4e5f5ed9977dc4954313bf57e7023547">4370f74</a>)</li>
 </ul>
