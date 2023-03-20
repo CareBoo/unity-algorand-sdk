@@ -16,7 +16,7 @@ namespace Algorand.Unity
     [StructLayout(LayoutKind.Explicit, Size = 32)]
     public partial struct PrivateKey
         : IEquatable<PrivateKey>
-        , IByteArray
+            , IByteArray
     {
         [SerializeField, FieldOffset(0)] internal Ed25519.Seed seed;
 
@@ -49,16 +49,20 @@ namespace Algorand.Unity
             return result;
         }
 
-        public Ed25519.KeyPair ToKeyPair()
+        internal Ed25519.KeyPair ToKeyPair()
         {
             return seed.ToKeyPair();
         }
 
-        public Ed25519.PublicKey ToPublicKey()
+        internal Ed25519.PublicKey ToPublicKey()
         {
             return seed.ToPublicKey();
         }
 
+        /// <summary>
+        /// Return the public key for this private key.
+        /// </summary>
+        /// <returns>An algorand address.</returns>
         public Address ToAddress()
         {
             return ToPublicKey();
@@ -83,6 +87,11 @@ namespace Algorand.Unity
             return System.Convert.ToBase64String(bytes);
         }
 
+        /// <summary>
+        /// Convert the given base64 key string into a private key.
+        /// </summary>
+        /// <param name="keyString">A key string in base64 format.</param>
+        /// <returns>A private key from the parsed key string.</returns>
         public static PrivateKey FromString(string keyString)
         {
             var key = new PrivateKey();
@@ -90,6 +99,16 @@ namespace Algorand.Unity
             for (var i = 0; i < key.Length; i++)
                 key[i] = bytes[i];
             return key;
+        }
+
+        /// <summary>
+        /// Return the private key for a given mnemonic.
+        /// </summary>
+        /// <param name="mnemonic">A mnemonic with a valid checksum.</param>
+        /// <returns>The private key for the 25 word mnemonic.</returns>
+        public static PrivateKey FromMnemonic(Mnemonic mnemonic)
+        {
+            return mnemonic.ToPrivateKey();
         }
     }
 }
