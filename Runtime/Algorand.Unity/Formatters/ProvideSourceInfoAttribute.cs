@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using System.IO;
 using System.Runtime.CompilerServices;
 
 namespace Algorand.Unity
@@ -8,24 +9,42 @@ namespace Algorand.Unity
     [Conditional("UNITY_EDITOR")]
     public class ProvideSourceInfoAttribute : Attribute
     {
-        private readonly string absoluteFilePath;
+        private readonly string filePath;
         private string assetPath;
 
         public string Member { get; }
         public int LineNumber { get; }
+
         public string AssetPath
         {
             get
             {
                 if (assetPath == null)
-                    assetPath = absoluteFilePath.Replace('\\', '/').Substring(LengthOfPathToProject);
+                {
+                    assetPath = Path.GetFullPath(filePath)
+                        .Replace('\\', '/')
+                        .Substring(LengthOfPathToProject);
+                }
+
                 return assetPath;
             }
         }
-        public string AbsoluteFilePath => absoluteFilePath;
 
-        private static int LengthOfPathToProject =>
-            UnityEngine.Application.dataPath.Length - "Assets".Length;
+        public string FilePath => filePath;
+
+        private static int LengthOfPathToProject
+        {
+            get
+            {
+                var dataPath = UnityEngine.Application.dataPath;
+                if (dataPath.EndsWith("Assets"))
+                {
+                    return dataPath.Length - "Assets".Length;
+                }
+
+                return dataPath.Length;
+            }
+        }
 
         public ProvideSourceInfoAttribute(
             [CallerMemberName] string member = "",
@@ -33,7 +52,7 @@ namespace Algorand.Unity
             [CallerLineNumber] int lineNumber = 0)
         {
             Member = member;
-            absoluteFilePath = filePath;
+            this.filePath = filePath;
             LineNumber = lineNumber;
         }
     }

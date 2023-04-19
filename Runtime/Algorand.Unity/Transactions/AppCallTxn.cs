@@ -60,6 +60,11 @@ namespace Algorand.Unity
         /// Number of additional pages allocated to the application's approval and clear state programs. Each ExtraProgramPages is 2048 bytes. The sum of <see cref="ApprovalProgram"/> and <see cref="ClearStateProgram"/> may not exceed 2048*(1+ExtraProgramPages) bytes.
         /// </summary>
         ulong ExtraProgramPages { get; set; }
+        
+        /// <summary>
+        /// The boxes that should be made available for the runtime of the program.
+        /// </summary>
+        BoxRef[] Boxes { get; set; }
     }
 
     public partial struct Transaction : IAppCallTxn
@@ -152,6 +157,14 @@ namespace Algorand.Unity
             set => appCallParams.ExtraProgramPages = value;
         }
 
+        /// <inheritdoc />
+        [AlgoApiField("apbx")]
+        public BoxRef[] Boxes
+        {
+            get => appCallParams.Boxes;
+            set => appCallParams.Boxes = value;
+        }
+
         /// <summary>
         /// Create an <see cref="AppCallTxn"/> with params to create apps.
         /// </summary>
@@ -197,6 +210,7 @@ namespace Algorand.Unity
         /// <param name="accounts">List of accounts in addition to the sender that may be accessed from the application's approval-program and clear-state-program.</param>
         /// <param name="foreignApps">Lists the applications in addition to the application-id whose global states may be accessed by this application's approval-program and clear-state-program. The access is read-only.</param>
         /// <param name="foreignAssets">Lists the assets whose AssetParams may be accessed by this application's approval-program and clear-state-program. The access is read-only.</param>
+        /// <param name="boxRefs">The boxes that should be made available for the runtime of the program.</param>
         /// <returns>An <see cref="AppCallTxn"/> with params set to close out state with your account.</returns>
         public static AppCallTxn AppCloseOut(
             Address sender,
@@ -205,7 +219,8 @@ namespace Algorand.Unity
             CompiledTeal[] appArguments = default,
             Address[] accounts = default,
             ulong[] foreignApps = default,
-            ulong[] foreignAssets = default
+            ulong[] foreignAssets = default,
+            BoxRef[] boxRefs = default
         )
         {
             var txn = new AppCallTxn
@@ -217,6 +232,7 @@ namespace Algorand.Unity
                 Accounts = accounts,
                 ForeignApps = foreignApps,
                 ForeignAssets = foreignAssets,
+                Boxes = boxRefs
             };
             txn.Fee = txn.GetSuggestedFee(txnParams);
             return txn;
@@ -232,6 +248,7 @@ namespace Algorand.Unity
         /// <param name="accounts">List of accounts in addition to the sender that may be accessed from the application's approval-program and clear-state-program.</param>
         /// <param name="foreignApps">Lists the applications in addition to the application-id whose global states may be accessed by this application's approval-program and clear-state-program. The access is read-only.</param>
         /// <param name="foreignAssets">Lists the assets whose AssetParams may be accessed by this application's approval-program and clear-state-program. The access is read-only.</param>
+        /// <param name="boxRefs">The boxes that should be made available for the runtime of the program.</param>
         /// <returns>An <see cref="AppCallTxn"/> with params to clear app state with your account.</returns>
         public static AppCallTxn AppClearState(
             Address sender,
@@ -240,7 +257,8 @@ namespace Algorand.Unity
             CompiledTeal[] appArguments = default,
             Address[] accounts = default,
             ulong[] foreignApps = default,
-            ulong[] foreignAssets = default
+            ulong[] foreignAssets = default,
+            BoxRef[] boxRefs = default
         )
         {
             var txn = new AppCallTxn
@@ -252,6 +270,7 @@ namespace Algorand.Unity
                 Accounts = accounts,
                 ForeignApps = foreignApps,
                 ForeignAssets = foreignAssets,
+                Boxes = boxRefs
             };
             txn.Fee = txn.GetSuggestedFee(txnParams);
             return txn;
@@ -268,6 +287,7 @@ namespace Algorand.Unity
         /// <param name="accounts">List of accounts in addition to the sender that may be accessed from the application's approval-program and clear-state-program.</param>
         /// <param name="foreignApps">Lists the applications in addition to the application-id whose global states may be accessed by this application's approval-program and clear-state-program. The access is read-only.</param>
         /// <param name="foreignAssets">Lists the assets whose AssetParams may be accessed by this application's approval-program and clear-state-program. The access is read-only.</param>
+        /// <param name="boxRefs">The boxes that should be made available for the runtime of the program.</param>
         /// <returns>An <see cref="AppCallTxn"/> used to call an application.</returns>
         public static AppCallTxn AppCall(
             Address sender,
@@ -277,7 +297,8 @@ namespace Algorand.Unity
             CompiledTeal[] appArguments = default,
             Address[] accounts = default,
             ulong[] foreignApps = default,
-            ulong[] foreignAssets = default
+            ulong[] foreignAssets = default,
+            BoxRef[] boxRefs = default
         )
         {
             var txn = new AppCallTxn
@@ -289,6 +310,7 @@ namespace Algorand.Unity
                 Accounts = accounts,
                 ForeignApps = foreignApps,
                 ForeignAssets = foreignAssets,
+                Boxes = boxRefs
             };
             txn.Fee = txn.GetSuggestedFee(txnParams);
             return txn;
@@ -304,6 +326,7 @@ namespace Algorand.Unity
         /// <param name="accounts">List of accounts in addition to the sender that may be accessed from the application's approval-program and clear-state-program.</param>
         /// <param name="foreignApps">Lists the applications in addition to the application-id whose global states may be accessed by this application's approval-program and clear-state-program. The access is read-only.</param>
         /// <param name="foreignAssets">Lists the assets whose AssetParams may be accessed by this application's approval-program and clear-state-program. The access is read-only.</param>
+        /// <param name="boxRefs">The boxes that should be made available for the runtime of the program.</param>
         /// <returns>An <see cref="AppCallTxn"/> with params to opt in to an application.</returns>
         public static AppCallTxn AppOptIn(
             Address sender,
@@ -312,7 +335,8 @@ namespace Algorand.Unity
             CompiledTeal[] appArguments = default,
             Address[] accounts = default,
             ulong[] foreignApps = default,
-            ulong[] foreignAssets = default
+            ulong[] foreignAssets = default,
+            BoxRef[] boxRefs = default
         )
         {
             var txn = new AppCallTxn
@@ -324,6 +348,7 @@ namespace Algorand.Unity
                 Accounts = accounts,
                 ForeignApps = foreignApps,
                 ForeignAssets = foreignAssets,
+                Boxes = boxRefs
             };
             txn.Fee = txn.GetSuggestedFee(txnParams);
             return txn;
@@ -342,6 +367,7 @@ namespace Algorand.Unity
         /// <param name="accounts">List of accounts in addition to the sender that may be accessed from the application's approval-program and clear-state-program.</param>
         /// <param name="foreignApps">Lists the applications in addition to the application-id whose global states may be accessed by this application's approval-program and clear-state-program. The access is read-only.</param>
         /// <param name="foreignAssets">Lists the assets whose AssetParams may be accessed by this application's approval-program and clear-state-program. The access is read-only.</param>
+        /// <param name="boxRefs">The boxes that should be made available for the runtime of the program.</param>
         /// <returns>An <see cref="AppCallTxn"/> with params to update an application.</returns>
         public static AppCallTxn AppUpdateTxn(
             Address sender,
@@ -353,7 +379,8 @@ namespace Algorand.Unity
             CompiledTeal[] appArguments = default,
             Address[] accounts = default,
             ulong[] foreignApps = default,
-            ulong[] foreignAssets = default
+            ulong[] foreignAssets = default,
+            BoxRef[] boxRefs = default
         )
         {
             var txn = new AppCallTxn
@@ -367,7 +394,8 @@ namespace Algorand.Unity
                 AppArguments = appArguments,
                 Accounts = accounts,
                 ForeignApps = foreignApps,
-                ForeignAssets = foreignAssets
+                ForeignAssets = foreignAssets,
+                Boxes = boxRefs
             };
             txn.Fee = txn.GetSuggestedFee(txnParams);
             return txn;
@@ -383,6 +411,7 @@ namespace Algorand.Unity
         /// <param name="accounts">List of accounts in addition to the sender that may be accessed from the application's approval-program and clear-state-program.</param>
         /// <param name="foreignApps">Lists the applications in addition to the application-id whose global states may be accessed by this application's approval-program and clear-state-program. The access is read-only.</param>
         /// <param name="foreignAssets">Lists the assets whose AssetParams may be accessed by this application's approval-program and clear-state-program. The access is read-only.</param>
+        /// <param name="boxRefs">The boxes that should be made available for the runtime of the program.</param>
         /// <returns>An <see cref="AppCallTxn"/> with params to delete an application.</returns>
         public static AppCallTxn AppDelete(
             Address sender,
@@ -391,7 +420,8 @@ namespace Algorand.Unity
             CompiledTeal[] appArguments = default,
             Address[] accounts = default,
             ulong[] foreignApps = default,
-            ulong[] foreignAssets = default
+            ulong[] foreignAssets = default,
+            BoxRef[] boxRefs = default
         )
         {
             var txn = new AppCallTxn
@@ -402,7 +432,8 @@ namespace Algorand.Unity
                 AppArguments = appArguments,
                 Accounts = accounts,
                 ForeignApps = foreignApps,
-                ForeignAssets = foreignAssets
+                ForeignAssets = foreignAssets,
+                Boxes = boxRefs
             };
             txn.Fee = txn.GetSuggestedFee(txnParams);
             return txn;
@@ -599,6 +630,14 @@ namespace Algorand.Unity
         }
 
         /// <inheritdoc />
+        [AlgoApiField("apbx")]
+        public BoxRef[] Boxes
+        {
+            get => @params.Boxes;
+            set => @params.Boxes = value;
+        }
+
+        /// <inheritdoc />
         public void CopyTo(ref Transaction transaction)
         {
             transaction.Header = header;
@@ -668,10 +707,14 @@ namespace Algorand.Unity
             [Tooltip("Number of additional pages allocated to the application's approval and clear state programs. Each ExtraProgramPages is 2048 bytes.")]
             public ulong ExtraProgramPages;
 
+            [AlgoApiField("apbx")]
+            [Tooltip("The boxes that should be made available for the runtime of the program.")]
+            public BoxRef[] Boxes;
+
             public bool Equals(Params other)
             {
                 return ApplicationId.Equals(other.ApplicationId)
-                    && OnComplete.Equals(other.OnComplete)
+                    && OnComplete == other.OnComplete
                     && ArrayComparer.Equals(Accounts, other.Accounts)
                     && ApprovalProgram.Equals(other.ApprovalProgram)
                     && ArrayComparer.Equals(AppArguments, other.AppArguments)
@@ -681,6 +724,7 @@ namespace Algorand.Unity
                     && GlobalStateSchema.Equals(other.GlobalStateSchema)
                     && LocalStateSchema.Equals(other.LocalStateSchema)
                     && ExtraProgramPages.Equals(other.ExtraProgramPages)
+                    && ArrayComparer.Equals(Boxes, other.Boxes)
                     ;
             }
         }

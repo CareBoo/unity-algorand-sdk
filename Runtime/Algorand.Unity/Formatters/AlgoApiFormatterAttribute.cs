@@ -19,7 +19,7 @@ namespace Algorand.Unity
         ) : base(member, filePath, lineNumber)
         {
             if (!formatterType.GetInterfaces().Any(t => t.IsGenericType && t.GetGenericTypeDefinition() == typeof(IAlgoApiFormatter<>)))
-                UnityEngine.Debug.LogError($"`{nameof(formatterType)}` given for `{typeof(AlgoApiFormatterAttribute)}` at {AbsoluteFilePath} line {LineNumber} doesn't implement `{typeof(IAlgoApiFormatter<>)}`");
+                UnityEngine.Debug.LogError($"`{nameof(formatterType)}` given for `{typeof(AlgoApiFormatterAttribute)}` at {base.FilePath} line {LineNumber} doesn't implement `{typeof(IAlgoApiFormatter<>)}`");
 
             this.formatterType = formatterType;
         }
