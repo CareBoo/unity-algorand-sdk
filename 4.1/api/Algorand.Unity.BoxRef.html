@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class AlgoApiObjectAttribute
+    <title>Struct BoxRef
    | Algorand SDK for Unity </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class AlgoApiObjectAttribute
+    <meta name="title" content="Struct BoxRef
    | Algorand SDK for Unity ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -77,51 +77,109 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Algorand.Unity.AlgoApiObjectAttribute">
+            <article class="content wrap" id="_content" data-uid="Algorand.Unity.BoxRef">
   
   
-  <h1 id="Algorand_Unity_AlgoApiObjectAttribute" data-uid="Algorand.Unity.AlgoApiObjectAttribute" class="text-break">Class AlgoApiObjectAttribute
+  <h1 id="Algorand_Unity_BoxRef" data-uid="Algorand.Unity.BoxRef" class="text-break">Struct BoxRef
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><a class="xref" href="Algorand.Unity.ProvideSourceInfoAttribute.html">ProvideSourceInfoAttribute</a></div>
-    <div class="level2"><span class="xref">AlgoApiObjectAttribute</span></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="Algorand.Unity.ProvideSourceInfoAttribute.html#Algorand_Unity_ProvideSourceInfoAttribute_Member">ProvideSourceInfoAttribute.Member</a>
-    </div>
-    <div>
-      <a class="xref" href="Algorand.Unity.ProvideSourceInfoAttribute.html#Algorand_Unity_ProvideSourceInfoAttribute_LineNumber">ProvideSourceInfoAttribute.LineNumber</a>
-    </div>
-    <div>
-      <a class="xref" href="Algorand.Unity.ProvideSourceInfoAttribute.html#Algorand_Unity_ProvideSourceInfoAttribute_AssetPath">ProvideSourceInfoAttribute.AssetPath</a>
-    </div>
-    <div>
-      <a class="xref" href="Algorand.Unity.ProvideSourceInfoAttribute.html#Algorand_Unity_ProvideSourceInfoAttribute_FilePath">ProvideSourceInfoAttribute.FilePath</a>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Algorand.Unity.html">Algorand.Unity</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Algorand_Unity_AlgoApiObjectAttribute_syntax">Syntax</h5>
+  <h5 id="Algorand_Unity_BoxRef_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class AlgoApiObjectAttribute : ProvideSourceInfoAttribute</code></pre>
+    <pre><code class="lang-csharp hljs">public struct BoxRef : IEquatable&lt;BoxRef&gt;</code></pre>
   </div>
-  <h3 id="constructors">Constructors
+  <h3 id="properties">Properties
   </h3>
   
   
-  <a id="Algorand_Unity_AlgoApiObjectAttribute__ctor_" data-uid="Algorand.Unity.AlgoApiObjectAttribute.#ctor*"></a>
-  <h4 id="Algorand_Unity_AlgoApiObjectAttribute__ctor_System_String_System_String_System_Int32_" data-uid="Algorand.Unity.AlgoApiObjectAttribute.#ctor(System.String,System.String,System.Int32)">AlgoApiObjectAttribute(String, String, Int32)</h4>
+  <a id="Algorand_Unity_BoxRef_Index_" data-uid="Algorand.Unity.BoxRef.Index*"></a>
+  <h4 id="Algorand_Unity_BoxRef_Index" data-uid="Algorand.Unity.BoxRef.Index">Index</h4>
+  <div class="markdown level1 summary"><p>[i] Index of the foreign application that contains this box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong Index { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_BoxRef_Name_" data-uid="Algorand.Unity.BoxRef.Name*"></a>
+  <h4 id="Algorand_Unity_BoxRef_Name" data-uid="Algorand.Unity.BoxRef.Name">Name</h4>
+  <div class="markdown level1 summary"><p>[n] The name key of the box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_BoxRef_NameBytes_" data-uid="Algorand.Unity.BoxRef.NameBytes*"></a>
+  <h4 id="Algorand_Unity_BoxRef_NameBytes" data-uid="Algorand.Unity.BoxRef.NameBytes">NameBytes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AlgoApiObjectAttribute(string member = &quot;&quot;, string filePath = &quot;&quot;, int lineNumber = 0)</code></pre>
+    <pre><code class="lang-csharp hljs">public byte[] NameBytes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Algorand_Unity_BoxRef_Equals_" data-uid="Algorand.Unity.BoxRef.Equals*"></a>
+  <h4 id="Algorand_Unity_BoxRef_Equals_Algorand_Unity_BoxRef_" data-uid="Algorand.Unity.BoxRef.Equals(Algorand.Unity.BoxRef)">Equals(BoxRef)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(BoxRef other)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -134,35 +192,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">member</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">filePath</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">lineNumber</span></td>
+        <td><a class="xref" href="Algorand.Unity.BoxRef.html">BoxRef</a></td>
+        <td><span class="parametername">other</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="fields">Fields
-  </h3>
-  
-  
-  <h4 id="Algorand_Unity_AlgoApiObjectAttribute_IsStrict" data-uid="Algorand.Unity.AlgoApiObjectAttribute.IsStrict">IsStrict</h4>
-  <div class="markdown level1 summary"><p>Determines if unknown keys should throw an error.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsStrict</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>

@@ -86,20 +86,20 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Algorand.Unity.IAppCallTxn.html">IAppCallTxn</a></div>
-    <div><a class="xref" href="Algorand.Unity.IUntypedTransaction.html">IUntypedTransaction</a></div>
     <div><a class="xref" href="Algorand.Unity.IAssetConfigTxn.html">IAssetConfigTxn</a></div>
-    <div><a class="xref" href="Algorand.Unity.IAssetTransferTxn.html">IAssetTransferTxn</a></div>
+    <div><a class="xref" href="Algorand.Unity.IAppCallTxn.html">IAppCallTxn</a></div>
     <div><a class="xref" href="Algorand.Unity.IPaymentTxn.html">IPaymentTxn</a></div>
     <div><a class="xref" href="Algorand.Unity.IAssetFreezeTxn.html">IAssetFreezeTxn</a></div>
+    <div><a class="xref" href="Algorand.Unity.IAssetTransferTxn.html">IAssetTransferTxn</a></div>
     <div><a class="xref" href="Algorand.Unity.ITransaction.html">ITransaction</a></div>
+    <div><a class="xref" href="Algorand.Unity.IUntypedTransaction.html">IUntypedTransaction</a></div>
     <div><a class="xref" href="Algorand.Unity.ITransactionHeader.html">ITransactionHeader</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Algorand.Unity.html">Algorand.Unity</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Algorand_Unity_Transaction_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct Transaction : IAppCallTxn, IEquatable&lt;Transaction&gt;, IUntypedTransaction, IAssetConfigTxn, IAssetTransferTxn, IPaymentTxn, IAssetFreezeTxn, ITransaction, ITransactionHeader</code></pre>
+    <pre><code class="lang-csharp hljs">public struct Transaction : IAssetConfigTxn, IAppCallTxn, IPaymentTxn, IAssetFreezeTxn, IAssetTransferTxn, IEquatable&lt;Transaction&gt;, ITransaction, IUntypedTransaction, ITransactionHeader</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -516,6 +516,32 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Algorand.Unity.AssetTransferTxn.Params.html">AssetTransferTxn.Params</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Transaction_Boxes_" data-uid="Algorand.Unity.Transaction.Boxes*"></a>
+  <h4 id="Algorand_Unity_Transaction_Boxes" data-uid="Algorand.Unity.Transaction.Boxes">Boxes</h4>
+  <div class="markdown level1 summary"><p>The boxes that should be made available for the runtime of the program.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BoxRef[] Boxes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.BoxRef.html">BoxRef</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -1377,13 +1403,13 @@
   
   
   <a id="Algorand_Unity_Transaction_AppCall_" data-uid="Algorand.Unity.Transaction.AppCall*"></a>
-  <h4 id="Algorand_Unity_Transaction_AppCall_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_OnCompletion_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___" data-uid="Algorand.Unity.Transaction.AppCall(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.OnCompletion,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[])">AppCall(Address, TransactionParams, AppIndex, OnCompletion, CompiledTeal[], Address[], UInt64[], UInt64[])</h4>
+  <h4 id="Algorand_Unity_Transaction_AppCall_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_OnCompletion_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___Algorand_Unity_BoxRef___" data-uid="Algorand.Unity.Transaction.AppCall(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.OnCompletion,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[],Algorand.Unity.BoxRef[])">AppCall(Address, TransactionParams, AppIndex, OnCompletion, CompiledTeal[], Address[], UInt64[], UInt64[], BoxRef[])</h4>
   <div class="markdown level1 summary"><p>Create an <a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a> used to call an application.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static AppCallTxn AppCall(Address sender, TransactionParams txnParams, AppIndex applicationId, OnCompletion onComplete = OnCompletion.NoOp, CompiledTeal[] appArguments = null, Address[] accounts = null, ulong[] foreignApps = null, ulong[] foreignAssets = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static AppCallTxn AppCall(Address sender, TransactionParams txnParams, AppIndex applicationId, OnCompletion onComplete = OnCompletion.NoOp, CompiledTeal[] appArguments = null, Address[] accounts = null, ulong[] foreignApps = null, ulong[] foreignAssets = null, BoxRef[] boxRefs = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1443,6 +1469,12 @@
         <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
 </td>
       </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.BoxRef.html">BoxRef</a>[]</td>
+        <td><span class="parametername">boxRefs</span></td>
+        <td><p>The boxes that should be made available for the runtime of the program.</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -1464,13 +1496,13 @@
   
   
   <a id="Algorand_Unity_Transaction_AppClearState_" data-uid="Algorand.Unity.Transaction.AppClearState*"></a>
-  <h4 id="Algorand_Unity_Transaction_AppClearState_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___" data-uid="Algorand.Unity.Transaction.AppClearState(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[])">AppClearState(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[])</h4>
+  <h4 id="Algorand_Unity_Transaction_AppClearState_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___Algorand_Unity_BoxRef___" data-uid="Algorand.Unity.Transaction.AppClearState(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[],Algorand.Unity.BoxRef[])">AppClearState(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[], BoxRef[])</h4>
   <div class="markdown level1 summary"><p>Create an <a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a> with params to clear state with your account.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static AppCallTxn AppClearState(Address sender, TransactionParams txnParams, AppIndex applicationId, CompiledTeal[] appArguments = null, Address[] accounts = null, ulong[] foreignApps = null, ulong[] foreignAssets = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static AppCallTxn AppClearState(Address sender, TransactionParams txnParams, AppIndex applicationId, CompiledTeal[] appArguments = null, Address[] accounts = null, ulong[] foreignApps = null, ulong[] foreignAssets = null, BoxRef[] boxRefs = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1522,6 +1554,12 @@
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
         <td><span class="parametername">foreignAssets</span></td>
         <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.BoxRef.html">BoxRef</a>[]</td>
+        <td><span class="parametername">boxRefs</span></td>
+        <td><p>The boxes that should be made available for the runtime of the program.</p>
 </td>
       </tr>
     </tbody>
@@ -1545,13 +1583,13 @@
   
   
   <a id="Algorand_Unity_Transaction_AppCloseOut_" data-uid="Algorand.Unity.Transaction.AppCloseOut*"></a>
-  <h4 id="Algorand_Unity_Transaction_AppCloseOut_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___" data-uid="Algorand.Unity.Transaction.AppCloseOut(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[])">AppCloseOut(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[])</h4>
+  <h4 id="Algorand_Unity_Transaction_AppCloseOut_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___Algorand_Unity_BoxRef___" data-uid="Algorand.Unity.Transaction.AppCloseOut(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[],Algorand.Unity.BoxRef[])">AppCloseOut(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[], BoxRef[])</h4>
   <div class="markdown level1 summary"><p>Create an <a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a> with params to close out state with your account.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static AppCallTxn AppCloseOut(Address sender, TransactionParams txnParams, AppIndex applicationId, CompiledTeal[] appArguments = null, Address[] accounts = null, ulong[] foreignApps = null, ulong[] foreignAssets = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static AppCallTxn AppCloseOut(Address sender, TransactionParams txnParams, AppIndex applicationId, CompiledTeal[] appArguments = null, Address[] accounts = null, ulong[] foreignApps = null, ulong[] foreignAssets = null, BoxRef[] boxRefs = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1603,6 +1641,12 @@
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
         <td><span class="parametername">foreignAssets</span></td>
         <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.BoxRef.html">BoxRef</a>[]</td>
+        <td><span class="parametername">boxRefs</span></td>
+        <td><p>The boxes that should be made available for the runtime of the program.</p>
 </td>
       </tr>
     </tbody>
@@ -1707,13 +1751,13 @@
   
   
   <a id="Algorand_Unity_Transaction_AppDelete_" data-uid="Algorand.Unity.Transaction.AppDelete*"></a>
-  <h4 id="Algorand_Unity_Transaction_AppDelete_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___" data-uid="Algorand.Unity.Transaction.AppDelete(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[])">AppDelete(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[])</h4>
+  <h4 id="Algorand_Unity_Transaction_AppDelete_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___Algorand_Unity_BoxRef___" data-uid="Algorand.Unity.Transaction.AppDelete(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[],Algorand.Unity.BoxRef[])">AppDelete(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[], BoxRef[])</h4>
   <div class="markdown level1 summary"><p>Create an <a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a> used to delete an application.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static AppCallTxn AppDelete(Address sender, TransactionParams txnParams, AppIndex applicationId, CompiledTeal[] appArguments = null, Address[] accounts = null, ulong[] foreignApps = null, ulong[] foreignAssets = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static AppCallTxn AppDelete(Address sender, TransactionParams txnParams, AppIndex applicationId, CompiledTeal[] appArguments = null, Address[] accounts = null, ulong[] foreignApps = null, ulong[] foreignAssets = null, BoxRef[] boxRefs = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1765,6 +1809,12 @@
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
         <td><span class="parametername">foreignAssets</span></td>
         <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.BoxRef.html">BoxRef</a>[]</td>
+        <td><span class="parametername">boxRefs</span></td>
+        <td><p>The boxes that should be made available for the runtime of the program.</p>
 </td>
       </tr>
     </tbody>
@@ -1788,13 +1838,13 @@
   
   
   <a id="Algorand_Unity_Transaction_AppOptIn_" data-uid="Algorand.Unity.Transaction.AppOptIn*"></a>
-  <h4 id="Algorand_Unity_Transaction_AppOptIn_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___" data-uid="Algorand.Unity.Transaction.AppOptIn(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[])">AppOptIn(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[])</h4>
+  <h4 id="Algorand_Unity_Transaction_AppOptIn_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___Algorand_Unity_BoxRef___" data-uid="Algorand.Unity.Transaction.AppOptIn(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[],Algorand.Unity.BoxRef[])">AppOptIn(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[], BoxRef[])</h4>
   <div class="markdown level1 summary"><p>Create an <a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a> used to opt in to an application.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static AppCallTxn AppOptIn(Address sender, TransactionParams txnParams, AppIndex applicationId, CompiledTeal[] appArguments = null, Address[] accounts = null, ulong[] foreignApps = null, ulong[] foreignAssets = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static AppCallTxn AppOptIn(Address sender, TransactionParams txnParams, AppIndex applicationId, CompiledTeal[] appArguments = null, Address[] accounts = null, ulong[] foreignApps = null, ulong[] foreignAssets = null, BoxRef[] boxRefs = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1848,6 +1898,12 @@
         <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
 </td>
       </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.BoxRef.html">BoxRef</a>[]</td>
+        <td><span class="parametername">boxRefs</span></td>
+        <td><p>The boxes that should be made available for the runtime of the program.</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -1869,13 +1925,13 @@
   
   
   <a id="Algorand_Unity_Transaction_AppUpdateTxn_" data-uid="Algorand.Unity.Transaction.AppUpdateTxn*"></a>
-  <h4 id="Algorand_Unity_Transaction_AppUpdateTxn_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal_Algorand_Unity_CompiledTeal_System_UInt64_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___" data-uid="Algorand.Unity.Transaction.AppUpdateTxn(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal,Algorand.Unity.CompiledTeal,System.UInt64,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[])">AppUpdateTxn(Address, TransactionParams, AppIndex, CompiledTeal, CompiledTeal, UInt64, CompiledTeal[], Address[], UInt64[], UInt64[])</h4>
+  <h4 id="Algorand_Unity_Transaction_AppUpdateTxn_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal_Algorand_Unity_CompiledTeal_System_UInt64_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___Algorand_Unity_BoxRef___" data-uid="Algorand.Unity.Transaction.AppUpdateTxn(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal,Algorand.Unity.CompiledTeal,System.UInt64,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[],Algorand.Unity.BoxRef[])">AppUpdateTxn(Address, TransactionParams, AppIndex, CompiledTeal, CompiledTeal, UInt64, CompiledTeal[], Address[], UInt64[], UInt64[], BoxRef[])</h4>
   <div class="markdown level1 summary"><p>Create an <a class="xref" href="Algorand.Unity.AppCallTxn.html">AppCallTxn</a> used to update an application.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static AppCallTxn AppUpdateTxn(Address sender, TransactionParams txnParams, AppIndex applicationId, CompiledTeal approvalProgram = default(CompiledTeal), CompiledTeal clearStateProgram = default(CompiledTeal), ulong extraProgramPages = 0UL, CompiledTeal[] appArguments = null, Address[] accounts = null, ulong[] foreignApps = null, ulong[] foreignAssets = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static AppCallTxn AppUpdateTxn(Address sender, TransactionParams txnParams, AppIndex applicationId, CompiledTeal approvalProgram = default(CompiledTeal), CompiledTeal clearStateProgram = default(CompiledTeal), ulong extraProgramPages = 0UL, CompiledTeal[] appArguments = null, Address[] accounts = null, ulong[] foreignApps = null, ulong[] foreignAssets = null, BoxRef[] boxRefs = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1945,6 +2001,12 @@
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
         <td><span class="parametername">foreignAssets</span></td>
         <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.BoxRef.html">BoxRef</a>[]</td>
+        <td><span class="parametername">boxRefs</span></td>
+        <td><p>The boxes that should be made available for the runtime of the program.</p>
 </td>
       </tr>
     </tbody>
@@ -2789,16 +2851,10 @@ See <a class="xref" href="Algorand.Unity.AtomicTxn.Building.html#Algorand_Unity_
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Algorand.Unity.IAppCallTxn.html">IAppCallTxn</a>
-  </div>
-  <div>
-      <a class="xref" href="Algorand.Unity.IUntypedTransaction.html">IUntypedTransaction</a>
-  </div>
-  <div>
       <a class="xref" href="Algorand.Unity.IAssetConfigTxn.html">IAssetConfigTxn</a>
   </div>
   <div>
-      <a class="xref" href="Algorand.Unity.IAssetTransferTxn.html">IAssetTransferTxn</a>
+      <a class="xref" href="Algorand.Unity.IAppCallTxn.html">IAppCallTxn</a>
   </div>
   <div>
       <a class="xref" href="Algorand.Unity.IPaymentTxn.html">IPaymentTxn</a>
@@ -2807,7 +2863,13 @@ See <a class="xref" href="Algorand.Unity.AtomicTxn.Building.html#Algorand_Unity_
       <a class="xref" href="Algorand.Unity.IAssetFreezeTxn.html">IAssetFreezeTxn</a>
   </div>
   <div>
+      <a class="xref" href="Algorand.Unity.IAssetTransferTxn.html">IAssetTransferTxn</a>
+  </div>
+  <div>
       <a class="xref" href="Algorand.Unity.ITransaction.html">ITransaction</a>
+  </div>
+  <div>
+      <a class="xref" href="Algorand.Unity.IUntypedTransaction.html">IUntypedTransaction</a>
   </div>
   <div>
       <a class="xref" href="Algorand.Unity.ITransactionHeader.html">ITransactionHeader</a>

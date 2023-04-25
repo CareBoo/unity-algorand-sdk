@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "changelog/CHANGELOG.html",
-          "hash": "BMqRFlOXBEGInkJSHgftHQ=="
+          "hash": "WirLTqgvkVdRwrFEzLo1eg=="
         }
       },
       "is_incremental": false,
@@ -446,7 +446,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.AlgoApiFormatterAttribute.html",
-          "hash": "7VeN7w3qjdVjeGnCVdR8FA=="
+          "hash": "f4EbUqmz8QdmpnKDSn5tVA=="
         }
       },
       "is_incremental": false,
@@ -494,7 +494,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.AlgoApiObjectAttribute.html",
-          "hash": "qct5cu2wkoUBJ1Umnr2nsQ=="
+          "hash": "UPZ5PTF5ZQpuIu86oc//8g=="
         }
       },
       "is_incremental": false,
@@ -530,7 +530,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.AlgoApiRequest.Awaiter-1.html",
-          "hash": "d6HkjEdx2U06tgseU8IaRw=="
+          "hash": "CM48OF4HoEYaXLWeF8TnZA=="
         }
       },
       "is_incremental": false,
@@ -542,7 +542,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.AlgoApiRequest.Awaiter.html",
-          "hash": "nBabOMQ7ES8/85jf5TcUlA=="
+          "hash": "HvwwtTGr+SshFOJD+GUktA=="
         }
       },
       "is_incremental": false,
@@ -2114,7 +2114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.AppCallTxn.Params.html",
-          "hash": "NJsxnAGeyn0Yg/71LzEgEQ=="
+          "hash": "SSV0QxKLvfJf+j7jPigh3g=="
         }
       },
       "is_incremental": false,
@@ -2126,7 +2126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.AppCallTxn.html",
-          "hash": "3BFdlh9LoPSjGJUNfKKewA=="
+          "hash": "oqxbQ94WaneV1IfXDQCPsQ=="
         }
       },
       "is_incremental": false,
@@ -2499,6 +2499,18 @@
         ".html": {
           "relative_path": "api/Algorand.Unity.BlockUpgradeVote.html",
           "hash": "BcWG3z/0jPgQXm9RIEm8gw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.BoxRef.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.BoxRef.html",
+          "hash": "AAwmWjLpLh1czGO2tJr1CQ=="
         }
       },
       "is_incremental": false,
@@ -4418,7 +4430,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.IAppCallTxn.html",
-          "hash": "wWC/0FJsKzb3kaSXA9VZLw=="
+          "hash": "9o+NutPKfxTB7ZPCM/xv+A=="
         }
       },
       "is_incremental": false,
@@ -7190,7 +7202,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.MinBalance.html",
-          "hash": "k52fiJO3cqoGQ8YhWI2VQQ=="
+          "hash": "Acxp/tRq38DL4AWtnuQKQw=="
         }
       },
       "is_incremental": false,
@@ -7490,7 +7502,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.ProvideSourceInfoAttribute.html",
-          "hash": "QIBdS+CFN4upQ3yrEhgswA=="
+          "hash": "r7xAMAAK9E+3iUlSO72EQg=="
         }
       },
       "is_incremental": false,
@@ -7754,7 +7766,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Transaction.html",
-          "hash": "1WLuPyvrRpcJreeSMsH58w=="
+          "hash": "FzFPiajCwMLv6i5u+ZX41w=="
         }
       },
       "is_incremental": false,
@@ -8558,7 +8570,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.html",
-          "hash": "o+T3iu+UWuzwQ0E7DPRfjw=="
+          "hash": "4oJ0eMTXXkBglkI/PjjCcQ=="
         }
       },
       "is_incremental": false,
@@ -8570,7 +8582,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "eQQYUT+a3PUZ8Wh1UYPDJg=="
+          "hash": "4fZTAdT+J2qvNCDQVCE6iA=="
         }
       },
       "is_incremental": false,
@@ -8679,7 +8691,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 698,
+          "total_file_count": 699,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
