@@ -12,11 +12,25 @@ namespace Algorand.Unity
     [StructLayout(LayoutKind.Explicit, Size = 50)]
     internal struct FixedBytes50 : IByteArray
     {
-        [FieldOffset(0)] [SerializeField] internal FixedBytes16 offset0000;
-        [FieldOffset(16)] [SerializeField] internal FixedBytes16 offset0016;
-        [FieldOffset(32)] [SerializeField] internal FixedBytes16 offset0032;
-        [FieldOffset(48)] [SerializeField] internal byte byte0048;
-        [FieldOffset(49)] [SerializeField] internal byte byte0049;
+        [FieldOffset(0)]
+        [SerializeField]
+        internal FixedBytes16 offset0000;
+
+        [FieldOffset(16)]
+        [SerializeField]
+        internal FixedBytes16 offset0016;
+
+        [FieldOffset(32)]
+        [SerializeField]
+        internal FixedBytes16 offset0032;
+
+        [FieldOffset(48)]
+        [SerializeField]
+        internal byte byte0048;
+
+        [FieldOffset(49)]
+        [SerializeField]
+        internal byte byte0049;
 
         public int Length => 50;
 
@@ -71,7 +85,9 @@ namespace Algorand.Unity
         /// </summary>
         public const int BitsPerWord = 11;
 
-        [FieldOffset(0)] [SerializeField] internal FixedBytes50 buffer;
+        [FieldOffset(0)]
+        [SerializeField]
+        internal FixedBytes50 buffer;
 
         internal unsafe byte* Buffer
         {
