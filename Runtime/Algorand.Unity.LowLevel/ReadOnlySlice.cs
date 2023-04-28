@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace Algorand.Unity.LowLevel
 {
@@ -11,13 +10,12 @@ namespace Algorand.Unity.LowLevel
     {
         private readonly TList list;
         private readonly int start;
-        private readonly int count;
 
         public ReadOnlySlice(TList list, int start, int count)
         {
             this.list = list;
             this.start = start;
-            this.count = count;
+            Count = count;
         }
 
         public T this[int index]
@@ -31,7 +29,7 @@ namespace Algorand.Unity.LowLevel
             }
         }
 
-        public int Count => count;
+        public int Count { get; }
 
         public IEnumerator<T> GetEnumerator()
         {

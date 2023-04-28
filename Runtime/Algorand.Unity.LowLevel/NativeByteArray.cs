@@ -10,10 +10,14 @@ namespace Algorand.Unity.LowLevel
     /// </summary>
     public struct NativeByteArray
         : IByteArray
-        , IEquatable<NativeByteArray>
-        , INativeDisposable
+            , IEquatable<NativeByteArray>
+            , INativeDisposable
     {
-        public byte this[int index] { get => this.GetByteAt(index); set => this.SetByteAt(index, value); }
+        public byte this[int index]
+        {
+            get => this.GetByteAt(index);
+            set => this.SetByteAt(index, value);
+        }
 
         public int Length => data.Length;
 
@@ -52,6 +56,5 @@ namespace Algorand.Unity.LowLevel
         {
             data.Dispose();
         }
-
     }
 }
