@@ -10,62 +10,82 @@ namespace Algorand.Unity
 {
     [Serializable]
     [StructLayout(LayoutKind.Explicit, Size = 50)]
-    internal struct FixedBytes50
+    internal struct FixedBytes50 : IByteArray
     {
-        [FieldOffset(0), SerializeField] internal FixedBytes16 offset0000;
-        [FieldOffset(16), SerializeField] internal FixedBytes16 offset0016;
-        [FieldOffset(32), SerializeField] internal FixedBytes16 offset0032;
-        [FieldOffset(48), SerializeField] internal byte byte0048;
-        [FieldOffset(49), SerializeField] internal byte byte0049;
+        [FieldOffset(0)] [SerializeField] internal FixedBytes16 offset0000;
+        [FieldOffset(16)] [SerializeField] internal FixedBytes16 offset0016;
+        [FieldOffset(32)] [SerializeField] internal FixedBytes16 offset0032;
+        [FieldOffset(48)] [SerializeField] internal byte byte0048;
+        [FieldOffset(49)] [SerializeField] internal byte byte0049;
+
+        public int Length => 50;
+
+        public byte this[int index]
+        {
+            get => this.GetByteAt(index);
+            set => this.SetByteAt(index, value);
+        }
+
+        public unsafe void* GetUnsafePtr()
+        {
+            fixed (byte* b = &offset0000.byte0000)
+            {
+                return b;
+            }
+        }
     }
 
     /// <summary>
-    /// Byte struct representing a private key encoded with <see cref="Length"/> words.
+    ///     Byte struct representing a private key encoded with <see cref="Length" /> words.
     /// </summary>
     [Serializable]
     [StructLayout(LayoutKind.Explicit, Size = 50)]
     public partial struct Mnemonic
         : IEquatable<Mnemonic>
     {
-        [FieldOffset(0), SerializeField] internal FixedBytes50 buffer;
+        public enum ParseError
+        {
+            None,
+            Not25Words,
+            WordsNotInSet,
+            InvalidChecksum
+        }
 
         /// <summary>
-        /// Size of Mnemonic in bytes.
+        ///     Size of Mnemonic in bytes.
         /// </summary>
         public const int SizeBytes = 50;
 
         /// <summary>
-        /// Number of words contained in the mnemonic.
+        ///     Number of words contained in the mnemonic.
         /// </summary>
         public const int Length = 25;
 
         /// <summary>
-        /// Index of the word used for the checksum.
+        ///     Index of the word used for the checksum.
         /// </summary>
         public const int ChecksumIndex = Length - 1;
 
         /// <summary>
-        /// The number of bits encoded by each word.
+        ///     The number of bits encoded by each word.
         /// </summary>
         public const int BitsPerWord = 11;
 
-        unsafe internal byte* Buffer
+        [FieldOffset(0)] [SerializeField] internal FixedBytes50 buffer;
+
+        internal unsafe byte* Buffer
         {
             get
             {
                 fixed (byte* b = &buffer.offset0000.byte0000)
+                {
                     return b;
+                }
             }
         }
 
         /// <summary>
-        /// Get the byte pointer at the start of this struct.
-        /// </summary>
-        /// <returns>An unsafe byte pointer.</returns>
-        public unsafe byte* GetUnsafePtr() => Buffer;
-
-        /// <summary>
-        /// The word at a given index.
+        ///     The word at a given index.
         /// </summary>
         /// <param name="index">The index of the word.</param>
         /// <returns>A word in the set of possible mnemonic words.</returns>
@@ -84,9 +104,26 @@ namespace Algorand.Unity
                 ByteArray.CheckElementAccess(index, Length);
                 unsafe
                 {
-                    UnsafeUtility.WriteArrayElement<Word>(Buffer, index, value);
+                    UnsafeUtility.WriteArrayElement(Buffer, index, value);
                 }
             }
+        }
+
+        public bool Equals(Mnemonic other)
+        {
+            for (var i = 0; i < Length; i++)
+                if ((ushort)this[i] != (ushort)other[i])
+                    return false;
+            return true;
+        }
+
+        /// <summary>
+        ///     Get the byte pointer at the start of this struct.
+        /// </summary>
+        /// <returns>An unsafe byte pointer.</returns>
+        public unsafe byte* GetUnsafePtr()
+        {
+            return Buffer;
         }
 
         public override string ToString()
@@ -98,7 +135,7 @@ namespace Algorand.Unity
         }
 
         /// <summary>
-        /// Get the <see cref="PrivateKey"/> from this mnemonic encodes.
+        ///     Get the <see cref="PrivateKey" /> from this mnemonic encodes.
         /// </summary>
         public PrivateKey ToPrivateKey()
         {
@@ -108,7 +145,7 @@ namespace Algorand.Unity
             var j = 0;
             for (var i = 0; i < ChecksumIndex; i++)
             {
-                buffer |= ((ushort)this[i] << numBits);
+                buffer |= (ushort)this[i] << numBits;
                 numBits += BitsPerWord;
                 while (numBits >= 8 && j < 32)
                 {
@@ -118,37 +155,84 @@ namespace Algorand.Unity
                     numBits -= 8;
                 }
             }
-            if (numBits != 0 && j < 32)
-            {
-                result[j] = (byte)(buffer & 0xff);
-            }
+
+            if (numBits != 0 && j < 32) result[j] = (byte)(buffer & 0xff);
             return result;
         }
 
-        public bool Equals(Mnemonic other)
+        private Word ComputeChecksum()
         {
-            for (var i = 0; i < Length; i++)
-                if ((ushort)this[i] != (ushort)other[i])
-                    return false;
-            return true;
+            var pk = ToPrivateKey();
+            var newMnemonic = pk.ToMnemonic();
+            return newMnemonic[ChecksumIndex];
         }
 
+        /// <summary>
+        ///     Convert a mnemonic from a string.
+        /// </summary>
+        /// <param name="mnemonicString">The 25 word mnemonic in a string, with each word separated by spaces.</param>
+        /// <returns>A mnemonic parsed from the string.</returns>
+        /// <exception cref="ArgumentException">If the mnemonic string cannot be parsed, this error is thrown.</exception>
         public static Mnemonic FromString(string mnemonicString)
         {
             if (string.IsNullOrEmpty(mnemonicString))
                 return default;
-            var words = mnemonicString.Split(' ');
-            if (words.Length != 25)
-                throw new ArgumentException($"Mnemonic must be 25 words, but was {words.Length} words...");
 
-            var mnemonic = new Mnemonic();
-            for (var i = 0; i < words.Length; i++)
+            return TryParse(mnemonicString, out var mnemonic) switch
             {
-                var wordString = words[i];
-                var shortWordString = wordString.Substring(0, math.min(4, wordString.Length));
-                mnemonic[i] = (Word)Enum.Parse(typeof(ShortWord), shortWordString);
+                ParseError.InvalidChecksum => throw new ArgumentException("invalid checksum", nameof(mnemonicString)),
+                ParseError.Not25Words => throw new ArgumentException("mnemonic must be 25 words",
+                    nameof(mnemonicString)),
+                ParseError.WordsNotInSet => throw new ArgumentException("mnemonic contains words not in set",
+                    nameof(mnemonicString)),
+                ParseError.None => mnemonic,
+                _ => throw new ArgumentException("unknown parse error", nameof(mnemonicString))
+            };
+        }
+
+        /// <summary>
+        ///     Try to parse a mnemonic from a string.
+        /// </summary>
+        /// <param name="mnemonicString">The mnemonic string of 25 words separated by space.</param>
+        /// <param name="mnemonic">The mnemonic parsed from the mnemonic string.</param>
+        /// <returns>A ParseError if the mnemonic string could not be parsed.</returns>
+        public static ParseError TryParse(ReadOnlySpan<char> mnemonicString, out Mnemonic mnemonic)
+        {
+            mnemonic = default;
+            if (mnemonicString.Length == 0) return ParseError.None;
+
+            var start = 0;
+            int length;
+            var wordCount = 0;
+            ReadOnlySpan<char> shortWord;
+            Word parsedWord;
+            for (var i = 1; i < mnemonicString.Length; i++)
+            {
+                var c = mnemonicString[i];
+                if (c != ' ') continue;
+                length = i - start;
+                shortWord = mnemonicString.Slice(start, math.min(length, 4));
+                parsedWord = ParseWord(shortWord);
+                if (parsedWord == Word.Unknown) return ParseError.WordsNotInSet;
+                mnemonic[wordCount] = parsedWord;
+
+                wordCount++;
+                i++;
+                start = i;
+                if (wordCount == 24) break;
             }
-            return mnemonic;
+
+            if (wordCount < 24) return ParseError.Not25Words;
+
+            length = mnemonicString.Length - start;
+            shortWord = mnemonicString.Slice(start, math.min(length, 4));
+            parsedWord = ParseWord(shortWord);
+            if (parsedWord == Word.Unknown) return ParseError.WordsNotInSet;
+            var checksum = mnemonic.ComputeChecksum();
+            if (checksum != parsedWord) return ParseError.InvalidChecksum;
+            mnemonic[ChecksumIndex] = parsedWord;
+
+            return ParseError.None;
         }
 
         public static implicit operator string(Mnemonic mnemonic)
@@ -158,7 +242,7 @@ namespace Algorand.Unity
 
         public static implicit operator Mnemonic(string mnemonicString)
         {
-            return Mnemonic.FromString(mnemonicString);
+            return FromString(mnemonicString);
         }
 
         public static Mnemonic FromKey(PrivateKey key)
