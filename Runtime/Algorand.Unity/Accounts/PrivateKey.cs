@@ -25,7 +25,9 @@ namespace Algorand.Unity
             InvalidLength
         }
 
-        [SerializeField] [FieldOffset(0)] internal Ed25519.Seed seed;
+        [SerializeField]
+        [FieldOffset(0)]
+        internal Ed25519.Seed seed;
 
         public unsafe void* GetUnsafePtr()
         {
