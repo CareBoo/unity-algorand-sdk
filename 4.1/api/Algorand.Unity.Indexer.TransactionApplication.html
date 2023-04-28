@@ -88,7 +88,9 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Algorand_Unity_Indexer_TransactionApplication_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct TransactionApplication : IEquatable&lt;TransactionApplication&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiObject(&quot;&quot;, &quot;&quot;, 0)]
+[Serializable]
+public struct TransactionApplication : IEquatable&lt;TransactionApplication&gt;</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -101,7 +103,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Address[] Accounts { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;accounts&quot;)]
+public Address[] Accounts { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -127,7 +130,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string[] ApplicationArgs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;application-args&quot;)]
+public string[] ApplicationArgs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,7 +157,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong ApplicationId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;application-id&quot;)]
+public ulong ApplicationId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,7 +184,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CompiledTeal ApprovalProgram { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;approval-program&quot;)]
+public CompiledTeal ApprovalProgram { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,7 +211,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CompiledTeal ClearStateProgram { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;clear-state-program&quot;)]
+public CompiledTeal ClearStateProgram { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,7 +238,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Optional&lt;ulong&gt; ExtraProgramPages { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;extra-program-pages&quot;)]
+public Optional&lt;ulong&gt; ExtraProgramPages { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -257,7 +265,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong[] ForeignApps { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;foreign-apps&quot;)]
+public ulong[] ForeignApps { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -283,7 +292,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong[] ForeignAssets { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;foreign-assets&quot;)]
+public ulong[] ForeignAssets { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -308,7 +318,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StateSchema GlobalStateSchema { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;global-state-schema&quot;)]
+public StateSchema GlobalStateSchema { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -333,7 +344,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StateSchema LocalStateSchema { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;local-state-schema&quot;)]
+public StateSchema LocalStateSchema { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -358,7 +370,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OnCompletion OnCompletion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;on-completion&quot;)]
+public OnCompletion OnCompletion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

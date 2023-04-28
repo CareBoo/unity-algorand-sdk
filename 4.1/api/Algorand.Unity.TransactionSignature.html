@@ -89,7 +89,9 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Algorand_Unity_TransactionSignature_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct TransactionSignature : IEquatable&lt;TransactionSignature&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiObject(&quot;&quot;, &quot;&quot;, 0)]
+[Serializable]
+public struct TransactionSignature : IEquatable&lt;TransactionSignature&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -100,7 +102,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LogicSig LogicSig</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;logicsig&quot;)]
+public LogicSig LogicSig</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -124,7 +127,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MultisigSig Multisig</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;multisig&quot;)]
+public MultisigSig Multisig</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,7 +152,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Sig Sig</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;sig&quot;)]
+public Sig Sig</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">

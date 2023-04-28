@@ -88,7 +88,9 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Algorand_Unity_Indexer_StateProofFields_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct StateProofFields : IEquatable&lt;StateProofFields&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiObject(&quot;&quot;, &quot;&quot;, 0)]
+[Serializable]
+public struct StateProofFields : IEquatable&lt;StateProofFields&gt;</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -101,7 +103,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MerkleArrayProof PartProofs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;part-proofs&quot;)]
+public MerkleArrayProof PartProofs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -127,7 +130,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ulong[] PositionsToReveal { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;positions-to-reveal&quot;)]
+public ulong[] PositionsToReveal { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,7 +157,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StateProofReveal[] Reveals { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;reveals&quot;)]
+public StateProofReveal[] Reveals { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,7 +184,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Optional&lt;ulong&gt; SaltVersion { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;salt-version&quot;)]
+public Optional&lt;ulong&gt; SaltVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,7 +211,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] SigCommit { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;sig-commit&quot;)]
+public byte[] SigCommit { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,7 +238,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Optional&lt;ulong&gt; SignedWeight { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;signed-weight&quot;)]
+public Optional&lt;ulong&gt; SignedWeight { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -257,7 +265,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MerkleArrayProof SigProofs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;sig-proofs&quot;)]
+public MerkleArrayProof SigProofs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

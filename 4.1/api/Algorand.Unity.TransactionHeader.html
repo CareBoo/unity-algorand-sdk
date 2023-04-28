@@ -93,7 +93,8 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Algorand_Unity_TransactionHeader_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct TransactionHeader : IEquatable&lt;TransactionHeader&gt;, ITransactionHeader</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public struct TransactionHeader : IEquatable&lt;TransactionHeader&gt;, ITransactionHeader</code></pre>
   </div>
   <h5 id="Algorand_Unity_TransactionHeader_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>For the most part, this is used internally in the sdk and shouldn&apos;t be used directly.</p>
@@ -247,7 +248,7 @@
   
   <a id="Algorand_Unity_TransactionHeader_Group_" data-uid="Algorand.Unity.TransactionHeader.Group*"></a>
   <h4 id="Algorand_Unity_TransactionHeader_Group" data-uid="Algorand.Unity.TransactionHeader.Group">Group</h4>
-  <div class="markdown level1 summary"><p>The group specifies that the transaction is part of a group and, if so, specifies the hash of the transaction group. See <a class="xref" href="Algorand.Unity.TransactionGroup.html">TransactionGroup</a>.</p>
+  <div class="markdown level1 summary"><p>The group specifies that the transaction is part of a group and, if so, specifies the hash of the transaction group. See <span class="xref">Algorand.Unity.TransactionGroup</span>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

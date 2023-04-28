@@ -89,7 +89,9 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Algorand_Unity_Address_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct Address : IByteArray, IEquatable&lt;Address&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+[AlgoApiFormatter(typeof(AddressFormatter))]
+public struct Address : IByteArray, IEquatable&lt;Address&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -414,6 +416,22 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>Thrown if the address has an invalid checksum or is not 58 chars long.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Algorand_Unity_Address_FromString_" data-uid="Algorand.Unity.Address.FromString*"></a>
@@ -470,6 +488,22 @@
       <tr>
         <td><span class="parametername">TString</span></td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>Thrown if the address has an invalid checksum or is not 58 chars long.</p>
+</td>
       </tr>
     </tbody>
   </table>

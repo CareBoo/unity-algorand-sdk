@@ -88,7 +88,9 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Algorand_Unity_Indexer_IndexerStateProofMessage_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct IndexerStateProofMessage : IEquatable&lt;IndexerStateProofMessage&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiObject(&quot;&quot;, &quot;&quot;, 0)]
+[Serializable]
+public struct IndexerStateProofMessage : IEquatable&lt;IndexerStateProofMessage&gt;</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -101,7 +103,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] BlockHeadersCommitment { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;block-headers-commitment&quot;)]
+public byte[] BlockHeadersCommitment { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -127,7 +130,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Optional&lt;ulong&gt; FirstAttestedRound { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;first-attested-round&quot;)]
+public Optional&lt;ulong&gt; FirstAttestedRound { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,7 +157,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Optional&lt;ulong&gt; LatestAttestedRound { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;latest-attested-round&quot;)]
+public Optional&lt;ulong&gt; LatestAttestedRound { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,7 +184,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Optional&lt;ulong&gt; LnProvenWeight { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;ln-proven-weight&quot;)]
+public Optional&lt;ulong&gt; LnProvenWeight { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,7 +211,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] VotersCommitment { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;voters-commitment&quot;)]
+public byte[] VotersCommitment { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

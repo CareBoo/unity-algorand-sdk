@@ -89,7 +89,9 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Algorand_Unity_GenesisHash_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct GenesisHash : IByteArray, IEquatable&lt;GenesisHash&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+[AlgoApiFormatter(typeof(GenesisHashFormatter))]
+public struct GenesisHash : IByteArray, IEquatable&lt;GenesisHash&gt;</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>

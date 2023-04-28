@@ -89,7 +89,8 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Algorand_Unity_Mnemonic_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct Mnemonic : IEquatable&lt;Mnemonic&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public struct Mnemonic : IEquatable&lt;Mnemonic&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -330,7 +331,8 @@
   
   <a id="Algorand_Unity_Mnemonic_FromString_" data-uid="Algorand.Unity.Mnemonic.FromString*"></a>
   <h4 id="Algorand_Unity_Mnemonic_FromString_System_String_" data-uid="Algorand.Unity.Mnemonic.FromString(System.String)">FromString(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Convert a mnemonic from a string.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -349,7 +351,8 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">mnemonicString</span></td>
-        <td></td>
+        <td><p>The 25 word mnemonic in a string, with each word separated by spaces.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -364,7 +367,24 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Algorand.Unity.Mnemonic.html">Mnemonic</a></td>
-        <td></td>
+        <td><p>A mnemonic parsed from the string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>If the mnemonic string cannot be parsed, this error is thrown.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -448,6 +468,57 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring#system-valuetype-tostring">ValueType.ToString()</a></div>
+  
+  
+  <a id="Algorand_Unity_Mnemonic_TryParse_" data-uid="Algorand.Unity.Mnemonic.TryParse*"></a>
+  <h4 id="Algorand_Unity_Mnemonic_TryParse_System_ReadOnlySpan_System_Char__Algorand_Unity_Mnemonic__" data-uid="Algorand.Unity.Mnemonic.TryParse(System.ReadOnlySpan{System.Char},Algorand.Unity.Mnemonic@)">TryParse(ReadOnlySpan&lt;Char&gt;, out Mnemonic)</h4>
+  <div class="markdown level1 summary"><p>Try to parse a mnemonic from a string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Mnemonic.ParseError TryParse(ReadOnlySpan&lt;char&gt; mnemonicString, out Mnemonic mnemonic)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">mnemonicString</span></td>
+        <td><p>The mnemonic string of 25 words separated by space.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Mnemonic.html">Mnemonic</a></td>
+        <td><span class="parametername">mnemonic</span></td>
+        <td><p>The mnemonic parsed from the mnemonic string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Mnemonic.ParseError.html">Mnemonic.ParseError</a></td>
+        <td><p>A ParseError if the mnemonic string could not be parsed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="operators">Operators
   </h3>
   

@@ -89,7 +89,9 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Algorand_Unity_Experimental_Abi_Interface_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct Interface : IEquatable&lt;Interface&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiObject(&quot;&quot;, &quot;&quot;, 0)]
+[Serializable]
+public struct Interface : IEquatable&lt;Interface&gt;</code></pre>
   </div>
   <h5 id="Algorand_Unity_Experimental_Abi_Interface_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>See <a href="https://github.com/algorandfoundation/ARCs/blob/2723ca7f4568c0d19c412198651404cb0a0e9dbd/ARCs/arc-0004.md#interfaces">ARC-0004</a>
@@ -106,7 +108,8 @@ for details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Description { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;desc&quot;)]
+public string Description { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -132,7 +135,8 @@ for details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Method[] Methods { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;methods&quot;)]
+public Method[] Methods { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -158,7 +162,8 @@ for details.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;name&quot;)]
+public string Name { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

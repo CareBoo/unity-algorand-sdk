@@ -93,7 +93,8 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Algorand_Unity_WalletConnect_SignTxnsError_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct SignTxnsError : IJsonRpcError, IEquatable&lt;SignTxnsError&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiObject(&quot;&quot;, &quot;&quot;, 0)]
+public struct SignTxnsError : IJsonRpcError, IEquatable&lt;SignTxnsError&gt;</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -106,7 +107,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Code { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;code&quot;)]
+public int Code { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -132,7 +134,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AlgoApiObject Data { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;data&quot;)]
+public AlgoApiObject Data { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -184,7 +187,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Message { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;message&quot;)]
+public string Message { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

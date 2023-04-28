@@ -93,7 +93,8 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Algorand_Unity_ApplyData_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct ApplyData&lt;TTxn&gt; : IEquatable&lt;ApplyData&lt;TTxn&gt;&gt;, IApplyData&lt;TTxn&gt;, IAppEvalDelta&lt;TTxn&gt; where TTxn : IAppliedSignedTxn&lt;TTxn&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public struct ApplyData&lt;TTxn&gt; : IEquatable&lt;ApplyData&lt;TTxn&gt;&gt;, IApplyData&lt;TTxn&gt;, IAppEvalDelta&lt;TTxn&gt; where TTxn : IAppliedSignedTxn&lt;TTxn&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
