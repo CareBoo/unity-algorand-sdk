@@ -6,9 +6,9 @@ namespace Algorand.Unity.Samples.YourFirstTransaction
 {
     public class YourFirstTransaction : MonoBehaviour
     {
-        public AlgodClient algod = new AlgodClient("https://node.testnet.algoexplorerapi.io");
+        public AlgodClient algod = new("https://node.testnet.algoexplorerapi.io");
 
-        public IndexerClient indexer = new IndexerClient("https://algoindexer.testnet.algoexplorerapi.io");
+        public IndexerClient indexer = new("https://algoindexer.testnet.algoexplorerapi.io");
 
         public string testnetFaucetUrl = "https://dispenser.testnet.aws.algodev.network/?account={0}";
 
@@ -19,11 +19,10 @@ namespace Algorand.Unity.Samples.YourFirstTransaction
 
         [field: SerializeField]
         public string PayAmountText { get; set; }
-        
-        [Space]
 
+        [Space]
         public UnityEvent<string> onCheckAlgodStatus;
-        
+
         public UnityEvent<string> onCheckIndexerStatus;
 
         public UnityEvent<string> onAccountGenerated;
@@ -37,9 +36,9 @@ namespace Algorand.Unity.Samples.YourFirstTransaction
         public UnityEvent onTransactionConfirmedSuccessfully;
 
         private string txnStatus;
-        
+
         public string AlgodHealth { get; set; }
-        
+
         public string IndexerHealth { get; set; }
 
         public MicroAlgos Balance { get; set; }
@@ -55,12 +54,18 @@ namespace Algorand.Unity.Samples.YourFirstTransaction
                 onTxnStatusUpdate?.Invoke(value);
             }
         }
-        
-        public string ConfirmedTxnId { get; set; }
-        
-        public void CheckAlgodStatus() => CheckAlgodStatusAsync().Forget();
 
-        public void CheckIndexerStatus() => CheckIndexerStatusAsync().Forget();
+        public string ConfirmedTxnId { get; set; }
+
+        public void CheckAlgodStatus()
+        {
+            CheckAlgodStatusAsync().Forget();
+        }
+
+        public void CheckIndexerStatus()
+        {
+            CheckIndexerStatusAsync().Forget();
+        }
 
         private async UniTaskVoid CheckAlgodStatusAsync()
         {
@@ -88,7 +93,10 @@ namespace Algorand.Unity.Samples.YourFirstTransaction
             Application.OpenURL(string.Format(testnetFaucetUrl, Account.Address.ToString()));
         }
 
-        public void CheckBalance() => CheckBalanceAsync().Forget();
+        public void CheckBalance()
+        {
+            CheckBalanceAsync().Forget();
+        }
 
         private async UniTaskVoid CheckBalanceAsync()
         {
@@ -96,23 +104,21 @@ namespace Algorand.Unity.Samples.YourFirstTransaction
             if (err)
             {
                 Balance = 0;
-                if (!err.Message.Contains("no accounts found for address"))
-                {
-                    Debug.LogError(err);
-                }
+                if (!err.Message.Contains("no accounts found for address")) Debug.LogError(err);
             }
             else
             {
                 Balance = resp.Account.Amount;
             }
+
             onBalanceTextUpdated?.Invoke(Balance.ToAlgos().ToString("F6"));
-            if (Balance >= 1_000)
-            {
-                onEnoughBalanceForPayment?.Invoke();
-            }
+            if (Balance >= 1_000) onEnoughBalanceForPayment?.Invoke();
         }
 
-        public void MakePayment() => MakePaymentAsync().Forget();
+        public void MakePayment()
+        {
+            MakePaymentAsync().Forget();
+        }
 
         public async UniTaskVoid MakePaymentAsync()
         {
@@ -128,7 +134,7 @@ namespace Algorand.Unity.Samples.YourFirstTransaction
                 TxnStatus = $"Invalid format: Pay amount must be a double, instead it was \"{PayAmountText}\"";
                 return;
             }
-            
+
             // Get the suggested transaction params
             var (txnParamsError, txnParams) = await algod.TransactionParams();
             if (txnParamsError)
@@ -140,10 +146,10 @@ namespace Algorand.Unity.Samples.YourFirstTransaction
 
             // Construct and sign the payment transaction
             var paymentTxn = Transaction.Payment(
-                sender: Account.Address,
-                txnParams: txnParams,
-                receiver: recipientAddress,
-                amount: MicroAlgos.FromAlgos(payAmountAlgos)
+                Account.Address,
+                txnParams,
+                recipientAddress,
+                MicroAlgos.FromAlgos(payAmountAlgos)
             );
             var signedTxn = Account.SignTxn(paymentTxn);
 
