@@ -1,7 +1,9 @@
-using System.Collections.Generic;
+using Algorand.Unity.Indexer;
+using Algorand.Unity.NftViewer;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.Pool;
 using UnityEngine.Serialization;
 
 namespace Algorand.Unity.Samples.NftViewer
@@ -19,17 +21,15 @@ namespace Algorand.Unity.Samples.NftViewer
 
         private AlgodClient algod;
 
-        private IndexerClient indexer;
-
         private string algodHealth;
+
+        private IndexerClient indexer;
 
         private string indexerHealth;
 
         private string textureStatus;
 
         public string PublicKey { get; set; } = "HAE4ZMZI2TKTFNES33PNWC5RIK7MUOISQDRQ7LMWLKNNGMA7V5NZOGHJVY";
-
-        public List<Texture> NftTextures = new List<Texture>();
 
         private void Start()
         {
@@ -63,54 +63,80 @@ namespace Algorand.Unity.Samples.NftViewer
         public async UniTaskVoid GetNFTs()
         {
             //clear the box
-            foreach (Transform t in contentTransform)
-            {
-                Destroy(t.gameObject);
-            }
+            foreach (Transform t in contentTransform) Destroy(t.gameObject);
 
             var (err, resp) = await indexer.SearchForAssets(creator: PublicKey);
-            Debug.Log("getting NFTs");
-            foreach (Indexer.Asset asset in resp.Assets)
+            if (err)
             {
-                if (!asset.Params.Url.Contains("ipfs"))
-                    continue;
-                else
-                    Debug.Log("This is an NFT");
+                Debug.LogError(err);
+                return;
+            }
 
-                string url = asset.Params.Url;
-
-                if (url == "")
-                    continue;
-
-                url = FormatNftURL(url);
-
-                UnityWebRequest www = UnityWebRequestTexture.GetTexture(url);
-
-                Debug.Log("sending a web request");
-                await www.SendWebRequest();
-                Debug.Log("request sent");
-                if (www.result == UnityWebRequest.Result.ConnectionError)
+            Debug.Log("getting ARC-0069 tokens");
+            using var disposeWebRequests = ListPool<(UnityWebRequestAsyncOperation, Asset)>.Get(out var webRequests);
+            foreach (var asset in resp.Assets)
+            {
+                var url = asset.Params.Url;
+                if (string.IsNullOrEmpty(url) || !IsIpfsUrl(asset.Params.Url))
                 {
-                    Debug.Log(www.error);
+                    Debug.LogWarning(
+                        $"asset id: {asset.Index} does not have an IPFS url which is required to view the asset in this sample.");
+                    continue;
                 }
-                else
-                {
-                    Texture nftTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
-                    Debug.Log("The Texture is loaded");
-                    NftTextures.Add(nftTexture);
 
-                    GameObject displayBox = Instantiate(nftDisplayBoxPrefab, contentTransform);
+                if (asset.IsArc0003())
+                {
+                    Debug.LogWarning(
+                        $"asset id: {asset.Index} is an arc3 asset which is not supported in this sample.");
+                    continue;
+                }
+
+                url = FormatIpfsUrl(url);
+                var sent = UnityWebRequestTexture.GetTexture(url, true).SendWebRequest();
+                webRequests.Add((sent, asset));
+            }
+
+            foreach (var (sent, asset) in webRequests)
+            {
+                var webRequest = sent.webRequest;
+                try
+                {
+                    await sent;
+                }
+                catch (UnityWebRequestException e)
+                {
+                    if (webRequest.downloadHandler.error == "Failed to create texture from downloaded bytes")
+                        Debug.LogError(
+                            $"Asset {asset.Index} does not have a valid image located at its url, {webRequest.url}. Please make sure it is either a png or jpeg file.");
+                    else
+                        Debug.LogError(webRequest.downloadHandler.error);
+                    continue;
+                }
+
+                if (webRequest.result == UnityWebRequest.Result.Success &&
+                    webRequest.downloadHandler is DownloadHandlerTexture textureDownload)
+                {
+                    Texture nftTexture = textureDownload.texture;
+
+                    var displayBox = Instantiate(nftDisplayBoxPrefab, contentTransform);
                     displayBox.GetComponent<NftDisplayBox>().SetFields(
                         nftTexture,
                         $"Name: {asset.Params.Name}",
                         $"ID: {asset.Index}");
                 }
-
-                Debug.Log("Done loading");
+                else
+                {
+                    Debug.LogError(webRequest.error);
+                }
             }
         }
 
-        private string FormatNftURL(string url)
+        private static bool IsIpfsUrl(string url)
+        {
+            return url.StartsWith("ipfs://") || url.StartsWith("https://ifps.io/ipfs/");
+        }
+
+        private static string FormatIpfsUrl(string url)
         {
             return url.Replace("ipfs://", "https://ipfs.io/ipfs/");
         }
