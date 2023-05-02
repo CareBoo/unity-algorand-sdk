@@ -7,62 +7,70 @@ namespace Algorand.Unity
     public interface IAppCallTxn : ITransaction
     {
         /// <summary>
-        /// ID of the application being configured or empty if creating.
+        ///     ID of the application being configured or empty if creating.
         /// </summary>
         AppIndex ApplicationId { get; set; }
 
         /// <summary>
-        /// Defines what additional actions occur with the transaction.
+        ///     Defines what additional actions occur with the transaction.
         /// </summary>
         OnCompletion OnComplete { get; set; }
 
         /// <summary>
-        /// Logic executed for every application transaction, except when on-completion is set to "clear". It can read and write global state for the application, as well as account-specific local state. Approval programs may reject the transaction.
+        ///     Logic executed for every application transaction, except when on-completion is set to "clear". It can read and
+        ///     write global state for the application, as well as account-specific local state. Approval programs may reject the
+        ///     transaction.
         /// </summary>
         CompiledTeal ApprovalProgram { get; set; }
 
         /// <summary>
-        /// Logic executed for application transactions with on-completion set to "clear". It can read and write global state for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.
+        ///     Logic executed for application transactions with on-completion set to "clear". It can read and write global state
+        ///     for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.
         /// </summary>
         CompiledTeal ClearStateProgram { get; set; }
 
         /// <summary>
-        /// Transaction specific arguments accessed from the application's approval-program and clear-state-program.
+        ///     Transaction specific arguments accessed from the application's approval-program and clear-state-program.
         /// </summary>
         CompiledTeal[] AppArguments { get; set; }
 
         /// <summary>
-        /// List of accounts in addition to the sender that may be accessed from the application's approval-program and clear-state-program.
+        ///     List of accounts in addition to the sender that may be accessed from the application's approval-program and
+        ///     clear-state-program.
         /// </summary>
         Address[] Accounts { get; set; }
 
         /// <summary>
-        /// Lists the applications in addition to the application-id whose global states may be accessed by this application's approval-program and clear-state-program. The access is read-only.
+        ///     Lists the applications in addition to the application-id whose global states may be accessed by this application's
+        ///     approval-program and clear-state-program. The access is read-only.
         /// </summary>
         ulong[] ForeignApps { get; set; }
 
         /// <summary>
-        /// Lists the assets whose AssetParams may be accessed by this application's approval-program and clear-state-program. The access is read-only.
+        ///     Lists the assets whose AssetParams may be accessed by this application's approval-program and clear-state-program.
+        ///     The access is read-only.
         /// </summary>
         ulong[] ForeignAssets { get; set; }
 
         /// <summary>
-        /// Holds the maximum number of global state values defined within a <see cref="StateSchema"/> object.
+        ///     Holds the maximum number of global state values defined within a <see cref="StateSchema" /> object.
         /// </summary>
         StateSchema GlobalStateSchema { get; set; }
 
         /// <summary>
-        /// Holds the maximum number of local state values defined within a <see cref="StateSchema"/> object.
+        ///     Holds the maximum number of local state values defined within a <see cref="StateSchema" /> object.
         /// </summary>
         StateSchema LocalStateSchema { get; set; }
 
         /// <summary>
-        /// Number of additional pages allocated to the application's approval and clear state programs. Each ExtraProgramPages is 2048 bytes. The sum of <see cref="ApprovalProgram"/> and <see cref="ClearStateProgram"/> may not exceed 2048*(1+ExtraProgramPages) bytes.
+        ///     Number of additional pages allocated to the application's approval and clear state programs. Each ExtraProgramPages
+        ///     is 2048 bytes. The sum of <see cref="ApprovalProgram" /> and <see cref="ClearStateProgram" /> may not exceed
+        ///     2048*(1+ExtraProgramPages) bytes.
         /// </summary>
         ulong ExtraProgramPages { get; set; }
-        
+
         /// <summary>
-        /// The boxes that should be made available for the runtime of the program.
+        ///     The boxes that should be made available for the runtime of the program.
         /// </summary>
         BoxRef[] Boxes { get; set; }
     }
@@ -166,16 +174,34 @@ namespace Algorand.Unity
         }
 
         /// <summary>
-        /// Create an <see cref="AppCallTxn"/> with params to create apps.
+        ///     Create an <see cref="AppCallTxn" /> with params to create apps.
         /// </summary>
         /// <param name="sender">The address of the account that pays the fee and amount.</param>
-        /// <param name="txnParams">See <see cref="TransactionParams"/></param>
-        /// <param name="approvalProgram">Logic executed for every application transaction, except when on-completion is set to "clear". It can read and write global state for the application, as well as account-specific local state. Approval programs may reject the transaction.</param>
-        /// <param name="clearStateProgram">Logic executed for application transactions with on-completion set to "clear". It can read and write global state for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.</param>
-        /// <param name="globalStateSchema">Holds the maximum number of global state values defined within a <see cref="StateSchema"/> object.</param>
-        /// <param name="localStateSchema">Holds the maximum number of local state values defined within a <see cref="StateSchema"/> object.</param>
-        /// <param name="extraProgramPages">Number of additional pages allocated to the application's approval and clear state programs. Each ExtraProgramPages is 2048 bytes. The sum of ApprovalProgram and ClearStateProgram may not exceed 2048*(1+ExtraProgramPages) bytes.</param>
-        /// <returns>An <see cref="AppCallTxn"/> with params set to create apps</returns>
+        /// <param name="txnParams">See <see cref="TransactionParams" /></param>
+        /// <param name="approvalProgram">
+        ///     Logic executed for every application transaction, except when on-completion is set to
+        ///     "clear". It can read and write global state for the application, as well as account-specific local state. Approval
+        ///     programs may reject the transaction.
+        /// </param>
+        /// <param name="clearStateProgram">
+        ///     Logic executed for application transactions with on-completion set to "clear". It can
+        ///     read and write global state for the application, as well as account-specific local state. Clear state programs
+        ///     cannot reject the transaction.
+        /// </param>
+        /// <param name="globalStateSchema">
+        ///     Holds the maximum number of global state values defined within a
+        ///     <see cref="StateSchema" /> object.
+        /// </param>
+        /// <param name="localStateSchema">
+        ///     Holds the maximum number of local state values defined within a
+        ///     <see cref="StateSchema" /> object.
+        /// </param>
+        /// <param name="extraProgramPages">
+        ///     Number of additional pages allocated to the application's approval and clear state
+        ///     programs. Each ExtraProgramPages is 2048 bytes. The sum of ApprovalProgram and ClearStateProgram may not exceed
+        ///     2048*(1+ExtraProgramPages) bytes.
+        /// </param>
+        /// <returns>An <see cref="AppCallTxn" /> with params set to create apps</returns>
         public static AppCallTxn AppCreate(
             Address sender,
             TransactionParams txnParams,
@@ -201,17 +227,29 @@ namespace Algorand.Unity
         }
 
         /// <summary>
-        /// Create an <see cref="AppCallTxn"/> with params to close out state with your account.
+        ///     Create an <see cref="AppCallTxn" /> with params to close out state with your account.
         /// </summary>
         /// <param name="sender">The address of the account that pays the fee and amount.</param>
-        /// <param name="txnParams">See <see cref="TransactionParams"/></param>
+        /// <param name="txnParams">See <see cref="TransactionParams" /></param>
         /// <param name="applicationId">ID of the application being configured.</param>
-        /// <param name="appArguments">Transaction specific arguments accessed from the application's approval-program and clear-state-program.</param>
-        /// <param name="accounts">List of accounts in addition to the sender that may be accessed from the application's approval-program and clear-state-program.</param>
-        /// <param name="foreignApps">Lists the applications in addition to the application-id whose global states may be accessed by this application's approval-program and clear-state-program. The access is read-only.</param>
-        /// <param name="foreignAssets">Lists the assets whose AssetParams may be accessed by this application's approval-program and clear-state-program. The access is read-only.</param>
+        /// <param name="appArguments">
+        ///     Transaction specific arguments accessed from the application's approval-program and
+        ///     clear-state-program.
+        /// </param>
+        /// <param name="accounts">
+        ///     List of accounts in addition to the sender that may be accessed from the application's
+        ///     approval-program and clear-state-program.
+        /// </param>
+        /// <param name="foreignApps">
+        ///     Lists the applications in addition to the application-id whose global states may be accessed
+        ///     by this application's approval-program and clear-state-program. The access is read-only.
+        /// </param>
+        /// <param name="foreignAssets">
+        ///     Lists the assets whose AssetParams may be accessed by this application's approval-program
+        ///     and clear-state-program. The access is read-only.
+        /// </param>
         /// <param name="boxRefs">The boxes that should be made available for the runtime of the program.</param>
-        /// <returns>An <see cref="AppCallTxn"/> with params set to close out state with your account.</returns>
+        /// <returns>An <see cref="AppCallTxn" /> with params set to close out state with your account.</returns>
         public static AppCallTxn AppCloseOut(
             Address sender,
             TransactionParams txnParams,
@@ -239,17 +277,29 @@ namespace Algorand.Unity
         }
 
         /// <summary>
-        /// Create an <see cref="AppCallTxn"/> with params to clear state with your account.
+        ///     Create an <see cref="AppCallTxn" /> with params to clear state with your account.
         /// </summary>
         /// <param name="sender">The address of the account that pays the fee and amount.</param>
-        /// <param name="txnParams">See <see cref="TransactionParams"/></param>
+        /// <param name="txnParams">See <see cref="TransactionParams" /></param>
         /// <param name="applicationId">ID of the application being configured.</param>
-        /// <param name="appArguments">Transaction specific arguments accessed from the application's approval-program and clear-state-program.</param>
-        /// <param name="accounts">List of accounts in addition to the sender that may be accessed from the application's approval-program and clear-state-program.</param>
-        /// <param name="foreignApps">Lists the applications in addition to the application-id whose global states may be accessed by this application's approval-program and clear-state-program. The access is read-only.</param>
-        /// <param name="foreignAssets">Lists the assets whose AssetParams may be accessed by this application's approval-program and clear-state-program. The access is read-only.</param>
+        /// <param name="appArguments">
+        ///     Transaction specific arguments accessed from the application's approval-program and
+        ///     clear-state-program.
+        /// </param>
+        /// <param name="accounts">
+        ///     List of accounts in addition to the sender that may be accessed from the application's
+        ///     approval-program and clear-state-program.
+        /// </param>
+        /// <param name="foreignApps">
+        ///     Lists the applications in addition to the application-id whose global states may be accessed
+        ///     by this application's approval-program and clear-state-program. The access is read-only.
+        /// </param>
+        /// <param name="foreignAssets">
+        ///     Lists the assets whose AssetParams may be accessed by this application's approval-program
+        ///     and clear-state-program. The access is read-only.
+        /// </param>
         /// <param name="boxRefs">The boxes that should be made available for the runtime of the program.</param>
-        /// <returns>An <see cref="AppCallTxn"/> with params to clear app state with your account.</returns>
+        /// <returns>An <see cref="AppCallTxn" /> with params to clear app state with your account.</returns>
         public static AppCallTxn AppClearState(
             Address sender,
             TransactionParams txnParams,
@@ -277,18 +327,30 @@ namespace Algorand.Unity
         }
 
         /// <summary>
-        /// Create an <see cref="AppCallTxn"/> used to call an application.
+        ///     Create an <see cref="AppCallTxn" /> used to call an application.
         /// </summary>
         /// <param name="sender">The address of the account that pays the fee and amount.</param>
-        /// <param name="txnParams">See <see cref="TransactionParams"/></param>
+        /// <param name="txnParams">See <see cref="TransactionParams" /></param>
         /// <param name="applicationId">ID of the application being configured.</param>
         /// <param name="onComplete">Defines what additional actions occur with the transaction.</param>
-        /// <param name="appArguments">Transaction specific arguments accessed from the application's approval-program and clear-state-program.</param>
-        /// <param name="accounts">List of accounts in addition to the sender that may be accessed from the application's approval-program and clear-state-program.</param>
-        /// <param name="foreignApps">Lists the applications in addition to the application-id whose global states may be accessed by this application's approval-program and clear-state-program. The access is read-only.</param>
-        /// <param name="foreignAssets">Lists the assets whose AssetParams may be accessed by this application's approval-program and clear-state-program. The access is read-only.</param>
+        /// <param name="appArguments">
+        ///     Transaction specific arguments accessed from the application's approval-program and
+        ///     clear-state-program.
+        /// </param>
+        /// <param name="accounts">
+        ///     List of accounts in addition to the sender that may be accessed from the application's
+        ///     approval-program and clear-state-program.
+        /// </param>
+        /// <param name="foreignApps">
+        ///     Lists the applications in addition to the application-id whose global states may be accessed
+        ///     by this application's approval-program and clear-state-program. The access is read-only.
+        /// </param>
+        /// <param name="foreignAssets">
+        ///     Lists the assets whose AssetParams may be accessed by this application's approval-program
+        ///     and clear-state-program. The access is read-only.
+        /// </param>
         /// <param name="boxRefs">The boxes that should be made available for the runtime of the program.</param>
-        /// <returns>An <see cref="AppCallTxn"/> used to call an application.</returns>
+        /// <returns>An <see cref="AppCallTxn" /> used to call an application.</returns>
         public static AppCallTxn AppCall(
             Address sender,
             TransactionParams txnParams,
@@ -317,17 +379,29 @@ namespace Algorand.Unity
         }
 
         /// <summary>
-        /// Create an <see cref="AppCallTxn"/> used to opt in to an application.
+        ///     Create an <see cref="AppCallTxn" /> used to opt in to an application.
         /// </summary>
         /// <param name="sender">The address of the account that pays the fee and amount.</param>
-        /// <param name="txnParams">See <see cref="TransactionParams"/></param>
+        /// <param name="txnParams">See <see cref="TransactionParams" /></param>
         /// <param name="applicationId">ID of the application being configured.</param>
-        /// <param name="appArguments">Transaction specific arguments accessed from the application's approval-program and clear-state-program.</param>
-        /// <param name="accounts">List of accounts in addition to the sender that may be accessed from the application's approval-program and clear-state-program.</param>
-        /// <param name="foreignApps">Lists the applications in addition to the application-id whose global states may be accessed by this application's approval-program and clear-state-program. The access is read-only.</param>
-        /// <param name="foreignAssets">Lists the assets whose AssetParams may be accessed by this application's approval-program and clear-state-program. The access is read-only.</param>
+        /// <param name="appArguments">
+        ///     Transaction specific arguments accessed from the application's approval-program and
+        ///     clear-state-program.
+        /// </param>
+        /// <param name="accounts">
+        ///     List of accounts in addition to the sender that may be accessed from the application's
+        ///     approval-program and clear-state-program.
+        /// </param>
+        /// <param name="foreignApps">
+        ///     Lists the applications in addition to the application-id whose global states may be accessed
+        ///     by this application's approval-program and clear-state-program. The access is read-only.
+        /// </param>
+        /// <param name="foreignAssets">
+        ///     Lists the assets whose AssetParams may be accessed by this application's approval-program
+        ///     and clear-state-program. The access is read-only.
+        /// </param>
         /// <param name="boxRefs">The boxes that should be made available for the runtime of the program.</param>
-        /// <returns>An <see cref="AppCallTxn"/> with params to opt in to an application.</returns>
+        /// <returns>An <see cref="AppCallTxn" /> with params to opt in to an application.</returns>
         public static AppCallTxn AppOptIn(
             Address sender,
             TransactionParams txnParams,
@@ -355,20 +429,44 @@ namespace Algorand.Unity
         }
 
         /// <summary>
-        /// Create an <see cref="AppCallTxn"/> used to update an application.
+        ///     Create an <see cref="AppCallTxn" /> used to update an application.
         /// </summary>
         /// <param name="sender">The address of the account that pays the fee and amount.</param>
-        /// <param name="txnParams">See <see cref="TransactionParams"/></param>
+        /// <param name="txnParams">See <see cref="TransactionParams" /></param>
         /// <param name="applicationId">ID of the application being configured.</param>
-        /// <param name="approvalProgram">Logic executed for every application transaction, except when on-completion is set to "clear". It can read and write global state for the application, as well as account-specific local state. Approval programs may reject the transaction.</param>
-        /// <param name="clearStateProgram">Logic executed for application transactions with on-completion set to "clear". It can read and write global state for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.</param>
-        /// <param name="extraProgramPages">Number of additional pages allocated to the application's approval and clear state programs. Each ExtraProgramPages is 2048 bytes. The sum of ApprovalProgram and ClearStateProgram may not exceed 2048*(1+ExtraProgramPages) bytes.</param>
-        /// <param name="appArguments">Transaction specific arguments accessed from the application's approval-program and clear-state-program.</param>
-        /// <param name="accounts">List of accounts in addition to the sender that may be accessed from the application's approval-program and clear-state-program.</param>
-        /// <param name="foreignApps">Lists the applications in addition to the application-id whose global states may be accessed by this application's approval-program and clear-state-program. The access is read-only.</param>
-        /// <param name="foreignAssets">Lists the assets whose AssetParams may be accessed by this application's approval-program and clear-state-program. The access is read-only.</param>
+        /// <param name="approvalProgram">
+        ///     Logic executed for every application transaction, except when on-completion is set to
+        ///     "clear". It can read and write global state for the application, as well as account-specific local state. Approval
+        ///     programs may reject the transaction.
+        /// </param>
+        /// <param name="clearStateProgram">
+        ///     Logic executed for application transactions with on-completion set to "clear". It can
+        ///     read and write global state for the application, as well as account-specific local state. Clear state programs
+        ///     cannot reject the transaction.
+        /// </param>
+        /// <param name="extraProgramPages">
+        ///     Number of additional pages allocated to the application's approval and clear state
+        ///     programs. Each ExtraProgramPages is 2048 bytes. The sum of ApprovalProgram and ClearStateProgram may not exceed
+        ///     2048*(1+ExtraProgramPages) bytes.
+        /// </param>
+        /// <param name="appArguments">
+        ///     Transaction specific arguments accessed from the application's approval-program and
+        ///     clear-state-program.
+        /// </param>
+        /// <param name="accounts">
+        ///     List of accounts in addition to the sender that may be accessed from the application's
+        ///     approval-program and clear-state-program.
+        /// </param>
+        /// <param name="foreignApps">
+        ///     Lists the applications in addition to the application-id whose global states may be accessed
+        ///     by this application's approval-program and clear-state-program. The access is read-only.
+        /// </param>
+        /// <param name="foreignAssets">
+        ///     Lists the assets whose AssetParams may be accessed by this application's approval-program
+        ///     and clear-state-program. The access is read-only.
+        /// </param>
         /// <param name="boxRefs">The boxes that should be made available for the runtime of the program.</param>
-        /// <returns>An <see cref="AppCallTxn"/> with params to update an application.</returns>
+        /// <returns>An <see cref="AppCallTxn" /> with params to update an application.</returns>
         public static AppCallTxn AppUpdateTxn(
             Address sender,
             TransactionParams txnParams,
@@ -402,17 +500,29 @@ namespace Algorand.Unity
         }
 
         /// <summary>
-        /// Create an <see cref="AppCallTxn"/> used to delete an application.
+        ///     Create an <see cref="AppCallTxn" /> used to delete an application.
         /// </summary>
         /// <param name="sender">The address of the account that pays the fee and amount.</param>
-        /// <param name="txnParams">See <see cref="TransactionParams"/></param>
+        /// <param name="txnParams">See <see cref="TransactionParams" /></param>
         /// <param name="applicationId">ID of the application being configured.</param>
-        /// <param name="appArguments">Transaction specific arguments accessed from the application's approval-program and clear-state-program.</param>
-        /// <param name="accounts">List of accounts in addition to the sender that may be accessed from the application's approval-program and clear-state-program.</param>
-        /// <param name="foreignApps">Lists the applications in addition to the application-id whose global states may be accessed by this application's approval-program and clear-state-program. The access is read-only.</param>
-        /// <param name="foreignAssets">Lists the assets whose AssetParams may be accessed by this application's approval-program and clear-state-program. The access is read-only.</param>
+        /// <param name="appArguments">
+        ///     Transaction specific arguments accessed from the application's approval-program and
+        ///     clear-state-program.
+        /// </param>
+        /// <param name="accounts">
+        ///     List of accounts in addition to the sender that may be accessed from the application's
+        ///     approval-program and clear-state-program.
+        /// </param>
+        /// <param name="foreignApps">
+        ///     Lists the applications in addition to the application-id whose global states may be accessed
+        ///     by this application's approval-program and clear-state-program. The access is read-only.
+        /// </param>
+        /// <param name="foreignAssets">
+        ///     Lists the assets whose AssetParams may be accessed by this application's approval-program
+        ///     and clear-state-program. The access is read-only.
+        /// </param>
         /// <param name="boxRefs">The boxes that should be made available for the runtime of the program.</param>
-        /// <returns>An <see cref="AppCallTxn"/> with params to delete an application.</returns>
+        /// <returns>An <see cref="AppCallTxn" /> with params to delete an application.</returns>
         public static AppCallTxn AppDelete(
             Address sender,
             TransactionParams txnParams,
@@ -443,15 +553,16 @@ namespace Algorand.Unity
     [AlgoApiObject]
     [Serializable]
     public partial struct AppCallTxn
-          : IAppCallTxn
-          , IEquatable<AppCallTxn>
+        : IAppCallTxn
+            , IEquatable<AppCallTxn>
     {
         public const int MaxNumAppArguments = 16;
 
         [SerializeField]
         internal TransactionHeader header;
 
-        [SerializeField] private Params @params;
+        [SerializeField]
+        private Params @params;
 
         /// <inheritdoc />
         [AlgoApiField("fee")]
@@ -654,7 +765,7 @@ namespace Algorand.Unity
         public bool Equals(AppCallTxn other)
         {
             return header.Equals(other.header)
-                && @params.Equals(other.@params)
+                   && @params.Equals(other.@params)
                 ;
         }
 
@@ -672,27 +783,33 @@ namespace Algorand.Unity
             public OnCompletion OnComplete;
 
             [AlgoApiField("apap")]
-            [Tooltip("Logic executed for every application transaction, except when on-completion is set to \"clear\". It can read and write global state for the application, as well as account-specific local state. Approval programs may reject the transaction.")]
+            [Tooltip(
+                "Logic executed for every application transaction, except when on-completion is set to \"clear\". It can read and write global state for the application, as well as account-specific local state. Approval programs may reject the transaction.")]
             public CompiledTeal ApprovalProgram;
 
             [AlgoApiField("apsu")]
-            [Tooltip("Logic executed for application transactions with on-completion set to \"clear\". It can read and write global state for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.")]
+            [Tooltip(
+                "Logic executed for application transactions with on-completion set to \"clear\". It can read and write global state for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.")]
             public CompiledTeal ClearStateProgram;
 
             [AlgoApiField("apaa")]
-            [Tooltip("Transaction specific arguments accessed from the application's approval-program and clear-state-program.")]
+            [Tooltip(
+                "Transaction specific arguments accessed from the application's approval-program and clear-state-program.")]
             public CompiledTeal[] AppArguments;
 
             [AlgoApiField("apat")]
-            [Tooltip("List of accounts in addition to the sender that may be accessed from the application's approval-program and clear-state-program.")]
+            [Tooltip(
+                "List of accounts in addition to the sender that may be accessed from the application's approval-program and clear-state-program.")]
             public Address[] Accounts;
 
             [AlgoApiField("apfa")]
-            [Tooltip("Lists the applications in addition to the application-id whose global states may be accessed by this application's approval-program and clear-state-program. The access is read-only.")]
+            [Tooltip(
+                "Lists the applications in addition to the application-id whose global states may be accessed by this application's approval-program and clear-state-program. The access is read-only.")]
             public ulong[] ForeignApps;
 
             [AlgoApiField("apas")]
-            [Tooltip("Lists the assets whose AssetParams may be accessed by this application's approval-program and clear-state-program. The access is read-only.")]
+            [Tooltip(
+                "Lists the assets whose AssetParams may be accessed by this application's approval-program and clear-state-program. The access is read-only.")]
             public ulong[] ForeignAssets;
 
             [AlgoApiField("global-state-schema")]
@@ -704,7 +821,8 @@ namespace Algorand.Unity
             public StateSchema LocalStateSchema;
 
             [AlgoApiField("epp")]
-            [Tooltip("Number of additional pages allocated to the application's approval and clear state programs. Each ExtraProgramPages is 2048 bytes.")]
+            [Tooltip(
+                "Number of additional pages allocated to the application's approval and clear state programs. Each ExtraProgramPages is 2048 bytes.")]
             public ulong ExtraProgramPages;
 
             [AlgoApiField("apbx")]
@@ -714,17 +832,17 @@ namespace Algorand.Unity
             public bool Equals(Params other)
             {
                 return ApplicationId.Equals(other.ApplicationId)
-                    && OnComplete == other.OnComplete
-                    && ArrayComparer.Equals(Accounts, other.Accounts)
-                    && ApprovalProgram.Equals(other.ApprovalProgram)
-                    && ArrayComparer.Equals(AppArguments, other.AppArguments)
-                    && ClearStateProgram.Equals(other.ClearStateProgram)
-                    && ArrayComparer.Equals(ForeignApps, other.ForeignApps)
-                    && ArrayComparer.Equals(ForeignAssets, other.ForeignAssets)
-                    && GlobalStateSchema.Equals(other.GlobalStateSchema)
-                    && LocalStateSchema.Equals(other.LocalStateSchema)
-                    && ExtraProgramPages.Equals(other.ExtraProgramPages)
-                    && ArrayComparer.Equals(Boxes, other.Boxes)
+                       && OnComplete == other.OnComplete
+                       && ArrayComparer.Equals(Accounts, other.Accounts)
+                       && ApprovalProgram.Equals(other.ApprovalProgram)
+                       && ArrayComparer.Equals(AppArguments, other.AppArguments)
+                       && ClearStateProgram.Equals(other.ClearStateProgram)
+                       && ArrayComparer.Equals(ForeignApps, other.ForeignApps)
+                       && ArrayComparer.Equals(ForeignAssets, other.ForeignAssets)
+                       && GlobalStateSchema.Equals(other.GlobalStateSchema)
+                       && LocalStateSchema.Equals(other.LocalStateSchema)
+                       && ExtraProgramPages.Equals(other.ExtraProgramPages)
+                       && ArrayComparer.Equals(Boxes, other.Boxes)
                     ;
             }
         }

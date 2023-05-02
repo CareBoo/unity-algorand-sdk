@@ -1,5 +1,5 @@
 using System;
-using Random=Algorand.Unity.Crypto.Random;
+using Random = Algorand.Unity.Crypto.Random;
 
 namespace Algorand.Unity.WalletConnect
 {
@@ -10,13 +10,14 @@ namespace Algorand.Unity.WalletConnect
         public const string SessionUpdateMethod = "wc_sessionUpdate";
 
         /// <summary>
-        /// Utility function for building a <see cref="JsonRpcRequest"/> used to start a new WalletConnect session.
+        ///     Utility function for building a <see cref="JsonRpcRequest" /> used to start a new WalletConnect session.
         /// </summary>
         /// <param name="peerId">The UUID of the client.</param>
         /// <param name="peerMeta">The metadata of the client.</param>
         /// <param name="chainId">The id of the blockchain this request is for.</param>
-        /// <returns>A <see cref="JsonRpcRequest"/> that can be used to start a new WalletConnect session.</returns>
-        public static JsonRpcRequest SessionRequest(string peerId, ClientMeta peerMeta, Optional<int> chainId = default, ulong id = default)
+        /// <returns>A <see cref="JsonRpcRequest" /> that can be used to start a new WalletConnect session.</returns>
+        public static JsonRpcRequest SessionRequest(string peerId, ClientMeta peerMeta, Optional<int> chainId = default,
+            ulong id = default)
         {
             var sessionRequest = new WalletConnectSessionRequest
             {
@@ -28,10 +29,10 @@ namespace Algorand.Unity.WalletConnect
         }
 
         /// <summary>
-        /// Utility function for building a <see cref="JsonRpcRequest"/> used to start a new WalletConnect session.
+        ///     Utility function for building a <see cref="JsonRpcRequest" /> used to start a new WalletConnect session.
         /// </summary>
         /// <param name="sessionRequest">Parameters required to create the request.</param>
-        /// <returns>A <see cref="JsonRpcRequest"/> that can be used to start a new WalletConnect session.</returns>
+        /// <returns>A <see cref="JsonRpcRequest" /> that can be used to start a new WalletConnect session.</returns>
         public static JsonRpcRequest SessionRequest(WalletConnectSessionRequest sessionRequest, ulong id = default)
         {
             const string method = "wc_sessionRequest";
@@ -49,9 +50,9 @@ namespace Algorand.Unity.WalletConnect
         }
 
         /// <summary>
-        /// Gets a random, valid JsonRpcRequest id.
+        ///     Gets a random, valid JsonRpcRequest id.
         /// </summary>
-        /// <returns>a <see cref="ulong"/> in the range [1, <see cref="uint.MaxValue"/>]</returns>
+        /// <returns>a <see cref="ulong" /> in the range [1, <see cref="uint.MaxValue" />]</returns>
         public static ulong GetRandomId()
         {
             ulong x = 0;
@@ -82,27 +83,30 @@ namespace Algorand.Unity.WalletConnect
             }
 
             /// <summary>
-            /// Builds a <see cref="JsonRpcRequest"/> used for signing transactions.
+            ///     Builds a <see cref="JsonRpcRequest" /> used for signing transactions.
             /// </summary>
             /// <param name="transactions">
-            /// The atomic transaction group of [1,16] transactions. Contains information about how to sign
-            /// each transaction, and which ones to sign.
+            ///     The atomic transaction group of [1,16] transactions. Contains information about how to sign
+            ///     each transaction, and which ones to sign.
             /// </param>
             /// <param name="options">
-            /// Optional options for signing the transactions, e.g. adding a message to the transaction group.
+            ///     Optional options for signing the transactions, e.g. adding a message to the transaction group.
             /// </param>
-            /// <returns>A <see cref="JsonRpcRequest"/> used for signing Algorand transactions.</returns>
-            public static JsonRpcRequest SignTransactions(WalletTransaction[] transactions, SignTxnsOpts options = default)
+            /// <returns>A <see cref="JsonRpcRequest" /> used for signing Algorand transactions.</returns>
+            public static JsonRpcRequest SignTransactions(WalletTransaction[] transactions,
+                SignTxnsOpts options = default)
             {
                 if (transactions == null)
                     throw new ArgumentNullException(nameof(transactions));
                 if (transactions.Length < 1 || transactions.Length > 16)
-                    throw new ArgumentException($"must have [1,16] transactions, instead it was {transactions.Length}", nameof(transactions));
+                    throw new ArgumentException($"must have [1,16] transactions, instead it was {transactions.Length}",
+                        nameof(transactions));
 
                 const string method = "algo_signTxn";
-                AlgoApiObject[] requestParams = options.Equals(default)
-                    ? new AlgoApiObject[] { AlgoApiSerializer.SerializeJson(transactions) }
-                    : new AlgoApiObject[] { AlgoApiSerializer.SerializeJson(transactions), AlgoApiSerializer.SerializeJson(options) }
+                var requestParams = options.Equals(default)
+                        ? new AlgoApiObject[] { AlgoApiSerializer.SerializeJson(transactions) }
+                        : new AlgoApiObject[]
+                            { AlgoApiSerializer.SerializeJson(transactions), AlgoApiSerializer.SerializeJson(options) }
                     ;
 
                 return new JsonRpcRequest

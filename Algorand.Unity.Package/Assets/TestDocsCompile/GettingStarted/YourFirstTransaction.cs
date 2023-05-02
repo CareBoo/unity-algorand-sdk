@@ -2,7 +2,6 @@ using Algorand.Unity;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-
 public class AlgodCheck : MonoBehaviour
 {
     private AlgodClient algod;
@@ -10,8 +9,8 @@ public class AlgodCheck : MonoBehaviour
     public void Start()
     {
         algod = new AlgodClient(
-            address: "http://localhost:4001",
-            token: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            "http://localhost:4001",
+            "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
         );
         CheckAlgodStatus().Forget();
     }
@@ -21,7 +20,8 @@ public class AlgodCheck : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             var privateKey = Mnemonic
-                .FromString("find paddle girl crumble hammer usual obvious toy actual obscure decorate lock bag inmate author valve course ship burger denial sibling tissue nominee above remove")
+                .FromString(
+                    "find paddle girl crumble hammer usual obvious toy actual obscure decorate lock bag inmate author valve course ship burger denial sibling tissue nominee above remove")
                 .ToPrivateKey();
             ulong amount = 100_000;
             Address receiver = "HZ57J3K46JIJXILONBBZOHX6BKPXEM2VVXNRFSUED6DKFD5ZD24PMJ3MVA";
@@ -33,13 +33,9 @@ public class AlgodCheck : MonoBehaviour
     {
         var response = await algod.HealthCheck();
         if (response.Error)
-        {
             Debug.LogError(response.Error);
-        }
         else
-        {
             Debug.Log("Connected to algod!");
-        }
     }
 
     public async UniTaskVoid CheckBalance()
@@ -67,10 +63,10 @@ public class AlgodCheck : MonoBehaviour
 
         // Construct and sign the payment transaction
         var paymentTxn = Transaction.Payment(
-            sender: senderAccount.Address,
-            txnParams: txnParams,
-            receiver: receiver,
-            amount: amount
+            senderAccount.Address,
+            txnParams,
+            receiver,
+            amount
         );
         var signedTxn = senderAccount.SignTxn(paymentTxn);
 
