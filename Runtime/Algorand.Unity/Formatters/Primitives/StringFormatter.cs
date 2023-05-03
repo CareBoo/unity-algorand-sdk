@@ -12,7 +12,7 @@ namespace Algorand.Unity.Formatters
             {
                 return null;
             }
-            var text = new NativeText(Allocator.Persistent);
+            var text = new NativeText(Allocator.Temp);
             try
             {
                 reader.ReadString(ref text);
@@ -30,7 +30,7 @@ namespace Algorand.Unity.Formatters
             {
                 return null;
             }
-            var text = new NativeText(Allocator.Persistent);
+            var text = new NativeText(Allocator.Temp);
             try
             {
                 reader.ReadString(ref text);
@@ -44,13 +44,13 @@ namespace Algorand.Unity.Formatters
 
         public void Serialize(ref JsonWriter writer, string value)
         {
-            using var text = new NativeText(value, Allocator.Persistent);
+            using var text = new NativeText(value, Allocator.Temp);
             writer.WriteString(text);
         }
 
         public void Serialize(ref MessagePackWriter writer, string value)
         {
-            using var text = new NativeText(value, Allocator.Persistent);
+            using var text = new NativeText(value, Allocator.Temp);
             writer.WriteString(text);
         }
     }

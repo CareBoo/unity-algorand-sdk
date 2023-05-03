@@ -1,3 +1,4 @@
+using System.Linq;
 using Algorand.Unity.WalletConnect;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -7,35 +8,39 @@ namespace Algorand.Unity.Samples.WalletConnect
 {
     public class WalletConnectManager : MonoBehaviour
     {
-        [FormerlySerializedAs("DappMeta")] public ClientMeta dappMeta;
+        [FormerlySerializedAs("DappMeta")]
+        public ClientMeta dappMeta;
 
-        [FormerlySerializedAs("BridgeUrl")] public string bridgeUrl;
+        [FormerlySerializedAs("BridgeUrl")]
+        public string bridgeUrl;
 
-        private HandshakeUrl handshake;
-
-        private Texture2D qrCode;
-
-        private bool shouldLaunchApp;
-
-        private AppEntry launchedApp;
-
-        private MicroAlgos currentBalance;
-
-        private WalletConnectAccount account;
-
-        private TransactionStatus txnStatus;
-
-        [FormerlySerializedAs("algoClientURL")] [FormerlySerializedAs("AlgoClientURL")]
+        [FormerlySerializedAs("algoClientURL")]
+        [FormerlySerializedAs("AlgoClientURL")]
         public string algodClientURL = @"https://node.testnet.algoexplorerapi.io";
 
         [FormerlySerializedAs("IndexerURL")]
         public string indexerURL = @"https://algoindexer.testnet.algoexplorerapi.io";
 
+        [SerializeField]
+        private WalletConnectCanvas walletConnectCanvas;
+
+        private WalletConnectAccount account;
+
         private AlgodClient algod;
+
+        private MicroAlgos currentBalance;
+
+        private HandshakeUrl handshake;
 
         private IndexerClient indexer;
 
-        [SerializeField] private WalletConnectCanvas walletConnectCanvas;
+        private AppEntry launchedApp;
+
+        private Texture2D qrCode;
+
+        private bool shouldLaunchApp;
+
+        private TransactionStatus txnStatus;
 
         private void Start()
         {
@@ -62,14 +67,12 @@ namespace Algorand.Unity.Samples.WalletConnect
                     }
 
                     if (supportedWallets.Length > 0)
-                    {
                         if (!shouldLaunchApp)
                         {
                             walletConnectCanvas.qrCodeDisplay.gameObject.SetActive(false);
                             walletConnectCanvas.connectingToWallet.gameObject.SetActive(true);
                             shouldLaunchApp = true;
                         }
-                    }
 
                     break;
                 case SessionStatus.WalletConnected:
@@ -108,6 +111,8 @@ namespace Algorand.Unity.Samples.WalletConnect
             qrCode = handshake.ToQrCodeTexture();
 
             await account.WaitForWalletApproval();
+            Debug.Log(
+                $"Connected account with addresses:\n{string.Join("\n", account.SessionData.Accounts.Select(a => a.ToString()))}");
             Debug.Log($"Connected account:\n{AlgoApiSerializer.SerializeJson(account.Address)}");
         }
 
@@ -122,10 +127,7 @@ namespace Algorand.Unity.Samples.WalletConnect
                     if (err)
                     {
                         currentBalance = 0;
-                        if (!err.Message.Contains("no accounts found for address"))
-                        {
-                            Debug.LogError(err);
-                        }
+                        if (!err.Message.Contains("no accounts found for address")) Debug.LogError(err);
                     }
                     else
                     {
@@ -149,13 +151,18 @@ namespace Algorand.Unity.Samples.WalletConnect
             }
 
             var signing = Transaction.Atomic()
-                    .AddTxn(Transaction.Payment(account.Address, txnParams, account.Address, 0))
+                    .AddTxn(
+                        Transaction.Payment(
+                            account.Address,
+                            txnParams,
+                            account.Address,
+                            0))
                     .Build()
                     .SignWithAsync(account)
                     .FinishSigningAsync()
                 ;
-            if (shouldLaunchApp && launchedApp != null)
-                launchedApp.LaunchForSigning();
+            if (shouldLaunchApp && launchedApp != null) launchedApp.LaunchForSigning();
+
             var signedTxns = await signing;
             txnStatus = TransactionStatus.AwaitingConfirmation;
             var (txnSendErr, txid) = await algod.RawTransaction(signedTxns);

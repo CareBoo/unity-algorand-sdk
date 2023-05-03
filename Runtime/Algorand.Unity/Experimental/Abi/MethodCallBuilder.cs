@@ -92,8 +92,8 @@ namespace Algorand.Unity.Experimental.Abi
         /// <exception cref="System.ArgumentException">Not enough arguments given to call this method.</exception>
         public AppCallTxn BuildTxn()
         {
-            using var appArguments = new NativeListOfList<byte>(Allocator.Persistent);
-            using var references = new AbiReferences(sender, applicationId, Allocator.Persistent);
+            using var appArguments = new NativeListOfList<byte>(Allocator.Temp);
+            using var references = new AbiReferences(sender, applicationId, Allocator.Temp);
 
             appArguments.AddArray(methodSelector);
             var args = this.argValues;
@@ -107,13 +107,13 @@ namespace Algorand.Unity.Experimental.Abi
                 {
                     using var remainingBytes = Tuple
                         .Of(args)
-                        .Encode(appArgTypes.Slice(i), references, Allocator.Persistent);
+                        .Encode(appArgTypes.Slice(i), references, Allocator.Temp);
                     appArguments.Add(remainingBytes.Bytes);
                 }
                 else
                 {
                     var type = appArgTypes[i];
-                    using var bytes = args.EncodeCurrent(type, references, Allocator.Persistent);
+                    using var bytes = args.EncodeCurrent(type, references, Allocator.Temp);
                     appArguments.Add(bytes);
                 }
             }

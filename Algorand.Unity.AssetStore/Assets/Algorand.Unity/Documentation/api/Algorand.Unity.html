@@ -318,6 +318,9 @@
                             <a href="Algorand.Unity.BlockUpgradeVote.html" title="BlockUpgradeVote" class="">BlockUpgradeVote</a>
                           </li>
                           <li class="">
+                            <a href="Algorand.Unity.BoxRef.html" title="BoxRef" class="">BoxRef</a>
+                          </li>
+                          <li class="">
                             <a href="Algorand.Unity.ByteEnumComparer-1.html" title="ByteEnumComparer&lt;T&gt;" class="">ByteEnumComparer&lt;T&gt;</a>
                           </li>
                           <li class="">
@@ -540,6 +543,9 @@
                             <a href="Algorand.Unity.Mnemonic.html" title="Mnemonic" class="">Mnemonic</a>
                           </li>
                           <li class="">
+                            <a href="Algorand.Unity.Mnemonic.ParseError.html" title="Mnemonic.ParseError" class="">Mnemonic.ParseError</a>
+                          </li>
+                          <li class="">
                             <a href="Algorand.Unity.Mnemonic.Word.html" title="Mnemonic.Word" class="">Mnemonic.Word</a>
                           </li>
                           <li class="">
@@ -571,6 +577,9 @@
                           </li>
                           <li class="">
                             <a href="Algorand.Unity.PrivateKey.html" title="PrivateKey" class="">PrivateKey</a>
+                          </li>
+                          <li class="">
+                            <a href="Algorand.Unity.PrivateKey.ParseError.html" title="PrivateKey.ParseError" class="">PrivateKey.ParseError</a>
                           </li>
                           <li class="">
                             <a href="Algorand.Unity.ProvideSourceInfoAttribute.html" title="ProvideSourceInfoAttribute" class="">ProvideSourceInfoAttribute</a>
@@ -1965,6 +1974,9 @@
                             <a href="Algorand.Unity.LowLevel.ByteArrayComparer-1.html" title="ByteArrayComparer&lt;T&gt;" class="">ByteArrayComparer&lt;T&gt;</a>
                           </li>
                           <li class="">
+                            <a href="Algorand.Unity.LowLevel.ByteArraySlice-1.html" title="ByteArraySlice&lt;TBytes&gt;" class="">ByteArraySlice&lt;TBytes&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="Algorand.Unity.LowLevel.FixedBytes128.html" title="FixedBytes128" class="">FixedBytes128</a>
                           </li>
                           <li class="">
@@ -2343,7 +2355,8 @@ Similar to the <see cref="!:RangeAttribute"></see> but extended with mod.</p>
     <h3 id="structs">Structs
 </h3>
       <h4><a class="xref" href="Algorand.Unity.Account.html">Account</a></h4>
-      <section><p>A local, in-memory account.</p>
+      <section><p>A insecure, local, in-memory account. This is useful for creating quick accounts for developer testing, and it
+should not be used in production.</p>
 </section>
       <h4><a class="xref" href="Algorand.Unity.AccountParticipation.html">AccountParticipation</a></h4>
       <section><p>Describes the parameters used by this account in consensus protocol.</p>
@@ -2456,6 +2469,8 @@ This can be deconstructed into a tuple of (ErrorResponse, Payload)</p>
       <h4><a class="xref" href="Algorand.Unity.BlockUpgradeState.html">BlockUpgradeState</a></h4>
       <section></section>
       <h4><a class="xref" href="Algorand.Unity.BlockUpgradeVote.html">BlockUpgradeVote</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Algorand.Unity.BoxRef.html">BoxRef</a></h4>
       <section></section>
       <h4><a class="xref" href="Algorand.Unity.ByteEnumComparer-1.html">ByteEnumComparer&lt;T&gt;</a></h4>
       <section></section>
@@ -2596,9 +2611,11 @@ It contains multiple commitments based on different algorithms and hash function
       <h4><a class="xref" href="Algorand.Unity.AtomicTxn.ISigning-1.html">AtomicTxn.ISigning&lt;T&gt;</a></h4>
       <section></section>
       <h4><a class="xref" href="Algorand.Unity.IAccount.html">IAccount</a></h4>
-      <section></section>
+      <section><p>An Algorand Account which has an <a class="xref" href="Algorand.Unity.IAccount.html#Algorand_Unity_IAccount_Address">Address</a> to identify it.</p>
+</section>
       <h4><a class="xref" href="Algorand.Unity.IAccountSigner.html">IAccountSigner</a></h4>
-      <section></section>
+      <section><p>A signer for a particular <a class="xref" href="Algorand.Unity.Address.html">Address</a>. There is only one valid Signer for an <a class="xref" href="Algorand.Unity.Address.html">Address</a>.</p>
+</section>
       <h4><a class="xref" href="Algorand.Unity.IAlgoApiClient.html">IAlgoApiClient</a></h4>
       <section></section>
       <h4><a class="xref" href="Algorand.Unity.IAlgoApiFormatter-1.html">IAlgoApiFormatter&lt;T&gt;</a></h4>
@@ -2625,9 +2642,12 @@ It contains multiple commitments based on different algorithms and hash function
       <h4><a class="xref" href="Algorand.Unity.IAssetTransferTxn.html">IAssetTransferTxn</a></h4>
       <section></section>
       <h4><a class="xref" href="Algorand.Unity.IAsyncAccountSigner.html">IAsyncAccountSigner</a></h4>
-      <section></section>
+      <section><p>An asynchronous signer for a particular <a class="xref" href="Algorand.Unity.Address.html">Address</a>.</p>
+</section>
       <h4><a class="xref" href="Algorand.Unity.IAsyncAccountSignerWithProgress.html">IAsyncAccountSignerWithProgress</a></h4>
-      <section></section>
+      <section><p>An asynchronous signer for a particular <a class="xref" href="Algorand.Unity.Address.html">Address</a> that contains signing functions that support
+progress updates.</p>
+</section>
       <h4><a class="xref" href="Algorand.Unity.IAsyncSigner.html">IAsyncSigner</a></h4>
       <section></section>
       <h4><a class="xref" href="Algorand.Unity.IAsyncSignerWithProgress.html">IAsyncSignerWithProgress</a></h4>
@@ -2690,12 +2710,16 @@ It contains multiple commitments based on different algorithms and hash function
       <section></section>
       <h4><a class="xref" href="Algorand.Unity.HashType.html">HashType</a></h4>
       <section></section>
+      <h4><a class="xref" href="Algorand.Unity.Mnemonic.ParseError.html">Mnemonic.ParseError</a></h4>
+      <section></section>
       <h4><a class="xref" href="Algorand.Unity.Mnemonic.Word.html">Mnemonic.Word</a></h4>
       <section><p>A list of possible words that occur in a <a class="xref" href="Algorand.Unity.Mnemonic.html">Mnemonic</a></p>
 </section>
       <h4><a class="xref" href="Algorand.Unity.OnCompletion.html">OnCompletion</a></h4>
       <section><p>[apan] defines the what additional actions occur with the transaction.</p>
 </section>
+      <h4><a class="xref" href="Algorand.Unity.PrivateKey.ParseError.html">PrivateKey.ParseError</a></h4>
+      <section></section>
       <h4><a class="xref" href="Algorand.Unity.ResponseFormat.html">ResponseFormat</a></h4>
       <section></section>
       <h4><a class="xref" href="Algorand.Unity.SignatureType.html">SignatureType</a></h4>

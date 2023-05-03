@@ -15,7 +15,7 @@ namespace Algorand.Unity.Formatters
             if (reader.Peek() == JsonToken.ArrayBegin)
                 return ArrayFormatter<byte>.Instance.Deserialize(ref reader);
 
-            var b64 = new NativeText(Allocator.Persistent);
+            var b64 = new NativeText(Allocator.Temp);
             try
             {
                 reader.ReadString(ref b64).ThrowIfError(reader);
@@ -38,7 +38,7 @@ namespace Algorand.Unity.Formatters
         public void Serialize(ref JsonWriter writer, byte[] value)
         {
             var s = System.Convert.ToBase64String(value);
-            using var t = new NativeText(s, Allocator.Persistent);
+            using var t = new NativeText(s, Allocator.Temp);
             writer.WriteString(t);
         }
 
@@ -56,7 +56,7 @@ namespace Algorand.Unity.Formatters
 
         public TByteArray Deserialize(ref JsonReader reader)
         {
-            var text = new NativeText(Allocator.Persistent);
+            var text = new NativeText(Allocator.Temp);
             try
             {
                 reader.ReadString(ref text)
@@ -95,7 +95,7 @@ namespace Algorand.Unity.Formatters
             }
             else
             {
-                var text = new NativeText(Allocator.Persistent);
+                var text = new NativeText(Allocator.Temp);
                 try
                 {
                     reader.ReadString(ref text);
@@ -111,7 +111,7 @@ namespace Algorand.Unity.Formatters
 
         public void Serialize(ref JsonWriter writer, TByteArray value)
         {
-            var text = new NativeText(Allocator.Persistent);
+            var text = new NativeText(Allocator.Temp);
             try
             {
                 value.CopyToBase64(ref text);

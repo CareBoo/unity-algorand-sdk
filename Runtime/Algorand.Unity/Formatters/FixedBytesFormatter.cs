@@ -11,7 +11,7 @@ namespace Algorand.Unity.Formatters
     {
         public T Deserialize(ref JsonReader reader)
         {
-            var text = new NativeText(Allocator.Persistent);
+            var text = new NativeText(Allocator.Temp);
             try
             {
                 reader.ReadString(ref text)
@@ -39,7 +39,7 @@ namespace Algorand.Unity.Formatters
         public void Serialize(ref JsonWriter writer, T value)
         {
             FixedBytesArray<T> bytes = value;
-            var text = new NativeText(Allocator.Persistent);
+            var text = new NativeText(Allocator.Temp);
             try
             {
                 bytes.CopyToBase64(ref text);
@@ -53,7 +53,7 @@ namespace Algorand.Unity.Formatters
 
         public void Serialize(ref MessagePackWriter writer, T value)
         {
-            var arr = new NativeArray<byte>(value.Length, Allocator.Persistent);
+            var arr = new NativeArray<byte>(value.Length, Allocator.Temp);
             try
             {
                 for (var i = 0; i < value.Length; i++)

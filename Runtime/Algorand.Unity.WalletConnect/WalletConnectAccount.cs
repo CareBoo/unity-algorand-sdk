@@ -144,11 +144,12 @@ namespace Algorand.Unity.WalletConnect
 
             var cancellation = CancellationTokenSource.CreateLinkedTokenSource(sessionCancellation.Token, cancellationToken);
             var walletTxns = new WalletTransaction[txns.Length];
+            var accounts = SessionData.Accounts ?? Array.Empty<Address>();
             for (var i = 0; i < txns.Length; i++)
             {
                 var signers = txnsToSign.ContainsIndex(i)
-                    ? new[] { Address }
-                    : new Address[0];
+                    ? accounts
+                    : Array.Empty<Address>();
                 walletTxns[i] = WalletTransaction.New(
                     txns[i],
                     signers: signers

@@ -22,7 +22,7 @@ namespace Algorand.Unity
         {
             if (bytes == null)
                 return default;
-            using var nativeBytes = new NativeArray<byte>(bytes, Allocator.Persistent);
+            using var nativeBytes = new NativeArray<byte>(bytes, Allocator.Temp);
             return Deserialize<T>(nativeBytes, contentType);
         }
 
@@ -52,7 +52,7 @@ namespace Algorand.Unity
         /// <returns>The data deserialized as T</returns>
         public static T DeserializeJson<T>(NativeArray<byte> bytes)
         {
-            var text = new NativeText(bytes.Length, Allocator.Persistent);
+            var text = new NativeText(bytes.Length, Allocator.Temp);
             try
             {
                 unsafe
@@ -76,7 +76,7 @@ namespace Algorand.Unity
         /// <returns>The data deserialized as T</returns>
         public static T DeserializeJson<T>(byte[] bytes)
         {
-            using var nativeByteArray = new NativeArray<byte>(bytes, Allocator.Persistent);
+            using var nativeByteArray = new NativeArray<byte>(bytes, Allocator.Temp);
             return DeserializeJson<T>(nativeByteArray);
         }
 
@@ -100,7 +100,7 @@ namespace Algorand.Unity
         /// <returns>The data deserialized as T</returns>
         public static T DeserializeJson<T>(string text)
         {
-            using var nativeText = new NativeText(text, Allocator.Persistent);
+            using var nativeText = new NativeText(text, Allocator.Temp);
             return DeserializeJson<T>(nativeText);
         }
 
@@ -124,7 +124,7 @@ namespace Algorand.Unity
         /// <returns>The data deserialized as T</returns>        
         public static T DeserializeMessagePack<T>(byte[] bytes)
         {
-            using var nativeBytes = new NativeArray<byte>(bytes, Allocator.Persistent);
+            using var nativeBytes = new NativeArray<byte>(bytes, Allocator.Temp);
             return DeserializeMessagePack<T>(nativeBytes);
         }
 
@@ -151,7 +151,7 @@ namespace Algorand.Unity
         /// <returns>The message pack message as an array of bytes</returns>
         public static byte[] SerializeMessagePack<T>(T obj)
         {
-            using var listBytes = SerializeMessagePack<T>(obj, Allocator.Persistent);
+            using var listBytes = SerializeMessagePack<T>(obj, Allocator.Temp);
             return listBytes.AsArray().ToArray();
         }
 
@@ -178,7 +178,7 @@ namespace Algorand.Unity
         /// <returns>json text as a string</returns>
         public static string SerializeJson<T>(T obj)
         {
-            using var text = SerializeJson<T>(obj, Allocator.Persistent);
+            using var text = SerializeJson<T>(obj, Allocator.Temp);
             return text.ToString();
         }
     }

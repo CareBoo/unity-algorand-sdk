@@ -54,7 +54,7 @@ namespace Algorand.Unity
             /// <returns>Msgpack encoding of the transaction group.</returns>
             public byte[] FinishSigning()
             {
-                using var signed = FinishSigning(Allocator.Persistent);
+                using var signed = FinishSigning(Allocator.Temp);
                 return signed.AsArray().ToArray();
             }
 

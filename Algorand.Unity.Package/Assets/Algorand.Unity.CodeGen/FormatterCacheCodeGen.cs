@@ -21,7 +21,7 @@ namespace Algorand.Unity.Editor.CodeGen
                 .Concat(TypeCache.GetTypesWithAttribute(typeof(AlgoApiFormatterAttribute)))
                 .Select(t => new AlgoApiCompileUnit(t))
                 .Where(cu => cu.IsValid)
-                .GroupBy(cu => cu.SourceInfo.AbsoluteFilePath)
+                .GroupBy(cu => cu.SourceInfo.FilePath)
                 .Select(grouping => grouping.Aggregate(MergeCompileUnit))
                 .Select(ExportToDirectory)
                 .Where(filePath => filePath != null)
@@ -41,7 +41,7 @@ namespace Algorand.Unity.Editor.CodeGen
         {
             try
             {
-                var sourcePath = compileUnit.SourceInfo.AbsoluteFilePath;
+                var sourcePath = compileUnit.SourceInfo.FilePath;
                 var formatterDir = GetFormatterDir(compileUnit);
                 var filenameWithoutExtension = Path.GetFileNameWithoutExtension(sourcePath);
                 var outputPath = Path.Combine(formatterDir, $"{filenameWithoutExtension}.{OutputFileName}");

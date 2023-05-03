@@ -1,9 +1,11 @@
+// ReSharper disable InconsistentNaming
+
 namespace Algorand.Unity
 {
     public partial struct Mnemonic
     {
         /// <summary>
-        /// A list of possible words that occur in a <see cref="Mnemonic"/>
+        ///     A list of possible words that occur in a <see cref="Mnemonic" />
         /// </summary>
         public enum Word : ushort
         {
@@ -2055,7 +2057,8 @@ namespace Algorand.Unity
             zero,
             zone,
             zoo,
-            LENGTH
+            LENGTH,
+            Unknown
         }
     }
 }

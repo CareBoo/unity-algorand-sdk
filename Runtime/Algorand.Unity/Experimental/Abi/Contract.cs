@@ -125,7 +125,7 @@ namespace Algorand.Unity.Experimental.Abi
                 {
                     if (!reader.TryRead(JsonToken.ObjectBegin))
                         JsonReadError.IncorrectType.ThrowIfError(reader);
-                    using var deployments = new NativeList<Deployment>(Allocator.Persistent);
+                    using var deployments = new NativeList<Deployment>(Allocator.Temp);
                     while (reader.Peek() != JsonToken.ObjectEnd
                         && reader.Peek() != JsonToken.None)
                     {

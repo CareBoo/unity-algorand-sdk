@@ -318,6 +318,9 @@
                             <a href="Algorand.Unity.BlockUpgradeVote.html" title="BlockUpgradeVote" class="">BlockUpgradeVote</a>
                           </li>
                           <li class="">
+                            <a href="Algorand.Unity.BoxRef.html" title="BoxRef" class="">BoxRef</a>
+                          </li>
+                          <li class="">
                             <a href="Algorand.Unity.ByteEnumComparer-1.html" title="ByteEnumComparer&lt;T&gt;" class="">ByteEnumComparer&lt;T&gt;</a>
                           </li>
                           <li class="">
@@ -540,6 +543,9 @@
                             <a href="Algorand.Unity.Mnemonic.html" title="Mnemonic" class="">Mnemonic</a>
                           </li>
                           <li class="">
+                            <a href="Algorand.Unity.Mnemonic.ParseError.html" title="Mnemonic.ParseError" class="">Mnemonic.ParseError</a>
+                          </li>
+                          <li class="">
                             <a href="Algorand.Unity.Mnemonic.Word.html" title="Mnemonic.Word" class="">Mnemonic.Word</a>
                           </li>
                           <li class="">
@@ -571,6 +577,9 @@
                           </li>
                           <li class="">
                             <a href="Algorand.Unity.PrivateKey.html" title="PrivateKey" class="">PrivateKey</a>
+                          </li>
+                          <li class="">
+                            <a href="Algorand.Unity.PrivateKey.ParseError.html" title="PrivateKey.ParseError" class="">PrivateKey.ParseError</a>
                           </li>
                           <li class="">
                             <a href="Algorand.Unity.ProvideSourceInfoAttribute.html" title="ProvideSourceInfoAttribute" class="">ProvideSourceInfoAttribute</a>
@@ -1965,6 +1974,9 @@
                             <a href="Algorand.Unity.LowLevel.ByteArrayComparer-1.html" title="ByteArrayComparer&lt;T&gt;" class="">ByteArrayComparer&lt;T&gt;</a>
                           </li>
                           <li class="">
+                            <a href="Algorand.Unity.LowLevel.ByteArraySlice-1.html" title="ByteArraySlice&lt;TBytes&gt;" class="">ByteArraySlice&lt;TBytes&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="Algorand.Unity.LowLevel.FixedBytes128.html" title="FixedBytes128" class="">FixedBytes128</a>
                           </li>
                           <li class="">
@@ -2329,13 +2341,13 @@ an account.</p>
 
 
   <a id="Algorand_Unity_MinBalance__ctor_" data-uid="Algorand.Unity.MinBalance.#ctor*"></a>
-  <h4 id="Algorand_Unity_MinBalance__ctor_System_UInt64_System_UInt64_System_UInt64_System_UInt64_System_UInt64_System_UInt64_" data-uid="Algorand.Unity.MinBalance.#ctor(System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64)">MinBalance(UInt64, UInt64, UInt64, UInt64, UInt64, UInt64)</h4>
+  <h4 id="Algorand_Unity_MinBalance__ctor_System_UInt64_System_UInt64_System_UInt64_System_UInt64_System_UInt64_System_UInt64_System_UInt64_System_UInt64_" data-uid="Algorand.Unity.MinBalance.#ctor(System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64)">MinBalance(UInt64, UInt64, UInt64, UInt64, UInt64, UInt64, UInt64, UInt64)</h4>
   <div class="markdown level1 summary"><p>Get the minimum balance from explicit data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MinBalance(ulong assets = 0UL, ulong applicationsOptedIn = 0UL, ulong applicationsCreated = 0UL, ulong applicationExtraPages = 0UL, ulong applicationSchemaUints = 0UL, ulong applicationSchemaByteSlices = 0UL)</code></pre>
+    <pre><code class="lang-csharp hljs">public MinBalance(ulong assets = 0UL, ulong applicationsOptedIn = 0UL, ulong applicationsCreated = 0UL, ulong applicationExtraPages = 0UL, ulong applicationSchemaUints = 0UL, ulong applicationSchemaByteSlices = 0UL, ulong boxes = 0UL, ulong boxBytes = 0UL)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2381,6 +2393,18 @@ an account.</p>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td><span class="parametername">applicationSchemaByteSlices</span></td>
         <td><p>The total number of application schema byte slices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="parametername">boxes</span></td>
+        <td><p>The total number of boxes associated with the account.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="parametername">boxBytes</span></td>
+        <td><p>The total number of bytes associated with the boxes in the account.</p>
 </td>
       </tr>
     </tbody>
@@ -2490,7 +2514,7 @@ an account.</p>
 
 
   <h4 id="Algorand_Unity_MinBalance_ApplicationSchemaByteSlices" data-uid="Algorand.Unity.MinBalance.ApplicationSchemaByteSlices">ApplicationSchemaByteSlices</h4>
-  <div class="markdown level1 summary"><p>The total number of byteslices in application schema.</p>
+  <div class="markdown level1 summary"><p>The total number of byte slices in application schema.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2639,6 +2663,106 @@ an account.</p>
   </table>
 
 
+  <h4 id="Algorand_Unity_MinBalance_BoxByteCost" data-uid="Algorand.Unity.MinBalance.BoxByteCost">BoxByteCost</h4>
+  <div class="markdown level1 summary"><p>The minimum balance required per box byte.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const ulong BoxByteCost = 400UL</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="Algorand_Unity_MinBalance_BoxBytes" data-uid="Algorand.Unity.MinBalance.BoxBytes">BoxBytes</h4>
+  <div class="markdown level1 summary"><p>The total number of bytes associated with the boxes in the account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ulong BoxBytes</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="Algorand_Unity_MinBalance_BoxCost" data-uid="Algorand.Unity.MinBalance.BoxCost">BoxCost</h4>
+  <div class="markdown level1 summary"><p>The minimum balance required per box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const ulong BoxCost = 2500UL</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="Algorand_Unity_MinBalance_Boxes" data-uid="Algorand.Unity.MinBalance.Boxes">Boxes</h4>
+  <div class="markdown level1 summary"><p>The total number of boxes associated with the account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ulong Boxes</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
   <h4 id="Algorand_Unity_MinBalance_ByteSliceCost" data-uid="Algorand.Unity.MinBalance.ByteSliceCost">ByteSliceCost</h4>
   <div class="markdown level1 summary"><p>The minimum balance required per byteslice in application schema.</p>
 </div>
@@ -2719,13 +2843,13 @@ an account.</p>
 
 
   <a id="Algorand_Unity_MinBalance_With_" data-uid="Algorand.Unity.MinBalance.With*"></a>
-  <h4 id="Algorand_Unity_MinBalance_With_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__" data-uid="Algorand.Unity.MinBalance.With(Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64})">With(Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;)</h4>
+  <h4 id="Algorand_Unity_MinBalance_With_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__" data-uid="Algorand.Unity.MinBalance.With(Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64})">With(Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;)</h4>
   <div class="markdown level1 summary"><p>Modify this min balance with a different amount of data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly MinBalance With(Optional&lt;ulong&gt; assets = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; applicationsOptedIn = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; applicationsCreated = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; applicationExtraPages = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; applicationSchemaUints = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; applicationSchemaByteSlices = default(Optional&lt;ulong&gt;))</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly MinBalance With(Optional&lt;ulong&gt; assets = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; applicationsOptedIn = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; applicationsCreated = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; applicationExtraPages = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; applicationSchemaUints = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; applicationSchemaByteSlices = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; boxes = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; boxBytes = default(Optional&lt;ulong&gt;))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2771,6 +2895,18 @@ an account.</p>
         <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
         <td><span class="parametername">applicationSchemaByteSlices</span></td>
         <td><p>The total number of application schema byte slices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">boxes</span></td>
+        <td><p>The total number of boxes associated with the account.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td><span class="parametername">boxBytes</span></td>
+        <td><p>The total number of bytes associated with the boxes in the account.</p>
 </td>
       </tr>
     </tbody>

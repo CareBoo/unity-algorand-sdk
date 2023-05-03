@@ -33,7 +33,7 @@ namespace Algorand.Unity
         public static byte[] ToSignatureMessage<T>(this T txn)
             where T : ITransaction
         {
-            using var messageForSigning = txn.ToSignatureMessage(Allocator.Persistent);
+            using var messageForSigning = txn.ToSignatureMessage(Allocator.Temp);
             return messageForSigning.ToArray();
         }
 
@@ -48,7 +48,7 @@ namespace Algorand.Unity
             )
             where T : ITransaction
         {
-            using var data = AlgoApiSerializer.SerializeMessagePack(txn, Allocator.Persistent);
+            using var data = AlgoApiSerializer.SerializeMessagePack(txn, Allocator.Temp);
             var result = new NativeByteArray(Transaction.SignaturePrefix.Length + data.Length, allocator);
             for (var i = 0; i < Transaction.SignaturePrefix.Length; i++)
                 result[i] = Transaction.SignaturePrefix[i];
@@ -93,7 +93,7 @@ namespace Algorand.Unity
         public static TransactionId GetId<T>(this T txn)
             where T : ITransaction
         {
-            using var txnData = txn.ToSignatureMessage(Allocator.Persistent);
+            using var txnData = txn.ToSignatureMessage(Allocator.Temp);
             return Sha512.Hash256Truncated(txnData);
         }
 

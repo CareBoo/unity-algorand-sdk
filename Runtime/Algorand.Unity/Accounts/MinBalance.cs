@@ -40,6 +40,16 @@ namespace Algorand.Unity
         public const ulong ByteSliceCost = 50_000L;
 
         /// <summary>
+        /// The minimum balance required per box.
+        /// </summary>
+        public const ulong BoxCost = 2_500L;
+
+        /// <summary>
+        /// The minimum balance required per box byte.
+        /// </summary>
+        public const ulong BoxByteCost = 400L;
+
+        /// <summary>
         /// The number of assets opted in and created.
         /// </summary>
         public readonly ulong Assets;
@@ -65,9 +75,19 @@ namespace Algorand.Unity
         public readonly ulong ApplicationSchemaUints;
 
         /// <summary>
-        /// The total number of byteslices in application schema.
+        /// The total number of byte slices in application schema.
         /// </summary>
         public readonly ulong ApplicationSchemaByteSlices;
+
+        /// <summary>
+        /// The total number of boxes associated with the account.
+        /// </summary>
+        public readonly ulong Boxes;
+
+        /// <summary>
+        /// The total number of bytes associated with the boxes in the account.
+        /// </summary>
+        public readonly ulong BoxBytes;
 
         /// <summary>
         /// Get the minimum balance of an account.
@@ -81,6 +101,8 @@ namespace Algorand.Unity
             ApplicationExtraPages = accountInfo.AppsTotalExtraPages;
             ApplicationSchemaUints = accountInfo.AppsTotalSchema.NumUint;
             ApplicationSchemaByteSlices = accountInfo.AppsTotalSchema.NumByteSlice;
+            Boxes = accountInfo.TotalBoxes;
+            BoxBytes = accountInfo.TotalBoxBytes;
         }
 
         /// <summary>
@@ -95,6 +117,8 @@ namespace Algorand.Unity
             ApplicationExtraPages = accountInfo.AppsTotalExtraPages;
             ApplicationSchemaUints = accountInfo.AppsTotalSchema.NumUint;
             ApplicationSchemaByteSlices = accountInfo.AppsTotalSchema.NumByteSlice;
+            Boxes = accountInfo.TotalBoxes;
+            BoxBytes = accountInfo.TotalBoxBytes;
         }
 
         /// <summary>
@@ -106,13 +130,17 @@ namespace Algorand.Unity
         /// <param name="applicationExtraPages">The total number of extra application pages.</param>
         /// <param name="applicationSchemaUints">The total number of application schema uints.</param>
         /// <param name="applicationSchemaByteSlices">The total number of application schema byte slices.</param>
+        /// <param name="boxes">The total number of boxes associated with the account.</param>
+        /// <param name="boxBytes">The total number of bytes associated with the boxes in the account.</param>
         public MinBalance(
             ulong assets = 0,
             ulong applicationsOptedIn = 0,
             ulong applicationsCreated = 0,
             ulong applicationExtraPages = 0,
             ulong applicationSchemaUints = 0,
-            ulong applicationSchemaByteSlices = 0
+            ulong applicationSchemaByteSlices = 0,
+            ulong boxes = 0,
+            ulong boxBytes = 0
         )
         {
             Assets = assets;
@@ -121,6 +149,8 @@ namespace Algorand.Unity
             ApplicationExtraPages = applicationExtraPages;
             ApplicationSchemaUints = applicationSchemaUints;
             ApplicationSchemaByteSlices = applicationSchemaByteSlices;
+            Boxes = boxes;
+            BoxBytes = boxBytes;
         }
 
         /// <summary>
@@ -132,6 +162,8 @@ namespace Algorand.Unity
         /// <param name="applicationExtraPages">The total number of extra application pages.</param>
         /// <param name="applicationSchemaUints">The total number of application schema uints.</param>
         /// <param name="applicationSchemaByteSlices">The total number of application schema byte slices.</param>
+        /// <param name="boxes">The total number of boxes associated with the account.</param>
+        /// <param name="boxBytes">The total number of bytes associated with the boxes in the account.</param>
         /// <returns>A <see cref="MinBalance"/> with given parameters replaced.</returns>
         public MinBalance With(
             Optional<ulong> assets = default,
@@ -139,16 +171,20 @@ namespace Algorand.Unity
             Optional<ulong> applicationsCreated = default,
             Optional<ulong> applicationExtraPages = default,
             Optional<ulong> applicationSchemaUints = default,
-            Optional<ulong> applicationSchemaByteSlices = default
+            Optional<ulong> applicationSchemaByteSlices = default,
+            Optional<ulong> boxes = default,
+            Optional<ulong> boxBytes = default
         )
         {
             return new MinBalance(
-                assets.HasValue ? assets.Value : Assets,
-                applicationsOptedIn.HasValue ? applicationsOptedIn.Value : ApplicationsOptedIn,
-                applicationsCreated.HasValue ? applicationsCreated.Value : ApplicationsCreated,
-                applicationExtraPages.HasValue ? applicationExtraPages.Value : ApplicationExtraPages,
-                applicationSchemaUints.HasValue ? applicationSchemaUints.Value : ApplicationSchemaUints,
-                applicationSchemaByteSlices.HasValue ? applicationSchemaByteSlices.Value : ApplicationSchemaByteSlices
+                assets.Else(Assets),
+                applicationsOptedIn.Else(ApplicationsOptedIn),
+                applicationsCreated.Else(ApplicationsCreated),
+                applicationExtraPages.Else(ApplicationExtraPages),
+                applicationSchemaUints.Else(ApplicationSchemaUints),
+                applicationSchemaByteSlices.Else(ApplicationSchemaByteSlices),
+                boxes.Else(Boxes),
+                boxBytes.Else(BoxBytes)
             );
         }
 
@@ -164,6 +200,8 @@ namespace Algorand.Unity
              + ApplicationExtraPageCost * ApplicationExtraPages
              + UintCost * ApplicationSchemaUints
              + ByteSliceCost * ApplicationSchemaByteSlices
+             + BoxCost * Boxes
+             + BoxByteCost * BoxBytes
              ;
         }
     }

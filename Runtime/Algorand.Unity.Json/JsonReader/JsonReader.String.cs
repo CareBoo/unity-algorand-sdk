@@ -6,7 +6,7 @@ namespace Algorand.Unity.Json
     {
         public JsonReadError ReadString(out string value)
         {
-            var text = new NativeText(Allocator.Persistent);
+            var text = new NativeText(Allocator.Temp);
             try
             {
                 var result = ReadString(ref text);

@@ -81,8 +81,8 @@ namespace Algorand.Unity
         /// <returns>A <see cref="TransactionId"/></returns>
         public TransactionId GetId()
         {
-            using var msgpack = AlgoApiSerializer.SerializeMessagePack(this, Allocator.Persistent);
-            var data = new NativeByteArray(IdPrefix.Length + msgpack.Length, Allocator.Persistent);
+            using var msgpack = AlgoApiSerializer.SerializeMessagePack(this, Allocator.Temp);
+            var data = new NativeByteArray(IdPrefix.Length + msgpack.Length, Allocator.Temp);
             try
             {
                 data.CopyFrom(IdPrefix, 0);

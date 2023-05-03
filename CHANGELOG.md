@@ -5,6 +5,42 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [4.1.0-pre.4](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.1.0-pre.3...v4.1.0-pre.4) (2023-04-28)
+
+
+### Features
+
+* **accounts:** add mnemonic try parse methods ([c5a6c75](https://github.com/CareBoo/unity-algorand-sdk/commit/c5a6c7557c1df7db8c26d472dcdaba1347e94032))
+* **accounts:** add PrivateKey try parse methods ([4c1289f](https://github.com/CareBoo/unity-algorand-sdk/commit/4c1289fd985d86750300e3cf88439e7d85bb5574))
+* **accounts:** overload Account constructor with mnemonic and string types ([2e368ee](https://github.com/CareBoo/unity-algorand-sdk/commit/2e368ee5eb2edd00b568ef25d4e499f68d8b78a9)), closes [#208](https://github.com/CareBoo/unity-algorand-sdk/issues/208)
+* **lowlevel:** add slice struct and function to ByteArray types ([b10abad](https://github.com/CareBoo/unity-algorand-sdk/commit/b10abad153ef868cd85fac93f5a6ec6456fd8662))
+
+# [4.1.0-pre.3](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.1.0-pre.2...v4.1.0-pre.3) (2023-04-25)
+
+
+### Features
+
+* **applications:** add Box support to `AppCallTxn` ([e3ebfe5](https://github.com/CareBoo/unity-algorand-sdk/commit/e3ebfe59f18b5ff6a92ad7e34585f5d7176f32be))
+
+# [4.1.0-pre.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.1.0-pre.1...v4.1.0-pre.2) (2023-03-20)
+
+
+### Bug Fixes
+
+* **account:** set methods returning `Algorand.Unity.Crypto` types to `internal` ([835f14d](https://github.com/CareBoo/unity-algorand-sdk/commit/835f14d404fa2add655abe3ad7705c43abe762a2))
+
+# [4.1.0-pre.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0...v4.1.0-pre.1) (2023-03-09)
+
+
+### Bug Fixes
+
+* **walletconnect:** use all addresses in a `WalletConnectAccount` as signers ([5dc7214](https://github.com/CareBoo/unity-algorand-sdk/commit/5dc7214a762e8d4eb2b3069ebb621bd723672376))
+
+
+### Features
+
+* **blockchain:** add `MicroAlgos.FromAlgos` conversion function ([055d84a](https://github.com/CareBoo/unity-algorand-sdk/commit/055d84a0121c664af51ccd033b7dd98e2f6baf57))
+
 # [4.0.0](https://github.com/CareBoo/unity-algorand-sdk/compare/v3.0.0...v4.0.0) (2023-02-27)
 
 

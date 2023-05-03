@@ -9,33 +9,33 @@ using UnityEngine;
 namespace Algorand.Unity
 {
     /// <summary>
-    /// An error describing issues with address formatting when converting from a string.
+    ///     An error describing issues with address formatting when converting from a string.
     /// </summary>
     public enum AddressFormatError
     {
         /// <summary>
-        /// The formatting is correct, and there were no errors.
+        ///     The formatting is correct, and there were no errors.
         /// </summary>
         None,
 
         /// <summary>
-        /// The calculated checksum does not match the given checksum.
+        ///     The calculated checksum does not match the given checksum.
         /// </summary>
         InvalidChecksum,
 
         /// <summary>
-        /// The length of the address string is not <see cref="Address.StringLength"/>.
+        ///     The length of the address string is not <see cref="Address.StringLength" />.
         /// </summary>
         IncorrectLength,
 
         /// <summary>
-        /// The string is not valid Base32 format.
+        ///     The string is not valid Base32 format.
         /// </summary>
         NotBase32
     }
 
     /// <summary>
-    /// A public key for an Algorand account.
+    ///     A public key for an Algorand account.
     /// </summary>
     [Serializable]
     [AlgoApiFormatter(typeof(AddressFormatter))]
@@ -45,56 +45,70 @@ namespace Algorand.Unity
             , IEquatable<Address>
     {
         /// <summary>
-        /// Size of an Algorand Address in Bytes.
+        ///     Size of an Algorand Address in Bytes.
         /// </summary>
         public const int SizeBytes = Ed25519.PublicKey.SizeBytes;
 
         /// <summary>
-        /// Length of a formatted Address string.
+        ///     Length of a formatted Address string.
         /// </summary>
         public const int StringLength = 58;
 
         /// <summary>
-        /// An empty address.
+        ///     An empty address.
         /// </summary>
-        public static readonly Address Empty = default(Address);
+        public static readonly Address Empty;
 
-        [FieldOffset(0)] internal byte buffer;
-        [FieldOffset(0), SerializeField] internal Ed25519.PublicKey publicKey;
+        [FieldOffset(0)]
+        [SerializeField]
+        internal Ed25519.PublicKey publicKey;
+
+        [FieldOffset(0)]
+        internal byte buffer;
 
         /// <summary>
-        /// Get the pointer to this struct.
+        ///     Get the pointer to this struct.
         /// </summary>
         /// <returns>A pointer to this struct.</returns>
         public unsafe void* GetUnsafePtr()
         {
             fixed (byte* b = &buffer)
+            {
                 return b;
+            }
         }
 
         /// <summary>
-        /// The length of an Address in Bytes = 32.
+        ///     The length of an Address in Bytes = 32.
         /// </summary>
         public int Length => SizeBytes;
 
         /// <summary>
-        /// The byte of this address at a given index.
+        ///     The byte of this address at a given index.
         /// </summary>
-        /// <param name="index">An index in the range [0, <see cref="Length"/>).</param>
+        /// <param name="index">An index in the range [0, <see cref="Length" />).</param>
         public byte this[int index]
         {
             get => this.GetByteAt(index);
             set => this.SetByteAt(index, value);
         }
 
+        public bool Equals(Address other)
+        {
+            for (var i = 0; i < Ed25519.PublicKey.SizeBytes; i++)
+                if (!this[i].Equals(other[i]))
+                    return false;
+            return true;
+        }
+
         /// <summary>
-        /// Converts this address to a fixed string base32 representation with padding trimmed.
+        ///     Converts this address to a fixed string base32 representation with padding trimmed.
         /// </summary>
         public FixedString128Bytes ToFixedString()
         {
             var result = new FixedString128Bytes();
             var checksum = ComputeCheckSum(publicKey);
-            var bytes = new NativeByteArray(SizeBytes + CheckSum.SizeBytes, Allocator.Persistent);
+            var bytes = new NativeByteArray(SizeBytes + CheckSum.SizeBytes, Allocator.Temp);
             try
             {
                 bytes.CopyFrom(this, 0);
@@ -111,7 +125,7 @@ namespace Algorand.Unity
         }
 
         /// <summary>
-        /// Returns the ed25519 public key this address represents.
+        ///     Returns the ed25519 public key this address represents.
         /// </summary>
         public Ed25519.PublicKey ToPublicKey()
         {
@@ -119,7 +133,7 @@ namespace Algorand.Unity
         }
 
         /// <summary>
-        /// Converts this address to its base32 string representation with trimmed padding.
+        ///     Converts this address to its base32 string representation with trimmed padding.
         /// </summary>
         /// <returns></returns>
         public override string ToString()
@@ -128,31 +142,23 @@ namespace Algorand.Unity
         }
 
         /// <summary>
-        /// Try to parse a string for an address.
+        ///     Try to parse a string for an address.
         /// </summary>
         public static AddressFormatError TryParse<TString>(TString s, out Address address)
             where TString : struct, IUTF8Bytes, INativeList<byte>
         {
             address = default;
-            if (s.Length == 0)
-            {
-                return AddressFormatError.None;
-            }
+            if (s.Length == 0) return AddressFormatError.None;
 
-            if (s.Length != StringLength)
-            {
-                return AddressFormatError.IncorrectLength;
-            }
+            if (s.Length != StringLength) return AddressFormatError.IncorrectLength;
 
             CheckSum checksum = default;
             var bytes = new NativeByteArray(SizeBytes + CheckSum.SizeBytes, Allocator.Temp);
             try
             {
                 var error = Base32Encoding.ToBytes(s, ref bytes);
-                if (error != ConversionError.None)
-                {
-                    return AddressFormatError.NotBase32;
-                }
+                if (error != ConversionError.None) return AddressFormatError.NotBase32;
+
                 bytes.CopyTo(ref address, 0);
                 bytes.CopyTo(ref checksum, SizeBytes);
             }
@@ -166,7 +172,7 @@ namespace Algorand.Unity
         }
 
         /// <summary>
-        /// Try to parse a string for an address.
+        ///     Try to parse a string for an address.
         /// </summary>
         public static AddressFormatError TryParse(string s, out Address address)
         {
@@ -175,12 +181,13 @@ namespace Algorand.Unity
                 address = default;
                 return AddressFormatError.IncorrectLength;
             }
+
             using var nativeS = new NativeText(s, Allocator.Temp);
             return TryParse(nativeS, out address);
         }
 
         /// <summary>
-        /// Determines if the given string is a correctly formatted address.
+        ///     Determines if the given string is a correctly formatted address.
         /// </summary>
         public static bool IsAddressString<TString>(TString s)
             where TString : struct, IUTF8Bytes, INativeList<byte>
@@ -189,7 +196,7 @@ namespace Algorand.Unity
         }
 
         /// <summary>
-        /// Determines if the given string is a correctly formatted address.
+        ///     Determines if the given string is a correctly formatted address.
         /// </summary>
         public static bool IsAddressString(string s)
         {
@@ -197,7 +204,7 @@ namespace Algorand.Unity
         }
 
         /// <summary>
-        /// Get an address from a string. This will throw an error if the string isn't formatter properly.
+        ///     Get an address from a string. This will throw an error if the string isn't formatter properly.
         /// </summary>
         /// <exception cref="ArgumentException">Thrown if the address has an invalid checksum or is not 58 chars long.</exception>
         public static Address FromString<TString>(TString s)
@@ -224,7 +231,7 @@ namespace Algorand.Unity
         }
 
         /// <summary>
-        /// Get an address from a string. This will throw an error if the string isn't formatter properly.
+        ///     Get an address from a string. This will throw an error if the string isn't formatter properly.
         /// </summary>
         /// <exception cref="ArgumentException">Thrown if the address has an invalid checksum or is not 58 chars long.</exception>
         public static Address FromString(string addressString)
@@ -234,7 +241,7 @@ namespace Algorand.Unity
         }
 
         /// <summary>
-        /// Gets the address representation of an ed25519 public key.
+        ///     Gets the address representation of an ed25519 public key.
         /// </summary>
         public static Address FromPublicKey(Ed25519.PublicKey publicKey)
         {
@@ -293,34 +300,36 @@ namespace Algorand.Unity
             return ByteArray.GetHashCode(this);
         }
 
-        public bool Equals(Address other)
-        {
-            for (var i = 0; i < Ed25519.PublicKey.SizeBytes; i++)
-                if (!this[i].Equals(other[i]))
-                    return false;
-            return true;
-        }
-
         [Serializable]
         [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
-        public partial struct CheckSum
+        public struct CheckSum
             : IByteArray
                 , IEquatable<CheckSum>
         {
-            [SerializeField] [FieldOffset(0)] internal byte byte0000;
-
-            [SerializeField] [FieldOffset(1)] internal byte byte0001;
-
-            [SerializeField] [FieldOffset(2)] internal byte byte0002;
-
-            [SerializeField] [FieldOffset(3)] internal byte byte0003;
-
             public const int SizeBytes = 4;
+
+            [SerializeField]
+            [FieldOffset(0)]
+            internal byte byte0000;
+
+            [SerializeField]
+            [FieldOffset(1)]
+            internal byte byte0001;
+
+            [SerializeField]
+            [FieldOffset(2)]
+            internal byte byte0002;
+
+            [SerializeField]
+            [FieldOffset(3)]
+            internal byte byte0003;
 
             public unsafe void* GetUnsafePtr()
             {
                 fixed (byte* b = &byte0000)
+                {
                     return b;
+                }
             }
 
             public int Length => SizeBytes;
@@ -367,7 +376,7 @@ namespace Algorand.Unity
 
             public override string ToString()
             {
-                return System.Convert.ToBase64String(this.ToArray());
+                return Convert.ToBase64String(this.ToArray());
             }
         }
     }

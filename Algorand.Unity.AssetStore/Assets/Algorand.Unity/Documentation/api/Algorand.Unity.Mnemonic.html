@@ -318,6 +318,9 @@
                             <a href="Algorand.Unity.BlockUpgradeVote.html" title="BlockUpgradeVote" class="">BlockUpgradeVote</a>
                           </li>
                           <li class="">
+                            <a href="Algorand.Unity.BoxRef.html" title="BoxRef" class="">BoxRef</a>
+                          </li>
+                          <li class="">
                             <a href="Algorand.Unity.ByteEnumComparer-1.html" title="ByteEnumComparer&lt;T&gt;" class="">ByteEnumComparer&lt;T&gt;</a>
                           </li>
                           <li class="">
@@ -540,6 +543,9 @@
                             <a href="Algorand.Unity.Mnemonic.html" title="Mnemonic" class="active">Mnemonic</a>
                           </li>
                           <li class="">
+                            <a href="Algorand.Unity.Mnemonic.ParseError.html" title="Mnemonic.ParseError" class="">Mnemonic.ParseError</a>
+                          </li>
+                          <li class="">
                             <a href="Algorand.Unity.Mnemonic.Word.html" title="Mnemonic.Word" class="">Mnemonic.Word</a>
                           </li>
                           <li class="">
@@ -571,6 +577,9 @@
                           </li>
                           <li class="">
                             <a href="Algorand.Unity.PrivateKey.html" title="PrivateKey" class="">PrivateKey</a>
+                          </li>
+                          <li class="">
+                            <a href="Algorand.Unity.PrivateKey.ParseError.html" title="PrivateKey.ParseError" class="">PrivateKey.ParseError</a>
                           </li>
                           <li class="">
                             <a href="Algorand.Unity.ProvideSourceInfoAttribute.html" title="ProvideSourceInfoAttribute" class="">ProvideSourceInfoAttribute</a>
@@ -1965,6 +1974,9 @@
                             <a href="Algorand.Unity.LowLevel.ByteArrayComparer-1.html" title="ByteArrayComparer&lt;T&gt;" class="">ByteArrayComparer&lt;T&gt;</a>
                           </li>
                           <li class="">
+                            <a href="Algorand.Unity.LowLevel.ByteArraySlice-1.html" title="ByteArraySlice&lt;TBytes&gt;" class="">ByteArraySlice&lt;TBytes&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="Algorand.Unity.LowLevel.FixedBytes128.html" title="FixedBytes128" class="">FixedBytes128</a>
                           </li>
                           <li class="">
@@ -2506,7 +2518,7 @@
 
   <a id="Algorand_Unity_Mnemonic_FromString_" data-uid="Algorand.Unity.Mnemonic.FromString*"></a>
   <h4 id="Algorand_Unity_Mnemonic_FromString_System_String_" data-uid="Algorand.Unity.Mnemonic.FromString(System.String)">FromString(String)</h4>
-  <div class="markdown level1 summary"><p>Byte struct representing a private key encoded with <a class="xref" href="Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_Length">Length</a> words.</p>
+  <div class="markdown level1 summary"><p>Convert a mnemonic from a string.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2526,7 +2538,8 @@
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">mnemonicString</span></td>
-        <td></td>
+        <td><p>The 25 word mnemonic in a string, with each word separated by spaces.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2541,7 +2554,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Algorand.Unity.Mnemonic.html">Mnemonic</a></td>
-        <td></td>
+        <td><p>A mnemonic parsed from the string.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2626,6 +2640,57 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring#system-valuetype-tostring">ValueType.ToString()</a></div>
+
+
+  <a id="Algorand_Unity_Mnemonic_TryParse_" data-uid="Algorand.Unity.Mnemonic.TryParse*"></a>
+  <h4 id="Algorand_Unity_Mnemonic_TryParse_ReadOnlySpan_System_Char__Algorand_Unity_Mnemonic__" data-uid="Algorand.Unity.Mnemonic.TryParse(ReadOnlySpan{System.Char},Algorand.Unity.Mnemonic@)">TryParse(ReadOnlySpan&lt;Char&gt;, out Mnemonic)</h4>
+  <div class="markdown level1 summary"><p>Try to parse a mnemonic from a string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Mnemonic.ParseError TryParse(ReadOnlySpan&lt;char&gt; mnemonicString, out Mnemonic mnemonic)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ReadOnlySpan</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">mnemonicString</span></td>
+        <td><p>The mnemonic string of 25 words separated by space.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Mnemonic.html">Mnemonic</a></td>
+        <td><span class="parametername">mnemonic</span></td>
+        <td><p>The mnemonic parsed from the mnemonic string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Mnemonic.ParseError.html">Mnemonic.ParseError</a></td>
+        <td><p>A ParseError if the mnemonic string could not be parsed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="operators">Operators
 </h3>
 

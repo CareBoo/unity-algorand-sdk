@@ -10,12 +10,12 @@ namespace Algorand.Unity.LowLevel
     public interface IArray<T>
     {
         /// <summary>
-        /// The length in <see cref="T"/> of this array.
+        ///     The length in <see cref="T" /> of this array.
         /// </summary>
         int Length { get; }
 
         /// <summary>
-        /// Get/set the element at the index.
+        ///     Get/set the element at the index.
         /// </summary>
         T this[int index] { get; set; }
     }
@@ -23,7 +23,7 @@ namespace Algorand.Unity.LowLevel
     public interface IContiguousArray<T> : IArray<T>
     {
         /// <summary>
-        /// Gets the ptr at the beginning of this array.
+        ///     Gets the ptr at the beginning of this array.
         /// </summary>
         unsafe void* GetUnsafePtr();
     }
@@ -93,7 +93,7 @@ namespace Algorand.Unity.LowLevel
             CheckElementAccess(index, bytes.Length);
             unsafe
             {
-                UnsafeUtility.WriteArrayElement<byte>(bytes.GetUnsafePtr(), index, value);
+                UnsafeUtility.WriteArrayElement(bytes.GetUnsafePtr(), index, value);
             }
         }
 
@@ -130,7 +130,8 @@ namespace Algorand.Unity.LowLevel
                 target[i] = source[i - start];
         }
 
-        public static void CopyFrom<T>(this ref T target, NativeArray<byte> source, int start, int length = int.MaxValue)
+        public static void CopyFrom<T>(this ref T target, NativeArray<byte> source, int start,
+            int length = int.MaxValue)
             where T : struct, IByteArray
         {
             if (start >= target.Length)
@@ -166,13 +167,13 @@ namespace Algorand.Unity.LowLevel
         public static string ToBase64<TByteArray>(this TByteArray bytes)
             where TByteArray : struct, IArray<byte>
         {
-            return System.Convert.ToBase64String(bytes.ToArray());
+            return Convert.ToBase64String(bytes.ToArray());
         }
 
         public static TByteArray FromBase64<TByteArray>(string b64)
             where TByteArray : struct, IByteArray
         {
-            var arr = System.Convert.FromBase64String(b64);
+            var arr = Convert.FromBase64String(b64);
             var result = default(TByteArray);
             result.CopyFrom(arr, 0, arr.Length);
             return result;
@@ -181,7 +182,7 @@ namespace Algorand.Unity.LowLevel
         public static NativeArray<byte> ToNativeArray<TByteArray>(this TByteArray bytes, Allocator allocator)
             where TByteArray : struct, IArray<byte>
         {
-            var arr = new NativeArray<byte>(bytes.Length, Allocator.Persistent);
+            var arr = new NativeArray<byte>(bytes.Length, Allocator.Temp);
             try
             {
                 for (var i = 0; i < arr.Length; i++)
@@ -235,6 +236,24 @@ namespace Algorand.Unity.LowLevel
             where TByteArray : unmanaged, IByteArray
         {
             return ByteArrayComparer<TByteArray>.GetHashCode(bytes);
+        }
+
+        public static ByteArraySlice<TBytes> Slice<TBytes>(this TBytes bytes)
+            where TBytes : struct, IByteArray
+        {
+            return new ByteArraySlice<TBytes>(bytes, 0, bytes.Length);
+        }
+
+        public static ByteArraySlice<TBytes> Slice<TBytes>(this TBytes bytes, int start)
+            where TBytes : struct, IByteArray
+        {
+            return new ByteArraySlice<TBytes>(bytes, start, bytes.Length - start);
+        }
+
+        public static ByteArraySlice<TBytes> Slice<TBytes>(this TBytes bytes, int start, int length)
+            where TBytes : struct, IByteArray
+        {
+            return new ByteArraySlice<TBytes>(bytes, start, length);
         }
     }
 }

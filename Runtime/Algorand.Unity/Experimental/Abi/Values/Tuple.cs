@@ -53,13 +53,13 @@ namespace Algorand.Unity.Experimental.Abi
         public EncodedAbiArg Encode<U>(U types, AbiReferences references, Allocator allocator)
             where U : IReadOnlyList<IAbiType>
         {
-            using var encoder = new Encoder<U>(args, types, references, Allocator.Persistent);
+            using var encoder = new Encoder<U>(args, types, references, Allocator.Temp);
             return encoder.Encode(allocator);
         }
 
         public override string ToString()
         {
-            var text = new NativeText(Allocator.Persistent);
+            var text = new NativeText(Allocator.Temp);
             try
             {
                 text.Append((Unicode.Rune)'(');
@@ -179,7 +179,7 @@ namespace Algorand.Unity.Experimental.Abi
                 else
                 {
                     boolShift = 0;
-                    using var bytes = args.EncodeCurrent(types[t], references, Allocator.Persistent);
+                    using var bytes = args.EncodeCurrent(types[t], references, Allocator.Temp);
                     headBytes.AddRange(bytes.Bytes.AsArray());
                 }
             }
@@ -201,7 +201,7 @@ namespace Algorand.Unity.Experimental.Abi
                 boolShift %= 8;
                 if (boolShift == 0)
                     headBytes.Add(0);
-                using var encoded = args.EncodeCurrent(types[t], references, Allocator.Persistent);
+                using var encoded = args.EncodeCurrent(types[t], references, Allocator.Temp);
                 headBytes[headBytes.Length - 1] |= (byte)(encoded[0] >> boolShift);
                 boolShift++;
             }
@@ -220,7 +220,7 @@ namespace Algorand.Unity.Experimental.Abi
 
             private void EncodeDynamicTail(int t)
             {
-                using var bytes = args.EncodeCurrent(types[t], references, Allocator.Persistent);
+                using var bytes = args.EncodeCurrent(types[t], references, Allocator.Temp);
                 tailBytes.AddRange(bytes.Bytes.AsArray());
             }
 

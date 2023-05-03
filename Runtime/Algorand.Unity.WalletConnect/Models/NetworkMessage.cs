@@ -51,7 +51,7 @@ namespace Algorand.Unity.WalletConnect
 
         public static NetworkMessage PublishToTopicEncrypted<T>(T payload, Hex encryptionKey, string topic)
         {
-            using var payloadJson = AlgoApiSerializer.SerializeJson(payload, Allocator.Persistent);
+            using var payloadJson = AlgoApiSerializer.SerializeJson(payload, Allocator.Temp);
             var encryptedPayload = AesCipher.EncryptWithKey(encryptionKey, payloadJson.ToByteArray());
             return PublishToTopic(encryptedPayload, topic);
         }

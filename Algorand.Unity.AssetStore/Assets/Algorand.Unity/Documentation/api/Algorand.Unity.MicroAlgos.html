@@ -318,6 +318,9 @@
                             <a href="Algorand.Unity.BlockUpgradeVote.html" title="BlockUpgradeVote" class="">BlockUpgradeVote</a>
                           </li>
                           <li class="">
+                            <a href="Algorand.Unity.BoxRef.html" title="BoxRef" class="">BoxRef</a>
+                          </li>
+                          <li class="">
                             <a href="Algorand.Unity.ByteEnumComparer-1.html" title="ByteEnumComparer&lt;T&gt;" class="">ByteEnumComparer&lt;T&gt;</a>
                           </li>
                           <li class="">
@@ -540,6 +543,9 @@
                             <a href="Algorand.Unity.Mnemonic.html" title="Mnemonic" class="">Mnemonic</a>
                           </li>
                           <li class="">
+                            <a href="Algorand.Unity.Mnemonic.ParseError.html" title="Mnemonic.ParseError" class="">Mnemonic.ParseError</a>
+                          </li>
+                          <li class="">
                             <a href="Algorand.Unity.Mnemonic.Word.html" title="Mnemonic.Word" class="">Mnemonic.Word</a>
                           </li>
                           <li class="">
@@ -571,6 +577,9 @@
                           </li>
                           <li class="">
                             <a href="Algorand.Unity.PrivateKey.html" title="PrivateKey" class="">PrivateKey</a>
+                          </li>
+                          <li class="">
+                            <a href="Algorand.Unity.PrivateKey.ParseError.html" title="PrivateKey.ParseError" class="">PrivateKey.ParseError</a>
                           </li>
                           <li class="">
                             <a href="Algorand.Unity.ProvideSourceInfoAttribute.html" title="ProvideSourceInfoAttribute" class="">ProvideSourceInfoAttribute</a>
@@ -1965,6 +1974,9 @@
                             <a href="Algorand.Unity.LowLevel.ByteArrayComparer-1.html" title="ByteArrayComparer&lt;T&gt;" class="">ByteArrayComparer&lt;T&gt;</a>
                           </li>
                           <li class="">
+                            <a href="Algorand.Unity.LowLevel.ByteArraySlice-1.html" title="ByteArraySlice&lt;TBytes&gt;" class="">ByteArraySlice&lt;TBytes&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="Algorand.Unity.LowLevel.FixedBytes128.html" title="FixedBytes128" class="">FixedBytes128</a>
                           </li>
                           <li class="">
@@ -2332,7 +2344,7 @@
 
   <a id="Algorand_Unity_MicroAlgos_Amount_" data-uid="Algorand.Unity.MicroAlgos.Amount*"></a>
   <h4 id="Algorand_Unity_MicroAlgos_Amount" data-uid="Algorand.Unity.MicroAlgos.Amount">Amount</h4>
-  <div class="markdown level1 summary"><p>Base unit of Algos</p>
+  <div class="markdown level1 summary"><p>The numeric amount of MicroAlgos.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2444,9 +2456,54 @@
   </table>
 
 
+  <a id="Algorand_Unity_MicroAlgos_FromAlgos_" data-uid="Algorand.Unity.MicroAlgos.FromAlgos*"></a>
+  <h4 id="Algorand_Unity_MicroAlgos_FromAlgos_System_Double_" data-uid="Algorand.Unity.MicroAlgos.FromAlgos(System.Double)">FromAlgos(Double)</h4>
+  <div class="markdown level1 summary"><p>Converts the given amount of algos into microalgos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MicroAlgos FromAlgos(double algos)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">Double</a></td>
+        <td><span class="parametername">algos</span></td>
+        <td><p>The amount of algos</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.MicroAlgos.html">MicroAlgos</a></td>
+        <td><p>MicroAlgo amount of algos</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
   <a id="Algorand_Unity_MicroAlgos_ToAlgos_" data-uid="Algorand.Unity.MicroAlgos.ToAlgos*"></a>
   <h4 id="Algorand_Unity_MicroAlgos_ToAlgos" data-uid="Algorand.Unity.MicroAlgos.ToAlgos">ToAlgos()</h4>
-  <div class="markdown level1 summary"><p>Base unit of Algos</p>
+  <div class="markdown level1 summary"><p>Converts these MicroAlgos to units of Algos.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
