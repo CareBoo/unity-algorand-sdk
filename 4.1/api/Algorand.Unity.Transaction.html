@@ -136,7 +136,8 @@ public struct Transaction : IAssetTransferTxn, IAssetFreezeTxn, IAppCallTxn, IEq
   
   <a id="Algorand_Unity_Transaction_Accounts_" data-uid="Algorand.Unity.Transaction.Accounts*"></a>
   <h4 id="Algorand_Unity_Transaction_Accounts" data-uid="Algorand.Unity.Transaction.Accounts">Accounts</h4>
-  <div class="markdown level1 summary"><p>List of accounts in addition to the sender that may be accessed from the application&apos;s approval-program and clear-state-program.</p>
+  <div class="markdown level1 summary"><p>List of accounts in addition to the sender that may be accessed from the application&apos;s approval-program and
+clear-state-program.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -270,7 +271,9 @@ public AppIndex ApplicationId { get; set; }</code></pre>
   
   <a id="Algorand_Unity_Transaction_ApprovalProgram_" data-uid="Algorand.Unity.Transaction.ApprovalProgram*"></a>
   <h4 id="Algorand_Unity_Transaction_ApprovalProgram" data-uid="Algorand.Unity.Transaction.ApprovalProgram">ApprovalProgram</h4>
-  <div class="markdown level1 summary"><p>Logic executed for every application transaction, except when on-completion is set to &quot;clear&quot;. It can read and write global state for the application, as well as account-specific local state. Approval programs may reject the transaction.</p>
+  <div class="markdown level1 summary"><p>Logic executed for every application transaction, except when on-completion is set to &quot;clear&quot;. It can read and
+write global state for the application, as well as account-specific local state. Approval programs may reject the
+transaction.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -564,7 +567,8 @@ public BoxRef[] Boxes { get; set; }</code></pre>
   
   <a id="Algorand_Unity_Transaction_ClearStateProgram_" data-uid="Algorand.Unity.Transaction.ClearStateProgram*"></a>
   <h4 id="Algorand_Unity_Transaction_ClearStateProgram" data-uid="Algorand.Unity.Transaction.ClearStateProgram">ClearStateProgram</h4>
-  <div class="markdown level1 summary"><p>Logic executed for application transactions with on-completion set to &quot;clear&quot;. It can read and write global state for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.</p>
+  <div class="markdown level1 summary"><p>Logic executed for application transactions with on-completion set to &quot;clear&quot;. It can read and write global state
+for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -645,7 +649,9 @@ public AssetIndex ConfigAsset { get; set; }</code></pre>
   
   <a id="Algorand_Unity_Transaction_ExtraProgramPages_" data-uid="Algorand.Unity.Transaction.ExtraProgramPages*"></a>
   <h4 id="Algorand_Unity_Transaction_ExtraProgramPages" data-uid="Algorand.Unity.Transaction.ExtraProgramPages">ExtraProgramPages</h4>
-  <div class="markdown level1 summary"><p>Number of additional pages allocated to the application&apos;s approval and clear state programs. Each ExtraProgramPages is 2048 bytes. The sum of <a class="xref" href="Algorand.Unity.IAppCallTxn.html#Algorand_Unity_IAppCallTxn_ApprovalProgram">ApprovalProgram</a> and <a class="xref" href="Algorand.Unity.IAppCallTxn.html#Algorand_Unity_IAppCallTxn_ClearStateProgram">ClearStateProgram</a> may not exceed 2048*(1+ExtraProgramPages) bytes.</p>
+  <div class="markdown level1 summary"><p>Number of additional pages allocated to the application&apos;s approval and clear state programs. Each ExtraProgramPages
+is 2048 bytes. The sum of <a class="xref" href="Algorand.Unity.IAppCallTxn.html#Algorand_Unity_IAppCallTxn_ApprovalProgram">ApprovalProgram</a> and <a class="xref" href="Algorand.Unity.IAppCallTxn.html#Algorand_Unity_IAppCallTxn_ClearStateProgram">ClearStateProgram</a> may not exceed
+2048*(1+ExtraProgramPages) bytes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -726,7 +732,8 @@ public ulong FirstValidRound { get; set; }</code></pre>
   
   <a id="Algorand_Unity_Transaction_ForeignApps_" data-uid="Algorand.Unity.Transaction.ForeignApps*"></a>
   <h4 id="Algorand_Unity_Transaction_ForeignApps" data-uid="Algorand.Unity.Transaction.ForeignApps">ForeignApps</h4>
-  <div class="markdown level1 summary"><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+  <div class="markdown level1 summary"><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s
+approval-program and clear-state-program. The access is read-only.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -753,7 +760,8 @@ public ulong[] ForeignApps { get; set; }</code></pre>
   
   <a id="Algorand_Unity_Transaction_ForeignAssets_" data-uid="Algorand.Unity.Transaction.ForeignAssets*"></a>
   <h4 id="Algorand_Unity_Transaction_ForeignAssets" data-uid="Algorand.Unity.Transaction.ForeignAssets">ForeignAssets</h4>
-  <div class="markdown level1 summary"><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+  <div class="markdown level1 summary"><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program.
+The access is read-only.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1492,25 +1500,29 @@ public AssetIndex XferAsset { get; set; }</code></pre>
       <tr>
         <td><a class="xref" href="Algorand.Unity.CompiledTeal.html">CompiledTeal</a>[]</td>
         <td><span class="parametername">appArguments</span></td>
-        <td><p>Transaction specific arguments accessed from the application&apos;s approval-program and clear-state-program.</p>
+        <td><p>Transaction specific arguments accessed from the application&apos;s approval-program and
+clear-state-program.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.Address.html">Address</a>[]</td>
         <td><span class="parametername">accounts</span></td>
-        <td><p>List of accounts in addition to the sender that may be accessed from the application&apos;s approval-program and clear-state-program.</p>
+        <td><p>List of accounts in addition to the sender that may be accessed from the application&apos;s
+approval-program and clear-state-program.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
         <td><span class="parametername">foreignApps</span></td>
-        <td><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+        <td><p>Lists the applications in addition to the application-id whose global states may be accessed
+by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
         <td><span class="parametername">foreignAssets</span></td>
-        <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+        <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program
+and clear-state-program. The access is read-only.</p>
 </td>
       </tr>
       <tr>
@@ -1579,25 +1591,29 @@ public AssetIndex XferAsset { get; set; }</code></pre>
       <tr>
         <td><a class="xref" href="Algorand.Unity.CompiledTeal.html">CompiledTeal</a>[]</td>
         <td><span class="parametername">appArguments</span></td>
-        <td><p>Transaction specific arguments accessed from the application&apos;s approval-program and clear-state-program.</p>
+        <td><p>Transaction specific arguments accessed from the application&apos;s approval-program and
+clear-state-program.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.Address.html">Address</a>[]</td>
         <td><span class="parametername">accounts</span></td>
-        <td><p>List of accounts in addition to the sender that may be accessed from the application&apos;s approval-program and clear-state-program.</p>
+        <td><p>List of accounts in addition to the sender that may be accessed from the application&apos;s
+approval-program and clear-state-program.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
         <td><span class="parametername">foreignApps</span></td>
-        <td><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+        <td><p>Lists the applications in addition to the application-id whose global states may be accessed
+by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
         <td><span class="parametername">foreignAssets</span></td>
-        <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+        <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program
+and clear-state-program. The access is read-only.</p>
 </td>
       </tr>
       <tr>
@@ -1666,25 +1682,29 @@ public AssetIndex XferAsset { get; set; }</code></pre>
       <tr>
         <td><a class="xref" href="Algorand.Unity.CompiledTeal.html">CompiledTeal</a>[]</td>
         <td><span class="parametername">appArguments</span></td>
-        <td><p>Transaction specific arguments accessed from the application&apos;s approval-program and clear-state-program.</p>
+        <td><p>Transaction specific arguments accessed from the application&apos;s approval-program and
+clear-state-program.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.Address.html">Address</a>[]</td>
         <td><span class="parametername">accounts</span></td>
-        <td><p>List of accounts in addition to the sender that may be accessed from the application&apos;s approval-program and clear-state-program.</p>
+        <td><p>List of accounts in addition to the sender that may be accessed from the application&apos;s
+approval-program and clear-state-program.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
         <td><span class="parametername">foreignApps</span></td>
-        <td><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+        <td><p>Lists the applications in addition to the application-id whose global states may be accessed
+by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
         <td><span class="parametername">foreignAssets</span></td>
-        <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+        <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program
+and clear-state-program. The access is read-only.</p>
 </td>
       </tr>
       <tr>
@@ -1747,31 +1767,39 @@ public AssetIndex XferAsset { get; set; }</code></pre>
       <tr>
         <td><a class="xref" href="Algorand.Unity.CompiledTeal.html">CompiledTeal</a></td>
         <td><span class="parametername">approvalProgram</span></td>
-        <td><p>Logic executed for every application transaction, except when on-completion is set to &quot;clear&quot;. It can read and write global state for the application, as well as account-specific local state. Approval programs may reject the transaction.</p>
+        <td><p>Logic executed for every application transaction, except when on-completion is set to
+&quot;clear&quot;. It can read and write global state for the application, as well as account-specific local state. Approval
+programs may reject the transaction.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.CompiledTeal.html">CompiledTeal</a></td>
         <td><span class="parametername">clearStateProgram</span></td>
-        <td><p>Logic executed for application transactions with on-completion set to &quot;clear&quot;. It can read and write global state for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.</p>
+        <td><p>Logic executed for application transactions with on-completion set to &quot;clear&quot;. It can
+read and write global state for the application, as well as account-specific local state. Clear state programs
+cannot reject the transaction.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.StateSchema.html">StateSchema</a></td>
         <td><span class="parametername">globalStateSchema</span></td>
-        <td><p>Holds the maximum number of global state values defined within a <a class="xref" href="Algorand.Unity.StateSchema.html">StateSchema</a> object.</p>
+        <td><p>Holds the maximum number of global state values defined within a
+<a class="xref" href="Algorand.Unity.StateSchema.html">StateSchema</a> object.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.StateSchema.html">StateSchema</a></td>
         <td><span class="parametername">localStateSchema</span></td>
-        <td><p>Holds the maximum number of local state values defined within a <a class="xref" href="Algorand.Unity.StateSchema.html">StateSchema</a> object.</p>
+        <td><p>Holds the maximum number of local state values defined within a
+<a class="xref" href="Algorand.Unity.StateSchema.html">StateSchema</a> object.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td><span class="parametername">extraProgramPages</span></td>
-        <td><p>Number of additional pages allocated to the application&apos;s approval and clear state programs. Each ExtraProgramPages is 2048 bytes. The sum of ApprovalProgram and ClearStateProgram may not exceed 2048*(1+ExtraProgramPages) bytes.</p>
+        <td><p>Number of additional pages allocated to the application&apos;s approval and clear state
+programs. Each ExtraProgramPages is 2048 bytes. The sum of ApprovalProgram and ClearStateProgram may not exceed
+2048*(1+ExtraProgramPages) bytes.</p>
 </td>
       </tr>
     </tbody>
@@ -1834,25 +1862,29 @@ public AssetIndex XferAsset { get; set; }</code></pre>
       <tr>
         <td><a class="xref" href="Algorand.Unity.CompiledTeal.html">CompiledTeal</a>[]</td>
         <td><span class="parametername">appArguments</span></td>
-        <td><p>Transaction specific arguments accessed from the application&apos;s approval-program and clear-state-program.</p>
+        <td><p>Transaction specific arguments accessed from the application&apos;s approval-program and
+clear-state-program.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.Address.html">Address</a>[]</td>
         <td><span class="parametername">accounts</span></td>
-        <td><p>List of accounts in addition to the sender that may be accessed from the application&apos;s approval-program and clear-state-program.</p>
+        <td><p>List of accounts in addition to the sender that may be accessed from the application&apos;s
+approval-program and clear-state-program.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
         <td><span class="parametername">foreignApps</span></td>
-        <td><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+        <td><p>Lists the applications in addition to the application-id whose global states may be accessed
+by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
         <td><span class="parametername">foreignAssets</span></td>
-        <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+        <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program
+and clear-state-program. The access is read-only.</p>
 </td>
       </tr>
       <tr>
@@ -1921,25 +1953,29 @@ public AssetIndex XferAsset { get; set; }</code></pre>
       <tr>
         <td><a class="xref" href="Algorand.Unity.CompiledTeal.html">CompiledTeal</a>[]</td>
         <td><span class="parametername">appArguments</span></td>
-        <td><p>Transaction specific arguments accessed from the application&apos;s approval-program and clear-state-program.</p>
+        <td><p>Transaction specific arguments accessed from the application&apos;s approval-program and
+clear-state-program.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.Address.html">Address</a>[]</td>
         <td><span class="parametername">accounts</span></td>
-        <td><p>List of accounts in addition to the sender that may be accessed from the application&apos;s approval-program and clear-state-program.</p>
+        <td><p>List of accounts in addition to the sender that may be accessed from the application&apos;s
+approval-program and clear-state-program.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
         <td><span class="parametername">foreignApps</span></td>
-        <td><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+        <td><p>Lists the applications in addition to the application-id whose global states may be accessed
+by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
         <td><span class="parametername">foreignAssets</span></td>
-        <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+        <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program
+and clear-state-program. The access is read-only.</p>
 </td>
       </tr>
       <tr>
@@ -2008,43 +2044,53 @@ public AssetIndex XferAsset { get; set; }</code></pre>
       <tr>
         <td><a class="xref" href="Algorand.Unity.CompiledTeal.html">CompiledTeal</a></td>
         <td><span class="parametername">approvalProgram</span></td>
-        <td><p>Logic executed for every application transaction, except when on-completion is set to &quot;clear&quot;. It can read and write global state for the application, as well as account-specific local state. Approval programs may reject the transaction.</p>
+        <td><p>Logic executed for every application transaction, except when on-completion is set to
+&quot;clear&quot;. It can read and write global state for the application, as well as account-specific local state. Approval
+programs may reject the transaction.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.CompiledTeal.html">CompiledTeal</a></td>
         <td><span class="parametername">clearStateProgram</span></td>
-        <td><p>Logic executed for application transactions with on-completion set to &quot;clear&quot;. It can read and write global state for the application, as well as account-specific local state. Clear state programs cannot reject the transaction.</p>
+        <td><p>Logic executed for application transactions with on-completion set to &quot;clear&quot;. It can
+read and write global state for the application, as well as account-specific local state. Clear state programs
+cannot reject the transaction.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td><span class="parametername">extraProgramPages</span></td>
-        <td><p>Number of additional pages allocated to the application&apos;s approval and clear state programs. Each ExtraProgramPages is 2048 bytes. The sum of ApprovalProgram and ClearStateProgram may not exceed 2048*(1+ExtraProgramPages) bytes.</p>
+        <td><p>Number of additional pages allocated to the application&apos;s approval and clear state
+programs. Each ExtraProgramPages is 2048 bytes. The sum of ApprovalProgram and ClearStateProgram may not exceed
+2048*(1+ExtraProgramPages) bytes.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.CompiledTeal.html">CompiledTeal</a>[]</td>
         <td><span class="parametername">appArguments</span></td>
-        <td><p>Transaction specific arguments accessed from the application&apos;s approval-program and clear-state-program.</p>
+        <td><p>Transaction specific arguments accessed from the application&apos;s approval-program and
+clear-state-program.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.Address.html">Address</a>[]</td>
         <td><span class="parametername">accounts</span></td>
-        <td><p>List of accounts in addition to the sender that may be accessed from the application&apos;s approval-program and clear-state-program.</p>
+        <td><p>List of accounts in addition to the sender that may be accessed from the application&apos;s
+approval-program and clear-state-program.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
         <td><span class="parametername">foreignApps</span></td>
-        <td><p>Lists the applications in addition to the application-id whose global states may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+        <td><p>Lists the applications in addition to the application-id whose global states may be accessed
+by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>[]</td>
         <td><span class="parametername">foreignAssets</span></td>
-        <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program and clear-state-program. The access is read-only.</p>
+        <td><p>Lists the assets whose AssetParams may be accessed by this application&apos;s approval-program
+and clear-state-program. The access is read-only.</p>
 </td>
       </tr>
       <tr>
