@@ -13,6 +13,18 @@ references:
   commentId: T:Algorand.Unity.Account
   fullName: Algorand.Unity.Account
   nameWithType: Account
+- uid: Algorand.Unity.Account.#ctor(Algorand.Unity.Mnemonic,Algorand.Unity.Address)
+  name: Account(Mnemonic, Address)
+  href: api/Algorand.Unity.Account.html#Algorand_Unity_Account__ctor_Algorand_Unity_Mnemonic_Algorand_Unity_Address_
+  commentId: M:Algorand.Unity.Account.#ctor(Algorand.Unity.Mnemonic,Algorand.Unity.Address)
+  fullName: Algorand.Unity.Account.Account(Algorand.Unity.Mnemonic, Algorand.Unity.Address)
+  nameWithType: Account.Account(Mnemonic, Address)
+- uid: Algorand.Unity.Account.#ctor(Algorand.Unity.Mnemonic)
+  name: Account(Mnemonic)
+  href: api/Algorand.Unity.Account.html#Algorand_Unity_Account__ctor_Algorand_Unity_Mnemonic_
+  commentId: M:Algorand.Unity.Account.#ctor(Algorand.Unity.Mnemonic)
+  fullName: Algorand.Unity.Account.Account(Algorand.Unity.Mnemonic)
+  nameWithType: Account.Account(Mnemonic)
 - uid: Algorand.Unity.Account.#ctor(Algorand.Unity.PrivateKey,Algorand.Unity.Address)
   name: Account(PrivateKey, Address)
   href: api/Algorand.Unity.Account.html#Algorand_Unity_Account__ctor_Algorand_Unity_PrivateKey_Algorand_Unity_Address_
@@ -25,6 +37,18 @@ references:
   commentId: M:Algorand.Unity.Account.#ctor(Algorand.Unity.PrivateKey)
   fullName: Algorand.Unity.Account.Account(Algorand.Unity.PrivateKey)
   nameWithType: Account.Account(PrivateKey)
+- uid: Algorand.Unity.Account.#ctor(System.String,Algorand.Unity.Address)
+  name: Account(String, Address)
+  href: api/Algorand.Unity.Account.html#Algorand_Unity_Account__ctor_System_String_Algorand_Unity_Address_
+  commentId: M:Algorand.Unity.Account.#ctor(System.String,Algorand.Unity.Address)
+  fullName: Algorand.Unity.Account.Account(System.String, Algorand.Unity.Address)
+  nameWithType: Account.Account(String, Address)
+- uid: Algorand.Unity.Account.#ctor(System.String)
+  name: Account(String)
+  href: api/Algorand.Unity.Account.html#Algorand_Unity_Account__ctor_System_String_
+  commentId: M:Algorand.Unity.Account.#ctor(System.String)
+  fullName: Algorand.Unity.Account.Account(System.String)
+  nameWithType: Account.Account(String)
 - uid: Algorand.Unity.Account.#ctor*
   name: Account
   href: api/Algorand.Unity.Account.html#Algorand_Unity_Account__ctor_
@@ -10313,6 +10337,19 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.AppCallTxn.ApprovalProgram
   nameWithType: AppCallTxn.ApprovalProgram
+- uid: Algorand.Unity.AppCallTxn.Boxes
+  name: Boxes
+  href: api/Algorand.Unity.AppCallTxn.html#Algorand_Unity_AppCallTxn_Boxes
+  commentId: P:Algorand.Unity.AppCallTxn.Boxes
+  fullName: Algorand.Unity.AppCallTxn.Boxes
+  nameWithType: AppCallTxn.Boxes
+- uid: Algorand.Unity.AppCallTxn.Boxes*
+  name: Boxes
+  href: api/Algorand.Unity.AppCallTxn.html#Algorand_Unity_AppCallTxn_Boxes_
+  commentId: Overload:Algorand.Unity.AppCallTxn.Boxes
+  isSpec: "True"
+  fullName: Algorand.Unity.AppCallTxn.Boxes
+  nameWithType: AppCallTxn.Boxes
 - uid: Algorand.Unity.AppCallTxn.ClearStateProgram
   name: ClearStateProgram
   href: api/Algorand.Unity.AppCallTxn.html#Algorand_Unity_AppCallTxn_ClearStateProgram
@@ -10586,6 +10623,12 @@ references:
   commentId: F:Algorand.Unity.AppCallTxn.Params.ApprovalProgram
   fullName: Algorand.Unity.AppCallTxn.Params.ApprovalProgram
   nameWithType: AppCallTxn.Params.ApprovalProgram
+- uid: Algorand.Unity.AppCallTxn.Params.Boxes
+  name: Boxes
+  href: api/Algorand.Unity.AppCallTxn.Params.html#Algorand_Unity_AppCallTxn_Params_Boxes
+  commentId: F:Algorand.Unity.AppCallTxn.Params.Boxes
+  fullName: Algorand.Unity.AppCallTxn.Params.Boxes
+  nameWithType: AppCallTxn.Params.Boxes
 - uid: Algorand.Unity.AppCallTxn.Params.ClearStateProgram
   name: ClearStateProgram
   href: api/Algorand.Unity.AppCallTxn.Params.html#Algorand_Unity_AppCallTxn_Params_ClearStateProgram
@@ -14771,6 +14814,64 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.BlockUpgradeVote.UpgradePropose
   nameWithType: BlockUpgradeVote.UpgradePropose
+- uid: Algorand.Unity.BoxRef
+  name: BoxRef
+  href: api/Algorand.Unity.BoxRef.html
+  commentId: T:Algorand.Unity.BoxRef
+  fullName: Algorand.Unity.BoxRef
+  nameWithType: BoxRef
+- uid: Algorand.Unity.BoxRef.Equals(Algorand.Unity.BoxRef)
+  name: Equals(BoxRef)
+  href: api/Algorand.Unity.BoxRef.html#Algorand_Unity_BoxRef_Equals_Algorand_Unity_BoxRef_
+  commentId: M:Algorand.Unity.BoxRef.Equals(Algorand.Unity.BoxRef)
+  fullName: Algorand.Unity.BoxRef.Equals(Algorand.Unity.BoxRef)
+  nameWithType: BoxRef.Equals(BoxRef)
+- uid: Algorand.Unity.BoxRef.Equals*
+  name: Equals
+  href: api/Algorand.Unity.BoxRef.html#Algorand_Unity_BoxRef_Equals_
+  commentId: Overload:Algorand.Unity.BoxRef.Equals
+  isSpec: "True"
+  fullName: Algorand.Unity.BoxRef.Equals
+  nameWithType: BoxRef.Equals
+- uid: Algorand.Unity.BoxRef.Index
+  name: Index
+  href: api/Algorand.Unity.BoxRef.html#Algorand_Unity_BoxRef_Index
+  commentId: P:Algorand.Unity.BoxRef.Index
+  fullName: Algorand.Unity.BoxRef.Index
+  nameWithType: BoxRef.Index
+- uid: Algorand.Unity.BoxRef.Index*
+  name: Index
+  href: api/Algorand.Unity.BoxRef.html#Algorand_Unity_BoxRef_Index_
+  commentId: Overload:Algorand.Unity.BoxRef.Index
+  isSpec: "True"
+  fullName: Algorand.Unity.BoxRef.Index
+  nameWithType: BoxRef.Index
+- uid: Algorand.Unity.BoxRef.Name
+  name: Name
+  href: api/Algorand.Unity.BoxRef.html#Algorand_Unity_BoxRef_Name
+  commentId: P:Algorand.Unity.BoxRef.Name
+  fullName: Algorand.Unity.BoxRef.Name
+  nameWithType: BoxRef.Name
+- uid: Algorand.Unity.BoxRef.Name*
+  name: Name
+  href: api/Algorand.Unity.BoxRef.html#Algorand_Unity_BoxRef_Name_
+  commentId: Overload:Algorand.Unity.BoxRef.Name
+  isSpec: "True"
+  fullName: Algorand.Unity.BoxRef.Name
+  nameWithType: BoxRef.Name
+- uid: Algorand.Unity.BoxRef.NameBytes
+  name: NameBytes
+  href: api/Algorand.Unity.BoxRef.html#Algorand_Unity_BoxRef_NameBytes
+  commentId: P:Algorand.Unity.BoxRef.NameBytes
+  fullName: Algorand.Unity.BoxRef.NameBytes
+  nameWithType: BoxRef.NameBytes
+- uid: Algorand.Unity.BoxRef.NameBytes*
+  name: NameBytes
+  href: api/Algorand.Unity.BoxRef.html#Algorand_Unity_BoxRef_NameBytes_
+  commentId: Overload:Algorand.Unity.BoxRef.NameBytes
+  isSpec: "True"
+  fullName: Algorand.Unity.BoxRef.NameBytes
+  nameWithType: BoxRef.NameBytes
 - uid: Algorand.Unity.ByteEnumComparer`1
   name: ByteEnumComparer<T>
   href: api/Algorand.Unity.ByteEnumComparer-1.html
@@ -26981,6 +27082,19 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.IAppCallTxn.ApprovalProgram
   nameWithType: IAppCallTxn.ApprovalProgram
+- uid: Algorand.Unity.IAppCallTxn.Boxes
+  name: Boxes
+  href: api/Algorand.Unity.IAppCallTxn.html#Algorand_Unity_IAppCallTxn_Boxes
+  commentId: P:Algorand.Unity.IAppCallTxn.Boxes
+  fullName: Algorand.Unity.IAppCallTxn.Boxes
+  nameWithType: IAppCallTxn.Boxes
+- uid: Algorand.Unity.IAppCallTxn.Boxes*
+  name: Boxes
+  href: api/Algorand.Unity.IAppCallTxn.html#Algorand_Unity_IAppCallTxn_Boxes_
+  commentId: Overload:Algorand.Unity.IAppCallTxn.Boxes
+  isSpec: "True"
+  fullName: Algorand.Unity.IAppCallTxn.Boxes
+  nameWithType: IAppCallTxn.Boxes
 - uid: Algorand.Unity.IAppCallTxn.ClearStateProgram
   name: ClearStateProgram
   href: api/Algorand.Unity.IAppCallTxn.html#Algorand_Unity_IAppCallTxn_ClearStateProgram
@@ -40081,6 +40195,40 @@ references:
   fullName.vb: Algorand.Unity.LowLevel.ByteArray.SetByteAt(Of TByteArray)(ByRef TByteArray, System.Int32, System.Byte)
   nameWithType: ByteArray.SetByteAt<TByteArray>(ref TByteArray, Int32, Byte)
   nameWithType.vb: ByteArray.SetByteAt(Of TByteArray)(ByRef TByteArray, Int32, Byte)
+- uid: Algorand.Unity.LowLevel.ByteArray.Slice*
+  name: Slice
+  href: api/Algorand.Unity.LowLevel.ByteArray.html#Algorand_Unity_LowLevel_ByteArray_Slice_
+  commentId: Overload:Algorand.Unity.LowLevel.ByteArray.Slice
+  isSpec: "True"
+  fullName: Algorand.Unity.LowLevel.ByteArray.Slice
+  nameWithType: ByteArray.Slice
+- uid: Algorand.Unity.LowLevel.ByteArray.Slice``1(``0,System.Int32,System.Int32)
+  name: Slice<TBytes>(TBytes, Int32, Int32)
+  href: api/Algorand.Unity.LowLevel.ByteArray.html#Algorand_Unity_LowLevel_ByteArray_Slice__1___0_System_Int32_System_Int32_
+  commentId: M:Algorand.Unity.LowLevel.ByteArray.Slice``1(``0,System.Int32,System.Int32)
+  name.vb: Slice(Of TBytes)(TBytes, Int32, Int32)
+  fullName: Algorand.Unity.LowLevel.ByteArray.Slice<TBytes>(TBytes, System.Int32, System.Int32)
+  fullName.vb: Algorand.Unity.LowLevel.ByteArray.Slice(Of TBytes)(TBytes, System.Int32, System.Int32)
+  nameWithType: ByteArray.Slice<TBytes>(TBytes, Int32, Int32)
+  nameWithType.vb: ByteArray.Slice(Of TBytes)(TBytes, Int32, Int32)
+- uid: Algorand.Unity.LowLevel.ByteArray.Slice``1(``0,System.Int32)
+  name: Slice<TBytes>(TBytes, Int32)
+  href: api/Algorand.Unity.LowLevel.ByteArray.html#Algorand_Unity_LowLevel_ByteArray_Slice__1___0_System_Int32_
+  commentId: M:Algorand.Unity.LowLevel.ByteArray.Slice``1(``0,System.Int32)
+  name.vb: Slice(Of TBytes)(TBytes, Int32)
+  fullName: Algorand.Unity.LowLevel.ByteArray.Slice<TBytes>(TBytes, System.Int32)
+  fullName.vb: Algorand.Unity.LowLevel.ByteArray.Slice(Of TBytes)(TBytes, System.Int32)
+  nameWithType: ByteArray.Slice<TBytes>(TBytes, Int32)
+  nameWithType.vb: ByteArray.Slice(Of TBytes)(TBytes, Int32)
+- uid: Algorand.Unity.LowLevel.ByteArray.Slice``1(``0)
+  name: Slice<TBytes>(TBytes)
+  href: api/Algorand.Unity.LowLevel.ByteArray.html#Algorand_Unity_LowLevel_ByteArray_Slice__1___0_
+  commentId: M:Algorand.Unity.LowLevel.ByteArray.Slice``1(``0)
+  name.vb: Slice(Of TBytes)(TBytes)
+  fullName: Algorand.Unity.LowLevel.ByteArray.Slice<TBytes>(TBytes)
+  fullName.vb: Algorand.Unity.LowLevel.ByteArray.Slice(Of TBytes)(TBytes)
+  nameWithType: ByteArray.Slice<TBytes>(TBytes)
+  nameWithType.vb: ByteArray.Slice(Of TBytes)(TBytes)
 - uid: Algorand.Unity.LowLevel.ByteArray.ToArray*
   name: ToArray
   href: api/Algorand.Unity.LowLevel.ByteArray.html#Algorand_Unity_LowLevel_ByteArray_ToArray_
@@ -40172,6 +40320,84 @@ references:
   fullName.vb: Algorand.Unity.LowLevel.ByteArrayComparer(Of T).GetHashCode
   nameWithType: ByteArrayComparer<T>.GetHashCode
   nameWithType.vb: ByteArrayComparer(Of T).GetHashCode
+- uid: Algorand.Unity.LowLevel.ByteArraySlice`1
+  name: ByteArraySlice<TBytes>
+  href: api/Algorand.Unity.LowLevel.ByteArraySlice-1.html
+  commentId: T:Algorand.Unity.LowLevel.ByteArraySlice`1
+  name.vb: ByteArraySlice(Of TBytes)
+  fullName: Algorand.Unity.LowLevel.ByteArraySlice<TBytes>
+  fullName.vb: Algorand.Unity.LowLevel.ByteArraySlice(Of TBytes)
+  nameWithType: ByteArraySlice<TBytes>
+  nameWithType.vb: ByteArraySlice(Of TBytes)
+- uid: Algorand.Unity.LowLevel.ByteArraySlice`1.#ctor(`0,System.Int32,System.Int32)
+  name: ByteArraySlice(TBytes, Int32, Int32)
+  href: api/Algorand.Unity.LowLevel.ByteArraySlice-1.html#Algorand_Unity_LowLevel_ByteArraySlice_1__ctor__0_System_Int32_System_Int32_
+  commentId: M:Algorand.Unity.LowLevel.ByteArraySlice`1.#ctor(`0,System.Int32,System.Int32)
+  fullName: Algorand.Unity.LowLevel.ByteArraySlice<TBytes>.ByteArraySlice(TBytes, System.Int32, System.Int32)
+  fullName.vb: Algorand.Unity.LowLevel.ByteArraySlice(Of TBytes).ByteArraySlice(TBytes, System.Int32, System.Int32)
+  nameWithType: ByteArraySlice<TBytes>.ByteArraySlice(TBytes, Int32, Int32)
+  nameWithType.vb: ByteArraySlice(Of TBytes).ByteArraySlice(TBytes, Int32, Int32)
+- uid: Algorand.Unity.LowLevel.ByteArraySlice`1.#ctor*
+  name: ByteArraySlice
+  href: api/Algorand.Unity.LowLevel.ByteArraySlice-1.html#Algorand_Unity_LowLevel_ByteArraySlice_1__ctor_
+  commentId: Overload:Algorand.Unity.LowLevel.ByteArraySlice`1.#ctor
+  isSpec: "True"
+  fullName: Algorand.Unity.LowLevel.ByteArraySlice<TBytes>.ByteArraySlice
+  fullName.vb: Algorand.Unity.LowLevel.ByteArraySlice(Of TBytes).ByteArraySlice
+  nameWithType: ByteArraySlice<TBytes>.ByteArraySlice
+  nameWithType.vb: ByteArraySlice(Of TBytes).ByteArraySlice
+- uid: Algorand.Unity.LowLevel.ByteArraySlice`1.GetUnsafePtr
+  name: GetUnsafePtr()
+  href: api/Algorand.Unity.LowLevel.ByteArraySlice-1.html#Algorand_Unity_LowLevel_ByteArraySlice_1_GetUnsafePtr
+  commentId: M:Algorand.Unity.LowLevel.ByteArraySlice`1.GetUnsafePtr
+  fullName: Algorand.Unity.LowLevel.ByteArraySlice<TBytes>.GetUnsafePtr()
+  fullName.vb: Algorand.Unity.LowLevel.ByteArraySlice(Of TBytes).GetUnsafePtr()
+  nameWithType: ByteArraySlice<TBytes>.GetUnsafePtr()
+  nameWithType.vb: ByteArraySlice(Of TBytes).GetUnsafePtr()
+- uid: Algorand.Unity.LowLevel.ByteArraySlice`1.GetUnsafePtr*
+  name: GetUnsafePtr
+  href: api/Algorand.Unity.LowLevel.ByteArraySlice-1.html#Algorand_Unity_LowLevel_ByteArraySlice_1_GetUnsafePtr_
+  commentId: Overload:Algorand.Unity.LowLevel.ByteArraySlice`1.GetUnsafePtr
+  isSpec: "True"
+  fullName: Algorand.Unity.LowLevel.ByteArraySlice<TBytes>.GetUnsafePtr
+  fullName.vb: Algorand.Unity.LowLevel.ByteArraySlice(Of TBytes).GetUnsafePtr
+  nameWithType: ByteArraySlice<TBytes>.GetUnsafePtr
+  nameWithType.vb: ByteArraySlice(Of TBytes).GetUnsafePtr
+- uid: Algorand.Unity.LowLevel.ByteArraySlice`1.Item(System.Int32)
+  name: Item[Int32]
+  href: api/Algorand.Unity.LowLevel.ByteArraySlice-1.html#Algorand_Unity_LowLevel_ByteArraySlice_1_Item_System_Int32_
+  commentId: P:Algorand.Unity.LowLevel.ByteArraySlice`1.Item(System.Int32)
+  name.vb: Item(Int32)
+  fullName: Algorand.Unity.LowLevel.ByteArraySlice<TBytes>.Item[System.Int32]
+  fullName.vb: Algorand.Unity.LowLevel.ByteArraySlice(Of TBytes).Item(System.Int32)
+  nameWithType: ByteArraySlice<TBytes>.Item[Int32]
+  nameWithType.vb: ByteArraySlice(Of TBytes).Item(Int32)
+- uid: Algorand.Unity.LowLevel.ByteArraySlice`1.Item*
+  name: Item
+  href: api/Algorand.Unity.LowLevel.ByteArraySlice-1.html#Algorand_Unity_LowLevel_ByteArraySlice_1_Item_
+  commentId: Overload:Algorand.Unity.LowLevel.ByteArraySlice`1.Item
+  isSpec: "True"
+  fullName: Algorand.Unity.LowLevel.ByteArraySlice<TBytes>.Item
+  fullName.vb: Algorand.Unity.LowLevel.ByteArraySlice(Of TBytes).Item
+  nameWithType: ByteArraySlice<TBytes>.Item
+  nameWithType.vb: ByteArraySlice(Of TBytes).Item
+- uid: Algorand.Unity.LowLevel.ByteArraySlice`1.Length
+  name: Length
+  href: api/Algorand.Unity.LowLevel.ByteArraySlice-1.html#Algorand_Unity_LowLevel_ByteArraySlice_1_Length
+  commentId: P:Algorand.Unity.LowLevel.ByteArraySlice`1.Length
+  fullName: Algorand.Unity.LowLevel.ByteArraySlice<TBytes>.Length
+  fullName.vb: Algorand.Unity.LowLevel.ByteArraySlice(Of TBytes).Length
+  nameWithType: ByteArraySlice<TBytes>.Length
+  nameWithType.vb: ByteArraySlice(Of TBytes).Length
+- uid: Algorand.Unity.LowLevel.ByteArraySlice`1.Length*
+  name: Length
+  href: api/Algorand.Unity.LowLevel.ByteArraySlice-1.html#Algorand_Unity_LowLevel_ByteArraySlice_1_Length_
+  commentId: Overload:Algorand.Unity.LowLevel.ByteArraySlice`1.Length
+  isSpec: "True"
+  fullName: Algorand.Unity.LowLevel.ByteArraySlice<TBytes>.Length
+  fullName.vb: Algorand.Unity.LowLevel.ByteArraySlice(Of TBytes).Length
+  nameWithType: ByteArraySlice<TBytes>.Length
+  nameWithType.vb: ByteArraySlice(Of TBytes).Length
 - uid: Algorand.Unity.LowLevel.FixedBytes128
   name: FixedBytes128
   href: api/Algorand.Unity.LowLevel.FixedBytes128.html
@@ -43051,12 +43277,12 @@ references:
   commentId: M:Algorand.Unity.MinBalance.#ctor(IndexerAccount)
   fullName: Algorand.Unity.MinBalance.MinBalance(IndexerAccount)
   nameWithType: MinBalance.MinBalance(IndexerAccount)
-- uid: Algorand.Unity.MinBalance.#ctor(System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64)
-  name: MinBalance(UInt64, UInt64, UInt64, UInt64, UInt64, UInt64)
-  href: api/Algorand.Unity.MinBalance.html#Algorand_Unity_MinBalance__ctor_System_UInt64_System_UInt64_System_UInt64_System_UInt64_System_UInt64_System_UInt64_
-  commentId: M:Algorand.Unity.MinBalance.#ctor(System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64)
-  fullName: Algorand.Unity.MinBalance.MinBalance(System.UInt64, System.UInt64, System.UInt64, System.UInt64, System.UInt64, System.UInt64)
-  nameWithType: MinBalance.MinBalance(UInt64, UInt64, UInt64, UInt64, UInt64, UInt64)
+- uid: Algorand.Unity.MinBalance.#ctor(System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64)
+  name: MinBalance(UInt64, UInt64, UInt64, UInt64, UInt64, UInt64, UInt64, UInt64)
+  href: api/Algorand.Unity.MinBalance.html#Algorand_Unity_MinBalance__ctor_System_UInt64_System_UInt64_System_UInt64_System_UInt64_System_UInt64_System_UInt64_System_UInt64_System_UInt64_
+  commentId: M:Algorand.Unity.MinBalance.#ctor(System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64,System.UInt64)
+  fullName: Algorand.Unity.MinBalance.MinBalance(System.UInt64, System.UInt64, System.UInt64, System.UInt64, System.UInt64, System.UInt64, System.UInt64, System.UInt64)
+  nameWithType: MinBalance.MinBalance(UInt64, UInt64, UInt64, UInt64, UInt64, UInt64, UInt64, UInt64)
 - uid: Algorand.Unity.MinBalance.#ctor*
   name: MinBalance
   href: api/Algorand.Unity.MinBalance.html#Algorand_Unity_MinBalance__ctor_
@@ -43124,6 +43350,30 @@ references:
   commentId: F:Algorand.Unity.MinBalance.Assets
   fullName: Algorand.Unity.MinBalance.Assets
   nameWithType: MinBalance.Assets
+- uid: Algorand.Unity.MinBalance.BoxByteCost
+  name: BoxByteCost
+  href: api/Algorand.Unity.MinBalance.html#Algorand_Unity_MinBalance_BoxByteCost
+  commentId: F:Algorand.Unity.MinBalance.BoxByteCost
+  fullName: Algorand.Unity.MinBalance.BoxByteCost
+  nameWithType: MinBalance.BoxByteCost
+- uid: Algorand.Unity.MinBalance.BoxBytes
+  name: BoxBytes
+  href: api/Algorand.Unity.MinBalance.html#Algorand_Unity_MinBalance_BoxBytes
+  commentId: F:Algorand.Unity.MinBalance.BoxBytes
+  fullName: Algorand.Unity.MinBalance.BoxBytes
+  nameWithType: MinBalance.BoxBytes
+- uid: Algorand.Unity.MinBalance.BoxCost
+  name: BoxCost
+  href: api/Algorand.Unity.MinBalance.html#Algorand_Unity_MinBalance_BoxCost
+  commentId: F:Algorand.Unity.MinBalance.BoxCost
+  fullName: Algorand.Unity.MinBalance.BoxCost
+  nameWithType: MinBalance.BoxCost
+- uid: Algorand.Unity.MinBalance.Boxes
+  name: Boxes
+  href: api/Algorand.Unity.MinBalance.html#Algorand_Unity_MinBalance_Boxes
+  commentId: F:Algorand.Unity.MinBalance.Boxes
+  fullName: Algorand.Unity.MinBalance.Boxes
+  nameWithType: MinBalance.Boxes
 - uid: Algorand.Unity.MinBalance.ByteSliceCost
   name: ByteSliceCost
   href: api/Algorand.Unity.MinBalance.html#Algorand_Unity_MinBalance_ByteSliceCost
@@ -43149,15 +43399,15 @@ references:
   commentId: F:Algorand.Unity.MinBalance.UintCost
   fullName: Algorand.Unity.MinBalance.UintCost
   nameWithType: MinBalance.UintCost
-- uid: Algorand.Unity.MinBalance.With(Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64})
-  name: With(Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>)
-  href: api/Algorand.Unity.MinBalance.html#Algorand_Unity_MinBalance_With_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__
-  commentId: M:Algorand.Unity.MinBalance.With(Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64})
-  name.vb: With(Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64))
-  fullName: Algorand.Unity.MinBalance.With(Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>)
-  fullName.vb: Algorand.Unity.MinBalance.With(Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64))
-  nameWithType: MinBalance.With(Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>)
-  nameWithType.vb: MinBalance.With(Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64))
+- uid: Algorand.Unity.MinBalance.With(Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64})
+  name: With(Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>)
+  href: api/Algorand.Unity.MinBalance.html#Algorand_Unity_MinBalance_With_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__
+  commentId: M:Algorand.Unity.MinBalance.With(Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64})
+  name.vb: With(Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64))
+  fullName: Algorand.Unity.MinBalance.With(Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>)
+  fullName.vb: Algorand.Unity.MinBalance.With(Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64))
+  nameWithType: MinBalance.With(Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>)
+  nameWithType.vb: MinBalance.With(Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64))
 - uid: Algorand.Unity.MinBalance.With*
   name: With
   href: api/Algorand.Unity.MinBalance.html#Algorand_Unity_MinBalance_With_
@@ -43285,6 +43535,36 @@ references:
   fullName.vb: Algorand.Unity.Mnemonic.Widening
   nameWithType: Mnemonic.Implicit
   nameWithType.vb: Mnemonic.Widening
+- uid: Algorand.Unity.Mnemonic.ParseError
+  name: Mnemonic.ParseError
+  href: api/Algorand.Unity.Mnemonic.ParseError.html
+  commentId: T:Algorand.Unity.Mnemonic.ParseError
+  fullName: Algorand.Unity.Mnemonic.ParseError
+  nameWithType: Mnemonic.ParseError
+- uid: Algorand.Unity.Mnemonic.ParseError.InvalidChecksum
+  name: InvalidChecksum
+  href: api/Algorand.Unity.Mnemonic.ParseError.html#Algorand_Unity_Mnemonic_ParseError_InvalidChecksum
+  commentId: F:Algorand.Unity.Mnemonic.ParseError.InvalidChecksum
+  fullName: Algorand.Unity.Mnemonic.ParseError.InvalidChecksum
+  nameWithType: Mnemonic.ParseError.InvalidChecksum
+- uid: Algorand.Unity.Mnemonic.ParseError.None
+  name: None
+  href: api/Algorand.Unity.Mnemonic.ParseError.html#Algorand_Unity_Mnemonic_ParseError_None
+  commentId: F:Algorand.Unity.Mnemonic.ParseError.None
+  fullName: Algorand.Unity.Mnemonic.ParseError.None
+  nameWithType: Mnemonic.ParseError.None
+- uid: Algorand.Unity.Mnemonic.ParseError.Not25Words
+  name: Not25Words
+  href: api/Algorand.Unity.Mnemonic.ParseError.html#Algorand_Unity_Mnemonic_ParseError_Not25Words
+  commentId: F:Algorand.Unity.Mnemonic.ParseError.Not25Words
+  fullName: Algorand.Unity.Mnemonic.ParseError.Not25Words
+  nameWithType: Mnemonic.ParseError.Not25Words
+- uid: Algorand.Unity.Mnemonic.ParseError.WordsNotInSet
+  name: WordsNotInSet
+  href: api/Algorand.Unity.Mnemonic.ParseError.html#Algorand_Unity_Mnemonic_ParseError_WordsNotInSet
+  commentId: F:Algorand.Unity.Mnemonic.ParseError.WordsNotInSet
+  fullName: Algorand.Unity.Mnemonic.ParseError.WordsNotInSet
+  nameWithType: Mnemonic.ParseError.WordsNotInSet
 - uid: Algorand.Unity.Mnemonic.SizeBytes
   name: SizeBytes
   href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_SizeBytes
@@ -43317,6 +43597,22 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Mnemonic.ToString
   nameWithType: Mnemonic.ToString
+- uid: Algorand.Unity.Mnemonic.TryParse(ReadOnlySpan{System.Char},Algorand.Unity.Mnemonic@)
+  name: TryParse(ReadOnlySpan<Char>, out Mnemonic)
+  href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_TryParse_ReadOnlySpan_System_Char__Algorand_Unity_Mnemonic__
+  commentId: M:Algorand.Unity.Mnemonic.TryParse(ReadOnlySpan{System.Char},Algorand.Unity.Mnemonic@)
+  name.vb: TryParse(ReadOnlySpan(Of Char), ByRef Mnemonic)
+  fullName: Algorand.Unity.Mnemonic.TryParse(ReadOnlySpan<System.Char>, out Algorand.Unity.Mnemonic)
+  fullName.vb: Algorand.Unity.Mnemonic.TryParse(ReadOnlySpan(Of System.Char), ByRef Algorand.Unity.Mnemonic)
+  nameWithType: Mnemonic.TryParse(ReadOnlySpan<Char>, out Mnemonic)
+  nameWithType.vb: Mnemonic.TryParse(ReadOnlySpan(Of Char), ByRef Mnemonic)
+- uid: Algorand.Unity.Mnemonic.TryParse*
+  name: TryParse
+  href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_TryParse_
+  commentId: Overload:Algorand.Unity.Mnemonic.TryParse
+  isSpec: "True"
+  fullName: Algorand.Unity.Mnemonic.TryParse
+  nameWithType: Mnemonic.TryParse
 - uid: Algorand.Unity.Mnemonic.Word
   name: Mnemonic.Word
   href: api/Algorand.Unity.Mnemonic.Word.html
@@ -54753,6 +55049,12 @@ references:
   commentId: F:Algorand.Unity.Mnemonic.Word.unknown
   fullName: Algorand.Unity.Mnemonic.Word.unknown
   nameWithType: Mnemonic.Word.unknown
+- uid: Algorand.Unity.Mnemonic.Word.Unknown
+  name: Unknown
+  href: api/Algorand.Unity.Mnemonic.Word.html#Algorand_Unity_Mnemonic_Word_Unknown
+  commentId: F:Algorand.Unity.Mnemonic.Word.Unknown
+  fullName: Algorand.Unity.Mnemonic.Word.Unknown
+  nameWithType: Mnemonic.Word.Unknown
 - uid: Algorand.Unity.Mnemonic.Word.unlock
   name: unlock
   href: api/Algorand.Unity.Mnemonic.Word.html#Algorand_Unity_Mnemonic_Word_unlock
@@ -56860,6 +57162,19 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.PrivateKey.Equals
   nameWithType: PrivateKey.Equals
+- uid: Algorand.Unity.PrivateKey.FromMnemonic(Algorand.Unity.Mnemonic)
+  name: FromMnemonic(Mnemonic)
+  href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_FromMnemonic_Algorand_Unity_Mnemonic_
+  commentId: M:Algorand.Unity.PrivateKey.FromMnemonic(Algorand.Unity.Mnemonic)
+  fullName: Algorand.Unity.PrivateKey.FromMnemonic(Algorand.Unity.Mnemonic)
+  nameWithType: PrivateKey.FromMnemonic(Mnemonic)
+- uid: Algorand.Unity.PrivateKey.FromMnemonic*
+  name: FromMnemonic
+  href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_FromMnemonic_
+  commentId: Overload:Algorand.Unity.PrivateKey.FromMnemonic
+  isSpec: "True"
+  fullName: Algorand.Unity.PrivateKey.FromMnemonic
+  nameWithType: PrivateKey.FromMnemonic
 - uid: Algorand.Unity.PrivateKey.FromString(System.String)
   name: FromString(String)
   href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_FromString_System_String_
@@ -56915,6 +57230,30 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.PrivateKey.Length
   nameWithType: PrivateKey.Length
+- uid: Algorand.Unity.PrivateKey.ParseError
+  name: PrivateKey.ParseError
+  href: api/Algorand.Unity.PrivateKey.ParseError.html
+  commentId: T:Algorand.Unity.PrivateKey.ParseError
+  fullName: Algorand.Unity.PrivateKey.ParseError
+  nameWithType: PrivateKey.ParseError
+- uid: Algorand.Unity.PrivateKey.ParseError.InvalidBase64
+  name: InvalidBase64
+  href: api/Algorand.Unity.PrivateKey.ParseError.html#Algorand_Unity_PrivateKey_ParseError_InvalidBase64
+  commentId: F:Algorand.Unity.PrivateKey.ParseError.InvalidBase64
+  fullName: Algorand.Unity.PrivateKey.ParseError.InvalidBase64
+  nameWithType: PrivateKey.ParseError.InvalidBase64
+- uid: Algorand.Unity.PrivateKey.ParseError.InvalidLength
+  name: InvalidLength
+  href: api/Algorand.Unity.PrivateKey.ParseError.html#Algorand_Unity_PrivateKey_ParseError_InvalidLength
+  commentId: F:Algorand.Unity.PrivateKey.ParseError.InvalidLength
+  fullName: Algorand.Unity.PrivateKey.ParseError.InvalidLength
+  nameWithType: PrivateKey.ParseError.InvalidLength
+- uid: Algorand.Unity.PrivateKey.ParseError.None
+  name: None
+  href: api/Algorand.Unity.PrivateKey.ParseError.html#Algorand_Unity_PrivateKey_ParseError_None
+  commentId: F:Algorand.Unity.PrivateKey.ParseError.None
+  fullName: Algorand.Unity.PrivateKey.ParseError.None
+  nameWithType: PrivateKey.ParseError.None
 - uid: Algorand.Unity.PrivateKey.Sign*
   name: Sign
   href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_Sign_
@@ -56944,19 +57283,6 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.PrivateKey.ToAddress
   nameWithType: PrivateKey.ToAddress
-- uid: Algorand.Unity.PrivateKey.ToKeyPair
-  name: ToKeyPair()
-  href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_ToKeyPair
-  commentId: M:Algorand.Unity.PrivateKey.ToKeyPair
-  fullName: Algorand.Unity.PrivateKey.ToKeyPair()
-  nameWithType: PrivateKey.ToKeyPair()
-- uid: Algorand.Unity.PrivateKey.ToKeyPair*
-  name: ToKeyPair
-  href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_ToKeyPair_
-  commentId: Overload:Algorand.Unity.PrivateKey.ToKeyPair
-  isSpec: "True"
-  fullName: Algorand.Unity.PrivateKey.ToKeyPair
-  nameWithType: PrivateKey.ToKeyPair
 - uid: Algorand.Unity.PrivateKey.ToMnemonic
   name: ToMnemonic()
   href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_ToMnemonic
@@ -56970,19 +57296,6 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.PrivateKey.ToMnemonic
   nameWithType: PrivateKey.ToMnemonic
-- uid: Algorand.Unity.PrivateKey.ToPublicKey
-  name: ToPublicKey()
-  href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_ToPublicKey
-  commentId: M:Algorand.Unity.PrivateKey.ToPublicKey
-  fullName: Algorand.Unity.PrivateKey.ToPublicKey()
-  nameWithType: PrivateKey.ToPublicKey()
-- uid: Algorand.Unity.PrivateKey.ToPublicKey*
-  name: ToPublicKey
-  href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_ToPublicKey_
-  commentId: Overload:Algorand.Unity.PrivateKey.ToPublicKey
-  isSpec: "True"
-  fullName: Algorand.Unity.PrivateKey.ToPublicKey
-  nameWithType: PrivateKey.ToPublicKey
 - uid: Algorand.Unity.PrivateKey.ToString
   name: ToString()
   href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_ToString
@@ -56996,6 +57309,22 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.PrivateKey.ToString
   nameWithType: PrivateKey.ToString
+- uid: Algorand.Unity.PrivateKey.TryParse(System.String,Algorand.Unity.PrivateKey@)
+  name: TryParse(String, out PrivateKey)
+  href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_TryParse_System_String_Algorand_Unity_PrivateKey__
+  commentId: M:Algorand.Unity.PrivateKey.TryParse(System.String,Algorand.Unity.PrivateKey@)
+  name.vb: TryParse(String, ByRef PrivateKey)
+  fullName: Algorand.Unity.PrivateKey.TryParse(System.String, out Algorand.Unity.PrivateKey)
+  fullName.vb: Algorand.Unity.PrivateKey.TryParse(System.String, ByRef Algorand.Unity.PrivateKey)
+  nameWithType: PrivateKey.TryParse(String, out PrivateKey)
+  nameWithType.vb: PrivateKey.TryParse(String, ByRef PrivateKey)
+- uid: Algorand.Unity.PrivateKey.TryParse*
+  name: TryParse
+  href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_TryParse_
+  commentId: Overload:Algorand.Unity.PrivateKey.TryParse
+  isSpec: "True"
+  fullName: Algorand.Unity.PrivateKey.TryParse
+  nameWithType: PrivateKey.TryParse
 - uid: Algorand.Unity.ProvideSourceInfoAttribute
   name: ProvideSourceInfoAttribute
   href: api/Algorand.Unity.ProvideSourceInfoAttribute.html
@@ -57015,19 +57344,6 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.ProvideSourceInfoAttribute.ProvideSourceInfoAttribute
   nameWithType: ProvideSourceInfoAttribute.ProvideSourceInfoAttribute
-- uid: Algorand.Unity.ProvideSourceInfoAttribute.AbsoluteFilePath
-  name: AbsoluteFilePath
-  href: api/Algorand.Unity.ProvideSourceInfoAttribute.html#Algorand_Unity_ProvideSourceInfoAttribute_AbsoluteFilePath
-  commentId: P:Algorand.Unity.ProvideSourceInfoAttribute.AbsoluteFilePath
-  fullName: Algorand.Unity.ProvideSourceInfoAttribute.AbsoluteFilePath
-  nameWithType: ProvideSourceInfoAttribute.AbsoluteFilePath
-- uid: Algorand.Unity.ProvideSourceInfoAttribute.AbsoluteFilePath*
-  name: AbsoluteFilePath
-  href: api/Algorand.Unity.ProvideSourceInfoAttribute.html#Algorand_Unity_ProvideSourceInfoAttribute_AbsoluteFilePath_
-  commentId: Overload:Algorand.Unity.ProvideSourceInfoAttribute.AbsoluteFilePath
-  isSpec: "True"
-  fullName: Algorand.Unity.ProvideSourceInfoAttribute.AbsoluteFilePath
-  nameWithType: ProvideSourceInfoAttribute.AbsoluteFilePath
 - uid: Algorand.Unity.ProvideSourceInfoAttribute.AssetPath
   name: AssetPath
   href: api/Algorand.Unity.ProvideSourceInfoAttribute.html#Algorand_Unity_ProvideSourceInfoAttribute_AssetPath
@@ -57041,6 +57357,19 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.ProvideSourceInfoAttribute.AssetPath
   nameWithType: ProvideSourceInfoAttribute.AssetPath
+- uid: Algorand.Unity.ProvideSourceInfoAttribute.FilePath
+  name: FilePath
+  href: api/Algorand.Unity.ProvideSourceInfoAttribute.html#Algorand_Unity_ProvideSourceInfoAttribute_FilePath
+  commentId: P:Algorand.Unity.ProvideSourceInfoAttribute.FilePath
+  fullName: Algorand.Unity.ProvideSourceInfoAttribute.FilePath
+  nameWithType: ProvideSourceInfoAttribute.FilePath
+- uid: Algorand.Unity.ProvideSourceInfoAttribute.FilePath*
+  name: FilePath
+  href: api/Algorand.Unity.ProvideSourceInfoAttribute.html#Algorand_Unity_ProvideSourceInfoAttribute_FilePath_
+  commentId: Overload:Algorand.Unity.ProvideSourceInfoAttribute.FilePath
+  isSpec: "True"
+  fullName: Algorand.Unity.ProvideSourceInfoAttribute.FilePath
+  nameWithType: ProvideSourceInfoAttribute.FilePath
 - uid: Algorand.Unity.ProvideSourceInfoAttribute.LineNumber
   name: LineNumber
   href: api/Algorand.Unity.ProvideSourceInfoAttribute.html#Algorand_Unity_ProvideSourceInfoAttribute_LineNumber
@@ -58539,15 +58868,15 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Transaction.AppArguments
   nameWithType: Transaction.AppArguments
-- uid: Algorand.Unity.Transaction.AppCall(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.OnCompletion,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[])
-  name: AppCall(Address, TransactionParams, AppIndex, OnCompletion, CompiledTeal[], Address[], UInt64[], UInt64[])
-  href: api/Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_AppCall_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_OnCompletion_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___
-  commentId: M:Algorand.Unity.Transaction.AppCall(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.OnCompletion,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[])
-  name.vb: AppCall(Address, TransactionParams, AppIndex, OnCompletion, CompiledTeal(), Address(), UInt64(), UInt64())
-  fullName: Algorand.Unity.Transaction.AppCall(Algorand.Unity.Address, Algorand.Unity.TransactionParams, Algorand.Unity.AppIndex, Algorand.Unity.OnCompletion, Algorand.Unity.CompiledTeal[], Algorand.Unity.Address[], System.UInt64[], System.UInt64[])
-  fullName.vb: Algorand.Unity.Transaction.AppCall(Algorand.Unity.Address, Algorand.Unity.TransactionParams, Algorand.Unity.AppIndex, Algorand.Unity.OnCompletion, Algorand.Unity.CompiledTeal(), Algorand.Unity.Address(), System.UInt64(), System.UInt64())
-  nameWithType: Transaction.AppCall(Address, TransactionParams, AppIndex, OnCompletion, CompiledTeal[], Address[], UInt64[], UInt64[])
-  nameWithType.vb: Transaction.AppCall(Address, TransactionParams, AppIndex, OnCompletion, CompiledTeal(), Address(), UInt64(), UInt64())
+- uid: Algorand.Unity.Transaction.AppCall(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.OnCompletion,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[],Algorand.Unity.BoxRef[])
+  name: AppCall(Address, TransactionParams, AppIndex, OnCompletion, CompiledTeal[], Address[], UInt64[], UInt64[], BoxRef[])
+  href: api/Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_AppCall_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_OnCompletion_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___Algorand_Unity_BoxRef___
+  commentId: M:Algorand.Unity.Transaction.AppCall(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.OnCompletion,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[],Algorand.Unity.BoxRef[])
+  name.vb: AppCall(Address, TransactionParams, AppIndex, OnCompletion, CompiledTeal(), Address(), UInt64(), UInt64(), BoxRef())
+  fullName: Algorand.Unity.Transaction.AppCall(Algorand.Unity.Address, Algorand.Unity.TransactionParams, Algorand.Unity.AppIndex, Algorand.Unity.OnCompletion, Algorand.Unity.CompiledTeal[], Algorand.Unity.Address[], System.UInt64[], System.UInt64[], Algorand.Unity.BoxRef[])
+  fullName.vb: Algorand.Unity.Transaction.AppCall(Algorand.Unity.Address, Algorand.Unity.TransactionParams, Algorand.Unity.AppIndex, Algorand.Unity.OnCompletion, Algorand.Unity.CompiledTeal(), Algorand.Unity.Address(), System.UInt64(), System.UInt64(), Algorand.Unity.BoxRef())
+  nameWithType: Transaction.AppCall(Address, TransactionParams, AppIndex, OnCompletion, CompiledTeal[], Address[], UInt64[], UInt64[], BoxRef[])
+  nameWithType.vb: Transaction.AppCall(Address, TransactionParams, AppIndex, OnCompletion, CompiledTeal(), Address(), UInt64(), UInt64(), BoxRef())
 - uid: Algorand.Unity.Transaction.AppCall*
   name: AppCall
   href: api/Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_AppCall_
@@ -58568,15 +58897,15 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Transaction.AppCallParams
   nameWithType: Transaction.AppCallParams
-- uid: Algorand.Unity.Transaction.AppClearState(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[])
-  name: AppClearState(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[])
-  href: api/Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_AppClearState_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___
-  commentId: M:Algorand.Unity.Transaction.AppClearState(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[])
-  name.vb: AppClearState(Address, TransactionParams, AppIndex, CompiledTeal(), Address(), UInt64(), UInt64())
-  fullName: Algorand.Unity.Transaction.AppClearState(Algorand.Unity.Address, Algorand.Unity.TransactionParams, Algorand.Unity.AppIndex, Algorand.Unity.CompiledTeal[], Algorand.Unity.Address[], System.UInt64[], System.UInt64[])
-  fullName.vb: Algorand.Unity.Transaction.AppClearState(Algorand.Unity.Address, Algorand.Unity.TransactionParams, Algorand.Unity.AppIndex, Algorand.Unity.CompiledTeal(), Algorand.Unity.Address(), System.UInt64(), System.UInt64())
-  nameWithType: Transaction.AppClearState(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[])
-  nameWithType.vb: Transaction.AppClearState(Address, TransactionParams, AppIndex, CompiledTeal(), Address(), UInt64(), UInt64())
+- uid: Algorand.Unity.Transaction.AppClearState(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[],Algorand.Unity.BoxRef[])
+  name: AppClearState(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[], BoxRef[])
+  href: api/Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_AppClearState_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___Algorand_Unity_BoxRef___
+  commentId: M:Algorand.Unity.Transaction.AppClearState(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[],Algorand.Unity.BoxRef[])
+  name.vb: AppClearState(Address, TransactionParams, AppIndex, CompiledTeal(), Address(), UInt64(), UInt64(), BoxRef())
+  fullName: Algorand.Unity.Transaction.AppClearState(Algorand.Unity.Address, Algorand.Unity.TransactionParams, Algorand.Unity.AppIndex, Algorand.Unity.CompiledTeal[], Algorand.Unity.Address[], System.UInt64[], System.UInt64[], Algorand.Unity.BoxRef[])
+  fullName.vb: Algorand.Unity.Transaction.AppClearState(Algorand.Unity.Address, Algorand.Unity.TransactionParams, Algorand.Unity.AppIndex, Algorand.Unity.CompiledTeal(), Algorand.Unity.Address(), System.UInt64(), System.UInt64(), Algorand.Unity.BoxRef())
+  nameWithType: Transaction.AppClearState(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[], BoxRef[])
+  nameWithType.vb: Transaction.AppClearState(Address, TransactionParams, AppIndex, CompiledTeal(), Address(), UInt64(), UInt64(), BoxRef())
 - uid: Algorand.Unity.Transaction.AppClearState*
   name: AppClearState
   href: api/Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_AppClearState_
@@ -58584,15 +58913,15 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Transaction.AppClearState
   nameWithType: Transaction.AppClearState
-- uid: Algorand.Unity.Transaction.AppCloseOut(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[])
-  name: AppCloseOut(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[])
-  href: api/Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_AppCloseOut_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___
-  commentId: M:Algorand.Unity.Transaction.AppCloseOut(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[])
-  name.vb: AppCloseOut(Address, TransactionParams, AppIndex, CompiledTeal(), Address(), UInt64(), UInt64())
-  fullName: Algorand.Unity.Transaction.AppCloseOut(Algorand.Unity.Address, Algorand.Unity.TransactionParams, Algorand.Unity.AppIndex, Algorand.Unity.CompiledTeal[], Algorand.Unity.Address[], System.UInt64[], System.UInt64[])
-  fullName.vb: Algorand.Unity.Transaction.AppCloseOut(Algorand.Unity.Address, Algorand.Unity.TransactionParams, Algorand.Unity.AppIndex, Algorand.Unity.CompiledTeal(), Algorand.Unity.Address(), System.UInt64(), System.UInt64())
-  nameWithType: Transaction.AppCloseOut(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[])
-  nameWithType.vb: Transaction.AppCloseOut(Address, TransactionParams, AppIndex, CompiledTeal(), Address(), UInt64(), UInt64())
+- uid: Algorand.Unity.Transaction.AppCloseOut(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[],Algorand.Unity.BoxRef[])
+  name: AppCloseOut(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[], BoxRef[])
+  href: api/Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_AppCloseOut_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___Algorand_Unity_BoxRef___
+  commentId: M:Algorand.Unity.Transaction.AppCloseOut(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[],Algorand.Unity.BoxRef[])
+  name.vb: AppCloseOut(Address, TransactionParams, AppIndex, CompiledTeal(), Address(), UInt64(), UInt64(), BoxRef())
+  fullName: Algorand.Unity.Transaction.AppCloseOut(Algorand.Unity.Address, Algorand.Unity.TransactionParams, Algorand.Unity.AppIndex, Algorand.Unity.CompiledTeal[], Algorand.Unity.Address[], System.UInt64[], System.UInt64[], Algorand.Unity.BoxRef[])
+  fullName.vb: Algorand.Unity.Transaction.AppCloseOut(Algorand.Unity.Address, Algorand.Unity.TransactionParams, Algorand.Unity.AppIndex, Algorand.Unity.CompiledTeal(), Algorand.Unity.Address(), System.UInt64(), System.UInt64(), Algorand.Unity.BoxRef())
+  nameWithType: Transaction.AppCloseOut(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[], BoxRef[])
+  nameWithType.vb: Transaction.AppCloseOut(Address, TransactionParams, AppIndex, CompiledTeal(), Address(), UInt64(), UInt64(), BoxRef())
 - uid: Algorand.Unity.Transaction.AppCloseOut*
   name: AppCloseOut
   href: api/Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_AppCloseOut_
@@ -58613,15 +58942,15 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Transaction.AppCreate
   nameWithType: Transaction.AppCreate
-- uid: Algorand.Unity.Transaction.AppDelete(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[])
-  name: AppDelete(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[])
-  href: api/Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_AppDelete_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___
-  commentId: M:Algorand.Unity.Transaction.AppDelete(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[])
-  name.vb: AppDelete(Address, TransactionParams, AppIndex, CompiledTeal(), Address(), UInt64(), UInt64())
-  fullName: Algorand.Unity.Transaction.AppDelete(Algorand.Unity.Address, Algorand.Unity.TransactionParams, Algorand.Unity.AppIndex, Algorand.Unity.CompiledTeal[], Algorand.Unity.Address[], System.UInt64[], System.UInt64[])
-  fullName.vb: Algorand.Unity.Transaction.AppDelete(Algorand.Unity.Address, Algorand.Unity.TransactionParams, Algorand.Unity.AppIndex, Algorand.Unity.CompiledTeal(), Algorand.Unity.Address(), System.UInt64(), System.UInt64())
-  nameWithType: Transaction.AppDelete(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[])
-  nameWithType.vb: Transaction.AppDelete(Address, TransactionParams, AppIndex, CompiledTeal(), Address(), UInt64(), UInt64())
+- uid: Algorand.Unity.Transaction.AppDelete(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[],Algorand.Unity.BoxRef[])
+  name: AppDelete(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[], BoxRef[])
+  href: api/Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_AppDelete_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___Algorand_Unity_BoxRef___
+  commentId: M:Algorand.Unity.Transaction.AppDelete(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[],Algorand.Unity.BoxRef[])
+  name.vb: AppDelete(Address, TransactionParams, AppIndex, CompiledTeal(), Address(), UInt64(), UInt64(), BoxRef())
+  fullName: Algorand.Unity.Transaction.AppDelete(Algorand.Unity.Address, Algorand.Unity.TransactionParams, Algorand.Unity.AppIndex, Algorand.Unity.CompiledTeal[], Algorand.Unity.Address[], System.UInt64[], System.UInt64[], Algorand.Unity.BoxRef[])
+  fullName.vb: Algorand.Unity.Transaction.AppDelete(Algorand.Unity.Address, Algorand.Unity.TransactionParams, Algorand.Unity.AppIndex, Algorand.Unity.CompiledTeal(), Algorand.Unity.Address(), System.UInt64(), System.UInt64(), Algorand.Unity.BoxRef())
+  nameWithType: Transaction.AppDelete(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[], BoxRef[])
+  nameWithType.vb: Transaction.AppDelete(Address, TransactionParams, AppIndex, CompiledTeal(), Address(), UInt64(), UInt64(), BoxRef())
 - uid: Algorand.Unity.Transaction.AppDelete*
   name: AppDelete
   href: api/Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_AppDelete_
@@ -58642,15 +58971,15 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Transaction.ApplicationId
   nameWithType: Transaction.ApplicationId
-- uid: Algorand.Unity.Transaction.AppOptIn(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[])
-  name: AppOptIn(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[])
-  href: api/Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_AppOptIn_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___
-  commentId: M:Algorand.Unity.Transaction.AppOptIn(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[])
-  name.vb: AppOptIn(Address, TransactionParams, AppIndex, CompiledTeal(), Address(), UInt64(), UInt64())
-  fullName: Algorand.Unity.Transaction.AppOptIn(Algorand.Unity.Address, Algorand.Unity.TransactionParams, Algorand.Unity.AppIndex, Algorand.Unity.CompiledTeal[], Algorand.Unity.Address[], System.UInt64[], System.UInt64[])
-  fullName.vb: Algorand.Unity.Transaction.AppOptIn(Algorand.Unity.Address, Algorand.Unity.TransactionParams, Algorand.Unity.AppIndex, Algorand.Unity.CompiledTeal(), Algorand.Unity.Address(), System.UInt64(), System.UInt64())
-  nameWithType: Transaction.AppOptIn(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[])
-  nameWithType.vb: Transaction.AppOptIn(Address, TransactionParams, AppIndex, CompiledTeal(), Address(), UInt64(), UInt64())
+- uid: Algorand.Unity.Transaction.AppOptIn(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[],Algorand.Unity.BoxRef[])
+  name: AppOptIn(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[], BoxRef[])
+  href: api/Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_AppOptIn_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___Algorand_Unity_BoxRef___
+  commentId: M:Algorand.Unity.Transaction.AppOptIn(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[],Algorand.Unity.BoxRef[])
+  name.vb: AppOptIn(Address, TransactionParams, AppIndex, CompiledTeal(), Address(), UInt64(), UInt64(), BoxRef())
+  fullName: Algorand.Unity.Transaction.AppOptIn(Algorand.Unity.Address, Algorand.Unity.TransactionParams, Algorand.Unity.AppIndex, Algorand.Unity.CompiledTeal[], Algorand.Unity.Address[], System.UInt64[], System.UInt64[], Algorand.Unity.BoxRef[])
+  fullName.vb: Algorand.Unity.Transaction.AppOptIn(Algorand.Unity.Address, Algorand.Unity.TransactionParams, Algorand.Unity.AppIndex, Algorand.Unity.CompiledTeal(), Algorand.Unity.Address(), System.UInt64(), System.UInt64(), Algorand.Unity.BoxRef())
+  nameWithType: Transaction.AppOptIn(Address, TransactionParams, AppIndex, CompiledTeal[], Address[], UInt64[], UInt64[], BoxRef[])
+  nameWithType.vb: Transaction.AppOptIn(Address, TransactionParams, AppIndex, CompiledTeal(), Address(), UInt64(), UInt64(), BoxRef())
 - uid: Algorand.Unity.Transaction.AppOptIn*
   name: AppOptIn
   href: api/Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_AppOptIn_
@@ -58671,15 +59000,15 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Transaction.ApprovalProgram
   nameWithType: Transaction.ApprovalProgram
-- uid: Algorand.Unity.Transaction.AppUpdateTxn(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal,Algorand.Unity.CompiledTeal,System.UInt64,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[])
-  name: AppUpdateTxn(Address, TransactionParams, AppIndex, CompiledTeal, CompiledTeal, UInt64, CompiledTeal[], Address[], UInt64[], UInt64[])
-  href: api/Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_AppUpdateTxn_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal_Algorand_Unity_CompiledTeal_System_UInt64_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___
-  commentId: M:Algorand.Unity.Transaction.AppUpdateTxn(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal,Algorand.Unity.CompiledTeal,System.UInt64,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[])
-  name.vb: AppUpdateTxn(Address, TransactionParams, AppIndex, CompiledTeal, CompiledTeal, UInt64, CompiledTeal(), Address(), UInt64(), UInt64())
-  fullName: Algorand.Unity.Transaction.AppUpdateTxn(Algorand.Unity.Address, Algorand.Unity.TransactionParams, Algorand.Unity.AppIndex, Algorand.Unity.CompiledTeal, Algorand.Unity.CompiledTeal, System.UInt64, Algorand.Unity.CompiledTeal[], Algorand.Unity.Address[], System.UInt64[], System.UInt64[])
-  fullName.vb: Algorand.Unity.Transaction.AppUpdateTxn(Algorand.Unity.Address, Algorand.Unity.TransactionParams, Algorand.Unity.AppIndex, Algorand.Unity.CompiledTeal, Algorand.Unity.CompiledTeal, System.UInt64, Algorand.Unity.CompiledTeal(), Algorand.Unity.Address(), System.UInt64(), System.UInt64())
-  nameWithType: Transaction.AppUpdateTxn(Address, TransactionParams, AppIndex, CompiledTeal, CompiledTeal, UInt64, CompiledTeal[], Address[], UInt64[], UInt64[])
-  nameWithType.vb: Transaction.AppUpdateTxn(Address, TransactionParams, AppIndex, CompiledTeal, CompiledTeal, UInt64, CompiledTeal(), Address(), UInt64(), UInt64())
+- uid: Algorand.Unity.Transaction.AppUpdateTxn(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal,Algorand.Unity.CompiledTeal,System.UInt64,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[],Algorand.Unity.BoxRef[])
+  name: AppUpdateTxn(Address, TransactionParams, AppIndex, CompiledTeal, CompiledTeal, UInt64, CompiledTeal[], Address[], UInt64[], UInt64[], BoxRef[])
+  href: api/Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_AppUpdateTxn_Algorand_Unity_Address_Algorand_Unity_TransactionParams_Algorand_Unity_AppIndex_Algorand_Unity_CompiledTeal_Algorand_Unity_CompiledTeal_System_UInt64_Algorand_Unity_CompiledTeal___Algorand_Unity_Address___System_UInt64___System_UInt64___Algorand_Unity_BoxRef___
+  commentId: M:Algorand.Unity.Transaction.AppUpdateTxn(Algorand.Unity.Address,Algorand.Unity.TransactionParams,Algorand.Unity.AppIndex,Algorand.Unity.CompiledTeal,Algorand.Unity.CompiledTeal,System.UInt64,Algorand.Unity.CompiledTeal[],Algorand.Unity.Address[],System.UInt64[],System.UInt64[],Algorand.Unity.BoxRef[])
+  name.vb: AppUpdateTxn(Address, TransactionParams, AppIndex, CompiledTeal, CompiledTeal, UInt64, CompiledTeal(), Address(), UInt64(), UInt64(), BoxRef())
+  fullName: Algorand.Unity.Transaction.AppUpdateTxn(Algorand.Unity.Address, Algorand.Unity.TransactionParams, Algorand.Unity.AppIndex, Algorand.Unity.CompiledTeal, Algorand.Unity.CompiledTeal, System.UInt64, Algorand.Unity.CompiledTeal[], Algorand.Unity.Address[], System.UInt64[], System.UInt64[], Algorand.Unity.BoxRef[])
+  fullName.vb: Algorand.Unity.Transaction.AppUpdateTxn(Algorand.Unity.Address, Algorand.Unity.TransactionParams, Algorand.Unity.AppIndex, Algorand.Unity.CompiledTeal, Algorand.Unity.CompiledTeal, System.UInt64, Algorand.Unity.CompiledTeal(), Algorand.Unity.Address(), System.UInt64(), System.UInt64(), Algorand.Unity.BoxRef())
+  nameWithType: Transaction.AppUpdateTxn(Address, TransactionParams, AppIndex, CompiledTeal, CompiledTeal, UInt64, CompiledTeal[], Address[], UInt64[], UInt64[], BoxRef[])
+  nameWithType.vb: Transaction.AppUpdateTxn(Address, TransactionParams, AppIndex, CompiledTeal, CompiledTeal, UInt64, CompiledTeal(), Address(), UInt64(), UInt64(), BoxRef())
 - uid: Algorand.Unity.Transaction.AppUpdateTxn*
   name: AppUpdateTxn
   href: api/Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_AppUpdateTxn_
@@ -58908,6 +59237,19 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Transaction.Atomic
   nameWithType: Transaction.Atomic
+- uid: Algorand.Unity.Transaction.Boxes
+  name: Boxes
+  href: api/Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_Boxes
+  commentId: P:Algorand.Unity.Transaction.Boxes
+  fullName: Algorand.Unity.Transaction.Boxes
+  nameWithType: Transaction.Boxes
+- uid: Algorand.Unity.Transaction.Boxes*
+  name: Boxes
+  href: api/Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_Boxes_
+  commentId: Overload:Algorand.Unity.Transaction.Boxes
+  isSpec: "True"
+  fullName: Algorand.Unity.Transaction.Boxes
+  nameWithType: Transaction.Boxes
 - uid: Algorand.Unity.Transaction.ClearStateProgram
   name: ClearStateProgram
   href: api/Algorand.Unity.Transaction.html#Algorand_Unity_Transaction_ClearStateProgram

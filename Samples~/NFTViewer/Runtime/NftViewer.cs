@@ -103,7 +103,7 @@ namespace Algorand.Unity.Samples.NftViewer
                 {
                     await sent;
                 }
-                catch (UnityWebRequestException e)
+                catch (UnityWebRequestException)
                 {
                     if (webRequest.downloadHandler.error == "Failed to create texture from downloaded bytes")
                         Debug.LogError(

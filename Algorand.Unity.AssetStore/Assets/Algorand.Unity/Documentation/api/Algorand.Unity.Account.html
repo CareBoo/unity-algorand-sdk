@@ -318,6 +318,9 @@
                             <a href="Algorand.Unity.BlockUpgradeVote.html" title="BlockUpgradeVote" class="">BlockUpgradeVote</a>
                           </li>
                           <li class="">
+                            <a href="Algorand.Unity.BoxRef.html" title="BoxRef" class="">BoxRef</a>
+                          </li>
+                          <li class="">
                             <a href="Algorand.Unity.ByteEnumComparer-1.html" title="ByteEnumComparer&lt;T&gt;" class="">ByteEnumComparer&lt;T&gt;</a>
                           </li>
                           <li class="">
@@ -540,6 +543,9 @@
                             <a href="Algorand.Unity.Mnemonic.html" title="Mnemonic" class="">Mnemonic</a>
                           </li>
                           <li class="">
+                            <a href="Algorand.Unity.Mnemonic.ParseError.html" title="Mnemonic.ParseError" class="">Mnemonic.ParseError</a>
+                          </li>
+                          <li class="">
                             <a href="Algorand.Unity.Mnemonic.Word.html" title="Mnemonic.Word" class="">Mnemonic.Word</a>
                           </li>
                           <li class="">
@@ -571,6 +577,9 @@
                           </li>
                           <li class="">
                             <a href="Algorand.Unity.PrivateKey.html" title="PrivateKey" class="">PrivateKey</a>
+                          </li>
+                          <li class="">
+                            <a href="Algorand.Unity.PrivateKey.ParseError.html" title="PrivateKey.ParseError" class="">PrivateKey.ParseError</a>
                           </li>
                           <li class="">
                             <a href="Algorand.Unity.ProvideSourceInfoAttribute.html" title="ProvideSourceInfoAttribute" class="">ProvideSourceInfoAttribute</a>
@@ -1965,6 +1974,9 @@
                             <a href="Algorand.Unity.LowLevel.ByteArrayComparer-1.html" title="ByteArrayComparer&lt;T&gt;" class="">ByteArrayComparer&lt;T&gt;</a>
                           </li>
                           <li class="">
+                            <a href="Algorand.Unity.LowLevel.ByteArraySlice-1.html" title="ByteArraySlice&lt;TBytes&gt;" class="">ByteArraySlice&lt;TBytes&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="Algorand.Unity.LowLevel.FixedBytes128.html" title="FixedBytes128" class="">FixedBytes128</a>
                           </li>
                           <li class="">
@@ -2281,6 +2293,70 @@ should not be used in production.</p>
 
 
   <a id="Algorand_Unity_Account__ctor_" data-uid="Algorand.Unity.Account.#ctor*"></a>
+  <h4 id="Algorand_Unity_Account__ctor_Algorand_Unity_Mnemonic_Algorand_Unity_Address_" data-uid="Algorand.Unity.Account.#ctor(Algorand.Unity.Mnemonic,Algorand.Unity.Address)">Account(Mnemonic, Address)</h4>
+  <div class="markdown level1 summary"><p>Instantiate a rekeyed, in-memory account from a mnemonic.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Account(Mnemonic mnemonic, Address address)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Mnemonic.html">Mnemonic</a></td>
+        <td><span class="parametername">mnemonic</span></td>
+        <td><p>The mnemonic representing this account&apos;s private key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>The address this account is rekeyed to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Algorand_Unity_Account__ctor_" data-uid="Algorand.Unity.Account.#ctor*"></a>
+  <h4 id="Algorand_Unity_Account__ctor_Algorand_Unity_Mnemonic_" data-uid="Algorand.Unity.Account.#ctor(Algorand.Unity.Mnemonic)">Account(Mnemonic)</h4>
+  <div class="markdown level1 summary"><p>Instantiate an in-memory account from a mnemonic.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Account(Mnemonic mnemonic)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Mnemonic.html">Mnemonic</a></td>
+        <td><span class="parametername">mnemonic</span></td>
+        <td><p>The 25 word mnemonic to instantiate the account with.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Algorand_Unity_Account__ctor_" data-uid="Algorand.Unity.Account.#ctor*"></a>
   <h4 id="Algorand_Unity_Account__ctor_Algorand_Unity_PrivateKey_Algorand_Unity_Address_" data-uid="Algorand.Unity.Account.#ctor(Algorand.Unity.PrivateKey,Algorand.Unity.Address)">Account(PrivateKey, Address)</h4>
   <div class="markdown level1 summary"><p>Instantiate an in-memory account that is rekeyed.</p>
 </div>
@@ -2338,6 +2414,70 @@ should not be used in production.</p>
         <td><a class="xref" href="Algorand.Unity.PrivateKey.html">PrivateKey</a></td>
         <td><span class="parametername">privateKey</span></td>
         <td><p>The private key of the account.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Algorand_Unity_Account__ctor_" data-uid="Algorand.Unity.Account.#ctor*"></a>
+  <h4 id="Algorand_Unity_Account__ctor_System_String_Algorand_Unity_Address_" data-uid="Algorand.Unity.Account.#ctor(System.String,Algorand.Unity.Address)">Account(String, Address)</h4>
+  <div class="markdown level1 summary"><p>Instantiate a rekeyed, in-memory account from a string that can be either a private key or mnemonic.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Account(string privateKeyOrMnemonic, Address address)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">privateKeyOrMnemonic</span></td>
+        <td><p>A string that is either an mnemonic or a private key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Address.html">Address</a></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>The address this account is rekeyed to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Algorand_Unity_Account__ctor_" data-uid="Algorand.Unity.Account.#ctor*"></a>
+  <h4 id="Algorand_Unity_Account__ctor_System_String_" data-uid="Algorand.Unity.Account.#ctor(System.String)">Account(String)</h4>
+  <div class="markdown level1 summary"><p>Instantiate an in-memory account from a string that can be either a private key or mnemonic.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Account(string privateKeyOrMnemonic)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">privateKeyOrMnemonic</span></td>
+        <td><p>A string that is either an mnemonic or a private key.</p>
 </td>
       </tr>
     </tbody>
