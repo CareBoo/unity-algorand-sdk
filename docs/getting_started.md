@@ -38,6 +38,6 @@ There are two kinds of smart contracts on the Algorand blockchain:
 
 All smart contracts are written using [TEAL](https://developer.algorand.org/docs/get-details/dapps/avm/teal/). To use a smart contract:
 
-1. Use your favorite tool to write TEAL source code. (Some may like [PyTEAL](https://pyteal.readthedocs.io/en/stable/) or [Reach](https://developer.algorand.org/docs/get-started/dapps/reach/)).
+1. Use your favorite tool to write TEAL source code. (Some may like [PyTEAL](https://pyteal.readthedocs.io/en/stable/)).
 2. Compile the source code using [`AlgodClient.TealCompile`](xref:Algorand.Unity.AlgodClient.TealCompile*).
 3. Use the compiled program in your [`LogicSig`](xref:Algorand.Unity.LogicSig) or [`Transaction.AppCreate`](xref:Algorand.Unity.Transaction.AppCreate*).
