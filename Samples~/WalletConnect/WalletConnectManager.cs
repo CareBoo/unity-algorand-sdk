@@ -16,10 +16,10 @@ namespace Algorand.Unity.Samples.WalletConnect
 
         [FormerlySerializedAs("algoClientURL")]
         [FormerlySerializedAs("AlgoClientURL")]
-        public string algodClientURL = @"https://node.testnet.algoexplorerapi.io";
+        public string algodClientURL = @"https://testnet-api.algonode.cloud";
 
         [FormerlySerializedAs("IndexerURL")]
-        public string indexerURL = @"https://algoindexer.testnet.algoexplorerapi.io";
+        public string indexerURL = @"https://testnet-idx.algonode.cloud";
 
         [SerializeField]
         private WalletConnectCanvas walletConnectCanvas;

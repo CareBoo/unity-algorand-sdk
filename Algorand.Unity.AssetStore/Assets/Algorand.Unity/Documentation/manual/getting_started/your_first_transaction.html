@@ -164,8 +164,8 @@ See <a href="../walletconnect.html">WalletConnect</a> for instructions on how to
 <li><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Install Git</a></li>
 </ul>
 </div>
-<p>The easiest way to access a node in development is via the Algorand Sandbox. Alternatively, <a href="https://testnet.algoexplorer.io/">AlgoExplorer</a>
-provides <a href="https://testnet.algoexplorer.io/api-dev/v2"><code>algod</code></a> and <a href="https://testnet.algoexplorer.io/api-dev/indexer-v2"><code>indexer</code></a> nodes with limited features.</p>
+<p>The easiest way to access a node in development is via the Algorand Sandbox. Alternatively, <a href="https://algonode.io">AlgoNode</a>
+provides <a href="https://testnet-api.algonode.cloud"><code>algod</code></a> and <a href="https://testnet-idx.algonode.cloud"><code>indexer</code></a> nodes with limited features.</p>
 <pre><code class="lang-bash">&gt; git clone https://github.com/algorand/sandbox.git
 &gt; cd sandbox
 &gt; ./sandbox up testnet
@@ -238,10 +238,6 @@ Replace the address with the address of the account you generated earlier.</p>
     CheckBalance().Forget();
 }
 </code></pre><p>Your balance should appear in the editor console when you press <strong>Play</strong> again.</p>
-<div class="NOTE"><h5>Note</h5><p>AlgoExplorer&#39;s <code>algod</code> node does not support the <code>GetAccountInformation</code> endpoint.
-Instead, you&#39;ll need to use <code>IndexerClient.GetAccount</code> to get the balance of algo
-from an account.</p>
-</div>
 <h2 id="send-a-transaction">Send a Transaction</h2>
 <p>The process for sending a transaction will look like</p>
 <ol>

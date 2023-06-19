@@ -34,8 +34,8 @@ Before sending transactions to the Algorand network, the account must be funded 
 > - [Install Docker Compose](https://docs.docker.com/compose/install/)
 > - [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-The easiest way to access a node in development is via the Algorand Sandbox. Alternatively, [AlgoExplorer](https://testnet.algoexplorer.io/)
-provides [`algod`](https://testnet.algoexplorer.io/api-dev/v2) and [`indexer`](https://testnet.algoexplorer.io/api-dev/indexer-v2) nodes with limited features.
+The easiest way to access a node in development is via the Algorand Sandbox. Alternatively, [AlgoNode](https://algonode.io)
+provides [`algod`](https://testnet-api.algonode.cloud) and [`indexer`](https://testnet-idx.algonode.cloud) nodes with limited features.
 
 ```bash
 > git clone https://github.com/algorand/sandbox.git
@@ -132,11 +132,6 @@ public void Start()
 ```
 
 Your balance should appear in the editor console when you press **Play** again.
-
-> [!Note]
-> AlgoExplorer's `algod` node does not support the `GetAccountInformation` endpoint.
-> Instead, you'll need to use `IndexerClient.GetAccount` to get the balance of algo
-> from an account.
 
 ## Send a Transaction
 

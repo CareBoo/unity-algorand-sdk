@@ -69,7 +69,7 @@ using Algorand.Unity;
 
 var sender = "<your sender address>";
 var receiver = "<your receiver address>";
-var algod = new AlgodClient("https://node.testnet.algoexplorerapi.io");
+var algod = new AlgodClient("https://testnet-api.algonode.cloud");
 var suggestedTxnParams = await algod.GetSuggestedParams();
 var microAlgosToSend = 1_000_000L;
 var paymentTxn = Transaction.Payment(sender, suggestedTxnParams, receiver, microAlgosToSend);

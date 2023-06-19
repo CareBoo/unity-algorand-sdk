@@ -263,7 +263,7 @@ and connect to any Algorand wallet supporting <a href="https://developer.algoran
 
 var sender = &quot;&lt;your sender address&gt;&quot;;
 var receiver = &quot;&lt;your receiver address&gt;&quot;;
-var algod = new AlgodClient(&quot;https://node.testnet.algoexplorerapi.io&quot;);
+var algod = new AlgodClient(&quot;https://testnet-api.algonode.cloud&quot;);
 var suggestedTxnParams = await algod.GetSuggestedParams();
 var microAlgosToSend = 1_000_000L;
 var paymentTxn = Transaction.Payment(sender, suggestedTxnParams, receiver, microAlgosToSend);

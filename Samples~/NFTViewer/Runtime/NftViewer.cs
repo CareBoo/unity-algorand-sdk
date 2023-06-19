@@ -10,9 +10,9 @@ namespace Algorand.Unity.Samples.NftViewer
 {
     public class NftViewer : MonoBehaviour
     {
-        public string algoClientNetworkAddress = "https://node.testnet.algoexplorerapi.io";
+        public string algoClientNetworkAddress = "https://testnet-api.algonode.cloud";
 
-        public string indexerNetworkAddress = "https://algoindexer.testnet.algoexplorerapi.io";
+        public string indexerNetworkAddress = "https://testnet-idx.algonode.cloud";
 
         public Transform contentTransform;
 

@@ -114,12 +114,12 @@ public class AlgodClientObject
 }
 ```
 
-Right click in the project hierarchy, and select `Create/Algod Client Object`, then name the file `TestNetAlgoExplorerAlgod`. We're going to use the AlgoExplorer TestNet `algod` service. This service has most endpoints disabled, but it's free to use and has the transaction endpoints enabled which is good for our usecase. Set the `Client/Address` field to the AlgoExplorer TestNet `algod` service address at https://node.testnet.algoexplorerapi.io. Set the `Network` field to `Test Net`. It should look like this:
+Right click in the project hierarchy, and select `Create/Algod Client Object`, then name the file `TestNetAlgod`. We're going to use a third party, TestNet `algod` service, run by AlgoNode. This service has most endpoints disabled, but it's free to use and has the transaction endpoints enabled which is good for our usecase. Set the `Client/Address` field to the AlgoNode TestNet `algod` service address at https://testnet-api.algonode.cloud. Set the `Network` field to `Test Net`. It should look like this:
 
-![TestNetAlgoExplorerAlgod](../images/testnet_algoexplorer_algod.png)
+![TestNetAlgod](../images/testnet_algod.png)
 
 > [!Important]
-> When using an Algorand node in production, it's recommended to consider using multiple nodes or your own node in case of a service outtage. Algo Explorer, while convenient, should not be relied upon by every Dapp.
+> When using an Algorand node in production, it's recommended to consider using multiple nodes or your own node in case of a service outtage. AlgoNode, while convenient, should not be relied upon by every Dapp.
 
 ## Creating the Algorand Standard Asset (ASA)
 
@@ -302,4 +302,4 @@ async UniTaskVoid CreateAsaAsync()
 }
 ```
 
-Go ahead and open that window back up by clicking on the `Create Asset` button. Add your `AssetCreator` account to the `Creator Account` field, and add `TestNetAlgoExplorerAlgod` to the `Algod` field. Click the `Connect` button and wait patiently for ~5-6 seconds. TYou should see that the transaction was submitted in the editor console, followed by a confirmation that the asset was created. The window will close automatically, and if you expand the `Index` field in your `GameToken` asset, you'll see that it was updated with a number. You can see your asset on the blockchain by searching this asset index on the [AlgoExplorer TestNet Block Explorer](https://testnet.algoexplorer.io).
+Go ahead and open that window back up by clicking on the `Create Asset` button. Add your `AssetCreator` account to the `Creator Account` field, and add `TestNetAlgod` to the `Algod` field. Click the `Connect` button and wait patiently for ~5-6 seconds. TYou should see that the transaction was submitted in the editor console, followed by a confirmation that the asset was created. The window will close automatically, and if you expand the `Index` field in your `GameToken` asset, you'll see that it was updated with a number. You can see your asset on the blockchain by searching this asset index on the [AlgoExplorer TestNet Block Explorer](https://testnet.algoexplorer.io).
