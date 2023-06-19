@@ -2,9 +2,9 @@
 
 ## Prerequisites
 
-### Algorand Sandbox
+### AlgoKit LocalNet
 
-This sample requires setting up the Algorand Sandbox. See [Developing with Sandbox](https://careboo.github.io/unity-algorand-sdk/4.0/manual/getting_started/developing_with_sandbox.html) documentation to learn more.
+This sample requires starting the AlgoKit LocalNet. [Install AlgoKit](https://github.com/algorandfoundation/algokit-cli#install), or see [the AlgoKit documentation](https://developer.algorand.org/docs/get-details/algokit/) to learn more.
 
 ### UI Toolkit
 

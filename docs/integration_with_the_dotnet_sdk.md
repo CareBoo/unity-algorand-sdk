@@ -19,17 +19,17 @@ using Algorand.Unity.Net;
 ### `Algorand.Unity.AlgodClient` to `Algorand.Algod.DefaultApi`:
 
 ```csharp
-Algorand.Unity.AlgodClient sandboxAlgodClient = new Algorand.Unity.AlgodClient(
+Algorand.Unity.AlgodClient localAlgodClient = new Algorand.Unity.AlgodClient(
     "http://localhost:4001",
     "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-Algorand.Algod.DefaultApi sandboxAlgodDefaultApi = sandboxAlgodClient.ToDefaultApi();
+Algorand.Algod.DefaultApi localAlgodDefaultApi = localAlgodClient.ToDefaultApi();
 ```
 
 ### `Algorand.Unity.IndexerClient` to `Algorand.Indexer.LookupApi`:
 
 ```csharp
-Algorand.Unity.IndexerClient sandboxIndexerClient = new Algorand.Unity.IndexerClient("http://localhost:8980");
-Algorand.Indexer.LookupApi sandboxIndexerLookupApi = sandboxIndexerClient.ToLookupApi();
+Algorand.Unity.IndexerClient localIndexerClient = new Algorand.Unity.IndexerClient("http://localhost:8980");
+Algorand.Indexer.LookupApi localIndexerLookupApi = localIndexerClient.ToLookupApi();
 ```
 
 ### `Algorand.Unity.Address` to `Algorand.Address` (Read-Only)

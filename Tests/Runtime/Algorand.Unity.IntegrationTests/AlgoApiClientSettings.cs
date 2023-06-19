@@ -7,12 +7,12 @@ using UnityEditor;
 
 public static class AlgoApiClientSettings
 {
-    public static IAlgodClient Algod { get; set; } = GetSandboxAlgodClient();
-    public static IIndexerClient Indexer { get; set; } = GetSandboxIndexerClient();
-    public static KmdClient Kmd { get; set; } = GetSandboxKmdClient();
+    public static IAlgodClient Algod { get; set; } = GetLocalAlgodClient();
+    public static IIndexerClient Indexer { get; set; } = GetLocalIndexerClient();
+    public static KmdClient Kmd { get; set; } = GetLocalKmdClient();
 
-    public static AlgodClient DefaultAlgod { get; set; } = GetSandboxAlgodClient();
-    public static IndexerClient DefaultIndexer { get; set; } = GetSandboxIndexerClient();
+    public static AlgodClient DefaultAlgod { get; set; } = GetLocalAlgodClient();
+    public static IndexerClient DefaultIndexer { get; set; } = GetLocalIndexerClient();
 
     public static T GetJson<T>(string propertyPath, T defaultVal)
     {
@@ -43,7 +43,7 @@ public static class AlgoApiClientSettings
         return $"{nameof(AlgoApiClientSettings)}_{propertyPath}";
     }
 
-    private static AlgodClient GetSandboxAlgodClient()
+    private static AlgodClient GetLocalAlgodClient()
     {
         return new AlgodClient(
             address: "http://localhost:4001",
@@ -51,12 +51,12 @@ public static class AlgoApiClientSettings
         );
     }
 
-    private static IndexerClient GetSandboxIndexerClient()
+    private static IndexerClient GetLocalIndexerClient()
     {
         return new IndexerClient(address: "http://localhost:8980");
     }
 
-    private static KmdClient GetSandboxKmdClient()
+    private static KmdClient GetLocalKmdClient()
     {
         return new KmdClient(
             address: "http://localhost:4002",

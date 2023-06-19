@@ -3,8 +3,6 @@
 - name: Getting Started
   href: ../../docs/getting_started.md
   items:
-    - name: Developing with Algorand Sandbox
-      href: ../../docs/getting_started/developing_with_sandbox.md
     - name: Your First Transaction
       href: ../../docs/getting_started/your_first_transaction.md
 - name: Algorand Standard Assets

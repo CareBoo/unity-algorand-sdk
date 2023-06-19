@@ -67,7 +67,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/algorand_standard_assets.html",
-          "hash": "bXrG7DIdT1wfsOuu/o+OUswaxoDdzBqf0ZaboIqIfM8="
+          "hash": "xpb6WN7xbx+VYE0KR+I8WnJXEPmR88lzsrorKHW5tQw="
         }
       },
       "is_incremental": false,
@@ -79,7 +79,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/algorand_standard_assets/creating_asas_in_editor.html",
-          "hash": "UvZjNxD0BrHwCS2jTWS4uO/W8UL5Eplc4vsfg7CE0Ss="
+          "hash": "d0+Zo3AA8LrcpN9Tyu3jd4D1XdNNBP58YZzFe+G/kXs="
         }
       },
       "is_incremental": false,
@@ -91,19 +91,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/getting_started.html",
-          "hash": "XFNRimOv+FtP7uIyjDd6Rb+R3BaVdh028KUFJw4Lq8E="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "../docs/getting_started/developing_with_sandbox.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/getting_started/developing_with_sandbox.html",
-          "hash": "UYCWDjHDRqOwZpV7KDwopdJq0/uNvNWGH5pNxW/bqWk="
+          "hash": "/3GOaWeKTwo2qmkWqx/v1UekIybayOZShOWb5+x2/go="
         }
       },
       "is_incremental": false,
@@ -115,7 +103,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/getting_started/your_first_transaction.html",
-          "hash": "0qYw9ivNSkmjx0m5tD2TlDqCTeWaWFg6Lp0ybMqHVoo="
+          "hash": "/BrC0jP+Tblxi+exyAbGt27tYV4m9+PoH7kXQXXCwz0="
         }
       },
       "is_incremental": false,
@@ -182,7 +170,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/integration_with_the_dotnet_sdk.html",
-          "hash": "dfRAqqtEgoOzARqB3FKVjScLq4zg/I+oBSjiW8kY/AY="
+          "hash": "iWIHnbymaYRLlwxcAStoQSs9A4vg5kXqOQ68frxhmMQ="
         }
       },
       "is_incremental": false,
@@ -194,7 +182,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/troubleshooting.html",
-          "hash": "FG4zlmpAnXo51PT/J86G7x7UdmXcvsTejcl+iYnrDe0="
+          "hash": "dXJ0lhOz5iNeHaYGEnCsH6W/RthKoNtjtAnfq8k+MLo="
         }
       },
       "is_incremental": false,
@@ -206,7 +194,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/walletconnect.html",
-          "hash": "2hIGMcxZCsYjEdZAeU6HF1VNBgNZex0/gssVWu2J9Ro="
+          "hash": "Dyj63g18qKey/c7+L/nXxdU0FlQD5cY8j/jFAq1vvhM="
         }
       },
       "is_incremental": false,
@@ -8426,7 +8414,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.WalletConnect.WalletConnectRpc.html",
-          "hash": "iTi7M0CEDud1vAJ0iJ5ZNUZMNHqctkdQFRG/2gQwWlg="
+          "hash": "cD0J7rNLo2zVFOHMbf1rousFgMPB5Lb3zYArPh86Kf8="
         }
       },
       "is_incremental": false,
@@ -8618,7 +8606,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "uo2i3JSasmJTuHDXAdj25wvRCuubexeqafco8P+nXUc="
+          "hash": "hKv+Fsa2DR6UzurZp6bmtVm0g0HzXqIGfDy+eCB4WyM="
         }
       },
       "is_incremental": false,
@@ -8661,7 +8649,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 12,
+          "total_file_count": 11,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
