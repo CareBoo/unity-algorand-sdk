@@ -1,0 +1,583 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct PendingTransactionResponse
+   | Algorand SDK for Unity </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct PendingTransactionResponse
+   | Algorand SDK for Unity ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Algorand.Unity.Algod.PendingTransactionResponse">
+  
+  
+  <h1 id="Algorand_Unity_Algod_PendingTransactionResponse" data-uid="Algorand.Unity.Algod.PendingTransactionResponse" class="text-break">Struct PendingTransactionResponse
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Algorand.Unity.Algod.html">Algorand.Unity.Algod</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Algorand_Unity_Algod_PendingTransactionResponse_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AlgoApiObject(&quot;&quot;, &quot;&quot;, 0)]
+[Serializable]
+public struct PendingTransactionResponse : IEquatable&lt;PendingTransactionResponse&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Algorand_Unity_Algod_PendingTransactionResponse_ApplicationIndex_" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.ApplicationIndex*"></a>
+  <h4 id="Algorand_Unity_Algod_PendingTransactionResponse_ApplicationIndex" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.ApplicationIndex">ApplicationIndex</h4>
+  <div class="markdown level1 summary"><p>The application index if the transaction was found and it created an application.        </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;application-index&quot;)]
+public Optional&lt;ulong&gt; ApplicationIndex { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Algod_PendingTransactionResponse_AssetClosingAmount_" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.AssetClosingAmount*"></a>
+  <h4 id="Algorand_Unity_Algod_PendingTransactionResponse_AssetClosingAmount" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.AssetClosingAmount">AssetClosingAmount</h4>
+  <div class="markdown level1 summary"><p>The number of the asset&apos;s unit that were transferred to the close-to address.        </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;asset-closing-amount&quot;)]
+public Optional&lt;ulong&gt; AssetClosingAmount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Algod_PendingTransactionResponse_AssetIndex_" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.AssetIndex*"></a>
+  <h4 id="Algorand_Unity_Algod_PendingTransactionResponse_AssetIndex" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.AssetIndex">AssetIndex</h4>
+  <div class="markdown level1 summary"><p>The asset index if the transaction was found and it created an asset.        </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;asset-index&quot;)]
+public Optional&lt;ulong&gt; AssetIndex { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Algod_PendingTransactionResponse_CloseRewards_" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.CloseRewards*"></a>
+  <h4 id="Algorand_Unity_Algod_PendingTransactionResponse_CloseRewards" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.CloseRewards">CloseRewards</h4>
+  <div class="markdown level1 summary"><p>Rewards in microalgos applied to the close remainder to account.        </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;close-rewards&quot;)]
+public Optional&lt;ulong&gt; CloseRewards { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Algod_PendingTransactionResponse_ClosingAmount_" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.ClosingAmount*"></a>
+  <h4 id="Algorand_Unity_Algod_PendingTransactionResponse_ClosingAmount" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.ClosingAmount">ClosingAmount</h4>
+  <div class="markdown level1 summary"><p>Closing amount for the transaction.        </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;closing-amount&quot;)]
+public Optional&lt;ulong&gt; ClosingAmount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Algod_PendingTransactionResponse_ConfirmedRound_" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.ConfirmedRound*"></a>
+  <h4 id="Algorand_Unity_Algod_PendingTransactionResponse_ConfirmedRound" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.ConfirmedRound">ConfirmedRound</h4>
+  <div class="markdown level1 summary"><p>The round where this transaction was confirmed, if present.        </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;confirmed-round&quot;)]
+public Optional&lt;ulong&gt; ConfirmedRound { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Algod_PendingTransactionResponse_GlobalStateDelta_" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.GlobalStateDelta*"></a>
+  <h4 id="Algorand_Unity_Algod_PendingTransactionResponse_GlobalStateDelta" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.GlobalStateDelta">GlobalStateDelta</h4>
+  <div class="markdown level1 summary"><p>[gd] Global state key/value changes for the application being executed by this transaction.        </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;global-state-delta&quot;)]
+public StateDelta GlobalStateDelta { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Algod.StateDelta.html">StateDelta</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Algod_PendingTransactionResponse_InnerTxns_" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.InnerTxns*"></a>
+  <h4 id="Algorand_Unity_Algod_PendingTransactionResponse_InnerTxns" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.InnerTxns">InnerTxns</h4>
+  <div class="markdown level1 summary"><p>Inner transactions produced by application execution.        </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;inner-txns&quot;)]
+public PendingTransactionResponse[] InnerTxns { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Algod.PendingTransactionResponse.html">PendingTransactionResponse</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Algod_PendingTransactionResponse_LocalStateDelta_" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.LocalStateDelta*"></a>
+  <h4 id="Algorand_Unity_Algod_PendingTransactionResponse_LocalStateDelta" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.LocalStateDelta">LocalStateDelta</h4>
+  <div class="markdown level1 summary"><p>[ld] Local state key/value changes for the application being executed by this transaction.        </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;local-state-delta&quot;)]
+public AccountStateDelta[] LocalStateDelta { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Algod.AccountStateDelta.html">AccountStateDelta</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Algod_PendingTransactionResponse_Logs_" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.Logs*"></a>
+  <h4 id="Algorand_Unity_Algod_PendingTransactionResponse_Logs" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.Logs">Logs</h4>
+  <div class="markdown level1 summary"><p>[lg] Logs for the application being executed by this transaction.        </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;logs&quot;)]
+public byte[][] Logs { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>[][]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Algod_PendingTransactionResponse_PoolError_" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.PoolError*"></a>
+  <h4 id="Algorand_Unity_Algod_PendingTransactionResponse_PoolError" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.PoolError">PoolError</h4>
+  <div class="markdown level1 summary"><p>Indicates that the transaction was kicked out of this node&apos;s transaction pool (and specifies why that happened).  An empty string indicates the transaction wasn&apos;t kicked out of this node&apos;s txpool due to an error.        </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;pool-error&quot;)]
+public string PoolError { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Algod_PendingTransactionResponse_ReceiverRewards_" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.ReceiverRewards*"></a>
+  <h4 id="Algorand_Unity_Algod_PendingTransactionResponse_ReceiverRewards" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.ReceiverRewards">ReceiverRewards</h4>
+  <div class="markdown level1 summary"><p>Rewards in microalgos applied to the receiver account.        </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;receiver-rewards&quot;)]
+public Optional&lt;ulong&gt; ReceiverRewards { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Algod_PendingTransactionResponse_SenderRewards_" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.SenderRewards*"></a>
+  <h4 id="Algorand_Unity_Algod_PendingTransactionResponse_SenderRewards" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.SenderRewards">SenderRewards</h4>
+  <div class="markdown level1 summary"><p>Rewards in microalgos applied to the sender account.        </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;sender-rewards&quot;)]
+public Optional&lt;ulong&gt; SenderRewards { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Optional-1.html">Optional</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Algod_PendingTransactionResponse_Txn_" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.Txn*"></a>
+  <h4 id="Algorand_Unity_Algod_PendingTransactionResponse_Txn" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.Txn">Txn</h4>
+  <div class="markdown level1 summary"><p>The raw signed transaction.        </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[AlgoApiField(&quot;txn&quot;)]
+public SignedTxn Txn { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.SignedTxn.html">SignedTxn</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Algorand_Unity_Algod_PendingTransactionResponse_Equals_" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.Equals*"></a>
+  <h4 id="Algorand_Unity_Algod_PendingTransactionResponse_Equals_Algorand_Unity_Algod_PendingTransactionResponse_" data-uid="Algorand.Unity.Algod.PendingTransactionResponse.Equals(Algorand.Unity.Algod.PendingTransactionResponse)">Equals(PendingTransactionResponse)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(PendingTransactionResponse other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Algod.PendingTransactionResponse.html">PendingTransactionResponse</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              Generated by DocFX
+              
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
