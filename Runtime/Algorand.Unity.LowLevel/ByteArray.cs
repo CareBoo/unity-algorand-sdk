@@ -34,19 +34,6 @@ namespace Algorand.Unity.LowLevel
 
     public struct ByteArrayComparer<T> : IEqualityComparer<T> where T : unmanaged, IByteArray
     {
-        public static bool Equals(T x, T y)
-        {
-            for (var i = 0; i < x.Length; i++)
-                if (ByteArray.ReadByteAt(x, i) != ByteArray.ReadByteAt(y, i))
-                    return false;
-            return true;
-        }
-
-        public static unsafe int GetHashCode(T obj)
-        {
-            return UnsafeUtility.ReadArrayElement<int>(obj.GetUnsafePtr(), 0);
-        }
-
         bool IEqualityComparer<T>.Equals(T x, T y)
         {
             return Equals(x, y);
@@ -55,6 +42,19 @@ namespace Algorand.Unity.LowLevel
         int IEqualityComparer<T>.GetHashCode(T obj)
         {
             return GetHashCode(obj);
+        }
+
+        public static bool Equals(T x, T y)
+        {
+            unsafe
+            {
+                return UnsafeUtility.MemCmp(x.GetUnsafePtr(), y.GetUnsafePtr(), x.Length) == 0;
+            }
+        }
+
+        public static unsafe int GetHashCode(T obj)
+        {
+            return UnsafeUtility.ReadArrayElement<int>(obj.GetUnsafePtr(), 0);
         }
     }
 
