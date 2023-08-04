@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [4.2.0-exp.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.1.0...v4.2.0-exp.1) (2023-08-04)
+
+
+### Features
+
+* **crypto:** add ChaCha20 Encrypt and Decrypt functions ([c4c2672](https://github.com/CareBoo/unity-algorand-sdk/commit/c4c267230e046a67efcf238c0d45bf110b30c2f9))
+
 # [4.1.0](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.0.0...v4.1.0) (2023-05-03)
 
 

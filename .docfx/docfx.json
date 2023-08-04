@@ -117,7 +117,7 @@
       }
     ],
     "sitemap": {
-      "baseUrl": "https://careboo.github.io/unity-algorand-sdk/4.1",
+      "baseUrl": "https://careboo.github.io/unity-algorand-sdk/4.2",
       "changefreq": "monthly",
       "fileOptions": {
         "api/*": {
