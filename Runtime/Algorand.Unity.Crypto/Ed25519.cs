@@ -21,12 +21,6 @@ namespace Algorand.Unity.Crypto
                 PublicKey = publicKey;
             }
 
-            public void Deconstruct(out SecretKeyHandle secretKey, out PublicKey publicKey)
-            {
-                secretKey = SecretKey;
-                publicKey = PublicKey;
-            }
-
             public JobHandle Dispose(JobHandle inputDeps)
             {
                 return SecretKey.Dispose(inputDeps);
@@ -35,6 +29,12 @@ namespace Algorand.Unity.Crypto
             public void Dispose()
             {
                 SecretKey.Dispose();
+            }
+
+            public void Deconstruct(out SecretKeyHandle secretKey, out PublicKey publicKey)
+            {
+                secretKey = SecretKey;
+                publicKey = PublicKey;
             }
         }
 
@@ -49,11 +49,6 @@ namespace Algorand.Unity.Crypto
 
             public bool IsCreated => handle.IsCreated;
 
-            public static SecretKeyHandle Create()
-            {
-                return SecureMemoryHandle.Create((UIntPtr)KeySize);
-            }
-
             public JobHandle Dispose(JobHandle inputDeps)
             {
                 return handle.Dispose(inputDeps);
@@ -62,6 +57,11 @@ namespace Algorand.Unity.Crypto
             public void Dispose()
             {
                 handle.Dispose();
+            }
+
+            public static SecretKeyHandle Create()
+            {
+                return SecureMemoryHandle.Create((UIntPtr)KeySize);
             }
 
             public static implicit operator SecureMemoryHandle(SecretKeyHandle secretKeyHandle)
@@ -102,15 +102,22 @@ namespace Algorand.Unity.Crypto
             : IByteArray
                 , IEquatable<Seed>
         {
-            [FieldOffset(0), SerializeField] internal FixedBytes16 offset0000;
-            [FieldOffset(16), SerializeField] internal FixedBytes16 offset0016;
-
             public const int Size = 32;
+
+            [FieldOffset(0)]
+            [SerializeField]
+            internal FixedBytes16 offset0000;
+
+            [FieldOffset(16)]
+            [SerializeField]
+            internal FixedBytes16 offset0016;
 
             public unsafe void* GetUnsafePtr()
             {
                 fixed (byte* b = &offset0000.byte0000)
+                {
                     return b;
+                }
             }
 
             public int Length => Size;
@@ -123,10 +130,7 @@ namespace Algorand.Unity.Crypto
 
             public bool Equals(Seed other)
             {
-                for (var i = 0; i < Length; i++)
-                    if (this[i] != other[i])
-                        return false;
-                return true;
+                return ByteArray.Equals(this, other);
             }
 
             public PublicKey ToPublicKey()
@@ -144,15 +148,12 @@ namespace Algorand.Unity.Crypto
                 {
                     fixed (Seed* seedPtr = &this)
                     {
-                        int error = crypto_sign_ed25519_seed_keypair(
+                        var error = crypto_sign_ed25519_seed_keypair(
                             &pk,
                             sk.Ptr,
                             seedPtr
                         );
-                        if (error > 0)
-                        {
-                            throw new System.Exception($"error code {error} when converting to KeyPair");
-                        }
+                        if (error > 0) throw new Exception($"error code {error} when converting to KeyPair");
                     }
                 }
 
@@ -166,15 +167,22 @@ namespace Algorand.Unity.Crypto
             : IByteArray
                 , IEquatable<PublicKey>
         {
-            [FieldOffset(0), SerializeField] internal FixedBytes16 offset0000;
-            [FieldOffset(16), SerializeField] internal FixedBytes16 offset0016;
-
             public const int SizeBytes = 32;
+
+            [FieldOffset(0)]
+            [SerializeField]
+            internal FixedBytes16 offset0000;
+
+            [FieldOffset(16)]
+            [SerializeField]
+            internal FixedBytes16 offset0016;
 
             public unsafe void* GetUnsafePtr()
             {
                 fixed (byte* b = &offset0000.byte0000)
+                {
                     return b;
+                }
             }
 
             public int Length => 32;
@@ -220,7 +228,9 @@ namespace Algorand.Unity.Crypto
                 , IEquatable<Signature>
         {
             public const int SizeBytes = 64;
-            [FieldOffset(0)] internal FixedBytes64 buffer;
+
+            [FieldOffset(0)]
+            internal FixedBytes64 buffer;
 
             public byte this[int index]
             {
@@ -231,10 +241,17 @@ namespace Algorand.Unity.Crypto
             public unsafe void* GetUnsafePtr()
             {
                 fixed (byte* b = &buffer.offset0000.offset0000.byte0000)
+                {
                     return b;
+                }
             }
 
             public int Length => SizeBytes;
+
+            public bool Equals(Signature other)
+            {
+                return ByteArray.Equals(this, other);
+            }
 
             public bool Verify<TMessage>(TMessage message, PublicKey pk)
                 where TMessage : IByteArray
@@ -259,11 +276,6 @@ namespace Algorand.Unity.Crypto
                         return error == 0;
                     }
                 }
-            }
-
-            public bool Equals(Signature other)
-            {
-                return ByteArray.Equals(this, other);
             }
 
             public override bool Equals(object obj)
