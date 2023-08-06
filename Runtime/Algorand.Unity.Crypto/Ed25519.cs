@@ -78,20 +78,12 @@ namespace Algorand.Unity.Crypto
                 where TMessage : IByteArray
             {
                 var signature = new Signature();
-#if (UNITY_WEBGL && !UNITY_EDITOR)
-                crypto_sign_ed25519_detached(
-                    &signature,
-                    message.GetUnsafePtr(),
-                    message.Length,
-                    Ptr);
-#else
                 crypto_sign_ed25519_detached(
                     &signature,
                     out _,
                     message.GetUnsafePtr(),
                     (ulong)message.Length,
                     Ptr);
-#endif
                 return signature;
             }
         }
@@ -260,19 +252,11 @@ namespace Algorand.Unity.Crypto
                 {
                     fixed (Signature* s = &this)
                     {
-#if (UNITY_WEBGL && !UNITY_EDITOR)
-                        var error = crypto_sign_ed25519_verify_detached(
-                            s,
-                            message.GetUnsafePtr(),
-                            message.Length,
-                            &pk);
-#else
                         var error = crypto_sign_ed25519_verify_detached(
                             s,
                             message.GetUnsafePtr(),
                             (ulong)message.Length,
                             &pk);
-#endif
                         return error == 0;
                     }
                 }
