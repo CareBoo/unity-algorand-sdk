@@ -11,10 +11,8 @@ namespace Algorand.Unity.Crypto
         internal const string Library = "sodium";
 #endif
 
-        // #if (!UNITY_WEBGL || UNITY_EDITOR)
         [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
         internal static extern int sodium_init();
-        // #endif
 
         [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
         internal static extern IntPtr sodium_malloc(UIntPtr size);
