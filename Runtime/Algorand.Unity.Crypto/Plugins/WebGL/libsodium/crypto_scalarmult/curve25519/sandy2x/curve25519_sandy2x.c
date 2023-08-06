@@ -12,7 +12,7 @@
 #include "utils.h"
 #include "curve25519_sandy2x.h"
 #include "../scalarmult_curve25519.h"
-#include "fe.h"
+#include "sandy2x_fe.h"
 #include "fe51.h"
 #include "ladder.h"
 

@@ -64,9 +64,9 @@ salsa20_encrypt_bytes(salsa_ctx *ctx, const uint8_t *m, uint8_t *c,
         return; /* LCOV_EXCL_LINE */
     }
 
-#include "u4.h"
-#include "u1.h"
-#include "u0.h"
+#include "dolbeau_u4.h"
+#include "dolbeau_u1.h"
+#include "dolbeau_u0.h"
 }
 
 static int
