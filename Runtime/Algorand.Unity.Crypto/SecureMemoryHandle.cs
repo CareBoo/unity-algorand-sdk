@@ -8,30 +8,26 @@ namespace Algorand.Unity.Crypto
     public struct SecureMemoryHandle
         : INativeDisposable
     {
-#if (!UNITY_WEBGL || UNITY_EDITOR)
+// #endif
+
+        public IntPtr Ptr;
+
+// #if (!UNITY_WEBGL || UNITY_EDITOR)
         static SecureMemoryHandle()
         {
             sodium_init();
         }
-#endif
-
-        public IntPtr Ptr;
 
         internal SecureMemoryHandle(IntPtr ptr)
         {
             Ptr = ptr;
         }
 
-        public static SecureMemoryHandle Create(UIntPtr sizeBytes)
-        {
-            return sodium_malloc(sizeBytes);
-        }
-
         public bool IsCreated => Ptr != IntPtr.Zero;
 
         public JobHandle Dispose(JobHandle inputDeps)
         {
-            return new DisposeJob { keyHandle = this }.Schedule(dependsOn: inputDeps);
+            return new DisposeJob { keyHandle = this }.Schedule(inputDeps);
         }
 
         public void Dispose()
@@ -43,14 +39,9 @@ namespace Algorand.Unity.Crypto
             Ptr = IntPtr.Zero;
         }
 
-        internal struct DisposeJob : IJob
+        public static SecureMemoryHandle Create(UIntPtr sizeBytes)
         {
-            public SecureMemoryHandle keyHandle;
-
-            public void Execute()
-            {
-                keyHandle.Dispose();
-            }
+            return sodium_malloc(sizeBytes);
         }
 
         public static implicit operator IntPtr(SecureMemoryHandle handle)
@@ -61,6 +52,16 @@ namespace Algorand.Unity.Crypto
         public static implicit operator SecureMemoryHandle(IntPtr ptr)
         {
             return new SecureMemoryHandle(ptr);
+        }
+
+        internal struct DisposeJob : IJob
+        {
+            public SecureMemoryHandle keyHandle;
+
+            public void Execute()
+            {
+                keyHandle.Dispose();
+            }
         }
     }
 }
