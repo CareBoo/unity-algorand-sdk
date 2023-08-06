@@ -52,7 +52,7 @@
 #include "core.h"
 #include "crypto_core_hchacha20.h"
 #include "crypto_stream_chacha20.h"
-#include "private/common.h"
+#include "common.h"
 #include "randombytes.h"
 #include "randombytes_internal_random.h"
 #include "runtime.h"

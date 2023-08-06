@@ -1,7 +1,7 @@
 
 #include "poly1305_donna.h"
 #include "crypto_verify_16.h"
-#include "private/common.h"
+#include "common.h"
 #include "utils.h"
 
 #ifdef HAVE_TI_MODE
@@ -9,7 +9,7 @@
 #else
 #include "poly1305_donna32.h"
 #endif
-#include "../onetimeauth_poly1305.h"
+#include "onetimeauth_poly1305.h"
 
 static void
 poly1305_update(poly1305_state_internal_t *st, const unsigned char *m,

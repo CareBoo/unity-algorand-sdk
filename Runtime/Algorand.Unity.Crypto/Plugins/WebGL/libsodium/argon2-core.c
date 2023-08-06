@@ -23,8 +23,8 @@
 #endif
 
 #include "crypto_generichash_blake2b.h"
-#include "private/common.h"
-#include "private/implementations.h"
+#include "common.h"
+#include "implementations.h"
 #include "runtime.h"
 #include "utils.h"
 

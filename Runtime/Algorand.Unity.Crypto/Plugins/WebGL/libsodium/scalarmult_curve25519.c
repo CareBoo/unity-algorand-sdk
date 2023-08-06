@@ -1,13 +1,13 @@
 
 #include "crypto_scalarmult_curve25519.h"
-#include "private/implementations.h"
+#include "implementations.h"
 #include "scalarmult_curve25519.h"
 #include "runtime.h"
 
 #ifdef HAVE_AVX_ASM
-# include "sandy2x/curve25519_sandy2x.h"
+#include "curve25519_sandy2x.h"
 #endif
-#include "ref10/x25519_ref10.h"
+#include "x25519_ref10.h"
 static const crypto_scalarmult_curve25519_implementation *implementation =
     &crypto_scalarmult_curve25519_ref10_implementation;
 

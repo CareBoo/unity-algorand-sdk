@@ -12,7 +12,7 @@
 #include "randombytes.h"
 #include "utils.h"
 
-#include "private/common.h"
+#include "common.h"
 
 #define crypto_secretstream_xchacha20poly1305_COUNTERBYTES  4U
 #define crypto_secretstream_xchacha20poly1305_INONCEBYTES   8U

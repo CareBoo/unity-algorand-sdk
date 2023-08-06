@@ -8,11 +8,8 @@ namespace Algorand.Unity.Crypto
     public struct SecureMemoryHandle
         : INativeDisposable
     {
-// #endif
-
         public IntPtr Ptr;
 
-// #if (!UNITY_WEBGL || UNITY_EDITOR)
         static SecureMemoryHandle()
         {
             sodium_init();

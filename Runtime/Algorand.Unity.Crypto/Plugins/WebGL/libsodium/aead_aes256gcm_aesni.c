@@ -13,7 +13,7 @@
 #include "core.h"
 #include "crypto_aead_aes256gcm.h"
 #include "export.h"
-#include "private/common.h"
+#include "common.h"
 #include "randombytes.h"
 #include "runtime.h"
 #include "utils.h"
@@ -28,7 +28,7 @@
 
 #include <tmmintrin.h>
 #include <wmmintrin.h>
-#include "private/sse2_64_32.h"
+#include "sse2_64_32.h"
 
 #ifndef ENOSYS
 # define ENOSYS ENXIO

@@ -4,7 +4,7 @@
 #include <string.h>
 
 #include "crypto_generichash_blake2b.h"
-#include "private/common.h"
+#include "common.h"
 #include "utils.h"
 
 #include "blake2b-long.h"

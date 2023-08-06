@@ -8,7 +8,7 @@
 #include "argon2-core.h"
 #include "argon2.h"
 #include "crypto_pwhash_argon2id.h"
-#include "private/common.h"
+#include "common.h"
 #include "randombytes.h"
 #include "utils.h"
 

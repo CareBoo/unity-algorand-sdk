@@ -1,5 +1,5 @@
 #include "crypto_shorthash_siphash24.h"
-#include "private/common.h"
+#include "common.h"
 #include "shorthash_siphash_ref.h"
 
 int

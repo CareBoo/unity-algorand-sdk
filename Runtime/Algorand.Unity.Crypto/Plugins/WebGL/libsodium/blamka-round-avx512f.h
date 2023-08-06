@@ -1,8 +1,8 @@
 #ifndef blamka_round_avx512f_H
 #define blamka_round_avx512f_H
 
-#include "private/common.h"
-#include "private/sse2_64_32.h"
+#include "common.h"
+#include "sse2_64_32.h"
 
 #define ror64(x, n) _mm512_ror_epi64((x), (n))
 

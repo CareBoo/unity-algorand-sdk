@@ -3,7 +3,7 @@
 
 #include "crypto_box_curve25519xchacha20poly1305.h"
 #include "crypto_generichash.h"
-#include "private/common.h"
+#include "common.h"
 #include "utils.h"
 
 static int

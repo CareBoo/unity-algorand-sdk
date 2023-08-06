@@ -2,7 +2,7 @@
 
 #include "crypto_kdf_blake2b.h"
 #include "crypto_generichash_blake2b.h"
-#include "private/common.h"
+#include "common.h"
 
 size_t
 crypto_kdf_blake2b_bytes_min(void)

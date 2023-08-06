@@ -3,7 +3,7 @@
 
 #include "crypto_scalarmult_ed25519.h"
 #include "crypto_scalarmult_ristretto255.h"
-#include "private/ed25519_ref10.h"
+#include "ed25519_ref10.h"
 #include "utils.h"
 
 int

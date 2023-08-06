@@ -12,8 +12,8 @@
 #include "randombytes.h"
 #include "utils.h"
 
-#include "private/chacha20_ietf_ext.h"
-#include "private/common.h"
+#include "chacha20_ietf_ext.h"
+#include "common.h"
 
 static const unsigned char _pad0[16] = { 0 };
 

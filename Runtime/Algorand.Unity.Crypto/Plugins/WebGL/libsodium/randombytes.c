@@ -19,7 +19,7 @@
 # endif
 # include "randombytes_sysrandom.h"
 #endif
-#include "private/common.h"
+#include "common.h"
 
 /* C++Builder defines a "random" macro */
 #undef random

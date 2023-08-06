@@ -10,7 +10,7 @@
 #include "crypto_onetimeauth_poly1305.h"
 #include "crypto_secretbox.h"
 #include "crypto_stream_salsa20.h"
-#include "private/common.h"
+#include "common.h"
 #include "utils.h"
 
 int

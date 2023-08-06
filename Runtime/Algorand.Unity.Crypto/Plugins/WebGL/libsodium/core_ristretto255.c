@@ -3,8 +3,8 @@
 
 #include "crypto_core_ed25519.h"
 #include "crypto_core_ristretto255.h"
-#include "private/common.h"
-#include "private/ed25519_ref10.h"
+#include "common.h"
+#include "ed25519_ref10.h"
 #include "randombytes.h"
 #include "utils.h"
 

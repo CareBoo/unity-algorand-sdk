@@ -35,7 +35,7 @@
 #include "crypto_auth_hmacsha256.h"
 #include "crypto_pwhash_scryptsalsa208sha256.h"
 #include "pbkdf2-sha256.h"
-#include "private/common.h"
+#include "common.h"
 #include "utils.h"
 
 /**

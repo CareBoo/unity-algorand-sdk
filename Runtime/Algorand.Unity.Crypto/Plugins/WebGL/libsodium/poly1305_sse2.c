@@ -2,10 +2,10 @@
 #include <stdint.h>
 #include <string.h>
 
-#include "../onetimeauth_poly1305.h"
+#include "onetimeauth_poly1305.h"
 #include "crypto_verify_16.h"
 #include "poly1305_sse2.h"
-#include "private/common.h"
+#include "common.h"
 #include "utils.h"
 
 #if defined(HAVE_TI_MODE) && defined(HAVE_EMMINTRIN_H)
@@ -15,7 +15,7 @@
 # endif
 
 # include <emmintrin.h>
-# include "private/sse2_64_32.h"
+#include "sse2_64_32.h"
 
 typedef __m128i xmmi;
 

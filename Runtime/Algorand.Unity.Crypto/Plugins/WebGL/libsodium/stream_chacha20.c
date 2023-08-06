@@ -1,19 +1,19 @@
 #include "crypto_stream_chacha20.h"
 #include "core.h"
-#include "private/chacha20_ietf_ext.h"
-#include "private/common.h"
-#include "private/implementations.h"
+#include "chacha20_ietf_ext.h"
+#include "common.h"
+#include "implementations.h"
 #include "randombytes.h"
 #include "runtime.h"
 #include "stream_chacha20.h"
 
-#include "ref/chacha20_ref.h"
+#include "chacha20_ref.h"
 #if defined(HAVE_AVX2INTRIN_H) && defined(HAVE_EMMINTRIN_H) && \
     defined(HAVE_TMMINTRIN_H) && defined(HAVE_SMMINTRIN_H)
-# include "dolbeau/chacha20_dolbeau-avx2.h"
+#include "chacha20_dolbeau-avx2.h"
 #endif
 #if defined(HAVE_EMMINTRIN_H) && defined(HAVE_TMMINTRIN_H)
-# include "dolbeau/chacha20_dolbeau-ssse3.h"
+#include "chacha20_dolbeau-ssse3.h"
 #endif
 
 static const crypto_stream_chacha20_implementation *implementation =

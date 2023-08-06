@@ -7,12 +7,10 @@ namespace Algorand.Unity.Crypto
 {
     public static unsafe class Random
     {
-// #if (!UNITY_WEBGL || UNITY_EDITOR)
         static Random()
         {
             sodium_init();
         }
-// #endif
 
         public static T Bytes<T>() where T : unmanaged
         {

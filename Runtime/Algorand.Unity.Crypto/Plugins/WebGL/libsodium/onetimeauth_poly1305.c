@@ -1,14 +1,14 @@
 
 #include "onetimeauth_poly1305.h"
 #include "crypto_onetimeauth_poly1305.h"
-#include "private/common.h"
-#include "private/implementations.h"
+#include "common.h"
+#include "implementations.h"
 #include "randombytes.h"
 #include "runtime.h"
 
-#include "donna/poly1305_donna.h"
+#include "poly1305_donna.h"
 #if defined(HAVE_TI_MODE) && defined(HAVE_EMMINTRIN_H)
-# include "sse2/poly1305_sse2.h"
+#include "poly1305_sse2.h"
 #endif
 
 static const crypto_onetimeauth_poly1305_implementation *implementation =

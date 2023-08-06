@@ -4,8 +4,8 @@
 #include <string.h>
 
 #include "crypto_verify_32.h"
-#include "private/common.h"
-#include "private/ed25519_ref10.h"
+#include "common.h"
+#include "ed25519_ref10.h"
 #include "utils.h"
 
 static inline uint64_t
@@ -43,11 +43,11 @@ load_4(const unsigned char *in)
  */
 
 #ifdef HAVE_TI_MODE
-# include "fe_51/constants.h"
-# include "fe_51/fe.h"
+#include "fe_51_constants.h"
+#include "fe_51_fe.h"
 #else
-# include "fe_25_5/constants.h"
-# include "fe_25_5/fe.h"
+#include "fe_25_5_constants.h"
+#include "fe_25_5_fe.h"
 #endif
 
 void
@@ -636,9 +636,9 @@ ge25519_cmov8_base(ge25519_precomp *t, const int pos, const signed char b)
 {
     static const ge25519_precomp base[32][8] = { /* base[i][j] = (j+1)*256^i*B */
 #ifdef HAVE_TI_MODE
-# include "fe_51/base.h"
+#include "fe_51_base.h"
 #else
-# include "fe_25_5/base.h"
+#include "fe_25_5_base.h"
 #endif
     };
     ge25519_cmov8(t, base[pos], b);
@@ -718,9 +718,9 @@ ge25519_double_scalarmult_vartime(ge25519_p2 *r, const unsigned char *a,
 {
     static const ge25519_precomp Bi[8] = {
 #ifdef HAVE_TI_MODE
-# include "fe_51/base2.h"
+#include "fe_51_base2.h"
 #else
-# include "fe_25_5/base2.h"
+#include "fe_25_5_base2.h"
 #endif
     };
     signed char    aslide[256];

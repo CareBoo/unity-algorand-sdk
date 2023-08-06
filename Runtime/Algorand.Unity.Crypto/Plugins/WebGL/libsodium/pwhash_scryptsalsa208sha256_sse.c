@@ -34,7 +34,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "private/common.h"
+#include "common.h"
 
 #ifdef HAVE_EMMINTRIN_H
 
@@ -45,10 +45,10 @@
 # if defined(__XOP__) && defined(DISABLED)
 #  include <x86intrin.h>
 # endif
-# include "private/sse2_64_32.h"
+#include "sse2_64_32.h"
 
-# include "../crypto_scrypt.h"
-# include "../pbkdf2-sha256.h"
+#include "crypto_scrypt.h"
+#include "pbkdf2-sha256.h"
 
 # define ARX(out, in1, in2, s)                                     \
     {                                                              \

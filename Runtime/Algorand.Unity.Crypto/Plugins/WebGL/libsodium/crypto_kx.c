@@ -5,7 +5,7 @@
 #include "crypto_generichash.h"
 #include "crypto_kx.h"
 #include "crypto_scalarmult.h"
-#include "private/common.h"
+#include "common.h"
 #include "randombytes.h"
 #include "utils.h"
 

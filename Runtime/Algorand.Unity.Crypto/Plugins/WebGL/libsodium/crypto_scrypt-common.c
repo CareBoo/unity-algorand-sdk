@@ -23,7 +23,7 @@
 
 #include "crypto_pwhash_scryptsalsa208sha256.h"
 #include "crypto_scrypt.h"
-#include "private/common.h"
+#include "common.h"
 #include "runtime.h"
 #include "utils.h"
 

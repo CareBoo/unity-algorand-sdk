@@ -4,7 +4,7 @@
 # include <cpu-features.h>
 #endif
 
-#include "private/common.h"
+#include "common.h"
 #include "runtime.h"
 
 typedef struct CPUFeatures_ {

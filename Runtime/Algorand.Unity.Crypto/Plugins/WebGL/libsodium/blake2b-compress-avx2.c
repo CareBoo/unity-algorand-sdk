@@ -7,7 +7,7 @@
 #include <string.h>
 
 #include "blake2.h"
-#include "private/common.h"
+#include "common.h"
 
 #if defined(HAVE_AVX2INTRIN_H) && defined(HAVE_EMMINTRIN_H) && \
     defined(HAVE_TMMINTRIN_H) && defined(HAVE_SMMINTRIN_H)
@@ -23,7 +23,7 @@
 # include <immintrin.h>
 # include <smmintrin.h>
 # include <tmmintrin.h>
-# include "private/sse2_64_32.h"
+#include "sse2_64_32.h"
 
 # include "blake2b-compress-avx2.h"
 

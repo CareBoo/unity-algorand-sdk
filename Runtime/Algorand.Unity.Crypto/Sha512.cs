@@ -10,7 +10,6 @@ namespace Algorand.Unity.Crypto
 {
     public static class Sha512
     {
-// #if (!UNITY_WEBGL || UNITY_EDITOR)
         internal static readonly Sha512StateVector FIPS_Sha512_256_IV = new ulong[8]
         {
             Convert.ToUInt64("22312194FC2BF72C", 16),
@@ -22,7 +21,6 @@ namespace Algorand.Unity.Crypto
             Convert.ToUInt64("2B0199FC2C85B8AA", 16),
             Convert.ToUInt64("0EB72DDC81C52CA2", 16)
         };
-// #endif
 
         public static Sha512_256_Hash Hash256Truncated<TByteArray>(TByteArray bytes)
             where TByteArray : struct, IByteArray
@@ -44,9 +42,6 @@ namespace Algorand.Unity.Crypto
         public static unsafe Sha512_256_Hash Hash256Truncated(byte* ptr, int length)
         {
             var result = new Sha512_256_Hash();
-// #if (UNITY_WEBGL && !UNITY_EDITOR)
-//             crypto_hash_sha512_256(&result, ptr, length);
-// #else
             var hashState = default(crypto_hash_sha512_state);
             crypto_hash_sha512_init(&hashState);
             hashState.vector = FIPS_Sha512_256_IV;
@@ -54,7 +49,6 @@ namespace Algorand.Unity.Crypto
             var hash512 = new Sha512_Hash();
             crypto_hash_sha512_final(&hashState, &hash512);
             hash512.CopyTo(ref result);
-// #endif
             return result;
         }
     }
@@ -117,7 +111,6 @@ namespace Algorand.Unity.Crypto
         }
     }
 
-// #if (!UNITY_WEBGL || UNITY_EDITOR)
     [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
     public struct Sha512_Hash
         : IByteArray
@@ -249,5 +242,4 @@ namespace Algorand.Unity.Crypto
             }
         }
     }
-// #endif
 }

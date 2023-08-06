@@ -10,7 +10,7 @@ Public domain.
 #include "crypto_stream_salsa20.h"
 #include "utils.h"
 
-#include "../stream_salsa20.h"
+#include "stream_salsa20.h"
 #include "salsa20_ref.h"
 
 #ifndef HAVE_AMD64_ASM
