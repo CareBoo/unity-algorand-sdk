@@ -55,6 +55,23 @@ namespace Algorand.Unity.Crypto
                 }
             }
 
+            public bool Verify(ReadOnlySpan<byte> message, PublicKey pk)
+            {
+                unsafe
+                {
+                    fixed (byte* m = message)
+                    fixed (Signature* s = &this)
+                    {
+                        var error = crypto_sign_ed25519_verify_detached(
+                            s,
+                            m,
+                            (ulong)message.Length,
+                            &pk);
+                        return error == 0;
+                    }
+                }
+            }
+
             public override bool Equals(object obj)
             {
                 return ByteArray.Equals(this, obj);

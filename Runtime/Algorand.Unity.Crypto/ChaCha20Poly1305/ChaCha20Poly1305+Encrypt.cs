@@ -1,6 +1,4 @@
-using Algorand.Unity.LowLevel;
-using Unity.Collections;
-using Unity.Collections.LowLevel.Unsafe;
+using System;
 
 namespace Algorand.Unity.Crypto
 {
@@ -8,31 +6,47 @@ namespace Algorand.Unity.Crypto
     {
         public enum EncryptionError
         {
-            None = 0
+            None = 0,
+            CipherInvalidSize = 1,
         }
 
-        public static unsafe EncryptionError Encrypt<TMessage>(
-            NativeList<byte> cipher,
-            TMessage message,
+        /// <summary>
+        /// Encrypt a message using the ChaCha20Poly1305 algorithm.
+        /// </summary>
+        /// <param name="cipher">The encrypted message.</param>
+        /// <param name="message">The message to encrypt.</param>
+        /// <param name="key">The symmetric key to encrypt with.</param>
+        /// <param name="nonce">The 12 byte iv to use to encrypt.</param>
+        /// <returns></returns>
+        public static unsafe EncryptionError Encrypt(
+            Span<byte> cipher,
+            ReadOnlySpan<byte> message,
             Key key,
             Nonce nonce
         )
-            where TMessage : struct, IByteArray
         {
-            cipher.Length = message.Length + AuthTag.Size;
-            var errorCode = sodium.crypto_aead_chacha20poly1305_ietf_encrypt(
-                cipher.GetUnsafePtr(),
-                out var cipherLength,
-                message.GetUnsafePtr(),
-                (ulong)message.Length,
-                null,
-                0,
-                null,
-                nonce.GetUnsafePtr(),
-                key.GetUnsafePtr()
-            );
-            cipher.Length = (int)cipherLength;
-            nonce += 1;
+            var cipherLength = message.Length + AuthTag.Size;
+            if (cipher.Length != cipherLength)
+            {
+                return EncryptionError.CipherInvalidSize;
+            }
+            var errorCode = default(int);
+
+            fixed (byte* c = &cipher[0])
+            fixed (byte* m = &message[0])
+            {
+                errorCode = sodium.crypto_aead_chacha20poly1305_ietf_encrypt(
+                    c,
+                    out _,
+                    m,
+                    (ulong)message.Length,
+                    null,
+                    0,
+                    null,
+                    nonce.GetUnsafePtr(),
+                    key.GetUnsafePtr()
+                );
+            }
             return (EncryptionError)errorCode;
         }
     }

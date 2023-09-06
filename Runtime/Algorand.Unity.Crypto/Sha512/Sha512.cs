@@ -37,6 +37,17 @@ namespace Algorand.Unity.Crypto
             }
         }
 
+        public static Sha512_256_Hash Hash256Truncated(ReadOnlySpan<byte> bytes)
+        {
+            unsafe
+            {
+                fixed (byte* ptr = bytes)
+                {
+                    return Hash256Truncated(ptr, bytes.Length);
+                }
+            }
+        }
+
         public static unsafe Sha512_256_Hash Hash256Truncated(byte* ptr, int length)
         {
             var result = new Sha512_256_Hash();

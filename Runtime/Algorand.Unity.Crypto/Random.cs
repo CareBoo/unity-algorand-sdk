@@ -25,5 +25,13 @@ namespace Algorand.Unity.Crypto
         {
             randombytes_buf(bytes.GetUnsafePtr(), (UIntPtr)bytes.Length);
         }
+
+        public static void Randomize(Span<byte> bytes)
+        {
+            fixed (byte* ptr = bytes)
+            {
+                randombytes_buf(ptr, (UIntPtr)bytes.Length);
+            }
+        }
     }
 }
