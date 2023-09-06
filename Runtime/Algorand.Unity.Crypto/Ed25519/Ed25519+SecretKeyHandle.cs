@@ -56,6 +56,22 @@ namespace Algorand.Unity.Crypto
                     Ptr);
                 return signature;
             }
+
+            public readonly unsafe Signature Sign(ReadOnlySpan<byte> message)
+            {
+                var signature = new Signature();
+                fixed (byte* mPtr = &message.GetPinnableReference())
+                {
+                    crypto_sign_ed25519_detached(
+                        &signature,
+                        out _,
+                        mPtr,
+                        (ulong)message.Length,
+                        Ptr);
+                }
+
+                return signature;
+            }
         }
     }
 }

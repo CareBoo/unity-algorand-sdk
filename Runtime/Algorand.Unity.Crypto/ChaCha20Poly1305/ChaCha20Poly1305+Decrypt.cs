@@ -1,6 +1,4 @@
-using Algorand.Unity.LowLevel;
-using Unity.Collections;
-using Unity.Collections.LowLevel.Unsafe;
+using System;
 
 namespace Algorand.Unity.Crypto
 {
@@ -9,30 +7,38 @@ namespace Algorand.Unity.Crypto
         public enum DecryptionError
         {
             None = 0,
-            VerificationFailed = -1
+            VerificationFailed = -1,
+            InvalidMessageLength = 1
         }
 
-        public static unsafe DecryptionError Decrypt<TCipher>(
-            NativeList<byte> message,
-            TCipher cipher,
+        public static unsafe DecryptionError Decrypt(
+            Span<byte> message,
+            ReadOnlySpan<byte> cipher,
             Key key,
             Nonce nonce
         )
-            where TCipher : struct, IByteArray
         {
-            message.Length = cipher.Length - AuthTag.Size;
-            var errorCode = sodium.crypto_aead_chacha20poly1305_ietf_decrypt(
-                message.GetUnsafePtr(),
-                out var messageLength,
-                null,
-                cipher.GetUnsafePtr(),
-                (ulong)cipher.Length,
-                null,
-                0,
-                nonce.GetUnsafePtr(),
-                key.GetUnsafePtr()
-            );
-            message.Length = (int)messageLength;
+            if (message.Length != cipher.Length - AuthTag.Size)
+            {
+                return DecryptionError.InvalidMessageLength;
+            }
+
+            var errorCode = 0;
+            fixed (byte* m = &message[0])
+            fixed (byte* c = &cipher[0])
+            {
+                errorCode = sodium.crypto_aead_chacha20poly1305_ietf_decrypt(
+                    m,
+                    out _,
+                    null,
+                    c,
+                    (ulong)cipher.Length,
+                    null,
+                    0,
+                    nonce.GetUnsafePtr(),
+                    key.GetUnsafePtr()
+                );
+            }
             return (DecryptionError)errorCode;
         }
     }
