@@ -5,6 +5,25 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [4.2.0-exp.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.2.0-exp.1...v4.2.0-exp.2) (2023-09-06)
+
+
+### Bug Fixes
+
+* :bug: add AsSpan and AsReadOnlySpan to NativeArray for Unity 2021.3 ([0e51971](https://github.com/CareBoo/unity-algorand-sdk/commit/0e519719c475ace0aa63dc9ac76d0c690573b1e9))
+* :bug: fix compile error in test script unity 2021.3 ([462e612](https://github.com/CareBoo/unity-algorand-sdk/commit/462e6121d441f590db691fa774557d385b3c375b))
+* :bug: update scripts to use explicit AsSpan APIs ([849f1b3](https://github.com/CareBoo/unity-algorand-sdk/commit/849f1b3e7c3f506304c64532306f11c7201e547c))
+* :bug: use new collections API and collisions with extension methods ([6737cfe](https://github.com/CareBoo/unity-algorand-sdk/commit/6737cfedd80b584159b4f0780500c0684ab7ad97))
+
+
+### Features
+
+* **crypto:** :sparkles: add Sha256 and X25519 APIs, and use Span based APIs ([22cd7fd](https://github.com/CareBoo/unity-algorand-sdk/commit/22cd7fdbddf2fd04939afc87ac4b832bdb85dfd7))
+* **encoding:** :sparkles: add new different base conversions, including baseN ([2d4a515](https://github.com/CareBoo/unity-algorand-sdk/commit/2d4a5159f69029c5187bf7a0d4cf302423320348))
+* **json:** :sparkles: add jsonrpc utilities assembly ([d4fa97e](https://github.com/CareBoo/unity-algorand-sdk/commit/d4fa97e7e83452da3c7db923849bc196aa5d2e5c))
+* **walletconnect:** :sparkles: add `WalletConnectSignError` ([01f43b3](https://github.com/CareBoo/unity-algorand-sdk/commit/01f43b3c22f596b54aefee242ac7fc1106cf312c))
+* **walletconnect:** :sparkles: add relay and pairing WalletConnectV2 Apis ([286c235](https://github.com/CareBoo/unity-algorand-sdk/commit/286c235c20c1bbf6a33626bc4b27c70129c710be))
+
 # [4.2.0-exp.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.1.0...v4.2.0-exp.1) (2023-08-04)
 
 

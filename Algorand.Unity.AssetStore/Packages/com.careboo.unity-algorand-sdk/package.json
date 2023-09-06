@@ -1,7 +1,7 @@
 {
   "name": "com.careboo.unity-algorand-sdk",
   "displayName": "Algorand.Unity",
-  "version": "4.2.0-exp.1",
+  "version": "4.2.0-exp.2",
   "unity": "2021.3",
   "keywords": [
     "algorand",
@@ -13,7 +13,7 @@
   "license": "MIT",
   "description": "Integrate your game with Algorand, a Pure Proof-of-Stake blockchain overseen by the Algorand Foundation. Create and sign Algorand transactions, use Algorand's REST APIs, and connect to any Algorand wallet supporting WalletConnect.",
   "dependencies": {
-    "com.unity.collections": "1.4.0",
+    "com.unity.collections": "1.5.1",
     "com.cysharp.unitask": "2.3.1",
     "com.unity.ugui": "1.0.0"
   },
