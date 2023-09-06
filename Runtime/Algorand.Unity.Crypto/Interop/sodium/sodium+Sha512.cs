@@ -34,6 +34,5 @@ namespace Algorand.Unity.Crypto
             [FieldOffset(0)]
             internal Sha512.StateVector vector;
         }
-// #endif
     }
 }
