@@ -13,13 +13,13 @@ namespace Algorand.Unity.Crypto.Tests
             var key = Random.Bytes<ChaCha20Poly1305.Key>();
             var nonce = Random.Bytes<ChaCha20Poly1305.Nonce>();
             var inputMessage = new NativeArray<byte>(1024, Allocator.Temp);
-            Random.Randomize(inputMessage);
+            Random.Randomize(inputMessage.AsSpan());
             using var cipher = new NativeArray<byte>(inputMessage.Length + ChaCha20Poly1305.AuthTag.Size, Allocator.Temp);
             using var outputMessage = new NativeArray<byte>(cipher.Length - ChaCha20Poly1305.AuthTag.Size, Allocator.Temp);
-            var encryptError = ChaCha20Poly1305.Encrypt(cipher, inputMessage, key, nonce);
+            var encryptError = ChaCha20Poly1305.Encrypt(cipher.AsSpan(), inputMessage.AsSpan(), key, nonce);
             Assert.AreEqual(ChaCha20Poly1305.EncryptionError.None, encryptError);
             var decryptError =
-                ChaCha20Poly1305.Decrypt(outputMessage, cipher, key, nonce);
+                ChaCha20Poly1305.Decrypt(outputMessage.AsSpan(), cipher.AsSpan(), key, nonce);
             Assert.AreEqual(ChaCha20Poly1305.DecryptionError.None, decryptError);
             Assert.AreEqual(inputMessage.Length, outputMessage.Length);
             var cmp = UnsafeUtility.MemCmp(

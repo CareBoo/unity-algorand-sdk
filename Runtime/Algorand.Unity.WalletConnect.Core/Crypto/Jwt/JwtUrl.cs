@@ -13,7 +13,7 @@ namespace Algorand.Unity.WalletConnect.Core
         {
             using var json = AlgoApiSerializer.SerializeJson(data, Allocator.Temp);
             var utf8Bytes = json.AsArray();
-            return Base64Url.Encode(utf8Bytes);
+            return Base64Url.Encode(utf8Bytes.AsReadOnlySpan());
         }
 
         public static string SignJwt(string audience, Ed25519.Seed seed)
@@ -68,7 +68,7 @@ namespace Algorand.Unity.WalletConnect.Core
             jwt.Append('.');
             jwt.Append(encodedPayload);
 
-            var signature = signer.Sign(jwt.AsArray());
+            var signature = signer.Sign(jwt.AsArray().AsSpan());
             var encodedSignature = Base64Url.Encode(signature.AsReadOnlySpan());
 
             jwt.Append('.');

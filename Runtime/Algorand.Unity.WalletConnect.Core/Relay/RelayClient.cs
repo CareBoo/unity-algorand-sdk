@@ -127,7 +127,7 @@ namespace Algorand.Unity.WalletConnect.Core
                 Params = request
             };
             using var json = AlgoApiSerializer.SerializeJson(jsonRpc, Allocator.Temp);
-            ws.Send(json.AsArray());
+            ws.Send(json.AsArray().AsSpan());
             return jsonRpc.Id;
         }
 
@@ -145,7 +145,7 @@ namespace Algorand.Unity.WalletConnect.Core
                 Params = request
             };
             using var json = AlgoApiSerializer.SerializeJson(jsonRpc, Allocator.Temp);
-            ws.Send(json.AsArray());
+            ws.Send(json.AsArray().AsSpan());
             return jsonRpc.Id;
         }
 
@@ -164,7 +164,7 @@ namespace Algorand.Unity.WalletConnect.Core
                 Params = request
             };
             using var json = AlgoApiSerializer.SerializeJson(jsonRpc, Allocator.Temp);
-            ws.Send(json.AsArray());
+            ws.Send(json.AsArray().AsSpan());
             return jsonRpc.Id;
         }
 
@@ -182,7 +182,7 @@ namespace Algorand.Unity.WalletConnect.Core
                 Params = request
             };
             using var json = AlgoApiSerializer.SerializeJson(jsonRpc, Allocator.Temp);
-            ws.Send(json.AsArray());
+            ws.Send(json.AsArray().AsSpan());
             return jsonRpc.Id;
         }
     }
