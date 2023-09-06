@@ -1,6 +1,6 @@
 using System;
-using Algorand.Unity;
 using Unity.Collections;
+using Algorand.Unity.Collections;
 
 namespace Algorand.Unity.WalletConnect
 {
