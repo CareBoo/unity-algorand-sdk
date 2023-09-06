@@ -63,9 +63,10 @@ namespace Algorand.Unity.Json
         }
 
         public JsonReadError ReadRaw<T>(ref T value)
-            where T : unmanaged, INativeList<byte>, IUTF8Bytes
+            where T : struct, INativeList<byte>, IUTF8Bytes
         {
             value.Clear();
+            SkipWhitespace();
             var startOffset = offset;
             var skipErr = Skip();
             if (skipErr != JsonReadError.None)
@@ -73,23 +74,16 @@ namespace Algorand.Unity.Json
                 offset = startOffset;
                 return skipErr;
             }
-            while (startOffset < offset)
-                value.Append(text.Read(ref startOffset));
-            return JsonReadError.None;
-        }
-
-        public JsonReadError ReadRaw(ref NativeText value)
-        {
-            value.Clear();
-            var startOffset = offset;
-            var skipErr = Skip();
-            if (skipErr != JsonReadError.None)
+            unsafe
             {
-                offset = startOffset;
-                return skipErr;
+                var appendError = value.Append(text.GetUnsafePtr() + startOffset, offset - startOffset);
+                switch (appendError)
+                {
+                    case FormatError.Overflow:
+                        offset = startOffset;
+                        return JsonReadError.Overflow;
+                }
             }
-            while (startOffset < offset)
-                value.Append(text.Read(ref startOffset));
             return JsonReadError.None;
         }
 

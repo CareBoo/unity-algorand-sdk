@@ -21,6 +21,17 @@ namespace Algorand.Unity.QrCode
         }
 
         /// <summary>
+        /// Generates a 256x256 QR-Code
+        /// </summary>
+        /// <param name="text">The text to use to generate the QR-Code</param>
+        /// <returns>A <see cref="Sprite"/> with width=256 and height=256.</returns>
+        public static Sprite GenerateSprite(string text)
+        {
+            var texture = GenerateTexture(text);
+            return Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
+        }
+
+        /// <summary>
         /// Generates a QR-Code with specified width/height.
         /// </summary>
         /// <param name="textForEncoding">The text to encode</param>

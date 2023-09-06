@@ -97,17 +97,6 @@ namespace Algorand.Unity.LowLevel
             }
         }
 
-        [Obsolete("Use GetByteAt instead.")]
-        public static byte ReadByteAt<TByteArray>(TByteArray bytes, int index)
-            where TByteArray : struct, IByteArray
-        {
-            CheckElementAccess(index, bytes.Length);
-            unsafe
-            {
-                return UnsafeUtility.ReadArrayElement<byte>(bytes.GetUnsafePtr(), index);
-            }
-        }
-
         public static void CopyFrom<T, U>(this ref T target, U source, int start, int length = int.MaxValue)
             where T : struct, IByteArray
             where U : struct, IByteArray
@@ -180,6 +169,20 @@ namespace Algorand.Unity.LowLevel
             unsafe
             {
                 UnsafeUtility.MemCpy(to.GetUnsafePtr(), from.GetUnsafePtr(), length);
+            }
+        }
+
+        public static void CopyTo<T>(this T from, ref Span<byte> to)
+            where T : struct, IByteArray
+        {
+            var length = math.min(from.Length, to.Length);
+
+            unsafe
+            {
+                fixed (byte* toPtr = &to[0])
+                {
+                    UnsafeUtility.MemCpy(toPtr, from.GetUnsafePtr(), length);
+                }
             }
         }
 
@@ -273,6 +276,24 @@ namespace Algorand.Unity.LowLevel
             where TBytes : struct, IByteArray
         {
             return new ByteArraySlice<TBytes>(bytes, start, length);
+        }
+
+        public static Span<byte> AsSpan<TBytes>(this TBytes bytes)
+            where TBytes : struct, IByteArray
+        {
+            unsafe
+            {
+                return new Span<byte>(bytes.GetUnsafePtr(), bytes.Length);
+            }
+        }
+
+        public static ReadOnlySpan<byte> AsReadOnlySpan<TBytes>(this TBytes bytes)
+            where TBytes : struct, IByteArray
+        {
+            unsafe
+            {
+                return new Span<byte>(bytes.GetUnsafePtr(), bytes.Length);
+            }
         }
     }
 }
