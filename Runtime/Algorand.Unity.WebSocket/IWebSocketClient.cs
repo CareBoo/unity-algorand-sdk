@@ -15,4 +15,12 @@ namespace Algorand.Unity.WebSocket
         void Send(ArraySegment<byte> data);
         WebSocketEvent Poll();
     }
+
+    public static class WebSocketExtensions
+    {
+        public static void Send(this IWebSocketClient client, ReadOnlySpan<byte> data)
+        {
+            client.Send(new ArraySegment<byte>(data.ToArray()));
+        }
+    }
 }
