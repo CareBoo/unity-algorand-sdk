@@ -1,0 +1,21 @@
+{
+    "name": "Algorand.Unity.WalletConnect.Sign",
+    "rootNamespace": "Algorand.Unity.WalletConnect.Sign",
+    "references": [
+        "GUID:45ab5c0c2cb4a0e4ba897b731349c490",
+        "GUID:f8b80ea32105bf74aa022a9a7e066bc1",
+        "GUID:9f8c967ec86c9324c9b2928ff73b4cf1",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:96a3d11394a174143976db8839772a1a",
+        "GUID:3593772e9e2814b759387539d266dc24"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
