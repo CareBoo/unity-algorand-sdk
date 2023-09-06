@@ -1,0 +1,21 @@
+{
+    "name": "Algorand.Unity.JsonRpc",
+    "rootNamespace": "Algorand.Unity.JsonRpc",
+    "references": [
+        "GUID:8dadf2ce3ffc34301a9f6d2e747938f6",
+        "GUID:45ab5c0c2cb4a0e4ba897b731349c490",
+        "GUID:427b0dd64d04a4a02b8413b20fc93483",
+        "GUID:2ee6601452ca245499e63674423f6541",
+        "GUID:9f8c967ec86c9324c9b2928ff73b4cf1",
+        "GUID:e0cd26848372d4e5c891c569017e11f1"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
