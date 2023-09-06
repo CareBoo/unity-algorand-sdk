@@ -51,5 +51,21 @@
     "ProjectSettings/": true,
     "temp/": true,
     "Temp/": true
-  }
+  },
+  "conventionalCommits.scopes": [
+    "upm",
+    "dependencies",
+    "developer",
+    "walletconnect",
+    "asset-store",
+    "algod",
+    "kmd",
+    "indexer",
+    "docs",
+    "json",
+    "msgpack",
+    "applications",
+    "assets",
+    "abi"
+  ]
 }
