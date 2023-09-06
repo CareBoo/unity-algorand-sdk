@@ -104,7 +104,7 @@ namespace WalletConnectV2
 
             string message;
             using (var requestJson = AlgoApiSerializer.SerializeJson(request, Allocator.Temp))
-            using (var encryptedEnvelope = Envelope.EncryptType0(requestJson.AsArray(), key, nonce, Allocator.Temp))
+            using (var encryptedEnvelope = Envelope.EncryptType0(requestJson.AsArray().AsReadOnlySpan(), key, nonce, Allocator.Temp))
             {
                 message = Convert.ToBase64String(encryptedEnvelope.ToArray());
             }
