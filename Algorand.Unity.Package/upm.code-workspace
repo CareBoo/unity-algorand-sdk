@@ -24,7 +24,9 @@
       "msgpack",
       "applications",
       "assets",
-      "abi"
+      "abi",
+      "encoding",
+      "crypto"
     ]
   },
   "extensions": {
