@@ -100,13 +100,12 @@
   
   
   <a id="Algorand_Unity_Crypto_ChaCha20Poly1305_Decrypt_" data-uid="Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt*"></a>
-  <h4 id="Algorand_Unity_Crypto_ChaCha20Poly1305_Decrypt__1_NativeList_System_Byte____0_Algorand_Unity_Crypto_ChaCha20Poly1305_Key_Algorand_Unity_Crypto_ChaCha20Poly1305_Nonce_" data-uid="Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt``1(NativeList{System.Byte},``0,Algorand.Unity.Crypto.ChaCha20Poly1305.Key,Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)">Decrypt&lt;TCipher&gt;(NativeList&lt;Byte&gt;, TCipher, ChaCha20Poly1305.Key, ChaCha20Poly1305.Nonce)</h4>
+  <h4 id="Algorand_Unity_Crypto_ChaCha20Poly1305_Decrypt_Span_System_Byte__ReadOnlySpan_System_Byte__Algorand_Unity_Crypto_ChaCha20Poly1305_Key_Algorand_Unity_Crypto_ChaCha20Poly1305_Nonce_" data-uid="Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt(Span{System.Byte},ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.ChaCha20Poly1305.Key,Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)">Decrypt(Span&lt;Byte&gt;, ReadOnlySpan&lt;Byte&gt;, ChaCha20Poly1305.Key, ChaCha20Poly1305.Nonce)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ChaCha20Poly1305.DecryptionError Decrypt&lt;TCipher&gt;(NativeList&lt;byte&gt; message, TCipher cipher, ChaCha20Poly1305.Key key, ChaCha20Poly1305.Nonce nonce)
-    where TCipher : struct, IByteArray</code></pre>
+    <pre><code class="lang-csharp hljs">public static ChaCha20Poly1305.DecryptionError Decrypt(Span&lt;byte&gt; message, ReadOnlySpan&lt;byte&gt; cipher, ChaCha20Poly1305.Key key, ChaCha20Poly1305.Nonce nonce)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -119,12 +118,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">NativeList</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
+        <td><span class="xref">Span</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
         <td><span class="parametername">message</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">TCipher</span></td>
+        <td><span class="xref">ReadOnlySpan</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
         <td><span class="parametername">cipher</span></td>
         <td></td>
       </tr>
@@ -155,31 +154,16 @@
       </tr>
     </tbody>
   </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TCipher</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Algorand_Unity_Crypto_ChaCha20Poly1305_Encrypt_" data-uid="Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt*"></a>
-  <h4 id="Algorand_Unity_Crypto_ChaCha20Poly1305_Encrypt__1_NativeList_System_Byte____0_Algorand_Unity_Crypto_ChaCha20Poly1305_Key_Algorand_Unity_Crypto_ChaCha20Poly1305_Nonce_" data-uid="Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt``1(NativeList{System.Byte},``0,Algorand.Unity.Crypto.ChaCha20Poly1305.Key,Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)">Encrypt&lt;TMessage&gt;(NativeList&lt;Byte&gt;, TMessage, ChaCha20Poly1305.Key, ChaCha20Poly1305.Nonce)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="Algorand_Unity_Crypto_ChaCha20Poly1305_Encrypt_Span_System_Byte__ReadOnlySpan_System_Byte__Algorand_Unity_Crypto_ChaCha20Poly1305_Key_Algorand_Unity_Crypto_ChaCha20Poly1305_Nonce_" data-uid="Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt(Span{System.Byte},ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.ChaCha20Poly1305.Key,Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)">Encrypt(Span&lt;Byte&gt;, ReadOnlySpan&lt;Byte&gt;, ChaCha20Poly1305.Key, ChaCha20Poly1305.Nonce)</h4>
+  <div class="markdown level1 summary"><p>Encrypt a message using the ChaCha20Poly1305 algorithm.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ChaCha20Poly1305.EncryptionError Encrypt&lt;TMessage&gt;(NativeList&lt;byte&gt; cipher, TMessage message, ChaCha20Poly1305.Key key, ChaCha20Poly1305.Nonce nonce)
-    where TMessage : struct, IByteArray</code></pre>
+    <pre><code class="lang-csharp hljs">public static ChaCha20Poly1305.EncryptionError Encrypt(Span&lt;byte&gt; cipher, ReadOnlySpan&lt;byte&gt; message, ChaCha20Poly1305.Key key, ChaCha20Poly1305.Nonce nonce)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -192,24 +176,28 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">NativeList</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
+        <td><span class="xref">Span</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
         <td><span class="parametername">cipher</span></td>
-        <td></td>
+        <td><p>The encrypted message.</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">TMessage</span></td>
+        <td><span class="xref">ReadOnlySpan</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
         <td><span class="parametername">message</span></td>
-        <td></td>
+        <td><p>The message to encrypt.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.Crypto.ChaCha20Poly1305.Key.html">ChaCha20Poly1305.Key</a></td>
         <td><span class="parametername">key</span></td>
-        <td></td>
+        <td><p>The symmetric key to encrypt with.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce.html">ChaCha20Poly1305.Nonce</a></td>
         <td><span class="parametername">nonce</span></td>
-        <td></td>
+        <td><p>The 12 byte iv to use to encrypt.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -224,21 +212,6 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Algorand.Unity.Crypto.ChaCha20Poly1305.EncryptionError.html">ChaCha20Poly1305.EncryptionError</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TMessage</span></td>
         <td></td>
       </tr>
     </tbody>

@@ -154,7 +154,39 @@
   
   
   <a id="Algorand_Unity_Net_UnityHttpClient__ctor_" data-uid="Algorand.Unity.Net.UnityHttpClient.#ctor*"></a>
-  <h4 id="Algorand_Unity_Net_UnityHttpClient__ctor_System_String_System_TimeSpan_" data-uid="Algorand.Unity.Net.UnityHttpClient.#ctor(System.String,System.TimeSpan)">UnityHttpClient(String, TimeSpan)</h4>
+  <h4 id="Algorand_Unity_Net_UnityHttpClient__ctor_System_String_System_ValueTuple_System_String_System_String____" data-uid="Algorand.Unity.Net.UnityHttpClient.#ctor(System.String,System.ValueTuple{System.String,System.String}[])">UnityHttpClient(String, (String header, String value)[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityHttpClient(string address, params (string header, string value)[] headers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">address</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-2">ValueTuple</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;[]</td>
+        <td><span class="parametername">headers</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Net_UnityHttpClient__ctor_" data-uid="Algorand.Unity.Net.UnityHttpClient.#ctor*"></a>
+  <h4 id="Algorand_Unity_Net_UnityHttpClient__ctor_System_String_TimeSpan_" data-uid="Algorand.Unity.Net.UnityHttpClient.#ctor(System.String,TimeSpan)">UnityHttpClient(String, TimeSpan)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -177,7 +209,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="xref">TimeSpan</span></td>
         <td><span class="parametername">timeout</span></td>
         <td></td>
       </tr>
@@ -186,7 +218,7 @@
   
   
   <a id="Algorand_Unity_Net_UnityHttpClient__ctor_" data-uid="Algorand.Unity.Net.UnityHttpClient.#ctor*"></a>
-  <h4 id="Algorand_Unity_Net_UnityHttpClient__ctor_System_String_System_TimeSpan_System_ValueTuple_System_String_System_String____" data-uid="Algorand.Unity.Net.UnityHttpClient.#ctor(System.String,System.TimeSpan,System.ValueTuple{System.String,System.String}[])">UnityHttpClient(String, TimeSpan, (String header, String value)[])</h4>
+  <h4 id="Algorand_Unity_Net_UnityHttpClient__ctor_System_String_TimeSpan_System_ValueTuple_System_String_System_String____" data-uid="Algorand.Unity.Net.UnityHttpClient.#ctor(System.String,TimeSpan,System.ValueTuple{System.String,System.String}[])">UnityHttpClient(String, TimeSpan, (String header, String value)[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -209,40 +241,8 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="xref">TimeSpan</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-2">ValueTuple</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a>&gt;[]</td>
-        <td><span class="parametername">headers</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Algorand_Unity_Net_UnityHttpClient__ctor_" data-uid="Algorand.Unity.Net.UnityHttpClient.#ctor*"></a>
-  <h4 id="Algorand_Unity_Net_UnityHttpClient__ctor_System_String_System_ValueTuple_System_String_System_String____" data-uid="Algorand.Unity.Net.UnityHttpClient.#ctor(System.String,System.ValueTuple{System.String,System.String}[])">UnityHttpClient(String, (String header, String value)[])</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnityHttpClient(string address, params (string header, string value)[] headers)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">address</span></td>
         <td></td>
       </tr>
       <tr>

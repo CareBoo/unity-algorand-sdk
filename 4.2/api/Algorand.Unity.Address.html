@@ -89,9 +89,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Algorand_Unity_Address_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
-[AlgoApiFormatter(typeof(AddressFormatter))]
-public struct Address : IByteArray, IEquatable&lt;Address&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct Address : IByteArray, IEquatable&lt;Address&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -128,7 +126,7 @@ public struct Address : IByteArray, IEquatable&lt;Address&gt;</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int SizeBytes = default(int)</code></pre>
+    <pre><code class="lang-csharp hljs">public const int SizeBytes = 32</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -333,7 +331,7 @@ public struct Address : IByteArray, IEquatable&lt;Address&gt;</code></pre>
   
   
   <a id="Algorand_Unity_Address_FromPublicKey_" data-uid="Algorand.Unity.Address.FromPublicKey*"></a>
-  <h4 id="Algorand_Unity_Address_FromPublicKey_Ed25519_PublicKey_" data-uid="Algorand.Unity.Address.FromPublicKey(Ed25519.PublicKey)">FromPublicKey(Ed25519.PublicKey)</h4>
+  <h4 id="Algorand_Unity_Address_FromPublicKey_Algorand_Unity_Crypto_Ed25519_PublicKey_" data-uid="Algorand.Unity.Address.FromPublicKey(Algorand.Unity.Crypto.Ed25519.PublicKey)">FromPublicKey(Ed25519.PublicKey)</h4>
   <div class="markdown level1 summary"><p>Gets the address representation of an ed25519 public key.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -352,7 +350,7 @@ public struct Address : IByteArray, IEquatable&lt;Address&gt;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Ed25519.PublicKey</span></td>
+        <td><a class="xref" href="Algorand.Unity.Crypto.Ed25519.PublicKey.html">Ed25519.PublicKey</a></td>
         <td><span class="parametername">publicKey</span></td>
         <td></td>
       </tr>
@@ -416,22 +414,6 @@ public struct Address : IByteArray, IEquatable&lt;Address&gt;</code></pre>
       </tr>
     </tbody>
   </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
-        <td><p>Thrown if the address has an invalid checksum or is not 58 chars long.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Algorand_Unity_Address_FromString_" data-uid="Algorand.Unity.Address.FromString*"></a>
@@ -488,22 +470,6 @@ public struct Address : IByteArray, IEquatable&lt;Address&gt;</code></pre>
       <tr>
         <td><span class="parametername">TString</span></td>
         <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
-        <td><p>Thrown if the address has an invalid checksum or is not 58 chars long.</p>
-</td>
       </tr>
     </tbody>
   </table>
@@ -710,7 +676,7 @@ public struct Address : IByteArray, IEquatable&lt;Address&gt;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Ed25519.PublicKey</span></td>
+        <td><a class="xref" href="Algorand.Unity.Crypto.Ed25519.PublicKey.html">Ed25519.PublicKey</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -907,7 +873,7 @@ public struct Address : IByteArray, IEquatable&lt;Address&gt;</code></pre>
   
   
   <a id="Algorand_Unity_Address_op_Implicit_" data-uid="Algorand.Unity.Address.op_Implicit*"></a>
-  <h4 id="Algorand_Unity_Address_op_Implicit_Algorand_Unity_Address__Ed25519_PublicKey" data-uid="Algorand.Unity.Address.op_Implicit(Algorand.Unity.Address)~Ed25519.PublicKey">Implicit(Address to Ed25519.PublicKey)</h4>
+  <h4 id="Algorand_Unity_Address_op_Implicit_Algorand_Unity_Address__Algorand_Unity_Crypto_Ed25519_PublicKey" data-uid="Algorand.Unity.Address.op_Implicit(Algorand.Unity.Address)~Algorand.Unity.Crypto.Ed25519.PublicKey">Implicit(Address to Ed25519.PublicKey)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -941,7 +907,7 @@ public struct Address : IByteArray, IEquatable&lt;Address&gt;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Ed25519.PublicKey</span></td>
+        <td><a class="xref" href="Algorand.Unity.Crypto.Ed25519.PublicKey.html">Ed25519.PublicKey</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -991,7 +957,7 @@ public struct Address : IByteArray, IEquatable&lt;Address&gt;</code></pre>
   
   
   <a id="Algorand_Unity_Address_op_Implicit_" data-uid="Algorand.Unity.Address.op_Implicit*"></a>
-  <h4 id="Algorand_Unity_Address_op_Implicit_Ed25519_PublicKey__Algorand_Unity_Address" data-uid="Algorand.Unity.Address.op_Implicit(Ed25519.PublicKey)~Algorand.Unity.Address">Implicit(Ed25519.PublicKey to Address)</h4>
+  <h4 id="Algorand_Unity_Address_op_Implicit_Algorand_Unity_Crypto_Ed25519_PublicKey__Algorand_Unity_Address" data-uid="Algorand.Unity.Address.op_Implicit(Algorand.Unity.Crypto.Ed25519.PublicKey)~Algorand.Unity.Address">Implicit(Ed25519.PublicKey to Address)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1009,7 +975,7 @@ public struct Address : IByteArray, IEquatable&lt;Address&gt;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Ed25519.PublicKey</span></td>
+        <td><a class="xref" href="Algorand.Unity.Crypto.Ed25519.PublicKey.html">Ed25519.PublicKey</a></td>
         <td><span class="parametername">publicKey</span></td>
         <td></td>
       </tr>
@@ -1033,7 +999,7 @@ public struct Address : IByteArray, IEquatable&lt;Address&gt;</code></pre>
   
   
   <a id="Algorand_Unity_Address_op_Implicit_" data-uid="Algorand.Unity.Address.op_Implicit*"></a>
-  <h4 id="Algorand_Unity_Address_op_Implicit_Sha512_256_Hash__Algorand_Unity_Address" data-uid="Algorand.Unity.Address.op_Implicit(Sha512_256_Hash)~Algorand.Unity.Address">Implicit(Sha512_256_Hash to Address)</h4>
+  <h4 id="Algorand_Unity_Address_op_Implicit_Algorand_Unity_Crypto_Sha512_256_Hash__Algorand_Unity_Address" data-uid="Algorand.Unity.Address.op_Implicit(Algorand.Unity.Crypto.Sha512_256_Hash)~Algorand.Unity.Address">Implicit(Sha512_256_Hash to Address)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1051,7 +1017,7 @@ public struct Address : IByteArray, IEquatable&lt;Address&gt;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Sha512_256_Hash</span></td>
+        <td><a class="xref" href="Algorand.Unity.Crypto.Sha512_256_Hash.html">Sha512_256_Hash</a></td>
         <td><span class="parametername">checksum</span></td>
         <td></td>
       </tr>

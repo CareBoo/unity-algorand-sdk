@@ -92,15 +92,14 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Algorand_Unity_Sig_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AlgoApiFormatter(typeof(ByteArrayFormatter&lt;Sig&gt;))]
-public struct Sig : ISignature, IEquatable&lt;Sig&gt;, IByteArray</code></pre>
+    <pre><code class="lang-csharp hljs">public struct Sig : ISignature, IEquatable&lt;Sig&gt;, IByteArray</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   
   
   <a id="Algorand_Unity_Sig__ctor_" data-uid="Algorand.Unity.Sig.#ctor*"></a>
-  <h4 id="Algorand_Unity_Sig__ctor_Ed25519_Signature__" data-uid="Algorand.Unity.Sig.#ctor(Ed25519.Signature@)">Sig(Ed25519.Signature)</h4>
+  <h4 id="Algorand_Unity_Sig__ctor_Algorand_Unity_Crypto_Ed25519_Signature__" data-uid="Algorand.Unity.Sig.#ctor(Algorand.Unity.Crypto.Ed25519.Signature@)">Sig(Ed25519.Signature)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -118,7 +117,7 @@ public struct Sig : ISignature, IEquatable&lt;Sig&gt;, IByteArray</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Ed25519.Signature</span></td>
+        <td><a class="xref" href="Algorand.Unity.Crypto.Ed25519.Signature.html">Ed25519.Signature</a></td>
         <td><span class="parametername">sig</span></td>
         <td></td>
       </tr>
@@ -336,7 +335,7 @@ public struct Sig : ISignature, IEquatable&lt;Sig&gt;, IByteArray</code></pre>
   
   
   <a id="Algorand_Unity_Sig_Verify_" data-uid="Algorand.Unity.Sig.Verify*"></a>
-  <h4 id="Algorand_Unity_Sig_Verify__1___0_Ed25519_PublicKey_" data-uid="Algorand.Unity.Sig.Verify``1(``0,Ed25519.PublicKey)">Verify&lt;TMessage&gt;(TMessage, Ed25519.PublicKey)</h4>
+  <h4 id="Algorand_Unity_Sig_Verify__1___0_Algorand_Unity_Crypto_Ed25519_PublicKey_" data-uid="Algorand.Unity.Sig.Verify``1(``0,Algorand.Unity.Crypto.Ed25519.PublicKey)">Verify&lt;TMessage&gt;(TMessage, Ed25519.PublicKey)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -360,7 +359,7 @@ public struct Sig : ISignature, IEquatable&lt;Sig&gt;, IByteArray</code></pre>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Ed25519.PublicKey</span></td>
+        <td><a class="xref" href="Algorand.Unity.Crypto.Ed25519.PublicKey.html">Ed25519.PublicKey</a></td>
         <td><span class="parametername">pk</span></td>
         <td></td>
       </tr>
@@ -448,7 +447,49 @@ public struct Sig : ISignature, IEquatable&lt;Sig&gt;, IByteArray</code></pre>
   
   
   <a id="Algorand_Unity_Sig_op_Implicit_" data-uid="Algorand.Unity.Sig.op_Implicit*"></a>
-  <h4 id="Algorand_Unity_Sig_op_Implicit_Algorand_Unity_Sig__Ed25519_Signature" data-uid="Algorand.Unity.Sig.op_Implicit(Algorand.Unity.Sig)~Ed25519.Signature">Implicit(Sig to Ed25519.Signature)</h4>
+  <h4 id="Algorand_Unity_Sig_op_Implicit_Algorand_Unity_Crypto_Ed25519_Signature__Algorand_Unity_Sig" data-uid="Algorand.Unity.Sig.op_Implicit(Algorand.Unity.Crypto.Ed25519.Signature)~Algorand.Unity.Sig">Implicit(Ed25519.Signature to Sig)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Sig(Ed25519.Signature sig)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Crypto.Ed25519.Signature.html">Ed25519.Signature</a></td>
+        <td><span class="parametername">sig</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Sig.html">Sig</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Sig_op_Implicit_" data-uid="Algorand.Unity.Sig.op_Implicit*"></a>
+  <h4 id="Algorand_Unity_Sig_op_Implicit_Algorand_Unity_Sig__Algorand_Unity_Crypto_Ed25519_Signature" data-uid="Algorand.Unity.Sig.op_Implicit(Algorand.Unity.Sig)~Algorand.Unity.Crypto.Ed25519.Signature">Implicit(Sig to Ed25519.Signature)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -482,49 +523,7 @@ public struct Sig : ISignature, IEquatable&lt;Sig&gt;, IByteArray</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Ed25519.Signature</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Algorand_Unity_Sig_op_Implicit_" data-uid="Algorand.Unity.Sig.op_Implicit*"></a>
-  <h4 id="Algorand_Unity_Sig_op_Implicit_Ed25519_Signature__Algorand_Unity_Sig" data-uid="Algorand.Unity.Sig.op_Implicit(Ed25519.Signature)~Algorand.Unity.Sig">Implicit(Ed25519.Signature to Sig)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Sig(Ed25519.Signature sig)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Ed25519.Signature</span></td>
-        <td><span class="parametername">sig</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Algorand.Unity.Sig.html">Sig</a></td>
+        <td><a class="xref" href="Algorand.Unity.Crypto.Ed25519.Signature.html">Ed25519.Signature</a></td>
         <td></td>
       </tr>
     </tbody>

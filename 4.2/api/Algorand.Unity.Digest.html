@@ -88,9 +88,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Algorand_Unity_Digest_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
-[AlgoApiFormatter(typeof(ByteArrayFormatter&lt;Digest&gt;))]
-public struct Digest : IByteArray, IEquatable&lt;Digest&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct Digest : IByteArray, IEquatable&lt;Digest&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -261,7 +259,49 @@ public struct Digest : IByteArray, IEquatable&lt;Digest&gt;</code></pre>
   
   
   <a id="Algorand_Unity_Digest_op_Implicit_" data-uid="Algorand.Unity.Digest.op_Implicit*"></a>
-  <h4 id="Algorand_Unity_Digest_op_Implicit_Algorand_Unity_Digest__Sha512_256_Hash" data-uid="Algorand.Unity.Digest.op_Implicit(Algorand.Unity.Digest)~Sha512_256_Hash">Implicit(Digest to Sha512_256_Hash)</h4>
+  <h4 id="Algorand_Unity_Digest_op_Implicit_Algorand_Unity_Crypto_Sha512_256_Hash__Algorand_Unity_Digest" data-uid="Algorand.Unity.Digest.op_Implicit(Algorand.Unity.Crypto.Sha512_256_Hash)~Algorand.Unity.Digest">Implicit(Sha512_256_Hash to Digest)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Digest(Sha512_256_Hash hash)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Crypto.Sha512_256_Hash.html">Sha512_256_Hash</a></td>
+        <td><span class="parametername">hash</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Digest.html">Digest</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Digest_op_Implicit_" data-uid="Algorand.Unity.Digest.op_Implicit*"></a>
+  <h4 id="Algorand_Unity_Digest_op_Implicit_Algorand_Unity_Digest__Algorand_Unity_Crypto_Sha512_256_Hash" data-uid="Algorand.Unity.Digest.op_Implicit(Algorand.Unity.Digest)~Algorand.Unity.Crypto.Sha512_256_Hash">Implicit(Digest to Sha512_256_Hash)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -295,49 +335,7 @@ public struct Digest : IByteArray, IEquatable&lt;Digest&gt;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Sha512_256_Hash</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Algorand_Unity_Digest_op_Implicit_" data-uid="Algorand.Unity.Digest.op_Implicit*"></a>
-  <h4 id="Algorand_Unity_Digest_op_Implicit_Sha512_256_Hash__Algorand_Unity_Digest" data-uid="Algorand.Unity.Digest.op_Implicit(Sha512_256_Hash)~Algorand.Unity.Digest">Implicit(Sha512_256_Hash to Digest)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Digest(Sha512_256_Hash hash)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Sha512_256_Hash</span></td>
-        <td><span class="parametername">hash</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Algorand.Unity.Digest.html">Digest</a></td>
+        <td><a class="xref" href="Algorand.Unity.Crypto.Sha512_256_Hash.html">Sha512_256_Hash</a></td>
         <td></td>
       </tr>
     </tbody>

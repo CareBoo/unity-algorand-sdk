@@ -1,0 +1,2420 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct TransactionGroup
+   | Algorand SDK for Unity </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct TransactionGroup
+   | Algorand SDK for Unity ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../resources/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Algorand.Unity.TransactionGroup">
+  
+  
+  <h1 id="Algorand_Unity_TransactionGroup" data-uid="Algorand.Unity.TransactionGroup" class="text-break">Struct TransactionGroup
+  </h1>
+  <div class="markdown level0 summary"><p>A group of transactions used to generate a group id for atomic transactions.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Algorand.Unity.html">Algorand.Unity</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Algorand_Unity_TransactionGroup_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct TransactionGroup : IEquatable&lt;TransactionGroup&gt;</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Algorand_Unity_TransactionGroup_IdPrefix" data-uid="Algorand.Unity.TransactionGroup.IdPrefix">IdPrefix</h4>
+  <div class="markdown level1 summary"><p>The prefix to use when converting this group of transactions to bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly byte[] IdPrefix</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Algorand_Unity_TransactionGroup_MaxSize" data-uid="Algorand.Unity.TransactionGroup.MaxSize">MaxSize</h4>
+  <div class="markdown level1 summary"><p>Max number of allowed transactions in an atomic transaction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MaxSize = 16</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Algorand_Unity_TransactionGroup_Txns" data-uid="Algorand.Unity.TransactionGroup.Txns">Txns</h4>
+  <div class="markdown level1 summary"><p>The list of transaction ids belonging to this group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionId[] Txns</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionId.html">TransactionId</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Algorand_Unity_TransactionGroup_Equals_" data-uid="Algorand.Unity.TransactionGroup.Equals*"></a>
+  <h4 id="Algorand_Unity_TransactionGroup_Equals_Algorand_Unity_TransactionGroup_" data-uid="Algorand.Unity.TransactionGroup.Equals(Algorand.Unity.TransactionGroup)">Equals(TransactionGroup)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(TransactionGroup other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionGroup.html">TransactionGroup</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_TransactionGroup_GetId_" data-uid="Algorand.Unity.TransactionGroup.GetId*"></a>
+  <h4 id="Algorand_Unity_TransactionGroup_GetId" data-uid="Algorand.Unity.TransactionGroup.GetId">GetId()</h4>
+  <div class="markdown level1 summary"><p>Hash the transaction ids contained in this group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransactionId GetId()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionId.html">TransactionId</a></td>
+        <td><p>A <a class="xref" href="Algorand.Unity.TransactionId.html">TransactionId</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_TransactionGroup_Of_" data-uid="Algorand.Unity.TransactionGroup.Of*"></a>
+  <h4 id="Algorand_Unity_TransactionGroup_Of_Algorand_Unity_TransactionId___" data-uid="Algorand.Unity.TransactionGroup.Of(Algorand.Unity.TransactionId[])">Of(TransactionId[])</h4>
+  <div class="markdown level1 summary"><p>Get a transaction group using the transaction ids given.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionGroup Of(params TransactionId[] txns)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionId.html">TransactionId</a>[]</td>
+        <td><span class="parametername">txns</span></td>
+        <td><p>The transaction ids of the transactions in the group.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionGroup.html">TransactionGroup</a></td>
+        <td><p>A transaction group that can be used to generate a group id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_TransactionGroup_Of_" data-uid="Algorand.Unity.TransactionGroup.Of*"></a>
+  <h4 id="Algorand_Unity_TransactionGroup_Of__1___0__" data-uid="Algorand.Unity.TransactionGroup.Of``1(``0@)">Of&lt;T0&gt;(T0)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionGroup Of&lt;T0&gt;(in T0 txn0)
+    where T0 : IEquatable&lt;T0&gt;, ITransaction</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T0</span></td>
+        <td><span class="parametername">txn0</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionGroup.html">TransactionGroup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T0</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_TransactionGroup_Of_" data-uid="Algorand.Unity.TransactionGroup.Of*"></a>
+  <h4 id="Algorand_Unity_TransactionGroup_Of__1___0___" data-uid="Algorand.Unity.TransactionGroup.Of``1(``0[])">Of&lt;T&gt;(T[])</h4>
+  <div class="markdown level1 summary"><p>Generate a TransactionGroup with the given transactions that can be used to generate a GroupId.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionGroup Of&lt;T&gt;(params T[] txns)
+    where T : ITransaction, IEquatable&lt;T&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>T[]</td>
+        <td><span class="parametername">txns</span></td>
+        <td><p>The transactions to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionGroup.html">TransactionGroup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the transactions.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_TransactionGroup_Of_" data-uid="Algorand.Unity.TransactionGroup.Of*"></a>
+  <h4 id="Algorand_Unity_TransactionGroup_Of__10___0____1____2____3____4____5____6____7____8____9__" data-uid="Algorand.Unity.TransactionGroup.Of``10(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@)">Of&lt;T0, T1, T2, T3, T4, T5, T6, T7, T8, T9&gt;(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionGroup Of&lt;T0, T1, T2, T3, T4, T5, T6, T7, T8, T9&gt;(in T0 txn0, in T1 txn1, in T2 txn2, in T3 txn3, in T4 txn4, in T5 txn5, in T6 txn6, in T7 txn7, in T8 txn8, in T9 txn9)
+    where T0 : IEquatable&lt;T0&gt;, ITransaction where T1 : IEquatable&lt;T1&gt;, ITransaction where T2 : IEquatable&lt;T2&gt;, ITransaction where T3 : IEquatable&lt;T3&gt;, ITransaction where T4 : IEquatable&lt;T4&gt;, ITransaction where T5 : IEquatable&lt;T5&gt;, ITransaction where T6 : IEquatable&lt;T6&gt;, ITransaction where T7 : IEquatable&lt;T7&gt;, ITransaction where T8 : IEquatable&lt;T8&gt;, ITransaction where T9 : IEquatable&lt;T9&gt;, ITransaction</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T0</span></td>
+        <td><span class="parametername">txn0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">txn1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">txn2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">txn3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">txn4</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T5</span></td>
+        <td><span class="parametername">txn5</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T6</span></td>
+        <td><span class="parametername">txn6</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T7</span></td>
+        <td><span class="parametername">txn7</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T8</span></td>
+        <td><span class="parametername">txn8</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T9</span></td>
+        <td><span class="parametername">txn9</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionGroup.html">TransactionGroup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_TransactionGroup_Of_" data-uid="Algorand.Unity.TransactionGroup.Of*"></a>
+  <h4 id="Algorand_Unity_TransactionGroup_Of__11___0____1____2____3____4____5____6____7____8____9____10__" data-uid="Algorand.Unity.TransactionGroup.Of``11(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@)">Of&lt;T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10&gt;(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionGroup Of&lt;T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10&gt;(in T0 txn0, in T1 txn1, in T2 txn2, in T3 txn3, in T4 txn4, in T5 txn5, in T6 txn6, in T7 txn7, in T8 txn8, in T9 txn9, in T10 txn10)
+    where T0 : IEquatable&lt;T0&gt;, ITransaction where T1 : IEquatable&lt;T1&gt;, ITransaction where T2 : IEquatable&lt;T2&gt;, ITransaction where T3 : IEquatable&lt;T3&gt;, ITransaction where T4 : IEquatable&lt;T4&gt;, ITransaction where T5 : IEquatable&lt;T5&gt;, ITransaction where T6 : IEquatable&lt;T6&gt;, ITransaction where T7 : IEquatable&lt;T7&gt;, ITransaction where T8 : IEquatable&lt;T8&gt;, ITransaction where T9 : IEquatable&lt;T9&gt;, ITransaction where T10 : IEquatable&lt;T10&gt;, ITransaction</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T0</span></td>
+        <td><span class="parametername">txn0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">txn1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">txn2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">txn3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">txn4</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T5</span></td>
+        <td><span class="parametername">txn5</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T6</span></td>
+        <td><span class="parametername">txn6</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T7</span></td>
+        <td><span class="parametername">txn7</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T8</span></td>
+        <td><span class="parametername">txn8</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T9</span></td>
+        <td><span class="parametername">txn9</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T10</span></td>
+        <td><span class="parametername">txn10</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionGroup.html">TransactionGroup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_TransactionGroup_Of_" data-uid="Algorand.Unity.TransactionGroup.Of*"></a>
+  <h4 id="Algorand_Unity_TransactionGroup_Of__12___0____1____2____3____4____5____6____7____8____9____10____11__" data-uid="Algorand.Unity.TransactionGroup.Of``12(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@)">Of&lt;T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11&gt;(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionGroup Of&lt;T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11&gt;(in T0 txn0, in T1 txn1, in T2 txn2, in T3 txn3, in T4 txn4, in T5 txn5, in T6 txn6, in T7 txn7, in T8 txn8, in T9 txn9, in T10 txn10, in T11 txn11)
+    where T0 : IEquatable&lt;T0&gt;, ITransaction where T1 : IEquatable&lt;T1&gt;, ITransaction where T2 : IEquatable&lt;T2&gt;, ITransaction where T3 : IEquatable&lt;T3&gt;, ITransaction where T4 : IEquatable&lt;T4&gt;, ITransaction where T5 : IEquatable&lt;T5&gt;, ITransaction where T6 : IEquatable&lt;T6&gt;, ITransaction where T7 : IEquatable&lt;T7&gt;, ITransaction where T8 : IEquatable&lt;T8&gt;, ITransaction where T9 : IEquatable&lt;T9&gt;, ITransaction where T10 : IEquatable&lt;T10&gt;, ITransaction where T11 : IEquatable&lt;T11&gt;, ITransaction</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T0</span></td>
+        <td><span class="parametername">txn0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">txn1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">txn2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">txn3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">txn4</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T5</span></td>
+        <td><span class="parametername">txn5</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T6</span></td>
+        <td><span class="parametername">txn6</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T7</span></td>
+        <td><span class="parametername">txn7</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T8</span></td>
+        <td><span class="parametername">txn8</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T9</span></td>
+        <td><span class="parametername">txn9</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T10</span></td>
+        <td><span class="parametername">txn10</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T11</span></td>
+        <td><span class="parametername">txn11</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionGroup.html">TransactionGroup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_TransactionGroup_Of_" data-uid="Algorand.Unity.TransactionGroup.Of*"></a>
+  <h4 id="Algorand_Unity_TransactionGroup_Of__13___0____1____2____3____4____5____6____7____8____9____10____11____12__" data-uid="Algorand.Unity.TransactionGroup.Of``13(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@,``12@)">Of&lt;T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12&gt;(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionGroup Of&lt;T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12&gt;(in T0 txn0, in T1 txn1, in T2 txn2, in T3 txn3, in T4 txn4, in T5 txn5, in T6 txn6, in T7 txn7, in T8 txn8, in T9 txn9, in T10 txn10, in T11 txn11, in T12 txn12)
+    where T0 : IEquatable&lt;T0&gt;, ITransaction where T1 : IEquatable&lt;T1&gt;, ITransaction where T2 : IEquatable&lt;T2&gt;, ITransaction where T3 : IEquatable&lt;T3&gt;, ITransaction where T4 : IEquatable&lt;T4&gt;, ITransaction where T5 : IEquatable&lt;T5&gt;, ITransaction where T6 : IEquatable&lt;T6&gt;, ITransaction where T7 : IEquatable&lt;T7&gt;, ITransaction where T8 : IEquatable&lt;T8&gt;, ITransaction where T9 : IEquatable&lt;T9&gt;, ITransaction where T10 : IEquatable&lt;T10&gt;, ITransaction where T11 : IEquatable&lt;T11&gt;, ITransaction where T12 : IEquatable&lt;T12&gt;, ITransaction</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T0</span></td>
+        <td><span class="parametername">txn0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">txn1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">txn2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">txn3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">txn4</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T5</span></td>
+        <td><span class="parametername">txn5</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T6</span></td>
+        <td><span class="parametername">txn6</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T7</span></td>
+        <td><span class="parametername">txn7</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T8</span></td>
+        <td><span class="parametername">txn8</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T9</span></td>
+        <td><span class="parametername">txn9</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T10</span></td>
+        <td><span class="parametername">txn10</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T11</span></td>
+        <td><span class="parametername">txn11</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T12</span></td>
+        <td><span class="parametername">txn12</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionGroup.html">TransactionGroup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T12</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_TransactionGroup_Of_" data-uid="Algorand.Unity.TransactionGroup.Of*"></a>
+  <h4 id="Algorand_Unity_TransactionGroup_Of__14___0____1____2____3____4____5____6____7____8____9____10____11____12____13__" data-uid="Algorand.Unity.TransactionGroup.Of``14(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@,``12@,``13@)">Of&lt;T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13&gt;(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionGroup Of&lt;T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13&gt;(in T0 txn0, in T1 txn1, in T2 txn2, in T3 txn3, in T4 txn4, in T5 txn5, in T6 txn6, in T7 txn7, in T8 txn8, in T9 txn9, in T10 txn10, in T11 txn11, in T12 txn12, in T13 txn13)
+    where T0 : IEquatable&lt;T0&gt;, ITransaction where T1 : IEquatable&lt;T1&gt;, ITransaction where T2 : IEquatable&lt;T2&gt;, ITransaction where T3 : IEquatable&lt;T3&gt;, ITransaction where T4 : IEquatable&lt;T4&gt;, ITransaction where T5 : IEquatable&lt;T5&gt;, ITransaction where T6 : IEquatable&lt;T6&gt;, ITransaction where T7 : IEquatable&lt;T7&gt;, ITransaction where T8 : IEquatable&lt;T8&gt;, ITransaction where T9 : IEquatable&lt;T9&gt;, ITransaction where T10 : IEquatable&lt;T10&gt;, ITransaction where T11 : IEquatable&lt;T11&gt;, ITransaction where T12 : IEquatable&lt;T12&gt;, ITransaction where T13 : IEquatable&lt;T13&gt;, ITransaction</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T0</span></td>
+        <td><span class="parametername">txn0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">txn1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">txn2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">txn3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">txn4</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T5</span></td>
+        <td><span class="parametername">txn5</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T6</span></td>
+        <td><span class="parametername">txn6</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T7</span></td>
+        <td><span class="parametername">txn7</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T8</span></td>
+        <td><span class="parametername">txn8</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T9</span></td>
+        <td><span class="parametername">txn9</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T10</span></td>
+        <td><span class="parametername">txn10</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T11</span></td>
+        <td><span class="parametername">txn11</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T12</span></td>
+        <td><span class="parametername">txn12</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T13</span></td>
+        <td><span class="parametername">txn13</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionGroup.html">TransactionGroup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T12</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T13</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_TransactionGroup_Of_" data-uid="Algorand.Unity.TransactionGroup.Of*"></a>
+  <h4 id="Algorand_Unity_TransactionGroup_Of__15___0____1____2____3____4____5____6____7____8____9____10____11____12____13____14__" data-uid="Algorand.Unity.TransactionGroup.Of``15(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@,``12@,``13@,``14@)">Of&lt;T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14&gt;(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionGroup Of&lt;T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14&gt;(in T0 txn0, in T1 txn1, in T2 txn2, in T3 txn3, in T4 txn4, in T5 txn5, in T6 txn6, in T7 txn7, in T8 txn8, in T9 txn9, in T10 txn10, in T11 txn11, in T12 txn12, in T13 txn13, in T14 txn14)
+    where T0 : IEquatable&lt;T0&gt;, ITransaction where T1 : IEquatable&lt;T1&gt;, ITransaction where T2 : IEquatable&lt;T2&gt;, ITransaction where T3 : IEquatable&lt;T3&gt;, ITransaction where T4 : IEquatable&lt;T4&gt;, ITransaction where T5 : IEquatable&lt;T5&gt;, ITransaction where T6 : IEquatable&lt;T6&gt;, ITransaction where T7 : IEquatable&lt;T7&gt;, ITransaction where T8 : IEquatable&lt;T8&gt;, ITransaction where T9 : IEquatable&lt;T9&gt;, ITransaction where T10 : IEquatable&lt;T10&gt;, ITransaction where T11 : IEquatable&lt;T11&gt;, ITransaction where T12 : IEquatable&lt;T12&gt;, ITransaction where T13 : IEquatable&lt;T13&gt;, ITransaction where T14 : IEquatable&lt;T14&gt;, ITransaction</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T0</span></td>
+        <td><span class="parametername">txn0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">txn1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">txn2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">txn3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">txn4</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T5</span></td>
+        <td><span class="parametername">txn5</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T6</span></td>
+        <td><span class="parametername">txn6</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T7</span></td>
+        <td><span class="parametername">txn7</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T8</span></td>
+        <td><span class="parametername">txn8</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T9</span></td>
+        <td><span class="parametername">txn9</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T10</span></td>
+        <td><span class="parametername">txn10</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T11</span></td>
+        <td><span class="parametername">txn11</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T12</span></td>
+        <td><span class="parametername">txn12</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T13</span></td>
+        <td><span class="parametername">txn13</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T14</span></td>
+        <td><span class="parametername">txn14</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionGroup.html">TransactionGroup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T12</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T13</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T14</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_TransactionGroup_Of_" data-uid="Algorand.Unity.TransactionGroup.Of*"></a>
+  <h4 id="Algorand_Unity_TransactionGroup_Of__16___0____1____2____3____4____5____6____7____8____9____10____11____12____13____14____15__" data-uid="Algorand.Unity.TransactionGroup.Of``16(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@,``12@,``13@,``14@,``15@)">Of&lt;T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15&gt;(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionGroup Of&lt;T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15&gt;(in T0 txn0, in T1 txn1, in T2 txn2, in T3 txn3, in T4 txn4, in T5 txn5, in T6 txn6, in T7 txn7, in T8 txn8, in T9 txn9, in T10 txn10, in T11 txn11, in T12 txn12, in T13 txn13, in T14 txn14, in T15 txn15)
+    where T0 : IEquatable&lt;T0&gt;, ITransaction where T1 : IEquatable&lt;T1&gt;, ITransaction where T2 : IEquatable&lt;T2&gt;, ITransaction where T3 : IEquatable&lt;T3&gt;, ITransaction where T4 : IEquatable&lt;T4&gt;, ITransaction where T5 : IEquatable&lt;T5&gt;, ITransaction where T6 : IEquatable&lt;T6&gt;, ITransaction where T7 : IEquatable&lt;T7&gt;, ITransaction where T8 : IEquatable&lt;T8&gt;, ITransaction where T9 : IEquatable&lt;T9&gt;, ITransaction where T10 : IEquatable&lt;T10&gt;, ITransaction where T11 : IEquatable&lt;T11&gt;, ITransaction where T12 : IEquatable&lt;T12&gt;, ITransaction where T13 : IEquatable&lt;T13&gt;, ITransaction where T14 : IEquatable&lt;T14&gt;, ITransaction where T15 : IEquatable&lt;T15&gt;, ITransaction</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T0</span></td>
+        <td><span class="parametername">txn0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">txn1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">txn2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">txn3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">txn4</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T5</span></td>
+        <td><span class="parametername">txn5</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T6</span></td>
+        <td><span class="parametername">txn6</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T7</span></td>
+        <td><span class="parametername">txn7</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T8</span></td>
+        <td><span class="parametername">txn8</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T9</span></td>
+        <td><span class="parametername">txn9</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T10</span></td>
+        <td><span class="parametername">txn10</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T11</span></td>
+        <td><span class="parametername">txn11</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T12</span></td>
+        <td><span class="parametername">txn12</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T13</span></td>
+        <td><span class="parametername">txn13</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T14</span></td>
+        <td><span class="parametername">txn14</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T15</span></td>
+        <td><span class="parametername">txn15</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionGroup.html">TransactionGroup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T9</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T10</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T11</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T12</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T13</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T14</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T15</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_TransactionGroup_Of_" data-uid="Algorand.Unity.TransactionGroup.Of*"></a>
+  <h4 id="Algorand_Unity_TransactionGroup_Of__2___0____1__" data-uid="Algorand.Unity.TransactionGroup.Of``2(``0@,``1@)">Of&lt;T0, T1&gt;(T0, T1)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionGroup Of&lt;T0, T1&gt;(in T0 txn0, in T1 txn1)
+    where T0 : IEquatable&lt;T0&gt;, ITransaction where T1 : IEquatable&lt;T1&gt;, ITransaction</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T0</span></td>
+        <td><span class="parametername">txn0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">txn1</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionGroup.html">TransactionGroup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_TransactionGroup_Of_" data-uid="Algorand.Unity.TransactionGroup.Of*"></a>
+  <h4 id="Algorand_Unity_TransactionGroup_Of__3___0____1____2__" data-uid="Algorand.Unity.TransactionGroup.Of``3(``0@,``1@,``2@)">Of&lt;T0, T1, T2&gt;(T0, T1, T2)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionGroup Of&lt;T0, T1, T2&gt;(in T0 txn0, in T1 txn1, in T2 txn2)
+    where T0 : IEquatable&lt;T0&gt;, ITransaction where T1 : IEquatable&lt;T1&gt;, ITransaction where T2 : IEquatable&lt;T2&gt;, ITransaction</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T0</span></td>
+        <td><span class="parametername">txn0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">txn1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">txn2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionGroup.html">TransactionGroup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_TransactionGroup_Of_" data-uid="Algorand.Unity.TransactionGroup.Of*"></a>
+  <h4 id="Algorand_Unity_TransactionGroup_Of__4___0____1____2____3__" data-uid="Algorand.Unity.TransactionGroup.Of``4(``0@,``1@,``2@,``3@)">Of&lt;T0, T1, T2, T3&gt;(T0, T1, T2, T3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionGroup Of&lt;T0, T1, T2, T3&gt;(in T0 txn0, in T1 txn1, in T2 txn2, in T3 txn3)
+    where T0 : IEquatable&lt;T0&gt;, ITransaction where T1 : IEquatable&lt;T1&gt;, ITransaction where T2 : IEquatable&lt;T2&gt;, ITransaction where T3 : IEquatable&lt;T3&gt;, ITransaction</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T0</span></td>
+        <td><span class="parametername">txn0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">txn1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">txn2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">txn3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionGroup.html">TransactionGroup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_TransactionGroup_Of_" data-uid="Algorand.Unity.TransactionGroup.Of*"></a>
+  <h4 id="Algorand_Unity_TransactionGroup_Of__5___0____1____2____3____4__" data-uid="Algorand.Unity.TransactionGroup.Of``5(``0@,``1@,``2@,``3@,``4@)">Of&lt;T0, T1, T2, T3, T4&gt;(T0, T1, T2, T3, T4)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionGroup Of&lt;T0, T1, T2, T3, T4&gt;(in T0 txn0, in T1 txn1, in T2 txn2, in T3 txn3, in T4 txn4)
+    where T0 : IEquatable&lt;T0&gt;, ITransaction where T1 : IEquatable&lt;T1&gt;, ITransaction where T2 : IEquatable&lt;T2&gt;, ITransaction where T3 : IEquatable&lt;T3&gt;, ITransaction where T4 : IEquatable&lt;T4&gt;, ITransaction</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T0</span></td>
+        <td><span class="parametername">txn0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">txn1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">txn2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">txn3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">txn4</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionGroup.html">TransactionGroup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_TransactionGroup_Of_" data-uid="Algorand.Unity.TransactionGroup.Of*"></a>
+  <h4 id="Algorand_Unity_TransactionGroup_Of__6___0____1____2____3____4____5__" data-uid="Algorand.Unity.TransactionGroup.Of``6(``0@,``1@,``2@,``3@,``4@,``5@)">Of&lt;T0, T1, T2, T3, T4, T5&gt;(T0, T1, T2, T3, T4, T5)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionGroup Of&lt;T0, T1, T2, T3, T4, T5&gt;(in T0 txn0, in T1 txn1, in T2 txn2, in T3 txn3, in T4 txn4, in T5 txn5)
+    where T0 : IEquatable&lt;T0&gt;, ITransaction where T1 : IEquatable&lt;T1&gt;, ITransaction where T2 : IEquatable&lt;T2&gt;, ITransaction where T3 : IEquatable&lt;T3&gt;, ITransaction where T4 : IEquatable&lt;T4&gt;, ITransaction where T5 : IEquatable&lt;T5&gt;, ITransaction</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T0</span></td>
+        <td><span class="parametername">txn0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">txn1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">txn2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">txn3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">txn4</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T5</span></td>
+        <td><span class="parametername">txn5</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionGroup.html">TransactionGroup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_TransactionGroup_Of_" data-uid="Algorand.Unity.TransactionGroup.Of*"></a>
+  <h4 id="Algorand_Unity_TransactionGroup_Of__7___0____1____2____3____4____5____6__" data-uid="Algorand.Unity.TransactionGroup.Of``7(``0@,``1@,``2@,``3@,``4@,``5@,``6@)">Of&lt;T0, T1, T2, T3, T4, T5, T6&gt;(T0, T1, T2, T3, T4, T5, T6)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionGroup Of&lt;T0, T1, T2, T3, T4, T5, T6&gt;(in T0 txn0, in T1 txn1, in T2 txn2, in T3 txn3, in T4 txn4, in T5 txn5, in T6 txn6)
+    where T0 : IEquatable&lt;T0&gt;, ITransaction where T1 : IEquatable&lt;T1&gt;, ITransaction where T2 : IEquatable&lt;T2&gt;, ITransaction where T3 : IEquatable&lt;T3&gt;, ITransaction where T4 : IEquatable&lt;T4&gt;, ITransaction where T5 : IEquatable&lt;T5&gt;, ITransaction where T6 : IEquatable&lt;T6&gt;, ITransaction</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T0</span></td>
+        <td><span class="parametername">txn0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">txn1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">txn2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">txn3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">txn4</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T5</span></td>
+        <td><span class="parametername">txn5</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T6</span></td>
+        <td><span class="parametername">txn6</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionGroup.html">TransactionGroup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_TransactionGroup_Of_" data-uid="Algorand.Unity.TransactionGroup.Of*"></a>
+  <h4 id="Algorand_Unity_TransactionGroup_Of__8___0____1____2____3____4____5____6____7__" data-uid="Algorand.Unity.TransactionGroup.Of``8(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@)">Of&lt;T0, T1, T2, T3, T4, T5, T6, T7&gt;(T0, T1, T2, T3, T4, T5, T6, T7)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionGroup Of&lt;T0, T1, T2, T3, T4, T5, T6, T7&gt;(in T0 txn0, in T1 txn1, in T2 txn2, in T3 txn3, in T4 txn4, in T5 txn5, in T6 txn6, in T7 txn7)
+    where T0 : IEquatable&lt;T0&gt;, ITransaction where T1 : IEquatable&lt;T1&gt;, ITransaction where T2 : IEquatable&lt;T2&gt;, ITransaction where T3 : IEquatable&lt;T3&gt;, ITransaction where T4 : IEquatable&lt;T4&gt;, ITransaction where T5 : IEquatable&lt;T5&gt;, ITransaction where T6 : IEquatable&lt;T6&gt;, ITransaction where T7 : IEquatable&lt;T7&gt;, ITransaction</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T0</span></td>
+        <td><span class="parametername">txn0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">txn1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">txn2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">txn3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">txn4</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T5</span></td>
+        <td><span class="parametername">txn5</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T6</span></td>
+        <td><span class="parametername">txn6</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T7</span></td>
+        <td><span class="parametername">txn7</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionGroup.html">TransactionGroup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_TransactionGroup_Of_" data-uid="Algorand.Unity.TransactionGroup.Of*"></a>
+  <h4 id="Algorand_Unity_TransactionGroup_Of__9___0____1____2____3____4____5____6____7____8__" data-uid="Algorand.Unity.TransactionGroup.Of``9(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@)">Of&lt;T0, T1, T2, T3, T4, T5, T6, T7, T8&gt;(T0, T1, T2, T3, T4, T5, T6, T7, T8)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransactionGroup Of&lt;T0, T1, T2, T3, T4, T5, T6, T7, T8&gt;(in T0 txn0, in T1 txn1, in T2 txn2, in T3 txn3, in T4 txn4, in T5 txn5, in T6 txn6, in T7 txn7, in T8 txn8)
+    where T0 : IEquatable&lt;T0&gt;, ITransaction where T1 : IEquatable&lt;T1&gt;, ITransaction where T2 : IEquatable&lt;T2&gt;, ITransaction where T3 : IEquatable&lt;T3&gt;, ITransaction where T4 : IEquatable&lt;T4&gt;, ITransaction where T5 : IEquatable&lt;T5&gt;, ITransaction where T6 : IEquatable&lt;T6&gt;, ITransaction where T7 : IEquatable&lt;T7&gt;, ITransaction where T8 : IEquatable&lt;T8&gt;, ITransaction</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T0</span></td>
+        <td><span class="parametername">txn0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">txn1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">txn2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">txn3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">txn4</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T5</span></td>
+        <td><span class="parametername">txn5</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T6</span></td>
+        <td><span class="parametername">txn6</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T7</span></td>
+        <td><span class="parametername">txn7</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T8</span></td>
+        <td><span class="parametername">txn8</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.TransactionGroup.html">TransactionGroup</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T5</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T6</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T7</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T8</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              Generated by DocFX
+              
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

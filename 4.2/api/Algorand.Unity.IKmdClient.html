@@ -556,7 +556,7 @@
   
   
   <a id="Algorand_Unity_IKmdClient_ImportMultisig_" data-uid="Algorand.Unity.IKmdClient.ImportMultisig*"></a>
-  <h4 id="Algorand_Unity_IKmdClient_ImportMultisig_Ed25519_PublicKey___System_Byte_FixedString128Bytes_System_Byte_" data-uid="Algorand.Unity.IKmdClient.ImportMultisig(Ed25519.PublicKey[],System.Byte,FixedString128Bytes,System.Byte)">ImportMultisig(Ed25519.PublicKey[], Byte, FixedString128Bytes, Byte)</h4>
+  <h4 id="Algorand_Unity_IKmdClient_ImportMultisig_Algorand_Unity_Crypto_Ed25519_PublicKey___System_Byte_FixedString128Bytes_System_Byte_" data-uid="Algorand.Unity.IKmdClient.ImportMultisig(Algorand.Unity.Crypto.Ed25519.PublicKey[],System.Byte,FixedString128Bytes,System.Byte)">ImportMultisig(Ed25519.PublicKey[], Byte, FixedString128Bytes, Byte)</h4>
   <div class="markdown level1 summary"><p>Generates a multisig account from the passed public keys array and multisig metadata, and stores all of this in the wallet.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -575,7 +575,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Ed25519.PublicKey</span>[]</td>
+        <td><a class="xref" href="Algorand.Unity.Crypto.Ed25519.PublicKey.html">Ed25519.PublicKey</a>[]</td>
         <td><span class="parametername">publicKeys</span></td>
         <td><p>Public keys for the accounts used to sign</p>
 </td>
@@ -933,7 +933,7 @@ When you&apos;re done, you can invalidate the token with <a class="xref" href="A
   
   
   <a id="Algorand_Unity_IKmdClient_SignMultisig_" data-uid="Algorand.Unity.IKmdClient.SignMultisig*"></a>
-  <h4 id="Algorand_Unity_IKmdClient_SignMultisig_Algorand_Unity_MultisigSig_Ed25519_PublicKey_System_Byte___FixedString128Bytes_FixedString128Bytes_" data-uid="Algorand.Unity.IKmdClient.SignMultisig(Algorand.Unity.MultisigSig,Ed25519.PublicKey,System.Byte[],FixedString128Bytes,FixedString128Bytes)">SignMultisig(MultisigSig, Ed25519.PublicKey, Byte[], FixedString128Bytes, FixedString128Bytes)</h4>
+  <h4 id="Algorand_Unity_IKmdClient_SignMultisig_Algorand_Unity_MultisigSig_Algorand_Unity_Crypto_Ed25519_PublicKey_System_Byte___FixedString128Bytes_FixedString128Bytes_" data-uid="Algorand.Unity.IKmdClient.SignMultisig(Algorand.Unity.MultisigSig,Algorand.Unity.Crypto.Ed25519.PublicKey,System.Byte[],FixedString128Bytes,FixedString128Bytes)">SignMultisig(MultisigSig, Ed25519.PublicKey, Byte[], FixedString128Bytes, FixedString128Bytes)</h4>
   <div class="markdown level1 summary"><p>Sign a multisig transaction</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -958,7 +958,7 @@ When you&apos;re done, you can invalidate the token with <a class="xref" href="A
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Ed25519.PublicKey</span></td>
+        <td><a class="xref" href="Algorand.Unity.Crypto.Ed25519.PublicKey.html">Ed25519.PublicKey</a></td>
         <td><span class="parametername">publicKey</span></td>
         <td><p>public key of the key to use to add a signature to the multisig</p>
 </td>
@@ -996,7 +996,7 @@ When you&apos;re done, you can invalidate the token with <a class="xref" href="A
       </tr>
     </tbody>
   </table>
-  <h5 id="Algorand_Unity_IKmdClient_SignMultisig_Algorand_Unity_MultisigSig_Ed25519_PublicKey_System_Byte___FixedString128Bytes_FixedString128Bytes__remarks">Remarks</h5>
+  <h5 id="Algorand_Unity_IKmdClient_SignMultisig_Algorand_Unity_MultisigSig_Algorand_Unity_Crypto_Ed25519_PublicKey_System_Byte___FixedString128Bytes_FixedString128Bytes__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Start a multisig signature, or add a signature to a partially completed multisig signature object.</p>
 </div>
   
@@ -1065,7 +1065,7 @@ When you&apos;re done, you can invalidate the token with <a class="xref" href="A
   
   
   <a id="Algorand_Unity_IKmdClient_SignProgramMultisig_" data-uid="Algorand.Unity.IKmdClient.SignProgramMultisig*"></a>
-  <h4 id="Algorand_Unity_IKmdClient_SignProgramMultisig_Algorand_Unity_Address_System_Byte___Algorand_Unity_MultisigSig_Ed25519_PublicKey_FixedString128Bytes_FixedString128Bytes_" data-uid="Algorand.Unity.IKmdClient.SignProgramMultisig(Algorand.Unity.Address,System.Byte[],Algorand.Unity.MultisigSig,Ed25519.PublicKey,FixedString128Bytes,FixedString128Bytes)">SignProgramMultisig(Address, Byte[], MultisigSig, Ed25519.PublicKey, FixedString128Bytes, FixedString128Bytes)</h4>
+  <h4 id="Algorand_Unity_IKmdClient_SignProgramMultisig_Algorand_Unity_Address_System_Byte___Algorand_Unity_MultisigSig_Algorand_Unity_Crypto_Ed25519_PublicKey_FixedString128Bytes_FixedString128Bytes_" data-uid="Algorand.Unity.IKmdClient.SignProgramMultisig(Algorand.Unity.Address,System.Byte[],Algorand.Unity.MultisigSig,Algorand.Unity.Crypto.Ed25519.PublicKey,FixedString128Bytes,FixedString128Bytes)">SignProgramMultisig(Address, Byte[], MultisigSig, Ed25519.PublicKey, FixedString128Bytes, FixedString128Bytes)</h4>
   <div class="markdown level1 summary"><p>Sign a program for a multisig account</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1102,7 +1102,7 @@ When you&apos;re done, you can invalidate the token with <a class="xref" href="A
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Ed25519.PublicKey</span></td>
+        <td><a class="xref" href="Algorand.Unity.Crypto.Ed25519.PublicKey.html">Ed25519.PublicKey</a></td>
         <td><span class="parametername">publicKey</span></td>
         <td><p>public key of the key to use to add a signature to the multisig</p>
 </td>
@@ -1134,7 +1134,7 @@ When you&apos;re done, you can invalidate the token with <a class="xref" href="A
       </tr>
     </tbody>
   </table>
-  <h5 id="Algorand_Unity_IKmdClient_SignProgramMultisig_Algorand_Unity_Address_System_Byte___Algorand_Unity_MultisigSig_Ed25519_PublicKey_FixedString128Bytes_FixedString128Bytes__remarks">Remarks</h5>
+  <h5 id="Algorand_Unity_IKmdClient_SignProgramMultisig_Algorand_Unity_Address_System_Byte___Algorand_Unity_MultisigSig_Algorand_Unity_Crypto_Ed25519_PublicKey_FixedString128Bytes_FixedString128Bytes__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Start a multisig signature, or add a signature to a partially completed multisig signature object.</p>
 </div>
   

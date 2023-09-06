@@ -87,15 +87,13 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Algorand.Unity.IWrappedValue-1.html">IWrappedValue</a>&lt;<span class="xref">Ed25519.PublicKey</span>&gt;</div>
+    <div><a class="xref" href="Algorand.Unity.IWrappedValue-1.html">IWrappedValue</a>&lt;<a class="xref" href="Algorand.Unity.Crypto.Ed25519.PublicKey.html">Ed25519.PublicKey</a>&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Algorand.Unity.html">Algorand.Unity</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Algorand_Unity_ParticipationPublicKey_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
-[AlgoApiFormatter(typeof(WrappedValueFormatter&lt;ParticipationPublicKey, Ed25519.PublicKey&gt;), &quot;&quot;, &quot;&quot;, 0)]
-public struct ParticipationPublicKey : IWrappedValue&lt;Ed25519.PublicKey&gt;, IByteArray, IEquatable&lt;ParticipationPublicKey&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct ParticipationPublicKey : IWrappedValue&lt;Ed25519.PublicKey&gt;, IByteArray, IEquatable&lt;ParticipationPublicKey&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -106,7 +104,7 @@ public struct ParticipationPublicKey : IWrappedValue&lt;Ed25519.PublicKey&gt;, I
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int SizeBytes = default(int)</code></pre>
+    <pre><code class="lang-csharp hljs">public const int SizeBytes = 32</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -266,7 +264,49 @@ public struct ParticipationPublicKey : IWrappedValue&lt;Ed25519.PublicKey&gt;, I
   
   
   <a id="Algorand_Unity_ParticipationPublicKey_op_Implicit_" data-uid="Algorand.Unity.ParticipationPublicKey.op_Implicit*"></a>
-  <h4 id="Algorand_Unity_ParticipationPublicKey_op_Implicit_Algorand_Unity_ParticipationPublicKey__Ed25519_PublicKey" data-uid="Algorand.Unity.ParticipationPublicKey.op_Implicit(Algorand.Unity.ParticipationPublicKey)~Ed25519.PublicKey">Implicit(ParticipationPublicKey to Ed25519.PublicKey)</h4>
+  <h4 id="Algorand_Unity_ParticipationPublicKey_op_Implicit_Algorand_Unity_Crypto_Ed25519_PublicKey__Algorand_Unity_ParticipationPublicKey" data-uid="Algorand.Unity.ParticipationPublicKey.op_Implicit(Algorand.Unity.Crypto.Ed25519.PublicKey)~Algorand.Unity.ParticipationPublicKey">Implicit(Ed25519.PublicKey to ParticipationPublicKey)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator ParticipationPublicKey(Ed25519.PublicKey pk)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Crypto.Ed25519.PublicKey.html">Ed25519.PublicKey</a></td>
+        <td><span class="parametername">pk</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.ParticipationPublicKey.html">ParticipationPublicKey</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_ParticipationPublicKey_op_Implicit_" data-uid="Algorand.Unity.ParticipationPublicKey.op_Implicit*"></a>
+  <h4 id="Algorand_Unity_ParticipationPublicKey_op_Implicit_Algorand_Unity_ParticipationPublicKey__Algorand_Unity_Crypto_Ed25519_PublicKey" data-uid="Algorand.Unity.ParticipationPublicKey.op_Implicit(Algorand.Unity.ParticipationPublicKey)~Algorand.Unity.Crypto.Ed25519.PublicKey">Implicit(ParticipationPublicKey to Ed25519.PublicKey)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -300,49 +340,7 @@ public struct ParticipationPublicKey : IWrappedValue&lt;Ed25519.PublicKey&gt;, I
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Ed25519.PublicKey</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Algorand_Unity_ParticipationPublicKey_op_Implicit_" data-uid="Algorand.Unity.ParticipationPublicKey.op_Implicit*"></a>
-  <h4 id="Algorand_Unity_ParticipationPublicKey_op_Implicit_Ed25519_PublicKey__Algorand_Unity_ParticipationPublicKey" data-uid="Algorand.Unity.ParticipationPublicKey.op_Implicit(Ed25519.PublicKey)~Algorand.Unity.ParticipationPublicKey">Implicit(Ed25519.PublicKey to ParticipationPublicKey)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator ParticipationPublicKey(Ed25519.PublicKey pk)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Ed25519.PublicKey</span></td>
-        <td><span class="parametername">pk</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Algorand.Unity.ParticipationPublicKey.html">ParticipationPublicKey</a></td>
+        <td><a class="xref" href="Algorand.Unity.Crypto.Ed25519.PublicKey.html">Ed25519.PublicKey</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -351,8 +349,8 @@ public struct ParticipationPublicKey : IWrappedValue&lt;Ed25519.PublicKey&gt;, I
   </h3>
   
   
-  <a id="Algorand_Unity_ParticipationPublicKey_Algorand_Unity_IWrappedValue_Ed25519_PublicKey__WrappedValue_" data-uid="Algorand.Unity.ParticipationPublicKey.Algorand#Unity#IWrappedValue{Ed25519#PublicKey}#WrappedValue*"></a>
-  <h4 id="Algorand_Unity_ParticipationPublicKey_Algorand_Unity_IWrappedValue_Ed25519_PublicKey__WrappedValue" data-uid="Algorand.Unity.ParticipationPublicKey.Algorand#Unity#IWrappedValue{Ed25519#PublicKey}#WrappedValue">IWrappedValue&lt;Ed25519.PublicKey&gt;.WrappedValue</h4>
+  <a id="Algorand_Unity_ParticipationPublicKey_Algorand_Unity_IWrappedValue_Algorand_Unity_Crypto_Ed25519_PublicKey__WrappedValue_" data-uid="Algorand.Unity.ParticipationPublicKey.Algorand#Unity#IWrappedValue{Algorand#Unity#Crypto#Ed25519#PublicKey}#WrappedValue*"></a>
+  <h4 id="Algorand_Unity_ParticipationPublicKey_Algorand_Unity_IWrappedValue_Algorand_Unity_Crypto_Ed25519_PublicKey__WrappedValue" data-uid="Algorand.Unity.ParticipationPublicKey.Algorand#Unity#IWrappedValue{Algorand#Unity#Crypto#Ed25519#PublicKey}#WrappedValue">IWrappedValue&lt;Ed25519.PublicKey&gt;.WrappedValue</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -369,7 +367,7 @@ public struct ParticipationPublicKey : IWrappedValue&lt;Ed25519.PublicKey&gt;, I
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Ed25519.PublicKey</span></td>
+        <td><a class="xref" href="Algorand.Unity.Crypto.Ed25519.PublicKey.html">Ed25519.PublicKey</a></td>
         <td></td>
       </tr>
     </tbody>

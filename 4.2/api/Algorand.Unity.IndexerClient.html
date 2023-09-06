@@ -94,8 +94,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Algorand_Unity_IndexerClient_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
-public struct IndexerClient : IIndexerClient, IAlgoApiClient</code></pre>
+    <pre><code class="lang-csharp hljs">public struct IndexerClient : IIndexerClient, IAlgoApiClient</code></pre>
   </div>
   <h5 id="Algorand_Unity_IndexerClient_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>The indexer service is responsible for querying the blockchain</p>
@@ -636,12 +635,12 @@ public struct IndexerClient : IIndexerClient, IAlgoApiClient</code></pre>
   
   
   <a id="Algorand_Unity_IndexerClient_LookupAccountTransactions_" data-uid="Algorand.Unity.IndexerClient.LookupAccountTransactions*"></a>
-  <h4 id="Algorand_Unity_IndexerClient_LookupAccountTransactions_System_String_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__System_DateTime_System_String_Algorand_Unity_Optional_System_UInt64__System_DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_Optional_System_UInt64__" data-uid="Algorand.Unity.IndexerClient.LookupAccountTransactions(System.String,System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},System.DateTime,System.String,Algorand.Unity.Optional{System.UInt64},System.DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.Optional{System.UInt64})">LookupAccountTransactions(String, Byte[], Optional&lt;Boolean&gt;, String, Optional&lt;UInt64&gt;, DateTime, String, Optional&lt;UInt64&gt;, DateTime, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, SignatureType, String, Optional&lt;UInt64&gt;)</h4>
+  <h4 id="Algorand_Unity_IndexerClient_LookupAccountTransactions_System_String_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__DateTime_System_String_Algorand_Unity_Optional_System_UInt64__DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_Optional_System_UInt64__" data-uid="Algorand.Unity.IndexerClient.LookupAccountTransactions(System.String,System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},DateTime,System.String,Algorand.Unity.Optional{System.UInt64},DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.Optional{System.UInt64})">LookupAccountTransactions(String, Byte[], Optional&lt;Boolean&gt;, String, Optional&lt;UInt64&gt;, DateTime, String, Optional&lt;UInt64&gt;, DateTime, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, SignatureType, String, Optional&lt;UInt64&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;TransactionsResponse&gt; LookupAccountTransactions(string accountId, byte[] notePrefix = null, Optional&lt;bool&gt; rekeyTo = default(Optional&lt;bool&gt;), string next = null, Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), DateTime afterTime = default(DateTime), string txType = null, Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), DateTime beforeTime = default(DateTime), Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), SignatureType sigType = SignatureType.None, string txid = null, Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;))</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;TransactionsResponse&gt; LookupAccountTransactions(string accountId, byte[] notePrefix = null, Optional&lt;bool&gt; rekeyTo = default(Optional&lt;bool&gt;), string next = null, Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), DateTime afterTime = null, string txType = null, Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), DateTime beforeTime = null, Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), SignatureType sigType = SignatureType.None, string txid = null, Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -684,7 +683,7 @@ public struct IndexerClient : IIndexerClient, IAlgoApiClient</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="xref">DateTime</span></td>
         <td><span class="parametername">afterTime</span></td>
         <td><p>Include results after the given time. Must be an RFC 3339 formatted string.</p>
 </td>
@@ -701,7 +700,7 @@ public struct IndexerClient : IIndexerClient, IAlgoApiClient</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="xref">DateTime</span></td>
         <td><span class="parametername">beforeTime</span></td>
         <td><p>Include results before the given time. Must be an RFC 3339 formatted string.</p>
 </td>
@@ -770,7 +769,7 @@ public struct IndexerClient : IIndexerClient, IAlgoApiClient</code></pre>
       </tr>
     </tbody>
   </table>
-  <h5 id="Algorand_Unity_IndexerClient_LookupAccountTransactions_System_String_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__System_DateTime_System_String_Algorand_Unity_Optional_System_UInt64__System_DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_Optional_System_UInt64___remarks">Remarks</h5>
+  <h5 id="Algorand_Unity_IndexerClient_LookupAccountTransactions_System_String_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__DateTime_System_String_Algorand_Unity_Optional_System_UInt64__DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_Optional_System_UInt64___remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Lookup account transactions. Transactions are returned newest to oldest.</p>
 </div>
   
@@ -1086,12 +1085,12 @@ public struct IndexerClient : IIndexerClient, IAlgoApiClient</code></pre>
   
   
   <a id="Algorand_Unity_IndexerClient_LookupAssetTransactions_" data-uid="Algorand.Unity.IndexerClient.LookupAssetTransactions*"></a>
-  <h4 id="Algorand_Unity_IndexerClient_LookupAssetTransactions_System_UInt64_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__System_DateTime_System_String_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__System_DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_AddressRole_Algorand_Unity_Optional_System_UInt64__" data-uid="Algorand.Unity.IndexerClient.LookupAssetTransactions(System.UInt64,System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},System.DateTime,System.String,Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},System.DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Address,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.AddressRole,Algorand.Unity.Optional{System.UInt64})">LookupAssetTransactions(UInt64, Byte[], Optional&lt;Boolean&gt;, String, Optional&lt;UInt64&gt;, DateTime, String, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, DateTime, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Address, Optional&lt;UInt64&gt;, SignatureType, String, AddressRole, Optional&lt;UInt64&gt;)</h4>
+  <h4 id="Algorand_Unity_IndexerClient_LookupAssetTransactions_System_UInt64_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__DateTime_System_String_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_AddressRole_Algorand_Unity_Optional_System_UInt64__" data-uid="Algorand.Unity.IndexerClient.LookupAssetTransactions(System.UInt64,System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},DateTime,System.String,Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Address,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.AddressRole,Algorand.Unity.Optional{System.UInt64})">LookupAssetTransactions(UInt64, Byte[], Optional&lt;Boolean&gt;, String, Optional&lt;UInt64&gt;, DateTime, String, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, DateTime, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Address, Optional&lt;UInt64&gt;, SignatureType, String, AddressRole, Optional&lt;UInt64&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;TransactionsResponse&gt; LookupAssetTransactions(ulong assetId, byte[] notePrefix = null, Optional&lt;bool&gt; rekeyTo = default(Optional&lt;bool&gt;), string next = null, Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), DateTime afterTime = default(DateTime), string txType = null, Optional&lt;bool&gt; excludeCloseTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), DateTime beforeTime = default(DateTime), Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Address address = default(Address), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), SignatureType sigType = SignatureType.None, string txid = null, AddressRole addressRole = AddressRole.None, Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;))</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;TransactionsResponse&gt; LookupAssetTransactions(ulong assetId, byte[] notePrefix = null, Optional&lt;bool&gt; rekeyTo = default(Optional&lt;bool&gt;), string next = null, Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), DateTime afterTime = null, string txType = null, Optional&lt;bool&gt; excludeCloseTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), DateTime beforeTime = null, Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Address address = default(Address), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), SignatureType sigType = SignatureType.None, string txid = null, AddressRole addressRole = AddressRole.None, Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1133,7 +1132,7 @@ public struct IndexerClient : IIndexerClient, IAlgoApiClient</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="xref">DateTime</span></td>
         <td><span class="parametername">afterTime</span></td>
         <td><p>Include results after the given time. Must be an RFC 3339 formatted string.</p>
 </td>
@@ -1156,7 +1155,7 @@ public struct IndexerClient : IIndexerClient, IAlgoApiClient</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="xref">DateTime</span></td>
         <td><span class="parametername">beforeTime</span></td>
         <td><p>Include results before the given time. Must be an RFC 3339 formatted string.</p>
 </td>
@@ -1231,7 +1230,7 @@ public struct IndexerClient : IIndexerClient, IAlgoApiClient</code></pre>
       </tr>
     </tbody>
   </table>
-  <h5 id="Algorand_Unity_IndexerClient_LookupAssetTransactions_System_UInt64_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__System_DateTime_System_String_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__System_DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_AddressRole_Algorand_Unity_Optional_System_UInt64___remarks">Remarks</h5>
+  <h5 id="Algorand_Unity_IndexerClient_LookupAssetTransactions_System_UInt64_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__DateTime_System_String_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_AddressRole_Algorand_Unity_Optional_System_UInt64___remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Lookup transactions for an asset. Transactions are returned oldest to newest.</p>
 </div>
   
@@ -1670,12 +1669,12 @@ public struct IndexerClient : IIndexerClient, IAlgoApiClient</code></pre>
   
   
   <a id="Algorand_Unity_IndexerClient_SearchForTransactions_" data-uid="Algorand.Unity.IndexerClient.SearchForTransactions*"></a>
-  <h4 id="Algorand_Unity_IndexerClient_SearchForTransactions_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__System_DateTime_Algorand_Unity_Optional_System_UInt64__System_String_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__System_DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_AddressRole_Algorand_Unity_Optional_System_UInt64__" data-uid="Algorand.Unity.IndexerClient.SearchForTransactions(System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},System.DateTime,Algorand.Unity.Optional{System.UInt64},System.String,Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},System.DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Address,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.AddressRole,Algorand.Unity.Optional{System.UInt64})">SearchForTransactions(Byte[], Optional&lt;Boolean&gt;, String, Optional&lt;UInt64&gt;, DateTime, Optional&lt;UInt64&gt;, String, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, DateTime, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Address, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, SignatureType, String, AddressRole, Optional&lt;UInt64&gt;)</h4>
+  <h4 id="Algorand_Unity_IndexerClient_SearchForTransactions_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__DateTime_Algorand_Unity_Optional_System_UInt64__System_String_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_AddressRole_Algorand_Unity_Optional_System_UInt64__" data-uid="Algorand.Unity.IndexerClient.SearchForTransactions(System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},DateTime,Algorand.Unity.Optional{System.UInt64},System.String,Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Address,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.AddressRole,Algorand.Unity.Optional{System.UInt64})">SearchForTransactions(Byte[], Optional&lt;Boolean&gt;, String, Optional&lt;UInt64&gt;, DateTime, Optional&lt;UInt64&gt;, String, Optional&lt;Boolean&gt;, Optional&lt;UInt64&gt;, DateTime, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, Address, Optional&lt;UInt64&gt;, Optional&lt;UInt64&gt;, SignatureType, String, AddressRole, Optional&lt;UInt64&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;TransactionsResponse&gt; SearchForTransactions(byte[] notePrefix = null, Optional&lt;bool&gt; rekeyTo = default(Optional&lt;bool&gt;), string next = null, Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), DateTime afterTime = default(DateTime), Optional&lt;ulong&gt; applicationId = default(Optional&lt;ulong&gt;), string txType = null, Optional&lt;bool&gt; excludeCloseTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), DateTime beforeTime = default(DateTime), Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Address address = default(Address), Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), SignatureType sigType = SignatureType.None, string txid = null, AddressRole addressRole = AddressRole.None, Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;))</code></pre>
+    <pre><code class="lang-csharp hljs">public AlgoApiRequest.Sent&lt;TransactionsResponse&gt; SearchForTransactions(byte[] notePrefix = null, Optional&lt;bool&gt; rekeyTo = default(Optional&lt;bool&gt;), string next = null, Optional&lt;ulong&gt; maxRound = default(Optional&lt;ulong&gt;), DateTime afterTime = null, Optional&lt;ulong&gt; applicationId = default(Optional&lt;ulong&gt;), string txType = null, Optional&lt;bool&gt; excludeCloseTo = default(Optional&lt;bool&gt;), Optional&lt;ulong&gt; limit = default(Optional&lt;ulong&gt;), DateTime beforeTime = null, Optional&lt;ulong&gt; minRound = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyGreaterThan = default(Optional&lt;ulong&gt;), Address address = default(Address), Optional&lt;ulong&gt; assetId = default(Optional&lt;ulong&gt;), Optional&lt;ulong&gt; currencyLessThan = default(Optional&lt;ulong&gt;), SignatureType sigType = SignatureType.None, string txid = null, AddressRole addressRole = AddressRole.None, Optional&lt;ulong&gt; round = default(Optional&lt;ulong&gt;))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1712,7 +1711,7 @@ public struct IndexerClient : IIndexerClient, IAlgoApiClient</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="xref">DateTime</span></td>
         <td><span class="parametername">afterTime</span></td>
         <td><p>Include results after the given time. Must be an RFC 3339 formatted string.</p>
 </td>
@@ -1741,7 +1740,7 @@ public struct IndexerClient : IIndexerClient, IAlgoApiClient</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="xref">DateTime</span></td>
         <td><span class="parametername">beforeTime</span></td>
         <td><p>Include results before the given time. Must be an RFC 3339 formatted string.</p>
 </td>
@@ -1822,7 +1821,7 @@ public struct IndexerClient : IIndexerClient, IAlgoApiClient</code></pre>
       </tr>
     </tbody>
   </table>
-  <h5 id="Algorand_Unity_IndexerClient_SearchForTransactions_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__System_DateTime_Algorand_Unity_Optional_System_UInt64__System_String_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__System_DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_AddressRole_Algorand_Unity_Optional_System_UInt64___remarks">Remarks</h5>
+  <h5 id="Algorand_Unity_IndexerClient_SearchForTransactions_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__DateTime_Algorand_Unity_Optional_System_UInt64__System_String_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_AddressRole_Algorand_Unity_Optional_System_UInt64___remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Search for transactions. Transactions are returned oldest to newest unless the address parameter is used, in which case results are returned newest to oldest.</p>
 </div>
   <h3 id="implements">Implements</h3>
