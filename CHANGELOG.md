@@ -5,6 +5,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [5.0.0-exp.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.2.0-exp.2...v5.0.0-exp.1) (2023-09-14)
+
+
+### Code Refactoring
+
+* :fire: remove .NET SDK support ([34c9d39](https://github.com/CareBoo/unity-algorand-sdk/commit/34c9d39eea41c14281fdb0fb21ae3c6eea40d377))
+* :fire: remove WalletConnect support from this SDK ([76c48bb](https://github.com/CareBoo/unity-algorand-sdk/commit/76c48bb06a170aeb0caea296b8149233051556ac))
+
+
+### BREAKING CHANGES
+
+* Remove compatibility with .NET Algorand SDK
+* WalletConnect is no longer supported. All related samples have been removed.
+
 # [4.2.0-exp.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.2.0-exp.1...v4.2.0-exp.2) (2023-09-06)
 
 
