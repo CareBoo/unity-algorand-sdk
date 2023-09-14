@@ -19,7 +19,7 @@ Since we'll be creating the asset in the editor, we'll need to be able to save t
 We'll create an `AccountObject` class that inherits from `ScriptableObject`. This will store our `PrivateKey` used for signing.
 
 > [!Important]
-> Do **NOT** store a sensitive `PrivateKey` inside your project source. We're only storing the `PrivateKey` in this demo to keep it simple. In production, you will want to use a secure Algorand wallet to sign your transactions. This SDK currently supports KMD and WalletConnect connections. Please see the `Editor Wallet Connection` sample to see examples on how to connect your wallets in the editor.
+> Do **NOT** store a sensitive `PrivateKey` inside your project source. We're only storing the `PrivateKey` in this demo to keep it simple. In production, you will want to use a secure Algorand wallet to sign your transactions. This SDK currently supports KMD and password-protected local storage connections.
 
 Add the following, `AccountObject.cs`, to your project:
 

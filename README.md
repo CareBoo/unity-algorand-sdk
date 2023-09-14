@@ -24,8 +24,7 @@ Algorand SDK for Unity
 </h1>
 
 Integrate your game with [Algorand](https://www.algorand.com/), a Pure Proof-of-Stake blockchain overseen by the Algorand Foundation.
-Create and sign Algorand transactions, use Algorand's [REST APIs](https://developer.algorand.org/docs/rest-apis/restendpoints/),
-and connect to any Algorand wallet supporting [WalletConnect](https://developer.algorand.org/docs/get-details/walletconnect/).
+Create Algorand transactions, Algorand accounts, and use Algorand's [REST APIs](https://developer.algorand.org/docs/rest-apis/restendpoints/).
 
 ## Table of Contents
 
@@ -35,9 +34,7 @@ and connect to any Algorand wallet supporting [WalletConnect](https://developer.
   - [Make a payment transaction](#make-a-payment-transaction)
     - [Sign the transaction with an account](#sign-the-transaction-with-an-account)
     - [Sign the transaction with `kmd`](#sign-the-transaction-with-kmd)
-    - [Sign the transaction with WalletConnect](#sign-the-transaction-with-walletconnect)
     - [Send the signed transaction](#send-the-signed-transaction)
-  - [Initiate a WalletConnect session and generate a QR Code](#initiate-a-walletconnect-session-and-generate-a-qr-code)
 - [Installation](#installation)
   - [Open UPM](#open-upm)
   - [Manually Adding UPM Scopes](#manually-adding-upm-scopes)
@@ -90,44 +87,10 @@ var walletToken = await kmd.InitWalletHandleToken("<your wallet id>", "<your wal
 var signedTxn = await kmd.SignTransaction(paymentTxn.Sender, paymentTxn.ToSignatureMessage(), walletToken, "<your kmd wallet password>");
 ```
 
-#### Sign the transaction with WalletConnect:
-
-```csharp
-using Algorand.Unity.WalletConnect;
-
-SavedSession savedSession = [...];
-var session = new AlgorandWalletConnectSession(savedSession);
-var walletTransaction = WalletTransaction.New(paymentTxn);
-var signedTxns = await session.SignTransactions(new[] { walletTransaction });
-var signedTxn = signedTxns[0];
-```
-
 #### Send the signed transaction:
 
 ```csharp
 await algod.SendTransaction(signedTxn);
-```
-
-### Initiate a WalletConnect session and generate a QR Code:
-
-```csharp
-using Algorand.Unity;
-using Algorand.Unity.WalletConnect;
-using UnityEngine;
-
-var dappMeta = new ClientMeta
-{
-    Name = "<name of your dapp>",
-    Description = "<description of your dapp>",
-    Url = "<url of your dapp>",
-    IconUrls = new[]
-    {
-        "<icon1 of your dapp>", "<icon2 of your dapp>"
-    }
-};
-var session = new AlgorandWalletConnectSession(dappMeta);
-var handshake = await session.StartConnection();
-Texture2D qrCode = handshake.ToQrCodeTexture();
 ```
 
 ## Installation
@@ -164,5 +127,4 @@ Docs for this version were generated at https://careboo.github.io/unity-algorand
 
 Some of the samples are built on WebGL and hosted on GitHub Pages.
 
-- [WalletConnect](https://careboo.github.io/unity-algorand-sdk/walletconnect)
 - [ABI](https://careboo.github.io/unity-algorand-sdk/abi)
