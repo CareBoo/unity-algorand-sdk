@@ -5,7 +5,7 @@
       "depth": 0,
       "source": "embedded",
       "dependencies": {
-        "com.unity.collections": "1.4.0",
+        "com.unity.collections": "1.5.1",
         "com.cysharp.unitask": "2.3.1",
         "com.unity.ugui": "1.0.0"
       }
@@ -32,7 +32,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collections": {
-      "version": "1.4.0",
+      "version": "1.5.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {

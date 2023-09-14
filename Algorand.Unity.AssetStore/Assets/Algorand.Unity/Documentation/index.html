@@ -133,12 +133,6 @@ Algorand SDK for Unity
                           </li>
                         </ul>                    </li>
                     <li class="">
-                      <a href="manual/walletconnect.html" title="WalletConnect" class="">WalletConnect</a>
-                    </li>
-                    <li class="">
-                      <a href="manual/integration_with_the_dotnet_sdk.html" title="Integration with the .NET SDK" class="">Integration with the .NET SDK</a>
-                    </li>
-                    <li class="">
                       <a href="manual/troubleshooting.html" title="Troubleshooting" class="">Troubleshooting</a>
                     </li>
                   </ul>                </div>
@@ -176,8 +170,7 @@ Algorand SDK for Unity
 
 
 <p>Integrate your game with <a href="https://www.algorand.com/">Algorand</a>, a Pure Proof-of-Stake blockchain overseen by the Algorand Foundation.
-Create and sign Algorand transactions, use Algorand&#39;s <a href="https://developer.algorand.org/docs/rest-apis/restendpoints/">REST APIs</a>,
-and connect to any Algorand wallet supporting <a href="https://developer.algorand.org/docs/get-details/walletconnect/">WalletConnect</a>.</p>
+Create Algorand transactions, Algorand accounts, and use Algorand&#39;s <a href="https://developer.algorand.org/docs/rest-apis/restendpoints/">REST APIs</a>.</p>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>
 <li><a href="#table-of-contents">Table of Contents</a></li>
@@ -186,11 +179,9 @@ and connect to any Algorand wallet supporting <a href="https://developer.algoran
 <li><a href="#make-a-payment-transaction">Make a payment transaction</a><ul>
 <li><a href="#sign-the-transaction-with-an-account">Sign the transaction with an account</a></li>
 <li><a href="#sign-the-transaction-with-kmd">Sign the transaction with <code>kmd</code></a></li>
-<li><a href="#sign-the-transaction-with-walletconnect">Sign the transaction with WalletConnect</a></li>
 <li><a href="#send-the-signed-transaction">Send the signed transaction</a></li>
 </ul>
 </li>
-<li><a href="#initiate-a-walletconnect-session-and-generate-a-qr-code">Initiate a WalletConnect session and generate a QR Code</a></li>
 </ul>
 </li>
 <li><a href="#installation">Installation</a><ul>
@@ -271,34 +262,8 @@ var signedTxn = account.SignTxn(paymentTxn);
 <pre><code class="lang-csharp">var kmd = new KmdClient(&quot;&lt;host of kmd&gt;&quot;);
 var walletToken = await kmd.InitWalletHandleToken(&quot;&lt;your wallet id&gt;&quot;, &quot;&lt;your wallet password&gt;&quot;);
 var signedTxn = await kmd.SignTransaction(paymentTxn.Sender, paymentTxn.ToSignatureMessage(), walletToken, &quot;&lt;your kmd wallet password&gt;&quot;);
-</code></pre><h4 id="sign-the-transaction-with-walletconnect">Sign the transaction with WalletConnect:</h4>
-<pre><code class="lang-csharp">using Algorand.Unity.WalletConnect;
-
-SavedSession savedSession = [...];
-var session = new AlgorandWalletConnectSession(savedSession);
-var walletTransaction = WalletTransaction.New(paymentTxn);
-var signedTxns = await session.SignTransactions(new[] { walletTransaction });
-var signedTxn = signedTxns[0];
 </code></pre><h4 id="send-the-signed-transaction">Send the signed transaction:</h4>
 <pre><code class="lang-csharp">await algod.SendTransaction(signedTxn);
-</code></pre><h3 id="initiate-a-walletconnect-session-and-generate-a-qr-code">Initiate a WalletConnect session and generate a QR Code:</h3>
-<pre><code class="lang-csharp">using Algorand.Unity;
-using Algorand.Unity.WalletConnect;
-using UnityEngine;
-
-var dappMeta = new ClientMeta
-{
-    Name = &quot;&lt;name of your dapp&gt;&quot;,
-    Description = &quot;&lt;description of your dapp&gt;&quot;,
-    Url = &quot;&lt;url of your dapp&gt;&quot;,
-    IconUrls = new[]
-    {
-        &quot;&lt;icon1 of your dapp&gt;&quot;, &quot;&lt;icon2 of your dapp&gt;&quot;
-    }
-};
-var session = new AlgorandWalletConnectSession(dappMeta);
-var handshake = await session.StartConnection();
-Texture2D qrCode = handshake.ToQrCodeTexture();
 </code></pre><h2 id="installation">Installation</h2>
 <h3 id="open-upm">Open UPM</h3>
 <p>The easiest way to install is to use Open UPM as it manages your scopes automatically.
@@ -314,11 +279,10 @@ required for this package. See <a href="https://docs.unity3d.com/Manual/upm-scop
 <h2 id="getting-started">Getting Started</h2>
 <p>Read <a href="manual/getting_started.html">Getting Started</a> to learn the basic workflows for developing on Algorand.</p>
 <h3 id="documentation-site">Documentation Site</h3>
-<p>Docs for this version were generated at <a href="https://careboo.github.io/unity-algorand-sdk/4.1">https://careboo.github.io/unity-algorand-sdk/4.1</a>.</p>
+<p>Docs for this version were generated at <a href="https://careboo.github.io/unity-algorand-sdk/5.0">https://careboo.github.io/unity-algorand-sdk/5.0</a>.</p>
 <h3 id="samples">Samples</h3>
 <p>Some of the samples are built on WebGL and hosted on GitHub Pages.</p>
 <ul>
-<li><a href="https://careboo.github.io/unity-algorand-sdk/walletconnect">WalletConnect</a></li>
 <li><a href="https://careboo.github.io/unity-algorand-sdk/abi">ABI</a></li>
 </ul>
 </article>
