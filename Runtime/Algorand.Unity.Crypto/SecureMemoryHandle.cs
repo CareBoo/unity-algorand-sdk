@@ -1,5 +1,6 @@
 using System;
 using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 using Unity.Jobs;
 using static Algorand.Unity.Crypto.sodium;
 
@@ -8,7 +9,15 @@ namespace Algorand.Unity.Crypto
     public struct SecureMemoryHandle
         : INativeDisposable
     {
-        public IntPtr Ptr;
+        [NativeDisableUnsafePtrRestriction]
+        private IntPtr ptr;
+
+        public IntPtr Ptr => ptr;
+
+        public unsafe byte* GetUnsafePtr()
+        {
+            return (byte*)ptr.ToPointer();
+        }
 
         static SecureMemoryHandle()
         {
@@ -17,7 +26,7 @@ namespace Algorand.Unity.Crypto
 
         internal SecureMemoryHandle(IntPtr ptr)
         {
-            Ptr = ptr;
+            this.ptr = ptr;
         }
 
         public bool IsCreated => Ptr != IntPtr.Zero;
@@ -32,8 +41,8 @@ namespace Algorand.Unity.Crypto
             if (!IsCreated)
                 return;
 
-            sodium_free(Ptr);
-            Ptr = IntPtr.Zero;
+            sodium_free(ptr);
+            ptr = IntPtr.Zero;
         }
 
         public static SecureMemoryHandle Create(UIntPtr sizeBytes)
