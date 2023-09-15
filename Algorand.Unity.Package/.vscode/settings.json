@@ -65,7 +65,8 @@
         "msgpack",
         "applications",
         "assets",
-        "abi"
+        "abi",
+        "crypto"
     ],
     "dotnet.defaultSolution": "Algorand.Unity.Package.sln"
 }
