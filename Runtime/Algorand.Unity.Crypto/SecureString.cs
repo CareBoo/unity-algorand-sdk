@@ -27,11 +27,13 @@ namespace Algorand.Unity.Crypto
         public SecureString(ReadOnlySpan<char> source)
         {
             totalCapacity = source.Length * 2;
-            handle = SecureMemoryHandle.Create((UIntPtr)totalCapacity);
+            var totalCapacityNUint = (UIntPtr)totalCapacity;
+            handle = SecureMemoryHandle.Create(totalCapacityNUint);
             unsafe
             {
                 fixed (char* sourceptr = source)
                 {
+                    sodium.sodium_mlock((IntPtr)sourceptr, totalCapacityNUint);
                     var error = UTF8ArrayUnsafeUtility.Copy(
                         handle.GetUnsafePtr(),
                         out length,
@@ -39,6 +41,7 @@ namespace Algorand.Unity.Crypto
                         sourceptr,
                         source.Length
                     );
+                    sodium.sodium_munlock((IntPtr)sourceptr, totalCapacityNUint);
                     if (error != CopyError.None)
                     {
                         if (handle.IsCreated) handle.Dispose();
