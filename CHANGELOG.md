@@ -5,6 +5,22 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [5.0.0-exp.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v5.0.0-exp.1...v5.0.0-exp.2) (2023-09-25)
+
+
+### Features
+
+* **crypto:** :sparkles: add `PwHash` store methods ([721907b](https://github.com/CareBoo/unity-algorand-sdk/commit/721907be4571a98e58f4c6aff36efa2d50a2db59))
+* **crypto:** :sparkles: add `PwHash` struct and related APIs ([6642e99](https://github.com/CareBoo/unity-algorand-sdk/commit/6642e99f759866f857a65cf748fc6a0be30f26d3))
+* **crypto:** :sparkles: add `PwHash` to represent password hashes for storage ([3f9bfb3](https://github.com/CareBoo/unity-algorand-sdk/commit/3f9bfb30302c50ef861472615ce4c8e7faa42346))
+* **crypto:** :sparkles: add `SecretBox` related APIs for encrypt and decrypt ([a6f7ea0](https://github.com/CareBoo/unity-algorand-sdk/commit/a6f7ea0d8783e8edc73a07d17156878fbe759dfa))
+* **crypto:** :sparkles: add `SodiumArray` ([5c03fa3](https://github.com/CareBoo/unity-algorand-sdk/commit/5c03fa3dbf3a755973b22ec52322e4adbbd1e908))
+* **crypto:** :sparkles: add `SodiumReference` ([11762f6](https://github.com/CareBoo/unity-algorand-sdk/commit/11762f6dd6f09337346c4c008993fa8c9d9230f1))
+* **crypto:** :sparkles: add `SodiumString` ([fdd3ccb](https://github.com/CareBoo/unity-algorand-sdk/commit/fdd3ccbc3b5045839c58be7072dd1c32c9e43356))
+* **crypto:** :sparkles: add mlock and munlock in sodium ([0d9a4d7](https://github.com/CareBoo/unity-algorand-sdk/commit/0d9a4d72ef430a1f5d711e2e2cb291eaa7fcba05))
+* **crypto:** :sparkles: add new methods to support secret key -> seed and public keys ([ac09b7d](https://github.com/CareBoo/unity-algorand-sdk/commit/ac09b7dd2b8325ca8081721c380bb9930c99bd1e))
+* **libsodium:** :sparkles: add pwhash, secretbox apis ([568b039](https://github.com/CareBoo/unity-algorand-sdk/commit/568b039db2d8d54853158ad07ce546c53a32ebee))
+
 # [5.0.0-exp.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.2.0-exp.2...v5.0.0-exp.1) (2023-09-14)
 
 
