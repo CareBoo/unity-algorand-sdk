@@ -8,7 +8,7 @@ namespace Algorand.Unity.Crypto
 
     public partial struct PwHash
     {
-        public PasswordVerificationError Verify(SecureString password)
+        public PasswordVerificationError Verify(SodiumString password)
         {
             unsafe
             {

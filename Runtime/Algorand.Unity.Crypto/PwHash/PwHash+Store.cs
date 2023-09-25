@@ -13,7 +13,7 @@ namespace Algorand.Unity.Crypto
 
     public partial struct PwHash
     {
-        public PasswordStorageError HashStore(SecureString password)
+        public PasswordStorageError HashStore(SodiumString password)
         {
             unsafe
             {
@@ -28,7 +28,7 @@ namespace Algorand.Unity.Crypto
         }
 
         public static JobHandle HashStore(
-            SecureString password,
+            SodiumString password,
             NativeReference<PwHash> hash,
             JobHandle inputDeps = default
         )
@@ -44,7 +44,7 @@ namespace Algorand.Unity.Crypto
         [BurstCompile]
         public struct HashStoreJob : IJob
         {
-            public SecureString Password;
+            public SodiumString Password;
             public NativeReference<PwHash> Hash;
 
             public void Execute()
