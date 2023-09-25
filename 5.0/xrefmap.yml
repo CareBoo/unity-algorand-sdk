@@ -13978,6 +13978,15 @@ references:
   fullName.vb: Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt(System.Span(Of System.Byte), System.ReadOnlySpan(Of System.Byte), Algorand.Unity.Crypto.ChaCha20Poly1305.Key, Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
   nameWithType: ChaCha20Poly1305.Decrypt(Span<Byte>, ReadOnlySpan<Byte>, ChaCha20Poly1305.Key, ChaCha20Poly1305.Nonce)
   nameWithType.vb: ChaCha20Poly1305.Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ChaCha20Poly1305.Key, ChaCha20Poly1305.Nonce)
+- uid: Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecureMemoryHandle,Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
+  name: Decrypt(Span<Byte>, ReadOnlySpan<Byte>, SecureMemoryHandle, ChaCha20Poly1305.Nonce)
+  href: api/Algorand.Unity.Crypto.ChaCha20Poly1305.html#Algorand_Unity_Crypto_ChaCha20Poly1305_Decrypt_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__Algorand_Unity_Crypto_SecureMemoryHandle_Algorand_Unity_Crypto_ChaCha20Poly1305_Nonce_
+  commentId: M:Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecureMemoryHandle,Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
+  name.vb: Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecureMemoryHandle, ChaCha20Poly1305.Nonce)
+  fullName: Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt(System.Span<System.Byte>, System.ReadOnlySpan<System.Byte>, Algorand.Unity.Crypto.SecureMemoryHandle, Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
+  fullName.vb: Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt(System.Span(Of System.Byte), System.ReadOnlySpan(Of System.Byte), Algorand.Unity.Crypto.SecureMemoryHandle, Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
+  nameWithType: ChaCha20Poly1305.Decrypt(Span<Byte>, ReadOnlySpan<Byte>, SecureMemoryHandle, ChaCha20Poly1305.Nonce)
+  nameWithType.vb: ChaCha20Poly1305.Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecureMemoryHandle, ChaCha20Poly1305.Nonce)
 - uid: Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt*
   name: Decrypt
   href: api/Algorand.Unity.Crypto.ChaCha20Poly1305.html#Algorand_Unity_Crypto_ChaCha20Poly1305_Decrypt_
@@ -14018,6 +14027,15 @@ references:
   fullName.vb: Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt(System.Span(Of System.Byte), System.ReadOnlySpan(Of System.Byte), Algorand.Unity.Crypto.ChaCha20Poly1305.Key, Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
   nameWithType: ChaCha20Poly1305.Encrypt(Span<Byte>, ReadOnlySpan<Byte>, ChaCha20Poly1305.Key, ChaCha20Poly1305.Nonce)
   nameWithType.vb: ChaCha20Poly1305.Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ChaCha20Poly1305.Key, ChaCha20Poly1305.Nonce)
+- uid: Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecureMemoryHandle,Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
+  name: Encrypt(Span<Byte>, ReadOnlySpan<Byte>, SecureMemoryHandle, ChaCha20Poly1305.Nonce)
+  href: api/Algorand.Unity.Crypto.ChaCha20Poly1305.html#Algorand_Unity_Crypto_ChaCha20Poly1305_Encrypt_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__Algorand_Unity_Crypto_SecureMemoryHandle_Algorand_Unity_Crypto_ChaCha20Poly1305_Nonce_
+  commentId: M:Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecureMemoryHandle,Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
+  name.vb: Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecureMemoryHandle, ChaCha20Poly1305.Nonce)
+  fullName: Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt(System.Span<System.Byte>, System.ReadOnlySpan<System.Byte>, Algorand.Unity.Crypto.SecureMemoryHandle, Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
+  fullName.vb: Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt(System.Span(Of System.Byte), System.ReadOnlySpan(Of System.Byte), Algorand.Unity.Crypto.SecureMemoryHandle, Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
+  nameWithType: ChaCha20Poly1305.Encrypt(Span<Byte>, ReadOnlySpan<Byte>, SecureMemoryHandle, ChaCha20Poly1305.Nonce)
+  nameWithType.vb: ChaCha20Poly1305.Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecureMemoryHandle, ChaCha20Poly1305.Nonce)
 - uid: Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt*
   name: Encrypt
   href: api/Algorand.Unity.Crypto.ChaCha20Poly1305.html#Algorand_Unity_Crypto_ChaCha20Poly1305_Encrypt_
@@ -14228,6 +14246,43 @@ references:
   commentId: T:Algorand.Unity.Crypto.Ed25519
   fullName: Algorand.Unity.Crypto.Ed25519
   nameWithType: Ed25519
+- uid: Algorand.Unity.Crypto.Ed25519.GenKeyPair(Algorand.Unity.Crypto.Ed25519.Seed@,Algorand.Unity.Crypto.Ed25519.SecretKey@,Algorand.Unity.Crypto.Ed25519.PublicKey@)
+  name: GenKeyPair(ref Ed25519.Seed, ref Ed25519.SecretKey, ref Ed25519.PublicKey)
+  href: api/Algorand.Unity.Crypto.Ed25519.html#Algorand_Unity_Crypto_Ed25519_GenKeyPair_Algorand_Unity_Crypto_Ed25519_Seed__Algorand_Unity_Crypto_Ed25519_SecretKey__Algorand_Unity_Crypto_Ed25519_PublicKey__
+  commentId: M:Algorand.Unity.Crypto.Ed25519.GenKeyPair(Algorand.Unity.Crypto.Ed25519.Seed@,Algorand.Unity.Crypto.Ed25519.SecretKey@,Algorand.Unity.Crypto.Ed25519.PublicKey@)
+  name.vb: GenKeyPair(ByRef Ed25519.Seed, ByRef Ed25519.SecretKey, ByRef Ed25519.PublicKey)
+  fullName: Algorand.Unity.Crypto.Ed25519.GenKeyPair(ref Algorand.Unity.Crypto.Ed25519.Seed, ref Algorand.Unity.Crypto.Ed25519.SecretKey, ref Algorand.Unity.Crypto.Ed25519.PublicKey)
+  fullName.vb: Algorand.Unity.Crypto.Ed25519.GenKeyPair(ByRef Algorand.Unity.Crypto.Ed25519.Seed, ByRef Algorand.Unity.Crypto.Ed25519.SecretKey, ByRef Algorand.Unity.Crypto.Ed25519.PublicKey)
+  nameWithType: Ed25519.GenKeyPair(ref Ed25519.Seed, ref Ed25519.SecretKey, ref Ed25519.PublicKey)
+  nameWithType.vb: Ed25519.GenKeyPair(ByRef Ed25519.Seed, ByRef Ed25519.SecretKey, ByRef Ed25519.PublicKey)
+- uid: Algorand.Unity.Crypto.Ed25519.GenKeyPair(Algorand.Unity.Crypto.SecureMemoryHandle,Algorand.Unity.Crypto.Ed25519.KeyPair@)
+  name: GenKeyPair(SecureMemoryHandle, out Ed25519.KeyPair)
+  href: api/Algorand.Unity.Crypto.Ed25519.html#Algorand_Unity_Crypto_Ed25519_GenKeyPair_Algorand_Unity_Crypto_SecureMemoryHandle_Algorand_Unity_Crypto_Ed25519_KeyPair__
+  commentId: M:Algorand.Unity.Crypto.Ed25519.GenKeyPair(Algorand.Unity.Crypto.SecureMemoryHandle,Algorand.Unity.Crypto.Ed25519.KeyPair@)
+  name.vb: GenKeyPair(SecureMemoryHandle, ByRef Ed25519.KeyPair)
+  fullName: Algorand.Unity.Crypto.Ed25519.GenKeyPair(Algorand.Unity.Crypto.SecureMemoryHandle, out Algorand.Unity.Crypto.Ed25519.KeyPair)
+  fullName.vb: Algorand.Unity.Crypto.Ed25519.GenKeyPair(Algorand.Unity.Crypto.SecureMemoryHandle, ByRef Algorand.Unity.Crypto.Ed25519.KeyPair)
+  nameWithType: Ed25519.GenKeyPair(SecureMemoryHandle, out Ed25519.KeyPair)
+  nameWithType.vb: Ed25519.GenKeyPair(SecureMemoryHandle, ByRef Ed25519.KeyPair)
+- uid: Algorand.Unity.Crypto.Ed25519.GenKeyPair*
+  name: GenKeyPair
+  href: api/Algorand.Unity.Crypto.Ed25519.html#Algorand_Unity_Crypto_Ed25519_GenKeyPair_
+  commentId: Overload:Algorand.Unity.Crypto.Ed25519.GenKeyPair
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.Ed25519.GenKeyPair
+  nameWithType: Ed25519.GenKeyPair
+- uid: Algorand.Unity.Crypto.Ed25519.GenKeyPairError
+  name: Ed25519.GenKeyPairError
+  href: api/Algorand.Unity.Crypto.Ed25519.GenKeyPairError.html
+  commentId: T:Algorand.Unity.Crypto.Ed25519.GenKeyPairError
+  fullName: Algorand.Unity.Crypto.Ed25519.GenKeyPairError
+  nameWithType: Ed25519.GenKeyPairError
+- uid: Algorand.Unity.Crypto.Ed25519.GenKeyPairError.None
+  name: None
+  href: api/Algorand.Unity.Crypto.Ed25519.GenKeyPairError.html#Algorand_Unity_Crypto_Ed25519_GenKeyPairError_None
+  commentId: F:Algorand.Unity.Crypto.Ed25519.GenKeyPairError.None
+  fullName: Algorand.Unity.Crypto.Ed25519.GenKeyPairError.None
+  nameWithType: Ed25519.GenKeyPairError.None
 - uid: Algorand.Unity.Crypto.Ed25519.KeyPair
   name: Ed25519.KeyPair
   href: api/Algorand.Unity.Crypto.Ed25519.KeyPair.html
@@ -14412,6 +14467,48 @@ references:
   commentId: F:Algorand.Unity.Crypto.Ed25519.PublicKey.SizeBytes
   fullName: Algorand.Unity.Crypto.Ed25519.PublicKey.SizeBytes
   nameWithType: Ed25519.PublicKey.SizeBytes
+- uid: Algorand.Unity.Crypto.Ed25519.SecretKey
+  name: Ed25519.SecretKey
+  href: api/Algorand.Unity.Crypto.Ed25519.SecretKey.html
+  commentId: T:Algorand.Unity.Crypto.Ed25519.SecretKey
+  fullName: Algorand.Unity.Crypto.Ed25519.SecretKey
+  nameWithType: Ed25519.SecretKey
+- uid: Algorand.Unity.Crypto.Ed25519.SecretKey.bytes
+  name: bytes
+  href: api/Algorand.Unity.Crypto.Ed25519.SecretKey.html#Algorand_Unity_Crypto_Ed25519_SecretKey_bytes
+  commentId: F:Algorand.Unity.Crypto.Ed25519.SecretKey.bytes
+  fullName: Algorand.Unity.Crypto.Ed25519.SecretKey.bytes
+  nameWithType: Ed25519.SecretKey.bytes
+- uid: Algorand.Unity.Crypto.Ed25519.SecretKey.chars
+  name: chars
+  href: api/Algorand.Unity.Crypto.Ed25519.SecretKey.html#Algorand_Unity_Crypto_Ed25519_SecretKey_chars
+  commentId: F:Algorand.Unity.Crypto.Ed25519.SecretKey.chars
+  fullName: Algorand.Unity.Crypto.Ed25519.SecretKey.chars
+  nameWithType: Ed25519.SecretKey.chars
+- uid: Algorand.Unity.Crypto.Ed25519.SecretKey.SizeBytes
+  name: SizeBytes
+  href: api/Algorand.Unity.Crypto.Ed25519.SecretKey.html#Algorand_Unity_Crypto_Ed25519_SecretKey_SizeBytes
+  commentId: F:Algorand.Unity.Crypto.Ed25519.SecretKey.SizeBytes
+  fullName: Algorand.Unity.Crypto.Ed25519.SecretKey.SizeBytes
+  nameWithType: Ed25519.SecretKey.SizeBytes
+- uid: Algorand.Unity.Crypto.Ed25519.SecretKey.SizeChars
+  name: SizeChars
+  href: api/Algorand.Unity.Crypto.Ed25519.SecretKey.html#Algorand_Unity_Crypto_Ed25519_SecretKey_SizeChars
+  commentId: F:Algorand.Unity.Crypto.Ed25519.SecretKey.SizeChars
+  fullName: Algorand.Unity.Crypto.Ed25519.SecretKey.SizeChars
+  nameWithType: Ed25519.SecretKey.SizeChars
+- uid: Algorand.Unity.Crypto.Ed25519.SecretKey.SizeUlongs
+  name: SizeUlongs
+  href: api/Algorand.Unity.Crypto.Ed25519.SecretKey.html#Algorand_Unity_Crypto_Ed25519_SecretKey_SizeUlongs
+  commentId: F:Algorand.Unity.Crypto.Ed25519.SecretKey.SizeUlongs
+  fullName: Algorand.Unity.Crypto.Ed25519.SecretKey.SizeUlongs
+  nameWithType: Ed25519.SecretKey.SizeUlongs
+- uid: Algorand.Unity.Crypto.Ed25519.SecretKey.ulongs
+  name: ulongs
+  href: api/Algorand.Unity.Crypto.Ed25519.SecretKey.html#Algorand_Unity_Crypto_Ed25519_SecretKey_ulongs
+  commentId: F:Algorand.Unity.Crypto.Ed25519.SecretKey.ulongs
+  fullName: Algorand.Unity.Crypto.Ed25519.SecretKey.ulongs
+  nameWithType: Ed25519.SecretKey.ulongs
 - uid: Algorand.Unity.Crypto.Ed25519.SecretKeyHandle
   name: Ed25519.SecretKeyHandle
   href: api/Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.html
@@ -14450,6 +14547,19 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.Dispose
   nameWithType: Ed25519.SecretKeyHandle.Dispose
+- uid: Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.GetUnsafePtr
+  name: GetUnsafePtr()
+  href: api/Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.html#Algorand_Unity_Crypto_Ed25519_SecretKeyHandle_GetUnsafePtr
+  commentId: M:Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.GetUnsafePtr
+  fullName: Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.GetUnsafePtr()
+  nameWithType: Ed25519.SecretKeyHandle.GetUnsafePtr()
+- uid: Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.GetUnsafePtr*
+  name: GetUnsafePtr
+  href: api/Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.html#Algorand_Unity_Crypto_Ed25519_SecretKeyHandle_GetUnsafePtr_
+  commentId: Overload:Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.GetUnsafePtr
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.GetUnsafePtr
+  nameWithType: Ed25519.SecretKeyHandle.GetUnsafePtr
 - uid: Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.IsCreated
   name: IsCreated
   href: api/Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.html#Algorand_Unity_Crypto_Ed25519_SecretKeyHandle_IsCreated
@@ -14771,6 +14881,448 @@ references:
   fullName.vb: Algorand.Unity.Crypto.Ed25519.Signature.Verify(Of TMessage)(TMessage, Algorand.Unity.Crypto.Ed25519.PublicKey)
   nameWithType: Ed25519.Signature.Verify<TMessage>(TMessage, Ed25519.PublicKey)
   nameWithType.vb: Ed25519.Signature.Verify(Of TMessage)(TMessage, Ed25519.PublicKey)
+- uid: Algorand.Unity.Crypto.PasswordNeedsRehashResult
+  name: PasswordNeedsRehashResult
+  href: api/Algorand.Unity.Crypto.PasswordNeedsRehashResult.html
+  commentId: T:Algorand.Unity.Crypto.PasswordNeedsRehashResult
+  fullName: Algorand.Unity.Crypto.PasswordNeedsRehashResult
+  nameWithType: PasswordNeedsRehashResult
+- uid: Algorand.Unity.Crypto.PasswordNeedsRehashResult.Error
+  name: Error
+  href: api/Algorand.Unity.Crypto.PasswordNeedsRehashResult.html#Algorand_Unity_Crypto_PasswordNeedsRehashResult_Error
+  commentId: F:Algorand.Unity.Crypto.PasswordNeedsRehashResult.Error
+  fullName: Algorand.Unity.Crypto.PasswordNeedsRehashResult.Error
+  nameWithType: PasswordNeedsRehashResult.Error
+- uid: Algorand.Unity.Crypto.PasswordNeedsRehashResult.NeedsRehash
+  name: NeedsRehash
+  href: api/Algorand.Unity.Crypto.PasswordNeedsRehashResult.html#Algorand_Unity_Crypto_PasswordNeedsRehashResult_NeedsRehash
+  commentId: F:Algorand.Unity.Crypto.PasswordNeedsRehashResult.NeedsRehash
+  fullName: Algorand.Unity.Crypto.PasswordNeedsRehashResult.NeedsRehash
+  nameWithType: PasswordNeedsRehashResult.NeedsRehash
+- uid: Algorand.Unity.Crypto.PasswordNeedsRehashResult.Success
+  name: Success
+  href: api/Algorand.Unity.Crypto.PasswordNeedsRehashResult.html#Algorand_Unity_Crypto_PasswordNeedsRehashResult_Success
+  commentId: F:Algorand.Unity.Crypto.PasswordNeedsRehashResult.Success
+  fullName: Algorand.Unity.Crypto.PasswordNeedsRehashResult.Success
+  nameWithType: PasswordNeedsRehashResult.Success
+- uid: Algorand.Unity.Crypto.PasswordStorageError
+  name: PasswordStorageError
+  href: api/Algorand.Unity.Crypto.PasswordStorageError.html
+  commentId: T:Algorand.Unity.Crypto.PasswordStorageError
+  fullName: Algorand.Unity.Crypto.PasswordStorageError
+  nameWithType: PasswordStorageError
+- uid: Algorand.Unity.Crypto.PasswordStorageError.OutOfMemory
+  name: OutOfMemory
+  href: api/Algorand.Unity.Crypto.PasswordStorageError.html#Algorand_Unity_Crypto_PasswordStorageError_OutOfMemory
+  commentId: F:Algorand.Unity.Crypto.PasswordStorageError.OutOfMemory
+  fullName: Algorand.Unity.Crypto.PasswordStorageError.OutOfMemory
+  nameWithType: PasswordStorageError.OutOfMemory
+- uid: Algorand.Unity.Crypto.PasswordStorageError.Success
+  name: Success
+  href: api/Algorand.Unity.Crypto.PasswordStorageError.html#Algorand_Unity_Crypto_PasswordStorageError_Success
+  commentId: F:Algorand.Unity.Crypto.PasswordStorageError.Success
+  fullName: Algorand.Unity.Crypto.PasswordStorageError.Success
+  nameWithType: PasswordStorageError.Success
+- uid: Algorand.Unity.Crypto.PasswordVerificationError
+  name: PasswordVerificationError
+  href: api/Algorand.Unity.Crypto.PasswordVerificationError.html
+  commentId: T:Algorand.Unity.Crypto.PasswordVerificationError
+  fullName: Algorand.Unity.Crypto.PasswordVerificationError
+  nameWithType: PasswordVerificationError
+- uid: Algorand.Unity.Crypto.PasswordVerificationError.Success
+  name: Success
+  href: api/Algorand.Unity.Crypto.PasswordVerificationError.html#Algorand_Unity_Crypto_PasswordVerificationError_Success
+  commentId: F:Algorand.Unity.Crypto.PasswordVerificationError.Success
+  fullName: Algorand.Unity.Crypto.PasswordVerificationError.Success
+  nameWithType: PasswordVerificationError.Success
+- uid: Algorand.Unity.Crypto.PasswordVerificationError.VerificationFailed
+  name: VerificationFailed
+  href: api/Algorand.Unity.Crypto.PasswordVerificationError.html#Algorand_Unity_Crypto_PasswordVerificationError_VerificationFailed
+  commentId: F:Algorand.Unity.Crypto.PasswordVerificationError.VerificationFailed
+  fullName: Algorand.Unity.Crypto.PasswordVerificationError.VerificationFailed
+  nameWithType: PasswordVerificationError.VerificationFailed
+- uid: Algorand.Unity.Crypto.PwHash
+  name: PwHash
+  href: api/Algorand.Unity.Crypto.PwHash.html
+  commentId: T:Algorand.Unity.Crypto.PwHash
+  fullName: Algorand.Unity.Crypto.PwHash
+  nameWithType: PwHash
+- uid: Algorand.Unity.Crypto.PwHash.#ctor(Algorand.Unity.Crypto.PwHash.OpsLimit,Algorand.Unity.Crypto.PwHash.MemLimit)
+  name: PwHash(PwHash.OpsLimit, PwHash.MemLimit)
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash__ctor_Algorand_Unity_Crypto_PwHash_OpsLimit_Algorand_Unity_Crypto_PwHash_MemLimit_
+  commentId: M:Algorand.Unity.Crypto.PwHash.#ctor(Algorand.Unity.Crypto.PwHash.OpsLimit,Algorand.Unity.Crypto.PwHash.MemLimit)
+  fullName: Algorand.Unity.Crypto.PwHash.PwHash(Algorand.Unity.Crypto.PwHash.OpsLimit, Algorand.Unity.Crypto.PwHash.MemLimit)
+  nameWithType: PwHash.PwHash(PwHash.OpsLimit, PwHash.MemLimit)
+- uid: Algorand.Unity.Crypto.PwHash.#ctor*
+  name: PwHash
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash__ctor_
+  commentId: Overload:Algorand.Unity.Crypto.PwHash.#ctor
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.PwHash.PwHash
+  nameWithType: PwHash.PwHash
+- uid: Algorand.Unity.Crypto.PwHash.GetUnsafePtr
+  name: GetUnsafePtr()
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_GetUnsafePtr
+  commentId: M:Algorand.Unity.Crypto.PwHash.GetUnsafePtr
+  fullName: Algorand.Unity.Crypto.PwHash.GetUnsafePtr()
+  nameWithType: PwHash.GetUnsafePtr()
+- uid: Algorand.Unity.Crypto.PwHash.GetUnsafePtr*
+  name: GetUnsafePtr
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_GetUnsafePtr_
+  commentId: Overload:Algorand.Unity.Crypto.PwHash.GetUnsafePtr
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.PwHash.GetUnsafePtr
+  nameWithType: PwHash.GetUnsafePtr
+- uid: Algorand.Unity.Crypto.PwHash.Hash(Algorand.Unity.Crypto.SodiumString,Algorand.Unity.Crypto.PwHash.Salt,System.UInt32,Algorand.Unity.Crypto.SecureMemoryHandle@,Algorand.Unity.Crypto.PwHash.HashAlgorithm,Algorand.Unity.Crypto.PwHash.OpsLimit,Algorand.Unity.Crypto.PwHash.MemLimit)
+  name: Hash(SodiumString, PwHash.Salt, UInt32, out SecureMemoryHandle, PwHash.HashAlgorithm, PwHash.OpsLimit, PwHash.MemLimit)
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_Hash_Algorand_Unity_Crypto_SodiumString_Algorand_Unity_Crypto_PwHash_Salt_System_UInt32_Algorand_Unity_Crypto_SecureMemoryHandle__Algorand_Unity_Crypto_PwHash_HashAlgorithm_Algorand_Unity_Crypto_PwHash_OpsLimit_Algorand_Unity_Crypto_PwHash_MemLimit_
+  commentId: M:Algorand.Unity.Crypto.PwHash.Hash(Algorand.Unity.Crypto.SodiumString,Algorand.Unity.Crypto.PwHash.Salt,System.UInt32,Algorand.Unity.Crypto.SecureMemoryHandle@,Algorand.Unity.Crypto.PwHash.HashAlgorithm,Algorand.Unity.Crypto.PwHash.OpsLimit,Algorand.Unity.Crypto.PwHash.MemLimit)
+  name.vb: Hash(SodiumString, PwHash.Salt, UInt32, ByRef SecureMemoryHandle, PwHash.HashAlgorithm, PwHash.OpsLimit, PwHash.MemLimit)
+  fullName: Algorand.Unity.Crypto.PwHash.Hash(Algorand.Unity.Crypto.SodiumString, Algorand.Unity.Crypto.PwHash.Salt, System.UInt32, out Algorand.Unity.Crypto.SecureMemoryHandle, Algorand.Unity.Crypto.PwHash.HashAlgorithm, Algorand.Unity.Crypto.PwHash.OpsLimit, Algorand.Unity.Crypto.PwHash.MemLimit)
+  fullName.vb: Algorand.Unity.Crypto.PwHash.Hash(Algorand.Unity.Crypto.SodiumString, Algorand.Unity.Crypto.PwHash.Salt, System.UInt32, ByRef Algorand.Unity.Crypto.SecureMemoryHandle, Algorand.Unity.Crypto.PwHash.HashAlgorithm, Algorand.Unity.Crypto.PwHash.OpsLimit, Algorand.Unity.Crypto.PwHash.MemLimit)
+  nameWithType: PwHash.Hash(SodiumString, PwHash.Salt, UInt32, out SecureMemoryHandle, PwHash.HashAlgorithm, PwHash.OpsLimit, PwHash.MemLimit)
+  nameWithType.vb: PwHash.Hash(SodiumString, PwHash.Salt, UInt32, ByRef SecureMemoryHandle, PwHash.HashAlgorithm, PwHash.OpsLimit, PwHash.MemLimit)
+- uid: Algorand.Unity.Crypto.PwHash.Hash*
+  name: Hash
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_Hash_
+  commentId: Overload:Algorand.Unity.Crypto.PwHash.Hash
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.PwHash.Hash
+  nameWithType: PwHash.Hash
+- uid: Algorand.Unity.Crypto.PwHash.HashAlgorithm
+  name: PwHash.HashAlgorithm
+  href: api/Algorand.Unity.Crypto.PwHash.HashAlgorithm.html
+  commentId: T:Algorand.Unity.Crypto.PwHash.HashAlgorithm
+  fullName: Algorand.Unity.Crypto.PwHash.HashAlgorithm
+  nameWithType: PwHash.HashAlgorithm
+- uid: Algorand.Unity.Crypto.PwHash.HashAlgorithm.Argon2I13
+  name: Argon2I13
+  href: api/Algorand.Unity.Crypto.PwHash.HashAlgorithm.html#Algorand_Unity_Crypto_PwHash_HashAlgorithm_Argon2I13
+  commentId: F:Algorand.Unity.Crypto.PwHash.HashAlgorithm.Argon2I13
+  fullName: Algorand.Unity.Crypto.PwHash.HashAlgorithm.Argon2I13
+  nameWithType: PwHash.HashAlgorithm.Argon2I13
+- uid: Algorand.Unity.Crypto.PwHash.HashAlgorithm.Argon2ID13
+  name: Argon2ID13
+  href: api/Algorand.Unity.Crypto.PwHash.HashAlgorithm.html#Algorand_Unity_Crypto_PwHash_HashAlgorithm_Argon2ID13
+  commentId: F:Algorand.Unity.Crypto.PwHash.HashAlgorithm.Argon2ID13
+  fullName: Algorand.Unity.Crypto.PwHash.HashAlgorithm.Argon2ID13
+  nameWithType: PwHash.HashAlgorithm.Argon2ID13
+- uid: Algorand.Unity.Crypto.PwHash.HashAlgorithm.Default
+  name: Default
+  href: api/Algorand.Unity.Crypto.PwHash.HashAlgorithm.html#Algorand_Unity_Crypto_PwHash_HashAlgorithm_Default
+  commentId: F:Algorand.Unity.Crypto.PwHash.HashAlgorithm.Default
+  fullName: Algorand.Unity.Crypto.PwHash.HashAlgorithm.Default
+  nameWithType: PwHash.HashAlgorithm.Default
+- uid: Algorand.Unity.Crypto.PwHash.HashAlgorithm.None
+  name: None
+  href: api/Algorand.Unity.Crypto.PwHash.HashAlgorithm.html#Algorand_Unity_Crypto_PwHash_HashAlgorithm_None
+  commentId: F:Algorand.Unity.Crypto.PwHash.HashAlgorithm.None
+  fullName: Algorand.Unity.Crypto.PwHash.HashAlgorithm.None
+  nameWithType: PwHash.HashAlgorithm.None
+- uid: Algorand.Unity.Crypto.PwHash.HashError
+  name: PwHash.HashError
+  href: api/Algorand.Unity.Crypto.PwHash.HashError.html
+  commentId: T:Algorand.Unity.Crypto.PwHash.HashError
+  fullName: Algorand.Unity.Crypto.PwHash.HashError
+  nameWithType: PwHash.HashError
+- uid: Algorand.Unity.Crypto.PwHash.HashError.None
+  name: None
+  href: api/Algorand.Unity.Crypto.PwHash.HashError.html#Algorand_Unity_Crypto_PwHash_HashError_None
+  commentId: F:Algorand.Unity.Crypto.PwHash.HashError.None
+  fullName: Algorand.Unity.Crypto.PwHash.HashError.None
+  nameWithType: PwHash.HashError.None
+- uid: Algorand.Unity.Crypto.PwHash.HashError.OutOfMemory
+  name: OutOfMemory
+  href: api/Algorand.Unity.Crypto.PwHash.HashError.html#Algorand_Unity_Crypto_PwHash_HashError_OutOfMemory
+  commentId: F:Algorand.Unity.Crypto.PwHash.HashError.OutOfMemory
+  fullName: Algorand.Unity.Crypto.PwHash.HashError.OutOfMemory
+  nameWithType: PwHash.HashError.OutOfMemory
+- uid: Algorand.Unity.Crypto.PwHash.HashStore(Algorand.Unity.Crypto.SodiumString)
+  name: HashStore(SodiumString)
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_HashStore_Algorand_Unity_Crypto_SodiumString_
+  commentId: M:Algorand.Unity.Crypto.PwHash.HashStore(Algorand.Unity.Crypto.SodiumString)
+  fullName: Algorand.Unity.Crypto.PwHash.HashStore(Algorand.Unity.Crypto.SodiumString)
+  nameWithType: PwHash.HashStore(SodiumString)
+- uid: Algorand.Unity.Crypto.PwHash.HashStore(Algorand.Unity.Crypto.SodiumString,NativeReference{Algorand.Unity.Crypto.PwHash},JobHandle)
+  name: HashStore(SodiumString, NativeReference<PwHash>, JobHandle)
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_HashStore_Algorand_Unity_Crypto_SodiumString_NativeReference_Algorand_Unity_Crypto_PwHash__JobHandle_
+  commentId: M:Algorand.Unity.Crypto.PwHash.HashStore(Algorand.Unity.Crypto.SodiumString,NativeReference{Algorand.Unity.Crypto.PwHash},JobHandle)
+  name.vb: HashStore(SodiumString, NativeReference(Of PwHash), JobHandle)
+  fullName: Algorand.Unity.Crypto.PwHash.HashStore(Algorand.Unity.Crypto.SodiumString, NativeReference<Algorand.Unity.Crypto.PwHash>, JobHandle)
+  fullName.vb: Algorand.Unity.Crypto.PwHash.HashStore(Algorand.Unity.Crypto.SodiumString, NativeReference(Of Algorand.Unity.Crypto.PwHash), JobHandle)
+  nameWithType: PwHash.HashStore(SodiumString, NativeReference<PwHash>, JobHandle)
+  nameWithType.vb: PwHash.HashStore(SodiumString, NativeReference(Of PwHash), JobHandle)
+- uid: Algorand.Unity.Crypto.PwHash.HashStore*
+  name: HashStore
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_HashStore_
+  commentId: Overload:Algorand.Unity.Crypto.PwHash.HashStore
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.PwHash.HashStore
+  nameWithType: PwHash.HashStore
+- uid: Algorand.Unity.Crypto.PwHash.HashStoreJob
+  name: PwHash.HashStoreJob
+  href: api/Algorand.Unity.Crypto.PwHash.HashStoreJob.html
+  commentId: T:Algorand.Unity.Crypto.PwHash.HashStoreJob
+  fullName: Algorand.Unity.Crypto.PwHash.HashStoreJob
+  nameWithType: PwHash.HashStoreJob
+- uid: Algorand.Unity.Crypto.PwHash.HashStoreJob.Execute
+  name: Execute()
+  href: api/Algorand.Unity.Crypto.PwHash.HashStoreJob.html#Algorand_Unity_Crypto_PwHash_HashStoreJob_Execute
+  commentId: M:Algorand.Unity.Crypto.PwHash.HashStoreJob.Execute
+  fullName: Algorand.Unity.Crypto.PwHash.HashStoreJob.Execute()
+  nameWithType: PwHash.HashStoreJob.Execute()
+- uid: Algorand.Unity.Crypto.PwHash.HashStoreJob.Execute*
+  name: Execute
+  href: api/Algorand.Unity.Crypto.PwHash.HashStoreJob.html#Algorand_Unity_Crypto_PwHash_HashStoreJob_Execute_
+  commentId: Overload:Algorand.Unity.Crypto.PwHash.HashStoreJob.Execute
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.PwHash.HashStoreJob.Execute
+  nameWithType: PwHash.HashStoreJob.Execute
+- uid: Algorand.Unity.Crypto.PwHash.HashStoreJob.Hash
+  name: Hash
+  href: api/Algorand.Unity.Crypto.PwHash.HashStoreJob.html#Algorand_Unity_Crypto_PwHash_HashStoreJob_Hash
+  commentId: F:Algorand.Unity.Crypto.PwHash.HashStoreJob.Hash
+  fullName: Algorand.Unity.Crypto.PwHash.HashStoreJob.Hash
+  nameWithType: PwHash.HashStoreJob.Hash
+- uid: Algorand.Unity.Crypto.PwHash.HashStoreJob.Password
+  name: Password
+  href: api/Algorand.Unity.Crypto.PwHash.HashStoreJob.html#Algorand_Unity_Crypto_PwHash_HashStoreJob_Password
+  commentId: F:Algorand.Unity.Crypto.PwHash.HashStoreJob.Password
+  fullName: Algorand.Unity.Crypto.PwHash.HashStoreJob.Password
+  nameWithType: PwHash.HashStoreJob.Password
+- uid: Algorand.Unity.Crypto.PwHash.Interactive
+  name: Interactive
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_Interactive
+  commentId: P:Algorand.Unity.Crypto.PwHash.Interactive
+  fullName: Algorand.Unity.Crypto.PwHash.Interactive
+  nameWithType: PwHash.Interactive
+- uid: Algorand.Unity.Crypto.PwHash.Interactive*
+  name: Interactive
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_Interactive_
+  commentId: Overload:Algorand.Unity.Crypto.PwHash.Interactive
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.PwHash.Interactive
+  nameWithType: PwHash.Interactive
+- uid: Algorand.Unity.Crypto.PwHash.IsCreated
+  name: IsCreated
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_IsCreated
+  commentId: P:Algorand.Unity.Crypto.PwHash.IsCreated
+  fullName: Algorand.Unity.Crypto.PwHash.IsCreated
+  nameWithType: PwHash.IsCreated
+- uid: Algorand.Unity.Crypto.PwHash.IsCreated*
+  name: IsCreated
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_IsCreated_
+  commentId: Overload:Algorand.Unity.Crypto.PwHash.IsCreated
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.PwHash.IsCreated
+  nameWithType: PwHash.IsCreated
+- uid: Algorand.Unity.Crypto.PwHash.IsEmpty
+  name: IsEmpty
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_IsEmpty
+  commentId: P:Algorand.Unity.Crypto.PwHash.IsEmpty
+  fullName: Algorand.Unity.Crypto.PwHash.IsEmpty
+  nameWithType: PwHash.IsEmpty
+- uid: Algorand.Unity.Crypto.PwHash.IsEmpty*
+  name: IsEmpty
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_IsEmpty_
+  commentId: Overload:Algorand.Unity.Crypto.PwHash.IsEmpty
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.PwHash.IsEmpty
+  nameWithType: PwHash.IsEmpty
+- uid: Algorand.Unity.Crypto.PwHash.Item(System.Int32)
+  name: Item[Int32]
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_Item_System_Int32_
+  commentId: P:Algorand.Unity.Crypto.PwHash.Item(System.Int32)
+  name.vb: Item(Int32)
+  fullName: Algorand.Unity.Crypto.PwHash.Item[System.Int32]
+  fullName.vb: Algorand.Unity.Crypto.PwHash.Item(System.Int32)
+  nameWithType: PwHash.Item[Int32]
+  nameWithType.vb: PwHash.Item(Int32)
+- uid: Algorand.Unity.Crypto.PwHash.Item*
+  name: Item
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_Item_
+  commentId: Overload:Algorand.Unity.Crypto.PwHash.Item
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.PwHash.Item
+  nameWithType: PwHash.Item
+- uid: Algorand.Unity.Crypto.PwHash.MaxLength
+  name: MaxLength
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_MaxLength
+  commentId: F:Algorand.Unity.Crypto.PwHash.MaxLength
+  fullName: Algorand.Unity.Crypto.PwHash.MaxLength
+  nameWithType: PwHash.MaxLength
+- uid: Algorand.Unity.Crypto.PwHash.MemLimit
+  name: PwHash.MemLimit
+  href: api/Algorand.Unity.Crypto.PwHash.MemLimit.html
+  commentId: T:Algorand.Unity.Crypto.PwHash.MemLimit
+  fullName: Algorand.Unity.Crypto.PwHash.MemLimit
+  nameWithType: PwHash.MemLimit
+- uid: Algorand.Unity.Crypto.PwHash.MemLimit.Interactive
+  name: Interactive
+  href: api/Algorand.Unity.Crypto.PwHash.MemLimit.html#Algorand_Unity_Crypto_PwHash_MemLimit_Interactive
+  commentId: F:Algorand.Unity.Crypto.PwHash.MemLimit.Interactive
+  fullName: Algorand.Unity.Crypto.PwHash.MemLimit.Interactive
+  nameWithType: PwHash.MemLimit.Interactive
+- uid: Algorand.Unity.Crypto.PwHash.MemLimit.Max
+  name: Max
+  href: api/Algorand.Unity.Crypto.PwHash.MemLimit.html#Algorand_Unity_Crypto_PwHash_MemLimit_Max
+  commentId: F:Algorand.Unity.Crypto.PwHash.MemLimit.Max
+  fullName: Algorand.Unity.Crypto.PwHash.MemLimit.Max
+  nameWithType: PwHash.MemLimit.Max
+- uid: Algorand.Unity.Crypto.PwHash.MemLimit.Min
+  name: Min
+  href: api/Algorand.Unity.Crypto.PwHash.MemLimit.html#Algorand_Unity_Crypto_PwHash_MemLimit_Min
+  commentId: F:Algorand.Unity.Crypto.PwHash.MemLimit.Min
+  fullName: Algorand.Unity.Crypto.PwHash.MemLimit.Min
+  nameWithType: PwHash.MemLimit.Min
+- uid: Algorand.Unity.Crypto.PwHash.MemLimit.Moderate
+  name: Moderate
+  href: api/Algorand.Unity.Crypto.PwHash.MemLimit.html#Algorand_Unity_Crypto_PwHash_MemLimit_Moderate
+  commentId: F:Algorand.Unity.Crypto.PwHash.MemLimit.Moderate
+  fullName: Algorand.Unity.Crypto.PwHash.MemLimit.Moderate
+  nameWithType: PwHash.MemLimit.Moderate
+- uid: Algorand.Unity.Crypto.PwHash.MemLimit.None
+  name: None
+  href: api/Algorand.Unity.Crypto.PwHash.MemLimit.html#Algorand_Unity_Crypto_PwHash_MemLimit_None
+  commentId: F:Algorand.Unity.Crypto.PwHash.MemLimit.None
+  fullName: Algorand.Unity.Crypto.PwHash.MemLimit.None
+  nameWithType: PwHash.MemLimit.None
+- uid: Algorand.Unity.Crypto.PwHash.MemLimit.Sensitive
+  name: Sensitive
+  href: api/Algorand.Unity.Crypto.PwHash.MemLimit.html#Algorand_Unity_Crypto_PwHash_MemLimit_Sensitive
+  commentId: F:Algorand.Unity.Crypto.PwHash.MemLimit.Sensitive
+  fullName: Algorand.Unity.Crypto.PwHash.MemLimit.Sensitive
+  nameWithType: PwHash.MemLimit.Sensitive
+- uid: Algorand.Unity.Crypto.PwHash.MinLength
+  name: MinLength
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_MinLength
+  commentId: F:Algorand.Unity.Crypto.PwHash.MinLength
+  fullName: Algorand.Unity.Crypto.PwHash.MinLength
+  nameWithType: PwHash.MinLength
+- uid: Algorand.Unity.Crypto.PwHash.Moderate
+  name: Moderate
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_Moderate
+  commentId: P:Algorand.Unity.Crypto.PwHash.Moderate
+  fullName: Algorand.Unity.Crypto.PwHash.Moderate
+  nameWithType: PwHash.Moderate
+- uid: Algorand.Unity.Crypto.PwHash.Moderate*
+  name: Moderate
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_Moderate_
+  commentId: Overload:Algorand.Unity.Crypto.PwHash.Moderate
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.PwHash.Moderate
+  nameWithType: PwHash.Moderate
+- uid: Algorand.Unity.Crypto.PwHash.NeedsRehash(Algorand.Unity.Crypto.PwHash.OpsLimit,Algorand.Unity.Crypto.PwHash.MemLimit)
+  name: NeedsRehash(PwHash.OpsLimit, PwHash.MemLimit)
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_NeedsRehash_Algorand_Unity_Crypto_PwHash_OpsLimit_Algorand_Unity_Crypto_PwHash_MemLimit_
+  commentId: M:Algorand.Unity.Crypto.PwHash.NeedsRehash(Algorand.Unity.Crypto.PwHash.OpsLimit,Algorand.Unity.Crypto.PwHash.MemLimit)
+  fullName: Algorand.Unity.Crypto.PwHash.NeedsRehash(Algorand.Unity.Crypto.PwHash.OpsLimit, Algorand.Unity.Crypto.PwHash.MemLimit)
+  nameWithType: PwHash.NeedsRehash(PwHash.OpsLimit, PwHash.MemLimit)
+- uid: Algorand.Unity.Crypto.PwHash.NeedsRehash*
+  name: NeedsRehash
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_NeedsRehash_
+  commentId: Overload:Algorand.Unity.Crypto.PwHash.NeedsRehash
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.PwHash.NeedsRehash
+  nameWithType: PwHash.NeedsRehash
+- uid: Algorand.Unity.Crypto.PwHash.OpsLimit
+  name: PwHash.OpsLimit
+  href: api/Algorand.Unity.Crypto.PwHash.OpsLimit.html
+  commentId: T:Algorand.Unity.Crypto.PwHash.OpsLimit
+  fullName: Algorand.Unity.Crypto.PwHash.OpsLimit
+  nameWithType: PwHash.OpsLimit
+- uid: Algorand.Unity.Crypto.PwHash.OpsLimit.Interactive
+  name: Interactive
+  href: api/Algorand.Unity.Crypto.PwHash.OpsLimit.html#Algorand_Unity_Crypto_PwHash_OpsLimit_Interactive
+  commentId: F:Algorand.Unity.Crypto.PwHash.OpsLimit.Interactive
+  fullName: Algorand.Unity.Crypto.PwHash.OpsLimit.Interactive
+  nameWithType: PwHash.OpsLimit.Interactive
+- uid: Algorand.Unity.Crypto.PwHash.OpsLimit.Max
+  name: Max
+  href: api/Algorand.Unity.Crypto.PwHash.OpsLimit.html#Algorand_Unity_Crypto_PwHash_OpsLimit_Max
+  commentId: F:Algorand.Unity.Crypto.PwHash.OpsLimit.Max
+  fullName: Algorand.Unity.Crypto.PwHash.OpsLimit.Max
+  nameWithType: PwHash.OpsLimit.Max
+- uid: Algorand.Unity.Crypto.PwHash.OpsLimit.Min
+  name: Min
+  href: api/Algorand.Unity.Crypto.PwHash.OpsLimit.html#Algorand_Unity_Crypto_PwHash_OpsLimit_Min
+  commentId: F:Algorand.Unity.Crypto.PwHash.OpsLimit.Min
+  fullName: Algorand.Unity.Crypto.PwHash.OpsLimit.Min
+  nameWithType: PwHash.OpsLimit.Min
+- uid: Algorand.Unity.Crypto.PwHash.OpsLimit.Moderate
+  name: Moderate
+  href: api/Algorand.Unity.Crypto.PwHash.OpsLimit.html#Algorand_Unity_Crypto_PwHash_OpsLimit_Moderate
+  commentId: F:Algorand.Unity.Crypto.PwHash.OpsLimit.Moderate
+  fullName: Algorand.Unity.Crypto.PwHash.OpsLimit.Moderate
+  nameWithType: PwHash.OpsLimit.Moderate
+- uid: Algorand.Unity.Crypto.PwHash.OpsLimit.None
+  name: None
+  href: api/Algorand.Unity.Crypto.PwHash.OpsLimit.html#Algorand_Unity_Crypto_PwHash_OpsLimit_None
+  commentId: F:Algorand.Unity.Crypto.PwHash.OpsLimit.None
+  fullName: Algorand.Unity.Crypto.PwHash.OpsLimit.None
+  nameWithType: PwHash.OpsLimit.None
+- uid: Algorand.Unity.Crypto.PwHash.OpsLimit.Sensitive
+  name: Sensitive
+  href: api/Algorand.Unity.Crypto.PwHash.OpsLimit.html#Algorand_Unity_Crypto_PwHash_OpsLimit_Sensitive
+  commentId: F:Algorand.Unity.Crypto.PwHash.OpsLimit.Sensitive
+  fullName: Algorand.Unity.Crypto.PwHash.OpsLimit.Sensitive
+  nameWithType: PwHash.OpsLimit.Sensitive
+- uid: Algorand.Unity.Crypto.PwHash.Salt
+  name: PwHash.Salt
+  href: api/Algorand.Unity.Crypto.PwHash.Salt.html
+  commentId: T:Algorand.Unity.Crypto.PwHash.Salt
+  fullName: Algorand.Unity.Crypto.PwHash.Salt
+  nameWithType: PwHash.Salt
+- uid: Algorand.Unity.Crypto.PwHash.Salt.bytes
+  name: bytes
+  href: api/Algorand.Unity.Crypto.PwHash.Salt.html#Algorand_Unity_Crypto_PwHash_Salt_bytes
+  commentId: F:Algorand.Unity.Crypto.PwHash.Salt.bytes
+  fullName: Algorand.Unity.Crypto.PwHash.Salt.bytes
+  nameWithType: PwHash.Salt.bytes
+- uid: Algorand.Unity.Crypto.PwHash.Salt.SizeBytes
+  name: SizeBytes
+  href: api/Algorand.Unity.Crypto.PwHash.Salt.html#Algorand_Unity_Crypto_PwHash_Salt_SizeBytes
+  commentId: F:Algorand.Unity.Crypto.PwHash.Salt.SizeBytes
+  fullName: Algorand.Unity.Crypto.PwHash.Salt.SizeBytes
+  nameWithType: PwHash.Salt.SizeBytes
+- uid: Algorand.Unity.Crypto.PwHash.Salt.ulongs
+  name: ulongs
+  href: api/Algorand.Unity.Crypto.PwHash.Salt.html#Algorand_Unity_Crypto_PwHash_Salt_ulongs
+  commentId: F:Algorand.Unity.Crypto.PwHash.Salt.ulongs
+  fullName: Algorand.Unity.Crypto.PwHash.Salt.ulongs
+  nameWithType: PwHash.Salt.ulongs
+- uid: Algorand.Unity.Crypto.PwHash.Sensitive
+  name: Sensitive
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_Sensitive
+  commentId: P:Algorand.Unity.Crypto.PwHash.Sensitive
+  fullName: Algorand.Unity.Crypto.PwHash.Sensitive
+  nameWithType: PwHash.Sensitive
+- uid: Algorand.Unity.Crypto.PwHash.Sensitive*
+  name: Sensitive
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_Sensitive_
+  commentId: Overload:Algorand.Unity.Crypto.PwHash.Sensitive
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.PwHash.Sensitive
+  nameWithType: PwHash.Sensitive
+- uid: Algorand.Unity.Crypto.PwHash.SizeBytes
+  name: SizeBytes
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_SizeBytes
+  commentId: F:Algorand.Unity.Crypto.PwHash.SizeBytes
+  fullName: Algorand.Unity.Crypto.PwHash.SizeBytes
+  nameWithType: PwHash.SizeBytes
+- uid: Algorand.Unity.Crypto.PwHash.Verify(Algorand.Unity.Crypto.SodiumString)
+  name: Verify(SodiumString)
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_Verify_Algorand_Unity_Crypto_SodiumString_
+  commentId: M:Algorand.Unity.Crypto.PwHash.Verify(Algorand.Unity.Crypto.SodiumString)
+  fullName: Algorand.Unity.Crypto.PwHash.Verify(Algorand.Unity.Crypto.SodiumString)
+  nameWithType: PwHash.Verify(SodiumString)
+- uid: Algorand.Unity.Crypto.PwHash.Verify*
+  name: Verify
+  href: api/Algorand.Unity.Crypto.PwHash.html#Algorand_Unity_Crypto_PwHash_Verify_
+  commentId: Overload:Algorand.Unity.Crypto.PwHash.Verify
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.PwHash.Verify
+  nameWithType: PwHash.Verify
 - uid: Algorand.Unity.Crypto.Random
   name: Random
   href: api/Algorand.Unity.Crypto.Random.html
@@ -14818,6 +15370,217 @@ references:
   fullName.vb: Algorand.Unity.Crypto.Random.Randomize(Of T)(T)
   nameWithType: Random.Randomize<T>(T)
   nameWithType.vb: Random.Randomize(Of T)(T)
+- uid: Algorand.Unity.Crypto.SecretBox
+  name: SecretBox
+  href: api/Algorand.Unity.Crypto.SecretBox.html
+  commentId: T:Algorand.Unity.Crypto.SecretBox
+  fullName: Algorand.Unity.Crypto.SecretBox
+  nameWithType: SecretBox
+- uid: Algorand.Unity.Crypto.SecretBox.CipherLength(System.Int32)
+  name: CipherLength(Int32)
+  href: api/Algorand.Unity.Crypto.SecretBox.html#Algorand_Unity_Crypto_SecretBox_CipherLength_System_Int32_
+  commentId: M:Algorand.Unity.Crypto.SecretBox.CipherLength(System.Int32)
+  fullName: Algorand.Unity.Crypto.SecretBox.CipherLength(System.Int32)
+  nameWithType: SecretBox.CipherLength(Int32)
+- uid: Algorand.Unity.Crypto.SecretBox.CipherLength*
+  name: CipherLength
+  href: api/Algorand.Unity.Crypto.SecretBox.html#Algorand_Unity_Crypto_SecretBox_CipherLength_
+  commentId: Overload:Algorand.Unity.Crypto.SecretBox.CipherLength
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SecretBox.CipherLength
+  nameWithType: SecretBox.CipherLength
+- uid: Algorand.Unity.Crypto.SecretBox.Decrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecretBox.Key*,Algorand.Unity.Crypto.SecretBox.Nonce)
+  name: Decrypt(Span<Byte>, ReadOnlySpan<Byte>, SecretBox.Key*, SecretBox.Nonce)
+  href: api/Algorand.Unity.Crypto.SecretBox.html#Algorand_Unity_Crypto_SecretBox_Decrypt_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__Algorand_Unity_Crypto_SecretBox_Key__Algorand_Unity_Crypto_SecretBox_Nonce_
+  commentId: M:Algorand.Unity.Crypto.SecretBox.Decrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecretBox.Key*,Algorand.Unity.Crypto.SecretBox.Nonce)
+  name.vb: Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecretBox.Key*, SecretBox.Nonce)
+  fullName: Algorand.Unity.Crypto.SecretBox.Decrypt(System.Span<System.Byte>, System.ReadOnlySpan<System.Byte>, Algorand.Unity.Crypto.SecretBox.Key*, Algorand.Unity.Crypto.SecretBox.Nonce)
+  fullName.vb: Algorand.Unity.Crypto.SecretBox.Decrypt(System.Span(Of System.Byte), System.ReadOnlySpan(Of System.Byte), Algorand.Unity.Crypto.SecretBox.Key*, Algorand.Unity.Crypto.SecretBox.Nonce)
+  nameWithType: SecretBox.Decrypt(Span<Byte>, ReadOnlySpan<Byte>, SecretBox.Key*, SecretBox.Nonce)
+  nameWithType.vb: SecretBox.Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecretBox.Key*, SecretBox.Nonce)
+- uid: Algorand.Unity.Crypto.SecretBox.Decrypt*
+  name: Decrypt
+  href: api/Algorand.Unity.Crypto.SecretBox.html#Algorand_Unity_Crypto_SecretBox_Decrypt_
+  commentId: Overload:Algorand.Unity.Crypto.SecretBox.Decrypt
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SecretBox.Decrypt
+  nameWithType: SecretBox.Decrypt
+- uid: Algorand.Unity.Crypto.SecretBox.DecryptError
+  name: SecretBox.DecryptError
+  href: api/Algorand.Unity.Crypto.SecretBox.DecryptError.html
+  commentId: T:Algorand.Unity.Crypto.SecretBox.DecryptError
+  fullName: Algorand.Unity.Crypto.SecretBox.DecryptError
+  nameWithType: SecretBox.DecryptError
+- uid: Algorand.Unity.Crypto.SecretBox.DecryptError.Error
+  name: Error
+  href: api/Algorand.Unity.Crypto.SecretBox.DecryptError.html#Algorand_Unity_Crypto_SecretBox_DecryptError_Error
+  commentId: F:Algorand.Unity.Crypto.SecretBox.DecryptError.Error
+  fullName: Algorand.Unity.Crypto.SecretBox.DecryptError.Error
+  nameWithType: SecretBox.DecryptError.Error
+- uid: Algorand.Unity.Crypto.SecretBox.DecryptError.None
+  name: None
+  href: api/Algorand.Unity.Crypto.SecretBox.DecryptError.html#Algorand_Unity_Crypto_SecretBox_DecryptError_None
+  commentId: F:Algorand.Unity.Crypto.SecretBox.DecryptError.None
+  fullName: Algorand.Unity.Crypto.SecretBox.DecryptError.None
+  nameWithType: SecretBox.DecryptError.None
+- uid: Algorand.Unity.Crypto.SecretBox.Encrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecretBox.Key*,Algorand.Unity.Crypto.SecretBox.Nonce@)
+  name: Encrypt(Span<Byte>, ReadOnlySpan<Byte>, SecretBox.Key*, out SecretBox.Nonce)
+  href: api/Algorand.Unity.Crypto.SecretBox.html#Algorand_Unity_Crypto_SecretBox_Encrypt_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__Algorand_Unity_Crypto_SecretBox_Key__Algorand_Unity_Crypto_SecretBox_Nonce__
+  commentId: M:Algorand.Unity.Crypto.SecretBox.Encrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecretBox.Key*,Algorand.Unity.Crypto.SecretBox.Nonce@)
+  name.vb: Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecretBox.Key*, ByRef SecretBox.Nonce)
+  fullName: Algorand.Unity.Crypto.SecretBox.Encrypt(System.Span<System.Byte>, System.ReadOnlySpan<System.Byte>, Algorand.Unity.Crypto.SecretBox.Key*, out Algorand.Unity.Crypto.SecretBox.Nonce)
+  fullName.vb: Algorand.Unity.Crypto.SecretBox.Encrypt(System.Span(Of System.Byte), System.ReadOnlySpan(Of System.Byte), Algorand.Unity.Crypto.SecretBox.Key*, ByRef Algorand.Unity.Crypto.SecretBox.Nonce)
+  nameWithType: SecretBox.Encrypt(Span<Byte>, ReadOnlySpan<Byte>, SecretBox.Key*, out SecretBox.Nonce)
+  nameWithType.vb: SecretBox.Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecretBox.Key*, ByRef SecretBox.Nonce)
+- uid: Algorand.Unity.Crypto.SecretBox.Encrypt*
+  name: Encrypt
+  href: api/Algorand.Unity.Crypto.SecretBox.html#Algorand_Unity_Crypto_SecretBox_Encrypt_
+  commentId: Overload:Algorand.Unity.Crypto.SecretBox.Encrypt
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SecretBox.Encrypt
+  nameWithType: SecretBox.Encrypt
+- uid: Algorand.Unity.Crypto.SecretBox.EncryptError
+  name: SecretBox.EncryptError
+  href: api/Algorand.Unity.Crypto.SecretBox.EncryptError.html
+  commentId: T:Algorand.Unity.Crypto.SecretBox.EncryptError
+  fullName: Algorand.Unity.Crypto.SecretBox.EncryptError
+  nameWithType: SecretBox.EncryptError
+- uid: Algorand.Unity.Crypto.SecretBox.EncryptError.Error
+  name: Error
+  href: api/Algorand.Unity.Crypto.SecretBox.EncryptError.html#Algorand_Unity_Crypto_SecretBox_EncryptError_Error
+  commentId: F:Algorand.Unity.Crypto.SecretBox.EncryptError.Error
+  fullName: Algorand.Unity.Crypto.SecretBox.EncryptError.Error
+  nameWithType: SecretBox.EncryptError.Error
+- uid: Algorand.Unity.Crypto.SecretBox.EncryptError.None
+  name: None
+  href: api/Algorand.Unity.Crypto.SecretBox.EncryptError.html#Algorand_Unity_Crypto_SecretBox_EncryptError_None
+  commentId: F:Algorand.Unity.Crypto.SecretBox.EncryptError.None
+  fullName: Algorand.Unity.Crypto.SecretBox.EncryptError.None
+  nameWithType: SecretBox.EncryptError.None
+- uid: Algorand.Unity.Crypto.SecretBox.Key
+  name: SecretBox.Key
+  href: api/Algorand.Unity.Crypto.SecretBox.Key.html
+  commentId: T:Algorand.Unity.Crypto.SecretBox.Key
+  fullName: Algorand.Unity.Crypto.SecretBox.Key
+  nameWithType: SecretBox.Key
+- uid: Algorand.Unity.Crypto.SecretBox.Key.bytes
+  name: bytes
+  href: api/Algorand.Unity.Crypto.SecretBox.Key.html#Algorand_Unity_Crypto_SecretBox_Key_bytes
+  commentId: F:Algorand.Unity.Crypto.SecretBox.Key.bytes
+  fullName: Algorand.Unity.Crypto.SecretBox.Key.bytes
+  nameWithType: SecretBox.Key.bytes
+- uid: Algorand.Unity.Crypto.SecretBox.Key.op_Implicit(Algorand.Unity.Crypto.SecretBox.Key)~System.Span{System.Byte}
+  name: Implicit(SecretBox.Key to Span<Byte>)
+  href: api/Algorand.Unity.Crypto.SecretBox.Key.html#Algorand_Unity_Crypto_SecretBox_Key_op_Implicit_Algorand_Unity_Crypto_SecretBox_Key__System_Span_System_Byte_
+  commentId: M:Algorand.Unity.Crypto.SecretBox.Key.op_Implicit(Algorand.Unity.Crypto.SecretBox.Key)~System.Span{System.Byte}
+  name.vb: Widening(SecretBox.Key to Span(Of Byte))
+  fullName: Algorand.Unity.Crypto.SecretBox.Key.Implicit(Algorand.Unity.Crypto.SecretBox.Key to System.Span<System.Byte>)
+  fullName.vb: Algorand.Unity.Crypto.SecretBox.Key.Widening(Algorand.Unity.Crypto.SecretBox.Key to System.Span(Of System.Byte))
+  nameWithType: SecretBox.Key.Implicit(SecretBox.Key to Span<Byte>)
+  nameWithType.vb: SecretBox.Key.Widening(SecretBox.Key to Span(Of Byte))
+- uid: Algorand.Unity.Crypto.SecretBox.Key.op_Implicit*
+  name: Implicit
+  href: api/Algorand.Unity.Crypto.SecretBox.Key.html#Algorand_Unity_Crypto_SecretBox_Key_op_Implicit_
+  commentId: Overload:Algorand.Unity.Crypto.SecretBox.Key.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Algorand.Unity.Crypto.SecretBox.Key.Implicit
+  fullName.vb: Algorand.Unity.Crypto.SecretBox.Key.Widening
+  nameWithType: SecretBox.Key.Implicit
+  nameWithType.vb: SecretBox.Key.Widening
+- uid: Algorand.Unity.Crypto.SecretBox.Key.SizeBytes
+  name: SizeBytes
+  href: api/Algorand.Unity.Crypto.SecretBox.Key.html#Algorand_Unity_Crypto_SecretBox_Key_SizeBytes
+  commentId: F:Algorand.Unity.Crypto.SecretBox.Key.SizeBytes
+  fullName: Algorand.Unity.Crypto.SecretBox.Key.SizeBytes
+  nameWithType: SecretBox.Key.SizeBytes
+- uid: Algorand.Unity.Crypto.SecretBox.Mac
+  name: SecretBox.Mac
+  href: api/Algorand.Unity.Crypto.SecretBox.Mac.html
+  commentId: T:Algorand.Unity.Crypto.SecretBox.Mac
+  fullName: Algorand.Unity.Crypto.SecretBox.Mac
+  nameWithType: SecretBox.Mac
+- uid: Algorand.Unity.Crypto.SecretBox.Mac.bytes
+  name: bytes
+  href: api/Algorand.Unity.Crypto.SecretBox.Mac.html#Algorand_Unity_Crypto_SecretBox_Mac_bytes
+  commentId: F:Algorand.Unity.Crypto.SecretBox.Mac.bytes
+  fullName: Algorand.Unity.Crypto.SecretBox.Mac.bytes
+  nameWithType: SecretBox.Mac.bytes
+- uid: Algorand.Unity.Crypto.SecretBox.Mac.op_Implicit(Algorand.Unity.Crypto.SecretBox.Mac)~System.Span{System.Byte}
+  name: Implicit(SecretBox.Mac to Span<Byte>)
+  href: api/Algorand.Unity.Crypto.SecretBox.Mac.html#Algorand_Unity_Crypto_SecretBox_Mac_op_Implicit_Algorand_Unity_Crypto_SecretBox_Mac__System_Span_System_Byte_
+  commentId: M:Algorand.Unity.Crypto.SecretBox.Mac.op_Implicit(Algorand.Unity.Crypto.SecretBox.Mac)~System.Span{System.Byte}
+  name.vb: Widening(SecretBox.Mac to Span(Of Byte))
+  fullName: Algorand.Unity.Crypto.SecretBox.Mac.Implicit(Algorand.Unity.Crypto.SecretBox.Mac to System.Span<System.Byte>)
+  fullName.vb: Algorand.Unity.Crypto.SecretBox.Mac.Widening(Algorand.Unity.Crypto.SecretBox.Mac to System.Span(Of System.Byte))
+  nameWithType: SecretBox.Mac.Implicit(SecretBox.Mac to Span<Byte>)
+  nameWithType.vb: SecretBox.Mac.Widening(SecretBox.Mac to Span(Of Byte))
+- uid: Algorand.Unity.Crypto.SecretBox.Mac.op_Implicit*
+  name: Implicit
+  href: api/Algorand.Unity.Crypto.SecretBox.Mac.html#Algorand_Unity_Crypto_SecretBox_Mac_op_Implicit_
+  commentId: Overload:Algorand.Unity.Crypto.SecretBox.Mac.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Algorand.Unity.Crypto.SecretBox.Mac.Implicit
+  fullName.vb: Algorand.Unity.Crypto.SecretBox.Mac.Widening
+  nameWithType: SecretBox.Mac.Implicit
+  nameWithType.vb: SecretBox.Mac.Widening
+- uid: Algorand.Unity.Crypto.SecretBox.Mac.SizeBytes
+  name: SizeBytes
+  href: api/Algorand.Unity.Crypto.SecretBox.Mac.html#Algorand_Unity_Crypto_SecretBox_Mac_SizeBytes
+  commentId: F:Algorand.Unity.Crypto.SecretBox.Mac.SizeBytes
+  fullName: Algorand.Unity.Crypto.SecretBox.Mac.SizeBytes
+  nameWithType: SecretBox.Mac.SizeBytes
+- uid: Algorand.Unity.Crypto.SecretBox.MessageLength(System.Int32)
+  name: MessageLength(Int32)
+  href: api/Algorand.Unity.Crypto.SecretBox.html#Algorand_Unity_Crypto_SecretBox_MessageLength_System_Int32_
+  commentId: M:Algorand.Unity.Crypto.SecretBox.MessageLength(System.Int32)
+  fullName: Algorand.Unity.Crypto.SecretBox.MessageLength(System.Int32)
+  nameWithType: SecretBox.MessageLength(Int32)
+- uid: Algorand.Unity.Crypto.SecretBox.MessageLength*
+  name: MessageLength
+  href: api/Algorand.Unity.Crypto.SecretBox.html#Algorand_Unity_Crypto_SecretBox_MessageLength_
+  commentId: Overload:Algorand.Unity.Crypto.SecretBox.MessageLength
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SecretBox.MessageLength
+  nameWithType: SecretBox.MessageLength
+- uid: Algorand.Unity.Crypto.SecretBox.Nonce
+  name: SecretBox.Nonce
+  href: api/Algorand.Unity.Crypto.SecretBox.Nonce.html
+  commentId: T:Algorand.Unity.Crypto.SecretBox.Nonce
+  fullName: Algorand.Unity.Crypto.SecretBox.Nonce
+  nameWithType: SecretBox.Nonce
+- uid: Algorand.Unity.Crypto.SecretBox.Nonce.bytes
+  name: bytes
+  href: api/Algorand.Unity.Crypto.SecretBox.Nonce.html#Algorand_Unity_Crypto_SecretBox_Nonce_bytes
+  commentId: F:Algorand.Unity.Crypto.SecretBox.Nonce.bytes
+  fullName: Algorand.Unity.Crypto.SecretBox.Nonce.bytes
+  nameWithType: SecretBox.Nonce.bytes
+- uid: Algorand.Unity.Crypto.SecretBox.Nonce.op_Implicit(Algorand.Unity.Crypto.SecretBox.Nonce)~System.Span{System.Byte}
+  name: Implicit(SecretBox.Nonce to Span<Byte>)
+  href: api/Algorand.Unity.Crypto.SecretBox.Nonce.html#Algorand_Unity_Crypto_SecretBox_Nonce_op_Implicit_Algorand_Unity_Crypto_SecretBox_Nonce__System_Span_System_Byte_
+  commentId: M:Algorand.Unity.Crypto.SecretBox.Nonce.op_Implicit(Algorand.Unity.Crypto.SecretBox.Nonce)~System.Span{System.Byte}
+  name.vb: Widening(SecretBox.Nonce to Span(Of Byte))
+  fullName: Algorand.Unity.Crypto.SecretBox.Nonce.Implicit(Algorand.Unity.Crypto.SecretBox.Nonce to System.Span<System.Byte>)
+  fullName.vb: Algorand.Unity.Crypto.SecretBox.Nonce.Widening(Algorand.Unity.Crypto.SecretBox.Nonce to System.Span(Of System.Byte))
+  nameWithType: SecretBox.Nonce.Implicit(SecretBox.Nonce to Span<Byte>)
+  nameWithType.vb: SecretBox.Nonce.Widening(SecretBox.Nonce to Span(Of Byte))
+- uid: Algorand.Unity.Crypto.SecretBox.Nonce.op_Implicit*
+  name: Implicit
+  href: api/Algorand.Unity.Crypto.SecretBox.Nonce.html#Algorand_Unity_Crypto_SecretBox_Nonce_op_Implicit_
+  commentId: Overload:Algorand.Unity.Crypto.SecretBox.Nonce.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: Algorand.Unity.Crypto.SecretBox.Nonce.Implicit
+  fullName.vb: Algorand.Unity.Crypto.SecretBox.Nonce.Widening
+  nameWithType: SecretBox.Nonce.Implicit
+  nameWithType.vb: SecretBox.Nonce.Widening
+- uid: Algorand.Unity.Crypto.SecretBox.Nonce.SizeBytes
+  name: SizeBytes
+  href: api/Algorand.Unity.Crypto.SecretBox.Nonce.html#Algorand_Unity_Crypto_SecretBox_Nonce_SizeBytes
+  commentId: F:Algorand.Unity.Crypto.SecretBox.Nonce.SizeBytes
+  fullName: Algorand.Unity.Crypto.SecretBox.Nonce.SizeBytes
+  nameWithType: SecretBox.Nonce.SizeBytes
 - uid: Algorand.Unity.Crypto.SecureMemoryHandle
   name: SecureMemoryHandle
   href: api/Algorand.Unity.Crypto.SecureMemoryHandle.html
@@ -14856,6 +15619,19 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Crypto.SecureMemoryHandle.Dispose
   nameWithType: SecureMemoryHandle.Dispose
+- uid: Algorand.Unity.Crypto.SecureMemoryHandle.GetUnsafePtr
+  name: GetUnsafePtr()
+  href: api/Algorand.Unity.Crypto.SecureMemoryHandle.html#Algorand_Unity_Crypto_SecureMemoryHandle_GetUnsafePtr
+  commentId: M:Algorand.Unity.Crypto.SecureMemoryHandle.GetUnsafePtr
+  fullName: Algorand.Unity.Crypto.SecureMemoryHandle.GetUnsafePtr()
+  nameWithType: SecureMemoryHandle.GetUnsafePtr()
+- uid: Algorand.Unity.Crypto.SecureMemoryHandle.GetUnsafePtr*
+  name: GetUnsafePtr
+  href: api/Algorand.Unity.Crypto.SecureMemoryHandle.html#Algorand_Unity_Crypto_SecureMemoryHandle_GetUnsafePtr_
+  commentId: Overload:Algorand.Unity.Crypto.SecureMemoryHandle.GetUnsafePtr
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SecureMemoryHandle.GetUnsafePtr
+  nameWithType: SecureMemoryHandle.GetUnsafePtr
 - uid: Algorand.Unity.Crypto.SecureMemoryHandle.IsCreated
   name: IsCreated
   href: api/Algorand.Unity.Crypto.SecureMemoryHandle.html#Algorand_Unity_Crypto_SecureMemoryHandle_IsCreated
@@ -14900,9 +15676,29 @@ references:
 - uid: Algorand.Unity.Crypto.SecureMemoryHandle.Ptr
   name: Ptr
   href: api/Algorand.Unity.Crypto.SecureMemoryHandle.html#Algorand_Unity_Crypto_SecureMemoryHandle_Ptr
-  commentId: F:Algorand.Unity.Crypto.SecureMemoryHandle.Ptr
+  commentId: P:Algorand.Unity.Crypto.SecureMemoryHandle.Ptr
   fullName: Algorand.Unity.Crypto.SecureMemoryHandle.Ptr
   nameWithType: SecureMemoryHandle.Ptr
+- uid: Algorand.Unity.Crypto.SecureMemoryHandle.Ptr*
+  name: Ptr
+  href: api/Algorand.Unity.Crypto.SecureMemoryHandle.html#Algorand_Unity_Crypto_SecureMemoryHandle_Ptr_
+  commentId: Overload:Algorand.Unity.Crypto.SecureMemoryHandle.Ptr
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SecureMemoryHandle.Ptr
+  nameWithType: SecureMemoryHandle.Ptr
+- uid: Algorand.Unity.Crypto.SecureMemoryHandle.ToSpan(System.Int32)
+  name: ToSpan(Int32)
+  href: api/Algorand.Unity.Crypto.SecureMemoryHandle.html#Algorand_Unity_Crypto_SecureMemoryHandle_ToSpan_System_Int32_
+  commentId: M:Algorand.Unity.Crypto.SecureMemoryHandle.ToSpan(System.Int32)
+  fullName: Algorand.Unity.Crypto.SecureMemoryHandle.ToSpan(System.Int32)
+  nameWithType: SecureMemoryHandle.ToSpan(Int32)
+- uid: Algorand.Unity.Crypto.SecureMemoryHandle.ToSpan*
+  name: ToSpan
+  href: api/Algorand.Unity.Crypto.SecureMemoryHandle.html#Algorand_Unity_Crypto_SecureMemoryHandle_ToSpan_
+  commentId: Overload:Algorand.Unity.Crypto.SecureMemoryHandle.ToSpan
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SecureMemoryHandle.ToSpan
+  nameWithType: SecureMemoryHandle.ToSpan
 - uid: Algorand.Unity.Crypto.Sha256
   name: Sha256
   href: api/Algorand.Unity.Crypto.Sha256.html
@@ -15217,6 +16013,372 @@ references:
   commentId: F:Algorand.Unity.Crypto.Sha512_Hash.SizeBytes
   fullName: Algorand.Unity.Crypto.Sha512_Hash.SizeBytes
   nameWithType: Sha512_Hash.SizeBytes
+- uid: Algorand.Unity.Crypto.SodiumArray`1
+  name: SodiumArray<T>
+  href: api/Algorand.Unity.Crypto.SodiumArray-1.html
+  commentId: T:Algorand.Unity.Crypto.SodiumArray`1
+  name.vb: SodiumArray(Of T)
+  fullName: Algorand.Unity.Crypto.SodiumArray<T>
+  fullName.vb: Algorand.Unity.Crypto.SodiumArray(Of T)
+  nameWithType: SodiumArray<T>
+  nameWithType.vb: SodiumArray(Of T)
+- uid: Algorand.Unity.Crypto.SodiumArray`1.#ctor(System.Int32)
+  name: SodiumArray(Int32)
+  href: api/Algorand.Unity.Crypto.SodiumArray-1.html#Algorand_Unity_Crypto_SodiumArray_1__ctor_System_Int32_
+  commentId: M:Algorand.Unity.Crypto.SodiumArray`1.#ctor(System.Int32)
+  fullName: Algorand.Unity.Crypto.SodiumArray<T>.SodiumArray(System.Int32)
+  fullName.vb: Algorand.Unity.Crypto.SodiumArray(Of T).SodiumArray(System.Int32)
+  nameWithType: SodiumArray<T>.SodiumArray(Int32)
+  nameWithType.vb: SodiumArray(Of T).SodiumArray(Int32)
+- uid: Algorand.Unity.Crypto.SodiumArray`1.#ctor*
+  name: SodiumArray
+  href: api/Algorand.Unity.Crypto.SodiumArray-1.html#Algorand_Unity_Crypto_SodiumArray_1__ctor_
+  commentId: Overload:Algorand.Unity.Crypto.SodiumArray`1.#ctor
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SodiumArray<T>.SodiumArray
+  fullName.vb: Algorand.Unity.Crypto.SodiumArray(Of T).SodiumArray
+  nameWithType: SodiumArray<T>.SodiumArray
+  nameWithType.vb: SodiumArray(Of T).SodiumArray
+- uid: Algorand.Unity.Crypto.SodiumArray`1.AsSpan
+  name: AsSpan()
+  href: api/Algorand.Unity.Crypto.SodiumArray-1.html#Algorand_Unity_Crypto_SodiumArray_1_AsSpan
+  commentId: M:Algorand.Unity.Crypto.SodiumArray`1.AsSpan
+  fullName: Algorand.Unity.Crypto.SodiumArray<T>.AsSpan()
+  fullName.vb: Algorand.Unity.Crypto.SodiumArray(Of T).AsSpan()
+  nameWithType: SodiumArray<T>.AsSpan()
+  nameWithType.vb: SodiumArray(Of T).AsSpan()
+- uid: Algorand.Unity.Crypto.SodiumArray`1.AsSpan*
+  name: AsSpan
+  href: api/Algorand.Unity.Crypto.SodiumArray-1.html#Algorand_Unity_Crypto_SodiumArray_1_AsSpan_
+  commentId: Overload:Algorand.Unity.Crypto.SodiumArray`1.AsSpan
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SodiumArray<T>.AsSpan
+  fullName.vb: Algorand.Unity.Crypto.SodiumArray(Of T).AsSpan
+  nameWithType: SodiumArray<T>.AsSpan
+  nameWithType.vb: SodiumArray(Of T).AsSpan
+- uid: Algorand.Unity.Crypto.SodiumArray`1.Dispose
+  name: Dispose()
+  href: api/Algorand.Unity.Crypto.SodiumArray-1.html#Algorand_Unity_Crypto_SodiumArray_1_Dispose
+  commentId: M:Algorand.Unity.Crypto.SodiumArray`1.Dispose
+  fullName: Algorand.Unity.Crypto.SodiumArray<T>.Dispose()
+  fullName.vb: Algorand.Unity.Crypto.SodiumArray(Of T).Dispose()
+  nameWithType: SodiumArray<T>.Dispose()
+  nameWithType.vb: SodiumArray(Of T).Dispose()
+- uid: Algorand.Unity.Crypto.SodiumArray`1.Dispose(JobHandle)
+  name: Dispose(JobHandle)
+  href: api/Algorand.Unity.Crypto.SodiumArray-1.html#Algorand_Unity_Crypto_SodiumArray_1_Dispose_JobHandle_
+  commentId: M:Algorand.Unity.Crypto.SodiumArray`1.Dispose(JobHandle)
+  fullName: Algorand.Unity.Crypto.SodiumArray<T>.Dispose(JobHandle)
+  fullName.vb: Algorand.Unity.Crypto.SodiumArray(Of T).Dispose(JobHandle)
+  nameWithType: SodiumArray<T>.Dispose(JobHandle)
+  nameWithType.vb: SodiumArray(Of T).Dispose(JobHandle)
+- uid: Algorand.Unity.Crypto.SodiumArray`1.Dispose*
+  name: Dispose
+  href: api/Algorand.Unity.Crypto.SodiumArray-1.html#Algorand_Unity_Crypto_SodiumArray_1_Dispose_
+  commentId: Overload:Algorand.Unity.Crypto.SodiumArray`1.Dispose
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SodiumArray<T>.Dispose
+  fullName.vb: Algorand.Unity.Crypto.SodiumArray(Of T).Dispose
+  nameWithType: SodiumArray<T>.Dispose
+  nameWithType.vb: SodiumArray(Of T).Dispose
+- uid: Algorand.Unity.Crypto.SodiumArray`1.GetUnsafePtr
+  name: GetUnsafePtr()
+  href: api/Algorand.Unity.Crypto.SodiumArray-1.html#Algorand_Unity_Crypto_SodiumArray_1_GetUnsafePtr
+  commentId: M:Algorand.Unity.Crypto.SodiumArray`1.GetUnsafePtr
+  fullName: Algorand.Unity.Crypto.SodiumArray<T>.GetUnsafePtr()
+  fullName.vb: Algorand.Unity.Crypto.SodiumArray(Of T).GetUnsafePtr()
+  nameWithType: SodiumArray<T>.GetUnsafePtr()
+  nameWithType.vb: SodiumArray(Of T).GetUnsafePtr()
+- uid: Algorand.Unity.Crypto.SodiumArray`1.GetUnsafePtr*
+  name: GetUnsafePtr
+  href: api/Algorand.Unity.Crypto.SodiumArray-1.html#Algorand_Unity_Crypto_SodiumArray_1_GetUnsafePtr_
+  commentId: Overload:Algorand.Unity.Crypto.SodiumArray`1.GetUnsafePtr
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SodiumArray<T>.GetUnsafePtr
+  fullName.vb: Algorand.Unity.Crypto.SodiumArray(Of T).GetUnsafePtr
+  nameWithType: SodiumArray<T>.GetUnsafePtr
+  nameWithType.vb: SodiumArray(Of T).GetUnsafePtr
+- uid: Algorand.Unity.Crypto.SodiumArray`1.IsCreated
+  name: IsCreated
+  href: api/Algorand.Unity.Crypto.SodiumArray-1.html#Algorand_Unity_Crypto_SodiumArray_1_IsCreated
+  commentId: P:Algorand.Unity.Crypto.SodiumArray`1.IsCreated
+  fullName: Algorand.Unity.Crypto.SodiumArray<T>.IsCreated
+  fullName.vb: Algorand.Unity.Crypto.SodiumArray(Of T).IsCreated
+  nameWithType: SodiumArray<T>.IsCreated
+  nameWithType.vb: SodiumArray(Of T).IsCreated
+- uid: Algorand.Unity.Crypto.SodiumArray`1.IsCreated*
+  name: IsCreated
+  href: api/Algorand.Unity.Crypto.SodiumArray-1.html#Algorand_Unity_Crypto_SodiumArray_1_IsCreated_
+  commentId: Overload:Algorand.Unity.Crypto.SodiumArray`1.IsCreated
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SodiumArray<T>.IsCreated
+  fullName.vb: Algorand.Unity.Crypto.SodiumArray(Of T).IsCreated
+  nameWithType: SodiumArray<T>.IsCreated
+  nameWithType.vb: SodiumArray(Of T).IsCreated
+- uid: Algorand.Unity.Crypto.SodiumArray`1.Item(System.Int32)
+  name: Item[Int32]
+  href: api/Algorand.Unity.Crypto.SodiumArray-1.html#Algorand_Unity_Crypto_SodiumArray_1_Item_System_Int32_
+  commentId: P:Algorand.Unity.Crypto.SodiumArray`1.Item(System.Int32)
+  name.vb: Item(Int32)
+  fullName: Algorand.Unity.Crypto.SodiumArray<T>.Item[System.Int32]
+  fullName.vb: Algorand.Unity.Crypto.SodiumArray(Of T).Item(System.Int32)
+  nameWithType: SodiumArray<T>.Item[Int32]
+  nameWithType.vb: SodiumArray(Of T).Item(Int32)
+- uid: Algorand.Unity.Crypto.SodiumArray`1.Item*
+  name: Item
+  href: api/Algorand.Unity.Crypto.SodiumArray-1.html#Algorand_Unity_Crypto_SodiumArray_1_Item_
+  commentId: Overload:Algorand.Unity.Crypto.SodiumArray`1.Item
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SodiumArray<T>.Item
+  fullName.vb: Algorand.Unity.Crypto.SodiumArray(Of T).Item
+  nameWithType: SodiumArray<T>.Item
+  nameWithType.vb: SodiumArray(Of T).Item
+- uid: Algorand.Unity.Crypto.SodiumArray`1.Length
+  name: Length
+  href: api/Algorand.Unity.Crypto.SodiumArray-1.html#Algorand_Unity_Crypto_SodiumArray_1_Length
+  commentId: P:Algorand.Unity.Crypto.SodiumArray`1.Length
+  fullName: Algorand.Unity.Crypto.SodiumArray<T>.Length
+  fullName.vb: Algorand.Unity.Crypto.SodiumArray(Of T).Length
+  nameWithType: SodiumArray<T>.Length
+  nameWithType.vb: SodiumArray(Of T).Length
+- uid: Algorand.Unity.Crypto.SodiumArray`1.Length*
+  name: Length
+  href: api/Algorand.Unity.Crypto.SodiumArray-1.html#Algorand_Unity_Crypto_SodiumArray_1_Length_
+  commentId: Overload:Algorand.Unity.Crypto.SodiumArray`1.Length
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SodiumArray<T>.Length
+  fullName.vb: Algorand.Unity.Crypto.SodiumArray(Of T).Length
+  nameWithType: SodiumArray<T>.Length
+  nameWithType.vb: SodiumArray(Of T).Length
+- uid: Algorand.Unity.Crypto.SodiumReference`1
+  name: SodiumReference<T>
+  href: api/Algorand.Unity.Crypto.SodiumReference-1.html
+  commentId: T:Algorand.Unity.Crypto.SodiumReference`1
+  name.vb: SodiumReference(Of T)
+  fullName: Algorand.Unity.Crypto.SodiumReference<T>
+  fullName.vb: Algorand.Unity.Crypto.SodiumReference(Of T)
+  nameWithType: SodiumReference<T>
+  nameWithType.vb: SodiumReference(Of T)
+- uid: Algorand.Unity.Crypto.SodiumReference`1.#ctor(Algorand.Unity.Crypto.SecureMemoryHandle)
+  name: SodiumReference(SecureMemoryHandle)
+  href: api/Algorand.Unity.Crypto.SodiumReference-1.html#Algorand_Unity_Crypto_SodiumReference_1__ctor_Algorand_Unity_Crypto_SecureMemoryHandle_
+  commentId: M:Algorand.Unity.Crypto.SodiumReference`1.#ctor(Algorand.Unity.Crypto.SecureMemoryHandle)
+  fullName: Algorand.Unity.Crypto.SodiumReference<T>.SodiumReference(Algorand.Unity.Crypto.SecureMemoryHandle)
+  fullName.vb: Algorand.Unity.Crypto.SodiumReference(Of T).SodiumReference(Algorand.Unity.Crypto.SecureMemoryHandle)
+  nameWithType: SodiumReference<T>.SodiumReference(SecureMemoryHandle)
+  nameWithType.vb: SodiumReference(Of T).SodiumReference(SecureMemoryHandle)
+- uid: Algorand.Unity.Crypto.SodiumReference`1.#ctor*
+  name: SodiumReference
+  href: api/Algorand.Unity.Crypto.SodiumReference-1.html#Algorand_Unity_Crypto_SodiumReference_1__ctor_
+  commentId: Overload:Algorand.Unity.Crypto.SodiumReference`1.#ctor
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SodiumReference<T>.SodiumReference
+  fullName.vb: Algorand.Unity.Crypto.SodiumReference(Of T).SodiumReference
+  nameWithType: SodiumReference<T>.SodiumReference
+  nameWithType.vb: SodiumReference(Of T).SodiumReference
+- uid: Algorand.Unity.Crypto.SodiumReference`1.Alloc
+  name: Alloc()
+  href: api/Algorand.Unity.Crypto.SodiumReference-1.html#Algorand_Unity_Crypto_SodiumReference_1_Alloc
+  commentId: M:Algorand.Unity.Crypto.SodiumReference`1.Alloc
+  fullName: Algorand.Unity.Crypto.SodiumReference<T>.Alloc()
+  fullName.vb: Algorand.Unity.Crypto.SodiumReference(Of T).Alloc()
+  nameWithType: SodiumReference<T>.Alloc()
+  nameWithType.vb: SodiumReference(Of T).Alloc()
+- uid: Algorand.Unity.Crypto.SodiumReference`1.Alloc*
+  name: Alloc
+  href: api/Algorand.Unity.Crypto.SodiumReference-1.html#Algorand_Unity_Crypto_SodiumReference_1_Alloc_
+  commentId: Overload:Algorand.Unity.Crypto.SodiumReference`1.Alloc
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SodiumReference<T>.Alloc
+  fullName.vb: Algorand.Unity.Crypto.SodiumReference(Of T).Alloc
+  nameWithType: SodiumReference<T>.Alloc
+  nameWithType.vb: SodiumReference(Of T).Alloc
+- uid: Algorand.Unity.Crypto.SodiumReference`1.AsSpan
+  name: AsSpan()
+  href: api/Algorand.Unity.Crypto.SodiumReference-1.html#Algorand_Unity_Crypto_SodiumReference_1_AsSpan
+  commentId: M:Algorand.Unity.Crypto.SodiumReference`1.AsSpan
+  fullName: Algorand.Unity.Crypto.SodiumReference<T>.AsSpan()
+  fullName.vb: Algorand.Unity.Crypto.SodiumReference(Of T).AsSpan()
+  nameWithType: SodiumReference<T>.AsSpan()
+  nameWithType.vb: SodiumReference(Of T).AsSpan()
+- uid: Algorand.Unity.Crypto.SodiumReference`1.AsSpan*
+  name: AsSpan
+  href: api/Algorand.Unity.Crypto.SodiumReference-1.html#Algorand_Unity_Crypto_SodiumReference_1_AsSpan_
+  commentId: Overload:Algorand.Unity.Crypto.SodiumReference`1.AsSpan
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SodiumReference<T>.AsSpan
+  fullName.vb: Algorand.Unity.Crypto.SodiumReference(Of T).AsSpan
+  nameWithType: SodiumReference<T>.AsSpan
+  nameWithType.vb: SodiumReference(Of T).AsSpan
+- uid: Algorand.Unity.Crypto.SodiumReference`1.Dispose
+  name: Dispose()
+  href: api/Algorand.Unity.Crypto.SodiumReference-1.html#Algorand_Unity_Crypto_SodiumReference_1_Dispose
+  commentId: M:Algorand.Unity.Crypto.SodiumReference`1.Dispose
+  fullName: Algorand.Unity.Crypto.SodiumReference<T>.Dispose()
+  fullName.vb: Algorand.Unity.Crypto.SodiumReference(Of T).Dispose()
+  nameWithType: SodiumReference<T>.Dispose()
+  nameWithType.vb: SodiumReference(Of T).Dispose()
+- uid: Algorand.Unity.Crypto.SodiumReference`1.Dispose(JobHandle)
+  name: Dispose(JobHandle)
+  href: api/Algorand.Unity.Crypto.SodiumReference-1.html#Algorand_Unity_Crypto_SodiumReference_1_Dispose_JobHandle_
+  commentId: M:Algorand.Unity.Crypto.SodiumReference`1.Dispose(JobHandle)
+  fullName: Algorand.Unity.Crypto.SodiumReference<T>.Dispose(JobHandle)
+  fullName.vb: Algorand.Unity.Crypto.SodiumReference(Of T).Dispose(JobHandle)
+  nameWithType: SodiumReference<T>.Dispose(JobHandle)
+  nameWithType.vb: SodiumReference(Of T).Dispose(JobHandle)
+- uid: Algorand.Unity.Crypto.SodiumReference`1.Dispose*
+  name: Dispose
+  href: api/Algorand.Unity.Crypto.SodiumReference-1.html#Algorand_Unity_Crypto_SodiumReference_1_Dispose_
+  commentId: Overload:Algorand.Unity.Crypto.SodiumReference`1.Dispose
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SodiumReference<T>.Dispose
+  fullName.vb: Algorand.Unity.Crypto.SodiumReference(Of T).Dispose
+  nameWithType: SodiumReference<T>.Dispose
+  nameWithType.vb: SodiumReference(Of T).Dispose
+- uid: Algorand.Unity.Crypto.SodiumReference`1.GetUnsafePtr
+  name: GetUnsafePtr()
+  href: api/Algorand.Unity.Crypto.SodiumReference-1.html#Algorand_Unity_Crypto_SodiumReference_1_GetUnsafePtr
+  commentId: M:Algorand.Unity.Crypto.SodiumReference`1.GetUnsafePtr
+  fullName: Algorand.Unity.Crypto.SodiumReference<T>.GetUnsafePtr()
+  fullName.vb: Algorand.Unity.Crypto.SodiumReference(Of T).GetUnsafePtr()
+  nameWithType: SodiumReference<T>.GetUnsafePtr()
+  nameWithType.vb: SodiumReference(Of T).GetUnsafePtr()
+- uid: Algorand.Unity.Crypto.SodiumReference`1.GetUnsafePtr*
+  name: GetUnsafePtr
+  href: api/Algorand.Unity.Crypto.SodiumReference-1.html#Algorand_Unity_Crypto_SodiumReference_1_GetUnsafePtr_
+  commentId: Overload:Algorand.Unity.Crypto.SodiumReference`1.GetUnsafePtr
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SodiumReference<T>.GetUnsafePtr
+  fullName.vb: Algorand.Unity.Crypto.SodiumReference(Of T).GetUnsafePtr
+  nameWithType: SodiumReference<T>.GetUnsafePtr
+  nameWithType.vb: SodiumReference(Of T).GetUnsafePtr
+- uid: Algorand.Unity.Crypto.SodiumReference`1.IsCreated
+  name: IsCreated
+  href: api/Algorand.Unity.Crypto.SodiumReference-1.html#Algorand_Unity_Crypto_SodiumReference_1_IsCreated
+  commentId: P:Algorand.Unity.Crypto.SodiumReference`1.IsCreated
+  fullName: Algorand.Unity.Crypto.SodiumReference<T>.IsCreated
+  fullName.vb: Algorand.Unity.Crypto.SodiumReference(Of T).IsCreated
+  nameWithType: SodiumReference<T>.IsCreated
+  nameWithType.vb: SodiumReference(Of T).IsCreated
+- uid: Algorand.Unity.Crypto.SodiumReference`1.IsCreated*
+  name: IsCreated
+  href: api/Algorand.Unity.Crypto.SodiumReference-1.html#Algorand_Unity_Crypto_SodiumReference_1_IsCreated_
+  commentId: Overload:Algorand.Unity.Crypto.SodiumReference`1.IsCreated
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SodiumReference<T>.IsCreated
+  fullName.vb: Algorand.Unity.Crypto.SodiumReference(Of T).IsCreated
+  nameWithType: SodiumReference<T>.IsCreated
+  nameWithType.vb: SodiumReference(Of T).IsCreated
+- uid: Algorand.Unity.Crypto.SodiumReference`1.Value
+  name: Value
+  href: api/Algorand.Unity.Crypto.SodiumReference-1.html#Algorand_Unity_Crypto_SodiumReference_1_Value
+  commentId: P:Algorand.Unity.Crypto.SodiumReference`1.Value
+  fullName: Algorand.Unity.Crypto.SodiumReference<T>.Value
+  fullName.vb: Algorand.Unity.Crypto.SodiumReference(Of T).Value
+  nameWithType: SodiumReference<T>.Value
+  nameWithType.vb: SodiumReference(Of T).Value
+- uid: Algorand.Unity.Crypto.SodiumReference`1.Value*
+  name: Value
+  href: api/Algorand.Unity.Crypto.SodiumReference-1.html#Algorand_Unity_Crypto_SodiumReference_1_Value_
+  commentId: Overload:Algorand.Unity.Crypto.SodiumReference`1.Value
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SodiumReference<T>.Value
+  fullName.vb: Algorand.Unity.Crypto.SodiumReference(Of T).Value
+  nameWithType: SodiumReference<T>.Value
+  nameWithType.vb: SodiumReference(Of T).Value
+- uid: Algorand.Unity.Crypto.SodiumString
+  name: SodiumString
+  href: api/Algorand.Unity.Crypto.SodiumString.html
+  commentId: T:Algorand.Unity.Crypto.SodiumString
+  fullName: Algorand.Unity.Crypto.SodiumString
+  nameWithType: SodiumString
+- uid: Algorand.Unity.Crypto.SodiumString.#ctor(System.ReadOnlySpan{System.Char})
+  name: SodiumString(ReadOnlySpan<Char>)
+  href: api/Algorand.Unity.Crypto.SodiumString.html#Algorand_Unity_Crypto_SodiumString__ctor_System_ReadOnlySpan_System_Char__
+  commentId: M:Algorand.Unity.Crypto.SodiumString.#ctor(System.ReadOnlySpan{System.Char})
+  name.vb: SodiumString(ReadOnlySpan(Of Char))
+  fullName: Algorand.Unity.Crypto.SodiumString.SodiumString(System.ReadOnlySpan<System.Char>)
+  fullName.vb: Algorand.Unity.Crypto.SodiumString.SodiumString(System.ReadOnlySpan(Of System.Char))
+  nameWithType: SodiumString.SodiumString(ReadOnlySpan<Char>)
+  nameWithType.vb: SodiumString.SodiumString(ReadOnlySpan(Of Char))
+- uid: Algorand.Unity.Crypto.SodiumString.#ctor*
+  name: SodiumString
+  href: api/Algorand.Unity.Crypto.SodiumString.html#Algorand_Unity_Crypto_SodiumString__ctor_
+  commentId: Overload:Algorand.Unity.Crypto.SodiumString.#ctor
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SodiumString.SodiumString
+  nameWithType: SodiumString.SodiumString
+- uid: Algorand.Unity.Crypto.SodiumString.Capacity
+  name: Capacity
+  href: api/Algorand.Unity.Crypto.SodiumString.html#Algorand_Unity_Crypto_SodiumString_Capacity
+  commentId: P:Algorand.Unity.Crypto.SodiumString.Capacity
+  fullName: Algorand.Unity.Crypto.SodiumString.Capacity
+  nameWithType: SodiumString.Capacity
+- uid: Algorand.Unity.Crypto.SodiumString.Capacity*
+  name: Capacity
+  href: api/Algorand.Unity.Crypto.SodiumString.html#Algorand_Unity_Crypto_SodiumString_Capacity_
+  commentId: Overload:Algorand.Unity.Crypto.SodiumString.Capacity
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SodiumString.Capacity
+  nameWithType: SodiumString.Capacity
+- uid: Algorand.Unity.Crypto.SodiumString.Dispose
+  name: Dispose()
+  href: api/Algorand.Unity.Crypto.SodiumString.html#Algorand_Unity_Crypto_SodiumString_Dispose
+  commentId: M:Algorand.Unity.Crypto.SodiumString.Dispose
+  fullName: Algorand.Unity.Crypto.SodiumString.Dispose()
+  nameWithType: SodiumString.Dispose()
+- uid: Algorand.Unity.Crypto.SodiumString.Dispose(JobHandle)
+  name: Dispose(JobHandle)
+  href: api/Algorand.Unity.Crypto.SodiumString.html#Algorand_Unity_Crypto_SodiumString_Dispose_JobHandle_
+  commentId: M:Algorand.Unity.Crypto.SodiumString.Dispose(JobHandle)
+  fullName: Algorand.Unity.Crypto.SodiumString.Dispose(JobHandle)
+  nameWithType: SodiumString.Dispose(JobHandle)
+- uid: Algorand.Unity.Crypto.SodiumString.Dispose*
+  name: Dispose
+  href: api/Algorand.Unity.Crypto.SodiumString.html#Algorand_Unity_Crypto_SodiumString_Dispose_
+  commentId: Overload:Algorand.Unity.Crypto.SodiumString.Dispose
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SodiumString.Dispose
+  nameWithType: SodiumString.Dispose
+- uid: Algorand.Unity.Crypto.SodiumString.GetUnsafePtr
+  name: GetUnsafePtr()
+  href: api/Algorand.Unity.Crypto.SodiumString.html#Algorand_Unity_Crypto_SodiumString_GetUnsafePtr
+  commentId: M:Algorand.Unity.Crypto.SodiumString.GetUnsafePtr
+  fullName: Algorand.Unity.Crypto.SodiumString.GetUnsafePtr()
+  nameWithType: SodiumString.GetUnsafePtr()
+- uid: Algorand.Unity.Crypto.SodiumString.GetUnsafePtr*
+  name: GetUnsafePtr
+  href: api/Algorand.Unity.Crypto.SodiumString.html#Algorand_Unity_Crypto_SodiumString_GetUnsafePtr_
+  commentId: Overload:Algorand.Unity.Crypto.SodiumString.GetUnsafePtr
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SodiumString.GetUnsafePtr
+  nameWithType: SodiumString.GetUnsafePtr
+- uid: Algorand.Unity.Crypto.SodiumString.IsCreated
+  name: IsCreated
+  href: api/Algorand.Unity.Crypto.SodiumString.html#Algorand_Unity_Crypto_SodiumString_IsCreated
+  commentId: P:Algorand.Unity.Crypto.SodiumString.IsCreated
+  fullName: Algorand.Unity.Crypto.SodiumString.IsCreated
+  nameWithType: SodiumString.IsCreated
+- uid: Algorand.Unity.Crypto.SodiumString.IsCreated*
+  name: IsCreated
+  href: api/Algorand.Unity.Crypto.SodiumString.html#Algorand_Unity_Crypto_SodiumString_IsCreated_
+  commentId: Overload:Algorand.Unity.Crypto.SodiumString.IsCreated
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SodiumString.IsCreated
+  nameWithType: SodiumString.IsCreated
+- uid: Algorand.Unity.Crypto.SodiumString.Length
+  name: Length
+  href: api/Algorand.Unity.Crypto.SodiumString.html#Algorand_Unity_Crypto_SodiumString_Length
+  commentId: P:Algorand.Unity.Crypto.SodiumString.Length
+  fullName: Algorand.Unity.Crypto.SodiumString.Length
+  nameWithType: SodiumString.Length
+- uid: Algorand.Unity.Crypto.SodiumString.Length*
+  name: Length
+  href: api/Algorand.Unity.Crypto.SodiumString.html#Algorand_Unity_Crypto_SodiumString_Length_
+  commentId: Overload:Algorand.Unity.Crypto.SodiumString.Length
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SodiumString.Length
+  nameWithType: SodiumString.Length
 - uid: Algorand.Unity.Crypto.X25519
   name: X25519
   href: api/Algorand.Unity.Crypto.X25519.html
@@ -37398,6 +38560,271 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.KmdClient.WalletInfo
   nameWithType: KmdClient.WalletInfo
+- uid: Algorand.Unity.LocalAccountStore
+  name: LocalAccountStore
+  href: api/Algorand.Unity.LocalAccountStore.html
+  commentId: T:Algorand.Unity.LocalAccountStore
+  fullName: Algorand.Unity.LocalAccountStore
+  nameWithType: LocalAccountStore
+- uid: Algorand.Unity.LocalAccountStore.#ctor(SodiumArray{Ed25519.SecretKey},SodiumReference{SecretBox.Key},PwHash.Salt)
+  name: LocalAccountStore(SodiumArray<Ed25519.SecretKey>, SodiumReference<SecretBox.Key>, PwHash.Salt)
+  href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore__ctor_SodiumArray_Ed25519_SecretKey__SodiumReference_SecretBox_Key__PwHash_Salt_
+  commentId: M:Algorand.Unity.LocalAccountStore.#ctor(SodiumArray{Ed25519.SecretKey},SodiumReference{SecretBox.Key},PwHash.Salt)
+  name.vb: LocalAccountStore(SodiumArray(Of Ed25519.SecretKey), SodiumReference(Of SecretBox.Key), PwHash.Salt)
+  fullName: Algorand.Unity.LocalAccountStore.LocalAccountStore(SodiumArray<Ed25519.SecretKey>, SodiumReference<SecretBox.Key>, PwHash.Salt)
+  fullName.vb: Algorand.Unity.LocalAccountStore.LocalAccountStore(SodiumArray(Of Ed25519.SecretKey), SodiumReference(Of SecretBox.Key), PwHash.Salt)
+  nameWithType: LocalAccountStore.LocalAccountStore(SodiumArray<Ed25519.SecretKey>, SodiumReference<SecretBox.Key>, PwHash.Salt)
+  nameWithType.vb: LocalAccountStore.LocalAccountStore(SodiumArray(Of Ed25519.SecretKey), SodiumReference(Of SecretBox.Key), PwHash.Salt)
+- uid: Algorand.Unity.LocalAccountStore.#ctor(SodiumString)
+  name: LocalAccountStore(SodiumString)
+  href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore__ctor_SodiumString_
+  commentId: M:Algorand.Unity.LocalAccountStore.#ctor(SodiumString)
+  fullName: Algorand.Unity.LocalAccountStore.LocalAccountStore(SodiumString)
+  nameWithType: LocalAccountStore.LocalAccountStore(SodiumString)
+- uid: Algorand.Unity.LocalAccountStore.#ctor*
+  name: LocalAccountStore
+  href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore__ctor_
+  commentId: Overload:Algorand.Unity.LocalAccountStore.#ctor
+  isSpec: "True"
+  fullName: Algorand.Unity.LocalAccountStore.LocalAccountStore
+  nameWithType: LocalAccountStore.LocalAccountStore
+- uid: Algorand.Unity.LocalAccountStore.Account
+  name: LocalAccountStore.Account
+  href: api/Algorand.Unity.LocalAccountStore.Account.html
+  commentId: T:Algorand.Unity.LocalAccountStore.Account
+  fullName: Algorand.Unity.LocalAccountStore.Account
+  nameWithType: LocalAccountStore.Account
+- uid: Algorand.Unity.LocalAccountStore.Account.Address
+  name: Address
+  href: api/Algorand.Unity.LocalAccountStore.Account.html#Algorand_Unity_LocalAccountStore_Account_Address
+  commentId: P:Algorand.Unity.LocalAccountStore.Account.Address
+  fullName: Algorand.Unity.LocalAccountStore.Account.Address
+  nameWithType: LocalAccountStore.Account.Address
+- uid: Algorand.Unity.LocalAccountStore.Account.Address*
+  name: Address
+  href: api/Algorand.Unity.LocalAccountStore.Account.html#Algorand_Unity_LocalAccountStore_Account_Address_
+  commentId: Overload:Algorand.Unity.LocalAccountStore.Account.Address
+  isSpec: "True"
+  fullName: Algorand.Unity.LocalAccountStore.Account.Address
+  nameWithType: LocalAccountStore.Account.Address
+- uid: Algorand.Unity.LocalAccountStore.Account.SignTxn*
+  name: SignTxn
+  href: api/Algorand.Unity.LocalAccountStore.Account.html#Algorand_Unity_LocalAccountStore_Account_SignTxn_
+  commentId: Overload:Algorand.Unity.LocalAccountStore.Account.SignTxn
+  isSpec: "True"
+  fullName: Algorand.Unity.LocalAccountStore.Account.SignTxn
+  nameWithType: LocalAccountStore.Account.SignTxn
+- uid: Algorand.Unity.LocalAccountStore.Account.SignTxn``1(``0)
+  name: SignTxn<T>(T)
+  href: api/Algorand.Unity.LocalAccountStore.Account.html#Algorand_Unity_LocalAccountStore_Account_SignTxn__1___0_
+  commentId: M:Algorand.Unity.LocalAccountStore.Account.SignTxn``1(``0)
+  name.vb: SignTxn(Of T)(T)
+  fullName: Algorand.Unity.LocalAccountStore.Account.SignTxn<T>(T)
+  fullName.vb: Algorand.Unity.LocalAccountStore.Account.SignTxn(Of T)(T)
+  nameWithType: LocalAccountStore.Account.SignTxn<T>(T)
+  nameWithType.vb: LocalAccountStore.Account.SignTxn(Of T)(T)
+- uid: Algorand.Unity.LocalAccountStore.Account.SignTxns*
+  name: SignTxns
+  href: api/Algorand.Unity.LocalAccountStore.Account.html#Algorand_Unity_LocalAccountStore_Account_SignTxns_
+  commentId: Overload:Algorand.Unity.LocalAccountStore.Account.SignTxns
+  isSpec: "True"
+  fullName: Algorand.Unity.LocalAccountStore.Account.SignTxns
+  nameWithType: LocalAccountStore.Account.SignTxns
+- uid: Algorand.Unity.LocalAccountStore.Account.SignTxns``1(``0[],Algorand.Unity.TxnIndices)
+  name: SignTxns<T>(T[], TxnIndices)
+  href: api/Algorand.Unity.LocalAccountStore.Account.html#Algorand_Unity_LocalAccountStore_Account_SignTxns__1___0___Algorand_Unity_TxnIndices_
+  commentId: M:Algorand.Unity.LocalAccountStore.Account.SignTxns``1(``0[],Algorand.Unity.TxnIndices)
+  name.vb: SignTxns(Of T)(T(), TxnIndices)
+  fullName: Algorand.Unity.LocalAccountStore.Account.SignTxns<T>(T[], Algorand.Unity.TxnIndices)
+  fullName.vb: Algorand.Unity.LocalAccountStore.Account.SignTxns(Of T)(T(), Algorand.Unity.TxnIndices)
+  nameWithType: LocalAccountStore.Account.SignTxns<T>(T[], TxnIndices)
+  nameWithType.vb: LocalAccountStore.Account.SignTxns(Of T)(T(), TxnIndices)
+- uid: Algorand.Unity.LocalAccountStore.Add(Ed25519.SecretKey@)
+  name: Add(ref Ed25519.SecretKey)
+  href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore_Add_Ed25519_SecretKey__
+  commentId: M:Algorand.Unity.LocalAccountStore.Add(Ed25519.SecretKey@)
+  name.vb: Add(ByRef Ed25519.SecretKey)
+  fullName: Algorand.Unity.LocalAccountStore.Add(ref Ed25519.SecretKey)
+  fullName.vb: Algorand.Unity.LocalAccountStore.Add(ByRef Ed25519.SecretKey)
+  nameWithType: LocalAccountStore.Add(ref Ed25519.SecretKey)
+  nameWithType.vb: LocalAccountStore.Add(ByRef Ed25519.SecretKey)
+- uid: Algorand.Unity.LocalAccountStore.Add*
+  name: Add
+  href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore_Add_
+  commentId: Overload:Algorand.Unity.LocalAccountStore.Add
+  isSpec: "True"
+  fullName: Algorand.Unity.LocalAccountStore.Add
+  nameWithType: LocalAccountStore.Add
+- uid: Algorand.Unity.LocalAccountStore.Decrypt(System.String,SodiumString,Algorand.Unity.LocalAccountStore@)
+  name: Decrypt(String, SodiumString, out LocalAccountStore)
+  href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore_Decrypt_System_String_SodiumString_Algorand_Unity_LocalAccountStore__
+  commentId: M:Algorand.Unity.LocalAccountStore.Decrypt(System.String,SodiumString,Algorand.Unity.LocalAccountStore@)
+  name.vb: Decrypt(String, SodiumString, ByRef LocalAccountStore)
+  fullName: Algorand.Unity.LocalAccountStore.Decrypt(System.String, SodiumString, out Algorand.Unity.LocalAccountStore)
+  fullName.vb: Algorand.Unity.LocalAccountStore.Decrypt(System.String, SodiumString, ByRef Algorand.Unity.LocalAccountStore)
+  nameWithType: LocalAccountStore.Decrypt(String, SodiumString, out LocalAccountStore)
+  nameWithType.vb: LocalAccountStore.Decrypt(String, SodiumString, ByRef LocalAccountStore)
+- uid: Algorand.Unity.LocalAccountStore.Decrypt*
+  name: Decrypt
+  href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore_Decrypt_
+  commentId: Overload:Algorand.Unity.LocalAccountStore.Decrypt
+  isSpec: "True"
+  fullName: Algorand.Unity.LocalAccountStore.Decrypt
+  nameWithType: LocalAccountStore.Decrypt
+- uid: Algorand.Unity.LocalAccountStore.DecryptError
+  name: LocalAccountStore.DecryptError
+  href: api/Algorand.Unity.LocalAccountStore.DecryptError.html
+  commentId: T:Algorand.Unity.LocalAccountStore.DecryptError
+  fullName: Algorand.Unity.LocalAccountStore.DecryptError
+  nameWithType: LocalAccountStore.DecryptError
+- uid: Algorand.Unity.LocalAccountStore.DecryptError.InvalidFormat
+  name: InvalidFormat
+  href: api/Algorand.Unity.LocalAccountStore.DecryptError.html#Algorand_Unity_LocalAccountStore_DecryptError_InvalidFormat
+  commentId: F:Algorand.Unity.LocalAccountStore.DecryptError.InvalidFormat
+  fullName: Algorand.Unity.LocalAccountStore.DecryptError.InvalidFormat
+  nameWithType: LocalAccountStore.DecryptError.InvalidFormat
+- uid: Algorand.Unity.LocalAccountStore.DecryptError.InvalidPassword
+  name: InvalidPassword
+  href: api/Algorand.Unity.LocalAccountStore.DecryptError.html#Algorand_Unity_LocalAccountStore_DecryptError_InvalidPassword
+  commentId: F:Algorand.Unity.LocalAccountStore.DecryptError.InvalidPassword
+  fullName: Algorand.Unity.LocalAccountStore.DecryptError.InvalidPassword
+  nameWithType: LocalAccountStore.DecryptError.InvalidPassword
+- uid: Algorand.Unity.LocalAccountStore.DecryptError.None
+  name: None
+  href: api/Algorand.Unity.LocalAccountStore.DecryptError.html#Algorand_Unity_LocalAccountStore_DecryptError_None
+  commentId: F:Algorand.Unity.LocalAccountStore.DecryptError.None
+  fullName: Algorand.Unity.LocalAccountStore.DecryptError.None
+  nameWithType: LocalAccountStore.DecryptError.None
+- uid: Algorand.Unity.LocalAccountStore.Dispose
+  name: Dispose()
+  href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore_Dispose
+  commentId: M:Algorand.Unity.LocalAccountStore.Dispose
+  fullName: Algorand.Unity.LocalAccountStore.Dispose()
+  nameWithType: LocalAccountStore.Dispose()
+- uid: Algorand.Unity.LocalAccountStore.Dispose(JobHandle)
+  name: Dispose(JobHandle)
+  href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore_Dispose_JobHandle_
+  commentId: M:Algorand.Unity.LocalAccountStore.Dispose(JobHandle)
+  fullName: Algorand.Unity.LocalAccountStore.Dispose(JobHandle)
+  nameWithType: LocalAccountStore.Dispose(JobHandle)
+- uid: Algorand.Unity.LocalAccountStore.Dispose*
+  name: Dispose
+  href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore_Dispose_
+  commentId: Overload:Algorand.Unity.LocalAccountStore.Dispose
+  isSpec: "True"
+  fullName: Algorand.Unity.LocalAccountStore.Dispose
+  nameWithType: LocalAccountStore.Dispose
+- uid: Algorand.Unity.LocalAccountStore.Encrypt(SodiumString,System.String@,Algorand.Unity.LocalAccountStore@)
+  name: Encrypt(SodiumString, out String, out LocalAccountStore)
+  href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore_Encrypt_SodiumString_System_String__Algorand_Unity_LocalAccountStore__
+  commentId: M:Algorand.Unity.LocalAccountStore.Encrypt(SodiumString,System.String@,Algorand.Unity.LocalAccountStore@)
+  name.vb: Encrypt(SodiumString, ByRef String, ByRef LocalAccountStore)
+  fullName: Algorand.Unity.LocalAccountStore.Encrypt(SodiumString, out System.String, out Algorand.Unity.LocalAccountStore)
+  fullName.vb: Algorand.Unity.LocalAccountStore.Encrypt(SodiumString, ByRef System.String, ByRef Algorand.Unity.LocalAccountStore)
+  nameWithType: LocalAccountStore.Encrypt(SodiumString, out String, out LocalAccountStore)
+  nameWithType.vb: LocalAccountStore.Encrypt(SodiumString, ByRef String, ByRef LocalAccountStore)
+- uid: Algorand.Unity.LocalAccountStore.Encrypt(System.String@)
+  name: Encrypt(out String)
+  href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore_Encrypt_System_String__
+  commentId: M:Algorand.Unity.LocalAccountStore.Encrypt(System.String@)
+  name.vb: Encrypt(ByRef String)
+  fullName: Algorand.Unity.LocalAccountStore.Encrypt(out System.String)
+  fullName.vb: Algorand.Unity.LocalAccountStore.Encrypt(ByRef System.String)
+  nameWithType: LocalAccountStore.Encrypt(out String)
+  nameWithType.vb: LocalAccountStore.Encrypt(ByRef String)
+- uid: Algorand.Unity.LocalAccountStore.Encrypt*
+  name: Encrypt
+  href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore_Encrypt_
+  commentId: Overload:Algorand.Unity.LocalAccountStore.Encrypt
+  isSpec: "True"
+  fullName: Algorand.Unity.LocalAccountStore.Encrypt
+  nameWithType: LocalAccountStore.Encrypt
+- uid: Algorand.Unity.LocalAccountStore.EncryptedSizeBytes
+  name: EncryptedSizeBytes
+  href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore_EncryptedSizeBytes
+  commentId: P:Algorand.Unity.LocalAccountStore.EncryptedSizeBytes
+  fullName: Algorand.Unity.LocalAccountStore.EncryptedSizeBytes
+  nameWithType: LocalAccountStore.EncryptedSizeBytes
+- uid: Algorand.Unity.LocalAccountStore.EncryptedSizeBytes*
+  name: EncryptedSizeBytes
+  href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore_EncryptedSizeBytes_
+  commentId: Overload:Algorand.Unity.LocalAccountStore.EncryptedSizeBytes
+  isSpec: "True"
+  fullName: Algorand.Unity.LocalAccountStore.EncryptedSizeBytes
+  nameWithType: LocalAccountStore.EncryptedSizeBytes
+- uid: Algorand.Unity.LocalAccountStore.EncryptError
+  name: LocalAccountStore.EncryptError
+  href: api/Algorand.Unity.LocalAccountStore.EncryptError.html
+  commentId: T:Algorand.Unity.LocalAccountStore.EncryptError
+  fullName: Algorand.Unity.LocalAccountStore.EncryptError
+  nameWithType: LocalAccountStore.EncryptError
+- uid: Algorand.Unity.LocalAccountStore.EncryptError.None
+  name: None
+  href: api/Algorand.Unity.LocalAccountStore.EncryptError.html#Algorand_Unity_LocalAccountStore_EncryptError_None
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptError.None
+  fullName: Algorand.Unity.LocalAccountStore.EncryptError.None
+  nameWithType: LocalAccountStore.EncryptError.None
+- uid: Algorand.Unity.LocalAccountStore.EncryptError.OutOfMemory
+  name: OutOfMemory
+  href: api/Algorand.Unity.LocalAccountStore.EncryptError.html#Algorand_Unity_LocalAccountStore_EncryptError_OutOfMemory
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptError.OutOfMemory
+  fullName: Algorand.Unity.LocalAccountStore.EncryptError.OutOfMemory
+  nameWithType: LocalAccountStore.EncryptError.OutOfMemory
+- uid: Algorand.Unity.LocalAccountStore.IsCreated
+  name: IsCreated
+  href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore_IsCreated
+  commentId: P:Algorand.Unity.LocalAccountStore.IsCreated
+  fullName: Algorand.Unity.LocalAccountStore.IsCreated
+  nameWithType: LocalAccountStore.IsCreated
+- uid: Algorand.Unity.LocalAccountStore.IsCreated*
+  name: IsCreated
+  href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore_IsCreated_
+  commentId: Overload:Algorand.Unity.LocalAccountStore.IsCreated
+  isSpec: "True"
+  fullName: Algorand.Unity.LocalAccountStore.IsCreated
+  nameWithType: LocalAccountStore.IsCreated
+- uid: Algorand.Unity.LocalAccountStore.Item(System.Int32)
+  name: Item[Int32]
+  href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore_Item_System_Int32_
+  commentId: P:Algorand.Unity.LocalAccountStore.Item(System.Int32)
+  name.vb: Item(Int32)
+  fullName: Algorand.Unity.LocalAccountStore.Item[System.Int32]
+  fullName.vb: Algorand.Unity.LocalAccountStore.Item(System.Int32)
+  nameWithType: LocalAccountStore.Item[Int32]
+  nameWithType.vb: LocalAccountStore.Item(Int32)
+- uid: Algorand.Unity.LocalAccountStore.Item*
+  name: Item
+  href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore_Item_
+  commentId: Overload:Algorand.Unity.LocalAccountStore.Item
+  isSpec: "True"
+  fullName: Algorand.Unity.LocalAccountStore.Item
+  nameWithType: LocalAccountStore.Item
+- uid: Algorand.Unity.LocalAccountStore.Length
+  name: Length
+  href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore_Length
+  commentId: P:Algorand.Unity.LocalAccountStore.Length
+  fullName: Algorand.Unity.LocalAccountStore.Length
+  nameWithType: LocalAccountStore.Length
+- uid: Algorand.Unity.LocalAccountStore.Length*
+  name: Length
+  href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore_Length_
+  commentId: Overload:Algorand.Unity.LocalAccountStore.Length
+  isSpec: "True"
+  fullName: Algorand.Unity.LocalAccountStore.Length
+  nameWithType: LocalAccountStore.Length
+- uid: Algorand.Unity.LocalAccountStore.RemoveAt(System.Int32)
+  name: RemoveAt(Int32)
+  href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore_RemoveAt_System_Int32_
+  commentId: M:Algorand.Unity.LocalAccountStore.RemoveAt(System.Int32)
+  fullName: Algorand.Unity.LocalAccountStore.RemoveAt(System.Int32)
+  nameWithType: LocalAccountStore.RemoveAt(Int32)
+- uid: Algorand.Unity.LocalAccountStore.RemoveAt*
+  name: RemoveAt
+  href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore_RemoveAt_
+  commentId: Overload:Algorand.Unity.LocalAccountStore.RemoveAt
+  isSpec: "True"
+  fullName: Algorand.Unity.LocalAccountStore.RemoveAt
+  nameWithType: LocalAccountStore.RemoveAt
 - uid: Algorand.Unity.Logic
   name: Logic
   href: api/Algorand.Unity.Logic.html
@@ -41258,6 +42685,12 @@ references:
   commentId: F:Algorand.Unity.Mnemonic.Length
   fullName: Algorand.Unity.Mnemonic.Length
   nameWithType: Mnemonic.Length
+- uid: Algorand.Unity.Mnemonic.MaxWordLength
+  name: MaxWordLength
+  href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_MaxWordLength
+  commentId: F:Algorand.Unity.Mnemonic.MaxWordLength
+  fullName: Algorand.Unity.Mnemonic.MaxWordLength
+  nameWithType: Mnemonic.MaxWordLength
 - uid: Algorand.Unity.Mnemonic.op_Implicit(Algorand.Unity.Mnemonic)~System.String
   name: Implicit(Mnemonic to String)
   href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_op_Implicit_Algorand_Unity_Mnemonic__System_String
@@ -41328,6 +42761,15 @@ references:
   commentId: M:Algorand.Unity.Mnemonic.ToPrivateKey
   fullName: Algorand.Unity.Mnemonic.ToPrivateKey()
   nameWithType: Mnemonic.ToPrivateKey()
+- uid: Algorand.Unity.Mnemonic.ToPrivateKey(System.Span{System.Byte})
+  name: ToPrivateKey(Span<Byte>)
+  href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_ToPrivateKey_System_Span_System_Byte__
+  commentId: M:Algorand.Unity.Mnemonic.ToPrivateKey(System.Span{System.Byte})
+  name.vb: ToPrivateKey(Span(Of Byte))
+  fullName: Algorand.Unity.Mnemonic.ToPrivateKey(System.Span<System.Byte>)
+  fullName.vb: Algorand.Unity.Mnemonic.ToPrivateKey(System.Span(Of System.Byte))
+  nameWithType: Mnemonic.ToPrivateKey(Span<Byte>)
+  nameWithType.vb: Mnemonic.ToPrivateKey(Span(Of Byte))
 - uid: Algorand.Unity.Mnemonic.ToPrivateKey*
   name: ToPrivateKey
   href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_ToPrivateKey_
@@ -54623,6 +56065,12 @@ references:
   fullName.vb: Algorand.Unity.PrivateKey.Sign(Of T)(T)
   nameWithType: PrivateKey.Sign<T>(T)
   nameWithType.vb: PrivateKey.Sign(Of T)(T)
+- uid: Algorand.Unity.PrivateKey.SizeBytes
+  name: SizeBytes
+  href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_SizeBytes
+  commentId: F:Algorand.Unity.PrivateKey.SizeBytes
+  fullName: Algorand.Unity.PrivateKey.SizeBytes
+  nameWithType: PrivateKey.SizeBytes
 - uid: Algorand.Unity.PrivateKey.ToAddress
   name: ToAddress()
   href: api/Algorand.Unity.PrivateKey.html#Algorand_Unity_PrivateKey_ToAddress

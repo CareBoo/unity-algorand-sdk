@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "changelog/CHANGELOG.html",
-          "hash": "gUJ1xWSjjgT14uwZTXaxQg=="
+          "hash": "xlyCeBYL+SN/QQh/tMBVTA=="
         }
       },
       "is_incremental": false,
@@ -2066,7 +2066,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Crypto.ChaCha20Poly1305.html",
-          "hash": "d+a/cgsyZXj5hPeMAVk1qg=="
+          "hash": "VOKJBFySf2Qn2N2P5FzZ+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Crypto.Ed25519.GenKeyPairError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Crypto.Ed25519.GenKeyPairError.html",
+          "hash": "eXoDwWPfep0b3RDM3tO0xA=="
         }
       },
       "is_incremental": false,
@@ -2098,11 +2110,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Crypto.Ed25519.SecretKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Crypto.Ed25519.SecretKey.html",
+          "hash": "qNqC+8WG3cH9ol1g2+y0ow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.yml",
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.html",
-          "hash": "zsUAxnELqzOrssAwSrSq0A=="
+          "hash": "rj1X2Qdz1iKGvgyty7QCTQ=="
         }
       },
       "is_incremental": false,
@@ -2138,7 +2162,127 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Crypto.Ed25519.html",
-          "hash": "xVJ0bqX8X2aL80ECSxuaZA=="
+          "hash": "ibZ3kabtYqTLKQAam942Fw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Crypto.PasswordNeedsRehashResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Crypto.PasswordNeedsRehashResult.html",
+          "hash": "5XC6K444PKu/bxlAJIKE/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Crypto.PasswordStorageError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Crypto.PasswordStorageError.html",
+          "hash": "ZIKERf8/lf6KjFoCpzeaLQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Crypto.PasswordVerificationError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Crypto.PasswordVerificationError.html",
+          "hash": "uELGVzR1V56vR3IWbMdX0Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Crypto.PwHash.HashAlgorithm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Crypto.PwHash.HashAlgorithm.html",
+          "hash": "56IqaopPcuTUkysWoFgHgQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Crypto.PwHash.HashError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Crypto.PwHash.HashError.html",
+          "hash": "gSr36GzejZT2rJrsAtp4Ug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Crypto.PwHash.HashStoreJob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Crypto.PwHash.HashStoreJob.html",
+          "hash": "+XmRsA+hlMeO2vJzN8vopA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Crypto.PwHash.MemLimit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Crypto.PwHash.MemLimit.html",
+          "hash": "DmMEHo/DxzpYPFJvSD7oLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Crypto.PwHash.OpsLimit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Crypto.PwHash.OpsLimit.html",
+          "hash": "pl6kJN6wt7EZcu6nHCHu+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Crypto.PwHash.Salt.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Crypto.PwHash.Salt.html",
+          "hash": "M8IqODoLuXZNmL7qzxs05g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Crypto.PwHash.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Crypto.PwHash.html",
+          "hash": "0DxAhm03mIuNdXDTezYMWg=="
         }
       },
       "is_incremental": false,
@@ -2158,11 +2302,83 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Crypto.SecretBox.DecryptError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Crypto.SecretBox.DecryptError.html",
+          "hash": "v3YFEEshK71rQP1xxt5jbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Crypto.SecretBox.EncryptError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Crypto.SecretBox.EncryptError.html",
+          "hash": "BTBbih/ZDvTkCaDbLlkOSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Crypto.SecretBox.Key.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Crypto.SecretBox.Key.html",
+          "hash": "8RHJZSv/wlFix0se2nbiOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Crypto.SecretBox.Mac.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Crypto.SecretBox.Mac.html",
+          "hash": "tipky1sCKznBUkkWIWilaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Crypto.SecretBox.Nonce.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Crypto.SecretBox.Nonce.html",
+          "hash": "KaSz8GwLmo3fE/nYIPTOIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Crypto.SecretBox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Crypto.SecretBox.html",
+          "hash": "8FHnQI8ioisUoAW1MypLrw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Algorand.Unity.Crypto.SecureMemoryHandle.yml",
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Crypto.SecureMemoryHandle.html",
-          "hash": "jzRx+jG1G7puUAiNc/sGoQ=="
+          "hash": "Oi6ZbihUfDOM0r0qheh9jg=="
         }
       },
       "is_incremental": false,
@@ -2218,6 +2434,42 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Crypto.SodiumArray-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Crypto.SodiumArray-1.html",
+          "hash": "qMBzmBaBDdeNLStp2J0nMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Crypto.SodiumReference-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Crypto.SodiumReference-1.html",
+          "hash": "dNGhR6A22waw+Xp7KrStrw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.Crypto.SodiumString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.Crypto.SodiumString.html",
+          "hash": "NOChHKJzdhgaYR/KIhx+Mw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Algorand.Unity.Crypto.X25519.PublicKey.yml",
       "output": {
         ".html": {
@@ -2258,7 +2510,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Crypto.html",
-          "hash": "LAGAjZ61/D8mHEPSUryyTA=="
+          "hash": "qkGQGOTszlMnfdXfwb5lkw=="
         }
       },
       "is_incremental": false,
@@ -5782,6 +6034,54 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.LocalAccountStore.Account.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.LocalAccountStore.Account.html",
+          "hash": "pUHMphGadMiLBhLJgTFVXg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.LocalAccountStore.DecryptError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.LocalAccountStore.DecryptError.html",
+          "hash": "ERlbv2BffuQal7x9zGXcCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.LocalAccountStore.EncryptError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.LocalAccountStore.EncryptError.html",
+          "hash": "FdjcxyH1SfEEDpzBbzlMSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Algorand.Unity.LocalAccountStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Algorand.Unity.LocalAccountStore.html",
+          "hash": "1/eTEYibGmqYWcu84MsJ9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Algorand.Unity.Logic.yml",
       "output": {
         ".html": {
@@ -6230,7 +6530,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.Mnemonic.html",
-          "hash": "xssYOBo7VY6kunGzV8WOIw=="
+          "hash": "R4au1/PV8OTCf6pihp29IQ=="
         }
       },
       "is_incremental": false,
@@ -6374,7 +6674,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.PrivateKey.html",
-          "hash": "cfT4NMEq5ZG8IDoNmC0oEw=="
+          "hash": "JBDN7Cc8oAKvV2+kZFxBIg=="
         }
       },
       "is_incremental": false,
@@ -6818,7 +7118,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Algorand.Unity.html",
-          "hash": "kAhasRSDz6F7rswq31WiIQ=="
+          "hash": "uD1R+CvZYa1uwsnyvXP+lA=="
         }
       },
       "is_incremental": false,
@@ -6830,7 +7130,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "pUhk5+0FYMZk3ggjnyqxLQ=="
+          "hash": "VN2QgILqDuZ7Y+2aAJOOlQ=="
         }
       },
       "is_incremental": false,
@@ -6939,7 +7239,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 554,
+          "total_file_count": 579,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

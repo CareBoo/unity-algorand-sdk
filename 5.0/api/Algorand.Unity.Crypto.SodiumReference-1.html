@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Struct SecureMemoryHandle
+    <title>Struct SodiumReference&lt;T&gt;
    | Algorand SDK for Unity </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Struct SecureMemoryHandle
+    <meta name="title" content="Struct SodiumReference&lt;T&gt;
    | Algorand SDK for Unity ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -77,25 +77,69 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Algorand.Unity.Crypto.SecureMemoryHandle">
+            <article class="content wrap" id="_content" data-uid="Algorand.Unity.Crypto.SodiumReference`1">
   
   
-  <h1 id="Algorand_Unity_Crypto_SecureMemoryHandle" data-uid="Algorand.Unity.Crypto.SecureMemoryHandle" class="text-break">Struct SecureMemoryHandle
+  <h1 id="Algorand_Unity_Crypto_SodiumReference_1" data-uid="Algorand.Unity.Crypto.SodiumReference`1" class="text-break">Struct SodiumReference&lt;T&gt;
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Algorand.Unity.Crypto.html">Algorand.Unity.Crypto</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Algorand_Unity_Crypto_SecureMemoryHandle_syntax">Syntax</h5>
+  <h5 id="Algorand_Unity_Crypto_SodiumReference_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct SecureMemoryHandle : INativeDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public struct SodiumReference&lt;T&gt; : INativeDisposable where T : struct</code></pre>
   </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Algorand_Unity_Crypto_SodiumReference_1__ctor_" data-uid="Algorand.Unity.Crypto.SodiumReference`1.#ctor*"></a>
+  <h4 id="Algorand_Unity_Crypto_SodiumReference_1__ctor_Algorand_Unity_Crypto_SecureMemoryHandle_" data-uid="Algorand.Unity.Crypto.SodiumReference`1.#ctor(Algorand.Unity.Crypto.SecureMemoryHandle)">SodiumReference(SecureMemoryHandle)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SodiumReference(SecureMemoryHandle handle)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Crypto.SecureMemoryHandle.html">SecureMemoryHandle</a></td>
+        <td><span class="parametername">handle</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
   
-  <a id="Algorand_Unity_Crypto_SecureMemoryHandle_IsCreated_" data-uid="Algorand.Unity.Crypto.SecureMemoryHandle.IsCreated*"></a>
-  <h4 id="Algorand_Unity_Crypto_SecureMemoryHandle_IsCreated" data-uid="Algorand.Unity.Crypto.SecureMemoryHandle.IsCreated">IsCreated</h4>
+  <a id="Algorand_Unity_Crypto_SodiumReference_1_IsCreated_" data-uid="Algorand.Unity.Crypto.SodiumReference`1.IsCreated*"></a>
+  <h4 id="Algorand_Unity_Crypto_SodiumReference_1_IsCreated" data-uid="Algorand.Unity.Crypto.SodiumReference`1.IsCreated">IsCreated</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -119,13 +163,13 @@
   </table>
   
   
-  <a id="Algorand_Unity_Crypto_SecureMemoryHandle_Ptr_" data-uid="Algorand.Unity.Crypto.SecureMemoryHandle.Ptr*"></a>
-  <h4 id="Algorand_Unity_Crypto_SecureMemoryHandle_Ptr" data-uid="Algorand.Unity.Crypto.SecureMemoryHandle.Ptr">Ptr</h4>
+  <a id="Algorand_Unity_Crypto_SodiumReference_1_Value_" data-uid="Algorand.Unity.Crypto.SodiumReference`1.Value*"></a>
+  <h4 id="Algorand_Unity_Crypto_SodiumReference_1_Value" data-uid="Algorand.Unity.Crypto.SodiumReference`1.Value">Value</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IntPtr Ptr { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public T Value { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -137,7 +181,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
+        <td><span class="xref">T</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -146,31 +190,14 @@
   </h3>
   
   
-  <a id="Algorand_Unity_Crypto_SecureMemoryHandle_Create_" data-uid="Algorand.Unity.Crypto.SecureMemoryHandle.Create*"></a>
-  <h4 id="Algorand_Unity_Crypto_SecureMemoryHandle_Create_System_UIntPtr_" data-uid="Algorand.Unity.Crypto.SecureMemoryHandle.Create(System.UIntPtr)">Create(UIntPtr)</h4>
+  <a id="Algorand_Unity_Crypto_SodiumReference_1_Alloc_" data-uid="Algorand.Unity.Crypto.SodiumReference`1.Alloc*"></a>
+  <h4 id="Algorand_Unity_Crypto_SodiumReference_1_Alloc" data-uid="Algorand.Unity.Crypto.SodiumReference`1.Alloc">Alloc()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SecureMemoryHandle Create(UIntPtr sizeBytes)</code></pre>
+    <pre><code class="lang-csharp hljs">public static SodiumReference&lt;T&gt; Alloc()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">UIntPtr</a></td>
-        <td><span class="parametername">sizeBytes</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -181,15 +208,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Algorand.Unity.Crypto.SecureMemoryHandle.html">SecureMemoryHandle</a></td>
+        <td><a class="xref" href="Algorand.Unity.Crypto.SodiumReference-1.html">SodiumReference</a>&lt;T&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Algorand_Unity_Crypto_SecureMemoryHandle_Dispose_" data-uid="Algorand.Unity.Crypto.SecureMemoryHandle.Dispose*"></a>
-  <h4 id="Algorand_Unity_Crypto_SecureMemoryHandle_Dispose" data-uid="Algorand.Unity.Crypto.SecureMemoryHandle.Dispose">Dispose()</h4>
+  <a id="Algorand_Unity_Crypto_SodiumReference_1_AsSpan_" data-uid="Algorand.Unity.Crypto.SodiumReference`1.AsSpan*"></a>
+  <h4 id="Algorand_Unity_Crypto_SodiumReference_1_AsSpan" data-uid="Algorand.Unity.Crypto.SodiumReference`1.AsSpan">AsSpan()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Span&lt;byte&gt; AsSpan()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Crypto_SodiumReference_1_Dispose_" data-uid="Algorand.Unity.Crypto.SodiumReference`1.Dispose*"></a>
+  <h4 id="Algorand_Unity_Crypto_SodiumReference_1_Dispose" data-uid="Algorand.Unity.Crypto.SodiumReference`1.Dispose">Dispose()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -198,8 +250,8 @@
   </div>
   
   
-  <a id="Algorand_Unity_Crypto_SecureMemoryHandle_Dispose_" data-uid="Algorand.Unity.Crypto.SecureMemoryHandle.Dispose*"></a>
-  <h4 id="Algorand_Unity_Crypto_SecureMemoryHandle_Dispose_JobHandle_" data-uid="Algorand.Unity.Crypto.SecureMemoryHandle.Dispose(JobHandle)">Dispose(JobHandle)</h4>
+  <a id="Algorand_Unity_Crypto_SodiumReference_1_Dispose_" data-uid="Algorand.Unity.Crypto.SodiumReference`1.Dispose*"></a>
+  <h4 id="Algorand_Unity_Crypto_SodiumReference_1_Dispose_JobHandle_" data-uid="Algorand.Unity.Crypto.SodiumReference`1.Dispose(JobHandle)">Dispose(JobHandle)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -240,13 +292,13 @@
   </table>
   
   
-  <a id="Algorand_Unity_Crypto_SecureMemoryHandle_GetUnsafePtr_" data-uid="Algorand.Unity.Crypto.SecureMemoryHandle.GetUnsafePtr*"></a>
-  <h4 id="Algorand_Unity_Crypto_SecureMemoryHandle_GetUnsafePtr" data-uid="Algorand.Unity.Crypto.SecureMemoryHandle.GetUnsafePtr">GetUnsafePtr()</h4>
+  <a id="Algorand_Unity_Crypto_SodiumReference_1_GetUnsafePtr_" data-uid="Algorand.Unity.Crypto.SodiumReference`1.GetUnsafePtr*"></a>
+  <h4 id="Algorand_Unity_Crypto_SodiumReference_1_GetUnsafePtr" data-uid="Algorand.Unity.Crypto.SodiumReference`1.GetUnsafePtr">GetUnsafePtr()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte *GetUnsafePtr()</code></pre>
+    <pre><code class="lang-csharp hljs">public T*GetUnsafePtr()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -258,135 +310,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>*</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Algorand_Unity_Crypto_SecureMemoryHandle_ToSpan_" data-uid="Algorand.Unity.Crypto.SecureMemoryHandle.ToSpan*"></a>
-  <h4 id="Algorand_Unity_Crypto_SecureMemoryHandle_ToSpan_System_Int32_" data-uid="Algorand.Unity.Crypto.SecureMemoryHandle.ToSpan(System.Int32)">ToSpan(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Span&lt;byte&gt; ToSpan(int length)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">length</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="operators">Operators
-  </h3>
-  
-  
-  <a id="Algorand_Unity_Crypto_SecureMemoryHandle_op_Implicit_" data-uid="Algorand.Unity.Crypto.SecureMemoryHandle.op_Implicit*"></a>
-  <h4 id="Algorand_Unity_Crypto_SecureMemoryHandle_op_Implicit_Algorand_Unity_Crypto_SecureMemoryHandle__System_IntPtr" data-uid="Algorand.Unity.Crypto.SecureMemoryHandle.op_Implicit(Algorand.Unity.Crypto.SecureMemoryHandle)~System.IntPtr">Implicit(SecureMemoryHandle to IntPtr)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator IntPtr(SecureMemoryHandle handle)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Algorand.Unity.Crypto.SecureMemoryHandle.html">SecureMemoryHandle</a></td>
-        <td><span class="parametername">handle</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Algorand_Unity_Crypto_SecureMemoryHandle_op_Implicit_" data-uid="Algorand.Unity.Crypto.SecureMemoryHandle.op_Implicit*"></a>
-  <h4 id="Algorand_Unity_Crypto_SecureMemoryHandle_op_Implicit_System_IntPtr__Algorand_Unity_Crypto_SecureMemoryHandle" data-uid="Algorand.Unity.Crypto.SecureMemoryHandle.op_Implicit(System.IntPtr)~Algorand.Unity.Crypto.SecureMemoryHandle">Implicit(IntPtr to SecureMemoryHandle)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator SecureMemoryHandle(IntPtr ptr)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
-        <td><span class="parametername">ptr</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Algorand.Unity.Crypto.SecureMemoryHandle.html">SecureMemoryHandle</a></td>
+        <td>T*</td>
         <td></td>
       </tr>
     </tbody>
