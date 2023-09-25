@@ -68,7 +68,8 @@
     "abi",
     "crypto",
     "libsodium",
-    "crypto"
+    "crypto",
+    "accounts"
   ],
   "dotnet.defaultSolution": "Algorand.Unity.Package.sln"
 }
