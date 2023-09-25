@@ -30,6 +30,11 @@
   },
   "samples": [
     {
+      "displayName": "Local Wallet",
+      "description": "An example UI showcasing how to use LocalAccountStore with PlayerPrefs to store a player's wallet locally.",
+      "path": "Samples~/LocalAccountStore"
+    },
+    {
       "displayName": "Your First Transaction",
       "description": "Contains a scene for signing and submitting your first Algorand transaction.",
       "path": "Samples~/YourFirstTransaction"
