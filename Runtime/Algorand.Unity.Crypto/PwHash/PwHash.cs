@@ -9,6 +9,9 @@ namespace Algorand.Unity.Crypto
     [StructLayout(LayoutKind.Sequential, Size = SizeBytes)]
     public partial struct PwHash
     {
+        public const uint MinLength = sodium.crypto_pwhash_PASSWD_MIN;
+        public const uint MaxLength = sodium.crypto_pwhash_PASSWD_MAX;
+
         public const int SizeBytes = sizeof(ulong)
             + sizeof(ulong)
             + sodium.crypto_pwhash_STRBYTES;
@@ -67,7 +70,7 @@ namespace Algorand.Unity.Crypto
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public unsafe byte* GetUnsafePtr()
         {
-            return (byte*) UnsafeUtility.AddressOf(ref bytes[0]);
+            return (byte*)UnsafeUtility.AddressOf(ref bytes[0]);
         }
 
         [Conditional("ENABLE_UNITY_COLLECTIONS_CHECKS")]
