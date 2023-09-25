@@ -49,5 +49,37 @@ namespace Algorand.Unity.Crypto
             }
             return (EncryptionError)errorCode;
         }
+
+        public static unsafe EncryptionError Encrypt(
+            Span<byte> cipher,
+            ReadOnlySpan<byte> message,
+            SecureMemoryHandle key,
+            Nonce nonce
+        )
+        {
+            var cipherLength = message.Length + AuthTag.Size;
+            if (cipher.Length != cipherLength)
+            {
+                return EncryptionError.CipherInvalidSize;
+            }
+            var errorCode = default(int);
+
+            fixed (byte* c = &cipher[0])
+            fixed (byte* m = &message[0])
+            {
+                errorCode = sodium.crypto_aead_chacha20poly1305_ietf_encrypt(
+                    c,
+                    out _,
+                    m,
+                    (ulong)message.Length,
+                    null,
+                    0,
+                    null,
+                    nonce.GetUnsafePtr(),
+                    key.GetUnsafePtr()
+                );
+            }
+            return (EncryptionError)errorCode;
+        }
     }
 }

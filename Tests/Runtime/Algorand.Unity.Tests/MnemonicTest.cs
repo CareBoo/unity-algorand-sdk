@@ -1,6 +1,9 @@
 using Algorand.Unity;
 using Algorand.Unity.Crypto;
 using NUnit.Framework;
+using Unity.Mathematics;
+using UnityEngine;
+using Random = Algorand.Unity.Crypto.Random;
 
 public class MnemonicTest
 {
@@ -43,5 +46,17 @@ public class MnemonicTest
         var mnemonic = expected.ToMnemonic();
         var actual = mnemonic.ToPrivateKey();
         Assert.AreEqual(expected, actual);
+    }
+
+    [Test]
+    public void PrintMaxWordLength()
+    {
+        var maxWordLength= 0;
+        for (var i = 0; i < (int)Mnemonic.Word.LENGTH; i++)
+        {
+            var wordLen = ((Mnemonic.Word)i).ToString().Length;
+            maxWordLength = math.max(maxWordLength, wordLen);
+        }
+        Debug.Log($"Max mnemonic word length: {maxWordLength}");
     }
 }

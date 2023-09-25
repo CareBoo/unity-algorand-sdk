@@ -71,6 +71,11 @@ namespace Algorand.Unity
         public const int SizeBytes = 50;
 
         /// <summary>
+        ///     Length of the largest word.
+        /// </summary>
+        public const int MaxWordLength = 8;
+
+        /// <summary>
         ///     Number of words contained in the mnemonic.
         /// </summary>
         public const int Length = 25;
@@ -148,6 +153,27 @@ namespace Algorand.Unity
             for (var i = 0; i < Length; i++)
                 words[i] = this[i].ToString();
             return string.Join(" ", words);
+        }
+
+        public void ToPrivateKey(Span<byte> privateKeyBytes)
+        {
+            var buffer = 0;
+            var numBits = 0;
+            var j = 0;
+            for (var i = 0; i < ChecksumIndex; i++)
+            {
+                buffer |= (ushort)this[i] << numBits;
+                numBits += BitsPerWord;
+                while (numBits >= 8 && j < 32)
+                {
+                    privateKeyBytes[j] = (byte)(buffer & 0xff);
+                    j++;
+                    buffer >>= 8;
+                    numBits -= 8;
+                }
+            }
+
+            if (numBits != 0 && j < 32) privateKeyBytes[j] = (byte)(buffer & 0xff);
         }
 
         /// <summary>

@@ -45,6 +45,11 @@ namespace Algorand.Unity.Crypto
             ptr = IntPtr.Zero;
         }
 
+        public unsafe Span<byte> ToSpan(int length)
+        {
+            return new Span<byte>((void*)ptr, length);
+        }
+
         public static SecureMemoryHandle Create(UIntPtr sizeBytes)
         {
             return sodium_malloc(sizeBytes);
