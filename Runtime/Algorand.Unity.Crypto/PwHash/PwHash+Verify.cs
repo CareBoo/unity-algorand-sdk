@@ -15,7 +15,7 @@ namespace Algorand.Unity.Crypto
                 return (PasswordVerificationError)sodium.crypto_pwhash_str_verify(
                     GetUnsafePtr(),
                     password.GetUnsafePtr(),
-                    (ulong) password.Length
+                    (ulong)password.Length
                 );
             }
         }
