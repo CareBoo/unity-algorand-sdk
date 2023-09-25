@@ -10,7 +10,7 @@ namespace Algorand.Unity.Crypto.Tests
         [UnityTest]
         public IEnumerator PwHashStoreJobThenVerifySucceeds()
         {
-            using var password = new SecureString("password");
+            using var password = new SodiumString("password");
             var hash = new PwHash(PwHash.OpsLimit.Interactive, PwHash.MemLimit.Interactive);
             using var hashRef = new NativeReference<PwHash>(hash, Allocator.Persistent);
             var hashJob = PwHash.HashStore(password, hashRef);
@@ -24,7 +24,7 @@ namespace Algorand.Unity.Crypto.Tests
         [Test]
         public void PwHashStoreThenVerifySucceeds()
         {
-            using var password = new SecureString("password");
+            using var password = new SodiumString("password");
             var hash = new PwHash(PwHash.OpsLimit.Interactive, PwHash.MemLimit.Interactive);
             var storeError = hash.HashStore(password);
             Assert.AreEqual(PasswordStorageError.Success, storeError);
@@ -35,7 +35,7 @@ namespace Algorand.Unity.Crypto.Tests
         [UnityTest]
         public IEnumerator PwHashStoreThenRehashWithNewParamsShouldReturnRequired()
         {
-            using var password = new SecureString("hello world 123");
+            using var password = new SodiumString("hello world 123");
             using var hashRef = new NativeReference<PwHash>(PwHash.Interactive, Allocator.Persistent);
             var hashJob = PwHash.HashStore(password, hashRef);
             while (!hashJob.IsCompleted) yield return null;

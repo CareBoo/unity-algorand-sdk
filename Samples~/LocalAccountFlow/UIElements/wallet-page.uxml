@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:ListView focusable="true" name="account-list" />
+    <ui:Button text="New Account" parse-escape-sequences="true" display-tooltip-when-elided="true" name="new-account-button" />
+    <ui:Button text="Import Account" parse-escape-sequences="true" display-tooltip-when-elided="true" name="import-account-button" />
+</ui:UXML>
