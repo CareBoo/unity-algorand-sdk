@@ -70,6 +70,8 @@ jobs:
       - name: Package unitypackage
         uses: game-ci/unity-builder@v3
         env:
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE_2020 }}
         with:
           targetPlatform: StandaloneLinux64
