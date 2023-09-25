@@ -68,7 +68,7 @@ jobs:
             Library-build_unitypackage-Algorand.Unity.AssetStore-
 
       - name: Package unitypackage
-        uses: game-ci/unity-builder@v2
+        uses: game-ci/unity-builder@v3
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE_2020 }}
         with:
