@@ -63,7 +63,7 @@ namespace Algorand.Unity.Crypto
                     {
                         var error = crypto_sign_ed25519_seed_keypair(
                             &pk,
-                            sk.Ptr,
+                            sk.GetUnsafePtr(),
                             seedPtr
                         );
                         if (error > 0) throw new Exception($"error code {error} when converting to KeyPair");
