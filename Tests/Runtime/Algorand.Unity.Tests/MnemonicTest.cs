@@ -51,7 +51,7 @@ public class MnemonicTest
     [Test]
     public void PrintMaxWordLength()
     {
-        var maxWordLength= 0;
+        var maxWordLength = 0;
         for (var i = 0; i < (int)Mnemonic.Word.LENGTH; i++)
         {
             var wordLen = ((Mnemonic.Word)i).ToString().Length;
