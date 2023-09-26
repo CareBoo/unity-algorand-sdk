@@ -75,7 +75,7 @@ jobs:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE_2020 }}
         with:
           targetPlatform: StandaloneLinux64
-          unityVersion: 2021.3.30f1
+          unityVersion: 2021.3.29f1
           projectPath: Algorand.Unity.AssetStore
           buildMethod: UnityPackage.Build
           versioning: None
