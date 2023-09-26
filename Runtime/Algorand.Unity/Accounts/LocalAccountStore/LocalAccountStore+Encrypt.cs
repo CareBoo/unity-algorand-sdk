@@ -1,6 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 using Algorand.Unity.Crypto;
+using UnityEngine;
 using Random = Algorand.Unity.Crypto.Random;
 
 namespace Algorand.Unity
@@ -74,7 +75,6 @@ namespace Algorand.Unity
             var nonceSpan = s.Slice(EncryptedView.NonceOffset, EncryptedView.NonceSize);
             var cipherSpan = s.Slice(EncryptedView.CipherOffset, s.Length - EncryptedView.CipherOffset);
 
-
             var prefix = EncryptedView.Prefix;
             MemoryMarshal.Write(prefixSpan, ref prefix);
 
@@ -94,8 +94,7 @@ namespace Algorand.Unity
                 if (encryptError != SecretBox.EncryptError.None) return EncryptError.OutOfMemory;
             }
 
-            var chars = MemoryMarshal.Cast<byte, char>(s);
-            encrypted = chars.ToString();
+            encrypted = Convert.ToBase64String(s);
             return default;
         }
     }

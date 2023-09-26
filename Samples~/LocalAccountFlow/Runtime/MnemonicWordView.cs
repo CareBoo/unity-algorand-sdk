@@ -4,8 +4,8 @@ namespace Algorand.Unity.Samples.LocalAccountFlow
 {
     public class MnemonicWordView
     {
-        private readonly Label wordIdLabel;
-        private readonly TextField wordTextField;
+        public readonly Label wordIdLabel;
+        public readonly TextField wordTextField;
 
         public string Id
         {
@@ -17,6 +17,12 @@ namespace Algorand.Unity.Samples.LocalAccountFlow
         {
             get => wordTextField.value;
             set => wordTextField.value = value;
+        }
+
+        public bool IsReadOnly
+        {
+            get => wordTextField.isReadOnly;
+            set => wordTextField.isReadOnly = value;
         }
 
         public MnemonicWordView(VisualElement mnemonicWord)

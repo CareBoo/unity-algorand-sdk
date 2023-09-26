@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine.UIElements;
 
 namespace Algorand.Unity.Samples.LocalAccountFlow
@@ -8,6 +9,7 @@ namespace Algorand.Unity.Samples.LocalAccountFlow
         public readonly Button newAccountButton;
         public readonly Button importAccountButton;
         public readonly ListView accountList;
+        public readonly List<Address> walletAddresses = new();
 
         public WalletView(VisualElement root)
         {
@@ -15,6 +17,15 @@ namespace Algorand.Unity.Samples.LocalAccountFlow
             newAccountButton = root.Q<Button>("new-account-button");
             importAccountButton = root.Q<Button>("import-account-button");
             accountList = root.Q<ListView>("account-list");
+
+            accountList.itemsSource = walletAddresses;
+            accountList.makeItem = () => new Label();
+            accountList.bindItem = (element, i) =>
+            {
+                var address = walletAddresses[i];
+                var label = (Label)element;
+                label.text = address.ToString();
+            };
         }
 
         public void Open(LocalAccountStore accountStore)
@@ -24,14 +35,15 @@ namespace Algorand.Unity.Samples.LocalAccountFlow
             for (var i = 0; i < accountStore.Length; i++)
             {
                 var account = accountStore[i];
-                accountList.Add(new Label(account.Address.ToString()));
+                walletAddresses.Add(account.Address);
             }
+            accountList.Rebuild();
         }
 
         public void Close()
         {
             root.style.display = DisplayStyle.None;
-            accountList.Clear();
+            walletAddresses.Clear();
         }
     }
 }

@@ -86,15 +86,7 @@ namespace Algorand.Unity
             /// </summary>
             /// <param name="keyCount">The number of keys in the store.</param>
             /// <returns></returns>
-            public static int SizeBytes(int keyCount) => PrefixSize + SaltSize + NonceSize + SecretBox.MessageLength(keyCount * KeySize) + MacSize;
-
-            /// <summary>
-            /// Create an encrypted view from the given characters.
-            /// </summary>
-            /// <param name="chars"></param>
-            public EncryptedView(ReadOnlySpan<char> chars) : this(MemoryMarshal.Cast<char, byte>(chars))
-            {
-            }
+            public static int SizeBytes(int keyCount) => PrefixSize + SaltSize + NonceSize + SecretBox.CipherLength(keyCount * KeySize);
 
             /// <summary>
             /// Create an encrypted view from the given bytes.

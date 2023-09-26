@@ -10,7 +10,7 @@ namespace Algorand.Unity
 
         internal static readonly Dictionary<int, Word> WordMap = GetWordMap();
 
-        internal static Word ParseWord(ReadOnlySpan<char> chars)
+        public static Word ParseWord(ReadOnlySpan<char> chars)
         {
             if (chars.Length < 3) return Word.Unknown;
 

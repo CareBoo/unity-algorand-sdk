@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.InteropServices;
 using Algorand.Unity.Crypto;
 
@@ -36,7 +37,8 @@ namespace Algorand.Unity
         public static DecryptError Decrypt(string encryptedStore, SodiumString password, out LocalAccountStore store)
         {
             store = default;
-            var encryptedView = new EncryptedView(encryptedStore);
+            var encryptedStoreBytes = Convert.FromBase64String(encryptedStore);
+            var encryptedView = new EncryptedView(encryptedStoreBytes);
             if (!encryptedView.IsValidFormat) return DecryptError.InvalidFormat;
 
             var decryptError = encryptedView.Decrypt(password, out var secretKeys, out var pwHash);

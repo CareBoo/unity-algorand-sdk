@@ -1,10 +1,12 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:Template name="login-page" src="project://database/Assets/Samples/LocalAccountFlow/UIElements/login-page.uxml?fileID=9197481963319205126&amp;guid=77ca91c3fdeb94f428588b087218fcc0&amp;type=3#login-page" />
     <ui:Template name="create-wallet-page" src="project://database/Assets/Samples/LocalAccountFlow/UIElements/create-wallet-page.uxml?fileID=9197481963319205126&amp;guid=89af3bbf344124e37b3f8ee5e5c77024&amp;type=3#create-wallet-page" />
-    <ui:Template name="mnemonic-page" src="project://database/Assets/Samples/LocalAccountFlow/UIElements/mnemonic-page.uxml?fileID=9197481963319205126&amp;guid=fbb2f1b51e4f945589a929646aba1451&amp;type=3#mnemonic-page" />
+    <ui:Template name="mnemonic-page" src="project://database/Assets/Samples/LocalAccountFlow/UIElements/new-account-page.uxml?fileID=9197481963319205126&amp;guid=fbb2f1b51e4f945589a929646aba1451&amp;type=3#new-account-page" />
     <ui:Template name="wallet-page" src="project://database/Assets/Samples/LocalAccountFlow/UIElements/wallet-page.uxml?fileID=9197481963319205126&amp;guid=bf311fc9686d249b5bab586e8d105641&amp;type=3#wallet-page" />
+    <ui:Template name="import-account-page" src="project://database/Assets/Samples/LocalAccountFlow/UIElements/import-account-page.uxml?fileID=9197481963319205126&amp;guid=5e74ce22e89fa44deba7cd1beedb0abf&amp;type=3#import-account-page" />
     <ui:Instance template="login-page" name="login-page" style="display: flex; visibility: visible;" />
     <ui:Instance template="create-wallet-page" name="create-wallet-page" style="display: flex;" />
-    <ui:Instance template="mnemonic-page" name="mnemonic-page" />
+    <ui:Instance template="mnemonic-page" name="new-account-page" />
     <ui:Instance template="wallet-page" name="wallet-page" />
+    <ui:Instance template="import-account-page" name="import-account-page" />
 </ui:UXML>

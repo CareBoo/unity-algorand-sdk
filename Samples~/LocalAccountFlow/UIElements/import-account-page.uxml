@@ -33,4 +33,8 @@
             <ui:Instance template="mnemonic-word" name="mnemonic-word-24" />
         </ui:VisualElement>
     </ui:VisualElement>
+    <ui:VisualElement name="button-container" style="flex-grow: 1; flex-direction: row; justify-content: space-around;">
+        <ui:Button text="Confirm" parse-escape-sequences="true" display-tooltip-when-elided="true" name="confirm-button" />
+        <ui:Button text="Cancel" parse-escape-sequences="true" display-tooltip-when-elided="true" name="cancel-button" />
+    </ui:VisualElement>
 </ui:UXML>

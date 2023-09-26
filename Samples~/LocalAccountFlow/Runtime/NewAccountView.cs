@@ -4,15 +4,19 @@ using Random = Algorand.Unity.Crypto.Random;
 
 namespace Algorand.Unity.Samples.LocalAccountFlow
 {
-    public class MnemonicView
+    public class NewAccountView
     {
         public SodiumReference<Mnemonic> mnemonic;
         public readonly VisualElement root;
+        public readonly Button confirmButton;
+        public readonly Button cancelButton;
         public readonly MnemonicWordView[] wordViews;
 
-        public MnemonicView(VisualElement root)
+        public NewAccountView(VisualElement root)
         {
             this.root = root;
+            confirmButton = root.Q<Button>("confirm-button");
+            cancelButton = root.Q<Button>("cancel-button");
             wordViews = new MnemonicWordView[Mnemonic.Length];
             for (int i = 0; i < wordViews.Length; i++)
             {

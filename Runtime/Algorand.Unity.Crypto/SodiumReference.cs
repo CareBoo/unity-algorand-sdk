@@ -18,6 +18,8 @@ namespace Algorand.Unity.Crypto
             set => *GetUnsafePtr() = value;
         }
 
+        public unsafe ref T RefValue => ref *GetUnsafePtr();
+
         public bool IsCreated => handle.IsCreated;
 
         public SodiumReference(SecureMemoryHandle handle)
