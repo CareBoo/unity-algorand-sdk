@@ -1,6 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 using Algorand.Unity.Crypto;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using Random = Algorand.Unity.Crypto.Random;
 
@@ -67,34 +68,25 @@ namespace Algorand.Unity
         {
             encrypted = null;
             var encryptedSizeBytes = EncryptedSizeBytes;
-            Span<byte> s = encryptedSizeBytes >= 1024
+            Span<byte> encryptedBytes = encryptedSizeBytes >= 1024
                 ? new byte[encryptedSizeBytes]
                 : stackalloc byte[encryptedSizeBytes];
-            var prefixSpan = s.Slice(EncryptedView.PrefixOffset, EncryptedView.PrefixSize);
-            var saltSpan = s.Slice(EncryptedView.SaltOffset, EncryptedView.SaltSize);
-            var nonceSpan = s.Slice(EncryptedView.NonceOffset, EncryptedView.NonceSize);
-            var cipherSpan = s.Slice(EncryptedView.CipherOffset, s.Length - EncryptedView.CipherOffset);
 
-            var prefix = EncryptedView.Prefix;
-            MemoryMarshal.Write(prefixSpan, ref prefix);
+            var headerSpan = encryptedBytes.Slice(0, EncryptHeader.SizeBytes);
+            ref var header = ref MemoryMarshal.Cast<byte, EncryptHeader>(headerSpan)[0];
+            var cipherSpan = encryptedBytes.Slice(EncryptHeader.SizeBytes);
 
-            var saltTmp = salt;
-            MemoryMarshal.Write(saltSpan, ref saltTmp);
+            header.prefix = EncryptHeader.Prefix;
+            header.salt = salt;
+            header.nonce = Random.Bytes<SecretBox.Nonce>();
 
             if (cipherSpan.Length > 0)
             {
-                SecretBox.EncryptError encryptError;
-                SecretBox.Nonce nonce;
-                unsafe
-                {
-                    encryptError = SecretBox.Encrypt(cipherSpan, SecretKeySpan, pwHash.GetUnsafePtr(), out nonce);
-                }
-                MemoryMarshal.Write(nonceSpan, ref nonce);
-
+                var encryptError = SecretBox.Encrypt(cipherSpan, secretKeys.AsByteSpan(), header.nonce, ref pwHash.RefValue);
                 if (encryptError != SecretBox.EncryptError.None) return EncryptError.OutOfMemory;
             }
 
-            encrypted = Convert.ToBase64String(s);
+            encrypted = Convert.ToBase64String(encryptedBytes);
             return default;
         }
     }

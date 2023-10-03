@@ -155,6 +155,33 @@ namespace Algorand.Unity
             return string.Join(" ", words);
         }
 
+        /// <summary>
+        ///     Get the <see cref="PrivateKey" /> from this mnemonic encodes.
+        /// </summary>
+        public void ToPrivateKey(ref PrivateKey privateKey)
+        {
+            var buffer = 0;
+            var numBits = 0;
+            var j = 0;
+            for (var i = 0; i < ChecksumIndex; i++)
+            {
+                buffer |= (ushort)this[i] << numBits;
+                numBits += BitsPerWord;
+                while (numBits >= 8 && j < 32)
+                {
+                    privateKey[j] = (byte)(buffer & 0xff);
+                    j++;
+                    buffer >>= 8;
+                    numBits -= 8;
+                }
+            }
+
+            if (numBits != 0 && j < 32) privateKey[j] = (byte)(buffer & 0xff);
+        }
+
+        /// <summary>
+        ///     Get the <see cref="PrivateKey" /> from this mnemonic encodes.
+        /// </summary>
         public void ToPrivateKey(Span<byte> privateKeyBytes)
         {
             var buffer = 0;
@@ -182,23 +209,7 @@ namespace Algorand.Unity
         public PrivateKey ToPrivateKey()
         {
             var result = new PrivateKey();
-            var buffer = 0;
-            var numBits = 0;
-            var j = 0;
-            for (var i = 0; i < ChecksumIndex; i++)
-            {
-                buffer |= (ushort)this[i] << numBits;
-                numBits += BitsPerWord;
-                while (numBits >= 8 && j < 32)
-                {
-                    result[j] = (byte)(buffer & 0xff);
-                    j++;
-                    buffer >>= 8;
-                    numBits -= 8;
-                }
-            }
-
-            if (numBits != 0 && j < 32) result[j] = (byte)(buffer & 0xff);
+            ToPrivateKey(ref result);
             return result;
         }
 

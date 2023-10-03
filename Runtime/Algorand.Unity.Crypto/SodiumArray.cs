@@ -44,11 +44,19 @@ namespace Algorand.Unity.Crypto
             return handle.Dispose(inputDeps);
         }
 
-        public Span<byte> AsSpan()
+        public Span<byte> AsByteSpan()
         {
             unsafe
             {
                 return new Span<byte>(handle.GetUnsafePtr(), length * UnsafeUtility.SizeOf<T>());
+            }
+        }
+
+        public Span<T> AsSpan()
+        {
+            unsafe
+            {
+                return new Span<T>(handle.GetUnsafePtr(), length);
             }
         }
 

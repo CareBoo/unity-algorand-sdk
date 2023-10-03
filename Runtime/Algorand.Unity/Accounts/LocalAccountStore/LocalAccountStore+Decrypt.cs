@@ -47,7 +47,7 @@ namespace Algorand.Unity
                 return DecryptError.InvalidPassword;
             }
 
-            store = new LocalAccountStore(secretKeys, pwHash, MemoryMarshal.Read<PwHash.Salt>(encryptedView.salt));
+            store = new LocalAccountStore(secretKeys, pwHash, encryptedView.header.salt);
             return DecryptError.None;
         }
     }

@@ -29,21 +29,20 @@ namespace Algorand.Unity.Crypto
         public static unsafe EncryptError Encrypt(
             Span<byte> cipher,
             ReadOnlySpan<byte> message,
-            Key* key,
-            out Nonce nonce
+            Nonce nonce,
+            ref Key key
         )
         {
-            nonce = Random.Bytes<Nonce>();
-            fixed (byte* noncePtr = nonce.bytes)
             fixed (byte* cipherPtr = cipher)
             fixed (byte* messagePtr = message)
+            fixed (Key* keyPtr = &key)
             {
                 return (EncryptError)sodium.crypto_secretbox_easy(
                     cipherPtr,
                     messagePtr,
                     (ulong)message.Length,
-                    noncePtr,
-                    key
+                    nonce.bytes,
+                    keyPtr
                 );
             }
         }
@@ -51,19 +50,20 @@ namespace Algorand.Unity.Crypto
         public static unsafe DecryptError Decrypt(
             Span<byte> message,
             ReadOnlySpan<byte> cipher,
-            Key* key,
-            Nonce nonce
+            Nonce nonce,
+            ref Key key
         )
         {
             fixed (byte* messagePtr = message)
             fixed (byte* cipherPtr = cipher)
+            fixed (Key* keyPtr = &key)
             {
                 return (DecryptError)sodium.crypto_secretbox_open_easy(
                     messagePtr,
                     cipherPtr,
                     (ulong)cipher.Length,
                     nonce.bytes,
-                    key
+                    keyPtr
                 );
             }
         }

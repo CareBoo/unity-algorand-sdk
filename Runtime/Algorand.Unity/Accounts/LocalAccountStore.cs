@@ -45,8 +45,6 @@ namespace Algorand.Unity
             }
         }
 
-        internal Span<byte> SecretKeySpan => secretKeys.AsSpan();
-
         /// <summary>
         /// Create a new store with the given secret keys.
         /// </summary>
