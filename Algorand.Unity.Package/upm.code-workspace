@@ -8,5 +8,27 @@
       "name": "Algorand.Unity",
       "path": ".."
     }
-  ]
+  ],
+  "settings": {
+    "conventionalCommits.scopes": [
+      "upm",
+      "dependencies",
+      "developer",
+      "asset-store",
+      "algod",
+      "kmd",
+      "indexer",
+      "docs",
+      "json",
+      "msgpack",
+      "applications",
+      "assets",
+      "abi",
+      "encoding",
+      "crypto"
+    ]
+  },
+  "extensions": {
+    "recommendations": ["visualstudiotoolsforunity.vstuc", "vivaxy.vscode-conventional-commits"]
+  }
 }

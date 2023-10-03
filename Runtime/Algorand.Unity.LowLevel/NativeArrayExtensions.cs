@@ -1,20 +1,23 @@
+#if !UNITY_2022_3_OR_NEWER
+using System;
 using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 
-namespace Algorand.Unity.LowLevel
+namespace Algorand.Unity
 {
     public static class NativeArrayExtensions
     {
-        public static NativeText AsUtf8Text(this NativeArray<byte>.ReadOnly rawBytes, Allocator allocator)
+        public unsafe static Span<T> AsSpan<T>(this NativeArray<T> nativeArray)
+            where T : unmanaged
         {
-            var text = new NativeText(allocator) { Length = rawBytes.Length };
-            for (var i = 0; i < rawBytes.Length; i++)
-                text[i] = rawBytes[i];
-            return text;
+            return new Span<T>(nativeArray.GetUnsafePtr(), nativeArray.Length);
         }
 
-        public static NativeText AsUtf8Text(this NativeArray<byte> rawBytes, Allocator allocator)
+        public unsafe static ReadOnlySpan<T> AsReadOnlySpan<T>(this NativeArray<T> nativeArray)
+            where T : unmanaged
         {
-            return rawBytes.AsReadOnly().AsUtf8Text(allocator);
+            return new ReadOnlySpan<T>(nativeArray.GetUnsafeReadOnlyPtr(), nativeArray.Length);
         }
     }
 }
+#endif

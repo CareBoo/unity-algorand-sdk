@@ -119,12 +119,6 @@
                           </li>
                         </ul>                    </li>
                     <li class="">
-                      <a href="../walletconnect.html" title="WalletConnect" class="">WalletConnect</a>
-                    </li>
-                    <li class="">
-                      <a href="../integration_with_the_dotnet_sdk.html" title="Integration with the .NET SDK" class="">Integration with the .NET SDK</a>
-                    </li>
-                    <li class="">
                       <a href="../troubleshooting.html" title="Troubleshooting" class="">Troubleshooting</a>
                     </li>
                   </ul>                </div>
@@ -149,7 +143,7 @@
 </div>
 <h3 id="creating-the-accountobject">Creating the <code>AccountObject</code></h3>
 <p>We&#39;ll create an <code>AccountObject</code> class that inherits from <code>ScriptableObject</code>. This will store our <code>PrivateKey</code> used for signing.</p>
-<div class="IMPORTANT"><h5>Important</h5><p>Do <strong>NOT</strong> store a sensitive <code>PrivateKey</code> inside your project source. We&#39;re only storing the <code>PrivateKey</code> in this demo to keep it simple. In production, you will want to use a secure Algorand wallet to sign your transactions. This SDK currently supports KMD and WalletConnect connections. Please see the <code>Editor Wallet Connection</code> sample to see examples on how to connect your wallets in the editor.</p>
+<div class="IMPORTANT"><h5>Important</h5><p>Do <strong>NOT</strong> store a sensitive <code>PrivateKey</code> inside your project source. We&#39;re only storing the <code>PrivateKey</code> in this demo to keep it simple. In production, you will want to use a secure Algorand wallet to sign your transactions. This SDK currently supports KMD and password-protected local storage connections.</p>
 </div>
 <p>Add the following, <code>AccountObject.cs</code>, to your project:</p>
 <pre><code class="lang-csharp">using System;

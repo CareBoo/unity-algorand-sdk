@@ -1,6 +1,7 @@
 using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
 using Unity.Jobs;
+using Algorand.Unity.Collections;
 
 namespace Algorand.Unity.Json
 {

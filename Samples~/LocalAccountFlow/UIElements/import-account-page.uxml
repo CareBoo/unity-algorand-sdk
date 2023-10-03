@@ -1,0 +1,41 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="mnemonic-word" src="project://database/Assets/Samples/LocalAccountFlow/UIElements/mnemonic-word.uxml?fileID=9197481963319205126&amp;guid=dbfaf2341a7fa45d1bdaae1ce7526cb0&amp;type=3#mnemonic-word" />
+    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="error-label" style="color: rgb(229, 27, 27);" />
+    <ui:VisualElement name="mnemonic-container" style="flex-grow: 1; flex-direction: row;">
+        <ui:VisualElement name="mnemonic-col-0" style="flex-grow: 1;">
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-0" />
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-1" />
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-2" />
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-3" />
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-4" />
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-5" />
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-6" />
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-7" />
+        </ui:VisualElement>
+        <ui:VisualElement name="mnemonic-col-1" style="flex-grow: 1;">
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-8" />
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-9" />
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-10" />
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-11" />
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-12" />
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-13" />
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-14" />
+        </ui:VisualElement>
+        <ui:VisualElement name="mnemonic-col-2" style="flex-grow: 1;">
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-15" />
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-16" />
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-17" />
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-18" />
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-19" />
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-20" />
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-21" />
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-22" />
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-23" />
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-24" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="button-container" style="flex-grow: 1; flex-direction: row; justify-content: space-around;">
+        <ui:Button text="Confirm" parse-escape-sequences="true" display-tooltip-when-elided="true" name="confirm-button" />
+        <ui:Button text="Cancel" parse-escape-sequences="true" display-tooltip-when-elided="true" name="cancel-button" />
+    </ui:VisualElement>
+</ui:UXML>

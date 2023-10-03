@@ -5,14 +5,12 @@ using static Algorand.Unity.Crypto.sodium;
 
 namespace Algorand.Unity.Crypto
 {
-    public unsafe static class Random
+    public static unsafe class Random
     {
-#if (!UNITY_WEBGL || UNITY_EDITOR)
         static Random()
         {
             sodium_init();
         }
-#endif
 
         public static T Bytes<T>() where T : unmanaged
         {
@@ -26,6 +24,14 @@ namespace Algorand.Unity.Crypto
             where T : struct, IByteArray
         {
             randombytes_buf(bytes.GetUnsafePtr(), (UIntPtr)bytes.Length);
+        }
+
+        public static void Randomize(Span<byte> bytes)
+        {
+            fixed (byte* ptr = bytes)
+            {
+                randombytes_buf(ptr, (UIntPtr)bytes.Length);
+            }
         }
     }
 }

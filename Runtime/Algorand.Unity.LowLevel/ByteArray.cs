@@ -34,19 +34,6 @@ namespace Algorand.Unity.LowLevel
 
     public struct ByteArrayComparer<T> : IEqualityComparer<T> where T : unmanaged, IByteArray
     {
-        public static bool Equals(T x, T y)
-        {
-            for (var i = 0; i < x.Length; i++)
-                if (ByteArray.ReadByteAt(x, i) != ByteArray.ReadByteAt(y, i))
-                    return false;
-            return true;
-        }
-
-        public static unsafe int GetHashCode(T obj)
-        {
-            return UnsafeUtility.ReadArrayElement<int>(obj.GetUnsafePtr(), 0);
-        }
-
         bool IEqualityComparer<T>.Equals(T x, T y)
         {
             return Equals(x, y);
@@ -55,6 +42,19 @@ namespace Algorand.Unity.LowLevel
         int IEqualityComparer<T>.GetHashCode(T obj)
         {
             return GetHashCode(obj);
+        }
+
+        public static bool Equals(T x, T y)
+        {
+            unsafe
+            {
+                return UnsafeUtility.MemCmp(x.GetUnsafePtr(), y.GetUnsafePtr(), x.Length) == 0;
+            }
+        }
+
+        public static unsafe int GetHashCode(T obj)
+        {
+            return UnsafeUtility.ReadArrayElement<int>(obj.GetUnsafePtr(), 0);
         }
     }
 
@@ -97,16 +97,6 @@ namespace Algorand.Unity.LowLevel
             }
         }
 
-        public static byte ReadByteAt<TByteArray>(TByteArray bytes, int index)
-            where TByteArray : struct, IByteArray
-        {
-            CheckElementAccess(index, bytes.Length);
-            unsafe
-            {
-                return UnsafeUtility.ReadArrayElement<byte>(bytes.GetUnsafePtr(), index);
-            }
-        }
-
         public static void CopyFrom<T, U>(this ref T target, U source, int start, int length = int.MaxValue)
             where T : struct, IByteArray
             where U : struct, IByteArray
@@ -114,9 +104,13 @@ namespace Algorand.Unity.LowLevel
             if (start >= target.Length)
                 return;
             length = math.min(source.Length, length);
-            var end = math.min(target.Length, start + length);
-            for (var i = start; i < end; i++)
-                target[i] = source[i - start];
+            unsafe
+            {
+                UnsafeUtility.MemCpy(
+                    (byte*)target.GetUnsafePtr() + start,
+                    source.GetUnsafePtr(),
+                    length);
+            }
         }
 
         public static void CopyFrom<T>(this ref T target, byte[] source, int start, int length = int.MaxValue)
@@ -125,9 +119,16 @@ namespace Algorand.Unity.LowLevel
             if (start >= target.Length)
                 return;
             length = math.min(source.Length, length);
-            var end = math.min(target.Length, start + length);
-            for (var i = start; i < end; i++)
-                target[i] = source[i - start];
+            unsafe
+            {
+                fixed (byte* s = &source[0])
+                {
+                    UnsafeUtility.MemCpy(
+                        (byte*)target.GetUnsafePtr() + start,
+                        s,
+                        length);
+                }
+            }
         }
 
         public static void CopyFrom<T>(this ref T target, NativeArray<byte> source, int start,
@@ -137,9 +138,13 @@ namespace Algorand.Unity.LowLevel
             if (start >= target.Length)
                 return;
             length = math.min(source.Length, length);
-            var end = math.min(target.Length, start + length);
-            for (var i = start; i < end; i++)
-                target[i] = source[i - start];
+            unsafe
+            {
+                UnsafeUtility.MemCpy(
+                    (byte*)target.GetUnsafePtr() + start,
+                    source.GetUnsafePtr(),
+                    length);
+            }
         }
 
         public static void CopyTo<T, U>(this T source, ref U target, int start, int length = int.MaxValue)
@@ -149,9 +154,10 @@ namespace Algorand.Unity.LowLevel
             if (start >= source.Length)
                 return;
             length = math.min(length, target.Length);
-            var end = math.min(source.Length, start + length);
-            for (var i = start; i < end; i++)
-                target[i - start] = source[i];
+            unsafe
+            {
+                UnsafeUtility.MemCpy(target.GetUnsafePtr(), (byte*)source.GetUnsafePtr() + start, length);
+            }
         }
 
 
@@ -160,8 +166,24 @@ namespace Algorand.Unity.LowLevel
             where U : struct, IByteArray
         {
             var length = math.min(from.Length, to.Length);
-            for (var i = 0; i < length; i++)
-                to.SetByteAt(i, from.GetByteAt(i));
+            unsafe
+            {
+                UnsafeUtility.MemCpy(to.GetUnsafePtr(), from.GetUnsafePtr(), length);
+            }
+        }
+
+        public static void CopyTo<T>(this T from, ref Span<byte> to)
+            where T : struct, IByteArray
+        {
+            var length = math.min(from.Length, to.Length);
+
+            unsafe
+            {
+                fixed (byte* toPtr = &to[0])
+                {
+                    UnsafeUtility.MemCpy(toPtr, from.GetUnsafePtr(), length);
+                }
+            }
         }
 
         public static string ToBase64<TByteArray>(this TByteArray bytes)
@@ -254,6 +276,24 @@ namespace Algorand.Unity.LowLevel
             where TBytes : struct, IByteArray
         {
             return new ByteArraySlice<TBytes>(bytes, start, length);
+        }
+
+        public static Span<byte> AsSpan<TBytes>(this TBytes bytes)
+            where TBytes : struct, IByteArray
+        {
+            unsafe
+            {
+                return new Span<byte>(bytes.GetUnsafePtr(), bytes.Length);
+            }
+        }
+
+        public static ReadOnlySpan<byte> AsReadOnlySpan<TBytes>(this TBytes bytes)
+            where TBytes : struct, IByteArray
+        {
+            unsafe
+            {
+                return new Span<byte>(bytes.GetUnsafePtr(), bytes.Length);
+            }
         }
     }
 }

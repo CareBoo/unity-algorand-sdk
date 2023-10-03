@@ -1,5 +1,6 @@
 using System;
 using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 using Unity.Jobs;
 using static Algorand.Unity.Crypto.sodium;
 
@@ -8,30 +9,31 @@ namespace Algorand.Unity.Crypto
     public struct SecureMemoryHandle
         : INativeDisposable
     {
-#if (!UNITY_WEBGL || UNITY_EDITOR)
+        [NativeDisableUnsafePtrRestriction]
+        private IntPtr ptr;
+
+        public IntPtr Ptr => ptr;
+
+        public unsafe byte* GetUnsafePtr()
+        {
+            return (byte*)ptr.ToPointer();
+        }
+
         static SecureMemoryHandle()
         {
             sodium_init();
         }
-#endif
-
-        public IntPtr Ptr;
 
         internal SecureMemoryHandle(IntPtr ptr)
         {
-            Ptr = ptr;
-        }
-
-        public static SecureMemoryHandle Create(UIntPtr sizeBytes)
-        {
-            return sodium_malloc(sizeBytes);
+            this.ptr = ptr;
         }
 
         public bool IsCreated => Ptr != IntPtr.Zero;
 
         public JobHandle Dispose(JobHandle inputDeps)
         {
-            return new DisposeJob { keyHandle = this }.Schedule(dependsOn: inputDeps);
+            return new DisposeJob { keyHandle = this }.Schedule(inputDeps);
         }
 
         public void Dispose()
@@ -39,18 +41,18 @@ namespace Algorand.Unity.Crypto
             if (!IsCreated)
                 return;
 
-            sodium_free(Ptr);
-            Ptr = IntPtr.Zero;
+            sodium_free(ptr);
+            ptr = IntPtr.Zero;
         }
 
-        internal struct DisposeJob : IJob
+        public unsafe Span<byte> ToSpan(int length)
         {
-            public SecureMemoryHandle keyHandle;
+            return new Span<byte>((void*)ptr, length);
+        }
 
-            public void Execute()
-            {
-                keyHandle.Dispose();
-            }
+        public static SecureMemoryHandle Create(UIntPtr sizeBytes)
+        {
+            return sodium_malloc(sizeBytes);
         }
 
         public static implicit operator IntPtr(SecureMemoryHandle handle)
@@ -61,6 +63,16 @@ namespace Algorand.Unity.Crypto
         public static implicit operator SecureMemoryHandle(IntPtr ptr)
         {
             return new SecureMemoryHandle(ptr);
+        }
+
+        internal struct DisposeJob : IJob
+        {
+            public SecureMemoryHandle keyHandle;
+
+            public void Execute()
+            {
+                keyHandle.Dispose();
+            }
         }
     }
 }

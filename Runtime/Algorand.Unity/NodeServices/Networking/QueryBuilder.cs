@@ -1,5 +1,6 @@
 using System;
 using Algorand.Unity.Json;
+using Algorand.Unity.Collections;
 using Unity.Collections;
 using Unity.Jobs;
 
