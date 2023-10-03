@@ -26,6 +26,7 @@ namespace Algorand.Unity.Samples.LocalAccountFlow
         public void Open()
         {
             root.style.display = DisplayStyle.Flex;
+            passwordField.SetValueWithoutNotify(string.Empty);
         }
 
         public void Close()

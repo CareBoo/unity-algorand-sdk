@@ -11,74 +11,10 @@ namespace Algorand.Unity
         /// </summary>
         internal readonly ref struct EncryptedView
         {
-            /// <summary>
-            /// The size of the prefix in bytes.
-            /// </summary>
-            public const int PrefixSize = sizeof(uint);
+            public const int KeySizeBytes = Ed25519.SecretKey.SizeBytes;
 
-            /// <summary>
-            /// The prefix of the encrypted store.
-            /// </summary>
-            public const uint Prefix = 'K' << 24 + 'e' << 16 + 'y' << 8 + 'S';
+            public readonly EncryptHeader header;
 
-            /// <summary>
-            /// The size of the salt in bytes.
-            /// </summary>
-            public const int SaltSize = PwHash.Salt.SizeBytes;
-
-            /// <summary>
-            /// The size of the nonce in bytes.
-            /// </summary>
-            public const int NonceSize = SecretBox.Nonce.SizeBytes;
-
-            /// <summary>
-            /// The size of the key in bytes.
-            /// </summary>
-            public const int KeySize = Ed25519.SecretKey.SizeBytes;
-
-            /// <summary>
-            /// The size of the mac in bytes.
-            /// </summary>
-            public const int MacSize = SecretBox.Mac.SizeBytes;
-
-            /// <summary>
-            /// The offset of the prefix in bytes.
-            /// </summary>
-            public const int PrefixOffset = 0;
-
-            /// <summary>
-            /// The offset of the salt in bytes.
-            /// </summary>
-            public const int SaltOffset = PrefixOffset + PrefixSize;
-
-            /// <summary>
-            /// The offset of the nonce in bytes.
-            /// </summary>
-            public const int NonceOffset = SaltSize + SaltOffset;
-
-            /// <summary>
-            /// The offset of the cipher in bytes.
-            /// </summary>
-            public const int CipherOffset = NonceSize + NonceOffset;
-
-            /// <summary>
-            /// The prefix bytes.
-            /// </summary>
-            public readonly ReadOnlySpan<byte> prefix;
-
-            /// <summary>
-            /// The salt bytes.
-            /// </summary>
-            public readonly ReadOnlySpan<byte> salt;
-
-            /// <summary>
-            /// The nonce bytes.
-            /// </summary>
-            public readonly ReadOnlySpan<byte> nonce;
-
-            /// <summary>
-            /// The cipher bytes.
-            /// </summary>
             public readonly ReadOnlySpan<byte> cipher;
 
             /// <summary>
@@ -86,15 +22,7 @@ namespace Algorand.Unity
             /// </summary>
             /// <param name="keyCount">The number of keys in the store.</param>
             /// <returns></returns>
-            public static int SizeBytes(int keyCount) => PrefixSize + SaltSize + NonceSize + SecretBox.MessageLength(keyCount * KeySize) + MacSize;
-
-            /// <summary>
-            /// Create an encrypted view from the given characters.
-            /// </summary>
-            /// <param name="chars"></param>
-            public EncryptedView(ReadOnlySpan<char> chars) : this(MemoryMarshal.Cast<char, byte>(chars))
-            {
-            }
+            public static int SizeBytes(int keyCount) => EncryptHeader.SizeBytes + SecretBox.CipherLength(keyCount * KeySizeBytes);
 
             /// <summary>
             /// Create an encrypted view from the given bytes.
@@ -102,31 +30,26 @@ namespace Algorand.Unity
             /// <param name="bytes"></param>
             public EncryptedView(ReadOnlySpan<byte> bytes)
             {
-                prefix = bytes.Slice(PrefixOffset, PrefixSize);
-                salt = bytes.Slice(SaltOffset, SaltSize);
-                nonce = bytes.Slice(NonceOffset, NonceSize);
-                cipher = bytes.Slice(CipherOffset, bytes.Length - CipherOffset);
+                header = MemoryMarshal.Read<EncryptHeader>(bytes.Slice(0, EncryptHeader.SizeBytes));
+                cipher = bytes.Slice(EncryptHeader.SizeBytes);
             }
+
+            public int MessageLength => SecretBox.MessageLength(cipher.Length);
 
             /// <summary>
             /// The number of keys in the store.
             /// </summary>
-            public int KeyCount => SecretBox.MessageLength(cipher.Length) / KeySize;
-
-            /// <summary>
-            /// Whether the prefix is valid.
-            /// </summary>
-            public bool IsPrefixValid => MemoryMarshal.Read<uint>(prefix) == Prefix;
+            public int KeyCount => MessageLength / KeySizeBytes;
 
             /// <summary>
             /// Whether the cipher is a valid length.
             /// </summary>
-            public bool IsCipherValidLength => SecretBox.MessageLength(cipher.Length) % KeySize == 0;
+            public bool IsCipherValid => MessageLength % KeySizeBytes == 0;
 
             /// <summary>
             /// Whether this is an encrypted view of a store.
             /// </summary>
-            public bool IsValidFormat => IsPrefixValid && IsCipherValidLength;
+            public bool IsValidFormat => header.IsValid && IsCipherValid;
 
             /// <summary>
             /// An error that can occur when decrypting an encrypted store.
@@ -169,23 +92,22 @@ namespace Algorand.Unity
                 pwHash = default;
                 var pwHashError = PwHash.Hash(
                     password,
-                    MemoryMarshal.Read<PwHash.Salt>(salt),
+                    header.salt,
                     SecretBox.Key.SizeBytes,
                     out var pwHashHandle);
                 if (pwHashError != PwHash.HashError.None) return DecryptError.OutOfMemory;
                 pwHash = new SodiumReference<SecretBox.Key>(pwHashHandle);
 
-                var messageLength = SecretBox.MessageLength(cipher.Length);
-                var keyCount = messageLength / KeySize;
+                var keyCount = KeyCount;
                 secretKeys = new SodiumArray<Ed25519.SecretKey>(keyCount);
 
                 if (secretKeys.Length > 0)
                 {
                     var decryptError = SecretBox.Decrypt(
-                        secretKeys.AsSpan(),
+                        secretKeys.AsByteSpan(),
                         cipher,
-                        pwHash.GetUnsafePtr(),
-                        MemoryMarshal.Read<SecretBox.Nonce>(nonce));
+                        header.nonce,
+                        ref pwHash.RefValue);
 
                     if (decryptError != SecretBox.DecryptError.None)
                     {
@@ -196,7 +118,6 @@ namespace Algorand.Unity
                         return DecryptError.InvalidPassword;
                     }
                 }
-
 
                 return DecryptError.None;
             }

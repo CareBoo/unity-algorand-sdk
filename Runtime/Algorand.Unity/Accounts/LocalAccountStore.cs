@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 using Algorand.Unity.Crypto;
 using Unity.Collections;
 using Unity.Jobs;
@@ -43,8 +44,6 @@ namespace Algorand.Unity
                 }
             }
         }
-
-        internal Span<byte> SecretKeySpan => secretKeys.AsSpan();
 
         /// <summary>
         /// Create a new store with the given secret keys.
