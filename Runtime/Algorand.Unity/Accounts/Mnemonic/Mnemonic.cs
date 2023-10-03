@@ -130,6 +130,15 @@ namespace Algorand.Unity
             }
         }
 
+        public bool IsValid()
+        {
+            for (var i = 0; i < ChecksumIndex; i++)
+            {
+                if (this[i] == Word.Unknown) return false;
+            }
+            return this[ChecksumIndex] == ComputeChecksum();
+        }
+
         public bool Equals(Mnemonic other)
         {
             for (var i = 0; i < Length; i++)

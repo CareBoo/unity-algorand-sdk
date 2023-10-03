@@ -21,8 +21,8 @@
             <ui:Instance template="mnemonic-word" name="mnemonic-word-14" />
         </ui:VisualElement>
         <ui:VisualElement name="mnemonic-col-2" style="flex-grow: 1;">
-            <ui:Instance template="mnemonic-word" name="mnemonic-word-16" />
             <ui:Instance template="mnemonic-word" name="mnemonic-word-15" />
+            <ui:Instance template="mnemonic-word" name="mnemonic-word-16" />
             <ui:Instance template="mnemonic-word" name="mnemonic-word-17" />
             <ui:Instance template="mnemonic-word" name="mnemonic-word-18" />
             <ui:Instance template="mnemonic-word" name="mnemonic-word-19" />

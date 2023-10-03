@@ -6,6 +6,7 @@ namespace Algorand.Unity.Samples.LocalAccountFlow
     public class ImportAccountView
     {
         public readonly VisualElement root;
+        public readonly Label errorLabel;
         public readonly Button confirmButton;
         public readonly Button cancelButton;
         public readonly MnemonicWordView[] wordViews;
@@ -13,6 +14,7 @@ namespace Algorand.Unity.Samples.LocalAccountFlow
         public ImportAccountView(VisualElement root)
         {
             this.root = root;
+            errorLabel = root.Q<Label>("error-label");
             confirmButton = root.Q<Button>("confirm-button");
             cancelButton = root.Q<Button>("cancel-button");
             wordViews = new MnemonicWordView[Mnemonic.Length];
@@ -53,6 +55,7 @@ namespace Algorand.Unity.Samples.LocalAccountFlow
             {
                 wordViews[i].Text = string.Empty;
             }
+            errorLabel.text = "";
         }
     }
 }

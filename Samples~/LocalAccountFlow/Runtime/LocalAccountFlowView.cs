@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Algorand.Unity.Crypto;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -134,6 +133,11 @@ namespace Algorand.Unity.Samples.LocalAccountFlow
         public void ImportAccount()
         {
             using var mnemonic = importAccountView.ReadMnemonic();
+            if (!mnemonic.RefValue.IsValid())
+            {
+                importAccountView.errorLabel.text = "Invalid mnemonic";
+                return;
+            }
             using var seedRef = SodiumReference<Ed25519.Seed>.Alloc();
             mnemonic.RefValue.ToPrivateKey(seedRef.AsSpan());
             using var secretKeyRef = SodiumReference<Ed25519.SecretKey>.Alloc();
