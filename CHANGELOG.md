@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [5.0.0-exp.3](https://github.com/CareBoo/unity-algorand-sdk/compare/v5.0.0-exp.2...v5.0.0-exp.3) (2023-10-03)
+
+
+### Bug Fixes
+
+* **accounts:** change encryption of LocalAccountStore to prevent crashes ([#222](https://github.com/CareBoo/unity-algorand-sdk/issues/222)) ([d02fc90](https://github.com/CareBoo/unity-algorand-sdk/commit/d02fc900b1b67fc6e69d73664c747c224965bc92))
+
 # [5.0.0-exp.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v5.0.0-exp.1...v5.0.0-exp.2) (2023-09-25)
 
 
