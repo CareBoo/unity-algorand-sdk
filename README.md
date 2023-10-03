@@ -47,14 +47,12 @@ Create Algorand transactions, Algorand accounts, and use Algorand's [REST APIs](
 
 This package supports the following build targets and Unity versions:
 
-| Unity Version |      Windows       |       Mac OS       |       Linux        |      Android       |        iOS         |           WebGL            |
-| :-----------: | :----------------: | :----------------: | :----------------: | :----------------: | :----------------: | :------------------------: |
-|    2020.3     |        :x:         |        :x:         |        :x:         |        :x:         |        :x:         |            :x:             |
-|    2021.3     | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :eight_pointed_black_star: |
-|    2022.2     | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :eight_pointed_black_star: |
+| Unity Version |      Windows       |       Mac OS       |       Linux        |      Android       |        iOS         |       WebGL        |
+| :-----------: | :----------------: | :----------------: | :----------------: | :----------------: | :----------------: | :----------------: |
+|    2021.3     | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|    2022.3     | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 - :white_check_mark: All APIs are supported.
-- :eight_pointed_black_star: `Algorand.Unity.Net` is not supported. This assembly is used to enable cross-compatibility between the .NET SDK and the Unity SDK.
 - :x: Not supported. Use at your own risk.
 
 ## Common Usages

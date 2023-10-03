@@ -15389,15 +15389,15 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Crypto.SecretBox.CipherLength
   nameWithType: SecretBox.CipherLength
-- uid: Algorand.Unity.Crypto.SecretBox.Decrypt(Span{System.Byte},ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecretBox.Key*,Algorand.Unity.Crypto.SecretBox.Nonce)
-  name: Decrypt(Span<Byte>, ReadOnlySpan<Byte>, SecretBox.Key*, SecretBox.Nonce)
-  href: api/Algorand.Unity.Crypto.SecretBox.html#Algorand_Unity_Crypto_SecretBox_Decrypt_Span_System_Byte__ReadOnlySpan_System_Byte__Algorand_Unity_Crypto_SecretBox_Key__Algorand_Unity_Crypto_SecretBox_Nonce_
-  commentId: M:Algorand.Unity.Crypto.SecretBox.Decrypt(Span{System.Byte},ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecretBox.Key*,Algorand.Unity.Crypto.SecretBox.Nonce)
-  name.vb: Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecretBox.Key*, SecretBox.Nonce)
-  fullName: Algorand.Unity.Crypto.SecretBox.Decrypt(Span<System.Byte>, ReadOnlySpan<System.Byte>, Algorand.Unity.Crypto.SecretBox.Key*, Algorand.Unity.Crypto.SecretBox.Nonce)
-  fullName.vb: Algorand.Unity.Crypto.SecretBox.Decrypt(Span(Of System.Byte), ReadOnlySpan(Of System.Byte), Algorand.Unity.Crypto.SecretBox.Key*, Algorand.Unity.Crypto.SecretBox.Nonce)
-  nameWithType: SecretBox.Decrypt(Span<Byte>, ReadOnlySpan<Byte>, SecretBox.Key*, SecretBox.Nonce)
-  nameWithType.vb: SecretBox.Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecretBox.Key*, SecretBox.Nonce)
+- uid: Algorand.Unity.Crypto.SecretBox.Decrypt(Span{System.Byte},ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecretBox.Nonce,Algorand.Unity.Crypto.SecretBox.Key@)
+  name: Decrypt(Span<Byte>, ReadOnlySpan<Byte>, SecretBox.Nonce, ref SecretBox.Key)
+  href: api/Algorand.Unity.Crypto.SecretBox.html#Algorand_Unity_Crypto_SecretBox_Decrypt_Span_System_Byte__ReadOnlySpan_System_Byte__Algorand_Unity_Crypto_SecretBox_Nonce_Algorand_Unity_Crypto_SecretBox_Key__
+  commentId: M:Algorand.Unity.Crypto.SecretBox.Decrypt(Span{System.Byte},ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecretBox.Nonce,Algorand.Unity.Crypto.SecretBox.Key@)
+  name.vb: Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecretBox.Nonce, ByRef SecretBox.Key)
+  fullName: Algorand.Unity.Crypto.SecretBox.Decrypt(Span<System.Byte>, ReadOnlySpan<System.Byte>, Algorand.Unity.Crypto.SecretBox.Nonce, ref Algorand.Unity.Crypto.SecretBox.Key)
+  fullName.vb: Algorand.Unity.Crypto.SecretBox.Decrypt(Span(Of System.Byte), ReadOnlySpan(Of System.Byte), Algorand.Unity.Crypto.SecretBox.Nonce, ByRef Algorand.Unity.Crypto.SecretBox.Key)
+  nameWithType: SecretBox.Decrypt(Span<Byte>, ReadOnlySpan<Byte>, SecretBox.Nonce, ref SecretBox.Key)
+  nameWithType.vb: SecretBox.Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecretBox.Nonce, ByRef SecretBox.Key)
 - uid: Algorand.Unity.Crypto.SecretBox.Decrypt*
   name: Decrypt
   href: api/Algorand.Unity.Crypto.SecretBox.html#Algorand_Unity_Crypto_SecretBox_Decrypt_
@@ -15423,15 +15423,15 @@ references:
   commentId: F:Algorand.Unity.Crypto.SecretBox.DecryptError.None
   fullName: Algorand.Unity.Crypto.SecretBox.DecryptError.None
   nameWithType: SecretBox.DecryptError.None
-- uid: Algorand.Unity.Crypto.SecretBox.Encrypt(Span{System.Byte},ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecretBox.Key*,Algorand.Unity.Crypto.SecretBox.Nonce@)
-  name: Encrypt(Span<Byte>, ReadOnlySpan<Byte>, SecretBox.Key*, out SecretBox.Nonce)
-  href: api/Algorand.Unity.Crypto.SecretBox.html#Algorand_Unity_Crypto_SecretBox_Encrypt_Span_System_Byte__ReadOnlySpan_System_Byte__Algorand_Unity_Crypto_SecretBox_Key__Algorand_Unity_Crypto_SecretBox_Nonce__
-  commentId: M:Algorand.Unity.Crypto.SecretBox.Encrypt(Span{System.Byte},ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecretBox.Key*,Algorand.Unity.Crypto.SecretBox.Nonce@)
-  name.vb: Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecretBox.Key*, ByRef SecretBox.Nonce)
-  fullName: Algorand.Unity.Crypto.SecretBox.Encrypt(Span<System.Byte>, ReadOnlySpan<System.Byte>, Algorand.Unity.Crypto.SecretBox.Key*, out Algorand.Unity.Crypto.SecretBox.Nonce)
-  fullName.vb: Algorand.Unity.Crypto.SecretBox.Encrypt(Span(Of System.Byte), ReadOnlySpan(Of System.Byte), Algorand.Unity.Crypto.SecretBox.Key*, ByRef Algorand.Unity.Crypto.SecretBox.Nonce)
-  nameWithType: SecretBox.Encrypt(Span<Byte>, ReadOnlySpan<Byte>, SecretBox.Key*, out SecretBox.Nonce)
-  nameWithType.vb: SecretBox.Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecretBox.Key*, ByRef SecretBox.Nonce)
+- uid: Algorand.Unity.Crypto.SecretBox.Encrypt(Span{System.Byte},ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecretBox.Nonce,Algorand.Unity.Crypto.SecretBox.Key@)
+  name: Encrypt(Span<Byte>, ReadOnlySpan<Byte>, SecretBox.Nonce, ref SecretBox.Key)
+  href: api/Algorand.Unity.Crypto.SecretBox.html#Algorand_Unity_Crypto_SecretBox_Encrypt_Span_System_Byte__ReadOnlySpan_System_Byte__Algorand_Unity_Crypto_SecretBox_Nonce_Algorand_Unity_Crypto_SecretBox_Key__
+  commentId: M:Algorand.Unity.Crypto.SecretBox.Encrypt(Span{System.Byte},ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecretBox.Nonce,Algorand.Unity.Crypto.SecretBox.Key@)
+  name.vb: Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecretBox.Nonce, ByRef SecretBox.Key)
+  fullName: Algorand.Unity.Crypto.SecretBox.Encrypt(Span<System.Byte>, ReadOnlySpan<System.Byte>, Algorand.Unity.Crypto.SecretBox.Nonce, ref Algorand.Unity.Crypto.SecretBox.Key)
+  fullName.vb: Algorand.Unity.Crypto.SecretBox.Encrypt(Span(Of System.Byte), ReadOnlySpan(Of System.Byte), Algorand.Unity.Crypto.SecretBox.Nonce, ByRef Algorand.Unity.Crypto.SecretBox.Key)
+  nameWithType: SecretBox.Encrypt(Span<Byte>, ReadOnlySpan<Byte>, SecretBox.Nonce, ref SecretBox.Key)
+  nameWithType.vb: SecretBox.Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecretBox.Nonce, ByRef SecretBox.Key)
 - uid: Algorand.Unity.Crypto.SecretBox.Encrypt*
   name: Encrypt
   href: api/Algorand.Unity.Crypto.SecretBox.html#Algorand_Unity_Crypto_SecretBox_Encrypt_
@@ -16039,6 +16039,23 @@ references:
   fullName.vb: Algorand.Unity.Crypto.SodiumArray(Of T).SodiumArray
   nameWithType: SodiumArray<T>.SodiumArray
   nameWithType.vb: SodiumArray(Of T).SodiumArray
+- uid: Algorand.Unity.Crypto.SodiumArray`1.AsByteSpan
+  name: AsByteSpan()
+  href: api/Algorand.Unity.Crypto.SodiumArray-1.html#Algorand_Unity_Crypto_SodiumArray_1_AsByteSpan
+  commentId: M:Algorand.Unity.Crypto.SodiumArray`1.AsByteSpan
+  fullName: Algorand.Unity.Crypto.SodiumArray<T>.AsByteSpan()
+  fullName.vb: Algorand.Unity.Crypto.SodiumArray(Of T).AsByteSpan()
+  nameWithType: SodiumArray<T>.AsByteSpan()
+  nameWithType.vb: SodiumArray(Of T).AsByteSpan()
+- uid: Algorand.Unity.Crypto.SodiumArray`1.AsByteSpan*
+  name: AsByteSpan
+  href: api/Algorand.Unity.Crypto.SodiumArray-1.html#Algorand_Unity_Crypto_SodiumArray_1_AsByteSpan_
+  commentId: Overload:Algorand.Unity.Crypto.SodiumArray`1.AsByteSpan
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SodiumArray<T>.AsByteSpan
+  fullName.vb: Algorand.Unity.Crypto.SodiumArray(Of T).AsByteSpan
+  nameWithType: SodiumArray<T>.AsByteSpan
+  nameWithType.vb: SodiumArray(Of T).AsByteSpan
 - uid: Algorand.Unity.Crypto.SodiumArray`1.AsSpan
   name: AsSpan()
   href: api/Algorand.Unity.Crypto.SodiumArray-1.html#Algorand_Unity_Crypto_SodiumArray_1_AsSpan
@@ -16269,6 +16286,23 @@ references:
   fullName.vb: Algorand.Unity.Crypto.SodiumReference(Of T).IsCreated
   nameWithType: SodiumReference<T>.IsCreated
   nameWithType.vb: SodiumReference(Of T).IsCreated
+- uid: Algorand.Unity.Crypto.SodiumReference`1.RefValue
+  name: RefValue
+  href: api/Algorand.Unity.Crypto.SodiumReference-1.html#Algorand_Unity_Crypto_SodiumReference_1_RefValue
+  commentId: P:Algorand.Unity.Crypto.SodiumReference`1.RefValue
+  fullName: Algorand.Unity.Crypto.SodiumReference<T>.RefValue
+  fullName.vb: Algorand.Unity.Crypto.SodiumReference(Of T).RefValue
+  nameWithType: SodiumReference<T>.RefValue
+  nameWithType.vb: SodiumReference(Of T).RefValue
+- uid: Algorand.Unity.Crypto.SodiumReference`1.RefValue*
+  name: RefValue
+  href: api/Algorand.Unity.Crypto.SodiumReference-1.html#Algorand_Unity_Crypto_SodiumReference_1_RefValue_
+  commentId: Overload:Algorand.Unity.Crypto.SodiumReference`1.RefValue
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SodiumReference<T>.RefValue
+  fullName.vb: Algorand.Unity.Crypto.SodiumReference(Of T).RefValue
+  nameWithType: SodiumReference<T>.RefValue
+  nameWithType.vb: SodiumReference(Of T).RefValue
 - uid: Algorand.Unity.Crypto.SodiumReference`1.Value
   name: Value
   href: api/Algorand.Unity.Crypto.SodiumReference-1.html#Algorand_Unity_Crypto_SodiumReference_1_Value
@@ -38770,6 +38804,122 @@ references:
   commentId: F:Algorand.Unity.LocalAccountStore.EncryptError.OutOfMemory
   fullName: Algorand.Unity.LocalAccountStore.EncryptError.OutOfMemory
   nameWithType: LocalAccountStore.EncryptError.OutOfMemory
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader
+  name: LocalAccountStore.EncryptHeader
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html
+  commentId: T:Algorand.Unity.LocalAccountStore.EncryptHeader
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader
+  nameWithType: LocalAccountStore.EncryptHeader
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.#ctor(PwHash.Salt,SecretBox.Nonce)
+  name: EncryptHeader(PwHash.Salt, SecretBox.Nonce)
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader__ctor_PwHash_Salt_SecretBox_Nonce_
+  commentId: M:Algorand.Unity.LocalAccountStore.EncryptHeader.#ctor(PwHash.Salt,SecretBox.Nonce)
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.EncryptHeader(PwHash.Salt, SecretBox.Nonce)
+  nameWithType: LocalAccountStore.EncryptHeader.EncryptHeader(PwHash.Salt, SecretBox.Nonce)
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.#ctor*
+  name: EncryptHeader
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader__ctor_
+  commentId: Overload:Algorand.Unity.LocalAccountStore.EncryptHeader.#ctor
+  isSpec: "True"
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.EncryptHeader
+  nameWithType: LocalAccountStore.EncryptHeader.EncryptHeader
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.bytes
+  name: bytes
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_bytes
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.bytes
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.bytes
+  nameWithType: LocalAccountStore.EncryptHeader.bytes
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.IsValid
+  name: IsValid
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_IsValid
+  commentId: P:Algorand.Unity.LocalAccountStore.EncryptHeader.IsValid
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.IsValid
+  nameWithType: LocalAccountStore.EncryptHeader.IsValid
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.IsValid*
+  name: IsValid
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_IsValid_
+  commentId: Overload:Algorand.Unity.LocalAccountStore.EncryptHeader.IsValid
+  isSpec: "True"
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.IsValid
+  nameWithType: LocalAccountStore.EncryptHeader.IsValid
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.KeySize
+  name: KeySize
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_KeySize
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.KeySize
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.KeySize
+  nameWithType: LocalAccountStore.EncryptHeader.KeySize
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.MacSize
+  name: MacSize
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_MacSize
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.MacSize
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.MacSize
+  nameWithType: LocalAccountStore.EncryptHeader.MacSize
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.nonce
+  name: nonce
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_nonce
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.nonce
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.nonce
+  nameWithType: LocalAccountStore.EncryptHeader.nonce
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.NonceOffset
+  name: NonceOffset
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_NonceOffset
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.NonceOffset
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.NonceOffset
+  nameWithType: LocalAccountStore.EncryptHeader.NonceOffset
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.NonceSize
+  name: NonceSize
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_NonceSize
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.NonceSize
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.NonceSize
+  nameWithType: LocalAccountStore.EncryptHeader.NonceSize
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.prefix
+  name: prefix
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_prefix
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.prefix
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.prefix
+  nameWithType: LocalAccountStore.EncryptHeader.prefix
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.Prefix
+  name: Prefix
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_Prefix
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.Prefix
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.Prefix
+  nameWithType: LocalAccountStore.EncryptHeader.Prefix
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.PrefixOffset
+  name: PrefixOffset
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_PrefixOffset
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.PrefixOffset
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.PrefixOffset
+  nameWithType: LocalAccountStore.EncryptHeader.PrefixOffset
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.PrefixSize
+  name: PrefixSize
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_PrefixSize
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.PrefixSize
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.PrefixSize
+  nameWithType: LocalAccountStore.EncryptHeader.PrefixSize
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.salt
+  name: salt
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_salt
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.salt
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.salt
+  nameWithType: LocalAccountStore.EncryptHeader.salt
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.SaltOffset
+  name: SaltOffset
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_SaltOffset
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.SaltOffset
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.SaltOffset
+  nameWithType: LocalAccountStore.EncryptHeader.SaltOffset
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.SaltSize
+  name: SaltSize
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_SaltSize
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.SaltSize
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.SaltSize
+  nameWithType: LocalAccountStore.EncryptHeader.SaltSize
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.SizeBytes
+  name: SizeBytes
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_SizeBytes
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.SizeBytes
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.SizeBytes
+  nameWithType: LocalAccountStore.EncryptHeader.SizeBytes
 - uid: Algorand.Unity.LocalAccountStore.IsCreated
   name: IsCreated
   href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore_IsCreated
@@ -42663,6 +42813,19 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Mnemonic.GetUnsafePtr
   nameWithType: Mnemonic.GetUnsafePtr
+- uid: Algorand.Unity.Mnemonic.IsValid
+  name: IsValid()
+  href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_IsValid
+  commentId: M:Algorand.Unity.Mnemonic.IsValid
+  fullName: Algorand.Unity.Mnemonic.IsValid()
+  nameWithType: Mnemonic.IsValid()
+- uid: Algorand.Unity.Mnemonic.IsValid*
+  name: IsValid
+  href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_IsValid_
+  commentId: Overload:Algorand.Unity.Mnemonic.IsValid
+  isSpec: "True"
+  fullName: Algorand.Unity.Mnemonic.IsValid
+  nameWithType: Mnemonic.IsValid
 - uid: Algorand.Unity.Mnemonic.Item(System.Int32)
   name: Item[Int32]
   href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_Item_System_Int32_
@@ -42749,6 +42912,22 @@ references:
   commentId: F:Algorand.Unity.Mnemonic.ParseError.WordsNotInSet
   fullName: Algorand.Unity.Mnemonic.ParseError.WordsNotInSet
   nameWithType: Mnemonic.ParseError.WordsNotInSet
+- uid: Algorand.Unity.Mnemonic.ParseWord(ReadOnlySpan{System.Char})
+  name: ParseWord(ReadOnlySpan<Char>)
+  href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_ParseWord_ReadOnlySpan_System_Char__
+  commentId: M:Algorand.Unity.Mnemonic.ParseWord(ReadOnlySpan{System.Char})
+  name.vb: ParseWord(ReadOnlySpan(Of Char))
+  fullName: Algorand.Unity.Mnemonic.ParseWord(ReadOnlySpan<System.Char>)
+  fullName.vb: Algorand.Unity.Mnemonic.ParseWord(ReadOnlySpan(Of System.Char))
+  nameWithType: Mnemonic.ParseWord(ReadOnlySpan<Char>)
+  nameWithType.vb: Mnemonic.ParseWord(ReadOnlySpan(Of Char))
+- uid: Algorand.Unity.Mnemonic.ParseWord*
+  name: ParseWord
+  href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_ParseWord_
+  commentId: Overload:Algorand.Unity.Mnemonic.ParseWord
+  isSpec: "True"
+  fullName: Algorand.Unity.Mnemonic.ParseWord
+  nameWithType: Mnemonic.ParseWord
 - uid: Algorand.Unity.Mnemonic.SizeBytes
   name: SizeBytes
   href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_SizeBytes
@@ -42761,6 +42940,15 @@ references:
   commentId: M:Algorand.Unity.Mnemonic.ToPrivateKey
   fullName: Algorand.Unity.Mnemonic.ToPrivateKey()
   nameWithType: Mnemonic.ToPrivateKey()
+- uid: Algorand.Unity.Mnemonic.ToPrivateKey(Algorand.Unity.PrivateKey@)
+  name: ToPrivateKey(ref PrivateKey)
+  href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_ToPrivateKey_Algorand_Unity_PrivateKey__
+  commentId: M:Algorand.Unity.Mnemonic.ToPrivateKey(Algorand.Unity.PrivateKey@)
+  name.vb: ToPrivateKey(ByRef PrivateKey)
+  fullName: Algorand.Unity.Mnemonic.ToPrivateKey(ref Algorand.Unity.PrivateKey)
+  fullName.vb: Algorand.Unity.Mnemonic.ToPrivateKey(ByRef Algorand.Unity.PrivateKey)
+  nameWithType: Mnemonic.ToPrivateKey(ref PrivateKey)
+  nameWithType.vb: Mnemonic.ToPrivateKey(ByRef PrivateKey)
 - uid: Algorand.Unity.Mnemonic.ToPrivateKey(Span{System.Byte})
   name: ToPrivateKey(Span<Byte>)
   href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_ToPrivateKey_Span_System_Byte__
