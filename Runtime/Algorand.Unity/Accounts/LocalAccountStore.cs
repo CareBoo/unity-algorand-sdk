@@ -88,24 +88,11 @@ namespace Algorand.Unity
         /// </summary>
         /// <param name="secretKey"></param>
         /// <returns></returns>
-        public LocalAccountStore Add(SodiumReference<Ed25519.SecretKey> secretKey)
-        {
-            unsafe
-            {
-                return Add(secretKey.GetUnsafePtr());
-            }
-        }
-
-        /// <summary>
-        /// Create a new store with an additional account.
-        /// </summary>
-        /// <param name="secretKey"></param>
-        /// <returns></returns>
-        public unsafe LocalAccountStore Add(Ed25519.SecretKey* secretKey)
+        public LocalAccountStore Add(ref Ed25519.SecretKey secretKey)
         {
             var newSecretKeys = new SodiumArray<Ed25519.SecretKey>(Length + 1);
             secretKeys.AsSpan().CopyTo(newSecretKeys.AsSpan());
-            newSecretKeys[Length] = *secretKey;
+            newSecretKeys[Length] = secretKey;
             secretKeys.Dispose();
             return new LocalAccountStore(newSecretKeys, pwHash, salt);
         }

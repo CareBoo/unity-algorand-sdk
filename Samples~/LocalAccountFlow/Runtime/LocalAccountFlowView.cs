@@ -125,7 +125,7 @@ namespace Algorand.Unity.Samples.LocalAccountFlow
             using var secretKeyRef = SodiumReference<Ed25519.SecretKey>.Alloc();
             var pk = default(Ed25519.PublicKey);
             Ed25519.GenKeyPair(ref seedRef.RefValue, ref secretKeyRef.RefValue, ref pk);
-            accountStore = accountStore.Add(secretKeyRef);
+            accountStore = accountStore.Add(ref secretKeyRef.RefValue);
             newAccountView.Close();
             walletView.Open(accountStore);
         }
@@ -143,7 +143,7 @@ namespace Algorand.Unity.Samples.LocalAccountFlow
             using var secretKeyRef = SodiumReference<Ed25519.SecretKey>.Alloc();
             var pk = default(Ed25519.PublicKey);
             Ed25519.GenKeyPair(ref seedRef.RefValue, ref secretKeyRef.RefValue, ref pk);
-            accountStore = accountStore.Add(secretKeyRef);
+            accountStore = accountStore.Add(ref secretKeyRef.RefValue);
             importAccountView.Close();
             walletView.Open(accountStore);
         }
