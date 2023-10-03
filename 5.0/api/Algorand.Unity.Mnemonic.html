@@ -89,8 +89,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Algorand_Unity_Mnemonic_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Serializable]
-public struct Mnemonic : IEquatable&lt;Mnemonic&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct Mnemonic : IEquatable&lt;Mnemonic&gt;</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -397,22 +396,6 @@ public struct Mnemonic : IEquatable&lt;Mnemonic&gt;</code></pre>
       </tr>
     </tbody>
   </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
-        <td><p>If the mnemonic string cannot be parsed, this error is thrown.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Algorand_Unity_Mnemonic_GetUnsafePtr_" data-uid="Algorand.Unity.Mnemonic.GetUnsafePtr*"></a>
@@ -437,6 +420,73 @@ public struct Mnemonic : IEquatable&lt;Mnemonic&gt;</code></pre>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>*</td>
         <td><p>An unsafe byte pointer.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Mnemonic_IsValid_" data-uid="Algorand.Unity.Mnemonic.IsValid*"></a>
+  <h4 id="Algorand_Unity_Mnemonic_IsValid" data-uid="Algorand.Unity.Mnemonic.IsValid">IsValid()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsValid()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Mnemonic_ParseWord_" data-uid="Algorand.Unity.Mnemonic.ParseWord*"></a>
+  <h4 id="Algorand_Unity_Mnemonic_ParseWord_ReadOnlySpan_System_Char__" data-uid="Algorand.Unity.Mnemonic.ParseWord(ReadOnlySpan{System.Char})">ParseWord(ReadOnlySpan&lt;Char&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Mnemonic.Word ParseWord(ReadOnlySpan&lt;char&gt; chars)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ReadOnlySpan</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">chars</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.Mnemonic.Word.html">Mnemonic.Word</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -469,8 +519,37 @@ public struct Mnemonic : IEquatable&lt;Mnemonic&gt;</code></pre>
   
   
   <a id="Algorand_Unity_Mnemonic_ToPrivateKey_" data-uid="Algorand.Unity.Mnemonic.ToPrivateKey*"></a>
-  <h4 id="Algorand_Unity_Mnemonic_ToPrivateKey_System_Span_System_Byte__" data-uid="Algorand.Unity.Mnemonic.ToPrivateKey(System.Span{System.Byte})">ToPrivateKey(Span&lt;Byte&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="Algorand_Unity_Mnemonic_ToPrivateKey_Algorand_Unity_PrivateKey__" data-uid="Algorand.Unity.Mnemonic.ToPrivateKey(Algorand.Unity.PrivateKey@)">ToPrivateKey(ref PrivateKey)</h4>
+  <div class="markdown level1 summary"><p>Get the <a class="xref" href="Algorand.Unity.PrivateKey.html">PrivateKey</a> from this mnemonic encodes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ToPrivateKey(ref PrivateKey privateKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Algorand.Unity.PrivateKey.html">PrivateKey</a></td>
+        <td><span class="parametername">privateKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Algorand_Unity_Mnemonic_ToPrivateKey_" data-uid="Algorand.Unity.Mnemonic.ToPrivateKey*"></a>
+  <h4 id="Algorand_Unity_Mnemonic_ToPrivateKey_Span_System_Byte__" data-uid="Algorand.Unity.Mnemonic.ToPrivateKey(Span{System.Byte})">ToPrivateKey(Span&lt;Byte&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get the <a class="xref" href="Algorand.Unity.PrivateKey.html">PrivateKey</a> from this mnemonic encodes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -487,7 +566,7 @@ public struct Mnemonic : IEquatable&lt;Mnemonic&gt;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
+        <td><span class="xref">Span</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
         <td><span class="parametername">privateKeyBytes</span></td>
         <td></td>
       </tr>
@@ -523,7 +602,7 @@ public struct Mnemonic : IEquatable&lt;Mnemonic&gt;</code></pre>
   
   
   <a id="Algorand_Unity_Mnemonic_TryParse_" data-uid="Algorand.Unity.Mnemonic.TryParse*"></a>
-  <h4 id="Algorand_Unity_Mnemonic_TryParse_System_ReadOnlySpan_System_Char__Algorand_Unity_Mnemonic__" data-uid="Algorand.Unity.Mnemonic.TryParse(System.ReadOnlySpan{System.Char},Algorand.Unity.Mnemonic@)">TryParse(ReadOnlySpan&lt;Char&gt;, out Mnemonic)</h4>
+  <h4 id="Algorand_Unity_Mnemonic_TryParse_ReadOnlySpan_System_Char__Algorand_Unity_Mnemonic__" data-uid="Algorand.Unity.Mnemonic.TryParse(ReadOnlySpan{System.Char},Algorand.Unity.Mnemonic@)">TryParse(ReadOnlySpan&lt;Char&gt;, out Mnemonic)</h4>
   <div class="markdown level1 summary"><p>Try to parse a mnemonic from a string.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -542,7 +621,7 @@ public struct Mnemonic : IEquatable&lt;Mnemonic&gt;</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="xref">ReadOnlySpan</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
         <td><span class="parametername">mnemonicString</span></td>
         <td><p>The mnemonic string of 25 words separated by space.</p>
 </td>

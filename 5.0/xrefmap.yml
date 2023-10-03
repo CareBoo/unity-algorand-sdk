@@ -1094,11 +1094,11 @@ references:
   commentId: T:Algorand.Unity.AlgoApiFormatterAttribute
   fullName: Algorand.Unity.AlgoApiFormatterAttribute
   nameWithType: AlgoApiFormatterAttribute
-- uid: Algorand.Unity.AlgoApiFormatterAttribute.#ctor(System.Type,System.String,System.String,System.Int32)
+- uid: Algorand.Unity.AlgoApiFormatterAttribute.#ctor(Type,System.String,System.String,System.Int32)
   name: AlgoApiFormatterAttribute(Type, String, String, Int32)
-  href: api/Algorand.Unity.AlgoApiFormatterAttribute.html#Algorand_Unity_AlgoApiFormatterAttribute__ctor_System_Type_System_String_System_String_System_Int32_
-  commentId: M:Algorand.Unity.AlgoApiFormatterAttribute.#ctor(System.Type,System.String,System.String,System.Int32)
-  fullName: Algorand.Unity.AlgoApiFormatterAttribute.AlgoApiFormatterAttribute(System.Type, System.String, System.String, System.Int32)
+  href: api/Algorand.Unity.AlgoApiFormatterAttribute.html#Algorand_Unity_AlgoApiFormatterAttribute__ctor_Type_System_String_System_String_System_Int32_
+  commentId: M:Algorand.Unity.AlgoApiFormatterAttribute.#ctor(Type,System.String,System.String,System.Int32)
+  fullName: Algorand.Unity.AlgoApiFormatterAttribute.AlgoApiFormatterAttribute(Type, System.String, System.String, System.Int32)
   nameWithType: AlgoApiFormatterAttribute.AlgoApiFormatterAttribute(Type, String, String, Int32)
 - uid: Algorand.Unity.AlgoApiFormatterAttribute.#ctor*
   name: AlgoApiFormatterAttribute
@@ -1565,11 +1565,11 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.AlgoApiRequest.Awaiter.IsCompleted
   nameWithType: AlgoApiRequest.Awaiter.IsCompleted
-- uid: Algorand.Unity.AlgoApiRequest.Awaiter.OnCompleted(System.Action)
+- uid: Algorand.Unity.AlgoApiRequest.Awaiter.OnCompleted(Action)
   name: OnCompleted(Action)
-  href: api/Algorand.Unity.AlgoApiRequest.Awaiter.html#Algorand_Unity_AlgoApiRequest_Awaiter_OnCompleted_System_Action_
-  commentId: M:Algorand.Unity.AlgoApiRequest.Awaiter.OnCompleted(System.Action)
-  fullName: Algorand.Unity.AlgoApiRequest.Awaiter.OnCompleted(System.Action)
+  href: api/Algorand.Unity.AlgoApiRequest.Awaiter.html#Algorand_Unity_AlgoApiRequest_Awaiter_OnCompleted_Action_
+  commentId: M:Algorand.Unity.AlgoApiRequest.Awaiter.OnCompleted(Action)
+  fullName: Algorand.Unity.AlgoApiRequest.Awaiter.OnCompleted(Action)
   nameWithType: AlgoApiRequest.Awaiter.OnCompleted(Action)
 - uid: Algorand.Unity.AlgoApiRequest.Awaiter.OnCompleted*
   name: OnCompleted
@@ -1578,11 +1578,11 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.AlgoApiRequest.Awaiter.OnCompleted
   nameWithType: AlgoApiRequest.Awaiter.OnCompleted
-- uid: Algorand.Unity.AlgoApiRequest.Awaiter.UnsafeOnCompleted(System.Action)
+- uid: Algorand.Unity.AlgoApiRequest.Awaiter.UnsafeOnCompleted(Action)
   name: UnsafeOnCompleted(Action)
-  href: api/Algorand.Unity.AlgoApiRequest.Awaiter.html#Algorand_Unity_AlgoApiRequest_Awaiter_UnsafeOnCompleted_System_Action_
-  commentId: M:Algorand.Unity.AlgoApiRequest.Awaiter.UnsafeOnCompleted(System.Action)
-  fullName: Algorand.Unity.AlgoApiRequest.Awaiter.UnsafeOnCompleted(System.Action)
+  href: api/Algorand.Unity.AlgoApiRequest.Awaiter.html#Algorand_Unity_AlgoApiRequest_Awaiter_UnsafeOnCompleted_Action_
+  commentId: M:Algorand.Unity.AlgoApiRequest.Awaiter.UnsafeOnCompleted(Action)
+  fullName: Algorand.Unity.AlgoApiRequest.Awaiter.UnsafeOnCompleted(Action)
   nameWithType: AlgoApiRequest.Awaiter.UnsafeOnCompleted(Action)
 - uid: Algorand.Unity.AlgoApiRequest.Awaiter.UnsafeOnCompleted*
   name: UnsafeOnCompleted
@@ -1652,12 +1652,12 @@ references:
   fullName.vb: Algorand.Unity.AlgoApiRequest.Awaiter(Of TResponse).IsCompleted
   nameWithType: AlgoApiRequest.Awaiter<TResponse>.IsCompleted
   nameWithType.vb: AlgoApiRequest.Awaiter(Of TResponse).IsCompleted
-- uid: Algorand.Unity.AlgoApiRequest.Awaiter`1.OnCompleted(System.Action)
+- uid: Algorand.Unity.AlgoApiRequest.Awaiter`1.OnCompleted(Action)
   name: OnCompleted(Action)
-  href: api/Algorand.Unity.AlgoApiRequest.Awaiter-1.html#Algorand_Unity_AlgoApiRequest_Awaiter_1_OnCompleted_System_Action_
-  commentId: M:Algorand.Unity.AlgoApiRequest.Awaiter`1.OnCompleted(System.Action)
-  fullName: Algorand.Unity.AlgoApiRequest.Awaiter<TResponse>.OnCompleted(System.Action)
-  fullName.vb: Algorand.Unity.AlgoApiRequest.Awaiter(Of TResponse).OnCompleted(System.Action)
+  href: api/Algorand.Unity.AlgoApiRequest.Awaiter-1.html#Algorand_Unity_AlgoApiRequest_Awaiter_1_OnCompleted_Action_
+  commentId: M:Algorand.Unity.AlgoApiRequest.Awaiter`1.OnCompleted(Action)
+  fullName: Algorand.Unity.AlgoApiRequest.Awaiter<TResponse>.OnCompleted(Action)
+  fullName.vb: Algorand.Unity.AlgoApiRequest.Awaiter(Of TResponse).OnCompleted(Action)
   nameWithType: AlgoApiRequest.Awaiter<TResponse>.OnCompleted(Action)
   nameWithType.vb: AlgoApiRequest.Awaiter(Of TResponse).OnCompleted(Action)
 - uid: Algorand.Unity.AlgoApiRequest.Awaiter`1.OnCompleted*
@@ -1669,12 +1669,12 @@ references:
   fullName.vb: Algorand.Unity.AlgoApiRequest.Awaiter(Of TResponse).OnCompleted
   nameWithType: AlgoApiRequest.Awaiter<TResponse>.OnCompleted
   nameWithType.vb: AlgoApiRequest.Awaiter(Of TResponse).OnCompleted
-- uid: Algorand.Unity.AlgoApiRequest.Awaiter`1.UnsafeOnCompleted(System.Action)
+- uid: Algorand.Unity.AlgoApiRequest.Awaiter`1.UnsafeOnCompleted(Action)
   name: UnsafeOnCompleted(Action)
-  href: api/Algorand.Unity.AlgoApiRequest.Awaiter-1.html#Algorand_Unity_AlgoApiRequest_Awaiter_1_UnsafeOnCompleted_System_Action_
-  commentId: M:Algorand.Unity.AlgoApiRequest.Awaiter`1.UnsafeOnCompleted(System.Action)
-  fullName: Algorand.Unity.AlgoApiRequest.Awaiter<TResponse>.UnsafeOnCompleted(System.Action)
-  fullName.vb: Algorand.Unity.AlgoApiRequest.Awaiter(Of TResponse).UnsafeOnCompleted(System.Action)
+  href: api/Algorand.Unity.AlgoApiRequest.Awaiter-1.html#Algorand_Unity_AlgoApiRequest_Awaiter_1_UnsafeOnCompleted_Action_
+  commentId: M:Algorand.Unity.AlgoApiRequest.Awaiter`1.UnsafeOnCompleted(Action)
+  fullName: Algorand.Unity.AlgoApiRequest.Awaiter<TResponse>.UnsafeOnCompleted(Action)
+  fullName.vb: Algorand.Unity.AlgoApiRequest.Awaiter(Of TResponse).UnsafeOnCompleted(Action)
   nameWithType: AlgoApiRequest.Awaiter<TResponse>.UnsafeOnCompleted(Action)
   nameWithType.vb: AlgoApiRequest.Awaiter(Of TResponse).UnsafeOnCompleted(Action)
 - uid: Algorand.Unity.AlgoApiRequest.Awaiter`1.UnsafeOnCompleted*
@@ -11925,13 +11925,13 @@ references:
   commentId: T:Algorand.Unity.Base64Url
   fullName: Algorand.Unity.Base64Url
   nameWithType: Base64Url
-- uid: Algorand.Unity.Base64Url.Decode(System.ReadOnlySpan{System.Char})
+- uid: Algorand.Unity.Base64Url.Decode(ReadOnlySpan{System.Char})
   name: Decode(ReadOnlySpan<Char>)
-  href: api/Algorand.Unity.Base64Url.html#Algorand_Unity_Base64Url_Decode_System_ReadOnlySpan_System_Char__
-  commentId: M:Algorand.Unity.Base64Url.Decode(System.ReadOnlySpan{System.Char})
+  href: api/Algorand.Unity.Base64Url.html#Algorand_Unity_Base64Url_Decode_ReadOnlySpan_System_Char__
+  commentId: M:Algorand.Unity.Base64Url.Decode(ReadOnlySpan{System.Char})
   name.vb: Decode(ReadOnlySpan(Of Char))
-  fullName: Algorand.Unity.Base64Url.Decode(System.ReadOnlySpan<System.Char>)
-  fullName.vb: Algorand.Unity.Base64Url.Decode(System.ReadOnlySpan(Of System.Char))
+  fullName: Algorand.Unity.Base64Url.Decode(ReadOnlySpan<System.Char>)
+  fullName.vb: Algorand.Unity.Base64Url.Decode(ReadOnlySpan(Of System.Char))
   nameWithType: Base64Url.Decode(ReadOnlySpan<Char>)
   nameWithType.vb: Base64Url.Decode(ReadOnlySpan(Of Char))
 - uid: Algorand.Unity.Base64Url.Decode*
@@ -11941,13 +11941,13 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Base64Url.Decode
   nameWithType: Base64Url.Decode
-- uid: Algorand.Unity.Base64Url.Encode(System.ReadOnlySpan{System.Byte})
+- uid: Algorand.Unity.Base64Url.Encode(ReadOnlySpan{System.Byte})
   name: Encode(ReadOnlySpan<Byte>)
-  href: api/Algorand.Unity.Base64Url.html#Algorand_Unity_Base64Url_Encode_System_ReadOnlySpan_System_Byte__
-  commentId: M:Algorand.Unity.Base64Url.Encode(System.ReadOnlySpan{System.Byte})
+  href: api/Algorand.Unity.Base64Url.html#Algorand_Unity_Base64Url_Encode_ReadOnlySpan_System_Byte__
+  commentId: M:Algorand.Unity.Base64Url.Encode(ReadOnlySpan{System.Byte})
   name.vb: Encode(ReadOnlySpan(Of Byte))
-  fullName: Algorand.Unity.Base64Url.Encode(System.ReadOnlySpan<System.Byte>)
-  fullName.vb: Algorand.Unity.Base64Url.Encode(System.ReadOnlySpan(Of System.Byte))
+  fullName: Algorand.Unity.Base64Url.Encode(ReadOnlySpan<System.Byte>)
+  fullName.vb: Algorand.Unity.Base64Url.Encode(ReadOnlySpan(Of System.Byte))
   nameWithType: Base64Url.Encode(ReadOnlySpan<Byte>)
   nameWithType.vb: Base64Url.Encode(ReadOnlySpan(Of Byte))
 - uid: Algorand.Unity.Base64Url.Encode*
@@ -11963,24 +11963,24 @@ references:
   commentId: T:Algorand.Unity.BaseN
   fullName: Algorand.Unity.BaseN
   nameWithType: BaseN
-- uid: Algorand.Unity.BaseN.ChangeBase(System.ReadOnlySpan{System.Byte},System.Byte,System.Byte,System.Span{System.Byte}@,System.Int32@)
-  name: ChangeBase(ReadOnlySpan<Byte>, Byte, Byte, ref Span<Byte>, out Int32)
-  href: api/Algorand.Unity.BaseN.html#Algorand_Unity_BaseN_ChangeBase_System_ReadOnlySpan_System_Byte__System_Byte_System_Byte_System_Span_System_Byte___System_Int32__
-  commentId: M:Algorand.Unity.BaseN.ChangeBase(System.ReadOnlySpan{System.Byte},System.Byte,System.Byte,System.Span{System.Byte}@,System.Int32@)
-  name.vb: ChangeBase(ReadOnlySpan(Of Byte), Byte, Byte, ByRef Span(Of Byte), ByRef Int32)
-  fullName: Algorand.Unity.BaseN.ChangeBase(System.ReadOnlySpan<System.Byte>, System.Byte, System.Byte, ref System.Span<System.Byte>, out System.Int32)
-  fullName.vb: Algorand.Unity.BaseN.ChangeBase(System.ReadOnlySpan(Of System.Byte), System.Byte, System.Byte, ByRef System.Span(Of System.Byte), ByRef System.Int32)
-  nameWithType: BaseN.ChangeBase(ReadOnlySpan<Byte>, Byte, Byte, ref Span<Byte>, out Int32)
-  nameWithType.vb: BaseN.ChangeBase(ReadOnlySpan(Of Byte), Byte, Byte, ByRef Span(Of Byte), ByRef Int32)
-- uid: Algorand.Unity.BaseN.ChangeBase(System.ReadOnlySpan{System.Byte},System.Byte,System.Span{System.Byte}@,System.Int32@,System.Boolean)
+- uid: Algorand.Unity.BaseN.ChangeBase(ReadOnlySpan{System.Byte},System.Byte,Span{System.Byte}@,System.Int32@,System.Boolean)
   name: ChangeBase(ReadOnlySpan<Byte>, Byte, ref Span<Byte>, out Int32, Boolean)
-  href: api/Algorand.Unity.BaseN.html#Algorand_Unity_BaseN_ChangeBase_System_ReadOnlySpan_System_Byte__System_Byte_System_Span_System_Byte___System_Int32__System_Boolean_
-  commentId: M:Algorand.Unity.BaseN.ChangeBase(System.ReadOnlySpan{System.Byte},System.Byte,System.Span{System.Byte}@,System.Int32@,System.Boolean)
+  href: api/Algorand.Unity.BaseN.html#Algorand_Unity_BaseN_ChangeBase_ReadOnlySpan_System_Byte__System_Byte_Span_System_Byte___System_Int32__System_Boolean_
+  commentId: M:Algorand.Unity.BaseN.ChangeBase(ReadOnlySpan{System.Byte},System.Byte,Span{System.Byte}@,System.Int32@,System.Boolean)
   name.vb: ChangeBase(ReadOnlySpan(Of Byte), Byte, ByRef Span(Of Byte), ByRef Int32, Boolean)
-  fullName: Algorand.Unity.BaseN.ChangeBase(System.ReadOnlySpan<System.Byte>, System.Byte, ref System.Span<System.Byte>, out System.Int32, System.Boolean)
-  fullName.vb: Algorand.Unity.BaseN.ChangeBase(System.ReadOnlySpan(Of System.Byte), System.Byte, ByRef System.Span(Of System.Byte), ByRef System.Int32, System.Boolean)
+  fullName: Algorand.Unity.BaseN.ChangeBase(ReadOnlySpan<System.Byte>, System.Byte, ref Span<System.Byte>, out System.Int32, System.Boolean)
+  fullName.vb: Algorand.Unity.BaseN.ChangeBase(ReadOnlySpan(Of System.Byte), System.Byte, ByRef Span(Of System.Byte), ByRef System.Int32, System.Boolean)
   nameWithType: BaseN.ChangeBase(ReadOnlySpan<Byte>, Byte, ref Span<Byte>, out Int32, Boolean)
   nameWithType.vb: BaseN.ChangeBase(ReadOnlySpan(Of Byte), Byte, ByRef Span(Of Byte), ByRef Int32, Boolean)
+- uid: Algorand.Unity.BaseN.ChangeBase(ReadOnlySpan{System.Byte},System.Byte,System.Byte,Span{System.Byte}@,System.Int32@)
+  name: ChangeBase(ReadOnlySpan<Byte>, Byte, Byte, ref Span<Byte>, out Int32)
+  href: api/Algorand.Unity.BaseN.html#Algorand_Unity_BaseN_ChangeBase_ReadOnlySpan_System_Byte__System_Byte_System_Byte_Span_System_Byte___System_Int32__
+  commentId: M:Algorand.Unity.BaseN.ChangeBase(ReadOnlySpan{System.Byte},System.Byte,System.Byte,Span{System.Byte}@,System.Int32@)
+  name.vb: ChangeBase(ReadOnlySpan(Of Byte), Byte, Byte, ByRef Span(Of Byte), ByRef Int32)
+  fullName: Algorand.Unity.BaseN.ChangeBase(ReadOnlySpan<System.Byte>, System.Byte, System.Byte, ref Span<System.Byte>, out System.Int32)
+  fullName.vb: Algorand.Unity.BaseN.ChangeBase(ReadOnlySpan(Of System.Byte), System.Byte, System.Byte, ByRef Span(Of System.Byte), ByRef System.Int32)
+  nameWithType: BaseN.ChangeBase(ReadOnlySpan<Byte>, Byte, Byte, ref Span<Byte>, out Int32)
+  nameWithType.vb: BaseN.ChangeBase(ReadOnlySpan(Of Byte), Byte, Byte, ByRef Span(Of Byte), ByRef Int32)
 - uid: Algorand.Unity.BaseN.ChangeBase*
   name: ChangeBase
   href: api/Algorand.Unity.BaseN.html#Algorand_Unity_BaseN_ChangeBase_
@@ -13969,22 +13969,22 @@ references:
   commentId: F:Algorand.Unity.Crypto.ChaCha20Poly1305.AuthTag.Size
   fullName: Algorand.Unity.Crypto.ChaCha20Poly1305.AuthTag.Size
   nameWithType: ChaCha20Poly1305.AuthTag.Size
-- uid: Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.ChaCha20Poly1305.Key,Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
+- uid: Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt(Span{System.Byte},ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.ChaCha20Poly1305.Key,Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
   name: Decrypt(Span<Byte>, ReadOnlySpan<Byte>, ChaCha20Poly1305.Key, ChaCha20Poly1305.Nonce)
-  href: api/Algorand.Unity.Crypto.ChaCha20Poly1305.html#Algorand_Unity_Crypto_ChaCha20Poly1305_Decrypt_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__Algorand_Unity_Crypto_ChaCha20Poly1305_Key_Algorand_Unity_Crypto_ChaCha20Poly1305_Nonce_
-  commentId: M:Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.ChaCha20Poly1305.Key,Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
+  href: api/Algorand.Unity.Crypto.ChaCha20Poly1305.html#Algorand_Unity_Crypto_ChaCha20Poly1305_Decrypt_Span_System_Byte__ReadOnlySpan_System_Byte__Algorand_Unity_Crypto_ChaCha20Poly1305_Key_Algorand_Unity_Crypto_ChaCha20Poly1305_Nonce_
+  commentId: M:Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt(Span{System.Byte},ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.ChaCha20Poly1305.Key,Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
   name.vb: Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ChaCha20Poly1305.Key, ChaCha20Poly1305.Nonce)
-  fullName: Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt(System.Span<System.Byte>, System.ReadOnlySpan<System.Byte>, Algorand.Unity.Crypto.ChaCha20Poly1305.Key, Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
-  fullName.vb: Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt(System.Span(Of System.Byte), System.ReadOnlySpan(Of System.Byte), Algorand.Unity.Crypto.ChaCha20Poly1305.Key, Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
+  fullName: Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt(Span<System.Byte>, ReadOnlySpan<System.Byte>, Algorand.Unity.Crypto.ChaCha20Poly1305.Key, Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
+  fullName.vb: Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt(Span(Of System.Byte), ReadOnlySpan(Of System.Byte), Algorand.Unity.Crypto.ChaCha20Poly1305.Key, Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
   nameWithType: ChaCha20Poly1305.Decrypt(Span<Byte>, ReadOnlySpan<Byte>, ChaCha20Poly1305.Key, ChaCha20Poly1305.Nonce)
   nameWithType.vb: ChaCha20Poly1305.Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ChaCha20Poly1305.Key, ChaCha20Poly1305.Nonce)
-- uid: Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecureMemoryHandle,Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
+- uid: Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt(Span{System.Byte},ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecureMemoryHandle,Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
   name: Decrypt(Span<Byte>, ReadOnlySpan<Byte>, SecureMemoryHandle, ChaCha20Poly1305.Nonce)
-  href: api/Algorand.Unity.Crypto.ChaCha20Poly1305.html#Algorand_Unity_Crypto_ChaCha20Poly1305_Decrypt_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__Algorand_Unity_Crypto_SecureMemoryHandle_Algorand_Unity_Crypto_ChaCha20Poly1305_Nonce_
-  commentId: M:Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecureMemoryHandle,Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
+  href: api/Algorand.Unity.Crypto.ChaCha20Poly1305.html#Algorand_Unity_Crypto_ChaCha20Poly1305_Decrypt_Span_System_Byte__ReadOnlySpan_System_Byte__Algorand_Unity_Crypto_SecureMemoryHandle_Algorand_Unity_Crypto_ChaCha20Poly1305_Nonce_
+  commentId: M:Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt(Span{System.Byte},ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecureMemoryHandle,Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
   name.vb: Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecureMemoryHandle, ChaCha20Poly1305.Nonce)
-  fullName: Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt(System.Span<System.Byte>, System.ReadOnlySpan<System.Byte>, Algorand.Unity.Crypto.SecureMemoryHandle, Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
-  fullName.vb: Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt(System.Span(Of System.Byte), System.ReadOnlySpan(Of System.Byte), Algorand.Unity.Crypto.SecureMemoryHandle, Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
+  fullName: Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt(Span<System.Byte>, ReadOnlySpan<System.Byte>, Algorand.Unity.Crypto.SecureMemoryHandle, Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
+  fullName.vb: Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt(Span(Of System.Byte), ReadOnlySpan(Of System.Byte), Algorand.Unity.Crypto.SecureMemoryHandle, Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
   nameWithType: ChaCha20Poly1305.Decrypt(Span<Byte>, ReadOnlySpan<Byte>, SecureMemoryHandle, ChaCha20Poly1305.Nonce)
   nameWithType.vb: ChaCha20Poly1305.Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecureMemoryHandle, ChaCha20Poly1305.Nonce)
 - uid: Algorand.Unity.Crypto.ChaCha20Poly1305.Decrypt*
@@ -14018,22 +14018,22 @@ references:
   commentId: F:Algorand.Unity.Crypto.ChaCha20Poly1305.DecryptionError.VerificationFailed
   fullName: Algorand.Unity.Crypto.ChaCha20Poly1305.DecryptionError.VerificationFailed
   nameWithType: ChaCha20Poly1305.DecryptionError.VerificationFailed
-- uid: Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.ChaCha20Poly1305.Key,Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
+- uid: Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt(Span{System.Byte},ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.ChaCha20Poly1305.Key,Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
   name: Encrypt(Span<Byte>, ReadOnlySpan<Byte>, ChaCha20Poly1305.Key, ChaCha20Poly1305.Nonce)
-  href: api/Algorand.Unity.Crypto.ChaCha20Poly1305.html#Algorand_Unity_Crypto_ChaCha20Poly1305_Encrypt_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__Algorand_Unity_Crypto_ChaCha20Poly1305_Key_Algorand_Unity_Crypto_ChaCha20Poly1305_Nonce_
-  commentId: M:Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.ChaCha20Poly1305.Key,Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
+  href: api/Algorand.Unity.Crypto.ChaCha20Poly1305.html#Algorand_Unity_Crypto_ChaCha20Poly1305_Encrypt_Span_System_Byte__ReadOnlySpan_System_Byte__Algorand_Unity_Crypto_ChaCha20Poly1305_Key_Algorand_Unity_Crypto_ChaCha20Poly1305_Nonce_
+  commentId: M:Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt(Span{System.Byte},ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.ChaCha20Poly1305.Key,Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
   name.vb: Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ChaCha20Poly1305.Key, ChaCha20Poly1305.Nonce)
-  fullName: Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt(System.Span<System.Byte>, System.ReadOnlySpan<System.Byte>, Algorand.Unity.Crypto.ChaCha20Poly1305.Key, Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
-  fullName.vb: Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt(System.Span(Of System.Byte), System.ReadOnlySpan(Of System.Byte), Algorand.Unity.Crypto.ChaCha20Poly1305.Key, Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
+  fullName: Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt(Span<System.Byte>, ReadOnlySpan<System.Byte>, Algorand.Unity.Crypto.ChaCha20Poly1305.Key, Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
+  fullName.vb: Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt(Span(Of System.Byte), ReadOnlySpan(Of System.Byte), Algorand.Unity.Crypto.ChaCha20Poly1305.Key, Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
   nameWithType: ChaCha20Poly1305.Encrypt(Span<Byte>, ReadOnlySpan<Byte>, ChaCha20Poly1305.Key, ChaCha20Poly1305.Nonce)
   nameWithType.vb: ChaCha20Poly1305.Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), ChaCha20Poly1305.Key, ChaCha20Poly1305.Nonce)
-- uid: Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecureMemoryHandle,Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
+- uid: Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt(Span{System.Byte},ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecureMemoryHandle,Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
   name: Encrypt(Span<Byte>, ReadOnlySpan<Byte>, SecureMemoryHandle, ChaCha20Poly1305.Nonce)
-  href: api/Algorand.Unity.Crypto.ChaCha20Poly1305.html#Algorand_Unity_Crypto_ChaCha20Poly1305_Encrypt_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__Algorand_Unity_Crypto_SecureMemoryHandle_Algorand_Unity_Crypto_ChaCha20Poly1305_Nonce_
-  commentId: M:Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecureMemoryHandle,Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
+  href: api/Algorand.Unity.Crypto.ChaCha20Poly1305.html#Algorand_Unity_Crypto_ChaCha20Poly1305_Encrypt_Span_System_Byte__ReadOnlySpan_System_Byte__Algorand_Unity_Crypto_SecureMemoryHandle_Algorand_Unity_Crypto_ChaCha20Poly1305_Nonce_
+  commentId: M:Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt(Span{System.Byte},ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecureMemoryHandle,Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
   name.vb: Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecureMemoryHandle, ChaCha20Poly1305.Nonce)
-  fullName: Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt(System.Span<System.Byte>, System.ReadOnlySpan<System.Byte>, Algorand.Unity.Crypto.SecureMemoryHandle, Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
-  fullName.vb: Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt(System.Span(Of System.Byte), System.ReadOnlySpan(Of System.Byte), Algorand.Unity.Crypto.SecureMemoryHandle, Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
+  fullName: Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt(Span<System.Byte>, ReadOnlySpan<System.Byte>, Algorand.Unity.Crypto.SecureMemoryHandle, Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
+  fullName.vb: Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt(Span(Of System.Byte), ReadOnlySpan(Of System.Byte), Algorand.Unity.Crypto.SecureMemoryHandle, Algorand.Unity.Crypto.ChaCha20Poly1305.Nonce)
   nameWithType: ChaCha20Poly1305.Encrypt(Span<Byte>, ReadOnlySpan<Byte>, SecureMemoryHandle, ChaCha20Poly1305.Nonce)
   nameWithType.vb: ChaCha20Poly1305.Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecureMemoryHandle, ChaCha20Poly1305.Nonce)
 - uid: Algorand.Unity.Crypto.ChaCha20Poly1305.Encrypt*
@@ -14620,13 +14620,13 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.Ptr
   nameWithType: Ed25519.SecretKeyHandle.Ptr
-- uid: Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.Sign(System.ReadOnlySpan{System.Byte})
+- uid: Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.Sign(ReadOnlySpan{System.Byte})
   name: Sign(ReadOnlySpan<Byte>)
-  href: api/Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.html#Algorand_Unity_Crypto_Ed25519_SecretKeyHandle_Sign_System_ReadOnlySpan_System_Byte__
-  commentId: M:Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.Sign(System.ReadOnlySpan{System.Byte})
+  href: api/Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.html#Algorand_Unity_Crypto_Ed25519_SecretKeyHandle_Sign_ReadOnlySpan_System_Byte__
+  commentId: M:Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.Sign(ReadOnlySpan{System.Byte})
   name.vb: Sign(ReadOnlySpan(Of Byte))
-  fullName: Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.Sign(System.ReadOnlySpan<System.Byte>)
-  fullName.vb: Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.Sign(System.ReadOnlySpan(Of System.Byte))
+  fullName: Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.Sign(ReadOnlySpan<System.Byte>)
+  fullName.vb: Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.Sign(ReadOnlySpan(Of System.Byte))
   nameWithType: Ed25519.SecretKeyHandle.Sign(ReadOnlySpan<Byte>)
   nameWithType.vb: Ed25519.SecretKeyHandle.Sign(ReadOnlySpan(Of Byte))
 - uid: Algorand.Unity.Crypto.Ed25519.SecretKeyHandle.Sign*
@@ -14856,13 +14856,13 @@ references:
   commentId: F:Algorand.Unity.Crypto.Ed25519.Signature.SizeBytes
   fullName: Algorand.Unity.Crypto.Ed25519.Signature.SizeBytes
   nameWithType: Ed25519.Signature.SizeBytes
-- uid: Algorand.Unity.Crypto.Ed25519.Signature.Verify(System.ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.Ed25519.PublicKey)
+- uid: Algorand.Unity.Crypto.Ed25519.Signature.Verify(ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.Ed25519.PublicKey)
   name: Verify(ReadOnlySpan<Byte>, Ed25519.PublicKey)
-  href: api/Algorand.Unity.Crypto.Ed25519.Signature.html#Algorand_Unity_Crypto_Ed25519_Signature_Verify_System_ReadOnlySpan_System_Byte__Algorand_Unity_Crypto_Ed25519_PublicKey_
-  commentId: M:Algorand.Unity.Crypto.Ed25519.Signature.Verify(System.ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.Ed25519.PublicKey)
+  href: api/Algorand.Unity.Crypto.Ed25519.Signature.html#Algorand_Unity_Crypto_Ed25519_Signature_Verify_ReadOnlySpan_System_Byte__Algorand_Unity_Crypto_Ed25519_PublicKey_
+  commentId: M:Algorand.Unity.Crypto.Ed25519.Signature.Verify(ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.Ed25519.PublicKey)
   name.vb: Verify(ReadOnlySpan(Of Byte), Ed25519.PublicKey)
-  fullName: Algorand.Unity.Crypto.Ed25519.Signature.Verify(System.ReadOnlySpan<System.Byte>, Algorand.Unity.Crypto.Ed25519.PublicKey)
-  fullName.vb: Algorand.Unity.Crypto.Ed25519.Signature.Verify(System.ReadOnlySpan(Of System.Byte), Algorand.Unity.Crypto.Ed25519.PublicKey)
+  fullName: Algorand.Unity.Crypto.Ed25519.Signature.Verify(ReadOnlySpan<System.Byte>, Algorand.Unity.Crypto.Ed25519.PublicKey)
+  fullName.vb: Algorand.Unity.Crypto.Ed25519.Signature.Verify(ReadOnlySpan(Of System.Byte), Algorand.Unity.Crypto.Ed25519.PublicKey)
   nameWithType: Ed25519.Signature.Verify(ReadOnlySpan<Byte>, Ed25519.PublicKey)
   nameWithType.vb: Ed25519.Signature.Verify(ReadOnlySpan(Of Byte), Ed25519.PublicKey)
 - uid: Algorand.Unity.Crypto.Ed25519.Signature.Verify*
@@ -15345,13 +15345,13 @@ references:
   fullName.vb: Algorand.Unity.Crypto.Random.Bytes(Of T)()
   nameWithType: Random.Bytes<T>()
   nameWithType.vb: Random.Bytes(Of T)()
-- uid: Algorand.Unity.Crypto.Random.Randomize(System.Span{System.Byte})
+- uid: Algorand.Unity.Crypto.Random.Randomize(Span{System.Byte})
   name: Randomize(Span<Byte>)
-  href: api/Algorand.Unity.Crypto.Random.html#Algorand_Unity_Crypto_Random_Randomize_System_Span_System_Byte__
-  commentId: M:Algorand.Unity.Crypto.Random.Randomize(System.Span{System.Byte})
+  href: api/Algorand.Unity.Crypto.Random.html#Algorand_Unity_Crypto_Random_Randomize_Span_System_Byte__
+  commentId: M:Algorand.Unity.Crypto.Random.Randomize(Span{System.Byte})
   name.vb: Randomize(Span(Of Byte))
-  fullName: Algorand.Unity.Crypto.Random.Randomize(System.Span<System.Byte>)
-  fullName.vb: Algorand.Unity.Crypto.Random.Randomize(System.Span(Of System.Byte))
+  fullName: Algorand.Unity.Crypto.Random.Randomize(Span<System.Byte>)
+  fullName.vb: Algorand.Unity.Crypto.Random.Randomize(Span(Of System.Byte))
   nameWithType: Random.Randomize(Span<Byte>)
   nameWithType.vb: Random.Randomize(Span(Of Byte))
 - uid: Algorand.Unity.Crypto.Random.Randomize*
@@ -15389,15 +15389,15 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Crypto.SecretBox.CipherLength
   nameWithType: SecretBox.CipherLength
-- uid: Algorand.Unity.Crypto.SecretBox.Decrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecretBox.Key*,Algorand.Unity.Crypto.SecretBox.Nonce)
-  name: Decrypt(Span<Byte>, ReadOnlySpan<Byte>, SecretBox.Key*, SecretBox.Nonce)
-  href: api/Algorand.Unity.Crypto.SecretBox.html#Algorand_Unity_Crypto_SecretBox_Decrypt_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__Algorand_Unity_Crypto_SecretBox_Key__Algorand_Unity_Crypto_SecretBox_Nonce_
-  commentId: M:Algorand.Unity.Crypto.SecretBox.Decrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecretBox.Key*,Algorand.Unity.Crypto.SecretBox.Nonce)
-  name.vb: Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecretBox.Key*, SecretBox.Nonce)
-  fullName: Algorand.Unity.Crypto.SecretBox.Decrypt(System.Span<System.Byte>, System.ReadOnlySpan<System.Byte>, Algorand.Unity.Crypto.SecretBox.Key*, Algorand.Unity.Crypto.SecretBox.Nonce)
-  fullName.vb: Algorand.Unity.Crypto.SecretBox.Decrypt(System.Span(Of System.Byte), System.ReadOnlySpan(Of System.Byte), Algorand.Unity.Crypto.SecretBox.Key*, Algorand.Unity.Crypto.SecretBox.Nonce)
-  nameWithType: SecretBox.Decrypt(Span<Byte>, ReadOnlySpan<Byte>, SecretBox.Key*, SecretBox.Nonce)
-  nameWithType.vb: SecretBox.Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecretBox.Key*, SecretBox.Nonce)
+- uid: Algorand.Unity.Crypto.SecretBox.Decrypt(Span{System.Byte},ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecretBox.Nonce,Algorand.Unity.Crypto.SecretBox.Key@)
+  name: Decrypt(Span<Byte>, ReadOnlySpan<Byte>, SecretBox.Nonce, ref SecretBox.Key)
+  href: api/Algorand.Unity.Crypto.SecretBox.html#Algorand_Unity_Crypto_SecretBox_Decrypt_Span_System_Byte__ReadOnlySpan_System_Byte__Algorand_Unity_Crypto_SecretBox_Nonce_Algorand_Unity_Crypto_SecretBox_Key__
+  commentId: M:Algorand.Unity.Crypto.SecretBox.Decrypt(Span{System.Byte},ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecretBox.Nonce,Algorand.Unity.Crypto.SecretBox.Key@)
+  name.vb: Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecretBox.Nonce, ByRef SecretBox.Key)
+  fullName: Algorand.Unity.Crypto.SecretBox.Decrypt(Span<System.Byte>, ReadOnlySpan<System.Byte>, Algorand.Unity.Crypto.SecretBox.Nonce, ref Algorand.Unity.Crypto.SecretBox.Key)
+  fullName.vb: Algorand.Unity.Crypto.SecretBox.Decrypt(Span(Of System.Byte), ReadOnlySpan(Of System.Byte), Algorand.Unity.Crypto.SecretBox.Nonce, ByRef Algorand.Unity.Crypto.SecretBox.Key)
+  nameWithType: SecretBox.Decrypt(Span<Byte>, ReadOnlySpan<Byte>, SecretBox.Nonce, ref SecretBox.Key)
+  nameWithType.vb: SecretBox.Decrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecretBox.Nonce, ByRef SecretBox.Key)
 - uid: Algorand.Unity.Crypto.SecretBox.Decrypt*
   name: Decrypt
   href: api/Algorand.Unity.Crypto.SecretBox.html#Algorand_Unity_Crypto_SecretBox_Decrypt_
@@ -15423,15 +15423,15 @@ references:
   commentId: F:Algorand.Unity.Crypto.SecretBox.DecryptError.None
   fullName: Algorand.Unity.Crypto.SecretBox.DecryptError.None
   nameWithType: SecretBox.DecryptError.None
-- uid: Algorand.Unity.Crypto.SecretBox.Encrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecretBox.Key*,Algorand.Unity.Crypto.SecretBox.Nonce@)
-  name: Encrypt(Span<Byte>, ReadOnlySpan<Byte>, SecretBox.Key*, out SecretBox.Nonce)
-  href: api/Algorand.Unity.Crypto.SecretBox.html#Algorand_Unity_Crypto_SecretBox_Encrypt_System_Span_System_Byte__System_ReadOnlySpan_System_Byte__Algorand_Unity_Crypto_SecretBox_Key__Algorand_Unity_Crypto_SecretBox_Nonce__
-  commentId: M:Algorand.Unity.Crypto.SecretBox.Encrypt(System.Span{System.Byte},System.ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecretBox.Key*,Algorand.Unity.Crypto.SecretBox.Nonce@)
-  name.vb: Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecretBox.Key*, ByRef SecretBox.Nonce)
-  fullName: Algorand.Unity.Crypto.SecretBox.Encrypt(System.Span<System.Byte>, System.ReadOnlySpan<System.Byte>, Algorand.Unity.Crypto.SecretBox.Key*, out Algorand.Unity.Crypto.SecretBox.Nonce)
-  fullName.vb: Algorand.Unity.Crypto.SecretBox.Encrypt(System.Span(Of System.Byte), System.ReadOnlySpan(Of System.Byte), Algorand.Unity.Crypto.SecretBox.Key*, ByRef Algorand.Unity.Crypto.SecretBox.Nonce)
-  nameWithType: SecretBox.Encrypt(Span<Byte>, ReadOnlySpan<Byte>, SecretBox.Key*, out SecretBox.Nonce)
-  nameWithType.vb: SecretBox.Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecretBox.Key*, ByRef SecretBox.Nonce)
+- uid: Algorand.Unity.Crypto.SecretBox.Encrypt(Span{System.Byte},ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecretBox.Nonce,Algorand.Unity.Crypto.SecretBox.Key@)
+  name: Encrypt(Span<Byte>, ReadOnlySpan<Byte>, SecretBox.Nonce, ref SecretBox.Key)
+  href: api/Algorand.Unity.Crypto.SecretBox.html#Algorand_Unity_Crypto_SecretBox_Encrypt_Span_System_Byte__ReadOnlySpan_System_Byte__Algorand_Unity_Crypto_SecretBox_Nonce_Algorand_Unity_Crypto_SecretBox_Key__
+  commentId: M:Algorand.Unity.Crypto.SecretBox.Encrypt(Span{System.Byte},ReadOnlySpan{System.Byte},Algorand.Unity.Crypto.SecretBox.Nonce,Algorand.Unity.Crypto.SecretBox.Key@)
+  name.vb: Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecretBox.Nonce, ByRef SecretBox.Key)
+  fullName: Algorand.Unity.Crypto.SecretBox.Encrypt(Span<System.Byte>, ReadOnlySpan<System.Byte>, Algorand.Unity.Crypto.SecretBox.Nonce, ref Algorand.Unity.Crypto.SecretBox.Key)
+  fullName.vb: Algorand.Unity.Crypto.SecretBox.Encrypt(Span(Of System.Byte), ReadOnlySpan(Of System.Byte), Algorand.Unity.Crypto.SecretBox.Nonce, ByRef Algorand.Unity.Crypto.SecretBox.Key)
+  nameWithType: SecretBox.Encrypt(Span<Byte>, ReadOnlySpan<Byte>, SecretBox.Nonce, ref SecretBox.Key)
+  nameWithType.vb: SecretBox.Encrypt(Span(Of Byte), ReadOnlySpan(Of Byte), SecretBox.Nonce, ByRef SecretBox.Key)
 - uid: Algorand.Unity.Crypto.SecretBox.Encrypt*
   name: Encrypt
   href: api/Algorand.Unity.Crypto.SecretBox.html#Algorand_Unity_Crypto_SecretBox_Encrypt_
@@ -15469,13 +15469,13 @@ references:
   commentId: F:Algorand.Unity.Crypto.SecretBox.Key.bytes
   fullName: Algorand.Unity.Crypto.SecretBox.Key.bytes
   nameWithType: SecretBox.Key.bytes
-- uid: Algorand.Unity.Crypto.SecretBox.Key.op_Implicit(Algorand.Unity.Crypto.SecretBox.Key)~System.Span{System.Byte}
+- uid: Algorand.Unity.Crypto.SecretBox.Key.op_Implicit(Algorand.Unity.Crypto.SecretBox.Key)~Span{System.Byte}
   name: Implicit(SecretBox.Key to Span<Byte>)
-  href: api/Algorand.Unity.Crypto.SecretBox.Key.html#Algorand_Unity_Crypto_SecretBox_Key_op_Implicit_Algorand_Unity_Crypto_SecretBox_Key__System_Span_System_Byte_
-  commentId: M:Algorand.Unity.Crypto.SecretBox.Key.op_Implicit(Algorand.Unity.Crypto.SecretBox.Key)~System.Span{System.Byte}
+  href: api/Algorand.Unity.Crypto.SecretBox.Key.html#Algorand_Unity_Crypto_SecretBox_Key_op_Implicit_Algorand_Unity_Crypto_SecretBox_Key__Span_System_Byte_
+  commentId: M:Algorand.Unity.Crypto.SecretBox.Key.op_Implicit(Algorand.Unity.Crypto.SecretBox.Key)~Span{System.Byte}
   name.vb: Widening(SecretBox.Key to Span(Of Byte))
-  fullName: Algorand.Unity.Crypto.SecretBox.Key.Implicit(Algorand.Unity.Crypto.SecretBox.Key to System.Span<System.Byte>)
-  fullName.vb: Algorand.Unity.Crypto.SecretBox.Key.Widening(Algorand.Unity.Crypto.SecretBox.Key to System.Span(Of System.Byte))
+  fullName: Algorand.Unity.Crypto.SecretBox.Key.Implicit(Algorand.Unity.Crypto.SecretBox.Key to Span<System.Byte>)
+  fullName.vb: Algorand.Unity.Crypto.SecretBox.Key.Widening(Algorand.Unity.Crypto.SecretBox.Key to Span(Of System.Byte))
   nameWithType: SecretBox.Key.Implicit(SecretBox.Key to Span<Byte>)
   nameWithType.vb: SecretBox.Key.Widening(SecretBox.Key to Span(Of Byte))
 - uid: Algorand.Unity.Crypto.SecretBox.Key.op_Implicit*
@@ -15506,13 +15506,13 @@ references:
   commentId: F:Algorand.Unity.Crypto.SecretBox.Mac.bytes
   fullName: Algorand.Unity.Crypto.SecretBox.Mac.bytes
   nameWithType: SecretBox.Mac.bytes
-- uid: Algorand.Unity.Crypto.SecretBox.Mac.op_Implicit(Algorand.Unity.Crypto.SecretBox.Mac)~System.Span{System.Byte}
+- uid: Algorand.Unity.Crypto.SecretBox.Mac.op_Implicit(Algorand.Unity.Crypto.SecretBox.Mac)~Span{System.Byte}
   name: Implicit(SecretBox.Mac to Span<Byte>)
-  href: api/Algorand.Unity.Crypto.SecretBox.Mac.html#Algorand_Unity_Crypto_SecretBox_Mac_op_Implicit_Algorand_Unity_Crypto_SecretBox_Mac__System_Span_System_Byte_
-  commentId: M:Algorand.Unity.Crypto.SecretBox.Mac.op_Implicit(Algorand.Unity.Crypto.SecretBox.Mac)~System.Span{System.Byte}
+  href: api/Algorand.Unity.Crypto.SecretBox.Mac.html#Algorand_Unity_Crypto_SecretBox_Mac_op_Implicit_Algorand_Unity_Crypto_SecretBox_Mac__Span_System_Byte_
+  commentId: M:Algorand.Unity.Crypto.SecretBox.Mac.op_Implicit(Algorand.Unity.Crypto.SecretBox.Mac)~Span{System.Byte}
   name.vb: Widening(SecretBox.Mac to Span(Of Byte))
-  fullName: Algorand.Unity.Crypto.SecretBox.Mac.Implicit(Algorand.Unity.Crypto.SecretBox.Mac to System.Span<System.Byte>)
-  fullName.vb: Algorand.Unity.Crypto.SecretBox.Mac.Widening(Algorand.Unity.Crypto.SecretBox.Mac to System.Span(Of System.Byte))
+  fullName: Algorand.Unity.Crypto.SecretBox.Mac.Implicit(Algorand.Unity.Crypto.SecretBox.Mac to Span<System.Byte>)
+  fullName.vb: Algorand.Unity.Crypto.SecretBox.Mac.Widening(Algorand.Unity.Crypto.SecretBox.Mac to Span(Of System.Byte))
   nameWithType: SecretBox.Mac.Implicit(SecretBox.Mac to Span<Byte>)
   nameWithType.vb: SecretBox.Mac.Widening(SecretBox.Mac to Span(Of Byte))
 - uid: Algorand.Unity.Crypto.SecretBox.Mac.op_Implicit*
@@ -15556,13 +15556,13 @@ references:
   commentId: F:Algorand.Unity.Crypto.SecretBox.Nonce.bytes
   fullName: Algorand.Unity.Crypto.SecretBox.Nonce.bytes
   nameWithType: SecretBox.Nonce.bytes
-- uid: Algorand.Unity.Crypto.SecretBox.Nonce.op_Implicit(Algorand.Unity.Crypto.SecretBox.Nonce)~System.Span{System.Byte}
+- uid: Algorand.Unity.Crypto.SecretBox.Nonce.op_Implicit(Algorand.Unity.Crypto.SecretBox.Nonce)~Span{System.Byte}
   name: Implicit(SecretBox.Nonce to Span<Byte>)
-  href: api/Algorand.Unity.Crypto.SecretBox.Nonce.html#Algorand_Unity_Crypto_SecretBox_Nonce_op_Implicit_Algorand_Unity_Crypto_SecretBox_Nonce__System_Span_System_Byte_
-  commentId: M:Algorand.Unity.Crypto.SecretBox.Nonce.op_Implicit(Algorand.Unity.Crypto.SecretBox.Nonce)~System.Span{System.Byte}
+  href: api/Algorand.Unity.Crypto.SecretBox.Nonce.html#Algorand_Unity_Crypto_SecretBox_Nonce_op_Implicit_Algorand_Unity_Crypto_SecretBox_Nonce__Span_System_Byte_
+  commentId: M:Algorand.Unity.Crypto.SecretBox.Nonce.op_Implicit(Algorand.Unity.Crypto.SecretBox.Nonce)~Span{System.Byte}
   name.vb: Widening(SecretBox.Nonce to Span(Of Byte))
-  fullName: Algorand.Unity.Crypto.SecretBox.Nonce.Implicit(Algorand.Unity.Crypto.SecretBox.Nonce to System.Span<System.Byte>)
-  fullName.vb: Algorand.Unity.Crypto.SecretBox.Nonce.Widening(Algorand.Unity.Crypto.SecretBox.Nonce to System.Span(Of System.Byte))
+  fullName: Algorand.Unity.Crypto.SecretBox.Nonce.Implicit(Algorand.Unity.Crypto.SecretBox.Nonce to Span<System.Byte>)
+  fullName.vb: Algorand.Unity.Crypto.SecretBox.Nonce.Widening(Algorand.Unity.Crypto.SecretBox.Nonce to Span(Of System.Byte))
   nameWithType: SecretBox.Nonce.Implicit(SecretBox.Nonce to Span<Byte>)
   nameWithType.vb: SecretBox.Nonce.Widening(SecretBox.Nonce to Span(Of Byte))
 - uid: Algorand.Unity.Crypto.SecretBox.Nonce.op_Implicit*
@@ -15587,11 +15587,11 @@ references:
   commentId: T:Algorand.Unity.Crypto.SecureMemoryHandle
   fullName: Algorand.Unity.Crypto.SecureMemoryHandle
   nameWithType: SecureMemoryHandle
-- uid: Algorand.Unity.Crypto.SecureMemoryHandle.Create(System.UIntPtr)
+- uid: Algorand.Unity.Crypto.SecureMemoryHandle.Create(UIntPtr)
   name: Create(UIntPtr)
-  href: api/Algorand.Unity.Crypto.SecureMemoryHandle.html#Algorand_Unity_Crypto_SecureMemoryHandle_Create_System_UIntPtr_
-  commentId: M:Algorand.Unity.Crypto.SecureMemoryHandle.Create(System.UIntPtr)
-  fullName: Algorand.Unity.Crypto.SecureMemoryHandle.Create(System.UIntPtr)
+  href: api/Algorand.Unity.Crypto.SecureMemoryHandle.html#Algorand_Unity_Crypto_SecureMemoryHandle_Create_UIntPtr_
+  commentId: M:Algorand.Unity.Crypto.SecureMemoryHandle.Create(UIntPtr)
+  fullName: Algorand.Unity.Crypto.SecureMemoryHandle.Create(UIntPtr)
   nameWithType: SecureMemoryHandle.Create(UIntPtr)
 - uid: Algorand.Unity.Crypto.SecureMemoryHandle.Create*
   name: Create
@@ -15645,22 +15645,22 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Crypto.SecureMemoryHandle.IsCreated
   nameWithType: SecureMemoryHandle.IsCreated
-- uid: Algorand.Unity.Crypto.SecureMemoryHandle.op_Implicit(Algorand.Unity.Crypto.SecureMemoryHandle)~System.IntPtr
+- uid: Algorand.Unity.Crypto.SecureMemoryHandle.op_Implicit(Algorand.Unity.Crypto.SecureMemoryHandle)~IntPtr
   name: Implicit(SecureMemoryHandle to IntPtr)
-  href: api/Algorand.Unity.Crypto.SecureMemoryHandle.html#Algorand_Unity_Crypto_SecureMemoryHandle_op_Implicit_Algorand_Unity_Crypto_SecureMemoryHandle__System_IntPtr
-  commentId: M:Algorand.Unity.Crypto.SecureMemoryHandle.op_Implicit(Algorand.Unity.Crypto.SecureMemoryHandle)~System.IntPtr
+  href: api/Algorand.Unity.Crypto.SecureMemoryHandle.html#Algorand_Unity_Crypto_SecureMemoryHandle_op_Implicit_Algorand_Unity_Crypto_SecureMemoryHandle__IntPtr
+  commentId: M:Algorand.Unity.Crypto.SecureMemoryHandle.op_Implicit(Algorand.Unity.Crypto.SecureMemoryHandle)~IntPtr
   name.vb: Widening(SecureMemoryHandle to IntPtr)
-  fullName: Algorand.Unity.Crypto.SecureMemoryHandle.Implicit(Algorand.Unity.Crypto.SecureMemoryHandle to System.IntPtr)
-  fullName.vb: Algorand.Unity.Crypto.SecureMemoryHandle.Widening(Algorand.Unity.Crypto.SecureMemoryHandle to System.IntPtr)
+  fullName: Algorand.Unity.Crypto.SecureMemoryHandle.Implicit(Algorand.Unity.Crypto.SecureMemoryHandle to IntPtr)
+  fullName.vb: Algorand.Unity.Crypto.SecureMemoryHandle.Widening(Algorand.Unity.Crypto.SecureMemoryHandle to IntPtr)
   nameWithType: SecureMemoryHandle.Implicit(SecureMemoryHandle to IntPtr)
   nameWithType.vb: SecureMemoryHandle.Widening(SecureMemoryHandle to IntPtr)
-- uid: Algorand.Unity.Crypto.SecureMemoryHandle.op_Implicit(System.IntPtr)~Algorand.Unity.Crypto.SecureMemoryHandle
+- uid: Algorand.Unity.Crypto.SecureMemoryHandle.op_Implicit(IntPtr)~Algorand.Unity.Crypto.SecureMemoryHandle
   name: Implicit(IntPtr to SecureMemoryHandle)
-  href: api/Algorand.Unity.Crypto.SecureMemoryHandle.html#Algorand_Unity_Crypto_SecureMemoryHandle_op_Implicit_System_IntPtr__Algorand_Unity_Crypto_SecureMemoryHandle
-  commentId: M:Algorand.Unity.Crypto.SecureMemoryHandle.op_Implicit(System.IntPtr)~Algorand.Unity.Crypto.SecureMemoryHandle
+  href: api/Algorand.Unity.Crypto.SecureMemoryHandle.html#Algorand_Unity_Crypto_SecureMemoryHandle_op_Implicit_IntPtr__Algorand_Unity_Crypto_SecureMemoryHandle
+  commentId: M:Algorand.Unity.Crypto.SecureMemoryHandle.op_Implicit(IntPtr)~Algorand.Unity.Crypto.SecureMemoryHandle
   name.vb: Widening(IntPtr to SecureMemoryHandle)
-  fullName: Algorand.Unity.Crypto.SecureMemoryHandle.Implicit(System.IntPtr to Algorand.Unity.Crypto.SecureMemoryHandle)
-  fullName.vb: Algorand.Unity.Crypto.SecureMemoryHandle.Widening(System.IntPtr to Algorand.Unity.Crypto.SecureMemoryHandle)
+  fullName: Algorand.Unity.Crypto.SecureMemoryHandle.Implicit(IntPtr to Algorand.Unity.Crypto.SecureMemoryHandle)
+  fullName.vb: Algorand.Unity.Crypto.SecureMemoryHandle.Widening(IntPtr to Algorand.Unity.Crypto.SecureMemoryHandle)
   nameWithType: SecureMemoryHandle.Implicit(IntPtr to SecureMemoryHandle)
   nameWithType.vb: SecureMemoryHandle.Widening(IntPtr to SecureMemoryHandle)
 - uid: Algorand.Unity.Crypto.SecureMemoryHandle.op_Implicit*
@@ -15731,13 +15731,13 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Crypto.Sha256.GetUnsafePtr
   nameWithType: Sha256.GetUnsafePtr
-- uid: Algorand.Unity.Crypto.Sha256.Hash(System.ReadOnlySpan{System.Byte})
+- uid: Algorand.Unity.Crypto.Sha256.Hash(ReadOnlySpan{System.Byte})
   name: Hash(ReadOnlySpan<Byte>)
-  href: api/Algorand.Unity.Crypto.Sha256.html#Algorand_Unity_Crypto_Sha256_Hash_System_ReadOnlySpan_System_Byte__
-  commentId: M:Algorand.Unity.Crypto.Sha256.Hash(System.ReadOnlySpan{System.Byte})
+  href: api/Algorand.Unity.Crypto.Sha256.html#Algorand_Unity_Crypto_Sha256_Hash_ReadOnlySpan_System_Byte__
+  commentId: M:Algorand.Unity.Crypto.Sha256.Hash(ReadOnlySpan{System.Byte})
   name.vb: Hash(ReadOnlySpan(Of Byte))
-  fullName: Algorand.Unity.Crypto.Sha256.Hash(System.ReadOnlySpan<System.Byte>)
-  fullName.vb: Algorand.Unity.Crypto.Sha256.Hash(System.ReadOnlySpan(Of System.Byte))
+  fullName: Algorand.Unity.Crypto.Sha256.Hash(ReadOnlySpan<System.Byte>)
+  fullName.vb: Algorand.Unity.Crypto.Sha256.Hash(ReadOnlySpan(Of System.Byte))
   nameWithType: Sha256.Hash(ReadOnlySpan<Byte>)
   nameWithType.vb: Sha256.Hash(ReadOnlySpan(Of Byte))
 - uid: Algorand.Unity.Crypto.Sha256.Hash*
@@ -15797,21 +15797,21 @@ references:
   fullName.vb: Algorand.Unity.Crypto.Sha512.Hash256Truncated(NativeArray(Of System.Byte).ReadOnly)
   nameWithType: Sha512.Hash256Truncated(NativeArray<Byte>.ReadOnly)
   nameWithType.vb: Sha512.Hash256Truncated(NativeArray(Of Byte).ReadOnly)
+- uid: Algorand.Unity.Crypto.Sha512.Hash256Truncated(ReadOnlySpan{System.Byte})
+  name: Hash256Truncated(ReadOnlySpan<Byte>)
+  href: api/Algorand.Unity.Crypto.Sha512.html#Algorand_Unity_Crypto_Sha512_Hash256Truncated_ReadOnlySpan_System_Byte__
+  commentId: M:Algorand.Unity.Crypto.Sha512.Hash256Truncated(ReadOnlySpan{System.Byte})
+  name.vb: Hash256Truncated(ReadOnlySpan(Of Byte))
+  fullName: Algorand.Unity.Crypto.Sha512.Hash256Truncated(ReadOnlySpan<System.Byte>)
+  fullName.vb: Algorand.Unity.Crypto.Sha512.Hash256Truncated(ReadOnlySpan(Of System.Byte))
+  nameWithType: Sha512.Hash256Truncated(ReadOnlySpan<Byte>)
+  nameWithType.vb: Sha512.Hash256Truncated(ReadOnlySpan(Of Byte))
 - uid: Algorand.Unity.Crypto.Sha512.Hash256Truncated(System.Byte*,System.Int32)
   name: Hash256Truncated(Byte*, Int32)
   href: api/Algorand.Unity.Crypto.Sha512.html#Algorand_Unity_Crypto_Sha512_Hash256Truncated_System_Byte__System_Int32_
   commentId: M:Algorand.Unity.Crypto.Sha512.Hash256Truncated(System.Byte*,System.Int32)
   fullName: Algorand.Unity.Crypto.Sha512.Hash256Truncated(System.Byte*, System.Int32)
   nameWithType: Sha512.Hash256Truncated(Byte*, Int32)
-- uid: Algorand.Unity.Crypto.Sha512.Hash256Truncated(System.ReadOnlySpan{System.Byte})
-  name: Hash256Truncated(ReadOnlySpan<Byte>)
-  href: api/Algorand.Unity.Crypto.Sha512.html#Algorand_Unity_Crypto_Sha512_Hash256Truncated_System_ReadOnlySpan_System_Byte__
-  commentId: M:Algorand.Unity.Crypto.Sha512.Hash256Truncated(System.ReadOnlySpan{System.Byte})
-  name.vb: Hash256Truncated(ReadOnlySpan(Of Byte))
-  fullName: Algorand.Unity.Crypto.Sha512.Hash256Truncated(System.ReadOnlySpan<System.Byte>)
-  fullName.vb: Algorand.Unity.Crypto.Sha512.Hash256Truncated(System.ReadOnlySpan(Of System.Byte))
-  nameWithType: Sha512.Hash256Truncated(ReadOnlySpan<Byte>)
-  nameWithType.vb: Sha512.Hash256Truncated(ReadOnlySpan(Of Byte))
 - uid: Algorand.Unity.Crypto.Sha512.Hash256Truncated*
   name: Hash256Truncated
   href: api/Algorand.Unity.Crypto.Sha512.html#Algorand_Unity_Crypto_Sha512_Hash256Truncated_
@@ -16039,6 +16039,23 @@ references:
   fullName.vb: Algorand.Unity.Crypto.SodiumArray(Of T).SodiumArray
   nameWithType: SodiumArray<T>.SodiumArray
   nameWithType.vb: SodiumArray(Of T).SodiumArray
+- uid: Algorand.Unity.Crypto.SodiumArray`1.AsByteSpan
+  name: AsByteSpan()
+  href: api/Algorand.Unity.Crypto.SodiumArray-1.html#Algorand_Unity_Crypto_SodiumArray_1_AsByteSpan
+  commentId: M:Algorand.Unity.Crypto.SodiumArray`1.AsByteSpan
+  fullName: Algorand.Unity.Crypto.SodiumArray<T>.AsByteSpan()
+  fullName.vb: Algorand.Unity.Crypto.SodiumArray(Of T).AsByteSpan()
+  nameWithType: SodiumArray<T>.AsByteSpan()
+  nameWithType.vb: SodiumArray(Of T).AsByteSpan()
+- uid: Algorand.Unity.Crypto.SodiumArray`1.AsByteSpan*
+  name: AsByteSpan
+  href: api/Algorand.Unity.Crypto.SodiumArray-1.html#Algorand_Unity_Crypto_SodiumArray_1_AsByteSpan_
+  commentId: Overload:Algorand.Unity.Crypto.SodiumArray`1.AsByteSpan
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SodiumArray<T>.AsByteSpan
+  fullName.vb: Algorand.Unity.Crypto.SodiumArray(Of T).AsByteSpan
+  nameWithType: SodiumArray<T>.AsByteSpan
+  nameWithType.vb: SodiumArray(Of T).AsByteSpan
 - uid: Algorand.Unity.Crypto.SodiumArray`1.AsSpan
   name: AsSpan()
   href: api/Algorand.Unity.Crypto.SodiumArray-1.html#Algorand_Unity_Crypto_SodiumArray_1_AsSpan
@@ -16269,6 +16286,23 @@ references:
   fullName.vb: Algorand.Unity.Crypto.SodiumReference(Of T).IsCreated
   nameWithType: SodiumReference<T>.IsCreated
   nameWithType.vb: SodiumReference(Of T).IsCreated
+- uid: Algorand.Unity.Crypto.SodiumReference`1.RefValue
+  name: RefValue
+  href: api/Algorand.Unity.Crypto.SodiumReference-1.html#Algorand_Unity_Crypto_SodiumReference_1_RefValue
+  commentId: P:Algorand.Unity.Crypto.SodiumReference`1.RefValue
+  fullName: Algorand.Unity.Crypto.SodiumReference<T>.RefValue
+  fullName.vb: Algorand.Unity.Crypto.SodiumReference(Of T).RefValue
+  nameWithType: SodiumReference<T>.RefValue
+  nameWithType.vb: SodiumReference(Of T).RefValue
+- uid: Algorand.Unity.Crypto.SodiumReference`1.RefValue*
+  name: RefValue
+  href: api/Algorand.Unity.Crypto.SodiumReference-1.html#Algorand_Unity_Crypto_SodiumReference_1_RefValue_
+  commentId: Overload:Algorand.Unity.Crypto.SodiumReference`1.RefValue
+  isSpec: "True"
+  fullName: Algorand.Unity.Crypto.SodiumReference<T>.RefValue
+  fullName.vb: Algorand.Unity.Crypto.SodiumReference(Of T).RefValue
+  nameWithType: SodiumReference<T>.RefValue
+  nameWithType.vb: SodiumReference(Of T).RefValue
 - uid: Algorand.Unity.Crypto.SodiumReference`1.Value
   name: Value
   href: api/Algorand.Unity.Crypto.SodiumReference-1.html#Algorand_Unity_Crypto_SodiumReference_1_Value
@@ -16292,13 +16326,13 @@ references:
   commentId: T:Algorand.Unity.Crypto.SodiumString
   fullName: Algorand.Unity.Crypto.SodiumString
   nameWithType: SodiumString
-- uid: Algorand.Unity.Crypto.SodiumString.#ctor(System.ReadOnlySpan{System.Char})
+- uid: Algorand.Unity.Crypto.SodiumString.#ctor(ReadOnlySpan{System.Char})
   name: SodiumString(ReadOnlySpan<Char>)
-  href: api/Algorand.Unity.Crypto.SodiumString.html#Algorand_Unity_Crypto_SodiumString__ctor_System_ReadOnlySpan_System_Char__
-  commentId: M:Algorand.Unity.Crypto.SodiumString.#ctor(System.ReadOnlySpan{System.Char})
+  href: api/Algorand.Unity.Crypto.SodiumString.html#Algorand_Unity_Crypto_SodiumString__ctor_ReadOnlySpan_System_Char__
+  commentId: M:Algorand.Unity.Crypto.SodiumString.#ctor(ReadOnlySpan{System.Char})
   name.vb: SodiumString(ReadOnlySpan(Of Char))
-  fullName: Algorand.Unity.Crypto.SodiumString.SodiumString(System.ReadOnlySpan<System.Char>)
-  fullName.vb: Algorand.Unity.Crypto.SodiumString.SodiumString(System.ReadOnlySpan(Of System.Char))
+  fullName: Algorand.Unity.Crypto.SodiumString.SodiumString(ReadOnlySpan<System.Char>)
+  fullName.vb: Algorand.Unity.Crypto.SodiumString.SodiumString(ReadOnlySpan(Of System.Char))
   nameWithType: SodiumString.SodiumString(ReadOnlySpan<Char>)
   nameWithType.vb: SodiumString.SodiumString(ReadOnlySpan(Of Char))
 - uid: Algorand.Unity.Crypto.SodiumString.#ctor*
@@ -28180,13 +28214,13 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.IIndexerClient.LookupAccountCreatedAssets
   nameWithType: IIndexerClient.LookupAccountCreatedAssets
-- uid: Algorand.Unity.IIndexerClient.LookupAccountTransactions(System.String,System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},System.DateTime,System.String,Algorand.Unity.Optional{System.UInt64},System.DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.Optional{System.UInt64})
+- uid: Algorand.Unity.IIndexerClient.LookupAccountTransactions(System.String,System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},DateTime,System.String,Algorand.Unity.Optional{System.UInt64},DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.Optional{System.UInt64})
   name: LookupAccountTransactions(String, Byte[], Optional<Boolean>, String, Optional<UInt64>, DateTime, String, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, SignatureType, String, Optional<UInt64>)
-  href: api/Algorand.Unity.IIndexerClient.html#Algorand_Unity_IIndexerClient_LookupAccountTransactions_System_String_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__System_DateTime_System_String_Algorand_Unity_Optional_System_UInt64__System_DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_Optional_System_UInt64__
-  commentId: M:Algorand.Unity.IIndexerClient.LookupAccountTransactions(System.String,System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},System.DateTime,System.String,Algorand.Unity.Optional{System.UInt64},System.DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.Optional{System.UInt64})
+  href: api/Algorand.Unity.IIndexerClient.html#Algorand_Unity_IIndexerClient_LookupAccountTransactions_System_String_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__DateTime_System_String_Algorand_Unity_Optional_System_UInt64__DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_Optional_System_UInt64__
+  commentId: M:Algorand.Unity.IIndexerClient.LookupAccountTransactions(System.String,System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},DateTime,System.String,Algorand.Unity.Optional{System.UInt64},DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.Optional{System.UInt64})
   name.vb: LookupAccountTransactions(String, Byte(), Optional(Of Boolean), String, Optional(Of UInt64), DateTime, String, Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), SignatureType, String, Optional(Of UInt64))
-  fullName: Algorand.Unity.IIndexerClient.LookupAccountTransactions(System.String, System.Byte[], Algorand.Unity.Optional<System.Boolean>, System.String, Algorand.Unity.Optional<System.UInt64>, System.DateTime, System.String, Algorand.Unity.Optional<System.UInt64>, System.DateTime, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.SignatureType, System.String, Algorand.Unity.Optional<System.UInt64>)
-  fullName.vb: Algorand.Unity.IIndexerClient.LookupAccountTransactions(System.String, System.Byte(), Algorand.Unity.Optional(Of System.Boolean), System.String, Algorand.Unity.Optional(Of System.UInt64), System.DateTime, System.String, Algorand.Unity.Optional(Of System.UInt64), System.DateTime, Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.SignatureType, System.String, Algorand.Unity.Optional(Of System.UInt64))
+  fullName: Algorand.Unity.IIndexerClient.LookupAccountTransactions(System.String, System.Byte[], Algorand.Unity.Optional<System.Boolean>, System.String, Algorand.Unity.Optional<System.UInt64>, DateTime, System.String, Algorand.Unity.Optional<System.UInt64>, DateTime, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.SignatureType, System.String, Algorand.Unity.Optional<System.UInt64>)
+  fullName.vb: Algorand.Unity.IIndexerClient.LookupAccountTransactions(System.String, System.Byte(), Algorand.Unity.Optional(Of System.Boolean), System.String, Algorand.Unity.Optional(Of System.UInt64), DateTime, System.String, Algorand.Unity.Optional(Of System.UInt64), DateTime, Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.SignatureType, System.String, Algorand.Unity.Optional(Of System.UInt64))
   nameWithType: IIndexerClient.LookupAccountTransactions(String, Byte[], Optional<Boolean>, String, Optional<UInt64>, DateTime, String, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, SignatureType, String, Optional<UInt64>)
   nameWithType.vb: IIndexerClient.LookupAccountTransactions(String, Byte(), Optional(Of Boolean), String, Optional(Of UInt64), DateTime, String, Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), SignatureType, String, Optional(Of UInt64))
 - uid: Algorand.Unity.IIndexerClient.LookupAccountTransactions*
@@ -28273,13 +28307,13 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.IIndexerClient.LookupAssetByID
   nameWithType: IIndexerClient.LookupAssetByID
-- uid: Algorand.Unity.IIndexerClient.LookupAssetTransactions(System.UInt64,System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},System.DateTime,System.String,Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},System.DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Address,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.AddressRole,Algorand.Unity.Optional{System.UInt64})
+- uid: Algorand.Unity.IIndexerClient.LookupAssetTransactions(System.UInt64,System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},DateTime,System.String,Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Address,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.AddressRole,Algorand.Unity.Optional{System.UInt64})
   name: LookupAssetTransactions(UInt64, Byte[], Optional<Boolean>, String, Optional<UInt64>, DateTime, String, Optional<Boolean>, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Address, Optional<UInt64>, SignatureType, String, AddressRole, Optional<UInt64>)
-  href: api/Algorand.Unity.IIndexerClient.html#Algorand_Unity_IIndexerClient_LookupAssetTransactions_System_UInt64_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__System_DateTime_System_String_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__System_DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_AddressRole_Algorand_Unity_Optional_System_UInt64__
-  commentId: M:Algorand.Unity.IIndexerClient.LookupAssetTransactions(System.UInt64,System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},System.DateTime,System.String,Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},System.DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Address,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.AddressRole,Algorand.Unity.Optional{System.UInt64})
+  href: api/Algorand.Unity.IIndexerClient.html#Algorand_Unity_IIndexerClient_LookupAssetTransactions_System_UInt64_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__DateTime_System_String_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_AddressRole_Algorand_Unity_Optional_System_UInt64__
+  commentId: M:Algorand.Unity.IIndexerClient.LookupAssetTransactions(System.UInt64,System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},DateTime,System.String,Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Address,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.AddressRole,Algorand.Unity.Optional{System.UInt64})
   name.vb: LookupAssetTransactions(UInt64, Byte(), Optional(Of Boolean), String, Optional(Of UInt64), DateTime, String, Optional(Of Boolean), Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Address, Optional(Of UInt64), SignatureType, String, AddressRole, Optional(Of UInt64))
-  fullName: Algorand.Unity.IIndexerClient.LookupAssetTransactions(System.UInt64, System.Byte[], Algorand.Unity.Optional<System.Boolean>, System.String, Algorand.Unity.Optional<System.UInt64>, System.DateTime, System.String, Algorand.Unity.Optional<System.Boolean>, Algorand.Unity.Optional<System.UInt64>, System.DateTime, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Address, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.SignatureType, System.String, Algorand.Unity.AddressRole, Algorand.Unity.Optional<System.UInt64>)
-  fullName.vb: Algorand.Unity.IIndexerClient.LookupAssetTransactions(System.UInt64, System.Byte(), Algorand.Unity.Optional(Of System.Boolean), System.String, Algorand.Unity.Optional(Of System.UInt64), System.DateTime, System.String, Algorand.Unity.Optional(Of System.Boolean), Algorand.Unity.Optional(Of System.UInt64), System.DateTime, Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Address, Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.SignatureType, System.String, Algorand.Unity.AddressRole, Algorand.Unity.Optional(Of System.UInt64))
+  fullName: Algorand.Unity.IIndexerClient.LookupAssetTransactions(System.UInt64, System.Byte[], Algorand.Unity.Optional<System.Boolean>, System.String, Algorand.Unity.Optional<System.UInt64>, DateTime, System.String, Algorand.Unity.Optional<System.Boolean>, Algorand.Unity.Optional<System.UInt64>, DateTime, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Address, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.SignatureType, System.String, Algorand.Unity.AddressRole, Algorand.Unity.Optional<System.UInt64>)
+  fullName.vb: Algorand.Unity.IIndexerClient.LookupAssetTransactions(System.UInt64, System.Byte(), Algorand.Unity.Optional(Of System.Boolean), System.String, Algorand.Unity.Optional(Of System.UInt64), DateTime, System.String, Algorand.Unity.Optional(Of System.Boolean), Algorand.Unity.Optional(Of System.UInt64), DateTime, Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Address, Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.SignatureType, System.String, Algorand.Unity.AddressRole, Algorand.Unity.Optional(Of System.UInt64))
   nameWithType: IIndexerClient.LookupAssetTransactions(UInt64, Byte[], Optional<Boolean>, String, Optional<UInt64>, DateTime, String, Optional<Boolean>, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Address, Optional<UInt64>, SignatureType, String, AddressRole, Optional<UInt64>)
   nameWithType.vb: IIndexerClient.LookupAssetTransactions(UInt64, Byte(), Optional(Of Boolean), String, Optional(Of UInt64), DateTime, String, Optional(Of Boolean), Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Address, Optional(Of UInt64), SignatureType, String, AddressRole, Optional(Of UInt64))
 - uid: Algorand.Unity.IIndexerClient.LookupAssetTransactions*
@@ -28395,13 +28429,13 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.IIndexerClient.SearchForAssets
   nameWithType: IIndexerClient.SearchForAssets
-- uid: Algorand.Unity.IIndexerClient.SearchForTransactions(System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},System.DateTime,Algorand.Unity.Optional{System.UInt64},System.String,Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},System.DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Address,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.AddressRole,Algorand.Unity.Optional{System.UInt64})
+- uid: Algorand.Unity.IIndexerClient.SearchForTransactions(System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},DateTime,Algorand.Unity.Optional{System.UInt64},System.String,Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Address,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.AddressRole,Algorand.Unity.Optional{System.UInt64})
   name: SearchForTransactions(Byte[], Optional<Boolean>, String, Optional<UInt64>, DateTime, Optional<UInt64>, String, Optional<Boolean>, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Address, Optional<UInt64>, Optional<UInt64>, SignatureType, String, AddressRole, Optional<UInt64>)
-  href: api/Algorand.Unity.IIndexerClient.html#Algorand_Unity_IIndexerClient_SearchForTransactions_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__System_DateTime_Algorand_Unity_Optional_System_UInt64__System_String_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__System_DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_AddressRole_Algorand_Unity_Optional_System_UInt64__
-  commentId: M:Algorand.Unity.IIndexerClient.SearchForTransactions(System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},System.DateTime,Algorand.Unity.Optional{System.UInt64},System.String,Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},System.DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Address,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.AddressRole,Algorand.Unity.Optional{System.UInt64})
+  href: api/Algorand.Unity.IIndexerClient.html#Algorand_Unity_IIndexerClient_SearchForTransactions_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__DateTime_Algorand_Unity_Optional_System_UInt64__System_String_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_AddressRole_Algorand_Unity_Optional_System_UInt64__
+  commentId: M:Algorand.Unity.IIndexerClient.SearchForTransactions(System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},DateTime,Algorand.Unity.Optional{System.UInt64},System.String,Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Address,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.AddressRole,Algorand.Unity.Optional{System.UInt64})
   name.vb: SearchForTransactions(Byte(), Optional(Of Boolean), String, Optional(Of UInt64), DateTime, Optional(Of UInt64), String, Optional(Of Boolean), Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Address, Optional(Of UInt64), Optional(Of UInt64), SignatureType, String, AddressRole, Optional(Of UInt64))
-  fullName: Algorand.Unity.IIndexerClient.SearchForTransactions(System.Byte[], Algorand.Unity.Optional<System.Boolean>, System.String, Algorand.Unity.Optional<System.UInt64>, System.DateTime, Algorand.Unity.Optional<System.UInt64>, System.String, Algorand.Unity.Optional<System.Boolean>, Algorand.Unity.Optional<System.UInt64>, System.DateTime, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Address, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.SignatureType, System.String, Algorand.Unity.AddressRole, Algorand.Unity.Optional<System.UInt64>)
-  fullName.vb: Algorand.Unity.IIndexerClient.SearchForTransactions(System.Byte(), Algorand.Unity.Optional(Of System.Boolean), System.String, Algorand.Unity.Optional(Of System.UInt64), System.DateTime, Algorand.Unity.Optional(Of System.UInt64), System.String, Algorand.Unity.Optional(Of System.Boolean), Algorand.Unity.Optional(Of System.UInt64), System.DateTime, Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Address, Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.SignatureType, System.String, Algorand.Unity.AddressRole, Algorand.Unity.Optional(Of System.UInt64))
+  fullName: Algorand.Unity.IIndexerClient.SearchForTransactions(System.Byte[], Algorand.Unity.Optional<System.Boolean>, System.String, Algorand.Unity.Optional<System.UInt64>, DateTime, Algorand.Unity.Optional<System.UInt64>, System.String, Algorand.Unity.Optional<System.Boolean>, Algorand.Unity.Optional<System.UInt64>, DateTime, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Address, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.SignatureType, System.String, Algorand.Unity.AddressRole, Algorand.Unity.Optional<System.UInt64>)
+  fullName.vb: Algorand.Unity.IIndexerClient.SearchForTransactions(System.Byte(), Algorand.Unity.Optional(Of System.Boolean), System.String, Algorand.Unity.Optional(Of System.UInt64), DateTime, Algorand.Unity.Optional(Of System.UInt64), System.String, Algorand.Unity.Optional(Of System.Boolean), Algorand.Unity.Optional(Of System.UInt64), DateTime, Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Address, Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.SignatureType, System.String, Algorand.Unity.AddressRole, Algorand.Unity.Optional(Of System.UInt64))
   nameWithType: IIndexerClient.SearchForTransactions(Byte[], Optional<Boolean>, String, Optional<UInt64>, DateTime, Optional<UInt64>, String, Optional<Boolean>, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Address, Optional<UInt64>, Optional<UInt64>, SignatureType, String, AddressRole, Optional<UInt64>)
   nameWithType.vb: IIndexerClient.SearchForTransactions(Byte(), Optional(Of Boolean), String, Optional(Of UInt64), DateTime, Optional(Of UInt64), String, Optional(Of Boolean), Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Address, Optional(Of UInt64), Optional(Of UInt64), SignatureType, String, AddressRole, Optional(Of UInt64))
 - uid: Algorand.Unity.IIndexerClient.SearchForTransactions*
@@ -34255,13 +34289,13 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.IndexerClient.LookupAccountCreatedAssets
   nameWithType: IndexerClient.LookupAccountCreatedAssets
-- uid: Algorand.Unity.IndexerClient.LookupAccountTransactions(System.String,System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},System.DateTime,System.String,Algorand.Unity.Optional{System.UInt64},System.DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.Optional{System.UInt64})
+- uid: Algorand.Unity.IndexerClient.LookupAccountTransactions(System.String,System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},DateTime,System.String,Algorand.Unity.Optional{System.UInt64},DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.Optional{System.UInt64})
   name: LookupAccountTransactions(String, Byte[], Optional<Boolean>, String, Optional<UInt64>, DateTime, String, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, SignatureType, String, Optional<UInt64>)
-  href: api/Algorand.Unity.IndexerClient.html#Algorand_Unity_IndexerClient_LookupAccountTransactions_System_String_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__System_DateTime_System_String_Algorand_Unity_Optional_System_UInt64__System_DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_Optional_System_UInt64__
-  commentId: M:Algorand.Unity.IndexerClient.LookupAccountTransactions(System.String,System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},System.DateTime,System.String,Algorand.Unity.Optional{System.UInt64},System.DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.Optional{System.UInt64})
+  href: api/Algorand.Unity.IndexerClient.html#Algorand_Unity_IndexerClient_LookupAccountTransactions_System_String_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__DateTime_System_String_Algorand_Unity_Optional_System_UInt64__DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_Optional_System_UInt64__
+  commentId: M:Algorand.Unity.IndexerClient.LookupAccountTransactions(System.String,System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},DateTime,System.String,Algorand.Unity.Optional{System.UInt64},DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.Optional{System.UInt64})
   name.vb: LookupAccountTransactions(String, Byte(), Optional(Of Boolean), String, Optional(Of UInt64), DateTime, String, Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), SignatureType, String, Optional(Of UInt64))
-  fullName: Algorand.Unity.IndexerClient.LookupAccountTransactions(System.String, System.Byte[], Algorand.Unity.Optional<System.Boolean>, System.String, Algorand.Unity.Optional<System.UInt64>, System.DateTime, System.String, Algorand.Unity.Optional<System.UInt64>, System.DateTime, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.SignatureType, System.String, Algorand.Unity.Optional<System.UInt64>)
-  fullName.vb: Algorand.Unity.IndexerClient.LookupAccountTransactions(System.String, System.Byte(), Algorand.Unity.Optional(Of System.Boolean), System.String, Algorand.Unity.Optional(Of System.UInt64), System.DateTime, System.String, Algorand.Unity.Optional(Of System.UInt64), System.DateTime, Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.SignatureType, System.String, Algorand.Unity.Optional(Of System.UInt64))
+  fullName: Algorand.Unity.IndexerClient.LookupAccountTransactions(System.String, System.Byte[], Algorand.Unity.Optional<System.Boolean>, System.String, Algorand.Unity.Optional<System.UInt64>, DateTime, System.String, Algorand.Unity.Optional<System.UInt64>, DateTime, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.SignatureType, System.String, Algorand.Unity.Optional<System.UInt64>)
+  fullName.vb: Algorand.Unity.IndexerClient.LookupAccountTransactions(System.String, System.Byte(), Algorand.Unity.Optional(Of System.Boolean), System.String, Algorand.Unity.Optional(Of System.UInt64), DateTime, System.String, Algorand.Unity.Optional(Of System.UInt64), DateTime, Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.SignatureType, System.String, Algorand.Unity.Optional(Of System.UInt64))
   nameWithType: IndexerClient.LookupAccountTransactions(String, Byte[], Optional<Boolean>, String, Optional<UInt64>, DateTime, String, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, Optional<UInt64>, SignatureType, String, Optional<UInt64>)
   nameWithType.vb: IndexerClient.LookupAccountTransactions(String, Byte(), Optional(Of Boolean), String, Optional(Of UInt64), DateTime, String, Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), Optional(Of UInt64), SignatureType, String, Optional(Of UInt64))
 - uid: Algorand.Unity.IndexerClient.LookupAccountTransactions*
@@ -34348,13 +34382,13 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.IndexerClient.LookupAssetByID
   nameWithType: IndexerClient.LookupAssetByID
-- uid: Algorand.Unity.IndexerClient.LookupAssetTransactions(System.UInt64,System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},System.DateTime,System.String,Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},System.DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Address,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.AddressRole,Algorand.Unity.Optional{System.UInt64})
+- uid: Algorand.Unity.IndexerClient.LookupAssetTransactions(System.UInt64,System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},DateTime,System.String,Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Address,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.AddressRole,Algorand.Unity.Optional{System.UInt64})
   name: LookupAssetTransactions(UInt64, Byte[], Optional<Boolean>, String, Optional<UInt64>, DateTime, String, Optional<Boolean>, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Address, Optional<UInt64>, SignatureType, String, AddressRole, Optional<UInt64>)
-  href: api/Algorand.Unity.IndexerClient.html#Algorand_Unity_IndexerClient_LookupAssetTransactions_System_UInt64_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__System_DateTime_System_String_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__System_DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_AddressRole_Algorand_Unity_Optional_System_UInt64__
-  commentId: M:Algorand.Unity.IndexerClient.LookupAssetTransactions(System.UInt64,System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},System.DateTime,System.String,Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},System.DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Address,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.AddressRole,Algorand.Unity.Optional{System.UInt64})
+  href: api/Algorand.Unity.IndexerClient.html#Algorand_Unity_IndexerClient_LookupAssetTransactions_System_UInt64_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__DateTime_System_String_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_AddressRole_Algorand_Unity_Optional_System_UInt64__
+  commentId: M:Algorand.Unity.IndexerClient.LookupAssetTransactions(System.UInt64,System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},DateTime,System.String,Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Address,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.AddressRole,Algorand.Unity.Optional{System.UInt64})
   name.vb: LookupAssetTransactions(UInt64, Byte(), Optional(Of Boolean), String, Optional(Of UInt64), DateTime, String, Optional(Of Boolean), Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Address, Optional(Of UInt64), SignatureType, String, AddressRole, Optional(Of UInt64))
-  fullName: Algorand.Unity.IndexerClient.LookupAssetTransactions(System.UInt64, System.Byte[], Algorand.Unity.Optional<System.Boolean>, System.String, Algorand.Unity.Optional<System.UInt64>, System.DateTime, System.String, Algorand.Unity.Optional<System.Boolean>, Algorand.Unity.Optional<System.UInt64>, System.DateTime, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Address, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.SignatureType, System.String, Algorand.Unity.AddressRole, Algorand.Unity.Optional<System.UInt64>)
-  fullName.vb: Algorand.Unity.IndexerClient.LookupAssetTransactions(System.UInt64, System.Byte(), Algorand.Unity.Optional(Of System.Boolean), System.String, Algorand.Unity.Optional(Of System.UInt64), System.DateTime, System.String, Algorand.Unity.Optional(Of System.Boolean), Algorand.Unity.Optional(Of System.UInt64), System.DateTime, Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Address, Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.SignatureType, System.String, Algorand.Unity.AddressRole, Algorand.Unity.Optional(Of System.UInt64))
+  fullName: Algorand.Unity.IndexerClient.LookupAssetTransactions(System.UInt64, System.Byte[], Algorand.Unity.Optional<System.Boolean>, System.String, Algorand.Unity.Optional<System.UInt64>, DateTime, System.String, Algorand.Unity.Optional<System.Boolean>, Algorand.Unity.Optional<System.UInt64>, DateTime, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Address, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.SignatureType, System.String, Algorand.Unity.AddressRole, Algorand.Unity.Optional<System.UInt64>)
+  fullName.vb: Algorand.Unity.IndexerClient.LookupAssetTransactions(System.UInt64, System.Byte(), Algorand.Unity.Optional(Of System.Boolean), System.String, Algorand.Unity.Optional(Of System.UInt64), DateTime, System.String, Algorand.Unity.Optional(Of System.Boolean), Algorand.Unity.Optional(Of System.UInt64), DateTime, Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Address, Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.SignatureType, System.String, Algorand.Unity.AddressRole, Algorand.Unity.Optional(Of System.UInt64))
   nameWithType: IndexerClient.LookupAssetTransactions(UInt64, Byte[], Optional<Boolean>, String, Optional<UInt64>, DateTime, String, Optional<Boolean>, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Address, Optional<UInt64>, SignatureType, String, AddressRole, Optional<UInt64>)
   nameWithType.vb: IndexerClient.LookupAssetTransactions(UInt64, Byte(), Optional(Of Boolean), String, Optional(Of UInt64), DateTime, String, Optional(Of Boolean), Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Address, Optional(Of UInt64), SignatureType, String, AddressRole, Optional(Of UInt64))
 - uid: Algorand.Unity.IndexerClient.LookupAssetTransactions*
@@ -34470,13 +34504,13 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.IndexerClient.SearchForAssets
   nameWithType: IndexerClient.SearchForAssets
-- uid: Algorand.Unity.IndexerClient.SearchForTransactions(System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},System.DateTime,Algorand.Unity.Optional{System.UInt64},System.String,Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},System.DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Address,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.AddressRole,Algorand.Unity.Optional{System.UInt64})
+- uid: Algorand.Unity.IndexerClient.SearchForTransactions(System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},DateTime,Algorand.Unity.Optional{System.UInt64},System.String,Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Address,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.AddressRole,Algorand.Unity.Optional{System.UInt64})
   name: SearchForTransactions(Byte[], Optional<Boolean>, String, Optional<UInt64>, DateTime, Optional<UInt64>, String, Optional<Boolean>, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Address, Optional<UInt64>, Optional<UInt64>, SignatureType, String, AddressRole, Optional<UInt64>)
-  href: api/Algorand.Unity.IndexerClient.html#Algorand_Unity_IndexerClient_SearchForTransactions_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__System_DateTime_Algorand_Unity_Optional_System_UInt64__System_String_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__System_DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_AddressRole_Algorand_Unity_Optional_System_UInt64__
-  commentId: M:Algorand.Unity.IndexerClient.SearchForTransactions(System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},System.DateTime,Algorand.Unity.Optional{System.UInt64},System.String,Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},System.DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Address,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.AddressRole,Algorand.Unity.Optional{System.UInt64})
+  href: api/Algorand.Unity.IndexerClient.html#Algorand_Unity_IndexerClient_SearchForTransactions_System_Byte___Algorand_Unity_Optional_System_Boolean__System_String_Algorand_Unity_Optional_System_UInt64__DateTime_Algorand_Unity_Optional_System_UInt64__System_String_Algorand_Unity_Optional_System_Boolean__Algorand_Unity_Optional_System_UInt64__DateTime_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Address_Algorand_Unity_Optional_System_UInt64__Algorand_Unity_Optional_System_UInt64__Algorand_Unity_SignatureType_System_String_Algorand_Unity_AddressRole_Algorand_Unity_Optional_System_UInt64__
+  commentId: M:Algorand.Unity.IndexerClient.SearchForTransactions(System.Byte[],Algorand.Unity.Optional{System.Boolean},System.String,Algorand.Unity.Optional{System.UInt64},DateTime,Algorand.Unity.Optional{System.UInt64},System.String,Algorand.Unity.Optional{System.Boolean},Algorand.Unity.Optional{System.UInt64},DateTime,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Address,Algorand.Unity.Optional{System.UInt64},Algorand.Unity.Optional{System.UInt64},Algorand.Unity.SignatureType,System.String,Algorand.Unity.AddressRole,Algorand.Unity.Optional{System.UInt64})
   name.vb: SearchForTransactions(Byte(), Optional(Of Boolean), String, Optional(Of UInt64), DateTime, Optional(Of UInt64), String, Optional(Of Boolean), Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Address, Optional(Of UInt64), Optional(Of UInt64), SignatureType, String, AddressRole, Optional(Of UInt64))
-  fullName: Algorand.Unity.IndexerClient.SearchForTransactions(System.Byte[], Algorand.Unity.Optional<System.Boolean>, System.String, Algorand.Unity.Optional<System.UInt64>, System.DateTime, Algorand.Unity.Optional<System.UInt64>, System.String, Algorand.Unity.Optional<System.Boolean>, Algorand.Unity.Optional<System.UInt64>, System.DateTime, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Address, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.SignatureType, System.String, Algorand.Unity.AddressRole, Algorand.Unity.Optional<System.UInt64>)
-  fullName.vb: Algorand.Unity.IndexerClient.SearchForTransactions(System.Byte(), Algorand.Unity.Optional(Of System.Boolean), System.String, Algorand.Unity.Optional(Of System.UInt64), System.DateTime, Algorand.Unity.Optional(Of System.UInt64), System.String, Algorand.Unity.Optional(Of System.Boolean), Algorand.Unity.Optional(Of System.UInt64), System.DateTime, Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Address, Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.SignatureType, System.String, Algorand.Unity.AddressRole, Algorand.Unity.Optional(Of System.UInt64))
+  fullName: Algorand.Unity.IndexerClient.SearchForTransactions(System.Byte[], Algorand.Unity.Optional<System.Boolean>, System.String, Algorand.Unity.Optional<System.UInt64>, DateTime, Algorand.Unity.Optional<System.UInt64>, System.String, Algorand.Unity.Optional<System.Boolean>, Algorand.Unity.Optional<System.UInt64>, DateTime, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Address, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.Optional<System.UInt64>, Algorand.Unity.SignatureType, System.String, Algorand.Unity.AddressRole, Algorand.Unity.Optional<System.UInt64>)
+  fullName.vb: Algorand.Unity.IndexerClient.SearchForTransactions(System.Byte(), Algorand.Unity.Optional(Of System.Boolean), System.String, Algorand.Unity.Optional(Of System.UInt64), DateTime, Algorand.Unity.Optional(Of System.UInt64), System.String, Algorand.Unity.Optional(Of System.Boolean), Algorand.Unity.Optional(Of System.UInt64), DateTime, Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Address, Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.Optional(Of System.UInt64), Algorand.Unity.SignatureType, System.String, Algorand.Unity.AddressRole, Algorand.Unity.Optional(Of System.UInt64))
   nameWithType: IndexerClient.SearchForTransactions(Byte[], Optional<Boolean>, String, Optional<UInt64>, DateTime, Optional<UInt64>, String, Optional<Boolean>, Optional<UInt64>, DateTime, Optional<UInt64>, Optional<UInt64>, Address, Optional<UInt64>, Optional<UInt64>, SignatureType, String, AddressRole, Optional<UInt64>)
   nameWithType.vb: IndexerClient.SearchForTransactions(Byte(), Optional(Of Boolean), String, Optional(Of UInt64), DateTime, Optional(Of UInt64), String, Optional(Of Boolean), Optional(Of UInt64), DateTime, Optional(Of UInt64), Optional(Of UInt64), Address, Optional(Of UInt64), Optional(Of UInt64), SignatureType, String, AddressRole, Optional(Of UInt64))
 - uid: Algorand.Unity.IndexerClient.SearchForTransactions*
@@ -38770,6 +38804,122 @@ references:
   commentId: F:Algorand.Unity.LocalAccountStore.EncryptError.OutOfMemory
   fullName: Algorand.Unity.LocalAccountStore.EncryptError.OutOfMemory
   nameWithType: LocalAccountStore.EncryptError.OutOfMemory
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader
+  name: LocalAccountStore.EncryptHeader
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html
+  commentId: T:Algorand.Unity.LocalAccountStore.EncryptHeader
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader
+  nameWithType: LocalAccountStore.EncryptHeader
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.#ctor(PwHash.Salt,SecretBox.Nonce)
+  name: EncryptHeader(PwHash.Salt, SecretBox.Nonce)
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader__ctor_PwHash_Salt_SecretBox_Nonce_
+  commentId: M:Algorand.Unity.LocalAccountStore.EncryptHeader.#ctor(PwHash.Salt,SecretBox.Nonce)
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.EncryptHeader(PwHash.Salt, SecretBox.Nonce)
+  nameWithType: LocalAccountStore.EncryptHeader.EncryptHeader(PwHash.Salt, SecretBox.Nonce)
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.#ctor*
+  name: EncryptHeader
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader__ctor_
+  commentId: Overload:Algorand.Unity.LocalAccountStore.EncryptHeader.#ctor
+  isSpec: "True"
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.EncryptHeader
+  nameWithType: LocalAccountStore.EncryptHeader.EncryptHeader
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.bytes
+  name: bytes
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_bytes
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.bytes
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.bytes
+  nameWithType: LocalAccountStore.EncryptHeader.bytes
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.IsValid
+  name: IsValid
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_IsValid
+  commentId: P:Algorand.Unity.LocalAccountStore.EncryptHeader.IsValid
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.IsValid
+  nameWithType: LocalAccountStore.EncryptHeader.IsValid
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.IsValid*
+  name: IsValid
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_IsValid_
+  commentId: Overload:Algorand.Unity.LocalAccountStore.EncryptHeader.IsValid
+  isSpec: "True"
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.IsValid
+  nameWithType: LocalAccountStore.EncryptHeader.IsValid
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.KeySize
+  name: KeySize
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_KeySize
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.KeySize
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.KeySize
+  nameWithType: LocalAccountStore.EncryptHeader.KeySize
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.MacSize
+  name: MacSize
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_MacSize
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.MacSize
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.MacSize
+  nameWithType: LocalAccountStore.EncryptHeader.MacSize
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.nonce
+  name: nonce
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_nonce
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.nonce
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.nonce
+  nameWithType: LocalAccountStore.EncryptHeader.nonce
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.NonceOffset
+  name: NonceOffset
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_NonceOffset
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.NonceOffset
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.NonceOffset
+  nameWithType: LocalAccountStore.EncryptHeader.NonceOffset
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.NonceSize
+  name: NonceSize
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_NonceSize
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.NonceSize
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.NonceSize
+  nameWithType: LocalAccountStore.EncryptHeader.NonceSize
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.prefix
+  name: prefix
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_prefix
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.prefix
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.prefix
+  nameWithType: LocalAccountStore.EncryptHeader.prefix
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.Prefix
+  name: Prefix
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_Prefix
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.Prefix
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.Prefix
+  nameWithType: LocalAccountStore.EncryptHeader.Prefix
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.PrefixOffset
+  name: PrefixOffset
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_PrefixOffset
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.PrefixOffset
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.PrefixOffset
+  nameWithType: LocalAccountStore.EncryptHeader.PrefixOffset
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.PrefixSize
+  name: PrefixSize
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_PrefixSize
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.PrefixSize
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.PrefixSize
+  nameWithType: LocalAccountStore.EncryptHeader.PrefixSize
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.salt
+  name: salt
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_salt
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.salt
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.salt
+  nameWithType: LocalAccountStore.EncryptHeader.salt
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.SaltOffset
+  name: SaltOffset
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_SaltOffset
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.SaltOffset
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.SaltOffset
+  nameWithType: LocalAccountStore.EncryptHeader.SaltOffset
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.SaltSize
+  name: SaltSize
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_SaltSize
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.SaltSize
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.SaltSize
+  nameWithType: LocalAccountStore.EncryptHeader.SaltSize
+- uid: Algorand.Unity.LocalAccountStore.EncryptHeader.SizeBytes
+  name: SizeBytes
+  href: api/Algorand.Unity.LocalAccountStore.EncryptHeader.html#Algorand_Unity_LocalAccountStore_EncryptHeader_SizeBytes
+  commentId: F:Algorand.Unity.LocalAccountStore.EncryptHeader.SizeBytes
+  fullName: Algorand.Unity.LocalAccountStore.EncryptHeader.SizeBytes
+  nameWithType: LocalAccountStore.EncryptHeader.SizeBytes
 - uid: Algorand.Unity.LocalAccountStore.IsCreated
   name: IsCreated
   href: api/Algorand.Unity.LocalAccountStore.html#Algorand_Unity_LocalAccountStore_IsCreated
@@ -39037,13 +39187,13 @@ references:
   commentId: T:Algorand.Unity.LowLevel.Base58
   fullName: Algorand.Unity.LowLevel.Base58
   nameWithType: Base58
-- uid: Algorand.Unity.LowLevel.Base58.Encode(System.ReadOnlySpan{System.Byte})
+- uid: Algorand.Unity.LowLevel.Base58.Encode(ReadOnlySpan{System.Byte})
   name: Encode(ReadOnlySpan<Byte>)
-  href: api/Algorand.Unity.LowLevel.Base58.html#Algorand_Unity_LowLevel_Base58_Encode_System_ReadOnlySpan_System_Byte__
-  commentId: M:Algorand.Unity.LowLevel.Base58.Encode(System.ReadOnlySpan{System.Byte})
+  href: api/Algorand.Unity.LowLevel.Base58.html#Algorand_Unity_LowLevel_Base58_Encode_ReadOnlySpan_System_Byte__
+  commentId: M:Algorand.Unity.LowLevel.Base58.Encode(ReadOnlySpan{System.Byte})
   name.vb: Encode(ReadOnlySpan(Of Byte))
-  fullName: Algorand.Unity.LowLevel.Base58.Encode(System.ReadOnlySpan<System.Byte>)
-  fullName.vb: Algorand.Unity.LowLevel.Base58.Encode(System.ReadOnlySpan(Of System.Byte))
+  fullName: Algorand.Unity.LowLevel.Base58.Encode(ReadOnlySpan<System.Byte>)
+  fullName.vb: Algorand.Unity.LowLevel.Base58.Encode(ReadOnlySpan(Of System.Byte))
   nameWithType: Base58.Encode(ReadOnlySpan<Byte>)
   nameWithType.vb: Base58.Encode(ReadOnlySpan(Of Byte))
 - uid: Algorand.Unity.LowLevel.Base58.Encode*
@@ -39145,13 +39295,13 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.LowLevel.ByteArray.CopyTo
   nameWithType: ByteArray.CopyTo
-- uid: Algorand.Unity.LowLevel.ByteArray.CopyTo``1(``0,System.Span{System.Byte}@)
+- uid: Algorand.Unity.LowLevel.ByteArray.CopyTo``1(``0,Span{System.Byte}@)
   name: CopyTo<T>(T, ref Span<Byte>)
-  href: api/Algorand.Unity.LowLevel.ByteArray.html#Algorand_Unity_LowLevel_ByteArray_CopyTo__1___0_System_Span_System_Byte___
-  commentId: M:Algorand.Unity.LowLevel.ByteArray.CopyTo``1(``0,System.Span{System.Byte}@)
+  href: api/Algorand.Unity.LowLevel.ByteArray.html#Algorand_Unity_LowLevel_ByteArray_CopyTo__1___0_Span_System_Byte___
+  commentId: M:Algorand.Unity.LowLevel.ByteArray.CopyTo``1(``0,Span{System.Byte}@)
   name.vb: CopyTo(Of T)(T, ByRef Span(Of Byte))
-  fullName: Algorand.Unity.LowLevel.ByteArray.CopyTo<T>(T, ref System.Span<System.Byte>)
-  fullName.vb: Algorand.Unity.LowLevel.ByteArray.CopyTo(Of T)(T, ByRef System.Span(Of System.Byte))
+  fullName: Algorand.Unity.LowLevel.ByteArray.CopyTo<T>(T, ref Span<System.Byte>)
+  fullName.vb: Algorand.Unity.LowLevel.ByteArray.CopyTo(Of T)(T, ByRef Span(Of System.Byte))
   nameWithType: ByteArray.CopyTo<T>(T, ref Span<Byte>)
   nameWithType.vb: ByteArray.CopyTo(Of T)(T, ByRef Span(Of Byte))
 - uid: Algorand.Unity.LowLevel.ByteArray.CopyTo``2(``0,``1@)
@@ -39598,13 +39748,13 @@ references:
   commentId: F:Algorand.Unity.LowLevel.HexConverter.ConversionError.None
   fullName: Algorand.Unity.LowLevel.HexConverter.ConversionError.None
   nameWithType: HexConverter.ConversionError.None
-- uid: Algorand.Unity.LowLevel.HexConverter.FromHex(System.ReadOnlySpan{System.Char},System.Span{System.Byte},System.Int32@)
+- uid: Algorand.Unity.LowLevel.HexConverter.FromHex(ReadOnlySpan{System.Char},Span{System.Byte},System.Int32@)
   name: FromHex(ReadOnlySpan<Char>, Span<Byte>, out Int32)
-  href: api/Algorand.Unity.LowLevel.HexConverter.html#Algorand_Unity_LowLevel_HexConverter_FromHex_System_ReadOnlySpan_System_Char__System_Span_System_Byte__System_Int32__
-  commentId: M:Algorand.Unity.LowLevel.HexConverter.FromHex(System.ReadOnlySpan{System.Char},System.Span{System.Byte},System.Int32@)
+  href: api/Algorand.Unity.LowLevel.HexConverter.html#Algorand_Unity_LowLevel_HexConverter_FromHex_ReadOnlySpan_System_Char__Span_System_Byte__System_Int32__
+  commentId: M:Algorand.Unity.LowLevel.HexConverter.FromHex(ReadOnlySpan{System.Char},Span{System.Byte},System.Int32@)
   name.vb: FromHex(ReadOnlySpan(Of Char), Span(Of Byte), ByRef Int32)
-  fullName: Algorand.Unity.LowLevel.HexConverter.FromHex(System.ReadOnlySpan<System.Char>, System.Span<System.Byte>, out System.Int32)
-  fullName.vb: Algorand.Unity.LowLevel.HexConverter.FromHex(System.ReadOnlySpan(Of System.Char), System.Span(Of System.Byte), ByRef System.Int32)
+  fullName: Algorand.Unity.LowLevel.HexConverter.FromHex(ReadOnlySpan<System.Char>, Span<System.Byte>, out System.Int32)
+  fullName.vb: Algorand.Unity.LowLevel.HexConverter.FromHex(ReadOnlySpan(Of System.Char), Span(Of System.Byte), ByRef System.Int32)
   nameWithType: HexConverter.FromHex(ReadOnlySpan<Char>, Span<Byte>, out Int32)
   nameWithType.vb: HexConverter.FromHex(ReadOnlySpan(Of Char), Span(Of Byte), ByRef Int32)
 - uid: Algorand.Unity.LowLevel.HexConverter.FromHex*
@@ -39614,13 +39764,13 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.LowLevel.HexConverter.FromHex
   nameWithType: HexConverter.FromHex
-- uid: Algorand.Unity.LowLevel.HexConverter.FromHex``1(``0,System.Span{System.Byte},System.Int32@)
+- uid: Algorand.Unity.LowLevel.HexConverter.FromHex``1(``0,Span{System.Byte},System.Int32@)
   name: FromHex<TFixedString>(TFixedString, Span<Byte>, out Int32)
-  href: api/Algorand.Unity.LowLevel.HexConverter.html#Algorand_Unity_LowLevel_HexConverter_FromHex__1___0_System_Span_System_Byte__System_Int32__
-  commentId: M:Algorand.Unity.LowLevel.HexConverter.FromHex``1(``0,System.Span{System.Byte},System.Int32@)
+  href: api/Algorand.Unity.LowLevel.HexConverter.html#Algorand_Unity_LowLevel_HexConverter_FromHex__1___0_Span_System_Byte__System_Int32__
+  commentId: M:Algorand.Unity.LowLevel.HexConverter.FromHex``1(``0,Span{System.Byte},System.Int32@)
   name.vb: FromHex(Of TFixedString)(TFixedString, Span(Of Byte), ByRef Int32)
-  fullName: Algorand.Unity.LowLevel.HexConverter.FromHex<TFixedString>(TFixedString, System.Span<System.Byte>, out System.Int32)
-  fullName.vb: Algorand.Unity.LowLevel.HexConverter.FromHex(Of TFixedString)(TFixedString, System.Span(Of System.Byte), ByRef System.Int32)
+  fullName: Algorand.Unity.LowLevel.HexConverter.FromHex<TFixedString>(TFixedString, Span<System.Byte>, out System.Int32)
+  fullName.vb: Algorand.Unity.LowLevel.HexConverter.FromHex(Of TFixedString)(TFixedString, Span(Of System.Byte), ByRef System.Int32)
   nameWithType: HexConverter.FromHex<TFixedString>(TFixedString, Span<Byte>, out Int32)
   nameWithType.vb: HexConverter.FromHex(Of TFixedString)(TFixedString, Span(Of Byte), ByRef Int32)
 - uid: Algorand.Unity.LowLevel.HexConverter.HexAlphabet
@@ -39629,13 +39779,13 @@ references:
   commentId: F:Algorand.Unity.LowLevel.HexConverter.HexAlphabet
   fullName: Algorand.Unity.LowLevel.HexConverter.HexAlphabet
   nameWithType: HexConverter.HexAlphabet
-- uid: Algorand.Unity.LowLevel.HexConverter.ToHex(System.ReadOnlySpan{System.Byte},System.Span{System.Char},System.Int32@)
+- uid: Algorand.Unity.LowLevel.HexConverter.ToHex(ReadOnlySpan{System.Byte},Span{System.Char},System.Int32@)
   name: ToHex(ReadOnlySpan<Byte>, Span<Char>, out Int32)
-  href: api/Algorand.Unity.LowLevel.HexConverter.html#Algorand_Unity_LowLevel_HexConverter_ToHex_System_ReadOnlySpan_System_Byte__System_Span_System_Char__System_Int32__
-  commentId: M:Algorand.Unity.LowLevel.HexConverter.ToHex(System.ReadOnlySpan{System.Byte},System.Span{System.Char},System.Int32@)
+  href: api/Algorand.Unity.LowLevel.HexConverter.html#Algorand_Unity_LowLevel_HexConverter_ToHex_ReadOnlySpan_System_Byte__Span_System_Char__System_Int32__
+  commentId: M:Algorand.Unity.LowLevel.HexConverter.ToHex(ReadOnlySpan{System.Byte},Span{System.Char},System.Int32@)
   name.vb: ToHex(ReadOnlySpan(Of Byte), Span(Of Char), ByRef Int32)
-  fullName: Algorand.Unity.LowLevel.HexConverter.ToHex(System.ReadOnlySpan<System.Byte>, System.Span<System.Char>, out System.Int32)
-  fullName.vb: Algorand.Unity.LowLevel.HexConverter.ToHex(System.ReadOnlySpan(Of System.Byte), System.Span(Of System.Char), ByRef System.Int32)
+  fullName: Algorand.Unity.LowLevel.HexConverter.ToHex(ReadOnlySpan<System.Byte>, Span<System.Char>, out System.Int32)
+  fullName.vb: Algorand.Unity.LowLevel.HexConverter.ToHex(ReadOnlySpan(Of System.Byte), Span(Of System.Char), ByRef System.Int32)
   nameWithType: HexConverter.ToHex(ReadOnlySpan<Byte>, Span<Char>, out Int32)
   nameWithType.vb: HexConverter.ToHex(ReadOnlySpan(Of Byte), Span(Of Char), ByRef Int32)
 - uid: Algorand.Unity.LowLevel.HexConverter.ToHex*
@@ -39645,13 +39795,13 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.LowLevel.HexConverter.ToHex
   nameWithType: HexConverter.ToHex
-- uid: Algorand.Unity.LowLevel.HexConverter.ToHex``1(System.ReadOnlySpan{System.Byte},``0@)
+- uid: Algorand.Unity.LowLevel.HexConverter.ToHex``1(ReadOnlySpan{System.Byte},``0@)
   name: ToHex<TFixedString>(ReadOnlySpan<Byte>, ref TFixedString)
-  href: api/Algorand.Unity.LowLevel.HexConverter.html#Algorand_Unity_LowLevel_HexConverter_ToHex__1_System_ReadOnlySpan_System_Byte____0__
-  commentId: M:Algorand.Unity.LowLevel.HexConverter.ToHex``1(System.ReadOnlySpan{System.Byte},``0@)
+  href: api/Algorand.Unity.LowLevel.HexConverter.html#Algorand_Unity_LowLevel_HexConverter_ToHex__1_ReadOnlySpan_System_Byte____0__
+  commentId: M:Algorand.Unity.LowLevel.HexConverter.ToHex``1(ReadOnlySpan{System.Byte},``0@)
   name.vb: ToHex(Of TFixedString)(ReadOnlySpan(Of Byte), ByRef TFixedString)
-  fullName: Algorand.Unity.LowLevel.HexConverter.ToHex<TFixedString>(System.ReadOnlySpan<System.Byte>, ref TFixedString)
-  fullName.vb: Algorand.Unity.LowLevel.HexConverter.ToHex(Of TFixedString)(System.ReadOnlySpan(Of System.Byte), ByRef TFixedString)
+  fullName: Algorand.Unity.LowLevel.HexConverter.ToHex<TFixedString>(ReadOnlySpan<System.Byte>, ref TFixedString)
+  fullName.vb: Algorand.Unity.LowLevel.HexConverter.ToHex(Of TFixedString)(ReadOnlySpan(Of System.Byte), ByRef TFixedString)
   nameWithType: HexConverter.ToHex<TFixedString>(ReadOnlySpan<Byte>, ref TFixedString)
   nameWithType.vb: HexConverter.ToHex(Of TFixedString)(ReadOnlySpan(Of Byte), ByRef TFixedString)
 - uid: Algorand.Unity.LowLevel.HexConverter.ToValue(System.Char,System.Int32@)
@@ -42663,6 +42813,19 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Mnemonic.GetUnsafePtr
   nameWithType: Mnemonic.GetUnsafePtr
+- uid: Algorand.Unity.Mnemonic.IsValid
+  name: IsValid()
+  href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_IsValid
+  commentId: M:Algorand.Unity.Mnemonic.IsValid
+  fullName: Algorand.Unity.Mnemonic.IsValid()
+  nameWithType: Mnemonic.IsValid()
+- uid: Algorand.Unity.Mnemonic.IsValid*
+  name: IsValid
+  href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_IsValid_
+  commentId: Overload:Algorand.Unity.Mnemonic.IsValid
+  isSpec: "True"
+  fullName: Algorand.Unity.Mnemonic.IsValid
+  nameWithType: Mnemonic.IsValid
 - uid: Algorand.Unity.Mnemonic.Item(System.Int32)
   name: Item[Int32]
   href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_Item_System_Int32_
@@ -42749,6 +42912,22 @@ references:
   commentId: F:Algorand.Unity.Mnemonic.ParseError.WordsNotInSet
   fullName: Algorand.Unity.Mnemonic.ParseError.WordsNotInSet
   nameWithType: Mnemonic.ParseError.WordsNotInSet
+- uid: Algorand.Unity.Mnemonic.ParseWord(ReadOnlySpan{System.Char})
+  name: ParseWord(ReadOnlySpan<Char>)
+  href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_ParseWord_ReadOnlySpan_System_Char__
+  commentId: M:Algorand.Unity.Mnemonic.ParseWord(ReadOnlySpan{System.Char})
+  name.vb: ParseWord(ReadOnlySpan(Of Char))
+  fullName: Algorand.Unity.Mnemonic.ParseWord(ReadOnlySpan<System.Char>)
+  fullName.vb: Algorand.Unity.Mnemonic.ParseWord(ReadOnlySpan(Of System.Char))
+  nameWithType: Mnemonic.ParseWord(ReadOnlySpan<Char>)
+  nameWithType.vb: Mnemonic.ParseWord(ReadOnlySpan(Of Char))
+- uid: Algorand.Unity.Mnemonic.ParseWord*
+  name: ParseWord
+  href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_ParseWord_
+  commentId: Overload:Algorand.Unity.Mnemonic.ParseWord
+  isSpec: "True"
+  fullName: Algorand.Unity.Mnemonic.ParseWord
+  nameWithType: Mnemonic.ParseWord
 - uid: Algorand.Unity.Mnemonic.SizeBytes
   name: SizeBytes
   href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_SizeBytes
@@ -42761,13 +42940,22 @@ references:
   commentId: M:Algorand.Unity.Mnemonic.ToPrivateKey
   fullName: Algorand.Unity.Mnemonic.ToPrivateKey()
   nameWithType: Mnemonic.ToPrivateKey()
-- uid: Algorand.Unity.Mnemonic.ToPrivateKey(System.Span{System.Byte})
+- uid: Algorand.Unity.Mnemonic.ToPrivateKey(Algorand.Unity.PrivateKey@)
+  name: ToPrivateKey(ref PrivateKey)
+  href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_ToPrivateKey_Algorand_Unity_PrivateKey__
+  commentId: M:Algorand.Unity.Mnemonic.ToPrivateKey(Algorand.Unity.PrivateKey@)
+  name.vb: ToPrivateKey(ByRef PrivateKey)
+  fullName: Algorand.Unity.Mnemonic.ToPrivateKey(ref Algorand.Unity.PrivateKey)
+  fullName.vb: Algorand.Unity.Mnemonic.ToPrivateKey(ByRef Algorand.Unity.PrivateKey)
+  nameWithType: Mnemonic.ToPrivateKey(ref PrivateKey)
+  nameWithType.vb: Mnemonic.ToPrivateKey(ByRef PrivateKey)
+- uid: Algorand.Unity.Mnemonic.ToPrivateKey(Span{System.Byte})
   name: ToPrivateKey(Span<Byte>)
-  href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_ToPrivateKey_System_Span_System_Byte__
-  commentId: M:Algorand.Unity.Mnemonic.ToPrivateKey(System.Span{System.Byte})
+  href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_ToPrivateKey_Span_System_Byte__
+  commentId: M:Algorand.Unity.Mnemonic.ToPrivateKey(Span{System.Byte})
   name.vb: ToPrivateKey(Span(Of Byte))
-  fullName: Algorand.Unity.Mnemonic.ToPrivateKey(System.Span<System.Byte>)
-  fullName.vb: Algorand.Unity.Mnemonic.ToPrivateKey(System.Span(Of System.Byte))
+  fullName: Algorand.Unity.Mnemonic.ToPrivateKey(Span<System.Byte>)
+  fullName.vb: Algorand.Unity.Mnemonic.ToPrivateKey(Span(Of System.Byte))
   nameWithType: Mnemonic.ToPrivateKey(Span<Byte>)
   nameWithType.vb: Mnemonic.ToPrivateKey(Span(Of Byte))
 - uid: Algorand.Unity.Mnemonic.ToPrivateKey*
@@ -42790,13 +42978,13 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Mnemonic.ToString
   nameWithType: Mnemonic.ToString
-- uid: Algorand.Unity.Mnemonic.TryParse(System.ReadOnlySpan{System.Char},Algorand.Unity.Mnemonic@)
+- uid: Algorand.Unity.Mnemonic.TryParse(ReadOnlySpan{System.Char},Algorand.Unity.Mnemonic@)
   name: TryParse(ReadOnlySpan<Char>, out Mnemonic)
-  href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_TryParse_System_ReadOnlySpan_System_Char__Algorand_Unity_Mnemonic__
-  commentId: M:Algorand.Unity.Mnemonic.TryParse(System.ReadOnlySpan{System.Char},Algorand.Unity.Mnemonic@)
+  href: api/Algorand.Unity.Mnemonic.html#Algorand_Unity_Mnemonic_TryParse_ReadOnlySpan_System_Char__Algorand_Unity_Mnemonic__
+  commentId: M:Algorand.Unity.Mnemonic.TryParse(ReadOnlySpan{System.Char},Algorand.Unity.Mnemonic@)
   name.vb: TryParse(ReadOnlySpan(Of Char), ByRef Mnemonic)
-  fullName: Algorand.Unity.Mnemonic.TryParse(System.ReadOnlySpan<System.Char>, out Algorand.Unity.Mnemonic)
-  fullName.vb: Algorand.Unity.Mnemonic.TryParse(System.ReadOnlySpan(Of System.Char), ByRef Algorand.Unity.Mnemonic)
+  fullName: Algorand.Unity.Mnemonic.TryParse(ReadOnlySpan<System.Char>, out Algorand.Unity.Mnemonic)
+  fullName.vb: Algorand.Unity.Mnemonic.TryParse(ReadOnlySpan(Of System.Char), ByRef Algorand.Unity.Mnemonic)
   nameWithType: Mnemonic.TryParse(ReadOnlySpan<Char>, out Mnemonic)
   nameWithType.vb: Mnemonic.TryParse(ReadOnlySpan(Of Char), ByRef Mnemonic)
 - uid: Algorand.Unity.Mnemonic.TryParse*
@@ -56295,11 +56483,11 @@ references:
   commentId: M:Algorand.Unity.SerializationException.#ctor(System.String)
   fullName: Algorand.Unity.SerializationException.SerializationException(System.String)
   nameWithType: SerializationException.SerializationException(String)
-- uid: Algorand.Unity.SerializationException.#ctor(System.String,System.Exception)
+- uid: Algorand.Unity.SerializationException.#ctor(System.String,Exception)
   name: SerializationException(String, Exception)
-  href: api/Algorand.Unity.SerializationException.html#Algorand_Unity_SerializationException__ctor_System_String_System_Exception_
-  commentId: M:Algorand.Unity.SerializationException.#ctor(System.String,System.Exception)
-  fullName: Algorand.Unity.SerializationException.SerializationException(System.String, System.Exception)
+  href: api/Algorand.Unity.SerializationException.html#Algorand_Unity_SerializationException__ctor_System_String_Exception_
+  commentId: M:Algorand.Unity.SerializationException.#ctor(System.String,Exception)
+  fullName: Algorand.Unity.SerializationException.SerializationException(System.String, Exception)
   nameWithType: SerializationException.SerializationException(String, Exception)
 - uid: Algorand.Unity.SerializationException.#ctor*
   name: SerializationException
@@ -58669,6 +58857,225 @@ references:
   fullName.vb: Algorand.Unity.TransactionExtensions.ToSignatureMessage(Of T)(T, Allocator)
   nameWithType: TransactionExtensions.ToSignatureMessage<T>(T, Allocator)
   nameWithType.vb: TransactionExtensions.ToSignatureMessage(Of T)(T, Allocator)
+- uid: Algorand.Unity.TransactionGroup
+  name: TransactionGroup
+  href: api/Algorand.Unity.TransactionGroup.html
+  commentId: T:Algorand.Unity.TransactionGroup
+  fullName: Algorand.Unity.TransactionGroup
+  nameWithType: TransactionGroup
+- uid: Algorand.Unity.TransactionGroup.Equals(Algorand.Unity.TransactionGroup)
+  name: Equals(TransactionGroup)
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_Equals_Algorand_Unity_TransactionGroup_
+  commentId: M:Algorand.Unity.TransactionGroup.Equals(Algorand.Unity.TransactionGroup)
+  fullName: Algorand.Unity.TransactionGroup.Equals(Algorand.Unity.TransactionGroup)
+  nameWithType: TransactionGroup.Equals(TransactionGroup)
+- uid: Algorand.Unity.TransactionGroup.Equals*
+  name: Equals
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_Equals_
+  commentId: Overload:Algorand.Unity.TransactionGroup.Equals
+  isSpec: "True"
+  fullName: Algorand.Unity.TransactionGroup.Equals
+  nameWithType: TransactionGroup.Equals
+- uid: Algorand.Unity.TransactionGroup.GetId
+  name: GetId()
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_GetId
+  commentId: M:Algorand.Unity.TransactionGroup.GetId
+  fullName: Algorand.Unity.TransactionGroup.GetId()
+  nameWithType: TransactionGroup.GetId()
+- uid: Algorand.Unity.TransactionGroup.GetId*
+  name: GetId
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_GetId_
+  commentId: Overload:Algorand.Unity.TransactionGroup.GetId
+  isSpec: "True"
+  fullName: Algorand.Unity.TransactionGroup.GetId
+  nameWithType: TransactionGroup.GetId
+- uid: Algorand.Unity.TransactionGroup.IdPrefix
+  name: IdPrefix
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_IdPrefix
+  commentId: F:Algorand.Unity.TransactionGroup.IdPrefix
+  fullName: Algorand.Unity.TransactionGroup.IdPrefix
+  nameWithType: TransactionGroup.IdPrefix
+- uid: Algorand.Unity.TransactionGroup.MaxSize
+  name: MaxSize
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_MaxSize
+  commentId: F:Algorand.Unity.TransactionGroup.MaxSize
+  fullName: Algorand.Unity.TransactionGroup.MaxSize
+  nameWithType: TransactionGroup.MaxSize
+- uid: Algorand.Unity.TransactionGroup.Of(Algorand.Unity.TransactionId[])
+  name: Of(TransactionId[])
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_Of_Algorand_Unity_TransactionId___
+  commentId: M:Algorand.Unity.TransactionGroup.Of(Algorand.Unity.TransactionId[])
+  name.vb: Of(TransactionId())
+  fullName: Algorand.Unity.TransactionGroup.Of(Algorand.Unity.TransactionId[])
+  fullName.vb: Algorand.Unity.TransactionGroup.Of(Algorand.Unity.TransactionId())
+  nameWithType: TransactionGroup.Of(TransactionId[])
+  nameWithType.vb: TransactionGroup.Of(TransactionId())
+- uid: Algorand.Unity.TransactionGroup.Of*
+  name: Of
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_Of_
+  commentId: Overload:Algorand.Unity.TransactionGroup.Of
+  isSpec: "True"
+  fullName: Algorand.Unity.TransactionGroup.Of
+  nameWithType: TransactionGroup.Of
+- uid: Algorand.Unity.TransactionGroup.Of``1(``0@)
+  name: Of<T0>(T0)
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_Of__1___0__
+  commentId: M:Algorand.Unity.TransactionGroup.Of``1(``0@)
+  name.vb: Of(Of T0)(ByRef T0)
+  fullName: Algorand.Unity.TransactionGroup.Of<T0>(T0)
+  fullName.vb: Algorand.Unity.TransactionGroup.Of(Of T0)(ByRef T0)
+  nameWithType: TransactionGroup.Of<T0>(T0)
+  nameWithType.vb: TransactionGroup.Of(Of T0)(ByRef T0)
+- uid: Algorand.Unity.TransactionGroup.Of``1(``0[])
+  name: Of<T>(T[])
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_Of__1___0___
+  commentId: M:Algorand.Unity.TransactionGroup.Of``1(``0[])
+  name.vb: Of(Of T)(T())
+  fullName: Algorand.Unity.TransactionGroup.Of<T>(T[])
+  fullName.vb: Algorand.Unity.TransactionGroup.Of(Of T)(T())
+  nameWithType: TransactionGroup.Of<T>(T[])
+  nameWithType.vb: TransactionGroup.Of(Of T)(T())
+- uid: Algorand.Unity.TransactionGroup.Of``10(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@)
+  name: Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9)
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_Of__10___0____1____2____3____4____5____6____7____8____9__
+  commentId: M:Algorand.Unity.TransactionGroup.Of``10(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@)
+  name.vb: Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9)
+  fullName: Algorand.Unity.TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9)
+  fullName.vb: Algorand.Unity.TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9)
+- uid: Algorand.Unity.TransactionGroup.Of``11(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@)
+  name: Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10)
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_Of__11___0____1____2____3____4____5____6____7____8____9____10__
+  commentId: M:Algorand.Unity.TransactionGroup.Of``11(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@)
+  name.vb: Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10)
+  fullName: Algorand.Unity.TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10)
+  fullName.vb: Algorand.Unity.TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10)
+- uid: Algorand.Unity.TransactionGroup.Of``12(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@)
+  name: Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11)
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_Of__12___0____1____2____3____4____5____6____7____8____9____10____11__
+  commentId: M:Algorand.Unity.TransactionGroup.Of``12(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@)
+  name.vb: Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11)
+  fullName: Algorand.Unity.TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11)
+  fullName.vb: Algorand.Unity.TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11)
+- uid: Algorand.Unity.TransactionGroup.Of``13(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@,``12@)
+  name: Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12)
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_Of__13___0____1____2____3____4____5____6____7____8____9____10____11____12__
+  commentId: M:Algorand.Unity.TransactionGroup.Of``13(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@,``12@)
+  name.vb: Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11, ByRef T12)
+  fullName: Algorand.Unity.TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12)
+  fullName.vb: Algorand.Unity.TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11, ByRef T12)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11, ByRef T12)
+- uid: Algorand.Unity.TransactionGroup.Of``14(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@,``12@,``13@)
+  name: Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13)
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_Of__14___0____1____2____3____4____5____6____7____8____9____10____11____12____13__
+  commentId: M:Algorand.Unity.TransactionGroup.Of``14(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@,``12@,``13@)
+  name.vb: Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11, ByRef T12, ByRef T13)
+  fullName: Algorand.Unity.TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13)
+  fullName.vb: Algorand.Unity.TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11, ByRef T12, ByRef T13)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11, ByRef T12, ByRef T13)
+- uid: Algorand.Unity.TransactionGroup.Of``15(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@,``12@,``13@,``14@)
+  name: Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14)
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_Of__15___0____1____2____3____4____5____6____7____8____9____10____11____12____13____14__
+  commentId: M:Algorand.Unity.TransactionGroup.Of``15(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@,``12@,``13@,``14@)
+  name.vb: Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11, ByRef T12, ByRef T13, ByRef T14)
+  fullName: Algorand.Unity.TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14)
+  fullName.vb: Algorand.Unity.TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11, ByRef T12, ByRef T13, ByRef T14)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11, ByRef T12, ByRef T13, ByRef T14)
+- uid: Algorand.Unity.TransactionGroup.Of``16(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@,``12@,``13@,``14@,``15@)
+  name: Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15)
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_Of__16___0____1____2____3____4____5____6____7____8____9____10____11____12____13____14____15__
+  commentId: M:Algorand.Unity.TransactionGroup.Of``16(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@,``9@,``10@,``11@,``12@,``13@,``14@,``15@)
+  name.vb: Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11, ByRef T12, ByRef T13, ByRef T14, ByRef T15)
+  fullName: Algorand.Unity.TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15)
+  fullName.vb: Algorand.Unity.TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11, ByRef T12, ByRef T13, ByRef T14, ByRef T15)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8, ByRef T9, ByRef T10, ByRef T11, ByRef T12, ByRef T13, ByRef T14, ByRef T15)
+- uid: Algorand.Unity.TransactionGroup.Of``2(``0@,``1@)
+  name: Of<T0, T1>(T0, T1)
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_Of__2___0____1__
+  commentId: M:Algorand.Unity.TransactionGroup.Of``2(``0@,``1@)
+  name.vb: Of(Of T0, T1)(ByRef T0, ByRef T1)
+  fullName: Algorand.Unity.TransactionGroup.Of<T0, T1>(T0, T1)
+  fullName.vb: Algorand.Unity.TransactionGroup.Of(Of T0, T1)(ByRef T0, ByRef T1)
+  nameWithType: TransactionGroup.Of<T0, T1>(T0, T1)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1)(ByRef T0, ByRef T1)
+- uid: Algorand.Unity.TransactionGroup.Of``3(``0@,``1@,``2@)
+  name: Of<T0, T1, T2>(T0, T1, T2)
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_Of__3___0____1____2__
+  commentId: M:Algorand.Unity.TransactionGroup.Of``3(``0@,``1@,``2@)
+  name.vb: Of(Of T0, T1, T2)(ByRef T0, ByRef T1, ByRef T2)
+  fullName: Algorand.Unity.TransactionGroup.Of<T0, T1, T2>(T0, T1, T2)
+  fullName.vb: Algorand.Unity.TransactionGroup.Of(Of T0, T1, T2)(ByRef T0, ByRef T1, ByRef T2)
+  nameWithType: TransactionGroup.Of<T0, T1, T2>(T0, T1, T2)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2)(ByRef T0, ByRef T1, ByRef T2)
+- uid: Algorand.Unity.TransactionGroup.Of``4(``0@,``1@,``2@,``3@)
+  name: Of<T0, T1, T2, T3>(T0, T1, T2, T3)
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_Of__4___0____1____2____3__
+  commentId: M:Algorand.Unity.TransactionGroup.Of``4(``0@,``1@,``2@,``3@)
+  name.vb: Of(Of T0, T1, T2, T3)(ByRef T0, ByRef T1, ByRef T2, ByRef T3)
+  fullName: Algorand.Unity.TransactionGroup.Of<T0, T1, T2, T3>(T0, T1, T2, T3)
+  fullName.vb: Algorand.Unity.TransactionGroup.Of(Of T0, T1, T2, T3)(ByRef T0, ByRef T1, ByRef T2, ByRef T3)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3>(T0, T1, T2, T3)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3)(ByRef T0, ByRef T1, ByRef T2, ByRef T3)
+- uid: Algorand.Unity.TransactionGroup.Of``5(``0@,``1@,``2@,``3@,``4@)
+  name: Of<T0, T1, T2, T3, T4>(T0, T1, T2, T3, T4)
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_Of__5___0____1____2____3____4__
+  commentId: M:Algorand.Unity.TransactionGroup.Of``5(``0@,``1@,``2@,``3@,``4@)
+  name.vb: Of(Of T0, T1, T2, T3, T4)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4)
+  fullName: Algorand.Unity.TransactionGroup.Of<T0, T1, T2, T3, T4>(T0, T1, T2, T3, T4)
+  fullName.vb: Algorand.Unity.TransactionGroup.Of(Of T0, T1, T2, T3, T4)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3, T4>(T0, T1, T2, T3, T4)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3, T4)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4)
+- uid: Algorand.Unity.TransactionGroup.Of``6(``0@,``1@,``2@,``3@,``4@,``5@)
+  name: Of<T0, T1, T2, T3, T4, T5>(T0, T1, T2, T3, T4, T5)
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_Of__6___0____1____2____3____4____5__
+  commentId: M:Algorand.Unity.TransactionGroup.Of``6(``0@,``1@,``2@,``3@,``4@,``5@)
+  name.vb: Of(Of T0, T1, T2, T3, T4, T5)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5)
+  fullName: Algorand.Unity.TransactionGroup.Of<T0, T1, T2, T3, T4, T5>(T0, T1, T2, T3, T4, T5)
+  fullName.vb: Algorand.Unity.TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3, T4, T5>(T0, T1, T2, T3, T4, T5)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5)
+- uid: Algorand.Unity.TransactionGroup.Of``7(``0@,``1@,``2@,``3@,``4@,``5@,``6@)
+  name: Of<T0, T1, T2, T3, T4, T5, T6>(T0, T1, T2, T3, T4, T5, T6)
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_Of__7___0____1____2____3____4____5____6__
+  commentId: M:Algorand.Unity.TransactionGroup.Of``7(``0@,``1@,``2@,``3@,``4@,``5@,``6@)
+  name.vb: Of(Of T0, T1, T2, T3, T4, T5, T6)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6)
+  fullName: Algorand.Unity.TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6>(T0, T1, T2, T3, T4, T5, T6)
+  fullName.vb: Algorand.Unity.TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6>(T0, T1, T2, T3, T4, T5, T6)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6)
+- uid: Algorand.Unity.TransactionGroup.Of``8(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@)
+  name: Of<T0, T1, T2, T3, T4, T5, T6, T7>(T0, T1, T2, T3, T4, T5, T6, T7)
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_Of__8___0____1____2____3____4____5____6____7__
+  commentId: M:Algorand.Unity.TransactionGroup.Of``8(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@)
+  name.vb: Of(Of T0, T1, T2, T3, T4, T5, T6, T7)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7)
+  fullName: Algorand.Unity.TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7>(T0, T1, T2, T3, T4, T5, T6, T7)
+  fullName.vb: Algorand.Unity.TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7>(T0, T1, T2, T3, T4, T5, T6, T7)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7)
+- uid: Algorand.Unity.TransactionGroup.Of``9(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@)
+  name: Of<T0, T1, T2, T3, T4, T5, T6, T7, T8>(T0, T1, T2, T3, T4, T5, T6, T7, T8)
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_Of__9___0____1____2____3____4____5____6____7____8__
+  commentId: M:Algorand.Unity.TransactionGroup.Of``9(``0@,``1@,``2@,``3@,``4@,``5@,``6@,``7@,``8@)
+  name.vb: Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8)
+  fullName: Algorand.Unity.TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8>(T0, T1, T2, T3, T4, T5, T6, T7, T8)
+  fullName.vb: Algorand.Unity.TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8)
+  nameWithType: TransactionGroup.Of<T0, T1, T2, T3, T4, T5, T6, T7, T8>(T0, T1, T2, T3, T4, T5, T6, T7, T8)
+  nameWithType.vb: TransactionGroup.Of(Of T0, T1, T2, T3, T4, T5, T6, T7, T8)(ByRef T0, ByRef T1, ByRef T2, ByRef T3, ByRef T4, ByRef T5, ByRef T6, ByRef T7, ByRef T8)
+- uid: Algorand.Unity.TransactionGroup.Txns
+  name: Txns
+  href: api/Algorand.Unity.TransactionGroup.html#Algorand_Unity_TransactionGroup_Txns
+  commentId: F:Algorand.Unity.TransactionGroup.Txns
+  fullName: Algorand.Unity.TransactionGroup.Txns
+  nameWithType: TransactionGroup.Txns
 - uid: Algorand.Unity.TransactionHeader
   name: TransactionHeader
   href: api/Algorand.Unity.TransactionHeader.html

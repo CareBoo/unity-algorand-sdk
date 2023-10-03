@@ -100,12 +100,12 @@
   
   
   <a id="Algorand_Unity_BaseN_ChangeBase_" data-uid="Algorand.Unity.BaseN.ChangeBase*"></a>
-  <h4 id="Algorand_Unity_BaseN_ChangeBase_System_ReadOnlySpan_System_Byte__System_Byte_System_Byte_System_Span_System_Byte___System_Int32__" data-uid="Algorand.Unity.BaseN.ChangeBase(System.ReadOnlySpan{System.Byte},System.Byte,System.Byte,System.Span{System.Byte}@,System.Int32@)">ChangeBase(ReadOnlySpan&lt;Byte&gt;, Byte, Byte, ref Span&lt;Byte&gt;, out Int32)</h4>
+  <h4 id="Algorand_Unity_BaseN_ChangeBase_ReadOnlySpan_System_Byte__System_Byte_Span_System_Byte___System_Int32__System_Boolean_" data-uid="Algorand.Unity.BaseN.ChangeBase(ReadOnlySpan{System.Byte},System.Byte,Span{System.Byte}@,System.Int32@,System.Boolean)">ChangeBase(ReadOnlySpan&lt;Byte&gt;, Byte, ref Span&lt;Byte&gt;, out Int32, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static BaseN.EncodeError ChangeBase(ReadOnlySpan&lt;byte&gt; data, byte fromBase, byte toBase, ref Span&lt;byte&gt; result, out int length)</code></pre>
+    <pre><code class="lang-csharp hljs">public static BaseN.EncodeError ChangeBase(ReadOnlySpan&lt;byte&gt; data, byte toBase, ref Span&lt;byte&gt; result, out int length, bool bigEndian = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -118,13 +118,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
+        <td><span class="xref">ReadOnlySpan</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
         <td><span class="parametername">data</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a></td>
-        <td><span class="parametername">fromBase</span></td>
         <td></td>
       </tr>
       <tr>
@@ -133,13 +128,18 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
+        <td><span class="xref">Span</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
         <td><span class="parametername">result</span></td>
         <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">length</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">bigEndian</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -162,12 +162,12 @@
   
   
   <a id="Algorand_Unity_BaseN_ChangeBase_" data-uid="Algorand.Unity.BaseN.ChangeBase*"></a>
-  <h4 id="Algorand_Unity_BaseN_ChangeBase_System_ReadOnlySpan_System_Byte__System_Byte_System_Span_System_Byte___System_Int32__System_Boolean_" data-uid="Algorand.Unity.BaseN.ChangeBase(System.ReadOnlySpan{System.Byte},System.Byte,System.Span{System.Byte}@,System.Int32@,System.Boolean)">ChangeBase(ReadOnlySpan&lt;Byte&gt;, Byte, ref Span&lt;Byte&gt;, out Int32, Boolean)</h4>
+  <h4 id="Algorand_Unity_BaseN_ChangeBase_ReadOnlySpan_System_Byte__System_Byte_System_Byte_Span_System_Byte___System_Int32__" data-uid="Algorand.Unity.BaseN.ChangeBase(ReadOnlySpan{System.Byte},System.Byte,System.Byte,Span{System.Byte}@,System.Int32@)">ChangeBase(ReadOnlySpan&lt;Byte&gt;, Byte, Byte, ref Span&lt;Byte&gt;, out Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static BaseN.EncodeError ChangeBase(ReadOnlySpan&lt;byte&gt; data, byte toBase, ref Span&lt;byte&gt; result, out int length, bool bigEndian = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public static BaseN.EncodeError ChangeBase(ReadOnlySpan&lt;byte&gt; data, byte fromBase, byte toBase, ref Span&lt;byte&gt; result, out int length)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,8 +180,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
+        <td><span class="xref">ReadOnlySpan</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
         <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a></td>
+        <td><span class="parametername">fromBase</span></td>
         <td></td>
       </tr>
       <tr>
@@ -190,18 +195,13 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
+        <td><span class="xref">Span</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
         <td><span class="parametername">result</span></td>
         <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">length</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">bigEndian</span></td>
         <td></td>
       </tr>
     </tbody>

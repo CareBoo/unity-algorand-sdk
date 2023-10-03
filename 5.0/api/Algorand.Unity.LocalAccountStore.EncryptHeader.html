@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Struct Either&lt;T, U&gt;
+    <title>Struct LocalAccountStore.EncryptHeader
    | Algorand SDK for Unity </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Struct Either&lt;T, U&gt;
+    <meta name="title" content="Struct LocalAccountStore.EncryptHeader
    | Algorand SDK for Unity ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -77,49 +77,30 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Algorand.Unity.Either`2">
+            <article class="content wrap" id="_content" data-uid="Algorand.Unity.LocalAccountStore.EncryptHeader">
   
   
-  <h1 id="Algorand_Unity_Either_2" data-uid="Algorand.Unity.Either`2" class="text-break">Struct Either&lt;T, U&gt;
+  <h1 id="Algorand_Unity_LocalAccountStore_EncryptHeader" data-uid="Algorand.Unity.LocalAccountStore.EncryptHeader" class="text-break">Struct LocalAccountStore.EncryptHeader
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Algorand.Unity.html">Algorand.Unity</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Algorand_Unity_Either_2_syntax">Syntax</h5>
+  <h5 id="Algorand_Unity_LocalAccountStore_EncryptHeader_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct Either&lt;T, U&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct EncryptHeader</code></pre>
   </div>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="parametername">U</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="constructors">Constructors
   </h3>
   
   
-  <a id="Algorand_Unity_Either_2__ctor_" data-uid="Algorand.Unity.Either`2.#ctor*"></a>
-  <h4 id="Algorand_Unity_Either_2__ctor__0_" data-uid="Algorand.Unity.Either`2.#ctor(`0)">Either(T)</h4>
+  <a id="Algorand_Unity_LocalAccountStore_EncryptHeader__ctor_" data-uid="Algorand.Unity.LocalAccountStore.EncryptHeader.#ctor*"></a>
+  <h4 id="Algorand_Unity_LocalAccountStore_EncryptHeader__ctor_PwHash_Salt_SecretBox_Nonce_" data-uid="Algorand.Unity.LocalAccountStore.EncryptHeader.#ctor(PwHash.Salt,SecretBox.Nonce)">EncryptHeader(PwHash.Salt, SecretBox.Nonce)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Either(T value)</code></pre>
+    <pre><code class="lang-csharp hljs">public EncryptHeader(PwHash.Salt salt, SecretBox.Nonce nonce)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -132,35 +113,361 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">value</span></td>
+        <td><span class="xref">PwHash.Salt</span></td>
+        <td><span class="parametername">salt</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">SecretBox.Nonce</span></td>
+        <td><span class="parametername">nonce</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Algorand_Unity_LocalAccountStore_EncryptHeader_bytes" data-uid="Algorand.Unity.LocalAccountStore.EncryptHeader.bytes">bytes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte *bytes</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>*</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Algorand_Unity_Either_2__ctor_" data-uid="Algorand.Unity.Either`2.#ctor*"></a>
-  <h4 id="Algorand_Unity_Either_2__ctor__1_" data-uid="Algorand.Unity.Either`2.#ctor(`1)">Either(U)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="Algorand_Unity_LocalAccountStore_EncryptHeader_KeySize" data-uid="Algorand.Unity.LocalAccountStore.EncryptHeader.KeySize">KeySize</h4>
+  <div class="markdown level1 summary"><p>The size of the key in bytes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Either(U value)</code></pre>
+    <pre><code class="lang-csharp hljs">public const int KeySize = default(int)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">U</span></td>
-        <td><span class="parametername">value</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Algorand_Unity_LocalAccountStore_EncryptHeader_MacSize" data-uid="Algorand.Unity.LocalAccountStore.EncryptHeader.MacSize">MacSize</h4>
+  <div class="markdown level1 summary"><p>The size of the mac in bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MacSize = default(int)</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Algorand_Unity_LocalAccountStore_EncryptHeader_nonce" data-uid="Algorand.Unity.LocalAccountStore.EncryptHeader.nonce">nonce</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SecretBox.Nonce nonce</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">SecretBox.Nonce</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Algorand_Unity_LocalAccountStore_EncryptHeader_NonceOffset" data-uid="Algorand.Unity.LocalAccountStore.EncryptHeader.NonceOffset">NonceOffset</h4>
+  <div class="markdown level1 summary"><p>The offset of the nonce in bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int NonceOffset = default(int)</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Algorand_Unity_LocalAccountStore_EncryptHeader_NonceSize" data-uid="Algorand.Unity.LocalAccountStore.EncryptHeader.NonceSize">NonceSize</h4>
+  <div class="markdown level1 summary"><p>The size of the nonce in bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int NonceSize = default(int)</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Algorand_Unity_LocalAccountStore_EncryptHeader_prefix" data-uid="Algorand.Unity.LocalAccountStore.EncryptHeader.prefix">prefix</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint prefix</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Algorand_Unity_LocalAccountStore_EncryptHeader_Prefix" data-uid="Algorand.Unity.LocalAccountStore.EncryptHeader.Prefix">Prefix</h4>
+  <div class="markdown level1 summary"><p>The prefix of the encrypted store.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const uint Prefix = 0U</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Algorand_Unity_LocalAccountStore_EncryptHeader_PrefixOffset" data-uid="Algorand.Unity.LocalAccountStore.EncryptHeader.PrefixOffset">PrefixOffset</h4>
+  <div class="markdown level1 summary"><p>The offset of the prefix in bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PrefixOffset = 0</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Algorand_Unity_LocalAccountStore_EncryptHeader_PrefixSize" data-uid="Algorand.Unity.LocalAccountStore.EncryptHeader.PrefixSize">PrefixSize</h4>
+  <div class="markdown level1 summary"><p>The size of the prefix in bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PrefixSize = 4</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Algorand_Unity_LocalAccountStore_EncryptHeader_salt" data-uid="Algorand.Unity.LocalAccountStore.EncryptHeader.salt">salt</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PwHash.Salt salt</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">PwHash.Salt</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Algorand_Unity_LocalAccountStore_EncryptHeader_SaltOffset" data-uid="Algorand.Unity.LocalAccountStore.EncryptHeader.SaltOffset">SaltOffset</h4>
+  <div class="markdown level1 summary"><p>The offset of the salt in bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int SaltOffset = 4</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Algorand_Unity_LocalAccountStore_EncryptHeader_SaltSize" data-uid="Algorand.Unity.LocalAccountStore.EncryptHeader.SaltSize">SaltSize</h4>
+  <div class="markdown level1 summary"><p>The size of the salt in bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int SaltSize = default(int)</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Algorand_Unity_LocalAccountStore_EncryptHeader_SizeBytes" data-uid="Algorand.Unity.LocalAccountStore.EncryptHeader.SizeBytes">SizeBytes</h4>
+  <div class="markdown level1 summary"><p>The size of the header in bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int SizeBytes = default(int)</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -169,13 +476,13 @@
   </h3>
   
   
-  <a id="Algorand_Unity_Either_2_IsValue1_" data-uid="Algorand.Unity.Either`2.IsValue1*"></a>
-  <h4 id="Algorand_Unity_Either_2_IsValue1" data-uid="Algorand.Unity.Either`2.IsValue1">IsValue1</h4>
+  <a id="Algorand_Unity_LocalAccountStore_EncryptHeader_IsValid_" data-uid="Algorand.Unity.LocalAccountStore.EncryptHeader.IsValid*"></a>
+  <h4 id="Algorand_Unity_LocalAccountStore_EncryptHeader_IsValid" data-uid="Algorand.Unity.LocalAccountStore.EncryptHeader.IsValid">IsValid</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsValue1 { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsValid { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -188,327 +495,6 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Algorand_Unity_Either_2_IsValue2_" data-uid="Algorand.Unity.Either`2.IsValue2*"></a>
-  <h4 id="Algorand_Unity_Either_2_IsValue2" data-uid="Algorand.Unity.Either`2.IsValue2">IsValue2</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsValue2 { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Algorand_Unity_Either_2_Value1_" data-uid="Algorand.Unity.Either`2.Value1*"></a>
-  <h4 id="Algorand_Unity_Either_2_Value1" data-uid="Algorand.Unity.Either`2.Value1">Value1</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T Value1 { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Algorand_Unity_Either_2_Value2_" data-uid="Algorand.Unity.Either`2.Value2*"></a>
-  <h4 id="Algorand_Unity_Either_2_Value2" data-uid="Algorand.Unity.Either`2.Value2">Value2</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public U Value2 { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">U</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  
-  
-  <a id="Algorand_Unity_Either_2_Deconstruct_" data-uid="Algorand.Unity.Either`2.Deconstruct*"></a>
-  <h4 id="Algorand_Unity_Either_2_Deconstruct__0___1__" data-uid="Algorand.Unity.Either`2.Deconstruct(`0@,`1@)">Deconstruct(out T, out U)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Deconstruct(out T value1, out U value2)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">value1</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">U</span></td>
-        <td><span class="parametername">value2</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Algorand_Unity_Either_2_TryGetValue1_" data-uid="Algorand.Unity.Either`2.TryGetValue1*"></a>
-  <h4 id="Algorand_Unity_Either_2_TryGetValue1__0__" data-uid="Algorand.Unity.Either`2.TryGetValue1(`0@)">TryGetValue1(out T)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryGetValue1(out T value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Algorand_Unity_Either_2_TryGetValue2_" data-uid="Algorand.Unity.Either`2.TryGetValue2*"></a>
-  <h4 id="Algorand_Unity_Either_2_TryGetValue2__1__" data-uid="Algorand.Unity.Either`2.TryGetValue2(`1@)">TryGetValue2(out U)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryGetValue2(out U value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">U</span></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="operators">Operators
-  </h3>
-  
-  
-  <a id="Algorand_Unity_Either_2_op_Implicit_" data-uid="Algorand.Unity.Either`2.op_Implicit*"></a>
-  <h4 id="Algorand_Unity_Either_2_op_Implicit__0__Algorand_Unity_Either__0__1_" data-uid="Algorand.Unity.Either`2.op_Implicit(`0)~Algorand.Unity.Either{`0,`1}">Implicit(T to Either&lt;T, U&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Either&lt;T, U&gt;(T value1)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">T</span></td>
-        <td><span class="parametername">value1</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Algorand.Unity.Either-2.html">Either</a>&lt;T, U&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Algorand_Unity_Either_2_op_Implicit_" data-uid="Algorand.Unity.Either`2.op_Implicit*"></a>
-  <h4 id="Algorand_Unity_Either_2_op_Implicit__1__Algorand_Unity_Either__0__1_" data-uid="Algorand.Unity.Either`2.op_Implicit(`1)~Algorand.Unity.Either{`0,`1}">Implicit(U to Either&lt;T, U&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Either&lt;T, U&gt;(U value2)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">U</span></td>
-        <td><span class="parametername">value2</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Algorand.Unity.Either-2.html">Either</a>&lt;T, U&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Algorand_Unity_Either_2_op_Implicit_" data-uid="Algorand.Unity.Either`2.op_Implicit*"></a>
-  <h4 id="Algorand_Unity_Either_2_op_Implicit_Algorand_Unity_Either__0__1___Algorand_Unity_Either__1__0_" data-uid="Algorand.Unity.Either`2.op_Implicit(Algorand.Unity.Either{`0,`1})~Algorand.Unity.Either{`1,`0}">Implicit(Either&lt;T, U&gt; to Either&lt;U, T&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Either&lt;U, T&gt;(Either&lt;T, U&gt; either)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Algorand.Unity.Either-2.html">Either</a>&lt;T, U&gt;</td>
-        <td><span class="parametername">either</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Algorand.Unity.Either-2.html">Either</a>&lt;U, T&gt;</td>
         <td></td>
       </tr>
     </tbody>
