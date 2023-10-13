@@ -9,6 +9,7 @@ namespace Algorand.Unity.Readme.Editor
     [CustomEditor(typeof(ReadmeFile))]
     public class ReadmeFileEditor : UnityEditor.Editor
     {
+        public const string Description = @"Integrate your game with Algorand, a Pure Proof-of-Stake blockchain overseen by the Algorand Foundation. Create Algorand transactions, Algorand accounts, and use Algorand's REST APIs.";
         public Texture2D logo;
 
         public static string DocHomePath =>
@@ -70,14 +71,7 @@ namespace Algorand.Unity.Readme.Editor
                 wordWrap = true,
                 richText = true
             };
-            GUILayout.Label(
-                @"   Integrate your game with Algorand, "
-                + @"a Pure Proof-of-Stake blockchain overseen by the Algorand Foundation. "
-                + @"Create and sign Algorand transactions, use Algorand's "
-                + @"REST APIs, "
-                + @"and connect to any Algorand wallet supporting "
-                + @"WalletConnect.",
-                descriptionStyle);
+            GUILayout.Label(Description, descriptionStyle);
         }
     }
 }
