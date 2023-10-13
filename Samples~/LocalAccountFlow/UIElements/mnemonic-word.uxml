@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:TextField value="mnemonic" name="word-field" readonly="true" style="flex-direction: row-reverse;">
+        <ui:Label tabindex="-1" text="25." parse-escape-sequences="true" display-tooltip-when-elided="true" name="word-id" style="-unity-text-align: middle-left;" />
+    </ui:TextField>
+</ui:UXML>

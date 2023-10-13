@@ -51,5 +51,26 @@
     "ProjectSettings/": true,
     "temp/": true,
     "Temp/": true
-  }
+  },
+  "conventionalCommits.scopes": [
+    "upm",
+    "dependencies",
+    "developer",
+    "asset-store",
+    "algod",
+    "kmd",
+    "indexer",
+    "docs",
+    "json",
+    "msgpack",
+    "applications",
+    "assets",
+    "abi",
+    "crypto",
+    "libsodium",
+    "crypto",
+    "accounts",
+    "webgl"
+  ],
+  "dotnet.defaultSolution": "Algorand.Unity.Package.sln"
 }

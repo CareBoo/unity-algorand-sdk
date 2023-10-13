@@ -117,7 +117,7 @@
       }
     ],
     "sitemap": {
-      "baseUrl": "https://careboo.github.io/unity-algorand-sdk/4.1",
+      "baseUrl": "https://careboo.github.io/unity-algorand-sdk/5.0",
       "changefreq": "monthly",
       "fileOptions": {
         "api/*": {
@@ -131,9 +131,6 @@
     ],
     "xref": [
       "https://normanderwan.github.io/UnityXrefMaps/xrefmap.yml"
-    ],
-    "xrefService": [
-      "https://xref.docs.microsoft.com/query?uid={uid}"
     ]
   }
 }

@@ -1,5 +1,6 @@
 using System;
 using Unity.Collections;
+using Algorand.Unity.Collections;
 
 namespace Algorand.Unity
 {

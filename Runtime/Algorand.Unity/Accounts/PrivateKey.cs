@@ -13,7 +13,7 @@ namespace Algorand.Unity
     /// </summary>
     [Serializable]
     [AlgoApiFormatter(typeof(PrivateKeyFormatter))]
-    [StructLayout(LayoutKind.Explicit, Size = 32)]
+    [StructLayout(LayoutKind.Explicit, Size = SizeBytes)]
     public partial struct PrivateKey
         : IEquatable<PrivateKey>
             , IByteArray
@@ -35,6 +35,8 @@ namespace Algorand.Unity
         }
 
         public int Length => seed.Length;
+
+        public const int SizeBytes = 32;
 
         public byte this[int index]
         {

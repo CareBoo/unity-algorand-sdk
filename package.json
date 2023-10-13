@@ -1,7 +1,7 @@
 {
   "name": "com.careboo.unity-algorand-sdk",
   "displayName": "Algorand.Unity",
-  "version": "4.1.0",
+  "version": "5.0.0-pre.3",
   "unity": "2021.3",
   "keywords": [
     "algorand",
@@ -11,9 +11,9 @@
     "blockchain"
   ],
   "license": "MIT",
-  "description": "Integrate your game with Algorand, a Pure Proof-of-Stake blockchain overseen by the Algorand Foundation. Create and sign Algorand transactions, use Algorand's REST APIs, and connect to any Algorand wallet supporting WalletConnect.",
+  "description": "Integrate your game with Algorand, a Pure Proof-of-Stake blockchain overseen by the Algorand Foundation.\nCreate Algorand transactions, Algorand accounts, and use Algorand's REST APIs.",
   "dependencies": {
-    "com.unity.collections": "1.4.0",
+    "com.unity.collections": "1.5.1",
     "com.cysharp.unitask": "2.3.1",
     "com.unity.ugui": "1.0.0"
   },
@@ -21,14 +21,19 @@
     "access": "public"
   },
   "repository": "github:CareBoo/unity-algorand-sdk",
-  "changelogUrl": "https://careboo.github.io/unity-algorand-sdk/4.1/changelog",
-  "documentationUrl": "https://careboo.github.io/unity-algorand-sdk/4.1",
-  "licensesUrl": "https://careboo.github.io/unity-algorand-sdk/4.1/license",
+  "changelogUrl": "https://careboo.github.io/unity-algorand-sdk/5.0/changelog",
+  "documentationUrl": "https://careboo.github.io/unity-algorand-sdk/5.0",
+  "licensesUrl": "https://careboo.github.io/unity-algorand-sdk/5.0/license",
   "author": {
     "name": "CareBoo",
     "url": "https://github.com/CareBoo"
   },
   "samples": [
+    {
+      "displayName": "Local Wallet",
+      "description": "An example UI showcasing how to use LocalAccountStore with PlayerPrefs to store a player's wallet locally.",
+      "path": "Samples~/LocalAccountStore"
+    },
     {
       "displayName": "Your First Transaction",
       "description": "Contains a scene for signing and submitting your first Algorand transaction.",
@@ -38,16 +43,6 @@
       "displayName": "Creating ASAs",
       "description": "Scripts that can be used to create Algorand Standard Assets (ASAs) in the Unity Editor.",
       "path": "Samples~/CreatingAsas"
-    },
-    {
-      "displayName": "WalletConnect",
-      "description": "Contains a scene that, when ran, will show a QR Code that can be scanned by any wallet supporting WalletConnect for Algorand.",
-      "path": "Samples~/WalletConnect"
-    },
-    {
-      "displayName": "Editor Wallets",
-      "description": "Scripts that show proof of concepts for connecting wallets to the Unity Editor. Currently it only supports WalletConnect for connection.",
-      "path": "Samples~/EditorWallets"
     },
     {
       "displayName": "Calling Smart Contract ABI",

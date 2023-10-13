@@ -24,7 +24,7 @@ namespace Algorand.Unity.Samples.CallingSmartContractAbi
             if (!string.IsNullOrEmpty(error))
             {
                 var root = document.rootVisualElement;
-                var title = new Label("An error occurred trying to connect to your Algorand sandbox at localhost.");
+                var title = new Label("An error occurred trying to connect to your AlgoKit LocalNet.");
                 var message = new Label(error);
 
                 root.Add(title);

@@ -18,9 +18,6 @@ Save your address and passphrase in a separate place.
 
 > [!Warning]
 > Never share your private key or mnemonic. Production environments require stringent private key management.
-> For more information on key management in community Wallets, click
-> [here](https://developer.algorand.org/ecosystem-projects/#wallets).
-> See [WalletConnect](../walletconnect.md) for instructions on how to connect to a mobile Wallet.
 
 ## Fund the Account
 
@@ -31,23 +28,14 @@ Before sending transactions to the Algorand network, the account must be funded 
 > [!Note]
 > Prerequisites:
 >
-> - [Install Docker Compose](https://docs.docker.com/compose/install/)
-> - [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+> - [Install AlgoKit](https://github.com/algorandfoundation/algokit-cli#install)
 
-The easiest way to access a node in development is via the Algorand Sandbox. Alternatively, [AlgoExplorer](https://testnet.algoexplorer.io/)
-provides [`algod`](https://testnet.algoexplorer.io/api-dev/v2) and [`indexer`](https://testnet.algoexplorer.io/api-dev/indexer-v2) nodes with limited features.
+The easiest way to access a node in development is via [AlgoKit](https://developer.algorand.org/docs/get-details/algokit/). Alternatively, [AlgoNode](https://algonode.io)
+provides [`algod`](https://testnet-api.algonode.cloud) and [`indexer`](https://testnet-idx.algonode.cloud) nodes with limited features.
 
 ```bash
-> git clone https://github.com/algorand/sandbox.git
-> cd sandbox
-> ./sandbox up testnet
+> algokit localnet start
 ```
-
-The `testnet` option will configure the network to use the testnet.
-
-> [!Warning]
-> The sandbox installation may take a few minutes to startup in order to catch up to the current block round.
-> To learn more about fast catchup, see [Sync Node Network using Fast Catchup](https://developer.algorand.org/docs/run-a-node/setup/install/#sync-node-network-using-fast-catchup)
 
 Once the network is up and running, you should be able to connect to the `algod` service.
 Verify that the node is healthy and you can connect to it. Create a new `AlgodCheck` component
@@ -132,11 +120,6 @@ public void Start()
 ```
 
 Your balance should appear in the editor console when you press **Play** again.
-
-> [!Note]
-> AlgoExplorer's `algod` node does not support the `GetAccountInformation` endpoint.
-> Instead, you'll need to use `IndexerClient.GetAccount` to get the balance of algo
-> from an account.
 
 ## Send a Transaction
 

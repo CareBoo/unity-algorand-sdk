@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Label tabindex="-1" text="Create a new Wallet" parse-escape-sequences="true" display-tooltip-when-elided="true" name="title" />
+    <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="error-label" style="color: rgb(255, 27, 27); white-space: normal;" />
+    <ui:TextField picking-mode="Ignore" label="Password" password="true" name="password-field" />
+    <ui:TextField picking-mode="Ignore" label="Confirm Password" name="confirm-password-field" password="true" />
+    <ui:Button text="Confirm" parse-escape-sequences="true" display-tooltip-when-elided="true" name="confirm-button" />
+</ui:UXML>

@@ -70,9 +70,12 @@ jobs:
       - name: Package unitypackage
         uses: game-ci/unity-builder@v2
         env:
+          # UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          # UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE_2020 }}
         with:
           targetPlatform: StandaloneLinux64
+          unityVersion: 2021.3.29f1
           projectPath: Algorand.Unity.AssetStore
           buildMethod: UnityPackage.Build
           versioning: None

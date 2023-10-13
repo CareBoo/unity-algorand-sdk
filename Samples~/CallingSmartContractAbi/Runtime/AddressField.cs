@@ -1,15 +1,18 @@
 using Algorand.Unity;
 using UnityEngine.UIElements;
 
-public class AddressField : BaseField<Address>
+namespace Algorand.Unity.Samples.CallingSmartContractAbi
 {
-    public Address address
+    public class AddressField : BaseField<Address>
     {
-        get => value;
-        set => this.value = value;
-    }
+        public Address address
+        {
+            get => value;
+            set => this.value = value;
+        }
 
-    public AddressField(string label) : base(label, new TextField())
-    {
+        public AddressField(string label) : base(label, new TextField())
+        {
+        }
     }
 }

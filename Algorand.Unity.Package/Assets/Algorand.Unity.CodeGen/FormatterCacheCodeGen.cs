@@ -1,4 +1,5 @@
 using System;
+using System.CodeDom;
 using System.CodeDom.Compiler;
 using System.IO;
 using System.Linq;
@@ -21,6 +22,7 @@ namespace Algorand.Unity.Editor.CodeGen
                 .Concat(TypeCache.GetTypesWithAttribute(typeof(AlgoApiFormatterAttribute)))
                 .Select(t => new AlgoApiCompileUnit(t))
                 .Where(cu => cu.IsValid)
+                .OrderBy(cu => cu.Type.Name)
                 .GroupBy(cu => cu.SourceInfo.FilePath)
                 .Select(grouping => grouping.Aggregate(MergeCompileUnit))
                 .Select(ExportToDirectory)
@@ -33,7 +35,26 @@ namespace Algorand.Unity.Editor.CodeGen
 
         private static AlgoApiCompileUnit MergeCompileUnit(AlgoApiCompileUnit cu1, AlgoApiCompileUnit cu2)
         {
-            cu1.Namespaces.AddRange(cu2.Namespaces);
+            var namespaces1 = cu1.Namespaces;
+            var namespaces2 = cu2.Namespaces;
+
+            foreach (CodeNamespace ns2 in namespaces2)
+            {
+                var existsAlready = false;
+                foreach (CodeNamespace ns1 in namespaces1)
+                {
+                    if (ns1.Name == ns2.Name)
+                    {
+                        existsAlready = true;
+                        ns1.Types.AddRange(ns2.Types);
+                        break;
+                    }
+                }
+                if (!existsAlready)
+                {
+                    namespaces1.Add(ns2);
+                }
+            }
             return cu1;
         }
 

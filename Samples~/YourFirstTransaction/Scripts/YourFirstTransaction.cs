@@ -6,9 +6,9 @@ namespace Algorand.Unity.Samples.YourFirstTransaction
 {
     public class YourFirstTransaction : MonoBehaviour
     {
-        public AlgodClient algod = new("https://node.testnet.algoexplorerapi.io");
+        public AlgodClient algod = new("https://testnet-api.algonode.cloud");
 
-        public IndexerClient indexer = new("https://algoindexer.testnet.algoexplorerapi.io");
+        public IndexerClient indexer = new("https://testnet-idx.algonode.cloud");
 
         public string testnetFaucetUrl = "https://dispenser.testnet.aws.algodev.network/?account={0}";
 

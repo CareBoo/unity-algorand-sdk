@@ -26,11 +26,6 @@ namespace Algorand.Unity
             return true;
         }
     }
-}
-
-namespace Algorand.Unity
-{
-    
     
     public partial struct SignedTxn<TTxn>
     {

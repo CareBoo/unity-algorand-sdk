@@ -106,9 +106,6 @@
 
                         <ul class="nav level2">
                           <li class="">
-                            <a href="getting_started/developing_with_sandbox.html" title="Developing with Algorand Sandbox" class="">Developing with Algorand Sandbox</a>
-                          </li>
-                          <li class="">
                             <a href="getting_started/your_first_transaction.html" title="Your First Transaction" class="">Your First Transaction</a>
                           </li>
                         </ul>                    </li>
@@ -151,13 +148,13 @@
 </div>
 <h2 id="examples">Examples</h2>
 <h3 id="algorandunityalgodclient-to-algorandalgoddefaultapi"><code>Algorand.Unity.AlgodClient</code> to <code>Algorand.Algod.DefaultApi</code>:</h3>
-<pre><code class="lang-csharp">Algorand.Unity.AlgodClient sandboxAlgodClient = new Algorand.Unity.AlgodClient(
+<pre><code class="lang-csharp">Algorand.Unity.AlgodClient localAlgodClient = new Algorand.Unity.AlgodClient(
     &quot;http://localhost:4001&quot;,
     &quot;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&quot;);
-Algorand.Algod.DefaultApi sandboxAlgodDefaultApi = sandboxAlgodClient.ToDefaultApi();
+Algorand.Algod.DefaultApi localAlgodDefaultApi = localAlgodClient.ToDefaultApi();
 </code></pre><h3 id="algorandunityindexerclient-to-algorandindexerlookupapi"><code>Algorand.Unity.IndexerClient</code> to <code>Algorand.Indexer.LookupApi</code>:</h3>
-<pre><code class="lang-csharp">Algorand.Unity.IndexerClient sandboxIndexerClient = new Algorand.Unity.IndexerClient(&quot;http://localhost:8980&quot;);
-Algorand.Indexer.LookupApi sandboxIndexerLookupApi = sandboxIndexerClient.ToLookupApi();
+<pre><code class="lang-csharp">Algorand.Unity.IndexerClient localIndexerClient = new Algorand.Unity.IndexerClient(&quot;http://localhost:8980&quot;);
+Algorand.Indexer.LookupApi localIndexerLookupApi = localIndexerClient.ToLookupApi();
 </code></pre><h3 id="algorandunityaddress-to-algorandaddress-read-only"><code>Algorand.Unity.Address</code> to <code>Algorand.Address</code> (Read-Only)</h3>
 <pre><code class="lang-csharp">Algorand.Unity.Address myAddress = Algorand.Unity.Address.FromString(&quot;VHHZTDDT3GEPZ4LXCDHGBGFFJEGIKJLBFGXKQIDD6XK26P5B7ZWY5EFCNE&quot;);
 Algorand.Address dotnetAddress = myAddress.ToDotnet();

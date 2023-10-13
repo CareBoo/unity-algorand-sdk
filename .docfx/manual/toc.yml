@@ -3,8 +3,6 @@
 - name: Getting Started
   href: ../../docs/getting_started.md
   items:
-    - name: Developing with Algorand Sandbox
-      href: ../../docs/getting_started/developing_with_sandbox.md
     - name: Your First Transaction
       href: ../../docs/getting_started/your_first_transaction.md
 - name: Algorand Standard Assets
@@ -12,9 +10,5 @@
   items:
     - name: Creating ASAs in the Editor
       href: ../../docs/algorand_standard_assets/creating_asas_in_editor.md
-- name: WalletConnect
-  href: ../../docs/walletconnect.md
-- name: Integration with the .NET SDK
-  href: ../../docs/integration_with_the_dotnet_sdk.md
 - name: Troubleshooting
   href: ../../docs/troubleshooting.md

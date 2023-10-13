@@ -106,9 +106,6 @@
 
                         <ul class="nav level2">
                           <li class="">
-                            <a href="../getting_started/developing_with_sandbox.html" title="Developing with Algorand Sandbox" class="">Developing with Algorand Sandbox</a>
-                          </li>
-                          <li class="">
                             <a href="../getting_started/your_first_transaction.html" title="Your First Transaction" class="">Your First Transaction</a>
                           </li>
                         </ul>                    </li>
@@ -121,12 +118,6 @@
                             <a href="../algorand_standard_assets/creating_asas_in_editor.html" title="Creating ASAs in the Editor" class="active">Creating ASAs in the Editor</a>
                           </li>
                         </ul>                    </li>
-                    <li class="">
-                      <a href="../walletconnect.html" title="WalletConnect" class="">WalletConnect</a>
-                    </li>
-                    <li class="">
-                      <a href="../integration_with_the_dotnet_sdk.html" title="Integration with the .NET SDK" class="">Integration with the .NET SDK</a>
-                    </li>
                     <li class="">
                       <a href="../troubleshooting.html" title="Troubleshooting" class="">Troubleshooting</a>
                     </li>
@@ -152,7 +143,7 @@
 </div>
 <h3 id="creating-the-accountobject">Creating the <code>AccountObject</code></h3>
 <p>We&#39;ll create an <code>AccountObject</code> class that inherits from <code>ScriptableObject</code>. This will store our <code>PrivateKey</code> used for signing.</p>
-<div class="IMPORTANT"><h5>Important</h5><p>Do <strong>NOT</strong> store a sensitive <code>PrivateKey</code> inside your project source. We&#39;re only storing the <code>PrivateKey</code> in this demo to keep it simple. In production, you will want to use a secure Algorand wallet to sign your transactions. This SDK currently supports KMD and WalletConnect connections. Please see the <code>Editor Wallet Connection</code> sample to see examples on how to connect your wallets in the editor.</p>
+<div class="IMPORTANT"><h5>Important</h5><p>Do <strong>NOT</strong> store a sensitive <code>PrivateKey</code> inside your project source. We&#39;re only storing the <code>PrivateKey</code> in this demo to keep it simple. In production, you will want to use a secure Algorand wallet to sign your transactions. This SDK currently supports KMD and password-protected local storage connections.</p>
 </div>
 <p>Add the following, <code>AccountObject.cs</code>, to your project:</p>
 <pre><code class="lang-csharp">using System;
@@ -227,9 +218,9 @@ public class AlgodClientObject
     public AlgodClient Client;
     public AlgorandNetwork Network;
 }
-</code></pre><p>Right click in the project hierarchy, and select <code>Create/Algod Client Object</code>, then name the file <code>TestNetAlgoExplorerAlgod</code>. We&#39;re going to use the AlgoExplorer TestNet <code>algod</code> service. This service has most endpoints disabled, but it&#39;s free to use and has the transaction endpoints enabled which is good for our usecase. Set the <code>Client/Address</code> field to the AlgoExplorer TestNet <code>algod</code> service address at <a href="https://node.testnet.algoexplorerapi.io">https://node.testnet.algoexplorerapi.io</a>. Set the <code>Network</code> field to <code>Test Net</code>. It should look like this:</p>
-<p><img src="../../docs/images/testnet_algoexplorer_algod.png" alt="TestNetAlgoExplorerAlgod"></p>
-<div class="IMPORTANT"><h5>Important</h5><p>When using an Algorand node in production, it&#39;s recommended to consider using multiple nodes or your own node in case of a service outtage. Algo Explorer, while convenient, should not be relied upon by every Dapp.</p>
+</code></pre><p>Right click in the project hierarchy, and select <code>Create/Algod Client Object</code>, then name the file <code>TestNetAlgod</code>. We&#39;re going to use a third party, TestNet <code>algod</code> service, run by AlgoNode. This service has most endpoints disabled, but it&#39;s free to use and has the transaction endpoints enabled which is good for our usecase. Set the <code>Client/Address</code> field to the AlgoNode TestNet <code>algod</code> service address at <a href="https://testnet-api.algonode.cloud">https://testnet-api.algonode.cloud</a>. Set the <code>Network</code> field to <code>Test Net</code>. It should look like this:</p>
+<p><img src="../../docs/images/testnet_algod.png" alt="TestNetAlgod"></p>
+<div class="IMPORTANT"><h5>Important</h5><p>When using an Algorand node in production, it&#39;s recommended to consider using multiple nodes or your own node in case of a service outtage. AlgoNode, while convenient, should not be relied upon by every Dapp.</p>
 </div>
 <h2 id="creating-the-algorand-standard-asset-asa">Creating the Algorand Standard Asset (ASA)</h2>
 <p>We&#39;re not done creating <code>ScriptableObject</code>s just yet. Let&#39;s create a <code>ScriptableObject</code> that will store the state of our ASA. Create an <code>AssetObject.cs</code> script and add it to your project:</p>
@@ -422,7 +413,7 @@ async UniTaskVoid CreateAsaAsync()
     // close the window now that the asset is created.
     Close();
 }
-</code></pre><p>Go ahead and open that window back up by clicking on the <code>Create Asset</code> button. Add your <code>AssetCreator</code> account to the <code>Creator Account</code> field, and add <code>TestNetAlgoExplorerAlgod</code> to the <code>Algod</code> field. Click the <code>Connect</code> button and wait patiently for ~5-6 seconds. TYou should see that the transaction was submitted in the editor console, followed by a confirmation that the asset was created. The window will close automatically, and if you expand the <code>Index</code> field in your <code>GameToken</code> asset, you&#39;ll see that it was updated with a number. You can see your asset on the blockchain by searching this asset index on the <a href="https://testnet.algoexplorer.io">AlgoExplorer TestNet Block Explorer</a>.</p>
+</code></pre><p>Go ahead and open that window back up by clicking on the <code>Create Asset</code> button. Add your <code>AssetCreator</code> account to the <code>Creator Account</code> field, and add <code>TestNetAlgod</code> to the <code>Algod</code> field. Click the <code>Connect</code> button and wait patiently for ~5-6 seconds. TYou should see that the transaction was submitted in the editor console, followed by a confirmation that the asset was created. The window will close automatically, and if you expand the <code>Index</code> field in your <code>GameToken</code> asset, you&#39;ll see that it was updated with a number. You can see your asset on the blockchain by searching this asset index on the <a href="https://testnet.algoexplorer.io">AlgoExplorer TestNet Block Explorer</a>.</p>
 </article>
           </div>
 
