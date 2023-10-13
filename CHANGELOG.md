@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [5.0.0-pre.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v5.0.0-pre.1...v5.0.0-pre.2) (2023-10-13)
+
+
+### Features
+
+* **algod:** :sparkles: add `round` field to `Algorand.Unity.Algod.Box` ([7796b7d](https://github.com/CareBoo/unity-algorand-sdk/commit/7796b7d1a6e071c54cb47897b466de8e32780476))
+
 # [5.0.0-pre.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.1.0...v5.0.0-pre.1) (2023-10-03)
 
 
