@@ -5,6 +5,51 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [5.0.0](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.1.0...v5.0.0) (2023-10-13)
+
+
+### Bug Fixes
+
+* :bug: add AsSpan and AsReadOnlySpan to NativeArray for Unity 2021.3 ([0e51971](https://github.com/CareBoo/unity-algorand-sdk/commit/0e519719c475ace0aa63dc9ac76d0c690573b1e9))
+* :bug: fix compile error in test script unity 2021.3 ([462e612](https://github.com/CareBoo/unity-algorand-sdk/commit/462e6121d441f590db691fa774557d385b3c375b))
+* :bug: update scripts to use explicit AsSpan APIs ([849f1b3](https://github.com/CareBoo/unity-algorand-sdk/commit/849f1b3e7c3f506304c64532306f11c7201e547c))
+* :bug: use new collections API and collisions with extension methods ([6737cfe](https://github.com/CareBoo/unity-algorand-sdk/commit/6737cfedd80b584159b4f0780500c0684ab7ad97))
+* **accounts:** change encryption of LocalAccountStore to prevent crashes ([#222](https://github.com/CareBoo/unity-algorand-sdk/issues/222)) ([d02fc90](https://github.com/CareBoo/unity-algorand-sdk/commit/d02fc900b1b67fc6e69d73664c747c224965bc92))
+* **webgl:** :bug: remove unsupported apis on webgl ([3202b93](https://github.com/CareBoo/unity-algorand-sdk/commit/3202b93c0ca2117e1d255a23f647fbd2e7ceb6cd))
+
+
+### Code Refactoring
+
+* :fire: remove .NET SDK support ([34c9d39](https://github.com/CareBoo/unity-algorand-sdk/commit/34c9d39eea41c14281fdb0fb21ae3c6eea40d377))
+* :fire: remove WalletConnect support from this SDK ([76c48bb](https://github.com/CareBoo/unity-algorand-sdk/commit/76c48bb06a170aeb0caea296b8149233051556ac))
+
+
+### Features
+
+* **algod:** :sparkles: add `round` field to `Algorand.Unity.Algod.Box` ([7796b7d](https://github.com/CareBoo/unity-algorand-sdk/commit/7796b7d1a6e071c54cb47897b466de8e32780476))
+* **crypto:** :sparkles: add `PwHash` store methods ([721907b](https://github.com/CareBoo/unity-algorand-sdk/commit/721907be4571a98e58f4c6aff36efa2d50a2db59))
+* **crypto:** :sparkles: add `PwHash` struct and related APIs ([6642e99](https://github.com/CareBoo/unity-algorand-sdk/commit/6642e99f759866f857a65cf748fc6a0be30f26d3))
+* **crypto:** :sparkles: add `PwHash` to represent password hashes for storage ([3f9bfb3](https://github.com/CareBoo/unity-algorand-sdk/commit/3f9bfb30302c50ef861472615ce4c8e7faa42346))
+* **crypto:** :sparkles: add `SecretBox` related APIs for encrypt and decrypt ([a6f7ea0](https://github.com/CareBoo/unity-algorand-sdk/commit/a6f7ea0d8783e8edc73a07d17156878fbe759dfa))
+* **crypto:** :sparkles: add `SodiumArray` ([5c03fa3](https://github.com/CareBoo/unity-algorand-sdk/commit/5c03fa3dbf3a755973b22ec52322e4adbbd1e908))
+* **crypto:** :sparkles: add `SodiumReference` ([11762f6](https://github.com/CareBoo/unity-algorand-sdk/commit/11762f6dd6f09337346c4c008993fa8c9d9230f1))
+* **crypto:** :sparkles: add `SodiumString` ([fdd3ccb](https://github.com/CareBoo/unity-algorand-sdk/commit/fdd3ccbc3b5045839c58be7072dd1c32c9e43356))
+* **crypto:** :sparkles: add mlock and munlock in sodium ([0d9a4d7](https://github.com/CareBoo/unity-algorand-sdk/commit/0d9a4d72ef430a1f5d711e2e2cb291eaa7fcba05))
+* **crypto:** :sparkles: add new methods to support secret key -> seed and public keys ([ac09b7d](https://github.com/CareBoo/unity-algorand-sdk/commit/ac09b7dd2b8325ca8081721c380bb9930c99bd1e))
+* **crypto:** :sparkles: add Sha256 and X25519 APIs, and use Span based APIs ([22cd7fd](https://github.com/CareBoo/unity-algorand-sdk/commit/22cd7fdbddf2fd04939afc87ac4b832bdb85dfd7))
+* **crypto:** add ChaCha20 Encrypt and Decrypt functions ([c4c2672](https://github.com/CareBoo/unity-algorand-sdk/commit/c4c267230e046a67efcf238c0d45bf110b30c2f9))
+* **encoding:** :sparkles: add new different base conversions, including baseN ([2d4a515](https://github.com/CareBoo/unity-algorand-sdk/commit/2d4a5159f69029c5187bf7a0d4cf302423320348))
+* **json:** :sparkles: add jsonrpc utilities assembly ([d4fa97e](https://github.com/CareBoo/unity-algorand-sdk/commit/d4fa97e7e83452da3c7db923849bc196aa5d2e5c))
+* **libsodium:** :sparkles: add pwhash, secretbox apis ([568b039](https://github.com/CareBoo/unity-algorand-sdk/commit/568b039db2d8d54853158ad07ce546c53a32ebee))
+* **walletconnect:** :sparkles: add `WalletConnectSignError` ([01f43b3](https://github.com/CareBoo/unity-algorand-sdk/commit/01f43b3c22f596b54aefee242ac7fc1106cf312c))
+* **walletconnect:** :sparkles: add relay and pairing WalletConnectV2 Apis ([286c235](https://github.com/CareBoo/unity-algorand-sdk/commit/286c235c20c1bbf6a33626bc4b27c70129c710be))
+
+
+### BREAKING CHANGES
+
+* Remove compatibility with .NET Algorand SDK
+* WalletConnect is no longer supported. All related samples have been removed.
+
 # [5.0.0-pre.3](https://github.com/CareBoo/unity-algorand-sdk/compare/v5.0.0-pre.2...v5.0.0-pre.3) (2023-10-13)
 
 
