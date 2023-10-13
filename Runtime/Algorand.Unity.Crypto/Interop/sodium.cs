@@ -21,12 +21,6 @@ namespace Algorand.Unity.Crypto
         internal static extern void sodium_free(IntPtr handle);
 
         [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
-        internal static extern void sodium_mlock(IntPtr handle, UIntPtr size);
-
-        [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
-        internal static extern void sodium_munlock(IntPtr handle, UIntPtr size);
-
-        [DllImport(Library, CallingConvention = CallingConvention.Cdecl)]
         internal static extern IntPtr sodium_allocarray(UIntPtr count, UIntPtr size);
     }
 }

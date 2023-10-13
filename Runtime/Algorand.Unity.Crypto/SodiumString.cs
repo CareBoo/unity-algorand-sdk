@@ -33,7 +33,6 @@ namespace Algorand.Unity.Crypto
             {
                 fixed (char* sourceptr = source)
                 {
-                    sodium.sodium_mlock((IntPtr)sourceptr, totalCapacityNUint);
                     var error = UTF8ArrayUnsafeUtility.Copy(
                         handle.GetUnsafePtr(),
                         out length,
@@ -41,7 +40,6 @@ namespace Algorand.Unity.Crypto
                         sourceptr,
                         source.Length
                     );
-                    sodium.sodium_munlock((IntPtr)sourceptr, totalCapacityNUint);
                     if (error != CopyError.None)
                     {
                         if (handle.IsCreated) handle.Dispose();
