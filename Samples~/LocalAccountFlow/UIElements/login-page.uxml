@@ -1,4 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Label tabindex="-1" text="Unlock existing wallet" parse-escape-sequences="true" display-tooltip-when-elided="true" name="title" />
     <ui:Label tabindex="-1" text="Invalid attempt 1/3" parse-escape-sequences="true" display-tooltip-when-elided="true" name="error-label" style="-unity-text-align: upper-center; white-space: normal; color: rgb(255, 0, 0);" />
     <ui:TextField picking-mode="Ignore" value="filler text" password="true" name="password-field" style="flex-direction: column; align-items: center; -unity-text-align: upper-center;" />
     <ui:Button text="Unlock" parse-escape-sequences="true" display-tooltip-when-elided="true" name="unlock-button" style="align-self: stretch;" />

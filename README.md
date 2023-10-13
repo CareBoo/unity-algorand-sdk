@@ -125,4 +125,5 @@ Docs for this version were generated at https://careboo.github.io/unity-algorand
 
 Some of the samples are built on WebGL and hosted on GitHub Pages.
 
-- [ABI](https://careboo.github.io/unity-algorand-sdk/abi)
+- [Your First Transaction](https://careboo.github.io/unity-algorand-sdk/your-first-transaction)
+- [Local Wallet](https://careboo.github.io/unity-algorand-sdk/local-wallet)

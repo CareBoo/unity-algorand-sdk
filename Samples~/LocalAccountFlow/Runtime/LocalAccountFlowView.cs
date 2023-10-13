@@ -105,16 +105,8 @@ namespace Algorand.Unity.Samples.LocalAccountFlow
             createWalletView.errorLabel.text = string.Empty;
             using var securePassword = new SodiumString(password);
             accountStore = new LocalAccountStore(securePassword);
-            var encryptError = accountStore.Encrypt(out var encryptedString);
-            if (encryptError != LocalAccountStore.EncryptError.None)
-            {
-                Debug.LogError($"Failed to encrypt account store: {encryptError}");
-                return;
-            }
-
+            Save();
             createWalletView.Close();
-            PlayerPrefs.SetString(playerPrefsPath, encryptedString);
-            PlayerPrefs.Save();
             walletView.Open(accountStore);
         }
 
@@ -127,6 +119,7 @@ namespace Algorand.Unity.Samples.LocalAccountFlow
             Ed25519.GenKeyPair(ref seedRef.RefValue, ref secretKeyRef.RefValue, ref pk);
             accountStore = accountStore.Add(ref secretKeyRef.RefValue);
             newAccountView.Close();
+            Save();
             walletView.Open(accountStore);
         }
 
@@ -145,6 +138,7 @@ namespace Algorand.Unity.Samples.LocalAccountFlow
             Ed25519.GenKeyPair(ref seedRef.RefValue, ref secretKeyRef.RefValue, ref pk);
             accountStore = accountStore.Add(ref secretKeyRef.RefValue);
             importAccountView.Close();
+            Save();
             walletView.Open(accountStore);
         }
 
@@ -180,6 +174,21 @@ namespace Algorand.Unity.Samples.LocalAccountFlow
             walletView.Open(accountStore);
         }
 
+        public void Save()
+        {
+            if (accountStore.IsCreated)
+            {
+                var encryptError = accountStore.Encrypt(out var encryptedString);
+                if (encryptError != LocalAccountStore.EncryptError.None)
+                {
+                    Debug.LogError($"Failed to encrypt account store: {encryptError}");
+                    return;
+                }
+                PlayerPrefs.SetString(playerPrefsPath, encryptedString);
+                PlayerPrefs.Save();
+            }
+        }
+
         private void OnDisable()
         {
             createWalletView.Close();
@@ -195,14 +204,7 @@ namespace Algorand.Unity.Samples.LocalAccountFlow
 
             if (accountStore.IsCreated)
             {
-                var encryptError = accountStore.Encrypt(out var encryptedString);
-                if (encryptError != LocalAccountStore.EncryptError.None)
-                {
-                    Debug.LogError($"Failed to encrypt account store: {encryptError}");
-                    return;
-                }
-                PlayerPrefs.SetString(playerPrefsPath, encryptedString);
-                PlayerPrefs.Save();
+                Save();
                 accountStore.Dispose();
             }
         }
