@@ -2113,8 +2113,7 @@ should not be used in production.</p>
 
   <a id="Algorand_Unity_Account_Address_" data-uid="Algorand.Unity.Account.Address*"></a>
   <h4 id="Algorand_Unity_Account_Address" data-uid="Algorand.Unity.Account.Address">Address</h4>
-  <div class="markdown level1 summary"><p>A insecure, local, in-memory account. This is useful for creating quick accounts for developer testing, and it
-should not be used in production.</p>
+  <div class="markdown level1 summary"><p>Address of this account</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2292,8 +2291,7 @@ should not be used in production.</p>
 
   <a id="Algorand_Unity_Account_SignTxns_" data-uid="Algorand.Unity.Account.SignTxns*"></a>
   <h4 id="Algorand_Unity_Account_SignTxns__1___0___Algorand_Unity_TxnIndices_" data-uid="Algorand.Unity.Account.SignTxns``1(``0[],Algorand.Unity.TxnIndices)">SignTxns&lt;T&gt;(T[], TxnIndices)</h4>
-  <div class="markdown level1 summary"><p>A insecure, local, in-memory account. This is useful for creating quick accounts for developer testing, and it
-should not be used in production.</p>
+  <div class="markdown level1 summary"><p>Sign a group of transactions.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2314,12 +2312,14 @@ should not be used in production.</p>
       <tr>
         <td>T[]</td>
         <td><span class="parametername">txns</span></td>
-        <td></td>
+        <td><p>The transactions to sign.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.TxnIndices.html">TxnIndices</a></td>
         <td><span class="parametername">txnsToSign</span></td>
-        <td></td>
+        <td><p>Indexes of the transactions this signer should sign.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2334,7 +2334,8 @@ should not be used in production.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Algorand.Unity.SignedTxn-1.html">SignedTxn</a>&lt;T&gt;[]</td>
-        <td></td>
+        <td><p>An array of transactions with signatures. If the transaction at a given index was not signed, that signed transaction will have no signature.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2349,16 +2350,19 @@ should not be used in production.</p>
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The type of the transactions.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Algorand_Unity_Account_SignTxns__1___0___Algorand_Unity_TxnIndices__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Each transaction is expected to have a valid group id already set.</p>
+</div>
 
 
   <a id="Algorand_Unity_Account_SignTxnsAsync_" data-uid="Algorand.Unity.Account.SignTxnsAsync*"></a>
   <h4 id="Algorand_Unity_Account_SignTxnsAsync__1___0___Algorand_Unity_TxnIndices_CancellationToken_" data-uid="Algorand.Unity.Account.SignTxnsAsync``1(``0[],Algorand.Unity.TxnIndices,CancellationToken)">SignTxnsAsync&lt;T&gt;(T[], TxnIndices, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>A insecure, local, in-memory account. This is useful for creating quick accounts for developer testing, and it
-should not be used in production.</p>
+  <div class="markdown level1 summary"><p>Sign a group of transactions.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2379,17 +2383,20 @@ should not be used in production.</p>
       <tr>
         <td>T[]</td>
         <td><span class="parametername">txns</span></td>
-        <td></td>
+        <td><p>The transactions to sign.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.TxnIndices.html">TxnIndices</a></td>
         <td><span class="parametername">txnsToSign</span></td>
-        <td></td>
+        <td><p>Indexes of the transactions this signer should sign.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>Provide an optional cancellation token to interrupt signing.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2404,7 +2411,8 @@ should not be used in production.</p>
     <tbody>
       <tr>
         <td><span class="xref">UniTask</span>&lt;<a class="xref" href="Algorand.Unity.SignedTxn-1.html">SignedTxn</a>&lt;T&gt;[]&gt;</td>
-        <td></td>
+        <td><p>An array of transactions with signatures. If the transaction at a given index was not signed, that signed transaction will have no signature.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2419,16 +2427,19 @@ should not be used in production.</p>
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The type of the transactions.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Algorand_Unity_Account_SignTxnsAsync__1___0___Algorand_Unity_TxnIndices_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Each transaction is expected to have a valid group id already set.</p>
+</div>
 
 
   <a id="Algorand_Unity_Account_SignTxnsAsync_" data-uid="Algorand.Unity.Account.SignTxnsAsync*"></a>
   <h4 id="Algorand_Unity_Account_SignTxnsAsync__2___0___Algorand_Unity_TxnIndices___1_CancellationToken_" data-uid="Algorand.Unity.Account.SignTxnsAsync``2(``0[],Algorand.Unity.TxnIndices,``1,CancellationToken)">SignTxnsAsync&lt;T, TProgress&gt;(T[], TxnIndices, TProgress, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>A insecure, local, in-memory account. This is useful for creating quick accounts for developer testing, and it
-should not be used in production.</p>
+  <div class="markdown level1 summary"><p>Sign a group of transactions.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2449,22 +2460,26 @@ should not be used in production.</p>
       <tr>
         <td>T[]</td>
         <td><span class="parametername">txns</span></td>
-        <td></td>
+        <td><p>The transactions to sign.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.TxnIndices.html">TxnIndices</a></td>
         <td><span class="parametername">txnsToSign</span></td>
-        <td></td>
+        <td><p>Indexes of the transactions this signer should sign.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">TProgress</span></td>
         <td><span class="parametername">progress</span></td>
-        <td></td>
+        <td><p>A progress token that can be used to periodically check the progress.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>Provide an optional cancellation token to interrupt signing.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2479,7 +2494,8 @@ should not be used in production.</p>
     <tbody>
       <tr>
         <td><span class="xref">UniTask</span>&lt;<a class="xref" href="Algorand.Unity.SignedTxn-1.html">SignedTxn</a>&lt;T&gt;[]&gt;</td>
-        <td></td>
+        <td><p>An array of transactions with signatures. If the transaction at a given index was not signed, that signed transaction will have no signature.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2494,7 +2510,8 @@ should not be used in production.</p>
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The type of the transactions.</p>
+</td>
       </tr>
       <tr>
         <td><span class="parametername">TProgress</span></td>
@@ -2502,6 +2519,9 @@ should not be used in production.</p>
       </tr>
     </tbody>
   </table>
+  <h5 id="Algorand_Unity_Account_SignTxnsAsync__2___0___Algorand_Unity_TxnIndices___1_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Each transaction is expected to have a valid group id already set.</p>
+</div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Algorand.Unity.IAccountSigner.html">IAccountSigner</a>
