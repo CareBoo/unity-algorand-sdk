@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [5.0.0-pre.3](https://github.com/CareBoo/unity-algorand-sdk/compare/v5.0.0-pre.2...v5.0.0-pre.3) (2023-10-13)
+
+
+### Bug Fixes
+
+* **webgl:** :bug: remove unsupported apis on webgl ([3202b93](https://github.com/CareBoo/unity-algorand-sdk/commit/3202b93c0ca2117e1d255a23f647fbd2e7ceb6cd))
+
 # [5.0.0-pre.2](https://github.com/CareBoo/unity-algorand-sdk/compare/v5.0.0-pre.1...v5.0.0-pre.2) (2023-10-13)
 
 
