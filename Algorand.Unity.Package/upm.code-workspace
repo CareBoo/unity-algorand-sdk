@@ -25,7 +25,8 @@
       "assets",
       "abi",
       "encoding",
-      "crypto"
+      "crypto",
+      "samples"
     ]
   },
   "extensions": {
