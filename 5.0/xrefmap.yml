@@ -4691,6 +4691,19 @@ references:
   isSpec: "True"
   fullName: Algorand.Unity.Algod.Box.Name
   nameWithType: Box.Name
+- uid: Algorand.Unity.Algod.Box.Round
+  name: Round
+  href: api/Algorand.Unity.Algod.Box.html#Algorand_Unity_Algod_Box_Round
+  commentId: P:Algorand.Unity.Algod.Box.Round
+  fullName: Algorand.Unity.Algod.Box.Round
+  nameWithType: Box.Round
+- uid: Algorand.Unity.Algod.Box.Round*
+  name: Round
+  href: api/Algorand.Unity.Algod.Box.html#Algorand_Unity_Algod_Box_Round_
+  commentId: Overload:Algorand.Unity.Algod.Box.Round
+  isSpec: "True"
+  fullName: Algorand.Unity.Algod.Box.Round
+  nameWithType: Box.Round
 - uid: Algorand.Unity.Algod.Box.Value
   name: Value
   href: api/Algorand.Unity.Algod.Box.html#Algorand_Unity_Algod_Box_Value
