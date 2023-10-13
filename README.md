@@ -36,9 +36,10 @@ Create Algorand transactions, Algorand accounts, and use Algorand's [REST APIs](
     - [Sign the transaction with `kmd`](#sign-the-transaction-with-kmd)
     - [Send the signed transaction](#send-the-signed-transaction)
 - [Installation](#installation)
+  - [Unity Asset Store](#unity-asset-store)
+  - [Asset Package](#asset-package)
   - [Open UPM](#open-upm)
   - [Manually Adding UPM Scopes](#manually-adding-upm-scopes)
-  - [Unity Asset Store](#unity-asset-store)
 - [Getting Started](#getting-started)
   - [Documentation Site](#documentation-site)
   - [Samples](#samples)
@@ -93,9 +94,20 @@ await algod.SendTransaction(signedTxn);
 
 ## Installation
 
+### Unity Asset Store
+
+[Algorand SDK for Unity](https://u3d.as/31Er) is now available!
+
+### Asset Package
+
+Each release contains a `.unitypackage` package file that can be installed into a project.
+
+1. [Download the latest release.](https://github.com/CareBoo/unity-algorand-sdk/releases/latest)
+2. [Import the `.unitypackage` file into your project.](https://docs.unity3d.com/Manual/AssetPackagesImport.html)
+
 ### Open UPM
 
-The easiest way to install is to use Open UPM as it manages your scopes automatically.
+The easiest way to install as a package is to use Open UPM as it manages your scopes automatically.
 You can [install Open UPM here](https://openupm.com/docs/getting-started.html).
 Then use the Open UPM CLI at the root of your Unity project to install.
 
@@ -108,10 +120,22 @@ Then use the Open UPM CLI at the root of your Unity project to install.
 
 If you don't want to use Open UPM, it's straightforward to manually add the UPM registry scopes
 required for this package. See [Unity's official documentation on Scoped Registries](https://docs.unity3d.com/Manual/upm-scoped.html).
+Modify your scopes to include the following:
 
-### Unity Asset Store
-
-[Algorand SDK for Unity](https://u3d.as/31Er) is now available!
+```json
+{
+  "scopedRegistries": [
+    {
+      "name": "package.openupm.com",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.careboo.unity-algorand-sdk",
+        "com.cysharp.unitask"
+      ]
+    }
+  ]
+}
+```
 
 ## Getting Started
 

@@ -185,9 +185,10 @@ Create Algorand transactions, Algorand accounts, and use Algorand&#39;s <a href=
 </ul>
 </li>
 <li><a href="#installation">Installation</a><ul>
+<li><a href="#unity-asset-store">Unity Asset Store</a></li>
+<li><a href="#asset-package">Asset Package</a></li>
 <li><a href="#open-upm">Open UPM</a></li>
 <li><a href="#manually-adding-upm-scopes">Manually Adding UPM Scopes</a></li>
-<li><a href="#unity-asset-store">Unity Asset Store</a></li>
 </ul>
 </li>
 <li><a href="#getting-started">Getting Started</a><ul>
@@ -255,18 +256,37 @@ var signedTxn = await kmd.SignTransaction(paymentTxn.Sender, paymentTxn.ToSignat
 </code></pre><h4 id="send-the-signed-transaction">Send the signed transaction:</h4>
 <pre><code class="lang-csharp">await algod.SendTransaction(signedTxn);
 </code></pre><h2 id="installation">Installation</h2>
+<h3 id="unity-asset-store">Unity Asset Store</h3>
+<p><a href="https://u3d.as/31Er">Algorand SDK for Unity</a> is now available!</p>
+<h3 id="asset-package">Asset Package</h3>
+<p>Each release contains a <code>.unitypackage</code> package file that can be installed into a project.</p>
+<ol>
+<li><a href="https://github.com/CareBoo/unity-algorand-sdk/releases/latest">Download the latest release.</a></li>
+<li><a href="https://docs.unity3d.com/Manual/AssetPackagesImport.html">Import the <code>.unitypackage</code> file into your project.</a></li>
+</ol>
 <h3 id="open-upm">Open UPM</h3>
-<p>The easiest way to install is to use Open UPM as it manages your scopes automatically.
+<p>The easiest way to install as a package is to use Open UPM as it manages your scopes automatically.
 You can <a href="https://openupm.com/docs/getting-started.html">install Open UPM here</a>.
 Then use the Open UPM CLI at the root of your Unity project to install.</p>
 <pre><code class="lang-sh">&gt; cd &lt;your unity project&gt;
 &gt; openupm add com.careboo.unity-algorand-sdk
 </code></pre><h3 id="manually-adding-upm-scopes">Manually Adding UPM Scopes</h3>
 <p>If you don&#39;t want to use Open UPM, it&#39;s straightforward to manually add the UPM registry scopes
-required for this package. See <a href="https://docs.unity3d.com/Manual/upm-scoped.html">Unity&#39;s official documentation on Scoped Registries</a>.</p>
-<h3 id="unity-asset-store">Unity Asset Store</h3>
-<p><a href="https://u3d.as/31Er">Algorand SDK for Unity</a> is now available!</p>
-<h2 id="getting-started">Getting Started</h2>
+required for this package. See <a href="https://docs.unity3d.com/Manual/upm-scoped.html">Unity&#39;s official documentation on Scoped Registries</a>.
+Modify your scopes to include the following:</p>
+<pre><code class="lang-json">{
+  &quot;scopedRegistries&quot;: [
+    {
+      &quot;name&quot;: &quot;package.openupm.com&quot;,
+      &quot;url&quot;: &quot;https://package.openupm.com&quot;,
+      &quot;scopes&quot;: [
+        &quot;com.careboo.unity-algorand-sdk&quot;,
+        &quot;com.cysharp.unitask&quot;
+      ]
+    }
+  ]
+}
+</code></pre><h2 id="getting-started">Getting Started</h2>
 <p>Read <a href="manual/getting_started.html">Getting Started</a> to learn the basic workflows for developing on Algorand.</p>
 <h3 id="documentation-site">Documentation Site</h3>
 <p>Docs for this version were generated at <a href="https://careboo.github.io/unity-algorand-sdk/5.0">https://careboo.github.io/unity-algorand-sdk/5.0</a>.</p>
