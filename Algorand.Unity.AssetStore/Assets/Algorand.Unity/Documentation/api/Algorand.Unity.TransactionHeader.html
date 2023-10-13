@@ -1958,7 +1958,7 @@
 
   <a id="Algorand_Unity_TransactionHeader_Fee_" data-uid="Algorand.Unity.TransactionHeader.Fee*"></a>
   <h4 id="Algorand_Unity_TransactionHeader_Fee" data-uid="Algorand.Unity.TransactionHeader.Fee">Fee</h4>
-  <div class="markdown level1 summary"><p>Paid by the sender to the FeeSink to prevent denial-of-service. The minimum fee on Algorand is currently 1000 microAlgos.</p>
+  <div class="markdown level1 summary"><p>Contains parameters used in all transaction types.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -1987,7 +1987,7 @@
 
   <a id="Algorand_Unity_TransactionHeader_FirstValidRound_" data-uid="Algorand.Unity.TransactionHeader.FirstValidRound*"></a>
   <h4 id="Algorand_Unity_TransactionHeader_FirstValidRound" data-uid="Algorand.Unity.TransactionHeader.FirstValidRound">FirstValidRound</h4>
-  <div class="markdown level1 summary"><p>The first round for when the transaction is valid. If the transaction is sent prior to this round it will be rejected by the network.</p>
+  <div class="markdown level1 summary"><p>Contains parameters used in all transaction types.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2004,7 +2004,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2016,7 +2016,7 @@
 
   <a id="Algorand_Unity_TransactionHeader_GenesisHash_" data-uid="Algorand.Unity.TransactionHeader.GenesisHash*"></a>
   <h4 id="Algorand_Unity_TransactionHeader_GenesisHash" data-uid="Algorand.Unity.TransactionHeader.GenesisHash">GenesisHash</h4>
-  <div class="markdown level1 summary"><p>The hash of the genesis block of the network for which the transaction is valid.</p>
+  <div class="markdown level1 summary"><p>Contains parameters used in all transaction types.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2045,7 +2045,7 @@
 
   <a id="Algorand_Unity_TransactionHeader_GenesisId_" data-uid="Algorand.Unity.TransactionHeader.GenesisId*"></a>
   <h4 id="Algorand_Unity_TransactionHeader_GenesisId" data-uid="Algorand.Unity.TransactionHeader.GenesisId">GenesisId</h4>
-  <div class="markdown level1 summary"><p>The human-readable string that identifies the network for the transaction. The genesis ID is found in the genesis block.</p>
+  <div class="markdown level1 summary"><p>Contains parameters used in all transaction types.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2074,7 +2074,7 @@
 
   <a id="Algorand_Unity_TransactionHeader_Group_" data-uid="Algorand.Unity.TransactionHeader.Group*"></a>
   <h4 id="Algorand_Unity_TransactionHeader_Group" data-uid="Algorand.Unity.TransactionHeader.Group">Group</h4>
-  <div class="markdown level1 summary"><p>The group specifies that the transaction is part of a group and, if so, specifies the hash of the transaction group. See <a class="xref" href="Algorand.Unity.TransactionGroup.html">TransactionGroup</a>.</p>
+  <div class="markdown level1 summary"><p>Contains parameters used in all transaction types.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2103,7 +2103,7 @@
 
   <a id="Algorand_Unity_TransactionHeader_LastValidRound_" data-uid="Algorand.Unity.TransactionHeader.LastValidRound*"></a>
   <h4 id="Algorand_Unity_TransactionHeader_LastValidRound" data-uid="Algorand.Unity.TransactionHeader.LastValidRound">LastValidRound</h4>
-  <div class="markdown level1 summary"><p>The ending round for which the transaction is valid. After this round, the transaction will be rejected by the network.</p>
+  <div class="markdown level1 summary"><p>Contains parameters used in all transaction types.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2120,7 +2120,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
+        <td><span class="xref">System.UInt64</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2132,7 +2132,7 @@
 
   <a id="Algorand_Unity_TransactionHeader_Lease_" data-uid="Algorand.Unity.TransactionHeader.Lease*"></a>
   <h4 id="Algorand_Unity_TransactionHeader_Lease" data-uid="Algorand.Unity.TransactionHeader.Lease">Lease</h4>
-  <div class="markdown level1 summary"><p>A lease enforces mutual exclusion of transactions. If this field is nonzero, then once the transaction is confirmed, it acquires the lease identified by the (Sender, Lease) pair of the transaction until the LastValid round passes. While this transaction possesses the lease, no other transaction specifying this lease can be confirmed. A lease is often used in the context of Algorand Smart Contracts to prevent replay attacks.</p>
+  <div class="markdown level1 summary"><p>Contains parameters used in all transaction types.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2161,7 +2161,7 @@
 
   <a id="Algorand_Unity_TransactionHeader_Note_" data-uid="Algorand.Unity.TransactionHeader.Note*"></a>
   <h4 id="Algorand_Unity_TransactionHeader_Note" data-uid="Algorand.Unity.TransactionHeader.Note">Note</h4>
-  <div class="markdown level1 summary"><p>Any data up to 1000 bytes.</p>
+  <div class="markdown level1 summary"><p>Contains parameters used in all transaction types.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2178,7 +2178,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
+        <td><span class="xref">System.Byte</span>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -2190,7 +2190,7 @@
 
   <a id="Algorand_Unity_TransactionHeader_RekeyTo_" data-uid="Algorand.Unity.TransactionHeader.RekeyTo*"></a>
   <h4 id="Algorand_Unity_TransactionHeader_RekeyTo" data-uid="Algorand.Unity.TransactionHeader.RekeyTo">RekeyTo</h4>
-  <div class="markdown level1 summary"><p>Specifies the authorized address. This address will be used to authorize all future transactions.</p>
+  <div class="markdown level1 summary"><p>Contains parameters used in all transaction types.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2219,7 +2219,7 @@
 
   <a id="Algorand_Unity_TransactionHeader_Sender_" data-uid="Algorand.Unity.TransactionHeader.Sender*"></a>
   <h4 id="Algorand_Unity_TransactionHeader_Sender" data-uid="Algorand.Unity.TransactionHeader.Sender">Sender</h4>
-  <div class="markdown level1 summary"><p>The address of the account that pays the fee and amount.</p>
+  <div class="markdown level1 summary"><p>Contains parameters used in all transaction types.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2248,7 +2248,7 @@
 
   <a id="Algorand_Unity_TransactionHeader_TransactionType_" data-uid="Algorand.Unity.TransactionHeader.TransactionType*"></a>
   <h4 id="Algorand_Unity_TransactionHeader_TransactionType" data-uid="Algorand.Unity.TransactionHeader.TransactionType">TransactionType</h4>
-  <div class="markdown level1 summary"><p>Specifies the type of transaction. This value is automatically generated using any of the developer tools.</p>
+  <div class="markdown level1 summary"><p>Contains parameters used in all transaction types.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2313,7 +2313,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2343,7 +2343,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">obj</span></td>
         <td></td>
       </tr>
@@ -2359,13 +2359,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals#system-valuetype-equals(system-object)">ValueType.Equals(Object)</a></div>
+  <div><span class="xref">System.ValueType.Equals(System.Object)</span></div>
   <h5 id="Algorand_Unity_TransactionHeader_Equals_System_Object__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>For the most part, this is used internally in the sdk and shouldn&apos;t be used directly.</p>
 </div>
@@ -2390,13 +2390,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode#system-valuetype-gethashcode">ValueType.GetHashCode()</a></div>
+  <div><span class="xref">System.ValueType.GetHashCode()</span></div>
   <h5 id="Algorand_Unity_TransactionHeader_GetHashCode_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>For the most part, this is used internally in the sdk and shouldn&apos;t be used directly.</p>
 </div>

@@ -1914,7 +1914,7 @@
 
   <a id="Algorand_Unity_LocalAccountStore_Account_Address_" data-uid="Algorand.Unity.LocalAccountStore.Account.Address*"></a>
   <h4 id="Algorand_Unity_LocalAccountStore_Account_Address" data-uid="Algorand.Unity.LocalAccountStore.Account.Address">Address</h4>
-  <div class="markdown level1 summary"><p>Address of this account</p>
+  <div class="markdown level1 summary"><p>An account view into the <a class="xref" href="Algorand.Unity.LocalAccountStore.html">LocalAccountStore</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2004,7 +2004,7 @@
 
   <a id="Algorand_Unity_LocalAccountStore_Account_SignTxns_" data-uid="Algorand.Unity.LocalAccountStore.Account.SignTxns*"></a>
   <h4 id="Algorand_Unity_LocalAccountStore_Account_SignTxns__1___0___Algorand_Unity_TxnIndices_" data-uid="Algorand.Unity.LocalAccountStore.Account.SignTxns``1(``0[],Algorand.Unity.TxnIndices)">SignTxns&lt;T&gt;(T[], TxnIndices)</h4>
-  <div class="markdown level1 summary"><p>Sign a group of transactions.</p>
+  <div class="markdown level1 summary"><p>An account view into the <a class="xref" href="Algorand.Unity.LocalAccountStore.html">LocalAccountStore</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -2025,14 +2025,12 @@
       <tr>
         <td>T[]</td>
         <td><span class="parametername">txns</span></td>
-        <td><p>The transactions to sign.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="Algorand.Unity.TxnIndices.html">TxnIndices</a></td>
         <td><span class="parametername">txnsToSign</span></td>
-        <td><p>Indexes of the transactions this signer should sign.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -2047,8 +2045,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Algorand.Unity.SignedTxn-1.html">SignedTxn</a>&lt;T&gt;[]</td>
-        <td><p>An array of transactions with signatures. If the transaction at a given index was not signed, that signed transaction will have no signature.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -2063,14 +2060,10 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td><p>The type of the transactions.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="Algorand_Unity_LocalAccountStore_Account_SignTxns__1___0___Algorand_Unity_TxnIndices__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Each transaction is expected to have a valid group id already set.</p>
-</div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Algorand.Unity.IAccountSigner.html">IAccountSigner</a>
