@@ -11,6 +11,11 @@ namespace Algorand.Unity
         None,
 
         /// <summary>
+        /// A local Algorand network running on the user's host machine.
+        /// </summary>
+        LocalNet,
+
+        /// <summary>
         /// The Algorand <see href="https://developer.algorand.org/docs/get-details/algorand-networks/testnet/">TestNet</see>
         /// </summary>
         TestNet,
