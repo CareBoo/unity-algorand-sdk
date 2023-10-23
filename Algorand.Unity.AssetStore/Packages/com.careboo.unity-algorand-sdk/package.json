@@ -29,6 +29,6 @@
     "url": "https://github.com/CareBoo"
   },
   "scripts": {
-    "version": "./scripts/updateVersionUrl.sh && git add package.json .docfx/docfx.json README.md Algorand.Unity.AssetStore/Packages/com.careboo.unity-algorand-sdk/package.json"
+    "version": "./scripts/updateVersionUrl.sh && git add package.json .docfx/docfx.json README.md Algorand.Unity.AssetStore/Packages/com.careboo.unity-algorand-sdk/package.json Runtime/Algorand.Unity/Util/DocUrl.cs"
   }
 }
