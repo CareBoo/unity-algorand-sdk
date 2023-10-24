@@ -1,7 +1,5 @@
 using System;
 using System.Text;
-using System.Threading;
-using Algorand.Unity;
 using Algorand.Unity.Experimental.Abi;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -10,7 +8,13 @@ namespace Algorand.Unity.Samples.CallingSmartContractAbi
 {
     public class CallingSmartContractAbi : MonoBehaviour
     {
-        public TextAsset contractJson;
+        public AlgodClientAsset algod;
+
+        public IndexerClientAsset indexer;
+
+        public KmdClientAsset kmd;
+
+        public ContractAsset contract;
 
         public TextAsset approvalTeal;
 
@@ -20,27 +24,16 @@ namespace Algorand.Unity.Samples.CallingSmartContractAbi
 
         private IAsyncAccountSigner account;
 
-        private AlgodClient algod;
-
-        private KmdClient kmd;
-
-        private IndexerClient indexer;
-
         private MicroAlgos accountBalance = 0;
-
-        private Contract contract;
 
         private void Awake()
         {
-            Debug.Assert(contractJson);
+            Debug.Assert(algod);
+            Debug.Assert(indexer);
+            Debug.Assert(kmd);
+            Debug.Assert(contract);
             Debug.Assert(approvalTeal);
             Debug.Assert(clearTeal);
-            contract = AlgoApiSerializer.DeserializeJson<Contract>(contractJson.text);
-            algod = new AlgodClient("http://localhost:4001",
-                "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-            kmd = new KmdClient("http://localhost:4002",
-                "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-            indexer = new IndexerClient("http://localhost:8980");
         }
 
         private void Start()
@@ -55,7 +48,7 @@ namespace Algorand.Unity.Samples.CallingSmartContractAbi
             {
                 account = await GetAccount();
                 smartContractUI.account = account;
-                smartContractUI.algod = algod;
+                smartContractUI.algod = algod.client;
                 smartContractUI.contractIndex = await GetOrCreateContract();
                 smartContractUI.contract = contract;
             }
@@ -70,15 +63,15 @@ namespace Algorand.Unity.Samples.CallingSmartContractAbi
 
         private async UniTask<IAsyncAccountSigner> GetAccount()
         {
-            var (listWalletsErr, listWalletsResponse) = await kmd.ListWallets();
+            var (listWalletsErr, listWalletsResponse) = await kmd.client.ListWallets();
             listWalletsErr.ThrowIfError();
             var wallet = listWalletsResponse.Wallets[0];
-            var (initHandleErr, initHandleResponse) = await kmd.InitWalletHandleToken(wallet.Id, "");
+            var (initHandleErr, initHandleResponse) = await kmd.client.InitWalletHandleToken(wallet.Id, "");
             initHandleErr.ThrowIfError();
-            var (keysErr, keysResponse) = await kmd.ListKeys(initHandleResponse.WalletHandleToken);
+            var (keysErr, keysResponse) = await kmd.client.ListKeys(initHandleResponse.WalletHandleToken);
             keysErr.ThrowIfError();
-            await kmd.ReleaseWalletHandleToken(initHandleResponse.WalletHandleToken);
-            return new KmdAccount(kmd, wallet.Id, "", keysResponse.Addresses[0]);
+            await kmd.client.ReleaseWalletHandleToken(initHandleResponse.WalletHandleToken);
+            return new KmdAccount(kmd.client, wallet.Id, "", keysResponse.Addresses[0]);
         }
 
         private async UniTask<AppIndex> GetOrCreateContract()
@@ -91,7 +84,7 @@ namespace Algorand.Unity.Samples.CallingSmartContractAbi
 
         private async UniTask<Optional<AppIndex>> GetContract(CompiledTeal approval, CompiledTeal clear)
         {
-            var (err, response) = await indexer.LookupAccountCreatedApplications(account.Address);
+            var (err, response) = await indexer.client.LookupAccountCreatedApplications(account.Address);
             err.ThrowIfError();
             if (response.Applications == null)
             {
@@ -126,28 +119,28 @@ namespace Algorand.Unity.Samples.CallingSmartContractAbi
             var signedTxn = await txn.SignWithAsync(account);
 
             var txid = await SendTransaction(signedTxn);
-            var (err, confirmedTxn) = await algod.WaitForConfirmation(txid);
+            var (err, confirmedTxn) = await algod.client.WaitForConfirmation(txid);
             err.ThrowIfError();
             return confirmedTxn.ApplicationIndex.Value;
         }
 
         private async UniTask<byte[]> CompileTeal(string teal)
         {
-            var (error, compiled) = await algod.TealCompile(Encoding.UTF8.GetBytes(teal));
+            var (error, compiled) = await algod.client.TealCompile(Encoding.UTF8.GetBytes(teal));
             error.ThrowIfError();
             return System.Convert.FromBase64String(compiled.Result);
         }
 
         private async UniTask<TransactionParams> GetSuggestedParams()
         {
-            var (error, txnParams) = await algod.TransactionParams();
+            var (error, txnParams) = await algod.client.TransactionParams();
             error.ThrowIfError();
             return txnParams;
         }
 
         private async UniTask<string> SendTransaction(byte[] signedTxn)
         {
-            var (error, response) = await algod.RawTransaction(signedTxn);
+            var (error, response) = await algod.client.RawTransaction(signedTxn);
             error.ThrowIfError();
             return response.TxId;
         }
