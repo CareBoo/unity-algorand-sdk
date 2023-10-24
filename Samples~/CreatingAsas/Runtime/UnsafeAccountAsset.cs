@@ -1,14 +1,15 @@
 using System;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace Algorand.Unity.Samples.CreatingAsas
 {
     [CreateAssetMenu]
-    public class AccountObject
-        : ScriptableObject
-            , IAccount
-            , ISigner
-            , ISerializationCallbackReceiver
+    public class UnsafeAccountAsset
+        : AccountAsset
+        , ISigner
+        , ISerializationCallbackReceiver
     {
         [SerializeField] private Mnemonic mnemonic;
 
@@ -16,13 +17,18 @@ namespace Algorand.Unity.Samples.CreatingAsas
 
         private Account account;
 
-        public Address Address => account.Address;
+        public override Address Address => account.Address;
 
         public SignedTxn<T> SignTxn<T>(T txn)
             where T : ITransaction, IEquatable<T> => account.SignTxn(txn);
 
         public SignedTxn<T>[] SignTxns<T>(T[] txns, TxnIndices txnsToSign)
             where T : ITransaction, IEquatable<T> => account.SignTxns(txns, txnsToSign);
+
+        public override UniTask<SignedTxn<T>[]> SignTxnsAsync<T>(T[] txns, TxnIndices txnsToSign, CancellationToken cancellationToken = default)
+        {
+            return account.SignTxnsAsync(txns, txnsToSign, cancellationToken);
+        }
 
         [System.Diagnostics.Conditional("UNITY_EDITOR")]
         [ContextMenu(nameof(GenerateNewAccount))]

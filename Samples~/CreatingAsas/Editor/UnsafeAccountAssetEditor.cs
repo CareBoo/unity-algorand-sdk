@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Algorand.Unity.Samples.CreatingAsas.Editor
 {
-    [CustomEditor(typeof(AccountObject))]
+    [CustomEditor(typeof(UnsafeAccountAsset))]
     public class AccountObjectEditor : UnityEditor.Editor
     {
         public override void OnInspectorGUI()
@@ -12,7 +12,7 @@ namespace Algorand.Unity.Samples.CreatingAsas.Editor
                 "This asset should only be used for sample purposes. Storing private keys in an asset is not safe for production.",
                 MessageType.Warning);
             DrawDefaultInspector();
-            var accountObject = (AccountObject)serializedObject.targetObject;
+            var accountObject = (UnsafeAccountAsset)serializedObject.targetObject;
             using (new GUILayout.HorizontalScope())
             {
                 if (GUILayout.Button("Generate new Account"))
