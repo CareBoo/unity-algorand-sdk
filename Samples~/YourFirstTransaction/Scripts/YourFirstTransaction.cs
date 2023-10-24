@@ -6,9 +6,9 @@ namespace Algorand.Unity.Samples.YourFirstTransaction
 {
     public class YourFirstTransaction : MonoBehaviour
     {
-        public AlgodClient algod = new("https://testnet-api.algonode.cloud");
+        public AlgodClientAsset algod;
 
-        public IndexerClient indexer = new("https://testnet-idx.algonode.cloud");
+        public IndexerClientAsset indexer;
 
         public string testnetFaucetUrl = "https://dispenser.testnet.aws.algodev.network/?account={0}";
 
@@ -69,14 +69,14 @@ namespace Algorand.Unity.Samples.YourFirstTransaction
 
         private async UniTaskVoid CheckAlgodStatusAsync()
         {
-            var response = await algod.HealthCheck();
+            var response = await algod.client.HealthCheck();
             AlgodHealth = response.Error ? response.Error : "Connected";
             onCheckAlgodStatus?.Invoke(AlgodHealth);
         }
 
         private async UniTaskVoid CheckIndexerStatusAsync()
         {
-            var response = await indexer.MakeHealthCheck();
+            var response = await indexer.client.MakeHealthCheck();
             IndexerHealth = response.Error ? response.Error : "Connected";
             onCheckIndexerStatus?.Invoke(IndexerHealth);
         }
@@ -100,7 +100,7 @@ namespace Algorand.Unity.Samples.YourFirstTransaction
 
         private async UniTaskVoid CheckBalanceAsync()
         {
-            var (err, resp) = await indexer.LookupAccountByID(Account.Address);
+            var (err, resp) = await indexer.client.LookupAccountByID(Account.Address);
             if (err)
             {
                 Balance = 0;
@@ -136,7 +136,7 @@ namespace Algorand.Unity.Samples.YourFirstTransaction
             }
 
             // Get the suggested transaction params
-            var (txnParamsError, txnParams) = await algod.TransactionParams();
+            var (txnParamsError, txnParams) = await algod.client.TransactionParams();
             if (txnParamsError)
             {
                 Debug.LogError(txnParamsError);
@@ -154,7 +154,7 @@ namespace Algorand.Unity.Samples.YourFirstTransaction
             var signedTxn = Account.SignTxn(paymentTxn);
 
             // Send the transaction
-            var (sendTxnError, txid) = await algod.SendTransaction(signedTxn);
+            var (sendTxnError, txid) = await algod.client.SendTransaction(signedTxn);
             if (sendTxnError)
             {
                 Debug.LogError(sendTxnError);
@@ -163,7 +163,7 @@ namespace Algorand.Unity.Samples.YourFirstTransaction
             }
 
             // Wait for the transaction to be confirmed
-            var (confirmErr, confirmed) = await algod.WaitForConfirmation(txid.TxId);
+            var (confirmErr, confirmed) = await algod.client.WaitForConfirmation(txid.TxId);
             if (confirmErr)
             {
                 Debug.LogError(confirmErr);

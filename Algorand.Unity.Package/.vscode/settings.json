@@ -70,7 +70,8 @@
     "libsodium",
     "crypto",
     "accounts",
-    "webgl"
+    "webgl",
+    "samples"
   ],
   "dotnet.defaultSolution": "Algorand.Unity.Package.sln"
 }
