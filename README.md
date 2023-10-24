@@ -143,7 +143,7 @@ Read [Getting Started](docs/getting_started.md) to learn the basic workflows for
 
 ### Documentation Site
 
-Docs for this version were generated at https://careboo.github.io/unity-algorand-sdk/5.0.
+Docs for this version were generated at https://careboo.github.io/unity-algorand-sdk/5.1.
 
 ### Samples
 

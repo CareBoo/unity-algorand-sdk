@@ -5,6 +5,30 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+# [5.1.0-pre.1](https://github.com/CareBoo/unity-algorand-sdk/compare/v5.0.0...v5.1.0-pre.1) (2023-10-24)
+
+
+### Bug Fixes
+
+* **kmd:** :bug: fix error if txn indices supplied are more than txns ([52328ad](https://github.com/CareBoo/unity-algorand-sdk/commit/52328ad6c3ece39432c3429fd993cb9721feb0ef))
+
+
+### Features
+
+* :sparkles: add `AlgorandNetwork.LocalNet` enum value ([f7a9fd7](https://github.com/CareBoo/unity-algorand-sdk/commit/f7a9fd790e35594f3c58e4e0a3d58c98dc54cb25))
+* :sparkles: add default client `ScriptableObject`s for easy referencing ([a4ea014](https://github.com/CareBoo/unity-algorand-sdk/commit/a4ea0140cb5b376e131aada98063ab8988a31523))
+* **abi:** :sparkles: add `AbiContractImporter` and `ContractAsset` ([a6456da](https://github.com/CareBoo/unity-algorand-sdk/commit/a6456daed9000d41ef57f545fb3ccd1e5565c224))
+* **abi:** :sparkles: add `InterfaceImporter` for `interface.json` files describing abi interfaces ([1d6c7ad](https://github.com/CareBoo/unity-algorand-sdk/commit/1d6c7addc3edf05929473874766ba1d87d622a09))
+* **accounts:** :sparkles: add `AccountAsset` base class ([dde5ee0](https://github.com/CareBoo/unity-algorand-sdk/commit/dde5ee06e73b3cb4f7f85dd886a85147927b3092))
+* **algod:** :sparkles: add `AlgodClientAsset` ([c8e0928](https://github.com/CareBoo/unity-algorand-sdk/commit/c8e092834f0ac730eeeddc41423a9048e4d81847))
+* **algod:** :sparkles: add `AlgodClientAsset` to be used for storing algod info ([57b7374](https://github.com/CareBoo/unity-algorand-sdk/commit/57b7374b7536247cfd49f628285c30d667d3aeb5))
+* **applications:** :sparkles: add `TealImporter` ([10cc011](https://github.com/CareBoo/unity-algorand-sdk/commit/10cc01184fb34b4fde00603a652d2397b461c373))
+* **assets:** :sparkles: add `AlgorandStandardAsset` for creating tokens ([af702e0](https://github.com/CareBoo/unity-algorand-sdk/commit/af702e072dcedee66d87cd76da578fd389756dc7))
+* **indexer:** :sparkles: add `IndexerClientAsset` ([da20c6f](https://github.com/CareBoo/unity-algorand-sdk/commit/da20c6fcee5bd6a9fa2e70250390253aac54a97d))
+* **indexer:** :sparkles: add `IndexerClientAsset` to store indexer info ([30fb9e9](https://github.com/CareBoo/unity-algorand-sdk/commit/30fb9e9b66eaa8cb0ab0bc1251aba5363b52dbda))
+* **kmd:** :sparkles: add `KmdClientAsset` ([d439e80](https://github.com/CareBoo/unity-algorand-sdk/commit/d439e80da755af7bc817bf9fab85b77eeca25250))
+* **kmd:** :sparkles: add `KmdClientAsset` to store kmd info ([aba4efb](https://github.com/CareBoo/unity-algorand-sdk/commit/aba4efb53c72771739072800864b3779e3bbdbdd))
+
 # [5.0.0](https://github.com/CareBoo/unity-algorand-sdk/compare/v4.1.0...v5.0.0) (2023-10-13)
 
 
