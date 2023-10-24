@@ -52,6 +52,7 @@ namespace Algorand.Unity
                 while (indexEnum.MoveNext())
                 {
                     var i = indexEnum.Current;
+                    if (i >= txns.Length) break;
                     var serializedTxn = AlgoApiSerializer.SerializeMessagePack(txns[i]);
                     (signErr, signResp) = await client.SignTransaction(Address, serializedTxn, walletHandleToken, walletPassword);
                     signErr.ThrowIfError();
